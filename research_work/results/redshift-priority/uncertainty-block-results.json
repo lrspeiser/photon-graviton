@@ -1,0 +1,193 @@
+{
+  "status": "exploratory exposed-sample sensitivity, not a predictive coverage guarantee",
+  "source_sha256": "0a555c28b6a9031691d45e01f5f042ecf67014d4c552be8a33354db4992df277",
+  "protocol_sha256": "f80936b262c19793364bbf9b4bf7727fca18cb874dc3ad97eb7b2324e0bd8604",
+  "groups": 164,
+  "sky_regions": 8,
+  "fixed_prediction_metrics_kms": {
+    "rms": 450.7161039216578,
+    "bias": -20.893443373911232
+  },
+  "region_metrics_kms": [
+    {
+      "region": 0,
+      "n": 21,
+      "rms": 327.6177209992833,
+      "bias": 208.35621347774736,
+      "median_absolute": 232.94568227865102,
+      "max_absolute": 668.3736951560073
+    },
+    {
+      "region": 1,
+      "n": 19,
+      "rms": 373.8696049934171,
+      "bias": -194.0922167639463,
+      "median_absolute": 261.28033457734546,
+      "max_absolute": 862.1893484479252
+    },
+    {
+      "region": 2,
+      "n": 16,
+      "rms": 776.1234982426346,
+      "bias": -531.5974807278023,
+      "median_absolute": 398.0058190577669,
+      "max_absolute": 1973.956212633604
+    },
+    {
+      "region": 3,
+      "n": 17,
+      "rms": 363.86357563095805,
+      "bias": 56.185925641860436,
+      "median_absolute": 160.99915675573345,
+      "max_absolute": 714.5487627529229
+    },
+    {
+      "region": 4,
+      "n": 20,
+      "rms": 565.2483574645153,
+      "bias": -18.20917999605332,
+      "median_absolute": 282.1245573393153,
+      "max_absolute": 1516.5186261238666
+    },
+    {
+      "region": 5,
+      "n": 31,
+      "rms": 376.43070745348524,
+      "bias": 99.31592879370712,
+      "median_absolute": 194.33634273503088,
+      "max_absolute": 973.5223687073068
+    },
+    {
+      "region": 6,
+      "n": 27,
+      "rms": 396.6022661426393,
+      "bias": -41.12206464845956,
+      "median_absolute": 133.389878352724,
+      "max_absolute": 1363.0490960271072
+    },
+    {
+      "region": 7,
+      "n": 13,
+      "rms": 338.27902086305073,
+      "bias": 140.91011005527747,
+      "median_absolute": 214.97451348375301,
+      "max_absolute": 794.9215642782668
+    }
+  ],
+  "conditional_bootstrap_percentile_95_kms": {
+    "individual_groups": {
+      "rms": [
+        376.7154263450171,
+        527.1282456250532
+      ],
+      "bias": [
+        -90.94551783513698,
+        47.01484177828508
+      ]
+    },
+    "whole_sky_regions": {
+      "rms": [
+        361.5120398258224,
+        560.8609111169777
+      ],
+      "bias": [
+        -168.26586155702358,
+        95.41939777174153
+      ]
+    }
+  },
+  "replicates": 10000,
+  "seed": 2026090917,
+  "split_conformal_rank_diagnostic_not_applied_to_data": [
+    {
+      "calibration_units": 3,
+      "nominal_coverage": 0.8,
+      "required_rank": 4,
+      "threshold": "+infinity"
+    },
+    {
+      "calibration_units": 3,
+      "nominal_coverage": 0.9,
+      "required_rank": 4,
+      "threshold": "+infinity"
+    },
+    {
+      "calibration_units": 3,
+      "nominal_coverage": 0.95,
+      "required_rank": 4,
+      "threshold": "+infinity"
+    },
+    {
+      "calibration_units": 7,
+      "nominal_coverage": 0.8,
+      "required_rank": 7,
+      "threshold": "finite order statistic"
+    },
+    {
+      "calibration_units": 7,
+      "nominal_coverage": 0.9,
+      "required_rank": 8,
+      "threshold": "+infinity"
+    },
+    {
+      "calibration_units": 7,
+      "nominal_coverage": 0.95,
+      "required_rank": 8,
+      "threshold": "+infinity"
+    },
+    {
+      "calibration_units": 8,
+      "nominal_coverage": 0.8,
+      "required_rank": 8,
+      "threshold": "finite order statistic"
+    },
+    {
+      "calibration_units": 8,
+      "nominal_coverage": 0.9,
+      "required_rank": 9,
+      "threshold": "+infinity"
+    },
+    {
+      "calibration_units": 8,
+      "nominal_coverage": 0.95,
+      "required_rank": 9,
+      "threshold": "+infinity"
+    },
+    {
+      "calibration_units": 19,
+      "nominal_coverage": 0.8,
+      "required_rank": 16,
+      "threshold": "finite order statistic"
+    },
+    {
+      "calibration_units": 19,
+      "nominal_coverage": 0.9,
+      "required_rank": 18,
+      "threshold": "finite order statistic"
+    },
+    {
+      "calibration_units": 19,
+      "nominal_coverage": 0.95,
+      "required_rank": 19,
+      "threshold": "finite order statistic"
+    },
+    {
+      "calibration_units": 64,
+      "nominal_coverage": 0.8,
+      "required_rank": 52,
+      "threshold": "finite order statistic"
+    },
+    {
+      "calibration_units": 64,
+      "nominal_coverage": 0.9,
+      "required_rank": 59,
+      "threshold": "finite order statistic"
+    },
+    {
+      "calibration_units": 64,
+      "nominal_coverage": 0.95,
+      "required_rank": 62,
+      "threshold": "finite order statistic"
+    }
+  ]
+}
