@@ -1,0 +1,35 @@
+{
+  "scope": "Conditional self-binding requirements: a nonrelativistic massive complex scalar Schrödinger-Poisson bound-state proxy, weak-gravity compactness diagnostics for massless waves, capture-energy accounting, and weak-probe static/periodic propagation tests. No ordinary-graviton bound state, capture rate, photon-production coupling or completed halo is claimed.",
+  "ground_state_runs": [
+    {"outer_radius": 30.0, "initial_nodes": 400, "tolerance": 1e-6},
+    {"outer_radius": 40.0, "initial_nodes": 800, "tolerance": 1e-8}
+  ],
+  "inner_radius": 0.00001,
+  "illustrative_targets": [
+    {"half_mass_radius_kpc": 1.0, "circular_speed_km_s": 30.0},
+    {"half_mass_radius_kpc": 10.0, "circular_speed_km_s": 200.0},
+    {"half_mass_radius_kpc": 100.0, "circular_speed_km_s": 1000.0}
+  ],
+  "optical": {
+    "source": -2.0,
+    "detector": 2.0,
+    "half_width": 1.0,
+    "period": 3.0,
+    "offset": 0.1,
+    "amplitudes": [0.0, 0.05, 0.1],
+    "phase_samples": [24,48],
+    "scope": "Prescribed bounded periodic optical profiles test an arrival-map theorem. They are not a derived coupling to the computed bound state and have no claimed closed photon/binding energy ledger."
+  },
+  "checks": {
+    "normalization_error": 1e-6,
+    "relative_virial_error": 1e-5,
+    "relative_chemical_potential_error": 1e-5,
+    "relative_ground_state_energy_change": 1e-5,
+    "relative_half_mass_radius_change": 1e-5,
+    "gaussian_energy_quadrature_error": 1e-7,
+    "periodic_arrival_mean_error": 1e-6,
+    "periodic_repeat_arrival_error": 1e-7,
+    "frequency_timing_relative_difference": 1e-7,
+    "phase_quadrature_change": 1e-6
+  }
+}

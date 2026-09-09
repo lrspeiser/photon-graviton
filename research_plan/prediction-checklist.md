@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [spherical propagation](../research_work/results/spherical-propagation/report.md). Eight finite-fuel spherical backgrounds approach a static profile, with much smaller late redshift but persistent delay; 74 carrier/event comparisons pass. General angular sources, self-binding, matter clocks, capture and gravity remain unproved. The [self-binding/time-formula note](time-field-and-self-binding.md) preserves the user's new question without adopting an interaction law.
+Latest diagnostic: [companion self-binding requirements](../research_work/results/companion-self-binding/report.md). Refined stationary massive-wave solutions and capture-energy ledgers quantify a conditional collective store. A periodic arrival-map theorem and 216 phase probes distinguish repeating fields from sustained redshift. Stable formation, charge/occupation balance, actual photon conversion, massless graviton binding and a common gravity/lensing law remain open.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

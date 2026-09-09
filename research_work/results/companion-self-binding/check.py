@@ -1,0 +1,151 @@
+"""Self-binding proxy, capture bookkeeping and periodic arrival-map constraints."""
+from pathlib import Path
+import hashlib
+import importlib.util
+import json
+import os
+import numpy as np
+from scipy.integrate import solve_bvp, quad
+from scipy.optimize import brentq
+from scipy.special import erf
+
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
+OUT=Path(os.environ.get('PHOTON_GRAVITON_RESULTS',ROOT/'research_work/generated'))/'companion-self-binding'
+PROBE=HERE.parent/'weak-signal-timing/check.py'
+spec=importlib.util.spec_from_file_location('binding_probe',PROBE)
+probe_module=importlib.util.module_from_spec(spec);spec.loader.exec_module(probe_module)
+
+
+def ground_state(case,cfg):
+    eps=cfg['inner_radius'];R=case['outer_radius'];x=np.linspace(eps,R,case['initial_nodes']);width=3.76
+    psi=np.exp(-x*x/(2*width*width))/(np.pi**.75*width**1.5)
+    u=x*psi;du=psi*(1-x*x/width**2)
+    M=erf(x/width)-2*x/(np.sqrt(np.pi)*width)*np.exp(-x*x/width**2)
+    Phi=-erf(x/width)/x
+    def rhs(r,y,p):
+        return np.array([y[1],2*(y[3]-p[0])*y[0],4*np.pi*y[0]**2,y[2]/r**2])
+    def boundary(a,b,p):
+        return [a[0]-eps*a[1],a[2]-4*np.pi*a[1]**2*eps**3/3,b[0],b[2]-1,b[3]+1/R]
+    sol=solve_bvp(rhs,boundary,x,np.array([u,du,M,Phi]),p=[-.16],tol=case['tolerance'],max_nodes=20000)
+    assert sol.success,sol.message
+    def integrate(f):return quad(f,eps,R,epsabs=1e-10,limit=300)[0]
+    norm=4*np.pi*integrate(lambda r:sol.sol(r)[0]**2)+sol.y[2,0]
+    kinetic=2*np.pi*(integrate(lambda r:sol.sol(r)[1]**2)+sol.y[0,0]**2/eps)
+    potential=2*np.pi*integrate(lambda r:sol.sol(r)[3]*sol.sol(r)[0]**2)
+    total=kinetic+potential;mu=float(sol.p[0]);half=brentq(lambda r:sol.sol(r)[2]-.5,eps,R)
+    virial=abs(2*kinetic+potential)/abs(potential)
+    chemical=abs(mu-(kinetic+2*potential))/abs(mu)
+    assert abs(norm-1)<cfg['checks']['normalization_error']
+    assert virial<cfg['checks']['relative_virial_error'],virial
+    assert chemical<cfg['checks']['relative_chemical_potential_error'],chemical
+    sample=np.linspace(eps,R,401);profile=sol.sol(sample)
+    assert profile[0].min()>-1e-10 and total<0
+    # A normalized Gaussian is an independent analytic variational upper bound.
+    gaussian_width=3*np.sqrt(2*np.pi)/2
+    gaussian_T=3/(4*gaussian_width**2);gaussian_W=-1/(np.sqrt(2*np.pi)*gaussian_width)
+    density=lambda r:np.exp(-r*r/gaussian_width**2)/(np.pi**1.5*gaussian_width**3)
+    phi=lambda r:-erf(r/gaussian_width)/r if r else -2/(np.sqrt(np.pi)*gaussian_width)
+    numeric_W=2*np.pi*quad(lambda r:r*r*density(r)*phi(r),0,np.inf,epsabs=1e-11)[0]
+    assert abs(numeric_W-gaussian_W)<cfg['checks']['gaussian_energy_quadrature_error']
+    assert total<gaussian_T+gaussian_W
+    return {'outer_radius':R,'nodes':len(sol.x),'tolerance':case['tolerance'],'normalization':norm,
+            'kinetic_energy':kinetic,'gravitational_energy':potential,'binding_energy':total,'chemical_potential':mu,
+            'half_mass_radius':half,'relative_virial_error':virial,'relative_chemical_potential_error':chemical,
+            'gaussian_comparison':{'width':gaussian_width,'energy':gaussian_T+gaussian_W,'quadrature_potential_error':abs(numeric_W-gaussian_W)},
+            'profile_columns':['r','radial_wave_u','du_dr','enclosed_mass','gravitational_potential'],
+            'profile':np.column_stack([sample,profile.T]).tolist()}
+
+
+def physical_scalings(state,cfg):
+    G=6.67430e-11;c=299792458.;hbar=1.054571817e-34;eV=1.602176634e-19
+    kpc=3.085677581491367e19;solar_mass=1.98847e30
+    out=[];xhalf=state['half_mass_radius']
+    for target in cfg['illustrative_targets']:
+        radius=target['half_mass_radius_kpc']*kpc;vc=target['circular_speed_km_s']*1000
+        M=2*vc*vc*radius/G;length=radius/xhalf;velocity=vc*np.sqrt(2*xhalf)
+        m=hbar/(length*velocity);binding=state['binding_energy']*M*velocity**2;mu=state['chemical_potential']*m*velocity**2
+        compactness=G*M/(radius*c*c)
+        alpha_gravity=G*m*m/(hbar*c)
+        pair_radius=2*hbar/(m*c*alpha_gravity)
+        pair_binding_eV=-alpha_gravity**2*(m*c*c/eV)/4
+        assert abs(pair_radius/radius/(2*(M/m)/xhalf)-1)<1e-12
+        captures=[]
+        # E_bind scales as N^3 at fixed particle mass. A small added population
+        # must release incoming kinetic energy plus the change of binding energy.
+        for fraction in [1e-4,1e-3]:
+            for incoming_kinetic_fraction in [0.,1e-6]:
+                incoming=fraction*M*c*c*(1+incoming_kinetic_fraction)
+                before=M*c*c+binding
+                after=(1+fraction)*M*c*c+binding*(1+fraction)**3
+                released=fraction*M*c*c*incoming_kinetic_fraction-binding*((1+fraction)**3-1)
+                error=abs((after-before)+released-incoming)/incoming
+                assert error<1e-10,error
+                captures.append({'added_mass_fraction':fraction,'incoming_kinetic_over_rest':incoming_kinetic_fraction,
+                                 'required_released_energy_over_incoming_rest':released/(fraction*M*c*c),'relative_ledger_error':error})
+        out.append({**target,'total_mass_solar':M/solar_mass,'required_particle_rest_energy_eV':m*c*c/eV,
+                    'binding_energy_over_rest_energy':binding/(M*c*c),'incremental_binding_release_over_particle_rest':-mu/(m*c*c),
+                    'compactness_GM_over_Rc2':compactness,'nonrelativistic_velocity_scale_over_c':velocity/c,
+                    'total_rest_energy_joule':M*c*c,'constituent_number':M/m,
+                    'pair_gravitational_fine_structure':alpha_gravity,'pair_bohr_radius_m':pair_radius,'pair_binding_energy_eV':pair_binding_eV,
+                    'capture_ledgers':captures,
+                    'scope':'Illustrative isolated single-state companion cloud; no observed mass, particle mass or halo fit is adopted.'})
+    return out
+
+
+def optical_checks(cfg):
+    opt=cfg['optical'];period=opt['period'];omega=2*np.pi/period;width=opt['half_width'];results=[]
+    original_solver=probe_module.solve_ivp
+    def refined_solver(*args,**kwargs):
+        kwargs.update(opt['probe_solver'])
+        return original_solver(*args,**kwargs)
+    probe_module.solve_ivp=refined_solver
+    for amplitude in opt['amplitudes']:
+        def field(t,x):
+            if abs(x)>=width:return 1.,0.,0.
+            f=np.cos(np.pi*x/(2*width))**2;fx=-np.pi/(2*width)*np.sin(np.pi*x/width)
+            modulation=opt['offset']+amplitude*np.cos(omega*t)
+            return 1+f*modulation,fx*modulation,-f*amplitude*omega*np.sin(omega*t)
+        for count in opt['phase_samples']:
+            phases=np.arange(count)*period/count
+            probes=[probe_module.probe(field,opt['source'],opt['detector']-opt['source'],float(t),1.,20.) for t in phases]
+            J=np.array([p['local_event_stretch'] for p in probes])
+            inverse=np.array([1/p['frequency_stretch'] for p in probes])
+            repeat=probe_module.probe(field,opt['source'],opt['detector']-opt['source'],period,1.,20.)
+            repeat_error=abs(repeat['arrival_time']-probes[0]['arrival_time']-period)
+            timing=max(p['frequency_timing_relative_difference'] for p in probes)
+            assert abs(J.mean()-1)<cfg['checks']['periodic_arrival_mean_error'],J.mean()
+            assert repeat_error<cfg['checks']['periodic_repeat_arrival_error']
+            assert timing<cfg['checks']['frequency_timing_relative_difference']
+            assert inverse.mean()>=1-1e-8
+            if amplitude==0:assert max(abs(J-1))<1e-9
+            results.append({'amplitude':amplitude,'phase_samples':count,'mean_arrival_stretch':float(J.mean()),
+                            'minimum_arrival_stretch':float(J.min()),'maximum_arrival_stretch':float(J.max()),
+                            'mean_photon_energy_ratio':float(inverse.mean()),'repeat_arrival_error':repeat_error,
+                            'maximum_frequency_timing_relative_difference':timing,'probes':probes})
+        a,b=results[-2:]
+        assert abs(a['mean_photon_energy_ratio']-b['mean_photon_energy_ratio'])<cfg['checks']['phase_quadrature_change']
+    probe_module.solve_ivp=original_solver
+    return results
+
+
+def main():
+    cfg=json.loads((HERE/'protocol.json').read_text(encoding='utf-8'))
+    states=[ground_state(case,cfg) for case in cfg['ground_state_runs']]
+    a,b=states;energy_change=abs(a['binding_energy']/b['binding_energy']-1);radius_change=abs(a['half_mass_radius']/b['half_mass_radius']-1)
+    assert energy_change<cfg['checks']['relative_ground_state_energy_change']
+    assert radius_change<cfg['checks']['relative_half_mass_radius_change']
+    scalings=physical_scalings(b,cfg);optical=optical_checks(cfg)
+    result={'scope':cfg['scope'],'checks_pass':True,'ground_states':states,
+            'convergence':{'relative_binding_energy_change':energy_change,'relative_half_mass_radius_change':radius_change},
+            'physical_scalings':scalings,'optical_checks':optical,
+            'massless_graviton_binding_or_capture_dynamics_proved':False,'bound_state_stability_spectrum_computed':False,
+            'photon_binding_interaction_joined':False,
+            'source_hashes':{p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in [HERE/'check.py',HERE/'protocol.json',PROBE]}}
+    OUT.mkdir(parents=True,exist_ok=True)
+    (OUT/'companion-self-binding-results.json').write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
+    print('Ground state:',{k:b[k] for k in ['binding_energy','chemical_potential','half_mass_radius','relative_virial_error']})
+    print('Illustrative scalings:',json.dumps([{k:v for k,v in r.items() if k!='capture_ledgers'} for r in scalings]))
+    print('Optical:',json.dumps([{k:v for k,v in r.items() if k!='probes'} for r in optical]))
+
+
+if __name__=='__main__':main()

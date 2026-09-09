@@ -63,3 +63,7 @@ The spherical result concerns a particular field sourced by localized radiation.
 5. Join the resulting stress-energy to both orbital motion and lensing, including extended halo support and available photon supply. Without this, an attractive state need not provide the required galaxy-scale gravity.
 
 These requirements supplement the existing 20 tasks and 32 observational areas. They do not replace distributed-illumination, clock, energy-supply or validation work, and no binding mechanism is adopted by this note.
+
+## First calculation following this question
+
+The [self-binding requirements calculation](../research_work/results/companion-self-binding/report.md) now solves a conditional massive-wave collective equilibrium and quantifies constituent-mass and binding-energy-release requirements. It does not establish ordinary-graviton pair bonds or formation. A separate periodic optical test shows why a repeating bound field cannot simply be assumed to give positive stretch at every emission phase. The next interaction must join production, binding and nonperiodic evolution while preserving energy and applicable occupation/charge constraints; no new mass or force is adopted.
