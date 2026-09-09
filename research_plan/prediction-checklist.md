@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [timing estimator injections](../research_work/results/timing-injection/report.md). An observer-time width estimator was tested on 98 DES cadence/error patterns with artificial unstretched and stretched curves of two shapes. The frozen feasibility gate failed: stretched shoulder-shaped events had only 70-77 of 98 accepted, below the 80% requirement. All 12 trials and the exact repeat are preserved; no real-flux exponent was fitted. Next test explicit partial-coverage and shape handling under a new protocol without relaxing the original gate.
+Latest diagnostic: [timing failure diagnosis](../research_work/results/timing-diagnosis/report.md). An exact attribution of the 12 existing artificial-event trials separates intrinsic sample variation, acceptance selection and fitted-width error. In a stretched shoulder trial, these contributions are +0.042, +0.050 and +0.431, yielding 1.523 instead of 1. Other apparently accurate trials contain cancelling errors. Twenty-four individual fits were replayed. The original feasibility gate remains failed; no real-flux timing inference is established.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

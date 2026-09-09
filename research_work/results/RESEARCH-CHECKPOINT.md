@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [timing estimator injections](timing-injection/report.md). An observer-time width estimator was tested on 98 DES cadence/error patterns with artificial unstretched and stretched curves of two shapes. The frozen feasibility gate failed: stretched shoulder-shaped events had only 70-77 of 98 accepted, below the 80% requirement. All 12 trials and the exact repeat are preserved; no real-flux exponent was fitted. Next test explicit partial-coverage and shape handling under a new protocol without relaxing the original gate.
+Latest result: [timing failure diagnosis](timing-diagnosis/report.md). An exact attribution of the 12 existing artificial-event trials separates intrinsic sample variation, acceptance selection and fitted-width error. In a stretched shoulder trial, these contributions are +0.042, +0.050 and +0.431, yielding 1.523 instead of 1. Other apparently accurate trials contain cancelling errors. Twenty-four individual fits were replayed. The original feasibility gate remains failed; no real-flux timing inference is established.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -32,6 +32,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Companion bath | Forward/inverse energy moments, detailed balance and soft-mode event counts | Fixed isotropic occupation does not repair achromaticity; bath evolution and storage unresolved |
 | Timing inputs | 8 pinned public files and FITS row/pointer audit; no time rescaling | No new exponent fit, selected sample or blind validation |
 | Timing injections | 98 real cadence/error patterns; 12 synthetic runs reproduced exactly | Stretched-shoulder acceptance fails; no real timing inference |
+| Timing diagnosis | 12 slope attributions and 24 individual replay checks | Width errors can dominate selection; failed gate remains failed |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |
