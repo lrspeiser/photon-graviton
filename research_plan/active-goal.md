@@ -2,6 +2,10 @@
 
 Current synthesis: [academic working draft v0.2](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
 
+## Mechanism requirement, latest user clarification
+
+Follow [mechanism-first redshift requirements](mechanism-first-redshift.md): the familiar exponential is not the claimed discovery. Derive a local photon-companion rate from nonexpanding field/source dynamics, then test predictions. Curve tuning alone cannot satisfy the objective. Continue the frozen catalog audit; the next mechanism question is sustained distributed-source evolution in three fixed spatial dimensions, with complete energy accounts.
+
 ## Immediate priority, 9 September 2026
 
 The user now prioritizes tuning and testing the redshift prediction against observations. Follow [the redshift priority plan](redshift-priority.md) before additional capture/halo research. The next calculation is a residual/input audit, followed by a small frozen candidate comparison and independent validation. The whole theory remains incomplete.

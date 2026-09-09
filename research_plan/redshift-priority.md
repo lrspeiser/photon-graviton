@@ -2,6 +2,10 @@
 
 User direction: 9 September 2026. Make agreement with observed redshifts the immediate research priority. Preserve the broader companion-energy program, but defer new capture/halo research unless needed to make or check redshift predictions.
 
+## Latest constraint
+
+The user requires a physical approach independent of cosmic expansion, not novelty claimed for an existing exponential relation. Follow [the mechanism-first requirements](mechanism-first-redshift.md). Empirical tuning is a diagnostic; the central task is to derive alpha from a shared interaction and measured or independently specified inputs.
+
 ## Objective
 
 Develop the simplest shared environmental-time propagation law that predicts catalog redshifts at the user-stipulated published distances, quantifies unresolved scatter, and improves prediction on data excluded from fitting. Do not equate a close fitted curve with confirmation of the mechanism. No dark-matter, expansion or Big-Bang explanation is adopted.
