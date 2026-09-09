@@ -2,6 +2,10 @@
 
 Current synthesis: [academic working draft v0.3](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
 
+## Modified gravity explicitly authorized
+
+The user explicitly permits gravity laws to change when gravity approaches zero. Standard-GR results remain conditional comparisons, not restrictions on all candidates. Derive proposed environmental switches, gravity reaction and photon/clock consequences from a shared physical model; label known structures and unverified originality. Do not insert a fitted expansion history.
+
 ## Latest physical premise
 
 Follow [void time and constant local light speed](void-time-premise.md): preserve the user's cumulative void-time origin and constant locally measured c. Distinguish external-clock travel delay from changing physical distance. Current optical-factor tests do not yet establish the necessary matter clock/ruler completion.
@@ -156,3 +160,5 @@ Manuscript v0.3 integrates all current redshift comparisons and the conditional 
 [Nonuniform finite-mode transport](../research_work/results/distributed-modes/report.md) retains mean rolling with moving photons and checked energy/momentum in a periodic 3D truncation, but nonzero-mode energy is resolution-sensitive and physical local clock/ruler interpretation remains unresolved. No continuum or observational success is claimed.
 
 [Pure clock-rate geometry check](../research_work/results/time-only-geometry/report.md): under ordinary GR with zero cosmological constant, an exactly flat fixed spatial metric and zero shift force zero normal energy density despite arbitrary lapse evolution. A sample lapse dip needs null-energy-violating transverse stresses. This restricts that ansatz, not nonexpansion generally; a curved nonexpanding geometry or explicitly different gravity/matter coupling needs derivation. No expansion law is adopted.
+
+[Shared-action acceleration screening](../research_work/results/acceleration-screening/report.md) permits a weak-acceleration flat scalar potential but its direct gravity reaction suppresses spherical attraction and loses ellipticity for strong coupling. Candidate retained as unfavorable, not adopted. [Eight-region CV](../research_work/results/redshift-priority/coarse-sky-report.md) likewise finds no improvement from the smooth distance rate. The original full objective remains incomplete.
