@@ -1,5 +1,7 @@
 # Candidate catalog and environmental-input audit
 
+The [radio quality join](elves-radio-quality-report.md) adds 14 fixed-cone matches, nine supported by explicit AGC/UGC aliases. Thirteen carry detection class 1 and one positional association carries class 2, which depends on a known optical redshift. No matched entry carries the source's confusion flag. These are measurement-source clues, not freshness or void-path evidence; all 26 pending targets remain retained and no outcomes were used.
+
 The [velocity metadata audit](elves-velocity-metadata-report.md) retrieved source metadata for all 26 pending positions. Fifteen have one name/alias-supported counterpart; five cones contain multiple objects. Source review distinguishes optical-convention HI profile midpoints from flux-weighted centers. No target outcomes were scored, no original ELVES per-row measurement chain is yet certified, and freshness decisions remain unchanged.
 
 Candidate [frame sensitivity](elves-frame-report.md) is now quantified from sky positions alone. ELVES/SIMBAD source conventions cannot be silently mixed with CF4 CMB shifts. No candidate outcomes were transformed, fitted or scored. The two unresolved PGC/group matches remain withheld after additional resolver checks.
