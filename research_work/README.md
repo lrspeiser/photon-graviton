@@ -21,7 +21,7 @@ python research_work/run_checks.py
 python research_work/run_checks.py --baseline
 ```
 
-The first command runs 12 jobs: catalog no-loss comparison, closed and open energy ledgers, internal/external spatial capture, microphysical kinematics, frequency transfer, scalar-wave evolution, gravity/lensing response, the data/requirement audit, and the conversion-first empirical/interaction pass. The second adds the historical baseline's three scripts as one additional job, run in an isolated copy. Each job logs its output, and the runner checks that saved results and the 271 recovered original files stay unchanged.
+The first command runs 13 jobs: catalog no-loss comparison, closed and open energy ledgers, internal/external spatial capture, microphysical kinematics, frequency transfer, scalar-wave evolution, gravity/lensing response, the data/requirement audit, the conversion-first empirical pass, and interaction-rate constraints. The second adds the historical baseline's three scripts as one additional job, run in an isolated copy. Each job logs its output, and the runner checks that saved results and the 271 recovered original files stay unchanged.
 
 To select a new output location:
 

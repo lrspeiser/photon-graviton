@@ -1,0 +1,126 @@
+{
+  "scope": "Necessary constraints and stipulated transport comparisons; no new astronomical fit or physical rate",
+  "source_alpha_per_mpc": 0.0002488993286382367,
+  "scalar_vertex": {
+    "signature": "+---",
+    "samples": 100,
+    "max_ward_error": 0.0,
+    "max_collinear_vertex": 0.0,
+    "all_noncollinear_companion_four_momenta_spacelike": true
+  },
+  "absolute_vs_fractional": [
+    {
+      "initial_energy_ev": 0.5,
+      "fixed_quantum_mean_z": 0.22222222222222232,
+      "fractional_loss_z": 0.10000000000000009,
+      "absolute_loss_ev": 0.09090909090909091,
+      "path_mpc": 382.9266246951339
+    },
+    {
+      "initial_energy_ev": 1.0,
+      "fixed_quantum_mean_z": 0.10000000000000009,
+      "fractional_loss_z": 0.10000000000000009,
+      "absolute_loss_ev": 0.09090909090909091,
+      "path_mpc": 382.9266246951339
+    },
+    {
+      "initial_energy_ev": 2.0,
+      "fixed_quantum_mean_z": 0.04761904761904767,
+      "fractional_loss_z": 0.10000000000000009,
+      "absolute_loss_ev": 0.09090909090909091,
+      "path_mpc": 382.9266246951339
+    },
+    {
+      "initial_energy_ev": 4.0,
+      "fixed_quantum_mean_z": 0.023255813953488413,
+      "fractional_loss_z": 0.10000000000000009,
+      "absolute_loss_ev": 0.09090909090909091,
+      "path_mpc": 382.9266246951339
+    }
+  ],
+  "reversible_bath_ladder": [
+    {
+      "occupation": 0.0,
+      "mean_photon_energy_ev": 0.899999999999989,
+      "net_energy_received_by_environment_ev": 0.10000000000001097,
+      "variance_ev2": 9.999999999999891e-05,
+      "predicted_variance_ev2": 9.999999999999999e-05,
+      "added_energy_rms_as_km_s": 3331.027311111133,
+      "probability_at_boundaries": 0.0
+    },
+    {
+      "occupation": 1.0,
+      "mean_photon_energy_ev": 0.9000000000000008,
+      "net_energy_received_by_environment_ev": 0.0999999999999992,
+      "variance_ev2": 0.0003000000000000008,
+      "predicted_variance_ev2": 0.00030000000000000003,
+      "added_energy_rms_as_km_s": 5769.508544243989,
+      "probability_at_boundaries": 0.0
+    },
+    {
+      "occupation": 10.0,
+      "mean_photon_energy_ev": 0.8999999999999259,
+      "net_energy_received_by_environment_ev": 0.10000000000007414,
+      "variance_ev2": 0.0020999999999998277,
+      "predicted_variance_ev2": 0.0021,
+      "added_energy_rms_as_km_s": 15264.684795132514,
+      "probability_at_boundaries": 2.123855410691971e-84
+    }
+  ],
+  "fractional_event_requirements": [
+    {
+      "shift": 1.1,
+      "illustrative_added_width_km_s": 1.0,
+      "max_fraction_per_event": 1.167398968642948e-10,
+      "min_events_per_mpc": 2132084.534283696,
+      "max_mean_event_spacing_pc": 0.46902455503996426
+    },
+    {
+      "shift": 1.1,
+      "illustrative_added_width_km_s": 10.0,
+      "max_fraction_per_event": 1.1673989679999892e-08,
+      "min_events_per_mpc": 21320.84535457967,
+      "max_mean_event_spacing_pc": 46.90245547816434
+    },
+    {
+      "shift": 1.1,
+      "illustrative_added_width_km_s": 100.0,
+      "max_fraction_per_event": 1.1673989037041207e-06,
+      "min_events_per_mpc": 213.2084652885032,
+      "max_mean_event_spacing_pc": 4690.245289495655
+    },
+    {
+      "shift": 2.0,
+      "illustrative_added_width_km_s": 1.0,
+      "max_fraction_per_event": 1.6052147181044527e-11,
+      "min_events_per_mpc": 15505671.972167939,
+      "max_mean_event_spacing_pc": 0.06449252904324043
+    },
+    {
+      "shift": 2.0,
+      "illustrative_added_width_km_s": 10.0,
+      "max_fraction_per_event": 1.6052147172203615e-09,
+      "min_events_per_mpc": 155056.7198070787,
+      "max_mean_event_spacing_pc": 6.449252900772041
+    },
+    {
+      "shift": 2.0,
+      "illustrative_added_width_km_s": 100.0,
+      "max_fraction_per_event": 1.6052146288112766e-07,
+      "min_events_per_mpc": 1550.5672834701006,
+      "max_mean_event_spacing_pc": 644.9252545571866
+    }
+  ],
+  "checks": {
+    "scalar_gauge_and_kinematic_identities": true,
+    "fixed_fraction_achromatic": true,
+    "ladder_distribution_moments_and_environment_ledger": true
+  },
+  "assumptions": [
+    "Scalar F^2 vertex is one comparison, not an ordinary graviton identity.",
+    "Standard massless photon dispersion and vacuum momentum conservation for vertex result.",
+    "Ladder down/up rates are specified, not derived; environment occupancy fixed in reservoir limit.",
+    "Environment energy is explicitly debited/credited; its finite capacity must be derived for a real model.",
+    "A source of recoil, medium dispersion, time-dependent background or different action requires new calculations."
+  ]
+}

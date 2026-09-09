@@ -18,6 +18,8 @@ The [universe contract](research_plan/universe-contract.md) fixes published gala
 
 ## Current findings
 
+- The resumed [interaction-rate study](research_work/results/interaction-rate/derivation.md) derives conditions for the same fractional shift across colors, checks why one scalar-photon vacuum operator does not supply partial redshift under standard dispersion, and shows how reverse transfers can increase spectral noise. These candidate-specific constraints do not rule out the overall conversion-first program.
+
 - **Latest conversion-first pass:** a constant photon-energy loss law was fitted to 164 previously exposed galaxy groups with fixed published distances. It gives alpha about 7.63e-5 per million light-years; the nearby data do not distinguish it from a linear distance trend. A resonant inelastic mode toy conserves energy without special time stretching, but does not derive the physical rate, smooth redshift, capture or gravity. Read [the executed pass](research_work/results/conversion-first/report.md) and [revised goal](research_plan/active-goal.md).
 
 - Changing the propagation history improves the earlier redshift–brightness fit, but does not establish an interaction or protect atomic/cavity frequency ratios.
@@ -79,7 +81,7 @@ python research_work/run_checks.py
 python research_work/run_checks.py --baseline
 ```
 
-The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest conversion-first verification passed all 12 current default jobs; the optional historical baseline now makes 13 jobs and was not rerun for this update. See [current verification](research_work/conversion-first-verification.json). The earlier [publication verification](research_work/publication-verification.json) records the successful 12-job suite at that time, including its optional baseline.
+The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest [interaction-rate verification](research_work/interaction-rate-verification.json) records 13 current default jobs; the optional historical baseline makes 14 jobs and was not rerun for this update. Earlier [conversion-first verification](research_work/conversion-first-verification.json) and [publication verification](research_work/publication-verification.json) retain their original suite scope and results.
 
 The historical scripts can still run directly, but doing so overwrites their corresponding outputs. Use the isolated runner above for baseline reproduction. `python restore_data.py` restores the compressed covariance if needed by older brightness analyses; the current diagnostics read its compressed form directly. These are research tools, not a complete cosmology library.
 

@@ -29,4 +29,6 @@ Completion requires a consistent theory and declared observational tests, not si
 
 ## App goal state
 
-At this update the existing app goal was reported as blocked under its older objective. The exposed goal API permits only completion/blocking, not editing its objective or resuming it. This file and the backlog record the revised project objective; they do not claim to change the app's scheduler state.
+The app now reports the goal as active after the user's resume command. Its stored objective text is literally "resume"; the research scope remains the substantive objective above and the user's prior directions. The goal API does not expose objective editing. The prior blocked status was administrative and is no longer present.
+
+The first resumed pass derives [interaction-rate requirements](../research_work/results/interaction-rate/derivation.md): achromatic energy loss, a scalar vacuum-vertex constraint, and reverse-transfer spectral noise. These are candidate-specific results, not completion of the overall goal.

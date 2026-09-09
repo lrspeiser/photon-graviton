@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+Resumed work: [interaction-rate requirements](interaction-rate/derivation.md) now connect the empirical loss coefficient to conditional transition kernels, distinguish fixed-energy from fractional loss, check the scalar F-squared vacuum vertex, and calculate reverse-event broadening. These are preliminary T03/T04/T05 results; the full observational and field-theory requirements remain open.
+
 Latest direction: [conversion-first active goal](../../research_plan/active-goal.md). The user permits conversion without special time/void stretching as the root cause. [The executed conversion-first pass](conversion-first/report.md) fits the stipulated rate on 164 previously exposed groups, checks 18 energy/storage cases, and maps all 32 remaining requirements. It does not establish a microscopic cause, new independent validation or a complete gravitational response. The original time idea was meant to stretch light, including in nearby galaxies.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
