@@ -11,3 +11,5 @@ Energy conservation is mandatory. No-loss companions, permanent storage, new fie
 The original snapshot is almost complete; the five absent files are historical v9 paper-building sources. Final v9 paper and current companion scripts/data are present. See ../RECOVERY_REPORT.md in the outputs folder for recovery details.
 
 For the distinction between energy conservation, production rate, graviton number and capture, read [energy-exchange.md](energy-exchange.md).
+
+For the working redshift hypothesis, available prediction formulas and all 32 response areas, read [prediction-checklist.md](prediction-checklist.md).
