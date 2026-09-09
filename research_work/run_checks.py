@@ -75,6 +75,7 @@ def main():
         ('interaction-rate/check_interaction_rate.py', []),
         ('matter-assisted/check_matter_assisted.py', []),
         ('collective-response/check_collective_response.py', []),
+        ('oscillator-response/check_oscillator_response.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
