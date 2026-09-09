@@ -2,6 +2,18 @@
 
 We do not yet know a physical conversion rate for this candidate. Four quantities must be kept distinct.
 
+## Clarification: what the earlier energy shortfall established
+
+The earlier calculation tested an optimistic source budget against a **specific ordinary, cold stored-mass response**. It inferred a Newtonian-equivalent extra mass from the archived rotation curves and baryonic subtraction, converted that equivalent mass to energy using E=M c², and compared it with the stipulated photon supply. The all-photon comparison allowed 100% conversion and capture of present luminosity over 10 billion years. The redshift-only comparison additionally used the archived empirical loss coefficient.
+
+An upper-bound comparison does not require knowing the actual conversion rate: a perfect-transfer assumption gives the maximum available deposited energy within that source history and without another energy source. However, converting that bound into a bound on gravity **does require an assumed gravitational response and stored state**. This calculation did not derive how the proposed graviton deposit curves spacetime. It therefore does not establish that the fictional mechanism cannot produce enough gravity. Earlier wording that omitted this condition was too broad.
+
+The correct claim is: the archived supply is insufficient for the stipulated cold-mass, ordinary-gravity benchmark and source history. The general photon-to-deposit theory remains undetermined until its stress tensor, field equations, spatial distribution and motion/lensing predictions are derived. The equivalent missing mass is a comparison quantity, not an independently observed dark-matter reservoir.
+
+In general relativity curvature is related to the complete stress-energy distribution, including energy density, momentum and stresses, together with geometric initial/boundary conditions. It is not a universal budget of joules spent to bend space by a specified amount. E=M c² alone does not specify a geometry. Classical field equations can predict curvature and motion without knowing a microscopic graviton count; another candidate law requires its own corresponding equations. See [Carroll's derivation of Einstein's equations and their Newtonian limit](https://ned.ipac.caltech.edu/level5/March01/Carroll3/Carroll4.html). This use of general relativity as a comparison does not adopt dark matter, an expanding background or a Big-Bang history.
+
+Energy conservation still constrains the complete system, but it does not by itself determine the gravitational response per deposited joule. Nor does the missing response law establish that arbitrarily large enhancement is physically consistent. That question needs the full candidate, including stability and lensing.
+
 ## 1. Energy accounting
 
 If photon energy decreases by a positive amount Delta E_gamma, conservation requires that the complete system account for it:
