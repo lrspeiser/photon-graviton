@@ -1,0 +1,9 @@
+# Atomic line response in the unscreened candidate
+
+Precalculation specification, 9 September 2026. Test an optional explicit matter completion: a Dirac electron with fixed mass, charge, hbar and limiting speed c_m=c0 in the electrostatic potential of a heavy point nucleus, while the candidate optical constitutive law has epsilon=mu=n. This is a preferred-frame effective model, not a Lorentz-invariant completed theory. The Coulomb strength is divided by n; do not replace c_m by c0/n silently. No QED, recoil or nuclear-size correction is included.
+
+Use established Dirac-Coulomb energy levels, with illustrative baseline fine-structure coupling 1/137 (not a precision determination). Evaluate Ly-alpha 1s to 2p(3/2), a gross 1s to 3p(3/2) separation, and the 2p fine-structure splitting, in units of m_e c_m^2. Use 50-digit arithmetic. n_e=1 and n_o=1,1.001,1.01,1.1,2. These are illustrative field changes, not fitted data or laboratory bounds.
+
+For the homogeneous candidate carrier propagation has S_ref=n_o/n_e, an established consequence of the stipulated dispersion. Measured line redshift factor is S_ref times the ratio of the same transition's detector/source reference frequencies (established normalization). Compute it separately for each transition without an independent per-line parameter. Compare exact ratios to leading electronic n^-2 and fine-structure n^-4 scaling; approximations need only agree to 0.1 percent over this range. Verify that n=1 yields zero measured redshift and finite changes yield unequal line-redshift factors. Do not call this a measured astrophysical test.
+
+This diagnoses one unscreened matter completion. Matched screened endpoint environments may avoid the response, but protection must come from the same physical theory. No uniqueness claim is made for the established spectroscopy or internally computed ratios.
