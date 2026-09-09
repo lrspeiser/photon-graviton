@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [finite radiation trains](../research_work/results/radiation-train/report.md). Eight refined shared-field backgrounds and 104 carrier/event comparisons show reduced sampled residual variation from closer packet arrivals, with continued drift and source-power dependence. Linear detrending is descriptive and does not remove physical event variation. A steady source population, environmental coupling, matter clocks, capture and gravity remain unproved.
+Latest diagnostic: [sustained illumination](../research_work/results/sustained-illumination/report.md). A derived rolling branch is approached by six longer finite-source backgrounds and 60 carrier/event comparisons. Numerical energy accounting distinguishes field production from light remaining in transit. Nearly steady stretching in one dimension does not establish a static cosmic field, its three-dimensional behavior, matter clocks, capture or gravity.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

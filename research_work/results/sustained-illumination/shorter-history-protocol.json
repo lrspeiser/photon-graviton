@@ -1,0 +1,36 @@
+{
+  "scope": "Test a derived rolling continuum branch against longer finite photon trains in the same optional 1D Hamiltonian. No physical scale calibration, matter-clock derivation, capture, gravitational response or observational validation.",
+  "domain": [-40.0, 32.0],
+  "cells": [2304, 4608],
+  "centers": [0.0, 3.0, 6.0],
+  "half_width": 0.5,
+  "smoothing_width": 0.25,
+  "field_speed": 0.5,
+  "inertia": 1.0,
+  "source_x": -2.0,
+  "detector_x": 9.0,
+  "source_duration": 32.0,
+  "end_time": 44.0,
+  "cases": [
+    {"power": 0.003, "spacing": 0.5},
+    {"power": 0.003, "spacing": 0.25},
+    {"power": 0.006, "spacing": 0.25}
+  ],
+  "probe_launches": [6.0, 8.13, 10.31, 12.07, 18.17, 20.31, 22.07, 24.53, 26.19, 28.07],
+  "late_launch_minimum": 18.0,
+  "energy_rate_window": [24.0, 30.0],
+  "control_volume": [-2.0, 9.0],
+  "control_edge_width": 0.25,
+  "checks": {
+    "relative_energy_drift": 2e-7,
+    "relative_grid_change_in_total_photon_loss": 0.02,
+    "absolute_grid_change_in_probe_stretch": 0.0001,
+    "relative_grid_change_in_mean_redshift": 0.02,
+    "frequency_timing_relative_difference": 1e-7,
+    "independent_arrival_difference": 1e-7,
+    "absolute_reference_probe_difference": 1e-6,
+    "relative_reference_energy_difference": 1e-7,
+    "relative_integrated_control_ledger_error": 0.002
+  },
+  "interpretation": "Agreement with an analytic branch is measured, not imposed as a pass criterion. Finite deterministic packets and startup transients are not a proof of continuum stability or cosmic stationarity. All source photons exist initially with total energy power times source_duration."
+}
