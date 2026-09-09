@@ -1,0 +1,84 @@
+{
+  "protocol_sha256": "065ed962d6d83058dc4dee2f98a53be6eda487628388c7308ea1fb614ca56e04",
+  "groups": 164,
+  "sky_tiles": 65,
+  "out_of_fold": {
+    "linear": {
+      "n": 164,
+      "rms": 448.08652642992735,
+      "mae": 326.7777232574074,
+      "median_absolute": 231.68163700587223,
+      "bias": -20.015937087670338
+    },
+    "constant": {
+      "n": 164,
+      "rms": 448.38135254161443,
+      "mae": 326.6849907890368,
+      "median_absolute": 231.18902617801876,
+      "bias": -23.5536778164312
+    },
+    "smooth": {
+      "n": 164,
+      "rms": 452.51798798949005,
+      "mae": 330.911388739317,
+      "median_absolute": 242.8876812662578,
+      "bias": -14.058957867415968
+    }
+  },
+  "difference_from_constant_95": {
+    "linear": [
+      -1.744650112232233,
+      1.2348752231564784
+    ],
+    "smooth": [
+      -0.7221400292121544,
+      9.263436832575328
+    ]
+  },
+  "baseline_correlations": {
+    "distance": 0.13943362028055012,
+    "sky_x": 0.25604948458565807,
+    "sky_y": 0.0925563916095426,
+    "sky_z": 0.16363543710296183
+  },
+  "baseline_distance_quartiles": [
+    {
+      "distance_min": 10.204694319421995,
+      "distance_max": 22.120757764641272,
+      "n": 41,
+      "rms": 366.6012585262615,
+      "mae": 271.8697864463518,
+      "median_absolute": 196.93227870877828,
+      "bias": -79.9225845659676
+    },
+    {
+      "distance_min": 22.151339841371943,
+      "distance_max": 28.89348981559084,
+      "n": 41,
+      "rms": 398.33230743829733,
+      "mae": 324.1193097541703,
+      "median_absolute": 316.35028058055855,
+      "bias": 14.490814624849593
+    },
+    {
+      "distance_min": 29.10717118066605,
+      "distance_max": 51.07401503571944,
+      "n": 41,
+      "rms": 500.29122699221136,
+      "mae": 343.7210288536943,
+      "median_absolute": 213.81825845460205,
+      "bias": -7.391360450877873
+    },
+    {
+      "distance_min": 52.504919867476204,
+      "distance_max": 93.19658525658426,
+      "n": 41,
+      "rms": 506.0063719418712,
+      "mae": 373.23427949314953,
+      "median_absolute": 254.50426551724513,
+      "bias": 129.8609166208635
+    }
+  ],
+  "environment_inputs_available": false,
+  "scope": "Previously exposed exploratory sky-tile cross-validation; nearby tiles and calibrations can remain correlated."
+}
