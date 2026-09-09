@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [broadband receiver response](../research_work/results/broadband-capture/derivation.md). An explicit scalar oscillator supplies a receiving cross section with an inverse-fourth-power tail and an energy/optical-theorem check. Broadband weighting changes cancellation: regular passive absorption in an isotropic thermal-spectrum bath has positive slowing, while nonthermal spectra remain distinct. Actual companion production spectra, permanent storage and galactic evolution are still unresolved.
+The latest calculation is [joined source and receiver](../research_work/results/source-receiver/derivation.md). The converter-generated spectrum now drives the receiver in an explicit one-zone energy ledger. Matching the response shapes gives a positive weak-capture slowing coefficient above 5/6 for finite photon energy. Absorption strength and detuning change both received power and spectral drift. The converter retains its known color/angle failures; no complete source-funded galaxy is established.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -17,6 +17,7 @@ The latest calculation is [broadband receiver response](../research_work/results
 | [Capture momentum](../research_work/results/capture-momentum/derivation.md) | Exact absorption, mass loading, radial force and conditional orbital changes |
 | [All-direction capture](../research_work/results/isotropic-capture/derivation.md) | Direction weighting, orbital drag and conditional spectral cancellation |
 | [Broadband receiver](../research_work/results/broadband-capture/derivation.md) | Derived oscillator cross section, spectral weighting and a conditional thermal-drag bound |
+| [Joined source and receiver](../research_work/results/source-receiver/derivation.md) | Generated spectrum, frequency-resolved capture/escape and matched-response drift identity |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

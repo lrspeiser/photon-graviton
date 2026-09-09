@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [broadband receiver](../research_work/results/broadband-capture/derivation.md). An explicit scalar oscillator supplies a receiving cross section with an inverse-fourth-power tail and an energy/optical-theorem check. Broadband weighting changes cancellation: regular passive absorption in an isotropic thermal-spectrum bath has positive slowing, while nonthermal spectra remain distinct. Actual companion production spectra, permanent storage and galactic evolution are still unresolved.
+Latest diagnostic: [joined source and receiver](../research_work/results/source-receiver/derivation.md). The converter-generated spectrum now drives the receiver in an explicit one-zone energy ledger. Matching the response shapes gives a positive weak-capture slowing coefficient above 5/6 for finite photon energy. Absorption strength and detuning change both received power and spectral drift. The converter retains its known color/angle failures; no complete source-funded galaxy is established.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 

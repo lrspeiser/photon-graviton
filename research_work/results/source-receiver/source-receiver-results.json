@@ -1,0 +1,380 @@
+{
+  "scope": "Conditional dilute/incoherent source-receiver spectral closure and one-zone energy kinetics. The converter retains its known color/angle failures. No complete microscopic theory, geometry, permanent deposit, stellar supply normalization or observational validation.",
+  "source_spectrum": "S(w) proportional to w^2 (1-w/E)^3 / [(1-w^2)^2+d_em^2*w^2], 0<w<E; derived from the earlier point-oscillator conversion differential rate.",
+  "kinetic_equation": "du_w/dt=S_w-(Gamma_abs(w)+1/t_escape)u_w; receiving power Gamma_abs(w)u_w and escape power u_w/t_escape are explicit.",
+  "optically_weak_matched_receiver": [
+    {
+      "photon_energy_over_emitter_Omega": 10.0,
+      "emitter_damping_ratio": 0.03,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.03,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8888791110131536,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8888791110131051,
+      "identity_error": 4.851674617611934e-14
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.03,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.03,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8383832561859265,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8383832561858774,
+      "identity_error": 4.907185768843192e-14
+    },
+    {
+      "photon_energy_over_emitter_Omega": "asymptotic reference, not finite source",
+      "emitter_damping_ratio": 0.03,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.03,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8333333333333814,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8333333333333334,
+      "identity_error": 4.807265696626928e-14
+    },
+    {
+      "photon_energy_over_emitter_Omega": 10.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8887864256106602,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8887864256106642,
+      "identity_error": 3.9968028886505635e-15
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8383777320677211,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.838377732067726,
+      "identity_error": 4.884981308350689e-15
+    },
+    {
+      "photon_energy_over_emitter_Omega": "asymptotic reference, not finite source",
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8333333333333279,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8333333333333334,
+      "identity_error": 5.440092820663267e-15
+    },
+    {
+      "photon_energy_over_emitter_Omega": 10.0,
+      "emitter_damping_ratio": 0.5,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.5,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8870080089861785,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8870080089861785,
+      "identity_error": 0.0
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.5,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.5,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8382705826362444,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8382705826362443,
+      "identity_error": 1.1102230246251565e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": "asymptotic reference, not finite source",
+      "emitter_damping_ratio": 0.5,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.5,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.0,
+      "steady_received_power_fraction": 0.0,
+      "steady_escape_power_fraction": 1.0,
+      "normalized_absorption_drag_coefficient": 0.8333333333333331,
+      "receiving_to_incident_power_ledger_error": 0.0,
+      "matched_analytic_coefficient": 0.8333333333333334,
+      "identity_error": 2.220446049250313e-16
+    }
+  ],
+  "detuning_and_loading_scan": [
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.5,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.01,
+      "steady_received_power_fraction": 3.312868269123869e-05,
+      "steady_escape_power_fraction": 0.9999668713174674,
+      "normalized_absorption_drag_coefficient": -0.20095541020612112,
+      "receiving_to_incident_power_ledger_error": 1.5876189252139739e-13
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.5,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 1.0,
+      "steady_received_power_fraction": 0.0026577337250768916,
+      "steady_escape_power_fraction": 0.9973422662749234,
+      "normalized_absorption_drag_coefficient": -0.3701176332978971,
+      "receiving_to_incident_power_ledger_error": 2.220446049250313e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.5,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 100.0,
+      "steady_received_power_fraction": 0.11091319160835943,
+      "steady_escape_power_fraction": 0.8890868083916407,
+      "normalized_absorption_drag_coefficient": -0.5676357831067073,
+      "receiving_to_incident_power_ledger_error": 0.0
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.5,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 10000.0,
+      "steady_received_power_fraction": 0.8680213006925777,
+      "steady_escape_power_fraction": 0.131978699307423,
+      "normalized_absorption_drag_coefficient": -0.45740007051673637,
+      "receiving_to_incident_power_ledger_error": 6.661338147750939e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.8,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.01,
+      "steady_received_power_fraction": 0.0005967204940788115,
+      "steady_escape_power_fraction": 0.9994032795059213,
+      "normalized_absorption_drag_coefficient": -1.684707025167218,
+      "receiving_to_incident_power_ledger_error": 2.220446049250313e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.8,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 1.0,
+      "steady_received_power_fraction": 0.04721249087878151,
+      "steady_escape_power_fraction": 0.9527875091212185,
+      "normalized_absorption_drag_coefficient": -1.947953712647419,
+      "receiving_to_incident_power_ledger_error": 0.0
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.8,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 100.0,
+      "steady_received_power_fraction": 0.6755574826979623,
+      "steady_escape_power_fraction": 0.3244425173020389,
+      "normalized_absorption_drag_coefficient": -2.1554272432919825,
+      "receiving_to_incident_power_ledger_error": 1.3322676295501878e-15
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 0.8,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 10000.0,
+      "steady_received_power_fraction": 0.9705189223023654,
+      "steady_escape_power_fraction": 0.029481077697636734,
+      "normalized_absorption_drag_coefficient": -1.9869503042091068,
+      "receiving_to_incident_power_ledger_error": 1.9984014443252818e-15
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.01,
+      "steady_received_power_fraction": 0.004997782798681947,
+      "steady_escape_power_fraction": 0.9950022172013182,
+      "normalized_absorption_drag_coefficient": 0.8371423864530725,
+      "receiving_to_incident_power_ledger_error": 2.220446049250313e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 1.0,
+      "steady_received_power_fraction": 0.29451620953522656,
+      "steady_escape_power_fraction": 0.7054837904647734,
+      "normalized_absorption_drag_coefficient": 0.7532067362373502,
+      "receiving_to_incident_power_ledger_error": 0.0
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 100.0,
+      "steady_received_power_fraction": 0.8967358332745753,
+      "steady_escape_power_fraction": 0.10326416672542489,
+      "normalized_absorption_drag_coefficient": 0.4308018716134603,
+      "receiving_to_incident_power_ledger_error": 2.220446049250313e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 10000.0,
+      "steady_received_power_fraction": 0.9816855467606814,
+      "steady_escape_power_fraction": 0.018314453239318913,
+      "normalized_absorption_drag_coefficient": 0.35417274805598703,
+      "receiving_to_incident_power_ledger_error": 4.440892098500626e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.2,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.01,
+      "steady_received_power_fraction": 0.0015114351321673667,
+      "steady_escape_power_fraction": 0.9984885648678327,
+      "normalized_absorption_drag_coefficient": 3.676385999378525,
+      "receiving_to_incident_power_ledger_error": 0.0
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.2,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 1.0,
+      "steady_received_power_fraction": 0.11632838468096492,
+      "steady_escape_power_fraction": 0.883671615319035,
+      "normalized_absorption_drag_coefficient": 3.800001914250015,
+      "receiving_to_incident_power_ledger_error": 0.0
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.2,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 100.0,
+      "steady_received_power_fraction": 0.8636182165983224,
+      "steady_escape_power_fraction": 0.13638178340167742,
+      "normalized_absorption_drag_coefficient": 3.679894553365894,
+      "receiving_to_incident_power_ledger_error": 2.220446049250313e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 1.2,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 10000.0,
+      "steady_received_power_fraction": 0.9854669599156568,
+      "steady_escape_power_fraction": 0.014533040084343606,
+      "normalized_absorption_drag_coefficient": 3.515856482365904,
+      "receiving_to_incident_power_ledger_error": 4.440892098500626e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 2.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 0.01,
+      "steady_received_power_fraction": 0.00026012445454020737,
+      "steady_escape_power_fraction": 0.9997398755454595,
+      "normalized_absorption_drag_coefficient": 1.8741453897324978,
+      "receiving_to_incident_power_ledger_error": 3.3306690738754696e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 2.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 1.0,
+      "steady_received_power_fraction": 0.023062722941433956,
+      "steady_escape_power_fraction": 0.9769372770585665,
+      "normalized_absorption_drag_coefficient": 1.8829182016050785,
+      "receiving_to_incident_power_ledger_error": 4.440892098500626e-16
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 2.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 100.0,
+      "steady_received_power_fraction": 0.6442557682766101,
+      "steady_escape_power_fraction": 0.35574423172339,
+      "normalized_absorption_drag_coefficient": 1.811579631495269,
+      "receiving_to_incident_power_ledger_error": 0.0
+    },
+    {
+      "photon_energy_over_emitter_Omega": 100.0,
+      "emitter_damping_ratio": 0.1,
+      "receiver_Omega_over_emitter_Omega": 2.0,
+      "receiver_damping_ratio": 0.1,
+      "capture_rate_at_receiver_resonance_times_escape_time": 10000.0,
+      "steady_received_power_fraction": 0.9884826655675507,
+      "steady_escape_power_fraction": 0.011517334432450196,
+      "normalized_absorption_drag_coefficient": 1.774683093449577,
+      "receiving_to_incident_power_ledger_error": 8.881784197001252e-16
+    }
+  ],
+  "time_dependent_energy_checks": [
+    {
+      "companion_energy_over_emitter_Omega": 0.2,
+      "capture_rate_times_escape_time": 0.10845986984815621,
+      "max_reservoir_error": 1.6326523466503318e-13,
+      "max_energy_ledger_error": 5.551115123125783e-17
+    },
+    {
+      "companion_energy_over_emitter_Omega": 1.0,
+      "capture_rate_times_escape_time": 10.0,
+      "max_reservoir_error": 2.959232858756877e-11,
+      "max_energy_ledger_error": 4.263256414560601e-14
+    },
+    {
+      "companion_energy_over_emitter_Omega": 3.0,
+      "capture_rate_times_escape_time": 0.0015603058199407088,
+      "max_reservoir_error": 4.660716257376407e-13,
+      "max_energy_ledger_error": 6.661338147750939e-16
+    },
+    {
+      "companion_energy_over_emitter_Omega": 30.0,
+      "capture_rate_times_escape_time": 1.2373021863129636e-07,
+      "max_reservoir_error": 2.695478389103112e-14,
+      "max_energy_ledger_error": 1.3010426069826053e-18
+    }
+  ],
+  "force_branch_note": "C is normalized to receiving-channel absorption power. In the constant-branch scalar oscillator, reradiated companion scattering has the same spectral shape and adds force; permanent storage efficiency and receiver identity remain separate.",
+  "unresolved": [
+    "Absolute converter rate, stellar photon spectrum and finite source history",
+    "Spatial/angular transport and field-mediated emitter-receiver correlations",
+    "Real receiver, capacity, heating and inverse transitions",
+    "Full momentum balance, orbital support and evolving gravity",
+    "Achromatic redshift, sharp images, timing and joint lensing"
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.26646440000331495
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.763357800002268
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7450482999993255
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.2594611999957124
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.191683800003375
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.4446803999962867
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.8468406000029063
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1780026000051294
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.6694817999959923
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.3261220999993384
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.06682150000415277
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.8473727000018698
+    },
+    {
+      "script": "interaction-rate/check_interaction_rate.py",
+      "exit_code": 0,
+      "seconds": 0.6160825999977533
+    },
+    {
+      "script": "matter-assisted/check_matter_assisted.py",
+      "exit_code": 0,
+      "seconds": 0.7855423000000883
+    },
+    {
+      "script": "collective-response/check_collective_response.py",
+      "exit_code": 0,
+      "seconds": 0.9511386000012862
+    },
+    {
+      "script": "oscillator-response/check_oscillator_response.py",
+      "exit_code": 0,
+      "seconds": 1.1640945000035572
+    },
+    {
+      "script": "soft-graviton/check_soft_graviton.py",
+      "exit_code": 0,
+      "seconds": 1.3817396000013105
+    },
+    {
+      "script": "capture-storage/check_capture_storage.py",
+      "exit_code": 0,
+      "seconds": 1.7104227000018
+    },
+    {
+      "script": "deposit-support/check_deposit_support.py",
+      "exit_code": 0,
+      "seconds": 0.7054132000048412
+    },
+    {
+      "script": "capture-momentum/check_capture_momentum.py",
+      "exit_code": 0,
+      "seconds": 0.37520170000061626
+    },
+    {
+      "script": "isotropic-capture/check_isotropic_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6595908000017516
+    },
+    {
+      "script": "broadband-capture/check_broadband_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6599454000024707
+    },
+    {
+      "script": "source-receiver/check_source_receiver.py",
+      "exit_code": 0,
+      "seconds": 0.7352584999971441
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "23 mathematical/integrity jobs; not full observational validation or a completed theory.",
+  "new_result_exact_repeat": true,
+  "new_pass_hashes": {
+    "research_work/results/source-receiver/check_source_receiver.py": "d407dde9cf7691a398d0b19962afcdedf475718c7429f677c2b99904a3d03e93",
+    "research_work/results/source-receiver/derivation.md": "73f65c86939585812de289f60185dc8b6282489c089e1ceae89b4ac630428dbd",
+    "research_work/results/source-receiver/source-receiver-results.json": "2fb6a458fb1b411d341a1b84cd4ea6c0130e24bce02bc3f9f1aea23356828b47"
+  }
+}
