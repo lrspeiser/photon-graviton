@@ -93,6 +93,7 @@ def main():
         ('companion-bath/check_companion_bath.py', []),
         ('cumulative-time/check.py', []),
         ('companion-backreaction/check.py', []),
+        ('weak-signal-timing/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

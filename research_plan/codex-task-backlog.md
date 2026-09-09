@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [companion-field backreaction](../research_work/results/companion-backreaction/report.md). A closed scalar companion/time-field candidate reacts to a photon packet and conserves total energy and momentum. Real-space flux verifies field-energy transport away from the photon route, including cross terms with the initial rolling background. Radiation loading changes fractional photon loss. The field action is an optional effective candidate; whole-signal void behavior, clock standards, capture and gravity remain unproved.
+Latest diagnostic: [weak-signal timing](../research_work/results/weak-signal-timing/report.md). Infinitesimal signals in the reacting companion field share a carrier-frequency and local event-time stretch: 40 independent timing comparisons and eight color controls pass. Field evolution can distort a finite event; a strong illustrative driving packet produces an 8.6% range in local stretch. Weak-signal propagation is distinct from finite-source feedback. Observable sign and magnitude still require a derived source/detector clock response and void environment.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 

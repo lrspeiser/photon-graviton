@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. The current clarified branch proposes cumulative time stretching during propagation, with all lost photon energy entering companions. Ordinary gravitational time dilation is not the proposed cause; timing and all other observations remain mandatory targets.
 
-The latest research step is [companion-field backreaction and energy flow](../research_work/results/companion-backreaction/report.md). A closed scalar companion/time-field candidate reacts to a photon packet and conserves total energy and momentum. Real-space flux verifies field-energy transport away from the photon route, including cross terms with the initial rolling background. Radiation loading changes fractional photon loss. The field action is an optional effective candidate; whole-signal void behavior, clock standards, capture and gravity remain unproved.
+The latest research step is [weak-signal timing in the companion field](../research_work/results/weak-signal-timing/report.md). Infinitesimal signals in the reacting companion field share a carrier-frequency and local event-time stretch: 40 independent timing comparisons and eight color controls pass. Field evolution can distort a finite event; a strong illustrative driving packet produces an 8.6% range in local stretch. Weak-signal propagation is distinct from finite-source feedback. Observable sign and magnitude still require a derived source/detector clock response and void environment.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -33,6 +33,7 @@ The latest research step is [companion-field backreaction and energy flow](../re
 | [Timing population](../research_work/results/timing-population/report.md) | Full uncertainty integration, 98 events; numerical convergence gate fails |
 | [Cumulative time](../research_work/results/cumulative-time/report.md) | Linked redshift, duration, brightness and companion-energy predictions; prescribed void-ray realization |
 | [Companion backreaction](../research_work/results/companion-backreaction/report.md) | Closed photon/field energy and momentum exchange, spatial energy flux and radiation-loading dependence |
+| [Weak-signal timing](../research_work/results/weak-signal-timing/report.md) | Common local carrier/duration mapping, finite-event distortion and detector-clock sensitivity |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

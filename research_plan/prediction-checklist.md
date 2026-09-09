@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [companion-field backreaction](../research_work/results/companion-backreaction/report.md). A closed scalar companion/time-field candidate reacts to a photon packet and conserves total energy and momentum. Real-space flux verifies field-energy transport away from the photon route, including cross terms with the initial rolling background. Radiation loading changes fractional photon loss. The field action is an optional effective candidate; whole-signal void behavior, clock standards, capture and gravity remain unproved.
+Latest diagnostic: [weak-signal timing](../research_work/results/weak-signal-timing/report.md). Infinitesimal signals in the reacting companion field share a carrier-frequency and local event-time stretch: 40 independent timing comparisons and eight color controls pass. Field evolution can distort a finite event; a strong illustrative driving packet produces an 8.6% range in local stretch. Weak-signal propagation is distinct from finite-source feedback. Observable sign and magnitude still require a derived source/detector clock response and void environment.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

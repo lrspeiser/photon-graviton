@@ -1,0 +1,10 @@
+{
+  "scope": "Infinitesimal test signals in the dynamical companion field from the prior closed Hamiltonian. Distinguish signal strength from radiation loading; test carrier/arrival-time mapping and finite-event distortion. No astronomical inference.",
+  "background": {"modes": 32, "length": 8, "wave_speed": 0.5, "smoothing_sigma": 0.2, "inertia": 1, "rolling_rate": 0.05, "packet_x": 0.4, "packet_energies": [0, 0.001, 0.01, 0.1], "duration": 6},
+  "signals": {"source_x": 0.4, "path_lengths": [1, 2], "launch_times": [0, 0.25, 0.5, 0.75, 1], "reference_frequency": 1, "color_control_frequency": 3},
+  "equations": "Independently integrate Hamilton rays dx/dt=1/n, dk/dt=k*n_x/n^2 and the arrival variational system dt/dx=n, dJ/dx=n_t*J. Initialize k=nu_emitted*n_emitted. Compare nu_emitted/nu_received to J.",
+  "energy_scope": "Test photons are infinitesimal and do not drive the background. Their finite energy must not be added to a conservation claim for the background solution. The previous full Hamiltonian result establishes transfer with backreaction; this test establishes its weak-signal propagation limit.",
+  "clock_controls": "Report reference-clock factor J and alternative measured factors J*(n_emitted/n_received)^p for atom-frequency scaling q(n)=n^-p, p=0,1,2. These are conditional comparisons, not an adoption of a matter-clock law.",
+  "checks": {"maximum_frequency_timing_relative_difference": 0.0000002, "maximum_arrival_time_difference": 0.00000002, "maximum_reference_background_energy_difference": 0.000000001, "maximum_color_relative_difference": 0.0000002},
+  "limits": "One localized driving packet and a periodic scalar field are not a realistic ambient radiation population or a void/galaxy environment. Uniform initial rolling motion is prescribed as an initial state, not derived cosmological history. A short-event local stretch need not give an affine map over a long event. Weak-signal source independence is a limit, not a finite-brightness calibration."
+}
