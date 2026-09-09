@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [thermal conversion and FIRAS](../research_work/results/thermal-conversion/derivation.md). In fixed volume with constant light speed, reducing every photon frequency by q while retaining every photon turns an initially Planckian bath into q^-3 times a Planck spectrum at q times its initial temperature. The recovered 43-channel FIRAS residual comparison worsens substantially for q=0.999 under a simplified diagonal-error treatment. This is conditional on an initially thermal, unreplenished bath; it is not a universal conversion exclusion, an official confidence limit, or a derived background history.
+The latest calculation is [background replenishment](../research_work/results/background-replenishment/derivation.md). A stationary Planck bath under constant fractional photon-energy loss cannot be sustained by positive emission alone. Frequency-independent whole-photon removal must have rate at least twice the conversion rate for the inverse source to be nonnegative everywhere. At that minimum, source power is three times the gradual-conversion power; the other two parts leave through photon removal. This is an inverse source requirement, not a derived emitter, thermalizer, background origin or observational fit.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -20,6 +20,7 @@ The latest calculation is [thermal conversion and FIRAS](../research_work/result
 | [Joined source and receiver](../research_work/results/source-receiver/derivation.md) | Generated spectrum, frequency-resolved capture/escape and matched-response drift identity |
 | [Matched waves](../research_work/results/matched-wave/derivation.md) | Exact wave action and receiving-field energy; atomic-standard consistency |
 | [Thermal conversion](../research_work/results/thermal-conversion/derivation.md) | Photon-number and energy moments; exploratory 43-channel FIRAS residual comparison |
+| [Background replenishment](../research_work/results/background-replenishment/derivation.md) | Required source positivity, photon removal and steady energy budget |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

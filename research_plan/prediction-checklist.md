@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [thermal conversion and FIRAS](../research_work/results/thermal-conversion/derivation.md). In fixed volume with constant light speed, reducing every photon frequency by q while retaining every photon turns an initially Planckian bath into q^-3 times a Planck spectrum at q times its initial temperature. The recovered 43-channel FIRAS residual comparison worsens substantially for q=0.999 under a simplified diagonal-error treatment. This is conditional on an initially thermal, unreplenished bath; it is not a universal conversion exclusion, an official confidence limit, or a derived background history.
+Latest diagnostic: [background replenishment](../research_work/results/background-replenishment/derivation.md). A stationary Planck bath under constant fractional photon-energy loss cannot be sustained by positive emission alone. Frequency-independent whole-photon removal must have rate at least twice the conversion rate for the inverse source to be nonnegative everywhere. At that minimum, source power is three times the gradual-conversion power; the other two parts leave through photon removal. This is an inverse source requirement, not a derived emitter, thermalizer, background origin or observational fit.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
