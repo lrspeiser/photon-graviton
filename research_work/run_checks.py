@@ -94,6 +94,7 @@ def main():
         ('cumulative-time/check.py', []),
         ('companion-backreaction/check.py', []),
         ('weak-signal-timing/check.py', []),
+        ('environmental-screening/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

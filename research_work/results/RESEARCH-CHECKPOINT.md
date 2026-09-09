@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [weak-signal timing in the companion field](weak-signal-timing/report.md). Infinitesimal signals in the reacting companion field share a carrier-frequency and local event-time stretch: 40 independent timing comparisons and eight color controls pass. Field evolution can distort a finite event; a strong illustrative driving packet produces an 8.6% range in local stretch. Weak-signal propagation is distinct from finite-source feedback. Observable sign and magnitude still require a derived source/detector clock response and void environment.
+Latest result: [environmental field suppression and wave transmission](environmental-screening/report.md). An optional positive restoring term can suppress the slowly changing companion/time field inside a dense region while transmitting sufficiently high-frequency companion waves. The same model predicts low-frequency reflection and no absorption. Twenty-one interface checks, six profile ODE checks and six boundary-energy checks pass. The density coupling, actual companion spectrum, clock limits and capture/gravity response remain unproved.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -38,6 +38,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Cumulative time | 54 ray cases, six waveform integrals, twelve conserved capture ledgers | Postulated whole-signal law; fundamental interaction and gravity response remain open |
 | Companion backreaction | Closed Hamiltonian, translation/mode checks and local energy flux | Conditional scalar field; common astronomical stretch and gravity not established |
 | Weak-signal timing | 40 timing comparisons, eight color controls and archived-background cross-check | Local equality does not establish an undistorted long event or an observational clock law |
+| Environmental suppression | 21 wave-interface cases, six profiles and six energy-flux checks | Dense-region coupling and actual spectrum not derived; transmission is not capture |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

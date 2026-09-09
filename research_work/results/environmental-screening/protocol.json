@@ -1,0 +1,12 @@
+{
+  "scope": "Optional positive environmental restoring term for the companion/time field: slow interior response versus traveling-wave transmission. Not an established matter coupling, a gravity-well model or a capture law.",
+  "agreed_receiver": "All photon energy lost through cumulative stretching enters companions; this test concerns their field configuration and access to dense regions.",
+  "action": "L_field=K/2[(phi_t)^2-v^2*(phi_x)^2-m(rho)^2*phi^2], n=1+phi, K>0. Trial environment: m=0 in a void and positive constant m inside a slab of half-width a. Density dependence is an optional constitutive assumption, not derived from low gravity.",
+  "slow_response": "For equal boundary values A(t) with A''=0, phi=A(t)*cosh(m*x/v)/cosh(m*a/v) is exact in the interior. Center suppression f=sech(m*a/v).",
+  "wave_response": "Match phi and phi_x across a lossless slab of thickness 2a. Outside dispersion omega=v*k; inside omega^2=v^2*q^2+m^2. Compute reflection and transmission flux, not absorption.",
+  "independent_checks": {"dimensionless_barrier_strengths": [0.2, 1, 3], "frequency_over_mass": [0.05, 0.2, 0.8, 1, 1.2, 2, 5], "static_ode_strengths": [0.2, 1, 3, 7, 14.5086577385, 28.3241682965], "relative_transmission_tolerance": 0.0000001, "flux_balance_tolerance": 0.00000001, "relative_static_ode_tolerance": 0.00000001},
+  "illustrations": {"center_suppressions": [0.001, 0.000001, 0.000000000001], "wave_frequency_over_mass": [0.1, 0.5, 1, 2, 10], "half_width_kpc": 10, "wave_speed_over_c": 0.5},
+  "clock_control": "Use the earlier q(n)=n^-2 only to illustrate reduction of field-induced atomic response; neither required accuracy nor a universal matter law is inferred.",
+  "energy_check": "For linearly changing boundary amplitude, interior field energy growth equals incoming boundary field-energy flux. No external energy is silently created by the restoring term.",
+  "limits": "Static matter profile is prescribed. A dynamical matter action must account for interface momentum and forces, actual clock response, density dependence, photon coupling and profile stability. Lossless transmission or reflection is not capture or permanent gravitational deposition. Companion emission frequencies have not been derived."
+}

@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [weak-signal timing](../research_work/results/weak-signal-timing/report.md). Infinitesimal signals in the reacting companion field share a carrier-frequency and local event-time stretch: 40 independent timing comparisons and eight color controls pass. Field evolution can distort a finite event; a strong illustrative driving packet produces an 8.6% range in local stretch. Weak-signal propagation is distinct from finite-source feedback. Observable sign and magnitude still require a derived source/detector clock response and void environment.
+Latest diagnostic: [environmental field suppression](../research_work/results/environmental-screening/report.md). An optional positive restoring term can suppress the slowly changing companion/time field inside a dense region while transmitting sufficiently high-frequency companion waves. The same model predicts low-frequency reflection and no absorption. Twenty-one interface checks, six profile ODE checks and six boundary-energy checks pass. The density coupling, actual companion spectrum, clock limits and capture/gravity response remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
