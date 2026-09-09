@@ -1,0 +1,31 @@
+{
+  "scope": "Conditional closed classical photon/companion interaction in a finite conversion region, coupled to a lossless restoring slab. The emitted companion signal is generated dynamically, not imposed. No graviton identity, material capture, astronomical fit or complete matter/gravity law is claimed.",
+  "parameters": {
+    "domain": [-32.0, 64.0],
+    "photon_initial_x": -2.0,
+    "photon_initial_energy": 0.03,
+    "field_inertia": 1.0,
+    "field_speed": 0.5,
+    "conversion_center": 2.0,
+    "conversion_half_width": 2.0,
+    "slab_edges": [-6.0, -4.0],
+    "monitor_edges": [-7.0, -3.0],
+    "initial_field_displacement": 0.0,
+    "initial_field_velocity": 0.0,
+    "end_time": 50.0,
+    "samples": 501
+  },
+  "grid": {
+    "cells": [1536, 3072],
+    "packet_smoothing_width": [0.25, 0.5],
+    "restoring_frequency": [0.0, 1.0, 3.0]
+  },
+  "checks": {
+    "relative_total_energy_tolerance": 2e-7,
+    "local_balance_over_incident_tolerance": 2e-6,
+    "max_absolute_fraction_change_on_refinement": 0.02,
+    "max_relative_incident_energy_change_on_refinement": 0.02,
+    "minimum_effective_optical_factor": 0.5,
+    "maximum_direct_source_work_over_incident": 1e-12
+  }
+}

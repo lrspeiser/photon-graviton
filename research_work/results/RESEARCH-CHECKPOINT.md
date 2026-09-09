@@ -4,7 +4,7 @@ Active direction: [cumulative-time and companion research](../../research_plan/a
 
 Current synthesis: [academic working draft v0.1](../../papers/cumulative-time-companions/manuscript.md). It separates postulates, conditional derivations, numerical evidence and missing observational validation, and retains all 32 research areas.
 
-Latest result: [environmental field suppression and wave transmission](environmental-screening/report.md). An optional positive restoring term can suppress the slowly changing companion/time field inside a dense region while transmitting sufficiently high-frequency companion waves. The same model predicts low-frequency reflection and no absorption. Twenty-one interface checks, six profile ODE checks and six boundary-energy checks pass. The density coupling, actual companion spectrum, clock limits and capture/gravity response remain unproved.
+Latest result: [generated companion-wave access](generated-wave-access/report.md). Twelve joint photon/field/slab runs generate the actual incoming pulse and conserve energy. The tested sources put most energy below the restoring region's transmission threshold, with about 0.15-0.17% transmitted in the m=1 example. Grid refinement and independent source-spectrum weighting support the result. The finite conversion envelope and environmental profile are optional assumptions; no capture, supported deposit or galaxy gravity is derived.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -41,6 +41,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Companion backreaction | Closed Hamiltonian, translation/mode checks and local energy flux | Conditional scalar field; common astronomical stretch and gravity not established |
 | Weak-signal timing | 40 timing comparisons, eight color controls and archived-background cross-check | Local equality does not establish an undistorted long event or an observational clock law |
 | Environmental suppression | 21 wave-interface cases, six profiles and six energy-flux checks | Dense-region coupling and actual spectrum not derived; transmission is not capture |
+| Generated-wave access | 12 coupled runs, local/full energy ledgers, mesh refinement and source-spectrum comparison | Actual generated waves mostly reflect in this candidate; no permanent localized store or derived environmental law |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

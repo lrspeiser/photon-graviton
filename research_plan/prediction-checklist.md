@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [environmental field suppression](../research_work/results/environmental-screening/report.md). An optional positive restoring term can suppress the slowly changing companion/time field inside a dense region while transmitting sufficiently high-frequency companion waves. The same model predicts low-frequency reflection and no absorption. Twenty-one interface checks, six profile ODE checks and six boundary-energy checks pass. The density coupling, actual companion spectrum, clock limits and capture/gravity response remain unproved.
+Latest diagnostic: [generated companion-wave access](../research_work/results/generated-wave-access/report.md). A joint photon/field/slab calculation supplies the actual incoming pulse. The tested source emits mainly below the restoring region's threshold, so only about 0.15-0.17% passes through the m=1 example. Twelve runs, grid refinement and independent spectral weighting support the conditional result. Energy is conserved, but there is no capture or permanent storage channel; environmental laws, clocks and gravity remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

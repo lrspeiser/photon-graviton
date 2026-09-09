@@ -4,6 +4,8 @@
 
 The manuscript develops redshift, whole-signal timing, energy transfer, environmental response, transport, conditional outer rotation profiles and joint lensing requirements. It records the incomplete mechanisms and the full 32-area research program. The [evidence map](evidence-map.md) ties its technical claims to existing reports.
 
+Post-draft research: [generated companion-wave access](../../research_work/results/generated-wave-access/report.md) now joins the photon interaction to a restoring region. In the tested examples the generated source spectrum mostly reflects, despite the region's transparency to sufficiently fast waves. Draft v0.1 remains a dated snapshot of the earlier evidence commit; this new report should inform the next manuscript revision.
+
 ## Rebuild
 
 From the repository root:
