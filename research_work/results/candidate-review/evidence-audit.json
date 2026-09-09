@@ -1,0 +1,1401 @@
+{
+  "status": "Full objective remains incomplete; review makes no new observational acceptance claim.",
+  "reviewed_physics_commit": "e0538942985031392cd75368f657190eb3260785",
+  "previous_turn_classification": "progress: heated thermalizer calculation committed and reproduced",
+  "review": "research_work/results/candidate-review/review.md",
+  "task_count": 20,
+  "requirement_count": 32,
+  "tasks": [
+    {
+      "id": "T01",
+      "title": "Reproduce and freeze the recovered baseline",
+      "recorded_status": "completed_with_documented_numerical_differences",
+      "depends_on": [],
+      "criteria": [
+        {
+          "requirement": "All available original snapshot hashes match or differences are explained.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Every latest reported baseline quantity is reproduced or a specific discrepancy is isolated.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "No archived scientific output was overwritten.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "baseline/manifest-audit.json",
+        "baseline/reproduction-report.md",
+        "baseline/environment-lock.txt",
+        "baseline/result-differences.json"
+      ],
+      "current_evidence": [
+        "research_work/results/baseline/reproduction-report.md"
+      ],
+      "baseline_exception": {
+        "id": "T01",
+        "title": "Reproduce and freeze the recovered baseline",
+        "recorded_status": "completed_with_documented_numerical_differences",
+        "depends_on": [],
+        "criteria": [
+          {
+            "requirement": "All available original snapshot hashes match or differences are explained.",
+            "status": "supported_by_baseline_with_documented_differences",
+            "evidence": "baseline/reproduction-report.md and current-original-hashes.json",
+            "scope_limit": null
+          },
+          {
+            "requirement": "Every latest reported baseline quantity is reproduced or a specific discrepancy is isolated.",
+            "status": "supported_by_baseline_with_documented_differences",
+            "evidence": "baseline/reproduction-report.md and current-original-hashes.json",
+            "scope_limit": null
+          },
+          {
+            "requirement": "No archived scientific output was overwritten.",
+            "status": "supported_by_baseline_with_documented_differences",
+            "evidence": "baseline/reproduction-report.md and current-original-hashes.json",
+            "scope_limit": null
+          }
+        ],
+        "deliverables": [
+          {
+            "required_path": "baseline/manifest-audit.json",
+            "exact_path_present": true,
+            "content_completion": "reviewed_baseline"
+          },
+          {
+            "required_path": "baseline/reproduction-report.md",
+            "exact_path_present": true,
+            "content_completion": "reviewed_baseline"
+          },
+          {
+            "required_path": "baseline/environment-lock.txt",
+            "exact_path_present": true,
+            "content_completion": "reviewed_baseline"
+          },
+          {
+            "required_path": "baseline/result-differences.json",
+            "exact_path_present": true,
+            "content_completion": "reviewed_baseline"
+          }
+        ],
+        "evidence_paths": []
+      },
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T02",
+      "title": "Define the universe and freeze the evidence protocol",
+      "recorded_status": "in_progress",
+      "depends_on": [
+        "T01"
+      ],
+      "criteria": [
+        {
+          "requirement": "Every R01\u2013R32 has an observable or derivation requirement and responsible task.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "The material clock/rod convention and allowed physical changes are explicit.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "No standard cosmology-derived quantity is silently treated as a raw measurement.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "specification/universe-contract.md",
+        "specification/observable-registry.json",
+        "specification/validation-protocol.json"
+      ],
+      "current_evidence": [
+        "research_work/results/data-audit/data-foundation-report.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/data-audit/validation-protocol.json"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T03",
+      "title": "Specify gravitons, deposits and candidate actions",
+      "recorded_status": "preliminary_candidates_recorded_prerequisites_open",
+      "depends_on": [
+        "T02"
+      ],
+      "criteria": [
+        {
+          "requirement": "Every candidate has explicit field content and either a defined action or a verdict that no action has yet been supplied.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "The deposited state and ordinary gravitational-wave sector are identified without double counting.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Unsupported candidate families are marked incomplete, not accepted.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "theory/candidate-registry.json",
+        "theory/action-specification.md",
+        "theory/assumption-map.md"
+      ],
+      "current_evidence": [
+        "research_work/results/microphysics/candidate-registry.json",
+        "research_work/results/microphysics/action-specification.md",
+        "research_work/results/matched-wave/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T20",
+      "title": "Solve the alternative energy ledgers analytically",
+      "recorded_status": "in_progress",
+      "depends_on": [
+        "T01",
+        "T02"
+      ],
+      "criteria": [
+        {
+          "requirement": "Impulse energy is exactly partitioned and all physical reservoirs remain nonnegative.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Continuous injection causes the correctly identified unbounded reservoir unless a derived sink/finite source is present.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "The no-loss branch does not inherit shared-loss energy fractions or a cosmic age without rederivation.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "energy/ledger-derivation.md",
+        "energy/ledger_solver.py",
+        "energy/analytic-checks.json",
+        "energy/branch-comparison.json"
+      ],
+      "current_evidence": [
+        "research_work/results/transport/transport-and-supply.md",
+        "research_work/results/background-replenishment/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T04",
+      "title": "Derive conversion rates and spectral consequences",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03"
+      ],
+      "criteria": [
+        {
+          "requirement": "Energy, momentum, angular momentum and gauge constraints are checked.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "A nonzero required rate is derived in the stated environment or the candidate is rejected.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Frequency/angle diffusion and inverse processes accompany the mean loss law.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "theory/conversion-derivation.md",
+        "theory/conversion-kernels.json",
+        "tests/conversion-limits.json"
+      ],
+      "current_evidence": [
+        "research_work/results/interaction-rate/derivation.md",
+        "research_work/results/matter-assisted/derivation.md",
+        "research_work/results/collective-response/derivation.md",
+        "research_work/results/oscillator-response/derivation.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T05",
+      "title": "Derive emission, propagation, clocks and detection together",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03",
+        "T04"
+      ],
+      "criteria": [
+        {
+          "requirement": "Redshift, interval stretch, attenuation and angular distance follow from the same model.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Operational nonexpansion survives in matter units or the candidate is rejected for this project.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Atom/cavity protection is derived to a stated approximation, not declared.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "theory/observable-transfer.md",
+        "theory/clock-response.json",
+        "theory/ray-and-pulse-solver.py"
+      ],
+      "current_evidence": [
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/conversion-first/report.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T09",
+      "title": "Derive gravity and audit consistency",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03",
+        "T04"
+      ],
+      "criteria": [
+        {
+          "requirement": "No extra gravity is inserted without a stress source or explicit modified-gravity term.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Motion and light deflection have a common derivation.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Every retained candidate has a stated viable perturbative domain or a scoped failure.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "theory/field-equations.md",
+        "theory/weak-field-limit.md",
+        "theory/stability-matrix.json"
+      ],
+      "current_evidence": [
+        "research_work/results/gravity-response/motion-and-lensing.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T16",
+      "title": "Construct a physical nonexpanding history",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T05",
+        "T09",
+        "T20"
+      ],
+      "criteria": [
+        {
+          "requirement": "At least one history solves the equations and respects operational nonexpansion, or the candidate is rejected.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Age and luminosity histories are compatible inputs to supply calculations.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "A static balance is not mislabeled stable; sinks and driver energy are specified.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "background/solutions.md",
+        "background/history-parameters.json",
+        "background/stability-report.md",
+        "background/drift-and-topology-predictions.json"
+      ],
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T06",
+      "title": "Compute independent photon and companion supply",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T04",
+        "T05",
+        "T16",
+        "T20"
+      ],
+      "criteria": [
+        {
+          "requirement": "Reproduces the recovered 10-Gyr limits under their assumptions.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Each new budget is independently normalized with recorded age, source population and capture assumptions.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Any claimed resolution of the deficit specifies its source, mass, energy and observational costs.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "supply/emissivity-history.json",
+        "supply/source-target-flux.csv",
+        "supply/budget-report.md",
+        "supply/systematics.json"
+      ],
+      "current_evidence": [
+        "research_work/results/transport/transport-and-supply.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T07",
+      "title": "Derive capture and the stored state",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03",
+        "T04",
+        "T09",
+        "T20"
+      ],
+      "criteria": [
+        {
+          "requirement": "A physically specified capture route has a rate and energy destination, or a quantitative obstruction is shown.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Pressure and confinement are included.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "No incoming radiation is assumed cold or permanently trapped solely because gravity is attractive.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "capture/cross-sections.json",
+        "capture/stored-state.md",
+        "capture/retention-and-heating.csv"
+      ],
+      "current_evidence": [
+        "research_work/results/capture-storage/derivation.md",
+        "research_work/results/deposit-support/derivation.md",
+        "research_work/results/broadband-capture/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T08",
+      "title": "Solve transport, deposition and self-gravity",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T06",
+        "T07",
+        "T09"
+      ],
+      "criteria": [
+        {
+          "requirement": "Closed energy/momentum ledger and convergent predictions within predeclared tolerances.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Halo amplitude, core, shape and outer extent follow from inputs rather than test-target fits.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Permanent reservoirs are evolved in time rather than forced into an unsupported steady state.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "transport/solver",
+        "transport/convergence.json",
+        "transport/halo-profiles.csv",
+        "transport/energy-ledger.json"
+      ],
+      "current_evidence": [
+        "research_work/results/radial-capture/capture-shape-findings.md",
+        "research_work/results/source-receiver/derivation.md",
+        "research_work/results/capture-momentum/derivation.md",
+        "research_work/results/isotropic-capture/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T10",
+      "title": "Test laboratory, local gravity and binaries",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T05",
+        "T07",
+        "T09"
+      ],
+      "criteria": [
+        {
+          "requirement": "A single parameter region is compatible with declared local tests or is excluded with scoped assumptions.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "No independent local exemptions or per-instrument unconstrained offsets count as proof of agreement.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "constraints/local-predictions.json",
+        "constraints/local-likelihood-report.md"
+      ],
+      "current_evidence": [
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/gravity-response/motion-and-lensing.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T11",
+      "title": "Test distant light and gravitational waves",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T04",
+        "T05",
+        "T09",
+        "T16"
+      ],
+      "criteria": [
+        {
+          "requirement": "Same parameters predict frequency, timing, flux and tensor propagation.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "No separate refit of the redshift history conceals a changed clock or brightness model.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "constraints/light-gw-predictions.json",
+        "constraints/light-gw-likelihood-report.md"
+      ],
+      "current_evidence": [
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T12",
+      "title": "Predict galaxy dynamics and environmental variation",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T08",
+        "T10",
+        "T11"
+      ],
+      "criteria": [
+        {
+          "requirement": "No per-test-galaxy halo/gain fits.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Scatter, outliers, scaling relations and controls are reported, not only mean RMSE.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "A causal illumination advantage is demonstrated or explicitly absent.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "validation/galaxy-predictions.csv",
+        "validation/galaxy-controls.json",
+        "validation/galaxy-report.md"
+      ],
+      "current_evidence": [
+        "research_work/results/radial-capture/capture-shape-findings.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T13",
+      "title": "Predict independent lensing",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T08",
+        "T09",
+        "T12"
+      ],
+      "criteria": [
+        {
+          "requirement": "Lensing is generated from the same action and source distribution as rotation.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "No lensing-only gravity normalization rescues the fit.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "validation/lensing-predictions.csv",
+        "validation/lensing-report.md"
+      ],
+      "current_evidence": [
+        "research_work/results/gravity-response/motion-and-lensing.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T14",
+      "title": "Test clusters, mergers and capture offsets",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T08",
+        "T12",
+        "T13"
+      ],
+      "criteria": [
+        {
+          "requirement": "Both equilibrium and collision behavior are explained within one capture/retention prescription or the branch fails.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Hydrostatic-derived quantities are not mislabeled independent lensing measurements.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "validation/cluster-predictions.csv",
+        "validation/merger-evolution.json",
+        "validation/cluster-merger-report.md"
+      ],
+      "current_evidence": [
+        "research_work/results/data-audit/observable-registry.json"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T15",
+      "title": "Test stellar, thermal and formation consequences",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T06",
+        "T07",
+        "T08",
+        "T09"
+      ],
+      "criteria": [
+        {
+          "requirement": "Energy losses/heating are compatible with the stipulated stellar/gas observations under quantified assumptions.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "There is no circular requirement for an already assembled final halo to create its own sole source.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "validation/thermal-stellar-budget.json",
+        "formation/history-report.md",
+        "validation/compact-object-scope.md"
+      ],
+      "current_evidence": [
+        "research_work/results/thermal-conversion/derivation.md",
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T17",
+      "title": "Construct and test full-universe predictions",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T06",
+        "T11",
+        "T15",
+        "T16"
+      ],
+      "criteria": [
+        {
+          "requirement": "The same background and interaction predict the registered cosmic observables without importing a contradictory expansion history.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Missing cosmological mechanisms remain explicit and prevent a full-universe completion claim.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "cosmology/transfer-functions",
+        "cosmology/observable-predictions.json",
+        "cosmology/joint-report.md"
+      ],
+      "current_evidence": [
+        "research_work/results/thermalizer/derivation.md",
+        "research_work/results/data-audit/observable-registry.json"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T18",
+      "title": "Freeze discriminating tests and assess identifiability",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T12",
+        "T13",
+        "T14",
+        "T15",
+        "T17"
+      ],
+      "criteria": [
+        {
+          "requirement": "At least one nontrivial independent prediction distinguishes the model or observational equivalence is reported.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "All tested candidates and failed predictions remain in the record.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "Unidentifiable coupling/capture/history products are not reported as separately measured constants.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "validation/frozen-predictions.json",
+        "validation/prediction-seal.json",
+        "validation/joint-verdict.md"
+      ],
+      "current_evidence": [
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/data-audit/validation-protocol.json"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    },
+    {
+      "id": "T19",
+      "title": "Assemble the final theory or rejection dossier",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T18"
+      ],
+      "criteria": [
+        {
+          "requirement": "Every R01\u2013R32 is passed, scoped, rejected or blocked with evidence.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "No claim exceeds demonstrated scope.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        },
+        {
+          "requirement": "A new reader can reproduce the reported conclusions from the released specification and data.",
+          "completion": "current_full_completion_not_established_by_this_review"
+        }
+      ],
+      "declared_deliverables": [
+        "release/theory-or-rejection.md",
+        "release/requirements-status.json",
+        "release/reproduction-guide.md",
+        "release/source-manifest.json"
+      ],
+      "current_evidence": [
+        "research_work/results/RESEARCH-CHECKPOINT.md",
+        "research_work/results/checkpoint/completion-audit.json",
+        "research_work/results/candidate-review/review.md"
+      ],
+      "baseline_exception": null,
+      "scope": "Evidence is preliminary or candidate-specific; no full task promoted by this audit."
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R01",
+      "area": "Operational definitions",
+      "required_response": "Define physical rods/clocks, nonexpansion, photons, gravitons, deposits and the matter metric. Distinguish coordinate changes from observable changes.",
+      "tasks": [
+        "T02",
+        "T03"
+      ],
+      "target": "Dimensionless source separation in material rods; clock ratios",
+      "units": "dimensionless; s",
+      "prior_missing_for_completion": "Final operational contract",
+      "current_evidence": [
+        "research_work/results/data-audit/data-foundation-report.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/data-audit/validation-protocol.json",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/microphysics/action-specification.md",
+        "research_work/results/microphysics/candidate-registry.json"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R02",
+      "area": "Microscopic conversion",
+      "required_response": "Specify the interaction, allowed channels, energy/momentum/angular-momentum exchange, rate and inverse processes.",
+      "tasks": [
+        "T03",
+        "T04"
+      ],
+      "target": "Transition amplitudes and differential conversion rates",
+      "units": "s^-1; m^-1; m^2",
+      "prior_missing_for_completion": "Derived interaction kernel and reverse channels",
+      "current_evidence": [
+        "research_work/results/collective-response/derivation.md",
+        "research_work/results/interaction-rate/derivation.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/matter-assisted/derivation.md",
+        "research_work/results/microphysics/action-specification.md",
+        "research_work/results/microphysics/candidate-registry.json",
+        "research_work/results/oscillator-response/derivation.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R03",
+      "area": "Conservation",
+      "required_response": "Account for photons, free gravitons, deposits, matter, driver, heat and boundary flux. No free energy or double counting.",
+      "tasks": [
+        "T04",
+        "T06",
+        "T08"
+      ],
+      "target": "Total energy and momentum balance including boundary flow",
+      "units": "J; kg m s^-1; W",
+      "prior_missing_for_completion": "Full on-shell stress-energy derivation",
+      "current_evidence": [
+        "research_work/results/capture-momentum/derivation.md",
+        "research_work/results/collective-response/derivation.md",
+        "research_work/results/interaction-rate/derivation.md",
+        "research_work/results/isotropic-capture/derivation.md",
+        "research_work/results/matter-assisted/derivation.md",
+        "research_work/results/oscillator-response/derivation.md",
+        "research_work/results/radial-capture/capture-shape-findings.md",
+        "research_work/results/soft-graviton/derivation.md",
+        "research_work/results/source-receiver/derivation.md",
+        "research_work/results/transport/transport-and-supply.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R04",
+      "area": "Quantum/classical consistency",
+      "required_response": "Gauge constraints, propagating degrees of freedom, positive kinetic energies, causal characteristics, perturbative regime and radiative stability.",
+      "tasks": [
+        "T03",
+        "T09"
+      ],
+      "target": "Constraint count and kinetic/gradient eigenvalues",
+      "units": "degrees of freedom; normalized eigenvalues",
+      "prior_missing_for_completion": "Background-specific stability and radiative analysis",
+      "current_evidence": [
+        "research_work/results/gravity-response/motion-and-lensing.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/microphysics/action-specification.md",
+        "research_work/results/microphysics/candidate-registry.json"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R05",
+      "area": "Graviton identity",
+      "required_response": "Determine whether the new radiation is the ordinary massless tensor sector or a new field. Give its mass, spin, dispersion, polarization, interactions and observational consequences.",
+      "tasks": [
+        "T03",
+        "T11"
+      ],
+      "target": "Companion mass, spin, dispersion and polarizations",
+      "units": "eV/c^2; omega(k) in s^-1",
+      "prior_missing_for_completion": "Selected field identity and observational transfer function",
+      "current_evidence": [
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/microphysics/action-specification.md",
+        "research_work/results/microphysics/candidate-registry.json",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R06",
+      "area": "Source production",
+      "required_response": "Stellar and AGN luminosity histories, radiation bands, dust reprocessing, obscured sources, completeness and formation of early halos.",
+      "tasks": [
+        "T06",
+        "T15",
+        "T17"
+      ],
+      "target": "Observed multiband fluxes and inferred luminosity history",
+      "units": "W m^-2; W; J",
+      "prior_missing_for_completion": "Underlying photometry and historical fuel/source model",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/thermal-conversion/derivation.md",
+        "research_work/results/thermalizer/derivation.md",
+        "research_work/results/transport/transport-and-supply.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R07",
+      "area": "Redshift",
+      "required_response": "Predict observed atomic-line ratios versus independently inferred distance and source/observer conditions. Include peculiar velocities and gravitational endpoint shifts.",
+      "tasks": [
+        "T05",
+        "T11"
+      ],
+      "target": "Spectral redshifts versus independent distance information",
+      "units": "dimensionless; Mpc",
+      "prior_missing_for_completion": "Source/detector spectral calibration and a redshift law at fixed published galaxy distances",
+      "current_evidence": [
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R08",
+      "area": "Time dilation",
+      "required_response": "Predict complete transient light curves and spectral aging, not merely carrier-frequency shifts.",
+      "tasks": [
+        "T05",
+        "T11"
+      ],
+      "target": "Transient widths and spectral-age progression",
+      "units": "days; dimensionless stretch",
+      "prior_missing_for_completion": "Raw multiepoch observations and joint covariance",
+      "current_evidence": [
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R09",
+      "area": "Brightness and photon counts",
+      "required_response": "Predict flux, attenuation, luminosity distance and source calibration from the same transport model.",
+      "tasks": [
+        "T05",
+        "T11"
+      ],
+      "target": "Flux/counts and standardized apparent brightness",
+      "units": "W m^-2; counts s^-1; mag",
+      "prior_missing_for_completion": "Candidate-consistent source calibration and count model",
+      "current_evidence": [
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R10",
+      "area": "Angular distances and surface brightness",
+      "required_response": "Predict source sizes, angular distances and reciprocity/duality relations; identify justified rulers instead of importing an expansion-based ruler.",
+      "tasks": [
+        "T05",
+        "T11",
+        "T17"
+      ],
+      "target": "Angular sizes and surface brightness",
+      "units": "rad; W m^-2 sr^-1",
+      "prior_missing_for_completion": "Independent angular-size targets beyond processed galaxy tables",
+      "current_evidence": [
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/soft-graviton/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R11",
+      "area": "Spectral and image fidelity",
+      "required_response": "Line width, chromaticity, scattering blur, polarization/birefringence, coherence and arrival-time dispersion.",
+      "tasks": [
+        "T04",
+        "T05",
+        "T11"
+      ],
+      "target": "Line width, image profile and polarization transfer",
+      "units": "km s^-1; rad; dimensionless Stokes fractions",
+      "prior_missing_for_completion": "Resolved spectra, PSFs, polarimetry and their covariances",
+      "current_evidence": [
+        "research_work/results/collective-response/derivation.md",
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/interaction-rate/derivation.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/matter-assisted/derivation.md",
+        "research_work/results/oscillator-response/derivation.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R12",
+      "area": "Atomic clocks and cavities",
+      "required_response": "Optical/hyperfine transitions, cavity lengths, fine-structure response, secular and oscillatory drifts, terrestrial versus interstellar conditions.",
+      "tasks": [
+        "T05",
+        "T10"
+      ],
+      "target": "Optical/hyperfine/cavity frequency ratios and drifts",
+      "units": "dimensionless; yr^-1",
+      "prior_missing_for_completion": "Actual frequency time series and secular-drift likelihood",
+      "current_evidence": [
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/gravity-response/motion-and-lensing.md",
+        "research_work/results/matched-wave/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R13",
+      "area": "Local gravity",
+      "required_response": "Equivalence principle, inverse-square tests, Solar-System ephemerides, gravitational redshift, Shapiro delay, perihelion advance, light deflection, binaries and pulsars.",
+      "tasks": [
+        "T09",
+        "T10"
+      ],
+      "target": "Local orbit, timing and gravitational deflection residuals",
+      "units": "m; s; rad",
+      "prior_missing_for_completion": "Primary local gravity/binary data and forward models",
+      "current_evidence": [
+        "research_work/results/gravity-response/motion-and-lensing.md",
+        "research_work/results/matched-wave/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R14",
+      "area": "Capture and retention",
+      "required_response": "Derive absorption/scattering cross-sections, optical depth, escape, residence time, equation of state and any bound state.",
+      "tasks": [
+        "T07",
+        "T08"
+      ],
+      "target": "Capture fraction, residence time and stored-state pressure",
+      "units": "dimensionless; yr; Pa",
+      "prior_missing_for_completion": "Physical capture and support mechanism",
+      "current_evidence": [
+        "research_work/results/broadband-capture/derivation.md",
+        "research_work/results/capture-momentum/derivation.md",
+        "research_work/results/capture-storage/derivation.md",
+        "research_work/results/deposit-support/derivation.md",
+        "research_work/results/isotropic-capture/derivation.md",
+        "research_work/results/radial-capture/capture-shape-findings.md",
+        "research_work/results/source-receiver/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R15",
+      "area": "Halo profiles",
+      "required_response": "Predict cores, radial slopes, outer truncation, total mass, shape and time evolution without fitting a halo separately to each test object.",
+      "tasks": [
+        "T08",
+        "T12"
+      ],
+      "target": "Halo radial density and predicted velocity field",
+      "units": "kg m^-3; km s^-1",
+      "prior_missing_for_completion": "Spatial transport/self-gravity solution",
+      "current_evidence": [
+        "research_work/results/capture-momentum/derivation.md",
+        "research_work/results/isotropic-capture/derivation.md",
+        "research_work/results/radial-capture/capture-shape-findings.md",
+        "research_work/results/source-receiver/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R16",
+      "area": "Galaxy rotation and scaling",
+      "required_response": "Spiral and dwarf rotation curves, radial-acceleration relation, baryonic Tully\u2013Fisher relation, diversity and scatter.",
+      "tasks": [
+        "T12",
+        "T18"
+      ],
+      "target": "Galaxy rotation profiles and population scaling residuals",
+      "units": "km s^-1; m s^-2",
+      "prior_missing_for_completion": "Unused validation sample and covariance-aware likelihood",
+      "current_evidence": [
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/data-audit/validation-protocol.json",
+        "research_work/results/radial-capture/capture-shape-findings.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R17",
+      "area": "Other galaxy dynamics",
+      "required_response": "Pressure-supported dwarfs/ellipticals, satellite orbits, stellar streams, vertical disk gravity, bars and dynamical friction.",
+      "tasks": [
+        "T12",
+        "T15"
+      ],
+      "target": "Dispersions, satellite/stream positions and disk vertical motion",
+      "units": "km s^-1; rad",
+      "prior_missing_for_completion": "Primary non-rotation dynamical samples",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/radial-capture/capture-shape-findings.md",
+        "research_work/results/thermal-conversion/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R18",
+      "area": "Lensing",
+      "required_response": "Strong and weak lensing, shear, convergence, deflection and time delays from the same fields that predict motion.",
+      "tasks": [
+        "T09",
+        "T13"
+      ],
+      "target": "Shear, image positions and lens time delays",
+      "units": "dimensionless; rad; days",
+      "prior_missing_for_completion": "Independent lensing measurements and same-field lens equations",
+      "current_evidence": [
+        "research_work/results/gravity-response/motion-and-lensing.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R19",
+      "area": "Clusters",
+      "required_response": "Hot gas, hydrostatic bias, pressure support, galaxy velocities, radial profiles and lensing with no cluster-only normalization.",
+      "tasks": [
+        "T13",
+        "T14"
+      ],
+      "target": "Cluster gas profiles, spectra, velocities and lensing",
+      "units": "keV; counts; km s^-1; dimensionless shear",
+      "prior_missing_for_completion": "Profile-level observations and lensing; published masses are derived",
+      "current_evidence": [
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/gravity-response/motion-and-lensing.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R20",
+      "area": "Merging systems",
+      "required_response": "Predict whether deposits follow galaxies, plasma or neither during collisions; model offsets, stripping, lag and reconnection/reformation.",
+      "tasks": [
+        "T07",
+        "T14"
+      ],
+      "target": "Offsets and evolution in merging systems",
+      "units": "rad; km s^-1",
+      "prior_missing_for_completion": "Merger images/spectra and dynamical simulations",
+      "current_evidence": [
+        "research_work/results/broadband-capture/derivation.md",
+        "research_work/results/capture-storage/derivation.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/deposit-support/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R21",
+      "area": "Environmental dependence",
+      "required_response": "Isolated versus group galaxies, voids, tidal dwarfs, low-luminosity and unusually low/high inferred-mass systems; dependence on illumination and history.",
+      "tasks": [
+        "T06",
+        "T12",
+        "T14"
+      ],
+      "target": "Dynamics conditioned on illumination and environment",
+      "units": "km s^-1; W m^-2",
+      "prior_missing_for_completion": "Independently selected environmental comparison sample",
+      "current_evidence": [
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/radial-capture/capture-shape-findings.md",
+        "research_work/results/transport/transport-and-supply.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R22",
+      "area": "Stellar and thermal physics",
+      "required_response": "Stellar structure/lifetimes, solar constraints, cooling, heating, ionization, metallicity and whether capture would overheat gas or evaporate a halo.",
+      "tasks": [
+        "T07",
+        "T15"
+      ],
+      "target": "Thermal spectra, stellar evolution and gas heating/cooling",
+      "units": "K; W; abundance ratios",
+      "prior_missing_for_completion": "Primary thermal/stellar constraints and evolution calculation",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/broadband-capture/derivation.md",
+        "research_work/results/capture-storage/derivation.md",
+        "research_work/results/deposit-support/derivation.md",
+        "research_work/results/thermal-conversion/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R23",
+      "area": "Gravitational waves",
+      "required_response": "Propagation speed, damping, dispersion, polarizations, binary radiation, multimessenger delay and generated stochastic/high-frequency backgrounds.",
+      "tasks": [
+        "T04",
+        "T10",
+        "T11"
+      ],
+      "target": "GW strain, phase, polarization and EM arrival difference",
+      "units": "dimensionless strain; s",
+      "prior_missing_for_completion": "Strain data and consistent emission/propagation model",
+      "current_evidence": [
+        "research_work/results/collective-response/derivation.md",
+        "research_work/results/frequency-transfer/conversion-kernels.md",
+        "research_work/results/gravity-response/motion-and-lensing.md",
+        "research_work/results/interaction-rate/derivation.md",
+        "research_work/results/matched-wave/derivation.md",
+        "research_work/results/matter-assisted/derivation.md",
+        "research_work/results/oscillator-response/derivation.md",
+        "research_work/results/soft-graviton/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R24",
+      "area": "Compact objects",
+      "required_response": "Black-hole capture versus long-lived halos, accretion, strong-field boundary conditions, ringdown and consistency with compact-object observations.",
+      "tasks": [
+        "T09",
+        "T15"
+      ],
+      "target": "Compact-object spectra, orbits and ringdown",
+      "units": "Hz; s; angular size",
+      "prior_missing_for_completion": "Compact-object observations and strong-field solution",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/gravity-response/motion-and-lensing.md",
+        "research_work/results/thermal-conversion/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R25",
+      "area": "CMB spectrum",
+      "required_response": "Explain the near-blackbody radiation field, its intensity, temperature and permitted spectral distortions without assuming the desired result.",
+      "tasks": [
+        "T17"
+      ],
+      "target": "CMB monopole spectrum and distortion residuals",
+      "units": "cm^-1; MJy sr^-1; kJy sr^-1",
+      "prior_missing_for_completion": "Full error covariance and radiation-production history",
+      "current_evidence": [
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R26",
+      "area": "CMB angular structure",
+      "required_response": "Predict temperature and polarization correlations and lensing from perturbations, with a physical source of the observed angular scales.",
+      "tasks": [
+        "T16",
+        "T17"
+      ],
+      "target": "CMB angular TT/EE/TE spectra and correlations",
+      "units": "multipole ell; microkelvin^2",
+      "prior_missing_for_completion": "Full likelihood/TE and candidate perturbation transfer functions",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R27",
+      "area": "Structure and BAO",
+      "required_response": "Explain galaxy clustering, voids, growth, baryon acoustic features and the matter power spectrum in the chosen history.",
+      "tasks": [
+        "T16",
+        "T17"
+      ],
+      "target": "Angular/redshift clustering and correlation features",
+      "units": "dimensionless redshift; rad; correlation amplitude",
+      "prior_missing_for_completion": "Galaxy catalogs and candidate-consistent clustering pipeline",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R28",
+      "area": "Abundances and cosmic chronology",
+      "required_response": "Light-element abundances, nucleosynthesis alternative/history, stellar ages, reionization, metal production and distant populations.",
+      "tasks": [
+        "T15",
+        "T17"
+      ],
+      "target": "Abundances, stellar populations and chronology indicators",
+      "units": "abundance ratios; flux; model-dependent years",
+      "prior_missing_for_completion": "Abundance/population inputs and chronology without Big-Bang or expansion-derived initial conditions",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/thermal-conversion/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R29",
+      "area": "Static background and topology",
+      "required_response": "Solve background field equations, distinguish curvature from topology, test stability, redshift drift, age, past/future endpoints and repeated images.",
+      "tasks": [
+        "T16"
+      ],
+      "target": "Static background solution, redshift drift, topology signals",
+      "units": "yr^-1; curvature length; angle",
+      "prior_missing_for_completion": "Solved background, stability and primary drift/topology tests",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/thermalizer/derivation.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R30",
+      "area": "Global radiation and entropy",
+      "required_response": "Finite fuel, accumulated radiation, dark night sky, infrared/optical/X-ray backgrounds, heat sinks and entropy production. Recycling photons cannot renew their energy.",
+      "tasks": [
+        "T06",
+        "T16",
+        "T17"
+      ],
+      "target": "Integrated radiation backgrounds, fuel and entropy budget",
+      "units": "W m^-2 sr^-1; J; J K^-1",
+      "prior_missing_for_completion": "Multi-band background compilation and closed global ledger",
+      "current_evidence": [
+        "research_work/results/background-replenishment/derivation.md",
+        "research_work/results/data-audit/observable-registry.json",
+        "research_work/results/thermalizer/derivation.md",
+        "research_work/results/transport/transport-and-supply.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R31",
+      "area": "Statistical identifiability",
+      "required_response": "Separate gravity response, capture, age, luminosity and reservoir degeneracies. Include selection functions and shared calibration errors.",
+      "tasks": [
+        "T01",
+        "T06",
+        "T18"
+      ],
+      "target": "Parameter identifiability and selection/calibration effects",
+      "units": "dimensionless likelihood; parameter covariance",
+      "prior_missing_for_completion": "Candidate-specific joint likelihood and simulation calibration",
+      "current_evidence": [
+        "research_work/results/baseline/reproduction-report.md",
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/data-audit/validation-protocol.json",
+        "research_work/results/transport/transport-and-supply.md"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    },
+    {
+      "id": "R32",
+      "area": "Distinguishing predictions",
+      "required_response": "Freeze a small set of tests that separate this theory from baryons alone, fitted halo models and empirical modified-force laws.",
+      "tasks": [
+        "T18",
+        "T19"
+      ],
+      "target": "Previously frozen discriminating predictions",
+      "units": "units of chosen observable",
+      "prior_missing_for_completion": "Unexposed validation targets and frozen predictive distribution",
+      "current_evidence": [
+        "research_work/results/RESEARCH-CHECKPOINT.md",
+        "research_work/results/candidate-review/review.md",
+        "research_work/results/checkpoint/completion-audit.json",
+        "research_work/results/conversion-first/report.md",
+        "research_work/results/data-audit/validation-protocol.json"
+      ],
+      "completion": "Not established for the full theory. Owner-task evidence is a navigation map, not proof that each observation passed."
+    }
+  ],
+  "source_sha256": {
+    "research_plan/codex-task-backlog.json": "00d83d3cbc84e1579448db3cedec8ab53d7ec2623b98fbe6345467522a2b764e",
+    "research_plan/universe-contract.json": "dab9f01b3e4c3af909a33e543c799ba52473cddbde8d29cd379d7f28f3318333",
+    "research_work/results/RESEARCH-CHECKPOINT.md": "a89e9fa4bc2cffa0a790f9adbb6949abe449b88c5e1cfccca533ca7cede24bfa",
+    "research_work/results/background-replenishment/derivation.md": "f49c72f01cba91a0892ff693e3f782ad2e03bc820d5039b6cafd870ea06070ed",
+    "research_work/results/baseline/reproduction-report.md": "3d69cb86a330a41136f5c6d6dec0ecda84cc4a1ba1b8eb6383ffe30e19b18119",
+    "research_work/results/broadband-capture/derivation.md": "15085ba2b9ae773ae188b8614fd4e3efb9c73263dd840833b8196a98bc4d1310",
+    "research_work/results/candidate-review/review.md": "49565dbbf4191384d95e5979ae02b2b20ab84e27b50a3b8666e14595cb22319f",
+    "research_work/results/capture-momentum/derivation.md": "4a625d0532d9e729cf2ecbc47eacfe41f2c99dc951d602b185fb4507bcf2f022",
+    "research_work/results/capture-storage/derivation.md": "60d2b866755e3947464737801c174382ad3b9c1a5d22598da1ac83ed29e5a91b",
+    "research_work/results/checkpoint/completion-audit.json": "9d1ae44d0b456054e3d05b528263120349e32876fb6b5df8e24d0ad471465f32",
+    "research_work/results/collective-response/derivation.md": "e3b5e8cec2db6b05300a875be635036e5e627650224eb372804f2fec62c06868",
+    "research_work/results/conversion-first/report.md": "94e59a5c31af9c76d0dbd828ba0c6dba9f42909e7041740b12b36c4d6059105a",
+    "research_work/results/data-audit/data-foundation-report.md": "b0ffffd800bdc54d43c97db683eaf8d18ab62be2c5fd42375b12f9adad0d080c",
+    "research_work/results/data-audit/observable-registry.json": "5c0e942d20d0980c0262a20fd37bcc4c5edcdf4f4aff685946f00b66e3e099f2",
+    "research_work/results/data-audit/validation-protocol.json": "39e3d527ba2449c8bc9b2b022b480c442c585bc4c46573506d29d93143ba7c5c",
+    "research_work/results/deposit-support/derivation.md": "87eed8a812deb4f7e58be596f6692aeadcc3846e089cacd5ffaab28f0ec90f5c",
+    "research_work/results/frequency-transfer/conversion-kernels.md": "9c65df9cc40e1542fd95c06264f5a08b6367ddb0871de5915d86350f5ae42d56",
+    "research_work/results/gravity-response/motion-and-lensing.md": "9124acb7cd311748bd78066a419330a8d66dd3d60f0669ce8ae23c845ba99d25",
+    "research_work/results/interaction-rate/derivation.md": "d9f3817ba108849a889a87f7be90ccefc655e02660f140d66206bef4e50e5144",
+    "research_work/results/isotropic-capture/derivation.md": "47ba55f554b472874c01721c8350709ac75b67f71a8e4dbab18184374954fc32",
+    "research_work/results/matched-wave/derivation.md": "599d97d37a46367b912e1712d1c8387b98cf20ac59d2c8b19b42e59d0db5728e",
+    "research_work/results/matter-assisted/derivation.md": "73b9fb5e876b6ddd5217280796d978f4c1151c55fc3aeef61ac42126a02507b3",
+    "research_work/results/microphysics/action-specification.md": "35e0c7d1c31408ddb21da978ab28c9733bd478cb65272690e7d8d71838e8b5b0",
+    "research_work/results/microphysics/candidate-registry.json": "7b93e8a2a7a0be813cca9068130516cb2991c7871b5d95dc0b8eea059742392a",
+    "research_work/results/oscillator-response/derivation.md": "2c5b013dd227a128fe62cd62b309b2b8afac3fa7ce224b04d0e89402c71ec6e8",
+    "research_work/results/radial-capture/capture-shape-findings.md": "560bac59a0232e30dbe67af707aa91d34ba6f743769cc9efa8e23c667f80bdb4",
+    "research_work/results/soft-graviton/derivation.md": "249a4a8ea3328b4231c284c28f37dc144f815c9cfff3ee8023b8ecda530ce5d3",
+    "research_work/results/source-receiver/derivation.md": "73f65c86939585812de289f60185dc8b6282489c089e1ceae89b4ac630428dbd",
+    "research_work/results/thermal-conversion/derivation.md": "4a90613e6954e100d036a23db8f77f4942e7319a21c7dc6ebc6ab8466fb51e6a",
+    "research_work/results/thermalizer/derivation.md": "de00ba663bbd96138cdc0aa7eaf69a2715149e05f3114da9b2fd5adbf4cf52fb",
+    "research_work/results/transport/transport-and-supply.md": "71192793e1448327af71b3f7d49503615148399492f46d0911030987f9c47a57",
+    "research_work/thermalizer-verification.json": "d22d2656e84ecd2e172c50ade2d6aa277b7987ad188e4e2b6b638afcc9a40ff2"
+  },
+  "verification_scope": "All mapped source paths exist; 20 task IDs and 32 requirement IDs are complete and owner references valid. Prior 27-job result inspected; numerical suite not rerun for this documentation-only review.",
+  "completion_limit": "Mapped evidence and files do not prove the declared criteria or deliverables scientifically complete. Prior T01 baseline support is retained with its documented numerical differences."
+}

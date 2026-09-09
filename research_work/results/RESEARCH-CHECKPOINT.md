@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [heated thermalizer](thermalizer/derivation.md). A gray LTE absorber/emitter produces an exact positive stationary spectrum under photon-energy conversion, but it is non-Planck for every finite absorption/conversion ratio. Fast thermalization approaches the recovered FIRAS spectrum in a simplified 43-channel comparison. It requires external heating equal to conversion power and attenuates incoming angular structure. Actual material opacity, heating sources and background history remain unestablished.
+Latest result: [candidate decisions and priorities](candidate-review/review.md). The current candidate review separates failed core mechanisms, reusable component calculations and untested extensions. No tested candidate completes the same-action redshift/timing/capture/gravity chain. All 20 tasks and 32 requirements remain represented. Next prioritize an interaction-derived joint kernel and operational light predictions before another galaxy normalization fit; no candidate or new law is adopted.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -50,7 +50,7 @@ The local project is reconstructed and research is underway. Energy conservation
 - Does the mechanism shift light or merely remove it? [Conversion kernels](frequency-transfer/conversion-kernels.md).
 - What does the explicit scalar interaction predict? [Scalar-wave derivation](scalar-wave/scalar-wave-derivation.md).
 - Does stronger gravity also bend light correctly? [Motion and lensing](gravity-response/motion-and-lensing.md).
-- Which original requirements remain unfinished? [Criterion-by-criterion audit](checkpoint/completion-audit.json).
+- Which original requirements remain unfinished? [Current 20-task/32-area evidence audit](candidate-review/evidence-audit.json), with the [earlier criterion audit](checkpoint/completion-audit.json) retained.
 
 ## Resolved distance choice and remaining research priorities
 

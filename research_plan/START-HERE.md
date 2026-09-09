@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [heated thermalizer](../research_work/results/thermalizer/derivation.md). A gray LTE absorber/emitter produces an exact positive stationary spectrum under photon-energy conversion, but it is non-Planck for every finite absorption/conversion ratio. Fast thermalization approaches the recovered FIRAS spectrum in a simplified 43-channel comparison. It requires external heating equal to conversion power and attenuates incoming angular structure. Actual material opacity, heating sources and background history remain unestablished.
+The latest research review is [candidate decisions and priorities](../research_work/results/candidate-review/review.md). The current candidate review separates failed core mechanisms, reusable component calculations and untested extensions. No tested candidate completes the same-action redshift/timing/capture/gravity chain. All 20 tasks and 32 requirements remain represented. Next prioritize an interaction-derived joint kernel and operational light predictions before another galaxy normalization fit; no candidate or new law is adopted.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|

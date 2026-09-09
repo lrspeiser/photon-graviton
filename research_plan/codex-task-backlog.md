@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [heated thermalizer](../research_work/results/thermalizer/derivation.md). A gray LTE absorber/emitter produces an exact positive stationary spectrum under photon-energy conversion, but it is non-Planck for every finite absorption/conversion ratio. Fast thermalization approaches the recovered FIRAS spectrum in a simplified 43-channel comparison. It requires external heating equal to conversion power and attenuates incoming angular structure. Actual material opacity, heating sources and background history remain unestablished.
+Latest diagnostic: [candidate decisions and priorities](../research_work/results/candidate-review/review.md). The current candidate review separates failed core mechanisms, reusable component calculations and untested extensions. No tested candidate completes the same-action redshift/timing/capture/gravity chain. All 20 tasks and 32 requirements remain represented. Next prioritize an interaction-derived joint kernel and operational light predictions before another galaxy normalization fit; no candidate or new law is adopted.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 
