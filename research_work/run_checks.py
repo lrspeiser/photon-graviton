@@ -104,6 +104,7 @@ def main():
         ('companion-self-binding/check.py', []),
         ('bound-cloud-exchange/check.py', []),
         ('bound-pair-production/check.py', []),
+        ('pair-production-balance/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

@@ -1,0 +1,2289 @@
+{
+  "scope": "Leading heavy-store, point-electric-dipole rates and an incoherent single bound-mode pair population under finite illumination, followed by darkness. The seed, spatial overlaps, absolute astronomical coupling and coherent time field are not derived.",
+  "checks_pass": true,
+  "phase_space_checks": [
+    {
+      "gap": 0.01,
+      "scattering_cross_section": 5.147596070904099e-10,
+      "single_pair_decay_rate": 1.919734192452351e-27,
+      "relative_phase_space_error": 2.220446049250313e-16
+    },
+    {
+      "gap": 0.1,
+      "scattering_cross_section": 3.8674651171330575e-10,
+      "single_pair_decay_rate": 1.9197341924523512e-20,
+      "relative_phase_space_error": 2.220446049250313e-16
+    },
+    {
+      "gap": 0.2,
+      "scattering_cross_section": 2.7162443621016813e-10,
+      "single_pair_decay_rate": 2.4572597663390096e-18,
+      "relative_phase_space_error": 2.220446049250313e-16
+    },
+    {
+      "gap": 0.5,
+      "scattering_cross_section": 6.631455962162307e-11,
+      "single_pair_decay_rate": 1.499792337853399e-15,
+      "relative_phase_space_error": 2.220446049250313e-16
+    }
+  ],
+  "population_cases": [
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.01,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 3.729380017409133e-12,
+          "empty_mode_creation_rate": 1.919734192452351e-21,
+          "single_pair_dark_decay_rate": 1.919734192452351e-27,
+          "inverse_to_creation_ratio": 1.0618386703480065,
+          "stationary_pair_mean": 16.1708494623668,
+          "stationary_stored_energy": 0.161708494623668,
+          "stationary_mean_error": 4.980904577678302e-12,
+          "stationary_probability_l1_error": 1.445413421882461e-12,
+          "maximum_probability_normalization_error": 8.901768211444505e-13,
+          "maximum_exchange_ledger_error": 8.563157821717127e-13,
+          "omitted_birth_count_bound": 6.713822170515414e-08,
+          "expected_finite_mass_recoil_energy_bound": 2.2382956942805027e-10,
+          "finite_incident_energy": 194265436958.49176,
+          "total_outgoing_energy": 194265436958.33005,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.1102433150980801,
+            2.3692568258261386,
+            10.209925732566779,
+            16.02706759595398,
+            16.170846384054432,
+            16.17084946237178
+          ],
+          "creation_counts": [
+            0.0,
+            0.11763170318833244,
+            11.083393475497587,
+            363.96937864244126,
+            3896.129681494695,
+            15334.728474189635,
+            55410.09874089459
+          ],
+          "inverse_counts": [
+            0.0,
+            0.007388381132150998,
+            8.714128443030754,
+            353.7591197527486,
+            3880.098959766466,
+            15318.54320137376,
+            55393.87572354911
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.95810139381111e-09,
+            8.206640694461415e-06,
+            0.00033315712606022123,
+            0.0036541322783948,
+            0.014426431838608091,
+            0.05216788319208073
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            16.170849462371788,
+            4.794355907972577,
+            0.6508472831224262,
+            0.011106523090703587,
+            7.483522897395316e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            11.376493554399218,
+            15.52000217924939,
+            16.15974293928109,
+            16.170774627142837
+          ]
+        },
+        {
+          "gap_ratio": 0.01,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 3.729380017409133e-12,
+          "empty_mode_creation_rate": 1.919734192452351e-21,
+          "single_pair_dark_decay_rate": 1.919734192452351e-27,
+          "inverse_to_creation_ratio": 1.0618386703480065,
+          "stationary_pair_mean": 16.1708494623668,
+          "stationary_stored_energy": 0.161708494623668,
+          "stationary_mean_error": 1.645616976020392e-11,
+          "stationary_probability_l1_error": 1.035946372819853e-12,
+          "maximum_probability_normalization_error": 1.0387246618392965e-12,
+          "maximum_exchange_ledger_error": 5.768351074575406e-13,
+          "omitted_birth_count_bound": 3.2169724685069134e-14,
+          "expected_finite_mass_recoil_energy_bound": 2.2382956943300847e-10,
+          "finite_incident_energy": 194265436958.49176,
+          "total_outgoing_energy": 194265436958.33005,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.1102433150903341,
+            2.3692568282894086,
+            10.209925670283022,
+            16.027067706523496,
+            16.170846394543844,
+            16.170849462383256
+          ],
+          "creation_counts": [
+            0.0,
+            0.11763170316636033,
+            11.083393386688911,
+            363.96938120412756,
+            3896.1296725864945,
+            15334.72847368627,
+            55410.098742121845
+          ],
+          "inverse_counts": [
+            0.0,
+            0.007388381117924848,
+            8.714128351758896,
+            353.7591223767164,
+            3880.0989507477043,
+            15318.543200859893,
+            55393.87572477633
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.958101380413449e-09,
+            8.20664060850499e-06,
+            0.0003331571285313759,
+            0.0036541322699012667,
+            0.014426431838124157,
+            0.052167883193236494
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            16.170849462383266,
+            4.794355907894859,
+            0.6508472829271453,
+            0.011106521985577714,
+            7.483512574089088e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            11.376493554488423,
+            15.520002179456148,
+            16.159742940397738,
+            16.170774627257572
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 1.1056951620957989e-07,
+      "maximum_relative_count_refinement_change": 9.395784605917388e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.01,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 3.729380017409133e-16,
+          "empty_mode_creation_rate": 1.9197341924523513e-25,
+          "single_pair_dark_decay_rate": 1.919734192452351e-27,
+          "inverse_to_creation_ratio": 1.0618386703480065,
+          "stationary_pair_mean": 13.920079466333675,
+          "stationary_stored_energy": 0.13920079466333676,
+          "stationary_mean_error": 2.4789059693830495e-11,
+          "stationary_probability_l1_error": 2.4471497783863373e-12,
+          "maximum_probability_normalization_error": 4.030109579389318e-13,
+          "maximum_exchange_ledger_error": 5.798028723802418e-14,
+          "omitted_birth_count_bound": 6.376562356061608e-10,
+          "expected_finite_mass_recoil_energy_bound": 1.6771204979075605e-10,
+          "finite_incident_energy": 194265436958.49173,
+          "total_outgoing_energy": 194265436958.3525,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.1101696241221308,
+            2.295066906872306,
+            9.175761338777466,
+            13.819733479689127,
+            13.920077948162769,
+            13.920079466358464
+          ],
+          "creation_counts": [
+            0.0,
+            0.11762222962966562,
+            10.465031641064323,
+            300.7025008540742,
+            2993.3506280125202,
+            11592.511638350785,
+            41713.33395242646
+          ],
+          "inverse_counts": [
+            0.0,
+            0.007383074469761052,
+            8.09374090536207,
+            288.8068643365009,
+            2951.732579572189,
+            11470.566053572913,
+            41310.368254187815
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.953103777376394e-05,
+            0.07622382882994305,
+            2.7198751787957347,
+            27.798314960640777,
+            108.02550682971035,
+            389.04561877228264
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            13.920079466358471,
+            4.50337277478231,
+            0.6350006305486353,
+            0.010859434492312173,
+            7.317036065405375e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            9.416706691576158,
+            13.285078835809813,
+            13.90922003186614,
+            13.920006295997796
+          ]
+        },
+        {
+          "gap_ratio": 0.01,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 3.729380017409133e-16,
+          "empty_mode_creation_rate": 1.9197341924523513e-25,
+          "single_pair_dark_decay_rate": 1.919734192452351e-27,
+          "inverse_to_creation_ratio": 1.0618386703480065,
+          "stationary_pair_mean": 13.920079466333675,
+          "stationary_stored_energy": 0.13920079466333676,
+          "stationary_mean_error": 3.3377745012330706e-12,
+          "stationary_probability_l1_error": 3.1023284274618544e-13,
+          "maximum_probability_normalization_error": 3.1163960301228144e-13,
+          "maximum_exchange_ledger_error": 1.8189894035458565e-14,
+          "omitted_birth_count_bound": 2.7735109497482188e-17,
+          "expected_finite_mass_recoil_energy_bound": 1.6771204979081726e-10,
+          "finite_incident_energy": 194265436958.49173,
+          "total_outgoing_energy": 194265436958.3525,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.1101696241145226,
+            2.295066910245041,
+            9.175761279648635,
+            13.819733579426346,
+            13.920077961212812,
+            13.920079466330337
+          ],
+          "creation_counts": [
+            0.0,
+            0.1176222296083041,
+            10.465031554082938,
+            300.7025028089537,
+            2993.3506212014763,
+            11592.51163747074,
+            41713.333952441666
+          ],
+          "inverse_counts": [
+            0.0,
+            0.0073830744561360516,
+            8.093740815850932,
+            288.806866331719,
+            2951.732572725885,
+            11470.566052688147,
+            41310.368254202906
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.953103764544878e-05,
+            0.0762238279869605,
+            2.7198751975859525,
+            27.798314896164825,
+            108.02550682137802,
+            389.04561877242486
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            13.920079466330352,
+            4.503372774702617,
+            0.635000630357021,
+            0.010859433395871592,
+            7.317025765097347e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            9.416706691627727,
+            13.285078835973353,
+            13.909220032934492,
+            13.92000629607272
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 9.973721937228675e-08,
+      "maximum_relative_count_refinement_change": 9.84315914317633e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.01,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 3.7293800174091326e-18,
+          "empty_mode_creation_rate": 1.919734192452351e-27,
+          "single_pair_dark_decay_rate": 1.919734192452351e-27,
+          "inverse_to_creation_ratio": 1.0618386703480065,
+          "stationary_pair_mean": 0.9417626499440453,
+          "stationary_stored_energy": 0.009417626499440454,
+          "stationary_mean_error": 2.3425705819590803e-14,
+          "stationary_probability_l1_error": 1.406750119730865e-14,
+          "maximum_probability_normalization_error": 7.993605777301127e-15,
+          "maximum_exchange_ledger_error": 5.684341886080802e-16,
+          "omitted_birth_count_bound": 1.5956634509401019e-31,
+          "expected_finite_mass_recoil_energy_bound": 1.7024290694934953e-12,
+          "finite_incident_energy": 194265436958.49173,
+          "total_outgoing_energy": 194265436958.4823,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.1033402067151551,
+            0.7383175896293959,
+            0.9346747917562429,
+            0.9417625922970825,
+            0.9417626501047432,
+            0.9417626499440688
+          ],
+          "creation_counts": [
+            0.0,
+            0.11674905359965304,
+            2.947849169790102,
+            13.506504551777457,
+            52.67729119622069,
+            164.6597255579282,
+            556.5982464828501
+          ],
+          "inverse_counts": [
+            0.0,
+            0.006905502526214686,
+            1.137899928307086,
+            6.474442054173559,
+            26.643590350970264,
+            84.31409622208011,
+            286.16086721459914
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.006503344358283243,
+            1.0716316518536209,
+            6.097387705847656,
+            25.091938252953355,
+            79.40386668574338,
+            269.49561661830694
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.9417626499440691,
+            0.7384089489852999,
+            0.22196410658743793,
+            0.003980348453718896,
+            2.6819439911715716e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.2033537009587693,
+            0.7197985433566311,
+            0.9377823014903501,
+            0.9417358305041571
+          ]
+        },
+        {
+          "gap_ratio": 0.01,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 3.7293800174091326e-18,
+          "empty_mode_creation_rate": 1.919734192452351e-27,
+          "single_pair_dark_decay_rate": 1.919734192452351e-27,
+          "inverse_to_creation_ratio": 1.0618386703480065,
+          "stationary_pair_mean": 0.9417626499440453,
+          "stationary_stored_energy": 0.009417626499440454,
+          "stationary_mean_error": 2.55351295663786e-15,
+          "stationary_probability_l1_error": 2.8835513579545387e-15,
+          "maximum_probability_normalization_error": 3.1086244689504383e-15,
+          "maximum_exchange_ledger_error": 5.684341886080802e-16,
+          "omitted_birth_count_bound": -1.0488362010814693e-31,
+          "expected_finite_mass_recoil_energy_bound": 1.7024290694934903e-12,
+          "finite_incident_energy": 194265436958.49173,
+          "total_outgoing_energy": 194265436958.4823,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.10334020672124783,
+            0.7383175873812143,
+            0.9346748063468301,
+            0.9417625942969196,
+            0.9417626499457048,
+            0.9417626499440428
+          ],
+          "creation_counts": [
+            0.0,
+            0.11674905358049519,
+            2.947849172370382,
+            13.506504504273623,
+            52.677291189712776,
+            164.6597255584459,
+            556.5982464828485
+          ],
+          "inverse_counts": [
+            0.0,
+            0.006905502513210749,
+            1.137899930793724,
+            6.474442022195179,
+            26.6435903465888,
+            84.31409622242862,
+            286.1608672145983
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.006503344346036616,
+            1.0716316541954434,
+            6.097387675731615,
+            25.091938248827052,
+            79.4038666860716,
+            269.4956166183062
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.9417626499440431,
+            0.7384089489049821,
+            0.22196410647730935,
+            0.003980347777388695,
+            2.681937070468053e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.20335370103906095,
+            0.7197985434667343,
+            0.9377823021666543,
+            0.9417358305733389
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 1.459058718289441e-08,
+      "maximum_relative_count_refinement_change": 4.278363501797891e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.1,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 4.9638048031715556e-05,
+          "empty_mode_creation_rate": 1.9197341924523513e-14,
+          "single_pair_dark_decay_rate": 1.9197341924523512e-20,
+          "inverse_to_creation_ratio": 1.8257887517146782,
+          "stationary_pair_mean": 1.2109619887187868,
+          "stationary_stored_energy": 0.12109619887187868,
+          "stationary_mean_error": 1.1546319456101628e-14,
+          "stationary_probability_l1_error": 8.606276181320599e-14,
+          "maximum_probability_normalization_error": 8.382183835919932e-14,
+          "maximum_exchange_ledger_error": 1.1976769402621824e-14,
+          "omitted_birth_count_bound": -9.687850830172068e-29,
+          "expected_finite_mass_recoil_energy_bound": 3.308624594755681e-12,
+          "finite_incident_energy": 258567296591.7525,
+          "total_outgoing_energy": 258567296591.63138,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.10489037797173707,
+            0.8674912866859753,
+            1.191356036264331,
+            1.210961127901108,
+            1.2109619888466763,
+            1.2109619887187753
+          ],
+          "creation_counts": [
+            0.0,
+            0.11694657389004813,
+            3.3292370833975284,
+            17.06637730956237,
+            69.94238088024434,
+            221.25725403050743,
+            750.8593229990171
+          ],
+          "inverse_counts": [
+            0.0,
+            0.012056189315033803,
+            2.461744448393219,
+            15.875012578418868,
+            68.73138210758168,
+            220.04617152050443,
+            749.6479504217514
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.603277243170276e-09,
+            1.348318334243919e-06,
+            8.694879165790644e-06,
+            3.764476149994517e-05,
+            0.00012052115630236486,
+            0.0004105885468500801
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            1.2109619887187753,
+            0.916470889513759,
+            0.26011583993148957,
+            0.004646429474554621,
+            3.130746056524254e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.2944910992050164,
+            0.9508461487872863,
+            1.2063155592442223,
+            1.2109306812582117
+          ]
+        },
+        {
+          "gap_ratio": 0.1,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 4.9638048031715556e-05,
+          "empty_mode_creation_rate": 1.9197341924523513e-14,
+          "single_pair_dark_decay_rate": 1.9197341924523512e-20,
+          "inverse_to_creation_ratio": 1.8257887517146782,
+          "stationary_pair_mean": 1.2109619887187868,
+          "stationary_stored_energy": 0.12109619887187868,
+          "stationary_mean_error": 7.30526750203353e-14,
+          "stationary_probability_l1_error": 6.036818155669567e-14,
+          "maximum_probability_normalization_error": 6.084022174945858e-14,
+          "maximum_exchange_ledger_error": 1.076108061166814e-14,
+          "omitted_birth_count_bound": -6.14079247400054e-29,
+          "expected_finite_mass_recoil_energy_bound": 3.308624594755719e-12,
+          "finite_incident_energy": 258567296591.7525,
+          "total_outgoing_energy": 258567296591.63138,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.10489037797292176,
+            0.867491282784143,
+            1.191356055876295,
+            1.2109611306547337,
+            1.2109619887209355,
+            1.2109619887187137
+          ],
+          "creation_counts": [
+            0.0,
+            0.11694657387265119,
+            3.3292370906275535,
+            17.066377224939817,
+            69.94238086841753,
+            221.25725403104764,
+            750.8593229990255
+          ],
+          "inverse_counts": [
+            0.0,
+            0.012056189296452134,
+            2.4617444595250695,
+            15.875012474184405,
+            68.73138209300132,
+            220.04617152117038,
+            749.64795042176
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.60327723299294e-09,
+            1.3483183403409281e-06,
+            8.69487910870055e-06,
+            3.7644761491959374e-05,
+            0.0001205211563027297,
+            0.00041058854685008494
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            1.2109619887187137,
+            0.9164708894349317,
+            0.260115839819386,
+            0.004646428735790549,
+            3.130738764059029e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.29449109928378314,
+            0.9508461488993283,
+            1.206315559982924,
+            1.2109306813310747
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 1.9611964052757003e-08,
+      "maximum_relative_count_refinement_change": 6.176852491117431e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.1,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 4.963804803171556e-09,
+          "empty_mode_creation_rate": 1.9197341924523513e-18,
+          "single_pair_dark_decay_rate": 1.9197341924523512e-20,
+          "inverse_to_creation_ratio": 1.8257887517146782,
+          "stationary_pair_mean": 1.196474585172905,
+          "stationary_stored_energy": 0.11964745851729051,
+          "stationary_mean_error": 9.880984919163893e-14,
+          "stationary_probability_l1_error": 4.796510407800796e-14,
+          "maximum_probability_normalization_error": 2.731148640577885e-14,
+          "maximum_exchange_ledger_error": 9.769962616701378e-15,
+          "omitted_birth_count_bound": -1.9107767552277937e-29,
+          "expected_finite_mass_recoil_energy_bound": 3.250530211426934e-12,
+          "finite_incident_energy": 258567296591.75247,
+          "total_outgoing_energy": 258567296591.63284,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.10482378552776876,
+            0.8610923499213455,
+            1.1777306092630597,
+            1.1964738201930771,
+            1.196474585340764,
+            1.1964745851730039
+          ],
+          "creation_counts": [
+            0.0,
+            0.11693808232293197,
+            3.3097039917149256,
+            16.869722772009375,
+            68.95797448465464,
+            218.00850367088773,
+            739.6853671729723
+          ],
+          "inverse_counts": [
+            0.0,
+            0.012048307193778834,
+            2.435273442398326,
+            15.606513960812183,
+            67.39238684022027,
+            215.63099979291712,
+            734.4661590793932
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.598960138440847e-05,
+            0.013338199395254536,
+            0.08547820193412532,
+            0.3691138242413263,
+            1.1810292926298758,
+            4.022733508406288
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            1.1964745851730032,
+            0.9071873514649114,
+            0.2582257482442564,
+            0.0046135627260593705,
+            3.108600626417194e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.2892872337080923,
+            0.9382488369287465,
+            1.1918610224469455,
+            1.19644349916674
+          ]
+        },
+        {
+          "gap_ratio": 0.1,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 4.963804803171556e-09,
+          "empty_mode_creation_rate": 1.9197341924523513e-18,
+          "single_pair_dark_decay_rate": 1.9197341924523512e-20,
+          "inverse_to_creation_ratio": 1.8257887517146782,
+          "stationary_pair_mean": 1.196474585172905,
+          "stationary_stored_energy": 0.11964745851729051,
+          "stationary_mean_error": 1.9761969838327786e-14,
+          "stationary_probability_l1_error": 1.653872300099738e-14,
+          "maximum_probability_normalization_error": 1.7763568394002505e-14,
+          "maximum_exchange_ledger_error": 5.284661597215745e-15,
+          "omitted_birth_count_bound": 1.5414755454818337e-30,
+          "expected_finite_mass_recoil_energy_bound": 3.25053021142693e-12,
+          "finite_incident_energy": 258567296591.75247,
+          "total_outgoing_energy": 258567296591.63284,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.10482378552915048,
+            0.8610923461288367,
+            1.1777306284840638,
+            1.196473822844094,
+            1.1964745851740963,
+            1.1964745851729248
+          ],
+          "creation_counts": [
+            0.0,
+            0.11693808230544676,
+            3.309703998615678,
+            16.86972269020863,
+            68.95797447341947,
+            218.00850367159373,
+            739.6853671729714
+          ],
+          "inverse_counts": [
+            0.0,
+            0.012048307175014612,
+            2.435273453033338,
+            15.606513860340733,
+            67.39238682640973,
+            215.63099979378507,
+            734.4661590793921
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.598960128163525e-05,
+            0.013338199453503403,
+            0.08547820138383465,
+            0.3691138241656849,
+            1.1810292926346295,
+            4.022733508406284
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            1.1964745851729244,
+            0.9071873513858416,
+            0.2582257481320596,
+            0.00461356198810319,
+            3.108593332683194e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.2892872337870835,
+            0.9382488370408654,
+            1.191861023184823,
+            1.1964434992395985
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 1.9221004121661167e-08,
+      "maximum_relative_count_refinement_change": 6.050122901859835e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.1,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 4.963804803171555e-11,
+          "empty_mode_creation_rate": 1.9197341924523512e-20,
+          "single_pair_dark_decay_rate": 1.9197341924523512e-20,
+          "inverse_to_creation_ratio": 1.8257887517146782,
+          "stationary_pair_mean": 0.5477084898572501,
+          "stationary_stored_energy": 0.05477084898572501,
+          "stationary_mean_error": 5.639932965095795e-14,
+          "stationary_probability_l1_error": 6.346122725217069e-14,
+          "maximum_probability_normalization_error": 1.7763568394002505e-15,
+          "maximum_exchange_ledger_error": 8.526512829121203e-15,
+          "omitted_birth_count_bound": 1.422475868651744e-32,
+          "expected_finite_mass_recoil_energy_bound": 1.1731586239669979e-12,
+          "finite_incident_energy": 258567296591.75247,
+          "total_outgoing_energy": 258567296591.6977,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.0986131861816353,
+            0.49612467830954954,
+            0.547331967263654,
+            0.5477084899170143,
+            0.5477084898611873,
+            0.5477084898573065
+          ],
+          "creation_counts": [
+            0.0,
+            0.11614818124259477,
+            2.2957714686017368,
+            8.689476308713623,
+            31.390458861478802,
+            96.2523518474831,
+            323.268977298152
+          ],
+          "inverse_counts": [
+            0.0,
+            0.011329649721425755,
+            1.1627814941159724,
+            5.260773843917434,
+            19.928010070169304,
+            61.836349664560586,
+            208.51553824458273
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.006205345339533716,
+            0.6368652961762159,
+            2.8813704975325365,
+            10.914740301392499,
+            33.86829369306134,
+            114.20573056371202
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.5477084898573065,
+            0.4540700023704088,
+            0.15114354505666983,
+            0.0027294125231245667,
+            1.839069419175402e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.09363848748689783,
+            0.39656494480063653,
+            0.5449790773341815,
+            0.5476900991631142
+          ]
+        },
+        {
+          "gap_ratio": 0.1,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 4.963804803171555e-11,
+          "empty_mode_creation_rate": 1.9197341924523512e-20,
+          "single_pair_dark_decay_rate": 1.9197341924523512e-20,
+          "inverse_to_creation_ratio": 1.8257887517146782,
+          "stationary_pair_mean": 0.5477084898572501,
+          "stationary_stored_energy": 0.05477084898572501,
+          "stationary_mean_error": 5.10702591327572e-15,
+          "stationary_probability_l1_error": 8.603227114350453e-15,
+          "maximum_probability_normalization_error": 8.659739592076221e-15,
+          "maximum_exchange_ledger_error": 1.4210854715202004e-14,
+          "omitted_birth_count_bound": 5.122298140708158e-33,
+          "expected_finite_mass_recoil_energy_bound": 1.1731586239670047e-12,
+          "finite_incident_energy": 258567296591.75247,
+          "total_outgoing_energy": 258567296591.6977,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.09861318619800376,
+            0.49612467960699386,
+            0.5473319738446619,
+            0.5477084898400547,
+            0.5477084898573894,
+            0.5477084898572552
+          ],
+          "creation_counts": [
+            0.0,
+            0.11614818122660774,
+            2.2957714653745023,
+            8.689476296828456,
+            31.390458861617816,
+            96.25235184749013,
+            323.2689772981538
+          ],
+          "inverse_counts": [
+            0.0,
+            0.011329649700520309,
+            1.162781491192502,
+            5.260773831986132,
+            19.92801007030885,
+            61.836349664567585,
+            208.51553824458398
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.006205345328083622,
+            0.6368652945750064,
+            2.8813704909976634,
+            10.914740301468926,
+            33.86829369306517,
+            114.2057305637127
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.5477084898572552,
+            0.4540700022930288,
+            0.15114354494718044,
+            0.002729411980600543,
+            1.8390633314399792e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.09363848756422648,
+            0.3965649449100747,
+            0.5449790778766544,
+            0.5476900992239409
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 6.581007960804186e-09,
+      "maximum_relative_count_refinement_change": 1.905723236242902e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.2,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 0.00904653425378016,
+          "empty_mode_creation_rate": 2.45725976633901e-12,
+          "single_pair_dark_decay_rate": 2.4572597663390096e-18,
+          "inverse_to_creation_ratio": 3.374999999999999,
+          "stationary_pair_mean": 0.4210524542937036,
+          "stationary_stored_energy": 0.08421049085874072,
+          "stationary_mean_error": 9.658940314238862e-15,
+          "stationary_probability_l1_error": 8.50897158275883e-15,
+          "maximum_probability_normalization_error": 8.43769498715119e-15,
+          "maximum_exchange_ledger_error": 1.2943828951381131e-14,
+          "omitted_birth_count_bound": -2.1972079801797067e-31,
+          "expected_finite_mass_recoil_energy_bound": 1.2630761723718886e-12,
+          "finite_incident_energy": 368155389092.5538,
+          "total_outgoing_energy": 368155389092.46954,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.09545889050475696,
+            0.3987297399072669,
+            0.4209988159891122,
+            0.4210524538323925,
+            0.4210524542911231,
+            0.42105245429371324
+          ],
+          "creation_counts": [
+            0.0,
+            0.11574784533743254,
+            2.050371286686859,
+            7.255462068194481,
+            25.579482841731664,
+            77.93403686939855,
+            261.17497596841946
+          ],
+          "inverse_counts": [
+            0.0,
+            0.0202889488211352,
+            1.6516410574044638,
+            6.834461227179818,
+            25.158422933551744,
+            77.51296144830403,
+            260.7538462537269
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.011540391447468e-09,
+            4.893751281198411e-07,
+            2.025025548794022e-06,
+            7.454347535867184e-06,
+            2.296680339209008e-05,
+            7.726039888999317e-05
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.42105245429371324,
+            0.35579317725362275,
+            0.12311720049953497,
+            0.0022293173024013828,
+            1.5021075171785997e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.0652592770400904,
+            0.2979352537941782,
+            0.41882313699131185,
+            0.42103743321854153
+          ]
+        },
+        {
+          "gap_ratio": 0.2,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 0.00904653425378016,
+          "empty_mode_creation_rate": 2.45725976633901e-12,
+          "single_pair_dark_decay_rate": 2.4572597663390096e-18,
+          "inverse_to_creation_ratio": 3.374999999999999,
+          "stationary_pair_mean": 0.4210524542937036,
+          "stationary_stored_energy": 0.08421049085874072,
+          "stationary_mean_error": 4.996003610813204e-16,
+          "stationary_probability_l1_error": 1.749238943617919e-15,
+          "maximum_probability_normalization_error": 2.1094237467877974e-15,
+          "maximum_exchange_ledger_error": 1.2943704268131296e-14,
+          "omitted_birth_count_bound": -3.3085623773131515e-30,
+          "expected_finite_mass_recoil_energy_bound": 1.263076172371878e-12,
+          "finite_incident_energy": 368155389092.5538,
+          "total_outgoing_energy": 368155389092.46954,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.09545889051736939,
+            0.39872974599993444,
+            0.42099881994141614,
+            0.4210524542905235,
+            0.4210524542937903,
+            0.4210524542937031
+          ],
+          "creation_counts": [
+            0.0,
+            0.11574784532894052,
+            2.0503712780053185,
+            7.255462062805417,
+            25.579482841106973,
+            77.93403686939472,
+            261.17497596841736
+          ],
+          "inverse_counts": [
+            0.0,
+            0.02028894880003074,
+            1.6516410426302601,
+            6.83446121783846,
+            25.158422932468913,
+            77.51296144829752,
+            260.7538462537248
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.0115403851942945e-09,
+            4.893751237422995e-07,
+            2.02502554602621e-06,
+            7.454347535546344e-06,
+            2.2966803392088156e-05,
+            7.726039888999255e-05
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.4210524542937033,
+            0.35579317718110043,
+            0.12311720039112262,
+            0.0022293168252548847,
+            1.5021019113487161e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.06525927711260268,
+            0.29793525390258074,
+            0.4188231374684478,
+            0.42103743327458937
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 6.092667537149765e-09,
+      "maximum_relative_count_refinement_change": 5.571720832776452e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.2,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 9.046534253780158e-07,
+          "empty_mode_creation_rate": 2.457259766339009e-16,
+          "single_pair_dark_decay_rate": 2.4572597663390096e-18,
+          "inverse_to_creation_ratio": 3.374999999999999,
+          "stationary_pair_mean": 0.4192872117400422,
+          "stationary_stored_energy": 0.08385744234800845,
+          "stationary_mean_error": 1.7763568394002505e-15,
+          "stationary_probability_l1_error": 1.1333389353075921e-14,
+          "maximum_probability_normalization_error": 1.0103029524088925e-14,
+          "maximum_exchange_ledger_error": 1.6542323066914833e-15,
+          "omitted_birth_count_bound": -3.4172944759892645e-32,
+          "expected_finite_mass_recoil_energy_bound": 1.2572639541716248e-12,
+          "finite_incident_energy": 368155389092.5538,
+          "total_outgoing_energy": 368155389092.4699,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.09540318579130057,
+            0.39728739659682727,
+            0.41923540539143095,
+            0.41928721123722645,
+            0.419287211737531,
+            0.41928721174004396
+          ],
+          "creation_counts": [
+            0.0,
+            0.11574077663370409,
+            2.046780706599492,
+            7.235917557122344,
+            25.50210340300895,
+            77.6914067438819,
+            260.3539684393097
+          ],
+          "inverse_counts": [
+            0.0,
+            0.02027750933326791,
+            1.6446203607855225,
+            6.796544242863171,
+            25.00871629164832,
+            77.04384148330496,
+            259.166779658212
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.008150913560863e-05,
+            0.004872949217142291,
+            0.020137908867742735,
+            0.07409990012340245,
+            0.2282780488394221,
+            0.7679015693576652
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.419287211740044,
+            0.3543973493541785,
+            0.12270367441834949,
+            0.0022219174364443333,
+            1.4971216355605626e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.06488986238586546,
+            0.29658353732169435,
+            0.4170652943035994,
+            0.41927224052368783
+          ]
+        },
+        {
+          "gap_ratio": 0.2,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 9.046534253780158e-07,
+          "empty_mode_creation_rate": 2.457259766339009e-16,
+          "single_pair_dark_decay_rate": 2.4572597663390096e-18,
+          "inverse_to_creation_ratio": 3.374999999999999,
+          "stationary_pair_mean": 0.4192872117400422,
+          "stationary_stored_energy": 0.08385744234800845,
+          "stationary_mean_error": 1.1102230246251565e-15,
+          "stationary_probability_l1_error": 1.5969237874610143e-15,
+          "maximum_probability_normalization_error": 1.9984014443252818e-15,
+          "maximum_exchange_ledger_error": 3.641531520770514e-15,
+          "omitted_birth_count_bound": -4.858966697767906e-30,
+          "expected_finite_mass_recoil_energy_bound": 1.2572639541716298e-12,
+          "finite_incident_energy": 368155389092.5538,
+          "total_outgoing_energy": 368155389092.4699,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.09540318580376055,
+            0.39728740261659873,
+            0.4192354093533779,
+            0.41928721173684785,
+            0.41928721174013295,
+            0.4192872117400433
+          ],
+          "creation_counts": [
+            0.0,
+            0.11574077662535591,
+            2.0467806980744867,
+            7.235917551744208,
+            25.502103402330707,
+            77.69140674387823,
+            260.35396843931073
+          ],
+          "inverse_counts": [
+            0.0,
+            0.020277509312521234,
+            1.6446203462837137,
+            6.796544233550677,
+            25.008716290473938,
+            77.04384148329872,
+            259.16677965821304
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            6.008150907413703e-05,
+            0.004872949174173968,
+            0.02013790884015017,
+            0.07409990011992279,
+            0.2282780488394036,
+            0.7679015693576683
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.41928721174004324,
+            0.3543973492814268,
+            0.12270367431015905,
+            0.0022219169575946438,
+            1.4971159198224744e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.0648898624586166,
+            0.2965835374298844,
+            0.41706529478244925,
+            0.41927224058084556
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 6.019771459087053e-09,
+      "maximum_relative_count_refinement_change": 5.483512552280851e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.2,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 9.046534253780159e-09,
+          "empty_mode_creation_rate": 2.4572597663390096e-18,
+          "single_pair_dark_decay_rate": 2.4572597663390096e-18,
+          "inverse_to_creation_ratio": 3.374999999999999,
+          "stationary_pair_mean": 0.2962962962962964,
+          "stationary_stored_energy": 0.05925925925925928,
+          "stationary_mean_error": 5.9396931817445875e-15,
+          "stationary_probability_l1_error": 2.0248370247685388e-14,
+          "maximum_probability_normalization_error": 2.020605904817785e-14,
+          "maximum_exchange_ledger_error": 7.105427357601002e-15,
+          "omitted_birth_count_bound": 3.8489546516203264e-33,
+          "expected_finite_mass_recoil_energy_bound": 8.841725414197568e-13,
+          "finite_incident_energy": 368155389092.5538,
+          "total_outgoing_energy": 368155389092.4945,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.09016420318486083,
+            0.29067354429799014,
+            0.29629449085687537,
+            0.2962962963717843,
+            0.29629629629482096,
+            0.29629629629629045
+          ],
+          "creation_counts": [
+            0.0,
+            0.11507566175625192,
+            1.7826202935247295,
+            5.90627567739424,
+            20.35757713371272,
+            61.647014719518765,
+            206.1600462695838
+          ],
+          "inverse_counts": [
+            0.0,
+            0.01921741089793025,
+            1.150930349403485,
+            4.327699772471681,
+            15.475845217377293,
+            47.3276970693442,
+            158.80917855082177
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.005694047673460817,
+            0.3410163998232549,
+            1.2822814140656835,
+            4.5854356199636435,
+            14.023021353879765,
+            47.05457142246572
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.29629629629629045,
+            0.2552846443101865,
+            0.09212369006812725,
+            0.0016730289045707501,
+            1.12728313813774e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.041011651986104014,
+            0.20417260622816313,
+            0.29462326739171957,
+            0.29628502346490887
+          ]
+        },
+        {
+          "gap_ratio": 0.2,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 9.046534253780159e-09,
+          "empty_mode_creation_rate": 2.4572597663390096e-18,
+          "single_pair_dark_decay_rate": 2.4572597663390096e-18,
+          "inverse_to_creation_ratio": 3.374999999999999,
+          "stationary_pair_mean": 0.2962962962962964,
+          "stationary_stored_energy": 0.05925925925925928,
+          "stationary_mean_error": 3.6637359812630166e-15,
+          "stationary_probability_l1_error": 1.3392834076907037e-14,
+          "maximum_probability_normalization_error": 1.3433698597964394e-14,
+          "maximum_exchange_ledger_error": 1.4210854715202005e-15,
+          "omitted_birth_count_bound": -1.0984773826332392e-32,
+          "expected_finite_mass_recoil_energy_bound": 8.841725414197592e-13,
+          "finite_incident_energy": 368155389092.5538,
+          "total_outgoing_energy": 368155389092.4945,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.09016420317241451,
+            0.29067355098414366,
+            0.29629449270299874,
+            0.296296296295286,
+            0.2962962962962482,
+            0.2962962962962927
+          ],
+          "creation_counts": [
+            0.0,
+            0.1150756617619718,
+            1.7826202872236137,
+            5.906275675657341,
+            20.357577133784684,
+            61.647014719517486,
+            206.16004626958434
+          ],
+          "inverse_counts": [
+            0.0,
+            0.019217410911944205,
+            1.1509303393847348,
+            4.327699769707634,
+            15.475845217491818,
+            47.3276970693421,
+            158.8091785508222
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.0056940476776130965,
+            0.3410163968547361,
+            1.2822814132467069,
+            4.585435619997577,
+            14.023021353879145,
+            47.05457142246585
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.2962962962962927,
+            0.25528464424640107,
+            0.09212368995738801,
+            0.0016730285013167906,
+            1.1272778234964471e-05
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.04101165204989164,
+            0.20417260633890486,
+            0.29462326779497605,
+            0.29628502351805824
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 6.686153519730453e-09,
+      "maximum_relative_count_refinement_change": 4.657868314186969e-09
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.5,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 22.616335634450394,
+          "empty_mode_creation_rate": 1.499792337853399e-09,
+          "single_pair_dark_decay_rate": 1.499792337853399e-15,
+          "inverse_to_creation_ratio": 27.0,
+          "stationary_pair_mean": 0.03846153698224857,
+          "stationary_stored_energy": 0.019230768491124286,
+          "stationary_mean_error": 1.6653345369377348e-16,
+          "stationary_probability_l1_error": 4.384304895723619e-15,
+          "maximum_probability_normalization_error": 4.6629367034256575e-15,
+          "maximum_exchange_ledger_error": 6.003202865096768e-15,
+          "omitted_birth_count_bound": 1.7855724359077681e-31,
+          "expected_finite_mass_recoil_energy_bound": 6.988210092838019e-13,
+          "finite_incident_energy": 1507964473723.1006,
+          "total_outgoing_energy": 1507964473723.0815,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.035765831254536744,
+            0.03846153692618242,
+            0.03846153698078503,
+            0.03846153698220366,
+            0.03846153698224884,
+            0.03846153698224874
+          ],
+          "creation_counts": [
+            0.0,
+            0.10765392701058159,
+            1.1138491410867204,
+            3.350535522282006,
+            11.178937856487574,
+            33.54580166850401,
+            111.82982501056172
+          ],
+          "inverse_counts": [
+            0.0,
+            0.07188809309352287,
+            1.0753875643313686,
+            3.312073862631818,
+            11.140475906895148,
+            33.5073388905092,
+            111.79135933315874
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            2.6625219664267732e-09,
+            3.9829169049309933e-08,
+            1.2266940231969692e-07,
+            4.1261021877389434e-07,
+            1.2410125515003402e-06,
+            4.140420716042915e-06
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.03846153698224875,
+            0.034572302752895925,
+            0.013813823948010473,
+            0.0002526929907520814,
+            1.702665172666386e-06
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.0038892342293528155,
+            0.024647713034238267,
+            0.038208843991496655,
+            0.03845983431707606
+          ]
+        },
+        {
+          "gap_ratio": 0.5,
+          "annihilation_to_creation_ratio": 1e-06,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 22.616335634450394,
+          "empty_mode_creation_rate": 1.499792337853399e-09,
+          "single_pair_dark_decay_rate": 1.499792337853399e-15,
+          "inverse_to_creation_ratio": 27.0,
+          "stationary_pair_mean": 0.03846153698224857,
+          "stationary_stored_energy": 0.019230768491124286,
+          "stationary_mean_error": 2.0816681711721685e-17,
+          "stationary_probability_l1_error": 8.058212491547529e-16,
+          "maximum_probability_normalization_error": 1.5543122344752192e-15,
+          "maximum_exchange_ledger_error": 6.003207100261504e-15,
+          "omitted_birth_count_bound": 3.3927236878349174e-33,
+          "expected_finite_mass_recoil_energy_bound": 6.988210092838002e-13,
+          "finite_incident_energy": 1507964473723.1006,
+          "total_outgoing_energy": 1507964473723.0815,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.03576583200353832,
+            0.03846153698223802,
+            0.03846153698226206,
+            0.03846153698224851,
+            0.03846153698224861,
+            0.03846153698224859
+          ],
+          "creation_counts": [
+            0.0,
+            0.10765392692255217,
+            1.1138491410801987,
+            3.3505355222818385,
+            11.178937856487586,
+            33.54580166850401,
+            111.82982501056148
+          ],
+          "inverse_counts": [
+            0.0,
+            0.07188809225649193,
+            1.0753875642687913,
+            3.3120738626301733,
+            11.140475906895116,
+            33.5073388905092,
+            111.7913593331585
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            2.662521935425628e-09,
+            3.982916904699225e-08,
+            1.22669402319636e-07,
+            4.126102187738932e-07,
+            1.241012551500341e-06,
+            4.140420716042907e-06
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.038461536982248606,
+            0.034572302766327695,
+            0.01381382389091628,
+            0.00025269285138604196,
+            1.7026319762155777e-06
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.0038892342159209314,
+            0.02464771309133236,
+            0.038208844130862604,
+            0.038459834350272476
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 7.490015760391877e-10,
+      "maximum_relative_count_refinement_change": 7.808939670128477e-10
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.5,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 0.0022616335634450396,
+          "empty_mode_creation_rate": 1.4997923378533992e-13,
+          "single_pair_dark_decay_rate": 1.499792337853399e-15,
+          "inverse_to_creation_ratio": 27.0,
+          "stationary_pair_mean": 0.03844675124951941,
+          "stationary_stored_energy": 0.019223375624759707,
+          "stationary_mean_error": 1.3183898417423734e-16,
+          "stationary_probability_l1_error": 3.571544965744498e-15,
+          "maximum_probability_normalization_error": 3.9968028886505635e-15,
+          "maximum_exchange_ledger_error": 1.583108644176434e-14,
+          "omitted_birth_count_bound": 5.101205377267913e-32,
+          "expected_finite_mass_recoil_energy_bound": 6.986677816268715e-13,
+          "finite_incident_energy": 1507964473723.1003,
+          "total_outgoing_energy": 1507964473723.081,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.035754783663977385,
+            0.038446751193836,
+            0.03844675124806279,
+            0.03844675124947447,
+            0.0384467512495197,
+            0.038446751249519545
+          ],
+          "creation_counts": [
+            0.0,
+            0.10765218344548619,
+            1.1138059855310138,
+            3.3503991037483916,
+            11.178475017531124,
+            33.544406199768005,
+            111.82516533759728
+          ],
+          "inverse_counts": [
+            0.0,
+            0.07187078097374075,
+            1.074961100596216,
+            3.310726157627133,
+            11.135903857445552,
+            33.49355442835983,
+            111.74533142656011
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            2.661880776805213e-05,
+            0.00039813374096156164,
+            0.0012261948731952345,
+            0.004124408836090946,
+            0.012405020158651785,
+            0.04138715978761485
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.03844675124951955,
+            0.03455909939297059,
+            0.013808638906742998,
+            0.0002525982609726522,
+            1.7020269464102757e-06
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.003887651856548944,
+            0.024638112342776533,
+            0.03819415298854687,
+            0.03844504922257311
+          ]
+        },
+        {
+          "gap_ratio": 0.5,
+          "annihilation_to_creation_ratio": 0.01,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 0.0022616335634450396,
+          "empty_mode_creation_rate": 1.4997923378533992e-13,
+          "single_pair_dark_decay_rate": 1.499792337853399e-15,
+          "inverse_to_creation_ratio": 27.0,
+          "stationary_pair_mean": 0.03844675124951941,
+          "stationary_stored_energy": 0.019223375624759707,
+          "stationary_mean_error": 5.551115123125783e-17,
+          "stationary_probability_l1_error": 1.6123004597436747e-15,
+          "maximum_probability_normalization_error": 2.4424906541753444e-15,
+          "maximum_exchange_ledger_error": 8.743006318923108e-15,
+          "omitted_birth_count_bound": -5.6832121281427484e-33,
+          "expected_finite_mass_recoil_energy_bound": 6.986677816268707e-13,
+          "finite_incident_energy": 1507964473723.1003,
+          "total_outgoing_energy": 1507964473723.081,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.03575478441421427,
+            0.03844675124951093,
+            0.038446751249534616,
+            0.03844675124951935,
+            0.03844675124951944,
+            0.03844675124951947
+          ],
+          "creation_counts": [
+            0.0,
+            0.10765218335734843,
+            1.1138059855245388,
+            3.3503991037482206,
+            11.17847501753112,
+            33.544406199768,
+            111.82516533759714
+          ],
+          "inverse_counts": [
+            0.0,
+            0.0718707801356765,
+            1.074961100534089,
+            3.3107261576254903,
+            11.135903857445513,
+            33.49355442835983,
+            111.74533142655999
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            2.6618807457657962e-05,
+            0.0003981337409385515,
+            0.0012261948731946259,
+            0.004124408836090929,
+            0.012405020158651784,
+            0.04138715978761481
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.038446751249519476,
+            0.03455909940641474,
+            0.01380863884966037,
+            0.00025259812165388356,
+            1.7019936934125381e-06
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.0038876518431047342,
+            0.024638112399859125,
+            0.038194153127865595,
+            0.03844504925582603
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 7.502368865042186e-10,
+      "maximum_relative_count_refinement_change": 7.818705934839742e-10
+    },
+    {
+      "runs": [
+        {
+          "gap_ratio": 0.5,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 512,
+            "rtol": 1e-09,
+            "atol": 1e-12
+          },
+          "photon_flux": 2.2616335634450396e-05,
+          "empty_mode_creation_rate": 1.499792337853399e-15,
+          "single_pair_dark_decay_rate": 1.499792337853399e-15,
+          "inverse_to_creation_ratio": 27.0,
+          "stationary_pair_mean": 0.037037037037037035,
+          "stationary_stored_energy": 0.018518518518518517,
+          "stationary_mean_error": 0.0,
+          "stationary_probability_l1_error": 6.93890052136517e-18,
+          "maximum_probability_normalization_error": 5.551115123125783e-16,
+          "maximum_exchange_ledger_error": 4.796163466380676e-14,
+          "omitted_birth_count_bound": 2.939870994673118e-33,
+          "expected_finite_mass_recoil_energy_bound": 6.840922352954802e-13,
+          "finite_incident_energy": 1507964473723.1006,
+          "total_outgoing_energy": 1507964473723.082,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.03468893996751022,
+            0.03703703700061746,
+            0.03703703703595633,
+            0.037037037036993604,
+            0.037037037037037215,
+            0.037037037037037035
+          ],
+          "creation_counts": [
+            0.0,
+            0.10748305647763912,
+            1.1096891796013781,
+            3.3373983702695713,
+            11.134380537621983,
+            33.4114724443435,
+            111.38129411786883
+          ],
+          "inverse_counts": [
+            0.0,
+            0.07019432663476713,
+            1.0343431375078764,
+            3.1824912856181298,
+            10.701009804135534,
+            32.18249128561696,
+            107.36767647080218
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.0025997898753617465,
+            0.03830900509288431,
+            0.1178700476154863,
+            0.39633369644946426,
+            1.191944121689517,
+            3.9765806100297105
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.037037037037037035,
+            0.03329994771173315,
+            0.013313850757511136,
+            0.00024355816084172528,
+            1.6411131126736743e-06
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.003737089325303907,
+            0.02372318627952591,
+            0.03679347887619534,
+            0.0370353959239244
+          ]
+        },
+        {
+          "gap_ratio": 0.5,
+          "annihilation_to_creation_ratio": 1.0,
+          "solver": {
+            "maximum_pairs": 768,
+            "rtol": 1e-11,
+            "atol": 1e-14
+          },
+          "photon_flux": 2.2616335634450396e-05,
+          "empty_mode_creation_rate": 1.499792337853399e-15,
+          "single_pair_dark_decay_rate": 1.499792337853399e-15,
+          "inverse_to_creation_ratio": 27.0,
+          "stationary_pair_mean": 0.037037037037037035,
+          "stationary_stored_energy": 0.018518518518518517,
+          "stationary_mean_error": 8.326672684688674e-17,
+          "stationary_probability_l1_error": 2.4178834332377872e-15,
+          "maximum_probability_normalization_error": 2.6645352591003757e-15,
+          "maximum_exchange_ledger_error": 5.88418203051333e-14,
+          "omitted_birth_count_bound": 4.236146634580407e-34,
+          "expected_finite_mass_recoil_energy_bound": 6.840922352954816e-13,
+          "finite_incident_energy": 1507964473723.1006,
+          "total_outgoing_energy": 1507964473723.082,
+          "seed_mass_accounted_separately": 1000000000000000.0,
+          "illumination_times": [
+            0.0,
+            0.1,
+            1.0,
+            3.0,
+            10.0,
+            30.0,
+            100.0
+          ],
+          "mean_pairs": [
+            0.0,
+            0.03468894078806999,
+            0.037037037037152123,
+            0.037037037037026606,
+            0.03703703703703653,
+            0.03703703703703704,
+            0.03703703703703712
+          ],
+          "creation_counts": [
+            0.0,
+            0.10748305638504822,
+            1.1096891795972854,
+            3.337398370269451,
+            11.134380537621979,
+            33.41147244434352,
+            111.38129411786903
+          ],
+          "inverse_counts": [
+            0.0,
+            0.07019432575422903,
+            1.0343431374687002,
+            3.182491285616983,
+            10.70100980413549,
+            32.182491285617004,
+            107.3676764708024
+          ],
+          "radiative_pair_loss_counts": [
+            0.0,
+            0.0025997898427492245,
+            0.03830900509143335,
+            0.11787004761544383,
+            0.3963336964494625,
+            1.1919441216895188,
+            3.976580610029718
+          ],
+          "dark_times": [
+            0.0,
+            0.1,
+            1.0,
+            5.0,
+            10.0
+          ],
+          "dark_mean_pairs": [
+            0.03703703703703712,
+            0.03329994772638227,
+            0.013313850701225042,
+            0.00024355802296991373,
+            1.6410820067003175e-06
+          ],
+          "dark_radiative_pair_loss_counts": [
+            0.0,
+            0.003737089310654849,
+            0.02372318633581208,
+            0.03679347901406724,
+            0.037035395955030456
+          ]
+        }
+      ],
+      "maximum_mean_refinement_change": 8.205597729071812e-10,
+      "maximum_relative_count_refinement_change": 8.227833764176245e-10
+    }
+  ],
+  "single_pair_exponential_decay_error": 5.787975654314437e-11,
+  "negligible_annihilation_soft_gap_limit": [
+    {
+      "gap_ratio": 0.1,
+      "limiting_stored_energy_over_photon_energy": 0.12109634551495015
+    },
+    {
+      "gap_ratio": 0.01,
+      "limiting_stored_energy_over_photon_energy": 0.16171110962967902
+    },
+    {
+      "gap_ratio": 0.0001,
+      "limiting_stored_energy_over_photon_energy": 0.1666166711111111
+    },
+    {
+      "gap_ratio": 1e-08,
+      "limiting_stored_energy_over_photon_energy": 0.1666666616666667
+    }
+  ],
+  "astronomical_storage_lifetime_determined": false,
+  "coherent_propagation_time_field_derived": false,
+  "source_hashes": {
+    "check.py": "05645aa16c379de21f498000751aba6ba0ebfc01d755b32b68d89e10f2baa7b6",
+    "protocol.json": "6f8a7b41a66b6bc7041f9fcbef5e6dbc2df706e8762acb16d9b1b673805cf5cf"
+  }
+}

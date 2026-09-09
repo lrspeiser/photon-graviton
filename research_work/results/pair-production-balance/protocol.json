@@ -1,0 +1,26 @@
+{
+  "scope": "Leading heavy-store, point-electric-dipole rates and an incoherent single bound-mode pair population under finite illumination, followed by darkness. The seed, spatial overlaps, absolute astronomical coupling and coherent time field are not derived.",
+  "photon_energy": 1.0,
+  "transition_polarizability": 0.0001,
+  "effective_source_area": 1.0,
+  "nominal_seed_mass": 1000000000000000.0,
+  "gap_ratios": [0.01, 0.1, 0.2, 0.5],
+  "annihilation_to_empty_creation_ratios": [0.000001, 0.01, 1.0],
+  "illumination_times_in_creation_units": [0.0, 0.1, 1.0, 3.0, 10.0, 30.0, 100.0],
+  "dark_times_in_single_pair_decay_units": [0.0, 0.1, 1.0, 5.0, 10.0],
+  "runs": [
+    {"maximum_pairs": 512, "rtol": 1e-9, "atol": 1e-12},
+    {"maximum_pairs": 768, "rtol": 1e-11, "atol": 1e-14}
+  ],
+  "checks": {
+    "relative_phase_space_error": 1e-12,
+    "probability_error": 1e-8,
+    "absolute_exchange_ledger_error": 1e-7,
+    "refinement_mean_error": 1e-6,
+    "refinement_relative_count_error": 1e-6,
+    "final_stationary_mean_error": 1e-6,
+    "integrated_omitted_births": 1e-6,
+    "recoil_energy_bound": 1e-8,
+    "single_pair_decay_error": 1e-8
+  }
+}
