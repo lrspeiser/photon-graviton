@@ -26,6 +26,8 @@ Follow [mechanism-first redshift requirements](mechanism-first-redshift.md): the
 
 ## Immediate priority, 9 September 2026
 
+ELVES follow-up: [identity decisions](../research_work/results/redshift-priority/elves-identity-report.md) exclude UGC05797, dw1046p1244 and NGC4592. Twenty-six remain pending. Next resolve the positional-only potential old-group matches for LV J1017+2922 and AGC740112, other aliases/hosts, and catalog velocity/selection provenance. No target outcome has been scored by these candidate-audit passes.
+
 Next concrete data step: audit the 29 provisional ELVES-Field candidates in [elves-field-feature-audit.json](../research_work/results/redshift-priority/elves-field-feature-audit.json). The [source report](../research_work/results/redshift-priority/elves-field-audit-report.md) separates TRGB/SBF from redshift-derived distances and stages identities without scoring target values. Crossmatch aliases/groups and resolve selection and frame issues before declaring a fresh sample; freeze final model and uncertainty before evaluation.
 
 The [2025 SBF source audit](../research_work/results/redshift-priority/sbf-2025-audit-report.md) found 16/16 calibration/anchor/Coma targets in previously excluded groups. It does not certify a new validation sample or audit all 61 recalibrated distant targets. Continue acquiring genuinely independent targets; do not call a newer calibration of old measurements fresh evidence.

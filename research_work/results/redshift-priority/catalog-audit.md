@@ -1,5 +1,7 @@
 # Candidate catalog and environmental-input audit
 
+The [ELVES identity audit](elves-identity-report.md) now excludes three of the 29 staged candidates through historical object/group or source-availability evidence. Twenty-six remain pending; none is certified fresh. The audit includes 799 historical text files and preserves unresolved positional group matches and name-lookup failures.
+
 ELVES-Field candidate staging is now available: [source audit](elves-field-audit-report.md) and feature-only JSON retain all 95 publisher rows and 29 provisional candidates. Redshift-derived distances and exposed examples are excluded. Candidate aliases/groups, frame conventions, selection and historical freshness remain unresolved; no labels were scored and no environmental proxy adopted.
 
 New source decision: the [2025 TRGB-SBF identity audit](sbf-2025-audit-report.md) resolves 14 calibration targets plus the anchor and Coma object. All 16 share already excluded CF4 groups. The publication recalibrates older distant SBF observations and does not supply a newly certified group-independent test here. Revised calibration remains a sensitivity option; current adopted distances are unchanged.
