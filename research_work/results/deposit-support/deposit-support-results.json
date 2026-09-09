@@ -1,0 +1,68 @@
+{
+  "scope": "Fixed-potential mechanical benchmarks; no new material population, energy supply, full halo formation, stability or astronomical fit.",
+  "cold_fall": {
+    "radius_initial_kpc": 10.0,
+    "radius_final_kpc": 1.0,
+    "circular_speed_km_s": 200.0,
+    "fall_time_Myr": 59.32088845429819,
+    "dimensionless_ODE_time": 1.2133638852705892,
+    "dimensionless_analytic_time": 1.2133638852706075,
+    "max_specific_energy_error_in_vc2_units": 9.724843152980611e-11
+  },
+  "finite_boundary_Jeans": [
+    {
+      "anisotropy_beta": -1.0,
+      "maximum_Jeans_solution_error": 1.3592460490485792e-12,
+      "sigma_r_squared_over_vc_squared_at_r_over_R_01": 0.2499999975,
+      "scope": "Moment equation with zero radial stress at outer boundary; distribution positivity and stability not established."
+    },
+    {
+      "anisotropy_beta": 0.0,
+      "maximum_Jeans_solution_error": 1.8276491431379327e-12,
+      "sigma_r_squared_over_vc_squared_at_r_over_R_01": 0.49995,
+      "scope": "Moment equation with zero radial stress at outer boundary; distribution positivity and stability not established."
+    },
+    {
+      "anisotropy_beta": 0.5,
+      "maximum_Jeans_solution_error": 3.3306690738754696e-16,
+      "sigma_r_squared_over_vc_squared_at_r_over_R_01": 0.99,
+      "scope": "Moment equation with zero radial stress at outer boundary; distribution positivity and stability not established."
+    },
+    {
+      "anisotropy_beta": 0.9,
+      "maximum_Jeans_solution_error": 8.109779514597903e-11,
+      "sigma_r_squared_over_vc_squared_at_r_over_R_01": 3.009464147232514,
+      "scope": "Moment equation with zero radial stress at outer boundary; distribution positivity and stability not established."
+    },
+    {
+      "anisotropy_beta": 1.0,
+      "maximum_Jeans_solution_error": 2.3645707614150524e-10,
+      "sigma_r_squared_over_vc_squared_at_r_over_R_01": 4.605170185988091,
+      "scope": "Moment equation with zero radial stress at outer boundary; distribution positivity and stability not established."
+    }
+  ],
+  "positive_isotropic_distribution": {
+    "sigma_r_over_vc": 0.7071067811865476,
+    "max_collisionless_equation_residual": 5.551115123125783e-17,
+    "velocity_second_moment_over_vc2": 1.499999999999996,
+    "kinetic_energy_over_rest_energy_at_200_km_s": 3.3379501681608555e-07,
+    "limitations": "Scale-free equilibrium has singular center and infinite extent/mass if extrapolated. Not a finite, growing, self-consistent galaxy."
+  },
+  "circular_support": {
+    "max_radius_error": 7.971401316808624e-13,
+    "max_specific_angular_momentum_error": 1.2068124277675452e-13
+  },
+  "isotropic_radiation": {
+    "assumptions": "Static isotropic radiation with P=u/3, ordinary stress conservation and specified lapse; not collisionless streaming or a confined solution.",
+    "required_density_log_slope_at_200_km_s": 1.7802400896857894e-06,
+    "energy_density_ratio_r10_to_r1": 0.999995900854109,
+    "target_r_minus_2_ratio_r10_to_r1": 0.01
+  },
+  "next_requirements": [
+    "Receiver or field identity and phase-space injection source",
+    "Angular momentum, velocity dispersion or supporting field stresses",
+    "Finite core, outer boundary and escape",
+    "Time-dependent self-gravity with energy-source depletion",
+    "Joint motion/lensing and stability against perturbations"
+  ]
+}

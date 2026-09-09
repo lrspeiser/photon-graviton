@@ -103,3 +103,7 @@ A user question is pending about which external-deposition extension to investig
 - `radial-capture.png`, `external-capture.png`: visually inspected figures.
 
 These equations are derived from the stated transport assumptions. Deriving those assumptions from first principles remains an outstanding task.
+
+## Later dynamical support check
+
+The [deposit-support calculation](../deposit-support/derivation.md) tests the assumption that deposits stay where formed. Internal retention alone does not prevent infall or transport; the earlier density shape requires an explicit support and phase-space formation mechanism.

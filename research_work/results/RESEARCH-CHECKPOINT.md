@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [capture and long-lived storage](capture-storage/derivation.md). A reversible two-step receiver separates capture from long-lived storage in a conditional three-state model. Its energy ledger includes returned companions and shelving radiation; finite capacity and environmental reverse transitions limit accumulation. Receiver identity, absolute rates, spatial support and the full gravity response remain unproved.
+Latest result: [mechanical support for deposits](deposit-support/derivation.md). Mechanical support is distinct from internal retention. Fixed-potential tests quantify cold infall, required orbital dispersion and a positive ideal equilibrium; isotropic radiation requires a different stress profile. A finite photon-funded reservoir, its formation, self-gravity, stability and lensing remain unproved.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -17,6 +17,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Oscillator frequency response | Causal resonance and energy ledger; general point-target color bound | No combined forward/small-packet/achromatic interaction established |
 | Ordinary soft-graviton emission | Tensor polarization/energy checks and a conditional soft-production bound | Tiny transfer strength; no full finite-energy amplitude, propagation or capture model |
 | Capture and storage | Resonance bandwidth, reversible three-state energy ledger, saturation and bath-induced leakage | No actual receiver, absolute capture rate, supported spatial reservoir or gravity law |
+| Deposit support | Cold infall, Jeans solutions and positive ideal phase-space equilibrium | Fixed potential; no finite growing reservoir, stability or lensing established |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

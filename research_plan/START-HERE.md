@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [capture and long-lived storage](../research_work/results/capture-storage/derivation.md). A reversible two-step receiver separates capture from long-lived storage in a conditional three-state model. Its energy ledger includes returned companions and shelving radiation; finite capacity and environmental reverse transitions limit accumulation. Receiver identity, absolute rates, spatial support and the full gravity response remain unproved. Read the [current checkpoint](../research_work/results/RESEARCH-CHECKPOINT.md) for the full scope.
+The latest calculation is [mechanical support for deposits](../research_work/results/deposit-support/derivation.md). Mechanical support is distinct from internal retention. Fixed-potential tests quantify cold infall, required orbital dispersion and a positive ideal equilibrium; isotropic radiation requires a different stress profile. A finite photon-funded reservoir, its formation, self-gravity, stability and lensing remain unproved.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -13,6 +13,7 @@ The latest calculation is [capture and long-lived storage](../research_work/resu
 | [Oscillator response](../research_work/results/oscillator-response/derivation.md) | Small-packet resonance and energy ledger; a general point-target color-slope bound |
 | [Ordinary soft gravitons](../research_work/results/soft-graviton/derivation.md) | Conserved tensor emission, finite soft-energy moments and a conditional production-strength bound |
 | [Capture and storage](../research_work/results/capture-storage/derivation.md) | Absorption/lifetime tradeoff, reversible storage, energy release and finite capacity |
+| [Deposit support](../research_work/results/deposit-support/derivation.md) | Cold infall, orbital support and radiation-pressure requirements |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

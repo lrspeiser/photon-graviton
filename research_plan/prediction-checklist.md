@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [capture and storage](../research_work/results/capture-storage/derivation.md). A reversible two-step receiver separates capture from long-lived storage in a conditional three-state model. Its energy ledger includes returned companions and shelving radiation; finite capacity and environmental reverse transitions limit accumulation. Receiver identity, absolute rates, spatial support and the full gravity response remain unproved.
+Latest diagnostic: [deposit support](../research_work/results/deposit-support/derivation.md). Mechanical support is distinct from internal retention. Fixed-potential tests quantify cold infall, required orbital dispersion and a positive ideal equilibrium; isotropic radiation requires a different stress profile. A finite photon-funded reservoir, its formation, self-gravity, stability and lensing remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
