@@ -1,0 +1,21 @@
+{
+  "scope": "Conditional fixed-occupation Gaussian massive-wave cloud coupled to symmetric photon pairs; no companion creation, capture, spin-2 identification or astronomical fit.",
+  "inertia": 10000.0,
+  "optical_coupling": 0.5,
+  "initial_radius": 1.0,
+  "source_distance": 8.0,
+  "pair_spacing": 5.0,
+  "end_time": 800.0,
+  "cases": [
+    {"name": "unilluminated", "pairs": 0, "energy_per_photon": 0.0},
+    {"name": "single_pair", "pairs": 1, "energy_per_photon": 0.02},
+    {"name": "short_train", "pairs": 16, "energy_per_photon": 0.02},
+    {"name": "long_faint_train", "pairs": 64, "energy_per_photon": 0.002},
+    {"name": "long_train", "pairs": 64, "energy_per_photon": 0.02}
+  ],
+  "solvers": [
+    {"rtol": 1e-9, "atol": 1e-11, "max_step": 0.5},
+    {"rtol": 1e-11, "atol": 1e-13, "max_step": 0.25}
+  ],
+  "checks": {"energy_absolute_error": 1e-8, "refinement_absolute_error": 1e-7, "work_absolute_error": 1e-8}
+}

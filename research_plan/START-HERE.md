@@ -2,7 +2,7 @@
 
 Follow the [cumulative-time and companion active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. The current clarified branch proposes cumulative time stretching during propagation, with all lost photon energy entering companions. Ordinary gravitational time dilation is not the proposed cause; timing and all other observations remain mandatory targets.
 
-The latest research step is [companion self-binding requirements](../research_work/results/companion-self-binding/report.md). A conditional massive-wave proxy admits a gravitationally supported equilibrium; its binding-energy, constituent-mass and capture-release requirements are calculated. Static or repeating optical response does not provide uniform continued redshift under the current ray law. Next derive a compatible photon/companion interaction and nonperiodic occupation evolution; no mass, force or graviton identity is adopted.
+The latest research step is [bound-cloud energy exchange](../research_work/results/bound-cloud-exchange/report.md). The density-dependent photon interaction transfers energy into breathing motion of a preexisting bound cloud but exactly conserves companion occupation. Ten refined Gaussian-cloud runs balance photon loss and cloud gain; this does not establish creation, capture, lifetime or a spin-2 identity. Next derive a production interaction with charge/occupation, energy and momentum accounting, retaining clocks, void coupling, cumulative redshift, source supply and joint rotation/lensing within all 20 tasks and 32 requirements.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|

@@ -102,6 +102,7 @@ def main():
         ('sustained-illumination/check.py', []),
         ('spherical-propagation/check.py', []),
         ('companion-self-binding/check.py', []),
+        ('bound-cloud-exchange/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

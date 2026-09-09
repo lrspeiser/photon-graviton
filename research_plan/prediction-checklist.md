@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [companion self-binding requirements](../research_work/results/companion-self-binding/report.md). Refined stationary massive-wave solutions and capture-energy ledgers quantify a conditional collective store. A periodic arrival-map theorem and 216 phase probes distinguish repeating fields from sustained redshift. Stable formation, charge/occupation balance, actual photon conversion, massless graviton binding and a common gravity/lensing law remain open.
+Latest diagnostic: [bound-cloud energy exchange](../research_work/results/bound-cloud-exchange/report.md). The density-dependent photon interaction transfers energy into breathing motion of a preexisting bound cloud but exactly conserves companion occupation. Ten refined Gaussian-cloud runs balance photon loss and cloud gain; this does not establish creation, capture, lifetime or a spin-2 identity. Next derive a production interaction with charge/occupation, energy and momentum accounting, retaining clocks, void coupling, cumulative redshift, source supply and joint rotation/lensing within all 20 tasks and 32 requirements.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
