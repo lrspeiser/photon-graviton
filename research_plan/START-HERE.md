@@ -2,7 +2,7 @@
 
 Follow the [cumulative-time and companion active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. The current clarified branch proposes cumulative time stretching during propagation, with all lost photon energy entering companions. Ordinary gravitational time dilation is not the proposed cause; timing and all other observations remain mandatory targets.
 
-The latest research step is [generated companion-wave access](../research_work/results/generated-wave-access/report.md). Twelve coupled photon/field/slab runs now generate the incident wave signal rather than imposing it. Most energy from the tested source lies below the restoring region's transmission threshold, so it mostly reflects. Energy and finite-window storage are accounted for, and source-spectrum weighting independently supports the result. The environmental law, clocks, capture, support and joint gravity remain incomplete.
+The latest research step is [source-timescale versus delivery](../research_work/results/source-timescale/report.md). A smaller tested production region sends more energy through the restoring slab but causes less photon energy loss. Eighteen refined runs confirm this conditional tradeoff. The initial numerical convergence failure is retained. Region sizes, repeated-region timing and redshift, capture, support and joint gravity still require derivation.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|

@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [generated companion-wave access](../research_work/results/generated-wave-access/report.md). A joint photon/field/slab calculation supplies the actual incoming pulse. The tested source emits mainly below the restoring region's threshold, so only about 0.15-0.17% passes through the m=1 example. Twelve runs, grid refinement and independent spectral weighting support the conditional result. Energy is conserved, but there is no capture or permanent storage channel; environmental laws, clocks and gravity remain unproved.
+Latest diagnostic: [source-timescale tradeoff](../research_work/results/source-timescale/report.md). Narrower finite conversion regions can deliver more companion energy through the same barrier, despite generating less total photon loss. Eighteen refined runs pass the unchanged convergence gate after a retained coarse-grid failure. This makes region size and accumulated redshift/timing a linked requirement, not independent fit choices. Permanent deposition and gravity remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

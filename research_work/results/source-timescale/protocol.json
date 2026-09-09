@@ -1,0 +1,10 @@
+{
+  "scope": "Change the finite conversion-region width in the existing closed photon/companion/slab model. Compare generated energy, spectral access and absolute transmitted energy at fixed packet energy, smoothing, field stiffness and barrier. No new capture channel or adopted environmental law.",
+  "conversion_half_widths": [0.5, 1.0, 2.0],
+  "restoring_frequencies": [0.0, 1.0, 3.0],
+  "cells": [3072, 6144],
+  "refinement_reason": "The initial 1536/3072-cell pilot failed the unchanged 2% relative-energy convergence gate for half-width 0.5 and restoring frequency 3. Both production and barrier are now resolved more finely; the failed pilot is retained separately.",
+  "smoothing_width": 0.25,
+  "maximum_relative_energy_change_on_refinement": 0.02,
+  "maximum_absolute_transmission_fraction_change": 0.01
+}

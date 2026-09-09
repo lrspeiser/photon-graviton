@@ -20,3 +20,5 @@ Markdown is the authoritative editable source. The build generates a PDF with nu
 ## Before journal submission
 
 Complete the joint interaction, clocks, generated-wave access, capture, support and gravity derivations; resolve the transient estimator's numerical gate; perform independent observational tests; expand the literature review; and have the mathematics and interpretation externally reviewed. Existing numerical passes do not fulfill those requirements. Keep failed candidate results and uncertainty visible.
+
+Further post-draft result: [source-timescale tradeoff](../../research_work/results/source-timescale/report.md) shows that reducing the modeled conversion-region width can improve absolute delivery while reducing photon loss. This constrains the next coupled redshift/timing calculation. Draft v0.1 remains unchanged as its dated evidence snapshot.

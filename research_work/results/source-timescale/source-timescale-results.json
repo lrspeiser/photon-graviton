@@ -1,0 +1,1391 @@
+{
+  "scope": "Change the finite conversion-region width in the existing closed photon/companion/slab model. Compare generated energy, spectral access and absolute transmitted energy at fixed packet energy, smoothing, field stiffness and barrier. No new capture channel or adopted environmental law.",
+  "checks_pass": true,
+  "runs": [
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 0.0,
+      "slab_static_center_suppression": 1.0,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.02984647202612066,
+      "photon_energy_lost": 0.0001535279738793388,
+      "incident_energy": 5.149135283846604e-05,
+      "reflected_energy": 1.3543966813445884e-11,
+      "transmitted_energy": 5.149135283846597e-05,
+      "energy_inside_monitors_at_end": 1.4294238285663832e-29,
+      "fractions_of_incident": {
+        "reflected": 2.630338118311783e-07,
+        "transmitted": 0.9999999999999987,
+        "temporarily_inside": 2.776046364620951e-25,
+        "incoming_from_left": 2.630338118310291e-07
+      },
+      "maximum_relative_total_energy_drift": 3.3884931897413636e-14,
+      "maximum_local_balance_error_over_incident": 1.9871604529271813e-14,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 6.583456291694065e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": -5.2887938534272004e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99838461153702,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 5.091416588198258e-05,
+          "reflected_energy": 1.0967445384311103e-11,
+          "transmitted_energy": 1.7926658544342606e-87,
+          "energy_inside_monitors": 5.091415491453717e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 5.149135283846604e-05,
+          "reflected_energy": 1.3543966813445884e-11,
+          "transmitted_energy": 5.149135283685688e-05,
+          "energy_inside_monitors": 1.604918869585152e-15
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 5.149135283846604e-05,
+          "reflected_energy": 1.3543966813445884e-11,
+          "transmitted_energy": 5.149135283846597e-05,
+          "energy_inside_monitors": 2.3860097115207976e-27
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 5.149135283846604e-05,
+          "reflected_energy": 1.3543966813445884e-11,
+          "transmitted_energy": 5.149135283846597e-05,
+          "energy_inside_monitors": 1.4294238285663832e-29
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 0.5,
+      "photon_fraction_lost": 0.005117599129311294,
+      "transmitted_over_initial_photon_energy": 0.0017163784279488658,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.9999999999999997,
+        "incident_energy_fraction_below_cutoff": 0.0,
+        "median_incident_angular_frequency": 0.7727428218973917,
+        "frequency_below_which_99_percent_of_energy_lies": 2.770752798118439,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 0.0,
+      "slab_static_center_suppression": 1.0,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029846533559455855,
+      "photon_energy_lost": 0.00015346644054414424,
+      "incident_energy": 5.148122389529647e-05,
+      "reflected_energy": 8.435079842306431e-13,
+      "transmitted_energy": 5.148122389529648e-05,
+      "energy_inside_monitors_at_end": 1.3259614015426263e-28,
+      "fractions_of_incident": {
+        "reflected": 1.6384769444218852e-08,
+        "transmitted": 1.0000000000000002,
+        "temporarily_inside": 2.57562136486769e-24,
+        "incoming_from_left": 1.6384769444228686e-08
+      },
+      "maximum_relative_total_energy_drift": 3.469446951953614e-16,
+      "maximum_local_balance_error_over_incident": 5.265036893307821e-16,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 3.27745281724264e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": -5.257092729608931e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99838456160773,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 5.0913716110899006e-05,
+          "reflected_energy": 6.883916311965449e-13,
+          "transmitted_energy": 3.3698364966818446e-131,
+          "energy_inside_monitors": 5.0913715422507374e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 5.148122389529647e-05,
+          "reflected_energy": 8.435079842306431e-13,
+          "transmitted_energy": 5.148122389529648e-05,
+          "energy_inside_monitors": 1.1572175981538878e-26
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 5.148122389529647e-05,
+          "reflected_energy": 8.435079842306431e-13,
+          "transmitted_energy": 5.148122389529648e-05,
+          "energy_inside_monitors": 7.114441509760513e-29
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 5.148122389529647e-05,
+          "reflected_energy": 8.435079842306431e-13,
+          "transmitted_energy": 5.148122389529648e-05,
+          "energy_inside_monitors": 1.3259614015426263e-28
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 0.5,
+      "photon_fraction_lost": 0.005115548018138141,
+      "transmitted_over_initial_photon_energy": 0.0017160407965098826,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.999999999999999,
+        "incident_energy_fraction_below_cutoff": 0.0,
+        "median_incident_angular_frequency": 0.7727428218973917,
+        "frequency_below_which_99_percent_of_energy_lies": 2.7726702741032963,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 1.0,
+      "slab_static_center_suppression": 0.2658022288340797,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.02984647202612066,
+      "photon_energy_lost": 0.0001535279738793388,
+      "incident_energy": 5.1491353477517193e-05,
+      "reflected_energy": 3.385495644958722e-05,
+      "transmitted_energy": 1.763589308271518e-05,
+      "energy_inside_monitors_at_end": 5.168494683956223e-10,
+      "fractions_of_incident": {
+        "reflected": 0.6574881832222452,
+        "transmitted": 0.34250202979060523,
+        "temporarily_inside": 1.0037597256426669e-05,
+        "incoming_from_left": 2.506101092467887e-07
+      },
+      "maximum_relative_total_energy_drift": 3.3884931897413636e-14,
+      "maximum_local_balance_error_over_incident": 1.7897603857219777e-14,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 6.58070061117233e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 8.250810569112164e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99838461153702,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 5.091416588197698e-05,
+          "reflected_energy": 1.0967445327954952e-11,
+          "transmitted_energy": 1.5992694036716436e-87,
+          "energy_inside_monitors": 5.0914154914531616e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 5.1491353287395e-05,
+          "reflected_energy": 3.2169490096297695e-05,
+          "transmitted_energy": 1.482683799997119e-05,
+          "energy_inside_monitors": 4.495037829957692e-06
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 5.149135346962047e-05,
+          "reflected_energy": 3.378559482449375e-05,
+          "transmitted_energy": 1.7564738942201106e-05,
+          "energy_inside_monitors": 1.4103259869615138e-07
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 5.1491353477517193e-05,
+          "reflected_energy": 3.385495644958722e-05,
+          "transmitted_energy": 1.763589308271518e-05,
+          "energy_inside_monitors": 5.168494683956223e-10
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 0.5,
+      "photon_fraction_lost": 0.005117599129311294,
+      "transmitted_over_initial_photon_energy": 0.0005878631027571727,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.3425628596033334,
+        "incident_energy_fraction_below_cutoff": 0.6181664576455455,
+        "median_incident_angular_frequency": 0.7727428218973917,
+        "frequency_below_which_99_percent_of_energy_lies": 2.770752798118439,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 1.0,
+      "slab_static_center_suppression": 0.2658022288340797,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029846533559455855,
+      "photon_energy_lost": 0.00015346644054414424,
+      "incident_energy": 5.148122393505319e-05,
+      "reflected_energy": 3.384874212399846e-05,
+      "transmitted_energy": 1.76319686389533e-05,
+      "energy_inside_monitors_at_end": 5.139757254223216e-10,
+      "fractions_of_incident": {
+        "reflected": 0.6574968413086058,
+        "transmitted": 0.3424931905503478,
+        "temporarily_inside": 9.983751087012508e-06,
+        "incoming_from_left": 1.5610037867326726e-08
+      },
+      "maximum_relative_total_energy_drift": 3.469446951953614e-16,
+      "maximum_local_balance_error_over_incident": 3.034433827761482e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 3.27745281724264e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 8.281888055054295e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99838456160773,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 5.0913716110898985e-05,
+          "reflected_energy": 6.883916311487694e-13,
+          "transmitted_energy": 3.12046996324254e-131,
+          "energy_inside_monitors": 5.091371542250736e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 5.148122392320646e-05,
+          "reflected_energy": 3.216548033372572e-05,
+          "transmitted_energy": 1.4840189598196813e-05,
+          "energy_inside_monitors": 4.475554778343904e-06
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 5.148122393456206e-05,
+          "reflected_energy": 3.377963405590361e-05,
+          "transmitted_energy": 1.7561097343245125e-05,
+          "energy_inside_monitors": 1.4049333851015455e-07
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 5.148122393505319e-05,
+          "reflected_energy": 3.384874212399846e-05,
+          "transmitted_energy": 1.76319686389533e-05,
+          "energy_inside_monitors": 5.139757254223216e-10
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 0.5,
+      "photon_fraction_lost": 0.005115548018138141,
+      "transmitted_over_initial_photon_energy": 0.00058773228796511,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.34251211074529264,
+        "incident_energy_fraction_below_cutoff": 0.6182258224358165,
+        "median_incident_angular_frequency": 0.7727428218973917,
+        "frequency_below_which_99_percent_of_energy_lies": 2.7726702741032963,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 3.0,
+      "slab_static_center_suppression": 0.004957473893560379,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.02984647202612066,
+      "photon_energy_lost": 0.0001535279738793388,
+      "incident_energy": 5.149136517593155e-05,
+      "reflected_energy": 5.134675097476894e-05,
+      "transmitted_energy": 1.250057416594185e-07,
+      "energy_inside_monitors_at_end": 1.9609552265310503e-08,
+      "fractions_of_incident": {
+        "reflected": 0.9971914863653643,
+        "transmitted": 0.0024277029989845664,
+        "temporarily_inside": 0.00038083185789132144,
+        "incoming_from_left": 2.1222240620631635e-08
+      },
+      "maximum_relative_total_energy_drift": 3.3884931897413636e-14,
+      "maximum_local_balance_error_over_incident": 1.2896799849419751e-14,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 6.586166797125278e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 0.00015241300827438143,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99838461153702,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 5.0914165881933624e-05,
+          "reflected_energy": 1.0967444888437083e-11,
+          "transmitted_energy": 6.426752325900882e-88,
+          "energy_inside_monitors": 5.0914154914488715e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 5.149136496942862e-05,
+          "reflected_energy": 5.131317571388626e-05,
+          "transmitted_energy": 2.0040372490484965e-08,
+          "energy_inside_monitors": 1.5814918569226907e-07
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 5.1491365033137634e-05,
+          "reflected_energy": 5.132346012460816e-05,
+          "transmitted_energy": 1.1228051894133806e-07,
+          "energy_inside_monitors": 5.562541259071874e-08
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 5.149136517593155e-05,
+          "reflected_energy": 5.134675097476894e-05,
+          "transmitted_energy": 1.250057416594185e-07,
+          "energy_inside_monitors": 1.9609552265310503e-08
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 0.5,
+      "photon_fraction_lost": 0.005117599129311294,
+      "transmitted_over_initial_photon_energy": 4.16685805531395e-06,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.0026409610343753787,
+        "incident_energy_fraction_below_cutoff": 0.9953926807842721,
+        "median_incident_angular_frequency": 0.7727428218973917,
+        "frequency_below_which_99_percent_of_energy_lies": 2.770752798118439,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 3.0,
+      "slab_static_center_suppression": 0.004957473893560379,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029846533559455855,
+      "photon_energy_lost": 0.00015346644054414424,
+      "incident_energy": 5.1481224662839666e-05,
+      "reflected_energy": 5.133544904086337e-05,
+      "transmitted_energy": 1.2620409592522373e-07,
+      "energy_inside_monitors_at_end": 1.9571594214378634e-08,
+      "fractions_of_incident": {
+        "reflected": 0.9971683730732707,
+        "transmitted": 0.0024514586968697495,
+        "temporarily_inside": 0.00038016955390157725,
+        "incoming_from_left": 1.324040991785656e-09
+      },
+      "maximum_relative_total_energy_drift": 3.469446951953614e-16,
+      "maximum_local_balance_error_over_incident": 2.4461340475059072e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 3.27745281724264e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 0.00015277713133293277,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99838456160773,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 5.0913716110898884e-05,
+          "reflected_energy": 6.883916307147738e-13,
+          "transmitted_energy": 1.6876235097409233e-131,
+          "energy_inside_monitors": 5.091371542250725e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 5.1481224650007835e-05,
+          "reflected_energy": 5.1301802319693385e-05,
+          "transmitted_energy": 2.071602327562424e-08,
+          "energy_inside_monitors": 1.5870632635882786e-07
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 5.1481224653978685e-05,
+          "reflected_energy": 5.131212587227267e-05,
+          "transmitted_energy": 1.1354795774262409e-07,
+          "energy_inside_monitors": 5.5550887823913996e-08
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 5.1481224662839666e-05,
+          "reflected_energy": 5.133544904086337e-05,
+          "transmitted_energy": 1.2620409592522373e-07,
+          "energy_inside_monitors": 1.9571594214378634e-08
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 0.5,
+      "photon_fraction_lost": 0.005115548018138141,
+      "transmitted_over_initial_photon_energy": 4.206803197507458e-06,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.0026579616409964308,
+        "incident_energy_fraction_below_cutoff": 0.9953670396145409,
+        "median_incident_angular_frequency": 0.7727428218973917,
+        "frequency_below_which_99_percent_of_energy_lies": 2.7726702741032963,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 0.0,
+      "slab_static_center_suppression": 1.0,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029610247047233366,
+      "photon_energy_lost": 0.0003897529527666331,
+      "incident_energy": 0.0001089068780460233,
+      "reflected_energy": 2.2548876124737808e-12,
+      "transmitted_energy": 0.00010890687804602332,
+      "energy_inside_monitors_at_end": 6.20067147683221e-29,
+      "fractions_of_incident": {
+        "reflected": 2.070473098605288e-08,
+        "transmitted": 1.0000000000000002,
+        "temporarily_inside": 5.693553601097489e-25,
+        "incoming_from_left": 2.070473098603799e-08
+      },
+      "maximum_relative_total_energy_drift": 1.97758476261356e-14,
+      "maximum_local_balance_error_over_incident": 7.466485532901751e-16,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 2.8331106268856636e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 1.7218416859905168e-289,
+      "fixed_profile_and_grid_impulse": -4.649370495463685e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.9961372715442,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 9.481683289058679e-05,
+          "reflected_energy": 1.7180107460661654e-12,
+          "transmitted_energy": 1.222410992043086e-58,
+          "energy_inside_monitors": 9.481683117257599e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.0001089068780460233,
+          "reflected_energy": 2.2548876124737808e-12,
+          "transmitted_energy": 0.00010890678975357271,
+          "energy_inside_monitors": 8.825623137066721e-11
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.0001089068780460233,
+          "reflected_energy": 2.2548876124737808e-12,
+          "transmitted_energy": 0.00010890687804602332,
+          "energy_inside_monitors": 4.825961230753844e-29
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.0001089068780460233,
+          "reflected_energy": 2.2548876124737808e-12,
+          "transmitted_energy": 0.00010890687804602332,
+          "energy_inside_monitors": 6.20067147683221e-29
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 1.0,
+      "photon_fraction_lost": 0.012991765092221105,
+      "transmitted_over_initial_photon_energy": 0.0036302292682007776,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.9999999999999991,
+        "incident_energy_fraction_below_cutoff": 0.0,
+        "median_incident_angular_frequency": 0.41033986075940904,
+        "frequency_below_which_99_percent_of_energy_lies": 1.4515293205367878,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 0.0,
+      "slab_static_center_suppression": 1.0,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.02961014588896693,
+      "photon_energy_lost": 0.00038985411103307013,
+      "incident_energy": 0.00010890169122846319,
+      "reflected_energy": 1.407756134980496e-13,
+      "transmitted_energy": 0.0001089016912284632,
+      "energy_inside_monitors_at_end": 4.0384579132854205e-28,
+      "fractions_of_incident": {
+        "reflected": 1.2926852825703009e-09,
+        "transmitted": 1.0000000000000002,
+        "temporarily_inside": 3.708351879323161e-24,
+        "incoming_from_left": 1.2926852825782443e-09
+      },
+      "maximum_relative_total_energy_drift": 3.469446951953614e-16,
+      "maximum_local_balance_error_over_incident": 6.222367624960556e-16,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 3.530433324155924e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": -4.590782525785613e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99613628022543,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 9.484994837225689e-05,
+          "reflected_energy": 1.0736588835495311e-13,
+          "transmitted_energy": 1.647352974126851e-83,
+          "energy_inside_monitors": 9.484994826489103e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00010890169122846319,
+          "reflected_energy": 1.407756134980496e-13,
+          "transmitted_energy": 0.00010890149105881229,
+          "energy_inside_monitors": 2.00167945105634e-10
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00010890169122846319,
+          "reflected_energy": 1.407756134980496e-13,
+          "transmitted_energy": 0.0001089016912284632,
+          "energy_inside_monitors": 2.79699548835765e-28
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00010890169122846319,
+          "reflected_energy": 1.407756134980496e-13,
+          "transmitted_energy": 0.0001089016912284632,
+          "energy_inside_monitors": 4.0384579132854205e-28
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 1.0,
+      "photon_fraction_lost": 0.012995137034435672,
+      "transmitted_over_initial_photon_energy": 0.0036300563742821066,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.9999999999999992,
+        "incident_energy_fraction_below_cutoff": 0.0,
+        "median_incident_angular_frequency": 0.41033986075940904,
+        "frequency_below_which_99_percent_of_energy_lies": 1.4515293205367878,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 1.0,
+      "slab_static_center_suppression": 0.2658022288340797,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029610247047233366,
+      "photon_energy_lost": 0.0003897529527666331,
+      "incident_energy": 0.00010890642534685953,
+      "reflected_energy": 0.00010090691568682357,
+      "transmitted_energy": 7.998933944964314e-06,
+      "energy_inside_monitors_at_end": 5.770505861688381e-10,
+      "fractions_of_incident": {
+        "reflected": 0.9265469449157102,
+        "transmitted": 0.07344776875641869,
+        "temporarily_inside": 5.298590825389515e-06,
+        "incoming_from_left": 1.2262956868761005e-08
+      },
+      "maximum_relative_total_energy_drift": 1.97758476261356e-14,
+      "maximum_local_balance_error_over_incident": 2.7803458544490712e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 2.8331106268856636e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 1.5532749531520487e-289,
+      "fixed_profile_and_grid_impulse": 0.00035708637159058974,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.9961372715442,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 9.481682550552363e-05,
+          "reflected_energy": 1.7868980948022936e-12,
+          "transmitted_energy": 1.0524788663682729e-58,
+          "energy_inside_monitors": 9.481682371862553e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.0001089064251665786,
+          "reflected_energy": 9.883082782704419e-05,
+          "transmitted_energy": 4.634349102660135e-06,
+          "energy_inside_monitors": 5.44124895448375e-06
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00010890642533801838,
+          "reflected_energy": 0.00010083312125910709,
+          "transmitted_energy": 7.925112553712283e-06,
+          "energy_inside_monitors": 1.4819285174646046e-07
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00010890642534685953,
+          "reflected_energy": 0.00010090691568682357,
+          "transmitted_energy": 7.998933944964314e-06,
+          "energy_inside_monitors": 5.770505861688381e-10
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 1.0,
+      "photon_fraction_lost": 0.012991765092221105,
+      "transmitted_over_initial_photon_energy": 0.00026663113149881046,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.07346979167322112,
+        "incident_energy_fraction_below_cutoff": 0.9090003049879537,
+        "median_incident_angular_frequency": 0.41033986075940904,
+        "frequency_below_which_99_percent_of_energy_lies": 1.4515293205367878,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 1.0,
+      "slab_static_center_suppression": 0.2658022288340797,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.02961014588896693,
+      "photon_energy_lost": 0.00038985411103307013,
+      "incident_energy": 0.00010890157749470068,
+      "reflected_energy": 0.00010089936158455922,
+      "transmitted_energy": 8.00164185729858e-06,
+      "energy_inside_monitors_at_end": 5.741362111032615e-10,
+      "fractions_of_incident": {
+        "reflected": 0.9265188246650434,
+        "transmitted": 0.07347590403534744,
+        "temporarily_inside": 5.2720651464502415e-06,
+        "incoming_from_left": 7.655368443609272e-10
+      },
+      "maximum_relative_total_energy_drift": 3.469446951953614e-16,
+      "maximum_local_balance_error_over_incident": 2.15644153215028e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 3.530433324155924e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 0.0003576785920213858,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99613628022543,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 9.484994690443222e-05,
+          "reflected_energy": 1.2025182679809894e-13,
+          "transmitted_energy": 1.4894201767054696e-83,
+          "energy_inside_monitors": 9.484994678418039e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00010890157748346013,
+          "reflected_energy": 9.882782941623506e-05,
+          "transmitted_energy": 4.652713590840129e-06,
+          "energy_inside_monitors": 5.4210345215825076e-06
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00010890157749415057,
+          "reflected_energy": 0.00010082579327993333,
+          "transmitted_energy": 7.928046295750173e-06,
+          "energy_inside_monitors": 1.4773800127746398e-07
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00010890157749470068,
+          "reflected_energy": 0.00010089936158455922,
+          "transmitted_energy": 8.00164185729858e-06,
+          "energy_inside_monitors": 5.741362111032615e-10
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 1.0,
+      "photon_fraction_lost": 0.012995137034435672,
+      "transmitted_over_initial_photon_energy": 0.000266721395243286,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.07348337991445068,
+        "incident_energy_fraction_below_cutoff": 0.9089870883623867,
+        "median_incident_angular_frequency": 0.41033986075940904,
+        "frequency_below_which_99_percent_of_energy_lies": 1.4515293205367878,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 3.0,
+      "slab_static_center_suppression": 0.004957473893560379,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029610247047233366,
+      "photon_energy_lost": 0.0003897529527666331,
+      "incident_energy": 0.00010890433347295127,
+      "reflected_energy": 0.00010890207415821529,
+      "transmitted_energy": 2.245423012698775e-09,
+      "energy_inside_monitors_at_end": 1.392239494807821e-11,
+      "fractions_of_incident": {
+        "reflected": 0.9999792541337528,
+        "transmitted": 2.0618307289456706e-05,
+        "temporarily_inside": 1.278405964583231e-07,
+        "incoming_from_left": 2.816384743378948e-10
+      },
+      "maximum_relative_total_energy_drift": 1.97758476261356e-14,
+      "maximum_local_balance_error_over_incident": 7.898821399853441e-16,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 2.8331106268856636e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 6.830111804151054e-290,
+      "fixed_profile_and_grid_impulse": 0.0003890503504104195,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.9961372715442,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 9.481677134412968e-05,
+          "reflected_energy": 2.9972523014217244e-12,
+          "transmitted_energy": 3.1839912474942523e-59,
+          "energy_inside_monitors": 9.481676834687737e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00010890433347058204,
+          "reflected_energy": 0.0001089017732994479,
+          "transmitted_energy": 9.816897279613943e-10,
+          "energy_inside_monitors": 1.5784952535792014e-09
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00010890433347260172,
+          "reflected_energy": 0.00010890203366372847,
+          "transmitted_energy": 2.18273253904717e-09,
+          "energy_inside_monitors": 1.171065630249785e-10
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00010890433347295127,
+          "reflected_energy": 0.00010890207415821529,
+          "transmitted_energy": 2.245423012698775e-09,
+          "energy_inside_monitors": 1.392239494807821e-11
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 1.0,
+      "photon_fraction_lost": 0.012991765092221105,
+      "transmitted_over_initial_photon_energy": 7.484743375662584e-08,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 2.071948521650601e-05,
+        "incident_energy_fraction_below_cutoff": 0.9999746128818285,
+        "median_incident_angular_frequency": 0.41033986075940904,
+        "frequency_below_which_99_percent_of_energy_lies": 1.4515293205367878,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 3.0,
+      "slab_static_center_suppression": 0.004957473893560379,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.02961014588896693,
+      "photon_energy_lost": 0.00038985411103307013,
+      "incident_energy": 0.0001089010520799305,
+      "reflected_energy": 0.00010889879294278619,
+      "transmitted_energy": 2.2445497837209193e-09,
+      "energy_inside_monitors_at_end": 1.458925599703384e-11,
+      "fractions_of_incident": {
+        "reflected": 0.9999792551394026,
+        "transmitted": 2.0610910003637786e-05,
+        "temporarily_inside": 1.3396799864087364e-07,
+        "incoming_from_left": 1.7401515852207338e-11
+      },
+      "maximum_relative_total_energy_drift": 3.469446951953614e-16,
+      "maximum_local_balance_error_over_incident": 3.653504422993546e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 3.530433324155924e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 0.0003896713284370062,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99613628022543,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 9.48499358897898e-05,
+          "reflected_energy": 5.15346039372638e-13,
+          "transmitted_energy": 6.653243213476283e-84,
+          "energy_inside_monitors": 9.484993537444374e-05
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00010890105207978723,
+          "reflected_energy": 0.00010889849760759001,
+          "transmitted_energy": 9.900374920359121e-10,
+          "energy_inside_monitors": 1.5644355605458525e-09
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00010890105207991027,
+          "reflected_energy": 0.00010889875476100567,
+          "transmitted_energy": 2.181762399246323e-09,
+          "energy_inside_monitors": 1.1555837320882491e-10
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.0001089010520799305,
+          "reflected_energy": 0.00010889879294278619,
+          "transmitted_energy": 2.2445497837209193e-09,
+          "energy_inside_monitors": 1.458925599703384e-11
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 1.0,
+      "photon_fraction_lost": 0.012995137034435672,
+      "transmitted_over_initial_photon_energy": 7.481832612403064e-08,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 2.0679758611268282e-05,
+        "incident_energy_fraction_below_cutoff": 0.9999746508916533,
+        "median_incident_angular_frequency": 0.41033986075940904,
+        "frequency_below_which_99_percent_of_energy_lies": 1.4515293205367878,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 0.0,
+      "slab_static_center_suppression": 1.0,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029152118120913527,
+      "photon_energy_lost": 0.000847881879086472,
+      "incident_energy": 0.00021840154938871422,
+      "reflected_energy": 3.069878082073392e-13,
+      "transmitted_energy": 0.00021840154938871428,
+      "energy_inside_monitors_at_end": 2.6415369747223135e-28,
+      "fractions_of_incident": {
+        "reflected": 1.405611860660191e-09,
+        "transmitted": 1.0000000000000002,
+        "temporarily_inside": 1.2094863713722414e-24,
+        "incoming_from_left": 1.405611860660867e-09
+      },
+      "maximum_relative_total_energy_drift": 1.7694179454963432e-14,
+      "maximum_local_balance_error_over_incident": 6.875112594369393e-16,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 2.0073099721758712e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 4.46882929756113e-224,
+      "fixed_profile_and_grid_impulse": -2.6169563104498587e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.991772724820336,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 0.00015651404394544387,
+          "reflected_energy": 2.0700518808577246e-13,
+          "transmitted_energy": 2.8855713941492724e-18,
+          "energy_inside_monitors": 0.00015651404373843585
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00021840154938871422,
+          "reflected_energy": 3.069878082073392e-13,
+          "transmitted_energy": 0.00021016626323404713,
+          "energy_inside_monitors": 8.2352860835578e-06
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00021840154938871422,
+          "reflected_energy": 3.069878082073392e-13,
+          "transmitted_energy": 0.00021840154938871428,
+          "energy_inside_monitors": 2.1517071625677375e-27
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00021840154938871422,
+          "reflected_energy": 3.069878082073392e-13,
+          "transmitted_energy": 0.00021840154938871428,
+          "energy_inside_monitors": 2.6415369747223135e-28
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 2.0,
+      "photon_fraction_lost": 0.0282627293028824,
+      "transmitted_over_initial_photon_energy": 0.007280051646290476,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.9999999999999987,
+        "incident_energy_fraction_below_cutoff": 0.0,
+        "median_incident_angular_frequency": 0.2090048823494186,
+        "frequency_below_which_99_percent_of_energy_lies": 0.7343933022002507,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 0.0,
+      "slab_static_center_suppression": 1.0,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029151979512081025,
+      "photon_energy_lost": 0.000848020487918974,
+      "incident_energy": 0.0002183982558298296,
+      "reflected_energy": 1.9179203812822797e-14,
+      "transmitted_energy": 0.0002183982558298298,
+      "energy_inside_monitors_at_end": 1.580574076992614e-27,
+      "fractions_of_incident": {
+        "reflected": 8.781756859709882e-11,
+        "transmitted": 1.0000000000000009,
+        "temporarily_inside": 7.23711858864e-24,
+        "incoming_from_left": 8.78175685918942e-11
+      },
+      "maximum_relative_total_energy_drift": 6.938893903907228e-16,
+      "maximum_local_balance_error_over_incident": 1.0730306675858003e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 5.89534931288993e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": -2.568398548263241e-05,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99177259457748,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 0.0001565266824669209,
+          "reflected_energy": 1.29354779152497e-14,
+          "transmitted_energy": 1.7490789743321494e-20,
+          "energy_inside_monitors": 0.0001565266824539855
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.0002183982558298296,
+          "reflected_energy": 1.9179203812822405e-14,
+          "transmitted_energy": 0.00021017105591230795,
+          "energy_inside_monitors": 8.22719991308241e-06
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.0002183982558298296,
+          "reflected_energy": 1.917920381282251e-14,
+          "transmitted_energy": 0.0002183982558298298,
+          "energy_inside_monitors": 1.0476381000849117e-27
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.0002183982558298296,
+          "reflected_energy": 1.9179203812822797e-14,
+          "transmitted_energy": 0.0002183982558298298,
+          "energy_inside_monitors": 1.580574076992614e-27
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 2.0,
+      "photon_fraction_lost": 0.028267349597299134,
+      "transmitted_over_initial_photon_energy": 0.007279941860994327,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.9999999999999993,
+        "incident_energy_fraction_below_cutoff": 0.0,
+        "median_incident_angular_frequency": 0.2090048823494186,
+        "frequency_below_which_99_percent_of_energy_lies": 0.7343933022002507,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 1.0,
+      "slab_static_center_suppression": 0.2658022288340797,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029152118120913527,
+      "photon_energy_lost": 0.000847881879086472,
+      "incident_energy": 0.00021839697623968787,
+      "reflected_energy": 0.00021802269649646205,
+      "transmitted_energy": 3.742522232734811e-07,
+      "energy_inside_monitors_at_end": 2.75473370283384e-11,
+      "fractions_of_incident": {
+        "reflected": 0.9982862411848823,
+        "transmitted": 0.0017136328062653397,
+        "temporarily_inside": 1.2613424188668964e-07,
+        "incoming_from_left": 1.2538737580746415e-10
+      },
+      "maximum_relative_total_energy_drift": 1.7694179454963432e-14,
+      "maximum_local_balance_error_over_incident": 2.387471321032045e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 2.0073099721758712e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 3.9611272261326246e-224,
+      "fixed_profile_and_grid_impulse": 0.0008459015836166082,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.991772724820336,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 0.00015651152490248226,
+          "reflected_energy": 1.6496808890962625e-07,
+          "transmitted_energy": 2.032245281298698e-18,
+          "energy_inside_monitors": 0.0001563465568135706
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00021839697620359115,
+          "reflected_energy": 0.00021784526612698827,
+          "transmitted_energy": 3.0118999335201174e-07,
+          "energy_inside_monitors": 2.5052009738313236e-07
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00021839697623923356,
+          "reflected_energy": 0.0002180188467225266,
+          "transmitted_energy": 3.7062982141754025e-07,
+          "energy_inside_monitors": 7.4997222884557e-09
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00021839697623968787,
+          "reflected_energy": 0.00021802269649646205,
+          "transmitted_energy": 3.742522232734811e-07,
+          "energy_inside_monitors": 2.75473370283384e-11
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 2.0,
+      "photon_fraction_lost": 0.0282627293028824,
+      "transmitted_over_initial_photon_energy": 1.2475074109116037e-05,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.001712541015896655,
+        "incident_energy_fraction_below_cutoff": 0.9995308492441193,
+        "median_incident_angular_frequency": 0.2090048823494186,
+        "frequency_below_which_99_percent_of_energy_lies": 0.7343933022002507,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 1.0,
+      "slab_static_center_suppression": 0.2658022288340797,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029151979512081025,
+      "photon_energy_lost": 0.000848020487918974,
+      "incident_energy": 0.00021839711263941418,
+      "reflected_energy": 0.00021802299103691102,
+      "transmitted_energy": 3.74094195934603e-07,
+      "energy_inside_monitors_at_end": 2.7408276869784807e-11,
+      "fractions_of_incident": {
+        "reflected": 0.9982869663523397,
+        "transmitted": 0.0017129081580499342,
+        "temporarily_inside": 1.254974323540504e-07,
+        "incoming_from_left": 7.819245506274148e-12
+      },
+      "maximum_relative_total_energy_drift": 6.938893903907228e-16,
+      "maximum_local_balance_error_over_incident": 2.793644634999736e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 5.89534931288993e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 0.0008464031101196294,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99177259457748,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 0.00015652605211891274,
+          "reflected_energy": 1.6502348067058622e-07,
+          "transmitted_energy": 1.3473175021681281e-20,
+          "energy_inside_monitors": 0.0001563610286382421
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00021839711263716305,
+          "reflected_energy": 0.00021784619681200986,
+          "transmitted_energy": 3.0107448339400764e-07,
+          "energy_inside_monitors": 2.498413426403576e-07
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.0002183971126393866,
+          "reflected_energy": 0.00021801915707700382,
+          "transmitted_energy": 3.70484778974617e-07,
+          "energy_inside_monitors": 7.470785091828237e-09
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00021839711263941418,
+          "reflected_energy": 0.00021802299103691102,
+          "transmitted_energy": 3.74094195934603e-07,
+          "energy_inside_monitors": 2.7408276869784807e-11
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 2.0,
+      "photon_fraction_lost": 0.028267349597299134,
+      "transmitted_over_initial_photon_energy": 1.2469806531153433e-05,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 0.0017126822379194087,
+        "incident_energy_fraction_below_cutoff": 0.9995309063622354,
+        "median_incident_angular_frequency": 0.2090048823494186,
+        "frequency_below_which_99_percent_of_energy_lies": 0.7343933022002507,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 3072,
+      "dx": 0.03125,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 3.0,
+      "slab_static_center_suppression": 0.004957473893560379,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029152118120913527,
+      "photon_energy_lost": 0.000847881879086472,
+      "incident_energy": 0.0002183980553430555,
+      "reflected_energy": 0.00021839791754137104,
+      "transmitted_energy": 1.3515557027650662e-10,
+      "energy_inside_monitors_at_end": 2.6478716378045707e-12,
+      "fractions_of_incident": {
+        "reflected": 0.9999993690342882,
+        "transmitted": 6.188496965515871e-07,
+        "temporarily_inside": 1.212406233949906e-08,
+        "incoming_from_left": 8.047106083844776e-12
+      },
+      "maximum_relative_total_energy_drift": 1.7694179454963432e-14,
+      "maximum_local_balance_error_over_incident": 9.270462772380919e-16,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 2.0073099721758712e-14,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 1.5148405636297813e-224,
+      "fixed_profile_and_grid_impulse": 0.0008473975621628445,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.991772724820336,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 0.00015650841398939826,
+          "reflected_energy": 2.752201716579382e-06,
+          "transmitted_energy": 1.179547141302866e-19,
+          "energy_inside_monitors": 0.00015375621227281883
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00021839805534199224,
+          "reflected_energy": 0.0002183977416948337,
+          "transmitted_energy": 6.323993145708702e-11,
+          "energy_inside_monitors": 2.5040807489752356e-10
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.00021839805534299304,
+          "reflected_energy": 0.000218397910753081,
+          "transmitted_energy": 1.2410269876430042e-10,
+          "energy_inside_monitors": 2.0488894793232513e-11
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.0002183980553430555,
+          "reflected_energy": 0.00021839791754137104,
+          "transmitted_energy": 1.3515557027650662e-10,
+          "energy_inside_monitors": 2.6478716378045707e-12
+        }
+      ],
+      "rhs_evaluations": 14309,
+      "conversion_half_width": 2.0,
+      "photon_fraction_lost": 0.0282627293028824,
+      "transmitted_over_initial_photon_energy": 4.505185675883554e-09,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 6.251310590950863e-07,
+        "incident_energy_fraction_below_cutoff": 0.9999991760269861,
+        "median_incident_angular_frequency": 0.2090048823494186,
+        "frequency_below_which_99_percent_of_energy_lies": 0.7343933022002507,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    },
+    {
+      "cells": 6144,
+      "dx": 0.015625,
+      "smoothing_width": 0.25,
+      "restoring_frequency": 3.0,
+      "slab_static_center_suppression": 0.004957473893560379,
+      "photon_initial_energy": 0.03,
+      "photon_final_energy": 0.029151979512081025,
+      "photon_energy_lost": 0.000848020487918974,
+      "incident_energy": 0.00021839738347798784,
+      "reflected_energy": 0.0002183972453402642,
+      "transmitted_energy": 1.3534211632754186e-10,
+      "energy_inside_monitors_at_end": 2.795717342639422e-12,
+      "fractions_of_incident": {
+        "reflected": 0.9999993674936877,
+        "transmitted": 6.197057591634696e-07,
+        "temporarily_inside": 1.2801056945451917e-08,
+        "incoming_from_left": 4.971746166808819e-13
+      },
+      "maximum_relative_total_energy_drift": 6.938893903907228e-16,
+      "maximum_local_balance_error_over_incident": 6.626696215481336e-15,
+      "maximum_momentum_balance_error_over_initial_photon_energy": 5.89534931288993e-16,
+      "maximum_boundary_strip_energy_over_initial_photon_energy": 0.0,
+      "fixed_profile_and_grid_impulse": 0.0008478988606417804,
+      "direct_source_work_inside_monitors": 0.0,
+      "minimum_effective_optical_factor": 1.0,
+      "final_photon_x": 47.99177259457748,
+      "time_samples": [
+        {
+          "time": 15.0,
+          "incident_energy": 0.0001565252748166326,
+          "reflected_energy": 2.7653418234092e-06,
+          "transmitted_energy": 1.6300692618581546e-21,
+          "energy_inside_monitors": 0.00015375993299322345
+        },
+        {
+          "time": 25.0,
+          "incident_energy": 0.00021839738347792688,
+          "reflected_energy": 0.0002183970891175561,
+          "transmitted_energy": 6.354223585677133e-11,
+          "energy_inside_monitors": 2.3081818721858982e-10
+        },
+        {
+          "time": 35.0,
+          "incident_energy": 0.0002183973834779857,
+          "reflected_energy": 0.00021839723875720645,
+          "transmitted_energy": 1.241941996711255e-10,
+          "energy_inside_monitors": 2.0526683350838783e-11
+        },
+        {
+          "time": 50.0,
+          "incident_energy": 0.00021839738347798784,
+          "reflected_energy": 0.0002183972453402642,
+          "transmitted_energy": 1.3534211632754186e-10,
+          "energy_inside_monitors": 2.795717342639422e-12
+        }
+      ],
+      "rhs_evaluations": 27113,
+      "conversion_half_width": 2.0,
+      "photon_fraction_lost": 0.028267349597299134,
+      "transmitted_over_initial_photon_energy": 4.511403877584729e-09,
+      "source_spectrum": {
+        "predicted_transmitted_fraction": 6.252273905603028e-07,
+        "incident_energy_fraction_below_cutoff": 0.9999991737588081,
+        "median_incident_angular_frequency": 0.2090048823494186,
+        "frequency_below_which_99_percent_of_energy_lies": 0.7343933022002507,
+        "frequency_quadrature_spacing": 0.0019174759848570515
+      }
+    }
+  ],
+  "grid_convergence": [
+    {
+      "half_width": 0.5,
+      "mass": 0.0,
+      "max_relative_energy_change": 0.00040095629361314167,
+      "absolute_transmission_fraction_change": 1.5543122344752192e-15
+    },
+    {
+      "half_width": 0.5,
+      "mass": 1.0,
+      "max_relative_energy_change": 0.00040095629361314167,
+      "absolute_transmission_fraction_change": 8.839240257407788e-06
+    },
+    {
+      "half_width": 0.5,
+      "mass": 3.0,
+      "max_relative_energy_change": 0.009495367460302218,
+      "absolute_transmission_fraction_change": 2.3755697885183107e-05
+    },
+    {
+      "half_width": 1.0,
+      "mass": 0.0,
+      "max_relative_energy_change": 0.000259477234109351,
+      "absolute_transmission_fraction_change": 0.0
+    },
+    {
+      "half_width": 1.0,
+      "mass": 1.0,
+      "max_relative_energy_change": 0.00033841958719960097,
+      "absolute_transmission_fraction_change": 2.813527892875367e-05
+    },
+    {
+      "half_width": 1.0,
+      "mass": 3.0,
+      "max_relative_energy_change": 0.00038904415673424175,
+      "absolute_transmission_fraction_change": 7.397285818919419e-09
+    },
+    {
+      "half_width": 2.0,
+      "mass": 0.0,
+      "max_relative_energy_change": 0.0001634498629179415,
+      "absolute_transmission_fraction_change": 6.661338147750939e-16
+    },
+    {
+      "half_width": 2.0,
+      "mass": 1.0,
+      "max_relative_energy_change": 0.00042242659895674883,
+      "absolute_transmission_fraction_change": 7.246482154055212e-07
+    },
+    {
+      "half_width": 2.0,
+      "mass": 3.0,
+      "max_relative_energy_change": 0.0013783296441426396,
+      "absolute_transmission_fraction_change": 8.5606261188255e-10
+    }
+  ],
+  "weak_loading_limits": [
+    {
+      "half_width": 0.5,
+      "integral_g_squared": 0.375,
+      "point_source_weak_loading_left_energy": 5.6250000000000005e-05,
+      "point_source_weak_loading_right_energy": 0.00016875,
+      "scope": "Zero smoothing and negligible feedback limit, not an exact formula for the finite-smoothing numerical run."
+    },
+    {
+      "half_width": 1.0,
+      "integral_g_squared": 0.75,
+      "point_source_weak_loading_left_energy": 0.00011250000000000001,
+      "point_source_weak_loading_right_energy": 0.0003375,
+      "scope": "Zero smoothing and negligible feedback limit, not an exact formula for the finite-smoothing numerical run."
+    },
+    {
+      "half_width": 2.0,
+      "integral_g_squared": 1.5,
+      "point_source_weak_loading_left_energy": 0.00022500000000000002,
+      "point_source_weak_loading_right_energy": 0.000675,
+      "scope": "Zero smoothing and negligible feedback limit, not an exact formula for the finite-smoothing numerical run."
+    }
+  ],
+  "comparisons": [
+    {
+      "half_width": 0.5,
+      "mass": 0.0,
+      "delivered_energy_ratio_to_width_2": 0.23572177213452336,
+      "photon_loss_ratio_to_width_2": 0.18097020382225426
+    },
+    {
+      "half_width": 0.5,
+      "mass": 1.0,
+      "delivered_energy_ratio_to_width_2": 47.132430362634175,
+      "photon_loss_ratio_to_width_2": 0.18097020382225426
+    },
+    {
+      "half_width": 0.5,
+      "mass": 3.0,
+      "delivered_energy_ratio_to_width_2": 932.4820636009327,
+      "photon_loss_ratio_to_width_2": 0.18097020382225426
+    },
+    {
+      "half_width": 1.0,
+      "mass": 0.0,
+      "delivered_energy_ratio_to_width_2": 0.4986380995337094,
+      "photon_loss_ratio_to_width_2": 0.4597225144757583
+    },
+    {
+      "half_width": 1.0,
+      "mass": 1.0,
+      "delivered_energy_ratio_to_width_2": 21.389377178942873,
+      "photon_loss_ratio_to_width_2": 0.4597225144757583
+    },
+    {
+      "half_width": 1.0,
+      "mass": 3.0,
+      "delivered_energy_ratio_to_width_2": 16.58426692759021,
+      "photon_loss_ratio_to_width_2": 0.4597225144757583
+    },
+    {
+      "half_width": 2.0,
+      "mass": 0.0,
+      "delivered_energy_ratio_to_width_2": 1.0,
+      "photon_loss_ratio_to_width_2": 1.0
+    },
+    {
+      "half_width": 2.0,
+      "mass": 1.0,
+      "delivered_energy_ratio_to_width_2": 1.0,
+      "photon_loss_ratio_to_width_2": 1.0
+    },
+    {
+      "half_width": 2.0,
+      "mass": 3.0,
+      "delivered_energy_ratio_to_width_2": 1.0,
+      "photon_loss_ratio_to_width_2": 1.0
+    }
+  ],
+  "full_redshift_timing_clock_law_validated": false,
+  "permanent_deposition_derived": false,
+  "source_hashes": {
+    "research_work/results/source-timescale/check.py": "1e86c2375fd0f8053891519df158654b0b6a0413af13b59aabae1189264f98c4",
+    "research_work/results/source-timescale/protocol.json": "df20112d8871f40c84eac7e87601fb194d52cb4a8107ab513f227d481f569137",
+    "research_work/results/generated-wave-access/check.py": "a3c907afb91566b0a073fa1bcd69ed19a5f815d1581597a6235c5f055941707f",
+    "research_work/results/generated-wave-access/protocol.json": "06aefaa0edb4304ebad5c6a74622749d33a8ff31b1a237641c1e2b946140abcd"
+  }
+}

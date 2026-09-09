@@ -96,6 +96,7 @@ def main():
         ('weak-signal-timing/check.py', []),
         ('environmental-screening/check.py', []),
         ('generated-wave-access/check.py', []),
+        ('source-timescale/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
