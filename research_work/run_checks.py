@@ -103,6 +103,7 @@ def main():
         ('spherical-propagation/check.py', []),
         ('companion-self-binding/check.py', []),
         ('bound-cloud-exchange/check.py', []),
+        ('bound-pair-production/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

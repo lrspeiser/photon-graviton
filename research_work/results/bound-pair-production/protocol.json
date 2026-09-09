@@ -1,0 +1,28 @@
+{
+  "scope": "Conditional neutral scalar-pair creation in specified bound modes of a seeded companion store; exact recoil and finite-mode quantum dynamics. No derived graviton interaction, seed formation, astronomical rate or whole-event time stretching.",
+  "kinematics": {
+    "store_masses": [10.0, 100.0, 1000.0],
+    "internal_gaps": [0.002, 0.2, 1.0],
+    "photon_threshold_multiples": [1.01, 2.0, 10.0, 100.0],
+    "angles": [0.0, 0.001, 0.1, 1.5707963267948966, 3.141592653589793]
+  },
+  "quantum": {
+    "store_masses": [100.0, 10000.0],
+    "initial_high_photons": [1, 4, 12],
+    "couplings": [0.0001, 0.0005],
+    "high_photon_energy": 1.0,
+    "constituent_rest_energy": 0.100001,
+    "binding_per_constituent": 0.000001,
+    "dimensionless_duration": 3.141592653589793,
+    "history_samples": 1001,
+    "independent_matrix_exponential_times": 9
+  },
+  "color_test": {"store_mass": 100.0, "internal_gap": 0.2, "photon_energies": [0.5, 1.0, 2.0, 4.0]},
+  "checks": {
+    "kinematic_relative_error": 1e-12,
+    "norm_error": 1e-12,
+    "absolute_energy_error": 1e-11,
+    "state_comparison_error": 1e-10,
+    "one_pair_probability_error": 1e-10
+  }
+}
