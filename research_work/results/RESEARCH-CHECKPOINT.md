@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [oscillator response](oscillator-response/derivation.md) supplies a causal small-energy-packet candidate and its energy ledger. It also establishes that any positive companion-frequency-only response in the same point-target vertex has logarithmic color slope at least three. This directs the next calculation toward a genuinely different coupling or joint collective response, rather than more tuning of that frequency filter.
+Latest result: [ordinary soft-graviton emission](soft-graviton/derivation.md). The ordinary soft-graviton comparison derives a spin-two small-energy emission factor with recoil and polarization checks. The leading heavy-target channel transfers extremely little energy per hard event; counting more almost energy-free packets does not increase the available energy without limit. This constrains that specific ordinary-gravity branch, not all companion laws. Full finite-energy emission, capture, storage and astronomical validation remain unfinished.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -15,6 +15,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Matter-assisted conversion | Recoil-conserving scalar/polarizability action and leading cross section | Broad, color-dependent scattering; no capture or gravity |
 | Collective spatial response | Gaussian form factor narrows angles and changes rate scaling | Large energy jumps and color dependence remain |
 | Oscillator frequency response | Causal resonance and energy ledger; general point-target color bound | No combined forward/small-packet/achromatic interaction established |
+| Ordinary soft-graviton emission | Tensor polarization/energy checks and a conditional soft-production bound | Tiny transfer strength; no full finite-energy amplitude, propagation or capture model |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

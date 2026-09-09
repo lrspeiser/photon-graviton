@@ -18,6 +18,8 @@ The [universe contract](research_plan/universe-contract.md) fixes published gala
 
 ## Current findings
 
+- [Ordinary soft gravitons](research_work/results/soft-graviton/derivation.md) provide a specified tensor small-energy emission route, with extremely weak energy throughput per hard scattering in the tested limit. Infrared packet counts do not imply unlimited energy. This is a conditional comparison, not a complete conversion law.
+
 - [Oscillator response](research_work/results/oscillator-response/derivation.md) supplies a causal small-packet candidate with stored/radiated energy accounting. For the same point-target vertex, any positive response depending only on companion frequency retains a logarithmic color slope of at least three. Changing only that response cannot yield achromatic loss.
 
 - [Collective spatial response](research_work/results/collective-response/derivation.md) narrows the scalar candidate's scattering and weakens its rate dependence from E^6 to E^3 at large target size. Energy transfers remain about 25% per event; this is not yet an achromatic narrow-line redshift mechanism.
@@ -87,7 +89,7 @@ python research_work/run_checks.py
 python research_work/run_checks.py --baseline
 ```
 
-The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest [oscillator-response verification](research_work/oscillator-response-verification.json) records 16 current default jobs; the optional historical baseline makes 17 jobs and was not rerun for this update. Earlier [conversion-first verification](research_work/conversion-first-verification.json) and [publication verification](research_work/publication-verification.json) retain their original suite scope and results.
+The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest [soft-graviton verification](research_work/soft-graviton-verification.json) records 17 current default jobs; the optional historical baseline makes 18 jobs and was not rerun for this update. Earlier [conversion-first verification](research_work/conversion-first-verification.json) and [publication verification](research_work/publication-verification.json) retain their original suite scope and results.
 
 The historical scripts can still run directly, but doing so overwrites their corresponding outputs. Use the isolated runner above for baseline reproduction. `python restore_data.py` restores the compressed covariance if needed by older brightness analyses; the current diagnostics read its compressed form directly. These are research tools, not a complete cosmology library.
 

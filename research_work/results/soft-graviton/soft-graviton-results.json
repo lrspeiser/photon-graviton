@@ -1,0 +1,98 @@
+{
+  "scope": "Leading soft ordinary-graviton radiation per elastic hard event; not a full cross section, redshift theory, or observational validation.",
+  "conventions": {
+    "signature": "+---",
+    "kappa_squared": "32 pi G",
+    "polarization_norm": 1,
+    "units_in_derivation": "hbar=c=1",
+    "Planck_energy_eV": 1.2208901285838957e+28
+  },
+  "checks": {
+    "random_kinematics_cases": 100,
+    "max_Ward_residual": 1.9939605522267811e-13,
+    "max_relative_target_shell_error": 3.405159123428123e-16,
+    "max_polarization_sum_error": 4.884981308350689e-15,
+    "forward_leading_soft_term_zero": true,
+    "backscatter_I_equals_8pi_over_3": true
+  },
+  "angular_results": [
+    {
+      "photon_angle_degrees": 0.0,
+      "I_heavy": 0.0,
+      "quadrature_absolute_change": 0.0
+    },
+    {
+      "photon_angle_degrees": 10.0,
+      "I_heavy": 1.9266656181515214,
+      "quadrature_absolute_change": 0.0007197863386556591
+    },
+    {
+      "photon_angle_degrees": 30.0,
+      "I_heavy": 9.664030524145073,
+      "quadrature_absolute_change": 0.001228876826253611
+    },
+    {
+      "photon_angle_degrees": 90.0,
+      "I_heavy": 21.609479864507932,
+      "quadrature_absolute_change": 6.546198790147173e-06
+    },
+    {
+      "photon_angle_degrees": 180.0,
+      "I_heavy": 8.377580409572783,
+      "quadrature_absolute_change": 1.0125233984581428e-13
+    }
+  ],
+  "finite_mass_convergence": [
+    {
+      "M_over_E": 100.0,
+      "I": 21.394949752774867,
+      "distance_from_heavy": 0.21453011173306535
+    },
+    {
+      "M_over_E": 1000.0,
+      "I": 21.587886119017014,
+      "distance_from_heavy": 0.02159374549091808
+    },
+    {
+      "M_over_E": 10000.0,
+      "I": 21.607319073870656,
+      "distance_from_heavy": 0.0021607906372764774
+    }
+  ],
+  "infrared_moments": [
+    {
+      "fractional_soft_floor": 1e-06,
+      "P_over_C": 6.907755278982137,
+      "energy_fraction_over_C": 0.000999,
+      "second_moment_over_C": 4.999995e-07
+    },
+    {
+      "fractional_soft_floor": 1e-12,
+      "P_over_C": 20.72326583694641,
+      "energy_fraction_over_C": 0.0009999999990000005,
+      "second_moment_over_C": 5.000000000000002e-07
+    },
+    {
+      "fractional_soft_floor": 1e-30,
+      "P_over_C": 62.16979751083923,
+      "energy_fraction_over_C": 0.0010000000000000002,
+      "second_moment_over_C": 5.000000000000004e-07
+    }
+  ],
+  "illustration": {
+    "photon_energy_eV": 1.0,
+    "soft_ceiling_fraction": 0.001,
+    "upper_C_heavy": 3.4167794420148005e-56,
+    "upper_soft_energy_fraction_per_hard_event": 3.4167794420148003e-59,
+    "empirical_alpha_per_Mpc": 0.0002488993286382367,
+    "necessary_hard_events_per_Mpc_from_soft_budget_bound": 7.284617952731131e+54,
+    "warning": "Necessary soft-energy throughput diagnostic only. Such a huge scattering rate invalidates transparent independent propagation; no gas density or successful cumulative-redshift law is inferred."
+  },
+  "unresolved": [
+    "Finite-energy two-photon one-graviton amplitude and phase space",
+    "Physical target and hard differential scattering rate",
+    "Inclusive real/virtual infrared treatment",
+    "Photon spectrum, direction and duration after propagation",
+    "Capture, stable storage and joint motion/lensing response"
+  ]
+}

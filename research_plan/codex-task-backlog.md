@@ -1,5 +1,7 @@
 # Codex task backlog — current checkpoint
 
+Latest diagnostic: [ordinary soft-graviton emission](../research_work/results/soft-graviton/derivation.md). The ordinary soft-graviton comparison derives a spin-two small-energy emission factor with recoil and polarization checks. The leading heavy-target channel transfers extremely little energy per hard event; counting more almost energy-free packets does not increase the available energy without limit. This constrains that specific ordinary-gravity branch, not all companion laws. Full finite-energy emission, capture, storage and astronomical validation remain unfinished.
+
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 
 **Governing contract:** [published galaxy distances are fixed facts; no assumed dark matter, expansion or Big Bang](universe-contract.md). This overrides earlier open-candidate wording. The distance decision is resolved.

@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [oscillator frequency response](../research_work/results/oscillator-response/derivation.md). It explains one way to favor small energy packets, but proves that transferred-frequency selection alone cannot remove the color dependence of the same point-target interaction. This matters because sharp, consistently shifted colors need both properties together. No complete microscopic or gravitational theory is established. Read the [current checkpoint](../research_work/results/RESEARCH-CHECKPOINT.md) for the full evidence and remaining work.
+The latest calculation is [ordinary soft-graviton emission](../research_work/results/soft-graviton/derivation.md). The ordinary soft-graviton comparison derives a spin-two small-energy emission factor with recoil and polarization checks. The leading heavy-target channel transfers extremely little energy per hard event; counting more almost energy-free packets does not increase the available energy without limit. This constrains that specific ordinary-gravity branch, not all companion laws. Full finite-energy emission, capture, storage and astronomical validation remain unfinished. Read the [current checkpoint](../research_work/results/RESEARCH-CHECKPOINT.md) for the full scope.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -11,6 +11,7 @@ The latest calculation is [oscillator frequency response](../research_work/resul
 | [Matter-assisted interaction](../research_work/results/matter-assisted/derivation.md) | Recoil and a specified scalar/polarizability rate with broad scattering |
 | [Collective spatial response](../research_work/results/collective-response/derivation.md) | Forward narrowing, E^3 large-target scaling and persistent large energy transfers |
 | [Oscillator response](../research_work/results/oscillator-response/derivation.md) | Small-packet resonance and energy ledger; a general point-target color-slope bound |
+| [Ordinary soft gravitons](../research_work/results/soft-graviton/derivation.md) | Conserved tensor emission, finite soft-energy moments and a conditional production-strength bound |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 
