@@ -1,8 +1,8 @@
 # Start here — active research
 
-Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
+Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. The current clarified branch proposes cumulative time stretching during propagation, with all lost photon energy entering companions. Ordinary gravitational time dilation is not the proposed cause; timing and all other observations remain mandatory targets.
 
-The latest research step is [integrated timing pilot](../research_work/results/timing-population/report.md). A full integrated timing estimator retains all 98 artificial cadence events. Three pilot calculations recover b=1.095-1.106 for injected b=1, but the numerical gate fails because individual-event likelihood curves are insufficiently converged. No calibrated timing inference is established. The user clarified cumulative light stretching during travel through low-gravity voids; the next physical comparison must test whether that effect accumulates and survives exit, with common clock standards and an explicit energy receiver.
+The latest research step is [cumulative time stretching with companion transfer](../research_work/results/cumulative-time/report.md). The cumulative whole-signal time-stretch branch predicts redshift and duration factor S, photon energy 1/S, companion gain 1-1/S and fixed-geometry received power 1/S^2. A prescribed evolving propagation-clock slab realizes matching frequency and event stretching through a complete void; 54 ray cases, six pulse integrations and twelve capture ledgers pass. These are consequences of declared postulates, not a derived fundamental time/companion action or astronomical validation.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -31,6 +31,7 @@ The latest research step is [integrated timing pilot](../research_work/results/t
 | [Timing diagnosis](../research_work/results/timing-diagnosis/report.md) | Exact attribution of 12 trials; fitted-width errors and cancellation require uncertainty and coverage handling |
 | [Timing likelihood](../research_work/results/timing-likelihood/report.md) | Normalized brightness/background integration; full estimator and calibration remain pending |
 | [Timing population](../research_work/results/timing-population/report.md) | Full uncertainty integration, 98 events; numerical convergence gate fails |
+| [Cumulative time](../research_work/results/cumulative-time/report.md) | Linked redshift, duration, brightness and companion-energy predictions; prescribed void-ray realization |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

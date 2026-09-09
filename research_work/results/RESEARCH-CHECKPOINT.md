@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [integrated timing pilot](timing-population/report.md). A full integrated timing estimator retains all 98 artificial cadence events. Three pilot calculations recover b=1.095-1.106 for injected b=1, but the numerical gate fails because individual-event likelihood curves are insufficiently converged. No calibrated timing inference is established. The user clarified cumulative light stretching during travel through low-gravity voids; the next physical comparison must test whether that effect accumulates and survives exit, with common clock standards and an explicit energy receiver.
+Latest result: [cumulative time stretching with companion transfer](cumulative-time/report.md). The cumulative whole-signal time-stretch branch predicts redshift and duration factor S, photon energy 1/S, companion gain 1-1/S and fixed-geometry received power 1/S^2. A prescribed evolving propagation-clock slab realizes matching frequency and event stretching through a complete void; 54 ray cases, six pulse integrations and twelve capture ledgers pass. These are consequences of declared postulates, not a derived fundamental time/companion action or astronomical validation.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -35,6 +35,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Timing diagnosis | 12 slope attributions and 24 individual replay checks | Width errors can dominate selection; failed gate remains failed |
 | Timing likelihood | Independent matrix and integral checks of positive-brightness likelihood | Component only; duration/population calibration pending |
 | Timing population | Three complete 98-event integrated pilots | Aggregate slope stable; event probabilities fail convergence gate |
+| Cumulative time | 54 ray cases, six waveform integrals, twelve conserved capture ledgers | Postulated whole-signal law; fundamental interaction and gravity response remain open |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |
