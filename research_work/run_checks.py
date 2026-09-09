@@ -73,6 +73,7 @@ def main():
         ('data-audit/enrich_observable_registry.py', []),
         ('conversion-first/run_conversion_first.py', []),
         ('interaction-rate/check_interaction_rate.py', []),
+        ('matter-assisted/check_matter_assisted.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

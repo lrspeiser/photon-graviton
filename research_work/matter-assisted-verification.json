@@ -1,0 +1,87 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.2670189999989816
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7170178000014857
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7075473000004422
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.2377373999988777
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.184832799997821
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.4532095000031404
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.8367261000021244
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1916752999968594
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.6535250999950222
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.3289041999960318
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.07880019999720389
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.8401427999997395
+    },
+    {
+      "script": "interaction-rate/check_interaction_rate.py",
+      "exit_code": 0,
+      "seconds": 0.6673637999992934
+    },
+    {
+      "script": "matter-assisted/check_matter_assisted.py",
+      "exit_code": 0,
+      "seconds": 0.7588910000049509
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "14 default diagnostics; optional historical baseline not rerun; mathematical checks are not astronomical validation",
+  "repeated_candidate_results_byte_identical": true,
+  "candidate_source_sha256": "6c3b65a2ddaf83152f9dbdaa17e134c6d8a3b9bad9039490cdf7ba9b4cbd624b",
+  "candidate_results_sha256": "cd0124f0a2e2ea7646ccd1bf121ac90600265902bdf3caa9926d14b02a0e8c3d"
+}

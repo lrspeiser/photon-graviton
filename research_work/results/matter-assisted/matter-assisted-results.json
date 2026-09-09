@@ -1,0 +1,126 @@
+{
+  "scope": "One stipulated, leading-order polarizability EFT with scalar companions, not ordinary gravitons or a fitted complete theory",
+  "recoil_cases": 295,
+  "attempted_recoil_cases": 300,
+  "nonpositive_companion_energy_cases_disallowed": 5,
+  "max_recoil_energy_residual": 1.624655779645847e-16,
+  "max_ward_identity_residual": 0.0,
+  "max_polarization_sum_error": 2.220446049250313e-16,
+  "leading_heavy_target_cross_sections": [
+    {
+      "energy_in_reference_units": 0.5,
+      "sigma_for_unit_beta": 1.0498546364973795e-06,
+      "cross_section_ratio_to_reference": 0.015625
+    },
+    {
+      "energy_in_reference_units": 1.0,
+      "sigma_for_unit_beta": 6.719069673583229e-05,
+      "cross_section_ratio_to_reference": 1.0
+    },
+    {
+      "energy_in_reference_units": 2.0,
+      "sigma_for_unit_beta": 0.0043002045910932665,
+      "cross_section_ratio_to_reference": 64.0
+    },
+    {
+      "energy_in_reference_units": 4.0,
+      "sigma_for_unit_beta": 0.27521309382996906,
+      "cross_section_ratio_to_reference": 4096.0
+    }
+  ],
+  "mean_event_loss": 0.33333333333333337,
+  "second_event_loss_moment": 0.14285714285714285,
+  "photon_direction_mean_cosine": 0.0,
+  "straight_photon_recoil_examples": [
+    {
+      "target_mass_over_initial_energy": 10.0,
+      "photon_deflection": 0,
+      "companion_angle_radians": 1.5707963267948966,
+      "companion_energy": 0.09900990099009901,
+      "recoil_energy": 0.000990099009900991
+    },
+    {
+      "target_mass_over_initial_energy": 1000.0,
+      "photon_deflection": 0,
+      "companion_angle_radians": 1.5707963267948966,
+      "companion_energy": 0.0999900009999,
+      "recoil_energy": 9.999000099999988e-06
+    },
+    {
+      "target_mass_over_initial_energy": 1000000.0,
+      "photon_deflection": 0,
+      "companion_angle_radians": 1.5707963267948966,
+      "companion_energy": 0.099999990000001,
+      "recoil_energy": 9.999999009413507e-09
+    }
+  ],
+  "illustrative_jump_histories": [
+    {
+      "initial_energy_in_reference_units": 0.5,
+      "number_histories": 20000,
+      "dimensionless_path": 0.1,
+      "mean_final_energy": 0.49932407701195236,
+      "centroid_shift": 0.0013536759374643825,
+      "added_relative_energy_rms": 0.022966812969948434,
+      "unscattered_fraction": 0.99555,
+      "analytic_unscattered_fraction": 0.995323469182085,
+      "mean_event_count": 0.00445,
+      "energy_ledger_max_error": 0.0,
+      "standard_error_mean_energy": 8.109017614625452e-05
+    },
+    {
+      "initial_energy_in_reference_units": 1.0,
+      "number_histories": 20000,
+      "dimensionless_path": 0.1,
+      "mean_final_energy": 0.9104362331872593,
+      "centroid_shift": 0.09837456325655602,
+      "added_relative_energy_rms": 0.19334767558474725,
+      "unscattered_fraction": 0.7397,
+      "analytic_unscattered_fraction": 0.7408182206817179,
+      "mean_event_count": 0.26815,
+      "energy_ledger_max_error": 1.1102230246251565e-16,
+      "standard_error_mean_energy": 0.001244725224947669
+    },
+    {
+      "initial_energy_in_reference_units": 2.0,
+      "number_histories": 20000,
+      "dimensionless_path": 0.1,
+      "mean_final_energy": 0.8828451882745023,
+      "centroid_shift": 1.2654028436275984,
+      "added_relative_energy_rms": 0.2987712683040876,
+      "unscattered_fraction": 0.0,
+      "analytic_unscattered_fraction": 4.587181746647508e-09,
+      "mean_event_count": 1.91995,
+      "energy_ledger_max_error": 4.440892098500626e-16,
+      "standard_error_mean_energy": 0.0018651269061111374
+    },
+    {
+      "initial_energy_in_reference_units": 4.0,
+      "number_histories": 20000,
+      "dimensionless_path": 0.1,
+      "mean_final_energy": 0.8849772341607186,
+      "centroid_shift": 3.5198902814640878,
+      "added_relative_energy_rms": 0.29909651060576686,
+      "unscattered_fraction": 0.0,
+      "analytic_unscattered_fraction": 0.0,
+      "mean_event_count": 3.4654,
+      "energy_ledger_max_error": 8.881784197001252e-16,
+      "standard_error_mean_energy": 0.0018716664140799879
+    }
+  ],
+  "checks": {
+    "recoil_conservation": true,
+    "gauge_invariance": true,
+    "polarization_sum": true,
+    "heavy_target_phase_space": true,
+    "jump_moments": true,
+    "simulation_energy_and_survival": true
+  },
+  "limitations": [
+    "Action coefficient and target abundance unmeasured; no absolute conversion rate predicted.",
+    "Heavy-target, long-wavelength polarizability limit only; higher operators and form factors omitted.",
+    "Scalar companion is a comparison identity, not a derived ordinary graviton.",
+    "Monte Carlo omits inverse reactions in a stipulated dilute escaping-companion limit.",
+    "No capture, stable deposit, gravitational response or event-time stretching derived."
+  ]
+}
