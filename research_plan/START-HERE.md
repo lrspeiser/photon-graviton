@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest research step is [timing failure diagnosis](../research_work/results/timing-diagnosis/report.md). An exact attribution of the 12 existing artificial-event trials separates intrinsic sample variation, acceptance selection and fitted-width error. In a stretched shoulder trial, these contributions are +0.042, +0.050 and +0.431, yielding 1.523 instead of 1. Other apparently accurate trials contain cancelling errors. Twenty-four individual fits were replayed. The original feasibility gate remains failed; no real-flux timing inference is established.
+The latest research step is [uncertain-duration likelihood component](../research_work/results/timing-likelihood/report.md). The first revised timing component integrates uncertain positive brightness and background into a normalized flux likelihood. Independent dense-matrix and numerical-integration checks agree; the shape parameter is exactly the observer-time FWHM. This is a mathematical component, not a calibrated population estimator or a passed timing gate. Next specify and implement shape/peak/width and population integration, prior sensitivity and independent-shape injection criteria.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -29,6 +29,7 @@ The latest research step is [timing failure diagnosis](../research_work/results/
 | [Timing inputs](../research_work/results/timing-foundation/report.md) | Pinned calibrated photometry, input hashes and methodological dependencies |
 | [Timing injections](../research_work/results/timing-injection/report.md) | Observer-time estimator, 12 artificial-event trials and an explicitly failed feasibility gate |
 | [Timing diagnosis](../research_work/results/timing-diagnosis/report.md) | Exact attribution of 12 trials; fitted-width errors and cancellation require uncertainty and coverage handling |
+| [Timing likelihood](../research_work/results/timing-likelihood/report.md) | Normalized brightness/background integration; full estimator and calibration remain pending |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

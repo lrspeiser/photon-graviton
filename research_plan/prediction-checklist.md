@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [timing failure diagnosis](../research_work/results/timing-diagnosis/report.md). An exact attribution of the 12 existing artificial-event trials separates intrinsic sample variation, acceptance selection and fitted-width error. In a stretched shoulder trial, these contributions are +0.042, +0.050 and +0.431, yielding 1.523 instead of 1. Other apparently accurate trials contain cancelling errors. Twenty-four individual fits were replayed. The original feasibility gate remains failed; no real-flux timing inference is established.
+Latest diagnostic: [uncertain-duration likelihood component](../research_work/results/timing-likelihood/report.md). The first revised timing component integrates uncertain positive brightness and background into a normalized flux likelihood. Independent dense-matrix and numerical-integration checks agree; the shape parameter is exactly the observer-time FWHM. This is a mathematical component, not a calibrated population estimator or a passed timing gate. Next specify and implement shape/peak/width and population integration, prior sensitivity and independent-shape injection criteria.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

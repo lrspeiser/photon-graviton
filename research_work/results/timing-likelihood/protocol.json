@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "stage": "Frozen mathematical building-block check; revised estimator calibration remains future work",
+  "purpose": "Retain duration uncertainty and partial temporal coverage instead of discarding events because a best-fit half-maximum crossing falls outside the observations.",
+  "inputs": "Synthetic flux only at this stage. Subsequent cadence tests must use the pinned timing-foundation manifest and original 98-event inventory without flux-dependent selection.",
+  "pulse": "A generalized asymmetric exponential with FWHM W, observer-time peak tau, rise fraction r and positive independent rise/fall powers. This is an optional empirical shape family, not an explosion theory.",
+  "flux_model": "y_i=A*s(t_i;W,tau,r,p_rise,p_fall)+B+Gaussian(0,error_i^2)",
+  "nuisance_priors": {
+    "amplitude": "Normal(mean=1, sigma=0.5), conditioned on A>0",
+    "baseline": "Normal(mean=0, sigma=0.1)",
+    "meaning": "Declared assumptions for normalized artificial flux. They are not suitable for unnormalized real data without a separate calibration and sensitivity protocol."
+  },
+  "likelihood": "Analytically integrate amplitude and baseline. Include covariance determinant and positive-amplitude truncation normalization. No maximization replacement and no fitted-crossing acceptance cut.",
+  "mathematical_checks": [
+    "Compare 2x2 calculation to an independent full observation-covariance calculation, including posterior amplitude truncation.",
+    "Compare against independent one-dimensional numerical integration over positive amplitude after integrating baseline.",
+    "Verify exact half-maximum width for asymmetric shapes.",
+    "Verify integration over a one-point measured flux gives probability one.",
+    "Verify empty observations give likelihood one and a shape/amplitude degeneracy remains finite with proper priors."
+  ],
+  "numerical_tolerances": {"log_likelihood_absolute": 0.00000001, "probability_integral_absolute": 0.00000001, "half_maximum_absolute": 0.000000000001},
+  "future_population_model": "Integrate each event flux likelihood over logW distributed as Normal(a+b*log(1+z),sigma_intrinsic^2), along with peak and shape nuisance parameters. Estimate b rather than imposing b=1. Calibrate population and nuisance priors before running evaluation trials.",
+  "remaining_before_estimator_execution": [
+    "Record peak/shape, intercept, slope and intrinsic-scatter priors and integration grids; test convergence and duration-prior boundary sensitivity.",
+    "Include shapes outside the estimator family, original exposed controls and newly recorded seeds; specify SNR, shape evolution and incomplete-coverage sensitivities.",
+    "Freeze population-bias and interval-coverage criteria before examining revised trial outcomes. Preserve the original failed gate as a distinct result.",
+    "Show that uninformative light curves remain weak evidence rather than silently becoming prior-based precise widths. Report full-sample and coverage-stratified recovery without truth-based real-data cuts.",
+    "Profile computational cost and implement validated quadrature or sampling. Do not substitute point-estimated widths for the required integrations."
+  ],
+  "scope_limits": "No revised estimator has passed, no real flux is analyzed, and no claim about the physical origin of redshift follows from these checks. Intrinsic duration evolution can remain degenerate with propagation."
+}
