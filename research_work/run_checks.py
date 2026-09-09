@@ -87,6 +87,7 @@ def main():
         ('thermal-conversion/check_thermal_conversion.py', []),
         ('background-replenishment/check_background_replenishment.py', []),
         ('thermalizer/check_thermalizer.py', []),
+        ('slow-companion/check_slow_companion.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

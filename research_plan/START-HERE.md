@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest research review is [candidate decisions and priorities](../research_work/results/candidate-review/review.md). The current candidate review separates failed core mechanisms, reusable component calculations and untested extensions. No tested candidate completes the same-action redshift/timing/capture/gravity chain. All 20 tasks and 32 requirements remain represented. Next prioritize an interaction-derived joint kernel and operational light predictions before another galaxy normalization fit; no candidate or new law is adopted.
+The latest calculation is [slower companion-wave emission](../research_work/results/slow-companion/derivation.md). An explicit preferred-frame scalar/electric interaction allows a photon to emit a slower companion while conserving energy and momentum. Its joint kernel predicts fractional loss proportional to photon energy cubed. Slow companions give small packets but broad deflections; speeds approaching light give forward directions but a mean one-quarter energy jump. This specific scale-free candidate is not an achromatic redshift mechanism; no graviton identity, medium, storage or gravity completion is established.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -22,6 +22,7 @@ The latest research review is [candidate decisions and priorities](../research_w
 | [Thermal conversion](../research_work/results/thermal-conversion/derivation.md) | Photon-number and energy moments; exploratory 43-channel FIRAS residual comparison |
 | [Background replenishment](../research_work/results/background-replenishment/derivation.md) | Required source positivity, photon removal and steady energy budget |
 | [Heated thermalizer](../research_work/results/thermalizer/derivation.md) | LTE source, stationary spectrum, heating and exploratory FIRAS comparison |
+| [Slow companion](../research_work/results/slow-companion/derivation.md) | Joint wave-emission kernel, color scaling and energy/angle tradeoff |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

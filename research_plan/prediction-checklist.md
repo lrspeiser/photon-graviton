@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [candidate decisions and priorities](../research_work/results/candidate-review/review.md). The current candidate review separates failed core mechanisms, reusable component calculations and untested extensions. No tested candidate completes the same-action redshift/timing/capture/gravity chain. All 20 tasks and 32 requirements remain represented. Next prioritize an interaction-derived joint kernel and operational light predictions before another galaxy normalization fit; no candidate or new law is adopted.
+Latest diagnostic: [slower companion-wave emission](../research_work/results/slow-companion/derivation.md). An explicit preferred-frame scalar/electric interaction allows a photon to emit a slower companion while conserving energy and momentum. Its joint kernel predicts fractional loss proportional to photon energy cubed. Slow companions give small packets but broad deflections; speeds approaching light give forward directions but a mean one-quarter energy jump. This specific scale-free candidate is not an achromatic redshift mechanism; no graviton identity, medium, storage or gravity completion is established.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
