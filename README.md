@@ -14,7 +14,7 @@ The aim is to find a self-consistent emitter–propagation–receiver model that
 4. **[Recovered causal-supply analysis](companion_causal_test/report.md).** DustPedia inputs, cross-validation, cluster transfer, controls, uncertainty checks and circulation. This is the historical baseline, not the latest full research checkpoint.
 5. **[Main paper, version 9](redshift_paper/temporal_redshift_paper.docx).** The historical unified paper; it has not incorporated all later findings.
 
-The observational contract remains open: published distances may be fixed fictional facts or quantities a new model must reconstruct. No final choice of propagation, companion identity, capture, storage or gravity law has been made. Conditional limitations identify what a revised candidate must address; they do not close every alternative in the fictional universe.
+The [universe contract](research_plan/universe-contract.md) fixes published galaxy distances as facts, including adopted Hubble-flow values. Dark matter, cosmic expansion and the Big Bang are excluded as active explanatory premises. We retain observations and derive the photon-supplied mechanism without importing those theories. Propagation, capture, storage and the detailed gravity law remain under investigation.
 
 ## Current findings
 

@@ -1,5 +1,10 @@
 # Photon-to-graviton deposition: theory-development roadmap
 
+## Governing universe contract
+
+The user has resolved the distance choice: published galaxy distances are fixed fictional facts, even if originally obtained from Hubble flow. Assumed dark matter, cosmic expansion and Big-Bang explanations/initial conditions are outside the active search. Retain observations, but do not import those interpretations or derived rulers, ages and halo profiles. This overrides earlier language that left all cosmological alternatives open. See [universe-contract.md](universe-contract.md).
+
+
 Prepared 9 September 2026 from the recovered photon-graviton project. This is a proposed research program for a fictional, operationally nonexpanding universe constrained by the same observational records as ours. It is not a completed derivation or a claim that our universe follows these laws.
 
 ## 1. The objective and the present position

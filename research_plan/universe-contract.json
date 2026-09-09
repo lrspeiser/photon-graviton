@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "authority": "Explicit user instruction, 2026-09-09",
+  "distance_decision": "resolved",
+  "galaxy_distances": {
+    "policy": "Adopt published galaxy distances as fixed fictional facts",
+    "refit_or_cosmological_reinference_allowed": false,
+    "hubble_flow_origin_does_not_invalidate_accepted_value": true,
+    "cross_catalog_policy": "Record which published value each analysis uses; preserve provenance and do not silently alter the baseline"
+  },
+  "mandatory": [
+    "Energy conservation",
+    "Operationally nonexpanding universe",
+    "Photon-supplied gravitating deposits or explicitly derived field response"
+  ],
+  "excluded_active_premises": [
+    "Cosmic expansion",
+    "Big Bang initial history or derived standard rulers/chronology",
+    "Independent assumed dark-matter component or fitted halo supplied as a source"
+  ],
+  "observations_policy": "Retain observations; separate and remove interpretations/reductions that require excluded premises, except explicitly accepted published galaxy distance values",
+  "historical_policy": "Preserve prior files and results for provenance; excluded theories are not active candidates",
+  "deposits_policy": "Derive source energy, production, capture, support and gravity; do not rename an assumed dark-matter halo as a deposit",
+  "optional_hypotheses": [
+    "No secondary companion energy loss",
+    "Permanent deposited reservoir"
+  ],
+  "still_unresolved": [
+    "Detailed matter rods and clocks",
+    "Microscopic photon/companion conversion and timing law",
+    "Source and fuel history without excluded cosmological assumptions",
+    "Capture, storage and joint motion/lensing response",
+    "Candidate-specific observational likelihood and fresh validation data"
+  ]
+}

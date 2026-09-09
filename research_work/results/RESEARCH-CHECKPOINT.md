@@ -30,16 +30,16 @@ The local project is reconstructed and research is underway. Energy conservation
 - Does stronger gravity also bend light correctly? [Motion and lensing](gravity-response/motion-and-lensing.md).
 - Which original requirements remain unfinished? [Criterion-by-criterion audit](checkpoint/completion-audit.json).
 
-## Choices awaiting the user
+## Resolved distance choice and remaining research priorities
 
-These choices affect the physical contract; unanswered questions have not been treated as approval of a law.
+The [current contract](../../research_plan/universe-contract.md) fixes published galaxy distances. Assumed dark matter, expansion and Big-Bang premises are excluded from active candidates; their earlier appearances are historical comparisons. Other priorities below remain optional research choices, not an unanswered distance blocker.
 
-1. **Distances:** preserve published distances as fictional facts, reconstruct model-dependent distances from the observations, or retain both as separate comparisons? The current sample contains 81 of 149 distances derived from Hubble flow, including 4 of the 26 energy-comparison galaxies.
+1. **Distances — resolved:** published galaxy distances are fixed fictional facts. Their original derivation does not import an expansion theory; retain the declared catalog values and source provenance.
 2. **Energy supply versus gravitational response:** prioritize a justified older/larger source history, a derived stronger response, or compare both? More elapsed time only helps if it provides more usable integrated energy.
 3. **External deposits:** prioritize inward transport/capture concentrated by the well, internally generated companions, or a different response to outer deposits?
 4. **Frequency and timing:** prioritize a smooth wave/clock mechanism, many tiny transfers, or compare both? A joint spectrum-and-arrival-time law is needed.
 
-These questions can be answered together in ordinary language. A preference chooses research emphasis; it is not evidence that the selected mechanism works. Comparative work can continue without merging incompatible assumptions into one candidate.
+The remaining priorities can be discussed in ordinary language. A preference chooses research emphasis; it is not evidence that the selected mechanism works. Comparative work can continue without merging incompatible assumptions into one candidate.
 
 ## Conditions for the next unified candidate
 

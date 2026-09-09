@@ -113,9 +113,10 @@
         {
           "path": "research_work/results/data-audit/data-foundation-report.md",
           "exists": true,
-          "sha256": "86801f1ee5a6ce821439c4d51b9f2244dfe44bd3c1a26269793dbd892840709e"
+          "sha256": "b0ffffd800bdc54d43c97db683eaf8d18ab62be2c5fd42375b12f9adad0d080c"
         }
-      ]
+      ],
+      "resolved_component": "Published galaxy distances fixed; no assumed dark matter, expansion or Big Bang. Other completion criteria remain unfinished."
     },
     {
       "id": "T03",
@@ -192,7 +193,7 @@
         {
           "path": "research_work/results/microphysics/action-specification.md",
           "exists": true,
-          "sha256": "3d2ca71031def292378cf2301eb87e0dc174d00f0ed65aeefee4412b99245a7e"
+          "sha256": "181ebc95bd8ef51e99f7f6878038f01f786f23e2eb8eabe1ef9854762a7b1886"
         },
         {
           "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
@@ -1241,7 +1242,7 @@
         "T11"
       ],
       "status": "completion_not_established",
-      "remaining": "Raw spectral calibration and candidate distance reconstruction"
+      "remaining": "Source/detector calibration and a redshift law at fixed published galaxy distances"
     },
     {
       "id": "R08",
@@ -1505,5 +1506,12 @@
     "model_ranking_unchanged": true,
     "original_outputs_preserved": true
   },
-  "interpretation": "This checkpoint distinguishes completed baseline work from partial derivations. It is not a claim that the full theory or roadmap has passed."
+  "interpretation": "This checkpoint distinguishes completed baseline work from partial derivations. It is not a claim that the full theory or roadmap has passed.",
+  "governing_contract": "research_plan/universe-contract.json",
+  "distance_decision": "resolved: published galaxy distances fixed",
+  "excluded_active_premises": [
+    "Cosmic expansion",
+    "Big Bang initial history or derived standard rulers/chronology",
+    "Independent assumed dark-matter component or fitted halo supplied as a source"
+  ]
 }

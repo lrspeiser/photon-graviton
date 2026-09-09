@@ -1,5 +1,7 @@
 # Codex task backlog — current checkpoint
 
+**Governing contract:** [published galaxy distances are fixed facts; no assumed dark matter, expansion or Big Bang](universe-contract.md). This overrides earlier open-candidate wording. The distance decision is resolved.
+
 Active research. T01 completed with documented numerical differences; later tasks have varying amounts of preliminary evidence. No full theory is established. Preserve each task’s scope and dependencies. Keep conceptual alternatives open and consult the user before selecting consequential new laws.
 
 ## T01 — Reproduce and freeze the recovered baseline

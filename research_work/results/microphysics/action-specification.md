@@ -1,6 +1,6 @@
 # Candidate interactions and the missing derivations
 
-This is preliminary T03 work. It supplies explicit comparison actions where possible and marks missing actions honestly. No candidate is adopted. The operational matter-frame choice in T02 remains open, and no complete microscopic photon–companion–deposit theory has yet been established.
+This is preliminary T03 work. It supplies explicit comparison actions where possible and marks missing actions honestly. No candidate is adopted. The subsequent [universe contract](../../../research_plan/universe-contract.md) excludes assumed dark matter, expansion and Big-Bang premises; candidate C is inactive as an independent dark-matter substitute. Earlier open-branch statements below are subject to that restriction. The operational matter-frame choice in T02 remains open, and no complete microscopic photon–companion–deposit theory has yet been established.
 
 ## 1. Conservation must include momentum and interaction energy
 

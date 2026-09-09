@@ -18,9 +18,9 @@ The local SPARC table defines distance method 1 as Hubble-flow distance using H0
 
 These counts come directly from the recovered catalog and frozen object lists. Distance estimates from the other methods also have calibration and stellar-physics assumptions; “not Hubble flow” does not mean assumption-free. Group distances share correlated uncertainty.
 
-The user has been asked whether published distances are fixed fictional facts, inferred quantities to reconstruct, or a benchmark alongside reconstruction. No distance was changed in this audit. All existing results remain comparisons under their published distance assumptions.
+The user has now fixed published galaxy distances as fictional facts. The Hubble-flow origin of some values does not invalidate their use or authorize expansion as an explanation. No distance values changed. See the governing [universe contract](../../../research_plan/universe-contract.md).
 
-If distances are to be re-inferred, the same observations must be propagated through all dependent quantities. For fixed angular size, radius scales with distance; under a fixed luminosity-flux relation, luminosity scales with distance squared. Gas and stellar mass templates, inclination-corrected dynamics, source separations and external illumination also depend on the adopted calibrations. The inferred extra mass depends on both the total dynamics and the baryonic subtraction. A revised distance cannot be used only where it improves the photon supply.
+Historical sensitivity note, not an active permission to re-infer fixed distances: if a distance were changed, the same observations must be propagated through all dependent quantities. For fixed angular size, radius scales with distance; under a fixed luminosity-flux relation, luminosity scales with distance squared. Gas and stellar mass templates, inclination-corrected dynamics, source separations and external illumination also depend on the adopted calibrations. The inferred extra mass depends on both the total dynamics and the baryonic subtraction. A revised distance cannot be used only where it improves the photon supply.
 
 The actual catalog rows use whitespace-separated fields whose layout differs from the byte offsets printed in its header. The audit parser therefore reads the 19 data columns and verifies the 175 names, the 149 unique selected names and the 26 unique matched names. A naive fixed-offset parse failed during development and was corrected before the reported results were produced.
 
@@ -58,7 +58,7 @@ No universal observational pass threshold has been invented. Candidate-specific 
 
 The registry identifies acquisition or derivation gaps for every requirement. High-priority gaps include resolved luminosity profiles and underlying photometry, galaxy distance/calibration provenance, lensing measurements, cluster profiles, local gravity and gravitational-wave data, background-radiation covariances, and a candidate-consistent cosmic history. A file being present is not sufficient if it contains a published fit rather than the observation needed to test a new law.
 
-T02 remains incomplete because the distance/matter-frame contract, candidate-specific likelihoods and genuinely unused validation sample are not finalized. T03's candidate comparison work and the existing energy/transport diagnostics remain preliminary; none has been relabeled as observationally confirmed.
+T02 remains incomplete because the detailed matter-frame convention, candidate-specific likelihoods and genuinely unused validation sample are not finalized. T03's candidate comparison work and the existing energy/transport diagnostics remain preliminary; none has been relabeled as observationally confirmed.
 
 ## Deliverables
 

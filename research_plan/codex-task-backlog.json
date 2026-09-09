@@ -53,7 +53,7 @@
         "README.md",
         "local data manifests"
       ],
-      "prompt": "Define operational nonexpansion and what observations remain fixed. Separate measured fluxes/angles/spectra/timing from model-derived masses, distances and ages. Build a registry for R01\u2013R32 with units, sources, nuisance parameters and availability. Register reused data as exploratory; define genuinely unused validation data and predeclare metrics, tolerances and stopping rules before new model selection.",
+      "prompt": "Define operational nonexpansion and what observations remain fixed. Separate measured fluxes/angles/spectra/timing from model-derived masses, distances and ages. Build a registry for R01\u2013R32 with units, sources, nuisance parameters and availability. Register reused data as exploratory; define genuinely unused validation data and predeclare metrics, tolerances and stopping rules before new model selection. Apply the resolved contract: adopt published galaxy distances as fixed fictional facts; exclude dark-matter, expansion and Big-Bang premises while retaining compatible observations.",
       "deliverables": [
         "specification/universe-contract.md",
         "specification/observable-registry.json",
@@ -68,7 +68,11 @@
       "evidence": {
         "path": "research_work/results/data-audit/data-foundation-report.md",
         "scope": "32 requirements mapped; 21 selected inputs hashed/present; SPARC distance methods and Pantheon covariance verified. Contract, likelihoods and fresh validation data still open."
-      }
+      },
+      "resolved_decisions": [
+        "Published galaxy distances fixed",
+        "No assumed dark matter, expanding universe or Big Bang"
+      ]
     },
     {
       "id": "T03",
@@ -82,7 +86,7 @@
         "conformal_action_derivation/derivation.md",
         "interaction_stability_attempt/checks.json"
       ],
-      "prompt": "Build a bounded candidate registry for ordinary massless tensor gravitons, any explicitly new companion field, and any deposited state. Specify action, symmetries, degrees of freedom, couplings, cutoff and matter frame for each actual candidate. Compare whole-photon mixing, partial energy transfer and field-driven frequency conversion. Identify how each candidate escapes or fails the already derived clock/conformal obstructions. Do not leave arbitrary functions unlimited.",
+      "prompt": "Build a bounded candidate registry for ordinary massless tensor gravitons, any explicitly new companion field, and any deposited state. Specify action, symmetries, degrees of freedom, couplings, cutoff and matter frame for each actual candidate. Compare whole-photon mixing, partial energy transfer and field-driven frequency conversion. Identify how each candidate escapes or fails the already derived clock/conformal obstructions. Do not leave arbitrary functions unlimited. Do not activate a candidate that assumes an independent dark-matter component, cosmic expansion or a Big Bang.",
       "deliverables": [
         "theory/candidate-registry.json",
         "theory/action-specification.md",
@@ -591,5 +595,12 @@
       "on_failure": "Record the result under its assumptions, keep the conceptual path open, and ask the user in plain language which physical assumption to revise when a material choice is needed. Do not silently change laws or report an incompatible model as successful."
     }
   ],
-  "user_direction": "# Active research direction \u2014 9 September 2026\n\nUser direction: pursue the roadmap in a fictional universe, remain open to alternative physical laws, and ask the user in plain language when a new problematic finding requires choosing a direction. Do not permanently reject a conceptual path without consultation.\n\nOperational interpretation: report what a calculation demonstrates under its explicit assumptions. Keep failed or incompatible assumptions in a branch register as \u201cneeds revision / user decision,\u201d not a universal prohibition. Preserve energy conservation and observational targets. Offer concrete alternatives with their costs before choosing a material change of laws. Routine numerical fixes and reproducibility work do not need permission.\n\nWorking branches: (A) no companion secondary loss and permanent deposits; (B) shared secondary loss into an explicit receiving sector; (C) finite residence with explicit energy destination; (D) alternative gravitating response or stored state. None is adopted as the final microscopic theory. Do not substitute a different goal just because it is easier to fit.\n\nCurrent work: T01 baseline reproduction in a scratch copy; T02 specification drafted while it runs; T20 bookkeeping calculations prepared as conditional diagnostics, not a validated mechanism. No automated subagents or scheduled jobs created.\n"
+  "user_direction": "# Active research direction \u2014 9 September 2026\n\nUser direction: pursue the roadmap in a fictional universe, remain open to alternative physical laws, and ask the user in plain language when a new problematic finding requires choosing a direction. Do not permanently reject a conceptual path without consultation.\n\nOperational interpretation: report what a calculation demonstrates under its explicit assumptions. Keep failed or incompatible assumptions in a branch register as \u201cneeds revision / user decision,\u201d not a universal prohibition. Preserve energy conservation and observational targets. Offer concrete alternatives with their costs before choosing a material change of laws. Routine numerical fixes and reproducibility work do not need permission.\n\nWorking branches: (A) no companion secondary loss and permanent deposits; (B) shared secondary loss into an explicit receiving sector; (C) finite residence with explicit energy destination; (D) alternative gravitating response or stored state. None is adopted as the final microscopic theory. Do not substitute a different goal just because it is easier to fit.\n\nCurrent work: T01 baseline reproduction in a scratch copy; T02 specification drafted while it runs; T20 bookkeeping calculations prepared as conditional diagnostics, not a validated mechanism. No automated subagents or scheduled jobs created.\n",
+  "universe_contract_file": "research_plan/universe-contract.json",
+  "fixed_galaxy_distances": true,
+  "excluded_active_premises": [
+    "Cosmic expansion",
+    "Big Bang initial history or derived standard rulers/chronology",
+    "Independent assumed dark-matter component or fitted halo supplied as a source"
+  ]
 }
