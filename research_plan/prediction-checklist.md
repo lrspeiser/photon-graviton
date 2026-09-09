@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [joined source and receiver](../research_work/results/source-receiver/derivation.md). The converter-generated spectrum now drives the receiver in an explicit one-zone energy ledger. Matching the response shapes gives a positive weak-capture slowing coefficient above 5/6 for finite photon energy. Absorption strength and detuning change both received power and spectral drift. The converter retains its known color/angle failures; no complete source-funded galaxy is established.
+Latest diagnostic: [dynamical matched waves](../research_work/results/matched-wave/derivation.md). A matched electromagnetic wave action now derives the recovered propagation Hamiltonian and its receiving-field energy. Homogeneous mode actions are conserved exactly, even outside the adiabatic regime. The same minimal coupling changes atomic standards and gives the wrong measured shift sign with fixed masses/charges. It is an explicit comparison, not an adopted propagation or graviton-deposition law.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

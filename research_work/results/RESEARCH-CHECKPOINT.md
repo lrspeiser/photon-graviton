@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [joined source and receiver](source-receiver/derivation.md). The converter-generated spectrum now drives the receiver in an explicit one-zone energy ledger. Matching the response shapes gives a positive weak-capture slowing coefficient above 5/6 for finite photon energy. Absorption strength and detuning change both received power and spectral drift. The converter retains its known color/angle failures; no complete source-funded galaxy is established.
+Latest result: [dynamical matched waves](matched-wave/derivation.md). A matched electromagnetic wave action now derives the recovered propagation Hamiltonian and its receiving-field energy. Homogeneous mode actions are conserved exactly, even outside the adiabatic regime. The same minimal coupling changes atomic standards and gives the wrong measured shift sign with fixed masses/charges. It is an explicit comparison, not an adopted propagation or graviton-deposition law.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -22,6 +22,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | All-direction capture | Isotropic-bath drag, frequency-selective comparisons and attenuation-induced flux | No actual material response or coupled growing galaxy |
 | Broadband receiver | Oscillator receiving/scattering cross sections, spectral weighting and thermal-drag bound | No identified material, permanent store or actual companion spectrum |
 | Joined source and receiver | Converter spectrum, receiving/escape ledger and matched-response identity | Known converter failures remain; no actual spatial galaxy or permanent store |
+| Matched waves | Positive classical wave/field energy and exact mode-action conservation | Minimal atomic response gives the wrong measured shift; no completed matter/gravity theory |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

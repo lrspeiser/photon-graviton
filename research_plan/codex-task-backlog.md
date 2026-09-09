@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [joined source and receiver](../research_work/results/source-receiver/derivation.md). The converter-generated spectrum now drives the receiver in an explicit one-zone energy ledger. Matching the response shapes gives a positive weak-capture slowing coefficient above 5/6 for finite photon energy. Absorption strength and detuning change both received power and spectral drift. The converter retains its known color/angle failures; no complete source-funded galaxy is established.
+Latest diagnostic: [dynamical matched waves](../research_work/results/matched-wave/derivation.md). A matched electromagnetic wave action now derives the recovered propagation Hamiltonian and its receiving-field energy. Homogeneous mode actions are conserved exactly, even outside the adiabatic regime. The same minimal coupling changes atomic standards and gives the wrong measured shift sign with fixed masses/charges. It is an explicit comparison, not an adopted propagation or graviton-deposition law.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 

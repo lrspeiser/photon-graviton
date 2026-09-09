@@ -83,6 +83,7 @@ def main():
         ('isotropic-capture/check_isotropic_capture.py', []),
         ('broadband-capture/check_broadband_capture.py', []),
         ('source-receiver/check_source_receiver.py', []),
+        ('matched-wave/check_matched_wave.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

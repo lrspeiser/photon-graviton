@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [joined source and receiver](../research_work/results/source-receiver/derivation.md). The converter-generated spectrum now drives the receiver in an explicit one-zone energy ledger. Matching the response shapes gives a positive weak-capture slowing coefficient above 5/6 for finite photon energy. Absorption strength and detuning change both received power and spectral drift. The converter retains its known color/angle failures; no complete source-funded galaxy is established.
+The latest calculation is [dynamical matched waves](../research_work/results/matched-wave/derivation.md). A matched electromagnetic wave action now derives the recovered propagation Hamiltonian and its receiving-field energy. Homogeneous mode actions are conserved exactly, even outside the adiabatic regime. The same minimal coupling changes atomic standards and gives the wrong measured shift sign with fixed masses/charges. It is an explicit comparison, not an adopted propagation or graviton-deposition law.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -18,6 +18,7 @@ The latest calculation is [joined source and receiver](../research_work/results/
 | [All-direction capture](../research_work/results/isotropic-capture/derivation.md) | Direction weighting, orbital drag and conditional spectral cancellation |
 | [Broadband receiver](../research_work/results/broadband-capture/derivation.md) | Derived oscillator cross section, spectral weighting and a conditional thermal-drag bound |
 | [Joined source and receiver](../research_work/results/source-receiver/derivation.md) | Generated spectrum, frequency-resolved capture/escape and matched-response drift identity |
+| [Matched waves](../research_work/results/matched-wave/derivation.md) | Exact wave action and receiving-field energy; atomic-standard consistency |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 
