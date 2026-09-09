@@ -2,7 +2,7 @@
 
 Follow the [cumulative-time and companion active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. The current clarified branch proposes cumulative time stretching during propagation, with all lost photon energy entering companions. Ordinary gravitational time dilation is not the proposed cause; timing and all other observations remain mandatory targets.
 
-The latest research step is [source-timescale versus delivery](../research_work/results/source-timescale/report.md). A smaller tested production region sends more energy through the restoring slab but causes less photon energy loss. Eighteen refined runs confirm this conditional tradeoff. The initial numerical convergence failure is retained. Region sizes, repeated-region timing and redshift, capture, support and joint gravity still require derivation.
+The latest research step is [multiple regions in a shared companion field](../research_work/results/multiple-regions/report.md). Redshift accumulates without resetting the field, and 32 carrier/event comparisons match. The amount depends on radiation loading and signal launch time. The next source-population calculation must predict both mean stretching and fluctuations; clock compatibility, capture and gravity remain incomplete.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|

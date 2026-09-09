@@ -4,7 +4,7 @@ Active direction: [cumulative-time and companion research](../../research_plan/a
 
 Current synthesis: [academic working draft v0.1](../../papers/cumulative-time-companions/manuscript.md). It separates postulates, conditional derivations, numerical evidence and missing observational validation, and retains all 32 research areas.
 
-Latest result: [source-timescale tradeoff](source-timescale/report.md). Narrowing the finite conversion region generates faster oscillations and can increase absolute delivery through the unchanged barrier while reducing photon loss. Eighteen refined runs meet the original numerical gates; a failed coarse-grid pilot is retained. The source size is still a diagnostic assumption, not a derived environmental law. Repeated-region redshift/timing, clocks, capture, support and gravity remain incomplete.
+Latest result: [multiple regions in a shared field](multiple-regions/report.md). Eight coupled backgrounds and 32 independent carrier/event comparisons show cumulative redshift with matching local timing stretch. Radiation loading and launch time change the amount; finite event intervals are not stretched uniformly in the tested burst-generated field. A physical source population, environmental law, clocks, capture, support and joint gravity remain missing.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -43,6 +43,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Environmental suppression | 21 wave-interface cases, six profiles and six energy-flux checks | Dense-region coupling and actual spectrum not derived; transmission is not capture |
 | Generated-wave access | 12 coupled runs, local/full energy ledgers, mesh refinement and source-spectrum comparison | Actual generated waves mostly reflect in this candidate; no permanent localized store or derived environmental law |
 | Source timescale | 18 refined source/barrier runs, retained failed pilot and energy/spectrum comparisons | Smaller sources improve delivery but alter photon loss; no derived region distribution or cumulative observational law |
+| Multiple regions | 8 shared-field backgrounds, 32 carrier/event comparisons and finite-interval timing | Stretch depends on loading and launch time; no universal source population, matter-clock law or observational validation |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

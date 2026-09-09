@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [source-timescale tradeoff](../research_work/results/source-timescale/report.md). Narrower finite conversion regions can deliver more companion energy through the same barrier, despite generating less total photon loss. Eighteen refined runs pass the unchanged convergence gate after a retained coarse-grid failure. This makes region size and accumulated redshift/timing a linked requirement, not independent fit choices. Permanent deposition and gravity remain unproved.
+Latest diagnostic: [multiple-region propagation and timing](../research_work/results/multiple-regions/report.md). Eight shared-field backgrounds accumulate redshift, and 32 independent frequency/timing comparisons match. The finite-burst background produces launch-dependent stretching, so a universal per-region rate or single event stretch is not established. Sustained source histories, matter clocks, capture and gravity remain to be derived.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
