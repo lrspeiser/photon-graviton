@@ -8,6 +8,8 @@ The user explicitly permits gravity laws to change when gravity approaches zero.
 
 ## Latest physical premise
 
+The [universal-clock coupling diagnostic](../research_work/results/universal-clock-coupling/report.md) tests a common matter/light lapse factor. It permits locally normal ideal clocks and constant local c, and changing localized profiles produce matched-endpoint wavelength/nearby-arrival stretch. It also derives an additional matter force: slower void time pulls toward voids, faster void time toward wells in this optional coupling. Redshift depends on decreasing q during traversal, not solely q being below one. The profiles are prescribed; field sourcing, energy receiver and gravitational completion remain unsolved. No branch is adopted or astronomical success claimed.
+
 Local-normality requirement: a traveler throughout the journey experiences ordinary clock ticking and local processes, with constant locally measured c; the proposed time difference is only meaningful through comparisons of signals or separated histories. Do not describe the traveler as noticing their own time slow. The physical completion must derive the observable redshift without confusing it with a coordinate change.
 
 Use observed redshift to calibrate the inverse-well time effect. Under the user's mostly-void approximation, infer an effective total signal gearing and required stretch rate per affected distance; see [redshift-time-calibration.md](../research_work/results/redshift-priority/redshift-time-calibration.md). These are conditional inverse targets, not independently measured local clock rates or fresh predictions. Retain common-parameter fitting, motion/endpoint accounting and a separate physical clock-law derivation.
