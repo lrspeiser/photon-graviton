@@ -1,0 +1,2172 @@
+{
+  "endpoint": "https://simbad.cds.unistra.fr/simbad/sim-tap/sync",
+  "protocol_sha256": "80004e8639048967ddf61af720dc690a80d7acd517390010296f9fac941aa922",
+  "feature_sha256": "4fce5f83043db09454b7ebe8dcc0806daff9eee69c183b46969cc3095392b20e",
+  "targets": 26,
+  "request_errors": 0,
+  "targets_with_counterparts": 26,
+  "status": "Current source metadata only; no target outcome columns queried and no automatic counterpart selection.",
+  "records": [
+    {
+      "target_name": "dw0242p0000",
+      "query_center_deg": [
+        40.5015,
+        0.0146
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',40.5015,0.0146,0.008333333333333333))",
+        "response_sha256": "b4221f3d5485046c681b41480dd2570f5ee4109d9875482bf52dbc6bfa8e56b6",
+        "records": [
+          {
+            "oid": 1397434,
+            "main_id": "2MASX J02420036+0000531",
+            "ra": 40.501537500000005,
+            "dec": 0.014758333333333333,
+            "otype": "Sy1",
+            "rvz_type": "z",
+            "rvz_nature": "s",
+            "rvz_qual": "E",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2009ApJS..182..543A",
+            "ids": "LEDA 1154903|APMUKS (BJ) B023926.66-001153.7|2MASX J02420036+0000531|SDSS J024200.36+000052.3|[VV2003c] J024200.4+000053"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1397434",
+          "response_sha256": "6c08426cf35df2f7f4da15f11b4f19d489e1d080113b22e21b0ceac02d5320f1",
+          "records": [
+            {
+              "oidref": 1397434,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw0243p1643",
+      "query_center_deg": [
+        40.857,
+        16.7324
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',40.857,16.7324,0.008333333333333333))",
+        "response_sha256": "15f4e1f91c1e44ab2595f0dce335885ef59e77ac50347b170d1de1b58d6353ae",
+        "records": [
+          {
+            "oid": 1477726,
+            "main_id": "LEDA 2832054",
+            "ra": 40.856666666666676,
+            "dec": 16.733333333333334,
+            "otype": "G",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "LSB F615-1|AGC 121135|K68  23|LEDA 2832054"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1477726",
+          "response_sha256": "6cd70ec1abbfc427de1ddd2d7ac7323e3fa50f56345aa7b5c5209f926bc7d4e6",
+          "records": [
+            {
+              "oidref": 1477726,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1477726,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "DDO047",
+      "query_center_deg": [
+        115.4808,
+        16.8025
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',115.4808,16.8025,0.008333333333333333))",
+        "response_sha256": "bc3fa7b6239611b217e3f13e44842da1d12635ce0ba1a78b8e894735d5ae6e46",
+        "records": [
+          {
+            "oid": 8353681,
+            "main_id": "[GPH2009] U3974-05",
+            "ra": 115.47737500000002,
+            "dec": 16.809361111111112,
+            "otype": "Gl?",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[GPH2009] U3974-05"
+          },
+          {
+            "oid": 1005508,
+            "main_id": "[HG85] DDO  47  2",
+            "ra": 115.47583333333334,
+            "dec": 16.799722222222226,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[HG85] DDO  47  2|[SHK91] DDO  47 16|[SKH89] DDO  47 2"
+          },
+          {
+            "oid": 1005509,
+            "main_id": "[SHK91] DDO  47 17",
+            "ra": 115.47791666666666,
+            "dec": 16.799722222222226,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] DDO  47 17"
+          },
+          {
+            "oid": 1005487,
+            "main_id": "Z  87-30",
+            "ra": 115.48460804087999,
+            "dec": 16.802069897830002,
+            "otype": "G",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "Gaia DR3 3166024662526413184|DDO  47|LEDA   21600|MCG+03-20-010|SPB  88|TC  93|UGC  3974|Z 0739.0+1655|Z  87-30|[MI94] Im  42|[VDD93]  69|UZC J074155.4+164809|SDSS J074156.30+164807.4|Gaia DR2 3166024662526413184"
+          },
+          {
+            "oid": 1005516,
+            "main_id": "[SHK91] DDO  47 24",
+            "ra": 115.485,
+            "dec": 16.803333333333335,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] DDO  47 24"
+          },
+          {
+            "oid": 8354169,
+            "main_id": "[GPH2009] U3974-04",
+            "ra": 115.478625,
+            "dec": 16.79852777777778,
+            "otype": "Gl?",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[GPH2009] U3974-04"
+          },
+          {
+            "oid": 1005514,
+            "main_id": "[SHK91] DDO  47 22",
+            "ra": 115.48333333333333,
+            "dec": 16.80888888888889,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] DDO  47 22"
+          },
+          {
+            "oid": 1005513,
+            "main_id": "[SHK91] DDO  47 21",
+            "ra": 115.48166666666667,
+            "dec": 16.803611111111113,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] DDO  47 21"
+          },
+          {
+            "oid": 1005737,
+            "main_id": "[WB2001] 10",
+            "ra": 115.4775,
+            "dec": 16.809444444444445,
+            "otype": "HI",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[WB2001] 10"
+          },
+          {
+            "oid": 1005511,
+            "main_id": "[SHK91] DDO  47 19",
+            "ra": 115.48041666666667,
+            "dec": 16.797222222222224,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] DDO  47 19"
+          },
+          {
+            "oid": 1005510,
+            "main_id": "[HG85] DDO  47  1",
+            "ra": 115.47916666666667,
+            "dec": 16.799444444444447,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[HG85] DDO  47  1|[SHK91] DDO  47 18|[SKH89] DDO  47 1"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1005487",
+          "response_sha256": "c6a456f00252fbcfbae34028a01dc3e931748ecfbcaec8f631a5fff7b02d8cf4",
+          "records": [
+            {
+              "oidref": 1005487,
+              "veltype": "z  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1996AJ....112.1803M",
+              "origin": "e",
+              "remarks": null
+            },
+            {
+              "oidref": 1005487,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1996AJ....112.1803M",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1005487,
+              "veltype": "cz ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "1999PASP..111..438F",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1005487,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2005ApJS..160..149S",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1005487,
+              "veltype": "v  ",
+              "nature": "s",
+              "wdomain": null,
+              "bibcode": "2016AJ....152...50T",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1005487,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1005487,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "UGC04115",
+      "query_center_deg": [
+        119.259,
+        14.3898
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',119.259,14.3898,0.008333333333333333))",
+        "response_sha256": "aff585ccebf380e10a5d15f149750c821d113a58ae875c7bf645d88be6809102",
+        "records": [
+          {
+            "oid": 1024573,
+            "main_id": "Z  88-7",
+            "ra": 119.254281,
+            "dec": 14.396571,
+            "otype": "G",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "ESDO 631-07|LEDA   22280|LEDA   22277|SPB  89|TC  96|UGC  4115|Z  88-7|[MI94] Im  43|[VDD93]  71|Z 0754.2+1431|UZC J075701.8+142327|HIPASS J0757+14|SDSS J075701.02+142347.6"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1024573",
+          "response_sha256": "2eeeb9947c7ca1e3c942ac04abfc33b51bcf135df348d4ea9ff178804671ab96",
+          "records": [
+            {
+              "oidref": 1024573,
+              "veltype": "z  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1991RC3v9.C......0D",
+              "origin": "e",
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1996AJ....112.1803M",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "cz ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "1999PASP..111..438F",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2000ApJS..131...47E",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "v  ",
+              "nature": "s",
+              "wdomain": null,
+              "bibcode": "2006MNRAS.371.1855W",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "cz ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011AJ....142..170H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "v  ",
+              "nature": "s",
+              "wdomain": null,
+              "bibcode": "2016AJ....152...50T",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1024573,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw0814p1502",
+      "query_center_deg": [
+        123.6916,
+        15.0449
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',123.6916,15.0449,0.008333333333333333))",
+        "response_sha256": "d000ca713e143a30d33612ca50ba54a1edf467eea68a6ec0a5711945f04faa80",
+        "records": [
+          {
+            "oid": 27779291,
+            "main_id": "LEDA 4158690",
+            "ra": 123.69195962499998,
+            "dec": 15.045054611111112,
+            "otype": "G",
+            "rvz_type": "z",
+            "rvz_nature": "s",
+            "rvz_qual": "C",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2020ApJS..249....3A",
+            "ids": "SDSS J081446.07+150242.2|LEDA 4158690"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=27779291",
+          "response_sha256": "593af21e76694293923e237902d2320a3b10eb5d08d6597ccb1cfd9ed05f8324",
+          "records": [
+            {
+              "oidref": 27779291,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2020ApJS..249....3A",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "UGC05086",
+      "query_center_deg": [
+        143.2033,
+        21.4657
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',143.2033,21.4657,0.008333333333333333))",
+        "response_sha256": "ce91963f26002daec6361f01a0e9848fbcf3daf9b60b5526ebcfc49e4a4d51ca",
+        "records": [
+          {
+            "oid": 1630051,
+            "main_id": "UGC  5086",
+            "ra": 143.203395,
+            "dec": 21.465624,
+            "otype": "LSB",
+            "rvz_type": "z",
+            "rvz_nature": null,
+            "rvz_qual": "D",
+            "rvz_wavelength": null,
+            "rvz_bibcode": "2002LEDA.........0P",
+            "ids": "[CGG2021] dw0932p2127|SDSS J093248.81+212756.2|ESDO 565-05|LEDA   27115|UGC  5086|VLSB F565-V03|[MI94] Im  57"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1630051",
+          "response_sha256": "033077c24486579af93a668a5b8a106f85e484957a82a494ed99b4a5a98eb7e0",
+          "records": [
+            {
+              "oidref": 1630051,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1630051,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2000ApJS..131...47E",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1630051,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2005ApJS..160..149S",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1630051,
+              "veltype": "z  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1991RC3v9.C......0D",
+              "origin": "e",
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "LV J0913+1937",
+      "query_center_deg": [
+        138.4125,
+        19.6188
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',138.4125,19.6188,0.008333333333333333))",
+        "response_sha256": "42781f5d872683df78a75c1f6c7c502bddf0fd3942400549bb500e0087369cf1",
+        "records": [
+          {
+            "oid": 6268349,
+            "main_id": "LEDA 1599237",
+            "ra": 138.41246666666666,
+            "dec": 19.618747222222222,
+            "otype": "AG?",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "AGC 739005|SDSS J091338.99+193707.4|[KMK2013] LV J0913+1937|LEDA 1599237"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=6268349",
+          "response_sha256": "10f872a2ccf67a97ea4149507d2058fd85a8328657162a25ee0fd1b955990f73",
+          "records": [
+            {
+              "oidref": 6268349,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 6268349,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 6268349,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "LSBC D565-09",
+      "query_center_deg": [
+        143.3068,
+        20.5153
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',143.3068,20.5153,0.008333333333333333))",
+        "response_sha256": "182b7562e18acff6d5ad7a391d450fec2f6511affbc32404f1514d92c534d4c1",
+        "records": [
+          {
+            "oid": 1630324,
+            "main_id": "SDSS J093313.66+203055.3",
+            "ra": 143.306928,
+            "dec": 20.515361,
+            "otype": "AG?",
+            "rvz_type": "z",
+            "rvz_nature": "s",
+            "rvz_qual": "E",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2009ApJS..182..543A",
+            "ids": "[CGG2021] dw0933p2030|ESDO 565-09|SDSS J093313.67+203055.7|SDSS J093313.66+203055.2|SDSS J093313.66+203055.3"
+          },
+          {
+            "oid": 10908350,
+            "main_id": "LEDA 2806909",
+            "ra": 143.30625,
+            "dec": 20.519444444444442,
+            "otype": "G",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "LEDA 2806909"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1630324",
+          "response_sha256": "c1e4d4ea44461a3793fef04aa1bc254a20838aafe7fa740dd26b27f4c04920a4",
+          "records": [
+            {
+              "oidref": 1630324,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "LSBC D634-03",
+      "query_center_deg": [
+        137.2239,
+        14.5839
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',137.2239,14.5839,0.008333333333333333))",
+        "response_sha256": "3f920904086b8365fe6e5fb72bcb713d226e9befaaf628bb86f0c450563a49a2",
+        "records": [
+          {
+            "oid": 5539952,
+            "main_id": "[GPH2009]D634-03-01",
+            "ra": 137.22383333333332,
+            "dec": 14.582194444444443,
+            "otype": "Gl?",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[GPH2009]D634-03-01"
+          },
+          {
+            "oid": 5533944,
+            "main_id": "[TSK2008] 308",
+            "ra": 137.22363652952865,
+            "dec": 14.58286094978965,
+            "otype": "GrG",
+            "rvz_type": "v",
+            "rvz_nature": null,
+            "rvz_qual": "D",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2008ApJ...676..184T",
+            "ids": "[TSK2008] 308"
+          },
+          {
+            "oid": 1604546,
+            "main_id": "LEDA 2806961",
+            "ra": 137.22375,
+            "dec": 14.583904,
+            "otype": "AG?",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "ESDO 634-03|LEDA 2806961|AGC 191791|SDSS J090853.70+143502.0"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=5533944",
+          "response_sha256": "742d8b97ea3ff1bcaf22cf3f8dcb7a062e7f228625550626f781bc62f011f8ce",
+          "records": []
+        },
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1604546",
+          "response_sha256": "80921f9d4361dcef704a804da252864fbb9ad670d701de5dff7824d5d1005d7d",
+          "records": [
+            {
+              "oidref": 1604546,
+              "veltype": "z  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1997ApJS..111..233S",
+              "origin": "e",
+              "remarks": null
+            },
+            {
+              "oidref": 1604546,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2000ApJS..131...47E",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1604546,
+              "veltype": "cz ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011AJ....142..170H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1604546,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1604546,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw0930p2143",
+      "query_center_deg": [
+        142.6665,
+        21.7236
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',142.6665,21.7236,0.008333333333333333))",
+        "response_sha256": "151fa53880cbad4ce3d1d6cd0967b63b9f60363d45d649544e57814e2618d8ee",
+        "records": [
+          {
+            "oid": 4904793,
+            "main_id": "SDSS J093039.96+214324.7",
+            "ra": 142.666484,
+            "dec": 21.723536,
+            "otype": "G",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[CGB2020] dw0930+2143|[CGG2021] dw0930p2143|SDSS J093039.96+214324.7|[IHS2009] N2903-HI-1|SDSS J093039.95+214324.7"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": []
+    },
+    {
+      "target_name": "KDG056",
+      "query_center_deg": [
+        142.554,
+        19.9914
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',142.554,19.9914,0.008333333333333333))",
+        "response_sha256": "88201df1a18d6a2e8faa7c8385f28ac1471db6b809d468843e6613071c09aafa",
+        "records": [
+          {
+            "oid": 1630365,
+            "main_id": "LEDA   26972",
+            "ra": 142.553461,
+            "dec": 19.989813,
+            "otype": "LSB",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "AGC 191706|SMDG J0930129+195930|[CGG2021] dw0930p1959|ESDO 565-10|K68  56|LEDA   26972|VLSB F565-V04|[KKH2001]  51|SDSS J093012.83+195923.3"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1630365",
+          "response_sha256": "400ca5595e65dcf4f4924e3a62ca7bd90e3065a67210dd7af8eaeabb164e277b",
+          "records": [
+            {
+              "oidref": 1630365,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1630365,
+              "veltype": "z  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1997ApJS..111..233S",
+              "origin": "e",
+              "remarks": null
+            },
+            {
+              "oidref": 1630365,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1630365,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            },
+            {
+              "oidref": 1630365,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2000ApJS..131...47E",
+              "origin": "r",
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "SexB",
+      "query_center_deg": [
+        150.0004,
+        5.3317
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',150.0004,5.3317,0.008333333333333333))",
+        "response_sha256": "5c2f680f845ba54c5b99a65ea649907f5a24097f79187bfc1ccbce15088d34fc",
+        "records": [
+          {
+            "oid": 3686524,
+            "main_id": "EV* SexB V0006",
+            "ra": 149.99483333333333,
+            "dec": 5.325555555555555,
+            "otype": "Ir*",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SC85] 28|EV* SexB V0006"
+          },
+          {
+            "oid": 23924813,
+            "main_id": "SSTDUSTF J095958.57+051935.6",
+            "ra": 149.994064,
+            "dec": 5.326573,
+            "otype": "s?r",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[BBH2019] Sextans B 1|SSTDUSTF J095958.57+051935.6"
+          },
+          {
+            "oid": 3692945,
+            "main_id": "EV* SexB V0007",
+            "ra": 149.99570833333334,
+            "dec": 5.336944444444442,
+            "otype": "cC*",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SC85] V2|EV* SexB V0007"
+          },
+          {
+            "oid": 1673053,
+            "main_id": "Z  36-12",
+            "ra": 150.00342389253,
+            "dec": 5.3359814971,
+            "otype": "H2G",
+            "rvz_type": "v",
+            "rvz_nature": "s",
+            "rvz_qual": "C",
+            "rvz_wavelength": null,
+            "rvz_bibcode": "2012AJ....144....4M",
+            "ids": "Gaia DR3 3849401483133349632|DDO  70|K73  388|LEDA   28913|MCG+01-26-005|NAME Sex B|NAME Sextans B|SPB 121|TC 128|UGC  5373|Z  36-12|[MI94] Im  65|Z 0957.4+0534|[M98c] 095722.9+053422|UZC J100000.1+051956|WVFSCC J095954+051924|SDSS J100000.82+052009.5|Gaia DR2 3849401483133349632"
+          },
+          {
+            "oid": 9485905,
+            "main_id": "SDSS J100001.57+051939.3",
+            "ra": 150.00655271446,
+            "dec": 5.327634683720001,
+            "otype": "BiC",
+            "rvz_type": "z",
+            "rvz_nature": "p",
+            "rvz_qual": "E",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2011ApJ...736...21S",
+            "ids": "Gaia DR3 3849401483132983040|SDSS J100001.57+051939.3|Gaia DR2 3849401483132983040"
+          },
+          {
+            "oid": 1673034,
+            "main_id": "[SHK91] Sextans B  7",
+            "ra": 150.00499999999997,
+            "dec": 5.325,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] Sextans B  7"
+          },
+          {
+            "oid": 3686523,
+            "main_id": "EV* SexB V0005",
+            "ra": 149.994,
+            "dec": 5.326666666666666,
+            "otype": "Ir*",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SC85] 27|EV* SexB V0005"
+          },
+          {
+            "oid": 19098539,
+            "main_id": "[PSB2020] DDO  70  6",
+            "ra": 149.9975,
+            "dec": 5.325694444444443,
+            "otype": "sh",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "D",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2020AJ....160...66P",
+            "ids": "[PSB2020] DDO  70  6"
+          },
+          {
+            "oid": 1673031,
+            "main_id": "[SHK91] Sextans B  4",
+            "ra": 150.00083333333333,
+            "dec": 5.337222222222222,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] Sextans B  4"
+          },
+          {
+            "oid": 3692948,
+            "main_id": "EV* SexB V0008",
+            "ra": 149.99566666666666,
+            "dec": 5.329722222222222,
+            "otype": "Ce*",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SC85] V7|EV* SexB V0008"
+          },
+          {
+            "oid": 1673033,
+            "main_id": "[SHK91] Sextans B  6",
+            "ra": 150.00458333333333,
+            "dec": 5.3277777777777775,
+            "otype": "HII",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SHK91] Sextans B  6"
+          },
+          {
+            "oid": 15580158,
+            "main_id": "[SWZ2020] clump-1",
+            "ra": 149.99279166666668,
+            "dec": 5.3299666666666665,
+            "otype": "MoC",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SWZ2020] clump-1"
+          },
+          {
+            "oid": 15580160,
+            "main_id": "[SWZ2020] clump-3",
+            "ra": 149.99309583333334,
+            "dec": 5.329338888888889,
+            "otype": "MoC",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SWZ2020] clump-3"
+          },
+          {
+            "oid": 15580161,
+            "main_id": "[SWZ2020] clump-4",
+            "ra": 149.99306666666666,
+            "dec": 5.329088888888889,
+            "otype": "MoC",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "[SWZ2020] clump-4"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1673053",
+          "response_sha256": "042697853625e56a1ddda48ed71982a2888be1bc4a234daf8f18e4e70b9027fb",
+          "records": [
+            {
+              "oidref": 1673053,
+              "veltype": "z  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "1991RC3v9.C......0D",
+              "origin": "e",
+              "remarks": null
+            },
+            {
+              "oidref": 1673053,
+              "veltype": "cz ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "1999PASP..111..438F",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1673053,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2005ApJS..160..149S",
+              "origin": "r",
+              "remarks": null
+            },
+            {
+              "oidref": 1673053,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011A&A...528A..28P",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1673053,
+              "veltype": "cz ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011AJ....142..170H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1673053,
+              "veltype": "v  ",
+              "nature": "s",
+              "wdomain": null,
+              "bibcode": "2016AJ....152...50T",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1673053,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1673053,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        },
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=9485905",
+          "response_sha256": "742d8b97ea3ff1bcaf22cf3f8dcb7a062e7f228625550626f781bc62f011f8ce",
+          "records": []
+        },
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=19098539",
+          "response_sha256": "a1bb9f49dc96e00fd27090d5db4a72905b2be3a8ba9c1ffae322d7afafbba259",
+          "records": [
+            {
+              "oidref": 19098539,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2020AJ....160...66P",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw1009m0210",
+      "query_center_deg": [
+        152.3848,
+        -2.1828
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',152.3848,-2.1828,0.008333333333333333))",
+        "response_sha256": "1b8c88e30737b12e2a2f84ff87a8703ddcd2db359be614f41730102e32a82421",
+        "records": [
+          {
+            "oid": 4708980,
+            "main_id": "LEDA 1099440",
+            "ra": 152.38530037026,
+            "dec": -2.1827065339,
+            "otype": "AG?",
+            "rvz_type": "z",
+            "rvz_nature": null,
+            "rvz_qual": "D",
+            "rvz_wavelength": null,
+            "rvz_bibcode": "2001MNRAS.328.1039C",
+            "ids": "Gaia DR3 3829027734539982208|2dFGRS TGN218Z179|GALEXASC J100932.32-021057.6|6dFGS gJ100932.3-021058|SDSS J100932.46-021057.7|LEDA 1099440"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=4708980",
+          "response_sha256": "1510c488ed5bb9ee67304739e815f1c464e9ce3505cda27926d9fa658c3d9045",
+          "records": [
+            {
+              "oidref": 4708980,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2009MNRAS.399..683J",
+              "origin": "r",
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "LV J1017+2922",
+      "query_center_deg": [
+        154.3598,
+        29.3699
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',154.3598,29.3699,0.008333333333333333))",
+        "response_sha256": "338720872b935c3f3c6f75a53af484e37b4c3b97d1bf3bf46adb63a6a35b663c",
+        "records": [
+          {
+            "oid": 1687484,
+            "main_id": "SDSS J101726.51+292210.5",
+            "ra": 154.360495,
+            "dec": 29.369591,
+            "otype": "AG?",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "AGC 200232|[WTK2001] J101726.48+292210.6|SDSS J101726.51+292210.5"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1687484",
+          "response_sha256": "02c7d2563da90fc39a052c8dc83718cb69009f92c9a0a47740606dd3c3ae0dbc",
+          "records": [
+            {
+              "oidref": 1687484,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1687484,
+              "veltype": "z  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2001AJ....122.2893W",
+              "origin": "e",
+              "remarks": null
+            },
+            {
+              "oidref": 1687484,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1687484,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw1046p1219",
+      "query_center_deg": [
+        161.6721,
+        12.327
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',161.6721,12.327,0.008333333333333333))",
+        "response_sha256": "e0b5a706e9fa4eadb3b7efa26ce38b580e357b8257c2381073b5842ebfd8a86d",
+        "records": [
+          {
+            "oid": 1749681,
+            "main_id": "LEDA   83336",
+            "ra": 161.672149,
+            "dec": 12.327046,
+            "otype": "GiG",
+            "rvz_type": "z",
+            "rvz_nature": "s",
+            "rvz_qual": "E",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2009ApJS..182..543A",
+            "ids": "[CGG2021] dw1046p1219|LEDA   83336|[FS90] Leo 17|[KK2004] LeG 17|AGC 202027|SDSS J104641.31+121937.3|MATLAS-741"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1749681",
+          "response_sha256": "cdae056ea2cc69fa96a5726152601c5650507fb243102951f6c34e4ad973419c",
+          "records": [
+            {
+              "oidref": 1749681,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "AGC208399",
+      "query_center_deg": [
+        160.0435,
+        4.9082
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',160.0435,4.9082,0.008333333333333333))",
+        "response_sha256": "2e353466d14835589f023f1b2bf48ff6433bf346e8603e59425e1d83867cd619",
+        "records": [
+          {
+            "oid": 27195000,
+            "main_id": "SMDG J1040102+045431",
+            "ra": 160.04236,
+            "dec": 4.908639999999999,
+            "otype": "LSB",
+            "rvz_type": null,
+            "rvz_nature": null,
+            "rvz_qual": null,
+            "rvz_wavelength": null,
+            "rvz_bibcode": null,
+            "ids": "SMDG J1040102+045431"
+          },
+          {
+            "oid": 8442477,
+            "main_id": "SDSS J104010.82+045425.6",
+            "ra": 160.045081,
+            "dec": 4.907118,
+            "otype": "G",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "AGC 208399|SDSS J104010.82+045425.6"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=8442477",
+          "response_sha256": "5a31283ac13ae106e23bbebfd6082fa500807ff42edeb514e5dff9b03e703d88",
+          "records": [
+            {
+              "oidref": 8442477,
+              "veltype": "cz ",
+              "nature": "s",
+              "wdomain": "O   ",
+              "bibcode": "2012A&A...545A..16G",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8442477,
+              "veltype": "cz ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011AJ....142..170H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8442477,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8442477,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw1046p1247",
+      "query_center_deg": [
+        161.7273,
+        12.7887
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',161.7273,12.7887,0.008333333333333333))",
+        "response_sha256": "fea2c072aa6f080eab7124367d8d852a95f1483bf3846a1a44f0ef9ef568d551",
+        "records": [
+          {
+            "oid": 1749717,
+            "main_id": "LEDA   83338",
+            "ra": 161.727553,
+            "dec": 12.788205000000001,
+            "otype": "LSB",
+            "rvz_type": "z",
+            "rvz_nature": null,
+            "rvz_qual": "E",
+            "rvz_wavelength": null,
+            "rvz_bibcode": "2020MNRAS.494.1784A",
+            "ids": "SMDG J1046546+124719|[CGG2021] dw1046p1247|LEDA   83338|[FS90] Leo 20|[KK2004] LeG 19|[TT2002] Leo  8|AGC 205290|SDSS J104654.61+124717.5|MATLAS-745"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1749717",
+          "response_sha256": "de7289fed7e8c7ffd217a2ee973404753bef158e41469ac9231277691a1608d3",
+          "records": [
+            {
+              "oidref": 1749717,
+              "veltype": "v  ",
+              "nature": "s",
+              "wdomain": "Rad ",
+              "bibcode": "2009A&A...506..677H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1749717,
+              "veltype": "cz ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011AJ....142..170H",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "LV J1030+0607",
+      "query_center_deg": [
+        157.6845,
+        6.1261
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',157.6845,6.1261,0.008333333333333333))",
+        "response_sha256": "a145704c939bb0fd499f5b1e735ec611f604138e5acacf9972f95abf8e92f441",
+        "records": [
+          {
+            "oid": 8442472,
+            "main_id": "LEDA 3466489",
+            "ra": 157.684728,
+            "dec": 6.125435,
+            "otype": "AG?",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "LEDA 3466489|SDSS J103044.26+060737.4|AGC 203709|[KMK2013] LV J1030+0607|SDSS J103044.33+060731.5"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=8442472",
+          "response_sha256": "fcfc553355d19d9b52e2a4525e0dcc98f495002a2cb1a7587f1428df7a03e20a",
+          "records": [
+            {
+              "oidref": 8442472,
+              "veltype": "cz ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011AJ....142..170H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8442472,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2020ApJS..249....3A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8442472,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8442472,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "LV J1000+3032",
+      "query_center_deg": [
+        150.1524,
+        30.536
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',150.1524,30.536,0.008333333333333333))",
+        "response_sha256": "c6a023cf4c20e359e1d8c513613d9b92bf517ca111aeeb5359816b873eae1237",
+        "records": [
+          {
+            "oid": 7824438,
+            "main_id": "SDSS J100036.54+303209.7",
+            "ra": 150.152269,
+            "dec": 30.53605,
+            "otype": "AG?",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "AGC 205590|SDSS J100036.50+303209.8|SDSS J100036.54+303209.7|[KMK2013] LV J1000+3032"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=7824438",
+          "response_sha256": "ae8c7b0c0f6ea62c3d693ab63ded54ded7666cedf3291fee1f704241a6362dbb",
+          "records": [
+            {
+              "oidref": 7824438,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2020ApJS..249....3A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 7824438,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 7824438,
+              "veltype": "v  ",
+              "nature": "em",
+              "wdomain": "Rad ",
+              "bibcode": "2016A&A...596A..86P",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 7824438,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2015ApJS..219...12A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 7824438,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 7824438,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "AGC202456",
+      "query_center_deg": [
+        163.0811,
+        11.0434
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',163.0811,11.0434,0.008333333333333333))",
+        "response_sha256": "d2f79e98234cd675c28b982882331febcbf47515cba9f190304f0a4d8ea2a1f2",
+        "records": [
+          {
+            "oid": 4996481,
+            "main_id": "LEDA 1388083",
+            "ra": 163.081268,
+            "dec": 11.043206,
+            "otype": "AG?",
+            "rvz_type": "z",
+            "rvz_nature": null,
+            "rvz_qual": "C",
+            "rvz_wavelength": null,
+            "rvz_bibcode": "2008ApJS..175..297A",
+            "ids": "SDSS J105219.51+110235.5|SDSS J105219.51+110235.6|AGC 202456|SDSS J105219.50+110235.5|LEDA 1388083|[CGB2022] dw1052p1102"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=4996481",
+          "response_sha256": "90c6770b57dfd1277bc38bb12ccf7e4eab043fa64b6477e57e5f74c3e6185e43",
+          "records": [
+            {
+              "oidref": 4996481,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw1138p0036",
+      "query_center_deg": [
+        174.5726,
+        0.6135
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',174.5726,0.6135,0.008333333333333333))",
+        "response_sha256": "6a555d213e41eacf204a98f79218874f13e8bfc9401e3bc533c03eeea220a401",
+        "records": [
+          {
+            "oid": 4779839,
+            "main_id": "LEDA 1170677",
+            "ra": 174.572391,
+            "dec": 0.613372,
+            "otype": "AG?",
+            "rvz_type": "v",
+            "rvz_nature": "se",
+            "rvz_qual": "C",
+            "rvz_wavelength": "R",
+            "rvz_bibcode": "2022ApJS..261...21Y",
+            "ids": "AGC 213171|2dFGRS TGN445Z155|SDSS J113817.34+003648.1|SDSS J113817.37+003648.1|LEDA 1170677|GAMA 83849|GAMA J113817.34+003648.1"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=4779839",
+          "response_sha256": "84d1acc5ccecd74ac1841f79259757402abb246e7a0b904f11d01fc2acbadf9f",
+          "records": [
+            {
+              "oidref": 4779839,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2015MNRAS.452.2087L",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2012ApJS..203...21A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2012ApJS..203...21A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "v  ",
+              "nature": "em",
+              "wdomain": "Rad ",
+              "bibcode": "2016A&A...595A.118V",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2021A&A...646A.113D",
+              "origin": null,
+              "remarks": "HI"
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2018MNRAS.474.3875B",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 4779839,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "KKSG20",
+      "query_center_deg": [
+        166.1675,
+        0.0583
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',166.1675,0.0583,0.008333333333333333))",
+        "response_sha256": "493a56cf29fa97406082f77b770d657048d3e026a954ac29729ff4576ed22a9f",
+        "records": [
+          {
+            "oid": 1789228,
+            "main_id": "2dFGRS TGN368Z258",
+            "ra": 166.167008,
+            "dec": 0.058228,
+            "otype": "LSB",
+            "rvz_type": "z",
+            "rvz_nature": null,
+            "rvz_qual": "D",
+            "rvz_wavelength": null,
+            "rvz_bibcode": "2003MNRAS.344..307L",
+            "ids": "[RDS2004] MGS sure 12|2dFGRS TGN368Z258|ISI96 1102+0019|MGC 16030|[KKS2000] 20|[KKS2000] 1102+0019|SDSS J110440.08+000329.6|LEDA  135770|[CGB2022] dw1104p0003"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1789228",
+          "response_sha256": "accb00234c7cc6248a3af8175ae56d513d649fe2cce55f7789163a5471c5a660",
+          "records": [
+            {
+              "oidref": 1789228,
+              "veltype": "v  ",
+              "nature": null,
+              "wdomain": null,
+              "bibcode": "2004MNRAS.352..478R",
+              "origin": "r",
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "AGC740112",
+      "query_center_deg": [
+        162.4811,
+        23.0688
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',162.4811,23.0688,0.008333333333333333))",
+        "response_sha256": "923c6912dcc587e85a50dfc088a17a17575dfec6960d297952be731939c21f03",
+        "records": [
+          {
+            "oid": 17698355,
+            "main_id": "SDSS J104955.41+230406.7",
+            "ra": 162.480902,
+            "dec": 23.068550000000002,
+            "otype": "G",
+            "rvz_type": "z",
+            "rvz_nature": "s",
+            "rvz_qual": "C",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2015ApJS..219...12A",
+            "ids": "SDSS J104955.41+230406.7|AGC 740112"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=17698355",
+          "response_sha256": "69bf75d2594f2e2783bca5d6435d8a1af66cdb053814d801c0269fbdd26c8643",
+          "records": [
+            {
+              "oidref": 17698355,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2015ApJS..219...12A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 17698355,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 17698355,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "KKH86",
+      "query_center_deg": [
+        208.6397,
+        4.2446
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',208.6397,4.2446,0.008333333333333333))",
+        "response_sha256": "9f7682398a1a8a129b97efc21a8e15e232f58d1df65b94b13ab73b7d8ccf7aa3",
+        "records": [
+          {
+            "oid": 2218575,
+            "main_id": "LEDA 2807150",
+            "ra": 208.638984,
+            "dec": 4.244351,
+            "otype": "LSB",
+            "rvz_type": "v",
+            "rvz_nature": "s",
+            "rvz_qual": "C",
+            "rvz_wavelength": null,
+            "rvz_bibcode": "2012AJ....144....4M",
+            "ids": "[KKH2001]  86|LEDA 2807150|AGC 231980|SDSS J135433.35+041439.6"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=2218575",
+          "response_sha256": "0524441025aa19008dc1586528f618bafdd53f60cfe927cbed621ca3e8eb5a65",
+          "records": [
+            {
+              "oidref": 2218575,
+              "veltype": "v  ",
+              "nature": "se",
+              "wdomain": "Rad ",
+              "bibcode": "2018ApJ...861...49H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 2218575,
+              "veltype": "cz ",
+              "nature": null,
+              "wdomain": "Rad ",
+              "bibcode": "2011AJ....142..170H",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 2218575,
+              "veltype": "v  ",
+              "nature": "e",
+              "wdomain": "Rad ",
+              "bibcode": "2022ApJS..261...21Y",
+              "origin": null,
+              "remarks": "HI"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw1232p0015",
+      "query_center_deg": [
+        188.1505,
+        0.2626
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',188.1505,0.2626,0.008333333333333333))",
+        "response_sha256": "aad729e3b3fe484cab1e833432981d2c3bbc7656248c5301ba7d0af84a06ae53",
+        "records": [
+          {
+            "oid": 1941637,
+            "main_id": "LEDA 1161319",
+            "ra": 188.15054999999998,
+            "dec": 0.26244,
+            "otype": "AG?",
+            "rvz_type": "v",
+            "rvz_nature": null,
+            "rvz_qual": "C",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2022ApJ...929...36K",
+            "ids": "[KKL2022] Dw4|[CGG2021] dw1232p0015|2dFGRS TGN321Z234|MGC 34050|SDSS J123236.12+001544.7|LEDA 1161319|SDSS J123236.13+001544.8|EVCC 839|SDSS J123236.13+001544.7"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=1941637",
+          "response_sha256": "0cdf520f47fea7d476252a03b455f1a52e24915ecd32edde05eeea17cf6bc96c",
+          "records": [
+            {
+              "oidref": 1941637,
+              "veltype": "v  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2022ApJ...929...36K",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 1941637,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "target_name": "dw1422m0153",
+      "query_center_deg": [
+        215.5505,
+        -1.8913
+      ],
+      "counterparts": {
+        "query": "SELECT TOP 100 b.oid, b.main_id, b.ra, b.dec, b.otype, b.rvz_type, b.rvz_nature, b.rvz_qual, b.rvz_wavelength, b.rvz_bibcode, i.ids FROM basic AS b LEFT JOIN ids AS i ON b.oid=i.oidref WHERE 1=CONTAINS(POINT('ICRS',b.ra,b.dec),CIRCLE('ICRS',215.5505,-1.8913,0.008333333333333333))",
+        "response_sha256": "7d2c38ab63faa1500f2a93a077e4fecb1ff095271c06c75211a6fb43a7b39075",
+        "records": [
+          {
+            "oid": 8328905,
+            "main_id": "LEDA 1107216",
+            "ra": 215.550982,
+            "dec": -1.891317,
+            "otype": "AG?",
+            "rvz_type": "z",
+            "rvz_nature": "s",
+            "rvz_qual": "D",
+            "rvz_wavelength": "O",
+            "rvz_bibcode": "2018MNRAS.474.3875B",
+            "ids": "SDSS J142212.16-015328.4|SDSS J142212.23-015328.7|LEDA 1107216|GAMA 485414|GAMA J142212.23-015328.7"
+          }
+        ]
+      },
+      "truncated": false,
+      "measurement_metadata": [
+        {
+          "query": "SELECT oidref, veltype, nature, wdomain, bibcode, origin, remarks FROM mesVelocities WHERE oidref=8328905",
+          "response_sha256": "d135a67a0709fd9c2d4706db83539e004686a61ea5aad30e956b0297153ac56e",
+          "records": [
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2012ApJS..203...21A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2011MNRAS.413..971D",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2015MNRAS.452.2087L",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2012ApJS..203...21A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "v  ",
+              "nature": "em",
+              "wdomain": "Rad ",
+              "bibcode": "2016A&A...595A.118V",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2009ApJS..182..543A",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2018MNRAS.474.3875B",
+              "origin": null,
+              "remarks": null
+            },
+            {
+              "oidref": 8328905,
+              "veltype": "z  ",
+              "nature": "s",
+              "wdomain": "Opt ",
+              "bibcode": "2018MNRAS.474.3875B",
+              "origin": null,
+              "remarks": null
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 # Candidate catalog and environmental-input audit
 
+The [velocity metadata audit](elves-velocity-metadata-report.md) retrieved source metadata for all 26 pending positions. Fifteen have one name/alias-supported counterpart; five cones contain multiple objects. Source review distinguishes optical-convention HI profile midpoints from flux-weighted centers. No target outcomes were scored, no original ELVES per-row measurement chain is yet certified, and freshness decisions remain unchanged.
+
 Candidate [frame sensitivity](elves-frame-report.md) is now quantified from sky positions alone. ELVES/SIMBAD source conventions cannot be silently mixed with CF4 CMB shifts. No candidate outcomes were transformed, fitted or scored. The two unresolved PGC/group matches remain withheld after additional resolver checks.
 
 The [ELVES identity audit](elves-identity-report.md) now excludes three of the 29 staged candidates through historical object/group or source-availability evidence. Twenty-six remain pending; none is certified fresh. The audit includes 799 historical text files and preserves unresolved positional group matches and name-lookup failures.

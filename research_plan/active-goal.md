@@ -28,6 +28,8 @@ Follow [mechanism-first redshift requirements](mechanism-first-redshift.md): the
 
 ## Immediate priority, 9 September 2026
 
+The [ELVES velocity metadata audit](../research_work/results/redshift-priority/elves-velocity-metadata-report.md) now supports one counterpart for 15 of the 26 pending positions and preserves all query results, including five multi-object cones. Source definitions distinguish HI profile midpoint from flux-weighted center; Haynes 2018 explicitly uses the optical velocity convention despite observing radio emission. The current preferred database record is not a verified chain to the adopted table value. Next finish source/identity provenance and selection flags before final uncertainty/model freeze; no numerical candidate outcomes were used and no fresh-validation claim is made.
+
 The [candidate frame audit](../research_work/results/redshift-priority/elves-frame-report.md) computes direction-only heliocentric-to-CMB factors under an explicit measured-dipole/kinematic assumption. Pending directions span -225 to +367 km/s in zero-redshift equivalent units; this is not applied to outcomes or already-CMB CF4 rows. Recover per-entry original velocity/frame provenance before new-sample evaluation. Additional resolver metadata leaves both positional-only PGC/group aliases unresolved; no freshness count changes.
 
 ELVES follow-up: [identity decisions](../research_work/results/redshift-priority/elves-identity-report.md) exclude UGC05797, dw1046p1244 and NGC4592. Twenty-six remain pending. Next resolve the positional-only potential old-group matches for LV J1017+2922 and AGC740112, other aliases/hosts, and catalog velocity/selection provenance. No target outcome has been scored by these candidate-audit passes.
