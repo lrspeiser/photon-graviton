@@ -1,4 +1,6 @@
-# Active research goal: conversion-first prediction program
+# Active research goal: cumulative-time and companion prediction program
+
+Current synthesis: [academic working draft v0.1](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
 
 ## User direction, 9 September 2026
 

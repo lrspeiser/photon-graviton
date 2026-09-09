@@ -6,7 +6,7 @@ Updated 9 September 2026. This checklist develops the user's request to list out
 
 ## Working starting point
 
-The user has now explicitly authorized a conversion-first research pass without special time/void stretching as the cause. Their original time concept meant that time stretches light and thereby causes photon-energy loss; it did not mean nearby galaxies lack redshift. See [the revised goal](active-goal.md) and [the executed exploratory pass](../research_work/results/conversion-first/report.md). This clarification does not waive timing observations.
+The current priority is a new cumulative time/propagation property that stretches light during travel, especially in low-gravity regions, with all photon energy lost at conversion entering the companion sector. This is not ordinary gravitational endpoint time dilation and does not exclude local redshift. The earlier conversion-first pass remains an alternative and empirical benchmark. See [the revised goal](active-goal.md), [the exploratory pass](../research_work/results/conversion-first/report.md), and [the current academic draft](../papers/cumulative-time-companions/manuscript.md).
 
 Use **partial photon-energy transfer into companion waves as the working explanation of the distance-related redshift component**. The surviving photons must lose frequency, rather than merely disappear. Smooth transfer and many small transfer events remain alternatives. Ordinary source motion and gravitational endpoint shifts must be modeled separately; not every measured redshift is assigned to conversion.
 
@@ -41,7 +41,7 @@ E_companion_produced = E_emitted - E_received
 E_companion_produced/E_emitted = z_conversion/(1 + z_conversion)
 ```
 
-Examples: a conversion redshift of 0.1 transfers 9.09% of initial energy; 1 transfers 50%; 2 transfers 66.67%. These are conditional energy identities, not measured companion production. If only a fraction eta enters companions, multiply the lost energy by eta and account for the rest in other sectors. Eta here is an energy-partition fraction, not the gravity-response parameter in older reports. Photon number and arrival intervals are separate quantities.
+Examples: a conversion redshift of 0.1 transfers 9.09% of initial energy; 1 transfers 50%; 2 transfers 66.67%. These are conditional energy identities, not measured companion production. The current model fixes the conversion energy fraction eta to one: all photon energy lost by this process enters companions. Subsequent energy exchange must be accounted for separately. This energy fraction is not a gravity-response multiplier. Photon number and arrival intervals require their own predictions.
 
 ## Available formulas and their limits
 
@@ -50,14 +50,14 @@ Status: **conditional** means calculable after supplying assumptions/parameters;
 | Outcome | Available formula or calculation | Status / what remains |
 |---|---|---|
 | Redshift versus fixed distance | z_conversion = exp(integral alpha ds) - 1 | Conditional drift law; derive or globally fit alpha, specify clocks and other shifts, then test unexposed objects. |
-| Companion energy supplied | E_c,produced = eta E_emitted z_conversion/(1+z_conversion) | Conditional bookkeeping; eta and the microscopic transfer must be derived. |
+| Companion energy supplied | E_c,produced = E_emitted z_conversion/(1+z_conversion) | The agreed full-transfer bookkeeping; microscopic interaction and companion spectrum remain to be completed. |
 | Photon survival | P_gamma = exp(-integral a_remove ds) for independent removal | Conditional; removal alone does not redden surviving photons. Derive both removal and partial transfer. |
 | Added spectral width | sigma_E/mean(E) = sqrt(S^epsilon - 1), S=E_initial/mean(E) | Exact for independent Poisson events of constant fractional loss epsilon. Smooth deterministic drift has zero added energy width in its idealized kernel. Neither establishes image fidelity. |
-| Event duration | S_t = dt_received/dt_emitted; fixed path and fixed travel speed give S_t=1 | Missing successful joint frequency/timing law. Redshift alone does not imply S_t=1+z. |
+| Event duration | S_t = dt_received/dt_emitted; whole-signal candidates give S_t=1+z_conversion | Conditional cumulative-ray and weak-probe examples now exist; a complete matter/field law and observational validation remain missing. Energy loss alone does not imply duration stretch. |
 | Brightness | F = L P_gamma/(4 pi R^2 S_E S_t), S_E=E_emitted/E_received | Conditional static Euclidean, isotropic, unlensed illustration with common energy/clock definitions; derive geometry and full spectra for real comparisons. |
 | Angular size / surface brightness | theta approximately ell/R; I=F/Omega | Conditional small-angle Euclidean geometry and fixed physical size ell; derive ray bundles and rulers in candidate theory. |
 | Image blur / polarization | Joint energy-direction-time-polarization transport kernel | Missing interaction-derived kernel; the energy ODE supplies none of these. |
-| Clocks and rods | Calculate atomic and cavity frequencies from the same matter/field law | Missing adopted completion; a special void-clock effect is not assumed. |
+| Clocks and rods | Calculate atomic and cavity frequencies from the same matter/field law | The new cumulative time/propagation effect is the current premise; its emitter/detector completion and quantitative clock compatibility are unresolved. |
 | Capture probability | P_cap=1-exp(-integral beta ds) | Conditional independent capture along a specified path, beta inverse length. Does not establish permanent trapping or bound-state support. |
 | Stored energy | dE_d/dt=P_cap,in - E_d/t_d | Conditional one-zone balance: P_cap,in is captured power, t_d lifetime. Escape/decay energy must enter another ledger sector. Permanent storage is t_d infinite. |
 | Total conservation | dE_total/dt=P_external,in-P_external,out | Accounting requirement with stellar fuel, fields, heat, recoil and escaping energy included; not a conversion or gravity law. |

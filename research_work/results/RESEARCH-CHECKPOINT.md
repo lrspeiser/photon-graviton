@@ -1,6 +1,8 @@
 # Photon–companion–deposit research checkpoint
 
-Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
+Active direction: [cumulative-time and companion research](../../research_plan/active-goal.md). The user proposes a new property of propagation that accumulates light stretching, especially in low-gravity regions, with all photon energy lost at conversion entering the companion sector. Ordinary gravitational endpoint time dilation is not the proposed cause. Published distances remain fixed, local redshift is not excluded, and conversion-first alternatives remain recorded.
+
+Current synthesis: [academic working draft v0.1](../../papers/cumulative-time-companions/manuscript.md). It separates postulates, conditional derivations, numerical evidence and missing observational validation, and retains all 32 research areas.
 
 Latest result: [environmental field suppression and wave transmission](environmental-screening/report.md). An optional positive restoring term can suppress the slowly changing companion/time field inside a dense region while transmitting sufficiently high-frequency companion waves. The same model predicts low-frequency reflection and no absorption. Twenty-one interface checks, six profile ODE checks and six boundary-energy checks pass. The density coupling, actual companion spectrum, clock limits and capture/gravity response remain unproved.
 

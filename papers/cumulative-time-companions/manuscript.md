@@ -1,0 +1,248 @@
+# Environmental Time Stretching and Companion-Energy Deposition
+
+## A phenomenological framework for redshift, galaxy dynamics and gravitational lensing
+
+Working academic draft v0.1 | 9 September 2026 | Authorship and affiliations to be supplied before submission
+
+### Abstract
+
+We investigate a hypothetical, nonexpanding universe in which a new environmental property of time changes light propagation cumulatively, especially in regions of limited gravity. Photon energy lost through the associated redshift is transferred entirely into a companion field or wave sector. Companions may propagate independently, enter gravitational wells and, if a physical retention mechanism exists, contribute to an extended gravitational source. We formulate the proposal as a sequence of explicit postulates and conditional derivations. A whole-signal propagation map can relate spectral redshift to transient-duration stretching, while energy conservation fixes the energy transferred to companions. Existing one-dimensional Hamiltonian calculations demonstrate energy and momentum exchange with a dynamical field; separate environmental calculations demonstrate suppression of slow field variation without necessarily excluding rapid waves. These results do not establish a complete microscopic theory, permanent capture or a sufficient gravitational response. An idealized source-and-deposition calculation produces an inverse-square energy-density profile and hence a flat circular-speed contribution under ordinary cold-source gravity, but leaves its normalization and stability unresolved. We identify the joint clock, spectrum, timing, source-budget, rotation and lensing tests needed to develop or reject the framework. Graviton identity remains an open hypothesis.
+
+### 1. Motivation and scope
+
+The proposed causal chain is environmental time evolution, cumulative stretching of light, photon-to-companion energy transfer, companion transport, retention near gravitational wells, and an additional gravitational response. The intended targets include outer-galaxy orbital speeds and galaxy and cluster lensing. A useful theory must calculate spatial profiles: an enhancement relative to the visible-matter prediction need not be an absolute increase of acceleration with radius, and neither galaxies nor clusters have a universal sharp gravitational edge.
+
+We adopt an alternate-universe research contract. Published galaxy distances are fixed facts of the model, including distances originally obtained using an expansion-based reduction. Their provenance remains documented. The active explanation introduces no independent dark-matter population, cosmic expansion or Big-Bang origin. These restrictions specify the model under investigation; they do not establish that competing descriptions of our actual universe are false. Measurements are retained while theory-dependent interpretations are audited.
+
+SPARC provides photometry and rotation curves for 175 disk galaxies and is a useful observational starting point [1]. Its mass-to-light assumptions and inclination uncertainties remain relevant even when distances are stipulated. Transient timing provides a separate constraint: the DES supernova analysis reports duration scaling consistent with the spectral stretch factor [2]. A replacement propagation mechanism must address that observation instead of assuming that a lower photon frequency automatically lengthens an entire event. Cluster mergers additionally require predictions of the spatial relation among light bending, galaxies and gas; the Bullet Cluster observations illustrate this requirement [3].
+
+This paper is a framework and research report, not a completed cosmological fit. We distinguish postulates, consequences derived from those postulates, numerical checks of selected realizations, and observational validation. No single candidate currently satisfies the entire chain.
+
+### 2. Operational meaning of environmental time
+
+The proposed effect is a new physical property of propagation that accumulates along the path. It is not ordinary gravitational time dilation determined solely by source and observer conditions. A signal may leave a low-gravity region with a lasting spectral and temporal change even when its source and detector occupy comparable environments. Calling this property "time" becomes scientifically meaningful only when it predicts ratios of physical frequencies, arrival intervals and lengths measured by specified instruments. A coordinate relabeling by itself supplies no new observable.
+
+Let a field chi characterize the proposed property, and let its coupling determine an effective optical factor n greater than zero. The relation between chi and the environment must be specified dynamically. Low matter density, small acceleration, shallow potential and small curvature are different conditions. In particular, symmetry can make acceleration small inside a dense system. A density-controlled candidate is therefore one possible approximation, not a derivation of the phrase "limited gravity." A covariant completion would need physical environmental variables and an explicit matter coupling.
+
+Our working postulates are: (i) affected propagation produces a cumulative signal stretch; (ii) every unit of photon energy lost through this process enters the companion sector at conversion; (iii) companions and deposits obey a complete energy and momentum budget; and (iv) the same completed theory must predict the motion of matter and the bending of light. Companion propagation without further loss and deposits without decay are optional limiting cases. Gravitational focusing, physical capture and long-lived support are separate questions.
+
+The equations below derive consequences from these postulates. They are not yet a derivation of the postulates from fundamental principles. An effective action is one route to such a derivation because it ties propagation, forces and conservation together rather than assigning each independently.
+
+### 3. Cumulative redshift and whole-signal stretching
+
+#### 3.1 Energy transfer along a path
+
+Let s be path length and alpha be a fractional energy-transfer rate per unit length, evaluated in a declared common energy standard. A deterministic model is
+
+$$
+\frac{dE_\gamma}{ds}=-\alpha E_\gamma,\qquad S=\exp\left(\int\alpha\,ds\right)=1+z_{\mathrm{conv}}. \tag{1}
+$$
+
+Alpha may depend on position, field state and time; frequency dependence must be tested. If it depends on energy, the integral is along the actual solution. Retaining the Planck energy-frequency relation and matching endpoint standards, photon energy and frequency decrease by the same factor. The agreed conversion rule then gives
+
+$$
+E_{\gamma,o}=\frac{E_{\gamma,e}}{S},\qquad \Delta E_c=E_{\gamma,e}\left(1-\frac{1}{S}\right). \tag{2}
+$$
+
+Thus S = 2 transfers half the original photon energy. There is no unknown energy exchange multiplier at this step: the model fixes the total transferred energy. What remains unknown is the number and spectrum of companion excitations, their subsequent motion and the gravitational response per unit stored energy. A unit of lost photon energy is a unit of companion energy; it is not automatically a specified amount of extra stellar acceleration.
+
+Measured redshift also contains source motion and ordinary endpoint effects, which must be separated consistently. Equation (1) is not permission to attribute every observed shift to the proposed process. Fitting a different alpha to every object would describe the data without predicting them.
+
+#### 3.2 Event timing is a further physical requirement
+
+An energy-loss equation alone supplies no event-duration prediction. Consider instead a local affine arrival map, with the same stretch applied to the carrier phase and its envelope:
+
+$$
+t_o=T+S t_e,\qquad \frac{\nu_o}{\nu_e}=\frac{1}{S},\qquad \frac{\Delta t_o}{\Delta t_e}=S. \tag{3}
+$$
+
+T is an arrival-time offset. Equation (3) is a whole-signal condition, not an inference from energy bookkeeping. If S changes during an event, the map is nonaffine and can distort the light curve. These distortions are additional predictions that a physical field solution must quantify.
+
+A conditional ray realization uses angular frequency omega = c k/n(t,x). Hamilton's equations imply
+
+$$
+\frac{dt}{dx}=\frac{n}{c},\qquad \frac{d\ln\omega}{dx}=-\frac{\partial_t n}{c},\qquad \frac{d\ln J}{dx}=\frac{\partial_t n}{c},\quad J=\frac{\partial t_o}{\partial t_e}. \tag{4}
+$$
+
+Consequently the local carrier-frequency ratio is 1/J, while adjacent arrival times stretch by J. Spatial gradients change momentum along the ray, but the accumulated frequency change in this illustrative law depends on temporal evolution. A purely stationary n(x) does not generate this cumulative frequency shift. This observation identifies a requirement of this candidate: the proposed environmental property must evolve or interact dynamically, rather than merely label a static region as having different time.
+
+The repository has verified prescribed finite-region examples with equal endpoint optical factors and a lasting stretch [5, cumulative-time]. Dynamical-field probe calculations also recover the carrier/event relation, including event-dependent distortions [5, weak-signal-timing]. Neither result completes the emitter and detector physics. If q denotes atomic clock cycles per reference-time unit, the measured duration factor is J times q_o/q_e. Computing q from the same matter action prevents an apparent coordinate effect from being mistaken for a physical signal.
+
+#### 3.3 Brightness and spectra
+
+For a static Euclidean, isotropic, unlensed illustration, assume photon number is preserved and endpoint standards agree. The same affine map yields
+
+$$
+F_{\mathrm{bol}}=\frac{L}{4\pi R^2 S^2},\qquad F_{\nu,o}(\nu)=\frac{L_{\nu,e}(S\nu)}{4\pi R^2 S}. \tag{5}
+$$
+
+One bolometric factor arises from reduced photon energy and the other from the slower arrival rate. Event fluence, integrated over arrival time, has only one energy-loss factor. These expressions must be replaced by actual ray-bundle, filter and clock calculations if geometry, extinction, absorption or nonaffine propagation matters. Smooth spectral shifting must also preserve sufficiently sharp images, lines and polarization. A wavelength shift that creates excessive scattering or broadening would fail those tests.
+
+### 4. A candidate dynamical interaction
+
+Frequency exchange in time-dependent electromagnetic media provides a physical analogy for why changing propagation properties can exchange wave energy [4]. It does not identify a cosmic time field. The present research explores a positive-energy classical companion field coupled to photons through n. In one spatial dimension, a schematic closed Hamiltonian is
+
+$$
+H=\int\frac{K}{2}\left[(\partial_t n)^2+v^2(\partial_x n)^2\right]dx+\frac{cP}{\bar n(X)}. \tag{6}
+$$
+
+Here K is a positive field normalization, v is the field-wave speed, X and P are the packet's canonical position and momentum, and the overbar denotes a smooth local sampling of n. The canonical field momentum is K times its time derivative. The final term is packet energy for a positive-momentum branch. The expression is an effective classical model; it is not a quantized spin-2 theory.
+
+The packet's loss can raise field energy, and spatial disturbances can carry energy away from its path. Existing periodic Fourier calculations test conservation of the total Hamiltonian and translational momentum [5, companion-backreaction]. In a representative dimensionless run with initial packet energy 0.01, the packet loses about 14.38 percent by time 3. The result depends on chosen field stiffness, initial rolling state, smoothing and packet energy; it is not an astronomical conversion-rate measurement. The initial field energy is separately counted, rather than credited to the photon.
+
+Backreaction matters because the signal can alter the field that stretches it. A weak probe traveling through a field established by other radiation can have a well-defined limiting response, whereas brighter finite packets need not have identical fractional losses. The next physical requirement is to derive the actual background and its radiation dependence. Otherwise a fitted distance law could quietly change with source luminosity.
+
+Earlier matched-wave calculations also show why matter must be included. One minimal atomic coupling changes reference transition frequencies in a way that spoils the desired measured redshift [5, matched-wave]. That failure applies to that coupling, not to every cumulative-time hypothesis. A successful completion must protect or correctly predict atomic and cavity comparisons while retaining the intergalactic effect.
+
+### 5. Environmental suppression and access to wells
+
+A possible environmental interaction gives the companion/time field a restoring term inside a region. For chi = n - 1, a toy Lagrangian density is
+
+$$
+\mathcal{L}_c=\frac{K}{2}\left[(\partial_t\chi)^2-v^2(\partial_x\chi)^2-m^2(\rho)\chi^2\right]. \tag{7}
+$$
+
+Here m has units of inverse time, and its dependence on matter density rho is postulated. It is not a measured graviton mass or a complete coupling to dynamical matter. In a uniform slab of half-width a, static or linearly varying equal boundary values have center-to-boundary response sech(B), where B = ma/v. Slow variation can therefore be suppressed in the slab.
+
+Suppression of slow variation does not imply exclusion of every wave. The lossless interface calculation transmits sufficiently high-frequency disturbances while reflecting subthreshold waves. At angular frequency twice m the transmission is at least 48/49 for the tested ideal slab law, irrespective of its thickness; low-frequency transmission can instead be extremely small [5, environmental-screening]. This offers a conditional way for source and detector regions to resist slow field changes while admitting rapid companion waves.
+
+However, the model absorbs no energy: reflection plus transmission equals unity. The actual spectrum produced by the photon interaction has not yet been propagated through this same environment. A wave that could enter at a chosen frequency is not evidence that the source produces that frequency. Matter reaction forces, realistic geometry and quantitative clock bounds also remain uncalculated. The screening and source models cannot yet be combined as though a single completed galaxy solution exists.
+
+### 6. Transport, capture and complete conservation
+
+Companions may accompany light or follow independent paths. A kinetic description can use a phase-space distribution f_c and a Hamiltonian H_c that determines their trajectories. For canonical phase-space flow,
+
+$$
+\partial_t f_c+\dot{\mathbf{x}}\cdot\nabla_x f_c+\dot{\mathbf{p}}\cdot\nabla_p f_c=Q_{\gamma c}-\Gamma_{\mathrm{cap}}f_c+Q_{\mathrm{return}}. \tag{8}
+$$
+
+The position and momentum velocities follow Hamilton's equations. A tendency to steer toward wells must arise from H_c or a specified interaction. An arbitrary inward force added to a fit is not a derivation. Capture requires a channel that removes escape energy or transfers the excitation into a bound state. Permanent storage further requires stability and a mechanism that keeps the stored source extended instead of letting it escape or fall inward.
+
+In a restricted volume model with no pressure work and explicitly included energy fluxes, the bookkeeping can be written
+
+$$
+\dot u_\gamma+\nabla\cdot\mathbf{F}_\gamma=j_\star-Q. \tag{9}
+$$
+
+$$
+\dot u_c+\nabla\cdot\mathbf{F}_c=Q-C+L_{\mathrm{return}},\qquad \dot u_d+\nabla\cdot\mathbf{F}_d=C-L_{\mathrm{return}}. \tag{10}
+$$
+
+Q is photon energy transferred per volume per time, C is captured companion power density, and L_return is released energy returned to traveling companions. Any release into heat or other radiation needs its own term and receiving sector. In the no-flux, no-return limit, summing gives total reservoir growth equal to stellar photon supply j_star. This is the specified no-loss-travel/permanent-deposit limiting case.
+
+Stellar supply is itself withdrawn from fuel. Forces, recoil, pressure work and an evolving gravitational or environmental field require a broader treatment. A covariant completion should satisfy local conservation of the combined matter, photon and companion stress-energy tensor, with deposits counted once. A separate local gravitational-energy density need not exist; a global conserved energy additionally depends on the background and boundary symmetries. Equations (9)-(10) therefore establish a restricted ledger, not a proof of conservation for an unspecified cosmology.
+
+This accounting explains the distinction between conversion efficiency and gravity. If stored energy behaves as ordinary slowly moving matter, its mass equivalent is energy divided by c squared. If a new field modifies the response, the field equations, energy and stability must establish that response. A freely chosen gravity multiplier cannot be used as evidence that the available photon supply is sufficient.
+
+### 7. Conditional outer profiles and joint lensing predictions
+
+#### 7.1 An instructive radial limit
+
+Consider a steady central photon luminosity L, a constant small alpha, negligible attenuation over the radii considered, and rapid local capture of all newly generated companion energy. Assume deposits remain supported where produced for time T. The deposition power density and stored energy density are then
+
+$$
+q_d(r)\simeq\frac{\alpha L}{4\pi r^2},\qquad u_d(r)\simeq\frac{\alpha L T}{4\pi r^2}. \tag{11}
+$$
+
+For the additional, optional benchmark that this reservoir gravitates as ordinary cold matter, rho_d = u_d/c squared. Outside an inner cutoff, and where its contribution dominates, this yields
+
+$$
+M_d(<r)\simeq\frac{\alpha L T}{c^2}r,\qquad v_d^2\simeq\frac{G\alpha L T}{c^2}. \tag{12}
+$$
+
+The flat-speed shape follows because equal radial increments receive equal deposited power in this idealization. It does not establish the needed amplitude. The assumptions exclude extended source geometry, finite transport lengths, escape, pressure, time-dependent luminosity and self-consistent formation. At sufficiently large alpha times r, photon attenuation invalidates the approximation. A finite inner boundary also modifies the enclosed-mass expression.
+
+Recovered supply calculations find severe shortfalls under a present-luminosity, ten-billion-year, ordinary mass-energy benchmark [5, energy and companion_causal_test]. These are conditional constraints, not a theorem against every age or gravity coupling. A longer history must carry its fuel, stellar-population and accumulated-radiation consequences. An alternative gravitational response must satisfy independent tests. Neither step is a free normalization adjustment.
+
+#### 7.2 Matter and light must share a completed theory
+
+In a weak, static metric description, circular speeds probe a potential Phi, while metric light deflection probes Phi plus a spatial potential Psi:
+
+$$
+v_{\mathrm{circ}}^2=r\frac{d\Phi}{dr},\qquad \boldsymbol{\alpha}_{\mathrm{lens}}=\frac{1}{c^2}\int\nabla_\perp(\Phi+\Psi)\,d\ell. \tag{13}
+$$
+
+The displayed deflection uses the usual lens-equation convention; ray-direction change carries the corresponding sign convention. The formula assumes light follows the metric null rays. Because this proposal also changes photon propagation, its completed optical action may add or modify deflection. Both effects must be derived together to avoid omitting or double-counting bending.
+
+Increasing stellar acceleration alone is insufficient. Existing scalar-response comparisons show how extra matter forces can fail to provide the required lensing [5, gravity-response]. A successful deposit solution must predict rotation curves, shear profiles, strong-lensing geometry and merger offsets with shared parameters. "Seeking wells" also creates a formation feedback problem: the growing companion distribution changes the wells that determine subsequent transport.
+
+### 8. Evidence status and decisive tests
+
+The present evidence supports limited mathematical statements. Cumulative ray examples relate carrier and event stretching. A closed classical field model transfers energy and momentum. A separate restoring-field model distinguishes slow environmental response from rapid transmission. None establishes a supported galaxy or a joint observational fit [5]. The retained offline suite contains 35 diagnostic jobs; successful checks validate the specified calculations and preservation of saved evidence, including calculations that expose failed candidates.
+
+The exploratory constant-rate distance fit uses 164 previously exposed galaxy groups. Its fitted rate is approximately 7.63 times 10 to the minus 5 per million light-years. It has not demonstrated an advantage over the compared linear distance relation and is not an independently derived or freshly validated law [5, conversion-first]. Extrapolation to billions of light-years is therefore a hypothesis, not a result.
+
+The current transient pipeline has used artificial signals on real DES cadence and uncertainty patterns. It has not established a real-flux measurement for this model. The population-likelihood pilot still fails a predeclared numerical convergence gate [5, timing-population]. This limitation concerns our estimator and does not negate the published DES finding [2]. It must be resolved before a fitted duration exponent is used as evidence.
+
+Priority tests should freeze a common finite parameter set and predict: (a) redshift residuals against independently described line-of-sight environments; (b) carrier shift, event duration, brightness and line fidelity together; (c) source-luminosity dependence from backreaction; (d) clock and cavity responses inside and outside screened regions; (e) companion production spectra and well-entry fractions; and (f) rotation and lensing from the same source-funded reservoir. Merger evolution and low-luminosity systems are especially useful because retention history and current stellar luminosity can differ substantially.
+
+Inferring a cause from observations is possible as model selection: propose a small number of dynamical laws, derive their linked consequences, estimate parameters on declared training data, then predict independent cases. A flexible rule adjusted separately for every galaxy is not equivalent. Even broad agreement can leave several microscopic causes observationally indistinguishable; discrimination requires predictions on which they differ.
+
+### 9. Computational objectives and completion criteria
+
+The next source-to-environment calculation should generate companions with the actual photon interaction and propagate that generated spectrum into a restoring region. Its deliverables are incident, reflected, transmitted and temporarily retained energy, with conservation residuals. Without this step, a favorable transmission curve may concern waves the mechanism never produces.
+
+A subsequent interaction calculation must introduce a physical capture and release channel. Its deliverables are capture probability, residence-time distribution, capacity and destination of released energy. Without it, temporary wave energy can be mistaken for a permanent gravity source. A coupled spatial evolution should then calculate support, redistribution and feedback in a finite galaxy, including source history and fuel. Without support, an assumed extended deposit profile may collapse or disperse.
+
+The gravity objective is a single action or consistent field-equation system for matter, light and companions, calibrated against local constraints. Its output must include both motion and lensing, together with the energy and stability conditions. Independently fitting their strengths would not complete this objective. Observational validation should follow numerical convergence and injection recovery, retain unsuccessful cases, and test fresh objects with parameters held fixed.
+
+These objectives preserve the broader 32-area program in Appendix A. Completing a numerical subproblem does not close the theory. A candidate should be rejected or revised when it cannot meet its declared accuracy, stability, supply or observational requirements without adding unconstrained object-specific adjustments.
+
+### 10. Discussion
+
+The central proposal can be made precise enough to calculate: an evolving environmental propagation field can stretch a whole signal and exchange its lost energy with companions. The present work supplies conditional realizations of parts of that mechanism. It does not yet explain from fundamental principles why low-gravity regions establish the required field, why local instruments remain compatible, how companions become a stable extended source, or whether their predicted gravity is sufficient.
+
+The immediate scientific value is the linked set of requirements. Redshift fixes an energy transfer once the conversion law and standards are declared. Timing constrains the propagation map. Source history limits available energy. Capture and support determine its location. Motion and lensing constrain its gravitational effect. Solving these together is the route from a proposed time property to a predictive theory.
+
+### Appendix A. Full observational and theoretical coverage
+
+Each item names an output still required of the completed theory. A partial calculation is not full completion.
+
+- R01 Operational definitions: observable clock, length and energy standards.
+- R02 Microscopic conversion: interaction-derived rate and environmental dependence.
+- R03 Conservation: energy, momentum, fuel, forces and boundary budgets.
+- R04 Quantum/classical consistency: stable degrees of freedom and a valid approximation regime.
+- R05 Companion identity: spin, dispersion and coupling; demonstrate any graviton claim.
+- R06 Source production: luminosity and fuel histories with companion spectra.
+- R07 Redshift: fixed-distance predictions including other shift components.
+- R08 Time dilation: transient duration and distortion from the same propagation law.
+- R09 Brightness and counts: spectra, flux, fluence and photon survival.
+- R10 Angular distance and surface brightness: rulers and ray-bundle propagation.
+- R11 Spectral and image fidelity: line width, blur and polarization.
+- R12 Atomic clocks and cavities: common matter/field predictions and local comparisons.
+- R13 Local gravity: laboratory, Solar System and binary constraints.
+- R14 Capture and retention: arrival, binding, release and capacity.
+- R15 Extended profiles: finite formation, support and long-term stability.
+- R16 Galaxy rotation and scaling: radial speeds and population relations.
+- R17 Other galaxy dynamics: dispersions, dwarfs, satellites and noncircular motion.
+- R18 Lensing: deflection, shear, magnification and delays.
+- R19 Clusters: joint gas, galaxy and lensing distributions.
+- R20 Mergers: time-dependent separation of gas, stars and gravitational response.
+- R21 Environment: voids, filaments and dense-region transitions.
+- R22 Stellar and thermal physics: heating, cooling and source evolution.
+- R23 Gravitational waves: speed, dispersion, damping and multimessenger timing.
+- R24 Compact objects: strong gravity, accretion and boundary behavior.
+- R25 Microwave background spectrum: origin, thermal shape and distortions.
+- R26 Microwave background angular structure: correlations and polarization.
+- R27 Large-scale structure: growth, clustering and measured BAO features.
+- R28 Abundances and chronology: element production and consistent ages.
+- R29 Nonexpanding background and topology: dynamical existence and stability.
+- R30 Global radiation and entropy: finite supply, accumulated backgrounds and disposal channels.
+- R31 Statistical identifiability: uncertainty, selection, degeneracy and fresh validation.
+- R32 Distinguishing predictions: predeclared observations separating candidate causes.
+
+### Data and code availability
+
+The research repository is public [5]. This draft summarizes evidence present at commit db461eda7c5312c4bc6311ea5e340ec0074b75ee. Its cited result directories contain assumptions, scripts and saved outputs. The companion evidence map identifies exact local reports. The manuscript introduces no new fitted astronomical dataset; equation (12) is an idealized conditional derivation. Historical papers are retained separately rather than overwritten. Current manuscript source and build instructions reside in papers/cumulative-time-companions.
+
+### References
+
+[1] Lelli, F., McGaugh, S. S., and Schombert, J. M. (2016). SPARC: Mass Models for 175 Disk Galaxies with Spitzer Photometry and Accurate Rotation Curves. Astronomical Journal, 152, 157. [Paper](https://arxiv.org/abs/1606.09251). [Public data](https://astroweb.case.edu/SPARC/).
+
+[2] White, R. M. T., et al. (2024). The Dark Energy Survey Supernova Program: Slow supernovae show cosmological time dilation out to z approximately 1. Monthly Notices of the Royal Astronomical Society, 533, 3365-3378. [Paper](https://arxiv.org/abs/2406.05050). DOI: 10.1093/mnras/stae2008. The observational timing constraint is retained; the paper's cosmological interpretation is not a premise of this framework.
+
+[3] Clowe, D., et al. (2006). A direct empirical proof of the existence of dark matter. Astrophysical Journal Letters, 648, L109-L113. [Paper](https://arxiv.org/abs/astro-ph/0608407). DOI: 10.1086/508162. The published title is retained; this framework uses the lensing and gas/galaxy comparison as a constraint without importing its dark-matter explanation.
+
+[4] Qu, K., Jia, Q., Edwards, M. R., and Fisch, N. J. (2018). Theory of electromagnetic wave frequency upconversion in dynamic media. Physical Review E, 98, 023202. [Paper](https://arxiv.org/abs/1804.07358). DOI: 10.1103/PhysRevE.98.023202. This is an analogy for energy exchange in evolving media, not evidence for cosmic companion production.
+
+[5] Photon-Companion Research repository (2026). Conditional derivations, diagnostics and research reports. [Evidence snapshot](https://github.com/lrspeiser/photon-graviton/tree/db461eda7c5312c4bc6311ea5e340ec0074b75ee). Relevant report identifiers are supplied in the accompanying evidence map. Repository results are internal working evidence, not peer-reviewed validation.

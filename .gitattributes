@@ -1,2 +1,5 @@
 # Preserve recovered bytes and their SHA-256 values on every checkout.
 * -text
+
+# Generated manuscripts are binary artifacts, even when their PDF streams use ASCII85.
+papers/**/*.pdf binary

@@ -8,6 +8,8 @@ The aim is to find a self-consistent emitter–propagation–receiver model that
 
 ## Start here
 
+**New working paper:** [Environmental Time Stretching and Companion-Energy Deposition](papers/cumulative-time-companions/manuscript.md), with a [PDF](papers/cumulative-time-companions/manuscript.pdf) and [evidence map](papers/cumulative-time-companions/evidence-map.md). This current synthesis develops the cumulative-time premise, conditional derivations and remaining research objectives; the historical version 9 below is preserved separately.
+
 1. **[Current research checkpoint](research_work/results/RESEARCH-CHECKPOINT.md).** Verified results, open questions, and links to the latest energy, capture, microphysics, data, wave and gravity derivations.
 2. **[Research roadmap](research_plan/START-HERE.md).** All 32 requirements and 20 tasks, with prerequisites and completion criteria. Baseline reproduction is complete with documented numerical differences; the full theory remains incomplete.
 3. **[Run the current checks](research_work/README.md).** Portable diagnostics write to a fresh ignored directory and preserve saved evidence.
@@ -48,6 +50,7 @@ A good fit is not proof. Negative results and superseded candidates are retained
 |---|---|
 | `research_plan` | Current roadmap, task queue, assumptions and original planning provenance |
 | `research_work` | Current solver modules, portable verification command, canonical reports and saved results |
+| `papers/cumulative-time-companions` | Current academic working draft, PDF, editable source, build script and claim-to-evidence map |
 | `archive/original-uploads` | Original GitHub upload bundles and historical paper/report, retained for provenance |
 | `redshift_paper`, `redshift_paper_sources` | Main paper, initial group data and original redshift work |
 | `option3_test`, `option3_cliff` | Galaxy timing/cliff candidates and prediction audits |
