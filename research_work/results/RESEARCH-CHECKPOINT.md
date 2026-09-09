@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [all-direction capture](isotropic-capture/derivation.md). A moving receiver samples isotropic illumination unevenly. Constant-cross-section absorption produces drag; a stipulated inverse-fourth-power energy response cancels velocity change in the ideal free-receiver calculation. Attenuation also creates an inward flux inside an externally illuminated sphere. Actual receiver spectra, reverse channels and galactic evolution remain unproved.
+Latest result: [broadband receiver response](broadband-capture/derivation.md). An explicit scalar oscillator supplies a receiving cross section with an inverse-fourth-power tail and an energy/optical-theorem check. Broadband weighting changes cancellation: regular passive absorption in an isotropic thermal-spectrum bath has positive slowing, while nonthermal spectra remain distinct. Actual companion production spectra, permanent storage and galactic evolution are still unresolved.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -20,6 +20,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Deposit support | Cold infall, Jeans solutions and positive ideal phase-space equilibrium | Fixed potential; no finite growing reservoir, stability or lensing established |
 | Capture momentum | Exact four-momentum transfer and directional-force requirements | No physical radiation geometry or evolved source-funded galaxy |
 | All-direction capture | Isotropic-bath drag, frequency-selective comparisons and attenuation-induced flux | No actual material response or coupled growing galaxy |
+| Broadband receiver | Oscillator receiving/scattering cross sections, spectral weighting and thermal-drag bound | No identified material, permanent store or actual companion spectrum |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

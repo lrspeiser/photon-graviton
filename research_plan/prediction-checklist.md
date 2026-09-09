@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [all-direction capture](../research_work/results/isotropic-capture/derivation.md). A moving receiver samples isotropic illumination unevenly. Constant-cross-section absorption produces drag; a stipulated inverse-fourth-power energy response cancels velocity change in the ideal free-receiver calculation. Attenuation also creates an inward flux inside an externally illuminated sphere. Actual receiver spectra, reverse channels and galactic evolution remain unproved.
+Latest diagnostic: [broadband receiver](../research_work/results/broadband-capture/derivation.md). An explicit scalar oscillator supplies a receiving cross section with an inverse-fourth-power tail and an energy/optical-theorem check. Broadband weighting changes cancellation: regular passive absorption in an isotropic thermal-spectrum bath has positive slowing, while nonthermal spectra remain distinct. Actual companion production spectra, permanent storage and galactic evolution are still unresolved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

@@ -81,6 +81,7 @@ def main():
         ('deposit-support/check_deposit_support.py', []),
         ('capture-momentum/check_capture_momentum.py', []),
         ('isotropic-capture/check_isotropic_capture.py', []),
+        ('broadband-capture/check_broadband_capture.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

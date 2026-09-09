@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [all-direction capture](../research_work/results/isotropic-capture/derivation.md). A moving receiver samples isotropic illumination unevenly. Constant-cross-section absorption produces drag; a stipulated inverse-fourth-power energy response cancels velocity change in the ideal free-receiver calculation. Attenuation also creates an inward flux inside an externally illuminated sphere. Actual receiver spectra, reverse channels and galactic evolution remain unproved.
+Latest diagnostic: [broadband receiver](../research_work/results/broadband-capture/derivation.md). An explicit scalar oscillator supplies a receiving cross section with an inverse-fourth-power tail and an energy/optical-theorem check. Broadband weighting changes cancellation: regular passive absorption in an isotropic thermal-spectrum bath has positive slowing, while nonthermal spectra remain distinct. Actual companion production spectra, permanent storage and galactic evolution are still unresolved.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 
