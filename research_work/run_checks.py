@@ -89,6 +89,7 @@ def main():
         ('thermalizer/check_thermalizer.py', []),
         ('slow-companion/check_slow_companion.py', []),
         ('dispersive-companion/check_dispersive_companion.py', []),
+        ('electromagnetic-balance/check_electromagnetic_balance.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

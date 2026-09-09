@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [dispersive companion-wave emission](dispersive-companion/derivation.md). A positive fourth-spatial-derivative scalar action supplies a finite companion emission band. It allows both small fractional energy packets and small photon deflections at energies well above the band edge, so the earlier linear-dispersion tradeoff is not universal. The same electric vertex still gives at least linear color dependence in the full-band regime. No achromatic conversion law, physical medium or matter/gravity completion is established.
+Latest result: [electric/magnetic balance](electromagnetic-balance/derivation.md). Constant electric, magnetic and parity-odd scalar couplings reduce to two nonnegative unpolarized rate shapes in the finite companion band. Opposite slopes can cancel at one energy, but no nonzero exactly constant fractional loss exists on an open full-band interval. The high-energy optimum over a twofold energy interval has an 8.30% minimum uniform rate-flatness error. This is a scoped operator-family calculation, not a measured redshift error or universal exclusion.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -28,6 +28,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Heated thermalizer | Exact thermal-source spectrum, moments and exploratory FIRAS comparison | Actual opacity, heating and directional structure remain unresolved |
 | Slow companion | Nonzero scalar emission, joint energy/angle kernel and local conservation | E-cubed fractional loss; no complete matter, storage or gravity theory |
 | Dispersive companion | An action-derived finite band permits small packets and deflections | At least linear color dependence in full-band regime; no complete theory |
+| Electric/magnetic balance | Two nonnegative unpolarized rate shapes and finite-band flatness limit | No exact achromatic drift in the tested constant-coupling family |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

@@ -1,0 +1,170 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.2874833999958355
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7413778000045568
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7355873000051361
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.254687600005127
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.1570878999991692
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.42887360000167973
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.841602000000421
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1607479000012972
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.6629682999991928
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.3502613000018755
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.06360779999522492
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.848742800000764
+    },
+    {
+      "script": "interaction-rate/check_interaction_rate.py",
+      "exit_code": 0,
+      "seconds": 0.6448211000024457
+    },
+    {
+      "script": "matter-assisted/check_matter_assisted.py",
+      "exit_code": 0,
+      "seconds": 0.7835152000043308
+    },
+    {
+      "script": "collective-response/check_collective_response.py",
+      "exit_code": 0,
+      "seconds": 0.9336158000005526
+    },
+    {
+      "script": "oscillator-response/check_oscillator_response.py",
+      "exit_code": 0,
+      "seconds": 1.2083454999956302
+    },
+    {
+      "script": "soft-graviton/check_soft_graviton.py",
+      "exit_code": 0,
+      "seconds": 1.3975121999974363
+    },
+    {
+      "script": "capture-storage/check_capture_storage.py",
+      "exit_code": 0,
+      "seconds": 1.7267417000039131
+    },
+    {
+      "script": "deposit-support/check_deposit_support.py",
+      "exit_code": 0,
+      "seconds": 0.708135000000766
+    },
+    {
+      "script": "capture-momentum/check_capture_momentum.py",
+      "exit_code": 0,
+      "seconds": 0.3854401999997208
+    },
+    {
+      "script": "isotropic-capture/check_isotropic_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6670073999994202
+    },
+    {
+      "script": "broadband-capture/check_broadband_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6562252000003355
+    },
+    {
+      "script": "source-receiver/check_source_receiver.py",
+      "exit_code": 0,
+      "seconds": 0.7558274999973946
+    },
+    {
+      "script": "matched-wave/check_matched_wave.py",
+      "exit_code": 0,
+      "seconds": 0.8017041999992216
+    },
+    {
+      "script": "thermal-conversion/check_thermal_conversion.py",
+      "exit_code": 0,
+      "seconds": 0.6858247999989544
+    },
+    {
+      "script": "background-replenishment/check_background_replenishment.py",
+      "exit_code": 0,
+      "seconds": 0.6737045999980182
+    },
+    {
+      "script": "thermalizer/check_thermalizer.py",
+      "exit_code": 0,
+      "seconds": 0.7645450999989407
+    },
+    {
+      "script": "slow-companion/check_slow_companion.py",
+      "exit_code": 0,
+      "seconds": 0.6702932999978657
+    },
+    {
+      "script": "dispersive-companion/check_dispersive_companion.py",
+      "exit_code": 0,
+      "seconds": 0.738412699996843
+    },
+    {
+      "script": "electromagnetic-balance/check_electromagnetic_balance.py",
+      "exit_code": 0,
+      "seconds": 0.8396445000034873
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "30 mathematical/integrity diagnostic jobs, including previous exploratory FIRAS comparisons. The new pass verifies a polarization and finite-band rate-flatness calculation with a scoped operator-family limitation, not observational success or a complete theory.",
+  "new_result_exact_repeat": true,
+  "new_pass_hashes": {
+    "research_work/results/electromagnetic-balance/check_electromagnetic_balance.py": "13b8aa86bafd790e3a576a65c10ec2ee123603a0214aef4d6bb05c5620753b73",
+    "research_work/results/electromagnetic-balance/derivation.md": "f67cca0782441b5f8f57cfaf547e5e51d6b86e6be2c21fd3f08d96a704f71888",
+    "research_work/results/electromagnetic-balance/electromagnetic-balance-results.json": "86b93b8b5beb7452589f8f7c02e9dd05f681f9692d6d5d1c9bf9078bd38ab0fe"
+  }
+}

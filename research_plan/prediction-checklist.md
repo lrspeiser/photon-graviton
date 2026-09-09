@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [dispersive companion-wave emission](../research_work/results/dispersive-companion/derivation.md). A positive fourth-spatial-derivative scalar action supplies a finite companion emission band. It allows both small fractional energy packets and small photon deflections at energies well above the band edge, so the earlier linear-dispersion tradeoff is not universal. The same electric vertex still gives at least linear color dependence in the full-band regime. No achromatic conversion law, physical medium or matter/gravity completion is established.
+Latest diagnostic: [electric/magnetic balance](../research_work/results/electromagnetic-balance/derivation.md). Constant electric, magnetic and parity-odd scalar couplings reduce to two nonnegative unpolarized rate shapes in the finite companion band. Opposite slopes can cancel at one energy, but no nonzero exactly constant fractional loss exists on an open full-band interval. The high-energy optimum over a twofold energy interval has an 8.30% minimum uniform rate-flatness error. This is a scoped operator-family calculation, not a measured redshift error or universal exclusion.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
