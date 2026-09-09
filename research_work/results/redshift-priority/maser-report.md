@@ -23,6 +23,8 @@ Published distance errors are retained in the CSV but do not move the adopted va
 
 ## Exposure and protocol accounting
 
+Subsequent structured alias audit confirms UGC 3789, NGC 5765b and CGCG 074-064 were present in the earlier pilot under PGC identifiers. See [object-exposure-report.md](object-exposure-report.md) and saved SIMBAD identifier responses. These are exact object overlaps, beyond the previously noted source/calibration exposure. This strengthens the reused-diagnostic classification; it does not change the already computed residuals.
+
 The source's aggregate abstract result was viewed before the protocol; target values were subsequently viewed together during table extraction. Predictions and labels are separated in saved artifacts, but the prediction-file seal was created after that viewing. It is an integrity hash, not proof of blinding. This deviation from the ideal feature-before-label workflow is recorded in maser-seal.json. The fixed formula, coefficients and all-six selection were not changed after extraction.
 
 An exact normalized-name repository scan found a prior NGC 4258 reference and no direct name hits for the other five outside the current audit. That is not an alias or group crossmatch. PGC identifiers, earlier uses under other names and common calibration links remain unresolved; no target is certified fresh. All six remain reported, with this limitation rather than a favorable subset selected. NGC 4258 can be a distance-calibration anchor for other methods, so geometric distance measurement does not imply independence of every cross-catalog calibration.

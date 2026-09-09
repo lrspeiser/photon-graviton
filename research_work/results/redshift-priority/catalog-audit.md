@@ -1,5 +1,7 @@
 # Candidate catalog and environmental-input audit
 
+Update: the [structured identity audit](object-exposure-report.md) now resolves all six maser PGC aliases and finds three exact earlier pilot overlaps. The conservative group exclusion set is 235. The previous name-only scan and 232-group list below are historical minimum snapshots; they no longer represent the latest audit. General aliases, supernova hosts and unstructured historical exposure remain unresolved, so no fresh sample is certified.
+
 9 September 2026. Metadata audit only: no new target-level redshift-distance pairs scored, no new rate fitted, and no fresh-validation success claimed. Previously used full CF4 table is already on disk. It is not automatically an untouched sample merely because some rows were not used in the 164-group fit.
 
 ## Candidate decisions

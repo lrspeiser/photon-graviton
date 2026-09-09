@@ -1,5 +1,11 @@
 # User premise: void time and constant locally measured light speed
 
+## Locally normal clocks and experience
+
+Latest user clarification: throughout the journey, a traveler experiences clocks and local processes as normal and cannot discover the proposed time-rate difference just by watching their own clock. Preserve constant locally measured light speed. The environmental effect is operationally sought in comparisons between source and received signals, or separated clock histories, not a locally visibly malfunctioning clock. Do not interpret "clocks behave the same" as proof that rates compared across separated histories must be equal, or as a requirement that an optical frequency variable alone controls all matter.
+
+This is a requirement for a locally consistent matter/clock/ruler model. It does not by itself specify that model or demonstrate cumulative redshift. The physical completion must show both locally normal behavior and the lasting received stretch after passage between wells. A mere change of coordinate time cannot create an observable shift. Redshift-derived effective signal gearing is a target for this completion, not a measurement of a traveler's subjective slowing.
+
 ## Inverse environmental dependence, user clarification 9 September 2026
 
 The additional time effect must be small inside deep gravity wells and grow outside wells, approaching its largest finite value in voids. This refers to the proposed additional effect, not a claim that ordinary gravitational clock effects vanish in deep wells. The user specifies the direction of environmental dependence; its numerical magnitude and whether a physical clock speeds up or slows down remain to be established. Do not equate the magnitude of the effect with the numerical clock rate.

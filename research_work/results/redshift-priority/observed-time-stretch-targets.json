@@ -1,0 +1,15 @@
+{
+  "source": "redshift_paper/all_164_groups.csv",
+  "source_sha256": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+  "rows": 164,
+  "status": "Previously exposed observed-redshift transformations; no fit or fresh validation.",
+  "assumptions": [
+    "Published distances retained as stipulated facts.",
+    "Observed CMB z kept unchanged; no nuisance correction invented.",
+    "Columns prefixed all_shift_time assume the entire observed shift is due to the time mechanism.",
+    "Per-object averages are diagnostic targets, never independently adjustable prediction parameters.",
+    "Energy fraction additionally assumes E proportional to frequency and all modeled loss enters companions.",
+    "None of these columns measures a physical local clock rate."
+  ],
+  "formula_provenance": "Established redshift definition, logarithm and photon energy relation; conditional algebraic transformations here, not novel laws."
+}

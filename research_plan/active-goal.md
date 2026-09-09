@@ -8,6 +8,10 @@ The user explicitly permits gravity laws to change when gravity approaches zero.
 
 ## Latest physical premise
 
+Local-normality requirement: a traveler throughout the journey experiences ordinary clock ticking and local processes, with constant locally measured c; the proposed time difference is only meaningful through comparisons of signals or separated histories. Do not describe the traveler as noticing their own time slow. The physical completion must derive the observable redshift without confusing it with a coordinate change.
+
+Use observed redshift to calibrate the inverse-well time effect. Under the user's mostly-void approximation, infer an effective total signal gearing and required stretch rate per affected distance; see [redshift-time-calibration.md](../research_work/results/redshift-priority/redshift-time-calibration.md). These are conditional inverse targets, not independently measured local clock rates or fresh predictions. Retain common-parameter fitting, motion/endpoint accounting and a separate physical clock-law derivation.
+
 Latest user steering: the additional time effect is inversely related to well depth: negligible in deep wells, stronger outside them, finite and strongest in voids. Follow the inverse environmental dependence section in [void-time-premise.md](void-time-premise.md). This fixes the direction of the effect, not its magnitude, the sign of physical clock change, or a validated redshift mechanism. Define well depth operationally and derive the propagation/energy consequences before fitting the environmental law.
 
 Follow [void time and constant local light speed](void-time-premise.md): preserve the user's cumulative void-time origin and constant locally measured c. Distinguish external-clock travel delay from changing physical distance. Current optical-factor tests do not yet establish the necessary matter clock/ruler completion.
