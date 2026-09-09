@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [slower companion-wave emission](../research_work/results/slow-companion/derivation.md). An explicit preferred-frame scalar/electric interaction allows a photon to emit a slower companion while conserving energy and momentum. Its joint kernel predicts fractional loss proportional to photon energy cubed. Slow companions give small packets but broad deflections; speeds approaching light give forward directions but a mean one-quarter energy jump. This specific scale-free candidate is not an achromatic redshift mechanism; no graviton identity, medium, storage or gravity completion is established.
+The latest calculation is [dispersive companion-wave emission](../research_work/results/dispersive-companion/derivation.md). A positive fourth-spatial-derivative scalar action supplies a finite companion emission band. It allows both small fractional energy packets and small photon deflections at energies well above the band edge, so the earlier linear-dispersion tradeoff is not universal. The same electric vertex still gives at least linear color dependence in the full-band regime. No achromatic conversion law, physical medium or matter/gravity completion is established.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -23,6 +23,7 @@ The latest calculation is [slower companion-wave emission](../research_work/resu
 | [Background replenishment](../research_work/results/background-replenishment/derivation.md) | Required source positivity, photon removal and steady energy budget |
 | [Heated thermalizer](../research_work/results/thermalizer/derivation.md) | LTE source, stationary spectrum, heating and exploratory FIRAS comparison |
 | [Slow companion](../research_work/results/slow-companion/derivation.md) | Joint wave-emission kernel, color scaling and energy/angle tradeoff |
+| [Dispersive companion](../research_work/results/dispersive-companion/derivation.md) | Finite emission band, small packets/angles and residual color dependence |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

@@ -88,6 +88,7 @@ def main():
         ('background-replenishment/check_background_replenishment.py', []),
         ('thermalizer/check_thermalizer.py', []),
         ('slow-companion/check_slow_companion.py', []),
+        ('dispersive-companion/check_dispersive_companion.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

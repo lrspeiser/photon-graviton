@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [slower companion-wave emission](../research_work/results/slow-companion/derivation.md). An explicit preferred-frame scalar/electric interaction allows a photon to emit a slower companion while conserving energy and momentum. Its joint kernel predicts fractional loss proportional to photon energy cubed. Slow companions give small packets but broad deflections; speeds approaching light give forward directions but a mean one-quarter energy jump. This specific scale-free candidate is not an achromatic redshift mechanism; no graviton identity, medium, storage or gravity completion is established.
+Latest diagnostic: [dispersive companion-wave emission](../research_work/results/dispersive-companion/derivation.md). A positive fourth-spatial-derivative scalar action supplies a finite companion emission band. It allows both small fractional energy packets and small photon deflections at energies well above the band edge, so the earlier linear-dispersion tradeoff is not universal. The same electric vertex still gives at least linear color dependence in the full-band regime. No achromatic conversion law, physical medium or matter/gravity completion is established.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [slower companion-wave emission](slow-companion/derivation.md). An explicit preferred-frame scalar/electric interaction allows a photon to emit a slower companion while conserving energy and momentum. Its joint kernel predicts fractional loss proportional to photon energy cubed. Slow companions give small packets but broad deflections; speeds approaching light give forward directions but a mean one-quarter energy jump. This specific scale-free candidate is not an achromatic redshift mechanism; no graviton identity, medium, storage or gravity completion is established.
+Latest result: [dispersive companion-wave emission](dispersive-companion/derivation.md). A positive fourth-spatial-derivative scalar action supplies a finite companion emission band. It allows both small fractional energy packets and small photon deflections at energies well above the band edge, so the earlier linear-dispersion tradeoff is not universal. The same electric vertex still gives at least linear color dependence in the full-band regime. No achromatic conversion law, physical medium or matter/gravity completion is established.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -27,6 +27,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Background replenishment | Inverse source positivity and exact stationary transport/moment checks | Actual source, opacity, thermalization and history are not derived |
 | Heated thermalizer | Exact thermal-source spectrum, moments and exploratory FIRAS comparison | Actual opacity, heating and directional structure remain unresolved |
 | Slow companion | Nonzero scalar emission, joint energy/angle kernel and local conservation | E-cubed fractional loss; no complete matter, storage or gravity theory |
+| Dispersive companion | An action-derived finite band permits small packets and deflections | At least linear color dependence in full-band regime; no complete theory |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |
