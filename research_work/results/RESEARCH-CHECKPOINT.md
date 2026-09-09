@@ -1,10 +1,8 @@
 # Photon–companion–deposit research checkpoint
 
-Latest candidate: [matter-assisted scalar conversion](matter-assisted/derivation.md) has an explicit effective interaction, exact recoil kinematics and a derived leading heavy-target rate/kernel. It conserves energy but predicts strong color dependence and broad scattering in its simple regime; no satisfactory astronomical propagation or gravity law is claimed.
+Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Resumed work: [interaction-rate requirements](interaction-rate/derivation.md) now connect the empirical loss coefficient to conditional transition kernels, distinguish fixed-energy from fractional loss, check the scalar F-squared vacuum vertex, and calculate reverse-event broadening. These are preliminary T03/T04/T05 results; the full observational and field-theory requirements remain open.
-
-Latest direction: [conversion-first active goal](../../research_plan/active-goal.md). The user permits conversion without special time/void stretching as the root cause. [The executed conversion-first pass](conversion-first/report.md) fits the stipulated rate on 164 previously exposed groups, checks 18 energy/storage cases, and maps all 32 remaining requirements. It does not establish a microscopic cause, new independent validation or a complete gravitational response. The original time idea was meant to stretch light, including in nearby galaxies.
+Latest result: [collective spatial response](collective-response/derivation.md) narrows the scalar/polarizability scattering kernel and changes its large-target rate scaling from E^6 to E^3, but leaves about 25% energy loss per event. The next candidate still needs a derived small-energy-transfer response, narrow spectra, event timing, capture and joint motion/lensing predictions.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -12,6 +10,10 @@ The local project is reconstructed and research is underway. Energy conservation
 
 | Work | Verified result | Limitation |
 |---|---|---|
+| Conversion-first empirical pass | Constant-loss fit to 164 reused galaxy groups; energy and timing diagnostics | Not fresh validation or a microscopic cause |
+| Interaction-rate constraints | Scalar vacuum vertex, chromaticity and reverse-event noise calculated | Specific operators and stipulated environment rates |
+| Matter-assisted conversion | Recoil-conserving scalar/polarizability action and leading cross section | Broad, color-dependent scattering; no capture or gravity |
+| Collective spatial response | Gaussian form factor narrows angles and changes rate scaling | Large energy jumps and color dependence remain |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |
@@ -25,6 +27,8 @@ The local project is reconstructed and research is underway. Energy conservation
 | Gravity response | One action yields joint motion/lensing predictions and calibrated-G relations | Its scalar force can strengthen motion without matching direct lensing enhancement |
 
 ## Read the work by question
+
+- What has the conversion-first program predicted? [Empirical pass](conversion-first/report.md), [rate constraints](interaction-rate/derivation.md), [matter-assisted action](matter-assisted/derivation.md), and [collective response](collective-response/derivation.md).
 
 - Can the numbers and recovered code be trusted? [Baseline report](baseline/reproduction-report.md).
 - Where does every unit of energy go? [Energy and escape derivation](transport/transport-and-supply.md).
