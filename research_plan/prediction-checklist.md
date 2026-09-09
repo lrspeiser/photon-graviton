@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [cumulative time stretching](../research_work/results/cumulative-time/report.md). The cumulative whole-signal time-stretch branch predicts redshift and duration factor S, photon energy 1/S, companion gain 1-1/S and fixed-geometry received power 1/S^2. A prescribed evolving propagation-clock slab realizes matching frequency and event stretching through a complete void; 54 ray cases, six pulse integrations and twelve capture ledgers pass. These are consequences of declared postulates, not a derived fundamental time/companion action or astronomical validation.
+Latest diagnostic: [companion-field backreaction](../research_work/results/companion-backreaction/report.md). A closed scalar companion/time-field candidate reacts to a photon packet and conserves total energy and momentum. Real-space flux verifies field-energy transport away from the photon route, including cross terms with the initial rolling background. Radiation loading changes fractional photon loss. The field action is an optional effective candidate; whole-signal void behavior, clock standards, capture and gravity remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

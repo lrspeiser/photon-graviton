@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [cumulative time stretching with companion transfer](cumulative-time/report.md). The cumulative whole-signal time-stretch branch predicts redshift and duration factor S, photon energy 1/S, companion gain 1-1/S and fixed-geometry received power 1/S^2. A prescribed evolving propagation-clock slab realizes matching frequency and event stretching through a complete void; 54 ray cases, six pulse integrations and twelve capture ledgers pass. These are consequences of declared postulates, not a derived fundamental time/companion action or astronomical validation.
+Latest result: [companion-field backreaction and energy flow](companion-backreaction/report.md). A closed scalar companion/time-field candidate reacts to a photon packet and conserves total energy and momentum. Real-space flux verifies field-energy transport away from the photon route, including cross terms with the initial rolling background. Radiation loading changes fractional photon loss. The field action is an optional effective candidate; whole-signal void behavior, clock standards, capture and gravity remain unproved.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -36,6 +36,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Timing likelihood | Independent matrix and integral checks of positive-brightness likelihood | Component only; duration/population calibration pending |
 | Timing population | Three complete 98-event integrated pilots | Aggregate slope stable; event probabilities fail convergence gate |
 | Cumulative time | 54 ray cases, six waveform integrals, twelve conserved capture ledgers | Postulated whole-signal law; fundamental interaction and gravity response remain open |
+| Companion backreaction | Closed Hamiltonian, translation/mode checks and local energy flux | Conditional scalar field; common astronomical stretch and gravity not established |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

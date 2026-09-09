@@ -1,0 +1,51 @@
+{
+  "scope": "Optional one-dimensional Hamiltonian companion/time-field candidate with photon backreaction and conserved total energy and momentum. No claim of ordinary gravitons, a complete void model or observed agreement.",
+  "receiver": "All energy lost by the photon packet enters this candidate companion field. Receiver selection is already fixed by the user's model.",
+  "field": "Periodic real Fourier field n(x)>0. A homogeneous mode and sine/cosine modes have positive kinetic energy; nonzero modes have wave speed v. Finite packet coupling uses a translation-invariant Gaussian spatial smoothing.",
+  "hamiltonian": "H=P0^2/(2KL)+sum[(Pc_j^2+Ps_j^2)/(KL)+(KL/4)*v^2*k_j^2*(qc_j^2+qs_j^2)]+P_packet/n_smoothed(X)",
+  "parameters": {
+    "length": 8,
+    "wave_speed": 0.5,
+    "packet_smoothing_sigma": 0.2,
+    "duration": 3,
+    "initial_x": 0.4,
+    "initial_n0": 1,
+    "initial_rolling_rate": 0.05
+  },
+  "grid": {
+    "modes": [
+      16,
+      32,
+      64
+    ],
+    "inertia": [
+      1,
+      10
+    ],
+    "initial_packet_energy": [
+      0.001,
+      0.01,
+      0.1
+    ]
+  },
+  "controls": [
+    "Zero initial rolling rate at 64 modes, inertia 1 and all three packet energies",
+    "Spatially translated packet at 64 modes, inertia 1, energy 0.01",
+    "No photon: homogeneous rolling energy is constant and traveling modes remain zero"
+  ],
+  "checks": {
+    "maximum_relative_energy_drift": 1e-08,
+    "maximum_momentum_drift_over_initial_packet_momentum": 1e-08,
+    "maximum_32_to_64_mode_final_energy_change_over_initial_packet_energy": 1e-06,
+    "maximum_local_energy_balance_error_over_initial_packet_energy": 1e-05
+  },
+  "required_outputs": [
+    "Separate received energy into homogeneous-field gain and nonzero-wave energy",
+    "Record pre-existing companion-field energy rather than crediting it to photons",
+    "Show total momentum exchange, not only photon energy bookkeeping",
+    "Check positivity along the calculated solution",
+    "Compare intensity and inertia dependence and resolve finite-mode error"
+  ],
+  "limits": "Classical effective field/ray approximation. Gaussian smoothing is a declared finite-size coupling, not a derived ultraviolet completion. No expansion or gravitational clock-dilation premise. Matter clocks, atomic coupling, void localization, companion capture, lensing and permanent gravity deposits are not implemented. Periodic boundaries and the homogeneous rolling state are explicit model assumptions.",
+  "local_transport_followup": "After inspecting the preliminary mode decomposition, add a full real-space energy-flux balance in the fixed interval X_initial +/-0.5. Include cross energy and flux against the initially rolling field. This diagnostic prevents interpreting nonzero mode energy as the entire transportable energy."
+}

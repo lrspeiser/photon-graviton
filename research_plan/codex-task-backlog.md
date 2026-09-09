@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [cumulative time stretching](../research_work/results/cumulative-time/report.md). The cumulative whole-signal time-stretch branch predicts redshift and duration factor S, photon energy 1/S, companion gain 1-1/S and fixed-geometry received power 1/S^2. A prescribed evolving propagation-clock slab realizes matching frequency and event stretching through a complete void; 54 ray cases, six pulse integrations and twelve capture ledgers pass. These are consequences of declared postulates, not a derived fundamental time/companion action or astronomical validation.
+Latest diagnostic: [companion-field backreaction](../research_work/results/companion-backreaction/report.md). A closed scalar companion/time-field candidate reacts to a photon packet and conserves total energy and momentum. Real-space flux verifies field-energy transport away from the photon route, including cross terms with the initial rolling background. Radiation loading changes fractional photon loss. The field action is an optional effective candidate; whole-signal void behavior, clock standards, capture and gravity remain unproved.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 

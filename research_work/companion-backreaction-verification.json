@@ -1,0 +1,179 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.27059539999754634
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7498706999977003
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7204873000009684
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.2648053000011714
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.1893386999945506
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.44193340000492753
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.8165961999984575
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1675142000021879
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.6364950999995926
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.3385792000044603
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.08266500000172528
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.8663650000016787
+    },
+    {
+      "script": "interaction-rate/check_interaction_rate.py",
+      "exit_code": 0,
+      "seconds": 0.648415899995598
+    },
+    {
+      "script": "matter-assisted/check_matter_assisted.py",
+      "exit_code": 0,
+      "seconds": 0.7741602999958559
+    },
+    {
+      "script": "collective-response/check_collective_response.py",
+      "exit_code": 0,
+      "seconds": 0.9261331000016071
+    },
+    {
+      "script": "oscillator-response/check_oscillator_response.py",
+      "exit_code": 0,
+      "seconds": 1.1806840999997803
+    },
+    {
+      "script": "soft-graviton/check_soft_graviton.py",
+      "exit_code": 0,
+      "seconds": 1.4100799999941955
+    },
+    {
+      "script": "capture-storage/check_capture_storage.py",
+      "exit_code": 0,
+      "seconds": 1.7391159999970114
+    },
+    {
+      "script": "deposit-support/check_deposit_support.py",
+      "exit_code": 0,
+      "seconds": 0.7058395999993081
+    },
+    {
+      "script": "capture-momentum/check_capture_momentum.py",
+      "exit_code": 0,
+      "seconds": 0.3782439999995404
+    },
+    {
+      "script": "isotropic-capture/check_isotropic_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6659418000053847
+    },
+    {
+      "script": "broadband-capture/check_broadband_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6658673999991152
+    },
+    {
+      "script": "source-receiver/check_source_receiver.py",
+      "exit_code": 0,
+      "seconds": 0.73623100000259
+    },
+    {
+      "script": "matched-wave/check_matched_wave.py",
+      "exit_code": 0,
+      "seconds": 0.8007858999990276
+    },
+    {
+      "script": "thermal-conversion/check_thermal_conversion.py",
+      "exit_code": 0,
+      "seconds": 0.6365769000040018
+    },
+    {
+      "script": "background-replenishment/check_background_replenishment.py",
+      "exit_code": 0,
+      "seconds": 0.6485269000040716
+    },
+    {
+      "script": "thermalizer/check_thermalizer.py",
+      "exit_code": 0,
+      "seconds": 0.763635900002555
+    },
+    {
+      "script": "slow-companion/check_slow_companion.py",
+      "exit_code": 0,
+      "seconds": 0.6471784000023035
+    },
+    {
+      "script": "dispersive-companion/check_dispersive_companion.py",
+      "exit_code": 0,
+      "seconds": 0.7184381000042777
+    },
+    {
+      "script": "electromagnetic-balance/check_electromagnetic_balance.py",
+      "exit_code": 0,
+      "seconds": 0.8127181000018027
+    },
+    {
+      "script": "companion-bath/check_companion_bath.py",
+      "exit_code": 0,
+      "seconds": 0.6464141999967978
+    },
+    {
+      "script": "cumulative-time/check.py",
+      "exit_code": 0,
+      "seconds": 0.8744622000012896
+    },
+    {
+      "script": "companion-backreaction/check.py",
+      "exit_code": 0,
+      "seconds": 2.0476144999993267
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "Numerical diagnostics and integrity; not observational validation of the theory."
+}

@@ -92,6 +92,7 @@ def main():
         ('electromagnetic-balance/check_electromagnetic_balance.py', []),
         ('companion-bath/check_companion_bath.py', []),
         ('cumulative-time/check.py', []),
+        ('companion-backreaction/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
