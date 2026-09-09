@@ -1,0 +1,5 @@
+{
+  "numeric_rtol": 1e-05,
+  "numeric_atol": 1e-08,
+  "reason": "Allow small floating-point/optimizer platform differences; report every exceedance for inspection, not silently relax. Discrete labels and counts must match exactly. Large optimizer differences can change scientific conclusions and require review."
+}

@@ -1,0 +1,11 @@
+{
+ "status":"Exploratory catalog holdout, not a blinded new observation or void test",
+ "source":"https://cdsarc.cds.unistra.fr/ftp/J/ApJ/944/94/table2.dat.gz",
+ "selection":"Prefer maser then Cepheid then TRGB per galaxy; distance 10 to 150 Mpc; distance-modulus error <=0.30 mag; one galaxy per 1PGC group chosen by smallest modulus error, then PGC. No cuts on redshift.",
+ "split":"Group representative sky tile: 12 right-ascension bins x 3 equal sin(declination) bins. SHA256('time-void-v1:'+tile) first 8 hex digits modulo 10; 0..5 train,6..7 validation,8..9 holdout.",
+ "models":["uniform: z=expm1(k D/c), catalog distance used as low-z path proxy","linear: z=k D/c, local expansion baseline only","static_flux: D_lum=D_path*(1+z), z=expm1(W(k D_lum/c)); masers use uniform geometric path formula"],
+ "fit":"One shared k per model, 10..150 km/s/Mpc; Gaussian negative log likelihood in catalog CMB-frame cz, 300 km/s motion floor plus propagated distance uncertainty. No intercept or individual velocity fits.",
+ "uncertainty":"Training-only profile likelihood delta NLL 0.5; ignores correlated flows and common calibration systematics.",
+ "score":"Frozen parameters and prediction JSON saved before scoring validation or holdout. Report RMSE, MAE, mean Gaussian NLL, mean signed error, mean 95% interval coverage; paired bootstrap of holdout sky tiles for RMSE difference with linear baseline, seed 20260908, 2000 draws.",
+ "limitations":["No independently constructed void map: alpha_void is not identifiable.","Catalog methods are jointly registered to a common scale, not reprocessed raw data.","Cepheid period, photometric, selection and correlated flow corrections are not rebuilt under a static cosmology.","Catalog luminosity and geometric distances differ; uniform is a low-redshift proxy model, static_flux is a specified sensitivity model with photon conservation and no opacity.","No full FLRW comparison or high-redshift extrapolation is validated."]
+}

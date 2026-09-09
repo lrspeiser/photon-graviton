@@ -1,0 +1,53 @@
+{
+  "downloads": [
+    {
+      "file": "planck_TT.txt",
+      "url": "https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_PowerSpect_CMB-TT-binned_R3.01.txt",
+      "bytes": 7143,
+      "status": "downloaded"
+    },
+    {
+      "file": "planck_EE.txt",
+      "url": "https://pla.esac.esa.int/pla/aio/product-action?COSMOLOGY.FILE_ID=COM_PowerSpect_CMB-EE-binned_R3.02.txt",
+      "bytes": 5698,
+      "status": "downloaded"
+    }
+  ],
+  "copied_inputs": {
+    "redshift_features.json": "temporal_hypothesis_checks/source_inputs/features.json",
+    "train_labels.json": "temporal_hypothesis_checks/source_inputs/train_labels.json",
+    "validation_labels.json": "temporal_hypothesis_checks/source_inputs/validation_labels.json",
+    "test_labels.json": "temporal_hypothesis_checks/source_inputs/test_labels.json",
+    "cf4_table2.dat": "redshift_paper_sources/expanded/time-redshift-expanded/table2.dat",
+    "cf4_ReadMe.txt": "redshift_paper_sources/expanded/time-redshift-expanded/ReadMe",
+    "spectral_aging.json": "time_first_principles/data/spectral_aging.json",
+    "firas.txt": "time_first_principles/data/firas.txt",
+    "DES_event_averages.csv": "time_revision/data/DES_event_averages.csv",
+    "SPARC_Lelli2016c.mrt": "option3_test/raw/SPARC_Lelli2016c.mrt",
+    "Rotmod_LTG.zip": "option3_test/raw/Rotmod_LTG.zip",
+    "sparc_frozen.json": "option3_test/frozen.json",
+    "prior_cliff_results.json": "option3_cliff/results.json",
+    "prior_cliff_models.json": "option3_cliff/fold_models.json",
+    "prior_redshift_scores.json": "redshift_paper_sources/expanded/time-redshift-expanded/scores.json"
+  },
+  "sha256": {
+    "published_measurements.json": "4592c99a2e479cce067f25545a672dd1fd35dced0aefe58f9f4f2e634616cf27",
+    "prior_redshift_scores.json": "b221671678cdbf63be313309f9036cd06af75a6834469288e9b67240148dd101",
+    "spectral_aging.json": "b62b2cc2ede705d5772c045a936004e3141cf81da4225f4f8eac902ab9c3a53c",
+    "DES_event_averages.csv": "06ed324ca5777edf819594a1c0bc95ed5395613b07337236d9b6cee8801f8ec1",
+    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "train_labels.json": "e11d51745018ffb7fae47ecd0a8287f3ba7da961484a43fce960ee3b79f61857",
+    "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "test_labels.json": "336e92672d026f9b33de6c0360a25dad7276e8d5b2b4a7e7101d4f70db4b58fd",
+    "firas.txt": "df793c3dca09ebfa7dbc5aa0ec1951daa8884431bc30eff28a710d7516cf50fa",
+    "planck_EE.txt": "bd30fc1121c0d1c2e1a6ac997b30ac14ea1fdd42bc91ecc40d594c00463ffdb2",
+    "prior_cliff_models.json": "90348c3928caa1aeaec1b1f497a5786f4131ff5862d5b028889efda902053c3b",
+    "prior_cliff_results.json": "213279fb21ae9ca20cf581ce5af43497d3ea702f5e89fa3e64f52c4c70a59183",
+    "cf4_ReadMe.txt": "2cfed1418147d5a626dee1fa37c47252124477c9828490508d9bbe511d34edb4",
+    "sparc_frozen.json": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015",
+    "redshift_features.json": "3ce0b9fb813bd2c04bdc0f6c24c99a771a4afde6fc10a4c7e1b230da9ba9b852",
+    "cf4_table2.dat": "8e908928e68352b59292cf67020a4d70aaa6d30f278dfa6aa3e41a9df808332f",
+    "planck_TT.txt": "ed2b8b51b033e668e661f6cf4eb7705f15bcaf358189dfc4a4481cc7020130cd",
+    "validation_labels.json": "68522ce57203e99f3ec17a8ba56baad575bd705e53e76a6e0e537db7e1c14f19"
+  }
+}

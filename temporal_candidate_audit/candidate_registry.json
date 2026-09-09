@@ -1,0 +1,80 @@
+[
+  {
+    "candidate": "R1 exponential distance",
+    "goal": "Predict nearby redshift",
+    "outcome": "412.44 km/s reserved RMSE",
+    "status": "Retain as empirical reference"
+  },
+  {
+    "candidate": "R2 rolling history",
+    "goal": "Obtain redshift from positive evolving timing factor",
+    "outcome": "411.54 km/s; difference from R1 inconclusive",
+    "status": "Retain; derive connected flux law"
+  },
+  {
+    "candidate": "R3 energy loss only",
+    "goal": "Explain spectral redshift without event stretching",
+    "outcome": "Similar nearby redshift score; larger supernova timing residuals",
+    "status": "Retain with explicit duration-extension requirement"
+  },
+  {
+    "candidate": "R4 directional rate",
+    "goal": "Predict an anisotropic redshift effect",
+    "outcome": "No reserved-score improvement",
+    "status": "Retain as exploratory direction branch"
+  },
+  {
+    "candidate": "R5 endpoint environment",
+    "goal": "Connect timing to source environment",
+    "outcome": "Worse validation and reserved scores for catalog-membership proxy",
+    "status": "Retain; distinguish from foreground-path screening"
+  },
+  {
+    "candidate": "Shared wave propagation",
+    "goal": "Preserve light\u2013gravity arrival coincidence",
+    "outcome": "Equal coupling removes propagation difference by construction",
+    "status": "Derive coupling from gravity theory"
+  },
+  {
+    "candidate": "Screened material response",
+    "goal": "Preserve local clock measurements",
+    "outcome": "Requirements depend on atomic coupling; 10\u207b\u2076 suppression insufficient for q=1 example",
+    "status": "Retain coupling-specific constraints"
+  },
+  {
+    "candidate": "Coherent CMB cooling",
+    "goal": "Preserve thermal shape and permit higher remote temperature",
+    "outcome": "Restricted spectrum compatible; 20.005 K inside HFLS3 interval",
+    "status": "Origin, intensity and boundaries unresolved"
+  },
+  {
+    "candidate": "Thermal mixture/recycling",
+    "goal": "Generate or maintain a microwave bath",
+    "outcome": "Percent-level received-temperature mixtures fit poorly",
+    "status": "Specify thermalization physics"
+  },
+  {
+    "candidate": "Directional/topological CMB",
+    "goal": "Explain alignment and angular structure",
+    "outcome": "Uniform branch omits TT/EE; no axis prediction scored",
+    "status": "Need angular and polarization equations"
+  },
+  {
+    "candidate": "Density-dependent rotation",
+    "goal": "Explain outer-galaxy enhancement",
+    "outcome": "Improves baseline; less accurate than acceleration power",
+    "status": "Empirical branch, not derived time theory"
+  },
+  {
+    "candidate": "Acceleration/cliff rotation",
+    "goal": "Find a gravity-linked temporal law",
+    "outcome": "Power matches RAR closely; earlier cliff fit boundary-limited",
+    "status": "Need unique cross-scale normalization and lensing"
+  },
+  {
+    "candidate": "Connected two-field energy model",
+    "goal": "Combine screening, redshift and conservation",
+    "outcome": "Finite-epoch example succeeds; later shifts can reverse",
+    "status": "Retain with history and backreaction dependencies"
+  }
+]

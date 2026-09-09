@@ -1,0 +1,132 @@
+{
+  "status": "Restricted candidates; data diagnostics, analytical tests and synthetic checks distinguished",
+  "candidate1": {
+    "model": "Stationary fixed-speed path memory: dlnnu/dell=-kappa; arrival map t_o=t_e+R/c",
+    "prediction": "Frequency redshift but no envelope dilation",
+    "DES": {
+      "b": 1.0028774167563257,
+      "sigma_formal": 0.004825466152674711,
+      "rmse_stretch": 0.15307358522982475,
+      "rmse_no_stretch": 0.5870061950990585,
+      "chi_no_stretch": 30117.372852906,
+      "chi_unit_stretch": 2166.8207889762966,
+      "N": 1504
+    },
+    "verdict": "Fails the width diagnostic under its published source/reference assumptions; richer time-dependent memory remains open"
+  },
+  "candidate2": {
+    "model": "Coherent evolving-index propagation n=1+gamma*t; H_wave=c|p|/n",
+    "prediction": "Spectral and envelope factors both exp(kappa R)",
+    "DES": {
+      "b": 1.0028774167563257,
+      "sigma_formal": 0.004825466152674711,
+      "rmse_stretch": 0.15307358522982475,
+      "rmse_no_stretch": 0.5870061950990585,
+      "chi_no_stretch": 30117.372852906,
+      "chi_unit_stretch": 2166.8207889762966,
+      "N": 1504
+    },
+    "other_checks": "Prior fixed-atom electromagnetic completion fails leading hyperfine invariance; exact shared tensor action absent",
+    "alternative": "A kinetic normalization alone changes leading amplitude, not the null cone or leading geometric-optics frequency on a static metric"
+  },
+  "candidate3": {
+    "model": "Band-dependent envelope law width=(1+z)^b_band; a proxy for chromatic temporal transport, not a spectral-redshift model",
+    "bands": {
+      "g": {
+        "b": 1.0211782921737182,
+        "sigma_formal": 0.027182848166140968,
+        "rmse_stretch": 0.13448278508580983,
+        "rmse_no_stretch": 0.3372222219993334,
+        "chi_no_stretch": 1267.0292740839302,
+        "chi_unit_stretch": 194.0982859527785,
+        "N": 361
+      },
+      "r": {
+        "b": 1.0043271300472092,
+        "sigma_formal": 0.008299798700404652,
+        "rmse_stretch": 0.17014767318597643,
+        "rmse_no_stretch": 0.5582045448836587,
+        "chi_no_stretch": 10574.966920991854,
+        "chi_unit_stretch": 1006.0978421590871,
+        "N": 1380
+      },
+      "i": {
+        "b": 0.9875622537993869,
+        "sigma_formal": 0.007736497524421039,
+        "rmse_stretch": 0.18893121558669743,
+        "rmse_no_stretch": 0.5924115408239333,
+        "chi_no_stretch": 11496.503310969854,
+        "chi_unit_stretch": 1155.9336688433962,
+        "N": 1465
+      },
+      "z": {
+        "b": 0.9972910381265802,
+        "sigma_formal": 0.008221420921918765,
+        "rmse_stretch": 0.22792145863051275,
+        "rmse_no_stretch": 0.6355777095601495,
+        "chi_no_stretch": 10851.953012341964,
+        "chi_unit_stretch": 1236.2883592128699,
+        "N": 1381
+      }
+    },
+    "paired_g_i_N": 342,
+    "paired_g_minus_i_b": 0.01808057145962816,
+    "paired_event_bootstrap_95_g_minus_i": [
+      -0.006988511820864836,
+      0.049578687235406954
+    ],
+    "limits": "No interband/reference covariance provided; bootstrap addresses event sampling only. No inference across atomic, radio or gravitational-wave frequencies."
+  },
+  "candidate4": {
+    "model": "Separate material and propagation metrics",
+    "conformal_subfamily": "Prior derivation: stable local matter ratios and shared characteristics, but fixed material scale implies zero homogeneous redshift",
+    "genuinely_nonconformal": "No full action satisfying matter, tensor and stable background requirements; no new fit score is assignable",
+    "previous_brightness": {
+      "flat_chi_squared": 898.4745863939072,
+      "negative_chi_squared": 873.041277470174,
+      "N": 960
+    },
+    "interpretation": "The earlier geometry fit is kinematic and does not validate this unspecified action"
+  },
+  "candidate5": {
+    "model": "Thermal reservoir with detailed balance; compare blackbody and equal-weight mixtures of redshifted thermal components",
+    "FIRAS_channels": 43,
+    "single_temperature": {
+      "log_temperature_half_separation": 0.0,
+      "T_center_K": 2.7250005393442547,
+      "galaxy_coefficient": -0.0017582804840905817,
+      "chi_squared": 45.01873960592946
+    },
+    "equal_weight_mixtures": [
+      {
+        "log_temperature_half_separation": 0.001,
+        "T_center_K": 2.724996245084716,
+        "galaxy_coefficient": -0.004607745933237842,
+        "chi_squared": 45.03078911577928
+      },
+      {
+        "log_temperature_half_separation": 0.01,
+        "T_center_K": 2.7245711762944187,
+        "galaxy_coefficient": -0.2864668641276405,
+        "chi_squared": 235.8100789457488
+      },
+      {
+        "log_temperature_half_separation": 0.1,
+        "T_center_K": 2.6826496449878388,
+        "galaxy_coefficient": -26.42664570034758,
+        "chi_squared": 1737972.1544449145
+      }
+    ],
+    "conditional_profile_threshold_delta": 0.0037873656685933955,
+    "threshold_convention": "Delta chi2=3.841 relative to delta=0; approximate diagnostic, not exact boundary-calibrated confidence limit",
+    "equilibrium_collision_max_abs": 2.220446049250313e-16,
+    "identifiability": "Equilibrium fit does not identify reservoir origin, rate, temperature derivation, kappa or energy budget",
+    "caveat": "FIRAS released residuals and diagonal errors only. No full covariance, absolute temperature recalibration or angular CMB test."
+  },
+  "common_caveats": [
+    "DES derived widths inherit reference-curve dilation assumptions; no raw-light-curve fit or independent confirmation.",
+    "All data reused; no newly blinded observations.",
+    "No candidate has a completed stable nonexpanding matter-light-gravity action.",
+    "Stationary transfer with fixed path maps delayed copies, not a stretch of the entire time axis; arbitrary broadening is not the same observable."
+  ]
+}

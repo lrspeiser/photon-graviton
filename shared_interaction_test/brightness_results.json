@@ -1,0 +1,174 @@
+{
+  "protocol": {
+    "status": "Written before inspecting higher-redshift brightness outcomes; exploratory test, not an external preregistration",
+    "law": "S=exp(kappa R); D_L=R S, Euclidean fixed spatial geometry and conserved photons",
+    "kappa_per_Mly": 7.7315e-05,
+    "fit_kappa": false,
+    "primary_selection": "Pantheon+ all light-curve rows with zHD>=0.1 and IS_CALIBRATOR==0, preserving released covariance for repeated supernovae",
+    "calibration": "Determine one absolute magnitude from IS_CALIBRATOR==1 using m_b_corr-CEPH_DIST and full released calibrator covariance; no higher-z brightness used for calibration",
+    "primary_distance": "D_L=(1+zHEL)*ln(1+zHD)/kappa_Mpc; heliocentric factor is a conventional observer correction whose transfer to this theory is conditional",
+    "primary_covariance": "Full STAT+SYS; propagate calibrator magnitude uncertainty and cross-covariance into higher-z residual covariance",
+    "reference": "Flat LCDM Omega_m=0.3 and H0=c*kappa_Mpc, both fixed; reference only, not a new best fit",
+    "diagnostics": [
+      "redshift bins [0.1,0.3,0.6,1.0,3.0]",
+      "remove one constant offset as a labeled higher-z shape-only diagnostic",
+      "replace heliocentric factor with 1+zHD to quantify frame convention sensitivity"
+    ],
+    "no_claims": [
+      "No independent raw light-curve analysis",
+      "No blind status for existing nearby test data",
+      "No screening introduced",
+      "No post-result refitting of formula or coefficient"
+    ]
+  },
+  "rows_total": 1701,
+  "calibrator_light_curves": 77,
+  "calibrator_unique_SN": 43,
+  "higher_redshift_light_curves": 960,
+  "higher_redshift_unique_SN": 960,
+  "z_range": [
+    0.10165,
+    2.26137
+  ],
+  "kappa_per_Mpc": 0.0002521678034317001,
+  "H0_equivalent_km_s_Mpc": 75.5980056192502,
+  "M_calibrator_only": -19.248884540083562,
+  "M_calibrator_sigma": 0.030105691677020024,
+  "calibrator_chi_squared": 57.13472857747834,
+  "calibrator_dof": 76,
+  "fixed_temporal": {
+    "chi_squared": 898.4745863939072,
+    "degrees_of_freedom": 960,
+    "rmse_mag": 0.24211803297591153,
+    "mean_residual_mag": 0.19164083546249083,
+    "fitted_shape_only_offset_mag": 0.16059402278361604,
+    "offset_sigma_mag": 0.030950813584141725,
+    "shape_only_chi_squared": 871.5521341629126,
+    "shape_only_dof": 959
+  },
+  "fixed_reference": {
+    "chi_squared": 838.4833829163803,
+    "degrees_of_freedom": 960,
+    "rmse_mag": 0.15546594548142287,
+    "mean_residual_mag": 0.05305294017077367,
+    "fitted_shape_only_offset_mag": 0.04345564679174889,
+    "offset_sigma_mag": 0.030950813584141725,
+    "shape_only_chi_squared": 836.512102998606,
+    "shape_only_dof": 959
+  },
+  "redshift_bins": [
+    {
+      "z_min": 0.1,
+      "z_max": 0.3,
+      "light_curves": 466,
+      "unique_SN": 466,
+      "mean_residual_mag": 0.13827687861246538,
+      "mean_sigma_mag": 0.03135583126252762,
+      "implied_distance_ratio": 1.0657500844250727,
+      "mean_reference_residual_mag": 0.041952794575708885,
+      "caveat": "Bin means are correlated; GLS weights may be negative"
+    },
+    {
+      "z_min": 0.3,
+      "z_max": 0.6,
+      "light_curves": 365,
+      "unique_SN": 365,
+      "mean_residual_mag": 0.20035188464351752,
+      "mean_sigma_mag": 0.0323486812209158,
+      "implied_distance_ratio": 1.0966558935899222,
+      "mean_reference_residual_mag": 0.046905504034903824,
+      "caveat": "Bin means are correlated; GLS weights may be negative"
+    },
+    {
+      "z_min": 0.6,
+      "z_max": 1.0,
+      "light_curves": 104,
+      "unique_SN": 104,
+      "mean_residual_mag": 0.21822527860924454,
+      "mean_sigma_mag": 0.03802502175418826,
+      "implied_distance_ratio": 1.1057197215757573,
+      "mean_reference_residual_mag": 0.006110921127789571,
+      "caveat": "Bin means are correlated; GLS weights may be negative"
+    },
+    {
+      "z_min": 1.0,
+      "z_max": 3.0,
+      "light_curves": 25,
+      "unique_SN": 25,
+      "mean_residual_mag": 0.3631459926464814,
+      "mean_sigma_mag": 0.07083465702159134,
+      "implied_distance_ratio": 1.1820319036338753,
+      "mean_reference_residual_mag": 0.13307319731586253,
+      "caveat": "Bin means are correlated; GLS weights may be negative"
+    }
+  ],
+  "bin_trend": {
+    "covariance_mag_squared": [
+      [
+        0.0009831881541641045,
+        0.0009340556541274456,
+        0.0009327162066234597,
+        0.0009141050414615236
+      ],
+      [
+        0.0009340556541274457,
+        0.00104643717673243,
+        0.0010037042962564805,
+        0.0009010983315691261
+      ],
+      [
+        0.0009327162066234597,
+        0.0010037042962564807,
+        0.0014459022794064903,
+        0.000920334599931031
+      ],
+      [
+        0.0009141050414615236,
+        0.0009010983315691261,
+        0.000920334599931031,
+        0.005017548635366478
+      ]
+    ],
+    "constant_bin_mean_chi_squared": 36.743149674677,
+    "degrees_of_freedom": 3,
+    "contrasts_to_first_bin": [
+      {
+        "bin_index": 1,
+        "minus_first_bin_mag": 0.06207500603105209,
+        "sigma_mag": 0.012708816728619659
+      },
+      {
+        "bin_index": 2,
+        "minus_first_bin_mag": 0.07994839999677919,
+        "sigma_mag": 0.02374148311129015
+      },
+      {
+        "bin_index": 3,
+        "minus_first_bin_mag": 0.2248691140340159,
+        "sigma_mag": 0.06459509816238021
+      }
+    ]
+  },
+  "frame_sensitivity": {
+    "max_prediction_difference_mag": 0.002522342183179158,
+    "fixed_temporal_using_zHD_only": {
+      "chi_squared": 897.9355365158568,
+      "degrees_of_freedom": 960,
+      "rmse_mag": 0.2427755959202724,
+      "mean_residual_mag": 0.19255218299108262,
+      "fitted_shape_only_offset_mag": 0.16155424125465365,
+      "offset_sigma_mag": 0.030950813584141725,
+      "shape_only_chi_squared": 870.690174123029,
+      "shape_only_dof": 959
+    }
+  },
+  "conditional_calibration_sensitivity_chi_squared": 907.7199364720317,
+  "covariance_max_asymmetry": 3.0000000000038676e-08,
+  "caveats": [
+    "Standardized published magnitudes and covariance inherit SALT2, selection, host, dust and fiducial-cosmology assumptions.",
+    "Primary absolute magnitude calibrated only on Cepheid hosts; these distances have their own ladder assumptions.",
+    "Some SN objects may overlap earlier duration studies; different observable, not a wholly independent sky sample.",
+    "No full light-curve refit or new joint cosmological inference.",
+    "Fixed reference is not best-fit LCDM and its absolute residual includes the deliberately fixed kappa scale."
+  ]
+}

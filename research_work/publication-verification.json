@@ -1,0 +1,123 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.2669577999986359
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7574582999986887
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7214080000012473
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.2678879999984929
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.1921259999980975
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.43929969999953755
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.829378700000234
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1864977000004728
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.64127709999957
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.3315784000005806
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.0667673999996623
+    },
+    {
+      "script": "baseline/run_baseline_001.py",
+      "exit_code": 0,
+      "seconds": 12.394682199999806
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "Numerical diagnostics and integrity; not observational validation of the theory.",
+  "command": "python research_work/run_checks.py --baseline",
+  "python_version": "3.13.5",
+  "clean_staged_export": true,
+  "baseline_regression": {
+    "state": "finished",
+    "scripts": [
+      {
+        "script": "run.py",
+        "exit_code": 0,
+        "seconds": 2.183892011642456
+      },
+      {
+        "script": "followup.py",
+        "exit_code": 0,
+        "seconds": 9.602344989776611
+      },
+      {
+        "script": "circulation.py",
+        "exit_code": 0,
+        "seconds": 0.16065526008605957
+      }
+    ],
+    "started_utc": "2026-09-09T15:58:19Z",
+    "current_script": "circulation.py",
+    "original_outputs_preserved": true,
+    "total_exceedances": 170,
+    "finished_utc": "2026-09-09T15:58:31Z"
+  },
+  "note": "Verified from a clean git checkout-index export, without ignored local files. Compressed covariance verified against its original decompressed checksum. Mathematical and integrity checks do not validate the full theory.",
+  "verified_script_sha256": {
+    "research_work/results/baseline/run_baseline_001.py": "bd3d7668d68adbe8829d6e95ac6314fa8e7db20de7bc7526c40ea6baa5a91f6a",
+    "research_work/results/data-audit/audit_observables.py": "b7b79dab75cae02006dca89c26ffc3b0eca1e4a5ec03ff0221137d22b2002786",
+    "research_work/results/data-audit/enrich_observable_registry.py": "0b2f590e35b9fc5653bdb0c8a509125cafe0f8fe452f9cefbb500b22d042b19d",
+    "research_work/results/energy/compare_no_loss_catalog.py": "63e41a0509b79f81c05697e8f5d76a55b78bd8dc85066fe5dc9ecda2aeef4d91",
+    "research_work/results/energy/ledger_solver.py": "a282bff17ebb20215dc3377127dcaa8a28352cfcdc77d63c80335b644cca736f",
+    "research_work/results/frequency-transfer/check_frequency_transfer.py": "d4aa965967e5709d6d6a5c800f77a0aa5f611cfb003efa615cf40fb3faf2b1d5",
+    "research_work/results/gravity-response/check_gravity_response.py": "5b8fc53f09e80771d06f832fb307d9262642b64d222187e5bf4ef832d5292196",
+    "research_work/results/microphysics/check_microphysics.py": "206087c447c3ee29150d6abdebec66255c94dcabf0c4d75495deb1f29766e75f",
+    "research_work/results/radial-capture/check_external_capture.py": "44cc1918f19e31c00e63dca286213b8feef5cac6a4fe8b192042385a75e863e0",
+    "research_work/results/radial-capture/radial_capture.py": "b4c0abfc7cebad420fd3cad44f09232f8e854c4d198412e7d7196244fcce0c9b",
+    "research_work/results/radial-capture/run_radial_capture.py": "fb210aff05bf3c7005027c53ad77f8af44e35c8e7efb07e1283d8e8e951385b6",
+    "research_work/results/scalar-wave/check_scalar_wave.py": "e5ef33c421aeb43b1afe8a27793deb9ac863a017af9ba6ea2b5724ecdcd1e0e5",
+    "research_work/results/transport/check_transport.py": "43d93cdadd5f80e0b656f866a7401c7d9d554cc852fdf315be956b584df5263b",
+    "research_work/results/transport/transport_ledger.py": "ab601561c23848299ecb4153a6f9162db885348d289918e991222435014cc221",
+    "research_work/energy/ledger_solver.py": "23900389e39f436997eaa82dd33f2a59499d20109541a08e4b55889f2c45d521",
+    "research_work/energy/radial_capture.py": "b4c0abfc7cebad420fd3cad44f09232f8e854c4d198412e7d7196244fcce0c9b",
+    "research_work/energy/transport_ledger.py": "ab601561c23848299ecb4153a6f9162db885348d289918e991222435014cc221",
+    "research_work/run_checks.py": "91e85105585b57601dec1d8ae85d3fa7c1cd20d4e3eb990681ad471994f1fe46"
+  }
+}

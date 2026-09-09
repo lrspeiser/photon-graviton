@@ -1,0 +1,248 @@
+{
+  "scope": "dimensionless bookkeeping verification; not a physical interaction or halo fit",
+  "columns": [
+    "photons",
+    "companions",
+    "deposits",
+    "explicit_receiving_sector",
+    "stellar_fuel"
+  ],
+  "checks": [
+    {
+      "check": "analytic_impulse",
+      "h": 1.0,
+      "capture": 0.2,
+      "error": 8.548717289613705e-15
+    },
+    {
+      "check": "analytic_impulse",
+      "h": 1.0,
+      "capture": 1.0,
+      "error": 1.2212453270876722e-14
+    },
+    {
+      "check": "analytic_impulse",
+      "h": 1.0,
+      "capture": 2.0,
+      "error": 7.299716386910404e-15
+    },
+    {
+      "check": "analytic_impulse",
+      "h": 1.0,
+      "capture": 0.0,
+      "error": 8.326672684688674e-15
+    },
+    {
+      "check": "analytic_impulse",
+      "h": 0.0,
+      "capture": 1.0,
+      "error": 0.0
+    },
+    {
+      "check": "finite_fuel_ode_and_conservation",
+      "rates": {
+        "photon_loss": 1.0,
+        "capture": 0.2,
+        "companion_loss": 0.0,
+        "deposit_loss": 0.0
+      },
+      "ode_error": 3.26316751397826e-12,
+      "total_energy_residual": 1.1102230246251565e-15
+    },
+    {
+      "check": "finite_fuel_ode_and_conservation",
+      "rates": {
+        "photon_loss": 1.0,
+        "capture": 0.2,
+        "companion_loss": 1.0,
+        "deposit_loss": 0.0
+      },
+      "ode_error": 1.982691788526836e-12,
+      "total_energy_residual": 2.220446049250313e-15
+    },
+    {
+      "check": "finite_fuel_ode_and_conservation",
+      "rates": {
+        "photon_loss": 1.0,
+        "capture": 0.2,
+        "companion_loss": 0.0,
+        "deposit_loss": 0.1
+      },
+      "ode_error": 3.412381488487881e-12,
+      "total_energy_residual": 1.1102230246251565e-15
+    },
+    {
+      "check": "finite_fuel_ode_and_conservation",
+      "rates": {
+        "photon_loss": 1.0,
+        "capture": 0.2,
+        "companion_loss": 0.4,
+        "deposit_loss": 0.3
+      },
+      "ode_error": 3.1498137431640316e-12,
+      "total_energy_residual": 2.886579864025407e-15
+    },
+    {
+      "check": "shared_loss_companion_solution",
+      "passed": true
+    }
+  ],
+  "finite_fuel_scenarios": {
+    "no_loss_permanent": {
+      "rates": {
+        "photon_loss": 1.0,
+        "capture": 0.2,
+        "companion_loss": 0.0,
+        "deposit_loss": 0.0
+      },
+      "times": [
+        0.0,
+        1.0,
+        4.0,
+        10.0,
+        50.0
+      ],
+      "energies": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.31606027941427883,
+          0.17139104736345814,
+          0.012548673222263022,
+          0.0,
+          1.5
+        ],
+        [
+          0.49084218055563283,
+          1.1072942614391414,
+          0.40186355800522566,
+          0.0,
+          2.220446049250313e-16
+        ],
+        [
+          0.0012166761234519367,
+          0.5167883069569018,
+          1.4819950169196459,
+          0.0,
+          2.220446049250313e-16
+        ],
+        [
+          5.168871186378709e-21,
+          0.00017387335023315135,
+          1.9998261266497668,
+          0.0,
+          2.220446049250313e-16
+        ]
+      ]
+    },
+    "shared_secondary_loss": {
+      "rates": {
+        "photon_loss": 1.0,
+        "capture": 0.2,
+        "companion_loss": 1.0,
+        "deposit_loss": 0.0
+      },
+      "times": [
+        0.0,
+        1.0,
+        4.0,
+        10.0,
+        50.0
+      ],
+      "energies": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.31606027941427883,
+          0.12445600522181524,
+          0.009913952560650991,
+          0.04956976280325496,
+          1.5
+        ],
+        [
+          0.49084218055563283,
+          0.38802287579695643,
+          0.18685582394123512,
+          0.9342791197061755,
+          2.220446049250313e-16
+        ],
+        [
+          0.0012166761234519367,
+          0.004540793958877703,
+          0.33237375498627847,
+          1.6618687749313918,
+          2.220446049250313e-16
+        ],
+        [
+          5.168871186378709e-21,
+          2.584215749279352e-20,
+          0.33333333333333337,
+          1.6666666666666663,
+          2.220446049250313e-16
+        ]
+      ]
+    },
+    "finite_residence": {
+      "rates": {
+        "photon_loss": 1.0,
+        "capture": 0.2,
+        "companion_loss": 0.0,
+        "deposit_loss": 0.1
+      },
+      "times": [
+        0.0,
+        1.0,
+        4.0,
+        10.0,
+        50.0
+      ],
+      "energies": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.0
+        ],
+        [
+          0.31606027941427883,
+          0.17139104736345814,
+          0.012223750619579931,
+          0.00032492260268309267,
+          1.5
+        ],
+        [
+          0.49084218055563283,
+          1.1072942614391414,
+          0.3577616754909852,
+          0.04410188251424052,
+          2.220446049250313e-16
+        ],
+        [
+          0.0012166761234519367,
+          0.5167883069569018,
+          0.9740773827294593,
+          0.5079176341901864,
+          2.220446049250313e-16
+        ],
+        [
+          5.168871186378709e-21,
+          0.00017387335023315135,
+          0.03647323936117939,
+          1.9633528872885875,
+          2.220446049250313e-16
+        ]
+      ]
+    }
+  }
+}

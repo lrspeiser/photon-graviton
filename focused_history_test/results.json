@@ -1,0 +1,187 @@
+{
+  "status": "Exploratory reuse, not independent validation",
+  "N": 960,
+  "kappa_per_Mly": 7.7315e-05,
+  "M": -19.248884540083562,
+  "law": "dn/dt=gamma*n^p, n_o=1; R=expm1(p*ln(1+zHD))/(kappa*p); DL=(1+zHEL)*R; DA=R in ideal rest-frame flat model.",
+  "models": {
+    "fixed_exponential_flat": {
+      "parameter": null,
+      "chi_squared": 898.4745863939072,
+      "offset_mag": 0.0,
+      "bin_mean_residuals_mag": [
+        0.13827687861246538,
+        0.20035188464351747,
+        0.21822527860924457,
+        0.3631459926464813
+      ],
+      "bin_constant_residual_chi_squared": 36.743149674677,
+      "note": "Post-fit diagnostic on four correlated bins; no naive chi-square significance assigned after fitting.",
+      "last_minus_first_bin_mag": 0.2248691140340159,
+      "last_minus_first_standard_error_before_parameter_fit": 0.06459509816238021,
+      "rmse_mag": 0.24211803297591153,
+      "added_fit_parameters": 0,
+      "delta_AIC_vs_fixed": 0.0
+    },
+    "offset_only": {
+      "parameter": null,
+      "chi_squared": 871.5521341629126,
+      "offset_mag": 0.16059402278361604,
+      "bin_mean_residuals_mag": [
+        -0.022317144171150747,
+        0.039757861859901426,
+        0.05763125582562853,
+        0.20255196986286533
+      ],
+      "bin_constant_residual_chi_squared": 36.74314967467708,
+      "note": "Post-fit diagnostic on four correlated bins; no naive chi-square significance assigned after fitting.",
+      "last_minus_first_bin_mag": 0.22486911403401608,
+      "last_minus_first_standard_error_before_parameter_fit": 0.06459509816238021,
+      "rmse_mag": 0.1511913908027843,
+      "added_fit_parameters": 1,
+      "delta_AIC_vs_fixed": -24.922452230994622
+    },
+    "history_only": {
+      "parameter": 0.26390611655880836,
+      "chi_squared": 850.2010305554895,
+      "offset_mag": 0.0,
+      "conditional_profile_intervals": {
+        "1.0": [
+          0.2264250821985367,
+          0.30122402293897504
+        ],
+        "3.841458820694124": [
+          0.19028916883619323,
+          0.33689636214087665
+        ]
+      },
+      "bin_mean_residuals_mag": [
+        0.08615092784318905,
+        0.1081287471708304,
+        0.06284965276074692,
+        0.11442354510940822
+      ],
+      "bin_constant_residual_chi_squared": 6.465022914807295,
+      "note": "Post-fit diagnostic on four correlated bins; no naive chi-square significance assigned after fitting.",
+      "last_minus_first_bin_mag": 0.02827261726621917,
+      "last_minus_first_standard_error_before_parameter_fit": 0.06459509816238021,
+      "rmse_mag": 0.1801489811507,
+      "added_fit_parameters": 1,
+      "delta_AIC_vs_fixed": -46.27355583841768
+    },
+    "negative_curvature_only": {
+      "parameter": 0.8721252692548485,
+      "chi_squared": 873.0412774701741,
+      "offset_mag": 0.0,
+      "conditional_profile_intervals": {
+        "1.0": [
+          0.7796451896131691,
+          0.9561928248725218
+        ],
+        "3.841458820694124": [
+          0.6797808694679676,
+          1.0308921235359678
+        ]
+      },
+      "bin_mean_residuals_mag": [
+        0.12874893193162504,
+        0.1716195010876848,
+        0.139105394102376,
+        0.163367848715123
+      ],
+      "bin_constant_residual_chi_squared": 12.52334648202936,
+      "note": "Post-fit diagnostic on four correlated bins; no naive chi-square significance assigned after fitting.",
+      "last_minus_first_bin_mag": 0.03461891678349796,
+      "last_minus_first_standard_error_before_parameter_fit": 0.06459509816238021,
+      "rmse_mag": 0.21764751795579992,
+      "added_fit_parameters": 1,
+      "delta_AIC_vs_fixed": -23.43330892373308
+    },
+    "history_plus_offset_diagnostic": {
+      "parameter": 0.22423958033593014,
+      "chi_squared": 840.6469449412157,
+      "offset_mag": 0.10111881654995589,
+      "conditional_profile_intervals": {
+        "1.0": [
+          0.18436938380834877,
+          0.26391191723012164
+        ],
+        "3.841458820694124": [
+          0.14590653599802875,
+          0.3018125240790142
+        ]
+      },
+      "bin_mean_residuals_mag": [
+        -0.007105188905777935,
+        0.020955808692145944,
+        -0.014682397577526752,
+        0.051284119002104486
+      ],
+      "bin_constant_residual_chi_squared": 7.2792672914126815,
+      "note": "Post-fit diagnostic on four correlated bins; no naive chi-square significance assigned after fitting.",
+      "last_minus_first_bin_mag": 0.05838930790788242,
+      "last_minus_first_standard_error_before_parameter_fit": 0.06459509816238021,
+      "rmse_mag": 0.14701975206362644,
+      "added_fit_parameters": 2,
+      "delta_AIC_vs_fixed": -53.82764145269152
+    }
+  },
+  "subset_sensitivity_not_holdouts": {
+    "z_below_0_6": {
+      "N": 831,
+      "parameter": 0.3321103327573528,
+      "chi_squared": 762.559537755304,
+      "offset_mag": 0.0,
+      "conditional_profile_intervals": {
+        "1.0": [
+          0.2794959350416524,
+          0.3845093777095589
+        ],
+        "3.841458820694124": [
+          0.2287829305142896,
+          0.43461042119210247
+        ]
+      }
+    },
+    "z_at_least_0_6": {
+      "N": 129,
+      "parameter": 0.3300001526886447,
+      "chi_squared": 80.52565573131099,
+      "offset_mag": 0.0,
+      "conditional_profile_intervals": {
+        "1.0": [
+          0.277313120256251,
+          0.38236816056596423
+        ],
+        "3.841458820694124": [
+          0.22642973389895857,
+          0.43234493962294906
+        ]
+      }
+    },
+    "z_below_1": {
+      "N": 935,
+      "parameter": 0.27127878840985314,
+      "chi_squared": 828.0790440616178,
+      "offset_mag": 0.0,
+      "conditional_profile_intervals": {
+        "1.0": [
+          0.22788925030470786,
+          0.3144884403052504
+        ],
+        "3.841458820694124": [
+          0.18606553687705688,
+          0.35580098331883236
+        ]
+      }
+    }
+  },
+  "maximum_integral_check_error": 4.440892098500626e-16,
+  "caveats": [
+    "Full released STAT+SYS covariance and Cepheid calibration propagated as in previous test.",
+    "Standardized published magnitudes and reference-frame corrections are conditional on their original processing.",
+    "Kappa fixed without its uncertainty; profile intervals conditional on this model and covariance.",
+    "AIC is descriptive within this likelihood, not validation or a probability of physical truth.",
+    "No new atomic interaction, angular-distance dataset or sustainable dynamical background tested."
+  ]
+}

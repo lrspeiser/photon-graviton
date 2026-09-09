@@ -1,0 +1,133 @@
+{
+  "models": {
+    "area_core": {
+      "parameters": [
+        0.3470318180444781,
+        0.3264319568900865
+      ],
+      "optimizer_success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 26.583401763617445,
+          "log_RMSE_dex": 0.12694740715993838
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.93561416845621,
+          "log_RMSE_dex": 0.10152216469889823
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.1886064583273,
+          "log_RMSE_dex": 0.09359033610607156
+        }
+      }
+    },
+    "lum_core": {
+      "parameters": [
+        0.12872977721203957,
+        0.44760456396264053,
+        -0.03366159638725427
+      ],
+      "optimizer_success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 19.386419960906156,
+          "log_RMSE_dex": 0.11407259860680564
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 28.102786004597625,
+          "log_RMSE_dex": 0.0984901910050101
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 15.750893214131139,
+          "log_RMSE_dex": 0.07719075556423506
+        }
+      }
+    },
+    "lum_size_core": {
+      "parameters": [
+        0.1965367887338582,
+        0.33947635328955955,
+        0.3791840406822429,
+        0.030331796277540728
+      ],
+      "optimizer_success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 19.4189062983544,
+          "log_RMSE_dex": 0.11175967806347296
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 25.995090146437395,
+          "log_RMSE_dex": 0.09046289437361711
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 14.758040920067453,
+          "log_RMSE_dex": 0.0703996003720222
+        }
+      }
+    },
+    "acceleration": {
+      "parameters": [
+        -0.15319899791629812,
+        0.46245879879491997
+      ],
+      "optimizer_success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 20.005419588757565,
+          "log_RMSE_dex": 0.10934928207497513
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 27.376934144531354,
+          "log_RMSE_dex": 0.09742855434351679
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 17.199506232513176,
+          "log_RMSE_dex": 0.07914105463407181
+        }
+      }
+    },
+    "baryons": {
+      "parameters": [],
+      "optimizer_success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 52.56535192119044,
+          "log_RMSE_dex": 0.2904157379880655
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 58.2192156635354,
+          "log_RMSE_dex": 0.27036399166046354
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 47.771889244324356,
+          "log_RMSE_dex": 0.25608303859029213
+        }
+      }
+    }
+  },
+  "validation_selected_cored_model": "lum_size_core",
+  "cluster_acceleration_median_required_over_predicted": 1.8993256490238428,
+  "cluster_acceleration_range_required_over_predicted": [
+    1.7037851648882762,
+    2.4163569307735537
+  ],
+  "acceleration_negative_mass_slope_intervals": 1,
+  "acceleration_total_intervals": 3001,
+  "note": "Negative slopes are finite-difference diagnostics at fixed noisy baryon inputs, not statistical exclusions."
+}

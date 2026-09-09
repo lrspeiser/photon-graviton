@@ -1,0 +1,50 @@
+{
+  "original_exponential_at_constant_path_speed_gamma_lifetime_yr": 12934100756.644896,
+  "revised_history_future_path_Mly": 49010.23487177373,
+  "circulation_examples": [
+    {
+      "circumference_Mly": 1000,
+      "future_circuit_budget": 49.01023487177373,
+      "first_circuit_n": 1.0812466272720311,
+      "photon_fraction": 0.9248583762272488,
+      "free_companion_fraction": 0.07224499758226889,
+      "timing_field_fraction": 0.0028966261904824764
+    },
+    {
+      "circumference_Mly": 10000,
+      "future_circuit_budget": 4.9010234871773735,
+      "first_circuit_n": 2.374343065034426,
+      "photon_fraction": 0.4211691287271921,
+      "free_companion_fraction": 0.3641937038344706,
+      "timing_field_fraction": 0.21463716743833727
+    },
+    {
+      "circumference_Mly": 30000,
+      "future_circuit_budget": 1.6336744957257912,
+      "first_circuit_n": 36.18313003256505,
+      "photon_fraction": 0.027637188908200962,
+      "free_companion_fraction": 0.09917862235192147,
+      "timing_field_fraction": 0.8731841887398776
+    },
+    {
+      "circumference_Mly": 100000,
+      "future_circuit_budget": 0.49010234871773734,
+      "first_circuit_n": null,
+      "photon_fraction": null,
+      "free_companion_fraction": null,
+      "timing_field_fraction": null
+    }
+  ],
+  "EBL_benchmark_I_nW_m2_sr": 50,
+  "EBL_energy_density_J_m3": 2.0958450219516818e-15,
+  "required_external_energy_density_median_J_m3": 1.011398694997347e-10,
+  "required_over_EBL_median": 48257.32267434152,
+  "capture_duration_yr_if_companion_u_equals_EBL": 482573226743415.25,
+  "nonredshifting_companion_build_time_yr_steady_original_gamma_ignoring_capture": 624165073715857.5,
+  "notes": [
+    "EBL source Driver2016 arXiv1605.01523 integrated COB24+CIB26 nW/m2/sr; benchmark not companion measurement.",
+    "Future path derives from unbounded extrapolation dot n=gamma n^p, v=c/n in static geometry; not an observational horizon measurement.",
+    "For shared secondary redshift, no-capture companion fraction is log(n)/n, not 1-1/n.",
+    "Constant-gamma uniform steady bath obeys uc=gamma*ugamma/(gamma+lambda); circulating topology alone does not evade this local balance."
+  ]
+}

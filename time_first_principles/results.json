@@ -1,0 +1,113 @@
+{
+  "all": {
+    "N": 35,
+    "b": 0.9664422374887092,
+    "sigma_b": 0.10401826206754458,
+    "chi2_b1": 26.94852459529445,
+    "chi2_b0": 150.56925988953117
+  },
+  "high_z": {
+    "N": 13,
+    "b": 0.950562105930183,
+    "sigma_b": 0.10379279304604187,
+    "chi2_b1": 3.654111611859464,
+    "chi2_b0": 123.68673155221666
+  },
+  "mixture": {
+    "best_delta": 0.0004309130571746668,
+    "best_chi2": 45.018078559293066,
+    "zero_delta_chi2": 45.01873960592338,
+    "N": 43,
+    "assumptions": "equal-weight two-temperature mixture, temperature and Galaxy nuisance; diagonal errors; illustrative profile threshold, not calibrated confidence bound.",
+    "grid": {
+      "0": {
+        "chi2": 45.01873960592338,
+        "delta_chi2_vs_best": 0.000661046630312967
+      },
+      "1e-05": {
+        "chi2": 45.01873889409944,
+        "delta_chi2_vs_best": 0.0006603348063762837
+      },
+      "0.001": {
+        "chi2": 45.030789136630574,
+        "delta_chi2_vs_best": 0.0127105773375078
+      },
+      "0.003": {
+        "chi2": 46.5072473138596,
+        "delta_chi2_vs_best": 1.4891687545665349
+      },
+      "0.01": {
+        "chi2": 235.83555550897404,
+        "delta_chi2_vs_best": 190.81747694968098
+      },
+      "0.05": {
+        "chi2": 117314.35776468749,
+        "delta_chi2_vs_best": 117269.3396861282
+      }
+    },
+    "delta_at_Dchi2_3_84": 0.0037868317743923194
+  },
+  "source_free_pinned_field": [
+    {
+      "vfield_over_c": 1,
+      "initial_phase": 0.0,
+      "z": -7.465069802376722e-06
+    },
+    {
+      "vfield_over_c": 1,
+      "initial_phase": 1.5707963267948966,
+      "z": -0.00385828773392408
+    },
+    {
+      "vfield_over_c": 1,
+      "initial_phase": 3.141592653589793,
+      "z": -7.478861186252752e-06
+    },
+    {
+      "vfield_over_c": 0.1,
+      "initial_phase": 0.0,
+      "z": 0.00486155726432683
+    },
+    {
+      "vfield_over_c": 0.1,
+      "initial_phase": 1.5707963267948966,
+      "z": -0.0007796265615379347
+    },
+    {
+      "vfield_over_c": 0.1,
+      "initial_phase": 3.141592653589793,
+      "z": -0.004838624113473871
+    },
+    {
+      "vfield_over_c": 0.01,
+      "initial_phase": 0.0,
+      "z": 0.0049334278542424795
+    },
+    {
+      "vfield_over_c": 0.01,
+      "initial_phase": 1.5707963267948966,
+      "z": -8.941479562606917e-05
+    },
+    {
+      "vfield_over_c": 0.01,
+      "initial_phase": 3.141592653589793,
+      "z": -0.004909214575177955
+    }
+  ],
+  "gravitational_clock_constraint": {
+    "epsilon_G_mean": 1.9e-06,
+    "epsilon_G_sigma": 2.48e-05,
+    "approx_95_interval": [
+      -4.6708e-05,
+      5.0508e-05
+    ],
+    "source": "Delva et al 2018; published summary, no orbit/clock reprocessing"
+  },
+  "interpretation": "Published-table reanalysis and conditional model calculations. These are not new blind data. Models sharing b=1 are not distinguished by spectral aging. Pinned-field normal-mode calculations are synthetic, not astronomical observations.",
+  "hashes": {
+    "spectral_aging.json": "b62b2cc2ede705d5772c045a936004e3141cf81da4225f4f8eac902ab9c3a53c",
+    "blondin2008.pdf": "e9ecaa24d075fb6938d33dd3367db6d4ce30cc32c24626cf3e9d82f943c6b3eb",
+    "firas.txt": "df793c3dca09ebfa7dbc5aa0ec1951daa8884431bc30eff28a710d7516cf50fa",
+    "blondin2008.txt": "3ab8f973dd67ab89ff3106fda1f87f74fc545cc9fae80a2f33a520c42e9d5bfa"
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "DES": {
+    "g": {
+      "n": 361,
+      "b": 1.0211782790118558,
+      "formal_sigma_b": 0.027182848153660837,
+      "chi2_dof": 0.5374859852477357,
+      "rmse_b1": 0.13448278508580983,
+      "rmse_b0": 0.3372222219993334
+    },
+    "r": {
+      "n": 1380,
+      "b": 1.0043271301663173,
+      "formal_sigma_b": 0.00829979869586679,
+      "chi2_dof": 0.7293880706332256,
+      "rmse_b1": 0.1701476731859764,
+      "rmse_b0": 0.5582045448836587
+    },
+    "i": {
+      "n": 1465,
+      "b": 0.9875622536606629,
+      "formal_sigma_b": 0.007736497466099345,
+      "chi2_dof": 0.7877952070343582,
+      "rmse_b1": 0.18893121558669743,
+      "rmse_b0": 0.5924115408239333
+    },
+    "z": {
+      "n": 1381,
+      "b": 0.9972910383806345,
+      "formal_sigma_b": 0.00822142092227413,
+      "chi2_dof": 0.8957822409508868,
+      "rmse_b1": 0.22792145863051275,
+      "rmse_b0": 0.6355777095601495
+    },
+    "all_event_average": {
+      "n": 1504,
+      "b": 1.0028774168039114,
+      "formal_sigma_b": 0.00482546615568941,
+      "chi2_dof": 1.4414273462294067,
+      "rmse_b1": 0.15307358522982475,
+      "rmse_b0": 0.5870061950990585
+    },
+    "event_bootstrap_95_b": [
+      0.9931169831026961,
+      1.013841511209561
+    ]
+  },
+  "status": "Derived-data reanalysis; published reference curves already assume dilation. No independent raw-light-curve or blind validation claim.",
+  "FIRAS": {
+    "channels": 43,
+    "theta_names": [
+      "deltaT_over_T",
+      "y",
+      "galactic_template_coefficient"
+    ],
+    "theta": [
+      1.8382303955379906e-07,
+      9.285098246345127e-08,
+      -0.002287591093582796
+    ],
+    "diagonal_only_sigma": [
+      3.0082315519576136e-06,
+      3.6113578557678688e-06,
+      0.03242942868175229
+    ],
+    "chi2": 45.018078559771695,
+    "dof": 40,
+    "published_residual_rms_over_peak": 0.0001865428978786136,
+    "note": "Released residual data and diagonal errors only; foreground and calibration processing already applied. Not a replacement for full-covariance FIRAS limits. Coherent Planck-preserving model is exactly degenerate with blackbody once present T is chosen; no kappa measured."
+  },
+  "screened_ray": {
+    "R_Mly": 100,
+    "active_path_fraction": 0.5,
+    "local_rate_twice_mean": true,
+    "predicted_S": 1.0077614617908153,
+    "numerical_pulse_stretch": 1.0077614617953756,
+    "numerical_frequency_stretch": 1.0077614617908752,
+    "relative_pulse_error": 4.525269048372138e-12,
+    "status": "Synthetic ray-equation consistency test, not observational evidence or microscopic matter theory."
+  },
+  "sha256": {
+    "DES_event_averages.csv": "06ed324ca5777edf819594a1c0bc95ed5395613b07337236d9b6cee8801f8ec1",
+    "Plot_Generation.py": "adb648f5ab5ef296fde03695cfc443c8822b9314be4a2be6b808f5241fa676a7",
+    "iBAND_pickled_data": "166287a0a4c59519949751e1f14bb0c0b9256227cfecda02254d2bad2e214a75",
+    "zBAND_pickled_data": "d02d0a3db2db79c3645b143e13dc9c62f81d1c4d2fa1d50c5dce6702539aeaf7",
+    "firas.txt": "df793c3dca09ebfa7dbc5aa0ec1951daa8884431bc30eff28a710d7516cf50fa",
+    "DES_widths.csv": "368d1cdb7c2dbcc335b8cda475c0036949f79dc500279c45d0d87a589f347ba5",
+    "rBAND_pickled_data": "490439c62eb03899759978a59cf40d11196b7a139beee285457e23ac5307dce5",
+    "README_DES.md": "c2e2e97ad929d50764f5f8827bfa31647afb8ad28ad2d8debf491309b5879ff0",
+    "gBAND_pickled_data": "539f88f96ea6a95f1c713ce7dfc2df5b24409014d549857e564a12763f018721",
+    "StretchMethod.py": "ba1216837883e4cb7341371130dc55bdcde4a1f0b19c36a941a34656515df6fe"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "status": "Exploratory reuse of existing split, not blind",
+  "split_counts": {
+    "train": 89,
+    "validation": 29,
+    "test": 31
+  },
+  "models": {
+    "area_core": [
+      [
+        0,
+        0
+      ],
+      [
+        [
+          -3,
+          3
+        ],
+        [
+          -2,
+          2
+        ]
+      ]
+    ],
+    "lum_core": [
+      [
+        0,
+        0.5,
+        0
+      ],
+      [
+        [
+          -3,
+          3
+        ],
+        [
+          -0.5,
+          1.5
+        ],
+        [
+          -2,
+          2
+        ]
+      ]
+    ],
+    "lum_size_core": [
+      [
+        0,
+        0.5,
+        0,
+        0
+      ],
+      [
+        [
+          -3,
+          3
+        ],
+        [
+          -0.5,
+          1.5
+        ],
+        [
+          -2,
+          2
+        ],
+        [
+          -2,
+          2
+        ]
+      ]
+    ],
+    "acceleration": [
+      [
+        0,
+        0.5
+      ],
+      [
+        [
+          -3,
+          3
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    ],
+    "baryons": [
+      [],
+      []
+    ]
+  },
+  "loss": "mean per-galaxy mean squared log10 velocity residual",
+  "selection": "minimum validation loss among 3 positive-density cored models; acceleration separate comparison",
+  "no_per_object_fitted_parameters": true
+}

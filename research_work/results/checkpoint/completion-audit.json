@@ -1,0 +1,1509 @@
+{
+  "status": "full objective not complete; no unified candidate or observational validation established",
+  "tasks": [
+    {
+      "id": "T01",
+      "title": "Reproduce and freeze the recovered baseline",
+      "recorded_status": "completed_with_documented_numerical_differences",
+      "depends_on": [],
+      "criteria": [
+        {
+          "requirement": "All available original snapshot hashes match or differences are explained.",
+          "status": "supported_by_baseline_with_documented_differences",
+          "evidence": "baseline/reproduction-report.md and current-original-hashes.json",
+          "scope_limit": null
+        },
+        {
+          "requirement": "Every latest reported baseline quantity is reproduced or a specific discrepancy is isolated.",
+          "status": "supported_by_baseline_with_documented_differences",
+          "evidence": "baseline/reproduction-report.md and current-original-hashes.json",
+          "scope_limit": null
+        },
+        {
+          "requirement": "No archived scientific output was overwritten.",
+          "status": "supported_by_baseline_with_documented_differences",
+          "evidence": "baseline/reproduction-report.md and current-original-hashes.json",
+          "scope_limit": null
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "baseline/manifest-audit.json",
+          "exact_path_present": true,
+          "content_completion": "reviewed_baseline"
+        },
+        {
+          "required_path": "baseline/reproduction-report.md",
+          "exact_path_present": true,
+          "content_completion": "reviewed_baseline"
+        },
+        {
+          "required_path": "baseline/environment-lock.txt",
+          "exact_path_present": true,
+          "content_completion": "reviewed_baseline"
+        },
+        {
+          "required_path": "baseline/result-differences.json",
+          "exact_path_present": true,
+          "content_completion": "reviewed_baseline"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T02",
+      "title": "Define the universe and freeze the evidence protocol",
+      "recorded_status": "in_progress",
+      "depends_on": [
+        "T01"
+      ],
+      "criteria": [
+        {
+          "requirement": "Every R01\u2013R32 has an observable or derivation requirement and responsible task.",
+          "status": "completion_not_established",
+          "evidence": {
+            "evidence": {
+              "path": "research_work/results/data-audit/data-foundation-report.md",
+              "scope": "32 requirements mapped; 21 selected inputs hashed/present; SPARC distance methods and Pantheon covariance verified. Contract, likelihoods and fresh validation data still open."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "The material clock/rod convention and allowed physical changes are explicit.",
+          "status": "completion_not_established",
+          "evidence": {
+            "evidence": {
+              "path": "research_work/results/data-audit/data-foundation-report.md",
+              "scope": "32 requirements mapped; 21 selected inputs hashed/present; SPARC distance methods and Pantheon covariance verified. Contract, likelihoods and fresh validation data still open."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "No standard cosmology-derived quantity is silently treated as a raw measurement.",
+          "status": "completion_not_established",
+          "evidence": {
+            "evidence": {
+              "path": "research_work/results/data-audit/data-foundation-report.md",
+              "scope": "32 requirements mapped; 21 selected inputs hashed/present; SPARC distance methods and Pantheon covariance verified. Contract, likelihoods and fresh validation data still open."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "specification/universe-contract.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "specification/observable-registry.json",
+          "exact_path_present": true,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "specification/validation-protocol.json",
+          "exact_path_present": true,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/data-audit/data-foundation-report.md",
+          "exists": true,
+          "sha256": "86801f1ee5a6ce821439c4d51b9f2244dfe44bd3c1a26269793dbd892840709e"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "title": "Specify gravitons, deposits and candidate actions",
+      "recorded_status": "preliminary_candidates_recorded_prerequisites_open",
+      "depends_on": [
+        "T02"
+      ],
+      "criteria": [
+        {
+          "requirement": "Every candidate has explicit field content and either a defined action or a verdict that no action has yet been supplied.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/microphysics/action-specification.md",
+              "scope": "Four candidate families; three explicit comparison actions, one action missing. Five check groups verify illustrative kinematics and static mixing, not complete actions. No candidate adopted."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "The deposited state and ordinary gravitational-wave sector are identified without double counting.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/microphysics/action-specification.md",
+              "scope": "Four candidate families; three explicit comparison actions, one action missing. Five check groups verify illustrative kinematics and static mixing, not complete actions. No candidate adopted."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Unsupported candidate families are marked incomplete, not accepted.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/microphysics/action-specification.md",
+              "scope": "Four candidate families; three explicit comparison actions, one action missing. Five check groups verify illustrative kinematics and static mixing, not complete actions. No candidate adopted."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "theory/candidate-registry.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "theory/action-specification.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "theory/assumption-map.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/microphysics/action-specification.md",
+          "exists": true,
+          "sha256": "3d2ca71031def292378cf2301eb87e0dc174d00f0ed65aeefee4412b99245a7e"
+        },
+        {
+          "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+          "exists": true,
+          "sha256": "db425231eef57dd88c894455e3e7165a7b804c236c039f13e48fa19b1ab511d9"
+        }
+      ]
+    },
+    {
+      "id": "T20",
+      "title": "Solve the alternative energy ledgers analytically",
+      "recorded_status": "in_progress",
+      "depends_on": [
+        "T01",
+        "T02"
+      ],
+      "criteria": [
+        {
+          "requirement": "Impulse energy is exactly partitioned and all physical reservoirs remain nonnegative.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Continuous injection causes the correctly identified unbounded reservoir unless a derived sink/finite source is present.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "The no-loss branch does not inherit shared-loss energy fractions or a cosmic age without rederivation.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "energy/ledger-derivation.md",
+          "exact_path_present": true,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "energy/ledger_solver.py",
+          "exact_path_present": true,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "energy/analytic-checks.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "energy/branch-comparison.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T04",
+      "title": "Derive conversion rates and spectral consequences",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03"
+      ],
+      "criteria": [
+        {
+          "requirement": "Energy, momentum, angular momentum and gauge constraints are checked.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+              "scope": "Exact stipulated energy kernels demonstrate spectral/photon-count non-identifiability of the energy ledger. Fixed travel conditions have no temporal dilation. No microscopic action rate or clock solution derived."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "A nonzero required rate is derived in the stated environment or the candidate is rejected.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+              "scope": "Exact stipulated energy kernels demonstrate spectral/photon-count non-identifiability of the energy ledger. Fixed travel conditions have no temporal dilation. No microscopic action rate or clock solution derived."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Frequency/angle diffusion and inverse processes accompany the mean loss law.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+              "scope": "Exact stipulated energy kernels demonstrate spectral/photon-count non-identifiability of the energy ledger. Fixed travel conditions have no temporal dilation. No microscopic action rate or clock solution derived."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "theory/conversion-derivation.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "theory/conversion-kernels.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "tests/conversion-limits.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+          "exists": true,
+          "sha256": "9c65df9cc40e1542fd95c06264f5a08b6367ddb0871de5915d86350f5ae42d56"
+        },
+        {
+          "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+          "exists": true,
+          "sha256": "db425231eef57dd88c894455e3e7165a7b804c236c039f13e48fa19b1ab511d9"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "title": "Derive emission, propagation, clocks and detection together",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03",
+        "T04"
+      ],
+      "criteria": [
+        {
+          "requirement": "Redshift, interval stretch, attenuation and angular distance follow from the same model.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+              "scope": "Exact stipulated energy kernels demonstrate spectral/photon-count non-identifiability of the energy ledger. Fixed travel conditions have no temporal dilation. No microscopic action rate or clock solution derived."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Operational nonexpansion survives in matter units or the candidate is rejected for this project.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+              "scope": "Exact stipulated energy kernels demonstrate spectral/photon-count non-identifiability of the energy ledger. Fixed travel conditions have no temporal dilation. No microscopic action rate or clock solution derived."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Atom/cavity protection is derived to a stated approximation, not declared.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+              "scope": "Exact stipulated energy kernels demonstrate spectral/photon-count non-identifiability of the energy ledger. Fixed travel conditions have no temporal dilation. No microscopic action rate or clock solution derived."
+            },
+            "action_specific_evidence": {
+              "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+              "scope": "Derived Z(chi)F^2 wave/scalar equations and verified three closed projected-mode examples. Leading adiabatic characteristic remains metric-null. Distinct electric-response operator recorded but not adopted. No full background, stability or cosmological redshift solution."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "theory/observable-transfer.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "theory/clock-response.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "theory/ray-and-pulse-solver.py",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/frequency-transfer/conversion-kernels.md",
+          "exists": true,
+          "sha256": "9c65df9cc40e1542fd95c06264f5a08b6367ddb0871de5915d86350f5ae42d56"
+        },
+        {
+          "path": "research_work/results/scalar-wave/scalar-wave-derivation.md",
+          "exists": true,
+          "sha256": "db425231eef57dd88c894455e3e7165a7b804c236c039f13e48fa19b1ab511d9"
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "title": "Derive gravity and audit consistency",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03",
+        "T04"
+      ],
+      "criteria": [
+        {
+          "requirement": "No extra gravity is inserted without a stress source or explicit modified-gravity term.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/gravity-response/motion-and-lensing.md",
+              "scope": "Explicit two-sector conformal scalar action; linear motion and lensing, measured-G normalization and coupling relation derived. Four force cases, eight lens integrals and three identities checked. No full nonlinear stability or observational fit."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Motion and light deflection have a common derivation.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/gravity-response/motion-and-lensing.md",
+              "scope": "Explicit two-sector conformal scalar action; linear motion and lensing, measured-G normalization and coupling relation derived. Four force cases, eight lens integrals and three identities checked. No full nonlinear stability or observational fit."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Every retained candidate has a stated viable perturbative domain or a scoped failure.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/gravity-response/motion-and-lensing.md",
+              "scope": "Explicit two-sector conformal scalar action; linear motion and lensing, measured-G normalization and coupling relation derived. Four force cases, eight lens integrals and three identities checked. No full nonlinear stability or observational fit."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "theory/field-equations.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "theory/weak-field-limit.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "theory/stability-matrix.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/gravity-response/motion-and-lensing.md",
+          "exists": true,
+          "sha256": "9124acb7cd311748bd78066a419330a8d66dd3d60f0669ce8ae23c845ba99d25"
+        }
+      ]
+    },
+    {
+      "id": "T16",
+      "title": "Construct a physical nonexpanding history",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T05",
+        "T09",
+        "T20"
+      ],
+      "criteria": [
+        {
+          "requirement": "At least one history solves the equations and respects operational nonexpansion, or the candidate is rejected.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Age and luminosity histories are compatible inputs to supply calculations.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "A static balance is not mislabeled stable; sinks and driver energy are specified.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "background/solutions.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "background/history-parameters.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "background/stability-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "background/drift-and-topology-predictions.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T06",
+      "title": "Compute independent photon and companion supply",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T04",
+        "T05",
+        "T16",
+        "T20"
+      ],
+      "criteria": [
+        {
+          "requirement": "Reproduces the recovered 10-Gyr limits under their assumptions.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Each new budget is independently normalized with recorded age, source population and capture assumptions.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Any claimed resolution of the deficit specifies its source, mass, energy and observational costs.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "supply/emissivity-history.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "supply/source-target-flux.csv",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "supply/budget-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "supply/systematics.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T07",
+      "title": "Derive capture and the stored state",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T03",
+        "T04",
+        "T09",
+        "T20"
+      ],
+      "criteria": [
+        {
+          "requirement": "A physically specified capture route has a rate and energy destination, or a quantitative obstruction is shown.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/radial-capture/capture-shape-findings.md",
+              "scope": "Analytic spatial benchmarks only. Prerequisite interaction, source history and gravity tasks incomplete. No task completion or physical mechanism claimed.",
+              "findings": [
+                "Fast capture of centrally generated companions gives a conditional flat outer deposited contribution.",
+                "Constant absorption of an isotropic external bath gives uniform or edge-weighted deposition in the tested model.",
+                "Fast-capture local supply exactly matches the archived optimistic local budget; no amplitude resolution."
+              ]
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Pressure and confinement are included.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/radial-capture/capture-shape-findings.md",
+              "scope": "Analytic spatial benchmarks only. Prerequisite interaction, source history and gravity tasks incomplete. No task completion or physical mechanism claimed.",
+              "findings": [
+                "Fast capture of centrally generated companions gives a conditional flat outer deposited contribution.",
+                "Constant absorption of an isotropic external bath gives uniform or edge-weighted deposition in the tested model.",
+                "Fast-capture local supply exactly matches the archived optimistic local budget; no amplitude resolution."
+              ]
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "No incoming radiation is assumed cold or permanently trapped solely because gravity is attractive.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/radial-capture/capture-shape-findings.md",
+              "scope": "Analytic spatial benchmarks only. Prerequisite interaction, source history and gravity tasks incomplete. No task completion or physical mechanism claimed.",
+              "findings": [
+                "Fast capture of centrally generated companions gives a conditional flat outer deposited contribution.",
+                "Constant absorption of an isotropic external bath gives uniform or edge-weighted deposition in the tested model.",
+                "Fast-capture local supply exactly matches the archived optimistic local budget; no amplitude resolution."
+              ]
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "capture/cross-sections.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "capture/stored-state.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "capture/retention-and-heating.csv",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/radial-capture/capture-shape-findings.md",
+          "exists": true,
+          "sha256": "97cea07d3e5787245b88e77365e4a07d972523e28d8b68d92ec6ac6d4cfd7f63"
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "title": "Solve transport, deposition and self-gravity",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T06",
+        "T07",
+        "T09"
+      ],
+      "criteria": [
+        {
+          "requirement": "Closed energy/momentum ledger and convergent predictions within predeclared tolerances.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/radial-capture/capture-shape-findings.md",
+              "scope": "Analytic spatial benchmarks only. Prerequisite interaction, source history and gravity tasks incomplete. No task completion or physical mechanism claimed.",
+              "findings": [
+                "Fast capture of centrally generated companions gives a conditional flat outer deposited contribution.",
+                "Constant absorption of an isotropic external bath gives uniform or edge-weighted deposition in the tested model.",
+                "Fast-capture local supply exactly matches the archived optimistic local budget; no amplitude resolution."
+              ]
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Halo amplitude, core, shape and outer extent follow from inputs rather than test-target fits.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/radial-capture/capture-shape-findings.md",
+              "scope": "Analytic spatial benchmarks only. Prerequisite interaction, source history and gravity tasks incomplete. No task completion or physical mechanism claimed.",
+              "findings": [
+                "Fast capture of centrally generated companions gives a conditional flat outer deposited contribution.",
+                "Constant absorption of an isotropic external bath gives uniform or edge-weighted deposition in the tested model.",
+                "Fast-capture local supply exactly matches the archived optimistic local budget; no amplitude resolution."
+              ]
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Permanent reservoirs are evolved in time rather than forced into an unsupported steady state.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/radial-capture/capture-shape-findings.md",
+              "scope": "Analytic spatial benchmarks only. Prerequisite interaction, source history and gravity tasks incomplete. No task completion or physical mechanism claimed.",
+              "findings": [
+                "Fast capture of centrally generated companions gives a conditional flat outer deposited contribution.",
+                "Constant absorption of an isotropic external bath gives uniform or edge-weighted deposition in the tested model.",
+                "Fast-capture local supply exactly matches the archived optimistic local budget; no amplitude resolution."
+              ]
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "transport/solver",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "transport/convergence.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "transport/halo-profiles.csv",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "transport/energy-ledger.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/radial-capture/capture-shape-findings.md",
+          "exists": true,
+          "sha256": "97cea07d3e5787245b88e77365e4a07d972523e28d8b68d92ec6ac6d4cfd7f63"
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "title": "Test laboratory, local gravity and binaries",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T05",
+        "T07",
+        "T09"
+      ],
+      "criteria": [
+        {
+          "requirement": "A single parameter region is compatible with declared local tests or is excluded with scoped assumptions.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "No independent local exemptions or per-instrument unconstrained offsets count as proof of agreement.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "constraints/local-predictions.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "constraints/local-likelihood-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T11",
+      "title": "Test distant light and gravitational waves",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T04",
+        "T05",
+        "T09",
+        "T16"
+      ],
+      "criteria": [
+        {
+          "requirement": "Same parameters predict frequency, timing, flux and tensor propagation.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "No separate refit of the redshift history conceals a changed clock or brightness model.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "constraints/light-gw-predictions.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "constraints/light-gw-likelihood-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T12",
+      "title": "Predict galaxy dynamics and environmental variation",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T08",
+        "T10",
+        "T11"
+      ],
+      "criteria": [
+        {
+          "requirement": "No per-test-galaxy halo/gain fits.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Scatter, outliers, scaling relations and controls are reported, not only mean RMSE.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "A causal illumination advantage is demonstrated or explicitly absent.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "validation/galaxy-predictions.csv",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/galaxy-controls.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/galaxy-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T13",
+      "title": "Predict independent lensing",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T08",
+        "T09",
+        "T12"
+      ],
+      "criteria": [
+        {
+          "requirement": "Lensing is generated from the same action and source distribution as rotation.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/gravity-response/motion-and-lensing.md",
+              "scope": "Explicit two-sector conformal scalar action; linear motion and lensing, measured-G normalization and coupling relation derived. Four force cases, eight lens integrals and three identities checked. No full nonlinear stability or observational fit."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "No lensing-only gravity normalization rescues the fit.",
+          "status": "completion_not_established",
+          "evidence": {
+            "preliminary_evidence": {
+              "path": "research_work/results/gravity-response/motion-and-lensing.md",
+              "scope": "Explicit two-sector conformal scalar action; linear motion and lensing, measured-G normalization and coupling relation derived. Four force cases, eight lens integrals and three identities checked. No full nonlinear stability or observational fit."
+            }
+          },
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "validation/lensing-predictions.csv",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/lensing-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": [
+        {
+          "path": "research_work/results/gravity-response/motion-and-lensing.md",
+          "exists": true,
+          "sha256": "9124acb7cd311748bd78066a419330a8d66dd3d60f0669ce8ae23c845ba99d25"
+        }
+      ]
+    },
+    {
+      "id": "T14",
+      "title": "Test clusters, mergers and capture offsets",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T08",
+        "T12",
+        "T13"
+      ],
+      "criteria": [
+        {
+          "requirement": "Both equilibrium and collision behavior are explained within one capture/retention prescription or the branch fails.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Hydrostatic-derived quantities are not mislabeled independent lensing measurements.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "validation/cluster-predictions.csv",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/merger-evolution.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/cluster-merger-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T15",
+      "title": "Test stellar, thermal and formation consequences",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T06",
+        "T07",
+        "T08",
+        "T09"
+      ],
+      "criteria": [
+        {
+          "requirement": "Energy losses/heating are compatible with the stipulated stellar/gas observations under quantified assumptions.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "There is no circular requirement for an already assembled final halo to create its own sole source.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "validation/thermal-stellar-budget.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "formation/history-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/compact-object-scope.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T17",
+      "title": "Construct and test full-universe predictions",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T06",
+        "T11",
+        "T15",
+        "T16"
+      ],
+      "criteria": [
+        {
+          "requirement": "The same background and interaction predict the registered cosmic observables without importing a contradictory expansion history.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Missing cosmological mechanisms remain explicit and prevent a full-universe completion claim.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "cosmology/transfer-functions",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "cosmology/observable-predictions.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "cosmology/joint-report.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T18",
+      "title": "Freeze discriminating tests and assess identifiability",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T12",
+        "T13",
+        "T14",
+        "T15",
+        "T17"
+      ],
+      "criteria": [
+        {
+          "requirement": "At least one nontrivial independent prediction distinguishes the model or observational equivalence is reported.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "All tested candidates and failed predictions remain in the record.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "Unidentifiable coupling/capture/history products are not reported as separately measured constants.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "validation/frozen-predictions.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/prediction-seal.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "validation/joint-verdict.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    },
+    {
+      "id": "T19",
+      "title": "Assemble the final theory or rejection dossier",
+      "recorded_status": "planned",
+      "depends_on": [
+        "T18"
+      ],
+      "criteria": [
+        {
+          "requirement": "Every R01\u2013R32 is passed, scoped, rejected or blocked with evidence.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "No claim exceeds demonstrated scope.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        },
+        {
+          "requirement": "A new reader can reproduce the reported conclusions from the released specification and data.",
+          "status": "completion_not_established",
+          "evidence": {},
+          "scope_limit": "Preliminary diagnostics do not establish the full criterion; consult original wording and evidence scopes."
+        }
+      ],
+      "deliverables": [
+        {
+          "required_path": "release/theory-or-rejection.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "release/requirements-status.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "release/reproduction-guide.md",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        },
+        {
+          "required_path": "release/source-manifest.json",
+          "exact_path_present": false,
+          "content_completion": "not_established_by_presence"
+        }
+      ],
+      "evidence_paths": []
+    }
+  ],
+  "requirements": [
+    {
+      "id": "R01",
+      "tasks": [
+        "T02",
+        "T03"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Final operational contract"
+    },
+    {
+      "id": "R02",
+      "tasks": [
+        "T03",
+        "T04"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Derived interaction kernel and reverse channels"
+    },
+    {
+      "id": "R03",
+      "tasks": [
+        "T04",
+        "T06",
+        "T08"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Full on-shell stress-energy derivation"
+    },
+    {
+      "id": "R04",
+      "tasks": [
+        "T03",
+        "T09"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Background-specific stability and radiative analysis"
+    },
+    {
+      "id": "R05",
+      "tasks": [
+        "T03",
+        "T11"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Selected field identity and observational transfer function"
+    },
+    {
+      "id": "R06",
+      "tasks": [
+        "T06",
+        "T15",
+        "T17"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Underlying photometry and historical fuel/source model"
+    },
+    {
+      "id": "R07",
+      "tasks": [
+        "T05",
+        "T11"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Raw spectral calibration and candidate distance reconstruction"
+    },
+    {
+      "id": "R08",
+      "tasks": [
+        "T05",
+        "T11"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Raw multiepoch observations and joint covariance"
+    },
+    {
+      "id": "R09",
+      "tasks": [
+        "T05",
+        "T11"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Candidate-consistent source calibration and count model"
+    },
+    {
+      "id": "R10",
+      "tasks": [
+        "T05",
+        "T11",
+        "T17"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Independent angular-size targets beyond processed galaxy tables"
+    },
+    {
+      "id": "R11",
+      "tasks": [
+        "T04",
+        "T05",
+        "T11"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Resolved spectra, PSFs, polarimetry and their covariances"
+    },
+    {
+      "id": "R12",
+      "tasks": [
+        "T05",
+        "T10"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Actual frequency time series and secular-drift likelihood"
+    },
+    {
+      "id": "R13",
+      "tasks": [
+        "T09",
+        "T10"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Primary local gravity/binary data and forward models"
+    },
+    {
+      "id": "R14",
+      "tasks": [
+        "T07",
+        "T08"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Physical capture and support mechanism"
+    },
+    {
+      "id": "R15",
+      "tasks": [
+        "T08",
+        "T12"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Spatial transport/self-gravity solution"
+    },
+    {
+      "id": "R16",
+      "tasks": [
+        "T12",
+        "T18"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Unused validation sample and covariance-aware likelihood"
+    },
+    {
+      "id": "R17",
+      "tasks": [
+        "T12",
+        "T15"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Primary non-rotation dynamical samples"
+    },
+    {
+      "id": "R18",
+      "tasks": [
+        "T09",
+        "T13"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Independent lensing measurements and same-field lens equations"
+    },
+    {
+      "id": "R19",
+      "tasks": [
+        "T13",
+        "T14"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Profile-level observations and lensing; published masses are derived"
+    },
+    {
+      "id": "R20",
+      "tasks": [
+        "T07",
+        "T14"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Merger images/spectra and dynamical simulations"
+    },
+    {
+      "id": "R21",
+      "tasks": [
+        "T06",
+        "T12",
+        "T14"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Independently selected environmental comparison sample"
+    },
+    {
+      "id": "R22",
+      "tasks": [
+        "T07",
+        "T15"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Primary thermal/stellar constraints and evolution calculation"
+    },
+    {
+      "id": "R23",
+      "tasks": [
+        "T04",
+        "T10",
+        "T11"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Strain data and consistent emission/propagation model"
+    },
+    {
+      "id": "R24",
+      "tasks": [
+        "T09",
+        "T15"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Compact-object observations and strong-field solution"
+    },
+    {
+      "id": "R25",
+      "tasks": [
+        "T17"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Full error covariance and radiation-production history"
+    },
+    {
+      "id": "R26",
+      "tasks": [
+        "T16",
+        "T17"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Full likelihood/TE and candidate perturbation transfer functions"
+    },
+    {
+      "id": "R27",
+      "tasks": [
+        "T16",
+        "T17"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Galaxy catalogs and candidate-consistent clustering pipeline"
+    },
+    {
+      "id": "R28",
+      "tasks": [
+        "T15",
+        "T17"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Independent abundance/population inputs and new-history model"
+    },
+    {
+      "id": "R29",
+      "tasks": [
+        "T16"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Solved background, stability and primary drift/topology tests"
+    },
+    {
+      "id": "R30",
+      "tasks": [
+        "T06",
+        "T16",
+        "T17"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Multi-band background compilation and closed global ledger"
+    },
+    {
+      "id": "R31",
+      "tasks": [
+        "T01",
+        "T06",
+        "T18"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Candidate-specific joint likelihood and simulation calibration"
+    },
+    {
+      "id": "R32",
+      "tasks": [
+        "T18",
+        "T19"
+      ],
+      "status": "completion_not_established",
+      "remaining": "Unexposed validation targets and frozen predictive distribution"
+    }
+  ],
+  "original_files": {
+    "match": 271,
+    "missing_historical": 5,
+    "changed": 0
+  },
+  "baseline": {
+    "status": "baseline executed; small regression deviations explicitly retained",
+    "snapshot_matched": 271,
+    "snapshot_missing_historical": 5,
+    "scripts": [
+      {
+        "script": "run.py",
+        "exit_code": 0,
+        "seconds": 2.196532964706421
+      },
+      {
+        "script": "followup.py",
+        "exit_code": 0,
+        "seconds": 9.759495258331299
+      },
+      {
+        "script": "circulation.py",
+        "exit_code": 0,
+        "seconds": 0.1930406093597412
+      }
+    ],
+    "numeric_leaves_compared": 30252,
+    "tolerance_exceedances": 170,
+    "max_prediction_difference_kms": 0.01980150112083834,
+    "model_ranking_unchanged": true,
+    "original_outputs_preserved": true
+  },
+  "interpretation": "This checkpoint distinguishes completed baseline work from partial derivations. It is not a claim that the full theory or roadmap has passed."
+}

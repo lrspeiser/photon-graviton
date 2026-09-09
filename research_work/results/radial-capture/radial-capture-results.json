@@ -1,0 +1,940 @@
+{
+  "scope": "Point source; radial straight transport; steady luminosity; constant coefficients; permanent fixed deposits; no secondary loss; deposited Newtonian contribution only",
+  "alpha_per_kpc": 2.5216780343170007e-07,
+  "duration_years": 10000000000.0,
+  "checks": [
+    {
+      "check": "independent_radial_ODE_and_energy",
+      "alpha": 1,
+      "beta": 0.2,
+      "error": 6.590283874174929e-13,
+      "residual": 1.1102230246251565e-16
+    },
+    {
+      "check": "independent_radial_ODE_and_energy",
+      "alpha": 1,
+      "beta": 1,
+      "error": 7.492062525926713e-13,
+      "residual": 1.1102230246251565e-16
+    },
+    {
+      "check": "independent_radial_ODE_and_energy",
+      "alpha": 0.2,
+      "beta": 1,
+      "error": 5.124789481669723e-13,
+      "residual": 1.1102230246251565e-16
+    },
+    {
+      "check": "independent_radial_ODE_and_energy",
+      "alpha": 0,
+      "beta": 1,
+      "error": 0.0,
+      "residual": 0.0
+    },
+    {
+      "check": "independent_radial_ODE_and_energy",
+      "alpha": 1,
+      "beta": 0,
+      "error": 1.0106915304675113e-12,
+      "residual": 0.0
+    },
+    {
+      "check": "independent_radial_ODE_and_energy",
+      "alpha": 1e-07,
+      "beta": 0.001,
+      "error": 1.1102230246251565e-16,
+      "residual": 1.1102230246251565e-16
+    },
+    {
+      "check": "short_path_double_transfer_limit",
+      "relative_error": 1.6666650831664853e-06
+    },
+    {
+      "check": "instant_capture_limit_matches_archived_local_supply",
+      "galaxies": 26,
+      "rtol": 1e-12
+    }
+  ],
+  "shape_scenarios": [
+    {
+      "beta_R": 0.1,
+      "outer_deposited_fraction": 4.837401777804041e-07,
+      "velocity_ratio_at_half_radius": 0.7129506779994731
+    },
+    {
+      "beta_R": 1,
+      "outer_deposited_fraction": 3.6787811996930884e-06,
+      "velocity_ratio_at_half_radius": 0.7610267990330951
+    },
+    {
+      "beta_R": 10,
+      "outer_deposited_fraction": 9.00000440010083e-06,
+      "velocity_ratio_at_half_radius": 0.9436015513693539
+    },
+    {
+      "beta_R": 1000,
+      "outer_deposited_fraction": 9.98995010006617e-06,
+      "velocity_ratio_at_half_radius": 0.9995006235573296
+    }
+  ],
+  "galaxies": [
+    {
+      "galaxy": "IC2574",
+      "radius_kpc": 10.23,
+      "luminosity_Lsun": 1290288451.4276063,
+      "alpha_R": 2.579676629106292e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 2.5771516302078273e-06,
+          "required_energy_or_response_multiplier": 3736290139.290116,
+          "deposited_velocity_km_s": 0.0009721064887251285
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 2.3275151813750315e-06,
+          "required_energy_or_response_multiplier": 4137024024.7852707,
+          "deposited_velocity_km_s": 0.0009238258651598594
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 9.645782144633639e-07,
+          "required_energy_or_response_multiplier": 9982587289.469284,
+          "deposited_velocity_km_s": 0.0005947200505567931
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.275635984025805e-07,
+          "required_energy_or_response_multiplier": 75483808421.68346,
+          "deposited_velocity_km_s": 0.00021627545632835565
+        }
+      ],
+      "instant_capture_shortfall": 3732637856.4655766
+    },
+    {
+      "galaxy": "NGC0289",
+      "radius_kpc": 71.12,
+      "luminosity_Lsun": 46773674903.290825,
+      "alpha_R": 1.793417418006251e-05,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 1.793149173090525e-05,
+          "required_energy_or_response_multiplier": 647224116.301521,
+          "deposited_velocity_km_s": 0.005855329650346569
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.7681850019083697e-05,
+          "required_energy_or_response_multiplier": 656361968.7406785,
+          "deposited_velocity_km_s": 0.0058144279277998305
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.54144300300175e-05,
+          "required_energy_or_response_multiplier": 752910997.4811053,
+          "deposited_velocity_km_s": 0.005428837919089113
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 5.100177067245772e-06,
+          "required_energy_or_response_multiplier": 2275547247.96458,
+          "deposited_velocity_km_s": 0.0031227395770362476
+        }
+      ],
+      "instant_capture_shortfall": 647133112.601544
+    },
+    {
+      "galaxy": "NGC0300",
+      "radius_kpc": 11.8,
+      "luminosity_Lsun": 3589995349.0849977,
+      "alpha_R": 2.975580080494061e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 2.973053982922812e-06,
+          "required_energy_or_response_multiplier": 2909350319.968733,
+          "deposited_velocity_km_s": 0.0016216069788992987
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 2.7234104291926548e-06,
+          "required_energy_or_response_multiplier": 3176038199.6719303,
+          "deposited_velocity_km_s": 0.001552032300399125
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.2287587632201341e-06,
+          "required_energy_or_response_multiplier": 7039343942.36438,
+          "deposited_velocity_km_s": 0.0010425034991715042
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.6885271883701932e-07,
+          "required_energy_or_response_multiplier": 51226036607.97226,
+          "deposited_velocity_km_s": 0.00038645438213627434
+        }
+      ],
+      "instant_capture_shortfall": 2906884772.5121183
+    },
+    {
+      "galaxy": "NGC0891",
+      "radius_kpc": 17.11,
+      "luminosity_Lsun": 63654994336.21764,
+      "alpha_R": 4.314591116716388e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 4.312060141720833e-06,
+          "required_energy_or_response_multiplier": 455451094.4052338,
+          "deposited_velocity_km_s": 0.006829232679392735
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 4.0624150392122405e-06,
+          "required_energy_or_response_multiplier": 483439651.47115433,
+          "deposited_velocity_km_s": 0.0066285975316791165
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 2.2485388837278163e-06,
+          "required_energy_or_response_multiplier": 873426083.4448943,
+          "deposited_velocity_km_s": 0.004931507593786815
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 3.4893153297411816e-07,
+          "required_energy_or_response_multiplier": 5628417970.563913,
+          "deposited_velocity_km_s": 0.0019426725979461385
+        }
+      ],
+      "instant_capture_shortfall": 455184904.9762381
+    },
+    {
+      "galaxy": "NGC2403",
+      "radius_kpc": 20.87,
+      "luminosity_Lsun": 10024293612.1865,
+      "alpha_R": 5.262742057619581e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 5.260206544647122e-06,
+          "required_energy_or_response_multiplier": 2084288320.650348,
+          "deposited_velocity_km_s": 0.0027102249025638394
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 5.010561669705275e-06,
+          "required_energy_or_response_multiplier": 2188135340.4959526,
+          "deposited_velocity_km_s": 0.0026451307158770064
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 3.053894111907307e-06,
+          "required_energy_or_response_multiplier": 3590100594.014734,
+          "deposited_velocity_km_s": 0.0020650516577151966
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 5.128753814828852e-07,
+          "required_energy_or_response_multiplier": 21377097558.31278,
+          "deposited_velocity_km_s": 0.0008462717805254849
+        }
+      ],
+      "instant_capture_shortfall": 2083289622.5950654
+    },
+    {
+      "galaxy": "NGC2841",
+      "radius_kpc": 63.64,
+      "luminosity_Lsun": 75764274813.49559,
+      "alpha_R": 1.6047959010393393e-05,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 1.60453086050148e-05,
+          "required_energy_or_response_multiplier": 1344242958.497332,
+          "deposited_velocity_km_s": 0.007452113400912136
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.579566642231482e-05,
+          "required_energy_or_response_multiplier": 1365488009.9732401,
+          "deposited_velocity_km_s": 0.007393913995317044
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.3530529825178011e-05,
+          "required_energy_or_response_multiplier": 1594083408.9934857,
+          "deposited_velocity_km_s": 0.006843256511046685
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 4.175726519116274e-06,
+          "required_energy_or_response_multiplier": 5165279146.14784,
+          "deposited_velocity_km_s": 0.0038016439665286375
+        }
+      ],
+      "instant_capture_shortfall": 1344031734.0825398
+    },
+    {
+      "galaxy": "NGC2915",
+      "radius_kpc": 10.04,
+      "luminosity_Lsun": 558267714.7615882,
+      "alpha_R": 2.5317647464542683e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 2.5292398698842193e-06,
+          "required_energy_or_response_multiplier": 16991024453.95465,
+          "deposited_velocity_km_s": 0.000639422151722682
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 2.279605312454329e-06,
+          "required_energy_or_response_multiplier": 18851674122.855785,
+          "deposited_velocity_km_s": 0.0006070472530022732
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 9.34056086169598e-07,
+          "required_energy_or_response_multiplier": 46008346945.5783,
+          "deposited_velocity_km_s": 0.00038857883804630503
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.229457061161512e-07,
+          "required_energy_or_response_multiplier": 349539466132.47656,
+          "deposited_velocity_km_s": 0.00014097735261714263
+        }
+      ],
+      "instant_capture_shortfall": 16974101144.205477
+    },
+    {
+      "galaxy": "NGC2976",
+      "radius_kpc": 2.27,
+      "luminosity_Lsun": 2411701611.7053275,
+      "alpha_R": 5.724209137899592e-07,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 5.698990733599242e-07,
+          "required_energy_or_response_multiplier": 2086174053.4601755,
+          "deposited_velocity_km_s": 0.0013267408513464502
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 3.463050393717158e-07,
+          "required_energy_or_response_multiplier": 3433125495.636591,
+          "deposited_velocity_km_s": 0.0010342285726743672
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 6.032049954078301e-08,
+          "required_energy_or_response_multiplier": 19709860975.714294,
+          "deposited_velocity_km_s": 0.00043163791984782846
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 6.44809340054401e-09,
+          "required_energy_or_response_multiplier": 184381426583.26965,
+          "deposited_velocity_km_s": 0.0001411246201470835
+        }
+      ],
+      "instant_capture_shortfall": 2076983861.9992237
+    },
+    {
+      "galaxy": "NGC3198",
+      "radius_kpc": 44.08,
+      "luminosity_Lsun": 24169044421.52306,
+      "alpha_R": 1.1115556775269338e-05,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 1.1112973347686049e-05,
+          "required_energy_or_response_multiplier": 1016872052.9986215,
+          "deposited_velocity_km_s": 0.004208839371457174
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.0863329933647371e-05,
+          "required_energy_or_response_multiplier": 1040240155.827278,
+          "deposited_velocity_km_s": 0.00416129687135807
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 8.624551522156082e-06,
+          "required_energy_or_response_multiplier": 1310267785.397313,
+          "deposited_velocity_km_s": 0.0037077929598137212
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 2.126306012185233e-06,
+          "required_energy_or_response_multiplier": 5314602864.41406,
+          "deposited_velocity_km_s": 0.0018410267490523461
+        }
+      ],
+      "instant_capture_shortfall": 1016641366.4278357
+    },
+    {
+      "galaxy": "NGC3521",
+      "radius_kpc": 17.74,
+      "luminosity_Lsun": 45802953822.456245,
+      "alpha_R": 4.4734568328783585e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 4.470925160225177e-06,
+          "required_energy_or_response_multiplier": 887745937.088268,
+          "deposited_velocity_km_s": 0.005793045019541521
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 4.221280093005363e-06,
+          "required_energy_or_response_multiplier": 940246929.5018592,
+          "deposited_velocity_km_s": 0.005628987552578128
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 2.3795850814531567e-06,
+          "required_energy_or_response_multiplier": 1667957021.98293,
+          "deposited_velocity_km_s": 0.004226285406848235
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 3.7433597197034496e-07,
+          "required_energy_or_response_multiplier": 10602896711.006027,
+          "deposited_velocity_km_s": 0.001676250748832953
+        }
+      ],
+      "instant_capture_shortfall": 887245517.7231712
+    },
+    {
+      "galaxy": "NGC3953",
+      "radius_kpc": 15.68,
+      "luminosity_Lsun": 63010728215.02442,
+      "alpha_R": 3.953991157809057e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 3.951461672726318e-06,
+          "required_energy_or_response_multiplier": 452534745.94616234,
+          "deposited_velocity_km_s": 0.006794404130839789
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 3.7018165099233433e-06,
+          "required_energy_or_response_multiplier": 483053036.094496,
+          "deposited_velocity_km_s": 0.0065762744913349025
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.957983506257263e-06,
+          "required_energy_or_response_multiplier": 913273119.2416135,
+          "deposited_velocity_km_s": 0.004782742537167421
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 2.944059392059901e-07,
+          "required_energy_or_response_multiplier": 6073837059.829326,
+          "deposited_velocity_km_s": 0.0018545808528039492
+        }
+      ],
+      "instant_capture_shortfall": 452246140.17292976
+    },
+    {
+      "galaxy": "NGC4013",
+      "radius_kpc": 31.01,
+      "luminosity_Lsun": 33988569528.564693,
+      "alpha_R": 7.81972358441702e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 7.817171352136317e-06,
+          "required_energy_or_response_multiplier": 890801576.7681077,
+          "deposited_velocity_km_s": 0.0049908974253814655
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 7.567527115313243e-06,
+          "required_energy_or_response_multiplier": 920188122.2544214,
+          "deposited_velocity_km_s": 0.004910557730819001
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 5.4115146635749636e-06,
+          "required_energy_or_response_multiplier": 1286802124.59209,
+          "deposited_velocity_km_s": 0.0041525344881464
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.0962616753465576e-06,
+          "required_energy_or_response_multiplier": 6352086114.976288,
+          "deposited_velocity_km_s": 0.001869007069723455
+        }
+      ],
+      "instant_capture_shortfall": 890514315.208576
+    },
+    {
+      "galaxy": "NGC4051",
+      "radius_kpc": 12.19,
+      "luminosity_Lsun": 62616204288.96217,
+      "alpha_R": 3.0739255238324236e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 3.0713991290389644e-06,
+          "required_energy_or_response_multiplier": 165591173.00711095,
+          "deposited_velocity_km_s": 0.0067724828262693436
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 2.8217549887200267e-06,
+          "required_energy_or_response_multiplier": 180241228.09517387,
+          "deposited_velocity_km_s": 0.006491415897873402
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.2974663115923513e-06,
+          "required_energy_or_response_multiplier": 391992131.1300884,
+          "deposited_velocity_km_s": 0.004401774895452015
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.7996914485128236e-07,
+          "required_energy_or_response_multiplier": 2826021010.272957,
+          "deposited_velocity_km_s": 0.001639376897287357
+        }
+      ],
+      "instant_capture_shortfall": 165455331.4001238
+    },
+    {
+      "galaxy": "NGC4100",
+      "radius_kpc": 22.76,
+      "luminosity_Lsun": 29974113515.677902,
+      "alpha_R": 5.739339206105494e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 5.73680107256179e-06,
+          "required_energy_or_response_multiplier": 829764584.7081568,
+          "deposited_velocity_km_s": 0.004686625037171418
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 5.487156316415093e-06,
+          "required_energy_or_response_multiplier": 867515719.4423624,
+          "deposited_velocity_km_s": 0.004583518400635921
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 3.476615083574752e-06,
+          "required_energy_or_response_multiplier": 1369203735.5579147,
+          "deposited_velocity_km_s": 0.0036484098367808105
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 6.062801500364095e-07,
+          "required_energy_or_response_multiplier": 7851476515.0098915,
+          "deposited_velocity_km_s": 0.0015235685094430534
+        }
+      ],
+      "instant_capture_shortfall": 829400014.31903
+    },
+    {
+      "galaxy": "NGC4138",
+      "radius_kpc": 18.58,
+      "luminosity_Lsun": 18809381832.129375,
+      "alpha_R": 4.685277787760987e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 4.682745145638213e-06,
+          "required_energy_or_response_multiplier": 1183833724.0513685,
+          "deposited_velocity_km_s": 0.003712384371378177
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 4.433100128467872e-06,
+          "required_energy_or_response_multiplier": 1250499980.576861,
+          "deposited_velocity_km_s": 0.0036120723846522246
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 2.556937376004561e-06,
+          "required_energy_or_response_multiplier": 2168059208.8675637,
+          "deposited_velocity_km_s": 0.0027432331499968815
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 4.095114487862296e-07,
+          "required_energy_or_response_multiplier": 13537085815.244646,
+          "deposited_velocity_km_s": 0.0010978315269881442
+        }
+      ],
+      "instant_capture_shortfall": 1183196570.6855214
+    },
+    {
+      "galaxy": "NGC4183",
+      "radius_kpc": 21.02,
+      "luminosity_Lsun": 7155539765.002436,
+      "alpha_R": 5.300567228134335e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 5.298031515478298e-06,
+          "required_energy_or_response_multiplier": 1959827286.6210198,
+          "deposited_velocity_km_s": 0.002289814918756393
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 5.04838664994898e-06,
+          "required_energy_or_response_multiplier": 2056741578.919558,
+          "deposited_velocity_km_s": 0.0022352155840298336
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 3.0870616415069536e-06,
+          "required_energy_or_response_multiplier": 3363465954.0986347,
+          "deposited_velocity_km_s": 0.0017478967007508266
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 5.2002317436033e-07,
+          "required_energy_or_response_multiplier": 19966853866.050644,
+          "deposited_velocity_km_s": 0.0007173885832597234
+        }
+      ],
+      "instant_capture_shortfall": 1958894925.965706
+    },
+    {
+      "galaxy": "NGC4217",
+      "radius_kpc": 16.72,
+      "luminosity_Lsun": 45616382927.776375,
+      "alpha_R": 4.216245673378025e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 4.213715117618043e-06,
+          "required_energy_or_response_multiplier": 472648808.73276716,
+          "deposited_velocity_km_s": 0.005781135377590966
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 3.964069995018783e-06,
+          "required_energy_or_response_multiplier": 502414799.2300986,
+          "deposited_velocity_km_s": 0.005607266679199868
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 2.168314260729502e-06,
+          "required_energy_or_response_multiplier": 918504972.6193143,
+          "deposited_velocity_km_s": 0.004147072876819542
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 3.3362732122433665e-07,
+          "required_energy_or_response_multiplier": 5969557359.3094,
+          "deposited_velocity_km_s": 0.0016267145772697986
+        }
+      ],
+      "instant_capture_shortfall": 472366124.6337698
+    },
+    {
+      "galaxy": "NGC4559",
+      "radius_kpc": 20.97,
+      "luminosity_Lsun": 15866635165.63975,
+      "alpha_R": 5.28795883796275e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 5.285423192026876e-06,
+          "required_energy_or_response_multiplier": 805287328.2840838,
+          "deposited_velocity_km_s": 0.003409740700889344
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 5.035778323359547e-06,
+          "required_energy_or_response_multiplier": 845208833.2431874,
+          "deposited_velocity_km_s": 0.0033282410488212244
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 3.0759980424062812e-06,
+          "required_energy_or_response_multiplier": 1383708397.2356713,
+          "deposited_velocity_km_s": 0.0026012045080570276
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 5.176354642978344e-07,
+          "required_energy_or_response_multiplier": 8222551611.550902,
+          "deposited_velocity_km_s": 0.0010670714054674786
+        }
+      ],
+      "instant_capture_shortfall": 804903310.5439057
+    },
+    {
+      "galaxy": "NGC5033",
+      "radius_kpc": 44.59,
+      "luminosity_Lsun": 58094466086.54464,
+      "alpha_R": 1.1244162355019507e-05,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 1.1241577489976232e-05,
+          "required_energy_or_response_multiplier": 718064725.8656263,
+          "deposited_velocity_km_s": 0.006525300905733661
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.0991934108043088e-05,
+          "required_energy_or_response_multiplier": 734373057.4886135,
+          "deposited_velocity_km_s": 0.006452439962784517
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 8.751628902803746e-06,
+          "required_energy_or_response_multiplier": 922363179.2763638,
+          "deposited_velocity_km_s": 0.0057574657233181205
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 2.1723615538730973e-06,
+          "required_energy_or_response_multiplier": 3715854869.667119,
+          "deposited_velocity_km_s": 0.0028684875429901982
+        }
+      ],
+      "instant_capture_shortfall": 717903689.6039834
+    },
+    {
+      "galaxy": "NGC5055",
+      "radius_kpc": 54.59,
+      "luminosity_Lsun": 89646263473.17125,
+      "alpha_R": 1.3765840389336508e-05,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 1.3763223997262564e-05,
+          "required_energy_or_response_multiplier": 332782368.3581299,
+          "deposited_velocity_km_s": 0.008106024389954199
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.351358124484886e-05,
+          "required_energy_or_response_multiplier": 338930013.8183844,
+          "deposited_velocity_km_s": 0.00803217284630142
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.1254832816890525e-05,
+          "required_energy_or_response_multiplier": 406950361.01992375,
+          "deposited_velocity_km_s": 0.007330225603651233
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 3.1576341584941926e-06,
+          "required_energy_or_response_multiplier": 1450503145.1257997,
+          "deposited_velocity_km_s": 0.0038826542898532236
+        }
+      ],
+      "instant_capture_shortfall": 332721408.4609532
+    },
+    {
+      "galaxy": "NGC5907",
+      "radius_kpc": 50.33,
+      "luminosity_Lsun": 71510635360.18391,
+      "alpha_R": 1.2691605546717464e-05,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 1.2689003362595772e-05,
+          "required_energy_or_response_multiplier": 646912671.020902,
+          "deposited_velocity_km_s": 0.007239755130677736
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.2439360342006981e-05,
+          "required_energy_or_response_multiplier": 659895431.292381,
+          "deposited_velocity_km_s": 0.007168184011973282
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.0186312043701537e-05,
+          "required_energy_or_response_multiplier": 805853681.1628186,
+          "deposited_velocity_km_s": 0.006486622275825802
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 2.7191741636578885e-06,
+          "required_energy_or_response_multiplier": 3018812537.8653784,
+          "deposited_velocity_km_s": 0.0033514182764279015
+        }
+      ],
+      "instant_capture_shortfall": 646784137.6278003
+    },
+    {
+      "galaxy": "NGC6946",
+      "radius_kpc": 20.4,
+      "luminosity_Lsun": 49988123241.88475,
+      "alpha_R": 5.144223190006681e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 5.14168829344462e-06,
+          "required_energy_or_response_multiplier": 404694689.2445424,
+          "deposited_velocity_km_s": 0.006052147063185899
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 4.892043389045794e-06,
+          "required_energy_or_response_multiplier": 425346584.3674254,
+          "deposited_velocity_km_s": 0.005903393738763349
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 2.9504299082832286e-06,
+          "required_energy_or_response_multiplier": 705257881.3230098,
+          "deposited_velocity_km_s": 0.004584576786822376
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 4.907774835217733e-07,
+          "required_energy_or_response_multiplier": 4239831728.1716876,
+          "deposited_velocity_km_s": 0.0018698161859816
+        }
+      ],
+      "instant_capture_shortfall": 404496310.00466686
+    },
+    {
+      "galaxy": "NGC7331",
+      "radius_kpc": 36.31,
+      "luminosity_Lsun": 119080703713.93553,
+      "alpha_R": 9.15621294260503e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 9.153649369663481e-06,
+          "required_energy_or_response_multiplier": 438607535.268288,
+          "deposited_velocity_km_s": 0.009342066967204327
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 8.904005466487041e-06,
+          "required_energy_or_response_multiplier": 450904888.1258412,
+          "deposited_velocity_km_s": 0.009213795072808487
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 6.701308336759802e-06,
+          "required_energy_or_response_multiplier": 599115782.6173794,
+          "deposited_velocity_km_s": 0.007993291298653503
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.4781243008857652e-06,
+          "required_energy_or_response_multiplier": 2716185361.6318436,
+          "deposited_velocity_km_s": 0.0037540609397762113
+        }
+      ],
+      "instant_capture_shortfall": 438486740.5758107
+    },
+    {
+      "galaxy": "NGC7793",
+      "radius_kpc": 7.87,
+      "luminosity_Lsun": 4958749329.253839,
+      "alpha_R": 1.9845606130074795e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 1.982036970732111e-06,
+          "required_energy_or_response_multiplier": 1389927561.9564245,
+          "deposited_velocity_km_s": 0.0019054293683281214
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.732487613980216e-06,
+          "required_energy_or_response_multiplier": 1590134204.8316884,
+          "deposited_velocity_km_s": 0.0017814434814668666
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 6.107711074067461e-07,
+          "required_energy_or_response_multiplier": 4510507751.642136,
+          "deposited_velocity_km_s": 0.0010577334076919932
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 7.608346443434552e-08,
+          "required_energy_or_response_multiplier": 36208758827.148926,
+          "deposited_velocity_km_s": 0.00037332074091000523
+        }
+      ],
+      "instant_capture_shortfall": 1388161454.985314
+    },
+    {
+      "galaxy": "UGC04483",
+      "radius_kpc": 1.21,
+      "luminosity_Lsun": 26789019.763681743,
+      "alpha_R": 3.051230421523571e-07,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 3.026013183310725e-07,
+          "required_energy_or_response_multiplier": 20886648553.58016,
+          "deposited_velocity_km_s": 0.0001395594990963627
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 1.2815097742932039e-07,
+          "required_energy_or_response_multiplier": 49319384952.15161,
+          "deposited_velocity_km_s": 9.082072315456625e-05
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 1.7737379577557482e-08,
+          "required_energy_or_response_multiplier": 356328135178.8877,
+          "deposited_velocity_km_s": 3.378848536578051e-05
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.8385711753445587e-09,
+          "required_energy_or_response_multiplier": 3437629977336.4385,
+          "deposited_velocity_km_s": 1.0878379807076514e-05
+        }
+      ],
+      "instant_capture_shortfall": 20714031649.2847
+    },
+    {
+      "galaxy": "UGC07089",
+      "radius_kpc": 9.16,
+      "luminosity_Lsun": 2683955062.6878543,
+      "alpha_R": 2.309857079434373e-06,
+      "scenarios": [
+        {
+          "capture_length_kpc": 0.01,
+          "deposited_fraction": 2.3073327395005967e-06,
+          "required_energy_or_response_multiplier": 2302107810.0154395,
+          "deposited_velocity_km_s": 0.0014019523904315405
+        },
+        {
+          "capture_length_kpc": 1.0,
+          "deposited_fraction": 2.0577136458709973e-06,
+          "required_energy_or_response_multiplier": 2581374104.490751,
+          "deposited_velocity_km_s": 0.0013239470615815407
+        },
+        {
+          "capture_length_kpc": 10.0,
+          "deposited_fraction": 7.971428967695789e-07,
+          "required_energy_or_response_multiplier": 6663458636.380529,
+          "deposited_velocity_km_s": 0.0008240361065935133
+        },
+        {
+          "capture_length_kpc": 100.0,
+          "deposited_fraction": 1.0263384495061495e-07,
+          "required_energy_or_response_multiplier": 51754162795.56247,
+          "deposited_velocity_km_s": 0.00029568102209032496
+        }
+      ],
+      "instant_capture_shortfall": 2299594594.778484
+    }
+  ]
+}

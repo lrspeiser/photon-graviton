@@ -1,0 +1,632 @@
+[
+  {
+    "id": "R01",
+    "area": "Operational definitions",
+    "required_response": "Define physical rods/clocks, nonexpansion, photons, gravitons, deposits and the matter metric. Distinguish coordinate changes from observable changes.",
+    "tasks": [
+      "T02",
+      "T03"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Dimensionless source separation in material rods; clock ratios",
+    "units": "dimensionless; s",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Matter metric, material rod response, atomic transition convention",
+    "missing_for_completion": "Final operational contract",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R02",
+    "area": "Microscopic conversion",
+    "required_response": "Specify the interaction, allowed channels, energy/momentum/angular-momentum exchange, rate and inverse processes.",
+    "tasks": [
+      "T03",
+      "T04"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Transition amplitudes and differential conversion rates",
+    "units": "s^-1; m^-1; m^2",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Field normalization, backgrounds, occupation numbers",
+    "missing_for_completion": "Derived interaction kernel and reverse channels",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R03",
+    "area": "Conservation",
+    "required_response": "Account for photons, free gravitons, deposits, matter, driver, heat and boundary flux. No free energy or double counting.",
+    "tasks": [
+      "T04",
+      "T06",
+      "T08"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Total energy and momentum balance including boundary flow",
+    "units": "J; kg m s^-1; W",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Control volume, frame, gravitational work, interaction partition",
+    "missing_for_completion": "Full on-shell stress-energy derivation",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R04",
+    "area": "Quantum/classical consistency",
+    "required_response": "Gauge constraints, propagating degrees of freedom, positive kinetic energies, causal characteristics, perturbative regime and radiative stability.",
+    "tasks": [
+      "T03",
+      "T09"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Constraint count and kinetic/gradient eigenvalues",
+    "units": "degrees of freedom; normalized eigenvalues",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Background solution, gauge, cutoff",
+    "missing_for_completion": "Background-specific stability and radiative analysis",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R05",
+    "area": "Graviton identity",
+    "required_response": "Determine whether the new radiation is the ordinary massless tensor sector or a new field. Give its mass, spin, dispersion, polarization, interactions and observational consequences.",
+    "tasks": [
+      "T03",
+      "T11"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Companion mass, spin, dispersion and polarizations",
+    "units": "eV/c^2; omega(k) in s^-1",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Matter frame and field identity",
+    "missing_for_completion": "Selected field identity and observational transfer function",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R06",
+    "area": "Source production",
+    "required_response": "Stellar and AGN luminosity histories, radiation bands, dust reprocessing, obscured sources, completeness and formation of early halos.",
+    "tasks": [
+      "T06",
+      "T15",
+      "T17"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Observed multiband fluxes and inferred luminosity history",
+    "units": "W m^-2; W; J",
+    "local_input_ids": [
+      "dustpedia_themis",
+      "dustpedia_dl14",
+      "dustpedia_schema"
+    ],
+    "nuisance_and_model_dependencies": "Distance, SED model, dust, band completeness, initial mass function",
+    "missing_for_completion": "Underlying photometry and historical fuel/source model",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R07",
+    "area": "Redshift",
+    "required_response": "Predict observed atomic-line ratios versus independently inferred distance and source/observer conditions. Include peculiar velocities and gravitational endpoint shifts.",
+    "tasks": [
+      "T05",
+      "T11"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Spectral redshifts versus independent distance information",
+    "units": "dimensionless; Mpc",
+    "local_input_ids": [
+      "cf4_catalog",
+      "cf4_schema",
+      "supernova_standardized"
+    ],
+    "nuisance_and_model_dependencies": "Reference frame, peculiar velocities, distance indicators",
+    "missing_for_completion": "Raw spectral calibration and candidate distance reconstruction",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R08",
+    "area": "Time dilation",
+    "required_response": "Predict complete transient light curves and spectral aging, not merely carrier-frequency shifts.",
+    "tasks": [
+      "T05",
+      "T11"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Transient widths and spectral-age progression",
+    "units": "days; dimensionless stretch",
+    "local_input_ids": [
+      "transient_widths",
+      "spectral_aging"
+    ],
+    "nuisance_and_model_dependencies": "Rest-band mapping, templates, selection, source population",
+    "missing_for_completion": "Raw multiepoch observations and joint covariance",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R09",
+    "area": "Brightness and photon counts",
+    "required_response": "Predict flux, attenuation, luminosity distance and source calibration from the same transport model.",
+    "tasks": [
+      "T05",
+      "T11"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Flux/counts and standardized apparent brightness",
+    "units": "W m^-2; counts s^-1; mag",
+    "local_input_ids": [
+      "supernova_standardized",
+      "supernova_covariance",
+      "supernova_schema"
+    ],
+    "nuisance_and_model_dependencies": "Absolute calibration, light-curve standardization, dust, selection",
+    "missing_for_completion": "Candidate-consistent source calibration and count model",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R10",
+    "area": "Angular distances and surface brightness",
+    "required_response": "Predict source sizes, angular distances and reciprocity/duality relations; identify justified rulers instead of importing an expansion-based ruler.",
+    "tasks": [
+      "T05",
+      "T11",
+      "T17"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Angular sizes and surface brightness",
+    "units": "rad; W m^-2 sr^-1",
+    "local_input_ids": [
+      "sparc_catalog",
+      "sparc_curves"
+    ],
+    "nuisance_and_model_dependencies": "Physical size, inclination, distance reciprocity",
+    "missing_for_completion": "Independent angular-size targets beyond processed galaxy tables",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R11",
+    "area": "Spectral and image fidelity",
+    "required_response": "Line width, chromaticity, scattering blur, polarization/birefringence, coherence and arrival-time dispersion.",
+    "tasks": [
+      "T04",
+      "T05",
+      "T11"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Line width, image profile and polarization transfer",
+    "units": "km s^-1; rad; dimensionless Stokes fractions",
+    "local_input_ids": [
+      "spectral_aging"
+    ],
+    "nuisance_and_model_dependencies": "Instrument line spread, intrinsic source width, scattering",
+    "missing_for_completion": "Resolved spectra, PSFs, polarimetry and their covariances",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R12",
+    "area": "Atomic clocks and cavities",
+    "required_response": "Optical/hyperfine transitions, cavity lengths, fine-structure response, secular and oscillatory drifts, terrestrial versus interstellar conditions.",
+    "tasks": [
+      "T05",
+      "T10"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Optical/hyperfine/cavity frequency ratios and drifts",
+    "units": "dimensionless; yr^-1",
+    "local_input_ids": [
+      "clock_paper_text"
+    ],
+    "nuisance_and_model_dependencies": "Spacer aging, temperature, atomic sensitivities, detrending",
+    "missing_for_completion": "Actual frequency time series and secular-drift likelihood",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R13",
+    "area": "Local gravity",
+    "required_response": "Equivalence principle, inverse-square tests, Solar-System ephemerides, gravitational redshift, Shapiro delay, perihelion advance, light deflection, binaries and pulsars.",
+    "tasks": [
+      "T09",
+      "T10"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Local orbit, timing and gravitational deflection residuals",
+    "units": "m; s; rad",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Ephemeris, source masses, reference-frame conventions",
+    "missing_for_completion": "Primary local gravity/binary data and forward models",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R14",
+    "area": "Capture and retention",
+    "required_response": "Derive absorption/scattering cross-sections, optical depth, escape, residence time, equation of state and any bound state.",
+    "tasks": [
+      "T07",
+      "T08"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Capture fraction, residence time and stored-state pressure",
+    "units": "dimensionless; yr; Pa",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Cross-section, target distribution, recoil, reverse processes",
+    "missing_for_completion": "Physical capture and support mechanism",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R15",
+    "area": "Halo profiles",
+    "required_response": "Predict cores, radial slopes, outer truncation, total mass, shape and time evolution without fitting a halo separately to each test object.",
+    "tasks": [
+      "T08",
+      "T12"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Halo radial density and predicted velocity field",
+    "units": "kg m^-3; km s^-1",
+    "local_input_ids": [
+      "sparc_catalog",
+      "sparc_curves"
+    ],
+    "nuisance_and_model_dependencies": "Inclination, distance, baryon mass-to-light ratio",
+    "missing_for_completion": "Spatial transport/self-gravity solution",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R16",
+    "area": "Galaxy rotation and scaling",
+    "required_response": "Spiral and dwarf rotation curves, radial-acceleration relation, baryonic Tully\u2013Fisher relation, diversity and scatter.",
+    "tasks": [
+      "T12",
+      "T18"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Galaxy rotation profiles and population scaling residuals",
+    "units": "km s^-1; m s^-2",
+    "local_input_ids": [
+      "sparc_catalog",
+      "sparc_curves",
+      "sparc_split"
+    ],
+    "nuisance_and_model_dependencies": "Shared distance and inclination errors, stellar mass calibration",
+    "missing_for_completion": "Unused validation sample and covariance-aware likelihood",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R17",
+    "area": "Other galaxy dynamics",
+    "required_response": "Pressure-supported dwarfs/ellipticals, satellite orbits, stellar streams, vertical disk gravity, bars and dynamical friction.",
+    "tasks": [
+      "T12",
+      "T15"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Dispersions, satellite/stream positions and disk vertical motion",
+    "units": "km s^-1; rad",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Anisotropy, membership, geometry, selection",
+    "missing_for_completion": "Primary non-rotation dynamical samples",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R18",
+    "area": "Lensing",
+    "required_response": "Strong and weak lensing, shear, convergence, deflection and time delays from the same fields that predict motion.",
+    "tasks": [
+      "T09",
+      "T13"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Shear, image positions and lens time delays",
+    "units": "dimensionless; rad; days",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Source redshifts, shear calibration, mass-sheet degeneracy",
+    "missing_for_completion": "Independent lensing measurements and same-field lens equations",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R19",
+    "area": "Clusters",
+    "required_response": "Hot gas, hydrostatic bias, pressure support, galaxy velocities, radial profiles and lensing with no cluster-only normalization.",
+    "tasks": [
+      "T13",
+      "T14"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Cluster gas profiles, spectra, velocities and lensing",
+    "units": "keV; counts; km s^-1; dimensionless shear",
+    "local_input_ids": [
+      "cluster_source_text",
+      "cluster_gas_source_text",
+      "cluster_derived"
+    ],
+    "nuisance_and_model_dependencies": "Hydrostatic bias, distance, R500 definition, gas calibration",
+    "missing_for_completion": "Profile-level observations and lensing; published masses are derived",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R20",
+    "area": "Merging systems",
+    "required_response": "Predict whether deposits follow galaxies, plasma or neither during collisions; model offsets, stripping, lag and reconnection/reformation.",
+    "tasks": [
+      "T07",
+      "T14"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Offsets and evolution in merging systems",
+    "units": "rad; km s^-1",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Merger orientation/time, gas response, lens reconstruction",
+    "missing_for_completion": "Merger images/spectra and dynamical simulations",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R21",
+    "area": "Environmental dependence",
+    "required_response": "Isolated versus group galaxies, voids, tidal dwarfs, low-luminosity and unusually low/high inferred-mass systems; dependence on illumination and history.",
+    "tasks": [
+      "T06",
+      "T12",
+      "T14"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Dynamics conditioned on illumination and environment",
+    "units": "km s^-1; W m^-2",
+    "local_input_ids": [
+      "sparc_catalog",
+      "dustpedia_themis",
+      "matched_energy_derived"
+    ],
+    "nuisance_and_model_dependencies": "Catalog completeness, selection, distance, environment definition",
+    "missing_for_completion": "Independently selected environmental comparison sample",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R22",
+    "area": "Stellar and thermal physics",
+    "required_response": "Stellar structure/lifetimes, solar constraints, cooling, heating, ionization, metallicity and whether capture would overheat gas or evaporate a halo.",
+    "tasks": [
+      "T07",
+      "T15"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Thermal spectra, stellar evolution and gas heating/cooling",
+    "units": "K; W; abundance ratios",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Opacity, composition, transport, stellar calibration",
+    "missing_for_completion": "Primary thermal/stellar constraints and evolution calculation",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R23",
+    "area": "Gravitational waves",
+    "required_response": "Propagation speed, damping, dispersion, polarizations, binary radiation, multimessenger delay and generated stochastic/high-frequency backgrounds.",
+    "tasks": [
+      "T04",
+      "T10",
+      "T11"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "GW strain, phase, polarization and EM arrival difference",
+    "units": "dimensionless strain; s",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Source emission lag, detector calibration, binary model",
+    "missing_for_completion": "Strain data and consistent emission/propagation model",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R24",
+    "area": "Compact objects",
+    "required_response": "Black-hole capture versus long-lived halos, accretion, strong-field boundary conditions, ringdown and consistency with compact-object observations.",
+    "tasks": [
+      "T09",
+      "T15"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Compact-object spectra, orbits and ringdown",
+    "units": "Hz; s; angular size",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Mass/spin inference, accretion, detector calibration",
+    "missing_for_completion": "Compact-object observations and strong-field solution",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R25",
+    "area": "CMB spectrum",
+    "required_response": "Explain the near-blackbody radiation field, its intensity, temperature and permitted spectral distortions without assuming the desired result.",
+    "tasks": [
+      "T17"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "CMB monopole spectrum and distortion residuals",
+    "units": "cm^-1; MJy sr^-1; kJy sr^-1",
+    "local_input_ids": [
+      "cmb_spectrum"
+    ],
+    "nuisance_and_model_dependencies": "Absolute calibration, Galactic subtraction, supplied blackbody reconstruction",
+    "missing_for_completion": "Full error covariance and radiation-production history",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R26",
+    "area": "CMB angular structure",
+    "required_response": "Predict temperature and polarization correlations and lensing from perturbations, with a physical source of the observed angular scales.",
+    "tasks": [
+      "T16",
+      "T17"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "CMB angular TT/EE/TE spectra and correlations",
+    "units": "multipole ell; microkelvin^2",
+    "local_input_ids": [
+      "cmb_TT",
+      "cmb_EE"
+    ],
+    "nuisance_and_model_dependencies": "Foregrounds, masks, beam, bin windows, calibration",
+    "missing_for_completion": "Full likelihood/TE and candidate perturbation transfer functions",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R27",
+    "area": "Structure and BAO",
+    "required_response": "Explain galaxy clustering, voids, growth, baryon acoustic features and the matter power spectrum in the chosen history.",
+    "tasks": [
+      "T16",
+      "T17"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Angular/redshift clustering and correlation features",
+    "units": "dimensionless redshift; rad; correlation amplitude",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Survey selection, fiducial coordinate conversion, tracer bias",
+    "missing_for_completion": "Galaxy catalogs and candidate-consistent clustering pipeline",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R28",
+    "area": "Abundances and cosmic chronology",
+    "required_response": "Light-element abundances, nucleosynthesis alternative/history, stellar ages, reionization, metal production and distant populations.",
+    "tasks": [
+      "T15",
+      "T17"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Abundances, stellar populations and chronology indicators",
+    "units": "abundance ratios; flux; model-dependent years",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Nuclear rates, stellar tracks, dust, distance",
+    "missing_for_completion": "Independent abundance/population inputs and new-history model",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R29",
+    "area": "Static background and topology",
+    "required_response": "Solve background field equations, distinguish curvature from topology, test stability, redshift drift, age, past/future endpoints and repeated images.",
+    "tasks": [
+      "T16"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Static background solution, redshift drift, topology signals",
+    "units": "yr^-1; curvature length; angle",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Clock/rod convention, boundary conditions, observer motion",
+    "missing_for_completion": "Solved background, stability and primary drift/topology tests",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R30",
+    "area": "Global radiation and entropy",
+    "required_response": "Finite fuel, accumulated radiation, dark night sky, infrared/optical/X-ray backgrounds, heat sinks and entropy production. Recycling photons cannot renew their energy.",
+    "tasks": [
+      "T06",
+      "T16",
+      "T17"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Integrated radiation backgrounds, fuel and entropy budget",
+    "units": "W m^-2 sr^-1; J; J K^-1",
+    "local_input_ids": [
+      "cmb_spectrum",
+      "dustpedia_themis"
+    ],
+    "nuisance_and_model_dependencies": "Obscured populations, source history, absorption, completeness",
+    "missing_for_completion": "Multi-band background compilation and closed global ledger",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R31",
+    "area": "Statistical identifiability",
+    "required_response": "Separate gravity response, capture, age, luminosity and reservoir degeneracies. Include selection functions and shared calibration errors.",
+    "tasks": [
+      "T01",
+      "T06",
+      "T18"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Parameter identifiability and selection/calibration effects",
+    "units": "dimensionless likelihood; parameter covariance",
+    "local_input_ids": [
+      "sparc_split",
+      "supernova_covariance"
+    ],
+    "nuisance_and_model_dependencies": "Shared nuisance structure and reused samples",
+    "missing_for_completion": "Candidate-specific joint likelihood and simulation calibration",
+    "availability": "partial local products; not complete measurement pipeline",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  },
+  {
+    "id": "R32",
+    "area": "Distinguishing predictions",
+    "required_response": "Freeze a small set of tests that separate this theory from baryons alone, fitted halo models and empirical modified-force laws.",
+    "tasks": [
+      "T18",
+      "T19"
+    ],
+    "status": "mapped; completion unproven",
+    "data_policy": "Retain raw measurements and track all model-derived calibration assumptions; no new blind sample yet selected.",
+    "target": "Previously frozen discriminating predictions",
+    "units": "units of chosen observable",
+    "local_input_ids": [],
+    "nuisance_and_model_dependencies": "Multiplicity, exposure history, model flexibility",
+    "missing_for_completion": "Unexposed validation targets and frozen predictive distribution",
+    "availability": "no primary observational input assigned; theoretical proof or acquisition required",
+    "validation_exposure": "all assigned recovered products exploratory; no new blind data"
+  }
+]

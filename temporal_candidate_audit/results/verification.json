@@ -1,0 +1,28 @@
+{
+  "redshift_164_unique_groups": true,
+  "redshift_split_counts": {
+    "test": 25,
+    "train": 104,
+    "validation": 35
+  },
+  "redshift_no_group_overlap": true,
+  "redshift_no_sky_tile_overlap": true,
+  "SPARC_no_galaxy_overlap": true,
+  "all_numeric_predictions_finite": true,
+  "SPARC_new_parameter_count": {
+    "density_p1": 2,
+    "density_free_p": 3
+  },
+  "test_status": "Reused historical splits, not new blind observations",
+  "paper_original_paragraphs_preserved": true,
+  "paper_original_tables_preserved": true,
+  "paper_pages": 17,
+  "paper_original_13_pages_pixel_identical": true,
+  "paper_new_pages_visually_reviewed": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "GW_p_derivative_relative_finite_difference_check": 2.0464987926516187e-08
+}

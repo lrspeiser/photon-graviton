@@ -1,0 +1,177 @@
+J/A+A/624/A80       DustPedia SED fitting results            (Nersesian+, 2019)
+================================================================================
+Old and young stellar populations in DustPedia galaxies and their role in
+dust heating.
+    Nersesian A., Xilouris E.M., Bianchi S., Galliano F., Jones A.P., Baes M.,
+    Casasola V., Cassara L.P., Clark C.J.R., Davies J.I., Decleir M.,
+    Dobbels W., De Looze I., De Vis P., Fritz J., Galametz M., Madden S.C.,
+    Mosenkov A.V., Trcka A., Verstocken S., Viaene S., Lianou S.
+   <Astron. Astrophys. 624, A80 (2019)>
+   =2019A&A...624A..80N    (SIMBAD/NED BibCode)
+================================================================================
+ADC_Keywords: Galaxies, nearby ; Galaxies, IR ; Galaxies, photometry ; Models ;
+              Energy distributions
+Keywords: dust; extinction - infrared: galaxies - galaxies: photometry -
+          galaxies: ISM - galaxies: evolution
+
+Abstract:
+    Within the framework of the DustPedia project we investigate the
+    properties of cosmic dust and its interaction with stellar radiation
+    (originating from different stellar populations) for 814 galaxies in
+    the nearby Universe, all observed by the Herschel Space Observatory.
+    We take advantage of the widely used fitting code CIGALE, properly
+    adapted to include the state-of-the-art dust model THEMIS. For
+    comparison purposes, an estimation of the dust properties is provided
+    by approximating the emission at far-infrared and sub-millimeter
+    wavelengths with a modified blackbody. Using the DustPedia photometry
+    we determine the physical properties of the galaxies, such as the dust
+    and stellar mass, the star-formation rate, the bolometric luminosity,
+    the unattenuated and the absorbed by dust stellar light, for both the
+    old (>200Myr) and young (<=200Myr) stellar populations. We show how
+    the mass of stars, dust, and atomic gas, as well as the star-formation
+    rate and the dust temperature vary between galaxies of different
+    morphologies and provide recipes to estimate these parameters given
+    their Hubble stage (T). We find a mild correlation between the mass
+    fraction of the small a-C(:H) grains with the specific star-formation
+    rate. On average, young stars are very efficient in heating the dust,
+    with absorption fractions reaching as high as 77% of the total
+    unattenuated luminosity of this population. On the other hand, the
+    maximum absorption fraction of old stars is 24%. Dust heating in
+    early-type galaxies is mainly due to old stars, up to a level of 90%.
+    Young stars progressively contribute more for typical spiral galaxies
+    and they become the dominant source of dust heating for Sm-type and
+    irregular galaxies, with 60% of their luminosity contributing to that
+    purpose. Finally, we find a strong correlation of the dust heating
+    fraction by young stars with morphology and the specific
+    star-formation rate.
+
+Description:
+    We make use of the SED fitting code CIGALE to model and interpret the
+    SEDs of 814 DustPedia galaxies. The code fits the multi-wavelength
+    spectrum (UV-submm) of each galaxy in order to derive global
+    properties such as the star-formation rate (SFR), the stellar mass,
+    the bolometric luminosity as well as the absorbed by dust luminosity,
+    the minimum intensity value of the stellar radiation field and the
+    dust mass. The stellar component is described by providing the
+    relative contribution of both the young and the old stellar components
+    to the total SED of the galaxy. We fitted the dust emission using
+    THEMIS dust model. For comparison purposes, we performed an additional
+    fitting run with CIGALE using the widely adopted model by Draine and
+    Li, 2007ApJ...657..810D (updated in Draine et al. 2014ApJ...780..172D;
+    DL14). The parameter grid is the same as in the case of THEMIS (See
+    Section 3.1.2 in the paper), with only the polycyclic aromatic
+    hydrocarbon (PAH) abundance substituting the mass fraction of small
+    hydrocarbon solids (a-C(:H)). The small a-C(:H) component has the same
+    effect as the PAH component in the DL14 model; the only difference
+    should be a scaling factor of 2.2 between the two quantities. We
+    approximate the dust temperature using the strength of the
+    interstellar radiation field parametrized by the minimum intensity
+    value of the stellar radiation field. The global galaxy properties
+    derived with CIGALE using THEMIS dust model are given in the
+    themis.dat file, whereas the properties obtained by using the DL14
+    model are given in the dl14.dat file. Finally, we provide a catalog
+    with the global dust properties of the DustPedia galaxies by fitting a
+    single temperature modified black body to the FIR SED (mbb.dat).
+
+File Summary:
+--------------------------------------------------------------------------------
+ FileName      Lrecl  Records   Explanations
+--------------------------------------------------------------------------------
+ReadMe            80        .   This file
+dl14.dat         302      875   DustPedia cigale results obtained by using
+                                 the DL14 model
+themis.dat       302      875   DustPedia cigale results derived with CIGALE
+                                 using THEMIS dust model
+mbb.dat          112      875   DustPedia mbb results by fitting a single
+                                 temperature modified black body to the FIR SED
+--------------------------------------------------------------------------------
+
+See also:
+ J/A+A/609/A37  : 875 nearby galaxies multiwavelength photometry (Clark+, 2018)
+ J/A+A/620/A112 : Template SED of DustPedia galaxies (Bianchi+, 2018)
+ J/A+A/622/A132 : Dust emission profiles of DustPedia galaxies (Mosenkov+, 2019)
+ J/A+A/623/A5   : DustPedia metallicities and HI masses (De Vis+, 2019)
+ J/A+A/649/A18  : Nearby galaxy perspective on dust evolution (Galliano+, 2021)
+ J/A+A/699/A346 : Gas and dust in DustPedia galaxies (Salvestrini+, 2025)
+
+Byte-by-byte Description of file: dl14.dat themis.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units     Label       Explanations
+--------------------------------------------------------------------------------
+   1- 23  A23   ---       Galaxy      Galaxy name (objname)
+  25- 33  F9.5  deg       RAdeg       Right Ascension (J2000) (ra2000)
+  35- 43  F9.5  deg       DEdeg       Declination ((J2000) de2000)
+  45- 48  F4.1  ---       T           Hubble stage (T)
+  50- 61  F12.9 Mpc       Dist        Distance (distance__Mpc)
+  63- 70  E8.6  Msun/yr   SFR         ? Current star-formation rate
+                                       (SFR__Msol_per_yr)
+  72- 79  E8.6  Msun/yr e_SFR         ? Uncertainty on star-formation rate
+                                       (SFR_err)
+  81- 89  E9.4  Msun      Mstar       ? Stellar mass (Mstar__Msol)
+  91- 99  E9.4  Msun    e_Mstar       ? Uncertainty on stellar mass (Mstar_err)
+ 101-109  E9.4  Lsun      Lbol        ? Bolometric luminosity (Lbolo__Lsol)
+ 111-119  E9.4  Lsun    e_Lbol        ? Uncertainty on bolometric luminosity
+                                       (Lbolo_err)
+ 121-129  E9.4  Lsun      LoldUnatt   ? Unattenuated luminosity of old stars
+                                       (Lold_unatt__Lsol)
+ 131-139  E9.4  Lsun    e_LoldUnatt   ? Uncertainty on the unattenuated
+                                       luminosity of old stars (Lold_unatt_err)
+ 141-149  E9.4  Lsun      LyoungUnatt ? Unattenuated luminosity of young stars
+                                       (Lyoung_unatt__Lsol)
+ 151-159  E9.4  Lsun    e_LyoungUnatt ? Uncertainty on the unattenuated
+                                       luminosity of young stars
+                                       (Lyoung_unatt_err)
+ 161-169  E9.4  Lsun      LoldAbs     ? Absorbed by dust, luminosity of the old
+                                       stars (Lold_abs__Lsol)
+ 171-179  E9.4  Lsun      LyoungAbs   ? Absorbed by dust, luminosity of the
+                                       young stars (Lyoung_abs__Lsol)
+ 181-185  F5.3  ---       AFUV        ? FUV attenuation (Afuv)
+ 187-191  F5.3  ---     e_AFUV        ? Uncertainty on FUV attenuation
+                                       (Afuv_err)
+ 193-197  F5.3  ---       AV-B90      ? V-B90 colour attenuation (Av_b90)
+ 199-203  F5.3  ---     e_AV-B90      ? Uncertainty on V-B90 colour attenuation
+                                       (Av_b90_err)
+ 205-213  E9.4  Msun      Mdust       ? Dust mass (Mdust__Msol)
+ 215-223  E9.4  Msun    e_Mdust       ? Uncertainty on dust mass (Mdust_err)
+ 225-233  E9.4  Lsun      Ldust       ? Dust luminosity (Ldust__Lsol)
+ 235-243  E9.4  Lsun    e_Ldust       ? Uncertainty on dust luminosity
+                                       (Ldust_err)
+ 245-250  F6.3  ---       Umin        ? Minimum intensity value of the stellar
+                                       radiation field (Umin)
+ 252-257  F6.3  ---     e_Umin        ? Uncertainty on Umin (Umin_err)
+ 259-264  F6.3  K         Tdust       ? Dust temperature (Tdust__K)
+ 266-271  F6.3  K       e_Tdust       ? Uncertainty on dust temperature
+                                       (Tdust_err)
+ 273-277  F5.3  ---       qpah        ? Mass fractions of aromatic feature
+                                       emitting grains (PAH) (qpah)
+ 279-283  F5.3  ---     e_qpah        ? Uncertainty on mass fractions qpah
+                                       (qpah_err)
+ 285-289  F5.3  ---       gamma       ? Fraction of dust heated in
+                                       photo-dissociation regions (PDR) (gamma)
+ 291-295  F5.3  ---     e_gamma       ? Uncertainty on gamma (gamma_err)
+ 297-302  F6.3  ---       redchi2     ? Reduced chi^2 (red_chi2)
+
+--------------------------------------------------------------------------------
+
+Byte-by-byte Description of file: mbb.dat
+--------------------------------------------------------------------------------
+   Bytes Format Units   Label     Explanations
+--------------------------------------------------------------------------------
+   1- 23  A23   ---     Galaxy    Galaxy name (objname)
+  25- 33  F9.5  deg     RAdeg     Right Ascension (J2000) (ra2000)
+  35- 43  F9.5  deg     DEdeg     Declination (J2000) (de2000)
+  45- 48  F4.1  ---     T         Hubble stage (T)
+  50- 61  F12.9 Mpc     Dist      Distance (distance__Mpc)
+  63- 68  F6.3  K       Tdust     ? Dust temperature (Tdust__K)
+  70- 75  F6.3  K     e_Tdust     ? Uncertainty on dust temperature (Tdust_err)
+  77- 85  E9.4  Msun    Mdust     ? Dust mass (Mdust__Msol)
+  87- 95  E9.4  Msun  e_Mdust     ? Uncertainty on dust mass (Mdust_err)
+  97-105  E9.4  Lsun    Ldust     ? Dust luminosity (Ldust__Lsol)
+ 107-112  F6.3  ---     redchi2   ? Reduced chi^2 (red_chi2)
+--------------------------------------------------------------------------------
+
+Acknowledgements:
+           Angelos Nersesian, a.nersesian(at)noa.gr
+
+================================================================================
+(End)                                      Patricia Vannier [CDS]    06-Jan-2026

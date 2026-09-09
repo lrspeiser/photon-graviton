@@ -1,0 +1,44 @@
+{
+  "run.py": {
+    "inputs": [
+      "companion_causal_test/data/themis.dat",
+      "companion_causal_test/data/dl14.dat",
+      "companion_wave_test/data/SPARC_Lelli2016c.mrt",
+      "companion_wave_test/data/Rotmod_LTG.zip",
+      "companion_wave_test/data/sparc_frozen.json",
+      "companion_deposition_fit/results.json",
+      "companion_wave_test/cluster_comparison.csv"
+    ],
+    "outputs": [
+      "protocol.json",
+      "results.json",
+      "energy.csv",
+      "cv_predictions.csv",
+      "cluster_predictions.csv",
+      "hashes.json"
+    ],
+    "seed": 20260909
+  },
+  "followup.py": {
+    "inputs": [
+      "companion_causal_test/run.py definitions before first fit loop",
+      "same data loader inputs except previous empirical-core results",
+      "companion_wave_test/cluster_comparison.csv"
+    ],
+    "outputs": [
+      "protocol.json",
+      "followup_results.json",
+      "control_predictions.csv"
+    ],
+    "seed": 2047
+  },
+  "circulation.py": {
+    "inputs": [
+      "companion_causal_test/energy.csv"
+    ],
+    "outputs": [
+      "circulation_results.json"
+    ],
+    "seed": null
+  }
+}

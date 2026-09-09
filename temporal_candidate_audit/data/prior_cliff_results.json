@@ -1,0 +1,133 @@
+{
+  "galaxies": 42,
+  "points": 957,
+  "fold_sizes": [
+    9,
+    9,
+    8,
+    8,
+    8
+  ],
+  "summary": {
+    "ordinary": {
+      "all": {
+        "galaxies": 42,
+        "points": 957,
+        "log_speed_rmse_dex": 0.286217205863473,
+        "rmse_kms": 46.09696938671252,
+        "mean_abs_fraction": 0.41757607770491106
+      },
+      "outer": {
+        "galaxies": 42,
+        "points": 267,
+        "log_speed_rmse_dex": 0.34275557946437835,
+        "rmse_kms": 59.67595675104348,
+        "mean_abs_fraction": 0.4998524319282615
+      }
+    },
+    "power": {
+      "all": {
+        "galaxies": 42,
+        "points": 957,
+        "log_speed_rmse_dex": 0.11984952611672287,
+        "rmse_kms": 19.198815256081417,
+        "mean_abs_fraction": 0.2154407556156805
+      },
+      "outer": {
+        "galaxies": 42,
+        "points": 267,
+        "log_speed_rmse_dex": 0.09750827069592422,
+        "rmse_kms": 20.022932691004275,
+        "mean_abs_fraction": 0.15975574031358836
+      }
+    },
+    "cliff5": {
+      "all": {
+        "galaxies": 42,
+        "points": 957,
+        "log_speed_rmse_dex": 0.1108027966809097,
+        "rmse_kms": 18.104608217010508,
+        "mean_abs_fraction": 0.19378627440894697
+      },
+      "outer": {
+        "galaxies": 42,
+        "points": 267,
+        "log_speed_rmse_dex": 0.08464265131219123,
+        "rmse_kms": 16.49218393814604,
+        "mean_abs_fraction": 0.1362636679567162
+      }
+    },
+    "cliff3": {
+      "all": {
+        "galaxies": 42,
+        "points": 957,
+        "log_speed_rmse_dex": 0.11121701721793649,
+        "rmse_kms": 18.141956955258287,
+        "mean_abs_fraction": 0.19519819839503805
+      },
+      "outer": {
+        "galaxies": 42,
+        "points": 267,
+        "log_speed_rmse_dex": 0.08564335558310535,
+        "rmse_kms": 16.612805363077126,
+        "mean_abs_fraction": 0.13856674136107308
+      }
+    },
+    "RAR": {
+      "all": {
+        "galaxies": 42,
+        "points": 957,
+        "log_speed_rmse_dex": 0.12066496211895686,
+        "rmse_kms": 20.013979671808666,
+        "mean_abs_fraction": 0.217811697892846
+      },
+      "outer": {
+        "galaxies": 42,
+        "points": 267,
+        "log_speed_rmse_dex": 0.09119092670508,
+        "rmse_kms": 20.137765866825333,
+        "mean_abs_fraction": 0.15591450350566693
+      }
+    }
+  },
+  "comparisons": {
+    "power_minus_cliff5": {
+      "delta": 0.009046729435813167,
+      "ci95": [
+        0.005149750145481378,
+        0.012826414023891631
+      ]
+    },
+    "power_minus_cliff3": {
+      "delta": 0.008632508898786376,
+      "ci95": [
+        0.004751529164236098,
+        0.012284403668493028
+      ]
+    },
+    "RAR_minus_cliff5": {
+      "delta": 0.00986216543804716,
+      "ci95": [
+        0.0038931923008503166,
+        0.01578142894957131
+      ]
+    }
+  },
+  "beta": {
+    "cliff5": [
+      0.6931471805599453,
+      0.6931471805599453,
+      0.6931471805599453,
+      0.6931471805599453,
+      0.6931471805599453
+    ],
+    "cliff3": [
+      0.6931471805599453,
+      0.6931471805599453,
+      0.6931471805599453,
+      0.6931471805599453,
+      0.6931471805599453
+    ]
+  },
+  "success": true
+}

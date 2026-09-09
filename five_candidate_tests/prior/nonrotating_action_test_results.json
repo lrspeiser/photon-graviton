@@ -1,0 +1,119 @@
+{
+  "status": "Restricted analytic checks and published-summary/catalog reanalysis; no complete successful new action",
+  "gamma_per_year": 7.731500000000001e-11,
+  "clock_data": [
+    {
+      "ratio": "Yb_E3_over_E2",
+      "observed_drift_per_year": -6.8e-18,
+      "sigma_per_year": 7.5e-18,
+      "zero_prediction_residual_in_sigma": 0.9066666666666666,
+      "residual_response_coefficient_95_interval": [
+        -2.7808316626786523e-07,
+        1.0217939597749465e-07
+      ]
+    },
+    {
+      "ratio": "Yb_E3_over_Cs",
+      "observed_drift_per_year": -3.1e-17,
+      "sigma_per_year": 3.4e-17,
+      "zero_prediction_residual_in_sigma": 0.9117647058823529,
+      "residual_response_coefficient_95_interval": [
+        -1.2628855978788072e-06,
+        4.6097135096682395e-07
+      ]
+    }
+  ],
+  "old_fixed_optical_prediction_per_year": -1.5463000000000001e-10,
+  "old_prediction_to_reported_sigma": 4547941.176470589,
+  "clock_caveat": "Leading constitutive model is not an exact Yb/Cs atomic calculation; huge ratio is a scale comparison, not an exact exclusion significance.",
+  "compensating_hyperfine_exponent_b_95": [
+    -2.000000460971351,
+    -1.9999987371144021
+  ],
+  "compensation_caveat": "Fitting a response exponent to a slope is not deriving a protective symmetry or validating it independently.",
+  "cavity": {
+    "predicted_fixed_atom_fixed_length_drift_per_year": -7.731500000000001e-11,
+    "expected_fractional_change_over_2826942_seconds": -6.925907569967298e-12,
+    "ideal_linear_detrending_max_remaining": 3.5826414439817214e-27,
+    "status": "Published Kennedy analysis removes overall linear drift; no raw undetrended-data secular fit performed.",
+    "source": "https://arxiv.org/abs/2008.08773"
+  },
+  "universal_metric": {
+    "action": "Einstein-Hilbert[q] + minimally coupled Standard Model[q] + canonical scalar[q]",
+    "homogeneous_metric": "ds_q^2=-c0^2 dt^2/n(t)^2+a0^2 dSigma_k^2",
+    "result": "dTau=dt/n removes lapse; fixed a0 gives zero cosmological redshift for comoving material observers.",
+    "original_25_test_objects_reused": true,
+    "null_zero_cosmological_redshift_RMSE_km_s": 3208.426816993026,
+    "original_temporal_RMSE_km_s": 412.4414371207221,
+    "caveat": "Descriptive zero-total-redshift benchmark with no peculiar-velocity fit; not a likelihood for a model of galaxy velocities."
+  },
+  "brightness": {
+    "N": 960,
+    "M_fixed": -19.248884540083562,
+    "kappa_per_Mpc": 0.0002521678034317001,
+    "flat_chi_squared": 898.4745863939072,
+    "fixed_reference_chi_squared": 838.4833829163803,
+    "fits": [
+      {
+        "sign": 1,
+        "a": 0.0,
+        "chi_squared": 898.4745863939072,
+        "radius_Mpc": null
+      },
+      {
+        "sign": -1,
+        "a": 0.87212528848709,
+        "chi_squared": 873.041277470174,
+        "radius_Mpc": 4547.068376184085
+      }
+    ],
+    "negative_radius_conditional_profile_95_Mpc": [
+      3846.7781728196323,
+      5833.66419601327
+    ],
+    "flat_four_bin_trend_chi_squared": 36.743149674677,
+    "flat_four_bin_trend_dof": 3,
+    "flat_four_bin_trend_p": 5.2146576396825963e-08,
+    "distances": [
+      {
+        "z": 0.1,
+        "R_Mpc": 377.96331850168065,
+        "DA_Mpc": 378.39871484082727,
+        "DL_Mpc": 416.23858632491005
+      },
+      {
+        "z": 0.5,
+        "R_Mpc": 1607.9178332454524,
+        "DA_Mpc": 1641.638195998562,
+        "DL_Mpc": 2462.457293997843
+      },
+      {
+        "z": 1.0,
+        "R_Mpc": 2748.753691498466,
+        "DA_Mpc": 2919.253961147919,
+        "DL_Mpc": 5838.507922295838
+      },
+      {
+        "z": 2.0,
+        "R_Mpc": 4356.671524743919,
+        "DA_Mpc": 5054.521888977741,
+        "DL_Mpc": 15163.565666933222
+      }
+    ],
+    "caveat": "Exploratory reuse of same Pantheon+ data and conventional released covariance/calibration. Radius interval conditional on fixed law; angular distances are predictions, not tested angular data."
+  },
+  "background": {
+    "required_negative_curvature_rho_plus_p_J_m3": -4.892188289740808e-10,
+    "required_effective_mass_density_kg_m3": -5.4432935748049665e-27,
+    "conclusion": "Einstein gravity with ordinary positive-enthalpy matter and a canonical homogeneous scalar cannot support this negative-curvature static background, for any scalar potential or cosmological constant.",
+    "scope": "Modified gravity or additional interactions change the effective equations; they are not excluded by this restricted result."
+  },
+  "untested": [
+    "Derivative interaction without specified action",
+    "Nonlinear tensor-sharing completion with fixed atoms",
+    "Species-specific exact atomic and solid-state calculations",
+    "Stable modified-gravity nonexpanding solution",
+    "New angular-distance data fit",
+    "CMB temperature or polarization likelihood"
+  ]
+}

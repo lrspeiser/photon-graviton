@@ -1,0 +1,130 @@
+{
+  "test_ray": [
+    {
+      "N": 81,
+      "launch_time": 0.0,
+      "frequency_stretch": 1.0031156267781283,
+      "pulse_stretch": 1.0031156168599509,
+      "pulse_vs_frequency_relative_difference": -9.887372032224562e-09,
+      "arrival_time": 0.801388222681243,
+      "initial_field_energy": 0.2988963422641968,
+      "minimum_frequency_squared": 0.005420194188657749
+    },
+    {
+      "N": 161,
+      "launch_time": 0.0,
+      "frequency_stretch": 1.003086497292985,
+      "pulse_stretch": 1.003086496720318,
+      "pulse_vs_frequency_relative_difference": -5.70904878927081e-10,
+      "arrival_time": 0.8013869608452616,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    },
+    {
+      "N": 321,
+      "launch_time": 0.0,
+      "frequency_stretch": 1.0030807033739568,
+      "pulse_stretch": 1.0030807054084434,
+      "pulse_vs_frequency_relative_difference": 2.028238244022873e-09,
+      "arrival_time": 0.8013866257270464,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.0054221220208219645
+    }
+  ],
+  "launch_epochs": [
+    {
+      "N": 161,
+      "launch_time": 10.0,
+      "frequency_stretch": 1.002766965324227,
+      "pulse_stretch": 1.0027669533840822,
+      "pulse_vs_frequency_relative_difference": -1.190719811638985e-08,
+      "arrival_time": 10.834152616136532,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    },
+    {
+      "N": 161,
+      "launch_time": 20.0,
+      "frequency_stretch": 1.0007333271596004,
+      "pulse_stretch": 1.000733326605996,
+      "pulse_vs_frequency_relative_difference": -5.53198820085754e-10,
+      "arrival_time": 20.849729710260505,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    },
+    {
+      "N": 161,
+      "launch_time": 40.0,
+      "frequency_stretch": 0.9964753348226775,
+      "pulse_stretch": 0.9964752933910858,
+      "pulse_vs_frequency_relative_difference": -4.157814070815391e-08,
+      "arrival_time": 40.80800346075566,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    }
+  ],
+  "backreaction": [
+    {
+      "N": 81,
+      "initial_photon_to_field_energy": 0.001,
+      "frequency_stretch": 1.0034019515675683,
+      "photon_energy_change": -1.0133833988637759e-06,
+      "total_relative_energy_error": 7.216449660063518e-14,
+      "arrival": 0.8014003569872754,
+      "solver_evaluations": 4817
+    },
+    {
+      "N": 81,
+      "initial_photon_to_field_energy": 0.1,
+      "frequency_stretch": 1.0317735870716942,
+      "photon_energy_change": -0.0009204547465976598,
+      "total_relative_energy_error": 8.948397578478762e-14,
+      "arrival": 0.8026034852425918,
+      "solver_evaluations": 4829
+    },
+    {
+      "N": 161,
+      "initial_photon_to_field_energy": 0.001,
+      "frequency_stretch": 1.0033622004342084,
+      "photon_energy_change": -1.0015818926692346e-06,
+      "total_relative_energy_error": 2.402522625288839e-13,
+      "arrival": 0.801399551770187,
+      "solver_evaluations": 4817
+    },
+    {
+      "N": 161,
+      "initial_photon_to_field_energy": 0.1,
+      "frequency_stretch": 1.0305249081652021,
+      "photon_energy_change": -0.0008853530202167503,
+      "total_relative_energy_error": 2.0305979120394113e-13,
+      "arrival": 0.8026473896352161,
+      "solver_evaluations": 4829
+    },
+    {
+      "N": 321,
+      "initial_photon_to_field_energy": 0.001,
+      "frequency_stretch": 1.0033503396352463,
+      "photon_energy_change": -9.980604209309466e-07,
+      "total_relative_energy_error": 7.573941473992818e-13,
+      "arrival": 0.8013993127591127,
+      "solver_evaluations": 4817
+    },
+    {
+      "N": 321,
+      "initial_photon_to_field_energy": 0.1,
+      "frequency_stretch": 1.0298713931372405,
+      "photon_energy_change": -0.0008669480681326516,
+      "total_relative_energy_error": 9.987566329527908e-13,
+      "arrival": 0.802656310969477,
+      "solver_evaluations": 4829
+    }
+  ],
+  "definition": "Periodic 1D box, smooth fixed-density slabs, positive gradient and quadratic field energies, two fields with epsilon=1e-4; fixed-width Gaussian packet (sigma=0.02 box lengths) with matched interpolation and adjoint deposition. Local particle Hamiltonian Hgamma=p exp(-chi).",
+  "limitations": [
+    "Synthetic geometry and dimensionless energy ratios, not data calibration.",
+    "Photon packet is a 1D ray surrogate, not a complete electromagnetic or gravitational-wave action.",
+    "Matter density is fixed; field plus ray energy conserved but matter motion and gravity omitted.",
+    "No material clock law or absolute cosmological energy scale is derived.",
+    "Pulse-stretch equality tested only in the negligible-backreaction limit."
+  ]
+}

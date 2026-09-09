@@ -1,0 +1,75 @@
+{
+  "scope": "Special-relativistic free-target absorption and a stipulated Hermitian static mixing matrix. No cross-section, lifetime, redshift law, halo model or revised law inferred.",
+  "checks": [
+    {
+      "check": "absorbed_energy_partitions_into_rest_gain_and_recoil",
+      "sample_count": 151,
+      "max_residual": 2.220446049250313e-16
+    },
+    {
+      "check": "capture_four_momentum_mass_shell",
+      "max_scaled_residual": 6.259211633725302e-16
+    },
+    {
+      "check": "inverse_emission_kinematically_open",
+      "max_scaled_residual": 3.106494019735515e-16
+    },
+    {
+      "check": "opposed_equal_packets_have_zero_total_momentum",
+      "max_relative_rest_gain_error": 2.7267077484793845e-13
+    },
+    {
+      "check": "static_two_mode_transfer_matches_analytic_solution",
+      "cases": [
+        {
+          "detuning": 0,
+          "coupling": 1,
+          "analytic_probability_error": 1.1102230246251565e-15,
+          "norm_residual": 8.881784197001252e-16
+        },
+        {
+          "detuning": 1,
+          "coupling": 0.1,
+          "analytic_probability_error": 4.163336342344337e-17,
+          "norm_residual": 1.7763568394002505e-15
+        },
+        {
+          "detuning": 2,
+          "coupling": 0,
+          "analytic_probability_error": 0.0,
+          "norm_residual": 4.440892098500626e-16
+        }
+      ]
+    }
+  ],
+  "capture_examples": [
+    {
+      "incident_energy_over_target_rest_energy": 1e-06,
+      "stored_rest_energy_fraction": 0.9999995000005,
+      "recoil_energy_fraction": 4.99999500000625e-07,
+      "final_speed_over_c": 9.99999000001e-07,
+      "inverse_emission_energy_over_initial": 0.9999990000014999
+    },
+    {
+      "incident_energy_over_target_rest_energy": 0.01,
+      "stored_rest_energy_fraction": 0.9950493836207795,
+      "recoil_energy_fraction": 0.0049506163792204655,
+      "final_speed_over_c": 0.009900990099009901,
+      "inverse_emission_energy_over_initial": 0.9901475429766743
+    },
+    {
+      "incident_energy_over_target_rest_energy": 1,
+      "stored_rest_energy_fraction": 0.7320508075688773,
+      "recoil_energy_fraction": 0.2679491924311227,
+      "final_speed_over_c": 0.5,
+      "inverse_emission_energy_over_initial": 0.5773502691896258
+    },
+    {
+      "incident_energy_over_target_rest_energy": 100,
+      "stored_rest_energy_fraction": 0.13177446878757826,
+      "recoil_energy_fraction": 0.8682255312124217,
+      "final_speed_over_c": 0.9900990099009901,
+      "inverse_emission_energy_over_initial": 0.07053456158585983
+    }
+  ]
+}

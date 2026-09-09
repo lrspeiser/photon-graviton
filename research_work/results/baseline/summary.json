@@ -1,0 +1,27 @@
+{
+  "status": "baseline executed; small regression deviations explicitly retained",
+  "snapshot_matched": 271,
+  "snapshot_missing_historical": 5,
+  "scripts": [
+    {
+      "script": "run.py",
+      "exit_code": 0,
+      "seconds": 2.196532964706421
+    },
+    {
+      "script": "followup.py",
+      "exit_code": 0,
+      "seconds": 9.759495258331299
+    },
+    {
+      "script": "circulation.py",
+      "exit_code": 0,
+      "seconds": 0.1930406093597412
+    }
+  ],
+  "numeric_leaves_compared": 30252,
+  "tolerance_exceedances": 170,
+  "max_prediction_difference_kms": 0.01980150112083834,
+  "model_ranking_unchanged": true,
+  "original_outputs_preserved": true
+}

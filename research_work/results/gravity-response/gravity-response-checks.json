@@ -1,0 +1,166 @@
+{
+  "scope": "Linear weak-field canonical conformal scalar comparison; negligible scalar stress backreaction, pressureless sources, static point source; no screening, source production or capture derived",
+  "cases": [
+    {
+      "beta_b": 0,
+      "beta_d": 1,
+      "scalar_mass": 0,
+      "radii": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "dynamics_over_bare_Newton": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dynamics_over_short_distance_Glab": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "lensing_over_Glab": 1.0,
+      "force_derivative_relative_error": 1.0092016111684643e-10,
+      "lensing_checks": [
+        {
+          "impact": 0.5,
+          "deflection_in_c1_units": 8.0,
+          "expected": 8.0
+        },
+        {
+          "impact": 2.0,
+          "deflection_in_c1_units": 2.0,
+          "expected": 2.0
+        }
+      ]
+    },
+    {
+      "beta_b": 0.1,
+      "beta_d": 1,
+      "scalar_mass": 0,
+      "radii": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "dynamics_over_bare_Newton": [
+        1.2,
+        1.2,
+        1.2
+      ],
+      "dynamics_over_short_distance_Glab": [
+        1.1764705882352942,
+        1.1764705882352942,
+        1.1764705882352942
+      ],
+      "lensing_over_Glab": 0.9803921568627451,
+      "force_derivative_relative_error": 1.0277068085429164e-10,
+      "lensing_checks": [
+        {
+          "impact": 0.5,
+          "deflection_in_c1_units": 8.0,
+          "expected": 8.0
+        },
+        {
+          "impact": 2.0,
+          "deflection_in_c1_units": 2.0,
+          "expected": 2.0
+        }
+      ]
+    },
+    {
+      "beta_b": 0.01,
+      "beta_d": 100,
+      "scalar_mass": 0,
+      "radii": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "dynamics_over_bare_Newton": [
+        3.0,
+        3.0,
+        3.0
+      ],
+      "dynamics_over_short_distance_Glab": [
+        2.9994001199760048,
+        2.9994001199760048,
+        2.9994001199760048
+      ],
+      "lensing_over_Glab": 0.9998000399920016,
+      "force_derivative_relative_error": 1.0277068085429164e-10,
+      "lensing_checks": [
+        {
+          "impact": 0.5,
+          "deflection_in_c1_units": 8.0,
+          "expected": 8.0
+        },
+        {
+          "impact": 2.0,
+          "deflection_in_c1_units": 2.0,
+          "expected": 2.0
+        }
+      ]
+    },
+    {
+      "beta_b": 1,
+      "beta_d": 1,
+      "scalar_mass": 1,
+      "radii": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "dynamics_over_bare_Newton": [
+        2.990642319679111,
+        2.4715177646857693,
+        1.0009987984547746
+      ],
+      "dynamics_over_short_distance_Glab": [
+        0.9968807732263704,
+        0.8238392548952564,
+        0.3336662661515915
+      ],
+      "lensing_over_Glab": 0.3333333333333333,
+      "force_derivative_relative_error": 1.1873502181458662e-10,
+      "lensing_checks": [
+        {
+          "impact": 0.5,
+          "deflection_in_c1_units": 7.999999999999999,
+          "expected": 8.0
+        },
+        {
+          "impact": 2.0,
+          "deflection_in_c1_units": 2.0,
+          "expected": 2.0
+        }
+      ]
+    }
+  ],
+  "coupling_relation_examples": [
+    {
+      "beta_b": 0.01,
+      "beta_d": 100,
+      "cross_excess": 2.0,
+      "ordinary_excess": 0.0002,
+      "deposit_self_excess": 20000
+    },
+    {
+      "beta_b": 0.1,
+      "beta_d": 10,
+      "cross_excess": 2.0,
+      "ordinary_excess": 0.020000000000000004,
+      "deposit_self_excess": 200
+    },
+    {
+      "beta_b": 1,
+      "beta_d": 1,
+      "cross_excess": 2,
+      "ordinary_excess": 2,
+      "deposit_self_excess": 2
+    }
+  ],
+  "numerical_tests": "Four force-gradient cases, eight light-deflection integrals, three scalar-coupling identities",
+  "warning": "Large response products from earlier energy budgets cannot be substituted into this linear approximation without checking small fields, scalar energy, stability and calibration"
+}

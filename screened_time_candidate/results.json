@@ -1,0 +1,48 @@
+{
+  "void": {
+    "chi_at_u1": 1.0000000000000002,
+    "psi_at_u1": 1.0000000000000002,
+    "chi_over_psi_at_u1": 1.0,
+    "psi_dot_at_u1": 1.0000000000000002,
+    "maximum_relative_energy_error": 0.0,
+    "minimum_mode_frequency_squared": 1.734723475976807e-18
+  },
+  "dense": {
+    "chi_at_u1": 9.98333169899947e-07,
+    "psi_at_u1": 0.9983341681332806,
+    "chi_over_psi_at_u1": 9.999990001010029e-07,
+    "psi_dot_at_u1": 0.9950041702696918,
+    "maximum_relative_energy_error": 5.551115123125783e-16,
+    "minimum_mode_frequency_squared": 0.009999990000010001
+  },
+  "redshift_comparison_same_local_slope": [
+    {
+      "R_Mly": 1,
+      "z_original_exponential": 7.731795483425438e-05,
+      "z_homogeneous_rolling_field": 7.731496595524618e-05
+    },
+    {
+      "R_Mly": 100,
+      "z_original_exponential": 0.007761461790815176,
+      "z_homogeneous_rolling_field": 0.007731496595524618
+    },
+    {
+      "R_Mly": 1000,
+      "z_original_exponential": 0.08038230645452794,
+      "z_homogeneous_rolling_field": 0.07731496595524619
+    },
+    {
+      "R_Mly": 10000,
+      "z_original_exponential": 1.1665795062776425,
+      "z_homogeneous_rolling_field": 0.7731496595524618
+    }
+  ],
+  "gamma_per_year": 7.731496595524618e-11,
+  "one_over_gamma_Gyr": 12.93410645202703,
+  "caveats": [
+    "Dimensionless mass and inertia parameters are illustrative, not estimated from data.",
+    "Fixed-density homogeneous patches omit boundaries, matter dynamics, photon backreaction and gravity.",
+    "The two-field subsystem conserves energy; the full light-plus-field model is not yet closed.",
+    "Homogeneous rolling-field redshift is not a derived global prediction of the screened model."
+  ]
+}

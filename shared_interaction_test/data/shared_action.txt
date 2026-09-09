@@ -1,0 +1,1385 @@
+Prepared for submission to JCAP
+The variation of the ﬁne-structure
+constant from disformal couplings
+Carsten van de Brucka , Jurgen Mifsuda and Nelson J. Nunesb
+aConsortium for Fundamental Physics, School of Mathematics and Statistics, University of
+Sheﬃeld, Hounsﬁeld Road, Sheﬃeld S3 7RH, UK
+bInstituto de Astrof´ısica e Ciˆencias do Espa¸co, Faculdade de Ciˆencias da Universidade de
+Lisboa, Campo Grande, PT1749-016 Lisboa, Portugal
+E-mail: c.vandebruck@sheﬃeld.ac.uk, jmifsud1@sheﬃeld.ac.uk, njnunes@fc.ul.pt
+Abstract. We study a theory in which the electromagnetic ﬁeld is disformally coupled to
+a scalar ﬁeld, in addition to a usual non–minimal electromagnetic coupling. We show that
+disformal couplings modify the expression for the ﬁne–structure constant, α. As a result,
+the theory we consider can explain the non–zero reported variation in the evolution of α by
+purely considering disformal couplings. We also ﬁnd that if matter and photons are coupled
+in the same way to the scalar ﬁeld, disformal couplings itself do not lead to a variation of
+the ﬁne–structure constant. A number of scenarios are discussed consistent with the current
+astrophysical, geochemical, laboratory and the cosmic microwave background radiation con-
+straints on the cosmological evolution of α. The models presented are also consistent with
+the current type Ia supernovae constraints on the eﬀective dark energy equation of state.
+We ﬁnd that the Oklo bound in particular puts strong constraints on the model parameters.
+From our numerical results, we ﬁnd that the introduction of a non–minimal electromagnetic
+coupling enhances the cosmological variation in α. Better constrained data is expected to
+be reported by ALMA and with the forthcoming generation of high–resolution ultra–stable
+spectrographs such as PEPSI, ESPRESSO, and ELT–HIRES. Furthermore, an expected in-
+crease in the sensitivity of molecular and nuclear clocks will put a more stringent constraint
+on the theory.
+arXiv:1510.00200v1  [astro-ph.CO]  1 Oct 2015
+
+Contents
+1
+Introduction
+1
+2
+Disformal Electrodynamics: The Model
+2
+3
+Observational Constraints
+7
+4
+Analysis
+10
+5
+Conclusions
+15
+1
+Introduction
+The idea on the variation of the fundamental constants of physics was ﬁrst raised by
+Dirac in his ‘large numbers hypothesis’ [1]. The advent of higher-dimensional theories [2, 3],
+in which the eﬀective (3+1)-dimensional constants can vary in space and time, has led to an
+increased interest in nature’s fundamental constants and their variation. Despite this, Ein-
+stein’s equivalence principle, and hence local position invariance, is one of the building blocks
+of gravitational metric theories, which include amongst others the well-known gravitational
+theory of general relativity. Hence, the link between the constancy of fundamental constants
+and the equivalence principle is a natural one.
+Recent observations have shown the possibility of the variation of one of these fundamen-
+tal constants of nature, the electromagnetic ﬁne-structure constant, α = e2/4πϵ0ℏc ≃1/137
+[4]. Weaker constraints on the variation of the electromagnetic ﬁne-structure constant have
+been derived from Big Bang Nucleosynthesis (BBN) at z ∼109 [5] and the cosmic microwave
+background (CMB) radiation at z ∼103 [6]. More stringent bounds have been reported at
+lower redshifts from astrophysical [7–18], geochemical [19–21] and laboratory [22] constraints.
+In this work, we will be considering a theoretical model containing three distinct metrics,
+related by a disformal transformation. We will specify our scalar-gravitational sector in what
+we will later call the Einstein Frame, in which the action looks like general relativity with
+an added scalar ﬁeld. We then specify two other distinct frames in which we deﬁne matter
+and radiation separately. The latter two frames are described by two separate metrics, ˜g(i)
+µν,
+although both of these metrics are disformally related with the scalar-gravitational metric,
+gµν.
+Such disformal transformations have been introduced by Bekenstein [23], where in
+general a disformal transformation is characterized by the following relation
+˜g(i)
+µν = Ci(φ, X)gµν + Di(φ, X)φ,µφ,ν
+(1.1)
+where X = (1/2)gµνφ,µφ,ν is the kinetic term. The ﬁrst term is the widely known conformal
+coupling, whereas the second term is referred to as the disformal coupling. In what follows, we
+will be considering both couplings to depend on φ only. The line elements of these disformal
+metrics are now related by d˜s2
+i = Cids2 + Di(φ,µdxµ)2, and as a result null four-vectors with
+respect to gµν could be either spacelike or timelike four-vectors with respect to the disformal
+metric ˜g(i)
+µν. Furthermore, a conformal transformation can be viewed as an angle preserving
+metric rescaling mapping, although a disformal transformation deforms the spacetime to a
+– 1 –
+
+preferred direction characterized by the gradient of the ﬁelds resulting in a distortion of both
+angles and lengths [24].
+Disformal relations as described in (1.1) have been used in diﬀerent scenarios, including
+inﬂation [25], varying speed of light theories [26–28], massive gravity [29, 30], dark energy
+[31–34] and others. It was shown in [35] that disformal transformations preserve second order
+ﬁeld equations and play, in the Horndeski theory, a similar role conformal transformations
+play in the scalar-tensor theories. See e.g. [36] on current constraints on universal disformal
+couplings.
+The most immediate way to obtain a space and time variation of the electromagnetic
+ﬁne-structure constant is to introduce a non–minimal coupling between the scalar ﬁeld and
+electromagnetic ﬁelds [37–41]. It has been shown that such a non–minimal coupling give rise
+to nonconservation of the photon number along geodesics [42] which result in a modiﬁcation
+of the distance-duality relation [37, 43–48] and CMB spectrum distortion [37, 49, 50]. Similar
+results have also been reported in disformal scalar-tensor theories [51, 52]. We will show that
+such non–minimal coupling is not necessary to explain this non-zero variation of α, as we
+can reproduce a varying electromagnetic ﬁne-structure coupling purely by the introduced
+disformally related metrics.
+We introduce our model in Section 2 and present the cosmological equations in Section
+2.1 in which we give the relevant equations that we then use for our examples. In Section 3
+we list the observational constraints that we use in order to choose our model parameters,
+which we then present and discuss in Section 4.
+2
+Disformal Electrodynamics: The Model
+We consider the following action, consisting of a gravitational sector, a matter sector and an
+electromagnetic sector, respectively:
+S = Sgrav (gµν, φ) + Smatter(˜g(m)
+µν ) + SEM(Aµ, ˜g(r)
+µν ).
+(2.1)
+The metrics ˜g(m)
+µν
+and ˜g(r)
+µν are related to gµν via a disformal transformation:
+˜g(m)
+µν
+= Cmgµν + Dmφ,µφ,ν ,
+(2.2)
+˜g(r)
+µν = Crgµν + Drφ,µφ,ν .
+(2.3)
+Here, Cr,m and Dr,m are functions of the scalar ﬁeld. The functions Cr,m are conformal
+factors, whereas the functions Dr,m are disformal couplings. At this point, we do not specify
+the gravitational sector. Instead, we study the consequences of the disformally coupled scalar
+ﬁeld on the propagation of electromagnetic waves. We aim to work in the Jordan Frame, by
+which we mean the frame in which matter is decoupled from the scalar degree of freedom.
+We therefore perform a disformal transformation of the action above such that all parts of
+the action are written in terms of the metric ˜g(m)
+µν . The electromagnetic sector is speciﬁed by
+SEM = −1
+4
+Z
+d4x
+q
+−˜g(r)h(φ)˜gµν
+(r)˜gαβ
+(r)FµαFνβ −
+Z
+d4x
+q
+−˜g(m)˜gµν
+(m)jµAµ,
+(2.4)
+where Fµν is the standard antisymmetric Faraday tensor, Fµν = ∂µAν −∂νAµ, and jµ is the
+four–current. The function h(φ) is the direct coupling between the electromagnetic ﬁeld and
+the scalar. Note that ˜g(r)
+µν can also be written as
+˜g(r)
+µν = Cr
+Cm
+˜g(m)
+µν +
+
+Dr −CrDm
+Cm
+
+φ,µφ,ν ≡A˜g(m)
+µν + Bφ,µφ,ν,
+(2.5)
+– 2 –
+
+Then, in terms of this metric the electromagnetic sector becomes
+SEM = −1
+4
+Z
+d4x
+q
+−˜g(m)h(φ)Z
+h
+˜gµν
+(m)˜gαβ
+(m) −2γ2˜gµν
+(m)φ,αφ,βi
+FµαFνβ
+−
+Z
+d4x
+q
+−˜g(m)˜gµν
+(m)jµAµ ,
+(2.6)
+where we raise the indices with the metric ˜g(m)
+µν
+and deﬁne
+Z =
+
+1 + B
+A ˜gµν
+(m)∂µφ∂νφ
+1/2
+,
+(2.7)
+together with
+γ2 =
+B
+A + B˜gµν
+(m)∂µφ∂νφ .
+(2.8)
+Note that the term proportional to γ4 vanishes due to the antisymmetry of Fµν. Furthermore,
+note that gauge invariance implies ˜∇µjµ = 0, where the covariant derivative is compatible
+with the metric ˜g(m)
+µν . The ﬁeld equations can be readily obtained by varying the action with
+respect to Aµ, which results in
+˜∇ϵ (h(φ)ZF ϵρ) −˜∇ϵ
+
+h(φ)Zγ2φ,β 
+˜gϵν
+(m)φ,ρ −˜gρν
+(m)φ,ϵ
+Fνβ
+
+= jρ .
+(2.9)
+where we again raise the indices with ˜g(m)
+µν . The ﬁrst term in the action (2.6) contains two
+parts: the ﬁrst part consists of the kinetic term for the vector potential Aµ; the second
+part is an interaction term between the disformally coupled scalar ﬁeld and Aµ. The latter
+vanishes in the case of vanishing disformal couplings. From the form of the action (2.6) we
+might naively think that the ﬁne-structure coupling is simply given by α ∝1/hZ. This is
+not the case, as we shall show. To identify the eﬀective electromagnetic coupling (or the
+”ﬁne–structure constant”) α, we start by deriving the ﬁeld equation for the electric ﬁeld in
+Minkowski space
+
+˜g(m)
+µν
+= ηµν
+
+and set the bare speed of light c = 1. We also consider the
+scalar ﬁeld to be a function of time only. From the obtained ﬁeld equation (2.9), and using
+the fact that the electric ﬁeld is identiﬁed by, Ei = F i0, we ﬁnd that the ﬁeld equation for
+the electric ﬁeld is given by
+∇· E = Zρ
+h(φ)
+(2.10)
+where ρ = j0 is the charge density.
+By integrating this equation over a volume V, it is
+straightforward to derive the electrostatic potential V (for which E = −∇V ), which is found
+to be V (r) = ZQ/(4πh(φ)r), where Q is the total charge contained in V. Comparing this
+to the standard expression for the tree-level-potential from QED, one ﬁnds that α has the
+following dependence on Z and h:
+α ∝
+Z
+h(φ).
+(2.11)
+Note that if matter and radiation couple in the same way to the scalar ﬁeld (i.e. ˜g(m)
+µν
+= ˜g(r)
+µν
+for which A = 1 and B = 0) we have Z = 1 and we recover the usual form α ∝h(φ)−1
+[37, 53–60].
+– 3 –
+
+2.1
+Cosmology
+We now specify our gravitational-scalar action to be as follows
+Sgrav (gµν, φ) =
+Z
+d4x√−g
+M2
+Pl
+2 R −1
+2gµν∂µφ∂νφ −V (φ)
+
+(2.12)
+where R is the Ricci scalar calculated with respect to the metric gµν. From now on, reduced
+Planck units are assumed: MPl = 1. Hence, the theory we consider is given in the Einstein
+Frame as
+S =
+Z
+d4x√−g
+1
+2R −1
+2gµν∂µφ∂νφ −V (φ)
+
++ Smatter(˜g(m)
+µν )
+−1
+4
+Z
+d4x
+q
+−˜g(r)h(φ)˜gµν
+(r)˜gαβ
+(r)FµαFνβ.
+(2.13)
+The last term in the action above describes the dynamics of the CMB photons. From now
+on, we will refer to the three distinctive frames as the Einstein Frame (EF), Radiation Frame
+(RF) and Jordan Frame (JF) corresponding to the metrics gµν, ˜g(r)
+µν and ˜g(m)
+µν
+respectively.
+We deﬁne the RF as the frame in which all electromagnetic quantities are deﬁned in their
+standard way. Furthermore, we deﬁne the JF as the frame in which matter is uncoupled from
+the scalar ﬁeld. Since the gravity-scalar part of the action is written in its simplest form in
+the EF, we will be working in this frame and not in the other two frames where in general
+this part of the action has a nonstandard form.
+By the variation of the action (2.13) with respect to the metric gµν, we obtain the
+Einstein Field Equations
+Gµν = T µν
+φ
++ T µν
+(m) + T µν
+(r),
+(2.14)
+with Gµν = Rµν −1
+2gµνR being the usual Einstein tensor in the EF. The energy-momentum
+tensors of the scalar ﬁeld, matter and radiation are denoted by T µν
+φ , T µν
+(m) and T µν
+(r) respec-
+tively. We specify these energy-momentum tensors to be as follows
+T φ
+µν = ∂µφ∂νφ −gµν
+1
+2gρσ∂ρφ∂σφ + V (φ)
+
+,
+(2.15)
+T (m)
+µν
+= −
+2
+√−g
+δ(
+p
+−˜g(m) ˜Lm)
+δgµν
+,
+(2.16)
+T (r)
+µν = −
+2
+√−g
+δ(
+p
+−˜g(r) ˜LEM)
+δgµν
+,
+(2.17)
+where we deﬁne the electromagnetic Lagrangian by ˜LEM = −1
+4h(φ)˜gµν
+(r)˜gαβ
+(r)FµαFνβ and denote
+the matter Lagrangian by ˜Lm. We now use the variation of the action (2.13) with respect to
+the scalar ﬁeld, which leads us to the Klein-Gordon equation
+□φ −V ′ = −Qm −Qr,
+(2.18)
+where we have introduced a matter coupling strength, Qm, and a radiation coupling strength,
+Qr, as follows
+Qm = C′
+m
+2Cm
+T(m) + D′
+m
+2Cm
+φ,µφ,νT µν
+(m) −∇µ
+Dm
+Cm
+φ,νT µν
+(m)
+
+,
+(2.19)
+Qr = C′
+r
+2Cr
+T(r) + D′
+r
+2Cr
+φ,µφ,νT µν
+(r) + h′
+h C2
+r
+r
+1 + Dr
+Cr
+gµνφ,µφ,ν ˜LEM −∇µ
+Dr
+Cr
+φ,νT µν
+(r)
+
+, (2.20)
+– 4 –
+
+where T(r) and T(m) are the trace of T µν
+(r) and T µν
+(m) respectively, and in (2.20) we have also
+used (A.4). As a result of the Bianchi identities, the total energy-momentum tensor in the EF
+is covariantly conserved with respect to the EF metric, leading to the following conservation
+relation
+∇µ(T µν
+φ
++ T µν
+(m) + T µν
+(r)) = 0.
+(2.21)
+Although this holds for the total energy-momentum tensor, the couplings under consideration
+do not allow each of the energy-momentum tensors to be individually conserved. Indeed, by
+using (2.15), (2.18) and (2.21), we ﬁnd that the matter and radiation conservation equations
+now read as follows
+∇µT µ
+(m)ν = Qmφ,ν,
+(2.22)
+∇µT µ
+(r)ν = Qrφ,ν.
+(2.23)
+A similar derivation is described in [51, 61–64]. We shall now consider perfect ﬂuid energy-
+momentum tensors for radiation and matter in the EF
+T µν
+(r) = (ρr + pr)uµuν + prgµν,
+(2.24)
+T µν
+(m) = (ρm + pm)uµuν + pmgµν,
+(2.25)
+where ρr and pr are the EF radiation energy density and pressure respectively, similarly, ρm
+and pm are the EF matter energy density and pressure respectively, and uµ is the 4-velocity in
+the EF. By projecting the matter and radiation conservation equations along the 4-velocity,
+we obtain the following modiﬁed conservation equations
+uµ∇µρr + (ρr + pr)∇µuµ = −Qruµφ,µ,
+(2.26)
+uµ∇µρm + (ρm + pm)∇µuµ = −Qmuµφ,µ.
+(2.27)
+These modiﬁed conservation equations show that energy is transferred from the scalar ﬁeld,
+depicted by the term projecting the ﬁeld gradient along the 4-velocity. We also deﬁne a
+perfect ﬂuid energy-momentum tensor for both radiation and matter in the RF and JF
+respectively
+˜T µν
+(r) = (˜ρr + ˜pr)˜uµ˜uν + ˜pr˜gµν
+(r),
+(2.28)
+˜T µν
+(m) = (˜ρm + ˜pm)˜uµ˜uν + ˜pm˜gµν
+(m).
+(2.29)
+From now on, we will be considering a time-dependent scalar ﬁeld, and a zero curvature
+Friedmann-Robertson-Walker (FRW) EF metric, given by ds2 = gµνdxµdxν = −dt2 +
+a2(t)δijdxidxj, where a(t) is the expansion scale factor.
+Following [39], we introduce an
+electromagnetic parametrisation,
+η ≡
+˜LEM
+˜ρr
+,
+(2.30)
+where η could be positive or negative and have a modulus between 0 and ≈1. We should note
+that in [39] they associate the η parameter with matter energy density and not with radiation
+energy density. Also, by setting η = 1 in the introduced electromagnetic parametrisation,
+and considering the special case Cr(φ) = Cm(φ) = 1 together with Dr(φ) = Dm(φ) = 0, we
+recover all the relevant equations given in [37], in which a statistical microscopic approach
+– 5 –
+
+was employed. Using (A.10) we obtain a relationship between the energy density in the RF
+and that in the EF as follows
+˜ρr = ρr
+C2r
+r
+1 + Dr
+Cr
+φ,µφ,µ.
+(2.31)
+Hence, we can then write the radiation coupling, Qr, in terms of this η-parametrisation as
+follows
+Qr = C′
+r
+2Cr
+T(r) + D′
+r
+2Cr
+φ,µφ,νT µν
+(r) + h′
+h
+
+1 + Dr
+Cr
+φ,µφ,µ
+
+ηρr −∇µ
+Dr
+Cr
+φ,νT µν
+(r)
+
+.
+(2.32)
+For FRW cosmology, we ﬁnd that the Klein-Gordon equation, (2.18), together with the
+conservation equations, (2.22) and (2.23), reduce to the following
+¨φ + 3H ˙φ + V ′ = Qm + Qr,
+(2.33)
+˙ρm + 3H(ρm + pm) = −Qm ˙φ,
+(2.34)
+˙ρr + 3H(ρr + pr) = −Qr ˙φ,
+(2.35)
+where H = ˙a/a is the Hubble parameter and dot represents an EF time derivative. By using
+(2.33), (2.34), and (2.35), we can rewrite (2.19) and (2.32) as follows
+Qm =
+Ar
+ArAm −DrDmρrρm
+
+Bm −DmBr
+Ar
+ρm
+
+,
+(2.36)
+Qr =
+Am
+ArAm −DrDmρrρm
+
+Br −DrBm
+Am
+ρr
+
+,
+(2.37)
+where
+Ar = Cr + Dr(ρr −˙φ2),
+(2.38)
+Am = Cm + Dm(ρm −˙φ2),
+(2.39)
+Br = 1
+2C′
+r[3wr −1]ρr −1
+2D′
+r ˙φ2ρr + h′
+h [Cr −Dr ˙φ2]ηρr + Drρr
+C′
+r
+Cr
+˙φ2 + V ′ + 3H ˙φ (1 + wr)
+
+,
+(2.40)
+Bm = 1
+2C′
+m[3wm −1]ρm −1
+2D′
+m ˙φ2ρm + Dmρm
+C′
+m
+Cm
+˙φ2 + V ′ + 3H ˙φ (1 + wm)
+
+.
+(2.41)
+Using (A.12), it follows that for pressureless matter, the equation of state parameter in both
+frames is still zero, although according to (A.12), the equation of state parameter for radiation
+in the EF is now modiﬁed to [51, 65]
+wr = 1
+3
+
+1 −Dr
+Cr
+˙φ2
+
+,
+(2.42)
+where we have used the fact that in the RF, ˜wr = 1/3. We ﬁnd that the exact solutions for
+(2.34) and (2.35) are the following
+ρm ∝C2
+m
+Ym
+
+aC
+1
+2m
+−3
+,
+(2.43)
+ρr ∝C2
+r
+hηYr
+
+aC
+1
+2r
+−4
+,
+(2.44)
+– 6 –
+
+where we deﬁne Y 2
+m = 1 −(Dm/Cm) ˙φ2, Y 2
+r = 1 −(Dr/Cr) ˙φ2 and assume constant η in
+(2.44). As expected, we ﬁnd that ˜ρm ∝˜a−3
+(m) where ˜a(m) is the scale factor in the JF, and
+that ˜ρr ∝h−η˜a−4
+(r) where ˜a(r) is the RF scale factor.
+We now give the Friedmann equations in the EF obtained from the Einstein Field
+Equations (2.14)
+H2 = 1
+3 (ρm + ρr + ρφ) ,
+(2.45)
+˙H = −1
+6
+
+3
+
+ρm + ˙φ2
++ ρr
+
+4 −Dr
+Cr
+˙φ2
+
+,
+(2.46)
+where we have also used (2.42), and deﬁned the energy-momentum tensor of the scalar ﬁeld
+as that of a perfect ﬂuid with ρφ = (1/2) ˙φ2 + V (φ) and pφ = (1/2) ˙φ2 −V (φ).
+We admit that the scalar ﬁeld characterizing the disformal coupling is also responsible
+for the current acceleration of the Universe, i.e., it is the dark energy. In order to compare
+our model’s dark energy equation of state parameter to type Ia supernova data set [66], we
+need to derive an eﬀective equation of state parameter, weﬀ, following [65, 67]. Experimental
+constraints on dark energy assume a non-interacting dark sector. On assuming that dark
+energy is given by a non-interacting perfect ﬂuid, described by its equation of state parameter,
+weﬀ, we can write the energy conservation equation as follows
+˙ρeﬀ
+DE = −3H(1 + weﬀ)ρeﬀ
+DE.
+(2.47)
+By our dark sector assumption, dark matter is also assumed to be non-interacting, hence we
+can write the following Friedmann equation
+H2 = 1
+3
+
+a−4ρ0,r + a−3ρ0,m + ρeﬀ
+DE
+
+.
+(2.48)
+By comparing (2.48) and (2.45), we get the energy density of the eﬀective dark energy ﬂuid
+ρeﬀ
+DE = ρm + ρr + ρφ −a−4ρ0,r −a−3ρ0,m.
+(2.49)
+By taking the EF time derivative of (2.49), substituting the Klein-Gordon equation, (2.33),
+the matter conservation equation, (2.34), the radiation conservation equation, (2.35), and
+comparing the ﬁnal equation with (2.47), we get the eﬀective equation of state parameter as
+follows
+weﬀ=
+pφ + ρr
+
+wr −1
+3a−4 ρ0,r
+ρr
+
+ρeﬀ
+DE
+,
+(2.50)
+where wr is the equation of state parameter for radiation in the EF given by (2.42). We
+should mention that in the absence of radiation, matter and electromagnetic couplings, weﬀ
+reduces to the usual equation of state parameter for a quintessence scalar ﬁeld, wφ = pφ/ρφ.
+3
+Observational Constraints
+We will only consider a choice of parameters for our models such that we agree with the
+measured cosmological, astrophysical, geochemical and laboratory parameters. Since we now
+have identiﬁed the ﬁne-structure coupling α ∝Z h(φ)−1, we can also deﬁne the temporal
+variation of α, denoted by ˙α/α, where dot refers to the temporal derivative.
+As we are
+– 7 –
+
+Parameter
+Estimated value
+Ref.
+w0,φ
+−1.006 ± 0.045
+[68]
+H0
+(67.8 ± 0.9) km s−1Mpc−1
+[68]
+Ω0,m
+0.308 ± 0.012
+[68]
+Table 1: Listed are, respectively, the cosmological parameter, its estimated value, and the
+original reference.
+interested in solving our equations in a spatially-ﬂat, homogeneous and isotropic Friedmann
+gravitational metric, and also a time-dependent scalar ﬁeld, we here give the temporal varia-
+tion of α in the mentioned setting. In this scenario, the coupling function Z, deﬁned in (2.7),
+reduces to
+Z =
+ 
+1 −Dr
+Cr ˙φ2
+1 −Dm
+Cm ˙φ2
+! 1
+2
+.
+(3.1)
+Furthermore, by considering the electromagnetic coupling, h, together with all the conformal
+and disformal couplings to be a function of φ only, it follows that Z(φ, ˙φ). We then arrive to
+the equation for the temporal variation of the ﬁne-structure coupling
+˙α
+α = 1
+Z
+∂Z
+∂φ
+˙φ + ∂Z
+∂˙φ
+¨φ
+
+−1
+h
+dh
+dφ
+˙φ.
+(3.2)
+Also, the redshift evolution of the ﬁne-structure coupling is speciﬁed by the quantity1
+∆α
+α (z) ≡α(z) −α(z = 0)
+α(z = 0)
+= h(φ0)Z(z)
+h(φ(z))Z0
+−1,
+(3.3)
+where φ0 is the ﬁeld value today and Z0 is the value of Z evaluated today.
+We recover
+the usual forms of the temporal variation and evolution of the ﬁne-structure coupling, in
+Refs. [37, 53–60], in the absence of disformal couplings. In order to choose our parameters
+will use:
+1. the Union2.1 SNe Ia data set [66] and the Planck collaboration results [68], such that
+the present time measurements of our Universe agree with our ﬁnal time boundary
+conditions. These results are summarized in Table 1. Since we are using a spatially-ﬂat
+FRW EF metric, it follows that Ω0,φ ≈0.7.
+2. the currently, most stringent atomic clock (AC) constraint on the present temporal
+variation of α [22]
+˙α
+α
+
+0
+= (−1.6 ± 2.3) × 10−17 yr−1,
+(3.4)
+3. an Oklo natural reactor constraint, in which self-sustained natural ﬁssion reactions took
+place at ∼2 Gyr ago (z ≃0.16) [20, 21]
+|∆α|
+α
+< 1.1 × 10−8,
+(3.5)
+1Note that the redshift is frame-invariant, see [51] and [52].
+– 8 –
+
+Object
+z
+(∆α/α) × 106
+Spectrograph
+Ref.
+Three sources
+1.08
+4.3 ± 3.4
+HIRES
+[8]
+HS1549+1919
+1.14
+−7.5 ± 5.5
+UVES/HIRES/HDS
+[13]
+HE0515-4414
+1.15
+−0.1 ± 1.8
+UVES
+[9]
+HE0515-4414
+1.15
+0.5 ± 2.4
+HARPS/UVES
+[10]
+HS1549+1919
+1.34
+−0.7 ± 6.6
+UVES/HIRES/HDS
+[13]
+HE0001-2340
+1.58
+−1.5 ± 2.6
+UVES
+[11]
+HE1104-1805A
+1.66
+−4.7 ± 5.3
+HIRES
+[8]
+HE2217-2818
+1.69
+1.3 ± 2.6
+UVES
+[12]
+HS1946+7658
+1.74
+−7.9 ± 6.2
+HIRES
+[8]
+HS1549+1919
+1.80
+−6.4 ± 7.2
+UVES/HIRES/HDS
+[13]
+Q1101-264
+1.84
+5.7 ± 2.7
+UVES
+[9]
+Table 2:
+Listed are, respectively, the object along each line of sight, the redshift of the
+absorber, the measurements of ∆α/α, the spectrograph, and the original reference. The ﬁrst
+measurement is the weighted average from eight absorbers in the redshift range 0.73 < z <
+1.53 along the lines of sight of three quasars reported in [8].
+4. the 187Re meteorite constraint over the age of the solar system ∼4.6 Gyr (z ≃0.43)
+[19]
+∆α
+α
+= (−8 ± 8) × 10−7,
+(3.6)
+5. astrophysical data, including the 11 recently measured data set which contains the
+results of the Ultraviolet and Visual Echelle Spectrograph (UVES) [12, 13]. We list
+these measurements in Table 2, and plot the corresponding data points for the redshift
+evolution of ∆α/α in the ﬁgures of Section 4. We also use the large data set from
+Keck telescope and ESO’s Very Large Telescope (VLT) surveys carried out by Webb
+et al [7]. By assuming that ∆α/α values are described by a simple weighted mean, it
+is found that [17] (∆α/α)w = (−0.57 ± 0.11) × 10−5 for the Keck quasi-stellar object
+(QSO) observations; while for the VLT quasar spectra observations, it is found that
+[15] (∆α/α)w = (0.208 ± 0.124) × 10−5.
+These results diﬀer from one another at
+the ∼4.7σ level, suggesting a dipole-like variation in α. The binned many-multiplet
+(MM) VLT+Keck combined sample is also used in our ∆α/α redshift evolution plots,
+in which statistical errors for certain points have been increased prior to binning as
+reported in King et al [15]. We also use the weighted mean of the 21 Si IV doublets,
+(∆α/α)w = (−0.5 ± 1.3) × 10−5, reported in Murphy et al [18] using the alkali-doublet
+(AD) method, together with two other results; ∆α/α = (−0.10 ± 0.22) × 10−5 at
+z = 0.25 and ∆α/α = (−0.08 ± 0.27) × 10−5 at z = 0.68; in which HI 21 cm absorption
+lines were used [14]. Other consistent results can be found in [16], and a detailed review
+on the constraints on ∆α/α can be found in [60, 69].
+6. and the cosmic microwave background (CMB) radiation constraint (z ≃103) reported
+in [6]
+∆α
+α
+= (3.6 ± 3.7) × 10−3.
+(3.7)
+– 9 –
+
+The models presented in Section 4 satisfy the above constraints, even though, there are
+combinations of parameters that lead to cases which do not respect the Oklo bound. For
+example, some models in Fig. 1 do not pass the Oklo bound.
+4
+Analysis
+In general, we will consider these speciﬁc forms of couplings and scalar ﬁeld potential:
+Ci(φ) = βiexiφ,
+(4.1)
+Di(φ) = M−4
+i
+eyiφ,
+(4.2)
+h(φ) = 1 −ζ(φ −φ0),
+(4.3)
+V (φ) = M4
+V e−λφ.
+(4.4)
+The introduced mass scales, Mi and MV , are tuned in order to obtain the correct cosmological
+parameters as listed in Table 1 together with an agreement with the temporal variation of the
+ﬁne-structure coupling (3.4). Typically we ﬁnd that Mi ∼MV ∼meV. In our models, we will
+only consider disformally coupled radiation, and hence we set Cr(φ) = 1 for all the models
+under consideration.
+On the other hand, whenever we consider a scalar ﬁeld dependent
+conformal matter coupling, we also tune the dimensionless parameter, βm, together with the
+other mass scales in order to agree with the measured cosmological parameters and temporal
+variation of the ﬁne-structure coupling stringent constraint. Following the symmetry breaking
+argument in [70] for a slowly evolving time dependent scalar ﬁeld, we only consider a linear
+electromagnetic coupling function. We are constrained on the magnitude of the dimensionless
+electromagnetic coupling parameter, ζ, from local tests of the equivalence principle [60]
+|ζlocal| < 10−3
+(4.5)
+Another constraint on ζ was obtained in [71] using the CMB and large-scale structure data in
+combination with direct measurements of the expansion of the Universe, and more recently,
+another tighter constraint was obtained in [72] using more recent data, in which it was found
+that |ζ| < 5 × 10−6.
+We will now consider several models with diﬀerent parameters. From our numerical
+results, we found that a change in the magnitude of |η| between 0 and 1 has negligible eﬀect
+on the results, so we set η = 1 in all the models. We summarize the diﬀerent parameter
+values for each speciﬁc model in Table 3, where we have neglected the parameters, ym and
+yr, from the table as these parameters are both set to zero for the models shown in Fig.
+1-3, although we do discuss a model with exponential disformal couplings in Section 4.1.
+The data points shown in the evolution with redshift of ∆α/α in Fig. 1-3 were taken from
+Section 3, as described therein. The respective data sets of the data points are listed in
+the legend of each plot, where UVES+HIRES+HDS+HARPS refer to the tabulated data
+points in Table 2. The constraints on weﬀused in the plots depicting the evolution with
+redshift of the theoretical weﬀ, wφ in Fig. 1-3 were taken from [66], where the results were
+obtained assuming a ﬂat Universe for the joint data set of SNe, BAO, CMB, and H0, with
+(dark/orange) and without (light/yellow) SN systematics. The dotted and dot-dashed lines
+in these plots depict the central value of weﬀconstraints with and without SN systematics in
+each redshift bin respectively. Although we start integrating our equations from z = 103, at
+which we set φini = 1.5 MPl as our initial condition, we restrict our plots in Fig. 1-3 to the
+redshift range where observational data is mostly concentrated.
+– 10 –
+
+Fig.
+Mr
+Mm
+βm
+xm
+|ζ|
+MV
+λ
+( ˙α/α)|0 × 1017
+1
+∼meV
+∼meV
+1
+0
+< 5 × 10−6
+2.69 meV
+0.45
+−2.14 ∼−1.62
+2
+∼meV
+15 meV
+8
+0.14
+0
+2.55 meV
+0.45
+−2.41 ∼0.70
+3
+∼meV
+15 meV
+8
+0.14
+< 5 × 10−6
+2.55 meV
+0.45
+−2.10 ∼−1.24
+Table 3: Listed are, respectively, the ﬁgure reference, the parameter values for each speciﬁc
+model, and the range of ( ˙α/α)|0 for the range of parameter values considered in each ﬁgure.
+4.1
+Disformal couplings
+In our ﬁrst model, we consider disformally coupled radiation and matter in the absence
+of matter and radiation conformal couplings and set ζ = 0 in order to get a purely disformal
+case, without the addition of an electromagnetic coupling. This purely disformal case is an
+interesting model to consider, since it still predicts a non-zero variation of the ﬁne-structure
+coupling, without the need of an electromagnetic coupling. The redshift evolution of ∆α/α
+is shown in Fig. 1, in which we consider constant matter and radiation disformal couplings.
+We have also considered a purely disformal case with exponential disformal couplings, by
+setting Mm = Mr = 100 meV, ym = 23.5 and yr = 1, together with MV = 4.75 meV
+and λ = 2. The latter two parameters were changed from those presented in Table 3 in
+order to be in agreement with the current cosmological parameters, whereas the exponential
+disformal coupling parameters were chosen such that the calculated temporal variation of the
+ﬁne-structure coupling lies within the bounds of the estimated value measured by AC. Since
+the redshift evolutions of ∆α/α, Ωi’s, weﬀ, and wφ, for constant disformal couplings and
+exponential disformal couplings are indistinguishable, we only show the constant disformal
+couplings case in Fig. 1.
+4.2
+Conformal and disformal couplings
+We now analyse the case in which we only consider matter to be conformally and disfor-
+mally coupled together with disformally coupled radiation. An exponential matter conformal
+coupling together with constant disformal matter and radiation couplings are considered, as
+summarized in Table 3. The range of values for the constant disformal couplings are chosen
+such that the predicted current temporal variation in the ﬁne-structure constant lies within
+the limits of the constraint given by (3.4), as these are the model parameters which directly
+aﬀect the evolution of α. We also restrict the values of the other model parameters, mainly
+the scalar ﬁeld potential and the conformal matter coupling parameters in order to be in
+agreement with the current cosmological values listed in Table 1. Four diﬀerent constant
+radiation energy scales are used in this model and shown in Fig. 2. We demonstrate that
+one can also get a non-zero value for the variation of α, without the introduction of an
+electromagnetic coupling. This shows that we can still explain observational evidence for
+such a variation in the ﬁne-structure coupling, without the need of an extra electromagnetic
+coupling. In these models |∆α/α| at the CMB era is predicted to be O(10−8 −10−7) which
+is well within the current bounds.
+4.3
+Disformal and electromagnetic couplings
+In this case, we consider matter and radiation to be disformally coupled together with
+an electromagnetic coupling.
+We again choose our model parameters so that we are in
+– 11 –
+
+Figure 1: Redshift evolution of Ωi’s, weﬀ, wφ and ∆α/α when considering disformally
+coupled matter and radiation with and without an electromagnetic coupling. The solid line
+is the purely disformal case, whereas the dot-dashed, dashed, and dotted lines correspond
+to ζ = −4.9 × 10−6, 1 × 10−6, 4.9 × 10−6 respectively. The other model parameters are
+summarized in Table 3.
+agreement with the data mentioned in Section 3. In Fig. 1 we only consider constant matter
+and radiation couplings, as described in Table 3. These disformal mass scales together with
+the non-zero ζ determine the evolution of the ﬁne-structure coupling. We consider three
+diﬀerent choices of these parameters, each giving a diﬀerent redshift evolution of α, although
+they all predict the same cosmology as long as the other independent parameters are left
+the same. The range of |∆α/α| for these models at the CMB redshift is O(10−8 −10−6)
+which lies within the current CMB constraint. In Fig. 1 we also plot the purely disformal
+case, discussed in Section 4.1, in order to see the eﬀect of the electromagnetic coupling
+on disformally coupled matter and radiation. We can clearly see that an electromagnetic
+– 12 –
+
+Figure 2: Redshift evolution of Ωi’s, weﬀ, wφ and ∆α/α when considering conformally and
+disformally coupled matter together with disformally coupled radiation in the absence of an
+electromagnetic coupling. The solid, dashed, dot-dashed, and dotted lines shown in the red-
+shift evolution of ∆α/α plot correspond to Mr = 24.91, 25.45, 25.91, 26.91 meV respectively.
+The other parameters are summarized in Table 3.
+coupling enhances the cosmological evolution of ∆α/α.
+4.4
+Disformal, conformal and electromagnetic couplings
+We now combine the previous cases together, where we are considering conformally
+and disformally coupled matter, and disformally coupled radiation, in the presence of an
+electromagnetic coupling. We choose a linear electromagnetic coupling as in (4.3) and an
+exponential conformal matter coupling. As in the previous cases, we choose our model pa-
+rameters so that we are in agreement with the data mentioned in Section 3. In Fig. 3 we
+show diﬀerent theoretical predictions of the variation of α, when considering four diﬀerent
+– 13 –
+
+ζ and Mr parameter choices as summarized in Table 3. In general, at least for our chosen
+parameters, we can conclude that the introduction of an electromagnetic coupling slightly
+enhances the variation of the ﬁne-structure constant, still in agreement with current observa-
+tional data. Indeed, for these models, |∆α/α| at the CMB era is O(10−7 −10−6), still within
+the CMB constraint.
+Figure 3: Redshift evolution of Ωi’s, weﬀ, wφ and ∆α/α when considering conformally
+and disformally coupled matter, and disformally coupled radiation in the presence of an
+electromagnetic coupling.
+The solid, dashed, dot-dashed and dotted lines correspond to
+ζ = −4.9 × 10−6, −1 × 10−6, 1 × 10−6, 4.9 × 10−6 respectively. The other model parameters
+are summarized in Table 3.
+– 14 –
+
+5
+Conclusions
+We have introduced the idea of disformally related metrics in order to explain the
+reported variations in the ﬁne-structure constant. Our main conclusion is that we can natu-
+rally explain a non-zero variation in α by only considering disformally coupled radiation and
+matter. The introduction of an electromagnetic coupling has been exhaustively discussed
+in the literature and such models also predict a varying ﬁne-structure constant. We have
+also considered the eﬀect of this electromagnetic coupling in some of our models, and we
+can say that this coupling enhances the variational evolution of α. We made sure that our
+chosen model parameters predict the current cosmological parameters in agreement with the
+experimental values together with an agreement with the reported bounds on variations in
+the ﬁne-structure constant. From our numerical results, we found that when the present tem-
+poral variation of the ﬁne-structure constant constraint is satisﬁed, the other geochemical
+and astrophysical constraints are also satisﬁed. We should still mention that the Oklo bound
+is not always satisﬁed by the chosen model parameters, although we do ﬁnd some speciﬁc
+models which predict a variation in α that lies well within the Oklo constraint. We have also
+considered the weak constraint from the CMB, which is well satisﬁed in all our models.
+High-resolution ultra-stable spectrographs are expected to increase the accuracy of the
+currently reported spectroscopic measurements. Such next generation spectrographs include
+PEPSI at the Large Binocular Telescope (LBT) in Arizona, ESPRESSO at the VLT [73],
+and ELT-HIRES at the European Extremely Large Telescope (E-ELT) [74, 75]. Consistency
+tests like the Sandage-Loeb cosmological redshift drift test could also be carried out in such
+facilities [76–79]. The Atacama Large Millimeter/submillimeter Array (ALMA) [80, 81] is
+also expected to increase the sensitivity to detect radio continuum sources.
+Laboratory
+measurements with molecular and nuclear clocks are also expected to increase their sensitivity
+to as high as 10−21 yr−1 [82]. Other observational constraints coming from compact objects,
+such as white-dwarfs [83, 84], are equally being explored.
+Acknowledgments
+CvdB is grateful to Clare Burrage and Jack Morrice for fruitful discussions on disformal
+electrodynamics. The work of CvdB is supported by the Lancaster- Manchester-Sheﬃeld
+Consortium for Fundamental Physics under STFC Grant No. ST/L000520/1. N.J.N was
+supported by the Funda¸c˜ao para a Ciˆencia e Tecnologia (FCT) through the grants EXPL/FIS-
+AST/1608/2013 and UID/FIS/04434/2013.
+– 15 –
+
+Appendix A: Disformal Transformations
+We here derive some variable transformations between the EF and the tilde frames, the JF
+and RF. These mappings are also discussed in [51, 61–65], although we reproduce the relevant
+transformations for completeness. To keep the discussion simple, we write the JF metric (2.2)
+and RF metric (2.3) as a single tilde metric, which we write as
+˜gµν = Cgµν + Dφ,µφ,ν,
+(A.1)
+and then apply the variable transformations to each frame. From (A.1), it follows that the
+inverse metric is given by
+˜gµν = 1
+C
+ gµν −¯γ2∂µφ∂νφ
+
+,
+(A.2)
+where
+¯γ2 =
+D
+C + Dgµνφ,µφ,ν
+.
+(A.3)
+The determinants are related via
+s
+−˜g
+−g = C2
+r
+1 + D
+C φ,µφ,µ.
+(A.4)
+We now derive a relationship between the energy-momentum tensors in the EF metric and
+in the tilde metric (A.1). Using the deﬁnition of the energy-momentum tensor and the chain
+rule, we obtain the following
+T µν =
+2
+√−g
+δ(√−˜g ˜L)
+δgµν
+=
+s
+−˜g
+−g
+δ˜gαβ
+δgµν
+ 
+2
+√−˜g
+δ(√−˜g ˜L)
+δ˜gαβ
+!
+=
+s
+−˜g
+−g
+δ˜gαβ
+δgµν
+˜T αβ.
+(A.5)
+Hence, together with (A.1)–(A.4), the contravariant and mixed energy-momentum tensor
+relations between the EF metric and tilde metric are as follows
+T µν = C3
+r
+1 + D
+C φ,µφ,µ ˜T µν,
+(A.6)
+T µ
+ν = C2
+r
+1 + D
+C φ,µφ,µ
+
+δρ
+ν −
+Dφ,νφ,ρ
+C + Dφ,µφ,µ
+
+˜T µ
+ρ.
+(A.7)
+On specifying a perfect ﬂuid energy-momentum tensor in both frames,
+T µν = (ρ + p)uµuν + pgµν,
+(A.8)
+˜T µν = (˜ρ + ˜p)˜uµ˜uν + ˜p˜gµν.
+(A.9)
+we get the following mappings for the energy density, pressure and the equation of state
+parameter
+˜ρ = ρ
+C2
+r
+1 + D
+C φ,µφ,µ,
+(A.10)
+˜p =
+p
+C2
+q
+1 + D
+C φ,µφ,µ
+,
+(A.11)
+˜w ≡˜p
+˜ρ =
+w
+1 + D
+C φ,µφ,µ ,
+(A.12)
+– 16 –
+
+when considering a spatially-ﬂat FRW EF metric and a time-dependent scalar ﬁeld. Using
+this tilde metric (A.1), we also derive a relationship between the 4-velocity in the EF, uµ,
+and that in the tilde frame, ˜uµ, given by the following equation
+˜uµ =
+uµ
+√
+C
+q
+1 + D
+C φ,µφ,µ
+.
+(A.13)
+References
+[1] P. A. M. Dirac, The Cosmological constants, Nature 139 (1937) 323.
+[2] A. Chodos and S. L. Detweiler, Where Has the Fifth-Dimension Gone?, Phys. Rev. D21 (1980)
+2167.
+[3] Y.-S. Wu and Z. Wang, The Time Variation of Newton’s Gravitational Constant in Superstring
+Theories, Phys. Rev. Lett. 57 (1986) 1978.
+[4] P. Mohr, B. Taylor, and D. Newell, The 2014 codata recommended values of the fundamental
+physical constants (web version 7.0), 2015. This database was developed by J. Baker, M.
+Douma, and S. Kotochigova. Available: http://physics.nist.gov/constants [Thursday,
+27-Aug-2015 10:53:20 EDT]. National Institute of Standards and Technology, Gaithersburg,
+MD 20899.
+[5] F. Iocco, G. Mangano, G. Miele, O. Pisanti, and P. D. Serpico, Primordial Nucleosynthesis:
+from precision cosmology to fundamental physics, Phys. Rept. 472 (2009) 1–76,
+[arXiv:0809.0631].
+[6] Planck: Collaboration, P. A. R. Ade et al., Planck intermediate results - XXIV. Constraints on
+variations in fundamental constants, Astron. Astrophys. 580 (2015) A22, [arXiv:1406.7482].
+[7] J. K. Webb, J. A. King, M. T. Murphy, V. V. Flambaum, R. F. Carswell, and M. B.
+Bainbridge, Indications of a spatial variation of the ﬁne structure constant, Phys. Rev. Lett.
+107 (2011) 191101, [arXiv:1008.3907].
+[8] A. Songaila and L. L. Cowie, Constraining the Variation of the Fine Structure Constant with
+Observations of Narrow Quasar Absorption Lines, Astrophys. J. 793 (2014) 103,
+[arXiv:1406.3628].
+[9] P. Molaro, D. Reimers, I. I. Agafonova, and S. A. Levshakov, Bounds on the ﬁne structure
+constant variability from FeII absorption lines in QSO spectra, Eur. Phys. J. ST 163 (2008)
+173–189, [arXiv:0712.4380].
+[10] H. Chand, R. Srianand, P. Petitjean, B. Aracil, R. Quast, and D. Reimers, On the variation of
+the ﬁne-structure constant: Very high resolution spectrum of QSO HE 0515-4414, Astron.
+Astrophys. 451 (2006) 45–56, [astro-ph/0601194].
+[11] I. I. Agafonova, P. Molaro, S. A. Levshakov, and J. L. Hou, First measurement of Mg isotope
+abundances at high redshifts and accurate estimate of ∆α/α, Astron. Astrophys. 529 (2011)
+A28, [arXiv:1102.2967].
+[12] P. Molaro et al., The UVES Large Program for Testing Fundamental Physics: I Bounds on a
+change in alpha towards quasar HE 2217-2818, Astron. Astrophys. 555 (2013) A68,
+[arXiv:1305.1884].
+[13] T. M. Evans et al., The UVES Large Program for testing fundamental physics III. Constraints
+on the ﬁne-structure constant from three telescopes, Mon. Not. Roy. Astron. Soc. 445 (2014),
+no. 1 128–150, [arXiv:1409.1923].
+– 17 –
+
+[14] M. T. Murphy, J. K. Webb, V. V. Flambaum, M. J. Drinkwater, F. Combes, and T. Wiklind,
+Improved constraints on possible variation of physical constants from H I 21cm and molecular
+QSO absorption lines, Mon. Not. Roy. Astron. Soc. 327 (2001) 1244, [astro-ph/0101519].
+[15] J. A. King, J. K. Webb, M. T. Murphy, V. V. Flambaum, R. F. Carswell, M. B. Bainbridge,
+M. R. Wilczynska, and F. E. Koch, Spatial variation in the ﬁne-structure constant – new results
+from VLT/UVES, Mon. Not. Roy. Astron. Soc. 422 (2012) 3370–3413, [arXiv:1202.4758].
+[16] H. Rahmani, R. Srianand, N. Gupta, P. Petitjean, P. Noterdaeme, and D. A. V´asquez,
+Constraining the variation of fundamental constants at z ∼1.3 using 21-cm absorbers, Mon.
+Not. Roy. Astron. Soc. 425 (2012) 556–576, [arXiv:1206.2653].
+[17] M. T. Murphy, V. V. Flambaum, J. K. Webb, V. V. Dzuba, J. X. Prochaska, and A. M. Wolfe,
+Constraining variations in the ﬁne - structure constant, quark masses and the strong
+interaction, Lect. Notes Phys. 648 (2004) 131–150, [astro-ph/0310318].
+[18] M. T. Murphy, J. K. Webb, V. V. Flambaum, J. X. Prochaska, and A. M. Wolfe, Further
+constraints on variation of the ﬁne structure constant from alkali doublet QSO absorption lines,
+Mon. Not. Roy. Astron. Soc. 327 (2001) 1237, [astro-ph/0012421].
+[19] K. A. Olive, M. Pospelov, Y.-Z. Qian, G. Manhes, E. Vangioni-Flam, A. Coc, and M. Casse, A
+Re-examination of the Re-187 bound on the variation of fundamental couplings, Phys. Rev.
+D69 (2004) 027701, [astro-ph/0309252].
+[20] Y. Fujii, A. Iwamoto, T. Fukahori, T. Ohnuki, M. Nakagawa, H. Hidaka, Y. Oura, and
+P. Moller, Nuclear data in Oklo and time variability of fundamental coupling constants, in
+International Conference on Nuclear Data for Science and Technology (ND 2001): Embracing
+the Future at the Beginning of the 21st Century Tsukuba, Japan, October 7-12, 2001, 2002.
+hep-ph/0205206.
+[21] E. D. Davis and L. Hamdan, Reappraisal of the limit on the variation in α implied by the Oklo
+natural ﬁssion reactors, Phys. Rev. C92 (2015), no. 1 014319, [arXiv:1503.06011].
+[22] T. Rosenband, D. Hume, P. Schmidt, C. Chou, A. Brusch, L. Lorini, W. Oskay, R. Drullinger,
+T. Fortier, J. Stalnaker, S. Diddams, W. Swann, N. Newbury, W. Itano, D. Wineland, and
+B. J., Frequency Ratio of Al+ and Hg+ Single-Ion Optical Clocks; Metrology at the 17th
+Decimal Place, Science 319 (2008), no. 5871 1808.
+[23] J. D. Bekenstein, The Relation between physical and gravitational geometry, Phys. Rev. D48
+(1993) 3641–3647, [gr-qc/9211017].
+[24] T. Koivisto, D. Wills, and I. Zavala, Dark D-brane Cosmology, JCAP 1406 (2014) 036,
+[arXiv:1312.2597].
+[25] N. Kaloper, Disformal inﬂation, Phys. Lett. B583 (2004) 1–13, [hep-ph/0312002].
+[26] M. A. Clayton and J. W. Moﬀat, Dynamical mechanism for varying light velocity as a solution
+to cosmological problems, Phys. Lett. B460 (1999) 263–270, [astro-ph/9812481].
+[27] J. Magueijo, New varying speed of light theories, Rept. Prog. Phys. 66 (2003) 2025,
+[astro-ph/0305457].
+[28] B. A. Bassett, S. Liberati, C. Molina-Paris, and M. Visser, Geometrodynamics of variable speed
+of light cosmologies, Phys. Rev. D62 (2000) 103518, [astro-ph/0001441].
+[29] C. de Rham and G. Gabadadze, Generalization of the Fierz-Pauli Action, Phys. Rev. D82
+(2010) 044020, [arXiv:1007.0443].
+[30] C. de Rham, G. Gabadadze, and A. J. Tolley, Resummation of Massive Gravity, Phys. Rev.
+Lett. 106 (2011) 231101, [arXiv:1011.1232].
+[31] T. S. Koivisto, Disformal quintessence, arXiv:0811.1957.
+– 18 –
+
+[32] M. Zumalac´arregui, T. S. Koivisto, D. F. Mota, and P. Ruiz-Lapuente, Disformal Scalar Fields
+and the Dark Sector of the Universe, JCAP 1005 (2010) 038, [arXiv:1004.2684].
+[33] J. Sakstein, Towards Viable Cosmological Models of Disformal Theories of Gravity, Phys. Rev.
+D91 (2015), no. 2 024036, [arXiv:1409.7296].
+[34] J. Sakstein, Disformal Theories of Gravity: From the Solar System to Cosmology, JCAP 1412
+(2014) 012, [arXiv:1409.1734].
+[35] D. Bettoni and S. Liberati, Disformal invariance of second order scalar-tensor theories:
+Framing the Horndeski action, Phys. Rev. D88 (2013) 084020, [arXiv:1306.6724].
+[36] P. Brax and C. Burrage, Constraining Disformally Coupled Scalar Fields, Phys. Rev. D90
+(2014), no. 10 104009, [arXiv:1407.1861].
+[37] A. Hees, O. Minazzoli, and J. Larena, Breaking of the equivalence principle in the
+electromagnetic sector and its cosmological signatures, Phys. Rev. D90 (2014) 124064,
+[arXiv:1406.6187].
+[38] J. D. Bekenstein, Fine Structure Constant: Is It Really a Constant?, Phys. Rev. D25 (1982)
+1527–1539.
+[39] H. B. Sandvik, J. D. Barrow, and J. Magueijo, A simple cosmology with a varying ﬁne
+structure constant, Phys. Rev. Lett. 88 (2002) 031302, [astro-ph/0107512].
+[40] J. D. Barrow and S. Z. W. Lip, A Generalized Theory of Varying Alpha, Phys. Rev. D85
+(2012) 023514, [arXiv:1110.3120].
+[41] J. D. Barrow and A. A. H. Graham, General Dynamics of Varying-Alpha Universes, Phys. Rev.
+D88 (2013) 103513, [arXiv:1307.6816].
+[42] O. Minazzoli, Conservation laws in theories with universal gravity/matter coupling, Phys. Rev.
+D88 (2013) 027506, [arXiv:1307.1590].
+[43] O. Minazzoli and A. Hees, Late-time cosmology of a scalar-tensor theory with a universal
+multiplicative coupling between the scalar ﬁeld and the matter Lagrangian, Phys. Rev. D90
+(2014), no. 2 023017, [arXiv:1404.4266].
+[44] I. Etherington, On the deﬁnition of distance in general relativity, Philos. Mag. 15 (1933), no. 7
+761.
+[45] I. Etherington, Republication of: LX. On the deﬁnition of distance in general relativity, Gen.
+Relativ. Gravit. 39 (2007), no. 7 1055.
+[46] G. Ellis, On the deﬁnition of distance in general relativity: I. M. H. Etherington (Philosophical
+Magazine ser. 7, vol. 15, 761 (1933)), Gen. Relativ. Gravit. 39 (2007), no. 7 1047.
+[47] G. F. R. Ellis, Relativistic cosmology, Gen. Rel. Grav. 41 (2009) 581–660. [Proc. Int. Sch. Phys.
+Fermi47,104(1971)].
+[48] G. F. R. Ellis, R. Poltis, J.-P. Uzan, and A. Weltman, Blackness of the cosmic microwave
+background spectrum as a probe of the distance-duality relation, Phys. Rev. D87 (2013), no. 10
+103530, [arXiv:1301.1312].
+[49] J. A. S. Lima, Thermodynamics of decaying vacuum cosmologies, Phys. Rev. D54 (1996)
+2571–2577, [gr-qc/9605055].
+[50] J. A. S. Lima, A. I. Silva, and S. M. Viegas, Is the radiation temperature redshift relation of the
+standard cosmology in accordance with the data?, Mon. Not. Roy. Astron. Soc. 312 (2000)
+747–752.
+[51] C. van de Bruck, J. Morrice, and S. Vu, Constraints on Nonconformal Couplings from the
+Properties of the Cosmic Microwave Background Radiation, Phys. Rev. Lett. 111 (2013)
+161302, [arXiv:1303.1773].
+– 19 –
+
+[52] P. Brax, C. Burrage, A.-C. Davis, and G. Gubitosi, Cosmological Tests of the Disformal
+Coupling to Radiation, JCAP 1311 (2013) 001, [arXiv:1306.4168].
+[53] T. Damour, F. Piazza, and G. Veneziano, Violations of the equivalence principle in a dilaton
+runaway scenario, Phys. Rev. D66 (2002) 046007, [hep-th/0205111].
+[54] T. Damour, F. Piazza, and G. Veneziano, Runaway dilaton and equivalence principle violations,
+Phys. Rev. Lett. 89 (2002) 081601, [gr-qc/0204094].
+[55] T. Damour and A. M. Polyakov, The String dilaton and a least coupling principle, Nucl. Phys.
+B423 (1994) 532–558, [hep-th/9401069].
+[56] T. Damour and A. M. Polyakov, String theory and gravity, Gen. Rel. Grav. 26 (1994)
+1171–1176, [gr-qc/9411069].
+[57] E. J. Copeland, N. J. Nunes, and M. Pospelov, Models of quintessence coupled to the
+electromagnetic ﬁeld and the cosmological evolution of alpha, Phys. Rev. D69 (2004) 023501,
+[hep-ph/0307299].
+[58] K. A. Olive and M. Pospelov, Evolution of the ﬁne structure constant driven by dark matter
+and the cosmological constant, Phys. Rev. D65 (2002) 085044, [hep-ph/0110377].
+[59] N. J. Nunes and J. E. Lidsey, Reconstructing the dark energy equation of state with varying
+alpha, Phys. Rev. D69 (2004) 123511, [astro-ph/0310882].
+[60] J.-P. Uzan, Varying Constants, Gravitation and Cosmology, Living Rev. Rel. 14 (2011) 2,
+[arXiv:1009.5514].
+[61] M. Zumalac´arregui and J. Garc´ıa-Bellido, Transforming gravity: from derivative couplings to
+matter to second-order scalar-tensor theories beyond the Horndeski Lagrangian, Phys. Rev.
+D89 (2014) 064046, [arXiv:1308.4685].
+[62] M. Zumalac´arregui, T. S. Koivisto, and D. F. Mota, DBI Galileons in the Einstein Frame:
+Local Gravity and Cosmology, Phys. Rev. D87 (2013) 083010, [arXiv:1210.8016].
+[63] M. Minamitsuji, Disformal transformation of cosmological perturbations, Phys. Lett. B737
+(2014) 139–150, [arXiv:1409.1566].
+[64] T. S. Koivisto, D. F. Mota, and M. Zumalac´arregui, Screening Modiﬁcations of Gravity through
+Disformally Coupled Fields, Phys. Rev. Lett. 109 (2012) 241102, [arXiv:1205.3167].
+[65] C. van de Bruck and J. Morrice, Disformal couplings and the dark sector of the universe, JCAP
+1504 (2015), no. 04 036, [arXiv:1501.03073].
+[66] N. Suzuki et al., The Hubble Space Telescope Cluster Supernova Survey: V. Improving the Dark
+Energy Constraints Above z > 1 and Building an Early-Type-Hosted Supernova Sample,
+Astrophys. J. 746 (2012) 85, [arXiv:1105.3470].
+[67] S. Das, P. S. Corasaniti, and J. Khoury, Super-acceleration as signature of dark sector
+interaction, Phys. Rev. D73 (2006) 083509, [astro-ph/0510628].
+[68] Planck Collaboration, P. A. R. Ade et al., Planck 2015 results. XIII. Cosmological parameters,
+arXiv:1502.01589.
+[69] T. Chiba, The Constancy of the Constants of Nature: Updates, Prog. Theor. Phys. 126 (2011)
+993–1019, [arXiv:1111.0092].
+[70] G. R. Dvali and M. Zaldarriaga, Changing α with time: Implications for ﬁfth force type
+experiments and quintessence, Phys. Rev. Lett. 88 (2002) 091303, [hep-ph/0108217].
+[71] E. Calabrese, E. Menegoni, C. J. A. P. Martins, A. Melchiorri, and G. Rocha, Constraining
+Variations in the Fine Structure Constant in the presence of Early Dark Energy, Phys. Rev.
+D84 (2011) 023518, [arXiv:1104.0760].
+– 20 –
+
+[72] C. J. A. P. Martins and A. M. M. Pinho, Fine-structure constant constraints on dark energy,
+Phys. Rev. D91 (2015), no. 10 103501, [arXiv:1505.02196].
+[73] F. Pepe et al., ESPRESSO An Echelle SPectrograph for Rocky Exo-planets Search and Stable
+Spectroscopic Observations, The Messenger (ESO) 153 (2013) 6.
+[74] ESO, “The e-elt construction proposal.”
+http://www.eso.org/public/products/books/book_0046, 2011. Accessed: 25/09/2015.
+[75] R. Maiolino et al., A Community Science Case for E-ELT HIRES, arXiv:1310.3163.
+[76] A. Sandage, The Change of Redshift and Apparent Luminosity of Galaxies due to the
+Deceleration of Selected Expanding Universes., Astrophys. J. 136 (1962) 319.
+[77] A. Loeb, Direct Measurement of Cosmological Parameters from the Cosmic Deceleration of
+Extragalactic Objects, Astrophys. J. 499 (1998) L111–L114, [astro-ph/9802122].
+[78] J. Liske et al., Cosmic dynamics in the era of Extremely Large Telescopes, Mon. Not. Roy.
+Astron. Soc. 386 (2008) 1192–1218, [arXiv:0802.1532].
+[79] P. E. Vielzeuf and C. J. A. P. Martins, Probing dark energy beyond z = 2 with CODEX, Phys.
+Rev. D85 (2012) 087301, [arXiv:1202.4364].
+[80] V. Fish et al., High-Angular-Resolution and High-Sensitivity Science Enabled by Beamformed
+ALMA, arXiv:1309.3519.
+[81] R. P. J. Tilanus et al., Future mmVLBI Research with ALMA: A European vision,
+arXiv:1406.4650.
+[82] C. J. A. P. Martins, Fundamental cosmology in the E-ELT era: The status and future role of
+tests of fundamental coupling stability, Gen. Rel. Grav. 47 (2015), no. 1 1843,
+[arXiv:1412.0108].
+[83] J. Bagdonaite, E. J. Salumbides, S. P. Preval, M. A. Barstow, J. D. Barrow, M. T. Murphy,
+and W. Ubachs, Limits on a Gravitational Field Dependence of the Proton-Electron Mass Ratio
+from H2 in White Dwarf Stars, Phys. Rev. Lett. 113 (2014), no. 12 123002, [arXiv:1409.1000].
+[84] J. C. Berengut, V. V. Flambaum, A. Ong, J. K. Webb, J. D. Barrow, M. A. Barstow, S. P.
+Preval, and J. B. Holberg, Limits on the dependence of the ﬁne-structure constant on
+gravitational potential from white-dwarf spectra, Phys. Rev. Lett. 111 (2013), no. 1 010801,
+[arXiv:1305.1337].
+– 21 –

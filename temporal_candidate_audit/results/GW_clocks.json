@@ -1,0 +1,57 @@
+{
+  "GW": [
+    {
+      "distance_Mpc": 30.0,
+      "photon_first_gap_years_p0": 368251.39909273386,
+      "shared_p1_propagation_gap_seconds": 0.0,
+      "dp_for_10second_gap_linearized": 8.583424652023788e-13
+    },
+    {
+      "distance_Mpc": 40.0,
+      "photon_first_gap_years_p0": 653577.5199050009,
+      "shared_p1_propagation_gap_seconds": 0.0,
+      "dp_for_10second_gap_linearized": 4.832212702397004e-13
+    },
+    {
+      "distance_Mpc": 50.0,
+      "photon_first_gap_years_p0": 1019515.5784465969,
+      "shared_p1_propagation_gap_seconds": 0.0,
+      "dp_for_10second_gap_linearized": 3.095197236978038e-13
+    }
+  ],
+  "clocks": {
+    "Galileo_epsilonG_95_approx": [
+      -4.6708e-05,
+      5.0508e-05
+    ],
+    "alpha_model": "alpha_dot/alpha=q_eff*gamma",
+    "q_eff_abs_bound_conservative_95": 4.082003996259731e-08,
+    "cases": [
+      {
+        "q_intrinsic": 0,
+        "screen_fraction": 1,
+        "predicted_alpha_dot_per_year": 0.0,
+        "standardized_residual": -0.9090909090909092
+      },
+      {
+        "q_intrinsic": 1,
+        "screen_fraction": 1,
+        "predicted_alpha_dot_per_year": 7.731496595524618e-11,
+        "standardized_residual": 70286331.77749653
+      },
+      {
+        "q_intrinsic": 1,
+        "screen_fraction": 1e-06,
+        "predicted_alpha_dot_per_year": 7.731496595524618e-17,
+        "standardized_residual": 69.37724177749652
+      },
+      {
+        "q_intrinsic": 1,
+        "screen_fraction": 1e-08,
+        "predicted_alpha_dot_per_year": 7.731496595524618e-19,
+        "standardized_residual": -0.2062275822250348
+      }
+    ]
+  },
+  "caveat": "GW homogeneous law and constant-c alternative, illustrative distance and emission assumptions. q is an explicit alpha coupling, not universal time rescaling. Gaussian standardized residuals are diagnostics, not calibrated extreme-tail probabilities."
+}

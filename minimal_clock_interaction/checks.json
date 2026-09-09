@@ -1,0 +1,129 @@
+{
+  "status": "Analytic identities and synthetic checks, not new observational fits",
+  "leading_atomic_toy": [
+    {
+      "a": 0.0,
+      "b": 0.0,
+      "optical_exponent": 0.0,
+      "rod_exponent": 0.0,
+      "cavity_to_optical_exponent": -1.0,
+      "hyperfine_to_optical_exponent": 2.0,
+      "observable_redshift_exponent": 1.0
+    },
+    {
+      "a": 0.0,
+      "b": 1.0,
+      "optical_exponent": 1.0,
+      "rod_exponent": -1.0,
+      "cavity_to_optical_exponent": -1.0,
+      "hyperfine_to_optical_exponent": 2.0,
+      "observable_redshift_exponent": 2.0
+    },
+    {
+      "a": 0.0,
+      "b": 2.0,
+      "optical_exponent": 2.0,
+      "rod_exponent": -2.0,
+      "cavity_to_optical_exponent": -1.0,
+      "hyperfine_to_optical_exponent": 2.0,
+      "observable_redshift_exponent": 3.0
+    },
+    {
+      "a": 1.0,
+      "b": 0.0,
+      "optical_exponent": -2.0,
+      "rod_exponent": 1.0,
+      "cavity_to_optical_exponent": 0.0,
+      "hyperfine_to_optical_exponent": 0.0,
+      "observable_redshift_exponent": -1.0
+    },
+    {
+      "a": 1.0,
+      "b": 1.0,
+      "optical_exponent": -1.0,
+      "rod_exponent": 0.0,
+      "cavity_to_optical_exponent": 0.0,
+      "hyperfine_to_optical_exponent": 0.0,
+      "observable_redshift_exponent": 0.0
+    },
+    {
+      "a": 1.0,
+      "b": 2.0,
+      "optical_exponent": 0.0,
+      "rod_exponent": -1.0,
+      "cavity_to_optical_exponent": 0.0,
+      "hyperfine_to_optical_exponent": 0.0,
+      "observable_redshift_exponent": 1.0
+    },
+    {
+      "a": 2.0,
+      "b": 0.0,
+      "optical_exponent": -4.0,
+      "rod_exponent": 2.0,
+      "cavity_to_optical_exponent": 1.0,
+      "hyperfine_to_optical_exponent": -2.0,
+      "observable_redshift_exponent": -3.0
+    },
+    {
+      "a": 2.0,
+      "b": 1.0,
+      "optical_exponent": -3.0,
+      "rod_exponent": 1.0,
+      "cavity_to_optical_exponent": 1.0,
+      "hyperfine_to_optical_exponent": -2.0,
+      "observable_redshift_exponent": -2.0
+    },
+    {
+      "a": 2.0,
+      "b": 2.0,
+      "optical_exponent": -2.0,
+      "rod_exponent": 0.0,
+      "cavity_to_optical_exponent": 1.0,
+      "hyperfine_to_optical_exponent": -2.0,
+      "observable_redshift_exponent": -1.0
+    }
+  ],
+  "protected_leading_cases": [
+    {
+      "a": 1.0,
+      "b": 0.0,
+      "optical_exponent": -2.0,
+      "rod_exponent": 1.0,
+      "cavity_to_optical_exponent": 0.0,
+      "hyperfine_to_optical_exponent": 0.0,
+      "observable_redshift_exponent": -1.0
+    },
+    {
+      "a": 1.0,
+      "b": 1.0,
+      "optical_exponent": -1.0,
+      "rod_exponent": 0.0,
+      "cavity_to_optical_exponent": 0.0,
+      "hyperfine_to_optical_exponent": 0.0,
+      "observable_redshift_exponent": 0.0
+    },
+    {
+      "a": 1.0,
+      "b": 2.0,
+      "optical_exponent": 0.0,
+      "rod_exponent": -1.0,
+      "cavity_to_optical_exponent": 0.0,
+      "hyperfine_to_optical_exponent": 0.0,
+      "observable_redshift_exponent": 1.0
+    }
+  ],
+  "maximum_identity_error": 0.0,
+  "present_fixed_atom_fixed_rod_cavity_fractional_drift_per_year": -7.7315e-11,
+  "redshift_drift_per_year": {
+    "0.1": -2.112490416044981e-12,
+    "1.0": -2.584950242505112e-11,
+    "2.0": -5.837694472700173e-11,
+    "4.0": -1.337783554488107e-10
+  },
+  "limitations": [
+    "Leading Coulomb/Pauli scaling does not include relativistic, nuclear, radiative or solid-state corrections.",
+    "Exact identity assumes homogeneous nondispersive adiabatic propagation, identical cavity geometry with fixed mode, and rods tracking the chosen cavity length standard.",
+    "A nonzero free-wave redshift with stable cavity/atom ratio then requires distances to change in those rod units for fixed coordinate separation.",
+    "No general no-go theorem for dispersive, nonlocal, environment-dependent, multimode or nonadiabatic theories."
+  ]
+}

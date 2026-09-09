@@ -1,0 +1,5156 @@
+{
+  "scope": "Conditional one-zone transport; no microscopic capture or new gravitational law established",
+  "checks": [
+    {
+      "check": "independent_ODE_finite_fuel_energy_conservation",
+      "rates": {
+        "photon_conversion": 1,
+        "companion_capture": 0.2,
+        "photon_escape": 0.0,
+        "companion_escape": 0.0,
+        "companion_energy_loss": 0.0,
+        "deposit_energy_loss": 0.0
+      },
+      "error": 2.745359495293087e-12,
+      "residual": 1.7763568394002505e-15
+    },
+    {
+      "check": "independent_ODE_finite_fuel_energy_conservation",
+      "rates": {
+        "photon_conversion": 1,
+        "companion_capture": 0.2,
+        "photon_escape": 2,
+        "companion_escape": 3,
+        "companion_energy_loss": 0.0,
+        "deposit_energy_loss": 0.0
+      },
+      "error": 7.787104294720848e-13,
+      "residual": 1.7763568394002505e-15
+    },
+    {
+      "check": "independent_ODE_finite_fuel_energy_conservation",
+      "rates": {
+        "photon_conversion": 1,
+        "companion_capture": 0.2,
+        "photon_escape": 2,
+        "companion_escape": 3,
+        "companion_energy_loss": 0.4,
+        "deposit_energy_loss": 0.1
+      },
+      "error": 6.246114736541131e-13,
+      "residual": 8.881784197001252e-16
+    },
+    {
+      "check": "analytic_infinite_time_capture_fraction",
+      "rates": {
+        "photon_conversion": 1,
+        "companion_capture": 0.2,
+        "photon_escape": 0.0,
+        "companion_escape": 0.0,
+        "companion_energy_loss": 0.0,
+        "deposit_energy_loss": 0.0
+      },
+      "expected": 1.0,
+      "actual": 0.9999999999999998
+    },
+    {
+      "check": "analytic_infinite_time_capture_fraction",
+      "rates": {
+        "photon_conversion": 1,
+        "companion_capture": 1,
+        "photon_escape": 2,
+        "companion_escape": 3,
+        "companion_energy_loss": 0.4,
+        "deposit_energy_loss": 0.0
+      },
+      "expected": 0.07575757575757575,
+      "actual": 0.07575757575757576
+    },
+    {
+      "check": "analytic_infinite_time_capture_fraction",
+      "rates": {
+        "photon_conversion": 0,
+        "companion_capture": 1,
+        "photon_escape": 0.0,
+        "companion_escape": 0.0,
+        "companion_energy_loss": 0.0,
+        "deposit_energy_loss": 0.0
+      },
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "check": "analytic_infinite_time_capture_fraction",
+      "rates": {
+        "photon_conversion": 1,
+        "companion_capture": 0,
+        "photon_escape": 0.0,
+        "companion_escape": 0.0,
+        "companion_energy_loss": 0.0,
+        "deposit_energy_loss": 0.0
+      },
+      "expected": 0.0,
+      "actual": 0.0
+    },
+    {
+      "check": "zero_escape_reduces_to_previous_solver",
+      "passed": true
+    },
+    {
+      "check": "fixed_fuel_longer_emission_does_not_create_energy",
+      "source_rates": [
+        0.1,
+        1,
+        10
+      ],
+      "deposits": [
+        0.04166666666666665,
+        0.04166666666666667,
+        0.0416666666666666
+      ]
+    }
+  ],
+  "tradeoff_definition": "eta_required = full_conversion_shortfall * 1e10 years / (T * B * f). B rescales integrated available photon energy relative to present luminosity times T; f includes conversion and capture. No stellar fuel or external-source history is yet established.",
+  "scenarios": [
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 5427.660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9628.986223400952
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11605.69388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8649.655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1963.932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10963.78706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21568.793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42974.37647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1188.908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11300.472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3969.0456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1788.173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6963.548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 508.59658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4760.1943595275425
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5543.591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10383.226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1991.6074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4256.2843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8072.180258636979
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4580.158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8208.677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2080.813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4014.859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2754.8878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6320.327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5311.728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 54276.60172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96289.86223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116056.9388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86496.55556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19639.32510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109637.8706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215687.93109207798
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429743.7647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11889.08659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113004.72022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39690.45646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17881.73704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69635.48566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5085.965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47601.94359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55435.91624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103832.26729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19916.0743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42562.84321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80721.80258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45801.58278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82086.77057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20808.13946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40148.59588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27548.878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63203.27387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53117.28719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 542766.0172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 962898.6223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1160569.3889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 864965.5556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 196393.2510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1096378.706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2156879.3109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4297437.647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 118890.86599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1130047.2022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 396904.56460156146
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 178817.3704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 696354.8566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 50859.6584550581
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 476019.4359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 554359.1624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1038322.6729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 199160.74306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 425628.4321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 807218.0258636979
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 458015.82780524844
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 820867.7057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 208081.39461078722
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 401485.9588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 275488.78144371795
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 632032.7387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 531172.8719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 54.27660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96.28986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116.05693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86.49655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19.63932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109.6378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215.68793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429.7437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11.88908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113.00472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39.69045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17.881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69.6354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47.60194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55.43591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103.83226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19.9160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42.56284321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80.72180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45.801582780524846
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82.08677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20.808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40.14859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27.5488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63.20327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53.11728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 542.7660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 962.8986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1160.569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 864.9655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 196.39325106879411
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1096.378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2156.8793109207795
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4297.437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 118.8908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1130.0472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 396.9045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 178.8173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 696.3548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 50.8596584550581
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 476.01943595275424
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 554.3591624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1038.3226729412484
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 199.16074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 425.62843211580577
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 807.2180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 458.0158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 820.8677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 208.0813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 401.4859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 275.488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 632.0327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 531.1728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 5427.660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9628.986223400952
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11605.69388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8649.655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1963.932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10963.78706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21568.793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42974.37647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1188.908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11300.472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3969.0456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1788.173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6963.548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 508.59658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4760.1943595275425
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5543.591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10383.226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1991.6074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4256.2843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8072.180258636979
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4580.158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8208.677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2080.813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4014.859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2754.8878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6320.327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5311.728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.5427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.9628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1.160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.8649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.1963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1.096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2.15687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4.297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.11889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1.1300472022980474
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.3969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.1788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.6963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.050859658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.4760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.5543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1.0383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.42562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.8072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.4580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.8208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.20808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.4014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.27548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.6320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.5311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 5.427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11.60569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10.96378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21.568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42.97437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11.300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.5085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10.383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.99160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158057
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.7548878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 54.27660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96.28986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116.05693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86.49655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19.63932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109.6378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215.68793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429.7437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11.88908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113.00472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39.69045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17.881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69.6354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47.60194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55.43591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103.83226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19.9160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42.56284321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80.72180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45.801582780524846
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82.08677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20.808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40.14859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27.5488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63.20327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53.11728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 542.7660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 962.8986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1160.569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 864.9655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 196.39325106879411
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1096.378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2156.8793109207795
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4297.437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 118.8908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1130.0472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 396.9045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 178.8173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 696.3548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 50.8596584550581
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 476.01943595275424
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 554.3591624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1038.3226729412484
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 199.16074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 425.62843211580577
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 807.2180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 458.0158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 820.8677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 208.0813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 401.4859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 275.488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 632.0327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 531.1728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 5427.660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9628.986223400952
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11605.69388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8649.655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1963.932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10963.78706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21568.793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42974.37647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1188.908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11300.472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3969.0456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1788.173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6963.548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 508.59658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4760.1943595275425
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5543.591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10383.226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1991.6074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4256.2843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8072.180258636979
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4580.158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8208.677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2080.813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4014.859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2754.8878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6320.327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5311.728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 54276.60172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96289.86223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116056.9388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86496.55556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19639.32510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109637.8706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215687.93109207798
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429743.7647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11889.08659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113004.72022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39690.45646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17881.73704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69635.48566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5085.965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47601.94359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55435.91624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103832.26729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19916.0743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42562.84321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80721.80258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45801.58278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82086.77057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20808.13946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40148.59588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27548.878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63203.27387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53117.28719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 5.427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11.60569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10.96378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21.568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42.97437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11.300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.5085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10.383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.99160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158057
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.7548878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 54.27660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96.28986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116.05693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86.49655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19.63932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109.6378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215.68793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429.7437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11.88908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113.00472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39.69045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17.881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69.6354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47.60194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55.43591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103.83226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19.9160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42.56284321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80.72180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45.801582780524846
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82.08677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20.808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40.14859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27.5488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63.20327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53.11728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 542.7660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 962.8986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1160.569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 864.9655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 196.39325106879411
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1096.378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2156.8793109207795
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4297.437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 118.8908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1130.0472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 396.9045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 178.8173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 696.3548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 50.8596584550581
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 476.01943595275424
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 554.3591624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1038.3226729412484
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 199.16074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 425.62843211580577
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 807.2180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 458.0158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 820.8677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 208.0813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 401.4859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 275.488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 632.0327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 531.1728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.05427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.09628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.1160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.08649655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.01963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.10963787065216521
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.21568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.4297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.01188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.11300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.03969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.01788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.0696354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.04760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.05543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.10383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.019916074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.08072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.04580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.08208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.020808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.04014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.027548878144371798
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.06320327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.05311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 0.5427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.9628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1.160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.8649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.1963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1.096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2.15687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4.297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.11889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1.1300472022980474
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.3969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.1788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.6963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.050859658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.4760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.5543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1.0383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.42562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.8072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.4580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.8208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.20808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.4014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.27548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.6320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.5311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 5.427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11.60569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10.96378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21.568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42.97437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11.300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.5085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10.383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.99160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158057
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.7548878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 54.27660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96.28986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116.05693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86.49655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19.63932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109.6378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215.68793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429.7437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11.88908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113.00472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39.69045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17.881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69.6354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47.60194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55.43591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103.83226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19.9160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42.56284321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80.72180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45.801582780524846
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82.08677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20.808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40.14859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27.5488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63.20327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53.11728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 542.7660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 962.8986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1160.569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 864.9655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 196.39325106879411
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1096.378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2156.8793109207795
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4297.437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 118.8908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1130.0472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 396.9045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 178.8173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 696.3548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 50.8596584550581
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 476.01943595275424
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 554.3591624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1038.3226729412484
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 199.16074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 425.62843211580577
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 807.2180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 458.0158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 820.8677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 208.0813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 401.4859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 275.488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 632.0327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 531.1728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 5427.660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9628.986223400952
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11605.69388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8649.655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1963.932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10963.78706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21568.793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42974.37647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1188.908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11300.472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3969.0456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1788.173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6963.548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 508.59658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4760.1943595275425
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5543.591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10383.226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1991.6074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4256.2843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8072.180258636979
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4580.158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8208.677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2080.813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4014.859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2754.8878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6320.327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5311.728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.5427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.9628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1.160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.8649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.1963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1.096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2.15687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4.297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.11889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1.1300472022980474
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.3969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.1788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.6963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.050859658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.4760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.5543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1.0383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.42562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.8072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.4580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.8208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.20808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.4014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.27548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.6320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.5311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 5.427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11.60569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10.96378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21.568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42.97437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11.300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.5085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10.383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.99160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158057
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.7548878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 54.27660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96.28986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116.05693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86.49655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19.63932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109.6378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215.68793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429.7437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11.88908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113.00472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39.69045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17.881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69.6354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47.60194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55.43591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103.83226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19.9160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42.56284321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80.72180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45.801582780524846
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82.08677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20.808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40.14859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27.5488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63.20327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53.11728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.005427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.009628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.01160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.008649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.001963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.01096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.0215687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.04297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.0011889086599344708
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.011300472022980476
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.003969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.0017881737041832019
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.006963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.0005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.004760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.005543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.010383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.00199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.0042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.008072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.004580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.008208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.002080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.004014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.0027548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.0063203273878311445
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.005311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 0.05427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.09628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.1160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.08649655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.01963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.10963787065216521
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.21568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.4297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.01188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.11300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.03969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.01788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.0696354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.04760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.05543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.10383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.019916074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.08072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.04580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.08208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.020808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.04014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.027548878144371798
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.06320327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.05311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 1000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 0.5427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.9628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1.160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.8649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.1963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1.096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2.15687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4.297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.11889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1.1300472022980474
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.3969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.1788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.6963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.050859658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.4760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.5543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1.0383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.42562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.8072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.4580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.8208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.20808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.4014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.27548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.6320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.5311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 5.427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11.60569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10.96378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21.568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42.97437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11.300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.5085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10.383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.99160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158057
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.7548878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 54.27660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96.28986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116.05693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86.49655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19.63932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109.6378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215.68793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429.7437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11.88908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113.00472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39.69045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17.881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69.6354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47.60194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55.43591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103.83226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19.9160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42.56284321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80.72180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45.801582780524846
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82.08677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20.808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40.14859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27.5488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63.20327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53.11728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 542.7660172226499,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 962.8986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1160.569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 864.9655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 196.39325106879411
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1096.378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2156.8793109207795
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4297.437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 118.8908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1130.0472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 396.9045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 178.8173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 696.3548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 50.8596584550581
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 476.01943595275424
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 554.3591624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1038.3226729412484
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 199.16074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 425.62843211580577
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 807.2180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 458.0158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 820.8677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 208.0813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 401.4859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 275.488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 632.0327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 531.1728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.05427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.09628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.1160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.08649655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.01963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.10963787065216521
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.21568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.4297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.01188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.11300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.03969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.01788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.0696354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.04760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.05543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.10383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.019916074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.08072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.04580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.08208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.020808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.04014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.027548878144371798
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.06320327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.05311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 0.5427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.9628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1.160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.8649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.1963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1.096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2.15687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4.297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.11889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1.1300472022980474
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.3969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.1788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.6963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.050859658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.4760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.5543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1.0383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.42562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.8072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.4580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.8208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.20808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.4014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.27548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.6320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.5311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 5.427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11.60569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10.96378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21.568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42.97437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11.300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.5085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10.383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.99160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158057
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.7548878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.0005427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.0009628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.0011605693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.0008649655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.0001963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.001096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.0021568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.004297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.00011889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.0011300472022980476
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.0003969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.00017881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.0006963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.0859658455058106e-05
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.0004760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.0005543591624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.0010383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.000199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.00042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.0008072180258636979
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.00045801582780524843
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.0008208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.00020808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.0004014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.00027548878144371795
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.0006320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.0005311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 0.005427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.009628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.01160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.008649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.001963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.01096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.0215687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.04297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.0011889086599344708
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.011300472022980476
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.003969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.0017881737041832019
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.006963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.0005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.004760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.005543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.010383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.00199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.0042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.008072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.004580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.008208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.002080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.004014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.0027548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.0063203273878311445
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.005311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 10000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 0.05427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.09628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.1160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.08649655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.01963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.10963787065216521
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.21568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.4297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.01188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.11300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.03969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.01788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.0696354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.04760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.05543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.10383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.019916074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.08072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.04580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.08208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.020808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.04014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.027548878144371798
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.06320327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.05311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.5427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.9628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1.160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.8649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.1963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1.096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2.15687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4.297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.11889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1.1300472022980474
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.3969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.1788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.6963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.050859658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.4760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.5543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1.0383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.42562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.8072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.4580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.8208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.20808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.4014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.27548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.6320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.5311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 5.427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 11.60569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 10.96378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 21.568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 42.97437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 11.300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156147
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.5085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 10.383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.99160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158057
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.7548878144371796
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 1,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 54.27660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 96.28986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 116.05693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 86.49655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 19.63932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 109.6378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 215.68793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 429.7437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 11.88908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 113.00472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 39.69045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 17.881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 69.6354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 47.60194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 55.43591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 103.83226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 19.9160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 42.56284321158058
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 80.72180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 45.801582780524846
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 82.08677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 20.808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 40.14859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 27.5488781443718
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 63.20327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 53.11728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 0.005427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.009628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.01160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.008649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.001963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.01096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.0215687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.04297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.0011889086599344708
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.011300472022980476
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.003969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.0017881737041832019
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.006963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.0005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.004760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.005543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.010383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.00199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.0042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.008072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.004580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.008208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.002080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.004014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.0027548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.0063203273878311445
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.005311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 0.05427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.09628986223400954
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.1160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.08649655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.01963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.10963787065216521
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.21568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.4297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.01188908659934471
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.11300472022980475
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.03969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.01788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.0696354856634951
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.04760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.05543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.10383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.019916074306814198
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.08072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.04580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.08208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.020808139461078724
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.04014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.027548878144371798
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.06320327387831144
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.05311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 100,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 0.5427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.9628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 1.160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.8649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.1963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 1.096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 2.15687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 4.297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.11889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 1.1300472022980474
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.3969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.1788173704183202
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.6963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.050859658455058104
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.4760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.5543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 1.0383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.42562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.8072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.4580158278052484
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.8208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.20808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.4014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.27548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.6320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.5311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 1,
+      "median_required_response_multiplier": 5.4276601722264985e-05,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 9.628986223400953e-05
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.00011605693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 8.649655556500799e-05
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 1.963932510687941e-05
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.0001096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.00021568793109207797
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.0004297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 1.1889086599344709e-05
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.00011300472022980476
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 3.9690456460156146e-05
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 1.788173704183202e-05
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 6.96354856634951e-05
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.0859658455058106e-06
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 4.760194359527542e-05
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 5.543591624544353e-05
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.00010383226729412483
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 1.9916074306814198e-05
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 4.256284321158058e-05
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 8.072180258636977e-05
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 4.5801582780524845e-05
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 8.208677057890037e-05
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 2.0808139461078724e-05
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 4.014859588738218e-05
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 2.75488781443718e-05
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 6.320327387831144e-05
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 5.311728719908643e-05
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.1,
+      "median_required_response_multiplier": 0.0005427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.0009628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.0011605693889503179
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.0008649655556500799
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.0001963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.001096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.0021568793109207796
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.004297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.00011889086599344709
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.0011300472022980476
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.0003969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.00017881737041832018
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.0006963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 5.0859658455058106e-05
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.0004760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.0005543591624544354
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.0010383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.000199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.00042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.0008072180258636979
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.00045801582780524843
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.0008208677057890037
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.00020808139461078723
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.0004014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.00027548878144371795
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.0006320327387831145
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.0005311728719908643
+        }
+      ]
+    },
+    {
+      "duration_years": 100000000000000.0,
+      "integrated_source_multiplier": 10000,
+      "captured_fraction": 0.01,
+      "median_required_response_multiplier": 0.005427660172226498,
+      "galaxies": [
+        {
+          "galaxy": "IC2574",
+          "required_response_multiplier": 0.009628986223400953
+        },
+        {
+          "galaxy": "NGC0289",
+          "required_response_multiplier": 0.01160569388950318
+        },
+        {
+          "galaxy": "NGC0300",
+          "required_response_multiplier": 0.008649655556500798
+        },
+        {
+          "galaxy": "NGC0891",
+          "required_response_multiplier": 0.001963932510687941
+        },
+        {
+          "galaxy": "NGC2403",
+          "required_response_multiplier": 0.01096378706521652
+        },
+        {
+          "galaxy": "NGC2841",
+          "required_response_multiplier": 0.0215687931092078
+        },
+        {
+          "galaxy": "NGC2915",
+          "required_response_multiplier": 0.04297437647911985
+        },
+        {
+          "galaxy": "NGC2976",
+          "required_response_multiplier": 0.0011889086599344708
+        },
+        {
+          "galaxy": "NGC3198",
+          "required_response_multiplier": 0.011300472022980476
+        },
+        {
+          "galaxy": "NGC3521",
+          "required_response_multiplier": 0.003969045646015615
+        },
+        {
+          "galaxy": "NGC3953",
+          "required_response_multiplier": 0.0017881737041832019
+        },
+        {
+          "galaxy": "NGC4013",
+          "required_response_multiplier": 0.006963548566349511
+        },
+        {
+          "galaxy": "NGC4051",
+          "required_response_multiplier": 0.0005085965845505811
+        },
+        {
+          "galaxy": "NGC4100",
+          "required_response_multiplier": 0.004760194359527542
+        },
+        {
+          "galaxy": "NGC4138",
+          "required_response_multiplier": 0.005543591624544353
+        },
+        {
+          "galaxy": "NGC4183",
+          "required_response_multiplier": 0.010383226729412482
+        },
+        {
+          "galaxy": "NGC4217",
+          "required_response_multiplier": 0.00199160743068142
+        },
+        {
+          "galaxy": "NGC4559",
+          "required_response_multiplier": 0.0042562843211580575
+        },
+        {
+          "galaxy": "NGC5033",
+          "required_response_multiplier": 0.008072180258636978
+        },
+        {
+          "galaxy": "NGC5055",
+          "required_response_multiplier": 0.004580158278052485
+        },
+        {
+          "galaxy": "NGC5907",
+          "required_response_multiplier": 0.008208677057890038
+        },
+        {
+          "galaxy": "NGC6946",
+          "required_response_multiplier": 0.002080813946107872
+        },
+        {
+          "galaxy": "NGC7331",
+          "required_response_multiplier": 0.004014859588738218
+        },
+        {
+          "galaxy": "NGC7793",
+          "required_response_multiplier": 0.0027548878144371797
+        },
+        {
+          "galaxy": "UGC04483",
+          "required_response_multiplier": 0.0063203273878311445
+        },
+        {
+          "galaxy": "UGC07089",
+          "required_response_multiplier": 0.005311728719908643
+        }
+      ]
+    }
+  ]
+}

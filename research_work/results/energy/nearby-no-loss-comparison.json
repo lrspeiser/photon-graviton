@@ -1,0 +1,27 @@
+{
+  "status": "conditional current-catalog sensitivity, not a derived no-loss propagation model",
+  "sources": 814,
+  "matched_targets": 26,
+  "source_sha256": "89f2db19844a3e08960efcf6725a478ebfd364bef10c1821dfbaf9bdad25a1ab",
+  "assumptions": [
+    "Same 10 Gyr, catalog geometry and luminosities as original; no new cosmic history.",
+    "Companion per-emitted-photon energy fraction 1-exp(-x), assuming complete transfer of photon loss and no companion loss.",
+    "Compare two stipulated companion arrival factors, S=exp(x) and 1. Neither is yet derived from the candidate interaction.",
+    "Local contribution kept at archived already-optimistic first-transfer energy.",
+    "No additional sources, capture gains, or halo fits."
+  ],
+  "medians": {
+    "shared_flux_W_m2": 9.513133866801912e-12,
+    "no_loss_arrival_S_flux_gain": 1.002073400610536,
+    "no_loss_arrival_1_flux_gain": 1.0062371025680434,
+    "shared_combined_shortfall": 685403783.5818577,
+    "no_loss_arrival_S_combined_shortfall": 685125082.2365005,
+    "no_loss_arrival_1_combined_shortfall": 684566110.5244606,
+    "full_conversion_shortfall": 5427.660172226499,
+    "constant_present_luminosity_100pct_supply_time_yr": 54276601722264.984
+  },
+  "maximum_flux_gains": {
+    "no_loss_arrival_S_flux_gain": 1.0037187014545554,
+    "no_loss_arrival_1_flux_gain": 1.011206697094486
+  }
+}

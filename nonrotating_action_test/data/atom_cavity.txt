@@ -1,0 +1,1381 @@
+Precision Metrology Meets Cosmology: Improved Constraints on Ultralight Dark
+Matter from Atom-Cavity Frequency Comparisons
+Colin J. Kennedy,1 Eric Oelker,1 John M. Robinson,1 Tobias Bothwell,1 Dhruv
+Kedar,1 William R. Milner,1 G. Edward Marti,1, 2 Andrei Derevianko,3 and Jun Ye1
+1JILA, National Institute of Standards and Technology and University of Colorado, Boulder, CO 80309-0440
+2Department of Molecular and Cellular Physiology,
+Stanford University, Stanford, California 94305, United States
+3Department of Physics, University of Nevada, Reno, Nevada 89557, USA
+(Dated: August 21, 2020)
+We conduct frequency comparisons between a state-of-the-art strontium optical lattice clock,
+a cryogenic crystalline silicon cavity, and a hydrogen maser to set new bounds on the coupling
+of ultralight dark matter to Standard Model particles and ﬁelds in the mass range of 10−16 −
+10−21 eV. The key advantage of this two-part ratio comparison is the diﬀerential sensitivities to
+time variation of both the ﬁne-structure constant and the electron mass, achieving a substantially
+improved limit on the moduli of ultralight dark matter, particularly at higher masses than typical
+atomic spectroscopic results. Furthermore, we demonstrate an extension of the search range to even
+higher masses by use of dynamical decoupling techniques. These results highlight the importance of
+using the best performing atomic clocks for fundamental physics applications as all-optical timescales
+are increasingly integrated with, and will eventually supplant, existing microwave timescales.
+It is widely accepted that dark matter makes up the
+majority of the matter in the observable universe [1, 2].
+While its composition remains a mystery, its presence
+is manifest through gravitational eﬀects on galactic and
+cosmological scales [3–5]. Many eﬀorts on direct detec-
+tion with laboratory experiments target weakly interact-
+ing massive particles (WIMPs) with masses in the 100
+GeV range as suitable candidate particles arise naturally
+in popular extensions to the Standard Model.
+Detec-
+tion has remained elusive, however, despite advances in
+the sensitivity for direct detection techniques [6–8] and
+missing-momentum searches at the Large Hadron Col-
+lider [9].
+Axions are another class of particle that has garnered
+interest both in solving the strong CP problem and as a
+dark matter candidate [10]. The pseudoscalar coupling
+of axions to matter dictates searches for odd parity sig-
+nals such as permanent electric dipole moments of the
+neutron or electron [11, 12], conversion of axions to pho-
+tons in a strong magnetic ﬁeld [13, 14], or nuclear re-
+coils [15]. Without a clear detection of either WIMPs
+or axions, there is renewed interest in alternative theo-
+ries proposing candidate particles with masses spanning
+many orders of magnitude below 1 eV down to 10−22 eV
+where the particle’s deBroglie wavelength is comparable
+to the size of dwarf galaxies. This has produced new con-
+straints arising from considerations of the astrophysical
+consequences of ultralight dark matter [16–19].
+For scalar ﬁelds, recent eﬀorts have been directed to-
+wards developing new laboratory probes of dark matter
+at particle masses far below 1 eV, as ultralight particles
+provide natural solutions to some astrophysical problems
+such as small scale structure in typical cold dark matter
+models [20]. In this low energy regime, the conditions
+that the dark matter is gravitationally bound to galaxies
+and it has large deBroglie wavelengths imply that these
+particles have large occupation numbers per mode, and
+consequently form a highly coherent bosonic object be-
+having locally like a classical ﬁeld [10]. Speciﬁcally, ul-
+tralight bosonic dark matter with dilatonic couplings to
+normal matter is predicted to generate highly coherent
+oscillations in the ﬁne-structure constant as well as elec-
+tron and quark masses [21]. Additionally, assuming that
+the dark matter contains some self-interaction, it may
+form clumps that can manifest as transient changes in
+these constants [22–25].
+Using atomic clocks as probes of ultralight dark matter
+has garnered strong interest due to their inherent sensi-
+tivity to fundamental constants and the rapid advance
+in the clock performance over the past decade.
+These
+systems provide a promising route to advance the search
+frontier for ultralight dark matter particles given a wealth
+of historical data from global timescale systems [25–29]
+including GPS [24], and a host of recent proposals for en-
+hancing the sensitivity of optical lattice clocks for dark
+matter searches [30, 31].
+In this Letter we demonstrate signiﬁcantly improved
+bounds on the coupling of ultralight dark matter to the
+ﬁne-structure constant (α) and electron mass (me). Cen-
+tral to this important advance is the state-of-the-art sta-
+bility of our 21 cm crystalline silicon optical cavity at
+124 K [32–34] and measuring its frequency with both a
+Sr optical lattice clock with an estimated accuracy of
+2.0 × 10−18 [35] and a hydrogen maser [36]. Fig. 1(a)
+shows the cavity resonance frequency in atomic units,
+fc ∝αmec2, and its dependence on α and me, both of
+which are directly traceable to the Bohr radius as the
+cavity spacer length is proportional to the silicon crystal
+lattice constant. The frequency of a resonant mode of
+the cavity is compared to atomic standards in both the
+arXiv:2008.08773v1  [physics.atom-ph]  20 Aug 2020
+
+2
+(a)
+0
+20
+Elapsed Time (Days)
+1.0
+0.5
+0.0
+0.5
+1.0
+Fractional Dev. (10
+14)
+(b)
+H/Si
+Sr/Si
+10
+5
+10
+3
+10
+1
+Frequency (Hz)
+10
+37
+10
+33
+10
+29
+10
+25
+PSD (1/Hz)
+(c)
+H/Si Data
+Sr/Si Data
+Sr/Si Model
+H/Si Model
+FIG. 1.
+Atom-Cavity Frequency Comparisons.
+(a)
+Schematic depiction of the three frequencies that compose
+the ratios for this dark matter search. Fractional ﬂuctuations
+of these ratios are sensitive to fractional ﬂuctuations of fun-
+damental quantities via the inscribed equations. (b) Time-
+domain signal of the 12-day comparison for the fSr/fc ratio
+(red) and the 33-day comparison of fH/fc (blue). For visual
+clarity, fH/fc has been decimated by a factor of 720.
+(c)
+Frequency-domain signal derived from (b) using the Lomb-
+Scargle technique to estimate the power spectral density
+(PSD). Data for fSr/fc has a bin width of 3.4×10−6 Hz, and
+fH/fc has a bin width of 3.7 × 10−7 Hz. Black lines indicate
+the noise model for fSr/fc (dashed) and fH/fc (dot-dashed)
+ratios.
+optical and microwave domain forming the dimensionless
+frequency ratios shown in Fig. 1(a). These atomic stan-
+dards have diﬀerent dependencies on α and me, making
+these dimensionless ratios powerful sensors for potential
+physics beyond the Standard Model. For the optical ra-
+tio, the 87Sr clock transition frequency depends primarily
+on the Rydberg energy, 1
+2α2+ϵmec2, via the electron in-
+teraction energy diﬀerence between 5s2 and 5s5p clock
+states – with a small ϵ = 0.06 correction for relativistic
+eﬀects [21]. For the microwave ratio, the 1H hyper-ﬁne
+transition frequency depends on the magnetic interaction
+of the electron and nuclear spins, fH ∝α4m2
+ec2, leading
+to a diﬀerent dependence on α, and me [37]. While not
+discussed in detail here, fH/fc has additional sensitivity
+to the quark masses, the results of which are given in [38].
+Arising from this diﬀerential sensitivity to fundamen-
+tal constants, precise determination of the ﬂuctuations
+of both fH/fc and fSr/fc provides a direct correspon-
+dence with potential ﬂuctuations in the apparent values
+of fundamental constants. These relative ﬂuctuations can
+subsequently be used to connect cosmological models of
+dark matter to atomic physics experiments via various
+hypotheses of how the Standard Model is coupled to dark
+matter. To make this connection, we consider the La-
+grangian coupling terms (in natural units ℏ= c = 1)
+between dark matter, φ, and Standard Model particles
+and ﬁelds [21]:
+Lφ = κφ
+de
+4 FµνF µν −dmeme ¯ψeψe
+
+.
+(1)
+The ﬁrst term describes the coupling of φ to the ﬁne-
+structure constant via the electromagnetic Faraday ten-
+sor, Fµν, with the electromagnetic gauge modulus de, and
+κ = √4πGN with Newton’s constant GN. The second
+term describes the coupling of φ to the electron mass
+with the modulus, dme, and the electron ﬁeld, ψe.
+In
+this model, Lφ produces an apparent periodic change in
+α or me, with the modulus, de or dme, respectively. This
+manifests in a laboratory experiment as periodic oscilla-
+tions of dimensionless frequency ratios at the Compton
+frequency (fφ) which can be subsequently used to set
+bounds on both de and dme [38].
+The data composing the two dimensionless frequency
+ratios between the Si cavity and the Sr clock or H maser
+are shown in Fig. 1(b). To begin, we consider a potential
+periodic signal that is observed over a duration of Tmax,
+compared to the dark matter ﬁeld’s coherence time, τc.
+For Tmax < τc, the phase is preserved throughout the ob-
+servation run so we expect the signal-to-noise ratio (SNR)
+to improve as more data is collected. The fSr/fc data
+consists of 12 consecutive comparison days with a total
+uptime of 30% resulting in a data set that is 978,041
+s long.
+The fH/fc data spans 33 days and has a to-
+tal uptime of 94% resulting in a 2,826,942 s long record.
+The highest frequency/mass bins for the Sr/Si data set
+are at 125 mHz, corresponding to a time period of 8 s,
+or a maximum of 1.2 × 105 oscillations over the course
+of the comparison, whereas the expected virial velocity-
+broadening of dark matter expects coherence times up to
+106 oscillations, τc = (fφv2
+virial/c2)−1 [21]. Consequently,
+the results of this comparison are interpreted in the limit
+of Tmax < τc.
+The power-spectral density (PSD) of the data is shown
+in Fig. 1(c). The fSr/fc model, shown overlaid in black
+dashed lines, is derived from previous work adding in a
+white frequency noise term accounting for the Dick ef-
+fect [34]. The fH/fc model, shown in dash-dotted lines,
+is derived from the cavity model in addition to a white
+frequency noise term for the maser. A resonance around
+0.1 mHz accounts for the noise of the microwave link be-
+tween the maser location at NIST and the cavity and
+optical frequency comb at JILA [38]. The PSD can be
+converted into a power spectrum using the bin width and
+subsequently a bound on the coupling of dark matter to
+Standard Model ﬁelds after accounting for the contribu-
+tion of the realistic laser noise in each frequency bin.
+
+3
+Complications arise from the existence of time gaps in
+the data and the ﬂicker frequency and random walk noise
+contributions in the frequency record. As a result, tra-
+ditional methods for computing the power spectrum of
+the data are not accurate estimators of the true power
+spectrum. To handle the gapped data, we use a Lomb-
+Scargle periodogram implemented using publicly avail-
+able software from the astropy Python library [39, 40].
+In the limit of a continuous data set without gaps the
+Lomb-Scargle periodogram is equivalent to traditional
+techniques for evaluating the power spectrum even in the
+presence of correlated noise [38]. For the fSr/fc data the
+periodogram is evaluated at frequencies ranging from the
+sampling frequency of 125 mHz to the frequency corre-
+sponding to one oscillation over the total duration of the
+data set.
+The number of bins this frequency range is
+subdivided into is given by one-half of the total num-
+ber of measurements taken during the observation pe-
+riod.
+Data for the fH/fc ratio is longer in duration,
+has signiﬁcantly fewer gaps, and is dominated by white
+noise, but nonetheless the power spectrum is evaluated
+with the same procedure as the fSr/fc data. Due to the
+worse short-term stability of fH/fc and the presence of
+signiﬁcant microwave link noise at high frequencies [36],
+data for the maser is plotted only for frequencies below
+1 mHz [38].
+Given this technique for estimating the power spec-
+trum of the gapped data, we next consider the amount
+of power observed in each frequency bin and the likeli-
+hood of observing that signal given the known laser noise
+model in the two-part frequency comparison. To accom-
+plish this, the known model for each ratio is used to sim-
+ulate the expected noise on a continuous data set. This
+data is then gapped in accordance with the timestamps
+of the real experiment and the Lomb-Scargle algorithm
+is used to estimate the power spectrum of the simulated
+data. This procedure is repeated 1000 times to generate
+a probability distribution of expected power for each fre-
+quency bin given the laser model and the existing gaps in
+the data [38]. For each bin the 95% conﬁdence limit can
+thus be determined by numerical integration of this prob-
+ability distribution. This procedure is especially impor-
+tant for low frequency bins corresponding to timescales
+longer than an individual day’s data as the presence of
+gaps in the data set reduces the sensitivity of the search
+to oscillations of speciﬁc frequencies. This is seen most
+prominently at masses ranging from 4×10−20 to 1×10−18
+eV arising from the diurnal pattern of data collection,
+with more discussion on data gaps provided in [38].
+The amplitude spectrum is then derived from the ob-
+served and expected power spectrum and the direct re-
+lation between the fractional amplitude in each bin and
+limits on de and dme is determined. To provide a rigor-
+ous conﬁrmation of all limits derived in this paper, we
+inject a periodic signal into the analysis pipeline with a
+known frequency and amplitude to demonstrate that our
+10
+20
+10
+19
+10
+18
+10
+17
+10
+16
+Dark Matter Candidate Mass: m c2(eV)
+10
+6
+10
+5
+10
+4
+10
+3
+10
+2
+Exclusion Limit (de)
+(a)
+H/Si Limit
+Sr/Si Limit
+Sr/Si Projected
+Dy/Dy
+Rb/Cs
+Network
+UW
+MICROSCOPE
+10
+20
+10
+19
+10
+18
+Dark Matter Candidate Mass: m c2(eV)
+10
+5
+10
+4
+10
+3
+10
+2
+Exclusion Limit (dme)
+(b)
+H/Si
+UW
+MICROSCOPE
+FIG. 2.
+Dilatonic Dark Matter Exclusion Plot.
+(a) 95%
+conﬁdence limits placed on the electromagnetic gauge modu-
+lus, de, showing the improved limits set by fSr/fc (red) and
+fH/fc (blue) ratios in the mass range above 1 × 10−19 eV.
+The maximum projected sensitivity for a search of the same
+11-day duration without data gaps is included (light green)
+highlighting the potential of this technique. Limits derived
+from previous spectroscopic searches (black lines) [25, 41, 42]
+and equivalence principle tests (purple lines) [43, 44] are in-
+cluded. (b) Demonstration of a signiﬁcantly improved limit
+on the electron mass modulus (dme) derived from the fH/fc
+(blue) ratio. Limits from equivalence principle tests (purple
+lines) [43, 44] are included. Shaded regions in both (a) and (b)
+are excluded at the 95% conﬁdence level given the observed
+signal and noise models.
+approach provides the correct sensitivity limit for detec-
+tion [38].
+In the analysis we subtract the overall lin-
+ear drift of the laser cavity or the hydrogen maser. For
+this reason we do not consider any frequencies below the
+inverse duration of the data set. With artiﬁcial signal
+
+4
+injection, the impact of this subtraction only underesti-
+mates the lowest frequency bin by a factor of 2.3 and is
+corrected accordingly.
+Fig. 2(a) shows the limits on de derived from both
+fSr/fc (red) and fH/fc (blue). These results surpass pre-
+vious limits, and particularly at higher masses, on de set
+by atomic spectroscopy (black lines) of Dy [41], Rb and
+Cs atomic clocks [42], and an optical clock network [25].
+Fig. 2(b) shows the limits on dme derived from fH/fc
+(blue).
+As recently highlighted in Ref. [45], interferences of dif-
+ferent amplitudes that are thought to compose the local
+thermal state of the dark mater ﬁeld create a distribution
+of possible ﬁeld amplitudes, φ, observed locally. As the
+apparent variation of constants comes from φ acting on α
+or me, the limit for the moduli de and dme thus depends
+on the value of φ experienced locally. When Tmax < τc,
+the experiment is sampling from this distribution once
+and the non-deterministic amplitude aﬀects the exclusion
+region of de and dme. This eﬀect is captured in Fig. 2 by
+a uniform rescaling of all spectroscopic limits previously
+published by a factor of 3.0 in accordance with the 95%
+limit of this distribution.
+At the same time, limits on de and dme are also set by
+equivalence principle tests [43, 44, 46, 47] with the most
+stringent limits to date coming from measurements of
+diﬀerential accelerations of macroscopic masses [43, 44],
+plotted in Fig. 2 (purple lines). These limits are not af-
+fected by the stochastic amplitude of φ because the cou-
+pling to dark matter in this case arises through a virtual
+exchange of the ultralight dark matter particle that me-
+diates a Yukawa potential. Therefore, these searches are
+not aﬀected by the rescaling which spectroscopic searches
+undergo.
+Fig. 2 shows the limits established by both fSr/fc and
+fH/fc on de and dme at the 95% conﬁdence level. For de,
+we set a new bound at a range of masses from 1 × 10−17
+to 1×10−19 eV, and improve upon the limits coming from
+atomic spectroscopy (black lines) from 4.5 × 10−16 down
+to 1 × 10−19 eV, improving the limit by a factor of ﬁve
+in certain mass ranges. One prominent, high-Q peak at
+3.83 × 10−16 is identiﬁed as arising from magnetic ﬁeld
+noise which is imperfectly rejected by the atomic servo.
+For dme, fH/fc is the only data with sensitivity, and here
+we improve the limit by up to a factor of 100 between
+2 × 10−19 and 2 × 10−21 eV. This disfavors dme at the
+level of ∼4×10−5 for the lowest masses, and can easily be
+improved and extended to lower candidate masses when
+longer data sets are collected. For comparison, Ref. [48]
+discusses natural values of both de and dme, and shows
+that the current limits on dme are ∼106 above natural
+values for this parameter.
+In total, the data does not
+support a signal consistent with coupling of dark mat-
+ter to standard model particles and ﬁelds subject to the
+constraints of the known cavity and maser noise models.
+To expand the sensitivity of the search to a higher mass
+2
+2
+2 N×
+2
+Reload
+Reload
+Clock sequence
+Echo sequence
+(a)
+0
+5
+Time (Hrs.)
+0.4
+0.2
+0.0
+0.2
+Excitation (
+z )
+(b)
+10
+15
+10
+14
+Candidate mass (10
+14 eV)
+10
+2
+10
+1
+100
+101
+Exclusion Limit (de)
+(c)
+1 Echo
+3 Echo
+5 Echo
+10
+16
+10
+15
+10
+14
+Candidate Mass (eV)
+10
+2
+10
+1
+100
+101
+Exclusion Limit (de)
+(d)
+Clock Seq.
+3 Echo Seq.
+FIG. 3. High Frequency Search with Dynamical Decoupling.
+(a) Experimental sequence to interleave clock and spin-echo
+pulses. The dark time for both sequences is 1 second, with
+the number of echo pulses, N = 1,3, and 5. (b) Time-domain
+signal for the three-pulse sequence over single day of data
+collection, or 33,043 seconds. (c) Limits derived from each
+of the three pulse sequences demonstrating the ﬂexibility in
+tailoring the sensitivity function for targeted searches.
+All
+resonances shown are consistent with the known laser model.
+(d) Comparison of the limit derived from interpolating the
+low-frequency data of the clock sequence to higher frequencies
+(grey) compared to the dynamical decoupling sequence for
+N=3 (red) showing clear advantage for frequencies above the
+Nyquist frequency and the customized sensitivity for speciﬁc
+mass regions.
+range beyond 10−16 eV [49], we demonstrate a technique
+of dynamical decoupling during the operation of the Sr
+lattice clock [50–53].
+Figure 3(a) details the time se-
+quence for this search, consisting of interleaved Ramsey
+and echo sequences used for clock-operation and high-
+frequency sampling, respectively.
+The clock sequence
+locks the laser to the atomic resonance, and enables near-
+continuous probing of the high frequency noise for many
+consecutive hours. Fig. 3(b) shows the resulting measure-
+ments of the excitation fraction for the case of a three-
+echo pulse sequence (N=3) converted into units of ⟨σz⟩,
+in the basis of {|g⟩, |e⟩} ground- and excited-clock states.
+For a highly coherent oscillation, extending the total ob-
+servation time up to the expected coherence time of the
+dark matter ﬁeld increases the search sensitivity. Here,
+each echo sequence was run for one working day, limit-
+ing the data length and thus the ultimate limit that can
+be set by this technique. With longer observation times,
+an expected improvement of ∼100 is attainable thereby
+
+5
+making such a search compelling.
+For the high-frequency search, we conduct three sepa-
+rate experiments varying the number of echo pulses be-
+tween N=1, 3, and 5. For all pulse sequences, including
+the clock sequence, we use an evolution time of 1 s be-
+tween the initial and ﬁnal π/2-pulses with π-pulses of 28
+ms in duration.
+Each search produces two signals for
+fSr/fc, one at low frequencies coming from the control
+and error signals of the clock sequence and another at
+high frequencies coming from the echo sequence. Each
+is converted to a limit at masses above the sampling fre-
+quency of the clock using the analysis outlined in [38].
+Fig. 3(c) shows the resulting limits for each of the three
+dynamical decoupling pulse sequences.
+The ability to
+tailor the search range and sensitivity is apparent. Addi-
+tionally, many sharp resonances appear in the spectrum
+which are found to be consistent with the known laser
+model by comparison with simulation.
+Fig. 3(d) demonstrates the relative advantage of dy-
+namical decoupling when compared to an extension of
+a low-frequency search to higher frequency.
+Here we
+see two main advantages. First, the ability to tune the
+point of maximal sensitivity is evident by the lower limit
+achieved at masses around 7 × 10−15 eV. Second, the
+limit derived from dynamical decoupling does not suﬀer
+from reduced sensitivity at every multiple of the Nyquist
+frequency as is apparent in the limit derived from the
+clock sequence. Note that the exclusion limits shown in
+Fig. 3(c,d) have been corrected for the assumption of a
+stochastic dark matter ﬁeld amplitude as in Fig. 2.
+The new limits demonstrated in this work highlight
+how the search for new physics is enabled directly by
+the higher degree of frequency stability demonstrated by
+cryogenic Si cavities [34] as well as the improved accuracy,
+stability, and long-term reliability of the optical lattice
+clock [35]. This improved stability allows observing the
+fractional variation of the frequency ratios in this three-
+element network with a higher degree of precision than
+previously possible. This also shows that as the stabil-
+ity of optical cavities and the precision and total uptime
+of optical clocks improve over time, each advance en-
+ables the re-examination of this result with progressively
+higher resolution. Integrated with a microwave timescale,
+future timekeeping systems will be able to extend the dis-
+covery reach of these searches for dark matter induced
+variation of fundamental constants.
+Indeed, the data
+presented here is a subset of that used to demonstrate
+an all-optical timescale with record low timing error over
+one month of operation [36]. As ultrastable laser tech-
+nologies and laser cooling techniques advance to include
+atomic species with highly relativistic clock transitions
+in neutral atoms, ions, highly charged ions, and nuclei,
+the resolution with which these eﬀects can be resolved is
+expected to advance greatly.
+We thank T. Fortier, J. A. Sherman, and H. Leopardi
+for the maser connection, D. Matei, T. Legero, U. Sterr,
+and F. Riehle for the collaboration on silicon cavities,
+and S. Campbell, R. Hutson, A. Goban, S. Kolkowitz,
+Y. Stadnik, K. Van Tilburg, S. Dimopoulos, and M. Ar-
+vanitaki for useful discussions. We acknowledge funding
+support from NIST, DARPA, NSF Phys-1734006, and
+PHY-1912465.
+[1] D. N. Schramm and M. S. Turner, Rev. Mod. Phys. 70,
+303 (1998).
+[2] G. Bertone, Particle dark matter: observations, models
+and searches (Cambridge University Press, 2010).
+[3] J. Bovy and S. Tremaine, The Astrophysical Journal 756,
+89 (2012).
+[4] D. Clowe, M. Bradač, A. H. Gonzalez, M. Markevitch,
+S. W. Randall, C. Jones,
+and D. Zaritsky, Ap J 648,
+L109 (2006).
+[5] N. Aghanim et al., arXiv:1807.06209 (2018).
+[6] E. Aprile, J. Aalbers, F. Agostini, M. Alfonsi, L. Al-
+thueser, F. D. Amaro, et al. (XENON Collaboration),
+Phys. Rev. Lett. 121, 111302 (2018).
+[7] M. Ackermann, A. Albert, B. Anderson, W. B. Atwood,
+L. Baldini, G. Barbiellini, et al. (The Fermi-LAT Collab-
+oration), Phys. Rev. Lett. 115, 231301 (2015).
+[8] X. Cui, A. Abdukerim, W. Chen, X. Chen, Y. Chen,
+B. Dong, D. Fang, C. Fu, K. Giboni, F. Giuliani, et al.,
+Phys. Rev. Lett. 119, 181302 (2017).
+[9] M. Aaboud, G. Aad, B. Abbott, B. Abeloos, S. Abidi,
+O. AbouZeid, N. L. Abraham, H. Abramowicz, H. Abreu,
+R. Abreu, et al., Journal of High Energy Physics 2018,
+126 (2018).
+[10] M. Safronova, D. Budker, D. DeMille, D. F. J. Kimball,
+A. Derevianko, and C. W. Clark, Rev. Mod. Phys. 90,
+025008 (2018).
+[11] C. Abel, N. J. Ayres, G. Ban, G. Bison, K. Bodek,
+V. Bondar, M. Daum, M. Fairbairn, V. V. Flambaum,
+P. Geltenbort, et al., Phys. Rev. X 7, 041034 (2017).
+[12] T. S. Roussy, D. A. Palken, W. B. Cairncross, B. M.
+Brubaker, D. N. Gresh, M. Grau, K. C. Cossel, K. Boon
+Ng, Y. Shagam, Y. Zhou, V. V. Flambaum, K. W.
+Lehnert, J. Ye,
+and E. A. Cornell, arXiv e-prints ,
+arXiv:2006.15787 (2020), arXiv:2006.15787 [hep-ph].
+[13] N. Du, N. Force, R. Khatiwada, E. Lentz, R. Ot-
+tens, L. Rosenberg, G. Rybka, G. Carosi, N. Woollett,
+D. Bowring, et al., Phys. Rev. Lett. 120, 151301 (2018).
+[14] L. Zhong, S. Al Kenany, K. Backes, B. Brubaker,
+S. Cahn, G. Carosi, Y. Gurevich, W. Kindel, S. Lamore-
+aux, K. Lehnert, et al., Phys. Rev. D 97, 092001 (2018).
+[15] E.
+Aprile,
+J.
+Aalbers,
+F.
+Agostini,
+M.
+Alfonsi,
+L. Althueser,
+F. Amaro,
+V. Antochi,
+E. Angelino,
+J.
+Angevaare,
+F.
+Arneodo,
+et
+al.,
+arXiv
+preprint
+arXiv:2006.09721 (2020).
+[16] D. J. Marsh and J. C. Niemeyer, Phys. Rev. Lett 123,
+051103 (2019).
+[17] N. K. Porayko, X. Zhu, Y. Levin, L. Hui, G. Hobbs,
+A. Grudskaya, K. Postnov, M. Bailes, N. R. Bhat,
+W. Coles, et al., Phys. Rev. D 98, 102002 (2018).
+[18] H. Davoudiasl and P. B. Denton, Phys. Rev. Lett. 123,
+021102 (2019).
+[19] V. Iršič, M. Viel, M. G. Haehnelt, J. S. Bolton, and G. D.
+Becker, Phys. Rev. Lett. 119, 031302 (2017).
+
+6
+[20] W. Hu, R. Barkana, and A. Gruzinov, Phys. Rev. Lett.
+85, 1158 (2000).
+[21] A. Arvanitaki, J. Huang,
+and K. Van Tilburg, Phys.
+Rev. D 91, 015015 (2015).
+[22] A. Derevianko and M. Pospelov, Nat. Phys. 10, 933
+(2014).
+[23] P. Wcisło, P. Morzyński, M. Bober, A. Cygan, D. Lisak,
+R. Ciuryło, and M. Zawada, Nat. Astr. 1, 0009 (2017).
+[24] B. M. Roberts, G. Blewitt, C. Dailey, M. Murphy,
+M. Pospelov, A. Rollings, J. Sherman, W. Williams, and
+A. Derevianko, Nat. Comm. 8, 1195 (2017).
+[25] P. Wcisło, P. Ablewski, K. Beloy, S. Bilicki, M. Bober,
+R. Brown, R. Fasano, R. Ciuryło, H. Hachisu, T. Ido,
+et al., Science Advances 4, eaau4869 (2018).
+[26] N. Huntemann, B. Lipphardt, C. Tamm, V. Gerginov,
+S. Weyers,
+and E. Peik, Phys. Rev. Lett. 113, 210802
+(2014).
+[27] R. Godun, P. Nisbet-Jones, J. Jones, S. King, L. Johnson,
+H. Margolis, K. Szymaniec, S. Lea, K. Bongs, and P. Gill,
+Phys. Rev. Lett. 113, 210801 (2014).
+[28] S. Blatt, A. D. Ludlow, G. K. Campbell, J. W. Thom-
+sen, T. Zelevinsky, M. M. Boyd, J. Ye, X. Baillard,
+M. FouchŐ, R. L. Targat, A. Brusch, P. Lemonde,
+M. Takamoto, F.-L. Hong, H. Katori, and V. V. Flam-
+baum, Phys. Rev. Lett. 100, 140801 (2008).
+[29] T. Rosenband, D. Hume, P. Schmidt, C.-W. Chou, A. Br-
+usch, L. Lorini, W. Oskay, R. E. Drullinger, T. M. Fortier,
+J. Stalnaker, et al., Science 319, 1808 (2008).
+[30] J. Berengut, V. Dzuba, and V. Flambaum, Phys. Rev.
+Lett. 105, 120801 (2010).
+[31] M. S. Safronova, S. G. Porsev, C. Sanner,
+and J. Ye,
+Phys. Rev. Lett. 120, 173001 (2018).
+[32] T. Kessler,
+C. Hagemann,
+C. Grebing,
+T. Legero,
+U. Sterr, F. Riehle, M. Martin, L. Chen,
+and J. Ye,
+Nat. Phot. 6, 687 (2012).
+[33] D. Matei, T. Legero, S. Häfner, C. Grebing, R. Weyrich,
+W. Zhang, L. Sonderhouse, J. Robinson, J. Ye, F. Riehle,
+et al., Phys. Rev. Lett. 118, 263202 (2017).
+[34] E. Oelker, R. Hutson, C. Kennedy, L. Sonderhouse,
+T. Bothwell, A. Goban, D. Kedar, C. Sanner, J. Robin-
+son, G. Marti, et al., Nat. Phot. 13, 714 (2019).
+[35] T. Bothwell, D. Kedar, E. Oelker, J. M. Robinson, S. L.
+Bromley, W. L. Tew, J. Ye, and C. J. Kennedy, Metrolo-
+gia 56, 065004 (2019).
+[36] W. R. Milner, J. M. Robinson, C. J. Kennedy, T. Both-
+well, D. Kedar, D. G. Matei, T. Legero, U. Sterr,
+F. Riehle, H. Leopardi, et al., Phys. Rev. Lett. 123,
+173201 (2019).
+[37] Y. Stadnik and V. Flambaum, Phys. Rev. A 93, 063630
+(2016).
+[38] More detailed technical information is presented in the
+Supplementary Material.
+[39] J. VanderPlas, A. J. Connolly, Ž. Ivezić,
+and A. Gray,
+in Intelligent Data Understanding (CIDU), 2012 Confer-
+ence on (IEEE, 2012) pp. 47–54.
+[40] J. T. VanderPlas and Ž. Ivezic, The Astrophysical Jour-
+nal 812, 18 (2015).
+[41] K. Van Tilburg, N. Leefer, L. Bougas,
+and D. Budker,
+Phys. Rev. Lett. 115, 011802 (2015).
+[42] A. Hees, J. Guéna, M. Abgrall, S. Bize,
+and P. Wolf,
+Phys. Rev. Lett. 117, 061301 (2016).
+[43] S. Schlamminger, K.-Y. Choi, T. A. Wagner, J. H. Gund-
+lach, and E. G. Adelberger, Phys. Rev. Lett. 100, 041101
+(2008).
+[44] J.
+Bergé,
+P.
+Brax,
+G.
+Métris,
+M.
+Pernot-Borràs,
+P. Touboul,
+and J.-P. Uzan, Phys. Rev. Lett. 120,
+141101 (2018).
+[45] G. P. Centers, J. W. Blanchard, J. Conrad, N. L.
+Figueroa, A. Garcon, A. V. Gramolin, D. F. J. Kim-
+ball, M. Lawson, B. Pelssers, J. A. Smiga, et al., arXiv
+preprint arXiv:1905.13650 (2019).
+[46] K. Kuroda and N. Mio, Phys. Rev. Lett. 62, 1941 (1989).
+[47] J. G. Williams, S. G. Turyshev, and D. H. Boggs, Clas-
+sical and Quantum Gravity 29, 184004 (2012).
+[48] A. Arvanitaki, S. Dimopoulos,
+and K. Van Tilburg,
+Phys. Rev. Lett. 116, 031102 (2016).
+[49] A. A. Geraci, C. Bradley, D. Gao, J. Weinstein,
+and
+A. Derevianko, Phys. Rev. Lett. 123, 031304 (2019).
+[50] M. Bishof, X. Zhang, M. J. Martin,
+and J. Ye, Phys.
+Rev. Lett. 111, 093604 (2013).
+[51] H. Y. Carr and E. M. Purcell, Phys. Rev. 94, 630 (1954).
+[52] S. Aharony, N. Akerman, R. Ozeri, G. Perez, I. Savoray,
+and R. Shaniv, arXiv preprint arXiv:1902.02788 (2019).
+[53] S. Kolkowitz, I. Pikovski, N. Langellier, M. D. Lukin,
+R. L. Walsworth,
+and J. Ye, Phys. Rev. D 94, 124043
+(2016).
+[54] M. J. Biercuk, H. Uys, A. P. VanDevender, N. Shiga,
+W. M. Itano,
+and J. J. Bollinger, Phys. Rev. A 79,
+062324 (2009).
+
+7
+SUPPLEMENTARY MATERIAL
+Quark mass limits
+In addition to the sensitivity of the fH/fc ratio to ﬂuc-
+tuations of the ﬁne-structure constant and the electron
+mass, there is an additional sensitivity to the modulus of
+the average up- and down-quark mass, d ˆm. Fig. S1 shows
+the limit derived from the fH/fc ratio for d ˆm. Although
+it is not competitive with the state-of-the-art limits de-
+rived from equivalence principle tests, the limit provides
+a complimentary check on these results in a radically dif-
+ferent experimental platform, and reinforces the limits
+derived from atomic spectroscopy by the comparison of
+atomic clocks in Rb and Cs [42].
+As such, this result
+provides a useful cross-check of the results oﬀered from
+Refs. [42–44].
+10
+21
+10
+20
+10
+19
+10
+18
+Dark Matter Candidate Mass: mDMc2(eV)
+10
+6
+10
+5
+10
+4
+10
+3
+10
+2
+10
+1
+Exclusion Limit (dm)
+H/Si
+RbCs
+UW
+MICROSCOPE
+FIG. S1. Quark Mass Coupling Limits. Fluctuations of the
+fH/fc ratio has a third sensitivity in addition to the ﬁne-
+structure constant and electron mass presented in the main
+text which is sensitivity to the modulus of the average quark
+mass, d ˆ
+m. Analysis of this ratio allows a bound to be set on d ˆ
+m
+that, although it does not set a new limit, is complimentary
+to existing limits given the diﬀerent experimental platforms
+used to derive this limit compared to Refs. [42–44].
+Dynamical Decoupling Sensitivity
+One main advantage of a dark matter search with dy-
+namical decoupling sequences featuring diﬀerent num-
+bers of echo-pulses and thus diﬀering sensitivities is the
+ability to tune the sensitivity of a search to a speciﬁc
+mass range with greater sensitivity than what is allowed
+by searching for aliased high-frequency signals in a Ram-
+sey or Rabi sequence. Figure S2 demonstrates this tun-
+able sensitivity in the three limits for de derived from this
+search resulting from diﬀerent pulse sequences using 1, 3,
+and 5 echo-pulses. The functions plotted here are for a
+total dark time between initialization and readout pulses
+of 1 second, and a π-pulse time of 28 ms.
+10
+2
+10
+1
+100
+101
+Frequency (Hz)
+10
+5
+10
+4
+10
+3
+10
+2
+10
+1
+100
+Sensitivity Function
+1 Echo
+3 Echo
+5 Echo
+FIG. S2. Sensitivity functions for the dynamical decoupling
+de limits. Functions for 1 (blue), 3 (red), and 5 (green) echo
+pulses determine how noise at each frequency is downsampled
+into the base band and conversely how the observed power in
+the base band translates to a limit at higher frequencies.
+The zeros in the sensitivity function correspond to re-
+gions in the main text Fig. 3(c) where the derived limit
+has broad peaks corresponding directly to this loss of
+sensitivity. The sharp peaks which appear in the spec-
+trum in Fig. 3(c) come from known resonances in the
+laser model and can be veriﬁed by comparison of simu-
+lated data and the collected data. The absence of a large
+peak in the N=3 data suggests that the 5.7 Hz peak in the
+laser model of Ref. [34] is not observed in this work and is
+subsequently omitted from the fSr/fc model. Note that
+without varying the pulse sequence timing this method
+cannot uniquely identify the frequency from which the
+baseband signal is aliased from due to the many-to-one
+mapping of frequency noise on a given experimental cy-
+cle to ﬂuctuations in the polar angle of the collective spin
+vector. As a result, we set bounds on the amplitude of a
+peak at every potential high-frequency component which
+may be aliased down to a given baseband frequency. This
+results in the series of peaks repeated throughout the lim-
+its in Fig. 3(c).
+
+8
+Derivation of Limits from Power Spectra
+Following the formalism laid out in Ref. [41], the frac-
+tional variation of a fundamental constant induced by Lφ
+can be expressed as:
+δα(t)
+α
+= deκφ(t),
+(2)
+δme(t)
+me
+= dmeκφ(t).
+(3)
+For example, the conﬁdence limit on α variation is
+shown in the amplitude spectrum in Fig. S3.
+With-
+10
+6
+10
+5
+10
+4
+10
+3
+10
+2
+10
+1
+Frequency (Hz)
+10
+18
+10
+17
+10
+16
+10
+15
+Amplitude Spectrum Limits (
+/ )
+H/Si
+Sr/Si
+FIG. S3.
+Amplitude Spectrum Conﬁdence Limits.
+95%
+conﬁdence limits on the amplitude of α variation from both
+fH/fc (blue) and fSr/fc (red).
+out applying any speciﬁc model to interpret either the
+fH/fc or fSr/fc ratio, we can already use the data in
+Fig. S3 to bound periodic ﬂuctuations in α arising from
+all sources. On the other hand, any particular theoretical
+model which produces periodic oscillations in α may use
+this limit as a starting point to produce a bound on a
+microscopic parameter such as a coupling constant.
+In this case, the periodic form of the classical wave so-
+lution that describes the dark matter ﬁeld, φ can be used
+along with the relations between fractional frequency
+ﬂuctuations between atom A, fA, and the cavity fre-
+quency, fc, and fractional ﬂuctuations in the fundamental
+constants to write:
+δ(fA/fc)
+fA/fc
+= KA,cdeκφ(t),
+(4)
+δ(fA/fc)
+fA/fc
+= KA,cdmeκφ(t),
+(5)
+where in each case KA,c is the speciﬁc sensitivity of that
+frequency ratio to that variation.
+To turn this into a
+limit on the moduli, de and dme, we must make some key
+assumptions about the form of φ(t). The ﬁrst assump-
+tion, discussed in Ref. [45], is that the local amplitude
+of φ(t) is sampled from a distribution of possible values
+given the stochastic nature of the ﬁeld. As a result, the
+amplitude of the time-dependent ﬁeld, φ0 is treated as
+a random variable with a known distribution. Next, we
+also assume that φ accounts for the entirety of the conser-
+vatively estimated 0.3 GeV/cm3 local dark matter energy
+density such that:
+κφ0 = 6.4 × 10−13
+ 
+10−18eV
+mφ
+!
+.
+(6)
+Next, the amplitude spectrum of fractional ratio ﬂuctu-
+ations is calculated from the data by,
+p
+Sy(f), where
+Sy(f) is the power spectrum in the unit-less fractional
+ratio at frequencies f.
+Frequencies in units of Hz are
+converted to mass units in multiplying by 4.14 × 10−15
+eV/Hz. After some rearrangement, the limit on the mod-
+ulus at each mass bin in the amplitude spectrum is given
+by:
+de = ξ
+p
+Sy(f)
+KA,c
+f
+1.55 × 10−16
+(7)
+where KA,c is the sensitivity for the particular frequency
+ratio (1.06 for Sr/Si, 3 for H/Si). From Ref. [45], this
+limit applies to one particular value of φ0 sampled from
+the possible distribution of values, so to account for this
+eﬀect, the limit is scaled by the 95% conﬁdence limit of
+this distribution given by ξ. Conversion of the observed
+data to electron mass limits proceeds in an identical man-
+ner but with a diﬀerent sensitivity coeﬃcient.
+The dynamical decoupling sequence uses a series of π
+echo pulses to tailor the sensitivity function of the atomic
+response to probe ﬂuctuations of the atom-cavity detun-
+ing at frequencies higher than the sampling frequency.
+For this sequence, the conversion from an observed ex-
+citation fraction variation to a exclusion plot includes
+an extra step to account for the signal being one that
+is aliased from higher frequencies down to the baseband
+where it is observed. Since the noise is dominated by de-
+phasing from the local oscillator, the noise power in both
+quadratures is equivalent and pulses π/2 rotated from
+the local oscillator as implemented in alternate dynam-
+ical decoupling schemes [54] are not implemented here.
+We start with the polar angle of a classical spin vector,
+θn resulting from the n-th experimental cycle, and time-
+dependent atom-cavity detuning ∆(t′) given by:
+θn =
+Z ∞
+−∞
+dt′ ∆(t′)r(t′ −nTc),
+(8)
+where r(t′ −nTc) is the time-domain sensitivity func-
+tion for the n-th experiment with cycle time Tc, and the
+polar angle is related to the excitation fraction, pe, by
+pe = sin2 θ/2. In the experiment, we collect a long data
+
+9
+set of many repeated samples of θn, and compute the
+power spectral density of the observed data set. Using
+the Wiener-Khinchin theorem, this power spectrum can
+be expressed as the Fourier transform of the autocorre-
+lation function,
+Sθ(f) = 1
+N
+N
+X
+m=1
+Rθ(m)e−2πifmTc,
+(9)
+where Rθ(m) = ⟨θnθn+m⟩is the autocorrelation of the
+long data set of θn measurements.
+Using the given relation between the time-dependent
+atom-cavity detuning and the measured polar angle we
+can rewrite the autocorrelation in θn as one in ∆by,
+ZZ
+dt1 dt2 ⟨∆(t1)∆(t2)⟩r(t1 −nTc)r(t2 −nTc −mTc),
+(10)
+The sensitivity function r(t1 −nTc) corresponds to the
+single-cycle sensitivity function time-shifted to the n-th
+experimental cycle. However, for a stationary process we
+can set n = 0 without loss of generality. Similarly, this
+means that the autocorrelation in detuning only depends
+on the time diﬀerence, R∆(t2 −t1), so the integral is
+simpliﬁed to:
+ZZ
+dt1 dt2 R∆(t2 −t1)r(t1)r(t2 −mTc).
+(11)
+We aim to simplify this complicated time integration
+by moving to the frequency domain via Parseval’s theo-
+rem. Note that r(t) and ∆(t) are purely real functions,
+but this process can we well-deﬁned for complex func-
+tions as well. We can now clearly identify the integration
+over t1 as the convolution of the detuning autocorrelation
+function and the sensitivity function, r(t1), leaving just
+the integration over t2:
+Z ∞
+−∞
+dt2 (R∆∗r)(t2)r(t2 −mTc),
+(12)
+where we denote the convolution with the common (A ∗
+B)(t) =
+R
+dτ A(t −τ)B(τ) syntax. Next, we use Parse-
+val’s theorem to move the integration of the time domain
+signal to the integration of the frequency domain signal.
+Denoting the Fourier transform as F[...], the integral is
+equivalent to:
+Z ∞
+−∞
+df ′ F[(R∆∗r)(t2)]F ∗[r(t2 −mTc)],
+(13)
+from which we deﬁne the frequency domain representa-
+tion of the sensitivity function, R(f) = F[r(t)].
+Note
+that here the phase of the intervening π pulses in the
+echo sequence are aligned with the beginning Ramsey
+pulse.
+We can now use the convolution theorem to write,
+F[(R∆∗r)] = F[R∆(t)]F[r(t)], and also use the Fourier
+shift theorem to write,
+F ∗[r(t2 −mTc)] = e2πif ′mTcF ∗[r(t2)].
+(14)
+Finally, we again use the Wiener-Khinchin theorem to
+write the Fourier transform of the autocorrealtion func-
+tion as the power spectral density, S∆(f) = F[R∆(t)].
+As a result, we can express the power spectral density of
+polar angle ﬂuctuations that we observe as,
+Sθ(f) = 1
+N
+N
+X
+m=1
+Z ∞
+−∞
+df ′ S∆(f ′)|R(f ′)|2e−2πi(f−f ′)mTc,
+(15)
+where S∆(f ′) is the power spectrum of the relative atom-
+cavity detuning ﬂuctuations which the dark matter signal
+acts on, and |R(f ′)|2 is known from the pulse sequence
+and is plotted in the previous section.
+The remaining sum can be straightforwardly evalu-
+ated, now that the argument of the integral has lost all m-
+dependence, and is immediately identiﬁed as a Kronecker
+delta function, δf ′,f. This leads to the expression of the
+observed power spectrum, Sθ(f) in terms of the known
+sensitivity function, |R(f)|2 and the power spectrum of
+high frequency atom-cavity frequency ﬂuctuations that
+we wish to infer, Sν(f), as:
+Sθ(f) = S∆(f)|R(f)|2.
+(16)
+Finally, we arrive at an expression for the inferred power
+spectrum written in fractional frequency units of the 87Sr
+clock frequency, fSr:
+Sν(f) =
+Sθ(f)
+(2πfSr)2|R(f)|2 .
+(17)
+Using this expression, the estimate of the power spec-
+trum at frequencies above the Nyquist frequency can be
+established by evaluating the Lomb-Scargle periodogram
+at each frequency and then dividing this spectrum by the
+appropriate sensitivity function to reﬂect how sensitive
+the power observed in the baseband is to ﬂuctuations at
+a given high frequency. Numerical simulation of injected
+signals at high frequencies have additionally been used
+to verify the analysis pipeline and to ensure proper nor-
+malization of the resulting limit.
+Eﬀect of Data Gaps on the Lomb-Scargle PSD
+Due to the ﬁnite uptime of realistic elements of current
+and future timescales, the data sets used in the main text
+have gaps in the time record. To handle these gaps, we
+utilized an algorithm deploying the Lomb-Scargle peri-
+odogram to estimate the power spectrum of this data. To
+understand the impact of the gaps in the time record, we
+consider the simulated experiment, shown in Fig. S4(a),
+where over the course of 1 × 106 seconds (∼12 days) the
+fSr/fc ratio is sampled for the same 12 hours of a 24-hour
+period over the course of the observation run. From this
+simulated experiment, the power spectrum of the simu-
+lated data can be computed using both traditional means
+
+10
+0
+2
+4
+6
+8
+10
+12
+Simulated Time (Days)
+1
+0
+1
+Simulated Data
+(×10
+15)
+(a)
+10
+6
+10
+5
+10
+4
+10
+3
+10
+2
+Frequency (Hz)
+10
+37
+10
+36
+10
+35
+10
+34
+10
+33
+10
+32
+10
+31
+Power Spectrum
+(b)
+LS: Gapped Data
+Power Spectrum
+LS: Continuous Data
+FIG. S4. Eﬀect of Gapped Data. (a) Simulation of realistic
+fSr/fc data with a continuous time record (orange) which is
+to be compared to the identical data which has been cut into a
+repeating pattern of 12 hours of continuous measurement fol-
+lowed by 12 hours of measurement dead-time (blue). (b) The
+resulting power spectra of 1000 independent simulations aver-
+aged for visual clarity. The power spectrum of the continuous
+data set (orange) is shown compared to the Lomb-Scargle
+evaluation of the same data (green) and the Lomb-Scargle
+evaluation of the data set with 50% uptime in 12-hour inter-
+vals (blue), showing the nontrivial eﬀect that gaps in the data
+set have in the estimation of the power spectrum of gapped
+data.
+as well as using the Lomb-Scargle technique, showing the
+exact agreement of the two shown in Fig. S4(b). The
+highest frequencies of the Lomb-Scargle periodogram are
+omitted for clarity so that the overlap with the power
+spectrum can be shown. However, when gaps are added
+to the same data set by removing 12 hours of every 24-
+hour period, signiﬁcant degradation in the accuracy of
+the Lomb-Scargle technique is apparent. Three main ef-
+fects are noted. First, due to the fact that there is only
+half as much data in the gapped data set, the power
+at high frequencies is higher by a factor of two. Next,
+prominent peaks at odd harmonics of the frequency cor-
+responding to the time between data gaps, 1.16 × 10−5
+Hz, appear in the spectrum. The loss of sensitivity to
+power at these frequencies can be understood by consid-
+ering a sine wave with frequency and phase set such that
+the wave’s crest occurs exactly synced up with observa-
+tion periods. Finally, for frequency bins corresponding
+to times longer than a single day, the estimated power
+agrees with that observed for a continuous data set. The
+observed diﬀerences between the gapped and the contin-
+uous time record decreases as the amount of dead time is
+decreased, highlighting both the importance of high upti-
+mes of the frequency network in a dark matter search, as
+well as the elimination of large gaps in the data record.
+10
+6
+10
+5
+10
+4
+10
+3
+10
+2
+10
+1
+Frequency (Hz)
+10
+38
+10
+37
+10
+36
+10
+35
+10
+34
+10
+33
+10
+32
+10
+31
+Power Spectrum
+Gapped Record
+Continuous Record
+FIG. S5. Eﬀect of Realistic Data Gaps. Average value of the
+power spectrum of 1000 independent simulations with data
+gaps identical to those realized in the fSr/fc data (blue) com-
+pared to the power spectrum of the same simulated data set
+without gaps (orange).
+Finally we note that this also highlights the importance
+of accounting for the realistic structure of the frequency
+comparisons dead time in computing the expected distri-
+bution of powers in each frequency bin given the noise
+model of each ratio, as discussed in the main text. The
+pattern of observation time versus dead time in the real
+experiment is not as regular or periodic as what is sim-
+ulated in Fig. S4, and adds additional structure to the
+series of peaks shown in Fig. S4(b). This is shown di-
+rectly in Fig. S5 where the average power spectrum of
+1000 simulated data runs is plotted in comparison to the
+power spectrum of the data with the exact pattern of
+data gaps as observed in the experiment. Comparison of
+Fig. S4(b) and Fig. S5 reveals similar general structure –
+the pronounced peak at the timescale of one day and the
+marginally suppressed sensitivity at longer times – but
+the uneven spacing of gaps and the lower total uptime
+of the record in Fig. S5 leads to an overall higher aver-
+age estimation of the power spectrum. The distribution
+from which the average values in Fig. S5 are calculated
+are used to compute the corresponding 95% conﬁdence
+limit which is used for the de limit in the main paper.
+The peak at the timescale of one day, 1.16 × 10−6 Hz, is
+clearly visible at the corresponding mass of 4 × 10−20 eV
+
+11
+along with much of the structure in the limit at higher
+frequencies.
+Artiﬁcial Signal Injection
+10
+20
+10
+19
+10
+18
+10
+17
+10
+16
+Mass (eV)
+10
+7
+10
+6
+10
+5
+10
+4
+10
+3
+Deterministic de Limit
+Gapped Data
+Continuous Data
+FIG. S6. Signal injection to the analysis pipeline. Exclusion
+plot for a realistic laser noise spectrum and an artiﬁcially in-
+jected periodic signal mimicking that expected from the dila-
+tonic model of ultralight dark matter. The injected signal as-
+sumes de of 1 × 10−3, an amplitude of 1, a mass of 2 × 10−18
+eV, and a random phase chosen from a uniform distribution.
+The pattern of gaps in the gapped simulation correspond to
+the same gaps as the observation run in the main text.
+Fig. S6 shows the veriﬁcation of the analysis pipeline
+by injection of an artiﬁcial signal with known phase, fre-
+quency, and amplitude for a given value of de. Successful
+retrieval of the injected amplitude and modulus signals
+the proper normalization of both the Lomb-Scargle pe-
+riodogram and the conversion from power spectra to ex-
+clusion plots. This technique is used to verify the limits
+for all plots in the main text.
+Maser Model and Microwave Link Noise
+Fig. S7 shows the noise added to the maser signal
+(ST14) by the link between JILA and NIST where the
+microwave signal is transferred as a modulation on an op-
+tical carrier. The noise is determined by measuring the
+maser signal against universal coordinated time (UTC)
+and comparing that to the silicon cavity (Si3) as mea-
+sured at NIST versus the silicon cavity as measured at
+JILA. Since the apparent noise peaks appear only after
+the maser timing signal has been transmitted to JILA,
+we concluded that microwave signal transfer added this
+noise. We note that the direct optical frequency/phase
+10
+6
+10
+5
+10
+4
+10
+3
+Frequency (Hz)
+10
+28
+10
+27
+10
+26
+10
+25
+10
+24
+10
+23
+PSD (1/Hz)
+H/Si @ JILA
+H/UTC(NIST)
+H/Si @ NIST
+FIG. S7. Maser model and link noise contribution. Power
+spectral density of fractional ﬂuctuations of the fH/fc ratio
+as measured at JILA (blue) compared to NIST (orange). The
+absence of a peak at 2 × 10−4 Hz in the NIST comparison
+shows this peak arises due to link noise. The maser compari-
+son with UTC (black) further reinforces this conclusion.
+transfer over a stabilized ﬁber link does not suﬀer from
+this additional noise.

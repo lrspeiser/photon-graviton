@@ -1,0 +1,128 @@
+{
+  "status": "Exploratory toy extensions, not a completed action or independent data validation",
+  "thermal_model": "dn/dt=gamma; df_k/dt=Gamma(f_eq(k/n,T_bath)-f_k); initial f=f_eq at n_i; n_o=1",
+  "thermal_parameters": "r=Gamma/gamma constant, same rate for all modes in first branch; T_bath and residual Galaxy amplitude fitted",
+  "blackbody_reference": {
+    "rate_ratio": null,
+    "initial_n": 0.5,
+    "T_bath_K": 2.7250005393056034,
+    "galaxy_template_coefficient": -0.0017584817501097435,
+    "chi_squared": 45.018739605778634
+  },
+  "thermal_rate_scan": [
+    {
+      "rate_ratio": 10.0,
+      "initial_n": 0.5,
+      "T_bath_K": 2.988777643230554,
+      "galaxy_template_coefficient": -21.553675111355165,
+      "chi_squared": 1563961.8591962687
+    },
+    {
+      "rate_ratio": 30.0,
+      "initial_n": 0.5,
+      "T_bath_K": 2.8153480860136186,
+      "galaxy_template_coefficient": -2.9523463484207917,
+      "chi_squared": 23788.88154095048
+    },
+    {
+      "rate_ratio": 100.0,
+      "initial_n": 0.5,
+      "T_bath_K": 2.7522230460962165,
+      "galaxy_template_coefficient": -0.28156487686323656,
+      "chi_squared": 237.48785763280682
+    },
+    {
+      "rate_ratio": 300.0,
+      "initial_n": 0.5,
+      "T_bath_K": 2.7340813263491346,
+      "galaxy_template_coefficient": -0.033235343230026554,
+      "chi_squared": 47.316446178912805
+    },
+    {
+      "rate_ratio": 1000.0,
+      "initial_n": 0.5,
+      "T_bath_K": 2.7277253263624774,
+      "galaxy_template_coefficient": -0.004602906961565052,
+      "chi_squared": 45.030893230426216
+    },
+    {
+      "rate_ratio": 10000.0,
+      "initial_n": 0.5,
+      "T_bath_K": 2.7252730372855622,
+      "galaxy_template_coefficient": -0.0017869694348973154,
+      "chi_squared": 45.01867041292085
+    }
+  ],
+  "quadrature_160_vs_320_peak_relative_difference": 8.16467547661853e-13,
+  "conditional_delta_chi_3_841_lower_rate_ratio": 264.34783764555,
+  "memory_sensitivity": [
+    {
+      "rate_ratio": 264.34783764555,
+      "initial_n": 0.1,
+      "T_bath_K": 2.7353056034921397,
+      "galaxy_template_coefficient": -0.042266029922845436,
+      "chi_squared": 48.86019842647336
+    },
+    {
+      "rate_ratio": 264.34783764555,
+      "initial_n": 0.5,
+      "T_bath_K": 2.7353056034921397,
+      "galaxy_template_coefficient": -0.042266029922845436,
+      "chi_squared": 48.86019842647336
+    },
+    {
+      "rate_ratio": 264.34783764555,
+      "initial_n": 0.9,
+      "T_bath_K": 2.7353056034923036,
+      "galaxy_template_coefficient": -0.04226603021970171,
+      "chi_squared": 48.86019843120686
+    }
+  ],
+  "thermalization_timescale_at_threshold_years": 48928339.53870864,
+  "achromatic_excess_photon_survival_z1": 3.959099383057057e-58,
+  "achromatic_excess_photon_log10_survival_z1": -57.402403596259525,
+  "optical_to_microwave_rate_ratio_for_99pct_survival_z1": 7.603872188262356e-05,
+  "transmission_caveat": "99% is an illustrative design target, not a measured cosmic transmission. Excess occupation, hence source contrast, damps at Gamma in this model.",
+  "gravity_dispersion": "omega^2=m^2-u^2 k^2+k^4/M^2, positive kinetic normalization assumed; no full gravity constraints derived",
+  "gravity": [
+    {
+      "abs_imaginary_sound_speed": 0.1,
+      "m_over_M": 0.0,
+      "analytic_min_omega2_over_M2": -2.5000000000000005e-05,
+      "grid_min_omega2_over_M2": -2.4999998261821447e-05,
+      "minimum_k_over_M": 0.07071067811865475,
+      "status": "unstable"
+    },
+    {
+      "abs_imaginary_sound_speed": 0.1,
+      "m_over_M": 0.003,
+      "analytic_min_omega2_over_M2": -1.6000000000000003e-05,
+      "grid_min_omega2_over_M2": -1.5999998261821445e-05,
+      "minimum_k_over_M": 0.07071067811865475,
+      "status": "unstable"
+    },
+    {
+      "abs_imaginary_sound_speed": 0.1,
+      "m_over_M": 0.005,
+      "analytic_min_omega2_over_M2": -3.3881317890172014e-21,
+      "grid_min_omega2_over_M2": 1.7381785538618435e-12,
+      "minimum_k_over_M": 0.07071067811865475,
+      "status": "marginal"
+    },
+    {
+      "abs_imaginary_sound_speed": 0.1,
+      "m_over_M": 0.007,
+      "analytic_min_omega2_over_M2": 2.4e-05,
+      "grid_min_omega2_over_M2": 2.4000001738178558e-05,
+      "minimum_k_over_M": 0.07071067811865475,
+      "status": "positive in this one-mode toy dispersion"
+    }
+  ],
+  "limitations": [
+    "FIRAS diagonal errors only; temperature is fitted, not predicted.",
+    "Constant reservoir temperature assumes an unmodeled energy supply/backreaction balance.",
+    "Rate selectivity is an extra hypothesis, not an atomic-protection derivation.",
+    "A restoring mass and quartic spatial gradient can stabilize the toy mode, but background compatibility and all gravity modes remain unproved.",
+    "No new supernova, angular-distance or CMB anisotropy likelihood."
+  ]
+}

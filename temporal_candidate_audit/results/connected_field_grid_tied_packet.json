@@ -1,0 +1,112 @@
+{
+  "test_ray": [
+    {
+      "N": 81,
+      "launch_time": 0.0,
+      "frequency_stretch": 1.0030274084564044,
+      "pulse_stretch": 1.003027373935872,
+      "pulse_vs_frequency_relative_difference": -3.441634011114303e-08,
+      "arrival_time": 0.8013890731386406,
+      "initial_field_energy": 0.2988963422641968,
+      "minimum_frequency_squared": 0.005420194188657749
+    },
+    {
+      "N": 161,
+      "launch_time": 0.0,
+      "frequency_stretch": 1.0029799448320684,
+      "pulse_stretch": 1.0029799156208163,
+      "pulse_vs_frequency_relative_difference": -2.9124462841423338e-08,
+      "arrival_time": 0.8013875579476535,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    },
+    {
+      "N": 321,
+      "launch_time": 0.0,
+      "frequency_stretch": 1.0029650779106225,
+      "pulse_stretch": 1.002965051677407,
+      "pulse_vs_frequency_relative_difference": -2.6155661969617938e-08,
+      "arrival_time": 0.8013871435995295,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.0054221220208219645
+    }
+  ],
+  "launch_epochs": [
+    {
+      "N": 161,
+      "launch_time": 10.0,
+      "frequency_stretch": 1.0028459417102482,
+      "pulse_stretch": 1.0028458904187687,
+      "pulse_vs_frequency_relative_difference": -5.114592116495231e-08,
+      "arrival_time": 10.834162424203948,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    },
+    {
+      "N": 161,
+      "launch_time": 20.0,
+      "frequency_stretch": 1.0008219499865607,
+      "pulse_stretch": 1.000821973562438,
+      "pulse_vs_frequency_relative_difference": 2.3556514960887398e-08,
+      "arrival_time": 20.84974745626262,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    },
+    {
+      "N": 161,
+      "launch_time": 40.0,
+      "frequency_stretch": 0.996519716161035,
+      "pulse_stretch": 0.9965196582584211,
+      "pulse_vs_frequency_relative_difference": -5.8104835165551094e-08,
+      "arrival_time": 40.808006100247745,
+      "initial_field_energy": 0.2988963422641001,
+      "minimum_frequency_squared": 0.005421732971846193
+    }
+  ],
+  "backreaction": [
+    {
+      "N": 81,
+      "initial_photon_to_field_energy": 0.001,
+      "frequency_stretch": 1.0037374806797537,
+      "photon_energy_change": -1.1129596393121867e-06,
+      "total_relative_energy_error": 4.558575739110893e-13,
+      "arrival": 0.8014007942964849,
+      "solver_evaluations": 4817
+    },
+    {
+      "N": 81,
+      "initial_photon_to_field_energy": 0.1,
+      "frequency_stretch": 1.0756798190547392,
+      "photon_energy_change": -0.0021028953688613065,
+      "total_relative_energy_error": 1.7046570821577234e-09,
+      "arrival": 0.8025617785833572,
+      "solver_evaluations": 4841
+    },
+    {
+      "N": 161,
+      "initial_photon_to_field_energy": 0.001,
+      "frequency_stretch": 1.0043104967700305,
+      "photon_energy_change": -1.282861945630287e-06,
+      "total_relative_energy_error": 9.683365220780615e-13,
+      "arrival": 0.801400419124985,
+      "solver_evaluations": 4817
+    },
+    {
+      "N": 161,
+      "initial_photon_to_field_energy": 0.1,
+      "frequency_stretch": 1.1420330731423964,
+      "photon_energy_change": -0.003717332452201086,
+      "total_relative_energy_error": 3.79475739720192e-09,
+      "arrival": 0.8026753608929923,
+      "solver_evaluations": 4985
+    }
+  ],
+  "definition": "Periodic 1D box, smooth fixed-density slabs, positive gradient and quadratic field energies, two fields with epsilon=1e-4; cubic B-spline interpolation and its adjoint deposition. Local particle Hamiltonian Hgamma=p exp(-chi).",
+  "limitations": [
+    "Synthetic geometry and dimensionless energy ratios, not data calibration.",
+    "Photon packet is a 1D ray surrogate, not a complete electromagnetic or gravitational-wave action.",
+    "Matter density is fixed; field plus ray energy conserved but matter motion and gravity omitted.",
+    "No material clock law or absolute cosmological energy scale is derived.",
+    "Pulse-stretch equality tested only in the negligible-backreaction limit."
+  ]
+}

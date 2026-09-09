@@ -1,0 +1,1129 @@
+                                               Astronomy & Astrophysics manuscript no. mass_xcop                                                                                     c ESO 2018
+                                               November 1, 2018
+
+
+
+
+                                                              Hydrostatic mass profiles in X-COP galaxy clusters
+                                               S. Ettori1,2 , V. Ghirardini1,3 , D. Eckert4 , E. Pointecouteau5 , F. Gastaldello6 , M. Sereno1,3 , M. Gaspari7? , S. Ghizzardi6 ,
+                                                                                                  M. Roncarelli1,3 , M. Rossetti6
+
+                                                      1
+                                                        INAF, Osservatorio di Astrofisica e Scienza dello Spazio, via Pietro Gobetti 93/3, 40129 Bologna, Italy
+                                                      2
+                                                        INFN, Sezione di Bologna, viale Berti Pichat 6/2, I-40127 Bologna, Italy
+                                                      3
+                                                        Dipartimento di Fisica e Astronomia Università di Bologna, via Pietro Gobetti 93/2, 40129 Bologna, Italy
+                                                      4
+                                                        MPE, Giessenbachstrasse 1, 85748 Garching bei München, Germany
+                                                      5
+                                                        IRAP, Université de Toulouse, CNRS, CNES, UPS, 9 av du colonel Roche, BP44346, 31028 Toulouse cedex 4, France
+                                                      6
+                                                        INAF, IASF, Via E. Bassini 15, I-20133 Milano, Italy
+                                                      7
+                                                        Department of Astrophysical Sciences, Princeton University, 4 Ivy Lane, Princeton, NJ 08544-1001, USA
+arXiv:1805.00035v3 [astro-ph.CO] 31 Oct 2018
+
+
+
+
+                                                      November 1, 2018
+
+                                                                                                                   ABSTRACT
+
+                                                      Aims. We present the reconstruction of hydrostatic mass profiles in 13 X-ray luminous galaxy clusters that have been mapped in their
+                                                      X-ray and Sunyaev-Zeldovich (SZ) signals out to R200 for the XMM-Newton Cluster Outskirts Project (X-COP).
+                                                      Methods. Using profiles of the gas temperature, density, and pressure that have been spatially resolved out to median values of
+                                                      0.9R500 , 1.8R500 , and 2.3R500 , respectively, we are able to recover the hydrostatic gravitating mass profile with several methods and
+                                                      using different mass models.
+                                                      Results. The hydrostatic masses are recovered with a relative (statistical) median error of 3 % at R500 and 6% at R200 . By using
+                                                      several different methods to solve the equation of the hydrostatic equilibrium, we evaluate some of the systematic uncertainties to be
+                                                      of the order of 5% at both R500 and R200 . A Navarro-Frenk-White profile provides the best-fit in 9 cases out of 13; the remaining 4
+                                                      cases do not show a statistically significant tension with it. The distribution of the mass concentration follows the correlations with
+                                                      the total mass predicted from numerical simulations with a scatter of 0.18 dex, with an intrinsic scatter on the hydrostatic masses of
+                                                      0.15 dex. We compare them with the estimates of the total gravitational mass obtained through X-ray scaling relations applied to YX ,
+                                                      gas fraction, and YSZ , and from weak lensing and galaxy dynamics techniques, and measure a substantial agreement with the results
+                                                      from scaling laws, from WL at both R500 and R200 (with differences below 15%), from cluster velocity dispersions. Instead, we find
+                                                      a significant tension with the caustic masses that tend to underestimate the hydrostatic masses by 40% at R200 . We also compare
+                                                      these measurements with predictions from alternative models to the cold dark matter, like the emergent gravity and MOND scenarios,
+                                                      confirming that the latter underestimates hydrostatic masses by 40% at R1000 , with a decreasing tension as the radius increases, and
+                                                      reaches ∼15% at R200 , whereas the former reproduces M500 within 10%, but overestimates M200 by about 20%.
+                                                      Conclusions. The unprecedented accuracy of these hydrostatic mass profiles out to R200 allows us to assess the level of systematic
+                                                      errors in the hydrostatic mass reconstruction method, to evaluate the intrinsic scatter in the NFW c − M relation, and to robustly
+                                                      quantify differences among different mass models, different mass proxies, and different gravity scenarios.
+                                                      Key words. Galaxies: clusters: intracluster medium – Galaxies: clusters: general – X-rays: galaxies: clusters – (Galaxies:) inter-
+                                                      galactic medium
+
+
+                                               1. Introduction                                                             static equilibrium within the gravitational potential. This is an
+                                                                                                                           assumption that is satisfied if the ICM, treated as collisional fluid
+                                               The use of the galaxy clusters as astrophysical laboratories and            on timescales typical of any heating/cooling/dynamical process
+                                               cosmological probes relies on characterizing the distribution of            much longer than the elastic collisions time for ions and elec-
+                                               their gravitational mass (see e.g. Allen et al. 2011; Kravtsov &            trons, is crossed by a sound wave on a timescale shorter than
+                                               Borgani 2012). In the currently favoured ΛCDM scenario, clus-               the cluster’s age (e.g. Ettori et al. 2013a), as generally occurs in
+                                               ters of galaxies are dominated by dark matter (80% of the to-               clusters that are not undergoing any major merger and can be
+                                               tal mass), with a negligible contribution due to stars (a small             considered relaxed from a dynamical point of view.
+                                               percentage; see e.g. Gonzalez et al. 2013), and even less by                     Given this condition, the ability to resolve the mass distri-
+                                               cold/warm gas, and the rest (about 15% of the total mass, i.e.              bution in X-rays depends on the ability to make spatially re-
+                                               MDM /Mgas ∼ 4 − 7) in the form of ionized plasma emitting in                solved measurements of the gas temperature and density. This
+                                               X-ray and detectable through the Sunyaev-Zeldovich (SZ, Sun-                ability is limited severely by many systematic effects, such as
+                                               yaev & Zeldovich 1972) effect induced from inverse Compton                  the presence of gas inhomogeneities on small and large scales
+                                               scattering of the cosmic microwave background photons off the               that can bias the measurements of the gas density (e.g. Roncar-
+                                               electrons in the hot intracluster medium (ICM).                             elli et al. 2013), contamination from the X-ray background that
+                                                   X-ray observations can provide an estimate of the total mass            reduce the signal-to-noise ratio and the corresponding robust-
+                                               in galaxy clusters under the condition that the ICM is in hydro-            ness of the spectral measurements (e.g. Ettori & Molendi 2011;
+                                                                                                                           Reiprich et al. 2013); adopted assumptions, for example on the
+                                                ?
+                                                    Einstein and Spitzer Fellow.                                           halo geometry (see e.g. Buote & Humphrey 2012; Sereno et al.
+                                                                                                                                                                      Article number, page 1 of 14
+                                                  A&A proofs: manuscript no. mass_xcop
+
+                                                                                             10 1
+2017b) and the dynamical state (see e.g. Nelson et al. 2014b;
+                                                                                             10 2
+
+
+
+
+                                                                       Density [cm 3]
+Biffi et al. 2016) of the objects, where mergers are the major
+source of violation of the hydrostatic equilibrium assumption                                10 3
+(e.g. Khatri & Gaspari 2016); and inhomogeneities in the tem-                                10 4
+perature distribution, which also play a role (Rasia et al. 2012).
+Within 0.15 R500 , turbulence driven by the active galactic nu-                              10 5
+cleus feedback (e.g. Gaspari et al. 2018) is instead responsible                               10
+
+
+
+
+                                                                                  Temperature [keV]
+for the major deviations.                                                                             8
+     In recent years, the great improvement in instrumentation in                                     6
+detecting and characterizing the SZ signal has also allowed us to                                     4
+use this piece of information to resolve the pressure profile of the
+intracluster plasma. Our XMM-Newton Cluster Outskirts Project                                         2
+
+
+
+
+                                                                       Pressure [keV cm 3]
+(X-COP; Eckert et al. 2017) has now completed the joint analy-                               10 2
+sis of XMM-Newton and Planck exposures of 13 nearby massive                                               A1644   A2319   A85
+                                                                                             10 3
+galaxy clusters, permitting us to resolve X-ray and SZ signals                                            A1795   A3158   RXC1825
+out to the virial radius (∼ R200 ), also correcting for gas clumpi-                          10 4         A2029   A3266   ZW1215
+                                                                                                          A2142   A644    HydraA
+ness as resolved with the XMM point spread function of about 15                              10 5         A2255
+arcsec (∼ 17 kpc at the mean redshift of our sample of 0.06). In                                                   10 1             100
+this paper, which appears as a companion to the extended anal-                                                            R/R500
+ysis of the X-COP sample presented in Ghirardini et al. (2018b,
+on the thermodynamical properties of the sample) and Eckert et
+al. (2018, on the non-thermal pressure support), we report on the      Fig. 1. (From top to bottom) Reconstructed electron density, projected
+reconstruction of the hydrostatic mass in these systems and how        temperature, and SZ pressure profiles as functions of the radius in scale
+it compares with several independent estimates.                        units of R500 . Statistical error bars are overplotted. The two vertical
+                                                                       lines indicate R500 and R200 .
+     The paper is organized as follows. In Section 2 we present
+the observed profiles of the thermodyncamical properties. We
+describe in Section 3 the different techniques adopted to recover
+the hydrostatic masses. In Section 4 we compare these dark mat-
+ter profiles with those recovered from scaling laws, weak lens-
+ing, and galaxy dynamics. A comparison with predictions from           Planck 2015 data release (i.e. the full intensity survey) which
+the modified Newtonian dynamics and the emergent gravity sce-          has a higher S/N (due to the higher exposure time) and improved
+nario is discussed in Section 5. We summarize our main findings        data processing and calibration. To the original X-COP list of
+in Section 6. Unless mentioned otherwise, the quoted errors are        12 clusters, we added HydraA (Abell 780) due to the availabil-
+statistical uncertainties at the 1σ confidence level.                  ity of a high-quality XMM-Newton mapping (De Grandi et al.
+     In this study, we often refer to radii, R∆ , and masses, M∆ ,     2016). The X-ray signal extends out to R200 and therefore it is
+which are the corresponding values estimated at the given over-        possible to recover its hydrostatic mass with very high precision,
+density ∆ as M∆ = 4/3 π ∆ ρc,z R∆     3
+                                        , where ρc,z = 3Hz2 /(8πG)     even though the Planck signal for this cluster is contaminated by
+is the critical density of the universe at the observed redshift z     a bright central radio source.
+                                                     0.5
+of the cluster, and Hz = H0 ΩΛ + Ωm (1 + z)3               = H0 hz
+is the value of the Hubble constant at the same redshift. For the          Here, we summarize the properties of the quantities of in-
+ΛCDM model, we adopt the cosmological parameters H0 = 70               terest for the reconstruction of the gravitating mass distribution.
+km s−1 Mpc−1 and Ωm = 1 − ΩΛ = 0.3.                                    The physical quantities directly observable are the density ngas
+                                                                       and temperature Tgas of the X-ray emitting gas, and the SZ pres-
+                                                                       sure Pgas of the same plasma. Their radial profiles are presented
+2. The X-COP sample                                                    in Fig. 1. The gas density is obtained from the geometrical de-
+                                                                       projection of the X-ray surface brightness out to a mean value
+The XMM-Newton Cluster Outskirts Project (X-COP, Eckert                of 1.8R500 . Thanks to the observational strategy implemented in
+et al. 2017) is an XMM Very Large Program (PI: Eckert) ded-            X-COP, we are able to correct the X-ray emission for the pres-
+icated to the study of the X-ray emission in cluster outskirts. It     ence of gas clumps both by masking substructures spatially re-
+targets 12 local, massive galaxy clusters selected for their high      solved with XMM-Newton and by measuring the azimuthal me-
+signal-to-noise ratios in the Planck all-sky SZ survey (S/N> 12 in     dian, instead of the azimuthal mean (Zhuravleva et al. 2013; Eck-
+the PSZ1 sample, Planck Collaboration et al. 2014) as resolved         ert et al. 2015). The estimates of the gas temperature are based
+sources (R500 > 10 arcmin) in the redshift range 0.04 < z < 0.1        on the modelling with an absorbed thermal component of the
+and along the directions with a galactic absorption lower than         XMM-Newton spectra extracted from concentric annuli around
+1021 cm−2 to avoid any significant suppression of the X-ray            the X-ray peak in the [0.5–12] keV energy band and corrected
+emission in the soft band where most of the spatial analysis is        from the local sky background components. A typical statistical
+performed. These selection criteria guarantee that a joint analy-      error lower than 5% is associated with these spectral measure-
+sis of the X-ray and SZ signals allows the reconstruction of the       ments. On average, the temperature profiles are resolved out to
+ICM properties out to R200 for all our targets. A complete de-         0.9R500 . The SZ electron pressure profile is obtained follow-
+scription of the reduction and analysis of our proprietary X-ray       ing the method described in Planck Collaboration (2013) from
+data and of the SZ data for X-COP is provided in Ghirardini            the Planck PSF deconvolution and geometrical deprojection of
+et al. (2018b) (see also Eckert et al. 2018). We note here that        the azimuthally averaged integrated Comptonization parameter
+our new Planck pressure profiles are extracted using exactly the       y extracted from a re-analysis of the SZ signal mapped with
+same method as in Planck Collaboration et al. (2013), but on the       Planck and that extends up to ∼ 2.3R500 .
+Article number, page 2 of 14
+                                         S. Ettori: Hydrostatic mass profiles in X-COP galaxy clusters
+
+3. Total gravitating mass from the hydrostatic                           innermost Planck points for the analysis to avoid possible bi-
+   equilibrium equation                                                  ases induced by the Planck beam. The hydrostatic equilibrium
+                                                                         equation (Eq. 1) is then directly applied to evaluate the radial
+Under the assumption that the intracluster medium has a spher-           distribution of the mass.
+ically symmetric distribution and follows the equation of state              The profiles are fitted using an MCMC approach based on
+for a perfect gas, Pgas = kTgas ngas , where k is the Boltzmann          the code emcee (Foreman-Mackey et al. 2013) with 10000 steps
+constant, the combination of the gas density ngas , as the sum of        and about 100 walkers, and throwing away the first 5000 points
+the electron and proton densities ne + np ≈ 1.83ne , with the X-         because of ‘burnt-in’ time. From the resulting posterior distribu-
+ray spectral measurements of the gas temperature and/or the SZ           tion on our parameters, we estimate the reference values using
+derived gas pressure, allows us to evaluate the total mass within        the median of the distributions, and the errors as half the differ-
+a radius r through the hydrostatic equilibrium equation (see e.g.        ence between the 84th and 16th percentiles. The best-fit parame-
+Ettori et al. 2013a)                                                     ters In the present analysis, we investigate different mass models
+                                                                         (Sect. 3.1), and adopt as reference model a NFW mass model
+                    r Pgas d log Pgas                                    with two free parameters, the mass concentration and R200 (see
+Mtot (< r) = −                        ,                           (1)
+                  µmu G ngas d log r                                     Sect. 3.2).
+
+where G is the gravitational constant, mu = 1.66 × 10−24 g
+is the atomic mass unit, and µ = ρgas /(mu ngas ) ≈ (2X +                3.1. Comparison among different mass models with the
+                                                                              backward method
+0.75Y +0.56Z)−1 ≈ 0.6 is the mean molecular weight in atomic
+mass unit for ionized plasma, with X, Y , and Z being the mass           We apply the backward method with the following set of differ-
+fraction for hydrogen, helium, and other elements, respectively          ent mass models and estimate their maximum likelihood in re-
+(X + Y + Z = 1, with X ≈ 0.716 and Y ≈ 0.278 for a                       producing the observed profiles of gas density, temperature and
+typical metallicity of 0.3 times the solar abundance from Anders         SZ pressure.
+& Grevesse 1989).                                                            The mass profile is parametrized through the expression
+    In the present analysis, we apply both the backward and the
+forward method (see e.g. Ettori et al. 2013a), as discussed and          M (< r) = n0 rs3 fc F (x)
+illustrated in our pilot study on A2319 (Ghirardini et al. 2018a).                 4
+We use all the information available (measured pressure Pm ,                 n0 = π ∆ ρc,z = 1.14 × 1014 h2z M Mpc−3
+                                                                                   3
+temperature Tm , and emissivity m ) to build a joint likelihood                               c3
+L,                                                                            fc =                                                      (3)
+                                                                                   log(1 + c) − c/(1 + c)
+log L = − 0.5 (P − Pm )Σ−1                 T
+                                                                
+                             tot (P − Pm ) + n log (det (Σtot ))         where ∆ = 200, hz = Hz /H0 , and x = r/rs , with the scale
+              nT
+                   "                                        #            radius rs and the concentration c being the two free parameters
+              X      (Ti − Tm,i )2           2      2
+                                                          
+        − 0.5         2 + σ2          + log σT,i + σT,int                of the fit. The function F (x) characterizes each mass model and
+              i=1
+                     σT,i      T,int                                     is defined as follows:
+                                  
+                 n              2
+                X    ( − m,j )                                        NFW F (x) = log(1 + x) − x/(1 + x) (Navarro et al. 1997);
+        − 0.5                       ,
+                          2
+                         σ,j                                            EIN F (x) = a1−a1 /2a1 ea0 γ(a1 , a0 x1/a ) with a = 5, a0 = 2n,
+                j=1
+                                                                            a1 = 3n, and R yγ(a, y) being the incomplete gamma func-
+                                                                  (2)       tion equal to 0 ta−1 exp(−t)dt (from eq. A2 in Mamon &
+                                                                            Łokas 2005);        √
+that combines in the fitting procedure (i) the χ2 related to the         ISO F (x) = log(x + 1 + x2 ) − √1+x     x
+                                                                                                                       , which is the King
+measured profiles [i.e. χ2P = (P − Pm )Σ−1                   T   2                                                   2
+                                              tot (P − Pm ) , χT =          approximation to the isothermal sphere (King 1962);
+PnT (Ti −Tm,i )2                      n (−m,j ) 2
+                      , and χ2 =
+                                   P
+    i=1 σT2 +σ 2
+           ,i  T ,int
+                                      j=1     2
+                                            σ,j
+                                                     ; see Table A.2],   BUR F (x) = log(1 +x2 ) + 2 log(1 +x)−2 arctan(x) (Salucci
+(ii) an intrinsic scatter σT,int to account for any tension between         & Burkert 2000);
+                                                                                         x2
+X-ray and SZ measurements, and (iii) the covariance matrix Σtot          HER F (x) = (x+1)   2 (Hernquist 1990).
+
+among the data in the Planck pressure profile (for details, see
+Appendix D in Ghirardini et al. 2018a).                                      We note that our observed profiles cannot provide any robust
+     The emissivity  is obtained from the multiscale fitting (Eck-      constraint on the third parameter a of the Einasto profile that is
+ert et al. 2016, see also Sect. 2.3 in Ghirardini et al. 2018b) of       therefore fixed to a value of 5 as observed for massive halos (e.g.
+the observed X-ray surface brightness. In the backward method,           Dutton & Macciò 2014). Moreover, the parameter c is defined
+a parametric mass model is assumed and combined with the gas             as the ‘concentration’ in the NFW profile, whereas it represents
+density profile to predict a gas temperature profile T that is then      a way to constrain the normalization for the other mass mod-
+compared with the one measured Tm in the spectral analysis and           els. In our MCMC approach, we adopt for c a uniform a-prior
+the one estimated from SZ as P/ngas (losing the spatial resolu-          distribution in the linear space in the range 0.1–15. The a-prior
+tion in the inner regions because of the modest 7 arcmin FWHM            distributions on the scale radius (or R200 = c × rs for the NFW
+angular resolution of our Planck SZ maps, but gaining in radial          case) are still defined as uniform in the linear space in the fol-
+extension due to the Planck spatial coverage; Planck Collabora-          lowing ranges: 1–3 Mpc (NFW); 0.1–2.8 Mpc (EIN); 0.02–0.8
+tion et al. 2013) to constrain the mass model parameters. In the         Mpc (ISO); 0.02–0.8 Mpc (BUR); 0.2–3 Mpc (HER).
+forward method, some functional forms are fitted to the depro-               We show all the mass profiles in Fig. A.1. In Table A.1, we
+jected gas temperature and pressure profiles, as detailed in Ghi-        quote all the best-fit parameters, and the relative Bayesian Evi-
+rardini et al. (2018a), with instead no assumptions on the form          dence E estimated, for each mass model, as the integral of the
+of the gravitational potential. We note that we neglect the three        likelihood function L (equation 2) over the a-prior distributions
+                                                                                                                Article number, page 3 of 14
+                                                    A&A proofs: manuscript no. mass_xcop
+
+
+
+
+Fig. 2. Bayes factor of the mass models investigated with respect to      Fig. 3. Relative error (at 1σ) on the hydrostatic mass recovered with
+the one with the highest evidence (see Table A.1). Shaded regions iden-   the backward method and a NFW model (see Table 1).
+tify values of the Bayes factor where the tension between the models
+is either weak (< 2.5) or strong (> 5) according to the Jeffreys scale
+(Jeffreys 1961).                                                          equilibrium density profiles of CDM halos; however, deviations
+                                                                          are expected.
+
+                                                                          3.2. Reference mass model: backward method with NFW
+                              R
+P (θ) of the parameters θ (E = L(θ)P (θ)dθ; as implemented
+in e.g. MultiNest, Feroz et al. 2009).                                         mass model
+     In Fig. 2, we present the Bayes factor estimated for each ob-        We present the results of our analysis with a backward method
+ject as the difference between the logarithm of the Bayesian ev-          and a NFW mass model in Table 1. We measure mean relative er-
+idence of the mass model with the highest evidence with respect           rors (statistical only) lower than 8% (median, mean, and disper-
+to the others. Nine out of 13 objects prefer a NFW model fit and          sion at ∆ = 1000, 500, and 200, respectively: 3, 4, 2%; 4, 5, 2%;
+have data that are significantly inconsistent (Bayes factor > 5)          6, 7, 3%; see Fig. 3).
+with an isothermal/Burkert mass model. The remaining four ob-                  In the cold dark matter scenario, the structure formation is
+jects prefer different mass models (ISO for A2255 and A2319,              hierarchical and allows the build-up of the most massive gravi-
+HER for A1644, and BUR for A644), but do not show any statis-             tationally bound halos, like galaxy clusters, only at later cosmic
+tically significant (Bayes factor < 5) tension with NFW. Of those         times. Considering that the central density of halos reflects the
+four objects, two (A2255 and A2319) are the ones with the high-           mean density of the Universe at the time of formation, halos with
+est value of the central entropy among the X-COP sample as es-            increasing mass are expected to have lower mass concentration
+timated in Cavagnolo et al. (2009), strongly suggesting that they         at given redshift (e.g. Navarro et al. 1997; Bullock et al. 2001;
+are disturbed systems that have produced a core (well modelled            Dolag et al. 2004; Diemer & Kravtsov 2015).
+by an ISO profile) in the gravitational potential as a consequence             We can investigate how our best-fit results on NFW concen-
+of the ongoing merger. The case of A2319 has been indeed ex-              tration and M200 (quoted in Table 1) reproduce the predictions
+tensively studied in Ghirardini et al. (2018a). A2255 shows a flat        from numerical simulations. We can also assess the level of the
+surface-brightness profile in its core and an X-ray morphology            intrinsic scatter in the c200 − M200 relation in this mass range.
+extended along the E-W axis (Sakelliou & Ponman 2006). Inter-             Simulations suggest that this scatter is related to the variation
+estingly, the X-ray centroid of the cluster does not coincide with        in formation time and is expected to be lower in more massive
+a dominant galaxy (Burns et al. 1995), which more strongly sup-           halos that formed more recently (e.g. Neto et al. 2007).
+ports the merger scenario. The cluster also exhibits an unusual                We model the relation with a standard power law:
+polarized radio halo which may be a radio relic seen in projec-                                 β
+tion (Pizzo & de Bruyn 2009). A644 is an unusual radio-quiet                         α    M200
+                                                                          c200 = 10                 .                                    (4)
+cool-core cluster with a temperature profile rising inward and the                        Mpivot
+cD galaxy positioned approximately between the X-ray peak and
+                                                                          The intrinsic scatter σc|M of the concentration around a given
+centroid, as expected for a merger origin of the properties of the
+X-ray emission in the core (Buote et al. 2005). We also note that         mass, c200 (M200 ), is taken to be lognormal (Duffy et al. 2008;
+it shows a steep gradient in the outermost points of the spectral         Bhattacharya et al. 2013).
+temperature profile, which also suggests that the object can be              We fit the data with a linear relation in decimal logarith-
+dynamically non-relaxed in the regions at r > 0.4R500 . We do             mic (log) variables with the R-package LIRA1 . LIRA is based
+not find any peculiarity in the observed profiles of A1644, con-          1
+                                                                             LIRA (LInear Regression in Astronomy) is available from the Com-
+firming that, as also probed in the numerical simulations, a NFW          prehensive R Archive Network at https://cran.r-project.
+profile provides a good description of the spherically averaged           org/web/packages/lira/index.html.
+
+Article number, page 4 of 14
+                                         S. Ettori: Hydrostatic mass profiles in X-COP galaxy clusters
+
+   Name         z        c200
+                           0.5 Mpc      1 Mpc      1.5 Mpc       R500         M500         R200          M200
+                           1014 M      1014 M      1014 M        Mpc         1014 M        Mpc         1014 M
+                   +0.13
+  A85   0.0555 3.31−0.13 1.94 ± 0.02 4.53 ± 0.08 6.81 ± 0.18 1.235 ± 0.013 5.65 ± 0.18 1.921 ± 0.027 8.50 ± 0.36
+                   +0.65
+  A644  0.0704 5.58−0.51 2.36 ± 0.09 4.74 ± 0.26 6.59 ± 0.45 1.230 ± 0.035 5.66 ± 0.48 1.847 ± 0.059 7.67 ± 0.73
+ A1644 0.0473 1.46+0.14
+                   −0.14 1.15 ± 0.02 3.24 ± 0.10 5.47 ± 0.26 1.054 ± 0.020 3.48 ± 0.20 1.778 ± 0.051 6.69 ± 0.58
+ A1795 0.0622 4.55+0.16
+                   −0.14 1.95 ± 0.02 4.06 ± 0.08 5.77 ± 0.15 1.153 ± 0.012 4.63 ± 0.14 1.755 ± 0.021 6.53 ± 0.23
+                   +0.19
+ A2029 0.0773 4.26−0.17  2.78 ± 0.03 6.25 ± 0.13 9.24 ± 0.26 1.423 ± 0.019 8.82 ± 0.35 2.173 ± 0.034 12.57 ± 0.59
+                   +0.10
+ A2142 0.0909 3.14−0.10 2.48 ± 0.02 6.08 ± 0.09 9.44 ± 0.19 1.424 ± 0.014 8.95 ± 0.26 2.224 ± 0.027 13.64 ± 0.50
+                   +0.24
+ A2255 0.0809 1.37−0.23  1.39 ± 0.06 4.08 ± 0.11 7.10 ± 0.36 1.196 ± 0.026 5.26 ± 0.34 2.033 ± 0.081 10.33 ± 1.23
+                   +0.51
+ A2319 0.0557 4.86−0.37 2.61 ± 0.08 5.58 ± 0.12 8.01 ± 0.25 1.346 ± 0.017 7.31 ± 0.28 2.040 ± 0.035 10.18 ± 0.52
+                   +0.26
+ A3158 0.0597 2.88−0.17  1.59 ± 0.02 3.76 ± 0.09 5.70 ± 0.21 1.123 ± 0.016 4.26 ± 0.18 1.766 ± 0.035 6.63 ± 0.39
+                   +0.25
+ A3266 0.0589 2.04−0.20  2.02 ± 0.05 5.57 ± 0.15 9.32 ± 0.39 1.430 ± 0.031 8.80 ± 0.57 2.325 ± 0.074 15.12 ± 1.44
+                   +0.67
+ HydraA 0.0538 5.51−0.61 1.28 ± 0.07 2.40 ± 0.20 3.22 ± 0.32 0.904 ± 0.032 2.21 ± 0.23 1.360 ± 0.056 3.01 ± 0.37
+                   +0.20
+RXC1825 0.0650 3.35−0.19 1.64 ± 0.02 3.69 ± 0.07 5.46 ± 0.15 1.105 ± 0.012 4.08 ± 0.13 1.719 ± 0.024 6.15 ± 0.26
+                   +0.22
+ZW1215 0.0766 2.11−0.18  1.93 ± 0.03 5.22 ± 0.15 8.61 ± 0.39 1.358 ± 0.031 7.66 ± 0.52 2.200 ± 0.069 13.03 ± 1.23
+
+Table 1. Values of the total gravitating mass as estimated with the backward method and a NFW model at some radii of reference (0.5, 1, 1.5 Mpc)
+and at the overdensities of 500 and 200 with respect to the critical density of the universe at the cluster’s redshift.
+
+
+
+on a Bayesian hierarchical analysis which can deal with het-                 The intrinsic scatter of the c-M relation, σc|M = 0.18±0.06,
+eroscedastic and correlated measurements uncertainties, intrin-          is compatible with theoretical predictions (Bhattacharya et al.
+sic scatter, scattered mass proxies, and time-evolving mass dis-         2013; Meneghetti et al. 2014, σc|M ∼ 0.15) and previous obser-
+tributions (Sereno 2016).                                                vational constraints (e.g. Ettori et al. 2010; Mantz et al. 2016).
+    The mass distribution of the fitted clusters has to be prop-         The relation between mass and concentration for subsamples can
+erly modelled to address Malmquist and Eddington biases (Kelly           differ from the general relation due to selection effects. Intrin-
+2007). The Gaussian distribution can provide an adequate mod-            sically overconcentrated clusters may be over-represented in a
+elling (Sereno & Ettori 2015a). The parameters of the distribu-          sample of clusters selected according to their large Einstein radii
+tion are found within the regression procedure. This scheme is           or to the apparent X-ray morphology (Meneghetti et al. 2014;
+fully effective in modelling both selection effects at low masses        Sereno et al. 2015). Intrinsic scatter of the c-M relation for re-
+and the steepness of the cosmological halo mass function at large        laxed samples is expected to be smaller than for the full popula-
+masses.                                                                  tion of mass selected halos. However, given the statistical uncer-
+    Performing an unbiased analysis of the concentration–mass            tainty on the measured σc|M , we cannot draw any firm conclu-
+(c-M ) relation requires properly addressing the uncertainties           sion on the equilibrium status of the clusters.
+connected to the correlations and intrinsic scatter. Measured
+mass and concentration are indeed strongly anti-correlated, caus-
+ing the c-M relation to appear steeper (Auger et al. 2013; Dut-          3.3. Comparison of different methods and systematic
+ton & Macciò 2014; Du & Fan 2014; Sereno et al. 2015). By                     errors
+correcting for this effect, it is possible to obtain a more precise,
+                                                                         To evaluate some of the systematic uncertainties affecting our
+significantly flatter relation (Sereno et al. 2015). On the other
+                                                                         measurements of the hydrostatic mass, we estimate the mass at
+hand, the intrinsic scatter of the measurable mass with respect to
+                                                                         some fixed physical radii (500, 1000, and 1500 kpc) and at two
+the true mass can bias the estimated slope towards flatter values
+                                                                         overdensities (R500 and R200 ) using the forward method and the
+(Rasia et al. 2013; Sereno & Ettori 2015b). To correct for this
+                                                                         other mass models described in Section 3.1, and compare them
+effect, we measure the concentration–mass uncertainty covari-
+                                                                         to the results obtained from our model of reference (backward
+ance matrix for each cluster from the MCMC chains, whereas
+                                                                         NFW). We summarize the results of this comparison in Table 2.
+we model the intrinsic scatter as a free fit parameter to be found
+in the regression procedure.                                                 We observe that the use of the forward method (with or with-
+    Adopting non-informative priors (Sereno et al. 2017a) we             out SZ profiles) introduces a small systematic error at any radius,
+find α = 0.89 ± 0.90 and β = −0.42 ± 0.98, in agreement with             with a median difference of about 4% at R500 , and <2% (1st-3rd
+theoretical predictions for slope and normalization (see Fig. 4).        quartile: -5.4 / +8.1 %) at R200 .
+Statistical uncertainties are very large and we cannot discrimi-             Any other mass model constrained with the backward
+nate between the different theoretical predictions.                      method introduces some systematic uncertainties that depends
+    On the other hand, mass measurement uncertainties are very           mainly on the shape characteristic of the model and on the fact
+small and we can estimate the intrinsic scatter of the hydrostatic       that all the models have only two parameters, implying that it
+masses, σMHE |M = 0.15 ± 0.08. Even though the marginalized              is not flexibile enough to accommodate the distribution in the
+posterior distribution of σMHE |M is peaked at ∼ 0.15 (see Fig. 4),      observed profiles. For instance, we note that cored profiles, like
+smaller values are fully consistent. The posterior probability that      ISO and BUR, present larger positive (negative) deviations in the
+σMHE |M is less than 10% (i.e. σMHE |M < 0.043) is 15%. Our              core (outskirts) up to about 25%.
+estimate of hydrostatic mass scatter is in agreement with results            We note that this budget of the systematic uncertainties does
+from higher-z samples (Sereno & Ettori 2015b) and larger, even           not include other sources of error, such as any non-thermal con-
+though compatible within uncertainties, with results from nu-            tribution to the total gas pressure (e.g. Nelson et al. 2014a;
+merical simulations (Rasia et al. 2012).                                 Sereno et al. 2017b), and terms that account for either depar-
+                                                                                                                   Article number, page 5 of 14
+                                                             A&A proofs: manuscript no. mass_xcop
+
+
+
+
+                                                                                         1
+
+                                                                                         0             ●
+
+
+                                                                                        -1
+
+
+
+
+                                                                                 β
+                                                                                        -2
+
+                                                                                        -3
+
+                                                                                         -4
+                                                                                       0.35
+
+                                                                                       0.30
+
+                                                                                       0.25
+
+
+
+
+                                                                              σc M
+                                                                                       0.20
+
+                                                                                       0.15
+
+                                                                                       0.10
+
+                                                                                       0.05
+                   ●                            ○
+         5                                              ○                              0.30
+                                           ●                 ●                         0.25
+
+
+
+
+                                                                              σMHE M
+                                                                                       0.20
+                                       ●            ●            ●                     0.15
+  c200
+
+
+
+
+                                           ●
+                                                                                       0.10
+
+                                                                                       0.05
+                                                                 ●   ●                  1.0
+              XCOP
+                                                                                        0.8
+              Bhattacharya+13              ○
+              Dutton&14                                  ○
+
+
+
+
+                                                                               p/pmax
+                                                                                        0.6
+
+              Ludlow+16                                                                 0.4
+         1    Meneghetti+14 (3D-rel)
+                                                                                        0.2
+
+
+                                   5                    10                              0.0
+                                                                                              -1   0       1       2   3   4 -4   -3   -2   -1   0   1   0.05 0.10 0.15 0.20 0.25 0.30 0.35 0.05 0.10 0.15 0.20 0.25 0.30
+                                                                                                               α                            β                       σc M                          σMHE M
+                                               14
+                                   M200 [10 M ]     ⊙
+
+
+
+Fig. 4. (Left) Concentration–mass relation of the X-COP clusters. The dashed black lines show the median scaling relation (full black line) plus
+or minus the intrinsic scatter at redshift z = 0.06. The shaded grey region encloses the 68.3% confidence region around the median relation
+due to uncertainties on the scaling parameters. As reference, we plot the concentration–mass relations of Bhattacharya et al. (2013, blue line),
+Dutton & Macciò (2014, green line), Ludlow et al. (2016, orange line), and Meneghetti et al. (2014, solid and dashed red lines). The dashed
+red lines enclose the 1-σ scatter region in the theoretical concentration–mass relation from the MUSIC-2 N -body/hydrodynamical simulations.
+Empty circles identify the four objects (A644, A1644, A2255, A2319; see Fig. 2) for which NFW does not represent the best-fit mass model.
+(Right) Probability distributions of the parameters of the concentration–mass relation. The thick and thin black contours include the 1-σ and 2-σ
+confidence regions in two dimensions, here defined as the regions within which the probability is larger than exp(−2.3/2) and exp(−6.17/2) of
+the maximum, respectively. The red disk represents the parameters found by Meneghetti et al. (2014) for the relaxed sample. The bottom row plots
+the marginalized 1D distributions, renormalized to the maximum probability. The thick and thin black levels denote the confidence limits in one
+dimension, i.e. exp(−1/2) and exp(−4/2) of the maximum.
+
+         Mi                                                              B (inter-quartile range) %
+                            0.5 Mpc                          1 Mpc               1.5 Mpc                                                             R500                                               R200
+
+   Forw             +0.6 (−1.1/ + 3.3)              −2.0 (−5.9/ + 1.4) −4.6 (−7.9/ + 1.3) −4.7 (−10.9/ − 0.5) +1.2 (−5.4/ + 8.1)
+Forw (no SZ)        −1.5 (−3.4/ + 4.1)              −1.9 (−8.0/ + 0.6) −1.3 (−5.4/ + 4.5) −4.2 (−9.0/ + 1.8) +1.3 (−11.9/ + 8.0)
+
+     EIN          −0.3 (−1.7/ + 1.3) −1.7 (−6.5/ − 0.2) −1.0 (−9.7/ + 1.5) −0.8 (−7.6/ + 1.0) −0.8 (−10.3/ + 4.3)
+     ISO         +14.1 (+11.8/ + 21.0) −3.0 (−3.5/ + 5.4) −13.3 (−19.0/ − 9.7) −8.2 (−13.0/ − 5.3) −23.5 (−28.7/ − 16.5)
+     BUR         +11.4 (+10.4/ + 15.1) −3.1 (−5.8/ + 4.0) −13.7 (−19.2/ − 8.3) −8.3 (−12.9/ − 5.2) −20.8 (−24.2/ − 17.9)
+     HER          +1.6 (+0.9/ + 2.1) −0.7 (−5.6/ + 0.2) −5.5 (−11.4/ − 2.4) −3.7 (−5.3/ − 1.9) −9.3 (−13.5/ − 6.8)
+
+Table 2. Systematic differences between the forward method (‘Forw’) and the other mass models described in Sect. 3.1 with respect to the
+model of reference defined as backward NFW. These differences are quoted as the median (1st-3rd quartiles, in brackets) of the quantity B =
+(Mi /NFW − 1) × 100 %, where Mi is listed in the first column.
+
+
+
+tures from the hydrostatic equilibrium (e.g. Nelson et al. 2014b;                      4. Comparison with mass estimates from scaling
+Biffi et al. 2016) or the violation of the assumed sphericity of                          laws, weak lensing, and galaxy dynamics
+the gas distribution (e.g. Sereno et al. 2017b). All these contri-
+butions have been shown to affect the clusters’ outskirts more                         We compare our estimates of the hydrostatic mass with con-
+significantly and tend to bias the total mass estimates higher (by                     straints obtained from (i) X-ray based scaling relations applied
+10–30%) at r > R500 , with smaller effects in the inner regions.                       to YX = Mgas × T (Vikhlinin et al. 2009), gas mass fraction
+In particular, by imposing the distribution of the cluster mass                        (Mantz et al. 2010, also including a correction factor of 0.9 for
+baryon fraction estimated in the state-of-art hydrodynamical cos-                      Chandra calibration updates; see caption of their Table 4), and
+mological simulations, we evaluate in Eckert et al. (2018) a me-                       SZ signal (the Planck mass proxy MYz in Planck Collaboration
+dian value of about 6% and 10% at R500 and R200 , respectively,                        et al. 2016); (ii) weak lensing signals associated with the co-
+for the relative amount of non-thermal pressure support in the                         herent distortion in the observed shape of background galaxies
+X-COP objects.                                                                         (as measured in the Multi Epoch Nearby Cluster Survey, ME-
+Article number, page 6 of 14
+                                          S. Ettori: Hydrostatic mass profiles in X-COP galaxy clusters
+
+NeaCS; Herbonnet et al. in prep.); and (iii) galaxy dynamics ei-
+ther through the estimate of the velocity dispersion (Zhang et al.
+2017) or via the caustic method (Rines et al. 2016, ; for A2029
+we consider the recent measurement in Sohn et al. 2018), which
+calculates the mass from the escape velocity profile which is de-
+fined from the edges (i.e. the ‘caustics’) of the distribution in
+the redshift-projected radius diagram. The comparison is done
+by evaluating the hydrostatic MNFW at the radius defined by the
+other methods at a given overdensity (∆ = 500 for X-ray and SZ
+scaling laws, galaxy dynamics, and WL; ∆ = 200 for WL and
+caustics). We plot the medians and the error-weighted means of
+the ratios M/MNFW in Fig. 5.
+    Mass estimates based on X-ray scaling laws provide a very
+reassuring agreement: we measure a median ratio M/MNFW
+of 1.06 and 1.03 for the nine and six objects in common with
+Vikhlinin et al. (2009) and Mantz et al. (2010), respectively. For
+the 11 objects in common with Planck-SZ catalog (Hydra-A and
+Zw1215 are not included there), we measure a median (1st-3rd
+quartile) of 0.98 (0.92–1.01) and an error-weighted mean of 0.96
+(r.m.s. 0.08) 2 .
+    A similarly good agreement is obtained with the six WL
+measurements in common: the medians are 1.16 (error-weighted
+mean 1.18 ± 0.12; r.m.s. 0.26) and 1.17 (error-weighted mean
+1.14 ± 0.12; r.m.s. 0.32) at R500 and R200 , respectively.                 Fig. 5. Comparison between the backward NFW model and estimates
+    Considering the eight clusters in common with Zhang et al.             of the mass from X-ray scaling relations (YX from Vikhlinin et al.
+                                                                                                         V 09
+                                                                           (2009) –label on X-axis: R500      – and fgas from Mantz et al. (2010) –
+(2017), we measure a median of 0.96, with 1st-3rd quartiles                   M 10                                                                SZ
+                                                                           R500    ), Planck PSZ2 catalog (Planck Collaboration et al. 2016, ; R500  ),
+of 0.78–1.10. On the other hand, a clear tension is measured               dynamical analysis for the HIFLUGCS sample (Zhang et al. 2017, ;
+with respect to the six mass values obtained from caustics:                   dyn                                              WL        WL
+                                                                           R500   ), lensing (Herbonnet et al. 2018 in prep.; R500 and R200   ), caus-
+MCau /MNFW has a median of 0.52 (1st-3rd quartiles: 0.39–                                               Cau
+                                                                           tics (Rines et al. 2016, ; R200 ). The number of objects in common is
+0.75; error-weighted mean 0.68 ± 0.02; r.m.s. 0.08), with ra-              shown. Shaded regions indicate the <10% (darkest) and <30% differ-
+tios smaller than 0.5 in three objects (A85: 0.43; A2142: 0.39;            ences.
+ZW1215: 0.35), and deviations larger than 3 σ, when statisti-
+cal uncertainties on the single measurements are propagated, on
+three clusters (A1795: 11.5 σ; A2029: 6.5 σ; A2142: 3.9 σ).                valid and robust test for models that try to explain this miss-
+Simulations in Serra & Diaferio (2013), among others, show this            ing mass problem. Among these rivals of the current cosmologi-
+might be the case when an insufficient number of spectroscopic             cal paradigm, we consider here two models, one that introduces
+member galaxies are adopted to constrain the caustic amplitude.            modifications in the Newtonian dynamical laws (MOND, Mil-
+We also note that caustic masses depend on a calibration con-              grom 1983) and another that compensates for the required ex-
+stant that is function of the mass density, potential and galaxies’        tra gravitational force by an emergent gravity (Verlinde 2016).
+velocity anisotropy profiles. This constant is generally calibrated        They can both be described by similar equations, are able to de-
+with numerical simulations, and its value (between 0.5 and 0.7)            scribe the behaviour of the gravity on galactic scales, but are also
+has been debated in recent literature due to its dependence on             known to cause trouble when applied on larger scales (called
+the dynamical tracers adopted in the caustic technique (see e.g.           the ‘upscaling problem’ in Massimi 2018), where for instance
+Serra et al. 2011; Gifford et al. 2013, 2017). In the present anal-        MOND predicts a gravitational acceleration that is too weak,
+ysis, we rely only on published results and postpone to further            suggesting that it can be an incomplete theory.
+investigation, also on the role of this calibration constant, the              In the emergent gravity scenario, dark matter can appear as a
+study of the detected tension with estimates from caustic masses           manifestation of an additional gravitational force describing the
+for the X-COP objects.                                                     ‘elastic’ response due to the displacement of the entropy that can
+                                                                           be associated with the thermal excitations carrying the positive
+                                                                           dark energy, and with a strength that can be described in terms of
+5. Comparison of predictions from the emergent                             the Hubble constant and of the baryonic mass distribution. For a
+                                                                           spherically symmetric, static, and isolated astronomical system,
+   gravity scenario and MOND                                               Verlinde (2016) provides a relation between the emergent dark
+The lack of a valuable candidate particle for the cold dark mat-           matter and the baryonic mass (see his equation 7.40) that can be
+ter has induced part of the community to search for alternative            rearranged to isolate the dark matter component MDM . Follow-
+paradigms on how gravity works at galactic and larger scales.              ing Ettori et al. (2017), we can write
+In galaxy clusters, the largest gravitationally bound structures                          cH0 2
+                                                                            2
+in the universe, visible matter can account for only a fraction            MDM,EG (r) =        r MB (r) (1 + 3δB ) ,                  (5)
+of the total gravitational mass. These systems thus represent a                            6G
+                                                                                            Rr
+                                                                           where MB (r) = 0 4πρB r02 dr0 = Mgas (r) + Mstar (r) is the
+ 2
+   Given a set of elements xi with statistical uncertainty σi , we adopt   baryonic mass equal to the sum of the gas and stellar masses,
+the following quantities as error-weighted mean x̄, error on it , and     and δB is equal to ρB (r)/ρ̄B with ρ̄B = MB (r)/V (< r) rep-
+relative dispersion σx̄ : x̄ = i wi xi / i wi ;  = ( i wi )−1/2 ; σx̄ =
+                              P         P            P
+                                                                           resenting the mean baryon density within the spherical volume
+( i wi (xi − x̄)2 / i wi )1/2 , where wi = 1/σi2 .
+  P                  P
+                                                                           V (< r). In our case, the gas mass has been obtained from the
+                                                                                                                        Article number, page 7 of 14
+                                                     A&A proofs: manuscript no. mass_xcop
+
+
+
+
+Fig. 6. (Left) Typical hydrostatic, EG and MOND radial mass profiles (here for A2142; plots for the remaining 12 objects in Appendix B. Vertical
+lines indicate R1000 (dotted line), R500 (dash-dotted line) and R200 (dashed line). (Right) Medians (and 1st and 3rd quartiles) of the ratio between
+the hydrostatic mass and the value predicted from EG and MOND for the whole X-COP sample. Shaded regions indicate the <10% (darkest) and
+<30% differences.
+
+
+integral over the cluster’s volume of the gas density (Fig. 1).            6. Conclusions
+The stellar mass has been estimated using a Navarro-Frenk-
+White (NFW, Navarro et al. 1997) profile with a concentration              We have investigated the hydrostatic mass profiles in the X-COP
+of 2.9 (see e.g. Lin et al. 2004) and by requiring the Mstar (<            sample of 13 massive X-ray luminous galaxy clusters for which
+                                                 −0.84                    the gas density and temperature (from XMM-Newton X-ray data)
+R500 )/Mgas (< R500 ) = 0.39 M500 /1014 M               (Gonza-            and SZ pressure profiles (from Planck) are recovered at very high
+lez et al. 2013). For the X-COP objects, we measure a median               accuracy up to about R500 for the temperature and at R200 for
+Mstar /Mgas of 0.09 (0.07–0.12 as 1st and 3rd quartile) at R500 .          density and pressure.
+    As we discuss in Ettori et al. (2017), Equation 5 can be ex-
+                                                                                We constrain the total mass distribution by applying the hy-
+pressed as an acceleration gEG depending on the acceleration gB
+                                                                           drostatic equilibrium equation on these profiles, reconstructed
+induced from the baryonic mass
+                                                                         under the assumption that the ICM follows a spherically sym-
+gEG = gB 1 + y −1/2 ,                                        (6)           metric distribution and using two different methods and five
+                                                                           mass models. By adopting as reference model a NFW mass pro-
+where y = 6/(cH0 ) × gB /(1 + 3δB ).                                       file constrained with the backward method, we estimate the ra-
+     Equation 6 takes a form very similar to the one implemented           dial mass distribution up to R200 with a mean statistical rela-
+in MOND (e.g. Milgrom & Sanders 2016) with a characteristic                tive error lower than 8%. A forward method, which is indepen-
+acceleration a0 = cH0 (1 + 3δB )/6. MOND is another theory                 dent from any assumption on the shape of the gravitational po-
+that accounts for the mass in galaxies and galaxy clusters with-           tential, provides consistent results within 5% both at R500 and
+out a dark component and by modifying Newtonian dynamics,                  R200 . Published results on the estimates of the hydrostatic mass
+and requires an acceleration gMOND = gB 1 + y −1/2 , with
+                                                            
+                                                                           in local massive galaxy clusters have so far reached statistical
+y = gB /a0 and a0 = 10−8 cm/s2 . For sake of completeness, we              uncertainties larger than 10% (e.g. Pointecouteau et al. 2005;
+have also estimated a gravitating mass associated with a MOND              Vikhlinin et al. 2006; Ettori et al. 2010), confirming that the strat-
+acceleration.                                                              egy implemented in the X-COP analysis is a successful way to
+     The results of our comparison are shown in Fig. 6 (where              improve constraints on the mass.
+we present as an example the case of A2142; the other mass pro-                 Other sources of systematic uncertainties, like any non-
+files are shown in Fig. B.1). Although in the inner cluster regions        thermal contribution to the total gas pressure that we discuss in a
+the mismatch is indeed significant, with mass values from mod-             companion paper (Eckert et al. 2018), or departures from the hy-
+ified gravities that underestimate the hydrostatic quantities by a         drostatic equilibrium (e.g. Nelson et al. 2014b; Biffi et al. 2016),
+factor of few, over the radial interval between R1000 and R200 ,           or the violation of the assumed sphericity of the gas distribu-
+the medians of the distribution of the ratios between the mass             tion (e.g. Sereno et al. 2017b) could push our mass estimates to
+estimates obtained from modified accelerations and from the hy-            higher values by a further 10–20%, in particular at r > R500 .
+drostatic equilibrium equation are in the range 0.6 − 0.87 for the              A NFW mass profile represents the best-fit model for nine
+MOND (consistent with previous studies; e.g. Pointecouteau &               objects, where we measure a statistically significant tension with
+Silk 2005) and between 0.88 and 1.19 for EG, with the latter that          any cored mass profile. The remaining four clusters prefer dif-
+indicates a nice consistency at R500 where MEG /MHyd ≈ 1.07                ferent mass models but are also consistent with a NFW. These
+(0.99 − 1.12 as 1st and 3rd quartiles).                                    four systems are also the ones that deviate most in the NFW
+Article number, page 8 of 14
+                                               S. Ettori: Hydrostatic mass profiles in X-COP galaxy clusters
+
+c200 −M200 plane with respect to the theoretical predictions from                   for and on behalf of NASA under contract NAS8-03060. Support for this work
+numerical simulations. Overall, we measure a scatter of 0.18 in                     was also provided by Chandra grant GO7-18121X. X-COP data products are
+                                                                                    available for download at https://www.astro.unige.ch/xcop.
+the c − M relation and of 0.15 ± 0.08 (with an a posteriori prob-
+ability of 15 % that it is below 10%) in the hydrostatic mass
+measurements. This is in agreement with the results from the
+literature (Sereno & Ettori 2015b) and larger, but still compati-                   References
+ble within the uncertainties, with those obtained from numerical
+                                                                                    Allen, S. W., Evrard, A. E., & Mantz, A. B. 2011, ARA&A, 49, 409
+simulations (Rasia et al. 2012).                                                    Anders, E. & Grevesse, N. 1989, Geochim. Cosmochim. Acta, 53, 197
+     For a subsample of X-COP objects, we can quantify the av-                      Auger, M. W., Budzynski, J. M., Belokurov, V., Koposov, S. E., & McCarthy,
+erage discrepancy between hydrostatic masses and estimates ob-                         I. G. 2013, MNRAS, 436, 503
+tained from (i) scaling relations based on X-ray data and applied                   Bhattacharya, S., Habib, S., Heitmann, K., & Vikhlinin, A. 2013, ApJ, 766, 32
+                                                                                    Biffi, V., Borgani, S., Murante, G., et al. 2016, ApJ, 827, 112
+to the SZ signal, (ii) weak-lensing, and (iii) galaxy dynamics.                     Bullock, J. S., Kolatt, T. S., Sigad, Y., et al. 2001, MNRAS, 321, 559
+Overall, we obtain remarkably good agreement (with an error-                        Buote, D. A. & Humphrey, P. J. 2012, MNRAS, 421, 1399
+weighted mean and median of the ratios between hydrostatic and                      Buote, D. A., Humphrey, P. J., & Stocke, J. T. 2005, ApJ, 630, 750
+                                                                                    Burns, J. O., Roettiger, K., Pinkney, J., et al. 1995, ApJ, 446, 583
+other masses around 1 ± 0.2), apart from the caustic method                         Cavagnolo, K. W., Donahue, M., Voit, G. M., & Sun, M. 2009, ApJS, 182, 12
+which severely underestimates (by more than 40 % on average)                        De Grandi, S., Eckert, D., Molendi, S., et al. 2016, A&A, 592, A154
+the hydrostatic values in this massive local relaxed systems.                       Diemer, B. & Kravtsov, A. V. 2015, ApJ, 799, 108
+     Then, we compare these mass estimates to predictions from                      Dolag, K., Bartelmann, M., Perrotta, F., et al. 2004, A&A, 416, 853
+                                                                                    Du, W. & Fan, Z. 2014, ApJ, 785, 57
+scenarios in which the gravitational acceleration is modified. We                   Duffy, A. R., Schaye, J., Kay, S. T., & Dalla Vecchia, C. 2008, MNRAS, 390,
+note that both the traditional MOND acceleration and the value                         L64
+produced as a manifestation of apparent dark matter in the emer-                    Dutton, A. A. & Macciò, A. V. 2014, MNRAS, 441, 3359
+gent gravity theory predict masses that are slightly below (by                      Eckert, D., Ettori, S., Coupon, J., et al. 2016, A&A, 592, A12
+                                                                                    Eckert, D., Ettori, S., Pointecouteau, E., et al. 2017, Astronomische Nachrichten,
+10–40%) the hydrostatic values in the inner 1 Mpc, with EG pro-                        338, 293
+viding less significant tension, in particular at R500 as estimated                 Eckert, D., Ghirardini, V., Ettori, S., et al. 2018, ArXiv e-prints
+from MHyd where we measure MEG /MHyd ≈ (0.9 –1.1).                                     [arXiv:1805.00034]
+     We conclude that these estimates of the hydrostatic masses                     Eckert, D., Roncarelli, M., Ettori, S., et al. 2015, MNRAS, 447, 2198
+                                                                                    Ettori, S., Donnarumma, A., Pointecouteau, E., et al. 2013a, Space Sci. Rev.,
+represent the best constraints ever measured, with a statistical                       177, 119
+error budget that is of the order of the systematic uncertainties                   Ettori, S., Gastaldello, F., Leccardi, A., et al. 2010, A&A, 524, A68
+we measure, and both within 10 % out to R200 .                                      Ettori, S., Ghirardini, V., Eckert, D., Dubath, F., & Pointecouteau, E. 2017, MN-
+     Future extensions of the X-COP sample, with comparable                            RAS, 470, L29
+                                                                                    Ettori, S. & Molendi, S. 2011, Memorie della Societa Astronomica Italiana Sup-
+coverage of the X-ray and SZ emission out to R200 to dynami-                           plementi, 17, 47
+cally non-relaxed systems, even at higher redshifts, will permit                    Ettori, S., Pratt, G. W., de Plaa, J., et al. 2013b, ArXiv e-prints
+us to build a proper collection of hydrostatic masses that will                        [arXiv:1306.2322]
+provide the reference to study in detail the robustness of the as-                  Feroz, F., Hobson, M. P., & Bridges, M. 2009, MNRAS, 398, 1601
+                                                                                    Foreman-Mackey, D., Hogg, D. W., Lang, D., & Goodman, J. 2013, PASP, 125,
+sumption of the hydrostatic equilibrium. This will be one of the                       306
+main goals of the XMM-Newton Multi-Year Heritage Program                            Gaspari, M., McDonald, M., Hamer, S. L., et al. 2018, ApJ, 854, 167
+on galaxy clusters recently approved in the AO17 special call3                      Ghirardini, V., Ettori, S., Eckert, D., et al. 2018a, A&A, 614, A7
+(PI: M. Arnaud & S. Ettori). It will dedicate 3 Msec of exposure                    Ghirardini, V., Eckert, D., Ettori, S., et al. 2018b, ArXiv e-prints
+                                                                                       [arXiv:1805.00042]
+time over the next 3 years to survey 118 Planck-SZ selected clus-                   Gifford, D., Kern, N., & Miller, C. J. 2017, ApJ, 834, 204
+ters out to z ≈ 0.6 to map the temperature profile in > ∼ 8 annuli                  Gifford, D., Miller, C., & Kern, N. 2013, ApJ, 773, 116
+up to R500 with a relative error of 15% in the in [0.8 − 1.2]R500                   Gonzalez, A. H., Sivanandam, S., Zabludoff, A. I., & Zaritsky, D. 2013, ApJ,
+annulus, allowing us to constrain the hydrostatic mass measure-                        778, 14
+                                                                                    Hernquist, L. 1990, ApJ, 356, 359
+ments at R500 to the 15−20% precision level. A complete census                      Hitomi Collaboration, Aharonian, F., Akamatsu, H., et al. 2016, Nature, 535, 117
+of any residual kinetic energy in the gas bulk motions and turbu-                   Hitomi Collaboration, Aharonian, F., Akamatsu, H., et al. 2018, PASJ, 70, 9
+lence as major bias in the estimates of the hydrostatic mass re-                    Jeffreys, H. 1961, The Theory of Probability (Oxford)
+quires direct measurements of the Doppler broadening and shifts                     Kelly, B. C. 2007, ApJ, 665, 1489
+                                                                                    Khatri, R. & Gaspari, M. 2016, MNRAS, 463, 655
+of the emission lines in the ICM over the entire cluster’s vol-                     King, I. 1962, AJ, 67, 471
+ume. Hitomi has provided the first significant results in the field,                Kravtsov, A. V. & Borgani, S. 2012, ARA&A, 50, 353
+but limited to the inner parts of the core of the Perseus cluster                   Lin, Y.-T., Mohr, J. J., & Stanford, S. A. 2004, ApJ, 610, 745
+(Hitomi Collaboration et al. 2016, 2018; ZuHone et al. 2018).                       Ludlow, A. D., Bose, S., Angulo, R. E., et al. 2016, MNRAS, 460, 1214
+                                                                                    Mamon, G. A. & Łokas, E. L. 2005, MNRAS, 362, 95
+The next generation of X-ray observatories equipped with high-                      Mantz, A., Allen, S. W., Ebeling, H., Rapetti, D., & Drlica-Wagner, A. 2010,
+resolution spectrometers like XARM (Ota et al. 2018) and Athena                        MNRAS, 406, 1773
+(Nandra et al. 2013; Ettori et al. 2013b) will deepen our knowl-                    Mantz, A. B., Allen, S. W., & Morris, R. G. 2016, MNRAS, 462, 681
+                                                                                    Massimi, M. 2018, ArXiv e-prints [arXiv:1804.07704]
+edge on the state of the ICM enlarging the sample and the regions                   Meneghetti, M., Rasia, E., Vega, J., et al. 2014, ApJ, 797, 34
+of study.                                                                           Milgrom, M. 1983, ApJ, 270, 365
+                                                                                    Milgrom, M. & Sanders, R. H. 2016, ArXiv e-prints [arXiv:1612.09582]
+Acknowledgements. We thank Ricardo Herbonnet and Henk Hoekstra for pro-
+                                                                                    Nandra, K., Barret, D., Barcons, X., et al. 2013, ArXiv e-prints
+viding their weak-lensing results in advance of publication. The research leading
+                                                                                       [arXiv:1306.2307]
+to these results has received funding from the European Union’s Horizon 2020
+                                                                                    Navarro, J. F., Frenk, C. S., & White, S. D. M. 1997, ApJ, 490, 493
+Programme under the AHEAD project (grant agreement n. 654215). S.E. and
+                                                                                    Nelson, K., Lau, E. T., & Nagai, D. 2014a, ApJ, 792, 25
+M.S. acknowledge financial contribution from the contracts NARO15 ASI-INAF          Nelson, K., Lau, E. T., Nagai, D., Rudd, D. H., & Yu, L. 2014b, ApJ, 782, 107
+I/037/12/0, ASI 2015-046-R.0, and ASI-INAF n.2017-14-H.0. M.G. is supported         Neto, A. F., Gao, L., Bett, P., et al. 2007, MNRAS, 381, 1450
+by NASA through Einstein Postdoctoral Fellowship Award Number PF5-160137            Ota, N., Nagai, D., & Lau, E. T. 2018, PASJ, 70, 51
+issued by the Chandra X-ray Observatory Center, which is operated by the SAO        Pizzo, R. F. & de Bruyn, A. G. 2009, A&A, 507, 639
+                                                                                    Planck Collaboration, Ade, P. A. R., Aghanim, N., et al. 2014, A&A, 571, A29
+3
+    https://www.cosmos.esa.int/web/xmm-newton/ao17                                  Planck Collaboration, Ade, P. A. R., Aghanim, N., et al. 2013, A&A, 550, A131
+
+                                                                                                                                    Article number, page 9 of 14
+                                                            A&A proofs: manuscript no. mass_xcop
+
+Planck Collaboration, Ade, P. A. R., Aghanim, N., et al. 2016, A&A, 594, A24
+Pointecouteau, E., Arnaud, M., & Pratt, G. W. 2005, A&A, 435, 1
+Pointecouteau, E. & Silk, J. 2005, MNRAS, 364, 654
+Rasia, E., Borgani, S., Ettori, S., Mazzotta, P., & Meneghetti, M. 2013, ApJ, 776,
+   39
+Rasia, E., Meneghetti, M., Martino, R., et al. 2012, New Journal of Physics, 14,
+   055018
+Reiprich, T. H., Basu, K., Ettori, S., et al. 2013, Space Sci. Rev., 177, 195
+Rines, K. J., Geller, M. J., Diaferio, A., & Hwang, H. S. 2016, ApJ, 819, 63
+Roncarelli, M., Ettori, S., Borgani, S., et al. 2013, MNRAS, 432, 3030
+Sakelliou, I. & Ponman, T. J. 2006, MNRAS, 367, 1409
+Salucci, P. & Burkert, A. 2000, ApJ, 537, L9
+Sereno, M. 2016, MNRAS, 455, 2149
+Sereno, M., Covone, G., Izzo, L., et al. 2017a, MNRAS, 472, 1946
+Sereno, M. & Ettori, S. 2015a, MNRAS, 450, 3675
+Sereno, M. & Ettori, S. 2015b, MNRAS, 450, 3633
+Sereno, M., Ettori, S., Meneghetti, M., et al. 2017b, MNRAS, 467, 3801
+Sereno, M., Giocoli, C., Ettori, S., & Moscardini, L. 2015, MNRAS, 449, 2024
+Serra, A. L. & Diaferio, A. 2013, ApJ, 768, 116
+Serra, A. L., Diaferio, A., Murante, G., & Borgani, S. 2011, MNRAS, 412, 800
+Sohn, J., Geller, M. J., Walker, S. A., et al. 2018, ArXiv e-prints
+   [arXiv:1808.00488]
+Sunyaev, R. A. & Zeldovich, Y. B. 1972, Comments on Astrophysics and Space
+   Physics, 4, 173
+Verlinde, E. P. 2016, ArXiv e-prints [arXiv:1611.02269]
+Vikhlinin, A., Burenin, R. A., Ebeling, H., et al. 2009, ApJ, 692, 1033
+Vikhlinin, A., Kravtsov, A., Forman, W., et al. 2006, ApJ, 640, 691
+Zhang, Y.-Y., Reiprich, T. H., Schneider, P., et al. 2017, A&A, 599, A138
+Zhuravleva, I., Churazov, E., Kravtsov, A., et al. 2013, MNRAS, 428, 3274
+ZuHone, J. A., Miller, E. D., Bulbul, E., & Zhuravleva, I. 2018, ApJ, 853, 180
+
+
+
+
+Article number, page 10 of 14
+                                          S. Ettori: Hydrostatic mass profiles in X-COP galaxy clusters
+
+Appendix A: Parameters and profiles of the best-fit mass models
+
+     Name                              NFW                                 Name                                EIN
+
+                   kpc            c              σT,int       ln E                        kpc             c             σT,int       ln E
+     A85         1921+30
+                     −24
+                                  +0.13
+                              3.31−0.13            +0.012
+                                              0.019−0.005       7.5        A85          636+40
+                                                                                           −73        1.49+0.18
+                                                                                                          −0.08      0.026+0.021
+                                                                                                                          −0.008       4.6
+     A644        1847+61
+                     −58
+                                  +0.65
+                              5.58−0.51            +0.017
+                                              0.063−0.016      -9.7        A644         325+60
+                                                                                           −53        2.99+0.52
+                                                                                                          −0.42      0.062+0.017
+                                                                                                                          −0.012     -12.7
+    A1644        1778+55
+                     −48      1.46+0.14
+                                  −0.14
+                                                   +0.000
+                                              0.001−0.000      -2.5       A1644        1119+107
+                                                                                            −207      0.66+0.15
+                                                                                                          −0.06      0.005+0.047
+                                                                                                                          −0.003      -3.1
+    A1795        1755+22
+                     −21      4.55+0.16
+                                  −0.14
+                                                   +0.012
+                                              0.009−0.007       9.0       A1795         480+23
+                                                                                           −21        1.92+0.08
+                                                                                                          −0.07      0.009+0.007
+                                                                                                                          −0.006       3.5
+    A2029        2173+35
+                     −33
+                                  +0.19
+                              4.26−0.17            +0.006
+                                              0.023−0.005      -2.5       A2029         571+29
+                                                                                           −38        1.95+0.13
+                                                                                                          −0.08      0.020+0.010
+                                                                                                                          −0.008      -3.4
+    A2142        2224+29
+                     −25
+                                  +0.10
+                              3.14−0.10            +0.000
+                                              0.001−0.000      -0.6       A2142         866+42
+                                                                                           −39        1.27+0.05
+                                                                                                          −0.05      0.001+0.000
+                                                                                                                          −0.000      -3.1
+    A2255        2033+88
+                     −74      1.37+0.24
+                                  −0.23
+                                                   +0.006
+                                              0.002−0.001      -4.2       A2255         959+97
+                                                                                           −124       0.88+0.14
+                                                                                                          −0.09      0.002+0.009
+                                                                                                                          −0.001      -6.5
+    A2319        2040+34
+                     −30      4.86+0.51
+                                  −0.37
+                                                   +0.009
+                                              0.055−0.008     -12.4       A2319         403+46
+                                                                                           −47        2.64+0.34
+                                                                                                          −0.26      0.067+0.017
+                                                                                                                          −0.013     -15.9
+    A3158        1766+34
+                     −37      2.88+0.26
+                                  −0.17
+                                                   +0.015
+                                              0.002−0.001       1.2       A3158         530+34
+                                                                                           −52        1.57+0.16
+                                                                                                          −0.09      0.004+0.028
+                                                                                                                          −0.003      -0.2
+    A3266        2325+74
+                     −75
+                                  +0.25
+                              2.04−0.20            +0.008
+                                              0.036−0.009      -7.1       A3266         765+61
+                                                                                           −91        1.34+0.18
+                                                                                                          −0.10      0.057+0.015
+                                                                                                                          −0.013      -9.1
+    HydraA       1360+58
+                     −55
+                                  +0.67
+                              5.51−0.61            +0.020
+                                              0.079−0.016     698.1       HydraA        299+33
+                                                                                           −29        2.45+0.21
+                                                                                                          −0.21      0.046+0.009
+                                                                                                                          −0.006     696.3
+   RXC1825       1719+24
+                     −25
+                                  +0.20
+                              3.35−0.19            +0.001
+                                              0.001−0.000       1.7      RXC1825        495+26
+                                                                                           −66        1.71+0.25
+                                                                                                          −0.08      0.002+0.011
+                                                                                                                          −0.001      -1.9
+   ZW1215        2200+74
+                     −64      2.11+0.22
+                                  −0.18
+                                                   +0.006
+                                              0.003−0.002       5.4      ZW1215        1341+145
+                                                                                            −161      0.75+0.10
+                                                                                                          −0.07      0.004+0.008
+                                                                                                                          −0.002       1.1
+     Name                               ISO                               Name                              BUR
+
+                   kpc           c             σT,int       ln E                        kpc           c            σT,int        ln E
+     A85         190+9
+                     −9
+                                 +0.29
+                             7.71−0.28           +0.011
+                                            0.057−0.008      -9.5        A85          188+9
+                                                                                         −11      4.87+0.21
+                                                                                                      −0.19     0.060+0.013
+                                                                                                                     −0.009       -7.3
+     A644        168+9
+                    −12
+                                 +0.59
+                             9.03−0.32           +0.028
+                                            0.029−0.027      -6.2        A644         172+6
+                                                                                          −7      5.64+0.16
+                                                                                                      −0.15     0.001+0.000
+                                                                                                                     −0.000       -6.8
+    A1644        298+19
+                    −13
+                                 +0.16
+                             4.50−0.19           +0.000
+                                            0.001−0.000      -4.0       A1644         294+17
+                                                                                         −16      2.74+0.13
+                                                                                                      −0.11     0.001+0.000
+                                                                                                                     −0.000       -3.7
+    A1795        144+8
+                     −6
+                                 +0.32
+                             9.45−0.39           +0.012
+                                            0.055−0.008      -8.5       A1795         146+7
+                                                                                          −6      5.86+0.22
+                                                                                                      −0.22     0.047+0.012
+                                                                                                                     −0.009       -6.8
+    A2029        195+13
+                    −10
+                                 +0.37
+                             8.81−0.39           +0.015
+                                            0.078−0.012     -15.4       A2029         186+9
+                                                                                         −10      5.73+0.25
+                                                                                                      −0.21     0.064+0.010
+                                                                                                                     −0.009      -14.2
+    A2142        240+13
+                    −11
+                                 +0.27
+                             7.35−0.26           +0.011
+                                            0.060−0.008     -13.5       A2142         237+11
+                                                                                         −11      4.59+0.19
+                                                                                                      −0.16     0.060+0.014
+                                                                                                                     −0.010      -12.4
+    A2255        444+42
+                    −41
+                                 +0.28
+                             3.62−0.22           +0.001
+                                            0.001−0.000      -2.3       A2255         409+28
+                                                                                         −28      2.31+0.14
+                                                                                                      −0.12     0.002+0.002
+                                                                                                                     −0.001       -2.9
+    A2319        241+14
+                    −9
+                                 +0.23
+                             7.22−0.32           +0.018
+                                            0.041−0.009      -8.4       A2319         229+11
+                                                                                         −13      4.68+0.23
+                                                                                                      −0.18     0.042+0.013
+                                                                                                                     −0.012       -9.2
+    A3158        223+15
+                    −13
+                                 +0.33
+                             6.19−0.29           +0.009
+                                            0.030−0.011      -5.8       A3158         217+12
+                                                                                         −13      3.90+0.21
+                                                                                                      −0.17     0.026+0.013
+                                                                                                                     −0.022       -5.3
+    A3266        312+30
+                    −21
+                                 +0.31
+                             5.61−0.30           +0.015
+                                            0.076−0.013     -13.4       A3266         313+30
+                                                                                         −26      3.44+0.26
+                                                                                                      −0.21     0.074+0.015
+                                                                                                                     −0.013      -14.2
+    HydraA       221+63
+                    −31
+                                 +0.45
+                             6.22−0.42           +0.029
+                                            0.324−0.028     687.0       HydraA         96+15
+                                                                                         −11      7.01+0.53
+                                                                                                      −0.57     0.097+0.019
+                                                                                                                     −0.013      688.4
+   RXC1825       233+10
+                    −9
+                                 +0.19
+                             5.98−0.18           +0.001
+                                            0.001−0.000      -6.6      RXC1825        220+10
+                                                                                         −10      3.86+0.15
+                                                                                                      −0.14     0.001+0.000
+                                                                                                                     −0.000       -4.5
+   ZW1215        313+18
+                    −16
+                                 +0.19
+                             5.25−0.17           +0.000
+                                            0.001−0.000      -6.0      ZW1215         303+20
+                                                                                         −19      3.30+0.15
+                                                                                                      −0.14     0.002+0.002
+                                                                                                                     −0.001       -4.7
+     Name                                HER
+
+                    kpc             c            σT,int        ln E
+     A85         914+55
+                     −109       1.92+0.26
+                                    −0.09
+                                                   +0.019
+                                              0.027−0.010        5.8
+     A644         478+73
+                     −74
+                                    +0.67
+                                3.73−0.45          +0.027
+                                              0.090−0.022      -10.5
+    A1644        2026+230
+                      −188      0.72+0.07
+                                    −0.06
+                                                   +0.001
+                                              0.001−0.000       -2.4
+    A1795         721+31
+                     −37        2.37+0.12
+                                    −0.09
+                                                   +0.016
+                                              0.017−0.007        5.2
+    A2029         925+69
+                     −42        2.27+0.10
+                                    −0.13
+                                                   +0.008
+                                              0.028−0.007       -5.8
+    A2142        1262+46
+                      −49
+                                    +0.06
+                                1.63−0.05          +0.011
+                                              0.006−0.004       -2.7
+    A2255        2235+203
+                      −289      0.73+0.11
+                                    −0.05
+                                                   +0.001
+                                              0.001−0.000       -6.2
+    A2319         674+55
+                     −77        2.99+0.41
+                                    −0.22
+                                                   +0.014
+                                              0.068−0.010      -12.5
+    A3158        1203+137
+                      −80       1.36+0.09
+                                    −0.12
+                                                   +0.001
+                                              0.001−0.000       -0.4
+    A3266        1952+285
+                      −189      1.03+0.10
+                                    −0.12
+                                                   +0.008
+                                              0.036−0.008       -8.7
+    HydraA        473+64
+                     −43
+                                    +0.24
+                                2.86−0.26          +0.010
+                                              0.055−0.007      694.9
+   RXC1825        913+49
+                     −69
+                                    +0.14
+                                1.76−0.09          +0.007
+                                              0.002−0.001        0.1
+   ZW1215        1325+86
+                      −113
+                                    +0.12
+                                1.38−0.07          +0.020
+                                              0.004−0.002        1.4
+Table A.1. For each mass model we have investigated (see Sect. 3.1), we quote the following best-fit parameters: scale radius rs (R200 in the case
+of NFW) and the concentration (or normalization) as defined in equation 3; the intrinsic scatter σT,int of equation 2; and the logarithmic value of
+the evidence E.
+
+
+
+
+                                                                                                                     Article number, page 11 of 14
+                                                  A&A proofs: manuscript no. mass_xcop
+
+                                       Name χ2 (DOF) χ2T (DOF) χ2P (DOF) χ2TOT (DOF)
+                                       A85   66.9 (70) 86.1 (13)   10.2 (7) 163.2 (90)
+                                       A644  43.5 (68) 48.0 (12)   85.1 (6) 171.6 (86)
+                                      A1644 72.0 (65) 53.5 (12)     2.2 (8) 127.7 (85)
+                                      A1795 45.7 (65) 31.3 (13)     8.2 (7)  85.2 (85)
+                                      A2029 31.2 (65) 120.3 (14) 11.3 (7)   162.8 (86)
+                                      A2142 77.5 (65) 23.5 (12)     2.0 (7) 103.0 (84)
+                                      A2255 16.1 (58)    3.3 (8)    6.5 (8)  25.9 (74)
+                                      A2319 69.5 (69) 168.9 (19)    5.0 (7) 143.4 (95)
+                                      A3158 41.9 (68) 20.4 (11)     2.4 (7)  64.7 (86)
+                                      A3266 90.3 (69) 122.7 (13) 23.8 (7)   236.8 (89)
+                                      HydraA 99.0 (67) 2235.3 (12)   – (–)  2334.3 (79)
+                                     RXC1825 51.7 (57) 22.9 (11)    5.0 (8)  79.6 (76)
+                                     ZW1215 32.1 (61)    9.4 (12)  13.4 (7)  54.9 (80)
+Table A.2. Values of χ2 (and relative degrees of freedom DOF) of the three components (emissivity , temperature T , and pressure P ) of the
+likelihood presented in equation 2 and of the total χ2 for the best-fit mass model.
+
+
+
+
+Article number, page 12 of 14
+                                          S. Ettori: Hydrostatic mass profiles in X-COP galaxy clusters
+
+
+
+
+Fig. A.1. Hydrostatic mass radial profiles obtained from the forward method and the mass models applied to the backward method and described
+in Sect. 3.1. Vertical lines indicate: (dotted) R1000 , R500 , and R200 ; (dashed) third radial bin (a minimum number of three independent bins are
+needed to constrain a mass model with two free parameters) and upper limit in measurements of the spectroscopic temperature; (dot-dashed) radial
+range covered from SZ pressure profile after the exclusion of the three inner points and used in the reconstruction of the mass profile. (Bottom
+panels) Ratios of the different mass profiles to the NFW profile adopted as reference model.
+
+
+
+
+                                                                                                                    Article number, page 13 of 14
+                                                     A&A proofs: manuscript no. mass_xcop
+
+Appendix B: EG and MOND mass profiles
+We present here the mass profiles for each X-COP object as obtained from (i) the backward NFW method, (ii) emergent gravity,
+and (iii) Modified Newtonian Dynamics.
+
+
+
+
+Fig. B.1. Hydrostatic, EG, and MOND mass radial profiles and relative ratios. Vertical lines indicate R1000 (dotted line), R500 (dash-dotted line),
+R200 (dashed line), and the outermost radial bin in the gas density profile (solid line).
+
+
+
+
+Article number, page 14 of 14
+

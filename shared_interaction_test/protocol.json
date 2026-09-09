@@ -1,0 +1,13 @@
+{
+  "status": "Written before inspecting higher-redshift brightness outcomes; exploratory test, not an external preregistration",
+  "law": "S=exp(kappa R); D_L=R S, Euclidean fixed spatial geometry and conserved photons",
+  "kappa_per_Mly": 0.000077315,
+  "fit_kappa": false,
+  "primary_selection": "Pantheon+ all light-curve rows with zHD>=0.1 and IS_CALIBRATOR==0, preserving released covariance for repeated supernovae",
+  "calibration": "Determine one absolute magnitude from IS_CALIBRATOR==1 using m_b_corr-CEPH_DIST and full released calibrator covariance; no higher-z brightness used for calibration",
+  "primary_distance": "D_L=(1+zHEL)*ln(1+zHD)/kappa_Mpc; heliocentric factor is a conventional observer correction whose transfer to this theory is conditional",
+  "primary_covariance": "Full STAT+SYS; propagate calibrator magnitude uncertainty and cross-covariance into higher-z residual covariance",
+  "reference": "Flat LCDM Omega_m=0.3 and H0=c*kappa_Mpc, both fixed; reference only, not a new best fit",
+  "diagnostics": ["redshift bins [0.1,0.3,0.6,1.0,3.0]", "remove one constant offset as a labeled higher-z shape-only diagnostic", "replace heliocentric factor with 1+zHD to quantify frame convention sensitivity"],
+  "no_claims": ["No independent raw light-curve analysis", "No blind status for existing nearby test data", "No screening introduced", "No post-result refitting of formula or coefficient"]
+}

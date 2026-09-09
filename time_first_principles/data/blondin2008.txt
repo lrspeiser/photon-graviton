@@ -1,0 +1,836 @@
+                                             Accepted for publication in Ap. J.
+                                             Preprint typeset using LATEX style emulateapj v. 08/22/09
+
+
+
+
+                                                               TIME DILATION IN TYPE Ia SUPERNOVA SPECTRA AT HIGH REDSHIFT1
+                                           S. Blondin,2 T. M. Davis,3,4 K. Krisciunas,5 B. P. Schmidt,6 J. Sollerman,3 W. M. Wood-Vasey,2 A. C. Becker,7
+                                             P. Challis,2 A. Clocchiatti,8 G. Damke,9 A. V. Filippenko,10 R. J. Foley,10 P. M. Garnavich,11 S. W. Jha,12
+                                                R. P. Kirshner,2 B. Leibundgut,13 W. Li,10 T. Matheson,14 G. Miknaitis,15 G. Narayan,16 G. Pignata,17
+                                                   A. Rest,9,16 A. G. Riess,18,19 J. M. Silverman,10 R. C. Smith,9 J. Spyromilio,13 M. Stritzinger,3,20
+                                                         C. W. Stubbs,2,16 N. B. Suntzeff,5 J. L. Tonry,21 B. E. Tucker,6 and A. Zenteno22
+                                                                                                Accepted for publication in Ap. J.
+
+                                                                                                 ABSTRACT
+arXiv:0804.3595v1 [astro-ph] 22 Apr 2008
+
+
+
+
+                                                       We present multiepoch spectra of 13 high-redshift Type Ia supernovae (SNe Ia) drawn from the
+                                                    literature, the ESSENCE and SNLS projects, and our own separate dedicated program on the ESO
+                                                    Very Large Telescope. We use the Supernova Identification (SNID) code of Blondin & Tonry to
+                                                    determine the spectral ages in the supernova rest frame. Comparison with the observed elapsed time
+                                                    yields an apparent aging rate consistent with the 1/(1 + z) factor (where z is the redshift) expected
+                                                    in a homogeneous, isotropic, expanding universe. These measurements thus confirm the expansion
+                                                    hypothesis, while unambiguously excluding models that predict no time dilation, such as Zwicky’s
+                                                    “tired light” hypothesis. We also test for power-law dependencies of the aging rate on redshift. The
+                                                    best-fit exponent for these models is consistent with the expected 1/(1 + z) factor.
+                                                    Subject headings: cosmology: miscellaneous — supernovae: general
+
+
+                                              1 Based on observations made with ESO Telescopes at the
+                                                                                                                                        1. INTRODUCTION
+                                           Paranal Observatory under programs 67.A-0361, 267.A-5688,
+                                           078.D-0383, and 080.D-0477; at the Gemini Observatory and                   The redshift, z, is a fundamental observational quan-
+                                           NOAO, which are operated by the Association of Universities for          tity in Friedman-Lemaı̂tre-Robertson-Walker (FLRW)
+                                           Research in Astronomy, Inc., under cooperative agreements with           models of the universe. It relates the frequency of light
+                                           the NSF; with the Magellan Telescopes at Las Campanas Observa-
+                                           tory; and at the W. M. Keck Observatory, which was made possible         emitted from a distant source to that detected by a local
+                                           by the generous financial support of the W. M. Keck Foundation.          observer by a factor 1/(1 + z). One important conse-
+                                              2 Harvard-Smithsonian Center for Astrophysics, 60 Garden
+                                                                                                                    quence is that the observed rate of any time variation
+                                           Street, Cambridge, MA 02138; sblondin@cfa.harvard.edu
+                                              3 Dark Cosmology Centre, Niels Bohr Institute, University of          in the intensity of emitted radiation will also be propor-
+                                           Copenhagen, Juliane Maries Vej 30, DK–2100 Copenhagen Ø, Den-            tional to 1/(1 + z) (see Weinberg 1972 and Appendix A).
+                                           mark.                                                                       Due to their large luminosities (several billion times
+                                              4 Department of Physics, University of Queensland, QLD, 4072,
+                                                                                                                    that of the sun) and variability on short timescales
+                                           Australia.
+                                              5 Department of Physics, Texas A&M University, College Sta-           (∼ 20 d from explosion to peak luminosity; Riess et al.
+                                           tion, TX 77843-4242.                                                     1999; Conley et al. 2006), Type Ia supernovae (SNe Ia)
+                                              6 The Research School of Astronomy and Astrophysics, The Aus-
+                                                                                                                    are ideally suited to probe these time-dilation effects
+                                           tralian National University, Mount Stromlo and Siding Spring Ob-         across a large fraction of the observable universe. The
+                                           servatories, via Cotter Road, Weston Creek, PO 2611, Australia.
+                                              7 Department of Astronomy, University of Washington, Box              suggestion to use supernovae as “cosmic clocks” was pro-
+                                           351580, Seattle, WA 98195-1580.                                          posed by Wilson more than six decades ago (Wilson
+                                              8 Pontificia Universidad Católica de Chile, Departamento de As-
+                                                                                                                    1939) and tested on light curves of low-redshift SNe Ia in
+                                           tronomı́a y Astrofı́sica, Casilla 306, Santiago 22, Chile.               the mid-1970s (Rust 1974), but only since the mid-1990s
+                                              9 Cerro Tololo Inter-American Observatory, National Optical As-
+                                           tronomy Observatory, Casilla 603, La Serena, Chile.                      has this effect been unambiguously detected in the light
+                                              10 Department of Astronomy, University of California, Berkeley,       curves of high-redshift objects (Leibundgut et al. 1996;
+                                           CA 94720-3411.                                                           Goldhaber et al. 2001).
+                                              11 Department of Physics, University of Notre Dame, 225 Nieuw-
+                                           land Science Hall, Notre Dame, IN 46556-5670.
+                                                                                                                       These latter studies show that the light curves of dis-
+                                              12 Department of Physics and Astronomy, Rutgers University,           tant SNe Ia are consistent with those of nearby SNe Ia
+                                           136 Frelinghuysen Road, Piscataway, New Jersey 08854.                    whose time axis is dilated by a factor (1 + z). However,
+                                              13 European Southern Observatory, Karl-Schwarzschild-Strasse
+                                                                                                                    there exists an intrinsic variation in the width of SN Ia
+                                           2, D-85748 Garching, Germany.
+                                              14 National Optical Astronomy Observatory, 950 North Cherry           light curves which is related to their peak luminosities
+                                           Avenue, Tucson, AZ 85719-4933.                                           (Phillips 1993), such that more luminous SNe Ia have
+                                              15 Fermilab, P.O. Box 500, Batavia, IL 60510-0500.
+                                                                                                                    broader light curves (Fig. 1). This “width-luminosity”
+                                              16 Department of Physics, Harvard University, 17 Oxford Street,
+                                                                                                                    relation is derived using low-redshift SNe Ia where the
+                                           Cambridge, MA 02138.
+                                              17 Departamento de Astronomı́a, Universidad de Chile, Casilla         time-dilation effect, if any, is negligible (Phillips 1993;
+                                           36-D, Santiago, Chile.                                                   Hamuy et al. 1995; Riess et al. 1995; Phillips et al. 1999;
+                                              18 Johns Hopkins University, 3400 North Charles Street, Balti-
+                                                                                                                    Jha et al. 2007).
+                                           more, MD 21218.                                                             It is problematic to disentangle this intrinsic variation
+                                              19 Space Telescope Science Institute, 3700 San Martin Drive,
+                                           Baltimore, MD 21218.
+                                              20 Las Campanas Observatory, Carnegie Observatories, Casilla
+                                                                                                                    lawn Drive, Honolulu, HI 96822.
+                                           601, La Serena, Chile.                                                     22 Department of Astronomy, University of Illinois at Urbana-
+                                              21 Institute for Astronomy, University of Hawaii, 2680 Wood-
+                                                                                                                    Champaign, 1002 West Green St, Urbana, IL 61801-3080.
+2                                                            Blondin et al.
+
+                                                                     comparison with a large database of supernova spectra
+                                                                     (see Section 2 and Blondin & Tonry 2007).
+                                                                       As of today there are two published examples of ag-
+                                                                     ing rate measurements using spectra of a single SN Ia
+                                                                     (SN 1996bj at z = 0.574, Riess et al. 1997; SN 1997ex
+                                                                     at z = 0.362, Foley et al. 2005). In both cases, the null
+                                                                     hypothesis of no time dilation is excluded with high sig-
+                                                                     nificance (> 95%).
+                                                                       In this paper we present data on 13 high-redshift
+                                                                     (0.28 ≤ z ≤ 0.62) SNe Ia for which we have multiepoch
+                                                                     spectra. We use the Supernova Identification (SNID)
+                                                                     code of Blondin & Tonry (2007) to infer the age of each
+                                                                     spectrum in the supernova rest frame, from which we de-
+                                                                     termine the apparent aging rate of each SN Ia. These ag-
+                                                                     ing rate measurements are then used to test the 1/(1 + z)
+                                                                     time-dilation hypothesis expected in an expanding uni-
+                                                                     verse. The data enable us for the first time to directly
+                                                                     test the time-dilation hypothesis over a large redshift
+                                                                     range.
+                                                                       This paper is organized as follows. In Section 2 we
+                                                                     explain how one can determine the age of a SN Ia based
+                                                                     on a single spectrum and present the SNID algorithm
+                                                                     used for this purpose. The aging rate measurements are
+  Fig. 1.— Bolometric light curves of 5 low-redshift SNe Ia taken
+from Stritzinger (2005) (from top to bottom: SNe 1991T, 1999ee,
+                                                                     presented in Section 3, and the time-dilation hypothesis
+1994D, 1992A, 1993H, and 1991bg). More luminous SNe Ia have          (amongst others) is tested against the data in Section 4,
+broader light curves. SN 1991bg is an example of intrinsically       with the help of model selection statistics (information
+subluminous SNe Ia (maximum Lbol < 109 Lsun ), which are less        criteria). Conclusions follow in Section 5.
+likely to be found at high redshifts.
+
+                                                                        2. DETERMINING THE AGE OF A SN Ia SPECTRUM
+of light-curve width with luminosity and the effect of time
+                                                                                   2.1. SN Ia Spectral Evolution
+dilation. To directly test the time-dilation hypothesis one
+needs to accurately know the distribution of light-curve                The spectra of SNe Ia consist of blended spectral lines,
+widths at z ≈ 0 and its potential evolution with redshift,           with a profile shape characteristic of stellar outflows.
+whether due to a selection effect (not taken into account            This line profile (also known as a “P Cygni” profile) con-
+by Goldhaber et al. 2001) or an evolution of the mean                sists of an emission component symmetric about the line
+properties of the SN Ia sample with redshift— as possibly            center, and an absorption component that is blueshifted
+observed by Howell et al. (2007). Moreover, one needs                by the ∼ 10, 000 km s−1 expansion velocity of the SN
+to probe sufficiently high redshifts (z & 0.4, as done by            ejecta (Pinto & Eastman 2000). The expansion also
+Leibundgut et al. 1996; Goldhaber et al. 2001) such that             causes a Doppler broadening of both components, such
+the observed widths of the SN Ia light curves are broader            that a typical spectroscopic feature in SN Ia spectra has a
+than the intrinsic width of any nearby counterpart.                  width of ∼ 100 Å. As the ejecta expand, the photosphere
+  Furthermore, one might argue that at high redshift we              recedes in the comoving frame of the supernova, such
+are preferentially finding the brighter events (akin to a            that the spectra probe deeper layers of the ejecta with
+Malmquist bias). Such a selection effect would produce               time. Given the homologous nature of the expansion (ve-
+a spurious relation in which there would be broader light            locity proportional to radius), and the chemical stratifi-
+curves at higher redshifts, without any time dilation.               cation in the SN ejecta (Nomoto et al. 1984; Stehle et al.
+  The spectra of SNe Ia provide an alternative and a                 2005; Mazzali et al. 2008), deeper layers correspond to
+more reliable way to measure the apparent aging rate of              lower expansion velocities and an increased abundance
+distant objects. Indeed, the spectra of SNe Ia are remark-           of iron-peak elements. The impact on the spectra is
+ably homogeneous at a given age, such that the age of a              twofold. First, the blueshift of SN Ia spectral lines de-
+SN Ia can be determined from a single spectrum with an               creases with time (by as much as ∼ 1000 km s−1 per day;
+accuracy of 1–3 d— with no reference to its correspond-              Benetti et al. 2005; Blondin et al. 2006). Second, due to
+ing light curve (Riess et al. 1997; Howell et al. 2005;              the varying chemical composition at the photosphere, the
+Blondin & Tonry 2007). More importantly, the spectra                 relative shapes and strengths of spectral features change
+of SNe Ia spanning a range of luminosities (and hence                on a timescale of days.
+different intrinsic light-curve widths) evolve uniformly                This complex spectral evolution is nonetheless pre-
+over time (Matheson et al. 2008). The use of spectra                 dictable to a large extent. At a given age, the spectra
+thus avoids the degeneracy between intrinsic light-curve             are remarkably homogeneous among different “normal”
+width and time-dilation effects. While there are some                SNe Ia. According to Li et al. (2001b), these constitute
+notable examples of deviations from homogeneity in sev-              ∼ 65% of the local SN Ia sample, the rest consisting
+eral SNe Ia (e.g., SN 2000cx, Li et al. 2001a; SN 2002cx,            of intrinsically subluminous (∼ 15%) or overluminous
+Li et al. 2003; SN 2002ic, Hamuy et al. 2003; SN 2003fg,             (∼ 20%) events, whose spectra show deviations from
+Howell et al. 2006; SN 2006gz, Hicken et al. 2007), these            those of normal SNe Ia. Subluminous SNe Ia are less
+outliers are readily identifiable spectroscopically through          likely to be found at high redshifts; in fact, no such object
+                                                  Time Dilation in SN Ia Spectra                                                 3
+
+                                                                      in the database. There are several standard tech-
+                                                                      niques to do this (see Blondin & Tonry 2007 for a re-
+                                                                      view). In this paper, we use an implementation of the
+                                                                      correlation techniques of Tonry & Davis (1979): SNID
+                                                                      (Blondin & Tonry 2007). SNID automatically deter-
+                                                                      mines the type, redshift, and age of a supernova spec-
+                                                                      trum. We refer the reader to that paper for a more de-
+                                                                      tailed discussion.
+                                                                         The redshift of the input spectrum is a free parameter
+                                                                      in SNID, although it can be fixed to a specific value.
+                                                                      Comparison of the SNID redshifts with those determined
+                                                                      from narrow emission and absorption lines in the host-
+                                                                      galaxy spectra (typically accurate to . 100 km s−1 ; see
+                                                                      Falco et al. 1999) yields a dispersion about the one-to-
+                                                                      one correspondence of only σz ≈ 0.005 out to a redshift
+                                                                      z ≈ 0.8 (Blondin & Tonry 2007).
+                                                                         Similarly, comparison of the SNID ages with those de-
+                                                                      termined using the corresponding light curves yields a
+                                                                      typical accuracy < 3 d, comparable to other algorithms
+                                                                      (Riess et al. 1997; Howell et al. 2005). However, the age
+                                                                      error is systematically overestimated. In this paper, we
+                                                                      estimate the error as follows: each spectrum in the SNID
+                                                                      database is trimmed to match the rest-frame wavelength
+                                                                      range of the input spectrum, and is correlated with all
+                                                                      other spectra in the database (except those correspond-
+                                                                      ing to the same supernova). The age error is then given
+                                                                      by the mean variance of all template spectra whose SNID
+                                                                      age is within one day of the initial estimate.
+  Fig. 2.— Standard (light gray) and maximum (dark gray) devi-           The success of SNID and similar algorithms lies pri-
+ation from the mean spectrum (black line) for the 22 low-redshift     marily in the completeness of the spectral database. In
+SNe Ia for which we report an aging rate measurement (see Sec-
+tion 4), at four different ages — given in days from B-band max-      Fig. 3 we show the age distribution of the SN Ia templates
+imum light. A low-order curve has been divided out from each          used in SNID for this paper (these do not include sub-
+spectrum to reveal the relative shapes and strengths of the various   luminous SNe Ia). This database comprises 959 spectra
+spectroscopic features.                                               of 79 low-redshift (z . 0.05) SNe Ia with ages between
+                                                                      −15 and +50 d from maximum light. The spectra are
+has been spectroscopically confirmed in any high-redshift             taken from the literature, from public databases (such as
+supernova search to this day (e.g., Matheson et al. 2005;             SUSPECT23 or the CfA Supernova Archive24 ), or from
+Howell et al. 2005). In what follows we only consider                 a set of unpublished spectra from the CfA Supernova
+normal and overluminous SNe Ia. In a separate paper                   Program. A full reference to all spectra in the SNID
+we will show that none of the SNe Ia in the high-redshift             database is given by Blondin & Tonry (2007). It is im-
+sample presented here (see Section 4) has a spectrum or               portant to note that each template spectrum is shifted
+light curve consistent with the subluminous variety of                to zero redshift and that each template age is corrected
+SNe Ia.                                                               for the expected (1 + z) time-dilation factor. Because all
+   The spectroscopic homogeneity of SNe Ia holds even                 the template SNe Ia are at low redshift (z . 0.05), this
+when we consider both normal and overluminous objects                 is a very small correction, and we will see in Section 4
+in a representative sample of nearby events. In Fig. 2 we             that this has no impact on the aging rate measurements.
+show the mean spectrum for the 22 low-redshift SNe Ia                 Thus, SNID determines the age a supernova would have
+for which we report an aging rate measurement (see Sec-               at z = 0 — that is, in the supernova rest frame.
+tion 4), at four different ages. While there is an in-                   The number of SNe Ia shown in Fig. 3 is large enough
+trinsic spectral variance among these different SNe Ia                that we can select a subsample (shown as an open his-
+— some spectroscopic features correlate with luminosity               togram) on which to conduct age determinations and ag-
+(e.g., Nugent et al. 1995; Matheson et al. 2008), the av-             ing rate measurements on low-redshift SNe Ia. The size
+erage deviations from the mean spectrum are small, and                of this subsample is set by the requirement that remov-
+all spectra evolve in a similar manner over the course of             ing it from the SNID database would leave a sufficient
+several days, independent of light-curve width.                       number of templates in a given age bin for a reliable
+   Both the homogeneity and rapid evolution of SN Ia                  age determination (see Blondin & Tonry 2007). It was
+spectra enables an accurate determination of the age of               also chosen to include a sufficient number of intrinsically
+a single spectrum. We explain how this is achieved in                 overluminous SNe Ia: indeed, there are five such SNe Ia
+practice in the following section.                                    (SNe 1997br, 1998ab, 1999dq, 1999gp, and 2001eh) in
+                                                                      this subsample, accounting for ∼ 20% by number of ob-
+                  2.2. The SNID Algorithm
+                                                                      jects and spectra. For these specific tests, the templates
+  Given a large database of finely time-sampled SN Ia
+                                                                        23 http://bruford.nhn.ou.edu/∼suspect/index1.html
+spectral templates, we can determine the age of a given
+                                                                        24 http://www.cfa.harvard.edu/supernova/SNarchive.html
+input spectrum by finding the best-match template(s)
+4                                                           Blondin et al.
+
+                                                                                              TABLE 1
+                                                                                  Comparison of galaxy and supernova
+                                                                                               redshifts
+
+                                                                                 SN       zGAL          zSN            zSNID
+                                                                                 (1)       (2)          (3)             (4)
+                                                                               1996bj     0.574    0.581 (0.005)    0.580 (0.008)
+                                                                                                                    0.582 (0.008)
+                                                                               1997ex     0.361    0.362 (0.002)    0.362 (0.005)
+                                                                                                                    0.361 (0.004)
+                                                                                                                    0.362 (0.004)
+                                                                               2001go     0.552    0.552 (0.005)    0.552 (0.008)
+                                                                                                                    0.556 (0.008)
+                                                                                                                    0.550 (0.009)
+                                                                               2002iz     0.427    0.425 (0.004)    0.422 (0.006)
+                                                                                                                    0.428 (0.006)
+                                                                               b027         ···    0.315 (0.003)    0.315 (0.006)
+                                                                                                                    0.315 (0.004)
+                                                                               2003js     0.363    0.361 (0.003)    0.359 (0.004)
+                                                                                                                    0.363 (0.006)
+  Fig. 3.— Age distribution of the 79 SN Ia templates used in                  04D2an     0.621    0.614 (0.006)    0.608 (0.007)
+SNID (hatched histogram). There are a total of 959 spectra with                                                     0.625 (0.011)
+ages between −15 and +50 d from B-band maximum light. The                      2006mk     0.475    0.477 (0.003)    0.479 (0.005)
+open histogram shows the subsample of 145 spectra from 22 SNe Ia                                                    0.478 (0.007)
+(restricted to ages between −10 and 30 d from maximum) for which                                                    0.474 (0.008)
+we report an aging rate measurement (see Section 4).                                                                0.476 (0.006)
+                                                                               2006sc     0.357    0.356 (0.004)    0.355 (0.007)
+corresponding to the 22 SNe Ia in this subsample are                                                                0.357 (0.007)
+                                                                                                                    0.356 (0.006)
+temporarily removed from the SNID database to avoid                            2006tk       ···    0.312 (0.003)    0.312 (0.006)
+biasing the age determination.                                                                                      0.310 (0.003)
+  We deliberately restrict this subsample to ages between                                                           0.315 (0.006)
+−10 and +30 d from maximum light. Before −10 d, the                            2007tg       ···    0.502 (0.004)    0.503 (0.009)
+number of spectral templates in the SNID database drops                                                             0.503 (0.008)
+                                                                                                                    0.502 (0.007)
+rapidly, and the age determination is inaccurate. Past                         2007tt     0.374    0.376 (0.004)    0.367 (0.008)
++30 d, the spectra of SNe Ia do not evolve as rapidly as                                                            0.379 (0.007)
+around maximum light, and the age determination is less                                                             0.377 (0.005)
+precise (Blondin & Tonry 2007).                                                2007un     0.283    0.285 (0.004)    0.287 (0.006)
+                                                                                                                    0.285 (0.007)
+                                                                                                                    0.285 (0.005)
+            3. AGING RATE AT HIGH REDSHIFTS
+                                                                                Column headings: (1) SN name. (2) Galaxy
+                    3.1. Spectroscopic Data                                   redshift (the typical error is < 0.001). (3) SN
+  Our aging rate measurements at high redshifts are                           redshift, quoted as the error-weighted mean of
+                                                                              the individual redshifts for each epoch. (4) SNID
+based on a sample of 35 spectra of 13 SNe Ia in                               redshift for each epoch, in order of increasing age.
+the redshift range 0.28 ≤ z ≤ 0.62. These include                   can be found in the aforementioned references. The rest
+previously published data by the High-Z Supernova                   of the data will be presented more thoroughly in a sepa-
+Search Team (SN 1996bj, Riess et al. 1997), the Super-              rate publication. All of the data are shown in Fig. 4.
+nova Cosmology Project (SN 1997ex, Foley et al. 2005;                 We use SNID to determine the redshift of each spec-
+SN 2001go, Lidman et al. 2005), and the ESSENCE                     trum. The redshift of a given supernova (zSN ) is then
+project (SNe 2002iz, b027, and 2003js, Matheson et al.              computed as the error-weighted mean of the SNID red-
+2005). For SN 2001go we present our own reductions of               shifts (zSNID ) for each of its spectra (Table 1). For ten
+the three epochs of spectroscopic data obtained from the            SNe Ia, we also have a redshift determination from the
+ESO Science Archive Facility25 , as only the first spec-            host galaxy (zGAL ). Comparison with the supernova red-
+trum was published by Lidman et al. (2005). The spec-               shift shows an excellent agreement between the two mea-
+tra of SN 04D2an (the highest-redshift SN Ia in this sam-           surements (better than 1%). For the three remaining
+ple) were obtained by members of the Supernova Legacy               SNe Ia (SNe b027, 2006tk, and 2007tg), only the SNID
+Survey (SNLS), and will be published as part of a larger            redshift is available, but the different redshift measure-
+sample of SNLS data by Stéphane Basa and cowork-                   ments for individual spectra all agree to within 1σ, and
+ers. SN 2006tk will be published alongside the complete             we are confident about their accuracy. In what follows,
+ESSENCE supernova dataset in the near future.                       we will use the galaxy redshift when available for the age
+  The other five SNe Ia (SNe 2006mk, 2006sc, 2007tg,                and aging rate measurements. Given the excellent agree-
+2007tt, 2007un) are ESSENCE targets which were ob-                  ment between zGAL and zSN , this choice has negligible
+served spectroscopically through two dedicated “Target-             impact on our results.
+of-Opportunity” programs at the ESO Very Large Tele-
+scope26 .                                                                    3.2. Accuracy of Relative Age Determination
+  Details on the instrumental setup and data reduction
+                                                                      An accurate determination of the rate of aging involves
+    25 http://www.eso.org/sci/archive/ .                            accurate knowledge of age differences. In what follows
+    26 Programs 078.D-0383 and 080.D-0477; PI: Jesper Sollerman.    we test how well SNID determines differential ages using
+                                                  Time Dilation in SN Ia Spectra                                                          5
+
+
+
+
+  Fig. 4.— Multiepoch spectra of the 13 high-redshift SNe Ia used in this study, binned to 10 Å (gray). The vertical offset between each
+spectrum is for clarity only, and does not reflect differences in flux density (Fλ ; erg s−1 cm−2 Å−1 ) between them. In each plot, the age
+of the supernova increases downwards, and the observed time (in days) from the first spectrum is indicated. Overplotted in black is a
+smoothed version using the inverse-variance-weighted Gaussian algorithm of Blondin et al. (2006).
+
+the subsample of low-redshift SNe Ia presented in Sec-                   compared to ∆tobs with no correction for time dila-
+tion 2.2. While the determination of absolute ages has                   tion. Given the restriction to ages between −10 and
+no impact on the main result of this paper, we discuss                   +30 d from maximum light in the low-redshift subsam-
+their accuracy in Appendix B.                                            ple, ∆tspec (and hence ∆tobs ) is at most 40 d.
+  We determine the rest-frame age (tspec ) of each of the                   The results are displayed in the upper panel of Fig. 5.
+145 spectra in the low-redshift subsample of 22 SNe Ia.                  There is good agreement between ∆tspec and ∆tobs , with
+We then compute the absolute age difference (∆tspec )                    a dispersion of only 2.0 d about the one-to-one corre-
+between each unique pair of spectra corresponding to a                   spondence. For ∆tobs & 30 d, however, SNID systemati-
+given supernova. This amounts to 631 pairs. This age                     cally underestimates the age difference by ∼ 1.5 d. This
+difference is then compared with the absolute observer-                  is more apparent in the plot of residuals in the middle
+frame age difference (∆tobs ) for each spectrum pair.                    panel. it is mainly due to a systematic overestimate of
+Since z ≈ 0 for this subsample, ∆tspec can be directly                   rest-frame ages tspec . −7 d from maximum light, due
+6                                                              Blondin et al.
+
+                                                                                                    TABLE 2
+                                                                                        Observer-frame and rest-frame age
+                                                                                                   differences
+
+                                                                                  SN         tobs      tspec      ∆tobs    ∆tspec
+                                                                                  (1)         (2)       (3)        (4)      (5)
+                                                                                1996bj      367.99   −2.2 (3.0)    0.00    0.0 (3.0)
+                                                                                            378.04    3.1 (2.2)   10.05    5.3 (2.2)
+                                                                                1997ex      815.08   −1.6 (1.6)    0.00    0.0 (1.6)
+                                                                                            839.96   17.4 (2.1)   24.88   19.0 (2.1)
+                                                                                            846.03   21.2 (2.0)   30.95   22.8 (2.0)
+                                                                                2001go     2021.70    7.9 (2.3)    0.00    0.0 (2.3)
+                                                                                           2027.69    9.8 (1.7)    5.99    1.9 (1.7)
+                                                                                           2059.17   31.2 (1.6)   37.47   23.3 (1.6)
+                                                                                2002iz     2586.95   −0.5 (2.2)    0.00    0.0 (2.2)
+                                                                                           2614.57   17.6 (1.2)   27.62   18.1 (1.2)
+                                                                                b027       2589.95   −3.5 (1.8)    0.00    0.0 (1.8)
+                                                                                           2616.57   18.4 (1.6)   26.62   21.9 (1.6)
+                                                                                2003js     2942.46   −4.9 (1.6)    0.00    0.0 (1.6)
+                                                                                           2966.71   12.5 (1.2)   24.25   17.4 (1.2)
+                                                                                04D2an     3026.20   −2.5 (1.6)    0.00    0.0 (1.6)
+                                                                                           3032.20    0.9 (1.3)    6.00    3.4 (1.3)
+                                                                                2006mk     4031.71   −6.2 (1.0)    0.00    0.0 (1.0)
+                                                                                           4040.72   −0.6 (2.2)    9.01    5.6 (2.2)
+                                                                                           4051.77    7.3 (1.9)   20.06   13.5 (1.9)
+                                                                                           4063.78   18.5 (1.8)   32.07   24.7 (1.8)
+                                                                                2006sc     4063.58    0.9 (1.6)    0.00    0.0 (1.6)
+                                                                                           4076.65    9.8 (1.4)   13.07    8.9 (1.4)
+                                                                                           4084.68   13.4 (2.2)   21.10   12.5 (2.2)
+                                                                                2006tk     4089.57   −8.8 (2.4)    0.00    0.0 (2.4)
+                                                                                           4100.57    0.3 (2.0)   11.00    9.1 (2.0)
+   Fig. 5.— Upper panel: Rest-frame age difference (∆tspec ) vs.
+                                                                                           4103.59    2.9 (0.9)   14.02   11.7 (0.9)
+observer-frame age difference (∆tobs ) for each spectrum pair for a
+given supernova. There are 631 such pairs, with a dispersion of                 2007tg     4381.75   −6.1 (2.0)    0.00    0.0 (2.0)
+2.0 d about the one-to-one correspondence. Middle panel: Residu-                           4391.65   −0.5 (1.8)    9.90    5.6 (1.8)
+als in the upper panel vs. ∆tobs . Lower panel: Ratio of ∆tspec to                         4405.61   10.0 (1.5)   23.86   16.1 (1.5)
+∆tobs , again vs. ∆tobs . For ∆tobs > 6 d, the fractional difference            2007tt     4415.81   −5.0 (2.1)    0.00    0.0 (2.1)
+is less than 20%.                                                                          4430.65    6.1 (1.4)   14.84   11.1 (1.4)
+                                                                                           4443.58   14.9 (2.2)   27.77   19.9 (2.2)
+to the lack of spectral templates in the SNID database                          2007un     4441.61    3.2 (2.2)    0.00    0.0 (2.2)
+with similar ages (see Fig. 3 and Blondin & Tonry 2007).                                   4451.60   11.1 (1.3)    9.99    7.9 (1.3)
+                                                                                           4460.58   17.7 (1.4)   18.97   14.5 (1.4)
+   The lower panel of Fig. 5 shows the absolute fractional
+age difference vs. ∆tobs . The quantity |∆tobs /∆tspec |                      Column headings: (1) SN name. (2) Julian date
+                                                                            (JD) minus 2,450,000 at midpoint of observation. (3)
+is a direct measure of the accuracy we can achieve for                      SN rest-frame age in days from maximum light, de-
+the aging rate determination. As expected, the frac-                        rived from the cross-correlation with spectral tem-
+tional age difference decreases with increasing age differ-                 plates using SNID. (4) Observer-frame days from first
+ence. For ∆tobs > 6 d, this difference drops below 20%.                     spectrum. (5) Rest-frame days from first spectrum.
+The high-redshift data presented in the previous section
+span a sufficient range of observer-frame age difference               results are displayed in Fig. 6.
+that the aging rate determination is accurate. Note that                 We note that comparing the inverse of the slope in
+the systematic underestimate of the age difference for                 Fig. 6 (denoted “age factor” by Foley et al. 2005) and
+∆tobs & 30 d results in a negligible fractional difference.            (1 + z) leads to asymmetric errors. The errors on the
+                                                                       “age factor” [≡ (1 + z)] become highly non-Gaussian
+               3.3. Aging Rate Determination                           when the uncertainties of the individual age measure-
+   The rest-frame age of each high-redshift SN Ia spec-                ments are large (& 1 d, as is the case in this paper, and
+trum (tspec ) is determined as outlined in Section 2.2. In             in Foley et al. 2005 for SN 1997ex), whereas the errors
+each case, we fix the redshift to that determined in the               on the aging rate [≡ 1/(1 + z)] are always Gaussian.
+previous section. The results are displayed in Table 2,                This is illustrated in Fig. 7 using a Monte Carlo simu-
+along with the corresponding observed date of each spec-               lation of the age measurements for SN 1997ex presented
+trum (tobs ). However, since the aging rate determination              by Foley et al. (2005). Using the same errors on the in-
+depends on age differences (see previous Section), we also             dividual age measurements, the distribution of the slope
+report the observer-frame and rest-frame age from the                  measurements is highly non-Gaussian in (1 + z) space,
+first spectrum, respectively denoted ∆tobs and ∆tspec in               while it is normally distributed in 1/(1 + z) space.
+Table 2.                                                                 The individual aging rate measurements presented here
+   We can then trivially compute the aging rate for each               alone reject models that predict no time dilation at a high
+supernova. This is simply done through a least-squares                 significance (up to ∼ 6σ), and all (except for SN 2006mk)
+fit of a line to ∆tspec versus ∆tobs . The slope of the line is        are within 1σ of the expected 1/(1+z) factor. In the next
+a measure of the aging rate, which should equal 1/(1 + z)              section we combine all aging rate measurements (includ-
+in an expanding universe (see Appendix A). Were there                  ing those for the low-redshift sample) to test each hy-
+no time dilation, the aging rate would equal one. The                  pothesis more thoroughly.
+                                                   Time Dilation in SN Ia Spectra                                                        7
+
+
+
+
+  Fig. 6.— Comparison of rest-frame (∆tspec ) and observer-frame (∆tobs ) time from the first spectrum, for each of the 13 high-redshift
+SNe Ia in our sample. The abscissa and ordinate ranges are both set to [−3,+40] d in all cases. The slope of the best-fit line (solid line)
+gives a measurement of the apparent aging rate of the supernova, which is compared to the expected 1/(1 + z) value. The dotted line in
+each plot corresponds to ∆tspec = ∆tobs .
+
+                                                                         4. TESTING THE 1/(1 + z) TIME-DILATION HYPOTHESIS
+                                                                           We have determined the aging rate for the subsample
+                                                                        of 22 low-redshift SNe Ia. We combine these aging rates
+                                                                        with those determined for the 13 high-redshift SNe Ia of
+                                                                        our sample (see Table 3) to test the 1/(1+z) time-dilation
+                                                                        hypothesis. As noted in Section 3.2 and Appendix B,
+                                                                        these measurements rely on a database of SN Ia spectra
+                                                                        whose ages have already been corrected for the expected
+                                                                        1/(1 + z) time-dilation factor. However, since all SNe Ia
+                                                                        in the SNID database are at redshifts z ≤ 0.05, the cor-
+                                                                        rection is small (. 1 d) and has a negligible impact on
+  Fig. 7.— Monte Carlo results illustrating the advantage of work-      the aging rate measurements.
+ing in 1/(1 + z) space for time-dilation measurements. Solid lines:        All aging rate measurements are shown in Fig. 8. The
+recovered slope (in standard deviations from the mean, µ) in (1+z)      solid line shows the expected 1/(1 + z) time-dilation fac-
+(left) and 1/(1 + z) space (right), using the SN age errors reported    tor, while the dashed line represents the “tired light”
+by Foley et al. (2005). The distribution is highly non-Gaussian in
+the former case.                                                        hypothesis of Zwicky (1929). According to this hypothe-
+                                                                        sis, photons lose energy as they interact with matter and
+8                                                      Blondin et al.
+
+                                                                  This result holds (and in fact improves) when we con-
+                        TABLE 3                                sider only the high-redshift sample (see Table 4). This
+                 Aging rate measurements
+                                                               works because the z = 0 end of the aging rate versus red-
+            SN       z     1/(1 + z)    Aging rate             shift relation (Fig. 8) is fixed to unity by theory, so the
+                                                               low-redshift sample is not needed to anchor the theoret-
+                   Low redshift (z < 0.04)                     ical curve at z ≈ 0 (although it is still used to calibrate
+          1981B    0.006    0.994      1.099 (0.071)
+          1989B    0.002    0.998      1.036 (0.079)           the tspec measurement). The low-redshift data alone do
+          1992A    0.006    0.994      1.040 (0.077)           not enable us to distinguish between the two hypothe-
+          1994D    0.002    0.998      1.011 (0.152)           ses, since the impact of time dilation is small at such low
+          1996X    0.007    0.993      0.886 (0.116)           redshifts.
+          1997br   0.007    0.993      1.120 (0.149)
+          1998V    0.018    0.983      1.047 (0.166)              In Fig. 9 a different view of Fig. 8 shows the distribu-
+          1998ab   0.027    0.974      0.987 (0.151)           tions of the ratio between the aging rate and 1/(1 + z)
+          1998dm   0.007    0.993      0.778 (0.119)           for both the low-redshift (open histogram) and high-
+          1998eg   0.025    0.976      0.883 (0.085)           redshift (hatched histogram) samples. Both distributions
+          1999cl   0.008    0.992      0.870 (0.122)
+          1999dq   0.014    0.986      0.928 (0.055)           are within ∼ 20% of a unit ratio, again validating the
+          1999ej   0.014    0.986      1.147 (0.159)           hypothesis of time dilation over a large redshift range.
+          1999gp   0.027    0.974      0.839 (0.060)           The apparent bias to lower values of the ratio for the
+          2000fa   0.021    0.979      0.884 (0.076)           low-redshift sample is not statistically significant, as the
+          2001V    0.015    0.985      0.973 (0.072)
+          2001eh   0.037    0.964      1.148 (0.107)
+                                                               mean error on the aging rate is of order one bin size
+          2001ep   0.013    0.987      0.925 (0.086)           (. 0.1; see Table 3).
+          2002ha   0.014    0.986      0.973 (0.134)              In what follows we test whether the data favor a non-
+          2003cg   0.004    0.996      1.006 (0.131)           linear dependence of the aging rate on redshift, namely
+          2003du   0.006    0.994      0.909 (0.091)
+          2006lf   0.013    0.987      0.941 (0.110)
+                   High redshift (z > 0.2)                                                        1
+                                                                                aging rate =            ,              (1)
+          1996bj   0.574    0.635      0.527 (0.369)                                           (1 + z)b
+          1997ex   0.361    0.735      0.745 (0.076)
+          2001go   0.552    0.644      0.652 (0.062)           where b is a free parameter. While Eq. [1] satisfies the
+          2002iz   0.427    0.701      0.655 (0.089)
+          b027     0.315    0.760      0.823 (0.092)           same zero point as the two previous hypotheses (aging
+          2003js   0.363    0.734      0.718 (0.082)           rate equal to 1 at z = 0), no model actually predicts such
+          04D2an   0.621    0.617      0.567 (0.341)           a dependence of the aging rate on redshift. Nonetheless,
+          2006mk   0.475    0.678      0.753 (0.060)           small deviations from the expected 1/(1+z) factor would
+          2006sc   0.357    0.737      0.619 (0.121)
+          2006tk   0.312    0.762      0.835 (0.181)           have profound implications for our assumption of FLRW
+          2007tg   0.502    0.666      0.687 (0.102)           cosmology.
+          2007tt   0.374    0.728      0.718 (0.108)              Again, we performed a least-squares fit to the entire
+          2007un   0.283    0.779      0.759 (0.135)           sample, and also to the individual high- and low-redshift
+                                                               samples (see Table 4). The data constrain the b expo-
+other photons in a static universe. The energy loss is pro-    nent to 10% (1σ), and yield b = 0.97 ± 0.10 for the en-
+portional to the distance from the source, and causes a        tire sample (Fig. 8; dotted line and gray region) and
+redshift in spectra as in an expanding universe. However,      b = 0.95 ± 0.10 for the high-redshift sample. As ex-
+this hypothesis does not predict a time-dilation effect,       pected, the low-redshift sample alone is insufficient to
+and so the aging rate should equal one for all redshifts.      constrain the free parameter (b = 3.18 ± 1.28). Nonethe-
+   As expected, the measurement of a time-dilation effect      less, the samples that include the high-redshift objects
+is more obvious at larger redshift, and the precision im-      have a best-fit value for b that is consistent with b = 1,
+proves as the number and time span of spectra for each         and thus with the expected 1/(1+z) time-dilation factor.
+supernova increases. This latter effect explains why the          Since this model has an additional free parameter, it
+aging rate measurements for SN 1996bj (z = 0.574) and          is instructive to use information criteria to compare it to
+SN 04D2an (z = 0.621) have a large associated error            the simple 1/(1 + z) prediction. These model comparison
+— despite being the two highest-redshift SNe Ia in our         statistics favor models that yield a good fit to the data
+sample, since only two spectra separated by ∼ 10 (for          with fewer parameters. As in Davis et al. (2007), we use
+SN 1996bj) and ∼ 6 (for SN 04D2an) observer-frame              the Akaike information criterion (AIC; Akaike 1974). For
+days are available.                                            Gaussian errors (which is the case here, see Section 3.3),
+   A simple χ2 analysis is sufficient to confirm what the      this criterion can be expressed as
+eye sees: the hypothesis of no time dilation is not a good
+fit to the data (χ2 = 150.3 for 35 degrees of freedom;                              AIC = χ2 + 2k,                     (2)
+see Table 4), with a goodness-of-fit of ∼ 0% (defined as
+GoF= Γ(ν/2, χ2 /2)/Γ(ν/2), where Γ(ν/2, χ2 /2) is the          where k is the number of free parameters (Davis et al.
+incomplete gamma function and ν is the number of de-           2007). Comparison of models simply involves comput-
+grees of freedom) — namely, a null probability of ob-          ing the difference in AIC (∆AIC) with respect to the
+taining data that are a worse fit to the model, assuming       model with the lowest value for this criterion. A differ-
+that the model is indeed correct. The expected 1/(1 + z)       ence in AIC of 2 is considered positive evidence against
+time-dilation factor, on the other hand, yields a good         the model with the higher AIC, whereas a difference of
+fit to the data (χ2 = 27.0 for 35 degrees of freedom),         6 is considered strong evidence (Liddle 2004; Davis et al.
+with GoF= 83.2%, and is largely favored over the null          2007). In the models considered here (see Table 4), the
+hypothesis of no time dilation (∆χ2 ≈ 123).                    expected 1/(1 + z) time-dilation model has the lowest
+                                                  Time Dilation in SN Ia Spectra                                                        9
+
+
+
+
+  Fig. 8.— Apparent aging rate versus 1/(1 + z) for the 13 high-redshift (0.28 ≤ z ≤ 0.62) and 22 low-redshift (z < 0.04) SNe Ia in our
+sample. Overplotted are the expected 1/(1 + z) time dilation (solid line) and the best-fit 1/(1 + z)b model (with b = 0.97 ± 0.10; dotted
+line and gray area). The dashed line corresponds to no time dilation, as expected in the tired-light model — clearly inconsistent with the
+data. The inset shows a close-up view of the low-redshift sample. These data are summarized in Table 3.
+
+
+
+                                                              TABLE 4
+                                                   Time-dilation model comparison
+
+                                             All SNe            High-redshift SNe only     Low-redshift SNe only
+                       Modela         χ2 /dof GoF      ∆AIC      χ2 /dof GoF ∆AIC          χ2 /dof GoF ∆AIC
+                                                 (%)                       (%)                      (%)
+                       1/(1 + z)      27.0/35   83.2       0      3.6/13   99.5        0   23.4/22   38.2       0
+                       1/(1 + z)b     26.9/34   80.2       1      3.4/12   99.2        1   20.3/21   50.0      −1
+                       tired light   150.3/35    0.0     123    123.4/13    0.0      119   26.9/22   21.4       3
+                      a The best-fit values for the b exponent in the second model are as follows.    All SNe: b =
+                      0.97 ± 0.10; high-redshift SNe only: b = 0.95 ± 0.10; low-redshift SNe only: b = 3.18 ± 1.28
+AIC (although this is not true for the low-redshift sam-                free parameters (k = 0 in Eq. [2]), hence ∆AIC = ∆χ2 ,
+ple), and we compute AIC differences with respect to                    and the information criterion is reduced to a simple χ2
+that model.                                                             test.
+  With ∆AIC = 1, we conclude that the information
+criteria do not provide positive evidence against a 1/(1 +                                     5. CONCLUSION
+z)b dependence of the aging rate. The χ2 per degree of                    We have presented 35 spectra of 13 high-redshift
+freedom is also satisfactory for the samples that include               (0.28 ≤ z ≤ 0.62) SNe Ia, which include previously un-
+the high-redshift objects.                                              published data from the ESSENCE and SNLS projects
+  The two other models considered previously have no                    and from our own dedicated program at the ESO Very
+10                                                           Blondin et al.
+
+                                                                     not predicted by any model. Whether we consider the
+                                                                     entire sample or only the high-redshift sample, the best-
+                                                                     fit value for the b exponent is consistent with b = 1, and
+                                                                     thus with the expected 1/(1 + z) factor.
+                                                                        That these data provide a confirmation of the time-
+                                                                     dilation factor expected in an expanding universe should
+                                                                     be of no surprise. Nonetheless, previous use of SN Ia light
+                                                                     curves to test this hypothesis (Leibundgut et al. 1996;
+                                                                     Goldhaber et al. 2001) are prone to the spread in intrin-
+                                                                     sic light-curve widths and its possible variation with red-
+                                                                     shift (which includes selection effects; see Section 1).
+                                                                        The data presented here are unique in that they en-
+                                                                     able the most direct test of the 1/(1 + z) time-dilation
+                                                                     hypothesis over a larger redshift range than has yet been
+                                                                     performed. This hypothesis is favored beyond doubt over
+                                                                     models that predict no time dilation. With more data,
+                                                                     the focus will shift to testing more thoroughly the alter-
+                                                                     native 1/(1+z)b dependence of the aging rate on redshift.
+  Fig. 9.— Ratio of the aging rate to 1/(1 + z) for all SNe Ia in    Any significant deviation from b = 1 would have a pro-
+Fig. 8. Both the low-redshift (open histogram) and high-redshift     found impact on our assumption of a FLRW cosmology
+(hatched histogram) samples are shown.
+                                                                     to describe the universal expansion.
+Large Telescope. Given the rapid and predictable evolu-
+tion of SN Ia spectral features with age, as well as the
+relative homogeneity of SN Ia spectra at a given age, one               The authors wish to thank the Supernova Legacy Sur-
+is able to determine the (rest-frame) age of a single spec-          vey (SNLS) collaboration, and in particular Stéphane
+trum with a typical accuracy of 1–3 d (Riess et al. 1997;            Basa and Tianmeng Zhang, for providing spectra of su-
+Foley et al. 2005; Hook et al. 2005; Howell et al. 2005;             pernova 04D2an prior to publication. The ESSENCE
+Blondin & Tonry 2007).                                               survey is supported by the US National Science Foun-
+   Using the Supernova Identification (SNID) code of                 dation (NSF) through grants AST 04-43378 and AST
+Blondin & Tonry (2007), we determine the ages of each                05-07475. Support for supernova research at Harvard
+spectrum in the supernova rest frame. Comparison with                University, including the CfA Supernova Archive, is pro-
+the observed time difference between the spectra yields              vided in part by NSF grant AST 06-06772. The Dark
+an apparent aging rate consistent with 1/(1 + z), as ex-             Cosmology Centre is funded by the Danish National Re-
+pected in a homogeneous and isotropic expanding uni-                 search Foundation. A. C. acknowledges the support of
+verse. Moreover, the data unambiguously rule out the                 CONICYT, Chile, under grants FONDECYT 1051061
+“tired light” hypothesis (Zwicky 1929) in which photons              and FONDAP 15010003. T. M. D. appreciates the sup-
+lose energy as they interact with matter and other pho-              port of the Villum Kann Rasmussen Fonden. A. V. F.
+tons in a static universe.                                           is grateful for the support of NSF grant AST 06-07894.
+   The fact that the age determination is so accurate over           G. P. acknowledges the support of the Proyecto FONDE-
+a large redshift range also shows that the deviations be-            CYT 3070034.
+tween spectra of low- and high-redshift SNe Ia in our                   Facilities:    VLT:Kueyen (FORS1), VLT:Antu
+sample are small.                                                    (FORS2), Gemini:South (GMOS), Gemini:Gillete
+   We also test for alternate dependencies of the aging              (GMOS), Keck:I (LRIS), Keck:II (DEIMOS, ESI),
+rate on redshift, namely 1/(1 + z)b , although these are             Magellan:Baade (IMACS), Magellan:Clay (LDSS3).
+                                                             APPENDIX
+                                      A. TIME DILATION IN AN EXPANDING UNIVERSE
+ In a homogeneous, isotropic expanding universe, the interval dτ between two space-time events is given by the
+Robertson-Walker (RW) metric (Robertson 1935, 1936a,b; Walker 1936),
+
+                                                        dr2
+                                                                                      
+                                                                               2
+                             dτ 2 = c2 dt2 − a2 (t)           + r 2
+                                                                    (dθ 2
+                                                                          + sin  θdφ2
+                                                                                      )  ,                (A1)
+                                                      1 − kr2
+where c is the speed of light in vacuum, t is the cosmic time, (r, θ, φ) are the comoving spatial coordinates, k is the
+curvature parameter, and a(t) is the dimensionless scale factor. In what follows we assume the present-day value of
+the dimensionless scale factor a0 = 1.
+  Photons travel along null geodesics (dτ 2 = 0). In what follows we consider radial null rays only (dθ = dφ = 0). For
+a photon emitted at time t1 from an object located at (r1 , θ1 , φ1 ) and observed at time t0 , Eq. [A1] implies
+                                          Z t0        Z r1
+                                               cdt              dr
+                                                    =      √            ≡ f (r1 ).                                (A2)
+                                            t1 a(t)    0     1 − kr2
+Here we assume that the object from which the photon was emitted has constant coordinates (r1 , θ1 , φ1 ) such that
+                                               Time Dilation in SN Ia Spectra                                            11
+
+f (r1 ), also known as the comoving distance, is time independent. Thus, for a photon emitted at time t1 + δt1 and
+observed at time t0 + δt0 , Eq. [A1] also implies
+                                                      Z t0 +δt0
+                                                                  cdt
+                                                                       = f (r1 ).                                      (A3)
+                                                        t1 +δt1   a(t)
+For small δt1 (and hence small δt0 ), the rate of change of the scale factor remains roughly constant and Eqs. [A2] and
+[A3] imply
+                                                            δt0    δt1
+                                                                =        .                                             (A4)
+                                                            a0    a(t1 )
+Hence, a light signal emitted with frequency ν1 will reach us with frequency ν0 such that
+
+                                                        ν0   δt1   a(t1 )
+                                                           =     =        .                                            (A5)
+                                                        ν1   δt0    a0
+  Using the standard definition of redshift, z = (l0 − l1 )/l1 = ν1 /ν0 − 1, we obtain a relationship between observed
+and rest-frame time intervals in a RW metric as a function of redshift z:
+                                                            δt0
+                                                                = 1 + z.                                               (A6)
+                                                            δt1
+A supernova at redshift z will thus appear to age (1 + z) times more slowly with respect to a local event at z ≈ 0.
+  The prediction of time dilation proportional to (1+z) is generic to expanding universe models, whether the underlying
+theory be general relativity (e.g., the Friedmann-Lemaı̂tre-Robertson-Walker universe), special relativity (e.g., the
+Milne Universe), or Newtonian expansion. A point of confusion can occur in the special relativistic case for which the
+well-known time-dilation factor is given by
+
+                                                             v 2 −1/2
+                                                   γSR = 1 −                                                           (A7)
+                                                               c
+                                                                         
+                                                         1             1
+                                                       =    1+z+            ,                                          (A8)
+                                                         2           1+z
+which evidently differs from (1+z). Thus it might be assumed that a special relativistic expansion can be distinguished
+from the FLRW universe using a time-dilation test27 .
+   This is not the case. Special relativistic expansion of the universe assumes there is an inertial frame that extends
+to infinity (impossible in the non-empty general relativistic picture) and that the expansion involves objects moving
+through this inertial frame. The time-dilation factor from Eq. [A8] relates the proper time in the moving emitter’s
+inertial frame (δt1 ) to the proper time in the observer’s inertial frame (δt0 ). To measure this time dilation the observer
+has to set up a set of synchronized clocks (each at rest in the observer’s inertial frame) and take readings of the
+emitter’s proper time as the emitter moves past each synchronized clock. The readings show that the emitter’s clock
+is time dilated such that δt0 = γSR δt1 .
+   We do not have this set of synchronized clocks at our disposal when we measure time dilation of supernovae in an
+expanding universe and therefore Eq. [A8] is not the time dilation we observe. We must also take into account an
+extra time-dilation factor that occurs because the distance to the emitter (and thus the distance light has to propagate
+to reach us) is increasing. In the time δt0 the emitter moves a distance vδt0 away from us. The total proper time we
+observe, δt0,tot , is δt0 plus an extra factor describing how long light takes to traverse this extra distance (vδt0 /c),
+
+                                                      δt0,tot = δt0 (1 + v/c).                                         (A9)
+The relationship between proper time at the emitter and proper time at the observer is thus
+
+                                                    δt0,tot = γSR δt1 (1 + v/c)                                      (A10)
+                                                                  s
+                                                                    1 + v/c
+                                                            = δt1                                                    (A11)
+                                                                    1 − v/c
+                                                            = δt1 (1 + z),                                           (A12)
+which is identical to the GR time-dilation equation.
+  27 In fact, such an erroneous assumption was made by one of the current authors of Davis & Lineweaver (2004).
+12                                                               Blondin et al.
+
+
+
+
+  Fig. 10.— Upper panel: comparison of supernova rest-frame ages (in days from maximum light) obtained from cross-correlation with
+spectral templates (tspec ) and from fits to the light curve (tLC ). 145 age measurements for the subsample of 22 low-redshift SNe Ia are shown
+in gray. The dashed line represents the one-to-one correspondence between tLC and tspec . Middle panel: Age residuals, ∆t = tspec − tLC .
+We also indicate the standard deviation (σ) and mean residual (µ). Lower panel: Same as above, where each point has been corrected for
+the mean offset between tspec and tLC for a given supernova.
+
+  Non-cosmological redshifts (i.e., not due to universal expansion) also cause a time-dilation effect described by
+Eq. [A6]. However, these additional effects from peculiar velocities and gravitational redshifts contribute random
+error only, and do not bias the measurements presented here.
+                                   B. COMPARISON OF SPECTRAL AND LIGHT-CURVE AGES
+   To test the accuracy of the age determination using SNID, we select the SNe Ia for which a well-sampled light curve
+is available around maximum light. Only the ESSENCE and SNLS SNe Ia in our sample have associated light curves
+for which we could determine the date of maximum brightness (tmax ). To do so we used the MLCS2k2 light-curve
+fitting code of Jha et al. (2007), as done by Wood-Vasey et al. (2007). This way we can determine the time difference
+(in the observer frame) between maximum light (tmax ) and the time the spectrum was obtained (tobs ). We compare
+this time interval with the rest-frame age determined through cross-correlation with local SN Ia spectral templates
+using SNID (tspec ). We expect a one-to-one correspondence between
+                                                                    tobs − tmax
+                                                            tLC =                                                                        (B1)
+                                                                       1+z
+and tspec .
+   The result is shown as black points in Fig. 10. While the agreement is good, there is a mean systematic offset of −1.6
+d between tspec and tLC , as shown in the middle panel. If this offset were to affect only a subset of age measurements
+for a given supernova, the impact on the aging rate determination would be severe. To check this, we correct the
+spectral ages of a given supernova for the mean difference between tLC and tspec . This “corrected” age residual, ∆tcorr
+is plotted in the lower panel of Fig. 10. The mean residual drops to −0.1 d and the scatter decreases slightly.
+   Since there are 2 to 4 tspec measurements for a given supernova, and only one measurement of tmax , the source of the
+discrepancy between the spectral and light-curve ages is most likely due to the determination of the date of maximum
+using the light-curve fitter. Indeed, using a different light-curve fitter (SALT2; Guy et al. 2007) yields values for tmax
+that differ from the MLCS2k2 measurements by more than one day in 9 out of 10 cases, and by more than two days
+for three objects (SNe 2003js, 2007tg, and 2007un). These discrepancies are due to a combination of differences in
+                                               Time Dilation in SN Ia Spectra                                                        13
+
+                                                          TABLE 5
+                                      Comparison of rest-frame light-curve and spectral
+                                                            ages
+
+                                       SN          tLC          tspec         ∆t         ∆tcorr
+                                       (1)         (2)           (3)          (4)         (5)
+                                     2002iz     0.1 (1.1)    −0.5 (2.2)    −0.6 (2.4)    0.8 (1.5)
+                                               19.4 (1.1)    17.6 (1.2)    −1.8 (1.6)   −0.4 (2.3)
+                                     b027      −2.4 (0.5)    −3.5 (1.8)    −1.1 (1.9)   −0.9 (1.7)
+                                               17.9 (0.5)    18.4 (1.6)     0.5 (1.7)    0.7 (1.4)
+                                     2003js    −3.2 (0.3)    −4.9 (1.6)    −1.7 (1.6)    0.3 (2.0)
+                                               14.6 (0.3)    12.5 (1.2)    −2.1 (1.2)   −0.1 (2.3)
+                                     04D2an    −3.2 (0.9)    −2.5 (1.6)     0.7 (1.8)    0.2 (1.4)
+                                                0.5 (0.9)     0.9 (1.3)     0.4 (1.6)   −0.1 (1.3)
+                                     2006mk    −3.6 (0.7)    −6.2 (1.0)    −2.6 (1.3)   −0.5 (2.7)
+                                                2.6 (0.7)    −0.6 (2.2)    −3.2 (2.3)   −1.1 (3.3)
+                                               10.0 (0.7)     7.3 (1.9)    −2.7 (2.0)   −0.6 (2.8)
+                                               18.2 (0.7)    18.5 (1.8)     0.3 (1.9)    2.4 (0.9)
+                                     2006sc     0.9 (0.5)     0.9 (1.6)     0.0 (1.7)    0.9 (1.0)
+                                               10.5 (0.5)     9.8 (1.4)    −0.7 (1.5)    0.2 (1.2)
+                                               16.4 (0.5)    13.4 (2.2)    −3.0 (2.3)   −2.1 (3.2)
+                                     2006tk    −6.1 (0.5)    −8.8 (2.4)    −2.7 (2.5)   −0.8 (2.8)
+                                                2.3 (0.5)     0.3 (2.0)    −2.0 (2.1)   −0.1 (2.2)
+                                                4.6 (0.5)     2.9 (0.9)    −1.7 (1.0)    0.2 (1.9)
+                                     2007tg    −6.6 (0.9)    −6.1 (2.0)     0.5 (2.2)    0.2 (1.2)
+                                                0.0 (0.9)    −0.5 (1.8)    −0.5 (2.0)   −0.8 (1.2)
+                                                9.3 (0.9)    10.0 (1.5)     0.7 (1.8)    0.4 (1.3)
+                                     2007tt    −2.5 (0.6)    −5.0 (2.1)    −2.5 (2.2)   −0.1 (2.7)
+                                                8.3 (0.6)     6.1 (1.4)    −2.2 (1.6)    0.2 (2.5)
+                                               17.7 (0.6)    14.9 (2.2)    −2.8 (2.2)   −0.4 (3.0)
+                                     2007un     4.3 (0.4)     3.2 (2.2)    −1.1 (2.3)    0.1 (1.4)
+                                               12.1 (0.4)    11.1 (1.3)    −1.0 (1.3)    0.2 (1.4)
+                                               19.1 (0.4)    17.7 (1.4)    −1.4 (1.5)   −0.2 (1.7)
+                                      Column headings: (1) SN name. (2) SN rest-frame age in
+                                    days from maximum light, derived from the light curve. (3)
+                                    SN rest-frame age in days from maximum light, derived from
+                                    the cross-correlation with spectral templates using SNID. (4)
+                                    ∆t = tspec −tLC . (5) ∆t corrected for the mean offset between
+                                    tspec and tLC .
+
+light-curve fitter algorithms and data quality (light-curve sampling around maximum light and signal-to-noise ratio of
+each light-curve measurement; see Miknaitis et al. 2007).
+   Therefore, while there is a systematic offset between part of these different age determinations, this offset affects all
+measurements in a similar fashion and has no impact on the determination of the rate of aging. In fact, the main result
+of this paper (see Section 4) is completely independent of tLC , and hence of tmax . Nonetheless, the comparison between
+spectral and light-curve ages confirms the accuracy of age determination using spectra alone (Blondin & Tonry 2007).
+The age measurements for all the high-redshift SNe Ia in our sample are reported in Table 5.
+   In making the comparison we have implicitly assumed what we are trying to show, namely a time-dilation factor of
+(1+z). Accordingly, we also make the same comparison for our subsample of 22 low-redshift SNe Ia (0.002 ≤ z ≤ 0.04).
+At such low redshifts, the (1 + z) correction present in tLC is negligible (the mean correction is ∼ 0.06 d). The result is
+shown as gray points in Fig. 10. The mean residual between tLC and tspec for this low-redshift sample is close to zero
+with a small scatter (σ ≈ 1.5 d), and unlike the high-redshift sample there is no significant systematic offset between
+the two age measurements.
+   The age measurements presented in Table 2 also enable us to infer the date of maximum light for each supernova
+using spectra alone (corresponding to tspec = 0). This way we are able to determine the time of maximum for the SNe Ia
+in our sample for which a well-sampled light curve was unavailable (SNe 1996bj, 1997ex, and 2001go; see Table 6). We
+can also compare the dates of maximum as inferred from a fit to the light curve (tLC     max ) with those determined from
+the spectra alone (tspec
+                      max ). The  results are also shown in Table 6.  For  four objects (SNe  2003js, 2006mk, 2006tk, and
+2007tt) the disagreement is larger than 1σ, and explains the systematic negative offset between tspec and tLC seen in
+Fig. 10.
+
+                                                            REFERENCES
+Akaike, H. 1974, IEEE Transactions on Automatic Control, 19,            Davis, T. M., et al. 2007, ApJ, 666, 716
+  716                                                                   Falco, E. E., et al. 1999, PASP, 111, 438
+Benetti, S., et al. 2005, ApJ, 623, 1011                                Foley, R. J., Filippenko, A. V., Leonard, D. C., Riess, A. G.,
+Blondin, S., et al. 2006, AJ, 131, 1648                                   Nugent, P., & Perlmutter, S. 2005, ApJ, 626, L11
+Blondin, S. & Tonry, J. L. 2007, ApJ, 666, 1024                         Goldhaber, G., et al. 2001, ApJ, 558, 359
+Conley, A., et al. 2006, AJ, 132, 1707                                  Guy, J., et al. 2007, A&A, 466, 11
+Davis, T. M. & Lineweaver, C. H. 2004, Publications of the              Hamuy, M., Phillips, M. M., Maza, J., Suntzeff, N. B., Schommer,
+  Astronomical Society of Australia, 21, 97                               R. A., & Aviles, R. 1995, AJ, 109, 1
+14                                                              Blondin et al.
+
+                                                               TABLE 6
+                                                  Comparison of dates of maximum light
+
+                                            SN           tLC
+                                                          max             tspec
+                                                                           max           ∆tmax
+                                            (1)           (2)              (3)            (4)
+                                         1996bj                 ···    372.16 (3.73)            ···
+                                         1997ex                 ···    817.16 (1.98)            ···
+                                         2001go                 ···   2011.47 (3.12)            ···
+                                         2002iz      2586.83 (1.51)   2587.71 (3.21)    0.88 (3.54)
+                                         b027        2593.09 (0.65)   2594.20 (1.90)    1.11 (2.01)
+                                         2003js      2946.80 (0.47)   2949.29 (1.67)    2.49 (1.73)
+                                         04D2an      3031.36 (1.50)   3030.61 (1.82)   −0.75 (2.36)
+                                         2006mk      4036.95 (0.96)   4040.32 (1.02)    3.37 (1.40)
+                                         2006sc      4062.39 (0.64)   4061.71 (2.77)   −0.68 (2.84)
+                                         2006tk      4097.56 (0.66)   4100.13 (0.98)    2.57 (1.18)
+                                         2007tg      4391.62 (1.34)   4391.34 (1.58)   −0.28 (2.08)
+                                         2007tt      4419.29 (0.83)   4422.47 (1.83)    3.18 (2.01)
+                                         2007un      4436.12 (0.47)   4437.15 (3.12)    1.03 (3.16)
+                                          Column headings: (1) SN name. (2) JD − 2,450,000 of
+                                        maximum light, derived from the light curve. (3) JD −
+                                        2,450,000 of maximum light, derived from the spectra. (4)
+                                        ∆tmax = tspec    LC
+                                                  max − tmax .
+
+Hamuy, M., et al. 2003, Nature, 424, 651                                  Pinto, P. A. & Eastman, R. G. 2000, ApJ, 530, 757
+Hicken, M., Garnavich, P. M., Prieto, J. L., Blondin, S., DePoy,          Riess, A. G., et al. 1997, AJ, 114, 722
+  D. L., Kirshner, R. P., & Parrent, J. 2007, ApJ, 669, L17               Riess, A. G., et al. 1999, AJ, 118, 2675
+Hook, I. M., et al. 2005, AJ, 130, 2788                                   Riess, A. G., Press, W. H., & Kirshner, R. P. 1995, ApJ, 438, L17
+Howell, D. A., Sullivan, M., Conley, A., & Carlberg, R. 2007,             Robertson, H. P. 1935, ApJ, 82, 284
+  ApJ, 667, L37                                                           —. 1936a, ApJ, 83, 187
+Howell, D. A., et al. 2006, Nature, 443, 308                              —. 1936b, ApJ, 83, 257
+Howell, D. A., et al. 2005, ApJ, 634, 1190                                Rust, B. W. 1974, PhD thesis, Oak Ridge National Lab., TN.
+Jha, S., Riess, A. G., & Kirshner, R. P. 2007, ApJ, 659, 122              Stehle, M., Mazzali, P. A., Benetti, S., & Hillebrandt, W. 2005,
+Leibundgut, B., et al. 1996, ApJ, 466, L21                                  MNRAS, 360, 1231
+Li, W., et al. 2003, PASP, 115, 453                                       Stritzinger, M. 2005, PhD thesis, Technische Universität
+Li, W., et al. 2001a, PASP, 113, 1178                                       München,
+Li, W., Filippenko, A. V., Treffers, R. R., Riess, A. G., Hu, J., &       Tonry, J. & Davis, M. 1979, AJ, 84, 1511
+  Qiu, Y. 2001b, ApJ, 546, 734                                            Walker, A. G. 1936, in Proceedings of the London Mathematical
+Liddle, A. R. 2004, MNRAS, 351, L49                                         Society, 90–127
+Lidman, C., et al. 2005, A&A, 430, 843                                    Weinberg, S. 1972, Gravitation and Cosmology: Principles and
+Matheson, T., et al. 2005, AJ, 129, 2352                                    Applications of the General Theory of Relativity (Gravitation
+Matheson, T., et al. 2008, accepted for publication in AJ                   and Cosmology: Principles and Applications of the General
+Mazzali, P. A., Sauer, D. N., Pastorello, A., Benetti, S., &                Theory of Relativity, by Steven Weinberg, pp. 688. ISBN
+  Hillebrandt, W. 2008, ArXiv e-prints, 803                                 0-471-92567-5. Wiley-VCH , July 1972.)
+Miknaitis, G., et al. 2007, ApJ, 666, 674                                 Wilson, O. C. 1939, ApJ, 90, 634
+Nomoto, K., Thielemann, F.-K., & Yokoi, K. 1984, ApJ, 286, 644            Wood-Vasey, W. M., et al. 2007, ApJ, 666, 694
+Nugent, P., Phillips, M., Baron, E., Branch, D., & Hauschildt, P.         Zwicky, F. 1929, Proceedings of the National Academy of Science,
+  1995, ApJ, 455, L147+                                                     15, 773
+Phillips, M. M. 1993, ApJ, 413, L105
+Phillips, M. M., Lira, P., Suntzeff, N. B., Schommer, R. A.,
+  Hamuy, M., & Maza, J. 1999, AJ, 118, 1766
+

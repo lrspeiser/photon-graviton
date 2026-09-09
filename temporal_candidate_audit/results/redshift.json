@@ -1,0 +1,178 @@
+{
+  "exponential": {
+    "parameters": [
+      75.59797204316126
+    ],
+    "optimizer_success": true,
+    "scores": {
+      "train": {
+        "N": 104,
+        "RMSE_kms": 457.0911684736288,
+        "mean_NLL_without_constant": 6.670757669472265
+      },
+      "validation": {
+        "N": 35,
+        "RMSE_kms": 435.9274253725356,
+        "mean_NLL_without_constant": 6.560724029006228
+      },
+      "test": {
+        "N": 25,
+        "RMSE_kms": 412.44143393222186,
+        "mean_NLL_without_constant": 6.56621176388225
+      }
+    },
+    "test_delta_RMSE_vs_exponential_95_descriptive": [
+      0.0,
+      0.0
+    ]
+  },
+  "rolling": {
+    "parameters": [
+      76.1251919722476
+    ],
+    "optimizer_success": true,
+    "scores": {
+      "train": {
+        "N": 104,
+        "RMSE_kms": 457.0769898435871,
+        "mean_NLL_without_constant": 6.670734450739738
+      },
+      "validation": {
+        "N": 35,
+        "RMSE_kms": 435.9033330572159,
+        "mean_NLL_without_constant": 6.562539019027418
+      },
+      "test": {
+        "N": 25,
+        "RMSE_kms": 411.5350200832185,
+        "mean_NLL_without_constant": 6.56472226093455
+      }
+    },
+    "test_delta_RMSE_vs_exponential_95_descriptive": [
+      -3.5840841134728634,
+      1.54608970144089
+    ]
+  },
+  "energy_only": {
+    "parameters": [
+      75.0735216159607
+    ],
+    "optimizer_success": true,
+    "scores": {
+      "train": {
+        "N": 104,
+        "RMSE_kms": 457.25903714201917,
+        "mean_NLL_without_constant": 6.67128728690298
+      },
+      "validation": {
+        "N": 35,
+        "RMSE_kms": 436.05912215242176,
+        "mean_NLL_without_constant": 6.559234894853523
+      },
+      "test": {
+        "N": 25,
+        "RMSE_kms": 413.4707826856132,
+        "mean_NLL_without_constant": 6.568030543157479
+      }
+    },
+    "test_delta_RMSE_vs_exponential_95_descriptive": [
+      -1.4491709591031565,
+      3.7310096136827458
+    ]
+  },
+  "directional_rate": {
+    "parameters": [
+      76.41921591770483,
+      -0.04766196128219524,
+      -0.018495810113482784,
+      -0.061474314307505794
+    ],
+    "optimizer_success": true,
+    "scores": {
+      "train": {
+        "N": 104,
+        "RMSE_kms": 439.59792921540856,
+        "mean_NLL_without_constant": 6.597766548019976
+      },
+      "validation": {
+        "N": 35,
+        "RMSE_kms": 454.8168800940652,
+        "mean_NLL_without_constant": 6.628389638428105
+      },
+      "test": {
+        "N": 25,
+        "RMSE_kms": 419.43937711376316,
+        "mean_NLL_without_constant": 6.598152359972959
+      }
+    },
+    "test_delta_RMSE_vs_exponential_95_descriptive": [
+      -55.894566571975986,
+      77.7234030020645
+    ]
+  },
+  "endpoint_proxy": {
+    "parameters": [
+      74.62208159924376,
+      0.02961746268917208
+    ],
+    "optimizer_success": true,
+    "scores": {
+      "train": {
+        "N": 104,
+        "RMSE_kms": 441.43705138017214,
+        "mean_NLL_without_constant": 6.624733747149984
+      },
+      "validation": {
+        "N": 35,
+        "RMSE_kms": 475.5141299734005,
+        "mean_NLL_without_constant": 6.6781436515226655
+      },
+      "test": {
+        "N": 25,
+        "RMSE_kms": 460.1067569680722,
+        "mean_NLL_without_constant": 6.725644798250101
+      }
+    },
+    "test_delta_RMSE_vs_exponential_95_descriptive": [
+      3.7877303847506973,
+      95.50562792397767
+    ]
+  },
+  "bulk_velocity": {
+    "parameters": [
+      75.90000734392643,
+      -163.86730049466297,
+      -96.69186551338522,
+      -221.98470014826057
+    ],
+    "optimizer_success": true,
+    "scores": {
+      "train": {
+        "N": 104,
+        "RMSE_kms": 424.25464332527184,
+        "mean_NLL_without_constant": 6.5577245268451225
+      },
+      "validation": {
+        "N": 35,
+        "RMSE_kms": 452.460016049636,
+        "mean_NLL_without_constant": 6.601942691059441
+      },
+      "test": {
+        "N": 25,
+        "RMSE_kms": 404.7325701055439,
+        "mean_NLL_without_constant": 6.547585568850519
+      }
+    },
+    "test_delta_RMSE_vs_exponential_95_descriptive": [
+      -83.5908225907998,
+      64.62447739152903
+    ]
+  },
+  "metadata": {
+    "status": "Exploratory reused split, not a new blind test",
+    "env_definition": "Standardized ln(number of entries in CF4 table2 sharing group ID)",
+    "env_train_mean": 1.126264103218722,
+    "env_train_sd": 1.1155104266992895,
+    "flux_assumption": "D_L=R*(1+z) except energy_only D_L=R*sqrt(1+z); these are phenomenological branches, not derived screened-field flux laws."
+  }
+}

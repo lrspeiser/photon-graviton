@@ -1,0 +1,73 @@
+{
+  "mixture": [
+    {
+      "fractional_temperature_split": 0,
+      "chi2_diagonal": 45.01873960592338,
+      "fitted_T_K": 2.7250005393055363,
+      "galaxy_nuisance": -0.0017584816198181813
+    },
+    {
+      "fractional_temperature_split": 1e-05,
+      "chi2_diagonal": 45.01873889409944,
+      "fitted_T_K": 2.7250005390123992,
+      "galaxy_nuisance": -0.0017587666541055806
+    },
+    {
+      "fractional_temperature_split": 0.001,
+      "chi2_diagonal": 45.030789136630574,
+      "fitted_T_K": 2.724997607591345,
+      "galaxy_nuisance": -0.0046077042148760395
+    },
+    {
+      "fractional_temperature_split": 0.003,
+      "chi2_diagonal": 46.5072473138596,
+      "fitted_T_K": 2.724974154014702,
+      "galaxy_nuisance": -0.027400090050117103
+    },
+    {
+      "fractional_temperature_split": 0.01,
+      "chi2_diagonal": 235.83555550897404,
+      "fitted_T_K": 2.7247073864298654,
+      "galaxy_nuisance": -0.28648603423984825
+    },
+    {
+      "fractional_temperature_split": 0.05,
+      "chi2_diagonal": 117314.35776468749,
+      "fitted_T_K": 2.717683125748443,
+      "galaxy_nuisance": -7.002791626415323
+    }
+  ],
+  "HFLS3": {
+    "z": 6.34,
+    "observed_1sigma_range_K": [
+      16.4,
+      30.2
+    ],
+    "constant_temperature_prediction_K": 2.72548,
+    "coherent_scaling_prediction_K": 20.0050232
+  },
+  "angular": {
+    "TT": {
+      "N_bins": 83,
+      "ell_range": [
+        47.711224,
+        2499.024
+      ],
+      "zero_signal_chi2_diagonal": 715128.9249264146,
+      "published_bestfit_chi2_diagonal": 65.12154684822823,
+      "bins_above_5_quoted_errors": 81,
+      "caveat": "Binned released bandpowers and diagonal approximation, not Planck likelihood. BestFit is a fitted standard-model reference. A uniform scalar acting on an initially uniform unpolarized sky predicts zero TT and EE; general field perturbations remain unspecified."
+    },
+    "EE": {
+      "N_bins": 66,
+      "ell_range": [
+        47.711224,
+        1988.02414
+      ],
+      "zero_signal_chi2_diagonal": 54424.974598145,
+      "published_bestfit_chi2_diagonal": 62.903583808166154,
+      "bins_above_5_quoted_errors": 46,
+      "caveat": "Binned released bandpowers and diagonal approximation, not Planck likelihood. BestFit is a fitted standard-model reference. A uniform scalar acting on an initially uniform unpolarized sky predicts zero TT and EE; general field perturbations remain unspecified."
+    }
+  }
+}

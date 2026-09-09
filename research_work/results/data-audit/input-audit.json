@@ -1,0 +1,448 @@
+{
+  "scope": "Selected locally recovered input products; not an exhaustive raw-observation archive or full original-manifest re-audit",
+  "inventory": [
+    {
+      "id": "sparc_catalog",
+      "path": "companion_wave_test/data/SPARC_Lelli2016c.mrt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 28259,
+      "sha256": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243"
+    },
+    {
+      "id": "sparc_curves",
+      "path": "companion_wave_test/data/Rotmod_LTG.zip",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 110737,
+      "sha256": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588"
+    },
+    {
+      "id": "sparc_split",
+      "path": "companion_wave_test/data/sparc_frozen.json",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 4266,
+      "sha256": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015"
+    },
+    {
+      "id": "dustpedia_themis",
+      "path": "companion_causal_test/data/themis.dat",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 265125,
+      "sha256": "89f2db19844a3e08960efcf6725a478ebfd364bef10c1821dfbaf9bdad25a1ab"
+    },
+    {
+      "id": "dustpedia_dl14",
+      "path": "companion_causal_test/data/dl14.dat",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 265125,
+      "sha256": "c6c4aae4834877eec95acb8b0a5b761fcb6bba28de0f73c6fbfa091c0eebf8c2"
+    },
+    {
+      "id": "dustpedia_schema",
+      "path": "companion_causal_test/data/ReadMe",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 11190,
+      "sha256": "20d7d45ea1c5d4f2c9bcb46b96df465eb4f8b456a0a56b62f390fa7b0557c0be"
+    },
+    {
+      "id": "matched_energy_derived",
+      "path": "companion_causal_test/energy.csv",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 6479,
+      "sha256": "8460a918b9983f2469258ad87b308b7f8b5dbe1689aaadda739ebb06d9e266fb"
+    },
+    {
+      "id": "cluster_derived",
+      "path": "companion_wave_test/cluster_comparison.csv",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 2305,
+      "sha256": "591de64b099dd9a82b7eff7e2e6d690449a18094b9f0918a1a3ef80b943aec64"
+    },
+    {
+      "id": "cluster_source_text",
+      "path": "companion_wave_test/data/xcop.txt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 100828,
+      "sha256": "eed372940c8498715bfae2eb2e030ba2d50c5d56497e895bff34f641af02833e"
+    },
+    {
+      "id": "cluster_gas_source_text",
+      "path": "companion_wave_test/data/xcop_gas.txt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 104349,
+      "sha256": "06cdb12cd064e196428413d89c0be8767cc44cb38d41d427df31ea5a67fa09bf"
+    },
+    {
+      "id": "supernova_standardized",
+      "path": "shared_interaction_test/data/Pantheon+SH0ES.dat",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 579283,
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8"
+    },
+    {
+      "id": "supernova_covariance",
+      "path": "shared_interaction_test/data/Pantheon+SH0ES_STAT+SYS.cov.gz",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 10085863,
+      "sha256": "e52c298480ff34aab53dd61ebacb1b91972d2bbaa825c409bea35c2a00d5200b"
+    },
+    {
+      "id": "supernova_schema",
+      "path": "shared_interaction_test/data/README",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 4056,
+      "sha256": "e2b0d262757f01c1794a938c78d32600a21e289b2a0320e5c660c4c6fc9aa87e"
+    },
+    {
+      "id": "transient_widths",
+      "path": "time_revision/data/DES_event_averages.csv",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 83874,
+      "sha256": "06ed324ca5777edf819594a1c0bc95ed5395613b07337236d9b6cee8801f8ec1"
+    },
+    {
+      "id": "spectral_aging",
+      "path": "time_first_principles/data/spectral_aging.json",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 1912,
+      "sha256": "b62b2cc2ede705d5772c045a936004e3141cf81da4225f4f8eac902ab9c3a53c"
+    },
+    {
+      "id": "cmb_spectrum",
+      "path": "time_first_principles/data/firas.txt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 2388,
+      "sha256": "df793c3dca09ebfa7dbc5aa0ec1951daa8884431bc30eff28a710d7516cf50fa"
+    },
+    {
+      "id": "cmb_TT",
+      "path": "temporal_candidate_audit/data/planck_TT.txt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 7143,
+      "sha256": "ed2b8b51b033e668e661f6cf4eb7705f15bcaf358189dfc4a4481cc7020130cd"
+    },
+    {
+      "id": "cmb_EE",
+      "path": "temporal_candidate_audit/data/planck_EE.txt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 5698,
+      "sha256": "bd30fc1121c0d1c2e1a6ac997b30ac14ea1fdd42bc91ecc40d594c00463ffdb2"
+    },
+    {
+      "id": "cf4_catalog",
+      "path": "temporal_candidate_audit/data/cf4_table2.dat",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 10672507,
+      "sha256": "8e908928e68352b59292cf67020a4d70aaa6d30f278dfa6aa3e41a9df808332f"
+    },
+    {
+      "id": "cf4_schema",
+      "path": "temporal_candidate_audit/data/cf4_ReadMe.txt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 19918,
+      "sha256": "2cfed1418147d5a626dee1fa37c47252124477c9828490508d9bbe511d34edb4"
+    },
+    {
+      "id": "clock_paper_text",
+      "path": "nonrotating_action_test/data/atom_cavity.txt",
+      "exists": true,
+      "role": "candidate input; inspect transformation notes before use",
+      "bytes": 49453,
+      "sha256": "a7f259fd3cfddf890838d08807ee81caf61890044e89f5e2b4ef98a2af6c396b"
+    }
+  ],
+  "distance_method_counts": {
+    "catalog": {
+      "total": 175,
+      "methods": {
+        "1": {
+          "count": 97,
+          "description": "Hubble flow with H0=73 and Virgo infall correction"
+        },
+        "2": {
+          "count": 45,
+          "description": "Tip of red giant branch magnitude"
+        },
+        "3": {
+          "count": 3,
+          "description": "Cepheid magnitude-period relation"
+        },
+        "4": {
+          "count": 28,
+          "description": "Ursa Major group distance"
+        },
+        "5": {
+          "count": 2,
+          "description": "Supernova light curve"
+        }
+      }
+    },
+    "analysis": {
+      "total": 149,
+      "methods": {
+        "1": {
+          "count": 81,
+          "description": "Hubble flow with H0=73 and Virgo infall correction"
+        },
+        "2": {
+          "count": 37,
+          "description": "Tip of red giant branch magnitude"
+        },
+        "3": {
+          "count": 3,
+          "description": "Cepheid magnitude-period relation"
+        },
+        "4": {
+          "count": 26,
+          "description": "Ursa Major group distance"
+        },
+        "5": {
+          "count": 2,
+          "description": "Supernova light curve"
+        }
+      }
+    },
+    "matched": {
+      "total": 26,
+      "methods": {
+        "1": {
+          "count": 4,
+          "description": "Hubble flow with H0=73 and Virgo infall correction"
+        },
+        "2": {
+          "count": 11,
+          "description": "Tip of red giant branch magnitude"
+        },
+        "3": {
+          "count": 3,
+          "description": "Cepheid magnitude-period relation"
+        },
+        "4": {
+          "count": 8,
+          "description": "Ursa Major group distance"
+        },
+        "5": {
+          "count": 0,
+          "description": "Supernova light curve"
+        }
+      }
+    }
+  },
+  "matched_distance_details": [
+    {
+      "galaxy": "IC2574",
+      "distance_Mpc": 3.91,
+      "distance_method": 2,
+      "inclination_deg": 75.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC0289",
+      "distance_Mpc": 20.8,
+      "distance_method": 1,
+      "inclination_deg": 46.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC0300",
+      "distance_Mpc": 2.08,
+      "distance_method": 2,
+      "inclination_deg": 42.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC0891",
+      "distance_Mpc": 9.91,
+      "distance_method": 2,
+      "inclination_deg": 90.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC2403",
+      "distance_Mpc": 3.16,
+      "distance_method": 2,
+      "inclination_deg": 63.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC2841",
+      "distance_Mpc": 14.1,
+      "distance_method": 3,
+      "inclination_deg": 76.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC2915",
+      "distance_Mpc": 4.06,
+      "distance_method": 2,
+      "inclination_deg": 56.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC2976",
+      "distance_Mpc": 3.58,
+      "distance_method": 2,
+      "inclination_deg": 61.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC3198",
+      "distance_Mpc": 13.8,
+      "distance_method": 3,
+      "inclination_deg": 73.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC3521",
+      "distance_Mpc": 7.7,
+      "distance_method": 1,
+      "inclination_deg": 75.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC3953",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 62.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC4013",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 89.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC4051",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 49.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC4100",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 73.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC4138",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 53.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "NGC4183",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 82.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC4217",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 86.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC4559",
+      "distance_Mpc": 9.0,
+      "distance_method": 1,
+      "inclination_deg": 67.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC5033",
+      "distance_Mpc": 15.7,
+      "distance_method": 1,
+      "inclination_deg": 66.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC5055",
+      "distance_Mpc": 9.9,
+      "distance_method": 2,
+      "inclination_deg": 55.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC5907",
+      "distance_Mpc": 17.3,
+      "distance_method": 2,
+      "inclination_deg": 88.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC6946",
+      "distance_Mpc": 5.52,
+      "distance_method": 2,
+      "inclination_deg": 38.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC7331",
+      "distance_Mpc": 14.7,
+      "distance_method": 3,
+      "inclination_deg": 75.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "NGC7793",
+      "distance_Mpc": 3.61,
+      "distance_method": 2,
+      "inclination_deg": 47.0,
+      "quality": 1
+    },
+    {
+      "galaxy": "UGC04483",
+      "distance_Mpc": 3.34,
+      "distance_method": 2,
+      "inclination_deg": 58.0,
+      "quality": 2
+    },
+    {
+      "galaxy": "UGC07089",
+      "distance_Mpc": 18.0,
+      "distance_method": 4,
+      "inclination_deg": 80.0,
+      "quality": 2
+    }
+  ],
+  "sparc_curve_members": 175,
+  "curve_header": [
+    "# Distance = 3.36 Mpc",
+    "# Rad\tVobs\terrV\tVgas\tVdisk\tVbul\tSBdisk\tSBbul\t\t",
+    "# kpc\tkm/s\tkm/s\tkm/s\tkm/s\tkm/s\tL/pc^2\tL/pc^2",
+    "0.16\t1.99\t1.50\t1.86\t3.75\t0.00\t30.32\t0.00"
+  ],
+  "pantheon": {
+    "rows": 1701,
+    "covariance_dimension": 1701,
+    "covariance_entries": 2893401,
+    "data_and_decompressed_covariance_match_archived_hashes": true
+  },
+  "all_listed_paths_present": true
+}

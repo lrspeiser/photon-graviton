@@ -1,0 +1,96 @@
+{
+  "status": "Exploratory reuse of already examined splits; external checks use published summary measurements, not raw-data reanalyses.",
+  "models": {
+    "full_signal": {
+      "k_kms_mpc": 75.59797232699187,
+      "scores": {
+        "train": {
+          "n": 104,
+          "rmse_kms": 457.09116833415686,
+          "mae_kms": 331.87311019534496
+        },
+        "validation": {
+          "n": 35,
+          "rmse_kms": 435.92742846577846,
+          "mae_kms": 311.96379149690085
+        },
+        "test": {
+          "n": 25,
+          "rmse_kms": 412.441437120721,
+          "mae_kms": 336.92731861161826
+        }
+      }
+    },
+    "energy_only": {
+      "k_kms_mpc": 75.07352198418268,
+      "scores": {
+        "train": {
+          "n": 104,
+          "rmse_kms": 457.259037001535,
+          "mae_kms": 331.2194944869517
+        },
+        "validation": {
+          "n": 35,
+          "rmse_kms": 436.0591262332462,
+          "mae_kms": 311.77507861527255
+        },
+        "test": {
+          "n": 25,
+          "rmse_kms": 413.47078688732364,
+          "mae_kms": 338.1776509653453
+        }
+      }
+    },
+    "positive_exponential_history": {
+      "k_kms_mpc": 76.12519231366508,
+      "scores": {
+        "train": {
+          "n": 104,
+          "rmse_kms": 457.0769896427289,
+          "mae_kms": 332.5841565145344
+        },
+        "validation": {
+          "n": 35,
+          "rmse_kms": 435.9033367168706,
+          "mae_kms": 312.1443011201324
+        },
+        "test": {
+          "n": 25,
+          "rmse_kms": 411.535023859775,
+          "mae_kms": 335.6831762332919
+        }
+      }
+    }
+  },
+  "external_checks": {
+    "DES_duration": {
+      "b": 1.003,
+      "sigma_quadrature": 0.011180339887498949,
+      "b1_standardized_difference": 0.26832815729996506,
+      "stretch_z1": 2.0041632101592652,
+      "stretch_z1_sigma": 0.015531505442615667,
+      "note": "Published method-two estimate is partly a consistency check; do not interpret Gaussian extrapolation to b=0 as rigorous exclusion significance."
+    },
+    "conditional_alpha_coupling": {
+      "gamma_per_year": 7.731496595524618e-11,
+      "clock_alpha_mean_per_year": 1e-18,
+      "clock_alpha_sigma_per_year": 1.1e-18,
+      "conservative_approx_95_abs_q_bound": 4.082003996259731e-08,
+      "note": "Defines alpha_dot/alpha=q*gamma, only for a model with this coupling. Not a bound on common clock rescaling; epsilon=n epsilon0 and c=c0/n can cancel in alpha."
+    },
+    "cmb_energy_budget": {
+      "T0_K": 2.72548,
+      "u_J_m3": 4.174660033705587e-14,
+      "Q_W_m3_if_all_CMB_couples": 1.0227764417467562e-31,
+      "energy_transferred_in_1Gyr_fraction_initial": 0.07440172425473823,
+      "note": "Constant present fractional transfer rate and static volume; no replenishment. Not a self-consistent cosmic field evolution."
+    },
+    "rate_zero_point_degeneracy_mag": 0.18202832859776058
+  },
+  "input_sha256": {
+    "features.json": "3ce0b9fb813bd2c04bdc0f6c24c99a771a4afde6fc10a4c7e1b230da9ba9b852",
+    "train_labels.json": "e11d51745018ffb7fae47ecd0a8287f3ba7da961484a43fce960ee3b79f61857",
+    "validation_labels.json": "68522ce57203e99f3ec17a8ba56baad575bd705e53e76a6e0e537db7e1c14f19",
+    "test_labels.json": "336e92672d026f9b33de6c0360a25dad7276e8d5b2b4a7e7101d4f70db4b58fd"
+  }
+}

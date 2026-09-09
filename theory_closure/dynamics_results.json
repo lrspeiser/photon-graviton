@@ -1,0 +1,39 @@
+{
+  "status": "Synthetic dynamical reconstruction; no new observations or complete gravity/matter action",
+  "p": 0.26390611655880836,
+  "potential": "V(n)=V0-K gamma^2 n^(2p)/2-U/n; radiation u=U/n; K>0",
+  "field_equation": "K n_ddot+V_prime=u/n",
+  "radiation_equation": "u_dot=-(n_dot/n)u",
+  "total_energy": "K n_dot^2/2+V+u=V0 along target trajectory",
+  "restricted_curvature_today_over_gamma2": 0.12461323984450567,
+  "restricted_curvature_assumption": "Fixed homogeneous photon invariant U, second derivative of V+U/n; not full coupled photon-field perturbations",
+  "past_positive_n_branch_endpoint_years_before_today": 17571265089.418762,
+  "tests": [
+    {
+      "beta": 0.001,
+      "max_n_error": 3.9832137588291516e-11,
+      "max_energy_error": 6.092683107160324e-11,
+      "max_photon_invariant_error": 3.3192656522657016e-12
+    },
+    {
+      "beta": 0.1,
+      "max_n_error": 2.7358115772813107e-12,
+      "max_energy_error": 2.6199542535465525e-11,
+      "max_photon_invariant_error": 1.489849910107921e-11
+    },
+    {
+      "beta": 1.0,
+      "max_n_error": 8.604317258686933e-11,
+      "max_energy_error": 1.3796142006583523e-10,
+      "max_photon_invariant_error": 8.25939316939639e-11
+    }
+  ],
+  "limitations": [
+    "Potential reverse-engineered from fitted p,gamma and chosen background radiation U.",
+    "No atomic protection or dynamical spacetime has been included.",
+    "Positive restricted potential curvature does not prove full stability.",
+    "Potential is unbounded below on n>0; needs modification outside finite tested interval for a globally bounded energy.",
+    "Energy cancellation tunes potential to chosen photon invariant; emission/absorption and density perturbations alter it.",
+    "Finite past n=0 endpoint is a breakdown of this branch, not a demonstrated origin of the universe."
+  ]
+}

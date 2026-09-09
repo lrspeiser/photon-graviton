@@ -1,0 +1,191 @@
+{
+  "schema_version": 1,
+  "status": "preliminary T03; T02 and complete microscopic theory still open",
+  "candidates": [
+    {
+      "id": "A",
+      "name": "Ordinary tensor radiation",
+      "action_status": "explicit_comparison_action",
+      "action_reference": "action-specification.md section 4A",
+      "fields": [
+        "metric g",
+        "Maxwell A",
+        "ordinary matter"
+      ],
+      "companion": {
+        "spin": 2,
+        "mass": 0,
+        "identity": "ordinary tensor radiation",
+        "polarizations": 2,
+        "dispersion": "g-null characteristics in geometric optics"
+      },
+      "deposit": "Unspecified radiation configuration or explicit matter absorber; no independent D field",
+      "symmetries": [
+        "diffeomorphism",
+        "electromagnetic gauge"
+      ],
+      "cutoff": "Low-energy gravity regime, background/energy limits to be specified numerically",
+      "couplings": [
+        "Einstein-Maxwell metric coupling",
+        "matter electromagnetic couplings"
+      ],
+      "matter_frame": "minimal metric g comparison",
+      "missing": [
+        "Relevant production rate",
+        "frequency-shift mechanism",
+        "galaxy-scale storage state",
+        "halo stability"
+      ],
+      "status": "open_for_investigation_not_adopted",
+      "shared_limitations": [
+        "No successful full redshift/capture/gravity theory established",
+        "No observational acceptance or completed background stability proof",
+        "No source history or final matter frame adopted"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "New scalar with excited absorbers",
+      "action_status": "explicit_illustrative_EFT_truncation",
+      "action_reference": "action-specification.md section 4B",
+      "fields": [
+        "metric g",
+        "Maxwell A",
+        "real scalar chi",
+        "neutral Dirac ground and excited absorbers",
+        "ordinary matter"
+      ],
+      "companion": {
+        "spin": 0,
+        "mass": "m_chi; zero is an optional unprotected choice",
+        "identity": "new scalar, not tensor graviton",
+        "polarizations": 1,
+        "dispersion": "omega^2=k^2+m_chi^2 in empty flat background"
+      },
+      "deposit": "Excited absorber rest-energy gain plus explicit recoil/support energy; inverse channel remains open",
+      "symmetries": [
+        "diffeomorphism",
+        "electromagnetic gauge",
+        "common absorber fermion number"
+      ],
+      "cutoff": "Lambda, E/Lambda small; positive Z=1+g_gamma chi/Lambda; perturbative couplings",
+      "couplings": [
+        "g_gamma chi F^2/(4 Lambda)",
+        "y chi bar(Psi_e) Psi_g + Hermitian conjugate",
+        "lambda_chi chi^4/4"
+      ],
+      "matter_frame": "minimal g with electromagnetic response modified by chi",
+      "missing": [
+        "Actual rate and environmental target population",
+        "clock/cavity response",
+        "storage lifetime",
+        "radiative corrections",
+        "redshift instead of attenuation",
+        "background and halo stability"
+      ],
+      "status": "open_for_investigation_not_adopted",
+      "shared_limitations": [
+        "No successful full redshift/capture/gravity theory established",
+        "No observational acceptance or completed background stability proof",
+        "No source history or final matter frame adopted"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "Stable massive charged scalar sector",
+      "action_status": "explicit_illustrative_EFT_truncation",
+      "action_reference": "action-specification.md section 4C",
+      "fields": [
+        "metric g",
+        "Maxwell A",
+        "complex scalar X",
+        "ordinary matter"
+      ],
+      "companion": {
+        "spin": 0,
+        "mass": "m_X>0",
+        "identity": "new matter sector, distinct from tensor radiation",
+        "polarizations": "two real field degrees of freedom",
+        "dispersion": "omega^2=k^2+m_X^2 in empty flat background"
+      },
+      "deposit": "Slow X particles, if production and cooling can be established; antiparticles permit annihilation",
+      "symmetries": [
+        "diffeomorphism",
+        "electromagnetic gauge",
+        "global U(1) of X"
+      ],
+      "cutoff": "Lambda; E/Lambda and |kappa| |X|^2/Lambda^2 small; positive photon kinetic term",
+      "couplings": [
+        "kappa |X|^2 F^2/(4 Lambda^2)",
+        "lambda_X |X|^4/2"
+      ],
+      "matter_frame": "minimal g comparison with specified scalar electromagnetic interaction",
+      "missing": [
+        "Radiation production and pair threshold history",
+        "retention and cooling",
+        "annihilation lifetime",
+        "frequency-transfer law",
+        "halo phase-space solution"
+      ],
+      "status": "open_for_investigation_not_adopted",
+      "shared_limitations": [
+        "No successful full redshift/capture/gravity theory established",
+        "No observational acceptance or completed background stability proof",
+        "No source history or final matter frame adopted"
+      ]
+    },
+    {
+      "id": "D",
+      "name": "Frequency-changing driver with distinct companion propagation",
+      "action_status": "no_complete_action_supplied",
+      "action_reference": "action-specification.md section 4D",
+      "fields": [
+        "driver unspecified",
+        "companion unspecified",
+        "deposit unspecified",
+        "matter and metric relation unspecified"
+      ],
+      "companion": {
+        "spin": "unfixed",
+        "mass": "unfixed",
+        "identity": "unfixed",
+        "polarizations": "not yet countable",
+        "dispersion": "must independently derive no-secondary-loss option"
+      },
+      "deposit": "Unspecified stored state",
+      "symmetries": [
+        "must be specified"
+      ],
+      "cutoff": "not supplied",
+      "couplings": [
+        "no complete finite interaction specification supplied"
+      ],
+      "matter_frame": "open; operational nonexpansion required by roadmap",
+      "missing": [
+        "Action",
+        "field content and constraints",
+        "Noether accounting",
+        "clock protection",
+        "frequency transfer",
+        "stable nonexpanding background",
+        "capture law"
+      ],
+      "status": "open_for_investigation_not_adopted",
+      "shared_limitations": [
+        "No successful full redshift/capture/gravity theory established",
+        "No observational acceptance or completed background stability proof",
+        "No source history or final matter frame adopted"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/2310.04150",
+      "supports": "magnetic photon-graviton conversion comparison only"
+    },
+    {
+      "url": "https://arxiv.org/abs/1511.01290",
+      "supports": "existence of highly relativistic photon shells, not galaxy halos"
+    }
+  ]
+}

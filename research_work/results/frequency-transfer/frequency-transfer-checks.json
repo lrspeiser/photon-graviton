@@ -1,0 +1,169 @@
+{
+  "scope": "Stipulated forward energy kernels, fixed path and speed, unchanged clocks; no microscopic rate, inverse process, angular transfer or observed line-width bound established",
+  "checks": [
+    {
+      "check": "Poisson_distribution_moments_and_energy_partition",
+      "cases": 9,
+      "max_moment_error": 8.770761894538737e-15
+    },
+    {
+      "check": "whole_photon_removal_same_mean_energy_surviving_line_unshifted",
+      "cases": 3
+    },
+    {
+      "check": "individual_random_transfer_histories_conserve_energy",
+      "histories": 100,
+      "max_residual": 6.661338147750939e-16
+    }
+  ],
+  "poisson_cases": [
+    {
+      "centroid_shift_factor": 1.1,
+      "event_fraction": 0.5,
+      "mean_events": 0.19062035960864987,
+      "photon_energy": 0.909090909090909,
+      "companion_energy": 0.09090909090909069,
+      "photon_survival": 1,
+      "relative_line_rms": 0.22092724632817834,
+      "moment_check_error": 1.1102230246251565e-16
+    },
+    {
+      "centroid_shift_factor": 1.1,
+      "event_fraction": 0.1,
+      "mean_events": 0.9531017980432493,
+      "photon_energy": 0.9090909090909075,
+      "companion_energy": 0.0909090909090836,
+      "photon_survival": 1,
+      "relative_line_rms": 0.09786001623179424,
+      "moment_check_error": 1.5543122344752192e-15
+    },
+    {
+      "centroid_shift_factor": 1.1,
+      "event_fraction": 0.01,
+      "mean_events": 9.531017980432493,
+      "photon_energy": 0.9090909090909033,
+      "companion_energy": 0.09090909090908791,
+      "photon_survival": 1,
+      "relative_line_rms": 0.030879704401053622,
+      "moment_check_error": 5.773159728050814e-15
+    },
+    {
+      "centroid_shift_factor": 2.0,
+      "event_fraction": 0.5,
+      "mean_events": 1.3862943611198906,
+      "photon_energy": 0.5,
+      "companion_energy": 0.49999999999999895,
+      "photon_survival": 1,
+      "relative_line_rms": 0.6435942529055826,
+      "moment_check_error": 5.551115123125783e-17
+    },
+    {
+      "centroid_shift_factor": 2.0,
+      "event_fraction": 0.1,
+      "mean_events": 6.931471805599452,
+      "photon_energy": 0.5,
+      "companion_energy": 0.49999999999999434,
+      "photon_survival": 1,
+      "relative_line_rms": 0.2679056970956257,
+      "moment_check_error": 5.551115123125783e-17
+    },
+    {
+      "centroid_shift_factor": 2.0,
+      "event_fraction": 0.01,
+      "mean_events": 69.31471805599453,
+      "photon_energy": 0.5000000000000088,
+      "companion_energy": 0.5000000000000056,
+      "photon_survival": 1,
+      "relative_line_rms": 0.08339994038798115,
+      "moment_check_error": 8.770761894538737e-15
+    },
+    {
+      "centroid_shift_factor": 5.0,
+      "event_fraction": 0.5,
+      "mean_events": 3.2188758248682006,
+      "photon_energy": 0.20000000000000007,
+      "companion_energy": 0.7999999999999982,
+      "photon_survival": 1,
+      "relative_line_rms": 1.1117859405028423,
+      "moment_check_error": 5.551115123125783e-17
+    },
+    {
+      "centroid_shift_factor": 5.0,
+      "event_fraction": 0.1,
+      "mean_events": 16.094379124341003,
+      "photon_energy": 0.19999999999999937,
+      "companion_energy": 0.7999999999999902,
+      "photon_survival": 1,
+      "relative_line_rms": 0.4178743149417286,
+      "moment_check_error": 6.38378239159465e-16
+    },
+    {
+      "centroid_shift_factor": 5.0,
+      "event_fraction": 0.01,
+      "mean_events": 160.94379124341003,
+      "photon_energy": 0.19999999999999554,
+      "companion_energy": 0.799999999999976,
+      "photon_survival": 1,
+      "relative_line_rms": 0.1273757876023761,
+      "moment_check_error": 4.468647674116255e-15
+    }
+  ],
+  "illustrative_width_requirements": [
+    {
+      "centroid_shift_factor": 1.1,
+      "illustrative_added_rms_km_s": 1.0,
+      "maximum_event_energy_fraction": 1.167398968642948e-10,
+      "minimum_mean_events": 816431934.2779529
+    },
+    {
+      "centroid_shift_factor": 1.1,
+      "illustrative_added_rms_km_s": 10.0,
+      "maximum_event_energy_fraction": 1.1673989679999892e-08,
+      "minimum_mean_events": 8164319.347276125
+    },
+    {
+      "centroid_shift_factor": 1.1,
+      "illustrative_added_rms_km_s": 100.0,
+      "maximum_event_energy_fraction": 1.1673989037041207e-06,
+      "minimum_mean_events": 81643.19796935622
+    },
+    {
+      "centroid_shift_factor": 2.0,
+      "illustrative_added_rms_km_s": 1.0,
+      "maximum_event_energy_fraction": 1.6052147181044527e-11,
+      "minimum_mean_events": 43180963440.1098
+    },
+    {
+      "centroid_shift_factor": 2.0,
+      "illustrative_added_rms_km_s": 10.0,
+      "maximum_event_energy_fraction": 1.6052147172203615e-09,
+      "minimum_mean_events": 431809634.6389223
+    },
+    {
+      "centroid_shift_factor": 2.0,
+      "illustrative_added_rms_km_s": 100.0,
+      "maximum_event_energy_fraction": 1.6052146288112766e-07,
+      "minimum_mean_events": 4318096.584213462
+    },
+    {
+      "centroid_shift_factor": 5.0,
+      "illustrative_added_rms_km_s": 1.0,
+      "maximum_event_energy_fraction": 6.9132834976197755e-12,
+      "minimum_mean_events": 232803690603.49185
+    },
+    {
+      "centroid_shift_factor": 5.0,
+      "illustrative_added_rms_km_s": 10.0,
+      "maximum_event_energy_fraction": 6.913283493812202e-10,
+      "minimum_mean_events": 2328036907.3171124
+    },
+    {
+      "centroid_shift_factor": 5.0,
+      "illustrative_added_rms_km_s": 100.0,
+      "maximum_event_energy_fraction": 6.913283113054998e-08,
+      "minimum_mean_events": 23280370.35536485
+    }
+  ],
+  "identifiability": "Same mean photon/companion energy partition does not determine photon number, line profile or transient time dilation",
+  "time_mapping": "For common fixed path R and speed v, t_arrive=t_emit+R/v; dt_arrive/dt_emit=1 in the stipulated clock frame"
+}

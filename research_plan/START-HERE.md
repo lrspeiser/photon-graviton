@@ -1,0 +1,11 @@
+# Start here — active research
+
+Research has started. Read [the current research checkpoint](../research_work/results/RESEARCH-CHECKPOINT.md) for verified results, limitations, outstanding choices and links to every major derivation.
+
+The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
+
+The local repository is .. Current research evidence is preserved in research_work/results; authoritative task status is in research_plan/codex-task-backlog.json. Numerical checks do not establish observational validation.
+
+Energy conservation is mandatory. No-loss companions, permanent storage, new field identities, source histories and gravitational-response changes remain candidate choices. Where older task wording says reject, follow the active user direction: explain the limitation under its assumptions and keep revisions open for discussion. No scheduled job is represented by these task descriptions. The active research goal is not complete.
+
+The original snapshot is almost complete; the five absent files are historical v9 paper-building sources. Final v9 paper and current companion scripts/data are present. See ../RECOVERY_REPORT.md in the outputs folder for recovery details.

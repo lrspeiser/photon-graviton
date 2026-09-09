@@ -1,0 +1,83 @@
+{
+  "status": "Exploratory fits to the same already-inspected data, not held-out validation",
+  "kappa_per_Mly": 7.7315e-05,
+  "calibrated_M": -19.248884540083562,
+  "N": 960,
+  "definition": "D_L=(1+zHEL)*Rc*sin(R/Rc) for positive curvature; sinh for negative; R=ln(1+zHD)/kappa",
+  "flat_chi_squared": 898.4745863939072,
+  "fits": [
+    {
+      "curvature": "positive",
+      "a_inverse_kappa_Rc": 0.0,
+      "radius_Mpc": null,
+      "chi_squared": 898.4745863939072,
+      "delta_chi_vs_flat": 0.0,
+      "fit_parameters_added": 1,
+      "best_is_flat_boundary": true,
+      "scan_upper_a": 2.6548729769614714,
+      "coarse_grid_best_chi": 898.4745863939072,
+      "bins_using_fixed_previous_GLS_weights": [
+        {
+          "z_min": 0.1,
+          "z_max": 0.3,
+          "residual_mag": 0.13827687861246535
+        },
+        {
+          "z_min": 0.3,
+          "z_max": 0.6,
+          "residual_mag": 0.2003518846435174
+        },
+        {
+          "z_min": 0.6,
+          "z_max": 1.0,
+          "residual_mag": 0.21822527860924454
+        },
+        {
+          "z_min": 1.0,
+          "z_max": 3.0,
+          "residual_mag": 0.36314599264648134
+        }
+      ]
+    },
+    {
+      "curvature": "negative",
+      "a_inverse_kappa_Rc": 0.8721252676686169,
+      "radius_Mpc": 4547.068484727002,
+      "chi_squared": 873.041277470174,
+      "delta_chi_vs_flat": -25.433308923733193,
+      "fit_parameters_added": 1,
+      "best_is_flat_boundary": false,
+      "scan_upper_a": 10.0,
+      "coarse_grid_best_chi": 873.1032054860409,
+      "bins_using_fixed_previous_GLS_weights": [
+        {
+          "z_min": 0.1,
+          "z_max": 0.3,
+          "residual_mag": 0.12874893196624765
+        },
+        {
+          "z_min": 0.3,
+          "z_max": 0.6,
+          "residual_mag": 0.17161950119189642
+        },
+        {
+          "z_min": 0.6,
+          "z_max": 1.0,
+          "residual_mag": 0.13910539438804304
+        },
+        {
+          "z_min": 1.0,
+          "z_max": 3.0,
+          "residual_mag": 0.1633678494278822
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "Constant-curvature isotropic geometry only, no rotation or full static gravity solution.",
+    "Positive-curvature fit restricted before the first conjugate point; no multiple wraps/images.",
+    "One radius fitted to high-z data, so improvements are exploratory and parameter-dependent.",
+    "Full released covariance and fixed Cepheid calibration retained; no new source luminosity adjustment.",
+    "Negative-curvature upper search bound a=10 is a numerical search range, not a physical prior."
+  ]
+}

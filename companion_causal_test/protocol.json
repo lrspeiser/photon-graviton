@@ -1,0 +1,54 @@
+{
+  "status": "Exploratory; reused galaxies and old split. Newly downloaded independent SED observable, not blind discovery.",
+  "sources": 814,
+  "matched": 26,
+  "split": {
+    "train": [
+      "UGC04483",
+      "UGC07089",
+      "NGC4013",
+      "NGC2403",
+      "IC2574",
+      "NGC0289",
+      "NGC0300",
+      "NGC2915",
+      "NGC7793",
+      "NGC4138",
+      "NGC4217",
+      "NGC3521",
+      "NGC3953",
+      "NGC5055",
+      "NGC2841",
+      "NGC4100",
+      "NGC5033",
+      "NGC3198",
+      "NGC4183"
+    ],
+    "validation": [
+      "NGC4559",
+      "NGC4051",
+      "NGC0891"
+    ],
+    "test": [
+      "NGC6946",
+      "NGC7331",
+      "NGC2976",
+      "NGC5907"
+    ]
+  },
+  "duration_yr": 10000000000.0,
+  "halo_radius_Rd": 10,
+  "energy_response": "ordinary eta=1 baseline and fitted universal gain",
+  "retention": "f=x^m/(1+x^m), x=vdepth/200 km/s; m>=0",
+  "candidates": [
+    "local",
+    "external",
+    "mix",
+    "local_retention",
+    "external_retention",
+    "mix_retention"
+  ],
+  "geometry": "local softened inverse-square production; uniform external deposition; truncate at 10 Rd",
+  "cluster": "same acceleration parameters from 149 galaxy training objects, not disk-template transfer",
+  "cv": "5 deterministic name-hash folds; all candidate scores reported; exploratory"
+}

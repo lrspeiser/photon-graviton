@@ -1,0 +1,139 @@
+{
+  "status": "Restricted model calculations and published-data diagnostics; not validation of time theory",
+  "kappa_per_Mly": 7.7315e-05,
+  "gamma_per_year": 7.731500000000001e-11,
+  "branches": [
+    {
+      "name": "fixed atoms, changing magnetic response",
+      "a": 0,
+      "b": 2,
+      "mass_exponent": 0,
+      "clock_p": 0,
+      "measured_redshift_exponent": 1,
+      "alpha_exponent": 1,
+      "bohr_length_exponent": 0,
+      "alpha_drift_per_year": 7.731500000000001e-11
+    },
+    {
+      "name": "equal electric and magnetic response, fixed mass",
+      "a": 1,
+      "b": 1,
+      "mass_exponent": 0,
+      "clock_p": 2,
+      "measured_redshift_exponent": -1,
+      "alpha_exponent": 0,
+      "bohr_length_exponent": 1,
+      "alpha_drift_per_year": 0.0
+    },
+    {
+      "name": "equal responses, compensating mass",
+      "a": 1,
+      "b": 1,
+      "mass_exponent": 2,
+      "clock_p": 0,
+      "measured_redshift_exponent": 1,
+      "alpha_exponent": 0,
+      "bohr_length_exponent": -1,
+      "alpha_drift_per_year": 0.0
+    },
+    {
+      "name": "equal responses, fixed atomic length",
+      "a": 1,
+      "b": 1,
+      "mass_exponent": 1,
+      "clock_p": 1,
+      "measured_redshift_exponent": 0,
+      "alpha_exponent": 0,
+      "bohr_length_exponent": 0,
+      "alpha_drift_per_year": 0.0
+    }
+  ],
+  "clock_constraint": {
+    "source": "https://arxiv.org/abs/2010.06620",
+    "alpha_drift_mean": 1e-18,
+    "alpha_drift_sigma": 1.1e-18,
+    "conditional_95_interval_on_1_minus_a": [
+      -1.4951820474681495e-08,
+      4.082002198797128e-08
+    ],
+    "caveat": "Assumes field rate gamma, this electromagnetic model, and applicable published sensitivity coefficients"
+  },
+  "conservative_synthetic_energy": [
+    {
+      "initial_radiation": 0.001,
+      "final_stretch": 2.743363625341955,
+      "radiation_energy_change": -0.000635483976399464,
+      "field_energy_change": 0.0006354839763991968,
+      "max_relative_total_energy_error": 1.7286172493413687e-13,
+      "final_field_velocity": 0.20315257308928775
+    },
+    {
+      "initial_radiation": 0.1,
+      "final_stretch": 6.166689827078211,
+      "radiation_energy_change": -0.08378384468748606,
+      "field_energy_change": 0.08378384468748938,
+      "max_relative_total_energy_error": 1.2616574451840279e-12,
+      "final_field_velocity": 0.4555959716404204
+    }
+  ],
+  "planck_occupation": [
+    {
+      "stretch": 2,
+      "max_relative_occupation_error": 0.0,
+      "temperature_ratio": 0.5,
+      "energy_density_ratio_fixed_coordinate_volume": 0.5,
+      "photon_density_ratio_fixed_coordinate_volume": 1
+    },
+    {
+      "stretch": 10,
+      "max_relative_occupation_error": 1.4432899320127035e-14,
+      "temperature_ratio": 0.1,
+      "energy_density_ratio_fixed_coordinate_volume": 0.1,
+      "photon_density_ratio_fixed_coordinate_volume": 1
+    },
+    {
+      "stretch": 1100.723542275122,
+      "max_relative_occupation_error": 1.432187701766452e-14,
+      "temperature_ratio": 0.0009084933333333334,
+      "energy_density_ratio_fixed_coordinate_volume": 0.0009084933333333334,
+      "photon_density_ratio_fixed_coordinate_volume": 1
+    }
+  ],
+  "firas": {
+    "source": "https://lambda.gsfc.nasa.gov/product/cobe/firas_monopole_spect.html",
+    "channels": 43,
+    "fitted_reference_temperature_K": 2.7250005393055825,
+    "fitted_galaxy_amplitude": -0.0017584817284196537,
+    "diagonal_chi_squared": 45.0187396058265,
+    "illustrative_source_distance_degeneracy": [
+      {
+        "source_temperature_K": 10,
+        "distance_Mly": 16815.83737914444,
+        "predicted_temperature_K": 2.7250005393055825
+      },
+      {
+        "source_temperature_K": 300,
+        "distance_Mly": 60807.26700679956,
+        "predicted_temperature_K": 2.7250005393055825
+      },
+      {
+        "source_temperature_K": 3000,
+        "distance_Mly": 90589.1346003331,
+        "predicted_temperature_K": 2.7250005393055816
+      },
+      {
+        "source_temperature_K": 6000,
+        "distance_Mly": 99554.37007287977,
+        "predicted_temperature_K": 2.725000539305579
+      }
+    ],
+    "caveat": "Reused public residual table; diagonal errors only; not an absolute recalibration or a new time-field detection"
+  },
+  "example_3000K": {
+    "stretch": 1100.723542275122,
+    "z": 1099.723542275122,
+    "exponential_distance_Mly": 90586.85906044199,
+    "rolling_distance_Mly": 14223935.10024086,
+    "caveat": "3000 K is an arbitrary example, not an assumed Big Bang or inferred source temperature"
+  }
+}

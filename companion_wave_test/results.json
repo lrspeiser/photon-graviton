@@ -1,0 +1,226 @@
+{
+  "selection": {
+    "n": 149,
+    "points": 3150,
+    "excluded": [
+      "D512-2",
+      "F561-1",
+      "F563-1",
+      "F563-V1",
+      "F563-V2",
+      "F567-2",
+      "F568-1",
+      "F574-2",
+      "F579-V1",
+      "NGC1705",
+      "NGC2366",
+      "NGC4214",
+      "NGC4389",
+      "NGC6789",
+      "PGC51017",
+      "UGC00634",
+      "UGC01230",
+      "UGC02023",
+      "UGC02455",
+      "UGC04305",
+      "UGC05999",
+      "UGC06628",
+      "UGC06973",
+      "UGC07232",
+      "UGC07608",
+      "UGCA281"
+    ],
+    "positive_outer_excess": 149,
+    "nonpositive_outer_excess": []
+  },
+  "assumptions": {
+    "time_years": 10000000000.0,
+    "bolometric_proxy_B": 1,
+    "disk_ML": 0.5,
+    "bulge_ML": 0.7,
+    "ordinary_gravity_eta": 1,
+    "p": 0.26390611655880836,
+    "kappa_per_Mly": 7.7315e-05
+  },
+  "positive_excess_percentiles_10_50_90": {
+    "extra_mass_signed_Msun": [
+      1960869259.6239731,
+      23579780856.408924,
+      399955259463.1728
+    ],
+    "full_luminosity_years_B1": [
+      15104209945231.395,
+      57745148315547.59,
+      254768055624203.3
+    ],
+    "required_gain_full_conversion_B1": [
+      1510.4209945231394,
+      5774.514831554759,
+      25476.80556242033
+    ],
+    "required_gain_local_conversion_B1": [
+      228254606.09259957,
+      1721620238.4338455,
+      13691155441.587025
+    ],
+    "external_u_required_J_m3_eta1_tau10Gyr": [
+      4.560948349579726e-11,
+      9.45442797314695e-11,
+      1.8461483934191234e-10
+    ],
+    "local_conversion_fraction": [
+      1.0384264753660869e-06,
+      3.1773092755816126e-06,
+      1.1615790233217817e-05
+    ]
+  },
+  "shape_descriptive_galaxy_equal_RMSE_kms": {
+    "baryons_only": 52.77271350899374,
+    "central": 44.86291850533088,
+    "cored_rminus2": 12.293818449606553,
+    "outer_shell": 48.64433067461703,
+    "rminus2": 20.894163418989393,
+    "uniform": 26.54839173822086
+  },
+  "cross_galaxy_outer_mass_scalings": {
+    "luminosity": {
+      "log10_normalization": 0.6495066655665686,
+      "scores": {
+        "train": {
+          "n": 89,
+          "logmass_RMSE_dex": 0.46809782115052595,
+          "mean_residual_dex": 6.517882363670161e-17
+        },
+        "validation": {
+          "n": 29,
+          "logmass_RMSE_dex": 0.5318911568729495,
+          "mean_residual_dex": 0.14267106702612598
+        },
+        "test": {
+          "n": 31,
+          "logmass_RMSE_dex": 0.5301709367678371,
+          "mean_residual_dex": 0.10441938527092282
+        }
+      }
+    },
+    "area": {
+      "log10_normalization": 8.142973669201835,
+      "scores": {
+        "train": {
+          "n": 89,
+          "logmass_RMSE_dex": 0.26942859553153425,
+          "mean_residual_dex": -1.1071044206234005e-16
+        },
+        "validation": {
+          "n": 29,
+          "logmass_RMSE_dex": 0.21504364040769464,
+          "mean_residual_dex": -0.07803356867290459
+        },
+        "test": {
+          "n": 31,
+          "logmass_RMSE_dex": 0.2617535436751904,
+          "mean_residual_dex": -0.021781760047353653
+        }
+      }
+    },
+    "volume": {
+      "log10_normalization": 7.008583915575248,
+      "scores": {
+        "train": {
+          "n": 89,
+          "logmass_RMSE_dex": 0.46173518660473456,
+          "mean_residual_dex": 1.3098136807375442e-17
+        },
+        "validation": {
+          "n": 29,
+          "logmass_RMSE_dex": 0.34953048413061033,
+          "mean_residual_dex": -0.05273541571849041
+        },
+        "test": {
+          "n": 31,
+          "logmass_RMSE_dex": 0.39142135876927137,
+          "mean_residual_dex": -0.05050473822022822
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "galaxy": "DDO154",
+      "rmax_kpc": 5.92,
+      "L36_solar": 53000000.0,
+      "v_outer_kms": 45.5,
+      "extra_v2_kms2": 1806.0466,
+      "extra_mass_signed_Msun": 2485933860.3157573,
+      "energy_J": 4.4427310063280685e+56,
+      "full_luminosity_years_B1": 693902181850875.6,
+      "local_conversion_fraction": 1.4928322820404445e-06,
+      "required_gain_full_conversion_B1": 69390.21818508756,
+      "required_gain_local_conversion_B1": 46482259942.98776,
+      "external_u_required_J_m3_eta1_tau10Gyr": 4.4795147632748055e-11,
+      "extra_mass_diskML0.3_Msun": 2496721819.1363673,
+      "extra_mass_diskML0.8_Msun": 2469751922.084843
+    },
+    {
+      "galaxy": "NGC2403",
+      "rmax_kpc": 20.87,
+      "L36_solar": 10041000000.0,
+      "v_outer_kms": 134.0,
+      "extra_v2_kms2": 15309.76265,
+      "extra_mass_signed_Msun": 74289907581.22739,
+      "energy_J": 1.3276703822942553e+58,
+      "full_luminosity_years_B1": 109455453284755.45,
+      "local_conversion_fraction": 5.262728209416892e-06,
+      "required_gain_full_conversion_B1": 10945.545328475546,
+      "required_gain_local_conversion_B1": 2079823409.6319232,
+      "external_u_required_J_m3_eta1_tau10Gyr": 1.0771340027514198e-10,
+      "extra_mass_diskML0.3_Msun": 76340788117.3521,
+      "extra_mass_diskML0.8_Msun": 71213586777.04033
+    },
+    {
+      "galaxy": "NGC3198",
+      "rmax_kpc": 44.08,
+      "L36_solar": 38279000000.0,
+      "v_outer_kms": 149.0,
+      "extra_v2_kms2": 18013.20595,
+      "extra_mass_signed_Msun": 184616924349.55905,
+      "energy_J": 3.299377136270749e+58,
+      "full_luminosity_years_B1": 71350246952008.58,
+      "local_conversion_fraction": 1.1115494997697026e-05,
+      "required_gain_full_conversion_B1": 7135.024695200857,
+      "required_gain_local_conversion_B1": 641898961.4658757,
+      "external_u_required_J_m3_eta1_tau10Gyr": 6.00030264078638e-11,
+      "extra_mass_diskML0.3_Msun": 192402573486.24136,
+      "extra_mass_diskML0.8_Msun": 172938450644.53558
+    },
+    {
+      "galaxy": "NGC7331",
+      "rmax_kpc": 36.31,
+      "L36_solar": 250631000000.0,
+      "v_outer_kms": 238.0,
+      "extra_v2_kms2": 38279.12843,
+      "extra_mass_signed_Msun": 323167144594.152,
+      "energy_J": 5.775474224936058e+58,
+      "full_luminosity_years_B1": 19075545528669.19,
+      "local_conversion_fraction": 9.156171024615243e-06,
+      "required_gain_full_conversion_B1": 1907.554552866919,
+      "required_gain_local_conversion_B1": 208335399.9983937,
+      "external_u_required_J_m3_eta1_tau10Gyr": 1.5479592333343038e-10,
+      "extra_mass_diskML0.3_Msun": 376483576627.97845,
+      "extra_mass_diskML0.8_Msun": 243192496543.41223
+    }
+  ],
+  "mass_to_light_sensitivity_median_gain": {
+    "0.3": 6152.906686093178,
+    "0.8": 5275.489693364057
+  },
+  "data_hashes": {
+    "xcop.pdf": "f92a95fec9e3fa1ea2452dc23905e95287dfa6c58c56550f398ca716326e3ef9",
+    "xcop_gas.txt": "06cdb12cd064e196428413d89c0be8767cc44cb38d41d427df31ea5a67fa09bf",
+    "xcop_gas.pdf": "41d0f331c67d0495781eda9a27bca28ee3e3bc5a4307bcc22d78e15ade5925c4",
+    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "xcop.txt": "eed372940c8498715bfae2eb2e030ba2d50c5d56497e895bff34f641af02833e",
+    "sparc_frozen.json": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015"
+  }
+}

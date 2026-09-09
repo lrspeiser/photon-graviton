@@ -1,0 +1,622 @@
+MATCHED MODELS {
+  "local": {
+    "parameters": [
+      9.209519686688386
+    ],
+    "success": true,
+    "scores": {
+      "train": {
+        "n": 19,
+        "RMSE_kms": 36.4947544308631,
+        "log_RMSE_dex": 0.13405166988969314
+      },
+      "validation": {
+        "n": 3,
+        "RMSE_kms": 53.49868758181146,
+        "log_RMSE_dex": 0.11185049501077077
+      },
+      "test": {
+        "n": 4,
+        "RMSE_kms": 69.02120656719957,
+        "log_RMSE_dex": 0.12221106921769456
+      }
+    },
+    "cv_scores": {
+      "n": 26,
+      "RMSE_kms": 36.20755910596311,
+      "log_RMSE_dex": 0.1289025125900149
+    },
+    "cv_parameters": [
+      {
+        "fold": 0,
+        "parameters": [
+          9.05009488227887
+        ],
+        "success": true
+      },
+      {
+        "fold": 1,
+        "parameters": [
+          9.093518757932513
+        ],
+        "success": true
+      },
+      {
+        "fold": 2,
+        "parameters": [
+          9.145059828891384
+        ],
+        "success": true
+      },
+      {
+        "fold": 3,
+        "parameters": [
+          9.085175371596572
+        ],
+        "success": true
+      },
+      {
+        "fold": 4,
+        "parameters": [
+          9.12202487269797
+        ],
+        "success": true
+      }
+    ]
+  },
+  "external": {
+    "parameters": [
+      9.849070414078229
+    ],
+    "success": true,
+    "scores": {
+      "train": {
+        "n": 19,
+        "RMSE_kms": 33.52695873480763,
+        "log_RMSE_dex": 0.1030315952177785
+      },
+      "validation": {
+        "n": 3,
+        "RMSE_kms": 27.311102227047197,
+        "log_RMSE_dex": 0.07364866705753968
+      },
+      "test": {
+        "n": 4,
+        "RMSE_kms": 29.629418425948565,
+        "log_RMSE_dex": 0.07778311581337782
+      }
+    },
+    "cv_scores": {
+      "n": 26,
+      "RMSE_kms": 32.501490512170754,
+      "log_RMSE_dex": 0.09715887774186231
+    },
+    "cv_parameters": [
+      {
+        "fold": 0,
+        "parameters": [
+          9.825290758958555
+        ],
+        "success": true
+      },
+      {
+        "fold": 1,
+        "parameters": [
+          9.854248333078193
+        ],
+        "success": true
+      },
+      {
+        "fold": 2,
+        "parameters": [
+          9.851155473952907
+        ],
+        "success": true
+      },
+      {
+        "fold": 3,
+        "parameters": [
+          9.875220312138733
+        ],
+        "success": true
+      },
+      {
+        "fold": 4,
+        "parameters": [
+          9.848514672903462
+        ],
+        "success": true
+      }
+    ]
+  },
+  "mix": {
+    "parameters": [
+      8.839313595156538,
+      9.657738257913211
+    ],
+    "success": true,
+    "scores": {
+      "train": {
+        "n": 19,
+        "RMSE_kms": 28.44709278725458,
+        "log_RMSE_dex": 0.08777779652619395
+      },
+      "validation": {
+        "n": 3,
+        "RMSE_kms": 28.683923366812397,
+        "log_RMSE_dex": 0.06999409577630678
+      },
+      "test": {
+        "n": 4,
+        "RMSE_kms": 31.030459024454213,
+        "log_RMSE_dex": 0.07015560668105726
+      }
+    },
+    "cv_scores": {
+      "n": 26,
+      "RMSE_kms": 28.159045043255272,
+      "log_RMSE_dex": 0.11124424377725374
+    },
+    "cv_parameters": [
+      {
+        "fold": 0,
+        "parameters": [
+          9.049997577782344,
+          6.046245197791204
+        ],
+        "success": true
+      },
+      {
+        "fold": 1,
+        "parameters": [
+          8.701359594455106,
+          9.674105877577437
+        ],
+        "success": true
+      },
+      {
+        "fold": 2,
+        "parameters": [
+          8.747712250620912,
+          9.683410335631947
+        ],
+        "success": true
+      },
+      {
+        "fold": 3,
+        "parameters": [
+          8.69182268731122,
+          9.7089750754251
+        ],
+        "success": true
+      },
+      {
+        "fold": 4,
+        "parameters": [
+          8.729636050427803,
+          9.674078452172271
+        ],
+        "success": true
+      }
+    ]
+  },
+  "local_retention": {
+    "parameters": [
+      9.510552305113938,
+      0.0
+    ],
+    "success": true,
+    "scores": {
+      "train": {
+        "n": 19,
+        "RMSE_kms": 36.494966051882145,
+        "log_RMSE_dex": 0.1340516698882504
+      },
+      "validation": {
+        "n": 3,
+        "RMSE_kms": 53.499046884631404,
+        "log_RMSE_dex": 0.11185121569615927
+      },
+      "test": {
+        "n": 4,
+        "RMSE_kms": 69.02171625964742,
+        "log_RMSE_dex": 0.1222117590651808
+      }
+    },
+    "cv_scores": {
+      "n": 26,
+      "RMSE_kms": 36.20768120466858,
+      "log_RMSE_dex": 0.1289020792471962
+    },
+    "cv_parameters": [
+      {
+        "fold": 0,
+        "parameters": [
+          9.351140225627761,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 1,
+        "parameters": [
+          9.39455131984126,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 2,
+        "parameters": [
+          9.446087382939137,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 3,
+        "parameters": [
+          9.386214587412846,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 4,
+        "parameters": [
+          9.42305826103806,
+          0.0
+        ],
+        "success": true
+      }
+    ]
+  },
+  "external_retention": {
+    "parameters": [
+      10.153404860346042,
+      0.12256570003984327
+    ],
+    "success": true,
+    "scores": {
+      "train": {
+        "n": 19,
+        "RMSE_kms": 33.65428698190161,
+        "log_RMSE_dex": 0.10292431959502102
+      },
+      "validation": {
+        "n": 3,
+        "RMSE_kms": 27.481871864647545,
+        "log_RMSE_dex": 0.07421507883968473
+      },
+      "test": {
+        "n": 4,
+        "RMSE_kms": 29.278770184601974,
+        "log_RMSE_dex": 0.07705523834559348
+      }
+    },
+    "cv_scores": {
+      "n": 26,
+      "RMSE_kms": 32.63814561031401,
+      "log_RMSE_dex": 0.09730545076940593
+    },
+    "cv_parameters": [
+      {
+        "fold": 0,
+        "parameters": [
+          10.125986647882543,
+          0.23090632267773362
+        ],
+        "success": true
+      },
+      {
+        "fold": 1,
+        "parameters": [
+          10.153810579020382,
+          0.09346678341040586
+        ],
+        "success": true
+      },
+      {
+        "fold": 2,
+        "parameters": [
+          10.153730070777272,
+          0.05234935819052339
+        ],
+        "success": true
+      },
+      {
+        "fold": 3,
+        "parameters": [
+          10.177289173968271,
+          0.14243274843891685
+        ],
+        "success": true
+      },
+      {
+        "fold": 4,
+        "parameters": [
+          10.151886851244631,
+          0.15302451293938424
+        ],
+        "success": true
+      }
+    ]
+  },
+  "mix_retention": {
+    "parameters": [
+      9.140372578037994,
+      9.958764171276105,
+      0.0
+    ],
+    "success": true,
+    "scores": {
+      "train": {
+        "n": 19,
+        "RMSE_kms": 28.44747127566925,
+        "log_RMSE_dex": 0.08777779659763625
+      },
+      "validation": {
+        "n": 3,
+        "RMSE_kms": 28.685354661241423,
+        "log_RMSE_dex": 0.06999715233870961
+      },
+      "test": {
+        "n": 4,
+        "RMSE_kms": 31.032724775462924,
+        "log_RMSE_dex": 0.0701585224879427
+      }
+    },
+    "cv_scores": {
+      "n": 26,
+      "RMSE_kms": 28.15944673452594,
+      "log_RMSE_dex": 0.11125635585010163
+    },
+    "cv_parameters": [
+      {
+        "fold": 0,
+        "parameters": [
+          9.351041125540899,
+          6.045010337389808,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 1,
+        "parameters": [
+          9.002386030797206,
+          9.975135505386415,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 2,
+        "parameters": [
+          9.04883888403644,
+          9.984411791800493,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 3,
+        "parameters": [
+          8.992744599273616,
+          10.010031786834192,
+          0.0
+        ],
+        "success": true
+      },
+      {
+        "fold": 4,
+        "parameters": [
+          9.030596438250825,
+          9.975150550256583,
+          0.0
+        ],
+        "success": true
+      }
+    ]
+  }
+}
+SUMMARY {
+  "energy_medians": {
+    "Lbol_Lsun": 31981341522.1213,
+    "Lbol_fractional_SED_error": 0.050007312275353516,
+    "SPARC_distance_Mpc": 13.95,
+    "DustPedia_distance_Mpc": 12.055754375,
+    "Lbol_DL14_over_THEMIS": 1.0186908247304196,
+    "Rmax_kpc": 19.49,
+    "extra_mass_Msun": 72386195663.07626,
+    "full_conversion_shortfall": 5427.660172226499,
+    "local_conversion_shortfall": 888879916.4658735,
+    "catalog_external_shortfall": 3744742585.581938,
+    "combined_local_external_shortfall": 685403783.5818577,
+    "external_companion_u_J_m3": 3.173239890778677e-20,
+    "nearest_catalog_source_Mpc": 1.2346667130339388,
+    "external_no_stretch_over_stretched": 1.0083274371008741
+  },
+  "energy_shortfall_ranges_10_90": {
+    "full_conversion_shortfall": [
+      1876.0531074355717,
+      11453.082956241828
+    ],
+    "local_conversion_shortfall": [
+      421491525.29023886,
+      3319761314.4888473
+    ],
+    "catalog_external_shortfall": [
+      1852312594.6912122,
+      6909078019.362799
+    ],
+    "combined_local_external_shortfall": [
+      394275119.3726177,
+      1409810814.9410105
+    ]
+  },
+  "references_matched_all": {
+    "baryons": {
+      "n": 26,
+      "RMSE_kms": 56.005260490438175,
+      "log_RMSE_dex": 0.22447608957594406
+    },
+    "previous_empirical_core": {
+      "n": 26,
+      "RMSE_kms": 22.09599014511539,
+      "log_RMSE_dex": 0.07071760137943042
+    },
+    "ordinary_local_plus_catalog": {
+      "n": 26,
+      "RMSE_kms": 56.00526041252749,
+      "log_RMSE_dex": 0.22447608925331794
+    }
+  },
+  "boundary_sensitivity": {
+    "5": {
+      "parameters": [
+        9.309000992723982
+      ],
+      "test": {
+        "n": 4,
+        "RMSE_kms": 75.31477543449853,
+        "log_RMSE_dex": 0.12730482922378547
+      }
+    },
+    "20": {
+      "parameters": [
+        9.195050850444195
+      ],
+      "test": {
+        "n": 4,
+        "RMSE_kms": 66.24364821206682,
+        "log_RMSE_dex": 0.11844206220511895
+      }
+    }
+  },
+  "acceleration_models": {
+    "power": {
+      "parameters": [
+        -0.15311732140106074,
+        0.4625195340009126
+      ],
+      "success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 20.005462243566985,
+          "log_RMSE_dex": 0.10934928266295177
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 27.377157749916826,
+          "log_RMSE_dex": 0.0974298203890144
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 17.20021850452967,
+          "log_RMSE_dex": 0.07914328712780105
+        }
+      },
+      "cluster_ratio_median": 1.8992639400805509,
+      "cluster_ratio_range": [
+        1.703686289864417,
+        2.416286709039343
+      ]
+    },
+    "power_depth_positive": {
+      "parameters": [
+        -0.22382585651575648,
+        0.3458491152826864,
+        0.29146829845195604
+      ],
+      "success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 19.772818696970592,
+          "log_RMSE_dex": 0.10618932641526935
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 26.884865275577848,
+          "log_RMSE_dex": 0.09421146530726156
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 16.567048951484864,
+          "log_RMSE_dex": 0.0748757142106546
+        }
+      },
+      "cluster_ratio_median": 1.140077532910522,
+      "cluster_ratio_range": [
+        0.9803988139821844,
+        1.4080597799744372
+      ]
+    },
+    "power_depth_signed": {
+      "parameters": [
+        -0.22405835402863503,
+        0.34566854133084335,
+        0.2913476768204689
+      ],
+      "success": true,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 19.77107380731998,
+          "log_RMSE_dex": 0.1061893185425767
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 26.881171019530363,
+          "log_RMSE_dex": 0.09420434467504342
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 16.562757787122877,
+          "log_RMSE_dex": 0.07487102764496759
+        }
+      },
+      "cluster_ratio_median": 1.1402857001320723,
+      "cluster_ratio_range": [
+        0.980733608854189,
+        1.4083795232052758
+      ]
+    }
+  },
+  "paired_cv_bootstrap": {
+    "local_retention": {
+      "mean_delta_log_MSE": -1.117177684984692e-07,
+      "percentile95": [
+        -3.105253743262042e-07,
+        3.318775262595924e-08
+      ],
+      "note": "paired held-out galaxy residual resampling; ignores overlapping-fold training uncertainty"
+    },
+    "external": {
+      "mean_delta_log_MSE": -0.007176010227960805,
+      "percentile95": [
+        -0.02125828189032038,
+        0.0017653830121245125
+      ],
+      "note": "paired held-out galaxy residual resampling; ignores overlapping-fold training uncertainty"
+    },
+    "mix": {
+      "mean_delta_log_MSE": -0.00424057597844589,
+      "percentile95": [
+        -0.00822658483684061,
+        -0.0010188742135970198
+      ],
+      "note": "paired held-out galaxy residual resampling; ignores overlapping-fold training uncertainty"
+    },
+    "mix_retention": {
+      "mean_delta_log_MSE": -0.004237881034974507,
+      "percentile95": [
+        -0.008223713290484776,
+        -0.0010137954704066904
+      ],
+      "note": "paired held-out galaxy residual resampling; ignores overlapping-fold training uncertainty"
+    }
+  }
+}

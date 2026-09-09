@@ -8,10 +8,13 @@ The aim is to find a self-consistent emitter–propagation–receiver model that
 
 ## Start here
 
-1. **[Latest analysis: causal supply, retention, gravity response, and circulation](companion_causal_test/report.md).** New DustPedia luminosity inputs, cross-validation, cluster transfer, controls, uncertainty checks, and the closed-universe question.
-2. **[Main paper, version 9](redshift_paper/temporal_redshift_paper.docx).** The unified temporal–companion framework before the latest causal tests. Read it alongside the addendum above: the paper has not yet incorporated that addendum.
-3. **[Companion deposition fits](companion_deposition_fit/deposition_fit_report.md)** and **[energy-budget tests](companion_wave_test/companion_wave_report.md)**.
-4. **[Propagation-history fit](focused_history_test/report.md)** and **[clock/interaction derivation](minimal_clock_interaction/derivation.md)**.
+1. **[Current research checkpoint](research_work/results/RESEARCH-CHECKPOINT.md).** Verified results, open questions, and links to the latest energy, capture, microphysics, data, wave and gravity derivations.
+2. **[Research roadmap](research_plan/START-HERE.md).** All 32 requirements and 20 tasks, with prerequisites and completion criteria. Baseline reproduction is complete with documented numerical differences; the full theory remains incomplete.
+3. **[Run the current checks](research_work/README.md).** Portable diagnostics write to a fresh ignored directory and preserve saved evidence.
+4. **[Recovered causal-supply analysis](companion_causal_test/report.md).** DustPedia inputs, cross-validation, cluster transfer, controls, uncertainty checks and circulation. This is the historical baseline, not the latest full research checkpoint.
+5. **[Main paper, version 9](redshift_paper/temporal_redshift_paper.docx).** The historical unified paper; it has not incorporated all later findings.
+
+The observational contract remains open: published distances may be fixed fictional facts or quantities a new model must reconstruct. No final choice of propagation, companion identity, capture, storage or gravity law has been made. Conditional limitations identify what a revised candidate must address; they do not close every alternative in the fictional universe.
 
 ## Current findings
 
@@ -40,6 +43,9 @@ A good fit is not proof. Negative results and superseded candidates are retained
 
 | Directory | Work preserved |
 |---|---|
+| `research_plan` | Current roadmap, task queue, assumptions and original planning provenance |
+| `research_work` | Current solver modules, portable verification command, canonical reports and saved results |
+| `archive/original-uploads` | Original GitHub upload bundles and historical paper/report, retained for provenance |
 | `redshift_paper`, `redshift_paper_sources` | Main paper, initial group data and original redshift work |
 | `option3_test`, `option3_cliff` | Galaxy timing/cliff candidates and prediction audits |
 | `time_revision`, `time_first_principles`, `temporal_hypothesis_checks` | Signal stretching, thermal tests and early first-principles checks |
@@ -52,9 +58,11 @@ A good fit is not proof. Negative results and superseded candidates are retained
 | `focused_history_test`, `theory_closure`, `nature_tests` | Revised history, dynamics and natural/laboratory checks |
 | `companion_wave_test`, `companion_deposition_fit` | Energy supply, halo shapes and global fits |
 | `companion_causal_test` | Latest source-driven tests, controls, bootstrap and circulation calculations |
-| `unified_paper_v9`, `abstract_revision`, `paper_fixed_atom_update` | Paper construction, previous versions and revision scripts |
+| `abstract_revision`, `paper_fixed_atom_update` | Available paper revisions; five historical `unified_paper_v9` build files remain missing |
 
-The original relative directory structure is preserved because analysis scripts share inputs. `SNAPSHOT_MANIFEST.json` inventories the committed research files and checksums. Regenerable page-render previews, caches, and duplicate delivery archives are omitted; scientific plots, source datasets, scripts, results, reports, and available paper versions are retained.
+The large Pantheon covariance input is stored losslessly as `.cov.gz`; `restore_data.py` restores and checks it before running historical brightness analyses. Its manifest entry records the original uncompressed checksum.
+
+The recovered relative directory structure is preserved because analysis scripts share inputs. `SNAPSHOT_MANIFEST.json` records the original 276-file snapshot, of which 271 files are recovered with matching checksums; it does not inventory later research additions. See [recovery details](RECOVERY_REPORT.md). Original upload bundles remain under `archive/original-uploads`; local orchestration state, duplicate working evidence and regenerated runs are ignored. `.gitattributes` preserves recovered file bytes across platforms for checksum verification.
 
 ## Reproduce the latest analysis
 
@@ -64,12 +72,14 @@ Use Python 3.11 or later in a virtual environment:
 python -m venv .venv
 # Activate the environment using your operating system's usual command.
 pip install -r requirements.txt
-python companion_causal_test/run.py
-python companion_causal_test/followup.py
-python companion_causal_test/circulation.py
+python research_work/run_checks.py
+# Include a fresh isolated reproduction of the historical three-script baseline:
+python research_work/run_checks.py --baseline
 ```
 
-The latest numerical scripts use local datasets and NumPy/SciPy. The follow-up includes bootstrap refits. Results are written into `companion_causal_test/` and overwrite the corresponding output files. The scripts are research checkpoints, not a packaged cosmology library.
+The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest verification used Python 3.13.5 and passed all 12 jobs, including the optional baseline. See [publication verification](research_work/publication-verification.json).
+
+The historical scripts can still run directly, but doing so overwrites their corresponding outputs. Use the isolated runner above for baseline reproduction. `python restore_data.py` restores the compressed covariance if needed by older brightness analyses; the current diagnostics read its compressed form directly. These are research tools, not a complete cosmology library.
 
 Earlier checkpoints may depend on additional libraries, archived inputs, network services, or document-rendering utilities. Their environment records and reports are preserved; not every historical script has been rerun for this commit. Paper-building scripts include original workspace paths and need adjustment for a different machine. Running all old paper-update scripts in sequence is not a supported build workflow and can overwrite the current paper.
 
@@ -77,4 +87,4 @@ Earlier checkpoints may depend on additional libraries, archived inputs, network
 
 Primary sources include SPARC (Lelli, McGaugh & Schombert), DustPedia/CIGALE (Nersesian and collaborators), Pantheon+SH0ES, Cosmicflows-4, X-COP, DES supernova duration products, and COBE/FIRAS and Planck products. Source URLs, citations, original catalog ReadMe files and existing license notices accompany the relevant checkpoints. Cite the original datasets and measurements when using them; this project does not claim ownership or grant a new license over third-party material.
 
-See each report for exact sample cuts, units, fixed versus fitted quantities, uncertainty limitations, and source references. `companion_causal_test/report.md` is the authoritative interpretation of the newest results, including the tests that did not improve the hypothesis.
+See each report for exact sample cuts, units, fixed versus fitted quantities, uncertainty limitations, and source references. Start with the current checkpoint for later findings and read the recovered causal report for the original baseline interpretation.

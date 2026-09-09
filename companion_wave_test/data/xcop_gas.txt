@@ -1,0 +1,972 @@
+                                              Astronomy & Astrophysics manuscript no. NTpressure                                                                                         c ESO 2018
+                                              October 5, 2018
+
+
+
+
+                                                           Non-thermal pressure support in X-COP galaxy clusters
+                                                   D. Eckert1 , V. Ghirardini2, 3 , S. Ettori3, 4 , E. Rasia5 , V. Biffi6, 5 , E. Pointecouteau7 , M. Rossetti8 , S. Molendi8 , F.
+                                                   Vazza2, 9 , F. Gastaldello8 , M. Gaspari10? , S. De Grandi11 , S. Ghizzardi8 , H. Bourdin12 , C. Tchernin13 , and M.
+                                                                                                            Roncarelli2
+
+                                                      1
+                                                        Max-Planck-Institut für extraterrestrische Physik, Giessenbachstrasse 1, 85748 Garching, Germany
+                                                        e-mail: deckert@mpe.mpg.de
+                                                      2
+                                                        Dipartimento di Fisica e Astronomia Università di Bologna, Via Piero Gobetti, 93/2, 40129 Bologna, Italy
+                                                      3
+                                                        INAF, Osservatorio di Astrofisica e Scienza dello Spazio, via Pietro Gobetti 93/3, 40129 Bologna, Italy
+                                                      4
+                                                        INFN, Sezione di Bologna, viale Berti Pichat 6/2, I-40127 Bologna, Italy
+                                                      5
+                                                        INAF, Osservatorio Astronomico di Trieste, via Tiepolo 11, I-34131, Trieste, Italy
+arXiv:1805.00034v2 [astro-ph.CO] 4 Oct 2018
+
+
+
+
+                                                      6
+                                                        Dipartimento di Fisica dell’ Università di Trieste, Sezione di Astronomia, via Tiepolo 11, I-34131 Trieste, Italy
+                                                      7
+                                                        IRAP, Université de Toulouse, CNRS, CNES, UPS, Toulouse, France
+                                                      8
+                                                        INAF - IASF Milano, Via E. Bassini 15, 20133 Milano, Italy
+                                                      9
+                                                        Hamburger Sternwarte, Universität Hamburg, Gojenbergsweg 112, 40131 Hamburg, Germany
+                                                     10
+                                                        Department of Astrophysical Sciences, Princeton University, 4 Ivy Lane, Princeton, NJ 08544-1001, USA
+                                                     11
+                                                        INAF-Osservatorio Astronomico di Brera, via E. Bianchi 46, 23807, Merate, Italy
+                                                     12
+                                                        Dipartimento di Fisica, Università degli Studi di Roma ’Tor Vergata’, via della Ricerca Scientifica 1, 00133 Roma, Italy
+                                                     13
+                                                        Center for Astronomy, Institute for Theoretical Astrophysics, Heidelberg University, Philosophenweg 12, 69120, Heidelberg,
+                                                        Germany
+                                                     October 5, 2018
+
+                                                                                                                    ABSTRACT
+
+                                                     Galaxy clusters are the endpoints of structure formation and are continuously growing through the merging and accretion of smaller
+                                                     structures. Numerical simulations predict that a fraction of their energy content is not yet thermalized, mainly in the form of kinetic
+                                                     motions (turbulence, bulk motions). Measuring the level of non-thermal pressure support is necessary to understand the processes
+                                                     leading to the virialization of the gas within the potential well of the main halo and to calibrate the biases in hydrostatic mass estimates.
+                                                     We present high-quality measurements of hydrostatic masses and intracluster gas fraction out to the virial radius for a sample of 13
+                                                     nearby clusters with available XMM-Newton and Planck data. We compare our hydrostatic gas fractions with the expected universal
+                                                     gas fraction to constrain the level of non-thermal pressure support. We find that hydrostatic masses require little correction and infer a
+                                                     median non-thermal pressure fraction of ∼ 6% and ∼ 10% at R500 and R200 , respectively. Our values are lower than the expectations of
+                                                     hydrodynamical simulations, possibly implying a faster thermalization of the gas. If instead we use the mass calibration adopted by
+                                                     the Planck team, we find that the gas fraction of massive local systems implies a mass bias 1 − b = 0.85 ± 0.05 for SZ-derived masses,
+                                                     with some evidence for a mass-dependent bias. Conversely, the high bias required to match Planck CMB and cluster count cosmology
+                                                     is excluded by the data at high significance, unless the most massive halos are missing a substantial fraction of their baryons.
+                                                     Key words. X-rays: galaxies: clusters - Galaxies: clusters: general - Galaxies: groups: general - Galaxies: clusters: intracluster
+                                                     medium - cosmology: large-scale structure
+
+
+                                              1. Introduction                                                                galaxy clusters (Lau et al. 2009; Vazza et al. 2009; Battaglia et al.
+                                                                                                                             2012; Nelson et al. 2014; Shi et al. 2015; Biffi et al. 2016). In
+                                              Galaxy clusters form hierarchically through the merging of                     case of substantial non-thermal pressure, the hydrostatic masses
+                                              smaller halos throughout cosmic time. The gravitational energy                 estimated under the assumption that the kinetic energy is fully
+                                              released during cluster mergers is responsible for heating the in-             thermalized should be biased low (e.g. Rasia et al. 2006; Nagai
+                                              tracluster medium (ICM) to the very high temperatures observed                 et al. 2007; Nelson et al. 2012; Shi et al. 2016; Khatri & Gas-
+                                              in today’s clusters. The kinetic energy developed by merging                   pari 2016). Non-thermal pressure would also affect the measured
+                                              subunits while falling into the main cluster gets progressively                thermodynamic properties of the ICM by reducing the fraction
+                                              dissipated into heat and the plasma is virialized, thereby form-               of energy that is thermalized (Kawaharada et al. 2010; Fusco-
+                                              ing ever more massive systems (e.g. Kravtsov & Borgani 2012).                  Femiano & Lapi 2013).
+                                              Although we expect that the majority of the energy in today’s
+                                              clusters is virialized, the timescale over which the kinetic en-                   Observationally, the integrated non-thermal pressure fraction
+                                              ergy is dissipated is currently unknown. Hydrodynamical simu-                  is difficult to measure. While the fraction of energy contained
+                                              lations predict that non-thermal processes in the form of turbu-               within magnetic fields and cosmic rays is known to be small
+                                              lence, bulk motions, magnetic fields or cosmic rays contribute at              (. 1%, e.g. Brunetti & Jones 2014; Huber et al. 2013; Acker-
+                                              the level of ∼ 15 − 30% to the pressure support in present-day                 mann et al. 2014), the kinetic energy content in the form of bulk
+                                                                                                                             motions and turbulence is currently unknown. Indeed, while the
+                                               ?
+                                                   Einstein and Spitzer Fellow                                               exquisite spectral resolution of the Hitomi spacecraft allowed us
+                                                                                                                                                                          Article number, page 1 of 12
+                                                  A&A proofs: manuscript no. NTpressure
+
+to assess directly the presence of bulk and turbulent motions for       selected from the Planck all-sky SZ survey. The selected clus-
+the first time (Hitomi Collaboration 2016; a 2017) in the Perseus       ters are the most significant Planck detections (SNR> 12 in the
+cluster, setting an upper limit of 4% on the turbulent-to-thermal       PSZ1 sample, Planck Collaboration XXIX 2014) in the redshift
+energy ratio, the measurement was limited to a small fraction of        range 0.04 < z < 0.1. The selected systems span a mass range
+the cluster’s volume in the cluster core, where the non-thermal         3 × 1014 M < M500 < 1.2 × 1015 M . The high signal-to-noise
+pressure fraction is expected to be small, especially in relaxed        of our clusters in the Planck survey allows us to perform a joint
+systems.                                                                analysis of the X-ray and SZ properties of X-COP clusters and
+    An alternative way of estimating the integrated contribution        to extend our reconstruction of the properties of the ICM out to
+of non-thermal pressure is to look for deviations of ICM quanti-        the virial radius. Detection at the virial radius is achieved both in
+ties (gas fraction, entropy) from the predictions of simple gravi-      X-rays and in SZ for 11 out of 12 objects. In the remaining case
+tational collapse. In particular, the total baryon fraction of mas-     (A3266), the XMM-Newton mosaic does not extend far enough
+sive clusters is one of the most robust quantities derived in cos-      to cover all the way out to R200 .
+mological simulations (White et al. 1993; Evrard 1997; Kravtsov             In Ghirardini et al. (2018) we present in detail our data anal-
+et al. 2005; Mantz et al. 2014). Since massive local clusters orig-     ysis technique. Here we briefly summarize the main steps of the
+inate from the collapse of very large regions of the early Uni-         procedure.
+verse (∼ 30 comoving Mpc at z ∼ 2, Muldrew et al. 2015),
+their composition should be representative of the Universe as a          – The XMM-Newton data are processed using the XMM-
+whole, with little scatter. Recent simulations confirm that while          SASv13.5 software and the extended source analysis soft-
+the gas and stellar fractions strongly depend on the adopted bary-         ware (ESAS) package (Snowden et al. 2008). Count im-
+onic physics (cooling, star formation, feedback from supernovae            ages, exposure maps, and particle background maps are ex-
+and active galactic nuclei), the total baryonic fraction of mas-           tracted in the [0.7-1.2] keV band to maximize the source-to-
+sive clusters is nearly independent of the adopted baryonic setup          background ratio (Ettori et al. 2010). To model the contribu-
+(Planelles et al. 2013; Le Brun et al. 2014; Sembolini et al.              tion from soft protons, we follow the procedure described in
+2016b,a). Thus, the baryon fraction of the most massive local              Ghirardini et al. (2017) (see Appendix A). We showed using
+clusters can be used to test the validity of the hydrostatic equilib-      a large set of ∼ 500 blank-sky pointings that this procedure
+rium assumption and estimate the integrated non-thermal pres-              leads to an overall precision of ∼ 3% on the subtraction of
+sure fraction (Ghirardini et al. 2017).                                    the background in the [0.7-1.2] keV band.
+    In this paper, we use high-precision hydrostatic masses ob-          – SZ pressure profiles are extracted from the Planck y-maps
+tained from the XMM-Newton cluster outskirts project (X-COP,               extracted with the MILCA algorithm (Hurier et al. 2013)
+Eckert et al. 2017a) out to R200 1 to estimate the level of non-           on the multi-frequency information provided by the high-
+thermal pressure. We present a high-confidence estimate of the             frequency instrument (HFI) from all the available Planck
+universal gas fraction of galaxy clusters and use our assessment           data. The procedure for the extraction of the pressure pro-
+of the universal gas fraction to probe the level of systematics in         files closely follows Planck Collaboration V (2013).
+our hydrostatic mass measurements. We apply the same tech-               – XMM-Newton spectra are extracted in concentric annuli out
+nique to examine potential systematics in the mass calibration             to ∼ R500 using the ESAS package. We apply a full-blown
+adopted by the Planck team to derive cosmological parameters               modeling technique to determine the source parameters, si-
+from Sunyaev-Zeldovich (SZ) cluster counts, which has resulted             multaneously fitting source and background spectra to de-
+in the well-known tension between cosmic microwave back-                   termine the contribution of each background component
+ground (CMB) and cluster counts (Planck Collaboration XXIV                 jointly (quiescent particle background cosmic X-ray back-
+2016). In companion papers we present our measurements of the              ground, Galactic foregrounds, and soft protons). A single-
+thermodynamic properties of X-COP clusters (Ghirardini et al.              temperature APEC model (Smith et al. 2001) is used to de-
+2018) and our high-precision hydrostatic mass estimates (Ettori            scribe the plasma emissivity, leaving temperature, normal-
+et al. 2018).                                                              ization and metal abundance as free parameters. Temperature
+    The paper is organized as follows. In Sect. 2 we present the           profiles are then constructed by fitting the full spectral model
+dataset and the methods used to derive gas fraction profiles. In           to the observed spectra.
+Sect. 3 we estimate the universal gas fraction and describe our          – Gas density profiles are reconstructed from the X-ray maps
+method to derive the non-thermal pressure fraction. Our results            using the azimuthal median method proposed by Eckert et al.
+are presented in Sect. 4 and discussed in Sect. 5.                         (2015). Binned surface-brightness maps are constructed us-
+    Throughout the paper, we assume a ΛCDM cosmology with                  ing an adaptive Voronoi tessellation algorithm to ensure a
+Ωm = 0.3, ΩΛ = 0.7 and H0 = 70 km/s/Mpc. Note that since our               minimum of 20 counts per bin. To reconstruct gas emissiv-
+clusters are local (z < 0.1) the results have a very mild depen-           ity profiles that are unbiased by the presence of accreting
+dence on the adopted cosmology.                                            clumps, we determine the median of the surface-brightness
+                                                                           distributions in concentric annuli (Eckert et al. 2015).
+
+2. Data analysis                                                            For more details on the analysis procedure, we refer the
+                                                                        reader to Ghirardini et al. (2018).
+2.1. The X-COP sample
+X-COP (Eckert et al. 2017a) is a very large program on XMM-             2.2. Hydrostatic masses and gas fraction
+Newton (proposal ID 074441, PI: Eckert) designed to advance
+our understanding of the physics of the ICM throughout the en-          Our hydrostatic mass measurements and the procedure to ob-
+tire cluster volume. It targets 12 local, massive galaxy clusters       tain them are described in detail in Ettori et al. (2018). We use
+                                                                        as our reference mass model the backward NFW model (Ettori
+ 1
+   Given an overdensity factor ∆, we define M∆ , R∆ as the mass and     et al. 2010), which describes the mass profile using a Navarro-
+radius for which M∆ /(4/3πR3∆ ) = ∆ρcrit , with ρcrit = 3H(z)2 /8πG.    Frenk-White (NFW, Navarro et al. 1996) model. We assume that
+Article number, page 2 of 12
+                                     D. Eckert et al.: Non-thermal pressure support in X-COP galaxy clusters
+
+the ICM is in hydrostatic equilibrium (HSE) within the poten-
+                                                                                            A1644
+tial well and that the kinetic energy has been fully converted into                  0.25   A1795
+thermal energy, in which case the HSE equation reads                                        A2029
+                                                                                            A2142
+                                                                                            A2255
+dPgas
+      = −ρgas
+              GMHSE (< r)
+                                                                   (1)               0.20   A2319
+                                                                                            A3158
+ dr              r2                                                                         A3266
+                                                                                            A644      b/ m
+with Pgas , ρgas the pressure and density of the ICM, G the grav-
+
+
+
+
+                                                                         fgas, HSE
+                                                                                            A85
+itational constant and MHSE the total hydrostatic mass enclosed
+                                                                                     0.15   RXC1825
+                                                                                            ZW1215
+within a radius r. We use the multiscale technique introduced
+in Eckert et al. (2016) to deproject the gas density profile. The                    0.10
+concentration and scale radius of the NFW profile and the pa-
+rameters describing the gas density profile are fit jointly to the
+measured thermodynamic quantities (X-ray emissivity, spectro-                        0.05
+scopic X-ray temperature, and SZ pressure) and the global likeli-
+hood is sampled using the Markov Chain Monte Carlo (MCMC)
+sampler emcee (Foreman-Mackey et al. 2013). The high sta-                                      10 1                                  100 R200
+tistical quality of the X-COP data results in relative uncertain-                                               R/R500
+ties of around 5% on MHSE . In Ettori et al. (2018) we compare
+our results with several other methods to reconstruct the hydro-           Fig. 1. Hydrostatic gas fraction profiles fgas,HSE (R) = Mgas (< R)/MHSE (<
+static mass (forward fitting, Gaussian processes) and show that            R) as a function of scale radius R/R500 for the X-COP clusters. The gray
+all the methods provide consistent results. We also compare our            shaded area shows the Planck universal baryon fraction Ωb /Ωm (Planck
+mass estimates with literature values obtained using weak lens-            Collaboration XIII 2016).
+ing, caustics and integrated SZ signal and find a good agreement
+between the various methods.
+                                                                           galaxy cluster (e.g. Edge et al. 2002; Salomé & Combes 2003)
+     At each radius, we integrate the model gas density profiles to
+                                                                           and for the present study we neglect their contribution. The uni-
+determine the enclosed gas mass,
+                                                                           versal baryon fraction is determined with very high precision by
+              Z r                                                          the CMB power spectrum. Here we assume the Planck value
+Mgas (< r) =       4πr2 ρgas (r) dr                             (2)        Ωb /Ωm = 0.156 ± 0.003 (Planck Collaboration XIII 2016). This
+                 0
+                                                                           value is slightly lower than, albeit consistent with, the WMAP9
+where ρgas = µm p (ne + n p ), with ne = 1.17n p the number den-           measurement (0.166 ± 0.009, Hinshaw et al. 2013). The baryon
+sities of electron and proton in a fully ionized gas, µ = 0.61 the         depletion factor encodes the fraction of the baryons that is en-
+mean molecular weight, and m p the mass of the proton. The hy-             closed within a given radius; Yb = 1 implies no depletion. We
+drostatic gas fraction profiles are then computed as fgas,HSE (r) =        expect from numerical simulation that its value at large cluster-
+Mgas (< r)/MHSE (< r). In Fig. 1 we show the hydrostatic gas frac-         centric radii depends very little on the adopted physical setup,
+tion profiles as a function of the scale radius R500,HS E for the 13       such that the value of Yb can be calibrated using numerical sim-
+X-COP clusters. The radial range of each profile corresponds to            ulations. Finally, the stellar fraction has been the subject of many
+the regions for which information on both the density and the              studies and its value is well measured. In the following we pro-
+pressure are available. For 10 objects out of 13 our gas fraction          vide estimates of Yb and f? .
+profiles extend out to R200 without requiring any extrapolation.
+The typical statistical uncertainties in fgas,HSE are ∼ 5% at R500
+                                                                           3.1.1. Baryon depletion factor
+and ∼ 10% at R200 . In the case for which our measurements do
+not extend all the way out to R200 (A3266), the NFW mass model             The baryon depletion factor Yb integrated over large fractions
+is extrapolated out to R200 to estimate the values of fgas,HSE .           of the cluster volume is one of the quantities most robustly
+                                                                           predicted by numerical simulations. A recent comparison of
+                                                                           13 different codes including modern and legacy SPH and grid
+3. Methodology                                                             codes (Sembolini et al. 2016b,a) showed that codes implement-
+3.1. The universal gas fraction                                            ing vastly different hydrodynamical solvers and baryonic physics
+                                                                           make very consistent predictions on the baryon budget inte-
+As described in the introduction, the gas fraction of galaxy clus-         grated within the virial radius, whereas in the inner regions
+ters is a fundamental prediction of cosmological simulations. In           (R . 0.5R500 ) different codes and simulation setups lead to sub-
+this section we review the current knowledge on the universal              stantial differences in the predicted baryon fraction.
+gas fraction and provide an assessment of the expected true gas                In the present work, we utilize simulated clusters with
+fraction. We also conservatively discuss the associated uncer-             masses in the X-COP range extracted from The Three Hun-
+tainties.                                                                  dred Project simulations (hereafter the300, Cui et al. in prepa-
+    In a general way, the universal gas fraction within a given            ration). This project comprises zoom-in re-simulations of more
+radius can be written as                                                   than three hundred Lagrangian regions, of 15–20 h−1 Mpc radius,
+                         Ωb                                                centered on the most massive cluster-size haloes selected from
+fgas,univ (r) = Yb (r)      − f? ,                                 (3)     one of the dark-matter-only MultiDark Simulation run carried
+                         Ωm
+                                                                           out with Planck cosmology (Planck Collaboration XIII 2016).
+with Yb (r) the baryon depletion factor, Ωb /Ωm the universal              All the regions have been re-simulated at higher resolution (with
+baryon fraction, and f? the fraction of baryons converted into             dark-matter particle mass around 2 × 109 M ) with a modified
+stars. Baryons in other forms such as warm and molecular gas or            version of the Smoothed-Particle-Hydrodynamics GADGET-3
+dust typically represent less than 0.1% of the mass content of a           code (Springel 2005). The re-simulations include the treatment
+                                                                                                                       Article number, page 3 of 12
+                                                     A&A proofs: manuscript no. NTpressure
+
+      1.10
+                                                                                                                                        Leauthaud+12
+                                                                                                                                        Coupon+15
+      1.05                                                                                b/ m                                          Gonzalez+13
+                                                                                                                                        Lagana+11
+                b/ m
+                                                                                  10 1                                                  Giodini+09
+      1.00                                                                                                                              Andreon+10
+                                                                                                                                        Chiu+17
+                                                                                                                                        Eckert+16
+      0.95
+Yb, 500
+
+
+
+
+                                                                            f , 500
+      0.90
+                                                                 X-COP
+      0.85
+                                                                                                                                          X-COP
+
+      0.80
+                                                                                  10 2
+      0.75
+
+      0.70             1014                           1015                                       1014                                     1015
+                                  M500[M ]                                                                    M500 [M ]
+Fig. 2. Baryon depletion factor Yb at R500 for the clusters in The300        Fig. 3. Stellar fraction within R500 estimated in several works from the
+simulation (filled circles). The blue points show the objects with a mass    literature. The hashed grey area represents the mass range of X-COP
+M500 > 3 × 1014 M . The hashed grey shaded area shows the mass               clusters and the range of f? adopted in this work.
+range covered by X-COP clusters and our determination of the universal
+baryon depletion factor and its scatter.
+                                                                             are locked into stars, both inside galaxies and in the form of in-
+Table 1. Baryon depletion factor in the simulated clusters from the clus-    tracluster light (ICL, Zibetti et al. 2005; Budzynski et al. 2014;
+ters in The300 project with M500 > 3 × 1014 M .                              Montes & Trujillo 2014). Predicting the exact amount of stars
+                                                                             in numerical simulations is a difficult endeavour, since the star
+           ∆      Median      16th    84th       Min         Max             formation rate and its evolution depend critically on the adopted
+          500     0.938       0.897   0.966     0.794        1.026           setup describing gas cooling and feedback from supernovae and
+          200     0.951       0.923   0.982     0.875        1.024           AGN (e.g. Kravtsov et al. 2005). However, the stellar content
+                                                                             of galaxy clusters has been extensively studied in the literature
+Column description: Overdensity ∆; Median value of Yb in the                 (Giodini et al. 2009; Gonzalez et al. 2007, 2013; Laganá et al.
+sample; 16th and 84th percentiles of the values; minimum and                 2013; Andreon 2010; Chiu et al. 2017) and the stellar fraction
+maximum values.                                                              can be robustly set to its observed value.
+                                                                                 In Fig. 3 we present a compilation of recent results on the
+                                                                             stellar fraction of dark-matter halos as a function of their mass.
+of a large variety of physical processes to describe the baryonic            Results obtained by directly integrating the stellar mass of mem-
+component, such as gas cooling and star formation, chemical                  ber galaxies (Giodini et al. 2009; Gonzalez et al. 2013; Laganá
+enrichment, stellar and Active Galactic Nuclei (AGN) feedback                et al. 2013; Andreon 2010; Chiu et al. 2017) and from the halo
+(see Rasia et al. 2015 and references therein for a more detailed            occupation distribution (Leauthaud et al. 2012; Coupon et al.
+description of the hydrodynamical code used, and Cui et al, in               2015; Zu & Mandelbaum 2015; Eckert et al. 2016) are com-
+prep., for details on the resimulation technique).                           pared. While the results obtained with the two methods differ
+     Thanks to the large statistics afforded by these simulations,           substantially in the galaxy group regime (M500 . 1014 M ), in
+we can constrain the value of Yb and its scatter with good preci-            the mass range covered by X-COP clusters (3 × 1014 < M500 <
+sion. In Fig. 2 we show the measurements of Yb at R500 for the               1.2 × 1015 M ) all studies are broadly consistent and converge to
+whole sample of simulated clusters. As noted in previous studies             a median stellar fraction of 1.2%, with the notable exception of
+(e.g. Planelles et al. 2013), the value of Yb is typically 5-10%             Giodini et al. (2009). The contribution of ICL was included in
+lower than 1, value that is reached at few times the virial region           some, but not all cases; measurements indicate that ICL can ac-
+(see also Kravtsov et al. 2005). For masses M500 ≥ 2 × 1014 M ,              count for ∼ 20 − 30% (Lin & Mohr 2004; Zibetti et al. 2005) of
+the baryon depletion factor is approximately constant albeit with            the total stellar mass. To encompass the uncertainty associated
+a large scatter. Smaller systems are instead largely influenced by           with the ICL fraction and with the various studies shown in Fig.
+the active galactic nuclei activity that in one hand pushes out-             3, for the present study we conservatively set the value of the
+side the hot gas and on the other hand quenches star formation,              stellar fraction to
+consequentially reducing both baryonic components. If we re-
+strict our analysis to the subsample of 295 systems with masses               f?,500 = 0.015 ± 0.005.                                             (4)
+M500 > 3 × 1014 M , corresponding to the X-COP mass range,
+we obtain a median depletion factor of 6.2 per cent at R500 and              Beyond the central regions the stellar fraction has been shown
+4.9 per cent at R200 . The median, 1σ percentiles, and extreme               to be nearly constant (Andreon 2015; van der Burg et al. 2015),
+values of Yb at R500 and R200 are provided in Table 1.                       thus we adopt the same value for f?,200 .
+                                                                                 Combining the results from the two previous sections
+3.1.2. Stellar fraction                                                      through Eq. 3, we estimate the following values for the universal
+                                                                             gas fraction:
+While the ICM is known to contain the vast majority of the
+baryons in galaxy clusters, obviously a fraction of the baryons               fgas,500 = 0.131 ± 0.009 ,      fgas,200 = 0.134 ± 0.007.           (5)
+Article number, page 4 of 12
+                                  D. Eckert et al.: Non-thermal pressure support in X-COP galaxy clusters
+
+The errors reported here include both the actual uncertainties in
+Ωb /Ωm and f? and the measured scatter in Yb .                                     0.24        Universal fgas, 500
+                                                                                               fgas, 500
+                                                                                   0.21        fgas, 200
+3.2. Non-thermal pressure fraction
+                                                                                                                                                 A2319
+
+Since our X-ray emissivity profiles are corrected for the effects                  0.18
+of gas clumping (Eckert et al. 2015) down to the limiting resolu-                         b/ m
+
+
+
+
+                                                                       fgas, HSE
+                                                                                                                                                             A2142
+tion of our observations (10-20 kpc), we expect that residual de-                  0.15
+                                                                                                                         A2255 A85
+                                                                                                         A3158
+                                                                                                                                                          A2029
+viations of the gas mass fraction with respect to the universal gas                                   RXC1825
+                                                                                                                 A1795
+                                                                                                                                     A644                  A3266
+                                                                                            A1644
+fraction should be caused by an additional, non-thermal pressure
+component. In the presence of isotropic non-thermal pressure,                      0.12
+                                                                                                                                                 ZW1215
+the hydrostatic equilibrium equation can be generalized as
+                                                                                   0.09
+ d                             GMtot (< r)
+   (Pth (r) + PNT (r)) = −ρgas              ,                    (6)               0.06
+dr                                r2
+                                                                                                                                                                  1015
+with Pth , PNT the thermal and non-thermal pressure components,
+respectively. We set α(r) = PNT (r)/Ptot (r) the non-thermal pres-                                                M500, HSE [M ]
+                                   α
+sure fraction, i.e. PNT = αPtot = 1−α  Pth . Using this formulation,     Fig. 4. Hydrostatic gas fractions at R500,HS E (blue points) and R200,HS E
+Eq. 6 can be rewritten as                                                (red points) obtained from our reference hydrostatic mass model as a
+                                                                         function of cluster mass. The dashed magenta line and shaded area rep-
+                                                 Pth r2   dα
+Mtot (< r) = MHSE (< r) + α(r)Mtot (< r) −                      (7)      resent the universal gas fraction at R500 estimated in Sect. 3.1 and its
+                                             (1 − α)ρgasG dr             uncertainty. The green shaded area indicates the cosmic baryon fraction
+                        2
+                                                                         (Planck Collaboration XIII 2016).
+with MHSE (< r) = − ρgasr dPth
+                         G dr . The gas fraction as a function of
+radius can be written as
+                                                                         4. Results
+             Mgas (< r)
+fgas (r) =
+             Mtot (< r)                                                  4.1. Non-thermal pressure fraction in X-COP clusters
+                                                           !−1
+                                           Pth r2       dα               In Fig. 4 we show the values of fgas,HSE for the 13 X-COP clus-
+         = fgas,HSE (r)(1 − α) 1 −                             .(8)
+                                    (1 − α)ρgasGMHSE dr                  ters at R500,HSE and R200,HSE compared to the universal baryon
+                                                                         fraction (Planck Collaboration XIII 2016) and the universal gas
+Thus, if the true gas fraction is known, the non-thermal pres-           fraction predicted from The300 simulation. With the exception
+sure fraction α(r) can be estimated by comparing the measured            of A2319 (Ghirardini et al. 2017), for which a substantial non-
+fgas,HSE with the universal value (Ghirardini et al. 2017).              thermal pressure support was clearly detected, at R500 our mea-
+     For α(r) we use the functional form introduced by Nelson            surements of fgas,HSE lie very close to the universal gas fraction,
+et al. (2014),                                                           albeit ∼ 7% higher on average (median fgas,500 = 0.141 ± 0.005,
+                          ( "         #γ )!                              with 12% scatter), implying a mild contribution of non-thermal
+PNT                               r
+      (r) = 1 − A 1 + exp −                                 (9)          pressure. Conversely, at R200 , the majority of the measurements
+ Ptot                           Br200                                    (9 out of 12) slightly exceed the universal gas fraction (median
+with A, B, and γ being free parameters. This functional form was          fgas,200 = 0.149+0.006
+                                                                                            −0.008 ). With just two exceptions (A3266 and
+shown to reproduce the behavior of the non-thermal pressure              ZwCl 1215), the gas fraction of all systems is at least as large
+fraction in the simulations of Nelson et al. (2014) and should be        as our determination of the Universal gas fraction.
+approximately valid in the range [0.3 − 2]R200 . For the present               To investigate any dependence of the measured gas frac-
+work, we fix B = 1.7 to the best fitting value in The300 simu-           tion on the core state, we split our sample into cool core (CC)
+lation. Note that in case α(r) is constant this quantity is simply       and non cool core (NCC) classes based on their central en-
+equal to the usual hydrostatic bias b = 1 − MHSE /Mtot .                 tropy K0 as measured by Chandra (Cavagnolo et al. 2009) be-
+    As already discussed in Sect. 3.1, the gas fraction predicted        cause of its higher resolution in the core, using a threshold of
+by various simulations was found to be consistent (Sembolini             30 keV cm2 as a boundary between the two populations. Us-
+et al. 2016b,a), including the setup used here (labelled G3X in          ing this definition, four of our systems are classified as CC, and
+Sembolini et al. 2016b). The predictions however diverge in the          the remaining eight as NCC. At R500 , we estimate median val-
+inner regions (see their Fig. 10). Thus, we focus on the gas frac-       ues fgas,CC = 0.142 ± 0.006 and fgas,NCC = 0.141 ± 0.008, i.e.
+tion at large radii to compare fgas,HSE to fgas,univ and determine       there is no difference in the hydrostatic gas fraction of the two
+the parameters of α(r). We set the universal gas fraction at R500        sub-populations. The values of fgas,HSE in the NCC population
+and R200 to the values derived in Sect. 3.1, and solve numerically       appear to be more scattered than in the CC population (15% ver-
+Eq. 8 for the parameters A and γ. Since this procedure results in        sus < 7%). However, the small number of objects in our sample
+a corrected estimate for M500 and M200 , we iteratively repeat the       makes it difficult to make any strong statistical claim about the
+procedure with the revised mass estimates until it converges.            scatter of the two populations.
+    We use the output MCMC chains of our mass models to                        We used the distribution of output values for the parame-
+propagate the uncertainties in fgas,HSE into our estimate of α(r).       ters of the non-thermal pressure fraction (Eq. 9) to determine
+We also propagate the dispersion and uncertainties in the univer-        the non-thermal pressure fraction at R500 and R200 . The normal-
+sal gas fraction (see Sect. 3.1) by randomizing the value of fgas        ization of the non-thermal pressure term A in Eq. 9 is usually
+in Eq. 8. The best-fit curves for α(r) are then computed from the        well determined and lies in the range 0.4 − 0.8 (median 0.65).
+posterior distributions of the parameters.                               The slope γ is however poorly constrained, given that we are
+                                                                                                                                        Article number, page 5 of 12
+                                                    A&A proofs: manuscript no. NTpressure
+
+
+                Nelson+14
+                                                                           4.2. Impact of missing clusters and sample selection
+                The300
+       0.5      A1644
+                A1795
+                                                                           While the selection of the X-COP sample was designed to be
+                A2029                                                      fairly clean (see Sect. 2.1), our original selection excluded 4 sys-
+                A2142                                                      tems for which we were unsure whether the strategy adopted
+       0.4      A2255
+                A2319                                                      for the project could be applied. This includes clusters with ob-
+                A3158                                                      vious substructures, aspherical morphology, bad visibility for
+PNT/Ptot
+
+
+
+                A3266
+                                                                           XMM-Newton, or an apparent size barely larger than the Planck
+       0.3      A644
+                A85                                                        beam (see Sect. 2.1 of Ghirardini et al. 2018). Two of these sys-
+                RXC1825
+                ZW1215                                                     tems (A754 and A3667) are extreme mergers which may devi-
+       0.2                                                                 ate substantially from hydrostatic equilibrium in a way similar to
+                                                                           A2319, thus the average level of non-thermal pressure support in
+                                                                           our sample may be biased by the exclusion of these objects. To
+       0.1                                                                 investigate the potential impact of these systems on our results,
+                                                                           we assumed that these two missing objects show a level of non-
+       0.00.6       0.8        1.0      1.2       1.4        1.6
+                                                                           thermal pressure similar to that of A2319 and that the remain-
+                                                                           ing two are representative of the population. Such a choice has
+                                     R/R500                                no influence on the median non-thermal pressure fraction, but
+                                                                           increases the mean value from 9% to 13% at R500 . We can thus
+Fig. 5. Non-thermal pressure fraction in X-COP clusters at R500 and        conclude that our analysis sets an upper limit of 13% to the mean
+R200 . The positions on the X axis are slightly shifted for clarity. The
+                                                                           level of non-thermal pressure in the Planck cluster population.
+blue and green curves and shaded areas show the mean non-thermal
+pressure ratio predicted from the numerical simulations of Nelson et al.   We were recently allocated observing time on XMM-Newton (PI:
+(2014) and Rasia et al., respectively.                                     Ghirardini) to extend the X-COP strategy to the missing objects
+                                                                           discussed here, which will allow us to set firm limits on the level
+                                                                           of non-thermal pressure support.
+constraining it using only two anchor points (R500 , R200 ). In the             Another issue that cannot be addressed with the current X-
+cases where no modification to the gas fraction was required we            COP sample is any possible evolution of non-thermal pressure
+computed upper limits at the 90% confidence level. In Table 2              and hydrostatic mass bias with redshift. Nelson et al. (2014)
+we provide our measurements of the hydrostatic gas fraction, of            showed that the expected level of non-thermal pressure is ex-
+the non-thermal pressure ratio, and of the total cluster masses af-        pected to increase substantially with redshift when scaled by the
+ter applying the method described in Sect. 3.2 (labelled as Mtot           critical density (see also Shi et al. 2016). By design, the X-COP
+hereafter). The uncertainties on PNT were propagated to the es-            sample was selected to contain only systems that are well re-
+timated total mass using the MCMC chain (see Sect. 3.2). In the            solved by Planck, which limits our study to local (z < 0.1)
+cases for which no evidence for non-thermal pressure was found,            systems. Further studies with higher resolution SZ data (e.g.
+Mtot is just equal to MHSE .                                               NIKA2, MUSTANG2) will allow us in the near future to test
+    In Fig. 5 we show the non-thermal pressure fractions at R500           whether the findings reported here can be applied to clusters lo-
+and R200 for the entire X-COP sample. We immediately see that              cated at higher redshifts.
+in the vast majority of cases non-thermal support in X-COP clus-
+ters is mild. We use a bootstrap method to compute the median              4.3. Comparison with Planck SZ masses
+of the distribution and the uncertainties on the median. We find a
+median non-thermal pressure of 5.9+2.9                +4.3
+                                       −3.3 % and 10.5−5.5 % at R500       Following the discovery of the tension between Planck CMB
+and R200 , respectively. For comparison, in Fig. 5 we show the av-         cosmology and SZ number counts (Planck Collaboration XXIV
+erage non-thermal pressure ratio in two sets of numerical simu-            2016), considerable effort has been devoted to evaluating the ac-
+lations (Ω500 , Nelson et al. (2014); The300, Rasia et al. in prep.),      curacy of the mass calibration adopted by the Planck collabora-
+with the scatter of the population indicated as the shaded areas.          tion. Planck SZ masses were derived from a relation between
+Assuming that the non-thermal pressure support is due to ran-              SZ flux YS Z and total mass that was calibrated using XMM-
+dom gas motions, the level of non-thermal pressure in numerical            Newton HSE masses. Biases in the estimation of the mass might
+simulations was defined as the ratio of the pressure induced by            arise from the potential impact of non-thermal pressure in the
+random motions Prand = 13 ρσ2gas to the sum of random and ther-            calibration sample, from uncertainties in the calibration of the
+mal pressure (Nelson et al. 2014; Biffi et al. 2016),                      XMM-Newton effective area and/or from the measurement of the
+                                                                           total SZ flux from Planck data. Cosmological constraints from
+PNT          σ2gas                                                         Planck CMB and cluster counts could be reconciled in case the
+     = 2                 ,                                         (10)    YS Z − M500 relation adopted by the Planck team is biased low by
+Ptot  σgas + (3kT/µm p )                                                   a factor 1 − b = MSZ /Mtrue = 0.58 ± 0.04, presumably because
+                                                                           of strong non-thermal pressure support (Rasia et al. 2006; Na-
+with σgas the velocity dispersion of gas particles in spherical            gai et al. 2007). Numerous studies have addressed this issue by
+shells, k the Boltzmann constant, µ the mean molecular weight              directly comparing masses derived using X-ray and weak lens-
+and m p the proton mass. Interestingly, most of our measurements           ing techniques (e.g. Hoekstra et al. 2015; von der Linden et al.
+lie substantially below the Nelson et al. (2014) curve, possibly           2014; Smith et al. 2016), resulting in somewhat divergent values
+indicating a higher level of thermalization in the real popula-            for the Planck mass bias (1−b in the range 0.7-1.0, Sereno & Et-
+tion compared to the simulations. A somewhat lower level of                tori 2015). Here we take a different route and combine our high-
+non-thermal pressure is predicted in The300 simulation, in bet-            quality measurements of hydrostatic masses with our robust as-
+ter agreement with our results. We discuss this comparison in              sessment of the universal gas fraction to probe the reliability of
+further detail in Sect. 5.2.                                               Planck SZ masses. Indeed, in case SZ masses are incorrect we
+Article number, page 6 of 12
+                                    D. Eckert et al.: Non-thermal pressure support in X-COP galaxy clusters
+
+Table 2. Hydrostatic gas fraction, non-thermal pressure fraction, and total (bias-corrected) masses at R500 and R200 in X-COP clusters.
+
+      Cluster        MHSE,500         MHSE,200            fgas,500            fgas,200      α(R500 )              α(R200 )             Mtot,500           Mtot,200
+                    [1014 M ]        [1014 M ]                                                [%]                  [%]               [1014 M ]          [1014 M ]
+     A1644         3.48 ± 0.20     6.69 ± 0.58       0.128 ± 0.008      0.126 ± 0.011       < 10.5                < 14.8             3.52+0.20
+                                                                                                                                          −0.22          6.58+0.72
+                                                                                                                                                             −0.59
+     A1795         4.63 ± 0.14     6.53 ± 0.23       0.139 ± 0.005      0.144 ± 0.005       2.2+5.6
+                                                                                                −2.2              6.7+6.0
+                                                                                                                     −4.5             4.77+0.35
+                                                                                                                                          −0.31          6.76+0.37
+                                                                                                                                                             −0.35
+     A2029         8.65 ± 0.29     12.25 ± 0.49      0.141 ± 0.005      0.152 ± 0.006       6.0+5.8
+                                                                                                −5.7             10.4+9.0
+                                                                                                                     −10.4            8.98+0.84
+                                                                                                                                          −0.83         13.29+0.78
+                                                                                                                                                               −0.60
+     A2142         8.95 ± 0.26     13.64 ± 0.50      0.158 ± 0.005      0.168 ± 0.006       15.8+4.5
+                                                                                                 −4.8            18.6+7.1
+                                                                                                                      −8.8           10.50+0.57
+                                                                                                                                            −0.89       16.37+0.95
+                                                                                                                                                               −0.82
+     A2255         5.26 ± 0.34     10.33 ± 1.23      0.153 ± 0.011      0.146 ± 0.018        5.6+6.8
+                                                                                                −5.6              6.1+6.3
+                                                                                                                     −6.1             5.87+0.47
+                                                                                                                                          −0.45         10.70+0.77
+                                                                                                                                                               −0.58
+     A2319         7.31 ± 0.28     10.18 ± 0.52      0.189 ± 0.008      0.237 ± 0.012       43.6+3.5
+                                                                                                 −3.6            52.3+3.4
+                                                                                                                      −4.6           11.44+1.06
+                                                                                                                                            −1.11       20.11+1.14
+                                                                                                                                                               −1.31
+     A3158         4.26 ± 0.18      6.63 ± 0.39      0.145 ± 0.007      0.155 ± 0.010        8.5+5.7
+                                                                                                −5.8             12.5+8.9
+                                                                                                                     −11.6            4.53+0.38
+                                                                                                                                          −0.37          7.34+0.46
+                                                                                                                                                             −0.35
+     A3266         8.80 ± 0.57     15.12 ± 1.44      0.132 ± 0.009      0.108 ± 0.018       < 11.2                < 15.9             8.94+0.60
+                                                                                                                                          −0.53         14.49+3.01
+                                                                                                                                                               −2.39
+      A644         5.66 ± 0.48      7.67 ± 0.73      0.132 ± 0.012      0.139 ± 0.015        3.2+6.4
+                                                                                                −3.2              5.6+6.4
+                                                                                                                     −5.6             6.03+0.62
+                                                                                                                                          −0.69          8.35+0.70
+                                                                                                                                                             −0.52
+      A85          5.65 ± 0.18      8.50 ± 0.36      0.150 ± 0.005      0.159 ± 0.007       10.2+4.9
+                                                                                                 −5.6            11.5+8.9
+                                                                                                                      −9.5            6.22+0.54
+                                                                                                                                          −0.44          9.56+0.53
+                                                                                                                                                             −0.46
+    RXC1825        4.08 ± 0.13      6.15 ± 0.26      0.133 ± 0.005      0.155 ± 0.007        5.1+5.1
+                                                                                                −5.1             15.2+6.4
+                                                                                                                      −7.8            3.94+0.36
+                                                                                                                                          −0.28          6.87+0.40
+                                                                                                                                                             −0.37
+    ZwCl1215       7.66 ± 0.52     13.03 ± 1.23      0.106 ± 0.008      0.092 ± 0.009       < 11.9                < 15.7             7.67+0.59
+                                                                                                                                          −0.47         13.03+1.37
+                                                                                                                                                               −1.12
+     Median                                            0.141+0.006
+                                                            −0.005        0.149+0.009
+                                                                               −0.008        5.9+2.9
+                                                                                                −3.3             10.5+4.3
+                                                                                                                      −5.5
+
+Column description: Cluster name; masses reconstructed using hydrostatic equilibrium (see Ettori et al. 2018); hydrostatic gas
+fractions; non-thermal pressure ratio α = PNT /Ptot ; total masses corrected for non-thermal pressure. Upper limits are at the 90%
+confidence level.
+
+expect the corresponding gas fractions to deviate from the uni-                      0.20
+versal gas fraction, which can be easily tested with our data.                               Universal fgas
+      We retrieved the masses of X-COP clusters from the PSZ2                        0.18    fgas, SZ                                                                A2319
+
+catalog (Planck Collaboration XXVII 2016) and determined the                                 fgas, 1 b = 0.58
+                                                                                             fgas, HSE                         A85
+value of R500,S Z accordingly. We recall that the PSZ2 masses                        0.16                                                           A2029
+                                                                                                                                                    A3266    A2142
+
+were determined by applying a relation between SZ signal Y500                                                             A2255
+                                                                                                              A3158                        ZW1215
+and total mass M500,S Z calibrated using HSE masses (Planck                                                                  A644
+                                                                         fgas, 500
+
+
+
+                                                                                                                  A1795
+
+Collaboration XI 2011). ZwCl 1215 does not have an associ-                           0.14           RXC1825
+
+
+ated mass in PSZ2 because of the mask used (point sources and                               A1644
+
+Galactic cuts, see sec 6.3 in Planck Collaboration XXVII 2016),                      0.12
+thus in this case we use the mass provided in PSZ1. Although
+the SZ mass estimate for ZwCl 1215 is low, there is no con-                          0.10
+taminating point source at radio or sub-millimeter wavelength
+that could bias the SZ signal. The overall consistency between
+the PSZ1 and PSZ2 mass proxy and mass estimates provided                             0.08
+by Planck Collaboration XXIX (2014); Planck Collaboration                                                                                             1015
+XXVII (2016) can however not account for features or structures
+intrinsic to the cluster.
+                                                                                                                      M500, tot [M ]
+      We integrated our gas masses out to R500,S Z and computed            Fig. 6. ICM gas fraction at R500 obtained from our reference hydrostatic-
+the corresponding values of fgas,SZ . We repeated the exercise             based mass model (blue squares) as a function of the total mass cor-
+by correcting the PSZ2 masses assuming a mass bias 1 − b =                 rected for non-thermal pressure support (see Sect. 4.3). The red points
+0.58 ± 0.04, and derived the corresponding gas fractions. In Fig.          show the gas fraction obtained using the Planck PSZ2 masses esti-
+6 we show the gas fractions determined using the hydrostatic               mated from the YS Z − M500 relation (Planck Collaboration XXVII 2016),
+                                                                           whereas the green triangles show the gas fraction one would get by cor-
+equilibrium assumption (see Table 2) as a function of total clus-          recting the PSZ2 masses with a uniform mass bias 1 − b = 0.58 ± 0.04
+ter masses corrected for non-thermal pressure support. We also             (Planck Collaboration XXIV 2016). The dashed magenta line and
+show the gas fractions fgas,SZ measured from the PSZ2 masses               shaded area represent the universal gas fraction estimated in Sect. 3.1.
+and from the masses corrected to reconcile CMB and SZ num-
+ber count cosmology.
+      In Fig. 6 we can clearly see that the gas fraction of X-                 As shown in Fig. 6, measurements of fgas,500 are very sensi-
+COP clusters exceeds the expected value in case the Planck                 tive to the adopted mass calibration and thus they can be used
+masses are assumed to be correct. The median gas fraction is               to assess systematics in the Planck mass calibration. We com-
+ fgas,SZ = 0.150+0.006
+                  −0.004 , i.e ∼ 15% higher than the universal gas         pared our masses corrected for non-thermal pressure support
+fraction. We also notice a trend of increasing gas fraction with           under the assumption of a universal gas fraction (see Table 2)
+cluster mass, which may indicate a mass-dependent bias. Con-               to the Planck SZ-derived masses. In Fig. 7 we show the ra-
+versely, when correcting the SZ masses by a factor 1 − b = 0.58            tio of SZ masses to total masses. We measure a median value
+the gas fraction is substantially lower than expected, with a me-          1−b = M500,SZ /M500,tot = 0.85±0.05 for the Planck mass bias in
+dian value fgas,1−b=0.58 = 0.108±0.006. All objects but one would          our systems. This value may be increased by 3-15% to take Ed-
+lie outside of the allowed range for fgas,univ . Reconciling CMB           dington bias into account (Battaglia et al. 2016). As noted in sev-
+and SZ cosmology would thus imply that the most massive local              eral previous studies (von der Linden et al. 2014; Ettori 2015),
+clusters are missing about a third of their baryons.                       we observe a substantial mass dependence of the SZ mass bias,
+                                                                                                                                      Article number, page 7 of 12
+                                                                     A&A proofs: manuscript no. NTpressure
+
+             1.2                                                                                  reference backward NFW method with the results obtained
+                                                                                                  with methods that do not make any assumption on the shape
+             1.1   A1644
+                                                                                                  of the dark matter halo (forward fitting, Gaussian processes).
+                                                                                                  We find that the results obtained with the various methods
+             1.0           RXC1825                                                                agree within ∼ 5% at a radius of 1.5 Mpc, with the NFW
+M500/M500, tot
+
+
+                                     A3158A1795
+                                                  A2255
+                                                                                                  method returning on average slightly higher masses. This
+             0.9                                                                                  propagates to a systematic uncertainty of ∼ 5% on the hy-
+                                                    A644
+                                                                               A2142              drostatic gas fraction, and thus on the non-thermal pressure
+                                                                                                  fraction.
+             0.8   MSZ/Mtot best fit
+                                                      A85             A2029
+                                                                                       A2319
+                                                                                                – Gas mass measurements: The gas mass of local clusters
+                                                                      A3266
+                   1 b = 0.58 ± 0.04                                                              is one of the quantities that can be most robustly computed
+             0.7   MSZ                                                                            from X-ray observations. Studies on mock X-ray observa-
+                   MHSE
+                                                            ZW1215                                tions of simulated clusters have shown that measurements
+             0.6                                                                                  of Mgas are accurate down to the level of a few percent and
+                                                                                                  exhibit very little scatter, even in situations of violent merg-
+             0.5                                                        1015                      ers (Nagai et al. 2007; Rasia et al. 2011; Eckert et al. 2016).
+                                              M500, tot [M ]                                      The measured gas densities tend to be biased high in clus-
+                                                                                                  ter outskirts by the presence of accreting substructures and
+Fig. 7. Comparison between HSE (blue squares)/SZ (red dots) and total                             large-scale asymmetries (Mathiesen et al. 1999; Nagai & Lau
+masses corrected for non-thermal pressure as a function of mass. The                              2011; Roncarelli et al. 2013), which introduces a systematic
+magenta line and shaded area show our best fit to the SZ data with a                              uncertainty of 5-10% on the true gas mass at R200 . However,
+power law, whereas the green area displays the expectation for a con-                             thanks to the use of the azimuthal median as a robust esti-
+stant mass bias 1 − b = 0.58 ± 0.04.                                                              mator of the surface brightness (Eckert et al. 2015), the bias
+                                                                                                  introduced by infalling substructures has been taken into ac-
+                                                                                                  count in our study. Residual clumping on scales smaller than
+with the most massive objects (M500 ∼ 1015 M ) being biased at
+                                             14                                                   the resolution of our study (. 20 kpc) can still introduce a
+the ∼
+    HydraA25% level, while for M500 ∼ 4 × 10    M SZ masses appear
+                                                                                                  slight positive bias in our estimates of Mgas , however we ex-
+to be unbiased. For comparison, in Fig. 7 we also show the ratio
+                                                                                                  pect the residual effect to be less than a few percent.
+between our direct HSE measurements and the masses corrected
+for non-thermal pressure support. In the latter case we find that                               – Calibration uncertainties: Temperature measurements are
+with the notable exception of A2319 our masses require little                                     known to be affected by systematics of the order of ∼ 15% in
+correction, with a median bias M500,HSE /M500,tot = 0.94 ± 0.04.                                  the high-temperature regime because of uncertainties in the
+    To assess the dependence of the Planck bias on the mass, we                                   calibration of the effective area of the instrument (Nevalainen
+describe the relation between SZ mass and total mass as a power                                   et al. 2010; Schellenberger et al. 2015), with Chandra re-
+law and use the Bayesian mixture model code linmix_err                                            turning systematically higher gas temperatures than XMM-
+(Kelly 2007) to fit the data. The resulting parameters read                                       Newton. If Chandra temperatures are correct, our masses
+                                                                                                  should be underestimated by ∼ 15%, meaning that our esti-
+ MSZ                           Mtot
+                                      !−0.21±0.12                                                 mates of the non-thermal pressure should be overestimated.
+         = (0.87 ± 0.05)                          ,           (11)                                However, we note that our mass reconstruction makes use
+ Mtot                     5 × 1014 M                                                              of joint XMM-Newton and Planck data. In the radial range
+i.e. a mass dependence is detected at ∼ 2σ. The best-fitting curve                                where data from both instruments are available, we do not
+and error envelope are displayed in Fig. 7. A high, constant bias                                 observe a systematic offset between X-ray and SZ pressure
+1 − b = 0.58 ± 0.04 is rejected at the 4.4σ level for the specific                                (see also Adam et al. 2017). While effective area calibration
+case of the 12 X-COP clusters. Note that the value estimated                                      introduces some uncertainty in the recovered temperature,
+here for the Planck mass bias encompasses all possible kinds of                                   its effect on the gas density and gas mass is mild. Bartalucci
+biases in the original Planck mass calibration (not restricted to                                 et al. (2017) compared XMM-Newton and Chandra recon-
+hydrostatic bias), as the gas fractions computed using SZ masses                                  structions of gas density profiles and gas masses and found
+were calculated using the original M500 − YS Z relation.                                          an exquisite agreement between the two missions at the level
+                                                                                                  of 2.5%.
+                                                                                                – Helium sedimentation: Several works suggest that Helium
+5. Discussion                                                                                     nuclei can sediment within cluster cores (e.g. Ettori & Fabian
+                                                                                                  2006; Markevitch 2007; Peng & Nagai 2009). He abundance
+5.1. Systematic uncertainties
+                                                                                                  can not be directly measured in the ICM, and it is here as-
+Beyond uncertainties associated with the determination of the                                     sumed. We cannot exclude that some sedimentation under
+universal gas fraction (see Sect. 3.1), our results can also be af-                               the effect of the gravitational potential occurred and is bi-
+fected by potential systematics in our measurements of fgas,HSE .                                 asing our estimates of the gas mass and total hydrostatic
+Here we review potential sources of systematic uncertainties.                                     mass (e.g. Ettori & Fabian 2006). However, theoretical mod-
+                                                                                                  els predict that any possible rise in the He abundance by up
+   – Reconstruction of MHSE : As described in Sect. 2.2, we                                       to about 50 per cent over the cosmic value (Peng & Nagai
+     adopt as our reference mass reconstruction method the back-                                  2009) induce a bias of a few per cent restricted to the inner
+     ward NFW method (Ettori et al. 2010), which assumes that                                     (< R2500 ) cluster regions, where sedimentation is more effec-
+     the mass profile can be accurately described by a NFW para-                                  tive, thus not affecting our conclusion at R ≥ R500 .
+     metric form. However, this method may be inaccurate if the
+     true mass distribution differs substantially from NFW. In Et-                                We note that most of the effects discussed here are potential
+     tori et al. (2018) we compare the results obtained with our                               positive biases in the reconstruction of fgas,HSE . If present, the
+Article number, page 8 of 12
+                                      D. Eckert et al.: Non-thermal pressure support in X-COP galaxy clusters
+
+measured hydrostatic gas fraction is thus more likely to be biased         between the medium and the denser and colder substructure is
+high, which would even lower the required non-thermal pressure             substantially larger. As a result, infalling motions get virialized
+and hydrostatic mass bias.                                                 on shorter timescales and the non-thermal pressure fraction is
+                                                                           reduced.
+                                                                               It should be stressed that the estimate of the non-thermal
+5.2. Implications on the thermalization of the ICM
+                                                                           pressure support in the simulated ICM is by itself non-trivial,
+As described in Sect. 4.1, our gas fraction data imply a low level         owing to the complexity of gas motions in the stratified cluster
+of non-thermal pressure in our population, α = PNT /Ptot = 6%              atmosphere. While all modern simulations overall agree on the
+and 10% at R500 and R200 , respectively. If we ascribe the excess          predicted radial trend of turbulent motions moving from the clus-
+gas fraction entirely to residual isotropic gas motions (Eq. 10),          ter centers to the periphery (e.g. Vazza et al. 2011; Nelson et al.
+we can relate the measured non-thermal pressure to the velocity            2014; Miniati 2014; Biffi et al. 2016), their quantitative answer
+dispersion by rewriting Eq. 10 as                                          may change depending on the adopted filtering techniques to dis-
+                                                                           entangle the various velocity components of the ICM (e.g. bulk
+σ2gas                  3 α(r)                                              motions, shock jumps and small-scale chaotic motions), which
+        = M23D (r) =              ,                                (12)    is particularly crucial in cluster outskirts (e.g. Vazza et al. 2017;
+ c2s                   γ 1 − α(r)
+                                                                           Schmidt et al. 2017). For example, if motions along the radial di-
+with c s = (γkT/µm p )1/2 the sound speed in the medium, M3D               rection are predominantly directed inwards, the missing pressure
+the Mach number of residual gas motions, γ = 5/3 the polytropic            estimated with radial averages in simulations may overestimate
+index, and α(r) the functional form for PNT /Ptot (r) following            the non-thermal pressure recovered here using the method de-
+the definition of Eq. 9. The values estimated here thus imply an           vised in Sect. 3.2. More detailed comparisons using exactly the
+average Mach number at R500                                                same technique as used here are necessary to test this hypothesis.
+
+M3D,500 = 0.33+0.08
+              −0.12 ,                                              (13)    5.3. Implications for cosmology
+i.e. isotropic gas motions in the X-COP cluster population are             The results presented in Sect. 4.3 have important implications
+clearly subsonic. This value broadly agrees with the Mach num-             for the use of galaxy clusters as cosmological probes. They im-
+bers estimated from the amplitude of relative ICM fluctuations             ply that galaxy cluster masses derived under the assumption of
+(Hofmann et al. 2016; Zhuravleva et al. 2015; Eckert et al.                hydrostatic equilibrium in a fully thermalized ICM require lit-
+2017b).                                                                    tle correction from non-thermal pressure support, provided that
+     As shown in Fig. 5, our values are somewhat smaller than the          the 12 X-COP clusters are representative of the Planck popu-
+predictions of non-radiative adaptive mesh refinement (AMR)                lation. This conclusion is further supported by our direct com-
+simulations by Nelson et al. (2014) and closer to the curves               parison of hydrostatic and weak lensing masses when available
+extracted from the The300 simulation with the smoothed par-                (see Sect. 4 of Ettori et al. 2018), which finds a median ra-
+ticle hydrodynamics (SPH) code GADGET-3. While in the past                 tio M500,HSE /M500,WL = 0.87 ± 0.10 and M200,HSE /Mrm200,WL =
+legacy SPH codes (employing a typically large artificial viscos-           0.86 ± 0.13 for the 6 X-COP clusters with available weak lens-
+ity to handle shocks) tended to predict a more clumped and inho-           ing measurements, fully consistent with the non-thermal pres-
+mogeneous ICM than grid codes (Rasia et al. 2014), we observe              sure and the mass ratio M500,HSE /M500,tot = 0.94 ± 0.04 estimated
+the opposite here.                                                         from the universal gas fraction method used here.
+     A few possible reasons can be given for this difference. First,            At face value, our results strongly disfavor a large hydrostatic
+to better reproduce standard hydrodynamics tests, The300 simu-             bias as the origin of the tension in the Ωm − σ8 plane between
+lation incorporates a number of advanced features compared to              SZ cluster counts and primary CMB. As shown in Fig. 6, our hy-
+previous SPH codes, including a higher-order Wendland C 4 ker-             drostatic gas fraction measurements are very close to the values
+nel function, the implementation of a time-dependent artificial            obtained with the Planck mass calibration, although we note a
+viscosity scheme, and artificial conduction (Beck et al. 2016).            mildly significant trend of increasing bias in the Planck calibra-
+Compared to previous SPH codes, the SPH scheme included in                 tion with cluster mass. However, the median mass of the systems
+The300 leads to a more efficient mixing of the gas phases with             in the Planck cosmological sample is ∼ 5 × 1014 M , where our
+different entropies. This promotes a faster thermalization of the          analysis shows that the SZ masses are biased only at the 10%
+accreting gas and of small merging substructures, thus reducing            level. Although quantifying the exact impact of our results on
+the non-thermal pressure fraction. On top of that, The300 sim-             the cosmological parameters is beyond the scope of this paper, it
+ulation implements a wide range of baryonic processes (includ-             is fair to say that our study favors lower values of σ8 compared
+ing radiative cooling, star formation, and AGN and supernova               to primary CMB, similar to what was obtained from essentially
+feedback) whereas the predictions of Nelson et al. (2014) are ex-          all cluster count (Vikhlinin et al. 2009; de Haan et al. 2016) and
+tracted from non-radiative simulations. The balance of cooling             weak lensing tomography studies (Heymans et al. 2013; Hilde-
+and AGN feedback implemented in these simulations substan-                 brandt et al. 2017).
+tially changes the appearance of galaxy- and group-scale halos                  Obviously, the conclusions reached here rest on the premise
+by removing the most structured phase of the ICM from the X-               that our determination of the universal gas fraction is accurate.
+ray emitting phase and by increasing their gas entropy, which              As shown in Fig. 6, a large, constant hydrostatic bias would im-
+leads to smoother and flatter density profiles compared to simu-           ply that the most massive galaxy clusters are missing about a
+lations without powerful feedback mechanisms. The AGN activ-               third of their baryons. We also note that our estimate of the stellar
+ity provides extra energy to the gas residing in the shallow po-           fraction (Sect. 3.1.2) lies on the high side of the published mea-
+tential well of small systems, further enhancing its mixing with           surements (see Fig. 3), thus our estimate of fgas is probably on
+the cluster ICM during, or immediately after, a merger. The sub-           the low side. Extreme AGN feedback would be required to push
+sequent clumping factor is thus reduced compared to the non-               a substantial fraction of the baryons outside of R200 , which would
+radiative case (Planelles et al. 2017) where the entropy difference        lead to high-entropy cores and large offsets from the observed
+                                                                                                                    Article number, page 9 of 12
+                                                 A&A proofs: manuscript no. NTpressure
+
+scaling relations (e.g. Le Brun et al. 2014). High-resolution hy-         are slightly underestimated. Comparing PSZ2 masses with
+drodynamic simulations testing different AGN feedback models              our masses corrected for non-thermal pressure support, we
+have shown that the feedback must be gentle and tightly self-             infer a median bias 1 − b = 0.85 ± 0.05. As noted in pre-
+regulated (e.g. Gaspari et al. 2014), thus affecting only the re-         vious studies (Ettori 2015; von der Linden et al. 2014), the
+gions within ∼ 0.1R500 . An extreme thermal/Sedov blast (∼ 1062           bias appears to depend slightly on cluster mass, MSZ /Mtot ∝
+                                                                             −0.21±0.12
+erg) would be required to evacuate a substantial fraction of the          Mtot          .
+gas away from R500 , which would transform any CC cluster into          – If instead we assume that the PSZ2 masses are biased low by
+a NCC cluster, with cooling times well above the Hubble time.             a constant factor MSZ /Mtrue = 0.58±0.04 to reconcile Planck
+The gentle preservation of many cool cores up to redshift ∼ 2             primary CMB and SZ cluster counts, the gas fraction of X-
+(e.g. McDonald et al. 2017) rules out the strong and impulsive            COP clusters would fall short of the universal baryon frac-
+AGN feedback scenario. In the absence of evidence for such ex-            tion (median fgas,1−b=0.58 = 0.108 ± 0.006), implying that the
+treme phenomena, we conclude for the time being that our esti-            most massive local clusters would be missing about a third
+mate of the universal gas fraction does not need to be revised.           of their baryons. This would pose a serious challenge to our
+                                                                          understanding of cluster formation processes and feedback
+                                                                          energetics.
+6. Conclusion
+                                                                       Acknowledgements. X-COP data products are available for download on
+In this paper, we presented high-precision measurements of the         https://www.astro.unige.ch/xcop. We thank Ricardo Herbonnet and Henk Hoek-
+hydrostatic gas fraction from the X-COP project, a sample of 13        stra for providing us their weak-lensing results in advance of publication, and
+clusters with high-quality X-ray and SZ data from XMM-Newton           the anonymous referee for helpful comments. The research leading to these re-
+and Planck. The statistical uncertainties in fgas,HSE are less than    sults has received funding from the European Union’s Horizon 2020 Programme
+                                                                       under the AHEAD project (grant agreement n. 654215). Based on observations
+10% in all cases and measurements at R200 are achieved for 10          obtained with XMM-Newton, an ESA science mission with instruments and con-
+out of 13 objects without requiring any extrapolation. We used         tributions directly funded by ESA Member States and NASA. S.E. acknowledges
+our measurements to estimate the level of non-thermal pressure         financial contribution from the contracts NARO15 ASI-INAF I/037/12/0, ASI
+in our sample. Our results can be summarized as follows.               2015-046-R.0 and ASI-INAF n.2017-14-H.0. F.V. acknowledges financial sup-
+                                                                       port from the ERC Starting Grant "MAGCOW", no.714196. M.G. is supported
+                                                                       by NASA through Einstein Postdoctoral Fellowship Award Number PF5-160137
+ – Combining a large set of clusters simulated with a state-of-        issued by the Chandra X-ray Observatory Center, which is operated by the SAO
+   the-art SPH code with literature measurements of the stel-          for and on behalf of NASA under contract NAS8-03060. Support for this work
+   lar fraction in observed clusters, we robustly estimate the         was also provided by Chandra grant GO7-18121X. E.R acknowledge the Ex-
+   universal gas fraction of massive clusters to be fgas,500 =         aNeSt and Euro Exa projects, funded by the European Union’s Horizon 2020
+                                                                       research and innovation programme under grant agreement No 671553 and No
+   0.131 ± 0.009 and fgas,200 = 0.134 ± 0.007 at R500 and R200 ,       754337 and financial contribution from the agreement ASI-INAF n.2017-14-H.0.
+   respectively. The uncertainties quoted here include both sta-       H.B. acknowledges financial support by ASI Grant 2016-24-H.0.
+   tistical uncertainties and scatter in the simulated cluster pop-
+   ulation.
+ – Our hydrostatic gas fractions are on average consistent with
+   the estimated universal gas fraction, lying just 7% and 11%         References
+   above the universal value at R500 and R200 , respectively, with     a, H. 2017, ArXiv e-prints [arXiv:1711.00240]
+   12% scatter.                                                        Ackermann, M., Ajello, M., Albert, A., et al. 2014, ApJ, 787, 18
+ – To determine the integrated level of non-thermal pressure           Adam, R., Arnaud, M., Bartalucci, I., et al. 2017, A&A, 606, A64
+                                                                       Andreon, S. 2010, MNRAS, 407, 263
+   support, we modified the hydrostatic equilibrium equation to        Andreon, S. 2015, A&A, 575, A108
+   incorporate the contribution of a non-thermal pressure term,        Bartalucci, I., Arnaud, M., Pratt, G. W., et al. 2017, A&A, 608, A88
+   which we describe using the parametric function of Nelson           Battaglia, N., Bond, J. R., Pfrommer, C., & Sievers, J. L. 2012, ApJ, 758, 74
+   et al. (2014) (see Sect. 3.2). The parameters of the non-           Battaglia, N., Leauthaud, A., Miyatake, H., et al. 2016, J. Cosmology Astropart.
+   thermal pressure component were then determined by com-                Phys., 8, 013
+                                                                       Beck, A. M., Murante, G., Arth, A., et al. 2016, MNRAS, 455, 2110
+   paring the measured hydrostatic gas fraction profiles with          Biffi, V., Borgani, S., Murante, G., et al. 2016, ApJ, 827, 112
+   the universal gas fraction. Our procedure leads to revised          Brunetti, G. & Jones, T. W. 2014, International Journal of Modern Physics D,
+   mass measurements that incorporate the contribution of non-            23, 1430007
+   thermal pressure.                                                   Budzynski, J. M., Koposov, S. E., McCarthy, I. G., & Belokurov, V. 2014, MN-
+                                                                          RAS, 437, 1362
+ – With the notable exception of A2319 (Ghirardini et al. 2017),       Cavagnolo, K. W., Donahue, M., Voit, G. M., & Sun, M. 2009, ApJS, 182, 12
+   the required levels of non-thermal pressure are mild, with          Chiu, I., Mohr, J. J., McDonald, M., et al. 2017, MNRAS, submitted
+   median values PNT /Ptot (R500 ) ∼ 6% and PNT /Ptot (R200 ) ∼           [arXiv:1711.00917]
+   10%, with missing clusters possibly raising the non-thermal         Coupon, J., Arnouts, S., van Waerbeke, L., et al. 2015, MNRAS, 449, 1352
+   pressure fraction to a maximum of 13% at R500 . These values        de Haan, T., Benson, B. A., Bleem, L. E., et al. 2016, ApJ, 832, 95
+                                                                       Eckert, D., Ettori, S., Coupon, J., et al. 2016, A&A, 592, A12
+   are lower than the predictions of numerical simulations (Nel-       Eckert, D., Ettori, S., Pointecouteau, E., et al. 2017a, Astronomische
+   son et al. 2014; Biffi et al. 2016), possibly implying a faster        Nachrichten, 338, 293
+   thermalization of the kinetic energy in the real population         Eckert, D., Gaspari, M., Vazza, F., et al. 2017b, ApJ, 843, L29
+   compared to hydrodynamical simulations.                             Eckert, D., Roncarelli, M., Ettori, S., et al. 2015, MNRAS, 447, 2198
+                                                                       Edge, A. C., Wilman, R. J., Johnstone, R. M., et al. 2002, MNRAS, 337, 49
+ – Assuming that the residual non-thermal pressure can be en-          Ettori, S. 2015, MNRAS, 446, 2629
+   tirely ascribed to random gas motions, we infer an average          Ettori, S. & Fabian, A. C. 2006, MNRAS, 369, L42
+   Mach number M3D = 0.33+0.08    −0.12 , implying that residual ki-   Ettori, S., Gastaldello, F., Leccardi, A., et al. 2010, A&A, 524, A68
+   netic motions are clearly subsonic.                                 Evrard, A. E. 1997, MNRAS, 292, 289
+ – We used our masses corrected for the effects of non-thermal         Foreman-Mackey, D., Hogg, D. W., Lang, D., & Goodman, J. 2013, PASP, 125,
+                                                                          306
+   pressure to test the accuracy of Planck SZ masses in our sys-       Fusco-Femiano, R. & Lapi, A. 2013, ApJ, 771, 102
+   tems. We find that PSZ2 masses lead to an average gas frac-         Fusco-Femiano, R. & Lapi, A. 2017, ArXiv e-prints [arXiv:1710.08700]
+   tion fgas,SZ = 0.150±0.005 at R500 , indicating that SZ masses      Gaspari, M., Brighenti, F., Temi, P., & Ettori, S. 2014, ApJ, 783, L10
+
+Article number, page 10 of 12
+                                         D. Eckert et al.: Non-thermal pressure support in X-COP galaxy clusters
+
+Ghirardini, V., Ettori, S., Eckert, D., et al. 2017, A&A, submitted
+   [arXiv:1708.02954]
+Giodini, S., Pierini, D., Finoguenov, A., et al. 2009, ApJ, 703, 982
+Gonzalez, A. H., Sivanandam, S., Zabludoff, A. I., & Zaritsky, D. 2013, ApJ,
+   778, 14
+Gonzalez, A. H., Zaritsky, D., & Zabludoff, A. I. 2007, ApJ, 666, 147
+Heymans, C., Grocutt, E., Heavens, A., et al. 2013, MNRAS, 432, 2433
+Hildebrandt, H., Viola, M., Heymans, C., et al. 2017, MNRAS, 465, 1454
+Hinshaw, G., Larson, D., Komatsu, E., et al. 2013, ApJS, 208, 19
+Hitomi Collaboration. 2016, Nature, 535, 117
+Hoekstra, H., Herbonnet, R., Muzzin, A., et al. 2015, MNRAS, 449, 685
+Hofmann, F., Sanders, J. S., Nandra, K., Clerc, N., & Gaspari, M. 2016, A&A,
+   585, A130
+Huber, B., Tchernin, C., Eckert, D., et al. 2013, A&A, 560, A64
+Hurier, G., Macías-Pérez, J. F., & Hildebrandt, S. 2013, A&A, 558, A118
+Kawaharada, M., Okabe, N., Umetsu, K., et al. 2010, ApJ, 714, 423
+Kelly, B. C. 2007, ApJ, 665, 1489
+Khatri, R. & Gaspari, M. 2016, MNRAS, 463, 655
+Kravtsov, A. V. & Borgani, S. 2012, ARA&A, 50, 353
+Kravtsov, A. V., Nagai, D., & Vikhlinin, A. A. 2005, ApJ, 625, 588
+Laganá, T. F., Martinet, N., Durret, F., et al. 2013, A&A, 555, A66
+Lau, E. T., Kravtsov, A. V., & Nagai, D. 2009, ApJ, 705, 1129
+Le Brun, A. M. C., McCarthy, I. G., Schaye, J., & Ponman, T. J. 2014, MNRAS,
+   441, 1270
+Leauthaud, A., Tinker, J., Bundy, K., et al. 2012, ApJ, 744, 159
+Lin, Y.-T. & Mohr, J. J. 2004, ApJ, 617, 879
+Mantz, A. B., Allen, S. W., Morris, R. G., et al. 2014, MNRAS, 440, 2077
+Markevitch, M. 2007, ArXiv e-prints [arXiv:0705.3289]
+Mathiesen, B., Evrard, A. E., & Mohr, J. J. 1999, ApJ, 520, L21
+McDonald, M., Allen, S. W., Bayliss, M., et al. 2017, ApJ, 843, 28
+Miniati, F. 2014, ApJ, 782, 21
+Montes, M. & Trujillo, I. 2014, ApJ, 794, 137
+Muldrew, S. I., Hatch, N. A., & Cooke, E. A. 2015, MNRAS, 452, 2528
+Nagai, D. & Lau, E. T. 2011, ApJ, 731, L10+
+Nagai, D., Vikhlinin, A., & Kravtsov, A. V. 2007, ApJ, 655, 98
+Navarro, J. F., Frenk, C. S., & White, S. D. M. 1996, ApJ, 462, 563
+Nelson, K., Lau, E. T., & Nagai, D. 2014, ApJ, 792, 25
+Nelson, K., Rudd, D. H., Shaw, L., & Nagai, D. 2012, ApJ, 751, 121
+Nevalainen, J., David, L., & Guainazzi, M. 2010, A&A, 523, A22
+Peng, F. & Nagai, D. 2009, ApJ, 705, L58
+Planck Collaboration V. 2013, A&A, 550, A131
+Planck Collaboration XI. 2011, A&A, 536, A11
+Planck Collaboration XIII. 2016, A&A, 594, A13
+Planck Collaboration XXIV. 2016, A&A, 594, A24
+Planck Collaboration XXIX. 2014, A&A, 571, A29
+Planck Collaboration XXVII. 2016, A&A, 594, A27
+Planelles, S., Borgani, S., Dolag, K., et al. 2013, MNRAS, 431, 1487
+Planelles, S., Fabjan, D., Borgani, S., et al. 2017, MNRAS, 467, 3827
+Rasia, E., Borgani, S., Murante, G., et al. 2015, ApJ, 813, L17
+Rasia, E., Ettori, S., Moscardini, L., et al. 2006, MNRAS, 369, 2013
+Rasia, E., Lau, E. T., Borgani, S., et al. 2014, ApJ, 791, 96
+Rasia, E., Mazzotta, P., Evrard, A., et al. 2011, ApJ, 729, 45
+Roncarelli, M., Ettori, S., Borgani, S., et al. 2013, MNRAS, 432, 3030
+Salomé, P. & Combes, F. 2003, A&A, 412, 657
+Schellenberger, G., Reiprich, T. H., Lovisari, L., Nevalainen, J., & David, L.
+   2015, A&A, 575, A30
+Schmidt, W., Byrohl, C., Engels, J. F., Behrens, C., & Niemeyer, J. C. 2017,
+   MNRAS, 470, 142
+Sembolini, F., Elahi, P. J., Pearce, F. R., et al. 2016a, MNRAS, 459, 2973
+Sembolini, F., Yepes, G., Pearce, F. R., et al. 2016b, MNRAS, 457, 4063
+Sereno, M. & Ettori, S. 2015, MNRAS, 450, 3633
+Shi, X., Komatsu, E., Nagai, D., & Lau, E. T. 2016, MNRAS, 455, 2936
+Shi, X., Komatsu, E., Nelson, K., & Nagai, D. 2015, MNRAS, 448, 1020
+Smith, G. P., Mazzotta, P., Okabe, N., et al. 2016, MNRAS, 456, L74
+Smith, R. K., Brickhouse, N. S., Liedahl, D. A., & Raymond, J. C. 2001, ApJ,
+   556, L91
+Snowden, S. L., Mushotzky, R. F., Kuntz, K. D., & Davis, D. S. 2008, A&A,
+   478, 615
+Springel, V. 2005, MNRAS, 364, 1105
+Tchernin, C., Eckert, D., Ettori, S., et al. 2016, A&A, 595, A42
+van der Burg, R. F. J., Hoekstra, H., Muzzin, A., et al. 2015, A&A, 577, A19
+Vazza, F., Brunetti, G., Gheller, C., Brunino, R., & Brüggen, M. 2011, A&A,
+   529, A17+
+Vazza, F., Brunetti, G., Kritsuk, A., et al. 2009, A&A, 504, 33
+Vazza, F., Jones, T. W., Brüggen, M., et al. 2017, MNRAS, 464, 210
+Vikhlinin, A., Kravtsov, A. V., Burenin, R. A., et al. 2009, ApJ, 692, 1060
+von der Linden, A., Mantz, A., Allen, S. W., et al. 2014, MNRAS, 443, 1973
+White, S. D. M., Navarro, J. F., Evrard, A. E., & Frenk, C. S. 1993, Nature, 366,
+   429
+Zhuravleva, I., Churazov, E., Arévalo, P., et al. 2015, MNRAS, 450, 4184
+Zibetti, S., White, S. D. M., Schneider, D. P., & Brinkmann, J. 2005, MNRAS,
+   358, 949
+Zu, Y. & Mandelbaum, R. 2015, MNRAS, 454, 1161
+
+
+                                                                                                                   Article number, page 11 of 12
+                                                 A&A proofs: manuscript no. NTpressure
+
+Appendix A: The case of A2142
+For one cluster in our sample (A2142), in Tchernin et al. (2016)
+we published a similar analysis presenting the gas fraction of this
+system out to R200 based on a joint XMM-Newton and Planck
+reconstruction. Noting the convergence of fgas,HSE close to the
+universal baryon, we concluded that this system requires a mod-
+est level of non-thermal pressure, in agreement with the results
+presented here (15% and 18% at R500 and R200 , respectively).
+Recently, Fusco-Femiano & Lapi (2017) re-analyzed our data
+and came to the contradicting conclusion that non-thermal pres-
+sure support at the level of ∼ 30% is required in the outskirts of
+A2142. To reach this conclusion, Fusco-Femiano & Lapi (2017)
+neglected the Planck constraints while fitting their model and
+extrapolated their fitted temperature profile beyond the range ac-
+cessible to XMM-Newton. However, as shown in Appendix D
+of Tchernin et al. (2016), the outermost spectral measurement
+in A2142 is affected by the presence of accreting substructures
+which bias the measured temperature low. As a result, the ex-
+trapolation of the model fitted by Fusco-Femiano & Lapi (2017)
+underestimates the Planck data beyond R500 (see their Fig. 1),
+and their hydrostatic mass reconstruction is biased low. This is-
+sue highlights the need to use all the available information in a
+self-consistent manner.
+
+
+
+
+Article number, page 12 of 12
+
