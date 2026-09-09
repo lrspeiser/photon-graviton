@@ -1,0 +1,26 @@
+{
+  "scope": "Acquire and audit observer-time DES photometry for a later exploratory time-dilation analysis. No exponent estimation or sample optimization in this pass.",
+  "exposure": "DES events and published/derived timing results have already been examined; raw-photometry access does not create a blind validation sample.",
+  "release_repository": "des-science/DES-SN5YR",
+  "release_commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+  "method_repository": "ryanwhite1/DES-Time-Dilation",
+  "method_commit": "8ebec41f9a4c82dbccd0eaea700ac4ba91e5baca",
+  "inputs": [
+    "0_DATA/README.md",
+    "0_DATA/DES-SN5YR_DES/DES-SN5YR_DES.README",
+    "0_DATA/DES-SN5YR_DES/DES-SN5YR_DES_HEAD.FITS.gz",
+    "0_DATA/DES-SN5YR_DES/DES-SN5YR_DES_PHOT.FITS.gz",
+    "3_CLASSIFICATION/DES_classification.csv",
+    "3_CLASSIFICATION/README.md"
+  ],
+  "method_inputs": ["Methods.py", "LICENSE"],
+  "data_policy": [
+    "Read measurement times, fluxes, errors, bands, identifiers, pointers and documented redshift provenance; do not use cosmological distance moduli, expansion-derived ages or standard-cosmology simulations as observational truth.",
+    "No time coordinate is divided by 1+z during acquisition.",
+    "Measured wavelength matching through redshift is distinct from assuming temporal dilation.",
+    "SALT-derived peak times, amplitudes, classification and selection are methodological dependencies to audit, not automatically model-free inputs.",
+    "Do not execute downloaded analysis code; inspect it as provenance.",
+    "Keep large original products in ignored cache; commit pinned retrieval instructions, hashes and audit only.",
+    "Before inference, freeze sample cuts, wavelength matching, nuisance model, exponent grid, injection tests and event-level uncertainty resampling. Do not treat shared reference curves as independent events."
+  ]
+}

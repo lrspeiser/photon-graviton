@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [populated companion bath](../research_work/results/companion-bath/derivation.md). The same finite-band interaction now includes stimulated emission and inverse absorption from a fixed isotropic companion bath. Reverse transfer can reduce or reverse photon energy loss; both directions increase the local energy-jump noise, including a channel whose mean drift is unchanged. Fixed finite bath moments cannot cancel the full-band color dependence. Thermal soft modes also require an infrared event-count treatment despite finite energy moments. No bath history or permanent store is established.
+Latest diagnostic: [observer-time input acquisition](../research_work/results/timing-foundation/report.md). Pinned DES observer-time inputs are acquired and audited: 19,706 transients and 1,779,030 photometry rows, including an inventory of 353 spectroscopically labelled SNe Ia. No time rescaling, sample optimization or exponent fit was applied. The published direct variable-exponent test is distinct from the recovered time-scaled width products; neither is dismissed or rebranded as a new blind measurement. Next freeze selection, wavelength matching, normalization, injection tests and correlated uncertainty handling.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

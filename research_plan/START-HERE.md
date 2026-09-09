@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [populated companion bath](../research_work/results/companion-bath/derivation.md). The same finite-band interaction now includes stimulated emission and inverse absorption from a fixed isotropic companion bath. Reverse transfer can reduce or reverse photon energy loss; both directions increase the local energy-jump noise, including a channel whose mean drift is unchanged. Fixed finite bath moments cannot cancel the full-band color dependence. Thermal soft modes also require an infrared event-count treatment despite finite energy moments. No bath history or permanent store is established.
+The latest research step is [observer-time input acquisition](../research_work/results/timing-foundation/report.md). Pinned DES observer-time inputs are acquired and audited: 19,706 transients and 1,779,030 photometry rows, including an inventory of 353 spectroscopically labelled SNe Ia. No time rescaling, sample optimization or exponent fit was applied. The published direct variable-exponent test is distinct from the recovered time-scaled width products; neither is dismissed or rebranded as a new blind measurement. Next freeze selection, wavelength matching, normalization, injection tests and correlated uncertainty handling.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -26,6 +26,7 @@ The latest calculation is [populated companion bath](../research_work/results/co
 | [Dispersive companion](../research_work/results/dispersive-companion/derivation.md) | Finite emission band, small packets/angles and residual color dependence |
 | [Electric/magnetic balance](../research_work/results/electromagnetic-balance/derivation.md) | Polarization decomposition, exact rate basis and broadband cancellation limit |
 | [Companion bath](../research_work/results/companion-bath/derivation.md) | Inverse transitions, net transfer, energy noise and soft-mode requirements |
+| [Timing inputs](../research_work/results/timing-foundation/report.md) | Pinned calibrated photometry, input hashes and methodological dependencies |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

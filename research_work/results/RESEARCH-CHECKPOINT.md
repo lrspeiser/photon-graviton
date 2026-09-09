@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [populated companion bath](companion-bath/derivation.md). The same finite-band interaction now includes stimulated emission and inverse absorption from a fixed isotropic companion bath. Reverse transfer can reduce or reverse photon energy loss; both directions increase the local energy-jump noise, including a channel whose mean drift is unchanged. Fixed finite bath moments cannot cancel the full-band color dependence. Thermal soft modes also require an infrared event-count treatment despite finite energy moments. No bath history or permanent store is established.
+Latest result: [observer-time input acquisition](timing-foundation/report.md). Pinned DES observer-time inputs are acquired and audited: 19,706 transients and 1,779,030 photometry rows, including an inventory of 353 spectroscopically labelled SNe Ia. No time rescaling, sample optimization or exponent fit was applied. The published direct variable-exponent test is distinct from the recovered time-scaled width products; neither is dismissed or rebranded as a new blind measurement. Next freeze selection, wavelength matching, normalization, injection tests and correlated uncertainty handling.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -30,6 +30,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Dispersive companion | An action-derived finite band permits small packets and deflections | At least linear color dependence in full-band regime; no complete theory |
 | Electric/magnetic balance | Two nonnegative unpolarized rate shapes and finite-band flatness limit | No exact achromatic drift in the tested constant-coupling family |
 | Companion bath | Forward/inverse energy moments, detailed balance and soft-mode event counts | Fixed isotropic occupation does not repair achromaticity; bath evolution and storage unresolved |
+| Timing inputs | 8 pinned public files and FITS row/pointer audit; no time rescaling | No new exponent fit, selected sample or blind validation |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

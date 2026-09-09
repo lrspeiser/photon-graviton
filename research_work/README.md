@@ -34,3 +34,7 @@ Existing nonempty output directories are refused. Script failures or integrity f
 The `PHOTON_GRAVITON_RESULTS` environment variable is set by the runner for its child scripts. Individual scripts may require preceding outputs; use the entry point to preserve their order. No network download is required for these numerical runs after Python dependencies are installed.
 
 The diagnostics' mathematical logic and original result records are preserved. Only current scripts were made portable; old paper builders and historical checkpoints retain their documented environment assumptions. Archived JSON containing paths describes the original calculation, not an active background process.
+
+## Optional timing-data acquisition
+
+The [timing input audit](results/timing-foundation/report.md) records pinned observer-time DES products and a separate network acquisition command. Large files remain in the ignored generated cache. Its Astropy dependency is listed alongside the script; it is not an additional default physics job or a timing fit.
