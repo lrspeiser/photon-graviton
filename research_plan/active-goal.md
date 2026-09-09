@@ -1,6 +1,10 @@
-# Active research goal: cumulative-time and companion prediction program
+# Active research goal: accurate redshift prediction within the cumulative-time program
 
-Current synthesis: [academic working draft v0.1](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
+Current synthesis: [academic working draft v0.2](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
+
+## Immediate priority, 9 September 2026
+
+The user now prioritizes tuning and testing the redshift prediction against observations. Follow [the redshift priority plan](redshift-priority.md) before additional capture/halo research. The next calculation is a residual/input audit, followed by a small frozen candidate comparison and independent validation. The whole theory remains incomplete.
 
 ## User direction, 9 September 2026
 
@@ -33,7 +37,7 @@ Completion requires a consistent theory and declared observational tests, not si
 
 ## App goal state
 
-The app now reports the goal as active after the user's resume command. Its stored objective text is literally "resume"; the research scope remains the substantive objective above and the user's prior directions. The goal API does not expose objective editing. The prior blocked status was administrative and is no longer present.
+At this update the app goal API still reports the prior goal, literally "resume", as blocked from the earlier user-requested break. The user has explicitly resumed and reprioritized the work. The API exposes neither objective editing nor a resume operation, and an unfinished goal prevents creating a replacement. This document records the current authorized objective; the stale administrative status does not mean the redshift work is scientifically blocked.
 
 The first resumed pass derives [interaction-rate requirements](../research_work/results/interaction-rate/derivation.md): achromatic energy loss, a scalar vacuum-vertex constraint, and reverse-transfer spectral noise. These are candidate-specific results, not completion of the overall goal.
 
