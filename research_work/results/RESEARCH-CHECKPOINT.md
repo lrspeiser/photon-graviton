@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+Latest direction: [conversion-first active goal](../../research_plan/active-goal.md). The user permits conversion without special time/void stretching as the root cause. [The executed conversion-first pass](conversion-first/report.md) fits the stipulated rate on 164 previously exposed groups, checks 18 energy/storage cases, and maps all 32 remaining requirements. It does not establish a microscopic cause, new independent validation or a complete gravitational response. The original time idea was meant to stretch light, including in nearby galaxies.
+
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
 ## What has been accomplished

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "scope": "Conversion-first exploratory pass; no first-principles interaction or independent validation claimed",
+  "source": "redshift_paper/all_164_groups.csv",
+  "distance_policy": "Adopt catalog_distance_mpc as the physical path R in the declared Euclidean benchmark, per the user's fixed published-distance fiction. Do not re-infer R from brightness or apply the historical D_L=R(1+z) relation.",
+  "redshift_policy": "Use catalog observed_cmb_z, retaining its published reference-frame transformation as an observational convention. No expansion model, cosmological peculiar-velocity inference, or archived FLRW prediction is used. An additive residual in c*z represents unresolved motion/endpoints/calibration, not their physical derivation.",
+  "model": "z=expm1(alpha_per_mpc*R); constant alpha>=0; fixed photon speed and material clock standards in the illustrative baseline",
+  "controls": ["archived alpha=7.7315e-5 per million light-years", "fitted linear small-optical-depth law z=alpha*R (not an expansion model)", "zero conversion with no fitted source motion (diagnostic only)"],
+  "fitting": "Use only recovered train rows to minimize squared c*z residuals, equivalent to a Gaussian likelihood with common fixed 300 km/s residual scale. No intercept, no per-galaxy coefficients, no distance fitting. Parameter bracket c*alpha in [0,150] km/s/Mpc; report boundary behavior. The c*alpha units are a conversion parameter, not an assumed Hubble constant.",
+  "split": "Preserve the published recovered train/validation/test labels and sky tiles; all three are previously exposed exploratory partitions, not fresh holdouts.",
+  "uncertainty": "Primary adopted distances are fixed facts. Retain their published errors as provenance only. Training sky-tile bootstrap 500 resamples, seed 2026090901; paired test-tile bootstrap 1000 resamples, seed 2026090902. Report percentile intervals descriptively, with shared calibration/correlated motion limitations. Nominal 95% residual coverage uses 1.96*300 km/s and omits fitted parameter uncertainty.",
+  "metrics": ["count", "RMSE_km_s", "MAE_km_s", "bias_predicted_minus_observed_km_s", "nominal_95pct_residual_coverage", "paired_test_RMSE_difference_exponential_minus_linear"],
+  "no_posthoc_success_threshold": "Report absolute residuals and comparator differences; do not call a low-z distance trend proof of companion production or a successful unified theory.",
+  "mechanism_diagnostics": "Energy partition, Poisson width, fixed-speed event timing, capture probability and finite-retention calculations are stipulated forward models. All scenario values must be labeled illustrative rather than measured.",
+  "required_output": ["report.md", "results.json", "predictions.csv", "coverage.json", "checks.json"],
+  "validation_gap": "No new raw spectra, transient light curves, joint luminosity histories or companion detections are supplied by this fit. Microscopic conversion, angular transfer, storage, field response and fresh validation remain open."
+}

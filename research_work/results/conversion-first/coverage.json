@@ -1,0 +1,392 @@
+[
+  {
+    "id": "R01",
+    "area": "Operational definitions",
+    "tasks": [
+      "T02",
+      "T03"
+    ],
+    "complete": false,
+    "this_pass": "Conversion-only baseline uses fixed material standards; complete matter law still missing.",
+    "next_requirement": "Define physical rods/clocks, nonexpansion, photons, gravitons, deposits and the matter metric. Distinguish coordinate changes from observable changes.",
+    "original_registry_gap": "Final operational contract"
+  },
+  {
+    "id": "R02",
+    "area": "Microscopic conversion",
+    "tasks": [
+      "T03",
+      "T04"
+    ],
+    "complete": false,
+    "this_pass": "Massless momentum diagnostic and resonant three-mode Hamiltonian toy; no physical rate or field action.",
+    "next_requirement": "Specify the interaction, allowed channels, energy/momentum/angular-momentum exchange, rate and inverse processes.",
+    "original_registry_gap": "Derived interaction kernel and reverse channels"
+  },
+  {
+    "id": "R03",
+    "area": "Conservation",
+    "tasks": [
+      "T04",
+      "T06",
+      "T08"
+    ],
+    "complete": false,
+    "this_pass": "18 closed four-reservoir ODE checks against independent matrix exponential.",
+    "next_requirement": "Account for photons, free gravitons, deposits, matter, driver, heat and boundary flux. No free energy or double counting.",
+    "original_registry_gap": "Full on-shell stress-energy derivation"
+  },
+  {
+    "id": "R04",
+    "area": "Quantum/classical consistency",
+    "tasks": [
+      "T03",
+      "T09"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Gauge constraints, propagating degrees of freedom, positive kinetic energies, causal characteristics, perturbative regime and radiative stability.",
+    "original_registry_gap": "Background-specific stability and radiative analysis"
+  },
+  {
+    "id": "R05",
+    "area": "Graviton identity",
+    "tasks": [
+      "T03",
+      "T11"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Determine whether the new radiation is the ordinary massless tensor sector or a new field. Give its mass, spin, dispersion, polarization, interactions and observational consequences.",
+    "original_registry_gap": "Selected field identity and observational transfer function"
+  },
+  {
+    "id": "R06",
+    "area": "Source production",
+    "tasks": [
+      "T06",
+      "T15",
+      "T17"
+    ],
+    "complete": false,
+    "this_pass": "Per-photon production fractions calculated; no integrated stellar source history derived.",
+    "next_requirement": "Stellar and AGN luminosity histories, radiation bands, dust reprocessing, obscured sources, completeness and formation of early halos.",
+    "original_registry_gap": "Underlying photometry and historical fuel/source model"
+  },
+  {
+    "id": "R07",
+    "area": "Redshift",
+    "tasks": [
+      "T05",
+      "T11"
+    ],
+    "complete": false,
+    "this_pass": "New constant-loss fit to all 164 previously exposed groups with inherited train/test split.",
+    "next_requirement": "Predict observed atomic-line ratios versus independently inferred distance and source/observer conditions. Include peculiar velocities and gravitational endpoint shifts.",
+    "original_registry_gap": "Source/detector spectral calibration and a redshift law at fixed published galaxy distances"
+  },
+  {
+    "id": "R08",
+    "area": "Time dilation",
+    "tasks": [
+      "T05",
+      "T11"
+    ],
+    "complete": false,
+    "this_pass": "Fixed conditions and stationary delay model preserve event separation; duration explanation missing.",
+    "next_requirement": "Predict complete transient light curves and spectral aging, not merely carrier-frequency shifts.",
+    "original_registry_gap": "Raw multiepoch observations and joint covariance"
+  },
+  {
+    "id": "R09",
+    "area": "Brightness and photon counts",
+    "tasks": [
+      "T05",
+      "T11"
+    ],
+    "complete": false,
+    "this_pass": "Conditional static flux scenarios; no brightness data fit.",
+    "next_requirement": "Predict flux, attenuation, luminosity distance and source calibration from the same transport model.",
+    "original_registry_gap": "Candidate-consistent source calibration and count model"
+  },
+  {
+    "id": "R10",
+    "area": "Angular distances and surface brightness",
+    "tasks": [
+      "T05",
+      "T11",
+      "T17"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Predict source sizes, angular distances and reciprocity/duality relations; identify justified rulers instead of importing an expansion-based ruler.",
+    "original_registry_gap": "Independent angular-size targets beyond processed galaxy tables"
+  },
+  {
+    "id": "R11",
+    "area": "Spectral and image fidelity",
+    "tasks": [
+      "T04",
+      "T05",
+      "T11"
+    ],
+    "complete": false,
+    "this_pass": "Existing Poisson width requirement evaluated at four illustrative shifts; no measured line-profile fit.",
+    "next_requirement": "Line width, chromaticity, scattering blur, polarization/birefringence, coherence and arrival-time dispersion.",
+    "original_registry_gap": "Resolved spectra, PSFs, polarimetry and their covariances"
+  },
+  {
+    "id": "R12",
+    "area": "Atomic clocks and cavities",
+    "tasks": [
+      "T05",
+      "T10"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Optical/hyperfine transitions, cavity lengths, fine-structure response, secular and oscillatory drifts, terrestrial versus interstellar conditions.",
+    "original_registry_gap": "Actual frequency time series and secular-drift likelihood"
+  },
+  {
+    "id": "R13",
+    "area": "Local gravity",
+    "tasks": [
+      "T09",
+      "T10"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Equivalence principle, inverse-square tests, Solar-System ephemerides, gravitational redshift, Shapiro delay, perihelion advance, light deflection, binaries and pulsars.",
+    "original_registry_gap": "Primary local gravity/binary data and forward models"
+  },
+  {
+    "id": "R14",
+    "area": "Capture and retention",
+    "tasks": [
+      "T07",
+      "T08"
+    ],
+    "complete": false,
+    "this_pass": "Capture optical-depth and finite-retention scenarios; no microscopic cross section or supported state.",
+    "next_requirement": "Derive absorption/scattering cross-sections, optical depth, escape, residence time, equation of state and any bound state.",
+    "original_registry_gap": "Physical capture and support mechanism"
+  },
+  {
+    "id": "R15",
+    "area": "Halo profiles",
+    "tasks": [
+      "T08",
+      "T12"
+    ],
+    "complete": false,
+    "this_pass": "Prior point-source radial shape calculation exists; realistic source and normalization unresolved.",
+    "next_requirement": "Predict cores, radial slopes, outer truncation, total mass, shape and time evolution without fitting a halo separately to each test object.",
+    "original_registry_gap": "Spatial transport/self-gravity solution"
+  },
+  {
+    "id": "R16",
+    "area": "Galaxy rotation and scaling",
+    "tasks": [
+      "T12",
+      "T18"
+    ],
+    "complete": false,
+    "this_pass": "Prior rotation diagnostic exists; this pass does not supply an absolute gravity prediction.",
+    "next_requirement": "Spiral and dwarf rotation curves, radial-acceleration relation, baryonic Tully\u2013Fisher relation, diversity and scatter.",
+    "original_registry_gap": "Unused validation sample and covariance-aware likelihood"
+  },
+  {
+    "id": "R17",
+    "area": "Other galaxy dynamics",
+    "tasks": [
+      "T12",
+      "T15"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Pressure-supported dwarfs/ellipticals, satellite orbits, stellar streams, vertical disk gravity, bars and dynamical friction.",
+    "original_registry_gap": "Primary non-rotation dynamical samples"
+  },
+  {
+    "id": "R18",
+    "area": "Lensing",
+    "tasks": [
+      "T09",
+      "T13"
+    ],
+    "complete": false,
+    "this_pass": "Prior motion/lensing mismatch remains; no newly derived field response.",
+    "next_requirement": "Strong and weak lensing, shear, convergence, deflection and time delays from the same fields that predict motion.",
+    "original_registry_gap": "Independent lensing measurements and same-field lens equations"
+  },
+  {
+    "id": "R19",
+    "area": "Clusters",
+    "tasks": [
+      "T13",
+      "T14"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Hot gas, hydrostatic bias, pressure support, galaxy velocities, radial profiles and lensing with no cluster-only normalization.",
+    "original_registry_gap": "Profile-level observations and lensing; published masses are derived"
+  },
+  {
+    "id": "R20",
+    "area": "Merging systems",
+    "tasks": [
+      "T07",
+      "T14"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Predict whether deposits follow galaxies, plasma or neither during collisions; model offsets, stripping, lag and reconnection/reformation.",
+    "original_registry_gap": "Merger images/spectra and dynamical simulations"
+  },
+  {
+    "id": "R21",
+    "area": "Environmental dependence",
+    "tasks": [
+      "T06",
+      "T12",
+      "T14"
+    ],
+    "complete": false,
+    "this_pass": "Recovered sample has no path environment fields; seeking/focusing cannot be inferred from this fit.",
+    "next_requirement": "Isolated versus group galaxies, voids, tidal dwarfs, low-luminosity and unusually low/high inferred-mass systems; dependence on illumination and history.",
+    "original_registry_gap": "Independently selected environmental comparison sample"
+  },
+  {
+    "id": "R22",
+    "area": "Stellar and thermal physics",
+    "tasks": [
+      "T07",
+      "T15"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Stellar structure/lifetimes, solar constraints, cooling, heating, ionization, metallicity and whether capture would overheat gas or evaporate a halo.",
+    "original_registry_gap": "Primary thermal/stellar constraints and evolution calculation"
+  },
+  {
+    "id": "R23",
+    "area": "Gravitational waves",
+    "tasks": [
+      "T04",
+      "T10",
+      "T11"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Propagation speed, damping, dispersion, polarizations, binary radiation, multimessenger delay and generated stochastic/high-frequency backgrounds.",
+    "original_registry_gap": "Strain data and consistent emission/propagation model"
+  },
+  {
+    "id": "R24",
+    "area": "Compact objects",
+    "tasks": [
+      "T09",
+      "T15"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Black-hole capture versus long-lived halos, accretion, strong-field boundary conditions, ringdown and consistency with compact-object observations.",
+    "original_registry_gap": "Compact-object observations and strong-field solution"
+  },
+  {
+    "id": "R25",
+    "area": "CMB spectrum",
+    "tasks": [
+      "T17"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Explain the near-blackbody radiation field, its intensity, temperature and permitted spectral distortions without assuming the desired result.",
+    "original_registry_gap": "Full error covariance and radiation-production history"
+  },
+  {
+    "id": "R26",
+    "area": "CMB angular structure",
+    "tasks": [
+      "T16",
+      "T17"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Predict temperature and polarization correlations and lensing from perturbations, with a physical source of the observed angular scales.",
+    "original_registry_gap": "Full likelihood/TE and candidate perturbation transfer functions"
+  },
+  {
+    "id": "R27",
+    "area": "Structure and BAO",
+    "tasks": [
+      "T16",
+      "T17"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Explain galaxy clustering, voids, growth, baryon acoustic features and the matter power spectrum in the chosen history.",
+    "original_registry_gap": "Galaxy catalogs and candidate-consistent clustering pipeline"
+  },
+  {
+    "id": "R28",
+    "area": "Abundances and cosmic chronology",
+    "tasks": [
+      "T15",
+      "T17"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Light-element abundances, nucleosynthesis alternative/history, stellar ages, reionization, metal production and distant populations.",
+    "original_registry_gap": "Abundance/population inputs and chronology without Big-Bang or expansion-derived initial conditions"
+  },
+  {
+    "id": "R29",
+    "area": "Static background and topology",
+    "tasks": [
+      "T16"
+    ],
+    "complete": false,
+    "this_pass": "No new completed prediction in this pass.",
+    "next_requirement": "Solve background field equations, distinguish curvature from topology, test stability, redshift drift, age, past/future endpoints and repeated images.",
+    "original_registry_gap": "Solved background, stability and primary drift/topology tests"
+  },
+  {
+    "id": "R30",
+    "area": "Global radiation and entropy",
+    "tasks": [
+      "T06",
+      "T16",
+      "T17"
+    ],
+    "complete": false,
+    "this_pass": "Explicit decay receiver included; no global steady-state radiation/entropy solution.",
+    "next_requirement": "Finite fuel, accumulated radiation, dark night sky, infrared/optical/X-ray backgrounds, heat sinks and entropy production. Recycling photons cannot renew their energy.",
+    "original_registry_gap": "Multi-band background compilation and closed global ledger"
+  },
+  {
+    "id": "R31",
+    "area": "Statistical identifiability",
+    "tasks": [
+      "T01",
+      "T06",
+      "T18"
+    ],
+    "complete": false,
+    "this_pass": "Tile bootstrap and exponential/linear comparison; shared calibration/motion degeneracies remain.",
+    "next_requirement": "Separate gravity response, capture, age, luminosity and reservoir degeneracies. Include selection functions and shared calibration errors.",
+    "original_registry_gap": "Candidate-specific joint likelihood and simulation calibration"
+  },
+  {
+    "id": "R32",
+    "area": "Distinguishing predictions",
+    "tasks": [
+      "T18",
+      "T19"
+    ],
+    "complete": false,
+    "this_pass": "New frozen protocol on reused data; genuinely new validation remains missing.",
+    "next_requirement": "Freeze a small set of tests that separate this theory from baryons alone, fitted halo models and empirical modified-force laws.",
+    "original_registry_gap": "Unexposed validation targets and frozen predictive distribution"
+  }
+]

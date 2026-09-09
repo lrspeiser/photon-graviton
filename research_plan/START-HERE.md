@@ -1,5 +1,7 @@
 # Start here — active research
 
+The latest direction is [the conversion-first active goal](active-goal.md): test photon-to-companion energy transfer without requiring special void/time stretching as its cause. [The first executed pass](../research_work/results/conversion-first/report.md) fits recovered galaxy redshifts, checks energy and storage, and maps remaining work across all 32 areas. The original time idea remains correctly recorded as a cause of light stretching, including local redshift.
+
 Research has started. The [universe contract](universe-contract.md) now fixes published galaxy distances and excludes assumed dark matter, expansion and Big-Bang premises. Read [the current research checkpoint](../research_work/results/RESEARCH-CHECKPOINT.md) for verified results, limitations, outstanding choices and links to every major derivation.
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.

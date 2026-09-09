@@ -1,0 +1,322 @@
+{
+  "scope": "Exploratory reused galaxy data, fixed published distances, stipulated conversion law",
+  "protocol_sha256": "2a019239322ec1633e09d9fc998015019502f9003fda31dc7e01a651bdff385a",
+  "source_sha256": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+  "source_files": {
+    "redshift_paper\\all_164_groups.csv": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+    "redshift_paper_sources\\time-redshift-expanded\\features.json": "3ce0b9fb813bd2c04bdc0f6c24c99a771a4afde6fc10a4c7e1b230da9ba9b852",
+    "redshift_paper_sources\\time-redshift-expanded\\train_labels.json": "e11d51745018ffb7fae47ecd0a8287f3ba7da961484a43fce960ee3b79f61857",
+    "redshift_paper_sources\\time-redshift-expanded\\validation_labels.json": "68522ce57203e99f3ec17a8ba56baad575bd705e53e76a6e0e537db7e1c14f19",
+    "redshift_paper_sources\\time-redshift-expanded\\test_labels.json": "336e92672d026f9b33de6c0360a25dad7276e8d5b2b4a7e7101d4f70db4b58fd"
+  },
+  "fitted": {
+    "alpha_per_mpc": 0.0002488993286382367,
+    "alpha_per_mly": 7.631288107636764e-05,
+    "c_alpha_km_s_per_mpc": 74.61814152700677,
+    "linear_c_alpha": 75.17651383428588,
+    "training_tile_bootstrap_95_c_alpha": [
+      72.41722973559975,
+      76.88738437794862
+    ],
+    "boundary_hit": false
+  },
+  "distance_range_mpc": [
+    10.204694319421995,
+    93.19658525658426
+  ],
+  "fitted_conversion_fraction_range": [
+    0.002536718642741177,
+    0.022929595392823094
+  ],
+  "statistics": {
+    "train": {
+      "conversion_exponential": {
+        "count": 104,
+        "rmse_km_s": 457.57748763316135,
+        "mae_km_s": 330.83649442031776,
+        "bias_km_s": -28.308536728133433,
+        "nominal_95pct_residual_coverage": 0.8653846153846154
+      },
+      "linear_small_depth_control": {
+        "count": 104,
+        "rmse_km_s": 457.23965509103874,
+        "mae_km_s": 331.6598151555088,
+        "bias_km_s": -24.325593328785203,
+        "nominal_95pct_residual_coverage": 0.8653846153846154
+      },
+      "archived_conversion_rate": {
+        "count": 104,
+        "rmse_km_s": 459.41873236746807,
+        "mae_km_s": 337.0405754412919,
+        "bias_km_s": 7.0534689340790395,
+        "nominal_95pct_residual_coverage": 0.8653846153846154
+      },
+      "zero_conversion_diagnostic": {
+        "count": 104,
+        "rmse_km_s": 3139.2011998400044,
+        "mae_km_s": 2704.9615384615386,
+        "bias_km_s": -2704.9615384615386,
+        "nominal_95pct_residual_coverage": 0.009615384615384616
+      }
+    },
+    "validation": {
+      "conversion_exponential": {
+        "count": 35,
+        "rmse_km_s": 437.0652123599017,
+        "mae_km_s": 311.8782005571561,
+        "bias_km_s": 97.98976510045941,
+        "nominal_95pct_residual_coverage": 0.8571428571428571
+      },
+      "linear_small_depth_control": {
+        "count": 35,
+        "rmse_km_s": 437.21301846040853,
+        "mae_km_s": 312.22963966410043,
+        "bias_km_s": 102.03918754071425,
+        "nominal_95pct_residual_coverage": 0.8571428571428571
+      },
+      "archived_conversion_rate": {
+        "count": 35,
+        "rmse_km_s": 450.2395769117696,
+        "mae_km_s": 316.2808617916197,
+        "bias_km_s": 135.4389932627853,
+        "nominal_95pct_residual_coverage": 0.8571428571428571
+      },
+      "zero_conversion_diagnostic": {
+        "count": 35,
+        "rmse_km_s": 3123.155771239816,
+        "mae_km_s": 2736.4857142857145,
+        "bias_km_s": -2736.4857142857145,
+        "nominal_95pct_residual_coverage": 0.02857142857142857
+      }
+    },
+    "test": {
+      "conversion_exponential": {
+        "count": 25,
+        "rmse_km_s": 415.4139782785834,
+        "mae_km_s": 340.3195258891395,
+        "bias_km_s": 74.11981106373487,
+        "nominal_95pct_residual_coverage": 0.8
+      },
+      "linear_small_depth_control": {
+        "count": 25,
+        "rmse_km_s": 414.6586349273716,
+        "mae_km_s": 339.50064348395375,
+        "bias_km_s": 78.24089405807148,
+        "nominal_95pct_residual_coverage": 0.8
+      },
+      "archived_conversion_rate": {
+        "count": 25,
+        "rmse_km_s": 429.1244685294176,
+        "mae_km_s": 353.229136172138,
+        "bias_km_s": 113.29187430039785,
+        "nominal_95pct_residual_coverage": 0.8
+      },
+      "zero_conversion_diagnostic": {
+        "count": 25,
+        "rmse_km_s": 3208.426816993026,
+        "mae_km_s": 2890.64,
+        "bias_km_s": -2890.64,
+        "nominal_95pct_residual_coverage": 0.0
+      }
+    }
+  },
+  "paired_test_rmse_exponential_minus_linear_95": [
+    -2.2182301451081727,
+    3.82538663691425
+  ],
+  "distance_refitted": false,
+  "new_independent_validation": false,
+  "imported_expansion_or_dark_matter_model": false,
+  "physical_cause_identified": false,
+  "illustrative_predictions": [
+    {
+      "conversion_z": 0.01,
+      "supplied_energy_fraction": 0.009900990099009901,
+      "illustrative_distance_mpc": 39.97733102619342,
+      "event_duration_ratio_fixed_conditions": 1.0,
+      "illustrative_comparison_duration_ratio": 1.01,
+      "flux_relative_to_no_loss_static_source": 0.9900990099009901,
+      "flux_if_additional_duration_stretch_S": 0.9802960494069208,
+      "maximum_event_fraction_for_illustrative_10kms_width": 1.1182040796968737e-07,
+      "minimum_mean_event_count": 88984.92711514216
+    },
+    {
+      "conversion_z": 0.1,
+      "supplied_energy_fraction": 0.09090909090909091,
+      "illustrative_distance_mpc": 382.9266246951342,
+      "event_duration_ratio_fixed_conditions": 1.0,
+      "illustrative_comparison_duration_ratio": 1.1,
+      "flux_relative_to_no_loss_static_source": 0.9090909090909091,
+      "flux_if_additional_duration_stretch_S": 0.8264462809917354,
+      "maximum_event_fraction_for_illustrative_10kms_width": 1.1673989679999892e-08,
+      "minimum_mean_event_count": 8164319.347276125
+    },
+    {
+      "conversion_z": 1.0,
+      "supplied_energy_fraction": 0.5,
+      "illustrative_distance_mpc": 2784.8495387763846,
+      "event_duration_ratio_fixed_conditions": 1.0,
+      "illustrative_comparison_duration_ratio": 2.0,
+      "flux_relative_to_no_loss_static_source": 0.5,
+      "flux_if_additional_duration_stretch_S": 0.25,
+      "maximum_event_fraction_for_illustrative_10kms_width": 1.6052147172203615e-09,
+      "minimum_mean_event_count": 431809634.6389223
+    },
+    {
+      "conversion_z": 2.0,
+      "supplied_energy_fraction": 0.6666666666666666,
+      "illustrative_distance_mpc": 4413.882089111177,
+      "event_duration_ratio_fixed_conditions": 1.0,
+      "illustrative_comparison_duration_ratio": 3.0,
+      "flux_relative_to_no_loss_static_source": 0.3333333333333333,
+      "flux_if_additional_duration_stretch_S": 0.1111111111111111,
+      "maximum_event_fraction_for_illustrative_10kms_width": 1.0127777259651194e-09,
+      "minimum_mean_event_count": 1084751629.6048028
+    }
+  ],
+  "capture_scenarios": [
+    {
+      "path_optical_depth": 0.01,
+      "capture_probability": 0.009950166250831947
+    },
+    {
+      "path_optical_depth": 0.1,
+      "capture_probability": 0.09516258196404043
+    },
+    {
+      "path_optical_depth": 1.0,
+      "capture_probability": 0.6321205588285577
+    },
+    {
+      "path_optical_depth": 3.0,
+      "capture_probability": 0.950212931632136
+    },
+    {
+      "path_optical_depth": 10.0,
+      "capture_probability": 0.9999546000702375
+    }
+  ],
+  "retention_scenarios": [
+    {
+      "age_over_lifetime": 0.01,
+      "fraction_of_captured_energy_still_stored": 0.9950166250831947
+    },
+    {
+      "age_over_lifetime": 0.1,
+      "fraction_of_captured_energy_still_stored": 0.9516258196404043
+    },
+    {
+      "age_over_lifetime": 1.0,
+      "fraction_of_captured_energy_still_stored": 0.6321205588285577
+    },
+    {
+      "age_over_lifetime": 10.0,
+      "fraction_of_captured_energy_still_stored": 0.09999546000702375
+    },
+    {
+      "age_over_lifetime": 100.0,
+      "fraction_of_captured_energy_still_stored": 0.01
+    }
+  ],
+  "resonant_mode_toy": {
+    "cases": [
+      {
+        "companion_frequency": 0.01,
+        "time": 0.0,
+        "conversion_probability": 0.0,
+        "photon_energy": 1.0,
+        "companion_energy": 0.0,
+        "interaction_energy": 0.0
+      },
+      {
+        "companion_frequency": 0.01,
+        "time": 1.0,
+        "conversion_probability": 0.039469502998557456,
+        "photon_energy": 0.9996053049700144,
+        "companion_energy": 0.00039469502998557454,
+        "interaction_energy": -1.3877787807814457e-17
+      },
+      {
+        "companion_frequency": 0.01,
+        "time": 4.0,
+        "conversion_probability": 0.5145997611506448,
+        "photon_energy": 0.9948540023884946,
+        "companion_energy": 0.005145997611506448,
+        "interaction_energy": 9.71445146547012e-17
+      },
+      {
+        "companion_frequency": 0.01,
+        "time": 8.0,
+        "conversion_probability": 0.9991473878973776,
+        "photon_energy": 0.9900085261210272,
+        "companion_energy": 0.009991473878973776,
+        "interaction_energy": 1.6089560239684886e-16
+      },
+      {
+        "companion_frequency": 0.1,
+        "time": 0.0,
+        "conversion_probability": 0.0,
+        "photon_energy": 1.0,
+        "companion_energy": 0.0,
+        "interaction_energy": 0.0
+      },
+      {
+        "companion_frequency": 0.1,
+        "time": 1.0,
+        "conversion_probability": 0.039469502998557456,
+        "photon_energy": 0.9960530497001443,
+        "companion_energy": 0.0039469502998557456,
+        "interaction_energy": -1.3877787807814457e-17
+      },
+      {
+        "companion_frequency": 0.1,
+        "time": 4.0,
+        "conversion_probability": 0.5145997611506448,
+        "photon_energy": 0.9485400238849366,
+        "companion_energy": 0.051459976115064476,
+        "interaction_energy": 9.71445146547012e-17
+      },
+      {
+        "companion_frequency": 0.1,
+        "time": 8.0,
+        "conversion_probability": 0.9991473878973776,
+        "photon_energy": 0.9000852612102632,
+        "companion_energy": 0.09991473878973776,
+        "interaction_energy": 1.6089560239684886e-16
+      },
+      {
+        "companion_frequency": 0.5,
+        "time": 0.0,
+        "conversion_probability": 0.0,
+        "photon_energy": 1.0,
+        "companion_energy": 0.0,
+        "interaction_energy": 0.0
+      },
+      {
+        "companion_frequency": 0.5,
+        "time": 1.0,
+        "conversion_probability": 0.039469502998557456,
+        "photon_energy": 0.9802652485007213,
+        "companion_energy": 0.019734751499278728,
+        "interaction_energy": -1.3877787807814457e-17
+      },
+      {
+        "companion_frequency": 0.5,
+        "time": 4.0,
+        "conversion_probability": 0.5145997611506448,
+        "photon_energy": 0.7427001194246787,
+        "companion_energy": 0.2572998805753224,
+        "interaction_energy": 9.71445146547012e-17
+      },
+      {
+        "companion_frequency": 0.5,
+        "time": 8.0,
+        "conversion_probability": 0.9991473878973776,
+        "photon_energy": 0.5004263060513122,
+        "companion_energy": 0.4995736939486888,
+        "interaction_energy": 1.6089560239684886e-16
+      }
+    ],
+    "status": "Closed energy-conserving inelastic mode toy; no microscopic graviton vertex, physical rate or irreversible drift derived"
+  }
+}

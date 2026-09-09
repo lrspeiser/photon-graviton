@@ -36,6 +36,8 @@ No-loss companion travel and permanent deposits remain optional hypotheses from 
 
 ## Current status
 
+The user's subsequent clarification prioritizes conversion without special time/void stretching as its cause. The original time idea was intended to cause photon-energy loss by stretching light, including nearby light; it did not exclude local-galaxy redshift. Ordinary clocks, gravitational endpoint shifts and observed event timing remain requirements. See [the revised active goal](active-goal.md). Neither an inelastic interaction nor an attraction/capture/storage law is selected merely by taking this research direction.
+
 The distance decision is resolved. T02 still needs the detailed matter-clock convention, candidate-specific likelihoods and unexposed validation data. No baseline numbers have been changed by this contract update, and no complete theory is claimed.
 
 The machine-readable counterpart is [universe-contract.json](universe-contract.json). Current reports and archived findings must be interpreted subject to this contract.

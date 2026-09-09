@@ -1,5 +1,7 @@
 # Codex task backlog — current checkpoint
 
+**Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
+
 **Governing contract:** [published galaxy distances are fixed facts; no assumed dark matter, expansion or Big Bang](universe-contract.md). This overrides earlier open-candidate wording. The distance decision is resolved.
 
 Active research. T01 completed with documented numerical differences; later tasks have varying amounts of preliminary evidence. No full theory is established. Preserve each task’s scope and dependencies. Keep conceptual alternatives open and consult the user before selecting consequential new laws.

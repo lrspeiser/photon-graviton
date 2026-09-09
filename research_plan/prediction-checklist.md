@@ -4,6 +4,8 @@ Updated 9 September 2026. This checklist develops the user's request to list out
 
 ## Working starting point
 
+The user has now explicitly authorized a conversion-first research pass without special time/void stretching as the cause. Their original time concept meant that time stretches light and thereby causes photon-energy loss; it did not mean nearby galaxies lack redshift. See [the revised goal](active-goal.md) and [the executed exploratory pass](../research_work/results/conversion-first/report.md). This clarification does not waive timing observations.
+
 Use **partial photon-energy transfer into companion waves as the working explanation of the distance-related redshift component**. The surviving photons must lose frequency, rather than merely disappear. Smooth transfer and many small transfer events remain alternatives. Ordinary source motion and gravitational endpoint shifts must be modeled separately; not every measured redshift is assigned to conversion.
 
 This is a working hypothesis, not a verified physical cause. No interaction-derived rate, companion identity, special void-clock law, no-loss propagation rule, permanent storage rule or enhanced gravity law is locked in. The [universe contract](universe-contract.md) remains authoritative: fixed published galaxy distances, nonexpansion, no assumed dark-matter population or Big-Bang origin, complete energy conservation.

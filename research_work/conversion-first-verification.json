@@ -1,0 +1,89 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.26437170000281185
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7314743000024464
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.6712882999927388
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.2516212000045925
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.1712490999998408
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.4642292999997153
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.8263807999974233
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.140243300003931
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.6477697999944212
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.32496309999987716
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.08366580000438262
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.829804699998931
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "12 current default diagnostics; no new observational validation; optional baseline not rerun",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "saved_conversion_result_hashes": {
+    "results.json": "1bcb7c1202addc23c063e27576b042cbd928d5fd3189a596739c309a7bcb00c3",
+    "report.md": "94e59a5c31af9c76d0dbd828ba0c6dba9f42909e7041740b12b36c4d6059105a",
+    "checks.json": "43760cb3d2782fb704ed4420bed1273ba4dd35edeec229f29f4d0b6d96fc9cef",
+    "coverage.json": "852a1a84d8ec7c052427db07b7697d227e769bf512a5444db9b5a9d049b6216f",
+    "predictions.csv": "6b406e54577eefe6f854b62f1fec653d9c39aafd62809f8bb21e14c6be0069d7"
+  },
+  "fresh_execution_matches_within_declared_tolerances": true,
+  "comparison_tolerance": "Exact bytes except checks.json floating-point diagnostics: absolute 1e-12, their existing invariant tolerance.",
+  "check_diagnostic_roundoff": [],
+  "tasks_retained": 20,
+  "observation_areas_retained": 32,
+  "new_document_local_links_checked": 8,
+  "app_goal_state": "Older goal is blocked; API cannot edit/resume it. Revised project goal saved in research_plan/active-goal.md."
+}

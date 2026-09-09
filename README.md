@@ -18,6 +18,8 @@ The [universe contract](research_plan/universe-contract.md) fixes published gala
 
 ## Current findings
 
+- **Latest conversion-first pass:** a constant photon-energy loss law was fitted to 164 previously exposed galaxy groups with fixed published distances. It gives alpha about 7.63e-5 per million light-years; the nearby data do not distinguish it from a linear distance trend. A resonant inelastic mode toy conserves energy without special time stretching, but does not derive the physical rate, smooth redshift, capture or gravity. Read [the executed pass](research_work/results/conversion-first/report.md) and [revised goal](research_plan/active-goal.md).
+
 - Changing the propagation history improves the earlier redshift–brightness fit, but does not establish an interaction or protect atomic/cavity frequency ratios.
 - Using measured total luminosities for 26 DustPedia–SPARC overlap galaxies, converting all of their present luminosity for 10 billion years still falls short of the ordinary deposited mass-energy requirement by a median factor of about **5,400**. At the fixed local redshift rate, the shortfall is much greater.
 - Catalogued neighboring sources do not solve the energy budget. A constant-bath control performs as well as or better than actual neighboring-source illumination under the primary log-residual metric.
@@ -77,7 +79,7 @@ python research_work/run_checks.py
 python research_work/run_checks.py --baseline
 ```
 
-The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest verification used Python 3.13.5 and passed all 12 jobs, including the optional baseline. See [publication verification](research_work/publication-verification.json).
+The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest conversion-first verification passed all 12 current default jobs; the optional historical baseline now makes 13 jobs and was not rerun for this update. See [current verification](research_work/conversion-first-verification.json). The earlier [publication verification](research_work/publication-verification.json) records the successful 12-job suite at that time, including its optional baseline.
 
 The historical scripts can still run directly, but doing so overwrites their corresponding outputs. Use the isolated runner above for baseline reproduction. `python restore_data.py` restores the compressed covariance if needed by older brightness analyses; the current diagnostics read its compressed form directly. These are research tools, not a complete cosmology library.
 

@@ -71,6 +71,7 @@ def main():
         ('gravity-response/check_gravity_response.py', []),
         ('data-audit/audit_observables.py', []),
         ('data-audit/enrich_observable_registry.py', []),
+        ('conversion-first/run_conversion_first.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
