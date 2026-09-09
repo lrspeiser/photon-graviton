@@ -12,7 +12,7 @@ from matplotlib.font_manager import FontProperties
 from reportlab.lib import colors
 from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
 from reportlab.lib.utils import ImageReader
-from reportlab.platypus import SimpleDocTemplate, Paragraph, Flowable, PageBreak, KeepTogether
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Flowable, PageBreak, KeepTogether, Image, Table, TableStyle
 
 
 class Equation(Flowable):
@@ -74,6 +74,22 @@ def main():
         if block.startswith("$$"):
             equation_count += 1
             story.append(Equation(block.strip().removeprefix("$$").removesuffix("$$").strip()))
+        elif block.startswith("!["):
+            match = re.fullmatch(r'!\[([^\]]*)\]\(([^)]+)\)', block)
+            assert match, block
+            picture = Image(str(Path(__file__).parent / match.group(2)))
+            picture.drawHeight *= 496 / picture.drawWidth
+            picture.drawWidth = 496
+            story.append(KeepTogether([picture, Paragraph(rich(match.group(1)), styles['PaperBody'])]))
+        elif block.startswith('|'):
+            rows = [[Paragraph(rich(cell.strip()), styles['PaperBullet']) for cell in line.strip('|').split('|')]
+                    for line in block.splitlines() if not re.match(r'^\|[\s:|\-]+\|$',line)]
+            table = Table(rows, repeatRows=1, hAlign='LEFT', colWidths=[496/len(rows[0])]*len(rows[0]))
+            table.setStyle(TableStyle([('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e4edf3')),
+                ('VALIGN',(0,0),(-1,-1),'TOP'),('LINEBELOW',(0,0),(-1,0),.7,colors.grey),
+                ('BOTTOMPADDING',(0,0),(-1,-1),7),('TOPPADDING',(0,0),(-1,-1),7)]))
+            table.keepWithNext = True
+            story.append(KeepTogether([table]))
         elif block.startswith("#### "):
             story.append(Paragraph(rich(block[5:]), styles["PaperSubsection"]))
         elif block.startswith("### "):
@@ -92,19 +108,19 @@ def main():
             if index + 1 < len(blocks) and blocks[index + 1].startswith("$$"):
                 paragraph.keepWithNext = True
             story.append(KeepTogether([paragraph]) if re.match(r"\[\d\] ", block) else paragraph)
-    assert equation_count == 13
+    assert equation_count == 15
     args.output.parent.mkdir(parents=True, exist_ok=True)
     doc = SimpleDocTemplate(str(args.output), pagesize=(612, 792), rightMargin=58,
                             leftMargin=58, topMargin=49, bottomMargin=48,
                             title="Environmental Time Stretching and Companion-Energy Deposition",
-                            author="", subject="Working theoretical framework, version 0.1")
+                            author="", subject="Working theoretical framework, version 0.2")
 
     def page(canvas, document):
         canvas.saveState()
         canvas.setFont("Times-Roman", 8)
         canvas.setFillColor(colors.HexColor("#526371"))
         canvas.drawString(58, 767, "ENVIRONMENTAL TIME STRETCHING AND COMPANION ENERGY")
-        canvas.drawString(58, 28, "Working draft v0.1  |  9 September 2026  |  Theory incomplete")
+        canvas.drawString(58, 28, "Working draft v0.2  |  9 September 2026  |  Theory incomplete")
         canvas.drawRightString(554, 28, str(document.page))
         canvas.restoreState()
 

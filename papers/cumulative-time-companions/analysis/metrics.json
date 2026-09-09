@@ -1,0 +1,34 @@
+{
+  "source_sha256": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+  "alpha_per_mpc": 0.0002488993286382367,
+  "c_alpha_km_s_per_mpc": 74.61814152700677,
+  "distance_range_mpc": [
+    10.204694319421995,
+    93.19658525658426
+  ],
+  "metrics": {
+    "train": {
+      "n": 104,
+      "rmse_km_s": 457.57748763316135,
+      "mae_km_s": 330.8364944203177,
+      "bias_km_s": -28.30853672813347,
+      "linear_rmse_km_s": 457.23965509103874
+    },
+    "validation": {
+      "n": 35,
+      "rmse_km_s": 437.06521235990186,
+      "mae_km_s": 311.8782005571562,
+      "bias_km_s": 97.98976510045937,
+      "linear_rmse_km_s": 437.21301846040853
+    },
+    "test": {
+      "n": 25,
+      "rmse_km_s": 415.41397827858333,
+      "mae_km_s": 340.3195258891395,
+      "bias_km_s": 74.11981106373497,
+      "linear_rmse_km_s": 414.6586349273717
+    }
+  },
+  "status": "Exploratory calibration on previously exposed catalog; not a blind physical prediction",
+  "saved_predictions_reproduced": true
+}

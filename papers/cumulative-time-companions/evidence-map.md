@@ -1,6 +1,6 @@
 # Manuscript evidence map
 
-Draft v0.1 describes research present at commit `db461eda7c5312c4bc6311ea5e340ec0074b75ee`. No new astronomical fit was performed for the paper. Formula derivations are conditional on their stated assumptions.
+Draft v0.2 describes research present at commit `c0425ecba9f13f937c56e0806b420539dd5c2fcd`. The existing frozen astronomical fit was independently reproduced; no new observations or fresh holdouts were added. Formula derivations are conditional on their stated assumptions.
 
 | Manuscript claim | Canonical evidence | Scope |
 |---|---|---|
@@ -16,7 +16,7 @@ Draft v0.1 describes research present at commit `db461eda7c5312c4bc6311ea5e340ec
 | Motion and lensing must be derived together | [Gravity-response comparison](../../research_work/results/gravity-response/motion-and-lensing.md) | Extra scalar matter force need not supply matching lensing |
 | 164-group fit and illustrative constant rate | [Conversion-first report](../../research_work/results/conversion-first/report.md) | Reused data; no demonstrated advantage or fresh validation |
 | Artificial timing signals; failed population convergence gate | [Timing-population report](../../research_work/results/timing-population/report.md) | Our estimator limitation; not a refutation of published supernova timing |
-| 35 diagnostics and preserved historical inputs | [Verification record](../../research_work/environmental-screening-verification.json) | Numerical and integrity checks, not 35 observational successes |
+| 45 diagnostics and preserved historical inputs | [Verification record](../../research_work/pair-production-balance-verification.json) | Numerical and integrity checks, not 45 observational successes |
 
 ## Editorial checks for this version
 
@@ -28,3 +28,21 @@ Draft v0.1 describes research present at commit `db461eda7c5312c4bc6311ea5e340ec
 - Source, screening, capture and gravity candidates are not presented as a single completed solution.
 - Published distances are retained as stipulated facts; model-dependent data reductions retain provenance.
 - All 32 requirements remain in scope; this draft does not complete the active research goal.
+
+- Latest candidate diagnostic: [generated-wave-access](../../research_work/results/generated-wave-access/report.md). Conditional model evidence, not a completed theory.
+
+- Latest candidate diagnostic: [source-timescale](../../research_work/results/source-timescale/report.md). Conditional model evidence, not a completed theory.
+
+- Latest candidate diagnostic: [sustained-illumination](../../research_work/results/sustained-illumination/report.md). Conditional model evidence, not a completed theory.
+
+- Latest candidate diagnostic: [spherical-propagation](../../research_work/results/spherical-propagation/report.md). Conditional model evidence, not a completed theory.
+
+- Latest candidate diagnostic: [companion-self-binding](../../research_work/results/companion-self-binding/report.md). Conditional model evidence, not a completed theory.
+
+- Latest candidate diagnostic: [bound-cloud-exchange](../../research_work/results/bound-cloud-exchange/report.md). Conditional model evidence, not a completed theory.
+
+- Latest candidate diagnostic: [bound-pair-production](../../research_work/results/bound-pair-production/report.md). Conditional model evidence, not a completed theory.
+
+- Latest candidate diagnostic: [pair-production-balance](../../research_work/results/pair-production-balance/report.md). Conditional model evidence, not a completed theory.
+
+- Paper benchmark reproduction: [analysis script](analysis.py), [metrics](analysis/metrics.json), [all rows](analysis/observed-predicted-redshift.csv).
