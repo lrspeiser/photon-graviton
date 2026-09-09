@@ -1,0 +1,175 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.2702376000015647
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7454617999974289
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7310180999993463
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.226433600000746
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.160082099995634
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.4548568000027444
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.8421956000020145
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1856836000006297
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.6485765999968862
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.33796069999516476
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.08352340000419645
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.8492582000035327
+    },
+    {
+      "script": "interaction-rate/check_interaction_rate.py",
+      "exit_code": 0,
+      "seconds": 0.6393104000017047
+    },
+    {
+      "script": "matter-assisted/check_matter_assisted.py",
+      "exit_code": 0,
+      "seconds": 0.7609863000034238
+    },
+    {
+      "script": "collective-response/check_collective_response.py",
+      "exit_code": 0,
+      "seconds": 0.952805900000385
+    },
+    {
+      "script": "oscillator-response/check_oscillator_response.py",
+      "exit_code": 0,
+      "seconds": 1.1850382999982685
+    },
+    {
+      "script": "soft-graviton/check_soft_graviton.py",
+      "exit_code": 0,
+      "seconds": 1.4208338000025833
+    },
+    {
+      "script": "capture-storage/check_capture_storage.py",
+      "exit_code": 0,
+      "seconds": 1.7360403999991831
+    },
+    {
+      "script": "deposit-support/check_deposit_support.py",
+      "exit_code": 0,
+      "seconds": 0.7017974999980652
+    },
+    {
+      "script": "capture-momentum/check_capture_momentum.py",
+      "exit_code": 0,
+      "seconds": 0.3781433000040124
+    },
+    {
+      "script": "isotropic-capture/check_isotropic_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6708837999976822
+    },
+    {
+      "script": "broadband-capture/check_broadband_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6706703999952879
+    },
+    {
+      "script": "source-receiver/check_source_receiver.py",
+      "exit_code": 0,
+      "seconds": 0.7334887000033632
+    },
+    {
+      "script": "matched-wave/check_matched_wave.py",
+      "exit_code": 0,
+      "seconds": 0.8002057999983663
+    },
+    {
+      "script": "thermal-conversion/check_thermal_conversion.py",
+      "exit_code": 0,
+      "seconds": 0.6654108000002452
+    },
+    {
+      "script": "background-replenishment/check_background_replenishment.py",
+      "exit_code": 0,
+      "seconds": 0.6475243000022601
+    },
+    {
+      "script": "thermalizer/check_thermalizer.py",
+      "exit_code": 0,
+      "seconds": 0.7742681999952765
+    },
+    {
+      "script": "slow-companion/check_slow_companion.py",
+      "exit_code": 0,
+      "seconds": 0.6690692999982275
+    },
+    {
+      "script": "dispersive-companion/check_dispersive_companion.py",
+      "exit_code": 0,
+      "seconds": 0.7217502999992575
+    },
+    {
+      "script": "electromagnetic-balance/check_electromagnetic_balance.py",
+      "exit_code": 0,
+      "seconds": 0.7907412999993539
+    },
+    {
+      "script": "companion-bath/check_companion_bath.py",
+      "exit_code": 0,
+      "seconds": 0.6561581999994814
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "31 mathematical/integrity diagnostic jobs, including previous exploratory FIRAS comparisons. The new pass verifies a local populated-bath rate, noise and detailed-balance calculation with scoped limitations, not observational success or a complete theory.",
+  "new_result_exact_repeat": true,
+  "new_pass_hashes": {
+    "research_work/results/companion-bath/check_companion_bath.py": "96cd84b12912e5e27e932834ab3f30d2099f76b195ba5913de39ec20c542df97",
+    "research_work/results/companion-bath/companion-bath-results.json": "e63026091a30b7d6e3471dae0d00714a0cb002920c271606cd1aff97dfc9f44b",
+    "research_work/results/companion-bath/derivation.md": "ceddc3cf7173c396dc4224dc437414dac25deb0ccc5792c06203d2841f2568d5"
+  }
+}

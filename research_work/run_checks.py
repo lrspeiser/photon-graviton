@@ -90,6 +90,7 @@ def main():
         ('slow-companion/check_slow_companion.py', []),
         ('dispersive-companion/check_dispersive_companion.py', []),
         ('electromagnetic-balance/check_electromagnetic_balance.py', []),
+        ('companion-bath/check_companion_bath.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [electric/magnetic balance](../research_work/results/electromagnetic-balance/derivation.md). Constant electric, magnetic and parity-odd scalar couplings reduce to two nonnegative unpolarized rate shapes in the finite companion band. Opposite slopes can cancel at one energy, but no nonzero exactly constant fractional loss exists on an open full-band interval. The high-energy optimum over a twofold energy interval has an 8.30% minimum uniform rate-flatness error. This is a scoped operator-family calculation, not a measured redshift error or universal exclusion.
+Latest diagnostic: [populated companion bath](../research_work/results/companion-bath/derivation.md). The same finite-band interaction now includes stimulated emission and inverse absorption from a fixed isotropic companion bath. Reverse transfer can reduce or reverse photon energy loss; both directions increase the local energy-jump noise, including a channel whose mean drift is unchanged. Fixed finite bath moments cannot cancel the full-band color dependence. Thermal soft modes also require an infrared event-count treatment despite finite energy moments. No bath history or permanent store is established.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
