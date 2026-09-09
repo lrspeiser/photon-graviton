@@ -1,0 +1,13 @@
+{
+  "metric": "Matrix([[-q(t, x)**2, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]])",
+  "ricci": "Matrix([[q(t, x)*Derivative(q(t, x), (x, 2)), 0, 0, 0], [0, -Derivative(q(t, x), (x, 2))/q(t, x), 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]])",
+  "scalar_curvature": "-2*Derivative(q(t, x), (x, 2))/q(t, x)",
+  "einstein_tensor": "Matrix([[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, Derivative(q(t, x), (x, 2))/q(t, x), 0], [0, 0, 0, Derivative(q(t, x), (x, 2))/q(t, x)]])",
+  "normal_energy_density_in_GR": "0",
+  "example_transverse_stress_in_units_c4_over_8piG": {
+    "0": 0.2222222222222222,
+    "2": -0.025688945388945485
+  },
+  "checks_passed": true,
+  "protocol_sha256": "202da2f392c40fdca5aa6d38d0fdd9637354e05305333bfa2282d5388dbd55c2"
+}
