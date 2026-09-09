@@ -1,0 +1,31 @@
+{
+  "scope": "Finite radiation trains generate a common companion field. Compare packet spacing at fixed incoming power and a power control, measuring weak-probe mean stretch, drift and sampled residual variation. No steady cosmic source population, adopted matter clocks, capture or galaxy gravity.",
+  "domain": [-30.0, 36.0],
+  "cells": [2112, 4224],
+  "refinement_reason": "The initial 1056/2112-cell pilot failed the unchanged 1e-4 absolute probe-stretch convergence gate at power 0.003 and spacing 1. The partial pilot is retained separately.",
+  "centers": [0.0, 3.0, 6.0],
+  "half_width": 0.5,
+  "smoothing_width": 0.25,
+  "field_speed": 0.5,
+  "inertia": 1.0,
+  "source_x": -2.0,
+  "detector_x": 9.0,
+  "source_duration": 20.0,
+  "end_time": 28.0,
+  "cases": [
+    {"power": 0.003, "spacing": 2.0},
+    {"power": 0.003, "spacing": 1.0},
+    {"power": 0.003, "spacing": 0.5},
+    {"power": 0.006, "spacing": 0.5}
+  ],
+  "probe_launches": [6.0, 6.37, 6.83, 7.29, 7.71, 8.13, 8.61, 9.17, 9.73, 10.31, 10.89, 11.47, 12.07],
+  "checks": {
+    "relative_energy_drift": 2e-7,
+    "relative_grid_change_in_total_photon_loss": 0.02,
+    "absolute_grid_change_in_probe_stretch": 0.0001,
+    "relative_grid_change_in_mean_redshift": 0.02,
+    "relative_grid_change_in_detrended_rms": 0.10,
+    "frequency_timing_relative_difference": 1e-7,
+    "independent_arrival_difference": 1e-7
+  }
+}

@@ -98,6 +98,7 @@ def main():
         ('generated-wave-access/check.py', []),
         ('source-timescale/check.py', []),
         ('multiple-regions/check.py', []),
+        ('radiation-train/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

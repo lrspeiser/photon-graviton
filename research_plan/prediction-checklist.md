@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [multiple-region propagation and timing](../research_work/results/multiple-regions/report.md). Eight shared-field backgrounds accumulate redshift, and 32 independent frequency/timing comparisons match. The finite-burst background produces launch-dependent stretching, so a universal per-region rate or single event stretch is not established. Sustained source histories, matter clocks, capture and gravity remain to be derived.
+Latest diagnostic: [finite radiation trains](../research_work/results/radiation-train/report.md). Eight refined shared-field backgrounds and 104 carrier/event comparisons show reduced sampled residual variation from closer packet arrivals, with continued drift and source-power dependence. Linear detrending is descriptive and does not remove physical event variation. A steady source population, environmental coupling, matter clocks, capture and gravity remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

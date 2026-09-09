@@ -2,7 +2,7 @@
 
 Follow the [cumulative-time and companion active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. The current clarified branch proposes cumulative time stretching during propagation, with all lost photon energy entering companions. Ordinary gravitational time dilation is not the proposed cause; timing and all other observations remain mandatory targets.
 
-The latest research step is [multiple regions in a shared companion field](../research_work/results/multiple-regions/report.md). Redshift accumulates without resetting the field, and 32 carrier/event comparisons match. The amount depends on radiation loading and signal launch time. The next source-population calculation must predict both mean stretching and fluctuations; clock compatibility, capture and gravity remain incomplete.
+The latest research step is [finite radiation trains](../research_work/results/radiation-train/report.md). A shared field receives a finite, fully accounted train of photon packets. More frequent illumination reduces sampled residual variation, but the background still drifts; doubling input power approximately doubles mean probe redshift in these examples. Eight refined backgrounds and 104 carrier/event comparisons pass. Longer source histories and a derived mean-field evolution are needed before asserting a stable redshift law.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
