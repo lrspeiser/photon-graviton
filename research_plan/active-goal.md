@@ -18,6 +18,8 @@ The original time concept proposed that time/propagation behavior stretches ligh
 
 ## Work sequence and completion standard
 
+Communication requirement from the user's latest instruction: before every new calculation, explain in layman's terms what question it answers, why that question matters to the proposed system, and what would remain unreliable or unexplained if it were skipped. Identify a candidate mechanism as optional when it is only one possible route. Report consequences in the same plain language; mathematical checks alone must not be presented as a working astronomical theory.
+
 1. Freeze the conversion-only observational assumptions and execute an exploratory redshift fit on recovered data.
 2. Generate energy, photon-count, spectral-width, brightness and timing predictions using that same rate; distinguish exact mathematical tests from astronomical agreement.
 3. Quantify capture and retention conditions, and explain what ordinary gravitational focusing can and cannot establish.
@@ -36,3 +38,5 @@ The first resumed pass derives [interaction-rate requirements](../research_work/
 The next pass derives [matter-assisted conversion](../research_work/results/matter-assisted/derivation.md). A specified scalar/polarizability interaction yields recoil-conserving reactions but an unsuitable color and angular kernel in its simple contact limit. Next investigate a permitted target's collective frequency/momentum response or an ordinary-tensor emission amplitude, without adopting either as the final law or discarding the original observation requirements.
 
 The [collective spatial response pass](../research_work/results/collective-response/derivation.md) narrows the matter-assisted angular kernel but leaves large energy jumps and residual E^3 color dependence. Next derive a material/collective frequency response with its fluctuations and energy ledger, or an ordinary-tensor emission kernel. Spatial coherence alone is not adopted as a complete redshift mechanism.
+
+Purpose of the next frequency-response calculation: explain why a photon would give away tiny energy amounts rather than the roughly 25% jumps of the current collective comparison. Large random jumps spread a sharp color into a broad distribution. An internal oscillating material state is one optional mechanism to test, not a required component or a selected law. Without a derived response, small transfers would simply be chosen to fit the desired behavior, and both the received spectrum and companion-energy supply would remain unsupported. The calculation must include energy temporarily stored in the material and all radiation/receiving channels; a preferred energy scale must also be checked for unwanted differences between colors.
