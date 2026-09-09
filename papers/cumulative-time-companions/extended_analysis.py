@@ -9,7 +9,7 @@ HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
 source=ROOT/'research_work/results/redshift-priority'
 out=HERE/'analysis'
-for src,dst in [('predictions.csv','sky-tile-predictions.csv'),('maser-comparison.csv','maser-comparison.csv')]:
+for src,dst in [('predictions.csv','sky-tile-predictions.csv'),('maser-comparison.csv','maser-comparison.csv'),('coarse-sky-predictions.csv','coarse-sky-predictions.csv'),('observed-time-stretch-targets.csv','observed-time-stretch-targets.csv'),('observation-factor-diagnostics.csv','observation-factor-diagnostics.csv')]:
     shutil.copyfile(source/src,out/dst)
 rows=list(csv.DictReader((source/'maser-comparison.csv').open()))
 d=np.array([float(r['distance_mpc']) for r in rows])
@@ -33,3 +33,21 @@ cv=json.loads((source/'results.json').read_text())
 check={name:float(np.sqrt(np.mean([(299792.458*(float(r[name+'_oof_z'])-float(r['observed_z'])))**2 for r in csv.DictReader((source/'predictions.csv').open())]))) for name in ['linear','constant','smooth']}
 assert all(abs(check[n]-cv['out_of_fold'][n]['rms'])<1e-9 for n in check)
 (out/'extended-checks.json').write_text(json.dumps(dict(maser_rows=6,sky_tile_rows=164,cv_rms_recomputed=check,no_new_fitting=True),indent=2)+'\n',newline='\n')
+
+coarse=json.loads((source/'coarse-sky-results.json').read_text())
+coarse_rows=list(csv.DictReader((source/'coarse-sky-predictions.csv').open()))
+assert len(coarse_rows)==164
+coarse_check={name:float(np.sqrt(np.mean([(299792.458*(float(r[name+'_oof_z'])-float(r['observed_z'])))**2 for r in coarse_rows]))) for name in ['linear','constant','smooth']}
+assert all(abs(coarse_check[n]-coarse['out_of_fold'][n]['rms'])<1e-9 for n in coarse_check)
+fig,ax=plt.subplots(figsize=(7.2,3.5),layout='constrained')
+x=np.arange(3);names=['linear','constant','smooth']
+for offset,values,color,label in [(-.18,check,'#226b9b','65 sky tiles'),(.18,coarse_check,'#a04266','8 larger sky regions')]:
+    bars=ax.bar(x+offset,[values[n] for n in names],width=.34,color=color,label=label)
+    ax.bar_label(bars,fmt='%.1f',padding=3,fontsize=8)
+ax.set(xticks=x,xticklabels=['Linear control','Constant rate','Smooth rate'],ylabel='Out-of-fold RMS, c times redshift residual (km/s)',ylim=(0,540))
+ax.legend(loc='upper left',fontsize=8)
+fig.savefig(out/'grouped-validation.png',dpi=200);plt.close(fig)
+clock=json.loads((ROOT/'research_work/results/universal-clock-coupling/results.json').read_text())
+assert len(clock['records'])==10
+assert max(abs(r['wavelength_stretch']-r['instantaneous_event_stretch']) for r in clock['records'])<2e-9
+(out/'revision-checks.json').write_text(json.dumps(dict(coarse_rows=164,coarse_rms_recomputed=coarse_check,clock_examples=10,clock_timing_identity_checked=True,new_candidate_outcomes_scored=False,no_new_fitting=True),indent=2)+'\n',newline='\n')

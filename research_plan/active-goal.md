@@ -1,6 +1,6 @@
 # Active research goal: accurate redshift prediction within the cumulative-time program
 
-Current synthesis: [academic working draft v0.3](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
+Current synthesis: [academic working draft v0.4](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
 
 ## Modified gravity explicitly authorized
 

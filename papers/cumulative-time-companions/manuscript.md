@@ -2,11 +2,11 @@
 
 ## A phenomenological framework for redshift, galaxy dynamics and gravitational lensing
 
-Working academic draft v0.3 | 9 September 2026 | Authorship and affiliations to be supplied before submission
+Working academic draft v0.4 | 9 September 2026 | Authorship and affiliations to be supplied before submission
 
 ### Abstract
 
-We investigate a hypothetical, nonexpanding universe in which a new environmental property of time changes light propagation cumulatively, especially in regions of limited gravity. Photon energy lost through the associated redshift is transferred entirely into a companion field or wave sector. Companions may propagate independently, enter gravitational wells and, if a physical retention mechanism exists, contribute to an extended gravitational source. We formulate the proposal as a sequence of explicit postulates and conditional derivations. A whole-signal propagation map can relate spectral redshift to transient-duration stretching, while energy conservation fixes the energy transferred to companions. Existing one-dimensional Hamiltonian calculations demonstrate energy and momentum exchange with a dynamical field; separate environmental calculations demonstrate suppression of slow field variation without necessarily excluding rapid waves. These results do not establish a complete microscopic theory, permanent capture or a sufficient gravitational response. An idealized source-and-deposition calculation produces an inverse-square energy-density profile and hence a flat circular-speed contribution under ordinary cold-source gravity, but leaves its normalization and stability unresolved. We identify the joint clock, spectrum, timing, source-budget, rotation and lensing tests needed to develop or reject the framework. A reproduced constant-rate calibration on 164 previously exposed galaxy groups gives alpha = 0.000248899 per Mpc. The inherited test subset has redshift-residual RMS equivalent to 415.4 km/s, versus 414.7 km/s for a linear control. Thus the nearby distance trend is reproduced without demonstrated preference for exponential curvature or validation of its proposed microscopic cause. Graviton identity remains an open hypothesis.
+We investigate a hypothetical, nonexpanding universe in which a new environmental property of time changes light propagation cumulatively, especially in regions of limited gravity. Photon energy lost through the associated redshift is transferred entirely into a companion field or wave sector. Companions may propagate independently, enter gravitational wells and, if a physical retention mechanism exists, contribute to an extended gravitational source. We formulate the proposal as a sequence of explicit postulates and conditional derivations. A whole-signal propagation map can relate spectral redshift to transient-duration stretching, while energy conservation fixes the energy transferred to companions. Existing one-dimensional Hamiltonian calculations demonstrate energy and momentum exchange with a dynamical field; separate environmental calculations demonstrate suppression of slow field variation without necessarily excluding rapid waves. These results do not establish a complete microscopic theory, permanent capture or a sufficient gravitational response. An idealized source-and-deposition calculation produces an inverse-square energy-density profile and hence a flat circular-speed contribution under ordinary cold-source gravity, but leaves its normalization and stability unresolved. We identify the joint clock, spectrum, timing, source-budget, rotation and lensing tests needed to develop or reject the framework. A reproduced constant-rate calibration on 164 previously exposed galaxy groups gives alpha = 0.000248899 per Mpc. The inherited test subset has redshift-residual RMS equivalent to 415.4 km/s, versus 414.7 km/s for a linear control. Thus the nearby distance trend is reproduced without demonstrated preference for exponential curvature or validation of its proposed microscopic cause. Larger sky-region exclusions give RMS 450.7 km/s for the constant rate and 461.6 km/s for the smooth extension. A universal local-clock candidate links lasting stretch to time evolution and also predicts a matter-force sign; its source and energy receiver remain unsolved. Candidate data audits have not yet certified a fresh validation sample. Graviton identity remains an open hypothesis.
 
 ### Formula provenance convention
 
@@ -256,6 +256,10 @@ Each of the 65 existing sky tiles was excluded once, and every fit used only the
 
 Table 2. Leave-one-sky-tile-out errors. These use a different evaluation partition from Table 1 and cannot be compared as improvements over its test RMS. The smooth-minus-constant RMS difference has a descriptive paired sky-tile bootstrap interval of approximately [-0.72, 9.26] km/s. No improvement from added flexibility is demonstrated. Source scripts and the frozen protocol are in redshift-priority [5].
 
+A second predeclared comparison excludes eight larger sky regions, retaining all 164 groups. Its RMS values are 450.4, 450.7 and 461.6 km/s for the linear, constant and smooth candidates. A descriptive paired region bootstrap puts the smooth-minus-constant RMS difference at [4.17, 17.13] km/s. This is further exploratory evidence against adding this particular flexibility, not a fresh significance claim or a reason to increase polynomial complexity.
+
+![Figure 3. Both grouped evaluation schemes retain every object and fit only their respective training folds. The smooth-rate candidate does not improve prediction. These are exposed-data diagnostics, not independent validation.](analysis/grouped-validation.png)
+
 Frozen baseline residuals correlate descriptively with distance (0.139) and equatorial Cartesian sky components (0.256, 0.093, 0.164). Those correlations are not independent significance tests or evidence for a particular void mechanism. The input catalog contains no independently measured line-of-sight environment. Environmental tuning remains deferred pending valid inputs.
 
 #### 8.3 Fixed-rate external maser diagnostic
@@ -264,9 +268,9 @@ The six geometric maser distances in Pesce et al. [6] offer a different measurem
 
 Both rates from section 8.1 were held fixed; all six targets were retained. Distances span 7.58-132.1 Mpc. The exponential RMS is 384.3 km/s versus 390.8 for the linear control; exponential MAE is 317.6 km/s and bias is +22.9 km/s. Two targets are within the prior SBF distance range, with exponential RMS 555.8 km/s. Four are outside, with RMS 258.9 km/s; one of those is closer rather than more distant. Small heterogeneous subsets cannot establish all-distance performance or statistically supported preference.
 
-![Figure 3. Six maser galaxies with the previously fixed rates. Neither curve is fitted to these six points. The lower panel retains every signed exponential residual; distances are held fixed and no uncertainty envelope is asserted.](analysis/maser-comparison.png)
+![Figure 4. Six maser galaxies with the previously fixed rates. Neither curve is fitted to these six points. The lower panel retains every signed exponential residual; distances are held fixed and no uncertainty envelope is asserted.](analysis/maser-comparison.png)
 
-The source's aggregate result was viewed before the protocol, and individual labels were visible during table extraction before prediction-file sealing. The seal proves artifact integrity, not blinding. Exact-name overlap scanning is incomplete for alternate identifiers and groups, and NGC 4258 can share calibration links with standard-candle distances. These six targets therefore constitute an external diagnostic, not a genuinely unexposed validation sample. Published distance uncertainties are retained in the accompanying CSV; they are not used to move targets toward the curve. No calibrated individual prediction intervals have been established.
+The source's aggregate result was viewed before the protocol, and individual labels were visible during table extraction before prediction-file sealing. The seal proves artifact integrity, not blinding. Subsequent PGC alias checks confirm three exact earlier pilot overlaps (UGC 3789, NGC 5765b and CGCG 074-064); NGC 4258 also shares calibration links with standard-candle distances. These six targets therefore constitute an external diagnostic, not a genuinely unexposed validation sample. Published distance uncertainties are retained in the accompanying CSV; they are not used to move targets toward the curve. No calibrated individual prediction intervals have been established.
 
 #### 8.4 Dynamical progress and unresolved causes
 
@@ -284,9 +288,67 @@ Priority tests should freeze a common finite parameter set and predict: (a) reds
 
 Inferring a cause from observations is possible as model selection: propose a small number of dynamical laws, derive their linked consequences, estimate parameters on declared training data, then predict independent cases. A flexible rule adjusted separately for every galaxy is not equivalent. Even broad agreement can leave several microscopic causes observationally indistinguishable; discrimination requires predictions on which they differ.
 
+#### 8.5 Inverse environmental dependence and observed gearing
+
+The additional time effect is stipulated to be small in deep wells and strongest, but finite, in voids. This specifies the direction of environmental dependence, not whether physical clocks are faster or slower relative to a distant standard. The following saturating switch is an optional parameterization. W must be an operationally defined nonnegative well depth; an arbitrary potential zero or a force-cancellation point cannot define the physical effect.
+
+Provenance: Proposed environmental parameterization using generic mathematics; conditional calibration by inversion of the established fractional-change law. Originality unverified.
+
+$$
+I(W)=\frac{1}{1+(W/W_*)^2},\quad \alpha=A I(W),\quad A_{\mathrm{required}}=\frac{\ln(1+z_{\mathrm{time}})}{F D}. \tag{16}
+$$
+
+The last relation approximates a fraction F of distance D as fully affected void and the remainder as unaffected. Observed stretch then constrains the required common rate. The companion table includes all 164 observed stretch targets and illustrative F=1, 0.9 and 0.75 scenarios. These per-object inversions are diagnostic targets, not 164 adjustable prediction parameters. None measures a local clock rate. Without independent path measurements, amplitude A and the transition scale W_* cannot both be inferred merely by calling most of space void. Nearly identical void-dominated paths carry little information about the transition scale.
+
+#### 8.6 A common local clock and its force consequence
+
+A traveler is required to experience ordinary local ticking and local processes, with constant locally measured light speed. One optional matter completion multiplies the entire local matter Hamiltonian by a common positive time factor q, rather than modifying only electromagnetism. In a spatially uniform clock-sized patch, the reference-time Schrodinger equation then reduces to its ordinary form in local time. This is an assumed universal coupling, not a derived physical law.
+
+Provenance: Established lapse, Hamiltonian and relativistic-dispersion structures [7], applied as a proposed matter completion; no novelty claim.
+
+$$
+d\tau=q\,dt,\quad H_{\mathrm{ref}}=qH_{\mathrm{local}},\quad H_m=q\sqrt{c^2p^2+m^2c^4},\quad H_\gamma=qc|p|. \tag{17}
+$$
+
+Fixed spatial rulers give local photon speed c. With q varying negligibly across a clock, all internal frequencies acquire the same reference-time factor and local frequency ratios remain normal. Finite laboratories can still have gradient and tidal effects; local normality does not establish identical clock histories between separated observers.
+
+Provenance: Derived from the established Hamiltonian identities within equation (17); not claimed unique. The acceleration is that of a freely released particle relative to fixed local observers, initially at rest.
+
+$$
+\boldsymbol{a}_{\mathrm{local,rest}}=-c^2\nabla\ln q,\qquad \alpha_{\mathrm{time}}=-\frac{\partial_t q}{c q^2}. \tag{18}
+$$
+
+The second expression is the earlier optical relation with n=1/q. A lower additional q in voids gives an additional force toward voids; a higher q gives a force toward wells. Redshift instead depends on q decreasing during traversal. Neither sign of clock contrast alone determines the spectral shift. Other gravitational contributions require a joint field theory rather than an arbitrary cancellation of an inconvenient force.
+
+Ten prescribed finite-region tests retain q=1 at both endpoints. Static faster or slower void clocks cause a travel-time change but no lasting shift. A faster-void factor relaxing toward one gives z=0.012188 in one dimensionless example; a slower factor decreasing further gives z=0.009057. The same equations stretch neighboring signal arrival times by the wavelength factor. Launching later changes the stretch, so an entire event need not be affinely rescaled. These are kinematic demonstrations, not astronomical fits or sourced gravitational solutions [5, universal-clock-coupling].
+
+Provenance: Conditional bound derived here using established calculus; originality unverified. It applies to q=1+sigma epsilon(t) I(x), a fixed profile between zero and one, monotone decreasing q, and matched endpoint clocks.
+
+$$
+1\leq S_{\mathrm{time}}\leq\frac{q_{\mathrm{void}}(t_e)}{q_{\mathrm{void}}(t_o)},\qquad q_{\mathrm{void}}=1+\sigma\epsilon>0. \tag{19}
+$$
+
+Thus redshift can bound the required change in the hypothetical void contrast, under a specified evolution law. It does not determine a unique subjective slowing throughout the trip. The numerical q histories are prescribed: photon energy loss is known but its receiver and the work maintaining q are not solved. A dynamical universal coupling also sources the field from matter energy, not only photons. Local clock normality, the associated force and the complete companion budget must be derived together.
+
+Other new diagnostics reinforce that limitation. A positive quadratic restoring term makes the closed homogeneous field oscillate and return energy, rather than sustain one-way accumulation. Distributed-mode calculations conserve energy in a finite periodic toy volume but do not establish spatial convergence or a real cosmic boundary condition. A fixed-matter electromagnetic-medium completion gives inconsistent atomic transition shifts; it is different from the universal prescription above. A pure time-factor metric with exactly fixed flat slices cannot support the selected positive sources under ordinary Einstein constraints, while a particular acceleration-screened modified action weakens the direct force and loses ellipticity above its derived coupling threshold. These are retained candidate-specific failures, not a prohibition on modified gravity [5, distributed-restoring, distributed-modes, atomic-line-response, time-only-geometry, acceleration-screening].
+
+#### 8.7 Observation conventions and fresh-data status
+
+Provenance: Established factor multiplication and logarithmic bookkeeping, applied to the proposed mechanism; not a new physical law.
+
+$$
+1+z_{\mathrm{obs}}=(1+z_{\mathrm{time}})(1+z_{\mathrm{motion}})(1+z_{\mathrm{endpoint}})(1+z_{\mathrm{measurement}}). \tag{20}
+$$
+
+A factor already contained in a propagation or frame calculation must not be added again. In an illustrative longitudinal-motion comparison, exact composition with +300 km/s changes the additive shortcut by 0.914-7.194 km/s across the 164 rows, far below the approximately 450 km/s model scatter. Those speeds are sensitivity scenarios, not measured motions or validated uncertainty widths. Residual-equivalent velocities cannot be inserted as object-specific corrections. CF4 confirms the CMB frame, but full source-level spectral-velocity and frame-transform provenance remains to be verified before precision validation [5, observation-model].
+
+The structured historical registry and subsequent alias checks show that UGC 3789, NGC 5765b and CGCG 074-064 were already in the earlier pilot under PGC identifiers. The six-maser diagnostic is therefore demonstrably reused as well as unblinded. A newer TRGB-SBF calibration [8] does not supply a fresh sample among the 16 calibration/anchor/Coma targets audited here: every one shares an excluded group. This does not assert that every one of the paper's 61 recalibrated distant objects was individually audited.
+
+The ELVES-Field publisher table [9] contains TRGB, SBF and redshift-derived distance methods. An identity-only staging pass retained 29 provisional candidates after fixed method/quality and exposed-example exclusions. Historical aliases and group/source overlap excluded three more, leaving 26 pending. No pending target outcome has been scored by these audits. Alias, host/group, selection, calibration and velocity-frame checks remain incomplete, and no fresh sample is yet certified. Isolation flags from a group/flow analysis are not independent line-of-sight well-depth measurements. New publication dates alone do not establish independent evidence.
+
 ### 9. Computational objectives and completion criteria
 
-The next redshift objective is a spatial field solution that predicts the line-of-sight integral of partial-time n from stated environmental and source inputs, with a common finite parameter set. Its deliverable is an object-by-object redshift calculation and an uncertainty budget. Without it, equation (14) remains a fitted descriptive law. A new untouched sample should be selected only after the rate and selection rules are frozen; the 164-group benchmark cannot be made blind retrospectively.
+The next redshift objective is a spatial field solution that predicts the line-of-sight integral of partial-time n from stated environmental and source inputs, with a common finite parameter set. Its deliverable is an object-by-object redshift calculation and an uncertainty budget. Without it, equation (14) remains a fitted descriptive law. Candidate identities and selection rules may be audited and quarantined before fitting. The final common model, parameters, uncertainty and evaluation rules must be frozen before opening fresh outcome labels; the 164-group benchmark cannot be made blind retrospectively.
 
 The next microscopic objective is to join physically normalized receiving modes, forward optical response and reversible companion production to the same energy-conserving dynamics. Generated-wave entry and pair-production balance have now been calculated in limited models. The deliverables are the optical drift, scattering, capture and release implied by a single interaction, rather than independently chosen coefficients. Without this connection, successful pieces may belong to incompatible mechanisms.
 
@@ -341,7 +403,7 @@ Each item names an output still required of the completed theory. A partial calc
 
 ### Data and code availability
 
-The research repository is public [5]. This draft summarizes evidence present at commit 7b0b296. Its cited result directories contain assumptions, scripts and saved outputs. The companion evidence map identifies exact local reports. Version 0.3 retains the reproduced 164-group calibration and adds sky-tile and six-maser comparison tables, formula provenance labels and updated field results; it introduces no new astronomical observations or fresh validation sample. The source catalog SHA-256 is 8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0. The paper analysis script verifies the source hash and reproduces every saved prediction. Equation (12) remains an idealized conditional derivation. Historical papers are retained separately rather than overwritten. Current manuscript source and build instructions reside in papers/cumulative-time-companions.
+The research repository is public [5]. This draft summarizes evidence present at commit ee5733b. Its cited result directories contain assumptions, scripts and saved outputs. The companion evidence map identifies exact local reports. Version 0.4 adds larger-region comparisons, observed gearing targets, multiplicative observation accounting, universal-clock and force diagnostics, and documented candidate-data exclusions. All reported prediction results remain reused or exploratory; candidate outcomes are not newly scored. The source catalog SHA-256 is 8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0. The paper analysis script verifies the source hash and reproduces every saved prediction. Equation (12) remains an idealized conditional derivation. Historical papers are retained separately rather than overwritten. Current manuscript source and build instructions reside in papers/cumulative-time-companions.
 
 ### References
 
@@ -353,7 +415,13 @@ The research repository is public [5]. This draft summarizes evidence present at
 
 [4] Qu, K., Jia, Q., Edwards, M. R., and Fisch, N. J. (2018). Theory of electromagnetic wave frequency upconversion in dynamic media. Physical Review E, 98, 023202. [Paper](https://arxiv.org/abs/1804.07358). DOI: 10.1103/PhysRevE.98.023202. This is an analogy for energy exchange in evolving media, not evidence for cosmic companion production.
 
-[5] Photon-Companion Research repository (2026). Conditional derivations, diagnostics and research reports. [Evidence snapshot](https://github.com/lrspeiser/photon-graviton/tree/7b0b296). Relevant report identifiers are supplied in the accompanying evidence map. Repository results are internal working evidence, not peer-reviewed validation.
+[5] Photon-Companion Research repository (2026). Conditional derivations, diagnostics and research reports. [Evidence snapshot](https://github.com/lrspeiser/photon-graviton/tree/ee5733b). Relevant report identifiers are supplied in the accompanying evidence map. Repository results are internal working evidence, not peer-reviewed validation.
 
 
 [6] Pesce, D. W., et al. (2020). The Megamaser Cosmology Project. XIII. Combined Hubble constant constraints. Astrophysical Journal Letters, 891, L1. [Paper](https://arxiv.org/abs/2001.09213). DOI: 10.3847/2041-8213/ab75f0. This work uses its Table 1 geometric distances and measured optical CMB-frame velocities, not its cosmological fit or inferred flow corrections.
+
+[7] Gourgoulhon, E. (2007). 3+1 Formalism and Bases of Numerical Relativity. [Lecture notes](https://arxiv.org/abs/gr-qc/0703035). Established clock, lapse and Hamiltonian geometry; the fictional modified-gravity dynamics remain unspecified.
+
+[8] Jensen, J. B., et al. (2025). The TRGB-SBF Project. III. Refining the HST Surface Brightness Fluctuation Distance Scale Calibration with JWST. [Paper](https://arxiv.org/abs/2502.15935). Calibration and identity audit only; no imported cosmological fit.
+
+[9] Carlsten, S. G., et al. (2026). A Sample of Nearby Isolated Dwarf Galaxies: A First Look at the Mass Function of Field Dwarfs. [Paper](https://arxiv.org/abs/2602.16766). [Publisher table](https://content.cld.iop.org/journals/0004-637X/1001/2/244/revision1/apjae4c5ct1_mrt.txt). Only candidate metadata and identity checks are used in this revision.

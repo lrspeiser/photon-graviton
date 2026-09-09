@@ -1,6 +1,6 @@
 # Manuscript evidence map
 
-Draft v0.3 describes research present at commit `7b0b296`. The existing frozen astronomical fit was independently reproduced; no new observations or fresh holdouts were added. Formula derivations are conditional on their stated assumptions.
+Draft v0.4 describes research present at commit `ee5733b`. The existing frozen astronomical fit was independently reproduced; no new observations or fresh holdouts were added. Formula derivations are conditional on their stated assumptions.
 
 | Manuscript claim | Canonical evidence | Scope |
 |---|---|---|
@@ -48,6 +48,24 @@ Draft v0.3 describes research present at commit `7b0b296`. The existing frozen a
 - Paper benchmark reproduction: [analysis script](analysis.py), [metrics](analysis/metrics.json), [all rows](analysis/observed-predicted-redshift.csv).
 
 - Sky-tile fixed-candidate comparison: [report](../../research_work/results/redshift-priority/report.md). No improved model demonstrated.
-- Fixed-rate maser check: [report](../../research_work/results/redshift-priority/maser-report.md). Six objects; not blinded; alias/group overlap unresolved.
+- Fixed-rate maser check: [report](../../research_work/results/redshift-priority/maser-report.md). Six objects; not blinded; three exact pilot overlaps confirmed by PGC aliases.
 - Homogeneous finite-radiation dynamics: [report](../../research_work/results/distributed-zero-mode/report.md). Conditional periodic zero mode; not a generic cosmic solution.
 - Formula provenance: [standing rule](../../research_plan/formula-provenance.md). No originality is certified.
+
+- Larger-region validation: [report](../../research_work/results/redshift-priority/coarse-sky-report.md). Smooth extension does not improve prediction.
+
+- Observed gearing calibration: [report](../../research_work/results/redshift-priority/redshift-time-calibration.md). Conditional inverse targets, not measured local clock slowing.
+
+- Observation model: [report](../../research_work/results/redshift-priority/observation-model.md). Independent motion and interval calibration remain missing.
+
+- Universal clocks and force: [report](../../research_work/results/universal-clock-coupling/report.md). Prescribed backgrounds, no solved source or companion energy receiver.
+
+- Restoring term: [report](../../research_work/results/distributed-restoring/report.md). Oscillations and energy return in this candidate.
+
+- Distributed modes: [report](../../research_work/results/distributed-modes/report.md). Finite periodic volume and no demonstrated spatial convergence.
+
+- Atomic response: [report](../../research_work/results/atomic-line-response/report.md). Failure of one fixed-matter electromagnetic completion.
+
+- Modified gravity trial: [report](../../research_work/results/acceleration-screening/report.md). Weakens direct force; ellipticity can fail.
+
+- New-source identity audits: [report](../../research_work/results/redshift-priority/elves-identity-report.md). 26 candidates pending; zero certified fresh targets.
