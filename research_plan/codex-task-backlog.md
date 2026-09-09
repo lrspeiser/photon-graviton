@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [deposit support](../research_work/results/deposit-support/derivation.md). Mechanical support is distinct from internal retention. Fixed-potential tests quantify cold infall, required orbital dispersion and a positive ideal equilibrium; isotropic radiation requires a different stress profile. A finite photon-funded reservoir, its formation, self-gravity, stability and lensing remain unproved.
+Latest diagnostic: [capture momentum](../research_work/results/capture-momentum/derivation.md). Capture transfers momentum as well as energy. Exact local absorption and conditional force/orbit comparisons tie receiver mass growth to radiation pressure and orbital changes. Balanced delivered momentum reduces the radial force but does not by itself preserve the orbit. No actual radiation geometry, capture rate or self-consistent galactic evolution is established.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 

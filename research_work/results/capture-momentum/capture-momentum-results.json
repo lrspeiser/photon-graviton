@@ -1,0 +1,105 @@
+{
+  "scope": "Local special-relativistic capture plus weak-field instantaneous force and adiabatic-orbit comparisons; no actual radiation field, capture rate, self-consistent growing galaxy or astronomical fit.",
+  "random_cases": 200,
+  "maximum_four_momentum_reconstruction_error": 1.7763568394002505e-15,
+  "packet_examples": [
+    {
+      "delivered_anisotropy": 0.0,
+      "incident_energy_over_initial_rest_energy": 1e-06,
+      "final_rest_mass_over_initial": 1.0000010000002224,
+      "radial_speed_km_s": 0.0,
+      "tangential_speed_km_s": 199.9998000002445,
+      "rest_energy_gain_over_incident": 1.0000002224064275,
+      "kinetic_energy_change_over_incident": -2.2248869413488137e-07
+    },
+    {
+      "delivered_anisotropy": 0.0,
+      "incident_energy_over_initial_rest_energy": 0.001,
+      "final_rest_mass_over_initial": 1.0010000002223076,
+      "radial_speed_km_s": 0.0,
+      "tangential_speed_km_s": 199.80019984461697,
+      "rest_energy_gain_over_incident": 1.0000002223076176,
+      "kinetic_energy_change_over_incident": -2.2230772778186747e-07
+    },
+    {
+      "delivered_anisotropy": 0.0,
+      "incident_energy_over_initial_rest_energy": 1.0,
+      "final_rest_mass_over_initial": 2.00000011126504,
+      "radial_speed_km_s": 0.0,
+      "tangential_speed_km_s": 100.00001112650303,
+      "rest_energy_gain_over_incident": 1.0000001112650398,
+      "kinetic_energy_change_over_incident": -1.1126503984826286e-07
+    },
+    {
+      "delivered_anisotropy": 1.0,
+      "incident_energy_over_initial_rest_energy": 1e-06,
+      "final_rest_mass_over_initial": 1.0000009999997224,
+      "radial_speed_km_s": 0.29979209149514874,
+      "tangential_speed_km_s": 199.9998000002445,
+      "rest_energy_gain_over_incident": 0.9999997223619772,
+      "kinetic_energy_change_over_incident": 2.7755575615628914e-07
+    },
+    {
+      "delivered_anisotropy": 1.0,
+      "incident_energy_over_initial_rest_energy": 0.001,
+      "final_rest_mass_over_initial": 1.0009995007216836,
+      "radial_speed_km_s": 299.4928984553644,
+      "tangential_speed_km_s": 199.80019984461697,
+      "rest_energy_gain_over_incident": 0.9995007216836438,
+      "kinetic_energy_change_over_incident": 0.0004992783162460768
+    },
+    {
+      "delivered_anisotropy": 1.0,
+      "incident_energy_over_initial_rest_energy": 1.0,
+      "final_rest_mass_over_initial": 1.7320509360466774,
+      "radial_speed_km_s": 149896.21232179154,
+      "tangential_speed_km_s": 100.00001112650303,
+      "rest_energy_gain_over_incident": 0.7320509360466774,
+      "kinetic_energy_change_over_incident": 0.26794906395332263
+    }
+  ],
+  "differential_checks": [
+    {
+      "xi": -1.0,
+      "velocity_derivative_error": 1.0955702567372327e-08,
+      "mass_derivative_error": 7.743511831748151e-09
+    },
+    {
+      "xi": 0.0,
+      "velocity_derivative_error": 5.514483203405973e-09,
+      "mass_derivative_error": 2.7521831480470382e-09
+    },
+    {
+      "xi": 0.5,
+      "velocity_derivative_error": 5.514483203405973e-09,
+      "mass_derivative_error": 1.1358749052448047e-08
+    },
+    {
+      "xi": 1.0,
+      "velocity_derivative_error": 6.378615968749557e-09,
+      "mass_derivative_error": 2.2391455356540746e-09
+    }
+  ],
+  "galactic_example": {
+    "radius_kpc": 10.0,
+    "circular_speed_km_s": 200.0,
+    "assumed_receiver_mass_doubling_time_Gyr": 10.0,
+    "outward_force_over_gravity_for_xi_1": 5.07963785212605,
+    "absolute_xi_for_radiation_force_below_gravity": 0.19686442795945708,
+    "absolute_xi_for_radiation_force_below_tenth_gravity": 0.01968644279594571,
+    "mass_growth_efold_time_for_equal_force_at_xi_1_Gyr": 73.28368338774116,
+    "note": "Radius, total potential and fractional growth are frozen local diagnostics, not an evolved trajectory."
+  },
+  "balanced_delivered_momentum_adiabatic_orbit": {
+    "assumptions": "No radiation torque/force, constant external potential, slow loading, nearly circular orbit; delivered balance is stipulated, not derived from an isotropic moving-target bath.",
+    "mass_doubling_radius_ratio_flat_speed": 0.5,
+    "mass_doubling_radius_ratio_Kepler": 0.25
+  },
+  "next_requirements": [
+    "Net energy and momentum delivered after all emission channels",
+    "Actual angular radiation distribution in the receiver frame",
+    "Capture rates tied to receiver mass growth and finite capacity",
+    "Angular momentum source and evolving supported distribution",
+    "Joint source depletion, gravity and lensing"
+  ]
+}

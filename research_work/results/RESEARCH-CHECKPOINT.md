@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [mechanical support for deposits](deposit-support/derivation.md). Mechanical support is distinct from internal retention. Fixed-potential tests quantify cold infall, required orbital dispersion and a positive ideal equilibrium; isotropic radiation requires a different stress profile. A finite photon-funded reservoir, its formation, self-gravity, stability and lensing remain unproved.
+Latest result: [momentum during capture](capture-momentum/derivation.md). Capture transfers momentum as well as energy. Exact local absorption and conditional force/orbit comparisons tie receiver mass growth to radiation pressure and orbital changes. Balanced delivered momentum reduces the radial force but does not by itself preserve the orbit. No actual radiation geometry, capture rate or self-consistent galactic evolution is established.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -18,6 +18,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Ordinary soft-graviton emission | Tensor polarization/energy checks and a conditional soft-production bound | Tiny transfer strength; no full finite-energy amplitude, propagation or capture model |
 | Capture and storage | Resonance bandwidth, reversible three-state energy ledger, saturation and bath-induced leakage | No actual receiver, absolute capture rate, supported spatial reservoir or gravity law |
 | Deposit support | Cold infall, Jeans solutions and positive ideal phase-space equilibrium | Fixed potential; no finite growing reservoir, stability or lensing established |
+| Capture momentum | Exact four-momentum transfer and directional-force requirements | No physical radiation geometry or evolved source-funded galaxy |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

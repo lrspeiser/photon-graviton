@@ -79,6 +79,7 @@ def main():
         ('soft-graviton/check_soft_graviton.py', []),
         ('capture-storage/check_capture_storage.py', []),
         ('deposit-support/check_deposit_support.py', []),
+        ('capture-momentum/check_capture_momentum.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
