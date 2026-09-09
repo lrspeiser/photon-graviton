@@ -1,5 +1,7 @@
 # Candidate catalog and environmental-input audit
 
+The [remaining-name resolver audit](elves-name-resolver-report.md) resolves 13 of 24 pending names and reveals a specific source-association ambiguity for LSBC D565-09: its named position nearly coincides with a different SIMBAD object from the spectroscopic object near the publisher position. LSBC D634-03 also has galaxy/group representation ambiguity. No redshift values were inspected, no automatic nearest-object substitution was made, and the 24-pending count is unchanged. Resolve these source associations before using their measurements.
+
 **Current eligibility:** the [stage-2 quarantine screen](elves-quarantine-screen-report.md) retains all 29 initial candidates, with five excluded and 24 pending. It precautionarily excludes the two unresolved historical object/group coincidences under a common rule and records accidental distance exposure in a search excerpt. Expanded supported-alias scans found no additional hits in 799 historical text files. This supersedes the counts in historical snapshots below; zero targets are certified fresh.
 
 The [radio quality join](elves-radio-quality-report.md) adds 14 fixed-cone matches, nine supported by explicit AGC/UGC aliases. Thirteen carry detection class 1 and one positional association carries class 2, which depends on a known optical redshift. No matched entry carries the source's confusion flag. These are measurement-source clues, not freshness or void-path evidence; all 26 pending targets remain retained and no outcomes were used.
