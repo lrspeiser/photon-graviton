@@ -1,5 +1,7 @@
 # Candidate catalog and environmental-input audit
 
+**Current eligibility:** the [stage-2 quarantine screen](elves-quarantine-screen-report.md) retains all 29 initial candidates, with five excluded and 24 pending. It precautionarily excludes the two unresolved historical object/group coincidences under a common rule and records accidental distance exposure in a search excerpt. Expanded supported-alias scans found no additional hits in 799 historical text files. This supersedes the counts in historical snapshots below; zero targets are certified fresh.
+
 The [radio quality join](elves-radio-quality-report.md) adds 14 fixed-cone matches, nine supported by explicit AGC/UGC aliases. Thirteen carry detection class 1 and one positional association carries class 2, which depends on a known optical redshift. No matched entry carries the source's confusion flag. These are measurement-source clues, not freshness or void-path evidence; all 26 pending targets remain retained and no outcomes were used.
 
 The [velocity metadata audit](elves-velocity-metadata-report.md) retrieved source metadata for all 26 pending positions. Fifteen have one name/alias-supported counterpart; five cones contain multiple objects. Source review distinguishes optical-convention HI profile midpoints from flux-weighted centers. No target outcomes were scored, no original ELVES per-row measurement chain is yet certified, and freshness decisions remain unchanged.
