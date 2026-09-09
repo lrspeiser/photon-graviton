@@ -100,6 +100,7 @@ def main():
         ('multiple-regions/check.py', []),
         ('radiation-train/check.py', []),
         ('sustained-illumination/check.py', []),
+        ('spherical-propagation/check.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

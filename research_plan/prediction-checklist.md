@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [sustained illumination](../research_work/results/sustained-illumination/report.md). A derived rolling branch is approached by six longer finite-source backgrounds and 60 carrier/event comparisons. Numerical energy accounting distinguishes field production from light remaining in transit. Nearly steady stretching in one dimension does not establish a static cosmic field, its three-dimensional behavior, matter clocks, capture or gravity.
+Latest diagnostic: [spherical propagation](../research_work/results/spherical-propagation/report.md). Eight finite-fuel spherical backgrounds approach a static profile, with much smaller late redshift but persistent delay; 74 carrier/event comparisons pass. General angular sources, self-binding, matter clocks, capture and gravity remain unproved. The [self-binding/time-formula note](time-field-and-self-binding.md) preserves the user's new question without adopting an interaction law.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

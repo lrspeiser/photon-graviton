@@ -1,0 +1,150 @@
+{
+  "scope": "Spherically symmetric three-dimensional massless companion field coupled to outward radiation shells. Test localized and radially extended compact production regions with finite emitter energy. This is not general angular illumination, a void-gravity cause, an adopted matter-clock law, capture or a gravitational model.",
+  "inertia": 1.0,
+  "field_speed": 0.5,
+  "half_width": 0.5,
+  "smoothing_width": 0.25,
+  "source_radius": 0.5,
+  "grid_spacings": [
+    0.0625,
+    0.03125
+  ],
+  "kernel_tail_sigmas": 12.0,
+  "cases": [
+    {
+      "name": "compact_sparse",
+      "power": 0.3,
+      "spacing": 0.5,
+      "centers": [
+        3,
+        6,
+        9
+      ],
+      "outer_radius": 56,
+      "source_duration": 64,
+      "end_time": 80,
+      "detector_radius": 12,
+      "launches": [
+        0,
+        4.13,
+        8.31,
+        12.07,
+        20.19,
+        32.17,
+        44.31,
+        52.07,
+        60.19
+      ],
+      "late_launch_minimum": 44,
+      "field_window": [
+        50,
+        60
+      ]
+    },
+    {
+      "name": "compact_smooth",
+      "power": 0.3,
+      "spacing": 0.25,
+      "centers": [
+        3,
+        6,
+        9
+      ],
+      "outer_radius": 56,
+      "source_duration": 64,
+      "end_time": 80,
+      "detector_radius": 12,
+      "launches": [
+        0,
+        4.13,
+        8.31,
+        12.07,
+        20.19,
+        32.17,
+        44.31,
+        52.07,
+        60.19
+      ],
+      "late_launch_minimum": 44,
+      "field_window": [
+        50,
+        60
+      ]
+    },
+    {
+      "name": "compact_power",
+      "power": 0.6,
+      "spacing": 0.25,
+      "centers": [
+        3,
+        6,
+        9
+      ],
+      "outer_radius": 56,
+      "source_duration": 64,
+      "end_time": 80,
+      "detector_radius": 12,
+      "launches": [
+        0,
+        4.13,
+        8.31,
+        12.07,
+        20.19,
+        32.17,
+        44.31,
+        52.07,
+        60.19
+      ],
+      "late_launch_minimum": 44,
+      "field_window": [
+        50,
+        60
+      ]
+    },
+    {
+      "name": "extended_smooth",
+      "power": 0.3,
+      "spacing": 0.25,
+      "centers": [
+        3,
+        6,
+        9,
+        12,
+        15,
+        18
+      ],
+      "outer_radius": 100,
+      "source_duration": 112,
+      "end_time": 140,
+      "detector_radius": 21,
+      "launches": [
+        0,
+        8.13,
+        16.31,
+        24.07,
+        40.19,
+        60.17,
+        80.31,
+        92.07,
+        100.19,
+        108.13
+      ],
+      "late_launch_minimum": 92,
+      "field_window": [
+        94,
+        106
+      ]
+    }
+  ],
+  "checks": {
+    "relative_total_energy_drift": 2e-07,
+    "relative_boundary_energy": 1e-10,
+    "frequency_timing_relative_difference": 1e-07,
+    "independent_arrival_difference": 1e-07,
+    "absolute_grid_change_in_probe_stretch": 0.0001,
+    "relative_grid_change_in_final_field_energy": 0.02,
+    "absolute_grid_change_in_static_delay": 0.0001,
+    "absolute_grid_change_in_late_probe_stretch": 1e-07
+  },
+  "interpretation": "The approach to a static field and loss of sustained redshift are measured rather than required as passing gates. No independent one-dimensional redshift coefficient is inserted. Emission transfers a prescribed finite amount of fuel energy into each shell; emitter microphysics and clock standards are not derived."
+}
