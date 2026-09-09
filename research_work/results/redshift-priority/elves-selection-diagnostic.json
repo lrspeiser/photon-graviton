@@ -1,0 +1,48 @@
+{
+  "status": "synthetic selection diagnostic only; no candidate distances/redshifts used",
+  "formula_provenance": "established Gaussian truncation algebra, applied to an explicitly simplified selection example; not a new physical law",
+  "fixed_toy_distance_sigma_mpc": 0.5,
+  "lower_bound_boundary_mpc": 10.0,
+  "lower_bound_sigma_multiple": 2.0,
+  "measured_distance_cutoff_mpc": 11.0,
+  "assumptions": [
+    "unbiased Gaussian distance errors before selection",
+    "fixed error for every synthetic object",
+    "only the distance lower-bound selection is applied",
+    "fixed true distances; no population prior, spectrum-availability or imaging selection"
+  ],
+  "pending_method_counts": {
+    "S": 15,
+    "T": 9
+  },
+  "input_hashes": {
+    "elves-quarantine-screen.json": "ea561f72d001bb5c1e18a65852abda121b2da5374d3d348e0e3749318a002f0e",
+    "elves-field-feature-audit.json": "4fce5f83043db09454b7ebe8dcc0806daff9eee69c183b46969cc3095392b20e"
+  },
+  "records": [
+    {
+      "synthetic_true_distance_mpc": 8.0,
+      "acceptance_probability": 0.9999999990134123,
+      "mean_measured_minus_true_mpc_given_selected": -3.0379414279088385e-09,
+      "coverage_of_measured_plus_minus_1p96sigma_given_selected": 0.9500042106408215
+    },
+    {
+      "synthetic_true_distance_mpc": 10.0,
+      "acceptance_probability": 0.9772498680518208,
+      "mean_measured_minus_true_mpc_given_selected": -0.027623931339494985,
+      "coverage_of_measured_plus_minus_1p96sigma_given_selected": 0.972120069555418
+    },
+    {
+      "synthetic_true_distance_mpc": 11.0,
+      "acceptance_probability": 0.5,
+      "mean_measured_minus_true_mpc_given_selected": -0.3989422804014327,
+      "coverage_of_measured_plus_minus_1p96sigma_given_selected": 0.9500042097035591
+    },
+    {
+      "synthetic_true_distance_mpc": 12.0,
+      "acceptance_probability": 0.0227501319481792,
+      "mean_measured_minus_true_mpc_given_selected": -1.186607766411421,
+      "coverage_of_measured_plus_minus_1p96sigma_given_selected": 0.0
+    }
+  ]
+}
