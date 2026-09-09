@@ -1,0 +1,174 @@
+{
+  "scope": "Numerical pilot of a complete integrated timing estimator on synthetic flux at all 98 existing DES cadence slots. This is development, not independent scientific validation.",
+  "protocol_sha256": "2247da0e26b61e2351d61958cad4de7277dba0d9ac3ead80346a1cd82e0fba22",
+  "checks": {
+    "scalar_batch_max_log_error": 1.9539925233402755e-14,
+    "constant_likelihood_max_error": 6.661338147750939e-15,
+    "invalid_error_rejected": true,
+    "all_original_cadence_slots": 98
+  },
+  "injection": {
+    "family": "split_gaussian_shoulder",
+    "b": 1,
+    "seed": 601,
+    "intrinsic_log_scatter": 0.1,
+    "offset_range_days": [
+      -5,
+      5
+    ],
+    "nominal_snr": 20
+  },
+  "slope_of_true_injected_widths_in_finite_sample": 1.0468366922915948,
+  "runs": {
+    "base": {
+      "a": 3.5241053489326757,
+      "b": 1.0950703488167988,
+      "sigma": 0.106642915384886,
+      "negative_centered_log_likelihood": 143.48439138566553,
+      "optimizer_success": true,
+      "interior_solution": true,
+      "maximum_population_mass_outside_width_bounds": 1.634278942108843e-37,
+      "starts": [
+        {
+          "success": true,
+          "objective": 143.4843913856665,
+          "parameters": [
+            3.5241053264192734,
+            1.0950704222688283,
+            -2.238269210161258
+          ]
+        },
+        {
+          "success": true,
+          "objective": 143.48439138566553,
+          "parameters": [
+            3.5241053489326757,
+            1.0950703488167988,
+            -2.2382692649174274
+          ]
+        },
+        {
+          "success": true,
+          "objective": 143.4843913856657,
+          "parameters": [
+            3.524105352760186,
+            1.0950703237518524,
+            -2.2382692064375878
+          ]
+        }
+      ],
+      "elapsed_seconds": 1.5972225000004983,
+      "event_count": 98
+    },
+    "refined": {
+      "a": 3.5234657048325007,
+      "b": 1.1001927727322882,
+      "sigma": 0.10546234506383191,
+      "negative_centered_log_likelihood": 141.19340103506283,
+      "optimizer_success": true,
+      "interior_solution": true,
+      "maximum_population_mass_outside_width_bounds": 3.509807924436227e-38,
+      "starts": [
+        {
+          "success": true,
+          "objective": 141.1934010350768,
+          "parameters": [
+            3.523465586658776,
+            1.1001931539036756,
+            -2.249401022679877
+          ]
+        },
+        {
+          "success": true,
+          "objective": 141.19340103506283,
+          "parameters": [
+            3.5234657048325007,
+            1.1001927727322882,
+            -2.249401308602938
+          ]
+        },
+        {
+          "success": true,
+          "objective": 141.19340103506298,
+          "parameters": [
+            3.5234657109708833,
+            1.1001927634787436,
+            -2.2494012138146355
+          ]
+        }
+      ],
+      "elapsed_seconds": 5.9392355999953,
+      "event_count": 98
+    },
+    "independent_scramble": {
+      "a": 3.525500347872613,
+      "b": 1.1055858070235707,
+      "sigma": 0.10965981928718727,
+      "negative_centered_log_likelihood": 145.46763068091676,
+      "optimizer_success": true,
+      "interior_solution": true,
+      "maximum_population_mass_outside_width_bounds": 3.3234228612647797e-35,
+      "starts": [
+        {
+          "success": true,
+          "objective": 145.46763068091718,
+          "parameters": [
+            3.5255003365505613,
+            1.1055858413193762,
+            -2.2103722043617595
+          ]
+        },
+        {
+          "success": true,
+          "objective": 145.46763068093867,
+          "parameters": [
+            3.525500195340456,
+            1.1055861184194382,
+            -2.210371923717875
+          ]
+        },
+        {
+          "success": true,
+          "objective": 145.46763068091676,
+          "parameters": [
+            3.525500347872613,
+            1.1055858070235707,
+            -2.2103722569449693
+          ]
+        }
+      ],
+      "elapsed_seconds": 5.878189299997757,
+      "event_count": 98
+    }
+  },
+  "comparisons": [
+    {
+      "left": "base",
+      "right": "refined",
+      "absolute_b_change": 0.005122423915489449,
+      "mean_posterior_weighted_centered_event_log_change": 0.1773531254271759
+    },
+    {
+      "left": "refined",
+      "right": "independent_scramble",
+      "absolute_b_change": 0.005393034291282461,
+      "mean_posterior_weighted_centered_event_log_change": 0.2180232078076004
+    }
+  ],
+  "numerical_pilot_gate_pass": false,
+  "calibrated_estimator_established": false,
+  "real_flux_used": false,
+  "interval_coverage_established": false,
+  "next_step": "Numerical gate failed: refine or replace integration under a new recorded protocol before calibration or real-flux inference.",
+  "source_hashes": {
+    "research_work/results/timing-population/run.py": "a05464a5fad0b9d1700e377afd20cd39ceb7d84a43e38e4a48325eda792fe495",
+    "research_work/results/timing-population/estimator.py": "27e0a4dda4ffe4d410ad3c9e7ef55cfda665d4eebb91b7dd2e025c59e2c23a52",
+    "research_work/results/timing-foundation/input-audit.json": "11f46fcbd6636041901322b9ddda18267627bbc64ce122d59065d6378323139a",
+    "research_work/results/timing-injection/timing-injection-results.json": "0fbf4f621f6d0025da171d9d492471cd6762627ffe825e4b9d96578698a3cc33"
+  },
+  "array_hashes": {
+    "base-event-likelihoods.npz": "52f5a96800ac6508c88e379e727033085ae327117679ca77ebcf931c1dddacee",
+    "independent_scramble-event-likelihoods.npz": "051342119574a7ae4c6824ba323cbb482147ab622c9a00f1c0b56ce797c4d44b",
+    "refined-event-likelihoods.npz": "59af0b61a4b9aa383886f51e53df48ff1ade1db6be6743b63208270c1a92c478"
+  }
+}

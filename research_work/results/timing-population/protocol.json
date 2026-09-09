@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "scope": "Numerical pilot of a complete integrated timing estimator on synthetic flux at all 98 existing DES cadence slots. This is development, not independent scientific validation.",
+  "source_inventory": "research_work/results/timing-injection/timing-injection-results.json",
+  "input_audit": "research_work/results/timing-foundation/input-audit.json",
+  "pilot_injection": {
+    "family": "split_gaussian_shoulder",
+    "b": 1,
+    "seed": 601,
+    "intrinsic_log_scatter": 0.1,
+    "offset_range_days": [
+      -5,
+      5
+    ],
+    "nominal_snr": 20
+  },
+  "event_model": "Generalized asymmetric exponential from timing-likelihood, with amplitude and baseline analytically marginalized under its declared priors. Retain every original cadence slot, including partial coverage; no fitted-crossing cuts.",
+  "shape_priors": {
+    "peak_days_uniform": [
+      -10,
+      10
+    ],
+    "rise_fraction_uniform": [
+      0.15,
+      0.65
+    ],
+    "rise_power_uniform": [
+      1.2,
+      3.2
+    ],
+    "fall_power_uniform": [
+      1.2,
+      3.2
+    ]
+  },
+  "event_integration": "Scrambled Sobol quadrature of four independent uniform shape/peak priors. Average likelihoods, not log likelihoods. Fixed observer-time log-width grid; no event time is divided by (1+z).",
+  "width_days_range": [
+    2,
+    256
+  ],
+  "quadrature": {
+    "base": {
+      "sobol_power": 8,
+      "width_nodes": 161,
+      "seed": 1401
+    },
+    "refined": {
+      "sobol_power": 9,
+      "width_nodes": 321,
+      "seed": 1401
+    },
+    "independent_scramble": {
+      "sobol_power": 9,
+      "width_nodes": 321,
+      "seed": 1402
+    }
+  },
+  "population_model": "log W has a normal distribution with mean a+b*log(1+z) and standard deviation sigma. Numerical quadrature normalizes this distribution on the declared grid. All event flux likelihoods are integrated over it; no point width estimates enter the fit.",
+  "population_estimation": "Maximum marginal likelihood for a,b,log(sigma), with three starts. Hyperparameter bounds are computational restrictions, not Bayesian priors. No calibrated confidence interval is claimed in this pilot.",
+  "bounds": {
+    "mean_width_at_zero_redshift_days": [
+      5,
+      100
+    ],
+    "b": [
+      -2,
+      3
+    ],
+    "intrinsic_sigma": [
+      0.03,
+      0.6
+    ]
+  },
+  "numerical_gate": {
+    "maximum_b_change_between_runs": 0.05,
+    "maximum_mean_absolute_centered_event_log_likelihood_change": 0.1,
+    "maximum_continuous_population_probability_outside_width_bounds": 1e-06,
+    "require_optimizer_success_and_interior_solution": true
+  },
+  "gate_interpretation": "All three calculations must agree under these checks before expanded injection calibration. Passing is only numerical pilot convergence. Failing stops observational inference and requires a documented integration repair, not changed gates.",
+  "software_checks": [
+    "Vectorized likelihood agrees with independently checked scalar component",
+    "A constant event likelihood remains constant after population integration",
+    "Invalid input arrays are rejected",
+    "All 98 original events are present and no real flux column is read"
+  ],
+  "later_calibration_requirements": [
+    "Separate width-grid, shape-integration and boundary/prior sensitivity",
+    "Original exposed controls plus new seeds, out-of-family shapes, SNR and source-shape evolution",
+    "Freeze repeated-trial bias and interval-coverage criteria before calibration outcomes",
+    "Calibrate confidence intervals and intrinsic-scatter recovery",
+    "Filter throughput, classification, source evolution and actual flux calibration before science inference"
+  ],
+  "failure_policy": "Keep this protocol and every pilot result. One injected exponent or one random realization cannot establish population bias, coverage or validity of a physical theory.",
+  "event_curve_comparison": "For each refinement pair, subtract each event curve maximum, interpolate the coarser curve onto the second grid, and average absolute differences using the second calculation event posterior width probabilities at its fitted population parameters; then average over all 98 events."
+}

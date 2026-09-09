@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [uncertain-duration likelihood component](../research_work/results/timing-likelihood/report.md). The first revised timing component integrates uncertain positive brightness and background into a normalized flux likelihood. Independent dense-matrix and numerical-integration checks agree; the shape parameter is exactly the observer-time FWHM. This is a mathematical component, not a calibrated population estimator or a passed timing gate. Next specify and implement shape/peak/width and population integration, prior sensitivity and independent-shape injection criteria.
+Latest diagnostic: [integrated timing pilot](../research_work/results/timing-population/report.md). A full integrated timing estimator retains all 98 artificial cadence events. Three pilot calculations recover b=1.095-1.106 for injected b=1, but the numerical gate fails because individual-event likelihood curves are insufficiently converged. No calibrated timing inference is established. The user clarified cumulative light stretching during travel through low-gravity voids; the next physical comparison must test whether that effect accumulates and survives exit, with common clock standards and an explicit energy receiver.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
