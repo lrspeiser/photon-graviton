@@ -26,6 +26,8 @@ Follow [mechanism-first redshift requirements](mechanism-first-redshift.md): the
 
 ## Immediate priority, 9 September 2026
 
+Next concrete data step: audit the 29 provisional ELVES-Field candidates in [elves-field-feature-audit.json](../research_work/results/redshift-priority/elves-field-feature-audit.json). The [source report](../research_work/results/redshift-priority/elves-field-audit-report.md) separates TRGB/SBF from redshift-derived distances and stages identities without scoring target values. Crossmatch aliases/groups and resolve selection and frame issues before declaring a fresh sample; freeze final model and uncertainty before evaluation.
+
 The [2025 SBF source audit](../research_work/results/redshift-priority/sbf-2025-audit-report.md) found 16/16 calibration/anchor/Coma targets in previously excluded groups. It does not certify a new validation sample or audit all 61 recalibrated distant targets. Continue acquiring genuinely independent targets; do not call a newer calibration of old measurements fresh evidence.
 
 The [observation-model pass](../research_work/results/redshift-priority/observation-model.md) now implements multiplicative factors, explicit velocity-convention transforms and all-row fixed-motion sensitivity. Exact composition changes an illustrative +300 km/s scenario by only 0.914–7.194 km/s relative to the additive shortcut, not enough to explain the main scatter. Motion/endpoint constraints, original CF4 spectral/frame-transform provenance and credible predictive intervals remain open. Do not convert residual-equivalent velocities into per-object corrections.

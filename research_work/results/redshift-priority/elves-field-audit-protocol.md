@@ -1,0 +1,11 @@
+# ELVES-Field candidate quarantine protocol
+
+This is a source/feature audit, not a frozen final-model evaluation. Before inspecting individual distance or velocity values in the machine-readable table, parse only identifiers, coordinates, distance-method flag, SBF flags, and whether a velocity is present. Export those fields for every row. Keep the raw table in work/catalog-audit; do not display or score its outcome columns.
+
+Source: Carlsten et al. 2026, DOI 10.3847/1538-4357/ae4c5c, publisher Table 1 apjae4c5ct1_mrt.txt. Download URL: https://content.cld.iop.org/journals/0004-637X/1001/2/244/revision1/apjae4c5ct1_mrt.txt
+
+Fixed provisional eligibility: method T (TRGB) or S (SBF); a velocity entry is present; for S, require three recognized flags, second flag false (not particularly ambiguous) and third false (not failed). Do not filter on redshift sign, value, prediction error, isolation class or published probability of lying within 10 Mpc. Method R is redshift-derived and cannot independently validate this redshift-distance relation. Keep every excluded row and its reason. These criteria only establish potential usability, not freshness or a final inclusion decision.
+
+Exposure disclosure: browsing the paper's appendix automatically displayed initial example rows for IC1613, UGC00685, UGC00695, UGC01056, UGC01085, dw0020p0837, PiscesA and dw0112p0129. Conservatively exclude all eight from a fresh sample, even when a velocity was absent. Abstract totals, methodology and flow-model comparison summaries are also exposed. The raw full table has been downloaded but its remaining target distances/velocities have not been displayed to the research conversation or scored by this audit. On-disk availability alone does not certify historical nonexposure.
+
+Before any evaluation: crossmatch remaining identifiers, coordinates, aliases and group/host membership against historical data; audit selection, calibration, velocity convention/frame and motion constraints; choose and freeze the common physical/empirical model and uncertainty rules. The isolation flags are not independent line-of-sight well-depth measurements and must not become the environmental term. No environmental fit or new predictive-success claim follows from this table audit.
