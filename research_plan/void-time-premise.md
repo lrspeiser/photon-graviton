@@ -1,5 +1,25 @@
 # User premise: void time and constant locally measured light speed
 
+## Inverse environmental dependence, user clarification 9 September 2026
+
+The additional time effect must be small inside deep gravity wells and grow outside wells, approaching its largest finite value in voids. This refers to the proposed additional effect, not a claim that ordinary gravitational clock effects vanish in deep wells. The user specifies the direction of environmental dependence; its numerical magnitude and whether a physical clock speeds up or slows down remain to be established. Do not equate the magnitude of the effect with the numerical clock rate.
+
+Optional illustrative parameterization, proposed here; originality unverified (a generic saturating function, not a novelty claim or derived law):
+
+I(W) = 1 / [1 + (W/W_star)^2].
+
+W is a nonnegative, physically defined measure of well depth; W_star is its transition scale. Both require an operational definition before astronomical fitting. I is a dimensionless strength of the additional time effect: I approaches zero in deep wells and one in the void limit. It is not itself a clock rate or a redshift. Avoid literal 1/W, which diverges at zero.
+
+Optional slower-clock realization, proposed here; originality unverified and not selected by the user's inverse-dependence instruction:
+
+q(W) = 1 - epsilon I(W), with 0 < epsilon < 1,
+
+where q is the physical-clock/reference-clock ratio defined below. This would make the additional slowing negligible in deep wells and bound its maximum fractional size by epsilon in voids. It is a trial clock prescription, not a demonstrated physical realization, fitted value or derivation of cumulative stretching. A faster-clock branch requires its own sign and propagation analysis.
+
+Well depth must not silently be replaced by acceleration magnitude: forces can cancel in dense environments. A potential-based depth needs a specified physical reference/boundary condition; an arbitrary potential zero cannot control an observable. Density and curvature are other candidate environment measures, not interchangeable definitions.
+
+Next mechanism calculation must explain how this inverse environmental dependence produces lasting stretch along a path, including passage back into a well, while preserving local c and the full energy ledger. Without that calculation the switch describes where an effect is strongest but predicts neither accumulated redshift nor event-duration stretch. Keep the existing independent-data audit active; no calibration or predictive-success claim follows from this premise update.
+
 Latest clarification, 9 September 2026. The fictional universe may have different time behavior in intergalactic voids. The user intends that behavior itself to stretch light accumulated over long travel, while light goes the same locally measured speed. Do not silently replace this with a model whose physical locally measured speed changes. Current varying optical-factor calculations are candidates with unresolved clock/ruler interpretation, not a settled replacement for the user's premise.
 
 Established clock/ruler bookkeeping, not a new law:
