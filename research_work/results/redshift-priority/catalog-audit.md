@@ -1,5 +1,7 @@
 # Candidate catalog and environmental-input audit
 
+Candidate [frame sensitivity](elves-frame-report.md) is now quantified from sky positions alone. ELVES/SIMBAD source conventions cannot be silently mixed with CF4 CMB shifts. No candidate outcomes were transformed, fitted or scored. The two unresolved PGC/group matches remain withheld after additional resolver checks.
+
 The [ELVES identity audit](elves-identity-report.md) now excludes three of the 29 staged candidates through historical object/group or source-availability evidence. Twenty-six remain pending; none is certified fresh. The audit includes 799 historical text files and preserves unresolved positional group matches and name-lookup failures.
 
 ELVES-Field candidate staging is now available: [source audit](elves-field-audit-report.md) and feature-only JSON retain all 95 publisher rows and 29 provisional candidates. Redshift-derived distances and exposed examples are excluded. Candidate aliases/groups, frame conventions, selection and historical freshness remain unresolved; no labels were scored and no environmental proxy adopted.
