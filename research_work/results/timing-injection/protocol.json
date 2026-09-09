@@ -1,0 +1,13 @@
+{
+  "scope": "First feasibility test of an observer-time width estimator on DES cadence/error patterns. No real-flux timing inference or astronomical validation.",
+  "input_audit": "research_work/results/timing-foundation/input-audit.json",
+  "eligible_inventory": "FAKE=0, SNTYPE=1, finite positive REDSHIFT_HELIO, finite PEAKMJD. Select at most one band per event closest to 450 nm/(emission-frame convention) using lambda_observed/(1+z), within 5 percent.",
+  "filter_centers_nm": {"g": 473, "r": 642, "i": 784, "z": 926},
+  "cadence_cut": "Use observer times within 80 days of header PEAKMJD; at least 8 points, at least 2 before and 3 after that date, finite positive errors. No observed flux selection or fit.",
+  "injections": {"propagation_exponents": [0, 1], "families": ["split_gaussian", "split_gaussian_shoulder"], "seeds": [501, 502, 503], "rise_days": 8, "decline_days": 18, "intrinsic_log_width_sigma": 0.1, "nominal_peak_to_median_error": 20, "random_peak_offset_days": 5},
+  "estimator": "Independent five-parameter Bazin-shaped fit in observer days, with three initial rise times, Gaussian flux residuals and fixed observer-time parameter bounds. Measure fitted baseline-subtracted FWHM only when both crossings lie within cadence coverage. Regress log FWHM on log(1+z) with an intercept and no imposed time rescaling.",
+  "fit_bounds": {"log_amplitude": [-4, 4], "peak_days": [-30, 30], "rise_days": [0.5, 80], "fall_minus_rise_days": [0.5, 150], "baseline": [-0.5, 0.5], "max_nfev": 700},
+  "feasibility_gate": {"minimum_eligible_events": 30, "minimum_accepted_fraction_each_run": 0.8, "maximum_absolute_median_exponent_bias_each_family_truth": 0.15},
+  "failure_policy": "Report failed gates and stop before real-flux inference; do not change gates or select favorable trials after seeing results. Passing is only a limited cadence/shape feasibility result.",
+  "limitations": ["Central wavelengths are only a proxy; actual filter throughput and source wavelength evolution are required before science inference.", "Injected amplitude deliberately fixes nominal SNR to isolate cadence; real brightness selection and classifier/spectroscopic selection are not validated.", "Only three realizations per family/truth; no confidence coverage claim.", "Original DES aggregate results are exposed; no blind validation.", "Intrinsic duration evolution and propagation enter through their sum; include an exact degeneracy demonstration."]
+}
