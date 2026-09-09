@@ -1,0 +1,10 @@
+{
+  "scope": "Exploratory comparison of a homogeneous gray thermal absorber/emitter with constant fractional photon-energy conversion. Reuses all 43 exposed FIRAS channels; no blind validation or official confidence limits.",
+  "input": "time_revision/data/firas.txt",
+  "reference_temperature_K": 2.725,
+  "absorption_to_conversion_ratios": [10, 100, 1000, 10000, 100000],
+  "temperature_bounds_K": [0.5, 4.0],
+  "fit": "Profile thermalizer temperature and signed recovered Galaxy template coefficient; fixed absolute spectral normalization. Include unchanged Planck comparator. No extra instrumental gain, full covariance or calibration likelihood.",
+  "integration": "128-point Gauss-Laguerre for exp(-y) weighted stationary characteristic solution, checked against adaptive quadrature and 256 points.",
+  "assumptions": ["fixed physical volume and light speed", "frequency-independent conversion rate", "frequency-independent true absorption with LTE thermal emission at fixed material temperature", "homogeneous isotropic bath without boundary escape", "external heating budget explicitly required but source not derived"]
+}

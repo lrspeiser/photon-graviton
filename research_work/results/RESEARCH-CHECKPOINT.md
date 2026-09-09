@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [background replenishment](background-replenishment/derivation.md). A stationary Planck bath under constant fractional photon-energy loss cannot be sustained by positive emission alone. Frequency-independent whole-photon removal must have rate at least twice the conversion rate for the inverse source to be nonnegative everywhere. At that minimum, source power is three times the gradual-conversion power; the other two parts leave through photon removal. This is an inverse source requirement, not a derived emitter, thermalizer, background origin or observational fit.
+Latest result: [heated thermalizer](thermalizer/derivation.md). A gray LTE absorber/emitter produces an exact positive stationary spectrum under photon-energy conversion, but it is non-Planck for every finite absorption/conversion ratio. Fast thermalization approaches the recovered FIRAS spectrum in a simplified 43-channel comparison. It requires external heating equal to conversion power and attenuates incoming angular structure. Actual material opacity, heating sources and background history remain unestablished.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -25,6 +25,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Matched waves | Positive classical wave/field energy and exact mode-action conservation | Minimal atomic response gives the wrong measured shift; no completed matter/gravity theory |
 | Thermal conversion | Fixed-volume photon-number and energy moments; exploratory FIRAS comparison | Conditional thermal-bath tension; source history, calibration covariance and full observational validation remain open |
 | Background replenishment | Inverse source positivity and exact stationary transport/moment checks | Actual source, opacity, thermalization and history are not derived |
+| Heated thermalizer | Exact thermal-source spectrum, moments and exploratory FIRAS comparison | Actual opacity, heating and directional structure remain unresolved |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

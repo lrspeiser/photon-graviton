@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [background replenishment](../research_work/results/background-replenishment/derivation.md). A stationary Planck bath under constant fractional photon-energy loss cannot be sustained by positive emission alone. Frequency-independent whole-photon removal must have rate at least twice the conversion rate for the inverse source to be nonnegative everywhere. At that minimum, source power is three times the gradual-conversion power; the other two parts leave through photon removal. This is an inverse source requirement, not a derived emitter, thermalizer, background origin or observational fit.
+Latest diagnostic: [heated thermalizer](../research_work/results/thermalizer/derivation.md). A gray LTE absorber/emitter produces an exact positive stationary spectrum under photon-energy conversion, but it is non-Planck for every finite absorption/conversion ratio. Fast thermalization approaches the recovered FIRAS spectrum in a simplified 43-channel comparison. It requires external heating equal to conversion power and attenuates incoming angular structure. Actual material opacity, heating sources and background history remain unestablished.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

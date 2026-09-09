@@ -86,6 +86,7 @@ def main():
         ('matched-wave/check_matched_wave.py', []),
         ('thermal-conversion/check_thermal_conversion.py', []),
         ('background-replenishment/check_background_replenishment.py', []),
+        ('thermalizer/check_thermalizer.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

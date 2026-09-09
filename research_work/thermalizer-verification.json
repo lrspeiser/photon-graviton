@@ -1,0 +1,156 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.2748265000045649
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7567479999997886
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7247726999994484
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.25167440000223
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.1707680999970762
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.4462558999948669
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.8337681999983033
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1996008999994956
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.6602241000000504
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.32660200000100303
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.07368660000065574
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.8643767000030493
+    },
+    {
+      "script": "interaction-rate/check_interaction_rate.py",
+      "exit_code": 0,
+      "seconds": 0.6330239000017173
+    },
+    {
+      "script": "matter-assisted/check_matter_assisted.py",
+      "exit_code": 0,
+      "seconds": 0.7896181000032811
+    },
+    {
+      "script": "collective-response/check_collective_response.py",
+      "exit_code": 0,
+      "seconds": 0.9422200999979395
+    },
+    {
+      "script": "oscillator-response/check_oscillator_response.py",
+      "exit_code": 0,
+      "seconds": 1.2043178000021726
+    },
+    {
+      "script": "soft-graviton/check_soft_graviton.py",
+      "exit_code": 0,
+      "seconds": 1.3891602000003331
+    },
+    {
+      "script": "capture-storage/check_capture_storage.py",
+      "exit_code": 0,
+      "seconds": 1.7250188999969396
+    },
+    {
+      "script": "deposit-support/check_deposit_support.py",
+      "exit_code": 0,
+      "seconds": 0.7066588000016054
+    },
+    {
+      "script": "capture-momentum/check_capture_momentum.py",
+      "exit_code": 0,
+      "seconds": 0.369462199996633
+    },
+    {
+      "script": "isotropic-capture/check_isotropic_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6568064999955823
+    },
+    {
+      "script": "broadband-capture/check_broadband_capture.py",
+      "exit_code": 0,
+      "seconds": 0.6743891000005533
+    },
+    {
+      "script": "source-receiver/check_source_receiver.py",
+      "exit_code": 0,
+      "seconds": 0.7385073999976157
+    },
+    {
+      "script": "matched-wave/check_matched_wave.py",
+      "exit_code": 0,
+      "seconds": 0.7892499999943539
+    },
+    {
+      "script": "thermal-conversion/check_thermal_conversion.py",
+      "exit_code": 0,
+      "seconds": 0.6393094000013662
+    },
+    {
+      "script": "background-replenishment/check_background_replenishment.py",
+      "exit_code": 0,
+      "seconds": 0.6614198999959626
+    },
+    {
+      "script": "thermalizer/check_thermalizer.py",
+      "exit_code": 0,
+      "seconds": 0.8021252999969875
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "27 mathematical/integrity diagnostic jobs, including exploratory FIRAS comparisons. The new pass verifies a prescribed thermal-medium calculation, not an actual material or full observational agreement.",
+  "new_result_exact_repeat": true,
+  "new_pass_hashes": {
+    "research_work/results/thermalizer/check_thermalizer.py": "e3773ea00338b3f85dad55da731e52cb31460b12c4af3053ce6d80718e14e3de",
+    "research_work/results/thermalizer/derivation.md": "de00ba663bbd96138cdc0aa7eaf69a2715149e05f3114da9b2fd5adbf4cf52fb",
+    "research_work/results/thermalizer/protocol.json": "32e23ea19e2881da9f0a05493e4c41f5f737ce6b9de81244bead8eca13f680b3",
+    "research_work/results/thermalizer/thermalizer-results.json": "46a5b3279df9cbb18f5c7c15d652568df94ac04a7c36e1b90c1627aec1ebc776"
+  }
+}
