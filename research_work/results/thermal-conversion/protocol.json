@@ -1,0 +1,13 @@
+{
+  "scope": "Exploratory fixed-volume constant-speed thermal-conversion diagnostic, not a blind validation or official FIRAS likelihood.",
+  "input": "time_revision/data/firas.txt",
+  "data_selection": "All released numeric rows; use residual column 3, uncertainty column 4 and Galaxy-template column 5. Do not fit the rounded reconstructed column 2.",
+  "reference_temperature_K": 2.725,
+  "conversion_rule": "Every photon energy scales by q, photon number and physical volume fixed, constant vacuum c and standard density of modes. An initial exact blackbody becomes q^-3 times a Planck spectrum at the fitted final color temperature.",
+  "energy_survival_factors": [1.0, 0.9999, 0.999, 0.99, 0.9, 0.5],
+  "nuisances": "Final color temperature in [0.5,4] K and an unconstrained signed coefficient for the released Galaxy residual template. No freely fitted blackbody amplitude in the fixed-q hypotheses.",
+  "comparator": "Additional descriptive fit with positive free blackbody amplitude, free color temperature in [0.5,4] K, and the same Galaxy template.",
+  "objective": "Sum squared residuals divided by the published diagonal variances. No covariance, instrument gain prior or full foreground model supplied.",
+  "interpretation": "Report diagnostic chi-square and residuals, not exclusion significance, a confidence interval, a cosmic age, or an inferred absolute conversion rate. Initial thermal conditions are an explicit conditional premise. Escape, photon absorption/emission and thermalization are omitted, not ruled out.",
+  "frozen_before_execution": true
+}

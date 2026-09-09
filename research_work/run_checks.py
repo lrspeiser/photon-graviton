@@ -84,6 +84,7 @@ def main():
         ('broadband-capture/check_broadband_capture.py', []),
         ('source-receiver/check_source_receiver.py', []),
         ('matched-wave/check_matched_wave.py', []),
+        ('thermal-conversion/check_thermal_conversion.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

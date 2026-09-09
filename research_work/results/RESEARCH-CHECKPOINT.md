@@ -2,7 +2,7 @@
 
 Active direction: [conversion-first research](../../research_plan/active-goal.md), without requiring special void/time stretching as the cause. Published distances remain fixed. The original time concept included local light stretching, and all timing observations remain in scope.
 
-Latest result: [dynamical matched waves](matched-wave/derivation.md). A matched electromagnetic wave action now derives the recovered propagation Hamiltonian and its receiving-field energy. Homogeneous mode actions are conserved exactly, even outside the adiabatic regime. The same minimal coupling changes atomic standards and gives the wrong measured shift sign with fixed masses/charges. It is an explicit comparison, not an adopted propagation or graviton-deposition law.
+Latest result: [thermal conversion and FIRAS](thermal-conversion/derivation.md). In fixed volume with constant light speed, reducing every photon frequency by q while retaining every photon turns an initially Planckian bath into q^-3 times a Planck spectrum at q times its initial temperature. The recovered 43-channel FIRAS residual comparison worsens substantially for q=0.999 under a simplified diagonal-error treatment. This is conditional on an initially thermal, unreplenished bath; it is not a universal conversion exclusion, an official confidence limit, or a derived background history.
 
 The local project is reconstructed and research is underway. Energy conservation has been tested in several explicit models, and we now have concrete requirements for conversion, capture, storage, clocks and gravity. **No unified theory reproducing the astronomical observations has yet been derived.** The calculations below are conditional evidence and research tools, not discoveries of new physics.
 
@@ -23,6 +23,7 @@ The local project is reconstructed and research is underway. Energy conservation
 | Broadband receiver | Oscillator receiving/scattering cross sections, spectral weighting and thermal-drag bound | No identified material, permanent store or actual companion spectrum |
 | Joined source and receiver | Converter spectrum, receiving/escape ledger and matched-response identity | Known converter failures remain; no actual spatial galaxy or permanent store |
 | Matched waves | Positive classical wave/field energy and exact mode-action conservation | Minimal atomic response gives the wrong measured shift; no completed matter/gravity theory |
+| Thermal conversion | Fixed-volume photon-number and energy moments; exploratory FIRAS comparison | Conditional thermal-bath tension; source history, calibration covariance and full observational validation remain open |
 | Baseline reproduction | Three latest scripts ran in an isolated copy; energy budgets and model ranking reproduced | 170 numerical tolerance exceedances remain documented; maximum velocity difference about 0.020 km/s |
 | Recovery integrity | All 271 available original snapshot files still match their hashes | Five historical paper-build sources remain missing; current numerical work is available |
 | Energy ledgers | Finite fuel, companion/deposit transfers and escape are explicitly accounted for | Fixed-volume rate models do not establish microscopic interactions or global cosmology |

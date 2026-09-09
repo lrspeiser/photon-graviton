@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [dynamical matched waves](../research_work/results/matched-wave/derivation.md). A matched electromagnetic wave action now derives the recovered propagation Hamiltonian and its receiving-field energy. Homogeneous mode actions are conserved exactly, even outside the adiabatic regime. The same minimal coupling changes atomic standards and gives the wrong measured shift sign with fixed masses/charges. It is an explicit comparison, not an adopted propagation or graviton-deposition law.
+Latest diagnostic: [thermal conversion and FIRAS](../research_work/results/thermal-conversion/derivation.md). In fixed volume with constant light speed, reducing every photon frequency by q while retaining every photon turns an initially Planckian bath into q^-3 times a Planck spectrum at q times its initial temperature. The recovered 43-channel FIRAS residual comparison worsens substantially for q=0.999 under a simplified diagonal-error treatment. This is conditional on an initially thermal, unreplenished bath; it is not a universal conversion exclusion, an official confidence limit, or a derived background history.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 
