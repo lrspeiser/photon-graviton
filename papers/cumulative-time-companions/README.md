@@ -1,6 +1,6 @@
 # Environmental time and companion-energy manuscript
 
-Current working draft: **v0.2, 9 September 2026**. This is an incomplete theoretical framework with a reproduced observational calibration, not a validated replacement cosmology.
+Current working draft: **v0.3, 9 September 2026**. This is an incomplete theoretical framework with a reproduced observational calibration, not a validated replacement cosmology.
 
 - [Manuscript PDF](manuscript.pdf) and [editable source](manuscript.md).
 - [All 164 observed/predicted rows](analysis/observed-predicted-redshift.csv), [metrics](analysis/metrics.json), [comparison figure](analysis/redshift-comparison.png), [residual figure](analysis/redshift-residuals.png).
@@ -12,6 +12,7 @@ From repository root, install `papers/cumulative-time-companions/requirements.tx
 
 ```text
 python papers/cumulative-time-companions/analysis.py
+python papers/cumulative-time-companions/extended_analysis.py
 python papers/cumulative-time-companions/build.py
 ```
 
@@ -19,6 +20,8 @@ The analysis verifies the adopted source hash, independently refits only the inh
 
 ## Revision scope
 
-Version 0.2 clarifies the root law and its link to temporal evolution of the propagation factor; adds the full redshift comparison, residuals and limitations; corrects the schematic canonical field notation; and incorporates progress through the 45-job pair-production-balance verification. Evidence is pinned to c0425ecba9f13f937c56e0806b420539dd5c2fcd. The physical conversion rate, common clock action, persistent three-dimensional field, capture, supported halo and joint gravity/lensing solution remain open.
+Version 0.2 clarifies the root law and its link to temporal evolution of the propagation factor; adds the full redshift comparison, residuals and limitations; corrects the schematic canonical field notation; and incorporates progress through the 45-job pair-production-balance verification. Evidence is pinned to 7b0b296. The physical conversion rate, common clock action, persistent three-dimensional field, capture, supported halo and joint gravity/lensing solution remain open.
 
 Version 0.1 remains available in Git history. Recovered historical papers and original data are unchanged. The full research program remains incomplete.
+
+Version 0.3 labels all 15 numbered equations by provenance and adds the predeclared sky-tile comparison, fixed-rate six-maser diagnostic and conditional homogeneous-field result. [Sky-tile predictions](analysis/sky-tile-predictions.csv), [maser comparison](analysis/maser-comparison.csv), and [extended checks](analysis/extended-checks.json) retain all rows. No fresh-validation success or originality claim is made.

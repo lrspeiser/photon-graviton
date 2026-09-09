@@ -2,11 +2,15 @@
 
 ## A phenomenological framework for redshift, galaxy dynamics and gravitational lensing
 
-Working academic draft v0.2 | 9 September 2026 | Authorship and affiliations to be supplied before submission
+Working academic draft v0.3 | 9 September 2026 | Authorship and affiliations to be supplied before submission
 
 ### Abstract
 
 We investigate a hypothetical, nonexpanding universe in which a new environmental property of time changes light propagation cumulatively, especially in regions of limited gravity. Photon energy lost through the associated redshift is transferred entirely into a companion field or wave sector. Companions may propagate independently, enter gravitational wells and, if a physical retention mechanism exists, contribute to an extended gravitational source. We formulate the proposal as a sequence of explicit postulates and conditional derivations. A whole-signal propagation map can relate spectral redshift to transient-duration stretching, while energy conservation fixes the energy transferred to companions. Existing one-dimensional Hamiltonian calculations demonstrate energy and momentum exchange with a dynamical field; separate environmental calculations demonstrate suppression of slow field variation without necessarily excluding rapid waves. These results do not establish a complete microscopic theory, permanent capture or a sufficient gravitational response. An idealized source-and-deposition calculation produces an inverse-square energy-density profile and hence a flat circular-speed contribution under ordinary cold-source gravity, but leaves its normalization and stability unresolved. We identify the joint clock, spectrum, timing, source-budget, rotation and lensing tests needed to develop or reject the framework. A reproduced constant-rate calibration on 164 previously exposed galaxy groups gives alpha = 0.000248899 per Mpc. The inherited test subset has redshift-residual RMS equivalent to 415.4 km/s, versus 414.7 km/s for a linear control. Thus the nearby distance trend is reproduced without demonstrated preference for exponential curvature or validation of its proposed microscopic cause. Graviton identity remains an open hypothesis.
+
+### Formula provenance convention
+
+Each numbered equation states its provenance. Established forms, proposed assumptions, internal derivations and calibrated numbers are distinguished. "Derived here" does not establish uniqueness in the literature. No equation or interaction in this draft is certified as original; a dedicated prior-art review remains required before such a claim.
 
 ### 1. Motivation and scope
 
@@ -34,11 +38,15 @@ The equations below derive consequences from these postulates. They are not yet 
 
 Let s be path length and alpha be a fractional energy-transfer rate per unit length, evaluated in a declared common energy standard. Our root phenomenological equation says that light gives up the same fraction of its remaining energy per unit distance when alpha is constant. Integrating d ln E = -alpha ds yields the exponential law below. This is a consequence of the assumed transfer rule, not a first-principles derivation of the rate. A deterministic model is
 
+Provenance: Established mathematics: fractional-loss differential equation and its exponential solution; not a novelty claim.
+
 $$
 \frac{dE_\gamma}{ds}=-\alpha E_\gamma,\qquad S=\exp\left(\int\alpha\,ds\right)=1+z_{\mathrm{conv}}. \tag{1}
 $$
 
 Alpha may depend on position, field state and time; frequency dependence must be tested. If it depends on energy, the integral is along the actual solution. Retaining the Planck energy-frequency relation and matching endpoint standards, photon energy and frequency decrease by the same factor. The agreed conversion rule then gives
+
+Provenance: Established energy-frequency accounting, applied to the stipulated complete companion transfer.
 
 $$
 E_{\gamma,o}=\frac{E_{\gamma,e}}{S},\qquad \Delta E_c=E_{\gamma,e}\left(1-\frac{1}{S}\right). \tag{2}
@@ -52,6 +60,8 @@ Measured redshift also contains source motion and ordinary endpoint effects, whi
 
 An energy-loss equation alone supplies no event-duration prediction. Consider instead a local affine arrival map, with the same stretch applied to the carrier phase and its envelope:
 
+Provenance: Proposed whole-signal condition using established affine-map mathematics; not derived from energy loss alone.
+
 $$
 t_o=T+S t_e,\qquad \frac{\nu_o}{\nu_e}=\frac{1}{S},\qquad \frac{\Delta t_o}{\Delta t_e}=S. \tag{3}
 $$
@@ -59,6 +69,8 @@ $$
 T is an arrival-time offset. Equation (3) is a whole-signal condition, not an inference from energy bookkeeping. If S changes during an event, the map is nonaffine and can distort the light curve. These distortions are additional predictions that a physical field solution must quantify.
 
 A conditional ray realization uses angular frequency omega = c k/n(t,x). Hamilton's equations imply
+
+Provenance: Established Hamiltonian-ray identities applied to the candidate optical dispersion; cosmic interpretation and originality unverified.
 
 $$
 \frac{dt}{dx}=\frac{n}{c},\qquad \frac{d\ln\omega}{dx}=-\frac{\partial_t n}{c},\qquad \frac{d\ln J}{dx}=\frac{\partial_t n}{c},\quad J=\frac{\partial t_o}{\partial t_e}. \tag{4}
@@ -74,6 +86,8 @@ The repository has verified prescribed finite-region examples with equal endpoin
 
 For a static Euclidean, isotropic, unlensed illustration, assume photon number is preserved and endpoint standards agree. The same affine map yields
 
+Provenance: Derived here from standard photon-energy and arrival-rate accounting under the stated geometry; originality unverified.
+
 $$
 F_{\mathrm{bol}}=\frac{L}{4\pi R^2 S^2},\qquad F_{\nu,o}(\nu)=\frac{L_{\nu,e}(S\nu)}{4\pi R^2 S}. \tag{5}
 $$
@@ -83,6 +97,8 @@ One bolometric factor arises from reduced photon energy and the other from the s
 ### 4. A candidate dynamical interaction
 
 Frequency exchange in time-dependent electromagnetic media provides a physical analogy for why changing propagation properties can exchange wave energy [4]. It does not identify a cosmic time field. The present research explores a positive-energy classical companion field coupled to photons through n. In one spatial dimension, a schematic closed Hamiltonian is
+
+Provenance: Proposed effective coupling using standard Hamiltonian ingredients; originality and microscopic validity unverified.
 
 $$
 H=\int\frac{K}{2}\left[(\partial_t\phi)^2+v^2(\partial_x\phi)^2\right]dx+\frac{cP}{\bar n(X)}. \tag{6}
@@ -100,6 +116,8 @@ Earlier matched-wave calculations also show why matter must be included. One min
 
 A possible environmental interaction gives the companion/time field a restoring term inside a region. For chi = n - 1, a toy Lagrangian density is
 
+Provenance: Established scalar-field Lagrangian form with proposed environmental mass dependence; no novelty claim for the form.
+
 $$
 \mathcal{L}_c=\frac{K}{2}\left[(\partial_t\chi)^2-v^2(\partial_x\chi)^2-m^2(\rho)\chi^2\right]. \tag{7}
 $$
@@ -114,6 +132,8 @@ However, the model absorbs no energy: reflection plus transmission equals unity.
 
 Companions may accompany light or follow independent paths. A kinetic description can use a phase-space distribution f_c and a Hamiltonian H_c that determines their trajectories. For canonical phase-space flow,
 
+Provenance: Established kinetic transport structure with unspecified proposed interaction terms.
+
 $$
 \partial_t f_c+\dot{\mathbf{x}}\cdot\nabla_x f_c+\dot{\mathbf{p}}\cdot\nabla_p f_c=Q_{\gamma c}-\Gamma_{\mathrm{cap}}f_c+Q_{\mathrm{return}}. \tag{8}
 $$
@@ -122,9 +142,13 @@ The position and momentum velocities follow Hamilton's equations. A tendency to 
 
 In a restricted volume model with no pressure work and explicitly included energy fluxes, the bookkeeping can be written
 
+Provenance: Established local energy-balance structure applied to the proposed sectors.
+
 $$
 \dot u_\gamma+\nabla\cdot\mathbf{F}_\gamma=j_\star-Q. \tag{9}
 $$
+
+Provenance: Established local energy-balance structure applied to capture and return; permanence remains an assumption.
 
 $$
 \dot u_c+\nabla\cdot\mathbf{F}_c=Q-C+L_{\mathrm{return}},\qquad \dot u_d+\nabla\cdot\mathbf{F}_d=C-L_{\mathrm{return}}. \tag{10}
@@ -142,11 +166,15 @@ This accounting explains the distinction between conversion efficiency and gravi
 
 Consider a steady central photon luminosity L, a constant small alpha, negligible attenuation over the radii considered, and rapid local capture of all newly generated companion energy. Assume deposits remain supported where produced for time T. The deposition power density and stored energy density are then
 
+Provenance: Conditional radial-source derivation using standard flux geometry; derived here, originality unverified.
+
 $$
 q_d(r)\simeq\frac{\alpha L}{4\pi r^2},\qquad u_d(r)\simeq\frac{\alpha L T}{4\pi r^2}. \tag{11}
 $$
 
 For the additional, optional benchmark that this reservoir gravitates as ordinary cold matter, rho_d = u_d/c squared. Outside an inner cutoff, and where its contribution dominates, this yields
+
+Provenance: Conditional consequence using established Newtonian gravity and mass-energy equivalence; not a new gravity law.
 
 $$
 M_d(<r)\simeq\frac{\alpha L T}{c^2}r,\qquad v_d^2\simeq\frac{G\alpha L T}{c^2}. \tag{12}
@@ -159,6 +187,8 @@ Recovered supply calculations find severe shortfalls under a present-luminosity,
 #### 7.2 Matter and light must share a completed theory
 
 In a weak, static metric description, circular speeds probe a potential Phi, while metric light deflection probes Phi plus a spatial potential Psi:
+
+Provenance: Established weak-field metric relations; applicability requires the stated matter and optical completion.
 
 $$
 v_{\mathrm{circ}}^2=r\frac{d\Phi}{dr},\qquad \boldsymbol{\alpha}_{\mathrm{lens}}=\frac{1}{c^2}\int\nabla_\perp(\Phi+\Psi)\,d\ell. \tag{13}
@@ -178,11 +208,15 @@ We reproduce the frozen conversion-first benchmark from the recovered catalog of
 
 For this benchmark only, replace the path-dependent rate by one universal constant:
 
+Provenance: Established exponential form; numerical coefficient empirically calibrated here on previously exposed data.
+
 $$
 z_{\mathrm{pred}}(D)=\exp(\alpha D)-1,\qquad \alpha=2.488993286\times10^{-4}\ \mathrm{Mpc}^{-1}. \tag{14}
 $$
 
 This equals 7.631288108 times 10 to the minus 5 per million light-years. Equivalently c alpha = 74.61814 km/s/Mpc; that unit conversion is not an assumption of cosmic expansion. The rate is fitted, not yet calculated from the time field or companion coupling. The fit uses only the inherited 104 training rows and minimizes the sum of squared c times redshift residuals, with c = 299792.458 km/s and c alpha constrained to [0,150] km/s/Mpc. There is no intercept, distance reassignment, clipping or object-specific parameter. The other inherited subsets contain 35 validation and 25 test rows. All subsets were previously exposed during research: these names do not make them fresh independent holdouts.
+
+Provenance: Established definitions of signed residual and root-mean-square error.
 
 $$
 r_i=c\left[z_{\mathrm{pred}}(D_i)-z_{\mathrm{obs},i}\right],\qquad \mathrm{RMSE}=\sqrt{\frac{1}{N}\sum_i r_i^2}. \tag{15}
@@ -208,11 +242,41 @@ A previously used illustrative 300 km/s Gaussian residual scale covers only 80 p
 
 The distance-only exponential is shared by a conversion-only model and the environmental-time candidate. This fit does not distinguish them. In the time candidate, equations (3)-(5) additionally require carrier shift, event stretching and the corresponding brightness change. Agreement with the distance trend alone does not validate those predictions, establish the gravitons' identity, explain extra gravity, or justify extrapolation to billions of light-years.
 
-#### 8.2 Dynamical progress and unresolved causes
+#### 8.2 Testing additional rate flexibility
+
+A protocol written before the comparison fixed three candidates: the linear mathematical control, the constant exponential, and a smooth rate changing linearly with distance along the path. The last candidate is an empirical two-parameter diagnostic, not a derived environmental law. Its endpoint rates at zero and 100 Mpc are constrained to be nonnegative. None uses a redshift-derived void proxy or an object-specific correction.
+
+Each of the 65 existing sky tiles was excluded once, and every fit used only the other tiles. All 164 out-of-fold predictions are published. No model or regularization selection was performed inside this fixed comparison. Existing exposure, neighboring-tile correlations and common calibration prevent a claim of blind independence.
+
+| Candidate | RMS (km/s) | MAE (km/s) | Bias (km/s) |
+| --- | --- | --- | --- |
+| Linear | 448.1 | 326.8 | -20.0 |
+| Constant exponential | 448.4 | 326.7 | -23.6 |
+| Smooth rate | 452.5 | 330.9 | -14.1 |
+
+Table 2. Leave-one-sky-tile-out errors. These use a different evaluation partition from Table 1 and cannot be compared as improvements over its test RMS. The smooth-minus-constant RMS difference has a descriptive paired sky-tile bootstrap interval of approximately [-0.72, 9.26] km/s. No improvement from added flexibility is demonstrated. Source scripts and the frozen protocol are in redshift-priority [5].
+
+Frozen baseline residuals correlate descriptively with distance (0.139) and equatorial Cartesian sky components (0.256, 0.093, 0.164). Those correlations are not independent significance tests or evidence for a particular void mechanism. The input catalog contains no independently measured line-of-sight environment. Environmental tuning remains deferred pending valid inputs.
+
+#### 8.3 Fixed-rate external maser diagnostic
+
+The six geometric maser distances in Pesce et al. [6] offer a different measurement method. Table 1 of that source supplies disk-model angular-size distances and optical CMB-frame redshifts. Under our stipulated-distance contract we adopt those distances directly as path distances. We do not import the source's expansion-based distance equation, fitted cosmological parameters or flow corrections. Maser disk and clock assumptions still require a physical audit for a completed alternative theory.
+
+Both rates from section 8.1 were held fixed; all six targets were retained. Distances span 7.58-132.1 Mpc. The exponential RMS is 384.3 km/s versus 390.8 for the linear control; exponential MAE is 317.6 km/s and bias is +22.9 km/s. Two targets are within the prior SBF distance range, with exponential RMS 555.8 km/s. Four are outside, with RMS 258.9 km/s; one of those is closer rather than more distant. Small heterogeneous subsets cannot establish all-distance performance or statistically supported preference.
+
+![Figure 3. Six maser galaxies with the previously fixed rates. Neither curve is fitted to these six points. The lower panel retains every signed exponential residual; distances are held fixed and no uncertainty envelope is asserted.](analysis/maser-comparison.png)
+
+The source's aggregate result was viewed before the protocol, and individual labels were visible during table extraction before prediction-file sealing. The seal proves artifact integrity, not blinding. Exact-name overlap scanning is incomplete for alternate identifiers and groups, and NGC 4258 can share calibration links with standard-candle distances. These six targets therefore constitute an external diagnostic, not a genuinely unexposed validation sample. Published distance uncertainties are retained in the accompanying CSV; they are not used to move targets toward the curve. No calibrated individual prediction intervals have been established.
+
+#### 8.4 Dynamical progress and unresolved causes
 
 Later diagnostics sharpen the physical gap. A driven one-dimensional field can sustain rolling and nearly steady stretch, whereas the tested localized three-dimensional spherical source settles: its lasting travel delay does not maintain new redshift [5, sustained-illumination and spherical-propagation]. Thus a steady source is not by itself a demonstrated cosmic origin of positive partial-time n.
 
 A massive complex-scalar proxy admits conditional self-bound configurations, but it is not evidence for ordinary massless gravitons bonding like atoms [5, companion-self-binding]. Fixed-population cloud exchange transfers energy without creating new particles. An optional neutral pair interaction can create excitations but also permits inverse conversion and radiative loss [5, bound-cloud-exchange, bound-pair-production and pair-production-balance]. The tested illuminated mode has a finite stationary mean population, not indefinitely accumulating permanent deposits. Its overlap strengths, spatial capture, stable galaxy distribution and coherent optical response remain unjoined to the time model. These calculations constrain candidate mechanisms; they do not yet derive alpha.
+
+A later homogeneous finite-radiation calculation supplies an exact special sector of the same scalar-photon model in a finite periodic three-dimensional volume [5, distributed-zero-mode]. Radiation drives a field initially at rest; photon energy lost becomes field kinetic energy. The limiting rate is proportional to the coupling times the square root of initial radiation density divided by field inertia. This conditional relation was derived here from the proposed Hamiltonian; its originality is unverified. Numerical energy and independently evaluated carrier/event checks agree with the analytic solution.
+
+The result does not resolve the localized-source failure: its spatially uniform zero mode, periodic boundaries and zero restoring potential are material assumptions. The optical factor grows without bound. In this homogeneous sector spatial wavelength stays fixed while reference frequency and propagation speed fall. Matter clock response must be derived before calling that effect an observed spectral redshift. Nonuniform sources, boundaries, stability, astronomical normalization and joint gravity remain open.
 
 The current transient pipeline has used artificial signals on real DES cadence and uncertainty patterns. It has not established a real-flux measurement for this model. The population-likelihood pilot still fails a predeclared numerical convergence gate [5, timing-population]. This limitation concerns our estimator and does not negate the published DES finding [2]. It must be resolved before a fitted duration exponent is used as evidence.
 
@@ -277,7 +341,7 @@ Each item names an output still required of the completed theory. A partial calc
 
 ### Data and code availability
 
-The research repository is public [5]. This draft summarizes evidence present at commit c0425ecba9f13f937c56e0806b420539dd5c2fcd. Its cited result directories contain assumptions, scripts and saved outputs. The companion evidence map identifies exact local reports. Version 0.2 independently reproduces the existing frozen 164-group calibration and adds all-row comparison figures and a CSV; it introduces no new astronomical observations or fresh validation sample. The source catalog SHA-256 is 8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0. The paper analysis script verifies the source hash and reproduces every saved prediction. Equation (12) remains an idealized conditional derivation. Historical papers are retained separately rather than overwritten. Current manuscript source and build instructions reside in papers/cumulative-time-companions.
+The research repository is public [5]. This draft summarizes evidence present at commit 7b0b296. Its cited result directories contain assumptions, scripts and saved outputs. The companion evidence map identifies exact local reports. Version 0.3 retains the reproduced 164-group calibration and adds sky-tile and six-maser comparison tables, formula provenance labels and updated field results; it introduces no new astronomical observations or fresh validation sample. The source catalog SHA-256 is 8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0. The paper analysis script verifies the source hash and reproduces every saved prediction. Equation (12) remains an idealized conditional derivation. Historical papers are retained separately rather than overwritten. Current manuscript source and build instructions reside in papers/cumulative-time-companions.
 
 ### References
 
@@ -289,4 +353,7 @@ The research repository is public [5]. This draft summarizes evidence present at
 
 [4] Qu, K., Jia, Q., Edwards, M. R., and Fisch, N. J. (2018). Theory of electromagnetic wave frequency upconversion in dynamic media. Physical Review E, 98, 023202. [Paper](https://arxiv.org/abs/1804.07358). DOI: 10.1103/PhysRevE.98.023202. This is an analogy for energy exchange in evolving media, not evidence for cosmic companion production.
 
-[5] Photon-Companion Research repository (2026). Conditional derivations, diagnostics and research reports. [Evidence snapshot](https://github.com/lrspeiser/photon-graviton/tree/c0425ecba9f13f937c56e0806b420539dd5c2fcd). Relevant report identifiers are supplied in the accompanying evidence map. Repository results are internal working evidence, not peer-reviewed validation.
+[5] Photon-Companion Research repository (2026). Conditional derivations, diagnostics and research reports. [Evidence snapshot](https://github.com/lrspeiser/photon-graviton/tree/7b0b296). Relevant report identifiers are supplied in the accompanying evidence map. Repository results are internal working evidence, not peer-reviewed validation.
+
+
+[6] Pesce, D. W., et al. (2020). The Megamaser Cosmology Project. XIII. Combined Hubble constant constraints. Astrophysical Journal Letters, 891, L1. [Paper](https://arxiv.org/abs/2001.09213). DOI: 10.3847/2041-8213/ab75f0. This work uses its Table 1 geometric distances and measured optical CMB-frame velocities, not its cosmological fit or inferred flow corrections.

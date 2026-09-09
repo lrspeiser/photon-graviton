@@ -1,6 +1,6 @@
 # Active research goal: accurate redshift prediction within the cumulative-time program
 
-Current synthesis: [academic working draft v0.2](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
+Current synthesis: [academic working draft v0.3](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
 
 ## Standing formula presentation requirement
 
@@ -140,3 +140,5 @@ The user resumed work specifically to revise the academic paper and show observe
 [Distributed radiation zero mode](../research_work/results/distributed-zero-mode/report.md): an exact homogeneous periodic 3D sector derives alpha tending to |g| sqrt(2 U0/K)/c0 from finite radiation, with field initially at rest and checked energy/carrier/event accounts. This is not a nonuniform cosmic solution: periodic topology, zero potential, clock response, spatial wavelength and missing astronomical normalization are explicit limitations. Next test nonuniform/open geometry and matter clocks; the observational validation program remains unfinished.
 
 [Fixed-rate maser diagnostic](../research_work/results/redshift-priority/maser-report.md): all six source objects retained, 7.58-132.1 Mpc, no refit. Exponential RMS 384.3 versus linear 390.8 km/s is not demonstrated superiority. Source optical CMB-frame convention verified. Table-extraction label exposure and incomplete alias/group overlap prevent a blind-validation claim; source, parameters, predictions and residuals are recorded.
+
+Manuscript v0.3 integrates all current redshift comparisons and the conditional homogeneous-field calculation, labels all 15 numbered formulas by provenance, and retains full comparison CSVs. Document/metric checks are complete; the underlying predictive-improvement, fresh-validation and physical-completion goals remain open.

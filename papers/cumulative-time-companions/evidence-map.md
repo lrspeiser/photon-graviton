@@ -1,6 +1,6 @@
 # Manuscript evidence map
 
-Draft v0.2 describes research present at commit `c0425ecba9f13f937c56e0806b420539dd5c2fcd`. The existing frozen astronomical fit was independently reproduced; no new observations or fresh holdouts were added. Formula derivations are conditional on their stated assumptions.
+Draft v0.3 describes research present at commit `7b0b296`. The existing frozen astronomical fit was independently reproduced; no new observations or fresh holdouts were added. Formula derivations are conditional on their stated assumptions.
 
 | Manuscript claim | Canonical evidence | Scope |
 |---|---|---|
@@ -46,3 +46,8 @@ Draft v0.2 describes research present at commit `c0425ecba9f13f937c56e0806b42053
 - Latest candidate diagnostic: [pair-production-balance](../../research_work/results/pair-production-balance/report.md). Conditional model evidence, not a completed theory.
 
 - Paper benchmark reproduction: [analysis script](analysis.py), [metrics](analysis/metrics.json), [all rows](analysis/observed-predicted-redshift.csv).
+
+- Sky-tile fixed-candidate comparison: [report](../../research_work/results/redshift-priority/report.md). No improved model demonstrated.
+- Fixed-rate maser check: [report](../../research_work/results/redshift-priority/maser-report.md). Six objects; not blinded; alias/group overlap unresolved.
+- Homogeneous finite-radiation dynamics: [report](../../research_work/results/distributed-zero-mode/report.md). Conditional periodic zero mode; not a generic cosmic solution.
+- Formula provenance: [standing rule](../../research_plan/formula-provenance.md). No originality is certified.
