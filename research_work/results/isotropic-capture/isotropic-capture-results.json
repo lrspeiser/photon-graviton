@@ -1,0 +1,194 @@
+{
+  "scope": "Prescribed radiation and absorption cross sections. Derived direction weighting, not a physical material, complete capture law or self-consistent galaxy.",
+  "constant_cross_section": [
+    {
+      "beta": 0.0,
+      "power_over_c_sigma_u": 1.0,
+      "force_over_sigma_u": 0.0,
+      "receiver_energy_density_over_u": 1.0,
+      "receiver_flux_over_c_u": 0.0
+    },
+    {
+      "beta": 0.001,
+      "power_over_c_sigma_u": 1.0,
+      "force_over_sigma_u": -0.00033333333333333636,
+      "receiver_energy_density_over_u": 1.0000013333346665,
+      "receiver_flux_over_c_u": -0.001333334666668005
+    },
+    {
+      "beta": 0.3,
+      "power_over_c_sigma_u": 1.0,
+      "force_over_sigma_u": -0.1,
+      "receiver_energy_density_over_u": 1.1318681318681316,
+      "receiver_flux_over_c_u": -0.43956043956043955
+    },
+    {
+      "beta": 0.8,
+      "power_over_c_sigma_u": 1.0,
+      "force_over_sigma_u": -0.26666666666666666,
+      "receiver_energy_density_over_u": 3.3703703703703716,
+      "receiver_flux_over_c_u": -2.962962962962964
+    }
+  ],
+  "free_receiver_exact_evolution": [
+    {
+      "initial_beta": 0.001,
+      "energy_doubling_final_beta": 0.000396850262961539,
+      "speed_ratio": 0.396850262961539,
+      "analytic_speed_ratio": 0.3968502629920499,
+      "max_exact_solution_error": 1.8860210702215108e-12
+    },
+    {
+      "initial_beta": 0.3,
+      "energy_doubling_final_beta": 0.1190550788971467,
+      "speed_ratio": 0.39685026299048903,
+      "analytic_speed_ratio": 0.3968502629920499,
+      "max_exact_solution_error": 9.043454873847168e-11
+    },
+    {
+      "initial_beta": 0.8,
+      "energy_doubling_final_beta": 0.31748021039356106,
+      "speed_ratio": 0.3968502629919513,
+      "analytic_speed_ratio": 0.3968502629920499,
+      "max_exact_solution_error": 2.0044499393634396e-10
+    }
+  ],
+  "frequency_selective_comparisons": [
+    {
+      "cross_section_local_energy_power": -6.0,
+      "small_speed_deceleration_coefficient": -0.6666666533330103,
+      "analytic_coefficient": -0.6666666666666666
+    },
+    {
+      "cross_section_local_energy_power": -4.0,
+      "small_speed_deceleration_coefficient": 2.4236168627567167e-13,
+      "analytic_coefficient": 0.0
+    },
+    {
+      "cross_section_local_energy_power": -1.0,
+      "small_speed_deceleration_coefficient": 1.0,
+      "analytic_coefficient": 1.0
+    },
+    {
+      "cross_section_local_energy_power": 0.0,
+      "small_speed_deceleration_coefficient": 1.3333333333332074,
+      "analytic_coefficient": 1.3333333333333333
+    },
+    {
+      "cross_section_local_energy_power": 2.0,
+      "small_speed_deceleration_coefficient": 1.9999999919998555,
+      "analytic_coefficient": 2.0
+    },
+    {
+      "cross_section_local_energy_power": 6.0,
+      "small_speed_deceleration_coefficient": 3.3333332399994235,
+      "analytic_coefficient": 3.3333333333333335
+    }
+  ],
+  "inverse_fourth_power_cancellation": [
+    {
+      "beta": 0.001,
+      "power": 1.0000000000000007,
+      "force": 0.0010000000000000002,
+      "velocity_acceleration_numerator": -4.336808689942018e-19
+    },
+    {
+      "beta": 0.3,
+      "power": 1.0000000000000004,
+      "force": 0.30000000000000016,
+      "velocity_acceleration_numerator": 5.551115123125783e-17
+    },
+    {
+      "beta": 0.8,
+      "power": 0.9999999999999997,
+      "force": 0.7999999999999999,
+      "velocity_acceleration_numerator": 1.1102230246251565e-16
+    }
+  ],
+  "attenuated_external_sphere": [
+    {
+      "optical_depth": 0.01,
+      "radius_over_R": 0.0,
+      "radial_delivered_momentum_over_energy_div_c": 1.8325790391258026e-18,
+      "energy_density_over_unattenuated_bath": 0.9900498337491681
+    },
+    {
+      "optical_depth": 0.01,
+      "radius_over_R": 0.5,
+      "radial_delivered_momentum_over_energy_div_c": -0.0016660628608348887,
+      "energy_density_over_unattenuated_bath": 0.9909258710673581
+    },
+    {
+      "optical_depth": 0.01,
+      "radius_over_R": 0.9,
+      "radial_delivered_momentum_over_energy_div_c": -0.0029953290672935966,
+      "energy_density_over_unattenuated_bath": 0.9934823244935952
+    },
+    {
+      "optical_depth": 0.01,
+      "radius_over_R": 1.0,
+      "radial_delivered_momentum_over_energy_div_c": -0.00332498078827221,
+      "energy_density_over_unattenuated_bath": 0.9950331516743445
+    },
+    {
+      "optical_depth": 1.0,
+      "radius_over_R": 0.0,
+      "radial_delivered_momentum_over_energy_div_c": 5.061989679577501e-18,
+      "energy_density_over_unattenuated_bath": 0.36787944117144233
+    },
+    {
+      "optical_depth": 1.0,
+      "radius_over_R": 0.5,
+      "radial_delivered_momentum_over_energy_div_c": -0.15828374904589923,
+      "energy_density_over_unattenuated_bath": 0.4184079498908964
+    },
+    {
+      "optical_depth": 1.0,
+      "radius_over_R": 0.9,
+      "radial_delivered_momentum_over_energy_div_c": -0.24612249334053177,
+      "energy_density_over_unattenuated_bath": 0.5899517530313524
+    },
+    {
+      "optical_depth": 1.0,
+      "radius_over_R": 1.0,
+      "radial_delivered_momentum_over_energy_div_c": -0.24540549463912784,
+      "energy_density_over_unattenuated_bath": 0.716164613520416
+    },
+    {
+      "optical_depth": 10.0,
+      "radius_over_R": 0.0,
+      "radial_delivered_momentum_over_energy_div_c": 6.941768743508609e-18,
+      "energy_density_over_unattenuated_bath": 4.539992976248485e-05
+    },
+    {
+      "optical_depth": 10.0,
+      "radius_over_R": 0.5,
+      "radial_delivered_momentum_over_energy_div_c": -0.7243946616626098,
+      "energy_density_over_unattenuated_bath": 0.0010842293098356367
+    },
+    {
+      "optical_depth": 10.0,
+      "radius_over_R": 0.9,
+      "radial_delivered_momentum_over_energy_div_c": -0.6769704553813515,
+      "energy_density_over_unattenuated_bath": 0.08859150177897607
+    },
+    {
+      "optical_depth": 10.0,
+      "radius_over_R": 1.0,
+      "radial_delivered_momentum_over_energy_div_c": -0.47382365029671847,
+      "energy_density_over_unattenuated_bath": 0.524984350036605
+    }
+  ],
+  "adiabatic_mass_doubling_radius_ratios": {
+    "frequency_independent_isotropic_bath_flat_speed": 0.3968502629920499,
+    "frequency_independent_isotropic_bath_Kepler": 0.15749013123685915,
+    "scope": "Slow, nearly circular loading, fixed dominant potential; not a full orbit integration."
+  },
+  "unresolved": [
+    "Actual receiver spectrum and finite bandwidth",
+    "Companion illumination and sources",
+    "All emitted/reverse channels, storage capacity and thermal consistency",
+    "Coupled transport and orbit evolution with changing gravity",
+    "Formation, stability and joint lensing"
+  ]
+}

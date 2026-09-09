@@ -2,7 +2,7 @@
 
 Follow the [conversion-first active goal](active-goal.md) under the [universe contract](universe-contract.md): fixed published galaxy distances, no assumed dark matter, expansion or Big-Bang premises, and complete energy accounting. Special time/void stretching is not required as the cause. The original time idea was meant to stretch light, including nearby light; timing observations remain mandatory targets.
 
-The latest calculation is [momentum during capture](../research_work/results/capture-momentum/derivation.md). Capture transfers momentum as well as energy. Exact local absorption and conditional force/orbit comparisons tie receiver mass growth to radiation pressure and orbital changes. Balanced delivered momentum reduces the radial force but does not by itself preserve the orbit. No actual radiation geometry, capture rate or self-consistent galactic evolution is established.
+The latest calculation is [all-direction capture](../research_work/results/isotropic-capture/derivation.md). A moving receiver samples isotropic illumination unevenly. Constant-cross-section absorption produces drag; a stipulated inverse-fourth-power energy response cancels velocity change in the ideal free-receiver calculation. Attenuation also creates an inward flux inside an externally illuminated sphere. Actual receiver spectra, reverse channels and galactic evolution remain unproved.
 
 | Recent calculation | What it establishes conditionally |
 |---|---|
@@ -15,6 +15,7 @@ The latest calculation is [momentum during capture](../research_work/results/cap
 | [Capture and storage](../research_work/results/capture-storage/derivation.md) | Absorption/lifetime tradeoff, reversible storage, energy release and finite capacity |
 | [Deposit support](../research_work/results/deposit-support/derivation.md) | Cold infall, orbital support and radiation-pressure requirements |
 | [Capture momentum](../research_work/results/capture-momentum/derivation.md) | Exact absorption, mass loading, radial force and conditional orbital changes |
+| [All-direction capture](../research_work/results/isotropic-capture/derivation.md) | Direction weighting, orbital drag and conditional spectral cancellation |
 
 The original theory-development-roadmap.md retains all 32 response areas. codex-task-backlog.md and its JSON version retain all 20 tasks and their completion criteria. T01 baseline reproduction is complete with documented numerical differences; later tasks contain preliminary evidence and remain incomplete at full scope. Do not rerun T01 simply because the original launch prompt described it as the first step.
 

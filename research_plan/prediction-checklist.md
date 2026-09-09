@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [capture momentum](../research_work/results/capture-momentum/derivation.md). Capture transfers momentum as well as energy. Exact local absorption and conditional force/orbit comparisons tie receiver mass growth to radiation pressure and orbital changes. Balanced delivered momentum reduces the radial force but does not by itself preserve the orbit. No actual radiation geometry, capture rate or self-consistent galactic evolution is established.
+Latest diagnostic: [all-direction capture](../research_work/results/isotropic-capture/derivation.md). A moving receiver samples isotropic illumination unevenly. Constant-cross-section absorption produces drag; a stipulated inverse-fourth-power energy response cancels velocity change in the ideal free-receiver calculation. Attenuation also creates an inward flux inside an externally illuminated sphere. Actual receiver spectra, reverse channels and galactic evolution remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 
