@@ -1,0 +1,11 @@
+# Nonuniform finite-mode transport result
+
+The existing proposed scalar-photon Hamiltonian was evolved with 48 moving packets in a fixed periodic three-dimensional cube. All field and particle forces follow from the same Hamiltonian. This uses established Fourier and Hamiltonian methods; originality of this application is unverified.
+
+The 33-mode unequal-weight case retains positive mean rolling rate 0.0607538 at reference time 40, with spatial RMS rate variation 0.00025245. The equal-weight comparison gives 0.0607579 and 0.00007920. Relative energy errors stay below 2.1e-12; total field-plus-particle momentum errors normalized by initial energy stay below 1e-16. Tightened time-integration tolerance changes the 33-mode trajectories by less than 1.7e-10. Momentum verification was added after the initial run as a conservation audit, not an observational acceptance criterion.
+
+This is limited progress toward inhomogeneous propagation, not a continuum solution. Seven versus 33 modes change nonzero-mode energy substantially: the unequal-weight case changes from 5.67e-7 to 3.68e-6. The discrete equal-weight particle lattice cancels source modes at the lowest cutoff but not at the higher one. Neither the small change in mean rolling nor numerical conservation proves spatial convergence, continuum stability, or a realistic cosmic source distribution. Positivity was checked at particle positions and an eight-cubed grid, not analytically everywhere.
+
+The experiment still uses periodic boundaries, no restoring potential, no protected atomic endpoints and no physical normalization. Its reference-coordinate propagation speed changes with the optical factor; it does not by itself prove the user's constant locally measured light-speed premise. That operational requirement must be met by a shared clock/ruler/propagation completion before this model is accepted. No galaxy redshift has been fitted in this experiment.
+
+Reproduce with `python research_work/results/distributed-modes/run.py`; protocol and full results are retained. The next work must resolve physical clock/ruler interpretation and boundaries, alongside spatial resolution, rather than presenting the periodic zero mode as a completed explanation.

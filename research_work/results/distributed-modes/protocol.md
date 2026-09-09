@@ -1,0 +1,11 @@
+# Nonuniform radiation and field: finite-mode 3D test
+
+Freeze before execution. This is a finite Fourier-Galerkin realization of the proposed scalar-photon Hamiltonian, using established Hamiltonian and Fourier methods. Originality of this application is unverified. Spatial geometry is a unit periodic cube, not an open universe; no gravity, matter clocks, screening or potential is supplied.
+
+Use K=g=c0=1, field-wave speed 0.5, initial field and field velocities zero, total initial photon energy 0.003. Forty-eight packets start at the eight cube positions with coordinates 0.25 or 0.75, with six equally represented momentum directions along positive/negative coordinate axes. Compare equal weights to positive weights proportional to 1+0.5 sin(2 pi x), normalized to identical total energy. This is a spatial radiation perturbation, not a galaxy environment inferred from redshift.
+
+Retain the constant mode and real sine/cosine orthonormal modes for all integer wavevectors with Euclidean norm at most cutoff=1 or 2, counting conjugate pairs once. Optical factor n(X)=1+sum_a q_a B_a(X). Field energy=sum_a[p_a^2+v^2 k_a^2 q_a^2]/2. Photon energy=sum_i |P_i|/n(X_i). Derive all particle and field forces from this same truncated Hamiltonian. Integrate to t=40 using DOP853, relative tolerance 1e-9 and absolute 1e-12, maximum step 0.1. Repeat cutoff=2 at 1e-11/1e-14. No coefficients fitted to redshifts.
+
+Report energy conservation, positive n on particles and on an 8-cubed diagnostic grid, zero-mode velocity and spatial RMS rate variation, nonzero-mode energy and packet energy loss. Require relative energy error below 1e-6 and tightened-tolerance state differences below 1e-5. Report cutoff differences rather than declaring spatial convergence from two low cutoffs; if appreciable, do not promote the finite-mode result to a continuum solution. The homogeneous analytic result is a control for the equal-weight source only if its discrete symmetry cancels all retained nonzero source modes.
+
+This tests nonuniform photon transport and field reaction in fixed 3D periodic geometry. It does not address open boundaries, endpoint atoms, finite stellar sources, or an astronomical redshift fit. Retain these as open requirements.

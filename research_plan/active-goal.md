@@ -2,6 +2,10 @@
 
 Current synthesis: [academic working draft v0.3](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
 
+## Latest physical premise
+
+Follow [void time and constant local light speed](void-time-premise.md): preserve the user's cumulative void-time origin and constant locally measured c. Distinguish external-clock travel delay from changing physical distance. Current optical-factor tests do not yet establish the necessary matter clock/ruler completion.
+
 ## Standing formula presentation requirement
 
 Follow [formula provenance labels](formula-provenance.md) in every response and artifact: identify known mathematics, adaptations, proposed assumptions and internal derivations; originality remains unverified unless a prior-art review supports it. Explicitly distinguish calibrated constants from novel physical laws.
@@ -148,3 +152,5 @@ Manuscript v0.3 integrates all current redshift comparisons and the conditional 
 [Explicit time-rate mapping](../research_work/results/redshift-priority/time-slowing-to-redshift.md) distinguishes optical-time rate from atomic clocks, translates fractional optical slowing into temporal stretch, and identifies cancellation if clocks and light slow identically. The homogeneous example does not stretch spatial wavelength. Derive protected endpoint standards and nonuniform propagation before claiming the requested physical light stretching.
 
 [Atomic line-response diagnostic](../research_work/results/atomic-line-response/report.md): established Dirac-Coulomb spectroscopy applied to the optional unscreened fixed-mass/charge matter completion produces transition-dependent clock shifts and the wrong observed sign. A common propagation rate cannot cancel the fine/gross differential response. Protected endpoints must be derived from environmental coupling rather than assumed; this is not a general rejection of cumulative time.
+
+[Nonuniform finite-mode transport](../research_work/results/distributed-modes/report.md) retains mean rolling with moving photons and checked energy/momentum in a periodic 3D truncation, but nonzero-mode energy is resolution-sensitive and physical local clock/ruler interpretation remains unresolved. No continuum or observational success is claimed.
