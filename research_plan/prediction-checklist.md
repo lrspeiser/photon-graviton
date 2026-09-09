@@ -1,6 +1,6 @@
 # Prediction checklist: photon energy, companions and gravity
 
-Latest diagnostic: [ordinary soft-graviton emission](../research_work/results/soft-graviton/derivation.md). The ordinary soft-graviton comparison derives a spin-two small-energy emission factor with recoil and polarization checks. The leading heavy-target channel transfers extremely little energy per hard event; counting more almost energy-free packets does not increase the available energy without limit. This constrains that specific ordinary-gravity branch, not all companion laws. Full finite-energy emission, capture, storage and astronomical validation remain unfinished.
+Latest diagnostic: [capture and storage](../research_work/results/capture-storage/derivation.md). A reversible two-step receiver separates capture from long-lived storage in a conditional three-state model. Its energy ledger includes returned companions and shelving radiation; finite capacity and environmental reverse transitions limit accumulation. Receiver identity, absolute rates, spatial support and the full gravity response remain unproved.
 
 Updated 9 September 2026. This checklist develops the user's request to list outcomes and available prediction formulas. It supplements the full roadmap; it does not mark its tasks complete or adopt a microscopic interaction.
 

@@ -148,3 +148,7 @@ For this candidate, the next action must specify the dynamical driver, the matte
 `microphysics-checks.json` records five check groups: capture energy partition over 151 ratios, four-momentum mass shell, inverse-channel kinematics, opposed-packet momentum cancellation, and three static-mixing matrix cases. These are mathematical checks of stated examples, not validation of any action above. `check_microphysics.py` reproduces them.
 
 Recovered sources inspected: `minimal_clock_interaction/derivation.md`, `conformal_action_derivation/derivation.md`, `interaction_stability_attempt/checks.json`. External primary sources were checked on 9 September 2026 and support only their explicitly attributed comparison claims. The scalar/absorber actions are proposed illustrative candidates in this work; they are not presented as established solutions or claims of novelty.
+
+## Later capture/storage calculation
+
+The [reversible receiver calculation](../capture-storage/derivation.md) develops the bandwidth/lifetime tradeoff, a three-state storage model, energy-release ledger, finite capacity and reverse bath transitions. It remains a conditional effective model; no actual material or ordinary-graviton capture strength is identified.

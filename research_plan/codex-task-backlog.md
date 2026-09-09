@@ -1,6 +1,6 @@
 # Codex task backlog — current checkpoint
 
-Latest diagnostic: [ordinary soft-graviton emission](../research_work/results/soft-graviton/derivation.md). The ordinary soft-graviton comparison derives a spin-two small-energy emission factor with recoil and polarization checks. The leading heavy-target channel transfers extremely little energy per hard event; counting more almost energy-free packets does not increase the available energy without limit. This constrains that specific ordinary-gravity branch, not all companion laws. Full finite-energy emission, capture, storage and astronomical validation remain unfinished.
+Latest diagnostic: [capture and storage](../research_work/results/capture-storage/derivation.md). A reversible two-step receiver separates capture from long-lived storage in a conditional three-state model. Its energy ledger includes returned companions and shelving radiation; finite capacity and environmental reverse transitions limit accumulation. Receiver identity, absolute rates, spatial support and the full gravity response remain unproved.
 
 **Updated active objective:** [conversion-first prediction program](active-goal.md). The user permits leaving special time/void stretching out as the cause, while retaining all timing observations. The [executed pass](../research_work/results/conversion-first/report.md) is preliminary evidence for T02/T04/T05/T07/T08/T18/T20; it does not complete their full scope or supply fresh validation.
 

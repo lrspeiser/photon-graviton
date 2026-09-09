@@ -18,6 +18,8 @@ The [universe contract](research_plan/universe-contract.md) fixes published gala
 
 ## Current findings
 
+- [Capture and storage](research_work/results/capture-storage/derivation.md) now has a conditional reversible receiver model. It explicitly accounts for stored energy, returned companions and shelving radiation, while identifying finite capacity and environmental reopening of the store. Receiver identity and a supported galactic distribution remain unresolved.
+
 - [Ordinary soft gravitons](research_work/results/soft-graviton/derivation.md) provide a specified tensor small-energy emission route, with extremely weak energy throughput per hard scattering in the tested limit. Infrared packet counts do not imply unlimited energy. This is a conditional comparison, not a complete conversion law.
 
 - [Oscillator response](research_work/results/oscillator-response/derivation.md) supplies a causal small-packet candidate with stored/radiated energy accounting. For the same point-target vertex, any positive response depending only on companion frequency retains a logarithmic color slope of at least three. Changing only that response cannot yield achromatic loss.
@@ -89,7 +91,7 @@ python research_work/run_checks.py
 python research_work/run_checks.py --baseline
 ```
 
-The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest [soft-graviton verification](research_work/soft-graviton-verification.json) records 17 current default jobs; the optional historical baseline makes 18 jobs and was not rerun for this update. Earlier [conversion-first verification](research_work/conversion-first-verification.json) and [publication verification](research_work/publication-verification.json) retain their original suite scope and results.
+The current command checks original source hashes, runs diagnostics, and verifies that original files and saved results remain unchanged. Each invocation creates a fresh directory under `research_work/generated/`, with logs and a verification summary. `--output-dir` selects another new or empty directory. The latest [capture-storage verification](research_work/capture-storage-verification.json) records 18 current default jobs; the optional historical baseline makes 19 jobs and was not rerun for this update. Earlier [conversion-first verification](research_work/conversion-first-verification.json) and [publication verification](research_work/publication-verification.json) retain their original suite scope and results.
 
 The historical scripts can still run directly, but doing so overwrites their corresponding outputs. Use the isolated runner above for baseline reproduction. `python restore_data.py` restores the compressed covariance if needed by older brightness analyses; the current diagnostics read its compressed form directly. These are research tools, not a complete cosmology library.
 

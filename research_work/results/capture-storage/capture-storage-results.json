@@ -1,0 +1,239 @@
+{
+  "scope": "Conditional resonant absorber and reversible three-level receiver. No material identity, cosmic abundance, cross-section normalization, ordinary-graviton capture rate or halo is established.",
+  "resonance_integrals": [
+    {
+      "Gamma_c": 1.0,
+      "Gamma_s": 0.0,
+      "inclusive_area_over_sigma_unit": 1.5707963267948966,
+      "shelving_area_over_sigma_unit": 0.0,
+      "shelving_peak_over_sigma_unit": 0.0
+    },
+    {
+      "Gamma_c": 1.0,
+      "Gamma_s": 0.1,
+      "inclusive_area_over_sigma_unit": 1.5707963267948968,
+      "shelving_area_over_sigma_unit": 0.1427996660722633,
+      "shelving_peak_over_sigma_unit": 0.08264462809917354
+    },
+    {
+      "Gamma_c": 1.0,
+      "Gamma_s": 1.0,
+      "inclusive_area_over_sigma_unit": 1.5707963267948966,
+      "shelving_area_over_sigma_unit": 0.7853981633974483,
+      "shelving_peak_over_sigma_unit": 0.25
+    },
+    {
+      "Gamma_c": 1.0,
+      "Gamma_s": 10.0,
+      "inclusive_area_over_sigma_unit": 1.5707963267948966,
+      "shelving_area_over_sigma_unit": 1.4279966607226333,
+      "shelving_peak_over_sigma_unit": 0.08264462809917356
+    },
+    {
+      "Gamma_c": 1e-06,
+      "Gamma_s": 0.0,
+      "inclusive_area_over_sigma_unit": 1.5707963268467783e-06,
+      "shelving_area_over_sigma_unit": 0.0,
+      "shelving_peak_over_sigma_unit": 0.0
+    }
+  ],
+  "direct_storage_width_examples": [
+    {
+      "retention_interval_years": 1000000000.0,
+      "required_survival": 0.9,
+      "maximum_direct_width_eV": 2.1975546681780136e-33,
+      "illustrative_bandwidth_eV": 1e-06,
+      "maximum_flat_band_average_over_sigma_unit": 3.4519108007050016e-27
+    },
+    {
+      "retention_interval_years": 10000000000.0,
+      "required_survival": 0.9,
+      "maximum_direct_width_eV": 2.197554668178014e-34,
+      "illustrative_bandwidth_eV": 1e-06,
+      "maximum_flat_band_average_over_sigma_unit": 3.451910800705002e-28
+    }
+  ],
+  "driven_storage_cases": [
+    {
+      "kc": 1.0,
+      "ks": 9.0,
+      "kd": 0.0,
+      "incident_occupation": 0.01,
+      "final_g_b_d": [
+        1.906209906705684e-12,
+        2.967288241897146e-13,
+        0.9999999999977955
+      ],
+      "analytic_steady_g_b_d": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stored_energy_per_receiver": 0.899999999998016,
+      "incident_energy_counter": 1.1122222222200686,
+      "returned_companion_energy_counter": 0.11222222222197503,
+      "shelving_radiation_energy_counter": 0.09999999999977963,
+      "deposit_leak_energy_counter": 0.0,
+      "checks": {
+        "energy_ledger_max_error": 2.55351295663786e-15,
+        "ODE_vs_matrix_exponential_error": 2.947930386872713e-13
+      }
+    },
+    {
+      "kc": 1.0,
+      "ks": 9.0,
+      "kd": 0.001,
+      "incident_occupation": 0.01,
+      "final_g_b_d": [
+        0.10007998400325144,
+        9.998000434361506e-05,
+        0.8998200359924079
+      ],
+      "analytic_steady_g_b_d": [
+        0.10007998400319935,
+        9.998000399920016e-05,
+        0.8998200359928014
+      ],
+      "stored_energy_per_receiver": 0.8098380323931671,
+      "incident_energy_counter": 3.903029242181874,
+      "returned_companion_energy_counter": 0.39380205342650443,
+      "shelving_radiation_energy_counter": 0.3509127208751025,
+      "deposit_leak_energy_counter": 2.3483764554827586,
+      "checks": {
+        "energy_ledger_max_error": 5.329070518200751e-15,
+        "ODE_vs_matrix_exponential_error": 4.596323321948148e-13
+      }
+    },
+    {
+      "kc": 1.0,
+      "ks": 9.0,
+      "kd": 0.1,
+      "incident_occupation": 0.01,
+      "final_g_b_d": [
+        0.916666666666543,
+        0.0009157509171157414,
+        0.08241758241634321
+      ],
+      "analytic_steady_g_b_d": [
+        0.9166666666666666,
+        0.0009157509157509158,
+        0.08241758241758242
+      ],
+      "stored_energy_per_receiver": 0.07417582417470889,
+      "incident_energy_counter": 27.5076312576313,
+      "returned_companion_energy_counter": 2.775402863314814,
+      "shelving_radiation_energy_counter": 2.473131264339947,
+      "deposit_leak_energy_counter": 22.184005554884642,
+      "checks": {
+        "energy_ledger_max_error": 7.172040739078511e-14,
+        "ODE_vs_matrix_exponential_error": 2.8563817977556027e-12
+      }
+    },
+    {
+      "kc": 1.0,
+      "ks": 1.0,
+      "kd": 0.0,
+      "incident_occupation": 0.1,
+      "final_g_b_d": [
+        -2.9902225942439866e-13,
+        5.582379621759226e-13,
+        0.9999999999997409
+      ],
+      "analytic_steady_g_b_d": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stored_energy_per_receiver": 0.8999999999997668,
+      "incident_energy_counter": 2.1000000000000134,
+      "returned_companion_energy_counter": 1.099999999999712,
+      "shelving_radiation_energy_counter": 0.09999999999997398,
+      "deposit_leak_energy_counter": 0.0,
+      "checks": {
+        "energy_ledger_max_error": 3.552713678800501e-15,
+        "ODE_vs_matrix_exponential_error": 5.582379621759226e-13
+      }
+    },
+    {
+      "kc": 1.0,
+      "ks": 9.0,
+      "kd": 0.0,
+      "incident_occupation": 10.0,
+      "final_g_b_d": [
+        -9.407462231604798e-13,
+        1.4212922256115066e-12,
+        0.9999999999995196
+      ],
+      "analytic_steady_g_b_d": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "stored_energy_per_receiver": 0.8999999999995677,
+      "incident_energy_counter": 2.222222222222574,
+      "returned_companion_energy_counter": 1.222222222221635,
+      "shelving_radiation_energy_counter": 0.09999999999995193,
+      "deposit_leak_energy_counter": 0.0,
+      "checks": {
+        "energy_ledger_max_error": 2.4424906541753444e-15,
+        "ODE_vs_matrix_exponential_error": 1.4212922256115066e-12
+      }
+    }
+  ],
+  "single_caught_packet": {
+    "stored_fraction": 0.8099999999998976,
+    "returned_fraction": 0.0999999999999873,
+    "shelving_radiation_fraction": 0.08999999999998855,
+    "checks": {
+      "energy_ledger_max_error": 3.885780586188048e-16,
+      "ODE_vs_matrix_exponential_error": 1.266962611762171e-13
+    }
+  },
+  "reverse_shelving_bath": [
+    {
+      "shelving_bath_occupation": 0.0001,
+      "effective_slow_decay_rate": 8.998461249279987e-05,
+      "dark_population_after_ten_slow_lifetimes": 4.539625289285184e-05,
+      "ledger_error": 2.2341017924532025e-12
+    },
+    {
+      "shelving_bath_occupation": 0.01,
+      "effective_slow_decay_rate": 0.008848555691338184,
+      "dark_population_after_ten_slow_lifetimes": 4.5037386949893476e-05,
+      "ledger_error": 1.8207657603852567e-14
+    },
+    {
+      "shelving_bath_occupation": 1.0,
+      "effective_slow_decay_rate": 0.32520566882265683,
+      "dark_population_after_ten_slow_lifetimes": 3.09998940543963e-05,
+      "ledger_error": 1.3322676295501878e-15
+    }
+  ],
+  "thermal_detailed_balance": [
+    {
+      "temperature_in_Eb_units": 0.05,
+      "Gibbs_stationarity_error": 1.6143295329257565e-24
+    },
+    {
+      "temperature_in_Eb_units": 0.5,
+      "Gibbs_stationarity_error": 1.3211022879414096e-15
+    },
+    {
+      "temperature_in_Eb_units": 5.0,
+      "Gibbs_stationarity_error": 1.6161594281245398e-14
+    }
+  ],
+  "capacity_example": {
+    "assumption": "One 1 eV storage slot per proton; illustrative, not an identified material.",
+    "maximum_extra_rest_mass_fraction": 1.0657889233488306e-09,
+    "energy_per_proton_eV_for_equal_added_rest_mass": 938272089.4282572
+  },
+  "unresolved": [
+    "Actual receiver and its microscopic transition matrix elements",
+    "Companion spectrum and absorption bandwidth",
+    "Temperature, collisions and all reverse channels",
+    "Finite receiver abundance, storage capacity and spatial distribution",
+    "Supply, recoil, gravitational support and simultaneous lensing",
+    "Emission spectrum and destination of capture-release energy"
+  ]
+}

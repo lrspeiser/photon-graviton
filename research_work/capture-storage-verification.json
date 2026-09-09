@@ -1,0 +1,110 @@
+{
+  "jobs": [
+    {
+      "script": "energy/compare_no_loss_catalog.py",
+      "exit_code": 0,
+      "seconds": 0.2687057000002824
+    },
+    {
+      "script": "energy/ledger_solver.py",
+      "exit_code": 0,
+      "seconds": 0.7329221000036341
+    },
+    {
+      "script": "transport/check_transport.py",
+      "exit_code": 0,
+      "seconds": 0.7324383000013768
+    },
+    {
+      "script": "radial-capture/run_radial_capture.py",
+      "exit_code": 0,
+      "seconds": 1.2666585999977542
+    },
+    {
+      "script": "radial-capture/check_external_capture.py",
+      "exit_code": 0,
+      "seconds": 1.181004899997788
+    },
+    {
+      "script": "microphysics/check_microphysics.py",
+      "exit_code": 0,
+      "seconds": 0.45155190000514267
+    },
+    {
+      "script": "frequency-transfer/check_frequency_transfer.py",
+      "exit_code": 0,
+      "seconds": 0.8472296000036295
+    },
+    {
+      "script": "scalar-wave/check_scalar_wave.py",
+      "exit_code": 0,
+      "seconds": 1.1985866999966674
+    },
+    {
+      "script": "gravity-response/check_gravity_response.py",
+      "exit_code": 0,
+      "seconds": 0.645731300006446
+    },
+    {
+      "script": "data-audit/audit_observables.py",
+      "exit_code": 0,
+      "seconds": 0.33640549999836367
+    },
+    {
+      "script": "data-audit/enrich_observable_registry.py",
+      "exit_code": 0,
+      "seconds": 0.08145119999971939
+    },
+    {
+      "script": "conversion-first/run_conversion_first.py",
+      "exit_code": 0,
+      "seconds": 0.8864805999983218
+    },
+    {
+      "script": "interaction-rate/check_interaction_rate.py",
+      "exit_code": 0,
+      "seconds": 0.6492733000050066
+    },
+    {
+      "script": "matter-assisted/check_matter_assisted.py",
+      "exit_code": 0,
+      "seconds": 0.7863186000031419
+    },
+    {
+      "script": "collective-response/check_collective_response.py",
+      "exit_code": 0,
+      "seconds": 0.9470733999987715
+    },
+    {
+      "script": "oscillator-response/check_oscillator_response.py",
+      "exit_code": 0,
+      "seconds": 1.1663660000049276
+    },
+    {
+      "script": "soft-graviton/check_soft_graviton.py",
+      "exit_code": 0,
+      "seconds": 1.4229357000003802
+    },
+    {
+      "script": "capture-storage/check_capture_storage.py",
+      "exit_code": 0,
+      "seconds": 1.7376528000022518
+    }
+  ],
+  "original_files_verified": 271,
+  "missing_historical_files": [
+    "unified_paper_v9/build.py",
+    "unified_paper_v9/design_tokens.json",
+    "unified_paper_v9/math_format.py",
+    "unified_paper_v9/verification.json",
+    "unified_paper_v9/version8_original.docx"
+  ],
+  "originals_and_saved_results_preserved": true,
+  "scope": "18 mathematical/integrity diagnostics; not full observational validation or a complete theory.",
+  "new_result_exact_repeat": true,
+  "new_pass_hashes": {
+    "research_work/results/capture-storage/capture-storage-results.json": "ca9349e8948ad35c8e147064dd49b74d3c65e768182e893b115a1995726c9dcc",
+    "research_work/results/capture-storage/check_capture_storage.py": "eea9f2f247e18dc7afb1e7778d51835aa423676f5181e7b4b8d7cc921c5fb501",
+    "research_work/results/capture-storage/derivation.md": "60d2b866755e3947464737801c174382ad3b9c1a5d22598da1ac83ed29e5a91b"
+  }
+}
