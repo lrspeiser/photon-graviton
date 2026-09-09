@@ -2,6 +2,10 @@
 
 Current synthesis: [academic working draft v0.2](../papers/cumulative-time-companions/manuscript.md). The draft develops the cumulative-time premise and preserves the full research scope; it does not close the goal or replace incomplete physics with a paper claim.
 
+## Standing formula presentation requirement
+
+Follow [formula provenance labels](formula-provenance.md) in every response and artifact: identify known mathematics, adaptations, proposed assumptions and internal derivations; originality remains unverified unless a prior-art review supports it. Explicitly distinguish calibrated constants from novel physical laws.
+
 ## Mechanism requirement, latest user clarification
 
 Follow [mechanism-first redshift requirements](mechanism-first-redshift.md): the familiar exponential is not the claimed discovery. Derive a local photon-companion rate from nonexpanding field/source dynamics, then test predictions. Curve tuning alone cannot satisfy the objective. Continue the frozen catalog audit; the next mechanism question is sustained distributed-source evolution in three fixed spatial dimensions, with complete energy accounts.
