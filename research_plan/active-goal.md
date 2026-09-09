@@ -26,6 +26,8 @@ Follow [mechanism-first redshift requirements](mechanism-first-redshift.md): the
 
 ## Immediate priority, 9 September 2026
 
+The [observation-model pass](../research_work/results/redshift-priority/observation-model.md) now implements multiplicative factors, explicit velocity-convention transforms and all-row fixed-motion sensitivity. Exact composition changes an illustrative +300 km/s scenario by only 0.914–7.194 km/s relative to the additive shortcut, not enough to explain the main scatter. Motion/endpoint constraints, original CF4 spectral/frame-transform provenance and credible predictive intervals remain open. Do not convert residual-equivalent velocities into per-object corrections.
+
 The user now prioritizes tuning and testing the redshift prediction against observations. Follow [the redshift priority plan](redshift-priority.md) before additional capture/halo research. The next calculation is a residual/input audit, followed by a small frozen candidate comparison and independent validation. The whole theory remains incomplete.
 
 ## User direction, 9 September 2026
