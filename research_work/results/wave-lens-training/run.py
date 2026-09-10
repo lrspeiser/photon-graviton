@@ -9,7 +9,7 @@ from scipy.stats import ncx2
 from numpy.polynomial.legendre import leggauss
 
 H=Path(__file__).resolve().parent;R=H.parent
-parser=argparse.ArgumentParser();parser.add_argument('--verify-resolution',action='store_true');parser.add_argument('--grid-index',type=int,choices=range(9));parser.add_argument('--role',choices=['training','validation'],default='training');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--verify-resolution',action='store_true');parser.add_argument('--grid-index',type=int,choices=range(9));parser.add_argument('--role',choices=['training','validation'],default='training');parser.add_argument('--orbit-audit',action='store_true');args=parser.parse_args()
 if args.role!='training' and args.grid_index is not None:raise ValueError('Parameter grid is training-only.')
 spec=importlib.util.spec_from_file_location('wave_equilibrium',R/'self-consistent-wave/run.py')
 wave=importlib.util.module_from_spec(spec);spec.loader.exec_module(wave)
@@ -33,6 +33,9 @@ if args.role=='validation':
     protocol.update({'role':'validation','choice':'Frozen training-selected common parameters','validation_protocol':vp})
     files[1]=OUT/'mass-inputs.json';masses=json.loads(files[1].read_text())
     files.extend([vpfile,selectedfile])
+if args.orbit_audit:
+    opfile=R/'stellar-orbit-degeneracy/protocol.json'
+    protocol['orbital_audit']=json.loads(opfile.read_text());files.append(opfile)
 masses=[r for r in masses if r['model']=='baryons' and r['imf']=='Salpeter' and r['propagation_branch']=='energy_loss_and_event_stretch']
 assert len(masses)==(32 if args.role=='training' else 7) and all(r['role']==args.role for r in masses)
 if args.verify_resolution:
@@ -46,7 +49,7 @@ particle=protocol['field_mass_eV_c2']*1.7826619216279e-36
 source_fraction=protocol['source_to_stellar_mass_ratio']
 t,w=leggauss(256 if args.verify_resolution else 128)
 x=np.geomspace(1e-6,1e5,24000 if args.verify_resolution else 12000);j=1/(x*(1+x)**3)
-rows=[];checks=[]
+rows=[];checks=[];orbitrows=[]
 for mrow in masses:
     name=mrow['Name'];obs=observed[name];geo=geometry[name]
     dl=geo['conditional_Dl_Mpc']*1000;ratio=geo['conditional_Dls_over_Ds']
@@ -72,6 +75,12 @@ for mrow in masses:
     prob=ncx2.cdf((ap/s)**2,2,(x[:,None]*np.sin(theta)/s)**2)
     W=np.sum(prob*np.sin(theta)*w[None,:],axis=1)*top/2
     kernel=cumulative_trapezoid(x*x*W,x,initial=0)
+    kernels={0.:kernel};angular_weights={0.:W}
+    if args.orbit_audit:
+        for beta in [-.3,.3]:
+            Wbeta=np.sum(prob*np.sin(theta)*(1-beta*np.sin(theta)**2)*w[None,:],axis=1)*top/2
+            angular_weights[beta]=Wbeta
+            kernels[beta]=x**(2*beta)*cumulative_trapezoid(x**(2-2*beta)*Wbeta,x,initial=0)
     denom=np.trapezoid(j*x*x*W,x)
     for model in ['baryons','stationary_wave']:
         gc=enclosed(x)/x**2 if model=='stationary_wave' else np.zeros_like(x)
@@ -98,6 +107,16 @@ for mrow in masses:
                      'sigma_pred_km_s':float(sigma),'sigma_observed_km_s':obs['sigma'],
                      'sigma_error_km_s':obs['e_sigma'],'theta_pred_arcsec':float(angle),
                      'theta_SIE_arcsec':obs['bSIE'],'projected_mass_lensing_identity_relative_error':lens_error})
+        if args.orbit_audit:
+            for beta,kbeta in sorted(kernels.items()):
+                entry=dict(rows[-1]);entry['beta']=beta
+                entry['sigma_pred_km_s']=float(np.sqrt(G*M/a*np.trapezoid(j*(1/(1+x)**2+gc)*kbeta,x)/denom))
+                pressure_integrand=j*(1/(1+x)**2+gc)*x**(2*beta)
+                pressure=-cumulative_trapezoid(pressure_integrand[::-1],x[::-1],initial=0)[::-1]*x**(-2*beta)
+                variance_direct=G*M/a*np.trapezoid(x*x*angular_weights[beta]*pressure,x)/denom
+                entry['independent_pressure_variance_relative_error']=abs(variance_direct/entry['sigma_pred_km_s']**2-1)
+                assert entry['independent_pressure_variance_relative_error']<1e-4
+                orbitrows.append(entry)
     print(name,flush=True)
 summary={'classification':f'Fixed shared-parameter conditional {args.role} comparison; not capture theory',
          'systems':len(masses),'protocol':protocol,'scores':{},'equilibrium_checks':checks,
@@ -112,6 +131,9 @@ for model in ['baryons','stationary_wave']:
         'median_sigma_pred_over_observed':float(np.median([r['sigma_pred_km_s']/r['sigma_observed_km_s'] for r in ss])),
         'median_theta_pred_over_SIE':float(np.median([r['theta_pred_arcsec']/r['theta_SIE_arcsec'] for r in ss]))}
 for filename,data in [('predictions.json',rows),('results.json',summary)]:
+    if args.orbit_audit:
+        if filename=='predictions.json':data=orbitrows
+        filename='orbital-'+filename
     if args.verify_resolution:filename=filename.replace('.json','-refined.json')
     (OUT/filename).write_text(json.dumps(data,indent=2)+'\n',newline='\n')
 print(json.dumps(summary['scores'],indent=2))

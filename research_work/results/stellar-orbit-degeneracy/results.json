@@ -1,0 +1,89 @@
+{
+  "classification": "Shared orbital sensitivity, no new fitted beta or holdout selection",
+  "fixed_stellar_mass_multiplier": 1.645362158609144,
+  "scores": {
+    "training/shared_stellar_mass/beta-0.3": {
+      "n": 32,
+      "sigma_rmse_km_s": 31.556274876558994,
+      "theta_rmse_arcsec": 0.22784106730740789,
+      "score": 0.024431775712082042
+    },
+    "training/stationary_wave/beta-0.3": {
+      "n": 32,
+      "sigma_rmse_km_s": 33.82552520924538,
+      "theta_rmse_arcsec": 0.14401337594196817,
+      "score": 0.01577512255888155
+    },
+    "training/shared_stellar_mass/beta+0.0": {
+      "n": 32,
+      "sigma_rmse_km_s": 31.037773272561733,
+      "theta_rmse_arcsec": 0.22784106730740789,
+      "score": 0.024301437054837737
+    },
+    "training/stationary_wave/beta+0.0": {
+      "n": 32,
+      "sigma_rmse_km_s": 31.990577881682597,
+      "theta_rmse_arcsec": 0.14401337594196817,
+      "score": 0.014670067123529161
+    },
+    "training/shared_stellar_mass/beta+0.3": {
+      "n": 32,
+      "sigma_rmse_km_s": 31.360831351179073,
+      "theta_rmse_arcsec": 0.22784106730740789,
+      "score": 0.024622164196930807
+    },
+    "training/stationary_wave/beta+0.3": {
+      "n": 32,
+      "sigma_rmse_km_s": 30.682579307788053,
+      "theta_rmse_arcsec": 0.14401337594196817,
+      "score": 0.013866252453835505
+    },
+    "validation/shared_stellar_mass/beta-0.3": {
+      "n": 7,
+      "sigma_rmse_km_s": 50.52016649295325,
+      "theta_rmse_arcsec": 0.354096438900009,
+      "score": 0.066327530528962
+    },
+    "validation/stationary_wave/beta-0.3": {
+      "n": 7,
+      "sigma_rmse_km_s": 42.020148534299835,
+      "theta_rmse_arcsec": 0.2698692959720389,
+      "score": 0.04838316548815689
+    },
+    "validation/shared_stellar_mass/beta+0.0": {
+      "n": 7,
+      "sigma_rmse_km_s": 45.846910292643635,
+      "theta_rmse_arcsec": 0.354096438900009,
+      "score": 0.06286843238384253
+    },
+    "validation/stationary_wave/beta+0.0": {
+      "n": 7,
+      "sigma_rmse_km_s": 38.224549824176414,
+      "theta_rmse_arcsec": 0.2698692959720389,
+      "score": 0.04494854808073846
+    },
+    "validation/shared_stellar_mass/beta+0.3": {
+      "n": 7,
+      "sigma_rmse_km_s": 40.04453501033298,
+      "theta_rmse_arcsec": 0.354096438900009,
+      "score": 0.05921024910832517
+    },
+    "validation/stationary_wave/beta+0.3": {
+      "n": 7,
+      "sigma_rmse_km_s": 34.806626122629744,
+      "theta_rmse_arcsec": 0.2698692959720389,
+      "score": 0.04153967070749849
+    }
+  },
+  "input_sha256": {
+    "wave-lens-training\\parameter-grid\\cell-4\\orbital-predictions.json": "8900a8dcf8eaf93f5bedd93477585ab6d2d4820003a6fe88b2fbf074961aebc0",
+    "wave-lens-validation\\orbital-predictions.json": "5cc47281689e9cf95e15e13c7bf60ab659f31c8bec37ec0e70315a2de7ee2138",
+    "stellar-mass-degeneracy\\predictions.json": "dfec039c45186a937cf91d54b16f0d1e0d2628d77b3bfdd80ed6734ca4650109",
+    "stellar-mass-degeneracy\\frozen-calibration.json": "4cd4700900f25d3d346bfd0755405b97ef00308c8eb7c9b1bca6732c4758dc9c"
+  },
+  "checks": {
+    "max_independent_pressure_variance_relative_error": 7.3981894845864815e-06,
+    "max_original_isotropic_dispersion_relative_change": 0.0,
+    "lensing_identical_across_beta": true
+  }
+}

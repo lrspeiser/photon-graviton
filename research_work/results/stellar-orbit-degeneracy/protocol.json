@@ -1,0 +1,10 @@
+{
+  "purpose": "Shared orbital sensitivity for supported waves and the shared-stellar-mass benchmark",
+  "beta_values": [-0.3, 0.0, 0.3],
+  "interpretation": "Tangential, isotropic and radial preferences using known constant-beta Jeans dynamics; not measured priors",
+  "mass_parameters": "Retain frozen wave m and source fraction, and the previously frozen common ordinary-mass multiplier",
+  "samples": "Training and already-exposed validation; no further parameter selection or fresh validation claim",
+  "test_access": false,
+  "comparison": "Use the same beta choices for each hypothesis; light bending is unchanged because mass profiles stay fixed",
+  "limitations": "Sensitivity test, not simultaneous mass/orbit posterior inference, stellar anisotropy measurement or source stability proof"
+}
