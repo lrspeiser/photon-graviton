@@ -1,0 +1,13 @@
+# Independent environment input audit
+
+Specified before calculation on 2026-09-10; publisher metadata and the first returned feature rows already viewed. Download feature columns only from VizieR J/AJ/145/101/catalog: Name, RAJ2000, DEJ2000, Dist, f_Dist. Archive source metadata and returned 869-row table. No velocities or tidal indices requested. The source's selection itself includes a velocity threshold as an alternative to an 11-Mpc distance limit, so this is not a purely distance-selected complete sample.
+
+Classify h and h-prime distances as ineligible for independent coordinates; txt is unmeasured. Retain TRGB, Cep, geom, SBF, CMD, HB, RR, PNLF and SN only as individually measured indicator candidates with calibration still pending. Membership, Tully-Fisher, Fundamental Plane and brightest-star cases remain separately pending; no claim that every method intrinsically requires dark matter. Record all rows and reasons, including distances beyond the nominal region. Viewing distances exposes features but does not certify fresh outcomes.
+
+For the already exposed 164 SBF target groups, calculate optimistic radial coverage min(D,11)/D. Do not fit any redshift outcomes. Compute the length inside 11 Mpc lacking a retained catalog tracer within radii 0.5, 1 and 2 Mpc using exact line/sphere intersection and interval union. These radii are illustrative geometric diagnostics, not a gravity or void law; retain all three without choosing by fit. No weighting by dynamical masses, tidal index or reconstructed velocities.
+
+Outside the 11-Mpc region, mark the path unknown. For a binary proximity proxy, full-path bounds are local-empty-length through local-empty-length plus unmapped length. Missing catalog neighbors are not proof of low physical density, even inside the nominal region. Angular completeness, obscuration, population selection and distance errors remain required. No physical environment coefficient is fitted or adopted from these features.
+
+Verify the ray/union calculation with independent midpoint integration for every twentieth target, 20,000 points and all three radii; absolute agreement within 0.01 Mpc is a numerical gate, not environmental accuracy. Hash inputs and retain extraction outputs. This advances stage 2 input readiness, not its final observational test. No holdout is opened or claimed.
+
+Sources: [catalog paper](https://arxiv.org/abs/1303.5328), [catalog metadata](https://cdsarc.cds.unistra.fr/ftp/J/AJ/145/101/ReadMe), [feature query](https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J/AJ/145/101/catalog&-out=Name,RAJ2000,DEJ2000,Dist,f_Dist&-out.max=unlimited). Direct CDS table download failed with an anti-bot response; the VizieR Harvard mirror returned the requested table successfully.
