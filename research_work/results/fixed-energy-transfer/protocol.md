@@ -1,0 +1,9 @@
+# Fixed-energy transfer as a redshift candidate
+
+2026-09-10. Postulate a photon-energy ladder E=m*epsilon with transitions m->m-1 at rate alpha*m per unit path, each releasing epsilon to companions. This is a phenomenological Markov energy process, not a derived quantum interaction, coherent electromagnetic field, tensor-graviton source or momentum-complete action. Ordinary endpoint clocks, straight trajectories and unchanged c are separately assumed. Zero energy is absorbing; photon disappearance there must not be hidden.
+
+Use the existing alpha unchanged. Derive the known linear-death-process/binomial distribution, its mean, variance and zero-energy probability. Verify finite-state evolution by matrix exponentiation against binomial probabilities at m0=32,64,128 and depths 0.01,0.1,ln(1+0.885801). Astrophysical frequency ratios use the large-m limit; a real continuous-energy boundary rule remains unspecified.
+
+Use the already exposed methanol summary in electromagnetic-audit/observations.json: 48.3724558-GHz rest frequency, z=0.885801, Gaussian FWHM 13.85 km/s. Attribute that factor to transfer for this conditional linewidth diagnostic only; do not infer distance from z or claim a new alpha test. Allocate fractions 1 and 0.1 of observed variance to conversion as explicit scenarios, not posterior bounds; real kinematics/instrumental contributions and covariance are unresolved. Translate the resulting epsilon bound to epsilon/h; that is an energy-equivalent frequency, not a detected gravitational wave or proof of phase coherence.
+
+Predict conversion broadening for epsilon/h=1,10,100,1000 Hz and its frequency dependence for 48.3724558 and 60.531489 GHz. Add fixed-alpha synthetic propagation to 100 million light-years for radio and optical input. No rates fitted, no new observations or holdouts. Timing and brightness consequences of unchanged-speed transport must remain explicit even if spectral moments match.

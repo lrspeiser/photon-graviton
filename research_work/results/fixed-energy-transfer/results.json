@@ -1,0 +1,89 @@
+{
+  "status": "Conditional energy-process and exposed linewidth test, not a completed field theory.",
+  "alpha_per_mpc": 0.0002488993286382367,
+  "observed_factor": 1.8858009999999998,
+  "observed_line_frequency_hz": 25650880342.09336,
+  "variance_budget_scenarios": [
+    {
+      "fraction": 1,
+      "max_step_energy_over_h_hz": 21.018642483869073,
+      "max_step_energy_ev": 8.692612075372878e-14
+    },
+    {
+      "fraction": 0.1,
+      "max_step_energy_over_h_hz": 2.1018642483869074,
+      "max_step_energy_ev": 8.692612075372878e-15
+    }
+  ],
+  "step_cases": [
+    {
+      "step_energy_over_h_hz": 1,
+      "step_energy_ev": 4.135667696923859e-15,
+      "lower_line_conversion_fwhm_kms": 3.0209771601373303,
+      "higher_line_conversion_fwhm_kms": 2.7005724413875662,
+      "mean_companion_steps": 22721575457.90664
+    },
+    {
+      "step_energy_over_h_hz": 10,
+      "step_energy_ev": 4.135667696923859e-14,
+      "lower_line_conversion_fwhm_kms": 9.553168585381194,
+      "higher_line_conversion_fwhm_kms": 8.53995990106628,
+      "mean_companion_steps": 2272157545.7906637
+    },
+    {
+      "step_energy_over_h_hz": 100,
+      "step_energy_ev": 4.135667696923859e-13,
+      "lower_line_conversion_fwhm_kms": 30.209771601373305,
+      "higher_line_conversion_fwhm_kms": 27.005724413875665,
+      "mean_companion_steps": 227215754.5790664
+    },
+    {
+      "step_energy_over_h_hz": 1000,
+      "step_energy_ev": 4.135667696923859e-12,
+      "lower_line_conversion_fwhm_kms": 95.53168585381194,
+      "higher_line_conversion_fwhm_kms": 85.39959901066281,
+      "mean_companion_steps": 22721575.457906637
+    }
+  ],
+  "synthetic": [
+    {
+      "emitted_frequency_hz": 48372455800.0,
+      "distance_mpc": 30.660139,
+      "mean_redshift": 0.007660480502942102,
+      "step_energy_over_h_hz": 10,
+      "mean_companion_steps": 36773919.55972827,
+      "conversion_fwhm_kms": 0.8883975751852241,
+      "event_interval_ratio": 1,
+      "required_shared_stretch": 1.007660480502942,
+      "energy_flux_ratio_unchanged_time": 0.9923977563364215
+    },
+    {
+      "emitted_frequency_hz": 600000000000000.0,
+      "distance_mpc": 30.660139,
+      "mean_redshift": 0.007660480502942102,
+      "step_energy_over_h_hz": 10,
+      "mean_companion_steps": 456134619814.71204,
+      "conversion_fwhm_kms": 0.007976838650160575,
+      "event_interval_ratio": 1,
+      "required_shared_stretch": 1.007660480502942,
+      "energy_flux_ratio_unchanged_time": 0.9923977563364215
+    }
+  ],
+  "checks": {
+    "max_distribution_error": 1.4155343563970746e-15,
+    "max_moment_absolute_error": 8.526512829121202e-14
+  },
+  "limitations": [
+    "No source distance used; not independent rate validation",
+    "Finite-line profiles and covariance not fitted",
+    "Energy probabilities do not establish optical phase coherence",
+    "No event stretching at unchanged stationary transport",
+    "Photon zero-energy absorption boundary and continuum completion unresolved",
+    "Momentum, angular redistribution and clocks not derived"
+  ],
+  "sha256": {
+    "research_work/results/electromagnetic-audit/observations.json": "fbc7624587aa080a36db4d8e038d52a6668362a43180aa321698a0ec4968986f",
+    "research_work/results/electromagnetic-audit/protocol.json": "02387262d72a0a06f06d4f43ac865d7cfe32ade5a309c86d86f674326011a821",
+    "research_work/results/fixed-energy-transfer/protocol.md": "06bcda504d96aa23c5491173d1d1890082da46a174862da5a2ce263f2b47c7d6"
+  }
+}

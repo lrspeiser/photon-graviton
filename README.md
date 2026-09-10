@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Small transfers can reproduce the mean redshift:** [Fixed-energy transfer audit](research_work/results/fixed-energy-transfer/report.md) gives an explicit statistical rule with the existing exponential mean and calculable spectral broadening. The reused radio-line width limits its step size conditionally. This is a postulated energy process, not a derived graviton interaction; event stretching, coherence, clocks and momentum remain unresolved.
+
 **Conversion is not automatically redshift:** [Direct spectral discriminator](research_work/results/conversion-versus-redshift/report.md) gives stationary photon/graviton mixing exactly the energy-transfer fraction required by the existing calculator. Surviving frequencies and event-copy separation remain unchanged. This specialization can be a source channel but cannot alone explain the desired redshift; inelastic or time-dependent extensions require separate derivation. The calculator itself remains unchanged.
 
 **Brightness-distance consistency:** [Fixed-rate exposed-data sensitivity](research_work/results/brightness-distance-consistency/report.md) finds that ideal shared-stretching dimming changes median inferred path distance by -0.714% and overall redshift RMS from 447.05 to 444.45 km/s. The large scatter remains, and training RMS worsens. Published distances are not overwritten; actual passband/calibration inference and a genuinely withheld test remain required.
