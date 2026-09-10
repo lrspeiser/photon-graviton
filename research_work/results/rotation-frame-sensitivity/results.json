@@ -1,0 +1,48 @@
+{
+  "classification": "Post-exposure central-ray frame sensitivity; not a revised observed curve, exact Jeans correction or fresh validation",
+  "published_solar_frames": {
+    "Eilers": {
+      "R_kpc": 8.122,
+      "V_phi_kms": 245.8
+    },
+    "Feng": {
+      "R_kpc": 8.275,
+      "V_phi_kms": 250.2
+    }
+  },
+  "delta_R_kpc": 0.15300000000000047,
+  "delta_V_phi_kms": 4.399999999999977,
+  "illustrative_transform": "R_old = R_Cepheid - delta_R; vphi_old = vphi_Cepheid - delta_V_phi, on central ray with unchanged heliocentric position/velocity. Applied to Vc only as a constant-drift approximation.",
+  "unadjusted_curve_difference": {
+    "rms_difference_kms": 12.953006775386026,
+    "mean_difference_kms": 12.03370320608662,
+    "median_difference_kms": 10.849201541989984,
+    "positive_rows": 12
+  },
+  "central_ray_constant_drift_difference": {
+    "rms_difference_kms": 8.677330827775474,
+    "mean_difference_kms": 7.235622652713751,
+    "median_difference_kms": 6.181730391297222,
+    "positive_rows": 12
+  },
+  "interpolation_sensitivity": {
+    "max_PCHIP_linear_before_kms": 0.3569940994621845,
+    "max_PCHIP_linear_after_kms": 0.4824652061845143
+  },
+  "velocity_projection_only_at_fixed_axes": {
+    "azimuth_wedge_deg": 30,
+    "delta_vphi_min_kms": 3.8105117766515106,
+    "delta_vphi_max_kms": 4.399999999999977
+  },
+  "published_data_or_previous_scores_modified": false,
+  "limitations": [
+    "Vphi and circular speed Vc are different quantities.",
+    "Changed radial moments, gradients, bin membership, distances and direction bases require individual stellar data.",
+    "Interpolation sensitivity is not observational covariance or a statistical significance.",
+    "The fixed-axis velocity projection range is not a bound on total Vc-estimator systematics."
+  ],
+  "input_sha256": {
+    "research_work\\results\\milky-way-capture\\inputs.json": "e2af10278dcfc6019dcb0848b1897f42329590e8ee524b04d4a1b675ca365258",
+    "research_work\\results\\cepheid-rotation-check\\observations.json": "3669b8b8146e8a7f51a338958adbf6b1d76bd029e116087a9fcc52ef1173fe89"
+  }
+}
