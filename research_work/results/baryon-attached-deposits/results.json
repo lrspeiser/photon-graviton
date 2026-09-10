@@ -1,0 +1,4190 @@
+{
+  "scope": "Shape test of constant loading on declared baryonic matter, not an observational fit or a rejection of all deposits.",
+  "postulate": "rho_extra(x)=eta*rho_b(x), one nonnegative position-independent eta",
+  "assumptions": [
+    "Deposits remain attached to ordinary matter with identical loading per baryonic mass.",
+    "Extra source obeys Newtonian Poisson sourcing; no additional response kernel.",
+    "Uniform accumulated capture per baryonic mass, or equal saturated capacity per baryonic mass."
+  ],
+  "samples": 240,
+  "summaries": {
+    "finer": {
+      "required_loading_minimum": 0.19814599713021924,
+      "required_loading_maximum": 290.0226330455159,
+      "required_loading_dynamic_range": 1463.6815138633176,
+      "minimax_relative_error": 0.998634515434878,
+      "minimax_loading": 0.3960214289597165,
+      "minimax_multiplicative_factor": 38.258090828781796,
+      "minimum_location": {
+        "R_kpc": 0.5,
+        "z_kpc": 0.1,
+        "phi_rad": 0.7853981633974483
+      },
+      "maximum_location": {
+        "R_kpc": 20,
+        "z_kpc": 4,
+        "phi_rad": 0.0
+      }
+    },
+    "fine": {
+      "required_loading_minimum": 0.1981460304727418,
+      "required_loading_maximum": 290.1029499200329,
+      "required_loading_dynamic_range": 1464.0866093955958,
+      "minimax_relative_error": 0.9986348929905072,
+      "minimax_loading": 0.39602157041038205,
+      "minimax_multiplicative_factor": 38.26338470908704,
+      "minimum_location": {
+        "R_kpc": 0.5,
+        "z_kpc": 0.1,
+        "phi_rad": 0.7853981633974483
+      },
+      "maximum_location": {
+        "R_kpc": 20,
+        "z_kpc": 4,
+        "phi_rad": 0.0
+      }
+    },
+    "requested_divQ": {
+      "required_loading_minimum": 0.19814596974750737,
+      "required_loading_maximum": 289.16611430958136,
+      "required_loading_dynamic_range": 1459.3590506940857,
+      "minimax_relative_error": 0.9986304737872175,
+      "minimax_loading": 0.39602057339548835,
+      "minimax_multiplicative_factor": 38.2015582233773,
+      "minimum_location": {
+        "R_kpc": 0.5,
+        "z_kpc": 0.1,
+        "phi_rad": 0.7853981633974483
+      },
+      "maximum_location": {
+        "R_kpc": 20,
+        "z_kpc": 4,
+        "phi_rad": 0.0
+      }
+    }
+  },
+  "rows": [
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 3741767336.4659376,
+      "equivalent_extra_density_Msun_kpc3": 792339786.5096537,
+      "required_extra_per_baryon": 0.21175549286236775,
+      "components_Msun_kpc3": {
+        "bar": 3700751935.092843,
+        "nuclei": 31270426.7902089,
+        "disk_0": 7808887.2403049255,
+        "disk_1": 1882682.7768317712,
+        "disk_2": 53372.84162453664,
+        "disk_3": 0.40274475749892047,
+        "softened_centre": 31.321379585749508
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 3555142813.370115,
+      "equivalent_extra_density_Msun_kpc3": 730483646.7253933,
+      "required_extra_per_baryon": 0.20547237764350956,
+      "components_Msun_kpc3": {
+        "bar": 3514127411.9970202,
+        "nuclei": 31270426.7902089,
+        "disk_0": 7808887.2403049255,
+        "disk_1": 1882682.7768317712,
+        "disk_2": 53372.84162453664,
+        "disk_3": 0.40274475749892047,
+        "softened_centre": 31.321379585749508
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 3077581723.6077795,
+      "equivalent_extra_density_Msun_kpc3": 616109700.054098,
+      "required_extra_per_baryon": 0.2001927992124435,
+      "components_Msun_kpc3": {
+        "bar": 3036566322.234685,
+        "nuclei": 31270426.7902089,
+        "disk_0": 7808887.2403049255,
+        "disk_1": 1882682.7768317712,
+        "disk_2": 53372.84162453664,
+        "disk_3": 0.40274475749892047,
+        "softened_centre": 31.321379585749494
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 2653526361.498241,
+      "equivalent_extra_density_Msun_kpc3": 538672644.684012,
+      "required_extra_per_baryon": 0.20300256010264972,
+      "components_Msun_kpc3": {
+        "bar": 2612510960.1251464,
+        "nuclei": 31270426.7902089,
+        "disk_0": 7808887.2403049255,
+        "disk_1": 1882682.7768317712,
+        "disk_2": 53372.84162453664,
+        "disk_3": 0.40274475749892047,
+        "softened_centre": 31.321379585749508
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 2490725655.290408,
+      "equivalent_extra_density_Msun_kpc3": 512659690.7931229,
+      "required_extra_per_baryon": 0.20582744217702648,
+      "components_Msun_kpc3": {
+        "bar": 2449710253.9173136,
+        "nuclei": 31270426.7902089,
+        "disk_0": 7808887.2403049255,
+        "disk_1": 1882682.7768317712,
+        "disk_2": 53372.84162453664,
+        "disk_3": 0.40274475749892047,
+        "softened_centre": 31.321379585749508
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 3496870755.6478543,
+      "equivalent_extra_density_Msun_kpc3": 717589614.3869843,
+      "required_extra_per_baryon": 0.2052090753505812,
+      "components_Msun_kpc3": {
+        "bar": 3479656787.8518963,
+        "nuclei": 9895470.391908638,
+        "disk_0": 5595312.208418628,
+        "disk_1": 1684698.5697983226,
+        "disk_2": 38458.08768813098,
+        "disk_3": 0.14210948418552774,
+        "softened_centre": 28.396034920920822
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 3317041973.8613124,
+      "equivalent_extra_density_Msun_kpc3": 665947092.7657217,
+      "required_extra_per_baryon": 0.20076534997550963,
+      "components_Msun_kpc3": {
+        "bar": 3299828006.0653543,
+        "nuclei": 9895470.391908638,
+        "disk_0": 5595312.208418628,
+        "disk_1": 1684698.5697983226,
+        "disk_2": 38458.08768813098,
+        "disk_3": 0.14210948418552774,
+        "softened_centre": 28.396034920920822
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 2867679500.424758,
+      "equivalent_extra_density_Msun_kpc3": 568219214.0615526,
+      "required_extra_per_baryon": 0.19814599713021924,
+      "components_Msun_kpc3": {
+        "bar": 2850465532.6288,
+        "nuclei": 9895470.391908638,
+        "disk_0": 5595312.208418628,
+        "disk_1": 1684698.5697983226,
+        "disk_2": 38458.08768813098,
+        "disk_3": 0.14210948418552774,
+        "softened_centre": 28.3960349209208
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 2473360789.587862,
+      "equivalent_extra_density_Msun_kpc3": 500605315.2091216,
+      "required_extra_per_baryon": 0.20239882402782727,
+      "components_Msun_kpc3": {
+        "bar": 2456146821.791904,
+        "nuclei": 9895470.391908638,
+        "disk_0": 5595312.208418628,
+        "disk_1": 1684698.5697983226,
+        "disk_2": 38458.08768813098,
+        "disk_3": 0.14210948418552774,
+        "softened_centre": 28.396034920920822
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 2322904116.969292,
+      "equivalent_extra_density_Msun_kpc3": 477650627.1404802,
+      "required_extra_per_baryon": 0.20562649299691027,
+      "components_Msun_kpc3": {
+        "bar": 2305690149.173334,
+        "nuclei": 9895470.391908638,
+        "disk_0": 5595312.208418628,
+        "disk_1": 1684698.5697983226,
+        "disk_2": 38458.08768813098,
+        "disk_3": 0.14210948418552774,
+        "softened_centre": 28.396034920920822
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 1231001103.0164332,
+      "equivalent_extra_density_Msun_kpc3": 256277785.22563812,
+      "required_extra_per_baryon": 0.20818647895412726,
+      "components_Msun_kpc3": {
+        "bar": 1228445378.446147,
+        "nuclei": 23.110302934148834,
+        "disk_0": 1474908.2850031375,
+        "disk_1": 1080195.6833706775,
+        "disk_2": 591.9546678430314,
+        "disk_3": 2.4075907309061794e-05,
+        "softened_centre": 5.5369176597363765
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 1149284134.3637426,
+      "equivalent_extra_density_Msun_kpc3": 244929794.33821723,
+      "required_extra_per_baryon": 0.21311509226899167,
+      "components_Msun_kpc3": {
+        "bar": 1146728409.7934563,
+        "nuclei": 23.110302934148834,
+        "disk_0": 1474908.2850031375,
+        "disk_1": 1080195.6833706775,
+        "disk_2": 591.9546678430314,
+        "disk_3": 2.4075907309061794e-05,
+        "softened_centre": 5.5369176597363765
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 986482080.7861618,
+      "equivalent_extra_density_Msun_kpc3": 223361084.6447904,
+      "required_extra_per_baryon": 0.22642183674211924,
+      "components_Msun_kpc3": {
+        "bar": 983926356.2158754,
+        "nuclei": 23.110302934148834,
+        "disk_0": 1474908.2850031375,
+        "disk_1": 1080195.6833706775,
+        "disk_2": 591.9546678430314,
+        "disk_3": 2.4075907309061794e-05,
+        "softened_centre": 5.5369176597363765
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 865316918.586641,
+      "equivalent_extra_density_Msun_kpc3": 208200999.66798186,
+      "required_extra_per_baryon": 0.24060664387337466,
+      "components_Msun_kpc3": {
+        "bar": 862761194.0163546,
+        "nuclei": 23.110302934148834,
+        "disk_0": 1474908.2850031375,
+        "disk_1": 1080195.6833706775,
+        "disk_2": 591.9546678430314,
+        "disk_3": 2.4075907309061794e-05,
+        "softened_centre": 5.5369176597363765
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 823968137.2860925,
+      "equivalent_extra_density_Msun_kpc3": 203152331.47577533,
+      "required_extra_per_baryon": 0.24655362541675344,
+      "components_Msun_kpc3": {
+        "bar": 821412412.7158061,
+        "nuclei": 23.110302934148834,
+        "disk_0": 1474908.2850031375,
+        "disk_1": 1080195.6833706775,
+        "disk_2": 591.9546678430314,
+        "disk_3": 2.4075907309061794e-05,
+        "softened_centre": 5.5369176597363765
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 190185222.533307,
+      "equivalent_extra_density_Msun_kpc3": 84115393.75220811,
+      "required_extra_per_baryon": 0.4422814382304443,
+      "components_Msun_kpc3": {
+        "bar": 189286880.15345836,
+        "nuclei": 1.449407643179565e-06,
+        "disk_0": 278574.191460082,
+        "disk_1": 619765.9683997349,
+        "disk_2": 1.6596890113947442,
+        "disk_3": 3.5983334028549723e-10,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 183209097.35411826,
+      "equivalent_extra_density_Msun_kpc3": 82958308.23459932,
+      "required_extra_per_baryon": 0.4528067079237457,
+      "components_Msun_kpc3": {
+        "bar": 182310754.97426963,
+        "nuclei": 1.449407643179565e-06,
+        "disk_0": 278574.191460082,
+        "disk_1": 619765.9683997349,
+        "disk_2": 1.6596890113947442,
+        "disk_3": 3.5983334028549723e-10,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 169890961.4208125,
+      "equivalent_extra_density_Msun_kpc3": 80708481.3582293,
+      "required_extra_per_baryon": 0.47506047810464685,
+      "components_Msun_kpc3": {
+        "bar": 168992619.04096386,
+        "nuclei": 1.449407643179565e-06,
+        "disk_0": 278574.191460082,
+        "disk_1": 619765.9683997349,
+        "disk_2": 1.6596890113947442,
+        "disk_3": 3.5983334028549723e-10,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 160503103.91831282,
+      "equivalent_extra_density_Msun_kpc3": 79086904.33782652,
+      "required_extra_per_baryon": 0.49274376885619214,
+      "components_Msun_kpc3": {
+        "bar": 159604761.5384642,
+        "nuclei": 1.449407643179565e-06,
+        "disk_0": 278574.191460082,
+        "disk_1": 619765.9683997349,
+        "disk_2": 1.6596890113947442,
+        "disk_3": 3.5983334028549723e-10,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 157527254.62368292,
+      "equivalent_extra_density_Msun_kpc3": 78559270.11683577,
+      "required_extra_per_baryon": 0.49870271848834113,
+      "components_Msun_kpc3": {
+        "bar": 156628912.2438343,
+        "nuclei": 1.449407643179565e-06,
+        "disk_0": 278574.191460082,
+        "disk_1": 619765.9683997349,
+        "disk_2": 1.6596890113947442,
+        "disk_3": 3.5983334028549723e-10,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 7357742.939789564,
+      "equivalent_extra_density_Msun_kpc3": 27198910.30154019,
+      "required_extra_per_baryon": 3.6966377493908604,
+      "components_Msun_kpc3": {
+        "bar": 7143782.448758741,
+        "nuclei": 2.1308901986504912e-19,
+        "disk_0": 9937.853852863178,
+        "disk_1": 204022.61087916873,
+        "disk_2": 1.290287901627414e-05,
+        "disk_3": 8.037350610147237e-20,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 7334935.188931137,
+      "equivalent_extra_density_Msun_kpc3": 27165076.063614763,
+      "required_extra_per_baryon": 3.7035195763704243,
+      "components_Msun_kpc3": {
+        "bar": 7120974.697900314,
+        "nuclei": 2.1308901986504912e-19,
+        "disk_0": 9937.853852863178,
+        "disk_1": 204022.61087916873,
+        "disk_2": 1.290287901627414e-05,
+        "disk_3": 8.037350610147237e-20,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 7252946.0084267,
+      "equivalent_extra_density_Msun_kpc3": 27057405.14911981,
+      "required_extra_per_baryon": 3.7305399926710705,
+      "components_Msun_kpc3": {
+        "bar": 7038985.517395876,
+        "nuclei": 2.1308901986504912e-19,
+        "disk_0": 9937.853852863178,
+        "disk_1": 204022.61087916873,
+        "disk_2": 1.290287901627414e-05,
+        "disk_3": 8.037350610147237e-20,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 7157912.594406388,
+      "equivalent_extra_density_Msun_kpc3": 26934987.730310623,
+      "required_extra_per_baryon": 3.7629668391535263,
+      "components_Msun_kpc3": {
+        "bar": 6943952.103375564,
+        "nuclei": 2.1308901986504912e-19,
+        "disk_0": 9937.853852863178,
+        "disk_1": 204022.61087916873,
+        "disk_2": 1.290287901627414e-05,
+        "disk_3": 8.037350610147237e-20,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 7125687.499712483,
+      "equivalent_extra_density_Msun_kpc3": 26886302.135700304,
+      "required_extra_per_baryon": 3.773152013301895,
+      "components_Msun_kpc3": {
+        "bar": 6911727.00868166,
+        "nuclei": 2.1308901986504912e-19,
+        "disk_0": 9937.853852863178,
+        "disk_1": 204022.61087916873,
+        "disk_2": 1.290287901627414e-05,
+        "disk_3": 8.037350610147237e-20,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 37363.8342356043,
+      "equivalent_extra_density_Msun_kpc3": 9690313.11859196,
+      "required_extra_per_baryon": 259.3500725190024,
+      "components_Msun_kpc3": {
+        "bar": 15241.659033811547,
+        "nuclei": 9.257495835656693e-42,
+        "disk_0": 12.647248725928725,
+        "disk_1": 22109.527033545583,
+        "disk_2": 7.798174215644427e-16,
+        "disk_3": 4.009922142227264e-39,
+        "softened_centre": 0.0009195212439536194
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 37334.82328963356,
+      "equivalent_extra_density_Msun_kpc3": 9815501.043240698,
+      "required_extra_per_baryon": 262.90471410818446,
+      "components_Msun_kpc3": {
+        "bar": 15212.648087840806,
+        "nuclei": 9.257495835656693e-42,
+        "disk_0": 12.647248725928725,
+        "disk_1": 22109.527033545583,
+        "disk_2": 7.798174215644427e-16,
+        "disk_3": 4.009922142227264e-39,
+        "softened_centre": 0.0009195212439536194
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 37235.92520780696,
+      "equivalent_extra_density_Msun_kpc3": 9848736.14629255,
+      "required_extra_per_baryon": 264.49554002830695,
+      "components_Msun_kpc3": {
+        "bar": 15113.750006014214,
+        "nuclei": 9.257495835656693e-42,
+        "disk_0": 12.647248725928725,
+        "disk_1": 22109.527033545583,
+        "disk_2": 7.798174215644427e-16,
+        "disk_3": 4.009922142227264e-39,
+        "softened_centre": 0.0009195212439536194
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 37124.58864843354,
+      "equivalent_extra_density_Msun_kpc3": 9622076.926659735,
+      "required_extra_per_baryon": 259.1833950748902,
+      "components_Msun_kpc3": {
+        "bar": 15002.413446640794,
+        "nuclei": 9.257495835656693e-42,
+        "disk_0": 12.647248725928725,
+        "disk_1": 22109.527033545583,
+        "disk_2": 7.798174215644427e-16,
+        "disk_3": 4.009922142227264e-39,
+        "softened_centre": 0.0009195212439536194
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 37091.23515285147,
+      "equivalent_extra_density_Msun_kpc3": 9795571.71406948,
+      "required_extra_per_baryon": 264.09397459271247,
+      "components_Msun_kpc3": {
+        "bar": 14969.05995105872,
+        "nuclei": 9.257495835656693e-42,
+        "disk_0": 12.647248725928725,
+        "disk_1": 22109.527033545583,
+        "disk_2": 7.798174215644427e-16,
+        "disk_3": 4.009922142227264e-39,
+        "softened_centre": 0.0009195212439536194
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 1646163938.7169127,
+      "equivalent_extra_density_Msun_kpc3": 418644414.31346875,
+      "required_extra_per_baryon": 0.25431514107870523,
+      "components_Msun_kpc3": {
+        "bar": 1529467234.7846153,
+        "nuclei": 11915.082090518952,
+        "disk_0": 90492092.83197299,
+        "disk_1": 23432556.05940165,
+        "disk_2": 2713171.3278213693,
+        "disk_3": 46967.65221031237,
+        "softened_centre": 0.9788004530121887
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 1488718420.8505204,
+      "equivalent_extra_density_Msun_kpc3": 361104560.79413277,
+      "required_extra_per_baryon": 0.24256068557802218,
+      "components_Msun_kpc3": {
+        "bar": 1372021716.918223,
+        "nuclei": 11915.082090518952,
+        "disk_0": 90492092.83197299,
+        "disk_1": 23432556.05940165,
+        "disk_2": 2713171.3278213693,
+        "disk_3": 46967.65221031237,
+        "softened_centre": 0.9788004530121887
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 1163987151.4662669,
+      "equivalent_extra_density_Msun_kpc3": 283687874.2014406,
+      "required_extra_per_baryon": 0.24372079523737084,
+      "components_Msun_kpc3": {
+        "bar": 1047290447.5339695,
+        "nuclei": 11915.082090518952,
+        "disk_0": 90492092.83197299,
+        "disk_1": 23432556.05940165,
+        "disk_2": 2713171.3278213693,
+        "disk_3": 46967.65221031237,
+        "softened_centre": 0.9788004530121882
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 936597197.7653232,
+      "equivalent_extra_density_Msun_kpc3": 241376293.56869465,
+      "required_extra_per_baryon": 0.2577162243754382,
+      "components_Msun_kpc3": {
+        "bar": 819900493.8330259,
+        "nuclei": 11915.082090518952,
+        "disk_0": 90492092.83197299,
+        "disk_1": 23432556.05940165,
+        "disk_2": 2713171.3278213693,
+        "disk_3": 46967.65221031237,
+        "softened_centre": 0.9788004530121887
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 879005140.5694189,
+      "equivalent_extra_density_Msun_kpc3": 231360092.51011905,
+      "required_extra_per_baryon": 0.26320675708476987,
+      "components_Msun_kpc3": {
+        "bar": 762308436.6371217,
+        "nuclei": 11915.082090518952,
+        "disk_0": 90492092.83197299,
+        "disk_1": 23432556.05940165,
+        "disk_2": 2713171.3278213693,
+        "disk_3": 46967.65221031237,
+        "softened_centre": 0.9788004530121887
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 1580917836.9376414,
+      "equivalent_extra_density_Msun_kpc3": 394618749.7518838,
+      "required_extra_per_baryon": 0.24961369941672015,
+      "components_Msun_kpc3": {
+        "bar": 1493130450.2430863,
+        "nuclei": 7032.586442758092,
+        "disk_0": 64840417.8734586,
+        "disk_1": 20968372.455409393,
+        "disk_2": 1954990.1721985159,
+        "disk_3": 16572.65229338372,
+        "softened_centre": 0.9547523543270126
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 1422016212.7926247,
+      "equivalent_extra_density_Msun_kpc3": 341192907.5968011,
+      "required_extra_per_baryon": 0.23993601797742506,
+      "components_Msun_kpc3": {
+        "bar": 1334228826.0980697,
+        "nuclei": 7032.586442758092,
+        "disk_0": 64840417.8734586,
+        "disk_1": 20968372.455409393,
+        "disk_2": 1954990.1721985159,
+        "disk_3": 16572.65229338372,
+        "softened_centre": 0.9547523543270126
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 1103097093.1215034,
+      "equivalent_extra_density_Msun_kpc3": 268665065.6282711,
+      "required_extra_per_baryon": 0.2435552294567404,
+      "components_Msun_kpc3": {
+        "bar": 1015309706.4269484,
+        "nuclei": 7032.586442758092,
+        "disk_0": 64840417.8734586,
+        "disk_1": 20968372.455409393,
+        "disk_2": 1954990.1721985159,
+        "disk_3": 16572.65229338372,
+        "softened_centre": 0.9547523543270119
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 883397664.0225413,
+      "equivalent_extra_density_Msun_kpc3": 228803791.10174495,
+      "required_extra_per_baryon": 0.25900429718128243,
+      "components_Msun_kpc3": {
+        "bar": 795610277.3279864,
+        "nuclei": 7032.586442758092,
+        "disk_0": 64840417.8734586,
+        "disk_1": 20968372.455409393,
+        "disk_2": 1954990.1721985159,
+        "disk_3": 16572.65229338372,
+        "softened_centre": 0.9547523543270126
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 828247837.9790702,
+      "equivalent_extra_density_Msun_kpc3": 219411791.3518459,
+      "required_extra_per_baryon": 0.2649107927491993,
+      "components_Msun_kpc3": {
+        "bar": 740460451.2845153,
+        "nuclei": 7032.586442758092,
+        "disk_0": 64840417.8734586,
+        "disk_1": 20968372.455409393,
+        "disk_2": 1954990.1721985159,
+        "disk_3": 16572.65229338372,
+        "softened_centre": 0.9547523543270126
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 922914412.8284068,
+      "equivalent_extra_density_Msun_kpc3": 211800460.04310274,
+      "required_extra_per_baryon": 0.22949090088864157,
+      "components_Msun_kpc3": {
+        "bar": 892348059.158528,
+        "nuclei": 0.9161691303284941,
+        "disk_0": 17091748.585671507,
+        "disk_1": 13444509.195703354,
+        "disk_2": 30091.60433053256,
+        "disk_3": 2.807705923131136,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 776536925.3917149,
+      "equivalent_extra_density_Msun_kpc3": 184897763.81917873,
+      "required_extra_per_baryon": 0.23810556558647772,
+      "components_Msun_kpc3": {
+        "bar": 745970571.7218361,
+        "nuclei": 0.9161691303284941,
+        "disk_0": 17091748.585671507,
+        "disk_1": 13444509.195703354,
+        "disk_2": 30091.60433053256,
+        "disk_3": 2.807705923131136,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 570672470.3382776,
+      "equivalent_extra_density_Msun_kpc3": 151672061.2991859,
+      "required_extra_per_baryon": 0.2657777782924753,
+      "components_Msun_kpc3": {
+        "bar": 540106116.6683987,
+        "nuclei": 0.9161691303284941,
+        "disk_0": 17091748.585671507,
+        "disk_1": 13444509.195703354,
+        "disk_2": 30091.60433053256,
+        "disk_3": 2.807705923131136,
+        "softened_centre": 0.560298353580622
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 461543199.98258895,
+      "equivalent_extra_density_Msun_kpc3": 135148777.7871608,
+      "required_extra_per_baryon": 0.2928193456046132,
+      "components_Msun_kpc3": {
+        "bar": 430976846.31271017,
+        "nuclei": 0.9161691303284941,
+        "disk_0": 17091748.585671507,
+        "disk_1": 13444509.195703354,
+        "disk_2": 30091.60433053256,
+        "disk_3": 2.807705923131136,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 438299970.97034943,
+      "equivalent_extra_density_Msun_kpc3": 131870736.41010492,
+      "required_extra_per_baryon": 0.30086868616066104,
+      "components_Msun_kpc3": {
+        "bar": 407733617.30047065,
+        "nuclei": 0.9161691303284941,
+        "disk_0": 17091748.585671507,
+        "disk_1": 13444509.195703354,
+        "disk_2": 30091.60433053256,
+        "disk_3": 2.807705923131136,
+        "softened_centre": 0.5602983535806224
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 235602293.40098295,
+      "equivalent_extra_density_Msun_kpc3": 85687145.58860123,
+      "required_extra_per_baryon": 0.3636940216144931,
+      "components_Msun_kpc3": {
+        "bar": 224660161.39993596,
+        "nuclei": 2.982456679018634e-07,
+        "disk_0": 3228214.3176667504,
+        "disk_1": 7713833.14117067,
+        "disk_2": 84.36913796896808,
+        "disk_3": 4.196336976589824e-05,
+        "softened_centre": 0.1730293257247055
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 194879780.7874527,
+      "equivalent_extra_density_Msun_kpc3": 78113149.13909182,
+      "required_extra_per_baryon": 0.4008273655864104,
+      "components_Msun_kpc3": {
+        "bar": 183937648.7864057,
+        "nuclei": 2.982456679018634e-07,
+        "disk_0": 3228214.3176667504,
+        "disk_1": 7713833.14117067,
+        "disk_2": 84.36913796896808,
+        "disk_3": 4.196336976589824e-05,
+        "softened_centre": 0.1730293257247055
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 148293776.99199072,
+      "equivalent_extra_density_Msun_kpc3": 69456721.40185681,
+      "required_extra_per_baryon": 0.4683724618168444,
+      "components_Msun_kpc3": {
+        "bar": 137351644.99094373,
+        "nuclei": 2.982456679018634e-07,
+        "disk_0": 3228214.3176667504,
+        "disk_1": 7713833.14117067,
+        "disk_2": 84.36913796896808,
+        "disk_3": 4.196336976589824e-05,
+        "softened_centre": 0.1730293257247055
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 126710403.19334494,
+      "equivalent_extra_density_Msun_kpc3": 65259727.88450089,
+      "required_extra_per_baryon": 0.5150305439792686,
+      "components_Msun_kpc3": {
+        "bar": 115768271.19229797,
+        "nuclei": 2.982456679018634e-07,
+        "disk_0": 3228214.3176667504,
+        "disk_1": 7713833.14117067,
+        "disk_2": 84.36913796896808,
+        "disk_3": 4.196336976589824e-05,
+        "softened_centre": 0.1730293257247055
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 122899394.31678636,
+      "equivalent_extra_density_Msun_kpc3": 64509052.170721725,
+      "required_extra_per_baryon": 0.5248931659048109,
+      "components_Msun_kpc3": {
+        "bar": 111957262.3157394,
+        "nuclei": 2.982456679018634e-07,
+        "disk_0": 3228214.3176667504,
+        "disk_1": 7713833.14117067,
+        "disk_2": 84.36913796896808,
+        "disk_3": 4.196336976589824e-05,
+        "softened_centre": 0.1730293257247055
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 10604358.289105726,
+      "equivalent_extra_density_Msun_kpc3": 26311119.863340877,
+      "required_extra_per_baryon": 2.4811609666538073,
+      "components_Msun_kpc3": {
+        "bar": 7949855.1956549045,
+        "nuclei": 1.0488571085569278e-19,
+        "disk_0": 115163.29609194856,
+        "disk_1": 2539339.779193614,
+        "disk_2": 0.0006559088916339278,
+        "disk_3": 9.373070191999936e-15,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 10153580.808684308,
+      "equivalent_extra_density_Msun_kpc3": 25990337.208329946,
+      "required_extra_per_baryon": 2.5597213138935713,
+      "components_Msun_kpc3": {
+        "bar": 7499077.715233486,
+        "nuclei": 1.0488571085569278e-19,
+        "disk_0": 115163.29609194856,
+        "disk_1": 2539339.779193614,
+        "disk_2": 0.0006559088916339278,
+        "disk_3": 9.373070191999936e-15,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 9232975.181791924,
+      "equivalent_extra_density_Msun_kpc3": 25383747.747504264,
+      "required_extra_per_baryon": 2.749248995877602,
+      "components_Msun_kpc3": {
+        "bar": 6578472.088341102,
+        "nuclei": 1.0488571085569278e-19,
+        "disk_0": 115163.29609194856,
+        "disk_1": 2539339.779193614,
+        "disk_2": 0.0006559088916339278,
+        "disk_3": 9.373070191999936e-15,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 8588014.689558608,
+      "equivalent_extra_density_Msun_kpc3": 24886778.645192876,
+      "required_extra_per_baryon": 2.8978500322607115,
+      "components_Msun_kpc3": {
+        "bar": 5933511.596107787,
+        "nuclei": 1.0488571085569278e-19,
+        "disk_0": 115163.29609194856,
+        "disk_1": 2539339.779193614,
+        "disk_2": 0.0006559088916339278,
+        "disk_3": 9.373070191999936e-15,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 8488736.084735824,
+      "equivalent_extra_density_Msun_kpc3": 24739291.70987224,
+      "required_extra_per_baryon": 2.914366928470971,
+      "components_Msun_kpc3": {
+        "bar": 5834232.991285002,
+        "nuclei": 1.0488571085569278e-19,
+        "disk_0": 115163.29609194856,
+        "disk_1": 2539339.779193614,
+        "disk_2": 0.0006559088916339278,
+        "disk_3": 9.373070191999936e-15,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 291748.5877519948,
+      "equivalent_extra_density_Msun_kpc3": 9758152.581988156,
+      "required_extra_per_baryon": 33.447128766509124,
+      "components_Msun_kpc3": {
+        "bar": 16418.794067342566,
+        "nuclei": 6.794295194105534e-42,
+        "disk_0": 146.56070328031836,
+        "disk_1": 275183.2321599375,
+        "disk_2": 3.9641476914573105e-14,
+        "disk_3": 4.676327253423422e-34,
+        "softened_centre": 0.0008214343883445957
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 291137.3833405079,
+      "equivalent_extra_density_Msun_kpc3": 9876876.036864268,
+      "required_extra_per_baryon": 33.92513844679468,
+      "components_Msun_kpc3": {
+        "bar": 15807.589655855743,
+        "nuclei": 6.794295194105534e-42,
+        "disk_0": 146.56070328031836,
+        "disk_1": 275183.2321599375,
+        "disk_2": 3.9641476914573105e-14,
+        "disk_3": 4.676327253423422e-34,
+        "softened_centre": 0.0008214343883445957
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 289876.6731965573,
+      "equivalent_extra_density_Msun_kpc3": 9936222.042414248,
+      "required_extra_per_baryon": 34.2774116069587,
+      "components_Msun_kpc3": {
+        "bar": 14546.879511905126,
+        "nuclei": 6.794295194105534e-42,
+        "disk_0": 146.56070328031836,
+        "disk_1": 275183.2321599375,
+        "disk_2": 3.9641476914573105e-14,
+        "disk_3": 4.676327253423422e-34,
+        "softened_centre": 0.0008214343883445957
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 289009.6965183935,
+      "equivalent_extra_density_Msun_kpc3": 9859704.047126332,
+      "required_extra_per_baryon": 34.11547835904125,
+      "components_Msun_kpc3": {
+        "bar": 13679.902833741344,
+        "nuclei": 6.794295194105534e-42,
+        "disk_0": 146.56070328031836,
+        "disk_1": 275183.2321599375,
+        "disk_2": 3.9641476914573105e-14,
+        "disk_3": 4.676327253423422e-34,
+        "softened_centre": 0.0008214343883445957
+      }
+    },
+    {
+      "R_kpc": 1,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 288894.11991117324,
+      "equivalent_extra_density_Msun_kpc3": 9833402.332249908,
+      "required_extra_per_baryon": 34.03808404017846,
+      "components_Msun_kpc3": {
+        "bar": 13564.326226521063,
+        "nuclei": 6.794295194105534e-42,
+        "disk_0": 146.56070328031836,
+        "disk_1": 275183.2321599375,
+        "disk_2": 3.9641476914573105e-14,
+        "disk_3": 4.676327253423422e-34,
+        "softened_centre": 0.0008214343883445957
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 934458130.3750639,
+      "equivalent_extra_density_Msun_kpc3": 319576167.291206,
+      "required_extra_per_baryon": 0.3419908895896037,
+      "components_Msun_kpc3": {
+        "bar": 632388397.543298,
+        "nuclei": 0.014599162408389224,
+        "disk_0": 211719540.11852014,
+        "disk_1": 63242938.86458246,
+        "disk_2": 17378973.214339938,
+        "disk_3": 9728280.589136556,
+        "softened_centre": 0.030587571508237855
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 562880926.1996123,
+      "equivalent_extra_density_Msun_kpc3": 183190636.82805124,
+      "required_extra_per_baryon": 0.3254518465653019,
+      "components_Msun_kpc3": {
+        "bar": 260811193.36784637,
+        "nuclei": 0.014599162408389224,
+        "disk_0": 211719540.11852014,
+        "disk_1": 63242938.86458246,
+        "disk_2": 17378973.214339938,
+        "disk_3": 9728280.589136556,
+        "softened_centre": 0.030587571508237855
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 431639928.8032406,
+      "equivalent_extra_density_Msun_kpc3": 152343909.06245172,
+      "required_extra_per_baryon": 0.3529421142405396,
+      "components_Msun_kpc3": {
+        "bar": 129570195.97147478,
+        "nuclei": 0.014599162408389224,
+        "disk_0": 211719540.11852014,
+        "disk_1": 63242938.86458246,
+        "disk_2": 17378973.214339938,
+        "disk_3": 9728280.589136556,
+        "softened_centre": 0.030587571508237835
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 396234404.8083537,
+      "equivalent_extra_density_Msun_kpc3": 144331412.5733564,
+      "required_extra_per_baryon": 0.364257648558219,
+      "components_Msun_kpc3": {
+        "bar": 94164671.97658794,
+        "nuclei": 0.014599162408389224,
+        "disk_0": 211719540.11852014,
+        "disk_1": 63242938.86458246,
+        "disk_2": 17378973.214339938,
+        "disk_3": 9728280.589136556,
+        "softened_centre": 0.030587571508237855
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 382993627.2192177,
+      "equivalent_extra_density_Msun_kpc3": 141352424.73357266,
+      "required_extra_per_baryon": 0.3690725241562973,
+      "components_Msun_kpc3": {
+        "bar": 80923894.38745196,
+        "nuclei": 0.014599162408389224,
+        "disk_0": 211719540.11852014,
+        "disk_1": 63242938.86458246,
+        "disk_2": 17378973.214339938,
+        "disk_3": 9728280.589136556,
+        "softened_centre": 0.030587571508237855
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 841530139.4823791,
+      "equivalent_extra_density_Msun_kpc3": 279762242.4116267,
+      "required_extra_per_baryon": 0.33244470909111706,
+      "components_Msun_kpc3": {
+        "bar": 617279031.3131311,
+        "nuclei": 0.01158105718543994,
+        "disk_0": 151703679.55520317,
+        "disk_1": 56592268.20691592,
+        "disk_2": 12522512.488814246,
+        "disk_3": 3432647.8763363757,
+        "softened_centre": 0.030397232486922627
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 479649360.6183937,
+      "equivalent_extra_density_Msun_kpc3": 157749279.70503443,
+      "required_extra_per_baryon": 0.32888458248261665,
+      "components_Msun_kpc3": {
+        "bar": 255398252.44914567,
+        "nuclei": 0.01158105718543994,
+        "disk_0": 151703679.55520317,
+        "disk_1": 56592268.20691592,
+        "disk_2": 12522512.488814246,
+        "disk_3": 3432647.8763363757,
+        "softened_centre": 0.030397232486922627
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 351718482.9511924,
+      "equivalent_extra_density_Msun_kpc3": 128536198.19032177,
+      "required_extra_per_baryon": 0.36545192937204446,
+      "components_Msun_kpc3": {
+        "bar": 127467374.78194438,
+        "nuclei": 0.01158105718543994,
+        "disk_0": 151703679.55520317,
+        "disk_1": 56592268.20691592,
+        "disk_2": 12522512.488814246,
+        "disk_3": 3432647.8763363757,
+        "softened_centre": 0.030397232486922613
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 317039819.6441001,
+      "equivalent_extra_density_Msun_kpc3": 120418564.46966544,
+      "required_extra_per_baryon": 0.3798215776328787,
+      "components_Msun_kpc3": {
+        "bar": 92788711.47485211,
+        "nuclei": 0.01158105718543994,
+        "disk_0": 151703679.55520317,
+        "disk_1": 56592268.20691592,
+        "disk_2": 12522512.488814246,
+        "disk_3": 3432647.8763363757,
+        "softened_centre": 0.030397232486922627
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 304044743.4724145,
+      "equivalent_extra_density_Msun_kpc3": 117327835.75313693,
+      "required_extra_per_baryon": 0.3858900318853298,
+      "components_Msun_kpc3": {
+        "bar": 79793635.30316645,
+        "nuclei": 0.01158105718543994,
+        "disk_0": 151703679.55520317,
+        "disk_1": 56592268.20691592,
+        "disk_2": 12522512.488814246,
+        "disk_3": 3432647.8763363757,
+        "softened_centre": 0.030397232486922627
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 444203979.2225752,
+      "equivalent_extra_density_Msun_kpc3": 122632774.5756235,
+      "required_extra_per_baryon": 0.27607311125454026,
+      "components_Msun_kpc3": {
+        "bar": 367736140.31417525,
+        "nuclei": 8.299353739341136e-05,
+        "disk_0": 39988655.77237685,
+        "disk_1": 36285852.51104251,
+        "disk_2": 192749.04620813977,
+        "disk_3": 581.5524035498454,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 238698365.14856058,
+      "equivalent_extra_density_Msun_kpc3": 79823766.54184508,
+      "required_extra_per_baryon": 0.3344127074023508,
+      "components_Msun_kpc3": {
+        "bar": 162230526.24016067,
+        "nuclei": 8.299353739341136e-05,
+        "disk_0": 39988655.77237685,
+        "disk_1": 36285852.51104251,
+        "disk_2": 192749.04620813977,
+        "disk_3": 581.5524035498454,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 165021908.54564166,
+      "equivalent_extra_density_Msun_kpc3": 66177720.503501184,
+      "required_extra_per_baryon": 0.4010238463894495,
+      "components_Msun_kpc3": {
+        "bar": 88554069.63724172,
+        "nuclei": 8.299353739341076e-05,
+        "disk_0": 39988655.77237685,
+        "disk_1": 36285852.51104251,
+        "disk_2": 192749.04620813977,
+        "disk_3": 581.5524035498454,
+        "softened_centre": 0.02628588883031054
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 143096115.87163848,
+      "equivalent_extra_density_Msun_kpc3": 61112140.98839879,
+      "required_extra_per_baryon": 0.4270705785139425,
+      "components_Msun_kpc3": {
+        "bar": 66628276.96323855,
+        "nuclei": 8.299353739341136e-05,
+        "disk_0": 39988655.77237685,
+        "disk_1": 36285852.51104251,
+        "disk_2": 192749.04620813977,
+        "disk_3": 581.5524035498454,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 134543811.912489,
+      "equivalent_extra_density_Msun_kpc3": 58911677.41454313,
+      "required_extra_per_baryon": 0.4378624076212506,
+      "components_Msun_kpc3": {
+        "bar": 58075973.004089065,
+        "nuclei": 8.299353739341136e-05,
+        "disk_0": 39988655.77237685,
+        "disk_1": 36285852.51104251,
+        "disk_2": 192749.04620813977,
+        "disk_3": 581.5524035498454,
+        "softened_centre": 0.026285888830310553
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 146798874.6263965,
+      "equivalent_extra_density_Msun_kpc3": 57316439.957791716,
+      "required_extra_per_baryon": 0.3904419574309558,
+      "components_Msun_kpc3": {
+        "bar": 118426320.71306725,
+        "nuclei": 1.123843189443047e-09,
+        "disk_0": 7552881.465671424,
+        "disk_1": 20819132.002584606,
+        "disk_2": 540.4188721310938,
+        "disk_3": 0.008691757333757362,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 83830141.09575608,
+      "equivalent_extra_density_Msun_kpc3": 43342346.38540021,
+      "required_extra_per_baryon": 0.5170258074108672,
+      "components_Msun_kpc3": {
+        "bar": 55457587.1824268,
+        "nuclei": 1.123843189443047e-09,
+        "disk_0": 7552881.465671424,
+        "disk_1": 20819132.002584606,
+        "disk_2": 540.4188721310938,
+        "disk_3": 0.008691757333757362,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 63033158.34173324,
+      "equivalent_extra_density_Msun_kpc3": 38130113.97467042,
+      "required_extra_per_baryon": 0.6049215203202832,
+      "components_Msun_kpc3": {
+        "bar": 34660604.42840397,
+        "nuclei": 1.123843189443047e-09,
+        "disk_0": 7552881.465671424,
+        "disk_1": 20819132.002584606,
+        "disk_2": 540.4188721310938,
+        "disk_3": 0.008691757333757362,
+        "softened_centre": 0.017509349813386327
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 56117690.91936796,
+      "equivalent_extra_density_Msun_kpc3": 35849681.03297431,
+      "required_extra_per_baryon": 0.638830294790363,
+      "components_Msun_kpc3": {
+        "bar": 27745137.00603869,
+        "nuclei": 1.123843189443047e-09,
+        "disk_0": 7552881.465671424,
+        "disk_1": 20819132.002584606,
+        "disk_2": 540.4188721310938,
+        "disk_3": 0.008691757333757362,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 53219254.63067023,
+      "equivalent_extra_density_Msun_kpc3": 34849023.515976064,
+      "required_extra_per_baryon": 0.654819834622272,
+      "components_Msun_kpc3": {
+        "bar": 24846700.71734096,
+        "nuclei": 1.123843189443047e-09,
+        "disk_0": 7552881.465671424,
+        "disk_1": 20819132.002584606,
+        "disk_2": 540.4188721310938,
+        "disk_3": 0.008691757333757362,
+        "softened_centre": 0.017509349813386334
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 13602214.716782609,
+      "equivalent_extra_density_Msun_kpc3": 22530492.369704377,
+      "required_extra_per_baryon": 1.6563841138241944,
+      "components_Msun_kpc3": {
+        "bar": 6479260.996517113,
+        "nuclei": 6.815621086458858e-21,
+        "disk_0": 269441.4431589482,
+        "disk_1": 6853512.267498011,
+        "disk_2": 0.004201365001120902,
+        "disk_3": 1.9414182425202595e-12,
+        "softened_centre": 0.005407171498116369
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 10701028.560714372,
+      "equivalent_extra_density_Msun_kpc3": 20868083.904844135,
+      "required_extra_per_baryon": 1.950100757739781,
+      "components_Msun_kpc3": {
+        "bar": 3578074.8404488754,
+        "nuclei": 6.815621086458858e-21,
+        "disk_0": 269441.4431589482,
+        "disk_1": 6853512.267498011,
+        "disk_2": 0.004201365001120902,
+        "disk_3": 1.9414182425202595e-12,
+        "softened_centre": 0.005407171498116369
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 9834963.195807748,
+      "equivalent_extra_density_Msun_kpc3": 19647225.672413092,
+      "required_extra_per_baryon": 1.9976918348599333,
+      "components_Msun_kpc3": {
+        "bar": 2712009.4755422524,
+        "nuclei": 6.815621086458858e-21,
+        "disk_0": 269441.4431589482,
+        "disk_1": 6853512.267498011,
+        "disk_2": 0.004201365001120902,
+        "disk_3": 1.9414182425202595e-12,
+        "softened_centre": 0.005407171498116369
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 9490212.90631796,
+      "equivalent_extra_density_Msun_kpc3": 18941892.13299307,
+      "required_extra_per_baryon": 1.9959396401299703,
+      "components_Msun_kpc3": {
+        "bar": 2367259.186052465,
+        "nuclei": 6.815621086458858e-21,
+        "disk_0": 269441.4431589482,
+        "disk_1": 6853512.267498011,
+        "disk_2": 0.004201365001120902,
+        "disk_3": 1.9414182425202595e-12,
+        "softened_centre": 0.005407171498116369
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 9331578.769655183,
+      "equivalent_extra_density_Msun_kpc3": 18683148.66749132,
+      "required_extra_per_baryon": 2.0021423093213295,
+      "components_Msun_kpc3": {
+        "bar": 2208625.049389686,
+        "nuclei": 6.815621086458858e-21,
+        "disk_0": 269441.4431589482,
+        "disk_1": 6853512.267498011,
+        "disk_2": 0.004201365001120902,
+        "disk_3": 1.9414182425202595e-12,
+        "softened_centre": 0.005407171498116369
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 755754.6365015799,
+      "equivalent_extra_density_Msun_kpc3": 9146718.263667794,
+      "required_extra_per_baryon": 12.102761692615395,
+      "components_Msun_kpc3": {
+        "bar": 12710.159110594022,
+        "nuclei": 1.994609684710227e-42,
+        "disk_0": 342.90028804585614,
+        "disk_1": 742701.5765557727,
+        "disk_2": 2.539198901340442e-13,
+        "disk_3": 9.685947989101493e-32,
+        "softened_centre": 0.0005471673868560289
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 752710.6871367953,
+      "equivalent_extra_density_Msun_kpc3": 9016479.118693013,
+      "required_extra_per_baryon": 11.978678226278971,
+      "components_Msun_kpc3": {
+        "bar": 9666.209745809296,
+        "nuclei": 1.994609684710227e-42,
+        "disk_0": 342.90028804585614,
+        "disk_1": 742701.5765557727,
+        "disk_2": 2.539198901340442e-13,
+        "disk_3": 9.685947989101493e-32,
+        "softened_centre": 0.0005471673868560289
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 751504.6882075575,
+      "equivalent_extra_density_Msun_kpc3": 8930456.465317532,
+      "required_extra_per_baryon": 11.883434136143455,
+      "components_Msun_kpc3": {
+        "bar": 8460.210816571576,
+        "nuclei": 1.994609684710227e-42,
+        "disk_0": 342.90028804585614,
+        "disk_1": 742701.5765557727,
+        "disk_2": 2.539198901340442e-13,
+        "disk_3": 9.685947989101493e-32,
+        "softened_centre": 0.0005471673868560289
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 750938.4085940638,
+      "equivalent_extra_density_Msun_kpc3": 8813862.088779261,
+      "required_extra_per_baryon": 11.73713048621513,
+      "components_Msun_kpc3": {
+        "bar": 7893.931203077964,
+        "nuclei": 1.994609684710227e-42,
+        "disk_0": 342.90028804585614,
+        "disk_1": 742701.5765557727,
+        "disk_2": 2.539198901340442e-13,
+        "disk_3": 9.685947989101493e-32,
+        "softened_centre": 0.0005471673868560289
+      }
+    },
+    {
+      "R_kpc": 2,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 750660.2536420191,
+      "equivalent_extra_density_Msun_kpc3": 8768692.609147437,
+      "required_extra_per_baryon": 11.681306645188545,
+      "components_Msun_kpc3": {
+        "bar": 7615.776251033159,
+        "nuclei": 1.994609684710227e-42,
+        "disk_0": 342.90028804585614,
+        "disk_1": 742701.5765557727,
+        "disk_2": 2.539198901340442e-13,
+        "disk_3": 9.685947989101493e-32,
+        "softened_centre": 0.0005471673868560289
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 1089658338.1181448,
+      "equivalent_extra_density_Msun_kpc3": 361236302.26212907,
+      "required_extra_per_baryon": 0.33151336490113886,
+      "components_Msun_kpc3": {
+        "bar": 752618339.652278,
+        "nuclei": 7.425567308834755e-08,
+        "disk_0": 201393856.30249578,
+        "disk_1": 69396790.89434303,
+        "disk_2": 29343485.52352284,
+        "disk_3": 36905865.74147689,
+        "softened_centre": 0.004027994354425987
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 520239481.2925113,
+      "equivalent_extra_density_Msun_kpc3": 189704820.24078256,
+      "required_extra_per_baryon": 0.3646490261936091,
+      "components_Msun_kpc3": {
+        "bar": 183199482.82664463,
+        "nuclei": 7.425567308834808e-08,
+        "disk_0": 201393856.30249578,
+        "disk_1": 69396790.89434303,
+        "disk_2": 29343485.52352284,
+        "disk_3": 36905865.74147686,
+        "softened_centre": 0.0040279943544259894
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 383342001.8474983,
+      "equivalent_extra_density_Msun_kpc3": 150003634.90030026,
+      "required_extra_per_baryon": 0.3913049813935467,
+      "components_Msun_kpc3": {
+        "bar": 46302003.38163175,
+        "nuclei": 7.425567308834704e-08,
+        "disk_0": 201393856.3024957,
+        "disk_1": 69396790.89434303,
+        "disk_2": 29343485.523522846,
+        "disk_3": 36905865.74147689,
+        "softened_centre": 0.004027994354425985
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 356838393.4049247,
+      "equivalent_extra_density_Msun_kpc3": 144520093.3214581,
+      "required_extra_per_baryon": 0.4050015244785137,
+      "components_Msun_kpc3": {
+        "bar": 19798394.939058065,
+        "nuclei": 7.425567308834808e-08,
+        "disk_0": 201393856.30249578,
+        "disk_1": 69396790.89434303,
+        "disk_2": 29343485.52352284,
+        "disk_3": 36905865.74147686,
+        "softened_centre": 0.0040279943544259894
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 351790065.08986175,
+      "equivalent_extra_density_Msun_kpc3": 143900046.2101165,
+      "required_extra_per_baryon": 0.40905090987534987,
+      "components_Msun_kpc3": {
+        "bar": 14750066.623995109,
+        "nuclei": 7.425567308834755e-08,
+        "disk_0": 201393856.30249578,
+        "disk_1": 69396790.89434303,
+        "disk_2": 29343485.52352284,
+        "disk_3": 36905865.74147689,
+        "softened_centre": 0.004027994354425987
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 923616885.3987321,
+      "equivalent_extra_density_Msun_kpc3": 293740139.6467506,
+      "required_extra_per_baryon": 0.3180324486163339,
+      "components_Msun_kpc3": {
+        "bar": 683046972.5092064,
+        "nuclei": 6.441132105043625e-08,
+        "disk_0": 144305003.79793668,
+        "disk_1": 62098976.9530036,
+        "disk_2": 21143606.0923586,
+        "disk_3": 13022326.042209696,
+        "softened_centre": 0.0040168272023950605
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 401552337.82284015,
+      "equivalent_extra_density_Msun_kpc3": 146123147.78433502,
+      "required_extra_per_baryon": 0.3638956470197484,
+      "components_Msun_kpc3": {
+        "bar": 160982424.9333147,
+        "nuclei": 6.441132105043625e-08,
+        "disk_0": 144305003.79793668,
+        "disk_1": 62098976.9530036,
+        "disk_2": 21143606.0923586,
+        "disk_3": 13022326.042209685,
+        "softened_centre": 0.004016827202395062
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 282974874.2923503,
+      "equivalent_extra_density_Msun_kpc3": 113314706.29761992,
+      "required_extra_per_baryon": 0.4004408751165339,
+      "components_Msun_kpc3": {
+        "bar": 42404961.40282491,
+        "nuclei": 6.441132105043579e-08,
+        "disk_0": 144305003.79793662,
+        "disk_1": 62098976.9530036,
+        "disk_2": 21143606.092358604,
+        "disk_3": 13022326.042209696,
+        "softened_centre": 0.004016827202395059
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 259308274.10949516,
+      "equivalent_extra_density_Msun_kpc3": 108224948.83761813,
+      "required_extra_per_baryon": 0.4173601833928338,
+      "components_Msun_kpc3": {
+        "bar": 18738361.21996975,
+        "nuclei": 6.441132105043625e-08,
+        "disk_0": 144305003.79793668,
+        "disk_1": 62098976.9530036,
+        "disk_2": 21143606.0923586,
+        "disk_3": 13022326.042209685,
+        "softened_centre": 0.004016827202395062
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 254641788.45623124,
+      "equivalent_extra_density_Msun_kpc3": 107459289.8833829,
+      "required_extra_per_baryon": 0.42200178743189043,
+      "components_Msun_kpc3": {
+        "bar": 14071875.566705804,
+        "nuclei": 6.441132105043625e-08,
+        "disk_0": 144305003.79793668,
+        "disk_1": 62098976.9530036,
+        "disk_2": 21143606.0923586,
+        "disk_3": 13022326.042209696,
+        "softened_centre": 0.0040168272023950605
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 291136249.65479076,
+      "equivalent_extra_density_Msun_kpc3": 90289495.62296212,
+      "required_extra_per_baryon": 0.3101279752350357,
+      "components_Msun_kpc3": {
+        "bar": 212953564.59013557,
+        "nuclei": 2.5624104127674845e-09,
+        "disk_0": 38038386.016915195,
+        "disk_1": 39816646.16382964,
+        "disk_2": 325446.6634665447,
+        "disk_3": 2206.216682422883,
+        "softened_centre": 0.0037613244597509655
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 111896743.59935552,
+      "equivalent_extra_density_Msun_kpc3": 45444038.597810306,
+      "required_extra_per_baryon": 0.406124764099677,
+      "components_Msun_kpc3": {
+        "bar": 33714058.53470041,
+        "nuclei": 2.5624104127675027e-09,
+        "disk_0": 38038386.016915195,
+        "disk_1": 39816646.16382964,
+        "disk_2": 325446.6634665447,
+        "disk_3": 2206.216682422881,
+        "softened_centre": 0.003761324459750968
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 95978061.46393007,
+      "equivalent_extra_density_Msun_kpc3": 42665788.71429293,
+      "required_extra_per_baryon": 0.4445368875295251,
+      "components_Msun_kpc3": {
+        "bar": 17795376.399274975,
+        "nuclei": 2.5624104127674845e-09,
+        "disk_0": 38038386.01691517,
+        "disk_1": 39816646.16382964,
+        "disk_2": 325446.66346654476,
+        "disk_3": 2206.216682422883,
+        "softened_centre": 0.003761324459750964
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 89182647.42418031,
+      "equivalent_extra_density_Msun_kpc3": 40958367.471519336,
+      "required_extra_per_baryon": 0.4592638663966617,
+      "components_Msun_kpc3": {
+        "bar": 10999962.359525187,
+        "nuclei": 2.5624104127675027e-09,
+        "disk_0": 38038386.016915195,
+        "disk_1": 39816646.16382964,
+        "disk_2": 325446.6634665447,
+        "disk_3": 2206.216682422881,
+        "softened_centre": 0.003761324459750968
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 87040675.44897552,
+      "equivalent_extra_density_Msun_kpc3": 40235248.777880974,
+      "required_extra_per_baryon": 0.4622580025986523,
+      "components_Msun_kpc3": {
+        "bar": 8857990.384320391,
+        "nuclei": 2.5624104127674845e-09,
+        "disk_0": 38038386.016915195,
+        "disk_1": 39816646.16382964,
+        "disk_2": 325446.6634665447,
+        "disk_3": 2206.216682422883,
+        "softened_centre": 0.0037613244597509655
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 82620293.54859948,
+      "equivalent_extra_density_Msun_kpc3": 41722352.548782155,
+      "required_extra_per_baryon": 0.5049891589194118,
+      "components_Msun_kpc3": {
+        "bar": 52589921.0148838,
+        "nuclei": 5.770054358066594e-13,
+        "disk_0": 7184523.08991274,
+        "disk_1": 22844936.938789237,
+        "disk_2": 912.4689448242285,
+        "disk_3": 0.032973640745452344,
+        "softened_centre": 0.0030952457706144524
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 41002640.86020244,
+      "equivalent_extra_density_Msun_kpc3": 26514600.22209107,
+      "required_extra_per_baryon": 0.646655914493215,
+      "components_Msun_kpc3": {
+        "bar": 10972268.32648675,
+        "nuclei": 5.770054358066594e-13,
+        "disk_0": 7184523.08991274,
+        "disk_1": 22844936.938789237,
+        "disk_2": 912.4689448242285,
+        "disk_3": 0.032973640745452316,
+        "softened_centre": 0.0030952457706144537
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 38103743.87541232,
+      "equivalent_extra_density_Msun_kpc3": 24454560.137392934,
+      "required_extra_per_baryon": 0.6417889070783156,
+      "components_Msun_kpc3": {
+        "bar": 8073371.341696633,
+        "nuclei": 5.770054358066512e-13,
+        "disk_0": 7184523.089912736,
+        "disk_1": 22844936.938789237,
+        "disk_2": 912.4689448242287,
+        "disk_3": 0.032973640745452344,
+        "softened_centre": 0.003095245770614451
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 35629367.27907515,
+      "equivalent_extra_density_Msun_kpc3": 23192762.87478591,
+      "required_extra_per_baryon": 0.6509451232496861,
+      "components_Msun_kpc3": {
+        "bar": 5598994.745359467,
+        "nuclei": 5.770054358066594e-13,
+        "disk_0": 7184523.08991274,
+        "disk_1": 22844936.938789237,
+        "disk_2": 912.4689448242285,
+        "disk_3": 0.032973640745452316,
+        "softened_centre": 0.0030952457706144537
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 34689273.15788441,
+      "equivalent_extra_density_Msun_kpc3": 22677165.397358086,
+      "required_extra_per_baryon": 0.6537227025237877,
+      "components_Msun_kpc3": {
+        "bar": 4658900.624168719,
+        "nuclei": 5.770054358066594e-13,
+        "disk_0": 7184523.08991274,
+        "disk_1": 22844936.938789237,
+        "disk_2": 912.4689448242285,
+        "disk_3": 0.032973640745452344,
+        "softened_centre": 0.0030952457706144524
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 11237750.597015625,
+      "equivalent_extra_density_Msun_kpc3": 18129971.481984477,
+      "required_extra_per_baryon": 1.6133096499578126,
+      "components_Msun_kpc3": {
+        "bar": 3461056.9122395567,
+        "nuclei": 9.799765396327697e-23,
+        "disk_0": 256300.62891272822,
+        "disk_1": 7520393.047163216,
+        "disk_2": 0.007093784630941389,
+        "disk_3": 7.365096056801346e-12,
+        "softened_centre": 0.0016063374446517475
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 8937480.744848832,
+      "equivalent_extra_density_Msun_kpc3": 16054392.442607488,
+      "required_extra_per_baryon": 1.796299527902259,
+      "components_Msun_kpc3": {
+        "bar": 1160787.060072765,
+        "nuclei": 9.799765396327697e-23,
+        "disk_0": 256300.62891272822,
+        "disk_1": 7520393.047163216,
+        "disk_2": 0.007093784630941389,
+        "disk_3": 7.36509605680134e-12,
+        "softened_centre": 0.001606337444651748
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 8729537.81751476,
+      "equivalent_extra_density_Msun_kpc3": 14843044.240009004,
+      "required_extra_per_baryon": 1.7003241809925187,
+      "components_Msun_kpc3": {
+        "bar": 952844.132738692,
+        "nuclei": 9.799765396327697e-23,
+        "disk_0": 256300.6289127281,
+        "disk_1": 7520393.047163216,
+        "disk_2": 0.007093784630941391,
+        "disk_3": 7.365096056801346e-12,
+        "softened_centre": 0.0016063374446517468
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 8512460.150585063,
+      "equivalent_extra_density_Msun_kpc3": 14168006.99689916,
+      "required_extra_per_baryon": 1.6643845311775574,
+      "components_Msun_kpc3": {
+        "bar": 735766.4658089947,
+        "nuclei": 9.799765396327697e-23,
+        "disk_0": 256300.62891272822,
+        "disk_1": 7520393.047163216,
+        "disk_2": 0.007093784630941389,
+        "disk_3": 7.36509605680134e-12,
+        "softened_centre": 0.001606337444651748
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 8420352.610818537,
+      "equivalent_extra_density_Msun_kpc3": 13936298.935393047,
+      "required_extra_per_baryon": 1.6550730806079994,
+      "components_Msun_kpc3": {
+        "bar": 643658.9260424696,
+        "nuclei": 9.799765396327697e-23,
+        "disk_0": 256300.62891272822,
+        "disk_1": 7520393.047163216,
+        "disk_2": 0.007093784630941389,
+        "disk_3": 7.365096056801346e-12,
+        "softened_centre": 0.0016063374446517475
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 822516.8500949796,
+      "equivalent_extra_density_Msun_kpc3": 8349394.178043565,
+      "required_extra_per_baryon": 10.151031163774242,
+      "components_Msun_kpc3": {
+        "bar": 7220.544565335948,
+        "nuclei": 2.6927303257163217e-43,
+        "disk_0": 326.17684365898884,
+        "disk_1": 814970.1283727677,
+        "disk_2": 4.287304277639872e-13,
+        "disk_3": 3.674526991582541e-31,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 820071.5438492801,
+      "equivalent_extra_density_Msun_kpc3": 8306159.850511217,
+      "required_extra_per_baryon": 10.128579527980543,
+      "components_Msun_kpc3": {
+        "bar": 4775.238319636446,
+        "nuclei": 2.6927303257163217e-43,
+        "disk_0": 326.17684365898884,
+        "disk_1": 814970.1283727677,
+        "disk_2": 4.287304277639872e-13,
+        "disk_3": 3.6745269915825375e-31,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 819593.1103275385,
+      "equivalent_extra_density_Msun_kpc3": 8103261.533457959,
+      "required_extra_per_baryon": 9.886932224478569,
+      "components_Msun_kpc3": {
+        "bar": 4296.804797894822,
+        "nuclei": 2.6927303257163217e-43,
+        "disk_0": 326.1768436589887,
+        "disk_1": 814970.1283727677,
+        "disk_2": 4.287304277639873e-13,
+        "disk_3": 3.674526991582541e-31,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 819013.4484928724,
+      "equivalent_extra_density_Msun_kpc3": 7924641.979606294,
+      "required_extra_per_baryon": 9.675838649767007,
+      "components_Msun_kpc3": {
+        "bar": 3717.142963228766,
+        "nuclei": 2.6927303257163217e-43,
+        "disk_0": 326.17684365898884,
+        "disk_1": 814970.1283727677,
+        "disk_2": 4.287304277639872e-13,
+        "disk_3": 3.6745269915825375e-31,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 3,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 818739.9646077456,
+      "equivalent_extra_density_Msun_kpc3": 7860749.407501786,
+      "required_extra_per_baryon": 9.601032986423025,
+      "components_Msun_kpc3": {
+        "bar": 3443.65907810201,
+        "nuclei": 2.6927303257163217e-43,
+        "disk_0": 326.17684365898884,
+        "disk_1": 814970.1283727677,
+        "disk_2": 4.287304277639872e-13,
+        "disk_3": 3.674526991582541e-31,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 352315265.407298,
+      "equivalent_extra_density_Msun_kpc3": 149542015.20768836,
+      "required_extra_per_baryon": 0.42445511134695973,
+      "components_Msun_kpc3": {
+        "bar": 111655186.80600272,
+        "nuclei": 1.8582891270493905e-17,
+        "disk_0": 106193454.67712037,
+        "disk_1": 48693955.79703927,
+        "disk_2": 37588178.935215496,
+        "disk_3": 48184489.19160695,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 261514334.83595845,
+      "equivalent_extra_density_Msun_kpc3": 117542430.16730815,
+      "required_extra_per_baryon": 0.4494684019560138,
+      "components_Msun_kpc3": {
+        "bar": 20854256.234663144,
+        "nuclei": 1.8582891270493905e-17,
+        "disk_0": 106193454.67712037,
+        "disk_1": 48693955.79703927,
+        "disk_2": 37588178.935215496,
+        "disk_3": 48184489.19160695,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 242184618.64744398,
+      "equivalent_extra_density_Msun_kpc3": 112598018.9004359,
+      "required_extra_per_baryon": 0.46492638355513605,
+      "components_Msun_kpc3": {
+        "bar": 1524540.0461486732,
+        "nuclei": 1.8582891270493905e-17,
+        "disk_0": 106193454.67712037,
+        "disk_1": 48693955.79703927,
+        "disk_2": 37588178.935215496,
+        "disk_3": 48184489.19160695,
+        "softened_centre": 0.00031321689668315926
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 241003920.7905209,
+      "equivalent_extra_density_Msun_kpc3": 113624602.98605746,
+      "required_extra_per_baryon": 0.471463711517039,
+      "components_Msun_kpc3": {
+        "bar": 343842.18922560546,
+        "nuclei": 1.8582891270493905e-17,
+        "disk_0": 106193454.67712037,
+        "disk_1": 48693955.79703927,
+        "disk_2": 37588178.935215496,
+        "disk_3": 48184489.19160695,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 240877042.1860083,
+      "equivalent_extra_density_Msun_kpc3": 114034745.38446556,
+      "required_extra_per_baryon": 0.47341475281154644,
+      "components_Msun_kpc3": {
+        "bar": 216963.58471299685,
+        "nuclei": 1.8582891270493905e-17,
+        "disk_0": 106193454.67712037,
+        "disk_1": 48693955.79703927,
+        "disk_2": 37588178.935215496,
+        "disk_3": 48184489.19160695,
+        "softened_centre": 0.0003132168966831593
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 259578377.63880306,
+      "equivalent_extra_density_Msun_kpc3": 118392055.86947905,
+      "required_extra_per_baryon": 0.45609367369657683,
+      "components_Msun_kpc3": {
+        "bar": 95827795.80203466,
+        "nuclei": 1.7209588410655443e-17,
+        "disk_0": 76090935.25415535,
+        "disk_1": 43573266.138411745,
+        "disk_2": 27084364.210863307,
+        "disk_3": 17002016.233025093,
+        "softened_centre": 0.00031290389891933617
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 181733299.40638494,
+      "equivalent_extra_density_Msun_kpc3": 90091284.97506541,
+      "required_extra_per_baryon": 0.49573350216685813,
+      "components_Msun_kpc3": {
+        "bar": 17982717.569616567,
+        "nuclei": 1.7209588410655443e-17,
+        "disk_0": 76090935.25415535,
+        "disk_1": 43573266.138411745,
+        "disk_2": 27084364.210863307,
+        "disk_3": 17002016.233025093,
+        "softened_centre": 0.00031290389891933617
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 165120466.09188396,
+      "equivalent_extra_density_Msun_kpc3": 85450765.6227183,
+      "required_extra_per_baryon": 0.5175055984590538,
+      "components_Msun_kpc3": {
+        "bar": 1369884.2551155568,
+        "nuclei": 1.7209588410655443e-17,
+        "disk_0": 76090935.25415535,
+        "disk_1": 43573266.138411745,
+        "disk_2": 27084364.210863307,
+        "disk_3": 17002016.233025093,
+        "softened_centre": 0.0003129038989193361
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 164077326.22020054,
+      "equivalent_extra_density_Msun_kpc3": 86231164.24656479,
+      "required_extra_per_baryon": 0.5255519835253651,
+      "components_Msun_kpc3": {
+        "bar": 326744.38343211845,
+        "nuclei": 1.7209588410655443e-17,
+        "disk_0": 76090935.25415535,
+        "disk_1": 43573266.138411745,
+        "disk_2": 27084364.210863307,
+        "disk_3": 17002016.233025093,
+        "softened_centre": 0.00031290389891933617
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 163959434.5622555,
+      "equivalent_extra_density_Msun_kpc3": 86557866.57645018,
+      "required_extra_per_baryon": 0.5279224511083813,
+      "components_Msun_kpc3": {
+        "bar": 208852.72548708052,
+        "nuclei": 1.7209588410655443e-17,
+        "disk_0": 76090935.25415535,
+        "disk_1": 43573266.138411745,
+        "disk_2": 27084364.210863307,
+        "disk_3": 17002016.233025093,
+        "softened_centre": 0.00031290389891933617
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 57153255.743058264,
+      "equivalent_extra_density_Msun_kpc3": 32750038.82517389,
+      "required_extra_per_baryon": 0.5730214035820986,
+      "components_Msun_kpc3": {
+        "bar": 8737810.802945785,
+        "nuclei": 2.835007963375579e-18,
+        "disk_0": 20057352.76954441,
+        "disk_1": 27938323.707788628,
+        "disk_2": 416888.01456265146,
+        "disk_3": 2880.4479112672952,
+        "softened_centre": 0.0003055214793750417
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 50530678.99566858,
+      "equivalent_extra_density_Msun_kpc3": 29059310.54724733,
+      "required_extra_per_baryon": 0.5750825265921768,
+      "components_Msun_kpc3": {
+        "bar": 2115234.055556109,
+        "nuclei": 2.835007963375579e-18,
+        "disk_0": 20057352.76954441,
+        "disk_1": 27938323.707788628,
+        "disk_2": 416888.01456265146,
+        "disk_3": 2880.4479112672952,
+        "softened_centre": 0.0003055214793750417
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 48889016.32994566,
+      "equivalent_extra_density_Msun_kpc3": 27447026.351407927,
+      "required_extra_per_baryon": 0.5614149846290931,
+      "components_Msun_kpc3": {
+        "bar": 473571.3898331804,
+        "nuclei": 2.835007963375538e-18,
+        "disk_0": 20057352.76954441,
+        "disk_1": 27938323.707788628,
+        "disk_2": 416888.01456265146,
+        "disk_3": 2880.4479112672952,
+        "softened_centre": 0.00030552147937504157
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 48626668.32107608,
+      "equivalent_extra_density_Msun_kpc3": 27135806.084693678,
+      "required_extra_per_baryon": 0.558043703622037,
+      "components_Msun_kpc3": {
+        "bar": 211223.38096360076,
+        "nuclei": 2.835007963375579e-18,
+        "disk_0": 20057352.76954441,
+        "disk_1": 27938323.707788628,
+        "disk_2": 416888.01456265146,
+        "disk_3": 2880.4479112672952,
+        "softened_centre": 0.0003055214793750417
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 48564924.03601853,
+      "equivalent_extra_density_Msun_kpc3": 27071934.125741456,
+      "required_extra_per_baryon": 0.5574380000195894,
+      "components_Msun_kpc3": {
+        "bar": 149479.09590604957,
+        "nuclei": 2.835007963375579e-18,
+        "disk_0": 20057352.76954441,
+        "disk_1": 27938323.707788628,
+        "disk_2": 416888.01456265146,
+        "disk_3": 2880.4479112672952,
+        "softened_centre": 0.0003055214793750417
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 20428217.56883672,
+      "equivalent_extra_density_Msun_kpc3": 18515210.472812843,
+      "required_extra_per_baryon": 0.9063546738927349,
+      "components_Msun_kpc3": {
+        "bar": 608995.2857831385,
+        "nuclei": 1.5417164019009608e-20,
+        "disk_0": 3788344.595673341,
+        "disk_1": 16029708.797013441,
+        "disk_2": 1168.847032278622,
+        "disk_3": 0.04305055589907422,
+        "softened_centre": 0.000283963052300917
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 20264323.441459693,
+      "equivalent_extra_density_Msun_kpc3": 16965685.993546143,
+      "required_extra_per_baryon": 0.8372194631889501,
+      "components_Msun_kpc3": {
+        "bar": 445101.15840611304,
+        "nuclei": 1.5417164019009608e-20,
+        "disk_0": 3788344.595673341,
+        "disk_1": 16029708.797013441,
+        "disk_2": 1168.847032278622,
+        "disk_3": 0.04305055589907422,
+        "softened_centre": 0.000283963052300917
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 20077851.8945914,
+      "equivalent_extra_density_Msun_kpc3": 15676072.044284025,
+      "required_extra_per_baryon": 0.7807644028147687,
+      "components_Msun_kpc3": {
+        "bar": 258629.61153781848,
+        "nuclei": 1.5417164019009608e-20,
+        "disk_0": 3788344.595673341,
+        "disk_1": 16029708.797013441,
+        "disk_2": 1168.847032278622,
+        "disk_3": 0.04305055589907422,
+        "softened_centre": 0.00028396305230091683
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 19955849.314065196,
+      "equivalent_extra_density_Msun_kpc3": 15247571.021747932,
+      "required_extra_per_baryon": 0.7640652513346653,
+      "components_Msun_kpc3": {
+        "bar": 136627.03101161483,
+        "nuclei": 1.5417164019009608e-20,
+        "disk_0": 3788344.595673341,
+        "disk_1": 16029708.797013441,
+        "disk_2": 1168.847032278622,
+        "disk_3": 0.04305055589907422,
+        "softened_centre": 0.000283963052300917
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 19918752.892211586,
+      "equivalent_extra_density_Msun_kpc3": 15140940.392789755,
+      "required_extra_per_baryon": 0.760134957982736,
+      "components_Msun_kpc3": {
+        "bar": 99530.60915800546,
+        "nuclei": 1.5417164019009608e-20,
+        "disk_0": 3788344.595673341,
+        "disk_1": 16029708.797013441,
+        "disk_2": 1168.847032278622,
+        "disk_3": 0.04305055589907422,
+        "softened_centre": 0.000283963052300917
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 5499898.794334867,
+      "equivalent_extra_density_Msun_kpc3": 10706364.759135215,
+      "required_extra_per_baryon": 1.9466475947090576,
+      "components_Msun_kpc3": {
+        "bar": 87885.67254913376,
+        "nuclei": 8.437339273007366e-28,
+        "disk_0": 135145.37990315031,
+        "disk_1": 5276867.732579522,
+        "disk_2": 0.00908693842188434,
+        "disk_3": 9.61590750451502e-12,
+        "softened_centre": 0.000216122615764689
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 5494117.168741838,
+      "equivalent_extra_density_Msun_kpc3": 10125066.860082403,
+      "required_extra_per_baryon": 1.8428924154890312,
+      "components_Msun_kpc3": {
+        "bar": 82104.04695610463,
+        "nuclei": 8.437339273007366e-28,
+        "disk_0": 135145.37990315031,
+        "disk_1": 5276867.732579522,
+        "disk_2": 0.00908693842188434,
+        "disk_3": 9.61590750451502e-12,
+        "softened_centre": 0.000216122615764689
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 5467247.098281501,
+      "equivalent_extra_density_Msun_kpc3": 9324983.279860262,
+      "required_extra_per_baryon": 1.705608528795296,
+      "components_Msun_kpc3": {
+        "bar": 55233.97649576725,
+        "nuclei": 8.437339273007366e-28,
+        "disk_0": 135145.37990315031,
+        "disk_1": 5276867.732579522,
+        "disk_2": 0.00908693842188434,
+        "disk_3": 9.61590750451502e-12,
+        "softened_centre": 0.00021612261576468896
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 5444469.779495926,
+      "equivalent_extra_density_Msun_kpc3": 8941451.979668627,
+      "required_extra_per_baryon": 1.6422998642296565,
+      "components_Msun_kpc3": {
+        "bar": 32456.657710191845,
+        "nuclei": 8.437339273007366e-28,
+        "disk_0": 135145.37990315031,
+        "disk_1": 5276867.732579522,
+        "disk_2": 0.00908693842188434,
+        "disk_3": 9.61590750451502e-12,
+        "softened_centre": 0.000216122615764689
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 5436788.758556677,
+      "equivalent_extra_density_Msun_kpc3": 8833044.767215237,
+      "required_extra_per_baryon": 1.6246805162906819,
+      "components_Msun_kpc3": {
+        "bar": 24775.636770943733,
+        "nuclei": 8.437339273007366e-28,
+        "disk_0": 135145.37990315031,
+        "disk_1": 5276867.732579522,
+        "disk_2": 0.00908693842188434,
+        "disk_3": 9.61590750451502e-12,
+        "softened_centre": 0.000216122615764689
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 573118.8453810051,
+      "equivalent_extra_density_Msun_kpc3": 6240173.603802906,
+      "required_extra_per_baryon": 10.88809703972391,
+      "components_Msun_kpc3": {
+        "bar": 1103.1297284589,
+        "nuclei": 6.0267802013059814e-46,
+        "disk_0": 171.99057855965867,
+        "disk_1": 571843.7249830506,
+        "disk_2": 5.491916091851354e-13,
+        "disk_3": 4.797481445102434e-31,
+        "softened_centre": 9.093594391547277e-05
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 572725.955497246,
+      "equivalent_extra_density_Msun_kpc3": 6119055.830775308,
+      "required_extra_per_baryon": 10.68409030888549,
+      "components_Msun_kpc3": {
+        "bar": 710.2398446997516,
+        "nuclei": 6.0267802013059814e-46,
+        "disk_0": 171.99057855965867,
+        "disk_1": 571843.7249830506,
+        "disk_2": 5.491916091851354e-13,
+        "disk_3": 4.797481445102434e-31,
+        "softened_centre": 9.093594391547277e-05
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 572565.6763266318,
+      "equivalent_extra_density_Msun_kpc3": 5894792.592224277,
+      "required_extra_per_baryon": 10.295399874549014,
+      "components_Msun_kpc3": {
+        "bar": 549.9606740855722,
+        "nuclei": 6.0267802013059814e-46,
+        "disk_0": 171.99057855965867,
+        "disk_1": 571843.7249830506,
+        "disk_2": 5.491916091851354e-13,
+        "disk_3": 4.797481445102434e-31,
+        "softened_centre": 9.093594391547277e-05
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 572401.7697475726,
+      "equivalent_extra_density_Msun_kpc3": 5739038.879046223,
+      "required_extra_per_baryon": 10.026242374437663,
+      "components_Msun_kpc3": {
+        "bar": 386.0540950263878,
+        "nuclei": 6.0267802013059814e-46,
+        "disk_0": 171.99057855965867,
+        "disk_1": 571843.7249830506,
+        "disk_2": 5.491916091851354e-13,
+        "disk_3": 4.797481445102434e-31,
+        "softened_centre": 9.093594391547277e-05
+      }
+    },
+    {
+      "R_kpc": 5,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 572336.8231473918,
+      "equivalent_extra_density_Msun_kpc3": 5686959.128796755,
+      "required_extra_per_baryon": 9.93638518228315,
+      "components_Msun_kpc3": {
+        "bar": 321.1074948455458,
+        "nuclei": 6.0267802013059814e-46,
+        "disk_0": 171.99057855965867,
+        "disk_1": 571843.7249830506,
+        "disk_2": 5.491916091851354e-13,
+        "disk_3": 4.797481445102434e-31,
+        "softened_centre": 9.093594391547277e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 99459085.40567364,
+      "equivalent_extra_density_Msun_kpc3": 58076089.09948902,
+      "required_extra_per_baryon": 0.5839193962281909,
+      "components_Msun_kpc3": {
+        "bar": 930855.5819650816,
+        "nuclei": 1.853667223668207e-30,
+        "disk_0": 29013535.85948981,
+        "disk_1": 20422277.514002584,
+        "disk_2": 33053193.315537665,
+        "disk_3": 16039223.134648614,
+        "softened_centre": 2.9870692803365146e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 98592183.23194219,
+      "equivalent_extra_density_Msun_kpc3": 57753123.72508683,
+      "required_extra_per_baryon": 0.585777916989831,
+      "components_Msun_kpc3": {
+        "bar": 63953.40823363378,
+        "nuclei": 1.853667223668207e-30,
+        "disk_0": 29013535.85948981,
+        "disk_1": 20422277.514002584,
+        "disk_2": 33053193.315537665,
+        "disk_3": 16039223.134648614,
+        "softened_centre": 2.9870692803365146e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 98529742.69665541,
+      "equivalent_extra_density_Msun_kpc3": 58006648.60845425,
+      "required_extra_per_baryon": 0.588722217483506,
+      "components_Msun_kpc3": {
+        "bar": 1512.872946855083,
+        "nuclei": 1.853667223668207e-30,
+        "disk_0": 29013535.85948981,
+        "disk_1": 20422277.514002584,
+        "disk_2": 33053193.315537665,
+        "disk_3": 16039223.134648614,
+        "softened_centre": 2.987069280336513e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 98528577.03877081,
+      "equivalent_extra_density_Msun_kpc3": 58224635.96323549,
+      "required_extra_per_baryon": 0.5909416101718814,
+      "components_Msun_kpc3": {
+        "bar": 347.21506227579033,
+        "nuclei": 1.853667223668207e-30,
+        "disk_0": 29013535.85948981,
+        "disk_1": 20422277.514002584,
+        "disk_2": 33053193.315537665,
+        "disk_3": 16039223.134648614,
+        "softened_centre": 2.9870692803365146e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 98528433.46445818,
+      "equivalent_extra_density_Msun_kpc3": 58300661.83878116,
+      "required_extra_per_baryon": 0.5917140848465002,
+      "components_Msun_kpc3": {
+        "bar": 203.640749631976,
+        "nuclei": 1.853667223668207e-30,
+        "disk_0": 29013535.85948981,
+        "disk_1": 20422277.514002584,
+        "disk_2": 33053193.315537665,
+        "disk_3": 16039223.134648614,
+        "softened_centre": 2.9870692803365146e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 69338158.45578414,
+      "equivalent_extra_density_Msun_kpc3": 49077381.01176094,
+      "required_extra_per_baryon": 0.7077975836790765,
+      "components_Msun_kpc3": {
+        "bar": 798259.188968393,
+        "nuclei": 1.7747654516637658e-30,
+        "disk_0": 20789106.873779863,
+        "disk_1": 18274656.85842354,
+        "disk_2": 23816655.96604307,
+        "disk_3": 5659479.568539405,
+        "softened_centre": 2.9859027753957623e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 68595004.1621932,
+      "equivalent_extra_density_Msun_kpc3": 48756969.00163788,
+      "required_extra_per_baryon": 0.7107947524334544,
+      "components_Msun_kpc3": {
+        "bar": 55104.895377447756,
+        "nuclei": 1.7747654516637658e-30,
+        "disk_0": 20789106.873779863,
+        "disk_1": 18274656.85842354,
+        "disk_2": 23816655.96604307,
+        "disk_3": 5659479.568539405,
+        "softened_centre": 2.9859027753957623e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 68541324.65990965,
+      "equivalent_extra_density_Msun_kpc3": 48974779.614295766,
+      "required_extra_per_baryon": 0.714529225358574,
+      "components_Msun_kpc3": {
+        "bar": 1425.3930939049828,
+        "nuclei": 1.7747654516637658e-30,
+        "disk_0": 20789106.873779863,
+        "disk_1": 18274656.85842354,
+        "disk_2": 23816655.96604307,
+        "disk_3": 5659479.568539405,
+        "softened_centre": 2.985902775395761e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 68540242.98993665,
+      "equivalent_extra_density_Msun_kpc3": 49169647.644912764,
+      "required_extra_per_baryon": 0.7173836201913093,
+      "components_Msun_kpc3": {
+        "bar": 343.72312090031903,
+        "nuclei": 1.7747654516637658e-30,
+        "disk_0": 20789106.873779863,
+        "disk_1": 18274656.85842354,
+        "disk_2": 23816655.96604307,
+        "disk_3": 5659479.568539405,
+        "softened_centre": 2.9859027753957623e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 68540101.5606184,
+      "equivalent_extra_density_Msun_kpc3": 49238138.573173374,
+      "required_extra_per_baryon": 0.7183843830407234,
+      "components_Msun_kpc3": {
+        "bar": 202.29380266209708,
+        "nuclei": 1.7747654516637658e-30,
+        "disk_0": 20789106.873779863,
+        "disk_1": 18274656.85842354,
+        "disk_2": 23816655.96604307,
+        "disk_3": 5659479.568539405,
+        "softened_centre": 2.9859027753957623e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 17634110.555631112,
+      "equivalent_extra_density_Msun_kpc3": 16482070.310504977,
+      "required_extra_per_baryon": 0.934669784365265,
+      "components_Msun_kpc3": {
+        "bar": 69260.29094068732,
+        "nuclei": 6.303986697082847e-31,
+        "disk_0": 5479949.075910356,
+        "disk_1": 11717351.582908137,
+        "disk_2": 366590.7880245915,
+        "disk_3": 958.8178177594147,
+        "softened_centre": 2.9580969285685167e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 17571174.29565658,
+      "equivalent_extra_density_Msun_kpc3": 16212667.796548733,
+      "required_extra_per_baryon": 0.9226855031855409,
+      "components_Msun_kpc3": {
+        "bar": 6324.030966152439,
+        "nuclei": 6.303986697082847e-31,
+        "disk_0": 5479949.075910356,
+        "disk_1": 11717351.582908137,
+        "disk_2": 366590.7880245915,
+        "disk_3": 958.8178177594147,
+        "softened_centre": 2.9580969285685167e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 17565733.991450556,
+      "equivalent_extra_density_Msun_kpc3": 16024800.561395861,
+      "required_extra_per_baryon": 0.9122761718465802,
+      "components_Msun_kpc3": {
+        "bar": 883.7267601298046,
+        "nuclei": 6.303986697082847e-31,
+        "disk_0": 5479949.075910356,
+        "disk_1": 11717351.582908137,
+        "disk_2": 366590.7880245915,
+        "disk_3": 958.8178177594147,
+        "softened_centre": 2.958096928568515e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 17565154.73457289,
+      "equivalent_extra_density_Msun_kpc3": 15955950.18508734,
+      "required_extra_per_baryon": 0.908386542913954,
+      "components_Msun_kpc3": {
+        "bar": 304.4698824630479,
+        "nuclei": 6.303986697082847e-31,
+        "disk_0": 5479949.075910356,
+        "disk_1": 11717351.582908137,
+        "disk_2": 366590.7880245915,
+        "disk_3": 958.8178177594147,
+        "softened_centre": 2.9580969285685167e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 17565033.54320154,
+      "equivalent_extra_density_Msun_kpc3": 15938489.173686283,
+      "required_extra_per_baryon": 0.9073987325150994,
+      "components_Msun_kpc3": {
+        "bar": 183.2785111107148,
+        "nuclei": 6.303986697082847e-31,
+        "disk_0": 5479949.075910356,
+        "disk_1": 11717351.582908137,
+        "disk_2": 366590.7880245915,
+        "disk_3": 958.8178177594147,
+        "softened_centre": 2.9580969285685167e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 7761796.424159906,
+      "equivalent_extra_density_Msun_kpc3": 9270627.720985612,
+      "required_extra_per_baryon": 1.1943920214306591,
+      "components_Msun_kpc3": {
+        "bar": 2869.345378684249,
+        "nuclei": 2.753171534890201e-32,
+        "disk_0": 1035028.6852317082,
+        "disk_1": 6722870.552676716,
+        "disk_2": 1027.826513776712,
+        "disk_3": 0.014330285195929594,
+        "softened_centre": 2.873504218913208e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 7760382.718472074,
+      "equivalent_extra_density_Msun_kpc3": 9050516.957781015,
+      "required_extra_per_baryon": 1.1662462131201377,
+      "components_Msun_kpc3": {
+        "bar": 1455.6396908528232,
+        "nuclei": 2.753171534890201e-32,
+        "disk_0": 1035028.6852317082,
+        "disk_1": 6722870.552676716,
+        "disk_2": 1027.826513776712,
+        "disk_3": 0.014330285195929594,
+        "softened_centre": 2.873504218913208e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 7759563.928486843,
+      "equivalent_extra_density_Msun_kpc3": 8877558.610626582,
+      "required_extra_per_baryon": 1.1440795761776468,
+      "components_Msun_kpc3": {
+        "bar": 636.8497056212782,
+        "nuclei": 2.753171534890201e-32,
+        "disk_0": 1035028.6852317082,
+        "disk_1": 6722870.552676716,
+        "disk_2": 1027.826513776712,
+        "disk_3": 0.014330285195929594,
+        "softened_centre": 2.873504218913207e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 7759161.648457175,
+      "equivalent_extra_density_Msun_kpc3": 8812554.22142809,
+      "required_extra_per_baryon": 1.1357611325419894,
+      "components_Msun_kpc3": {
+        "bar": 234.5696759538198,
+        "nuclei": 2.753171534890201e-32,
+        "disk_0": 1035028.6852317082,
+        "disk_1": 6722870.552676716,
+        "disk_2": 1027.826513776712,
+        "disk_3": 0.014330285195929594,
+        "softened_centre": 2.873504218913208e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 7759069.957824717,
+      "equivalent_extra_density_Msun_kpc3": 8796268.220085569,
+      "required_extra_per_baryon": 1.1336755910049345,
+      "components_Msun_kpc3": {
+        "bar": 142.87904349589357,
+        "nuclei": 2.753171534890201e-32,
+        "disk_0": 1035028.6852317082,
+        "disk_1": 6722870.552676716,
+        "disk_2": 1027.826513776712,
+        "disk_3": 0.014330285195929594,
+        "softened_centre": 2.873504218913208e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 2250545.140231442,
+      "equivalent_extra_density_Msun_kpc3": 6272428.618769744,
+      "required_extra_per_baryon": 2.787070788602222,
+      "components_Msun_kpc3": {
+        "bar": 499.6819025613734,
+        "nuclei": 3.5917869984375386e-37,
+        "disk_0": 36923.60643117134,
+        "disk_1": 2213121.8438814334,
+        "disk_2": 0.007990606111102036,
+        "disk_3": 3.2008575517684115e-12,
+        "softened_centre": 2.5669827466999333e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 2250488.2863035197,
+      "equivalent_extra_density_Msun_kpc3": 6112621.212681419,
+      "required_extra_per_baryon": 2.7161310946974733,
+      "components_Msun_kpc3": {
+        "bar": 442.8279746388519,
+        "nuclei": 3.5917869984375386e-37,
+        "disk_0": 36923.60643117134,
+        "disk_1": 2213121.8438814334,
+        "disk_2": 0.007990606111102036,
+        "disk_3": 3.2008575517684115e-12,
+        "softened_centre": 2.5669827466999333e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 2250265.859825483,
+      "equivalent_extra_density_Msun_kpc3": 5917042.874949386,
+      "required_extra_per_baryon": 2.629486133433263,
+      "components_Msun_kpc3": {
+        "bar": 220.40149660203784,
+        "nuclei": 3.5917869984374872e-37,
+        "disk_0": 36923.60643117134,
+        "disk_1": 2213121.8438814334,
+        "disk_2": 0.007990606111102036,
+        "disk_3": 3.2008575517684115e-12,
+        "softened_centre": 2.566982746699932e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 2250133.3025348857,
+      "equivalent_extra_density_Msun_kpc3": 5818168.756632142,
+      "required_extra_per_baryon": 2.5856995894766275,
+      "components_Msun_kpc3": {
+        "bar": 87.84420600494416,
+        "nuclei": 3.5917869984375386e-37,
+        "disk_0": 36923.60643117134,
+        "disk_1": 2213121.8438814334,
+        "disk_2": 0.007990606111102036,
+        "disk_3": 3.2008575517684115e-12,
+        "softened_centre": 2.5669827466999333e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 2250100.843612718,
+      "equivalent_extra_density_Msun_kpc3": 5789524.32291252,
+      "required_extra_per_baryon": 2.573006600725047,
+      "components_Msun_kpc3": {
+        "bar": 55.38528383686931,
+        "nuclei": 3.5917869984375386e-37,
+        "disk_0": 36923.60643117134,
+        "disk_1": 2213121.8438814334,
+        "disk_2": 0.007990606111102036,
+        "disk_3": 3.2008575517684115e-12,
+        "softened_centre": 2.5669827466999333e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 239889.50896074114,
+      "equivalent_extra_density_Msun_kpc3": 4084666.9525308507,
+      "required_extra_per_baryon": 17.027284645446176,
+      "components_Msun_kpc3": {
+        "bar": 10.879343402270798,
+        "nuclei": 1.0010277204066823e-51,
+        "disk_0": 46.990229611676575,
+        "disk_1": 239831.6393706282,
+        "disk_2": 4.829320531051531e-13,
+        "disk_3": 1.5969428476526763e-31,
+        "softened_centre": 1.7098982442280385e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 239888.56899346842,
+      "equivalent_extra_density_Msun_kpc3": 4019315.4877274362,
+      "required_extra_per_baryon": 16.754927108831403,
+      "components_Msun_kpc3": {
+        "bar": 9.939376129551105,
+        "nuclei": 1.0010277204066823e-51,
+        "disk_0": 46.990229611676575,
+        "disk_1": 239831.6393706282,
+        "disk_2": 4.829320531051531e-13,
+        "disk_3": 1.5969428476526763e-31,
+        "softened_centre": 1.7098982442280385e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 239884.45805213094,
+      "equivalent_extra_density_Msun_kpc3": 3907607.4122652416,
+      "required_extra_per_baryon": 16.28953973923585,
+      "components_Msun_kpc3": {
+        "bar": 5.828434792067059,
+        "nuclei": 1.0010277204066823e-51,
+        "disk_0": 46.990229611676575,
+        "disk_1": 239831.6393706282,
+        "disk_2": 4.829320531051531e-13,
+        "disk_3": 1.5969428476526763e-31,
+        "softened_centre": 1.7098982442280375e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 239881.45702726612,
+      "equivalent_extra_density_Msun_kpc3": 3833855.123735031,
+      "required_extra_per_baryon": 15.982290466491772,
+      "components_Msun_kpc3": {
+        "bar": 2.8274099272639757,
+        "nuclei": 1.0010277204066823e-51,
+        "disk_0": 46.990229611676575,
+        "disk_1": 239831.6393706282,
+        "disk_2": 4.829320531051531e-13,
+        "disk_3": 1.5969428476526763e-31,
+        "softened_centre": 1.7098982442280385e-05
+      }
+    },
+    {
+      "R_kpc": 8,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 239880.58198861565,
+      "equivalent_extra_density_Msun_kpc3": 3809885.042429108,
+      "required_extra_per_baryon": 15.882423707851098,
+      "components_Msun_kpc3": {
+        "bar": 1.9523712767721708,
+        "nuclei": 1.0010277204066823e-51,
+        "disk_0": 46.990229611676575,
+        "disk_1": 239831.6393706282,
+        "disk_2": 4.829320531051531e-13,
+        "disk_3": 1.5969428476526763e-31,
+        "softened_centre": 1.7098982442280385e-05
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 33760124.39797011,
+      "equivalent_extra_density_Msun_kpc3": 26596473.736806,
+      "required_extra_per_baryon": 0.7878073381271417,
+      "components_Msun_kpc3": {
+        "bar": 641.8057120413351,
+        "nuclei": 2.7654695809443445e-46,
+        "disk_0": 4394098.870084097,
+        "disk_1": 5476985.790713136,
+        "disk_2": 22050963.070610784,
+        "disk_3": 1837434.8608461178,
+        "softened_centre": 3.933589261116137e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 33759494.22786262,
+      "equivalent_extra_density_Msun_kpc3": 26608542.712510537,
+      "required_extra_per_baryon": 0.788179542410022,
+      "components_Msun_kpc3": {
+        "bar": 11.63560454299204,
+        "nuclei": 2.765469580944423e-46,
+        "disk_0": 4394098.8700841,
+        "disk_1": 5476985.790713136,
+        "disk_2": 22050963.070610784,
+        "disk_3": 1837434.8608461178,
+        "softened_centre": 3.933589261116139e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 33759482.67610451,
+      "equivalent_extra_density_Msun_kpc3": 26639928.582272198,
+      "required_extra_per_baryon": 0.789109502591056,
+      "components_Msun_kpc3": {
+        "bar": 0.08384645648838795,
+        "nuclei": 2.7654695809442656e-46,
+        "disk_0": 4394098.870084093,
+        "disk_1": 5476985.7907131305,
+        "disk_2": 22050963.070610777,
+        "disk_3": 1837434.8608461143,
+        "softened_centre": 3.933589261116135e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 33759482.60911031,
+      "equivalent_extra_density_Msun_kpc3": 26669318.384194158,
+      "required_extra_per_baryon": 0.7899800685036918,
+      "components_Msun_kpc3": {
+        "bar": 0.01685223853506392,
+        "nuclei": 2.765469580944423e-46,
+        "disk_0": 4394098.8700841,
+        "disk_1": 5476985.790713136,
+        "disk_2": 22050963.070610784,
+        "disk_3": 1837434.8608461178,
+        "softened_centre": 3.933589261116139e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 33759482.60040066,
+      "equivalent_extra_density_Msun_kpc3": 26680738.651935395,
+      "required_extra_per_baryon": 0.7903183519648713,
+      "components_Msun_kpc3": {
+        "bar": 0.008142586873382086,
+        "nuclei": 2.7654695809443445e-46,
+        "disk_0": 4394098.870084097,
+        "disk_1": 5476985.790713136,
+        "disk_2": 22050963.070610784,
+        "disk_3": 1837434.8608461178,
+        "softened_centre": 3.933589261116137e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 24587365.151568245,
+      "equivalent_extra_density_Msun_kpc3": 23945575.231538363,
+      "required_extra_per_baryon": 0.9738975723476841,
+      "components_Msun_kpc3": {
+        "bar": 550.197120523146,
+        "nuclei": 2.6927792518985167e-46,
+        "disk_0": 3148509.422172164,
+        "disk_1": 4901022.223163753,
+        "disk_2": 15888939.872135766,
+        "disk_3": 648343.4369721093,
+        "softened_centre": 3.932906429303076e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 24586824.96006958,
+      "equivalent_extra_density_Msun_kpc3": 23956346.788257565,
+      "required_extra_per_baryon": 0.9743570724224886,
+      "components_Msun_kpc3": {
+        "bar": 10.00562184897292,
+        "nuclei": 2.6927792518985167e-46,
+        "disk_0": 3148509.422172167,
+        "disk_1": 4901022.223163753,
+        "disk_2": 15888939.872135766,
+        "disk_3": 648343.4369721093,
+        "softened_centre": 3.932906429303078e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 24586815.03650823,
+      "equivalent_extra_density_Msun_kpc3": 23985177.66645598,
+      "required_extra_per_baryon": 0.9755300810959494,
+      "components_Msun_kpc3": {
+        "bar": 0.08206051848830516,
+        "nuclei": 2.6927792518985167e-46,
+        "disk_0": 3148509.4221721613,
+        "disk_1": 4901022.223163748,
+        "disk_2": 15888939.87213576,
+        "disk_3": 648343.436972108,
+        "softened_centre": 3.932906429303074e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 24586814.971251305,
+      "equivalent_extra_density_Msun_kpc3": 24012540.98559885,
+      "required_extra_per_baryon": 0.9766430102343904,
+      "components_Msun_kpc3": {
+        "bar": 0.0168035773393185,
+        "nuclei": 2.6927792518985167e-46,
+        "disk_0": 3148509.422172167,
+        "disk_1": 4901022.223163753,
+        "disk_2": 15888939.872135766,
+        "disk_3": 648343.4369721093,
+        "softened_centre": 3.932906429303078e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 24586814.96256997,
+      "equivalent_extra_density_Msun_kpc3": 24023227.31774594,
+      "required_extra_per_baryon": 0.9770776472803812,
+      "components_Msun_kpc3": {
+        "bar": 0.008122248522659359,
+        "nuclei": 2.6927792518985167e-46,
+        "disk_0": 3148509.422172164,
+        "disk_1": 4901022.223163753,
+        "disk_2": 15888939.872135766,
+        "disk_3": 648343.4369721093,
+        "softened_centre": 3.932906429303076e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 4217099.670663955,
+      "equivalent_extra_density_Msun_kpc3": 4825293.809192001,
+      "required_extra_per_baryon": 1.144220954216216,
+      "components_Msun_kpc3": {
+        "bar": 46.646130055827086,
+        "nuclei": 1.424371644127631e-46,
+        "disk_0": 829938.0730149831,
+        "disk_1": 3142439.3327519745,
+        "disk_2": 244565.77770222258,
+        "disk_3": 109.84106080211005,
+        "softened_centre": 3.916568127117796e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 4217054.059679145,
+      "equivalent_extra_density_Msun_kpc3": 4814166.639799641,
+      "required_extra_per_baryon": 1.1415947179405919,
+      "components_Msun_kpc3": {
+        "bar": 1.0351452458312351,
+        "nuclei": 1.4243716441276714e-46,
+        "disk_0": 829938.0730149838,
+        "disk_1": 3142439.3327519745,
+        "disk_2": 244565.77770222258,
+        "disk_3": 109.84106080211005,
+        "softened_centre": 3.916568127117798e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 4217053.0934254,
+      "equivalent_extra_density_Msun_kpc3": 4799826.853365719,
+      "required_extra_per_baryon": 1.1381945512729952,
+      "components_Msun_kpc3": {
+        "bar": 0.06889150432904143,
+        "nuclei": 1.424371644127631e-46,
+        "disk_0": 829938.0730149824,
+        "disk_1": 3142439.3327519717,
+        "disk_2": 244565.7777022225,
+        "disk_3": 109.84106080210984,
+        "softened_centre": 3.916568127117794e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 4217053.040352625,
+      "equivalent_extra_density_Msun_kpc3": 4792936.60133271,
+      "required_extra_per_baryon": 1.136560663446607,
+      "components_Msun_kpc3": {
+        "bar": 0.01581872499195639,
+        "nuclei": 1.4243716441276714e-46,
+        "disk_0": 829938.0730149838,
+        "disk_1": 3142439.3327519745,
+        "disk_2": 244565.77770222258,
+        "disk_3": 109.84106080211005,
+        "softened_centre": 3.916568127117798e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 4217053.032209099,
+      "equivalent_extra_density_Msun_kpc3": 4791215.685251107,
+      "required_extra_per_baryon": 1.136152580642609,
+      "components_Msun_kpc3": {
+        "bar": 0.007675200088481962,
+        "nuclei": 1.424371644127631e-46,
+        "disk_0": 829938.0730149831,
+        "disk_1": 3142439.3327519745,
+        "disk_2": 244565.77770222258,
+        "disk_3": 109.84106080211005,
+        "softened_centre": 3.916568127117796e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 1960427.181679636,
+      "equivalent_extra_density_Msun_kpc3": 3689237.2441269965,
+      "required_extra_per_baryon": 1.8818537503474968,
+      "components_Msun_kpc3": {
+        "bar": 1.109856586358665,
+        "nuclei": 2.0047735388400346e-47,
+        "disk_0": 156755.05385854933,
+        "disk_1": 1802985.3166263013,
+        "disk_2": 685.6996926717738,
+        "disk_3": 0.0016416609061312205,
+        "softened_centre": 3.866119149228191e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 1960426.2586078318,
+      "equivalent_extra_density_Msun_kpc3": 3666689.605176366,
+      "required_extra_per_baryon": 1.8703532403102028,
+      "components_Msun_kpc3": {
+        "bar": 0.18678478198827306,
+        "nuclei": 2.0047735388400346e-47,
+        "disk_0": 156755.05385854945,
+        "disk_1": 1802985.3166263013,
+        "disk_2": 685.6996926717738,
+        "disk_3": 0.0016416609061312205,
+        "softened_centre": 3.866119149228193e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 1960426.1279290337,
+      "equivalent_extra_density_Msun_kpc3": 3629454.4078557533,
+      "required_extra_per_baryon": 1.8513599447329634,
+      "components_Msun_kpc3": {
+        "bar": 0.05610598609343415,
+        "nuclei": 2.0047735388399775e-47,
+        "disk_0": 156755.0538585492,
+        "disk_1": 1802985.3166262994,
+        "disk_2": 685.6996926717735,
+        "disk_3": 0.0016416609061312172,
+        "softened_centre": 3.866119149228189e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 1960426.085045891,
+      "equivalent_extra_density_Msun_kpc3": 3604297.2368570846,
+      "required_extra_per_baryon": 1.838527483566264,
+      "components_Msun_kpc3": {
+        "bar": 0.013222841337457587,
+        "nuclei": 2.0047735388400346e-47,
+        "disk_0": 156755.05385854945,
+        "disk_1": 1802985.3166263013,
+        "disk_2": 685.6996926717738,
+        "disk_3": 0.0016416609061312205,
+        "softened_centre": 3.866119149228193e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 1960426.078281107,
+      "equivalent_extra_density_Msun_kpc3": 3595949.4146959507,
+      "required_extra_per_baryon": 1.8342693226407514,
+      "components_Msun_kpc3": {
+        "bar": 0.006458057299692644,
+        "nuclei": 2.0047735388400346e-47,
+        "disk_0": 156755.05385854933,
+        "disk_1": 1802985.3166263013,
+        "disk_2": 685.6996926717738,
+        "disk_3": 0.0016416609061312205,
+        "softened_centre": 3.866119149228191e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 599122.2995531013,
+      "equivalent_extra_density_Msun_kpc3": 3500279.7434706534,
+      "required_extra_per_baryon": 5.842345955210798,
+      "components_Msun_kpc3": {
+        "bar": 0.09211611730393493,
+        "nuclei": 1.176488457906596e-50,
+        "disk_0": 5592.078748498078,
+        "disk_1": 593530.1233539947,
+        "disk_2": 0.005330818072118902,
+        "disk_3": 3.666865409158538e-13,
+        "softened_centre": 3.6731693484270736e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 599122.2838232907,
+      "equivalent_extra_density_Msun_kpc3": 3478612.3583278027,
+      "required_extra_per_baryon": 5.806180895374289,
+      "components_Msun_kpc3": {
+        "bar": 0.07638630668708844,
+        "nuclei": 1.1764884579066294e-50,
+        "disk_0": 5592.078748498083,
+        "disk_1": 593530.1233539947,
+        "disk_2": 0.005330818072118902,
+        "disk_3": 3.666865409158538e-13,
+        "softened_centre": 3.6731693484270753e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 599122.2337976106,
+      "equivalent_extra_density_Msun_kpc3": 3441415.918249265,
+      "required_extra_per_baryon": 5.744096486680895,
+      "components_Msun_kpc3": {
+        "bar": 0.026360627160354543,
+        "nuclei": 1.176488457906596e-50,
+        "disk_0": 5592.078748498073,
+        "disk_1": 593530.1233539941,
+        "disk_2": 0.0053308180721189004,
+        "disk_3": 3.666865409158531e-13,
+        "softened_centre": 3.6731693484270723e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 599122.2140017718,
+      "equivalent_extra_density_Msun_kpc3": 3415605.129751753,
+      "required_extra_per_baryon": 5.701015669136335,
+      "components_Msun_kpc3": {
+        "bar": 0.006564787737055981,
+        "nuclei": 1.1764884579066294e-50,
+        "disk_0": 5592.078748498083,
+        "disk_1": 593530.1233539947,
+        "disk_2": 0.005330818072118902,
+        "disk_3": 3.666865409158538e-13,
+        "softened_centre": 3.6731693484270753e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 599122.2107212651,
+      "equivalent_extra_density_Msun_kpc3": 3406935.1565624382,
+      "required_extra_per_baryon": 5.686544574037628,
+      "components_Msun_kpc3": {
+        "bar": 0.0032842810197451743,
+        "nuclei": 1.176488457906596e-50,
+        "disk_0": 5592.078748498078,
+        "disk_1": 593530.1233539947,
+        "disk_2": 0.005330818072118902,
+        "disk_3": 3.666865409158538e-13,
+        "softened_centre": 3.6731693484270736e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 64326.80757842563,
+      "equivalent_extra_density_Msun_kpc3": 2323499.944030923,
+      "required_extra_per_baryon": 36.12024335574512,
+      "components_Msun_kpc3": {
+        "bar": 0.004716447416379143,
+        "nuclei": 1.4647237469730963e-61,
+        "disk_0": 7.116668435092666,
+        "disk_1": 64319.68619052042,
+        "disk_2": 3.2218118131509056e-13,
+        "disk_3": 1.8294392654948138e-32,
+        "softened_centre": 3.0227016563112558e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 64326.80689541943,
+      "equivalent_extra_density_Msun_kpc3": 2309029.891542784,
+      "required_extra_per_baryon": 35.895297823452275,
+      "components_Msun_kpc3": {
+        "bar": 0.0040334412176033846,
+        "nuclei": 1.4647237469730963e-61,
+        "disk_0": 7.116668435092672,
+        "disk_1": 64319.68619052042,
+        "disk_2": 3.2218118131509056e-13,
+        "disk_3": 1.8294392654948138e-32,
+        "softened_centre": 3.022701656311257e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 64326.804477303005,
+      "equivalent_extra_density_Msun_kpc3": 2282157.1022640606,
+      "required_extra_per_baryon": 35.4775450266505,
+      "components_Msun_kpc3": {
+        "bar": 0.0016153248570116574,
+        "nuclei": 1.4647237469730133e-61,
+        "disk_0": 7.1166684350926595,
+        "disk_1": 64319.686190520355,
+        "disk_2": 3.221811813150904e-13,
+        "disk_3": 1.8294392654948105e-32,
+        "softened_centre": 3.022701656311254e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 64326.80333962909,
+      "equivalent_extra_density_Msun_kpc3": 2262366.1633959636,
+      "required_extra_per_baryon": 35.16988325148458,
+      "components_Msun_kpc3": {
+        "bar": 0.00047765087665492024,
+        "nuclei": 1.4647237469730963e-61,
+        "disk_0": 7.116668435092672,
+        "disk_1": 64319.68619052042,
+        "disk_2": 3.2218118131509056e-13,
+        "disk_3": 1.8294392654948138e-32,
+        "softened_centre": 3.022701656311257e-06
+      }
+    },
+    {
+      "R_kpc": 12,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 64326.803120126926,
+      "equivalent_extra_density_Msun_kpc3": 2255546.91600927,
+      "required_extra_per_baryon": 35.063873946870245,
+      "components_Msun_kpc3": {
+        "bar": 0.0002581487107809496,
+        "nuclei": 1.4647237469730963e-61,
+        "disk_0": 7.116668435092666,
+        "disk_1": 64319.68619052042,
+        "disk_2": 3.2218118131509056e-13,
+        "disk_3": 1.8294392654948138e-32,
+        "softened_centre": 3.0227016563112558e-06
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 8480679.510482246,
+      "equivalent_extra_density_Msun_kpc3": 8733346.044866526,
+      "required_extra_per_baryon": 1.0297931945278656,
+      "components_Msun_kpc3": {
+        "bar": 0.00018955389138064773,
+        "nuclei": 5.442906864749337e-75,
+        "disk_0": 88059.94307106487,
+        "disk_1": 344180.8800504229,
+        "disk_2": 8035204.645197141,
+        "disk_3": 13234.041973758955,
+        "softened_centre": 3.058759043430119e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 8480679.510292938,
+      "equivalent_extra_density_Msun_kpc3": 8733902.190793833,
+      "required_extra_per_baryon": 1.029858772542172,
+      "components_Msun_kpc3": {
+        "bar": 2.458662549189887e-07,
+        "nuclei": 5.442906864749337e-75,
+        "disk_0": 88059.94307106487,
+        "disk_1": 344180.8800504229,
+        "disk_2": 8035204.645197141,
+        "disk_3": 13234.041973758955,
+        "softened_centre": 3.058759043430119e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 8480679.510292692,
+      "equivalent_extra_density_Msun_kpc3": 8735366.2650832,
+      "required_extra_per_baryon": 1.030031408978656,
+      "components_Msun_kpc3": {
+        "bar": 8.038003071070666e-12,
+        "nuclei": 5.442906864749337e-75,
+        "disk_0": 88059.94307106487,
+        "disk_1": 344180.8800504229,
+        "disk_2": 8035204.645197141,
+        "disk_3": 13234.041973758955,
+        "softened_centre": 3.0587590434301187e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 8480679.510292692,
+      "equivalent_extra_density_Msun_kpc3": 8736936.689658377,
+      "required_extra_per_baryon": 1.030216585717533,
+      "components_Msun_kpc3": {
+        "bar": 5.457147260818412e-13,
+        "nuclei": 5.442906864749337e-75,
+        "disk_0": 88059.94307106487,
+        "disk_1": 344180.8800504229,
+        "disk_2": 8035204.645197141,
+        "disk_3": 13234.041973758955,
+        "softened_centre": 3.058759043430119e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 8480679.510292692,
+      "equivalent_extra_density_Msun_kpc3": 8737605.693325266,
+      "required_extra_per_baryon": 1.0302954713382049,
+      "components_Msun_kpc3": {
+        "bar": 1.7566049712803633e-13,
+        "nuclei": 5.442906864749337e-75,
+        "disk_0": 88059.94307106487,
+        "disk_1": 344180.8800504229,
+        "disk_2": 8035204.645197141,
+        "disk_3": 13234.041973758955,
+        "softened_centre": 3.058759043430119e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 6165563.817281866,
+      "equivalent_extra_density_Msun_kpc3": 8294159.8398735775,
+      "required_extra_per_baryon": 1.3452394761733435,
+      "components_Msun_kpc3": {
+        "bar": 0.00016248645730227048,
+        "nuclei": 5.365317619181743e-75,
+        "disk_0": 63097.70641776338,
+        "disk_1": 307986.58356488904,
+        "disk_2": 5789809.862681297,
+        "disk_3": 4669.664455124657,
+        "softened_centre": 3.058567879353864e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 6165563.81711959,
+      "equivalent_extra_density_Msun_kpc3": 8294675.1771917,
+      "required_extra_per_baryon": 1.3453230593705512,
+      "components_Msun_kpc3": {
+        "bar": 2.107620994112574e-07,
+        "nuclei": 5.365317619181743e-75,
+        "disk_0": 63097.70641776338,
+        "disk_1": 307986.58356488904,
+        "disk_2": 5789809.862681297,
+        "disk_3": 4669.664455124657,
+        "softened_centre": 3.058567879353864e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 6165563.8171193795,
+      "equivalent_extra_density_Msun_kpc3": 8296046.880994746,
+      "required_extra_per_baryon": 1.345545537613258,
+      "components_Msun_kpc3": {
+        "bar": 7.648622829034809e-12,
+        "nuclei": 5.365317619181591e-75,
+        "disk_0": 63097.70641776338,
+        "disk_1": 307986.58356488904,
+        "disk_2": 5789809.862681297,
+        "disk_3": 4669.664455124657,
+        "softened_centre": 3.0585678793538627e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 6165563.8171193795,
+      "equivalent_extra_density_Msun_kpc3": 8297532.341040192,
+      "required_extra_per_baryon": 1.3457864661137986,
+      "components_Msun_kpc3": {
+        "bar": 5.447813517054e-13,
+        "nuclei": 5.365317619181743e-75,
+        "disk_0": 63097.70641776338,
+        "disk_1": 307986.58356488904,
+        "disk_2": 5789809.862681297,
+        "disk_3": 4669.664455124657,
+        "softened_centre": 3.058567879353864e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 6165563.8171193795,
+      "equivalent_extra_density_Msun_kpc3": 8298168.023548948,
+      "required_extra_per_baryon": 1.3458895682026928,
+      "components_Msun_kpc3": {
+        "bar": 1.7538433397441298e-13,
+        "nuclei": 5.365317619181743e-75,
+        "disk_0": 63097.70641776338,
+        "disk_1": 307986.58356488904,
+        "disk_2": 5789809.862681297,
+        "disk_3": 4669.664455124657,
+        "softened_centre": 3.058567879353864e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.5,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 303226.0482515451,
+      "equivalent_extra_density_Msun_kpc3": 1907118.086361782,
+      "required_extra_per_baryon": 6.289426971589549,
+      "components_Msun_kpc3": {
+        "bar": 1.3707139148184165e-05,
+        "nuclei": 3.8032108586646287e-75,
+        "disk_0": 16632.374833388756,
+        "disk_1": 197474.9572813502,
+        "disk_2": 89117.92499749165,
+        "disk_3": 0.7911253019483633,
+        "softened_centre": 3.0539849549116414e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.5,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 303226.0482378558,
+      "equivalent_extra_density_Msun_kpc3": 1906775.690706922,
+      "required_extra_per_baryon": 6.288297795614228,
+      "components_Msun_kpc3": {
+        "bar": 1.7806983880809845e-08,
+        "nuclei": 3.8032108586646287e-75,
+        "disk_0": 16632.374833388756,
+        "disk_1": 197474.9572813502,
+        "disk_2": 89117.92499749165,
+        "disk_3": 0.7911253019483633,
+        "softened_centre": 3.0539849549116414e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.5,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 303226.04823783797,
+      "equivalent_extra_density_Msun_kpc3": 1906205.8153845128,
+      "required_extra_per_baryon": 6.286418421049909,
+      "components_Msun_kpc3": {
+        "bar": 5.343906261669766e-12,
+        "nuclei": 3.8032108586646287e-75,
+        "disk_0": 16632.374833388756,
+        "disk_1": 197474.9572813502,
+        "disk_2": 89117.92499749165,
+        "disk_3": 0.7911253019483633,
+        "softened_centre": 3.0539849549116403e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.5,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 303226.04823783797,
+      "equivalent_extra_density_Msun_kpc3": 1905905.2676582516,
+      "required_extra_per_baryon": 6.285427253806831,
+      "components_Msun_kpc3": {
+        "bar": 5.240595660762551e-13,
+        "nuclei": 3.8032108586646287e-75,
+        "disk_0": 16632.374833388756,
+        "disk_1": 197474.9572813502,
+        "disk_2": 89117.92499749165,
+        "disk_3": 0.7911253019483633,
+        "softened_centre": 3.0539849549116414e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 0.5,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 303226.04823783797,
+      "equivalent_extra_density_Msun_kpc3": 1905840.496577586,
+      "required_extra_per_baryon": 6.28521364722177,
+      "components_Msun_kpc3": {
+        "bar": 1.6899691045334236e-13,
+        "nuclei": 3.8032108586646287e-75,
+        "disk_0": 16632.374833388756,
+        "disk_1": 197474.9572813502,
+        "disk_2": 89117.92499749165,
+        "disk_3": 0.7911253019483633,
+        "softened_centre": 3.0539849549116414e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 116693.24588261747,
+      "equivalent_extra_density_Msun_kpc3": 1373186.120517239,
+      "required_extra_per_baryon": 11.767485856881008,
+      "components_Msun_kpc3": {
+        "bar": 2.6677381689467423e-07,
+        "nuclei": 1.3051525958472233e-75,
+        "disk_0": 3141.4498232765927,
+        "disk_1": 113301.93225015307,
+        "disk_2": 249.86379679306566,
+        "disk_3": 1.1823988866966005e-05,
+        "softened_centre": 3.0397251248310195e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 1,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 116693.24588235107,
+      "equivalent_extra_density_Msun_kpc3": 1371327.0417184345,
+      "required_extra_per_baryon": 11.751554525280687,
+      "components_Msun_kpc3": {
+        "bar": 3.7221781596346184e-10,
+        "nuclei": 1.3051525958472233e-75,
+        "disk_0": 3141.4498232765927,
+        "disk_1": 113301.93225015307,
+        "disk_2": 249.86379679306566,
+        "disk_3": 1.1823988866966005e-05,
+        "softened_centre": 3.0397251248310195e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 116693.24588235069,
+      "equivalent_extra_density_Msun_kpc3": 1367322.9868756074,
+      "required_extra_per_baryon": 11.71724187237137,
+      "components_Msun_kpc3": {
+        "bar": 4.540375199320165e-12,
+        "nuclei": 1.3051525958471863e-75,
+        "disk_0": 3141.4498232765927,
+        "disk_1": 113301.93225015307,
+        "disk_2": 249.86379679306566,
+        "disk_3": 1.1823988866966005e-05,
+        "softened_centre": 3.039725124831019e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 1,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 116693.24588235069,
+      "equivalent_extra_density_Msun_kpc3": 1363862.4400361963,
+      "required_extra_per_baryon": 11.687586798393053,
+      "components_Msun_kpc3": {
+        "bar": 4.654202947290136e-13,
+        "nuclei": 1.3051525958472233e-75,
+        "disk_0": 3141.4498232765927,
+        "disk_1": 113301.93225015307,
+        "disk_2": 249.86379679306566,
+        "disk_3": 1.1823988866966005e-05,
+        "softened_centre": 3.0397251248310195e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 1,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 116693.24588235069,
+      "equivalent_extra_density_Msun_kpc3": 1362558.1333091834,
+      "required_extra_per_baryon": 11.676409572863411,
+      "components_Msun_kpc3": {
+        "bar": 1.5064677262899822e-13,
+        "nuclei": 1.3051525958472233e-75,
+        "disk_0": 3141.4498232765927,
+        "disk_1": 113301.93225015307,
+        "disk_2": 249.86379679306566,
+        "disk_3": 1.1823988866966005e-05,
+        "softened_centre": 3.0397251248310195e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 2,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 37410.27160474145,
+      "equivalent_extra_density_Msun_kpc3": 1311101.6649034456,
+      "required_extra_per_baryon": 35.04656899463072,
+      "components_Msun_kpc3": {
+        "bar": 1.1478805627799103e-10,
+        "nuclei": 1.9704511824896236e-77,
+        "disk_0": 112.06806009629636,
+        "disk_1": 37298.20160183678,
+        "disk_2": 0.0019425099030200412,
+        "disk_3": 2.6410433246369644e-15,
+        "softened_centre": 2.983608473965729e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 2,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 37410.27160474135,
+      "equivalent_extra_density_Msun_kpc3": 1309291.2646316974,
+      "required_extra_per_baryon": 34.998175861031676,
+      "components_Msun_kpc3": {
+        "bar": 1.555290582933233e-11,
+        "nuclei": 1.9704511824896236e-77,
+        "disk_0": 112.06806009629636,
+        "disk_1": 37298.20160183678,
+        "disk_2": 0.0019425099030200412,
+        "disk_3": 2.6410433246369644e-15,
+        "softened_centre": 2.983608473965729e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 2,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 37410.27160474134,
+      "equivalent_extra_density_Msun_kpc3": 1305387.7369110875,
+      "required_extra_per_baryon": 34.89383211924192,
+      "components_Msun_kpc3": {
+        "bar": 2.7441436755931085e-12,
+        "nuclei": 1.9704511824895676e-77,
+        "disk_0": 112.06806009629636,
+        "disk_1": 37298.20160183678,
+        "disk_2": 0.0019425099030200412,
+        "disk_3": 2.6410433246369644e-15,
+        "softened_centre": 2.9836084739657276e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 2,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 37410.271604741334,
+      "equivalent_extra_density_Msun_kpc3": 1302010.4375718578,
+      "required_extra_per_baryon": 34.80355479180329,
+      "components_Msun_kpc3": {
+        "bar": 2.909273937306886e-13,
+        "nuclei": 1.9704511824896236e-77,
+        "disk_0": 112.06806009629636,
+        "disk_1": 37298.20160183678,
+        "disk_2": 0.0019425099030200412,
+        "disk_3": 2.6410433246369644e-15,
+        "softened_centre": 2.983608473965729e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 2,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 37410.271604741334,
+      "equivalent_extra_density_Msun_kpc3": 1300736.8361967106,
+      "required_extra_per_baryon": 34.76951062905025,
+      "components_Msun_kpc3": {
+        "bar": 9.552267451734035e-14,
+        "nuclei": 1.9704511824896236e-77,
+        "disk_0": 112.06806009629636,
+        "disk_1": 37298.20160183678,
+        "disk_2": 0.0019425099030200412,
+        "disk_3": 2.6410433246369644e-15,
+        "softened_centre": 2.983608473965729e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 4,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 4042.0749992014416,
+      "equivalent_extra_density_Msun_kpc3": 1172293.2342358537,
+      "required_extra_per_baryon": 290.0226330455159,
+      "components_Msun_kpc3": {
+        "bar": 2.608525219824165e-12,
+        "nuclei": 3.3438329618612616e-84,
+        "disk_0": 0.1426216013291277,
+        "disk_1": 4041.932377322802,
+        "disk_2": 1.1740039273606255e-13,
+        "disk_3": 1.3176454057724957e-34,
+        "softened_centre": 2.773076932603013e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 4,
+      "phi_rad": 0.39269908169872414,
+      "declared_baryon_density_Msun_kpc3": 4042.0749992014407,
+      "equivalent_extra_density_Msun_kpc3": 1170569.3925939829,
+      "required_extra_per_baryon": 289.5961586129012,
+      "components_Msun_kpc3": {
+        "bar": 1.972253397201239e-12,
+        "nuclei": 3.3438329618612616e-84,
+        "disk_0": 0.1426216013291277,
+        "disk_1": 4041.932377322802,
+        "disk_2": 1.1740039273606255e-13,
+        "disk_3": 1.3176454057724957e-34,
+        "softened_centre": 2.773076932603013e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 4,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 4042.0749992014394,
+      "equivalent_extra_density_Msun_kpc3": 1166817.7204823222,
+      "required_extra_per_baryon": 288.66800361518307,
+      "components_Msun_kpc3": {
+        "bar": 3.898765117022502e-13,
+        "nuclei": 3.3438329618612616e-84,
+        "disk_0": 0.1426216013291277,
+        "disk_1": 4041.932377322802,
+        "disk_2": 1.1740039273606255e-13,
+        "disk_3": 1.3176454057724957e-34,
+        "softened_centre": 2.773076932603012e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 4,
+      "phi_rad": 1.1780972450961724,
+      "declared_baryon_density_Msun_kpc3": 4042.074999201439,
+      "equivalent_extra_density_Msun_kpc3": 1163536.123868113,
+      "required_extra_per_baryon": 287.8561442076121,
+      "components_Msun_kpc3": {
+        "bar": 4.653911237344968e-14,
+        "nuclei": 3.3438329618612616e-84,
+        "disk_0": 0.1426216013291277,
+        "disk_1": 4041.932377322802,
+        "disk_2": 1.1740039273606255e-13,
+        "disk_3": 1.3176454057724957e-34,
+        "softened_centre": 2.773076932603013e-07
+      }
+    },
+    {
+      "R_kpc": 20,
+      "z_kpc": 4,
+      "phi_rad": 1.5707963267948966,
+      "declared_baryon_density_Msun_kpc3": 4042.074999201439,
+      "equivalent_extra_density_Msun_kpc3": 1162290.414424223,
+      "required_extra_per_baryon": 287.5479585742094,
+      "components_Msun_kpc3": {
+        "bar": 1.6099426075707314e-14,
+        "nuclei": 3.3438329618612616e-84,
+        "disk_0": 0.1426216013291277,
+        "disk_1": 4041.932377322802,
+        "disk_2": 1.1740039273606255e-13,
+        "disk_3": 1.3176454057724957e-34,
+        "softened_centre": 2.773076932603013e-07
+      }
+    }
+  ],
+  "disk_parameters": [
+    [
+      1332000000.0,
+      2.0,
+      0.3,
+      2.7,
+      "exp"
+    ],
+    [
+      897000000.0,
+      2.8,
+      0.9,
+      2.7,
+      "exp"
+    ],
+    [
+      58100000.0,
+      7.0,
+      0.085,
+      4.0,
+      "sech2"
+    ],
+    [
+      2680000000.0,
+      1.5,
+      0.045,
+      12.0,
+      "sech2"
+    ]
+  ],
+  "source_hashes": {
+    "research_work\\results\\baryon-attached-deposits\\run.py": "9e9ad576da42e5a2b595239593d0f2214e8e43087f4b515c2300b9d7c78890ba",
+    "research_work\\results\\full-bar-source-audit\\run.py": "1f603c70fa0936c5b65462ee8cb464700c4ad28b291303496d739e5e7a6a90a2",
+    "research_work\\results\\full-bar-source-audit\\results.json": "6ac1fd1b5146a1a4736f9d9192c7d3325bd1c8001c8a0890d62929dc087daa04",
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\results\\bar-field-foundation\\field.py": "9e0f1e007aaab4fc5d77a1cd4705c62e2bd0c904abfd88bb2a1ecdffac36bb4b",
+    "research_work\\results\\bar-field-foundation\\published_bar.py": "0dc81333d56168bea153b3ae94a1f55c64b1bc2a263156ee4cde14eb37e2e5e8"
+  },
+  "holdouts_opened": false,
+  "energy_supply_budget_evaluated": false,
+  "nonuniform_capture_ruled_out": false,
+  "modified_gravity_response_ruled_out": false
+}

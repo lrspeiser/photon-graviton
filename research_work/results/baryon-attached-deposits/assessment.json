@@ -1,0 +1,31 @@
+{
+  "subsets": {
+    "full_grid": {
+      "points": 240,
+      "minimum": 0.19814599713021924,
+      "maximum": 290.0226330455159,
+      "range_factor": 1463.6815138633176,
+      "minimum_worst_fractional_error": 0.998634515434878,
+      "minimum_worst_multiplicative_factor": 38.258090828781796
+    },
+    "inner_sampled_region_R_le_8_z_le_1": {
+      "points": 120,
+      "minimum": 0.19814599713021924,
+      "maximum": 1.1943920214306591,
+      "range_factor": 6.0278382542631865,
+      "minimum_worst_fractional_error": 0.7154174686950469,
+      "minimum_worst_multiplicative_factor": 2.455165626645825
+    },
+    "midplane_only": {
+      "points": 40,
+      "minimum": 0.2001927992124435,
+      "maximum": 1.0302954713382049,
+      "range_factor": 5.146516135402357,
+      "minimum_worst_fractional_error": 0.6746124217456272,
+      "minimum_worst_multiplicative_factor": 2.268593426641794
+    }
+  },
+  "interpretation": "Conditional source-shape mismatch, not observational model exclusion.",
+  "results_sha256": "ca4d399a682f4abd0bc571f3c1189987d4d7da8b2c9c373d76f90d4cbd248c86",
+  "holdouts_opened": false
+}
