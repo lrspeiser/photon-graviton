@@ -1,0 +1,43 @@
+{
+  "stage": "Freeze before first inferred validation-star outcomes",
+  "selection": "Use existing validation role and measurement/mode flag; apply identical distance calibration, common frame, R=6..18 kpc, abs(phi)<=30 degrees, abs(z)<=0.5 kpc, abs(vz)<=100 km/s.",
+  "bins": "Twelve fixed one-kpc bins. Score only n>=5 and valid corrected moments, per frozen training routine. Record every unscored bin. No residual exclusions or merging.",
+  "estimator": "Same frozen simplified Jeans moments and independent 7-percent distance-error scenario as training.",
+  "primary": "Original frozen conservative completion; all ordinary component multipliers unity.",
+  "secondary": "Previously fitted balanced ordinary-component scales, no q deformation.",
+  "balanced_component_scales": [
+    0.9619973846156058,
+    0.7000000000000062,
+    1.2999999999999994
+  ],
+  "controls": [
+    "Original ordinary matter",
+    "Balanced ordinary matter"
+  ],
+  "metrics": "Unweighted bin RMS, bias, median predicted/proxy ratio, count below proxy; no significance threshold or complete physical-validation claim.",
+  "numerical_check": "Refined vs coarse per-bin prediction difference below 0.1 km/s.",
+  "final_test": "Do not compute or inspect final-test inferred positions, velocities or model residuals.",
+  "component_adapter_classes_identical": true,
+  "frozen_sha256": {
+    "research_work\\results\\cepheid-validation\\evaluate.py": "3fd7666bd20acb53a6ee3400fb2e1c3522c206dba774b3669edd32b34beb639f",
+    "research_work\\results\\cepheid-validation\\components.py": "83374b2644a10f797362854dc613a33cc5b3b5121fcd2fec2bc708486a5d37f7",
+    "research_work\\results\\cepheid-common-frame\\run.py": "75351dfdf106bd9a149ccebc679570b1046eb32ece0adcb59286709f83dc3ee2",
+    "research_work\\results\\cepheid-common-frame\\protocol.json": "32782932202a91e5c53874a1d2d879dfb788cd32ef73429d2c23c68b85f9bc44",
+    "research_work\\results\\baryon-component-response\\run.py": "f84fd9cd5162addbfdca064d251ee389a2e416fcb3b07c38389d51ec2f6cb6c7",
+    "research_work\\results\\baryon-component-response\\results.json": "45c27784c6541d1962819786970edcb29b99d8fa7107d44e21d3b99d080f68c1",
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\results\\joint-galaxy-audit\\results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd",
+    "research_work\\data-cache\\cepheid-stars\\gaia-dr3-dcep-parent-with-flags.parquet": "a1f6cf7934818ce556650a93e78c40a3ee537c5e5f4d964b241bcd5011799870",
+    "research_work\\data-cache\\cepheid-stars\\cepheid-common-frame-split.parquet": "02e0535a11f9f06b25fc79eb7396f09a17264851ae333a143fad5f32f32e7c60"
+  },
+  "limitations": [
+    "Same Gaia calibration and Galactic population as training; published aggregate curves already exposed.",
+    "Conditional validation of a frozen approximate pipeline, not a full selection/orbit likelihood or a new independent catalog.",
+    "Published calibration and adopted radial profiles are shared assumptions.",
+    "Mass adjustment is exploratory and lacks independent allowed-mass priors.",
+    "No photon production, event timing, transport, storage, lensing or source-energy validation.",
+    "Validation becomes exposed once evaluated; later retuning is not fresh validation."
+  ]
+}
