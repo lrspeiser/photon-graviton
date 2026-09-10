@@ -1,0 +1,32 @@
+{
+  "classification": "Known Jeans algebra applied to exposed training data; conditional diagnostic, not a new gravity law or holdout",
+  "training_rows": 542,
+  "bins": 12,
+  "completion_below_zero_tilt_nonincreasing_pressure_floor_bins": 12,
+  "required_completion_log_pressure_slope_range": [
+    4.757165390442564,
+    85.37439671052303
+  ],
+  "required_completion_density_efold_kpc_range": [
+    0.16829022200930474,
+    1.7502140041582486
+  ],
+  "required_completion_midplane_tilt_slope_range": [
+    363.28712868355103,
+    1368.627734496011
+  ],
+  "new_physics_parameters_fitted": false,
+  "validation_or_test_outcomes_opened": false,
+  "input_sha256": {
+    "research_work\\results\\cepheid-common-frame\\training-bins.json": "f640a2285dc0b04b3b185e4363eeb3d19564bae921ee9177153d7c0026430cf0",
+    "research_work\\results\\cepheid-common-frame\\run.py": "75351dfdf106bd9a149ccebc679570b1046eb32ece0adcb59286709f83dc3ee2",
+    "research_work\\data-cache\\cepheid-stars\\cepheid-common-frame-train-selected.parquet": "053bf6d2e566afb6820ca298c82f24184f58d2304c283a4ca2df1de6ae8c3f7a"
+  },
+  "limitations": [
+    "Pressure floor assumes steady axisymmetry and zero tilt; non-axisymmetry, time dependence, and biased distance/velocity inference can invalidate it.",
+    "Finite bins summarize midplane quantities approximately.",
+    "Density gradient is conditional on adopted radial second-moment scale; raw survey counts cannot establish physical density.",
+    "Tilt fit ignores position error, selection, radial variation within a bin and vertical density gradients away from the plane.",
+    "No complete astrophysical covariance or population likelihood."
+  ]
+}
