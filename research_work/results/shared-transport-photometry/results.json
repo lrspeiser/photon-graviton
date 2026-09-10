@@ -1,0 +1,104 @@
+{
+  "alpha_per_mpc": 0.0002488993286382367,
+  "predictions": [
+    {
+      "distance_mpc": 0,
+      "stretch": 1.0,
+      "redshift": 0.0,
+      "bolometric_flux_ratio": 1.0,
+      "photon_rate_ratio": 1.0,
+      "event_fluence_ratio": 1.0,
+      "temperature_inferred_kelvin": 6000.0,
+      "thermal_shape_amplitude": 1.0,
+      "thermal_shape_relative_error": 0.0,
+      "bolometric_magnitude_extra": 0.0,
+      "naive_candle_distance_mpc": 0.0,
+      "line_fractional_width_ratio": 1.0,
+      "extra_frequency_dependent_delay_seconds": 0.0
+    },
+    {
+      "distance_mpc": 30.660139,
+      "stretch": 1.0076604805029419,
+      "redshift": 0.00766048050294188,
+      "bolometric_flux_ratio": 0.9848533067815634,
+      "photon_rate_ratio": 0.9923977563364217,
+      "event_fluence_ratio": 0.9923977563364214,
+      "temperature_inferred_kelvin": 5954.38653801853,
+      "thermal_shape_amplitude": 1.0153796439674196,
+      "thermal_shape_relative_error": 6.661338147750939e-16,
+      "bolometric_magnitude_extra": 0.0165711313694209,
+      "naive_candle_distance_mpc": 30.89501039702699,
+      "line_fractional_width_ratio": 1.0,
+      "extra_frequency_dependent_delay_seconds": 0.0
+    },
+    {
+      "distance_mpc": 40.7,
+      "stretch": 1.0101816868803175,
+      "redshift": 0.010181686880317509,
+      "bolometric_flux_ratio": 0.9799434575582491,
+      "photon_rate_ratio": 0.9899209350035232,
+      "event_fluence_ratio": 0.9899209350035229,
+      "temperature_inferred_kelvin": 5939.525610021138,
+      "thermal_shape_amplitude": 1.0204670405083638,
+      "thermal_shape_relative_error": 6.661338147750939e-16,
+      "bolometric_magnitude_extra": 0.021997455612821574,
+      "naive_candle_distance_mpc": 41.11439465602893,
+      "line_fractional_width_ratio": 1.0,
+      "extra_frequency_dependent_delay_seconds": 0.0
+    },
+    {
+      "distance_mpc": 100,
+      "stretch": 1.0252022732359374,
+      "redshift": 0.025202273235937378,
+      "bolometric_flux_ratio": 0.951438845747468,
+      "photon_rate_ratio": 0.9754172675052809,
+      "event_fluence_ratio": 0.9754172675052806,
+      "temperature_inferred_kelvin": 5852.503605031683,
+      "thermal_shape_amplitude": 1.0510397010481336,
+      "thermal_shape_relative_error": 4.440892098500626e-16,
+      "bolometric_magnitude_extra": 0.05404780248850529,
+      "naive_candle_distance_mpc": 102.52022732359374,
+      "line_fractional_width_ratio": 1.0,
+      "extra_frequency_dependent_delay_seconds": 0.0
+    },
+    {
+      "distance_mpc": 1000,
+      "stretch": 1.2826129041824508,
+      "redshift": 0.2826129041824508,
+      "bolometric_flux_ratio": 0.607867312242373,
+      "photon_rate_ratio": 0.7796584587127708,
+      "event_fluence_ratio": 0.7796584587127706,
+      "temperature_inferred_kelvin": 4677.9507522766235,
+      "thermal_shape_amplitude": 1.6450958619753406,
+      "thermal_shape_relative_error": 6.661338147750939e-16,
+      "bolometric_magnitude_extra": 0.5404780248850513,
+      "naive_candle_distance_mpc": 1282.6129041824508,
+      "line_fractional_width_ratio": 1.0,
+      "extra_frequency_dependent_delay_seconds": 0.0
+    }
+  ],
+  "sbf_bolometric_sensitivity": {
+    "apparent_distance_mpc": 40.7,
+    "inferred_static_path_mpc": 40.29385512184402,
+    "naive_distance_bias_percent": 1.007957359572198,
+    "source": "https://arxiv.org/abs/1801.06080",
+    "status": "Idealized calibration sensitivity, not an adopted correction"
+  },
+  "checks": {
+    "planck_integral_error": 8.881784197001252e-16,
+    "lambert_vs_bracket_mpc": 7.105427357601002e-15,
+    "energy_photon_rate_and_shape": "pass"
+  },
+  "missing": [
+    "physical endpoint clock coupling",
+    "local rods and clocks",
+    "causal interaction and momentum closure",
+    "derived spatial coupling",
+    "passband and source calibration likelihood",
+    "fresh observed spectra/flux test"
+  ],
+  "sha256": {
+    "research_work/results/electromagnetic-audit/protocol.json": "02387262d72a0a06f06d4f43ac865d7cfe32ade5a309c86d86f674326011a821",
+    "research_work/results/shared-transport-photometry/protocol.md": "fb02b86aebfb1e10225ea08d2ab9fd61fb5ea605c51487eabc3067d2c707014c"
+  }
+}

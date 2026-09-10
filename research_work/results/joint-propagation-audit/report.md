@@ -1,5 +1,7 @@
 # Distinguishing mechanisms with timing, spectra and messenger arrivals
 
+**Arrival-time clarification, requested by the user:** the measured gamma/GW arrival separation is not a direct measurement of unequal travel speeds. Source emission timing enters the calculation below explicitly. The later discovery of optical, X-ray or radio counterparts is not an hours-to-days flight-speed measurement. LIGO's published speed limits depend on source-emission assumptions; this audit never imported them as an unconditional bound. Our conditional exclusion concerns an enormous predicted photon-only delay, not the existence of the 1.74-second observed lag. Equal shared propagation remains compatible with this relative-arrival test. [LIGO explanation](https://ligo.org/science-summaries/gw170817grb/)
+
 **Status: exploratory diagnostic, 2026-09-10.** No physical parameters fitted, fresh holdouts opened or unified theory validated. [Protocol](protocol.json), [calculation](run.py), [numerical results and input hashes](results.json). The familiar equations below are labeled by origin; the proposed physical interpretation has no established originality claim.
 
 Similar-looking redshift formulas can represent very different physics. Ask whether a proposed mechanism also stretches an event, preserves the relative positions of spectral lines, and delays light relative to gravitational waves. Requiring one mechanism to answer all three is more discriminating than fitting another redshift curve.

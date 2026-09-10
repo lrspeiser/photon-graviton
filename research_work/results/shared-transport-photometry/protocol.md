@@ -1,0 +1,11 @@
+# Shared-transport photometry and clock contract
+
+2026-09-10. Previous goal turn made progress by extending method-specific tracer positions and quantifying their uncertainty; no credible physical void map is yet certified. This turn addresses stage 3 without waiting for that map.
+
+Use the fixed alpha from electromagnetic-audit/protocol.json and the shared-messenger affine arrival map from joint-propagation-audit. Additional explicit assumptions for the conditional photometric calculation: static Euclidean geometric dilution, ordinary endpoint clocks, isotropic source, no photon destruction/scattering/lensing, one common frequency-independent spectral and event stretch S=exp(alpha D). These are a specialization for testing, not a completed causal action or a new energy-conservation proof.
+
+Derive flux per frequency by transforming energy, arrival time and frequency-bin width together. Verify bolometric flux, photon arrival rate and integrated event fluence using direct integration of a Planck spectrum at 6000 K. Verify scaled thermal shape with free amplitude separately from an absolute-intensity thermal test. Use fixed synthetic distances 0,30.660139,40.7,100,1000 Mpc; these are predictions, not observed spectra. Use dimensionless integration frequency x=h nu/(kT) from 1e-5 to 80, with quadrature and known Planck integrals as independent checks. Do not use an expanding-universe distance formula to compute predictions.
+
+Derive unresolved standard-candle and ideal same-population SBF distance bias. Treat NGC4993's published 40.7-Mpc SBF distance only as a calibration-sensitivity illustration, not a replacement for its previously stipulated path distance. Invert D_app=D exp(alpha D) using Lambert W and independently bracketed root finding. Baseline calibration anchor stretch is unity in this example; state how a nontrivial anchor changes it. Real SBF passbands, stellar populations, calibration and selection are not modeled.
+
+Derive endpoint clock ratios symbolically; do not invent immunity or score an unspecified clock response as passed. Record which photometric/line predictions are conditional, which clock response remains missing, and what a withheld test would need. All mathematics is known change-of-variables, radiometry, distance-modulus and clock-ratio algebra applied to proposed physics; no novelty claim for these formulas.
