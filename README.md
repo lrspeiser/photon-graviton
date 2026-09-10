@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Brightness-distance consistency:** [Fixed-rate exposed-data sensitivity](research_work/results/brightness-distance-consistency/report.md) finds that ideal shared-stretching dimming changes median inferred path distance by -0.714% and overall redshift RMS from 447.05 to 444.45 km/s. The large scatter remains, and training RMS worsens. Published distances are not overwritten; actual passband/calibration inference and a genuinely withheld test remain required.
+
 **Shared-transport photometry:** [One-rate brightness and spectrum predictions](research_work/results/shared-transport-photometry/report.md) link spectral/event stretching to bolometric dimming, photon arrival rate and calibration bias. Numerical identities pass; ordinary endpoint clocks remain a stated assumption requiring physical completion. The gamma/GW arrival lag includes source timing and does not prove unequal propagation speeds; the earlier conditional photon-only exclusion did not assume simultaneous emission.
 
 **Extended environment geometry:** [Method-specific CF4 coordinates](research_work/results/extended-environment-geometry/report.md) provide 774 selected distance-indicator tracers out to 131.8 Mpc, but only 16 beyond 50 Mpc. Distance-error propagation and three proximity definitions quantify sparsity and distance/environment degeneracy. The numerical geometry passes its independent check; the result is not a physical void map or a redshift fit. Selection and denser-tracer calibration remain required.

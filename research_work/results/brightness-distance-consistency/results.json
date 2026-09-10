@@ -1,0 +1,296 @@
+{
+  "status": "Exposed-data bolometric distance sensitivity only; original distances and rate not changed.",
+  "alpha_per_mpc": 0.0002488993286382367,
+  "scenarios": [
+    {
+      "p": 0,
+      "anchor_mpc": 0,
+      "all": {
+        "n": 164,
+        "rms_kms": 447.04554302478647,
+        "bias_kms": 14.259446557216895,
+        "mae_kms": 328.23610113684146
+      },
+      "historical_partitions": {
+        "test": {
+          "n": 25,
+          "rms_kms": 415.41397827858333,
+          "bias_kms": 74.11981106373497,
+          "mae_kms": 340.3195258891395
+        },
+        "train": {
+          "n": 104,
+          "rms_kms": 457.57748763316135,
+          "bias_kms": -28.30853672813347,
+          "mae_kms": 330.8364944203177
+        },
+        "validation": {
+          "n": 35,
+          "rms_kms": 437.06521235990186,
+          "bias_kms": 97.98976510045937,
+          "mae_kms": 311.8782005571562
+        }
+      },
+      "distance_change_percent_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "prediction_change_kms_min_median_max": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "p": 0.5,
+      "anchor_mpc": 0,
+      "all": {
+        "n": 164,
+        "rms_kms": 445.08918769141656,
+        "bias_kms": -2.189833982142024,
+        "mae_kms": 325.9081250741384
+      },
+      "historical_partitions": {
+        "test": {
+          "n": 25,
+          "rms_kms": 408.72929127524014,
+          "bias_kms": 56.21022242944631,
+          "mae_kms": 332.277088853768
+        },
+        "train": {
+          "n": 104,
+          "rms_kms": 457.81945990065935,
+          "bias_kms": -44.21674828055706,
+          "mae_kms": 329.268699855685
+        },
+        "validation": {
+          "n": 35,
+          "rms_kms": 431.4218314722662,
+          "bias_kms": 80.97581392487096,
+          "mae_kms": 311.37315730923603
+        }
+      },
+      "distance_change_percent_min_median_max": [
+        -1.1400571976984297,
+        -0.3589667415539233,
+        -0.12675569923138452
+      ],
+      "prediction_change_kms_min_median_max": [
+        -81.13117877191148,
+        -7.824141886863044,
+        -0.9676411009965564
+      ]
+    },
+    {
+      "p": 0.5,
+      "anchor_mpc": 1,
+      "all": {
+        "n": 164,
+        "rms_kms": 445.1068056161079,
+        "bias_kms": -1.8490891556364648,
+        "mae_kms": 325.9473720582895
+      },
+      "historical_partitions": {
+        "test": {
+          "n": 25,
+          "rms_kms": 408.8167983572718,
+          "bias_kms": 56.576984871349524,
+          "mae_kms": 332.3974216725005
+        },
+        "train": {
+          "n": 104,
+          "rms_kms": 457.8003150946212,
+          "bias_kms": -43.885594133046425,
+          "mae_kms": 329.30848329481074
+        },
+        "validation": {
+          "n": 35,
+          "rms_kms": 431.50813562910037,
+          "bias_kms": 81.32647275796315,
+          "mae_kms": 311.3528918024754
+        }
+      },
+      "distance_change_percent_min_median_max": [
+        -1.1278928398895105,
+        -0.34661011826256916,
+        -0.11434148173526948
+      ],
+      "prediction_change_kms_min_median_max": [
+        -80.26562606811227,
+        -7.55482044491058,
+        -0.8728722683887284
+      ]
+    },
+    {
+      "p": 0.5,
+      "anchor_mpc": 10,
+      "all": {
+        "n": 164,
+        "rms_kms": 445.2808360029406,
+        "bias_kms": 1.2195233667989336,
+        "mae_kms": 326.30081480222276
+      },
+      "historical_partitions": {
+        "test": {
+          "n": 25,
+          "rms_kms": 409.6222410983407,
+          "bias_kms": 59.87990169915289,
+          "mae_kms": 333.48109124517555
+        },
+        "train": {
+          "n": 104,
+          "rms_kms": 457.64236037332233,
+          "bias_kms": -40.903351454165005,
+          "mae_kms": 329.6667571350184
+        },
+        "validation": {
+          "n": 35,
+          "rms_kms": 432.3009906000619,
+          "bias_kms": 84.4843668831247,
+          "mae_kms": 311.17038869694966
+        }
+      },
+      "distance_change_percent_min_median_max": [
+        -1.0183470071195244,
+        -0.2353317770131036,
+        -0.0025441505730361413
+      ],
+      "prediction_change_kms_min_median_max": [
+        -72.47080190067527,
+        -5.1294185900325715,
+        -0.01942183712394236
+      ]
+    },
+    {
+      "p": 1,
+      "anchor_mpc": 0,
+      "all": {
+        "n": 164,
+        "rms_kms": 444.44921990266744,
+        "bias_kms": -18.289060917746248,
+        "mae_kms": 324.27495338197565
+      },
+      "historical_partitions": {
+        "test": {
+          "n": 25,
+          "rms_kms": 403.51206309667003,
+          "bias_kms": 38.6704009528882,
+          "mae_kms": 324.4363113116681
+        },
+        "train": {
+          "n": 104,
+          "rms_kms": 459.3084422455195,
+          "bias_kms": -59.78073649914502,
+          "mae_kms": 328.09831116739855
+        },
+        "validation": {
+          "n": 35,
+          "rms_kms": 427.1141289075801,
+          "bias_kms": 64.31515947367127,
+          "mae_kms": 312.7988631555103
+        }
+      },
+      "distance_change_percent_min_median_max": [
+        -2.2421291825383216,
+        -0.7140997908405777,
+        -0.2530308090521127
+      ],
+      "prediction_change_kms_min_median_max": [
+        -159.53878046702258,
+        -15.56452288810936,
+        -1.9316103299363712
+      ]
+    },
+    {
+      "p": 1,
+      "anchor_mpc": 1,
+      "all": {
+        "n": 164,
+        "rms_kms": 444.4455922713104,
+        "bias_kms": -17.615474821701632,
+        "mae_kms": 324.33600090445464
+      },
+      "historical_partitions": {
+        "test": {
+          "n": 25,
+          "rms_kms": 403.6418467715021,
+          "bias_kms": 39.395312309299435,
+          "mae_kms": 324.67312816446974
+        },
+        "train": {
+          "n": 104,
+          "rms_kms": 459.23427342111927,
+          "bias_kms": -59.126067692508165,
+          "mae_kms": 328.1510559196406
+        },
+        "validation": {
+          "n": 35,
+          "rms_kms": 427.2458069553464,
+          "bias_kms": 65.00829604369413,
+          "mae_kms": 312.75903224503446
+        }
+      },
+      "distance_change_percent_min_median_max": [
+        -2.218334009156564,
+        -0.6895604290569624,
+        -0.22826352929270488
+      ],
+      "prediction_change_kms_min_median_max": [
+        -157.84606966254833,
+        -15.029683474820725,
+        -1.7425400940924023
+      ]
+    },
+    {
+      "p": 1,
+      "anchor_mpc": 10,
+      "all": {
+        "n": 164,
+        "rms_kms": 444.472971052489,
+        "bias_kms": -11.545736088599934,
+        "mae_kms": 324.88610449346226
+      },
+      "historical_partitions": {
+        "test": {
+          "n": 25,
+          "rms_kms": 404.8813209568792,
+          "bias_kms": 45.92754585540098,
+          "mae_kms": 326.8070925327582
+        },
+        "train": {
+          "n": 104,
+          "rms_kms": 458.62166379331376,
+          "bias_kms": -53.22679368364421,
+          "mae_kms": 328.62634415396985
+        },
+        "validation": {
+          "n": 35,
+          "rms_kms": 428.4950386053689,
+          "bias_kms": 71.25420509095952,
+          "mae_kms": 312.400115188457
+        }
+      },
+      "distance_change_percent_min_median_max": [
+        -2.0039224378329834,
+        -0.46843501104464336,
+        -0.005081791287708803
+      ],
+      "prediction_change_kms_min_median_max": [
+        -142.5931103789243,
+        -10.210176005656578,
+        -0.03879397727217326
+      ]
+    }
+  ],
+  "checks": {
+    "max_bracket_vs_lambert_mpc": 2.149391775674303e-13,
+    "max_derivative_relative_error": 4.118918539575134e-10,
+    "forward_distance_roundtrip": "pass"
+  },
+  "sha256": {
+    "redshift_paper/all_164_groups.csv": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+    "research_work/results/electromagnetic-audit/protocol.json": "02387262d72a0a06f06d4f43ac865d7cfe32ade5a309c86d86f674326011a821",
+    "research_work/results/brightness-distance-consistency/protocol.md": "32be579b7e8a2f0aa32137847d22e7157772f07c009128c2d465148a93c44765"
+  }
+}
