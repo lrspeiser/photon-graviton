@@ -1,0 +1,90 @@
+{
+  "scope": "Synthetic local continuity test for the stipulated ideal packet branch; no electromagnetic field theory or observational fit.",
+  "parameters": {
+    "a": 0.1,
+    "seed_energy_per_packet": 0.1,
+    "initial_propagation_energy_per_packet": 1,
+    "time": 8.0,
+    "domain_length": 12.0
+  },
+  "units": "Dimensionless diagnostic; no astronomical calibration.",
+  "runs": [
+    {
+      "cells": 480,
+      "steps": 801,
+      "dx": 0.025,
+      "initial_total_energy": 1.1,
+      "final_photon_energy": 0.5555555555555557,
+      "final_seed_energy": 0.1,
+      "final_moving_reservoir_gain": 0.4444444444444446,
+      "final_stationary_reservoir_gain": 0.4444444444444443,
+      "moving_gain_left_of_x5": 9.03440536117032e-13,
+      "stationary_gain_left_of_x5": 0.29562441550939544,
+      "moving_total_energy_crossed_x5": 1.0999999999977628,
+      "stationary_total_energy_crossed_x5": 0.8043755844892718,
+      "maximum_global_energy_error": 4.440892098500626e-16,
+      "maximum_control_volume_error": 1.3322676295501878e-15,
+      "number_density_L1_error": 0.6412525937572203,
+      "exact_packet_support": [
+        6.877866649021191,
+        7.877866649021191
+      ],
+      "exact_stationary_gain_left_of_x5": 0.2951967822798502,
+      "stationary_control_error": 0.0004276332295452545
+    },
+    {
+      "cells": 960,
+      "steps": 1601,
+      "dx": 0.0125,
+      "initial_total_energy": 1.1,
+      "final_photon_energy": 0.5555555555555557,
+      "final_seed_energy": 0.1,
+      "final_moving_reservoir_gain": 0.44444444444444464,
+      "final_stationary_reservoir_gain": 0.4444444444444444,
+      "moving_gain_left_of_x5": 8.47540254467033e-22,
+      "stationary_gain_left_of_x5": 0.2954107985265876,
+      "moving_total_energy_crossed_x5": 1.0999999999999972,
+      "stationary_total_energy_crossed_x5": 0.8045892014734116,
+      "maximum_global_energy_error": 6.661338147750939e-16,
+      "maximum_control_volume_error": 2.886579864025407e-15,
+      "number_density_L1_error": 0.4233453948565262,
+      "exact_packet_support": [
+        6.877866649021191,
+        7.877866649021191
+      ],
+      "exact_stationary_gain_left_of_x5": 0.2951967822798502,
+      "stationary_control_error": 0.00021401624673739184
+    },
+    {
+      "cells": 1920,
+      "steps": 3200,
+      "dx": 0.00625,
+      "initial_total_energy": 1.1,
+      "final_photon_energy": 0.555555555555556,
+      "final_seed_energy": 0.10000000000000007,
+      "final_moving_reservoir_gain": 0.4444444444444444,
+      "final_stationary_reservoir_gain": 0.44444444444444386,
+      "moving_gain_left_of_x5": 6.552390353251646e-39,
+      "stationary_gain_left_of_x5": 0.2953038403487939,
+      "moving_total_energy_crossed_x5": 1.0999999999999999,
+      "stationary_total_energy_crossed_x5": 0.8046961596512044,
+      "maximum_global_energy_error": 6.661338147750939e-16,
+      "maximum_control_volume_error": 1.9984014443252818e-15,
+      "number_density_L1_error": 0.2548083008305707,
+      "exact_packet_support": [
+        6.877866649021191,
+        7.877866649021191
+      ],
+      "exact_stationary_gain_left_of_x5": 0.2951967822798502,
+      "stationary_control_error": 0.00010705806894373282
+    }
+  ],
+  "source_hashes": {
+    "research_work\\results\\reservoir-energy-current\\run.py": "0b92dd6d8318e2b271e038a2afc9ee0db1ad9ce5cf142d1fcb9958147052b017",
+    "research_work\\results\\internal-companion-reservoir\\run.py": "d417cf0ccb13e75a5097b18c29694a0199753da02596a53d1232fdb9531c65e8"
+  },
+  "seed_energy_included": true,
+  "creation_mechanism_derived": false,
+  "relativistic_stress_tensor_derived": false,
+  "holdouts_opened": false
+}
