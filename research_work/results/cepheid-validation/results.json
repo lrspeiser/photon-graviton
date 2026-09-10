@@ -1,0 +1,88 @@
+{
+  "role": "Reserved validation stars from an already examined Gaia catalog; conditional Jeans-pipeline test, not independent astrophysical evidence",
+  "pre_spatial_candidates": 433,
+  "selected_validation_stars": 167,
+  "selected_modes": {
+    "FUNDAMENTAL": 110,
+    "FIRST_OVERTONE": 57
+  },
+  "evaluated_bins": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "unscored_bins": [
+    {
+      "bin": 9,
+      "n": 3,
+      "reason": "Below five stars"
+    },
+    {
+      "bin": 10,
+      "n": 0,
+      "reason": "Below five stars"
+    },
+    {
+      "bin": 11,
+      "n": 1,
+      "reason": "Below five stars"
+    }
+  ],
+  "scores": {
+    "original_ordinary": {
+      "bins": 9,
+      "rms_kms": 67.74083408484941,
+      "bias_kms": -66.82823360778154,
+      "underpredicted_bins": 9,
+      "median_prediction_to_proxy": 0.7352889474222081
+    },
+    "original_completion": {
+      "bins": 9,
+      "rms_kms": 15.362213219965838,
+      "bias_kms": -13.833176527234988,
+      "underpredicted_bins": 9,
+      "median_prediction_to_proxy": 0.9364747953563071
+    },
+    "balanced_ordinary": {
+      "bins": 9,
+      "rms_kms": 64.52492059497689,
+      "bias_kms": -63.277209528620915,
+      "underpredicted_bins": 9,
+      "median_prediction_to_proxy": 0.7481802153982516
+    },
+    "balanced_completion": {
+      "bins": 9,
+      "rms_kms": 12.358642062338598,
+      "bias_kms": -9.911943167604555,
+      "underpredicted_bins": 8,
+      "median_prediction_to_proxy": 0.9555216283688259
+    }
+  },
+  "max_coarse_refined_change_kms": {
+    "original_ordinary": 0.00764116499195211,
+    "original_completion": 0.009859870396184078,
+    "balanced_ordinary": 0.008260868876675431,
+    "balanced_completion": 0.006771439092489118
+  },
+  "primary_model": "original_completion",
+  "secondary_model": "balanced_completion",
+  "parameters_fitted_on_validation": false,
+  "final_test_outcomes_opened": false,
+  "validation_now_exposed": true,
+  "selected_catalog_sha256": "71816b28fa1ed85cdab11be3ed144c481c1a3a574b8c6e2ca734ac90e370bd33",
+  "protocol_sha256": "c327b0809395cc4f76caf091c774e4af32d335a97d461894c559b43470ec965c",
+  "limitations": [
+    "Same Gaia calibration and Galactic population as training; published aggregate curves already exposed.",
+    "Conditional validation of a frozen approximate pipeline, not a full selection/orbit likelihood or a new independent catalog.",
+    "Published calibration and adopted radial profiles are shared assumptions.",
+    "Mass adjustment is exploratory and lacks independent allowed-mass priors.",
+    "No photon production, event timing, transport, storage, lensing or source-energy validation.",
+    "Validation becomes exposed once evaluated; later retuning is not fresh validation."
+  ]
+}

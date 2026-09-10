@@ -1,0 +1,22 @@
+{
+  "frozen_hashes_unchanged": true,
+  "validation_ids_disjoint_from_train_and_test": true,
+  "spatial_and_bin_count_checks": true,
+  "minimum_count_rule_obeyed": true,
+  "max_metric_reconstruction_error": 0.0,
+  "training_metrics_on_same_bin_indices": {
+    "original_ordinary": {
+      "bins": 9,
+      "rms_kms": 70.44282578092108
+    },
+    "original_completion": {
+      "bins": 9,
+      "rms_kms": 17.608758287886477
+    },
+    "balanced_completion": {
+      "bins": 9,
+      "rms_kms": 14.481032376535184
+    }
+  },
+  "qualification": "Matched-bin training values use their own stars and mean radii; they are descriptive comparisons, not identical data or independent systematic-error realizations."
+}
