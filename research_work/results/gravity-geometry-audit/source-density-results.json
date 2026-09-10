@@ -1,0 +1,71 @@
+{
+  "probe_count": 63,
+  "parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "models": {
+    "baryon": {
+      "minimum_density_Msun_pc3": -2.7304117892398255e-05,
+      "maximum_density_Msun_pc3": 3.101708922511971,
+      "negative_probe_count": 1,
+      "minimum_probe": {
+        "bar_order": 64,
+        "h_kpc": 0.001,
+        "R_kpc": 0.5,
+        "z_kpc": 4.0,
+        "baryon_density_Msun_pc3": -2.7304117892398255e-05,
+        "spherical_density_Msun_pc3": 0.025413699049683672,
+        "shape_density_Msun_pc3": 0.008270357127381117,
+        "shape_divergence_density_Msun_pc3": 0.008270357391387387,
+        "declared_baryon_density_Msun_pc3": 3.723015074879201e-05,
+        "shape_with_declared_source_Msun_pc3": 0.00830332341024185
+      }
+    },
+    "spherical": {
+      "minimum_density_Msun_pc3": 0.001118395915072864,
+      "maximum_density_Msun_pc3": 0.4495011880265364,
+      "negative_probe_count": 0,
+      "minimum_probe": {
+        "bar_order": 64,
+        "h_kpc": 0.001,
+        "R_kpc": 20.0,
+        "z_kpc": 4.0,
+        "baryon_density_Msun_pc3": 5.866487644774876e-06,
+        "spherical_density_Msun_pc3": 0.001118395915072864,
+        "shape_density_Msun_pc3": 0.0010676410206348613,
+        "shape_divergence_density_Msun_pc3": 0.0010676410232167768,
+        "declared_baryon_density_Msun_pc3": 4.04207499920144e-06,
+        "shape_with_declared_source_Msun_pc3": 0.0010648683314586477
+      }
+    },
+    "shape": {
+      "minimum_density_Msun_pc3": 0.0010676410206348613,
+      "maximum_density_Msun_pc3": 0.6376957994915698,
+      "negative_probe_count": 0,
+      "minimum_probe": {
+        "bar_order": 64,
+        "h_kpc": 0.001,
+        "R_kpc": 20.0,
+        "z_kpc": 4.0,
+        "baryon_density_Msun_pc3": 5.866487644774876e-06,
+        "spherical_density_Msun_pc3": 0.001118395915072864,
+        "shape_density_Msun_pc3": 0.0010676410206348613,
+        "shape_divergence_density_Msun_pc3": 0.0010676410232167768,
+        "declared_baryon_density_Msun_pc3": 4.04207499920144e-06,
+        "shape_with_declared_source_Msun_pc3": 0.0010648683314586477
+      }
+    }
+  },
+  "asymptotic_if_extended_around_finite_baryonic_mass": {
+    "g_exponent": -0.9249174840208798,
+    "enclosed_source_mass_exponent": 1.0750825159791202,
+    "potential_growth_exponent": 0.07508251597912019,
+    "finite_potential_at_infinity": false,
+    "finite_total_equivalent_mass": false
+  },
+  "scope": "Conditional ordinary positive-source Poisson interpretation. No global positivity proof, photon/graviton identity, capture law, energy normalization or observational fit. No heldout score evaluated.",
+  "fit_sha256": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f"
+}

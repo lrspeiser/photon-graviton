@@ -1,0 +1,34 @@
+{
+  "spherical": {
+    "negative_probes_in_any_run": 0,
+    "max_step_change_Msun_pc3": 0.0,
+    "max_bar_order_change_Msun_pc3": 1.3524953990026733e-05,
+    "minimum_density_minus_step_and_order_changes_Msun_pc3": 0.0011183874238658372
+  },
+  "shape": {
+    "negative_probes_in_any_run": 0,
+    "max_step_change_Msun_pc3": 0.00012680690672312034,
+    "max_bar_order_change_Msun_pc3": 0.0008582671642666795,
+    "minimum_density_minus_step_and_order_changes_Msun_pc3": 0.0010676279669498009
+  },
+  "chain_rule_vs_acceleration_divergence_max_difference_Msun_pc3": 1.1674288799001786e-06,
+  "declared_baryon_minimum_Msun_pc3": 4.04207499920144e-06,
+  "maximum_baryonic_density_reconstruction_error_Msun_pc3": 0.006908939476163223,
+  "maximum_shape_change_when_using_declared_density_Msun_pc3": 0.0013290248230786172,
+  "shape_source_substitution_minimum_Msun_pc3": 0.0010648683314586477,
+  "negative_reconstructed_baryon_examples": [
+    {
+      "bar_order": 64,
+      "h_kpc": 0.001,
+      "R_kpc": 0.5,
+      "z_kpc": 4.0,
+      "baryon_density_Msun_pc3": -2.7304117892398255e-05,
+      "spherical_density_Msun_pc3": 0.025413699049683672,
+      "shape_density_Msun_pc3": 0.008270357127381117,
+      "shape_divergence_density_Msun_pc3": 0.008270357391387387,
+      "declared_baryon_density_Msun_pc3": 3.723015074879201e-05,
+      "shape_with_declared_source_Msun_pc3": 0.00830332341024185
+    }
+  ],
+  "limits": "Finite probe and resolution diagnostics, not a global positivity theorem or rigorous error bound. Declared-source substitution is a sensitivity check, not the exact Laplacian of the cached potential."
+}

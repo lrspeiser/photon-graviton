@@ -79,3 +79,8 @@ The finding supports the user's proposed above/below-disk comparison: it can dis
 Before a full bulge fit, resolve the flagged catalog associations and distance likelihoods, build the shared orbit-population/selection model, and evaluate reserved observations with the complete procedure frozen. A good three-dimensional gravity fit would still leave photon origin, event timing, companion transport/capture, lensing and the deferred total source-energy budget to establish. Those requirements are not replaced by this geometric result.
 
 Sources: [Eilers et al. rotation inference](https://arxiv.org/abs/1810.09466), [Bovy & Rix vertical inference](https://arxiv.org/abs/1309.0809), and the archived bar-field and joint-galaxy-audit provenance. Formula labels above distinguish established mathematics, empirical fitting and additional hypothesis choices throughout.
+
+
+## Subsequent source check
+
+The [source-density audit](source-density-report.md) reconstructs the conditional Newtonian sources, tests positivity and numerical sensitivity, and identifies the required exterior boundary specification. A finite positive-source spherical continuation is possible; its radius and capture cause are not yet predicted.
