@@ -1,0 +1,362 @@
+{
+  "scope": "Six duration probes, not stationary-population validation or a likelihood.",
+  "indices": [
+    0,
+    16,
+    24,
+    40,
+    48,
+    64
+  ],
+  "selection": "First seed in low/high-height stratum at each of three radii.",
+  "duration_kpc_per_kms": 1.0,
+  "rows": [
+    {
+      "seed_index": 0,
+      "source_id": "4066775653524363648",
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 21872
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 52034,
+          "position_difference_kpc": 0.0005162242190257125,
+          "velocity_difference_kms": 0.07233887804350944,
+          "passed": false
+        },
+        {
+          "rtol": 2e-13,
+          "nfev": 212999,
+          "position_difference_kpc": 0.0010815248514766344,
+          "velocity_difference_kms": 0.17423256564479214,
+          "passed": false
+        }
+      ],
+      "error": null,
+      "numerical_pass": false,
+      "Jacobi_drift_over_220_squared": 1.8035688832948709e-09,
+      "maximum_radius_kpc": 2.5291086688197586,
+      "maximum_absolute_height_kpc": 1.2195106280571655,
+      "occupation_windows": [
+        {
+          "duration_kpc_per_kms": 0.25,
+          "spatial_TV": 0.6679999999999999,
+          "R_z_TV": 0.47200000000000003,
+          "half_sampling_spatial_TV": 0.672
+        },
+        {
+          "duration_kpc_per_kms": 0.5,
+          "spatial_TV": 0.672,
+          "R_z_TV": 0.542,
+          "half_sampling_spatial_TV": 0.664
+        },
+        {
+          "duration_kpc_per_kms": 1.0,
+          "spatial_TV": 0.483,
+          "R_z_TV": 0.225,
+          "half_sampling_spatial_TV": 0.48400000000000004
+        }
+      ],
+      "first_quarter_vs_full_TV": 0.372,
+      "last_two_quarters_TV": 0.6300000000000001,
+      "trajectory_sha256": "7c459072155485ac5033c38d8ef25aa0c53c23cae95d68fc6c685a2f44222bd0",
+      "seconds": 170.497371999998
+    },
+    {
+      "seed_index": 16,
+      "source_id": "4109975598504206336",
+      "distance_disagreement_flag": true,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 22616
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 52364,
+          "position_difference_kpc": 0.00048353366518871847,
+          "velocity_difference_kms": 0.11437430712454143,
+          "passed": false
+        },
+        {
+          "rtol": 2e-13,
+          "nfev": 223232,
+          "position_difference_kpc": 0.00010737510930797698,
+          "velocity_difference_kms": 0.027591596346275737,
+          "passed": false
+        }
+      ],
+      "error": null,
+      "numerical_pass": false,
+      "Jacobi_drift_over_220_squared": 5.653739869806238e-09,
+      "maximum_radius_kpc": 2.0317268894298914,
+      "maximum_absolute_height_kpc": 0.9939251006792901,
+      "occupation_windows": [
+        {
+          "duration_kpc_per_kms": 0.25,
+          "spatial_TV": 0.41600000000000004,
+          "R_z_TV": 0.16,
+          "half_sampling_spatial_TV": 0.43200000000000005
+        },
+        {
+          "duration_kpc_per_kms": 0.5,
+          "spatial_TV": 0.324,
+          "R_z_TV": 0.174,
+          "half_sampling_spatial_TV": 0.32
+        },
+        {
+          "duration_kpc_per_kms": 1.0,
+          "spatial_TV": 0.47400000000000003,
+          "R_z_TV": 0.118,
+          "half_sampling_spatial_TV": 0.482
+        }
+      ],
+      "first_quarter_vs_full_TV": 0.3115,
+      "last_two_quarters_TV": 0.522,
+      "trajectory_sha256": "75316386175e6ca7d6df68107416d19cb16c859f2c6a5ee7afe732a33e8da7db",
+      "seconds": 177.428396599993
+    },
+    {
+      "seed_index": 24,
+      "source_id": "4094154794415342720",
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 7397
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 14123,
+          "position_difference_kpc": 7.568568950517399e-06,
+          "velocity_difference_kms": 0.0004778013883396062,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "numerical_pass": true,
+      "Jacobi_drift_over_220_squared": 1.2874778435654045e-08,
+      "maximum_radius_kpc": 4.44091127125167,
+      "maximum_absolute_height_kpc": 0.023955485473696834,
+      "occupation_windows": [
+        {
+          "duration_kpc_per_kms": 0.25,
+          "spatial_TV": 0.8600000000000001,
+          "R_z_TV": 0.236,
+          "half_sampling_spatial_TV": 0.8640000000000001
+        },
+        {
+          "duration_kpc_per_kms": 0.5,
+          "spatial_TV": 0.244,
+          "R_z_TV": 0.064,
+          "half_sampling_spatial_TV": 0.244
+        },
+        {
+          "duration_kpc_per_kms": 1.0,
+          "spatial_TV": 0.03200000000000001,
+          "R_z_TV": 0.009999999999999995,
+          "half_sampling_spatial_TV": 0.036000000000000004
+        }
+      ],
+      "first_quarter_vs_full_TV": 0.12899999999999998,
+      "last_two_quarters_TV": 0.196,
+      "trajectory_sha256": "96f7c6a744ee7e200e944918dbe625a84a2151acb972233ce396f3b636e03693",
+      "seconds": 13.334362999987206
+    },
+    {
+      "seed_index": 40,
+      "source_id": "6761267878213538176",
+      "distance_disagreement_flag": true,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 13505
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 25580,
+          "position_difference_kpc": 4.879028005529383e-06,
+          "velocity_difference_kms": 0.00026432708305144443,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "numerical_pass": true,
+      "Jacobi_drift_over_220_squared": 1.2054982460931344e-09,
+      "maximum_radius_kpc": 5.138142008953517,
+      "maximum_absolute_height_kpc": 0.9223383459820235,
+      "occupation_windows": [
+        {
+          "duration_kpc_per_kms": 0.25,
+          "spatial_TV": 0.992,
+          "R_z_TV": 0.192,
+          "half_sampling_spatial_TV": 0.992
+        },
+        {
+          "duration_kpc_per_kms": 0.5,
+          "spatial_TV": 0.632,
+          "R_z_TV": 0.09999999999999999,
+          "half_sampling_spatial_TV": 0.64
+        },
+        {
+          "duration_kpc_per_kms": 1.0,
+          "spatial_TV": 0.42600000000000005,
+          "R_z_TV": 0.106,
+          "half_sampling_spatial_TV": 0.42400000000000004
+        }
+      ],
+      "first_quarter_vs_full_TV": 0.35650000000000004,
+      "last_two_quarters_TV": 0.558,
+      "trajectory_sha256": "a4dd4a3697c447630c1c9f386cc959f2eff8d4d129aa825141b0b3450f9d7a1d",
+      "seconds": 23.72970520000672
+    },
+    {
+      "seed_index": 48,
+      "source_id": "4091460273745160320",
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3668
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 6347,
+          "position_difference_kpc": 7.541964259274133e-06,
+          "velocity_difference_kms": 0.000304065253757365,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "numerical_pass": true,
+      "Jacobi_drift_over_220_squared": 2.778763377708037e-10,
+      "maximum_radius_kpc": 8.005201950836753,
+      "maximum_absolute_height_kpc": 0.03829743928319965,
+      "occupation_windows": [
+        {
+          "duration_kpc_per_kms": 0.25,
+          "spatial_TV": 0.9319999999999999,
+          "R_z_TV": 0.036000000000000004,
+          "half_sampling_spatial_TV": 0.9359999999999999
+        },
+        {
+          "duration_kpc_per_kms": 0.5,
+          "spatial_TV": 0.9039999999999999,
+          "R_z_TV": 0.06800000000000003,
+          "half_sampling_spatial_TV": 0.904
+        },
+        {
+          "duration_kpc_per_kms": 1.0,
+          "spatial_TV": 0.8490000000000001,
+          "R_z_TV": 0.417,
+          "half_sampling_spatial_TV": 0.8500000000000001
+        }
+      ],
+      "first_quarter_vs_full_TV": 0.516,
+      "last_two_quarters_TV": 0.9199999999999999,
+      "trajectory_sha256": "35a86519de01fb9046d0cd3f4dd70a245283c9bb7886a37c972cd8f9e4382158",
+      "seconds": 6.637041800000588
+    },
+    {
+      "seed_index": 64,
+      "source_id": "1299110719506880512",
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 6131
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10091,
+          "position_difference_kpc": 7.923600516083009e-08,
+          "velocity_difference_kms": 3.4788909780882476e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "numerical_pass": true,
+      "Jacobi_drift_over_220_squared": 7.0903004312595306e-12,
+      "maximum_radius_kpc": 9.109397190746385,
+      "maximum_absolute_height_kpc": 0.5987052962380044,
+      "occupation_windows": [
+        {
+          "duration_kpc_per_kms": 0.25,
+          "spatial_TV": 0.9959999999999999,
+          "R_z_TV": 0.268,
+          "half_sampling_spatial_TV": 0.992
+        },
+        {
+          "duration_kpc_per_kms": 0.5,
+          "spatial_TV": 0.9319999999999999,
+          "R_z_TV": 0.162,
+          "half_sampling_spatial_TV": 0.9320000000000002
+        },
+        {
+          "duration_kpc_per_kms": 1.0,
+          "spatial_TV": 0.357,
+          "R_z_TV": 0.096,
+          "half_sampling_spatial_TV": 0.36
+        }
+      ],
+      "first_quarter_vs_full_TV": 0.4625,
+      "last_two_quarters_TV": 0.98,
+      "trajectory_sha256": "b04bb3c222898355ecddd9212a71b45c5d4ce9f5b26a42fe95e78a3163a0dc85",
+      "seconds": 10.326410900001065
+    }
+  ],
+  "source_hashes": {
+    "research_work\\data-cache\\training-orbit-launches\\full-field-orbits.npz": "9b6597cb60cf9cd7faf9dd793e6e986aa7210e4e5e10016d9b89499337b29ba3",
+    "research_work\\results\\training-orbit-launches\\launches.json": "cc9b21bfe140eb50ce778dc918016e3970a477566f5d85dd01b8f579ca598686",
+    "research_work\\results\\full-bar-orbits\\run.py": "6227132d019c04c95075759782e6456454ea59661b91300bc5c6f16b69481d54",
+    "research_work\\results\\orbit-duration-audit\\run.py": "0ea26bfb73666fd7ac9159db22ca3b23958c6f1dc44aa121065e876836fff10a",
+    "research_work\\data-cache\\full-bar-completion\\axis-disk-ec0d15eb7bb9.npz": "9ce6b854f866cf434391e730e6941c41d3fc1c1a80f991946b33b938539d7567",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd",
+    "research_work\\data-cache\\full-bar-completion\\axisymmetric-reference-80-L128-N512.npz": "ebdcc0f52093d0048f18a4d7f4d25443f94dc0d9ca68b6f0d871432bef8476f5",
+    "research_work\\data-cache\\full-bar-completion\\finer.npz": "47014aaaf398ba8ecaf45a50ac792ef81dbaab1b67364acc7d4095f551917d6b"
+  },
+  "spatial_bins": {
+    "R_kpc": [
+      "0",
+      "0.5",
+      "3.5",
+      "5",
+      "9",
+      "20",
+      "40",
+      "80",
+      "inf"
+    ],
+    "z_kpc": [
+      "-inf",
+      "-1.5",
+      "-0.5",
+      "-0.2",
+      "0",
+      "0.2",
+      "0.5",
+      "1.5",
+      "inf"
+    ],
+    "phi_rad": [
+      -3.141592653589793,
+      -2.356194490192345,
+      -1.5707963267948966,
+      -0.7853981633974483,
+      0.0,
+      0.7853981633974483,
+      1.5707963267948966,
+      2.356194490192345,
+      3.141592653589793
+    ]
+  },
+  "total_variation_definition": "0.5 sum_bins abs(p_early - p_late); descriptive bin-dependent distance, not a p-value.",
+  "holdouts_opened": false,
+  "population_fit": false,
+  "source_physics_derived": false,
+  "completed": true
+}
