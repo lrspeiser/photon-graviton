@@ -1,0 +1,139 @@
+{
+  "frozen_inputs_unchanged": true,
+  "test_systems": 12,
+  "excluded": [
+    {
+      "Name": "J0405-0455",
+      "reason": "Missing Salpeter mass"
+    }
+  ],
+  "joint_scores": {
+    "baryons": 0.19084998509107076,
+    "shared_stellar_mass": 0.042264067222434275,
+    "stationary_wave": 0.03827519184062718
+  },
+  "wave_minus_mass_primary_score": -0.003988875381807096,
+  "paired_wave_smaller_absolute_error_counts_vs_mass": {
+    "dispersion": 6,
+    "lensing": 5
+  },
+  "individual_scores": {
+    "J0252+0039": {
+      "baryons": 0.22177711069442954,
+      "shared_stellar_mass": 0.03470930375100537,
+      "stationary_wave": 0.07518152143903914
+    },
+    "J0737+3216": {
+      "baryons": 0.1554659928945833,
+      "shared_stellar_mass": 0.019937619395463593,
+      "stationary_wave": 0.06012623111359248
+    },
+    "J0935-0003": {
+      "baryons": 0.9928539769451303,
+      "shared_stellar_mass": 0.2558539688449398,
+      "stationary_wave": 0.03306759812891145
+    },
+    "J0959+0410": {
+      "baryons": 0.0936943756295594,
+      "shared_stellar_mass": 0.000611370912846621,
+      "stationary_wave": 0.07459973858274262
+    },
+    "J1016+3859": {
+      "baryons": 0.09496242106687301,
+      "shared_stellar_mass": 0.0011986913454742865,
+      "stationary_wave": 0.02355699767293306
+    },
+    "J1023+4230": {
+      "baryons": 0.1890567554516256,
+      "shared_stellar_mass": 0.009638904835967544,
+      "stationary_wave": 0.0265931451442689
+    },
+    "J1134+6027": {
+      "baryons": 0.11361008072243305,
+      "shared_stellar_mass": 0.0024873476793313776,
+      "stationary_wave": 0.02200293615291811
+    },
+    "J1250+0523": {
+      "baryons": 0.002724617219164279,
+      "shared_stellar_mass": 0.08739740209635422,
+      "stationary_wave": 0.1248758788415744
+    },
+    "J1443+0304": {
+      "baryons": 0.005305196801760697,
+      "shared_stellar_mass": 0.050669320823457535,
+      "stationary_wave": 0.003373751464841655
+    },
+    "J2238-0754": {
+      "baryons": 0.048004964522259455,
+      "shared_stellar_mass": 0.020729516617787613,
+      "stationary_wave": 0.004906859860939869
+    },
+    "J2303+1422": {
+      "baryons": 0.26894866384559674,
+      "shared_stellar_mass": 0.0183750603978214,
+      "stationary_wave": 0.005075381842566389
+    },
+    "J2321-0939": {
+      "baryons": 0.10379566529943342,
+      "shared_stellar_mass": 0.005560299968761869,
+      "stationary_wave": 0.005942261843198094
+    }
+  },
+  "post_test_leave_one_out_influence": [
+    {
+      "omitted_for_diagnostic_only": "J0252+0039",
+      "wave_minus_mass_score": -0.008030792933610803
+    },
+    {
+      "omitted_for_diagnostic_only": "J0737+3216",
+      "wave_minus_mass_score": -0.00800501057271036
+    },
+    {
+      "omitted_for_diagnostic_only": "J0935-0003",
+      "wave_minus_mass_score": 0.015901806012213027
+    },
+    {
+      "omitted_for_diagnostic_only": "J0959+0410",
+      "wave_minus_mass_score": -0.011077715659234644
+    },
+    {
+      "omitted_for_diagnostic_only": "J1016+3859",
+      "wave_minus_mass_score": -0.006384073719013079
+    },
+    {
+      "omitted_for_diagnostic_only": "J1023+4230",
+      "wave_minus_mass_score": -0.005892794989998769
+    },
+    {
+      "omitted_for_diagnostic_only": "J1134+6027",
+      "wave_minus_mass_score": -0.006125644823206529
+    },
+    {
+      "omitted_for_diagnostic_only": "J1250+0523",
+      "wave_minus_mass_score": -0.0077586346660823
+    },
+    {
+      "omitted_for_diagnostic_only": "J1443+0304",
+      "wave_minus_mass_score": -5.1903202097202215e-05
+    },
+    {
+      "omitted_for_diagnostic_only": "J2238-0754",
+      "wave_minus_mass_score": -0.002913077074985215
+    },
+    {
+      "omitted_for_diagnostic_only": "J2303+1422",
+      "wave_minus_mass_score": -0.0031424387296754633
+    },
+    {
+      "omitted_for_diagnostic_only": "J2321-0939",
+      "wave_minus_mass_score": -0.004386224223283757
+    }
+  ],
+  "checks": {
+    "max_sigma_resolution_change_km_s": 4.2122135141653416e-05,
+    "max_angle_resolution_change_arcsec": 0.0,
+    "max_projected_mass_identity_relative_error": 6.796341267545358e-12,
+    "mass_scaling_identity_relative_error": 2.220446049250313e-16
+  },
+  "status": "First fixed-protocol test completed; these residuals are now exposed and cannot be reused as a fresh test after development"
+}

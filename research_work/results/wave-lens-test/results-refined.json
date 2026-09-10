@@ -1,0 +1,139 @@
+{
+  "classification": "Fixed shared-parameter conditional test comparison; not capture theory",
+  "systems": 3,
+  "protocol": {
+    "status": "Written before this wave-model training score; historical training data already exposed",
+    "role": "test",
+    "field_mass_eV_c2": 1e-24,
+    "source_to_stellar_mass_ratio": 0.6,
+    "choice": "Frozen training-selected common parameters",
+    "stellar_mass": "Archived Salpeter population normalization with energy loss and event stretching; fixed population assumptions retained",
+    "stellar_orbits": "Spherical isotropic Jeans moments, Hernquist tracer",
+    "seeing_fwhm_arcsec": 1.5,
+    "aperture_diameter_arcsec": 3.0,
+    "geometry": "Archived static Euclidean redshift-derived geometry",
+    "comparison": "Same photometric stellar masses under ordinary gravity and stationary wave-source gravity",
+    "tuning_to_sigma_or_lens_angle": false,
+    "holdout_scoring": false,
+    "evaluation_protocol": {
+      "status": "Frozen before preparing or predicting test-role galaxies; first test-role model scoring",
+      "sample_role": "test",
+      "eligibility": "Original test role, E morphology, available spectroscopic dispersion, finite published Salpeter mass, positive updated I-band radius",
+      "primary_comparison": "Frozen wave versus frozen common-stellar-mass benchmark; also report original ordinary-mass baseline",
+      "parameters": {
+        "field_mass_eV_c2": 1e-24,
+        "source_fraction": 0.6,
+        "common_stellar_mass_multiplier": 1.645362158609144,
+        "stellar_beta": 0.0
+      },
+      "preserved_assumptions": "Same conditional Salpeter luminosity normalization, energy-loss-plus-event-stretch branch, archived static geometry, Hernquist profiles, 3 arcsec aperture, 1.5 arcsec Gaussian seeing",
+      "primary_score": "Same equal-weight mean squared log dispersion and lens-angle residual score used in training; lower is better",
+      "secondary_metrics": "Both RMS errors, median ratios, mean biases, per-object predictions and all exclusions",
+      "interpretation": "Conditional predictive test of calibrated profiles, not a full uncertainty likelihood, pristine data blinding or proof of photon origin",
+      "history": "Public catalog and some aggregate sample information previously accessed; no prior model predictions or residual selection for test-role systems",
+      "failure_handling": "Keep numerical failures explicit and do not omit systems based on outcomes",
+      "no_refitting": true,
+      "no_orbital_grid": true,
+      "future_use": "After this run the test residuals are exposed. Later changes require a new independent test sample.",
+      "frozen_inputs": {
+        "wave-lens-training/parameter-grid/selected-calibration.json": "92dcffd28a9fc2e623d77383206bc708138084f581a8440e80ccb0e039618efd",
+        "stellar-mass-degeneracy/frozen-calibration.json": "4cd4700900f25d3d346bfd0755405b97ef00308c8eb7c9b1bca6732c4758dc9c",
+        "wave-lens-training/run.py": "2f90a78287703967dc496f71daf1049267936b585503d91dd918cd0bb231320a",
+        "wave-lens-validation/prepare.py": "2eb68017ce69106ad807165e344a7b6e310336b9bfc523ccb428e7fbf7cdd9b6",
+        "self-consistent-wave/run.py": "7df026f5b2508a30326f0b9601ad8002e92704cbaf65ee49a295cb80cc39b6ce",
+        "lensing-data-readiness/lens-observations-and-image-models.json": "e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+        "lensing-data-readiness/conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+        "lens-photometric-audit/source-tables/table3.dat": "1a5023ec92db956076e73bf1d788f8695027a4db9e3e482ff7d143a4be9c2c0c",
+        "lens-photometric-audit/source-tables/table4.dat": "b22e49621789b935329b0b0c27a27b2297008553baa8f0c474c095eaba37e11b"
+      }
+    }
+  },
+  "scores": {
+    "baryons": {
+      "sigma_rmse_km_s": 116.16572768220126,
+      "sigma_mean_residual_km_s": -78.1234575253391,
+      "theta_rmse_arcsec": 0.45795292864458803,
+      "theta_mean_residual_arcsec": -0.3848762678236355,
+      "median_sigma_pred_over_observed": 0.8979695028191258,
+      "median_theta_pred_over_SIE": 0.5182766854173257
+    },
+    "stationary_wave": {
+      "sigma_rmse_km_s": 51.76841133127737,
+      "sigma_mean_residual_km_s": -33.17478534515178,
+      "theta_rmse_arcsec": 0.1945096945216309,
+      "theta_mean_residual_arcsec": -0.13089145291061363,
+      "median_sigma_pred_over_observed": 0.9228420260731074,
+      "median_theta_pred_over_SIE": 0.9480418756160519
+    },
+    "shared_stellar_mass": {
+      "sigma_rmse_km_s": 87.02157703551109,
+      "sigma_mean_residual_km_s": -27.74054771294492,
+      "theta_rmse_arcsec": 0.2863140237895037,
+      "theta_mean_residual_arcsec": -0.10673897899969213,
+      "median_sigma_pred_over_observed": 1.1518404865100698,
+      "median_theta_pred_over_SIE": 0.8006421082273367
+    }
+  },
+  "equilibrium_checks": [
+    {
+      "eta": 1.0263371313072558,
+      "source_to_baryon_mass_ratio": 0.6,
+      "domain_over_a": 90,
+      "inner_radius_over_a": 0.0005,
+      "eigenvalue": -0.38238996162407585,
+      "half_mass_radius_over_a": 2.335135685111615,
+      "normalization_relative_error": 1.8476664642719243e-11,
+      "virial_relative_residual": 7.013535671816822e-11,
+      "kinetic_energy": 0.0939290539928842,
+      "self_gravitational_energy": -0.06526615209966327,
+      "external_potential_energy": -0.1928307267627092,
+      "mass_fraction_beyond_0p8_domain": 0.0,
+      "max_solver_rms_residual": 1.9877760947500054e-09,
+      "Name": "J0252+0039",
+      "max_dimensionless_potential_depth_over_c2": 3.88295044526762e-06
+    },
+    {
+      "eta": 0.17712663803914575,
+      "source_to_baryon_mass_ratio": 0.6,
+      "domain_over_a": 90,
+      "inner_radius_over_a": 0.0005,
+      "eigenvalue": -1.0178068233433621,
+      "half_mass_radius_over_a": 0.7090534068004366,
+      "normalization_relative_error": 4.1126901884069866e-10,
+      "virial_relative_residual": 9.082982258384888e-10,
+      "kinetic_energy": 0.17652703550942697,
+      "self_gravitational_energy": -0.21610582799783898,
+      "external_potential_energy": -0.3549994732684886,
+      "mass_fraction_beyond_0p8_domain": 0.0,
+      "max_solver_rms_residual": 1.99849265324748e-09,
+      "Name": "J0935-0003",
+      "max_dimensionless_potential_depth_over_c2": 1.0009755556646645e-05
+    },
+    {
+      "eta": 8.327962228434618,
+      "source_to_baryon_mass_ratio": 0.6,
+      "domain_over_a": 90,
+      "inner_radius_over_a": 0.0005,
+      "eigenvalue": -0.08636734863919755,
+      "half_mass_radius_over_a": 11.606330961883982,
+      "normalization_relative_error": 6.277034447776941e-11,
+      "virial_relative_residual": 2.967354375840884e-07,
+      "kinetic_energy": 0.031289688899843036,
+      "self_gravitational_energy": -0.013051251621267407,
+      "external_potential_energy": -0.05700759483291543,
+      "mass_fraction_beyond_0p8_domain": 8.810079465959575e-07,
+      "max_solver_rms_residual": 1.272651885519836e-09,
+      "Name": "J1443+0304",
+      "max_dimensionless_potential_depth_over_c2": 5.887342405389678e-06
+    }
+  ],
+  "input_sha256": {
+    "wave-lens-training\\protocol.json": "d01295f259b5ca18db7e6aa122fb993335e9614cd22f840f468c00ad9dc333d9",
+    "wave-lens-test\\mass-inputs.json": "d4663bbabaa8767e2e44e705c7fa0c15e55223759ce4aec3379eed564ff6446c",
+    "lensing-data-readiness\\lens-observations-and-image-models.json": "e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+    "lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "wave-lens-test\\protocol.json": "ac51895ced5e649f107bdfcecea229f41cb5f188ec62d24d0393c4ab9b82225d",
+    "wave-lens-training\\parameter-grid\\selected-calibration.json": "92dcffd28a9fc2e623d77383206bc708138084f581a8440e80ccb0e039618efd",
+    "stellar-mass-degeneracy\\frozen-calibration.json": "4cd4700900f25d3d346bfd0755405b97ef00308c8eb7c9b1bca6732c4758dc9c"
+  }
+}
