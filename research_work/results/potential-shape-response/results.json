@@ -1,0 +1,170 @@
+{
+  "classification": "Post-exposure hypothetical shape extension using known coordinate deformation; not a derived companion mechanism or fresh holdout",
+  "formula": "Phi_total(R,z)=lambda Phi_b(R,z)+lambda^p Phi_c_original(R,z/q)",
+  "lambda_scope": "All ordinary matter scales together with fixed geometry; not a stellar-only mass-to-light change or observationally justified mass prior.",
+  "parameters_p": 0.4624587420104399,
+  "extended_bounds": {
+    "lambda_mass": [0.5, 1.6],
+    "inverse_q": [0.0, 2.0],
+    "zero_inverse_q_is_cylindrical_limit": true
+  },
+  "bounds": {
+    "lambda_mass": [
+      0.5,
+      1.6
+    ],
+    "q_potential": [
+      0.5,
+      4.0
+    ]
+  },
+  "cases": [
+    {
+      "case": "original",
+      "lambda_mass": 1.0,
+      "q_potential": 1.0,
+      "metrics": {
+        "rotation_rms_kms": 18.792085091038476,
+        "rotation_bias_kms": -17.831151044178124,
+        "vertical_rms_surface_equivalent": 33.312736978065644,
+        "vertical_bias_surface_equivalent": 30.92280095990619,
+        "equal_observable_log_mse": 0.05075889456291617
+      },
+      "q_at_search_boundary": false
+    },
+    {
+      "case": "shape_only",
+      "lambda_mass": 1.0,
+      "q_potential": 1.8464986106615675,
+      "metrics": {
+        "rotation_rms_kms": 18.792085091038476,
+        "rotation_bias_kms": -17.831151044178124,
+        "vertical_rms_surface_equivalent": 15.182848641141609,
+        "vertical_bias_surface_equivalent": 2.0199097237363515,
+        "equal_observable_log_mse": 0.01504262544540304
+      },
+      "q_at_search_boundary": false
+    },
+    {
+      "case": "rotation_mass_original_shape",
+      "lambda_mass": 1.225969911004012,
+      "q_potential": 1.0,
+      "metrics": {
+        "rotation_rms_kms": 6.995307964641563,
+        "rotation_bias_kms": -0.4553453215841756,
+        "vertical_rms_surface_equivalent": 60.319315436661306,
+        "vertical_bias_surface_equivalent": 58.906098116269284,
+        "equal_observable_log_mse": 0.10574140281051016
+      },
+      "q_at_search_boundary": false
+    },
+    {
+      "case": "rotation_mass_then_vertical_shape",
+      "lambda_mass": 1.225969911004012,
+      "q_potential": 4.0,
+      "metrics": {
+        "rotation_rms_kms": 6.995307964641563,
+        "rotation_bias_kms": -0.4553453215841756,
+        "vertical_rms_surface_equivalent": 16.501431916388693,
+        "vertical_bias_surface_equivalent": 10.15969784267507,
+        "equal_observable_log_mse": 0.01580092786532309
+      },
+      "q_at_search_boundary": true
+    },
+    {
+      "case": "joint_compromise",
+      "lambda_mass": 1.1112643580629527,
+      "q_potential": 3.9999999890986677,
+      "metrics": {
+        "rotation_rms_kms": 11.10170447954024,
+        "rotation_bias_kms": -9.043073195107615,
+        "vertical_rms_surface_equivalent": 15.000208723562285,
+        "vertical_bias_surface_equivalent": -1.8100800365042582,
+        "equal_observable_log_mse": 0.010602417373453299
+      },
+      "q_at_search_boundary": true
+    },
+    {
+      "case": "extended_joint_with_cylindrical_limit",
+      "lambda_mass": 1.1793164388593456,
+      "q_potential": null,
+      "metrics": {
+        "rotation_rms_kms": 7.801077650464895,
+        "rotation_bias_kms": -3.895034974366638,
+        "vertical_rms_surface_equivalent": 14.892100122382274,
+        "vertical_bias_surface_equivalent": -2.7273122153216782,
+        "equal_observable_log_mse": 0.009431157498646286
+      },
+      "q_at_search_boundary": true,
+      "note": "q=null means infinite vertical stretch, a limiting diagnostic, not a finite galaxy source."
+    }
+  ],
+  "vertical_nonnegative_addition_floor": {
+    "lambda_mass": 1.225969911004012,
+    "rows_ordinary_already_above_observed": 27,
+    "unavoidable_vertical_rms_lower_bound": 10.750904043516893,
+    "note": "Conditional on fixed ordinary-matter shape, normalization, and published inferred vertical values. Allows arbitrary nonnegative extra pull independently at every row; hence a lower bound, not a realizable fitted model."
+  },
+  "source_diagnostic": [
+    {
+      "q_potential": 1.0,
+      "grid_points": 2501,
+      "negative_points": 0,
+      "negatives_exceeding_10_step_differences": 0,
+      "minimum_effective_density_Msun_kpc3": 146598.95528962495,
+      "minimum_at_R_z_kpc": [
+        27.541666666666664,
+        1.0
+      ],
+      "step_change_at_minimum_Msun_kpc3": 22.476246086967876,
+      "note": "Equivalent Newtonian additional source at lambda=1; sign unchanged by positive lambda^p. Signed effective density is not automatically forbidden in modified field equations, but is incompatible with interpreting that source everywhere as positive deposited mass."
+    },
+    {
+      "q_potential": 1.8464986,
+      "grid_points": 2501,
+      "negative_points": 0,
+      "negatives_exceeding_10_step_differences": 0,
+      "minimum_effective_density_Msun_kpc3": 76114.21105379693,
+      "minimum_at_R_z_kpc": [
+        30.0,
+        2.0
+      ],
+      "step_change_at_minimum_Msun_kpc3": 1.2067413351178402,
+      "note": "Equivalent Newtonian additional source at lambda=1; sign unchanged by positive lambda^p. Signed effective density is not automatically forbidden in modified field equations, but is incompatible with interpreting that source everywhere as positive deposited mass."
+    },
+    {
+      "q_potential": 4.0,
+      "grid_points": 2501,
+      "negative_points": 0,
+      "negatives_exceeding_10_step_differences": 0,
+      "minimum_effective_density_Msun_kpc3": 45624.4010218197,
+      "minimum_at_R_z_kpc": [
+        30.0,
+        4.25
+      ],
+      "step_change_at_minimum_Msun_kpc3": 0.052631637212471105,
+      "note": "Equivalent Newtonian additional source at lambda=1; sign unchanged by positive lambda^p. Signed effective density is not automatically forbidden in modified field equations, but is incompatible with interpreting that source everywhere as positive deposited mass."
+    }
+  ],
+  "optimization_check": {
+    "extended_grid_points": 17871,
+    "grid_minimum_log_score": 0.009431350155777335,
+    "extended_optimizer_no_worse_than_grid": true
+  },
+  "original_scores_reproduced": true,
+  "held_out_outcomes_opened": false,
+  "input_sha256": {
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\results\\conservative-field-completion\\results-refined.json": "400e15d8e969b6ce5bd73a4106307d112048d5c90bea27a035fcb1b3c9739e54",
+    "research_work\\results\\conservative-field-completion\\predictions-refined.json": "30fffcdba0549e5fecfa580e8582ba14ecca06be652afa78b1bfd0cb08a81c0b",
+    "research_work\\results\\cepheid-common-frame\\training-bins.json": "f640a2285dc0b04b3b185e4363eeb3d19564bae921ee9177153d7c0026430cf0"
+  },
+  "limitations": [
+    "No complete observational likelihood or component mass uncertainty.",
+    "Vertical estimates are previously exposed model-dependent Bovy-Rix inferences, not new raw-star force measurements.",
+    "Changing q leaves equatorial extra force unchanged, but changes off-plane geometry.",
+    "No companion transport/capture law predicts q or lambda.",
+    "Positive effective density, stable orbital support and finite outer boundary are separate requirements.",
+    "No relativistic lensing or photon-redshift completion."
+  ]
+}
