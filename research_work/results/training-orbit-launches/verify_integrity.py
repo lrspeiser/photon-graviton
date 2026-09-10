@@ -57,5 +57,5 @@ assert sum(row['parallax_interval_disjoint_5'] for row in seeds) == 3
 result = dict(passed=True, seeds=72, sampled_positions=36072,
               checked_hashes=checked, training_only=True,
               population_fit_validated=False, holdouts_opened=False)
-(HERE / 'integrity.json').write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8')
+(HERE / 'integrity.json').write_text(json.dumps(result, indent=2) + '\n', encoding='utf-8', newline='\n')
 print('Integrity and archived numerical gates passed; no population validation.')
