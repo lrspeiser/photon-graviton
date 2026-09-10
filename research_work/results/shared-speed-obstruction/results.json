@@ -1,0 +1,228 @@
+{
+  "conditional_assumptions": [
+    "Differentiable canonical ray Hamiltonian H_c(t,x,p).",
+    "One canonical momentum, with no extra evolving internal state.",
+    "Energy being retained is this Hamiltonian in a common reference standard.",
+    "Equal nondispersive speed dH_c/dp=c0/n(t,x) for a continuum of positive momenta.",
+    "Retention means dH_c/dt=0 along every free ray, not just one selected energy or endpoint."
+  ],
+  "derived_equations": [
+    "H_c=c0*p/n+B(t,x)",
+    "dH_c/dt=partial_t H_c=-c0*p*n_t/n^2+B_t",
+    "Subtracting two distinct p values forces n_t=0 if both energies are retained everywhere."
+  ],
+  "offset_cases": [
+    {
+      "final_n": 1.01,
+      "momentum": 1.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 1.0,
+      "final_energy": 0.9900990099009901,
+      "energy_fraction_retained": 0.9900990099009901,
+      "integrated_explicit_time_work": -0.00990099009900991,
+      "final_speed": 0.9900990099009901
+    },
+    {
+      "final_n": 1.01,
+      "momentum": 1.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 1.0,
+      "final_energy": 1.00990099009901,
+      "energy_fraction_retained": 1.00990099009901,
+      "integrated_explicit_time_work": 0.00990099009900991,
+      "final_speed": 0.9900990099009901
+    },
+    {
+      "final_n": 1.01,
+      "momentum": 2.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 2.0,
+      "final_energy": 1.9801980198019802,
+      "energy_fraction_retained": 0.9900990099009901,
+      "integrated_explicit_time_work": -0.01980198019801982,
+      "final_speed": 0.9900990099009901
+    },
+    {
+      "final_n": 1.01,
+      "momentum": 2.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 2.0,
+      "final_energy": 2.0,
+      "energy_fraction_retained": 1.0,
+      "integrated_explicit_time_work": 0.0,
+      "final_speed": 0.9900990099009901
+    },
+    {
+      "final_n": 1.01,
+      "momentum": 4.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 4.0,
+      "final_energy": 3.9603960396039604,
+      "energy_fraction_retained": 0.9900990099009901,
+      "integrated_explicit_time_work": -0.03960396039603964,
+      "final_speed": 0.9900990099009901
+    },
+    {
+      "final_n": 1.01,
+      "momentum": 4.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 4.0,
+      "final_energy": 3.98019801980198,
+      "energy_fraction_retained": 0.995049504950495,
+      "integrated_explicit_time_work": -0.01980198019801982,
+      "final_speed": 0.9900990099009901
+    },
+    {
+      "final_n": 1.3,
+      "momentum": 1.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 1.0,
+      "final_energy": 0.7692307692307692,
+      "energy_fraction_retained": 0.7692307692307692,
+      "integrated_explicit_time_work": -0.23076923076923084,
+      "final_speed": 0.7692307692307692
+    },
+    {
+      "final_n": 1.3,
+      "momentum": 1.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 1.0,
+      "final_energy": 1.2307692307692308,
+      "energy_fraction_retained": 1.2307692307692308,
+      "integrated_explicit_time_work": 0.23076923076923084,
+      "final_speed": 0.7692307692307692
+    },
+    {
+      "final_n": 1.3,
+      "momentum": 2.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 2.0,
+      "final_energy": 1.5384615384615383,
+      "energy_fraction_retained": 0.7692307692307692,
+      "integrated_explicit_time_work": -0.4615384615384617,
+      "final_speed": 0.7692307692307692
+    },
+    {
+      "final_n": 1.3,
+      "momentum": 2.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 2.0,
+      "final_energy": 2.0,
+      "energy_fraction_retained": 1.0,
+      "integrated_explicit_time_work": 0.0,
+      "final_speed": 0.7692307692307692
+    },
+    {
+      "final_n": 1.3,
+      "momentum": 4.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 4.0,
+      "final_energy": 3.0769230769230766,
+      "energy_fraction_retained": 0.7692307692307692,
+      "integrated_explicit_time_work": -0.9230769230769234,
+      "final_speed": 0.7692307692307692
+    },
+    {
+      "final_n": 1.3,
+      "momentum": 4.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 4.0,
+      "final_energy": 3.5384615384615383,
+      "energy_fraction_retained": 0.8846153846153846,
+      "integrated_explicit_time_work": -0.4615384615384617,
+      "final_speed": 0.7692307692307692
+    },
+    {
+      "final_n": 2.0,
+      "momentum": 1.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 1.0,
+      "final_energy": 0.5,
+      "energy_fraction_retained": 0.5,
+      "integrated_explicit_time_work": -0.5,
+      "final_speed": 0.5
+    },
+    {
+      "final_n": 2.0,
+      "momentum": 1.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 1.0,
+      "final_energy": 1.5,
+      "energy_fraction_retained": 1.5,
+      "integrated_explicit_time_work": 0.5,
+      "final_speed": 0.5
+    },
+    {
+      "final_n": 2.0,
+      "momentum": 2.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 2.0,
+      "final_energy": 1.0,
+      "energy_fraction_retained": 0.5,
+      "integrated_explicit_time_work": -1.0,
+      "final_speed": 0.5
+    },
+    {
+      "final_n": 2.0,
+      "momentum": 2.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 2.0,
+      "final_energy": 2.0,
+      "energy_fraction_retained": 1.0,
+      "integrated_explicit_time_work": 0.0,
+      "final_speed": 0.5
+    },
+    {
+      "final_n": 2.0,
+      "momentum": 4.0,
+      "offset_tuned_momentum": null,
+      "initial_energy": 4.0,
+      "final_energy": 2.0,
+      "energy_fraction_retained": 0.5,
+      "integrated_explicit_time_work": -2.0,
+      "final_speed": 0.5
+    },
+    {
+      "final_n": 2.0,
+      "momentum": 4.0,
+      "offset_tuned_momentum": 2.0,
+      "initial_energy": 4.0,
+      "final_energy": 3.0,
+      "energy_fraction_retained": 0.75,
+      "integrated_explicit_time_work": -1.0,
+      "final_speed": 0.5
+    }
+  ],
+  "momentum_dependent_compensation": {
+    "n": 1.3,
+    "restored_energy_speed": 1.0000000000065512,
+    "required_shared_speed": 0.7692307692307692
+  },
+  "common_clock_controls": [
+    {
+      "n": 1.01,
+      "q": 0.9900990099009901,
+      "photon_reference_energy_ratio": 0.9900990099009901,
+      "companion_reference_energy_ratio": 0.9900990099009901,
+      "photon_local_energy_ratio": 1.0,
+      "companion_local_energy_ratio": 1.0
+    },
+    {
+      "n": 1.3,
+      "q": 0.7692307692307692,
+      "photon_reference_energy_ratio": 0.7692307692307692,
+      "companion_reference_energy_ratio": 0.7692307692307692,
+      "photon_local_energy_ratio": 1.0,
+      "companion_local_energy_ratio": 1.0
+    },
+    {
+      "n": 2.0,
+      "q": 0.5,
+      "photon_reference_energy_ratio": 0.5,
+      "companion_reference_energy_ratio": 0.5,
+      "photon_local_energy_ratio": 1.0,
+      "companion_local_energy_ratio": 1.0
+    }
+  ],
+  "scope": "Conditional mathematical restriction, not a general no-go theorem for companion theories, quantum interactions, internal energy storage or modified dynamics."
+}
