@@ -1,0 +1,2047 @@
+{
+  "scope": "Provisional training-derived full-field orbit library; no population fit.",
+  "model": "full_bar_empirical_response",
+  "seeds": 72,
+  "completed": true,
+  "duration_kpc_per_kms": 0.25,
+  "sample_times": 501,
+  "tolerances": [
+    2e-09,
+    2e-11,
+    2e-13
+  ],
+  "position_gate_kpc": 0.0001,
+  "velocity_gate_kms": 0.01,
+  "Jacobi_gate_over_220_squared": 1e-05,
+  "rows": [
+    {
+      "seed_index": 0,
+      "source_id": "4066775653524363648",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5021
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 12092,
+          "position_difference_kpc": 1.0738149131073836e-06,
+          "velocity_difference_kms": 0.00016186265028542376,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 10.45614559999376,
+      "Jacobi_drift_over_220_squared": 2.0311752089861134e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.13415512921116374,
+      "radius_max_kpc": 2.5291086739277735,
+      "max_absolute_height_kpc": 0.7838210705829344
+    },
+    {
+      "seed_index": 1,
+      "source_id": "4067659587844501888",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5102
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10406,
+          "position_difference_kpc": 1.3678853469516592e-05,
+          "velocity_difference_kms": 0.0017869585114870321,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.454168100011884,
+      "Jacobi_drift_over_220_squared": 3.821541626662524e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.4781510267312489,
+      "radius_max_kpc": 4.396986749154432,
+      "max_absolute_height_kpc": 2.634990347539122
+    },
+    {
+      "seed_index": 2,
+      "source_id": "4053780972315780096",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4259
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 11417,
+          "position_difference_kpc": 4.42376306467316e-06,
+          "velocity_difference_kms": 0.00044619418340391734,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.55192499999248,
+      "Jacobi_drift_over_220_squared": 2.3987563320941653e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.5295840350395962,
+      "radius_max_kpc": 3.3619808224516534,
+      "max_absolute_height_kpc": 0.33569134658143507
+    },
+    {
+      "seed_index": 3,
+      "source_id": "4067606914360646528",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 6176
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 13388,
+          "position_difference_kpc": 2.0945182982758906e-05,
+          "velocity_difference_kms": 0.0026021162471114977,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 11.915826500000549,
+      "Jacobi_drift_over_220_squared": 1.461318330136936e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.6419825411295697,
+      "radius_max_kpc": 2.5287236356033853,
+      "max_absolute_height_kpc": 0.25674279688646146
+    },
+    {
+      "seed_index": 4,
+      "source_id": "4152849684361320960",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3626
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10499,
+          "position_difference_kpc": 4.8467236643372885e-06,
+          "velocity_difference_kms": 0.0004786583376599315,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 8.631391799994162,
+      "Jacobi_drift_over_220_squared": 5.450794019415005e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.3906921489049586,
+      "radius_max_kpc": 4.041064501792903,
+      "max_absolute_height_kpc": 0.34459722975580376
+    },
+    {
+      "seed_index": 5,
+      "source_id": "4054429130067135360",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5546
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10658,
+          "position_difference_kpc": 3.4046490283506144e-06,
+          "velocity_difference_kms": 0.00038590174372133963,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.881127400003606,
+      "Jacobi_drift_over_220_squared": 4.512226936159163e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.6811234265168663,
+      "radius_max_kpc": 2.607143074786715,
+      "max_absolute_height_kpc": 1.4410373333953475
+    },
+    {
+      "seed_index": 6,
+      "source_id": "4063465402005066496",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4886
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10151,
+          "position_difference_kpc": 1.2197642922964162e-05,
+          "velocity_difference_kms": 0.001234815381348135,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.115620199998375,
+      "Jacobi_drift_over_220_squared": 2.0045510218776992e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.5028295218728395,
+      "radius_max_kpc": 3.1873629916872788,
+      "max_absolute_height_kpc": 1.4079540733647402
+    },
+    {
+      "seed_index": 7,
+      "source_id": "4064014397552570880",
+      "R_stratum": 0,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4937
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 11438,
+          "position_difference_kpc": 4.472456755459687e-06,
+          "velocity_difference_kms": 0.0011774437486313076,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 10.024820299993735,
+      "Jacobi_drift_over_220_squared": 8.245764607741605e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.1648638619628524,
+      "radius_max_kpc": 2.4393521198081336,
+      "max_absolute_height_kpc": 0.7809519116229602
+    },
+    {
+      "seed_index": 8,
+      "source_id": "4063363108723477888",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5606
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 12392,
+          "position_difference_kpc": 2.5435721356531364e-06,
+          "velocity_difference_kms": 0.000845779073167972,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 10.920833399999538,
+      "Jacobi_drift_over_220_squared": 9.158914982127642e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.23111799749512305,
+      "radius_max_kpc": 1.2933345880822438,
+      "max_absolute_height_kpc": 0.5218585770918216
+    },
+    {
+      "seed_index": 9,
+      "source_id": "4056507898598341760",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 7706
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 13229,
+          "position_difference_kpc": 1.9241050642268635e-06,
+          "velocity_difference_kms": 0.00015273322316129018,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 12.65787559999444,
+      "Jacobi_drift_over_220_squared": 1.058930844792034e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.649199125085415,
+      "radius_max_kpc": 3.5585411407031398,
+      "max_absolute_height_kpc": 3.1839368795413674
+    },
+    {
+      "seed_index": 10,
+      "source_id": "4067122373329866240",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5477
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10190,
+          "position_difference_kpc": 1.7391340567802604e-05,
+          "velocity_difference_kms": 0.0019365410204758905,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.475966399986646,
+      "Jacobi_drift_over_220_squared": 1.9545808198408624e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.7619786990748524,
+      "radius_max_kpc": 3.576199311488269,
+      "max_absolute_height_kpc": 2.5069325068946267
+    },
+    {
+      "seed_index": 11,
+      "source_id": "4054077561215499392",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5450
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10931,
+          "position_difference_kpc": 1.9226048095718785e-06,
+          "velocity_difference_kms": 0.0005552622037174109,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.87306090000493,
+      "Jacobi_drift_over_220_squared": 1.067339085727499e-07,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.15592251211601185,
+      "radius_max_kpc": 3.597057169238468,
+      "max_absolute_height_kpc": 1.9006750197650832
+    },
+    {
+      "seed_index": 12,
+      "source_id": "4153885694867003648",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4709
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 11726,
+          "position_difference_kpc": 6.410260980841144e-06,
+          "velocity_difference_kms": 0.0011730068919741613,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.87301560000924,
+      "Jacobi_drift_over_220_squared": 5.536974971288477e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.17738223978391293,
+      "radius_max_kpc": 3.8663970785135016,
+      "max_absolute_height_kpc": 0.7326150664630348
+    },
+    {
+      "seed_index": 13,
+      "source_id": "5969791034352216960",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4169
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10682,
+          "position_difference_kpc": 5.075026150505302e-06,
+          "velocity_difference_kms": 0.0009042332598691313,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.045717000000877,
+      "Jacobi_drift_over_220_squared": 4.0686854319108174e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.21414966111572642,
+      "radius_max_kpc": 3.6935331098507063,
+      "max_absolute_height_kpc": 0.5924603870342408
+    },
+    {
+      "seed_index": 14,
+      "source_id": "4055524351040456960",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 7040
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 12944,
+          "position_difference_kpc": 3.4699386578956e-05,
+          "velocity_difference_kms": 0.004934872368805661,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 11.94228909999947,
+      "Jacobi_drift_over_220_squared": 4.701661363326798e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.5101921218594907,
+      "radius_max_kpc": 2.175424549211232,
+      "max_absolute_height_kpc": 1.9658117094693262
+    },
+    {
+      "seed_index": 15,
+      "source_id": "4056553936304704000",
+      "R_stratum": 0,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5264
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 12185,
+          "position_difference_kpc": 2.3964032335553383e-06,
+          "velocity_difference_kms": 0.00038147959415057693,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 10.31393369998841,
+      "Jacobi_drift_over_220_squared": 9.391335781912843e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.3123928218524973,
+      "radius_max_kpc": 2.050358414715946,
+      "max_absolute_height_kpc": 0.7084915622797312
+    },
+    {
+      "seed_index": 16,
+      "source_id": "4109975598504206336",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": true,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5459
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 13154,
+          "position_difference_kpc": 8.354502218980787e-06,
+          "velocity_difference_kms": 0.0026258765728298357,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 11.123076199990464,
+      "Jacobi_drift_over_220_squared": 1.1961566080331555e-07,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.16606017141294244,
+      "radius_max_kpc": 2.0317270269750742,
+      "max_absolute_height_kpc": 0.7149944873194004
+    },
+    {
+      "seed_index": 17,
+      "source_id": "4107497303703795072",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4337
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8183,
+          "position_difference_kpc": 1.3724100161172499e-05,
+          "velocity_difference_kms": 0.0010374523807372773,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.58106840000255,
+      "Jacobi_drift_over_220_squared": 1.6059781001252506e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.9113059067228716,
+      "radius_max_kpc": 8.127127832902467,
+      "max_absolute_height_kpc": 3.7625049383951645
+    },
+    {
+      "seed_index": 18,
+      "source_id": "4108140758470306432",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5099
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 9989,
+          "position_difference_kpc": 9.560938884525173e-06,
+          "velocity_difference_kms": 0.0016073757901248014,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.01143559999764,
+      "Jacobi_drift_over_220_squared": 3.244095916505268e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.2733720828675464,
+      "radius_max_kpc": 4.268653201134436,
+      "max_absolute_height_kpc": 3.008480550319331
+    },
+    {
+      "seed_index": 19,
+      "source_id": "5952321375174597760",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4193
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8000,
+          "position_difference_kpc": 5.2563818739649043e-08,
+          "velocity_difference_kms": 2.739977953970522e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.331154599989532,
+      "Jacobi_drift_over_220_squared": 7.518524361037349e-10,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.539406743327122,
+      "radius_max_kpc": 6.9790247516680415,
+      "max_absolute_height_kpc": 2.4310920070124733
+    },
+    {
+      "seed_index": 20,
+      "source_id": "4110368467749290496",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5771
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 12542,
+          "position_difference_kpc": 1.54555309394103e-05,
+          "velocity_difference_kms": 0.002433013528150451,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 10.969999499997357,
+      "Jacobi_drift_over_220_squared": 3.1178772565187145e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.5775314587065511,
+      "radius_max_kpc": 1.3495434477377821,
+      "max_absolute_height_kpc": 1.30637060981307
+    },
+    {
+      "seed_index": 21,
+      "source_id": "4110549719741851648",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5315
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 11885,
+          "position_difference_kpc": 1.9507877630857505e-05,
+          "velocity_difference_kms": 0.002953803540105089,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 10.358776900000521,
+      "Jacobi_drift_over_220_squared": 7.53379979809219e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.09862203622728515,
+      "radius_max_kpc": 2.685476971099675,
+      "max_absolute_height_kpc": 1.1753398134740436
+    },
+    {
+      "seed_index": 22,
+      "source_id": "6727441063713671168",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5492
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 12191,
+          "position_difference_kpc": 1.1533031866520493e-05,
+          "velocity_difference_kms": 0.002681322563193675,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 10.662588199993479,
+      "Jacobi_drift_over_220_squared": 4.1630300833922544e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.20029523757251325,
+      "radius_max_kpc": 2.6180434700018034,
+      "max_absolute_height_kpc": 2.0504962520926067
+    },
+    {
+      "seed_index": 23,
+      "source_id": "6010740145890930816",
+      "R_stratum": 0,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4412
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8735,
+          "position_difference_kpc": 4.7792791161731735e-06,
+          "velocity_difference_kms": 0.0004234374385403516,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.912223299994366,
+      "Jacobi_drift_over_220_squared": 1.0758365548580447e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.912792607247838,
+      "radius_max_kpc": 6.742628907342888,
+      "max_absolute_height_kpc": 2.822091082898837
+    },
+    {
+      "seed_index": 24,
+      "source_id": "4094154794415342720",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1772
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 3356,
+          "position_difference_kpc": 1.267093384484292e-06,
+          "velocity_difference_kms": 5.3681299119927296e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 3.0270387000055052,
+      "Jacobi_drift_over_220_squared": 7.627203115040805e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.0899510072407836,
+      "radius_max_kpc": 4.44091127125167,
+      "max_absolute_height_kpc": 0.023955485473696834
+    },
+    {
+      "seed_index": 25,
+      "source_id": "4054427278935887360",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4562
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8312,
+          "position_difference_kpc": 9.505461053568826e-07,
+          "velocity_difference_kms": 6.793579173856724e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.7343057000107365,
+      "Jacobi_drift_over_220_squared": 1.223983988983649e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.118758052461893,
+      "radius_max_kpc": 4.446173240634138,
+      "max_absolute_height_kpc": 1.5096566561895262
+    },
+    {
+      "seed_index": 26,
+      "source_id": "5884467488912086400",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1769
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 3035,
+          "position_difference_kpc": 2.0777809489184718e-07,
+          "velocity_difference_kms": 7.355225851179219e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 2.8777467999898363,
+      "Jacobi_drift_over_220_squared": 3.496050881077574e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 3.815322239908235,
+      "radius_max_kpc": 7.603978303059581,
+      "max_absolute_height_kpc": 0.38397708626127175
+    },
+    {
+      "seed_index": 27,
+      "source_id": "4053632091560935168",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3284
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8294,
+          "position_difference_kpc": 1.509472903872087e-05,
+          "velocity_difference_kms": 0.0009842235862783412,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 6.969937899993965,
+      "Jacobi_drift_over_220_squared": 2.9691661536560802e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.5252476915712851,
+      "radius_max_kpc": 4.665685705151444,
+      "max_absolute_height_kpc": 0.4264722684172187
+    },
+    {
+      "seed_index": 28,
+      "source_id": "4154077185999177728",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2591
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 4583,
+          "position_difference_kpc": 5.314702588472055e-07,
+          "velocity_difference_kms": 2.0669523979630062e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.255608699997538,
+      "Jacobi_drift_over_220_squared": 1.33952664688599e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.7350855039893514,
+      "radius_max_kpc": 5.185938586649476,
+      "max_absolute_height_kpc": 0.3598328364430098
+    },
+    {
+      "seed_index": 29,
+      "source_id": "5943289471228247808",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2735
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 5363,
+          "position_difference_kpc": 3.727043951236111e-06,
+          "velocity_difference_kms": 0.0002189642628328395,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.835132099993643,
+      "Jacobi_drift_over_220_squared": 1.085498041910127e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.8547974841718395,
+      "radius_max_kpc": 4.919245886478257,
+      "max_absolute_height_kpc": 0.3479649465519367
+    },
+    {
+      "seed_index": 30,
+      "source_id": "5965509123743716352",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2549
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 4742,
+          "position_difference_kpc": 1.8031452291303298e-07,
+          "velocity_difference_kms": 4.363207810560562e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.362133999995422,
+      "Jacobi_drift_over_220_squared": 3.7663543600712185e-10,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 3.8943689231938023,
+      "radius_max_kpc": 9.312959989255791,
+      "max_absolute_height_kpc": 1.894272005321106
+    },
+    {
+      "seed_index": 31,
+      "source_id": "4068610596680402176",
+      "R_stratum": 1,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4460
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 11402,
+          "position_difference_kpc": 1.2556740742477462e-05,
+          "velocity_difference_kms": 0.001812912905808955,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.43461679999018,
+      "Jacobi_drift_over_220_squared": 3.284954454861427e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.4823561873752115,
+      "radius_max_kpc": 4.060731270930659,
+      "max_absolute_height_kpc": 0.9591467200658093
+    },
+    {
+      "seed_index": 32,
+      "source_id": "5980464848398935808",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2639
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 5147,
+          "position_difference_kpc": 1.235993499913816e-06,
+          "velocity_difference_kms": 7.503059519261582e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.631595300001209,
+      "Jacobi_drift_over_220_squared": 1.824841618611023e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.1972255377908287,
+      "radius_max_kpc": 5.064068366732471,
+      "max_absolute_height_kpc": 0.2958507660888554
+    },
+    {
+      "seed_index": 33,
+      "source_id": "4068571357878823040",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4310
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8969,
+          "position_difference_kpc": 7.091491110117006e-06,
+          "velocity_difference_kms": 0.0009979028809043748,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.947875399986515,
+      "Jacobi_drift_over_220_squared": 5.685494155736067e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.3244574197303287,
+      "radius_max_kpc": 6.109861018719399,
+      "max_absolute_height_kpc": 3.287501245507617
+    },
+    {
+      "seed_index": 34,
+      "source_id": "4053814709217060736",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4073
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 9128,
+          "position_difference_kpc": 2.7701849491899202e-05,
+          "velocity_difference_kms": 0.002776790524537219,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.974302700007684,
+      "Jacobi_drift_over_220_squared": 1.3728206923129499e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.0610260994013234,
+      "radius_max_kpc": 5.4333680895332765,
+      "max_absolute_height_kpc": 1.7876211618700162
+    },
+    {
+      "seed_index": 35,
+      "source_id": "4063220898147424256",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1586
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 2576,
+          "position_difference_kpc": 7.068944761659616e-07,
+          "velocity_difference_kms": 2.53285860689886e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 2.495306000011624,
+      "Jacobi_drift_over_220_squared": 1.7374435072660846e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 4.4384437376092505,
+      "radius_max_kpc": 10.787466616405064,
+      "max_absolute_height_kpc": 0.7573403613108302
+    },
+    {
+      "seed_index": 36,
+      "source_id": "4064195335943700864",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4907
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 9863,
+          "position_difference_kpc": 6.1007901771708105e-06,
+          "velocity_difference_kms": 0.0007724663749232127,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 8.861969899997348,
+      "Jacobi_drift_over_220_squared": 5.523218630913122e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.5917462278610628,
+      "radius_max_kpc": 3.805017505135683,
+      "max_absolute_height_kpc": 1.2639476311465556
+    },
+    {
+      "seed_index": 37,
+      "source_id": "4205585766756457600",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4232
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8894,
+          "position_difference_kpc": 1.082293754047295e-05,
+          "velocity_difference_kms": 0.0007985716737208235,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.820714500005124,
+      "Jacobi_drift_over_220_squared": 1.778877319812328e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.639580263477523,
+      "radius_max_kpc": 4.598559443908118,
+      "max_absolute_height_kpc": 1.1222120957496484
+    },
+    {
+      "seed_index": 38,
+      "source_id": "5982834570828529408",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3611
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 7241,
+          "position_difference_kpc": 4.78889488987889e-07,
+          "velocity_difference_kms": 3.086754240163709e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 6.505556000003708,
+      "Jacobi_drift_over_220_squared": 5.768852885418056e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.9813411314227227,
+      "radius_max_kpc": 5.300321362164108,
+      "max_absolute_height_kpc": 1.2491497716590694
+    },
+    {
+      "seed_index": 39,
+      "source_id": "4120410479253019008",
+      "R_stratum": 1,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4391
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 12125,
+          "position_difference_kpc": 1.0988215832886066e-05,
+          "velocity_difference_kms": 0.0011095657468928252,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.931813299990608,
+      "Jacobi_drift_over_220_squared": 6.471002713872374e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.2918349539909231,
+      "radius_max_kpc": 4.004893113003605,
+      "max_absolute_height_kpc": 0.6652593122393134
+    },
+    {
+      "seed_index": 40,
+      "source_id": "6761267878213538176",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": true,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3242
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 6188,
+          "position_difference_kpc": 1.8877171478139794e-07,
+          "velocity_difference_kms": 1.1924178741330859e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 5.66483110000263,
+      "Jacobi_drift_over_220_squared": 1.0101742619621636e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.775994700360446,
+      "radius_max_kpc": 5.138142008953517,
+      "max_absolute_height_kpc": 0.8843838309927746
+    },
+    {
+      "seed_index": 41,
+      "source_id": "4056305858970036224",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3272
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 5936,
+          "position_difference_kpc": 1.2514966800369144e-07,
+          "velocity_difference_kms": 4.112194341588064e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 5.556679799992708,
+      "Jacobi_drift_over_220_squared": 3.5394933089144403e-10,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 3.6101632302310875,
+      "radius_max_kpc": 9.258086385420377,
+      "max_absolute_height_kpc": 6.805450364978567
+    },
+    {
+      "seed_index": 42,
+      "source_id": "5955268749169090944",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4907
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10001,
+          "position_difference_kpc": 1.5869350478669365e-06,
+          "velocity_difference_kms": 0.00015653596662925127,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 8.975496400002157,
+      "Jacobi_drift_over_220_squared": 2.0071464378883665e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.9015756545503292,
+      "radius_max_kpc": 5.837536659404317,
+      "max_absolute_height_kpc": 2.5789496543870025
+    },
+    {
+      "seed_index": 43,
+      "source_id": "5969960393515001088",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2708
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 4877,
+          "position_difference_kpc": 2.9055717143472186e-07,
+          "velocity_difference_kms": 1.5152340532232846e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.596833800009335,
+      "Jacobi_drift_over_220_squared": 5.026941226404699e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.9188240480366905,
+      "radius_max_kpc": 5.770643278757057,
+      "max_absolute_height_kpc": 0.6425898066683887
+    },
+    {
+      "seed_index": 44,
+      "source_id": "4080885136474452224",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3767
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8444,
+          "position_difference_kpc": 4.825261812924746e-06,
+          "velocity_difference_kms": 0.00047960058059312707,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.380311000000802,
+      "Jacobi_drift_over_220_squared": 4.344303114754619e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.5309739441991628,
+      "radius_max_kpc": 5.919019026494734,
+      "max_absolute_height_kpc": 1.2900468364668802
+    },
+    {
+      "seed_index": 45,
+      "source_id": "6008165295814883584",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4376
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8291,
+          "position_difference_kpc": 4.423888506776799e-06,
+          "velocity_difference_kms": 0.0003243993418277334,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.669234500004677,
+      "Jacobi_drift_over_220_squared": 2.0580141420749377e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.04808917308866,
+      "radius_max_kpc": 5.807679274953406,
+      "max_absolute_height_kpc": 2.8459354653725213
+    },
+    {
+      "seed_index": 46,
+      "source_id": "4170553844466764288",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 5174
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 10892,
+          "position_difference_kpc": 1.251460245498771e-05,
+          "velocity_difference_kms": 0.001661054485652454,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 9.730173200005083,
+      "Jacobi_drift_over_220_squared": 6.312147723457946e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.40634752115481226,
+      "radius_max_kpc": 4.320979965110551,
+      "max_absolute_height_kpc": 2.0629265229695855
+    },
+    {
+      "seed_index": 47,
+      "source_id": "5950515491684009344",
+      "R_stratum": 1,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4283
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 7799,
+          "position_difference_kpc": 8.206850897995088e-07,
+          "velocity_difference_kms": 4.41862386065349e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.283698999992339,
+      "Jacobi_drift_over_220_squared": 4.184595044617626e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.9900110160787767,
+      "radius_max_kpc": 5.964671439500448,
+      "max_absolute_height_kpc": 2.7045761270987994
+    },
+    {
+      "seed_index": 48,
+      "source_id": "4091460273745160320",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 692
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 1229,
+          "position_difference_kpc": 2.0385431550326736e-09,
+          "velocity_difference_kms": 5.6737546586297415e-08,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 1.1423595000087516,
+      "Jacobi_drift_over_220_squared": 1.2626191735852603e-12,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.12283128177694,
+      "radius_max_kpc": 8.005201950836753,
+      "max_absolute_height_kpc": 0.03829743928319965
+    },
+    {
+      "seed_index": 49,
+      "source_id": "2064727741401909888",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": true,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1796
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 3392,
+          "position_difference_kpc": 2.071982915745505e-07,
+          "velocity_difference_kms": 7.908365962912153e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 3.1431195000041043,
+      "Jacobi_drift_over_220_squared": 9.466662839048326e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 3.56075921884512,
+      "radius_max_kpc": 16.04293017819279,
+      "max_absolute_height_kpc": 5.446083322977573
+    },
+    {
+      "seed_index": 50,
+      "source_id": "6054656976798803072",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2669
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 5336,
+          "position_difference_kpc": 1.1202655677504828e-07,
+          "velocity_difference_kms": 3.862390977928624e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.9030031000002054,
+      "Jacobi_drift_over_220_squared": 4.9465246068521535e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 3.628045140810462,
+      "radius_max_kpc": 8.955196473125154,
+      "max_absolute_height_kpc": 2.4343950660119624
+    },
+    {
+      "seed_index": 51,
+      "source_id": "5867137570763044608",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2756
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 5138,
+          "position_difference_kpc": 8.055100966538068e-09,
+          "velocity_difference_kms": 3.9849529736916455e-07,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.795694599990384,
+      "Jacobi_drift_over_220_squared": 4.551682740542268e-12,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 5.544246054616071,
+      "radius_max_kpc": 6.492019188515255,
+      "max_absolute_height_kpc": 1.408469017118842
+    },
+    {
+      "seed_index": 52,
+      "source_id": "6054613305567187712",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 428
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 725,
+          "position_difference_kpc": 1.2081135987347243e-06,
+          "velocity_difference_kms": 1.3515762879188498e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 0.6990518999955384,
+      "Jacobi_drift_over_220_squared": 1.1341580679719067e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.910200529764422,
+      "radius_max_kpc": 33.72169047473904,
+      "max_absolute_height_kpc": 0.09675001799563548
+    },
+    {
+      "seed_index": 53,
+      "source_id": "6054585469848279296",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1607
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 2768,
+          "position_difference_kpc": 2.2516730094762697e-08,
+          "velocity_difference_kms": 6.822070621629792e-07,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 2.671273200001451,
+      "Jacobi_drift_over_220_squared": 2.4296361726924224e-10,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.987959590499631,
+      "radius_max_kpc": 11.344981220943808,
+      "max_absolute_height_kpc": 1.8759976476131828
+    },
+    {
+      "seed_index": 54,
+      "source_id": "4323206950803773312",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2090
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 6107,
+          "position_difference_kpc": 7.324463750848837e-07,
+          "velocity_difference_kms": 3.2997589277380434e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.984190699993633,
+      "Jacobi_drift_over_220_squared": 1.8852188152454462e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.576765175482617,
+      "radius_max_kpc": 8.192917019487536,
+      "max_absolute_height_kpc": 0.18992427576776455
+    },
+    {
+      "seed_index": 55,
+      "source_id": "6054612171695682304",
+      "R_stratum": 2,
+      "height_stratum": 0,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1040
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 1823,
+          "position_difference_kpc": 8.363033664403285e-07,
+          "velocity_difference_kms": 2.0029887357331552e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 1.758741599987843,
+      "Jacobi_drift_over_220_squared": 6.006775496764232e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 5.083276858092519,
+      "radius_max_kpc": 12.941555217646592,
+      "max_absolute_height_kpc": 0.24608446425281524
+    },
+    {
+      "seed_index": 56,
+      "source_id": "2105734714757070592",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1067
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 1856,
+          "position_difference_kpc": 3.2240078643732446e-09,
+          "velocity_difference_kms": 3.003752235365011e-07,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 1.7598175000021001,
+      "Jacobi_drift_over_220_squared": 2.0892822091306044e-12,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.643056935648654,
+      "radius_max_kpc": 8.818885787226938,
+      "max_absolute_height_kpc": 0.2736367202452491
+    },
+    {
+      "seed_index": 57,
+      "source_id": "5979280124620640768",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3479
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8105,
+          "position_difference_kpc": 2.0137801047478804e-05,
+          "velocity_difference_kms": 0.0021563433784501916,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.00340960000176,
+      "Jacobi_drift_over_220_squared": 1.799863552271046e-07,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.170551043339673,
+      "radius_max_kpc": 8.119791799843622,
+      "max_absolute_height_kpc": 1.2035279646786337
+    },
+    {
+      "seed_index": 58,
+      "source_id": "5969636411205461760",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 641
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 1097,
+          "position_difference_kpc": 4.40126980667483e-06,
+          "velocity_difference_kms": 4.9469372328099535e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 1.045415000000503,
+      "Jacobi_drift_over_220_squared": 7.777228700824482e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 5.952571329810287,
+      "radius_max_kpc": 20.973806378326845,
+      "max_absolute_height_kpc": 1.0854964946542185
+    },
+    {
+      "seed_index": 59,
+      "source_id": "5190172041086903424",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3668
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 6716,
+          "position_difference_kpc": 2.0592349220488307e-05,
+          "velocity_difference_kms": 0.001049179674411228,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 6.273228399993968,
+      "Jacobi_drift_over_220_squared": 2.6173001932582053e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.2726539855969032,
+      "radius_max_kpc": 7.988791116833113,
+      "max_absolute_height_kpc": 4.675943049375512
+    },
+    {
+      "seed_index": 60,
+      "source_id": "5965752180227956480",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2138
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 4196,
+          "position_difference_kpc": 4.623954051400825e-08,
+          "velocity_difference_kms": 1.4097411112846719e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 3.860800599999493,
+      "Jacobi_drift_over_220_squared": 4.791218088939786e-11,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 6.520348403508062,
+      "radius_max_kpc": 9.728203558827518,
+      "max_absolute_height_kpc": 2.424826303276965
+    },
+    {
+      "seed_index": 61,
+      "source_id": "5860572730466341120",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1277
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 2138,
+          "position_difference_kpc": 2.3576281971315662e-08,
+          "velocity_difference_kms": 8.26583802285577e-07,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 2.0598977000045124,
+      "Jacobi_drift_over_220_squared": 2.1432250163764193e-10,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.933306418987635,
+      "radius_max_kpc": 11.467678356410264,
+      "max_absolute_height_kpc": 0.813476674093441
+    },
+    {
+      "seed_index": 62,
+      "source_id": "4282130841349088896",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2552
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 4841,
+          "position_difference_kpc": 2.4866073203288062e-06,
+          "velocity_difference_kms": 9.672439148162062e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 4.46422770000936,
+      "Jacobi_drift_over_220_squared": 1.2358203484611354e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 2.5364737161631523,
+      "radius_max_kpc": 6.708624518047614,
+      "max_absolute_height_kpc": 0.6286181153466744
+    },
+    {
+      "seed_index": 63,
+      "source_id": "4154094911319570816",
+      "R_stratum": 2,
+      "height_stratum": 1,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1448
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 2465,
+          "position_difference_kpc": 2.2297809887061883e-07,
+          "velocity_difference_kms": 4.661197259309926e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 2.363866900006542,
+      "Jacobi_drift_over_220_squared": 2.369208142069007e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 5.183646951289297,
+      "radius_max_kpc": 12.32844791093031,
+      "max_absolute_height_kpc": 0.9071400698895089
+    },
+    {
+      "seed_index": 64,
+      "source_id": "1299110719506880512",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 1466
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 2525,
+          "position_difference_kpc": 2.1210026021890524e-09,
+          "velocity_difference_kms": 1.4596180759362966e-07,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 2.4215537999989465,
+      "Jacobi_drift_over_220_squared": 5.692685184584669e-12,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.527732258475893,
+      "radius_max_kpc": 9.109397190746385,
+      "max_absolute_height_kpc": 0.5987052962380044
+    },
+    {
+      "seed_index": 65,
+      "source_id": "4062364511637409152",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 917
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 1769,
+          "position_difference_kpc": 4.7361333277680336e-07,
+          "velocity_difference_kms": 4.21551535554162e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 1.6496813999983715,
+      "Jacobi_drift_over_220_squared": 3.656091732319352e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 5.494584621771469,
+      "radius_max_kpc": 23.257942254698808,
+      "max_absolute_height_kpc": 13.548589267301608
+    },
+    {
+      "seed_index": 66,
+      "source_id": "5961801020807224960",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 527
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 899,
+          "position_difference_kpc": 5.187616003622831e-07,
+          "velocity_difference_kms": 4.284140861647173e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 0.8940593000006629,
+      "Jacobi_drift_over_220_squared": 7.386637256530783e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.426841555526908,
+      "radius_max_kpc": 71.86449107473679,
+      "max_absolute_height_kpc": 5.846716733675316
+    },
+    {
+      "seed_index": 67,
+      "source_id": "5993112431884399872",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 4139
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 8096,
+          "position_difference_kpc": 9.241664439484407e-06,
+          "velocity_difference_kms": 0.0007007361128083047,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 7.428445400000783,
+      "Jacobi_drift_over_220_squared": 3.965049179610969e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 0.894499503159208,
+      "radius_max_kpc": 5.905668353849641,
+      "max_absolute_height_kpc": 3.0973968502532405
+    },
+    {
+      "seed_index": 68,
+      "source_id": "6049772323329029632",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 3773
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 7211,
+          "position_difference_kpc": 5.428843847733214e-06,
+          "velocity_difference_kms": 0.0004034461267203283,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 6.6872901000024285,
+      "Jacobi_drift_over_220_squared": 1.2192284666826326e-08,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 1.745960066172828,
+      "radius_max_kpc": 6.706226813734202,
+      "max_absolute_height_kpc": 2.4800961316144057
+    },
+    {
+      "seed_index": 69,
+      "source_id": "4105081779674933888",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 2231
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 3977,
+          "position_difference_kpc": 4.7952071396975865e-08,
+          "velocity_difference_kms": 1.813664289332489e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 3.748166899997159,
+      "Jacobi_drift_over_220_squared": 1.154406291330695e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 5.095109079877218,
+      "radius_max_kpc": 10.222801719044414,
+      "max_absolute_height_kpc": 2.593890999651894
+    },
+    {
+      "seed_index": 70,
+      "source_id": "5847900480981625728",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 905
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 1685,
+          "position_difference_kpc": 1.5886331169993254e-06,
+          "velocity_difference_kms": 1.966885388629895e-05,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 1.57063799999014,
+      "Jacobi_drift_over_220_squared": 4.860185598329187e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 7.212533556336131,
+      "radius_max_kpc": 18.999338972102397,
+      "max_absolute_height_kpc": 3.63520329549473
+    },
+    {
+      "seed_index": 71,
+      "source_id": "5847495414014488832",
+      "R_stratum": 2,
+      "height_stratum": 2,
+      "distance_disagreement_flag": false,
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 653
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 1139,
+          "position_difference_kpc": 4.784176915362529e-07,
+          "velocity_difference_kms": 2.8815346172818447e-06,
+          "passed": true
+        }
+      ],
+      "error": null,
+      "seconds": 1.0806353999942075,
+      "Jacobi_drift_over_220_squared": 1.2821590283516148e-09,
+      "integration_gate_pass": true,
+      "numerical_checks_pass": true,
+      "radius_min_kpc": 8.99186853670638,
+      "radius_max_kpc": 59.22002331457442,
+      "max_absolute_height_kpc": 14.719467855808471
+    }
+  ],
+  "source_sha256": "cd6830372886fcce162c2e3d5b17f4c99c28c61e381cf662a3305f48c6476dea",
+  "code_sha256": "d32d293f79edf05fea60e1a733d6ed715b10bfcccf13187858a609efe500f27a",
+  "driver_sha256": "6227132d019c04c95075759782e6456454ea59661b91300bc5c6f16b69481d54",
+  "input_field_hashes": {
+    "research_work\\data-cache\\full-bar-completion\\axis-disk-ec0d15eb7bb9.npz": "9ce6b854f866cf434391e730e6941c41d3fc1c1a80f991946b33b938539d7567",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd",
+    "research_work\\data-cache\\full-bar-completion\\axisymmetric-reference-80-L128-N512.npz": "ebdcc0f52093d0048f18a4d7f4d25443f94dc0d9ca68b6f0d871432bef8476f5",
+    "research_work\\data-cache\\full-bar-completion\\finer.npz": "47014aaaf398ba8ecaf45a50ac792ef81dbaab1b67364acc7d4095f551917d6b"
+  },
+  "holdouts_opened": false,
+  "likelihood_fitted": false,
+  "association_uncertainty_resolved": false
+}
