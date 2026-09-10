@@ -87,3 +87,8 @@ Do not treat the reduced radial-orbit bias as a measured preference for beta=0.3
 The broader requirements remain: a derived common propagation/arrival-time law, energy accounting, a capture and support mechanism, a field predicting motions and lensing together, and tests across the other observations. Refining stellar nuisance assumptions cannot fill those missing physical equations.
 
 Reproduce the two new runs using run.py --updated-profile --refined --beta 0.3 and --beta -0.3, repeat without --refined for numerical comparisons, then run verify_anisotropy.py. All eight existing seeing/boundary configurations are preserved for each beta, totaling 528 new training configurations at each numerical resolution. The mass-ratio summary reuses the archived fixed-population normalization estimates; no stellar-population refit is claimed.
+
+
+## Subsequent distribution-function check
+
+The [admissibility derivation](../lens-orbit-admissibility/report.md) now establishes a nonnegative stellar tracer distribution function for this specific potential/tracer/beta family. It does not establish dynamical stability, a supported companion source or measured anisotropy. Earlier statements about the unperformed DF check describe the state before this follow-up.

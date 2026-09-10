@@ -1,0 +1,104 @@
+{
+  "p": 0.4624587420104399,
+  "cutoff_over_a_minimum_tested": 9.0765,
+  "analytic_sufficient_cutoff_bounds": [
+    {
+      "beta": -0.3,
+      "k": 1.6,
+      "exterior_polynomial_coefficients": [
+        16.56,
+        5.5200000000000005,
+        0.9600000000000002
+      ],
+      "sufficient_minimum_cutoff_over_a": 0.0
+    },
+    {
+      "beta": 0.0,
+      "k": 1.0,
+      "exterior_polynomial_coefficients": [
+        12.0,
+        0.0,
+        0.0
+      ],
+      "sufficient_minimum_cutoff_over_a": 0.0
+    },
+    {
+      "beta": 0.3,
+      "k": 0.4,
+      "exterior_polynomial_coefficients": [
+        8.16,
+        -4.08,
+        -0.24
+      ],
+      "sufficient_minimum_cutoff_over_a": 0.5531695312954162
+    }
+  ],
+  "numeric_force_configurations": 54,
+  "radial_probes_per_configuration": 4003,
+  "inverse_transform_checks": [
+    {
+      "beta": -0.3,
+      "E": 0.01,
+      "inverse_relative_error": 1.6562307081358085e-12,
+      "density_recovery_relative_error": 2.8307800548077466e-11
+    },
+    {
+      "beta": -0.3,
+      "E": 0.2,
+      "inverse_relative_error": 1.6560086635308835e-12,
+      "density_recovery_relative_error": 2.013722522065109e-12
+    },
+    {
+      "beta": -0.3,
+      "E": 0.8,
+      "inverse_relative_error": 1.6568968419505836e-12,
+      "density_recovery_relative_error": 2.0140555889724965e-12
+    },
+    {
+      "beta": 0.0,
+      "E": 0.01,
+      "inverse_relative_error": 4.440892098500626e-16,
+      "density_recovery_relative_error": 7.083267306029484e-11
+    },
+    {
+      "beta": 0.0,
+      "E": 0.2,
+      "inverse_relative_error": 4.440892098500626e-16,
+      "density_recovery_relative_error": 5.477840403500522e-13
+    },
+    {
+      "beta": 0.0,
+      "E": 0.8,
+      "inverse_relative_error": 4.440892098500626e-16,
+      "density_recovery_relative_error": 5.477840403500522e-13
+    },
+    {
+      "beta": 0.3,
+      "E": 0.01,
+      "inverse_relative_error": 2.475575300309174e-12,
+      "density_recovery_relative_error": 2.6934676711221073e-11
+    },
+    {
+      "beta": 0.3,
+      "E": 0.2,
+      "inverse_relative_error": 2.4765745010313367e-12,
+      "density_recovery_relative_error": 3.155253835984695e-13
+    },
+    {
+      "beta": 0.3,
+      "E": 0.8,
+      "inverse_relative_error": 2.4767965456362617e-12,
+      "density_recovery_relative_error": 3.1519231669108194e-13
+    }
+  ],
+  "conclusion": "Known constant-anisotropy inversion admits a nonnegative stellar tracer DF for the specified Hernquist density, positive baryonic/companion amplitudes, tested betas and cutoffs; supported by the analytic bounds in report.md.",
+  "not_established": [
+    "Dynamical stability",
+    "Distribution or support of the companion deposited source",
+    "Observed orbital anisotropy",
+    "A photon-conversion field equation",
+    "Observational improvement beyond already exposed training diagnostics"
+  ],
+  "fit_sha256": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+  "heldout_scores_opened": false
+}
