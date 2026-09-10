@@ -1,0 +1,366 @@
+{
+  "training_stars": 77927,
+  "selected_training_stars": 27884,
+  "epoch_window_utc": [
+    "1997-06-07",
+    "2001-02-16"
+  ],
+  "threshold_counts": {
+    "0.3": {
+      "window_flagged": 360,
+      "unrestricted_flagged": 186,
+      "newly_flagged": 174
+    },
+    "0.5": {
+      "window_flagged": 140,
+      "unrestricted_flagged": 105,
+      "newly_flagged": 35
+    },
+    "1.0": {
+      "window_flagged": 121,
+      "unrestricted_flagged": 76,
+      "newly_flagged": 45
+    },
+    "1.5": {
+      "window_flagged": 93,
+      "unrestricted_flagged": 44,
+      "newly_flagged": 49
+    }
+  },
+  "regions": {
+    "bulge_plane": {
+      "stars": 299,
+      "parallax_disagreement_stars": 5,
+      "flagged_0.5_arcsec": 54,
+      "flagged_and_parallax_disagreement": 4,
+      "sensitivity": [
+        {
+          "threshold_arcsec": null,
+          "stars": 299,
+          "means_kms": [
+            2.9861718567123723,
+            122.15327419155528,
+            -9.232861102250311
+          ],
+          "stds_kms": [
+            112.46755992808752,
+            97.91846360801073,
+            64.9689032192392
+          ]
+        },
+        {
+          "threshold_arcsec": 0.3,
+          "stars": 244,
+          "means_kms": [
+            -1.128925307792631,
+            123.71813434176669,
+            -4.3958195009285355
+          ],
+          "stds_kms": [
+            100.2653548756161,
+            86.14024392635467,
+            58.86113513638976
+          ]
+        },
+        {
+          "threshold_arcsec": 0.5,
+          "stars": 245,
+          "means_kms": [
+            -1.5246630050418384,
+            124.05802134793687,
+            -4.603125543369096
+          ],
+          "stds_kms": [
+            100.25128722107588,
+            86.12806155097964,
+            58.83007703088996
+          ]
+        },
+        {
+          "threshold_arcsec": 1.0,
+          "stars": 246,
+          "means_kms": [
+            -1.2399255520841954,
+            124.15058217404302,
+            -4.63360082919333
+          ],
+          "stds_kms": [
+            100.146538157494,
+            85.9650357956207,
+            58.71231974121874
+          ]
+        },
+        {
+          "threshold_arcsec": 1.5,
+          "stars": 257,
+          "means_kms": [
+            0.673900629236775,
+            126.41786426955443,
+            -6.108469644182401
+          ],
+          "stds_kms": [
+            99.7585792993315,
+            88.242736525259,
+            60.0230472348809
+          ]
+        }
+      ]
+    },
+    "bulge_offplane": {
+      "stars": 577,
+      "parallax_disagreement_stars": 7,
+      "flagged_0.5_arcsec": 0,
+      "flagged_and_parallax_disagreement": 0,
+      "sensitivity": [
+        {
+          "threshold_arcsec": null,
+          "stars": 577,
+          "means_kms": [
+            -5.897160828570716,
+            118.83345093029813,
+            -0.9743562449389288
+          ],
+          "stds_kms": [
+            75.07396236762952,
+            75.66617928153282,
+            61.2856700826816
+          ]
+        },
+        {
+          "threshold_arcsec": 0.3,
+          "stars": 576,
+          "means_kms": [
+            -5.9436354730992385,
+            118.66283246393083,
+            -1.0955653920335477
+          ],
+          "stds_kms": [
+            75.13080901391764,
+            75.62085502885627,
+            61.26970694260727
+          ]
+        },
+        {
+          "threshold_arcsec": 0.5,
+          "stars": 577,
+          "means_kms": [
+            -5.897160828570716,
+            118.83345093029813,
+            -0.9743562449389288
+          ],
+          "stds_kms": [
+            75.07396236762952,
+            75.66617928153282,
+            61.2856700826816
+          ]
+        },
+        {
+          "threshold_arcsec": 1.0,
+          "stars": 577,
+          "means_kms": [
+            -5.897160828570716,
+            118.83345093029813,
+            -0.9743562449389288
+          ],
+          "stds_kms": [
+            75.07396236762952,
+            75.66617928153282,
+            61.2856700826816
+          ]
+        },
+        {
+          "threshold_arcsec": 1.5,
+          "stars": 577,
+          "means_kms": [
+            -5.897160828570716,
+            118.83345093029813,
+            -0.9743562449389288
+          ],
+          "stds_kms": [
+            75.07396236762952,
+            75.66617928153282,
+            61.2856700826816
+          ]
+        }
+      ]
+    },
+    "disk_plane": {
+      "stars": 4425,
+      "parallax_disagreement_stars": 156,
+      "flagged_0.5_arcsec": 28,
+      "flagged_and_parallax_disagreement": 3,
+      "sensitivity": [
+        {
+          "threshold_arcsec": null,
+          "stars": 4425,
+          "means_kms": [
+            1.5575371451874866,
+            224.87158261110454,
+            -1.087318073977916
+          ],
+          "stds_kms": [
+            42.433606856952544,
+            28.073538344933244,
+            20.558487184145918
+          ]
+        },
+        {
+          "threshold_arcsec": 0.3,
+          "stars": 4388,
+          "means_kms": [
+            1.214742770453344,
+            224.79515994424398,
+            -0.8467679982583504
+          ],
+          "stds_kms": [
+            37.44995093552514,
+            26.513282831841337,
+            19.123890200800098
+          ]
+        },
+        {
+          "threshold_arcsec": 0.5,
+          "stars": 4397,
+          "means_kms": [
+            1.276172161192718,
+            224.76607527979158,
+            -0.8244563100574617
+          ],
+          "stds_kms": [
+            37.56106292426708,
+            26.54788494041256,
+            19.208728358891555
+          ]
+        },
+        {
+          "threshold_arcsec": 1.0,
+          "stars": 4401,
+          "means_kms": [
+            1.2380311999019065,
+            224.77720230267832,
+            -0.8071584747789269
+          ],
+          "stds_kms": [
+            37.60761245781661,
+            26.57651002079218,
+            19.27276570746924
+          ]
+        },
+        {
+          "threshold_arcsec": 1.5,
+          "stars": 4409,
+          "means_kms": [
+            1.2831899418095287,
+            224.8113055214387,
+            -0.8556465025912973
+          ],
+          "stds_kms": [
+            37.68753278128659,
+            26.59880737391378,
+            19.323629170613287
+          ]
+        }
+      ]
+    },
+    "disk_offplane": {
+      "stars": 11214,
+      "parallax_disagreement_stars": 390,
+      "flagged_0.5_arcsec": 3,
+      "flagged_and_parallax_disagreement": 0,
+      "sensitivity": [
+        {
+          "threshold_arcsec": null,
+          "stars": 11214,
+          "means_kms": [
+            0.8898907748994336,
+            221.98456625916924,
+            -2.030856712866868
+          ],
+          "stds_kms": [
+            44.599828967072526,
+            31.09792692861109,
+            25.12643434120843
+          ]
+        },
+        {
+          "threshold_arcsec": 0.3,
+          "stars": 11175,
+          "means_kms": [
+            0.894965014341106,
+            221.97851155463655,
+            -2.041327082653059
+          ],
+          "stds_kms": [
+            44.589799553047925,
+            31.103773095404865,
+            25.118920019959095
+          ]
+        },
+        {
+          "threshold_arcsec": 0.5,
+          "stars": 11211,
+          "means_kms": [
+            0.9083447286171942,
+            221.982681690503,
+            -2.0326731748615963
+          ],
+          "stds_kms": [
+            44.59130114476079,
+            31.094800907007834,
+            25.125175343150364
+          ]
+        },
+        {
+          "threshold_arcsec": 1.0,
+          "stars": 11214,
+          "means_kms": [
+            0.8898907748994336,
+            221.98456625916924,
+            -2.030856712866868
+          ],
+          "stds_kms": [
+            44.599828967072526,
+            31.09792692861109,
+            25.12643434120843
+          ]
+        },
+        {
+          "threshold_arcsec": 1.5,
+          "stars": 11214,
+          "means_kms": [
+            0.8898907748994336,
+            221.98456625916924,
+            -2.030856712866868
+          ],
+          "stds_kms": [
+            44.599828967072526,
+            31.09792692861109,
+            25.12643434120843
+          ]
+        }
+      ]
+    }
+  },
+  "velocity_order": [
+    "vR",
+    "vphi",
+    "vz"
+  ],
+  "max_spherical_vs_tangent_arcsec": 4.02398726319364e-10,
+  "source_hashes": {
+    "parent": "a60182c30b98fe06d7e928a3aed5f70fa59342bdc44dc65b9f8005ff0b56f959",
+    "roles": "f07267caadc0377c5b0092b2dcc72f44779b7a9b155cfe952d339712d8d4dfd8",
+    "moments": "b3526517e426a41f294abea0b5b43c3a497c65d0d2db6592e5fcd5f22c44ecb0",
+    "provenance": "f054e69269a39e5bc32a5deb367f60b6524b45244b96ee09bbc0aae1151b46d3"
+  },
+  "screen_sha256": "6266969084c382fd8c924a60ae07991a6725b78efec6c2b61a0a7b835ac226d4",
+  "verification": {
+    "analytic_vs_grid": true,
+    "synthetic_boundary_fixtures": true,
+    "training_only": true,
+    "unchanged_source_files": true
+  },
+  "interpretation": "Training positional diagnostic and descriptive sensitivity only. No adopted deletion, replacement, association probability or gravity ranking. Approximate distance-derived positions/moments retain previously documented provenance limitations.",
+  "epoch_screen_applicable_training_stars": 77819,
+  "non_2mass_identifiers_not_epoch_screened": 108
+}
