@@ -9,8 +9,9 @@ from scipy.stats import ncx2
 from numpy.polynomial.legendre import leggauss
 
 H=Path(__file__).resolve().parent;R=H.parent
-parser=argparse.ArgumentParser();parser.add_argument('--verify-resolution',action='store_true');parser.add_argument('--grid-index',type=int,choices=range(9));parser.add_argument('--role',choices=['training','validation'],default='training');parser.add_argument('--orbit-audit',action='store_true');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--verify-resolution',action='store_true');parser.add_argument('--grid-index',type=int,choices=range(9));parser.add_argument('--role',choices=['training','validation','test'],default='training');parser.add_argument('--orbit-audit',action='store_true');args=parser.parse_args()
 if args.role!='training' and args.grid_index is not None:raise ValueError('Parameter grid is training-only.')
+if args.role=='test' and args.orbit_audit:raise ValueError('No exploratory orbital alternatives on the final test sample.')
 spec=importlib.util.spec_from_file_location('wave_equilibrium',R/'self-consistent-wave/run.py')
 wave=importlib.util.module_from_spec(spec);spec.loader.exec_module(wave)
 files=[H/'protocol.json',R/'lens-photometric-audit/normalization-sensitivity-updated-profile.json',
@@ -25,19 +26,25 @@ if args.grid_index is not None:
     protocol['grid_protocol']=gp
     OUT=H/'parameter-grid'/f'cell-{args.grid_index}'
     OUT.mkdir(parents=True,exist_ok=True)
-if args.role=='validation':
-    OUT=R/'wave-lens-validation'
+if args.role in ['validation','test']:
+    OUT=R/f'wave-lens-{args.role}'
     vpfile=OUT/'protocol.json';vp=json.loads(vpfile.read_text())
     selectedfile=H/'parameter-grid/selected-calibration.json';selected=json.loads(selectedfile.read_text())
     for key in ['field_mass_eV_c2','source_to_stellar_mass_ratio']:protocol[key]=selected[key]
-    protocol.update({'role':'validation','choice':'Frozen training-selected common parameters','validation_protocol':vp})
+    protocol.update({'role':args.role,'choice':'Frozen training-selected common parameters','evaluation_protocol':vp})
     files[1]=OUT/'mass-inputs.json';masses=json.loads(files[1].read_text())
     files.extend([vpfile,selectedfile])
+    if args.role=='test':
+        for file,digest in vp['frozen_inputs'].items():
+            assert hashlib.sha256((R/file).read_bytes()).hexdigest()==digest, f'Frozen input changed: {file}'
+        masscalfile=R/'stellar-mass-degeneracy/frozen-calibration.json';files.append(masscalfile)
+        shared_mass_factor=json.loads(masscalfile.read_text())['lambda_mass']
 if args.orbit_audit:
     opfile=R/'stellar-orbit-degeneracy/protocol.json'
     protocol['orbital_audit']=json.loads(opfile.read_text());files.append(opfile)
 masses=[r for r in masses if r['model']=='baryons' and r['imf']=='Salpeter' and r['propagation_branch']=='energy_loss_and_event_stretch']
-assert len(masses)==(32 if args.role=='training' else 7) and all(r['role']==args.role for r in masses)
+expected=32 if args.role=='training' else (7 if args.role=='validation' else json.loads((OUT/'preparation.json').read_text())['eligible'])
+assert len(masses)==expected and all(r['role']==args.role for r in masses)
 if args.verify_resolution:
     old=json.loads((OUT/'results.json').read_text())['equilibrium_checks']
     names={old[0]['Name'],min(old,key=lambda r:r['eta'])['Name'],max(old,key=lambda r:r['eta'])['Name']}
@@ -82,9 +89,10 @@ for mrow in masses:
             angular_weights[beta]=Wbeta
             kernels[beta]=x**(2*beta)*cumulative_trapezoid(x**(2-2*beta)*Wbeta,x,initial=0)
     denom=np.trapezoid(j*x*x*W,x)
-    for model in ['baryons','stationary_wave']:
+    for model in ['baryons','stationary_wave']+(['shared_stellar_mass'] if args.role=='test' else []):
+        multiplier=shared_mass_factor if model=='shared_stellar_mass' else 1.
         gc=enclosed(x)/x**2 if model=='stationary_wave' else np.zeros_like(x)
-        sigma=np.sqrt(G*M/a*np.trapezoid(j*(1/(1+x)**2+gc)*kernel,x)/denom)
+        sigma=np.sqrt(multiplier*G*M/a*np.trapezoid(j*(1/(1+x)**2+gc)*kernel,x)/denom)
         def bend(angle):
             b=dl*angle*RAD/a
             def integrand(t):
@@ -92,7 +100,7 @@ for mrow in masses:
                 mm=rr**2/(1+rr)**2
                 if model=='stationary_wave': mm+=float(enclosed(rr))
                 return mm*np.cos(t)/b
-            return 4*G*M/(a*C*C)*quad(integrand,0,np.pi/2,epsabs=1e-9,epsrel=2e-8)[0]*ratio/RAD
+            return multiplier*4*G*M/(a*C*C)*quad(integrand,0,np.pi/2,epsabs=1e-9,epsrel=2e-8)[0]*ratio/RAD
         angle=np.exp(brentq(lambda log:bend(np.exp(log))/np.exp(log)-1,-24,4))
         b=dl*angle*RAD/a
         def cap(r):return (b/r)**2/(1+np.sqrt(1-(b/r)**2))
@@ -100,10 +108,10 @@ for mrow in masses:
         if model=='stationary_wave':
             projected+=float(enclosed(b))
             if b<90:projected+=quad(lambda r:sol.sol(r)[0]**2*cap(r),b,90,epsabs=1e-10)[0]
-        projected_bend=4*G*M/(a*C*C)*projected/b*ratio/RAD
+        projected_bend=multiplier*4*G*M/(a*C*C)*projected/b*ratio/RAD
         lens_error=abs(projected_bend/angle-1)
         assert lens_error<1e-6
-        rows.append({'Name':name,'role':args.role,'model':model,'eta':eta,'stellar_mass_Msun':M,
+        rows.append({'Name':name,'role':args.role,'model':model,'eta':eta,'stellar_mass_Msun':M*multiplier,
                      'sigma_pred_km_s':float(sigma),'sigma_observed_km_s':obs['sigma'],
                      'sigma_error_km_s':obs['e_sigma'],'theta_pred_arcsec':float(angle),
                      'theta_SIE_arcsec':obs['bSIE'],'projected_mass_lensing_identity_relative_error':lens_error})
@@ -121,7 +129,7 @@ for mrow in masses:
 summary={'classification':f'Fixed shared-parameter conditional {args.role} comparison; not capture theory',
          'systems':len(masses),'protocol':protocol,'scores':{},'equilibrium_checks':checks,
          'input_sha256':{str(f.relative_to(R)):hashlib.sha256(f.read_bytes()).hexdigest() for f in files}}
-for model in ['baryons','stationary_wave']:
+for model in ['baryons','stationary_wave']+(['shared_stellar_mass'] if args.role=='test' else []):
     ss=[r for r in rows if r['model']==model]
     ds=np.array([r['sigma_pred_km_s']-r['sigma_observed_km_s'] for r in ss])
     da=np.array([r['theta_pred_arcsec']-r['theta_SIE_arcsec'] for r in ss])

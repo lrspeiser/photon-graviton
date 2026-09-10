@@ -1,0 +1,32 @@
+{
+  "status": "Frozen before preparing or predicting test-role galaxies; first test-role model scoring",
+  "sample_role": "test",
+  "eligibility": "Original test role, E morphology, available spectroscopic dispersion, finite published Salpeter mass, positive updated I-band radius",
+  "primary_comparison": "Frozen wave versus frozen common-stellar-mass benchmark; also report original ordinary-mass baseline",
+  "parameters": {
+    "field_mass_eV_c2": 1e-24,
+    "source_fraction": 0.6,
+    "common_stellar_mass_multiplier": 1.645362158609144,
+    "stellar_beta": 0.0
+  },
+  "preserved_assumptions": "Same conditional Salpeter luminosity normalization, energy-loss-plus-event-stretch branch, archived static geometry, Hernquist profiles, 3 arcsec aperture, 1.5 arcsec Gaussian seeing",
+  "primary_score": "Same equal-weight mean squared log dispersion and lens-angle residual score used in training; lower is better",
+  "secondary_metrics": "Both RMS errors, median ratios, mean biases, per-object predictions and all exclusions",
+  "interpretation": "Conditional predictive test of calibrated profiles, not a full uncertainty likelihood, pristine data blinding or proof of photon origin",
+  "history": "Public catalog and some aggregate sample information previously accessed; no prior model predictions or residual selection for test-role systems",
+  "failure_handling": "Keep numerical failures explicit and do not omit systems based on outcomes",
+  "no_refitting": true,
+  "no_orbital_grid": true,
+  "future_use": "After this run the test residuals are exposed. Later changes require a new independent test sample.",
+  "frozen_inputs": {
+    "wave-lens-training/parameter-grid/selected-calibration.json": "92dcffd28a9fc2e623d77383206bc708138084f581a8440e80ccb0e039618efd",
+    "stellar-mass-degeneracy/frozen-calibration.json": "4cd4700900f25d3d346bfd0755405b97ef00308c8eb7c9b1bca6732c4758dc9c",
+    "wave-lens-training/run.py": "2f90a78287703967dc496f71daf1049267936b585503d91dd918cd0bb231320a",
+    "wave-lens-validation/prepare.py": "2eb68017ce69106ad807165e344a7b6e310336b9bfc523ccb428e7fbf7cdd9b6",
+    "self-consistent-wave/run.py": "7df026f5b2508a30326f0b9601ad8002e92704cbaf65ee49a295cb80cc39b6ce",
+    "lensing-data-readiness/lens-observations-and-image-models.json": "e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+    "lensing-data-readiness/conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "lens-photometric-audit/source-tables/table3.dat": "1a5023ec92db956076e73bf1d788f8695027a4db9e3e482ff7d143a4be9c2c0c",
+    "lens-photometric-audit/source-tables/table4.dat": "b22e49621789b935329b0b0c27a27b2297008553baa8f0c474c095eaba37e11b"
+  }
+}
