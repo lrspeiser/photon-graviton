@@ -1,0 +1,64 @@
+{
+  "script_sha256": "c51a09f9e8f25ec9b6814b50aa04ce9a8c3cc02958f4d161d448e151f48a7877",
+  "proposed_gradient_energy": "K*c0^2/2 * integral (partial_x ln n)^2 dx",
+  "canonical_wave_equation": "n_tt = c0^2/n * partial_xx ln n, without photons; add the Hamiltonian photon source when coupled.",
+  "linearized_speed": "c0/N about constant n=N>0",
+  "finite_difference_energy_gradient_max_error": 1.7936740981383537e-10,
+  "runs": [
+    {
+      "background_n": 1.0,
+      "cells": 128,
+      "measured_phase_speed": 0.9998996042382213,
+      "continuum_photon_speed": 1.0,
+      "discrete_predicted_phase_speed": 0.9998996042161418,
+      "frequency_relative_error": 2.208166982597959e-11,
+      "relative_energy_error": 5.29707551010509e-12
+    },
+    {
+      "background_n": 1.0,
+      "cells": 256,
+      "measured_phase_speed": 0.9999749005104576,
+      "continuum_photon_speed": 1.0,
+      "discrete_predicted_phase_speed": 0.9999749004870501,
+      "frequency_relative_error": 2.3408164295801726e-11,
+      "relative_energy_error": 9.572525555125477e-12
+    },
+    {
+      "background_n": 1.2,
+      "cells": 128,
+      "measured_phase_speed": 0.8332496701956144,
+      "continuum_photon_speed": 0.8333333333333334,
+      "discrete_predicted_phase_speed": 0.8332496701801183,
+      "frequency_relative_error": 1.8597123840891072e-11,
+      "relative_energy_error": 1.5442077447182952e-11
+    },
+    {
+      "background_n": 1.2,
+      "cells": 256,
+      "measured_phase_speed": 0.8333124170808948,
+      "continuum_photon_speed": 0.8333333333333334,
+      "discrete_predicted_phase_speed": 0.8333124170725418,
+      "frequency_relative_error": 1.0023759600130688e-11,
+      "relative_energy_error": 1.644950636523261e-11
+    },
+    {
+      "background_n": 2.0,
+      "cells": 128,
+      "measured_phase_speed": 0.49994980210872014,
+      "continuum_photon_speed": 0.5,
+      "discrete_predicted_phase_speed": 0.4999498021080709,
+      "frequency_relative_error": 1.2987388942065081e-12,
+      "relative_energy_error": 3.357280422887733e-11
+    },
+    {
+      "background_n": 2.0,
+      "cells": 256,
+      "measured_phase_speed": 0.49998745025014113,
+      "continuum_photon_speed": 0.5,
+      "discrete_predicted_phase_speed": 0.49998745024352503,
+      "frequency_relative_error": 1.3232526185902316e-11,
+      "relative_energy_error": 2.0923608087850813e-11
+    }
+  ],
+  "scope": "Tests positive-energy variational consistency and small-wave speed only. No finite photon conversion, detector clocks, lossless transport in evolving backgrounds, capture or gravity prediction."
+}
