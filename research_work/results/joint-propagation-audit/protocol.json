@@ -1,0 +1,21 @@
+{
+  "status": "Exploratory diagnostic specified before this script's execution; timing and radio outcomes already exposed. No fresh holdout or parameter fit.",
+  "date": "2026-09-10",
+  "alpha_source": "research_work/results/electromagnetic-audit/protocol.json",
+  "distance_mpc": 40.7,
+  "distance_random_error_mpc": 1.4,
+  "distance_systematic_error_mpc": 1.9,
+  "distance_source": "https://arxiv.org/abs/1801.06080",
+  "distance_contract": "Stipulate the published surface-brightness-fluctuation distance as path length in the fictional static geometry. Not derived from redshift; luminosity calibration is still model dependent.",
+  "gamma_minus_gw_seconds": 1.74,
+  "quoted_lag_error_seconds": 0.05,
+  "lag_source": "https://arxiv.org/abs/1710.05834",
+  "distance_sensitivity_mpc": [30, 40.7, 50],
+  "illustrative_absolute_intrinsic_lag_bounds_seconds": [1, 10, 1000],
+  "lag_interpretation": "Bounds are diagnostic scenarios, not measured emission priors. Observed lag is not pure flight delay. No published speed bound imported.",
+  "law": "dt/ds = 1/c + kappa(s)*(t-t_star), with nonnegative kappa and source field age >= 0, ordinary endpoint clocks. Conditional photon Hamiltonian omega=v*k implies d ln omega/ds=-kappa. Spatial ordinary geometry; no claim of a matter-clock completion.",
+  "slabs": [[0, 1], [0, 0.01], [0.495, 0.01], [0.99, 0.01]],
+  "slab_interpretation": "Pairs are start and width as fractions of D; integrated kappa is held at alpha*D. These are synthetic placement sensitivities, not measured void profiles.",
+  "checks": "Independent dimensionless ODE versus analytic slab transport; finite emission-interval derivative; zero-coupling limit; positive age monotonicity; shared-messenger cancellation; source hashes.",
+  "decision": "Classify timing, chromaticity and relative delay separately; never combine heterogeneous summaries into one chi-square or equate an unspecified prediction with a pass."
+}

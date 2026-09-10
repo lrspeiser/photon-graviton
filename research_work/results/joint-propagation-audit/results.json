@@ -1,0 +1,131 @@
+{
+  "alpha_per_mpc": 0.0002488993286382367,
+  "distance_mpc": 40.7,
+  "predicted_transfer_redshift_not_total_observed_z": 0.010181686880317512,
+  "event_stretch": 1.0101816868803175,
+  "uniform_minimum_extra_delay_seconds": 21290218855635.004,
+  "uniform_minimum_extra_delay_years": 674646.324677257,
+  "intrinsic_gamma_emission_offset_needed_years": -667846.520521146,
+  "distance_sensitivities": [
+    {
+      "distance_mpc": 30,
+      "minimum_extra_delay_years": 366221.4206832889
+    },
+    {
+      "distance_mpc": 40.7,
+      "minimum_extra_delay_years": 674646.324677257
+    },
+    {
+      "distance_mpc": 50,
+      "minimum_extra_delay_years": 1018973.937803983
+    }
+  ],
+  "slab_sensitivities": [
+    {
+      "start_fraction": 0,
+      "width_fraction": 1,
+      "event_stretch": 1.010181686881495,
+      "extra_delay_years": 674646.324677257
+    },
+    {
+      "start_fraction": 0,
+      "width_fraction": 0.01,
+      "event_stretch": 1.0101816868801627,
+      "extra_delay_years": 6746.46324677257
+    },
+    {
+      "start_fraction": 0.495,
+      "width_fraction": 0.01,
+      "event_stretch": 1.0101816868806068,
+      "extra_delay_years": 675775.8900268405
+    },
+    {
+      "start_fraction": 0.99,
+      "width_fraction": 0.01,
+      "event_stretch": 1.0101816868801627,
+      "extra_delay_years": 1344805.3168069087
+    }
+  ],
+  "intrinsic_lag_scenarios": [
+    {
+      "hypothetical_intrinsic_bound_seconds": 1,
+      "allowed_extra_flight_seconds": 2.8001816868803173,
+      "thin_interaction_max_source_distance_au": 0.5511397881231076
+    },
+    {
+      "hypothetical_intrinsic_bound_seconds": 10,
+      "allowed_extra_flight_seconds": 11.891816868803176,
+      "thin_interaction_max_source_distance_au": 2.3405814916148713
+    },
+    {
+      "hypothetical_intrinsic_bound_seconds": 1000,
+      "allowed_extra_flight_seconds": 1011.9716868803175,
+      "thin_interaction_max_source_distance_au": 199.17916887570883
+    }
+  ],
+  "reused_aging_rows": 35,
+  "reused_diagonal_chi_square": {
+    "no_event_stretch": 150.5692598895312,
+    "event_stretch_one_plus_z": 26.94852459529445
+  },
+  "reused_radio_predictions": [
+    {
+      "p": "-1",
+      "calibrated_A": "0.4697213544801387",
+      "predicted_low_z": "0.8858010000000001",
+      "predicted_high_z": "0.6009422749039339",
+      "observed_high_z": "0.8858052",
+      "predicted_offset_km_s": "-45284.999519724486",
+      "offset_residual_in_quoted_sigma": "-116117.07569160125"
+    },
+    {
+      "p": "0",
+      "calibrated_A": "0.634352664328226",
+      "predicted_low_z": "0.8858010000000001",
+      "predicted_high_z": "0.8858010000000001",
+      "observed_high_z": "0.8858052",
+      "predicted_offset_km_s": "0.0",
+      "offset_residual_in_quoted_sigma": "-1.6923076923076923"
+    },
+    {
+      "p": "1",
+      "calibrated_A": "0.8858010000000001",
+      "predicted_low_z": "0.8858010000000001",
+      "predicted_high_z": "1.1084583695601617",
+      "observed_high_z": "0.8858052",
+      "predicted_offset_km_s": "35396.62992662283",
+      "offset_residual_in_quoted_sigma": "90758.89724775084"
+    },
+    {
+      "p": "2",
+      "calibrated_A": "1.2781227058005",
+      "predicted_low_z": "0.8858010000000001",
+      "predicted_high_z": "1.2367044887149183",
+      "observed_high_z": "0.8858052",
+      "predicted_offset_km_s": "55784.36929592286",
+      "offset_residual_in_quoted_sigma": "143035.15204082782"
+    },
+    {
+      "p": "3",
+      "calibrated_A": "1.9021237178141925",
+      "predicted_low_z": "0.8858010000000001",
+      "predicted_high_z": "1.3009288884356667",
+      "observed_high_z": "0.8858052",
+      "predicted_offset_km_s": "65994.34938176312",
+      "offset_residual_in_quoted_sigma": "169214.58815836697"
+    }
+  ],
+  "verification": {
+    "max_dimensionless_ode_error": 1.1102230246251565e-15,
+    "finite_interval_stretch": "pass",
+    "zero_coupling": "pass",
+    "positive_age": "pass",
+    "shared_messenger_cancellation": "pass"
+  },
+  "input_sha256": {
+    "research_work/results/joint-propagation-audit/protocol.json": "b480a0ac958e6eeb094e3b6a703af5d13db915919ab3f20cddb035346a6668d5",
+    "research_work/results/electromagnetic-audit/protocol.json": "02387262d72a0a06f06d4f43ac865d7cfe32ade5a309c86d86f674326011a821",
+    "temporal_candidate_audit/data/spectral_aging.json": "b62b2cc2ede705d5772c045a936004e3141cf81da4225f4f8eac902ab9c3a53c",
+    "research_work/results/electromagnetic-audit/radio-chromaticity.csv": "224162511ddcc88431b3d9315d255bc0c170772a2ebd837809a42c0b0426d49d"
+  }
+}
