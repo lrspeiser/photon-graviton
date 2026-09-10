@@ -1,0 +1,49 @@
+{
+  "samples": 240,
+  "negative_fine": 0,
+  "negative_finer": 0,
+  "negative_requested": 0,
+  "checks": {
+    "fine_to_finer_source": {
+      "maximum_fraction": 0.05414250670938353,
+      "median_fraction": 0.0005625202304046537,
+      "worst_location": {
+        "R_kpc": 1,
+        "z_kpc": 4,
+        "phi_rad": 0.0
+      }
+    },
+    "analytic_laplacian_vs_acceleration_divergence": {
+      "maximum_fraction": 1.3553638918924217e-05,
+      "median_fraction": 1.1371988098896022e-06,
+      "worst_location": {
+        "R_kpc": 3,
+        "z_kpc": 0,
+        "phi_rad": 1.5707963267948966
+      }
+    },
+    "requested_divQ_vs_reconstructed_laplacian": {
+      "maximum_fraction": 0.010906944771949525,
+      "median_fraction": 0.0010884734347641595,
+      "worst_location": {
+        "R_kpc": 12,
+        "z_kpc": 0.5,
+        "phi_rad": 0.0
+      }
+    },
+    "requested_divQ_step_change": {
+      "maximum_fraction": 4.1350844323990954e-05,
+      "median_fraction": 3.2761795807708374e-06,
+      "worst_location": {
+        "R_kpc": 3,
+        "z_kpc": 0,
+        "phi_rad": 1.5707963267948966
+      }
+    }
+  },
+  "global_positivity_proved": false,
+  "physical_deposit_law_derived": false,
+  "source_accuracy_1_percent_everywhere_on_grid": false,
+  "holdouts_opened": false,
+  "results_sha256": "6ac1fd1b5146a1a4736f9d9192c7d3325bd1c8001c8a0890d62929dc087daa04"
+}
