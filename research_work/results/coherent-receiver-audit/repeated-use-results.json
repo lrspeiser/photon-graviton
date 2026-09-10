@@ -1,0 +1,105 @@
+{
+  "status": "No resets; exact interior translated-state model, with explicit two-step unitary verification. No free-flight or spatial dynamics specified.",
+  "reservoir_max_energy": 300.0,
+  "cases": [
+    {
+      "receiver_width": 0.5,
+      "two_photon_distance_from_product_state": 0.21616617919084685,
+      "two_photon_mutual_information_bits": 0.33740707833187544,
+      "first_photon_beat_visibility": 0.6065306597126334,
+      "second_photon_beat_visibility": 0.6065306597126334,
+      "repeated_energy_ledger": [
+        {
+          "photons": 1,
+          "receiver_energy_gain": 1.5000000000000036,
+          "receiver_energy_variance_increase": 0.2500000000000001,
+          "photon_energy_loss": 1.5
+        },
+        {
+          "photons": 2,
+          "receiver_energy_gain": 3.0000000000000036,
+          "receiver_energy_variance_increase": 0.5000000000000001,
+          "photon_energy_loss": 3.0
+        },
+        {
+          "photons": 10,
+          "receiver_energy_gain": 15.000000000000004,
+          "receiver_energy_variance_increase": 2.5000000000000013,
+          "photon_energy_loss": 15.0
+        },
+        {
+          "photons": 100,
+          "receiver_energy_gain": 149.99999999999997,
+          "receiver_energy_variance_increase": 24.99999999999997,
+          "photon_energy_loss": 150.0
+        }
+      ]
+    },
+    {
+      "receiver_width": 2,
+      "two_photon_distance_from_product_state": 0.029375774353850942,
+      "two_photon_mutual_information_bits": 0.03219835712547267,
+      "first_photon_beat_visibility": 0.9692332344763439,
+      "second_photon_beat_visibility": 0.9692332344763439,
+      "repeated_energy_ledger": [
+        {
+          "photons": 1,
+          "receiver_energy_gain": 1.5000000000000036,
+          "receiver_energy_variance_increase": 0.2499999999999991,
+          "photon_energy_loss": 1.5
+        },
+        {
+          "photons": 2,
+          "receiver_energy_gain": 2.999999999999993,
+          "receiver_energy_variance_increase": 0.5000000000000009,
+          "photon_energy_loss": 3.0
+        },
+        {
+          "photons": 10,
+          "receiver_energy_gain": 15.000000000000007,
+          "receiver_energy_variance_increase": 2.500000000000001,
+          "photon_energy_loss": 15.0
+        },
+        {
+          "photons": 100,
+          "receiver_energy_gain": 149.99999999999994,
+          "receiver_energy_variance_increase": 24.999999999999964,
+          "photon_energy_loss": 150.0
+        }
+      ]
+    },
+    {
+      "receiver_width": 5,
+      "two_photon_distance_from_product_state": 0.004952259095241385,
+      "two_photon_mutual_information_bits": 0.005062917518082896,
+      "first_photon_beat_visibility": 0.9950093943866898,
+      "second_photon_beat_visibility": 0.9950093943866898,
+      "repeated_energy_ledger": [
+        {
+          "photons": 1,
+          "receiver_energy_gain": 1.5,
+          "receiver_energy_variance_increase": 0.2500000000000071,
+          "photon_energy_loss": 1.5
+        },
+        {
+          "photons": 2,
+          "receiver_energy_gain": 3.000000000000007,
+          "receiver_energy_variance_increase": 0.5000000000000071,
+          "photon_energy_loss": 3.0
+        },
+        {
+          "photons": 10,
+          "receiver_energy_gain": 14.999999999999993,
+          "receiver_energy_variance_increase": 2.5,
+          "photon_energy_loss": 15.0
+        },
+        {
+          "photons": 100,
+          "receiver_energy_gain": 149.99999999999986,
+          "receiver_energy_variance_increase": 24.999999999999947,
+          "photon_energy_loss": 150.0
+        }
+      ]
+    }
+  ]
+}
