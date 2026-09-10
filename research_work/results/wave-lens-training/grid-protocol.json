@@ -1,0 +1,14 @@
+{
+  "status": "Declared before grid execution; training sample and prior fixed-point results already exposed",
+  "role": "training",
+  "field_mass_values_eV_c2": [7e-25, 1e-24, 1.4e-24],
+  "source_to_stellar_mass_values": [0.3, 0.6, 1.0],
+  "cell_order": "Field mass outer loop, source fraction inner loop, zero-based index",
+  "purpose": "Local shared-parameter sensitivity around the first fixed-point calculation; not exhaustive optimization",
+  "selection_score": "0.5 * mean[ln(sigma_pred/sigma_obs)^2 + ln(theta_pred/theta_SIE)^2] across matched systems",
+  "score_interpretation": "Equal weighting of logarithmic fractional errors; not an uncertainty-based likelihood",
+  "preserved_assumptions": "Same 32 training systems, fixed rescaled Salpeter masses, static geometry, spherical isotropic tracer and 1.5 arcsec seeing",
+  "per_galaxy_parameter_adjustment": false,
+  "holdout_access": false,
+  "failure_handling": "Retain failed cells and report the numerical or physical gate; do not select from an incomplete grid without saying so"
+}

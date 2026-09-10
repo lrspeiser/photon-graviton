@@ -9,16 +9,25 @@ from scipy.stats import ncx2
 from numpy.polynomial.legendre import leggauss
 
 H=Path(__file__).resolve().parent;R=H.parent
-parser=argparse.ArgumentParser();parser.add_argument('--verify-resolution',action='store_true');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--verify-resolution',action='store_true');parser.add_argument('--grid-index',type=int,choices=range(9));args=parser.parse_args()
 spec=importlib.util.spec_from_file_location('wave_equilibrium',R/'self-consistent-wave/run.py')
 wave=importlib.util.module_from_spec(spec);spec.loader.exec_module(wave)
 files=[H/'protocol.json',R/'lens-photometric-audit/normalization-sensitivity-updated-profile.json',
        R/'lensing-data-readiness/lens-observations-and-image-models.json',R/'lensing-data-readiness/conditional-geometry.json']
 protocol,masses,observed,geometry=[json.loads(f.read_text()) for f in files]
+OUT=H
+if args.grid_index is not None:
+    gpfile=H/'grid-protocol.json';gp=json.loads(gpfile.read_text());files.append(gpfile)
+    protocol['field_mass_eV_c2']=gp['field_mass_values_eV_c2'][args.grid_index//3]
+    protocol['source_to_stellar_mass_ratio']=gp['source_to_stellar_mass_values'][args.grid_index%3]
+    protocol['choice']='Declared shared-parameter training grid; not tuned per galaxy'
+    protocol['grid_protocol']=gp
+    OUT=H/'parameter-grid'/f'cell-{args.grid_index}'
+    OUT.mkdir(parents=True,exist_ok=True)
 masses=[r for r in masses if r['model']=='baryons' and r['imf']=='Salpeter' and r['propagation_branch']=='energy_loss_and_event_stretch']
 assert len(masses)==32 and all(r['role']=='training' for r in masses)
 if args.verify_resolution:
-    old=json.loads((H/'results.json').read_text())['equilibrium_checks']
+    old=json.loads((OUT/'results.json').read_text())['equilibrium_checks']
     names={old[0]['Name'],min(old,key=lambda r:r['eta'])['Name'],max(old,key=lambda r:r['eta'])['Name']}
     masses=[r for r in masses if r['Name'] in names]
 observed={r['Name']:r for r in observed if r['role']=='training'}
@@ -95,5 +104,5 @@ for model in ['baryons','stationary_wave']:
         'median_theta_pred_over_SIE':float(np.median([r['theta_pred_arcsec']/r['theta_SIE_arcsec'] for r in ss]))}
 for filename,data in [('predictions.json',rows),('results.json',summary)]:
     if args.verify_resolution:filename=filename.replace('.json','-refined.json')
-    (H/filename).write_text(json.dumps(data,indent=2)+'\n',newline='\n')
+    (OUT/filename).write_text(json.dumps(data,indent=2)+'\n',newline='\n')
 print(json.dumps(summary['scores'],indent=2))
