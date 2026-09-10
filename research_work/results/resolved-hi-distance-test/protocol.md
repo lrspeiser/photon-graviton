@@ -1,0 +1,9 @@
+# Resolved-HI versus integrated-linewidth distance test
+
+Declared before computing joined residuals: normalize NGC/IC identifiers by removing spaces and leading zeroes only; join the 32-object Ponomareva et al. 2016 atlas to the existing 73 indicator calibrators. No fuzzy joins. Retain every match. Do not import atlas distances, systemic velocities, halo masses or redshift outcomes. Archive unmatched identities.
+
+Extract observed/deprojected Vmax, Vflat and their quoted errors, kinematic inclination and global-profile shape. A present Vflat is a measured rotation statistic, not certification of undisturbed circular motion. Retain asymmetric profiles. Missing Vflat remains missing rather than being replaced by Vmax.
+
+On the common matched subset with Vflat, compare three known empirical TF predictors: log10(Wmx/sin Inc)-2.5 from our staged source, log10(2Vmax)-2.5 and log10(2Vflat)-2.5. Fit the same corrected i absolute magnitude under the existing p=1 conditional photometry, using the same stipulated indicator distances, fixed alpha, unweighted linear fitting, no clipping and leave-entire-CF4-group-out predictions. This is an exploratory paired comparison of velocity statistics, not a blind validation or unbiased likelihood. Also report the original 73-sample group's excluded prediction residuals on the same overlap, clearly distinguished from the subset-refitted comparisons.
+
+Publish both magnitude RMS and median absolute fractional distance discrepancy using the same Lambert W inversion as the previous test. Record groups, sample coverage and distance span. Verify independent bracketed inversion and full-rank fits; visually verify selected extracted kinematic values in the source PDF. Do not select a new physical model or change alpha on these exposed outcomes. Resolved kinematics cannot by itself fix selection or environment-dependent distance-calibration bias.
