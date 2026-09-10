@@ -1,0 +1,149 @@
+{
+  "parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "bar_order": 64,
+  "angles": 32,
+  "radial_nodes": 480,
+  "field": "Azimuth average of existing ordinary-matter bar, L16 nuclei, conservative disk grid, central mass; no halo",
+  "scores": {
+    "rotation/baryons": {
+      "rows": 38,
+      "rmse": 67.50544063019696,
+      "bias": -66.47330524560894
+    },
+    "rotation/spherical": {
+      "rows": 38,
+      "rmse": 8.196048992622583,
+      "bias": -5.255805827457908
+    },
+    "rotation/potential_composition": {
+      "rows": 38,
+      "rmse": 8.196047311601511,
+      "bias": -5.2558049590675395
+    },
+    "rotation/direct_multiplier": {
+      "rows": 38,
+      "rmse": 8.196048238160612,
+      "bias": -5.255805430262214
+    },
+    "vertical/baryons": {
+      "rows": 43,
+      "rmse": 28.102200982285684,
+      "bias": -21.05652483964863
+    },
+    "vertical/spherical": {
+      "rows": 43,
+      "rmse": 15.785374807005784,
+      "bias": -3.542410303784309
+    },
+    "vertical/potential_composition": {
+      "rows": 43,
+      "rmse": 36.105750418468936,
+      "bias": 34.023641067461156
+    },
+    "vertical/direct_multiplier": {
+      "rows": 43,
+      "rmse": 33.55639405456023,
+      "bias": 31.190691206570634
+    }
+  },
+  "loops": [
+    {
+      "bounds_R0_R1_z0_z1_kpc": [
+        1,
+        3,
+        0.1,
+        1.5
+      ],
+      "work_kms2": {
+        "baryons": 0.000563433797651669,
+        "spherical": 0.0005049770479672588,
+        "potential_composition": 0.0011503055720822886,
+        "direct_multiplier": -1767.1648078990474
+      },
+      "quadrature_change_kms2": {
+        "baryons": 0.0010189643326157238,
+        "spherical": 0.0010808165825437754,
+        "potential_composition": 0.0011117478425148875,
+        "direct_multiplier": 0.0012790462278644554
+      }
+    },
+    {
+      "bounds_R0_R1_z0_z1_kpc": [
+        3,
+        5,
+        0.1,
+        1.5
+      ],
+      "work_kms2": {
+        "baryons": 0.0003700691249832744,
+        "spherical": 0.0001257328021893045,
+        "potential_composition": 0.0005913040658924729,
+        "direct_multiplier": -731.3502993122056
+      },
+      "quadrature_change_kms2": {
+        "baryons": 0.00014475554598902818,
+        "spherical": 9.893761307466775e-05,
+        "potential_composition": 0.00037381050606200006,
+        "direct_multiplier": 0.00016601574679953046
+      }
+    },
+    {
+      "bounds_R0_R1_z0_z1_kpc": [
+        5,
+        9,
+        0.1,
+        1.5
+      ],
+      "work_kms2": {
+        "baryons": 4.4564656491274945e-05,
+        "spherical": 8.664883353048936e-05,
+        "potential_composition": 4.9992722779279575e-06,
+        "direct_multiplier": -495.8716767492142
+      },
+      "quadrature_change_kms2": {
+        "baryons": 0.0002517940774851013,
+        "spherical": 0.0004415157291077776,
+        "potential_composition": 0.00016618699009995908,
+        "direct_multiplier": 0.0004046818548886222
+      }
+    },
+    {
+      "bounds_R0_R1_z0_z1_kpc": [
+        9,
+        15,
+        0.1,
+        1.5
+      ],
+      "work_kms2": {
+        "baryons": 5.21809988640598e-05,
+        "spherical": 2.7817861791845644e-05,
+        "potential_composition": 0.00020208417254252709,
+        "direct_multiplier": -153.02614783418448
+      },
+      "quadrature_change_kms2": {
+        "baryons": 3.113753950856335e-05,
+        "spherical": 6.010593051541946e-05,
+        "potential_composition": 0.000335826192440436,
+        "direct_multiplier": 4.276051276974613e-05
+      }
+    }
+  ],
+  "input_sha256": {
+    "research_work\\results\\milky-way-capture\\inputs.json": "e2af10278dcfc6019dcb0848b1897f42329590e8ee524b04d4a1b675ca365258",
+    "research_work\\results\\joint-galaxy-audit\\results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "research_work\\data-cache\\rotating-bar-orbits\\disk-N24-Rmin0.001-256-129-9e0f1e007aaa.npz": "646756ab01f49d7a51dd44775d0d59d3a0f4d2dd82c43ecf6abe92bde3c48da4"
+  },
+  "holdout_scores_opened": false,
+  "new_parameters_fitted": false,
+  "caveats": [
+    "Previously exposed, model-dependent summary inputs; not independent raw-force measurements.",
+    "Completions are geometry assumptions, not a derived companion mechanism.",
+    "Direct multiplier is diagnostic only and is not admitted as a conservative static well.",
+    "Finite radial domain 0.2\u201332 kpc; no outer boundary, positive deposit density, source history or lensing closure established."
+  ]
+}
