@@ -1,0 +1,103 @@
+{
+  "targets": [
+    {
+      "target_name": "DDO047",
+      "agc": 3974,
+      "distance_method": "T",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    },
+    {
+      "target_name": "UGC04115",
+      "agc": 4115,
+      "distance_method": "T",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    },
+    {
+      "target_name": "LV J0913+1937",
+      "agc": 739005,
+      "distance_method": "T",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    },
+    {
+      "target_name": "KDG056",
+      "agc": 191706,
+      "distance_method": "S",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    },
+    {
+      "target_name": "SexB",
+      "agc": 5373,
+      "distance_method": "T",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    },
+    {
+      "target_name": "AGC208399",
+      "agc": 208399,
+      "distance_method": "S",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    },
+    {
+      "target_name": "LV J1030+0607",
+      "agc": 203709,
+      "distance_method": "S",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    },
+    {
+      "target_name": "LV J1000+3032",
+      "agc": 205590,
+      "distance_method": "T",
+      "haynes_class": 1,
+      "haynes_optical_position_present": true
+    }
+  ],
+  "alpha_per_mpc": 0.0002488993286382367,
+  "linear_alpha_per_mpc": 0.00025076185817284936,
+  "c_kms": 299792.458,
+  "scope": "Fixed-formula conditional cross-catalog diagnostic, not certified independent/fresh or a complete motion/selection likelihood.",
+  "distance": "ELVES publisher adopted TRGB/SBF distances, unchanged. No ALFALFA flow distances imported.",
+  "velocity": "Corrected Haynes ALFALFA catalog heliocentric optical midpoint velocity, not presumed identical to the ELVES adopted velocity. Center statistical uncertainty is half e_W50.",
+  "frame": "Use frozen exact solar-to-CMB spectral factors. z_helio=Vhel/c; 1+z_CMB=(1+z_helio)*F.",
+  "models": "Frozen exponential and historical training-fitted linear control; no intercept or per-object velocity fitted.",
+  "outputs": "All eight rows, residual c*(predicted_z-observed_z), RMS/MAE/bias, distance-method summaries. No residual exclusions or significance/acceptance threshold. Below original distance calibration range is flagged as extrapolation.",
+  "identity_check": "Haynes optical position must be within 30 arcsec of frozen ELVES direction; stop on mismatch, do not choose by residual.",
+  "exposure": {
+    "header_inspection_first_65_lines_displayed_before_freeze": [
+      "IC1613",
+      "UGC00685",
+      "UGC00695",
+      "UGC01056",
+      "UGC01085",
+      "dw0020p0837",
+      "PiscesA",
+      "dw0112p0129",
+      "dw0136p1628",
+      "dw0111p0227",
+      "UGC01999",
+      "UGC02168",
+      "dw0243m0015",
+      "dw0236m0001",
+      "dw0242p0000",
+      "dw0445p0344",
+      "dw0249m0239",
+      "AGC124635"
+    ],
+    "selected_targets_in_that_display": [],
+    "scope": "Historical distances and cross-task object exposure may remain. This is not certified fresh validation."
+  },
+  "input_hashes": {
+    "research_work\\data-cache\\nearby-redshift-crosscheck\\haynes-table2.dat": "5b94dd38213c110922ec08d81905167c4a388d99ef92c4ce3f7d3177bcba8d8c",
+    "research_work\\data-cache\\nearby-redshift-crosscheck\\elves-table.txt": "890b1d178feb505cb2d9105926d13b77bc639d882e18776a3b3561b0650d8903",
+    "research_work\\results\\redshift-priority\\elves-quarantine-screen.json": "ea561f72d001bb5c1e18a65852abda121b2da5374d3d348e0e3749318a002f0e",
+    "research_work\\results\\redshift-priority\\elves-radio-quality.json": "13868ca21f5c6cffb2b07e6072dcffe53511051e3eea1ab7deb711b269134001",
+    "research_work\\results\\redshift-priority\\elves-frame-factors.csv": "8e6ffef11980793742091593ed9c50919b2c6fa447e560b811c082e1ec8b0680",
+    "redshift_paper\\all_164_groups.csv": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+    "research_work\\results\\nearby-redshift-crosscheck\\evaluate.py": "0b65249d247d75d07667fb7f98991855e8c693839c0cec7a77ae2bc15b025f24"
+  }
+}
