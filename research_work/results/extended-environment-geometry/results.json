@@ -1,0 +1,146 @@
+{
+  "source_rows": 55877,
+  "individual_method_counts": {
+    "TF": 12222,
+    "TRGB": 446,
+    "FP": 42223,
+    "CEP": 69,
+    "SBF": 469,
+    "SNIA": 1004,
+    "SNII": 94,
+    "MASER": 6
+  },
+  "selected_tracers": 774,
+  "selected_method_counts": {
+    "TRGB": 445,
+    "SBF": 276,
+    "CEP": 47,
+    "MASER": 6
+  },
+  "selected_distance_min_median_max": [
+    0.04940831009106557,
+    9.183350309375854,
+    131.82567385564073
+  ],
+  "selected_linear_radial_sigma_p16_p50_p84_mpc": [
+    0.08582720003310294,
+    0.44453008425714247,
+    1.5623206353366694
+  ],
+  "selected_over_25mpc_sigma_above_1mpc": 84,
+  "selected_over_25mpc": 86,
+  "shells": [
+    {
+      "lower_mpc": 0,
+      "upper_mpc": 11,
+      "count": 432,
+      "sampling_density_per_mpc3": 0.07748490091926986
+    },
+    {
+      "lower_mpc": 11,
+      "upper_mpc": 25,
+      "count": 256,
+      "sampling_density_per_mpc3": 0.004275605019398896
+    },
+    {
+      "lower_mpc": 25,
+      "upper_mpc": 50,
+      "count": 70,
+      "sampling_density_per_mpc3": 0.00015278874536821954
+    },
+    {
+      "lower_mpc": 50,
+      "upper_mpc": 100,
+      "count": 13,
+      "sampling_density_per_mpc3": 3.546881588905096e-06
+    },
+    {
+      "lower_mpc": 100,
+      "upper_mpc": 200,
+      "count": 3,
+      "sampling_density_per_mpc3": 1.0231389198764701e-07
+    },
+    {
+      "lower_mpc": 200,
+      "upper_mpc": null,
+      "count": 0,
+      "sampling_density_per_mpc3": null
+    }
+  ],
+  "geometry": [
+    {
+      "radius_mpc": 1,
+      "median_catalog_no_neighbor_fraction": 0.8596625908448485,
+      "median_p84_minus_p16_mpc": 4.311879579376055,
+      "fixed_distance_projection_beta": 0.9041232068647347,
+      "median_projected_p84_minus_p16_mpc": 0.7914200952878122,
+      "median_absolute_common_shift_mpc": 1.4797222654019269,
+      "residual_fraction_and_singular_ratio": [
+        0.0940292511019217,
+        0.04711900746324481
+      ],
+      "sampled_design_p16_p84": [
+        [
+          0.09548213589441704,
+          0.047850378701207626
+        ],
+        [
+          0.09864059962941797,
+          0.049440858306376394
+        ]
+      ]
+    },
+    {
+      "radius_mpc": 3,
+      "median_catalog_no_neighbor_fraction": 0.547400087705795,
+      "median_p84_minus_p16_mpc": 4.743803035551491,
+      "fixed_distance_projection_beta": 0.710892333172627,
+      "median_projected_p84_minus_p16_mpc": 2.2473400445292375,
+      "median_absolute_common_shift_mpc": 1.2654948214207424,
+      "residual_fraction_and_singular_ratio": [
+        0.2551625043941915,
+        0.12972837465374443
+      ],
+      "sampled_design_p16_p84": [
+        [
+          0.2597797823895705,
+          0.13215853228370153
+        ],
+        [
+          0.26827841418252446,
+          0.1366437908168035
+        ]
+      ]
+    },
+    {
+      "radius_mpc": 5,
+      "median_catalog_no_neighbor_fraction": 0.29778501338066465,
+      "median_p84_minus_p16_mpc": 4.856865580362277,
+      "fixed_distance_projection_beta": 0.5812388018173085,
+      "median_projected_p84_minus_p16_mpc": 3.0433416516204215,
+      "median_absolute_common_shift_mpc": 1.1007356190208881,
+      "residual_fraction_and_singular_ratio": [
+        0.3805710496758291,
+        0.19772475220411315
+      ],
+      "sampled_design_p16_p84": [
+        [
+          0.3887127984175502,
+          0.202311387976631
+        ],
+        [
+          0.4056498588518816,
+          0.2119351176283516
+        ]
+      ]
+    }
+  ],
+  "midpoint_max_error_mpc": 0.007622245856246934,
+  "interpretation": "Feature and uncertainty diagnostics only; not a complete void map, observational fit or fresh holdout.",
+  "sha256": {
+    "temporal_candidate_audit/data/cf4_table2.dat": "8e908928e68352b59292cf67020a4d70aaa6d30f278dfa6aa3e41a9df808332f",
+    "temporal_candidate_audit/data/cf4_ReadMe.txt": "2cfed1418147d5a626dee1fa37c47252124477c9828490508d9bbe511d34edb4",
+    "redshift_paper/all_164_groups.csv": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+    "research_work/results/extended-environment-geometry/protocol.md": "86aa47b29191d12d00880f78296802237df1609e7f4bd77183c6f71748e188a9"
+  }
+}
