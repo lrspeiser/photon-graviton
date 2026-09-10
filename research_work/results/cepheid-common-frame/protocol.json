@@ -1,0 +1,28 @@
+{
+  "status": "Declared before computing individual-star distances or velocities for this analysis",
+  "role": "Training-sample reconstruction diagnostic; no new validation claim",
+  "calibration": {
+    "source": "Ripepi et al. 2023, A&A 674 A17, Table 3 and section 2.2",
+    "url": "https://openaccess.inaf.it/bitstream/20.500.12386/36524/1/aa43990-22-compressed.pdf",
+    "wesenheit_color_coefficient": 1.9,
+    "fundamental": {"intercept": -2.744, "slope": -3.391, "intercept_error": 0.045, "slope_error": 0.052},
+    "first_overtone": {"intercept": -3.224, "slope": -3.588, "intercept_error": 0.028, "slope_error": 0.065},
+    "distance_error_scenario_fraction": 0.07,
+    "error_note": "7 percent is an illustrative distance-error scenario, not a complete posterior. Table 3 ABL scatter is not a magnitude or fractional-distance error. Coefficient covariance is unavailable here."
+  },
+  "split": {"algorithm": "SHA256 of cepheid-common-frame-v1: followed by decimal Gaia source_id; first eight hex digits modulo 100", "train": [0, 59], "validation": [60, 79], "test": [80, 99]},
+  "eligibility": "Existing flag_measurement_candidate and exactly FUNDAMENTAL with positive pf or FIRST_OVERTONE with positive p1_o. MULTI deferred. Process velocities only for train.",
+  "frame": {"R_sun_kpc": 8.2, "z_sun_kpc": 0.0208, "v_sun_astropy_xyz_kms": [11.1, 248.0, 7.25]},
+  "selection": {"R_kpc": [6, 18], "abs_phi_deg_max": 30, "abs_z_kpc_max": 0.5, "abs_vz_kms_max": 100, "note": "Galactocentric wedge around Sun azimuth. No exact replication of authors' sky exclusions is claimed."},
+  "bins": {"edges_kpc": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], "minimum_count_for_proxy": 5},
+  "velocity_proxy": {"formula_status": "Known simplified axisymmetric Jeans estimator, not a new physical law", "R_density_kpc": 4, "R_sigma_kpc": 27.3, "fit_parameters": false, "measurement_variance": "First-order propagation of pmra/pmdec covariance, combined radial-velocity error and independent 7 percent distance scenario; neglect sky-position error and distance-proper-motion covariance."},
+  "models": ["Frozen ordinary-matter field", "Frozen conservative completion at original mass normalization"],
+  "model_comparison": "Compare sqrt(mean predicted vc squared at individual radii)) with bin Jeans proxy. Record unweighted bin RMS and bias, not significance or holdout score.",
+  "sensitivity": "Recompute selected training stars at distance scales 0.93 and 1.07, retaining nominal membership and bins. Separately recompute exact coordinates in Feng and Eilers frames. Do not choose parameters by best agreement.",
+  "frozen_files": {
+    "research_work/results/conservative-field-completion/run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work/results/joint-galaxy-audit/results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "research_work/data-cache/cepheid-stars/gaia-dr3-dcep-parent-with-flags.parquet": "a1f6cf7934818ce556650a93e78c40a3ee537c5e5f4d964b241bcd5011799870"
+  },
+  "not_claimed": ["Exact 903-star replication", "Full distance likelihood", "Fresh independent catalog", "Axisymmetry established", "Photon production or capture validated", "Complete theory"]
+}
