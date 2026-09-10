@@ -100,3 +100,8 @@ Reproduce with run.py, run.py --refined, then verify.py. All 264 model/system co
 ## Next decision
 
 Do not respond to the overprediction by giving every lens a free companion normalization or by adjusting the spatial metric independently to match its image. First constrain the ordinary-matter mass/light profile from photometry under the same distance prescription, incorporate realistic seeing and orbital alternatives, and specify the shared companion source/metric law. If a prespecified extension still underperforms after those checks, retain that failure and test a clearly identified physical revision. The held-out systems remain available for evaluating the resulting frozen procedure.
+
+
+## Updated photometric profile comparison
+
+The [photometric audit](../lens-photometric-audit/report.md) reruns all 33 training systems with the newer I-band sizes, preserving this original result. Representative RMS discrepancies become 0.1840 arcsec for ordinary matter and 0.2083 arcsec for the empirical companion model. Stellar-population mass normalization still remains insufficient under fixed-population assumptions; no heldout score is opened.

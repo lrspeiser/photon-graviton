@@ -7,13 +7,19 @@ from scipy.optimize import brentq
 from scipy.stats import ncx2
 from numpy.polynomial.legendre import leggauss
 H=Path(__file__).resolve().parent;ROOT=H.parents[2]
-parser=argparse.ArgumentParser();parser.add_argument('--refined',action='store_true');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--refined',action='store_true');parser.add_argument('--updated-profile',action='store_true');args=parser.parse_args()
 datafile=H.parent/'lensing-data-readiness/lens-observations-and-image-models.json'
 geomfile=H.parent/'lensing-data-readiness/conditional-geometry.json'
 fitfile=H.parent/'joint-galaxy-audit/results.json'
 data=json.loads(datafile.read_text());geo={r['Name']:r for r in json.loads(geomfile.read_text())}
 data=[r for r in data if r['role']=='training' and r['Mph']=='E' and r['spectroscopic_dispersion_available']]
 assert len(data)==33
+profilefile=H.parent/'lens-photometric-audit/training-photometry.json'
+if args.updated_profile:
+    profiles={r['SDSS']:r for r in json.loads(profilefile.read_text())}
+    for r in data:
+        assert profiles[r['Name']]['Re(I)'] is not None
+        r['Re']=profiles[r['Name']]['Re(I)']
 pars=json.loads(fitfile.read_text())['sparc']['parameters'];G=4.30091727003628e-6;C=299792.458;KPC=3.085677581491367e19;RAD=np.pi/(180*3600)
 A,p,astar=pars['A'],pars['p'],pars['a_star_m_s2']*KPC/1e6;MREF=1e11
 x=np.geomspace(1e-6,1e5,12000 if args.refined else 6000);j=1/(x*(1+x)**3)
@@ -77,7 +83,9 @@ for model,seeing,cut in sorted(set((r['model'],r['seeing_fwhm_arcsec'],r['cutoff
     ss=[r for r in rows if (r['model'],r['seeing_fwhm_arcsec'],r['cutoff_over_Re'])==(model,seeing,cut)]
     res=np.array([r['residual_arcsec'] for r in ss]);rat=np.array([r['theta_pred_arcsec']/r['theta_SIE_arcsec'] for r in ss])
     summary['scores'][f'{model}/seeing{seeing}/cut{cut}']={'n':len(ss),'rmse_arcsec':float(np.sqrt(np.mean(res**2))),'median_predicted_over_SIE':float(np.median(rat)),'mean_residual_arcsec':float(res.mean())}
-suffix='-refined' if args.refined else ''
+summary['updated_I_profile_used']=args.updated_profile
+if args.updated_profile:summary['source_sha256'][str(profilefile.name)]=hashlib.sha256(profilefile.read_bytes()).hexdigest()
+suffix=('-refined' if args.refined else '')+('-updated-profile' if args.updated_profile else '')
 for name,obj in [('predictions',rows),('results',summary)]:
     (H/(name+suffix+'.json')).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(summary['scores'],indent=2))

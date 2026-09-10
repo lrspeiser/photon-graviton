@@ -1,0 +1,101 @@
+{
+  "training_systems": 33,
+  "extended_catalog_rows": 85,
+  "normalization_only": true,
+  "scores": {
+    "baryons/Chabrier/energy_loss_only": {
+      "n": 32,
+      "median_mass_ratio": 4.154483163027011,
+      "median_log10_ratio": 0.6185170032328298,
+      "log10_ratio_16_84": [
+        0.5043612692015885,
+        0.7229835003826306
+      ]
+    },
+    "baryons/Chabrier/energy_loss_and_event_stretch": {
+      "n": 32,
+      "median_mass_ratio": 3.354064534648622,
+      "median_log10_ratio": 0.5255714144931307,
+      "log10_ratio_16_84": [
+        0.4367681464261083,
+        0.6595974457086955
+      ]
+    },
+    "baryons/Salpeter/energy_loss_only": {
+      "n": 32,
+      "median_mass_ratio": 2.3547466268931387,
+      "median_log10_ratio": 0.37194418345553526,
+      "log10_ratio_16_84": [
+        0.26420268103590483,
+        0.48298350038263044
+      ]
+    },
+    "baryons/Salpeter/energy_loss_and_event_stretch": {
+      "n": 32,
+      "median_mass_ratio": 1.9079694407742533,
+      "median_log10_ratio": 0.2805714144931306,
+      "log10_ratio_16_84": [
+        0.1967681464261098,
+        0.41919744570869527
+      ]
+    },
+    "empirical_companion/Chabrier/energy_loss_only": {
+      "n": 32,
+      "median_mass_ratio": 3.3577360677556873,
+      "median_log10_ratio": 0.5260465557620773,
+      "log10_ratio_16_84": [
+        0.41979605237110745,
+        0.6466527759691615
+      ]
+    },
+    "empirical_companion/Chabrier/energy_loss_and_event_stretch": {
+      "n": 32,
+      "median_mass_ratio": 2.7277090211852713,
+      "median_log10_ratio": 0.4357980400190291,
+      "log10_ratio_16_84": [
+        0.3577384413010561,
+        0.5770827750730414
+      ]
+    },
+    "empirical_companion/Salpeter/energy_loss_only": {
+      "n": 32,
+      "median_mass_ratio": 1.9146916572387704,
+      "median_log10_ratio": 0.2820988449669155,
+      "log10_ratio_16_84": [
+        0.17979605237110724,
+        0.4066527759691613
+      ]
+    },
+    "empirical_companion/Salpeter/energy_loss_and_event_stretch": {
+      "n": 32,
+      "median_mass_ratio": 1.5586112688821456,
+      "median_log10_ratio": 0.1927378118978007,
+      "log10_ratio_16_84": [
+        0.11248534281620763,
+        0.3367616853627618
+      ]
+    }
+  },
+  "band_coverage_training": {
+    "Bmag": 11,
+    "Vmag": 32,
+    "Imag": 33,
+    "Hmag": 22
+  },
+  "missing_mass_training": 1,
+  "photometric_error_column_present": false,
+  "reference_cosmology_use": "Reconstruct published luminosity-distance normalization for a sensitivity conversion only; not assumed as fictional geometry.",
+  "limitations": [
+    "Mass-to-light ratio, age/metallicity/dust/IMF and star-formation priors held fixed; not a re-fit of stellar populations.",
+    "Published uncertainties are not recalculated and omit these changes.",
+    "Earlier dynamical masses use the older size/profile approximation; no radius silently replaced.",
+    "No lensing or stellar holdout score opened; no parameter fitted to these comparisons."
+  ],
+  "source_sha256": {
+    "ReadMe": "647d27d14c42080b2759d881daf7bb21d4975af872ee437016bcae563b654e97",
+    "table3.dat": "1a5023ec92db956076e73bf1d788f8695027a4db9e3e482ff7d143a4be9c2c0c",
+    "table4.dat": "b22e49621789b935329b0b0c27a27b2297008553baa8f0c474c095eaba37e11b"
+  },
+  "origin": "https://cdsarc.cds.unistra.fr/ftp/J/ApJ/705/1099/",
+  "retrieved": "2026-09-10"
+}
