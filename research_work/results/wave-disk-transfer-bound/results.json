@@ -1,0 +1,98 @@
+{
+  "classification": "Conditional transfer of lens f to exposed SPARC data; generous spherical mass bound, not a wave solution",
+  "f_from_lens_training": 0.6,
+  "galaxies": 149,
+  "radial_rows_verified": 3150,
+  "max_archived_baryonic_speed_difference_km_s": 5.684341886080802e-14,
+  "scenarios": {
+    "archived_stellar_baseline": {
+      "fail_last_radius": 147,
+      "fail_last_radius_speed_minus_one_error": 143,
+      "fail_any_radius": 147,
+      "median_minimum_f_last_radius": 5.576130232201191,
+      "luminosity_groups": {
+        "L_under_1e9": {
+          "n": 37,
+          "fail_last_radius": 37,
+          "median_minimum_f_last_radius": 17.48166920572206
+        },
+        "L_1e9_to_1e10": {
+          "n": 44,
+          "fail_last_radius": 44,
+          "median_minimum_f_last_radius": 6.99155220253953
+        },
+        "L_at_least_1e10": {
+          "n": 68,
+          "fail_last_radius": 66,
+          "median_minimum_f_last_radius": 2.67336032855487
+        }
+      },
+      "cepheid_or_trgb_distance_subset": {
+        "n": 40,
+        "fail_last_radius": 40
+      },
+      "historical_roles": {
+        "train": {
+          "n": 89,
+          "fail_last_radius": 89
+        },
+        "validation": {
+          "n": 29,
+          "fail_last_radius": 28
+        },
+        "test": {
+          "n": 31,
+          "fail_last_radius": 30
+        }
+      }
+    },
+    "shared_stellar_mass_increase": {
+      "fail_last_radius": 134,
+      "fail_last_radius_speed_minus_one_error": 126,
+      "fail_any_radius": 134,
+      "median_minimum_f_last_radius": 3.044227771866623,
+      "luminosity_groups": {
+        "L_under_1e9": {
+          "n": 37,
+          "fail_last_radius": 37,
+          "median_minimum_f_last_radius": 10.309853374967988
+        },
+        "L_1e9_to_1e10": {
+          "n": 44,
+          "fail_last_radius": 43,
+          "median_minimum_f_last_radius": 3.9094650825993367
+        },
+        "L_at_least_1e10": {
+          "n": 68,
+          "fail_last_radius": 54,
+          "median_minimum_f_last_radius": 1.3101373406235521
+        }
+      },
+      "cepheid_or_trgb_distance_subset": {
+        "n": 40,
+        "fail_last_radius": 38
+      },
+      "historical_roles": {
+        "train": {
+          "n": 89,
+          "fail_last_radius": 81
+        },
+        "validation": {
+          "n": 29,
+          "fail_last_radius": 26
+        },
+        "test": {
+          "n": 31,
+          "fail_last_radius": 27
+        }
+      }
+    }
+  },
+  "input_sha256": {
+    "temporal_candidate_audit\\data\\SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "temporal_candidate_audit\\data\\Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "research_work\\results\\joint-galaxy-audit\\galaxy-rotation-predictions.json": "8b49ac839bb9becb96b75bbf818cf91a47d49c063ed272e9649124e1f370cc77",
+    "research_work\\results\\wave-lens-training\\parameter-grid\\selected-calibration.json": "92dcffd28a9fc2e623d77383206bc708138084f581a8440e80ccb0e039618efd",
+    "research_work\\results\\stellar-mass-degeneracy\\frozen-calibration.json": "4cd4700900f25d3d346bfd0755405b97ef00308c8eb7c9b1bca6732c4758dc9c"
+  }
+}
