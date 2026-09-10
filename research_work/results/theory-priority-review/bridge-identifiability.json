@@ -1,0 +1,59 @@
+{
+  "rows": 3150,
+  "galaxies": 149,
+  "baseline_parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "scan": [
+    {
+      "alpha_multiplier": 0.01,
+      "alpha_per_Mpc": 2.488993265191759e-06,
+      "adjusted_A": 2.8802413420374493,
+      "max_rotation_prediction_change_kms": 5.684341886080802e-14,
+      "predicted_z_at_100_Mly": 7.631579138270193e-05
+    },
+    {
+      "alpha_multiplier": 0.1,
+      "alpha_per_Mpc": 2.4889932651917594e-05,
+      "adjusted_A": 0.8353868253099621,
+      "max_rotation_prediction_change_kms": 5.684341886080802e-14,
+      "predicted_z_at_100_Mly": 0.0007634200516712861
+    },
+    {
+      "alpha_multiplier": 1,
+      "alpha_per_Mpc": 0.0002488993265191759,
+      "adjusted_A": 0.2422960665538504,
+      "max_rotation_prediction_change_kms": 0.0,
+      "predicted_z_at_100_Mly": 0.0076604804374735816
+    },
+    {
+      "alpha_multiplier": 10,
+      "alpha_per_Mpc": 0.0024889932651917593,
+      "adjusted_A": 0.07027568796728999,
+      "max_rotation_prediction_change_kms": 5.684341886080802e-14,
+      "predicted_z_at_100_Mly": 0.07930021222459267
+    },
+    {
+      "alpha_multiplier": 100,
+      "alpha_per_Mpc": 0.024889932651917593,
+      "adjusted_A": 0.020382800222546273,
+      "max_rotation_prediction_change_kms": 5.684341886080802e-14,
+      "predicted_z_at_100_Mly": 1.144976925133144
+    }
+  ],
+  "rotation_Jacobian_singular_values": [
+    77.81725824025584,
+    5.281438629645407,
+    1.940355129887275e-15
+  ],
+  "rotation_Jacobian_rank_at_relative_tolerance_1e_10": 2,
+  "interpretation": "Rotation constrains A*(c^2*alpha)^(1-p), not alpha independently while A is free. Redshift data can constrain alpha separately; the combined datasets are not claimed to have the same rank deficiency.",
+  "physical_gap": "No independently derived coupling/capture/storage law currently fixes A. A successful gravity fit does not establish photon conversion as its source.",
+  "inputs_sha256": {
+    "results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "galaxy-rotation-predictions.json": "8b49ac839bb9becb96b75bbf818cf91a47d49c063ed272e9649124e1f370cc77"
+  }
+}
