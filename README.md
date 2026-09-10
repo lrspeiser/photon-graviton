@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Association audit:** [Epoch-aware positional check](research_work/results/stellar-orbit-support/association-report.md) finds 2.2–2.9 arcsec residuals for four extreme-speed training examples. One alternate Gaia source agrees within 0.045 arcsec; no replacement is adopted. Resolve source associations before combining parallax likelihoods or interpreting provisional high-speed launches as gravity evidence. Original parent and holdout roles remain unchanged.
+
 **This project explores a fictional universe that has the same observed stars, galaxies, and astronomical datasets as ours, while allowing different physical laws.** We use real measurements as a common test bed so that we can safely explore new concepts, derive their consequences, and compare their predictions without presenting speculation as established physics.
 
 The working universe is nonexpanding. The current electromagnetic specification compares direct photon-energy transfer with an explicitly time-dependent propagation candidate. Companions may populate extended bound configurations in gravitational wells, but the desired no-loss travel is incompatible with assigning them the same time-field propagation as photons in the new candidate. Neither branch is a completed theory. “Companion” does not mean an experimentally detected particle or an established graviton interaction.

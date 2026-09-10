@@ -89,3 +89,8 @@ An independent synthetic-mixture check agrees with constrained optimization to 1
 4. Freeze the complete model and procedure before opening reserved test scores. Keep ordinary-matter uncertainty, the shared companion response, redshift/timing, transport, capture, lensing and the deferred total-energy budget in scope.
 
 Reproduce the pre-audit support run with `run.py`, its optimizer checks with `verify.py`, and the retained weight refinements with `refine_mixtures.py` followed by `certify_mixtures.py`. Retrieve quality metadata with `fetch_fidelity.py`, create the corrected sidecar using `input_audit.py`, and verify preservation using `verify_inputs.py`. Large source and per-star tables remain in the ignored cache; scripts, protocols, hashes and summary evidence are tracked. No held-out kinematic scores were evaluated. The full research goal remains active.
+
+
+## Subsequent association finding
+
+The [epoch-aware follow-up](association-report.md) finds that all four extreme training examples remain positionally discrepant after proper-motion correction. Their inherited associations require review before distance replacement or orbital inference; see association-review.json. No original data or roles were changed.
