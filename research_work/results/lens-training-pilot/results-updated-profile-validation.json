@@ -1,0 +1,83 @@
+{
+  "sample_role": "validation",
+  "systems": 7,
+  "parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "radial_grid_nodes": 6000,
+  "angle_quadrature_nodes": 64,
+  "scores": {
+    "baryons/seeing0.0/cut20.0": {
+      "n": 7,
+      "rmse_arcsec": 0.165607095097162,
+      "median_predicted_over_SIE": 1.0528345348931856,
+      "mean_residual_arcsec": 0.11356738306097736
+    },
+    "baryons/seeing1.5/cut20.0": {
+      "n": 7,
+      "rmse_arcsec": 0.17117879031575578,
+      "median_predicted_over_SIE": 1.0614209305200057,
+      "mean_residual_arcsec": 0.12394773247016959
+    },
+    "empirical_companion/seeing0.0/cut5.0": {
+      "n": 7,
+      "rmse_arcsec": 0.22811269000917084,
+      "median_predicted_over_SIE": 1.102702094138108,
+      "mean_residual_arcsec": 0.1947517040931709
+    },
+    "empirical_companion/seeing0.0/cut20.0": {
+      "n": 7,
+      "rmse_arcsec": 0.24283404860110075,
+      "median_predicted_over_SIE": 1.1139355044629866,
+      "mean_residual_arcsec": 0.21144377653059848
+    },
+    "empirical_companion/seeing0.0/cut100.0": {
+      "n": 7,
+      "rmse_arcsec": 0.24747222790412318,
+      "median_predicted_over_SIE": 1.1174301325975058,
+      "mean_residual_arcsec": 0.21661997941886948
+    },
+    "empirical_companion/seeing1.5/cut5.0": {
+      "n": 7,
+      "rmse_arcsec": 0.23551214646664514,
+      "median_predicted_over_SIE": 1.1108141222204302,
+      "mean_residual_arcsec": 0.2046194963234395
+    },
+    "empirical_companion/seeing1.5/cut20.0": {
+      "n": 7,
+      "rmse_arcsec": 0.2504803111882105,
+      "median_predicted_over_SIE": 1.122089915694672,
+      "mean_residual_arcsec": 0.22137260745523693
+    },
+    "empirical_companion/seeing1.5/cut100.0": {
+      "n": 7,
+      "rmse_arcsec": 0.25520741398295244,
+      "median_predicted_over_SIE": 1.1256145437421703,
+      "mean_residual_arcsec": 0.2265881329784156
+    }
+  },
+  "holdout_scores_opened": true,
+  "test_scores_opened": false,
+  "mass_fitted_to": "Spectroscopic aperture dispersion only, separately under each potential; not an independently measured stellar mass.",
+  "assumptions": [
+    "Static Euclidean geometry using archived redshift distances",
+    "Spherical isotropic Hernquist light and ordinary-mass profile, Re=1.8153a",
+    "Uniform mass-to-light ratio; no separately modeled gas or central black hole",
+    "3-arcsecond diameter spectroscopic aperture",
+    "Seeing zero and Gaussian FWHM 1.5 arcsec are sensitivity cases, not per-object measurements",
+    "Equal temporal/spatial companion metric potentials",
+    "Source truncations 5,20,100 Re are prescribed sensitivity cases, not capture predictions",
+    "SIE intermediate-axis Einstein angle is an approximate circular target; no imaging likelihood or model covariance"
+  ],
+  "source_sha256": {
+    "lens-observations-and-image-models.json": "e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+    "conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "table3.dat": "1a5023ec92db956076e73bf1d788f8695027a4db9e3e482ff7d143a4be9c2c0c"
+  },
+  "updated_I_profile_used": true,
+  "protocol_sha256": "397ede73a2d9803f9321325069e591a60eef3caf7599845b7705ddb08353140a"
+}

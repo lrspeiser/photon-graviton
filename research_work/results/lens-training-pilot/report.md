@@ -105,3 +105,8 @@ Do not respond to the overprediction by giving every lens a free companion norma
 ## Updated photometric profile comparison
 
 The [photometric audit](../lens-photometric-audit/report.md) reruns all 33 training systems with the newer I-band sizes, preserving this original result. Representative RMS discrepancies become 0.1840 arcsec for ordinary matter and 0.2083 arcsec for the empirical companion model. Stellar-population mass normalization still remains insufficient under fixed-population assumptions; no heldout score is opened.
+
+
+## Subsequent reserved validation
+
+The [frozen validation comparison](validation-report.md) now evaluates seven eligible reserved systems. The companion pilot underperforms the ordinary-matter benchmark under the primary and listed sensitivity assumptions. Validation is now exposed; separate test scores remain unopened.

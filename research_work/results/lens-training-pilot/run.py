@@ -1,4 +1,4 @@
-"""Training-only spherical Jeans/lensing pilot; not a completed theory."""
+"""Role-isolated spherical Jeans/lensing pilot; not a completed theory."""
 from pathlib import Path
 import json,hashlib,argparse
 import numpy as np
@@ -7,16 +7,22 @@ from scipy.optimize import brentq
 from scipy.stats import ncx2
 from numpy.polynomial.legendre import leggauss
 H=Path(__file__).resolve().parent;ROOT=H.parents[2]
-parser=argparse.ArgumentParser();parser.add_argument('--refined',action='store_true');parser.add_argument('--updated-profile',action='store_true');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--refined',action='store_true');parser.add_argument('--updated-profile',action='store_true');parser.add_argument('--role',choices=['training','validation'],default='training');args=parser.parse_args()
 datafile=H.parent/'lensing-data-readiness/lens-observations-and-image-models.json'
 geomfile=H.parent/'lensing-data-readiness/conditional-geometry.json'
 fitfile=H.parent/'joint-galaxy-audit/results.json'
 data=json.loads(datafile.read_text());geo={r['Name']:r for r in json.loads(geomfile.read_text())}
-data=[r for r in data if r['role']=='training' and r['Mph']=='E' and r['spectroscopic_dispersion_available']]
-assert len(data)==33
+data=[r for r in data if r['role']==args.role and r['Mph']=='E' and r['spectroscopic_dispersion_available']]
+if args.role=='training':assert len(data)==33
+else:assert (H/'validation-protocol.json').exists()
 profilefile=H.parent/'lens-photometric-audit/training-photometry.json'
 if args.updated_profile:
-    profiles={r['SDSS']:r for r in json.loads(profilefile.read_text())}
+    if args.role=='training':profiles={r['SDSS']:r for r in json.loads(profilefile.read_text())}
+    else:
+        from astropy.table import Table
+        profilefile=H.parent/'lens-photometric-audit/source-tables/table3.dat'
+        tab=Table.read(profilefile,format='ascii.cds',readme=str(profilefile.parent/'ReadMe'))
+        profiles={str(r['SDSS']):{'Re(I)':None if np.ma.is_masked(r['Re(I)']) else float(r['Re(I)'])} for r in tab if str(r['SDSS']) in {x['Name'] for x in data}}
     for r in data:
         assert profiles[r['Name']]['Re(I)'] is not None
         r['Re']=profiles[r['Name']]['Re(I)']
@@ -71,12 +77,12 @@ for r in data:
                     # Solve in log-angle; no Einstein angle used in mass inference.
                     rt=brentq(lambda l:deflection(np.exp(l),m)/np.exp(l)-1,-14,8)
                     predictions.append(float(np.exp(rt)))
-                rows.append(dict(Name=r['Name'],role='training',model=model,seeing_fwhm_arcsec=fwhm,cutoff_over_Re=cutRe,
+                rows.append(dict(Name=r['Name'],role=args.role,model=model,seeing_fwhm_arcsec=fwhm,cutoff_over_Re=cutRe,
                     mass_from_sigma_Msun=masses[1],theta_pred_arcsec=predictions[1],theta_sigma_minus_arcsec=predictions[0],theta_sigma_plus_arcsec=predictions[2],
                     theta_SIE_arcsec=r['bSIE'],theta_LTM_arcsec=r['bLTM'],stellar_axis_ratio=r['b/a'],residual_arcsec=predictions[1]-r['bSIE']))
     print('computed',r['Name'],flush=True)
-summary={'training_systems':len(data),'parameters':pars,'radial_grid_nodes':len(x),'angle_quadrature_nodes':nq,'scores':{},
-    'holdout_scores_opened':False,'mass_fitted_to':'Spectroscopic aperture dispersion only, separately under each potential; not an independently measured stellar mass.',
+summary={'sample_role':args.role,'systems':len(data),'parameters':pars,'radial_grid_nodes':len(x),'angle_quadrature_nodes':nq,'scores':{},
+    'holdout_scores_opened':args.role!='training','test_scores_opened':False,'mass_fitted_to':'Spectroscopic aperture dispersion only, separately under each potential; not an independently measured stellar mass.',
     'assumptions':['Static Euclidean geometry using archived redshift distances','Spherical isotropic Hernquist light and ordinary-mass profile, Re=1.8153a','Uniform mass-to-light ratio; no separately modeled gas or central black hole','3-arcsecond diameter spectroscopic aperture','Seeing zero and Gaussian FWHM 1.5 arcsec are sensitivity cases, not per-object measurements','Equal temporal/spatial companion metric potentials','Source truncations 5,20,100 Re are prescribed sensitivity cases, not capture predictions','SIE intermediate-axis Einstein angle is an approximate circular target; no imaging likelihood or model covariance'],
     'source_sha256':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [datafile,geomfile,fitfile]}}
 for model,seeing,cut in sorted(set((r['model'],r['seeing_fwhm_arcsec'],r['cutoff_over_Re']) for r in rows)):
@@ -86,6 +92,9 @@ for model,seeing,cut in sorted(set((r['model'],r['seeing_fwhm_arcsec'],r['cutoff
 summary['updated_I_profile_used']=args.updated_profile
 if args.updated_profile:summary['source_sha256'][str(profilefile.name)]=hashlib.sha256(profilefile.read_bytes()).hexdigest()
 suffix=('-refined' if args.refined else '')+('-updated-profile' if args.updated_profile else '')
+if args.role!='training':
+    suffix+='-'+args.role
+    summary['protocol_sha256']=hashlib.sha256((H/'validation-protocol.json').read_bytes()).hexdigest()
 for name,obj in [('predictions',rows),('results',summary)]:
     (H/(name+suffix+'.json')).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(summary['scores'],indent=2))

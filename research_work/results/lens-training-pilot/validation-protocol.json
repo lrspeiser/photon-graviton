@@ -1,0 +1,14 @@
+{
+  "status": "Written before validation prediction execution",
+  "scope": "Restricted empirical spherical lens pilot, not full physical theory or imaging likelihood",
+  "sample": "Original validation role, original early-type classification, available measured stellar dispersion; no residual-based exclusions",
+  "primary": {"seeing_fwhm_arcsec": 1.5, "companion_cutoff_over_Re": 20, "updated_I_profile": true},
+  "sensitivity_cases": {"seeing_fwhm_arcsec": [0, 1.5], "companion_cutoff_over_Re": [5, 20, 100]},
+  "mass_calibration": "Each system's measured aperture dispersion only, under each potential; no lens angle used",
+  "shared_parameters": "Unchanged A, p, a_star and static geometry from archived training pilot",
+  "metrics": ["RMS Einstein-angle residual in arcseconds", "median predicted/published SIE angle", "mean angle residual"],
+  "uncertainty": "Quoted dispersion propagated; no calibrated joint likelihood or significance claimed",
+  "test_set": "Do not evaluate in this run",
+  "decision": "Report all configurations and primary outcome even if unfavorable. Do not change the primary based on validation performance.",
+  "history": "Public catalog and basic fields previously inspected; role reservation concerns uncomputed prediction residuals, not pristine blindness."
+}
