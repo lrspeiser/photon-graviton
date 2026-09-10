@@ -1,0 +1,963 @@
+{
+  "scope": "Field-grid and solver sensitivity of one targeted candidate orbit; not a stellar likelihood.",
+  "attempts": [
+    {
+      "rtol": 2e-11,
+      "nfev": 40979,
+      "seconds": 24.741253100000904,
+      "trajectory_sha256": "e2264796405c6df3d7eccff320b2747ea5e608e4e2c9725b0a3c0e9d050032ff",
+      "Jacobi_drift_over_220_squared": 1.2910801942329393e-09
+    },
+    {
+      "rtol": 2e-13,
+      "nfev": 67604,
+      "seconds": 39.60937489999924,
+      "trajectory_sha256": "46814f8711c693966c08f9f7167ebac333913f4be89135600e7d74c93f7a3d4b",
+      "Jacobi_drift_over_220_squared": 3.335040403252914e-10
+    }
+  ],
+  "lower_field_position_difference_kpc": 0.01033496514514694,
+  "lower_field_velocity_difference_kms": 0.4517316801412005,
+  "lower_field_strict_path_pass": false,
+  "extra_force_refinement_on_lower_and_upper_paths": [
+    {
+      "maximum": 0.0016073900027335013,
+      "median": 0.0003722776978441095
+    },
+    {
+      "maximum": 0.0011391105512662094,
+      "median": 0.00036626077363204973
+    }
+  ],
+  "rows": [
+    {
+      "window": "first_1",
+      "field_occupation_TV": 0.0015000000000000005,
+      "lower_solver_occupation_TV": 0.0,
+      "cells": [
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 446,
+            "mean_velocity_kms": [
+              1.68318027411761,
+              213.11610375265116,
+              1.041612155044034
+            ],
+            "dispersion_kms": [
+              19.302753696493728,
+              14.254613227043903,
+              12.096594211602932
+            ]
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 446,
+            "mean_velocity_kms": [
+              1.683635714231745,
+              213.1153189668845,
+              1.0363434357865082
+            ],
+            "dispersion_kms": [
+              19.295013903144568,
+              14.253690431209149,
+              12.090927578040485
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            -0.0004554401141350084,
+            0.0007847857666547498,
+            0.005268719257525811
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            0.0077397933491596405,
+            0.0009227958347537424,
+            0.005666633562446677
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 1554,
+            "mean_velocity_kms": [
+              2.4682517967600437,
+              226.17453453877744,
+              -0.04207326051938851
+            ],
+            "dispersion_kms": [
+              13.965768059103924,
+              9.388228464479193,
+              10.315188792075537
+            ]
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 1554,
+            "mean_velocity_kms": [
+              2.4669069617031973,
+              226.17350503686848,
+              -0.04017706750525686
+            ],
+            "dispersion_kms": [
+              13.961519293399355,
+              9.38277244157831,
+              10.31482161903834
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            0.0013448350568463496,
+            0.0010295019089596735,
+            -0.0018961930141316516
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            0.004248765704568669,
+            0.005456022900883539,
+            0.00036717303719591143
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        }
+      ],
+      "smooth": [
+        {
+          "position_scale_kpc": 0.5,
+          "velocity_scale_kms": 50.0,
+          "field_occupation_MMD": 0.000704234567185827,
+          "lower_solver_occupation_MMD": 4.898414910629479e-08,
+          "upper_solver_occupation_MMD": 7.849803862399418e-08
+        },
+        {
+          "position_scale_kpc": 2.0,
+          "velocity_scale_kms": 100.0,
+          "field_occupation_MMD": 0.0003397674350463484,
+          "lower_solver_occupation_MMD": 2.6813744170339132e-08,
+          "upper_solver_occupation_MMD": 4.1389578658595195e-08
+        }
+      ]
+    },
+    {
+      "window": "first_2",
+      "field_occupation_TV": 0.009499999999999998,
+      "lower_solver_occupation_TV": 0.0,
+      "cells": [
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 642,
+            "mean_velocity_kms": [
+              0.537217271568801,
+              212.24644811965453,
+              0.35941023754945417
+            ],
+            "dispersion_kms": [
+              18.72104623487005,
+              13.956995404349449,
+              11.844232630916306
+            ]
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 642,
+            "mean_velocity_kms": [
+              0.5065811724959842,
+              212.21585837284036,
+              0.37504735665589134
+            ],
+            "dispersion_kms": [
+              18.729373033008315,
+              13.901373568716247,
+              11.827748956325394
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            0.030636099072816725,
+            0.03058974681417226,
+            -0.01563711910643717
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            -0.008326798138263314,
+            0.05562183563320211,
+            0.016483674590912045
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 1358,
+            "mean_velocity_kms": [
+              0.5508846584228052,
+              227.5094536556053,
+              -0.11114794790976466
+            ],
+            "dispersion_kms": [
+              14.534512135569747,
+              9.387438590890175,
+              10.612548934891409
+            ]
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 1358,
+            "mean_velocity_kms": [
+              0.5680610924853056,
+              227.5256194263025,
+              -0.11785388941604497
+            ],
+            "dispersion_kms": [
+              14.502196961753256,
+              9.382273348531077,
+              10.61741666875895
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            -0.017176434062500356,
+            -0.016165770697199378,
+            0.006705941506280302
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            0.03231517381649063,
+            0.005165242359097988,
+            -0.004867733867541801
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        }
+      ],
+      "smooth": [
+        {
+          "position_scale_kpc": 0.5,
+          "velocity_scale_kms": 50.0,
+          "field_occupation_MMD": 0.0014081331591415283,
+          "lower_solver_occupation_MMD": 9.571716787493317e-08,
+          "upper_solver_occupation_MMD": 1.6469362379893462e-07
+        },
+        {
+          "position_scale_kpc": 2.0,
+          "velocity_scale_kms": 100.0,
+          "field_occupation_MMD": 0.0006239259382422161,
+          "lower_solver_occupation_MMD": 3.7506219760854014e-08,
+          "upper_solver_occupation_MMD": 7.32968958165853e-08
+        }
+      ]
+    },
+    {
+      "window": "first_4",
+      "field_occupation_TV": 0.097,
+      "lower_solver_occupation_TV": 0.0,
+      "cells": [
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 10,
+            "mean_velocity_kms": [
+              -1.4465242166049894,
+              222.45984453591473,
+              1.5965926889245807
+            ],
+            "dispersion_kms": [
+              11.906749651088234,
+              4.0748978223896275,
+              9.57923978601232
+            ]
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 777,
+            "mean_velocity_kms": [
+              -0.314766488939692,
+              211.24660586928127,
+              0.3016463983660132
+            ],
+            "dispersion_kms": [
+              21.68071623404741,
+              14.895654238379912,
+              11.92339377766297
+            ]
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 698,
+            "mean_velocity_kms": [
+              0.22696079184894483,
+              210.914116956108,
+              0.2904585409578398
+            ],
+            "dispersion_kms": [
+              20.00322480544076,
+              13.247277311839555,
+              11.864491339762987
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            -0.5417272807886369,
+            0.3324889131732789,
+            0.011187857408173407
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            1.6774914286066505,
+            1.6483769265403563,
+            0.05890243789998273
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 1213,
+            "mean_velocity_kms": [
+              0.013427922496176073,
+              227.76441403728197,
+              -0.21425741270017487
+            ],
+            "dispersion_kms": [
+              15.457090917241514,
+              10.37637144763941,
+              10.830448235038
+            ]
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 1302,
+            "mean_velocity_kms": [
+              0.29603563383450215,
+              228.28873079009296,
+              -0.14680031791032788
+            ],
+            "dispersion_kms": [
+              14.41694299492565,
+              9.764423386322179,
+              10.821876632601342
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            -0.2826077113383261,
+            -0.5243167528109893,
+            -0.06745709478984699
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            1.0401479223158638,
+            0.6119480613172321,
+            0.008571602436658665
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        }
+      ],
+      "smooth": [
+        {
+          "position_scale_kpc": 0.5,
+          "velocity_scale_kms": 50.0,
+          "field_occupation_MMD": 0.04476728835157292,
+          "lower_solver_occupation_MMD": 0.00012845539525456652,
+          "upper_solver_occupation_MMD": 0.0008315913815591029
+        },
+        {
+          "position_scale_kpc": 2.0,
+          "velocity_scale_kms": 100.0,
+          "field_occupation_MMD": 0.03749042675368952,
+          "lower_solver_occupation_MMD": 5.156060041614631e-05,
+          "upper_solver_occupation_MMD": 0.0003546093103658401
+        }
+      ]
+    },
+    {
+      "window": "last_unit",
+      "field_occupation_TV": 0.42000000000000004,
+      "lower_solver_occupation_TV": 0.002000000000000001,
+      "cells": [
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 42,
+            "mean_velocity_kms": [
+              0.1392183596959826,
+              222.62962844085683,
+              0.3509992933690239
+            ],
+            "dispersion_kms": [
+              11.9837847641971,
+              4.051316892402903,
+              9.307782062907986
+            ]
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 0,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 1065,
+            "mean_velocity_kms": [
+              -1.6403212421011701,
+              211.2578875666545,
+              -0.02472333239359443
+            ],
+            "dispersion_kms": [
+              24.74179994763779,
+              17.66378869122856,
+              12.16305193427355
+            ]
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": false,
+            "count": 682,
+            "mean_velocity_kms": [
+              -0.01395087758355901,
+              207.93568910023362,
+              0.1882732360204665
+            ],
+            "dispersion_kms": [
+              22.501112496458727,
+              10.602556443896832,
+              12.021655202637426
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            -1.626370364517611,
+            3.322198466420872,
+            -0.21299656841406092
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            2.2406874511790633,
+            7.061232247331729,
+            0.14139673163612443
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 1,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 893,
+            "mean_velocity_kms": [
+              -2.466136902461605,
+              225.83912326312645,
+              -0.4832723704762289
+            ],
+            "dispersion_kms": [
+              20.0325306121858,
+              13.17551593668157,
+              11.01972336190526
+            ]
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": false,
+            "count": 1318,
+            "mean_velocity_kms": [
+              -0.5899875929690849,
+              228.72123914753877,
+              -0.4224329924356483
+            ],
+            "dispersion_kms": [
+              13.138329690799749,
+              10.059997636892348,
+              10.97904397576116
+            ]
+          },
+          "comparison_eligible": true,
+          "lower_minus_upper_mean_velocity_kms": [
+            -1.8761493094925203,
+            -2.8821158844123147,
+            -0.060839378040580594
+          ],
+          "lower_minus_upper_dispersion_kms": [
+            6.89420092138605,
+            3.1155182997892226,
+            0.040679386144100604
+          ]
+        },
+        {
+          "lower": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 2,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": false,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        },
+        {
+          "lower": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "upper": {
+            "radial_bin": 3,
+            "offplane": true,
+            "count": 0,
+            "mean_velocity_kms": null,
+            "dispersion_kms": null
+          },
+          "comparison_eligible": false,
+          "lower_minus_upper_mean_velocity_kms": null,
+          "lower_minus_upper_dispersion_kms": null
+        }
+      ],
+      "smooth": [
+        {
+          "position_scale_kpc": 0.5,
+          "velocity_scale_kms": 50.0,
+          "field_occupation_MMD": 0.19470022804963627,
+          "lower_solver_occupation_MMD": 0.000508685281385504,
+          "upper_solver_occupation_MMD": 0.003278100272117516
+        },
+        {
+          "position_scale_kpc": 2.0,
+          "velocity_scale_kms": 100.0,
+          "field_occupation_MMD": 0.150762455897768,
+          "lower_solver_occupation_MMD": 0.00020314135681019453,
+          "upper_solver_occupation_MMD": 0.001395927105640022
+        }
+      ]
+    }
+  ],
+  "source_hashes": {
+    "research_work\\results\\orbit-field-population\\run.py": "4c9eec142ae64483073fed0abc6ce195d12c4a17f860d2940e987d0dc5d7389f",
+    "research_work\\results\\orbit-field-population\\protocol.md": "d015da0e3ba1ae4b17fa7f67ce002ab499478ab2bc9c8fe0436822f921eed383",
+    "research_work\\results\\orbit-phase-duration\\results.json": "2432c12b08236c6445fcc9fea1a2491b819f22436740fc99dc05ef0eb08731a5",
+    "research_work\\results\\orbit-phase-duration\\population-resolution.json": "a77f9030db219c155b9b12121f19547ff7df5b785e4a9421bb476e0fd55f4060",
+    "research_work\\data-cache\\orbit-phase-duration\\full-12.npz": "3561d1e769d85d19b769fa38c1f872c06ab58057a6771d3de61ab8b1472bcc2e",
+    "research_work\\data-cache\\full-bar-completion\\axis-disk-ec0d15eb7bb9.npz": "9ce6b854f866cf434391e730e6941c41d3fc1c1a80f991946b33b938539d7567",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd",
+    "research_work\\data-cache\\full-bar-completion\\axisymmetric-reference-80-L128-N512.npz": "ebdcc0f52093d0048f18a4d7f4d25443f94dc0d9ca68b6f0d871432bef8476f5",
+    "research_work\\data-cache\\full-bar-completion\\fine.npz": "c1e862fa166251bd73f462792cf23e8ed1a10295ed46f8cd38d13b407dfb1731",
+    "research_work\\data-cache\\full-bar-completion\\finer.npz": "47014aaaf398ba8ecaf45a50ac792ef81dbaab1b67364acc7d4095f551917d6b"
+  },
+  "velocity_order": [
+    "radial",
+    "rotational",
+    "vertical"
+  ],
+  "holdouts_opened": false,
+  "physical_parameters_changed": false,
+  "completed": true
+}

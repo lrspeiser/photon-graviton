@@ -1,0 +1,9 @@
+# Field-resolution sensitivity of the long orbit population
+
+Use the existing targeted training start index 12. Keep the ordinary components and all physical parameters fixed. Compare the candidate extra-potential correction at the existing `fine` and `finer` resolutions, represented by Field('lower_field') and Field('full'). This checks numerical field representation, not an alternative gravity law or an independently measured mass model.
+
+Integrate the lower-resolution field over 0–4 kpc/(km/s) at solver tolerances 2e-11 and 2e-13, saving both paths. Reuse both corresponding full-field paths from the preceding paired extension. Preserve the previous strict trajectory failures; record the same pointwise and Jacobi checks for the new field. No new pass threshold for population statistics.
+
+Use 2000 samples in each interval (0,1], (0,2], (0,4] and (3,4]. At the existing two Gaussian-kernel scales compare tight-solver occupations across field resolutions, and occupations across solver tolerances within each resolution. Also compare old-bin total variation and conditional means and dispersions of cylindrical velocities in fixed radial bins [0,3.5,5,9,infinity] kpc, separating |z|<0.2 from |z|>=0.2 kpc. Report every cell's counts; compare conditional velocity moments only where each of the two tight-field samples has at least 50 time samples. Counts are correlated orbit samples, not independent stars or error bars.
+
+Evaluate force-resolution differences along both tight paths and preserve field/source hashes. Do not treat a small instantaneous force error as a guarantee of accurate long-term occupations. The selected star is close to the disk plane; this test cannot establish bulge or above/below-plane population coverage. No observed holdouts, new physical fits, stationary population claims or theory ranking.
