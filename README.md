@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Conversion is not automatically redshift:** [Direct spectral discriminator](research_work/results/conversion-versus-redshift/report.md) gives stationary photon/graviton mixing exactly the energy-transfer fraction required by the existing calculator. Surviving frequencies and event-copy separation remain unchanged. This specialization can be a source channel but cannot alone explain the desired redshift; inelastic or time-dependent extensions require separate derivation. The calculator itself remains unchanged.
+
 **Brightness-distance consistency:** [Fixed-rate exposed-data sensitivity](research_work/results/brightness-distance-consistency/report.md) finds that ideal shared-stretching dimming changes median inferred path distance by -0.714% and overall redshift RMS from 447.05 to 444.45 km/s. The large scatter remains, and training RMS worsens. Published distances are not overwritten; actual passband/calibration inference and a genuinely withheld test remain required.
 
 **Shared-transport photometry:** [One-rate brightness and spectrum predictions](research_work/results/shared-transport-photometry/report.md) link spectral/event stretching to bolometric dimming, photon arrival rate and calibration bias. Numerical identities pass; ordinary endpoint clocks remain a stated assumption requiring physical completion. The gamma/GW arrival lag includes source timing and does not prove unequal propagation speeds; the earlier conditional photon-only exclusion did not assume simultaneous emission.
