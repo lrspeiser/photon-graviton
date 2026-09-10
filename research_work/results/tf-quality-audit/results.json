@@ -1,0 +1,77 @@
+{
+  "source_rows": 10737,
+  "joined": 73,
+  "by_QSflag": {
+    "0": {
+      "n": 0
+    },
+    "1": {
+      "n": 0
+    },
+    "2": {
+      "n": 0
+    },
+    "3": {
+      "n": 1,
+      "rms_mag": 0.34137630836488064,
+      "median_abs_fractional_distance_error": 0.16986040029905913,
+      "median_measurement_only_scale_mag": 0.2647775464160174,
+      "finite_measurement_scales": 1,
+      "beyond_three_measurement_only_scales": 0
+    },
+    "4": {
+      "n": 16,
+      "rms_mag": 1.03760705605977,
+      "median_abs_fractional_distance_error": 0.30462578777818217,
+      "median_measurement_only_scale_mag": 0.2774448710903812,
+      "finite_measurement_scales": 16,
+      "beyond_three_measurement_only_scales": 5
+    },
+    "5": {
+      "n": 56,
+      "rms_mag": 0.991405919509867,
+      "median_abs_fractional_distance_error": 0.23485627876685222,
+      "median_measurement_only_scale_mag": 0.2359753835945067,
+      "finite_measurement_scales": 56,
+      "beyond_three_measurement_only_scales": 15
+    }
+  },
+  "quality_at_least_4": {
+    "n": 72,
+    "rms_mag": 1.0018569806028803,
+    "median_abs_fractional_distance_error": 0.25054881165683707,
+    "median_measurement_only_scale_mag": 0.23617108660447544,
+    "finite_measurement_scales": 72,
+    "beyond_three_measurement_only_scales": 20
+  },
+  "all": {
+    "n": 73,
+    "rms_mag": 0.995773199089832,
+    "median_abs_fractional_distance_error": 0.24950083576892834,
+    "median_measurement_only_scale_mag": 0.23624266581175118,
+    "finite_measurement_scales": 73,
+    "beyond_three_measurement_only_scales": 20
+  },
+  "max_abs_logW_reconstruction_difference": 0.0027677339873961593,
+  "median_abs_sigma_logW_difference": 0.00024311913956429065,
+  "max_abs_sigma_logW_difference": 0.001975422639739377,
+  "ngc4424": {
+    "pgc": "40809",
+    "name": "NGC4424",
+    "QSflag": 5,
+    "QWflag": 5,
+    "e_Ai": 0.05,
+    "logWmxi": 1.783,
+    "e_logWmxi": 0.043,
+    "reconstructed_logW": 1.7830869780078453,
+    "reconstructed_sigma_logW": 0.04325622022141435,
+    "residual_mag": -5.265303820508006,
+    "distance_ratio": 0.08881785347287081,
+    "measurement_only_scale_mag": 0.3451912847428709
+  },
+  "hashes": {
+    "research_work\\data-cache\\tf-quality\\features.tsv": "fd88c0106b17f90e46edda86f3210672742996296a6151795fd9f764d303e72c",
+    "research_work\\results\\indicator-tf-calibration\\cross-validation.csv": "b8fbcf00202dafaaf5d6d1cac279b2574ab3fd4f46dfce7971c410792037e89a",
+    "research_work\\results\\indicator-tf-calibration\\results.json": "c1930475a4a1d0e6251a86d9e9f28ec6aaf7c90eaf0d707ebf070e5d22bcb006"
+  }
+}
