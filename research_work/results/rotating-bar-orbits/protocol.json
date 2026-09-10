@@ -1,0 +1,24 @@
+{
+  "status": "Declared before executing the orbit comparisons",
+  "purpose": "Validate the bar-aware orbital forward calculation before fitting or scoring stellar populations",
+  "models": ["ordinary_matter", "halo_comparison", "companion_equatorial", "companion_caps", "companion_shell"],
+  "bar_pattern_speed_kms_per_kpc": 37.5,
+  "pattern_speed_status": "Magnitude adopted from the pinned Hunter24 AGAMA example, sign positive in our prograde coordinate convention; not fitted or uniquely measured",
+  "bar_frame": "Right-handed Cartesian, bar major axis x, prograde positive Lz; p is inertial velocity expressed in the rotating axes",
+  "initial_conditions": "Six synthetic probes: R=1,3,8 kpc, z=0.1,0.8 kpc, azimuth=pi/6; vR=20, vz=20 km/s, vphi=0.8 times the initial ordinary-matter radial circular-speed diagnostic. Identical Cartesian states across models. These are not six observed stars or an equilibrium population.",
+  "duration_kpc_per_kms": 0.25,
+  "sampling_times": 501,
+  "integrator": "DOP853, rtol=2e-9 versus 2e-11, atol=rtol*0.01",
+  "refinement_after_initial_failure": "Initial ordinary-matter run differed by 0.0001503 kpc and 0.03493 km/s between tolerances, exceeding the unchanged acceptance thresholds. Retain those failed results; if either refinement threshold fails, compare 2e-11 against 2e-13 and retain the latter. A verified shared-Legendre evaluator accelerates the same potential without changing coefficients or equations. The first slow run was stopped deliberately after this evidence, not assumed dead from lack of output.",
+  "acceptance_checks": {
+    "max_Jacobi_drift_divided_by_220_squared": 0.00001,
+    "max_tolerance_refinement_position_difference_kpc": 0.0001,
+    "max_tolerance_refinement_velocity_difference_kms": 0.01,
+    "max_inertial_rotating_coordinate_difference_kpc": 0.0001,
+    "disk_interpolation_force_error_fraction_of_reference_disk_force": 0.003
+  },
+  "field_accuracy": "Existing bar L40 and nuclear L16 caches; disk order 24 remains provisional. Compare L24 and L40 orbital summaries separately. Orbit-integrator success is not proof of field convergence or astrophysical accuracy.",
+  "domain_revision": "Initial disk interpolation R=0.05 to 40 kpc failed when an orbit left its domain. Extend to R=0.001 to 40 kpc with proportionally more radial nodes, retain z=-10 to 10 kpc and all initial conditions, durations and acceptance thresholds. Never extrapolate silently.",
+  "holdout_policy": "No stellar velocities or validation/test scores loaded. No optimization of synthetic deposit amplitudes. Existing stellar splits remain unchanged.",
+  "hypothesis_scope": "Known Newtonian orbital equations plus earlier synthetic deposit-potential additions. No new derivation of capture, energy supply, photon origin or lensing. Standard halo is a comparison only."
+}

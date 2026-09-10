@@ -1,5 +1,7 @@
 # Three-dimensional field foundation: provisional
 
+**Subsequent work:** the [rotating-bar study](../rotating-bar-orbits/report.md) successfully completes the formerly failed order-64 bar calculation and adds checked orbital integration. The numerical and astrophysical limitations below describe this original foundation; neither that follow-up nor this report is a fitted stellar population or a demonstration of photon-generated gravity.
+
 We implemented a conservative three-dimensional potential for the ordinary-matter reference and separate additions for the comparison halo and the three previously drafted companion-deposit geometries. This is a numerical foundation, **not an orbital population fit or evidence that the theory succeeds**. No new stellar validation/test scores were evaluated.
 
 ## Components and provenance

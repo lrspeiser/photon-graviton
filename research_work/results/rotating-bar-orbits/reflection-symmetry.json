@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "model": "ordinary_matter",
+      "relative_potential_reflection_error": 3.7074267739857285e-16,
+      "relative_force_reflection_error": 1.1202226462422218e-12
+    },
+    {
+      "model": "halo_comparison",
+      "relative_potential_reflection_error": 2.2128735198176954e-16,
+      "relative_force_reflection_error": 5.504605811330025e-13
+    },
+    {
+      "model": "companion_equatorial",
+      "relative_potential_reflection_error": 3.695403096190987e-16,
+      "relative_force_reflection_error": 1.1165485086206767e-12
+    },
+    {
+      "model": "companion_caps",
+      "relative_potential_reflection_error": 4.370750906977706e-16,
+      "relative_force_reflection_error": 1.1166564131119355e-12
+    },
+    {
+      "model": "companion_shell",
+      "relative_potential_reflection_error": 3.695464514752884e-16,
+      "relative_force_reflection_error": 1.1165864746202174e-12
+    }
+  ],
+  "initial_force_threshold": 1e-12,
+  "initial_maximum_force_fraction": 1.1202226462422218e-12,
+  "force_roundoff_threshold": 1e-10,
+  "implication": "The same mirrored initial populations have mirrored orbits. Intrinsic north/south asymmetry requires asymmetric populations, selection, time dependence or an asymmetric field absent here.",
+  "observations_tested": false
+}
