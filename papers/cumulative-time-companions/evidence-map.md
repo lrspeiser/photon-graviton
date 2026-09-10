@@ -1,3 +1,19 @@
+# Current revision evidence
+
+Version 0.5 incorporates the reports listed below. Numerical success is conditional on each report's assumptions.
+
+- [matter-clock-closure](../../research_work/results/matter-clock-closure/report.md)
+- [conservative-field-completion](../../research_work/results/conservative-field-completion/report.md)
+- [potential-shape-response](../../research_work/results/potential-shape-response/report.md)
+- [baryon-component-response](../../research_work/results/baryon-component-response/report.md)
+- [cepheid-validation](../../research_work/results/cepheid-validation/report.md)
+- [gauge-kinetic-spectrum](../../research_work/results/gauge-kinetic-spectrum/report.md)
+- [companion-source-matching](../../research_work/results/companion-source-matching/report.md)
+- [wave-lens-test](../../research_work/results/wave-lens-test/report.md)
+- [wave-disk-transfer-bound](../../research_work/results/wave-disk-transfer-bound/report.md)
+
+## Historical evidence register
+
 # Manuscript evidence map
 
 Draft v0.4 describes research present at commit `ee5733b`. The existing frozen astronomical fit was independently reproduced; no new observations or fresh holdouts were added. Formula derivations are conditional on their stated assumptions.

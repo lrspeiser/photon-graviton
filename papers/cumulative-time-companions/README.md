@@ -1,39 +1,7 @@
-# Environmental time and companion-energy manuscript
+# Academic manuscript
 
-**Latest post-draft analysis:** [joint redshift/galaxy calculations](../../research_work/results/joint-galaxy-audit/report.md) and [local-well/bulge clarification](../../research_work/results/joint-galaxy-audit/bulge-local-well.md). Numerical gravity fits are conditional; a deposit's response is not locked to cold matter or its arrival direction. The v0.4 PDF is preserved and does not incorporate this later analysis.
+Current version: **v0.5, 10 September 2026**. The revised manuscript incorporates the homogeneous matter-clock cancellation, carrier-resolved energy-exchange tests, source-state matching, three-dimensional gravity tradeoffs, reserved Cepheid validation and cross-galaxy lens/source limitations. Earlier versions remain in Git history.
 
-**Milky Way post-draft update:** [all-direction deposition and radial/vertical tests](../../research_work/results/milky-way-capture/report.md) adds published-data provenance, a capture-geometry control and a paired-force research program. It is not yet incorporated into the versioned v0.4 PDF and does not establish a fitted companion halo.
+The paper reports conditional progress and unresolved mechanisms; it does not claim a validated photon-to-gravity theory. Evidence is frozen through commit `4f83fe5`; the Cepheid evaluation protocol predates outcomes at `e5cf484`. The final Cepheid test role remains unopened.
 
-Current working draft: **v0.4, 9 September 2026**. This is an incomplete theoretical framework with a reproduced observational calibration, not a validated replacement cosmology.
-
-**Latest post-draft research:** [current electromagnetic formulas](../../research_plan/electromagnetic-transfer-specification.md), [all-band audit and modifications](../../research_work/results/electromagnetic-audit/report.md), and [coverage gaps](../../research_work/results/electromagnetic-audit/coverage.md). These include an exact prescribed time-field candidate and its no-loss-companion conflict. They are not yet incorporated into the v0.4 PDF. The versioned manuscript/PDF are preserved; use the linked specification for current branch status.
-
-Post-v0.4 evidence, not yet incorporated into the PDF: [regional uncertainty sensitivity](../../research_work/results/redshift-priority/uncertainty-block-report.md), [independent foreground-dust audit](../../research_work/results/redshift-priority/foreground-dust-report.md), and [current ELVES eligibility](../../research_work/results/redshift-priority/elves-quarantine-screen-report.md). These reports add limitations and inputs; none establishes fresh predictive improvement.
-
-The [arrival-retention extension](../../research_work/results/universal-clock-coupling/arrival-report.md) verifies persistence of the earlier prescribed-profile shift through a downstream static clock region. It distinguishes local from reference energy and retains the unsolved companion-receiver requirement. This extension is also post-v0.4 evidence.
-
-- [Manuscript PDF](manuscript.pdf) and [editable source](manuscript.md).
-- [All 164 observed/predicted rows](analysis/observed-predicted-redshift.csv), [metrics](analysis/metrics.json), [comparison figure](analysis/redshift-comparison.png), [residual figure](analysis/redshift-residuals.png).
-- [Evidence map](evidence-map.md) and [artifact verification](verification.json).
-
-## Reproduce
-
-From repository root, install `papers/cumulative-time-companions/requirements.txt`, then run:
-
-```text
-python papers/cumulative-time-companions/analysis.py
-python papers/cumulative-time-companions/extended_analysis.py
-python papers/cumulative-time-companions/build.py
-```
-
-The analysis verifies the adopted source hash, independently refits only the inherited training partition and checks every prediction against the saved conversion-first result. It never alters the catalog. The inherited partitions are previously exposed, not fresh holdouts. The PDF builder embeds the generated figures and numbered equations.
-
-## Revision scope
-
-Version 0.2 clarifies the root law and its link to temporal evolution of the propagation factor; adds the full redshift comparison, residuals and limitations; corrects the schematic canonical field notation; and incorporates progress through the 45-job pair-production-balance verification. Evidence is pinned to 7b0b296. The physical conversion rate, common clock action, persistent three-dimensional field, capture, supported halo and joint gravity/lensing solution remain open.
-
-Version 0.1 remains available in Git history. Recovered historical papers and original data are unchanged. The full research program remains incomplete.
-
-Version 0.3 labels all 15 numbered equations by provenance and adds the predeclared sky-tile comparison, fixed-rate six-maser diagnostic and conditional homogeneous-field result. [Sky-tile predictions](analysis/sky-tile-predictions.csv), [maser comparison](analysis/maser-comparison.csv), and [extended checks](analysis/extended-checks.json) retain all rows. No fresh-validation success or originality claim is made.
-
-Version 0.4 incorporates evidence through ee5733b: 20 provenance-labeled equations, larger-region validation, [gearing targets](analysis/observed-time-stretch-targets.csv), [observation-factor diagnostics](analysis/observation-factor-diagnostics.csv), [larger-region predictions](analysis/coarse-sky-predictions.csv), universal local-clock/force checks and fresh-sample exclusions. [Revision checks](analysis/revision-checks.json) recompute saved metrics without fitting new parameters. The 26 pending ELVES targets remain unscored; their metadata alone does not establish a fresh sample.
+Build with `python -X utf8 papers/cumulative-time-companions/build.py` from the repository root. The Markdown is the editable source, and `evidence-map.md` links the supporting calculations. `verification.json` records the current artifact checks.

@@ -113,14 +113,14 @@ def main():
     doc = SimpleDocTemplate(str(args.output), pagesize=(612, 792), rightMargin=58,
                             leftMargin=58, topMargin=49, bottomMargin=48,
                             title="Environmental Time Stretching and Companion-Energy Deposition",
-                            author="", subject="Working theoretical framework, version 0.4")
+                            author="", subject="Working theoretical framework, version 0.5")
 
     def page(canvas, document):
         canvas.saveState()
         canvas.setFont("Times-Roman", 8)
         canvas.setFillColor(colors.HexColor("#526371"))
         canvas.drawString(58, 767, "ENVIRONMENTAL TIME STRETCHING AND COMPANION ENERGY")
-        canvas.drawString(58, 28, "Working draft v0.4  |  9 September 2026  |  Theory incomplete")
+        canvas.drawString(58, 28, "Working draft v0.5  |  10 September 2026  |  Theory incomplete")
         canvas.drawRightString(554, 28, str(document.page))
         canvas.restoreState()
 
