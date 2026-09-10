@@ -1,0 +1,49 @@
+{
+  "n": 73,
+  "groups": 57,
+  "models": [
+    {
+      "model": "gaussian",
+      "slope": -7.603359193151296,
+      "intercept": -20.797274700526966,
+      "intrinsic_core_mag": 0.8602816366366058,
+      "broad_fraction": 0.0,
+      "heldout_log_score": -112.06945180025727,
+      "coverage68": 57,
+      "coverage95": 69,
+      "n": 73,
+      "median_halfwidth68": 0.8853007274636161,
+      "rms_mag": 0.9938839765719168,
+      "median_abs_fractional_distance_discrepancy": 0.2431924063157861
+    },
+    {
+      "model": "mixture",
+      "slope": -7.918796467011146,
+      "intercept": -20.800358802986274,
+      "intrinsic_core_mag": 0.6209500811501126,
+      "broad_fraction": 0.033782948332067804,
+      "heldout_log_score": -102.24264137983691,
+      "coverage68": 47,
+      "coverage95": 67,
+      "n": 73,
+      "median_halfwidth68": 0.6808446218957087,
+      "rms_mag": 0.9854556361406821,
+      "median_abs_fractional_distance_discrepancy": 0.22028017129867183
+    }
+  ],
+  "max_cdf_error": 1.5720758028692217e-13,
+  "optimizer_fits": 116,
+  "fits_with_any_failed_start": 0,
+  "boundary_fits": 1,
+  "hashes": {
+    "research_work\\results\\indicator-tf-calibration\\cross-validation.csv": "b8fbcf00202dafaaf5d6d1cac279b2574ab3fd4f46dfce7971c410792037e89a",
+    "research_work\\results\\tf-quality-audit\\joined.csv": "affb1d7ff70b7e67c372d7d52377d6182e6d4874179813cc64eb50ab09a95b1c"
+  },
+  "status": "Conditional plug-in residual predictions, not population selection model or new holdout",
+  "posthoc_score_concentration_diagnostic": {
+    "total_gain": 9.826810420420358,
+    "ngc4424_gain": 9.53866323501617,
+    "remaining_72_gain": 0.28814718540418816,
+    "interpretation": "Accounting diagnostic only; no rows removed or refitted"
+  }
+}
