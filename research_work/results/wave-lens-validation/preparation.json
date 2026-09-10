@@ -1,0 +1,33 @@
+{
+  "eligible": 7,
+  "eligible_names": [
+    "J0029-0055",
+    "J0216-0813",
+    "J0912+0029",
+    "J0946+1006",
+    "J1420+6019",
+    "J1531-0105",
+    "J1627-0053"
+  ],
+  "excluded": [
+    {
+      "Name": "J0157-0056",
+      "reason": "No spectroscopic dispersion"
+    },
+    {
+      "Name": "J1103+5322",
+      "reason": "Not early-type E in original catalog"
+    }
+  ],
+  "reference_normalization_max_relative_check_error": 1.021405182655144e-14,
+  "reference_cosmology_role": "Undo published luminosity normalization only, not the fictional model",
+  "limitations": "Population M/L and age/dust/metallicity/IMF priors retained; not a new stellar-population posterior",
+  "input_sha256": {
+    "lens-photometric-audit\\source-tables\\table3.dat": "1a5023ec92db956076e73bf1d788f8695027a4db9e3e482ff7d143a4be9c2c0c",
+    "lens-photometric-audit\\source-tables\\table4.dat": "b22e49621789b935329b0b0c27a27b2297008553baa8f0c474c095eaba37e11b",
+    "lens-photometric-audit\\source-tables\\ReadMe": "647d27d14c42080b2759d881daf7bb21d4975af872ee437016bcae563b654e97",
+    "lensing-data-readiness\\lens-observations-and-image-models.json": "e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+    "lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "wave-lens-validation\\protocol.json": "5af46b7496b52224cbc66113edcd48b7bab90140db58b65bcbf758676f669efc"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "Written before wave-model validation predictions",
+  "sample_role": "validation",
+  "eligibility": "Original validation role, early-type E morphology, available spectroscopic dispersion, finite Salpeter population mass and positive updated I-band effective radius",
+  "parameters": "Read unchanged from wave-lens-training/parameter-grid/selected-calibration.json",
+  "stellar_mass": "Same published Salpeter mass normalization conversion as training; fixed population parameters; energy-loss-plus-event-stretch branch",
+  "geometry": "Same archived static Euclidean redshift-derived distances as training",
+  "aperture_seeing_and_orbits": "Same three-arcsecond aperture, 1.5-arcsecond Gaussian seeing and isotropic Hernquist stellar tracer as training",
+  "tuning_on_validation": false,
+  "test_role_access": false,
+  "history": "These validation galaxies were previously scored under the empirical extra-force pilot. Reused validation, not pristine blinding.",
+  "reporting": "Report dispersion and lensing RMS, biases, per-system predictions and the previously declared equal-weight logarithmic score for both models; retain failures and exclusions"
+}
