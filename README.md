@@ -8,6 +8,8 @@ The aim is to find a self-consistent emitter–propagation–receiver model that
 
 ## Start here
 
+**Latest conceptual specification:** [Environmental Time and Bound Companion Fields](research_plan/environmental-time-bound-companions.md) consolidates the steady-environment conversion choice, light-speed companion transport, voids without storage, deep-well capture and the proposed bound-level picture. It labels agreed premises, provisional equations and unresolved couplings; it adds no new observational fit and does not replace the existing PDF.
+
 **New working paper:** [Environmental Time Stretching and Companion-Energy Deposition](papers/cumulative-time-companions/manuscript.md), with a [PDF](papers/cumulative-time-companions/manuscript.pdf) and [evidence map](papers/cumulative-time-companions/evidence-map.md). This current synthesis develops the cumulative-time premise, conditional derivations and remaining research objectives; the historical version 9 below is preserved separately.
 
 1. **[Current research checkpoint](research_work/results/RESEARCH-CHECKPOINT.md).** Verified results, open questions, and links to the latest energy, capture, microphysics, data, wave and gravity derivations.
