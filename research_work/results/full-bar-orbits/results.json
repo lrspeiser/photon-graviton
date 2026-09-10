@@ -1,0 +1,353 @@
+{
+  "scope": "Six synthetic orbit probes; not a fitted stellar population or data likelihood.",
+  "known_equations": "H_J=|p|\u00b2/2+Phi-Omega*Lz; xdot=p-Omega cross x; pdot=-grad(Phi)-Omega cross p",
+  "initial_conditions": [
+    [
+      0.8660254037844387,
+      0.49999999999999994,
+      0.1,
+      -46.8673070382784,
+      121.17655700422867,
+      20.0
+    ],
+    [
+      0.8660254037844387,
+      0.49999999999999994,
+      0.8,
+      -29.40300818562442,
+      90.9275040728651,
+      20.0
+    ],
+    [
+      2.598076211353316,
+      1.4999999999999998,
+      0.1,
+      -52.84434434166745,
+      131.52908929243299,
+      20.0
+    ],
+    [
+      2.598076211353316,
+      1.4999999999999998,
+      0.8,
+      -48.16483732614704,
+      123.42394538717662,
+      20.0
+    ],
+    [
+      6.92820323027551,
+      3.9999999999999996,
+      0.1,
+      -53.719061127879584,
+      133.04414320838575,
+      20.0
+    ],
+    [
+      6.92820323027551,
+      3.9999999999999996,
+      0.8,
+      -51.61865619815832,
+      129.40613515364038,
+      20.0
+    ]
+  ],
+  "pattern_speed_kms_per_kpc": 37.5,
+  "duration_kpc_per_kms": 0.25,
+  "models": {
+    "ordinary": {
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 7562,
+          "seconds": 8.381776199996239
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 15590,
+          "seconds": 17.216832699996303,
+          "position_difference_kpc": 0.00019013274610734203,
+          "velocity_difference_kms": 0.05070175652765288,
+          "integration_refinement_pass": false
+        },
+        {
+          "rtol": 2e-13,
+          "nfev": 72218,
+          "seconds": 79.69336940000358,
+          "position_difference_kpc": 4.776639522887814e-06,
+          "velocity_difference_kms": 0.002793320291738319,
+          "integration_refinement_pass": true
+        }
+      ],
+      "probes": [
+        {
+          "probe": 0,
+          "R_min_kpc": 0.029463655435394146,
+          "R_max_kpc": 1.237135007365818,
+          "max_abs_height_kpc": 0.6790795886656746,
+          "mean_rotation_kms": 72.09611373971208,
+          "sampled_plane_fraction": 0.5249500998003992,
+          "sampled_offplane_fraction": 0.10978043912175649,
+          "Jacobi_drift_over_220_squared": 2.869201125577092e-09
+        },
+        {
+          "probe": 1,
+          "R_min_kpc": 0.016897411775790728,
+          "R_max_kpc": 1.6885932673700106,
+          "max_abs_height_kpc": 0.8084315385926417,
+          "mean_rotation_kms": 93.87102756443024,
+          "sampled_plane_fraction": 0.3972055888223553,
+          "sampled_offplane_fraction": 0.10179640718562874,
+          "Jacobi_drift_over_220_squared": 4.119835113279121e-09
+        },
+        {
+          "probe": 2,
+          "R_min_kpc": 0.29386223358705904,
+          "R_max_kpc": 3.27841540940715,
+          "max_abs_height_kpc": 0.32001447866518157,
+          "mean_rotation_kms": 132.29267047531806,
+          "sampled_plane_fraction": 0.810379241516966,
+          "sampled_offplane_fraction": 0.0,
+          "Jacobi_drift_over_220_squared": 6.460635451415231e-10
+        },
+        {
+          "probe": 3,
+          "R_min_kpc": 0.4347398164777092,
+          "R_max_kpc": 3.4182877196694736,
+          "max_abs_height_kpc": 0.925772468127353,
+          "mean_rotation_kms": 133.89362054378694,
+          "sampled_plane_fraction": 0.16167664670658682,
+          "sampled_offplane_fraction": 0.5429141716566867,
+          "Jacobi_drift_over_220_squared": 2.424682808986072e-10
+        },
+        {
+          "probe": 4,
+          "R_min_kpc": 5.217386285679363,
+          "R_max_kpc": 10.787897615800937,
+          "max_abs_height_kpc": 0.4220980300206554,
+          "mean_rotation_kms": 156.93041498115926,
+          "sampled_plane_fraction": 0.3413173652694611,
+          "sampled_offplane_fraction": 0.0,
+          "Jacobi_drift_over_220_squared": 3.427517223210374e-13
+        },
+        {
+          "probe": 5,
+          "R_min_kpc": 5.145270334573865,
+          "R_max_kpc": 10.588779845677417,
+          "max_abs_height_kpc": 1.1419219855053833,
+          "mean_rotation_kms": 153.7384519377983,
+          "sampled_plane_fraction": 0.10778443113772455,
+          "sampled_offplane_fraction": 0.6806387225548902,
+          "Jacobi_drift_over_220_squared": 3.436537005376717e-13
+        }
+      ],
+      "all_evaluation_domain_bounds": [
+        0.01870742782317234,
+        10.792893210116809,
+        1.1419264060206862
+      ],
+      "Jacobi_gate_pass": true,
+      "integration_refinement_pass": true
+    },
+    "axisymmetric_extra": {
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 9362,
+          "seconds": 11.361667600009241
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 18053,
+          "seconds": 22.01332920001005,
+          "position_difference_kpc": 0.00040888016132557007,
+          "velocity_difference_kms": 0.18507458817831118,
+          "integration_refinement_pass": false
+        },
+        {
+          "rtol": 2e-13,
+          "nfev": 91466,
+          "seconds": 110.72391519999655,
+          "position_difference_kpc": 0.0001202194350976608,
+          "velocity_difference_kms": 0.05237848957610638,
+          "integration_refinement_pass": false
+        }
+      ],
+      "probes": [
+        {
+          "probe": 0,
+          "R_min_kpc": 0.013483776659326263,
+          "R_max_kpc": 1.10911549448013,
+          "max_abs_height_kpc": 0.6334514222433548,
+          "mean_rotation_kms": 37.49059036032462,
+          "sampled_plane_fraction": 0.5568862275449101,
+          "sampled_offplane_fraction": 0.02594810379241517,
+          "Jacobi_drift_over_220_squared": 6.122575519117719e-09
+        },
+        {
+          "probe": 1,
+          "R_min_kpc": 0.01034165976223249,
+          "R_max_kpc": 1.6685390221338776,
+          "max_abs_height_kpc": 0.8064344952059703,
+          "mean_rotation_kms": 97.4974223861164,
+          "sampled_plane_fraction": 0.3912175648702595,
+          "sampled_offplane_fraction": 0.20758483033932135,
+          "Jacobi_drift_over_220_squared": 2.2466620743036087e-09
+        },
+        {
+          "probe": 2,
+          "R_min_kpc": 0.4918395240145075,
+          "R_max_kpc": 3.2699917083873613,
+          "max_abs_height_kpc": 0.3258564308930329,
+          "mean_rotation_kms": 153.8567403507181,
+          "sampled_plane_fraction": 0.8043912175648703,
+          "sampled_offplane_fraction": 0.0,
+          "Jacobi_drift_over_220_squared": 6.605849434402271e-10
+        },
+        {
+          "probe": 3,
+          "R_min_kpc": 0.748068452918926,
+          "R_max_kpc": 3.2937641973393843,
+          "max_abs_height_kpc": 0.9911493114819829,
+          "mean_rotation_kms": 155.61640101221298,
+          "sampled_plane_fraction": 0.14570858283433133,
+          "sampled_offplane_fraction": 0.590818363273453,
+          "Jacobi_drift_over_220_squared": 2.3526327890413236e-10
+        },
+        {
+          "probe": 4,
+          "R_min_kpc": 2.782894815158372,
+          "R_max_kpc": 8.053197558965477,
+          "max_abs_height_kpc": 0.26899950336029405,
+          "mean_rotation_kms": 183.80590536309992,
+          "sampled_plane_fraction": 0.6586826347305389,
+          "sampled_offplane_fraction": 0.0,
+          "Jacobi_drift_over_220_squared": 5.7567106049954275e-11
+        },
+        {
+          "probe": 5,
+          "R_min_kpc": 3.0389506695220003,
+          "R_max_kpc": 8.056023533282092,
+          "max_abs_height_kpc": 0.9336672087047315,
+          "mean_rotation_kms": 180.83261424435364,
+          "sampled_plane_fraction": 0.1596806387225549,
+          "sampled_offplane_fraction": 0.5728542914171657,
+          "Jacobi_drift_over_220_squared": 3.3260897727498464e-11
+        }
+      ],
+      "all_evaluation_domain_bounds": [
+        0.011702779985400289,
+        8.1033093715371,
+        0.9912830098599678
+      ],
+      "Jacobi_gate_pass": true,
+      "integration_refinement_pass": false
+    },
+    "full": {
+      "attempts": [
+        {
+          "rtol": 2e-09,
+          "nfev": 8426,
+          "seconds": 17.914641800001846
+        },
+        {
+          "rtol": 2e-11,
+          "nfev": 17273,
+          "seconds": 36.415800399990985,
+          "position_difference_kpc": 1.2968164071641058e-05,
+          "velocity_difference_kms": 0.0063088970657564705,
+          "integration_refinement_pass": true
+        }
+      ],
+      "probes": [
+        {
+          "probe": 0,
+          "R_min_kpc": 0.03516445671441669,
+          "R_max_kpc": 1.207620883935664,
+          "max_abs_height_kpc": 0.495569278389423,
+          "mean_rotation_kms": 64.01913668780132,
+          "sampled_plane_fraction": 0.6726546906187625,
+          "sampled_offplane_fraction": 0.0,
+          "Jacobi_drift_over_220_squared": 1.0255884352930983e-07
+        },
+        {
+          "probe": 1,
+          "R_min_kpc": 0.02925679063911173,
+          "R_max_kpc": 1.593889988950997,
+          "max_abs_height_kpc": 0.8741286688347667,
+          "mean_rotation_kms": 75.72464789692285,
+          "sampled_plane_fraction": 0.3013972055888224,
+          "sampled_offplane_fraction": 0.2634730538922156,
+          "Jacobi_drift_over_220_squared": 9.017897573057254e-08
+        },
+        {
+          "probe": 2,
+          "R_min_kpc": 0.5670846310024379,
+          "R_max_kpc": 3.132735099551683,
+          "max_abs_height_kpc": 0.24348364142821707,
+          "mean_rotation_kms": 144.42977584756758,
+          "sampled_plane_fraction": 0.8842315369261478,
+          "sampled_offplane_fraction": 0.0,
+          "Jacobi_drift_over_220_squared": 1.8939806241253466e-08
+        },
+        {
+          "probe": 3,
+          "R_min_kpc": 0.6556440802136657,
+          "R_max_kpc": 3.0798486966846896,
+          "max_abs_height_kpc": 1.0618456571435653,
+          "mean_rotation_kms": 151.16246291458685,
+          "sampled_plane_fraction": 0.11976047904191617,
+          "sampled_offplane_fraction": 0.6646706586826348,
+          "Jacobi_drift_over_220_squared": 4.355663932525083e-09
+        },
+        {
+          "probe": 4,
+          "R_min_kpc": 2.0221652876083875,
+          "R_max_kpc": 8.052872724105661,
+          "max_abs_height_kpc": 0.26913126445067215,
+          "mean_rotation_kms": 183.3388582521629,
+          "sampled_plane_fraction": 0.7105788423153693,
+          "sampled_offplane_fraction": 0.0,
+          "Jacobi_drift_over_220_squared": 4.17900909352201e-09
+        },
+        {
+          "probe": 5,
+          "R_min_kpc": 2.0206270791843037,
+          "R_max_kpc": 8.055690992413588,
+          "max_abs_height_kpc": 0.9380022446619015,
+          "mean_rotation_kms": 179.04352560273296,
+          "sampled_plane_fraction": 0.1536926147704591,
+          "sampled_offplane_fraction": 0.5508982035928144,
+          "Jacobi_drift_over_220_squared": 5.9157216977732145e-09
+        }
+      ],
+      "all_evaluation_domain_bounds": [
+        0.04849153485910462,
+        8.102945637957403,
+        1.0619313033746596
+      ],
+      "Jacobi_gate_pass": true,
+      "integration_refinement_pass": true
+    }
+  },
+  "actual_trajectory_extra_force_refinement_max": 0.00364231682717373,
+  "actual_trajectory_extra_force_refinement_median": 4.181063434481667e-05,
+  "actual_trajectory_field_gate_pass": true,
+  "frame_check_duration_kpc_per_kms": 0.05,
+  "inertial_rotating_position_difference_kpc": 6.791299074106435e-09,
+  "inertial_rotating_velocity_difference_kms": 5.389270816481429e-06,
+  "frame_check_pass": true,
+  "input_hashes": {
+    "research_work\\data-cache\\full-bar-completion\\fine.npz": "c1e862fa166251bd73f462792cf23e8ed1a10295ed46f8cd38d13b407dfb1731",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd",
+    "research_work\\results\\full-bar-completion\\run.py": "d5bac729589e8e7af2a3b30e43b9a987fec2920803b97fe61f21a0366c5517d9",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\full-bar-completion\\finer.npz": "47014aaaf398ba8ecaf45a50ac792ef81dbaab1b67364acc7d4095f551917d6b",
+    "research_work\\results\\full-bar-orbits\\run.py": "6227132d019c04c95075759782e6456454ea59661b91300bc5c6f16b69481d54",
+    "research_work\\data-cache\\full-bar-completion\\axis-disk-ec0d15eb7bb9.npz": "9ce6b854f866cf434391e730e6941c41d3fc1c1a80f991946b33b938539d7567",
+    "research_work\\data-cache\\full-bar-completion\\axisymmetric-reference-80-L128-N512.npz": "ebdcc0f52093d0048f18a4d7f4d25443f94dc0d9ca68b6f0d871432bef8476f5",
+    "research_work\\results\\rotating-bar-orbits\\results.json": "b983f48a1ee02be1a0ab9db0e0e9574d4d8e654b9e1af151856800395a270e31"
+  },
+  "holdouts_opened": false,
+  "stellar_population_fit": false,
+  "photon_origin_derived": false
+}
