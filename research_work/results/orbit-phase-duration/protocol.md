@@ -1,0 +1,9 @@
+# Paired extension of the strongest candidate smooth-drift probe
+
+Before new integrations, select existing launch index 12 because it had the largest candidate individual smooth early/late discrepancy at both predeclared kernel scales. Retain this targeted selection in interpretation; it is not a random or representative galaxy sample. Use the same initial star state for ordinary and candidate potentials, with all physical coefficients unchanged.
+
+Integrate from the original initial condition to time 4 kpc/(km/s), approximately 3.91 Gyr, saving every 0.0005 time unit. The potential and bar pattern speed remain frozen; this tests numerical orbit-population sampling, not the Milky Way's actual historical evolution. Try DOP853 tolerances 2e-9, 2e-11, 2e-13 until consecutive trajectories differ by less than 1e-4 kpc and 0.01 km/s over the full interval. Require Jacobi drift / 220^2 below 1e-5 and actual-trajectory candidate extra-force refinement differences below 1%. Preserve failures; do not interpret ungated trajectories as physical evidence.
+
+Compare first and second halves for duration 1, 2 and 4 using exactly 2000 noninitial equally spaced samples in each full duration (1000 per half). Retain the earlier histogram bins and Gaussian kernel scales (0.5 kpc, 50 km/s) and (2 kpc, 100 km/s). Also compare halves of the final one-unit interval (3,4] at original cadence. These are finite-time diagnostics, not independent observations or significance tests. Keep matched sampling and no post hoc score optimization. Record bar-frame angle span and reversals without claiming a resonance identification from them alone.
+
+Verify input/source hashes and agreement with the old first-unit trajectory. No new held-out observations, refitted weights, physical parameter changes, selected stellar likelihood or graviton derivation.
