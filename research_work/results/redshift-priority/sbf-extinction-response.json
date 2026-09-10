@@ -1,0 +1,17 @@
+{
+  "status": "symbolic established-calibration sensitivity; no proposed gravity law or applied distance correction",
+  "formula_provenance": "established SBF/color-extinction structure; algebraic restatement of known sensitivity, not original research",
+  "assumptions": [
+    "fixed passband extinction coefficients",
+    "fixed linear color-calibration slope",
+    "same sensitivity K for target and calibrator in cancellation example",
+    "fixed observed fluctuation magnitude and observed color",
+    "no change in calibrator adopted distance in zero-point recalibration example"
+  ],
+  "mu": "-E*R_I - a - b*(-E*(-R_I + R_V) + color - pivot) + m",
+  "d_mu_d_E": "-R_I - b*(R_I - R_V)",
+  "finite_change_mu": "-R_I*b*delta_E - R_I*delta_E + R_V*b*delta_E - delta_a",
+  "after_zero_point_recalibration": "-R_I*b*delta_E - R_I*delta_E + R_V*b*delta_E + delta_E_cal*(R_I + b*(R_I - R_V))",
+  "common_shift_cancels": true,
+  "symbolic_identities_verified": 4
+}
