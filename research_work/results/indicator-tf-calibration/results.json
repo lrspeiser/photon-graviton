@@ -1,0 +1,85 @@
+{
+  "alpha_fixed": 0.0002488993286382367,
+  "eligible": 73,
+  "excluded": 36,
+  "groups": 57,
+  "distance_range_mpc": [
+    3.1188895840939352,
+    36.81289736425311
+  ],
+  "source_sha256": {
+    "research_work\\results\\dense-distance-source-audit\\possible-calibrators.csv": "51c3e16ca0a8491dd4337a043c13b119f9229b90a24e6cf02aab77ae9165090d",
+    "research_work\\results\\dense-distance-source-audit\\observer-features.csv": "aa4d9df803b95f9df93adfaa006a0b1e92fd745889c1e55b06dc546ecde3cdf2",
+    "temporal_candidate_audit\\data\\cf4_table2.dat": "8e908928e68352b59292cf67020a4d70aaa6d30f278dfa6aa3e41a9df808332f"
+  },
+  "scenarios": [
+    {
+      "p": 0,
+      "slope": -7.567924613689418,
+      "intercept": -20.766482586087953,
+      "training_rms_mag": 0.9472154299263553,
+      "group_excluded_rms_mag": 0.9943458798517716,
+      "group_excluded_median_abs_mag": 0.5432516096809401,
+      "distance_ratio_percentiles": {
+        "p16": 0.740198396223125,
+        "p50": 1.0050881398564617,
+        "p84": 1.3538138267134234
+      },
+      "median_absolute_fractional_distance_error": 0.24886060911099472,
+      "median_width_induced_mag_error": 0.1858223828694767,
+      "by_method": {
+        "CEP": {
+          "n": 17,
+          "rms_mag": 0.6309371532072828
+        },
+        "MASER": {
+          "n": 1,
+          "rms_mag": 0.02045721963828484
+        },
+        "SBF": {
+          "n": 9,
+          "rms_mag": 0.8180551055540846
+        },
+        "TRGB": {
+          "n": 46,
+          "rms_mag": 1.1362227425286653
+        }
+      }
+    },
+    {
+      "p": 1,
+      "slope": -7.573580758597285,
+      "intercept": -20.774417119477445,
+      "training_rms_mag": 0.9485778423087057,
+      "group_excluded_rms_mag": 0.995773199089832,
+      "group_excluded_median_abs_mag": 0.5405999146234528,
+      "distance_ratio_percentiles": {
+        "p16": 0.7408648635402918,
+        "p50": 1.0055211431139215,
+        "p84": 1.3562616520380777
+      },
+      "median_absolute_fractional_distance_error": 0.24950083576892834,
+      "median_width_induced_mag_error": 0.18596126352411926,
+      "by_method": {
+        "CEP": {
+          "n": 17,
+          "rms_mag": 0.6346301915171038
+        },
+        "MASER": {
+          "n": 1,
+          "rms_mag": 0.015563428339284258
+        },
+        "SBF": {
+          "n": 9,
+          "rms_mag": 0.819421840755609
+        },
+        "TRGB": {
+          "n": 46,
+          "rms_mag": 1.1372548614580216
+        }
+      }
+    }
+  ],
+  "max_relative_root_difference": 1.4985234990656757e-14,
+  "scope": "Exploratory group-excluded calibration; no fresh holdout, no environment or redshift fit; not a complete likelihood."
+}
