@@ -110,3 +110,8 @@ The [photometric audit](../lens-photometric-audit/report.md) reruns all 33 train
 ## Subsequent reserved validation
 
 The [frozen validation comparison](validation-report.md) now evaluates seven eligible reserved systems. The companion pilot underperforms the ordinary-matter benchmark under the primary and listed sensitivity assumptions. Validation is now exposed; separate test scores remain unopened.
+
+
+## Orbital sensitivity follow-up
+
+The [constant-anisotropy training audit](anisotropy-report.md) tests shared radial and tangential alternatives while preserving the original isotropic validation failure. The radial example reduces bias, but does not establish a measured orbital distribution or a successful physical companion model.

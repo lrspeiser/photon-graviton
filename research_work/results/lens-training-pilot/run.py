@@ -7,7 +7,8 @@ from scipy.optimize import brentq
 from scipy.stats import ncx2
 from numpy.polynomial.legendre import leggauss
 H=Path(__file__).resolve().parent;ROOT=H.parents[2]
-parser=argparse.ArgumentParser();parser.add_argument('--refined',action='store_true');parser.add_argument('--updated-profile',action='store_true');parser.add_argument('--role',choices=['training','validation'],default='training');args=parser.parse_args()
+parser=argparse.ArgumentParser();parser.add_argument('--refined',action='store_true');parser.add_argument('--updated-profile',action='store_true');parser.add_argument('--role',choices=['training','validation'],default='training');parser.add_argument('--beta',type=float,choices=[-.3,0.,.3],default=0.);args=parser.parse_args()
+if args.beta!=0 and args.role!='training':raise ValueError('Nonzero-beta alternatives are training diagnostics only; original validation protocol was isotropic.')
 datafile=H.parent/'lensing-data-readiness/lens-observations-and-image-models.json'
 geomfile=H.parent/'lensing-data-readiness/conditional-geometry.json'
 fitfile=H.parent/'joint-galaxy-audit/results.json'
@@ -34,6 +35,9 @@ def weights(ap,seeing):
     if seeing==0:
         u=np.minimum(1,(ap/x)**2);W=u/(1+np.sqrt(1-u))
         K=x**3/3*np.where(u==1,1,-np.expm1(1.5*np.log1p(-np.minimum(u,1-1e-16))))
+        if args.beta!=0:
+            Wbeta=W-args.beta*W*W*(np.sqrt(1-u)+2)/3
+            K=x**(2*args.beta)*cumulative_trapezoid(x**(2-2*args.beta)*Wbeta,x,initial=0)
     else:
         s=seeing/2.354820045
         top=np.arcsin(np.minimum(1,(ap+8*s)/x))
@@ -41,6 +45,9 @@ def weights(ap,seeing):
         P=ncx2.cdf((ap/s)**2,2,(x[:,None]*np.sin(theta)/s)**2)
         W=np.sum(P*np.sin(theta)*w[None,:],axis=1)*top/2
         K=cumulative_trapezoid(x*x*W,x,initial=0)
+        if args.beta!=0:
+            Wbeta=np.sum(P*np.sin(theta)*(1-args.beta*np.sin(theta)**2)*w[None,:],axis=1)*top/2
+            K=x**(2*args.beta)*cumulative_trapezoid(x**(2-2*args.beta)*Wbeta,x,initial=0)
     return W,K
 rows=[]
 for r in data:
@@ -77,7 +84,7 @@ for r in data:
                     # Solve in log-angle; no Einstein angle used in mass inference.
                     rt=brentq(lambda l:deflection(np.exp(l),m)/np.exp(l)-1,-14,8)
                     predictions.append(float(np.exp(rt)))
-                rows.append(dict(Name=r['Name'],role=args.role,model=model,seeing_fwhm_arcsec=fwhm,cutoff_over_Re=cutRe,
+                rows.append(dict(Name=r['Name'],role=args.role,beta=args.beta,model=model,seeing_fwhm_arcsec=fwhm,cutoff_over_Re=cutRe,
                     mass_from_sigma_Msun=masses[1],theta_pred_arcsec=predictions[1],theta_sigma_minus_arcsec=predictions[0],theta_sigma_plus_arcsec=predictions[2],
                     theta_SIE_arcsec=r['bSIE'],theta_LTM_arcsec=r['bLTM'],stellar_axis_ratio=r['b/a'],residual_arcsec=predictions[1]-r['bSIE']))
     print('computed',r['Name'],flush=True)
@@ -90,8 +97,13 @@ for model,seeing,cut in sorted(set((r['model'],r['seeing_fwhm_arcsec'],r['cutoff
     res=np.array([r['residual_arcsec'] for r in ss]);rat=np.array([r['theta_pred_arcsec']/r['theta_SIE_arcsec'] for r in ss])
     summary['scores'][f'{model}/seeing{seeing}/cut{cut}']={'n':len(ss),'rmse_arcsec':float(np.sqrt(np.mean(res**2))),'median_predicted_over_SIE':float(np.median(rat)),'mean_residual_arcsec':float(res.mean())}
 summary['updated_I_profile_used']=args.updated_profile
+summary['constant_orbital_anisotropy_beta']=args.beta
+if args.beta!=0:
+    summary['assumptions']=[s.replace('Spherical isotropic Hernquist','Spherical constant-anisotropy Hernquist') for s in summary['assumptions']]
+    summary['assumptions'].append('Nonzero beta is a shared illustrative alternative, not a measured population prior; full distribution-function positivity not established.')
 if args.updated_profile:summary['source_sha256'][str(profilefile.name)]=hashlib.sha256(profilefile.read_bytes()).hexdigest()
 suffix=('-refined' if args.refined else '')+('-updated-profile' if args.updated_profile else '')
+if args.beta!=0:suffix+=f'-beta{args.beta:+.1f}'
 if args.role!='training':
     suffix+='-'+args.role
     summary['protocol_sha256']=hashlib.sha256((H/'validation-protocol.json').read_bytes()).hexdigest()
