@@ -1,0 +1,7 @@
+# Post-result diagnostic amendment
+
+The initial results have been inspected: centre-weighted capture fits inner rotation but overshoots some vertical-force summaries. Both assumed stellar models contain uncertain stellar masses and were historically constructed using halo-containing comparisons. Their gas additions are explicit rather than silently omitted.
+
+Test one further repair, without replacing those initial results: multiply all stellar masses in each model by a single scale s, leaving gas fixed. Fit s, M100 and beta0 using R<=15 kpc rotation and even-indexed Bovy-Rix Table 3 rows, with the odd-indexed rows and R>15 kpc reserved. Fix rs=0.501187 kpc, the initial run's boundary value, rather than claiming it was measured. Use a declared Gaussian sensitivity prior s=1 +/- 0.2 and bounds 0.5..1.5; this is not a published mass posterior. Other bounds remain unchanged. Use the 3% radial floor and the published diagonal vertical errors for this diagnostic objective.
+
+This split is post hoc and not blind: all vertical rows have been seen, share data-model assumptions, and may have correlated systematics. Its withheld score is an exploratory transfer check, not independent validation or a statistical proof. A better result would demonstrate a baryonic-normalization degeneracy, not establish companion physics. No modification to the redshift law, energy budget, or loss-free companion requirement is authorized by a better force fit alone.

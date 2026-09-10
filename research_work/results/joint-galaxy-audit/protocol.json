@@ -1,0 +1,32 @@
+{
+  "date": "2026-09-09",
+  "status": "Exploratory reuse: earlier outcomes are known. Written before running this suite; not a blinded preregistration.",
+  "scope": "164 distance-redshift groups, 149 SPARC galaxies, 38 Milky Way rotation bins, 43 provisional vertical-force summaries, and integration of earlier electromagnetic failures",
+  "redshift": {
+    "split": "Preserve original train/validation/test group labels",
+    "models": ["fixed previous alpha", "refit constant alpha", "quadratic cumulative loss"],
+    "quadratic": "ln(1+z)=a*(D/100Mpc)+b*(D/100Mpc)^2; positive derivative enforced throughout the observed range; diagnostic photon-history dependence, not a local field derivation",
+    "loss": "Unweighted squared c*z residual on training only, matching the recovered baseline; no per-object velocity adjustments",
+    "evaluation": "Split RMSE, bias, fractional log error, and descriptive 300 km/s plus distance-error sensitivity. No uncertainty-calibrated global acceptance claim."
+  },
+  "sparc": {
+    "split": "Preserve original 89 train / 29 validation / 31 test galaxies",
+    "cuts": "Quality <=2, inclination >=30 degrees, positive scale length, >=5 valid points; published gas and disk/bulge contributions with fixed M/L=0.5/0.7",
+    "models": ["baryons only", "extra acceleration A*a_star*(g_b/a_star)^p"],
+    "scale": "a_star=c^2*alpha from redshift training, SI units",
+    "loss": "Equal weight per galaxy, mean squared log10 velocity residual",
+    "bounds": "log10(A) [-4,2], p [0,1]",
+    "caveat": "A is free, so a_star linkage is not an independently verified physical coupling"
+  },
+  "milky_way": {
+    "baryonic_sensitivity": "Pouliasis model I and II stellar components, without their dark halo; McMillan fixed HI/H2 gas profiles added. These are conditional morphology benchmarks, not halo-independent stellar mass measurements.",
+    "transfer_test": "SPARC-trained A,p applied without Milky Way retuning; extra force assigned a spherical conservative completion for vertical prediction",
+    "capture_fits": "External isotropic bath in a 100 kpc sphere; constant beta control and beta(r)=beta0/[1+(r/rs)^2] candidate. Zero capture outside. Fit only R<=15 kpc rotation bins; predict R>15 and all vertical points.",
+    "bounds": "log10(M100/Msun) [9,13], log10(beta0/kpc^-1) [-5,1], log10(rs/kpc) [-0.3,1.7]",
+    "capture_loss": "Squared rotation residual divided by sqrt(mean statistical error^2+(0.03*vobs)^2); 3% is an explicit sensitivity floor, not a supplied covariance",
+    "storage": "Stationary accumulated deposits, ordinary cold-source Newtonian gravity; mass amplitude free because source-budget calculation remains deferred",
+    "vertical": "Bovy-Rix R0=8 retained, z=1.1 kpc; predictions in each published frame without remapping raw stars. Conditional diagnostic only: original potential assumptions, shared systematics and coordinate mismatch require refit.",
+    "acceptance": "Do not declare real-data reproduction solely from fit or diagonal scores; report boundary parameters, numerical errors, unsupported assumptions and failed tests"
+  },
+  "global": "No dark matter or cosmic expansion source in fitted candidates. Previously failing timing/thermal/source tests remain requirements; do not pool incompatible or overlapping scores. Formula originality always labeled."
+}

@@ -1,5 +1,7 @@
 # Environmental time and companion-energy manuscript
 
+**Latest post-draft analysis:** [joint redshift/galaxy calculations](../../research_work/results/joint-galaxy-audit/report.md) and [local-well/bulge clarification](../../research_work/results/joint-galaxy-audit/bulge-local-well.md). Numerical gravity fits are conditional; a deposit's response is not locked to cold matter or its arrival direction. The v0.4 PDF is preserved and does not incorporate this later analysis.
+
 **Milky Way post-draft update:** [all-direction deposition and radial/vertical tests](../../research_work/results/milky-way-capture/report.md) adds published-data provenance, a capture-geometry control and a paired-force research program. It is not yet incorporated into the versioned v0.4 PDF and does not establish a fitted companion halo.
 
 Current working draft: **v0.4, 9 September 2026**. This is an incomplete theoretical framework with a reproduced observational calibration, not a validated replacement cosmology.

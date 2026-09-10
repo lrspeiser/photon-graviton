@@ -1,0 +1,297 @@
+{
+  "status": "Conditional available-data audit, not a completed theory",
+  "redshift": {
+    "fixed_alpha": {
+      "scores": {
+        "train": {
+          "n": 104,
+          "RMSE_kms": 457.57748763316135,
+          "bias_kms": -28.308536728133454,
+          "within_300kms": 62,
+          "sensitivity_rms_standardized": 1.2641912468581686
+        },
+        "validation": {
+          "n": 35,
+          "RMSE_kms": 437.06521235990175,
+          "bias_kms": 97.98976510045937,
+          "within_300kms": 21,
+          "sensitivity_rms_standardized": 1.1736151217396869
+        },
+        "test": {
+          "n": 25,
+          "RMSE_kms": 415.41397827858333,
+          "bias_kms": 74.11981106373497,
+          "within_300kms": 12,
+          "sensitivity_rms_standardized": 1.1705005799289983
+        }
+      }
+    },
+    "refit_alpha": {
+      "scores": {
+        "train": {
+          "n": 104,
+          "RMSE_kms": 457.5774876331619,
+          "bias_kms": -28.308559652697966,
+          "within_300kms": 62,
+          "sensitivity_rms_standardized": 1.2641912482509985
+        },
+        "validation": {
+          "n": 35,
+          "RMSE_kms": 437.0652050282681,
+          "bias_kms": 97.98974082280331,
+          "within_300kms": 21,
+          "sensitivity_rms_standardized": 1.1736151065896812
+        },
+        "test": {
+          "n": 25,
+          "RMSE_kms": 415.4139707251279,
+          "bias_kms": 74.11978566920865,
+          "within_300kms": 12,
+          "sensitivity_rms_standardized": 1.17050056093028
+        }
+      }
+    },
+    "quadratic_history": {
+      "scores": {
+        "train": {
+          "n": 104,
+          "RMSE_kms": 457.0640208490929,
+          "bias_kms": -18.663045048641052,
+          "within_300kms": 61,
+          "sensitivity_rms_standardized": 1.2647879506976087
+        },
+        "validation": {
+          "n": 35,
+          "RMSE_kms": 437.59631309072137,
+          "bias_kms": 107.80995925359792,
+          "within_300kms": 21,
+          "sensitivity_rms_standardized": 1.1806036289850015
+        },
+        "test": {
+          "n": 25,
+          "RMSE_kms": 413.74416093385645,
+          "bias_kms": 84.11422341042262,
+          "within_300kms": 15,
+          "sensitivity_rms_standardized": 1.171097716850474
+        }
+      }
+    },
+    "parameters": {
+      "alpha_per_Mpc": 0.0002488993265191759,
+      "alpha_fixed_per_Mpc": 0.0002488993286382367,
+      "a_star_m_s2": 7.249608968708169e-10,
+      "history_a": 0.02534426044151708,
+      "history_b": -0.0007607502599490857,
+      "history_optimizer_success": true,
+      "max_distance_Mpc": 93.19658525658426
+    }
+  },
+  "sparc": {
+    "parameters": {
+      "A": 0.2422960665538504,
+      "p": 0.4624587420104399,
+      "a_star_m_s2": 7.249608968708169e-10,
+      "optimizer_success": true
+    },
+    "scores": {
+      "baryons": {
+        "train": {
+          "n_galaxies": 89,
+          "n_rows": 1987,
+          "galaxy_weighted_RMSE_kms": 52.56535192119044,
+          "galaxy_weighted_log_RMSE": 0.2904157379880655
+        },
+        "validation": {
+          "n_galaxies": 29,
+          "n_rows": 521,
+          "galaxy_weighted_RMSE_kms": 58.2192156635354,
+          "galaxy_weighted_log_RMSE": 0.27036399166046354
+        },
+        "test": {
+          "n_galaxies": 31,
+          "n_rows": 642,
+          "galaxy_weighted_RMSE_kms": 47.771889244324356,
+          "galaxy_weighted_log_RMSE": 0.25608303859029213
+        }
+      },
+      "power": {
+        "train": {
+          "n_galaxies": 89,
+          "n_rows": 1987,
+          "galaxy_weighted_RMSE_kms": 20.005419279899193,
+          "galaxy_weighted_log_RMSE": 0.10934928207497562
+        },
+        "validation": {
+          "n_galaxies": 29,
+          "n_rows": 521,
+          "galaxy_weighted_RMSE_kms": 27.37693372986969,
+          "galaxy_weighted_log_RMSE": 0.09742855283860193
+        },
+        "test": {
+          "n_galaxies": 31,
+          "n_rows": 642,
+          "galaxy_weighted_RMSE_kms": 17.199505520327826,
+          "galaxy_weighted_log_RMSE": 0.07914105365407847
+        }
+      }
+    }
+  },
+  "milky_way": {
+    "I": {
+      "capture_fits": {
+        "uniform": {
+          "log_parameters": [
+            12.999999999999998,
+            -4.999999999999999
+          ],
+          "mass_100kpc_Msun": 9999999999999.959,
+          "beta0_per_kpc": 1.0000000000000021e-05,
+          "rs_kpc": null,
+          "success": true,
+          "calibration_score": 449.95547642423276,
+          "at_bounds": [
+            true,
+            true
+          ],
+          "max_resolution_change_kms_or_surface_units": 2.4251264818531126e-05
+        },
+        "well": {
+          "log_parameters": [
+            11.847334679403486,
+            0.6504565758454254,
+            -0.2999999999999998
+          ],
+          "mass_100kpc_Msun": 703614335782.1803,
+          "beta0_per_kpc": 4.471534396598415,
+          "rs_kpc": 0.5011872336272725,
+          "success": true,
+          "calibration_score": 0.3525442784749626,
+          "at_bounds": [
+            false,
+            false,
+            true
+          ],
+          "max_resolution_change_kms_or_surface_units": 0.00026558379695984513
+        }
+      },
+      "scores": {
+        "baryons": {
+          "radial_calibration_RMSE_kms": 45.67883955628598,
+          "radial_outer_RMSE_kms": 59.30408471472589,
+          "radial_all_RMSE_kms": 52.574925986259,
+          "vertical_RMSE_surface_units": 15.578854275616772,
+          "vertical_diagonal_score": 70.57596991364795,
+          "vertical_n": 43
+        },
+        "sparc_transfer": {
+          "radial_calibration_RMSE_kms": 7.968781378497572,
+          "radial_outer_RMSE_kms": 16.083963277651673,
+          "radial_all_RMSE_kms": 12.488435996288567,
+          "vertical_RMSE_surface_units": 23.812823462894883,
+          "vertical_diagonal_score": 216.5414794704329,
+          "vertical_n": 43
+        },
+        "capture_uniform": {
+          "radial_calibration_RMSE_kms": 32.25009137468489,
+          "radial_outer_RMSE_kms": 19.7861465602345,
+          "radial_all_RMSE_kms": 27.07116187314946,
+          "vertical_RMSE_surface_units": 15.812931870821124,
+          "vertical_diagonal_score": 80.51598985426288,
+          "vertical_n": 43
+        },
+        "capture_well": {
+          "radial_calibration_RMSE_kms": 0.9077515627992158,
+          "radial_outer_RMSE_kms": 11.91511622550504,
+          "radial_all_RMSE_kms": 8.226945717717978,
+          "vertical_RMSE_surface_units": 20.937964182123206,
+          "vertical_diagonal_score": 174.88496885702975,
+          "vertical_n": 43
+        }
+      }
+    },
+    "II": {
+      "capture_fits": {
+        "uniform": {
+          "log_parameters": [
+            12.999999999999304,
+            -4.999999999998158
+          ],
+          "mass_100kpc_Msun": 9999999999983.967,
+          "beta0_per_kpc": 1.0000000000042415e-05,
+          "rs_kpc": null,
+          "success": true,
+          "calibration_score": 776.2028222997458,
+          "at_bounds": [
+            true,
+            true
+          ],
+          "max_resolution_change_kms_or_surface_units": 2.4904969819772305e-05
+        },
+        "well": {
+          "log_parameters": [
+            11.852717796514558,
+            0.3656782057127181,
+            -0.29999999999999993
+          ],
+          "mass_100kpc_Msun": 712389970445.8519,
+          "beta0_per_kpc": 2.321016381709732,
+          "rs_kpc": 0.5011872336272724,
+          "success": true,
+          "calibration_score": 0.34475491605848285,
+          "at_bounds": [
+            false,
+            false,
+            true
+          ],
+          "max_resolution_change_kms_or_surface_units": 0.00039906722756199997
+        }
+      },
+      "scores": {
+        "baryons": {
+          "radial_calibration_RMSE_kms": 56.40164721116437,
+          "radial_outer_RMSE_kms": 68.33588687181962,
+          "radial_all_RMSE_kms": 62.34015306211458,
+          "vertical_RMSE_surface_units": 19.03612864904833,
+          "vertical_diagonal_score": 60.42786459389926,
+          "vertical_n": 43
+        },
+        "sparc_transfer": {
+          "radial_calibration_RMSE_kms": 3.3377306225920687,
+          "radial_outer_RMSE_kms": 10.381751948686157,
+          "radial_all_RMSE_kms": 7.5443649895183285,
+          "vertical_RMSE_surface_units": 16.56021287128792,
+          "vertical_diagonal_score": 104.76379507411549,
+          "vertical_n": 43
+        },
+        "capture_uniform": {
+          "radial_calibration_RMSE_kms": 42.412703505937635,
+          "radial_outer_RMSE_kms": 24.33839720820708,
+          "radial_all_RMSE_kms": 35.03351207269519,
+          "vertical_RMSE_surface_units": 18.28849091314833,
+          "vertical_diagonal_score": 59.824296804571375,
+          "vertical_n": 43
+        },
+        "capture_well": {
+          "radial_calibration_RMSE_kms": 0.8961141839243281,
+          "radial_outer_RMSE_kms": 12.078666112659672,
+          "radial_all_RMSE_kms": 8.338489645696356,
+          "vertical_RMSE_surface_units": 17.196784563453278,
+          "vertical_diagonal_score": 114.02990293047358,
+          "vertical_n": 43
+        }
+      }
+    }
+  },
+  "checks": {
+    "transparent_mass_half_ratio": 0.125003617436686,
+    "capture_energy_relative_error": 2.103642482431667e-08,
+    "redshift_energy_fraction_error": 0.0,
+    "alpha_degeneracy_prediction_error": 1.0339757656912846e-25
+  },
+  "gas_numerics": 0.001942588263569076,
+  "software": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "galpy": "1.11.1"
+  }
+}
