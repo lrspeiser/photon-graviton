@@ -1,5 +1,7 @@
 # Environmental time and companion-energy manuscript
 
+**Milky Way post-draft update:** [all-direction deposition and radial/vertical tests](../../research_work/results/milky-way-capture/report.md) adds published-data provenance, a capture-geometry control and a paired-force research program. It is not yet incorporated into the versioned v0.4 PDF and does not establish a fitted companion halo.
+
 Current working draft: **v0.4, 9 September 2026**. This is an incomplete theoretical framework with a reproduced observational calibration, not a validated replacement cosmology.
 
 **Latest post-draft research:** [current electromagnetic formulas](../../research_plan/electromagnetic-transfer-specification.md), [all-band audit and modifications](../../research_work/results/electromagnetic-audit/report.md), and [coverage gaps](../../research_work/results/electromagnetic-audit/coverage.md). These include an exact prescribed time-field candidate and its no-loss-companion conflict. They are not yet incorporated into the v0.4 PDF. The versioned manuscript/PDF are preserved; use the linked specification for current branch status.
