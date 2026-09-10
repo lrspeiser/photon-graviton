@@ -12,7 +12,7 @@
   },
   "split": {"algorithm": "SHA256 of cepheid-common-frame-v1: followed by decimal Gaia source_id; first eight hex digits modulo 100", "train": [0, 59], "validation": [60, 79], "test": [80, 99]},
   "eligibility": "Existing flag_measurement_candidate and exactly FUNDAMENTAL with positive pf or FIRST_OVERTONE with positive p1_o. MULTI deferred. Process velocities only for train.",
-  "frame": {"R_sun_kpc": 8.2, "z_sun_kpc": 0.0208, "v_sun_astropy_xyz_kms": [11.1, 248.0, 7.25]},
+  "frame": {"R_sun_kpc": 8.2, "galcen_distance_kpc": 8.2, "z_sun_kpc": 0.0208, "v_sun_astropy_xyz_kms": [11.1, 248.0, 7.25], "implementation_correction": "After first training diagnostic, match archived giant code exactly by treating 8.2 kpc as Astropy galcen_distance, not cylindrical solar radius. The galcen_distance field takes precedence; physical cylindrical radius is sqrt(8.2^2-0.0208^2). Original protocol remains at commit f04e0fe. This corrects a 0.0264 pc convention difference, not a fit."},
   "selection": {"R_kpc": [6, 18], "abs_phi_deg_max": 30, "abs_z_kpc_max": 0.5, "abs_vz_kms_max": 100, "note": "Galactocentric wedge around Sun azimuth. No exact replication of authors' sky exclusions is claimed."},
   "bins": {"edges_kpc": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18], "minimum_count_for_proxy": 5},
   "velocity_proxy": {"formula_status": "Known simplified axisymmetric Jeans estimator, not a new physical law", "R_density_kpc": 4, "R_sigma_kpc": 27.3, "fit_parameters": false, "measurement_variance": "First-order propagation of pmra/pmdec covariance, combined radial-velocity error and independent 7 percent distance scenario; neglect sky-position error and distance-proper-motion covariance."},

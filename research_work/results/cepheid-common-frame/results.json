@@ -1,0 +1,77 @@
+{
+  "parent_role_counts": {
+    "train": 7972,
+    "validation": 2575,
+    "test": 2530
+  },
+  "measurement_mode_eligible_role_counts": {
+    "train": 1389,
+    "test": 443,
+    "validation": 433
+  },
+  "selected_training_stars": 542,
+  "selected_modes": {
+    "FUNDAMENTAL": 348,
+    "FIRST_OVERTONE": 194
+  },
+  "selected_distance_percentiles_kpc": [
+    0.2565817731785632,
+    1.8738398249189492,
+    3.4145298362167704,
+    5.734274627929799,
+    10.799916904460883
+  ],
+  "exact_coordinate_frame_diagnostics": {
+    "Feng": {
+      "median_delta_R_kpc": 0.07235060650142167,
+      "median_delta_vphi_kms": 2.1185064855045113,
+      "delta_vphi_percentiles_kms": [
+        1.3253620233507206,
+        1.9864322398488934,
+        2.1185064855045113,
+        2.18819075346148,
+        2.395014788774347
+      ],
+      "note": "Exact coordinate transform of same selected training stars; not a circular-speed correction."
+    },
+    "Eilers": {
+      "median_delta_R_kpc": -0.07515445691254996,
+      "median_delta_vphi_kms": -2.11663451336031,
+      "delta_vphi_percentiles_kms": [
+        -2.422400087471914,
+        -2.1879865660903612,
+        -2.11663451336031,
+        -1.9821784027882836,
+        -1.2796594930107403
+      ],
+      "note": "Exact coordinate transform of same selected training stars; not a circular-speed correction."
+    }
+  },
+  "training_proxy_scores": {
+    "ordinary": {
+      "bins": 12,
+      "rms_kms": 75.23610897086017,
+      "bias_kms": -74.14937073321543
+    },
+    "completion": {
+      "bins": 12,
+      "rms_kms": 18.792085091038476,
+      "bias_kms": -17.831151044178124
+    }
+  },
+  "max_coarse_refined_bin_change_kms": {
+    "ordinary": 0.007689253915856398,
+    "completion": 0.00986468848509503
+  },
+  "held_out_outcomes_processed": false,
+  "new_physics_parameters_fitted": false,
+  "formula_status": "Known empirical distance calibration, known coordinate transformations and approximate Jeans equation; frozen hypothetical/empirical additional field",
+  "limitations": [
+    "Random star split does not isolate spatial or survey systematics.",
+    "Published aggregate rotation curves already exposed.",
+    "7 percent distance error is a sensitivity assumption; no complete covariance, extinction, metallicity or population likelihood.",
+    "Axisymmetry, density scale length and dispersion scale length imposed; vertical mixed moment omitted.",
+    "No exact original sample replication.",
+    "Training proxy discrepancies are not formal significances."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "coordinate_fixture_max_abs_errors": [
+    3.552713678800501e-15,
+    8.881784197001252e-15,
+    5.134781488891349e-16,
+    5.062616992290714e-14,
+    8.526512829121202e-14,
+    2.6645352591003757e-14
+  ],
+  "coordinate_columns": [
+    "R_kpc",
+    "phi_deg",
+    "z_kpc",
+    "vR_kms",
+    "vphi_kms",
+    "vz_kms"
+  ],
+  "monte_carlo_stars": 20,
+  "draws_per_star": 4000,
+  "max_relative_variance_difference": 0.06906410392204965,
+  "median_relative_variance_difference": 0.014563741470369984,
+  "training_only_identifier_check": true,
+  "bin_count_check": true,
+  "frozen_hashes_unchanged": true,
+  "qualification": "Monte Carlo checks the declared independent Gaussian 7-percent error scenario, not its astrophysical adequacy."
+}
