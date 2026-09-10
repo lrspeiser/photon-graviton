@@ -1,0 +1,13 @@
+# Paired duration probes before a stellar population fit
+
+Extend the first new orbit chosen in each of the nine existing radius/absolute-height cells: expansion indices 0,4,8,12,16,20,24,28,32. These are the first greedy populated-gap starts, not a random sample or an independent holdout. Their selection used the extra-potential training library, so this is not a neutral gravitational-model score.
+
+Integrate exactly those initial states under both the existing full-bar empirical extra potential and its ordinary-matter-only baseline, for 1 kpc/(km/s), about 978 Myr, with 2001 saved times. Keep all existing physical parameters and DOP853 tolerances 2e-9, 2e-11, 2e-13. Require successive-path agreement below 1e-4 kpc and 0.01 km/s and Jacobi drift/220^2 below 1e-5. No extrapolation past any field component's interpolation domain. Preserve every failed attempt and full trajectory where available. Do not label leaving the computed domain as physical escape.
+
+For the full candidate, check fine/finer extra-force differences below 1% at all saved positions, and compare the first 244 Myr with the archived short integration. Ordinary-matter components are the identical already-audited field components; their discretization uncertainty is not newly certified here.
+
+Use the same fixed radius, signed-height and bar-angle occupation bins as the prior duration audit. Report early/late total-variation distances for 244,489,978-Myr durations, with angle included and marginalized, and half-sampling checks. These are descriptive finite-window diagnostics, not stationarity proofs or p-values.
+
+For coverage, use the identical 27,606 eligible training targets excluding all 108 expansion launch stars, never validation or final-test stars. Use only pairs where both complete paths pass numerical checks and the candidate passes its extra-force check. Report all omitted pairs and limitations; this common-passing subset is a numerical diagnostic, not an unbiased stellar subsample. Compare equal-size 250-time-sample windows at the beginning, around the middle, and end of the 978-Myr integration; compare first-quarter versus complete histories at equal saved-state counts as well as at full resolution. Keep the 0.5-kpc and 50-km/s diagnostic thresholds fixed. No fitted orbital weights, likelihood, source-physics claim or gravity ranking follows from coverage.
+
+Duration probes that fail a numerical check remain a numerical problem. Low or varying coverage requires better population/phase representation before the real measurement-error/selection-aware stellar test. Redshift, clocks, physical stress-energy, capture/support, lensing and the deferred photon supply remain separate requirements of the full objective.
