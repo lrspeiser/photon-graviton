@@ -1,0 +1,136 @@
+{
+  "source_n": 10737,
+  "eligible_n": 7375,
+  "excluded_n": 3362,
+  "calibrators": 73,
+  "feature_summaries": {
+    "x": {
+      "calibrator_min": -0.9230978161229493,
+      "calibrator_max": 0.3656995683483779,
+      "calibrator_percentiles_5_50_95": [
+        -0.7285838175348914,
+        -0.11994632506936131,
+        0.17553643889238496
+      ],
+      "parent_percentiles_5_50_95": [
+        -0.4741970214280835,
+        -0.06537493514309345,
+        0.20308772167485598
+      ],
+      "parent_outside_calibrator_range": 23
+    },
+    "m": {
+      "calibrator_min": 7.14,
+      "calibrator_max": 16.4,
+      "calibrator_percentiles_5_50_95": [
+        7.714,
+        10.899999999999999,
+        14.532
+      ],
+      "parent_percentiles_5_50_95": [
+        11.67,
+        14.02,
+        16.310000000000002
+      ],
+      "parent_outside_calibrator_range": 323
+    },
+    "inclination": {
+      "calibrator_min": 45.0,
+      "calibrator_max": 90.0,
+      "calibrator_percentiles_5_50_95": [
+        52.0,
+        68.0,
+        89.0
+      ],
+      "parent_percentiles_5_50_95": [
+        52.0,
+        74.0,
+        89.0
+      ],
+      "parent_outside_calibrator_range": 0
+    }
+  },
+  "parent_inside_hull": {
+    "2": 588,
+    "3": 452
+  },
+  "magnitude_bins": [
+    {
+      "lower_mag": 0,
+      "upper_mag": 2,
+      "parent_n": 1,
+      "calibrator_n": 0
+    },
+    {
+      "lower_mag": 2,
+      "upper_mag": 4,
+      "parent_n": 0,
+      "calibrator_n": 0
+    },
+    {
+      "lower_mag": 4,
+      "upper_mag": 6,
+      "parent_n": 1,
+      "calibrator_n": 0
+    },
+    {
+      "lower_mag": 6,
+      "upper_mag": 8,
+      "parent_n": 9,
+      "calibrator_n": 6
+    },
+    {
+      "lower_mag": 8,
+      "upper_mag": 10,
+      "parent_n": 58,
+      "calibrator_n": 16
+    },
+    {
+      "lower_mag": 10,
+      "upper_mag": 12,
+      "parent_n": 449,
+      "calibrator_n": 31
+    },
+    {
+      "lower_mag": 12,
+      "upper_mag": 14,
+      "parent_n": 3108,
+      "calibrator_n": 12
+    },
+    {
+      "lower_mag": 14,
+      "upper_mag": 16,
+      "parent_n": 3181,
+      "calibrator_n": 7
+    },
+    {
+      "lower_mag": 16,
+      "upper_mag": 18,
+      "parent_n": 564,
+      "calibrator_n": 1
+    },
+    {
+      "lower_mag": 18,
+      "upper_mag": 20,
+      "parent_n": 4,
+      "calibrator_n": 0
+    },
+    {
+      "lower_mag": 20,
+      "upper_mag": 22,
+      "parent_n": 0,
+      "calibrator_n": 0
+    },
+    {
+      "lower_mag": 22,
+      "upper_mag": 24,
+      "parent_n": 0,
+      "calibrator_n": 0
+    }
+  ],
+  "hashes": {
+    "research_work\\results\\dense-distance-source-audit\\observer-features.csv": "aa4d9df803b95f9df93adfaa006a0b1e92fd745889c1e55b06dc546ecde3cdf2",
+    "research_work\\results\\indicator-tf-calibration\\cross-validation.csv": "b8fbcf00202dafaaf5d6d1cac279b2574ab3fd4f46dfce7971c410792037e89a"
+  },
+  "status": "Empirical feature coverage, not physical completeness, selection probability or independent validation"
+}
