@@ -1,0 +1,75 @@
+{
+  "classification": "Dimensionless field interaction demonstration; not astrophysical conversion, deposition or redshift validation",
+  "parameters": {
+    "box_length": 100.0,
+    "coupling_g": 0.3,
+    "scalar_mass": 0.2,
+    "final_time": 45.0,
+    "pulse_width": 2.0,
+    "initial_centers": [
+      -15,
+      15
+    ]
+  },
+  "Z": "exp(g phi), positive completion with same linear phi F^2 vertex",
+  "cases": [
+    {
+      "n": 512,
+      "dt": 0.02,
+      "counterpropagating_pulses": false,
+      "initial_energy": 0.4431134627263791,
+      "final_electromagnetic_energy": 0.44311346254464373,
+      "final_scalar_energy": 3.332027036071724e-30,
+      "final_scalar_fraction": 7.51957978340468e-30,
+      "max_total_energy_relative_drift": 4.101328165972973e-10,
+      "initial_momentum": 0.4431134627263791,
+      "max_momentum_drift_over_initial_energy": 4.1013276345460087e-10,
+      "max_abs_final_scalar_amplitude": 8.102611555335847e-17,
+      "maximum_scalar_fraction_during_run": 7.51957978340468e-30
+    },
+    {
+      "n": 1024,
+      "dt": 0.01,
+      "counterpropagating_pulses": false,
+      "initial_energy": 0.4431134627263791,
+      "final_electromagnetic_energy": 0.44311346272069946,
+      "final_scalar_energy": 3.262711974750697e-29,
+      "final_scalar_fraction": 7.363152441083492e-29,
+      "max_total_energy_relative_drift": 1.2817524819297432e-11,
+      "initial_momentum": 0.4431134627263791,
+      "max_momentum_drift_over_initial_energy": 1.2817537529283534e-11,
+      "max_abs_final_scalar_amplitude": 1.1000782615240141e-16,
+      "maximum_scalar_fraction_during_run": 7.363152441083492e-29
+    },
+    {
+      "n": 512,
+      "dt": 0.02,
+      "counterpropagating_pulses": true,
+      "initial_energy": 0.8862269254527582,
+      "final_electromagnetic_energy": 0.8858686263196497,
+      "final_scalar_energy": 0.0003582987680203706,
+      "final_scalar_fraction": 0.000404296865430174,
+      "max_total_energy_relative_drift": 4.119578012051761e-10,
+      "initial_momentum": -0.0,
+      "max_momentum_drift_over_initial_energy": 6.850990408373096e-16,
+      "max_abs_final_scalar_amplitude": 0.012733911208606641,
+      "maximum_scalar_fraction_during_run": 0.010930821669619542
+    },
+    {
+      "n": 1024,
+      "dt": 0.01,
+      "counterpropagating_pulses": true,
+      "initial_energy": 0.8862269254527582,
+      "final_electromagnetic_energy": 0.8858686266730604,
+      "final_scalar_energy": 0.00035829876828785375,
+      "final_scalar_fraction": 0.0004042968657319964,
+      "max_total_energy_relative_drift": 1.2874701305065628e-11,
+      "initial_momentum": -0.0,
+      "max_momentum_drift_over_initial_energy": 8.808416239336837e-16,
+      "max_abs_final_scalar_amplitude": 0.012735019271274958,
+      "maximum_scalar_fraction_during_run": 0.010930821582751249
+    }
+  ],
+  "collision_fraction_relative_refinement_change": 7.465366103076576e-10,
+  "identity_of_phi_with_lens_massive_source_established": false
+}
