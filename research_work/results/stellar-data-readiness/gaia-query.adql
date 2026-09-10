@@ -1,0 +1,10 @@
+SELECT g.source_id, g.ra, g.dec, g.ra_error, g.dec_error,
+ g.parallax, g.parallax_error, g.pmra, g.pmra_error, g.pmdec, g.pmdec_error,
+ g.ra_dec_corr, g.ra_parallax_corr, g.ra_pmra_corr, g.ra_pmdec_corr,
+ g.dec_parallax_corr, g.dec_pmra_corr, g.dec_pmdec_corr,
+ g.parallax_pmra_corr, g.parallax_pmdec_corr, g.pmra_pmdec_corr,
+ g.ruwe, g.visibility_periods_used, g.astrometric_params_solved,
+ g.duplicated_source, g.phot_g_mean_mag, g.bp_rp,
+ g.radial_velocity, g.radial_velocity_error, g.non_single_star
+ FROM gaiadr3.gaia_source AS g
+ JOIN TAP_UPLOAD.targets AS t ON g.source_id=t.source_id
