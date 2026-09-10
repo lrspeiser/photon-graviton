@@ -1,0 +1,126 @@
+{
+  "calibration": {
+    "lambda_mass": 1.645362158609144,
+    "log10_mass_shift": 0.2162615048236947,
+    "fit_role": "training",
+    "objective_value": 0.024301437054837737,
+    "hashes": {
+      "wave-lens-training\\parameter-grid\\cell-4\\predictions.json": "c2e73cfc9f71ecd07b63dce8407663b9f51f572bb1b7ffcda975fc61c8df32e6",
+      "lens-photometric-audit\\normalization-sensitivity-updated-profile.json": "1a988187fb7b25ff113c3b24b76c9253657e06c63d6c0ba3ab970d8c0aef0b66",
+      "lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+      "stellar-mass-degeneracy\\protocol.json": "d61afa3cc47c6fdd563246481e3904d57fbf12e7214b8194c159a39c3aab5c58"
+    }
+  },
+  "scores": {
+    "training": {
+      "ordinary_fixed_mass": {
+        "score": 0.14085348846532203,
+        "sigma_rmse_km_s": 62.77106831565899,
+        "theta_rmse_arcsec": 0.46275909782825153,
+        "median_sigma_ratio": 0.7899261190337669,
+        "median_theta_ratio": 0.6633668862282343
+      },
+      "ordinary_shared_mass": {
+        "score": 0.024301437054837737,
+        "sigma_rmse_km_s": 31.037773272561733,
+        "theta_rmse_arcsec": 0.22784106730740789,
+        "median_sigma_ratio": 1.013251432702761,
+        "median_theta_ratio": 1.0077178826878845
+      },
+      "frozen_wave": {
+        "score": 0.014670067123529161,
+        "sigma_rmse_km_s": 31.990577881682597,
+        "theta_rmse_arcsec": 0.14401337594196817,
+        "median_sigma_ratio": 0.9599518185507196,
+        "median_theta_ratio": 1.0441891304445474
+      }
+    },
+    "validation": {
+      "ordinary_fixed_mass": {
+        "score": 0.32262793727821304,
+        "sigma_rmse_km_s": 92.11833318113304,
+        "theta_rmse_arcsec": 0.6436679287509168,
+        "median_sigma_ratio": 0.667629500955648,
+        "median_theta_ratio": 0.6203543054101377
+      },
+      "ordinary_shared_mass": {
+        "score": 0.06286843238384253,
+        "sigma_rmse_km_s": 45.846910292643635,
+        "theta_rmse_arcsec": 0.354096438900009,
+        "median_sigma_ratio": 0.856379517093829,
+        "median_theta_ratio": 0.9591975535442325
+      },
+      "frozen_wave": {
+        "score": 0.04494854808073846,
+        "sigma_rmse_km_s": 38.224549824176414,
+        "theta_rmse_arcsec": 0.2698692959720389,
+        "median_sigma_ratio": 0.8903871832732075,
+        "median_theta_ratio": 1.0451602737957726
+      }
+    }
+  },
+  "objective_evaluations": [
+    {
+      "lambda": 0.9912822588269565,
+      "score": 0.14523305841394774
+    },
+    {
+      "lambda": 1.5131916128258356,
+      "score": 0.027328680620913814
+    },
+    {
+      "lambda": 1.9652810333301467,
+      "score": 0.03733557285597672
+    },
+    {
+      "lambda": 1.654683140532928,
+      "score": 0.024314995545769415
+    },
+    {
+      "lambda": 1.647393882273625,
+      "score": 0.024302084595409376
+    },
+    {
+      "lambda": 1.6454451144831281,
+      "score": 0.02430143813564318
+    },
+    {
+      "lambda": 1.6453611176162473,
+      "score": 0.024301437055011497
+    },
+    {
+      "lambda": 1.645362158609144,
+      "score": 0.024301437054837737
+    },
+    {
+      "lambda": 1.645362176246244,
+      "score": 0.024301437054838632
+    },
+    {
+      "lambda": 1.6453620440123984,
+      "score": 0.024301437054840884
+    },
+    {
+      "lambda": 1.6453621148370812,
+      "score": 0.024301437054838528
+    },
+    {
+      "lambda": 1.645362140972044,
+      "score": 0.02430143705483867
+    }
+  ],
+  "checks": {
+    "projected_mass_max_relative_error": 3.7969627442180354e-14,
+    "original_angle_repeat_max_relative_error": 4.67847982577041e-13,
+    "dense_scan_points": 121,
+    "dense_scan_best_score": 0.024306346576190373
+  },
+  "input_sha256": {
+    "wave-lens-training\\parameter-grid\\cell-4\\predictions.json": "c2e73cfc9f71ecd07b63dce8407663b9f51f572bb1b7ffcda975fc61c8df32e6",
+    "wave-lens-validation\\predictions.json": "82a957647533dbacd3f0f15de87cd9635beb177c3e9cdad4e371c60d62efe626",
+    "lens-photometric-audit\\normalization-sensitivity-updated-profile.json": "1a988187fb7b25ff113c3b24b76c9253657e06c63d6c0ba3ab970d8c0aef0b66",
+    "wave-lens-validation\\mass-inputs.json": "9348f55cdb380a806e4b2c1ddb08d2f92e104ee763010f10a776d9600867993b",
+    "lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "stellar-mass-degeneracy\\protocol.json": "d61afa3cc47c6fdd563246481e3904d57fbf12e7214b8194c159a39c3aab5c58"
+  }
+}

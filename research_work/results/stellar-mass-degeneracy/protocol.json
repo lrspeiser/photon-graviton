@@ -1,0 +1,11 @@
+{
+  "status": "Written before this benchmark fit; training and reused validation outcomes already exposed",
+  "candidate": "Ordinary Hernquist stellar mass multiplied by one positive shared factor lambda; no wave source",
+  "fit_role": "training",
+  "lambda_range": [0.5, 3.0],
+  "objective": "Same equal-weight mean squared logarithmic dispersion and angle residual score as the wave grid",
+  "validation": "Freeze training factor before calculating reused validation predictions",
+  "test_role_access": false,
+  "interpretation": "A degeneracy benchmark, not an independently allowed stellar population correction or a full IMF prior",
+  "preserved": "All input stellar sizes, distances, aperture/orbit assumptions and measured quantities remain as in the wave pilot"
+}
