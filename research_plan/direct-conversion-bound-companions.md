@@ -1,5 +1,7 @@
 # Active branch: Direct Photon Conversion and Bound Companion Fields
 
+**Status update, 9 September 2026:** retained as baseline C0 in the [new electromagnetic specification](electromagnetic-transfer-specification.md). The user has reopened time-dependent propagation as an alternative and requested joint all-band tests. The original exclusive selection recorded below is historical. The [new audit](../research_work/results/electromagnetic-audit/report.md) retains the successful calibration and records timing, thermal and companion-law limitations; no complete mechanism is adopted.
+
 9 September 2026. Selected after the user's concern about the time-sign reversal and screening. This supersedes additional environmental clock factors and conversion screening as the active starting mechanism. Those earlier hypotheses and their tests remain available as historical alternatives, not ingredients silently retained in this branch.
 
 ## Physical proposal

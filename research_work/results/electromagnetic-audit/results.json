@@ -1,0 +1,488 @@
+{
+  "status": "Scoped joint audit; no completed all-observation theory",
+  "alpha_per_mpc": 0.0002488993286382367,
+  "redshift": {
+    "statistics": [
+      {
+        "sample": "SBF_group",
+        "split": "train",
+        "n": 104,
+        "rms_km_s": 457.57748763316135,
+        "mean_km_s": -28.30853672813347
+      },
+      {
+        "sample": "SBF_group",
+        "split": "validation",
+        "n": 35,
+        "rms_km_s": 437.06521235990186,
+        "mean_km_s": 97.98976510045937
+      },
+      {
+        "sample": "SBF_group",
+        "split": "test",
+        "n": 25,
+        "rms_km_s": 415.41397827858333,
+        "mean_km_s": 74.11981106373497
+      },
+      {
+        "sample": "maser_galaxy",
+        "split": "exposed_external",
+        "n": 6,
+        "rms_km_s": 384.27538550779775,
+        "mean_km_s": 22.87812102772664
+      }
+    ],
+    "interpretation": "Fixed exposed-data prediction check; motion and covariance unresolved; no new parity claim"
+  },
+  "timing": {
+    "scores": [
+      {
+        "sample": "all",
+        "n": 35,
+        "extra_fractional_error": 0.0,
+        "chi2_b0": 150.56925988953117,
+        "chi2_b1": 26.94852459529445,
+        "b_fit": 0.966442026319702,
+        "chi2_fit": 26.8464247855941,
+        "formal_delta_chi2_one_interval": [
+          0.8640098765134282,
+          1.0728687904362255
+        ]
+      },
+      {
+        "sample": "all",
+        "n": 35,
+        "extra_fractional_error": 0.1,
+        "chi2_b0": 83.48793547465252,
+        "chi2_b1": 13.12584935559943,
+        "b_fit": 0.9923121059270555,
+        "chi2_fit": 13.122945080883236,
+        "formal_delta_chi2_one_interval": [
+          0.8534017693464755,
+          1.1385618779414617
+        ]
+      },
+      {
+        "sample": "all",
+        "n": 35,
+        "extra_fractional_error": 0.2,
+        "chi2_b0": 39.62712515536755,
+        "chi2_b1": 5.76801045368923,
+        "b_fit": 1.0177438144564115,
+        "chi2_fit": 5.760922490246277,
+        "formal_delta_chi2_one_interval": [
+          0.8139651055698931,
+          1.2376202294122993
+        ]
+      },
+      {
+        "sample": "low",
+        "n": 22,
+        "extra_fractional_error": 0.0,
+        "chi2_b0": 26.882528337314536,
+        "chi2_b1": 23.29441298343498,
+        "b_fit": 3.2063039061345235,
+        "chi2_fit": 20.206657505379162,
+        "formal_delta_chi2_one_interval": [
+          1.9369508626793672,
+          4.513827862752679
+        ]
+      },
+      {
+        "sample": "low",
+        "n": 22,
+        "extra_fractional_error": 0.1,
+        "chi2_b0": 12.357575132155738,
+        "chi2_b1": 11.008690985813644,
+        "b_fit": 2.8951986364093645,
+        "chi2_fit": 10.037906629704688,
+        "formal_delta_chi2_one_interval": [
+          0.972319802527736,
+          4.907869154766229
+        ]
+      },
+      {
+        "sample": "low",
+        "n": 22,
+        "extra_fractional_error": 0.2,
+        "chi2_b0": 5.157816024746333,
+        "chi2_b1": 4.6658571049334,
+        "b_fit": 2.7427274951912666,
+        "chi2_fit": 4.3455045752750925,
+        "formal_delta_chi2_one_interval": [
+          -0.29002416712940793,
+          6.003662397395514
+        ]
+      },
+      {
+        "sample": "high",
+        "n": 13,
+        "extra_fractional_error": 0.0,
+        "chi2_b0": 123.68673155221666,
+        "chi2_b1": 3.654111611859464,
+        "b_fit": 0.9505621047941402,
+        "chi2_fit": 3.431631836673991,
+        "formal_delta_chi2_one_interval": [
+          0.8486314462525253,
+          1.0564626078660588
+        ]
+      },
+      {
+        "sample": "high",
+        "n": 13,
+        "extra_fractional_error": 0.1,
+        "chi2_b0": 71.13036034249679,
+        "chi2_b1": 2.1171583697857836,
+        "b_fit": 0.9816370122596376,
+        "chi2_fit": 2.100559963539202,
+        "formal_delta_chi2_one_interval": [
+          0.8431175305658061,
+          1.1274789527573144
+        ]
+      },
+      {
+        "sample": "high",
+        "n": 13,
+        "extra_fractional_error": 0.2,
+        "chi2_b0": 34.46930913062123,
+        "chi2_b1": 1.102153348755829,
+        "b_fit": 1.009444339278504,
+        "chi2_fit": 1.1001435250041673,
+        "formal_delta_chi2_one_interval": [
+          0.8060659150940054,
+          1.228907075295169
+        ]
+      }
+    ],
+    "caveat": "Published spectral-age summaries with source-template assumptions; no raw-spectrum refit, shared-template covariance, selection calibration or global significance. Extra-error rows are sensitivity examples only.",
+    "source_evolution_degeneracy": "Only b_propagation + e_intrinsic is identifiable in this chosen family; b=0,e=1 gives the same timing predictions as b=1,e=0, but requires independent source physics.",
+    "DES_status": "Author width summaries not independently refitted; the existing observer-time inference pilot failed its numerical gate and is not a validation result."
+  },
+  "radio": {
+    "models": [
+      {
+        "p": -1,
+        "calibrated_A": 0.4697213544801387,
+        "predicted_low_z": 0.8858010000000001,
+        "predicted_high_z": 0.6009422749039339,
+        "observed_high_z": 0.8858052,
+        "predicted_offset_km_s": -45284.999519724486,
+        "offset_residual_in_quoted_sigma": -116117.07569160125
+      },
+      {
+        "p": 0,
+        "calibrated_A": 0.634352664328226,
+        "predicted_low_z": 0.8858010000000001,
+        "predicted_high_z": 0.8858010000000001,
+        "observed_high_z": 0.8858052,
+        "predicted_offset_km_s": 0.0,
+        "offset_residual_in_quoted_sigma": -1.6923076923076923
+      },
+      {
+        "p": 1,
+        "calibrated_A": 0.8858010000000001,
+        "predicted_low_z": 0.8858010000000001,
+        "predicted_high_z": 1.1084583695601617,
+        "observed_high_z": 0.8858052,
+        "predicted_offset_km_s": 35396.62992662283,
+        "offset_residual_in_quoted_sigma": 90758.89724775084
+      },
+      {
+        "p": 2,
+        "calibrated_A": 1.2781227058005,
+        "predicted_low_z": 0.8858010000000001,
+        "predicted_high_z": 1.2367044887149183,
+        "observed_high_z": 0.8858052,
+        "predicted_offset_km_s": 55784.36929592286,
+        "offset_residual_in_quoted_sigma": 143035.15204082782
+      },
+      {
+        "p": 3,
+        "calibrated_A": 1.9021237178141925,
+        "predicted_low_z": 0.8858010000000001,
+        "predicted_high_z": 1.3009288884356667,
+        "observed_high_z": 0.8858052,
+        "predicted_offset_km_s": 65994.34938176312,
+        "offset_residual_in_quoted_sigma": 169214.58815836697
+      }
+    ],
+    "fitted_p": 1.5477240898376985e-05,
+    "formal_one_sigma_p_interval": [
+      6.331590794543886e-06,
+      2.462291341217826e-05
+    ],
+    "achromatic_quoted_sigma_residual": -1.6923076923076923,
+    "p_caveat": "Two-centroid conditional comparison with the lower line anchored; covariance and source systematics not fully supplied. Not a global p measurement or proof of photon conversion. A not independently inferred from distance.",
+    "jump_noise": [
+      {
+        "fraction_per_jump": 0.001,
+        "mean_number": 634.352664328226,
+        "predicted_rms_fractional_width_as_km_s": 7551.877988153517
+      },
+      {
+        "fraction_per_jump": 1e-06,
+        "mean_number": 634352.664328226,
+        "predicted_rms_fractional_width_as_km_s": 238.77351675626747
+      },
+      {
+        "fraction_per_jump": 1e-09,
+        "mean_number": 634352664.328226,
+        "predicted_rms_fractional_width_as_km_s": 7.550680382530585
+      },
+      {
+        "fraction_per_jump": 1e-12,
+        "mean_number": 634352664328.2261,
+        "predicted_rms_fractional_width_as_km_s": 0.23877347888965222
+      }
+    ],
+    "conditional_max_fraction_per_independent_jump": 6.06752989151798e-10,
+    "linewidth_caveat": "All observed Gaussian width generously assigned to independent multiplicative jumps; ordinary gas broadening would consume some allowance. Bound does not apply to coherent deterministic frequency conversion.",
+    "excluded": "12.179 GHz profile mismatch; second 48 GHz centroid tied, not counted independently"
+  },
+  "thermal": {
+    "n": 43,
+    "profiles": [
+      {
+        "q": 1.0,
+        "model": "number_preserved",
+        "photon_survival": 1.0,
+        "final_energy_fraction": 1.0,
+        "amplitude": 1.0,
+        "T_color_K": 2.7250005522755463,
+        "galaxy_coefficient": -0.001772223993677628,
+        "chi2_diagonal": 45.01874219510253
+      },
+      {
+        "q": 1.0,
+        "model": "extra_photon_removal",
+        "photon_survival": 1.0,
+        "final_energy_fraction": 1.0,
+        "amplitude": 1.0,
+        "T_color_K": 2.7250005522755463,
+        "galaxy_coefficient": -0.001772223993677628,
+        "chi2_diagonal": 45.01874219510253
+      },
+      {
+        "q": 0.9923977562429157,
+        "model": "number_preserved",
+        "photon_survival": 1.0,
+        "final_energy_fraction": 0.9923977562429157,
+        "amplitude": 1.0231579402223288,
+        "T_color_K": 2.709074316845583,
+        "galaxy_coefficient": 5.056467850240148,
+        "chi2_diagonal": 252220.99267985785
+      },
+      {
+        "q": 0.9923977562429157,
+        "model": "extra_photon_removal",
+        "photon_survival": 0.9773662116942605,
+        "final_energy_fraction": 0.9699360355130227,
+        "amplitude": 1.0000000000000002,
+        "T_color_K": 2.7250005522755463,
+        "galaxy_coefficient": -0.0017722239937847835,
+        "chi2_diagonal": 45.018742195096934
+      },
+      {
+        "q": 0.99,
+        "model": "number_preserved",
+        "photon_survival": 1.0,
+        "final_energy_fraction": 0.99,
+        "amplitude": 1.0306101521283646,
+        "T_color_K": 2.704052475381716,
+        "galaxy_coefficient": 6.651089046364523,
+        "chi2_diagonal": 438288.6633648127
+      },
+      {
+        "q": 0.99,
+        "model": "extra_photon_removal",
+        "photon_survival": 0.970299,
+        "final_energy_fraction": 0.9605960100000001,
+        "amplitude": 1.0,
+        "T_color_K": 2.7250005522755463,
+        "galaxy_coefficient": -0.001772223993677628,
+        "chi2_diagonal": 45.01874219510253
+      },
+      {
+        "q": 0.5,
+        "model": "number_preserved",
+        "photon_survival": 1.0,
+        "final_energy_fraction": 0.5,
+        "amplitude": 8.0,
+        "T_color_K": 1.6053814518946041,
+        "galaxy_coefficient": 365.8902183746993,
+        "chi2_diagonal": 3170943771.3034873
+      },
+      {
+        "q": 0.5,
+        "model": "extra_photon_removal",
+        "photon_survival": 0.125,
+        "final_energy_fraction": 0.0625,
+        "amplitude": 1.0,
+        "T_color_K": 2.7250005522755463,
+        "galaxy_coefficient": -0.001772223993677628,
+        "chi2_diagonal": 45.01874219510253
+      },
+      {
+        "q": 0.45454545454545453,
+        "model": "number_preserved",
+        "photon_survival": 1.0,
+        "final_energy_fraction": 0.45454545454545453,
+        "amplitude": 10.648000000000001,
+        "T_color_K": 1.4717179357187042,
+        "galaxy_coefficient": 408.24586210377447,
+        "chi2_diagonal": 4143249444.123911
+      },
+      {
+        "q": 0.45454545454545453,
+        "model": "extra_photon_removal",
+        "photon_survival": 0.0939143501126972,
+        "final_energy_fraction": 0.04268834096031691,
+        "amplitude": 1.0,
+        "T_color_K": 2.7250005522755463,
+        "galaxy_coefficient": -0.001772223993677628,
+        "chi2_diagonal": 45.01874219510253
+      }
+    ],
+    "moment_checks": [
+      {
+        "q": 0.5,
+        "number_ratio": 0.9999999999999998,
+        "energy_ratio": 0.49999999999999994,
+        "concurrent_partial_transfer": 0.234375,
+        "concurrent_removal_energy": 0.703125
+      },
+      {
+        "q": 0.9,
+        "number_ratio": 1.0000000000000002,
+        "energy_ratio": 0.9,
+        "concurrent_partial_transfer": 0.085975,
+        "concurrent_removal_energy": 0.25792499999999996
+      },
+      {
+        "q": 0.99,
+        "number_ratio": 1.0,
+        "energy_ratio": 0.9900000000000002,
+        "concurrent_partial_transfer": 0.009850997500000014,
+        "concurrent_removal_energy": 0.02955299250000004
+      }
+    ],
+    "caveat": "Initially Planckian homogeneous fixed-volume bath only; no age/origin fitted, no full FIRAS covariance or calibration likelihood. Removal fixes this normalization by construction while changing photon count, flux and energy sink requirements."
+  },
+  "time_field": {
+    "n": 48,
+    "field": "q=1+sign*0.2*sin(pi*x)^2*f(t), c=L=1, q=1 at both endpoints",
+    "max_static_error": 1.2667566995361312e-10,
+    "evolving_stretch_range": [
+      0.982528386176233,
+      1.0187966778668127
+    ],
+    "largest_finite_event_distortion": 0.00021920810743725205,
+    "status": "Kinematic construction, not a sourced field, observed void or completed companion theory. Positive sign in this particular evolving family blueshifts; static profiles only delay."
+  },
+  "synthetic": {
+    "n_predictions": 70,
+    "maximum_drift_ODE_relative_error": 2.886579864025407e-15,
+    "maximum_flux_integral_error": 0.0,
+    "maximum_ledger_error": 0.0,
+    "illustrative_1Mpc_approaching_300km_s_total_z": -0.000751510765211072,
+    "conclusion": "Positive path transfer is compatible with total blueshift when independent motion/endpoint factors dominate; do not fit arbitrary velocities to erase residuals."
+  },
+  "local_and_multimessenger": {
+    "loss_rate_per_year": 7.631288107277117e-11,
+    "optical_clock_coupling": {
+      "assumption": "dln(alpha_fs)/dt = beta_clock * gamma; optional, not implied by universal time",
+      "conservative_gaussian_beta_abs_bound": 4.135605884137006e-08,
+      "beta_zero_residual_sigma": -0.9090909090909092,
+      "beta_one_residual_sigma": 69375345.52070108
+    },
+    "lab_clock_summary": {
+      "ordinary_prediction_residual_sigma": 0.5777784118285089,
+      "path_conversion_over_1cm": 8.066277894074041e-29,
+      "caveat": "Published corrected summary. Quadrature error is only a diagnostic. Path conversion over 1 cm cannot be substituted for the clock network's full measurement model."
+    },
+    "zero_drift_summary_residual_sigma": 0.9722222222222222,
+    "drift_caveat": "A stationary conversion law predicts zero transfer drift for fixed path; no event stretch. A time-field branch has to derive its own drift, not inherit this zero.",
+    "multimessenger": [
+      {
+        "D_mpc": 30.0,
+        "fractional_speed_mismatch_linearized": 0.0,
+        "propagation_delay_s": 0.0
+      },
+      {
+        "D_mpc": 30.0,
+        "fractional_speed_mismatch_linearized": 1e-15,
+        "propagation_delay_s": 3.0878137516301702
+      },
+      {
+        "D_mpc": 30.0,
+        "fractional_speed_mismatch_linearized": 1e-12,
+        "propagation_delay_s": 3087.81375163017
+      },
+      {
+        "D_mpc": 40.0,
+        "fractional_speed_mismatch_linearized": 0.0,
+        "propagation_delay_s": 0.0
+      },
+      {
+        "D_mpc": 40.0,
+        "fractional_speed_mismatch_linearized": 1e-15,
+        "propagation_delay_s": 4.117085002173561
+      },
+      {
+        "D_mpc": 40.0,
+        "fractional_speed_mismatch_linearized": 1e-12,
+        "propagation_delay_s": 4117.0850021735605
+      },
+      {
+        "D_mpc": 50.0,
+        "fractional_speed_mismatch_linearized": 0.0,
+        "propagation_delay_s": 0.0
+      },
+      {
+        "D_mpc": 50.0,
+        "fractional_speed_mismatch_linearized": 1e-15,
+        "propagation_delay_s": 5.146356252716951
+      },
+      {
+        "D_mpc": 50.0,
+        "fractional_speed_mismatch_linearized": 1e-12,
+        "propagation_delay_s": 5146.356252716951
+      }
+    ],
+    "observed_GW_gamma_gap": {
+      "gamma_minus_GW_seconds": 1.74,
+      "sigma_seconds": 0.05,
+      "nominal_distance_Mpc": 40.0,
+      "distance_sensitivity_Mpc": [
+        30.0,
+        40.0,
+        50.0
+      ],
+      "source": "https://arxiv.org/abs/1710.05834",
+      "note": "Published timing summary; distances are illustrative sensitivity values, not a refit of a standard siren in modified gravity."
+    },
+    "GRB090510": {
+      "source": "https://doi.org/10.1088/0004-637X/716/2/1178",
+      "photon_energy_GeV": 30.5,
+      "arrival_after_GBM_trigger_s": 0.829,
+      "limitations": "Observed photon energy and arrival delay, not known emission energy or a measured propagation delay. Do not assign the full delay to propagation or infer distance from redshift to validate this alternative."
+    },
+    "multimessenger_caveat": "Observed gaps combine emission lag and propagation. Constant equal speeds predict no propagation difference, not zero observed gap. A new companion need not be the measured GR tensor wave; equating them requires an action and source calculation."
+  },
+  "exact_time_candidate": {
+    "n": 12,
+    "maximum_ODE_vs_integrating_factor_error": 3.552713678800501e-15,
+    "time_origin_domain_past_years_for_peak_kappa": 6551973834.184103,
+    "formula": "q(s,t)=1/[1+c*kappa(s)*(t-t_ref)]; q=1 at endpoints where kappa=0",
+    "ten_day_interval_at_100Mly_days": 10.07660480597886,
+    "construction": "Known integrating-factor and lapse geometry, proposed inverse-affine time dependence; originality unverified. Chosen to enforce desired stretch, not derived from sources.",
+    "failures": [
+      "Same-metric massless companions also redshift: no-loss transport does not follow.",
+      "Prescribed pure-lapse, fixed-flat-space geometry lacks the required positive-energy GR source; modified gravity or spatial geometry must be derived.",
+      "Spatial time gradients exert forces on matter in a universal coupling.",
+      "Positive denominator has a finite past domain; cannot extrapolate this profile to an arbitrarily old universe.",
+      "No measured environmental kappa map, source evolution, actual photon-companion energy exchange, stable storage or full background solution."
+    ],
+    "amendment_sha256": "51683386d68af8e4b9d93d81ee91787a71fed5ad1a954779176dfcddc3649fea"
+  }
+}

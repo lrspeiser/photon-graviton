@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Latest checkpoint:** [electromagnetic audit](electromagnetic-audit/report.md), [current formulas](../../research_plan/electromagnetic-transfer-specification.md), [coverage](electromagnetic-audit/coverage.md). Both direct energy conversion and altered-time causes are in scope. New measured-summary and synthetic tests are separately labeled, and a prescribed inverse-affine lapse gives matching energy and event stretch while exposing source and companion-law failures. Historical checkpoints below are retained, not assertions that the theory is complete.
+
 Active direction: [cumulative-time and companion research](../../research_plan/active-goal.md). The user proposes a new property of propagation that accumulates light stretching, especially in low-gravity regions, with all photon energy lost at conversion entering the companion sector. Ordinary gravitational endpoint time dilation is not the proposed cause. Published distances remain fixed, local redshift is not excluded, and conversion-first alternatives remain recorded.
 
 Current synthesis: [academic working draft v0.1](../../papers/cumulative-time-companions/manuscript.md). It separates postulates, conditional derivations, numerical evidence and missing observational validation, and retains all 32 research areas.

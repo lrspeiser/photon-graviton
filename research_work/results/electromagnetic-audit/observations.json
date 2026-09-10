@@ -1,0 +1,41 @@
+{
+  "radio_methanol": {
+    "source": "https://arxiv.org/abs/1412.7757",
+    "table": "Table 1 and section 3; PDF page 3, table text checked 2026-09-09",
+    "absorber": "PKS1830-211 southwest sightline, heliocentric absorber redshift",
+    "independent_centroid_groups": [
+      {"frequency_GHz": 48.3724558, "frequency_error_GHz": 0.0000007, "z": 0.8858010, "z_error": 0.0000014},
+      {"frequency_GHz": 60.531489, "frequency_error_GHz": 0.000010, "z": 0.8858052, "z_error": 0.0000019}
+    ],
+    "tied_not_independent": {"frequency_GHz": 48.376892, "z": 0.8858010},
+    "excluded_profile_mismatch_frequency_GHz": 12.178597,
+    "high_minus_low_velocity_offset_km_s": 0.66,
+    "offset_sigma_km_s": 0.39,
+    "FWHM_km_s": 13.85,
+    "FWHM_sigma_km_s": 0.39,
+    "limitations": "Published Gaussian profile summaries, not raw visibilities; tied widths and partial covariance; possible gas, covering-factor and calibration effects. Offset is not a detection of chromatic propagation. No distance is supplied for an independent alpha fit."
+  },
+  "laboratory_gradient": {
+    "source": "https://doi.org/10.1038/s41467-023-40629-8",
+    "title": "A lab-based test of the gravitational redshift with a miniature clock network",
+    "frequency_gradient_per_cm": -1.24e-18,
+    "stat_error_per_cm": 0.07e-18,
+    "sys_error_per_cm": 0.25e-18,
+    "ordinary_prediction_per_cm": -1.09e-18,
+    "convention": "Published redshift comparison gradient, not a light flight-time measurement",
+    "limitations": "Published corrected summary. Quadrature error is only a diagnostic. Path conversion over 1 cm cannot be substituted for the clock network's full measurement model."
+  },
+  "GRB090510": {
+    "source": "https://doi.org/10.1088/0004-637X/716/2/1178",
+    "photon_energy_GeV": 30.5,
+    "arrival_after_GBM_trigger_s": 0.829,
+    "limitations": "Observed photon energy and arrival delay, not known emission energy or a measured propagation delay. Do not assign the full delay to propagation or infer distance from redshift to validate this alternative."
+  },
+  "redshift_drift": {
+    "source": "https://arxiv.org/abs/2603.02318",
+    "velocity_drift_m_s_year": -3.5,
+    "sigma_m_s_year": 3.6,
+    "baseline_years_approx": 2,
+    "limitations": "Published quasar absorption-feature summary consistent with zero; not a detection of cosmological drift or light-speed change."
+  }
+}

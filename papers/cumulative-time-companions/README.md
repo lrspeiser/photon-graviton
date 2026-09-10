@@ -2,6 +2,8 @@
 
 Current working draft: **v0.4, 9 September 2026**. This is an incomplete theoretical framework with a reproduced observational calibration, not a validated replacement cosmology.
 
+**Latest post-draft research:** [current electromagnetic formulas](../../research_plan/electromagnetic-transfer-specification.md), [all-band audit and modifications](../../research_work/results/electromagnetic-audit/report.md), and [coverage gaps](../../research_work/results/electromagnetic-audit/coverage.md). These include an exact prescribed time-field candidate and its no-loss-companion conflict. They are not yet incorporated into the v0.4 PDF. The versioned manuscript/PDF are preserved; use the linked specification for current branch status.
+
 Post-v0.4 evidence, not yet incorporated into the PDF: [regional uncertainty sensitivity](../../research_work/results/redshift-priority/uncertainty-block-report.md), [independent foreground-dust audit](../../research_work/results/redshift-priority/foreground-dust-report.md), and [current ELVES eligibility](../../research_work/results/redshift-priority/elves-quarantine-screen-report.md). These reports add limitations and inputs; none establishes fresh predictive improvement.
 
 The [arrival-retention extension](../../research_work/results/universal-clock-coupling/arrival-report.md) verifies persistence of the earlier prescribed-profile shift through a downstream static clock region. It distinguishes local from reference energy and retains the unsolved companion-receiver requirement. This extension is also post-v0.4 evidence.

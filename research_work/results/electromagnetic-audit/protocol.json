@@ -1,0 +1,17 @@
+{
+  "title": "Electromagnetic transfer and timing audit",
+  "date": "2026-09-09",
+  "status": "Exploratory reused-data and published-summary audit, specified before this suite's execution; literature and earlier results already inspected",
+  "scope": "Radio through gamma-ray formula checks, available redshift and spectral-aging rows, FIRAS residuals, published local-clock and multimessenger summaries. Not all astronomical data or an independent validation.",
+  "alpha_per_mpc": 0.0002488993286382367,
+  "redshift_data": "All 164 existing groups with frozen splits and all six existing maser rows; no refitting distances, source motions, or alpha",
+  "spectral_aging": "All 35 published Table 3 rows, checked against the recovered paper text; rate predictions (1+z)^(-b) with fixed b=0,1, and one fitted b. Additional fractional error sensitivities 0, 0.1, 0.2 are illustrative, not inferred error corrections. Published shared-template covariance unavailable.",
+  "radio": "Use the two independent centroid groups at 48.3724558 and 60.531489 GHz. The 48.376892 GHz redshift was tied, so do not count it again. Exclude the mismatched-profile 12.179 GHz line from fitting per authors' warning, retain it in provenance. Anchor the lower-frequency redshift and compare higher frequency for p=-1,0,1,2,3 in dE/ds=-alpha_ref E(E/E_ref)^p. A is calibrated to this absorber and is NOT a distance prediction. Published differential offset uncertainty, not independent-centroid errors, controls this diagnostic.",
+  "firas": "All 43 numeric rows, residual rather than rounded monopole column; temperature 0.5..4 K and signed published Galaxy template nuisance; diagonal scores only. Compare q=1, q=exp(-alpha*100 million ly), 0.99, 0.5, 1/2.2 at fixed amplitude q^-3 and at Planck-preserving amplitude 1. No CMB source age or origin assumed.",
+  "synthetic_grid": "Seven representative frequencies 1e8, 1e11, 3e13, 6e14, 3e15, 2.4e17, 2.4e23 Hz and all distances 0,1mm,1m,1au,100au,1ly,1000ly,1Mly,100Mly,1000Mly; predictions only, not measured samples",
+  "time_field": "Dimensionless c=L=1 prescribed lapse q=1+sign*0.2*w(x)*f(t), w=sin(pi*x)^2 inside x=0..1. Static f=1 and evolving f=1-exp(-0.2*t), signs +/-; emission times 0,0.2,1 and intervals 1e-5,0.001,0.01,0.1. Both endpoints q=1. Check characteristic variation and photon Hamiltonian independently. No fitted real void field or derived companion coupling.",
+  "checks": "Independent ODE versus closed-form frequency drift; finite-difference arrival stretching versus characteristic variation; spectral number/energy integrals; conserved photon/companion/deposit ledger; source hashes; thermal optimizer cross-check; compare recovered spectral-age table before scoring",
+  "interpretation": "No extreme-tail significance or combined global chi-square across heterogeneous summaries; no upgrade of toy numerical passes to measured success; no new whole-band observational claim from synthetic frequencies. Document failures and required physical modifications.",
+  "energy_supply": "Conservation mandatory. Formation-budget magnitude remains deferred under earlier user direction, never declared passed.",
+  "formula_provenance": "Every equation distinguished as established mathematics/physics, proposed postulate, conditional deduction, or empirical calibration; no originality claim without literature assessment."
+}

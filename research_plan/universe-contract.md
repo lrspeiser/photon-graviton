@@ -1,5 +1,7 @@
 # Fictional-universe contract
 
+**Current mechanism scope:** the user permits either altered time or partial photon-energy transfer as the redshift cause. The [electromagnetic specification](electromagnetic-transfer-specification.md) compares both. Loss-free companion travel remains a desired premise, explicitly unresolved when photons and companions share a time-dependent metric. Do not silently abandon that premise or claim the prescribed time field fulfills it. Fixed distances, nonexpansion, energy conservation, and the prohibition on inserted dark-matter halos remain unchanged.
+
 This contract implements the user's explicit direction of 9 September 2026 and supersedes earlier unresolved distance questions and broader permission to explore alternative cosmological premises.
 
 ## Fixed facts and constraints
