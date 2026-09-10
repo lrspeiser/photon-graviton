@@ -1,0 +1,42 @@
+{
+  "rows": 13077,
+  "mode_counts": {
+    "FUNDAMENTAL": 7712,
+    "FIRST_OVERTONE": 5110,
+    "MULTI": 255
+  },
+  "independent_flag_counts": {
+    "has_sky_pm": 13050,
+    "has_intensity_photometry": 12969,
+    "has_positive_period": 13077,
+    "has_combined_rv": 2633,
+    "has_pulsation_mean_rv": 718,
+    "ruwe_below_1_4": 12135,
+    "combined_rv_transits_at_least_8": 2489,
+    "has_astrometric_covariance_fields": 13050
+  },
+  "sequential_measurement_cutflow": {
+    "parent": 13077,
+    "has_sky_pm": 13050,
+    "has_intensity_photometry": 12956,
+    "has_positive_period": 12956,
+    "has_combined_rv": 2632,
+    "ruwe_below_1_4": 2436,
+    "combined_rv_transits_at_least_8": 2304,
+    "has_astrometric_covariance_fields": 2304
+  },
+  "overlap_with_prepared_giant_parent": 0,
+  "overlap_with_quality_giants": 0,
+  "measurement_candidates_overlapping_quality_giants": 0,
+  "giant_parent_rows": 140407,
+  "giant_quality_rows": 128772,
+  "derived_parquet_sha256": "a1f6cf7934818ce556650a93e78c40a3ee537c5e5f4d964b241bcd5011799870",
+  "limitations": [
+    "No distance calibration or spatial cuts applied.",
+    "Not a reconstruction of the published 903-star sample.",
+    "Covariance field completeness is not a positive-semidefinite covariance check.",
+    "RV transit count and pulsation clean-epoch count are distinct.",
+    "Different identifiers do not establish independent survey systematics.",
+    "No gravity fit or new holdout score."
+  ]
+}
