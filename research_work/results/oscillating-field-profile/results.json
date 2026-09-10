@@ -1,0 +1,52 @@
+{
+  "classification": "Inverse single stationary no-flow wave test; no observational likelihood",
+  "p": 0.4624587420104399,
+  "training_configurations": 99,
+  "radial_probes_per_configuration": 80,
+  "range_over_Re": [
+    0.1,
+    4.0
+  ],
+  "positive_wave_support_at_all_probes": true,
+  "max_over_min_required_mass": {
+    "min": 75.48919505778231,
+    "median": 82.00456382186789,
+    "max": 90.1870195186148
+  },
+  "best_constant_acceleration_ratio_range": [
+    0.010389912107074304,
+    84.50841241291697
+  ],
+  "derivative_checks": [
+    {
+      "r_over_a": 0.18153,
+      "relative_error": 0.0
+    },
+    {
+      "r_over_a": 0.5,
+      "relative_error": 0.0
+    },
+    {
+      "r_over_a": 1.0,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "r_over_a": 1.8153,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "r_over_a": 4.0,
+      "relative_error": 4.440892098500626e-16
+    },
+    {
+      "r_over_a": 7.2612,
+      "relative_error": 8.881784197001252e-16
+    }
+  ],
+  "input_sha256": {
+    "deposit-boundary-admissibility\\configurations.json": "7916fc1b18cc24622ad9ea9b2960bb0a0c53c01eec3414242fe88bd797bf3b1f",
+    "joint-galaxy-audit\\results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "lens-photometric-audit\\training-photometry.json": "4303f0a0ddc8b3173dd8fc7a92cb1391cb9f30f371e909e6817be924fabf376c",
+    "lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af"
+  }
+}
