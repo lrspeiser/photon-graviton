@@ -2,6 +2,8 @@
 
 Current working draft: **v0.4, 9 September 2026**. This is an incomplete theoretical framework with a reproduced observational calibration, not a validated replacement cosmology.
 
+Post-v0.4 evidence, not yet incorporated into the PDF: [regional uncertainty sensitivity](../../research_work/results/redshift-priority/uncertainty-block-report.md), [independent foreground-dust audit](../../research_work/results/redshift-priority/foreground-dust-report.md), and [current ELVES eligibility](../../research_work/results/redshift-priority/elves-quarantine-screen-report.md). These reports add limitations and inputs; none establishes fresh predictive improvement.
+
 - [Manuscript PDF](manuscript.pdf) and [editable source](manuscript.md).
 - [All 164 observed/predicted rows](analysis/observed-predicted-redshift.csv), [metrics](analysis/metrics.json), [comparison figure](analysis/redshift-comparison.png), [residual figure](analysis/redshift-residuals.png).
 - [Evidence map](evidence-map.md) and [artifact verification](verification.json).

@@ -1,0 +1,79 @@
+{
+  "n": 164,
+  "primary_input": "Schlafly-Finkbeiner reference-pixel E(B-V), mag",
+  "input_range_mag": [
+    0.0053,
+    0.1965
+  ],
+  "correlations": {
+    "signed_residual": {
+      "pearson": -0.22947565559805322,
+      "spearman": -0.23817711643813994
+    },
+    "absolute_residual": {
+      "pearson": 0.16670675212077968,
+      "spearman": 0.13007382459100766
+    },
+    "region_demeaned_signed": {
+      "pearson": -0.13771075853056639,
+      "spearman": -0.1456101152529581
+    },
+    "region_demeaned_absolute": {
+      "pearson": 0.08952835237988245,
+      "spearman": 0.04990154769099528
+    }
+  },
+  "regions": [
+    {
+      "region": 0,
+      "n": 21,
+      "mean_ebv_mag": 0.03242857142857143,
+      "mean_residual_kms": 208.35621347774736
+    },
+    {
+      "region": 1,
+      "n": 19,
+      "mean_ebv_mag": 0.09235789473684211,
+      "mean_residual_kms": -194.0922167639463
+    },
+    {
+      "region": 2,
+      "n": 16,
+      "mean_ebv_mag": 0.0687,
+      "mean_residual_kms": -531.5974807278023
+    },
+    {
+      "region": 3,
+      "n": 17,
+      "mean_ebv_mag": 0.037511764705882356,
+      "mean_residual_kms": 56.185925641860436
+    },
+    {
+      "region": 4,
+      "n": 20,
+      "mean_ebv_mag": 0.07685,
+      "mean_residual_kms": -18.20917999605332
+    },
+    {
+      "region": 5,
+      "n": 31,
+      "mean_ebv_mag": 0.028658064516129032,
+      "mean_residual_kms": 99.31592879370712
+    },
+    {
+      "region": 6,
+      "n": 27,
+      "mean_ebv_mag": 0.021962962962962962,
+      "mean_residual_kms": -41.12206464845956
+    },
+    {
+      "region": 7,
+      "n": 13,
+      "mean_ebv_mag": 0.07930000000000001,
+      "mean_residual_kms": 140.91011005527747
+    }
+  ],
+  "metadata_sha256": "a3936a6d459b16e6c7b412c2794a4a77be349976476ed67ae35feca6d05de174",
+  "prediction_sha256": "0a555c28b6a9031691d45e01f5f042ecf67014d4c552be8a33354db4992df277",
+  "status": "descriptive exposed-sample audit; no distance correction or physical environmental term fitted"
+}
