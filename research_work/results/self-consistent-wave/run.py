@@ -50,43 +50,49 @@ def diagnostics(sol,eta,f,L):
             'mass_fraction_beyond_0p8_domain':float(1-sol.sol(.8*L)[3]/f),
             'max_solver_rms_residual':float(np.max(sol.rms_residuals))}
 
-records=[]; profiles=[]
-for eta in [.3,1.,3.]:
-    prev=None
-    for f in sorted(set(np.geomspace(.03,3.,65).tolist()+[.1,1.,3.])):
-        sol=solve(eta,f,previous=prev);prev=sol
-        if f not in [.1,1.,3.]:continue
-        base=diagnostics(sol,eta,f,60.)
-        # Wider domain and tighter tolerance; interpolate prior solution only as a guess.
-        refined=solve(eta,f,L=90.,tol=2e-9,previous=sol,eps=5e-4)
-        fine=diagnostics(refined,eta,f,90.)
-        radii=np.geomspace(.05,30.,150)
-        m0=sol.sol(radii)[3];m1=refined.sol(radii)[3]
-        # Scale by total source mass to avoid meaningless relative error in tiny central masses.
-        err=float(np.max(np.abs(m0-m1))/f)
-        fine['coarse_to_refined_max_enclosed_mass_difference_over_total']=err
-        fine['coarse_to_refined_half_mass_radius_relative_change']=abs(fine['half_mass_radius_over_a']/base['half_mass_radius_over_a']-1)
-        assert err<2e-5 and fine['virial_relative_residual']<2e-5, (err,fine)
-        assert fine['normalization_relative_error']<1e-6
-        lens=[]
-        for b in [.5,1.,2.,5.]:
-            def mass_at(r): return float(refined.sol(r)[3]) if r<90 else f
-            bending=quad(lambda t:mass_at(b/np.cos(t))*np.cos(t)/b,0,np.pi/2,epsabs=1e-9)[0]
-            projected=mass_at(b)+quad(lambda r:refined.sol(r)[0]**2*(b/r)**2/(1+np.sqrt(1-(b/r)**2)),b,90,epsabs=1e-9)[0]
-            assert abs(bending*b/projected-1)<1e-6
-            lens.append({'impact_over_a':b,'extra_bending_in_4GMb_over_ac2':bending,
-                         'projected_mass_identity_relative_error':abs(bending*b/projected-1)})
-        fine['conditional_weak_lensing']=lens
-        records.append(fine)
-        for r in radii:
-            u,up,v,M=refined.sol(r)
-            profiles.append({'eta':eta,'mass_ratio':f,'r_over_a':float(r),
-                'enclosed_source_mass_over_baryon_mass':float(M),
-                'density_in_Mb_over_4pi_a3':float((u/r)**2),
-                'extra_acceleration_in_GMb_over_a2':float(M/r**2),
-                'total_circular_speed_squared_in_GMb_over_a':float(r/(1+r)**2+M/r)})
-        print(json.dumps(fine),flush=True)
-(HERE/'results.json').write_text(json.dumps({'classification':'Numerical stationary source equilibria; not capture, stability or observed validation',
-    'equations':'Free single-state Schrodinger-Poisson in fixed Hernquist ordinary potential',
-    'cases':records},indent=2)+'\n',newline='\n')
-(HERE/'profiles.json').write_text(json.dumps(profiles,indent=2)+'\n',newline='\n')
+def main():
+    records=[]; profiles=[]
+
+    for eta in [.3,1.,3.]:
+        prev=None
+        for f in sorted(set(np.geomspace(.03,3.,65).tolist()+[.1,1.,3.])):
+            sol=solve(eta,f,previous=prev);prev=sol
+            if f not in [.1,1.,3.]:continue
+            base=diagnostics(sol,eta,f,60.)
+            # Wider domain and tighter tolerance; interpolate prior solution only as a guess.
+            refined=solve(eta,f,L=90.,tol=2e-9,previous=sol,eps=5e-4)
+            fine=diagnostics(refined,eta,f,90.)
+            radii=np.geomspace(.05,30.,150)
+            m0=sol.sol(radii)[3];m1=refined.sol(radii)[3]
+            # Scale by total source mass to avoid meaningless relative error in tiny central masses.
+            err=float(np.max(np.abs(m0-m1))/f)
+            fine['coarse_to_refined_max_enclosed_mass_difference_over_total']=err
+            fine['coarse_to_refined_half_mass_radius_relative_change']=abs(fine['half_mass_radius_over_a']/base['half_mass_radius_over_a']-1)
+            assert err<2e-5 and fine['virial_relative_residual']<2e-5, (err,fine)
+            assert fine['normalization_relative_error']<1e-6
+            lens=[]
+            for b in [.5,1.,2.,5.]:
+                def mass_at(r): return float(refined.sol(r)[3]) if r<90 else f
+                bending=quad(lambda t:mass_at(b/np.cos(t))*np.cos(t)/b,0,np.pi/2,epsabs=1e-9)[0]
+                projected=mass_at(b)+quad(lambda r:refined.sol(r)[0]**2*(b/r)**2/(1+np.sqrt(1-(b/r)**2)),b,90,epsabs=1e-9)[0]
+                assert abs(bending*b/projected-1)<1e-6
+                lens.append({'impact_over_a':b,'extra_bending_in_4GMb_over_ac2':bending,
+                             'projected_mass_identity_relative_error':abs(bending*b/projected-1)})
+            fine['conditional_weak_lensing']=lens
+            records.append(fine)
+            for r in radii:
+                u,up,v,M=refined.sol(r)
+                profiles.append({'eta':eta,'mass_ratio':f,'r_over_a':float(r),
+                    'enclosed_source_mass_over_baryon_mass':float(M),
+                    'density_in_Mb_over_4pi_a3':float((u/r)**2),
+                    'extra_acceleration_in_GMb_over_a2':float(M/r**2),
+                    'total_circular_speed_squared_in_GMb_over_a':float(r/(1+r)**2+M/r)})
+            print(json.dumps(fine),flush=True)
+    (HERE/'results.json').write_text(json.dumps({'classification':'Numerical stationary source equilibria; not capture, stability or observed validation',
+        'equations':'Free single-state Schrodinger-Poisson in fixed Hernquist ordinary potential',
+        'cases':records},indent=2)+'\n',newline='\n')
+    (HERE/'profiles.json').write_text(json.dumps(profiles,indent=2)+'\n',newline='\n')
+
+
+if __name__ == "__main__":
+    main()

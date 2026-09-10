@@ -1,0 +1,96 @@
+{
+  "classification": "Fixed shared-parameter conditional training comparison; not validation or capture theory",
+  "systems": 3,
+  "protocol": {
+    "status": "Written before this wave-model training score; historical training data already exposed",
+    "role": "training",
+    "field_mass_eV_c2": 1e-24,
+    "source_to_stellar_mass_ratio": 1.0,
+    "choice": "Illustrative shared parameters, not fitted; mass chosen to keep dimensionless solver range near previously verified family",
+    "stellar_mass": "Archived Salpeter population normalization with energy loss and event stretching; fixed population assumptions retained",
+    "stellar_orbits": "Spherical isotropic Jeans moments, Hernquist tracer",
+    "seeing_fwhm_arcsec": 1.5,
+    "aperture_diameter_arcsec": 3.0,
+    "geometry": "Archived static Euclidean redshift-derived geometry",
+    "comparison": "Same photometric stellar masses under ordinary gravity and stationary wave-source gravity",
+    "tuning_to_sigma_or_lens_angle": false,
+    "holdout_scoring": false
+  },
+  "scores": {
+    "baryons": {
+      "sigma_rmse_km_s": 53.53136402169356,
+      "sigma_mean_residual_km_s": -42.846571697718495,
+      "theta_rmse_arcsec": 0.5075521632711151,
+      "theta_mean_residual_arcsec": -0.4471729889976046,
+      "median_sigma_pred_over_observed": 0.7705489314359446,
+      "median_theta_pred_over_SIE": 0.6791695853167135
+    },
+    "stationary_wave": {
+      "sigma_rmse_km_s": 99.68768973713463,
+      "sigma_mean_residual_km_s": 73.30275038908,
+      "theta_rmse_arcsec": 0.4605583449562352,
+      "theta_mean_residual_arcsec": 0.3856037127428684,
+      "median_sigma_pred_over_observed": 1.1358697426729307,
+      "median_theta_pred_over_SIE": 1.3793810348889382
+    }
+  },
+  "equilibrium_checks": [
+    {
+      "eta": 0.5726590019597355,
+      "source_to_baryon_mass_ratio": 1.0,
+      "domain_over_a": 90,
+      "inner_radius_over_a": 0.0005,
+      "eigenvalue": -0.8192989464811663,
+      "half_mass_radius_over_a": 1.3092151692139096,
+      "normalization_relative_error": 6.95337121214834e-11,
+      "virial_relative_residual": 1.887232612323687e-10,
+      "kinetic_energy": 0.2783090333615153,
+      "self_gravitational_energy": -0.3245450054583257,
+      "external_potential_energy": -0.4485179688690296,
+      "mass_fraction_beyond_0p8_domain": 0.0,
+      "max_solver_rms_residual": 1.9989475239823446e-09,
+      "Name": "J0037-0942",
+      "max_dimensionless_potential_depth_over_c2": 1.1725343045739761e-05
+    },
+    {
+      "eta": 0.13385320370847392,
+      "source_to_baryon_mass_ratio": 1.0,
+      "domain_over_a": 90,
+      "inner_radius_over_a": 0.0005,
+      "eigenvalue": -2.062842432073468,
+      "half_mass_radius_over_a": 0.4357649237027387,
+      "normalization_relative_error": 1.7068515489881975e-09,
+      "virial_relative_residual": 2.8462903467824418e-09,
+      "kinetic_energy": 0.5895387174319252,
+      "self_gravitational_energy": -0.9776686625080288,
+      "external_potential_energy": -0.6970438209683286,
+      "mass_fraction_beyond_0p8_domain": 0.0,
+      "max_solver_rms_residual": 1.9998867246658955e-09,
+      "Name": "J1525+3327",
+      "max_dimensionless_potential_depth_over_c2": 1.8580010719700774e-05
+    },
+    {
+      "eta": 3.808264716335485,
+      "source_to_baryon_mass_ratio": 1.0,
+      "domain_over_a": 90,
+      "inner_radius_over_a": 0.0005,
+      "eigenvalue": -0.2246703450050251,
+      "half_mass_radius_over_a": 5.42590204775544,
+      "normalization_relative_error": 2.941125121225241e-11,
+      "virial_relative_residual": 4.086047521574186e-11,
+      "kinetic_energy": 0.1078739215179989,
+      "self_gravitational_energy": -0.07785440759986088,
+      "external_potential_energy": -0.1768354513168769,
+      "mass_fraction_beyond_0p8_domain": 0.0,
+      "max_solver_rms_residual": 1.9925976458647603e-09,
+      "Name": "J1538+5817",
+      "max_dimensionless_potential_depth_over_c2": 6.458996276333281e-06
+    }
+  ],
+  "input_sha256": {
+    "wave-lens-training\\protocol.json": "d01295f259b5ca18db7e6aa122fb993335e9614cd22f840f468c00ad9dc333d9",
+    "lens-photometric-audit\\normalization-sensitivity-updated-profile.json": "1a988187fb7b25ff113c3b24b76c9253657e06c63d6c0ba3ab970d8c0aef0b66",
+    "lensing-data-readiness\\lens-observations-and-image-models.json": "e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+    "lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af"
+  }
+}
