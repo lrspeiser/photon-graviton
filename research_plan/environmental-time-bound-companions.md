@@ -1,5 +1,7 @@
 # Environmental Time and Bound Companion Fields
 
+**Historical branch:** the user subsequently selected [direct conversion without an added clock factor or screening](direct-conversion-bound-companions.md) as the active starting model. This document preserves the preceding hypotheses and their provenance. Its bound-mode concept carries forward; its time-rate prescription is not automatically part of the active branch.
+
 Working research specification, 9 September 2026. This document consolidates the latest discussion; it is a hypothesis within a fictional nonexpanding universe, not an established branch of physics or a completed first-principles theory. The descriptive title makes no originality claim.
 
 **Follow-up clarification and test:** the [screened-clock diagnostic](../research_work/results/void-screening/report.md) treats the environmental response in equations (3)-(4) as an additional factor multiplying a baseline clock law, rather than as the complete clock law. Its 180 illustrative cases show that accumulated local photon loss can be tiny without screening, while a slower-void clock factor can oppose ordinary gravitational gradients. A faster-void sign is tested as a separate alternative, not adopted. No clock amplitude or sign is established by redshift alone; the equations below preserve the earlier proposed branch for provenance.

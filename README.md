@@ -2,13 +2,15 @@
 
 **This project explores a fictional universe that has the same observed stars, galaxies, and astronomical datasets as ours, while allowing different physical laws.** We use real measurements as a common test bed so that we can safely explore new concepts, derive their consequences, and compare their predictions without presenting speculation as established physics.
 
-The working universe is nonexpanding. Candidate mechanisms let light redshift through changing propagation and exchange energy with hypothetical companion waves or fields. Captured energy or a modified field response might contribute to galaxy and cluster gravity. These are hypotheses to investigate, not discoveries about our universe. “Companion” does not mean an experimentally detected particle or an established graviton interaction.
+The working universe is nonexpanding. The active starting branch is direct, continuous photon-energy transfer into hypothetical companions, with no added clock-rate factor or screening of conversion. Companions travel through voids and may populate extended bound configurations in gravitational wells. The interaction, capture, stability and joint gravity predictions remain under investigation; earlier time-field candidates are retained as alternatives. “Companion” does not mean an experimentally detected particle or an established graviton interaction.
 
 The aim is to find a self-consistent emitter–propagation–receiver model that predicts color, duration, brightness, angular size, gravitational-wave propagation, galaxy rotation, and lensing with shared independently constrained parameters. No candidate in this repository has yet achieved all of those requirements.
 
 ## Start here
 
-**Latest conceptual specification:** [Environmental Time and Bound Companion Fields](research_plan/environmental-time-bound-companions.md) consolidates the steady-environment conversion choice, light-speed companion transport, voids without storage, deep-well capture and the proposed bound-level picture. It labels agreed premises, provisional equations and unresolved couplings; it adds no new observational fit and does not replace the existing PDF.
+**Active branch:** [Direct Photon Conversion and Bound Companion Fields](research_plan/direct-conversion-bound-companions.md). Its [first integrated benchmark](research_work/results/direct-conversion/report.md) predicts z=0.0076605 at 100 million light-years with the reused rate, but finds no demonstrated redshift advantage over explicit expansion comparisons and retains the unresolved whole-event timing problem. This branch supersedes added time-rate changes and conversion screening as the current starting mechanism.
+
+**Earlier conceptual specification:** [Environmental Time and Bound Companion Fields](research_plan/environmental-time-bound-companions.md) preserves the environmental-time branch and the development of the bound-level picture. Its time and screening prescriptions are not silently included in the active direct-conversion branch. The existing paper PDF remains a separately versioned artifact.
 
 **New working paper:** [Environmental Time Stretching and Companion-Energy Deposition](papers/cumulative-time-companions/manuscript.md), with a [PDF](papers/cumulative-time-companions/manuscript.pdf) and [evidence map](papers/cumulative-time-companions/evidence-map.md). This current synthesis develops the cumulative-time premise, conditional derivations and remaining research objectives; the historical version 9 below is preserved separately.
 
@@ -21,6 +23,8 @@ The aim is to find a self-consistent emitter–propagation–receiver model that
 The [universe contract](research_plan/universe-contract.md) fixes published galaxy distances as facts, including adopted Hubble-flow values. Dark matter, cosmic expansion and the Big Bang are excluded as active explanatory premises. We retain observations and derive the photon-supplied mechanism without importing those theories. Propagation, capture, storage and the detailed gravity law remain under investigation.
 
 ## Current findings
+
+- **[Direct conversion versus expansion benchmarks](research_work/results/direct-conversion/report.md).** The 100-million-light-year prediction is z=0.0076605 at the reused rate. In the geometric-distance comparison, coarse-sky RMS is 450.716 km/s for conversion and 450.502 km/s for a one-scale flat-FLRW benchmark; the paired descriptive difference interval spans zero. A separate luminosity-distance sensitivity also shows no conversion advantage. All 164 predictions and five distance-selected examples are saved. This is exposed-data testing, not fresh validation or a completed capture/gravity theory.
 
 - **[Screened-clock recommendation tested](research_work/results/void-screening/report.md).** At the reused exploratory conversion rate, unscreened photon loss is about 1.21e-15 over 1 au. A 180-case illustrative scan separates that path accumulation from clock-rate differences and transition forces: slower-void factors oppose the ordinary outward clock trend in the tested coupling, and screening near Earth does not guarantee acceptable boundary forces. Both signs remain hypotheses; no clock amplitude, real Solar System fit or supply result is established.
 
