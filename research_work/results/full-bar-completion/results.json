@@ -1,0 +1,1156 @@
+{
+  "scope": "Full-bar conservative potential prototype; no stellar fit or holdout score.",
+  "formula_provenance": "Known spherical-harmonic Poisson solution with integration by parts; frozen empirical response.",
+  "parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "radial_domain_kpc": [
+    0.001,
+    80.0
+  ],
+  "configurations": [
+    [
+      "coarse",
+      192,
+      64,
+      96,
+      24
+    ],
+    [
+      "fine",
+      384,
+      128,
+      128,
+      48
+    ],
+    [
+      "finer",
+      768,
+      256,
+      192,
+      64
+    ]
+  ],
+  "numerical_split": true,
+  "axisymmetric_angular_order": 128,
+  "axisymmetric_angular_nodes": 512,
+  "force_comparison_pair": [
+    "fine",
+    "finer"
+  ],
+  "manufactured_gradient_controls": [
+    {
+      "radial_nodes": 600,
+      "radial_gradient_error_over_peak": 0.001032659882212229
+    },
+    {
+      "radial_nodes": 1200,
+      "radial_gradient_error_over_peak": 0.00025869286770510117
+    }
+  ],
+  "potential_derivative_error": 2.2699711505848287e-08,
+  "force_refinement_maximum": 0.0025803507416139035,
+  "force_refinement_median": 1.0044129744897987e-05,
+  "provisional_extra_force_refinement_target": 0.01,
+  "refinement_target_met": true,
+  "rows": [
+    {
+      "position_kpc": [
+        0.5,
+        0.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -5351.886791212513,
+        0.0,
+        -5.436271993104544e-13
+      ],
+      "fine_extra_acceleration": [
+        -5351.839170438655,
+        0.0,
+        -5.436352432959113e-13
+      ],
+      "refinement_fraction": 8.89802035185128e-06
+    },
+    {
+      "position_kpc": [
+        0.43301270189221935,
+        0.24999999999999997,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -4431.770119522703,
+        -4131.641653621971,
+        -4.579377899000067e-13
+      ],
+      "fine_extra_acceleration": [
+        -4431.723774710616,
+        -4131.66876595309,
+        -4.579411264524431e-13
+      ],
+      "refinement_fraction": 8.861740125383544e-06
+    },
+    {
+      "position_kpc": [
+        3.061616997868383e-17,
+        0.5,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -2.838496606380061e-13,
+        -7075.02711492547,
+        -2.7755355304660893e-13
+      ],
+      "fine_extra_acceleration": [
+        -2.8385309403354475e-13,
+        -7075.067283975396,
+        -2.7754837514861083e-13
+      ],
+      "refinement_fraction": 5.677550235693256e-06
+    },
+    {
+      "position_kpc": [
+        0.5,
+        0.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -5094.424679281313,
+        0.0,
+        -2691.3874580887023
+      ],
+      "fine_extra_acceleration": [
+        -5094.379070406325,
+        0.0,
+        -2691.3957045280185
+      ],
+      "refinement_fraction": 8.044327664172241e-06
+    },
+    {
+      "position_kpc": [
+        0.43301270189221935,
+        0.24999999999999997,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -4232.087475709795,
+        -3958.958333349335,
+        -2543.609897458535
+      ],
+      "fine_extra_acceleration": [
+        -4232.042884259628,
+        -3958.9842408385493,
+        -2543.613307885658
+      ],
+      "refinement_fraction": 8.166462415722518e-06
+    },
+    {
+      "position_kpc": [
+        3.061616997868383e-17,
+        0.5,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -2.724774112499735e-13,
+        -6817.713324501056,
+        -2224.149012420421
+      ],
+      "fine_extra_acceleration": [
+        -2.7247808818449556e-13,
+        -6817.751440495772,
+        -2224.1421178509136
+      ],
+      "refinement_fraction": 5.401274239098467e-06
+    },
+    {
+      "position_kpc": [
+        0.5,
+        0.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1669.8893647954517,
+        0.0,
+        -6963.452032867591
+      ],
+      "fine_extra_acceleration": [
+        -1669.8696123588556,
+        0.0,
+        -6963.4670062317
+      ],
+      "refinement_fraction": 3.4613429746008983e-06
+    },
+    {
+      "position_kpc": [
+        0.43301270189221935,
+        0.24999999999999997,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1439.61422138498,
+        -1384.3410659297251,
+        -6846.043721414688
+      ],
+      "fine_extra_acceleration": [
+        -1439.5991251675491,
+        -1384.3550159703025,
+        -6846.049369240461
+      ],
+      "refinement_fraction": 2.9891061984932215e-06
+    },
+    {
+      "position_kpc": [
+        3.061616997868383e-17,
+        0.5,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1.0054597250101867e-13,
+        -2588.0096371449126,
+        -6548.736691591352
+      ],
+      "fine_extra_acceleration": [
+        -1.0054945400240197e-13,
+        -2588.021317970853,
+        -6548.71695207986
+      ],
+      "refinement_fraction": 3.25732600638018e-06
+    },
+    {
+      "position_kpc": [
+        0.5,
+        0.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -831.6003002864561,
+        0.0,
+        -5665.352283458299
+      ],
+      "fine_extra_acceleration": [
+        -831.6103362229422,
+        0.0,
+        -5665.350248145251
+      ],
+      "refinement_fraction": 1.7883569683995226e-06
+    },
+    {
+      "position_kpc": [
+        0.43301270189221935,
+        0.24999999999999997,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -719.8781393923801,
+        -612.9211185262535,
+        -5632.768519638793
+      ],
+      "fine_extra_acceleration": [
+        -719.8696839831745,
+        -612.9197595364543,
+        -5632.774904986118
+      ],
+      "refinement_fraction": 1.870307011495778e-06
+    },
+    {
+      "position_kpc": [
+        3.061616997868383e-17,
+        0.5,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -5.0812301217803034e-14,
+        -1196.481310740281,
+        -5543.725378930144
+      ],
+      "fine_extra_acceleration": [
+        -5.0813369077158945e-14,
+        -1196.4801811475356,
+        -5543.725248935269
+      ],
+      "refinement_fraction": 2.0048909314169353e-07
+    },
+    {
+      "position_kpc": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -4471.0407856324755,
+        0.0,
+        -6.678177164634397e-13
+      ],
+      "fine_extra_acceleration": [
+        -4471.049250654274,
+        0.0,
+        -6.678432655130854e-13
+      ],
+      "refinement_fraction": 1.893296477872089e-06
+    },
+    {
+      "position_kpc": [
+        0.8660254037844387,
+        0.49999999999999994,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -3621.361220840435,
+        -3738.5360874882927,
+        -5.353202196748926e-13
+      ],
+      "fine_extra_acceleration": [
+        -3621.319160231683,
+        -3738.552590797226,
+        -5.353265061841623e-13
+      ],
+      "refinement_fraction": 8.680794260876253e-06
+    },
+    {
+      "position_kpc": [
+        6.123233995736766e-17,
+        1.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -2.2627984865525351e-13,
+        -5582.382267985869,
+        -3.381063239592252e-13
+      ],
+      "fine_extra_acceleration": [
+        -2.2648971787729968e-13,
+        -5582.395595693162,
+        -3.380816488752182e-13
+      ],
+      "refinement_fraction": 2.387453032523503e-06
+    },
+    {
+      "position_kpc": [
+        1.0,
+        0.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -4416.5421336830805,
+        0.0,
+        -1487.0933300483425
+      ],
+      "fine_extra_acceleration": [
+        -4416.548382618121,
+        0.0,
+        -1487.044936566141
+      ],
+      "refinement_fraction": 1.04707015615807e-05
+    },
+    {
+      "position_kpc": [
+        0.8660254037844387,
+        0.49999999999999994,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -3581.2433826876686,
+        -3689.756973198965,
+        -1333.8552203686536
+      ],
+      "fine_extra_acceleration": [
+        -3581.204424935727,
+        -3689.7711630452254,
+        -1333.8621127524757
+      ],
+      "refinement_fraction": 7.912189139987402e-06
+    },
+    {
+      "position_kpc": [
+        6.123233995736766e-17,
+        1.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -2.243897176483847e-13,
+        -5530.129091432339,
+        -1080.101843165026
+      ],
+      "fine_extra_acceleration": [
+        -2.2460429440947883e-13,
+        -5530.141587100346,
+        -1080.1106264414364
+      ],
+      "refinement_fraction": 2.7106918094815886e-06
+    },
+    {
+      "position_kpc": [
+        1.0,
+        0.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -2628.103389159412,
+        0.0,
+        -5748.148448717242
+      ],
+      "fine_extra_acceleration": [
+        -2628.0853973629382,
+        0.0,
+        -5748.174453783809
+      ],
+      "refinement_fraction": 5.003152246947628e-06
+    },
+    {
+      "position_kpc": [
+        0.8660254037844387,
+        0.49999999999999994,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -2220.807540721855,
+        -2144.7398421392904,
+        -5441.962412986617
+      ],
+      "fine_extra_acceleration": [
+        -2220.791124567811,
+        -2144.7648412416975,
+        -5441.973335606311
+      ],
+      "refinement_fraction": 5.088806387164402e-06
+    },
+    {
+      "position_kpc": [
+        6.123233995736766e-17,
+        1.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1.5020946424316375e-13,
+        -3578.1159880181904,
+        -4861.132155756106
+      ],
+      "fine_extra_acceleration": [
+        -1.503485957244469e-13,
+        -3578.1173362901254,
+        -4861.105027208589
+      ],
+      "refinement_fraction": 4.500007002191967e-06
+    },
+    {
+      "position_kpc": [
+        1.0,
+        0.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -1511.021215200256,
+        0.0,
+        -5241.206946964866
+      ],
+      "fine_extra_acceleration": [
+        -1511.0519485897303,
+        0.0,
+        -5241.195494872343
+      ],
+      "refinement_fraction": 6.012783113525013e-06
+    },
+    {
+      "position_kpc": [
+        0.8660254037844387,
+        0.49999999999999994,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -1302.6922004085186,
+        -1108.7688307043368,
+        -5121.894037599969
+      ],
+      "fine_extra_acceleration": [
+        -1302.6924398787903,
+        -1108.7661883525552,
+        -5121.907851432003
+      ],
+      "refinement_fraction": 2.6048600004346156e-06
+    },
+    {
+      "position_kpc": [
+        6.123233995736766e-17,
+        1.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -9.064233689809256e-14,
+        -2036.8456465935783,
+        -4864.214343302473
+      ],
+      "fine_extra_acceleration": [
+        -9.065804842056615e-14,
+        -2036.836275853117,
+        -4864.210309199679
+      ],
+      "refinement_fraction": 1.9346347581176653e-06
+    },
+    {
+      "position_kpc": [
+        3.0,
+        0.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -3459.2907950362305,
+        0.0,
+        -2.3916500099973043e-12
+      ],
+      "fine_extra_acceleration": [
+        -3460.3635741390576,
+        0.0,
+        -2.42429892280566e-12
+      ],
+      "refinement_fraction": 0.000310019187245088
+    },
+    {
+      "position_kpc": [
+        2.598076211353316,
+        1.4999999999999998,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -2388.9821554520904,
+        -2298.2016451716495,
+        -1.3969897204983241e-12
+      ],
+      "fine_extra_acceleration": [
+        -2388.451427823397,
+        -2298.994627000906,
+        -1.393197927377899e-12
+      ],
+      "refinement_fraction": 0.0002878310940157515
+    },
+    {
+      "position_kpc": [
+        1.8369701987210297e-16,
+        3.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -1.4440749803021907e-13,
+        -3061.6386201011464,
+        -1.1659077046608139e-12
+      ],
+      "fine_extra_acceleration": [
+        -1.4363159675884567e-13,
+        -3061.6022286832913,
+        -1.16125510549124e-12
+      ],
+      "refinement_fraction": 1.1886396447655999e-05
+    },
+    {
+      "position_kpc": [
+        3.0,
+        0.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -3447.740403759476,
+        0.0,
+        -1292.0573003967515
+      ],
+      "fine_extra_acceleration": [
+        -3448.781391108369,
+        0.0,
+        -1301.5118377324216
+      ],
+      "refinement_fraction": 0.0025803507416139035
+    },
+    {
+      "position_kpc": [
+        2.598076211353316,
+        1.4999999999999998,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -2391.083773055943,
+        -2288.3223069823343,
+        -781.5925559389325
+      ],
+      "fine_extra_acceleration": [
+        -2390.5608328502103,
+        -2288.950437357793,
+        -780.5309233617713
+      ],
+      "refinement_fraction": 0.00039400405397744387
+    },
+    {
+      "position_kpc": [
+        1.8369701987210297e-16,
+        3.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -1.449698053043062e-13,
+        -3060.665920578018,
+        -656.6007817633649
+      ],
+      "fine_extra_acceleration": [
+        -1.4421070645257867e-13,
+        -3060.5376751956774,
+        -655.2432118190576
+      ],
+      "refinement_fraction": 0.00043567420935437004
+    },
+    {
+      "position_kpc": [
+        3.0,
+        0.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -3017.3658725026253,
+        0.0,
+        -3323.3996783080647
+      ],
+      "fine_extra_acceleration": [
+        -3016.7169744004113,
+        0.0,
+        -3328.299543124621
+      ],
+      "refinement_fraction": 0.0011003191870908263
+    },
+    {
+      "position_kpc": [
+        2.598076211353316,
+        1.4999999999999998,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -2288.1385647873585,
+        -1944.32776695647,
+        -2609.4385381784027
+      ],
+      "fine_extra_acceleration": [
+        -2288.1638657209724,
+        -1944.4591400913428,
+        -2608.8401091244855
+      ],
+      "refinement_fraction": 0.000154157124875206
+    },
+    {
+      "position_kpc": [
+        1.8369701987210297e-16,
+        3.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1.4408408197449285e-13,
+        -2875.6798097556625,
+        -2268.923278817661
+      ],
+      "fine_extra_acceleration": [
+        -1.439273084406536e-13,
+        -2875.8144636804445,
+        -2268.0821281285016
+      ],
+      "refinement_fraction": 0.00023258467952201833
+    },
+    {
+      "position_kpc": [
+        3.0,
+        0.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -2449.1469801366707,
+        0.0,
+        -3354.148860438204
+      ],
+      "fine_extra_acceleration": [
+        -2450.391064215671,
+        0.0,
+        -3351.860742728615
+      ],
+      "refinement_fraction": 0.0006272740126779936
+    },
+    {
+      "position_kpc": [
+        2.598076211353316,
+        1.4999999999999998,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -1979.9129498748712,
+        -1533.0887427999137,
+        -3003.4306438371896
+      ],
+      "fine_extra_acceleration": [
+        -1979.7703216963955,
+        -1532.9987719060957,
+        -3003.7917394296273
+      ],
+      "refinement_fraction": 0.00010191215535624712
+    },
+    {
+      "position_kpc": [
+        1.8369701987210297e-16,
+        3.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -1.2863698458051406e-13,
+        -2490.9691482221424,
+        -2699.3266038155475
+      ],
+      "fine_extra_acceleration": [
+        -1.285653024971274e-13,
+        -2490.7539794287163,
+        -2699.7484153693695
+      ],
+      "refinement_fraction": 0.00012891205317530575
+    },
+    {
+      "position_kpc": [
+        8.0,
+        0.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -2398.09014489042,
+        0.0,
+        -1.3267472612383662e-12
+      ],
+      "fine_extra_acceleration": [
+        -2398.0435391964124,
+        0.0,
+        -1.3251580220286584e-12
+      ],
+      "refinement_fraction": 1.9434882330487014e-05
+    },
+    {
+      "position_kpc": [
+        6.92820323027551,
+        3.9999999999999996,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -2002.8084362248308,
+        -1211.9791224387095,
+        -1.3217751071260518e-12
+      ],
+      "fine_extra_acceleration": [
+        -2002.82546254988,
+        -1211.921562383378,
+        -1.320854244500799e-12
+      ],
+      "refinement_fraction": 2.5641456183790464e-05
+    },
+    {
+      "position_kpc": [
+        4.898587196589413e-16,
+        8.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -1.3637446650806494e-13,
+        -2285.159831715877,
+        -1.331840980107571e-12
+      ],
+      "fine_extra_acceleration": [
+        -1.3637840134201707e-13,
+        -2285.1987029104866,
+        -1.3335912207843734e-12
+      ],
+      "refinement_fraction": 1.700998454107098e-05
+    },
+    {
+      "position_kpc": [
+        8.0,
+        0.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -2394.8544933044454,
+        0.0,
+        -283.89508368699876
+      ],
+      "fine_extra_acceleration": [
+        -2394.805930625108,
+        0.0,
+        -283.596868486061
+      ],
+      "refinement_fraction": 0.00012529067547282336
+    },
+    {
+      "position_kpc": [
+        6.92820323027551,
+        3.9999999999999996,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -2000.1358765531434,
+        -1210.4422807357946,
+        -282.15879427169796
+      ],
+      "fine_extra_acceleration": [
+        -2000.154783721499,
+        -1210.392649623863,
+        -281.98649524391993
+      ],
+      "refinement_fraction": 7.656582286200893e-05
+    },
+    {
+      "position_kpc": [
+        4.898587196589413e-16,
+        8.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -1.3618354653705056e-13,
+        -2282.045413331707,
+        -283.4690141884243
+      ],
+      "fine_extra_acceleration": [
+        -1.36186942464266e-13,
+        -2282.077202361886,
+        -283.7969874169081
+      ],
+      "refinement_fraction": 0.00014328674963359867
+    },
+    {
+      "position_kpc": [
+        8.0,
+        0.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -2295.0577907673946,
+        0.0,
+        -931.2955672088405
+      ],
+      "fine_extra_acceleration": [
+        -2295.000002776674,
+        0.0,
+        -931.4751012939971
+      ],
+      "refinement_fraction": 7.614793651691897e-05
+    },
+    {
+      "position_kpc": [
+        6.92820323027551,
+        3.9999999999999996,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1920.2030868410307,
+        -1163.8354898468078,
+        -917.8491365414538
+      ],
+      "fine_extra_acceleration": [
+        -1920.2050947376192,
+        -1163.7799952786604,
+        -917.9918739350876
+      ],
+      "refinement_fraction": 6.313867935802454e-05
+    },
+    {
+      "position_kpc": [
+        4.898587196589413e-16,
+        8.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1.3054280270172813e-13,
+        -2189.893434657618,
+        -914.1777962978118
+      ],
+      "fine_extra_acceleration": [
+        -1.3054674196665433e-13,
+        -2189.9494340196393,
+        -913.9267500922922
+      ],
+      "refinement_fraction": 0.00010839268509278055
+    },
+    {
+      "position_kpc": [
+        8.0,
+        0.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -2150.6610910600616,
+        0.0,
+        -1155.9972155572611
+      ],
+      "fine_extra_acceleration": [
+        -2150.5665694728086,
+        0.0,
+        -1156.2455237983108
+      ],
+      "refinement_fraction": 0.00010881417194683662
+    },
+    {
+      "position_kpc": [
+        6.92820323027551,
+        3.9999999999999996,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -1805.7148286592635,
+        -1094.7696537829625,
+        -1135.663680635158
+      ],
+      "fine_extra_acceleration": [
+        -1805.7020727217812,
+        -1094.7406169926426,
+        -1135.813164920244
+      ],
+      "refinement_fraction": 6.3731915084197e-05
+    },
+    {
+      "position_kpc": [
+        4.898587196589413e-16,
+        8.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -1.2269020381307967e-13,
+        -2060.7952309792104,
+        -1121.0077445809404
+      ],
+      "fine_extra_acceleration": [
+        -1.2269595712743349e-13,
+        -2060.858866433433,
+        -1120.7335996124787
+      ],
+      "refinement_fraction": 0.00011996902799998136
+    },
+    {
+      "position_kpc": [
+        20.0,
+        0.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -1167.2418763952846,
+        0.0,
+        -4.99164267341573e-13
+      ],
+      "fine_extra_acceleration": [
+        -1167.2388409889602,
+        0.0,
+        -4.990516078023571e-13
+      ],
+      "refinement_fraction": 2.60050147223623e-06
+    },
+    {
+      "position_kpc": [
+        17.320508075688775,
+        9.999999999999998,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -1008.2322976066923,
+        -585.0421651179514,
+        -4.992759620142424e-13
+      ],
+      "fine_extra_acceleration": [
+        -1008.2323758218641,
+        -585.0395590381596,
+        -4.992231824652606e-13
+      ],
+      "refinement_fraction": 2.2366850716897697e-06
+    },
+    {
+      "position_kpc": [
+        1.2246467991473533e-15,
+        20.0,
+        0.0
+      ],
+      "coarse_extra_acceleration": [
+        -7.082424161120713e-14,
+        -1161.7856719650956,
+        -4.995952293746021e-13
+      ],
+      "fine_extra_acceleration": [
+        -7.082464473884483e-14,
+        -1161.7882291766962,
+        -4.997015262803195e-13
+      ],
+      "refinement_fraction": 2.2010995948656867e-06
+    },
+    {
+      "position_kpc": [
+        20.0,
+        0.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -1166.9524345980008,
+        0.0,
+        -45.798940293858216
+      ],
+      "fine_extra_acceleration": [
+        -1166.9495059649698,
+        0.0,
+        -45.78985305432604
+      ],
+      "refinement_fraction": 8.17529920814462e-06
+    },
+    {
+      "position_kpc": [
+        17.320508075688775,
+        9.999999999999998,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -1007.9815831876105,
+        -584.8974307522745,
+        -45.80017397716415
+      ],
+      "fine_extra_acceleration": [
+        -1007.981683037061,
+        -584.894884204837,
+        -45.795917657900276
+      ],
+      "refinement_fraction": 4.253634408548191e-06
+    },
+    {
+      "position_kpc": [
+        1.2246467991473533e-15,
+        20.0,
+        0.1
+      ],
+      "coarse_extra_acceleration": [
+        -7.080650103884352e-14,
+        -1161.4959992473516,
+        -45.806641829307516
+      ],
+      "fine_extra_acceleration": [
+        -7.080689330817756e-14,
+        -1161.4984582727936,
+        -45.815214313648795
+      ],
+      "refinement_fraction": 7.672218804893409e-06
+    },
+    {
+      "position_kpc": [
+        20.0,
+        0.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -1157.4044693319272,
+        0.0,
+        -166.95134025647081
+      ],
+      "fine_extra_acceleration": [
+        -1157.4048813435068,
+        0.0,
+        -166.92739550941877
+      ],
+      "refinement_fraction": 2.047946835844912e-05
+    },
+    {
+      "position_kpc": [
+        17.320508075688775,
+        9.999999999999998,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -999.7116533062014,
+        -580.122740750701,
+        -166.93564085427965
+      ],
+      "fine_extra_acceleration": [
+        -999.7122507656325,
+        -580.1223416142774,
+        -166.92443217392034
+      ],
+      "refinement_fraction": 9.617557928215275e-06
+    },
+    {
+      "position_kpc": [
+        1.2246467991473533e-15,
+        20.0,
+        0.8
+      ],
+      "coarse_extra_acceleration": [
+        -7.02212687271437e-14,
+        -1151.9400155455928,
+        -166.9192226568206
+      ],
+      "fine_extra_acceleration": [
+        -7.022128265076057e-14,
+        -1151.939424211148,
+        -166.9417997772028
+      ],
+      "refinement_fraction": 1.9403247289089403e-05
+    },
+    {
+      "position_kpc": [
+        20.0,
+        0.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -1143.001723973795,
+        0.0,
+        -216.47431444016217
+      ],
+      "fine_extra_acceleration": [
+        -1142.9988170462038,
+        0.0,
+        -216.50161819669978
+      ],
+      "refinement_fraction": 2.360314118179773e-05
+    },
+    {
+      "position_kpc": [
+        17.320508075688775,
+        9.999999999999998,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -987.2485348902873,
+        -572.920045339933,
+        -216.36489103534964
+      ],
+      "fine_extra_acceleration": [
+        -987.2478950092739,
+        -572.9186893649857,
+        -216.3777049419258
+      ],
+      "refinement_fraction": 1.1104875239337129e-05
+    },
+    {
+      "position_kpc": [
+        1.2246467991473533e-15,
+        20.0,
+        1.5
+      ],
+      "coarse_extra_acceleration": [
+        -6.934108328759397e-14,
+        -1137.5577015112392,
+        -216.12037095397147
+      ],
+      "fine_extra_acceleration": [
+        -6.934131393196125e-14,
+        -1137.5602332468227,
+        -216.09457200006523
+      ],
+      "refinement_fraction": 2.238777545132389e-05
+    }
+  ],
+  "input_hashes": {
+    "research_work\\results\\full-bar-completion\\run.py": "d5bac729589e8e7af2a3b30e43b9a987fec2920803b97fe61f21a0366c5517d9",
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\data-cache\\full-bar-completion\\axis-disk-ec0d15eb7bb9.npz": "9ce6b854f866cf434391e730e6941c41d3fc1c1a80f991946b33b938539d7567",
+    "research_work\\data-cache\\full-bar-completion\\axisymmetric-reference-80-L128-N512.npz": "ebdcc0f52093d0048f18a4d7f4d25443f94dc0d9ca68b6f0d871432bef8476f5",
+    "research_work\\data-cache\\full-bar-completion\\coarse.npz": "7f228021134b5277700c2991354ccacf30888eacee6db826fdd971305d62f4cd",
+    "research_work\\data-cache\\full-bar-completion\\fine.npz": "c1e862fa166251bd73f462792cf23e8ed1a10295ed46f8cd38d13b407dfb1731",
+    "research_work\\data-cache\\full-bar-completion\\finer.npz": "47014aaaf398ba8ecaf45a50ac792ef81dbaab1b67364acc7d4095f551917d6b",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd"
+  },
+  "outer_boundary_refined": false,
+  "disk_field_refined": false,
+  "full_orbit_inference_ready": false,
+  "holdouts_opened": false
+}
