@@ -1,0 +1,28 @@
+{
+  "source_rows": 10737,
+  "unique_pgc": 10737,
+  "photometry_present": {
+    "gmag": 7502,
+    "rmag": 7502,
+    "imag": 7502,
+    "W1mag": 5478,
+    "W2mag": 5475
+  },
+  "exact_overlap_with_previously_selected_indicator_tracers": 109,
+  "overlap_methods": {
+    "TRGB": 75,
+    "CEP": 24,
+    "SBF": 9,
+    "MASER": 1
+  },
+  "overlap_with_i_photometry": 74,
+  "overlap_with_W1_photometry": 97,
+  "source_query": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J/ApJ/902/145/table1&-out=PGC,Name,Inc,e_Inc,Wmx,e_Wmx,gmag,rmag,imag,W1mag,W2mag,Rei,ReW1,icmag,Ai&-out.max=unlimited",
+  "interpretation": "Measurement-stage inputs only. Wmx is already adjusted, icmag includes corrections. No velocities or distance-outcome columns queried; features are not certified fresh observations.",
+  "raw_sha256": {
+    "research_work/data-cache/dense-distance-audit/tf-observer-features.tsv": "c99d49ea1d102e1f95f7d9d37f181112176d41688a7e2f78e74a045fc931cf40",
+    "research_work/data-cache/dense-distance-audit/tf-ReadMe.txt": "45fa3cca5346aff29bcf9785e7b08e8ab34b1d67e80b359c0d28bdbd18e42581",
+    "research_work/results/extended-environment-geometry/selected-tracers.csv": "f8d95ead5a392bfaeb90c1a9e6d40be67b435d060f999634face3da3a7415e31"
+  },
+  "normalized_feature_sha256": "aa4d9df803b95f9df93adfaa006a0b1e92fd745889c1e55b06dc546ecde3cdf2"
+}
