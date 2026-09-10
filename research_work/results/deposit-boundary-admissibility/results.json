@@ -1,0 +1,121 @@
+{
+  "classification": "Conditional collisionless particle-source consistency; not new observational validation",
+  "p": 0.4624587420104399,
+  "training_configurations": 99,
+  "systems": 33,
+  "isotropic_sharp_edge_source_admissible": false,
+  "circular_shell_equilibrium_exists_conditionally": true,
+  "collective_stability_or_capture_formation_established": false,
+  "max_density_integral_relative_error": 4.440892098500626e-16,
+  "max_potential_integral_relative_error": 1.7763568394002505e-15,
+  "max_density_slope_relative_error": 6.598765978083065e-11,
+  "orbit_checks": [
+    {
+      "cutoff_over_Re": 5.0,
+      "radius_over_cutoff": 0.1,
+      "max_fractional_radius_drift_10_orbits": 7.62923058061915e-12
+    },
+    {
+      "cutoff_over_Re": 5.0,
+      "radius_over_cutoff": 0.9,
+      "max_fractional_radius_drift_10_orbits": 3.710365348297273e-12
+    },
+    {
+      "cutoff_over_Re": 20.0,
+      "radius_over_cutoff": 0.1,
+      "max_fractional_radius_drift_10_orbits": 3.799405234872211e-12
+    },
+    {
+      "cutoff_over_Re": 20.0,
+      "radius_over_cutoff": 0.9,
+      "max_fractional_radius_drift_10_orbits": 3.803624082365786e-12
+    },
+    {
+      "cutoff_over_Re": 100.0,
+      "radius_over_cutoff": 0.1,
+      "max_fractional_radius_drift_10_orbits": 4.160893851690162e-12
+    },
+    {
+      "cutoff_over_Re": 100.0,
+      "radius_over_cutoff": 0.9,
+      "max_fractional_radius_drift_10_orbits": 5.838440841898773e-12
+    }
+  ],
+  "inputs_sha256": {
+    "joint-galaxy-audit\\results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "lens-training-pilot\\predictions-refined-updated-profile.json": "d9c1e64550be906b4f9ab2d809fe0856da0bc1069becf2c5db221e3f16a885de",
+    "lens-photometric-audit\\training-photometry.json": "4303f0a0ddc8b3173dd8fc7a92cb1391cb9f30f371e909e6817be924fabf376c",
+    "lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af"
+  },
+  "cutoff_summaries": [
+    {
+      "cutoff_over_Re": 5.0,
+      "necessary_condition_crossing_over_cutoff": {
+        "min": 0.7540422739014235,
+        "median": 0.757870209699582,
+        "max": 0.761375877243103
+      },
+      "equivalent_source_mass_fraction_outside_crossing": {
+        "min": 0.27488667345716566,
+        "median": 0.27886544004897773,
+        "max": 0.2832077267785533
+      },
+      "circular_support_speed_at_Re_km_s": {
+        "min": 325.49152072851473,
+        "median": 424.56189878502187,
+        "max": 549.5001805766348
+      },
+      "circular_support_speed_at_edge_km_s": {
+        "min": 247.00023685980378,
+        "median": 327.46987854780593,
+        "max": 424.4236638886488
+      }
+    },
+    {
+      "cutoff_over_Re": 20.0,
+      "necessary_condition_crossing_over_cutoff": {
+        "min": 0.7633647493816783,
+        "median": 0.7668179780968625,
+        "max": 0.769081681346017
+      },
+      "equivalent_source_mass_fraction_outside_crossing": {
+        "min": 0.25150135821414676,
+        "median": 0.25394006340686137,
+        "max": 0.2576591550396865
+      },
+      "circular_support_speed_at_Re_km_s": {
+        "min": 325.31167677160244,
+        "median": 424.3883733485965,
+        "max": 549.3997169617145
+      },
+      "circular_support_speed_at_edge_km_s": {
+        "min": 203.69548682361574,
+        "median": 273.6379462586385,
+        "max": 368.10602412195783
+      }
+    },
+    {
+      "cutoff_over_Re": 100.0,
+      "necessary_condition_crossing_over_cutoff": {
+        "min": 0.7706978243847389,
+        "median": 0.771757547177355,
+        "max": 0.7723362522533406
+      },
+      "equivalent_source_mass_fraction_outside_crossing": {
+        "min": 0.24362969095184162,
+        "median": 0.24424268025202023,
+        "max": 0.24536509408234408
+      },
+      "circular_support_speed_at_Re_km_s": {
+        "min": 325.3079703962755,
+        "median": 424.3848218432453,
+        "max": 549.3976698737143
+      },
+      "circular_support_speed_at_edge_km_s": {
+        "min": 195.57067891613764,
+        "median": 268.25424809510594,
+        "max": 364.04648416714144
+      }
+    }
+  ]
+}
