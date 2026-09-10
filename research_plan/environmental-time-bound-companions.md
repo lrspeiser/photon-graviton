@@ -2,6 +2,8 @@
 
 Working research specification, 9 September 2026. This document consolidates the latest discussion; it is a hypothesis within a fictional nonexpanding universe, not an established branch of physics or a completed first-principles theory. The descriptive title makes no originality claim.
 
+**Follow-up clarification and test:** the [screened-clock diagnostic](../research_work/results/void-screening/report.md) treats the environmental response in equations (3)-(4) as an additional factor multiplying a baseline clock law, rather than as the complete clock law. Its 180 illustrative cases show that accumulated local photon loss can be tiny without screening, while a slower-void clock factor can oppose ordinary gravitational gradients. A faster-void sign is tested as a separate alternative, not adopted. No clock amplitude or sign is established by redshift alone; the equations below preserve the earlier proposed branch for provenance.
+
 ## The concept in ordinary language
 
 The universe has the observed stars, galaxies and astronomical signals of our own, but permits a different relationship between gravity, time and light. Deep gravitational wells suppress an environmental time effect. In weak gravitational environments, that effect enables light to transfer energy continuously into a companion field. The surviving photons become redder. Companions carry the transferred energy forward at the locally measured speed of light and do not collect in voids.
