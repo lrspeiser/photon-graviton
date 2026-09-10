@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "purpose": "Prepare spatial holdouts and propagate measurement uncertainty for the existing photon-companion and bulge-potential tests. This is not a completed orbital fit.",
+  "parent_catalog": "matched-with-gaia-covariance.parquet",
+  "parent_sha256": "a60182c30b98fe06d7e928a3aed5f70fa59342bdc44dc65b9f8005ff0b56f959",
+  "selection": "gaia_quality_candidate from stellar-data-readiness; no additional kinematic outlier clipping",
+  "split": {
+    "group": "Gaia source-ID nested HEALPix level 4 sky cell; approximately 3.7 degree scale",
+    "pixel_integer_divisor": 2251799813685248,
+    "hash_salt": "photon-graviton-stellar-spatial-v1",
+    "rule": "First 8 SHA256 bytes as big-endian integer modulo 10: 0-5 training, 6-7 validation, 8-9 test",
+    "disclosure": "All-catalog exploratory moments were computed previously. These are model-development holdouts fixed before an orbital fit, not untouched blind observations. Sky-block splitting does not eliminate all shared selection/systematic errors."
+  },
+  "uncertainty": {
+    "draws_per_mode": 64,
+    "seed": 260910,
+    "distance": "Asymmetric log-distance distribution matching StarHorse 16th, 50th and 84th quantiles; extrapolated tails. This is an approximation to the marginal posterior.",
+    "modes": ["independent", "conditional_minus_0.037", "conditional_minus_0.017", "conditional_plus_0.003"],
+    "conditional_model": "Gaussian Gaia RA*,Dec,proper-motion distribution conditioned on parallax = 1/distance + bias, mixed over the approximate StarHorse posterior. No additional parallax likelihood multiplication.",
+    "limitations": "StarHorse reprocessed parallaxes/uncertainties and does not supply the full joint distance-astrometry posterior here. Constant bias values bracket a sensitivity case, not the Gaia per-source zero-point calibration. No spatially correlated calibration errors or survey selection correction is claimed."
+  },
+  "frame": {"R0_kpc": 8.2, "z_sun_kpc": 0.0208, "solar_velocity_astropy_kms": [11.1, 248.0, 7.25]},
+  "photon_prediction": {"alpha_per_Mpc": 0.0002488993286382367, "speed_of_light_kms": 299792.458, "distance_unit": "kpc divided by 1000 before using alpha", "status": "Frozen earlier redshift fit; known exponential accumulation formula applied to proposed loss mechanism. Does not predict orbital velocities."},
+  "release_rule": "Only training velocity moments may be summarized in this audit. Validation/test roles, coverage and measurement-error summaries may be checked. Reserve their orbital-fit scores for frozen models."
+}

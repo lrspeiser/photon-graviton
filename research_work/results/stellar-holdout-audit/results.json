@@ -1,0 +1,155 @@
+{
+  "sources": 128772,
+  "roles": {
+    "training": 77927,
+    "test": 26090,
+    "validation": 24755
+  },
+  "sky_pixels": 1720,
+  "fields_spanning_roles": 1133,
+  "coverage_by_role_region": {
+    "training": {
+      "0": 53582,
+      "1": 375,
+      "2": 1687,
+      "3": 4740,
+      "4": 17543
+    },
+    "validation": {
+      "0": 17166,
+      "1": 46,
+      "2": 1350,
+      "3": 1308,
+      "4": 4885
+    },
+    "test": {
+      "0": 17899,
+      "1": 296,
+      "2": 1048,
+      "3": 1655,
+      "4": 5192
+    }
+  },
+  "minimum_correlation_eigenvalue": 0.0078077199388656105,
+  "role_allocation_sha256": "f07267caadc0377c5b0092b2dcc72f44779b7a9b155cfe952d339712d8d4dfd8",
+  "region_codes": {
+    "0": "outside targets",
+    "1": "plane beneath bulge",
+    "2": "off-plane bulge",
+    "3": "disk plane control",
+    "4": "off-plane disk control"
+  },
+  "modes": {
+    "independent": {
+      "file": "stellar-errors-independent.parquet",
+      "sha256": "136e766415ad770208cae4bea9d3226c5946e406a75074028b2bb09af0fda4f1",
+      "median_uncertainty": {
+        "R_kpc": 0.0628644684250496,
+        "z_kpc": 0.02317573924097303,
+        "phi_rad": 0.00649529636258914,
+        "vR_kms": 1.048849994063637,
+        "vphi_kms": 1.2531467423586282,
+        "vz_kms": 0.886961709931994
+      },
+      "q84_uncertainty": {
+        "R_kpc": 0.29974900568571566,
+        "z_kpc": 0.07411993446255875,
+        "phi_rad": 0.04322846798208059,
+        "vR_kms": 4.480524015787856,
+        "vphi_kms": 6.521320450501404,
+        "vz_kms": 3.1970680620042344
+      },
+      "median_velocity_shift_from_catalog_kms": [
+        0.15940053026313517,
+        0.19655113520612133,
+        0.12217979185989858
+      ],
+      "target_stars_region_change_fraction": 0.051853193146417446
+    },
+    "conditional_minus_0.037": {
+      "file": "stellar-errors-conditional_minus_0.037.parquet",
+      "sha256": "c5a31b78456b88d2ba2ced823ddf77ae36cf256e4e5d65088f0c9e914f5d34c3",
+      "median_uncertainty": {
+        "R_kpc": 0.06286446841927534,
+        "z_kpc": 0.02317573923950208,
+        "phi_rad": 0.006495296365124387,
+        "vR_kms": 1.0485144178317043,
+        "vphi_kms": 1.253187282414223,
+        "vz_kms": 0.8873547845234734
+      },
+      "q84_uncertainty": {
+        "R_kpc": 0.29974900566579926,
+        "z_kpc": 0.07411993443196137,
+        "phi_rad": 0.043228467990844746,
+        "vR_kms": 4.483129954563346,
+        "vphi_kms": 6.509164116309072,
+        "vz_kms": 3.1949525070428426
+      },
+      "median_velocity_shift_from_catalog_kms": [
+        0.18312935082517434,
+        0.21493642886078135,
+        0.1659902811206868
+      ],
+      "target_stars_region_change_fraction": 0.051853193146417446
+    },
+    "conditional_minus_0.017": {
+      "file": "stellar-errors-conditional_minus_0.017.parquet",
+      "sha256": "b3526517e426a41f294abea0b5b43c3a497c65d0d2db6592e5fcd5f22c44ecb0",
+      "median_uncertainty": {
+        "R_kpc": 0.06286446841951857,
+        "z_kpc": 0.023175739239126934,
+        "phi_rad": 0.006495296365042133,
+        "vR_kms": 1.0483261347739528,
+        "vphi_kms": 1.2528514579244763,
+        "vz_kms": 0.8870401474215672
+      },
+      "q84_uncertainty": {
+        "R_kpc": 0.29974900566806373,
+        "z_kpc": 0.07411993443414866,
+        "phi_rad": 0.0432284679902371,
+        "vR_kms": 4.484080900543223,
+        "vphi_kms": 6.5093701004487,
+        "vz_kms": 3.1927103754683017
+      },
+      "median_velocity_shift_from_catalog_kms": [
+        0.17650607451211098,
+        0.20962904183211606,
+        0.15421022033740517
+      ],
+      "target_stars_region_change_fraction": 0.051853193146417446
+    },
+    "conditional_plus_0.003": {
+      "file": "stellar-errors-conditional_plus_0.003.parquet",
+      "sha256": "f483b96cd3ac4c7a845781a9c355034878807ac8c2d8ff1d572991f2fa65ef72",
+      "median_uncertainty": {
+        "R_kpc": 0.06286446841976112,
+        "z_kpc": 0.023175739238751852,
+        "phi_rad": 0.006495296364959869,
+        "vR_kms": 1.0481506854005018,
+        "vphi_kms": 1.252894213986408,
+        "vz_kms": 0.8869672550499388
+      },
+      "q84_uncertainty": {
+        "R_kpc": 0.29974900567032786,
+        "z_kpc": 0.07411993443633563,
+        "phi_rad": 0.04322846798962935,
+        "vR_kms": 4.482941210911863,
+        "vphi_kms": 6.5092100215798565,
+        "vz_kms": 3.191868363548747
+      },
+      "median_velocity_shift_from_catalog_kms": [
+        0.17666868553738624,
+        0.2103027312489445,
+        0.15366274233652666
+      ],
+      "target_stars_region_change_fraction": 0.051853193146417446
+    }
+  },
+  "frozen_conversion_equivalent_los_kms_quantiles": [
+    0.014003577488659285,
+    0.10600671918768273,
+    0.23274775142008164,
+    0.49924291982336133,
+    8.1631981663095
+  ]
+}
