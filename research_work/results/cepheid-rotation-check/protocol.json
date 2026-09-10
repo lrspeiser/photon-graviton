@@ -1,0 +1,50 @@
+{
+  "status": "Frozen before numerical table acquisition; verify commit order in git",
+  "target_title": "The rotation curve of the Milky Way measured by classical Cepheids from Gaia DR3",
+  "target_url": "https://academic.oup.com/mnras/article/546/2/stag011/8416425",
+  "input_target": "Published final circular-velocity Table 1, including its stated asymmetric-drift correction and uncertainties",
+  "prior_exposure": "Search-result title, sample size 903, stated range 6<R<18 kpc, and table availability seen; numerical table not yet read in this check. Same Galaxy and Gaia astrometry as earlier work; individual-star overlap not established.",
+  "eligibility": "All finite positive-radius, positive-speed rows in the published final Table 1 within 6<=R<=18 kpc; no residual-based exclusions. Missing uncertainties retain a row for unweighted metrics but prevent uncertainty scoring.",
+  "baseline": "Same axisymmetrized bar, nuclear components, two stellar and two gas disks, central mass as archived conservative completion; no halo",
+  "prediction_resolution": {
+    "refined": true,
+    "response_outer_radius_kpc": 200
+  },
+  "models": [
+    {
+      "name": "ordinary",
+      "lambda_mass": 1.0,
+      "role": "fixed ordinary-matter reference"
+    },
+    {
+      "name": "conservative_completion",
+      "lambda_mass": 1.0,
+      "role": "primary frozen empirical-field prediction"
+    },
+    {
+      "name": "rotation_mass_adjusted_completion",
+      "lambda_mass": 1.0777525635344904,
+      "role": "secondary normalization previously fitted to Eilers rotation rows; no Cepheid fitting"
+    }
+  ],
+  "metrics": [
+    "Unweighted circular-speed RMS in km/s",
+    "Mean signed prediction-minus-observation residual",
+    "Median predicted/observed ratio",
+    "Per-row residual with published error when available; any error-standardized summary is diagnostic only because full covariance/systematics are not established"
+  ],
+  "prohibitions": [
+    "No parameter refit on this table",
+    "No choosing the winning mass or geometry after opening the table",
+    "No calling shared Gaia systematics or model-derived circular speeds fully independent raw-force measurements",
+    "No treating rotation agreement as proof of photon origin or vertical/lensing agreement"
+  ],
+  "hashes": {
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\results\\conservative-field-completion\\results-refined.json": "400e15d8e969b6ce5bd73a4106307d112048d5c90bea27a035fcb1b3c9739e54",
+    "research_work\\results\\joint-galaxy-audit\\results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "research_work\\results\\milky-way-mass-response\\results.json": "d6167c0a22775c6f9de3cd49237f7f033d9412240e6ea08a7429d61ab95240b9",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd"
+  }
+}
