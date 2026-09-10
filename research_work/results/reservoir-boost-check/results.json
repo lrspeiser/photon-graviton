@@ -1,0 +1,66 @@
+{
+  "scope": "Necessary symmetric-stress/boost condition for the modeled late state; not a general no-go theorem.",
+  "assumed_closed_system": "Only outgoing EM, outgoing advected reservoir and the previously modeled support.",
+  "known_identity": "dX_energy/dt=c^2*P_total/E_total for an isolated system with conserved symmetric stress-energy.",
+  "rows": [
+    {
+      "support_rest_energy_ratio": 10.0,
+      "tight": false,
+      "total_energy_including_support_rest_energy": 10.99999999999878,
+      "total_canonical_momentum": 1.0,
+      "outgoing_reservoir_energy": 0.13614716989159203,
+      "energy_centroid_speed": 0.10328610635379257,
+      "required_relativistic_centroid_speed": 0.090909090909101,
+      "centroid_speed_difference": 0.012377015444691566,
+      "relative_center_speed_mismatch": 0.13614716989159215,
+      "energy_flow_minus_canonical_momentum": 0.13614716989159215,
+      "added_momentum_if_reservoir_relabelled_massless": 0.13614716989159203
+    },
+    {
+      "support_rest_energy_ratio": 100.0,
+      "tight": false,
+      "total_energy_including_support_rest_energy": 100.99999999998238,
+      "total_canonical_momentum": 1.0,
+      "outgoing_reservoir_energy": 0.13896464056316327,
+      "energy_centroid_speed": 0.011276877629340218,
+      "required_relativistic_centroid_speed": 0.009900990099011629,
+      "centroid_speed_difference": 0.0013758875303285893,
+      "relative_center_speed_mismatch": 0.13896464056316327,
+      "energy_flow_minus_canonical_momentum": 0.13896464056316327,
+      "added_momentum_if_reservoir_relabelled_massless": 0.13896464056316327
+    },
+    {
+      "support_rest_energy_ratio": 10000.0,
+      "tight": false,
+      "total_energy_including_support_rest_energy": 10000.999999999996,
+      "total_canonical_momentum": 1.0,
+      "outgoing_reservoir_energy": 0.13928873485282392,
+      "energy_centroid_speed": 0.00011391748173710873,
+      "required_relativistic_centroid_speed": 9.999000099990004e-05,
+      "centroid_speed_difference": 1.3927480737208685e-05,
+      "relative_center_speed_mismatch": 0.139288734852824,
+      "energy_flow_minus_canonical_momentum": 0.139288734852824,
+      "added_momentum_if_reservoir_relabelled_massless": 0.13928873485282392
+    },
+    {
+      "support_rest_energy_ratio": 10.0,
+      "tight": true,
+      "total_energy_including_support_rest_energy": 10.999999999998977,
+      "total_canonical_momentum": 0.9999999999999997,
+      "outgoing_reservoir_energy": 0.13614716989172512,
+      "energy_centroid_speed": 0.10328610635380278,
+      "required_relativistic_centroid_speed": 0.09090909090909934,
+      "centroid_speed_difference": 0.012377015444703446,
+      "relative_center_speed_mismatch": 0.13614716989172537,
+      "energy_flow_minus_canonical_momentum": 0.13614716989172526,
+      "added_momentum_if_reservoir_relabelled_massless": 0.13614716989172512
+    }
+  ],
+  "all_nonzero_conversion_cases_fail": true,
+  "omitted_background_or_preferred_frame_ruled_out": false,
+  "holdouts_opened": false,
+  "source_hashes": {
+    "research_work\\results\\reservoir-boost-check\\run.py": "b227a6139e7164d4e4f8ade1351deddb7eab924daa9914b1db3987665c35560f",
+    "research_work\\results\\bounded-profile-momentum\\moving-results.json": "f12c9888ebe2c4b63bd3ddb674d083b68366cf96df9701e28872ac3cceece7ca"
+  }
+}
