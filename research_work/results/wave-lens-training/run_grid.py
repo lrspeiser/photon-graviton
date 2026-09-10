@@ -9,6 +9,8 @@ for i in range(9):
     cell=directory/f'cell-{i}';cell.mkdir(exist_ok=True)
     with (cell/'execution.log').open('w') as log:
         outcome=subprocess.run([sys.executable,str(H/'run.py'),'--grid-index',str(i)],stdout=log,stderr=subprocess.STDOUT)
+    logfile=cell/'execution.log'
+    logfile.write_text(logfile.read_text(),newline='\n')
     state={'cell':i,'exit_code':outcome.returncode}
     if outcome.returncode==0:
         result=json.loads((cell/'results.json').read_text())
