@@ -1,0 +1,206 @@
+{
+  "classification": "Conditional same-field consistency check; no observational scores or photon-supply budget",
+  "calibration_path": "research_work\\results\\wave-lens-training\\parameter-grid\\selected-calibration.json",
+  "calibration_sha256": "92dcffd28a9fc2e623d77383206bc708138084f581a8440e80ccb0e039618efd",
+  "frozen_mass_eV_c2": 1e-24,
+  "production": [
+    {
+      "input": "1 GHz photon",
+      "each_photon_energy_eV": 4.135667696923859e-06,
+      "required_full_opening_angle_rad": 2.4179892420849183e-19,
+      "produced_scalar_energy_eV": 8.271335393847717e-06,
+      "produced_scalar_lorentz_factor": 8.271335393847717e+18,
+      "one_minus_scalar_speed_over_c": 7.308339968547996e-39,
+      "classification": "Vacuum two-photon to one on-shell scalar; kinematic condition, not rate"
+    },
+    {
+      "input": "1 meV photon",
+      "each_photon_energy_eV": 0.001,
+      "required_full_opening_angle_rad": 1e-21,
+      "produced_scalar_energy_eV": 0.002,
+      "produced_scalar_lorentz_factor": 2e+21,
+      "one_minus_scalar_speed_over_c": 1.25e-43,
+      "classification": "Vacuum two-photon to one on-shell scalar; kinematic condition, not rate"
+    },
+    {
+      "input": "1 eV photon",
+      "each_photon_energy_eV": 1.0,
+      "required_full_opening_angle_rad": 1e-24,
+      "produced_scalar_energy_eV": 2.0,
+      "produced_scalar_lorentz_factor": 2e+24,
+      "one_minus_scalar_speed_over_c": 1.25e-49,
+      "classification": "Vacuum two-photon to one on-shell scalar; kinematic condition, not rate"
+    },
+    {
+      "input": "1 keV photon",
+      "each_photon_energy_eV": 1000.0,
+      "required_full_opening_angle_rad": 1e-27,
+      "produced_scalar_energy_eV": 2000.0,
+      "produced_scalar_lorentz_factor": 2e+27,
+      "one_minus_scalar_speed_over_c": 1.25e-55,
+      "classification": "Vacuum two-photon to one on-shell scalar; kinematic condition, not rate"
+    },
+    {
+      "input": "1 MeV photon",
+      "each_photon_energy_eV": 1000000.0,
+      "required_full_opening_angle_rad": 1e-30,
+      "produced_scalar_energy_eV": 2000000.0,
+      "produced_scalar_lorentz_factor": 2e+30,
+      "one_minus_scalar_speed_over_c": 1.25e-61,
+      "classification": "Vacuum two-photon to one on-shell scalar; kinematic condition, not rate"
+    }
+  ],
+  "storage": [
+    {
+      "incoming_companion_energy_eV": 4.135667696923859e-06,
+      "energy_scale_label": "1 GHz energy scale",
+      "illustrative_final_speed_kms": 100,
+      "cold_energy_per_quantum_eV": 1.0000000556325074e-24,
+      "kinetic_energy_over_rest_energy": 5.5632507445144405e-08,
+      "energy_fraction_retained_in_same_one_cold_quantum": 2.4179893766037226e-19,
+      "cold_quanta_for_all_incoming_energy": 4.1356674668463073e+18
+    },
+    {
+      "incoming_companion_energy_eV": 0.001,
+      "energy_scale_label": "1 meV energy scale",
+      "illustrative_final_speed_kms": 100,
+      "cold_energy_per_quantum_eV": 1.0000000556325074e-24,
+      "kinetic_energy_over_rest_energy": 5.5632507445144405e-08,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000000556325074e-21,
+      "cold_quanta_for_all_incoming_energy": 9.999999443674957e+20
+    },
+    {
+      "incoming_companion_energy_eV": 1.0,
+      "energy_scale_label": "1 eV energy scale",
+      "illustrative_final_speed_kms": 100,
+      "cold_energy_per_quantum_eV": 1.0000000556325074e-24,
+      "kinetic_energy_over_rest_energy": 5.5632507445144405e-08,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000000556325074e-24,
+      "cold_quanta_for_all_incoming_energy": 9.999999443674957e+23
+    },
+    {
+      "incoming_companion_energy_eV": 1000.0,
+      "energy_scale_label": "1 keV energy scale",
+      "illustrative_final_speed_kms": 100,
+      "cold_energy_per_quantum_eV": 1.0000000556325074e-24,
+      "kinetic_energy_over_rest_energy": 5.5632507445144405e-08,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000000556325074e-27,
+      "cold_quanta_for_all_incoming_energy": 9.999999443674956e+26
+    },
+    {
+      "incoming_companion_energy_eV": 1000000.0,
+      "energy_scale_label": "1 MeV energy scale",
+      "illustrative_final_speed_kms": 100,
+      "cold_energy_per_quantum_eV": 1.0000000556325074e-24,
+      "kinetic_energy_over_rest_energy": 5.5632507445144405e-08,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000000556325074e-30,
+      "cold_quanta_for_all_incoming_energy": 9.999999443674956e+29
+    },
+    {
+      "incoming_companion_energy_eV": 4.135667696923859e-06,
+      "energy_scale_label": "1 GHz energy scale",
+      "illustrative_final_speed_kms": 200,
+      "cold_energy_per_quantum_eV": 1.0000002225300856e-24,
+      "kinetic_energy_over_rest_energy": 2.2253008549016006e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 2.417989780160271e-19,
+      "cold_quanta_for_all_incoming_energy": 4.135666776613577e+18
+    },
+    {
+      "incoming_companion_energy_eV": 0.001,
+      "energy_scale_label": "1 meV energy scale",
+      "illustrative_final_speed_kms": 200,
+      "cold_energy_per_quantum_eV": 1.0000002225300856e-24,
+      "kinetic_energy_over_rest_energy": 2.2253008549016006e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000002225300856e-21,
+      "cold_quanta_for_all_incoming_energy": 9.999997774699641e+20
+    },
+    {
+      "incoming_companion_energy_eV": 1.0,
+      "energy_scale_label": "1 eV energy scale",
+      "illustrative_final_speed_kms": 200,
+      "cold_energy_per_quantum_eV": 1.0000002225300856e-24,
+      "kinetic_energy_over_rest_energy": 2.2253008549016006e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000002225300856e-24,
+      "cold_quanta_for_all_incoming_energy": 9.99999777469964e+23
+    },
+    {
+      "incoming_companion_energy_eV": 1000.0,
+      "energy_scale_label": "1 keV energy scale",
+      "illustrative_final_speed_kms": 200,
+      "cold_energy_per_quantum_eV": 1.0000002225300856e-24,
+      "kinetic_energy_over_rest_energy": 2.2253008549016006e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000002225300856e-27,
+      "cold_quanta_for_all_incoming_energy": 9.99999777469964e+26
+    },
+    {
+      "incoming_companion_energy_eV": 1000000.0,
+      "energy_scale_label": "1 MeV energy scale",
+      "illustrative_final_speed_kms": 200,
+      "cold_energy_per_quantum_eV": 1.0000002225300856e-24,
+      "kinetic_energy_over_rest_energy": 2.2253008549016006e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000002225300855e-30,
+      "cold_quanta_for_all_incoming_energy": 9.99999777469964e+29
+    },
+    {
+      "incoming_companion_energy_eV": 4.135667696923859e-06,
+      "energy_scale_label": "1 GHz energy scale",
+      "illustrative_final_speed_kms": 300,
+      "cold_energy_per_quantum_eV": 1.0000005006929012e-24,
+      "kinetic_energy_over_rest_energy": 5.006929012639493e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 2.417990452754967e-19,
+      "cold_quanta_for_all_incoming_energy": 4.1356656262254377e+18
+    },
+    {
+      "incoming_companion_energy_eV": 0.001,
+      "energy_scale_label": "1 meV energy scale",
+      "illustrative_final_speed_kms": 300,
+      "cold_energy_per_quantum_eV": 1.0000005006929012e-24,
+      "kinetic_energy_over_rest_energy": 5.006929012639493e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000005006929012e-21,
+      "cold_quanta_for_all_incoming_energy": 9.999994993073494e+20
+    },
+    {
+      "incoming_companion_energy_eV": 1.0,
+      "energy_scale_label": "1 eV energy scale",
+      "illustrative_final_speed_kms": 300,
+      "cold_energy_per_quantum_eV": 1.0000005006929012e-24,
+      "kinetic_energy_over_rest_energy": 5.006929012639493e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000005006929012e-24,
+      "cold_quanta_for_all_incoming_energy": 9.999994993073495e+23
+    },
+    {
+      "incoming_companion_energy_eV": 1000.0,
+      "energy_scale_label": "1 keV energy scale",
+      "illustrative_final_speed_kms": 300,
+      "cold_energy_per_quantum_eV": 1.0000005006929012e-24,
+      "kinetic_energy_over_rest_energy": 5.006929012639493e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000005006929012e-27,
+      "cold_quanta_for_all_incoming_energy": 9.999994993073495e+26
+    },
+    {
+      "incoming_companion_energy_eV": 1000000.0,
+      "energy_scale_label": "1 MeV energy scale",
+      "illustrative_final_speed_kms": 300,
+      "cold_energy_per_quantum_eV": 1.0000005006929012e-24,
+      "kinetic_energy_over_rest_energy": 5.006929012639493e-07,
+      "energy_fraction_retained_in_same_one_cold_quantum": 1.0000005006929013e-30,
+      "cold_quanta_for_all_incoming_energy": 9.999994993073495e+29
+    }
+  ],
+  "head_on_cold_production": {
+    "each_photon_energy_eV": 5e-25,
+    "each_photon_frequency_hz": 1.208994621042459e-10,
+    "wavelength_m": 2.479683968664005e+18
+  },
+  "verification": {
+    "arithmetic_decimal_precision": 110,
+    "max_independent_invariant_relative_error": 1.8811356126516222e-52,
+    "all_energy_partition_reciprocity_checks_pass": true
+  },
+  "assumptions": [
+    "Locally vacuum photons and usual special-relativistic dispersion",
+    "One on-shell scalar in two-photon production diagnostic",
+    "Same scalar rest mass as frozen nonrelativistic lens-source fit",
+    "Cold-state counting is an occupation/particle diagnostic, not proof of particle-number conservation"
+  ]
+}
