@@ -1,0 +1,49 @@
+{
+  "galaxies": 149,
+  "predictions": 1788,
+  "skipped_inner_impact_parameters": 0,
+  "parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "lensing_metric_assumption": "Psi_c=Phi_c, static weak field, straight unperturbed rays and asymptotically distant endpoints",
+  "geometry": "Spherical effective extra source; radial template over measured interval, point-baryon power-law continuation to trial cutoff, fixed enclosed mass beyond cutoff.",
+  "negative_density_template_galaxies": 3,
+  "conditional_boundary_changes": {
+    "0.25": {
+      "galaxies": 149,
+      "median_ratio_cut10_to_cut1": 1.1371976838567983,
+      "minimum_ratio": 1.0925368859356204,
+      "maximum_ratio": 1.2490186451649274
+    },
+    "0.5": {
+      "galaxies": 149,
+      "median_ratio_cut10_to_cut1": 1.2313487604566462,
+      "minimum_ratio": 1.1954909620622174,
+      "maximum_ratio": 1.3530430689035147
+    },
+    "1.0": {
+      "galaxies": 149,
+      "median_ratio_cut10_to_cut1": 1.5896341177268394,
+      "minimum_ratio": 1.5896341177268387,
+      "maximum_ratio": 1.5896341177268398
+    }
+  },
+  "analytic_powerlaw_integral": 1.6587751006617615,
+  "numerical_powerlaw_integral": 1.6587751006617617,
+  "new_parameters_fitted": false,
+  "observed_lensing_rows": 0,
+  "heldout_likelihood_scores_opened": false,
+  "limitations": [
+    "No capture-predicted outer radius; trial cutoffs are sensitivity cases.",
+    "Spherical extension of disk rotation is an added approximation; some templates require negative effective source density.",
+    "Extra deflection only, not total lensing, shear, image separation or a lens equation.",
+    "Neither the lens metric nor the companion origin is derived by this calculation."
+  ],
+  "input_sha256": {
+    "galaxy-rotation-predictions.json": "8b49ac839bb9becb96b75bbf818cf91a47d49c063ed272e9649124e1f370cc77",
+    "results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f"
+  }
+}
