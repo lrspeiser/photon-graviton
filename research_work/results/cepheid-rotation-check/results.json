@@ -1,0 +1,38 @@
+{
+  "protocol_commit": "f7b2980",
+  "protocol_sha256": "296fc2d295821b942454afb25047b79f9487e97c9a7c13adea8e4b45236b2e85",
+  "observations_sha256": "3669b8b8146e8a7f51a338958adbf6b1d76bd029e116087a9fcc52ef1173fe89",
+  "all_frozen_hashes_match": true,
+  "parameters_refitted": false,
+  "scores": {
+    "ordinary": {
+      "rows": 12,
+      "rmse_kms": 76.83556409383793,
+      "bias_kms": -75.74537419249695,
+      "median_prediction_observation_ratio": 0.67937583044989,
+      "rms_residual_over_published_bootstrap_error": 54.24489072782825,
+      "within_one_published_error": 0,
+      "underpredicted_rows": 12
+    },
+    "conservative_completion": {
+      "rows": 12,
+      "rmse_kms": 20.464832997671675,
+      "bias_kms": -19.530661222246007,
+      "median_prediction_observation_ratio": 0.9180460782162928,
+      "rms_residual_over_published_bootstrap_error": 13.923853676104263,
+      "within_one_published_error": 0,
+      "underpredicted_rows": 12
+    },
+    "rotation_mass_adjusted_completion": {
+      "rows": 12,
+      "rmse_kms": 14.818492312360172,
+      "bias_kms": -13.330108463345049,
+      "median_prediction_observation_ratio": 0.945421433017419,
+      "rms_residual_over_published_bootstrap_error": 9.604880035179137,
+      "within_one_published_error": 0,
+      "underpredicted_rows": 12
+    }
+  },
+  "scope": "First frozen-model evaluation of this Cepheid table; shared Gaia systematics and model assumptions prevent a fully independent raw-data claim",
+  "now_exposed": true
+}
