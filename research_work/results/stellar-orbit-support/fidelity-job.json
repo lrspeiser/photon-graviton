@@ -1,0 +1,6 @@
+{
+  "endpoint": "https://dc.g-vo.org/tap",
+  "job_url": "https://dc.g-vo.org/__system__/tap/run/async/kjhbhshv",
+  "query": "SELECT t.source_id, f.fidelity_v1, f.fidelity_v2 FROM TAP_UPLOAD.targets AS t LEFT OUTER JOIN gedr3spur.main AS f ON t.source_id=f.source_id",
+  "requested_sources": 140407
+}

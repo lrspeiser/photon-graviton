@@ -1,0 +1,12 @@
+{
+  "endpoint": "https://dc.g-vo.org/tap",
+  "table": "gedr3spur.main",
+  "query": "SELECT t.source_id, f.fidelity_v1, f.fidelity_v2 FROM TAP_UPLOAD.targets AS t LEFT OUTER JOIN gedr3spur.main AS f ON t.source_id=f.source_id",
+  "requested_sources": 140407,
+  "returned_sources": 140407,
+  "missing_fidelity_v1": 0,
+  "missing_fidelity_v2": 0,
+  "sha256": "c3e7d0f05b1201db5bf9d790efed60b1bd32354ffee037198fb07058b79172d0",
+  "source_documentation": "https://dc.g-vo.org/tableinfo/gedr3spur.main",
+  "status": "Public source-ID join; no velocity or gravity selection used"
+}

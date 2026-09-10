@@ -1,0 +1,169 @@
+{
+  "parent_sources": 140407,
+  "quality_candidate_sources": 128772,
+  "metadata_file_sha256": "f054e69269a39e5bc32a5deb367f60b6524b45244b96ee09bbc0aae1151b46d3",
+  "raw_starhorse_sha256": "6444893991349a8e4c60081b30cf76f2ad1274ace61c212aa50d6a308463a2d0",
+  "samples": {
+    "all_training": {
+      "stars": 77927,
+      "groups": [
+        {
+          "starhorse_used_parallax": false,
+          "stars": 19381,
+          "fidelity_v1_below_half": 2479,
+          "fidelity_v2_below_half": 1656,
+          "interval_disjoint": {
+            "3": 2003,
+            "5": 1180,
+            "10": 423
+          }
+        },
+        {
+          "starhorse_used_parallax": true,
+          "stars": 58546,
+          "fidelity_v1_below_half": 0,
+          "fidelity_v2_below_half": 144,
+          "interval_disjoint": {
+            "3": 990,
+            "5": 235,
+            "10": 7
+          }
+        }
+      ]
+    },
+    "orbit_support_training": {
+      "stars": 27884,
+      "groups": [
+        {
+          "starhorse_used_parallax": false,
+          "stars": 11128,
+          "fidelity_v1_below_half": 1670,
+          "fidelity_v2_below_half": 1097,
+          "interval_disjoint": {
+            "3": 1510,
+            "5": 959,
+            "10": 364
+          }
+        },
+        {
+          "starhorse_used_parallax": true,
+          "stars": 16756,
+          "fidelity_v1_below_half": 0,
+          "fidelity_v2_below_half": 36,
+          "interval_disjoint": {
+            "3": 372,
+            "5": 111,
+            "10": 1
+          }
+        }
+      ]
+    }
+  },
+  "selected_training_processing_routes": {
+    "included_parallax_joint_approximation": 16610,
+    "omitted_parallax_needs_separate_likelihood_review": 8483,
+    "astrometric_fidelity_review": 1732,
+    "distance_parallax_disagreement_review": 1059
+  },
+  "selected_training_regions": {
+    "bulge_plane": {
+      "stars": 299,
+      "starhorse_parallax_used": 36
+    },
+    "bulge_offplane": {
+      "stars": 577,
+      "starhorse_parallax_used": 440
+    },
+    "disk_plane": {
+      "stars": 4425,
+      "starhorse_parallax_used": 2472
+    },
+    "disk_offplane": {
+      "stars": 11214,
+      "starhorse_parallax_used": 7667
+    }
+  },
+  "launches_requiring_input_review": 42,
+  "audited_launches_sha256": "caae95025080cce8c15688f5fd4175fd02e6e09b6fbdea70f33d4e325608fcfc",
+  "fast_launch_examples": [
+    {
+      "source_id": "4054573376547724160",
+      "APOGEE_ID": "2M17353316-3239126",
+      "StarHorse_INPUTFLAGS": "TEFF_LOGG_MH_ALPHAM_2massWise_AVprior",
+      "starhorse_used_parallax": false,
+      "distance_median_kpc": 8.606355667114258,
+      "distance_05_95_kpc": [
+        7.307353973388672,
+        9.363873481750488
+      ],
+      "gaia_parallax_mas": 1.6583099825196994,
+      "gaia_parallax_error_mas": 0.8329488635063171,
+      "inverse_raw_parallax_kpc": 0.6030235664869856,
+      "implied_tangential_scale_ratio": 14.27200551589056,
+      "fidelity_v1": 0.923828125,
+      "fidelity_v2": 0.9951171875,
+      "prior_approximate_galactocentric_speed_kms": 529.5824098984201,
+      "disjoint_at_5_error_widths": false
+    },
+    {
+      "source_id": "5943264457314570880",
+      "APOGEE_ID": "2M16453225-4452301",
+      "StarHorse_INPUTFLAGS": "TEFF_LOGG_MH_ALPHAM_2massWise_AVprior",
+      "starhorse_used_parallax": false,
+      "distance_median_kpc": 6.688138008117676,
+      "distance_05_95_kpc": [
+        6.260052680969238,
+        7.5424957275390625
+      ],
+      "gaia_parallax_mas": 1.9448560533542663,
+      "gaia_parallax_error_mas": 0.1479737013578415,
+      "inverse_raw_parallax_kpc": 0.5141768709696092,
+      "implied_tangential_scale_ratio": 13.007465690756407,
+      "fidelity_v1": 1.0,
+      "fidelity_v2": 1.0,
+      "prior_approximate_galactocentric_speed_kms": 601.1829054674555,
+      "disjoint_at_5_error_widths": true
+    },
+    {
+      "source_id": "4054069937701531136",
+      "APOGEE_ID": "2M17452907-3227078",
+      "StarHorse_INPUTFLAGS": "TEFF_LOGG_MH_ALPHAM_2massWiseSM_AVprior",
+      "starhorse_used_parallax": false,
+      "distance_median_kpc": 8.696367263793945,
+      "distance_05_95_kpc": [
+        7.7948899269104,
+        10.794445991516113
+      ],
+      "gaia_parallax_mas": 1.9226486898118829,
+      "gaia_parallax_error_mas": 0.2495271861553192,
+      "inverse_raw_parallax_kpc": 0.5201158200658295,
+      "implied_tangential_scale_ratio": 16.720059125856377,
+      "fidelity_v1": 1.0,
+      "fidelity_v2": 0.99951171875,
+      "prior_approximate_galactocentric_speed_kms": 1127.3313370753094,
+      "disjoint_at_5_error_widths": true
+    },
+    {
+      "source_id": "5337204370984538112",
+      "APOGEE_ID": "2M11112524-6128593",
+      "StarHorse_INPUTFLAGS": "TEFF_LOGG_MH_ALPHAM_2massWise",
+      "starhorse_used_parallax": false,
+      "distance_median_kpc": 6.08095645904541,
+      "distance_05_95_kpc": [
+        5.137415885925293,
+        7.216719150543213
+      ],
+      "gaia_parallax_mas": 1.7587537834946634,
+      "gaia_parallax_error_mas": 0.010460609570145607,
+      "inverse_raw_parallax_kpc": 0.5685844200505364,
+      "implied_tangential_scale_ratio": 10.694905179612427,
+      "fidelity_v1": 1.0,
+      "fidelity_v2": 1.0,
+      "prior_approximate_galactocentric_speed_kms": 1386.9644640382303,
+      "disjoint_at_5_error_widths": true
+    }
+  ],
+  "interpretation": "An overlap/provenance audit, not a formal sigma significance test. Distances may share parallax inputs and have non-Gaussian systematic errors. High fidelity does not prove the crossmatch or the distance model is correct.",
+  "raw_catalogs_or_holdout_roles_changed": false,
+  "new_distance_estimates_computed": false
+}

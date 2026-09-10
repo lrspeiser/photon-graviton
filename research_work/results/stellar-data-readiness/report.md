@@ -1,5 +1,7 @@
 # Milky Way stellar-data readiness
 
+**Input-provenance correction:** the [later training audit](../stellar-orbit-support/report.md) recovers StarHorse_INPUTFLAGS, the wider distance quantiles and public astrometric-fidelity scores. The preparation below had retained output flags but omitted input flags. StarHorse did not record parallax use for 19,381 of the 77,927 subsequently allocated training stars, so its use of Gaia cannot be assumed for every row. A new sidecar records the required distance/astrometry treatment and disagreements without altering this frozen parent catalog. Earlier exploratory motions and uncertainty reconstructions remain provisional; they are not validated gravity measurements.
+
 We recovered useful observations locally, downloaded the missing official APOGEE and StarHorse catalogs, and prepared an exploratory sample of 140,407 giant stars. This establishes actual data coverage for the proposed bulge/plane comparison. It does not yet measure a companion-induced gravitational field.
 
 **Gaia enrichment is complete:** all 140,407 requested sources were returned with astrometric correlations and quality fields. The additional stated Gaia cuts retain **128,772 candidate stars**. The highest absolute difference between Gaia's PMRA and the rounded value packaged in APOGEE is 0.0000064 mas/yr. The enriched table contains both catalogs' values and a `gaia_quality_candidate` column; it retains excluded rows for auditing. It does not silently change the original 442-cell exploratory summary.

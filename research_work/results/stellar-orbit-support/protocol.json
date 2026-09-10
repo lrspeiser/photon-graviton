@@ -1,0 +1,13 @@
+{
+  "purpose": "Training-only orbit-library support and positive-weight mixture diagnostic; not a full gravitational likelihood",
+  "selection": "Existing Gaia-quality training stars, posterior mean R from 0.5 to 9 kpc, absolute posterior mean z at most 1.5 kpc, FE_H >= -0.5, ALPHA_M < 0.15",
+  "uncertainty_input": "Existing conditional_minus_0.017 approximate six-dimensional posterior moments; not an independent measurement likelihood",
+  "bar_angle_degrees": 27,
+  "bar_pattern_speed_kms_per_kpc": 37.5,
+  "models": ["ordinary_matter", "halo_comparison", "companion_equatorial", "companion_caps", "companion_shell"],
+  "support_diagnostic": "Nearest orbit Jacobi value divided by first-order propagated stellar Jacobi uncertainty; six demonstration orbits, then expanded launch states. This is a necessary library diagnostic, not sufficient phase-space coverage.",
+  "mixture_fit": "Fit nonnegative normalized orbit weights to selected training Jacobi values convolved with approximate per-star error, EM from uniform weights. Also show fixed broadening of 1000 (km/s)^2 to expose smoothing dependence. These are in-sample marginal fits, not model-comparison scores.",
+  "expanded_launches": "Training positions and velocities only. Stratify in R: [0.5,3.5,5,9], absolute z: [0,0.2,0.5,1.5]; within each occupied bin select up to eight observed representatives using deterministic farthest-point covering of robustly scaled position/velocity coordinates. Initial point is closest to the componentwise median. Same physical launches for all gravity models. Preserve outliers; no velocity clipping.",
+  "holdout_rule": "No validation or test kinematic scores computed; expansion is model-development training work, not independent validation",
+  "no_promotion_rule": "Do not rank theories using an incomplete library, adjustable orbit weights or smoothing-dependent support. Expanded launch coverage is not an integrated orbit library."
+}
