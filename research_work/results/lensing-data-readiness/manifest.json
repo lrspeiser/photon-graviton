@@ -1,0 +1,48 @@
+{
+  "candidates": 131,
+  "modeled_lenses": 63,
+  "spectroscopic_dispersion_available": 58,
+  "published_good_dispersion_flag": {
+    "Yes": 58,
+    "No": 5
+  },
+  "morphology": {
+    "E": 57,
+    "L": 5,
+    "U": 1
+  },
+  "roles": {
+    "training": 41,
+    "test": 13,
+    "validation": 9
+  },
+  "roles_with_available_dispersion": {
+    "training": 37,
+    "test": 13,
+    "validation": 8
+  },
+  "redshift_ranges": {
+    "lens": [
+      0.0629,
+      0.5132
+    ],
+    "source": [
+      0.1965,
+      1.1924
+    ]
+  },
+  "frozen_alpha_per_Mpc": 0.0002488993265191759,
+  "split_salt": "photon-graviton-slacs-object-v1",
+  "split_method": "First eight SHA256 bytes, big endian, modulo ten; 0\u20135 train, 6\u20137 validation, 8\u20139 test. Split by system ID.",
+  "provenance": "Publicly available 2008 sample; basic catalog fields and aggregate summaries inspected. Assigned roles do not imply pristine blind validation or an independent galaxy population.",
+  "formulas_fitted": false,
+  "observed_lensing_scores_evaluated": false,
+  "raw_sha256": {
+    "ReadMe": "7cd53666c6fa5362b1feaaf479c4875e56d4b5dde640920101de6765c84b4b11",
+    "table4.dat": "7c5b2e29e714173a75fa0c7217e1a89623e6aee7070b3c32be26049af19edad1",
+    "table5.dat": "2d96c38f9a1ad54d13eb07c2f5796bff5eba5807be4d249cd2b057b76372a18e",
+    "notes.dat": "5650fcfbc24b56098741514898d2b8e36e9b07bf7fc5c45f47aa0b4d1ad84a9c"
+  },
+  "origin": "https://cdsarc.cds.unistra.fr/ftp/J/ApJ/682/964/",
+  "retrieved": "2026-09-10"
+}
