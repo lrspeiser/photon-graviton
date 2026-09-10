@@ -1,0 +1,221 @@
+{
+  "classification": "Post-exposure local component response with two bounded fitting criteria, verified by full nonlinear field solves; not a global optimum, observational mass posterior or fresh validation",
+  "component_order": [
+    "stellar_disks",
+    "gas_disks",
+    "central_stars"
+  ],
+  "candidate_scales": [
+    0.7000000000000017,
+    0.7000000000000015,
+    1.2999999999999972
+  ],
+  "exploratory_scale_bounds": [
+    0.7,
+    1.3
+  ],
+  "balanced_candidate_scales": [
+    0.9619973846156058,
+    0.7000000000000062,
+    1.2999999999999994
+  ],
+  "balanced_objective": "Minimize the larger fractional RMS relative to original RMS across the two observables, using local response; full field checked afterwards.",
+  "bound_note": "Illustrative +/-30 percent sensitivity box; not confidence intervals or observed allowed mass ranges.",
+  "fixed_items": [
+    "All spatial component shapes",
+    "Central black-hole mass",
+    "Empirical A, p and a_star",
+    "Original conservative field equation; no q deformation",
+    "Training/holdout assignment"
+  ],
+  "responses": [
+    {
+      "group": "stellar_disks",
+      "median_rotation_change_for_10_percent_kms": 4.976714873464985,
+      "median_vertical_change_for_10_percent_surface_equivalent": 8.152671169687835
+    },
+    {
+      "group": "gas_disks",
+      "median_rotation_change_for_10_percent_kms": 0.7866856829965059,
+      "median_vertical_change_for_10_percent_surface_equivalent": 2.130455747197715
+    },
+    {
+      "group": "central_stars",
+      "median_rotation_change_for_10_percent_kms": 2.264052096177963,
+      "median_vertical_change_for_10_percent_surface_equivalent": 1.1305829694564409
+    }
+  ],
+  "trace": [
+    {
+      "label": "coarse_original",
+      "scales": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "refined": false,
+      "rotation_rms_kms": 18.786555457564706,
+      "vertical_rms_surface_equivalent": 33.49674671610955,
+      "equal_observable_fractional_mse": 0.07815826493562018
+    },
+    {
+      "label": "stellar_disks_minus_5_percent",
+      "scales": [
+        0.95,
+        1.0,
+        1.0
+      ],
+      "refined": false,
+      "rotation_rms_kms": 21.105263083313595,
+      "vertical_rms_surface_equivalent": 29.65849274111028,
+      "equal_observable_fractional_mse": 0.06627469807728135
+    },
+    {
+      "label": "stellar_disks_plus_5_percent",
+      "scales": [
+        1.05,
+        1.0,
+        1.0
+      ],
+      "refined": false,
+      "rotation_rms_kms": 16.550960959388632,
+      "vertical_rms_surface_equivalent": 37.473834247477654,
+      "equal_observable_fractional_mse": 0.09156461093634469
+    },
+    {
+      "label": "gas_disks_minus_5_percent",
+      "scales": [
+        1.0,
+        0.95,
+        1.0
+      ],
+      "refined": false,
+      "rotation_rms_kms": 19.169357003487335,
+      "vertical_rms_surface_equivalent": 32.522776140207576,
+      "equal_observable_fractional_mse": 0.07452759427789928
+    },
+    {
+      "label": "gas_disks_plus_5_percent",
+      "scales": [
+        1.0,
+        1.05,
+        1.0
+      ],
+      "refined": false,
+      "rotation_rms_kms": 18.40525820147375,
+      "vertical_rms_surface_equivalent": 34.47468130789829,
+      "equal_observable_fractional_mse": 0.08189509645929297
+    },
+    {
+      "label": "central_stars_minus_5_percent",
+      "scales": [
+        1.0,
+        1.0,
+        0.95
+      ],
+      "refined": false,
+      "rotation_rms_kms": 19.92185123115868,
+      "vertical_rms_surface_equivalent": 32.790507870745365,
+      "equal_observable_fractional_mse": 0.07681057340800346
+    },
+    {
+      "label": "central_stars_plus_5_percent",
+      "scales": [
+        1.0,
+        1.0,
+        1.05
+      ],
+      "refined": false,
+      "rotation_rms_kms": 17.678110902340265,
+      "vertical_rms_surface_equivalent": 34.226711634973654,
+      "equal_observable_fractional_mse": 0.07959970455939397
+    },
+    {
+      "label": "coarse_linear_response_candidate",
+      "scales": [
+        0.7000000000000017,
+        0.7000000000000015,
+        1.2999999999999972
+      ],
+      "refined": false,
+      "rotation_rms_kms": 28.551977647130677,
+      "vertical_rms_surface_equivalent": 14.622009151050857,
+      "equal_observable_fractional_mse": 0.022170880476425982
+    },
+    {
+      "label": "coarse_balanced_candidate",
+      "scales": [
+        0.9619973846156058,
+        0.7000000000000062,
+        1.2999999999999994
+      ],
+      "refined": false,
+      "rotation_rms_kms": 16.35826842688991,
+      "vertical_rms_surface_equivalent": 29.236313886821247,
+      "equal_observable_fractional_mse": 0.05717400358929266
+    },
+    {
+      "label": "refined_original",
+      "scales": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "refined": true,
+      "rotation_rms_kms": 18.79208509103863,
+      "vertical_rms_surface_equivalent": 33.31273697806547,
+      "equal_observable_fractional_mse": 0.07713435893800152
+    },
+    {
+      "label": "refined_component_candidate",
+      "scales": [
+        0.7000000000000017,
+        0.7000000000000015,
+        1.2999999999999972
+      ],
+      "refined": true,
+      "rotation_rms_kms": 28.55777740539709,
+      "vertical_rms_surface_equivalent": 14.517593173702137,
+      "equal_observable_fractional_mse": 0.02188660915362355
+    },
+    {
+      "label": "refined_balanced_candidate",
+      "scales": [
+        0.9619973846156058,
+        0.7000000000000062,
+        1.2999999999999994
+      ],
+      "refined": true,
+      "rotation_rms_kms": 16.359553666325933,
+      "vertical_rms_surface_equivalent": 29.108211376776385,
+      "equal_observable_fractional_mse": 0.05654736033798756
+    }
+  ],
+  "checks": {
+    "component_force_sum_relative_error": 3.150589153705734e-14,
+    "max_linearized_vs_full_coarse_rotation_kms": 0.43723693914864725,
+    "max_linearized_vs_full_coarse_vertical_units": 0.37406623006087614,
+    "max_candidate_coarse_refined_rotation_kms": 0.009234014808981783,
+    "max_candidate_coarse_refined_vertical_units": 0.2854482121547903,
+    "original_scores_reproduced": true
+  },
+  "baseline_disk_masses_Msun": {
+    "stellar": 36992494232.99399,
+    "gas": 13191473848.441292
+  },
+  "input_sha256": {
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\results\\conservative-field-completion\\results-refined.json": "400e15d8e969b6ce5bd73a4106307d112048d5c90bea27a035fcb1b3c9739e54",
+    "research_work\\data-cache\\cepheid-stars\\cepheid-common-frame-train-selected.parquet": "053bf6d2e566afb6820ca298c82f24184f58d2304c283a4ca2df1de6ae8c3f7a",
+    "research_work\\results\\cepheid-common-frame\\training-bins.json": "f640a2285dc0b04b3b185e4363eeb3d19564bae921ee9177153d7c0026430cf0"
+  },
+  "held_out_outcomes_opened": false,
+  "limitations": [
+    "Only one local response step; not a proof no other component combination can work.",
+    "Stellar thin/thick disks co-scale, and gas components co-scale; scale lengths/heights fixed.",
+    "Central stellar bar and nuclei co-scale; bar azimuth averaged.",
+    "Published vertical inference remains model dependent with its original frame/selection assumptions.",
+    "No complete likelihood or priors; no full stellar orbit/population fit.",
+    "No photon production, capture, lensing or energy-supply validation."
+  ]
+}
