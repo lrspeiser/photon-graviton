@@ -1,0 +1,37 @@
+{
+  "classification": "Known quasi-linear conservative completion of frozen empirical fit; not a photon mechanism or fresh holdout",
+  "parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "refined": false,
+  "outer_radius_kpc": 200.0,
+  "disk_mass_Msun": 50134237065.26981,
+  "scores": {
+    "rotation/ordinary": {
+      "rows": 38,
+      "rmse": 67.44872070555415,
+      "bias": -66.41871074222927
+    },
+    "rotation/conservative_completion": {
+      "rows": 38,
+      "rmse": 8.6069960310875,
+      "bias": -5.743779957663392
+    },
+    "vertical/ordinary": {
+      "rows": 43,
+      "rmse": 27.993271518826536,
+      "bias": -20.89567850885874
+    },
+    "vertical/conservative_completion": {
+      "rows": 43,
+      "rmse": 33.49674671610956,
+      "bias": 31.089020763966833
+    }
+  },
+  "fit_sha256": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+  "holdout_scores_opened": false,
+  "new_parameters_fitted": false
+}

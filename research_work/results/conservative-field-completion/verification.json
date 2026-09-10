@@ -1,0 +1,55 @@
+{
+  "rotation": {
+    "max_coarse_fine_prediction_change": 0.015198372536019633,
+    "max_200_400_kpc_prediction_change": 0.0004937217524059179,
+    "median_prediction_observation_ratio": 0.9685537578725201,
+    "max_new_old_ordinary_baseline_difference": 0.08998030220172382
+  },
+  "vertical": {
+    "max_coarse_fine_prediction_change": 0.3855660475264244,
+    "max_200_400_kpc_prediction_change": 6.211739041361852e-05,
+    "median_prediction_observation_ratio": 1.2691913110677842,
+    "max_new_old_ordinary_baseline_difference": 0.255855631953807
+  },
+  "refined_disk_mass_relative_error": 6.155323369094745e-05,
+  "analytic": {
+    "spherical_plummer": {
+      "max_analytic_extra_force_relative_error": 2.193923869882771e-05,
+      "relative_errors": [
+        6.765433376291212e-06,
+        4.551537585730158e-06,
+        6.0335640047361635e-06,
+        1.3840497198016588e-05,
+        1.889004119443412e-05,
+        2.193923869882771e-05
+      ],
+      "max_potential_gradient_relative_error": 1.4561349725948948e-09,
+      "closed_loop_work_kms2": 1.8864675439544953e-06,
+      "closed_loop_quadrature_change_kms2": 1.210356640513055e-05
+    },
+    "kuzmin_disk": {
+      "max_analytic_extra_force_relative_error": 0.0024667071334205353,
+      "relative_errors": [
+        0.0024667071334205353,
+        0.000537523330909951,
+        0.0016086916431544153,
+        0.0017179725708257375,
+        0.0019362042077467549,
+        0.0006467900663747055
+      ],
+      "max_potential_gradient_relative_error": 6.311165812275066e-07,
+      "closed_loop_work_kms2": 8.560800779378042e-07,
+      "closed_loop_quadrature_change_kms2": 8.136301403283142e-06
+    },
+    "disk_mass_independent_Msun": 50187057257.09867
+  },
+  "development_note": "The razor-thin Kuzmin limit initially failed the 1% force check at ell=128 (1.44%). Exact kernel integration reduced it to 1.19%; ell=512 with 2048 angular nodes reduced it to 0.247%. The MW finite-thickness comparison uses separately refined ell=64/128 response grids.",
+  "input_sha256": {
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\results\\conservative-field-completion\\verify.py": "52434a0fdc9be212b808b02578089c8f6c01220b492ca288df82d981bb3bb592",
+    "research_work\\results\\milky-way-capture\\inputs.json": "e2af10278dcfc6019dcb0848b1897f42329590e8ee524b04d4a1b675ca365258",
+    "research_work\\results\\joint-galaxy-audit\\results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd"
+  }
+}
