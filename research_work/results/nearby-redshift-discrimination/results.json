@@ -1,0 +1,153 @@
+{
+  "scope": "Post-evaluation test-design sensitivity using already-exposed eight-galaxy inputs; no new observations, parameter fitting, motion estimates or significance claim.",
+  "formula_provenance": "Known first-order error propagation and Gaussian simple-hypothesis likelihood algebra, conditional on assumed covariance.",
+  "rows": [
+    {
+      "galaxy": "DDO047",
+      "distance_mpc": 8.17,
+      "fixed_rule_difference_kms": -3.941637571361173,
+      "exponential_curvature_above_its_own_tangent_kms": 0.6202641791092808,
+      "distance_error_projected_kms": 30.54355826068334,
+      "spectral_center_error_projected_kms": 1.0006708321550368,
+      "rule_difference_over_distance_and_spectral_error": 0.1289805153586641
+    },
+    {
+      "galaxy": "UGC04115",
+      "distance_mpc": 7.87,
+      "fixed_rule_difference_kms": -3.818855720997594,
+      "exponential_curvature_above_its_own_tangent_kms": 0.5755343372891472,
+      "distance_error_projected_kms": 29.419810920380645,
+      "spectral_center_error_projected_kms": 1.501118756658582,
+      "rule_difference_over_distance_and_spectral_error": 0.12963694104720647
+    },
+    {
+      "galaxy": "LV J0913+1937",
+      "distance_mpc": 8.63,
+      "fixed_rule_difference_kms": -4.1266499672038,
+      "exponential_curvature_above_its_own_tangent_kms": 0.6921030446150919,
+      "distance_error_projected_kms": 32.26696315953938,
+      "spectral_center_error_projected_kms": 1.5014305371016765,
+      "rule_difference_over_distance_and_spectral_error": 0.12775264022810648
+    },
+    {
+      "galaxy": "KDG056",
+      "distance_mpc": 8.3274,
+      "fixed_rule_difference_kms": -4.005387204611336,
+      "exponential_curvature_above_its_own_tangent_kms": 0.6444023470248899,
+      "distance_error_projected_kms": 59.287481384630816,
+      "spectral_center_error_projected_kms": 1.0009888458788132,
+      "rule_difference_over_distance_and_spectral_error": 0.06754910733714584
+    },
+    {
+      "galaxy": "SexB",
+      "distance_mpc": 1.43,
+      "fixed_rule_difference_kms": -0.7794807904432883,
+      "exponential_curvature_above_its_own_tangent_kms": 0.018991608965846594,
+      "distance_error_projected_kms": 5.33709639274439,
+      "spectral_center_error_projected_kms": 1.001146644141191,
+      "rule_difference_over_distance_and_spectral_error": 0.14354593999873652
+    },
+    {
+      "galaxy": "AGC208399",
+      "distance_mpc": 9.5398,
+      "fixed_rule_difference_kms": -4.480974117274024,
+      "exponential_curvature_above_its_own_tangent_kms": 0.8457860197073368,
+      "distance_error_projected_kms": 70.26292001300736,
+      "spectral_center_error_projected_kms": 2.002392763559033,
+      "rule_difference_over_distance_and_spectral_error": 0.06374849737333946
+    },
+    {
+      "galaxy": "LV J1030+0607",
+      "distance_mpc": 9.8752,
+      "fixed_rule_difference_kms": -4.607709258755888,
+      "exponential_curvature_above_its_own_tangent_kms": 0.9063289500868462,
+      "distance_error_projected_kms": 49.533734298325925,
+      "spectral_center_error_projected_kms": 1.5017742098317062,
+      "rule_difference_over_distance_and_spectral_error": 0.09297891817840617
+    },
+    {
+      "galaxy": "LV J1000+3032",
+      "distance_mpc": 10.57,
+      "fixed_rule_difference_kms": -4.863584783882507,
+      "exponential_curvature_above_its_own_tangent_kms": 1.0384105040577798,
+      "distance_error_projected_kms": 39.539574399376924,
+      "spectral_center_error_projected_kms": 3.503250099209716,
+      "rule_difference_over_distance_and_spectral_error": 0.12252550947034269
+    }
+  ],
+  "scenarios": [
+    {
+      "illustrative_independent_motion_sigma_kms": 0.0,
+      "illustrative_distance_error_correlation": 0.0,
+      "squared_mahalanobis_rule_separation": 0.10265221631763405,
+      "sqrt_separation": 0.32039384563008394,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.051326108158817024
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 0.0,
+      "illustrative_distance_error_correlation": 0.5,
+      "squared_mahalanobis_rule_separation": 0.03470266188685291,
+      "sqrt_separation": 0.1862865048436223,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.017351330943426457
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 0.0,
+      "illustrative_distance_error_correlation": 0.9,
+      "squared_mahalanobis_rule_separation": 0.07650912599452278,
+      "sqrt_separation": 0.2766028307782167,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.03825456299726139
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 100.0,
+      "illustrative_distance_error_correlation": 0.0,
+      "squared_mahalanobis_rule_separation": 0.010644315047379399,
+      "sqrt_separation": 0.10317128984063056,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.005322157523689699
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 100.0,
+      "illustrative_distance_error_correlation": 0.5,
+      "squared_mahalanobis_rule_separation": 0.0073730657506266,
+      "sqrt_separation": 0.08586655781284469,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.0036865328753133
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 100.0,
+      "illustrative_distance_error_correlation": 0.9,
+      "squared_mahalanobis_rule_separation": 0.006009187828419121,
+      "sqrt_separation": 0.07751895141460004,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.0030045939142095603
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 300.0,
+      "illustrative_distance_error_correlation": 0.0,
+      "squared_mahalanobis_rule_separation": 0.0013961267654379122,
+      "sqrt_separation": 0.03736477974560953,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.0006980633827189561
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 300.0,
+      "illustrative_distance_error_correlation": 0.5,
+      "squared_mahalanobis_rule_separation": 0.0013133621343043274,
+      "sqrt_separation": 0.036240338495995415,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.0006566810671521637
+    },
+    {
+      "illustrative_independent_motion_sigma_kms": 300.0,
+      "illustrative_distance_error_correlation": 0.9,
+      "squared_mahalanobis_rule_separation": 0.0012543225427069705,
+      "sqrt_separation": 0.03541641628831142,
+      "expected_log_likelihood_ratio_if_one_fixed_rule_true": 0.0006271612713534852
+    }
+  ],
+  "gaussian_identity_check": {
+    "draws": 100000,
+    "expected_llr": 0.051326108158817024,
+    "simulated_mean_llr": 0.05191659944288763,
+    "monte_carlo_standard_error": 0.0010120603920165492
+  },
+  "source_hashes": {
+    "research_work\\results\\nearby-redshift-crosscheck\\results.json": "bcbe2446d15bae7066a1a33b5a851c3988c37b09ba1058e0c8bf743a281c0c4b",
+    "research_work\\results\\nearby-redshift-crosscheck\\protocol.json": "aae3c1f2e5a7a287fcce0764ef1eda3bdcc790b01216d6f268dffb6d26f1fc3d"
+  }
+}
