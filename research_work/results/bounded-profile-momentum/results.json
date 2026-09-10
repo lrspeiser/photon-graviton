@@ -1,0 +1,87 @@
+{
+  "scope": "Canonical profile impulse and conditional finite-support recoil, not a completed moving-medium model.",
+  "runs": [
+    {
+      "a": 0,
+      "b": 0.4,
+      "rays": 129,
+      "tight": false,
+      "initial_energy_and_momentum": 0.37500000000000006,
+      "final_wave_momentum": 0.3750000000000002,
+      "net_profile_impulse": 7.98250475758664e-18,
+      "net_profile_impulse_fraction": 2.128667935356437e-17,
+      "minimum_profile_impulse": -0.14812519738320454,
+      "maximum_profile_impulse": 6.557629668121228e-16,
+      "final_reservoir_energy": 0.0,
+      "canonical_momentum_balance_error": 5.551115123125783e-16,
+      "independent_force_quadrature_error": 1.6126844689100747e-18,
+      "reservoir_gain_minus_profile_impulse": -7.98250475758664e-18
+    },
+    {
+      "a": 0.1,
+      "b": 0,
+      "rays": 129,
+      "tight": false,
+      "initial_energy_and_momentum": 0.37500000000000006,
+      "final_wave_momentum": 0.32276549116465797,
+      "net_profile_impulse": 0.05223450883534217,
+      "net_profile_impulse_fraction": 0.13929202356091244,
+      "minimum_profile_impulse": -0.10092104364667652,
+      "maximum_profile_impulse": 0.05223450883534243,
+      "final_reservoir_energy": 0.05223450884000245,
+      "canonical_momentum_balance_error": 5.551115123125783e-16,
+      "independent_force_quadrature_error": 6.305320848776219e-11,
+      "reservoir_gain_minus_profile_impulse": 4.660279107060461e-12
+    },
+    {
+      "a": 0.1,
+      "b": 0,
+      "rays": 257,
+      "tight": true,
+      "initial_energy_and_momentum": 0.375,
+      "final_wave_momentum": 0.32276549115870745,
+      "net_profile_impulse": 0.052234508841292666,
+      "net_profile_impulse_fraction": 0.13929202357678044,
+      "minimum_profile_impulse": -0.10092104364845544,
+      "maximum_profile_impulse": 0.052234508841292666,
+      "final_reservoir_energy": 0.05223450884055497,
+      "canonical_momentum_balance_error": 4.440892098500626e-16,
+      "independent_force_quadrature_error": 8.708034293647415e-13,
+      "reservoir_gain_minus_profile_impulse": -7.376946276060892e-13
+    }
+  ],
+  "recoil_comparisons": [
+    {
+      "support_rest_energy_over_initial_wave_energy": 1.0,
+      "recoil_energy_over_initial_wave_energy": 0.009654528951420273,
+      "recoil_fraction_of_claimed_transfer": 0.06931142719811599,
+      "maximum_reservoir_fraction_if_wave_loss_unchanged": 0.12963749462536017
+    },
+    {
+      "support_rest_energy_over_initial_wave_energy": 10.0,
+      "recoil_energy_over_initial_wave_energy": 0.0009700663401705011,
+      "recoil_fraction_of_claimed_transfer": 0.006964263388964135,
+      "maximum_reservoir_fraction_if_wave_loss_unchanged": 0.13832195723660995
+    },
+    {
+      "support_rest_energy_over_initial_wave_energy": 100.0,
+      "recoil_energy_over_initial_wave_energy": 9.701129210461781e-05,
+      "recoil_fraction_of_claimed_transfer": 0.0006964597800615864,
+      "maximum_reservoir_fraction_if_wave_loss_unchanged": 0.13919501228467582
+    },
+    {
+      "support_rest_energy_over_initial_wave_energy": 10000.0,
+      "recoil_energy_over_initial_wave_energy": 9.70113391558662e-07,
+      "recoil_fraction_of_claimed_transfer": 6.9646011785012004e-06,
+      "maximum_reservoir_fraction_if_wave_loss_unchanged": 0.13929105346338888
+    }
+  ],
+  "source_hashes": {
+    "research_work\\results\\bounded-profile-momentum\\run.py": "1b085038f3fdb57e321c659e9f25cdd890653e7a0d08f3dd200f8ecaaf80db20",
+    "research_work\\results\\bounded-wave-reservoir\\run.py": "1b7622da520fe9e28d14ba2849788e3c538f3add1a0d11cad6444436ba059c4f"
+  },
+  "moving_profile_backreaction_solved": false,
+  "ordinary_companion_momentum_derived": false,
+  "holdouts_opened": false,
+  "total_cosmic_energy_budget_evaluated": false
+}

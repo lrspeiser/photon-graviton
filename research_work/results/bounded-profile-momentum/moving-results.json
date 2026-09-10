@@ -1,0 +1,62 @@
+{
+  "scope": "Moving-profile Hamiltonian energy and canonical momentum completion only.",
+  "hamiltonian_extension": "W(x-X); support Hamiltonian sqrt(M^2+K^2); Xdot=K/sqrt(M^2+K^2); Kdot=integral v_x e dx.",
+  "runs": [
+    {
+      "support_rest_energy_ratio": 10.0,
+      "tight": false,
+      "final_support_position": 0.2145969111279819,
+      "maximum_support_speed": 0.02639187437018511,
+      "outgoing_wave_energy_fraction": 0.8629132351948812,
+      "reservoir_energy_fraction": 0.13614716989159203,
+      "support_recoil_energy_fraction": 0.0009395949123067377,
+      "support_momentum_fraction": 0.13708676480511892,
+      "maximum_fractional_energy_error": 1.3799184017670996e-11,
+      "maximum_fractional_canonical_momentum_error": 1.3322676295501878e-15
+    },
+    {
+      "support_rest_energy_ratio": 100.0,
+      "tight": false,
+      "final_support_position": 0.0216093189940485,
+      "maximum_support_speed": 0.0026860514896449375,
+      "outgoing_wave_energy_fraction": 0.8609386691973331,
+      "reservoir_energy_fraction": 0.13896464056316327,
+      "support_recoil_energy_fraction": 9.66902218780488e-05,
+      "support_momentum_fraction": 0.13906133080266694,
+      "maximum_fractional_energy_error": 1.8734199376998124e-11,
+      "maximum_fractional_canonical_momentum_error": 1.1842378929335002e-15
+    },
+    {
+      "support_rest_energy_ratio": 10000.0,
+      "tight": false,
+      "final_support_position": 0.00021626358852276466,
+      "maximum_support_speed": 2.691176170098171e-05,
+      "outgoing_wave_energy_fraction": 0.8607102950617044,
+      "reservoir_energy_fraction": 0.13928873485282392,
+      "support_recoil_energy_fraction": 9.7008109504282e-07,
+      "support_momentum_fraction": 0.13928970493829562,
+      "maximum_fractional_energy_error": 1.3298843507906591e-11,
+      "maximum_fractional_canonical_momentum_error": 1.3322676295501878e-15
+    },
+    {
+      "support_rest_energy_ratio": 10.0,
+      "tight": true,
+      "final_support_position": 0.2145969111272967,
+      "maximum_support_speed": 0.026391874370324864,
+      "outgoing_wave_energy_fraction": 0.862913235194946,
+      "reservoir_energy_fraction": 0.13614716989172512,
+      "support_recoil_energy_fraction": 0.0009395949123058439,
+      "support_momentum_fraction": 0.1370867648050537,
+      "maximum_fractional_energy_error": 1.9733844188370617e-12,
+      "maximum_fractional_canonical_momentum_error": 1.1842378929335002e-15
+    }
+  ],
+  "source_hashes": {
+    "research_work\\results\\bounded-profile-momentum\\moving.py": "173ec43c19fe7e9f598f8771725b3fd8c989adcd15bd25aa724656da9e88e7a1",
+    "research_work\\results\\bounded-profile-momentum\\run.py": "1b085038f3fdb57e321c659e9f25cdd890653e7a0d08f3dd200f8ecaaf80db20",
+    "research_work\\results\\bounded-wave-reservoir\\run.py": "1b7622da520fe9e28d14ba2849788e3c538f3add1a0d11cad6444436ba059c4f"
+  },
+  "profile_shape_origin_derived": false,
+  "symmetric_relativistic_stress_tensor_derived": false,
+  "holdouts_opened": false
+}
