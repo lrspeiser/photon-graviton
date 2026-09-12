@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Capture-momentum checkpoint:** [Newly captured cohort audit](research_work/results/capture-injection/report.md) derives rest mass and inward motion for one local merger rule. Weak absorption can inject bound radial material; stronger absorption mostly injects unbound material at the tested scales. The rule creates no circular angular momentum, so snapshot support is not a formation solution.
+
 **Retention checkpoint:** [Bound-particle support audit](research_work/results/deposit-retention/report.md) rules out isotropic bound-particle support for a strongly shielded deposit profile. Randomly oriented circular orbits provide a conditional stationary alternative in the frozen spherical potential, with kinetic and potential energies calculated. Formation, collective stability and continuing capture remain unresolved.
 
 **Depleted-supply checkpoint:** [Attenuated companions with gravity feedback](research_work/results/depleted-capture-feedback/report.md) separates incident fluence from opacity and removes captured energy from onward rays. The absorption ledger balances, but several models remain boundary-dependent; unresolved numerical gates are retained explicitly. Mechanical retention and a photon-funded source still require closure.
