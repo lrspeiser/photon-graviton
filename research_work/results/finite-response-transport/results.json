@@ -1,0 +1,121 @@
+{
+  "characteristic_states": 54,
+  "defective_same_speed": 9,
+  "half_speed_max_eigenvector_condition": 126.2483264731038,
+  "fourier": [
+    {
+      "k": 1,
+      "gain": 1.396710420953463,
+      "error": 1.5700924586837752e-16
+    },
+    {
+      "k": 10,
+      "gain": 9.80204060387428,
+      "error": 3.972054645195637e-15
+    },
+    {
+      "k": 100,
+      "gain": 97.51410154434073,
+      "error": 1.4210854715202004e-14
+    },
+    {
+      "k": 1000,
+      "gain": 975.0902522330946,
+      "error": 2.8421709430404007e-13
+    }
+  ],
+  "cell_runs": 72,
+  "raw_negative_runs": 9,
+  "gated_negative_runs": 0,
+  "max_budget_error": 4.6629367034256575e-15,
+  "max_Rn_scaled_error": 3.4450220454118607e-13,
+  "no_seed_controls": [
+    {
+      "K": 0.05,
+      "R0": 0.22,
+      "T0": 0,
+      "M0": 0,
+      "Gamma": 1,
+      "gated": true,
+      "negative_T_event": false,
+      "time_reached": 20.0,
+      "minimum": 0.0,
+      "budget_error": 0.0,
+      "Rn_scaled_error": 0.0,
+      "R_final": 0.22,
+      "T_final": 0.0,
+      "M_final": 0.0,
+      "D_final": 0.0
+    },
+    {
+      "K": 0.5,
+      "R0": 0.22,
+      "T0": 0,
+      "M0": 0,
+      "Gamma": 1,
+      "gated": true,
+      "negative_T_event": false,
+      "time_reached": 20.0,
+      "minimum": 0.0,
+      "budget_error": 0.0,
+      "Rn_scaled_error": 0.0,
+      "R_final": 0.22,
+      "T_final": 0.0,
+      "M_final": 0.0,
+      "D_final": 0.0
+    },
+    {
+      "K": 2.0,
+      "R0": 0.22,
+      "T0": 0,
+      "M0": 0,
+      "Gamma": 1,
+      "gated": true,
+      "negative_T_event": false,
+      "time_reached": 20.0,
+      "minimum": 0.0,
+      "budget_error": 0.0,
+      "Rn_scaled_error": 0.0,
+      "R_final": 0.22,
+      "T_final": 0.0,
+      "M_final": 0.0,
+      "D_final": 0.0
+    }
+  ],
+  "spatial_positivity_boundary": [
+    {
+      "K": 0.5,
+      "R": 0.22,
+      "T": 0.0,
+      "M": 0.1,
+      "sigma": 0.5,
+      "M_x": 0.0,
+      "T_t": 0.04011111111111111,
+      "independent_error": 0.0,
+      "nonnegative_boundary_direction": true
+    },
+    {
+      "K": 0.5,
+      "R": 0.22,
+      "T": 0.0,
+      "M": 0.1,
+      "sigma": 0.5,
+      "M_x": 0.1,
+      "T_t": 0.02737962962962963,
+      "independent_error": 0.0,
+      "nonnegative_boundary_direction": true
+    },
+    {
+      "K": 0.5,
+      "R": 0.22,
+      "T": 0.0,
+      "M": 0.1,
+      "sigma": 0.5,
+      "M_x": 1.0,
+      "T_t": -0.08720370370370371,
+      "independent_error": 0.0,
+      "nonnegative_boundary_direction": false
+    }
+  ],
+  "scope": "Constitutive local-characteristic and homogeneous positivity audit; no spatial or observational redshift claim."
+}

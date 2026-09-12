@@ -1,5 +1,7 @@
 # Selected research branches: shared temporal transport and radiation-fed temporal field
 
+Current closure qualification: the [finite-response transport audit](../research_work/results/finite-response-transport/report.md) tests an explicit moving field-energy budget. Its homogeneous checks pass only with a stated availability rule, and that rule still fails a spatial empty-companion boundary. Neither the initial cell demonstration below nor this extension is a completed energy/clock mechanism. Shared messenger transport remains a postulate; observable redshift must retain endpoint clock factors.
+
 User decision, 2026-09-12: proceed with option 1 (light and gravitational waves share temporal transport), and add a branch where photon energy enters whatever physically changes time and can subsequently be captured by deep gravity wells. Both remain hypotheses in a static-spatial-geometry universe. This records research directions, not validated laws. Earlier failed candidates remain archived.
 
 ## A. Shared evolving temporal transport
