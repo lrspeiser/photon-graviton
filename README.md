@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Largest force discrepancy localized in age:** [Mass-preserving attribution](research_work/results/bar-cell-geometry/age-attribution-report.md) reproduces both archived forces and traces 92.3% of their signed difference to the 61–73 Myr source-age bin at the selected failing target. No ages are removed or renormalized. Next resolve angular structure during that passage; other failures and all nine physical/observational goals remain open.
+
 **Curved interpolation does not resolve the late map:** [Quadratic audit](research_work/results/bar-cell-geometry/quadratic-report.md) uses the same actual vertex/midpoint paths with known six-node shape functions. Early RMS improves, but final errors worsen to 25.63% and 40.52% of launch radius. Retain this failed remedy; no new force result or mass reweighting is adopted. The model still needs resolved late-time source geometry and all physical/observational closures. All nine goals remain open.
 
 **Second full-sphere gravity comparison complete:** [Completed audit](research_work/results/bar-cell-geometry/nested2-report.md) passes all 30 age-layer potential and force gates but fails 6/30 spatial potential and 14/30 spatial force gates; the largest force change is 135.2%. Source mass and sampled high-precision checks pass, while the source map remains unconverged. Next address curved/folded cells without physical retuning. No stellar/lensing fit, energy closure or full-model validation is established; all nine goals remain open.
