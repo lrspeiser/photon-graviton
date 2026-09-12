@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Capture-law checkpoint:** [Depth-law comparison](research_work/results/capture-depth-law/report.md) finds a nearly flat finite-range force contribution for one thin-capture case, but the same profile declines farther out. Full curves, interception efficiency and lensing remain to be checked against actual galaxy geometry and data.
+
 **All-direction capture checkpoint:** [Isotropic deposition profile](research_work/results/isotropic-capture-profile/report.md) computes where companions are intercepted, then derives gravity and lensing. Strong capture can load outer layers while starving the center; that pattern does not automatically fit stellar motion. Supply and nonspherical tests remain open.
 
 **Deposit/gravity checkpoint:** [Growing-well clock and lensing test](research_work/results/deposit-clock-gravity/report.md) links a prescribed deposit profile to stellar forces, clocks and light bending. Growing wells can redshift crossing signals, through a known evolving-potential effect, but the strength is tied to the gravitational potential and its growth. Capture-funded profiles and full energy accounting remain unresolved.
