@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Moving-deposit checkpoint:** [Radial capture response](research_work/results/radial-capture-response/report.md) follows a negligible bound source in the frozen well. The innermost added-mass fraction grows about96-fold relative to in-place capture, while the projected fraction grows10.34-fold. Orbital energy is conserved, but the source does not build the assumed stationary profile. Changing self-gravity and source feedback remain necessary.
+
 **Capture-momentum checkpoint:** [Newly captured cohort audit](research_work/results/capture-injection/report.md) derives rest mass and inward motion for one local merger rule. Weak absorption can inject bound radial material; stronger absorption mostly injects unbound material at the tested scales. The rule creates no circular angular momentum, so snapshot support is not a formation solution.
 
 **Retention checkpoint:** [Bound-particle support audit](research_work/results/deposit-retention/report.md) rules out isotropic bound-particle support for a strongly shielded deposit profile. Randomly oriented circular orbits provide a conditional stationary alternative in the frozen spherical potential, with kinetic and potential energies calculated. Formation, collective stability and continuing capture remain unresolved.
