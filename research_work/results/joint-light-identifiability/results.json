@@ -1,0 +1,227 @@
+{
+  "scope": "Algebraic identifiability in a declared static-geometric, bolometric model with power-law source evolution. No data fit or new causal mechanism.",
+  "checks": [
+    {
+      "delta": -2.0,
+      "relative_max_errors_width_peak_lightcurve_fluence": [
+        0.0,
+        1.066617507485835e-18,
+        1.066617507485835e-18,
+        1.8135157091172274e-18
+      ]
+    },
+    {
+      "delta": -1.0,
+      "relative_max_errors_width_peak_lightcurve_fluence": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": -0.3,
+      "relative_max_errors_width_peak_lightcurve_fluence": [
+        1.958779464109335e-16,
+        0.0,
+        6.249711957924815e-21,
+        7.08404573873917e-21
+      ]
+    },
+    {
+      "delta": 0.2,
+      "relative_max_errors_width_peak_lightcurve_fluence": [
+        1.958779464109335e-16,
+        1.066617507485835e-18,
+        1.066617507485835e-18,
+        1.8135157091172274e-18
+      ]
+    },
+    {
+      "delta": 1.0,
+      "relative_max_errors_width_peak_lightcurve_fluence": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "delta": 2.0,
+      "relative_max_errors_width_peak_lightcurve_fluence": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "jacobian": [
+    [
+      1.0,
+      1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "null_direction": [
+    1.0,
+    -1.0,
+    1.0
+  ],
+  "ranks": {
+    "width_and_flux": 2,
+    "plus_fluence": 2,
+    "plus_independent_duration_evolution_constraint": 3,
+    "plus_independent_peak_luminosity_evolution_constraint": 3
+  },
+  "head_columns": [
+    "SNID",
+    "NAME_IAUC",
+    "NAME_TRANSIENT",
+    "FAKE",
+    "MASK_FLUXCOR_SNANA",
+    "RA",
+    "DEC",
+    "PIXSIZE",
+    "NXPIX",
+    "NYPIX",
+    "SNTYPE",
+    "NOBS",
+    "PTROBS_MIN",
+    "PTROBS_MAX",
+    "MWEBV",
+    "MWEBV_ERR",
+    "REDSHIFT_HELIO",
+    "REDSHIFT_HELIO_ERR",
+    "REDSHIFT_FINAL",
+    "REDSHIFT_FINAL_ERR",
+    "REDSHIFT_QUALITYFLAG",
+    "MASK_REDSHIFT_SOURCE",
+    "VPEC",
+    "VPEC_ERR",
+    "LENSDMU",
+    "LENSDMU_ERR",
+    "HOSTGAL_NMATCH",
+    "HOSTGAL_NMATCH2",
+    "HOSTGAL_OBJID",
+    "HOSTGAL_FLAG",
+    "HOSTGAL_PHOTOZ",
+    "HOSTGAL_PHOTOZ_ERR",
+    "HOSTGAL_SPECZ",
+    "HOSTGAL_SPECZ_ERR",
+    "HOSTGAL_RA",
+    "HOSTGAL_DEC",
+    "HOSTGAL_SNSEP",
+    "HOSTGAL_DDLR",
+    "HOSTGAL_CONFUSION",
+    "HOSTGAL_LOGMASS",
+    "HOSTGAL_LOGMASS_ERR",
+    "HOSTGAL_LOGSFR",
+    "HOSTGAL_LOGSFR_ERR",
+    "HOSTGAL_LOGsSFR",
+    "HOSTGAL_LOGsSFR_ERR",
+    "HOSTGAL_COLOR",
+    "HOSTGAL_COLOR_ERR",
+    "HOSTGAL_ELLIPTICITY",
+    "HOSTGAL_OBJID2",
+    "HOSTGAL_SQRADIUS",
+    "HOSTGAL_OBJID_UNIQUE",
+    "HOSTGAL_MAG_g",
+    "HOSTGAL_MAG_r",
+    "HOSTGAL_MAG_i",
+    "HOSTGAL_MAG_z",
+    "HOSTGAL_MAGERR_g",
+    "HOSTGAL_MAGERR_r",
+    "HOSTGAL_MAGERR_i",
+    "HOSTGAL_MAGERR_z",
+    "HOSTGAL2_OBJID",
+    "HOSTGAL2_FLAG",
+    "HOSTGAL2_PHOTOZ",
+    "HOSTGAL2_PHOTOZ_ERR",
+    "HOSTGAL2_SPECZ",
+    "HOSTGAL2_SPECZ_ERR",
+    "HOSTGAL2_RA",
+    "HOSTGAL2_DEC",
+    "HOSTGAL2_SNSEP",
+    "HOSTGAL2_DDLR",
+    "HOSTGAL2_LOGMASS",
+    "HOSTGAL2_LOGMASS_ERR",
+    "HOSTGAL2_LOGSFR",
+    "HOSTGAL2_LOGSFR_ERR",
+    "HOSTGAL2_LOGsSFR",
+    "HOSTGAL2_LOGsSFR_ERR",
+    "HOSTGAL2_COLOR",
+    "HOSTGAL2_COLOR_ERR",
+    "HOSTGAL2_ELLIPTICITY",
+    "HOSTGAL2_OBJID2",
+    "HOSTGAL2_SQRADIUS",
+    "HOSTGAL2_OBJID_UNIQUE",
+    "HOSTGAL2_MAG_g",
+    "HOSTGAL2_MAG_r",
+    "HOSTGAL2_MAG_i",
+    "HOSTGAL2_MAG_z",
+    "HOSTGAL2_MAGERR_g",
+    "HOSTGAL2_MAGERR_r",
+    "HOSTGAL2_MAGERR_i",
+    "HOSTGAL2_MAGERR_z",
+    "HOSTGAL_SB_FLUXCAL_g",
+    "HOSTGAL_SB_FLUXCAL_r",
+    "HOSTGAL_SB_FLUXCAL_i",
+    "HOSTGAL_SB_FLUXCAL_z",
+    "PEAKMJD",
+    "MJD_TRIGGER",
+    "MJD_DETECT_FIRST",
+    "MJD_DETECT_LAST",
+    "SEARCH_TYPE",
+    "PRIVATE(AGN_SCAN)"
+  ],
+  "verified_inputs": [
+    {
+      "repository": "des-science/DES-SN5YR",
+      "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "path": "0_DATA/README.md",
+      "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/0_DATA/README.md",
+      "bytes": 4618,
+      "git_blob_sha1": "fc2881ad945e01e29224cfdbc900503b4c30e830",
+      "sha256": "60a21d8e6805c38b63546601d1c9161ad956d175eccb3fe48b6149f5583e1753",
+      "cache_relative_path": "research_work/generated/timing-inputs/release/0_DATA/README.md"
+    },
+    {
+      "repository": "des-science/DES-SN5YR",
+      "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "path": "0_DATA/DES-SN5YR_DES/DES-SN5YR_DES.README",
+      "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/0_DATA/DES-SN5YR_DES/DES-SN5YR_DES.README",
+      "bytes": 2881,
+      "git_blob_sha1": "23f2f8d0dad1376adfd004901fa37d3e405ddf73",
+      "sha256": "c808a8b163a862023522bc16bb031fe22d125587a35958c5f354b9089c24b37f",
+      "cache_relative_path": "research_work/generated/timing-inputs/release/0_DATA/DES-SN5YR_DES/DES-SN5YR_DES.README"
+    },
+    {
+      "repository": "des-science/DES-SN5YR",
+      "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "path": "0_DATA/DES-SN5YR_DES/DES-SN5YR_DES_HEAD.FITS.gz",
+      "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/0_DATA/DES-SN5YR_DES/DES-SN5YR_DES_HEAD.FITS.gz",
+      "bytes": 3249096,
+      "git_blob_sha1": "4ee66262f80e43f0586a18f62be2676d00c3f864",
+      "sha256": "4396d427c1a1f064be4f9cb81669d0179bbbbaacca0b009391ab2e0aaccdbfb5",
+      "cache_relative_path": "research_work/generated/timing-inputs/release/0_DATA/DES-SN5YR_DES/DES-SN5YR_DES_HEAD.FITS.gz"
+    },
+    {
+      "repository": "des-science/DES-SN5YR",
+      "commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+      "path": "3_CLASSIFICATION/README.md",
+      "url": "https://raw.githubusercontent.com/des-science/DES-SN5YR/c9a4fcafc4cbd19bd750dee47fc76194a45c181f/3_CLASSIFICATION/README.md",
+      "bytes": 93,
+      "git_blob_sha1": "e39f7f544491b237c41518e6cd4f13dc4d148828",
+      "sha256": "3b2bc996d8a7aadbf4791d75868807afc6089ead29fe1774d57742a7946b17b1",
+      "cache_relative_path": "research_work/generated/timing-inputs/release/3_CLASSIFICATION/README.md"
+    }
+  ],
+  "real_flux_used": false,
+  "new_independent_distances_acquired": false
+}
