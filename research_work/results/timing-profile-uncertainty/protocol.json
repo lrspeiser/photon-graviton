@@ -1,0 +1,26 @@
+{
+  "scope": "Descriptive profile-likelihood intervals for the six already exposed artificial controls and their one refined case. Not an independent validation or calibrated coverage claim.",
+  "input": "research_work/results/timing-null-stretch-controls",
+  "interval_levels": [
+    0.6826894921370859,
+    0.95
+  ],
+  "construction": "Reoptimize mean log width and intrinsic log scatter at each fixed b; use chi-square-one likelihood-ratio thresholds as nominal asymptotic intervals. Locate all threshold crossings on a 101-point b scan including fitted b, then refine with Brent. All grid values and optimizer diagnostics retained.",
+  "b_range": [
+    -2,
+    3
+  ],
+  "optimizer": "Two L-BFGS-B starts: saved full fit and mean width 30 days / scatter 0.2; require at least one successful fit at every evaluated b.",
+  "limitations": [
+    "Nominal Wilks thresholds are not calibrated for shape misspecification, cadence and population selection.",
+    "Six exposed runs comprise three paired noise seeds, not six independent coverage trials.",
+    "Finite b scan cannot prove absence of narrower disconnected regions.",
+    "No real flux inference, likelihood-based physical model selection or joint brightness evidence."
+  ],
+  "checks": [
+    "Profile at saved best b reproduces full-fit likelihood within 1e-6",
+    "No fixed-b fit improves the unrestricted saved fit by more than 1e-6",
+    "Every interval endpoint meets its likelihood-ratio threshold within 1e-5",
+    "Report truncated intervals rather than pretending parameter bounds are data constraints"
+  ]
+}
