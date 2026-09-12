@@ -1,7 +1,9 @@
-# Nested-mesh preparation in progress
+# Nested-mesh checkpoint completed
 
-The previous goal turn completed the first trajectory-volume calculation and was progress. This turn completed the angular geometry audit and constructed a nested mesh, then launched actual new trajectories.
+Both preparation sessions40550/79270 are terminal and each manifest has98 records (18 reused,80 new). All volume runs256/512 on both launch spheres and the1024 late-R3 supplement are complete. No process from this checkpoint remains pending.
 
-Launch radius1: session40550. Launch radius3: session79270. Each prepared-R*.json must contain98 records, with18 reused and80 new trajectories, and the process must be terminal before a complete preparation claim. Recheck these handles or the prepare_nested.py process command line before restart; partial manifests are not completion evidence. Partial prepared-R1.json/prepared-R3.json are excluded from the checkpoint commit.
+The completed results are in nested-report.md and nested-summary.json. Final geometry improves but remains34.6/49.7 percent of launch radius in RMS error. The matched512 parent/child comparison fails15/30 potential and14/30 force gates. The initial256/512 age failure passes a1024 supplement, retained separately.
 
-Next verify new trajectory/cache accuracy and use mesh.json faces and lookup/sign arrays to assemble the new volume mesh. Compare geometry and force against the parent without dropping source mass. No new-grid force result exists yet. The exact polar limit is tested, but the original radial domain still applies. All nine goals remain incomplete.
+Of10 selected stricter orbit checks,9 pass and the1kpc polar trajectory reaches below the original cache boundary. That failure remains in nested-orbit-checks.json. Separate shrinking-core continuation tests all pass at the orbit tolerances; core curvature itself is not established as converged. No mass or failing direction was dropped.
+
+Next refine the late angular source map or its local representation, then repeat mass/geometry/force checks before a stellar fit. Physical supply, self-gravity, ordinary-matter response, lensing and successful joint redshift remain incomplete. All nine goals remain active.

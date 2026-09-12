@@ -27,13 +27,13 @@ All ray reconstructions agree within1e-14 and weights are nonnegative to the dec
 
 The final age is approximately244Myr. Large particle-position error does not directly specify a force-error bound, since contributions can average and cancel. Nevertheless it prevents treating the coarse cell density as a resolved formation result. The per-cell errors and every sampled direction are retained in results.json. The2 percent diagnostic is not an observational tolerance.
 
-## Refinement underway
+## Subsequent refinement
 
 Every parent triangle is split at normalized great-circle edge midpoints, giving282 vertices and560 children. The summed solid angle remains4pi. Symmetry matching leaves98 distinct trajectory representatives per launch sphere:18 existing directions can be reused and80 require actual integration. The full mesh reconstruction error is1.36e-16. Adding interpolated trajectories would not constitute this refinement.
 
 The new directions include a polar-axis case. The bar cache has even angular harmonics; its exact axis potential and axial acceleration follow from its m=0 terms, and the transverse force vanishes by symmetry. Nearby off-axis evaluations verify that limit. This is known harmonic mathematics, not a modified force law. The radial cache domain is unchanged; a trajectory outside that domain must be reported rather than hidden.
 
-Both preparation processes remain active at this checkpoint. No improved interpolation or force result is claimed yet. After completion, check new trajectory accuracy, test interpolation against the existing finer-grid trajectories, and recompute mass-preserving volume fields with the same convergence gates.
+Both preparations and force comparisons are now complete. The [nested checkpoint](nested-report.md) records improved but still inadequate late geometry, retained angular force failures and the polar-domain sensitivity test.
 
 ## Scope
 
