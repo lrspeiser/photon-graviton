@@ -1,0 +1,13 @@
+# Open transport with energy-funded temporal restoration
+
+Postulate linear state energy M=K(n-1), K>0. Keep traveling radiation G,H and receiving field T with speed v=1/n, fixed-position clocks d tau=dt/n and a stationary local state n. Define R=G+H. Memory is a separate stationary energy sector in this provisional closure; it is not claimed to satisfy the desired onward transport of all converted energy.
+
+Choose a restoration rate r=Gamma*(n-1)*max(0,1-R/(K*n)), switched off in the no-restoration control. This smooth-in-state, piecewise differentiable energy-availability prescription is a new analyst postulate, not a unique derivation or fit. It makes restoration unavailable when it would require unbudgeted energy. n_t=T-r and h=n_t/n. Deposits receive Gamma*T+(K-R/n)*r. The receiving equation is T_t+(vT)_x=(R/n-K)*T-Gamma*T; radiation equations are G_t+(vG)_x=-hG and similarly H. Including M makes the sum conserve reference energy with boundary fluxes. Restoration transfers state energy to radiation and deposits; no double counting.
+
+Use domain [0,10], initial n=1,G=0.2,H=0.02,T=0.01 exp(-((x-2)/0.4)^2), zero receiving inflow, and radiation inflow multiplied by [1-tanh((t-2)/0.1)]/2. This permits the radiation to leave. Gamma=1/[1+exp(-(x-8)/0.25)] defines an imposed receiving-end well, not a dynamically derived potential. Test K=0.05 and 0.5, each with restoration off/on, plus zero-seed K=0.05/on. All cases are retained.
+
+Use 160,320,640 cells with the previous minmod MUSCL transport, to t=24. Probes: (start,end,emission time)=(0,10,1),(2,9,0.1),(0,10,5). Check all reservoir signs, reference energy including state energy/inflow/outflow, positive deposit rate, and the phase/event identity with endpoint clocks. Require finest pair absolute-z change below 0.003 for an initial numerical pass; preserve failures. Derive individual photon/packet observational interpretation separately from the reference energy budget.
+
+This supplies a concrete, testable reset rather than a manual endpoint normalization. It does not provide a field action, momentum balance, a physical well source or a validated galaxy redshift law. No constants are calibrated to observations and no holdouts are accessed.
+
+Refinement amendment: the K=0.05 cases failed the declared 0.003 gate at 320-to-640 cells, while K=0.5 and zero-seed cases passed. The two low-cost cases were extended to 1280 cells with identical equations and probe choices. Run the default script first, then --refine-low to reproduce those additional runs. Earlier failed comparisons remain in results.json; the original gate was not relaxed.
