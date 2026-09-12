@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Adaptive trajectories started:** [Preparation checkpoint](research_work/results/bar-cell-geometry/adaptive-progress.md) refines the identified angular regions with a conforming 3,184-cell full sphere, reuses 480 paths and starts 218 new ones. The first planned force comparison preserves parent-region masses to isolate geometry. No adaptive force result exists yet; all nine goals remain open.
+
 **Angular refinement targets identified:** [Complete contribution audit](research_work/results/bar-cell-geometry/angular-attribution-report.md) reproduces the problematic age-bin force and finds that 66/560 parent regions supply 90% of summed difference magnitudes. All directions and their masses remain included. The ranking guides actual refinement; it does not resolve the 14 force failures or establish physical/observational success. All nine goals remain open.
 
 **Largest force discrepancy localized in age:** [Mass-preserving attribution](research_work/results/bar-cell-geometry/age-attribution-report.md) reproduces both archived forces and traces 92.3% of their signed difference to the 61–73 Myr source-age bin at the selected failing target. No ages are removed or renormalized. Next resolve angular structure during that passage; other failures and all nine physical/observational goals remain open.
