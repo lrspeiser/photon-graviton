@@ -1,5 +1,8 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Age and size constraints released:** [Executed assumption audit](research_work/results/assumption-release/report.md) replaces fixed cosmic age/size with free histories and analytic infinite limits. The old ideal full-capture energy benchmark requires a median 54.3 trillion years at constant present luminosity; this is not a measured age or a funded history. Infinite lossless traveling supply and permanent capture have separate convergence/growth problems. Conditional checks pass; no complete mechanism or improved observational fit is claimed.
+
+
 **Adaptive first force comparison complete:** [Fixed-parent-mass audit](research_work/results/bar-cell-geometry/adaptive-report.md) completes all 218 new trajectories and passes all five age-layer checks. Four of five spatial force gates pass, but the central target still changes by 32.2%, exceeding 5%. Source mass and sampled roundoff checks pass; geometry, capture-quadrature sensitivity and other failures remain unresolved. No physical/observational closure follows; all nine goals remain open.
 
 **Angular refinement targets identified:** [Complete contribution audit](research_work/results/bar-cell-geometry/angular-attribution-report.md) reproduces the problematic age-bin force and finds that 66/560 parent regions supply 90% of summed difference magnitudes. All directions and their masses remain included. The ranking guides actual refinement; it does not resolve the 14 force failures or establish physical/observational success. All nine goals remain open.

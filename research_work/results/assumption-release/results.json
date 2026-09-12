@@ -1,0 +1,4659 @@
+{
+  "scope": "Conditional age/size-free transport and energy deductions; no new observational fit",
+  "source_sha256": "8460a918b9983f2469258ad87b308b7f8b5dbe1689aaadda739ebb06d9e266fb",
+  "script_sha256": "4c2fc20981ad568e198f51a444d472636ad6cbe5881f9f491c0bc90fc4fbdc4d",
+  "age_requirement_years": {
+    "median": 54276601722264.984,
+    "p10": 18760531074355.715,
+    "p90": 114530829562418.28
+  },
+  "per_galaxy_requirements": [
+    {
+      "galaxy": "IC2574",
+      "required_full_capture_years": 96289862234009.53,
+      "equivalent_radiated_solar_masses": 8398134440.097081
+    },
+    {
+      "galaxy": "NGC0289",
+      "required_full_capture_years": 116056938895031.8,
+      "equivalent_radiated_solar_masses": 366934081282.3139
+    },
+    {
+      "galaxy": "NGC0300",
+      "required_full_capture_years": 86496555565007.98,
+      "equivalent_radiated_solar_masses": 20989792563.30557
+    },
+    {
+      "galaxy": "NGC0891",
+      "required_full_capture_years": 19639325106879.41,
+      "equivalent_radiated_solar_masses": 84503459787.22679
+    },
+    {
+      "galaxy": "NGC2403",
+      "required_full_capture_years": 109637870652165.2,
+      "equivalent_radiated_solar_masses": 74289907581.22739
+    },
+    {
+      "galaxy": "NGC2841",
+      "required_full_capture_years": 215687931092077.97,
+      "equivalent_radiated_solar_masses": 1104601840451.3801
+    },
+    {
+      "galaxy": "NGC2915",
+      "required_full_capture_years": 429743764791198.5,
+      "equivalent_radiated_solar_masses": 16216889002.706078
+    },
+    {
+      "galaxy": "NGC2976",
+      "required_full_capture_years": 11889086599344.709,
+      "equivalent_radiated_solar_masses": 1938150560.8290117
+    },
+    {
+      "galaxy": "NGC3198",
+      "required_full_capture_years": 113004720229804.75,
+      "equivalent_radiated_solar_masses": 184616924349.55905
+    },
+    {
+      "galaxy": "NGC3521",
+      "required_full_capture_years": 39690456460156.15,
+      "equivalent_radiated_solar_masses": 122883911580.45728
+    },
+    {
+      "galaxy": "NGC3953",
+      "required_full_capture_years": 17881737041832.02,
+      "equivalent_radiated_solar_masses": 76162229740.64249
+    },
+    {
+      "galaxy": "NGC4013",
+      "required_full_capture_years": 69635485663495.11,
+      "equivalent_radiated_solar_masses": 159984881112.9761
+    },
+    {
+      "galaxy": "NGC4051",
+      "required_full_capture_years": 5085965845505.811,
+      "equivalent_radiated_solar_masses": 21526609084.187065
+    },
+    {
+      "galaxy": "NGC4100",
+      "required_full_capture_years": 47601943595275.42,
+      "equivalent_radiated_solar_masses": 96446501852.03421
+    },
+    {
+      "galaxy": "NGC4138",
+      "required_full_capture_years": 55435916245443.53,
+      "equivalent_radiated_solar_masses": 70482483744.92514
+    },
+    {
+      "galaxy": "NGC4183",
+      "required_full_capture_years": 103832267294124.83,
+      "equivalent_radiated_solar_masses": 50221558302.41719
+    },
+    {
+      "galaxy": "NGC4217",
+      "required_full_capture_years": 19916074306814.2,
+      "equivalent_radiated_solar_masses": 61410131985.21068
+    },
+    {
+      "galaxy": "NGC4559",
+      "required_full_capture_years": 42562843211580.58,
+      "equivalent_radiated_solar_masses": 45648962790.173325
+    },
+    {
+      "galaxy": "NGC5033",
+      "required_full_capture_years": 80721802586369.78,
+      "equivalent_radiated_solar_masses": 316986716577.2756
+    },
+    {
+      "galaxy": "NGC5055",
+      "required_full_capture_years": 45801582780524.84,
+      "equivalent_radiated_solar_masses": 277541624533.0222
+    },
+    {
+      "galaxy": "NGC5907",
+      "required_full_capture_years": 82086770578900.38,
+      "equivalent_radiated_solar_masses": 396788662068.9648
+    },
+    {
+      "galaxy": "NGC6946",
+      "required_full_capture_years": 20808139461078.723,
+      "equivalent_radiated_solar_masses": 70309745992.73079
+    },
+    {
+      "galaxy": "NGC7331",
+      "required_full_capture_years": 40148595887382.18,
+      "equivalent_radiated_solar_masses": 323167144594.152
+    },
+    {
+      "galaxy": "NGC7793",
+      "required_full_capture_years": 27548878144371.797,
+      "equivalent_radiated_solar_masses": 9234035076.583788
+    },
+    {
+      "galaxy": "UGC04483",
+      "required_full_capture_years": 63203273878311.445,
+      "equivalent_radiated_solar_masses": 114448958.46505035
+    },
+    {
+      "galaxy": "UGC07089",
+      "required_full_capture_years": 53117287199086.43,
+      "equivalent_radiated_solar_masses": 9636660832.504313
+    }
+  ],
+  "reservoir_cases": [
+    {
+      "a": 0.3,
+      "b": 0.7,
+      "finite_fuel": false,
+      "final_energy": [
+        3.3333333333333335,
+        1.428571428615845,
+        661.9047619047172
+      ],
+      "final_time": 666.6666666666667
+    },
+    {
+      "a": 0.3,
+      "b": 0.7,
+      "finite_fuel": true,
+      "final_energy": [
+        1.5807617514866296e-83,
+        -9.207299092305717e-13,
+        2.000000000000985
+      ],
+      "final_time": 666.6666666666667
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "finite_fuel": false,
+      "final_energy": [
+        0.99999999999995,
+        1.000000000014268,
+        197.99999999998582
+      ],
+      "final_time": 200.0
+    },
+    {
+      "a": 1,
+      "b": 1,
+      "finite_fuel": true,
+      "final_energy": [
+        6.486457041997557e-15,
+        -1.7013551839936997e-12,
+        2.0000000000017013
+      ],
+      "final_time": 200.0
+    },
+    {
+      "a": 2,
+      "b": 0.2,
+      "finite_fuel": false,
+      "final_energy": [
+        0.5,
+        4.9999999999652305,
+        994.5000000000348
+      ],
+      "final_time": 1000.0
+    },
+    {
+      "a": 2,
+      "b": 0.2,
+      "finite_fuel": true,
+      "final_energy": [
+        3.0580458347742047e-13,
+        -3.397828705304554e-13,
+        2.000000000000041
+      ],
+      "final_time": 1000.0
+    }
+  ],
+  "shell_cases": [
+    {
+      "alpha": 1,
+      "beta": 0,
+      "radius": 0.1,
+      "photon_integral": 0.09516258196404043,
+      "companion_integral": 0.004837418035959574
+    },
+    {
+      "alpha": 1,
+      "beta": 0,
+      "radius": 1,
+      "photon_integral": 0.6321205588285578,
+      "companion_integral": 0.3678794411714423
+    },
+    {
+      "alpha": 1,
+      "beta": 0,
+      "radius": 10,
+      "photon_integral": 0.9999546000702375,
+      "companion_integral": 9.00004539992976
+    },
+    {
+      "alpha": 1,
+      "beta": 0,
+      "radius": 100,
+      "photon_integral": 1.0000000000000002,
+      "companion_integral": 99.0
+    },
+    {
+      "alpha": 1,
+      "beta": 1,
+      "radius": 0.1,
+      "photon_integral": 0.09516258196404043,
+      "companion_integral": 0.004678840160444469
+    },
+    {
+      "alpha": 1,
+      "beta": 1,
+      "radius": 1,
+      "photon_integral": 0.6321205588285578,
+      "companion_integral": 0.2642411176571154
+    },
+    {
+      "alpha": 1,
+      "beta": 1,
+      "radius": 10,
+      "photon_integral": 0.9999546000702375,
+      "companion_integral": 0.9995006007726127
+    },
+    {
+      "alpha": 1,
+      "beta": 1,
+      "radius": 100,
+      "photon_integral": 1.0000000000000002,
+      "companion_integral": 1.0
+    },
+    {
+      "alpha": 1,
+      "beta": 0.2,
+      "radius": 0.1,
+      "photon_integral": 0.09516258196404043,
+      "companion_integral": 0.004805064377728828
+    },
+    {
+      "alpha": 1,
+      "beta": 0.2,
+      "radius": 1,
+      "photon_integral": 0.6321205588285578,
+      "companion_integral": 0.34278209472691623
+    },
+    {
+      "alpha": 1,
+      "beta": 0.2,
+      "radius": 10,
+      "photon_integral": 0.9999546000702375,
+      "companion_integral": 4.154211229683374
+    },
+    {
+      "alpha": 1,
+      "beta": 0.2,
+      "radius": 100,
+      "photon_integral": 1.0000000000000002,
+      "companion_integral": 4.999999987117789
+    },
+    {
+      "alpha": 1,
+      "beta": 3,
+      "radius": 0.1,
+      "photon_integral": 0.09516258196404043,
+      "companion_integral": 0.004384327762306524
+    },
+    {
+      "alpha": 1,
+      "beta": 3,
+      "radius": 1,
+      "photon_integral": 0.6321205588285578,
+      "companion_integral": 0.1576914574755895
+    },
+    {
+      "alpha": 1,
+      "beta": 3,
+      "radius": 10,
+      "photon_integral": 0.9999546000702375,
+      "companion_integral": 0.3333106333684677
+    },
+    {
+      "alpha": 1,
+      "beta": 3,
+      "radius": 100,
+      "photon_integral": 1.0000000000000002,
+      "companion_integral": 0.3333333333333333
+    }
+  ],
+  "checks": [
+    {
+      "name": "archived energy units IC2574",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC0289",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC0300",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC0891",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC2403",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC2841",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC2915",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC2976",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC3198",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC3521",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC3953",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC4013",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC4051",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC4100",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC4138",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC4183",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC4217",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC4559",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC5033",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC5055",
+      "error": 2.220446049250313e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC5907",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC6946",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC7331",
+      "error": 0.0,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units NGC7793",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units UGC04483",
+      "error": 1.1102230246251565e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "archived energy units UGC07089",
+      "error": 3.3306690738754696e-16,
+      "tolerance": 0.002,
+      "passed": true
+    },
+    {
+      "name": "normalized shape duration 1e-08",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "normalized shape duration 1",
+      "error": 0.0,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "normalized shape duration 100000000.0",
+      "error": 2.7755575615628914e-17,
+      "tolerance": 1e-14,
+      "passed": true
+    },
+    {
+      "name": "energy conservation a=0.3 b=0.7 finite_fuel=False",
+      "error": 5.115907697472721e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "nonnegative energy a=0.3 b=0.7 finite_fuel=False",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "permanent deposit late growth a=0.3 b=0.7 finite_fuel=False",
+      "error": 3.1091573760022584e-11,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "energy conservation a=0.3 b=0.7 finite_fuel=True",
+      "error": 2.985389713217046e-13,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "nonnegative energy a=0.3 b=0.7 finite_fuel=True",
+      "error": 4.151781137049015e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite fuel deposit limit a=0.3 b=0.7 finite_fuel=True",
+      "error": 4.924949337237194e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "energy conservation a=1 b=1 finite_fuel=False",
+      "error": 2.842170943040401e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "nonnegative energy a=1 b=1 finite_fuel=False",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "permanent deposit late growth a=1 b=1 finite_fuel=False",
+      "error": 1.4267920178667737e-11,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "energy conservation a=1 b=1 finite_fuel=True",
+      "error": 5.695444116327053e-14,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "nonnegative energy a=1 b=1 finite_fuel=True",
+      "error": 2.8381909868690597e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite fuel deposit limit a=1 b=1 finite_fuel=True",
+      "error": 8.506528814677949e-13,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "energy conservation a=2 b=0.2 finite_fuel=False",
+      "error": 2.2737367544323206e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "nonnegative energy a=2 b=0.2 finite_fuel=False",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "permanent deposit late growth a=2 b=0.2 finite_fuel=False",
+      "error": 6.953881914739668e-12,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "energy conservation a=2 b=0.2 finite_fuel=True",
+      "error": 2.2470914018413168e-13,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "nonnegative energy a=2 b=0.2 finite_fuel=True",
+      "error": 3.0994518229783544e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite fuel deposit limit a=2 b=0.2 finite_fuel=True",
+      "error": 2.042810365310288e-14,
+      "tolerance": 1e-08,
+      "passed": true
+    },
+    {
+      "name": "finite lifetime solution 0.2",
+      "error": 4.019562460655379e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite lifetime receiver ledger 0.2",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite lifetime solution 1",
+      "error": 3.0042635046356736e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite lifetime receiver ledger 1",
+      "error": 1.7763568394002506e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite lifetime solution 20",
+      "error": 2.771471940832271e-12,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "finite lifetime receiver ledger 20",
+      "error": 2.842170943040401e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "lossless ray energy R=0.1",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.005",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.01",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.015",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0175",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.02",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.03",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.035",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.04",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0425",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.045",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0475",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.055",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0575",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.06",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.065",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.07",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0725",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.08",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0825",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.085",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.08750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.09",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.095",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.0975",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,0.1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "lossless ray energy R=1",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.07500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.15000000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.17500000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.2",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.30000000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.35000000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.4",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.42500000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.45",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.47500000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.55",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.5750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.6000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.65",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.7000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.7250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.8",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.8250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.8500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.875",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.9",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.9500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,0.9750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,1,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "lossless ray energy R=10",
+      "error": 1.7763568394002505e-15,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,1.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,1.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,1.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,2.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,2.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,2.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,3.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,3.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,3.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,3.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,4.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,4.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,4.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,4.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,5.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,5.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,5.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,6.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,6.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,6.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,6.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,7.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,7.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,7.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,8.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,8.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,8.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,8.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,9.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,9.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,9.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,9.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,10,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "lossless ray energy R=100",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,12.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,15.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,17.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,20.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,22.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,25.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,27.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,30.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,32.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,35.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,37.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,40.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,42.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,45.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,47.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,50.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,52.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,55.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,57.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,60.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,62.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,65.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,67.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,70.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,72.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,75.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,77.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,80.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,82.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,85.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,87.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,90.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,92.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,95.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,97.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0,100,100.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.005",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.01",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.015",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0175",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.02",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.03",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.035",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.04",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0425",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.045",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0475",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.055",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0575",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.06",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.065",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.07",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0725",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.08",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0825",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.085",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.08750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.09",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.095",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.0975",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,0.1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.07500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.15000000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.17500000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.2",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.30000000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.35000000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.4",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.42500000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.45",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.47500000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.55",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.5750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.6000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.65",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.7000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.7250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.8",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.8250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.8500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.875",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.9",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.9500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,0.9750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,1,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,1.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,1.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,1.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,2.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,2.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,2.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,3.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,3.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,3.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,3.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,4.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,4.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,4.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,4.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,5.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,5.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,5.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,6.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,6.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,6.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,6.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,7.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,7.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,7.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,8.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,8.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,8.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,8.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,9.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,9.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,9.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,9.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,10,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,12.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,15.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,17.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,20.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,22.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,25.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,27.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,30.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,32.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,35.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,37.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,40.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,42.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,45.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,47.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,50.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,52.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,55.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,57.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,60.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,62.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,65.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,67.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,70.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,72.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,75.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,77.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,80.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,82.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,85.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,87.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,90.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,92.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,95.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,97.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,1,100,100.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "infinite photon integral 1",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "infinite companion integral 1",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.005",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.01",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.015",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0175",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.02",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.03",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.035",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.04",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0425",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.045",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0475",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.055",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0575",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.06",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.065",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.07",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0725",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.08",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0825",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.085",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.08750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.09",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.095",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.0975",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,0.1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.07500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.15000000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.17500000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.2",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.30000000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.35000000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.4",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.42500000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.45",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.47500000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.55",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.5750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.6000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.65",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.7000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.7250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.8",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.8250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.8500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.875",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.9",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.9500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,0.9750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,1,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,1.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,1.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,1.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,2.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,2.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,2.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,3.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,3.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,3.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,3.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,4.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,4.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,4.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,4.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,5.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,5.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,5.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,6.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,6.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,6.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,6.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,7.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,7.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,7.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,8.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,8.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,8.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,8.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,9.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,9.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,9.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,9.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,10,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,12.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,15.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,17.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,20.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,22.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,25.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,27.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,30.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,32.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,35.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,37.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,40.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,42.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,45.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,47.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,50.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,52.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,55.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,57.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,60.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,62.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,65.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,67.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,70.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,72.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,75.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,77.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,80.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,82.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,85.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,87.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,90.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,92.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,95.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,97.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,0.2,100,100.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "infinite photon integral 0.2",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "infinite companion integral 0.2",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.005",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.01",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.015",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0175",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.02",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.03",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.035",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.04",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0425",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.045",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0475",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.055",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0575",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.06",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.065",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.07",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0725",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.075",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.08",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0825",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.085",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.08750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.09",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.095",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.0975",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,0.1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.025",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.05",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.07500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.1",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.125",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.15000000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.17500000000000002",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.2",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.225",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.275",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.30000000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.325",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.35000000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.375",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.4",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.42500000000000004",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.45",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.47500000000000003",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.525",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.55",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.5750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.6000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.625",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.65",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.675",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.7000000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.7250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.775",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.8",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.8250000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.8500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.875",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.9",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.925",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.9500000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,0.9750000000000001",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,1,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,0.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,0.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,0.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,1.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,1.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,1.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,1.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,2.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,2.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,2.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,3.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,3.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,3.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,3.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,4.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,4.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,4.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,4.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,5.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,5.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,5.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,6.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,6.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,6.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,6.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,7.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,7.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,7.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,8.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,8.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,8.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,8.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,9.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,9.25",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,9.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,9.75",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,10,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,0.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,2.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,5.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,7.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,10.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,12.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,15.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,17.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,20.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,22.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,25.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,27.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,30.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,32.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,35.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,37.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,40.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,42.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,45.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,47.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,50.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,52.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,55.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,57.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,60.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,62.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,65.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,67.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,70.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,72.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,75.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,77.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,80.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,82.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,85.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,87.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,90.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,92.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,95.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,97.5",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "ray positivity 1,3,100,100.0",
+      "error": 0.0,
+      "tolerance": 1e-12,
+      "passed": true
+    },
+    {
+      "name": "infinite photon integral 3",
+      "error": 2.220446049250313e-16,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "infinite companion integral 3",
+      "error": 0.0,
+      "tolerance": 1e-09,
+      "passed": true
+    },
+    {
+      "name": "stationary event separation 0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "stationary event separation 1",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    },
+    {
+      "name": "stationary event separation 1000000.0",
+      "error": 0.0,
+      "tolerance": 0,
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true
+}

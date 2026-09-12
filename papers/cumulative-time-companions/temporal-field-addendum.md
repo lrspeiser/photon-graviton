@@ -1,5 +1,8 @@
 # Temporal-field mechanism addendum — 12 September 2026
 
+**Age/size-free assumption audit:** The latest [executed analysis](../../research_work/results/assumption-release/report.md) imposes no universe age or radius. The archived full-conversion ordinary-mass benchmark becomes a median 54.3-trillion-year illumination requirement at fixed present luminosity, not a universal energy exclusion. Analytic shell transport and independently integrated energy reservoirs distinguish finite traveling densities from unbounded permanent deposition under eternal steady supply. Finite source fuel and finite deposit lifetimes change these limits. Stationary propagation still does not stretch event spacing, irrespective of cosmic age. These are known mathematical consequences of explicit toy postulates; no novel interaction, funded gravitational source, global static solution or new observational validation is established.
+
+
 This working addendum updates the mechanism assessment alongside the historical v0.5 manuscript/PDF. It does not certify a complete new observational model. The early mechanism tests are synthetic operational experiments with reference-energy ledgers. Subsequent capture sections include explicitly labeled calibration against exposed stellar-motion proxies; none constitutes independent validation or a complete physical conservation proof.
 
 ## Clock completion and energy transport

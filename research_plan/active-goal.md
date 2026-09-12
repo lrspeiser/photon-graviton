@@ -1,5 +1,8 @@
 # Active research goal: accurate redshift and joint companion predictions
 
+**Resumed with age/size-free physical priority:** The user requests removal of outcome-changing arbitrary assumptions and first-principles tests. [Executed audit](../research_work/results/assumption-release/report.md) frees age/size/history/lifetime, derives conditional supply and infinite-domain limits, and retains age-independent timing and response obstructions. All 722 numerical checks pass; these check simplified deductions, not astronomical agreement. Prioritize the physical source/coupling connection over further orbit-only refinement. All nine goals remain open.
+
+
 **Goal 5 lensing bridge:** [Conditional ray-kernel audit](../research_work/results/deposit-lensing-kernel/report.md) passes independent numerical comparisons under an explicitly assumed equal-potential metric. Deriving that response, integrating a converged physical deposit source, and testing observed lensing remain outstanding. No change to the nine goals.
 
 **Interior lensing kernel checked:** [Six cube-ray comparisons](../research_work/results/deposit-lensing-kernel/interior-report.md) agree with an independent singularity-resolving polar-volume integral, including near-edge impacts. This extends the conditional numerical lensing bridge; it does not validate the evolving source map or derive the companion metric. The full-sphere preparations remain running; all nine goals stay open.
