@@ -1,3 +1,5 @@
+Latest timing development: [continuous source-scatter integration](../research_work/results/timing-continuous-scatter/report.md). Exact integration includes zero scatter; exposed-case grid and optimizer limitations remain. Separate revision only: frozen 160-case calibration unchanged, all six demonstrations open.
+
 Latest source-clock evidence: [SN 2011fe observed tail audit](../research_work/results/sn2011fe-clock-audit/report.md). All 14 published LBT R observations retained; a single exponential has diagonal chi-square 1142/12. Its naive apparent stretch is not a propagation measurement. Multiband source physics remains necessary; all six demonstrations stay open.
 
 # Active research goal: accurate redshift and joint companion predictions
