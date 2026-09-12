@@ -1,0 +1,7 @@
+{
+  "scope": "Numerical width-grid sensitivity using the same refined 8192-sample event curves; no new flux or shape evaluations.",
+  "method": "Decimate the 321-node uniform log-width grid to its nested 161-node grid. Refit the population on both. Interpolate centered coarse event curves back to fine grid and compare using the existing posterior-weighted metric.",
+  "maximum_b_change": 0.05,
+  "maximum_mean_event_log_change": 0.1,
+  "limitation": "Checks 161 to 321 only, not 321 to 641; does not establish asymptotic convergence, prior sensitivity or coverage."
+}

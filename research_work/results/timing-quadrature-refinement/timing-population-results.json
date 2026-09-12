@@ -1,0 +1,174 @@
+{
+  "scope": "Shape-integration refinement of the existing synthetic DES cadence pilot. Same exposed seed and 98 cadence slots; no real-flux inference or new physics validation.",
+  "protocol_sha256": "441ac7ea951dcf3b2d8ca8ba02caf4ad30b175bc3c2da7e0296f365112aed86c",
+  "checks": {
+    "scalar_batch_max_log_error": 1.9539925233402755e-14,
+    "constant_likelihood_max_error": 6.661338147750939e-15,
+    "invalid_error_rejected": true,
+    "all_original_cadence_slots": 98
+  },
+  "injection": {
+    "family": "split_gaussian_shoulder",
+    "b": 1,
+    "seed": 601,
+    "intrinsic_log_scatter": 0.1,
+    "offset_range_days": [
+      -5,
+      5
+    ],
+    "nominal_snr": 20
+  },
+  "slope_of_true_injected_widths_in_finite_sample": 1.0468366922915948,
+  "runs": {
+    "base": {
+      "a": 3.523114957120264,
+      "b": 1.1045835309536771,
+      "sigma": 0.10832015654131175,
+      "negative_centered_log_likelihood": 141.81438435414827,
+      "optimizer_success": true,
+      "interior_solution": true,
+      "maximum_population_mass_outside_width_bounds": 3.504390510357747e-36,
+      "starts": [
+        {
+          "success": true,
+          "objective": 141.81438435414827,
+          "parameters": [
+            3.523114957120264,
+            1.1045835309536771,
+            -2.222664024644625
+          ]
+        },
+        {
+          "success": true,
+          "objective": 141.8143843541487,
+          "parameters": [
+            3.5231150089735412,
+            1.1045833758868022,
+            -2.222664079112564
+          ]
+        },
+        {
+          "success": true,
+          "objective": 141.81438435414884,
+          "parameters": [
+            3.5231149390907057,
+            1.1045835775013595,
+            -2.222663988566399
+          ]
+        }
+      ],
+      "elapsed_seconds": 30.74177359999885,
+      "event_count": 98
+    },
+    "refined": {
+      "a": 3.5232498674602093,
+      "b": 1.1038551999908646,
+      "sigma": 0.10793663874346673,
+      "negative_centered_log_likelihood": 141.09017866787286,
+      "optimizer_success": true,
+      "interior_solution": true,
+      "maximum_population_mass_outside_width_bounds": 1.9312790602351586e-36,
+      "starts": [
+        {
+          "success": true,
+          "objective": 141.0901786678735,
+          "parameters": [
+            3.5232498347142753,
+            1.1038553013932761,
+            -2.226210862351372
+          ]
+        },
+        {
+          "success": true,
+          "objective": 141.09017866787326,
+          "parameters": [
+            3.5232498430104973,
+            1.1038552801404042,
+            -2.2262108487411423
+          ]
+        },
+        {
+          "success": true,
+          "objective": 141.09017866787286,
+          "parameters": [
+            3.5232498674602093,
+            1.1038551999908646,
+            -2.2262109023222054
+          ]
+        }
+      ],
+      "elapsed_seconds": 127.8439271999996,
+      "event_count": 98
+    },
+    "independent_scramble": {
+      "a": 3.523037800586625,
+      "b": 1.1047431806042727,
+      "sigma": 0.1078680108189048,
+      "negative_centered_log_likelihood": 140.9560252453139,
+      "optimizer_success": true,
+      "interior_solution": true,
+      "maximum_population_mass_outside_width_bounds": 1.8135806742264404e-36,
+      "starts": [
+        {
+          "success": true,
+          "objective": 140.95602524531398,
+          "parameters": [
+            3.5230377963090715,
+            1.1047431866771305,
+            -2.226846941995718
+          ]
+        },
+        {
+          "success": true,
+          "objective": 140.95602524531452,
+          "parameters": [
+            3.523037817158381,
+            1.104743152673252,
+            -2.2268468285489798
+          ]
+        },
+        {
+          "success": true,
+          "objective": 140.9560252453139,
+          "parameters": [
+            3.523037800586625,
+            1.1047431806042727,
+            -2.226846921305249
+          ]
+        }
+      ],
+      "elapsed_seconds": 129.26686039999913,
+      "event_count": 98
+    }
+  },
+  "comparisons": [
+    {
+      "left": "base",
+      "right": "refined",
+      "absolute_b_change": 0.0007283309628125512,
+      "mean_posterior_weighted_centered_event_log_change": 0.053123563936363694
+    },
+    {
+      "left": "refined",
+      "right": "independent_scramble",
+      "absolute_b_change": 0.0008879806134081125,
+      "mean_posterior_weighted_centered_event_log_change": 0.03561923462017588
+    }
+  ],
+  "numerical_pilot_gate_pass": true,
+  "calibrated_estimator_established": false,
+  "real_flux_used": false,
+  "interval_coverage_established": false,
+  "next_step": "Record expanded calibration protocol, separate quadrature/prior sensitivities and test bias/coverage before real data.",
+  "source_hashes": {
+    "research_work/results/timing-population/run.py": "51ab7f85df101767bb16e78f4302eebde8b81af2f48287208c2b97baf0d2b5ea",
+    "research_work/results/timing-population/estimator.py": "27e0a4dda4ffe4d410ad3c9e7ef55cfda665d4eebb91b7dd2e025c59e2c23a52",
+    "research_work/results/timing-foundation/input-audit.json": "11f46fcbd6636041901322b9ddda18267627bbc64ce122d59065d6378323139a",
+    "research_work/results/timing-injection/timing-injection-results.json": "0fbf4f621f6d0025da171d9d492471cd6762627ffe825e4b9d96578698a3cc33"
+  },
+  "array_hashes": {
+    "base-event-likelihoods.npz": "46133f2d81f5c4534c91a88c4cedc85c6e74595a51f09b6f5c87ae4205c4ad97",
+    "independent_scramble-event-likelihoods.npz": "8f726cd6038248e3e640a705fe9f200cdd32510344a133065d84a3e9d389092a",
+    "refined-event-likelihoods.npz": "ad51b8ec366bd74483290041e29aca820f901974617784f1f8cc7518b251e8fe"
+  }
+}

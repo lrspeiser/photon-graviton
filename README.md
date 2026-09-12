@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Joint-light timing prerequisite:** [Refined synthetic-cadence calculation](research_work/results/timing-quadrature-refinement/report.md) passes the unchanged mean-based numerical gate: shape integration changes 0.0531/0.0356 (limit 0.1), and the separate duration-grid comparison changes 0.0346. Some individual curves exceed 0.1 and remain reported. This is not a real-supernova result or a brightness test; repeated-trial bias/coverage, source/filter/selection calibration and joint physical flux predictions remain required. The six-demonstration evidence program remains active.
+
 **Age and size constraints released:** [Executed assumption audit](research_work/results/assumption-release/report.md) replaces fixed cosmic age/size with free histories and analytic infinite limits. The old ideal full-capture energy benchmark requires a median 54.3 trillion years at constant present luminosity; this is not a measured age or a funded history. Infinite lossless traveling supply and permanent capture have separate convergence/growth problems. Conditional checks pass; no complete mechanism or improved observational fit is claimed.
 
 

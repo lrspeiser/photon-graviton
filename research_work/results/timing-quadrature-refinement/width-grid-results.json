@@ -1,0 +1,83 @@
+{
+  "coarse": {
+    "a": 3.523249834555854,
+    "b": 1.1038553800300135,
+    "sigma": 0.10793668390089954,
+    "negative_centered_log_likelihood": 139.9178813553276,
+    "optimizer_success": true,
+    "interior_solution": true,
+    "maximum_population_mass_outside_width_bounds": 1.9314243227347353e-36,
+    "starts": [
+      {
+        "success": true,
+        "objective": 139.9178813553276,
+        "parameters": [
+          3.523249834555854,
+          1.1038553800300135,
+          -2.2262104839524666
+        ]
+      },
+      {
+        "success": true,
+        "objective": 139.91788135532815,
+        "parameters": [
+          3.5232498151905256,
+          1.1038554343042186,
+          -2.2262104797643967
+        ]
+      },
+      {
+        "success": true,
+        "objective": 139.917881355328,
+        "parameters": [
+          3.5232498225075606,
+          1.1038554037280024,
+          -2.2262104654127377
+        ]
+      }
+    ]
+  },
+  "fine": {
+    "a": 3.5232498674602093,
+    "b": 1.1038551999908646,
+    "sigma": 0.10793663874346673,
+    "negative_centered_log_likelihood": 141.09017866787286,
+    "optimizer_success": true,
+    "interior_solution": true,
+    "maximum_population_mass_outside_width_bounds": 1.9312790602351586e-36,
+    "starts": [
+      {
+        "success": true,
+        "objective": 141.0901786678735,
+        "parameters": [
+          3.5232498347142753,
+          1.1038553013932761,
+          -2.226210862351372
+        ]
+      },
+      {
+        "success": true,
+        "objective": 141.09017866787326,
+        "parameters": [
+          3.5232498430104973,
+          1.1038552801404042,
+          -2.2262108487411423
+        ]
+      },
+      {
+        "success": true,
+        "objective": 141.09017866787286,
+        "parameters": [
+          3.5232498674602093,
+          1.1038551999908646,
+          -2.2262109023222054
+        ]
+      }
+    ]
+  },
+  "absolute_b_change": 1.800391489226172e-07,
+  "mean_event_log_change": 0.034598891680959386,
+  "nested_grid_check_pass": true,
+  "scope": "Numerical width-grid sensitivity using the same refined 8192-sample event curves; no new flux or shape evaluations.",
+  "limitation": "Checks 161 to 321 only, not 321 to 641; does not establish asymptotic convergence, prior sensitivity or coverage."
+}

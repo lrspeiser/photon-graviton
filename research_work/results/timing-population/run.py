@@ -1,6 +1,6 @@
 """Frozen numerical convergence pilot on synthetic DES-cadence light curves."""
 from pathlib import Path
-import importlib.util, hashlib, json, os, time
+import argparse, importlib.util, hashlib, json, os, time
 import numpy as np
 from astropy.io import fits
 from scipy.special import logsumexp
@@ -15,7 +15,13 @@ def load_module(name,path):
 
 
 def main():
-    protocol=json.loads((HERE/'protocol.json').read_text())
+    global OUT
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--protocol',type=Path,default=HERE/'protocol.json')
+    parser.add_argument('--output',type=Path,default=OUT)
+    args=parser.parse_args()
+    OUT=args.output
+    protocol=json.loads(args.protocol.read_text())
     scalar=load_module('scalar_component',ROOT/'research_work/results/timing-likelihood/likelihood.py')
     previous=load_module('old_injection',ROOT/'research_work/results/timing-injection/run_injections.py')
     rng=np.random.default_rng(8123);s=rng.uniform(0,1,(3,4,9));err=rng.uniform(.05,.3,9);y=rng.normal(.5,.2,9)
@@ -73,7 +79,7 @@ def main():
             and all(r['optimizer_success'] and r['interior_solution'] and r['maximum_population_mass_outside_width_bounds']<=gate['maximum_continuous_population_probability_outside_width_bounds'] for r in all_results.values()))
     logz=np.log1p(redshift);true_log_scale=np.log([s['scale'] for s in slots])
     true_slope=float(np.dot(logz-logz.mean(),true_log_scale)/np.sum((logz-logz.mean())**2))
-    result={'scope':protocol['scope'],'protocol_sha256':hashlib.sha256((HERE/'protocol.json').read_bytes()).hexdigest(),
+    result={'scope':protocol['scope'],'protocol_sha256':hashlib.sha256(args.protocol.read_bytes()).hexdigest(),
             'checks':{'scalar_batch_max_log_error':float(scalar_error),'constant_likelihood_max_error':float(neutral),'invalid_error_rejected':True,'all_original_cadence_slots':len(slots)},
             'injection':inject,'slope_of_true_injected_widths_in_finite_sample':true_slope,'runs':all_results,'comparisons':comparisons,
             'numerical_pilot_gate_pass':bool(passed),'calibrated_estimator_established':False,'real_flux_used':False,
