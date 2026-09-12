@@ -1,0 +1,125 @@
+{
+  "scope": "Version comparison of already exposed DES source data; no light-curve fit or physical model inference.",
+  "archive_sha256": "36ec3b5f64f4e7ac9b0ff37a15a7f44234fcb2b5e0e906b34491f6fd754ba7c7",
+  "old_files": [
+    {
+      "member": "lcmerge/DES-SN5YR/DES-SN5YR_DES/DES-SN5YR_DES.README",
+      "sha256": "7fcc28c0149fba8057f0e17423ce42fc3838f2504d469c7c3666ac9489cbc697",
+      "bytes": 1716
+    },
+    {
+      "member": "lcmerge/DES-SN5YR/DES-SN5YR_DES/DES-SN5YR_DES_HEAD.FITS.gz",
+      "sha256": "08c1fb41dfe8b4e8a969f205144f94c9f6838a1a895a0fedc75b837fb87fd00a",
+      "bytes": 2929622
+    },
+    {
+      "member": "lcmerge/DES-SN5YR/DES-SN5YR_DES/DES-SN5YR_DES_PHOT.FITS.gz",
+      "sha256": "10248f0364e90f88626ef19cf5ecf052500bbcbfd27f14f8b94cf8ffbc7dd01c",
+      "bytes": 66106516
+    }
+  ],
+  "new_source_commit": "c9a4fcafc4cbd19bd750dee47fc76194a45c181f",
+  "old_events": 19706,
+  "new_events": 19706,
+  "matched_events": 19706,
+  "old_only_count": 0,
+  "new_only_count": 0,
+  "different_point_count_ids": [],
+  "unaligned_observation_ids": [],
+  "aligned_measurement_rows": 1779030,
+  "measurement_field_comparisons": {
+    "CCDNUM": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "IMGNUM": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "FIELD": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "PHOTFLAG": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "PHOTPROB": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "FLUXCAL": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "FLUXCALERR": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "PSF_SIG1": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "PSF_SIG2": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "PSF_RATIO": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "SKY_SIG": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "SKY_SIG_T": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "RDNOISE": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "ZEROPT": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "ZEROPT_ERR": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "GAIN": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "XPIX": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    },
+    "YPIX": {
+      "different_entries": 0,
+      "max_absolute_difference": 0.0
+    }
+  },
+  "changed_header_fields": {
+    "HOSTGAL_MAG_g": 16697,
+    "HOSTGAL_MAG_r": 16704,
+    "HOSTGAL_MAG_i": 16703,
+    "HOSTGAL_MAG_z": 16704,
+    "HOSTGAL_MAGERR_g": 16704,
+    "HOSTGAL_MAGERR_r": 16704,
+    "HOSTGAL_MAGERR_i": 16704,
+    "HOSTGAL_MAGERR_z": 16704
+  },
+  "old_only_header_fields": [
+    "IAUC"
+  ],
+  "new_only_header_fields": [
+    "LENSDMU",
+    "LENSDMU_ERR",
+    "NAME_IAUC",
+    "NAME_TRANSIENT"
+  ],
+  "old_only_photometry_fields": [],
+  "new_only_photometry_fields": []
+}
