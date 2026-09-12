@@ -1,0 +1,102 @@
+{
+  "scope": "Two artificial end-to-end recovery controls; no actual supernova fit or empirical theory validation.",
+  "results": [
+    {
+      "injected_b": 0,
+      "fitted_alpha_per_mpc": 0.0002489171328399195,
+      "fitted_b": -0.021010872185012148,
+      "fitted_common_luminosity_scale": 0.9973798781154173,
+      "fitted_common_width_days": 30.25691201010123,
+      "errors": {
+        "relative_alpha_error": 7.153173847525031e-05,
+        "absolute_b_error": 0.021010872185012148,
+        "relative_luminosity_error": 0.0026201218845827655,
+        "relative_width_error": 0.008563733670041075
+      },
+      "screen_pass": true,
+      "analytic_vs_forward_max_relative_error": 7.03073029853778e-16,
+      "starts": [
+        {
+          "success": true,
+          "nll": 1462.5817165151282,
+          "parameters": [
+            7.152875921470179e-05,
+            -0.02101087038868609,
+            -0.0026235615239540316,
+            0.008527302466533842
+          ]
+        },
+        {
+          "success": true,
+          "nll": 1462.58171651512,
+          "parameters": [
+            7.152918020244341e-05,
+            -0.021010872185012148,
+            -0.002623560411480777,
+            0.00852727291510758
+          ]
+        },
+        {
+          "success": true,
+          "nll": 1462.5817165151302,
+          "parameters": [
+            7.152867232297225e-05,
+            -0.021010821943602914,
+            -0.002623542005240178,
+            0.008527287205244777
+          ]
+        }
+      ]
+    },
+    {
+      "injected_b": 1,
+      "fitted_alpha_per_mpc": 0.00024891713330940825,
+      "fitted_b": 0.9820750581962678,
+      "fitted_common_luminosity_scale": 0.9989133849379466,
+      "fitted_common_width_days": 30.209829585199326,
+      "errors": {
+        "relative_alpha_error": 7.153362473475153e-05,
+        "absolute_b_error": 0.017924941803732164,
+        "relative_luminosity_error": 0.0010866150620534416,
+        "relative_width_error": 0.006994319506644164
+      },
+      "screen_pass": true,
+      "analytic_vs_forward_max_relative_error": 2.217328654815557e-15,
+      "starts": [
+        {
+          "success": true,
+          "nll": 1393.4213339311136,
+          "parameters": [
+            7.153106632702507e-05,
+            0.9820750581962678,
+            -0.0010872058562159824,
+            0.006969972714203051
+          ]
+        },
+        {
+          "success": true,
+          "nll": 1393.4213339311877,
+          "parameters": [
+            7.152868619125453e-05,
+            0.9820751327210709,
+            -0.0010872082880785438,
+            0.006969945387990376
+          ]
+        },
+        {
+          "success": true,
+          "nll": 1393.421333931194,
+          "parameters": [
+            7.152857170714549e-05,
+            0.9820751447411854,
+            -0.00108720255043282,
+            0.006969939762268108
+          ]
+        }
+      ]
+    }
+  ],
+  "observed_data_fitted": false,
+  "source_evolution_allowed": false,
+  "uncertainty_coverage_established": false
+}
