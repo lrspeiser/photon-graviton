@@ -1,0 +1,119 @@
+{
+  "states": 72,
+  "max_eigenvalue_error": 2.220446049250313e-16,
+  "capture_domain_tests": [
+    {
+      "K": 0.5,
+      "R_initial": 0.22,
+      "C_initial": 1.0,
+      "Gamma": 1.0,
+      "crossing_C": 0.37649820430708336,
+      "crossing_time": 0.7096241337334439,
+      "time_check_error": 4.960476474025199e-13,
+      "crossing_state_error": 1.0186296250935811e-13,
+      "reference_budget_error": 4.440892098500626e-16,
+      "positive_singular_C": 0.07445626465380284,
+      "implication": "Capture reaches the defective equal-speed boundary from the initially regular C>R domain."
+    },
+    {
+      "K": 2.0,
+      "R_initial": 0.22,
+      "C_initial": 1.0,
+      "Gamma": 1.0,
+      "crossing_C": 0.2884098726725126,
+      "crossing_time": 1.117095682085205,
+      "time_check_error": 3.064215547965432e-14,
+      "crossing_state_error": 1.2212453270876722e-15,
+      "reference_budget_error": 6.661338147750939e-16,
+      "positive_singular_C": null,
+      "implication": "Capture reaches the defective equal-speed boundary from the initially regular C>R domain."
+    }
+  ],
+  "by_eta": {
+    "1.0": {
+      "n": 36,
+      "capture_reversal": 8,
+      "forward_within_c": 18,
+      "coincident": 9
+    },
+    "0.5": {
+      "n": 36,
+      "capture_reversal": 8,
+      "forward_within_c": 28,
+      "coincident": 0
+    }
+  },
+  "representative": [
+    {
+      "K": 0.5,
+      "R": 0.22,
+      "C": 0.01,
+      "eta": 1.0,
+      "time_matrix_determinant": 0.5686274509803921,
+      "local_radiation_speed": 1.0,
+      "local_state_characteristic": 1.7241379310344829,
+      "state_energy_flux_speed_local": 1.0,
+      "capture_depletes_state": true,
+      "forward_and_within_local_c": false,
+      "coincident": false,
+      "eigenvalue_error": 2.220446049250313e-16
+    },
+    {
+      "K": 0.5,
+      "R": 0.22,
+      "C": 0.01,
+      "eta": 0.5,
+      "time_matrix_determinant": 0.5686274509803921,
+      "local_radiation_speed": 1.0,
+      "local_state_characteristic": 0.8620689655172414,
+      "state_energy_flux_speed_local": 0.5,
+      "capture_depletes_state": true,
+      "forward_and_within_local_c": true,
+      "coincident": false,
+      "eigenvalue_error": 1.1102230246251565e-16
+    }
+  ],
+  "singular_state": {
+    "K": 0.5,
+    "R": 0.51,
+    "C": 0.01,
+    "determinant": 0.0
+  },
+  "coincident_state": {
+    "K": 0.5,
+    "R": 0.22,
+    "C": 0.22,
+    "off_diagonal": -0.4243827160493827,
+    "fourier": [
+      {
+        "wavenumber": 1,
+        "time": 1.0,
+        "radiation_perturbation_amplitude": 0.42438271604938266,
+        "total_amplitude": 1.0863243943138952,
+        "independent_check_error": 1.1102230246251565e-16
+      },
+      {
+        "wavenumber": 10,
+        "time": 1.0,
+        "radiation_perturbation_amplitude": 4.243827160493828,
+        "total_amplitude": 4.3600537804188955,
+        "independent_check_error": 0.0
+      },
+      {
+        "wavenumber": 100,
+        "time": 1.0,
+        "radiation_perturbation_amplitude": 42.43827160493827,
+        "total_amplitude": 42.45005178812519,
+        "independent_check_error": 0.0
+      },
+      {
+        "wavenumber": 1000,
+        "time": 1.0,
+        "radiation_perturbation_amplitude": 424.38271604938274,
+        "total_amplitude": 424.38389422956544,
+        "independent_check_error": 0.0
+      }
+    ]
+  },
+  "scope": "Local characteristic and capture audit of a specified constitutive closure, not observational evidence"
+}
