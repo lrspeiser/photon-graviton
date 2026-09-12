@@ -1,5 +1,7 @@
 # Gravity of a continuously supplied moving test population
 
+**Subsequent refinement:** [Source-direction comparison](source-refinement.md) finds21/30 vector-force gates fail although all potential gates pass. The coefficients below are the retained original6x12 results, not established stellar predictions.
+
 This calculation turns the prescribed captured trajectories into potential and three-dimensional force coefficients. It is a linear response in a fixed ordinary bar, not a self-gravitating formed galaxy. The injection rate remains unspecified and unfunded. The source-direction grid is not established as converged for these new force quantities.
 
 ## Assumptions and provenance

@@ -3,13 +3,14 @@ import json
 HERE=Path(__file__).resolve().parent
 d=json.loads((HERE/'summary.json').read_text());a=json.loads((HERE/'analytic-checks.json').read_text())
 lines=['# Gravity of a continuously supplied moving test population','',
+'**Subsequent refinement:** [Source-direction comparison](source-refinement.md) finds21/30 vector-force gates fail although all potential gates pass. The coefficients below retain the original6x12 calculation.','',
 'This calculation turns the prescribed captured trajectories into potential and three-dimensional force coefficients. It is a linear response in a fixed ordinary bar, not a self-gravitating formed galaxy. The injection rate remains unspecified and unfunded. The source-direction grid is not established as converged for these new force quantities.','',
 '## Assumptions and provenance','',
 'The [population-to-gravity derivation](../bar-angular-refinement/population-to-gravity.md) gives the equations. Newtonian Green functions, Gauss quadrature and rotating-frame mechanics are known mathematics. The cold captured-particle interpretation, thin source weighting, launch speed and source history are project assumptions. No formula is claimed unique.','',
 'The retained ordinary bar component and its normalization are model-dependent. Other Galactic components, deposited self-gravity and ordinary-bar backreaction are absent. A rotating prescribed bar can exchange orbital energy with the particles; this calculation does not fund that exchange with an evolving ordinary-matter energy reservoir. The source is stationary in bar coordinates. Each of the 1 and 3 kpc launch spheres has its own unspecified constant injection rate; they are not combined into a fitted radial source.','',
 '## Results','',
 'The table is at T=0.25 kpc/(km/s), approximately 244 Myr. Multiply potential coefficients by G times the total injected rest mass of that source to obtain potential. Multiply acceleration coefficients by the same factor to obtain acceleration. Equivalently, for a constant rate, total injected mass is injection rate times T. These are predictions per unit source mass, not measured stellar accelerations.','',
-'| Source radius (kpc) | Position (kpc) | Potential / GM (1/kpc) | ax / GM (1/kpc²) | ay / GM (1/kpc²) | az / GM (1/kpc²) |',
+'| Source radius (kpc) | Position (kpc) | Potential / GM (1/kpc) | ax / GM (1/kpcÂ²) | ay / GM (1/kpcÂ²) | az / GM (1/kpcÂ²) |',
 '|---|---|---:|---:|---:|---:|']
 for r in d['rows']:
     if r['T']==.25:
