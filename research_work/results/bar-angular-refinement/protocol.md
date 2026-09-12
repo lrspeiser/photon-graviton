@@ -1,0 +1,9 @@
+# Angular refinement of the captured test population
+
+Recorded before new calculations. Preserve the previous ordinary bar, source weights, inward launch speed, two separate launch spheres, observation times and central radius. No parameter fitting or observational data.
+
+Compare 8x16 and 12x24 Gauss-Legendre/midpoint angular grids (64 and 144 symmetry-reduced trajectories across both spheres) with the retained 6x12 result. Use L40, whose comparison with L64 passed on the previous grid; this is evidence at the old grid, not a new whole-grid field-order verification. Every trajectory uses rtol2e-11, atol2e-13, max_step0.0002, and the repaired turning-point-bracketed crossings. Require Jacobi drift/220^2<1e-5. On every eighth trajectory including the first (indices0,8,...), also integrate at rtol2e-13; require matching entry classification, entry-time and residence-duration differences<1e-5 and final velocity difference<0.05km/s. These are spot checks, not paired tolerance checks on every new orbit. If a gate fails retain it and refine rather than dropping its source weight.
+
+Source quadrature gates remain 0.05 absolute for cohort/continuous ever-entry fractions and0.005 absolute for continuous central residence. Also report relative residence changes; a loose absolute pass is not precision. Compare both adjacent grids, retain every discrepancy, and do not label two agreeing grids proof of convergence. No threshold relaxation or declaration that the current direction grid is sufficient before results.
+
+Next use the results to decide whether ordinary deterministic direction quadrature is adequate for this discontinuous encounter statistic. Do not infer the evolved density of a self-gravitating galaxy from a fixed-field, two-sphere experiment. All nine project goals remain active.
