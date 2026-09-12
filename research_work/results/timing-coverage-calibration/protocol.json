@@ -1,0 +1,158 @@
+{
+  "version": 2,
+  "scope": "Expanded synthetic timing calibration: 160 cases, 20 independent seeds per shape/SNR/truth cell, on the 98 exposed DES cadence slots. No observed-flux analysis.",
+  "source_inventory": "research_work/results/timing-injection/timing-injection-results.json",
+  "input_audit": "research_work/results/timing-foundation/input-audit.json",
+  "pilot_injection": {
+    "family": "split_gaussian_shoulder",
+    "b": 1,
+    "seed": 601,
+    "intrinsic_log_scatter": 0.1,
+    "offset_range_days": [
+      -5,
+      5
+    ],
+    "nominal_snr": 20
+  },
+  "event_model": "Generalized asymmetric exponential from timing-likelihood, with amplitude and baseline analytically marginalized under its declared priors. Retain every original cadence slot, including partial coverage; no fitted-crossing cuts.",
+  "shape_priors": {
+    "peak_days_uniform": [
+      -10,
+      10
+    ],
+    "rise_fraction_uniform": [
+      0.15,
+      0.65
+    ],
+    "rise_power_uniform": [
+      1.2,
+      3.2
+    ],
+    "fall_power_uniform": [
+      1.2,
+      3.2
+    ]
+  },
+  "event_integration": "Scrambled Sobol quadrature of four independent uniform shape/peak priors. Average likelihoods, not log likelihoods. Fixed observer-time log-width grid; no event time is divided by (1+z).",
+  "width_days_range": [
+    2,
+    256
+  ],
+  "quadrature": {
+    "base": {
+      "sobol_power": 11,
+      "width_nodes": 321,
+      "seed": 1401
+    },
+    "refined": {
+      "sobol_power": 13,
+      "width_nodes": 321,
+      "seed": 1401
+    },
+    "independent_scramble": {
+      "sobol_power": 13,
+      "width_nodes": 321,
+      "seed": 1402
+    }
+  },
+  "population_model": "log W has a normal distribution with mean a+b*log(1+z) and standard deviation sigma. Numerical quadrature normalizes this distribution on the declared grid. All event flux likelihoods are integrated over it; no point width estimates enter the fit.",
+  "population_estimation": "Maximum marginal likelihood for a,b,log(sigma), with three starts. Hyperparameter bounds are computational restrictions, not Bayesian priors. No calibrated confidence interval is claimed in this pilot.",
+  "bounds": {
+    "mean_width_at_zero_redshift_days": [
+      5,
+      100
+    ],
+    "b": [
+      -2,
+      3
+    ],
+    "intrinsic_sigma": [
+      0.03,
+      0.6
+    ]
+  },
+  "numerical_gate": {
+    "maximum_b_change_between_runs": 0.05,
+    "maximum_mean_absolute_centered_event_log_likelihood_change": 0.1,
+    "maximum_continuous_population_probability_outside_width_bounds": 1e-06,
+    "require_optimizer_success_and_interior_solution": true
+  },
+  "gate_interpretation": "All three calculations must agree under these checks before expanded injection calibration. Passing is only numerical pilot convergence. Failing stops observational inference and requires a documented integration repair, not changed gates.",
+  "software_checks": [
+    "Vectorized likelihood agrees with independently checked scalar component",
+    "A constant event likelihood remains constant after population integration",
+    "Invalid input arrays are rejected",
+    "All 98 original events are present and no real flux column is read"
+  ],
+  "later_calibration_requirements": [
+    "Separate width-grid, shape-integration and boundary/prior sensitivity",
+    "Original exposed controls plus new seeds, out-of-family shapes, SNR and source-shape evolution",
+    "Freeze repeated-trial bias and interval-coverage criteria before calibration outcomes",
+    "Calibrate confidence intervals and intrinsic-scatter recovery",
+    "Filter throughput, classification, source evolution and actual flux calibration before science inference"
+  ],
+  "failure_policy": "Keep this protocol and every pilot result. One injected exponent or one random realization cannot establish population bias, coverage or validity of a physical theory.",
+  "event_curve_comparison": "For each refinement pair, subtract each event curve maximum, interpolate the coarser curve onto the second grid, and average absolute differences using the second calculation event posterior width probabilities at its fitted population parameters; then average over all 98 events.",
+  "refinement_rationale": "Increase shape/peak samples only, keeping the width grid fixed at 321 nodes, injection, priors, estimator and original numerical thresholds unchanged. Compare 2048 vs 8192 nested Sobol samples and an independent 8192 scramble. This does not establish width-grid convergence or repeated-trial coverage.",
+  "calibration": {
+    "seeds": [
+      901,
+      902,
+      903,
+      904,
+      905,
+      906,
+      907,
+      908,
+      909,
+      910,
+      911,
+      912,
+      913,
+      914,
+      915,
+      916,
+      917,
+      918,
+      919,
+      920
+    ],
+    "truth_b": [
+      0,
+      1
+    ],
+    "families": [
+      "split_gaussian",
+      "split_gaussian_shoulder"
+    ],
+    "nominal_snr": [
+      5,
+      20
+    ],
+    "intrinsic_log_scatter": 0.1,
+    "quadrature": {
+      "sobol_power": 11,
+      "width_nodes": 321,
+      "seed": 1401
+    },
+    "profile_truth": "Reoptimize a and log sigma at injected b with two starts. Determine nominal interval membership from the profile likelihood ratio at truth; computing both interval endpoints is unnecessary for coverage.",
+    "levels": [
+      0.6826894921370859,
+      0.95
+    ],
+    "reporting": "Per cell report mean bias and Monte Carlo standard error, empirical coverage with exact binomial intervals, optimizer/boundary failures. Seeds paired across cells; do not pool as independent outcomes.",
+    "diagnostic_thresholds": {
+      "maximum_absolute_mean_bias": 0.1,
+      "minimum_nominal_95_coverage": 0.85,
+      "maximum_optimizer_or_boundary_failures": 0
+    },
+    "threshold_interpretation": "Screening criteria only. Even passing does not establish 95 percent coverage with 20 trials per cell. Report binomial uncertainty; no threshold changes or selective case removal.",
+    "refinement": "After all base cases, refine the largest absolute b error in each of eight cells with 8192 samples and seed 1402; retain old and refined fits. Numerical criterion remains delta b <=0.05 and mean event log-likelihood change <=0.1. Report coverage changes without substituting selected refinements into base frequency estimates.",
+    "stop_rule": "Run every declared case regardless of outcomes. Unexpected execution failure stops with saved completed cases; resume only with identical protocol and code hashes.",
+    "limitations": [
+      "Two source shapes and two signal levels do not cover actual source diversity or brightness selection.",
+      "No intrinsic duration evolution, real bandpass integration or joint flux test.",
+      "A common error pattern and source normalization are reused; these are conditional simulations."
+    ]
+  }
+}
