@@ -1,0 +1,11 @@
+# Energy cost of temporal memory and capture-driven restoration
+
+Test a new operational postulate: the accumulated clock state n carries energy U(n), in the same reference-energy convention as the existing ray Hamiltonian. Compare U=K(n-1) and U=K(n-1)^2/2 for n>=1. These are illustrative constitutive choices, not established laws or inferred energy scales. No microscopic explanation of time is required.
+
+During spatially homogeneous local restoration retain R_dot=-(n_dot/n)R for the sum of EM/GW reference radiation energies. Therefore R(n)=R_i*n_i/n. Consider a proposed passive capture-only reset, with no incoming energy, no receiving reservoir and no external work. The energy available to deposits is D(n)=U(n_i)-U(n)-[R(n)-R_i], and its rate is D_dot=(-n_dot)[U'(n)-R(n)/n]. Negative rate/deposit means this proposed passive reset is unavailable under the declared assumptions; it is not negative physical deposited matter to be silently accepted.
+
+Before calculation set n_i=1.1, R_i=0.1,1,10, K=0.05,0.5,2 and both U shapes. Integrate n=1+0.1*exp(-t) to t=12 as a forced diagnostic path, and compare energy-transfer integration with the exact endpoint budget and rate sign. Retain every failing combination. At t->infinity linear U gives total D=(n_i-1)(K-R_i), but nonnegative rate throughout requires K>=R_i*n_i. Quadratic U has U'->0, so any nonzero surviving R eventually prevents a purely passive complete reset without another paying sector.
+
+Also test growth with n_dot=T, R_dot=-(T/n)R, T_dot=T[R/n-U'(n)]-Gamma*T, D_dot=Gamma*T. This accounts for the memory cost that was missing from the earlier cell ledger. Use linear U, initial n=1,R=1,T=0.01,D=0; K=0.05,0.5,2 and Gamma=0 or 1. Track all four sectors and positivity to t=30. No outgoing transport is included in this local growth diagnostic; it is not a void accumulation model. Initial growth rate of T is proportional to R/n-U'-Gamma, making the changed feedback threshold explicit.
+
+This closes an additional reference-energy sector only. Local proper-energy interpretation, momentum/forces, spatial radiation exchange, physical capture law and a causal field completion remain. Do not identify reference radiation blueshifting during reset with an independently predicted observational blueshift without clocks and ray endpoints.
