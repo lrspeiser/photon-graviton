@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Nonspherical-torque checkpoint:** [Ordinary bar first-pass test](research_work/results/bar-capture-torques/report.md) generates angular momentum from purely radial probes without an extra force law. Eight selected probes enter0.1kpc in the spherical control; all turn outside it on the first approach in the bar cases. Energy/Jacobi and field-order checks pass. This conditional bar-component experiment is not a formed population or a measured capture fraction.
+
 **Coupled formation checkpoint:** [Moving deposits with capture feedback](research_work/results/coupled-radial-formation/report.md) starts from zero deposits and evolves their gravity and depleted supply together. The lower rate passes the tested slow-motion numerical checks; the higher rate leaves the approximation. Central potential remains sensitive to numerical core size even where outer mass fractions are stable.
 
 **Moving-deposit checkpoint:** [Radial capture response](research_work/results/radial-capture-response/report.md) follows a negligible bound source in the frozen well. The innermost added-mass fraction grows about96-fold relative to in-place capture, while the projected fraction grows10.34-fold. Orbital energy is conserved, but the source does not build the assumed stationary profile. Changing self-gravity and source feedback remain necessary.
