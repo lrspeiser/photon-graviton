@@ -1,0 +1,51 @@
+{
+  "scope": "Independent count-weighted filter integration for a known flat-fnu AB reference. No SN flux fit, applied correction or cosmological/source model.",
+  "rows": [
+    {
+      "band": "g",
+      "points": 200,
+      "pivot_angstrom": 4809.402694813942,
+      "calibration_offset_expression": "0.0-0.003+0.0022",
+      "calibration_offset_mag": -0.0007999999999999999,
+      "calculated_AB0_photons_per_s_cm2": 652180.4241459097,
+      "archived_log_AB0_photons_per_s_cm2": 652200.0,
+      "relative_difference": 3.001510900069171e-05,
+      "agreement_within_0_1_percent": true
+    },
+    {
+      "band": "r",
+      "points": 211,
+      "pivot_angstrom": 6420.435913083172,
+      "calibration_offset_expression": "0.0-0.003-0.0086",
+      "calibration_offset_mag": -0.0116,
+      "calculated_AB0_photons_per_s_cm2": 745615.3056655563,
+      "archived_log_AB0_photons_per_s_cm2": 745700.0,
+      "relative_difference": 0.00011357695379332622,
+      "agreement_within_0_1_percent": true
+    },
+    {
+      "band": "i",
+      "points": 211,
+      "pivot_angstrom": 7816.0273864421015,
+      "calibration_offset_expression": "0.0-0.002-0.007",
+      "calibration_offset_mag": -0.009000000000000001,
+      "calculated_AB0_photons_per_s_cm2": 706898.3574568942,
+      "archived_log_AB0_photons_per_s_cm2": 706900.0,
+      "relative_difference": 2.323586229646679e-06,
+      "agreement_within_0_1_percent": true
+    },
+    {
+      "band": "z",
+      "points": 198,
+      "pivot_angstrom": 9171.128625159754,
+      "calibration_offset_expression": "0.0+0.001+0.0061",
+      "calibration_offset_mag": 0.0071,
+      "calculated_AB0_photons_per_s_cm2": 554337.4269844521,
+      "archived_log_AB0_photons_per_s_cm2": 554400.0,
+      "relative_difference": 0.00011286618966077633,
+      "agreement_within_0_1_percent": true
+    }
+  ],
+  "all_agree_within_0_1_percent": true,
+  "offset_sign_applied_to_observed_data": false
+}
