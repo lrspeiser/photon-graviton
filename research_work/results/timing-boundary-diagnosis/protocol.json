@@ -1,0 +1,127 @@
+{
+  "scope": "Diagnose the first two flagged cases from the ongoing frozen calibration, without changing its cases, thresholds or code.",
+  "source_checkpoint_sha256_at_snapshot": "0a818940a027544837cedfe524424c319843eb2980de7cba05b41d5dde1c0de2",
+  "cases": [
+    {
+      "label": "split_gaussian-snr5-b1-seed902",
+      "seed": 902,
+      "family": "split_gaussian",
+      "snr": 5,
+      "truth_b": 1,
+      "fit": {
+        "a": 3.3839651589119026,
+        "b": 1.0300322547430871,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 49.16639506186684,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 49.166395061866865,
+            "parameters": [
+              3.383965163413278,
+              1.030032229755701,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 49.16639506186684,
+            "parameters": [
+              3.3839651589119026,
+              1.0300322547430871,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 49.166395061867156,
+            "parameters": [
+              3.3839651250726805,
+              1.0300323364825237,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "true_sample_slope": 1.0134647241157329,
+      "profile_lr_at_truth": 0.029766365858222343,
+      "valid_fit": false,
+      "coverage": {
+        "0.6826894921370859": false,
+        "0.95": false
+      },
+      "elapsed_seconds": 28.810110800000984,
+      "array_sha256": "f6e3bd2abe4c7add3a11c3559261ad8519de73c5582673120f7f1e5982d9d2b6"
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed903",
+      "seed": 903,
+      "family": "split_gaussian",
+      "snr": 5,
+      "truth_b": 0,
+      "fit": {
+        "a": 3.415721781042381,
+        "b": -0.04308925523357725,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 47.15922268986888,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 47.15922268986889,
+            "parameters": [
+              3.4157217706384757,
+              -0.043089225609612494,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.15922268986922,
+            "parameters": [
+              3.415721727759404,
+              -0.043089110021509974,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.15922268986888,
+            "parameters": [
+              3.415721781042381,
+              -0.04308925523357725,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "true_sample_slope": 0.015924582530270945,
+      "profile_lr_at_truth": 0.05847698906035248,
+      "valid_fit": false,
+      "coverage": {
+        "0.6826894921370859": false,
+        "0.95": false
+      },
+      "elapsed_seconds": 30.158371099998476,
+      "array_sha256": "d8f1ec863c946110f0de2b313e2c9665d57599eed5ce96fbf146f12da0c61a34"
+    }
+  ],
+  "sigma_grid": [
+    0.03,
+    0.04,
+    0.06,
+    0.08,
+    0.1,
+    0.12,
+    0.15,
+    0.2,
+    0.3,
+    0.6
+  ],
+  "method": "At fixed intrinsic log scatter sigma, maximize over a and b with three starts. Keep original sigma lower bound 0.03. This is a descriptive diagnostic, not a repaired estimator or new calibration."
+}

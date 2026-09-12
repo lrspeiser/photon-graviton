@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Faint timing boundary diagnosed:** [First two flagged controls](research_work/results/timing-boundary-diagnosis/report.md) converged but reached the imposed intrinsic-scatter floor 0.03. Timing estimates remain near injected values; nominal truth inclusion does not override the frozen validity screen. The zero-invalid-fits criterion has already failed in at least one cell. The full batch continues unchanged, and uncertainty treatment needs further work before observational inference.
+
 **DES calibration acquired:** [Checksum-verified original resources](research_work/results/des-photometric-calibration/report.md) supply the four real passbands and calibration inputs. Independent AB-reference photon integrals agree with the archived program log within 0.0114%. Version compatibility, offset application, covariance and source-evolution constraints remain unresolved; no observed brightness fit is claimed.
 
 **Joint-light input requirement derived:** [Executed identifiability audit](research_work/results/joint-light-identifiability/report.md) shows that free duration and peak-luminosity evolution can exactly offset a changed timing exponent, even with fixed distances; fluence does not add an independent constraint in the fixed-shape bolometric model. Source-evolution constraints and the DES external photometric calibration are needed for a predictive joint test. This is a conditional deduction, not an observational failure or completed mechanism.
