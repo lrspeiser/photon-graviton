@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Integrable-tail checkpoint:** [Steeper capture with feedback](research_work/results/integrable-capture-feedback/report.md) finds finite-range mass convergence in weak-source p4/p6 examples, but domain-filling capture at higher supply. Inner force convergence alone misses the divergent mass and depth. Supply depletion and retention dynamics remain necessary before another galaxy calibration.
+
 **Capture-boundary checkpoint:** [Boundary and finite-mass audit](research_work/results/coupled-capture-boundary/report.md) finds that refitting the amplitude masks a more than 400-fold change in deposited mass across assumed boundaries. The best tested boundary still misses the radial shape. A physical outer capture/retention law is required before further tuning.
 
 **Coupled-calibration checkpoint:** [Feedback-aware amplitude fit](research_work/results/coupled-capture-calibration/report.md) reduces the large overprediction, but both capture-law variants remain too weak inside and too strong outside. The full curves and required masses show that spatial/retention assumptions need testing beyond an overall amplitude adjustment.
