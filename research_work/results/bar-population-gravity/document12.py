@@ -8,7 +8,7 @@ lines=['# Direction-sampling test of the gravitational response','',
 'This holds the source law and ordinary bar fixed and compares8x16 with12x24 angular sampling. The source is still a negligible test population, separately normalized on1 and3kpc launch spheres. No energy supply, self-gravity, observed star fit or new physical interaction is introduced.','',
 f"All {len(d['orbit_checks'])} combined orbit/age status checks pass: **{d['all_orbit_checks_pass']}**. Of30 position/time/source comparisons, {pfailed} fail the2 percent potential gate and {afailed} fail the5 percent vector-force gate. These development thresholds are not measurement error bars. A passing pair is useful evidence but not proof of convergence.",
 '','## Final-epoch comparison','',
-'At approximately244Myr, values below are per G times total injected rest mass. Potential units are1/kpc; acceleration units are1/kpcÂ². Changes use the refined magnitude with the predeclared0.01 floor.','',
+'At approximately244Myr, values below are per G times total injected rest mass. Potential units are1/kpc; acceleration units are1/kpc^2. Changes use the refined magnitude with the predeclared0.01 floor.','',
 '| Source R | Position | Refined potential / GM | Refined acceleration / GM | Potential change (%) | Force change (%) |',
 '|---:|---|---:|---|---:|---:|']
 for c in d['comparisons']:

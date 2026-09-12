@@ -35,6 +35,6 @@ A continuum of nearby paths must be integrated over its actual distribution. For
 
 ## Next numerical action
 
-The source12 calculation is running with unchanged physical and numerical gates. If the force values remain unstable, use local source-cell refinement or a singularity-aware integration scheme, retaining all angular cells and their weights. Direct the error estimate at vector force, including cancellation; a stable potential cannot serve as its substitute. Validate any new scheme against analytic passage/continuum integrals and against the existing outputs before using it for galaxy fits.
+The source12 calculation is complete and still fails19/30 force gates. Use local source-cell refinement or a singularity-aware integration scheme, retaining all angular cells and their weights. The straight-stream benchmark in ../stream-force-quadrature/report.md verifies one local-coordinate remedy, which still needs adaptation to the bar trajectories. Direct the error estimate at vector force, including cancellation; a stable potential cannot serve as its substitute. Validate any new scheme against analytic passage/continuum integrals and against the existing outputs before using it for galaxy fits.
 
 Do not add a velocity dispersion, a softened physical force or permanent retention merely to make the numerical test pass. Those would be additional physical assumptions requiring their own rationale and observational predictions. No lensing or source-energy closure follows from the present diagnostic. All nine goals remain incomplete.

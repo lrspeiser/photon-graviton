@@ -1,0 +1,111 @@
+{
+  "target": [
+    0.137,
+    0.219
+  ],
+  "reference": {
+    "potential": -1.1725704975186293,
+    "force": [
+      -0.07079463149110038,
+      -0.11522296313787489
+    ],
+    "kernel_nodes": 512
+  },
+  "reference_coarse": {
+    "potential": -1.1725704975186206,
+    "force": [
+      -0.07079463149109977,
+      -0.11522296313787429
+    ],
+    "kernel_nodes": 256
+  },
+  "potential_reference_change": 7.38526136415831e-15,
+  "force_reference_change": 6.3134620151476545e-15,
+  "gradient_checks": [
+    {
+      "h": 0.0001,
+      "force": [
+        -0.0707946316658159,
+        -0.11522296341937022
+      ],
+      "scaled_error": 2.4498900236869994e-09
+    },
+    {
+      "h": 5e-05,
+      "force": [
+        -0.07079463153480958,
+        -0.11522296320842784
+      ],
+      "scaled_error": 6.13716341160949e-10
+    }
+  ],
+  "tensor": [
+    {
+      "potential": -1.1876523422395646,
+      "force": [
+        0.37366755782394195,
+        -0.020921814341599267
+      ],
+      "kernel_nodes": 36,
+      "n": 6,
+      "potential_relative_error": 0.01286220722152845,
+      "force_relative_error": 3.359778315281703
+    },
+    {
+      "potential": -1.1910950411074097,
+      "force": [
+        0.34340557477336625,
+        -0.4265937043323398
+      ],
+      "kernel_nodes": 64,
+      "n": 8,
+      "potential_relative_error": 0.0157982344157402,
+      "force_relative_error": 3.8317528563334133
+    },
+    {
+      "potential": -1.1712157195646933,
+      "force": [
+        -0.08546571207816164,
+        -0.19253624374089753
+      ],
+      "kernel_nodes": 144,
+      "n": 12,
+      "potential_relative_error": 0.0011553914726687815,
+      "force_relative_error": 0.5819026554130932
+    },
+    {
+      "potential": -1.1716430147251584,
+      "force": [
+        -0.05582725519513919,
+        -0.13346549723821463
+      ],
+      "kernel_nodes": 576,
+      "n": 24,
+      "potential_relative_error": 0.0007909825425708735,
+      "force_relative_error": 0.17448931498748219
+    },
+    {
+      "potential": -1.1724413382066072,
+      "force": [
+        -0.052263401484502564,
+        -0.10833973809689851
+      ],
+      "kernel_nodes": 2304,
+      "n": 48,
+      "potential_relative_error": 0.00011015057286140924,
+      "force_relative_error": 0.14617849331393365
+    },
+    {
+      "potential": -1.1725302862896365,
+      "force": [
+        -0.06235535090295047,
+        -0.1234016588452344
+      ],
+      "kernel_nodes": 9216,
+      "n": 96,
+      "potential_relative_error": 3.429322934346004e-05,
+      "force_relative_error": 0.08690222827039892
+    }
+  ],
+  "passes": true
+}
