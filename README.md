@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Retention checkpoint:** [Bound-particle support audit](research_work/results/deposit-retention/report.md) rules out isotropic bound-particle support for a strongly shielded deposit profile. Randomly oriented circular orbits provide a conditional stationary alternative in the frozen spherical potential, with kinetic and potential energies calculated. Formation, collective stability and continuing capture remain unresolved.
+
 **Depleted-supply checkpoint:** [Attenuated companions with gravity feedback](research_work/results/depleted-capture-feedback/report.md) separates incident fluence from opacity and removes captured energy from onward rays. The absorption ledger balances, but several models remain boundary-dependent; unresolved numerical gates are retained explicitly. Mechanical retention and a photon-funded source still require closure.
 
 **Integrable-tail checkpoint:** [Steeper capture with feedback](research_work/results/integrable-capture-feedback/report.md) finds finite-range mass convergence in weak-source p4/p6 examples, but domain-filling capture at higher supply. Inner force convergence alone misses the divergent mass and depth. Supply depletion and retention dynamics remain necessary before another galaxy calibration.
