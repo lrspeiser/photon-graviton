@@ -18,6 +18,8 @@ The late coordinate event Jacobian approaches one as the field settles. Under th
 
 ## Evidential status
 
+**Conditional lensing connection checked:** [Tetrahedral ray benchmark](../../research_work/results/deposit-lensing-kernel/report.md) integrates the existing force kernel into light bending under an explicit equal-potential weak-field assumption. Four independent exterior-ray comparisons and three finite point-lens checks pass. The metric response is not derived for companions, and no galaxy lensing prediction, supply closure or source convergence is established. Full-sphere trajectory preparation remains active.
+
 **Second full-sphere refinement started:** [Preparation checkpoint](../../research_work/results/bar-cell-geometry/nested2-progress.md) validates the 1,122-vertex, 2,240-cell mesh and starts 764 actual new trajectories across both sources, retaining 196 reused paths. Geometry comparisons against existing references and targeted probes are prepared; trajectory preparation and new force tests are not yet complete. No coefficients or physical laws change. All nine goals remain incomplete.
 
 **Spatial coverage gap confirmed:** [New interior-trajectory audit](../../research_work/results/bar-cell-geometry/local-refinement-report.md) finds that prior probes occupy cells containing only about 24% of source mass. Eight actual trajectories in previously unchecked cells have final interpolation errors of 23–78% of launch radius despite passing orbit checks. Errors also span many already sampled cells. Next refine across the sphere with actual trajectories, preserving mass and force-convergence requirements; do not infer that unchecked cells pass. All nine goals remain incomplete.

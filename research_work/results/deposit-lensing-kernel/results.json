@@ -1,0 +1,105 @@
+{
+  "tetrahedron": [
+    {
+      "impact": [
+        3.0,
+        2.0
+      ],
+      "L": 5.0,
+      "deflection_coefficient": [
+        -0.7494683303774331,
+        -0.4990043987247204
+      ],
+      "volume_reference": [
+        -0.7494683303774333,
+        -0.4990043987247189
+      ],
+      "relative_difference": 1.6827751736877894e-15,
+      "volume_refinement": 2.0970782659759007e-15,
+      "integrator_estimate": 1.0486281426034802e-13,
+      "passes": true
+    },
+    {
+      "impact": [
+        3.0,
+        2.0
+      ],
+      "L": 20.0,
+      "deflection_coefficient": [
+        -0.9091700523681239,
+        -0.6054685808781017
+      ],
+      "volume_reference": [
+        -0.9091700523681184,
+        -0.6054685808780967
+      ],
+      "relative_difference": 6.761803061233693e-15,
+      "volume_refinement": 2.1368200378171074e-15,
+      "integrator_estimate": 1.3494979334948659e-13,
+      "passes": true
+    },
+    {
+      "impact": [
+        1.5,
+        0.2
+      ],
+      "L": 5.0,
+      "deflection_coefficient": [
+        -2.4658802195512313,
+        -0.30562644357335256
+      ],
+      "volume_reference": [
+        -2.4658802195512037,
+        -0.3056264435733495
+      ],
+      "relative_difference": 1.1148932978065695e-14,
+      "volume_refinement": 6.263047305606444e-10,
+      "integrator_estimate": 1.709931821660075e-13,
+      "passes": true
+    },
+    {
+      "impact": [
+        1.5,
+        0.2
+      ],
+      "L": 20.0,
+      "deflection_coefficient": [
+        -2.570693967642654,
+        -0.3196009789632409
+      ],
+      "volume_reference": [
+        -2.570693967642651,
+        -0.3196009789632391
+      ],
+      "relative_difference": 1.3928762003053516e-15,
+      "volume_refinement": 6.007524225249408e-10,
+      "integrator_estimate": 2.3740006907160127e-13,
+      "passes": true
+    }
+  ],
+  "point_lens": [
+    {
+      "b": 0.5,
+      "L": 20.0,
+      "numeric": -7.997501171264981,
+      "exact": -7.997501171264982,
+      "relative_error": 2.2211398302543545e-16
+    },
+    {
+      "b": 2.0,
+      "L": 20.0,
+      "numeric": -1.990074380419978,
+      "exact": -1.9900743804199783,
+      "relative_error": 1.1157603309187458e-16
+    },
+    {
+      "b": 10.0,
+      "L": 20.0,
+      "numeric": -0.3577708763999663,
+      "exact": -0.35777087639996635,
+      "relative_error": 1.5515838457795457e-16
+    }
+  ],
+  "all_pass": true,
+  "scope": "conditional static equal-potential weak-field exterior-ray benchmark; not a galaxy observation"
+}
