@@ -1,6 +1,6 @@
 # Temporal-field mechanism addendum — 12 September 2026
 
-This working addendum updates the mechanism assessment alongside the historical v0.5 manuscript/PDF. It does not certify a complete new observational model. All reported new numbers are synthetic operational tests with reference-energy ledgers; they are not astronomical fits.
+This working addendum updates the mechanism assessment alongside the historical v0.5 manuscript/PDF. It does not certify a complete new observational model. The early mechanism tests are synthetic operational experiments with reference-energy ledgers. Subsequent capture sections include explicitly labeled calibration against exposed stellar-motion proxies; none constitutes independent validation or a complete physical conservation proof.
 
 ## Clock completion and energy transport
 
@@ -17,6 +17,8 @@ With two prescribed capture regions, the lower-rate example yields early measure
 The late coordinate event Jacobian approaches one as the field settles. Under this operational clock rule, standard calculus gives log(1+z)=-integral partial_x(log n) dx along the evolving ray; in a stationary field this reduces to an endpoint ratio. Continuous conversion and capture alone therefore do not establish persistent accumulated redshift.
 
 ## Evidential status
+
+The [capture-boundary audit](../../research_work/results/coupled-capture-boundary/report.md) compares 30, 100 and 200 kpc cutoffs, retaining both transferred and recalibrated amplitudes. Recalibration hides a roughly 426-fold p3 deposited-mass range behind RMS values of 18.72–23.26 km/s. All refinement gates pass, but even the best case remains systematically too weak inside and too strong outside. Under isolated finite-mass, uniform infinite illumination and permanent in-place retention assumptions, the proposed low-depth p2/p3 laws have nonintegrable mass tails. This conditional power-counting result requires explicit outer physics, not an arbitrary fitted cutoff; redshift and full energy/retention closure remain unresolved.
 
 The subsequent [coupled one-amplitude calibration](../../research_work/results/coupled-capture-calibration/report.md) fits C while evolving the deposited gravity, rather than reusing the no-feedback amount. It reduces the p3 training RMS to22.62km/s but retains an inner deficit of41km/s and outer excess of29km/s. The selected100kpc profile requires about3e13 solar masses in deposits. This is a conditional training fit with verified numerical refinement, not a recovered joint model; boundary and retention physics, source energy and independent tests remain unresolved.
 
