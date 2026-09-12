@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**All-direction capture checkpoint:** [Isotropic deposition profile](research_work/results/isotropic-capture-profile/report.md) computes where companions are intercepted, then derives gravity and lensing. Strong capture can load outer layers while starving the center; that pattern does not automatically fit stellar motion. Supply and nonspherical tests remain open.
+
 **Deposit/gravity checkpoint:** [Growing-well clock and lensing test](research_work/results/deposit-clock-gravity/report.md) links a prescribed deposit profile to stellar forces, clocks and light bending. Growing wells can redshift crossing signals, through a known evolving-potential effect, but the strength is tied to the gravitational potential and its growth. Capture-funded profiles and full energy accounting remain unresolved.
 
 **Response-history checkpoint:** [Slow-response and steady-flow comparison](research_work/results/slow-response-history/report.md) shows that a longer response time does not sustain stretching in the tested open channel. Independent stationary equations reproduce the late results. Deposits grow, but their gravity/clock feedback remains to be added and tested.
