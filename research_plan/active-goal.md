@@ -1,5 +1,7 @@
 # Active research goal: accurate redshift and joint companion predictions
 
+**Predictive effective-theory priority:** The user asks which linked observations the phenomenon must explain to become competitive. The [selected evidence program](competitive-evidence-program.md) prioritizes joint redshift/timing/brightness, galaxy diversity, same-field lensing, three-dimensional Milky Way motion, cluster collisions and a preregistered distinguishing prediction. Explicit postulates are permitted before microscopic completion; all nine goals and conservation remain in scope. This is a work-order update, not a new observational result.
+
 **Resumed with age/size-free physical priority:** The user requests removal of outcome-changing arbitrary assumptions and first-principles tests. [Executed audit](../research_work/results/assumption-release/report.md) frees age/size/history/lifetime, derives conditional supply and infinite-domain limits, and retains age-independent timing and response obstructions. All 722 numerical checks pass; these check simplified deductions, not astronomical agreement. Prioritize the physical source/coupling connection over further orbit-only refinement. All nine goals remain open.
 
 
