@@ -1,5 +1,7 @@
 # Active research goal: accurate redshift and joint companion predictions
 
+**Measured zero-point covariance acquired:** [Verified Fragilistic DES5YR block](../research_work/results/des-calibration-covariance/report.md) provides correlated g/r/i/z uncertainties of about 0.0057-0.0061 mag. Full cross-survey covariance is retained; this is only the zero-point component, not the entire brightness error budget. Compatibility, passband/source-systematic treatment and physical source constraints remain open.
+
 **Historical DES offset convention checked:** [Source/FITS audit](../research_work/results/des-calibration-convention/report.md) establishes the synthetic-model offset sign and implements native/AB-equivalent flux transforms with shared-band covariance propagation. Four reference checks and a finite-difference covariance check pass. Actual observations remain untouched; release compatibility and measured covariance are still required.
 
 **Real-filter timing bridge checked:** [Controlled spectral-duration experiment](../research_work/results/bandpass-timing-coupling/report.md) shows the fixed-filter width exponent is b-q for the declared self-similar source; matching emitted response recovers b. All 320 numerical cases match their analytic scalings. This is not a real-supernova result; it defines a necessary spectral/passband component of the joint-light inference.
