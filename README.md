@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Response-history checkpoint:** [Slow-response and steady-flow comparison](research_work/results/slow-response-history/report.md) shows that a longer response time does not sustain stretching in the tested open channel. Independent stationary equations reproduce the late results. Deposits grow, but their gravity/clock feedback remains to be added and tested.
+
 **Initiation checkpoint:** [Radiation-powered startup](research_work/results/radiation-powered-initiation/report.md) removes the external seed and funds deposits, but mainly by removing whole photons. Early redshift does not persist after the field settles. Surviving-light frequency, timing and attenuation are reported separately in the [working paper addendum](papers/cumulative-time-companions/temporal-field-addendum.md).
 
 **Spatial energy-assignment checkpoint:** [Field-funded transport](research_work/results/field-funded-transport/report.md) keeps reservoirs nonnegative and energy moving in a tested finite domain, with consistent measured clock/frequency changes. It still gives path-dependent redshift/blueshift and net energy gain by radiation; its deposits are funded by the supplied seed overall. A common radiation-powered history remains to be derived.
