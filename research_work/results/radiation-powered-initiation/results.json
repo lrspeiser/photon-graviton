@@ -1,0 +1,803 @@
+{
+  "runs": [
+    {
+      "cells": 80,
+      "case": "no_initiation",
+      "epsilon": 0.0,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 8.881784197001252e-16,
+      "radiation_error": 8.881784197001252e-16,
+      "final_energies": {
+        "R": 2.2,
+        "T": 0.0,
+        "M": 0.0,
+        "D": 0.0
+      },
+      "photon_energy_in": 8.799999999999981,
+      "total_energy_out": 8.799999999999981,
+      "temporal_work": 0.0,
+      "photon_energy_out": 8.799999999999981,
+      "whole_photon_conversion": 0.0,
+      "net_radiation_transfer": 0.0,
+      "final_clock_range": [
+        1.0,
+        1.0
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.099999999999994,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 3.3306690738754696e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 14.999999999999906,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.00000000000012,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 1.7763568394002505e-12,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 80,
+      "case": "initiation_no_capture",
+      "epsilon": 0.01,
+      "capture_strength": 0.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 2.4868995751603507e-14,
+      "radiation_error": 3.4638958368304884e-14,
+      "final_energies": {
+        "R": 2.100198574532108,
+        "T": 0.07370356522138997,
+        "M": 0.06692475110592064,
+        "D": 0.0
+      },
+      "photon_energy_in": 8.799999999999981,
+      "total_energy_out": 8.75917310914058,
+      "temporal_work": 0.007030875375052176,
+      "photon_energy_out": 8.049942558775754,
+      "whole_photon_conversion": 0.8428279913171002,
+      "net_radiation_transfer": 0.8498588666921524,
+      "final_clock_range": [
+        1.0000249713572416,
+        1.0068250801997518
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.126075322563231,
+          "coordinate_stretch": 1.004969576589736,
+          "endpoint_clock_factor": 0.9947060322564955,
+          "measured_z": -0.0003506999319334847,
+          "photon_survival": 0.9046015095188239,
+          "clock_error": 2.0439881409650695e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.03346272821082,
+          "coordinate_stretch": 1.0000011780385443,
+          "endpoint_clock_factor": 0.9932468033817904,
+          "measured_z": -0.006752026535191358,
+          "photon_survival": 0.9045346854041362,
+          "clock_error": 5.242005903793867e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.03346237414475,
+          "coordinate_stretch": 1.000000000334422,
+          "endpoint_clock_factor": 0.993245987977301,
+          "measured_z": -0.006754011690535466,
+          "photon_survival": 0.9045346886067865,
+          "clock_error": 1.5520029705839988e-11,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 80,
+      "case": "initiation_capture",
+      "epsilon": 0.01,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 1.6431300764452317e-14,
+      "radiation_error": 1.9539925233402755e-14,
+      "final_energies": {
+        "R": 2.097821725016765,
+        "T": 0.04398543848108873,
+        "M": 0.04310685273754786,
+        "D": 0.715720135581319
+      },
+      "photon_energy_in": 8.799999999999981,
+      "total_energy_out": 8.09936584818327,
+      "temporal_work": 0.00455933138665352,
+      "photon_energy_out": 8.05545224960167,
+      "whole_photon_conversion": 0.8421666939949081,
+      "net_radiation_transfer": 0.8467260253815616,
+      "final_clock_range": [
+        1.000011712241545,
+        1.0045932756112443
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.119918387272726,
+          "coordinate_stretch": 1.001823080450191,
+          "endpoint_clock_factor": 0.9992513277583845,
+          "measured_z": 0.0010730433188483879,
+          "photon_survival": 0.9046572069630121,
+          "clock_error": 4.082581779751848e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.021553383549465,
+          "coordinate_stretch": 1.0000003423403216,
+          "endpoint_clock_factor": 0.9991332152854212,
+          "measured_z": -0.0008664426709923401,
+          "photon_survival": 0.9046424159722775,
+          "clock_error": 4.599803246740919e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.021553426377796,
+          "coordinate_stretch": 1.0000000002181,
+          "endpoint_clock_factor": 0.9991331162067155,
+          "measured_z": -0.0008668835753734561,
+          "photon_survival": 0.9046424155848342,
+          "clock_error": 1.2826406603494434e-11,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 80,
+      "case": "stronger_initiation_capture",
+      "epsilon": 0.05,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 2.398081733190338e-14,
+      "radiation_error": 2.220446049250313e-14,
+      "final_energies": {
+        "R": 1.7437028315150145,
+        "T": 0.19261187328079443,
+        "M": 0.18909664852956282,
+        "D": 3.014589255625961
+      },
+      "photon_energy_in": 8.799999999999981,
+      "total_energy_out": 5.859999391048672,
+      "temporal_work": 0.017372454057668518,
+      "photon_energy_out": 5.686592499668722,
+      "whole_photon_conversion": 3.5523322147585965,
+      "net_radiation_transfer": 3.5697046688162652,
+      "final_clock_range": [
+        1.000058278816975,
+        1.019644407769252
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.18785208931038,
+          "coordinate_stretch": 1.006888690140208,
+          "endpoint_clock_factor": 0.9970018970439044,
+          "measured_z": 0.0038699341818395627,
+          "photon_survival": 0.6038722533665877,
+          "clock_error": 5.908674880483744e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.094546540798776,
+          "coordinate_stretch": 1.0000052497753043,
+          "endpoint_clock_factor": 0.9965442721600631,
+          "measured_z": -0.003450496206427456,
+          "photon_survival": 0.6036701575162287,
+          "clock_error": 4.7689481665891265e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.09454851562844,
+          "coordinate_stretch": 1.000000006792873,
+          "endpoint_clock_factor": 0.9965428493123496,
+          "measured_z": -0.0034571439182614627,
+          "photon_survival": 0.6036700979089449,
+          "clock_error": 4.370679373977282e-10,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 160,
+      "case": "no_initiation",
+      "epsilon": 0.0,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 8.881784197001252e-16,
+      "radiation_error": 8.881784197001252e-16,
+      "final_energies": {
+        "R": 2.2,
+        "T": 0.0,
+        "M": 0.0,
+        "D": 0.0
+      },
+      "photon_energy_in": 8.800000000000116,
+      "total_energy_out": 8.800000000000116,
+      "temporal_work": 0.0,
+      "photon_energy_out": 8.800000000000116,
+      "whole_photon_conversion": 0.0,
+      "net_radiation_transfer": 0.0,
+      "final_clock_range": [
+        1.0,
+        1.0
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.099999999999993,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 5.551115123125783e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 14.999999999999805,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 29.99999999999942,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 160,
+      "case": "initiation_no_capture",
+      "epsilon": 0.01,
+      "capture_strength": 0.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 1.2523315717771766e-13,
+      "radiation_error": 1.4477308241112041e-13,
+      "final_energies": {
+        "R": 2.100225147833126,
+        "T": 0.07368311302653452,
+        "M": 0.0669042104202463,
+        "D": 0.0
+      },
+      "photon_energy_in": 8.800000000000118,
+      "total_energy_out": 8.759187528720085,
+      "temporal_work": 0.007028583413138445,
+      "photon_energy_out": 8.049908820296956,
+      "whole_photon_conversion": 0.8428374484567533,
+      "net_radiation_transfer": 0.8498660318698918,
+      "final_clock_range": [
+        1.0000072325494302,
+        1.0068251697545172
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.126106334208174,
+          "coordinate_stretch": 1.00505765584477,
+          "endpoint_clock_factor": 0.9947055703111171,
+          "measured_z": -0.0002635512473736501,
+          "photon_survival": 0.9046012289870592,
+          "clock_error": 3.793309844013493e-08,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.03345087390897,
+          "coordinate_stretch": 1.000004677856862,
+          "endpoint_clock_factor": 0.9932304048984326,
+          "measured_z": -0.006764948911902047,
+          "photon_survival": 0.9045347926304145,
+          "clock_error": 2.075656077016319e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.033452104940643,
+          "coordinate_stretch": 1.000000000077236,
+          "endpoint_clock_factor": 0.9932282809334465,
+          "measured_z": -0.006771718989840414,
+          "photon_survival": 0.9045347814953048,
+          "clock_error": 1.5063505998114124e-11,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 160,
+      "case": "initiation_capture",
+      "epsilon": 0.01,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 1.1457501614131615e-13,
+      "radiation_error": 1.2168044349891716e-13,
+      "final_energies": {
+        "R": 2.097860707021515,
+        "T": 0.04402283925430561,
+        "M": 0.04315941334112531,
+        "D": 0.7164190239579363
+      },
+      "photon_energy_in": 8.800000000000118,
+      "total_energy_out": 8.098538016425122,
+      "temporal_work": 0.004564739070604699,
+      "photon_energy_out": 8.0553955100704,
+      "whole_photon_conversion": 0.8421790438374794,
+      "net_radiation_transfer": 0.8467437829080842,
+      "final_clock_range": [
+        1.000004544340413,
+        1.0045981516138098
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.119943482685885,
+          "coordinate_stretch": 1.0018091695588842,
+          "endpoint_clock_factor": 0.9992660792797081,
+          "measured_z": 0.001073921051566451,
+          "photon_survival": 0.9046569799355769,
+          "clock_error": 1.1536123125654996e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.021579573052911,
+          "coordinate_stretch": 1.0000004228223542,
+          "endpoint_clock_factor": 0.9991412285599175,
+          "measured_z": -0.0008583489808361433,
+          "photon_survival": 0.9046421790509518,
+          "clock_error": 6.689093723366568e-12,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.02157970667267,
+          "coordinate_stretch": 0.9999999999732724,
+          "endpoint_clock_factor": 0.9991411145032062,
+          "measured_z": -0.0008588855234984427,
+          "photon_survival": 0.904642177842171,
+          "clock_error": 7.1875838614232634e-12,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 160,
+      "case": "stronger_initiation_capture",
+      "epsilon": 0.05,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 1.092459456231154e-13,
+      "radiation_error": 1.234568003383174e-13,
+      "final_energies": {
+        "R": 1.7438290006543866,
+        "T": 0.19277714689295494,
+        "M": 0.18932479865765844,
+        "D": 3.01758738733911
+      },
+      "photon_energy_in": 8.800000000000116,
+      "total_energy_out": 5.856481666455896,
+      "temporal_work": 0.017390800265913015,
+      "photon_energy_out": 5.686249192874086,
+      "whole_photon_conversion": 3.552531006205607,
+      "net_radiation_transfer": 3.5699218064715197,
+      "final_clock_range": [
+        1.0000226665721017,
+        1.0196667803041228
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.187928545986486,
+          "coordinate_stretch": 1.0067358304718523,
+          "endpoint_clock_factor": 0.997062267168127,
+          "measured_z": 0.003778309569652194,
+          "photon_survival": 0.6038699448677359,
+          "clock_error": 8.439401474991115e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.094660226556252,
+          "coordinate_stretch": 1.00000544838046,
+          "endpoint_clock_factor": 0.9965716572825141,
+          "measured_z": -0.0034229130159414423,
+          "photon_survival": 0.6036667260910251,
+          "clock_error": 1.7827144543902662e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.094662401065417,
+          "coordinate_stretch": 0.9999999987956978,
+          "endpoint_clock_factor": 0.9965702400627399,
+          "measured_z": -0.003429761137431875,
+          "photon_survival": 0.6036666604570873,
+          "clock_error": 2.8354207870506798e-11,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 320,
+      "case": "no_initiation",
+      "epsilon": 0.0,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 8.881784197001252e-16,
+      "radiation_error": 8.881784197001252e-16,
+      "final_energies": {
+        "R": 2.2,
+        "T": 0.0,
+        "M": 0.0,
+        "D": 0.0
+      },
+      "photon_energy_in": 8.800000000000548,
+      "total_energy_out": 8.800000000000548,
+      "temporal_work": 0.0,
+      "photon_energy_out": 8.800000000000548,
+      "whole_photon_conversion": 0.0,
+      "net_radiation_transfer": 0.0,
+      "final_clock_range": [
+        1.0,
+        1.0
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.099999999999984,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 5.551115123125783e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 14.999999999999625,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.000000000000476,
+          "coordinate_stretch": 1.0,
+          "endpoint_clock_factor": 1.0,
+          "measured_z": 0.0,
+          "photon_survival": 1.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 320,
+      "case": "initiation_no_capture",
+      "epsilon": 0.01,
+      "capture_strength": 0.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 7.593925488436071e-13,
+      "radiation_error": 7.505107646466058e-13,
+      "final_energies": {
+        "R": 2.1002318471245323,
+        "T": 0.07367784700071774,
+        "M": 0.06689892214318897,
+        "D": 0.0
+      },
+      "photon_energy_in": 8.800000000000546,
+      "total_energy_out": 8.759191383731562,
+      "temporal_work": 0.007027991732179854,
+      "photon_energy_out": 8.049900290795598,
+      "whole_photon_conversion": 0.8428398703476677,
+      "net_radiation_transfer": 0.8498678620798475,
+      "final_clock_range": [
+        1.0000019636893982,
+        1.006825192321953
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.126116935350051,
+          "coordinate_stretch": 1.0050873278961507,
+          "endpoint_clock_factor": 0.994704696030651,
+          "measured_z": -0.00023491502079997506,
+          "photon_survival": 0.9046011330890046,
+          "clock_error": 2.491008440630438e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.033447818949066,
+          "coordinate_stretch": 1.0000055282616824,
+          "endpoint_clock_factor": 0.9932254660544475,
+          "measured_z": -0.006769043135266495,
+          "photon_survival": 0.9045348202635901,
+          "clock_error": 9.517561960770138e-09,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.03344946103709,
+          "coordinate_stretch": 1.0000000000133915,
+          "endpoint_clock_factor": 0.9932230255223828,
+          "measured_z": -0.006776974464316465,
+          "photon_survival": 0.9045348054103323,
+          "clock_error": 2.4049762181732603e-11,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 320,
+      "case": "initiation_capture",
+      "epsilon": 0.01,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 7.327471962526033e-13,
+      "radiation_error": 7.380762667708041e-13,
+      "final_energies": {
+        "R": 2.0978706619227627,
+        "T": 0.04403302984586751,
+        "M": 0.0431738043255626,
+        "D": 0.7166233435095654
+      },
+      "photon_energy_in": 8.800000000000548,
+      "total_energy_out": 8.098299160396254,
+      "temporal_work": 0.004566218432753937,
+      "photon_energy_out": 8.055380894000832,
+      "whole_photon_conversion": 0.8421822256436601,
+      "net_radiation_transfer": 0.846748444076414,
+      "final_clock_range": [
+        1.000001506473389,
+        1.00459968640602
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.119949608663406,
+          "coordinate_stretch": 1.0018047579497449,
+          "endpoint_clock_factor": 0.9992694865443491,
+          "measured_z": 0.0010729260941275687,
+          "photon_survival": 0.9046569245164954,
+          "clock_error": 5.547884905920952e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.021586759391377,
+          "coordinate_stretch": 1.0000004386972499,
+          "endpoint_clock_factor": 0.9991423957700364,
+          "measured_z": -0.0008571659089423589,
+          "photon_survival": 0.9046421140403053,
+          "clock_error": 1.3951040322979225e-10,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.021586902163243,
+          "coordinate_stretch": 0.9999999999977264,
+          "endpoint_clock_factor": 0.9991422796586513,
+          "measured_z": -0.0008577203436204162,
+          "photon_survival": 0.9046421127487309,
+          "clock_error": 2.0037305148434825e-11,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 320,
+      "case": "stronger_initiation_capture",
+      "epsilon": 0.05,
+      "capture_strength": 10.0,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 7.362999099314038e-13,
+      "radiation_error": 7.371880883511039e-13,
+      "final_energies": {
+        "R": 1.7438614207241512,
+        "T": 0.19282311530702514,
+        "M": 0.1893882325614971,
+        "D": 3.0184601942220137
+      },
+      "photon_energy_in": 8.800000000000548,
+      "total_energy_out": 5.855467037185321,
+      "temporal_work": 0.01739587909442614,
+      "photon_energy_out": 5.686160331494563,
+      "whole_photon_conversion": 3.5525823686868594,
+      "net_radiation_transfer": 3.5699782477812856,
+      "final_clock_range": [
+        1.0000075231490944,
+        1.0196779050589813
+      ],
+      "probes": [
+        {
+          "emission": 0.1,
+          "arrival": 10.187939165999634,
+          "coordinate_stretch": 1.0066739958715858,
+          "endpoint_clock_factor": 0.9970755486150156,
+          "measured_z": 0.003730026710131229,
+          "photon_survival": 0.6038696242124832,
+          "clock_error": 6.235712710633834e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 5.0,
+          "arrival": 15.094691978035575,
+          "coordinate_stretch": 1.0000055108028727,
+          "endpoint_clock_factor": 0.9965740399963975,
+          "measured_z": -0.0034204680805199894,
+          "photon_survival": 0.6036657677262073,
+          "clock_error": 2.0681610379824633e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "emission": 20.0,
+          "arrival": 30.094694116026567,
+          "coordinate_stretch": 1.000000000535453,
+          "endpoint_clock_factor": 0.9965726145648592,
+          "measured_z": -0.003427384901522945,
+          "photon_survival": 0.603665703194612,
+          "clock_error": 1.5217604953932096e-11,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    }
+  ],
+  "refinement": [
+    {
+      "case": "no_initiation",
+      "coarse": 80,
+      "fine": 160,
+      "absolute_z_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passes": true
+    },
+    {
+      "case": "no_initiation",
+      "coarse": 160,
+      "fine": 320,
+      "absolute_z_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passes": true
+    },
+    {
+      "case": "initiation_no_capture",
+      "coarse": 80,
+      "fine": 160,
+      "absolute_z_difference": [
+        8.71486845598346e-05,
+        1.2922376710688965e-05,
+        1.7707299304947632e-05
+      ],
+      "passes": true
+    },
+    {
+      "case": "initiation_no_capture",
+      "coarse": 160,
+      "fine": 320,
+      "absolute_z_difference": [
+        2.863622657367504e-05,
+        4.094223364448091e-06,
+        5.255474476051347e-06
+      ],
+      "passes": true
+    },
+    {
+      "case": "initiation_capture",
+      "coarse": 80,
+      "fine": 160,
+      "absolute_z_difference": [
+        8.777327180631289e-07,
+        8.093690156196764e-06,
+        7.998051875013346e-06
+      ],
+      "passes": true
+    },
+    {
+      "case": "initiation_capture",
+      "coarse": 160,
+      "fine": 320,
+      "absolute_z_difference": [
+        9.94957438882338e-07,
+        1.1830718937844154e-06,
+        1.1651798780265565e-06
+      ],
+      "passes": true
+    },
+    {
+      "case": "stronger_initiation_capture",
+      "coarse": 80,
+      "fine": 160,
+      "absolute_z_difference": [
+        9.162461218736873e-05,
+        2.7583190486013542e-05,
+        2.7382780829587894e-05
+      ],
+      "passes": true
+    },
+    {
+      "case": "stronger_initiation_capture",
+      "coarse": 160,
+      "fine": 320,
+      "absolute_z_difference": [
+        4.8282859520965005e-05,
+        2.444935421452854e-06,
+        2.376235908929658e-06
+      ],
+      "passes": true
+    }
+  ],
+  "scope": "Synthetic seeded-by-photon-removal branch; surviving-photon redshift and extinction distinguished; no observational fit."
+}

@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Initiation checkpoint:** [Radiation-powered startup](research_work/results/radiation-powered-initiation/report.md) removes the external seed and funds deposits, but mainly by removing whole photons. Early redshift does not persist after the field settles. Surviving-light frequency, timing and attenuation are reported separately in the [working paper addendum](papers/cumulative-time-companions/temporal-field-addendum.md).
+
 **Spatial energy-assignment checkpoint:** [Field-funded transport](research_work/results/field-funded-transport/report.md) keeps reservoirs nonnegative and energy moving in a tested finite domain, with consistent measured clock/frequency changes. It still gives path-dependent redshift/blueshift and net energy gain by radiation; its deposits are funded by the supplied seed overall. A common radiation-powered history remains to be derived.
 
 **Finite-response checkpoint:** [Moving response-energy audit](research_work/results/finite-response-transport/report.md) improves local propagation in an explicit slower-field variant, but a spatial gradient can demand energy from an empty companion reservoir. Uniform-cell conservation passes do not resolve that failure. The next constitutive rule must specify spatial energy exchange as well as temporal response.
