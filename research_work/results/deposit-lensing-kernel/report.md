@@ -43,3 +43,5 @@ The tests cover exterior projected rays through a static weak field. They do not
 ## Reproduction
 
 Run `python research_work/results/deposit-lensing-kernel/verify.py` from the repository root. `results.json` records all cases and errors. The new implementation is a conditional numerical connection to the existing gravity kernel; it is not a new first-principles theory of time or gravitons.
+
+Subsequent check: [six interior cube rays](interior-report.md) now pass an independent polar-volume comparison. This extends numerical coverage while retaining the original metric and physical limitations.
