@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Physical source-clock option assessed:** [Radioactive-tail calculation](research_work/results/radioactive-clock-feasibility/report.md) identifies a possible nuclear-decay anchor but shows that ignoring deposition evolution biases the inferred stretch. A conditional slope bound is derived and checked; real bolometric coverage and source-physics constraints remain necessary. No calibrated independent clock or new astronomical success is claimed.
+
 **Joint pipeline recovery checked:** [Two artificial end-to-end controls](research_work/results/joint-light-recovery/report.md) recover b=-0.021/0.982 for injected 0/1, together with a shared rate, luminosity and duration. Independent analytic injection agrees with numerical real-filter predictions. Identical sources and exact distances are restrictive control assumptions; this does not validate the theory or override the broader timing-calibration failures.
 
 **Joint flux likelihood checked:** [Shared-calibration likelihood](research_work/results/joint-light-likelihood/report.md) retains model-dependent covariance and normalization, with independent dense and scalar-integration checks. It must be evaluated jointly across events sharing zero points. Source, selection, nonlinear-systematic and redshift-likelihood components remain required; no observed fit or theory validation is claimed.
