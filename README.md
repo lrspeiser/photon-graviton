@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Spatial energy-assignment checkpoint:** [Field-funded transport](research_work/results/field-funded-transport/report.md) keeps reservoirs nonnegative and energy moving in a tested finite domain, with consistent measured clock/frequency changes. It still gives path-dependent redshift/blueshift and net energy gain by radiation; its deposits are funded by the supplied seed overall. A common radiation-powered history remains to be derived.
+
 **Finite-response checkpoint:** [Moving response-energy audit](research_work/results/finite-response-transport/report.md) improves local propagation in an explicit slower-field variant, but a spatial gradient can demand energy from an empty companion reservoir. Uniform-cell conservation passes do not resolve that failure. The next constitutive rule must specify spatial energy exchange as well as temporal response.
 
 **Traveling field-energy checkpoint:** [Propagation and capture audit](research_work/results/advected-temporal-state/report.md) tests tying the temporal state directly to traveling companion energy. Its reference-energy budget closes, but capture reaches an unstable equal-speed boundary from initially regular examples. The tested instantaneous feedback requires revision before a joint redshift/gravity claim; energy conservation alone does not establish sensible signal propagation.

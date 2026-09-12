@@ -1,0 +1,686 @@
+{
+  "runs": [
+    {
+      "cells": 80,
+      "case": "no_capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8814421333704198,
+      "min_speed_gap": 0.38994792682971524,
+      "energy_error": 3.1086244689504383e-15,
+      "final_energies": {
+        "R": 6.911054752113667e-33,
+        "T": 2.071209731805205e-18,
+        "M": 6.983093840342918e-18,
+        "D": 0.0
+      },
+      "energy_in": 0.43999999943043067,
+      "energy_out": 2.710898153466616,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.015587098949625,
+          "coordinate_stretch": 0.9790926525624466,
+          "endpoint_factor": 0.993451570910594,
+          "measured_z": -0.02731886624481694,
+          "clock_error": 8.654070304814354e-08,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.154489439838533,
+          "coordinate_stretch": 1.0816385210758166,
+          "endpoint_factor": 1.0033338328871815,
+          "measured_z": 0.08524452314942166,
+          "clock_error": 1.5255083023468785e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.000010864028551,
+          "coordinate_stretch": 0.9999751568485661,
+          "endpoint_factor": 0.9999855861542729,
+          "measured_z": -3.925663907566879e-05,
+          "clock_error": 3.948837339340372e-07,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 80,
+      "case": "capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8814423769679294,
+      "min_speed_gap": 0.384962555328635,
+      "energy_error": 3.552713678800501e-15,
+      "final_energies": {
+        "R": 6.910364899522601e-33,
+        "T": 1.1344005747372687e-18,
+        "M": 4.816873877514028e-18,
+        "D": 0.04901158809812463
+      },
+      "energy_in": 0.43999999943165735,
+      "energy_out": 2.6618865653697186,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.012189100909955,
+          "coordinate_stretch": 0.9832750132047791,
+          "endpoint_factor": 0.9973395200772786,
+          "measured_z": -0.01934097022636594,
+          "clock_error": 3.810468961473745e-07,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.15401041484902,
+          "coordinate_stretch": 1.0804335047076223,
+          "endpoint_factor": 1.0039687353954432,
+          "measured_z": 0.08472145940017817,
+          "clock_error": 4.193066901914122e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.000007801961509,
+          "coordinate_stretch": 0.9999821359258881,
+          "endpoint_factor": 0.9999914593495399,
+          "measured_z": -2.640457200109303e-05,
+          "clock_error": 2.8122956408083155e-08,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 80,
+      "case": "zero_seed",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 3.552713678800501e-15,
+      "final_energies": {
+        "R": 6.909308110405662e-33,
+        "T": 0.0,
+        "M": 0.0,
+        "D": 0.0
+      },
+      "energy_in": 0.4400000662298042,
+      "energy_out": 2.640000066229801,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 10.999999999999961,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 1.27675647831893e-12,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.1,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 3.3306690738754696e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 14.999999999999906,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 160,
+      "case": "no_capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8790842479160815,
+      "min_speed_gap": 0.38922566893591104,
+      "energy_error": 6.661338147750939e-15,
+      "final_energies": {
+        "R": 2.4687534872959855e-63,
+        "T": 5.042181219279941e-26,
+        "M": 2.824822596971142e-25,
+        "D": 0.0
+      },
+      "energy_in": 0.43999999921809907,
+      "energy_out": 2.710898153254265,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.014205059104125,
+          "coordinate_stretch": 0.9785321370016741,
+          "endpoint_factor": 0.9932336825517871,
+          "measured_z": -0.028088922070557354,
+          "clock_error": 1.0839065484047339e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.1549135299777005,
+          "coordinate_stretch": 1.097938018065778,
+          "endpoint_factor": 1.0038574578022383,
+          "measured_z": 0.10217326763994006,
+          "clock_error": 3.007259739007395e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.000001596445829,
+          "coordinate_stretch": 0.9999950860818481,
+          "endpoint_factor": 0.9999970091056636,
+          "measured_z": -7.904797791336016e-06,
+          "clock_error": 4.65105287617007e-10,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 160,
+      "case": "capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8790842499227823,
+      "min_speed_gap": 0.3839005208818448,
+      "energy_error": 3.9968028886505635e-15,
+      "final_energies": {
+        "R": 2.4682989918848195e-63,
+        "T": 3.756579714083139e-26,
+        "M": 2.4572693034101023e-25,
+        "D": 0.04878664386277757
+      },
+      "energy_in": 0.43999999910012655,
+      "energy_out": 2.662111509273522,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.010957427530753,
+          "coordinate_stretch": 0.9829855655995362,
+          "endpoint_factor": 0.9971106896554532,
+          "measured_z": -0.01985458476369062,
+          "clock_error": 1.4228964788642884e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.154524298669252,
+          "coordinate_stretch": 1.0967174196381055,
+          "endpoint_factor": 1.0043488780402139,
+          "measured_z": 0.10148690994068987,
+          "clock_error": 7.093177976313925e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.00000125772772,
+          "coordinate_stretch": 0.9999961564899094,
+          "endpoint_factor": 0.9999978743402427,
+          "measured_z": -5.969161677943369e-06,
+          "clock_error": 4.4561687673194683e-10,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 160,
+      "case": "zero_seed",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 5.773159728050814e-15,
+      "final_energies": {
+        "R": 2.468332552139223e-63,
+        "T": 0.0,
+        "M": 0.0,
+        "D": 0.0
+      },
+      "energy_in": 0.4400000339376563,
+      "energy_out": 2.6400000339376506,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 10.999999999999922,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 4.996003610813204e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.1,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 3.3306690738754696e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 14.999999999999805,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 320,
+      "case": "no_capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8781654033768126,
+      "min_speed_gap": 0.38910898694146057,
+      "energy_error": 5.773159728050814e-15,
+      "final_energies": {
+        "R": 3.417753171368897e-116,
+        "T": 1.1110693826211556e-35,
+        "M": 1.039068682642871e-34,
+        "D": 0.0
+      },
+      "energy_in": 0.43999999821188035,
+      "energy_out": 2.7108981522480504,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.013830953505261,
+          "coordinate_stretch": 0.9783329850721137,
+          "endpoint_factor": 0.993156561723379,
+          "measured_z": -0.028362176325209654,
+          "clock_error": 1.7857636647189423e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.154968534300194,
+          "coordinate_stretch": 1.104117557702382,
+          "endpoint_factor": 1.0039971320186953,
+          "measured_z": 0.10853086134467804,
+          "clock_error": 1.2718368827657756e-05,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.00000049078326,
+          "coordinate_stretch": 0.9999981604695085,
+          "endpoint_factor": 0.9999988361647143,
+          "measured_z": -3.003363636233658e-06,
+          "clock_error": 1.103604985175366e-10,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 320,
+      "case": "capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8781654054352299,
+      "min_speed_gap": 0.3837593613496687,
+      "energy_error": 7.549516567451064e-15,
+      "final_energies": {
+        "R": 3.4176604202206864e-116,
+        "T": 9.575337050503453e-36,
+        "M": 9.883971274949757e-35,
+        "D": 0.048718625183394024
+      },
+      "energy_in": 0.4399999982118911,
+      "energy_out": 2.662179527064669,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.010614508416795,
+          "coordinate_stretch": 0.982877293639441,
+          "endpoint_factor": 0.9970310481648945,
+          "measured_z": -0.02004082170519339,
+          "clock_error": 5.69883095813406e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.154604804113345,
+          "coordinate_stretch": 1.1028933133700984,
+          "endpoint_factor": 1.0044468995057725,
+          "measured_z": 0.10779776910024363,
+          "clock_error": 1.461753079690098e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.000000410304414,
+          "coordinate_stretch": 0.9999984774642345,
+          "endpoint_factor": 0.9999990893805116,
+          "measured_z": -2.4331538673871833e-06,
+          "clock_error": 4.474864923054156e-12,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 320,
+      "case": "zero_seed",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.89,
+      "min_speed_gap": 0.39,
+      "energy_error": 4.884981308350689e-15,
+      "final_energies": {
+        "R": 3.449481005220445e-116,
+        "T": 0.0,
+        "M": 0.0,
+        "D": 0.0
+      },
+      "energy_in": 0.4400000068521021,
+      "energy_out": 2.640000006852098,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 10.999999999999849,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 4.996003610813204e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.1,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 3.3306690738754696e-13,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 14.999999999999625,
+          "coordinate_stretch": 1.0,
+          "endpoint_factor": 1.0,
+          "measured_z": 0.0,
+          "clock_error": 0.0,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 640,
+      "case": "no_capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8779084583573633,
+      "min_speed_gap": 0.3890305424802982,
+      "energy_error": 4.884981308350689e-15,
+      "final_energies": {
+        "R": 1.9767784602284253e-185,
+        "T": 1.0044008406155738e-48,
+        "M": 1.7078244638002398e-47,
+        "D": 0.0
+      },
+      "energy_in": 0.43999999844481436,
+      "energy_out": 2.710898152480979,
+      "net_radiation_to_M": -0.0015538068578830944,
+      "radiation_out": 2.6415538053026917,
+      "radiation_ledger_error": 7.105427357601002e-15,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.013743804245248,
+          "coordinate_stretch": 0.9782667819387708,
+          "endpoint_factor": 0.9931328819741185,
+          "measured_z": -0.028451091513601923,
+          "clock_error": 5.190863343829122e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.154990549094792,
+          "coordinate_stretch": 1.1057259075672388,
+          "endpoint_factor": 1.0040227765705945,
+          "measured_z": 0.11017399584169962,
+          "clock_error": 1.9277971587960963e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.000000291051911,
+          "coordinate_stretch": 0.9999987953081174,
+          "endpoint_factor": 0.9999992216563026,
+          "measured_z": -1.9830346423832523e-06,
+          "clock_error": 3.991140751224975e-12,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    },
+    {
+      "cells": 640,
+      "case": "capture",
+      "K": 2.0,
+      "sigma": 0.5,
+      "minimum_energy": 0.0,
+      "min_d": 0.8779084588004826,
+      "min_speed_gap": 0.3837140384293687,
+      "energy_error": 7.993605777301127e-15,
+      "final_energies": {
+        "R": 1.9788943865764866e-185,
+        "T": 9.346372236181661e-49,
+        "M": 1.681376177707534e-47,
+        "D": 0.048698994654202354
+      },
+      "energy_in": 0.4399999984448153,
+      "energy_out": 2.662199157826772,
+      "net_radiation_to_M": -0.001567008116665188,
+      "radiation_out": 2.641567006561473,
+      "radiation_ledger_error": 7.993605777301127e-15,
+      "probes": [
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 1.0,
+          "arrival": 11.01053233122995,
+          "coordinate_stretch": 0.9828348241435256,
+          "endpoint_factor": 0.9970063603735451,
+          "measured_z": -0.020107429132290355,
+          "clock_error": 3.5646686462609267e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 2.0,
+          "end": 9.0,
+          "emission": 0.1,
+          "arrival": 7.15463298201495,
+          "coordinate_stretch": 1.1045032909288606,
+          "endpoint_factor": 1.004462554473742,
+          "measured_z": 0.10943219703105789,
+          "clock_error": 1.7053816122603038e-06,
+          "shared_messenger_delay": 0.0
+        },
+        {
+          "start": 0.0,
+          "end": 10.0,
+          "emission": 5.0,
+          "arrival": 15.000000250101978,
+          "coordinate_stretch": 0.9999989762936292,
+          "endpoint_factor": 0.9999993660143851,
+          "measured_z": -1.6576913366428414e-06,
+          "clock_error": 3.346212196220222e-13,
+          "shared_messenger_delay": 0.0
+        }
+      ]
+    }
+  ],
+  "refinement": [
+    {
+      "case": "no_capture",
+      "coarse": 80,
+      "fine": 160,
+      "absolute_z_difference": [
+        0.0007700558257404122,
+        0.0169287444905184,
+        3.135184128433277e-05
+      ],
+      "passes": false
+    },
+    {
+      "case": "no_capture",
+      "coarse": 160,
+      "fine": 320,
+      "absolute_z_difference": [
+        0.0002732542546522998,
+        0.006357593704737985,
+        4.901434155102358e-06
+      ],
+      "passes": false
+    },
+    {
+      "case": "no_capture",
+      "coarse": 320,
+      "fine": 640,
+      "absolute_z_difference": [
+        8.891518839226897e-05,
+        0.001643134497021581,
+        1.0203289938504057e-06
+      ],
+      "passes": true
+    },
+    {
+      "case": "capture",
+      "coarse": 80,
+      "fine": 160,
+      "absolute_z_difference": [
+        0.0005136145373246803,
+        0.016765450540511706,
+        2.043541032314966e-05
+      ],
+      "passes": false
+    },
+    {
+      "case": "capture",
+      "coarse": 160,
+      "fine": 320,
+      "absolute_z_difference": [
+        0.00018623694150277093,
+        0.006310859159553761,
+        3.5360078105561854e-06
+      ],
+      "passes": false
+    },
+    {
+      "case": "capture",
+      "coarse": 320,
+      "fine": 640,
+      "absolute_z_difference": [
+        6.660742709696521e-05,
+        0.0016344279308142529,
+        7.754625307443419e-07
+      ],
+      "passes": true
+    },
+    {
+      "case": "zero_seed",
+      "coarse": 80,
+      "fine": 160,
+      "absolute_z_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passes": true
+    },
+    {
+      "case": "zero_seed",
+      "coarse": 160,
+      "fine": 320,
+      "absolute_z_difference": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passes": true
+    }
+  ],
+  "empty_T_boundary_derivative": 0.1,
+  "empty_T_boundary_explanation": "At T=0 and T_x=0, T_t=-Q=M/tau, independent of M_x. For prior example M=0.1,tau=1 it is +0.1.",
+  "scope": "Finite-domain synthetic reference-energy and clock test; no global domain proof or observational fit."
+}
