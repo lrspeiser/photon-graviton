@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Real-filter timing bridge checked:** [Controlled spectral-duration experiment](research_work/results/bandpass-timing-coupling/report.md) shows the fixed-filter width exponent is b-q for the declared self-similar source; matching emitted response recovers b. All 320 numerical cases match their analytic scalings. This is not a real-supernova result; it defines a necessary spectral/passband component of the joint-light inference.
+
 **Faint timing boundary diagnosed:** [First two flagged controls](research_work/results/timing-boundary-diagnosis/report.md) converged but reached the imposed intrinsic-scatter floor 0.03. Timing estimates remain near injected values; nominal truth inclusion does not override the frozen validity screen. The zero-invalid-fits criterion has already failed in at least one cell. The full batch continues unchanged, and uncertainty treatment needs further work before observational inference.
 
 **DES calibration acquired:** [Checksum-verified original resources](research_work/results/des-photometric-calibration/report.md) supply the four real passbands and calibration inputs. Independent AB-reference photon integrals agree with the archived program log within 0.0114%. Version compatibility, offset application, covariance and source-evolution constraints remain unresolved; no observed brightness fit is claimed.
