@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Milky Way calibration checkpoint:** [Depth-dependent capture against training stars](research_work/results/milky-way-depth-capture/report.md) substantially improves radial agreement with one fitted amplitude, but requires a deposit potential large enough to change the capture rule itself. This is a conditional calibration, not a new-data validation or a complete photon-to-gravity mechanism.
+
 **Capture-law checkpoint:** [Depth-law comparison](research_work/results/capture-depth-law/report.md) finds a nearly flat finite-range force contribution for one thin-capture case, but the same profile declines farther out. Full curves, interception efficiency and lensing remain to be checked against actual galaxy geometry and data.
 
 **All-direction capture checkpoint:** [Isotropic deposition profile](research_work/results/isotropic-capture-profile/report.md) computes where companions are intercepted, then derives gravity and lensing. Strong capture can load outer layers while starving the center; that pattern does not automatically fit stellar motion. Supply and nonspherical tests remain open.
