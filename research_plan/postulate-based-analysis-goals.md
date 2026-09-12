@@ -2,7 +2,7 @@
 
 User-approved approach: begin with explicit physical postulates and derive testable consequences. Explaining why time, energy or gravity ultimately exists is not a prerequisite. A microscopic action is a possible later strengthening, not a mandatory first deliverable. Operational consistency, honest assumptions and predictions remain required.
 
-Keep both selected branches: A, a shared temporal transport field for EM and gravitational waves; B, radiation energy feeding that field, with onward transport and capture in gravity wells. Do not collapse branch B into A's prescribed redshift rate and call the feedback derived. Preserve the existing four-stage goal in full.
+Keep both selected branches: A, a shared temporal transport field for EM and gravitational waves; B, radiation energy feeding that field, with onward transport and capture in gravity wells. Do not collapse branch B into A's prescribed redshift rate and call the feedback derived. These nine goals are the active analysis roadmap; none is completed merely by listing it.
 
 ## 1. Write the minimum rulebook
 
@@ -22,7 +22,7 @@ Work: specify emitted atomic frequencies, clock tick rates, rod lengths and meas
 
 Deliverable: an observer/clock model with predictions in ordinary measurement units, including well-to-void-to-well propagation and the zero-field limit.
 
-Finished when: observable redshift and event stretch survive the declared measuring procedure, or that branch is explicitly shown to cancel its own effect. A universal metric, microscopic origin of time or derivation of atomic physics from scratch is not required. Current status: unresolved; previous completions exhibit cancellation or changed local speed.
+Finished when: observable redshift and event stretch survive the declared measuring procedure, or that branch is explicitly shown to cancel its own effect. A universal metric, microscopic origin of time or derivation of atomic physics from scratch is not required. Current status: an inhomogeneous clock completion permits observable stretching for prescribed field histories; homogeneous changes cancel. A successful radiation-generated history remains unresolved.
 
 ## 3. Derive redshift and the full arrival-time map together
 
@@ -42,7 +42,7 @@ Work: define initiation/seed assumptions, finite transport speed, outward energy
 
 Deliverable: conservation and stability tests over declared parameter ranges, with a physically interpretable budget and identified instability regimes.
 
-Finished when: a retained branch has self-consistent bookkeeping and bounded, causal behavior in its declared domain, or its failure/required revision is demonstrated. No unexplained zero-cost field dynamics may be counted as a conservation proof. Current status: cell energy sums pass; full field cost, momentum, initiation and feedback stability remain open.
+Finished when: a retained branch has self-consistent bookkeeping and bounded, causal behavior in its declared domain, or its failure/required revision is demonstrated. No unexplained zero-cost field dynamics may be counted as a conservation proof. Current status: reference-energy budgets including field memory and funded restoration have been tested. These do not yet supply a complete physical energy/momentum theory or meet the requirement that converted energy keep moving through voids. Initiation and feedback stability remain open.
 
 ## 5. Define capture and the well's response
 
@@ -92,10 +92,12 @@ Work: assemble postulates, conditional derivations, code/data provenance, known 
 
 Deliverable: updated paper and reproducibility package, clearly marked with its actual evidential status.
 
-Finished when: each quantitative claim points to a calculation or source and no conceptual assumption is presented as a proven discovery. This writing goal can proceed alongside analysis; it does not replace the four-stage validation goal.
+Finished when: each quantitative claim points to a calculation or source and no conceptual assumption is presented as a proven discovery. This writing goal proceeds alongside analysis; it does not replace the other eight goals.
 
 ## Execution order and scope
 
 Start with goals 1–4 for both branches, prioritizing the observer/clock rule before more catalog fitting. Develop capture (5) and selection-aware data work (6) alongside the resulting operational model. Use 7 to reject/revise branches; perform 8 only after a complete candidate is ready. Maintain 9 throughout.
 
-The existing active stages map as follows: stage 1 to goals 2–4 and the messenger portion of 7; stage 2 to 6; stage 3 to 4–5 and 7; stage 4 to 8. Goals 1 and 9 organize and communicate the same work. No stage is marked complete by this planning document, and no microscopic explanation of why time exists has been added as a prerequisite.
+The earlier four-stage plan is covered by these nine goals: its stage 1 maps to goals 2–4 and the messenger portion of 7; stage 2 to 6; stage 3 to 4–5 and 7; stage 4 to 8. No goal is marked complete by this planning document, and no microscopic explanation of why time exists has been added as a prerequisite.
+
+Immediate checkpoint: retain one explicit clock rule, derive the frequency and event-timing measurements from it, and test an energy-carrying field evolution that transports converted energy onward without singular or uncontrolled feedback. Only then interpret a fitted redshift rate as a consequence of that physical branch.
