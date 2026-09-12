@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Angular refinement targets identified:** [Complete contribution audit](research_work/results/bar-cell-geometry/angular-attribution-report.md) reproduces the problematic age-bin force and finds that 66/560 parent regions supply 90% of summed difference magnitudes. All directions and their masses remain included. The ranking guides actual refinement; it does not resolve the 14 force failures or establish physical/observational success. All nine goals remain open.
+
 **Largest force discrepancy localized in age:** [Mass-preserving attribution](research_work/results/bar-cell-geometry/age-attribution-report.md) reproduces both archived forces and traces 92.3% of their signed difference to the 61–73 Myr source-age bin at the selected failing target. No ages are removed or renormalized. Next resolve angular structure during that passage; other failures and all nine physical/observational goals remain open.
 
 **Curved interpolation does not resolve the late map:** [Quadratic audit](research_work/results/bar-cell-geometry/quadratic-report.md) uses the same actual vertex/midpoint paths with known six-node shape functions. Early RMS improves, but final errors worsen to 25.63% and 40.52% of launch radius. Retain this failed remedy; no new force result or mass reweighting is adopted. The model still needs resolved late-time source geometry and all physical/observational closures. All nine goals remain open.

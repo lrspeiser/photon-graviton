@@ -1,7 +1,8 @@
 """Unsoftened Newtonian gravity of constant-density tetrahedra, G=1."""
 import numpy as np
 
-def gravity(vertices,masses,points):
+def gravity(vertices,masses,points,*,per_cell=False):
+    """Return totals by default; per_cell retains each source contribution for auditing."""
     v=np.asarray(vertices,dtype=float);mass=np.broadcast_to(masses,len(v)).astype(float)
     volume=np.abs(np.einsum('ij,ij->i',v[:,1]-v[:,0],np.cross(v[:,2]-v[:,0],v[:,3]-v[:,0])))/6
     scale=np.max(np.linalg.norm(v-v[:,:1],axis=2),axis=1)
@@ -35,5 +36,5 @@ def gravity(vertices,masses,points):
                 integral+=term
             p-=.5*rho*d*integral
             a-=rho[:,None]*n*integral[:,None]
-        P.append(p.sum());A.append(a.sum(axis=0))
+        P.append(p if per_cell else p.sum());A.append(a if per_cell else a.sum(axis=0))
     return np.array(P),np.array(A)
