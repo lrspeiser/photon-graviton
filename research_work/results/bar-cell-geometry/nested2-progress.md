@@ -11,3 +11,11 @@ Once both preparations finish, `check_nested2_geometry.py` compares the actual n
 All nine goals remain open. This is progress on numerical deposition dynamics, not closure of the photon-to-companion mechanism, energy supply, self-gravity, clock law, lensing or observational fit.
 
 Files: `mesh2.py`, `mesh2.json`, `mesh2-checks.json`, `prepare_nested2.py`, `check_nested2_geometry.py`. The mesh uses known geodesic midpoint subdivision and affine interpolation; no new physical law is introduced.
+
+## Dependent calculations queued
+
+`nested2_volumes.py` retains the exact tetrahedral gravity solver and unchanged target positions, source weighting and 256/512 age-layer comparison. It records the field and mesh hashes. `export_nested2.py` compares the second mesh with the first at matched 512 age layers, keeping the 2% potential and 5% vector-force thresholds.
+
+A deliberate preflight invocation on an incomplete preparation was rejected before field calculation; this verifies the completeness guard, not numerical accuracy. Syntax checks pass.
+
+`finish_nested2.py` waits on the two existing Windows preparation process IDs supplied at launch. It never restarts preparations. After process termination it checks that every expected record exists and passes its primary orbit check, then runs geometry, four volume calculations (at most two simultaneously), and the comparison exporter. Failed or incomplete preparations stop dependent work. Force-job logs are retained. The coordinator is currently waiting on the live preparation processes; no resulting force comparison is claimed yet.
