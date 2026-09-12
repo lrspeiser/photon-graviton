@@ -1,0 +1,9 @@
+# Linear gravitational response of the moving bar population
+
+Recorded before kernel calculation. Use the previous6x12 angular grid, L40 ordinary bar, two separate launch spheres, source weights and radial velocity. This is a first linear-response calculation with unresolved source quadrature, not a converged formed galaxy. No fitted normalization. Compute potential and acceleration per unit total injected rest mass at bar-frame positions (0.1,0,0), (1,0,0), (1,0,1), (0,1,1), and (3,0,0), at T0.05,0.1,0.25. Reconstruct the four exact reflection/half-turn trajectory symmetries. Preserve asymmetry between bar major/minor directions. Full mass normalization and self-gravity feedback remain absent.
+
+Use repaired whole-orbit integration at rtol2e-11 with max_step0.0002. Check the Jacobi drift/220^2<1e-5. Age-integrate on the solver step intervals using4 and8 Gauss nodes per interval. Require each potential and each vector acceleration difference below1e-4 times max(norm of refined result,0.01 in kernel units). If this fails retain and refine to16 nodes and compare8/16 with the same gate. Do not remove failed source directions. Quadrature near a path is a numerical issue, not permission to smooth the physical force silently.
+
+Known gravitational Green functions, normalized by G times total injected mass: potential has units1/kpc, acceleration1/kpc^2. This cold-rest-mass source uses known Newtonian gravity, not a novel interaction. Field-stress alternatives need a different source law. Physical capture energy, actual Galactic components, lensing and collective evolution are not solved here.
+
+Before real trajectories, verify the integration on a circular ring viewed along its axis (known potential and axial force) and an eccentric Kepler orbit (time-mean inverse radius1/a). Numerical tolerances test the kernel code, not the physical companion hypothesis. Source convergence must be assessed separately from these age-quadrature checks.
