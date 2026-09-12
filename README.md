@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Deposit/gravity checkpoint:** [Growing-well clock and lensing test](research_work/results/deposit-clock-gravity/report.md) links a prescribed deposit profile to stellar forces, clocks and light bending. Growing wells can redshift crossing signals, through a known evolving-potential effect, but the strength is tied to the gravitational potential and its growth. Capture-funded profiles and full energy accounting remain unresolved.
+
 **Response-history checkpoint:** [Slow-response and steady-flow comparison](research_work/results/slow-response-history/report.md) shows that a longer response time does not sustain stretching in the tested open channel. Independent stationary equations reproduce the late results. Deposits grow, but their gravity/clock feedback remains to be added and tested.
 
 **Initiation checkpoint:** [Radiation-powered startup](research_work/results/radiation-powered-initiation/report.md) removes the external seed and funds deposits, but mainly by removing whole photons. Early redshift does not persist after the field settles. Surviving-light frequency, timing and attenuation are reported separately in the [working paper addendum](papers/cumulative-time-companions/temporal-field-addendum.md).
