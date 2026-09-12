@@ -36,4 +36,3 @@ for kind in ('age','angular'):
     r=[r for r in comparisons if r['kind']==kind]
     print(kind,'potential fails',sum(not a['potential_pass'] for a in r),'force fails',sum(not a['force_pass'] for a in r),'of',len(r))
 print('Final geometry',[r['records'][-1] for r in geometry])
-
