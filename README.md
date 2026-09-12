@@ -1,5 +1,7 @@
 # Photon–Companion Research in a Hypothetical Universe
 
+**Capture-feedback checkpoint:** [Chronological deposited-gravity test](research_work/results/milky-way-capture-feedback/report.md) shows that the previously fitted capture amount overproduces stellar speeds once deposits deepen the capture well. The coupled growth equations must be calibrated directly; the earlier no-feedback agreement is not a validated complete model.
+
 **Milky Way calibration checkpoint:** [Depth-dependent capture against training stars](research_work/results/milky-way-depth-capture/report.md) substantially improves radial agreement with one fitted amplitude, but requires a deposit potential large enough to change the capture rule itself. This is a conditional calibration, not a new-data validation or a complete photon-to-gravity mechanism.
 
 **Capture-law checkpoint:** [Depth-law comparison](research_work/results/capture-depth-law/report.md) finds a nearly flat finite-range force contribution for one thin-capture case, but the same profile declines farther out. Full curves, interception efficiency and lensing remain to be checked against actual galaxy geometry and data.
