@@ -1,3 +1,5 @@
+Latest source-clock evidence: [SN 2011fe observed tail audit](../research_work/results/sn2011fe-clock-audit/report.md). All 14 published LBT R observations retained; a single exponential has diagonal chi-square 1142/12. Its naive apparent stretch is not a propagation measurement. Multiband source physics remains necessary; all six demonstrations stay open.
+
 # Active research goal: accurate redshift and joint companion predictions
 
 **Physical source-clock option assessed:** [Radioactive-tail calculation](../research_work/results/radioactive-clock-feasibility/report.md) identifies a possible nuclear-decay anchor but shows that ignoring deposition evolution biases the inferred stretch. A conditional slope bound is derived and checked; real bolometric coverage and source-physics constraints remain necessary. No calibrated independent clock or new astronomical success is claimed.
