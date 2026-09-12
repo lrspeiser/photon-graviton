@@ -1,0 +1,70 @@
+{
+  "scope": "Normalized linearized Gaussian joint-flux likelihood checks, artificial observations and source only.",
+  "dense_comparisons": [
+    {
+      "n": 4,
+      "covariance_scale": 0.0,
+      "absolute_log_likelihood_error": 0.0
+    },
+    {
+      "n": 4,
+      "covariance_scale": 1.0,
+      "absolute_log_likelihood_error": 0.0
+    },
+    {
+      "n": 4,
+      "covariance_scale": 4.0,
+      "absolute_log_likelihood_error": 0.0
+    },
+    {
+      "n": 12,
+      "covariance_scale": 0.0,
+      "absolute_log_likelihood_error": 1.4210854715202004e-14
+    },
+    {
+      "n": 12,
+      "covariance_scale": 1.0,
+      "absolute_log_likelihood_error": 1.4210854715202004e-14
+    },
+    {
+      "n": 12,
+      "covariance_scale": 4.0,
+      "absolute_log_likelihood_error": 4.263256414560601e-14
+    },
+    {
+      "n": 40,
+      "covariance_scale": 0.0,
+      "absolute_log_likelihood_error": 0.0
+    },
+    {
+      "n": 40,
+      "covariance_scale": 1.0,
+      "absolute_log_likelihood_error": 5.115907697472721e-13
+    },
+    {
+      "n": 40,
+      "covariance_scale": 4.0,
+      "absolute_log_likelihood_error": 3.979039320256561e-13
+    }
+  ],
+  "scalar_offset_integral_log_error": 0.0,
+  "repeated_measurement_example": [
+    {
+      "measurements": 1,
+      "correct_mean_sigma_fractional": 0.020761874969778812,
+      "incorrect_independent_calibration_sigma": 0.020761874969778812
+    },
+    {
+      "measurements": 10,
+      "correct_mean_sigma_fractional": 0.00842943961724194,
+      "incorrect_independent_calibration_sigma": 0.006565481340014058
+    },
+    {
+      "measurements": 100,
+      "correct_mean_sigma_fractional": 0.005920764499684813,
+      "incorrect_independent_calibration_sigma": 0.0020761874969778813
+    }
+  ],
+  "observations_fitted": false,
+  "nonlinear_magnitude_marginalization_verified": false
+}

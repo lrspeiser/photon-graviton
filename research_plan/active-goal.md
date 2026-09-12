@@ -1,5 +1,7 @@
 # Active research goal: accurate redshift and joint companion predictions
 
+**Joint flux likelihood checked:** [Shared-calibration likelihood](../research_work/results/joint-light-likelihood/report.md) retains model-dependent covariance and normalization, with independent dense and scalar-integration checks. It must be evaluated jointly across events sharing zero points. Source, selection, nonlinear-systematic and redshift-likelihood components remain required; no observed fit or theory validation is claimed.
+
 **Joint light forward calculator assembled:** [Verified distance/SED-to-detector calculation](../research_work/results/joint-light-forward/report.md) predicts redshift, time stretch and calibrated DES band flux from one conditional transport rule. Absolute-reference, inverse-square and 24 pulse checks pass. The source model, calibration likelihood and observational validation remain required; no causal or astronomical success is claimed.
 
 **DES light-curve versions match:** [Full paired release audit](../research_work/results/des-release-compatibility/report.md) finds exact agreement in all 1,779,030 aligned measurement rows for 19,706 events, including flux and errors. Later host-galaxy metadata differ and remain pinned to the corrected release. This closes measurement-version ambiguity for the historical calibration workflow; source and remaining systematic requirements stay open.
