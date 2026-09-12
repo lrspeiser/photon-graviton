@@ -19,3 +19,7 @@ Files: `mesh2.py`, `mesh2.json`, `mesh2-checks.json`, `prepare_nested2.py`, `che
 A deliberate preflight invocation on an incomplete preparation was rejected before field calculation; this verifies the completeness guard, not numerical accuracy. Syntax checks pass.
 
 `finish_nested2.py` waits on the two existing Windows preparation process IDs supplied at launch. It never restarts preparations. After process termination it checks that every expected record exists and passes its primary orbit check, then runs geometry, four volume calculations (at most two simultaneously), and the comparison exporter. Failed or incomplete preparations stop dependent work. Force-job logs are retained. The coordinator is currently waiting on the live preparation processes; no resulting force comparison is claimed yet.
+
+## Outer-source preparation completed
+
+The R=3 run has finished; its [geometry comparison](nested2-R3-report.md) reduces final RMS from 49.73% to 40.26% of launch radius but retains large errors and two worsening targeted probes. R=1 remains running. No full-map force comparison is complete.

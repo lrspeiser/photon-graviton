@@ -1,6 +1,6 @@
 """Evaluate the new mesh using the same actual source8 reference trajectories."""
 from pathlib import Path
-import json,hashlib
+import json,hashlib,sys
 import numpy as np
 from scipy.interpolate import CubicHermiteSpline
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
@@ -11,7 +11,9 @@ vertices=np.array(mesh['vertices']);faces=np.array(mesh['faces'])
 inverses=np.linalg.inv(np.transpose(vertices[faces],(0,2,1)))
 lookup=np.array(mesh['lookup']);signs=np.array(mesh['signs'])
 results=[]
-for R in (1.,3.):
+selected=(float(sys.argv[1]),) if len(sys.argv)>1 else (1.,3.)
+assert all(R in (1.,3.) for R in selected)
+for R in selected:
     d=json.loads((HERE/f'prepared2-R{R:g}.json').read_text(encoding='utf8'))
     assert len(d['records'])==d['expected']==len(mesh['directions'])
     assert all(r['passes'] for r in d['records'])
@@ -52,5 +54,5 @@ for R in (1.,3.):
         probe_results.append(dict(original_face=probe['face'],new_face=i,
                                   error_over_R=(np.linalg.norm(predicted-actual,axis=1)/R).tolist()))
     results.append(dict(R=R,records=records,sample_errors=error.tolist(),targeted_probe_results=probe_results))
-(HERE/'nested2-geometry.json').write_text(json.dumps(results,indent=2)+'\n',encoding='utf8',newline='\n')
+(HERE/(f'nested2-geometry-R{selected[0]:g}.json' if len(selected)==1 else 'nested2-geometry.json')).write_text(json.dumps(results,indent=2)+'\n',encoding='utf8',newline='\n')
 for r in results:print(r['R'],r['records'])
