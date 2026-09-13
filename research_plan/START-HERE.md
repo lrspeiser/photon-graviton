@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Earth conversion source decision:** [Outgoing EM budget](earth-em-conversion-budget.md) uses already emitted terrestrial IR with the retained alpha, not a new ground-state electron drain. It predicts about 0.373 W converted across all outgoing directions before lunar-orbit distance; local retention is separate. Static source energy is distinguished from a hypothetical decaying well requiring replenishment.
+
 **Common planetary well law:** [Energy to potential across Earth, Moon and planets](planetary-well-energy-law.md) uses W=G(M+E_retained/c^2)/R and derives solar-fed growth. The same solar history/common geometric capture predicts Earth/Moon added-depth ratio 3.67, versus existing-depth ratio 22.28; it cannot explain their entire gravity on those assumptions. Ordinary-gravity plus a small retained-energy increment remains the stated conditional interpretation.
 
 **Solar-system specialization:** [Photon-fed well formulas](solar-system-photon-feeding.md) calculates solar photon output, conversion at the retained alpha, capture-dependent stored energy and its gravitational effect. Perfect capture within 100 AU bounds solar-generated deposits at about 16,219 kg/year; the solar source loses the emitted energy. No graviton count or capture efficiency is inferred from force strength.
