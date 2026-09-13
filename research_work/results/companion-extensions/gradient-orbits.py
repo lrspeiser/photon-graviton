@@ -12,10 +12,12 @@ parser.add_argument('--slope-constrained',action='store_true')
 parser.add_argument('--all-motion-bins',action='store_true',help='Diagnostic fit consuming the outer bin; requires --slope-constrained')
 parser.add_argument('--free-orbit-radius',action='store_true',help='Fit 0.1<=ra/Re<=10; requires all-motion diagnostic')
 parser.add_argument('--stellar-only',action='store_true',help='Matched zero-companion control; requires free orbital radius')
+parser.add_argument('--nfw-shape',type=float,choices=[.3,1.,3.],help='NFW rs/capture-a at fixed reference bending; requires free orbital radius')
 args=parser.parse_args()
+if args.nfw_shape is not None and (not args.free_orbit_radius or args.stellar_only):parser.error('--nfw-shape requires --free-orbit-radius and excludes --stellar-only')
 if args.stellar_only and not args.free_orbit_radius:parser.error('--stellar-only requires --free-orbit-radius')
 companion_scale=0. if args.stellar_only else 1.
-if args.stellar_only:
+if args.stellar_only or args.nfw_shape is not None:
     companion_reference={(r['Name'],r['population']):r for r in json.loads((P/'orbit-transition-results.json').read_text())['rows']}
 if args.free_orbit_radius and not args.all_motion_bins:parser.error('--free-orbit-radius requires --all-motion-bins')
 if args.free_orbit_radius:
@@ -51,6 +53,10 @@ out['free_orbit_radius']=args.free_orbit_radius
 if args.free_orbit_radius:out['orbit_radius_bounds_Re']=[.1,10.]
 if args.all_motion_bins:out['scope']='All motion bins fitted with full covariance; lens angle calibrates stellar mass; necessary orbital condition enforced; no held-out prediction or physical stability proof'
 if args.stellar_only:out['scope']='Matched stellar-only lens/motion control with four stellar parameters; no separate gas or black hole in either version; all motion bins fitted; legacy comparison fields describe companion fits'
+if args.nfw_shape is not None:
+    out['scope']='NFW shape control normalized to reference added-component bending; four stellar parameters fitted to all motions; not a free NFW optimum or independent halo prediction'
+    out['added_density_profile']='NFW'
+    out['nfw_scale_over_capture_a']=args.nfw_shape
 cache={};mu,w=np.polynomial.legendre.leggauss(96)
 for old in source['rows']:
     name=old['Name'];item=data[name];dl=old['geometry']['angular_Dl_Mpc']*1000;dr=old['geometry']['Dls_over_Ds'];ac=old['capture_scale_kpc']
@@ -86,6 +92,27 @@ for old in source['rows']:
     target=old['lens_catalog_arcsec']/ARCSEC;impact=target*dl
     def bend(fn):return 4*G/C**2*quad(lambda t:fn(impact/np.cos(t))/(impact/np.cos(t)),0,np.pi/2,epsabs=1e-8,epsrel=1e-8,limit=200)[0]
     s0=1e11*bend(model.mass_fraction);sh=1e11*bend(core_fraction);dc=bend(comp_mass)
+    active_extra_force=model.forces[2]
+    if args.nfw_shape is not None:
+        rs=args.nfw_shape*ac
+        def nfw_fraction(xx):
+            xx=np.asarray(xx)
+            return np.where(xx<1e-4,xx**2/2-2*xx**3/3+3*xx**4/4-4*xx**5/5,np.log1p(xx)-xx/(1+xx))
+        mass_integral_error=0.
+        for xx in [1e-6,1e-3,1.,1e3]:
+            integ=quad(lambda v:v/(1+v)**2,0,xx,epsabs=1e-22,epsrel=1e-11)[0]
+            mass_integral_error=max(mass_integral_error,abs(float(nfw_fraction(xx))/integ-1))
+        assert mass_integral_error<1e-8
+        def unit_bend(t):
+            rr=impact/np.cos(t)
+            return float(nfw_fraction(rr/rs))/rr
+        first=quad(unit_bend,0,np.pi/2,epsabs=1e-12,epsrel=1e-10,limit=200)[0]
+        second=quad(unit_bend,0,np.pi/2,epsabs=1e-14,epsrel=1e-12,limit=400)[0]
+        bend_difference=abs(first/second-1);assert bend_difference<1e-8
+        nfw_amplitude=dc/(4*G/C**2*second)
+        active_extra_force=G*nfw_amplitude*nfw_fraction(r/rs)/r**2
+        nfw_match_error=abs((4*G/C**2*nfw_amplitude*first)/dc-1)
+        assert nfw_match_error<1e-8
     needed=target/dr-companion_scale*dc;assert needed>0
     y=np.array(item['vrms_kms']);cov=np.array(item['covariance_kms_squared']);fac=cho_factor(cov[:-1,:-1]);cw=cho_solve(fac,cov[:-1,-1]);csd=np.sqrt(cov[-1,-1]-cov[-1,:-1]@cw)
     full_fac=cho_factor(cov)
@@ -94,7 +121,7 @@ for old in source['rows']:
         weight=h*meanH/(1+h*meanH)
         scale=companion_scale if companion_override is None else companion_override
         mass=1e11*(target/dr-scale*dc)/((1-weight)*s0+weight*sh)
-        force=mass/1e11*((1-weight)*model.forces[0]+weight*model.forces[1])+scale*model.forces[2]
+        force=mass/1e11*((1-weight)*model.forces[0]+weight*model.forces[1])+scale*(model.forces[2] if companion_override is not None else active_extra_force)
         beta=b0+(bi-b0)*r*r/(r*r+ra*ra)
         factor=np.exp(2*b0*np.log(r/model.a)+(bi-b0)*np.log((r*r+ra*ra)/(model.a*model.a+ra*ra)))
         pressure=-cumulative_trapezoid((nu*force*factor)[::-1],r[::-1],initial=0)[::-1]/factor
@@ -151,7 +178,7 @@ for old in source['rows']:
             assert fixed_radius_drift<1e-5
             starts=[list(v)+[0.] for v in starts]+[fixed_q[:3]+[np.log(v)] for v in [.1,1/3,1,3,10]]
             fit_bounds.append((-np.log(10),np.log(10)))
-        if args.stellar_only:
+        if args.stellar_only or args.nfw_shape is not None:
             matched=companion_reference[key]
             matched_q=[matched['h'],matched['beta0'],matched['beta_infinity'],np.log(matched['orbit_transition_radius_Re'])]
             matched_control_score=evaluate(matched_q)[0]
@@ -194,9 +221,11 @@ for old in source['rows']:
     if args.free_orbit_radius:
         assert score<=fixed_radius_score+1e-4
         out['rows'][-1].update(orbit_transition_radius_Re=orbit_scale,orbit_transition_radius_kpc=Re*orbit_scale,orbit_radius_boundary=bool(min(abs(orbit_scale-.1),abs(orbit_scale-10))<1e-4),fixed_radius_all_motion_chi2=fixed_radius['all_motion_chi2'],fixed_radius_reproduction_difference=fixed_radius_drift,stellar_nuisance_parameters=4)
-    if args.stellar_only:
+    if args.stellar_only or args.nfw_shape is not None:
         assert score<=matched_control_score+1e-4
         out['rows'][-1].update(matched_companion_all_motion_chi2=matched['all_motion_chi2'],control_score_at_companion_stellar_parameters=matched_control_score,matched_reference_reproduction_difference=matched_reproduction,companion_density_multiplier=companion_scale)
+    if args.nfw_shape is not None:
+        out['rows'][-1].update(added_density_profile='NFW',nfw_rs_kpc=rs,nfw_scale_over_capture_a=args.nfw_shape,nfw_mass_amplitude_Msun=nfw_amplitude,nfw_rho_s_Msun_kpc3=nfw_amplitude/(4*np.pi*rs**3),nfw_bending_match_fractional_error=nfw_match_error,nfw_mass_integral_relative_error=mass_integral_error,nfw_bending_quadrature_relative_difference=bend_difference)
     print(name,key[1],opt.x,score,out['rows'][-1]['combined_outer_residual'],flush=True)
 for pop in ['Chabrier','Salpeter']:
     rr=[r for r in out['rows'] if r['population']==pop]
@@ -210,9 +239,11 @@ if args.slope_constrained:paths += [P/'gradient-orbits-results.json',P/'orbit_de
 if args.all_motion_bins:paths += [P/'constrained-gradient-orbits-results.json',P/'all-motion-orbits-protocol.md']
 if args.free_orbit_radius:paths += [P/'all-motion-orbits-results.json',P/'orbit-transition-protocol.md']
 if args.stellar_only:paths += [P/'orbit-transition-results.json',P/'stellar-only-lens-control-protocol.md']
+if args.nfw_shape is not None:paths += [P/'orbit-transition-results.json',P/'nfw-shape-control-protocol.md']
 out['input_sha256']={str(f.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
 assert len(out['rows'])==12
 output_name=('orbit-transition-results.json' if args.free_orbit_radius else ('all-motion-orbits-results.json' if args.all_motion_bins else ('constrained-gradient-orbits-results.json' if args.slope_constrained else 'gradient-orbits-results.json')))
 if args.stellar_only:output_name='stellar-only-lens-control-results.json'
+if args.nfw_shape is not None:output_name=f'nfw-shape-{args.nfw_shape:g}-results.json'
 (P/output_name).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(out['summary'],indent=2))

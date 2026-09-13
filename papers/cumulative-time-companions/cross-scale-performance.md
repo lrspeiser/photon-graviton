@@ -1,3 +1,11 @@
+## NFW shapes at matched added-component lens bending (after v1.2)
+
+Three prescribed NFW scales, rs/a_capture=0.3, 1 and 3, were normalized to the companion contribution to bending at the catalogue lens radius. The same four stellar freedoms, full motion covariance, lens-calibrated stellar mass and necessary orbital conditions were retained. NFW total chi-squared is 193.60/194.57, 177.02/177.07 and 163.23/162.62 respectively, versus companion 113.56/111.27. This isolates a radial-shape difference at fixed bending strength, not a free best-fitting NFW or independently calibrated dark-halo comparison.
+
+The best NFW result lies at the largest tested scale, so the scan does not establish its optimum. The companion profile helps the aggregate diagnostic but substantial residuals remain, especially J1402+6321. A claim of general superiority over dark matter or of photon origin is unwarranted. The ideal NFW control is untruncated and is not treated as a finite energy inventory. All data are exposed and fitted; stellar-mass lensing calibration is consumed.
+
+See [protocol](../../research_work/results/companion-extensions/nfw-shape-control-protocol.md) and [full comparison, formulas and numerical checks](../../research_work/results/companion-extensions/nfw-shape-control-report.md). The v1.2 PDF remains the earlier snapshot.
+
 ## Matched stellar-only lens/motion control (after v1.2)
 
 Removing companion gravity while retaining the same four stellar freedoms, lens-calibrated mass, full motion covariance and necessary orbital constraints gives total chi-squared 175.09. The companion result is 113.56/111.27, lower by 35.1%/36.4%. The improvement is concentrated in J0037-0942 and J1402+6321; the other four galaxies fit slightly better without the companion profile. Both population labels recover the same zero-companion control to numerical precision.
