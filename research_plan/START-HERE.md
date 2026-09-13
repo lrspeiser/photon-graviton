@@ -1,4 +1,8 @@
+> Paper updated to v1.2 (13 September 2026): theory-basis.md and output/pdf/theory-basis.pdf now incorporate capacity/recycling, joint lensing, stellar-gradient and radial-orbit results, and the necessary orbit-slope check. No joint physical solution is claimed. Earlier snapshot notices below are historical.
+
 # Start here â€” active research
+
+**Necessary orbital-consistency check.** All 18 tested population/system/orbit cases satisfy sampled gamma>=2 beta over 1e-6..100 Re, with minimum margins 0.324-0.325. This necessary condition applies to a separable augmented-density completion with beta0<=1/2; it neither constructs a positive distribution function nor establishes stability. Outer-motion discrepancies remain. [Report](../research_work/results/companion-extensions/orbit-slope-check-report.md).
 
 **Radial-orbit diagnostic.** A known varying-beta profile reduces exact-lens inner chi-squared to 448-454 under previous bounds. Expanding the outer bound for the three boundary cases lowers combined totals to 106-107, but all hit beta_infinity=0.95 and outer residual sums remain 114-116 versus free fits at 53-55. Orbital restrictions materially affect the tension; physical distribution functions and a joint fit remain unestablished. [Report](../research_work/results/companion-extensions/radial-orbits-report.md).
 

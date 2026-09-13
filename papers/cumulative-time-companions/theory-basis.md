@@ -2,11 +2,11 @@
 
 ## A phenomenological framework for redshift, additional gravity and reservoir emission in a nonexpanding universe
 
-Working paper v1.1 | 13 September 2026 | Evidence through revision 6e6b022
+Working paper v1.2 | 13 September 2026 | Evidence through revision 3f57bcc plus the accompanying orbit-slope check
 
 ### Abstract
 
-We assess a hypothetical nonexpanding-universe framework in which photons transfer energy into traveling companions and some energy enters gravitationally active reservoirs. The empirical exact-third retention law remains the reference: galaxy rotation predictions improve over ordinary matter alone but remain worse in aggregate than the tested MOND relation; lensing and absolute supply remain unresolved. Updated calculations enforce reciprocal loading, finite storage, outgoing-wave feedback and energy bookkeeping. Collective enhancement can accelerate transfer but does not establish permanent retention. A narrow-angle Gaussian interaction cannot preserve an unchanged long-path transfer rate. A known threshold-mixture identity reproduces the reference curve by inverse design; finite thresholds closely preserve existing galaxy predictions, while assumed formation and release kinetics expose substantial history dependence. These are conditional mechanisms and numerical consistency results, not a unified microscopic derivation or new independent observations. No branch yet explains redshift, event durations, gravity, supply and persistence together.
+We assess a hypothetical nonexpanding-universe framework in which photons transfer energy into traveling companions and some energy enters gravitationally active reservoirs. The empirical exact-third retention law remains the reference. New local-capacity and recycling calculations close selected stationary energy flows but do not improve galaxy predictions consistently. Transfer to six previously studied lens galaxies retains approximately 13% lens-angle RMS. At the motion-fitted stellar masses, three systems already overpredict bending from stars alone, so removing positive companion mass cannot fix those configurations. Imposing lens-required masses and allowing strongly radial outer stellar orbits substantially reduces inner motion residuals, but outer discrepancies and boundary dependence remain. All 18 checked orbital configurations satisfy a sampled necessary density-slope/anisotropy condition; this is neither a positive distribution-function construction nor a stability proof. Known equations, proposed mechanisms and fitted rules are distinguished throughout. No branch yet explains redshift, event durations, gravitational profiles, absolute supply and persistence together.
 
 ### 1. Motivation and scientific scope
 
@@ -189,6 +189,56 @@ Provenance: known linear rate-equation solution; applying a shared lambda and th
 
 After individually stopping the source at that target, losing the first 10% of formed storage takes 4.92%-41.79% of the formation time. This ratio is independent of lambda and uses no universe age. A slower residual tail persists, but does not make the whole reservoir permanent. These controlled histories are not observations of the named galaxies and do not model continued distant illumination. Equilibrium requires balancing capture and release; a successful amplitude fit does not establish the required energy throughput.
 
+#### 4.9 Local capacity, external illumination and recycling
+
+Write A=2 C0=9.45717848e7 solar masses/kpc cubed for the unadjusted reference source amplitude, and g(r)=[1+(r/a)^2]^-2. An audit corrected earlier capacity and recycling inventories that had used C0 where A was required. Equation (7) and the original lens calculations already contained the factor two. The correction doubles affected absolute mass inventories; the previously reported mass-ratio-based velocity predictions and scores are unchanged.
+
+The tested alternative profiles are
+
+$$
+\rho_{\rm ref}=A\eta(X)Jg,\quad \rho_{\rm local}=A\eta(XJ)g,\quad \rho_{\rm recycle}=A\eta(X)g.\tag{18}
+$$
+
+Provenance: the exact-third Hill response and attenuation operations are known forms; placing local incident intensity inside the response and specifying companion recycling are project hypotheses. The branches are alternatives, not terms to add together. Local filling uses the prescribed full-opacity field. A separate occupancy-dependent-opacity calculation uses kappa=k0 g[1-eta(XJ)] and solves its stationary incident field self-consistently with escaping release. It does not establish formation or support.
+
+For isotropic same-channel return with unit return fraction, a constant normalized intensity i=J=1 exactly balances capture and release in the stationary transport equation. This gives the recycling profile in (18). It is an energy-conserving stationary bath with no net bath sink, not a derivation of how an initially empty reservoir forms or persists after illumination stops. Its total spherical stored mass is pi squared times A eta(X) a cubed. Momentum transfer and gravitational support still require their own equations.
+
+With kappa=k0 g and isotropic illumination, the effective capture cross section follows from integrating 1-exp(-optical depth) over impact parameter. If available capacity is A Jg, the total capacity mass equals (A/k0) times that cross section. Thus increasing collection area also increases capacity: area alone does not establish a greater energy supply per unit required stored mass. Source luminosities and histories remain needed.
+
+A residual external floor can prolong storage without fixing a universe age. In the selected threshold kinetics, retaining at least 90% of the initial equilibrium occupancy indefinitely requires a remaining intensity between approximately 34% and 69% of the initial intensity across the catalogue. An additive common background large enough to meet that target does not improve the matched galaxy comparison. No observed external companion field has been measured by this inversion.
+
+#### 4.10 Joint lensing and stellar motions
+
+The lens comparison freezes capture amplitudes from galaxy training and then fits stellar mass and constant orbital anisotropy to inner stellar-motion bins. The same mass profile determines bending. Under the two stellar-population proxies, the refined adjusted reference gives lens-angle fractional RMS 13.068%/13.187%; full recycling gives 13.045%/13.161%. The tiny gain occurs in only three of six objects under each proxy and does not repair the rotation or outer-motion discrepancies. The adopted lens angles are catalogue SIE summaries rather than fits to raw lens images; the nonexpanding optical geometry is conditional.
+
+At these fixed motion-fitted stellar masses, stars alone overpredict the required bending in J0037-0942, J1204+0358 and J1402+6321. In the adjusted-reference Chabrier calculation, even removing every companion would require stellar masses lower by at least 12.98%, 12.58% and 15.00%, respectively. This rules out merely subtracting positive companion bending at those fixed stellar fits. It does not rule out a joint change of stellar mass, orbital structure or geometry.
+
+A subsequent diagnostic consumes the lens angle to determine stellar mass, then fits the motions at that mass. Exact lens agreement in this experiment is calibration, not a successful lens prediction. Two distinct nuisance-model extensions were tested separately. One uses a radially varying stellar mass-to-light ratio; the other uses a known smooth anisotropy family [14]:
+
+$$
+\Upsilon(r)=\Upsilon_{\rm out}\left[1+\frac{h}{1+(r/R_e)^2}\right].\tag{19}
+$$
+
+$$
+\beta(r)=\beta_0+(\beta_\infty-\beta_0)\frac{r^2}{r^2+R_e^2}.\tag{20}
+$$
+
+Provenance: (19) is a chosen phenomenological gradient, not a derived companion law or a claim of a unique new mathematical form. Equation (20) is a specialization of established orbital-anisotropy models [14]. Beta measures radial versus tangential velocity dispersion; it does not change the deposited density. Re is fixed to the projected half-light radius. The two extensions have not been combined, and neither is adopted into the reference.
+
+The gradient allows h from -0.8 to 9, keeps density positive, and only modestly reduces the large inner-motion cost of the lens-required masses. Increasing the permitted gradient to much larger values in boundary cases still leaves large residuals. For radial anisotropy, initially both endpoints lie between -2 and 0.45. The same three difficult galaxies hit the outer bound. An adaptive follow-up allows their outer endpoint to reach 0.95; all three hit that new bound. Remaining systems retain their earlier interior fits. The improved combined result is therefore a tested configuration, not a demonstrated global optimum.
+
+#### 4.11 Necessary orbital consistency, not established stability
+
+For a spherical separable augmented-density construction with central anisotropy beta0<=1/2, a nonnegative distribution function must satisfy [15]
+
+$$
+\gamma(r)=-\frac{d\ln\nu}{d\ln r}\ \geq\ 2\beta(r).\tag{21}
+$$
+
+Provenance: established stellar-dynamical inequality [15], not a companion prediction. Nu is stellar tracer density, not total gravitating density. Separability is a candidate completion of the fitted moments, not something those fits established; the criterion is not universal for arbitrary orbital distributions and is not sufficient for positivity.
+
+Using the same multi-component Sersic light profiles, all 12 original-bound configurations and six expanded-bound configurations show no violation on 4097 logarithmically spaced radii from 1e-6 to 100 Re. Minimum margins gamma-2 beta are 0.32422 and 0.32546, respectively. Doubling deprojection quadrature changes gamma by at most 2.14e-14; an independent numerical log-density derivative differs by less than 7.27e-5 away from grid edges. This finite-grid check includes extrapolated light profiles and is not an all-radii proof. It leaves the orbital candidates open but does not construct their distribution functions in the actual potential, demonstrate stability, or alter their remaining motion residuals.
+
 ### 5. Executed results and limits of the evidence
 
 The project record contains both successes and failures. Parameter selection and previously inspected observations must not be described as blind tests. Reported RMS values are descriptive, not likelihood-based evidence for the entire theory.
@@ -197,7 +247,7 @@ The project record contains both successes and failures. Parameter selection and
 |---|---|---|
 | SPARC rotation, 149 galaxies | Companion validation/test RMS 32.49/23.59 km/s; MOND 26.88/16.40 | Companions improve the ordinary-only control, but tested MOND is better |
 | Six Coma shear bins | Companion/NFW omitted-bin sums 6.86/6.82 | Comparable freely fitted shapes; no transferred supply normalization |
-| Six lens galaxies | About 14% lens-angle RMS | A material unresolved motion/lensing discrepancy |
+| Six lens galaxies, updated transfer | Adjusted reference 13.07%-13.19%; recycling 13.05%-13.16% lens-angle RMS | Small change, with a material unresolved motion/lensing discrepancy |
 | Earlier imposed Milky Way settling | Inner RMS 3.68/11.83 becomes 2.74/6.70 km/s | A shared conditional inner-fit improvement under two matter baselines |
 | Earlier pilot outer bins | RMS remains 8.36/9.78 km/s | No outer improvement from the selected central rearrangement |
 | Refraction sweep | No selected outer improvement | No reason to promote the tested refraction family |
@@ -210,6 +260,34 @@ The project record contains both successes and failures. Parameter selection and
 SPARC inputs [10] have 89 training, 29 validation and 31 test galaxies in the project split; all have been exposed during development. Companions have three shared fitted constants versus one for the tested MOND law. Restricted shared NFW mappings and per-galaxy NFW fits use different information budgets and cannot be pooled into one ranking. The Milky Way phase pilot uses a spherical gas monopole and two archived stellar baselines, with 20 inner bins for selection and 18 outer bins for comparison. It is not a comparison of two independent galaxies or individual bulge-star orbital predictions [11].
 
 Earlier wave/particle support, saturation, inward migration and coupled exchange tracks remain in the research record. None supplies a demonstrated joint solution for stability, absolute supply and lensing. Numerical mass/energy checks and refinement protect against implementation errors; they do not verify the physical assumptions. The accompanying cross-scale-performance.md and linked executable reports contain the detailed audit trail.
+
+#### 5.1 Matched galaxy comparisons
+
+Each new row below refits only the shared amplitude on the same 89 training galaxies using equal-galaxy velocity mean-square error. Other shared reference parameters remain fixed. This objective differs from the original calibration, so the adjusted reference is the relevant matched control. All partitions have already been inspected. Scores are equal-galaxy RMSE in km/s, not pooled point errors.
+
+| Profile or closure | Training | Validation | Test |
+|---|---:|---:|---:|
+| Adjusted reference | 26.87 | 30.82 | 21.41 |
+| Local filling, prescribed field | 28.75 | 28.63 | 25.19 |
+| Occupancy-dependent transport | 29.44 | 28.64 | 26.70 |
+| Full same-channel recycling | 30.77 | 28.82 | 30.88 |
+| Local finite formation, selected duration | 28.55 | 29.41 | 25.93 |
+
+Better validation scores accompanied by worse test scores do not establish a preferred replacement. The finite-formation row selects dimensionless duration 10 from the training scan; it is not a measured galaxy age. None of these rows derives the absolute companion supply.
+
+#### 5.2 Cost of imposing the lens angles
+
+Each entry below gives Chabrier/Salpeter population-proxy results summed across the same six systems. Inner chi-squared uses the measured covariance; outer scores sum squared covariance-conditioned standardized residuals. These are different diagnostics, not a single combined likelihood. Gradient and anisotropy extensions are separate experiments.
+
+| Stellar prescription | Inner chi-squared | Outer residual-square sum |
+|---|---:|---:|
+| Free mass, constant anisotropy | 45.81 / 45.27 | 55.01 / 53.42 |
+| Lens-required mass, constant anisotropy | 611.48 / 613.61 | 136.23 / 134.17 |
+| Lens-required mass, stellar gradient | 471.64 / 476.53 | 129.03 / 127.53 |
+| Lens-required mass, radial anisotropy | 447.76 / 453.84 | 103.09 / 101.47 |
+| Expanded outer-anisotropy follow-up | 106.88 / 105.62 | 115.71 / 114.32 |
+
+The expanded-orbit fit is a substantial inner improvement, but its outer score remains worse than the free-mass control and the previous radial-bound fit. For J1204+0358 and J1402+6321, Chabrier outer standardized residuals remain about 6.98 and 6.54. These conditional residuals are not model-independent exclusion significances. Passing (21) does not remove this discrepancy.
 
 ### 6. Evidence that would materially strengthen the theory
 
@@ -247,7 +325,7 @@ These tracks must eventually share one energy and momentum ledger. Until then th
 
 ### 9. Conclusion
 
-The reference remains an empirical radiation-conditioned extra-gravity model with substantial unresolved physics. New work narrows the permissible mechanisms: angular narrowing must be coupled to its rate cost; collective enhancement must include normalized states and reverse flow; storage must include finite capacity and energy release. A threshold mixture interprets the exact-third curve but does not derive its exponent, and its simplest kinetics does not make deposits permanent. Existing galaxy sensitivities are not fresh blind evidence. The next advance must connect an independently specified interaction and source history to a joint gravitational and radiative prediction. This paper does not establish a replacement for dark matter, MOND or expanding cosmology.
+The reference remains an empirical radiation-conditioned extra-gravity model with unresolved physical causes. New calculations clarify the distinction between stored capacity, incident supply and stationary recycling; none consistently improves galaxy predictions. The lensing problem is partly a stellar-mass/orbit problem: at three motion-fitted stellar masses, positive companion removal alone cannot fix the bending. Allowing radial orbital variation substantially reduces the cost of imposing the lens-required masses, but retains boundary dependence and poor outer motions. The sampled necessary orbital inequality does not reject these fits, while positivity and stability remain unproved. These results identify specific next calculations rather than establish a unified solution. Redshift, event timing, absolute supply and reservoir persistence still need one consistent mechanism. This paper does not establish a replacement for dark matter, MOND or expanding cosmology.
 
 ### References
 
@@ -277,6 +355,10 @@ The reference remains an empirical radiation-conditioned extra-gravity model wit
 
 [13] Tuncer, E. (2010). Geometrical Description in Binary Composites and Spectral Density Representation. [Materials 3, 585](https://www.mdpi.com/1996-1944/3/1/585). Used for known spectral-mixture mathematics.
 
+[14] Baes, M. and Van Hese, E. (2007). Dynamical models with a general anisotropy profile. [arXiv:0705.4109](https://arxiv.org/abs/0705.4109).
+
+[15] Van Hese, E., Baes, M. and Dejonghe, H. (2011). On the universality of the global slope--anisotropy inequality. [doi:10.1088/0004-637X/726/2/80](https://doi.org/10.1088/0004-637X/726/2/80); [arXiv:1010.4301](https://arxiv.org/abs/1010.4301).
+
 ### Reproducibility and research status
 
-This revision summarizes evidence through main revision 6e6b022, updating the earlier v1.0 snapshot at 35a7ea7. The v1.0 source and PDF remain recoverable in Git history. Detailed protocols, formulas, results and provenance are linked in cross-scale-performance.md and research_work/results/companion-extensions/. Key new executable records include coupled-torque, escape-feedback, site-mode-budget, collective-assembly, source-outlet, observer-transport, kernel-rate-closure, collective-normalization, collective-reservoir, threshold-mixture, threshold-galaxies, threshold-history and threshold-memory, each with its report and result JSON. The numerical tables use their recorded outputs; no new fitting is performed for this manuscript revision. The observed-data sample contains 149 galaxies and 3150 accepted rotation measurements in already-exposed partitions. Numerical verification validates stated calculations, not their assumptions. Computational assistance was used in analysis and drafting; independent scientific review remains necessary.
+This v1.2 revision summarizes committed evidence through 3f57bcc plus the accompanying orbit-slope-check report, script and result JSON. Earlier paper snapshots remain recoverable in Git history. The companion-extensions manifest records artifact hashes. Detailed results are indexed in cross-scale-performance.md and research_work/results/companion-extensions/. Newly incorporated executable records are threshold-floor, background-retention, capture-capacity, local-capacity, occupancy-transport, conservative-recycling, local-formation, capacity-lensing, lens-bending-budget, exact-lens-orbits, stellar-gradient, radial-orbits and orbit-slope-check. The normalization correction is recorded at 24534de. The manuscript synthesizes recorded calculations; no new fitting was performed for this revision. The rotation sample contains 149 galaxies and 3150 accepted measurements in already-exposed partitions; the lens diagnostics use six previously examined systems with two alternative population proxies, not twelve independent galaxies. Numerical verification checks calculations, not physical assumptions. Computational assistance was used in analysis and drafting; independent scientific review remains necessary.

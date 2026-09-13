@@ -1,6 +1,12 @@
+> Paper updated to v1.2 (13 September 2026): theory-basis.md and output/pdf/theory-basis.pdf now incorporate capacity/recycling, joint lensing, stellar-gradient and radial-orbit results, and the necessary orbit-slope check. No joint physical solution is claimed. Earlier snapshot notices below are historical.
+
 # Cross-scale performance of radiation-conditioned companion deposition
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
+
+## Necessary distribution-function consistency
+
+The [density-slope/anisotropy check](../../research_work/results/companion-extensions/orbit-slope-check-report.md) finds no sampled gamma-2 beta violation in the 12 original-bound and six expanded-bound orbit cases. Minimum margins exceed 0.324 on the stated radius grid. This established necessary condition concerns a separable augmented-density completion and is not sufficient or universal. It keeps the strongly radial fits open for distribution-function assessment without resolving their outer-motion residuals, stability or conditional geometry.
 
 ## Radially varying orbital anisotropy
 
