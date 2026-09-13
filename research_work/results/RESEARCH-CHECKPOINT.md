@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Lens bending budget.** At the current inner-star fits, stars alone exceed the catalogue-angle bending in J0037-0942, J1204+0358 and J1402+6321, under all four profiles and both population assumptions. Positive companion changes alone cannot resolve these three while stars and geometry stay fixed. This is a conditional stellar-model/geometry incompatibility, not a measured excess stellar mass. [Report](companion-extensions/lens-bending-budget-report.md).
+
 **Capacity profiles transferred to six lenses.** Galaxy-trained amplitudes give lens-angle RMS 13.07%-13.19% for the matched reference, 13.29%-13.46% for local filling and 13.05%-13.16% for refined recycling. Recycling helps only 3/6 systems per population and performs worse on galaxy test motions; outer stellar discrepancies remain. No joint solution is adopted. Conditional geometry and luminosity proxies are retained. [Report](companion-extensions/capacity-lensing-report.md).
 
 **Normalization correction.** Recent absolute capacity and conservative-recycling mass outputs used C0 instead of the source amplitude A=2 C0. Those masses are corrected upward by two; area/capacity halves. Rotation predictions and scores are verified unchanged for all 149 galaxies because mass ratios cancel the factor. Main-paper equation (7) and the original lens code were already correct. New-profile lens transfer remains pending. [Audit](companion-extensions/capacity-normalization-report.md).

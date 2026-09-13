@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Stellar and companion lens bending budget
+
+The [48-case bending decomposition](../../research_work/results/companion-extensions/lens-bending-budget-report.md) finds the same three stellar-only excesses under every tested profile and population proxy. At the adjusted-reference Chabrier fits, stars in those systems supply 114.39%-117.65% of the required bending at the catalogue angle. Even removing companions leaves a discrepancy, so companion-only changes cannot solve those cases with stars and geometry fixed. Stellar mass profiles, orbital assumptions, joint refitting and the conditional optical geometry must be assessed explicitly. The decomposition reproduces existing lens roots to 3.93e-10 relative and is an inverse diagnostic, not a new fit or an independent stellar-mass measurement.
+
 ## Capacity branches on stellar motions and lensing
 
 The [matched six-lens transfer](../../research_work/results/companion-extensions/capacity-lensing-report.md) freezes amplitudes from SPARC training and fits only lens inner-star mass/anisotropy. Refined lens-angle RMS is 13.07%-13.19% for the adjusted reference and 13.05%-13.16% for recycling; local filling gives 13.29%-13.46%. The small recycling improvement survives refinement but helps only 3/6 targets per population and accompanies worse galaxy test scores. Conditional outer stellar discrepancies persist. Both population proxies and inherited optical geometry are retained; this is not an independent geometry or raw-image lens test, and no branch is selected as a joint solution.
