@@ -1,0 +1,5 @@
+# Fixed tangential particle support on six fitted lens systems
+
+No fit or profile change. Test deposit anisotropy beta_d=-1/2 for all six attenuated lens-transfer profiles, retaining their inner-star-fitted ordinary masses. This deposit anisotropy is distinct from the fitted stellar tracer anisotropy. For the known constant-anisotropy ansatz f(E,L)=L F(E), direct velocity integration gives rho/r=2pi^2 integral_0^Psi F(E)(Psi-E)dE. Thus F(E)=1/(2pi^2) d^2(rho/r)/dPsi^2. Negative F rules out this specific bound-particle distribution.
+
+Reconstruct spherical ordinary mass from the same Sersic components and add the unchanged deposited mass. Evaluate the derivative sign with logarithmic radial differentiation on 2001 and 4001 points over r/a_capture=1e-5..1e5; report diagnostics on 1e-3..1e3. With h=rho/r, l=dln h/dln r and m=dln g/dln r, the sign is that of Q=l^2-l+dl/dln r-l*m. Record minimum Q, where it occurs and fine/coarse change. Consistent negative regions rule out this beta; no negative values on the sampled range do not prove global positivity, formation or collective stability. Do not optimize beta to hide a failure. All six goals remain open.
