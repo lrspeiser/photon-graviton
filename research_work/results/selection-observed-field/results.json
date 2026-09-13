@@ -1,0 +1,96 @@
+{
+  "scope": "Full observed main-sample metadata for one training-selected field; not selection probabilities",
+  "inputs": {
+    "research_work\\data-cache\\stellar-catalogs\\allStarLite-dr17-synspec_rev1.fits": "979592c332f1b82be319c026c42b0b0b9d3089715eb5d1049dfb85f19d9136cb",
+    "research_work\\data-cache\\selection-fields\\apogee2Object_300+00.fits": "8a733758d08e4713a8d76bbc0f33885744dcf62fcdb6e878af4db25920cec22b",
+    "research_work\\data-cache\\stellar-selection-membership\\training-membership.parquet": "7fda6f4ddd0e8a5cff497993b6aa3fc800a393bf02b15b6bd7a438a730c9975a"
+  },
+  "field": "300+00",
+  "telescope": "lco25m",
+  "all_observed_rows": 1343,
+  "extratarg_counts": {
+    "0": 1271,
+    "1": 57,
+    "5": 15
+  },
+  "main_rows": 1271,
+  "unique_main_ids": 1271,
+  "training_main_rows": 521,
+  "parent_matches": 1271,
+  "missing_parent_ids": [],
+  "metadata_comparison": {
+    "J": {
+      "both_finite": 1271,
+      "finite_status_disagreements": 0,
+      "differences_over_1e_5": 0,
+      "max_abs_difference": 0.0
+    },
+    "H": {
+      "both_finite": 1271,
+      "finite_status_disagreements": 0,
+      "differences_over_1e_5": 0,
+      "max_abs_difference": 0.0
+    },
+    "K": {
+      "both_finite": 1271,
+      "finite_status_disagreements": 0,
+      "differences_over_1e_5": 0,
+      "max_abs_difference": 0.0
+    },
+    "AK_TARG": {
+      "both_finite": 1271,
+      "finite_status_disagreements": 0,
+      "differences_over_1e_5": 0,
+      "max_abs_difference": 0.0
+    }
+  },
+  "extinction_method_agreement": 1271,
+  "observed_bounds": [
+    {
+      "MIN_H": 10.0,
+      "MAX_H": 12.199999809265137,
+      "MIN_JK": 0.5,
+      "MAX_JK": 0.800000011920929,
+      "observed_main_count": 376
+    },
+    {
+      "MIN_H": 10.0,
+      "MAX_H": 12.199999809265137,
+      "MIN_JK": 0.800000011920929,
+      "MAX_JK": 9999.990234375,
+      "observed_main_count": 362
+    },
+    {
+      "MIN_H": 12.199999809265137,
+      "MAX_H": 12.800000190734863,
+      "MIN_JK": 0.5,
+      "MAX_JK": 0.800000011920929,
+      "observed_main_count": 267
+    },
+    {
+      "MIN_H": 12.199999809265137,
+      "MAX_H": 12.800000190734863,
+      "MIN_JK": 0.800000011920929,
+      "MAX_JK": 9999.990234375,
+      "observed_main_count": 264
+    },
+    {
+      "MIN_H": 12.800000190734863,
+      "MAX_H": 13.300000190734863,
+      "MIN_JK": 0.5,
+      "MAX_JK": 0.800000011920929,
+      "observed_main_count": 1
+    },
+    {
+      "MIN_H": 12.800000190734863,
+      "MAX_H": 13.300000190734863,
+      "MIN_JK": 0.800000011920929,
+      "MAX_JK": 9999.990234375,
+      "observed_main_count": 1
+    }
+  ],
+  "h_outside_recorded_inclusive_bounds": [],
+  "documentation": "https://www.sdss4.org/dr17/irspec/targets/selection-biases/",
+  "heldout_kinematic_columns_read": false,
+  "completeness_estimated": false
+}
