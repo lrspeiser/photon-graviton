@@ -1,3 +1,5 @@
+Latest profile refit: [six training lenses with fixed published stellar components](research_work/results/slacs-component-refit/report.md). Extra-force radial chi-square 95.86 to 85.87; lensing RMS 10.60% to 11.60%. Four baseline orbit-boundary fits retained. No unified solution or reserved score claimed.
+
 Latest stellar-profile audit: [six published component models reconstructed](research_work/results/slacs-light-profile-audit/report.md). Half-light radii match release within 0.029%; one is 52% larger than our older pilot input. Seventh profile missing. No gravity refit yet; preserve this uncertainty in interpreting earlier results.
 
 Latest resolved fit: [seven training lenses, 47 radial bins](research_work/results/slacs-resolved-fit/report.md). Fixed extra force lowers summed radial chi-square 205.74 to 111.22, but residuals remain and lensing RMS does not improve. Training-only conditional result; all six objectives open.
