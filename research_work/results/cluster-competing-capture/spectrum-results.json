@@ -1,0 +1,116 @@
+{
+  "scope": "Synthetic identical 6000 K blackbody emitters and unchanged positive histories; no dust, stellar evolution or observed background fit. Finite-band spectral differences do not establish uniqueness of arbitrary histories.",
+  "history_sha256": "28ed6ffd90b4f813f2cfd6cbb96eefa6e21185c4390755299955214d132fe661",
+  "emission_temperature_K": 6000.0,
+  "transport": "Photon number conserved; each photon frequency and energy multiplied by exp(-alpha*c*age). This is a homogeneous radiation snapshot, not an event-arrival-time or luminosity-distance calculation.",
+  "cases": [
+    {
+      "old_burst_age_alpha_c_T": 10.0,
+      "bands": [
+        {
+          "name": "below_0.4_um",
+          "reference_energy": 0.0866323946641375,
+          "alternative_energy": 0.11829545944198985,
+          "difference_over_reference_total": 0.024877911247267428
+        },
+        {
+          "name": "0.4_to_0.7_um",
+          "reference_energy": 0.3204157245370036,
+          "alternative_energy": 0.4303481834626517,
+          "difference_over_reference_total": 0.08637477058945799
+        },
+        {
+          "name": "0.7_to_5_um",
+          "reference_energy": 0.8351806970602291,
+          "alternative_energy": 0.7138503908776397,
+          "difference_over_reference_total": -0.09533014602318537
+        },
+        {
+          "name": "5_to_1000_um",
+          "reference_energy": 0.030509248918678254,
+          "alternative_energy": 0.010188235977250383,
+          "difference_over_reference_total": -0.015966374700563828
+        },
+        {
+          "name": "above_1000_um",
+          "reference_energy": 6.08106699127263e-09,
+          "alternative_energy": 5.580150158328436e-05,
+          "difference_over_reference_total": 4.383888702331909e-05
+        }
+      ],
+      "spectral_total_variation_fraction": 0.11129652072374897
+    },
+    {
+      "old_burst_age_alpha_c_T": 30.0,
+      "bands": [
+        {
+          "name": "below_0.4_um",
+          "reference_energy": 0.0866323946641375,
+          "alternative_energy": 0.11830080029293154,
+          "difference_over_reference_total": 0.02488210759454601
+        },
+        {
+          "name": "0.4_to_0.7_um",
+          "reference_energy": 0.3204157245370036,
+          "alternative_energy": 0.43036758739553715,
+          "difference_over_reference_total": 0.08639001640737104
+        },
+        {
+          "name": "0.7_to_5_um",
+          "reference_energy": 0.8351806970602291,
+          "alternative_energy": 0.713881098191346,
+          "difference_over_reference_total": -0.09530601905283716
+        },
+        {
+          "name": "5_to_1000_um",
+          "reference_energy": 0.030509248918678254,
+          "alternative_energy": 0.010188583678999373,
+          "difference_over_reference_total": -0.01596610150865039
+        },
+        {
+          "name": "above_1000_um",
+          "reference_energy": 6.08106699127263e-09,
+          "alternative_energy": 1.7023008811117163e-09,
+          "difference_over_reference_total": -3.440429896013195e-09
+        }
+      ],
+      "spectral_total_variation_fraction": 0.11127212400191726
+    },
+    {
+      "old_burst_age_alpha_c_T": 100.0,
+      "bands": [
+        {
+          "name": "below_0.4_um",
+          "reference_energy": 0.0866323946641375,
+          "alternative_energy": 0.11830080029301286,
+          "difference_over_reference_total": 0.024882107594609907
+        },
+        {
+          "name": "0.4_to_0.7_um",
+          "reference_energy": 0.3204157245370036,
+          "alternative_energy": 0.4303675873958326,
+          "difference_over_reference_total": 0.08639001640760316
+        },
+        {
+          "name": "0.7_to_5_um",
+          "reference_energy": 0.8351806970602291,
+          "alternative_energy": 0.7138810981918137,
+          "difference_over_reference_total": -0.09530601905246974
+        },
+        {
+          "name": "5_to_1000_um",
+          "reference_energy": 0.030509248918678254,
+          "alternative_energy": 0.01018858367900467,
+          "difference_over_reference_total": -0.01596610150864623
+        },
+        {
+          "name": "above_1000_um",
+          "reference_energy": 6.08106699127263e-09,
+          "alternative_energy": 1.7014511660400236e-09,
+          "difference_over_reference_total": -3.4410975236192826e-09
+        }
+      ],
+      "spectral_total_variation_fraction": 0.11127212400221329
+    }
+  ]
+}
