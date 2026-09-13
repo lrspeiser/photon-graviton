@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Uniform-background retention and motions
+
+The [uniform-background comparison](../../research_work/results/companion-extensions/background-retention-report.md) adds a common input B to the exact-third response, including it before local-source fading. The minimum B preserving 90% across all existing inputs is 11.2562 in proxy units. Frozen validation/test velocity RMSE worsens to 36.88/30.67 km/s from 32.49/23.59. A separate training-only amplitude fit gives 31.54/22.52, still worse than an identically adjusted B=0 control at 30.82/21.41. This is an exposed-sample diagnostic with unchanged spatial geometry; neither an external supply measurement nor an adopted reference revision.
+
 ## Continuing-source maintenance checkpoint
 
 The [constant-floor calculation](../../research_work/results/companion-extensions/threshold-floor-report.md) starts at equilibrium and reduces the input to a continuing floor. Maintaining 90% of the original deposit indefinitely requires 34.09%-68.62% of the original input across the existing 149 intensity proxies; 99% requires 89.09%-96.43%. Capture and release remain equal and nonzero at the final equilibrium. These conditional requirements do not establish the availability of external companion supply or a physical rate. This supplement extends the v1.1 PDF evidence snapshot; it does not constitute a new fit.

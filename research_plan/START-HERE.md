@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Uniform-background comparison.** A common additive input strong enough to preserve 90% of every equilibrium deposit worsens frozen galaxy rotation scores. A training-only amplitude adjustment partly compensates, but validation/test RMSE remains 31.54/22.52 km/s versus 30.82/21.41 for the identically adjusted no-background control. This tests a uniform rate proxy with fixed geometry, not actual distant-source transport. [Report](../research_work/results/companion-extensions/background-retention-report.md).
+
 **Continuing-source checkpoint.** With initially equilibrated stores, maintaining 90% of the deposit indefinitely after fading requires a constant input floor of 34.09%-68.62% across the existing galaxy proxies. This is a requirement on external supply, not a measurement of it. Finite-threshold kinetics requires continuing energy turnover; actual sources and rates remain unspecified. [Report](../research_work/results/companion-extensions/threshold-floor-report.md).
 
 **Main paper updated to v1.1.** The manuscript and verified PDF now incorporate findings through `6e6b022`: coupled Milky Way endpoints, transfer and scattering constraints, reciprocal storage, and exact-third threshold formation and retention. These remain partial, conditional results. [Manuscript](../papers/cumulative-time-companions/theory-basis.md) | [PDF](../output/pdf/theory-basis.pdf).
