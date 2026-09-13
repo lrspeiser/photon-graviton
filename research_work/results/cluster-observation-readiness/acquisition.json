@@ -1,0 +1,61 @@
+{
+  "acquired_utc": "2026-09-13T03:57:07.071060+00:00",
+  "source": "Kang et al. 2025, ApJS 278,51; CDS J/ApJS/278/51",
+  "files": [
+    {
+      "name": "ReadMe",
+      "url": "https://cdsarc.cds.unistra.fr/ftp/J/ApJS/278/51/ReadMe",
+      "bytes": 10107,
+      "sha256": "47bcfe123bb16e8a90cf4f795e22dd698c41779df7fd617180f1d5702fc9766f",
+      "hash_applies_to": "decompressed local file"
+    },
+    {
+      "name": "table2.dat",
+      "url": "https://cdsarc.cds.unistra.fr/ftp/J/ApJS/278/51/table2.dat.gz",
+      "bytes": 3020640,
+      "sha256": "3853d0c30340723c1d942b09e89e3db023ee593f74ef8c69342aaff02fc01b4f",
+      "hash_applies_to": "decompressed local file"
+    },
+    {
+      "name": "refs.dat",
+      "url": "https://cdsarc.cds.unistra.fr/ftp/J/ApJS/278/51/refs.dat",
+      "bytes": 1930,
+      "sha256": "0f76bc42f413b9052dc2d04e70f8f68b1f85cc1319e62a0457e43560ec8ad0dd",
+      "hash_applies_to": "decompressed local file"
+    }
+  ],
+  "counts": {
+    "total": 37758,
+    "unique_SDSS_IDs": 37758,
+    "point": 10863,
+    "extended": 26895,
+    "published_member_flag": 1826,
+    "zero_redshift_error": 5,
+    "this_work_reference": 2194
+  },
+  "sky_extent_deg": {
+    "ra": [
+      192.506759,
+      197.403667
+    ],
+    "dec": [
+      25.819206,
+      30.139879
+    ]
+  },
+  "use": "Exploratory acquisition and schema validation only; not a held-out validation set.",
+  "missing": [
+    "individual background shape/shear measurements and calibration",
+    "lensing covariance and masks",
+    "distances independent of the proposed propagation law",
+    "bolometric luminosities and source histories",
+    "baryonic spatial model",
+    "membership and selection audit"
+  ],
+  "prohibitions": [
+    "Do not treat published membership as model-independent.",
+    "Do not convert redshift into distance by an expansion law.",
+    "Do not treat zero redshift errors as exact measurements.",
+    "Do not fit against published halo mass as if it were measured shear."
+  ]
+}
