@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Occupancy-dependent capture and transport
+
+The [coupled transport calculation](../../research_work/results/companion-extensions/occupancy-transport-report.md) solves local exact-third filling with capture opacity k0 g(1-f), assigning released energy to a non-recaptured escaping channel. Reduced opacity increases illumination and density. Across 149 inputs, training-adjusted validation/test RMSE is 28.64/26.70 km/s, versus 30.82/21.41 for the matched reference. Integrated incident absorption agrees with volume capture to 6.17e-5 relative, with equal assigned outgoing power. This is a stationary energy closure, not a derived release channel, momentum/support solution or improvement across partitions.
+
 ## Local filling with illumination-independent capacity
 
 The [local-capacity calculation](../../research_work/results/companion-extensions/local-capacity-report.md) substitutes Cg eta(XJ) for CgJ eta(X), preserving the transparent limit but increasing weak-field deposits. Frozen validation/test velocity RMSE is 67.14/66.01 km/s. A training-only amplitude fit gives 28.63/25.19 versus 30.82/21.41 for the matched adjusted reference: a mixed result, not an adopted improvement. All 3150 observed radii are retained and integration convergence is checked. Incident transport is held fixed; a self-consistent occupancy-dependent opacity and global energy ledger are not supplied by this diagnostic.

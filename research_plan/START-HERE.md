@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Occupancy-dependent transport.** Solving empty-site capture and local filling together across 149 inputs increases deposits further. Training-adjusted validation/test RMSE is 28.64/26.70 km/s versus matched reference 30.82/21.41. Stationary absorbed power is balanced by an explicitly assumed non-recaptured release channel; its microscopic cause and local support remain open. [Report](../research_work/results/companion-extensions/occupancy-transport-report.md).
+
 **Local-capacity comparison.** Replacing CgJ eta(X) by Cg eta(XJ) with fixed transport greatly increases deposits in weakly illuminated regions. Training-only amplitude adjustment yields mixed validation/test RMSE 28.63/25.19 km/s versus matched control 30.82/21.41. No replacement is adopted; occupancy-dependent transport and the physical capacity remain unresolved. [Report](../research_work/results/companion-extensions/local-capacity-report.md).
 
 **Capture/capacity audit.** Interpreting the reference eta=1 profile as capacity gives M_cap=(C/k0) sigma. Incoming power and capacity therefore scale with the same absorption area: size alone cannot change the normalized background rate. An alternative unattenuated volume capacity yields a factor 0.495-0.981 across existing scales, but changes the storage/profile mapping and needs its own local solution. [Report](../research_work/results/companion-extensions/capture-capacity-report.md).
