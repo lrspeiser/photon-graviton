@@ -1,0 +1,1592 @@
+{
+  "scope": "Completed exposed-simulation development comparison; not fresh-data validation",
+  "result_sha256": "d6cc364142ea280a677dc162c705a27a46f4c5498693c4c600427be696b60efc",
+  "cells": [
+    {
+      "family": "split_gaussian",
+      "snr": 5,
+      "truth_b": 0,
+      "n": 20,
+      "mean_bias": 0.0493190190728122,
+      "bias_monte_carlo_se": 0.03509428317073563,
+      "accepted_95": 20,
+      "binomial_95": [
+        0.8315665290169146,
+        1.0
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 13,
+      "original_invalid": 7,
+      "near_zero_scatter": 5
+    },
+    {
+      "family": "split_gaussian",
+      "snr": 5,
+      "truth_b": 1,
+      "n": 20,
+      "mean_bias": 0.016297283722294453,
+      "bias_monte_carlo_se": 0.03528455776662006,
+      "accepted_95": 20,
+      "binomial_95": [
+        0.8315665290169146,
+        1.0
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 16,
+      "original_invalid": 4,
+      "near_zero_scatter": 4
+    },
+    {
+      "family": "split_gaussian",
+      "snr": 20,
+      "truth_b": 0,
+      "n": 20,
+      "mean_bias": 0.007937489724827038,
+      "bias_monte_carlo_se": 0.02152731644878285,
+      "accepted_95": 20,
+      "binomial_95": [
+        0.8315665290169146,
+        1.0
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 20,
+      "original_invalid": 0,
+      "near_zero_scatter": 0
+    },
+    {
+      "family": "split_gaussian",
+      "snr": 20,
+      "truth_b": 1,
+      "n": 20,
+      "mean_bias": 0.005646475647968124,
+      "bias_monte_carlo_se": 0.021289378925927065,
+      "accepted_95": 20,
+      "binomial_95": [
+        0.8315665290169146,
+        1.0
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 20,
+      "original_invalid": 0,
+      "near_zero_scatter": 0
+    },
+    {
+      "family": "split_gaussian_shoulder",
+      "snr": 5,
+      "truth_b": 0,
+      "n": 20,
+      "mean_bias": 0.012401435790285803,
+      "bias_monte_carlo_se": 0.03166714309797673,
+      "accepted_95": 20,
+      "binomial_95": [
+        0.8315665290169146,
+        1.0
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 16,
+      "original_invalid": 4,
+      "near_zero_scatter": 2
+    },
+    {
+      "family": "split_gaussian_shoulder",
+      "snr": 5,
+      "truth_b": 1,
+      "n": 20,
+      "mean_bias": 0.006535117663153139,
+      "bias_monte_carlo_se": 0.03382762630727154,
+      "accepted_95": 19,
+      "binomial_95": [
+        0.7512672372279723,
+        0.9987349105020502
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 18,
+      "original_invalid": 1,
+      "near_zero_scatter": 0
+    },
+    {
+      "family": "split_gaussian_shoulder",
+      "snr": 20,
+      "truth_b": 0,
+      "n": 20,
+      "mean_bias": 0.0018728580025120297,
+      "bias_monte_carlo_se": 0.021648110021865292,
+      "accepted_95": 20,
+      "binomial_95": [
+        0.8315665290169146,
+        1.0
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 20,
+      "original_invalid": 0,
+      "near_zero_scatter": 0
+    },
+    {
+      "family": "split_gaussian_shoulder",
+      "snr": 20,
+      "truth_b": 1,
+      "n": 20,
+      "mean_bias": 0.010812255401442612,
+      "bias_monte_carlo_se": 0.02249913019835765,
+      "accepted_95": 19,
+      "binomial_95": [
+        0.7512672372279723,
+        0.9987349105020502
+      ],
+      "invalid": 0,
+      "screen": true,
+      "original_accepted_95": 19,
+      "original_invalid": 0,
+      "near_zero_scatter": 0
+    }
+  ],
+  "paired_case_comparison": [
+    {
+      "label": "split_gaussian-snr5-b0-seed901",
+      "old_b": 0.06958501316593042,
+      "new_b": 0.06958526507417553,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed901",
+      "old_b": 0.9695506708643834,
+      "new_b": 0.9695508448241087,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed901",
+      "old_b": 0.08278679865624489,
+      "new_b": 0.08278753085413264,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed901",
+      "old_b": 1.0476608398940104,
+      "new_b": 1.047661465946649,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed901",
+      "old_b": 0.042797010975472755,
+      "new_b": 0.042796994841944616,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed901",
+      "old_b": 1.0009294614895423,
+      "new_b": 1.0009295915481946,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed901",
+      "old_b": 0.07449056823145758,
+      "new_b": 0.07449120608694039,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed901",
+      "old_b": 1.0667925585314926,
+      "new_b": 1.0667930310714044,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed902",
+      "old_b": 0.07426356853845109,
+      "new_b": 0.07426355941863508,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed902",
+      "old_b": 1.0300322547430871,
+      "new_b": 1.0309004496455654,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed902",
+      "old_b": 0.03076291739006069,
+      "new_b": 0.03076302050586341,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed902",
+      "old_b": 1.0350500193307237,
+      "new_b": 1.035049853350912,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed902",
+      "old_b": -0.001896645754538812,
+      "new_b": -0.0018967055148489905,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed902",
+      "old_b": 0.9843660531389992,
+      "new_b": 0.9843660951960844,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed902",
+      "old_b": 0.0028081155459561123,
+      "new_b": 0.0028079555698637677,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed902",
+      "old_b": 1.0260666090236594,
+      "new_b": 1.0260665155249504,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed903",
+      "old_b": -0.04308925523357725,
+      "new_b": -0.04312794323547313,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed903",
+      "old_b": 0.9410850804650606,
+      "new_b": 0.9410851322688308,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed903",
+      "old_b": -0.0850974452238173,
+      "new_b": -0.08509723728685646,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed903",
+      "old_b": 0.9450799715448074,
+      "new_b": 0.9450799946229106,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed903",
+      "old_b": -0.0801914044213578,
+      "new_b": -0.08019140368115364,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed903",
+      "old_b": 0.9253711332102057,
+      "new_b": 0.9253712271805974,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed903",
+      "old_b": -0.10000767853164992,
+      "new_b": -0.10000788488908077,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed903",
+      "old_b": 0.941226581341426,
+      "new_b": 0.9412263670649226,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed904",
+      "old_b": 0.005377606865683133,
+      "new_b": 0.005404606085043612,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed904",
+      "old_b": 0.9218932151019589,
+      "new_b": 0.9218934498124938,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed904",
+      "old_b": -0.08205957527553623,
+      "new_b": -0.08205987154673039,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed904",
+      "old_b": 0.9131568029956153,
+      "new_b": 0.913156572834311,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed904",
+      "old_b": -0.012733867192762868,
+      "new_b": -0.011030909297591493,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed904",
+      "old_b": 0.9055054118634984,
+      "new_b": 0.9051477072473784,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed904",
+      "old_b": -0.07864389366665,
+      "new_b": -0.07864402834994917,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed904",
+      "old_b": 0.9178627149134171,
+      "new_b": 0.9178626216710976,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed905",
+      "old_b": 0.009280488700209907,
+      "new_b": 0.01864999426378766,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed905",
+      "old_b": 0.8957006824049917,
+      "new_b": 0.9039141802805221,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed905",
+      "old_b": -0.07261405151852976,
+      "new_b": -0.07261412035872586,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed905",
+      "old_b": 0.8911122986675808,
+      "new_b": 0.8911119356697987,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed905",
+      "old_b": -0.05506356800334883,
+      "new_b": -0.05380894526936282,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed905",
+      "old_b": 0.838549413671336,
+      "new_b": 0.8385494480544714,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed905",
+      "old_b": -0.09181784414055981,
+      "new_b": -0.09181815096560093,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed905",
+      "old_b": 0.8663577030597317,
+      "new_b": 0.8663572773525251,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed906",
+      "old_b": -0.004190360720716374,
+      "new_b": -0.004190214876533964,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed906",
+      "old_b": 1.081120478851278,
+      "new_b": 1.0811206146533934,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed906",
+      "old_b": 0.06750299655292626,
+      "new_b": 0.0675028587646276,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed906",
+      "old_b": 1.0731136631106806,
+      "new_b": 1.0731137196188012,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed906",
+      "old_b": 0.0379832332659609,
+      "new_b": 0.037983290638505814,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed906",
+      "old_b": 1.1146559624293426,
+      "new_b": 1.114656211043088,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed906",
+      "old_b": 0.06037134975855007,
+      "new_b": 0.06037114426194617,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed906",
+      "old_b": 1.0797071747263107,
+      "new_b": 1.0797070319119457,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed907",
+      "old_b": -0.10487290807270426,
+      "new_b": -0.10487285355839741,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed907",
+      "old_b": 0.7935838189799019,
+      "new_b": 0.7935837555332655,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed907",
+      "old_b": -0.10848544713948177,
+      "new_b": -0.1084849658855535,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed907",
+      "old_b": 0.8728641617366376,
+      "new_b": 0.8728644977731457,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed907",
+      "old_b": -0.13369668983138622,
+      "new_b": -0.1336964360096947,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed907",
+      "old_b": 0.8007560789364477,
+      "new_b": 0.8007561924415688,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed907",
+      "old_b": -0.10986605768556841,
+      "new_b": -0.10986554520626526,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed907",
+      "old_b": 0.8694959436106493,
+      "new_b": 0.8694963600075463,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed908",
+      "old_b": 0.19427006583299136,
+      "new_b": 0.19427004267745432,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed908",
+      "old_b": 1.0249779457015358,
+      "new_b": 1.0249781315880058,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed908",
+      "old_b": 0.04414940135321233,
+      "new_b": 0.04414927269941321,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed908",
+      "old_b": 1.0312490970503354,
+      "new_b": 1.0312490904599911,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed908",
+      "old_b": 0.08523026738208013,
+      "new_b": 0.0852303238356528,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed908",
+      "old_b": 0.9659053156979308,
+      "new_b": 0.9659053869451328,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed908",
+      "old_b": 0.04026575633121131,
+      "new_b": 0.04026561922415437,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed908",
+      "old_b": 1.0292685000671675,
+      "new_b": 1.0292685818750904,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed909",
+      "old_b": -0.06699156591906959,
+      "new_b": -0.06266239782800911,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed909",
+      "old_b": 0.9441019653493042,
+      "new_b": 0.9473157084251658,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed909",
+      "old_b": 0.04680616789336884,
+      "new_b": 0.04680583008822827,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed909",
+      "old_b": 1.0571990592804408,
+      "new_b": 1.0571986235832571,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed909",
+      "old_b": -0.0917850956241679,
+      "new_b": -0.08748355906944467,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed909",
+      "old_b": 0.9322239437397882,
+      "new_b": 0.9322236708988774,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed909",
+      "old_b": 0.03251275975488029,
+      "new_b": 0.03251242840980441,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed909",
+      "old_b": 1.0504244761041235,
+      "new_b": 1.0504239608333987,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed910",
+      "old_b": 0.001717321799638561,
+      "new_b": 0.001717461458435447,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed910",
+      "old_b": 0.8714943726777549,
+      "new_b": 0.8714941623365124,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed910",
+      "old_b": -0.08848326714445022,
+      "new_b": -0.08848294827959823,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed910",
+      "old_b": 0.875628753616136,
+      "new_b": 0.8756287488905806,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed910",
+      "old_b": -0.10243842261572747,
+      "new_b": -0.10243832675579748,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed910",
+      "old_b": 0.8965582421910319,
+      "new_b": 0.89655835479583,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed910",
+      "old_b": -0.10045023787358706,
+      "new_b": -0.10045038317993646,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed910",
+      "old_b": 0.8835043908890856,
+      "new_b": 0.8835037902525535,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed911",
+      "old_b": 0.30411293786791954,
+      "new_b": 0.3041130351127321,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed911",
+      "old_b": 1.3423194612704759,
+      "new_b": 1.3423195748832437,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed911",
+      "old_b": 0.13099978369849904,
+      "new_b": 0.13099977616633737,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed911",
+      "old_b": 1.1469440130054305,
+      "new_b": 1.1469438372839196,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed911",
+      "old_b": 0.2920303318065914,
+      "new_b": 0.2920303481585916,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed911",
+      "old_b": 1.2905430008981078,
+      "new_b": 1.2905428742587173,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed911",
+      "old_b": 0.14615778445280717,
+      "new_b": 0.1461576861109515,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed911",
+      "old_b": 1.1598403468643712,
+      "new_b": 1.1598401623553196,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed912",
+      "old_b": 0.06556218432949278,
+      "new_b": 0.06556214436084205,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed912",
+      "old_b": 1.044051500627049,
+      "new_b": 1.0388858654494673,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed912",
+      "old_b": 0.0002365868416658741,
+      "new_b": 0.00023638714869060468,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed912",
+      "old_b": 0.9842185987866706,
+      "new_b": 0.9842185227216835,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed912",
+      "old_b": -0.004555150319966066,
+      "new_b": -0.004555161243698259,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed912",
+      "old_b": 1.0218238354282467,
+      "new_b": 1.0218236180280855,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed912",
+      "old_b": -0.047832770564433524,
+      "new_b": -0.04783330001565029,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed912",
+      "old_b": 0.9571430263762281,
+      "new_b": 0.957142658106917,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed913",
+      "old_b": 0.19365127580835653,
+      "new_b": 0.1936514825970315,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed913",
+      "old_b": 1.1258884860741358,
+      "new_b": 1.125888523498776,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed913",
+      "old_b": 0.13264727093214254,
+      "new_b": 0.13264722177293423,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed913",
+      "old_b": 1.080077763055277,
+      "new_b": 1.0800777212223147,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed913",
+      "old_b": 0.12320614342464767,
+      "new_b": 0.12320625625256484,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed913",
+      "old_b": 1.074824593501151,
+      "new_b": 1.074824621391671,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed913",
+      "old_b": 0.1095834617631963,
+      "new_b": 0.1095834073144635,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed913",
+      "old_b": 1.1029302938473269,
+      "new_b": 1.1029302935225103,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed914",
+      "old_b": 0.13346082485043728,
+      "new_b": 0.13346103424480119,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed914",
+      "old_b": 0.9999570685389765,
+      "new_b": 0.9999571381057631,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed914",
+      "old_b": 0.055631148924244,
+      "new_b": 0.05563118696840026,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed914",
+      "old_b": 0.9958510804229761,
+      "new_b": 0.9958510199671895,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed914",
+      "old_b": 0.017047740448865818,
+      "new_b": 0.017047798225749672,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed914",
+      "old_b": 0.9758868077036382,
+      "new_b": 0.9758865863170502,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed914",
+      "old_b": 0.024587605096849444,
+      "new_b": 0.024587539373009542,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed914",
+      "old_b": 0.9886445613267799,
+      "new_b": 0.9886443410142726,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed915",
+      "old_b": 0.2409242177126602,
+      "new_b": 0.24092430698804482,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed915",
+      "old_b": 1.303765212101865,
+      "new_b": 1.3037652691349289,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed915",
+      "old_b": 0.0803132852610957,
+      "new_b": 0.08031357382549989,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed915",
+      "old_b": 1.1203750594893367,
+      "new_b": 1.1203753043604483,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed915",
+      "old_b": 0.20525072090792168,
+      "new_b": 0.20525084105809735,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed915",
+      "old_b": 1.3235834946401455,
+      "new_b": 1.3235835843218182,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": false
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed915",
+      "old_b": 0.0763418743507736,
+      "new_b": 0.076342028366949,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed915",
+      "old_b": 1.1345959223174187,
+      "new_b": 1.1345962481873673,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed916",
+      "old_b": -0.12222042817232946,
+      "new_b": -0.1305837876959098,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed916",
+      "old_b": 0.8895576193065733,
+      "new_b": 0.8895576958206212,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed916",
+      "old_b": -0.07876246722798981,
+      "new_b": -0.07876229967761256,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed916",
+      "old_b": 0.9402437025636662,
+      "new_b": 0.9402435472532048,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed916",
+      "old_b": -0.11786485944112433,
+      "new_b": -0.11786496404130219,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed916",
+      "old_b": 0.8972038213749157,
+      "new_b": 0.8972039028232839,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed916",
+      "old_b": -0.060427729753379344,
+      "new_b": -0.06042783946406575,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed916",
+      "old_b": 0.9683284803120685,
+      "new_b": 0.9683281370617901,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed917",
+      "old_b": 0.31810615998420766,
+      "new_b": 0.31810617462414,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed917",
+      "old_b": 1.2001966039586498,
+      "new_b": 1.2001966126756185,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed917",
+      "old_b": 0.13706060637210637,
+      "new_b": 0.13706054427116227,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed917",
+      "old_b": 1.1239695681437214,
+      "new_b": 1.1239694310208261,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed917",
+      "old_b": 0.23979211948833945,
+      "new_b": 0.23979205156056005,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed917",
+      "old_b": 1.1385677614570826,
+      "new_b": 1.138567747955503,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed917",
+      "old_b": 0.11208349301068625,
+      "new_b": 0.11208331821580246,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed917",
+      "old_b": 1.1139468734865694,
+      "new_b": 1.1139468719693109,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed918",
+      "old_b": -0.1612613336348201,
+      "new_b": -0.16126132676967686,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed918",
+      "old_b": 1.066673105420539,
+      "new_b": 1.0666729502170544,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed918",
+      "old_b": -0.10347002425397149,
+      "new_b": -0.1034700804046218,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed918",
+      "old_b": 0.9461271839396779,
+      "new_b": 0.9461270423027316,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed918",
+      "old_b": -0.15574059883485064,
+      "new_b": -0.1557404935160094,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed918",
+      "old_b": 1.0776172677805933,
+      "new_b": 1.0776172190958768,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed918",
+      "old_b": -0.1207884240502268,
+      "new_b": -0.12078845766379236,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed918",
+      "old_b": 0.9537478076536976,
+      "new_b": 0.953747601506161,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed919",
+      "old_b": 0.14414633346444178,
+      "new_b": 0.14760106181276772,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed919",
+      "old_b": 1.1566663176304788,
+      "new_b": 1.156666033787929,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed919",
+      "old_b": 0.12852319482347144,
+      "new_b": 0.12852329557865982,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed919",
+      "old_b": 1.1589476358334223,
+      "new_b": 1.158947369152245,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed919",
+      "old_b": 0.18705220309415102,
+      "new_b": 0.18705236210610293,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed919",
+      "old_b": 1.1991625323404929,
+      "new_b": 1.19916230690288,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed919",
+      "old_b": 0.1828445911765489,
+      "new_b": 0.18284458707519888,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed919",
+      "old_b": 1.2000372908143402,
+      "new_b": 1.2000369216822477,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": false
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed920",
+      "old_b": -0.27314044363870577,
+      "new_b": -0.2742312632976467,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed920",
+      "old_b": 0.7161994744548247,
+      "new_b": 0.7161995815046232,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed920",
+      "old_b": -0.15969905785160224,
+      "new_b": -0.15969918070771,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed920",
+      "old_b": 0.8740612280459349,
+      "new_b": 0.8740612149244423,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed920",
+      "old_b": -0.23330136365658022,
+      "new_b": -0.23365464647314999,
+      "old_valid": false,
+      "new_valid": true,
+      "old_accepted": false,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed920",
+      "old_b": 0.7670258225445837,
+      "new_b": 0.7670260068169537,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed920",
+      "old_b": -0.11475415274561149,
+      "new_b": -0.11475417022450239,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed920",
+      "old_b": 0.9063263871171255,
+      "new_b": 0.906326335057521,
+      "old_valid": true,
+      "new_valid": true,
+      "old_accepted": true,
+      "new_accepted": true
+    }
+  ]
+}
