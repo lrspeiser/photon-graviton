@@ -1,0 +1,5 @@
+# Fitted capture source: total mass and required energy exposure
+
+No new fit. Use the exact attenuated SPARC parameters and all 149 existing galaxy disk scales. Integrate the capture cross section through the same infinite-tail opacity profile, derive the exact total deposited mass, and express the common required incident energy exposure. Compare the independent chord integral with the closed expression. Record each galaxy's predicted total mass, mass inside its last measured rotation radius and effective capture area. These are model-derived requirements, not observed halo masses or a measured stellar supply.
+
+No fixed universe age, size, external energy density, stellar history or photon-to-gravity efficiency beyond retained E/c^2 is imposed. Any example translating exposure into time must be explicitly a scaling example, not an assumed cosmic age or supply exclusion. Do not imply that infinite geometry creates an available infinite source or that different receivers can reuse the same captured energy. All six goals remain open.
