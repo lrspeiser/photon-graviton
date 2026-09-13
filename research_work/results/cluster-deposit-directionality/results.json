@@ -1,0 +1,87 @@
+{
+  "scope": "Spatial moments of deposition power in stipulated static 1-Mpc receiver; orthographic sky projection, not a lensing peak or accumulated reservoir.",
+  "runs": [
+    {
+      "model": "themis",
+      "catalog_sha256": "89f2db19844a3e08960efcf6725a478ebfd364bef10c1821dfbaf9bdad25a1ab",
+      "deposited_power_Lsun": 217929725.6824923,
+      "centroid_xyz_Mpc": [
+        0.05303332132369003,
+        0.042913745093936265,
+        -0.029309321329711133
+      ],
+      "centroid_offset_Mpc": 0.07425064986528639,
+      "covariance_Mpc2": [
+        [
+          0.24684978696959442,
+          0.0034869387201858135,
+          -0.004610447159883212
+        ],
+        [
+          0.0034869387201858135,
+          0.18798654290001857,
+          0.008421848471722166
+        ],
+        [
+          -0.004610447159883212,
+          0.008421848471722166,
+          0.22733098800110088
+        ]
+      ],
+      "projected_centroid_east_north_Mpc": [
+        -0.035415165658837074,
+        -0.01611442807375405
+      ],
+      "projected_offset_Mpc": 0.03890898033599783,
+      "projected_rms_minor_major_Mpc": [
+        0.4319775803743863,
+        0.47780278587340985
+      ],
+      "projected_second_moment_axis_ratio": 0.9040917992655559,
+      "centroid_refinement_Mpc": 1.6831450480851576e-12,
+      "covariance_refinement_max_Mpc2": 1.24938948076192e-12,
+      "total_power_relative_error": 4.551914400963142e-14
+    },
+    {
+      "model": "dl14",
+      "catalog_sha256": "c6c4aae4834877eec95acb8b0a5b761fcb6bba28de0f73c6fbfa091c0eebf8c2",
+      "deposited_power_Lsun": 219234851.61635548,
+      "centroid_xyz_Mpc": [
+        0.052709272737781164,
+        0.04289379449672018,
+        -0.028531679922065966
+      ],
+      "centroid_offset_Mpc": 0.07370347208950122,
+      "covariance_Mpc2": [
+        [
+          0.2470604348682344,
+          0.003467336254456736,
+          -0.00475606730227468
+        ],
+        [
+          0.003467336254456736,
+          0.1881371429551836,
+          0.008409216069531916
+        ],
+        [
+          -0.00475606730227468,
+          0.008409216069531916,
+          0.2272873157978018
+        ]
+      ],
+      "projected_centroid_east_north_Mpc": [
+        -0.03543884576392871,
+        -0.015424383632479754
+      ],
+      "projected_offset_Mpc": 0.03865001163675681,
+      "projected_rms_minor_major_Mpc": [
+        0.4321480909902794,
+        0.4777149764065176
+      ],
+      "projected_second_moment_axis_ratio": 0.9046149112615165,
+      "centroid_refinement_Mpc": 1.6753953725588233e-12,
+      "covariance_refinement_max_Mpc2": 1.2452816555708068e-12,
+      "total_power_relative_error": 4.618527782440651e-14
+    }
+  ]
+}
