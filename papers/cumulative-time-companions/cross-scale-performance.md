@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Positive receiving spectra and the color bound
+
+For the previously derived forward point interaction, any positive incident-energy-independent gap spectrum obeys d ln(alpha)/d ln(E)>=3. A continuum of soft states alone therefore cannot produce common fractional redshift. Eighty-four numerical examples confirm the analytic bound; spatial response, inverse populations or a coherent evolving field must change the assumptions. This is a conditional interaction result, not an exclusion of the overall hypothesis. The [positive-spectrum proof](../../research_work/results/companion-extensions/continuum-color-report.md) prevents a misleading repair by tuning mode density alone. It does not apply to signed net transfer, energy-dependent overlap or coherent clock evolution.
+
 ### Redshift transfer versus bound effective mass
 
 The redshift-to-bound-state bridge now separates traveling quantum energy, creation gap and fitted phase mass. Under the illustrative Poisson linewidth case, an optical transfer supplies at most 2.62e-8 eV versus a hypothetical 17.8 eV creation gap. Accumulated storage or soft collective modes remain possible; one redshift step cannot be equated to creation of one fitted-mass particle. The width allowance is a design case, not a measured exclusion. The [scale audit](../../research_work/results/companion-extensions/quantum-bridge-report.md) evaluates seven photon bands, three illustrative widths and single/pair mass-gap assumptions. Pooling counts are optimistic energy requirements, not production rates. A massless traveling field and an effectively massive stored excitation require a derived transition; the phase selector does not identify ordinary gravitons.
