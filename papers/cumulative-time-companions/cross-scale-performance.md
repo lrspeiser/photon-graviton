@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Coupled circular endpoints
+
+Coupled circular endpoints now converge for both matter baselines and all three receiver bands. Receivers expand 5.4–8.2%, leaving 3.65–4.80e50 J to release. All-bin speed RMS is 6.27–6.28 km/s for I and 8.10–9.26 for II, versus no-settling 6.34/10.91. This preserves a conditional internal-exchange route; it does not derive the torque, contraction, formation rate or collective stability. The [coupled calculation](../../research_work/results/companion-extensions/coupled-torque-report.md) recomputes all companion radii and self-gravity, conserves the imposed scalar angular-momentum allocation, and accounts for circular kinetic and binding energy. Resolution changes remain below 0.084 km/s and 0.039% in released energy. Orientation matching and circular support are assumptions; these reused observations are not a blind validation.
+
 ### Torque-channel energy comparison
 
 The [torque budget](../../research_work/results/companion-extensions/torque-report.md) compares the orbital endpoint angular-momentum changes with freely escaping massless ray emission and internal receivers. Direct orbital ray braking requires at least 1,394/1,504 times the prior global cooling energy; this is not a bound on coherent-wave torque, intrinsic spin or internal cancellation. Orientation-matched outer receiver scenarios use 4.5-30.7% of that budget in frozen-potential orbit-energy increments while expanding by about 4-8%. This motivates coupled angular-momentum redistribution with separate cooling, not a completed transport solution. Actual recipient movement requires recalculating self-gravity and the total energy ledger.
