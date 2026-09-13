@@ -1,0 +1,683 @@
+{
+  "scope": "Ranked science-input membership; not complete pre-selection parent or inclusion probabilities",
+  "manifest": [
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.08.y.apogee2s.south/plateInput_300+00_SCI_10719.par",
+      "sha256": "be79cfecbe56e5df898ebbdaa35cfd42e528a18d3c94a3ee7ec1673c9298123c",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10719.par"
+    },
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.08.y.apogee2s.south/plateInput_300+00_SCI_10720.par",
+      "sha256": "7b8713ddefb6fea408e57817898d685fcc2af4b42cf9c5ab4a1900424cb18425",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10720.par"
+    },
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.08.y.apogee2s.south/plateInput_300+00_SCI_10721.par",
+      "sha256": "c125a416ce1b58c43436e6c62abc426a6f4d59126e9271d1298a531f60389cc0",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10721.par"
+    },
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.08.y.apogee2s.south/plateInput_300+00_SCI_10722.par",
+      "sha256": "aa5f8fbe91cc45629613021f0a5cf1be02a756dc349b82ef32d75b1b6bdb3387",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10722.par"
+    },
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.08.y.apogee2s.south/plateInput_300+00_SCI_10723.par",
+      "sha256": "29c91ce7f9d2ae01f0d5521534768641e034bdc42a22b98fabbd75bf670f15f2",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10723.par"
+    },
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.08.y.apogee2s.south/plateInput_300+00_SCI_10724.par",
+      "sha256": "c6395eaac8929c15ae10fa0b28708b24a33976223a92e94b05a4d4730b861d33",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10724.par"
+    },
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.08.y.apogee2s.south/plateInput_300+00_SCI_10725.par",
+      "sha256": "fd42dbe102afe51a6b48105bac19e1f848a5b423118240aa65f1dcaffb73a389",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10725.par"
+    },
+    {
+      "url": "https://svn.sdss.org/public/data/sdss/platelist/trunk/inputs/apogee/2017.10.x.apogee2s.south/plateInput_300+00_SCI_10999.par",
+      "sha256": "886fc8849049b4ba8f00a5eefa8288aae01fc10d53938df1c2f36f889d210b50",
+      "path": "research_work\\data-cache\\selection-fields\\plateInput_300+00_SCI_10999.par"
+    }
+  ],
+  "designs": [
+    {
+      "design_id": 10719,
+      "input_rows": 294
+    },
+    {
+      "design_id": 10720,
+      "input_rows": 291
+    },
+    {
+      "design_id": 10721,
+      "input_rows": 292
+    },
+    {
+      "design_id": 10722,
+      "input_rows": 291
+    },
+    {
+      "design_id": 10723,
+      "input_rows": 289
+    },
+    {
+      "design_id": 10724,
+      "input_rows": 289
+    },
+    {
+      "design_id": 10725,
+      "input_rows": 291
+    },
+    {
+      "design_id": 10999,
+      "input_rows": 292
+    }
+  ],
+  "total_input_rows": 2329,
+  "unique_input_targets": 1745,
+  "unique_normal_targets": 1710,
+  "drilled_assignments_matched": 2000,
+  "repeated_design_target_groups": [
+    {
+      "design_id": 10721,
+      "APOGEE_ID": "2M12255974-6323353"
+    }
+  ],
+  "infrared_exception_count": 42,
+  "infrared_exceptions": [
+    {
+      "APOGEE_ID": "2M12175711-6241573",
+      "designs": [
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12180028-6240442",
+      "designs": [
+        10725,
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12181397-6234467",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12182751-6230113",
+      "designs": [
+        10725,
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12183606-6301467",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12184253-6258439",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12185095-6237403",
+      "designs": [
+        10721,
+        10722
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12191087-6243319",
+      "designs": [
+        10721
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12193643-6300096",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12195927-6226502",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12200033-6310583",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12201426-6252451",
+      "designs": [
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12204260-6216031",
+      "designs": [
+        10725,
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12211511-6259562",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12213596-6255523",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12223044-6257273",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12223130-6231560",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12223467-6325301",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12230136-6309085",
+      "designs": [
+        10722
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12233124-6219298",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12234093-6322449",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12242198-6235184",
+      "designs": [
+        10725,
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12243925-6326245",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12245351-6257418",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12250181-6320386",
+      "designs": [
+        10721
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12252423-6311004",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12253055-6214003",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12253285-6316524",
+      "designs": [
+        10721,
+        10722
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12261903-6209182",
+      "designs": [
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12262737-6244152",
+      "designs": [
+        10719,
+        10720,
+        10721,
+        10722,
+        10723,
+        10724,
+        10725,
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12272596-6319013",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12273486-6218357",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12274740-6222356",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12274905-6257576",
+      "designs": [
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12281739-6214073",
+      "designs": [
+        10722
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12281947-6324467",
+      "designs": [
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12285577-6302150",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12290953-6259383",
+      "designs": [
+        10721,
+        10722
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12292890-6301410",
+      "designs": [
+        10723,
+        10724
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12300941-6231539",
+      "designs": [
+        10719,
+        10720
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12302834-6231227",
+      "designs": [
+        10721,
+        10722
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12305806-6257467",
+      "designs": [
+        10725,
+        10999
+      ],
+      "normal_all": true,
+      "qa": [
+        "0"
+      ],
+      "selbits": [
+        "0"
+      ]
+    }
+  ],
+  "input_hashes": {
+    "research_work\\results\\selection-plate-history\\results.json": "59c3344368a18923519e1abde30070a8aa0c5cb38c5b1bff02b84ab6a01b6d65",
+    "research_work\\results\\selection-parent-eligibility\\results.json": "000c62bd5e1eae252224d00cfa933222d0fe6c9e2617ab27ab8eeb297cb1c583",
+    "research_work\\data-cache\\selection-plate-history\\drilled-science-metadata.parquet": "a6beaf614b05e574de7f624d28f7708efaea18946868b1168f7d8bb65c218aad"
+  },
+  "heldout_kinematics_read": false
+}
