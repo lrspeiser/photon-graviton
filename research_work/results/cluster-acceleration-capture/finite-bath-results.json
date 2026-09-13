@@ -1,0 +1,411 @@
+{
+  "scope": "Homogenized identical receivers and finite positive photon injection; shared radiation bath and growing-area interpolation from prior conditional immobile-storage model. No full gravitational energy, support or observed source population.",
+  "input_sha256": "91c3d12a2cbb124125e4eb74e586ae61e25f6b1fd20f35341459d26fb8a2ce47",
+  "time_unit": "1/(beta_initial*c), beta_initial=n_receiver*sigma_initial",
+  "energy_unit": "initial ordinary receiver rest energy per receiver; radiation expressed in the same per-receiver units",
+  "source": "j=1 for dimensionless time 0 to 1, then zero; total injected energy=1",
+  "area_mass_knots": [
+    0.0,
+    0.1,
+    0.5,
+    1.0
+  ],
+  "area_gain_knots": [
+    1.0,
+    1.1106261933759227,
+    1.5820520171501375,
+    2.2277980663643704
+  ],
+  "cases": [
+    {
+      "alpha_over_initial_beta": 0.1,
+      "fixed": {
+        "alpha_over_initial_beta": 0.1,
+        "growing_area": false,
+        "time_to_half_capture": 8.488457368405836,
+        "time_to_90percent_capture": 24.583622405637026,
+        "final_photon_companion_deposit": [
+          1.0159395261883083e-13,
+          1.128821695764787e-14,
+          0.9999999999998874
+        ],
+        "max_energy_ledger_error": 7.771561172376096e-16,
+        "samples": [
+          {
+            "time": 1.0,
+            "photon_companion_deposit": [
+              0.9516258196404042,
+              0.03550058453464973,
+              0.012873595824945995
+            ]
+          },
+          {
+            "time": 3.0,
+            "photon_companion_deposit": [
+              0.7791253239626353,
+              0.07706412323313827,
+              0.14381055280422572
+            ]
+          },
+          {
+            "time": 10.0,
+            "photon_companion_deposit": [
+              0.3869021856913581,
+              0.042980463979709206,
+              0.5701173503289323
+            ]
+          },
+          {
+            "time": 30.0,
+            "photon_companion_deposit": [
+              0.052361516886466404,
+              0.005817946320700625,
+              0.9418205367928324
+            ]
+          },
+          {
+            "time": 100.0,
+            "photon_companion_deposit": [
+              4.7747522935998325e-05,
+              5.305280326222038e-06,
+              0.9999469471967377
+            ]
+          },
+          {
+            "time": 300.0,
+            "photon_companion_deposit": [
+              1.0159395261883083e-13,
+              1.128821695764787e-14,
+              0.9999999999998874
+            ]
+          }
+        ]
+      },
+      "growing": {
+        "alpha_over_initial_beta": 0.1,
+        "growing_area": true,
+        "time_to_half_capture": 8.110472460429548,
+        "time_to_90percent_capture": 24.021139159018052,
+        "final_photon_companion_deposit": [
+          1.0300173066438019e-13,
+          4.840766249396376e-15,
+          0.99999999999989
+        ],
+        "max_energy_ledger_error": 2.3314683517128287e-15,
+        "samples": [
+          {
+            "time": 1.0,
+            "photon_companion_deposit": [
+              0.9516258196404042,
+              0.03542201683836112,
+              0.012952163521234603
+            ]
+          },
+          {
+            "time": 3.0,
+            "photon_companion_deposit": [
+              0.7791253239626372,
+              0.07056799119519551,
+              0.15030668484216675
+            ]
+          },
+          {
+            "time": 10.0,
+            "photon_companion_deposit": [
+              0.3869021856916234,
+              0.024895262315329212,
+              0.5882025519930463
+            ]
+          },
+          {
+            "time": 30.0,
+            "photon_companion_deposit": [
+              0.05236151688558915,
+              0.002554184046338383,
+              0.9450842990680708
+            ]
+          },
+          {
+            "time": 100.0,
+            "photon_companion_deposit": [
+              4.774752293515349e-05,
+              2.244062433914822e-06,
+              0.9999500084146291
+            ]
+          },
+          {
+            "time": 300.0,
+            "photon_companion_deposit": [
+              1.0300173066438019e-13,
+              4.840766249396376e-15,
+              0.99999999999989
+            ]
+          }
+        ]
+      },
+      "fractional_reduction_in_time_to_90percent": 0.022880405390948266,
+      "linear_area_interpolation_time_to_90percent": 24.019886645988365,
+      "interpolation_t90_relative": -5.21421162167357e-05
+    },
+    {
+      "alpha_over_initial_beta": 1.0,
+      "fixed": {
+        "alpha_over_initial_beta": 1.0,
+        "growing_area": false,
+        "time_to_half_capture": 2.1949674971073483,
+        "time_to_90percent_capture": 4.420524601564177,
+        "final_photon_companion_deposit": [
+          1.0628620469315339e-21,
+          3.5839522904352406e-20,
+          1.0000000000000113
+        ],
+        "max_energy_ledger_error": 1.3766765505351941e-14,
+        "samples": [
+          {
+            "time": 1.0,
+            "photon_companion_deposit": [
+              0.6321205588285685,
+              0.2642411176571182,
+              0.10363832351432667
+            ]
+          },
+          {
+            "time": 3.0,
+            "photon_companion_deposit": [
+              0.085548214868891,
+              0.2068575762381632,
+              0.7075942088929588
+            ]
+          },
+          {
+            "time": 10.0,
+            "photon_companion_deposit": [
+              7.800987435642257e-05,
+              0.0007346988136543068,
+              0.9991872913120021
+            ]
+          },
+          {
+            "time": 30.0,
+            "photon_companion_deposit": [
+              1.617909958945056e-13,
+              4.755242093589839e-12,
+              0.9999999999950943
+            ]
+          },
+          {
+            "time": 100.0,
+            "photon_companion_deposit": [
+              2.4288237053900334e-19,
+              7.958115619090388e-18,
+              1.0000000000000113
+            ]
+          },
+          {
+            "time": 300.0,
+            "photon_companion_deposit": [
+              1.0628620469315339e-21,
+              3.5839522904352406e-20,
+              1.0000000000000113
+            ]
+          }
+        ]
+      },
+      "growing": {
+        "alpha_over_initial_beta": 1.0,
+        "growing_area": true,
+        "time_to_half_capture": 1.9734985061509729,
+        "time_to_90percent_capture": 3.568753530239383,
+        "final_photon_companion_deposit": [
+          1.7270910785734863e-19,
+          -9.725568769091672e-19,
+          1.000000000000042
+        ],
+        "max_energy_ledger_error": 4.263256414560601e-14,
+        "samples": [
+          {
+            "time": 1.0,
+            "photon_companion_deposit": [
+              0.6321205588285933,
+              0.2590494254343998,
+              0.10883001573704881
+            ]
+          },
+          {
+            "time": 3.0,
+            "photon_companion_deposit": [
+              0.08554821486874017,
+              0.09875106466165078,
+              0.8157007204696514
+            ]
+          },
+          {
+            "time": 10.0,
+            "photon_companion_deposit": [
+              7.800987446947294e-05,
+              6.35868251515997e-05,
+              0.9998584033004208
+            ]
+          },
+          {
+            "time": 30.0,
+            "photon_companion_deposit": [
+              1.7179715777179277e-13,
+              1.3990894666266594e-13,
+              0.9999999999997304
+            ]
+          },
+          {
+            "time": 100.0,
+            "photon_companion_deposit": [
+              8.25916497993243e-18,
+              7.052085155220684e-19,
+              1.000000000000042
+            ]
+          },
+          {
+            "time": 300.0,
+            "photon_companion_deposit": [
+              1.7270910785734863e-19,
+              -9.725568769091672e-19,
+              1.000000000000042
+            ]
+          }
+        ]
+      },
+      "fractional_reduction_in_time_to_90percent": 0.19268551769249276,
+      "linear_area_interpolation_time_to_90percent": 3.565668408347111,
+      "interpolation_t90_relative": -0.0008644816365520613
+    },
+    {
+      "alpha_over_initial_beta": 10.0,
+      "fixed": {
+        "alpha_over_initial_beta": 10.0,
+        "growing_area": false,
+        "time_to_half_capture": 1.339084415095879,
+        "time_to_90percent_capture": 2.9492704628832875,
+        "final_photon_companion_deposit": [
+          5.55006642063075e-106,
+          7.676488998541154e-20,
+          1.000000000000054
+        ],
+        "max_energy_ledger_error": 5.395683899678261e-14,
+        "samples": [
+          {
+            "time": 1.0,
+            "photon_companion_deposit": [
+              0.09999546000701534,
+              0.5912501098017364,
+              0.308754430191299
+            ]
+          },
+          {
+            "time": 3.0,
+            "photon_companion_deposit": [
+              2.0610599270409462e-10,
+              0.09505357184666847,
+              0.9049464279472783
+            ]
+          },
+          {
+            "time": 10.0,
+            "photon_companion_deposit": [
+              8.193595557813342e-41,
+              8.667763804589891e-05,
+              0.9999133223620079
+            ]
+          },
+          {
+            "time": 30.0,
+            "photon_companion_deposit": [
+              1.75538074135103e-97,
+              1.6861170926155438e-13,
+              0.9999999999998852
+            ]
+          },
+          {
+            "time": 100.0,
+            "photon_companion_deposit": [
+              -7.160282860362858e-102,
+              -1.4709780131572273e-17,
+              1.000000000000054
+            ]
+          },
+          {
+            "time": 300.0,
+            "photon_companion_deposit": [
+              5.55006642063075e-106,
+              7.676488998541154e-20,
+              1.000000000000054
+            ]
+          }
+        ]
+      },
+      "growing": {
+        "alpha_over_initial_beta": 10.0,
+        "growing_area": true,
+        "time_to_half_capture": 1.1835689404148573,
+        "time_to_90percent_capture": 2.039376924030421,
+        "final_photon_companion_deposit": [
+          2.5035952592216214e-59,
+          3.6898571267353687e-20,
+          1.0000000000000515
+        ],
+        "max_energy_ledger_error": 5.1736392947532295e-14,
+        "samples": [
+          {
+            "time": 1.0,
+            "photon_companion_deposit": [
+              0.0999954600070172,
+              0.5441892335425251,
+              0.3558153064505087
+            ]
+          },
+          {
+            "time": 3.0,
+            "photon_companion_deposit": [
+              2.061060022976501e-10,
+              0.012427688713743385,
+              0.9875723110802022
+            ]
+          },
+          {
+            "time": 10.0,
+            "photon_companion_deposit": [
+              8.179478112079212e-41,
+              2.113607272879004e-09,
+              0.9999999978864442
+            ]
+          },
+          {
+            "time": 30.0,
+            "photon_companion_deposit": [
+              -5.283911217462209e-55,
+              -3.822278869904407e-17,
+              1.0000000000000515
+            ]
+          },
+          {
+            "time": 100.0,
+            "photon_companion_deposit": [
+              -2.5901855397645895e-57,
+              -8.282677509634029e-19,
+              1.0000000000000515
+            ]
+          },
+          {
+            "time": 300.0,
+            "photon_companion_deposit": [
+              2.5035952592216214e-59,
+              3.6898571267353687e-20,
+              1.0000000000000515
+            ]
+          }
+        ]
+      },
+      "fractional_reduction_in_time_to_90percent": 0.30851478367410556,
+      "linear_area_interpolation_time_to_90percent": 2.0356739304056233,
+      "interpolation_t90_relative": -0.0018157475360068842
+    }
+  ]
+}
