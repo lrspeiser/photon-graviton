@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Overlapping wells change collecting area:** [Two-Plummer weak-capture calculation](cluster-acceleration-capture/overlap-report.md) gives 1.660 times the sum of isolated areas at separation 2a. Independent field/potential integrals pass. Net acceleration cancels at the midpoint, so this candidate predicts no local capture there despite a deep potential; it is not a depth-based law. Nonlinear receiver overlap, finite absorption and the physical gravity observable require resolution. All six objectives remain open.
+
 **Growing area coupled to finite supply:** [Shared-bath evolution](cluster-acceleration-capture/finite-bath-report.md) captures 90% of a synthetic photon-energy pulse 2.3-30.9% sooner than fixed area, while final storage remains exactly source-limited. Independent constant-area solutions and interpolation checks pass with a positivity-checked implicit solver. This inherits immobile-storage and gravitational-energy limitations, not a complete halo or universe solution. All six objectives remain open.
 
 **Deposited-gravity feedback evaluated:** [Conditional immobile-storage evolution](cluster-acceleration-capture/feedback-report.md) at A=1 increases capture by 2.228 when deposited mass reaches ordinary mass and moves half storage to 4.10a. Shell, step, boundary/angle and independent chord checks quantify numerical sensitivity. Support, binding energy, propagation-time ordering and bath depletion remain omitted, so this is not a complete physical halo solution. All six objectives remain open.
