@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Thermal protection and the storage-energy tradeoff
+
+A finite-site illuminated-to-protected-state model now includes thermal backflow, bright-state radiation and a signed bath-energy ledger. Twenty-seven cases show stronger thermal isolation for deeper relaxation, at the cost of less retained energy per site. Direct protected-state decay is omitted only as an optimistic assumption. No absolute lifetime, site capacity or microscopic selection rule is derived. The [protected-level test](../../research_work/results/companion-extensions/protected-state-report.md) is an explicitly different state model from the preceding unlimited bosonic pair ladder. Tiny excitation gaps also require a correspondingly cold bath for thermal protection; its physical origin and heating are unsolved.
+
 ### Reciprocity and finite populated storage
 
 An ideal flat forward fractional-loss law, combined with reciprocal heavy-store scattering, fixes inverse/forward ratio to (1+gap/E)^3. In the inherited bosonic pair-mode model this yields finite stationary storage and no net continued photon-energy deposition when spontaneous loss is absent. The small-gap E/3 per-mode limit is unrelated to the astrophysical one-third retention exponent. Protected-state transport, mode count and actual decay remain open. The [stationary mode calculation](../../research_work/results/companion-extensions/reciprocal-storage-report.md) links the color target to the reverse process instead of tuning that process independently. Sixteen equilibrium cases verify the formulas; they are not galaxy capacity measurements or lifetime calculations.
