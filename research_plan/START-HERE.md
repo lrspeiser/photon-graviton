@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Running paper assessment and new test:** [Cross-scale performance](../papers/cumulative-time-companions/cross-scale-performance.md) records successes and failures with formula provenance. [Exact-one-third lens transfer](../research_work/results/isotropic-galaxy-transfer/cross-test-audit-report.md) retains about 14% lens errors. Paired galaxy speed errors improve over baryons for 56/60 comparison galaxies but beat tested MOND for only 20/60. No cluster normalization-transfer success is claimed.
+
 **NFW cluster follow-up:** [Full-profile and omitted-bin Coma checks](../research_work/results/isotropic-galaxy-transfer/cluster-comparison-detail-report.md) reproduce the published NFW fit approximately (3.855 versus 3.87). NFW and transparent companions are essentially tied in omitted-bin prediction (6.82/6.86); point mass deteriorates to 32.17 and is only a control. The initial outer-only ranking is not robust evidence for companions. [Next sample specification](../research_work/results/isotropic-galaxy-transfer/cluster-comparison-next-sample.md).
 
 **Cluster comparison:** [Coma results](../research_work/results/isotropic-galaxy-transfer/cluster-model-comparison-report.md) compare companion, NFW and compact-baryon MOND shear shapes using the same inner/outer bins. Several shapes remain viable; this does not yet test the frozen one-third normalization or multiple clusters. See the linked protocol for the physical inputs needed to do that.

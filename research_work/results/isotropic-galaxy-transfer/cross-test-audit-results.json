@@ -1,0 +1,1018 @@
+{
+  "lens_summary": [
+    {
+      "model": "attenuated_Chabrier",
+      "n": 6,
+      "inner_chi2_sum": 42.15556226668135,
+      "outer_conditional_residual_square_sum": 44.32216368006399,
+      "lens_fractional_rms": 0.1392307638442564,
+      "orbit_boundary_count": 0
+    },
+    {
+      "model": "attenuated_Salpeter",
+      "n": 6,
+      "inner_chi2_sum": 41.55383764372078,
+      "outer_conditional_residual_square_sum": 42.703975966792896,
+      "lens_fractional_rms": 0.14093688861532266,
+      "orbit_boundary_count": 0
+    }
+  ],
+  "paired_galaxy_summary": [
+    {
+      "split": "validation",
+      "metric": "rms_kms",
+      "n": 29,
+      "companion_better_than_mond": 11,
+      "companion_better_than_baryons": 26
+    },
+    {
+      "split": "validation",
+      "metric": "log_rms",
+      "n": 29,
+      "companion_better_than_mond": 12,
+      "companion_better_than_baryons": 29
+    },
+    {
+      "split": "test",
+      "metric": "rms_kms",
+      "n": 31,
+      "companion_better_than_mond": 9,
+      "companion_better_than_baryons": 30
+    },
+    {
+      "split": "test",
+      "metric": "log_rms",
+      "n": 31,
+      "companion_better_than_mond": 13,
+      "companion_better_than_baryons": 31
+    }
+  ],
+  "paired_galaxies": [
+    {
+      "galaxy": "UGC08550",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 29.603145461388138,
+        "log_rms": 0.3759766863717958
+      },
+      "companion_third": {
+        "rms_kms": 19.29469920557062,
+        "log_rms": 0.20249718643692016
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 5.982166374180355,
+        "log_rms": 0.05658685247640495
+      }
+    },
+    {
+      "galaxy": "F571-V1",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 39.794929421262424,
+        "log_rms": 0.3350481730350324
+      },
+      "companion_third": {
+        "rms_kms": 17.761804077933597,
+        "log_rms": 0.08491570207898946
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 3.2850064851418854,
+        "log_rms": 0.034526848893219095
+      }
+    },
+    {
+      "galaxy": "NGC3972",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 44.45959494291804,
+        "log_rms": 0.21729214165873909
+      },
+      "companion_third": {
+        "rms_kms": 10.253028708086665,
+        "log_rms": 0.05654763204465162
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 11.779947568759797,
+        "log_rms": 0.054908456755619235
+      }
+    },
+    {
+      "galaxy": "ESO079-G014",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 55.74658403541774,
+        "log_rms": 0.22369488115903963
+      },
+      "companion_third": {
+        "rms_kms": 20.351868682925215,
+        "log_rms": 0.10072356766094757
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 16.70122191873149,
+        "log_rms": 0.05886945297326833
+      }
+    },
+    {
+      "galaxy": "NGC4559",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 39.983139647321316,
+        "log_rms": 0.18374260541976215
+      },
+      "companion_third": {
+        "rms_kms": 12.934912723174117,
+        "log_rms": 0.04570293574621948
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 10.813539335480874,
+        "log_rms": 0.042191703744258305
+      }
+    },
+    {
+      "galaxy": "IC4202",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 69.12159369429722,
+        "log_rms": 0.17763533977242835
+      },
+      "companion_third": {
+        "rms_kms": 29.69564755202948,
+        "log_rms": 0.11466361290629223
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 28.68994596971648,
+        "log_rms": 0.118721977086996
+      }
+    },
+    {
+      "galaxy": "UGC05414",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 19.4770280367091,
+        "log_rms": 0.2166363013309604
+      },
+      "companion_third": {
+        "rms_kms": 4.281827187657165,
+        "log_rms": 0.0330836716821285
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 4.747146318189967,
+        "log_rms": 0.05834917796715326
+      }
+    },
+    {
+      "galaxy": "NGC4157",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 52.61576992556368,
+        "log_rms": 0.15580407322577777
+      },
+      "companion_third": {
+        "rms_kms": 16.180835873038607,
+        "log_rms": 0.04179912236984855
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 14.489740018192373,
+        "log_rms": 0.03965135999334998
+      }
+    },
+    {
+      "galaxy": "NGC5585",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 31.680943701137302,
+        "log_rms": 0.22761702869061595
+      },
+      "companion_third": {
+        "rms_kms": 2.902844633545293,
+        "log_rms": 0.04106623410761304
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 6.823943545149217,
+        "log_rms": 0.06340965845920714
+      }
+    },
+    {
+      "galaxy": "UGC07603",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 31.453943634197763,
+        "log_rms": 0.3513545862285149
+      },
+      "companion_third": {
+        "rms_kms": 19.27183471763129,
+        "log_rms": 0.17583643452908407
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 9.855543416563059,
+        "log_rms": 0.08175671376586174
+      }
+    },
+    {
+      "galaxy": "UGC09037",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 38.691859305391624,
+        "log_rms": 0.13630713091119195
+      },
+      "companion_third": {
+        "rms_kms": 51.26535579080224,
+        "log_rms": 0.13385455732244533
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 28.475168760606365,
+        "log_rms": 0.09862228397011123
+      }
+    },
+    {
+      "galaxy": "NGC4051",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 23.60037443042511,
+        "log_rms": 0.07718602091445852
+      },
+      "companion_third": {
+        "rms_kms": 20.396230298639924,
+        "log_rms": 0.05458077145685002
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 17.510461910883304,
+        "log_rms": 0.047283951262383765
+      }
+    },
+    {
+      "galaxy": "UGC05721",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 43.42112660188199,
+        "log_rms": 0.3802918928078002
+      },
+      "companion_third": {
+        "rms_kms": 37.219526587319336,
+        "log_rms": 0.2995895360639461
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 20.227069957602083,
+        "log_rms": 0.13531368791595988
+      }
+    },
+    {
+      "galaxy": "UGC12732",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 44.72613799762456,
+        "log_rms": 0.3814743366390711
+      },
+      "companion_third": {
+        "rms_kms": 9.378761233729008,
+        "log_rms": 0.06995044488406822
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 7.501810561555638,
+        "log_rms": 0.05400618868381972
+      }
+    },
+    {
+      "galaxy": "UGC11455",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 60.052146253715186,
+        "log_rms": 0.12317724775562013
+      },
+      "companion_third": {
+        "rms_kms": 27.651184048557646,
+        "log_rms": 0.05966497674922357
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 13.163900077353153,
+        "log_rms": 0.05856330416479632
+      }
+    },
+    {
+      "galaxy": "NGC1090",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 53.94427875610075,
+        "log_rms": 0.1833002221179627
+      },
+      "companion_third": {
+        "rms_kms": 29.23223515880142,
+        "log_rms": 0.0843941549822907
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 11.011790651822944,
+        "log_rms": 0.07324325055379602
+      }
+    },
+    {
+      "galaxy": "NGC4088",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 25.396289301523897,
+        "log_rms": 0.07535491232971209
+      },
+      "companion_third": {
+        "rms_kms": 31.567779814604094,
+        "log_rms": 0.07506974108580837
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 32.27293042672844,
+        "log_rms": 0.08043403602732
+      }
+    },
+    {
+      "galaxy": "UGC00731",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 38.17360738121145,
+        "log_rms": 0.4836644804797879
+      },
+      "companion_third": {
+        "rms_kms": 11.629031891099359,
+        "log_rms": 0.1386115944721946
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 11.410128081331344,
+        "log_rms": 0.12399236193764643
+      }
+    },
+    {
+      "galaxy": "NGC3917",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 50.96833813740423,
+        "log_rms": 0.23199268566479833
+      },
+      "companion_third": {
+        "rms_kms": 11.036114186567763,
+        "log_rms": 0.04803363502842221
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 10.088066714332045,
+        "log_rms": 0.06425894581513147
+      }
+    },
+    {
+      "galaxy": "F574-1",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 48.52533758837649,
+        "log_rms": 0.35926642619282706
+      },
+      "companion_third": {
+        "rms_kms": 19.78643071310201,
+        "log_rms": 0.13536104859619394
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 12.736911941768252,
+        "log_rms": 0.07642721707183117
+      }
+    },
+    {
+      "galaxy": "NGC4068",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 9.428676806463027,
+        "log_rms": 0.14135172498206133
+      },
+      "companion_third": {
+        "rms_kms": 3.8351482463839686,
+        "log_rms": 0.10985272460232919
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 8.893789337423671,
+        "log_rms": 0.21298515430779252
+      }
+    },
+    {
+      "galaxy": "KK98-251",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 9.24231819672141,
+        "log_rms": 0.2027548325765632
+      },
+      "companion_third": {
+        "rms_kms": 4.005433815449666,
+        "log_rms": 0.06149780320791241
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 8.420261266120521,
+        "log_rms": 0.17512365728457904
+      }
+    },
+    {
+      "galaxy": "F568-V1",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 65.51997770587302,
+        "log_rms": 0.46050892649675024
+      },
+      "companion_third": {
+        "rms_kms": 23.043852418172733,
+        "log_rms": 0.15784982902764924
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 30.591788358651517,
+        "log_rms": 0.16120903352075971
+      }
+    },
+    {
+      "galaxy": "NGC5985",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 136.4962034128173,
+        "log_rms": 0.2829979675988867
+      },
+      "companion_third": {
+        "rms_kms": 87.75447202582718,
+        "log_rms": 0.17724059463793126
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 80.47219304238668,
+        "log_rms": 0.14893826190886167
+      }
+    },
+    {
+      "galaxy": "UGC02487",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 167.86710373521154,
+        "log_rms": 0.2944990212765314
+      },
+      "companion_third": {
+        "rms_kms": 64.48296786787732,
+        "log_rms": 0.08683892161753864
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 76.82022596760974,
+        "log_rms": 0.10480571587499209
+      }
+    },
+    {
+      "galaxy": "UGC03546",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 51.95330691477968,
+        "log_rms": 0.13336985617869113
+      },
+      "companion_third": {
+        "rms_kms": 29.710915450976476,
+        "log_rms": 0.05183207683514072
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 30.779629505448604,
+        "log_rms": 0.051967476128496747
+      }
+    },
+    {
+      "galaxy": "NGC3109",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 32.07944925871144,
+        "log_rms": 0.4336653129424642
+      },
+      "companion_third": {
+        "rms_kms": 3.2252563638157468,
+        "log_rms": 0.04069524615316739
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 7.810577812587654,
+        "log_rms": 0.06923139379331576
+      }
+    },
+    {
+      "galaxy": "NGC0891",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 42.48873191442031,
+        "log_rms": 0.09370427801371355
+      },
+      "companion_third": {
+        "rms_kms": 24.669895057267226,
+        "log_rms": 0.046079428779910836
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 27.758417214606155,
+        "log_rms": 0.05116343093012833
+      }
+    },
+    {
+      "galaxy": "NGC0801",
+      "split": "validation",
+      "baryons": {
+        "rms_kms": 53.955412557620825,
+        "log_rms": 0.12878625094922874
+      },
+      "companion_third": {
+        "rms_kms": 77.46842297034019,
+        "log_rms": 0.12658831185573197
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 24.734925108019894,
+        "log_rms": 0.05054727273965768
+      }
+    },
+    {
+      "galaxy": "UGC08699",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 57.25812439420853,
+        "log_rms": 0.1750698918908304
+      },
+      "companion_third": {
+        "rms_kms": 16.67664690330702,
+        "log_rms": 0.04035630488045343
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 19.17814835219238,
+        "log_rms": 0.04697396961152834
+      }
+    },
+    {
+      "galaxy": "UGC02885",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 114.82690801221729,
+        "log_rms": 0.22604447641265862
+      },
+      "companion_third": {
+        "rms_kms": 67.01632841544838,
+        "log_rms": 0.09488342759887282
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 25.273653018162396,
+        "log_rms": 0.0399177805346924
+      }
+    },
+    {
+      "galaxy": "UGC07151",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 27.222430951846494,
+        "log_rms": 0.23252616317441846
+      },
+      "companion_third": {
+        "rms_kms": 6.279873122372812,
+        "log_rms": 0.05484937728088863
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 3.9642841443668857,
+        "log_rms": 0.034498309738674494
+      }
+    },
+    {
+      "galaxy": "NGC3877",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 33.84095588590208,
+        "log_rms": 0.13243696076389838
+      },
+      "companion_third": {
+        "rms_kms": 20.95206600686337,
+        "log_rms": 0.0973308209452355
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 19.884283575529114,
+        "log_rms": 0.10636566534232325
+      }
+    },
+    {
+      "galaxy": "NGC6946",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 42.149896326484296,
+        "log_rms": 0.13266655945292213
+      },
+      "companion_third": {
+        "rms_kms": 10.753477600530138,
+        "log_rms": 0.02764420254197986
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 10.040580122185379,
+        "log_rms": 0.027001966391143533
+      }
+    },
+    {
+      "galaxy": "UGC10310",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 31.25990953267383,
+        "log_rms": 0.30021354813150375
+      },
+      "companion_third": {
+        "rms_kms": 11.264477135585668,
+        "log_rms": 0.0768705316758198
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 5.877414053831402,
+        "log_rms": 0.04021432220819744
+      }
+    },
+    {
+      "galaxy": "F565-V2",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 41.087913426981345,
+        "log_rms": 0.4327193188575101
+      },
+      "companion_third": {
+        "rms_kms": 2.5770434276353633,
+        "log_rms": 0.018832047925211513
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 10.661816405289832,
+        "log_rms": 0.07553916550307112
+      }
+    },
+    {
+      "galaxy": "F583-4",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 28.256036139451535,
+        "log_rms": 0.32444196466514236
+      },
+      "companion_third": {
+        "rms_kms": 13.851441038803827,
+        "log_rms": 0.12592188131334053
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 1.7623898513239462,
+        "log_rms": 0.016145285812380537
+      }
+    },
+    {
+      "galaxy": "NGC7331",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 59.35435178932775,
+        "log_rms": 0.13191481932483043
+      },
+      "companion_third": {
+        "rms_kms": 33.23881888242872,
+        "log_rms": 0.05615363285238435
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 21.60783168285022,
+        "log_rms": 0.035885862782241706
+      }
+    },
+    {
+      "galaxy": "NGC2955",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 42.64993554277889,
+        "log_rms": 0.08231281795386819
+      },
+      "companion_third": {
+        "rms_kms": 40.85710620510453,
+        "log_rms": 0.07768096142306756
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 15.705038850497745,
+        "log_rms": 0.027999793773387335
+      }
+    },
+    {
+      "galaxy": "UGCA442",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 27.598673456837002,
+        "log_rms": 0.3706825211720193
+      },
+      "companion_third": {
+        "rms_kms": 3.6421065064080165,
+        "log_rms": 0.06783372978473524
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 3.5541533005866,
+        "log_rms": 0.032142438037727615
+      }
+    },
+    {
+      "galaxy": "NGC2976",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 14.260040448565771,
+        "log_rms": 0.11746012550624253
+      },
+      "companion_third": {
+        "rms_kms": 6.694058441563709,
+        "log_rms": 0.06033075866219917
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 3.8834979954695537,
+        "log_rms": 0.09212567980915295
+      }
+    },
+    {
+      "galaxy": "DDO154",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 23.71217692693497,
+        "log_rms": 0.36897901563148183
+      },
+      "companion_third": {
+        "rms_kms": 17.30643096058323,
+        "log_rms": 0.22373848197047708
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 2.5840800873523833,
+        "log_rms": 0.054769348509575974
+      }
+    },
+    {
+      "galaxy": "DDO170",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 27.33402059077279,
+        "log_rms": 0.3067848048076301
+      },
+      "companion_third": {
+        "rms_kms": 18.984108392988077,
+        "log_rms": 0.12325468293905836
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 9.482374345816925,
+        "log_rms": 0.07157033857335356
+      }
+    },
+    {
+      "galaxy": "NGC7814",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 73.62545163519991,
+        "log_rms": 0.1915097553036533
+      },
+      "companion_third": {
+        "rms_kms": 25.679150911047255,
+        "log_rms": 0.05434437302000268
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 28.393081769419773,
+        "log_rms": 0.060696912802301196
+      }
+    },
+    {
+      "galaxy": "F583-1",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 37.881198388480925,
+        "log_rms": 0.45365305599398587
+      },
+      "companion_third": {
+        "rms_kms": 7.499061424052828,
+        "log_rms": 0.10594147002504724
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 11.97859928884816,
+        "log_rms": 0.12211008908029063
+      }
+    },
+    {
+      "galaxy": "F568-3",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 44.56354544414182,
+        "log_rms": 0.3246177202755352
+      },
+      "companion_third": {
+        "rms_kms": 22.446298075735772,
+        "log_rms": 0.13522751962322244
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 9.927581895581305,
+        "log_rms": 0.08778718099893432
+      }
+    },
+    {
+      "galaxy": "UGC04499",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 28.740791843283862,
+        "log_rms": 0.25335088681476997
+      },
+      "companion_third": {
+        "rms_kms": 9.518660693326472,
+        "log_rms": 0.05413314267008184
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 4.8186914711040725,
+        "log_rms": 0.05058874722424753
+      }
+    },
+    {
+      "galaxy": "UGC06399",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 38.70738543926881,
+        "log_rms": 0.32421187408531577
+      },
+      "companion_third": {
+        "rms_kms": 6.297314545284072,
+        "log_rms": 0.0493316355938818
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 8.011476097388345,
+        "log_rms": 0.05238620253405149
+      }
+    },
+    {
+      "galaxy": "NGC0055",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 30.10483924708385,
+        "log_rms": 0.2093371711483004
+      },
+      "companion_third": {
+        "rms_kms": 11.540901111087274,
+        "log_rms": 0.07108595616008902
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 11.377281641367334,
+        "log_rms": 0.07579299003920448
+      }
+    },
+    {
+      "galaxy": "UGC07559",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 9.818827026724065,
+        "log_rms": 0.19701202103119989
+      },
+      "companion_third": {
+        "rms_kms": 2.6438223338933544,
+        "log_rms": 0.054689099244506975
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 8.006233705475239,
+        "log_rms": 0.14731385508744185
+      }
+    },
+    {
+      "galaxy": "UGC07524",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 34.28871958325588,
+        "log_rms": 0.32576595192259306
+      },
+      "companion_third": {
+        "rms_kms": 15.749331833677061,
+        "log_rms": 0.10819107826607989
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 4.996609921702318,
+        "log_rms": 0.03950800608288614
+      }
+    },
+    {
+      "galaxy": "NGC5907",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 86.48374825501512,
+        "log_rms": 0.22064315056244416
+      },
+      "companion_third": {
+        "rms_kms": 48.433509006733686,
+        "log_rms": 0.09383643883348422
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 18.32424349624827,
+        "log_rms": 0.04046557972122456
+      }
+    },
+    {
+      "galaxy": "DDO161",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 23.323029110647877,
+        "log_rms": 0.22635076285072928
+      },
+      "companion_third": {
+        "rms_kms": 9.574449932035392,
+        "log_rms": 0.08682984721918008
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 13.634048936420673,
+        "log_rms": 0.12386732670549531
+      }
+    },
+    {
+      "galaxy": "UGC02916",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 40.95236813050122,
+        "log_rms": 0.10192848088247164
+      },
+      "companion_third": {
+        "rms_kms": 36.66547611989139,
+        "log_rms": 0.07718731644795995
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 24.821244302357385,
+        "log_rms": 0.05616634478233776
+      }
+    },
+    {
+      "galaxy": "F571-8",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 55.62174794317093,
+        "log_rms": 0.30648862636840973
+      },
+      "companion_third": {
+        "rms_kms": 15.229584931848235,
+        "log_rms": 0.1280857388084542
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 29.801457829853806,
+        "log_rms": 0.1855817218466826
+      }
+    },
+    {
+      "galaxy": "UGC06786",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 82.0312241748302,
+        "log_rms": 0.22370152823116063
+      },
+      "companion_third": {
+        "rms_kms": 34.223788368837035,
+        "log_rms": 0.07932329534283104
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 38.26342627127696,
+        "log_rms": 0.08703008882829529
+      }
+    },
+    {
+      "galaxy": "NGC3949",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 28.517276444165443,
+        "log_rms": 0.08650078579980075
+      },
+      "companion_third": {
+        "rms_kms": 9.61251433164483,
+        "log_rms": 0.02735441392608084
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 8.026012525610316,
+        "log_rms": 0.02225557305702345
+      }
+    },
+    {
+      "galaxy": "UGC03205",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 71.96485846242949,
+        "log_rms": 0.1796869909597924
+      },
+      "companion_third": {
+        "rms_kms": 29.453143788115046,
+        "log_rms": 0.06575360148702473
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 27.30376702966965,
+        "log_rms": 0.05916798256678421
+      }
+    },
+    {
+      "galaxy": "UGC07323",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 23.544315659585056,
+        "log_rms": 0.1904562226231186
+      },
+      "companion_third": {
+        "rms_kms": 5.750792674490091,
+        "log_rms": 0.0459665170757604
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 5.116232045358025,
+        "log_rms": 0.04631937031522977
+      }
+    },
+    {
+      "galaxy": "UGC09992",
+      "split": "test",
+      "baryons": {
+        "rms_kms": 11.212288562531272,
+        "log_rms": 0.19354639247300506
+      },
+      "companion_third": {
+        "rms_kms": 12.467803621724398,
+        "log_rms": 0.13638433738883998
+      },
+      "MOND_simple_fitted": {
+        "rms_kms": 12.150729554951317,
+        "log_rms": 0.13039911889542546
+      }
+    }
+  ],
+  "scope": "Descriptive, exposed samples; no new fit or significance claim",
+  "input_sha256": {
+    "third-retention-optics-results.json": "a171b0ba487ab26a28b9bc53e6558468b19b110bb7986a576cea1166b393b7be",
+    "retention-optics-results.json": "961136c3063583107b3abe33662ad92dbbf22815263517c4db8e8879f1438cbf",
+    "model-comparison-predictions.json": "621ab9f24c77f6f7fc1e8ccd4aaff0f0e0ede11aea4a02c17b34bbba689adb3e"
+  }
+}

@@ -8,7 +8,8 @@ from scipy.optimize import minimize,brentq
 from scipy.linalg import cho_factor,cho_solve
 HERE=Path(__file__).resolve().parent
 RELAXING='--relaxing-optics' in sys.argv
-RETENTION='--retention-optics' in sys.argv
+THIRD='--third-retention-optics' in sys.argv
+RETENTION='--retention-optics' in sys.argv or THIRD
 REGULAR='--regular-optics' in sys.argv or RELAXING or RETENTION
 OPTICAL_FILE='relaxing-area-results.json' if RELAXING else 'regular-area-results.json'
 sys.path.insert(0,str(HERE.parent/'slacs-component-refit'))
@@ -23,7 +24,7 @@ allowed={r['Name'] for r in read('slacs-outer-bin-check')['rows'] if r['model']=
 capture=json.loads((HERE/'results.json').read_text())['models']
 capture_file='results.json'
 if RETENTION:
-    capture_file='bounded-radiation-retention-results.json'
+    capture_file='third-radiation-retention-results.json' if THIRD else 'bounded-radiation-retention-results.json'
     retained=json.loads((HERE/capture_file).read_text())['models']['attenuated']
     capture={f'attenuated_{imf}':dict(retained,population=imf) for imf in ['Chabrier','Salpeter']}
     photorows=read('lens-photometric-audit','normalization-sensitivity.json')
@@ -109,7 +110,7 @@ out=dict(summary=summary,rows=rows,capture_input_sha256=hashlib.sha256((HERE/cap
 if REGULAR:out['optical_input_sha256']=hashlib.sha256((HERE.parent/'brightness-distance-consistency'/OPTICAL_FILE).read_bytes()).hexdigest()
 output='relaxing-optics-results.json' if RELAXING else 'regular-optics-results.json' if REGULAR else 'lensing-results.json'
 if RETENTION:
-    output='retention-optics-results.json'
+    output='third-retention-optics-results.json' if THIRD else 'retention-optics-results.json'
     out['photometric_input_sha256']=hashlib.sha256((HERE.parent/'lens-photometric-audit/normalization-sensitivity.json').read_bytes()).hexdigest()
 (HERE/output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(summary,indent=2))
