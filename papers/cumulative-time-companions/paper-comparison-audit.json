@@ -1,0 +1,306 @@
+{
+  "version": "1.4",
+  "evidence_through": "0756dec",
+  "scope": "Snapshot of existing exposed-data diagnostics; no new fitting or full-theory ranking.",
+  "source_sha256": {
+    "research_work/results/isotropic-galaxy-transfer/model-comparison-results.json": "d19620ecd79043103de48294156e50290fa50734ae418c298e27ddf0daf8eea5",
+    "research_work/results/isotropic-galaxy-transfer/cluster-comparison-detail-results.json": "dac83b1d6914d5661233e5a9250d90ea5a086bad20a941c665490cc78c8f16d6",
+    "research_work/results/direct-conversion/results.json": "3ea63929f10eb884d237d1089f00ffbe4bd065d9b4d1951cfcded2355e0841e5",
+    "research_work/results/brightness-distance-consistency/rate-results.json": "640921262f1ae38fd000f575337a763440266df826f81787c8cb089438bd8429"
+  },
+  "rotation": [
+    {
+      "model": "baryons",
+      "split": "train",
+      "n": 89,
+      "RMSE_kms": 52.56535192119044,
+      "log_RMS": 0.2904157379880655,
+      "mean_diagonal_chi2_per_point_per_galaxy": 492.31635671215696
+    },
+    {
+      "model": "baryons",
+      "split": "validation",
+      "n": 29,
+      "RMSE_kms": 58.2192156635354,
+      "log_RMS": 0.27036399166046354,
+      "mean_diagonal_chi2_per_point_per_galaxy": 272.4243022668712
+    },
+    {
+      "model": "baryons",
+      "split": "test",
+      "n": 31,
+      "RMSE_kms": 47.771889244324356,
+      "log_RMS": 0.25608303859029213,
+      "mean_diagonal_chi2_per_point_per_galaxy": 403.77053816153835
+    },
+    {
+      "model": "companion_third",
+      "split": "train",
+      "n": 89,
+      "RMSE_kms": 29.02512605660848,
+      "log_RMS": 0.13848909638905518,
+      "mean_diagonal_chi2_per_point_per_galaxy": 127.1026187960357
+    },
+    {
+      "model": "companion_third",
+      "split": "validation",
+      "n": 29,
+      "RMSE_kms": 32.49485711556625,
+      "log_RMS": 0.11539400971119736,
+      "mean_diagonal_chi2_per_point_per_galaxy": 49.26842640756131
+    },
+    {
+      "model": "companion_third",
+      "split": "test",
+      "n": 31,
+      "RMSE_kms": 23.590786917262584,
+      "log_RMS": 0.0910582648582728,
+      "mean_diagonal_chi2_per_point_per_galaxy": 137.45281736792805
+    },
+    {
+      "model": "MOND_simple_fitted",
+      "split": "train",
+      "n": 89,
+      "RMSE_kms": 19.889635118667837,
+      "log_RMS": 0.10917236501547446,
+      "mean_diagonal_chi2_per_point_per_galaxy": 43.586540759945066
+    },
+    {
+      "model": "MOND_simple_fitted",
+      "split": "validation",
+      "n": 29,
+      "RMSE_kms": 26.87606597484392,
+      "log_RMS": 0.09542662229128518,
+      "mean_diagonal_chi2_per_point_per_galaxy": 36.13286347200008
+    },
+    {
+      "model": "MOND_simple_fitted",
+      "split": "test",
+      "n": 31,
+      "RMSE_kms": 16.397754884399404,
+      "log_RMS": 0.07833726278962216,
+      "mean_diagonal_chi2_per_point_per_galaxy": 24.81314150325322
+    },
+    {
+      "model": "MOND_simple_fixed",
+      "split": "train",
+      "n": 89,
+      "RMSE_kms": 19.30625571208852,
+      "log_RMS": 0.11286241161249969,
+      "mean_diagonal_chi2_per_point_per_galaxy": 42.568782425403604
+    },
+    {
+      "model": "MOND_simple_fixed",
+      "split": "validation",
+      "n": 29,
+      "RMSE_kms": 26.23635165206711,
+      "log_RMS": 0.09765196383751715,
+      "mean_diagonal_chi2_per_point_per_galaxy": 32.40413393437942
+    },
+    {
+      "model": "MOND_simple_fixed",
+      "split": "test",
+      "n": 31,
+      "RMSE_kms": 16.493220151346932,
+      "log_RMS": 0.08733464280952304,
+      "mean_diagonal_chi2_per_point_per_galaxy": 32.05970105507884
+    },
+    {
+      "model": "NFW_shared_scaling",
+      "split": "train",
+      "n": 89,
+      "RMSE_kms": 37.43678870419525,
+      "log_RMS": 0.14421136274920193,
+      "mean_diagonal_chi2_per_point_per_galaxy": 245.64315443333285
+    },
+    {
+      "model": "NFW_shared_scaling",
+      "split": "validation",
+      "n": 29,
+      "RMSE_kms": 35.17943339848182,
+      "log_RMS": 0.12033199702056081,
+      "mean_diagonal_chi2_per_point_per_galaxy": 85.15268823765665
+    },
+    {
+      "model": "NFW_shared_scaling",
+      "split": "test",
+      "n": 31,
+      "RMSE_kms": 40.544223974736276,
+      "log_RMS": 0.10167923270397718,
+      "mean_diagonal_chi2_per_point_per_galaxy": 155.1917546436721
+    },
+    {
+      "model": "NFW_shared_large_scale_limit",
+      "split": "train",
+      "n": 89,
+      "RMSE_kms": 38.02546210015483,
+      "log_RMS": 0.14400289374633543,
+      "mean_diagonal_chi2_per_point_per_galaxy": 256.5631932041201
+    },
+    {
+      "model": "NFW_shared_large_scale_limit",
+      "split": "validation",
+      "n": 29,
+      "RMSE_kms": 35.16178343485007,
+      "log_RMS": 0.11978979808173477,
+      "mean_diagonal_chi2_per_point_per_galaxy": 84.21159949044795
+    },
+    {
+      "model": "NFW_shared_large_scale_limit",
+      "split": "test",
+      "n": 31,
+      "RMSE_kms": 39.87656635248297,
+      "log_RMS": 0.10082788314306358,
+      "mean_diagonal_chi2_per_point_per_galaxy": 149.69765130233955
+    }
+  ],
+  "rotation_outer": [
+    {
+      "model": "baryons",
+      "split": "validation",
+      "RMSE_kms": 68.76677280240838,
+      "log_RMS": 0.2927784440314347
+    },
+    {
+      "model": "baryons",
+      "split": "test",
+      "RMSE_kms": 61.525941951756934,
+      "log_RMS": 0.2874379290487274
+    },
+    {
+      "model": "companion_third",
+      "split": "validation",
+      "RMSE_kms": 33.22511598280444,
+      "log_RMS": 0.1126110117772481
+    },
+    {
+      "model": "companion_third",
+      "split": "test",
+      "RMSE_kms": 29.201120057080534,
+      "log_RMS": 0.09416769463623964
+    },
+    {
+      "model": "MOND_simple_fitted",
+      "split": "validation",
+      "RMSE_kms": 22.141934671387748,
+      "log_RMS": 0.06360875768615797
+    },
+    {
+      "model": "MOND_simple_fitted",
+      "split": "test",
+      "RMSE_kms": 16.792549959462733,
+      "log_RMS": 0.06458622398675892
+    },
+    {
+      "model": "MOND_simple_fixed",
+      "split": "validation",
+      "RMSE_kms": 22.229217297612784,
+      "log_RMS": 0.06541720473930696
+    },
+    {
+      "model": "MOND_simple_fixed",
+      "split": "test",
+      "RMSE_kms": 16.437554444106834,
+      "log_RMS": 0.07163111786714706
+    },
+    {
+      "model": "NFW_shared_scaling",
+      "split": "validation",
+      "RMSE_kms": 47.089281646228905,
+      "log_RMS": 0.12257320172731836
+    },
+    {
+      "model": "NFW_shared_scaling",
+      "split": "test",
+      "RMSE_kms": 55.41969601790908,
+      "log_RMS": 0.10547291946482226
+    },
+    {
+      "model": "NFW_shared_large_scale_limit",
+      "split": "validation",
+      "RMSE_kms": 46.938780011240496,
+      "log_RMS": 0.12109195637274313
+    },
+    {
+      "model": "NFW_shared_large_scale_limit",
+      "split": "test",
+      "RMSE_kms": 54.73562996628157,
+      "log_RMS": 0.10434871881681139
+    },
+    {
+      "model": "NFW_target_inner_fit",
+      "split": "validation",
+      "RMSE_kms": 16.144784856768037,
+      "log_RMS": 0.06556713773837908
+    },
+    {
+      "model": "NFW_target_inner_fit",
+      "split": "test",
+      "RMSE_kms": 20.070965696518563,
+      "log_RMS": 0.060027944050147664
+    }
+  ],
+  "cluster": {
+    "transparent": {
+      "all_chi2": 3.683878605258336,
+      "omitted_sum": 6.857270808552077
+    },
+    "strong_interception": {
+      "all_chi2": 3.7245300749126073,
+      "omitted_sum": 10.791910541357161
+    },
+    "nfw": {
+      "all_chi2": 3.8549154988449623,
+      "omitted_sum": 6.820948659352073
+    },
+    "mond_point_baryons": {
+      "all_chi2": 4.45747335463326,
+      "omitted_sum": 19.618102798551515
+    },
+    "point_mass_control": {
+      "all_chi2": 7.360654017907054,
+      "omitted_sum": 32.17375854097291
+    }
+  },
+  "redshift_scales": {
+    "conversion_path": 74.61814152700677,
+    "expansion_comoving": 74.92204534795727,
+    "conversion_luminosity": 75.17573147782153,
+    "expansion_luminosity": 76.0376061626299,
+    "linear_control": 75.17651383428588
+  },
+  "redshift_omitted_region": {
+    "conversion_path": {
+      "count": 164,
+      "rms_km_s": 450.71610392926533,
+      "mae_km_s": 328.7644061150906,
+      "bias_km_s": -20.893438767990794
+    },
+    "expansion_comoving": {
+      "count": 164,
+      "rms_km_s": 450.5023949226655,
+      "mae_km_s": 328.83122928862207,
+      "bias_km_s": -19.034516313928297
+    },
+    "conversion_luminosity": {
+      "count": 164,
+      "rms_km_s": 450.3581412693784,
+      "mae_km_s": 328.8873016168649,
+      "bias_km_s": -17.491049975931574
+    },
+    "expansion_luminosity": {
+      "count": 164,
+      "rms_km_s": 450.07415411976535,
+      "mae_km_s": 329.16980925904977,
+      "bias_km_s": -12.426219648444683
+    },
+    "linear_control": {
+      "count": 164,
+      "rms_km_s": 450.3581120890783,
+      "mae_km_s": 328.8879713491708,
+      "bias_km_s": -17.48424427641664
+    }
+  },
+  "brightness_rate": 70.47511461127903,
+  "checks": "Rounded main rotation, Coma, redshift scale and omitted-region values present in manuscript."
+}

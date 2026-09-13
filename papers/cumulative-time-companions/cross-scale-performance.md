@@ -1,3 +1,5 @@
+> Current paper: v1.4 (13 September 2026), evidence through 0756dec. The review now includes matched rotation comparisons with ordinary matter, MOND and specified NFW models; qualified Coma and lens comparisons; conversion-rate versus FLRW and published H0 values; timing/brightness limitations; and the latest reservoir scale and orbital-support results. Older notices below describe historical paper versions. No new fitting was performed for this update.
+
 ## Circular-orbit support: stationary alternative, formation still open
 
 An explicit spherical ensemble of randomly oriented circular orbits supplies tangential stress for all six free profiles and four nonzero J1621 scale branches. Individual radial perturbations in the frozen potential have positive squared frequency. This resolves the isotropic-particle obstruction only for a singular fully tangential completion; collective stability and capture are not proved. The largest J1621 kinetic inventory is about 1.05e60 J, or 6.97e-5 of its effective mass-energy. Incident light-speed energy still requires an interaction and momentum exchange to populate slow bound orbits.

@@ -2,11 +2,11 @@
 
 ## A phenomenological framework for redshift, additional gravity and reservoir emission in a nonexpanding universe
 
-Working paper v1.3 | 13 September 2026 | Evidence through revision 2054afb
+Working paper v1.4 | 13 September 2026 | Evidence through revision 0756dec
 
 ### Abstract
 
-We assess a hypothetical nonexpanding-universe framework in which photons transfer energy into traveling companions and some energy enters gravitationally active reservoirs. The empirical exact-third retention law remains the reference. New matched diagnostics combine stellar mass-to-light gradients, varying orbital anisotropy and lens-calibrated stellar masses in six previously studied galaxies. The transferred companion profile gives total motion chi-squared 111.27-113.56, versus 175.09 for a matched stellar-only control. Freeing the added component's scale and normalization gives 26.49 for the companion family and 49.71 for the tested NFW family, each with six local parameters per galaxy. All forty motion bins are fitted; these are descriptive results, not independent predictions or a model-selection verdict. Free normalization no longer tests the one-third law. One extended companion fit implies 8.42e16 solar masses and an extrapolated circular-speed peak near 4246 km/s at 9.17 Mpc. These unobserved outer signatures expose a degeneracy requiring independent tests. Known equations, proposed mechanisms and fitted rules are distinguished throughout. No branch yet explains redshift, event durations, gravitational profiles, absolute supply and persistence together.
+We assess a hypothetical nonexpanding universe in which photons transfer energy to traveling companions that can enter gravitationally active reservoirs. The shared exact-third prescription improves galaxy rotation over ordinary matter alone, but the tested MOND prescription performs better. Freely fitted companion profiles describe six lens galaxies more closely than matched free NFW profiles; their free normalization no longer tests the one-third law or radiation supply. Six Coma shear bins do not distinguish the fitted companion and NFW shapes. A nearby distance-redshift fit gives a conversion gradient c alpha=74.62 km/s/Mpc, versus H0=74.92 for the specified expansion comparator on the same inputs, with indistinguishable residuals at the precision of this diagnostic. A conditional supernova-brightness calibration instead favors 70.48 and retains redshift-dependent residuals. Recent calculations show that an extreme reservoir is not required by the inner data and that circular particle orbits can support the tested profiles in a frozen potential; formation and collective stability remain unresolved. These are useful partial results, not a common derived explanation of redshift, timing, lensing, supply and persistence. Known mathematics, project postulates and fitted rules are labeled separately.
 
 ### 1. Motivation and scientific scope
 
@@ -336,7 +336,7 @@ $$
 
 Provenance: the bound is ordinary integration of rho_d<=D ac^4/r^4. The energy relation is the reference effective-mass closure using established mass-energy equivalence, not a unique local gravitational-field energy definition. The tail adds at most about 1.30% for J1621+3931. Its interior energy equivalent is about 1.51e64 J; no source history supplies this in the current calculation. No universe age or size is imposed to close that deficit.
 
-Crucially, the same galaxy's stellar-only chi-squared is 3.09385, compared with 2.76199 for the enormous free reservoir: a raw improvement of only 0.33186 with added freedom. This endpoint comparison does not show that the data require the enormous mass. A profile scan with capture scale fixed at successive values is still needed to quantify that tradeoff; it has not been executed in this paper revision. No free-fit parameters replace the shared exact-third reference.
+Crucially, the same galaxy's stellar-only chi-squared is 3.09385, compared with 2.76199 for the enormous free reservoir: a raw improvement of only 0.33186 with added freedom. This endpoint comparison does not show that the data require the enormous mass. The now-executed fixed-scale scan quantifies this tradeoff in Section 5.6. The extreme reservoir is one nearly degenerate fitted branch, not a measured inventory. No free-fit parameters replace the shared exact-third reference.
 
 #### 5.5 Frozen outer predictions and the extended-envelope degeneracy
 
@@ -364,6 +364,130 @@ The scanned circular-speed maximum is approximately 4246 km/s near 9.17 Mpc. At 
 No additional critical curves are found over the finite 0.01-10000 kpc scan beyond the inner radial/tangential pair. J1621+3931 has maximum sampled compactness 2GM/(rc^2) about 4.01e-4 and near-central potential magnitude about 4.79e-4 c^2. The large mass is diffuse, so its size alone is not an automatic horizon or extra-ring argument. These diagnostics do not establish stability, relativistic completion or the accuracy of isolated thin-lens geometry over this environment.
 
 An initial unsplit angular projection failed a central critical-curve refinement check; splitting at capture-scale crossings resolved the distant-envelope contribution. Final catalogue mean-convergence normalization agrees within 1.55e-6, projected-mass derivative consistency within 3.07e-7 in convergence, and refined critical eigenvalue residuals within 1.22e-8. These are numerical checks rather than measurement uncertainties.
+
+#### 5.6 Updated reservoir assessment: degeneracy and support
+
+Refitting five other local parameters at seven fixed J1621 capture scales changes the interpretation of its extreme mass. The ac/Re=10 branch has 1.73e14 solar masses, about 486 times less than the ac/Re=100 branch, while motion chi-squared changes only from 2.76199 to 2.76284. The stellar-only value is 3.09385. Inner observations therefore do not select a large inventory. These are profile scans of previously fitted data, not confidence limits from a full nuisance-parameter analysis.
+
+Less mass is not simply a weaker version of the same outer field. At 300 kpc the ac/Re=10 branch predicts circular speed 842.67 km/s and reduced tangential shear 0.03823, versus 116.39 km/s and 0.000984 for ac/Re=100. The mass has moved inward. Compact and stellar-only branches instead give nearly identical outer predictions. These are frozen extrapolations without new outer observations; environment and source geometry must be included before comparison.
+
+A necessary support test excludes spherical bound collisionless isotropic particles for four of the six free profiles and five of six transferred Chabrier profiles: their deposited density rises outward in an attractive potential. For a nonnegative isotropic distribution f(relative energy), established phase-space integration requires density to increase with relative potential, which decreases outward. This objection concerns deposited particles, not the separately fitted stellar orbits. Passing the condition is not sufficient for a physical distribution function.
+
+An explicit alternative uses randomly oriented circular particle orbits, with no mean rotation but nonzero tangential stress. In the frozen spherical potential,
+
+$$
+v_c^2=GM/r,\qquad p_r=0,\qquad p_\theta=p_\phi=\rho_d v_c^2/2,\qquad \omega_r^2=G(M+rM')/r^3>0.\tag{25}
+$$
+
+Provenance: established circular dynamics, Jeans balance and an Einstein-cluster-type construction [24], not a new companion interaction. The calculation supports all six free profiles and four nonzero J1621 branches in this singular, fully tangential idealization. Positive omega_r squared establishes individual radial stability in the frozen field, not collective stability or a formation history. The extreme branch has orbital kinetic energy about 1.05e60 J, or 6.97e-5 of its effective mass-energy. Binding release may supply this kinetic energy, so it must not automatically be counted as a second external budget. Incoming light-speed companions still need a momentum-exchanging interaction to populate slow bound orbits. Net zero angular momentum does not eliminate individual orbital angular momentum.
+
+#### 5.7 Newtonian, MOND and dark-halo rotation comparisons
+
+The common 149-galaxy SPARC sample includes gas and uses fixed published distances, inclinations and disk/bulge mass-to-light ratios 0.5/0.7. The original fits minimize equal-galaxy mean squared log10 speed. The following equal-galaxy speed RMSE values are descriptive summaries of those fits, not the fitting objective. There are 89 training, 29 validation and 31 test galaxies, all exposed during development.
+
+| Prescription | Shared fitted parameters | Validation RMSE (km/s) | Test RMSE (km/s) |
+|---|---:|---:|---:|
+| Ordinary-matter Newtonian | 0 | 58.22 | 47.77 |
+| Exact-third companion | 3 | 32.49 | 23.59 |
+| Simple MOND, fitted a0 | 1 | 26.88 | 16.40 |
+| Simple MOND, fixed a0 | 0 | 26.24 | 16.49 |
+| NFW, imposed shared scaling | 3 | 35.18 | 40.54 |
+
+The tested MOND rule [22] and the spherical Newtonian acceleration relation are
+
+$$
+g_N=GM_b(<r)/r^2,\qquad g_{\rm MOND}=g_b/2+\sqrt{g_b^2/4+a_0g_b}.\tag{26}
+$$
+
+Provenance: established Newtonian gravity and the known simple MOND interpolation, not our formulas. In the actual disk comparison g_b comes from the supplied gas, disk and bulge rotation contributions rather than a spherical enclosed-mass approximation. Fitted a0=8.5633e-11 m/s squared; the fixed control uses 1.2e-10. This algebraic MOND comparison is not a full nonspherical field solution with external-field effects or a relativistic lensing theory.
+
+The NFW row imposes rs=s Rdisk and rho_s=rho0 X raised to a shared fitted power. Its fitted s reaches the upper bound 100. This restrictive galaxy-to-halo mapping is a project choice, not a general prediction of dark matter. A separate outer-radius experiment fits two halo parameters to each target's inner 60% of radial points:
+
+| Model on outer 40% only | Uses target inner motions? | Validation RMSE | Test RMSE |
+|---|---|---:|---:|
+| Ordinary matter | No | 68.77 | 61.53 |
+| Shared exact-third | No | 33.23 | 29.20 |
+| Shared fitted MOND | No | 22.14 | 16.79 |
+| Per-target NFW | Yes | 16.14 | 20.07 |
+
+Units are km/s. These scores use the same 60 comparison galaxies but different radial subsets from the first table. NFW consumes more target information; 41 of 60 fits meet a parameter bound. Outer points were excluded from those local fits but were previously inspected. Neither table supports general superiority over dark matter. Section 5.1 uses a different velocity-space objective and must not be mixed into this ranking.
+
+#### 5.8 Cluster comparison and missing gravitational controls
+
+The Coma diagnostic reconstructs six shear points from Kubo et al. [23], retains the negative outer point and uses the plotted diagonal errors. Its NFW all-bin chi-squared 3.85 approximately reproduces the publication's 3.87, correcting the impression that NFW inherently fits this cluster poorly. No independent source inventory is supplied to the companion normalization.
+
+| Fitted shape | All-six chi-squared | Omitted-bin residual-square sum |
+|---|---:|---:|
+| Transparent companion | 3.68 | 6.86 |
+| Strong-interception companion | 3.72 | 10.79 |
+| NFW | 3.85 | 6.82 |
+| Compact-baryon MOND approximation | 4.46 | 19.62 |
+| Point-mass control | 7.36 | 32.17 |
+
+Each omitted-bin score refits the remaining five bins. This is a small, already exposed shape diagnostic without the original full covariance. Free amplitude absorbs the retention factor and external radiation supply, so it does not test one-third retention. NFW represents a total fitted shape here, rather than a separately measured gas-plus-halo decomposition. The MOND row assumes compact baryons and an imposed equal-potential lensing response, with freely adjusted amplitude and scale; it is not transfer of the galaxy a0 into a realistic extended cluster. The point mass is a numerical control, not a viable ordinary-matter cluster model.
+
+A matched extended-baryon Newtonian/GR and MOND cluster calculation remains absent. A matched MOND analysis of the six lens galaxies is also absent. Their stellar-only lens control uses ordinary stellar gravity with GR weak-field light bending; it does not apply a Newtonian particle-deflection formula to photons. Those missing comparisons prevent claiming that success on galaxies and clusters makes the theory better than MOND. The six lens galaxies, Coma and the Milky Way pilot have different data, fitted freedoms and score definitions; their raw residuals cannot be added into a global evidence score.
+
+#### 5.9 Conversion rate versus the Hubble constant
+
+Our constant-alpha law has a low-redshift gradient with familiar Hubble units:
+
+$$
+H_{\rm conv}\equiv c\alpha=c\left.\frac{dz}{dD}\right|_{D=0},\qquad z=\exp(H_{\rm conv}D/c)-1.\tag{27}
+$$
+
+Provenance: a definition and the known exponential solution of (1), not a novel expansion equation. H_conv measures fractional photon-energy transfer per distance. The actual expansion rate is zero in the stipulated static background; H_conv is not that rate and its inverse is not an inferred universe age. No physical theory yet derives its fitted value.
+
+For a specified expansion comparator we use the established flat FLRW distance relations [18], with Omega_m=0.3, Omega_Lambda=0.7 and radiation neglected:
+
+$$
+D_C(z)=\frac{c}{H_0}\int_0^z\frac{dz'}{\sqrt{0.3(1+z')^3+0.7}},\qquad D_L=(1+z)D_C.\tag{28}
+$$
+
+Provenance: known cosmological relations, used only as a competing explanation. Present-day comoving distance is not the distance a photon physically traveled. The nearby comparison holds the supplied published distances fixed and interprets them alternatively as static path distance or comoving distance; it is a conditional curve comparison, not a reanalysis of the distance measurements under both theories.
+
+| Same nearby inputs | Fitted scale (km/s/Mpc) | Eight-region omitted-region RMS (km/s) |
+|---|---:|---:|
+| Conversion, path | 74.618 | 450.716 |
+| FLRW, comoving | 74.922 | 450.502 |
+| Conversion, luminosity sensitivity | 75.176 | 450.358 |
+| FLRW, luminosity sensitivity | 76.038 | 450.074 |
+| Linear distance-redshift control | 75.177 | 450.358 |
+
+There are 164 recovered galaxy groups at 10.20-93.20 Mpc. Scales use 104 training groups; each eight-region score instead refits on the other seven regions and aggregates predictions across all 164. The old 25-group test RMS is 415.41 versus 414.99 km/s for the first two rows. Paired sky bootstrap 95% intervals for the conversion-minus-expansion RMS difference span zero: approximately [-0.95,1.39] km/s for the first pair and [-2.98,3.58] for the luminosity pair. These diagnostics do not resolve a difference, but they do not establish statistical equivalence or parity on other cosmological observations. Peculiar motions, distance calibration and frame uncertainties remain material.
+
+The luminosity sensitivity row uses stationary photon-number-conserving conversion, D_L=r sqrt(1+z). It is an alternative interpretation of the supplied distances, not a physical recalibration of surface-brightness-fluctuation measurements. It also differs from the event-stretched brightness branch below. These alternatives must not be combined as one tested model.
+
+For scale, a 100-million-light-year static path gives z=0.00766048: a 500 nm photon becomes 503.830 nm and transfers 0.7602% of its energy. Those are predictions of the fitted rule, not a measurement of a particular galaxy. The wavelength change does not by itself stretch an event's duration.
+
+| Rate determination | Value (km/s/Mpc) | Meaning and uncertainty |
+|---|---:|---|
+| Our nearby H_conv | 74.62 | Training sky-bootstrap 95% range 72.42-76.89; incomplete systematics |
+| Our supernova-brightness H_conv | 70.48 | Formal delta-chi-squared-one range 69.47-71.49; conditional propagation law |
+| Our same-input FLRW H0 | 74.92 | Fixed 0.3/0.7 comparator above; not a precision external result |
+| Planck base flat LCDM [19] | 67.4 +/- 0.5 | CMB-inferred H0 conditional on that cosmology |
+| SH0ES 2022 [20] | 73.04 +/- 1.04 | Cepheid-supernova distance ladder, reported uncertainty |
+| Local Distance Network 2026 [21] | 73.50 +/- 0.81 | Covariance-aware combined local distance indicators |
+
+The last three rows are published context, not fits to our sample. Their calibrations and assumptions differ, and the local estimates are not independent of each other. Our bootstrap range and formal likelihood interval are not interchangeable one-sigma errors. Numerical proximity to a published H0 is not evidence for photon conversion. We do not resolve the Hubble tension by renaming or retuning the slope.
+
+The brightness branch assumes event stretching by 1+z and a static beam, giving F=L/[4 pi D squared (1+z) squared]. With 77 calibrator rows, 466 training rows at 0.1<=z<0.3 and 494 higher-redshift comparison rows, refitting alpha yields H_conv=70.475 and reduces comparison chi-squared from 424.48 to 391.84. Residual means still rise from about 0.062 mag at z=0.3-0.6 to 0.225 mag at z=1-3. A constant alpha changes only the magnitude normalization in this branch; it cannot remove that trend. A separately fitted regular beam-area branch reduces the higher-redshift score to 389.18 while retaining a roughly 0.116 mag highest-bin residual. These are exposed-data alternatives, not a common completed law. A matched full FLRW supernova likelihood with identical calibration, covariance and nuisance choices has not been executed here.
+
+#### 5.10 Propagation tests beyond a redshift curve
+
+The following diagnostics test different parts of the proposed propagation mechanism. Each must eventually follow from the same physical law.
+
+| Observable | Executed result | Consequence for the common model |
+|---|---|---|
+| Supernova spectral aging, 35 rows | Stationary-duration chi-squared 150.57; 1+z stretch 26.95 | Energy loss alone leaves the event-duration problem |
+| Brightness repaired by timing alone | Required exponent 1.481; aging chi-squared 47.06 | More delay cannot freely substitute for missing dimming |
+| GW170817 timing | Photon-only affine-time branch predicts about 674646 years extra flight time | That differential-delay branch fails the observed near-coincidence |
+| Limited radio comparisons | Two independent centroid groups, three methanol lines | Common fractional shift is not excluded there; not all-spectrum validation |
+| Microwave spectrum, 43 FIRAS channels | Tested number-retaining thermal history fails | A blackbody origin and transfer law remain to be supplied |
+
+The observed GW/gamma arrival separation is 1.74 +/- 0.05 seconds [3], with source emission delay uncertainty. The huge calculated delay belongs to a specific photon-only time law at 40.7 Mpc; it is not a generic consequence of redshift or a measured lag. Equal GW and electromagnetic propagation can cancel their common delay, but that response has not been derived from the energy-transfer mechanism. Constant-speed energy transfer avoids that particular differential-delay calculation while leaving event stretching unexplained. DES reports duration scaling (1+z) raised to b, with b=1.003 +/- 0.005 statistical +/- 0.010 systematic [2]. Source-population assumptions matter, but the duration data remain constraints in the fictional universe. The standard expansion benchmark links wavelength and duration stretching; our proposed mechanism must supply its own common derivation.
+
+There is no executed joint likelihood covering CMB angular structure, baryon acoustic patterns, abundances and all the foregoing tests for our model. Synthetic multiband predictions are not observations. Newtonian gravity alone and a halo density profile alone are not competing cosmological redshift theories, so assigning either a standalone H0 score would misstate the comparison.
 
 ### 6. Evidence that would materially strengthen the theory
 
@@ -401,7 +525,7 @@ These tracks must eventually share one energy and momentum ledger. Until then th
 
 ### 9. Conclusion
 
-The companion density family can describe the six fitted lens galaxies more closely when its scale and strength are independently adjustable. That is progress in identifying useful gravitational profiles, not a derivation of their radiation origin. The shared exact-third prescription retains substantial joint residuals, and freeing normalization removes the test of that exponent. Freely fitted NFW halos also improve strongly, qualifying earlier restricted comparisons. The companion family's lower matched raw residual is accompanied by active bounds and, in one case, an enormous extended reservoir with testable outer predictions. The small gain over stellar-only in that galaxy does not establish that its huge mass is required. Independent outer tests, a quantified scale degeneracy, physical orbital support and a calculated source supply are the next discriminants. Redshift and event timing still require a consistent propagation mechanism. No replacement for dark matter, MOND or expanding cosmology is established.
+The project has established a useful empirical gravity family and a calibrated redshift curve, with numerical checks and explicit failures. Shared companions improve ordinary-matter rotation but do not beat the tested MOND rule. Freely fitted companion profiles improve on matched NFW fits in six lens galaxies, at the cost of removing the shared normalization test; Coma does not distinguish the main fitted shapes. The extreme reservoir is not required, and idealized tangential orbital support is possible, but capture, collective stability and absolute supply remain open. Nearby conversion and expansion curves have almost identical errors, while brightness favors a different conditional conversion rate. A single mechanism has not yet connected these successes to event timing and the remaining observations. The most informative next work is a shared supply-and-support closure, matched missing gravitational comparisons, and a joint propagation fit with frozen parameters. These determine whether the model predicts new outcomes rather than assigning a separate rule to each phenomenon. No replacement for MOND, dark matter or expanding cosmology is established.
 
 ### References
 
@@ -439,6 +563,20 @@ The companion density family can describe the six fitted lens galaxies more clos
 
 [17] Bartelmann, M. and Schneider, P. (2001). Weak Gravitational Lensing. [arXiv:astro-ph/9912508](https://arxiv.org/abs/astro-ph/9912508).
 
+[18] Hogg, D. W. (1999). Distance measures in cosmology. [arXiv:astro-ph/9905116](https://arxiv.org/abs/astro-ph/9905116).
+
+[19] Planck Collaboration (2020). Planck 2018 results VI. Cosmological parameters. [arXiv:1807.06209](https://arxiv.org/abs/1807.06209).
+
+[20] Riess et al. (2022). A Comprehensive Measurement of the Local Value of the Hubble Constant with 1 km/s/Mpc Uncertainty. [arXiv:2112.04510](https://arxiv.org/abs/2112.04510).
+
+[21] H0 Distance Network Collaboration (2026). The Local Distance Network: A community consensus report on the measurement of the Hubble constant at approximately 1% precision. A&A 708, A166. [Published paper](https://eprints.whiterose.ac.uk/id/eprint/240623/1/aa57993-25.pdf).
+
+[22] Famaey and McGaugh (2012). Modified Newtonian Dynamics (MOND): Observational Phenomenology and Relativistic Extensions. [arXiv:1112.3960](https://arxiv.org/abs/1112.3960).
+
+[23] Kubo et al. (2007). The Mass of the Coma Cluster from Weak Lensing in the Sloan Digital Sky Survey. [arXiv:0709.0506](https://arxiv.org/abs/0709.0506).
+
+[24] Boehmer and Harko (2007). On Einstein clusters as galactic dark matter halos. [arXiv:0705.1756](https://arxiv.org/abs/0705.1756). Established orbital-support construction; not evidence for photon-derived companions.
+
 ### Reproducibility and research status
 
-This v1.3 revision summarizes committed evidence through 2054afb. Earlier snapshots remain in Git history. Newly incorporated records in research_work/results/companion-extensions/ are gradient-orbits, constrained-gradient-orbits, all-motion-orbits, orbit-transition, stellar-only-lens-control, nfw-shape-control, free-nfw, free-companion (including refinement and inventory), and outer-companion-predictions. Their protocols, scripts, reports and JSON files retain inputs, parameters and checks; cross-scale-performance.md indexes the historical sequence and the manifest records artifact hashes. The normalization correction remains recorded at 24534de. No new fitting or outer observational comparison was performed for this manuscript update. The rotation sample has 149 galaxies and 3150 accepted measurements in exposed partitions; lens diagnostics contain six systems and forty motion bins. Alternative population proxies are not additional galaxies. Computational assistance was used in analysis and drafting; independent scientific review remains necessary.
+This v1.4 revision reviews evidence through 0756dec; no new fitting was performed for the manuscript update. The comparison audit uses isotropic-galaxy-transfer/model-comparison-results.json and cluster-comparison-detail-results.json; direct-conversion/results.json; brightness-distance-consistency/rate-results.json and regular-area-report.md; electromagnetic-audit/report.md; and joint-propagation-audit/report.md. Latest support and degeneracy results are companion-extensions/reservoir-scale-scan, reservoir-branch-outer, reservoir-isotropic-support and circular-reservoir-support, each with executable scripts, reports and JSON results. The existing free-companion, free-nfw and matched lens-control records supply the six-galaxy tables. The comparison snapshot and source hashes are recorded in paper-comparison-audit.json beside this manuscript. Cross-scale-performance.md retains the historical research sequence. The normalization correction remains recorded at 24534de. Alternative population proxies are not extra galaxies; repeated partitions are not new observations. Computational assistance was used in analysis and drafting; independent scientific review remains necessary.
