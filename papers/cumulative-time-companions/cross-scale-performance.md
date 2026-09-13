@@ -1,3 +1,9 @@
+## Hollow-profile constraint on deposited-particle support
+
+A new necessary-condition test rejects spherical bound collisionless isotropic particle support for four of six free companion profiles, five of six transferred Chabrier profiles, and all three extended J1621 branches. Their deposited density rises outward, incompatible with a nonnegative isotropic f(relative energy) in the assumed attractive potential. This concerns deposited particles, not the earlier stellar orbit checks. Wave stresses, tangentially biased particles and ongoing flows remain distinct unproved alternatives.
+
+A central expansion derives the hollow threshold B=pi*(k0 ac)/4+(k0 ac)^2/6-2>0; changing the one-third amplitude cannot repair it. Coarse/refined classifications and the analytic criterion agree. No individual J1621 outer-shear comparison was obtained from the checked SLACS ensemble papers. See [support derivation, results and alternatives](../../research_work/results/companion-extensions/reservoir-isotropic-support-report.md). PDF v1.3 predates this result.
+
 ## Outer signatures distinguish near-equivalent inner fits
 
 Frozen projections of all seven J1621+3931 scale-profile solutions show that reducing reservoir mass moves the strong gravitational effect inward. At 300 kpc, ac/Re=10 gives an implied circular speed of 843 km/s and reduced shear 0.03823, whereas ac/Re=100 gives 116 km/s and 0.000984 despite almost identical inner scores. The intermediate branch has a different signed shear pattern; compact and stellar-only branches remain nearly indistinguishable outside. These are unobserved conditional predictions, requiring appropriate source geometry, environmental modeling and tracer distributions before an actual comparison.

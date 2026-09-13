@@ -1,3 +1,5 @@
+> New support constraint: outward-rising deposited density excludes a spherical bound collisionless isotropic particle completion for 4/6 free and 5/6 transferred Chabrier profiles. It does not exclude all companion interpretations. Tangential support, wave stresses or evolution need explicit calculations. See reservoir-isotropic-support-report.md; PDF v1.3 predates this result.
+
 > Frozen branch comparison: the lower-mass J1621 ac/Re=10 branch predicts stronger gravity nearer the galaxy (843 km/s circular diagnostic and 0.03823 reduced shear at 300 kpc), unlike the almost-equivalent inner fit at ac/Re=100 (116 km/s and 0.000984). No outer observations were fitted. See reservoir-branch-outer-report.md; PDF v1.3 predates this calculation.
 
 > New fixed-scale result: J1621+3931 can store about 486 times less mass than the extreme fit with only 0.000850 higher chi-squared. Stellar-only differs by just 0.332. The huge reservoir is not uniquely required by these inner data. See reservoir-scale-scan-report.md; v1.3 PDF predates this scan.

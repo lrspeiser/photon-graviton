@@ -1,0 +1,5 @@
+# Necessary isotropic particle-support diagnostic
+
+Before execution: assess the six free-companion profiles, nonzero J1621 fixed-scale branches and six transferred Chabrier reference profiles for outward-rising deposited density. Keep each recorded capture scale and fixed k0. In a spherical positive-mass potential, a nonnegative bound collisionless isotropic distribution f(relative energy) requires deposited density to be nonincreasing with radius. Derive this from the standard density integral; do not confuse this deposited-component test with prior stellar tracer anisotropy checks.
+
+Evaluate log density on 4097 logarithmic x=r/ac points from 1e-4 to 1000 with 192 incoming angles. Verify with 8193 points and 384 angles. Report robust positive slope exceeding 1e-3 where density exceeds 1e-12 of its peak, density-peak radius and sampled enclosed mass fraction inside the peak. A violation rejects only this isotropic bound-particle completion, not anisotropic particles, interacting waves, ongoing flows or the effective gravitational fit. Absence of violation is not a positive distribution-function or stability proof. No fits or new observed data.
