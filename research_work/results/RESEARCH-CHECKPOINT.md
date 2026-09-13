@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Finite local formation.** Empty local stores under the full-opacity field were tested at six common durations plus equilibrium. Training selection chooses u=10, giving validation/test RMSE 29.41/25.93 km/s versus matched reference 30.82/21.41. The common-history grid is not an improvement across partitions; this is a fixed-field diagnostic, not coupled time-dependent transport or a physical age estimate. [Report](companion-extensions/local-formation-report.md).
+
 **Conservative-recycling endpoint.** Isotropic same-channel re-emission admits stationary J=1 under an isotropic boundary bath, giving density Cg eta(X). Training-adjusted validation/test RMSE is 28.82/30.88 km/s versus matched reference 30.82/21.41. Stationary recycling avoids a separate escape-channel drain but does not establish formation energy, post-source retention or a physical return mechanism. [Report](companion-extensions/conservative-recycling-report.md).
 
 **Occupancy-dependent transport.** Solving empty-site capture and local filling together across 149 inputs increases deposits further. Training-adjusted validation/test RMSE is 28.64/26.70 km/s versus matched reference 30.82/21.41. Stationary absorbed power is balanced by an explicitly assumed non-recaptured release channel; its microscopic cause and local support remain open. [Report](companion-extensions/occupancy-transport-report.md).

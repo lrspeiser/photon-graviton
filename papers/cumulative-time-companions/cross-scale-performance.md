@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Finite local formation histories
+
+The [local-formation scan](../../research_work/results/companion-extensions/local-formation-report.md) starts threshold storage empty under the full-opacity field and compares six shared dimensionless durations plus equilibrium. Training selects u=10, with validation/test velocity RMSE 29.41/25.93 km/s against the matched reference at 30.82/21.41. The early linear-illumination limit changes the galaxy-to-galaxy source scaling and is not rescued by one amplitude on this grid. No physical age, preferred duration, or time-dependent transport closure is established.
+
 ## Conservative same-channel release
 
 The [full-recycling endpoint](../../research_work/results/companion-extensions/conservative-recycling-report.md) has the exact stationary solution J=1 in an isotropic boundary bath when absorbed energy is re-emitted isotropically into the same gray channel. The unattenuated density Cg eta(X) worsens test RMSE to 30.88 km/s after a training-only amplitude adjustment, versus 26.70 for escaping release and 21.41 for the matched reference. Local capture/release cancels at equilibrium; initial supply, isolated retention, microscopic transitions and support are not derived. No release endpoint is adopted as a solution.
