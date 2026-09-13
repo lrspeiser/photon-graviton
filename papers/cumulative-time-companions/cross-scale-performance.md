@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Thermal-wave capacity at gravitational energy scales
+
+A physical two-polarization, c-speed thermal bath has far too little local cold capacity for the tested heat budgets. In the 120-kpc larger-gap benchmark, prior orbital cooling exceeds available capacity by 5.58e20; a cold thermal outlet would need 2.91e26 years. These are conditional local-volume and throughput requirements, with no imposed universe age. Nonthermal escape and distinct slow/massive baths remain alternatives requiring derivation. The [bath budget](../../research_work/results/companion-extensions/bath-budget-report.md) separately records previous orbital cooling and the stronger conditional identification of all deposit energy with protected excitations. It does not silently count seed mass as newly created gravity or impose a conventional cosmological horizon.
+
 ### Finite-bath heating and cooling costs
 
 A finite-temperature bath now warms under protected-state relaxation, with heat capacity and cooling-outlet energy explicitly included. Small capacity substantially weakens protection; larger capacity or exported heat can preserve it in the conditional model. Thirty-six cases and six refinements close the energy ledger. Physical bath degrees of freedom, volume, heat capacity and cooling channels remain to be supplied. The [self-heating test](../../research_work/results/companion-extensions/finite-bath-report.md) removes the assumption of a freely maintained cold bath. Its constant heat capacity and outlet are still hypotheses; no astronomical temperature or lifetime is inferred.
