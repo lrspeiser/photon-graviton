@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Exact-third threshold-mixture checkpoint
+
+The [threshold mixture](../../research_work/results/companion-extensions/threshold-mixture-report.md) represents the reference exactly using a known positive distribution of first-power saturation thresholds. This is inverse design, not an independent derivation of one-third. Twenty-five integral checks, finite cutoffs and source-removal calculations expose the required breadth and potential slow release. Occupied capacity is not automatically permanent capture efficiency. Observational scores and the reference are unchanged.
+
 ## Finite reciprocal reservoir checkpoint
 
 The [collective-reservoir calculation](../../research_work/results/companion-extensions/collective-reservoir-report.md) adds a finite protected level with forward and inverse relaxation. Its no-decay occupancy is (n+1)/(n+1+r n), independent of domain size, while collective rates can improve replenishment under leakage. Fifty-four stationary generators close current and energy balances; eighteen no-decay cases match the analytic product distribution. Larger domains require additional energized constituents and do not automatically improve capacity per unit material. Protection lifetime, bath transport and reservoir multiplicity remain hypotheses, with no observational-fit or retention-reference changes.

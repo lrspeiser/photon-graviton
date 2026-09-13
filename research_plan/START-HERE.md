@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: exact-third threshold mixture.** A known positive mixture of ordinary saturation responses represents the reference exactly. The distribution is inverse-designed, not derived. Finite cutoffs alter the curve; stipulated release kinetics produce slow depletion rather than permanent storage. See [report](../research_work/results/companion-extensions/threshold-mixture-report.md).
+
 **Latest checkpoint: finite reciprocal protected reservoir.** Collective transfer can replenish leakage faster, but no-decay equilibrium protected occupancy is (n+1)/(n+1+r n), independent of domain size. Returning waves and finite capacity remain essential. Fifty-four stationary cases include the reverse export and close the energy ledger. See [report](../research_work/results/companion-extensions/collective-reservoir-report.md).
 
 **Latest checkpoint: collective-state normalization.** An empty domain has first-excitation rate factor N, not N^2. Partly excited symmetric states can enhance rates more strongly, but require preparation energy and enhance reverse transitions too. The tested closed ladders reach zero net current. A physically specified protected export remains necessary. See [report](../research_work/results/companion-extensions/collective-normalization-report.md).
