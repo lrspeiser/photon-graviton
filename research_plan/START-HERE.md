@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Solar-system specialization:** [Photon-fed well formulas](solar-system-photon-feeding.md) calculates solar photon output, conversion at the retained alpha, capture-dependent stored energy and its gravitational effect. Perfect capture within 100 AU bounds solar-generated deposits at about 16,219 kg/year; the solar source loses the emitted energy. No graviton count or capture efficiency is inferred from force strength.
+
 **New theory extension:** [Persistent microwave background and collective spatial modes](persistent-microwave-background.md) adds recording-transition, driven-resonance and spatial-pattern alternatives, with optional boundary-free spherical geometry. Known mode mathematics is distinguished from proposed physics. No radius/age is fixed, no CMB fit is claimed, and energy supply/retention constraints remain. Use the [current checkpoint](../research_work/results/RESEARCH-CHECKPOINT.md) for the latest executed results.
 
 **Latest:** [Joint galaxy/redshift analysis](../research_work/results/joint-galaxy-audit/report.md) and [local well response/bulge comparison](../research_work/results/joint-galaxy-audit/bulge-local-well.md). A companion deposit may deepen or reshape a local well; incoming direction is not an imposed force direction. Keep ordinary cold-source fits as conditional benchmarks. New bulge field moments have no derived dynamical prediction yet. The actual/predicted explorer marks these missing predictions explicitly.
