@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Source-template version verified:** [Hsiao author-release audit](hsiao-source-audit/report.md) confirms the cached spectral file is byte-identical to the author release: 106 phases through +85 days. The accompanying light-curve table extends to +90, so late spectral extrapolation is not authorized by that table. The empirical color/time history is a conditional modeling input, not an independent physical clock. Full ESSENCE response acquisition and a shared source-variation model remain needed. All six goals stay open.
+
 **ESSENCE filter-version mismatch:** [Legacy response audit](essence-passband-audit/report.md) recovers local R/I curves but finds their extra wavelength weighting and shape differ from the 2016 photon-throughput table. A rescaled R anchor differs by 2.06%; the legacy I response omits the printed 9725-Angstrom tail. Eight samples do not establish integrated flux errors. Full release-matched throughput remains needed; no substitute filters or joint photometric fit were adopted.
 
 **Same-object brightness linked:** [72 ESSENCE SN 2006mk measurements](sn2006mk-joint-photometry/report.md) include R4m/I4m observations within 0.14 day of both acquired spectra. Late/early flux ratios are 0.354/0.642, with conditional diagonal errors 0.054/0.152. All negative measurements and original headers are retained. Temporal ratios constrain source evolution and timing but cancel a constant propagation normalization; no absolute brightness or distance-law validation follows. All six goals remain open.
