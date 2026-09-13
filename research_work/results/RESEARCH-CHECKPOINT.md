@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**NFW under both geometries executed:** [Matched report](isotropic-galaxy-transfer/nfw-geometry-report.md). NFW also struggles in J0037/J1204/J1402 under our retained optical branch. Standard benchmark geometry lowers their motion scores 88.59/54.38/195.85 to 20.20/4.05/43.07. Residuals and boundaries prevent complete-success claims. All six NFW systems improve with standard geometry; the same companion model under standard geometry is not yet tested. All research goals remain open.
+
 **Flexible lens profile test:** [Compatibility report](isotropic-galaxy-transfer/lens-profile-compatibility-report.md) keeps the one-third inventory and fits positive conservative mixtures to each lens. Three systems retain severe stellar errors when the lens angle is forced; others show less conflict. Successful target fits are inverse diagnostics, not universal predictions. Basis/orbit boundaries and fixed geometry/matter assumptions prevent a general impossibility claim. No goal is complete.
 
 **Redistribution preserves exact one-third but does not solve lensing:** [Executed variants](isotropic-galaxy-transfer/redistribution-report.md) keep all capture constants fixed. Best training-selected compact follow-up concentrates f=0.00369849 to s=0.10217474, improves validation/test speed RMS 32.495/23.591 to 31.666/22.591 km/s, and leaves lens RMS 13.915/14.083%. Two additional shared parameters, exposed samples, no physical migration derivation. All goals remain open; no new multi-cluster prediction is claimed.
