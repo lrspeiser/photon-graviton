@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: finite thresholds on 149 galaxies.** With all original parameters fixed, a 12-decade threshold range changes speeds by at most 0.640 km/s; a six-decade range reaches 7.03 km/s and worsens aggregate validation/test velocity RMSE. This is an exposed-sample sensitivity comparison, not a new blind test or a physical derivation. See [report](../research_work/results/companion-extensions/threshold-galaxies-report.md).
+
 **Latest checkpoint: exact-third threshold mixture.** A known positive mixture of ordinary saturation responses represents the reference exactly. The distribution is inverse-designed, not derived. Finite cutoffs alter the curve; stipulated release kinetics produce slow depletion rather than permanent storage. See [report](../research_work/results/companion-extensions/threshold-mixture-report.md).
 
 **Latest checkpoint: finite reciprocal protected reservoir.** Collective transfer can replenish leakage faster, but no-decay equilibrium protected occupancy is (n+1)/(n+1+r n), independent of domain size. Returning waves and finite capacity remain essential. Fifty-four stationary cases include the reverse export and close the energy ledger. See [report](../research_work/results/companion-extensions/collective-reservoir-report.md).

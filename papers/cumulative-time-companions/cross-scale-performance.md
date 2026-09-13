@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Finite thresholds on the galaxy sample
+
+The [frozen galaxy comparison](../../research_work/results/companion-extensions/threshold-galaxies-report.md) applies finite threshold mixtures to all 149 original galaxies without optimization. The reference scores are reproduced from verified inputs. Threshold ranges of 12 and 18 decades shift speeds by at most 0.640 and 0.0634 km/s; six decades reaches 7.03 km/s. Aggregate validation/test velocity RMSE worsens slightly, although the test logarithmic metric can improve. These exposed partitions provide sensitivity evidence only. The mixture can preserve the reference numerically but does not derive its physics or solve its residuals.
+
 ## Exact-third threshold-mixture checkpoint
 
 The [threshold mixture](../../research_work/results/companion-extensions/threshold-mixture-report.md) represents the reference exactly using a known positive distribution of first-power saturation thresholds. This is inverse design, not an independent derivation of one-third. Twenty-five integral checks, finite cutoffs and source-removal calculations expose the required breadth and potential slow release. Occupied capacity is not automatically permanent capture efficiency. Observational scores and the reference are unchanged.
