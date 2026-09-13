@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Discrete transfer and survivor spectra
+
+An exact discrete energy-transfer/removal process now couples spectral width and photon survival. For illustrative width 1e-5 and 90% survival at z=1, 2 eV light requires gap <=2e-10 eV and removal/useful ratio <=2.11e-11. The previous small-gap drift survival estimates remain accurate, but their brightness allowance alone did not guarantee this linewidth. These are model design conditions, not measured exclusions or derived branching ratios. The [Markov solution](../../research_work/results/companion-extensions/discrete-transfer-report.md) includes survival selection and all energy sectors, with nine independent master-equation checks. The stationary event model still supplies no systematic supernova-duration stretch.
+
 ### Photon survival and resonant channel energy
 
 The resonance candidate now has an explicit photon-survival requirement and drift energy ledger. At 2 eV, gap 1e-8 eV and z=0.00766048, an illustrative 90% survival requires removal/useful rate ratio below 6.93e-8; at z=1 it is 1.05e-9. Removed radiation energy is separately counted. Damping is not automatically absorption, and the actual common-coupling branching ratios remain unknown. The [branching diagnostic](../../research_work/results/companion-extensions/resonance-loss-report.md) records 108 energy ledgers and nine independent ODE comparisons. The 90% allowance is not an observational bound, and the calculation does not complete a unitary response or remove spectral and timing requirements.
