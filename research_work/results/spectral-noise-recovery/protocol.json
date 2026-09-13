@@ -1,0 +1,11 @@
+{
+  "scope": "Noise sensitivity of exposed processed-library phase recovery; no real distant-source likelihood",
+  "contrast_snr": [3, 1, 0.3],
+  "seeds": [2101,2102,2103,2104,2105,2106,2107,2108],
+  "noise_definition": "Independent Gaussian noise per processed wavelength sample; sigma equals broad-window centered spectral RMS divided by contrast_snr",
+  "windows_angstrom": [[4000,7000],[4000,5500]],
+  "pairing": "Same unit Gaussian draw across SNR values and overlapping wavelength windows for each seed",
+  "fixed": "Same 269 targets, 2210 comparison spectra, object exclusion and median-of-five-distinct-objects estimator",
+  "zero_noise_gate_days": 1e-10,
+  "interpretation": "Contrast SNR is not photon or survey SNR; no physical probability assigned to these noise levels"
+}
