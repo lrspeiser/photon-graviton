@@ -1,0 +1,152 @@
+{
+  "models": {
+    "transparent_control": {
+      "C_Msun_kpc3": 12367924.233834941,
+      "scale_to_disk": 5.705790002868911,
+      "k0_per_kpc": null,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 38.189715112928745,
+          "log_RMS": 0.1535762151013277
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 36.34613567825606,
+          "log_RMS": 0.12477709539222002
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 43.79270580899844,
+          "log_RMS": 0.10904790039428351
+        }
+      },
+      "finer_scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 38.19058313212759,
+          "log_RMS": 0.1535819914114631
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 36.34678892980948,
+          "log_RMS": 0.1247980430608497
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 43.79297658260604,
+          "log_RMS": 0.10908046515208239
+        }
+      },
+      "refinement_max_RMS_change_kms": 0.0008680191988474917,
+      "refinement_pass": true,
+      "optimizer_success": true,
+      "boundary": false,
+      "starts": [
+        {
+          "parameters": [
+            7.092296816085231,
+            0.7563157837470109
+          ],
+          "loss": 0.02358565384484928,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.092296745157521,
+            0.7563158131589456
+          ],
+          "loss": 0.023585653844849515,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.092296970581331,
+            0.7563158137915913
+          ],
+          "loss": 0.023585653844851565,
+          "success": true
+        }
+      ],
+      "capture_exponent": 3
+    },
+    "attenuated": {
+      "C_Msun_kpc3": 24191166.44957295,
+      "scale_to_disk": 5.8102296018597945,
+      "k0_per_kpc": 0.10928963271364035,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 31.457712241307497,
+          "log_RMS": 0.1429729584860078
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 33.868381489083525,
+          "log_RMS": 0.1216242989743122
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 24.704439525394044,
+          "log_RMS": 0.10115689116048854
+        }
+      },
+      "finer_scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 31.458668581032455,
+          "log_RMS": 0.14298870412768078
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 33.86900901340349,
+          "log_RMS": 0.1216444629331852
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 24.70532389066019,
+          "log_RMS": 0.1011949295287485
+        }
+      },
+      "refinement_max_RMS_change_kms": 0.0009563397249578998,
+      "refinement_pass": true,
+      "optimizer_success": true,
+      "boundary": false,
+      "starts": [
+        {
+          "parameters": [
+            7.383659336632415,
+            -0.9614180308317181,
+            0.7641916916855344
+          ],
+          "loss": 0.020441266858326937,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.383656809676454,
+            -0.9614210335562852,
+            0.7641932946709694
+          ],
+          "loss": 0.020441266858241706,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.383655369757898,
+            -0.961423795417615,
+            0.7641936994742881
+          ],
+          "loss": 0.02044126685829663,
+          "success": true
+        }
+      ],
+      "capture_exponent": 3
+    }
+  },
+  "input_sha256": {
+    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "sparc_frozen.json": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015"
+  }
+}

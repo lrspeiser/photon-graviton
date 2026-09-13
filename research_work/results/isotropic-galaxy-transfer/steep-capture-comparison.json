@@ -1,0 +1,2767 @@
+{
+  "summary": [
+    {
+      "model": "transparent_control",
+      "split": "train",
+      "n": 89,
+      "galaxies_with_lower_kms_error": 31,
+      "galaxies_with_lower_log_error": 26
+    },
+    {
+      "model": "transparent_control",
+      "split": "validation",
+      "n": 29,
+      "galaxies_with_lower_kms_error": 8,
+      "galaxies_with_lower_log_error": 7
+    },
+    {
+      "model": "transparent_control",
+      "split": "test",
+      "n": 31,
+      "galaxies_with_lower_kms_error": 9,
+      "galaxies_with_lower_log_error": 7
+    },
+    {
+      "model": "attenuated",
+      "split": "train",
+      "n": 89,
+      "galaxies_with_lower_kms_error": 24,
+      "galaxies_with_lower_log_error": 20
+    },
+    {
+      "model": "attenuated",
+      "split": "validation",
+      "n": 29,
+      "galaxies_with_lower_kms_error": 6,
+      "galaxies_with_lower_log_error": 6
+    },
+    {
+      "model": "attenuated",
+      "split": "test",
+      "n": 31,
+      "galaxies_with_lower_kms_error": 4,
+      "galaxies_with_lower_log_error": 3
+    }
+  ],
+  "rows": [
+    {
+      "galaxy": "NGC6015",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 29.828086728488653,
+      "revised_RMSE_kms": 30.138989370206108,
+      "previous_log_MSE": 0.011958199906293897,
+      "revised_log_MSE": 0.012295193845588076
+    },
+    {
+      "galaxy": "ESO444-G084",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 26.27817680226254,
+      "revised_RMSE_kms": 26.170795707652868,
+      "previous_log_MSE": 0.09819418100574669,
+      "revised_log_MSE": 0.09783966668048542
+    },
+    {
+      "galaxy": "UGC04325",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 27.31235440284104,
+      "revised_RMSE_kms": 27.796446489599457,
+      "previous_log_MSE": 0.04857949327341922,
+      "revised_log_MSE": 0.05081619721081573
+    },
+    {
+      "galaxy": "UGC04483",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 6.609264629004485,
+      "revised_RMSE_kms": 6.5517071460636425,
+      "previous_log_MSE": 0.030545721287372173,
+      "revised_log_MSE": 0.030215268813428453
+    },
+    {
+      "galaxy": "UGC07089",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 16.417001708885437,
+      "revised_RMSE_kms": 16.826975860516576,
+      "previous_log_MSE": 0.008196572155110186,
+      "revised_log_MSE": 0.008371053156020321
+    },
+    {
+      "galaxy": "UGC02953",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 48.91201932900042,
+      "revised_RMSE_kms": 50.07480049494153,
+      "previous_log_MSE": 0.00952198331332345,
+      "revised_log_MSE": 0.01007954002914313
+    },
+    {
+      "galaxy": "UGC08286",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 25.576708212381735,
+      "revised_RMSE_kms": 25.19180254288687,
+      "previous_log_MSE": 0.04020159537845347,
+      "revised_log_MSE": 0.039860072462978374
+    },
+    {
+      "galaxy": "UGC06983",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 23.89801484646817,
+      "revised_RMSE_kms": 25.62346281890499,
+      "previous_log_MSE": 0.009119244242309926,
+      "revised_log_MSE": 0.010351358457470016
+    },
+    {
+      "galaxy": "NGC4013",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 14.579513201653429,
+      "revised_RMSE_kms": 16.704616826109007,
+      "previous_log_MSE": 0.0012527594220663866,
+      "revised_log_MSE": 0.0016200740321383757
+    },
+    {
+      "galaxy": "NGC0100",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 5.61752591736759,
+      "revised_RMSE_kms": 5.180803431881692,
+      "previous_log_MSE": 0.0014241953900671644,
+      "revised_log_MSE": 0.0013832636190386212
+    },
+    {
+      "galaxy": "NGC4010",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 6.596490236466573,
+      "revised_RMSE_kms": 7.018049497823295,
+      "previous_log_MSE": 0.0027734070076095314,
+      "revised_log_MSE": 0.0029516157723289225
+    },
+    {
+      "galaxy": "NGC2998",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 65.58720965897882,
+      "revised_RMSE_kms": 68.61201039076126,
+      "previous_log_MSE": 0.03667675845027791,
+      "revised_log_MSE": 0.03787615195723208
+    },
+    {
+      "galaxy": "UGC00891",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 3.85753326687675,
+      "revised_RMSE_kms": 4.427031646790592,
+      "previous_log_MSE": 0.0013090853652200085,
+      "revised_log_MSE": 0.0013328442701157593
+    },
+    {
+      "galaxy": "UGC11557",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 26.47417336327677,
+      "revised_RMSE_kms": 26.378626403967047,
+      "previous_log_MSE": 0.05872655593234554,
+      "revised_log_MSE": 0.05781960197284757
+    },
+    {
+      "galaxy": "UGC02259",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 21.553481998598937,
+      "revised_RMSE_kms": 21.61535406210704,
+      "previous_log_MSE": 0.032998613233130636,
+      "revised_log_MSE": 0.0341433144016314
+    },
+    {
+      "galaxy": "NGC4085",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 13.915248748527006,
+      "revised_RMSE_kms": 13.76789752493636,
+      "previous_log_MSE": 0.00786650487594217,
+      "revised_log_MSE": 0.007776232643368935
+    },
+    {
+      "galaxy": "UGC12632",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 20.21779602049236,
+      "revised_RMSE_kms": 21.10838031893755,
+      "previous_log_MSE": 0.014560553319831703,
+      "revised_log_MSE": 0.01593413322544532
+    },
+    {
+      "galaxy": "NGC3769",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 28.561389880733238,
+      "revised_RMSE_kms": 28.99785064637824,
+      "previous_log_MSE": 0.00836888529630975,
+      "revised_log_MSE": 0.00856529233375225
+    },
+    {
+      "galaxy": "NGC6503",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 10.146745237137889,
+      "revised_RMSE_kms": 10.055591835043794,
+      "previous_log_MSE": 0.0022512893702315677,
+      "revised_log_MSE": 0.0022404875663838224
+    },
+    {
+      "galaxy": "UGC06446",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 15.47622241037766,
+      "revised_RMSE_kms": 15.384591246903355,
+      "previous_log_MSE": 0.01959129280030107,
+      "revised_log_MSE": 0.020181296615514363
+    },
+    {
+      "galaxy": "D631-7",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 13.044049292592621,
+      "revised_RMSE_kms": 12.874406529564222,
+      "previous_log_MSE": 0.01759686392049179,
+      "revised_log_MSE": 0.016973132009096562
+    },
+    {
+      "galaxy": "UGC05005",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 39.57155449715299,
+      "revised_RMSE_kms": 40.62580517312837,
+      "previous_log_MSE": 0.028184969116544042,
+      "revised_log_MSE": 0.028283525502714724
+    },
+    {
+      "galaxy": "UGC07866",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 3.330191398118055,
+      "revised_RMSE_kms": 3.4248844926720152,
+      "previous_log_MSE": 0.007337264494635786,
+      "revised_log_MSE": 0.008014328194580308
+    },
+    {
+      "galaxy": "NGC2403",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 33.202746096390456,
+      "revised_RMSE_kms": 33.54681136594295,
+      "previous_log_MSE": 0.021388348565120247,
+      "revised_log_MSE": 0.02199850741511511
+    },
+    {
+      "galaxy": "UGC06667",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 16.369092808788384,
+      "revised_RMSE_kms": 15.840735426794328,
+      "previous_log_MSE": 0.018703930579879163,
+      "revised_log_MSE": 0.02087916802015983
+    },
+    {
+      "galaxy": "UGC06614",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 48.368906901883875,
+      "revised_RMSE_kms": 49.58427447694229,
+      "previous_log_MSE": 0.009985442103185412,
+      "revised_log_MSE": 0.01031878444927241
+    },
+    {
+      "galaxy": "UGC04278",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 4.935986004969955,
+      "revised_RMSE_kms": 5.435904154963119,
+      "previous_log_MSE": 0.005515946017506807,
+      "revised_log_MSE": 0.006348175258795672
+    },
+    {
+      "galaxy": "IC2574",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 33.509779376286815,
+      "revised_RMSE_kms": 33.36082168472774,
+      "previous_log_MSE": 0.05034275293399265,
+      "revised_log_MSE": 0.048124804162098876
+    },
+    {
+      "galaxy": "ESO563-G021",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 37.05304895821908,
+      "revised_RMSE_kms": 36.786791854440615,
+      "previous_log_MSE": 0.011203238436299877,
+      "revised_log_MSE": 0.011251015262162016
+    },
+    {
+      "galaxy": "NGC0289",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 111.90995582513065,
+      "revised_RMSE_kms": 114.51282187624486,
+      "previous_log_MSE": 0.04416669720709774,
+      "revised_log_MSE": 0.045623150366554066
+    },
+    {
+      "galaxy": "UGC09133",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 63.043928174218095,
+      "revised_RMSE_kms": 62.94388072799332,
+      "previous_log_MSE": 0.00983610887134489,
+      "revised_log_MSE": 0.009718143376563446
+    },
+    {
+      "galaxy": "NGC2903",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 33.93366600732116,
+      "revised_RMSE_kms": 33.58310142377232,
+      "previous_log_MSE": 0.01572084114390115,
+      "revised_log_MSE": 0.015574422594429557
+    },
+    {
+      "galaxy": "UGC11820",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 16.5804585869355,
+      "revised_RMSE_kms": 17.572405214703537,
+      "previous_log_MSE": 0.03880310134711572,
+      "revised_log_MSE": 0.04121053113308644
+    },
+    {
+      "galaxy": "NGC0300",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 10.356121925067251,
+      "revised_RMSE_kms": 10.137690968152521,
+      "previous_log_MSE": 0.005153497423234843,
+      "revised_log_MSE": 0.005313513774365924
+    },
+    {
+      "galaxy": "D564-8",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 2.4360766157139757,
+      "revised_RMSE_kms": 2.7028442747237738,
+      "previous_log_MSE": 0.0024064156857519802,
+      "revised_log_MSE": 0.002554029306260869
+    },
+    {
+      "galaxy": "UGC00128",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 116.26278500009553,
+      "revised_RMSE_kms": 119.77788581126975,
+      "previous_log_MSE": 0.07311498709150803,
+      "revised_log_MSE": 0.07611302829534917
+    },
+    {
+      "galaxy": "NGC2915",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 44.38714284323725,
+      "revised_RMSE_kms": 44.67307539747386,
+      "previous_log_MSE": 0.13264207701008154,
+      "revised_log_MSE": 0.1356451798417882
+    },
+    {
+      "galaxy": "UGC07577",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 6.477806266840451,
+      "revised_RMSE_kms": 6.131770369644407,
+      "previous_log_MSE": 0.031850713987033014,
+      "revised_log_MSE": 0.028948366007272106
+    },
+    {
+      "galaxy": "UGC05253",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 55.86978177164954,
+      "revised_RMSE_kms": 58.37144988066415,
+      "previous_log_MSE": 0.007904910689933622,
+      "revised_log_MSE": 0.00840935566113086
+    },
+    {
+      "galaxy": "UGC05918",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 8.373187594622092,
+      "revised_RMSE_kms": 8.395441694782404,
+      "previous_log_MSE": 0.013209317747588654,
+      "revised_log_MSE": 0.014558675187943543
+    },
+    {
+      "galaxy": "UGC07125",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 64.06910996269222,
+      "revised_RMSE_kms": 65.74732871699239,
+      "previous_log_MSE": 0.08544626390115874,
+      "revised_log_MSE": 0.08736171776563745
+    },
+    {
+      "galaxy": "NGC7793",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 17.577056342828534,
+      "revised_RMSE_kms": 17.448399171409317,
+      "previous_log_MSE": 0.013410603136684473,
+      "revised_log_MSE": 0.01336794377083561
+    },
+    {
+      "galaxy": "NGC5005",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 10.906988537590564,
+      "revised_RMSE_kms": 11.630923110208393,
+      "previous_log_MSE": 0.00036766459938691886,
+      "revised_log_MSE": 0.0004143503422709817
+    },
+    {
+      "galaxy": "NGC3893",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 24.836371902574424,
+      "revised_RMSE_kms": 23.910084298520182,
+      "previous_log_MSE": 0.004062819183612213,
+      "revised_log_MSE": 0.003731215939087675
+    },
+    {
+      "galaxy": "NGC5371",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 103.44018676684301,
+      "revised_RMSE_kms": 107.45459630194813,
+      "previous_log_MSE": 0.02646933978138852,
+      "revised_log_MSE": 0.028046227245619552
+    },
+    {
+      "galaxy": "NGC4138",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 36.68836105709146,
+      "revised_RMSE_kms": 36.71865157884088,
+      "previous_log_MSE": 0.013122474228681786,
+      "revised_log_MSE": 0.013276376056552738
+    },
+    {
+      "galaxy": "NGC0247",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 30.94484137071461,
+      "revised_RMSE_kms": 31.474051633887207,
+      "previous_log_MSE": 0.015829146602676616,
+      "revised_log_MSE": 0.01649864590874673
+    },
+    {
+      "galaxy": "UGC06930",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 40.260970843727655,
+      "revised_RMSE_kms": 41.642296141463916,
+      "previous_log_MSE": 0.018391295691343873,
+      "revised_log_MSE": 0.019512711593722497
+    },
+    {
+      "galaxy": "DDO064",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 9.7328041771747,
+      "revised_RMSE_kms": 9.76658459492734,
+      "previous_log_MSE": 0.04822807373967747,
+      "revised_log_MSE": 0.0507693925857464
+    },
+    {
+      "galaxy": "NGC2683",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 30.57121202447268,
+      "revised_RMSE_kms": 31.386642237510685,
+      "previous_log_MSE": 0.007287067674284761,
+      "revised_log_MSE": 0.008008712383453713
+    },
+    {
+      "galaxy": "NGC4217",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 42.35984122177185,
+      "revised_RMSE_kms": 42.34065846142891,
+      "previous_log_MSE": 0.019172141613449427,
+      "revised_log_MSE": 0.019168547420215776
+    },
+    {
+      "galaxy": "NGC3521",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 20.262426759961624,
+      "revised_RMSE_kms": 20.063622151817036,
+      "previous_log_MSE": 0.002080313875618132,
+      "revised_log_MSE": 0.002023960627082275
+    },
+    {
+      "galaxy": "UGC05829",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 10.988242789712292,
+      "revised_RMSE_kms": 11.091667653599854,
+      "previous_log_MSE": 0.007786738676557387,
+      "revised_log_MSE": 0.0084962998142191
+    },
+    {
+      "galaxy": "UGC06923",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 8.624024814138913,
+      "revised_RMSE_kms": 8.658952044056118,
+      "previous_log_MSE": 0.0028649555236401857,
+      "revised_log_MSE": 0.0029371109470737243
+    },
+    {
+      "galaxy": "UGC05716",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 12.614902318489923,
+      "revised_RMSE_kms": 12.448417233202802,
+      "previous_log_MSE": 0.01241477134899203,
+      "revised_log_MSE": 0.012551260274888032
+    },
+    {
+      "galaxy": "UGC05750",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 39.84634905613899,
+      "revised_RMSE_kms": 40.16898283728128,
+      "previous_log_MSE": 0.04814655986136993,
+      "revised_log_MSE": 0.04562276758282668
+    },
+    {
+      "galaxy": "UGC06917",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 11.03116653646259,
+      "revised_RMSE_kms": 11.993800927034016,
+      "previous_log_MSE": 0.003661668007668306,
+      "revised_log_MSE": 0.004303790473689676
+    },
+    {
+      "galaxy": "NGC1003",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 23.555652667434074,
+      "revised_RMSE_kms": 25.35163680752384,
+      "previous_log_MSE": 0.012333100899855214,
+      "revised_log_MSE": 0.014833213809475535
+    },
+    {
+      "galaxy": "CamB",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 5.638660793328514,
+      "revised_RMSE_kms": 5.562531822695267,
+      "previous_log_MSE": 0.051491621299203656,
+      "revised_log_MSE": 0.04976253161063038
+    },
+    {
+      "galaxy": "NGC3953",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 20.637994357184382,
+      "revised_RMSE_kms": 21.487113321398493,
+      "previous_log_MSE": 0.002089082240326952,
+      "revised_log_MSE": 0.002269945835134894
+    },
+    {
+      "galaxy": "NGC5055",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 11.394028995026305,
+      "revised_RMSE_kms": 13.327935080604792,
+      "previous_log_MSE": 0.0007784909189656596,
+      "revised_log_MSE": 0.0011156669729029181
+    },
+    {
+      "galaxy": "UGC07261",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 14.75436472276155,
+      "revised_RMSE_kms": 14.584616802447192,
+      "previous_log_MSE": 0.01859207850676024,
+      "revised_log_MSE": 0.018838195233099906
+    },
+    {
+      "galaxy": "NGC2841",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 79.39434788204723,
+      "revised_RMSE_kms": 80.94650127930223,
+      "previous_log_MSE": 0.018330102072767453,
+      "revised_log_MSE": 0.019478666361160902
+    },
+    {
+      "galaxy": "NGC4100",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 34.064589100122234,
+      "revised_RMSE_kms": 33.52731204278254,
+      "previous_log_MSE": 0.00901117667221378,
+      "revised_log_MSE": 0.008779147199208222
+    },
+    {
+      "galaxy": "UGC08490",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 34.35579102634328,
+      "revised_RMSE_kms": 34.50938454425403,
+      "previous_log_MSE": 0.06881701290202219,
+      "revised_log_MSE": 0.06989961124173619
+    },
+    {
+      "galaxy": "UGC00191",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 15.248104243833195,
+      "revised_RMSE_kms": 15.60896216927377,
+      "previous_log_MSE": 0.025887667144204027,
+      "revised_log_MSE": 0.027524299329549102
+    },
+    {
+      "galaxy": "UGC06818",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 6.421229477462807,
+      "revised_RMSE_kms": 5.926808853288955,
+      "previous_log_MSE": 0.004385363734182878,
+      "revised_log_MSE": 0.003901730324859943
+    },
+    {
+      "galaxy": "UGC01281",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 3.859080027221884,
+      "revised_RMSE_kms": 4.433367049879387,
+      "previous_log_MSE": 0.0023772420619379044,
+      "revised_log_MSE": 0.003435294535842962
+    },
+    {
+      "galaxy": "NGC5033",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 38.96642519479512,
+      "revised_RMSE_kms": 41.779368614975,
+      "previous_log_MSE": 0.005631789013634356,
+      "revised_log_MSE": 0.006365839466856207
+    },
+    {
+      "galaxy": "UGCA444",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 4.1861973061101025,
+      "revised_RMSE_kms": 4.385271699501067,
+      "previous_log_MSE": 0.022426295830009088,
+      "revised_log_MSE": 0.024488644784381723
+    },
+    {
+      "galaxy": "UGC08837",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 8.836156163708875,
+      "revised_RMSE_kms": 8.269433495578056,
+      "previous_log_MSE": 0.013813260303906085,
+      "revised_log_MSE": 0.011899434023677453
+    },
+    {
+      "galaxy": "NGC3726",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 20.00064538655012,
+      "revised_RMSE_kms": 21.24070371157157,
+      "previous_log_MSE": 0.0027996175449214095,
+      "revised_log_MSE": 0.003077254076451368
+    },
+    {
+      "galaxy": "UGC05764",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 15.731003250321555,
+      "revised_RMSE_kms": 16.091100277837942,
+      "previous_log_MSE": 0.059437884364187385,
+      "revised_log_MSE": 0.06299965661784543
+    },
+    {
+      "galaxy": "ESO116-G012",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 23.012402575365286,
+      "revised_RMSE_kms": 22.473213018617628,
+      "previous_log_MSE": 0.017879608007174374,
+      "revised_log_MSE": 0.017549102443381433
+    },
+    {
+      "galaxy": "UGC07399",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 35.32906860312781,
+      "revised_RMSE_kms": 35.4961153399327,
+      "previous_log_MSE": 0.056525973576928026,
+      "revised_log_MSE": 0.05783954792474314
+    },
+    {
+      "galaxy": "UGC03580",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 16.159578116992005,
+      "revised_RMSE_kms": 16.249482483430796,
+      "previous_log_MSE": 0.007290028486113016,
+      "revised_log_MSE": 0.007283718113455018
+    },
+    {
+      "galaxy": "UGC11914",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 45.76774617829873,
+      "revised_RMSE_kms": 45.877226918154655,
+      "previous_log_MSE": 0.00579488930086946,
+      "revised_log_MSE": 0.005822915482671355
+    },
+    {
+      "galaxy": "UGC07690",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 16.307117615549945,
+      "revised_RMSE_kms": 16.133111076024253,
+      "previous_log_MSE": 0.02133916272850674,
+      "revised_log_MSE": 0.02084399448370407
+    },
+    {
+      "galaxy": "UGC12506",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 83.75734767487164,
+      "revised_RMSE_kms": 88.73501490885408,
+      "previous_log_MSE": 0.03328561475031726,
+      "revised_log_MSE": 0.03546825470695267
+    },
+    {
+      "galaxy": "UGC05986",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 26.93726255495193,
+      "revised_RMSE_kms": 26.49679973270556,
+      "previous_log_MSE": 0.018707939638380557,
+      "revised_log_MSE": 0.018465470695625104
+    },
+    {
+      "galaxy": "NGC3198",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 10.83773106282763,
+      "revised_RMSE_kms": 11.73184391062449,
+      "previous_log_MSE": 0.0037389798192164533,
+      "revised_log_MSE": 0.004002316894354782
+    },
+    {
+      "galaxy": "UGC06787",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 23.598057944030813,
+      "revised_RMSE_kms": 24.90597035806898,
+      "previous_log_MSE": 0.0020705731278971976,
+      "revised_log_MSE": 0.0023009783688874626
+    },
+    {
+      "galaxy": "DDO168",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 6.30170467096686,
+      "revised_RMSE_kms": 6.254947261963403,
+      "previous_log_MSE": 0.003597837911153889,
+      "revised_log_MSE": 0.0036379182036772673
+    },
+    {
+      "galaxy": "NGC0024",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 36.538974266440164,
+      "revised_RMSE_kms": 36.67904882994556,
+      "previous_log_MSE": 0.05838315924705668,
+      "revised_log_MSE": 0.05924074313024745
+    },
+    {
+      "galaxy": "NGC3992",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 21.85898021481118,
+      "revised_RMSE_kms": 23.508550806437565,
+      "previous_log_MSE": 0.0016197172792837358,
+      "revised_log_MSE": 0.0018494490958789215
+    },
+    {
+      "galaxy": "NGC6674",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 49.86237481899334,
+      "revised_RMSE_kms": 51.65547243423631,
+      "previous_log_MSE": 0.006948194383825621,
+      "revised_log_MSE": 0.007381989202026622
+    },
+    {
+      "galaxy": "NGC3741",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 23.977998960094247,
+      "revised_RMSE_kms": 24.162217114140784,
+      "previous_log_MSE": 0.15447690843683265,
+      "revised_log_MSE": 0.15837779722612924
+    },
+    {
+      "galaxy": "NGC6195",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 101.08433999029354,
+      "revised_RMSE_kms": 98.06188129597068,
+      "previous_log_MSE": 0.01809151698798235,
+      "revised_log_MSE": 0.017063233853067697
+    },
+    {
+      "galaxy": "NGC4183",
+      "model": "transparent_control",
+      "split": "train",
+      "previous_RMSE_kms": 20.759698459976484,
+      "revised_RMSE_kms": 22.640704035909703,
+      "previous_log_MSE": 0.008674071649401132,
+      "revised_log_MSE": 0.009881012782303782
+    },
+    {
+      "galaxy": "UGC08550",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 22.632254193700827,
+      "revised_RMSE_kms": 22.587676857233124,
+      "previous_log_MSE": 0.06497617575169891,
+      "revised_log_MSE": 0.06472618429875539
+    },
+    {
+      "galaxy": "F571-V1",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 20.86411147913741,
+      "revised_RMSE_kms": 22.29423424702289,
+      "previous_log_MSE": 0.009513671249448892,
+      "revised_log_MSE": 0.010385911077135592
+    },
+    {
+      "galaxy": "NGC3972",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 19.027840050770664,
+      "revised_RMSE_kms": 19.100590933913153,
+      "previous_log_MSE": 0.008573078828999062,
+      "revised_log_MSE": 0.008902721462975004
+    },
+    {
+      "galaxy": "ESO079-G014",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 15.902601286877292,
+      "revised_RMSE_kms": 16.76977427206418,
+      "previous_log_MSE": 0.005096932901593978,
+      "revised_log_MSE": 0.005525262470292436
+    },
+    {
+      "galaxy": "NGC4559",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 3.451927426463834,
+      "revised_RMSE_kms": 3.6360295270638807,
+      "previous_log_MSE": 0.0002561415520280156,
+      "revised_log_MSE": 0.00029004477719613784
+    },
+    {
+      "galaxy": "IC4202",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 27.032933404622586,
+      "revised_RMSE_kms": 28.101969750498366,
+      "previous_log_MSE": 0.012600574393279336,
+      "revised_log_MSE": 0.012785952579272671
+    },
+    {
+      "galaxy": "UGC05414",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 3.0160671132309838,
+      "revised_RMSE_kms": 3.431287577193552,
+      "previous_log_MSE": 0.0017956209005584001,
+      "revised_log_MSE": 0.0022567986607779224
+    },
+    {
+      "galaxy": "NGC4157",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 22.66778016856165,
+      "revised_RMSE_kms": 23.295312052029946,
+      "previous_log_MSE": 0.0036763121184414317,
+      "revised_log_MSE": 0.003913015392068007
+    },
+    {
+      "galaxy": "NGC5585",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 7.612393813738611,
+      "revised_RMSE_kms": 7.059512452549523,
+      "previous_log_MSE": 0.0033346509019327275,
+      "revised_log_MSE": 0.003179346819124564
+    },
+    {
+      "galaxy": "UGC07603",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 23.649163613661468,
+      "revised_RMSE_kms": 23.41337185270431,
+      "previous_log_MSE": 0.054067260271337875,
+      "revised_log_MSE": 0.05283434531541403
+    },
+    {
+      "galaxy": "UGC09037",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 50.706361636092645,
+      "revised_RMSE_kms": 52.951838413563976,
+      "previous_log_MSE": 0.018283679805588475,
+      "revised_log_MSE": 0.019252440714481137
+    },
+    {
+      "galaxy": "NGC4051",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 24.644805997247246,
+      "revised_RMSE_kms": 24.200491499459318,
+      "previous_log_MSE": 0.0038515431138651597,
+      "revised_log_MSE": 0.0037533773897790814
+    },
+    {
+      "galaxy": "UGC05721",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 39.83283300988175,
+      "revised_RMSE_kms": 39.89414693597008,
+      "previous_log_MSE": 0.10980366562217117,
+      "revised_log_MSE": 0.11047892703389196
+    },
+    {
+      "galaxy": "UGC12732",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 9.064473815602017,
+      "revised_RMSE_kms": 10.366564995736582,
+      "previous_log_MSE": 0.006012521758307478,
+      "revised_log_MSE": 0.007080097728636367
+    },
+    {
+      "galaxy": "UGC11455",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 28.476361997165505,
+      "revised_RMSE_kms": 30.998613944203925,
+      "previous_log_MSE": 0.0033793121104336017,
+      "revised_log_MSE": 0.0036878098172731114
+    },
+    {
+      "galaxy": "NGC1090",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 19.60735233492861,
+      "revised_RMSE_kms": 21.589991129695207,
+      "previous_log_MSE": 0.004627211128458511,
+      "revised_log_MSE": 0.005089195975694023
+    },
+    {
+      "galaxy": "NGC4088",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 18.213920282476483,
+      "revised_RMSE_kms": 18.906569670033626,
+      "previous_log_MSE": 0.0021790141127529367,
+      "revised_log_MSE": 0.002305644042140374
+    },
+    {
+      "galaxy": "UGC00731",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 19.170214197247343,
+      "revised_RMSE_kms": 20.281927278211306,
+      "previous_log_MSE": 0.01869852323910973,
+      "revised_log_MSE": 0.020970118574329826
+    },
+    {
+      "galaxy": "NGC3917",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 11.42370340733739,
+      "revised_RMSE_kms": 11.890727482348499,
+      "previous_log_MSE": 0.0033335219826167656,
+      "revised_log_MSE": 0.003643256403074917
+    },
+    {
+      "galaxy": "F574-1",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 30.813834122654587,
+      "revised_RMSE_kms": 30.438711528448035,
+      "previous_log_MSE": 0.01541697488174018,
+      "revised_log_MSE": 0.015750869731314825
+    },
+    {
+      "galaxy": "NGC4068",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 3.4486531100344835,
+      "revised_RMSE_kms": 3.2986703146288576,
+      "previous_log_MSE": 0.004244046516144825,
+      "revised_log_MSE": 0.0038021100079487827
+    },
+    {
+      "galaxy": "KK98-251",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 4.613424997883292,
+      "revised_RMSE_kms": 4.234436043738259,
+      "previous_log_MSE": 0.004340563283832935,
+      "revised_log_MSE": 0.0033331212260610593
+    },
+    {
+      "galaxy": "F568-V1",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 22.116712087657433,
+      "revised_RMSE_kms": 23.211740750955425,
+      "previous_log_MSE": 0.02205743524021585,
+      "revised_log_MSE": 0.024151810744838423
+    },
+    {
+      "galaxy": "NGC5985",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 62.15147753764249,
+      "revised_RMSE_kms": 64.24869413896974,
+      "previous_log_MSE": 0.014898170136363841,
+      "revised_log_MSE": 0.015883204830029245
+    },
+    {
+      "galaxy": "UGC02487",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 53.87631744750734,
+      "revised_RMSE_kms": 56.839542044158726,
+      "previous_log_MSE": 0.00455374605862761,
+      "revised_log_MSE": 0.005028616849828294
+    },
+    {
+      "galaxy": "UGC03546",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 27.430833477616023,
+      "revised_RMSE_kms": 27.773930099142245,
+      "previous_log_MSE": 0.0021128975125919392,
+      "revised_log_MSE": 0.00220209292595108
+    },
+    {
+      "galaxy": "NGC3109",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 2.1311896304341853,
+      "revised_RMSE_kms": 2.630102054165904,
+      "previous_log_MSE": 0.0015627117799421868,
+      "revised_log_MSE": 0.0022269687499527776
+    },
+    {
+      "galaxy": "NGC0891",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 25.27935183928973,
+      "revised_RMSE_kms": 24.678106099682154,
+      "previous_log_MSE": 0.0023814595169589785,
+      "revised_log_MSE": 0.0022528511425977038
+    },
+    {
+      "galaxy": "NGC0801",
+      "model": "transparent_control",
+      "split": "validation",
+      "previous_RMSE_kms": 125.90602447746082,
+      "revised_RMSE_kms": 130.5258835794901,
+      "previous_log_MSE": 0.03422449214854118,
+      "revised_log_MSE": 0.03596989826187849
+    },
+    {
+      "galaxy": "UGC08699",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 21.73830601954374,
+      "revised_RMSE_kms": 21.673590662531314,
+      "previous_log_MSE": 0.0029178108490078873,
+      "revised_log_MSE": 0.0029066128874806686
+    },
+    {
+      "galaxy": "UGC02885",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 174.55676658485004,
+      "revised_RMSE_kms": 181.79246504632866,
+      "previous_log_MSE": 0.038704865419457675,
+      "revised_log_MSE": 0.040966884064053334
+    },
+    {
+      "galaxy": "UGC07151",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 12.18408496597228,
+      "revised_RMSE_kms": 12.250173545727458,
+      "previous_log_MSE": 0.010662647120801914,
+      "revised_log_MSE": 0.011027484972854409
+    },
+    {
+      "galaxy": "NGC3877",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 19.90671334082006,
+      "revised_RMSE_kms": 20.302982557041254,
+      "previous_log_MSE": 0.009848483082460875,
+      "revised_log_MSE": 0.010003851082696646
+    },
+    {
+      "galaxy": "NGC6946",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 9.73477808226519,
+      "revised_RMSE_kms": 9.099175674863195,
+      "previous_log_MSE": 0.0006589260686835368,
+      "revised_log_MSE": 0.0005725402159244028
+    },
+    {
+      "galaxy": "UGC10310",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 9.750680834718972,
+      "revised_RMSE_kms": 10.559984858655428,
+      "previous_log_MSE": 0.007719184914616868,
+      "revised_log_MSE": 0.008885549434284443
+    },
+    {
+      "galaxy": "F565-V2",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 6.350888351434232,
+      "revised_RMSE_kms": 7.096011348924427,
+      "previous_log_MSE": 0.001078065500484097,
+      "revised_log_MSE": 0.0013508690178681126
+    },
+    {
+      "galaxy": "F583-4",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 9.961536484456856,
+      "revised_RMSE_kms": 10.342128161944554,
+      "previous_log_MSE": 0.015092064094341343,
+      "revised_log_MSE": 0.016224258211717017
+    },
+    {
+      "galaxy": "NGC7331",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 31.759772493953893,
+      "revised_RMSE_kms": 34.025644401022795,
+      "previous_log_MSE": 0.002901681282489514,
+      "revised_log_MSE": 0.003300351363887461
+    },
+    {
+      "galaxy": "NGC2955",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 95.8604826526945,
+      "revised_RMSE_kms": 91.16506178231698,
+      "previous_log_MSE": 0.015294931946766822,
+      "revised_log_MSE": 0.014086579328747904
+    },
+    {
+      "galaxy": "UGCA442",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 3.8856971907336577,
+      "revised_RMSE_kms": 3.876040844332446,
+      "previous_log_MSE": 0.006754388077859511,
+      "revised_log_MSE": 0.0074608995440840166
+    },
+    {
+      "galaxy": "NGC2976",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 10.96002873894831,
+      "revised_RMSE_kms": 11.114941869723475,
+      "previous_log_MSE": 0.00824382300883618,
+      "revised_log_MSE": 0.008507468157869085
+    },
+    {
+      "galaxy": "DDO154",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 17.993659972168043,
+      "revised_RMSE_kms": 18.162089778990683,
+      "previous_log_MSE": 0.05677805165764426,
+      "revised_log_MSE": 0.05825971881192385
+    },
+    {
+      "galaxy": "DDO170",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 23.719302812362166,
+      "revised_RMSE_kms": 24.97349551026577,
+      "previous_log_MSE": 0.021374108020052848,
+      "revised_log_MSE": 0.022802228978334796
+    },
+    {
+      "galaxy": "NGC7814",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 39.935573159206534,
+      "revised_RMSE_kms": 38.84499728133899,
+      "previous_log_MSE": 0.007978862199877125,
+      "revised_log_MSE": 0.007470384218685588
+    },
+    {
+      "galaxy": "F583-1",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 10.875179996526908,
+      "revised_RMSE_kms": 11.719116924808336,
+      "previous_log_MSE": 0.011394631005818287,
+      "revised_log_MSE": 0.012414269750556985
+    },
+    {
+      "galaxy": "F568-3",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 37.951265738375945,
+      "revised_RMSE_kms": 38.183370111993725,
+      "previous_log_MSE": 0.014539007317144486,
+      "revised_log_MSE": 0.014658625675579288
+    },
+    {
+      "galaxy": "UGC04499",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 6.25542444200544,
+      "revised_RMSE_kms": 7.129918429629836,
+      "previous_log_MSE": 0.0019752330935688925,
+      "revised_log_MSE": 0.0025112157230090027
+    },
+    {
+      "galaxy": "UGC06399",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 7.795689632739427,
+      "revised_RMSE_kms": 8.45123276571887,
+      "previous_log_MSE": 0.004671502378111319,
+      "revised_log_MSE": 0.005526718613768684
+    },
+    {
+      "galaxy": "NGC0055",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 53.40807343970617,
+      "revised_RMSE_kms": 51.19369697086093,
+      "previous_log_MSE": 0.03958060398809194,
+      "revised_log_MSE": 0.03651588670147776
+    },
+    {
+      "galaxy": "UGC07559",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 1.469933258918936,
+      "revised_RMSE_kms": 1.4076602173588708,
+      "previous_log_MSE": 0.0005524821456244308,
+      "revised_log_MSE": 0.0005422268946728688
+    },
+    {
+      "galaxy": "UGC07524",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 26.273883968678668,
+      "revised_RMSE_kms": 25.97237538290366,
+      "previous_log_MSE": 0.01603758958453889,
+      "revised_log_MSE": 0.01603406416353825
+    },
+    {
+      "galaxy": "NGC5907",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 47.59076279484364,
+      "revised_RMSE_kms": 50.53532598868234,
+      "previous_log_MSE": 0.007968233910663133,
+      "revised_log_MSE": 0.00884208424129939
+    },
+    {
+      "galaxy": "DDO161",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 6.2279971264287255,
+      "revised_RMSE_kms": 6.650146713550512,
+      "previous_log_MSE": 0.0031096873625888833,
+      "revised_log_MSE": 0.0033252612924066292
+    },
+    {
+      "galaxy": "UGC02916",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 45.000878362607565,
+      "revised_RMSE_kms": 46.69372967285833,
+      "previous_log_MSE": 0.00777609996773032,
+      "revised_log_MSE": 0.008158553353732816
+    },
+    {
+      "galaxy": "F571-8",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 13.53167149309369,
+      "revised_RMSE_kms": 14.018148761075864,
+      "previous_log_MSE": 0.015815382993687906,
+      "revised_log_MSE": 0.01590321207151616
+    },
+    {
+      "galaxy": "UGC06786",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 38.04627394757905,
+      "revised_RMSE_kms": 37.959062594159526,
+      "previous_log_MSE": 0.007615074648873624,
+      "revised_log_MSE": 0.007615830170184052
+    },
+    {
+      "galaxy": "NGC3949",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 9.358722225625081,
+      "revised_RMSE_kms": 10.107039320954103,
+      "previous_log_MSE": 0.0007013562725660263,
+      "revised_log_MSE": 0.0008202324030417652
+    },
+    {
+      "galaxy": "UGC03205",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 36.25826894236699,
+      "revised_RMSE_kms": 36.364816266931015,
+      "previous_log_MSE": 0.006439150504719952,
+      "revised_log_MSE": 0.006511817298716989
+    },
+    {
+      "galaxy": "UGC07323",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 3.1898172093418404,
+      "revised_RMSE_kms": 3.4984560739214965,
+      "previous_log_MSE": 0.0019937239849083656,
+      "revised_log_MSE": 0.0022955982311600063
+    },
+    {
+      "galaxy": "UGC09992",
+      "model": "transparent_control",
+      "split": "test",
+      "previous_RMSE_kms": 8.849366576415173,
+      "revised_RMSE_kms": 9.117575079320325,
+      "previous_log_MSE": 0.012566177404641225,
+      "revised_log_MSE": 0.013353707336562087
+    },
+    {
+      "galaxy": "NGC6015",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 23.724773136349157,
+      "revised_RMSE_kms": 23.989752418382157,
+      "previous_log_MSE": 0.00899466433329487,
+      "revised_log_MSE": 0.009226562800851245
+    },
+    {
+      "galaxy": "ESO444-G084",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 21.82969626576454,
+      "revised_RMSE_kms": 21.656029748792157,
+      "previous_log_MSE": 0.06221023256572839,
+      "revised_log_MSE": 0.062168666348067114
+    },
+    {
+      "galaxy": "UGC04325",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 26.431838118047857,
+      "revised_RMSE_kms": 27.04135667426823,
+      "previous_log_MSE": 0.047183323719773566,
+      "revised_log_MSE": 0.04962895216181887
+    },
+    {
+      "galaxy": "UGC04483",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 5.171837041238281,
+      "revised_RMSE_kms": 5.0848374478119265,
+      "previous_log_MSE": 0.017748602415695577,
+      "revised_log_MSE": 0.01757681131126347
+    },
+    {
+      "galaxy": "UGC07089",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 18.453067308593422,
+      "revised_RMSE_kms": 18.712481862813863,
+      "previous_log_MSE": 0.009540809380787994,
+      "revised_log_MSE": 0.009625283848826008
+    },
+    {
+      "galaxy": "UGC02953",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 45.735567013659725,
+      "revised_RMSE_kms": 46.88667989169128,
+      "previous_log_MSE": 0.007999964376000207,
+      "revised_log_MSE": 0.008456923396300697
+    },
+    {
+      "galaxy": "UGC08286",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 18.307691144598394,
+      "revised_RMSE_kms": 18.005689216773813,
+      "previous_log_MSE": 0.022676518141453474,
+      "revised_log_MSE": 0.023078173918557352
+    },
+    {
+      "galaxy": "UGC06983",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 24.46179504250507,
+      "revised_RMSE_kms": 25.929567853482048,
+      "previous_log_MSE": 0.012208021424033669,
+      "revised_log_MSE": 0.013415291108748197
+    },
+    {
+      "galaxy": "NGC4013",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 17.39409479559239,
+      "revised_RMSE_kms": 19.953754318510985,
+      "previous_log_MSE": 0.0017405985193740116,
+      "revised_log_MSE": 0.0022539547040201823
+    },
+    {
+      "galaxy": "NGC0100",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 4.288931773499985,
+      "revised_RMSE_kms": 5.499959109535605,
+      "previous_log_MSE": 0.0008350140083942531,
+      "revised_log_MSE": 0.0011873520854956408
+    },
+    {
+      "galaxy": "NGC4010",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 8.344861565643162,
+      "revised_RMSE_kms": 8.857223273146332,
+      "previous_log_MSE": 0.00367405285050525,
+      "revised_log_MSE": 0.0039032248471208733
+    },
+    {
+      "galaxy": "NGC2998",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 48.978908335644064,
+      "revised_RMSE_kms": 51.07762438763794,
+      "previous_log_MSE": 0.0337289072881596,
+      "revised_log_MSE": 0.03438460174354247
+    },
+    {
+      "galaxy": "UGC00891",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 11.870026782555222,
+      "revised_RMSE_kms": 12.604238507481515,
+      "previous_log_MSE": 0.007357630246616389,
+      "revised_log_MSE": 0.007574601500470635
+    },
+    {
+      "galaxy": "UGC11557",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 23.764635392988378,
+      "revised_RMSE_kms": 23.641427802414476,
+      "previous_log_MSE": 0.05342528355869247,
+      "revised_log_MSE": 0.052781463130396396
+    },
+    {
+      "galaxy": "UGC02259",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 18.8247780141274,
+      "revised_RMSE_kms": 19.31232168410831,
+      "previous_log_MSE": 0.028044655367762603,
+      "revised_log_MSE": 0.029742418213058876
+    },
+    {
+      "galaxy": "NGC4085",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 12.75229349371362,
+      "revised_RMSE_kms": 12.6561625857772,
+      "previous_log_MSE": 0.007536072720400509,
+      "revised_log_MSE": 0.007461262491591837
+    },
+    {
+      "galaxy": "UGC12632",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 22.416699000739406,
+      "revised_RMSE_kms": 23.168163443843568,
+      "previous_log_MSE": 0.018187406611406845,
+      "revised_log_MSE": 0.019542315072393585
+    },
+    {
+      "galaxy": "NGC3769",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 34.62376022547619,
+      "revised_RMSE_kms": 34.86603721696094,
+      "previous_log_MSE": 0.011220271834780172,
+      "revised_log_MSE": 0.011420558327553247
+    },
+    {
+      "galaxy": "NGC6503",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 11.464545680101637,
+      "revised_RMSE_kms": 12.367387211897183,
+      "previous_log_MSE": 0.0025594458277230126,
+      "revised_log_MSE": 0.002843166077848596
+    },
+    {
+      "galaxy": "UGC06446",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 12.98204267948875,
+      "revised_RMSE_kms": 13.709634742161887,
+      "previous_log_MSE": 0.015276401916244787,
+      "revised_log_MSE": 0.01657810337520412
+    },
+    {
+      "galaxy": "D631-7",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 7.519218210977132,
+      "revised_RMSE_kms": 7.309211320842016,
+      "previous_log_MSE": 0.008611766018643581,
+      "revised_log_MSE": 0.008037816346565505
+    },
+    {
+      "galaxy": "UGC05005",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 41.9595846548264,
+      "revised_RMSE_kms": 43.71481133907553,
+      "previous_log_MSE": 0.02417608301682812,
+      "revised_log_MSE": 0.025178621405243785
+    },
+    {
+      "galaxy": "UGC07866",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 3.020616274112161,
+      "revised_RMSE_kms": 3.1976706631896423,
+      "previous_log_MSE": 0.0036765682263821954,
+      "revised_log_MSE": 0.004357571011687244
+    },
+    {
+      "galaxy": "NGC2403",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 25.45109150856954,
+      "revised_RMSE_kms": 25.89064675710009,
+      "previous_log_MSE": 0.012592475540582588,
+      "revised_log_MSE": 0.013104672146703612
+    },
+    {
+      "galaxy": "UGC06667",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 27.243362026175554,
+      "revised_RMSE_kms": 27.87597018196757,
+      "previous_log_MSE": 0.08935728959849451,
+      "revised_log_MSE": 0.09310982508976556
+    },
+    {
+      "galaxy": "UGC06614",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 31.245811856627824,
+      "revised_RMSE_kms": 32.60969177100246,
+      "previous_log_MSE": 0.0038856970550014075,
+      "revised_log_MSE": 0.004192503205316859
+    },
+    {
+      "galaxy": "UGC04278",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 5.574797561488174,
+      "revised_RMSE_kms": 6.227574594271507,
+      "previous_log_MSE": 0.006913823686598755,
+      "revised_log_MSE": 0.007888737871984483
+    },
+    {
+      "galaxy": "IC2574",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 28.999532437686383,
+      "revised_RMSE_kms": 28.69100371665271,
+      "previous_log_MSE": 0.03530876039357812,
+      "revised_log_MSE": 0.03350872811186627
+    },
+    {
+      "galaxy": "ESO563-G021",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 59.1873713430669,
+      "revised_RMSE_kms": 58.05455777731848,
+      "previous_log_MSE": 0.017953528401243403,
+      "revised_log_MSE": 0.017696417302897536
+    },
+    {
+      "galaxy": "NGC0289",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 81.71377038458452,
+      "revised_RMSE_kms": 84.82947557419354,
+      "previous_log_MSE": 0.026481862058919114,
+      "revised_log_MSE": 0.02810887415593297
+    },
+    {
+      "galaxy": "UGC09133",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 54.889710595792415,
+      "revised_RMSE_kms": 53.9275684176495,
+      "previous_log_MSE": 0.008211152346334514,
+      "revised_log_MSE": 0.007974880877981963
+    },
+    {
+      "galaxy": "NGC2903",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 28.2731338561287,
+      "revised_RMSE_kms": 27.80090198344023,
+      "previous_log_MSE": 0.01317332020323139,
+      "revised_log_MSE": 0.013010925015719235
+    },
+    {
+      "galaxy": "UGC11820",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 23.4922490713194,
+      "revised_RMSE_kms": 24.804342325344813,
+      "previous_log_MSE": 0.04622280007156133,
+      "revised_log_MSE": 0.04885851718420396
+    },
+    {
+      "galaxy": "NGC0300",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 9.025341952227679,
+      "revised_RMSE_kms": 10.150827901337465,
+      "previous_log_MSE": 0.004045967917360182,
+      "revised_log_MSE": 0.004793327791508949
+    },
+    {
+      "galaxy": "D564-8",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 8.368757288909633,
+      "revised_RMSE_kms": 8.627157344970266,
+      "previous_log_MSE": 0.02088275292569269,
+      "revised_log_MSE": 0.020745150105618712
+    },
+    {
+      "galaxy": "UGC00128",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 87.37553688128872,
+      "revised_RMSE_kms": 91.69302459312856,
+      "previous_log_MSE": 0.05087924806337114,
+      "revised_log_MSE": 0.05445992084425706
+    },
+    {
+      "galaxy": "NGC2915",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 38.554383659410846,
+      "revised_RMSE_kms": 38.91439482869956,
+      "previous_log_MSE": 0.08758610602059719,
+      "revised_log_MSE": 0.09016695450009655
+    },
+    {
+      "galaxy": "UGC07577",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 9.204758221087873,
+      "revised_RMSE_kms": 8.6551903723053,
+      "previous_log_MSE": 0.054084080828930195,
+      "revised_log_MSE": 0.048614732959092785
+    },
+    {
+      "galaxy": "UGC05253",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 35.37051096601056,
+      "revised_RMSE_kms": 36.94714873800241,
+      "previous_log_MSE": 0.004825273973580885,
+      "revised_log_MSE": 0.005134446071044776
+    },
+    {
+      "galaxy": "UGC05918",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 10.699444520766642,
+      "revised_RMSE_kms": 10.431358578778125,
+      "previous_log_MSE": 0.01523907254488759,
+      "revised_log_MSE": 0.016138926257942388
+    },
+    {
+      "galaxy": "UGC07125",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 58.293735411839094,
+      "revised_RMSE_kms": 60.00247038248945,
+      "previous_log_MSE": 0.06926069355860955,
+      "revised_log_MSE": 0.07128696262863936
+    },
+    {
+      "galaxy": "NGC7793",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 14.568240510902157,
+      "revised_RMSE_kms": 14.542456466547431,
+      "previous_log_MSE": 0.010967215053747936,
+      "revised_log_MSE": 0.011048517698018288
+    },
+    {
+      "galaxy": "NGC5005",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 30.28214656232026,
+      "revised_RMSE_kms": 30.304757648237402,
+      "previous_log_MSE": 0.0029693898050989547,
+      "revised_log_MSE": 0.002974540956095878
+    },
+    {
+      "galaxy": "NGC3893",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 19.720827036991952,
+      "revised_RMSE_kms": 18.837805438364093,
+      "previous_log_MSE": 0.0024075560581850565,
+      "revised_log_MSE": 0.0021808109707435776
+    },
+    {
+      "galaxy": "NGC5371",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 51.094885858785275,
+      "revised_RMSE_kms": 54.36178237789233,
+      "previous_log_MSE": 0.00924262659400156,
+      "revised_log_MSE": 0.010140531370023863
+    },
+    {
+      "galaxy": "NGC4138",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 28.191458221343467,
+      "revised_RMSE_kms": 28.099693901356098,
+      "previous_log_MSE": 0.006829875426119585,
+      "revised_log_MSE": 0.006865740245585757
+    },
+    {
+      "galaxy": "NGC0247",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 19.999089071483066,
+      "revised_RMSE_kms": 20.500120274618318,
+      "previous_log_MSE": 0.01425846121469643,
+      "revised_log_MSE": 0.015066332614135118
+    },
+    {
+      "galaxy": "UGC06930",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 28.92887500482693,
+      "revised_RMSE_kms": 30.023273510669245,
+      "previous_log_MSE": 0.014140816448053603,
+      "revised_log_MSE": 0.015077315264134838
+    },
+    {
+      "galaxy": "DDO064",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 6.051855505487922,
+      "revised_RMSE_kms": 6.264244990850669,
+      "previous_log_MSE": 0.028608864491724013,
+      "revised_log_MSE": 0.03149693365210092
+    },
+    {
+      "galaxy": "NGC2683",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 20.576405862750523,
+      "revised_RMSE_kms": 21.346537613003107,
+      "previous_log_MSE": 0.0026812923912416576,
+      "revised_log_MSE": 0.0030749457839488845
+    },
+    {
+      "galaxy": "NGC4217",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 41.422114623227046,
+      "revised_RMSE_kms": 41.50597831485396,
+      "previous_log_MSE": 0.018798831494851113,
+      "revised_log_MSE": 0.01884025840873602
+    },
+    {
+      "galaxy": "NGC3521",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 18.94479378115571,
+      "revised_RMSE_kms": 18.76090581260832,
+      "previous_log_MSE": 0.0017481599418338431,
+      "revised_log_MSE": 0.0017027151245919208
+    },
+    {
+      "galaxy": "UGC05829",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 13.452960808475757,
+      "revised_RMSE_kms": 13.350242959325389,
+      "previous_log_MSE": 0.01034017334916137,
+      "revised_log_MSE": 0.010907770649051357
+    },
+    {
+      "galaxy": "UGC06923",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 5.225123513317704,
+      "revised_RMSE_kms": 5.572753090784381,
+      "previous_log_MSE": 0.001053703831859826,
+      "revised_log_MSE": 0.0012229250203362766
+    },
+    {
+      "galaxy": "UGC05716",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 5.450404210126533,
+      "revised_RMSE_kms": 5.889175131188826,
+      "previous_log_MSE": 0.00475252863196165,
+      "revised_log_MSE": 0.005367197150838214
+    },
+    {
+      "galaxy": "UGC05750",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 33.978283119826656,
+      "revised_RMSE_kms": 34.92106766048248,
+      "previous_log_MSE": 0.024789310068421302,
+      "revised_log_MSE": 0.024288467178195015
+    },
+    {
+      "galaxy": "UGC06917",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 13.815729005872015,
+      "revised_RMSE_kms": 14.585546008382913,
+      "previous_log_MSE": 0.0063975079652782395,
+      "revised_log_MSE": 0.0071094604259735045
+    },
+    {
+      "galaxy": "NGC1003",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 11.973836513135025,
+      "revised_RMSE_kms": 14.715722657628111,
+      "previous_log_MSE": 0.002668315245155479,
+      "revised_log_MSE": 0.004216415339052028
+    },
+    {
+      "galaxy": "CamB",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 8.543750119177531,
+      "revised_RMSE_kms": 8.377702134274424,
+      "previous_log_MSE": 0.0811706448001062,
+      "revised_log_MSE": 0.07744552085896045
+    },
+    {
+      "galaxy": "NGC3953",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 29.773876897677685,
+      "revised_RMSE_kms": 30.15849930588694,
+      "previous_log_MSE": 0.004675116433679728,
+      "revised_log_MSE": 0.004795901304407964
+    },
+    {
+      "galaxy": "NGC5055",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 9.920432457937656,
+      "revised_RMSE_kms": 10.168673251725265,
+      "previous_log_MSE": 0.0005587556425792683,
+      "revised_log_MSE": 0.0005767324010241785
+    },
+    {
+      "galaxy": "UGC07261",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 10.729980055230893,
+      "revised_RMSE_kms": 11.046015092043493,
+      "previous_log_MSE": 0.012447604757920727,
+      "revised_log_MSE": 0.013282576820336242
+    },
+    {
+      "galaxy": "NGC2841",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 76.92879087188328,
+      "revised_RMSE_kms": 78.56793629563151,
+      "previous_log_MSE": 0.01619414062793303,
+      "revised_log_MSE": 0.01721674095338052
+    },
+    {
+      "galaxy": "NGC4100",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 26.38986057436798,
+      "revised_RMSE_kms": 25.652361801855033,
+      "previous_log_MSE": 0.005317636138570235,
+      "revised_log_MSE": 0.005088668406264148
+    },
+    {
+      "galaxy": "UGC08490",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 27.843253875655844,
+      "revised_RMSE_kms": 27.99790136410032,
+      "previous_log_MSE": 0.04080621858714104,
+      "revised_log_MSE": 0.04158823315567529
+    },
+    {
+      "galaxy": "UGC00191",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 15.344936643908179,
+      "revised_RMSE_kms": 16.121851129476106,
+      "previous_log_MSE": 0.023972080316289644,
+      "revised_log_MSE": 0.026031895995547852
+    },
+    {
+      "galaxy": "UGC06818",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 8.815080012754239,
+      "revised_RMSE_kms": 8.879968714683939,
+      "previous_log_MSE": 0.007094614474622651,
+      "revised_log_MSE": 0.0066888120441660716
+    },
+    {
+      "galaxy": "UGC01281",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 4.585229258469172,
+      "revised_RMSE_kms": 4.892024415582914,
+      "previous_log_MSE": 0.0019165731427625773,
+      "revised_log_MSE": 0.002742097641003809
+    },
+    {
+      "galaxy": "NGC5033",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 36.28649351239713,
+      "revised_RMSE_kms": 38.862690048206304,
+      "previous_log_MSE": 0.005396756863587914,
+      "revised_log_MSE": 0.0060766884828257475
+    },
+    {
+      "galaxy": "UGCA444",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 3.0952395345954993,
+      "revised_RMSE_kms": 3.2031366061105193,
+      "previous_log_MSE": 0.013867190055283097,
+      "revised_log_MSE": 0.01569838559251498
+    },
+    {
+      "galaxy": "UGC08837",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 10.691293168740588,
+      "revised_RMSE_kms": 9.942741872387264,
+      "previous_log_MSE": 0.016876019831109958,
+      "revised_log_MSE": 0.014488656024224654
+    },
+    {
+      "galaxy": "NGC3726",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 20.877592227129284,
+      "revised_RMSE_kms": 22.477095909143827,
+      "previous_log_MSE": 0.002814738819257962,
+      "revised_log_MSE": 0.003206874352890727
+    },
+    {
+      "galaxy": "UGC05764",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 13.341987798227898,
+      "revised_RMSE_kms": 13.874820799289482,
+      "previous_log_MSE": 0.04536532846903214,
+      "revised_log_MSE": 0.049313747327020103
+    },
+    {
+      "galaxy": "ESO116-G012",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 16.464396318114023,
+      "revised_RMSE_kms": 16.05713106499754,
+      "previous_log_MSE": 0.011330595164907663,
+      "revised_log_MSE": 0.011392930913533326
+    },
+    {
+      "galaxy": "UGC07399",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 32.04508458808376,
+      "revised_RMSE_kms": 32.44734648013437,
+      "previous_log_MSE": 0.048196485527320324,
+      "revised_log_MSE": 0.05006342836938712
+    },
+    {
+      "galaxy": "UGC03580",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 17.36916405967687,
+      "revised_RMSE_kms": 17.755209249279115,
+      "previous_log_MSE": 0.00761701478663961,
+      "revised_log_MSE": 0.007725713695481267
+    },
+    {
+      "galaxy": "UGC11914",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 46.20671389311574,
+      "revised_RMSE_kms": 46.353911228613846,
+      "previous_log_MSE": 0.005911579332485544,
+      "revised_log_MSE": 0.005951253995213361
+    },
+    {
+      "galaxy": "UGC07690",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 12.445320358927566,
+      "revised_RMSE_kms": 12.264767135337992,
+      "previous_log_MSE": 0.011760542174069999,
+      "revised_log_MSE": 0.011472369809457744
+    },
+    {
+      "galaxy": "UGC12506",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 66.42625997574468,
+      "revised_RMSE_kms": 68.61394748536075,
+      "previous_log_MSE": 0.04058567123414748,
+      "revised_log_MSE": 0.04145709487509456
+    },
+    {
+      "galaxy": "UGC05986",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 21.636466172706577,
+      "revised_RMSE_kms": 21.47232827149624,
+      "previous_log_MSE": 0.012779390169466467,
+      "revised_log_MSE": 0.012997337323190776
+    },
+    {
+      "galaxy": "NGC3198",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 19.341904899102943,
+      "revised_RMSE_kms": 19.543870030978052,
+      "previous_log_MSE": 0.006462198855037486,
+      "revised_log_MSE": 0.00663202302225321
+    },
+    {
+      "galaxy": "UGC06787",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 38.85664306729966,
+      "revised_RMSE_kms": 38.70517570458975,
+      "previous_log_MSE": 0.006279197458435927,
+      "revised_log_MSE": 0.006261915196701153
+    },
+    {
+      "galaxy": "DDO168",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 3.080461003274956,
+      "revised_RMSE_kms": 3.3583436097983568,
+      "previous_log_MSE": 0.0008720656404863187,
+      "revised_log_MSE": 0.0009870816857647218
+    },
+    {
+      "galaxy": "NGC0024",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 33.86176224597576,
+      "revised_RMSE_kms": 34.127230174182614,
+      "previous_log_MSE": 0.05153361773615882,
+      "revised_log_MSE": 0.0527928742317837
+    },
+    {
+      "galaxy": "NGC3992",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 35.88334103238988,
+      "revised_RMSE_kms": 36.4683167825,
+      "previous_log_MSE": 0.004774963971696553,
+      "revised_log_MSE": 0.004926235756171439
+    },
+    {
+      "galaxy": "NGC6674",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 51.9479121183331,
+      "revised_RMSE_kms": 52.77475315566958,
+      "previous_log_MSE": 0.008629217831103597,
+      "revised_log_MSE": 0.008873768037765777
+    },
+    {
+      "galaxy": "NGC3741",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 22.437296975916375,
+      "revised_RMSE_kms": 22.744522295148595,
+      "previous_log_MSE": 0.12042776793052745,
+      "revised_log_MSE": 0.1258150009929205
+    },
+    {
+      "galaxy": "NGC6195",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 25.27309610053306,
+      "revised_RMSE_kms": 25.496091061009977,
+      "previous_log_MSE": 0.0022856839058224302,
+      "revised_log_MSE": 0.0023316095990151458
+    },
+    {
+      "galaxy": "NGC4183",
+      "model": "attenuated",
+      "split": "train",
+      "previous_RMSE_kms": 27.267083953043148,
+      "revised_RMSE_kms": 29.454700365440544,
+      "previous_log_MSE": 0.013407835574329223,
+      "revised_log_MSE": 0.014952242159358926
+    },
+    {
+      "galaxy": "UGC08550",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 17.95820905476207,
+      "revised_RMSE_kms": 17.856249308618224,
+      "previous_log_MSE": 0.036453910228002546,
+      "revised_log_MSE": 0.036217324048521155
+    },
+    {
+      "galaxy": "F571-V1",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 25.360178683631155,
+      "revised_RMSE_kms": 26.939280114562045,
+      "previous_log_MSE": 0.012384242487637384,
+      "revised_log_MSE": 0.013579773707481991
+    },
+    {
+      "galaxy": "NGC3972",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 18.211291909776303,
+      "revised_RMSE_kms": 18.487998998175946,
+      "previous_log_MSE": 0.008586881135632798,
+      "revised_log_MSE": 0.009035336079785895
+    },
+    {
+      "galaxy": "ESO079-G014",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 28.062830981303044,
+      "revised_RMSE_kms": 28.628861901688,
+      "previous_log_MSE": 0.01583745545406232,
+      "revised_log_MSE": 0.016378726061763906
+    },
+    {
+      "galaxy": "NGC4559",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 9.913673364790474,
+      "revised_RMSE_kms": 11.142452710140857,
+      "previous_log_MSE": 0.0012896257462553314,
+      "revised_log_MSE": 0.0015961215140291088
+    },
+    {
+      "galaxy": "IC4202",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 35.235365687119504,
+      "revised_RMSE_kms": 35.360430169157816,
+      "previous_log_MSE": 0.014702515738021333,
+      "revised_log_MSE": 0.014750014626839074
+    },
+    {
+      "galaxy": "UGC05414",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 3.0926178908195743,
+      "revised_RMSE_kms": 3.212127967112881,
+      "previous_log_MSE": 0.0012821824485908751,
+      "revised_log_MSE": 0.001599191747161655
+    },
+    {
+      "galaxy": "NGC4157",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 13.418500306405303,
+      "revised_RMSE_kms": 14.38395807143398,
+      "previous_log_MSE": 0.0012834898490968203,
+      "revised_log_MSE": 0.0014588465567734687
+    },
+    {
+      "galaxy": "NGC5585",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 3.775946545481097,
+      "revised_RMSE_kms": 4.405883073366234,
+      "previous_log_MSE": 0.00196387558395112,
+      "revised_log_MSE": 0.002145129109049827
+    },
+    {
+      "galaxy": "UGC07603",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 18.800937219084357,
+      "revised_RMSE_kms": 18.45613730281971,
+      "previous_log_MSE": 0.030364823389408418,
+      "revised_log_MSE": 0.029345771928117863
+    },
+    {
+      "galaxy": "UGC09037",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 38.065318363659145,
+      "revised_RMSE_kms": 40.62991142661183,
+      "previous_log_MSE": 0.010837026875643412,
+      "revised_log_MSE": 0.011809770704474946
+    },
+    {
+      "galaxy": "NGC4051",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 13.293060119474813,
+      "revised_RMSE_kms": 13.365630831713458,
+      "previous_log_MSE": 0.0018318749443794022,
+      "revised_log_MSE": 0.0018750734272082647
+    },
+    {
+      "galaxy": "UGC05721",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 37.02695465348716,
+      "revised_RMSE_kms": 37.10530895087254,
+      "previous_log_MSE": 0.08835751677501398,
+      "revised_log_MSE": 0.08910793938864289
+    },
+    {
+      "galaxy": "UGC12732",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 17.719165556559904,
+      "revised_RMSE_kms": 19.475280177697194,
+      "previous_log_MSE": 0.010745781485770312,
+      "revised_log_MSE": 0.012432855415743991
+    },
+    {
+      "galaxy": "UGC11455",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 23.907786201259977,
+      "revised_RMSE_kms": 25.109149786501632,
+      "previous_log_MSE": 0.003460142213269245,
+      "revised_log_MSE": 0.003611803008909279
+    },
+    {
+      "galaxy": "NGC1090",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 24.707210029664836,
+      "revised_RMSE_kms": 26.996779962937147,
+      "previous_log_MSE": 0.00606432766264105,
+      "revised_log_MSE": 0.006721185505721512
+    },
+    {
+      "galaxy": "NGC4088",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 21.03085247360808,
+      "revised_RMSE_kms": 22.17026388251938,
+      "previous_log_MSE": 0.0027608847100434783,
+      "revised_log_MSE": 0.00301528520154146
+    },
+    {
+      "galaxy": "UGC00731",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 22.977191683892343,
+      "revised_RMSE_kms": 24.004384901117973,
+      "previous_log_MSE": 0.02499681668903238,
+      "revised_log_MSE": 0.02739304897906818
+    },
+    {
+      "galaxy": "NGC3917",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 14.218277314925226,
+      "revised_RMSE_kms": 15.100131086013977,
+      "previous_log_MSE": 0.004971658830628132,
+      "revised_log_MSE": 0.005463070903901522
+    },
+    {
+      "galaxy": "F574-1",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 20.051222896584708,
+      "revised_RMSE_kms": 20.424452154850094,
+      "previous_log_MSE": 0.02052857692994619,
+      "revised_log_MSE": 0.021570752565181907
+    },
+    {
+      "galaxy": "NGC4068",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 2.494554356541559,
+      "revised_RMSE_kms": 2.249543436657259,
+      "previous_log_MSE": 0.006375575246401754,
+      "revised_log_MSE": 0.005459068091498904
+    },
+    {
+      "galaxy": "KK98-251",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 7.152695592019195,
+      "revised_RMSE_kms": 6.563151821840819,
+      "previous_log_MSE": 0.009672749027819274,
+      "revised_log_MSE": 0.007709841472003583
+    },
+    {
+      "galaxy": "F568-V1",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 27.553572717211836,
+      "revised_RMSE_kms": 28.62384475943756,
+      "previous_log_MSE": 0.033393042877608775,
+      "revised_log_MSE": 0.03563235791610681
+    },
+    {
+      "galaxy": "NGC5985",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 102.49705697366052,
+      "revised_RMSE_kms": 102.70267012501488,
+      "previous_log_MSE": 0.042083201599680854,
+      "revised_log_MSE": 0.04233274054620787
+    },
+    {
+      "galaxy": "UGC02487",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 77.62521332008043,
+      "revised_RMSE_kms": 77.23553483002135,
+      "previous_log_MSE": 0.01134043830744771,
+      "revised_log_MSE": 0.011227113160972892
+    },
+    {
+      "galaxy": "UGC03546",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 27.530712780059588,
+      "revised_RMSE_kms": 27.92362150473292,
+      "previous_log_MSE": 0.002173025991461658,
+      "revised_log_MSE": 0.0022742355223200187
+    },
+    {
+      "galaxy": "NGC3109",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 5.3930144476127975,
+      "revised_RMSE_kms": 5.784779894631443,
+      "previous_log_MSE": 0.0019973724690621336,
+      "revised_log_MSE": 0.0025589797242084856
+    },
+    {
+      "galaxy": "NGC0891",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 23.24293831826564,
+      "revised_RMSE_kms": 22.750859635441024,
+      "previous_log_MSE": 0.001959086313282805,
+      "revised_log_MSE": 0.0018668447959952737
+    },
+    {
+      "galaxy": "NGC0801",
+      "model": "attenuated",
+      "split": "validation",
+      "previous_RMSE_kms": 56.65916131271972,
+      "revised_RMSE_kms": 61.14969135066407,
+      "previous_log_MSE": 0.009765851996653419,
+      "revised_log_MSE": 0.010955683797557215
+    },
+    {
+      "galaxy": "UGC08699",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 24.941719700747317,
+      "revised_RMSE_kms": 25.1122835584031,
+      "previous_log_MSE": 0.004017655466670965,
+      "revised_log_MSE": 0.004090368419284809
+    },
+    {
+      "galaxy": "UGC02885",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 53.1002670857789,
+      "revised_RMSE_kms": 56.845637821609984,
+      "previous_log_MSE": 0.007706041703480967,
+      "revised_log_MSE": 0.008402915818463572
+    },
+    {
+      "galaxy": "UGC07151",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 9.248217917669717,
+      "revised_RMSE_kms": 9.655128360476837,
+      "previous_log_MSE": 0.006850474510058205,
+      "revised_log_MSE": 0.0075011042508250645
+    },
+    {
+      "galaxy": "NGC3877",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 21.22894924654818,
+      "revised_RMSE_kms": 21.648525672503197,
+      "previous_log_MSE": 0.010409232735094868,
+      "revised_log_MSE": 0.010586760175527834
+    },
+    {
+      "galaxy": "NGC6946",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 8.46968422901183,
+      "revised_RMSE_kms": 8.948762195300567,
+      "previous_log_MSE": 0.0004921119481598572,
+      "revised_log_MSE": 0.000551799421462159
+    },
+    {
+      "galaxy": "UGC10310",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 13.209040579403828,
+      "revised_RMSE_kms": 14.01991237918023,
+      "previous_log_MSE": 0.009549768709524911,
+      "revised_log_MSE": 0.010832035709452233
+    },
+    {
+      "galaxy": "F565-V2",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 9.695167366901142,
+      "revised_RMSE_kms": 10.320173727150932,
+      "previous_log_MSE": 0.0024119208583625964,
+      "revised_log_MSE": 0.0028584380844569124
+    },
+    {
+      "galaxy": "F583-4",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 13.441176518368087,
+      "revised_RMSE_kms": 13.601318569443446,
+      "previous_log_MSE": 0.018242429691232954,
+      "revised_log_MSE": 0.019201179816580583
+    },
+    {
+      "galaxy": "NGC7331",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 16.973498036422306,
+      "revised_RMSE_kms": 19.256612063380622,
+      "previous_log_MSE": 0.000862902996395121,
+      "revised_log_MSE": 0.0011057007466152749
+    },
+    {
+      "galaxy": "NGC2955",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 41.698116412723564,
+      "revised_RMSE_kms": 41.714996860969535,
+      "previous_log_MSE": 0.006378923613721409,
+      "revised_log_MSE": 0.006387372788554321
+    },
+    {
+      "galaxy": "UGCA442",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 5.989639336740885,
+      "revised_RMSE_kms": 6.832446478305555,
+      "previous_log_MSE": 0.00569585785865131,
+      "revised_log_MSE": 0.0068546734074877175
+    },
+    {
+      "galaxy": "NGC2976",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 9.700167894115975,
+      "revised_RMSE_kms": 9.966481277438753,
+      "previous_log_MSE": 0.006679525502716638,
+      "revised_log_MSE": 0.007050149446608029
+    },
+    {
+      "galaxy": "DDO154",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 14.092833492197576,
+      "revised_RMSE_kms": 14.320334857195784,
+      "previous_log_MSE": 0.028896487036075617,
+      "revised_log_MSE": 0.030154778217944243
+    },
+    {
+      "galaxy": "DDO170",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 32.419565267054104,
+      "revised_RMSE_kms": 33.89913228580632,
+      "previous_log_MSE": 0.03416692959132877,
+      "revised_log_MSE": 0.03601779382513523
+    },
+    {
+      "galaxy": "NGC7814",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 34.882471025932134,
+      "revised_RMSE_kms": 33.61410342448328,
+      "previous_log_MSE": 0.00574476155773412,
+      "revised_log_MSE": 0.005265192985242811
+    },
+    {
+      "galaxy": "F583-1",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 15.262560146576622,
+      "revised_RMSE_kms": 16.319369965800934,
+      "previous_log_MSE": 0.015101070249526671,
+      "revised_log_MSE": 0.016553575884377156
+    },
+    {
+      "galaxy": "F568-3",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 22.375272048418804,
+      "revised_RMSE_kms": 22.806595939606435,
+      "previous_log_MSE": 0.020470588502953267,
+      "revised_log_MSE": 0.02158053605005826
+    },
+    {
+      "galaxy": "UGC04499",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 11.458902867890163,
+      "revised_RMSE_kms": 12.317848134690665,
+      "previous_log_MSE": 0.004330425997615574,
+      "revised_log_MSE": 0.005019902649011518
+    },
+    {
+      "galaxy": "UGC06399",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 8.842459442489174,
+      "revised_RMSE_kms": 9.60477091203507,
+      "previous_log_MSE": 0.005531754921858877,
+      "revised_log_MSE": 0.00650732335377074
+    },
+    {
+      "galaxy": "NGC0055",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 11.237482762882655,
+      "revised_RMSE_kms": 11.023793697977204,
+      "previous_log_MSE": 0.004471749642111027,
+      "revised_log_MSE": 0.004518558628762233
+    },
+    {
+      "galaxy": "UGC07559",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 3.3011357172187914,
+      "revised_RMSE_kms": 3.40294429360951,
+      "previous_log_MSE": 0.0025829942131687764,
+      "revised_log_MSE": 0.0024121256877971645
+    },
+    {
+      "galaxy": "UGC07524",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 16.988846686005914,
+      "revised_RMSE_kms": 16.87627343681723,
+      "previous_log_MSE": 0.013104995855381163,
+      "revised_log_MSE": 0.01371088054987176
+    },
+    {
+      "galaxy": "NGC5907",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 43.69240126718539,
+      "revised_RMSE_kms": 46.30472645595541,
+      "previous_log_MSE": 0.008134499546799649,
+      "revised_log_MSE": 0.00888316119326726
+    },
+    {
+      "galaxy": "DDO161",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 14.09630969588779,
+      "revised_RMSE_kms": 14.727891484938288,
+      "previous_log_MSE": 0.010881690073709739,
+      "revised_log_MSE": 0.01134112202120056
+    },
+    {
+      "galaxy": "UGC02916",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 33.21935261411304,
+      "revised_RMSE_kms": 34.67395235498415,
+      "previous_log_MSE": 0.0054606638405447026,
+      "revised_log_MSE": 0.005802322038769603
+    },
+    {
+      "galaxy": "F571-8",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 19.645314626568883,
+      "revised_RMSE_kms": 20.188082817654387,
+      "previous_log_MSE": 0.018922431357100082,
+      "revised_log_MSE": 0.019309747614197032
+    },
+    {
+      "galaxy": "UGC06786",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 43.20001306244093,
+      "revised_RMSE_kms": 43.01010796714775,
+      "previous_log_MSE": 0.010006960168927853,
+      "revised_log_MSE": 0.009960832409265735
+    },
+    {
+      "galaxy": "NGC3949",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 16.6230811920063,
+      "revised_RMSE_kms": 17.11546569496862,
+      "previous_log_MSE": 0.0022861856688672307,
+      "revised_log_MSE": 0.002432192234888652
+    },
+    {
+      "galaxy": "UGC03205",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 37.54624652713045,
+      "revised_RMSE_kms": 37.58311325198339,
+      "previous_log_MSE": 0.006909159057105117,
+      "revised_log_MSE": 0.006944771601901111
+    },
+    {
+      "galaxy": "UGC07323",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 3.932589730110127,
+      "revised_RMSE_kms": 4.330347525328061,
+      "previous_log_MSE": 0.0026417385839924553,
+      "revised_log_MSE": 0.0030133090005505965
+    },
+    {
+      "galaxy": "UGC09992",
+      "model": "attenuated",
+      "split": "test",
+      "previous_RMSE_kms": 13.815428958630301,
+      "revised_RMSE_kms": 13.945632631969417,
+      "previous_log_MSE": 0.022103193980714024,
+      "revised_log_MSE": 0.02260220260084949
+    }
+  ],
+  "upstream_integral_checks": [
+    {
+      "B": 0.2,
+      "t": -2.0,
+      "analytic": 0.006118126708856364,
+      "quadrature": 0.006118126709066661,
+      "relative_error": 3.4372837909302234e-11
+    },
+    {
+      "B": 1.0,
+      "t": 0.0,
+      "analytic": 0.5890486225480862,
+      "quadrature": 0.5890486225480862,
+      "relative_error": 0.0
+    },
+    {
+      "B": 1.0,
+      "t": 3.0,
+      "analytic": 1.1774407871974317,
+      "quadrature": 1.1774407871974317,
+      "relative_error": 0.0
+    },
+    {
+      "B": 4.0,
+      "t": -7.0,
+      "analytic": 6.477007387050321e-06,
+      "quadrature": 6.47700738705039e-06,
+      "relative_error": 1.0547118733938987e-14
+    },
+    {
+      "B": 4.0,
+      "t": 7.0,
+      "analytic": 0.0011440085835271807,
+      "quadrature": 0.0011440085835271803,
+      "relative_error": 4.440892098500626e-16
+    }
+  ]
+}
