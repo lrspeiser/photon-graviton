@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Cluster comparison:** [Coma results](../research_work/results/isotropic-galaxy-transfer/cluster-model-comparison-report.md) compare companion, NFW and compact-baryon MOND shear shapes using the same inner/outer bins. Several shapes remain viable; this does not yet test the frozen one-third normalization or multiple clusters. See the linked protocol for the physical inputs needed to do that.
+
 **Matched MOND/dark-halo comparison:** [Rotation benchmarks](../research_work/results/isotropic-galaxy-transfer/model-comparison-report.md) show simple MOND outperforming our exact-one-third candidate on frozen galaxies with fewer shared parameters. A restricted shared NFW mapping performs worse and reaches a scale bound; target-inner-fitted NFW gives much better outer predictions with extra target information. No full-theory ranking or dark-matter exclusion is claimed.
 
 **Retention lens transfer and one-third test:** [Executed results](../research_work/results/isotropic-galaxy-transfer/retention-lensing-report.md) improve outer stellar motion but worsen lens RMS to 13.94–14.11% under two declared photometric-to-3.6-micron proxy mappings. Exact q=1/3 produces nearly unchanged galaxy performance after training-only refits; simplicity is supported, a fundamental exponent is not. The lens run retains fitted q and is not a separate one-third test.

@@ -1,0 +1,214 @@
+{
+  "scope": "One cluster, six reconstructed shear bins; exploratory shape-only comparison",
+  "input_sha256": "54418e9fdede2057680f0bf57fda5036fba807a6528afdc653ec4e5507ab7e3e",
+  "observed": [
+    {
+      "bin": 1,
+      "published_radius_h_inverse_Mpc": 1.2091334687408992,
+      "shear_t": 0.007847463111441855,
+      "plotted_sigma_t": 0.0025339022403197543,
+      "shear_cross": -0.0016355844555936978,
+      "plotted_sigma_cross": 0.0025423629532051436,
+      "pdf_center_points": [
+        171.83999633789062,
+        255.8330078125
+      ],
+      "pdf_error_endpoints_y": [
+        193.9840087890625,
+        317.6809997558594
+      ]
+    },
+    {
+      "bin": 2,
+      "published_radius_h_inverse_Mpc": 2.7532502697453376,
+      "shear_t": 0.0030932388814204894,
+      "plotted_sigma_t": 0.0014999961241007915,
+      "shear_cross": -0.0005254331504909138,
+      "plotted_sigma_cross": 0.0014999961241007915,
+      "pdf_center_points": [
+        232.86099243164062,
+        371.8760070800781
+      ],
+      "pdf_error_endpoints_y": [
+        335.2640075683594,
+        408.489013671875
+      ]
+    },
+    {
+      "bin": 3,
+      "published_radius_h_inverse_Mpc": 4.4648592195300205,
+      "shear_t": 0.0030508765533603798,
+      "plotted_sigma_t": 0.0011906762368869579,
+      "shear_cross": 0.0003983061570284306,
+      "plotted_sigma_cross": 0.0011821955193604917,
+      "pdf_center_points": [
+        300.5010070800781,
+        372.9100036621094
+      ],
+      "pdf_error_endpoints_y": [
+        343.7449951171875,
+        401.8699951171875
+      ]
+    },
+    {
+      "bin": 4,
+      "published_radius_h_inverse_Mpc": 6.186943571810895,
+      "shear_t": 0.0003729052640212529,
+      "plotted_sigma_t": 0.0010211850399292636,
+      "shear_cross": 0.00032206221843467683,
+      "plotted_sigma_cross": 0.0010169653109521409,
+      "pdf_center_points": [
+        368.55499267578125,
+        438.2749938964844
+      ],
+      "pdf_error_endpoints_y": [
+        413.2460021972656,
+        463.09698486328125
+      ]
+    },
+    {
+      "bin": 5,
+      "published_radius_h_inverse_Mpc": 7.929955561957365,
+      "shear_t": 0.0014152508381944612,
+      "plotted_sigma_t": 0.0008983177847260564,
+      "shear_cross": 0.0018559605828552225,
+      "plotted_sigma_cross": 0.0008983177847260564,
+      "pdf_center_points": [
+        437.4360046386719,
+        412.8330078125
+      ],
+      "pdf_error_endpoints_y": [
+        390.906005859375,
+        434.7590026855469
+      ]
+    },
+    {
+      "bin": 6,
+      "published_radius_h_inverse_Mpc": 9.657278001605114,
+      "shear_t": -0.0004491479523249394,
+      "plotted_sigma_t": 0.0008050917812932601,
+      "shear_cross": 0.0006271204919541334,
+      "plotted_sigma_cross": 0.0007923707050035609,
+      "pdf_center_points": [
+        505.6969909667969,
+        458.3399963378906
+      ],
+      "pdf_error_endpoints_y": [
+        438.6889953613281,
+        477.9909973144531
+      ]
+    }
+  ],
+  "training_bins": [
+    1,
+    2,
+    3
+  ],
+  "prediction_bins": [
+    4,
+    5,
+    6
+  ],
+  "models": [
+    {
+      "model": "transparent",
+      "T": 0.0,
+      "scale_in_first_radius_units": 0.807698719709608,
+      "positive_amplitude": 0.020108740963100058,
+      "scale_boundary": false,
+      "training_diagonal_sum": 1.1622062621367095,
+      "outer_diagonal_sum": 2.7017562421285524,
+      "predicted_shear": [
+        0.007481272756650479,
+        0.004111202590340214,
+        0.002068468866229337,
+        0.0012089266413798062,
+        0.0007833644986007949,
+        0.0005488855036940586
+      ]
+    },
+    {
+      "model": "strong_interception",
+      "T": 100.0,
+      "scale_in_first_radius_units": 0.18271031983625166,
+      "positive_amplitude": 1.1987399302842268,
+      "scale_boundary": false,
+      "training_diagonal_sum": 1.3083524235363397,
+      "outer_diagonal_sum": 2.50235498677024,
+      "predicted_shear": [
+        0.007621209460352377,
+        0.004079338326217754,
+        0.0019414351899385148,
+        0.0011066796628446747,
+        0.0007073593450648346,
+        0.0004914887966739374
+      ]
+    },
+    {
+      "model": "nfw",
+      "scale_in_first_radius_units": 1.0060060099816184,
+      "positive_amplitude": 0.013073400113626819,
+      "scale_boundary": false,
+      "training_diagonal_sum": 0.6510132045074289,
+      "outer_diagonal_sum": 4.710624880823174,
+      "predicted_shear": [
+        0.007355996034965891,
+        0.003993878091014315,
+        0.002452118363998998,
+        0.0016813240590026356,
+        0.001233016631893772,
+        0.0009517595392043167
+      ]
+    },
+    {
+      "model": "mond_point_baryons",
+      "scale_in_first_radius_units": 0.01,
+      "positive_amplitude": 0.26029075245503963,
+      "scale_boundary": true,
+      "training_diagonal_sum": 0.6263483034199456,
+      "outer_diagonal_sum": 4.829878137593877,
+      "predicted_shear": [
+        0.008229486630303496,
+        0.0036012331840494247,
+        0.002218317859120126,
+        0.001600099568747069,
+        0.0012480547958673583,
+        0.001024647007274719
+      ]
+    },
+    {
+      "model": "point_mass_shape",
+      "positive_amplitude": 0.00934379015780619,
+      "training_diagonal_sum": 5.036928818326389,
+      "outer_diagonal_sum": 2.326124712596411,
+      "predicted_shear": [
+        0.00934379015780619,
+        0.0018021053699652147,
+        0.0006852610100997964,
+        0.0003568775687576197,
+        0.0002172351281387567,
+        0.00014647452376802278
+      ]
+    }
+  ],
+  "limitations": [
+    "No frozen one-third normalization transfer",
+    "MOND uses compact point baryons and stipulated equal-potential lensing; free amplitude and transition scale",
+    "No gas profile or source geometry; shear rather than reduced shear approximation",
+    "No covariance or bin averaging; outer bins previously explored; not an untouched test",
+    "NFW represents a fitted total shape, not baryons plus a calibrated cosmological halo"
+  ],
+  "post_fit_deep_mond_limit": {
+    "positive_amplitude": 0.008215498628415542,
+    "training_diagonal_sum": 0.6201347877906269,
+    "outer_diagonal_sum": 4.858994591812475,
+    "predicted_shear": [
+      0.008215498628415542,
+      0.0036079663600399815,
+      0.002224848279775732,
+      0.0016055802414736823,
+      0.0012526721337086848,
+      0.0010286163815892157
+    ]
+  }
+}
