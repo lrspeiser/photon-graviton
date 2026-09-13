@@ -1,0 +1,127 @@
+{
+  "source": "https://lss.fnal.gov/archive/2007/pub/fermilab-pub-07-453-a-cd.pdf",
+  "pdf_sha256": "87f5126c3e64a03f37315623b811c20b8c7a37a8de40b46a9fb48e87e06f0f6a",
+  "page_one_based": 15,
+  "figure": 2,
+  "status": "Exploratory vector-figure reconstruction; not author machine-readable measurements, raw shapes, full covariance or untouched validation.",
+  "axis_calibration": {
+    "x0": 124.05699920654297,
+    "xright": 539.0,
+    "x_units_per_point": 0.02530468035349873,
+    "y_zero": 447.37701416015625,
+    "y_bottom": 569.4190063476562,
+    "shear_per_point": 4.096950492514263e-05
+  },
+  "conservative_plot_coordinate_tolerance_points": 0.25,
+  "plot_coordinate_tolerance_shear": 1.0242376231285658e-05,
+  "checks": {
+    "null_chi2_t": 23.335876132644128,
+    "paper_null_chi2_t": 23.33,
+    "null_chi2_cross": 5.645299497946304,
+    "paper_null_chi2_cross": 5.65
+  },
+  "restrictions": [
+    "Radius retains paper cosmological units; not adopted as a fictional physical distance.",
+    "Do not substitute a fitted NFW curve for data; curve excluded from extraction.",
+    "No bin edges, source weights, full covariance or source geometry recovered.",
+    "Cross component and negative measured shear retained; do not clip."
+  ],
+  "rows": [
+    {
+      "bin": 1,
+      "published_radius_h_inverse_Mpc": 1.2091334687408992,
+      "shear_t": 0.007847463111441855,
+      "plotted_sigma_t": 0.0025339022403197543,
+      "shear_cross": -0.0016355844555936978,
+      "plotted_sigma_cross": 0.0025423629532051436,
+      "pdf_center_points": [
+        171.83999633789062,
+        255.8330078125
+      ],
+      "pdf_error_endpoints_y": [
+        193.9840087890625,
+        317.6809997558594
+      ]
+    },
+    {
+      "bin": 2,
+      "published_radius_h_inverse_Mpc": 2.7532502697453376,
+      "shear_t": 0.0030932388814204894,
+      "plotted_sigma_t": 0.0014999961241007915,
+      "shear_cross": -0.0005254331504909138,
+      "plotted_sigma_cross": 0.0014999961241007915,
+      "pdf_center_points": [
+        232.86099243164062,
+        371.8760070800781
+      ],
+      "pdf_error_endpoints_y": [
+        335.2640075683594,
+        408.489013671875
+      ]
+    },
+    {
+      "bin": 3,
+      "published_radius_h_inverse_Mpc": 4.4648592195300205,
+      "shear_t": 0.0030508765533603798,
+      "plotted_sigma_t": 0.0011906762368869579,
+      "shear_cross": 0.0003983061570284306,
+      "plotted_sigma_cross": 0.0011821955193604917,
+      "pdf_center_points": [
+        300.5010070800781,
+        372.9100036621094
+      ],
+      "pdf_error_endpoints_y": [
+        343.7449951171875,
+        401.8699951171875
+      ]
+    },
+    {
+      "bin": 4,
+      "published_radius_h_inverse_Mpc": 6.186943571810895,
+      "shear_t": 0.0003729052640212529,
+      "plotted_sigma_t": 0.0010211850399292636,
+      "shear_cross": 0.00032206221843467683,
+      "plotted_sigma_cross": 0.0010169653109521409,
+      "pdf_center_points": [
+        368.55499267578125,
+        438.2749938964844
+      ],
+      "pdf_error_endpoints_y": [
+        413.2460021972656,
+        463.09698486328125
+      ]
+    },
+    {
+      "bin": 5,
+      "published_radius_h_inverse_Mpc": 7.929955561957365,
+      "shear_t": 0.0014152508381944612,
+      "plotted_sigma_t": 0.0008983177847260564,
+      "shear_cross": 0.0018559605828552225,
+      "plotted_sigma_cross": 0.0008983177847260564,
+      "pdf_center_points": [
+        437.4360046386719,
+        412.8330078125
+      ],
+      "pdf_error_endpoints_y": [
+        390.906005859375,
+        434.7590026855469
+      ]
+    },
+    {
+      "bin": 6,
+      "published_radius_h_inverse_Mpc": 9.657278001605114,
+      "shear_t": -0.0004491479523249394,
+      "plotted_sigma_t": 0.0008050917812932601,
+      "shear_cross": 0.0006271204919541334,
+      "plotted_sigma_cross": 0.0007923707050035609,
+      "pdf_center_points": [
+        505.6969909667969,
+        458.3399963378906
+      ],
+      "pdf_error_endpoints_y": [
+        438.6889953613281,
+        477.9909973144531
+      ]
+    }
+  ]
+}
