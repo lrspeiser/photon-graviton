@@ -1,0 +1,9 @@
+{
+  "scope": "160 fresh-noise synthetic cases on 98 already exposed DES cadence slots; no observed flux or causal validation",
+  "seeds": [1901,1902,1903,1904,1905,1906,1907,1908,1909,1910,1911,1912,1913,1914,1915,1916,1917,1918,1919,1920],
+  "inherited_generation": "Shapes, SNR 5/20, truth b=0/1, scatter 0.1, priors and quadrature from timing-coverage-calibration/protocol.json",
+  "estimator": "Unchanged boundary-capable fit initialized by original population fit; three fixed-truth starts exactly as exposed recalibration",
+  "screens": {"maximum_absolute_mean_bias": 0.1, "minimum_95_acceptance_fraction": 0.85, "maximum_invalid_per_cell": 0},
+  "retention": "Keep every realization; no seed replacement or tuning after outcomes. Hash-locked resume.",
+  "interpretation": "20 runs per cell provide only a coarse calibration screen with exact binomial uncertainty. Numerical refinement and source evolution tests remain necessary."
+}
