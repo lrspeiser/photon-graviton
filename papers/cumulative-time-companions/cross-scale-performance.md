@@ -1,3 +1,11 @@
+## Combined fits with the necessary orbital condition enforced (after v1.2)
+
+The previous combined-gradient/orbit result has now been refitted with gamma>=2 beta enforced on 4097 radial points and checked on 8193. The exact central limit of the adopted positive Sersic light components is also enforced: gamma(0)=0.75, hence beta0<=0.375. This cap follows from the extrapolated light model; it is not an observed central clock or orbit parameter. All twelve fits pass these necessary conditions, and three galaxies under both populations sit on the central cap.
+
+Inner chi-squared rises only from 82.40/81.67 to 87.58/86.79, retaining much of the improvement over radial-only fits at 106.88/105.62. Conditional outer residual-square sums become 106.03/104.12, still roughly twice the free-mass control. The earlier necessary-condition failure can be repaired within this fit family, but it was not the main source of the joint motion/lensing mismatch. Positive distribution functions, stability, stellar-gradient evidence and residual outer motions remain unresolved. Lensing is consumed calibration in these fits, not an independent prediction.
+
+See [pre-execution protocol](../../research_work/results/companion-extensions/constrained-gradient-orbits-protocol.md), [results and derivation](../../research_work/results/companion-extensions/constrained-gradient-orbits-report.md), and [machine-readable results](../../research_work/results/companion-extensions/constrained-gradient-orbits-results.json). The v1.2 PDF remains the earlier snapshot.
+
 ## Combined stellar gradients and radial orbits (after v1.2)
 
 The formerly separate extensions have now been fitted together, with the exact-third companion density unchanged and the catalogue angle used to calibrate stellar mass. Three stellar nuisance parameters fit inner motions. Inner chi-squared falls from the radial-only expanded configuration's 106.88/105.62 to 82.40/81.67; outer residual-square sums fall from 115.71/114.32 to 103.20/101.32. Both populations still have large outer residuals. Boundary dependence remains, and the preferred gradients differ in sign between galaxies.

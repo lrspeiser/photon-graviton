@@ -2,26 +2,13 @@
 from pathlib import Path
 import hashlib,json,argparse
 import numpy as np
-from numpy.polynomial.legendre import leggauss
 P=Path(__file__).resolve().parent
 parser=argparse.ArgumentParser()
 parser.add_argument('--combined',action='store_true',help='Check the combined gradient/orbit fits without overwriting the radial-only check')
 args=parser.parse_args()
 orbits=P/('gradient-orbits-results.json' if args.combined else 'radial-orbits-results.json');light=P.parent/'slacs-light-profile-audit/results.json'
 fit=json.loads(orbits.read_text());profiles={r['Name']:r for r in json.loads(light.read_text())['rows']}
-def deproject_slope(profile,x,order):
-    nodes,weights=leggauss(order);total=np.zeros_like(x);slope_weight=np.zeros_like(x)
-    for comp in profile['components']:
-        Re=comp['R_arcsec']/profile['computed_equal_area_half_light_arcsec'];n=comp['n'];bn=comp['bn'];amp=comp['amp_at_R']
-        upper=np.arccosh(np.maximum(1.,Re*(1+100/bn)**n/x))
-        u=upper[:,None]*(nodes+1)/2;R=x[:,None]*np.cosh(u)
-        q=(R/Re)**(1/n)
-        integrand=amp*np.exp(-bn*(q-1))*bn/(n*Re)*(R/Re)**(1/n-1)
-        density=np.sum(integrand*weights,axis=1)*upper/(2*np.pi)
-        numerator=np.sum(integrand*(1-1/n+bn*q/n)*weights,axis=1)*upper/(2*np.pi)
-        total+=density;slope_weight+=numerator
-    assert np.all(total>0)
-    return total,slope_weight/total
+from orbit_density import deproject_slope
 
 x=np.geomspace(1e-6,100,4097);cache={}
 out=dict(scope='Necessary gamma>=2 beta for separable augmented density with beta0<=1/2; neither sufficient positivity nor a universal rejection test for arbitrary orbit distributions',
