@@ -1,0 +1,5 @@
+# Common outward redistribution test
+
+Test the existing extra-source profile and a fixed radial stretch s=2; do not choose s from lens/outer-bin outcomes. At fixed stellar mass define M_c,new(<r)=M_c,old(<r/s), hence g_c,new(r)=g_c,old(r/s)/s^2. This redistributes the finite extra mass outward without adding mass at fixed normalization. It is a geometric postulate, not a capture derivation.
+
+Retain the six previously exposed usable systems, observed tracer light, ordinary-matter shape, empirical coefficients and conditional distances. Refit stellar mass and constant anisotropy to inner bins only, with the same bounds/starts as slacs-outer-bin-check. Predict the outer velocity bin and lens angle using the same modified force. Neither outcome enters the fits. Use the inherited numerical grid; compare s=1 with existing results. Report both scenarios, all galaxies, optimizer boundaries and the separate stellar/lens summaries. No joint significance, new blind sample or full posterior uncertainty is claimed.
