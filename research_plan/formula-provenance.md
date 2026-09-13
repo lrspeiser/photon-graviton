@@ -1,5 +1,7 @@
 # Standing rule: identify formula provenance
 
+**Persistent-background extension:** [Source-labeled formulas](persistent-microwave-background.md) distinguish established S^3 eigenmodes, oscillator energy balance, angular-spectrum definitions and the Planck distribution from our proposed field/source/transfer identification. The combined construction is a hypothesis; mathematical novelty and empirical success are not claimed.
+
 User instruction, 9 September 2026: whenever presenting formulas, indicate whether they are unique to this work or restatements of known literature.
 
 Every displayed formula in future conversation, papers and reports must carry a nearby provenance label and enough explanation to distinguish:

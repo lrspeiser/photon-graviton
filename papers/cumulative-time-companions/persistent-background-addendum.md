@@ -1,0 +1,11 @@
+# Proposed persistent microwave-background extension
+
+Working manuscript addendum, 12 September 2026. Not incorporated into the historical v0.5 PDF. No new observational fit is reported.
+
+We extend the hypothetical nonexpanding framework to allow a persistent microwave radiation bath whose angular correlations arise from a finite-age recording transition, continuously sustained collective modes, or a spatially correlated medium. These are distinct candidate mechanisms. An eternal history and a boundary-free three-sphere are permitted branches, not inferred properties or fixed numerical assumptions. The observed angular peaks are not sequential pulses or individual photon-frequency resonances.
+
+The established scalar Laplacian spectrum on a round three-sphere yields omega_n^2=c_s^2*n(n+2)/R^2 for an ideal sound-like mode. This known result provides possible collective spatial modes, but does not determine the observed angular power spectrum. Driving, damping, radiation transfer and polarization must be specified before the temperature and polarization spectra can be predicted. No separate fitted amplitude for each observed peak will count as a physical explanation.
+
+The extension must reproduce a near-thermal frequency distribution as well as temperature peaks, damping and polarization cross-correlations. It must preserve the existing propagation tests and account for all energy transfers into traveling companions, bound deposits and any proposed thermalizing medium. Permanent capture in a closed finite-volume system is incompatible with a finite stationary deposit reservoir when its net capture rate remains positive. Recycling would therefore be an explicit additional mechanism with entropy and source constraints, not a consequence of an arbitrarily old universe.
+
+The full [theory specification, equations, primary references and fitting sequence](../../research_plan/persistent-microwave-background.md) is part of this addendum. The [latest checkpoint](../../research_work/results/RESEARCH-CHECKPOINT.md) records the unresolved optical-growth supply benchmark and previous observational residuals. This proposal does not erase those results or establish a completed cosmology.
