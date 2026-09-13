@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Finite-bath heating and cooling costs
+
+A finite-temperature bath now warms under protected-state relaxation, with heat capacity and cooling-outlet energy explicitly included. Small capacity substantially weakens protection; larger capacity or exported heat can preserve it in the conditional model. Thirty-six cases and six refinements close the energy ledger. Physical bath degrees of freedom, volume, heat capacity and cooling channels remain to be supplied. The [self-heating test](../../research_work/results/companion-extensions/finite-bath-report.md) removes the assumption of a freely maintained cold bath. Its constant heat capacity and outlet are still hypotheses; no astronomical temperature or lifetime is inferred.
+
 ### Thermal protection and the storage-energy tradeoff
 
 A finite-site illuminated-to-protected-state model now includes thermal backflow, bright-state radiation and a signed bath-energy ledger. Twenty-seven cases show stronger thermal isolation for deeper relaxation, at the cost of less retained energy per site. Direct protected-state decay is omitted only as an optimistic assumption. No absolute lifetime, site capacity or microscopic selection rule is derived. The [protected-level test](../../research_work/results/companion-extensions/protected-state-report.md) is an explicitly different state model from the preceding unlimited bosonic pair ladder. Tiny excitation gaps also require a correspondingly cold bath for thermal protection; its physical origin and heating are unsolved.
