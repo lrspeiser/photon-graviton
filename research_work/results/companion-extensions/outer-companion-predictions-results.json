@@ -1,0 +1,965 @@
+{
+  "scope": "Frozen extrapolations, not observed outer data or refits; spherical isolated weak-field thin-lens model at the adopted source geometry",
+  "rows": [
+    {
+      "Name": "J0037-0942",
+      "capture_scale_kpc": 20.140533373449102,
+      "sigma_critical_Msun_kpc2": 3381010827.221113,
+      "source_geometry": {
+        "z_lens": 0.1955,
+        "z_source": 0.6322,
+        "path_Dl_Mpc": 717.4165912507436,
+        "angular_Dl_Mpc": 634.9133142536824,
+        "angular_Ds_Mpc": 1324.6614323406195,
+        "Dls_over_Ds": 0.7746570133164056,
+        "previous_Dls_over_Ds": 0.6355296756878466
+      },
+      "catalogue_lens_radius_kpc": 4.709564314352386,
+      "catalogue_lens_mean_kappa_error": 1.1082347040058949e-08,
+      "mass_grid_upper_radius_kpc": 371351.3511489206,
+      "mass_inside_grid_Msun": 4393935551891.5923,
+      "relative_mass_difference_from_fit_grid": -4.309672078206539e-06,
+      "outer_predictions": [
+        {
+          "radius_kpc": 10.0,
+          "angle_arcsec": 3.2487081561607067,
+          "circular_speed_kms": 353.27772262034404,
+          "stellar_only_circular_speed_kms": 340.4103434897266,
+          "companion_enclosed_Msun": 20753589954.42326,
+          "kappa": 0.23758633957834993,
+          "mean_kappa": 0.4553823807942662,
+          "tangential_shear": 0.21779604121591625,
+          "reduced_shear": 0.28566649907015695,
+          "lambda_t": 0.5446176192057338,
+          "lambda_r": 0.9802097016375663,
+          "companion_kappa": 0.1434067544491505,
+          "companion_mean_kappa": 0.14168105854337318,
+          "stellar_kappa": 0.09417958512919945
+        },
+        {
+          "radius_kpc": 30.0,
+          "angle_arcsec": 9.746124468482119,
+          "circular_speed_kms": 401.88759950034836,
+          "stellar_only_circular_speed_kms": 270.6572885294582,
+          "companion_enclosed_Msun": 615624081492.4313,
+          "kappa": 0.0964826472438882,
+          "mean_kappa": 0.17876399305974824,
+          "tangential_shear": 0.08228134581586004,
+          "reduced_shear": 0.09106780911829417,
+          "lambda_t": 0.8212360069402518,
+          "lambda_r": 0.9857986985719718,
+          "companion_kappa": 0.08332090631432135,
+          "companion_mean_kappa": 0.1174318814966075,
+          "stellar_kappa": 0.013161740929566856
+        },
+        {
+          "radius_kpc": 100.0,
+          "angle_arcsec": 32.48708156160706,
+          "circular_speed_kms": 389.8457591643019,
+          "stellar_only_circular_speed_kms": 185.9279843259467,
+          "companion_enclosed_Msun": 2729894420449.7793,
+          "kappa": 0.006167896811448849,
+          "mean_kappa": 0.03666371577888878,
+          "tangential_shear": 0.03049581896743993,
+          "reduced_shear": 0.030685081383061565,
+          "lambda_t": 0.9633362842211112,
+          "lambda_r": 1.024327922155991,
+          "companion_kappa": 0.005753317923123078,
+          "companion_mean_kappa": 0.02890169110171549,
+          "stellar_kappa": 0.00041457888832577126
+        },
+        {
+          "radius_kpc": 300.0,
+          "angle_arcsec": 97.46124468482118,
+          "circular_speed_kms": 258.5663220391663,
+          "stellar_only_circular_speed_kms": 110.42261402914187,
+          "companion_enclosed_Msun": 3812911463189.241,
+          "kappa": 0.00023772255312116687,
+          "mean_kappa": 0.00500837216699677,
+          "tangential_shear": 0.004770649613875603,
+          "reduced_shear": 0.004771783974544975,
+          "lambda_t": 0.9949916278330032,
+          "lambda_r": 1.0045329270607544,
+          "companion_kappa": 0.0002370581225000578,
+          "companion_mean_kappa": 0.00411838769868447,
+          "stellar_kappa": 6.644306211090623e-07
+        },
+        {
+          "radius_kpc": 1000.0,
+          "angle_arcsec": 324.8708156160706,
+          "circular_speed_kms": 147.66907380060792,
+          "stellar_only_circular_speed_kms": 60.50312493297111,
+          "companion_enclosed_Msun": 4218990064489.5703,
+          "kappa": 6.48134031724512e-06,
+          "mean_kappa": 0.00048087565905368334,
+          "tangential_shear": 0.00047439431873643823,
+          "reduced_shear": 0.0004743973934673909,
+          "lambda_t": 0.9995191243409464,
+          "lambda_r": 1.0004679129784193,
+          "companion_kappa": 6.480923677609949e-06,
+          "companion_mean_kappa": 0.0004007449441275792,
+          "stellar_kappa": 4.1663963517130786e-10
+        },
+        {
+          "radius_kpc": 3000.0,
+          "angle_arcsec": 974.612446848212,
+          "circular_speed_kms": 86.23421392736617,
+          "stellar_only_circular_speed_kms": 34.93156657911555,
+          "companion_enclosed_Msun": 4335906680632.6655,
+          "kappa": 2.4029926884364746e-07,
+          "mean_kappa": 5.4391403160364395e-05,
+          "tangential_shear": 5.415110389152075e-05,
+          "reduced_shear": 5.4151116903994545e-05,
+          "lambda_t": 0.9999456085968397,
+          "lambda_r": 1.0000539108046227,
+          "companion_kappa": 2.402992121901948e-07,
+          "companion_mean_kappa": 4.548797314897444e-05,
+          "stellar_kappa": 5.6653452636276924e-14
+        },
+        {
+          "radius_kpc": 10000.0,
+          "angle_arcsec": 3248.7081561607065,
+          "circular_speed_kms": 47.418500663460144,
+          "stellar_only_circular_speed_kms": 19.132807023184167,
+          "companion_enclosed_Msun": 4376856801452.229,
+          "kappa": 6.488842639458806e-09,
+          "mean_kappa": 4.925506382782413e-06,
+          "tangential_shear": 4.919017540142954e-06,
+          "reduced_shear": 4.919017572061686e-06,
+          "lambda_t": 0.9999950744936172,
+          "lambda_r": 1.0000049125286976,
+          "companion_kappa": 6.488842639333191e-09,
+          "companion_mean_kappa": 4.12419768041023e-06,
+          "stellar_kappa": 1.2561547134764805e-19
+        }
+      ],
+      "critical_radii_kpc": {
+        "lambda_t": [
+          4.709564266974671
+        ],
+        "lambda_r": [
+          0.5920341237513636
+        ]
+      },
+      "refined_critical_curve_eigenvalue_residuals": {
+        "lambda_t": [
+          2.822586608886013e-11
+        ],
+        "lambda_r": [
+          9.616041296567346e-10
+        ]
+      },
+      "central_potential_magnitude_over_c2_within_grid": 1.3749050808181457e-05,
+      "exterior_companion_potential_bound_over_c2": 3.045305228963283e-14,
+      "peak_scanned_circular_speed_kms": 429.6386215354988,
+      "peak_speed_radius_kpc": 51.582216507230555,
+      "peak_scanned_compactness_2GM_rc2": 4.10766690378041e-06,
+      "maximum_scanned_companion_kappa": 0.14340675444915185,
+      "surface_projection_derivative_max_kappa_difference": 1.94895296151687e-07,
+      "quadrature_max_absolute_kappa_difference": 1.514448288997272e-11,
+      "quadrature_max_absolute_mean_kappa_difference": 4.0009995316836466e-11
+    },
+    {
+      "Name": "J1112+0826",
+      "capture_scale_kpc": 16.236240423197042,
+      "sigma_critical_Msun_kpc2": 3152648426.6152215,
+      "source_geometry": {
+        "z_lens": 0.273,
+        "z_source": 0.6295,
+        "path_Dl_Mpc": 969.7748921054682,
+        "angular_Dl_Mpc": 814.9662618922268,
+        "angular_Ds_Mpc": 1322.2142128651972,
+        "Dls_over_Ds": 0.6472249946942378,
+        "previous_Dls_over_Ds": 0.505653167045395
+      },
+      "catalogue_lens_radius_kpc": 5.887091221779925,
+      "catalogue_lens_mean_kappa_error": 2.133596499476198e-08,
+      "mass_grid_upper_radius_kpc": 326480.5762750361,
+      "mass_inside_grid_Msun": 7622416633734.837,
+      "relative_mass_difference_from_fit_grid": -4.318527642155345e-06,
+      "outer_predictions": [
+        {
+          "radius_kpc": 10.0,
+          "angle_arcsec": 2.530961291185,
+          "circular_speed_kms": 361.54207935498505,
+          "stellar_only_circular_speed_kms": 289.5519243858301,
+          "companion_enclosed_Msun": 108982236313.49557,
+          "kappa": 0.4830876950105768,
+          "mean_kappa": 0.6838523443388564,
+          "tangential_shear": 0.20076464932827964,
+          "reduced_shear": 0.38839208776890616,
+          "lambda_t": 0.31614765566114356,
+          "lambda_r": 0.7176769543177028,
+          "companion_kappa": 0.46343398675063024,
+          "companion_mean_kappa": 0.4764580147593475,
+          "stellar_kappa": 0.01965370825994659
+        },
+        {
+          "radius_kpc": 30.0,
+          "angle_arcsec": 7.592883873555001,
+          "circular_speed_kms": 544.0423088136176,
+          "stellar_only_circular_speed_kms": 180.21973894829773,
+          "companion_enclosed_Msun": 1838000102734.6177,
+          "kappa": 0.1716605718826394,
+          "mean_kappa": 0.3352859763367247,
+          "tangential_shear": 0.1636254044540853,
+          "reduced_shear": 0.19753424610726433,
+          "lambda_t": 0.6647140236632754,
+          "lambda_r": 0.9919648325714459,
+          "companion_kappa": 0.17108440567258737,
+          "companion_mean_kappa": 0.30956433599052097,
+          "stellar_kappa": 0.0005761662100520228
+        },
+        {
+          "radius_kpc": 100.0,
+          "angle_arcsec": 25.309612911850007,
+          "circular_speed_kms": 490.9582181770919,
+          "stellar_only_circular_speed_kms": 100.52539780719552,
+          "companion_enclosed_Msun": 5369427075480.157,
+          "kappa": 0.008587987942229201,
+          "mean_kappa": 0.06132902633580965,
+          "tangential_shear": 0.05274103839358045,
+          "reduced_shear": 0.053197901328743594,
+          "lambda_t": 0.9386709736641904,
+          "lambda_r": 1.0441530504513512,
+          "companion_kappa": 0.008579280391219562,
+          "companion_mean_kappa": 0.0589523937118122,
+          "stellar_kappa": 8.707551009638886e-06
+        },
+        {
+          "radius_kpc": 300.0,
+          "angle_arcsec": 75.92883873555002,
+          "circular_speed_kms": 318.7322642931952,
+          "stellar_only_circular_speed_kms": 58.17841239111939,
+          "companion_enclosed_Msun": 6850087258173.722,
+          "kappa": 0.0003390716084235647,
+          "mean_kappa": 0.008135099962523646,
+          "tangential_shear": 0.007796028354100081,
+          "reduced_shear": 0.007798672662583352,
+          "lambda_t": 0.9918649000374764,
+          "lambda_r": 1.0074569567456766,
+          "companion_kappa": 0.00033900293119168944,
+          "companion_mean_kappa": 0.00787020859900195,
+          "stellar_kappa": 6.867723187529988e-08
+        },
+        {
+          "radius_kpc": 1000.0,
+          "angle_arcsec": 253.09612911850004,
+          "circular_speed_kms": 181.11150279401613,
+          "stellar_only_circular_speed_kms": 31.86994275449123,
+          "companion_enclosed_Msun": 7390442828225.859,
+          "kappa": 9.222037892669457e-06,
+          "mean_kappa": 0.0007750665333038387,
+          "tangential_shear": 0.0007658444954111692,
+          "reduced_shear": 0.0007658515581232584,
+          "lambda_t": 0.9992249334666962,
+          "lambda_r": 1.0007566224575186,
+          "companion_kappa": 9.221978142877117e-06,
+          "companion_mean_kappa": 0.000751222675879498,
+          "stellar_kappa": 5.974979233939981e-11
+        },
+        {
+          "radius_kpc": 3000.0,
+          "angle_arcsec": 759.2883873555,
+          "circular_speed_kms": 105.62268869933577,
+          "stellar_only_circular_speed_kms": 18.400138641618174,
+          "companion_enclosed_Msun": 7545544301498.344,
+          "kappa": 3.4178259140186473e-07,
+          "mean_kappa": 8.748525944776543e-05,
+          "tangential_shear": 8.714347685636356e-05,
+          "reduced_shear": 8.71435066404971e-05,
+          "lambda_t": 0.9999125147405522,
+          "lambda_r": 1.000086801694265,
+          "companion_kappa": 3.417825800217251e-07,
+          "companion_mean_kappa": 8.483593935710321e-05,
+          "stellar_kappa": 1.1380139598578826e-14
+        },
+        {
+          "radius_kpc": 10000.0,
+          "angle_arcsec": 2530.9612911850004,
+          "circular_speed_kms": 58.05345432998249,
+          "stellar_only_circular_speed_kms": 10.07817100942447,
+          "companion_enclosed_Msun": 7599853295296.208,
+          "kappa": 9.228681986612979e-09,
+          "mean_kappa": 7.916739942747279e-06,
+          "tangential_shear": 7.907511260760667e-06,
+          "reduced_shear": 7.907511333736575e-06,
+          "lambda_t": 0.9999920832600573,
+          "lambda_r": 1.0000078982825789,
+          "companion_kappa": 9.228681986571658e-09,
+          "companion_mean_kappa": 7.678301134304031e-06,
+          "stellar_kappa": 4.1320059588012903e-20
+        }
+      ],
+      "critical_radii_kpc": {
+        "lambda_t": [
+          5.887091368964191
+        ],
+        "lambda_r": [
+          0.6794318458841467
+        ]
+      },
+      "refined_critical_curve_eigenvalue_residuals": {
+        "lambda_t": [
+          5.870859354217828e-12
+        ],
+        "lambda_r": [
+          1.8621548747432826e-11
+        ]
+      },
+      "central_potential_magnitude_over_c2_within_grid": 1.7293807519600828e-05,
+      "exterior_companion_potential_bound_over_c2": 5.22501686922417e-14,
+      "peak_scanned_circular_speed_kms": 568.9852748559765,
+      "peak_speed_radius_kpc": 44.157044735331255,
+      "peak_scanned_compactness_2GM_rc2": 7.204281002484953e-06,
+      "maximum_scanned_companion_kappa": 0.4815407327575629,
+      "surface_projection_derivative_max_kappa_difference": 3.9035012524418766e-08,
+      "quadrature_max_absolute_kappa_difference": 3.8852809858269666e-12,
+      "quadrature_max_absolute_mean_kappa_difference": 2.8129387708020204e-11
+    },
+    {
+      "Name": "J1204+0358",
+      "capture_scale_kpc": 0.4137431857024068,
+      "sigma_critical_Msun_kpc2": 3668482319.6740522,
+      "source_geometry": {
+        "z_lens": 0.1644,
+        "z_source": 0.6307,
+        "path_Dl_Mpc": 611.516044346408,
+        "angular_Dl_Mpc": 552.5684101201247,
+        "angular_Ds_Mpc": 1323.3037647740705,
+        "Dls_over_Ds": 0.8203477092073521,
+        "previous_Dls_over_Ds": 0.6887463879509226
+      },
+      "catalogue_lens_radius_kpc": 3.509394697174877,
+      "catalogue_lens_mean_kappa_error": 1.5434133476821543e-06,
+      "mass_grid_upper_radius_kpc": 216935.11029224735,
+      "mass_inside_grid_Msun": 93023035261.4083,
+      "relative_mass_difference_from_fit_grid": -3.6886914337452836e-06,
+      "outer_predictions": [
+        {
+          "radius_kpc": 10.0,
+          "angle_arcsec": 3.7328374635505455,
+          "circular_speed_kms": 300.6935268202863,
+          "stellar_only_circular_speed_kms": 229.23303657627682,
+          "companion_enclosed_Msun": 88048222358.209,
+          "kappa": 0.04330122618520641,
+          "mean_kappa": 0.20698542639787074,
+          "tangential_shear": 0.16368420021266433,
+          "reduced_shear": 0.1710927249963757,
+          "lambda_t": 0.7930145736021292,
+          "lambda_r": 1.1203829740274578,
+          "companion_kappa": 0.00169269466258225,
+          "companion_mean_kappa": 0.07732379693585616,
+          "stellar_kappa": 0.041608531522624156
+        },
+        {
+          "radius_kpc": 30.0,
+          "angle_arcsec": 11.198512390651635,
+          "circular_speed_kms": 207.9891856964232,
+          "stellar_only_circular_speed_kms": 173.67014315187106,
+          "companion_enclosed_Msun": 91363180841.83473,
+          "kappa": 0.0009365907040927679,
+          "mean_kappa": 0.029539022055113783,
+          "tangential_shear": 0.028602431351021015,
+          "reduced_shear": 0.02862924523597422,
+          "lambda_t": 0.9704609779448862,
+          "lambda_r": 1.0276658406469283,
+          "companion_kappa": 6.284020338477436e-05,
+          "companion_mean_kappa": 0.008842648666704167,
+          "stellar_kappa": 0.0008737505007079936
+        },
+        {
+          "radius_kpc": 100.0,
+          "angle_arcsec": 37.328374635505455,
+          "circular_speed_kms": 116.12443866792569,
+          "stellar_only_circular_speed_kms": 97.49591679558547,
+          "companion_enclosed_Msun": 92525180427.27985,
+          "kappa": 5.164585633447435e-06,
+          "mean_kappa": 0.0027230472265971787,
+          "tangential_shear": 0.0027178826409637313,
+          "reduced_shear": 0.0027178966777738666,
+          "lambda_t": 0.9972769527734028,
+          "lambda_r": 1.0027127180553304,
+          "companion_kappa": 1.6971404012635591e-06,
+          "companion_mean_kappa": 0.0008037575436145791,
+          "stellar_kappa": 3.4674452321838762e-06
+        },
+        {
+          "radius_kpc": 300.0,
+          "angle_arcsec": 111.98512390651635,
+          "circular_speed_kms": 67.12559438706315,
+          "stellar_only_circular_speed_kms": 56.34365805329986,
+          "companion_enclosed_Msun": 92857235008.71558,
+          "kappa": 7.029118123315066e-08,
+          "mean_kappa": 0.0003030479828111188,
+          "tangential_shear": 0.00030297769162988564,
+          "reduced_shear": 0.00030297771292654696,
+          "lambda_t": 0.9996969520171889,
+          "lambda_r": 1.0003029074004488,
+          "companion_kappa": 6.285851256337494e-08,
+          "companion_mean_kappa": 8.955782678757147e-05,
+          "stellar_kappa": 7.432668669775733e-09
+        },
+        {
+          "radius_kpc": 1000.0,
+          "angle_arcsec": 373.2837463550545,
+          "circular_speed_kms": 36.77338105341984,
+          "stellar_only_circular_speed_kms": 30.86114729201142,
+          "companion_enclosed_Msun": 92973455850.13327,
+          "kappa": 1.6981127406793048e-09,
+          "mean_kappa": 2.7282521251588944e-05,
+          "tangential_shear": 2.7280823138848264e-05,
+          "reduced_shear": 2.7280823185174177e-05,
+          "lambda_t": 0.9999727174787484,
+          "lambda_r": 1.000027279125026,
+          "companion_kappa": 1.6971842056716832e-09,
+          "companion_mean_kappa": 8.068124640683679e-06,
+          "stellar_kappa": 9.285350076215866e-13
+        },
+        {
+          "radius_kpc": 3000.0,
+          "angle_arcsec": 1119.8512390651636,
+          "circular_speed_kms": 21.23224278657753,
+          "stellar_only_circular_speed_kms": 17.817691985123865,
+          "companion_enclosed_Msun": 93006661858.18178,
+          "kappa": 6.285863735008677e-11,
+          "mean_kappa": 3.0316427159626055e-06,
+          "tangential_shear": 3.0315798573252556e-06,
+          "reduced_shear": 3.0315798575158164e-06,
+          "lambda_t": 0.999996968357284,
+          "lambda_r": 1.0000030315169985,
+          "companion_kappa": 6.285862071406104e-11,
+          "companion_mean_kappa": 8.967097295181765e-07,
+          "stellar_kappa": 1.6636025731103272e-17
+        },
+        {
+          "radius_kpc": 10000.0,
+          "angle_arcsec": 3732.8374635505447,
+          "circular_speed_kms": 11.629593230026053,
+          "stellar_only_circular_speed_kms": 9.759151822952395,
+          "companion_enclosed_Msun": 93018283962.70294,
+          "kappa": 1.6971141083395646e-12,
+          "mean_kappa": 2.7285576461296636e-07,
+          "tangential_shear": 2.7285406749885804e-07,
+          "reduced_shear": 2.728540674993211e-07,
+          "lambda_t": 0.9999997271442354,
+          "lambda_r": 1.0000002728523705,
+          "companion_kappa": 1.6971141083376605e-12,
+          "companion_mean_kappa": 8.0711795832658e-08,
+          "stellar_kappa": 1.904218953923576e-24
+        }
+      ],
+      "critical_radii_kpc": {
+        "lambda_t": [
+          3.5093910634607997
+        ],
+        "lambda_r": [
+          0.4951612669994813
+        ]
+      },
+      "refined_critical_curve_eigenvalue_residuals": {
+        "lambda_t": [
+          3.0284441621120095e-11
+        ],
+        "lambda_r": [
+          4.82194906226141e-09
+        ]
+      },
+      "central_potential_magnitude_over_c2_within_grid": 1.0214179542646395e-05,
+      "exterior_companion_potential_bound_over_c2": 2.532418759187314e-17,
+      "peak_scanned_circular_speed_kms": 506.94328577188355,
+      "peak_speed_radius_kpc": 0.7762471166286916,
+      "peak_scanned_compactness_2GM_rc2": 5.71883202610059e-06,
+      "maximum_scanned_companion_kappa": 22.788203818985682,
+      "surface_projection_derivative_max_kappa_difference": 1.4865459504326273e-07,
+      "quadrature_max_absolute_kappa_difference": 6.8672063478422696e-12,
+      "quadrature_max_absolute_mean_kappa_difference": 4.947303677838022e-11
+    },
+    {
+      "Name": "J1402+6321",
+      "capture_scale_kpc": 18.030475155520772,
+      "sigma_critical_Msun_kpc2": 3999895308.974575,
+      "source_geometry": {
+        "z_lens": 0.2046,
+        "z_source": 0.4814,
+        "path_Dl_Mpc": 747.8829398452908,
+        "angular_Dl_Mpc": 657.8534224410206,
+        "angular_Ds_Mpc": 1161.3773837752078,
+        "Dls_over_Ds": 0.6319645105187883,
+        "previous_Dls_over_Ds": 0.5263271208147617
+      },
+      "catalogue_lens_radius_kpc": 4.305640581415861,
+      "catalogue_lens_mean_kappa_error": 2.1230917024439577e-08,
+      "mass_grid_upper_radius_kpc": 474372.34412117687,
+      "mass_inside_grid_Msun": 11091749382482.348,
+      "relative_mass_difference_from_fit_grid": -4.275336786818684e-06,
+      "outer_predictions": [
+        {
+          "radius_kpc": 10.0,
+          "angle_arcsec": 3.135421952837661,
+          "circular_speed_kms": 345.69051980669946,
+          "stellar_only_circular_speed_kms": 280.67250423582533,
+          "companion_enclosed_Msun": 94688826343.95135,
+          "kappa": 0.43186945287680895,
+          "mean_kappa": 0.5694949621244965,
+          "tangential_shear": 0.13762550924768752,
+          "reduced_shear": 0.2422427555507685,
+          "lambda_t": 0.43050503787550354,
+          "lambda_r": 0.7057560563708786,
+          "companion_kappa": 0.4101715132169163,
+          "companion_mean_kappa": 0.4118820936618134,
+          "stellar_kappa": 0.021697939659892595
+        },
+        {
+          "radius_kpc": 30.0,
+          "angle_arcsec": 9.406265858512983,
+          "circular_speed_kms": 577.8782357534931,
+          "stellar_only_circular_speed_kms": 181.19685452954982,
+          "companion_enclosed_Msun": 2100326067864.3108,
+          "kappa": 0.19081150403750463,
+          "mean_kappa": 0.3238803637900823,
+          "tangential_shear": 0.13306885975257765,
+          "reduced_shear": 0.16444729555169701,
+          "lambda_t": 0.6761196362099178,
+          "lambda_r": 0.9422573557150731,
+          "companion_kappa": 0.19012911486717143,
+          "companion_mean_kappa": 0.30326645323683,
+          "stellar_kappa": 0.0006823891703332111
+        },
+        {
+          "radius_kpc": 100.0,
+          "angle_arcsec": 31.354219528376614,
+          "circular_speed_kms": 572.9116904038605,
+          "stellar_only_circular_speed_kms": 101.9904407636628,
+          "companion_enclosed_Msun": 7389720262895.494,
+          "kappa": 0.010997624753181886,
+          "mean_kappa": 0.06682483291439972,
+          "tangential_shear": 0.055827208161217834,
+          "reduced_shear": 0.05644800210645141,
+          "lambda_t": 0.9331751670856003,
+          "lambda_r": 1.044829583408036,
+          "companion_kappa": 0.0109856028331936,
+          "companion_mean_kappa": 0.06489401107532258,
+          "stellar_kappa": 1.2021919988286648e-05
+        },
+        {
+          "radius_kpc": 300.0,
+          "angle_arcsec": 94.06265858512984,
+          "circular_speed_kms": 379.70202850537316,
+          "stellar_only_circular_speed_kms": 59.14057118499307,
+          "companion_enclosed_Msun": 9812513084434.752,
+          "kappa": 0.00044200346795302746,
+          "mean_kappa": 0.009134029855707567,
+          "tangential_shear": 0.00869202638775454,
+          "reduced_shear": 0.00869586999244807,
+          "lambda_t": 0.9908659701442925,
+          "lambda_r": 1.0082500229198015,
+          "companion_kappa": 0.0004418714765095285,
+          "companion_mean_kappa": 0.008918247741148631,
+          "stellar_kappa": 1.3199144349896247e-07
+        },
+        {
+          "radius_kpc": 1000.0,
+          "angle_arcsec": 313.5421952837661,
+          "circular_speed_kms": 217.02423771615133,
+          "stellar_only_circular_speed_kms": 32.4037026704183,
+          "companion_enclosed_Msun": 10706906670896.102,
+          "kappa": 1.2045815430606778e-05,
+          "mean_kappa": 0.0008780626579849313,
+          "tangential_shear": 0.0008660168425543245,
+          "reduced_shear": 0.0008660272745590318,
+          "lambda_t": 0.999121937342015,
+          "lambda_r": 1.0008539710271236,
+          "companion_kappa": 1.2045624155148786e-05,
+          "companion_mean_kappa": 0.0008586345048403484,
+          "stellar_kappa": 1.9127545799103562e-10
+        },
+        {
+          "radius_kpc": 3000.0,
+          "angle_arcsec": 940.6265858512983,
+          "circular_speed_kms": 126.76106376376251,
+          "stellar_only_circular_speed_kms": 18.70836550307737,
+          "companion_enclosed_Msun": 10963961889872.393,
+          "kappa": 4.4651423365033527e-07,
+          "mean_kappa": 9.934795315323568e-05,
+          "tangential_shear": 9.890143891958535e-05,
+          "reduced_shear": 9.890148308050528e-05,
+          "lambda_t": 0.9999006520468467,
+          "lambda_r": 1.0000984549246859,
+          "companion_kappa": 4.465141657047612e-07,
+          "companion_mean_kappa": 9.718926028482646e-05,
+          "stellar_kappa": 6.794557408722722e-14
+        },
+        {
+          "radius_kpc": 10000.0,
+          "angle_arcsec": 3135.421952837661,
+          "circular_speed_kms": 69.7081532648947,
+          "stellar_only_circular_speed_kms": 10.246993911806033,
+          "companion_enclosed_Msun": 11053980927499.58,
+          "kappa": 1.2056974250725738e-08,
+          "mean_kappa": 8.997580020543566e-06,
+          "tangential_shear": 8.985523046292841e-06,
+          "reduced_shear": 8.985523154631062e-06,
+          "lambda_t": 0.9999910024199794,
+          "lambda_r": 1.000008973466072,
+          "companion_kappa": 1.2056974250111763e-08,
+          "companion_mean_kappa": 8.803297660527593e-06,
+          "stellar_kappa": 6.139746896227314e-19
+        }
+      ],
+      "critical_radii_kpc": {
+        "lambda_t": [
+          4.305640471108343
+        ],
+        "lambda_r": [
+          0.6891563287538902
+        ]
+      },
+      "refined_critical_curve_eigenvalue_residuals": {
+        "lambda_t": [
+          1.7468693158662063e-11
+        ],
+        "lambda_r": [
+          1.210719791089332e-08
+        ]
+      },
+      "central_potential_magnitude_over_c2_within_grid": 1.7666087771003715e-05,
+      "exterior_companion_potential_bound_over_c2": 4.102347832435856e-14,
+      "peak_scanned_circular_speed_kms": 635.8449623767718,
+      "peak_speed_radius_kpc": 51.582216507230555,
+      "peak_scanned_compactness_2GM_rc2": 8.996862009699957e-06,
+      "maximum_scanned_companion_kappa": 0.41407933231087446,
+      "surface_projection_derivative_max_kappa_difference": 1.2584967801210212e-07,
+      "quadrature_max_absolute_kappa_difference": 6.145417508207629e-12,
+      "quadrature_max_absolute_mean_kappa_difference": 2.69393396479245e-11
+    },
+    {
+      "Name": "J1621+3931",
+      "capture_scale_kpc": 877.4850806038842,
+      "sigma_critical_Msun_kpc2": 3288926921.330771,
+      "source_geometry": {
+        "z_lens": 0.2449,
+        "z_source": 0.6021,
+        "path_Dl_Mpc": 880.0956057378102,
+        "angular_Dl_Mpc": 753.5606122760367,
+        "angular_Ds_Mpc": 1296.489689480972,
+        "Dls_over_Ds": 0.6709621767868333,
+        "previous_Dls_over_Ds": 0.5352257396126674
+      },
+      "catalogue_lens_radius_kpc": 4.712840777459445,
+      "catalogue_lens_mean_kappa_error": 1.8515289301745952e-10,
+      "mass_grid_upper_radius_kpc": 430683.68752610625,
+      "mass_inside_grid_Msun": 8.424282943897267e+16,
+      "relative_mass_difference_from_fit_grid": -4.028296139657606e-06,
+      "outer_predictions": [
+        {
+          "radius_kpc": 10.0,
+          "angle_arcsec": 2.7372025937515363,
+          "circular_speed_kms": 352.74739118961,
+          "stellar_only_circular_speed_kms": 352.74739118961,
+          "companion_enclosed_Msun": 3.7011628083006765e-50,
+          "kappa": 0.23287395424980484,
+          "mean_kappa": 0.46088792064147566,
+          "tangential_shear": 0.22801396639167082,
+          "reduced_shear": 0.29723142325155866,
+          "lambda_t": 0.5391120793585243,
+          "lambda_r": 0.995140012141866,
+          "companion_kappa": 0.08474390270422083,
+          "companion_mean_kappa": 0.08474377526545869,
+          "stellar_kappa": 0.148130051545584
+        },
+        {
+          "radius_kpc": 30.0,
+          "angle_arcsec": 8.211607781254608,
+          "circular_speed_kms": 316.26697085862224,
+          "stellar_only_circular_speed_kms": 316.26697085862224,
+          "companion_enclosed_Msun": 1.0696929136842692e-47,
+          "kappa": 0.10179824041558842,
+          "mean_kappa": 0.16881546359166733,
+          "tangential_shear": 0.0670172231760789,
+          "reduced_shear": 0.07461266075351161,
+          "lambda_t": 0.8311845364083327,
+          "lambda_r": 0.9652189827604905,
+          "companion_kappa": 0.08474594102285382,
+          "companion_mean_kappa": 0.08474479439325888,
+          "stellar_kappa": 0.017052299392734595
+        },
+        {
+          "radius_kpc": 100.0,
+          "angle_arcsec": 27.372025937515367,
+          "circular_speed_kms": 200.71630945423567,
+          "stellar_only_circular_speed_kms": 200.71630945423567,
+          "companion_enclosed_Msun": 6.54759255269691e-41,
+          "kappa": 0.08484198629724232,
+          "mean_kappa": 0.09385574504693067,
+          "tangential_shear": 0.00901375874968835,
+          "reduced_shear": 0.009849401540197852,
+          "lambda_t": 0.9061442549530694,
+          "lambda_r": 0.9241717724524461,
+          "companion_kappa": 0.08476914387056939,
+          "companion_mean_kappa": 0.08475639285570158,
+          "stellar_kappa": 7.284242667293508e-05
+        },
+        {
+          "radius_kpc": 300.0,
+          "angle_arcsec": 82.1160778125461,
+          "circular_speed_kms": 116.39110197961107,
+          "stellar_only_circular_speed_kms": 116.39110197961107,
+          "companion_enclosed_Msun": 2.9875946598245596e-24,
+          "kappa": 0.08497476811829226,
+          "mean_kappa": 0.08587507397955894,
+          "tangential_shear": 0.000900305861266687,
+          "reduced_shear": 0.0009839136997514802,
+          "lambda_t": 0.914124926020441,
+          "lambda_r": 0.9159255377429745,
+          "companion_kappa": 0.08497448179099915,
+          "companion_mean_kappa": 0.0848588073938098,
+          "stellar_kappa": 2.8632729311626964e-07
+        },
+        {
+          "radius_kpc": 1000.0,
+          "angle_arcsec": 273.72025937515366,
+          "circular_speed_kms": 63.75863073728275,
+          "stellar_only_circular_speed_kms": 63.75862068602391,
+          "companion_enclosed_Msun": 298008.2665878463,
+          "kappa": 0.08750495428499876,
+          "mean_kappa": 0.08617782943509288,
+          "tangential_shear": -0.0013271248499058808,
+          "reduced_shear": -0.001454391293561478,
+          "lambda_t": 0.9138221705649071,
+          "lambda_r": 0.9111679208650953,
+          "companion_kappa": 0.08750495416595384,
+          "companion_mean_kappa": 0.08608635223388081,
+          "stellar_kappa": 1.1904490176928147e-10
+        },
+        {
+          "radius_kpc": 3000.0,
+          "angle_arcsec": 821.1607781254609,
+          "circular_speed_kms": 1520.5064685183468,
+          "stellar_only_circular_speed_kms": 36.81107469523854,
+          "companion_enclosed_Msun": 1611692148800452.0,
+          "kappa": 0.1167444139794797,
+          "mean_kappa": 0.10282787333769572,
+          "tangential_shear": -0.013916540641783978,
+          "reduced_shear": -0.015755961085380174,
+          "lambda_t": 0.8971721266623043,
+          "lambda_r": 0.8693390453787363,
+          "companion_kappa": 0.11674441397947048,
+          "companion_mean_kappa": 0.10281770919967416,
+          "stellar_kappa": 9.201038478306695e-15
+        },
+        {
+          "radius_kpc": 10000.0,
+          "angle_arcsec": 2737.2025937515364,
+          "circular_speed_kms": 4236.46418531882,
+          "stellar_only_circular_speed_kms": 20.162255982160985,
+          "companion_enclosed_Msun": 4.172882469039301e+16,
+          "kappa": 0.01502312611021071,
+          "mean_kappa": 0.04881521274387632,
+          "tangential_shear": 0.033792086633665605,
+          "reduced_shear": 0.03430749241879831,
+          "lambda_t": 0.9511847872561237,
+          "lambda_r": 1.018768960523455,
+          "companion_kappa": 0.01502312611021071,
+          "companion_mean_kappa": 0.048814297971454174,
+          "stellar_kappa": 8.930722415161136e-21
+        }
+      ],
+      "critical_radii_kpc": {
+        "lambda_t": [
+          4.712840776638743
+        ],
+        "lambda_r": [
+          0.5216570377708861
+        ]
+      },
+      "refined_critical_curve_eigenvalue_residuals": {
+        "lambda_t": [
+          9.305933801329047e-11
+        ],
+        "lambda_r": [
+          1.103705571381397e-09
+        ]
+      },
+      "central_potential_magnitude_over_c2_within_grid": 0.00047880014598581944,
+      "exterior_companion_potential_bound_over_c2": 6.066966038009558e-08,
+      "peak_scanned_circular_speed_kms": 4245.73985295492,
+      "peak_speed_radius_kpc": 9172.759353897785,
+      "peak_scanned_compactness_2GM_rc2": 0.0004011394276315666,
+      "maximum_scanned_companion_kappa": 0.1168191671287406,
+      "surface_projection_derivative_max_kappa_difference": 3.0635736972262073e-07,
+      "quadrature_max_absolute_kappa_difference": 1.1530568166939759e-11,
+      "quadrature_max_absolute_mean_kappa_difference": 1.8786187883090832e-10
+    },
+    {
+      "Name": "J1630+4520",
+      "capture_scale_kpc": 0.7415836503004236,
+      "sigma_critical_Msun_kpc2": 2732066106.113964,
+      "source_geometry": {
+        "z_lens": 0.2479,
+        "z_source": 0.7933,
+        "path_Dl_Mpc": 889.7659135656257,
+        "angular_Dl_Mpc": 760.3175779023438,
+        "angular_Ds_Mpc": 1446.016320407639,
+        "Dls_over_Ds": 0.8005421779605962,
+        "previous_Dls_over_Ds": 0.6208213415621675
+      },
+      "catalogue_lens_radius_kpc": 6.561300074841167,
+      "catalogue_lens_mean_kappa_error": 7.069333948228618e-07,
+      "mass_grid_upper_radius_kpc": 397994.95012396766,
+      "mass_inside_grid_Msun": 109348485279.38,
+      "relative_mass_difference_from_fit_grid": -3.7279159350589453e-06,
+      "outer_predictions": [
+        {
+          "radius_kpc": 10.0,
+          "angle_arcsec": 2.712876990377688,
+          "circular_speed_kms": 411.884385955144,
+          "stellar_only_circular_speed_kms": 356.6112456209577,
+          "companion_enclosed_Msun": 98763041052.30264,
+          "kappa": 0.15961309346510186,
+          "mean_kappa": 0.5575130781914647,
+          "tangential_shear": 0.3978999847263628,
+          "reduced_shear": 0.4734723752027418,
+          "lambda_t": 0.4424869218085353,
+          "lambda_r": 1.2382868912612608,
+          "companion_kappa": 0.004819884183657875,
+          "companion_mean_kappa": 0.11770507819943733,
+          "stellar_kappa": 0.15479320928144397
+        },
+        {
+          "radius_kpc": 30.0,
+          "angle_arcsec": 8.138630971133063,
+          "circular_speed_kms": 318.02437314189694,
+          "stellar_only_circular_speed_kms": 293.2071750894958,
+          "companion_enclosed_Msun": 105808041187.03474,
+          "kappa": 0.013519451333019515,
+          "mean_kappa": 0.09885913870715272,
+          "tangential_shear": 0.08533968737413321,
+          "reduced_shear": 0.08650924490042071,
+          "lambda_t": 0.9011408612928473,
+          "lambda_r": 1.0718202360411138,
+          "companion_kappa": 0.00017989965641991733,
+          "companion_mean_kappa": 0.013795629968886782,
+          "stellar_kappa": 0.013339551676599597
+        },
+        {
+          "radius_kpc": 100.0,
+          "angle_arcsec": 27.128769903776877,
+          "circular_speed_kms": 196.77858126126128,
+          "stellar_only_circular_speed_kms": 184.56574304723938,
+          "companion_enclosed_Msun": 108286122336.31575,
+          "kappa": 0.00030502516192880766,
+          "mean_kappa": 0.01064459156658888,
+          "tangential_shear": 0.010339566404660072,
+          "reduced_shear": 0.010342721194867321,
+          "lambda_t": 0.9893554084334111,
+          "lambda_r": 1.0100345412427312,
+          "companion_kappa": 4.861580703333335e-06,
+          "companion_mean_kappa": 0.0012642859841066182,
+          "stellar_kappa": 0.0003001635812254743
+        },
+        {
+          "radius_kpc": 300.0,
+          "angle_arcsec": 81.38630971133063,
+          "circular_speed_kms": 115.86315850083075,
+          "stellar_only_circular_speed_kms": 108.91135526605042,
+          "companion_enclosed_Msun": 108994530268.25601,
+          "kappa": 3.0712358803991423e-06,
+          "mean_kappa": 0.0012136258134881827,
+          "tangential_shear": 0.0012105545776077836,
+          "reduced_shear": 0.001210558295517856,
+          "lambda_t": 0.9987863741865118,
+          "lambda_r": 1.0012074833417275,
+          "companion_kappa": 1.8007238526561478e-07,
+          "companion_mean_kappa": 0.0001411964911436294,
+          "stellar_kappa": 2.8911634951335277e-06
+        },
+        {
+          "radius_kpc": 1000.0,
+          "angle_arcsec": 271.2876990377688,
+          "circular_speed_kms": 63.55095658402853,
+          "stellar_only_circular_speed_kms": 59.740113752688295,
+          "companion_enclosed_Msun": 109242485279.6527,
+          "kappa": 8.106394830438468e-09,
+          "mean_kappa": 0.00010941024663754826,
+          "tangential_shear": 0.00010940214024271782,
+          "reduced_shear": 0.00010940214112957476,
+          "lambda_t": 0.9998905897533624,
+          "lambda_r": 1.000109394033848,
+          "companion_kappa": 4.861995752102407e-09,
+          "companion_mean_kappa": 1.2730373566909184e-05,
+          "stellar_kappa": 3.244399078336061e-09
+        },
+        {
+          "radius_kpc": 3000.0,
+          "angle_arcsec": 813.8630971133063,
+          "circular_speed_kms": 36.692998179397364,
+          "stellar_only_circular_speed_kms": 34.4914518762839,
+          "companion_enclosed_Msun": 109313329938.51898,
+          "kappa": 1.809128900342122e-10,
+          "mean_kappa": 1.2157562357991156e-05,
+          "tangential_shear": 1.2157381445101122e-05,
+          "reduced_shear": 1.2157381447300548e-05,
+          "lambda_t": 0.999987842437642,
+          "lambda_r": 1.0000121572005323,
+          "companion_kappa": 1.8007401811394073e-10,
+          "companion_mean_kappa": 1.4152062519367044e-06,
+          "stellar_kappa": 8.388719202714611e-13
+        },
+        {
+          "radius_kpc": 10000.0,
+          "angle_arcsec": 2712.876990377688,
+          "circular_speed_kms": 20.097848585738713,
+          "stellar_only_circular_speed_kms": 18.891746730168503,
+          "companion_enclosed_Msun": 109338125580.9428,
+          "kappa": 4.861971801626628e-12,
+          "mean_kappa": 1.0942033235133027e-06,
+          "tangential_shear": 1.094198461541501e-06,
+          "reduced_shear": 1.094198461546821e-06,
+          "lambda_t": 0.9999989057966765,
+          "lambda_r": 1.0000010941935997,
+          "companion_kappa": 4.8619670411505525e-12,
+          "companion_mean_kappa": 1.2739125210532978e-07,
+          "stellar_kappa": 4.76047607579402e-18
+        }
+      ],
+      "critical_radii_kpc": {
+        "lambda_t": [
+          6.561296645614278
+        ],
+        "lambda_r": [
+          0.9063986839243675
+        ]
+      },
+      "refined_critical_curve_eigenvalue_residuals": {
+        "lambda_t": [
+          7.092071374614761e-11
+        ],
+        "lambda_r": [
+          1.1229204233131895e-09
+        ]
+      },
+      "central_potential_magnitude_over_c2_within_grid": 1.270710579149202e-05,
+      "exterior_companion_potential_bound_over_c2": 1.605205698539962e-17,
+      "peak_scanned_circular_speed_kms": 509.0082571402912,
+      "peak_speed_radius_kpc": 1.5757960227439234,
+      "peak_scanned_compactness_2GM_rc2": 5.765516838548665e-06,
+      "maximum_scanned_companion_kappa": 10.91281150056427,
+      "surface_projection_derivative_max_kappa_difference": 2.977326463426966e-07,
+      "quadrature_max_absolute_kappa_difference": 2.2500140639536426e-11,
+      "quadrature_max_absolute_mean_kappa_difference": 2.5908025724774575e-12
+    }
+  ],
+  "input_sha256": {
+    "research_work/results/companion-extensions/free-companion-results.json": "9fcbffbe522ac8e3d77d3ef1c58c857df37e814563c424d4544871f8f9444fdf",
+    "research_work/results/companion-extensions/outer-companion-predictions-protocol.md": "c52a6b29bfaac283b2dcc376e8f39b1f20a71699db3dede27f1da1398639b62b",
+    "research_work/results/isotropic-galaxy-transfer/capacity-reference-optics-results.json": "58357d342bab59a71bfea83f8f1499a821ed0e4a763fd5c6e595453652834b86",
+    "research_work/results/slacs-light-profile-audit/results.json": "7018d93494858c84a482b0f2951ee2175237be700ab5a51c7404d4b7a8a56c01",
+    "research_work/results/slacs-component-refit/model.py": "6f9c79fe74144c6217978f8c477f33b0ce923cf4861f09ea4af066120eab0d39",
+    "research_work/results/slacs-resolved-fit/model.py": "091c1af40427bcb19e7897332fa3f92a5092934b55b1dd5eb8543c58b57ba8d9",
+    "research_work/results/slacs-resolved-input-audit/results.json": "f04541d9ba2890367d47332d0d54b1e9801e7e35c0a4e854b75ca218747e63dd",
+    "research_work/results/slacs-motion-lensing-pilot/results.json": "d284e7b0e43514f9863612602226709805c7c8da3819f963ff1caeaeea285760",
+    "research_work/results/lensing-data-readiness/conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "research_work/results/isotropic-galaxy-transfer/third-radiation-retention-results.json": "d9c0277a3cedba60fa83b9014d452b27f56ddfabb50c0edfefc53df95424be53"
+  }
+}

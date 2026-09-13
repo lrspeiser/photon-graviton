@@ -1,3 +1,11 @@
+## Frozen outer-gravity predictions of the free companion fits (after v1.2)
+
+Without refitting, the extended J1621+3931 reservoir gives an implied circular-speed peak of about 4246 km/s near 9.17 Mpc. Its near-galaxy companion convergence is almost constant at 0.0847 while enclosed extra mass is negligible through the inner few hundred kpc. The extended envelope can therefore affect projected lensing without strong inner Newtonian acceleration, exposing a degeneracy of the inner fit.
+
+At the recorded source geometry, reduced tangential shear is about -0.0158 at 3 Mpc (13.7 arcmin) and +0.0343 at 10 Mpc (45.6 arcmin). Negative shear denotes radial stretching, not negative gravity. These are frozen extrapolated predictions for independent outer tests; no new observed shear or tracer data were compared. No additional critical curves are found in the finite 0.01-10000 kpc scan, and weak-field diagnostics remain small, so the huge mass alone is not an automatic critical-ring or horizon argument.
+
+A failed preliminary central integration check was resolved by splitting the mass projection at capture-scale crossings. Final projection, lens normalization and critical-curve refinement checks pass. Physical environmental, distribution-function, support and energy-supply requirements remain open. See [protocol](../../research_work/results/companion-extensions/outer-companion-predictions-protocol.md), [outer predictions and limitations](../../research_work/results/companion-extensions/outer-companion-predictions-report.md), and [calculated curves](../../research_work/results/companion-extensions/outer-companion-predictions.png). The v1.2 PDF remains the earlier snapshot.
+
 ## Companion scale and density fitted with matched local freedoms (after v1.2)
 
 Freeing capture scale and stored-density normalization gives total all-motion chi-squared 26.49, versus 49.71 for the free NFW diagnostic, with six local parameters per galaxy in both. Opacity k0 remains fixed and attenuation is recomputed as capture scale changes. All forty motion bins are fitted and lens angles calibrate stellar mass. This is descriptive profile flexibility, not a shared physical prediction; free normalization absorbs the one-third factor.
