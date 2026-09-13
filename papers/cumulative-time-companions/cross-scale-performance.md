@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Post-source retention checkpoint
+
+The [threshold memory calculation](../../research_work/results/companion-extensions/threshold-memory-report.md) compares formation and subsequent release for all 149 existing intensity inputs. Under individually controlled shutoff at 90% equilibrium, losing the first 10% takes 4.92%-41.79% of formation time, independent of the overall rate. Longer half-loss tails do not establish permanent retention. This constrains the stipulated kinetics rather than observed galaxy histories; no age, new fit or preferred alternative is inferred.
+
 ## Finite formation-history checkpoint
 
 The [threshold history scan](../../research_work/results/companion-extensions/threshold-history-report.md) starts storage empty and applies shared constant-source durations to all 149 existing galaxies. Ninety-percent formation times span about a factor of 1209 in an undetermined microscopic time unit. A modest test-RMSE improvement at one duration is accompanied by worse validation performance, so no new preferred law is selected. The equilibrium limit reproduces prior scores; capture/release integrals close the energy ledger. Source histories and a rate scale remain needed, and exposed partitions provide sensitivity evidence only.

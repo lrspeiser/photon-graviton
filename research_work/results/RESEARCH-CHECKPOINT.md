@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Latest checkpoint: formation versus retention.** In the stipulated threshold kinetics, individually filling to 90% equilibrium and then removing the source loses the first 10% in 4.92%-41.79% of the formation time. The ratio is independent of the unknown rate. A long release tail is not permanent retention; actual histories and other protection laws remain open. See [report](companion-extensions/threshold-memory-report.md).
+
 **Latest checkpoint: finite threshold formation histories.** Starting empty, 90%-equilibrium times vary by about 1209 across the existing galaxy sample under one rate scale. Common-duration scans give mixed score changes; none is selected. Equilibrium requires continuing energy turnover and is not automatically permanent storage. See [report](companion-extensions/threshold-history-report.md).
 
 **Latest checkpoint: finite thresholds on 149 galaxies.** With all original parameters fixed, a 12-decade threshold range changes speeds by at most 0.640 km/s; a six-decade range reaches 7.03 km/s and worsens aggregate validation/test velocity RMSE. This is an exposed-sample sensitivity comparison, not a new blind test or a physical derivation. See [report](companion-extensions/threshold-galaxies-report.md).
