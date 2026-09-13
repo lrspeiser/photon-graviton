@@ -1,3 +1,5 @@
+Latest predictive diagnostic: [outer radial bins omitted from fits](research_work/results/slacs-outer-bin-check/report.md). Extra force is closer in five of six exposed training systems, but substantial mismatches remain; fitted-parameter uncertainty is not yet included. This is not the reserved independent prediction test.
+
 Latest orbit-boundary check: [six resolved training lenses and comparison chart](research_work/results/slacs-orbit-boundary-extension/report.md). Wider tangential range removes baseline boundary fits; radial chi-square is 152.04 baseline versus 85.87 extra force, with extra force better in five of six. Significant discrepancies remain; no causal validation.
 
 Latest profile refit: [six training lenses with fixed published stellar components](research_work/results/slacs-component-refit/report.md). Extra-force radial chi-square 95.86 to 85.87; lensing RMS 10.60% to 11.60%. Four baseline orbit-boundary fits retained. No unified solution or reserved score claimed.

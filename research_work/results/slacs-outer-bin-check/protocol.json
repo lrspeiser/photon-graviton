@@ -1,0 +1,31 @@
+{
+  "scope": "Previously exposed training diagnostic: omit outermost bin from parameter fit, no blind validation",
+  "selection": "Existing training role and release_use_flag=1; flagged galaxy retained as excluded with unresolved reason",
+  "mass_Msun_bounds": [
+    10000000.0,
+    100000000000000.0
+  ],
+  "constant_beta_bounds": [
+    -2.0,
+    0.45
+  ],
+  "cutoff_in_a": 20,
+  "model": "Fixed published Sersic components, spherical Abel deprojection, shared constant mass-to-light ratio",
+  "likelihood": "Full released Gaussian covariance in Vrms, no extra scatter or lensing data in fit",
+  "starts_beta": [
+    -1.5,
+    -0.5,
+    0,
+    0.3
+  ],
+  "radial_nodes": 4001,
+  "angular_nodes": 128,
+  "refinement": "8001 radial nodes and 256 angular nodes at fitted parameters; no tuning based on lensing",
+  "limitations": "No full source capture, independent stellar masses, shape or PSF marginalization, or calibrated confidence intervals",
+  "light_profile": "Spherical Abel inverse of equal-area published Sersic components, shared constant mass-to-light ratio",
+  "cutoff": "Keep 20 times prior Hernquist a in physical kpc, not 20 times new profile radius",
+  "missing": "J1538+5817 missing components retained as exclusion; J0330-0020 remains release-flagged",
+  "deprojection_order": 256,
+  "change": "Fit only inner bins; use full Gaussian conditional error model for the omitted bin",
+  "uncertainty": "Plug-in parameter diagnostic; no parameter-uncertainty marginalization or calibrated significance"
+}
