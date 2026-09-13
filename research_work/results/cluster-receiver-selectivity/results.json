@@ -1,0 +1,67 @@
+{
+  "scope": "Conditional additive receiver mass contrast; no lensing likelihood",
+  "source": "https://arxiv.org/abs/astro-ph/0608407",
+  "source_table": 2,
+  "reference_mass_inputs": [
+    {
+      "name": "main",
+      "gas_B": 5.5,
+      "gas_P": 6.6,
+      "star_B": 0.54,
+      "star_P": 0.23
+    },
+    {
+      "name": "subcluster",
+      "gas_B": 2.7,
+      "gas_P": 5.8,
+      "star_B": 0.58,
+      "star_P": 0.12
+    }
+  ],
+  "sensitivity_rows": [
+    {
+      "name": "main",
+      "stellar_mass_scale": 0.25,
+      "required_Bstar_over_Bgas_strictly_greater_than": 14.193548387096767,
+      "additional_stellar_rest_energy_over_original_rest_energy_if_Bgas1": 13.193548387096767,
+      "universal_loading_preserves_plasma_larger": true
+    },
+    {
+      "name": "main",
+      "stellar_mass_scale": 1.0,
+      "required_Bstar_over_Bgas_strictly_greater_than": 3.5483870967741917,
+      "additional_stellar_rest_energy_over_original_rest_energy_if_Bgas1": 2.5483870967741917,
+      "universal_loading_preserves_plasma_larger": true
+    },
+    {
+      "name": "main",
+      "stellar_mass_scale": 1.5,
+      "required_Bstar_over_Bgas_strictly_greater_than": 2.365591397849461,
+      "additional_stellar_rest_energy_over_original_rest_energy_if_Bgas1": 1.3655913978494612,
+      "universal_loading_preserves_plasma_larger": true
+    },
+    {
+      "name": "subcluster",
+      "stellar_mass_scale": 0.25,
+      "required_Bstar_over_Bgas_strictly_greater_than": 26.956521739130434,
+      "additional_stellar_rest_energy_over_original_rest_energy_if_Bgas1": 25.956521739130434,
+      "universal_loading_preserves_plasma_larger": true
+    },
+    {
+      "name": "subcluster",
+      "stellar_mass_scale": 1.0,
+      "required_Bstar_over_Bgas_strictly_greater_than": 6.739130434782608,
+      "additional_stellar_rest_energy_over_original_rest_energy_if_Bgas1": 5.739130434782608,
+      "universal_loading_preserves_plasma_larger": true
+    },
+    {
+      "name": "subcluster",
+      "stellar_mass_scale": 1.5,
+      "required_Bstar_over_Bgas_strictly_greater_than": 4.492753623188405,
+      "additional_stellar_rest_energy_over_original_rest_energy_if_Bgas1": 3.4927536231884053,
+      "universal_loading_preserves_plasma_larger": true
+    }
+  ],
+  "uncertainty": "No confidence intervals: mass covariance and calibration posterior unavailable",
+  "script_sha256": "27d8aceca782a7e73bbc5baf6e60be8018c04d8e2ef00bdcbf7e2f9f2246a0be"
+}
