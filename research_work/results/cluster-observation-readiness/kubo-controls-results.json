@@ -1,0 +1,125 @@
+{
+  "source_archive_url": "https://arxiv.org/src/0709.0506",
+  "archive_sha256": "dd935feaf52beb8942c1435d6e013be15e898ec2258d14ec2561c748f545fec5",
+  "archive_members": [
+    {
+      "name": "f1.eps",
+      "bytes": 7721,
+      "sha256": "2befbbb8e9865415a6dc41a208c53922323fbdf74edaa6196dfe492f88a73f6d"
+    },
+    {
+      "name": "f2.eps",
+      "bytes": 17632,
+      "sha256": "e7678cba1a838b0c053ea51735fe9be52501513c6c07eba4b30d26887227759d"
+    },
+    {
+      "name": "f3.eps",
+      "bytes": 11021,
+      "sha256": "08246f6592d1825302b8808889d6a3ce7cb0f72d3e977a87bb0d072912f10678"
+    },
+    {
+      "name": "ms.tex",
+      "bytes": 45520,
+      "sha256": "68dba62dfee2de3f38f383f7f07113a6b9f2be749e1811087f4b8f7e2849a3d0"
+    }
+  ],
+  "source_audit": "Archive contains manuscript and three EPS figures only; no separate shear table, pipeline or covariance file. No exact intermediate angular bin boundaries recovered.",
+  "blank_figure": 3,
+  "page_one_based": 16,
+  "pdf_sha256": "87f5126c3e64a03f37315623b811c20b8c7a37a8de40b46a9fb48e87e06f0f6a",
+  "blank_rows": [
+    {
+      "bin": 1,
+      "published_radius_h_inverse_Mpc": 1.1986572940071478,
+      "shear_t": 0.0008644155444063023,
+      "sigma_t": 0.001088989520568772,
+      "shear_cross": 0.00026273720503156733,
+      "sigma_cross": 0.0010889901457138056
+    },
+    {
+      "bin": 2,
+      "published_radius_h_inverse_Mpc": 2.763726444479089,
+      "shear_t": -0.0005084729657280489,
+      "sigma_t": 0.0006525420147474214,
+      "shear_cross": -0.0009067778724664122,
+      "sigma_cross": 0.0006483016559841883
+    },
+    {
+      "bin": 3,
+      "published_radius_h_inverse_Mpc": 4.4648592195300205,
+      "shear_t": 0.00032206096814460956,
+      "sigma_t": 0.0005000122528426594,
+      "shear_cross": 0.00042374705931776173,
+      "sigma_cross": 0.0004999916230565491
+    },
+    {
+      "bin": 4,
+      "published_radius_h_inverse_Mpc": 6.192181659177771,
+      "shear_t": -0.00013556770170679598,
+      "sigma_t": 0.0004194866959134519,
+      "shear_cross": 0.0008050917812932601,
+      "sigma_cross": 0.0004194866959134519
+    },
+    {
+      "bin": 5,
+      "published_radius_h_inverse_Mpc": 7.91950487106308,
+      "shear_t": -2.5400893007177666e-05,
+      "sigma_t": 0.00036864365032687583,
+      "shear_cross": -5.932376311304223e-05,
+      "sigma_cross": 0.0003728840090901089
+    },
+    {
+      "bin": 6,
+      "published_radius_h_inverse_Mpc": 9.646827310710831,
+      "shear_t": -8.472465612021989e-05,
+      "sigma_t": 0.0003432221275335878,
+      "shear_cross": 0.0008389733918269038,
+      "sigma_cross": 0.00033900177341143143
+    }
+  ],
+  "checks": {
+    "blank_t_null_chi2": 1.8222627852211042,
+    "paper_blank_t_null_chi2": 1.84,
+    "blank_cross_null_chi2": 12.566399803185854,
+    "paper_blank_cross_null_chi2": 12.58
+  },
+  "conditional_offset_subtraction": {
+    "assumptions": "Common additive offset by bin estimated from published blank mean; independent Coma/control errors; diagonal bins. Sensitivity analysis only, not validated covariance or required correction.",
+    "rows": [
+      {
+        "bin": 1,
+        "shear_t": 0.006983047567035552,
+        "sigma": 0.002757999046302604
+      },
+      {
+        "bin": 2,
+        "shear_t": 0.0036017118471485384,
+        "sigma": 0.001635787105135635
+      },
+      {
+        "bin": 3,
+        "shear_t": 0.0027288155852157703,
+        "sigma": 0.0012914031725530485
+      },
+      {
+        "bin": 4,
+        "shear_t": 0.0005084729657280489,
+        "sigma": 0.0011039873069124105
+      },
+      {
+        "bin": 5,
+        "shear_t": 0.0014406517312016388,
+        "sigma": 0.00097101646910928
+      },
+      {
+        "bin": 6,
+        "shear_t": -0.0003644232962047195,
+        "sigma": 0.000875199523042967
+      }
+    ],
+    "null_chi2": 18.310437638575227,
+    "degrees_of_freedom": 6,
+    "conditional_null_p": 0.005501466523667556
+  },
+  "status": "Exploratory reconstructed control means. Six individual blank-field profiles remain unavailable; do not infer full covariance from their published mean."
+}
