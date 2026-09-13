@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Restarted assembly and recycling checkpoint
+
+The [restarted ladder](../../research_work/results/companion-extensions/assembly-recycling-report.md) distinguishes probability per attempt from mean completion time with recycling. Ninety-six cases use the exact first-passage sum F=sum (K-j)r^j; twelve independent matrix solves verify it. Gross forward energy is F delta, returned energy (F-K) delta and net input K delta. In the representative unbiased case gross/net traffic is 199,976, requiring losses below about five parts per million of returned energy to keep extra replacement input below the net requirement. Forward-biased assembly reduces this burden, but the bias, maintained source field and terminal protection remain hypotheses. These are first-fill benchmarks, not demonstrated formation histories or new observational fits.
+
 ## Collective release and assembly checkpoint
 
 The [collective assembly calculation](../../research_work/results/companion-extensions/collective-assembly-report.md) tests a larger stored excitation assembled from K small contributions and emitting one larger relaxation quantum. Within the prior closure its necessary lifetime bound falls as K^-4; grouping unchanged small emissions gives no such benefit. Twenty-four designs and 96 toy assembly probabilities quantify the distinction. A constant-rate reversible ladder can strongly suppress completion even with a modest reverse bias, so a larger packet cannot simply be assumed available. State-dependent pumping, collective transition rates, momentum and radiation predictions remain unresolved. These conditional calculations neither derive the exact-third reference nor improve the observational fits.
