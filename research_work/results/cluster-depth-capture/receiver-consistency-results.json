@@ -1,0 +1,134 @@
+{
+  "scope": "Fixed Plummer ordinary-matter receivers, straight rays, absorption with constant cross section per unit original receiver mass. Synthetic, no excitation feedback, source depletion or observed fit.",
+  "provenance": "Known opacity definition, Plummer projection and absorption geometry. Constant receiver mass opacity is an optional comparison to the depth-to-fourth postulate.",
+  "formulas": [
+    "kappa=K*rho_b; tau(b)=T/(1+(b/a)^2)^2; T=K*M/(pi*a^2)",
+    "sigma_eff=pi*a^2*[sqrt(pi*T)*erf(sqrt(T))+exp(-T)-1]",
+    "sigma_eff<=K*M, from 1-exp(-tau)<=tau",
+    "Depth-to-fourth implies K(r)=4*pi*chi*G^4*M^3/(3*a)*sqrt(1+(r/a)^2)"
+  ],
+  "constant_mass_opacity_cases": [
+    {
+      "central_optical_depth": 0.001,
+      "area_over_a_squared": 0.003141069159515252,
+      "area_over_sum_of_receiver_cross_sections": 0.9998333666607149,
+      "area_ratio_when_radius_doubles_at_fixed_mass": 1.0001249895832907,
+      "quadrature_relative_error": 2.220446049250313e-16
+    },
+    {
+      "central_optical_depth": 0.1,
+      "area_over_a_squared": 0.3090261560593874,
+      "area_over_sum_of_receiver_cross_sections": 0.9836608056307794,
+      "area_ratio_when_radius_doubles_at_fixed_mass": 1.0123958058718996,
+      "quadrature_relative_error": 2.220446049250313e-16
+    },
+    {
+      "central_optical_depth": 1.0,
+      "area_over_a_squared": 2.7065691145353057,
+      "area_over_sum_of_receiver_cross_sections": 0.8615277067962963,
+      "area_ratio_when_radius_doubles_at_fixed_mass": 1.1146793659229968,
+      "quadrature_relative_error": 0.0
+    },
+    {
+      "central_optical_depth": 10.0,
+      "area_over_a_squared": 14.467012838563598,
+      "area_over_sum_of_receiver_cross_sections": 0.46049932100626173,
+      "area_ratio_when_radius_doubles_at_fixed_mass": 1.575285586599142,
+      "quadrature_relative_error": 1.1102230246251565e-16
+    },
+    {
+      "central_optical_depth": 1000.0,
+      "area_over_a_squared": 172.9443996351207,
+      "area_over_sum_of_receiver_cross_sections": 0.05504991216397929,
+      "area_ratio_when_radius_doubles_at_fixed_mass": 1.9636693334942565,
+      "quadrature_relative_error": 2.220446049250313e-16
+    }
+  ],
+  "max_column_relative_error": 2.220446049250313e-16,
+  "depth_law_implied_mass_opacity": [
+    {
+      "M": 1.0,
+      "a": 1.0,
+      "radius_over_a": 0.0,
+      "implied_mass_opacity": 4.1887902047863905,
+      "relative_to_same_well_center": 1.0
+    },
+    {
+      "M": 1.0,
+      "a": 1.0,
+      "radius_over_a": 1.0,
+      "implied_mass_opacity": 5.923843917544486,
+      "relative_to_same_well_center": 1.4142135623730951
+    },
+    {
+      "M": 1.0,
+      "a": 1.0,
+      "radius_over_a": 3.0,
+      "implied_mass_opacity": 13.246117687728136,
+      "relative_to_same_well_center": 3.1622776601683795
+    },
+    {
+      "M": 1.0,
+      "a": 1.0,
+      "radius_over_a": 10.0,
+      "implied_mass_opacity": 42.09682056107273,
+      "relative_to_same_well_center": 10.04987562112089
+    },
+    {
+      "M": 10.0,
+      "a": 1.0,
+      "radius_over_a": 0.0,
+      "implied_mass_opacity": 4188.790204786391,
+      "relative_to_same_well_center": 1.0
+    },
+    {
+      "M": 10.0,
+      "a": 1.0,
+      "radius_over_a": 1.0,
+      "implied_mass_opacity": 5923.843917544486,
+      "relative_to_same_well_center": 1.4142135623730951
+    },
+    {
+      "M": 10.0,
+      "a": 1.0,
+      "radius_over_a": 3.0,
+      "implied_mass_opacity": 13246.117687728132,
+      "relative_to_same_well_center": 3.1622776601683795
+    },
+    {
+      "M": 10.0,
+      "a": 1.0,
+      "radius_over_a": 10.0,
+      "implied_mass_opacity": 42096.82056107273,
+      "relative_to_same_well_center": 10.04987562112089
+    },
+    {
+      "M": 1.0,
+      "a": 2.0,
+      "radius_over_a": 0.0,
+      "implied_mass_opacity": 2.0943951023931953,
+      "relative_to_same_well_center": 1.0
+    },
+    {
+      "M": 1.0,
+      "a": 2.0,
+      "radius_over_a": 1.0,
+      "implied_mass_opacity": 2.961921958772243,
+      "relative_to_same_well_center": 1.4142135623730951
+    },
+    {
+      "M": 1.0,
+      "a": 2.0,
+      "radius_over_a": 3.0,
+      "implied_mass_opacity": 6.623058843864068,
+      "relative_to_same_well_center": 3.1622776601683795
+    },
+    {
+      "M": 1.0,
+      "a": 2.0,
+      "radius_over_a": 10.0,
+      "implied_mass_opacity": 21.048410280536366,
+      "relative_to_same_well_center": 10.04987562112089
+    }
+  ]
+}
