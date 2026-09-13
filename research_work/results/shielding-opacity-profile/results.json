@@ -1,0 +1,3980 @@
+{
+  "scope": "Exposed model calibration of one global mass opacity and amplitude; not data validation or all-opacity proof",
+  "log10_kappa_search": [
+    -13,
+    -7
+  ],
+  "boundary_kpc": 30,
+  "hashes": {
+    "research_work\\results\\shielding-opacity-profile\\run.py": "aa422b2959cdf939fc2d192deb63478dd4bdb25ff150636182bd0021b27fbfbd",
+    "research_work\\results\\attached-shielding-pair\\run.py": "22d683e9d5178f924791438e9c2a148c9ea1a245cd667d191e042057ab62b7f1",
+    "research_work\\results\\attached-shielding-pair\\results.json": "1a8ca3b2cfc051cfdf6238d2c83aa98482afeee716d0d032e4707b700ddb318d",
+    "research_work\\results\\attached-shielding-grid\\results.json": "fd7776e9e4b989a560da3d1b3f2138ef7b49bf8943d8c91625c073abeef3ee40"
+  },
+  "cases": [
+    {
+      "subset": "full",
+      "mu_nodes": 16,
+      "column_file": "research_work\\generated\\shielding-opacity-profile\\columns-16.npz",
+      "column_sha256": "08343df829f01f0da4fc59d43f03d94eaff846719d01d5600dffba03c1cad03b",
+      "best": {
+        "log10_kappa": -8.442438925692677,
+        "log_required_amplitude_min": -0.18405085551600608,
+        "log_required_amplitude_max": 5.8419343521992,
+        "log_amplitude_span": 6.025985207715205,
+        "minimum_worst_relative_error": 0.9951812960940845,
+        "log_optimal_normalization": 0.5066840659320464
+      },
+      "scan": [
+        {
+          "log10_kappa": -13.0,
+          "log_required_amplitude_min": -1.6184921711613867,
+          "log_required_amplitude_max": 5.669959897158347,
+          "log_amplitude_span": 7.288452068319733,
+          "minimum_worst_relative_error": 0.9986341632567393,
+          "log_optimal_normalization": -0.9260281422680432
+        },
+        {
+          "log10_kappa": -12.95,
+          "log_required_amplitude_min": -1.6184605722392216,
+          "log_required_amplitude_max": 5.669960010907256,
+          "log_amplitude_span": 7.288420583146477,
+          "minimum_worst_relative_error": 0.9986341202818251,
+          "log_optimal_normalization": -0.9259965648480204
+        },
+        {
+          "log10_kappa": -12.9,
+          "log_required_amplitude_min": -1.6184251183353928,
+          "log_required_amplitude_max": 5.6699601385352665,
+          "log_amplitude_span": 7.28838525687066,
+          "minimum_worst_relative_error": 0.9986340720624838,
+          "log_optimal_normalization": -0.925961135070339
+        },
+        {
+          "log10_kappa": -12.85,
+          "log_required_amplitude_min": -1.6183853392443877,
+          "log_required_amplitude_max": 5.66996028173579,
+          "log_amplitude_span": 7.288345620980177,
+          "minimum_worst_relative_error": 0.9986340179586184,
+          "log_optimal_normalization": -0.9259213830497552
+        },
+        {
+          "log10_kappa": -12.8,
+          "log_required_amplitude_min": -1.6183407074318032,
+          "log_required_amplitude_max": 5.669960442408842,
+          "log_amplitude_span": 7.288301149840645,
+          "minimum_worst_relative_error": 0.9986339572519819,
+          "log_optimal_normalization": -0.9258767816112341
+        },
+        {
+          "log10_kappa": -12.75,
+          "log_required_amplitude_min": -1.6182906310507668,
+          "log_required_amplitude_max": 5.669960622686243,
+          "log_amplitude_span": 7.288251253737009,
+          "minimum_worst_relative_error": 0.9986338891366292,
+          "log_optimal_normalization": -0.9258267393111526
+        },
+        {
+          "log10_kappa": -12.7,
+          "log_required_amplitude_min": -1.618234446109224,
+          "log_required_amplitude_max": 5.669960824959897,
+          "log_amplitude_span": 7.288195271069121,
+          "minimum_worst_relative_error": 0.9986338127082012,
+          "log_optimal_normalization": -0.9257705926099451
+        },
+        {
+          "log10_kappa": -12.65,
+          "log_required_amplitude_min": -1.6181714076852693,
+          "log_required_amplitude_max": 5.669961051913518,
+          "log_amplitude_span": 7.288132459598787,
+          "minimum_worst_relative_error": 0.9986337269518969,
+          "log_optimal_normalization": -0.925707597093453
+        },
+        {
+          "log10_kappa": -12.6,
+          "log_required_amplitude_min": -1.6181006800753281,
+          "log_required_amplitude_max": 5.669961306558215,
+          "log_amplitude_span": 7.288061986633544,
+          "minimum_worst_relative_error": 0.9986336307289739,
+          "log_optimal_normalization": -0.9256369176278643
+        },
+        {
+          "log10_kappa": -12.55,
+          "log_required_amplitude_min": -1.6180213257461964,
+          "log_required_amplitude_max": 5.669961592272436,
+          "log_amplitude_span": 7.287982918018633,
+          "minimum_worst_relative_error": 0.9986335227615949,
+          "log_optimal_normalization": -0.9255576173193294
+        },
+        {
+          "log10_kappa": -12.5,
+          "log_required_amplitude_min": -1.6179322929465472,
+          "log_required_amplitude_max": 5.669961912846763,
+          "log_amplitude_span": 7.287894205793311,
+          "minimum_worst_relative_error": 0.9986334016158165,
+          "log_optimal_normalization": -0.9254686451339849
+        },
+        {
+          "log10_kappa": -12.45,
+          "log_required_amplitude_min": -1.6178324018162393,
+          "log_required_amplitude_max": 5.669962272534177,
+          "log_amplitude_span": 7.287794674350417,
+          "minimum_worst_relative_error": 0.998633265682494,
+          "log_optimal_normalization": -0.9253688220168144
+        },
+        {
+          "log10_kappa": -12.4,
+          "log_required_amplitude_min": -1.6177203288125868,
+          "log_required_amplitude_max": 5.669962676106445,
+          "log_amplitude_span": 7.287683004919032,
+          "minimum_worst_relative_error": 0.9986331131558426,
+          "log_optimal_normalization": -0.925256825328642
+        },
+        {
+          "log10_kappa": -12.35,
+          "log_required_amplitude_min": -1.6175945892512744,
+          "log_required_amplitude_max": 5.669963128917385,
+          "log_amplitude_span": 7.28755771816866,
+          "minimum_worst_relative_error": 0.998632942009367,
+          "log_optimal_normalization": -0.9251311713990953
+        },
+        {
+          "log10_kappa": -12.3,
+          "log_required_amplitude_min": -1.6174535177357012,
+          "log_required_amplitude_max": 5.669963636973835,
+          "log_amplitude_span": 7.287417154709535,
+          "minimum_worst_relative_error": 0.9986327499688348,
+          "log_optimal_normalization": -0.9249901959694702
+        },
+        {
+          "log10_kappa": -12.25,
+          "log_required_amplitude_min": -1.6172952462219379,
+          "log_required_amplitude_max": 5.669964207015268,
+          "log_amplitude_span": 7.287259453237207,
+          "minimum_worst_relative_error": 0.9986325344819256,
+          "log_optimal_normalization": -0.9248320322728736
+        },
+        {
+          "log10_kappa": -12.2,
+          "log_required_amplitude_min": -1.6171176794368392,
+          "log_required_amplitude_max": 5.669964846603115,
+          "log_amplitude_span": 7.2870825260399545,
+          "minimum_worst_relative_error": 0.9986322926841473,
+          "log_optimal_normalization": -0.9246545864693907
+        },
+        {
+          "log10_kappa": -12.15,
+          "log_required_amplitude_min": -1.6169184673339578,
+          "log_required_amplitude_max": 5.669965564220947,
+          "log_amplitude_span": 7.286884031554905,
+          "minimum_worst_relative_error": 0.9986320213605517,
+          "log_optimal_normalization": -0.9244555101211525
+        },
+        {
+          "log10_kappa": -12.1,
+          "log_required_amplitude_min": -1.6166949742353345,
+          "log_required_amplitude_max": 5.669966369386877,
+          "log_amplitude_span": 7.286661343622212,
+          "minimum_worst_relative_error": 0.9986317169027299,
+          "log_optimal_normalization": -0.9242321693556459
+        },
+        {
+          "log10_kappa": -12.05,
+          "log_required_amplitude_min": -1.6164442442667704,
+          "log_required_amplitude_max": 5.66996727277963,
+          "log_amplitude_span": 7.2864115170464,
+          "minimum_worst_relative_error": 0.998631375260496,
+          "log_optimal_normalization": -0.9239816103251597
+        },
+        {
+          "log10_kappa": -12.0,
+          "log_required_amplitude_min": -1.6161629626492764,
+          "log_required_amplitude_max": 5.669968286379957,
+          "log_amplitude_span": 7.286131249029234,
+          "minimum_worst_relative_error": 0.9986309918875962,
+          "log_optimal_normalization": -0.9237005205253972
+        },
+        {
+          "log10_kappa": -11.95,
+          "log_required_amplitude_min": -1.6158474123599027,
+          "log_required_amplitude_max": 5.6699694236292615,
+          "log_amplitude_span": 7.285816835989165,
+          "minimum_worst_relative_error": 0.9986305616806923,
+          "log_optimal_normalization": -0.923385185486838
+        },
+        {
+          "log10_kappa": -11.9,
+          "log_required_amplitude_min": -1.615493425620444,
+          "log_required_amplitude_max": 5.669970699607499,
+          "log_amplitude_span": 7.285464125227943,
+          "minimum_worst_relative_error": 0.9986300789107728,
+          "log_optimal_normalization": -0.9230314402977626
+        },
+        {
+          "log10_kappa": -11.85,
+          "log_required_amplitude_min": -1.6150963296123826,
+          "log_required_amplitude_max": 5.669972131232721,
+          "log_amplitude_span": 7.285068460845103,
+          "minimum_worst_relative_error": 0.9986295371460344,
+          "log_optimal_normalization": -0.9226346153577785
+        },
+        {
+          "log10_kappa": -11.8,
+          "log_required_amplitude_min": -1.614650885750422,
+          "log_required_amplitude_max": 5.669973737484847,
+          "log_amplitude_span": 7.284624623235269,
+          "minimum_worst_relative_error": 0.9986289291651503,
+          "log_optimal_normalization": -0.9221894756947524
+        },
+        {
+          "log10_kappa": -11.75,
+          "log_required_amplitude_min": -1.614151221774668,
+          "log_required_amplitude_max": 5.669975539656624,
+          "log_amplitude_span": 7.284126761431292,
+          "minimum_worst_relative_error": 0.9986282468597002,
+          "log_optimal_normalization": -0.921690153105815
+        },
+        {
+          "log10_kappa": -11.7,
+          "log_required_amplitude_min": -1.6135907558427047,
+          "log_required_amplitude_max": 5.669977561635035,
+          "log_amplitude_span": 7.283568317477739,
+          "minimum_worst_relative_error": 0.9986274811243702,
+          "log_optimal_normalization": -0.9211300703043701
+        },
+        {
+          "log10_kappa": -11.65,
+          "log_required_amplitude_min": -1.612962111717104,
+          "log_required_amplitude_max": 5.669979830216841,
+          "log_amplitude_span": 7.282941941933945,
+          "minimum_worst_relative_error": 0.9986266217333455,
+          "log_optimal_normalization": -0.9205018561694587
+        },
+        {
+          "log10_kappa": -11.6,
+          "log_required_amplitude_min": -1.6122570240511895,
+          "log_required_amplitude_max": 5.669982375462372,
+          "log_amplitude_span": 7.282239399513562,
+          "minimum_worst_relative_error": 0.998625657201103,
+          "log_optimal_normalization": -0.9197972511011772
+        },
+        {
+          "log10_kappa": -11.55,
+          "log_required_amplitude_min": -1.611466232676022,
+          "log_required_amplitude_max": 5.669985231092152,
+          "log_amplitude_span": 7.281451463768175,
+          "minimum_worst_relative_error": 0.9986245746255611,
+          "log_optimal_normalization": -0.9190070013861398
+        },
+        {
+          "log10_kappa": -11.5,
+          "log_required_amplitude_min": -1.6105793646846647,
+          "log_required_amplitude_max": 5.669988434931515,
+          "log_amplitude_span": 7.280567799616179,
+          "minimum_worst_relative_error": 0.9986233595112607,
+          "log_optimal_normalization": -0.9181207413702301
+        },
+        {
+          "log10_kappa": -11.45,
+          "log_required_amplitude_min": -1.609584802996069,
+          "log_required_amplitude_max": 5.669992029408954,
+          "log_amplitude_span": 7.279576832405024,
+          "minimum_worst_relative_error": 0.9986219955699166,
+          "log_optimal_normalization": -0.9171268621222772
+        },
+        {
+          "log10_kappa": -11.4,
+          "log_required_amplitude_min": -1.608469539960946,
+          "log_required_amplitude_max": 5.669996062114632,
+          "log_amplitude_span": 7.278465602075578,
+          "minimum_worst_relative_error": 0.9986204644952967,
+          "log_optimal_normalization": -0.9160123651525778
+        },
+        {
+          "log10_kappa": -11.35,
+          "log_required_amplitude_min": -1.6072190144464868,
+          "log_required_amplitude_max": 5.6700005864262195,
+          "log_amplitude_span": 7.277219600872707,
+          "minimum_worst_relative_error": 0.9986187457089369,
+          "log_optimal_normalization": -0.914762699624859
+        },
+        {
+          "log10_kappa": -11.3,
+          "log_required_amplitude_min": -1.60581693070699,
+          "log_required_amplitude_max": 5.670005662210075,
+          "log_amplitude_span": 7.275822592917065,
+          "minimum_worst_relative_error": 0.9986168160726707,
+          "log_optimal_normalization": -0.9133615813707516
+        },
+        {
+          "log10_kappa": -11.25,
+          "log_required_amplitude_min": -1.6042450572148854,
+          "log_required_amplitude_max": 5.6700113566066825,
+          "log_amplitude_span": 7.274256413821568,
+          "minimum_worst_relative_error": 0.9986146495633424,
+          "log_optimal_normalization": -0.9117907918835879
+        },
+        {
+          "log10_kappa": -11.2,
+          "log_required_amplitude_min": -1.6024830034933744,
+          "log_required_amplitude_max": 5.670017744910308,
+          "log_amplitude_span": 7.272500748403683,
+          "minimum_worst_relative_error": 0.9986122169043375,
+          "log_optimal_normalization": -0.9100299553354247
+        },
+        {
+          "log10_kappa": -11.15,
+          "log_required_amplitude_min": -1.6005079728604348,
+          "log_required_amplitude_max": 5.670024911553943,
+          "log_amplitude_span": 7.2705328844143775,
+          "minimum_worst_relative_error": 0.9986094851477035,
+          "log_optimal_normalization": -0.9080562915301664
+        },
+        {
+          "log10_kappa": -11.1,
+          "log_required_amplitude_min": -1.598294488867381,
+          "log_required_amplitude_max": 5.670032951211858,
+          "log_amplitude_span": 7.268327440079238,
+          "minimum_worst_relative_error": 0.9986064171996011,
+          "log_optimal_normalization": -0.9058443425795906
+        },
+        {
+          "log10_kappa": -11.05,
+          "log_required_amplitude_min": -1.595814093096927,
+          "log_required_amplitude_max": 5.670041970033461,
+          "log_amplitude_span": 7.2658560631303875,
+          "minimum_worst_relative_error": 0.9986029712805946,
+          "log_optimal_normalization": -0.9033656709715068
+        },
+        {
+          "log10_kappa": -11.0,
+          "log_required_amplitude_min": -1.5930350118797256,
+          "log_required_amplitude_max": 5.6700520870236435,
+          "log_amplitude_span": 7.26308709890337,
+          "minimum_worst_relative_error": 0.9985991003107972,
+          "log_optimal_normalization": -0.9005885265939888
+        },
+        {
+          "log10_kappa": -10.95,
+          "log_required_amplitude_min": -1.5899217893985074,
+          "log_required_amplitude_max": 5.670063435586449,
+          "log_amplitude_span": 7.259985224984957,
+          "minimum_worst_relative_error": 0.9985947512080859,
+          "log_optimal_normalization": -0.8974774801907257
+        },
+        {
+          "log10_kappa": -10.9,
+          "log_required_amplitude_min": -1.586434884579003,
+          "log_required_amplitude_max": 5.670076165250692,
+          "log_amplitude_span": 7.256511049829696,
+          "minimum_worst_relative_error": 0.9985898640854001,
+          "log_optimal_normalization": -0.8939930206536664
+        },
+        {
+          "log10_kappa": -10.85,
+          "log_required_amplitude_min": -1.5825302291195897,
+          "log_required_amplitude_max": 5.67009044359806,
+          "log_amplitude_span": 7.252620672717649,
+          "minimum_worst_relative_error": 0.9985843713304382,
+          "log_optimal_normalization": -0.8900911135132601
+        },
+        {
+          "log10_kappa": -10.8,
+          "log_required_amplitude_min": -1.5781587439884261,
+          "log_required_amplitude_max": 5.6701064584163765,
+          "log_amplitude_span": 7.248265202404802,
+          "minimum_worst_relative_error": 0.998578196547741,
+          "log_optimal_normalization": -0.8857227179650655
+        },
+        {
+          "log10_kappa": -10.75,
+          "log_required_amplitude_min": -1.5732658117161598,
+          "log_required_amplitude_max": 5.670124420102896,
+          "log_amplitude_span": 7.243390231819056,
+          "minimum_worst_relative_error": 0.9985712533390142,
+          "log_optimal_normalization": -0.8808332597729223
+        },
+        {
+          "log10_kappa": -10.7,
+          "log_required_amplitude_min": -1.5677907018286805,
+          "log_required_amplitude_max": 5.670144564344884,
+          "log_amplitude_span": 7.237935266173565,
+          "minimum_worst_relative_error": 0.9985634438923857,
+          "log_optimal_normalization": -0.8753620574078163
+        },
+        {
+          "log10_kappa": -10.65,
+          "log_required_amplitude_min": -1.561665946786602,
+          "log_required_amplitude_max": 5.6701671551072925,
+          "log_amplitude_span": 7.231833101893894,
+          "minimum_worst_relative_error": 0.9985546573448167,
+          "log_optimal_normalization": -0.8692416988070466
+        },
+        {
+          "log10_kappa": -10.6,
+          "log_required_amplitude_min": -1.5548166658074307,
+          "log_required_amplitude_max": 5.670192487959883,
+          "log_amplitude_span": 7.225009153767314,
+          "minimum_worst_relative_error": 0.998544767873706,
+          "log_optimal_normalization": -0.8623973661516766
+        },
+        {
+          "log10_kappa": -10.55,
+          "log_required_amplitude_min": -1.5471598339149586,
+          "log_required_amplitude_max": 5.670220893778886,
+          "log_amplitude_span": 7.217380727693845,
+          "minimum_worst_relative_error": 0.9985336324633525,
+          "log_optimal_normalization": -0.8547461060340051
+        },
+        {
+          "log10_kappa": -10.5,
+          "log_required_amplitude_min": -1.5386034934499686,
+          "log_required_amplitude_max": 5.670252742860919,
+          "log_amplitude_span": 7.208856236310888,
+          "minimum_worst_relative_error": 0.9985210882787132,
+          "log_optimal_normalization": -0.8461960422830037
+        },
+        {
+          "log10_kappa": -10.45,
+          "log_required_amplitude_min": -1.5290459050387644,
+          "log_required_amplitude_max": 5.670288449489566,
+          "log_amplitude_span": 7.199334354528331,
+          "minimum_worst_relative_error": 0.9985069495619517,
+          "log_optimal_normalization": -0.8366455284865522
+        },
+        {
+          "log10_kappa": -10.4,
+          "log_required_amplitude_min": -1.518374634595053,
+          "log_required_amplitude_max": 5.670328476997428,
+          "log_amplitude_span": 7.188703111592481,
+          "minimum_worst_relative_error": 0.998491003945487,
+          "log_optimal_normalization": -0.8259822368392529
+        },
+        {
+          "log10_kappa": -10.35,
+          "log_required_amplitude_min": -1.5064655722687657,
+          "log_required_amplitude_max": 5.670373343368689,
+          "log_amplitude_span": 7.176838915637454,
+          "minimum_worst_relative_error": 0.9984730080471463,
+          "log_optimal_normalization": -0.8140821792967392
+        },
+        {
+          "log10_kappa": -10.3,
+          "log_required_amplitude_min": -1.493181878304339,
+          "log_required_amplitude_max": 5.670423627428891,
+          "log_amplitude_span": 7.16360550573323,
+          "minimum_worst_relative_error": 0.998452682176618,
+          "log_optimal_normalization": -0.8008086560845875
+        },
+        {
+          "log10_kappa": -10.25,
+          "log_required_amplitude_min": -1.478372849510181,
+          "log_required_amplitude_max": 5.670479975669691,
+          "log_amplitude_span": 7.148852825179873,
+          "minimum_worst_relative_error": 0.9984297039351184,
+          "log_optimal_normalization": -0.7860111253728252
+        },
+        {
+          "log10_kappa": -10.2,
+          "log_required_amplitude_min": -1.4618726985029435,
+          "log_required_amplitude_max": 5.670543109756406,
+          "log_amplitude_span": 7.132415808259349,
+          "minimum_worst_relative_error": 0.9984037004285784,
+          "log_optimal_normalization": -0.769523986419836
+        },
+        {
+          "log10_kappa": -10.15,
+          "log_required_amplitude_min": -1.4435576962092096,
+          "log_required_amplitude_max": 5.670613834764901,
+          "log_amplitude_span": 7.114171530974111,
+          "minimum_worst_relative_error": 0.9983743336961362,
+          "log_optimal_normalization": -0.7512236793291844
+        },
+        {
+          "log10_kappa": -10.1,
+          "log_required_amplitude_min": -1.428919167766506,
+          "log_required_amplitude_max": 5.670693048191407,
+          "log_amplitude_span": 7.099612215957913,
+          "minimum_worst_relative_error": 0.9983505116331803,
+          "log_optimal_normalization": -0.7365970716785677
+        },
+        {
+          "log10_kappa": -10.05,
+          "log_required_amplitude_min": -1.4126609925084743,
+          "log_required_amplitude_max": 5.6707817497735284,
+          "log_amplitude_span": 7.083442742282003,
+          "minimum_worst_relative_error": 0.998323646013646,
+          "log_optimal_normalization": -0.72035234040845
+        },
+        {
+          "log10_kappa": -10.0,
+          "log_required_amplitude_min": -1.3946228483016263,
+          "log_required_amplitude_max": 5.670881052152519,
+          "log_amplitude_span": 7.065503900454146,
+          "minimum_worst_relative_error": 0.9982933287103738,
+          "log_optimal_normalization": -0.7023293676846158
+        },
+        {
+          "log10_kappa": -9.95,
+          "log_required_amplitude_min": -1.374632598857504,
+          "log_required_amplitude_max": 5.670992192394989,
+          "log_amplitude_span": 7.045624791252493,
+          "minimum_worst_relative_error": 0.9982590919669023,
+          "log_optimal_normalization": -0.6823562513791934
+        },
+        {
+          "log10_kappa": -9.9,
+          "log_required_amplitude_min": -1.352506290374488,
+          "log_required_amplitude_max": 5.671116544375656,
+          "log_amplitude_span": 7.023622834750144,
+          "minimum_worst_relative_error": 0.9982203985620549,
+          "log_optimal_normalization": -0.6602493066411634
+        },
+        {
+          "log10_kappa": -9.85,
+          "log_required_amplitude_min": -1.3280483751854844,
+          "log_required_amplitude_max": 5.671255632000594,
+          "log_amplitude_span": 6.999304007186078,
+          "minimum_worst_relative_error": 0.9981766301561829,
+          "log_optimal_normalization": -0.6358132953849074
+        },
+        {
+          "log10_kappa": -9.8,
+          "log_required_amplitude_min": -1.301052219235939,
+          "log_required_amplitude_max": 5.671411143221403,
+          "log_amplitude_span": 6.972463362457342,
+          "minimum_worst_relative_error": 0.998127073473345,
+          "log_optimal_normalization": -0.6088419406949832
+        },
+        {
+          "log10_kappa": -9.75,
+          "log_required_amplitude_min": -1.2713009591507394,
+          "log_required_amplitude_max": 5.671584944753594,
+          "log_amplitude_span": 6.942885903904333,
+          "minimum_worst_relative_error": 0.9980709039175948,
+          "log_optimal_normalization": -0.5791187921077983
+        },
+        {
+          "log10_kappa": -9.7,
+          "log_required_amplitude_min": -1.2385687827813046,
+          "log_required_amplitude_max": 5.671779097365809,
+          "log_amplitude_span": 6.910347880147113,
+          "minimum_worst_relative_error": 0.998007166160462,
+          "log_optimal_normalization": -0.5464185158944765
+        },
+        {
+          "log10_kappa": -9.65,
+          "log_required_amplitude_min": -1.2026227121340707,
+          "log_required_amplitude_max": 5.671995871549143,
+          "log_amplitude_span": 6.874618583683214,
+          "minimum_worst_relative_error": 0.9979347511700474,
+          "log_optimal_normalization": -0.5105086895130109
+        },
+        {
+          "log10_kappa": -9.6,
+          "log_required_amplitude_min": -1.1632249656252647,
+          "log_required_amplitude_max": 5.672237763306348,
+          "log_amplitude_span": 6.8354627289316126,
+          "minimum_worst_relative_error": 0.9978523690772797,
+          "log_optimal_normalization": -0.47115217747956617
+        },
+        {
+          "log10_kappa": -9.55,
+          "log_required_amplitude_min": -1.1201359619994422,
+          "log_required_amplitude_max": 5.672507509718549,
+          "log_amplitude_span": 6.792643471717991,
+          "minimum_worst_relative_error": 0.9977585171848358,
+          "log_optimal_normalization": -0.4281101513473651
+        },
+        {
+          "log10_kappa": -9.5,
+          "log_required_amplitude_min": -1.0731179934338115,
+          "log_required_amplitude_max": 5.6728081038519385,
+          "log_amplitude_span": 6.74592609728575,
+          "minimum_worst_relative_error": 0.997651442303885,
+          "log_optimal_normalization": -0.38114578172755564
+        },
+        {
+          "log10_kappa": -9.45,
+          "log_required_amplitude_min": -1.0284479122715238,
+          "log_required_amplitude_max": 5.673142808459689,
+          "log_amplitude_span": 6.701590720731213,
+          "minimum_worst_relative_error": 0.9975451061109332,
+          "log_optimal_normalization": -0.3365289325861154
+        },
+        {
+          "log10_kappa": -9.4,
+          "log_required_amplitude_min": -0.9817901682624715,
+          "log_required_amplitude_max": 5.673515167817554,
+          "log_amplitude_span": 6.655305336080025,
+          "minimum_worst_relative_error": 0.9974289592549431,
+          "log_optimal_normalization": -0.28992933506518614
+        },
+        {
+          "log10_kappa": -9.35,
+          "log_required_amplitude_min": -0.9331023165022048,
+          "log_required_amplitude_max": 5.67392901691004,
+          "log_amplitude_span": 6.607031333412245,
+          "minimum_worst_relative_error": 0.9973019718232433,
+          "log_optimal_normalization": -0.24130506076930125
+        },
+        {
+          "log10_kappa": -9.3,
+          "log_required_amplitude_min": -0.8957138968977292,
+          "log_required_amplitude_max": 5.6743884870655545,
+          "log_amplitude_span": 6.570102383963284,
+          "minimum_worst_relative_error": 0.9972006159717174,
+          "log_optimal_normalization": -0.20396738883581644
+        },
+        {
+          "log10_kappa": -9.25,
+          "log_required_amplitude_min": -0.8547683474255683,
+          "log_required_amplitude_max": 5.674898007035574,
+          "log_amplitude_span": 6.529666354461142,
+          "minimum_worst_relative_error": 0.9970852685856919,
+          "log_optimal_normalization": -0.16307959556308216
+        },
+        {
+          "log10_kappa": -9.2,
+          "log_required_amplitude_min": -0.8154842346667306,
+          "log_required_amplitude_max": 5.675462298441771,
+          "log_amplitude_span": 6.490946533108502,
+          "minimum_worst_relative_error": 0.9969703716241813,
+          "log_optimal_normalization": -0.12385301678568705
+        },
+        {
+          "log10_kappa": -9.15,
+          "log_required_amplitude_min": -0.7788239533300021,
+          "log_required_amplitude_max": 5.676086364499527,
+          "log_amplitude_span": 6.45491031782953,
+          "minimum_worst_relative_error": 0.9968593788560216,
+          "log_optimal_normalization": -0.08724831757194451
+        },
+        {
+          "log10_kappa": -9.1,
+          "log_required_amplitude_min": -0.7388560362527605,
+          "log_required_amplitude_max": 5.67677547099612,
+          "log_amplitude_span": 6.4156315072488805,
+          "minimum_worst_relative_error": 0.9967337697140086,
+          "log_optimal_normalization": -0.04734330582200208
+        },
+        {
+          "log10_kappa": -9.05,
+          "log_required_amplitude_min": -0.695376488479535,
+          "log_required_amplitude_max": 5.679691733550325,
+          "log_amplitude_span": 6.37506822202986,
+          "minimum_worst_relative_error": 0.996598786828066,
+          "log_optimal_normalization": -0.003931362178451359
+        },
+        {
+          "log10_kappa": -9.0,
+          "log_required_amplitude_min": -0.6481905015703551,
+          "log_required_amplitude_max": 5.6892239863149365,
+          "log_amplitude_span": 6.337414487885292,
+          "minimum_worst_relative_error": 0.9964685072232031,
+          "log_optimal_normalization": 0.04318937183348659
+        },
+        {
+          "log10_kappa": -8.95,
+          "log_required_amplitude_min": -0.5971179126752486,
+          "log_required_amplitude_max": 5.699424377841876,
+          "log_amplitude_span": 6.296542290517124,
+          "minimum_worst_relative_error": 0.9963214479890109,
+          "log_optimal_normalization": 0.0941882983341733
+        },
+        {
+          "log10_kappa": -8.899999999999999,
+          "log_required_amplitude_min": -0.5419989998224346,
+          "log_required_amplitude_max": 5.710308586354439,
+          "log_amplitude_span": 6.252307586176874,
+          "minimum_worst_relative_error": 0.9961553955601974,
+          "log_optimal_normalization": 0.14922402852348426
+        },
+        {
+          "log10_kappa": -8.85,
+          "log_required_amplitude_min": -0.4827001870462264,
+          "log_required_amplitude_max": 5.721888782050798,
+          "log_amplitude_span": 6.204588969097024,
+          "minimum_worst_relative_error": 0.9959678675126128,
+          "log_optimal_normalization": 0.20842889227288985
+        },
+        {
+          "log10_kappa": -8.8,
+          "log_required_amplitude_min": -0.41911897481111504,
+          "log_required_amplitude_max": 5.734173053530313,
+          "log_amplitude_span": 6.153292028341427,
+          "minimum_worst_relative_error": 0.9957560848861531,
+          "log_optimal_normalization": 0.27190399365004403
+        },
+        {
+          "log10_kappa": -8.75,
+          "log_required_amplitude_min": -0.3629134854862618,
+          "log_required_amplitude_max": 5.7471647266395225,
+          "log_amplitude_span": 6.110078212125784,
+          "minimum_worst_relative_error": 0.9955690840134099,
+          "log_optimal_normalization": 0.3280157793226186
+        },
+        {
+          "log10_kappa": -8.7,
+          "log_required_amplitude_min": -0.32259970901835855,
+          "log_required_amplitude_max": 5.760861563147988,
+          "log_amplitude_span": 6.083461272166346,
+          "minimum_worst_relative_error": 0.9954498349232683,
+          "log_optimal_normalization": 0.36826979707095653
+        },
+        {
+          "log10_kappa": -8.649999999999999,
+          "log_required_amplitude_min": -0.3005382607342626,
+          "log_required_amplitude_max": 5.7752548342245875,
+          "log_amplitude_span": 6.075793094958851,
+          "minimum_worst_relative_error": 0.9954148896296444,
+          "log_optimal_normalization": 0.3903137327125368
+        },
+        {
+          "log10_kappa": -8.6,
+          "log_required_amplitude_min": -0.2763627834011113,
+          "log_required_amplitude_max": 5.790328270659546,
+          "log_amplitude_span": 6.066691054060657,
+          "minimum_worst_relative_error": 0.9953730622490301,
+          "log_optimal_normalization": 0.4144682480797197
+        },
+        {
+          "log10_kappa": -8.55,
+          "log_required_amplitude_min": -0.2498775956092234,
+          "log_required_amplitude_max": 5.806056899449523,
+          "log_amplitude_span": 6.055934495058747,
+          "minimum_worst_relative_error": 0.9953231406928499,
+          "log_optimal_normalization": 0.4409284169006593
+        },
+        {
+          "log10_kappa": -8.5,
+          "log_required_amplitude_min": -0.22086995109114183,
+          "log_required_amplitude_max": 5.822405789458649,
+          "log_amplitude_span": 6.043275740549792,
+          "minimum_worst_relative_error": 0.995263702266527,
+          "log_optimal_normalization": 0.4699062721027003
+        },
+        {
+          "log10_kappa": -8.45,
+          "log_required_amplitude_min": -0.18910885869871974,
+          "log_required_amplitude_max": 5.8393287542677585,
+          "log_amplitude_span": 6.028437612966478,
+          "minimum_worst_relative_error": 0.9951930706622012,
+          "log_optimal_normalization": 0.5016319642347744
+        },
+        {
+          "log10_kappa": -8.399999999999999,
+          "log_required_amplitude_min": -0.15434369278775995,
+          "log_required_amplitude_max": 6.525537770782571,
+          "log_amplitude_span": 6.6798814635703305,
+          "minimum_worst_relative_error": 0.9974912970736859,
+          "log_optimal_normalization": 0.5375483489517476
+        },
+        {
+          "log10_kappa": -8.35,
+          "log_required_amplitude_min": -0.11630259468430504,
+          "log_required_amplitude_max": 7.413780575594761,
+          "log_amplitude_span": 7.530083170279067,
+          "minimum_worst_relative_error": 0.9989271885353238,
+          "log_optimal_normalization": 0.5763080362262798
+        },
+        {
+          "log10_kappa": -8.3,
+          "log_required_amplitude_min": -0.07469070973193181,
+          "log_required_amplitude_max": 8.401576654743602,
+          "log_amplitude_span": 8.476267364475534,
+          "minimum_worst_relative_error": 0.9995833768730762,
+          "log_optimal_normalization": 0.6182481375646844
+        },
+        {
+          "log10_kappa": -8.25,
+          "log_required_amplitude_min": -0.03823289937576119,
+          "log_required_amplitude_max": 9.500609043478285,
+          "log_amplitude_span": 9.538841942854045,
+          "minimum_worst_relative_error": 0.9998560100078673,
+          "log_optimal_normalization": 0.6548422835963521
+        },
+        {
+          "log10_kappa": -8.2,
+          "log_required_amplitude_min": -0.01836384700309951,
+          "log_required_amplitude_max": 10.723985578367381,
+          "log_amplitude_span": 10.742349425370481,
+          "minimum_worst_relative_error": 0.9999567807195119,
+          "log_optimal_normalization": 0.67476172368311
+        },
+        {
+          "log10_kappa": -8.149999999999999,
+          "log_required_amplitude_min": 0.0033464198330666606,
+          "log_required_amplitude_max": 12.0864165499017,
+          "log_amplitude_span": 12.083070130068633,
+          "minimum_worst_relative_error": 0.9999886911912885,
+          "log_optimal_normalization": 0.6964879459726703
+        },
+        {
+          "log10_kappa": -8.1,
+          "log_required_amplitude_min": 0.027070392204255944,
+          "log_required_amplitude_max": 13.604415918616674,
+          "log_amplitude_span": 13.577345526412417,
+          "minimum_worst_relative_error": 0.999997462166046,
+          "log_optimal_normalization": 0.7202163038464207
+        },
+        {
+          "log10_kappa": -8.05,
+          "log_required_amplitude_min": 0.05299617962153397,
+          "log_required_amplitude_max": 15.296527766942308,
+          "log_amplitude_span": 15.243531587320774,
+          "minimum_worst_relative_error": 0.9999995204341621,
+          "log_optimal_normalization": 0.7461431203985338
+        },
+        {
+          "log10_kappa": -8.0,
+          "log_required_amplitude_min": 0.08132791309840753,
+          "log_required_amplitude_max": 17.183579731154133,
+          "log_amplitude_span": 17.102251818055723,
+          "minimum_worst_relative_error": 0.9999999252491067,
+          "log_optimal_normalization": 0.7744750562829061
+        },
+        {
+          "log10_kappa": -7.949999999999999,
+          "log_required_amplitude_min": 0.11228613061298903,
+          "log_required_amplitude_max": 19.288965845543693,
+          "log_amplitude_span": 19.176679714930703,
+          "minimum_worst_relative_error": 0.9999999906091736,
+          "log_optimal_normalization": 0.8054333064775214
+        },
+        {
+          "log10_kappa": -7.8999999999999995,
+          "log_required_amplitude_min": 0.12529458524726728,
+          "log_required_amplitude_max": 21.638962306408505,
+          "log_amplitude_span": 21.513667721161237,
+          "minimum_worst_relative_error": 0.9999999990926751,
+          "log_optimal_normalization": 0.8184417653535476
+        },
+        {
+          "log10_kappa": -7.85,
+          "log_required_amplitude_min": 0.13497884640958752,
+          "log_required_amplitude_max": 24.263080739144765,
+          "log_amplitude_span": 24.128101892735177,
+          "minimum_worst_relative_error": 0.9999999999335755,
+          "log_optimal_normalization": 0.8281260269363209
+        },
+        {
+          "log10_kappa": -7.8,
+          "log_required_amplitude_min": 0.14555270867301345,
+          "log_required_amplitude_max": 27.194464371554748,
+          "log_amplitude_span": 27.048911662881736,
+          "minimum_worst_relative_error": 0.9999999999964204,
+          "log_optimal_normalization": 0.8386998892311688
+        },
+        {
+          "log10_kappa": -7.75,
+          "log_required_amplitude_min": 0.15709846647234954,
+          "log_required_amplitude_max": 30.470333081676596,
+          "log_amplitude_span": 30.313234615204248,
+          "minimum_worst_relative_error": 0.9999999999998631,
+          "log_optimal_normalization": 0.8502456470322279
+        },
+        {
+          "log10_kappa": -7.699999999999999,
+          "log_required_amplitude_min": 0.1697078322137408,
+          "log_required_amplitude_max": 34.13248370065058,
+          "log_amplitude_span": 33.96277586843684,
+          "minimum_worst_relative_error": 0.9999999999999964,
+          "log_optimal_normalization": 0.8628550127736858
+        },
+        {
+          "log10_kappa": -7.6499999999999995,
+          "log_required_amplitude_min": 0.18348256208359753,
+          "log_required_amplitude_max": 38.227852191138,
+          "log_amplitude_span": 38.0443696290544,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.8766297426435443
+        },
+        {
+          "log10_kappa": -7.6,
+          "log_required_amplitude_min": 0.1985348355346796,
+          "log_required_amplitude_max": 42.80914428699323,
+          "log_amplitude_span": 42.61060945145855,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.8916820160946273
+        },
+        {
+          "log10_kappa": -7.55,
+          "log_required_amplitude_min": 0.21498737948549657,
+          "log_required_amplitude_max": 47.93554098215611,
+          "log_amplitude_span": 47.72055360267061,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9081345600454398
+        },
+        {
+          "log10_kappa": -7.5,
+          "log_required_amplitude_min": 0.23297337425374426,
+          "log_required_amplitude_max": 53.673485399896336,
+          "log_amplitude_span": 53.44051202564259,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9261205548136928
+        },
+        {
+          "log10_kappa": -7.449999999999999,
+          "log_required_amplitude_min": 0.25263621860199453,
+          "log_required_amplitude_max": 60.09755871086912,
+          "log_amplitude_span": 59.84492249226713,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9457833991619395
+        },
+        {
+          "log10_kappa": -7.3999999999999995,
+          "log_required_amplitude_min": 0.27412925469790345,
+          "log_required_amplitude_max": 67.29145524208413,
+          "log_amplitude_span": 67.01732598738623,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.967276435257844
+        },
+        {
+          "log10_kappa": -7.35,
+          "log_required_amplitude_min": 0.2976155558840418,
+          "log_required_amplitude_max": 75.3490705691464,
+          "log_amplitude_span": 75.05145501326237,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9907627364439833
+        },
+        {
+          "log10_kappa": -7.3,
+          "log_required_amplitude_min": 0.3232678671081372,
+          "log_required_amplitude_max": 84.37572079847929,
+          "log_amplitude_span": 84.05245293137115,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.016415047668076
+        },
+        {
+          "log10_kappa": -7.25,
+          "log_required_amplitude_min": 0.35126877424810704,
+          "log_required_amplitude_max": 94.48951608950127,
+          "log_amplitude_span": 94.13824731525315,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.0444159548080592
+        },
+        {
+          "log10_kappa": -7.199999999999999,
+          "log_required_amplitude_min": 0.3818111790054685,
+          "log_required_amplitude_max": 105.82291642071479,
+          "log_amplitude_span": 105.44110524170932,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.0749583595654144
+        },
+        {
+          "log10_kappa": -7.1499999999999995,
+          "log_required_amplitude_min": 0.41509917584109196,
+          "log_required_amplitude_max": 118.52450183320448,
+          "log_amplitude_span": 118.10940265736339,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.1082463564010396
+        },
+        {
+          "log10_kappa": -7.1,
+          "log_required_amplitude_min": 0.45134945949638133,
+          "log_required_amplitude_max": 132.76099101590842,
+          "log_amplitude_span": 132.30964155641203,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.1444966400563317
+        },
+        {
+          "log10_kappa": -7.05,
+          "log_required_amplitude_min": 0.4907934225970662,
+          "log_required_amplitude_max": 148.71953864302847,
+          "log_amplitude_span": 148.2287452204314,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.183940603156998
+        },
+        {
+          "log10_kappa": -7.0,
+          "log_required_amplitude_min": 0.5336801221603147,
+          "log_required_amplitude_max": 166.61033233640197,
+          "log_amplitude_span": 166.07665221424165,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.2268273027202667
+        }
+      ],
+      "optimizer_trials": [
+        {
+          "success": true,
+          "logk": -8.442438925692677,
+          "objective": 6.025985207715205
+        }
+      ]
+    },
+    {
+      "subset": "inner",
+      "mu_nodes": 16,
+      "column_file": "research_work\\generated\\shielding-opacity-profile\\columns-16.npz",
+      "column_sha256": "08343df829f01f0da4fc59d43f03d94eaff846719d01d5600dffba03c1cad03b",
+      "best": {
+        "log10_kappa": -9.117930678680489,
+        "log_required_amplitude_min": -0.7535824483559295,
+        "log_required_amplitude_max": 0.2548600245715773,
+        "log_amplitude_span": 1.0084424729275068,
+        "minimum_worst_relative_error": 0.4654304561561972,
+        "log_optimal_normalization": -0.37143342231773824
+      },
+      "scan": [
+        {
+          "log10_kappa": -13.0,
+          "log_required_amplitude_min": -1.6184921711613867,
+          "log_required_amplitude_max": 0.17765066327818646,
+          "log_amplitude_span": 1.7961428344395731,
+          "minimum_worst_relative_error": 0.7153575118784407,
+          "log_optimal_normalization": -1.0788706505319121
+        },
+        {
+          "log10_kappa": -12.95,
+          "log_required_amplitude_min": -1.6184605722392216,
+          "log_required_amplitude_max": 0.17765229529377402,
+          "log_amplitude_span": 1.7961128675329956,
+          "minimum_worst_relative_error": 0.7153501959247293,
+          "log_optimal_normalization": -1.0788433165919806
+        },
+        {
+          "log10_kappa": -12.9,
+          "log_required_amplitude_min": -1.6184251183353928,
+          "log_required_amplitude_max": 0.17765412641742673,
+          "log_amplitude_span": 1.7960792447528195,
+          "minimum_worst_relative_error": 0.7153419872596946,
+          "log_optimal_normalization": -1.0788126481160458
+        },
+        {
+          "log10_kappa": -12.85,
+          "log_required_amplitude_min": -1.6183853392443877,
+          "log_required_amplitude_max": 0.17765618093676538,
+          "log_amplitude_span": 1.796041520181153,
+          "minimum_worst_relative_error": 0.7153327769483149,
+          "log_optimal_normalization": -1.0787782384127051
+        },
+        {
+          "log10_kappa": -12.8,
+          "log_required_amplitude_min": -1.6183407074318032,
+          "log_required_amplitude_max": 0.17765848610107815,
+          "log_amplitude_span": 1.7959991935328814,
+          "minimum_worst_relative_error": 0.7153224427614712,
+          "log_optimal_normalization": -1.0787396312141855
+        },
+        {
+          "log10_kappa": -12.75,
+          "log_required_amplitude_min": -1.6182906310507668,
+          "log_required_amplitude_max": 0.17766107248221052,
+          "log_amplitude_span": 1.7959517035329773,
+          "minimum_worst_relative_error": 0.7153108475532989,
+          "log_optimal_normalization": -1.0786963146393953
+        },
+        {
+          "log10_kappa": -12.7,
+          "log_required_amplitude_min": -1.618234446109224,
+          "log_required_amplitude_max": 0.17766397437936687,
+          "log_amplitude_span": 1.7958984204885908,
+          "minimum_worst_relative_error": 0.7152978374404092,
+          "log_optimal_normalization": -1.078647714423529
+        },
+        {
+          "log10_kappa": -12.65,
+          "log_required_amplitude_min": -1.6181714076852693,
+          "log_required_amplitude_max": 0.17766723027315523,
+          "log_amplitude_span": 1.7958386379584246,
+          "minimum_worst_relative_error": 0.715283239758774,
+          "log_optimal_normalization": -1.0785931863255551
+        },
+        {
+          "log10_kappa": -12.6,
+          "log_required_amplitude_min": -1.6181006800753281,
+          "log_required_amplitude_max": 0.1776708833348244,
+          "log_amplitude_span": 1.7957715634101525,
+          "minimum_worst_relative_error": 0.7152668607710929,
+          "log_optimal_normalization": -1.0785320076143043
+        },
+        {
+          "log10_kappa": -12.55,
+          "log_required_amplitude_min": -1.6180213257461964,
+          "log_required_amplitude_max": 0.17767498199739107,
+          "log_amplitude_span": 1.7956963077435875,
+          "minimum_worst_relative_error": 0.7152484830941442,
+          "log_optimal_normalization": -1.0784633675220185
+        },
+        {
+          "log10_kappa": -12.5,
+          "log_required_amplitude_min": -1.6179322929465472,
+          "log_required_amplitude_max": 0.17767958059614797,
+          "log_amplitude_span": 1.7956118735426951,
+          "minimum_worst_relative_error": 0.7152278628118854,
+          "log_optimal_normalization": -1.0783863565410208
+        },
+        {
+          "log10_kappa": -12.45,
+          "log_required_amplitude_min": -1.6178324018162393,
+          "log_required_amplitude_max": 0.17768474008691681,
+          "log_amplitude_span": 1.7955171419031561,
+          "minimum_worst_relative_error": 0.715204726235858,
+          "log_optimal_normalization": -1.0782999544243734
+        },
+        {
+          "log10_kappa": -12.4,
+          "log_required_amplitude_min": -1.6177203288125868,
+          "log_required_amplitude_max": 0.17769052885145387,
+          "log_amplitude_span": 1.7954108576640406,
+          "minimum_worst_relative_error": 0.7151787662697577,
+          "log_optimal_normalization": -1.0782030167349839
+        },
+        {
+          "log10_kappa": -12.35,
+          "log_required_amplitude_min": -1.6175945892512744,
+          "log_required_amplitude_max": 0.17769702360049822,
+          "log_amplitude_span": 1.7952916128517726,
+          "minimum_worst_relative_error": 0.7151496383297238,
+          "log_optimal_normalization": -1.078094259769271
+        },
+        {
+          "log10_kappa": -12.3,
+          "log_required_amplitude_min": -1.6174535177357012,
+          "log_required_amplitude_max": 0.17770431038622236,
+          "log_amplitude_span": 1.7951578281219236,
+          "minimum_worst_relative_error": 0.7151169557659506,
+          "log_optimal_normalization": -1.0779722436611292
+        },
+        {
+          "log10_kappa": -12.25,
+          "log_required_amplitude_min": -1.6172952462219379,
+          "log_required_amplitude_max": 0.17771248573722653,
+          "log_amplitude_span": 1.7950077319591644,
+          "minimum_worst_relative_error": 0.7150802847245499,
+          "log_optimal_normalization": -1.0778353534492742
+        },
+        {
+          "log10_kappa": -12.2,
+          "log_required_amplitude_min": -1.6171176794368392,
+          "log_required_amplitude_max": 0.17772165793078054,
+          "log_amplitude_span": 1.7948393373676197,
+          "minimum_worst_relative_error": 0.7150391383810688,
+          "log_optimal_normalization": -1.0776817778658847
+        },
+        {
+          "log10_kappa": -12.15,
+          "log_required_amplitude_min": -1.6169184673339578,
+          "log_required_amplitude_max": 0.17773194841872408,
+          "log_amplitude_span": 1.794650415752682,
+          "minimum_worst_relative_error": 0.7149929704686245,
+          "log_optimal_normalization": -1.0775094855765688
+        },
+        {
+          "log10_kappa": -12.1,
+          "log_required_amplitude_min": -1.6166949742353345,
+          "log_required_amplitude_max": 0.17774349342539297,
+          "log_amplitude_span": 1.7944384676607275,
+          "minimum_worst_relative_error": 0.7149411680141176,
+          "log_optimal_normalization": -1.0773161985707855
+        },
+        {
+          "log10_kappa": -12.05,
+          "log_required_amplitude_min": -1.6164442442667704,
+          "log_required_amplitude_max": 0.17775644573802873,
+          "log_amplitude_span": 1.794200690004799,
+          "minimum_worst_relative_error": 0.7148830431853043,
+          "log_optimal_normalization": -1.0770993623677554
+        },
+        {
+          "log10_kappa": -12.0,
+          "log_required_amplitude_min": -1.6161629626492764,
+          "log_required_amplitude_max": 0.17777097671253594,
+          "log_amplitude_span": 1.7939339393618123,
+          "minimum_worst_relative_error": 0.7148178241394744,
+          "log_optimal_normalization": -1.0768561126652072
+        },
+        {
+          "log10_kappa": -11.95,
+          "log_required_amplitude_min": -1.6158474123599027,
+          "log_required_amplitude_max": 0.17778727852006115,
+          "log_amplitude_span": 1.7936346908799639,
+          "minimum_worst_relative_error": 0.7147446447509622,
+          "log_optimal_normalization": -1.0765832380169318
+        },
+        {
+          "log10_kappa": -11.9,
+          "log_required_amplitude_min": -1.615493425620444,
+          "log_required_amplitude_max": 0.1778055666627556,
+          "log_amplitude_span": 1.7932989922831997,
+          "minimum_worst_relative_error": 0.7146625330794594,
+          "log_optimal_normalization": -1.0762771380796292
+        },
+        {
+          "log10_kappa": -11.85,
+          "log_required_amplitude_min": -1.6150963296123826,
+          "log_required_amplitude_max": 0.1778260827903284,
+          "log_amplitude_span": 1.792922412402711,
+          "minimum_worst_relative_error": 0.7145703984239367,
+          "log_optimal_normalization": -1.075933776919789
+        },
+        {
+          "log10_kappa": -11.8,
+          "log_required_amplitude_min": -1.614650885750422,
+          "log_required_amplitude_max": 0.1778490978524716,
+          "log_amplitude_span": 1.7924999836028936,
+          "minimum_worst_relative_error": 0.714467016787606,
+          "log_optimal_normalization": -1.0755486308171376
+        },
+        {
+          "log10_kappa": -11.75,
+          "log_required_amplitude_min": -1.614151221774668,
+          "log_required_amplitude_max": 0.17787491562618074,
+          "log_amplitude_span": 1.7920261374008488,
+          "minimum_worst_relative_error": 0.7143510145575152,
+          "log_optimal_normalization": -1.0751166299422392
+        },
+        {
+          "log10_kappa": -11.7,
+          "log_required_amplitude_min": -1.6135907558427047,
+          "log_required_amplitude_max": 0.17790387666119,
+          "log_amplitude_span": 1.7914946325038947,
+          "minimum_worst_relative_error": 0.7142208501776875,
+          "log_optimal_normalization": -1.074632093222219
+        },
+        {
+          "log10_kappa": -11.65,
+          "log_required_amplitude_min": -1.612962111717104,
+          "log_required_amplitude_max": 0.17793636269141677,
+          "log_amplitude_span": 1.7908984744085208,
+          "minimum_worst_relative_error": 0.7140747935668417,
+          "log_optimal_normalization": -1.0740886556401092
+        },
+        {
+          "log10_kappa": -11.6,
+          "log_required_amplitude_min": -1.6122570240511895,
+          "log_required_amplitude_max": 0.17797280156535722,
+          "log_amplitude_span": 1.7902298256165468,
+          "minimum_worst_relative_error": 0.7139109030001711,
+          "log_optimal_normalization": -1.0734791871402605
+        },
+        {
+          "log10_kappa": -11.55,
+          "log_required_amplitude_min": -1.611466232676022,
+          "log_required_amplitude_max": 0.17801367275382995,
+          "log_amplitude_span": 1.789479905429852,
+          "minimum_worst_relative_error": 0.713726999138926,
+          "log_optimal_normalization": -1.072795702234838
+        },
+        {
+          "log10_kappa": -11.5,
+          "log_required_amplitude_min": -1.6105793646846647,
+          "log_required_amplitude_max": 0.1780595134993601,
+          "log_amplitude_span": 1.7886388781840248,
+          "minimum_worst_relative_error": 0.7135206358509828,
+          "log_optimal_normalization": -1.072029259325162
+        },
+        {
+          "log10_kappa": -11.45,
+          "log_required_amplitude_min": -1.609584802996069,
+          "log_required_amplitude_max": 0.1781109256778124,
+          "log_amplitude_span": 1.7876957286738815,
+          "minimum_worst_relative_error": 0.7132890674195073,
+          "log_optimal_normalization": -1.071169848667338
+        },
+        {
+          "log10_kappa": -11.4,
+          "log_required_amplitude_min": -1.608469539960946,
+          "log_required_amplitude_max": 0.1781685834495499,
+          "log_amplitude_span": 1.786638123410496,
+          "minimum_worst_relative_error": 0.7130292116843404,
+          "log_optimal_normalization": -1.0702062678254602
+        },
+        {
+          "log10_kappa": -11.35,
+          "log_required_amplitude_min": -1.6072190144464868,
+          "log_required_amplitude_max": 0.17823324178447164,
+          "log_amplitude_span": 1.7854522562309585,
+          "minimum_worst_relative_error": 0.7127376086008561,
+          "log_optimal_normalization": -1.0691259833691267
+        },
+        {
+          "log10_kappa": -11.3,
+          "log_required_amplitude_min": -1.60581693070699,
+          "log_required_amplitude_max": 0.17830574595256588,
+          "log_amplitude_span": 1.784122676659556,
+          "minimum_worst_relative_error": 0.712410373632519,
+          "log_optimal_normalization": -1.067914977487305
+        },
+        {
+          "log10_kappa": -11.25,
+          "log_required_amplitude_min": -1.6042450572148854,
+          "log_required_amplitude_max": 0.17838704207916978,
+          "log_amplitude_span": 1.7826320992940552,
+          "minimum_worst_relative_error": 0.7120431453147533,
+          "log_optimal_normalization": -1.0665575781103498
+        },
+        {
+          "log10_kappa": -11.2,
+          "log_required_amplitude_min": -1.6024830034933744,
+          "log_required_amplitude_max": 0.17847818887163092,
+          "log_amplitude_span": 1.7809611923650053,
+          "minimum_worst_relative_error": 0.7116310262372044,
+          "log_optimal_normalization": -1.0650362710597479
+        },
+        {
+          "log10_kappa": -11.15,
+          "log_required_amplitude_min": -1.6005079728604348,
+          "log_required_amplitude_max": 0.17858037063152343,
+          "log_amplitude_span": 1.7790883434919582,
+          "minimum_worst_relative_error": 0.7111685165868574,
+          "log_optimal_normalization": -1.0633314926851574
+        },
+        {
+          "log10_kappa": -11.1,
+          "log_required_amplitude_min": -1.598294488867381,
+          "log_required_amplitude_max": 0.17869491167354434,
+          "log_amplitude_span": 1.7769894005409252,
+          "minimum_worst_relative_error": 0.7106494392730426,
+          "log_optimal_normalization": -1.0614214014058552
+        },
+        {
+          "log10_kappa": -11.05,
+          "log_required_amplitude_min": -1.595814093096927,
+          "log_required_amplitude_max": 0.17882329227854088,
+          "log_amplitude_span": 1.7746373853754678,
+          "minimum_worst_relative_error": 0.7100668555137494,
+          "log_optimal_normalization": -1.0592816265549518
+        },
+        {
+          "log10_kappa": -11.0,
+          "log_required_amplitude_min": -1.5930350118797256,
+          "log_required_amplitude_max": 0.17896716631330856,
+          "log_amplitude_span": 1.7720021781930342,
+          "minimum_worst_relative_error": 0.7094129695966984,
+          "log_optimal_normalization": -1.0568849929370723
+        },
+        {
+          "log10_kappa": -10.95,
+          "log_required_amplitude_min": -1.5899217893985074,
+          "log_required_amplitude_max": 0.17912838065330527,
+          "log_amplitude_span": 1.7690501700518126,
+          "minimum_worst_relative_error": 0.7086790213329471,
+          "log_optimal_normalization": -1.054201219561951
+        },
+        {
+          "log10_kappa": -10.9,
+          "log_required_amplitude_min": -1.586434884579003,
+          "log_required_amplitude_max": 0.17930899654576704,
+          "log_amplitude_span": 1.76574388112477,
+          "minimum_worst_relative_error": 0.7078551644888342,
+          "log_optimal_normalization": -1.0511965911168497
+        },
+        {
+          "log10_kappa": -10.85,
+          "log_required_amplitude_min": -1.5825302291195897,
+          "log_required_amplitude_max": 0.17951131304897183,
+          "log_amplitude_span": 1.7620415421685616,
+          "minimum_worst_relative_error": 0.7069303292052552,
+          "log_optimal_normalization": -1.047833600899894
+        },
+        {
+          "log10_kappa": -10.8,
+          "log_required_amplitude_min": -1.5781587439884261,
+          "log_required_amplitude_max": 0.17973789267781592,
+          "log_amplitude_span": 1.757896636666242,
+          "minimum_worst_relative_error": 0.7058920660809499,
+          "log_optimal_normalization": -1.0440705641648562
+        },
+        {
+          "log10_kappa": -10.75,
+          "log_required_amplitude_min": -1.5732658117161598,
+          "log_required_amplitude_max": 0.17999158937538917,
+          "log_amplitude_span": 1.753257401091549,
+          "minimum_worst_relative_error": 0.7047263691949677,
+          "log_optimal_normalization": -1.0398612011358193
+        },
+        {
+          "log10_kappa": -10.7,
+          "log_required_amplitude_min": -1.5677907018286805,
+          "log_required_amplitude_max": 0.1802755789137538,
+          "log_amplitude_span": 1.7480662807424343,
+          "minimum_worst_relative_error": 0.7034174748554841,
+          "log_optimal_normalization": -1.0351541893473213
+        },
+        {
+          "log10_kappa": -10.65,
+          "log_required_amplitude_min": -1.561665946786602,
+          "log_required_amplitude_max": 0.18059339180342127,
+          "log_amplitude_span": 1.7422593385900234,
+          "minimum_worst_relative_error": 0.7019476322657463,
+          "log_optimal_normalization": -1.0298926854602755
+        },
+        {
+          "log10_kappa": -10.6,
+          "log_required_amplitude_min": -1.5548166658074307,
+          "log_required_amplitude_max": 0.18094894875892953,
+          "log_amplitude_span": 1.7357656145663602,
+          "minimum_worst_relative_error": 0.7002968415655574,
+          "log_optimal_normalization": -1.024013817302659
+        },
+        {
+          "log10_kappa": -10.55,
+          "log_required_amplitude_min": -1.5471598339149586,
+          "log_required_amplitude_max": 0.18134659872628012,
+          "log_amplitude_span": 1.7285064326412387,
+          "minimum_worst_relative_error": 0.6984425538039615,
+          "log_optimal_normalization": -1.0174481475911437
+        },
+        {
+          "log10_kappa": -10.5,
+          "log_required_amplitude_min": -1.5386034934499686,
+          "log_required_amplitude_max": 0.18179115942600665,
+          "log_amplitude_span": 1.7203946528759753,
+          "minimum_worst_relative_error": 0.6963593262831499,
+          "log_optimal_normalization": -1.0101191116086474
+        },
+        {
+          "log10_kappa": -10.45,
+          "log_required_amplitude_min": -1.5290459050387644,
+          "log_required_amplitude_max": 0.18228796030298122,
+          "log_amplitude_span": 1.7113338653417456,
+          "minimum_worst_relative_error": 0.6940184253334883,
+          "log_optimal_normalization": -1.0019424320478127
+        },
+        {
+          "log10_kappa": -10.4,
+          "log_required_amplitude_min": -1.518374634595053,
+          "log_required_amplitude_max": 0.18284288770124713,
+          "log_amplitude_span": 1.7012175222963002,
+          "minimum_worst_relative_error": 0.6913873668734825,
+          "log_optimal_normalization": -0.9928255152923865
+        },
+        {
+          "log10_kappa": -10.35,
+          "log_required_amplitude_min": -1.5064655722687657,
+          "log_required_amplitude_max": 0.1834624320010536,
+          "log_amplitude_span": 1.6899280042698193,
+          "minimum_worst_relative_error": 0.6884293830054586,
+          "log_optimal_normalization": -0.9826668346241348
+        },
+        {
+          "log10_kappa": -10.3,
+          "log_required_amplitude_min": -1.493181878304339,
+          "log_required_amplitude_max": 0.18415373636959886,
+          "log_amplitude_span": 1.6773356146739378,
+          "minimum_worst_relative_error": 0.6851028003189532,
+          "log_optimal_normalization": -0.9713553072696259
+        },
+        {
+          "log10_kappa": -10.25,
+          "log_required_amplitude_min": -1.478372849510181,
+          "log_required_amplitude_max": 0.18492464669311692,
+          "log_amplitude_span": 1.663297496203298,
+          "minimum_worst_relative_error": 0.6813603124370539,
+          "log_optimal_normalization": -0.9587696739491709
+        },
+        {
+          "log10_kappa": -10.2,
+          "log_required_amplitude_min": -1.4618726985029435,
+          "log_required_amplitude_max": 0.18578376218563664,
+          "log_amplitude_span": 1.6476564606885802,
+          "minimum_worst_relative_error": 0.6771481255690646,
+          "log_optimal_normalization": -0.9447778918528953
+        },
+        {
+          "log10_kappa": -10.15,
+          "log_required_amplitude_min": -1.4435576962092096,
+          "log_required_amplitude_max": 0.18674048612306615,
+          "log_amplitude_span": 1.6302981823322757,
+          "minimum_worst_relative_error": 0.6724209653441757,
+          "log_optimal_normalization": -0.9292854397051308
+        },
+        {
+          "log10_kappa": -10.1,
+          "log_required_amplitude_min": -1.428919167766506,
+          "log_required_amplitude_max": 0.18780507614921182,
+          "log_amplitude_span": 1.616724243915718,
+          "minimum_worst_relative_error": 0.6686857348343398,
+          "log_optimal_normalization": -0.9168828363023448
+        },
+        {
+          "log10_kappa": -10.05,
+          "log_required_amplitude_min": -1.4126609925084743,
+          "log_required_amplitude_max": 0.18898869366742366,
+          "log_amplitude_span": 1.601649686175898,
+          "minimum_worst_relative_error": 0.6644976505180521,
+          "log_optimal_normalization": -0.903137626000678
+        },
+        {
+          "log10_kappa": -10.0,
+          "log_required_amplitude_min": -1.3946228483016263,
+          "log_required_amplitude_max": 0.19030345199723397,
+          "log_amplitude_span": 1.5849263002988603,
+          "minimum_worst_relative_error": 0.6598021423568825,
+          "log_optimal_normalization": -0.8879244443883036
+        },
+        {
+          "log10_kappa": -9.95,
+          "log_required_amplitude_min": -1.374632598857504,
+          "log_required_amplitude_max": 0.19176246327264534,
+          "log_amplitude_span": 1.5663950621301495,
+          "minimum_worst_relative_error": 0.6545381769036737,
+          "log_optimal_normalization": -0.8711106761575015
+        },
+        {
+          "log10_kappa": -9.9,
+          "log_required_amplitude_min": -1.352506290374488,
+          "log_required_amplitude_max": 0.19337988452049393,
+          "log_amplitude_span": 1.545886174894982,
+          "minimum_worst_relative_error": 0.6486375465636914,
+          "log_optimal_normalization": -0.8525570729196065
+        },
+        {
+          "log10_kappa": -9.85,
+          "log_required_amplitude_min": -1.3280483751854844,
+          "log_required_amplitude_max": 0.1951709640102064,
+          "log_amplitude_span": 1.5232193391956907,
+          "minimum_worst_relative_error": 0.6420241110998419,
+          "log_optimal_normalization": -0.8321186802802052
+        },
+        {
+          "log10_kappa": -9.8,
+          "log_required_amplitude_min": -1.301052219235939,
+          "log_required_amplitude_max": 0.1971520898203578,
+          "log_amplitude_span": 1.4982043090562969,
+          "minimum_worst_relative_error": 0.634613005032419,
+          "log_optimal_normalization": -0.8096461370729826
+        },
+        {
+          "log10_kappa": -9.75,
+          "log_required_amplitude_min": -1.2713009591507394,
+          "log_required_amplitude_max": 0.1993408436029056,
+          "log_amplitude_span": 1.470641802753645,
+          "minimum_worst_relative_error": 0.6263098345778871,
+          "log_optimal_normalization": -0.7849874160065962
+        },
+        {
+          "log10_kappa": -9.7,
+          "log_required_amplitude_min": -1.2385687827813046,
+          "log_required_amplitude_max": 0.20175606367481036,
+          "log_amplitude_span": 1.440324846456115,
+          "minimum_worst_relative_error": 0.6170099014650652,
+          "log_optimal_normalization": -0.7579900788500638
+        },
+        {
+          "log10_kappa": -9.65,
+          "log_required_amplitude_min": -1.2026227121340707,
+          "log_required_amplitude_max": 0.20441792269421777,
+          "log_amplitude_span": 1.4070406348282885,
+          "minimum_worst_relative_error": 0.6065975088361735,
+          "log_optimal_normalization": -0.7285041179589418
+        },
+        {
+          "log10_kappa": -9.6,
+          "log_required_amplitude_min": -1.1632249656252647,
+          "log_required_amplitude_max": 0.20734802606642555,
+          "log_amplitude_span": 1.3705729916916902,
+          "minimum_worst_relative_error": 0.5949454264450795,
+          "log_optimal_normalization": -0.6963854453687512
+        },
+        {
+          "log10_kappa": -9.55,
+          "log_required_amplitude_min": -1.1201359619994422,
+          "log_required_amplitude_max": 0.21056953756795016,
+          "log_amplitude_span": 1.3307054995673924,
+          "minimum_worst_relative_error": 0.5819146174850964,
+          "log_optimal_normalization": -0.6615000653588391
+        },
+        {
+          "log10_kappa": -9.5,
+          "log_required_amplitude_min": -1.0731179934338115,
+          "log_required_amplitude_max": 0.21410733810126592,
+          "log_amplitude_span": 1.2872253315350775,
+          "minimum_worst_relative_error": 0.5673543549811434,
+          "log_optimal_normalization": -0.6237289197083078
+        },
+        {
+          "log10_kappa": -9.45,
+          "log_required_amplitude_min": -1.0284479122715238,
+          "log_required_amplitude_max": 0.21798822161442688,
+          "log_amplitude_span": 1.2464361338859506,
+          "minimum_worst_relative_error": 0.5533646585238683,
+          "log_optimal_normalization": -0.5880245865737439
+        },
+        {
+          "log10_kappa": -9.4,
+          "log_required_amplitude_min": -0.9817901682624715,
+          "log_required_amplitude_max": 0.22224112875685487,
+          "log_amplitude_span": 1.2040312970193263,
+          "minimum_worst_relative_error": 0.5384823047712106,
+          "log_optimal_normalization": -0.5509937541598289
+        },
+        {
+          "log10_kappa": -9.35,
+          "log_required_amplitude_min": -0.9331023165022048,
+          "log_required_amplitude_max": 0.2268974137830111,
+          "log_amplitude_span": 1.1599997302852159,
+          "minimum_worst_relative_error": 0.5226653316686497,
+          "log_optimal_normalization": -0.5126400095670008
+        },
+        {
+          "log10_kappa": -9.3,
+          "log_required_amplitude_min": -0.8957138968977292,
+          "log_required_amplitude_max": 0.23199113402262883,
+          "log_amplitude_span": 1.127705030920358,
+          "minimum_worst_relative_error": 0.510830244098276,
+          "log_optimal_normalization": -0.48305456664365753
+        },
+        {
+          "log10_kappa": -9.25,
+          "log_required_amplitude_min": -0.8547683474255683,
+          "log_required_amplitude_max": 0.23755934503170684,
+          "log_amplitude_span": 1.0923276924572751,
+          "minimum_worst_relative_error": 0.4976395756113626,
+          "log_optimal_normalization": -0.4508780950109944
+        },
+        {
+          "log10_kappa": -9.2,
+          "log_required_amplitude_min": -0.8154842346667306,
+          "log_required_amplitude_max": 0.24364238015705775,
+          "log_amplitude_span": 1.0591266148237883,
+          "minimum_worst_relative_error": 0.4850472097726495,
+          "log_optimal_normalization": -0.4200376718247004
+        },
+        {
+          "log10_kappa": -9.15,
+          "log_required_amplitude_min": -0.7788239533300021,
+          "log_required_amplitude_max": 0.25028409301473653,
+          "log_amplitude_span": 1.0291080463447386,
+          "minimum_worst_relative_error": 0.4734858709490792,
+          "log_optimal_normalization": -0.3911930189492261
+        },
+        {
+          "log10_kappa": -9.1,
+          "log_required_amplitude_min": -0.7388560362527605,
+          "log_required_amplitude_max": 0.32437436284123744,
+          "log_amplitude_span": 1.063230399093998,
+          "minimum_worst_relative_error": 0.48661478925615137,
+          "log_optimal_normalization": -0.34235445461692704
+        },
+        {
+          "log10_kappa": -9.05,
+          "log_required_amplitude_min": -0.695376488479535,
+          "log_required_amplitude_max": 0.5323467238898292,
+          "log_amplitude_span": 1.2277232123693642,
+          "minimum_worst_relative_error": 0.5468396695421751,
+          "log_optimal_normalization": -0.2591625618573784
+        },
+        {
+          "log10_kappa": -9.0,
+          "log_required_amplitude_min": -0.6481905015703551,
+          "log_required_amplitude_max": 0.7628658186172996,
+          "log_amplitude_span": 1.4110563201876547,
+          "minimum_worst_relative_error": 0.6078649991976173,
+          "log_optimal_normalization": -0.17328329006093424
+        },
+        {
+          "log10_kappa": -8.95,
+          "log_required_amplitude_min": -0.5971179126752486,
+          "log_required_amplitude_max": 1.018356868912904,
+          "log_amplitude_span": 1.6154747815881525,
+          "minimum_worst_relative_error": 0.6683402020444865,
+          "log_optimal_normalization": -0.08528867147506758
+        },
+        {
+          "log10_kappa": -8.899999999999999,
+          "log_required_amplitude_min": -0.5419989998224346,
+          "log_required_amplitude_max": 1.3015152799157244,
+          "log_amplitude_span": 1.843514279738159,
+          "minimum_worst_relative_error": 0.7267276104068269,
+          "log_optimal_normalization": 0.004229062760381597
+        },
+        {
+          "log10_kappa": -8.85,
+          "log_required_amplitude_min": -0.4827001870462264,
+          "log_required_amplitude_max": 1.6153401781577015,
+          "log_amplitude_span": 2.0980403652039277,
+          "minimum_worst_relative_error": 0.7814251334515515,
+          "log_optimal_normalization": 0.09471349368965454
+        },
+        {
+          "log10_kappa": -8.8,
+          "log_required_amplitude_min": -0.41911897481111504,
+          "log_required_amplitude_max": 1.9631729713283688,
+          "log_amplitude_span": 2.3822919461394836,
+          "minimum_worst_relative_error": 0.8309339410651209,
+          "log_optimal_normalization": 0.18570721216659614
+        },
+        {
+          "log10_kappa": -8.75,
+          "log_required_amplitude_min": -0.3629134854862618,
+          "log_required_amplitude_max": 2.348741717851653,
+          "log_amplitude_span": 2.711655203337915,
+          "minimum_worst_relative_error": 0.8754217954917012,
+          "log_optimal_normalization": 0.2659201062325205
+        },
+        {
+          "log10_kappa": -8.7,
+          "log_required_amplitude_min": -0.32259970901835855,
+          "log_required_amplitude_max": 2.776212007665497,
+          "log_amplitude_span": 3.0988117166838554,
+          "minimum_worst_relative_error": 0.9136874058342555,
+          "log_optimal_normalization": 0.32643225083845495
+        },
+        {
+          "log10_kappa": -8.649999999999999,
+          "log_required_amplitude_min": -0.3005382607342626,
+          "log_required_amplitude_max": 3.2502448829282473,
+          "log_amplitude_span": 3.55078314366251,
+          "minimum_worst_relative_error": 0.9441973503039924,
+          "log_optimal_normalization": 0.3643109577975041
+        },
+        {
+          "log10_kappa": -8.6,
+          "log_required_amplitude_min": -0.2763627834011113,
+          "log_required_amplitude_max": 3.776062128508107,
+          "log_amplitude_span": 4.052424911909219,
+          "minimum_worst_relative_error": 0.9658334642800628,
+          "log_optimal_normalization": 0.39955352684177736
+        },
+        {
+          "log10_kappa": -8.55,
+          "log_required_amplitude_min": -0.2498775956092234,
+          "log_required_amplitude_max": 4.359519125223104,
+          "log_amplitude_span": 4.609396720832327,
+          "minimum_worst_relative_error": 0.9802807134936777,
+          "log_optimal_normalization": 0.4333610135399226
+        },
+        {
+          "log10_kappa": -8.5,
+          "log_required_amplitude_min": -0.22086995109114183,
+          "log_required_amplitude_max": 5.007185471967698,
+          "log_amplitude_span": 5.228055423058839,
+          "minimum_worst_relative_error": 0.9893293452674733,
+          "log_optimal_normalization": 0.46692761841540253
+        },
+        {
+          "log10_kappa": -8.45,
+          "log_required_amplitude_min": -0.18910885869871974,
+          "log_required_amplitude_max": 5.726433812160679,
+          "log_amplitude_span": 5.9155426708593986,
+          "minimum_worst_relative_error": 0.9946201191672842,
+          "log_optimal_normalization": 0.5013447570540901
+        },
+        {
+          "log10_kappa": -8.399999999999999,
+          "log_required_amplitude_min": -0.15434369278775995,
+          "log_required_amplitude_max": 6.525537770782571,
+          "log_amplitude_span": 6.6798814635703305,
+          "minimum_worst_relative_error": 0.9974912970736859,
+          "log_optimal_normalization": 0.5375483489517476
+        },
+        {
+          "log10_kappa": -8.35,
+          "log_required_amplitude_min": -0.11630259468430504,
+          "log_required_amplitude_max": 7.413780575594761,
+          "log_amplitude_span": 7.530083170279067,
+          "minimum_worst_relative_error": 0.9989271885353238,
+          "log_optimal_normalization": 0.5763080362262798
+        },
+        {
+          "log10_kappa": -8.3,
+          "log_required_amplitude_min": -0.07469070973193181,
+          "log_required_amplitude_max": 8.401576654743602,
+          "log_amplitude_span": 8.476267364475534,
+          "minimum_worst_relative_error": 0.9995833768730762,
+          "log_optimal_normalization": 0.6182481375646844
+        },
+        {
+          "log10_kappa": -8.25,
+          "log_required_amplitude_min": -0.029188311929634114,
+          "log_required_amplitude_max": 9.500609043478285,
+          "log_amplitude_span": 9.529797355407919,
+          "minimum_worst_relative_error": 0.9998547018655188,
+          "log_optimal_normalization": 0.6638862169240003
+        },
+        {
+          "log10_kappa": -8.2,
+          "log_required_amplitude_min": 0.02055118150875712,
+          "log_required_amplitude_max": 10.723985578367381,
+          "log_amplitude_span": 10.703434396858624,
+          "minimum_worst_relative_error": 0.9999550657246534,
+          "log_optimal_normalization": 0.713675894678639
+        },
+        {
+          "log10_kappa": -8.149999999999999,
+          "log_required_amplitude_min": 0.07490340536307416,
+          "log_required_amplitude_max": 12.0864165499017,
+          "log_amplitude_span": 12.011513144538625,
+          "minimum_worst_relative_error": 0.9999878523161726,
+          "log_optimal_normalization": 0.7680445120626587
+        },
+        {
+          "log10_kappa": -8.1,
+          "log_required_amplitude_min": 0.1342056124347708,
+          "log_required_amplitude_max": 13.604415918616674,
+          "log_amplitude_span": 13.470210306181903,
+          "minimum_worst_relative_error": 0.9999971751761182,
+          "log_optimal_normalization": 0.8273513805817778
+        },
+        {
+          "log10_kappa": -8.05,
+          "log_required_amplitude_min": 0.19872507532001538,
+          "log_required_amplitude_max": 15.296527766942308,
+          "log_amplitude_span": 15.097802691622293,
+          "minimum_worst_relative_error": 0.9999994451986907,
+          "log_optimal_normalization": 0.8918719784792675
+        },
+        {
+          "log10_kappa": -8.0,
+          "log_required_amplitude_min": 0.26916386950939386,
+          "log_required_amplitude_max": 17.183579731154133,
+          "log_amplitude_span": 16.914415861644738,
+          "minimum_worst_relative_error": 0.9999999098029149,
+          "log_optimal_normalization": 0.9623110049707932
+        },
+        {
+          "log10_kappa": -7.949999999999999,
+          "log_required_amplitude_min": 0.3460465779167732,
+          "log_required_amplitude_max": 19.288965845543693,
+          "log_amplitude_span": 18.94291926762692,
+          "minimum_worst_relative_error": 0.9999999881361763,
+          "log_optimal_normalization": 1.0391937525448043
+        },
+        {
+          "log10_kappa": -7.8999999999999995,
+          "log_required_amplitude_min": 0.42995018267288354,
+          "log_required_amplitude_max": 21.638962306408505,
+          "log_amplitude_span": 21.209012123735622,
+          "minimum_worst_relative_error": 0.9999999987695242,
+          "log_optimal_normalization": 1.1230973626175924
+        },
+        {
+          "log10_kappa": -7.85,
+          "log_required_amplitude_min": 0.5215132659637083,
+          "log_required_amplitude_max": 24.263080739144765,
+          "log_amplitude_span": 23.741567473181057,
+          "minimum_worst_relative_error": 0.9999999999022317,
+          "log_optimal_normalization": 1.2146604464747668
+        },
+        {
+          "log10_kappa": -7.8,
+          "log_required_amplitude_min": 0.6214468804312723,
+          "log_required_amplitude_max": 27.194464371554748,
+          "log_amplitude_span": 26.573017491123476,
+          "minimum_worst_relative_error": 0.9999999999942387,
+          "log_optimal_normalization": 1.3145940609883375
+        },
+        {
+          "log10_kappa": -7.75,
+          "log_required_amplitude_min": 0.7305468258424639,
+          "log_required_amplitude_max": 30.470333081676596,
+          "log_amplitude_span": 29.739786255834133,
+          "minimum_worst_relative_error": 0.9999999999997572,
+          "log_optimal_normalization": 1.4236940064022896
+        },
+        {
+          "log10_kappa": -7.699999999999999,
+          "log_required_amplitude_min": 0.8497068976246094,
+          "log_required_amplitude_max": 34.13248370065058,
+          "log_amplitude_span": 33.282776803025975,
+          "minimum_worst_relative_error": 0.999999999999993,
+          "log_optimal_normalization": 1.5428540781845541
+        },
+        {
+          "log10_kappa": -7.6499999999999995,
+          "log_required_amplitude_min": 0.9799325718913197,
+          "log_required_amplitude_max": 38.227852191138,
+          "log_amplitude_span": 37.24791961924668,
+          "minimum_worst_relative_error": 0.9999999999999999,
+          "log_optimal_normalization": 1.6730797524512653
+        },
+        {
+          "log10_kappa": -7.6,
+          "log_required_amplitude_min": 1.0902915298501308,
+          "log_required_amplitude_max": 42.80914428699323,
+          "log_amplitude_span": 41.7188527571431,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.7834387104100742
+        },
+        {
+          "log10_kappa": -7.55,
+          "log_required_amplitude_min": 1.1534586545731813,
+          "log_required_amplitude_max": 47.93554098215611,
+          "log_amplitude_span": 46.782082327582934,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.8466058351331256
+        },
+        {
+          "log10_kappa": -7.5,
+          "log_required_amplitude_min": 1.2187656690627675,
+          "log_required_amplitude_max": 53.673485399896336,
+          "log_amplitude_span": 52.45471973083357,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.9119128496227091
+        },
+        {
+          "log10_kappa": -7.449999999999999,
+          "log_required_amplitude_min": 1.2862878502637163,
+          "log_required_amplitude_max": 60.09755871086912,
+          "log_amplitude_span": 58.811270860605404,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.9794350308236588
+        },
+        {
+          "log10_kappa": -7.3999999999999995,
+          "log_required_amplitude_min": 1.356208936550303,
+          "log_required_amplitude_max": 67.29145524208413,
+          "log_amplitude_span": 65.93524630553382,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.04935611711025
+        },
+        {
+          "log10_kappa": -7.35,
+          "log_required_amplitude_min": 1.4288450321419328,
+          "log_required_amplitude_max": 75.3490705691464,
+          "log_amplitude_span": 73.92022553700447,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.1219922127018833
+        },
+        {
+          "log10_kappa": -7.3,
+          "log_required_amplitude_min": 1.5046611297783195,
+          "log_required_amplitude_max": 84.37572079847929,
+          "log_amplitude_span": 82.87105966870098,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.19780831033826
+        },
+        {
+          "log10_kappa": -7.25,
+          "log_required_amplitude_min": 1.5842772888959085,
+          "log_required_amplitude_max": 94.48951608950127,
+          "log_amplitude_span": 92.90523880060536,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.277424469455852
+        },
+        {
+          "log10_kappa": -7.199999999999999,
+          "log_required_amplitude_min": 1.6684631622634278,
+          "log_required_amplitude_max": 105.82291642071479,
+          "log_amplitude_span": 104.15445325845137,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.3616103428233686
+        },
+        {
+          "log10_kappa": -7.1499999999999995,
+          "log_required_amplitude_min": 1.758121829475651,
+          "log_required_amplitude_max": 118.52450183320448,
+          "log_amplitude_span": 116.76638000372883,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.4512690100356025
+        },
+        {
+          "log10_kappa": -7.1,
+          "log_required_amplitude_min": 1.8542662196966788,
+          "log_required_amplitude_max": 132.76099101590842,
+          "log_amplitude_span": 130.90672479621173,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.54741340025663
+        },
+        {
+          "log10_kappa": -7.05,
+          "log_required_amplitude_min": 1.9579931363060405,
+          "log_required_amplitude_max": 148.71953864302847,
+          "log_amplitude_span": 146.76154550672243,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.651140316865991
+        },
+        {
+          "log10_kappa": -7.0,
+          "log_required_amplitude_min": 2.070460506109397,
+          "log_required_amplitude_max": 166.61033233640197,
+          "log_amplitude_span": 164.53987183029258,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.7636076866693315
+        }
+      ],
+      "optimizer_trials": [
+        {
+          "success": true,
+          "logk": -9.117930678680489,
+          "objective": 1.0084424729275068
+        }
+      ]
+    },
+    {
+      "subset": "full",
+      "mu_nodes": 32,
+      "column_file": "research_work\\generated\\shielding-opacity-profile\\columns-32.npz",
+      "column_sha256": "ec30a845bbdceef776773868340cc64a7e04969c8912069c15fd6f1f18a82ae5",
+      "best": {
+        "log10_kappa": -8.441257819944315,
+        "log_required_amplitude_min": -0.17736289237297553,
+        "log_required_amplitude_max": 5.860191653730526,
+        "log_amplitude_span": 6.037554546103502,
+        "minimum_worst_relative_error": 0.9952365920464661,
+        "log_optimal_normalization": 0.51339974344181
+      },
+      "scan": [
+        {
+          "log10_kappa": -13.0,
+          "log_required_amplitude_min": -1.61848488380573,
+          "log_required_amplitude_max": 5.669960333352167,
+          "log_amplitude_span": 7.288445217157896,
+          "minimum_worst_relative_error": 0.9986341539055291,
+          "log_optimal_normalization": -0.926020859591187
+        },
+        {
+          "log10_kappa": -12.95,
+          "log_required_amplitude_min": -1.6184523974921086,
+          "log_required_amplitude_max": 5.669960500320442,
+          "log_amplitude_span": 7.288412897812551,
+          "minimum_worst_relative_error": 0.9986341097917121,
+          "log_optimal_normalization": -0.925988395349548
+        },
+        {
+          "log10_kappa": -12.9,
+          "log_required_amplitude_min": -1.6184159483841927,
+          "log_required_amplitude_max": 5.669960687660443,
+          "log_amplitude_span": 7.288376636044635,
+          "minimum_worst_relative_error": 0.9986340602950482,
+          "log_optimal_normalization": -0.925951971006878
+        },
+        {
+          "log10_kappa": -12.85,
+          "log_required_amplitude_min": -1.6183750532415924,
+          "log_required_amplitude_max": 5.669960897857511,
+          "log_amplitude_span": 7.2883359510991035,
+          "minimum_worst_relative_error": 0.9986340047586922,
+          "log_optimal_normalization": -0.9259111036514334
+        },
+        {
+          "log10_kappa": -12.8,
+          "log_required_amplitude_min": -1.618329169935556,
+          "log_required_amplitude_max": 5.669961133700145,
+          "log_amplitude_span": 7.288290303635701,
+          "minimum_worst_relative_error": 0.9986339424456421,
+          "log_optimal_normalization": -0.9258652515232173
+        },
+        {
+          "log10_kappa": -12.75,
+          "log_required_amplitude_min": -1.618277690283088,
+          "log_required_amplitude_max": 5.6699613983169685,
+          "log_amplitude_span": 7.288239088600056,
+          "minimum_worst_relative_error": 0.9986338725289543,
+          "log_optimal_normalization": -0.9258138068529878
+        },
+        {
+          "log10_kappa": -12.7,
+          "log_required_amplitude_min": -1.618219932011749,
+          "log_required_amplitude_max": 5.669961695218197,
+          "log_amplitude_span": 7.288181627229946,
+          "minimum_worst_relative_error": 0.9986337940807675,
+          "log_optimal_normalization": -0.9257560878325535
+        },
+        {
+          "log10_kappa": -12.65,
+          "log_required_amplitude_min": -1.6181551297503503,
+          "log_required_amplitude_max": 5.669962028342156,
+          "log_amplitude_span": 7.288117158092506,
+          "minimum_worst_relative_error": 0.9986337060599834,
+          "log_optimal_normalization": -0.9256913296116318
+        },
+        {
+          "log10_kappa": -12.6,
+          "log_required_amplitude_min": -1.6180824249283208,
+          "log_required_amplitude_max": 5.669962402107473,
+          "log_amplitude_span": 7.288044827035794,
+          "minimum_worst_relative_error": 0.9986336072984443,
+          "log_optimal_normalization": -0.9256186742041308
+        },
+        {
+          "log10_kappa": -12.55,
+          "log_required_amplitude_min": -1.6180008544526223,
+          "log_required_amplitude_max": 5.669962821471611,
+          "log_amplitude_span": 7.287963675924233,
+          "minimum_worst_relative_error": 0.9986334964854234,
+          "log_optimal_normalization": -0.9255371591728236
+        },
+        {
+          "log10_kappa": -12.5,
+          "log_required_amplitude_min": -1.617909338015615,
+          "log_required_amplitude_max": 5.669963291996541,
+          "log_amplitude_span": 7.287872630012156,
+          "minimum_worst_relative_error": 0.9986333721502187,
+          "log_optimal_normalization": -0.9254457049459255
+        },
+        {
+          "log10_kappa": -12.45,
+          "log_required_amplitude_min": -1.6178066638700455,
+          "log_required_amplitude_max": 5.669963819922397,
+          "log_amplitude_span": 7.287770483792443,
+          "minimum_worst_relative_error": 0.9986332326426227,
+          "log_optimal_normalization": -0.9253431006018529
+        },
+        {
+          "log10_kappa": -12.4,
+          "log_required_amplitude_min": -1.617691472888143,
+          "log_required_amplitude_max": 5.669964412250097,
+          "log_amplitude_span": 7.287655885138241,
+          "minimum_worst_relative_error": 0.9986330761110044,
+          "log_optimal_normalization": -0.9252279879392846
+        },
+        {
+          "log10_kappa": -12.35,
+          "log_required_amplitude_min": -1.617562240700511,
+          "log_required_amplitude_max": 5.6699650768340115,
+          "log_amplitude_span": 7.287527317534522,
+          "minimum_worst_relative_error": 0.9986329004777139,
+          "log_optimal_normalization": -0.925098843628362
+        },
+        {
+          "log10_kappa": -12.3,
+          "log_required_amplitude_min": -1.617417257686831,
+          "log_required_amplitude_max": 5.669965822485891,
+          "log_amplitude_span": 7.287383080172722,
+          "minimum_worst_relative_error": 0.9986327034114801,
+          "log_optimal_normalization": -0.9249539592152027
+        },
+        {
+          "log10_kappa": -12.25,
+          "log_required_amplitude_min": -1.617254606564193,
+          "log_required_amplitude_max": 5.669966659091432,
+          "log_amplitude_span": 7.287221265655624,
+          "minimum_worst_relative_error": 0.9986324822964342,
+          "log_optimal_normalization": -0.9247914187257278
+        },
+        {
+          "log10_kappa": -12.2,
+          "log_required_amplitude_min": -1.6170721372898131,
+          "log_required_amplitude_max": 5.66996759774099,
+          "log_amplitude_span": 7.2870397350308025,
+          "minimum_worst_relative_error": 0.9986322341973443,
+          "log_optimal_normalization": -0.9246090735857786
+        },
+        {
+          "log10_kappa": -12.15,
+          "log_required_amplitude_min": -1.6168674389628186,
+          "log_required_amplitude_max": 5.669968650876164,
+          "log_amplitude_span": 7.2868360898389835,
+          "minimum_worst_relative_error": 0.9986319558205977,
+          "log_optimal_normalization": -0.9244045145424202
+        },
+        {
+          "log10_kappa": -12.1,
+          "log_required_amplitude_min": -1.6166378083743917,
+          "log_required_amplitude_max": 5.669969832454164,
+          "log_amplitude_span": 7.2866076408285565,
+          "minimum_worst_relative_error": 0.9986316434704071,
+          "log_optimal_normalization": -0.924175040236002
+        },
+        {
+          "log10_kappa": -12.05,
+          "log_required_amplitude_min": -1.616380214816576,
+          "log_required_amplitude_max": 5.669971158132086,
+          "log_amplitude_span": 7.286351372948662,
+          "minimum_worst_relative_error": 0.9986312929996545,
+          "log_optimal_normalization": -0.9239176220335521
+        },
+        {
+          "log10_kappa": -12.0,
+          "log_required_amplitude_min": -1.6160912607172402,
+          "log_required_amplitude_max": 5.669972645473531,
+          "log_amplitude_span": 7.286063906190771,
+          "minimum_worst_relative_error": 0.9986308997547124,
+          "log_optimal_normalization": -0.9236288646913575
+        },
+        {
+          "log10_kappa": -11.95,
+          "log_required_amplitude_min": -1.6157671376217908,
+          "log_required_amplitude_max": 5.669974314180197,
+          "log_amplitude_span": 7.285741451801988,
+          "minimum_worst_relative_error": 0.9986304585135007,
+          "log_optimal_normalization": -0.9233049623676681
+        },
+        {
+          "log10_kappa": -11.9,
+          "log_required_amplitude_min": -1.6154035769909547,
+          "log_required_amplitude_max": 5.669976186351491,
+          "log_amplitude_span": 7.285379763342446,
+          "minimum_worst_relative_error": 0.9986299634159421,
+          "log_optimal_normalization": -0.9229416494552725
+        },
+        {
+          "log10_kappa": -11.85,
+          "log_required_amplitude_min": -1.614995795228125,
+          "log_required_amplitude_max": 5.669978286775462,
+          "log_amplitude_span": 7.284974082003586,
+          "minimum_worst_relative_error": 0.9986294078858763,
+          "log_optimal_normalization": -0.9225341456479184
+        },
+        {
+          "log10_kappa": -11.8,
+          "log_required_amplitude_min": -1.6145384322891467,
+          "log_required_amplitude_max": 5.669980643254834,
+          "log_amplitude_span": 7.284519075543981,
+          "minimum_worst_relative_error": 0.9986287845433736,
+          "log_optimal_normalization": -0.9220770945939742
+        },
+        {
+          "log10_kappa": -11.75,
+          "log_required_amplitude_min": -1.6140254831618663,
+          "log_required_amplitude_max": 5.669983286972287,
+          "log_amplitude_span": 7.284008770134154,
+          "minimum_worst_relative_error": 0.9986280851062509,
+          "log_optimal_normalization": -0.9215644954252502
+        },
+        {
+          "log10_kappa": -11.7,
+          "log_required_amplitude_min": -1.6134502214321755,
+          "log_required_amplitude_max": 5.669986252899642,
+          "log_amplitude_span": 7.283436474331818,
+          "minimum_worst_relative_error": 0.9986273002794424,
+          "log_optimal_normalization": -0.9209896263784048
+        },
+        {
+          "log10_kappa": -11.65,
+          "log_required_amplitude_min": -1.6128051140775637,
+          "log_required_amplitude_max": 5.6699895802561535,
+          "log_amplitude_span": 7.282794694333717,
+          "minimum_worst_relative_error": 0.9986264196306995,
+          "log_optimal_normalization": -0.9203449596506852
+        },
+        {
+          "log10_kappa": -11.6,
+          "log_required_amplitude_min": -1.612081726548412,
+          "log_required_amplitude_max": 5.669993313021663,
+          "log_amplitude_span": 7.282075039570074,
+          "minimum_worst_relative_error": 0.9986254314508951,
+          "log_optimal_normalization": -0.9196220665511277
+        },
+        {
+          "log10_kappa": -11.55,
+          "log_required_amplitude_min": -1.6112706171114843,
+          "log_required_amplitude_max": 5.6699975005110606,
+          "log_amplitude_span": 7.281268117622545,
+          "minimum_worst_relative_error": 0.9986243225969751,
+          "log_optimal_normalization": -0.918811511922625
+        },
+        {
+          "log10_kappa": -11.5,
+          "log_required_amplitude_min": -1.6103612193394183,
+          "log_required_amplitude_max": 5.670002198017187,
+          "log_amplitude_span": 7.280363417356606,
+          "minimum_worst_relative_error": 0.9986230783153383,
+          "log_optimal_normalization": -0.9179027367197978
+        },
+        {
+          "log10_kappa": -11.45,
+          "log_required_amplitude_min": -1.6093417115347646,
+          "log_required_amplitude_max": 5.670007467530092,
+          "log_amplitude_span": 7.279349179064857,
+          "minimum_worst_relative_error": 0.9986216820431131,
+          "log_optimal_normalization": -0.9168839275324716
+        },
+        {
+          "log10_kappa": -11.4,
+          "log_required_amplitude_min": -1.6081988717773776,
+          "log_required_amplitude_max": 5.67001337854146,
+          "log_amplitude_span": 7.278212250318838,
+          "minimum_worst_relative_error": 0.998620115184446,
+          "log_optimal_normalization": -0.9157418717450048
+        },
+        {
+          "log10_kappa": -11.35,
+          "log_required_amplitude_min": -1.6069179171799841,
+          "log_required_amplitude_max": 5.670020008943901,
+          "log_amplitude_span": 7.276937926123885,
+          "minimum_worst_relative_error": 0.9986183568584934,
+          "log_optimal_normalization": -0.9144617969179656
+        },
+        {
+          "log10_kappa": -11.3,
+          "log_required_amplitude_min": -1.6054823258284077,
+          "log_required_amplitude_max": 5.670027446035847,
+          "log_amplitude_span": 7.275509771864254,
+          "minimum_worst_relative_error": 0.9986163836153188,
+          "log_optimal_normalization": -0.9130271928705138
+        },
+        {
+          "log10_kappa": -11.25,
+          "log_required_amplitude_min": -1.6038736397700402,
+          "log_required_amplitude_max": 5.670035787643909,
+          "log_amplitude_span": 7.273909427413949,
+          "minimum_worst_relative_error": 0.9986141691153043,
+          "log_optimal_normalization": -0.9114196148293026
+        },
+        {
+          "log10_kappa": -11.2,
+          "log_required_amplitude_min": -1.602071247295712,
+          "log_required_amplitude_max": 5.670045143375671,
+          "log_amplitude_span": 7.272116390671384,
+          "minimum_worst_relative_error": 0.9986116837669904,
+          "log_optimal_normalization": -0.9096184658915698
+        },
+        {
+          "log10_kappa": -11.15,
+          "log_required_amplitude_min": -1.600052142634667,
+          "log_required_amplitude_max": 5.6700556360172225,
+          "log_amplitude_span": 7.270107778651889,
+          "minimum_worst_relative_error": 0.9986088943174055,
+          "log_optimal_normalization": -0.907600756925123
+        },
+        {
+          "log10_kappa": -11.1,
+          "log_required_amplitude_min": -1.5977906610469916,
+          "log_required_amplitude_max": 5.670067403090993,
+          "log_amplitude_span": 7.267858064137984,
+          "minimum_worst_relative_error": 0.9986057633879277,
+          "log_optimal_normalization": -0.9053408418930351
+        },
+        {
+          "log10_kappa": -11.05,
+          "log_required_amplitude_min": -1.5952581871484015,
+          "log_required_amplitude_max": 5.670080598590874,
+          "log_amplitude_span": 7.265338785739276,
+          "minimum_worst_relative_error": 0.9986022489474595,
+          "log_optimal_normalization": -0.9028101264420707
+        },
+        {
+          "log10_kappa": -11.0,
+          "log_required_amplitude_min": -1.5924228341325688,
+          "log_required_amplitude_max": 5.670095394913029,
+          "log_amplitude_span": 7.2625182290455985,
+          "minimum_worst_relative_error": 0.9985983037131582,
+          "log_optimal_normalization": -0.8999767474249145
+        },
+        {
+          "log10_kappa": -10.95,
+          "log_required_amplitude_min": -1.5892490913577633,
+          "log_required_amplitude_max": 5.6701119850022215,
+          "log_amplitude_span": 7.259361076359985,
+          "minimum_worst_relative_error": 0.9985938744670501,
+          "log_optimal_normalization": -0.8968052208288215
+        },
+        {
+          "log10_kappa": -10.9,
+          "log_required_amplitude_min": -1.5856974375268122,
+          "log_required_amplitude_max": 5.670130584734919,
+          "log_amplitude_span": 7.255828022261731,
+          "minimum_worst_relative_error": 0.9985889012744782,
+          "log_optimal_normalization": -0.8932560553467157
+        },
+        {
+          "log10_kappa": -10.85,
+          "log_required_amplitude_min": -1.5817239163994556,
+          "log_required_amplitude_max": 5.670151435561791,
+          "log_amplitude_span": 7.251875351961246,
+          "minimum_worst_relative_error": 0.9985833165873648,
+          "log_optimal_normalization": -0.8892853285383477
+        },
+        {
+          "log10_kappa": -10.8,
+          "log_required_amplitude_min": -1.5772796716204547,
+          "log_required_amplitude_max": 5.6701748074334235,
+          "log_amplitude_span": 7.247454479053879,
+          "minimum_worst_relative_error": 0.998577044211545,
+          "log_optimal_normalization": -0.8848442221752482
+        },
+        {
+          "log10_kappa": -10.75,
+          "log_required_amplitude_min": -1.5723104368125722,
+          "log_required_amplitude_max": 5.670201002034096,
+          "log_amplitude_span": 7.242511438846668,
+          "minimum_worst_relative_error": 0.9985699981127635,
+          "log_optimal_normalization": -0.8798785129313282
+        },
+        {
+          "log10_kappa": -10.7,
+          "log_required_amplitude_min": -1.5667559765632713,
+          "log_required_amplitude_max": 5.670230356349153,
+          "log_amplitude_span": 7.236986332912425,
+          "minimum_worst_relative_error": 0.9985620810300659,
+          "log_optimal_normalization": -0.8743280140636083
+        },
+        {
+          "log10_kappa": -10.65,
+          "log_required_amplitude_min": -1.5605494733303975,
+          "log_required_amplitude_max": 5.670263246591738,
+          "log_amplitude_span": 7.230812719922136,
+          "minimum_worst_relative_error": 0.9985531828579706,
+          "log_optimal_normalization": -0.8681259631277074
+        },
+        {
+          "log10_kappa": -10.6,
+          "log_required_amplitude_min": -1.5536168546269677,
+          "log_required_amplitude_max": 5.670300092514287,
+          "log_amplitude_span": 7.223916947141255,
+          "minimum_worst_relative_error": 0.9985431787496134,
+          "log_optimal_normalization": -0.861198350112133
+        },
+        {
+          "log10_kappa": -10.55,
+          "log_required_amplitude_min": -1.5458760541685614,
+          "log_required_amplitude_max": 5.6703413621289585,
+          "log_amplitude_span": 7.2162174162975194,
+          "minimum_worst_relative_error": 0.9985319268815672,
+          "log_optimal_normalization": -0.8534631797045762
+        },
+        {
+          "log10_kappa": -10.5,
+          "log_required_amplitude_min": -1.537236200068849,
+          "log_required_amplitude_max": 5.6703875768589365,
+          "log_amplitude_span": 7.207623776927786,
+          "minimum_worst_relative_error": 0.998519265806721,
+          "log_optimal_normalization": -0.8448296608126133
+        },
+        {
+          "log10_kappa": -10.45,
+          "log_required_amplitude_min": -1.527596722788354,
+          "log_required_amplitude_max": 5.670439317138851,
+          "log_amplitude_span": 7.198036039927205,
+          "minimum_worst_relative_error": 0.9985050113037854,
+          "log_optimal_normalization": -0.8351973160897153
+        },
+        {
+          "log10_kappa": -10.4,
+          "log_required_amplitude_min": -1.516846375569696,
+          "log_required_amplitude_max": 5.6704972284772355,
+          "log_amplitude_span": 7.187343604046932,
+          "minimum_worst_relative_error": 0.998488952609828,
+          "log_optimal_normalization": -0.8244550042567003
+        },
+        {
+          "log10_kappa": -10.35,
+          "log_required_amplitude_min": -1.5048621607626589,
+          "log_required_amplitude_max": 5.670562027986412,
+          "log_amplitude_span": 7.175424188749071,
+          "minimum_worst_relative_error": 0.9984708478946154,
+          "log_optimal_normalization": -0.812479848692746
+        },
+        {
+          "log10_kappa": -10.3,
+          "log_required_amplitude_min": -1.491508156998465,
+          "log_required_amplitude_max": 5.670634511375139,
+          "log_amplitude_span": 7.162142668373605,
+          "minimum_worst_relative_error": 0.9984504188009458,
+          "log_optimal_normalization": -0.7991360673434098
+        },
+        {
+          "log10_kappa": -10.25,
+          "log_required_amplitude_min": -1.4766342448095133,
+          "log_required_amplitude_max": 5.670715560386164,
+          "log_amplitude_span": 7.147349805195677,
+          "minimum_worst_relative_error": 0.9984273438314354,
+          "log_optimal_normalization": -0.7842737016519399
+        },
+        {
+          "log10_kappa": -10.2,
+          "log_required_amplitude_min": -1.4600747320614391,
+          "log_required_amplitude_max": 5.670806150644046,
+          "log_amplitude_span": 7.130880882705485,
+          "minimum_worst_relative_error": 0.998401250306307,
+          "log_optimal_normalization": -0.767727246018783
+        },
+        {
+          "log10_kappa": -10.15,
+          "log_required_amplitude_min": -1.4433322132443474,
+          "log_required_amplitude_max": 5.670907359857715,
+          "log_amplitude_span": 7.114239573102062,
+          "minimum_worst_relative_error": 0.9983744442162663,
+          "log_optimal_normalization": -0.7509981410593047
+        },
+        {
+          "log10_kappa": -10.1,
+          "log_required_amplitude_min": -1.4287804997309266,
+          "log_required_amplitude_max": 5.671020376296704,
+          "log_amplitude_span": 7.099800876027631,
+          "minimum_worst_relative_error": 0.998350822539836,
+          "log_optimal_normalization": -0.736458248061358
+        },
+        {
+          "log10_kappa": -10.05,
+          "log_required_amplitude_min": -1.4126267826266607,
+          "log_required_amplitude_max": 5.671146507429622,
+          "log_amplitude_span": 7.083773290056283,
+          "minimum_worst_relative_error": 0.998324199572938,
+          "log_optimal_normalization": -0.7203178535148433
+        },
+        {
+          "log10_kappa": -10.0,
+          "log_required_amplitude_min": -1.3947107979491493,
+          "log_required_amplitude_max": 5.671287188578005,
+          "log_amplitude_span": 7.0659979865271545,
+          "minimum_worst_relative_error": 0.9982941710255702,
+          "log_optimal_normalization": -0.7024168958149337
+        },
+        {
+          "log10_kappa": -9.95,
+          "log_required_amplitude_min": -1.3748598205499496,
+          "log_required_amplitude_max": 5.67144399139867,
+          "log_amplitude_span": 7.046303811948619,
+          "minimum_worst_relative_error": 0.9982602726503105,
+          "log_optimal_normalization": -0.6825828822157964
+        },
+        {
+          "log10_kappa": -9.9,
+          "log_required_amplitude_min": -1.3528886042393804,
+          "log_required_amplitude_max": 5.671618631963891,
+          "log_amplitude_span": 7.024507236203271,
+          "minimum_worst_relative_error": 0.9982219703498,
+          "log_optimal_normalization": -0.660630833912581
+        },
+        {
+          "log10_kappa": -9.85,
+          "log_required_amplitude_min": -1.3285995913326198,
+          "log_required_amplitude_max": 5.671812978162976,
+          "log_amplitude_span": 7.000412569495595,
+          "minimum_worst_relative_error": 0.9981786485155565,
+          "log_optimal_normalization": -0.6363635014319726
+        },
+        {
+          "log10_kappa": -9.8,
+          "log_required_amplitude_min": -1.3017834533443269,
+          "log_required_amplitude_max": 5.672029056104011,
+          "log_amplitude_span": 6.973812509448338,
+          "minimum_worst_relative_error": 0.9981295962612264,
+          "log_optimal_normalization": -0.6095719122278709
+        },
+        {
+          "log10_kappa": -9.75,
+          "log_required_amplitude_min": -1.2722200271864574,
+          "log_required_amplitude_max": 5.672269055155094,
+          "log_amplitude_span": 6.944489082341551,
+          "minimum_worst_relative_error": 0.9980739911492151,
+          "log_optimal_normalization": -0.580036315038571
+        },
+        {
+          "log10_kappa": -9.7,
+          "log_required_amplitude_min": -1.2396797121324346,
+          "log_required_amplitude_max": 5.672535331236457,
+          "log_amplitude_span": 6.912215043368891,
+          "minimum_worst_relative_error": 0.9980108799376172,
+          "log_optimal_normalization": -0.5475275865066758
+        },
+        {
+          "log10_kappa": -9.65,
+          "log_required_amplitude_min": -1.2039253906772096,
+          "log_required_amplitude_max": 5.672830407967009,
+          "log_amplitude_span": 6.8767557986442185,
+          "minimum_worst_relative_error": 0.997939155794094,
+          "log_optimal_normalization": -0.511809163470045
+        },
+        {
+          "log10_kappa": -9.6,
+          "log_required_amplitude_min": -1.1647149285320637,
+          "log_required_amplitude_max": 5.673156975291308,
+          "log_amplitude_span": 6.8378719038233715,
+          "minimum_worst_relative_error": 0.9978575313323047,
+          "log_optimal_normalization": -0.4726395564875565
+        },
+        {
+          "log10_kappa": -9.55,
+          "log_required_amplitude_min": -1.1218042910841879,
+          "log_required_amplitude_max": 5.673517885278814,
+          "log_amplitude_span": 6.795322176363002,
+          "minimum_worst_relative_error": 0.9977645067183343,
+          "log_optimal_normalization": -0.42977548230973106
+        },
+        {
+          "log10_kappa": -9.5,
+          "log_required_amplitude_min": -1.0749512801811996,
+          "log_required_amplitude_max": 5.673916144910329,
+          "log_amplitude_span": 6.748867425091529,
+          "minimum_worst_relative_error": 0.9976583319566307,
+          "log_optimal_normalization": -0.3829756196045757
+        },
+        {
+          "log10_kappa": -9.45,
+          "log_required_amplitude_min": -1.0303855516399512,
+          "log_required_amplitude_max": 5.674354905860973,
+          "log_amplitude_span": 6.704740457500924,
+          "minimum_worst_relative_error": 0.9975528167696937,
+          "log_optimal_normalization": -0.3384627118945849
+        },
+        {
+          "log10_kappa": -9.4,
+          "log_required_amplitude_min": -0.9837909275997212,
+          "log_required_amplitude_max": 5.674837451566451,
+          "log_amplitude_span": 6.6586283791661725,
+          "minimum_worst_relative_error": 0.9974374778258035,
+          "log_optimal_normalization": -0.2919258296436542
+        },
+        {
+          "log10_kappa": -9.35,
+          "log_required_amplitude_min": -0.9348621847899556,
+          "log_required_amplitude_max": 5.675367182225065,
+          "log_amplitude_span": 6.6102293670150205,
+          "minimum_worst_relative_error": 0.9973105748416132,
+          "log_optimal_normalization": -0.24306062174650833
+        },
+        {
+          "log10_kappa": -9.3,
+          "log_required_amplitude_min": -0.8975288198516456,
+          "log_required_amplitude_max": 5.675947598836048,
+          "log_amplitude_span": 6.573476418687694,
+          "minimum_worst_relative_error": 0.9972100321205676,
+          "log_optimal_normalization": -0.20577759712733013
+        },
+        {
+          "log10_kappa": -9.25,
+          "log_required_amplitude_min": -0.8566271781126398,
+          "log_required_amplitude_max": 5.676582287882128,
+          "log_amplitude_span": 6.5332094659947675,
+          "minimum_worst_relative_error": 0.9970955625596855,
+          "log_optimal_normalization": -0.1649332717644505
+        },
+        {
+          "log10_kappa": -9.2,
+          "log_required_amplitude_min": -0.81708838537083,
+          "log_required_amplitude_max": 5.677274908784049,
+          "log_amplitude_span": 6.494363294154878,
+          "minimum_worst_relative_error": 0.996980689875644,
+          "log_optimal_normalization": -0.12545200055043004
+        },
+        {
+          "log10_kappa": -9.15,
+          "log_required_amplitude_min": -0.7804641011156819,
+          "log_required_amplitude_max": 5.678029186712732,
+          "log_amplitude_span": 6.458493287828414,
+          "minimum_worst_relative_error": 0.9968705938965692,
+          "log_optimal_normalization": -0.08888284903372501
+        },
+        {
+          "log10_kappa": -9.1,
+          "log_required_amplitude_min": -0.7405192056232202,
+          "log_required_amplitude_max": 5.678848913638837,
+          "log_amplitude_span": 6.419368119262057,
+          "minimum_worst_relative_error": 0.9967459317554092,
+          "log_optimal_normalization": -0.04900038424305908
+        },
+        {
+          "log10_kappa": -9.05,
+          "log_required_amplitude_min": -0.6970465733252147,
+          "log_required_amplitude_max": 5.687435888327692,
+          "log_amplitude_span": 6.384482461652906,
+          "minimum_worst_relative_error": 0.9966306027238874,
+          "log_optimal_normalization": -0.005585512103936097
+        },
+        {
+          "log10_kappa": -9.0,
+          "log_required_amplitude_min": -0.6498476019980992,
+          "log_required_amplitude_max": 5.6976848839591225,
+          "log_amplitude_span": 6.347532485957222,
+          "minimum_worst_relative_error": 0.9965039965580712,
+          "log_optimal_normalization": 0.041550047303189785
+        },
+        {
+          "log10_kappa": -8.95,
+          "log_required_amplitude_min": -0.598737814448612,
+          "log_required_amplitude_max": 5.708656739836266,
+          "log_amplitude_span": 6.307394554284878,
+          "minimum_worst_relative_error": 0.9963610805313959,
+          "log_optimal_normalization": 0.09258824914969122
+        },
+        {
+          "log10_kappa": -8.899999999999999,
+          "log_required_amplitude_min": -0.5435529407843265,
+          "log_required_amplitude_max": 5.720366076509693,
+          "log_amplitude_span": 6.26391901729402,
+          "minimum_worst_relative_error": 0.9961996944101799,
+          "log_optimal_normalization": 0.14769227940023733
+        },
+        {
+          "log10_kappa": -8.85,
+          "log_required_amplitude_min": -0.4841550549286153,
+          "log_required_amplitude_max": 5.732821242490517,
+          "log_amplitude_span": 6.216976297419132,
+          "minimum_worst_relative_error": 0.9960174079314182,
+          "log_optimal_normalization": 0.20699884433115123
+        },
+        {
+          "log10_kappa": -8.8,
+          "log_required_amplitude_min": -0.4204380653117785,
+          "log_required_amplitude_max": 5.746022905506766,
+          "log_amplitude_span": 6.1664609708185445,
+          "minimum_worst_relative_error": 0.9958114901019582,
+          "log_optimal_normalization": 0.27061266428069874
+        },
+        {
+          "log10_kappa": -8.75,
+          "log_required_amplitude_min": -0.35794797088632724,
+          "log_required_amplitude_max": 5.759962536555839,
+          "log_amplitude_span": 6.117910507442166,
+          "minimum_worst_relative_error": 0.995603576713832,
+          "log_optimal_normalization": 0.33299857841678815
+        },
+        {
+          "log10_kappa": -8.7,
+          "log_required_amplitude_min": -0.3170891306659436,
+          "log_required_amplitude_max": 5.774620853501569,
+          "log_amplitude_span": 6.091709984167512,
+          "minimum_worst_relative_error": 0.9954871292073847,
+          "log_optimal_normalization": 0.37379906491130477
+        },
+        {
+          "log10_kappa": -8.649999999999999,
+          "log_required_amplitude_min": -0.2949093568370551,
+          "log_required_amplitude_max": 5.78996631927803,
+          "log_amplitude_span": 6.084875676115086,
+          "minimum_worst_relative_error": 0.995456251534547,
+          "log_optimal_normalization": 0.3959633648685328
+        },
+        {
+          "log10_kappa": -8.6,
+          "log_required_amplitude_min": -0.2706298720322766,
+          "log_required_amplitude_max": 5.805953820741236,
+          "log_amplitude_span": 6.076583692773513,
+          "minimum_worst_relative_error": 0.9954185048746824,
+          "log_optimal_normalization": 0.4202239331889972
+        },
+        {
+          "log10_kappa": -8.55,
+          "log_required_amplitude_min": -0.2440614379678281,
+          "log_required_amplitude_max": 5.82252368768542,
+          "log_amplitude_span": 6.066585125653248,
+          "minimum_worst_relative_error": 0.9953725732329899,
+          "log_optimal_normalization": 0.44676934843797955
+        },
+        {
+          "log10_kappa": -8.5,
+          "log_required_amplitude_min": -0.21499826398342625,
+          "log_required_amplitude_max": 5.839601244935271,
+          "log_amplitude_span": 6.054599508918697,
+          "minimum_worst_relative_error": 0.9953169076104251,
+          "log_optimal_normalization": 0.4758046246754706
+        },
+        {
+          "log10_kappa": -8.45,
+          "log_required_amplitude_min": -0.18321668008751724,
+          "log_required_amplitude_max": 5.857097116610115,
+          "log_amplitude_span": 6.040313796697632,
+          "minimum_worst_relative_error": 0.9952496861916471,
+          "log_optimal_normalization": 0.5075525184087404
+        },
+        {
+          "log10_kappa": -8.399999999999999,
+          "log_required_amplitude_min": -0.1484736714665451,
+          "log_required_amplitude_max": 6.525529825469989,
+          "log_amplitude_span": 6.674003496936534,
+          "minimum_worst_relative_error": 0.9974765262385441,
+          "log_optimal_normalization": 0.5434109755525061
+        },
+        {
+          "log10_kappa": -8.35,
+          "log_required_amplitude_min": -0.11050521623350518,
+          "log_required_amplitude_max": 7.413750291696947,
+          "log_amplitude_span": 7.524255507930452,
+          "minimum_worst_relative_error": 0.9989209216827192,
+          "log_optimal_normalization": 0.5821022795641726
+        },
+        {
+          "log10_kappa": -8.3,
+          "log_required_amplitude_min": -0.06902434760620446,
+          "log_required_amplitude_max": 8.401555752515545,
+          "log_amplitude_span": 8.47058010012175,
+          "minimum_worst_relative_error": 0.9995810011744053,
+          "log_optimal_normalization": 0.6239133115928759
+        },
+        {
+          "log10_kappa": -8.25,
+          "log_required_amplitude_min": -0.03183750529988755,
+          "log_required_amplitude_max": 9.500610882087287,
+          "log_amplitude_span": 9.532448387387173,
+          "minimum_worst_relative_error": 0.9998550865175226,
+          "log_optimal_normalization": 0.661237215893701
+        },
+        {
+          "log10_kappa": -8.2,
+          "log_required_amplitude_min": -0.011815967406606676,
+          "log_required_amplitude_max": 10.724010031488701,
+          "log_amplitude_span": 10.735825998895308,
+          "minimum_worst_relative_error": 0.9999564978662626,
+          "log_optimal_normalization": 0.6813094618499118
+        },
+        {
+          "log10_kappa": -8.149999999999999,
+          "log_required_amplitude_min": 0.010049359314575013,
+          "log_required_amplitude_max": 12.086456351771549,
+          "log_amplitude_span": 12.076406992456974,
+          "minimum_worst_relative_error": 0.9999886155879708,
+          "log_optimal_normalization": 0.703190847652305
+        },
+        {
+          "log10_kappa": -8.1,
+          "log_required_amplitude_min": 0.03391776983428946,
+          "log_required_amplitude_max": 13.604462297485536,
+          "log_amplitude_span": 13.570544527651247,
+          "minimum_worst_relative_error": 0.9999974448474374,
+          "log_optimal_normalization": 0.7270636728171382
+        },
+        {
+          "log10_kappa": -8.05,
+          "log_required_amplitude_min": 0.05996126713994704,
+          "log_required_amplitude_max": 15.296573827229736,
+          "log_amplitude_span": 15.236612560089789,
+          "minimum_worst_relative_error": 0.9999995171045281,
+          "log_optimal_normalization": 0.7531082062521293
+        },
+        {
+          "log10_kappa": -8.0,
+          "log_required_amplitude_min": 0.08836590555077178,
+          "log_required_amplitude_max": 17.183621205052606,
+          "log_amplitude_span": 17.095255299501833,
+          "minimum_worst_relative_error": 0.9999999247242769,
+          "log_optimal_normalization": 0.7815130484728563
+        },
+        {
+          "log10_kappa": -7.949999999999999,
+          "log_required_amplitude_min": 0.1193333849630634,
+          "log_required_amplitude_max": 19.288999868493132,
+          "log_amplitude_span": 19.16966648353007,
+          "minimum_worst_relative_error": 0.9999999905430821,
+          "log_optimal_normalization": 0.8124805607945476
+        },
+        {
+          "log10_kappa": -7.8999999999999995,
+          "log_required_amplitude_min": 0.13214274826657618,
+          "log_required_amplitude_max": 21.638985269341294,
+          "log_amplitude_span": 21.506842521074717,
+          "minimum_worst_relative_error": 0.9999999990864612,
+          "log_optimal_normalization": 0.8252899283697523
+        },
+        {
+          "log10_kappa": -7.85,
+          "log_required_amplitude_min": 0.1420010317761355,
+          "log_required_amplitude_max": 24.26308594482437,
+          "log_amplitude_span": 24.121084913048232,
+          "minimum_worst_relative_error": 0.9999999999331077,
+          "log_optimal_normalization": 0.8351482123026344
+        },
+        {
+          "log10_kappa": -7.8,
+          "log_required_amplitude_min": 0.1527850313755183,
+          "log_required_amplitude_max": 27.194439450255,
+          "log_amplitude_span": 27.04165441887948,
+          "minimum_worst_relative_error": 0.9999999999963943,
+          "log_optimal_normalization": 0.8459322119336612
+        },
+        {
+          "log10_kappa": -7.75,
+          "log_required_amplitude_min": 0.16457566327089473,
+          "log_required_amplitude_max": 30.47025626783174,
+          "log_amplitude_span": 30.305680604560845,
+          "minimum_worst_relative_error": 0.9999999999998621,
+          "log_optimal_normalization": 0.8577228438307714
+        },
+        {
+          "log10_kappa": -7.699999999999999,
+          "log_required_amplitude_min": 0.17745895926222616,
+          "log_required_amplitude_max": 34.1323174239285,
+          "log_amplitude_span": 33.95485846466627,
+          "minimum_worst_relative_error": 0.9999999999999964,
+          "log_optimal_normalization": 0.870606139822172
+        },
+        {
+          "log10_kappa": -7.6499999999999995,
+          "log_required_amplitude_min": 0.19152631106172752,
+          "log_required_amplitude_max": 38.22753228564018,
+          "log_amplitude_span": 38.03600597457845,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.8846734916216761
+        },
+        {
+          "log10_kappa": -7.6,
+          "log_required_amplitude_min": 0.2068748398437283,
+          "log_required_amplitude_max": 42.80856385384217,
+          "log_amplitude_span": 42.601689013998445,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9000220204036751
+        },
+        {
+          "log10_kappa": -7.55,
+          "log_required_amplitude_min": 0.22360792337326835,
+          "log_required_amplitude_max": 47.93452982001971,
+          "log_amplitude_span": 47.71092189664645,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9167551039332125
+        },
+        {
+          "log10_kappa": -7.5,
+          "log_required_amplitude_min": 0.24183591494657847,
+          "log_required_amplitude_max": 53.67178870641115,
+          "log_amplitude_span": 53.42995279146457,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9349830955065244
+        },
+        {
+          "log10_kappa": -7.449999999999999,
+          "log_required_amplitude_min": 0.261677089892903,
+          "log_required_amplitude_max": 60.09482156901726,
+          "log_amplitude_span": 59.83314447912436,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9548242704528462
+        },
+        {
+          "log10_kappa": -7.3999999999999995,
+          "log_required_amplitude_min": 0.28325885382234833,
+          "log_required_amplitude_max": 67.2872210288487,
+          "log_amplitude_span": 67.00396217502636,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9764060343822933
+        },
+        {
+          "log10_kappa": -7.35,
+          "log_required_amplitude_min": 0.3067192410455121,
+          "log_required_amplitude_max": 75.34280083747515,
+          "log_amplitude_span": 75.03608159642964,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 0.9998664216054607
+        },
+        {
+          "log10_kappa": -7.3,
+          "log_required_amplitude_min": 0.3322087223694061,
+          "log_required_amplitude_max": 84.3668408100582,
+          "log_amplitude_span": 84.0346320876888,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.0253559029293484
+        },
+        {
+          "log10_kappa": -7.25,
+          "log_required_amplitude_min": 0.35989233058892406,
+          "log_required_amplitude_max": 94.47748379352792,
+          "log_amplitude_span": 94.117591462939,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.0530395111488673
+        },
+        {
+          "log10_kappa": -7.199999999999999,
+          "log_required_amplitude_min": 0.38995210118953366,
+          "log_required_amplitude_max": 105.80730336775875,
+          "log_amplitude_span": 105.41735126656921,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.0830992817494831
+        },
+        {
+          "log10_kappa": -7.1499999999999995,
+          "log_required_amplitude_min": 0.4225898156136431,
+          "log_required_amplitude_max": 118.50506313765219,
+          "log_amplitude_span": 118.08247332203854,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.1157369961735952
+        },
+        {
+          "log10_kappa": -7.1,
+          "log_required_amplitude_min": 0.4580300234799108,
+          "log_required_amplitude_max": 132.73769067170554,
+          "log_amplitude_span": 132.27966064822562,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.1511772040398682
+        },
+        {
+          "log10_kappa": -7.05,
+          "log_required_amplitude_min": 0.49652330506452497,
+          "log_required_amplitude_max": 148.69249138787603,
+          "log_amplitude_span": 148.1959680828115,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.1896704856244753
+        },
+        {
+          "log10_kappa": -7.0,
+          "log_required_amplitude_min": 0.5383497127263674,
+          "log_required_amplitude_max": 166.5796302570962,
+          "log_amplitude_span": 166.04128054436984,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.2314968932863053
+        }
+      ],
+      "optimizer_trials": [
+        {
+          "success": true,
+          "logk": -8.441257819944315,
+          "objective": 6.037554546103502
+        }
+      ]
+    },
+    {
+      "subset": "inner",
+      "mu_nodes": 32,
+      "column_file": "research_work\\generated\\shielding-opacity-profile\\columns-32.npz",
+      "column_sha256": "ec30a845bbdceef776773868340cc64a7e04969c8912069c15fd6f1f18a82ae5",
+      "best": {
+        "log10_kappa": -9.119922593216478,
+        "log_required_amplitude_min": -0.7568466651382706,
+        "log_required_amplitude_max": 0.2515340625263929,
+        "log_amplitude_span": 1.0083807276646635,
+        "minimum_worst_relative_error": 0.4654062709767768,
+        "log_optimal_normalization": -0.374714143041904
+      },
+      "scan": [
+        {
+          "log10_kappa": -13.0,
+          "log_required_amplitude_min": -1.61848488380573,
+          "log_required_amplitude_max": 0.17764972128161682,
+          "log_amplitude_span": 1.7961346050873468,
+          "minimum_worst_relative_error": 0.7153555028258309,
+          "log_optimal_normalization": -1.0788645343920353
+        },
+        {
+          "log10_kappa": -12.95,
+          "log_required_amplitude_min": -1.6184523974921086,
+          "log_required_amplitude_max": 0.17765123836603758,
+          "log_amplitude_span": 1.7961036358581461,
+          "minimum_worst_relative_error": 0.715347942123436,
+          "log_optimal_normalization": -1.0788364557472878
+        },
+        {
+          "log10_kappa": -12.9,
+          "log_required_amplitude_min": -1.6184159483841927,
+          "log_required_amplitude_max": 0.17765294053733838,
+          "log_amplitude_span": 1.796068888921531,
+          "minimum_worst_relative_error": 0.7153394589474334,
+          "log_optimal_normalization": -1.078804952106569
+        },
+        {
+          "log10_kappa": -12.85,
+          "log_required_amplitude_min": -1.6183750532415924,
+          "log_required_amplitude_max": 0.17765485037295514,
+          "log_amplitude_span": 1.7960299036145475,
+          "minimum_worst_relative_error": 0.7153299407574966,
+          "log_optimal_normalization": -1.078769605846025
+        },
+        {
+          "log10_kappa": -12.8,
+          "log_required_amplitude_min": -1.618329169935556,
+          "log_required_amplitude_max": 0.17765699320348594,
+          "log_amplitude_span": 1.795986163139042,
+          "minimum_worst_relative_error": 0.7153192612860596,
+          "log_optimal_normalization": -1.0787299484586461
+        },
+        {
+          "log10_kappa": -12.75,
+          "log_required_amplitude_min": -1.618277690283088,
+          "log_required_amplitude_max": 0.1776593974481826,
+          "log_amplitude_span": 1.7959370877312706,
+          "minimum_worst_relative_error": 0.71530727886456,
+          "log_optimal_normalization": -1.0786854543648563
+        },
+        {
+          "log10_kappa": -12.7,
+          "log_required_amplitude_min": -1.618219932011749,
+          "log_required_amplitude_max": 0.17766209499127816,
+          "log_amplitude_span": 1.7958820270030271,
+          "minimum_worst_relative_error": 0.7152938345457683,
+          "log_optimal_normalization": -1.0786355339728553
+        },
+        {
+          "log10_kappa": -12.65,
+          "log_required_amplitude_min": -1.6181551297503503,
+          "log_required_amplitude_max": 0.17766512160407055,
+          "log_amplitude_span": 1.7958202513544208,
+          "minimum_worst_relative_error": 0.7152787499973912,
+          "log_optimal_normalization": -1.0785795258984359
+        },
+        {
+          "log10_kappa": -12.6,
+          "log_required_amplitude_min": -1.6180824249283208,
+          "log_required_amplitude_max": 0.177668517418343,
+          "log_amplitude_span": 1.7957509423466638,
+          "minimum_worst_relative_error": 0.7152618251391486,
+          "log_optimal_normalization": -1.0785166882433277
+        },
+        {
+          "log10_kappa": -12.55,
+          "log_required_amplitude_min": -1.6180008544526223,
+          "log_required_amplitude_max": 0.17767232745732064,
+          "log_amplitude_span": 1.795673181909943,
+          "minimum_worst_relative_error": 0.7152428354921417,
+          "log_optimal_normalization": -1.0784461888192007
+        },
+        {
+          "log10_kappa": -12.5,
+          "log_required_amplitude_min": -1.617909338015615,
+          "log_required_amplitude_max": 0.17767660223112047,
+          "log_amplitude_span": 1.7955859402467356,
+          "minimum_worst_relative_error": 0.7152215292055564,
+          "log_optimal_normalization": -1.0783670941912087
+        },
+        {
+          "log10_kappa": -12.45,
+          "log_required_amplitude_min": -1.6178066638700455,
+          "log_required_amplitude_max": 0.17768139840450514,
+          "log_amplitude_span": 1.7954880622745506,
+          "minimum_worst_relative_error": 0.7151976237215278,
+          "log_optimal_normalization": -1.078278357400209
+        },
+        {
+          "log10_kappa": -12.4,
+          "log_required_amplitude_min": -1.617691472888143,
+          "log_required_amplitude_max": 0.1776867795456636,
+          "log_amplitude_span": 1.7953782524338067,
+          "minimum_worst_relative_error": 0.7151708020342499,
+          "log_optimal_normalization": -1.0781788042064095
+        },
+        {
+          "log10_kappa": -12.35,
+          "log_required_amplitude_min": -1.617562240700511,
+          "log_required_amplitude_max": 0.1776928169657812,
+          "log_amplitude_span": 1.7952550576662922,
+          "minimum_worst_relative_error": 0.7151407084941094,
+          "log_optimal_normalization": -1.078067117679018
+        },
+        {
+          "log10_kappa": -12.3,
+          "log_required_amplitude_min": -1.617417257686831,
+          "log_required_amplitude_max": 0.17769959066034646,
+          "log_amplitude_span": 1.7951168483471776,
+          "minimum_worst_relative_error": 0.7151069441017008,
+          "log_optimal_normalization": -1.0779418209363185
+        },
+        {
+          "log10_kappa": -12.25,
+          "log_required_amplitude_min": -1.617254606564193,
+          "log_required_amplitude_max": 0.17770719036440452,
+          "log_amplitude_span": 1.7949617969285976,
+          "minimum_worst_relative_error": 0.715069061229922,
+          "log_optimal_normalization": -1.0778012578183318
+        },
+        {
+          "log10_kappa": -12.2,
+          "log_required_amplitude_min": -1.6170721372898131,
+          "log_required_amplitude_max": 0.1777157167354484,
+          "log_amplitude_span": 1.7947878540252615,
+          "minimum_worst_relative_error": 0.7150265577049236,
+          "log_optimal_normalization": -1.0776435712495802
+        },
+        {
+          "log10_kappa": -12.15,
+          "log_required_amplitude_min": -1.6168674389628186,
+          "log_required_amplitude_max": 0.17772528267921883,
+          "log_amplitude_span": 1.7945927216420374,
+          "minimum_worst_relative_error": 0.7149788701683626,
+          "log_optimal_normalization": -1.0774666790223524
+        },
+        {
+          "log10_kappa": -12.1,
+          "log_required_amplitude_min": -1.6166378083743917,
+          "log_required_amplitude_max": 0.1777360148354865,
+          "log_amplitude_span": 1.7943738232098783,
+          "minimum_worst_relative_error": 0.7149253666340966,
+          "log_optimal_normalization": -1.0772682467010353
+        },
+        {
+          "log10_kappa": -12.05,
+          "log_required_amplitude_min": -1.616380214816576,
+          "log_required_amplitude_max": 0.17774805524288206,
+          "log_amplitude_span": 1.794128270059458,
+          "minimum_worst_relative_error": 0.71486533814205,
+          "log_optimal_normalization": -1.0770456573153222
+        },
+        {
+          "log10_kappa": -12.0,
+          "log_required_amplitude_min": -1.6160912607172402,
+          "log_required_amplitude_max": 0.1777615632040379,
+          "log_amplitude_span": 1.793852823921278,
+          "minimum_worst_relative_error": 0.7147979894003195,
+          "log_optimal_normalization": -1.0767959774743068
+        },
+        {
+          "log10_kappa": -11.95,
+          "log_required_amplitude_min": -1.6157671376217908,
+          "log_required_amplitude_max": 0.17777671737476153,
+          "log_amplitude_span": 1.7935438549965523,
+          "minimum_worst_relative_error": 0.7147224282935609,
+          "log_optimal_normalization": -1.0765159194944234
+        },
+        {
+          "log10_kappa": -11.9,
+          "log_required_amplitude_min": -1.6154035769909547,
+          "log_required_amplitude_max": 0.17779371810367328,
+          "log_amplitude_span": 1.793197295094628,
+          "minimum_worst_relative_error": 0.7146376541211111,
+          "log_optimal_normalization": -1.0762017990917523
+        },
+        {
+          "log10_kappa": -11.85,
+          "log_required_amplitude_min": -1.614995795228125,
+          "log_required_amplitude_max": 0.1778127900517137,
+          "log_amplitude_span": 1.7928085852798388,
+          "minimum_worst_relative_error": 0.7145425444119693,
+          "log_optimal_normalization": -1.0758494881433212
+        },
+        {
+          "log10_kappa": -11.8,
+          "log_required_amplitude_min": -1.6145384322891467,
+          "log_required_amplitude_max": 0.17783418512425841,
+          "log_amplitude_span": 1.7923726174134051,
+          "minimum_worst_relative_error": 0.7144358401454952,
+          "log_optimal_normalization": -1.0754543619725823
+        },
+        {
+          "log10_kappa": -11.75,
+          "log_required_amplitude_min": -1.6140254831618663,
+          "log_required_amplitude_max": 0.17785818575217727,
+          "log_amplitude_span": 1.7918836689140436,
+          "minimum_worst_relative_error": 0.7143161291861904,
+          "log_optimal_normalization": -1.0750112405612895
+        },
+        {
+          "log10_kappa": -11.7,
+          "log_required_amplitude_min": -1.6134502214321755,
+          "log_required_amplitude_max": 0.17788510856217288,
+          "log_amplitude_span": 1.7913353299943484,
+          "minimum_worst_relative_error": 0.7141818277179668,
+          "log_optimal_normalization": -1.0745143230336256
+        },
+        {
+          "log10_kappa": -11.65,
+          "log_required_amplitude_min": -1.6128051140775637,
+          "log_required_amplitude_max": 0.17791530848109227,
+          "log_amplitude_span": 1.790720422558656,
+          "minimum_worst_relative_error": 0.7140311594375097,
+          "log_optimal_normalization": -1.0739571146987763
+        },
+        {
+          "log10_kappa": -11.6,
+          "log_required_amplitude_min": -1.612081726548412,
+          "log_required_amplitude_max": 0.1779491833236393,
+          "log_amplitude_span": 1.7900309098720513,
+          "minimum_worst_relative_error": 0.7138621322373155,
+          "log_optimal_normalization": -1.0733323458756046
+        },
+        {
+          "log10_kappa": -11.55,
+          "log_required_amplitude_min": -1.6112706171114843,
+          "log_required_amplitude_max": 0.17798717891808247,
+          "log_amplitude_span": 1.7892577960295668,
+          "minimum_worst_relative_error": 0.7136725120762593,
+          "log_optimal_normalization": -1.0726318816580123
+        },
+        {
+          "log10_kappa": -11.5,
+          "log_required_amplitude_min": -1.6103612193394183,
+          "log_required_amplitude_max": 0.17802979483010395,
+          "log_amplitude_span": 1.7883910141695223,
+          "minimum_worst_relative_error": 0.7134597936985121,
+          "log_optimal_normalization": -1.0718466217125844
+        },
+        {
+          "log10_kappa": -11.45,
+          "log_required_amplitude_min": -1.6093417115347646,
+          "log_required_amplitude_max": 0.17807759075093044,
+          "log_amplitude_span": 1.787419302285695,
+          "minimum_worst_relative_error": 0.7132211678195963,
+          "log_optimal_normalization": -1.070966389131963
+        },
+        {
+          "log10_kappa": -11.4,
+          "log_required_amplitude_min": -1.6081988717773776,
+          "log_required_amplitude_max": 0.17813119362225782,
+          "log_amplitude_span": 1.7863300653996355,
+          "minimum_worst_relative_error": 0.7129534843503934,
+          "log_optimal_normalization": -1.069979807298893
+        },
+        {
+          "log10_kappa": -11.35,
+          "log_required_amplitude_min": -1.6069179171799841,
+          "log_required_amplitude_max": 0.17819130557724483,
+          "log_amplitude_span": 1.785109222757229,
+          "minimum_worst_relative_error": 0.7126532111749064,
+          "log_optimal_normalization": -1.0688741636481112
+        },
+        {
+          "log10_kappa": -11.3,
+          "log_required_amplitude_min": -1.6054823258284077,
+          "log_required_amplitude_max": 0.17825871278393857,
+          "log_amplitude_span": 1.7837410386123462,
+          "minimum_worst_relative_error": 0.7123163879340447,
+          "log_optimal_normalization": -1.0676352591471483
+        },
+        {
+          "log10_kappa": -11.25,
+          "log_required_amplitude_min": -1.6038736397700402,
+          "log_required_amplitude_max": 0.17833429528484634,
+          "log_amplitude_span": 1.7822079350548865,
+          "minimum_worst_relative_error": 0.711938574193806,
+          "log_optimal_normalization": -1.0662472422538694
+        },
+        {
+          "log10_kappa": -11.2,
+          "log_required_amplitude_min": -1.602071247295712,
+          "log_required_amplitude_max": 0.17841903793390435,
+          "log_amplitude_span": 1.7804902852296163,
+          "minimum_worst_relative_error": 0.711514791289571,
+          "log_optimal_normalization": -1.0646924260489727
+        },
+        {
+          "log10_kappa": -11.15,
+          "log_required_amplitude_min": -1.600052142634667,
+          "log_required_amplitude_max": 0.1785140425396219,
+          "log_amplitude_span": 1.7785661851742889,
+          "minimum_worst_relative_error": 0.7110394570357226,
+          "log_optimal_normalization": -1.062951087186461
+        },
+        {
+          "log10_kappa": -11.1,
+          "log_required_amplitude_min": -1.5977906610469916,
+          "log_required_amplitude_max": 0.17862054133062744,
+          "log_amplitude_span": 1.776411202377619,
+          "minimum_worst_relative_error": 0.7105063123674834,
+          "log_optimal_normalization": -1.0610012452543598
+        },
+        {
+          "log10_kappa": -11.05,
+          "log_required_amplitude_min": -1.5952581871484015,
+          "log_required_amplitude_max": 0.178739911866868,
+          "log_amplitude_span": 1.7739980990152695,
+          "minimum_worst_relative_error": 0.7099083388346183,
+          "log_optimal_normalization": -1.0588184210912175
+        },
+        {
+          "log10_kappa": -11.0,
+          "log_required_amplitude_min": -1.5924228341325688,
+          "log_required_amplitude_max": 0.17887369352615634,
+          "log_amplitude_span": 1.7712965276587251,
+          "minimum_worst_relative_error": 0.7092376656880088,
+          "log_optimal_normalization": -1.0563753725597933
+        },
+        {
+          "log10_kappa": -10.95,
+          "log_required_amplitude_min": -1.5892490913577633,
+          "log_required_amplitude_max": 0.1790236057011696,
+          "log_amplitude_span": 1.7682726970589329,
+          "minimum_worst_relative_error": 0.7084854650818374,
+          "log_optimal_normalization": -1.0536418062355284
+        },
+        {
+          "log10_kappa": -10.9,
+          "log_required_amplitude_min": -1.5856974375268122,
+          "log_required_amplitude_max": 0.1791915678461078,
+          "log_amplitude_span": 1.76488900537292,
+          "minimum_worst_relative_error": 0.7076418336460618,
+          "log_optimal_normalization": -1.0505840634208559
+        },
+        {
+          "log10_kappa": -10.85,
+          "log_required_amplitude_min": -1.5817239163994556,
+          "log_required_amplitude_max": 0.17937972151441128,
+          "log_amplitude_span": 1.761103637913867,
+          "minimum_worst_relative_error": 0.7066956583534479,
+          "log_optimal_normalization": -1.0471647788439582
+        },
+        {
+          "log10_kappa": -10.8,
+          "log_required_amplitude_min": -1.5772796716204547,
+          "log_required_amplitude_max": 0.17959045452885425,
+          "log_amplitude_span": 1.756870126149309,
+          "minimum_worst_relative_error": 0.7056344641977205,
+          "log_optimal_normalization": -1.0433425103403038
+        },
+        {
+          "log10_kappa": -10.75,
+          "log_required_amplitude_min": -1.5723104368125722,
+          "log_required_amplitude_max": 0.17982642742235244,
+          "log_amplitude_span": 1.7521368642349247,
+          "minimum_worst_relative_error": 0.704444240696789,
+          "log_optimal_normalization": -1.0390713377487302
+        },
+        {
+          "log10_kappa": -10.7,
+          "log_required_amplitude_min": -1.5667559765632713,
+          "log_required_amplitude_max": 0.18009060228140195,
+          "log_amplitude_span": 1.7468465788446732,
+          "minimum_worst_relative_error": 0.703109243617716,
+          "log_optimal_normalization": -1.0343004291904125
+        },
+        {
+          "log10_kappa": -10.65,
+          "log_required_amplitude_min": -1.5605494733303975,
+          "log_required_amplitude_max": 0.1803862741138098,
+          "log_amplitude_span": 1.7409357474442073,
+          "minimum_worst_relative_error": 0.701611767566595,
+          "log_optimal_normalization": -1.0289735728612124
+        },
+        {
+          "log10_kappa": -10.6,
+          "log_required_amplitude_min": -1.5536168546269677,
+          "log_required_amplitude_max": 0.1807171048478602,
+          "log_amplitude_span": 1.734333959474828,
+          "minimum_worst_relative_error": 0.6999318841748084,
+          "log_optimal_normalization": -1.0230286725000122
+        },
+        {
+          "log10_kappa": -10.55,
+          "log_required_amplitude_min": -1.5458760541685614,
+          "log_required_amplitude_max": 0.18108716005128,
+          "log_amplitude_span": 1.7269632142198414,
+          "minimum_worst_relative_error": 0.6980471395223362,
+          "log_optimal_normalization": -1.0163972048730399
+        },
+        {
+          "log10_kappa": -10.5,
+          "log_required_amplitude_min": -1.537236200068849,
+          "log_required_amplitude_max": 0.18150094843558806,
+          "log_amplitude_span": 1.7187371485044372,
+          "minimum_worst_relative_error": 0.6959322031513365,
+          "log_optimal_normalization": -1.0090036380551366
+        },
+        {
+          "log10_kappa": -10.45,
+          "log_required_amplitude_min": -1.527596722788354,
+          "log_required_amplitude_max": 0.18196346418555231,
+          "log_amplitude_span": 1.7095601869739063,
+          "minimum_worst_relative_error": 0.6935584595269763,
+          "log_optimal_normalization": -1.0007648101633941
+        },
+        {
+          "log10_kappa": -10.4,
+          "log_required_amplitude_min": -1.516846375569696,
+          "log_required_amplitude_max": 0.18248023212631148,
+          "log_amplitude_span": 1.6993266076960074,
+          "minimum_worst_relative_error": 0.6908935310923484,
+          "log_optimal_normalization": -0.9915892697334094
+        },
+        {
+          "log10_kappa": -10.35,
+          "log_required_amplitude_min": -1.5048621607626589,
+          "log_required_amplitude_max": 0.18305735571490134,
+          "log_amplitude_span": 1.6879195164775602,
+          "minimum_worst_relative_error": 0.6879007201418093,
+          "log_optimal_normalization": -0.9813765814004348
+        },
+        {
+          "log10_kappa": -10.3,
+          "log_required_amplitude_min": -1.491508156998465,
+          "log_required_amplitude_max": 0.1837015678225824,
+          "log_amplitude_span": 1.6752097248210474,
+          "minimum_worst_relative_error": 0.6845383546064571,
+          "log_optimal_normalization": -0.9700166042590683
+        },
+        {
+          "log10_kappa": -10.25,
+          "log_required_amplitude_min": -1.4766342448095133,
+          "log_required_amplitude_max": 0.18442028426491452,
+          "log_amplitude_span": 1.6610545290744279,
+          "minimum_worst_relative_error": 0.6807590205048397,
+          "log_optimal_normalization": -0.9573887555047482
+        },
+        {
+          "log10_kappa": -10.2,
+          "log_required_amplitude_min": -1.4600747320614391,
+          "log_required_amplitude_max": 0.18522166004483465,
+          "log_amplitude_span": 1.6452963921062738,
+          "minimum_worst_relative_error": 0.6765086612382137,
+          "log_optimal_normalization": -0.9433612788886555
+        },
+        {
+          "log10_kappa": -10.15,
+          "log_required_amplitude_min": -1.4433322132443474,
+          "log_required_amplitude_max": 0.18611464830801294,
+          "log_amplitude_span": 1.6294468615523603,
+          "minimum_worst_relative_error": 0.6721877005285668,
+          "log_optimal_normalization": -0.9291994438009625
+        },
+        {
+          "log10_kappa": -10.1,
+          "log_required_amplitude_min": -1.4287804997309266,
+          "log_required_amplitude_max": 0.18710906207788947,
+          "log_amplitude_span": 1.615889561808816,
+          "minimum_worst_relative_error": 0.6684549395202787,
+          "log_optimal_normalization": -0.9168824874669134
+        },
+        {
+          "log10_kappa": -10.05,
+          "log_required_amplitude_min": -1.4126267826266607,
+          "log_required_amplitude_max": 0.18821563894710325,
+          "log_amplitude_span": 1.600842421573764,
+          "minimum_worst_relative_error": 0.664272184475813,
+          "log_optimal_normalization": -0.9032388812028206
+        },
+        {
+          "log10_kappa": -10.0,
+          "log_required_amplitude_min": -1.3947107979491493,
+          "log_required_amplitude_max": 0.18944610905652182,
+          "log_amplitude_span": 1.5841569070056711,
+          "minimum_worst_relative_error": 0.659584863972899,
+          "log_optimal_normalization": -0.888143308800438
+        },
+        {
+          "log10_kappa": -9.95,
+          "log_required_amplitude_min": -1.3748598205499496,
+          "log_required_amplitude_max": 0.19081326688984968,
+          "log_amplitude_span": 1.5656730874397993,
+          "minimum_worst_relative_error": 0.6543317950832178,
+          "log_optimal_normalization": -0.8714626424440052
+        },
+        {
+          "log10_kappa": -9.9,
+          "log_required_amplitude_min": -1.3528886042393804,
+          "log_required_amplitude_max": 0.19233104763755415,
+          "log_amplitude_span": 1.5452196518769346,
+          "minimum_worst_relative_error": 0.6484444566592722,
+          "log_optimal_normalization": -0.8530565145383437
+        },
+        {
+          "log10_kappa": -9.85,
+          "log_required_amplitude_min": -1.3285995913326198,
+          "log_required_amplitude_max": 0.1940146091101913,
+          "log_amplitude_span": 1.5226142004428111,
+          "minimum_worst_relative_error": 0.6418462247449772,
+          "log_optimal_normalization": -0.832778235878565
+        },
+        {
+          "log10_kappa": -9.8,
+          "log_required_amplitude_min": -1.3017834533443269,
+          "log_required_amplitude_max": 0.19588042036143483,
+          "log_amplitude_span": 1.4976638737057617,
+          "minimum_worst_relative_error": 0.6344515854352792,
+          "log_optimal_normalization": -0.8104761270136912
+        },
+        {
+          "log10_kappa": -9.75,
+          "log_required_amplitude_min": -1.2722200271864574,
+          "log_required_amplitude_max": 0.19794635824994655,
+          "log_amplitude_span": 1.470166385436404,
+          "minimum_worst_relative_error": 0.6261653489624531,
+          "log_optimal_normalization": -0.7859953306021651
+        },
+        {
+          "log10_kappa": -9.7,
+          "log_required_amplitude_min": -1.2396797121324346,
+          "log_required_amplitude_max": 0.2002318130479499,
+          "log_amplitude_span": 1.4399115251803845,
+          "minimum_worst_relative_error": 0.6168819004640547,
+          "log_optimal_normalization": -0.7591801704050751
+        },
+        {
+          "log10_kappa": -9.65,
+          "log_required_amplitude_min": -1.2039253906772096,
+          "log_required_amplitude_max": 0.2027578038164246,
+          "log_amplitude_span": 1.4066831944936342,
+          "minimum_worst_relative_error": 0.606484538391659,
+          "log_optimal_normalization": -0.7298771155558119
+        },
+        {
+          "log10_kappa": -9.6,
+          "log_required_amplitude_min": -1.1647149285320637,
+          "log_required_amplitude_max": 0.20554710356418715,
+          "log_amplitude_span": 1.3702620320962509,
+          "minimum_worst_relative_error": 0.5948449709944391,
+          "log_optimal_normalization": -0.6979383938878678
+        },
+        {
+          "log10_kappa": -9.55,
+          "log_required_amplitude_min": -1.1218042910841879,
+          "log_required_amplitude_max": 0.2086243732111659,
+          "log_amplitude_span": 1.3304286642953538,
+          "minimum_worst_relative_error": 0.5818230640949695,
+          "log_optimal_normalization": -0.6632262711700185
+        },
+        {
+          "log10_kappa": -9.5,
+          "log_required_amplitude_min": -1.0749512801811996,
+          "log_required_amplitude_max": 0.21201630221806722,
+          "log_amplitude_span": 1.2869675823992668,
+          "minimum_worst_relative_error": 0.5672669575823516,
+          "log_optimal_normalization": -0.6256179691077675
+        },
+        {
+          "log10_kappa": -9.45,
+          "log_required_amplitude_min": -1.0303855516399512,
+          "log_required_amplitude_max": 0.2157517527067765,
+          "log_amplitude_span": 1.2461373043467276,
+          "minimum_worst_relative_error": 0.5532609878454153,
+          "log_optimal_normalization": -0.5900289676035702
+        },
+        {
+          "log10_kappa": -9.4,
+          "log_required_amplitude_min": -0.9837909275997212,
+          "log_required_amplitude_max": 0.21986190340584022,
+          "log_amplitude_span": 1.2036528310055614,
+          "minimum_worst_relative_error": 0.5383479286800049,
+          "log_optimal_normalization": -0.5530818605920403
+        },
+        {
+          "log10_kappa": -9.35,
+          "log_required_amplitude_min": -0.9348621847899556,
+          "log_required_amplitude_max": 0.2243803903150403,
+          "log_amplitude_span": 1.159242575104996,
+          "minimum_worst_relative_error": 0.5223901191015591,
+          "log_optimal_normalization": -0.5145806381543847
+        },
+        {
+          "log10_kappa": -9.3,
+          "log_required_amplitude_min": -0.8975288198516456,
+          "log_required_amplitude_max": 0.22934344300096,
+          "log_amplitude_span": 1.1268722628526056,
+          "minimum_worst_relative_error": 0.5105224490023129,
+          "log_optimal_normalization": -0.4850732361497264
+        },
+        {
+          "log10_kappa": -9.25,
+          "log_required_amplitude_min": -0.8566271781126398,
+          "log_required_amplitude_max": 0.23479001897095708,
+          "log_amplitude_span": 1.0914171970835969,
+          "minimum_worst_relative_error": 0.49729699021614715,
+          "log_optimal_normalization": -0.45296570209394604
+        },
+        {
+          "log10_kappa": -9.2,
+          "log_required_amplitude_min": -0.81708838537083,
+          "log_required_amplitude_max": 0.2407619430651855,
+          "log_amplitude_span": 1.0578503284360155,
+          "minimum_worst_relative_error": 0.4845590520027608,
+          "log_optimal_normalization": -0.4219705918882731
+        },
+        {
+          "log10_kappa": -9.15,
+          "log_required_amplitude_min": -0.7804641011156819,
+          "log_required_amplitude_max": 0.24730406293453777,
+          "log_amplitude_span": 1.0277681640502196,
+          "minimum_worst_relative_error": 0.4729659583080889,
+          "log_optimal_normalization": -0.3931860743516018
+        },
+        {
+          "log10_kappa": -9.1,
+          "log_required_amplitude_min": -0.7405192056232202,
+          "log_required_amplitude_max": 0.32858490142454033,
+          "log_amplitude_span": 1.0691041070477605,
+          "minimum_worst_relative_error": 0.48885300885840066,
+          "log_optimal_normalization": -0.34251317482088794
+        },
+        {
+          "log10_kappa": -9.05,
+          "log_required_amplitude_min": -0.6970465733252147,
+          "log_required_amplitude_max": 0.5364341720825487,
+          "log_amplitude_span": 1.2334807454077634,
+          "minimum_worst_relative_error": 0.5488544108567813,
+          "log_optimal_normalization": -0.25953100542537333
+        },
+        {
+          "log10_kappa": -9.0,
+          "log_required_amplitude_min": -0.6498476019980992,
+          "log_required_amplitude_max": 0.7667544418004997,
+          "log_amplitude_span": 1.4166020437985989,
+          "minimum_worst_relative_error": 0.6096103426674524,
+          "log_optimal_normalization": -0.17385547548198355
+        },
+        {
+          "log10_kappa": -8.95,
+          "log_required_amplitude_min": -0.598737814448612,
+          "log_required_amplitude_max": 1.0219724735289144,
+          "log_amplitude_span": 1.6207102879775264,
+          "minimum_worst_relative_error": 0.6697861278180309,
+          "log_optimal_normalization": -0.0860422633960809
+        },
+        {
+          "log10_kappa": -8.899999999999999,
+          "log_required_amplitude_min": -0.5435529407843265,
+          "log_required_amplitude_max": 1.3047896391032905,
+          "log_amplitude_span": 1.848342579887617,
+          "minimum_worst_relative_error": 0.7278647708355258,
+          "log_optimal_normalization": 0.0033334689169199905
+        },
+        {
+          "log10_kappa": -8.85,
+          "log_required_amplitude_min": -0.4841550549286153,
+          "log_required_amplitude_max": 1.618216137602542,
+          "log_amplitude_span": 2.102371192531157,
+          "minimum_worst_relative_error": 0.7822668652615596,
+          "log_optimal_normalization": 0.09373101894672042
+        },
+        {
+          "log10_kappa": -8.8,
+          "log_required_amplitude_min": -0.4204380653117785,
+          "log_required_amplitude_max": 1.965609767870691,
+          "log_amplitude_span": 2.3860478331824693,
+          "minimum_worst_relative_error": 0.8315143498221841,
+          "log_optimal_normalization": 0.18470507290500748
+        },
+        {
+          "log10_kappa": -8.75,
+          "log_required_amplitude_min": -0.35794797088632724,
+          "log_required_amplitude_max": 2.3507197532963024,
+          "log_amplitude_span": 2.7086677241826296,
+          "minimum_worst_relative_error": 0.8750723464381147,
+          "log_optimal_normalization": 0.27069927255866855
+        },
+        {
+          "log10_kappa": -8.7,
+          "log_required_amplitude_min": -0.3170891306659436,
+          "log_required_amplitude_max": 2.777736125638489,
+          "log_amplitude_span": 3.0948252563044325,
+          "minimum_worst_relative_error": 0.9133575731400505,
+          "log_optimal_normalization": 0.3317704598057003
+        },
+        {
+          "log10_kappa": -8.649999999999999,
+          "log_required_amplitude_min": -0.2949093568370551,
+          "log_required_amplitude_max": 3.2513451961504183,
+          "log_amplitude_span": 3.5462545529874734,
+          "minimum_worst_relative_error": 0.9439511679121907,
+          "log_optimal_normalization": 0.3698132294989622
+        },
+        {
+          "log10_kappa": -8.6,
+          "log_required_amplitude_min": -0.2706298720322766,
+          "log_required_amplitude_max": 3.7767917049247908,
+          "log_amplitude_span": 4.047421576957067,
+          "minimum_worst_relative_error": 0.9656650313693949,
+          "log_optimal_normalization": 0.4052007543875318
+        },
+        {
+          "log10_kappa": -8.55,
+          "log_required_amplitude_min": -0.2440614379678281,
+          "log_required_amplitude_max": 4.359948370386275,
+          "log_amplitude_span": 4.604009808354103,
+          "minimum_worst_relative_error": 0.9801752565868872,
+          "log_optimal_normalization": 0.43912391624925373
+        },
+        {
+          "log10_kappa": -8.5,
+          "log_required_amplitude_min": -0.21499826398342625,
+          "log_required_amplitude_max": 5.0073937697121655,
+          "log_amplitude_span": 5.222392033695591,
+          "minimum_worst_relative_error": 0.989269066912442,
+          "log_optimal_normalization": 0.4727690042216093
+        },
+        {
+          "log10_kappa": -8.45,
+          "log_required_amplitude_min": -0.18321668008751724,
+          "log_required_amplitude_max": 5.726499747717415,
+          "log_amplitude_span": 5.909716427804932,
+          "minimum_worst_relative_error": 0.9945887682397299,
+          "log_optimal_normalization": 0.5072212177981967
+        },
+        {
+          "log10_kappa": -8.399999999999999,
+          "log_required_amplitude_min": -0.1484736714665451,
+          "log_required_amplitude_max": 6.525529825469989,
+          "log_amplitude_span": 6.674003496936534,
+          "minimum_worst_relative_error": 0.9974765262385441,
+          "log_optimal_normalization": 0.5434109755525061
+        },
+        {
+          "log10_kappa": -8.35,
+          "log_required_amplitude_min": -0.11050521623350518,
+          "log_required_amplitude_max": 7.413750291696947,
+          "log_amplitude_span": 7.524255507930452,
+          "minimum_worst_relative_error": 0.9989209216827192,
+          "log_optimal_normalization": 0.5821022795641726
+        },
+        {
+          "log10_kappa": -8.3,
+          "log_required_amplitude_min": -0.06902434760620446,
+          "log_required_amplitude_max": 8.401555752515545,
+          "log_amplitude_span": 8.47058010012175,
+          "minimum_worst_relative_error": 0.9995810011744053,
+          "log_optimal_normalization": 0.6239133115928759
+        },
+        {
+          "log10_kappa": -8.25,
+          "log_required_amplitude_min": -0.023718843654579214,
+          "log_required_amplitude_max": 9.500610882087287,
+          "log_amplitude_span": 9.524329725741866,
+          "minimum_worst_relative_error": 0.9998539053115131,
+          "log_optimal_normalization": 0.669355286893035
+        },
+        {
+          "log10_kappa": -8.2,
+          "log_required_amplitude_min": 0.025751562013787588,
+          "log_required_amplitude_max": 10.724010031488701,
+          "log_amplitude_span": 10.698258469474913,
+          "minimum_worst_relative_error": 0.9999548325504338,
+          "log_optimal_normalization": 0.7188761585939343
+        },
+        {
+          "log10_kappa": -8.149999999999999,
+          "log_required_amplitude_min": 0.07975855341262195,
+          "log_required_amplitude_max": 12.086456351771549,
+          "log_amplitude_span": 12.006697798358926,
+          "minimum_worst_relative_error": 0.9999877936801637,
+          "log_optimal_normalization": 0.7728996307940257
+        },
+        {
+          "log10_kappa": -8.1,
+          "log_required_amplitude_min": 0.13859463065930622,
+          "log_required_amplitude_max": 13.604462297485536,
+          "log_amplitude_span": 13.465867666826231,
+          "minimum_worst_relative_error": 0.9999971628822697,
+          "log_optimal_normalization": 0.8317403926593805
+        },
+        {
+          "log10_kappa": -8.05,
+          "log_required_amplitude_min": 0.20263250588122061,
+          "log_required_amplitude_max": 15.296573827229736,
+          "log_amplitude_span": 15.093941321348515,
+          "minimum_worst_relative_error": 0.9999994430522565,
+          "log_optimal_normalization": 0.8957794079672556
+        },
+        {
+          "log10_kappa": -8.0,
+          "log_required_amplitude_min": 0.27252831316253956,
+          "log_required_amplitude_max": 17.183621205052606,
+          "log_amplitude_span": 16.911092891890068,
+          "minimum_worst_relative_error": 0.9999999095026941,
+          "log_optimal_normalization": 0.9656754484738315
+        },
+        {
+          "log10_kappa": -7.949999999999999,
+          "log_required_amplitude_min": 0.3488242046148755,
+          "log_required_amplitude_max": 19.288999868493132,
+          "log_amplitude_span": 18.940175663878257,
+          "minimum_worst_relative_error": 0.9999999881035819,
+          "log_optimal_normalization": 1.041971379226613
+        },
+        {
+          "log10_kappa": -7.8999999999999995,
+          "log_required_amplitude_min": 0.43212106131154093,
+          "log_required_amplitude_max": 21.638985269341294,
+          "log_amplitude_span": 21.206864208029753,
+          "minimum_worst_relative_error": 0.9999999987668784,
+          "log_optimal_normalization": 1.1252682412549255
+        },
+        {
+          "log10_kappa": -7.85,
+          "log_required_amplitude_min": 0.5230862162375247,
+          "log_required_amplitude_max": 24.26308594482437,
+          "log_amplitude_span": 23.739999728586845,
+          "minimum_worst_relative_error": 0.9999999999020782,
+          "log_optimal_normalization": 1.2162333967485104
+        },
+        {
+          "log10_kappa": -7.8,
+          "log_required_amplitude_min": 0.6224617305934286,
+          "log_required_amplitude_max": 27.194439450255,
+          "log_amplitude_span": 26.57197771966157,
+          "minimum_worst_relative_error": 0.9999999999942327,
+          "log_optimal_normalization": 1.3156089111504876
+        },
+        {
+          "log10_kappa": -7.75,
+          "log_required_amplitude_min": 0.7310731518730387,
+          "log_required_amplitude_max": 30.47025626783174,
+          "log_amplitude_span": 29.739183115958703,
+          "minimum_worst_relative_error": 0.9999999999997571,
+          "log_optimal_normalization": 1.4242203324328635
+        },
+        {
+          "log10_kappa": -7.699999999999999,
+          "log_required_amplitude_min": 0.849838769553062,
+          "log_required_amplitude_max": 34.1323174239285,
+          "log_amplitude_span": 33.28247865437544,
+          "minimum_worst_relative_error": 0.999999999999993,
+          "log_optimal_normalization": 1.5429859501130068
+        },
+        {
+          "log10_kappa": -7.6499999999999995,
+          "log_required_amplitude_min": 0.9797795215123626,
+          "log_required_amplitude_max": 38.22753228564018,
+          "log_amplitude_span": 37.24775276412782,
+          "minimum_worst_relative_error": 0.9999999999999999,
+          "log_optimal_normalization": 1.67292670207231
+        },
+        {
+          "log10_kappa": -7.6,
+          "log_required_amplitude_min": 1.0861288738582087,
+          "log_required_amplitude_max": 42.80856385384217,
+          "log_amplitude_span": 41.722434979983966,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.7792760544181547
+        },
+        {
+          "log10_kappa": -7.55,
+          "log_required_amplitude_min": 1.1495866530608654,
+          "log_required_amplitude_max": 47.93452982001971,
+          "log_amplitude_span": 46.78494316695885,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.8427338336208123
+        },
+        {
+          "log10_kappa": -7.5,
+          "log_required_amplitude_min": 1.2152605703266028,
+          "log_required_amplitude_max": 53.67178870641115,
+          "log_amplitude_span": 52.45652813608454,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.9084077508865462
+        },
+        {
+          "log10_kappa": -7.449999999999999,
+          "log_required_amplitude_min": 1.2832146584501898,
+          "log_required_amplitude_max": 60.09482156901726,
+          "log_amplitude_span": 58.81160691056707,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 1.9763618390101314
+        },
+        {
+          "log10_kappa": -7.3999999999999995,
+          "log_required_amplitude_min": 1.3536167226244233,
+          "log_required_amplitude_max": 67.2872210288487,
+          "log_amplitude_span": 65.93360430622428,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.0467639031843703
+        },
+        {
+          "log10_kappa": -7.35,
+          "log_required_amplitude_min": 1.4267633325824776,
+          "log_required_amplitude_max": 75.34280083747515,
+          "log_amplitude_span": 73.91603750489267,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.119910513142429
+        },
+        {
+          "log10_kappa": -7.3,
+          "log_required_amplitude_min": 1.5030977584946668,
+          "log_required_amplitude_max": 84.3668408100582,
+          "log_amplitude_span": 82.86374305156355,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.1962449390546084
+        },
+        {
+          "log10_kappa": -7.25,
+          "log_required_amplitude_min": 1.583217755245281,
+          "log_required_amplitude_max": 94.47748379352792,
+          "log_amplitude_span": 92.89426603828264,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.2763649358052334
+        },
+        {
+          "log10_kappa": -7.199999999999999,
+          "log_required_amplitude_min": 1.667871751903918,
+          "log_required_amplitude_max": 105.80730336775875,
+          "log_amplitude_span": 104.13943161585483,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.361018932463864
+        },
+        {
+          "log10_kappa": -7.1499999999999995,
+          "log_required_amplitude_min": 1.757944277508628,
+          "log_required_amplitude_max": 118.50506313765219,
+          "log_amplitude_span": 116.74711886014356,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.451091458068575
+        },
+        {
+          "log10_kappa": -7.1,
+          "log_required_amplitude_min": 1.8544337784081517,
+          "log_required_amplitude_max": 132.73769067170554,
+          "log_amplitude_span": 130.88325689329739,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.5475809589680978
+        },
+        {
+          "log10_kappa": -7.05,
+          "log_required_amplitude_min": 1.9584277010109583,
+          "log_required_amplitude_max": 148.69249138787603,
+          "log_amplitude_span": 146.73406368686508,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.6515748815708946
+        },
+        {
+          "log10_kappa": -7.0,
+          "log_required_amplitude_min": 2.0710803262310664,
+          "log_required_amplitude_max": 166.5796302570962,
+          "log_amplitude_span": 164.50854993086514,
+          "minimum_worst_relative_error": 1.0,
+          "log_optimal_normalization": 2.764227506791002
+        }
+      ],
+      "optimizer_trials": [
+        {
+          "success": true,
+          "logk": -9.119922593216478,
+          "objective": 1.0083807276646635
+        }
+      ]
+    }
+  ]
+}
