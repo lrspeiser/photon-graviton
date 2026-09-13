@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Resonance-weighted spatial response
+
+An inverse-designed ensemble of independent damped resonances with weight proportional to resonance energy squared gives response approximately proportional to 1/E, canceling the Gaussian spatial model's residual E scaling. Across 0.01–100 eV, broad-cutoff p=2 cases vary by 0.0063–0.1891% after normalization. This is a conditional rate-shape success, not an absolute redshift fit: mode origin, damping-energy channels, extinction, image preservation and event timing remain unresolved. The [ensemble calculation](../../research_work/results/companion-extensions/resonant-spectrum-report.md) tests 18 parameter combinations and 306 normalized responses. Finite resonance cutoffs are essential, and the known oscillator response must not be mistaken for a derived companion microphysics or a completed conservation law.
+
 ### Gaussian spatial overlap
 
 A stipulated Gaussian receiving overlap makes scattering forward-directed and changes the high-energy fractional-loss scaling from cubic to approximately linear. It still fails common fractional redshift. Increasing size also suppresses the integrated rate; illustrative small deflections require compensating coupling or mode abundance that has not been derived. The angular diagnostic is not an observed image-width prediction. The [spatial extension](../../research_work/results/companion-extensions/spatial-response-report.md) evaluates 30 size/energy cases, checks narrow-cone angular integrals independently, and keeps the rate-versus-deflection tradeoff explicit. No microscopic overlap or absolute rate has been inferred from data.
