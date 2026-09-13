@@ -8,6 +8,16 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### New extension assessment
+
+The [companion-extension study](../../research_work/results/companion-extensions/report.md) retains the exact-one-third inventory while testing two distinct modifications. A 60-case axisymmetric gravitational-permittivity sweep gives no selected improvement in 18 outer Milky Way bins after choosing parameters on 20 inner bins. A 2,706-case ideal-Bose phase-selector sweep reduces inner RMS from 3.68/11.83 to 1.81/2.85 km/s for two ordinary-matter baselines; outer RMS changes from 8.36/9.78 to 8.36/9.29. Comparisons use the same spherical gas-monopole approximation, which differs from the earlier full-gas-disk transfer. Data were previously inspected; these are conditional spatial-transfer diagnostics, not blind or cross-galaxy validation.
+
+The phase selector combines known ideal-gas statistics with a proposed companion kinetic scale and conservative contraction map. Its preferred effective masses (17.78/13.34 eV/c²) and compact fractions (13.9/32.3%) are model-dependent fit parameters. Transferring the two parameter sets between ordinary-matter baselines exposes substantial sensitivity. No thermalization, massive bound-state formation, feedback equilibrium, support or full energy balance is derived. The original light-speed traveling channel would need a distinct capture transition into such massive states.
+
+An analytic Poisson-loss diagnostic shows that discrete fractional energy transfers broaden spectral lines unless losses are sufficiently small and numerous. For the archived redshift coefficient and a 100-million-light-year path, an illustrative added relative linewidth of 10^-5 requires per-event loss below 1.31e-8 and at least about 582,000 events. This is a design constraint, not a measured exclusion. Ordinary stationary whole-photon mixing changes intensity rather than redshifting surviving photons. Scalar/axion and string-inspired frameworks remain possible sources of explicit interactions, not derivations of the empirical law. No additional lensing success is claimed; the weak-field force pilot does not determine the relativistic lensing potential.
+
+### Retained empirical foundation
+
 The proposed physical interpretation is a lossless traveling companion channel with capture and retention. Conservation requires accounting for photon, traveling-companion, deposited, and released energy, together with boundary flux and any work done. A closed-volume reservoir equation without flux cannot be applied unaltered to companions traversing a cluster. Retention is not a source of new energy. Ordinary matter continues to contribute gravitational mass; these galaxy fits concern additional gravity, not replacement of the entire gravitational field by newly supplied photons.
 
 The current galaxy retention prescription is
