@@ -1,0 +1,127 @@
+{
+  "scope": "Fixed Plummer potential, nonrelativistic test-particle support. No self-gravity, capture-to-orbit mechanism, field binding or collective stability test.",
+  "isotropic": [
+    {
+      "A": 0.1,
+      "isotropic_checks": [
+        {
+          "radius_over_a": 0.1,
+          "isotropic_radial_variance": 5.890922635044171,
+          "escape_speed_squared": 1.9900743804199785,
+          "variance_over_escape_squared": 2.960151988791982
+        },
+        {
+          "radius_over_a": 0.01,
+          "isotropic_radial_variance": 572.0735127873791,
+          "escape_speed_squared": 1.9999000074993754,
+          "variance_over_escape_squared": 286.0510578739811
+        },
+        {
+          "radius_over_a": 0.001,
+          "isotropic_radial_variance": 57190.25543869877,
+          "escape_speed_squared": 1.99999900000075,
+          "variance_over_escape_squared": 28595.14201690967
+        }
+      ]
+    },
+    {
+      "A": 1.0,
+      "isotropic_checks": [
+        {
+          "radius_over_a": 0.1,
+          "isotropic_radial_variance": 5.962649234188443,
+          "escape_speed_squared": 1.9900743804199785,
+          "variance_over_escape_squared": 2.9961941587982786
+        },
+        {
+          "radius_over_a": 0.01,
+          "isotropic_radial_variance": 578.0543915097091,
+          "escape_speed_squared": 1.9999000074993754,
+          "variance_over_escape_squared": 289.04164675337637
+        },
+        {
+          "radius_over_a": 0.001,
+          "isotropic_radial_variance": 57787.153880464386,
+          "escape_speed_squared": 1.99999900000075,
+          "variance_over_escape_squared": 28893.59138701705
+        }
+      ]
+    },
+    {
+      "A": 10.0,
+      "isotropic_checks": [
+        {
+          "radius_over_a": 0.1,
+          "isotropic_radial_variance": 8.929556320282344,
+          "escape_speed_squared": 1.9900743804199785,
+          "variance_over_escape_squared": 4.487046518531574
+        },
+        {
+          "radius_over_a": 0.01,
+          "isotropic_radial_variance": 851.032190633178,
+          "escape_speed_squared": 1.9999000074993754,
+          "variance_over_escape_squared": 425.5373705894862
+        },
+        {
+          "radius_over_a": 0.001,
+          "isotropic_radial_variance": 85061.4199136605,
+          "escape_speed_squared": 1.99999900000075,
+          "variance_over_escape_squared": 42530.731222179915
+        }
+      ]
+    },
+    {
+      "A": 100.0,
+      "isotropic_checks": [
+        {
+          "radius_over_a": 0.1,
+          "isotropic_radial_variance": 12005970.99231957,
+          "escape_speed_squared": 1.9900743804199785,
+          "variance_over_escape_squared": 6032925.759179851
+        },
+        {
+          "radius_over_a": 0.01,
+          "isotropic_radial_variance": 969398173.2421861,
+          "escape_speed_squared": 1.9999000074993754,
+          "variance_over_escape_squared": 484723320.9695805
+        },
+        {
+          "radius_over_a": 0.001,
+          "isotropic_radial_variance": 96722927662.74124,
+          "escape_speed_squared": 1.99999900000075,
+          "variance_over_escape_squared": 48361488012.0965
+        }
+      ]
+    }
+  ],
+  "circular_orbits": [
+    {
+      "radius_over_a": 0.3,
+      "period": 6.702699385330699,
+      "max_radius_relative_error": 1.8209878049901818e-11,
+      "max_energy_relative_drift": 4.47020198635073e-12,
+      "radial_epicyclic_frequency_squared": 3.2972893750984835
+    },
+    {
+      "radius_over_a": 1.0,
+      "period": 10.567016002364246,
+      "max_radius_relative_error": 7.534628476690841e-11,
+      "max_energy_relative_drift": 4.1565639818941236e-11,
+      "radial_epicyclic_frequency_squared": 0.8838834764831843
+    },
+    {
+      "radius_over_a": 3.0,
+      "period": 35.33294752055899,
+      "max_radius_relative_error": 1.521294201722867e-11,
+      "max_energy_relative_drift": 1.8885448760386225e-11,
+      "radial_epicyclic_frequency_squared": 0.04110960958218893
+    },
+    {
+      "radius_over_a": 10.0,
+      "period": 200.18009853851262,
+      "max_radius_relative_error": 1.2848389019382012e-11,
+      "max_energy_relative_drift": 1.8336887563918935e-11,
+      "radial_epicyclic_frequency_squared": 0.001014448267638848
+    }
+  ]
+}
