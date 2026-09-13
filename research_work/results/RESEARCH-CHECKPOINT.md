@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Latest checkpoint: collective release and assembly.** Larger release quanta conditionally reduce the finite-site lifetime bound as K^-4; mere grouping with unchanged radiation does not. Twenty-four designs quantify packet sizes, while a reversible assembly ladder shows strong sensitivity to forward versus reverse rates. A microscopic accumulation mechanism and release spectrum remain required. See [report](companion-extensions/collective-assembly-report.md).
+
 **Latest checkpoint: physical site/mode budget.** Connecting finite protected excitations to the fitted Milky Way energy inventory yields a necessary stationary lifetime exceeding 10^32 to 10^41 years in the 120 kpc, 90%-protected examples. This assumes all extra mass-energy is in tiny excitations and a homogeneous coupled escape channel; it is not a cosmic-age exclusion. Collective storage, stable states or a separately justified release channel remain alternatives. See [report](companion-extensions/site-mode-budget-report.md).
 
 **Latest checkpoint — escaping-wave feedback:** An energy-conserving finite-site model now includes stimulated return while radiation escapes. Eighteen illustrative histories show delayed protection and extra loss through the bright state. Full stationary protection requires a stipulated non-decaying state and continued illumination; storage saturates at one excitation per site. Site/mode counts and physical lifetimes remain un-derived. See [report](companion-extensions/escape-feedback-report.md).

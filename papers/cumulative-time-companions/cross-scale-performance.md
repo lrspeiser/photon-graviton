@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Collective release and assembly checkpoint
+
+The [collective assembly calculation](../../research_work/results/companion-extensions/collective-assembly-report.md) tests a larger stored excitation assembled from K small contributions and emitting one larger relaxation quantum. Within the prior closure its necessary lifetime bound falls as K^-4; grouping unchanged small emissions gives no such benefit. Twenty-four designs and 96 toy assembly probabilities quantify the distinction. A constant-rate reversible ladder can strongly suppress completion even with a modest reverse bias, so a larger packet cannot simply be assumed available. State-dependent pumping, collective transition rates, momentum and radiation predictions remain unresolved. These conditional calculations neither derive the exact-third reference nor improve the observational fits.
+
 ## Physical site/mode inventory checkpoint
 
 The [site/mode budget](../../research_work/results/companion-extensions/site-mode-budget-report.md) connects the finite-site hypothesis to the fitted Milky Way deposit inventory. If all its Mc^2 is stored in tiny excitations, the previous illustrative site/mode ratios are far too small. A necessary stationary bound follows from positive replenishment in the stimulated-return closure: protected lifetime > mu_min tau p(2p-1)/(1-p). At 120 kpc and p=0.9 the tested energies and bandwidths imply bounds of order 10^32 to 10^41 years. This assumes uniform coupled occupation, the stated escape closure and finite single-excitation sites; it neither fixes the universe's age nor excludes stable or collective states. Seventy-two cases verify the algebra and mode-count quadrature. The empirical one-third reference remains unchanged.
