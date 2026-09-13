@@ -47,14 +47,14 @@ For an explicitly descriptive sensitivity calculation, let b vary by k times the
 
 ## Energy consequence and next physical requirement
 
-The missing photon energy remains E_emit[1-exp(-A)]. It is incorrect to count that loss again when event stretching lowers the arrival power: power decreases through both photon energy and arrival rate, but the longer duration cancels the rate factor in integrated received energy.
+The difference between emitted and observed photon energies is E_emit[1-exp(-A)], when expressed in the stipulated endpoint standards. This is not automatically a local energy deposit into a separate field: geometric redshift compares energies measured by different observers. See the subsequent [receiver-source derivation](../inhomogeneous-clock-completion/receiver-source.md). It is incorrect to count this difference again when event stretching lowers the arrival power: the longer duration cancels the arrival-rate factor in integrated received energy.
 
-Only with the additional assumption of simultaneous local loss rates alpha_t=b alpha and alpha_s=(1-b) alpha, acting on the same photon energy E, do the channel energy integrals obey
+Only in an additional common-energy bookkeeping model with simultaneous physical loss rates alpha_t=b alpha and alpha_s=(1-b) alpha, acting on the same E and assigned explicit receivers, do the channel energy integrals obey
 
     Q_s = integral alpha_s E ds = (1-b)(E_emit-E_obs)
     Q_t = integral alpha_t E ds = b(E_emit-E_obs).
 
-The logarithmic share need not equal the energy share for sequential or spatially varying channel proportions. More importantly, Q_t is work delivered to whatever causes the time/phase change. It cannot be labeled companion energy without a receiving-field equation. If only stationary conversion feeds companions, this restricted simultaneous model leaves them only the small Q_s portion. If the time-producing process also feeds companions, nearly all lost energy could still reach them, but that coupling and its conservation law must be derived.
+The logarithmic share need not equal the energy share for sequential or spatially varying channel proportions. These integrals are not established physical transfer terms for our lapse-metric candidate. The earlier wording identifying Q_t with delivered work was too broad: observer-dependent energy change is insufficient to establish such work or companion production. If only stationary conversion feeds companions, the added common-energy loss model leaves them the Q_s portion. A process that produces both time stretching and companions remains possible, but its local coupling and conservation law must establish that transfer rather than infer it from endpoint redshift.
 
 **Decision:** retain b approximately 1 as the timing requirement for a candidate joint mechanism. Do not add a large stationary loss on top of a clock mechanism already producing the full measured shift. The next physical calculation must identify the receiver of Q_t and produce the arrival map from the same interaction. The observational comparison shows why that missing step matters: a formula that transfers energy but leaves event spacing unchanged cannot be the dominant explanation under these source assumptions.
 
