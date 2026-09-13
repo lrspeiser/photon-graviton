@@ -9,7 +9,11 @@ from scipy.linalg import cho_factor,cho_solve
 P=Path(__file__).resolve().parent;ROOT=P.parents[2];L=P.parent/'isotropic-galaxy-transfer'
 parser=argparse.ArgumentParser()
 parser.add_argument('--slope-constrained',action='store_true')
+parser.add_argument('--all-motion-bins',action='store_true',help='Diagnostic fit consuming the outer bin; requires --slope-constrained')
 args=parser.parse_args()
+if args.all_motion_bins and not args.slope_constrained:parser.error('--all-motion-bins requires --slope-constrained')
+if args.all_motion_bins:
+    inner_previous={(r['Name'],r['population']):r for r in json.loads((P/'constrained-gradient-orbits-results.json').read_text())['rows']}
 if args.slope_constrained:
     from orbit_density import deproject_slope
     previous={(r['Name'],r['population']):r for r in json.loads((P/'gradient-orbits-results.json').read_text())['rows']}
@@ -32,6 +36,8 @@ separate_gradient={(r['Name'],r['population']):r for r in json.loads((P/'stellar
 separate_radial={(r['Name'],r['population']):r for r in json.loads((P/'radial-orbits-results.json').read_text())['rows']}
 out=dict(scope='Fixed companions; lens-calibrated stellar mass; gradient plus radial anisotropy fitted to inner motions; no positive distribution function or stability established',rows=[],summary=[])
 out['slope_constrained']=args.slope_constrained
+out['all_motion_bins_fitted']=args.all_motion_bins
+if args.all_motion_bins:out['scope']='All motion bins fitted with full covariance; lens angle calibrates stellar mass; necessary orbital condition enforced; no held-out prediction or physical stability proof'
 cache={};mu,w=np.polynomial.legendre.leggauss(96)
 for old in source['rows']:
     name=old['Name'];item=data[name];dl=old['geometry']['angular_Dl_Mpc']*1000;dr=old['geometry']['Dls_over_Ds'];ac=old['capture_scale_kpc']
@@ -69,7 +75,8 @@ for old in source['rows']:
     s0=1e11*bend(model.mass_fraction);sh=1e11*bend(core_fraction);dc=bend(comp_mass)
     needed=target/dr-dc;assert needed>0
     y=np.array(item['vrms_kms']);cov=np.array(item['covariance_kms_squared']);fac=cho_factor(cov[:-1,:-1]);cw=cho_solve(fac,cov[:-1,-1]);csd=np.sqrt(cov[-1,-1]-cov[-1,:-1]@cw)
-    def evaluate(q):
+    full_fac=cho_factor(cov)
+    def evaluate(q,inner_only=False):
         h,b0,bi=q;weight=h*meanH/(1+h*meanH)
         mass=1e11*needed/((1-weight)*s0+weight*sh)
         force=mass/1e11*((1-weight)*model.forces[0]+weight*model.forces[1])+model.forces[2]
@@ -78,7 +85,11 @@ for old in source['rows']:
         pressure=-cumulative_trapezoid((nu*force*factor)[::-1],r[::-1],initial=0)[::-1]/factor
         v2=np.trapezoid(r*r*pressure*(model.W-beta*model.T),r,axis=1)/model.den
         assert min(v2)>0 and np.isfinite(v2).all() and 1e7<mass<1e14
-        pred=np.sqrt(v2);err=y[:-1]-pred[:-1];score=float(err@cho_solve(fac,err))
+        pred=np.sqrt(v2)
+        if args.all_motion_bins and not inner_only:
+            err=y-pred;score=float(err@cho_solve(full_fac,err))
+        else:
+            err=y[:-1]-pred[:-1];score=float(err@cho_solve(fac,err))
         return score,pred,mass,weight
     key=(name,old['retention_mapping']['population'])
     sg=separate_gradient[key];sr=separate_radial[key]
@@ -87,7 +98,7 @@ for old in source['rows']:
     grad_seed=[sg['h'],sg['beta'],sg['beta']]
     radial_score=rb.get('inner_chi2',sr['radial_inner_chi2'])
     radial_outer=rb.get('outer_standardized_residual',sr['radial_outer_residual'])
-    rg=evaluate(radial_seed);gg=evaluate(grad_seed)
+    rg=evaluate(radial_seed,True);gg=evaluate(grad_seed,True)
     radial_drift=abs(rg[0]-radial_score);gradient_drift=abs(gg[0]-sg['gradient_inner_chi2'])
     assert radial_drift<1e-4 and gradient_drift<1e-4
     bounds=[(-.8,9),(-2,.45),(-2,.95)]
@@ -110,20 +121,27 @@ for old in source['rows']:
             h,b0,bi=q
             return [h,float(np.clip((b0+2)/(central_bound(bi)+2),0,1)),bi]
         prev=previous[key];starts.append([prev['h'],prev['beta0'],prev['beta_infinity']])
+        if args.all_motion_bins:
+            prior=inner_previous[key];prior_q=[prior['h'],prior['beta0'],prior['beta_infinity']]
+            starts.append(prior_q)
+            prior_total=evaluate(prior_q)[0]
+            assert abs(prior_total-prior['combined_inner_chi2']-prior['combined_outer_residual']**2)<1e-5
         fits=[minimize(lambda q:evaluate(physical(q))[0],mapped(q),bounds=[bounds[0],(0,1),bounds[2]],method='L-BFGS-B',options={'ftol':1e-11,'maxiter':600}) for q in starts]
         for f in fits:f.x=physical(f.x)
     else:
         fits=[minimize(lambda q:evaluate(q)[0],q,bounds=bounds,method='L-BFGS-B',options={'ftol':1e-11,'maxiter':600}) for q in starts]
     good=[f for f in fits if f.success and np.isfinite(f.fun)];assert good
     opt=min(good,key=lambda f:f.fun);score,pred,mass,weight=evaluate(opt.x)
-    assert score<=(radial_score if args.slope_constrained else min(radial_score,sg['gradient_inner_chi2']))+1e-4
+    if args.all_motion_bins:assert score<=prior_total+1e-4
+    else:assert score<=(radial_score if args.slope_constrained else min(radial_score,sg['gradient_inner_chi2']))+1e-4
+    inner_score=evaluate(opt.x,True)[0]
     h,b0,bi=opt.x;outer=pred[-1]+cw@(y[:-1]-pred[:-1])
     lens_error=abs(dr*(mass/1e11*((1-weight)*s0+weight*sh)+dc)/target-1)
     assert lens_error<1e-10
     out['rows'].append(dict(Name=name,population=key[1],h=float(h),beta0=float(b0),beta_infinity=float(bi),Re_kpc=Re,
         stellar_mass_Msun=mass,central_to_outer_ML_ratio=float(1+h),
         boundaries={key:bool(min(abs(v-lo),abs(v-hi))<1e-4) for key,v,(lo,hi) in zip(['h','beta0','beta_infinity'],opt.x,bounds)},
-        combined_inner_chi2=score,combined_outer_residual=float((y[-1]-outer)/csd),
+        combined_inner_chi2=inner_score,combined_outer_residual=float((y[-1]-outer)/csd),
         radial_inner_chi2=radial_score,radial_outer_residual=radial_outer,
         gradient_inner_chi2=sg['gradient_inner_chi2'],gradient_outer_residual=sg['gradient_outer_standardized_residual'],
         free_inner_chi2=old['inner_chi2'],free_outer_residual=old['outer_conditional_standardized_residual'],
@@ -131,6 +149,10 @@ for old in source['rows']:
         radial_limit_chi2_difference=radial_drift,gradient_limit_chi2_difference=gradient_drift,
         optimizer_successes=len(good),optimizer_attempts=len(fits),successful_objectives=[float(f.fun) for f in good],
         failed_optimizer_messages=[str(f.message) for f in fits if not f.success]))
+    if args.all_motion_bins:
+        decomposition_error=abs(score-inner_score-out['rows'][-1]['combined_outer_residual']**2)
+        assert decomposition_error<1e-5
+        out['rows'][-1].update(all_motion_chi2=score,previous_inner_fit_total_chi2=prior_total,previous_inner_fit_inner_chi2=prior['combined_inner_chi2'],previous_inner_fit_outer_residual=prior['combined_outer_residual'],covariance_decomposition_difference=decomposition_error,motion_bins=len(y))
     if args.slope_constrained:
         fine_beta=b0+(bi-b0)*check_x**2/(1+check_x**2)
         margin=fine_gamma-2*fine_beta
@@ -146,7 +168,8 @@ paths=[L/'capacity-reference-optics-results.json',L/'capacity-reference-exact-le
 paths += [P.parent/f/n for f,n in [('slacs-resolved-input-audit','results.json'),('slacs-light-profile-audit','results.json'),('slacs-motion-lensing-pilot','results.json'),('lensing-data-readiness','conditional-geometry.json'),('slacs-outer-bin-check','protocol.json')]]
 paths += [P/'stellar-gradient-results.json',P/'radial-orbits-results.json',P/'gradient-orbits-protocol.md']
 if args.slope_constrained:paths += [P/'gradient-orbits-results.json',P/'orbit_density.py',P/'constrained-gradient-orbits-protocol.md']
+if args.all_motion_bins:paths += [P/'constrained-gradient-orbits-results.json',P/'all-motion-orbits-protocol.md']
 out['input_sha256']={str(f.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
 assert len(out['rows'])==12
-(P/('constrained-gradient-orbits-results.json' if args.slope_constrained else 'gradient-orbits-results.json')).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
+(P/('all-motion-orbits-results.json' if args.all_motion_bins else ('constrained-gradient-orbits-results.json' if args.slope_constrained else 'gradient-orbits-results.json'))).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(out['summary'],indent=2))

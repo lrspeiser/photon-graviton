@@ -1,3 +1,5 @@
+> All-motion diagnostic: fitting all 40 bins reduces total chi-squared from 193.62/190.91 to 161.81/159.83, but J1402+6321 remains the dominant discrepancy. The outer bins are now fitted, not predicted; orbital boundary dependence remains. See all-motion-orbits-report.md. The v1.2 PDF predates this experiment.
+
 > New constrained orbital fit: inner chi-squared 87.58/86.79 and outer residual-square sums 106.03/104.12. All twelve fits satisfy the imposed central and sampled slope/anisotropy conditions, with six cases on the central bound. Positivity, stability and joint agreement remain unresolved. See constrained-gradient-orbits-report.md. The v1.2 PDF predates this experiment.
 
 > New result after paper v1.2: combining stellar gradients and radial orbits lowers inner chi-squared to 82.40/81.67, but outer residual-square sums remain 103.20/101.32 and six of twelve fits fail the necessary orbital condition near extrapolated centers. See the combined-fit report; no physical solution is adopted. The v1.2 PDF predates this experiment.

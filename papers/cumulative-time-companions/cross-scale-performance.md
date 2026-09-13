@@ -1,3 +1,11 @@
+## All-motion diagnostic with lens calibration and constrained orbits (after v1.2)
+
+Fitting all 40 stellar-motion bins, including the previously reserved outer bins, reduces the total covariance-weighted chi-squared from 193.62/190.91 at the constrained inner-only solutions to 161.81/159.83. Inner contributions worsen to 104.25/103.00; conditional outer contributions improve to 57.57/56.84. This is a descriptive all-bin fit, not a prediction. The standard block-covariance identity is verified to 2.67e-14.
+
+J1402+6321 still contributes approximately 47% of the total error, with conditional outer residual around 5.3. J1112+0826 and J1630+4520 switch to the tangential outer endpoint beta_infinity=-2, showing sensitivity to inclusion of the outer measurements. Other boundary dependence remains. Necessary central and sampled orbital conditions pass, but positivity and stability are unproved. Exact-third companions and lens calibration are unchanged; no joint physical solution or improvement over competing theories is established.
+
+See [protocol](../../research_work/results/companion-extensions/all-motion-orbits-protocol.md), [full diagnostic and limitations](../../research_work/results/companion-extensions/all-motion-orbits-report.md), and [recorded calculations](../../research_work/results/companion-extensions/all-motion-orbits-results.json). The v1.2 PDF remains an earlier snapshot.
+
 ## Combined fits with the necessary orbital condition enforced (after v1.2)
 
 The previous combined-gradient/orbit result has now been refitted with gamma>=2 beta enforced on 4097 radial points and checked on 8193. The exact central limit of the adopted positive Sersic light components is also enforced: gamma(0)=0.75, hence beta0<=0.375. This cap follows from the extrapolated light model; it is not an observed central clock or orbit parameter. All twelve fits pass these necessary conditions, and three galaxies under both populations sit on the central cap.
