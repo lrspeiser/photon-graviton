@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Photon survival and resonant channel energy
+
+The resonance candidate now has an explicit photon-survival requirement and drift energy ledger. At 2 eV, gap 1e-8 eV and z=0.00766048, an illustrative 90% survival requires removal/useful rate ratio below 6.93e-8; at z=1 it is 1.05e-9. Removed radiation energy is separately counted. Damping is not automatically absorption, and the actual common-coupling branching ratios remain unknown. The [branching diagnostic](../../research_work/results/companion-extensions/resonance-loss-report.md) records 108 energy ledgers and nine independent ODE comparisons. The 90% allowance is not an observational bound, and the calculation does not complete a unitary response or remove spectral and timing requirements.
+
 ### Resonance-weighted spatial response
 
 An inverse-designed ensemble of independent damped resonances with weight proportional to resonance energy squared gives response approximately proportional to 1/E, canceling the Gaussian spatial model's residual E scaling. Across 0.01–100 eV, broad-cutoff p=2 cases vary by 0.0063–0.1891% after normalization. This is a conditional rate-shape success, not an absolute redshift fit: mode origin, damping-energy channels, extinction, image preservation and event timing remain unresolved. The [ensemble calculation](../../research_work/results/companion-extensions/resonant-spectrum-report.md) tests 18 parameter combinations and 306 normalized responses. Finite resonance cutoffs are essential, and the known oscillator response must not be mistaken for a derived companion microphysics or a completed conservation law.
