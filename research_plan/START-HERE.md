@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Conservative-recycling endpoint.** Isotropic same-channel re-emission admits stationary J=1 under an isotropic boundary bath, giving density Cg eta(X). Training-adjusted validation/test RMSE is 28.82/30.88 km/s versus matched reference 30.82/21.41. Stationary recycling avoids a separate escape-channel drain but does not establish formation energy, post-source retention or a physical return mechanism. [Report](../research_work/results/companion-extensions/conservative-recycling-report.md).
+
 **Occupancy-dependent transport.** Solving empty-site capture and local filling together across 149 inputs increases deposits further. Training-adjusted validation/test RMSE is 28.64/26.70 km/s versus matched reference 30.82/21.41. Stationary absorbed power is balanced by an explicitly assumed non-recaptured release channel; its microscopic cause and local support remain open. [Report](../research_work/results/companion-extensions/occupancy-transport-report.md).
 
 **Local-capacity comparison.** Replacing CgJ eta(X) by Cg eta(XJ) with fixed transport greatly increases deposits in weakly illuminated regions. Training-only amplitude adjustment yields mixed validation/test RMSE 28.63/25.19 km/s versus matched control 30.82/21.41. No replacement is adopted; occupancy-dependent transport and the physical capacity remain unresolved. [Report](../research_work/results/companion-extensions/local-capacity-report.md).

@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Conservative same-channel release
+
+The [full-recycling endpoint](../../research_work/results/companion-extensions/conservative-recycling-report.md) has the exact stationary solution J=1 in an isotropic boundary bath when absorbed energy is re-emitted isotropically into the same gray channel. The unattenuated density Cg eta(X) worsens test RMSE to 30.88 km/s after a training-only amplitude adjustment, versus 26.70 for escaping release and 21.41 for the matched reference. Local capture/release cancels at equilibrium; initial supply, isolated retention, microscopic transitions and support are not derived. No release endpoint is adopted as a solution.
+
 ## Occupancy-dependent capture and transport
 
 The [coupled transport calculation](../../research_work/results/companion-extensions/occupancy-transport-report.md) solves local exact-third filling with capture opacity k0 g(1-f), assigning released energy to a non-recaptured escaping channel. Reduced opacity increases illumination and density. Across 149 inputs, training-adjusted validation/test RMSE is 28.64/26.70 km/s, versus 30.82/21.41 for the matched reference. Integrated incident absorption agrees with volume capture to 6.17e-5 relative, with equal assigned outgoing power. This is a stationary energy closure, not a derived release channel, momentum/support solution or improvement across partitions.
