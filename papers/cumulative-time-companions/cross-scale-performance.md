@@ -120,6 +120,14 @@ For the cached M87 source field, 797 external galaxy entries give about 53.1% of
 
 Streams crossing do not automatically merge or bind. Lightlike bending scales are of order 10^-5 radians for the existing lenses; full ray tracing and companion-specific scattering remain unexecuted. The next mechanism test must map source paths through capture into a radial and angular deposit distribution before comparing it to halo targets. This calculation supplies that test's inputs and does not improve the reported rotation or lens scores.
 
+## Straight-stream capture follow-up
+
+The [executed capture test](../../research_work/results/isotropic-galaxy-transfer/stream-capture-report.md) holds the one-third law, k0 and original capture scales fixed and integrates external companion rays inside each diagnostic 5 Re region. Five finite source distances and a distant background are compared with all existing geometry/population halo targets. Boundary illumination is conditional; internal sources, ongoing photon conversion inside the boundary, exterior opacity, steering and migration are excluded. Constant history is required to equate deposited-power shape with accumulated density. Normalizing both enclosed profiles at the boundary isolates placement and does not verify energy supply.
+
+With the standard comparison targets, separately fitted nonnegative source-distance mixtures reduce maximum cumulative fraction errors to 2.44, 5.52 and 5.83 percentage points for J1112, J1621 and J1630. They require predominantly or entirely the nearest tested shell, D/R=1.1. J0037, J1204 and J1402 remain at 17.97, 49.94 and 65.11 points, with inadequate central deposition. Under the retained geometry none of the six mixtures improves on distant illumination within this basis. The errors are normalized radial differences, not lens residuals or observational significance. Both population proxies and all cases are archived.
+
+This test distinguishes a source-location adjustment from a new capture or migration mechanism. Nearby illumination can move deposited weight outward, but does not supply the missing central concentration in the difficult targets. Boundary-fitted source weights are not observed stellar populations and cannot be transferred as predictions. The original halo-fit limitations and incomplete source histories remain; no new rotation/lens fit or complete halo-formation mechanism is claimed.
+
 ## Comparison claims that the evidence permits
 
 A common law that predicts both galaxy and cluster observables with fewer unsupported additions would be a meaningful advance. The present results do not yet show that: MOND is stronger in the matched galaxy test, while the cluster exercise is freely fitted and the lens transfer remains mismatched. A cluster shape fit cannot cancel a galaxy prediction deficit or establish a missing energy budget.
