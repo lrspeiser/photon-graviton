@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: angular escape geometry.** In an isolated-source toy geometry, small direction changes can reach less populated modes and favor loading. The illustrative cumulative direction spread can be small for distant sources, so this is not a universal image-blurring exclusion. Real source coverage, outgoing-mode filling, kernel strength and observer geometry remain unmodeled. See [report](../research_work/results/companion-extensions/angular-outlet-report.md).
+
 **Latest checkpoint: self-consistent source and outlet.** A replenished high-energy field and escaping low-energy field can sustain loading with occupations solved together. Slow escape throttles the rate. The terminal protected sink remains imposed; a one-step 2 eV to 1e-8 eV loading route requires processed light power 2e8 times net assembly power. See [report](../research_work/results/companion-extensions/source-outlet-report.md).
 
 **Latest checkpoint: occupation-driven assembly bias.** A reciprocal two-mode interaction favors loading only when the input mode is more occupied than its paired output mode. Smooth thermal examples do not provide that preference; a closed reservoir consumes an imposed contrast. Sustained loading needs specified source and escape channels, with momentum and field depletion included. See [report](../research_work/results/companion-extensions/mode-driven-bias-report.md).

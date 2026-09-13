@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Angular escape-channel checkpoint
+
+The [angular outlet diagnostic](../../research_work/results/companion-extensions/angular-outlet-report.md) relates empty-direction fraction to a uniform source disk and fixed isotropic angular kicks. In dilute modes a reverse/forward ratio of 0.9 requires about 10% empty outputs, attainable at a kick of 0.157242 source radii. An optimistic repeated-kick calculation can give small direction spread for a distant isolated source; it is neither a universal blurring exclusion nor an image-compatibility result. Thirty-six configurations and nine independent overlap integrals check the geometry. Multi-source illumination, returning radiation, physical kernel rate, recoil and actual observer transport remain unresolved. The retention reference and observational fits are unchanged.
+
 ## Maintained source and escape outlet checkpoint
 
 The [source/outlet calculation](../../research_work/results/companion-extensions/source-outlet-report.md) solves loader throughput and both coupled occupations together. Thirty-six stationary cases include source depletion and outlet accumulation; eighteen small cyclic generators independently verify the current. A forward-biased open-field solution exists under the specified replenishment and empty outlet, but terminal packet export/protection is imposed. The optical one-step example processes 2e8 times more photon power than net assembly power, with most energy remaining in outgoing light. Source geometry, absolute coupling, momentum, stability and supply remain unverified. This is a conditional loader architecture, not a new galaxy fit or a derivation of the retention reference.
