@@ -1,0 +1,225 @@
+{
+  "scope": "Fixed new source model on already exposed Cepheid validation subset; approximate Jeans comparison, not fresh validation",
+  "hashes": {
+    "research_work\\results\\component-loading-cepheids\\run.py": "6ab264e6e2eaa0ce238063a031309b9c069edaae3503886d0b3e3ad871804f82",
+    "research_work\\results\\component-attached-loading\\results.json": "00e7461c965a2174b18c85def52fd4b2a4eae74c66652f3b43bbc9bcc616df50",
+    "research_work\\results\\cepheid-validation\\results.json": "b8925b90f94c17bb156566371d28d58fdde0ed94f729ea2b9134348221ee2d1c",
+    "research_work\\results\\cepheid-validation\\validation-bins.json": "3d53a3187f3e6b7c9d718d13dba8586fe56bcb9ab614e55f4ed07ae6ab8f8d58",
+    "research_work\\data-cache\\cepheid-stars\\cepheid-validation-selected.parquet": "71816b28fa1ed85cdab11be3ed144c481c1a3a574b8c6e2ca734ac90e370bd33",
+    "research_work\\results\\cepheid-validation\\components.py": "83374b2644a10f797362854dc613a33cc5b3b5121fcd2fec2bc708486a5d37f7",
+    "research_work\\results\\conservative-field-completion\\run.py": "ec0d15eb7bb93568440c734f816479c0dd759f14754752f3641252810ef2d862",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd"
+  },
+  "coefficients": {
+    "bar": 0.2832153715750716,
+    "nuclei": 0.0,
+    "disk_0": 0.0,
+    "disk_1": 1.3439786991822609,
+    "disk_2": 0.0,
+    "disk_3": 0.6651388513228945,
+    "softened_centre": 0.0
+  },
+  "selected_stars": 167,
+  "final_test_opened": false,
+  "parameters_fitted_to_these_velocities": false,
+  "maximum_refinement_kms": 0.009266696453607892,
+  "results": [
+    {
+      "refined": false,
+      "rms_kms": 28.416592633922026,
+      "bias_kms": -25.619932328202022,
+      "underpredicted_bins": 9,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 37,
+          "radius_mean": 6.574057987004011,
+          "inferred_jeans_speed": 241.69895602231892,
+          "predicted_balance_speed": 221.18314261943772,
+          "ordinary_speed": 181.1095843320125,
+          "original_empirical_speed": 222.67101560644898,
+          "residual_kms": -20.515813402881207
+        },
+        {
+          "bin": 1,
+          "n": 24,
+          "radius_mean": 7.516293608631595,
+          "inferred_jeans_speed": 236.0172077099971,
+          "predicted_balance_speed": 220.3883639698254,
+          "ordinary_speed": 178.55465690489382,
+          "original_empirical_speed": 223.4313938234351,
+          "residual_kms": -15.628843740171703
+        },
+        {
+          "bin": 2,
+          "n": 24,
+          "radius_mean": 8.528664914323722,
+          "inferred_jeans_speed": 231.81221450314962,
+          "predicted_balance_speed": 217.6097142181027,
+          "ordinary_speed": 174.83490801638197,
+          "original_empirical_speed": 222.98152406506685,
+          "residual_kms": -14.20250028504691
+        },
+        {
+          "bin": 3,
+          "n": 13,
+          "radius_mean": 9.465822094323,
+          "inferred_jeans_speed": 224.36400092034637,
+          "predicted_balance_speed": 213.6763902920977,
+          "ordinary_speed": 170.73501689216477,
+          "original_empirical_speed": 221.65208634129291,
+          "residual_kms": -10.687610628248677
+        },
+        {
+          "bin": 4,
+          "n": 20,
+          "radius_mean": 10.513980355755155,
+          "inferred_jeans_speed": 225.41143547603843,
+          "predicted_balance_speed": 208.30048228491853,
+          "ordinary_speed": 165.73495202416171,
+          "original_empirical_speed": 219.51015986855998,
+          "residual_kms": -17.110953191119904
+        },
+        {
+          "bin": 5,
+          "n": 13,
+          "radius_mean": 11.517080243846443,
+          "inferred_jeans_speed": 231.79114632502257,
+          "predicted_balance_speed": 202.57263044142687,
+          "ordinary_speed": 160.78813496748285,
+          "original_empirical_speed": 217.06656632012934,
+          "residual_kms": -29.2185158835957
+        },
+        {
+          "bin": 6,
+          "n": 10,
+          "radius_mean": 12.55198960333858,
+          "inferred_jeans_speed": 234.85197915037662,
+          "predicted_balance_speed": 196.43295701042237,
+          "ordinary_speed": 155.72737355932023,
+          "original_empirical_speed": 214.38689937373718,
+          "residual_kms": -38.41902213995425
+        },
+        {
+          "bin": 7,
+          "n": 14,
+          "radius_mean": 13.388719749599838,
+          "inferred_jeans_speed": 227.99620441442926,
+          "predicted_balance_speed": 191.4594359914255,
+          "ordinary_speed": 151.7484418002959,
+          "original_empirical_speed": 212.20855330434733,
+          "residual_kms": -36.536768423003764
+        },
+        {
+          "bin": 8,
+          "n": 8,
+          "radius_mean": 14.312733416792693,
+          "inferred_jeans_speed": 234.31683926798047,
+          "predicted_balance_speed": 186.05747600818438,
+          "ordinary_speed": 147.51713200971676,
+          "original_empirical_speed": 209.85319634152683,
+          "residual_kms": -48.25936325979609
+        }
+      ]
+    },
+    {
+      "refined": true,
+      "rms_kms": 28.40978527024376,
+      "bias_kms": -25.612505055556834,
+      "underpredicted_bins": 9,
+      "bins": [
+        {
+          "bin": 0,
+          "n": 37,
+          "radius_mean": 6.574057987004011,
+          "inferred_jeans_speed": 241.69895602231892,
+          "predicted_balance_speed": 221.18548002858557,
+          "ordinary_speed": 181.11224980416682,
+          "original_empirical_speed": 222.67101560644898,
+          "residual_kms": -20.51347599373335
+        },
+        {
+          "bin": 1,
+          "n": 24,
+          "radius_mean": 7.516293608631595,
+          "inferred_jeans_speed": 236.0172077099971,
+          "predicted_balance_speed": 220.39384164915836,
+          "ordinary_speed": 178.5598207693826,
+          "original_empirical_speed": 223.4313938234351,
+          "residual_kms": -15.623366060838748
+        },
+        {
+          "bin": 2,
+          "n": 24,
+          "radius_mean": 8.528664914323722,
+          "inferred_jeans_speed": 231.81221450314962,
+          "predicted_balance_speed": 217.61762152895864,
+          "ordinary_speed": 174.841869592193,
+          "original_empirical_speed": 222.98152406506685,
+          "residual_kms": -14.194592974190982
+        },
+        {
+          "bin": 3,
+          "n": 13,
+          "radius_mean": 9.465822094323,
+          "inferred_jeans_speed": 224.36400092034637,
+          "predicted_balance_speed": 213.6854075704177,
+          "ordinary_speed": 170.74265805715672,
+          "original_empirical_speed": 221.65208634129291,
+          "residual_kms": -10.678593349928661
+        },
+        {
+          "bin": 4,
+          "n": 20,
+          "radius_mean": 10.513980355755155,
+          "inferred_jeans_speed": 225.41143547603843,
+          "predicted_balance_speed": 208.30974898137214,
+          "ordinary_speed": 165.74253712810557,
+          "original_empirical_speed": 219.51015986855998,
+          "residual_kms": -17.101686494666296
+        },
+        {
+          "bin": 5,
+          "n": 13,
+          "radius_mean": 11.517080243846443,
+          "inferred_jeans_speed": 231.79114632502257,
+          "predicted_balance_speed": 202.58152722169888,
+          "ordinary_speed": 160.79521237307142,
+          "original_empirical_speed": 217.06656632012934,
+          "residual_kms": -29.20961910332369
+        },
+        {
+          "bin": 6,
+          "n": 10,
+          "radius_mean": 12.55198960333858,
+          "inferred_jeans_speed": 234.85197915037662,
+          "predicted_balance_speed": 196.4412929765941,
+          "ordinary_speed": 155.73386416463538,
+          "original_empirical_speed": 214.38689937373718,
+          "residual_kms": -38.41068617378252
+        },
+        {
+          "bin": 7,
+          "n": 14,
+          "radius_mean": 13.388719749599838,
+          "inferred_jeans_speed": 227.99620441442926,
+          "predicted_balance_speed": 191.46738017758085,
+          "ordinary_speed": 151.75458178512395,
+          "original_empirical_speed": 212.20855330434733,
+          "residual_kms": -36.52882423684841
+        },
+        {
+          "bin": 8,
+          "n": 8,
+          "radius_mean": 14.312733416792693,
+          "inferred_jeans_speed": 234.31683926798047,
+          "predicted_balance_speed": 186.06513815528163,
+          "ordinary_speed": 147.52308764579058,
+          "original_empirical_speed": 209.85319634152683,
+          "residual_kms": -48.25170111269884
+        }
+      ]
+    }
+  ]
+}
