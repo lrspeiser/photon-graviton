@@ -1,0 +1,11 @@
+# Companion capture scale and density normalization fitted
+
+13 September 2026. Recorded before execution.
+
+Give the companion density the same two local freedoms as the free-NFW comparison: capture radius ac/Re in [0.1,100] and fraction f in [0,0.95] of required catalogue-angle bending supplied by deposits. Keep k0 fixed to the galaxy reference and recompute angular attenuation J for each ac; do not merely rescale the old radial profile. Use rho_d=D*J(r;ac,k0)/[1+(r/ac)^2]^2. D is fitted indirectly through f and the density's deflection. The reference D=A*eta(X) is recorded only for comparison: freeing D absorbs the one-third factor and does not test or derive that exponent.
+
+Retain the same four stellar freedoms, bounds, forty motion bins, six unique galaxies, lens-calibrated stellar mass, full covariance, geometry and necessary orbital constraints. Fit six parameters per galaxy, matching the free-NFW local count. No companion energy-supply history is inferred by fitting D. Report the required D/reference-D and ac/reference-ac ratios under both reference population proxies, not a new adopted universal law.
+
+Tabulate unit density masses and bending over 257 log capture scales, interpolate positive masses/deflections logarithmically for the initial search, and polish the best successful candidates with direct density/deflection evaluation. Keep the inherited radial integration range; report it relative to fitted capture scales and do not claim an exact infinite-radius inventory. Cache direct profiles by scale for efficiency. Verify reference-companion and zero-density reproduction, final interpolation differences, positivity, lens closure, covariance decomposition and the refined necessary orbital condition.
+
+Use both reference companion parameter sets, the stellar-only fit, the six-parameter NFW result mapped as a seed, and eighteen grid starts with capture-scale ratios 0.3,3,30 and bending fractions 0.1,0.4,0.8, each with two stellar seeds. Different physical profile families need not share objective values at the same seed. Require a final direct objective no worse than the feasible tested seeds. Record all optimizer outcomes and boundaries. Lower fit residuals do not establish prediction, a stable distribution function or a radiation source.

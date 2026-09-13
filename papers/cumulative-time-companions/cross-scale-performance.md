@@ -1,3 +1,11 @@
+## Companion scale and density fitted with matched local freedoms (after v1.2)
+
+Freeing capture scale and stored-density normalization gives total all-motion chi-squared 26.49, versus 49.71 for the free NFW diagnostic, with six local parameters per galaxy in both. Opacity k0 remains fixed and attenuation is recomputed as capture scale changes. All forty motion bins are fitted and lens angles calibrate stellar mass. This is descriptive profile flexibility, not a shared physical prediction; free normalization absorbs the one-third factor.
+
+The required departures prevent promotion to the reference law. Two compact fits require density normalizations roughly 500 and 2400 times the reference; J1621+3931 reaches ac/Re=100 and implies about 8.42e16 solar masses of effective stored mass, or 1.51e64 J under the reference energy/mass closure. The positive exterior tail is bounded by 4*pi*D*ac^4/R and adds at most about 1.30% for that largest case. No physical source history or independent large-radius mass test establishes this reservoir.
+
+Direct-profile polishing and separate angular/deflection refinement support the reported numerical score, while stellar/radial-grid assumptions, distribution-function positivity and stability remain unresolved. See [pre-execution protocol](../../research_work/results/companion-extensions/free-companion-protocol.md), [fit, inventory and limitations](../../research_work/results/companion-extensions/free-companion-report.md), and [recorded fit](../../research_work/results/companion-extensions/free-companion-results.json). The v1.2 PDF remains the earlier snapshot.
+
 ## NFW size and strength fitted: qualification of the restricted comparison (after v1.2)
 
 Releasing the halo scale and bending strength reduces the total all-motion chi-squared to 49.71, versus 111.27-113.56 for the transferred companion profile. The largest improvement is J1402+6321, now 4.49 instead of 63.24/64.97. The previous prescribed-scale, lens-matched NFW results therefore do not establish a general advantage of the companion profile over freely fitted halos.

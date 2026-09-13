@@ -1,0 +1,631 @@
+{
+  "scope": "Bounded companion capture scale and density strength plus four stellar parameters fitted to all motion bins; lens calibration consumed; no independent prediction or stability proof",
+  "rows": [
+    {
+      "Name": "J0037-0942",
+      "motion_bins": 6,
+      "h": -0.48995024023196104,
+      "beta0": 0.375,
+      "beta_infinity": 0.95,
+      "orbit_transition_radius_Re": 0.5207830693698713,
+      "capture_scale_Re": 1.962637723159506,
+      "capture_scale_kpc": 20.140533373449102,
+      "halo_bending_fraction": 0.1391354772249668,
+      "stellar_mass_Msun": 851130774211.2115,
+      "stored_density_normalization_Msun_kpc3": 84882355.59592266,
+      "all_motion_chi2": 4.614844307527428,
+      "inner_chi2": 4.613161275382185,
+      "conditional_outer_residual": 0.04102477477382304,
+      "observed_stellar_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "predicted_stellar_vrms": [
+        291.74613782769904,
+        289.72776617242664,
+        285.4103319308653,
+        275.19856866055557,
+        258.73035676336576,
+        242.78822532099397
+      ],
+      "stellar_only_chi2": 32.41642250869013,
+      "companion_chi2": {
+        "Chabrier": 10.444177941943046,
+        "Salpeter": 9.738896901613966
+      },
+      "boundaries": {
+        "h": false,
+        "central_slope_coordinate": true,
+        "beta_infinity": true,
+        "log_orbit_radius": false,
+        "log_capture_radius": false,
+        "halo_fraction": false
+      },
+      "minimum_refined_slope_margin": 0.09025116266906175,
+      "central_slope_margin": 0.0,
+      "reference_companion_reproduction_max_difference": 1.0810804340621871e-07,
+      "zero_halo_reproduction_difference": 0.0,
+      "covariance_decomposition_difference": 1.1622647289044608e-16,
+      "lens_fractional_residual": 0.0,
+      "deflection_interpolation_fractional_difference": 5.852953413043593e-07,
+      "optimizer_attempts": 22,
+      "optimizer_successes": 22,
+      "successful_objectives": [
+        4.614844355511595,
+        4.614844355538836,
+        4.614844355559081,
+        4.614844355597315,
+        4.635104030978849,
+        32.41642250869044,
+        32.41642250869069,
+        32.416422508691014,
+        32.41642250869109,
+        32.41642250869228,
+        32.41642250869231,
+        32.41642250869315,
+        32.41642250869394,
+        32.41642250869396,
+        32.41642250869582,
+        32.41642250869684,
+        32.41642250869941,
+        32.41642250870012,
+        32.41642250870146,
+        32.41642250871029,
+        56.086684732597206,
+        140.0314754902245
+      ],
+      "direct_polish_successes": 3,
+      "direct_polish_objectives": [
+        4.614844307527428,
+        4.6148443075532075,
+        4.614844307575708
+      ],
+      "failed_optimizer_messages": [],
+      "free_nfw_chi2": 9.264644852845896,
+      "reference_parameter_ratios": {
+        "Chabrier": {
+          "capture_scale_ratio": 1.188836016914701,
+          "density_normalization_ratio": 1.6932121645032887
+        },
+        "Salpeter": {
+          "capture_scale_ratio": 1.188836016914701,
+          "density_normalization_ratio": 1.6073362270706397
+        }
+      },
+      "outer_grid_radius_in_capture_scales": 18438.0097718001,
+      "stored_mass_within_grid_Msun": 4393954488394.564,
+      "force_interpolation_max_relative_difference": 0.00030017749487265544
+    },
+    {
+      "Name": "J1112+0826",
+      "motion_bins": 7,
+      "h": 9.0,
+      "beta0": 0.375,
+      "beta_infinity": 0.95,
+      "orbit_transition_radius_Re": 1.5462382616364636,
+      "capture_scale_Re": 2.5315318396087156,
+      "capture_scale_kpc": 16.236240423197042,
+      "halo_bending_fraction": 0.48032234322957035,
+      "stellar_mass_Msun": 236157834522.48642,
+      "stored_density_normalization_Msun_kpc3": 266539112.7657623,
+      "all_motion_chi2": 9.060359581591284,
+      "inner_chi2": 7.860336386409776,
+      "conditional_outer_residual": 1.0954557020626186,
+      "observed_stellar_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "predicted_stellar_vrms": [
+        284.20531998358643,
+        283.0911604326978,
+        280.83650708201634,
+        275.3141729866179,
+        264.99884017312877,
+        256.4582493150573,
+        253.38018088759873
+      ],
+      "stellar_only_chi2": 18.025082645647252,
+      "companion_chi2": {
+        "Chabrier": 18.668235589233692,
+        "Salpeter": 18.699775565837466
+      },
+      "boundaries": {
+        "h": true,
+        "central_slope_coordinate": true,
+        "beta_infinity": true,
+        "log_orbit_radius": false,
+        "log_capture_radius": false,
+        "halo_fraction": false
+      },
+      "minimum_refined_slope_margin": 0.07772441253956763,
+      "central_slope_margin": 0.0,
+      "reference_companion_reproduction_max_difference": 3.0122759397954724e-08,
+      "zero_halo_reproduction_difference": 0.0,
+      "covariance_decomposition_difference": 2.6645352591003757e-15,
+      "lens_fractional_residual": 0.0,
+      "deflection_interpolation_fractional_difference": 2.890434923075169e-06,
+      "optimizer_attempts": 22,
+      "optimizer_successes": 21,
+      "successful_objectives": [
+        9.060319141261381,
+        9.060319141261438,
+        9.060319141262204,
+        9.060319141264802,
+        9.060319141267138,
+        9.060319141268682,
+        17.138281917788817,
+        17.13828191779377,
+        17.138281917794163,
+        17.138281917799716,
+        17.138281917809717,
+        17.138281917823114,
+        17.138281917853117,
+        17.1931834638375,
+        17.193183463837972,
+        18.025082645648304,
+        18.025082645648315,
+        18.025082645649462,
+        18.025082645653452,
+        29.581287647786887,
+        31.506385922687237
+      ],
+      "direct_polish_successes": 3,
+      "direct_polish_objectives": [
+        9.060359581597586,
+        9.060359581593655,
+        9.060359581591284
+      ],
+      "failed_optimizer_messages": [
+        "ABNORMAL: "
+      ],
+      "free_nfw_chi2": 17.64081871965375,
+      "reference_parameter_ratios": {
+        "Chabrier": {
+          "capture_scale_ratio": 1.533434415011791,
+          "density_normalization_ratio": 4.902799889360946
+        },
+        "Salpeter": {
+          "capture_scale_ratio": 1.533434415011791,
+          "density_normalization_ratio": 4.7054333071019965
+        }
+      },
+      "outer_grid_radius_in_capture_scales": 20108.138815719107,
+      "stored_mass_within_grid_Msun": 7622449551493.926,
+      "force_interpolation_max_relative_difference": 0.0002682125166746374
+    },
+    {
+      "Name": "J1204+0358",
+      "motion_bins": 7,
+      "h": -0.8,
+      "beta0": -1.5931141703203249,
+      "beta_infinity": 0.95,
+      "orbit_transition_radius_Re": 1.5559712805744619,
+      "capture_scale_Re": 0.10000000000000002,
+      "capture_scale_kpc": 0.4137431857024068,
+      "halo_bending_fraction": 0.5774003050153333,
+      "stellar_mass_Msun": 221443562671.99634,
+      "stored_density_normalization_Msun_kpc3": 135260892361.1027,
+      "all_motion_chi2": 8.168814381336764,
+      "inner_chi2": 4.339710002097412,
+      "conditional_outer_residual": 1.9568097452842346,
+      "observed_stellar_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "predicted_stellar_vrms": [
+        264.71934822383133,
+        264.75866742309313,
+        264.711578758855,
+        263.7804587921272,
+        258.41090244198756,
+        245.2319805937988,
+        214.90639408809272
+      ],
+      "stellar_only_chi2": 13.945154038708564,
+      "companion_chi2": {
+        "Chabrier": 14.332978945093,
+        "Salpeter": 14.424317643370848
+      },
+      "boundaries": {
+        "h": true,
+        "central_slope_coordinate": false,
+        "beta_infinity": true,
+        "log_orbit_radius": false,
+        "log_capture_radius": true,
+        "halo_fraction": false
+      },
+      "minimum_refined_slope_margin": 2.5720237951738634,
+      "central_slope_margin": 3.9362283406406497,
+      "reference_companion_reproduction_max_difference": 1.8366872467368012e-09,
+      "zero_halo_reproduction_difference": 0.0,
+      "covariance_decomposition_difference": 8.881784197001252e-16,
+      "lens_fractional_residual": 0.0,
+      "deflection_interpolation_fractional_difference": 1.3322676295501878e-15,
+      "optimizer_attempts": 22,
+      "optimizer_successes": 22,
+      "successful_objectives": [
+        8.168814381336771,
+        8.168814381337542,
+        8.168814381340066,
+        8.168814381341246,
+        13.2610794704298,
+        13.261079470432454,
+        13.261079470494344,
+        13.94515403870845,
+        13.945154038708539,
+        13.945154038708912,
+        13.945154038708939,
+        13.945154038721562,
+        13.945154038724713,
+        13.94515403872909,
+        13.945154038746267,
+        13.945154038753188,
+        13.945154038783555,
+        13.945154038805983,
+        13.945154038873461,
+        13.945154038947067,
+        44.36088257833989,
+        44.3608825783405
+      ],
+      "direct_polish_successes": 2,
+      "direct_polish_objectives": [
+        8.168814381336764,
+        8.168814381336995
+      ],
+      "failed_optimizer_messages": [],
+      "free_nfw_chi2": 13.94515403870847,
+      "reference_parameter_ratios": {
+        "Chabrier": {
+          "capture_scale_ratio": 0.06057338055241705,
+          "density_normalization_ratio": 2444.574768590649
+        },
+        "Salpeter": {
+          "capture_scale_ratio": 0.06057338055241705,
+          "density_normalization_ratio": 2352.003892245056
+        }
+      },
+      "outer_grid_radius_in_capture_scales": 524323.1013556374,
+      "stored_mass_within_grid_Msun": 93023378395.94733,
+      "force_interpolation_max_relative_difference": 1.7763568394002505e-15
+    },
+    {
+      "Name": "J1402+6321",
+      "motion_bins": 7,
+      "h": 9.0,
+      "beta0": -1.1188824393237764,
+      "beta_infinity": 0.8550192003635944,
+      "orbit_transition_radius_Re": 0.09999999999999998,
+      "capture_scale_Re": 2.077845626516054,
+      "capture_scale_kpc": 18.030475155520772,
+      "halo_bending_fraction": 0.4079094110231855,
+      "stellar_mass_Msun": 244136024099.5524,
+      "stored_density_normalization_Msun_kpc3": 290497879.000507,
+      "all_motion_chi2": 0.41973348376726954,
+      "inner_chi2": 0.35531949734406254,
+      "conditional_outer_residual": -0.2537991064271248,
+      "observed_stellar_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "predicted_stellar_vrms": [
+        294.35628305293034,
+        294.7028542425599,
+        293.6790886919973,
+        284.9506038996169,
+        265.7816618636506,
+        256.2004787708826,
+        255.24799296999473
+      ],
+      "stellar_only_chi2": 105.95815378973211,
+      "companion_chi2": {
+        "Chabrier": 64.97387942589255,
+        "Salpeter": 63.242964575185624
+      },
+      "boundaries": {
+        "h": true,
+        "central_slope_coordinate": false,
+        "beta_infinity": false,
+        "log_orbit_radius": true,
+        "log_capture_radius": false,
+        "halo_fraction": false
+      },
+      "minimum_refined_slope_margin": 0.8918323623365256,
+      "central_slope_margin": 2.987764878647553,
+      "reference_companion_reproduction_max_difference": 4.5198888187769626e-08,
+      "zero_halo_reproduction_difference": 0.0,
+      "covariance_decomposition_difference": 0.0,
+      "lens_fractional_residual": 1.1102230246251565e-16,
+      "deflection_interpolation_fractional_difference": 5.250088599417779e-07,
+      "optimizer_attempts": 22,
+      "optimizer_successes": 22,
+      "successful_objectives": [
+        0.41973285744912187,
+        0.4197328574499612,
+        0.4197328574511041,
+        0.4197328574527313,
+        0.4197328574528497,
+        0.41973285747048006,
+        86.73327301494075,
+        86.73327301494132,
+        86.73327301494326,
+        86.73327301494575,
+        86.73327301495793,
+        105.95815378973333,
+        105.95815378973333,
+        105.95815378973454,
+        105.95815378973518,
+        105.95815378973573,
+        105.95815378973683,
+        105.95815378974038,
+        105.95815378974198,
+        245.77746767661571,
+        245.77746767661642,
+        245.77746767661893
+      ],
+      "direct_polish_successes": 3,
+      "direct_polish_objectives": [
+        0.41973348377180114,
+        0.419733483784804,
+        0.41973348376726954
+      ],
+      "failed_optimizer_messages": [],
+      "free_nfw_chi2": 4.494468458820579,
+      "reference_parameter_ratios": {
+        "Chabrier": {
+          "capture_scale_ratio": 1.2586213386413234,
+          "density_normalization_ratio": 5.538116780542182
+        },
+        "Salpeter": {
+          "capture_scale_ratio": 1.2586213386413234,
+          "density_normalization_ratio": 5.298103624848526
+        }
+      },
+      "outer_grid_radius_in_capture_scales": 26309.47548689133,
+      "stored_mass_within_grid_Msun": 11091796803649.254,
+      "force_interpolation_max_relative_difference": 0.00033700816830239955
+    },
+    {
+      "Name": "J1621+3931",
+      "motion_bins": 6,
+      "h": -0.6264527829875511,
+      "beta0": 0.375,
+      "beta_infinity": 0.95,
+      "orbit_transition_radius_Re": 1.4123659282906693,
+      "capture_scale_Re": 99.99999893155898,
+      "capture_scale_kpc": 877.4850806038842,
+      "halo_bending_fraction": 0.08474367670549275,
+      "stellar_mass_Msun": 945185737754.8646,
+      "stored_density_normalization_Msun_kpc3": 63129143.00309659,
+      "all_motion_chi2": 2.761989332988462,
+      "inner_chi2": 2.738571379630134,
+      "conditional_outer_residual": -0.15302925654373725,
+      "observed_stellar_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "predicted_stellar_vrms": [
+        270.53886562586615,
+        268.72881467995086,
+        265.00157836891276,
+        256.28369955545315,
+        241.70467013425315,
+        224.67847619550588
+      ],
+      "stellar_only_chi2": 3.093851233965628,
+      "companion_chi2": {
+        "Chabrier": 3.408720913754018,
+        "Salpeter": 3.426215451862309
+      },
+      "boundaries": {
+        "h": false,
+        "central_slope_coordinate": true,
+        "beta_infinity": true,
+        "log_orbit_radius": false,
+        "log_capture_radius": true,
+        "halo_fraction": false
+      },
+      "minimum_refined_slope_margin": 0.09220138013886525,
+      "central_slope_margin": 0.0,
+      "reference_companion_reproduction_max_difference": 9.25397536377659e-11,
+      "zero_halo_reproduction_difference": 0.0,
+      "covariance_decomposition_difference": 8.708311849403572e-16,
+      "lens_fractional_residual": 2.220446049250313e-16,
+      "deflection_interpolation_fractional_difference": 6.8833827526759706e-15,
+      "optimizer_attempts": 22,
+      "optimizer_successes": 22,
+      "successful_objectives": [
+        2.761989332988462,
+        2.7619894901549333,
+        2.761991617125025,
+        2.761991731638517,
+        2.761991969561258,
+        2.7619920004198635,
+        2.7619925444393054,
+        2.7640027937454104,
+        2.7823688713518147,
+        2.782368871360067,
+        2.782368871363345,
+        2.782368871379798,
+        2.782368871383366,
+        2.782368871403191,
+        2.7823688714184356,
+        2.782368871502046,
+        2.7823688715784667,
+        3.093851233965561,
+        3.0938512339669466,
+        3.0938512339694655,
+        6.643101815312749,
+        8.064720032476114
+      ],
+      "direct_polish_successes": 3,
+      "direct_polish_objectives": [
+        2.761989332988462,
+        2.7619894892610897,
+        2.761991617089576
+      ],
+      "failed_optimizer_messages": [],
+      "free_nfw_chi2": 2.8204199590950734,
+      "reference_parameter_ratios": {
+        "Chabrier": {
+          "capture_scale_ratio": 60.5733799052262,
+          "density_normalization_ratio": 1.2309467366312687
+        },
+        "Salpeter": {
+          "capture_scale_ratio": 60.5733799052262,
+          "density_normalization_ratio": 1.172026292884914
+        }
+      },
+      "outer_grid_radius_in_capture_scales": 490.8159660443574,
+      "stored_mass_within_grid_Msun": 8.424316879540432e+16,
+      "force_interpolation_max_relative_difference": 7.332766616130471e-10
+    },
+    {
+      "Name": "J1630+4520",
+      "motion_bins": 7,
+      "h": -0.6505422115211873,
+      "beta0": 0.375,
+      "beta_infinity": -2.0,
+      "orbit_transition_radius_Re": 0.47267764407156726,
+      "capture_scale_Re": 0.10000000000000002,
+      "capture_scale_kpc": 0.7415836503004236,
+      "halo_bending_fraction": 0.2617383466562303,
+      "stellar_mass_Msun": 829818552903.2054,
+      "stored_density_normalization_Msun_kpc3": 27960548033.883057,
+      "all_motion_chi2": 1.4683551077516948,
+      "inner_chi2": 1.4163121865554062,
+      "conditional_outer_residual": 0.22812917655637313,
+      "observed_stellar_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "predicted_stellar_vrms": [
+        294.68551296697643,
+        293.3752759878674,
+        290.72580806560757,
+        284.10883024828036,
+        270.84809353265433,
+        256.6513748874618,
+        240.616894891633
+      ],
+      "stellar_only_chi2": 1.6497424380262975,
+      "companion_chi2": {
+        "Chabrier": 1.7366969950086577,
+        "Salpeter": 1.7422532335668224
+      },
+      "boundaries": {
+        "h": false,
+        "central_slope_coordinate": true,
+        "beta_infinity": true,
+        "log_orbit_radius": false,
+        "log_capture_radius": true,
+        "halo_fraction": false
+      },
+      "minimum_refined_slope_margin": 0.07772441256130624,
+      "central_slope_margin": 0.0,
+      "reference_companion_reproduction_max_difference": 1.4456036367960223e-09,
+      "zero_halo_reproduction_difference": 0.0,
+      "covariance_decomposition_difference": 3.608224830031759e-16,
+      "lens_fractional_residual": 1.1102230246251565e-16,
+      "deflection_interpolation_fractional_difference": 9.992007221626409e-16,
+      "optimizer_attempts": 22,
+      "optimizer_successes": 22,
+      "successful_objectives": [
+        1.4683551077877857,
+        1.5255577528675341,
+        1.5255577528687607,
+        1.525557752870863,
+        1.525557752871739,
+        1.559447732994175,
+        1.5594477329968721,
+        1.5594477329982324,
+        1.55944773299946,
+        1.5594477330033472,
+        1.5594477330050738,
+        1.5594477330055654,
+        1.5594477330058134,
+        1.5594477330263579,
+        1.559447733045974,
+        1.6497424380262975,
+        1.6497424380264396,
+        1.6497424380267252,
+        1.6497424380291053,
+        1.6497424380291403,
+        9.088221750029135,
+        17.286152621160166
+      ],
+      "direct_polish_successes": 3,
+      "direct_polish_objectives": [
+        1.4683551077516948,
+        1.5255572581762646,
+        1.525557258180813
+      ],
+      "failed_optimizer_messages": [],
+      "free_nfw_chi2": 1.5475495266422539,
+      "reference_parameter_ratios": {
+        "Chabrier": {
+          "capture_scale_ratio": 0.06057338055241705,
+          "density_normalization_ratio": 513.9041327329115
+        },
+        "Salpeter": {
+          "capture_scale_ratio": 0.06057338055241705,
+          "density_normalization_ratio": 493.27161304860186
+        }
+      },
+      "outer_grid_radius_in_capture_scales": 536682.4767006872,
+      "stored_mass_within_grid_Msun": 109348892922.86041,
+      "force_interpolation_max_relative_difference": 1.887379141862766e-15
+    }
+  ],
+  "input_sha256": {
+    "research_work/results/isotropic-galaxy-transfer/capacity-reference-optics-results.json": "58357d342bab59a71bfea83f8f1499a821ed0e4a763fd5c6e595453652834b86",
+    "research_work/results/isotropic-galaxy-transfer/capacity-reference-exact-lens-optics-results.json": "12eeb201dd8c30eb8f60f5d7f7036215deff80e86644dd7d317cd6b784fd8b74",
+    "research_work/results/isotropic-galaxy-transfer/third-radiation-retention-results.json": "d9c0277a3cedba60fa83b9014d452b27f56ddfabb50c0edfefc53df95424be53",
+    "research_work/results/slacs-component-refit/model.py": "6f9c79fe74144c6217978f8c477f33b0ce923cf4861f09ea4af066120eab0d39",
+    "research_work/results/slacs-resolved-fit/model.py": "091c1af40427bcb19e7897332fa3f92a5092934b55b1dd5eb8543c58b57ba8d9",
+    "research_work/results/companion-extensions/orbit_density.py": "f4157ff9b87f3ac9fd12fdd1837d11cbfde83a15f11f63f41fd8c13df329df8b",
+    "research_work/results/companion-extensions/orbit-transition-results.json": "0e2d361ffd903663bdda672238fd92bd88c2cf581e2b399c6f684c8b96c16162",
+    "research_work/results/companion-extensions/stellar-only-lens-control-results.json": "a625e446b10f8528c6d071498de5ae628869e1cfa7c8619cd95784de9c6255fe",
+    "research_work/results/companion-extensions/free-companion-protocol.md": "fc078164619224178bd4f8b3799ba25049fa6d85ed0723893c9fe3224df73aa9",
+    "research_work/results/companion-extensions/free-nfw-results.json": "c5d115aa01fbbf2c57f13abf79ac93bab39caf8f08d35770df96435f0c00dba6",
+    "research_work/results/slacs-resolved-input-audit/results.json": "f04541d9ba2890367d47332d0d54b1e9801e7e35c0a4e854b75ca218747e63dd",
+    "research_work/results/slacs-light-profile-audit/results.json": "7018d93494858c84a482b0f2951ee2175237be700ab5a51c7404d4b7a8a56c01",
+    "research_work/results/slacs-motion-lensing-pilot/results.json": "d284e7b0e43514f9863612602226709805c7c8da3819f963ff1caeaeea285760",
+    "research_work/results/lensing-data-readiness/conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "research_work/results/slacs-outer-bin-check/protocol.json": "b439a2d18ed73086bce1e90fa88a66f2f9bdedf90cc523d553c172101c0e2724"
+  },
+  "summary": {
+    "total_motion_bins": 40,
+    "local_parameters_per_galaxy": 6,
+    "all_motion_chi2": 26.494096194962903,
+    "inner_chi2": 21.323410727418977,
+    "outer_residual_square_sum": 5.170685467543923
+  }
+}
