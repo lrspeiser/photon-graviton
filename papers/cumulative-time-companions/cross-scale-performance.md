@@ -1,3 +1,5 @@
+> New capture diagnostic: receiver-assisted absorption or separate-particle production can conserve momentum with a small recoil budget; two-packet production needs favorable energies and directions. These are conditional kinematic branches, not capture rates or orbit formation. See research_work/results/companion-extensions/capture-recoil-threshold-report.md. The v1.4 PDF predates this calculation.
+
 > Current paper: v1.4 (13 September 2026), evidence through 0756dec. The review now includes matched rotation comparisons with ordinary matter, MOND and specified NFW models; qualified Coma and lens comparisons; conversion-rate versus FLRW and published H0 values; timing/brightness limitations; and the latest reservoir scale and orbital-support results. Older notices below describe historical paper versions. No new fitting was performed for this update.
 
 ## Circular-orbit support: stationary alternative, formation still open
