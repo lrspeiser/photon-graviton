@@ -1,5 +1,7 @@
 # Academic manuscript
 
+**Theory-basis paper v1.0, 13 September 2026:** [Editable paper](theory-basis.md) and [PDF](../../output/pdf/theory-basis.pdf) consolidate the core postulates, twelve provenance-labeled equations, current successes/failures and eight requirements for a competitive theory. Nuclear emission is retained as an optional track alongside settling, conversion/time, lensing/field response and cross-system transfer. No superiority claim or newly completed physical goal is made.
+
 **Cross-scale assessment, 13 September 2026:** [Current formula performance](cross-scale-performance.md) begins the running comparison across galaxy rotation, Coma, lens galaxies, optics and unresolved mechanism tests. Includes the newly executed exact-one-third lens transfer. The historical manuscript PDF has not been rebuilt with this supplement.
 
 **Persistent-background theory addition, 12 September 2026:** [Microwave-background addendum](persistent-background-addendum.md) adds the user's three candidate mechanisms, optional S^3 modes, energy constraints and joint temperature/polarization targets. It is a proposed extension, not a fitted result; the historical PDF is unchanged.
