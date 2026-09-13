@@ -1,3 +1,5 @@
+Latest data acquisition: [KCWI radial profiles and covariances for 14 SLACS lenses](research_work/results/slacs-resolved-data/report.md). Eight overlap training; three validation, two test and one unassigned retained. Pinned source hashes verified; no resolved fit or reserved evaluation performed.
+
 Latest lensing sensitivity: [common orbital anisotropy on 33 training lenses](research_work/results/slacs-orbit-sensitivity/report.md). Median extra-force angle excess ranges 3.7-15.5%; orbital constraints are needed before a gravity-law conclusion. No beta selected from these scores, reserved roles untouched.
 
 Latest observational transfer: [33 SLACS training lenses](research_work/results/slacs-motion-lensing-pilot/report.md). Mass inferred from stellar dispersion alone; fixed extra-force template predicts median lens angles 9-10% high and does not improve descriptive RMS. Conditional spherical empirical pilot, not companion-source validation; reserved scores untouched.
