@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Maintained source and escape outlet checkpoint
+
+The [source/outlet calculation](../../research_work/results/companion-extensions/source-outlet-report.md) solves loader throughput and both coupled occupations together. Thirty-six stationary cases include source depletion and outlet accumulation; eighteen small cyclic generators independently verify the current. A forward-biased open-field solution exists under the specified replenishment and empty outlet, but terminal packet export/protection is imposed. The optical one-step example processes 2e8 times more photon power than net assembly power, with most energy remaining in outgoing light. Source geometry, absolute coupling, momentum, stability and supply remain unverified. This is a conditional loader architecture, not a new galaxy fit or a derivation of the retention reference.
+
 ## Occupation-driven assembly bias checkpoint
 
 The [two-mode interaction](../../research_work/results/companion-extensions/mode-driven-bias-report.md) makes the previously stipulated forward bias conditional on source occupations. For a reciprocal resonant store-raising interaction, paired rates give r=n_L(1+n_H)/[n_H(1+n_L)]. A forward preference requires n_H>n_L. Smooth thermal occupations give the opposite sign, while closed unequal reservoirs consume their contrast. Distinct maintained source and escape channels remain a possible route, but angular transport, recoil, the absolute rate and the traveling-companion connection are unresolved. Twelve occupation designs, twelve thermal cases and nine operator-matrix checks validate the algebra; no observational fit or retention exponent changes.

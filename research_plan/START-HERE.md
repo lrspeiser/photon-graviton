@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: self-consistent source and outlet.** A replenished high-energy field and escaping low-energy field can sustain loading with occupations solved together. Slow escape throttles the rate. The terminal protected sink remains imposed; a one-step 2 eV to 1e-8 eV loading route requires processed light power 2e8 times net assembly power. See [report](../research_work/results/companion-extensions/source-outlet-report.md).
+
 **Latest checkpoint: occupation-driven assembly bias.** A reciprocal two-mode interaction favors loading only when the input mode is more occupied than its paired output mode. Smooth thermal examples do not provide that preference; a closed reservoir consumes an imposed contrast. Sustained loading needs specified source and escape channels, with momentum and field depletion included. See [report](../research_work/results/companion-extensions/mode-driven-bias-report.md).
 
 **Latest checkpoint: restarted assembly and recycling.** Repeated attempts give finite mean completion times for the constant-rate ladder, but unbiased assembly can circulate about 200,000 times its net energy in the representative packet. Keeping replacement input below net assembly then requires returned-energy losses below about five parts per million. A forward bias helps, but its physical source remains unspecified. See [report](../research_work/results/companion-extensions/assembly-recycling-report.md).
