@@ -1,0 +1,961 @@
+{
+  "C_Msun_kpc3": 4166620.59862083,
+  "W0_kms2": 10.0,
+  "optimizer_success": true,
+  "boundary": true,
+  "scores": {
+    "train": {
+      "n": 89,
+      "RMSE_kms": 63.46289999978264,
+      "log_RMS": 0.17690261502601579
+    },
+    "validation": {
+      "n": 29,
+      "RMSE_kms": 52.91946868236219,
+      "log_RMS": 0.1470056469954568
+    },
+    "test": {
+      "n": 31,
+      "RMSE_kms": 45.23637276327212,
+      "log_RMS": 0.12725348992905539
+    }
+  },
+  "galaxies": [
+    {
+      "name": "NGC6015",
+      "split": "train",
+      "RMSE_kms": 46.4265014086599,
+      "log_RMS": 0.13744632416346364
+    },
+    {
+      "name": "ESO444-G084",
+      "split": "train",
+      "RMSE_kms": 23.9943845015465,
+      "log_RMS": 0.3035365498334279
+    },
+    {
+      "name": "UGC04325",
+      "split": "train",
+      "RMSE_kms": 36.770409929119715,
+      "log_RMS": 0.2953731508735812
+    },
+    {
+      "name": "UGC04483",
+      "split": "train",
+      "RMSE_kms": 6.860236231370479,
+      "log_RMS": 0.18902560537779764
+    },
+    {
+      "name": "UGC07089",
+      "split": "train",
+      "RMSE_kms": 5.650039731894828,
+      "log_RMS": 0.05412049231479123
+    },
+    {
+      "name": "UGC02953",
+      "split": "train",
+      "RMSE_kms": 84.47516364330107,
+      "log_RMS": 0.12078543748789389
+    },
+    {
+      "name": "UGC08286",
+      "split": "train",
+      "RMSE_kms": 26.81928111559671,
+      "log_RMS": 0.23516129839062078
+    },
+    {
+      "name": "UGC06983",
+      "split": "train",
+      "RMSE_kms": 25.871296949377907,
+      "log_RMS": 0.13638274954394589
+    },
+    {
+      "name": "NGC4013",
+      "split": "train",
+      "RMSE_kms": 47.80113708791778,
+      "log_RMS": 0.09950203316066097
+    },
+    {
+      "name": "NGC0100",
+      "split": "train",
+      "RMSE_kms": 12.970022040106935,
+      "log_RMS": 0.09560930173840887
+    },
+    {
+      "name": "NGC4010",
+      "split": "train",
+      "RMSE_kms": 17.15512129697254,
+      "log_RMS": 0.09154795143418436
+    },
+    {
+      "name": "NGC2998",
+      "split": "train",
+      "RMSE_kms": 79.16458240333411,
+      "log_RMS": 0.20557879069885282
+    },
+    {
+      "name": "UGC00891",
+      "split": "train",
+      "RMSE_kms": 6.104480252264169,
+      "log_RMS": 0.06617323864375078
+    },
+    {
+      "name": "UGC11557",
+      "split": "train",
+      "RMSE_kms": 13.970983038228981,
+      "log_RMS": 0.20743177765826043
+    },
+    {
+      "name": "UGC02259",
+      "split": "train",
+      "RMSE_kms": 29.91560205456675,
+      "log_RMS": 0.25383654990538546
+    },
+    {
+      "name": "NGC4085",
+      "split": "train",
+      "RMSE_kms": 16.580736735018125,
+      "log_RMS": 0.09255650091751104
+    },
+    {
+      "name": "UGC12632",
+      "split": "train",
+      "RMSE_kms": 15.359952388812124,
+      "log_RMS": 0.15779715734511768
+    },
+    {
+      "name": "NGC3769",
+      "split": "train",
+      "RMSE_kms": 93.82274925264049,
+      "log_RMS": 0.21230285520785602
+    },
+    {
+      "name": "NGC6503",
+      "split": "train",
+      "RMSE_kms": 41.188752178226714,
+      "log_RMS": 0.1318051556457646
+    },
+    {
+      "name": "UGC06446",
+      "split": "train",
+      "RMSE_kms": 22.698032354312662,
+      "log_RMS": 0.20684327138261746
+    },
+    {
+      "name": "D631-7",
+      "split": "train",
+      "RMSE_kms": 5.307217246379615,
+      "log_RMS": 0.06204187061123634
+    },
+    {
+      "name": "UGC05005",
+      "split": "train",
+      "RMSE_kms": 63.70520041399747,
+      "log_RMS": 0.18790047704554158
+    },
+    {
+      "name": "UGC07866",
+      "split": "train",
+      "RMSE_kms": 6.840124498410023,
+      "log_RMS": 0.1590649472599693
+    },
+    {
+      "name": "NGC2403",
+      "split": "train",
+      "RMSE_kms": 25.279301634742907,
+      "log_RMS": 0.11400028162898275
+    },
+    {
+      "name": "UGC06667",
+      "split": "train",
+      "RMSE_kms": 26.378969106475253,
+      "log_RMS": 0.2878229163146474
+    },
+    {
+      "name": "UGC06614",
+      "split": "train",
+      "RMSE_kms": 129.7957229609272,
+      "log_RMS": 0.17962256939380486
+    },
+    {
+      "name": "UGC04278",
+      "split": "train",
+      "RMSE_kms": 19.134914410265175,
+      "log_RMS": 0.18245049564593802
+    },
+    {
+      "name": "IC2574",
+      "split": "train",
+      "RMSE_kms": 12.326516610633437,
+      "log_RMS": 0.08107489835284318
+    },
+    {
+      "name": "ESO563-G021",
+      "split": "train",
+      "RMSE_kms": 56.97949889768395,
+      "log_RMS": 0.1294033971219407
+    },
+    {
+      "name": "NGC0289",
+      "split": "train",
+      "RMSE_kms": 214.99650647974897,
+      "log_RMS": 0.3083777735233089
+    },
+    {
+      "name": "UGC09133",
+      "split": "train",
+      "RMSE_kms": 244.45122021483377,
+      "log_RMS": 0.2529313363234809
+    },
+    {
+      "name": "NGC2903",
+      "split": "train",
+      "RMSE_kms": 31.890050200698372,
+      "log_RMS": 0.11837132355016027
+    },
+    {
+      "name": "UGC11820",
+      "split": "train",
+      "RMSE_kms": 25.284191304106987,
+      "log_RMS": 0.24805050317972693
+    },
+    {
+      "name": "NGC0300",
+      "split": "train",
+      "RMSE_kms": 18.442351669408453,
+      "log_RMS": 0.13397470675513481
+    },
+    {
+      "name": "D564-8",
+      "split": "train",
+      "RMSE_kms": 3.377334052370794,
+      "log_RMS": 0.09207218475503044
+    },
+    {
+      "name": "UGC00128",
+      "split": "train",
+      "RMSE_kms": 172.17007692217854,
+      "log_RMS": 0.3323634559438285
+    },
+    {
+      "name": "NGC2915",
+      "split": "train",
+      "RMSE_kms": 27.089200408587914,
+      "log_RMS": 0.21290655837929126
+    },
+    {
+      "name": "UGC07577",
+      "split": "train",
+      "RMSE_kms": 1.451532393947968,
+      "log_RMS": 0.08960711275088297
+    },
+    {
+      "name": "UGC05253",
+      "split": "train",
+      "RMSE_kms": 61.51531182111901,
+      "log_RMS": 0.09420315353847808
+    },
+    {
+      "name": "UGC05918",
+      "split": "train",
+      "RMSE_kms": 10.883802896938318,
+      "log_RMS": 0.21690257730219092
+    },
+    {
+      "name": "UGC07125",
+      "split": "train",
+      "RMSE_kms": 51.79594449065207,
+      "log_RMS": 0.23130004346405156
+    },
+    {
+      "name": "NGC7793",
+      "split": "train",
+      "RMSE_kms": 20.09760288443683,
+      "log_RMS": 0.12813304798092245
+    },
+    {
+      "name": "NGC5005",
+      "split": "train",
+      "RMSE_kms": 23.333286166242694,
+      "log_RMS": 0.04100692417934781
+    },
+    {
+      "name": "NGC3893",
+      "split": "train",
+      "RMSE_kms": 26.038215310276925,
+      "log_RMS": 0.0659379424047765
+    },
+    {
+      "name": "NGC5371",
+      "split": "train",
+      "RMSE_kms": 100.10172640597654,
+      "log_RMS": 0.15673118694131422
+    },
+    {
+      "name": "NGC4138",
+      "split": "train",
+      "RMSE_kms": 27.34438524402925,
+      "log_RMS": 0.0727917488377456
+    },
+    {
+      "name": "NGC0247",
+      "split": "train",
+      "RMSE_kms": 16.81739677366513,
+      "log_RMS": 0.1322098345779856
+    },
+    {
+      "name": "UGC06930",
+      "split": "train",
+      "RMSE_kms": 26.192470706816767,
+      "log_RMS": 0.12175354225595804
+    },
+    {
+      "name": "DDO064",
+      "split": "train",
+      "RMSE_kms": 13.518145565538795,
+      "log_RMS": 0.31081383769751
+    },
+    {
+      "name": "NGC2683",
+      "split": "train",
+      "RMSE_kms": 75.19503643530365,
+      "log_RMS": 0.15617083424399417
+    },
+    {
+      "name": "NGC4217",
+      "split": "train",
+      "RMSE_kms": 40.027743183708495,
+      "log_RMS": 0.1350586430100973
+    },
+    {
+      "name": "NGC3521",
+      "split": "train",
+      "RMSE_kms": 22.170126408166944,
+      "log_RMS": 0.04894045841537857
+    },
+    {
+      "name": "UGC05829",
+      "split": "train",
+      "RMSE_kms": 8.78589151323456,
+      "log_RMS": 0.16372636415641809
+    },
+    {
+      "name": "UGC06923",
+      "split": "train",
+      "RMSE_kms": 16.26890051702073,
+      "log_RMS": 0.1083645186261757
+    },
+    {
+      "name": "UGC05716",
+      "split": "train",
+      "RMSE_kms": 19.45299391308358,
+      "log_RMS": 0.16320516530747808
+    },
+    {
+      "name": "UGC05750",
+      "split": "train",
+      "RMSE_kms": 37.96467656182963,
+      "log_RMS": 0.13767681833761247
+    },
+    {
+      "name": "UGC06917",
+      "split": "train",
+      "RMSE_kms": 22.71436587055638,
+      "log_RMS": 0.1336323989239264
+    },
+    {
+      "name": "NGC1003",
+      "split": "train",
+      "RMSE_kms": 72.07851528885476,
+      "log_RMS": 0.20164748234012086
+    },
+    {
+      "name": "CamB",
+      "split": "train",
+      "RMSE_kms": 3.1498032006042878,
+      "log_RMS": 0.16061381485281925
+    },
+    {
+      "name": "NGC3953",
+      "split": "train",
+      "RMSE_kms": 30.088269026783223,
+      "log_RMS": 0.06901534719826878
+    },
+    {
+      "name": "NGC5055",
+      "split": "train",
+      "RMSE_kms": 125.40247986022548,
+      "log_RMS": 0.19782104940611175
+    },
+    {
+      "name": "UGC07261",
+      "split": "train",
+      "RMSE_kms": 19.55109576757719,
+      "log_RMS": 0.1822130262482563
+    },
+    {
+      "name": "NGC2841",
+      "split": "train",
+      "RMSE_kms": 116.42061293275714,
+      "log_RMS": 0.15393945263180864
+    },
+    {
+      "name": "NGC4100",
+      "split": "train",
+      "RMSE_kms": 35.17974879762687,
+      "log_RMS": 0.09499962672845146
+    },
+    {
+      "name": "UGC08490",
+      "split": "train",
+      "RMSE_kms": 23.28110317654287,
+      "log_RMS": 0.17961167728601893
+    },
+    {
+      "name": "UGC00191",
+      "split": "train",
+      "RMSE_kms": 20.72675114419183,
+      "log_RMS": 0.2213859802637396
+    },
+    {
+      "name": "UGC06818",
+      "split": "train",
+      "RMSE_kms": 8.493821352296948,
+      "log_RMS": 0.06549195163514783
+    },
+    {
+      "name": "UGC01281",
+      "split": "train",
+      "RMSE_kms": 13.007046792119397,
+      "log_RMS": 0.191519676586158
+    },
+    {
+      "name": "NGC5033",
+      "split": "train",
+      "RMSE_kms": 88.35391877301322,
+      "log_RMS": 0.14682146393437756
+    },
+    {
+      "name": "UGCA444",
+      "split": "train",
+      "RMSE_kms": 9.421063146052322,
+      "log_RMS": 0.2532216633227628
+    },
+    {
+      "name": "UGC08837",
+      "split": "train",
+      "RMSE_kms": 2.813140204778858,
+      "log_RMS": 0.03637859526689493
+    },
+    {
+      "name": "NGC3726",
+      "split": "train",
+      "RMSE_kms": 57.18290031178524,
+      "log_RMS": 0.1178156470056132
+    },
+    {
+      "name": "UGC05764",
+      "split": "train",
+      "RMSE_kms": 22.643916568818717,
+      "log_RMS": 0.3515594609609661
+    },
+    {
+      "name": "ESO116-G012",
+      "split": "train",
+      "RMSE_kms": 26.593870364628327,
+      "log_RMS": 0.1646639197548667
+    },
+    {
+      "name": "UGC07399",
+      "split": "train",
+      "RMSE_kms": 45.42238264950538,
+      "log_RMS": 0.3184748414352069
+    },
+    {
+      "name": "UGC03580",
+      "split": "train",
+      "RMSE_kms": 29.42524044423962,
+      "log_RMS": 0.10513705755124121
+    },
+    {
+      "name": "UGC11914",
+      "split": "train",
+      "RMSE_kms": 49.78362295148349,
+      "log_RMS": 0.08354246625253837
+    },
+    {
+      "name": "UGC07690",
+      "split": "train",
+      "RMSE_kms": 16.48150177819758,
+      "log_RMS": 0.14928743722261742
+    },
+    {
+      "name": "UGC12506",
+      "split": "train",
+      "RMSE_kms": 104.28443455703352,
+      "log_RMS": 0.2170226872255074
+    },
+    {
+      "name": "UGC05986",
+      "split": "train",
+      "RMSE_kms": 33.889424797262805,
+      "log_RMS": 0.1831769403473344
+    },
+    {
+      "name": "NGC3198",
+      "split": "train",
+      "RMSE_kms": 85.23177136210221,
+      "log_RMS": 0.1828453700810951
+    },
+    {
+      "name": "UGC06787",
+      "split": "train",
+      "RMSE_kms": 38.86948125373193,
+      "log_RMS": 0.07688741789239999
+    },
+    {
+      "name": "DDO168",
+      "split": "train",
+      "RMSE_kms": 12.28115813351256,
+      "log_RMS": 0.13027642761058317
+    },
+    {
+      "name": "NGC0024",
+      "split": "train",
+      "RMSE_kms": 38.46222859486485,
+      "log_RMS": 0.26391154996840804
+    },
+    {
+      "name": "NGC3992",
+      "split": "train",
+      "RMSE_kms": 91.63580809869057,
+      "log_RMS": 0.13758998258001234
+    },
+    {
+      "name": "NGC6674",
+      "split": "train",
+      "RMSE_kms": 197.9516360204478,
+      "log_RMS": 0.23918996785289995
+    },
+    {
+      "name": "NGC3741",
+      "split": "train",
+      "RMSE_kms": 9.270160048619774,
+      "log_RMS": 0.16708912657455333
+    },
+    {
+      "name": "NGC6195",
+      "split": "train",
+      "RMSE_kms": 37.758795534419505,
+      "log_RMS": 0.057842223828992685
+    },
+    {
+      "name": "NGC4183",
+      "split": "train",
+      "RMSE_kms": 35.72424051900624,
+      "log_RMS": 0.14831800834974307
+    },
+    {
+      "name": "UGC08550",
+      "split": "validation",
+      "RMSE_kms": 17.203152058662827,
+      "log_RMS": 0.20713544177062973
+    },
+    {
+      "name": "F571-V1",
+      "split": "validation",
+      "RMSE_kms": 18.2262612667765,
+      "log_RMS": 0.09864888139770532
+    },
+    {
+      "name": "NGC3972",
+      "split": "validation",
+      "RMSE_kms": 29.635669908584013,
+      "log_RMS": 0.14455651587882404
+    },
+    {
+      "name": "ESO079-G014",
+      "split": "validation",
+      "RMSE_kms": 27.422308110286725,
+      "log_RMS": 0.12331078663855599
+    },
+    {
+      "name": "NGC4559",
+      "split": "validation",
+      "RMSE_kms": 30.03891558172023,
+      "log_RMS": 0.09197455682701787
+    },
+    {
+      "name": "IC4202",
+      "split": "validation",
+      "RMSE_kms": 36.233688374243904,
+      "log_RMS": 0.12231034707323303
+    },
+    {
+      "name": "UGC05414",
+      "split": "validation",
+      "RMSE_kms": 11.274486009391529,
+      "log_RMS": 0.12441979426930931
+    },
+    {
+      "name": "NGC4157",
+      "split": "validation",
+      "RMSE_kms": 38.88660244048464,
+      "log_RMS": 0.07905386991624466
+    },
+    {
+      "name": "NGC5585",
+      "split": "validation",
+      "RMSE_kms": 11.753954419413834,
+      "log_RMS": 0.08717992246856986
+    },
+    {
+      "name": "UGC07603",
+      "split": "validation",
+      "RMSE_kms": 22.897858379163743,
+      "log_RMS": 0.23030334852170628
+    },
+    {
+      "name": "UGC09037",
+      "split": "validation",
+      "RMSE_kms": 50.844342092616955,
+      "log_RMS": 0.12464601589172175
+    },
+    {
+      "name": "NGC4051",
+      "split": "validation",
+      "RMSE_kms": 13.097553633725918,
+      "log_RMS": 0.04301090394774655
+    },
+    {
+      "name": "UGC05721",
+      "split": "validation",
+      "RMSE_kms": 32.80239458779043,
+      "log_RMS": 0.2617812365409971
+    },
+    {
+      "name": "UGC12732",
+      "split": "validation",
+      "RMSE_kms": 22.82791007694563,
+      "log_RMS": 0.15707197028679357
+    },
+    {
+      "name": "UGC11455",
+      "split": "validation",
+      "RMSE_kms": 43.9179679239793,
+      "log_RMS": 0.07624221026789194
+    },
+    {
+      "name": "NGC1090",
+      "split": "validation",
+      "RMSE_kms": 51.46820159378416,
+      "log_RMS": 0.12329897730732045
+    },
+    {
+      "name": "NGC4088",
+      "split": "validation",
+      "RMSE_kms": 25.52971315208389,
+      "log_RMS": 0.06128900394288667
+    },
+    {
+      "name": "UGC00731",
+      "split": "validation",
+      "RMSE_kms": 18.066430402946505,
+      "log_RMS": 0.21909782354792212
+    },
+    {
+      "name": "NGC3917",
+      "split": "validation",
+      "RMSE_kms": 23.067863824269278,
+      "log_RMS": 0.11108476755116685
+    },
+    {
+      "name": "F574-1",
+      "split": "validation",
+      "RMSE_kms": 20.853405732276705,
+      "log_RMS": 0.15428326287958
+    },
+    {
+      "name": "NGC4068",
+      "split": "validation",
+      "RMSE_kms": 5.637762910589914,
+      "log_RMS": 0.08014165435043644
+    },
+    {
+      "name": "KK98-251",
+      "split": "validation",
+      "RMSE_kms": 3.624820676704643,
+      "log_RMS": 0.07897026674715547
+    },
+    {
+      "name": "F568-V1",
+      "split": "validation",
+      "RMSE_kms": 38.75080505270493,
+      "log_RMS": 0.25365514632074476
+    },
+    {
+      "name": "NGC5985",
+      "split": "validation",
+      "RMSE_kms": 88.35665461276142,
+      "log_RMS": 0.1762682813793834
+    },
+    {
+      "name": "UGC02487",
+      "split": "validation",
+      "RMSE_kms": 181.508156824244,
+      "log_RMS": 0.18014062136742892
+    },
+    {
+      "name": "UGC03546",
+      "split": "validation",
+      "RMSE_kms": 33.57077805772783,
+      "log_RMS": 0.060415271579307886
+    },
+    {
+      "name": "NGC3109",
+      "split": "validation",
+      "RMSE_kms": 13.425977984392263,
+      "log_RMS": 0.17437146854247149
+    },
+    {
+      "name": "NGC0891",
+      "split": "validation",
+      "RMSE_kms": 23.827458966228548,
+      "log_RMS": 0.04592277223095084
+    },
+    {
+      "name": "NGC0801",
+      "split": "validation",
+      "RMSE_kms": 139.24039586575392,
+      "log_RMS": 0.1897091773785267
+    },
+    {
+      "name": "UGC08699",
+      "split": "test",
+      "RMSE_kms": 33.38360924928807,
+      "log_RMS": 0.08655582609138646
+    },
+    {
+      "name": "UGC02885",
+      "split": "test",
+      "RMSE_kms": 174.76521208173435,
+      "log_RMS": 0.18573042104420942
+    },
+    {
+      "name": "UGC07151",
+      "split": "test",
+      "RMSE_kms": 18.087041777271068,
+      "log_RMS": 0.15393113525666302
+    },
+    {
+      "name": "NGC3877",
+      "split": "test",
+      "RMSE_kms": 25.122954906082267,
+      "log_RMS": 0.11194729842884195
+    },
+    {
+      "name": "NGC6946",
+      "split": "test",
+      "RMSE_kms": 19.264353292710908,
+      "log_RMS": 0.049161070407893
+    },
+    {
+      "name": "UGC10310",
+      "split": "test",
+      "RMSE_kms": 15.937510850390138,
+      "log_RMS": 0.16249724029355256
+    },
+    {
+      "name": "F565-V2",
+      "split": "test",
+      "RMSE_kms": 13.53494011551341,
+      "log_RMS": 0.13425388701496355
+    },
+    {
+      "name": "F583-4",
+      "split": "test",
+      "RMSE_kms": 9.38978318019919,
+      "log_RMS": 0.16438666575929683
+    },
+    {
+      "name": "NGC7331",
+      "split": "test",
+      "RMSE_kms": 43.1413522514676,
+      "log_RMS": 0.06863778414638608
+    },
+    {
+      "name": "NGC2955",
+      "split": "test",
+      "RMSE_kms": 33.777913701370736,
+      "log_RMS": 0.054478744158362076
+    },
+    {
+      "name": "UGCA442",
+      "split": "test",
+      "RMSE_kms": 10.640108242915106,
+      "log_RMS": 0.1622588386080373
+    },
+    {
+      "name": "NGC2976",
+      "split": "test",
+      "RMSE_kms": 13.011814664741186,
+      "log_RMS": 0.10752968453003113
+    },
+    {
+      "name": "DDO154",
+      "split": "test",
+      "RMSE_kms": 8.292044029573326,
+      "log_RMS": 0.12200138978707745
+    },
+    {
+      "name": "DDO170",
+      "split": "test",
+      "RMSE_kms": 23.63739282267097,
+      "log_RMS": 0.13835997401223063
+    },
+    {
+      "name": "NGC7814",
+      "split": "test",
+      "RMSE_kms": 36.36624103949966,
+      "log_RMS": 0.07935497789064164
+    },
+    {
+      "name": "F583-1",
+      "split": "test",
+      "RMSE_kms": 21.97236905360789,
+      "log_RMS": 0.2044180038692865
+    },
+    {
+      "name": "F568-3",
+      "split": "test",
+      "RMSE_kms": 22.604347909360477,
+      "log_RMS": 0.14090409392103412
+    },
+    {
+      "name": "UGC04499",
+      "split": "test",
+      "RMSE_kms": 11.463019289458797,
+      "log_RMS": 0.1034197006279861
+    },
+    {
+      "name": "UGC06399",
+      "split": "test",
+      "RMSE_kms": 19.856245702074,
+      "log_RMS": 0.16416096603862218
+    },
+    {
+      "name": "NGC0055",
+      "split": "test",
+      "RMSE_kms": 16.03945054582588,
+      "log_RMS": 0.07344798568869682
+    },
+    {
+      "name": "UGC07559",
+      "split": "test",
+      "RMSE_kms": 4.822528679618705,
+      "log_RMS": 0.09253764946711635
+    },
+    {
+      "name": "UGC07524",
+      "split": "test",
+      "RMSE_kms": 13.347254743960574,
+      "log_RMS": 0.1344376429493717
+    },
+    {
+      "name": "NGC5907",
+      "split": "test",
+      "RMSE_kms": 116.16305606368014,
+      "log_RMS": 0.1786124147427908
+    },
+    {
+      "name": "DDO161",
+      "split": "test",
+      "RMSE_kms": 21.80460118859054,
+      "log_RMS": 0.11861228504657961
+    },
+    {
+      "name": "UGC02916",
+      "split": "test",
+      "RMSE_kms": 47.163859726359966,
+      "log_RMS": 0.09113359384530376
+    },
+    {
+      "name": "F571-8",
+      "split": "test",
+      "RMSE_kms": 26.547018057434926,
+      "log_RMS": 0.1577305546280496
+    },
+    {
+      "name": "UGC06786",
+      "split": "test",
+      "RMSE_kms": 50.511409005531064,
+      "log_RMS": 0.11403166521512256
+    },
+    {
+      "name": "NGC3949",
+      "split": "test",
+      "RMSE_kms": 20.755182582374037,
+      "log_RMS": 0.060646323175538114
+    },
+    {
+      "name": "UGC03205",
+      "split": "test",
+      "RMSE_kms": 51.14894121246162,
+      "log_RMS": 0.1038779535488737
+    },
+    {
+      "name": "UGC07323",
+      "split": "test",
+      "RMSE_kms": 12.951412147385273,
+      "log_RMS": 0.1099451177438078
+    },
+    {
+      "name": "UGC09992",
+      "split": "test",
+      "RMSE_kms": 6.838437794393608,
+      "log_RMS": 0.11826507639489614
+    }
+  ],
+  "input_sha256": {
+    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "sparc_frozen.json": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015"
+  },
+  "starts": [
+    {
+      "parameters": [
+        6.619783952119065,
+        1.0
+      ],
+      "loss": 0.031294535203042755,
+      "success": true
+    },
+    {
+      "parameters": [
+        6.619783956558305,
+        1.0
+      ],
+      "loss": 0.03129453520304275,
+      "success": true
+    },
+    {
+      "parameters": [
+        6.619783956964782,
+        1.0
+      ],
+      "loss": 0.03129453520304275,
+      "success": true
+    }
+  ],
+  "feedback_diagnostic": {
+    "points_extra_force_exceeds_baryonic": 1352,
+    "points": 3150,
+    "median_extra_to_baryonic": 0.6720505104890235
+  },
+  "Kepler_W_equals_W0_radius_kpc": {
+    "min": 21.638889799999998,
+    "median": 3319.07129955,
+    "max": 156466.21669956,
+    "warning": "Conditional continuation, not observed halo extent"
+  }
+}
