@@ -1,0 +1,29 @@
+{
+  "scope": "Development recalibration on all 160 exposed synthetic baseline cases; not independent validation",
+  "bounds": {
+    "a_days": [
+      5,
+      100
+    ],
+    "b": [
+      -2,
+      3
+    ],
+    "sigma": [
+      0,
+      0.6
+    ]
+  },
+  "outside_mass_limit": 1e-06,
+  "outside_mass_numerical_tolerance": 1e-11,
+  "optimizer": "Five SLSQP unrestricted starts; three fixed-truth starts; unchanged continuous interpolant",
+  "invalid": "Optimizer failure, support failure, computational mean/exponent/upper-scatter boundary within 1e-5, or fixed-truth optimum beats unrestricted by more than 1e-6 in log likelihood. Zero scatter is allowed.",
+  "interval": "Nominal chi-square(1) LR 95% membership, requires simulation calibration; not assumed correct at boundary",
+  "screens": {
+    "maximum_absolute_mean_bias": 0.1,
+    "minimum_accepted_95_fraction": 0.85,
+    "maximum_invalid_per_cell": 0
+  },
+  "reporting": "Every case retained, per-cell rates and binomial intervals, no selective replacement. Preserve frozen baseline. Hash-locked checkpoint resume.",
+  "limitations": "Previously exposed cases; all observed-flux and physical causal claims remain untested. Subsequent fresh-seed calibration and width-grid sensitivity required."
+}
