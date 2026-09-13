@@ -1,0 +1,220 @@
+{
+  "scope": "Nonrelativistic spherical isotropic collisionless tracer in fixed Plummer potential; density q/A, Psi=1/sqrt(1+r^2). No self-gravity, formation, stability or observations.",
+  "provenance": "Known Eddington inversion applied to the optional depth-to-fourth capture density. No halo prior or expansion model imported.",
+  "formula": "f(E)=1/(sqrt(8)*pi^2) integral_0^E rho_second(Psi)/sqrt(E-Psi) dPsi; rho_prime(0)=0",
+  "high_binding_endpoint_zero_A": 1.191349542705862,
+  "endpoint_zero_refinement_absolute_difference": 2.4975179258035496e-08,
+  "thin_limit_analytic_df_max_relative_error": 5.4928447469348995e-06,
+  "cases": [
+    {
+      "A": 0.1,
+      "minimum_sampled_df": 4.58519029905386e-06,
+      "energy_at_sampled_minimum": 0.01,
+      "maximum_sampled_df": 0.39323882907003577,
+      "df_at_maximum_binding": 0.39323882907003577,
+      "negative_sample_count": 0,
+      "tested_energy_range": [
+        0.01,
+        1.0
+      ],
+      "refinement_scaled_max_difference": 5.457774559955182e-09,
+      "density_reconstruction": [
+        {
+          "relative_potential": 0.1,
+          "reconstruction_relative_error": 4.517055618435961e-09
+        },
+        {
+          "relative_potential": 0.3,
+          "reconstruction_relative_error": 1.7502375104783141e-09
+        },
+        {
+          "relative_potential": 0.6,
+          "reconstruction_relative_error": 2.061828485722117e-11
+        },
+        {
+          "relative_potential": 0.9,
+          "reconstruction_relative_error": 1.0583356413462752e-10
+        },
+        {
+          "relative_potential": 1.0,
+          "reconstruction_relative_error": 1.2679801653092682e-10
+        }
+      ]
+    },
+    {
+      "A": 1.0,
+      "minimum_sampled_df": 4.584674963042135e-06,
+      "energy_at_sampled_minimum": 0.01,
+      "maximum_sampled_df": 0.09021031054076274,
+      "df_at_maximum_binding": 0.03719908360602967,
+      "negative_sample_count": 0,
+      "tested_energy_range": [
+        0.01,
+        1.0
+      ],
+      "refinement_scaled_max_difference": 6.443892043609264e-08,
+      "density_reconstruction": [
+        {
+          "relative_potential": 0.1,
+          "reconstruction_relative_error": 4.4861923065298015e-09
+        },
+        {
+          "relative_potential": 0.3,
+          "reconstruction_relative_error": 1.6931244184448246e-09
+        },
+        {
+          "relative_potential": 0.6,
+          "reconstruction_relative_error": 6.630673787810792e-11
+        },
+        {
+          "relative_potential": 0.9,
+          "reconstruction_relative_error": 3.8724357054320535e-11
+        },
+        {
+          "relative_potential": 1.0,
+          "reconstruction_relative_error": 2.984068547817742e-10
+        }
+      ]
+    },
+    {
+      "A": 1.5,
+      "minimum_sampled_df": -0.04181707247300324,
+      "energy_at_sampled_minimum": 1.0,
+      "maximum_sampled_df": 0.05991239953306285,
+      "df_at_maximum_binding": -0.04181707247300324,
+      "negative_sample_count": 82,
+      "tested_energy_range": [
+        0.01,
+        1.0
+      ],
+      "refinement_scaled_max_difference": 8.190655063680972e-08,
+      "density_reconstruction": [
+        {
+          "relative_potential": 0.1,
+          "reconstruction_relative_error": 4.47181824902998e-09
+        },
+        {
+          "relative_potential": 0.3,
+          "reconstruction_relative_error": 1.666567439606581e-09
+        },
+        {
+          "relative_potential": 0.6,
+          "reconstruction_relative_error": 7.174372207430224e-11
+        },
+        {
+          "relative_potential": 0.9,
+          "reconstruction_relative_error": 1.436224472683989e-10
+        },
+        {
+          "relative_potential": 1.0,
+          "reconstruction_relative_error": 6.605858082764371e-10
+        }
+      ]
+    },
+    {
+      "A": 1.8332747453568032,
+      "minimum_sampled_df": -0.06785573034632572,
+      "energy_at_sampled_minimum": 1.0,
+      "maximum_sampled_df": 0.04931872580827376,
+      "df_at_maximum_binding": -0.06785573034632572,
+      "negative_sample_count": 145,
+      "tested_energy_range": [
+        0.01,
+        1.0
+      ],
+      "refinement_scaled_max_difference": 6.45149369971766e-08,
+      "density_reconstruction": [
+        {
+          "relative_potential": 0.1,
+          "reconstruction_relative_error": 4.463007630128857e-09
+        },
+        {
+          "relative_potential": 0.3,
+          "reconstruction_relative_error": 1.6505216082762786e-09
+        },
+        {
+          "relative_potential": 0.6,
+          "reconstruction_relative_error": 6.643785521731616e-11
+        },
+        {
+          "relative_potential": 0.9,
+          "reconstruction_relative_error": 2.242692698217752e-10
+        },
+        {
+          "relative_potential": 1.0,
+          "reconstruction_relative_error": 9.771854436735339e-10
+        }
+      ]
+    },
+    {
+      "A": 3.0,
+      "minimum_sampled_df": -0.07600514386651114,
+      "energy_at_sampled_minimum": 1.0,
+      "maximum_sampled_df": 0.031197230626973372,
+      "df_at_maximum_binding": -0.07600514386651114,
+      "negative_sample_count": 275,
+      "tested_energy_range": [
+        0.01,
+        1.0
+      ],
+      "refinement_scaled_max_difference": 8.151863481380155e-08,
+      "density_reconstruction": [
+        {
+          "relative_potential": 0.1,
+          "reconstruction_relative_error": 4.43523950899305e-09
+        },
+        {
+          "relative_potential": 0.3,
+          "reconstruction_relative_error": 1.5995896829323897e-09
+        },
+        {
+          "relative_potential": 0.6,
+          "reconstruction_relative_error": 1.4921397450962104e-12
+        },
+        {
+          "relative_potential": 0.9,
+          "reconstruction_relative_error": 4.302314060566914e-10
+        },
+        {
+          "relative_potential": 1.0,
+          "reconstruction_relative_error": 2.6601487679300817e-09
+        }
+      ]
+    },
+    {
+      "A": 10.0,
+      "minimum_sampled_df": -0.017722672738280935,
+      "energy_at_sampled_minimum": 0.70003,
+      "maximum_sampled_df": 0.010913535927553824,
+      "df_at_maximum_binding": 0.006068821226219358,
+      "negative_sample_count": 406,
+      "tested_energy_range": [
+        0.01,
+        1.0
+      ],
+      "refinement_scaled_max_difference": 2.708875090547547e-07,
+      "density_reconstruction": [
+        {
+          "relative_potential": 0.1,
+          "reconstruction_relative_error": 4.310419021713585e-09
+        },
+        {
+          "relative_potential": 0.3,
+          "reconstruction_relative_error": 1.3863756809229244e-09
+        },
+        {
+          "relative_potential": 0.6,
+          "reconstruction_relative_error": 1.6758570087205271e-09
+        },
+        {
+          "relative_potential": 0.9,
+          "reconstruction_relative_error": 4.655817231746795e-08
+        },
+        {
+          "relative_potential": 1.0,
+          "reconstruction_relative_error": 3.9006596708190955e-07
+        }
+      ]
+    }
+  ]
+}
