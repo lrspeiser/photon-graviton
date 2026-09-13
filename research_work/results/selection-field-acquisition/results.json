@@ -1,0 +1,547 @@
+{
+  "scope": "One high-count training field selected by membership count; targeting metadata acquisition, not completeness or gravity inference",
+  "manifest": [
+    {
+      "url": "https://data.sdss.org/sas/dr17/apogee/target/allField.fits",
+      "path": "research_work\\data-cache\\selection-fields\\allField.fits",
+      "bytes": 184320,
+      "sha256": "ddc535c276faa6af49aa91db4d418df18252b1ff34b83875e11b3f5ced5fe616",
+      "extensions": [
+        {
+          "name": "",
+          "rows": 2702,
+          "columns": [
+            "FIELD_NAME",
+            "RA",
+            "DEC",
+            "GLON",
+            "GLAT",
+            "LOCATION_ID",
+            "EXPECTED_NO_OF_DESIGNS",
+            "NO_OF_DESIGNS_COMPLETED",
+            "EXPECTED_NO_OF_VISITS",
+            "TELESCOPE"
+          ],
+          "checksum_present": false,
+          "checksum_valid": null
+        }
+      ]
+    },
+    {
+      "url": "https://data.sdss.org/sas/dr17/apogee/target/allDesign.fits",
+      "path": "research_work\\data-cache\\selection-fields\\allDesign.fits",
+      "bytes": 1774080,
+      "sha256": "004ef29672227a61322cf1bca35b4d52564b095f48f99cca0eda3959c3b0600e",
+      "extensions": [
+        {
+          "name": "",
+          "rows": 4149,
+          "columns": [
+            "DESIGN_ID",
+            "LOCATION_ID",
+            "RA",
+            "DEC",
+            "FIELD_NAME",
+            "DESIGN_TYPE",
+            "DESIGN_DRIVER",
+            "RADIUS",
+            "SHARED",
+            "COMMENTS",
+            "NUMBER_OF_VISITS",
+            "NUMBER_OF_TELLURICS",
+            "NUMBER_OF_SKY",
+            "NUMBER_OF_SCIENCE",
+            "COHORT_SHORT_VERSION",
+            "COHORT_MEDIUM_VERSION",
+            "COHORT_LONG_VERSION",
+            "COHORT_FRACTION",
+            "COHORT_MIN_H",
+            "COHORT_MAX_H",
+            "COHORT_NUMBER_OF_VISITS",
+            "NUMBER_OF_SELECTION_BINS",
+            "BIN_FRACTION",
+            "BIN_PRIORITY",
+            "BIN_USE_WD_FLAG",
+            "BIN_DEREDDENED_MIN_JK_COLOR",
+            "BIN_DEREDDENED_MAX_JK_COLOR",
+            "PLATERUN",
+            "COHORT_FRACTION_1",
+            "COHORT_FRACTION_2",
+            "COHORT_FRACTION_3",
+            "COHORT_MIN_H_1",
+            "COHORT_MIN_H_2",
+            "COHORT_MIN_H_3",
+            "COHORT_MAX_H_1",
+            "COHORT_MAX_H_2",
+            "COHORT_MAX_H_3",
+            "COHORT_NUMBER_OF_VISITS_1",
+            "COHORT_NUMBER_OF_VISITS_2",
+            "COHORT_NUMBER_OF_VISITS_3",
+            "BIN_FRACTION_1",
+            "BIN_FRACTION_2",
+            "BIN_FRACTION_3",
+            "BIN_PRIORITY_1",
+            "BIN_PRIORITY_2",
+            "BIN_PRIORITY_3",
+            "BIN_USE_WD_FLAG_1",
+            "BIN_USE_WD_FLAG_2",
+            "BIN_USE_WD_FLAG_3",
+            "BIN_DEREDDENED_MIN_JK_COLOR_1",
+            "BIN_DEREDDENED_MIN_JK_COLOR_2",
+            "BIN_DEREDDENED_MIN_JK_COLOR_3",
+            "BIN_DEREDDENED_MAX_JK_COLOR_1",
+            "BIN_DEREDDENED_MAX_JK_COLOR_2",
+            "BIN_DEREDDENED_MAX_JK_COLOR_3"
+          ],
+          "checksum_present": false,
+          "checksum_valid": null
+        }
+      ]
+    },
+    {
+      "url": "https://data.sdss.org/sas/dr17/apogee/target/apogee2Plate.fits",
+      "path": "research_work\\data-cache\\selection-fields\\apogee2Plate.fits",
+      "bytes": 290880,
+      "sha256": "13ae5e17565bcca8dae3fddc6be95a5b04f536f12f93b21e05ad648dacd9a71f",
+      "extensions": [
+        {
+          "name": "",
+          "rows": 3587,
+          "columns": [
+            "PLATE_ID",
+            "DESIGN_ID",
+            "LOCATION_ID",
+            "FIELD_NAME",
+            "FIELD_TYPE",
+            "TEMPERATURE",
+            "HOUR_ANGLE",
+            "EPOCH",
+            "PLATERUN"
+          ],
+          "checksum_present": false,
+          "checksum_valid": null
+        }
+      ]
+    },
+    {
+      "url": "https://data.sdss.org/sas/dr17/apogee/target/apogee2Object/apogee2Object_300%2B00.fits",
+      "path": "research_work\\data-cache\\selection-fields\\apogee2Object_300+00.fits",
+      "bytes": 54826560,
+      "sha256": "8a733758d08e4713a8d76bbc0f33885744dcf62fcdb6e878af4db25920cec22b",
+      "extensions": [
+        {
+          "name": "",
+          "rows": 189661,
+          "columns": [
+            "APOGEE_ID",
+            "TARGET_ID",
+            "ALT_ID",
+            "LOCATION_ID",
+            "RA",
+            "DEC",
+            "J",
+            "J_ERR",
+            "H",
+            "H_ERR",
+            "K",
+            "K_ERR",
+            "IRAC_3_6",
+            "IRAC_3_6_ERR",
+            "IRAC_4_5",
+            "IRAC_4_5_ERR",
+            "IRAC_5_8",
+            "IRAC_5_8_ERR",
+            "IRAC_8_0",
+            "IRAC_8_0_ERR",
+            "WISE_4_5",
+            "WISE_4_5_ERR",
+            "SRC_H",
+            "SRC_4_5",
+            "SFD_EBV",
+            "WASH_M",
+            "WASH_M_ERR",
+            "WASH_T2",
+            "WASH_T2_ERR",
+            "DDO51",
+            "DDO51_ERR",
+            "WASH_DDO51_GIANT_FLAG",
+            "WASH_DDO51_STAR_FLAG",
+            "TARG_4_5",
+            "TARG_4_5_ERR",
+            "AK_WISE",
+            "AK_WISE_ERR",
+            "AK_TARG",
+            "AK_TARG_ERR",
+            "AK_TARG_METHOD",
+            "PMRA",
+            "PMRA_ERR",
+            "PMDEC",
+            "PMDEC_ERR",
+            "PM_SRC",
+            "TMASS_A",
+            "TMASS_PXPA",
+            "TMASS_PROX",
+            "TMASS_PHQUAL",
+            "TMASS_RDFLG",
+            "TMASS_CCFLG",
+            "TMASS_EXTKEY",
+            "TMASS_GAL_CONTAM",
+            "TMASS_CNTR"
+          ],
+          "checksum_present": false,
+          "checksum_valid": null
+        }
+      ]
+    }
+  ],
+  "membership_sha256": "7fda6f4ddd0e8a5cff497993b6aa3fc800a393bf02b15b6bd7a438a730c9975a",
+  "pilot": {
+    "parent_rows": 189661,
+    "unique_parent_ids": 189661,
+    "training_main_stars": 521,
+    "matched_training_ids": 521,
+    "unmatched_training_ids": [],
+    "location_ids": [
+      5540
+    ],
+    "field_summary_rows": 1,
+    "field_metadata": [
+      {
+        "FIELD_NAME": "300+00",
+        "RA": 186.17297,
+        "DEC": -62.85627,
+        "GLON": 299.8868458099386,
+        "GLAT": -0.14274135656610223,
+        "LOCATION_ID": 5540,
+        "EXPECTED_NO_OF_DESIGNS": 8,
+        "NO_OF_DESIGNS_COMPLETED": 8,
+        "EXPECTED_NO_OF_VISITS": 24,
+        "TELESCOPE": "lco25m"
+      }
+    ],
+    "designs": [
+      {
+        "DESIGN_ID": 10719,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 1,
+        "COHORT_MEDIUM_VERSION": 1,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.09.e.apogee2s.south"
+      },
+      {
+        "DESIGN_ID": 10720,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 2,
+        "COHORT_MEDIUM_VERSION": 1,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.09.e.apogee2s.south"
+      },
+      {
+        "DESIGN_ID": 10721,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 3,
+        "COHORT_MEDIUM_VERSION": 2,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.09.e.apogee2s.south"
+      },
+      {
+        "DESIGN_ID": 10722,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 4,
+        "COHORT_MEDIUM_VERSION": 2,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.09.e.apogee2s.south"
+      },
+      {
+        "DESIGN_ID": 10723,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 5,
+        "COHORT_MEDIUM_VERSION": 3,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.09.e.apogee2s.south"
+      },
+      {
+        "DESIGN_ID": 10724,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 6,
+        "COHORT_MEDIUM_VERSION": 3,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.09.e.apogee2s.south"
+      },
+      {
+        "DESIGN_ID": 10725,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 7,
+        "COHORT_MEDIUM_VERSION": 4,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.09.e.apogee2s.south"
+      },
+      {
+        "DESIGN_ID": 10999,
+        "LOCATION_ID": 5540,
+        "RADIUS": 0.800000011920929,
+        "NUMBER_OF_VISITS": 3,
+        "COHORT_SHORT_VERSION": 8,
+        "COHORT_MEDIUM_VERSION": 4,
+        "COHORT_LONG_VERSION": 1,
+        "COHORT_FRACTION": [
+          0.5,
+          0.5,
+          0.0
+        ],
+        "COHORT_MIN_H": [
+          10.0,
+          12.199999809265137,
+          12.800000190734863
+        ],
+        "COHORT_MAX_H": [
+          12.199999809265137,
+          12.800000190734863,
+          13.300000190734863
+        ],
+        "NUMBER_OF_SELECTION_BINS": 2,
+        "BIN_DEREDDENED_MIN_JK_COLOR": [
+          0.5,
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "BIN_DEREDDENED_MAX_JK_COLOR": [
+          0.800000011920929,
+          999.0,
+          999.0,
+          999.0,
+          999.0
+        ],
+        "PLATERUN": "2017.10.g.apogee2s.south"
+      }
+    ]
+  },
+  "documentation": "https://www.sdss4.org/dr17/irspec/spectro_data/",
+  "final_test_kinematics_opened": false
+}
