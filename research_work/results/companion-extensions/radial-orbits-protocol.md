@@ -1,0 +1,5 @@
+# Radially varying orbital anisotropy at fixed lens-required mass
+
+13 September 2026, before execution. Keep the adjusted-reference companion profile, constant stellar M/L, existing lens-required stellar mass and geometry fixed. Replace constant beta by beta(r)=beta0+(betainf-beta0)r^2/(r^2+Re^2), with transition radius fixed by the observed half-light radius and both endpoints in the inherited -2..0.45 range. Fit endpoints only to the inner stellar bins; evaluate the conditional outer bin afterward. Keep both population proxies and all six systems.
+
+This is a fixed-sharpness special case of known anisotropy-profile mathematics (Baes and Van Hese, 2007, arXiv:0705.4109), not a new companion law. It is separate from the previous M/L-gradient experiment. Recover the constant-beta limit against the existing solver before interpreting improvement. Report endpoint boundaries, direct numerical fits and all residuals; do not interpret Jeans moments alone as a positive distribution function or stable stellar system. Exact lens agreement remains a consumed constraint. No mass, gradient, transition radius, companion amplitude or geometry is fitted in this experiment.

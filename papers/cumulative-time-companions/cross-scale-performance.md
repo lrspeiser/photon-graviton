@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Radially varying orbital anisotropy
+
+The [radial-orbit test](../../research_work/results/companion-extensions/radial-orbits-report.md) retains constant stellar M/L and the exact-lens masses. The known smooth beta family reduces inner chi-squared totals to 448-454 under old bounds; an adaptive expansion of the outer bound in three systems gives 106-107. All three hit beta_infinity=0.95, and conditional outer residual sums remain 114-116 versus free fits at 53-55. This identifies orbital restrictions as part of the tension without establishing a positive, stable distribution function or a joint solution. No capture parameters are changed.
+
 ## Bounded radial stellar mass-to-light gradients
 
 The [stellar-gradient diagnostic](../../research_work/results/companion-extensions/stellar-gradient-report.md) keeps adjusted-reference companions fixed and fits one fixed-Re M/L gradient plus constant beta, with stellar normalization fixed by the catalogue angle. Inner chi-squared totals improve from 611-614 to 472-477 but remain far above the free constant-M/L inner fits near 45; outer residuals remain poor. Two gradient and two orbital bounds are reached per population. Extreme-gradient endpoint checks do not restore the previous motion fit. This is added per-lens nuisance flexibility, not an independent population measurement, lens prediction or adopted theory revision.
