@@ -1,0 +1,1116 @@
+{
+  "brightness_required_b": 1.4811888402456221,
+  "brightness_formal_sigma": 0.10281493031987665,
+  "DES_b": 1.003,
+  "DES_statistical_scale": 0.005,
+  "DES_systematic_estimate": 0.01,
+  "exponent_difference": 0.47818884024562225,
+  "models": [
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "spectral_aging_diagonal_scores": {
+        "all": 26.94852459529445,
+        "low_z": 23.294412983434984,
+        "high_z": 3.654111611859463
+      },
+      "stretch_at_z1": 2.0
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "spectral_aging_diagonal_scores": {
+        "all": 26.967462740305916,
+        "low_z": 23.28580572121874,
+        "high_z": 3.6816570190871767
+      },
+      "stretch_at_z1": 2.0041632101592652
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "spectral_aging_diagonal_scores": {
+        "all": 47.05755984126946,
+        "low_z": 22.073351672505925,
+        "high_z": 24.984208168763534
+      },
+      "stretch_at_z1": 2.7917869327219744
+    }
+  ],
+  "required_geometry_if_timing_fixed": [
+    {
+      "z": 0.1,
+      "required_beam_distance_over_Euclidean": 1.0230497652526975,
+      "required_beam_area_ratio": 1.0466308221835994
+    },
+    {
+      "z": 0.5,
+      "required_beam_distance_over_Euclidean": 1.101799161361586,
+      "required_beam_area_ratio": 1.2139613919770944
+    },
+    {
+      "z": 1.0,
+      "required_beam_distance_over_Euclidean": 1.1802515847835011,
+      "required_beam_area_ratio": 1.3929938033839662
+    },
+    {
+      "z": 1.2,
+      "required_beam_distance_over_Euclidean": 1.2074561067518852,
+      "required_beam_area_ratio": 1.4579502497324197
+    }
+  ],
+  "brightness_transfer_baseline_score": 424.4815024201787,
+  "brightness_transfer_time_only_score_on_same_covariance": 432.55402043951943,
+  "predictions": [
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1981B",
+      "z": 0.006,
+      "observed_aging_rate": 1.099,
+      "sigma": 0.071,
+      "predicted_aging_rate": 0.9940357852882704,
+      "standardized_residual": 1.478369221291966
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1989B",
+      "z": 0.002,
+      "observed_aging_rate": 1.036,
+      "sigma": 0.079,
+      "predicted_aging_rate": 0.998003992015968,
+      "standardized_residual": 0.4809621263801522
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1992A",
+      "z": 0.006,
+      "observed_aging_rate": 1.04,
+      "sigma": 0.077,
+      "predicted_aging_rate": 0.9940357852882704,
+      "standardized_residual": 0.596937853399086
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1994D",
+      "z": 0.002,
+      "observed_aging_rate": 1.011,
+      "sigma": 0.152,
+      "predicted_aging_rate": 0.998003992015968,
+      "standardized_residual": 0.08550005252652558
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1996X",
+      "z": 0.007,
+      "observed_aging_rate": 0.886,
+      "sigma": 0.116,
+      "predicted_aging_rate": 0.99304865938431,
+      "standardized_residual": -0.9228332705543962
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1997br",
+      "z": 0.007,
+      "observed_aging_rate": 1.12,
+      "sigma": 0.149,
+      "predicted_aging_rate": 0.99304865938431,
+      "standardized_residual": 0.8520224202395311
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1998V",
+      "z": 0.018,
+      "observed_aging_rate": 1.047,
+      "sigma": 0.166,
+      "predicted_aging_rate": 0.9823182711198428,
+      "standardized_residual": 0.3896489691575729
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1998ab",
+      "z": 0.027,
+      "observed_aging_rate": 0.987,
+      "sigma": 0.151,
+      "predicted_aging_rate": 0.9737098344693282,
+      "standardized_residual": 0.08801434126272682
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1998dm",
+      "z": 0.007,
+      "observed_aging_rate": 0.778,
+      "sigma": 0.119,
+      "predicted_aging_rate": 0.99304865938431,
+      "standardized_residual": -1.8071315914647896
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1998eg",
+      "z": 0.025,
+      "observed_aging_rate": 0.883,
+      "sigma": 0.085,
+      "predicted_aging_rate": 0.9756097560975611,
+      "standardized_residual": -1.0895265423242477
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1999cl",
+      "z": 0.008,
+      "observed_aging_rate": 0.87,
+      "sigma": 0.122,
+      "predicted_aging_rate": 0.9920634920634921,
+      "standardized_residual": -1.0005204267499352
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1999dq",
+      "z": 0.014,
+      "observed_aging_rate": 0.928,
+      "sigma": 0.055,
+      "predicted_aging_rate": 0.9861932938856016,
+      "standardized_residual": -1.0580598888291195
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1999ej",
+      "z": 0.014,
+      "observed_aging_rate": 1.147,
+      "sigma": 0.159,
+      "predicted_aging_rate": 0.9861932938856016,
+      "standardized_residual": 1.0113629315370969
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1999gp",
+      "z": 0.027,
+      "observed_aging_rate": 0.839,
+      "sigma": 0.06,
+      "predicted_aging_rate": 0.9737098344693282,
+      "standardized_residual": -2.245163907822138
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2000fa",
+      "z": 0.021,
+      "observed_aging_rate": 0.884,
+      "sigma": 0.076,
+      "predicted_aging_rate": 0.9794319294809012,
+      "standardized_residual": -1.2556832826434365
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2001V",
+      "z": 0.015,
+      "observed_aging_rate": 0.973,
+      "sigma": 0.072,
+      "predicted_aging_rate": 0.9852216748768474,
+      "standardized_residual": -0.16974548440065895
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2001eh",
+      "z": 0.037,
+      "observed_aging_rate": 1.148,
+      "sigma": 0.107,
+      "predicted_aging_rate": 0.9643201542912248,
+      "standardized_residual": 1.7166340720446276
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2001ep",
+      "z": 0.013,
+      "observed_aging_rate": 0.925,
+      "sigma": 0.086,
+      "predicted_aging_rate": 0.987166831194472,
+      "standardized_residual": -0.7228701301682788
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2002ha",
+      "z": 0.014,
+      "observed_aging_rate": 0.973,
+      "sigma": 0.134,
+      "predicted_aging_rate": 0.9861932938856016,
+      "standardized_residual": -0.09845741705672867
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2003cg",
+      "z": 0.004,
+      "observed_aging_rate": 1.006,
+      "sigma": 0.131,
+      "predicted_aging_rate": 0.9960159362549801,
+      "standardized_residual": 0.07621422706122077
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2003du",
+      "z": 0.006,
+      "observed_aging_rate": 0.909,
+      "sigma": 0.091,
+      "predicted_aging_rate": 0.9940357852882704,
+      "standardized_residual": -0.9344591789919823
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2006lf",
+      "z": 0.013,
+      "observed_aging_rate": 0.941,
+      "sigma": 0.11,
+      "predicted_aging_rate": 0.987166831194472,
+      "standardized_residual": -0.4196984654042915
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1996bj",
+      "z": 0.574,
+      "observed_aging_rate": 0.527,
+      "sigma": 0.369,
+      "predicted_aging_rate": 0.6353240152477764,
+      "standardized_residual": -0.2935610169316432
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "1997ex",
+      "z": 0.361,
+      "observed_aging_rate": 0.745,
+      "sigma": 0.076,
+      "predicted_aging_rate": 0.7347538574577517,
+      "standardized_residual": 0.1348176650295831
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2001go",
+      "z": 0.552,
+      "observed_aging_rate": 0.652,
+      "sigma": 0.062,
+      "predicted_aging_rate": 0.6443298969072164,
+      "standardized_residual": 0.12371134020618706
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2002iz",
+      "z": 0.427,
+      "observed_aging_rate": 0.655,
+      "sigma": 0.089,
+      "predicted_aging_rate": 0.7007708479327259,
+      "standardized_residual": -0.5142791902553472
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "b027",
+      "z": 0.315,
+      "observed_aging_rate": 0.823,
+      "sigma": 0.092,
+      "predicted_aging_rate": 0.7604562737642586,
+      "standardized_residual": 0.679823111258058
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2003js",
+      "z": 0.363,
+      "observed_aging_rate": 0.718,
+      "sigma": 0.082,
+      "predicted_aging_rate": 0.7336757153338225,
+      "standardized_residual": -0.1911672601685671
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "04D2an",
+      "z": 0.621,
+      "observed_aging_rate": 0.567,
+      "sigma": 0.341,
+      "predicted_aging_rate": 0.6169031462060457,
+      "standardized_residual": -0.1463435372611312
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2006mk",
+      "z": 0.475,
+      "observed_aging_rate": 0.753,
+      "sigma": 0.06,
+      "predicted_aging_rate": 0.6779661016949152,
+      "standardized_residual": 1.2505649717514131
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2006sc",
+      "z": 0.357,
+      "observed_aging_rate": 0.619,
+      "sigma": 0.121,
+      "predicted_aging_rate": 0.7369196757553427,
+      "standardized_residual": -0.9745427748375428
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2006tk",
+      "z": 0.312,
+      "observed_aging_rate": 0.835,
+      "sigma": 0.181,
+      "predicted_aging_rate": 0.7621951219512195,
+      "standardized_residual": 0.4022368952971295
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2007tg",
+      "z": 0.502,
+      "observed_aging_rate": 0.687,
+      "sigma": 0.102,
+      "predicted_aging_rate": 0.6657789613848203,
+      "standardized_residual": 0.20804939818803694
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2007tt",
+      "z": 0.374,
+      "observed_aging_rate": 0.718,
+      "sigma": 0.108,
+      "predicted_aging_rate": 0.727802037845706,
+      "standardized_residual": -0.09075960968246288
+    },
+    {
+      "model": "baseline",
+      "b": 1.0,
+      "object": "2007un",
+      "z": 0.283,
+      "observed_aging_rate": 0.759,
+      "sigma": 0.135,
+      "predicted_aging_rate": 0.779423226812159,
+      "standardized_residual": -0.1512831615715483
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1981B",
+      "z": 0.006,
+      "observed_aging_rate": 1.099,
+      "sigma": 0.071,
+      "predicted_aging_rate": 0.9940179462683894,
+      "standardized_residual": 1.4786204750931076
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1989B",
+      "z": 0.002,
+      "observed_aging_rate": 1.036,
+      "sigma": 0.079,
+      "predicted_aging_rate": 0.997998009989996,
+      "standardized_residual": 0.48103784822789925
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1992A",
+      "z": 0.006,
+      "observed_aging_rate": 1.04,
+      "sigma": 0.077,
+      "predicted_aging_rate": 0.9940179462683894,
+      "standardized_residual": 0.597169528981957
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1994D",
+      "z": 0.002,
+      "observed_aging_rate": 1.011,
+      "sigma": 0.152,
+      "predicted_aging_rate": 0.997998009989996,
+      "standardized_residual": 0.08553940796055201
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1996X",
+      "z": 0.007,
+      "observed_aging_rate": 0.886,
+      "sigma": 0.116,
+      "predicted_aging_rate": 0.9930278782301446,
+      "standardized_residual": -0.9226541226736602
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1997br",
+      "z": 0.007,
+      "observed_aging_rate": 1.12,
+      "sigma": 0.149,
+      "predicted_aging_rate": 0.9930278782301446,
+      "standardized_residual": 0.8521618910728558
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1998V",
+      "z": 0.018,
+      "observed_aging_rate": 1.047,
+      "sigma": 0.166,
+      "predicted_aging_rate": 0.9822656990940781,
+      "standardized_residual": 0.3899656681079627
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1998ab",
+      "z": 0.027,
+      "observed_aging_rate": 0.987,
+      "sigma": 0.151,
+      "predicted_aging_rate": 0.9736320130488236,
+      "standardized_residual": 0.08852971490845271
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1998dm",
+      "z": 0.007,
+      "observed_aging_rate": 0.778,
+      "sigma": 0.119,
+      "predicted_aging_rate": 0.9930278782301446,
+      "standardized_residual": -1.8069569599171813
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1998eg",
+      "z": 0.025,
+      "observed_aging_rate": 0.883,
+      "sigma": 0.085,
+      "predicted_aging_rate": 0.9755374877130968,
+      "standardized_residual": -1.0886763260364325
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1999cl",
+      "z": 0.008,
+      "observed_aging_rate": 0.87,
+      "sigma": 0.122,
+      "predicted_aging_rate": 0.9920397775563125,
+      "standardized_residual": -1.0003260455435448
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1999dq",
+      "z": 0.014,
+      "observed_aging_rate": 0.928,
+      "sigma": 0.055,
+      "predicted_aging_rate": 0.9861521618878594,
+      "standardized_residual": -1.0573120343247149
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1999ej",
+      "z": 0.014,
+      "observed_aging_rate": 1.147,
+      "sigma": 0.159,
+      "predicted_aging_rate": 0.9861521618878594,
+      "standardized_residual": 1.0116216233467965
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1999gp",
+      "z": 0.027,
+      "observed_aging_rate": 0.839,
+      "sigma": 0.06,
+      "predicted_aging_rate": 0.9736320130488236,
+      "standardized_residual": -2.243866884147061
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2000fa",
+      "z": 0.021,
+      "observed_aging_rate": 0.884,
+      "sigma": 0.076,
+      "predicted_aging_rate": 0.9793708661371447,
+      "standardized_residual": -1.2548798175940097
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2001V",
+      "z": 0.015,
+      "observed_aging_rate": 0.973,
+      "sigma": 0.072,
+      "predicted_aging_rate": 0.9851776701083965,
+      "standardized_residual": -0.1691343070610631
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2001eh",
+      "z": 0.037,
+      "observed_aging_rate": 1.148,
+      "sigma": 0.107,
+      "predicted_aging_rate": 0.9642150531842651,
+      "standardized_residual": 1.7176163253806986
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2001ep",
+      "z": 0.013,
+      "observed_aging_rate": 0.925,
+      "sigma": 0.086,
+      "predicted_aging_rate": 0.987128580528056,
+      "standardized_residual": -0.7224253549773945
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2002ha",
+      "z": 0.014,
+      "observed_aging_rate": 0.973,
+      "sigma": 0.134,
+      "predicted_aging_rate": 0.9861521618878594,
+      "standardized_residual": -0.09815046184969696
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2003cg",
+      "z": 0.004,
+      "observed_aging_rate": 1.006,
+      "sigma": 0.131,
+      "predicted_aging_rate": 0.9960040079760002,
+      "standardized_residual": 0.07630528262595275
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2003du",
+      "z": 0.006,
+      "observed_aging_rate": 0.909,
+      "sigma": 0.091,
+      "predicted_aging_rate": 0.9940179462683894,
+      "standardized_residual": -0.9342631458064761
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2006lf",
+      "z": 0.013,
+      "observed_aging_rate": 0.941,
+      "sigma": 0.11,
+      "predicted_aging_rate": 0.987128580528056,
+      "standardized_residual": -0.41935073207323653
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1996bj",
+      "z": 0.574,
+      "observed_aging_rate": 0.527,
+      "sigma": 0.369,
+      "predicted_aging_rate": 0.6344600159470779,
+      "standardized_residual": -0.2912195554121352
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "1997ex",
+      "z": 0.361,
+      "observed_aging_rate": 0.745,
+      "sigma": 0.076,
+      "predicted_aging_rate": 0.7340747745735127,
+      "standardized_residual": 0.14375296613799116
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2001go",
+      "z": 0.552,
+      "observed_aging_rate": 0.652,
+      "sigma": 0.062,
+      "predicted_aging_rate": 0.643480822003575,
+      "standardized_residual": 0.13740609671653206
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2002iz",
+      "z": 0.427,
+      "observed_aging_rate": 0.655,
+      "sigma": 0.089,
+      "predicted_aging_rate": 0.7000237181017954,
+      "standardized_residual": -0.5058844730538808
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "b027",
+      "z": 0.315,
+      "observed_aging_rate": 0.823,
+      "sigma": 0.092,
+      "predicted_aging_rate": 0.7598318078707712,
+      "standardized_residual": 0.686610784013356
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2003js",
+      "z": 0.363,
+      "observed_aging_rate": 0.718,
+      "sigma": 0.082,
+      "predicted_aging_rate": 0.7329943998449129,
+      "standardized_residual": -0.18285853469405985
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "04D2an",
+      "z": 0.621,
+      "observed_aging_rate": 0.567,
+      "sigma": 0.341,
+      "predicted_aging_rate": 0.616009820945847,
+      "standardized_residual": -0.14372381509046053
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2006mk",
+      "z": 0.475,
+      "observed_aging_rate": 0.753,
+      "sigma": 0.06,
+      "predicted_aging_rate": 0.6771760715350243,
+      "standardized_residual": 1.2637321410829276
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2006sc",
+      "z": 0.357,
+      "observed_aging_rate": 0.619,
+      "sigma": 0.121,
+      "predicted_aging_rate": 0.736245092189356,
+      "standardized_residual": -0.9689677040442642
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2006tk",
+      "z": 0.312,
+      "observed_aging_rate": 0.835,
+      "sigma": 0.181,
+      "predicted_aging_rate": 0.7615744463965161,
+      "standardized_residual": 0.4056660420081984
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2007tg",
+      "z": 0.502,
+      "observed_aging_rate": 0.687,
+      "sigma": 0.102,
+      "predicted_aging_rate": 0.6649669452172139,
+      "standardized_residual": 0.21601034100770752
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2007tt",
+      "z": 0.374,
+      "observed_aging_rate": 0.718,
+      "sigma": 0.108,
+      "predicted_aging_rate": 0.7271086430487649,
+      "standardized_residual": -0.08433928748856397
+    },
+    {
+      "model": "DES_central",
+      "b": 1.003,
+      "object": "2007un",
+      "z": 0.283,
+      "observed_aging_rate": 0.759,
+      "sigma": 0.135,
+      "predicted_aging_rate": 0.7788407452289844,
+      "standardized_residual": -0.14696848317766206
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1981B",
+      "z": 0.006,
+      "observed_aging_rate": 1.099,
+      "sigma": 0.071,
+      "predicted_aging_rate": 0.991178561425181,
+      "standardized_residual": 1.5186118109129432
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1989B",
+      "z": 0.002,
+      "observed_aging_rate": 1.036,
+      "sigma": 0.079,
+      "predicted_aging_rate": 0.9970449555177551,
+      "standardized_residual": 0.4931018288891767
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1992A",
+      "z": 0.006,
+      "observed_aging_rate": 1.04,
+      "sigma": 0.077,
+      "predicted_aging_rate": 0.991178561425181,
+      "standardized_residual": 0.6340446568158314
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1994D",
+      "z": 0.002,
+      "observed_aging_rate": 1.011,
+      "sigma": 0.152,
+      "predicted_aging_rate": 0.9970449555177551,
+      "standardized_residual": 0.09180950317266334
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1996X",
+      "z": 0.007,
+      "observed_aging_rate": 0.886,
+      "sigma": 0.116,
+      "predicted_aging_rate": 0.9897209926100193,
+      "standardized_residual": -0.8941464880174079
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1997br",
+      "z": 0.007,
+      "observed_aging_rate": 1.12,
+      "sigma": 0.149,
+      "predicted_aging_rate": 0.9897209926100193,
+      "standardized_residual": 0.874355754295173
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1998V",
+      "z": 0.018,
+      "observed_aging_rate": 1.047,
+      "sigma": 0.166,
+      "predicted_aging_rate": 0.9739217789579979,
+      "standardized_residual": 0.4402302472409759
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1998ab",
+      "z": 0.027,
+      "observed_aging_rate": 0.987,
+      "sigma": 0.151,
+      "predicted_aging_rate": 0.961306741726219,
+      "standardized_residual": 0.1701540283031854
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1998dm",
+      "z": 0.007,
+      "observed_aging_rate": 0.778,
+      "sigma": 0.119,
+      "predicted_aging_rate": 0.9897209926100193,
+      "standardized_residual": -1.7791680051262129
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1998eg",
+      "z": 0.025,
+      "observed_aging_rate": 0.883,
+      "sigma": 0.085,
+      "predicted_aging_rate": 0.964086341794662,
+      "standardized_residual": -0.9539569622901413
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1999cl",
+      "z": 0.008,
+      "observed_aging_rate": 0.87,
+      "sigma": 0.122,
+      "predicted_aging_rate": 0.988267010739284,
+      "standardized_residual": -0.9694017273711806
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1999dq",
+      "z": 0.014,
+      "observed_aging_rate": 0.928,
+      "sigma": 0.055,
+      "predicted_aging_rate": 0.9796177563129607,
+      "standardized_residual": -0.9385046602356476
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1999ej",
+      "z": 0.014,
+      "observed_aging_rate": 1.147,
+      "sigma": 0.159,
+      "predicted_aging_rate": 0.9796177563129607,
+      "standardized_residual": 1.0527185137549644
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1999gp",
+      "z": 0.027,
+      "observed_aging_rate": 0.839,
+      "sigma": 0.06,
+      "predicted_aging_rate": 0.961306741726219,
+      "standardized_residual": -2.038445695436984
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2000fa",
+      "z": 0.021,
+      "observed_aging_rate": 0.884,
+      "sigma": 0.076,
+      "predicted_aging_rate": 0.969686102904647,
+      "standardized_residual": -1.1274487224295653
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2001V",
+      "z": 0.015,
+      "observed_aging_rate": 0.973,
+      "sigma": 0.072,
+      "predicted_aging_rate": 0.978188539675873,
+      "standardized_residual": -0.07206305105379267
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2001eh",
+      "z": 0.037,
+      "observed_aging_rate": 1.148,
+      "sigma": 0.107,
+      "predicted_aging_rate": 0.9476079205966731,
+      "standardized_residual": 1.8728231719937085
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2001ep",
+      "z": 0.013,
+      "observed_aging_rate": 0.925,
+      "sigma": 0.086,
+      "predicted_aging_rate": 0.9810504744291447,
+      "standardized_residual": -0.6517497026644731
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2002ha",
+      "z": 0.014,
+      "observed_aging_rate": 0.973,
+      "sigma": 0.134,
+      "predicted_aging_rate": 0.9796177563129607,
+      "standardized_residual": -0.049386241141497665
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2003cg",
+      "z": 0.004,
+      "observed_aging_rate": 1.006,
+      "sigma": 0.131,
+      "predicted_aging_rate": 0.9941045096549879,
+      "standardized_residual": 0.09080526980925296
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2003du",
+      "z": 0.006,
+      "observed_aging_rate": 0.909,
+      "sigma": 0.091,
+      "predicted_aging_rate": 0.991178561425181,
+      "standardized_residual": -0.9030611145624284
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2006lf",
+      "z": 0.013,
+      "observed_aging_rate": 0.941,
+      "sigma": 0.11,
+      "predicted_aging_rate": 0.9810504744291447,
+      "standardized_residual": -0.36409522208313433
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1996bj",
+      "z": 0.574,
+      "observed_aging_rate": 0.527,
+      "sigma": 0.369,
+      "predicted_aging_rate": 0.5107387336947968,
+      "standardized_residual": 0.04406847237182437
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "1997ex",
+      "z": 0.361,
+      "observed_aging_rate": 0.745,
+      "sigma": 0.076,
+      "predicted_aging_rate": 0.6334769816751782,
+      "standardized_residual": 1.4674081358529185
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2001go",
+      "z": 0.552,
+      "observed_aging_rate": 0.652,
+      "sigma": 0.062,
+      "predicted_aging_rate": 0.5214988069327838,
+      "standardized_residual": 2.1048579526970355
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2002iz",
+      "z": 0.427,
+      "observed_aging_rate": 0.655,
+      "sigma": 0.089,
+      "predicted_aging_rate": 0.5905666719745541,
+      "standardized_residual": 0.7239699778139986
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "b027",
+      "z": 0.315,
+      "observed_aging_rate": 0.823,
+      "sigma": 0.092,
+      "predicted_aging_rate": 0.6665742030309623,
+      "standardized_residual": 1.7002804018373663
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2003js",
+      "z": 0.363,
+      "observed_aging_rate": 0.718,
+      "sigma": 0.082,
+      "predicted_aging_rate": 0.6321006534318413,
+      "standardized_residual": 1.0475530069287642
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "04D2an",
+      "z": 0.621,
+      "observed_aging_rate": 0.567,
+      "sigma": 0.341,
+      "predicted_aging_rate": 0.48895820645959526,
+      "standardized_residual": 0.22886156463461785
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2006mk",
+      "z": 0.475,
+      "observed_aging_rate": 0.753,
+      "sigma": 0.06,
+      "predicted_aging_rate": 0.5623246779385075,
+      "standardized_residual": 3.177922034358209
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2006sc",
+      "z": 0.357,
+      "observed_aging_rate": 0.619,
+      "sigma": 0.121,
+      "predicted_aging_rate": 0.6362447462558819,
+      "standardized_residual": -0.14251856409819755
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2006tk",
+      "z": 0.312,
+      "observed_aging_rate": 0.835,
+      "sigma": 0.181,
+      "predicted_aging_rate": 0.6688330411893835,
+      "standardized_residual": 0.9180494961912514
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2007tg",
+      "z": 0.502,
+      "observed_aging_rate": 0.687,
+      "sigma": 0.102,
+      "predicted_aging_rate": 0.5474172357768513,
+      "standardized_residual": 1.368458472775968
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2007tt",
+      "z": 0.374,
+      "observed_aging_rate": 0.718,
+      "sigma": 0.108,
+      "predicted_aging_rate": 0.6246195762842803,
+      "standardized_residual": 0.86463355292333
+    },
+    {
+      "model": "brightness_time_only",
+      "b": 1.4811888402456221,
+      "object": "2007un",
+      "z": 0.283,
+      "observed_aging_rate": 0.759,
+      "sigma": 0.135,
+      "predicted_aging_rate": 0.6913466843832795,
+      "standardized_residual": 0.5011356712349666
+    }
+  ]
+}
