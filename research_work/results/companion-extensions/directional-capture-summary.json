@@ -1,0 +1,671 @@
+{
+  "scope": "Frozen coarse-trained mixtures evaluated at refined resolution; no new fits; multiple exposed-data comparisons.",
+  "branches": [
+    {
+      "label": "flat_isotropic_raw",
+      "mixture": 0.0,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 29.02512605660848,
+          "log_RMS": 0.13848909638905518
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.49485711556625,
+          "log_RMS": 0.11539400971119736
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.590786917262584,
+          "log_RMS": 0.0910582648582728
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.725814198614359,
+          "RMSE_kms": 25.776733722987448
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -7.486009501430602,
+          "RMSE_kms": 25.923020231087623
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 10.411653822323865,
+          "RMSE_kms": 33.49594288862152
+        }
+      ],
+      "stored_mass_fraction_range": [
+        1.0,
+        1.0
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 0,
+          "mean_log_loss_difference": 0.0,
+          "descriptive_bootstrap95": [
+            0.0,
+            0.0
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 0,
+          "mean_log_loss_difference": 0.0,
+          "descriptive_bootstrap95": [
+            0.0,
+            0.0
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 0,
+          "mean_log_loss_difference": 0.0,
+          "descriptive_bootstrap95": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {
+        "train": {
+          "RMSE_kms": 29.02512605660848,
+          "log_RMS": 0.13848909638905518
+        },
+        "validation": {
+          "RMSE_kms": 32.49485711556625,
+          "log_RMS": 0.11539400971119736
+        },
+        "test": {
+          "RMSE_kms": 23.590786917262584,
+          "log_RMS": 0.0910582648582728
+        }
+      },
+      "max_prediction_refinement_change_kms": 0.0
+    },
+    {
+      "label": "flat_isotropic_fixed_mass",
+      "mixture": 0.019257513237884667,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 29.145328518362803,
+          "log_RMS": 0.13848367180835602
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.58148297983259,
+          "log_RMS": 0.11529307710115587
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.72805546061007,
+          "log_RMS": 0.0910733611619986
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.6510940810811245,
+          "RMSE_kms": 25.73951694250783
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -7.179666553812986,
+          "RMSE_kms": 25.817004534840073
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 10.815244695983012,
+          "RMSE_kms": 33.82507367927228
+        }
+      ],
+      "stored_mass_fraction_range": [
+        1.0,
+        1.0
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 48,
+          "mean_log_loss_difference": -1.5024611325561475e-06,
+          "descriptive_bootstrap95": [
+            -7.070776319883119e-05,
+            5.9314101341545326e-05
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 13,
+          "mean_log_loss_difference": -2.3283849774837e-05,
+          "descriptive_bootstrap95": [
+            -8.774480735276294e-05,
+            4.209480420732932e-05
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 17,
+          "mean_log_loss_difference": 2.749514344477735e-06,
+          "descriptive_bootstrap95": [
+            -4.0309564786479076e-05,
+            4.509505416799986e-05
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {},
+      "max_prediction_refinement_change_kms": 0.004748194779551795
+    },
+    {
+      "label": "flat_vertical_raw",
+      "mixture": 0.00027523495161300705,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 29.02362032903385,
+          "log_RMS": 0.13848909914003377
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.49336327352274,
+          "log_RMS": 0.11539446910694427
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.58913210333274,
+          "log_RMS": 0.09105671145557132
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.726191697759298,
+          "RMSE_kms": 25.776799876983265
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -7.487827149011366,
+          "RMSE_kms": 25.92305938209377
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 10.406865991176593,
+          "RMSE_kms": 33.49271327393515
+        }
+      ],
+      "stored_mass_fraction_range": [
+        0.999862190904221,
+        0.9998653672591873
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 44,
+          "mean_log_loss_difference": 7.619610895562235e-10,
+          "descriptive_bootstrap95": [
+            -5.833979144586581e-07,
+            6.032803975885247e-07
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 18,
+          "mean_log_loss_difference": 1.0602324560537181e-07,
+          "descriptive_bootstrap95": [
+            -5.429250032470591e-07,
+            8.331276192418803e-07
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 17,
+          "mean_log_loss_difference": -2.828978961844876e-07,
+          "descriptive_bootstrap95": [
+            -7.960873178891402e-07,
+            2.3116871175211627e-07
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {
+        "train": {
+          "RMSE_kms": 29.022998960212913,
+          "log_RMS": 0.13848911649203405
+        },
+        "validation": {
+          "RMSE_kms": 32.492875758485354,
+          "log_RMS": 0.11539481944336093
+        },
+        "test": {
+          "RMSE_kms": 23.588533056371865,
+          "log_RMS": 0.09105647663311077
+        }
+      },
+      "max_prediction_refinement_change_kms": 3.394001362266863e-05
+    },
+    {
+      "label": "flat_vertical_fixed_mass",
+      "mixture": 0.011888782739185162,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 29.07870472015838,
+          "log_RMS": 0.13848842379484932
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.537167532393525,
+          "log_RMS": 0.11536494946119588
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.64262948394321,
+          "log_RMS": 0.09108055299901169
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.699187093636042,
+          "RMSE_kms": 25.76116329371757
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -7.369660960060033,
+          "RMSE_kms": 25.875189736014185
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 10.593099292330963,
+          "RMSE_kms": 33.638508345442474
+        }
+      ],
+      "stored_mass_fraction_range": [
+        1.0,
+        1.0
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 48,
+          "mean_log_loss_difference": -1.8629347523052956e-07,
+          "descriptive_bootstrap95": [
+            -2.7340251614522372e-05,
+            2.4928048750627117e-05
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 11,
+          "mean_log_loss_difference": -6.705913043631007e-06,
+          "descriptive_bootstrap95": [
+            -3.243486627606871e-05,
+            2.0183198375965384e-05
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 16,
+          "mean_log_loss_difference": 4.059535606418966e-06,
+          "descriptive_bootstrap95": [
+            -1.5998040942723036e-05,
+            2.2743115920400583e-05
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {},
+      "max_prediction_refinement_change_kms": 0.002899382274620166
+    },
+    {
+      "label": "flat_sides_raw",
+      "mixture": 0.010672462028111207,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 28.96879602304637,
+          "log_RMS": 0.13848842433844194
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.43746993017105,
+          "log_RMS": 0.1154063162184867
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.530810498892,
+          "log_RMS": 0.09099483434533796
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.737566712022108,
+          "RMSE_kms": 25.778355834875335
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -7.545257228675956,
+          "RMSE_kms": 25.921424546676413
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 10.233204190912959,
+          "RMSE_kms": 33.3780223562299
+        }
+      ],
+      "stored_mass_fraction_range": [
+        0.9946560895059365,
+        0.994811711381055
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 45,
+          "mean_log_loss_difference": -1.8614291265708107e-07,
+          "descriptive_bootstrap95": [
+            -2.116270064845842e-05,
+            2.0575084693964117e-05
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 18,
+          "mean_log_loss_difference": 2.840345893435095e-06,
+          "descriptive_bootstrap95": [
+            -2.1364470411862618e-05,
+            3.092351474861799e-05
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 17,
+          "mean_log_loss_difference": -1.154772146386317e-05,
+          "descriptive_bootstrap95": [
+            -3.218263808204946e-05,
+            9.483080557919655e-06
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {
+        "train": {
+          "RMSE_kms": 28.943522838298428,
+          "log_RMS": 0.1384918174291962
+        },
+        "validation": {
+          "RMSE_kms": 32.418943181655514,
+          "log_RMS": 0.11542749776258718
+        },
+        "test": {
+          "RMSE_kms": 23.504375185287923,
+          "log_RMS": 0.09099141178972985
+        }
+      },
+      "max_prediction_refinement_change_kms": 0.0011788961393790487
+    },
+    {
+      "label": "flat_sides_fixed_mass",
+      "mixture": 0.027240756566921768,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 29.15665376892072,
+          "log_RMS": 0.13848304510528794
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.594137647433755,
+          "log_RMS": 0.115300660310405
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.729911096253836,
+          "log_RMS": 0.09109592211414072
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.65040876564112,
+          "RMSE_kms": 25.736576645454676
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -7.164216051043264,
+          "RMSE_kms": 25.800198325143743
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 10.860614832415367,
+          "RMSE_kms": 33.85512623227784
+        }
+      ],
+      "stored_mass_fraction_range": [
+        1.0,
+        1.0
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 48,
+          "mean_log_loss_difference": -1.6760370238079964e-06,
+          "descriptive_bootstrap95": [
+            -7.494981280717944e-05,
+            6.468019971249867e-05
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 12,
+          "mean_log_loss_difference": -2.1535209212505894e-05,
+          "descriptive_bootstrap95": [
+            -9.753427566183681e-05,
+            5.3307777003261594e-05
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 16,
+          "mean_log_loss_difference": 6.859426826231906e-06,
+          "descriptive_bootstrap95": [
+            -4.124043294626056e-05,
+            5.183703028762349e-05
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {},
+      "max_prediction_refinement_change_kms": 0.005939203811806237
+    },
+    {
+      "label": "thin_isotropic_raw",
+      "mixture": 0.030733760603328674,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 28.783282416084738,
+          "log_RMS": 0.13847338851912716
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.230245411353906,
+          "log_RMS": 0.11540514000509251
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.333767562749003,
+          "log_RMS": 0.09070807231876399
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.758311352785662,
+          "RMSE_kms": 25.77003900410025
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -7.686365007509892,
+          "RMSE_kms": 25.874822190162423
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 9.642101886972046,
+          "RMSE_kms": 33.013302916149044
+        }
+      ],
+      "stored_mass_fraction_range": [
+        0.9770204143467615,
+        0.978705890334052
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 48,
+          "mean_log_loss_difference": -4.350490687878774e-06,
+          "descriptive_bootstrap95": [
+            -0.00010627019376766758,
+            8.964766803928507e-05
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 21,
+          "mean_log_loss_difference": 2.568862367094562e-06,
+          "descriptive_bootstrap95": [
+            -0.00010562298971134451,
+            0.00013687171661780763
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 18,
+          "mean_log_loss_difference": -6.365321521324101e-05,
+          "descriptive_bootstrap95": [
+            -0.00014533531946086723,
+            3.128828125704441e-05
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {
+        "train": {
+          "RMSE_kms": 28.696430777058143,
+          "log_RMS": 0.13853446068439684
+        },
+        "validation": {
+          "RMSE_kms": 32.18973983490935,
+          "log_RMS": 0.11557103328159117
+        },
+        "test": {
+          "RMSE_kms": 23.242711687621856,
+          "log_RMS": 0.09081324114372846
+        }
+      },
+      "max_prediction_refinement_change_kms": 0.007484940711776744
+    },
+    {
+      "label": "thin_isotropic_fixed_mass",
+      "mixture": 0.03790598689748787,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 29.453880410750788,
+          "log_RMS": 0.1383860714550957
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 32.759548841267915,
+          "log_RMS": 0.11488424732131776
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 24.069408868299675,
+          "log_RMS": 0.09093886436006057
+        }
+      },
+      "radial": [
+        {
+          "bin": 0,
+          "galaxies": 137,
+          "bias_kms": -6.377194823065172,
+          "RMSE_kms": 25.580358254908653
+        },
+        {
+          "bin": 1,
+          "galaxies": 149,
+          "bias_kms": -6.126724296252603,
+          "RMSE_kms": 25.369571532945326
+        },
+        {
+          "bin": 2,
+          "galaxies": 134,
+          "bias_kms": 11.918968268243235,
+          "RMSE_kms": 34.76925109448119
+        }
+      ],
+      "stored_mass_fraction_range": [
+        1.0,
+        1.0
+      ],
+      "paired_log_loss": {
+        "train": {
+          "galaxies": 89,
+          "improved": 50,
+          "mean_log_loss_difference": -2.852504588216026e-05,
+          "descriptive_bootstrap95": [
+            -0.0003534461370875281,
+            0.0002567636024004912
+          ]
+        },
+        "validation": {
+          "galaxies": 29,
+          "improved": 14,
+          "mean_log_loss_difference": -0.00011738719464220315,
+          "descriptive_bootstrap95": [
+            -0.0004101258968894181,
+            0.00014004403922542928
+          ]
+        },
+        "test": {
+          "galaxies": 31,
+          "improved": 17,
+          "mean_log_loss_difference": -2.1730547901859303e-05,
+          "descriptive_bootstrap95": [
+            -0.00021278888383976014,
+            0.00014300038177501398
+          ]
+        }
+      },
+      "same_inventory_spherical_control": {},
+      "max_prediction_refinement_change_kms": 0.029255179942765608
+    }
+  ],
+  "refinement_max_kms": 0.029255179942765608,
+  "source_sha256": {
+    "directional-capture-results.json": "4b7e256bb8ffb41b9bd276a9f6a91f897668e1316873313b0525dd96e0e24828",
+    "directional-capture-refined.json": "12edc827236e7cbcfab444751ed376a40e83d16d87919c13e8decd576c9c0399",
+    "directional-capture-check-results.json": "278bc6730056605f579909f3bd0c472018dcac294d31bfdcb42111eb9015a9a6"
+  }
+}
