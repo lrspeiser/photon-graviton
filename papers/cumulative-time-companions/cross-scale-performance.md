@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Gaussian spatial overlap
+
+A stipulated Gaussian receiving overlap makes scattering forward-directed and changes the high-energy fractional-loss scaling from cubic to approximately linear. It still fails common fractional redshift. Increasing size also suppresses the integrated rate; illustrative small deflections require compensating coupling or mode abundance that has not been derived. The angular diagnostic is not an observed image-width prediction. The [spatial extension](../../research_work/results/companion-extensions/spatial-response-report.md) evaluates 30 size/energy cases, checks narrow-cone angular integrals independently, and keeps the rate-versus-deflection tradeoff explicit. No microscopic overlap or absolute rate has been inferred from data.
+
 ### Positive receiving spectra and the color bound
 
 For the previously derived forward point interaction, any positive incident-energy-independent gap spectrum obeys d ln(alpha)/d ln(E)>=3. A continuum of soft states alone therefore cannot produce common fractional redshift. Eighty-four numerical examples confirm the analytic bound; spatial response, inverse populations or a coherent evolving field must change the assumptions. This is a conditional interaction result, not an exclusion of the overall hypothesis. The [positive-spectrum proof](../../research_work/results/companion-extensions/continuum-color-report.md) prevents a misleading repair by tuning mode density alone. It does not apply to signed net transfer, energy-dependent overlap or coherent clock evolution.
