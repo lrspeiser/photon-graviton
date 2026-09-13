@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Age-independent hydrogen fuel cost derived:** [Measured atomic masses and energy bookkeeping](cluster-competing-capture/fuel-report.md) require at least 140.48 units of burned hydrogen per unit stored E/c^2 at ideal delivery, rising as 1/F. The budget allows external donors and does not establish actual shortage; other energy channels and source inventories remain to be assessed. Synthetic history alternatives now have explicit fuel costs. All six objectives remain open.
+
 **Accumulation-history nonuniqueness demonstrated:** [Positive finite emission histories](cluster-competing-capture/history-report.md) give identical present photon and companion energies but different stored deposits; one alternative stores 20.31 times as much, fully funded by additional past emission. Independent matrix/quadrature checks pass. Equality is bolometric only, not full observational equivalence; stellar fuel, remnants, spectra and histories must constrain storage. All six objectives remain open.
 
 **Distant-source capture competition derived:** [Homogeneous shell supply and finite-history ledger](cluster-competing-capture/report.md) yields finite steady receiver power sigma J/beta when alpha,beta>0, with beta=sum(n sigma) and total allocated capture equal to total emission. Twenty-five history cases pass independent shell/matrix checks. No size or age is fixed; permanent deposits continue growing, and real source density, capture populations, fuel and gravity remain unmeasured. All six objectives remain open.

@@ -1,0 +1,55 @@
+{
+  "scope": "Conditional hydrogen-to-helium photon funding; optimistic bound assuming all nuclear release can become photons. Not a total stellar/AGN energy limit or measured cosmic fuel inventory.",
+  "atomic_masses_u": {
+    "hydrogen1": 1.00782503223,
+    "helium4": 4.00260325413
+  },
+  "sources": [
+    "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=H",
+    "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ele=He"
+  ],
+  "energy_release_fraction": 0.007118516079746115,
+  "rows": [
+    {
+      "fraction_of_nuclear_release_retained_in_target": 1.0,
+      "minimum_hydrogen_burned_per_unit_deposit_mass_equivalent": 140.47871618148616,
+      "helium_product_per_unit_deposit_mass_equivalent": 139.47871618148616,
+      "energy_not_in_target_as_mass_equivalent": 0.0
+    },
+    {
+      "fraction_of_nuclear_release_retained_in_target": 0.5,
+      "minimum_hydrogen_burned_per_unit_deposit_mass_equivalent": 280.9574323629723,
+      "helium_product_per_unit_deposit_mass_equivalent": 278.9574323629723,
+      "energy_not_in_target_as_mass_equivalent": 1.0
+    },
+    {
+      "fraction_of_nuclear_release_retained_in_target": 0.1,
+      "minimum_hydrogen_burned_per_unit_deposit_mass_equivalent": 1404.7871618148615,
+      "helium_product_per_unit_deposit_mass_equivalent": 1394.7871618148615,
+      "energy_not_in_target_as_mass_equivalent": 9.0
+    },
+    {
+      "fraction_of_nuclear_release_retained_in_target": 0.01,
+      "minimum_hydrogen_burned_per_unit_deposit_mass_equivalent": 14047.871618148616,
+      "helium_product_per_unit_deposit_mass_equivalent": 13947.871618148616,
+      "energy_not_in_target_as_mass_equivalent": 99.0
+    }
+  ],
+  "previous_history_fuel_costs": [
+    {
+      "old_age_alpha_c_T": 10.0,
+      "reference_minimum_burned_mass_in_energy_unit_over_c2": 280.9574323629723,
+      "alternative_minimum_burned_mass_in_energy_unit_over_c2": 378.57650416567236
+    },
+    {
+      "old_age_alpha_c_T": 30.0,
+      "reference_minimum_burned_mass_in_energy_unit_over_c2": 280.9574323629723,
+      "alternative_minimum_burned_mass_in_energy_unit_over_c2": 1481.5194290864918
+    },
+    {
+      "old_age_alpha_c_T": 100.0,
+      "reference_minimum_burned_mass_in_energy_unit_over_c2": 280.9574323629723,
+      "alternative_minimum_burned_mass_in_energy_unit_over_c2": 1399060.1058562237
+    }
+  ]
+}
