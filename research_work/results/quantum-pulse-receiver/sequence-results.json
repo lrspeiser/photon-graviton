@@ -1,0 +1,77 @@
+{
+  "scope": "Finite spectral operations, no spatial interaction or causal arrival prediction",
+  "no_receiver_reset": true,
+  "waits": [
+    0.3,
+    2.0,
+    11.0
+  ],
+  "stretch_postulated": 2,
+  "photons_labeled_by_distinct_modes": true,
+  "receiver_lightcone_energy": 50,
+  "input_centers": [
+    0.0,
+    4.0
+  ],
+  "receiver_reference": 1.0,
+  "timing_values_are_analytic_continuum_predictions_not_detected_arrivals": true,
+  "rows": [
+    {
+      "receiver_sigma": 0.1,
+      "normalization": 0.9999999999999997,
+      "joint_trace_formula_error": 1.388640301642157e-17,
+      "free_evolution_errors": [
+        5.369914905502496e-16,
+        2.164901581133434e-15,
+        1.7288281663701173e-14
+      ],
+      "total_energy_error": 0.0,
+      "receiver_energy_gain": 10.0,
+      "first_packet_marginal_change": 5.561946577567963e-17,
+      "continuum_gaussian_common_jitter_sd": 5.0,
+      "continuum_predicted_profile_centers": [
+        -1.0,
+        7.0
+      ],
+      "continuum_predicted_profile_center_separation": 8.0
+    },
+    {
+      "receiver_sigma": 0.5,
+      "normalization": 0.9999999999999999,
+      "joint_trace_formula_error": 3.472765733777092e-17,
+      "free_evolution_errors": [
+        2.5119370972018154e-16,
+        1.0200306797329369e-15,
+        8.11874309124762e-15
+      ],
+      "total_energy_error": 1.4210854715202004e-14,
+      "receiver_energy_gain": 10.0,
+      "first_packet_marginal_change": 8.326672684688674e-17,
+      "continuum_gaussian_common_jitter_sd": 1.0,
+      "continuum_predicted_profile_centers": [
+        -1.0,
+        7.0
+      ],
+      "continuum_predicted_profile_center_separation": 8.0
+    },
+    {
+      "receiver_sigma": 1.0,
+      "normalization": 0.9999999999999996,
+      "joint_trace_formula_error": 2.1942709178604383e-17,
+      "free_evolution_errors": [
+        1.8094421531119201e-16,
+        7.220832050682907e-16,
+        5.7554454605277764e-15
+      ],
+      "total_energy_error": 0.0,
+      "receiver_energy_gain": 10.0,
+      "first_packet_marginal_change": 5.594315114139762e-17,
+      "continuum_gaussian_common_jitter_sd": 0.5,
+      "continuum_predicted_profile_centers": [
+        -1.0,
+        7.0
+      ],
+      "continuum_predicted_profile_center_separation": 8.0
+    }
+  ]
+}
