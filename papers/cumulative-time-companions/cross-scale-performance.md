@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Orbital support and angular-momentum transport
+
+The [orbital test](../../research_work/results/companion-extensions/orbital-support-report.md) finds resolved density increases that violate a necessary condition for a nonnegative isotropic energy-only distribution in both settled profiles. A singular population of circular orbits with random planes supplies a nonnegative stationary construction in the spherical-average potential, with bound individual orbits and positive radial epicyclic frequencies over 0.1-30 kpc. This preserves the fitted density by construction, so it is not new observational evidence or collective stability. Settling between the assumed initial/final circular states requires mean specific angular-momentum reductions of 17.13%/17.89% for moved mass. Formation, torques and nonspherical dynamics remain missing.
+
 ### Shared pressure laws and derived equilibrium profiles
 
 The [pressure-law test](../../research_work/results/companion-extensions/interaction-support-report.md) calibrates shared effective polytropic amplitudes to the prior inner required pressure, then solves hydrostatic equilibrium with the exact-third total mass. Gamma=5/3 yields all-bin speed RMS 26.93/19.47 km/s; gamma=2 yields 43.73/35.98, both worse than original 6.34/10.91. Gamma=4/3 mass matches that fail to reach a surface within the computational domain are rejected. These existing polytropic equations are proposed support closures, not a derived interaction or stability proof. A local outward-rising density also prevents an everywhere positive-compressibility barotropic law from exactly reproducing parts of the fitted profile. Orbital and multicomponent support remain alternatives.

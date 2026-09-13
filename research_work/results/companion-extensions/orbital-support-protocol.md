@@ -1,0 +1,7 @@
+# Orbital support test
+
+Freeze original and shared-settled density profiles and exact-third inventories. First test the necessary condition for a nonnegative isotropic energy-only distribution: d rho/d Psi must be nonnegative, with Psi decreasing outward. A resolved positive radial density slope rejects this class without an ill-conditioned numerical inversion. Passing the condition does not prove distribution-function positivity. Check both baselines and profiles with refined radial sampling; do not count small derivative noise as a physical result.
+
+Construct the singular tangential alternative explicitly: nonnegative spherical shells populated by circular orbits with uniformly distributed planes, phases and opposite senses of rotation. Set v_c^2=r*g for the same spherical-average potential. Check positive individual radial epicyclic frequency squared, bound specific orbital energy, tangential Jeans balance and radial sampling. This is an existence construction in a prescribed spherical potential, not collective stability, capture dynamics or a new density prediction.
+
+For the moved fraction, compare initial circular-orbit specific angular momentum with the final circular-orbit requirement at s*r using initial/final potentials. Report the transport requirement and specific energy changes; do not assert that isotropic incoming flux supplies the required orbital distribution. No new speed fitting, phase mass or pressure law. Formation, full flattened-Galaxy dynamics, energy supply and lensing remain outside this support diagnostic.
