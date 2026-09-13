@@ -1,0 +1,37 @@
+{
+  "status": "Conditional homogeneous temporal completion; not a general exclusion",
+  "source_input_sha256": "c9b38e073cc94729c785aa2013e5bf82196bfb863d4295cb52d56534b270304c",
+  "analytic_required_u_gamma_over_u_companion": "24*(q**2 + 2*q + 1)/(12*q + 13)",
+  "required_u_gamma_over_u_companion": 6.357765095019542,
+  "required_photon_u_lower_bound_J_m3": 2.9970797272592126e-08,
+  "required_growth_lower_source_W_m3": 7.247565999694077e-26,
+  "required_bolometric_intensity_nW_m2_sr": 715005092.425271,
+  "microwave_temperature_K": 2.72548,
+  "microwave_temperature_uncertainty_K": 0.00057,
+  "microwave_u_J_m3": 4.1746783808003774e-14,
+  "microwave_u_temperature_uncertainty_J_m3": 3.4923267491322116e-17,
+  "benchmarks": [
+    {
+      "UV_mm_intensity_nW_m2_sr": 45.0,
+      "UV_mm_u_J_m3": 1.8862605197565137e-15,
+      "microwave_plus_UV_mm_u_J_m3": 4.363304432776029e-14,
+      "required_to_benchmark_ratio": 686883.0202967079
+    },
+    {
+      "UV_mm_intensity_nW_m2_sr": 100.0,
+      "UV_mm_u_J_m3": 4.1916900439033635e-15,
+      "microwave_plus_UV_mm_u_J_m3": 4.593847385190714e-14,
+      "required_to_benchmark_ratio": 652411.68805933
+    },
+    {
+      "UV_mm_intensity_nW_m2_sr": 170.0,
+      "UV_mm_u_J_m3": 7.125873074635718e-15,
+      "microwave_plus_UV_mm_u_J_m3": 4.887265688263949e-14,
+      "required_to_benchmark_ratio": 613242.6429069039
+    }
+  ],
+  "source_references": [
+    "https://arxiv.org/abs/0911.1955",
+    "https://ned.ipac.caltech.edu/level5/March03/Dwek2/Dwek6.html"
+  ]
+}
