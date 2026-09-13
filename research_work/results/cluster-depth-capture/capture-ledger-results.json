@@ -1,0 +1,236 @@
+{
+  "scope": "Special-relativistic local absorption into a receiver initially at rest, no escaping products. Companion p=E/c assumed. Kinematic allowance, not an interaction rate, lifetime or microscopic mechanism.",
+  "provenance": "Known energy-momentum conservation and invariant-mass relation applied to hypothetical companions. Numerical ratios are synthetic, not measured receiver masses.",
+  "formulas": [
+    "M_final*c^2=sqrt((M*c^2+E)^2-j^2*E^2)",
+    "Delta_internal=(M_final-M)*c^2; K_recoil=E-Delta_internal",
+    "v/c=j*E/(M*c^2+E); j=|sum(p)|*c/E",
+    "For a single direction and weak external well, v<v_escape requires E/(M*c^2)<b/(1-b), b=v_escape/c"
+  ],
+  "cases": [
+    {
+      "incident_energy_over_receiver_rest_energy": 1e-12,
+      "net_momentum_fraction": 0.0,
+      "internal_rest_energy_gain_over_incident_energy": 1.0,
+      "recoil_kinetic_energy_over_incident_energy": 0.0,
+      "receiver_speed_over_c": 0.0,
+      "invariant_scaled_residual": 4.4408920984917436e-16,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1e-12,
+      "net_momentum_fraction": 0.1,
+      "internal_rest_energy_gain_over_incident_energy": 0.999999999999995,
+      "recoil_kinetic_energy_over_incident_energy": 4.999999999995e-15,
+      "receiver_speed_over_c": 9.999999999989999e-14,
+      "invariant_scaled_residual": 4.4408920984917436e-16,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 7.573064690121713e-17
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1e-12,
+      "net_momentum_fraction": 1.0,
+      "internal_rest_energy_gain_over_incident_energy": 0.9999999999995,
+      "recoil_kinetic_energy_over_incident_energy": 4.999999999995e-13,
+      "receiver_speed_over_c": 9.99999999999e-13,
+      "invariant_scaled_residual": 4.4408920984917436e-16,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1e-06,
+      "net_momentum_fraction": 0.0,
+      "internal_rest_energy_gain_over_incident_energy": 1.0,
+      "recoil_kinetic_energy_over_incident_energy": 0.0,
+      "receiver_speed_over_c": 0.0,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 2.220443828806484e-16,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1e-06,
+      "net_momentum_fraction": 0.1,
+      "internal_rest_energy_gain_over_incident_energy": 0.999999995000005,
+      "recoil_kinetic_energy_over_incident_energy": 4.999995000005014e-09,
+      "receiver_speed_over_c": 9.99999000001e-08,
+      "invariant_scaled_residual": 2.2204416083648761e-16,
+      "energy_ledger_scaled_residual": 2.2204438288064844e-16,
+      "momentum_scaled_residual": 5.293955920339377e-17
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1e-06,
+      "net_momentum_fraction": 1.0,
+      "internal_rest_energy_gain_over_incident_energy": 0.9999995000005,
+      "recoil_kinetic_energy_over_incident_energy": 4.99999500000625e-07,
+      "receiver_speed_over_c": 9.99999000001e-07,
+      "invariant_scaled_residual": 4.4408832167297523e-16,
+      "energy_ledger_scaled_residual": 2.2204438288064844e-16,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 0.001,
+      "net_momentum_fraction": 0.0,
+      "internal_rest_energy_gain_over_incident_energy": 1.0,
+      "recoil_kinetic_energy_over_incident_energy": 0.0,
+      "receiver_speed_over_c": 0.0,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 0.001,
+      "net_momentum_fraction": 0.1,
+      "internal_rest_energy_gain_over_incident_energy": 0.9999950049949925,
+      "recoil_kinetic_energy_over_incident_energy": 4.995005007467571e-06,
+      "receiver_speed_over_c": 9.990009990009991e-05,
+      "invariant_scaled_residual": 2.2160118096192646e-16,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 2.710505431213761e-17
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 0.001,
+      "net_momentum_fraction": 1.0,
+      "internal_rest_energy_gain_over_incident_energy": 0.9995004993758737,
+      "recoil_kinetic_energy_over_incident_energy": 0.0004995006241263105,
+      "receiver_speed_over_c": 0.0009990009990009992,
+      "invariant_scaled_residual": 2.2160118096192656e-16,
+      "energy_ledger_scaled_residual": 2.2182278214288845e-16,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 0.1,
+      "net_momentum_fraction": 0.0,
+      "internal_rest_energy_gain_over_incident_energy": 1.0,
+      "recoil_kinetic_energy_over_incident_energy": 0.0,
+      "receiver_speed_over_c": 0.0,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 0.1,
+      "net_momentum_fraction": 0.1,
+      "internal_rest_energy_gain_over_incident_energy": 0.9995454451536314,
+      "recoil_kinetic_energy_over_incident_energy": 0.00045455484636856174,
+      "receiver_speed_over_c": 0.009090909090909092,
+      "invariant_scaled_residual": 1.8350793795457136e-16,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 1.734723475976807e-17
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 0.1,
+      "net_momentum_fraction": 1.0,
+      "internal_rest_energy_gain_over_incident_energy": 0.9544511501033223,
+      "recoil_kinetic_energy_over_incident_energy": 0.045548849896677734,
+      "receiver_speed_over_c": 0.09090909090909091,
+      "invariant_scaled_residual": 3.670158759091426e-16,
+      "energy_ledger_scaled_residual": 2.0185873175002846e-16,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1.0,
+      "net_momentum_fraction": 0.0,
+      "internal_rest_energy_gain_over_incident_energy": 1.0,
+      "recoil_kinetic_energy_over_incident_energy": 0.0,
+      "receiver_speed_over_c": 0.0,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1.0,
+      "net_momentum_fraction": 0.1,
+      "internal_rest_energy_gain_over_incident_energy": 0.9974984355438179,
+      "recoil_kinetic_energy_over_incident_energy": 0.002501564456182109,
+      "receiver_speed_over_c": 0.05,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 2.7755575615628914e-17
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1.0,
+      "net_momentum_fraction": 1.0,
+      "internal_rest_energy_gain_over_incident_energy": 0.7320508075688773,
+      "recoil_kinetic_energy_over_incident_energy": 0.2679491924311227,
+      "receiver_speed_over_c": 0.5,
+      "invariant_scaled_residual": 1.1102230246251565e-16,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 10.0,
+      "net_momentum_fraction": 0.0,
+      "internal_rest_energy_gain_over_incident_energy": 1.0,
+      "recoil_kinetic_energy_over_incident_energy": 0.0,
+      "receiver_speed_over_c": 0.0,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 10.0,
+      "net_momentum_fraction": 0.1,
+      "internal_rest_energy_gain_over_incident_energy": 0.9954451150103323,
+      "recoil_kinetic_energy_over_incident_energy": 0.0045548849896677734,
+      "receiver_speed_over_c": 0.09090909090909091,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 10.0,
+      "net_momentum_fraction": 1.0,
+      "internal_rest_energy_gain_over_incident_energy": 0.35825756949558396,
+      "recoil_kinetic_energy_over_incident_energy": 0.641742430504416,
+      "receiver_speed_over_c": 0.9090909090909091,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1000.0,
+      "net_momentum_fraction": 0.0,
+      "internal_rest_energy_gain_over_incident_energy": 1.0,
+      "recoil_kinetic_energy_over_incident_energy": 0.0,
+      "receiver_speed_over_c": 0.0,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1000.0,
+      "net_momentum_fraction": 0.1,
+      "internal_rest_energy_gain_over_incident_energy": 0.9949924698510526,
+      "recoil_kinetic_energy_over_incident_energy": 0.005007530148947362,
+      "receiver_speed_over_c": 0.0999000999000999,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    },
+    {
+      "incident_energy_over_receiver_rest_energy": 1000.0,
+      "net_momentum_fraction": 1.0,
+      "internal_rest_energy_gain_over_incident_energy": 0.0437325384926901,
+      "recoil_kinetic_energy_over_incident_energy": 0.9562674615073099,
+      "receiver_speed_over_c": 0.999000999000999,
+      "invariant_scaled_residual": 0.0,
+      "energy_ledger_scaled_residual": 0.0,
+      "momentum_scaled_residual": 0.0
+    }
+  ],
+  "weak_well_retention_examples": [
+    {
+      "assumed_escape_speed_over_c": 0.0001,
+      "maximum_single_direction_energy_over_receiver_rest_energy": 0.00010001000100010001
+    },
+    {
+      "assumed_escape_speed_over_c": 0.001,
+      "maximum_single_direction_energy_over_receiver_rest_energy": 0.001001001001001001
+    },
+    {
+      "assumed_escape_speed_over_c": 0.01,
+      "maximum_single_direction_energy_over_receiver_rest_energy": 0.010101010101010102
+    }
+  ]
+}
