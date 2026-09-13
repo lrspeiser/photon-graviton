@@ -1,3 +1,9 @@
+## Circular-orbit support: stationary alternative, formation still open
+
+An explicit spherical ensemble of randomly oriented circular orbits supplies tangential stress for all six free profiles and four nonzero J1621 scale branches. Individual radial perturbations in the frozen potential have positive squared frequency. This resolves the isotropic-particle obstruction only for a singular fully tangential completion; collective stability and capture are not proved. The largest J1621 kinetic inventory is about 1.05e60 J, or 6.97e-5 of its effective mass-energy. Incident light-speed energy still requires an interaction and momentum exchange to populate slow bound orbits.
+
+See [circular support, conservation requirements and finite-domain bounds](../../research_work/results/companion-extensions/circular-reservoir-support-report.md). Numerical refinement passes. The effective density and exact-third reference remain unchanged; PDF v1.3 predates this calculation.
+
 ## Hollow-profile constraint on deposited-particle support
 
 A new necessary-condition test rejects spherical bound collisionless isotropic particle support for four of six free companion profiles, five of six transferred Chabrier profiles, and all three extended J1621 branches. Their deposited density rises outward, incompatible with a nonnegative isotropic f(relative energy) in the assumed attractive potential. This concerns deposited particles, not the earlier stellar orbit checks. Wave stresses, tangentially biased particles and ongoing flows remain distinct unproved alternatives.
