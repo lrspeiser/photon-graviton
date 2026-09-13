@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Reciprocity and finite populated storage
+
+An ideal flat forward fractional-loss law, combined with reciprocal heavy-store scattering, fixes inverse/forward ratio to (1+gap/E)^3. In the inherited bosonic pair-mode model this yields finite stationary storage and no net continued photon-energy deposition when spontaneous loss is absent. The small-gap E/3 per-mode limit is unrelated to the astrophysical one-third retention exponent. Protected-state transport, mode count and actual decay remain open. The [stationary mode calculation](../../research_work/results/companion-extensions/reciprocal-storage-report.md) links the color target to the reverse process instead of tuning that process independently. Sixteen equilibrium cases verify the formulas; they are not galaxy capacity measurements or lifetime calculations.
+
 ### Discrete transfer and survivor spectra
 
 An exact discrete energy-transfer/removal process now couples spectral width and photon survival. For illustrative width 1e-5 and 90% survival at z=1, 2 eV light requires gap <=2e-10 eV and removal/useful ratio <=2.11e-11. The previous small-gap drift survival estimates remain accurate, but their brightness allowance alone did not guarantee this linewidth. These are model design conditions, not measured exclusions or derived branching ratios. The [Markov solution](../../research_work/results/companion-extensions/discrete-transfer-report.md) includes survival selection and all energy sectors, with nine independent master-equation checks. The stationary event model still supplies no systematic supernova-duration stretch.
