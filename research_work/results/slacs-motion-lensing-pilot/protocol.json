@@ -1,0 +1,22 @@
+{
+  "scope": "Training-only conditional transfer pilot, not derived companion deposition or full likelihood",
+  "selection": "role=training, Mph=E, measured positive dispersion; retain all qualifying systems",
+  "stellar_model": "Spherical isotropic Hernquist, constant mass-to-light ratio, a=Re/1.8153; use catalog intermediate-axis Re",
+  "aperture_radius_arcsec": 1.5,
+  "gaussian_seeing_fwhm_arcsec": 1.4,
+  "outer_cutoffs_in_a": [
+    20,
+    100
+  ],
+  "metric": "Equal potentials, static Euclidean catalog conditional distances",
+  "mass_inference": "Match aperture dispersion only, no lensing adjustment; mass bracket 1e7 to 1e14 solar masses",
+  "numerics": {
+    "radial_nodes": 4001,
+    "angular_nodes": 128,
+    "r_over_a": [
+      1e-05,
+      100000.0
+    ]
+  },
+  "comparison": "Descriptive predicted Einstein angle / catalog SIE angle, no formal goodness of fit; no validation or test scores"
+}

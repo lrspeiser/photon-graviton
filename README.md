@@ -1,3 +1,5 @@
+Latest observational transfer: [33 SLACS training lenses](research_work/results/slacs-motion-lensing-pilot/report.md). Mass inferred from stellar dispersion alone; fixed extra-force template predicts median lens angles 9-10% high and does not improve descriptive RMS. Conditional spherical empirical pilot, not companion-source validation; reserved scores untouched.
+
 Latest numerical evidence: [641-node timing refinement](research_work/results/timing-scatter-grid-refinement/report.md). Zero-scatter b changes by 0.0019 and 0.0023 on two exposed artificial samples; revised uncertainty calibration remains necessary. Original 160-case experiment unchanged.
 
 Latest timing development: [continuous source-scatter integration](research_work/results/timing-continuous-scatter/report.md). Exact integration includes zero scatter; exposed-case grid and optimizer limitations remain. Separate revision only: frozen 160-case calibration unchanged, all six demonstrations open.

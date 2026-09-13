@@ -1,0 +1,3094 @@
+{
+  "scope": "Training-only conditional transfer pilot, not derived companion deposition or full likelihood",
+  "selection": "role=training, Mph=E, measured positive dispersion; retain all qualifying systems",
+  "parameters": {
+    "A": 0.2422960665538504,
+    "p": 0.4624587420104399,
+    "a_star_m_s2": 7.249608968708169e-10,
+    "optimizer_success": true
+  },
+  "summary": [
+    {
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "n": 33,
+      "missing_roots": 0,
+      "median_prediction_over_catalog": 1.0166258714107326,
+      "median_absolute_fractional_discrepancy": 0.12547507172261518,
+      "rms_fractional_discrepancy": 0.16406357226159596
+    },
+    {
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "n": 33,
+      "missing_roots": 0,
+      "median_prediction_over_catalog": 1.0166258714107328,
+      "median_absolute_fractional_discrepancy": 0.1254750717226153,
+      "rms_fractional_discrepancy": 0.16406357226159593
+    },
+    {
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "n": 33,
+      "missing_roots": 0,
+      "median_prediction_over_catalog": 1.0921565997558773,
+      "median_absolute_fractional_discrepancy": 0.13698273064386635,
+      "rms_fractional_discrepancy": 0.1950635212454483
+    },
+    {
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "n": 33,
+      "missing_roots": 0,
+      "median_prediction_over_catalog": 1.0990803130545643,
+      "median_absolute_fractional_discrepancy": 0.13400398145673365,
+      "rms_fractional_discrepancy": 0.19890573887012294
+    }
+  ],
+  "rows": [
+    {
+      "Name": "J0037-0942",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 4.196062939378565,
+      "inferred_stellar_mass_Msun": 859961742264.6451,
+      "mass_at_sigma_minus_plus": [
+        775822681498.6282,
+        948431489981.8542
+      ],
+      "predicted_einstein_arcsec": 1.5953543380278126,
+      "angles_at_sigma_minus_plus": [
+        1.4736630602948793,
+        1.7174136211853672
+      ],
+      "catalog_SIE_arcsec": 1.53,
+      "prediction_over_catalog": 1.0427152536129494
+    },
+    {
+      "Name": "J0037-0942",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 4.196062939378565,
+      "inferred_stellar_mass_Msun": 723441818688.9275,
+      "mass_at_sigma_minus_plus": [
+        646244348205.6533,
+        804998157751.7709
+      ],
+      "predicted_einstein_arcsec": 1.722459050951652,
+      "angles_at_sigma_minus_plus": [
+        1.5845321996344341,
+        1.8607341348912907
+      ],
+      "catalog_SIE_arcsec": 1.53,
+      "prediction_over_catalog": 1.1257902293801647
+    },
+    {
+      "Name": "J0037-0942",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 4.196062939378565,
+      "inferred_stellar_mass_Msun": 859961742264.6451,
+      "mass_at_sigma_minus_plus": [
+        775822681498.6282,
+        948431489981.8542
+      ],
+      "predicted_einstein_arcsec": 1.5953543380278126,
+      "angles_at_sigma_minus_plus": [
+        1.4736630602948795,
+        1.7174136211853672
+      ],
+      "catalog_SIE_arcsec": 1.53,
+      "prediction_over_catalog": 1.0427152536129494
+    },
+    {
+      "Name": "J0037-0942",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 4.196062939378565,
+      "inferred_stellar_mass_Msun": 723406760085.9064,
+      "mass_at_sigma_minus_plus": [
+        646211238454.9324,
+        804961158001.9042
+      ],
+      "predicted_einstein_arcsec": 1.7341004648300364,
+      "angles_at_sigma_minus_plus": [
+        1.5949462443479705,
+        1.8736648739398467
+      ],
+      "catalog_SIE_arcsec": 1.53,
+      "prediction_over_catalog": 1.1333989966209388
+    },
+    {
+      "Name": "J0044+0113",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 266,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 3.1638221206827852,
+      "inferred_stellar_mass_Msun": 575709202889.5265,
+      "mass_at_sigma_minus_plus": [
+        520811950474.2454,
+        633356606678.2129
+      ],
+      "predicted_einstein_arcsec": 0.9304679245393767,
+      "angles_at_sigma_minus_plus": [
+        0.8418929817602325,
+        1.0198610570285156
+      ],
+      "catalog_SIE_arcsec": 0.79,
+      "prediction_over_catalog": 1.1778074994169325
+    },
+    {
+      "Name": "J0044+0113",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 266,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 3.1638221206827852,
+      "inferred_stellar_mass_Msun": 494821051497.96576,
+      "mass_at_sigma_minus_plus": [
+        443886860490.46967,
+        548521091350.08374
+      ],
+      "predicted_einstein_arcsec": 0.9494151569055126,
+      "angles_at_sigma_minus_plus": [
+        0.8539818454164315,
+        1.045773370694394
+      ],
+      "catalog_SIE_arcsec": 0.79,
+      "prediction_over_catalog": 1.201791337855079
+    },
+    {
+      "Name": "J0044+0113",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 266,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 3.1638221206827852,
+      "inferred_stellar_mass_Msun": 575709202889.5265,
+      "mass_at_sigma_minus_plus": [
+        520811950474.2454,
+        633356606678.2129
+      ],
+      "predicted_einstein_arcsec": 0.9304679245393769,
+      "angles_at_sigma_minus_plus": [
+        0.8418929817602325,
+        1.0198610570285158
+      ],
+      "catalog_SIE_arcsec": 0.79,
+      "prediction_over_catalog": 1.1778074994169327
+    },
+    {
+      "Name": "J0044+0113",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 266,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 3.1638221206827852,
+      "inferred_stellar_mass_Msun": 494803861176.1771,
+      "mass_at_sigma_minus_plus": [
+        443870581212.1965,
+        548502993589.0849
+      ],
+      "predicted_einstein_arcsec": 0.9525929408800884,
+      "angles_at_sigma_minus_plus": [
+        0.8568127867914798,
+        1.0493140487244603
+      ],
+      "catalog_SIE_arcsec": 0.79,
+      "prediction_over_catalog": 1.2058138492153017
+    },
+    {
+      "Name": "J0109+1500",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 251,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 3.815314701501745,
+      "inferred_stellar_mass_Msun": 679253896576.9532,
+      "mass_at_sigma_minus_plus": [
+        580310816167.3296,
+        785981318716.5266
+      ],
+      "predicted_einstein_arcsec": 0.88143617302856,
+      "angles_at_sigma_minus_plus": [
+        0.7759050751424544,
+        0.9875709266294389
+      ],
+      "catalog_SIE_arcsec": 0.69,
+      "prediction_over_catalog": 1.2774437290268987
+    },
+    {
+      "Name": "J0109+1500",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 251,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 3.815314701501745,
+      "inferred_stellar_mass_Msun": 556445129926.9552,
+      "mass_at_sigma_minus_plus": [
+        467055733811.91626,
+        653676969214.6343
+      ],
+      "predicted_einstein_arcsec": 0.9249879795837767,
+      "angles_at_sigma_minus_plus": [
+        0.8063590639501994,
+        1.0442775923642513
+      ],
+      "catalog_SIE_arcsec": 0.69,
+      "prediction_over_catalog": 1.3405622892518503
+    },
+    {
+      "Name": "J0109+1500",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 251,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 3.815314701501745,
+      "inferred_stellar_mass_Msun": 679253896576.9532,
+      "mass_at_sigma_minus_plus": [
+        580310816167.3296,
+        785981318716.5266
+      ],
+      "predicted_einstein_arcsec": 0.88143617302856,
+      "angles_at_sigma_minus_plus": [
+        0.7759050751424544,
+        0.9875709266294386
+      ],
+      "catalog_SIE_arcsec": 0.69,
+      "prediction_over_catalog": 1.2774437290268987
+    },
+    {
+      "Name": "J0109+1500",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 251,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 3.815314701501745,
+      "inferred_stellar_mass_Msun": 556389285082.4142,
+      "mass_at_sigma_minus_plus": [
+        467004700080.3359,
+        653616340573.2764
+      ],
+      "predicted_einstein_arcsec": 0.9305117701469517,
+      "angles_at_sigma_minus_plus": [
+        0.8109906807708248,
+        1.050763208914412
+      ],
+      "catalog_SIE_arcsec": 0.69,
+      "prediction_over_catalog": 1.3485677828216693
+    },
+    {
+      "Name": "J0330-0020",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 212,
+      "sigma_error_kms": 21,
+      "scale_a_kpc": 3.870848325439628,
+      "inferred_stellar_mass_Msun": 503011377475.80304,
+      "mass_at_sigma_minus_plus": [
+        408293833697.3739,
+        607600228546.2771
+      ],
+      "predicted_einstein_arcsec": 0.9192945736089873,
+      "angles_at_sigma_minus_plus": [
+        0.783147373329762,
+        1.056196563667905
+      ],
+      "catalog_SIE_arcsec": 1.1,
+      "prediction_over_catalog": 0.8357223396445338
+    },
+    {
+      "Name": "J0330-0020",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 212,
+      "sigma_error_kms": 21,
+      "scale_a_kpc": 3.870848325439628,
+      "inferred_stellar_mass_Msun": 393009327476.9927,
+      "mass_at_sigma_minus_plus": [
+        309758504823.9438,
+        486220533336.334
+      ],
+      "predicted_einstein_arcsec": 0.9903390882884464,
+      "angles_at_sigma_minus_plus": [
+        0.8312578675632702,
+        1.1502163330792285
+      ],
+      "catalog_SIE_arcsec": 1.1,
+      "prediction_over_catalog": 0.9003082620804057
+    },
+    {
+      "Name": "J0330-0020",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 212,
+      "sigma_error_kms": 21,
+      "scale_a_kpc": 3.870848325439628,
+      "inferred_stellar_mass_Msun": 503011377475.80304,
+      "mass_at_sigma_minus_plus": [
+        408293833697.3739,
+        607600228546.2771
+      ],
+      "predicted_einstein_arcsec": 0.9192945736089873,
+      "angles_at_sigma_minus_plus": [
+        0.783147373329762,
+        1.0561965636679047
+      ],
+      "catalog_SIE_arcsec": 1.1,
+      "prediction_over_catalog": 0.8357223396445338
+    },
+    {
+      "Name": "J0330-0020",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 212,
+      "sigma_error_kms": 21,
+      "scale_a_kpc": 3.870848325439628,
+      "inferred_stellar_mass_Msun": 392950130828.3345,
+      "mass_at_sigma_minus_plus": [
+        309706296152.81775,
+        486154393994.4373
+      ],
+      "predicted_einstein_arcsec": 0.9988793133103878,
+      "angles_at_sigma_minus_plus": [
+        0.8380002589145029,
+        1.1607459326083758
+      ],
+      "catalog_SIE_arcsec": 1.1,
+      "prediction_over_catalog": 0.9080721030094434
+    },
+    {
+      "Name": "J0728+3835",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 214,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 3.574348553209348,
+      "inferred_stellar_mass_Msun": 444315009568.2687,
+      "mass_at_sigma_minus_plus": [
+        399811713453.1136,
+        491166201401.7295
+      ],
+      "predicted_einstein_arcsec": 1.0383277039260055,
+      "angles_at_sigma_minus_plus": [
+        0.9512914993918224,
+        1.1257544792145868
+      ],
+      "catalog_SIE_arcsec": 1.25,
+      "prediction_over_catalog": 0.8306621631408044
+    },
+    {
+      "Name": "J0728+3835",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 214,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 3.574348553209348,
+      "inferred_stellar_mass_Msun": 356936608657.6816,
+      "mass_at_sigma_minus_plus": [
+        317088259686.18225,
+        399151939478.729
+      ],
+      "predicted_einstein_arcsec": 1.0994384740164702,
+      "angles_at_sigma_minus_plus": [
+        1.0003984772252916,
+        1.1989199216163378
+      ],
+      "catalog_SIE_arcsec": 1.25,
+      "prediction_over_catalog": 0.8795507792131761
+    },
+    {
+      "Name": "J0728+3835",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 214,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 3.574348553209348,
+      "inferred_stellar_mass_Msun": 444315009568.2687,
+      "mass_at_sigma_minus_plus": [
+        399811713453.1136,
+        491166201401.7295
+      ],
+      "predicted_einstein_arcsec": 1.0383277039260053,
+      "angles_at_sigma_minus_plus": [
+        0.9512914993918224,
+        1.1257544792145868
+      ],
+      "catalog_SIE_arcsec": 1.25,
+      "prediction_over_catalog": 0.8306621631408042
+    },
+    {
+      "Name": "J0728+3835",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 214,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 3.574348553209348,
+      "inferred_stellar_mass_Msun": 356908405764.69116,
+      "mass_at_sigma_minus_plus": [
+        317061736540.18616,
+        399122063024.5758
+      ],
+      "predicted_einstein_arcsec": 1.1065293735067445,
+      "angles_at_sigma_minus_plus": [
+        1.0066937929483255,
+        1.206848262026198
+      ],
+      "catalog_SIE_arcsec": 1.25,
+      "prediction_over_catalog": 0.8852234988053956
+    },
+    {
+      "Name": "J0822+2652",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 259,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.222889393502958,
+      "inferred_stellar_mass_Msun": 766311490900.6342,
+      "mass_at_sigma_minus_plus": [
+        680119868849.0057,
+        857643766354.9441
+      ],
+      "predicted_einstein_arcsec": 1.2213881025567463,
+      "angles_at_sigma_minus_plus": [
+        1.1111518152395299,
+        1.3320668017953794
+      ],
+      "catalog_SIE_arcsec": 1.17,
+      "prediction_over_catalog": 1.0439214551767064
+    },
+    {
+      "Name": "J0822+2652",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 259,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.222889393502958,
+      "inferred_stellar_mass_Msun": 631033999033.6722,
+      "mass_at_sigma_minus_plus": [
+        552867532804.1852,
+        714378535958.7067
+      ],
+      "predicted_einstein_arcsec": 1.3053373060951337,
+      "angles_at_sigma_minus_plus": [
+        1.1802084194152336,
+        1.430923425313463
+      ],
+      "catalog_SIE_arcsec": 1.17,
+      "prediction_over_catalog": 1.115672911192422
+    },
+    {
+      "Name": "J0822+2652",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 259,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.222889393502958,
+      "inferred_stellar_mass_Msun": 766311490900.6342,
+      "mass_at_sigma_minus_plus": [
+        680119868849.0057,
+        857643766354.9441
+      ],
+      "predicted_einstein_arcsec": 1.2213881025567466,
+      "angles_at_sigma_minus_plus": [
+        1.1111518152395305,
+        1.3320668017953794
+      ],
+      "catalog_SIE_arcsec": 1.17,
+      "prediction_over_catalog": 1.0439214551767064
+    },
+    {
+      "Name": "J0822+2652",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.74,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 259,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.222889393502958,
+      "inferred_stellar_mass_Msun": 630990991621.7692,
+      "mass_at_sigma_minus_plus": [
+        552827343901.3949,
+        714332722424.6879
+      ],
+      "predicted_einstein_arcsec": 1.313975417533498,
+      "angles_at_sigma_minus_plus": [
+        1.1877816904624074,
+        1.4406892286638695
+      ],
+      "catalog_SIE_arcsec": 1.17,
+      "prediction_over_catalog": 1.1230559124217931
+    },
+    {
+      "Name": "J0936+0913",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 243,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 3.932674009290488,
+      "inferred_stellar_mass_Msun": 614639357842.8264,
+      "mass_at_sigma_minus_plus": [
+        555433127975.9363,
+        676843371500.4451
+      ],
+      "predicted_einstein_arcsec": 1.2617118950606419,
+      "angles_at_sigma_minus_plus": [
+        1.1609224015195863,
+        1.3629184203005797
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.157533848679488
+    },
+    {
+      "Name": "J0936+0913",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 243,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 3.932674009290488,
+      "inferred_stellar_mass_Msun": 505715034473.93445,
+      "mass_at_sigma_minus_plus": [
+        452018889199.496,
+        562430868967.8223
+      ],
+      "predicted_einstein_arcsec": 1.343348808147245,
+      "angles_at_sigma_minus_plus": [
+        1.2293671064308829,
+        1.4577792636643534
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.232430099217656
+    },
+    {
+      "Name": "J0936+0913",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 243,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 3.932674009290488,
+      "inferred_stellar_mass_Msun": 614639357842.8264,
+      "mass_at_sigma_minus_plus": [
+        555433127975.9363,
+        676843371500.4451
+      ],
+      "predicted_einstein_arcsec": 1.2617118950606419,
+      "angles_at_sigma_minus_plus": [
+        1.160922401519586,
+        1.3629184203005797
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.157533848679488
+    },
+    {
+      "Name": "J0936+0913",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 243,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 3.932674009290488,
+      "inferred_stellar_mass_Msun": 505686131862.8175,
+      "mass_at_sigma_minus_plus": [
+        451991602445.44147,
+        562400356547.056
+      ],
+      "predicted_einstein_arcsec": 1.351639005611944,
+      "angles_at_sigma_minus_plus": [
+        1.2367760514946957,
+        1.4669946797058144
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.2400357849650863
+    },
+    {
+      "Name": "J0956+5100",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 334,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.064346315151377,
+      "inferred_stellar_mass_Msun": 1487459194430.8757,
+      "mass_at_sigma_minus_plus": [
+        1339894644744.9197,
+        1642730648401.5051
+      ],
+      "predicted_einstein_arcsec": 1.5872560829497175,
+      "angles_at_sigma_minus_plus": [
+        1.4642621966647371,
+        1.7106305553353927
+      ],
+      "catalog_SIE_arcsec": 1.33,
+      "prediction_over_catalog": 1.193425626277983
+    },
+    {
+      "Name": "J0956+5100",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 334,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.064346315151377,
+      "inferred_stellar_mass_Msun": 1270622085848.0815,
+      "mass_at_sigma_minus_plus": [
+        1134156720620.079,
+        1414840130852.057
+      ],
+      "predicted_einstein_arcsec": 1.701614894422423,
+      "angles_at_sigma_minus_plus": [
+        1.5637519062778724,
+        1.8398380120898263
+      ],
+      "catalog_SIE_arcsec": 1.33,
+      "prediction_over_catalog": 1.2794096950544533
+    },
+    {
+      "Name": "J0956+5100",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 334,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.064346315151377,
+      "inferred_stellar_mass_Msun": 1487459194430.8757,
+      "mass_at_sigma_minus_plus": [
+        1339894644744.9197,
+        1642730648401.5051
+      ],
+      "predicted_einstein_arcsec": 1.5872560829497173,
+      "angles_at_sigma_minus_plus": [
+        1.4642621966647371,
+        1.7106305553353927
+      ],
+      "catalog_SIE_arcsec": 1.33,
+      "prediction_over_catalog": 1.193425626277983
+    },
+    {
+      "Name": "J0956+5100",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 334,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.064346315151377,
+      "inferred_stellar_mass_Msun": 1270565970574.2627,
+      "mass_at_sigma_minus_plus": [
+        1134103721919.8577,
+        1414780911758.925
+      ],
+      "predicted_einstein_arcsec": 1.7120284081270474,
+      "angles_at_sigma_minus_plus": [
+        1.5730588584040175,
+        1.8514143526366595
+      ],
+      "catalog_SIE_arcsec": 1.33,
+      "prediction_over_catalog": 1.2872394046068025
+    },
+    {
+      "Name": "J0959+4416",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.87,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 244,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 4.516978667404397,
+      "inferred_stellar_mass_Msun": 718379522847.7644,
+      "mass_at_sigma_minus_plus": [
+        610856680733.8093,
+        834614237030.6539
+      ],
+      "predicted_einstein_arcsec": 1.0557170117941632,
+      "angles_at_sigma_minus_plus": [
+        0.917751148781266,
+        1.194775543528189
+      ],
+      "catalog_SIE_arcsec": 0.96,
+      "prediction_over_catalog": 1.09970522061892
+    },
+    {
+      "Name": "J0959+4416",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.87,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 244,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 4.516978667404397,
+      "inferred_stellar_mass_Msun": 581343945414.8049,
+      "mass_at_sigma_minus_plus": [
+        484853599260.73047,
+        686614864548.8123
+      ],
+      "predicted_einstein_arcsec": 1.111883208796639,
+      "angles_at_sigma_minus_plus": [
+        0.9560754900894962,
+        1.2689416428335953
+      ],
+      "catalog_SIE_arcsec": 0.96,
+      "prediction_over_catalog": 1.1582116758298324
+    },
+    {
+      "Name": "J0959+4416",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.87,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 244,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 4.516978667404397,
+      "inferred_stellar_mass_Msun": 718379522847.7644,
+      "mass_at_sigma_minus_plus": [
+        610856680733.8093,
+        834614237030.6539
+      ],
+      "predicted_einstein_arcsec": 1.0557170117941632,
+      "angles_at_sigma_minus_plus": [
+        0.917751148781266,
+        1.194775543528189
+      ],
+      "catalog_SIE_arcsec": 0.96,
+      "prediction_over_catalog": 1.09970522061892
+    },
+    {
+      "Name": "J0959+4416",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.87,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 244,
+      "sigma_error_kms": 19,
+      "scale_a_kpc": 4.516978667404397,
+      "inferred_stellar_mass_Msun": 581305025885.2831,
+      "mass_at_sigma_minus_plus": [
+        484818170077.5367,
+        686572474488.4078
+      ],
+      "predicted_einstein_arcsec": 1.1184559672090806,
+      "angles_at_sigma_minus_plus": [
+        0.9615425428166727,
+        1.2767086512073704
+      ],
+      "catalog_SIE_arcsec": 0.96,
+      "prediction_over_catalog": 1.1650582991761256
+    },
+    {
+      "Name": "J1020+1122",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 282,
+      "sigma_error_kms": 18,
+      "scale_a_kpc": 4.240933087791155,
+      "inferred_stellar_mass_Msun": 931644821676.701,
+      "mass_at_sigma_minus_plus": [
+        816507186403.8448,
+        1054373949385.1301
+      ],
+      "predicted_einstein_arcsec": 1.1681373131781343,
+      "angles_at_sigma_minus_plus": [
+        1.0551350270792395,
+        1.2815691984613808
+      ],
+      "catalog_SIE_arcsec": 1.2,
+      "prediction_over_catalog": 0.9734477609817787
+    },
+    {
+      "Name": "J1020+1122",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 282,
+      "sigma_error_kms": 18,
+      "scale_a_kpc": 4.240933087791155,
+      "inferred_stellar_mass_Msun": 776779211732.3859,
+      "mass_at_sigma_minus_plus": [
+        671708053599.779,
+        889493746571.7736
+      ],
+      "predicted_einstein_arcsec": 1.246219709229227,
+      "angles_at_sigma_minus_plus": [
+        1.1185948758927877,
+        1.37426665600593
+      ],
+      "catalog_SIE_arcsec": 1.2,
+      "prediction_over_catalog": 1.0385164243576892
+    },
+    {
+      "Name": "J1020+1122",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 282,
+      "sigma_error_kms": 18,
+      "scale_a_kpc": 4.240933087791155,
+      "inferred_stellar_mass_Msun": 931644821676.701,
+      "mass_at_sigma_minus_plus": [
+        816507186403.8448,
+        1054373949385.1301
+      ],
+      "predicted_einstein_arcsec": 1.1681373131781345,
+      "angles_at_sigma_minus_plus": [
+        1.0551350270792392,
+        1.2815691984613808
+      ],
+      "catalog_SIE_arcsec": 1.2,
+      "prediction_over_catalog": 0.9734477609817788
+    },
+    {
+      "Name": "J1020+1122",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 282,
+      "sigma_error_kms": 18,
+      "scale_a_kpc": 4.240933087791155,
+      "inferred_stellar_mass_Msun": 776720344785.118,
+      "mass_at_sigma_minus_plus": [
+        671653388205.65,
+        889430698891.9125
+      ],
+      "predicted_einstein_arcsec": 1.2543954043224006,
+      "angles_at_sigma_minus_plus": [
+        1.1256732702732029,
+        1.3836110339438639
+      ],
+      "catalog_SIE_arcsec": 1.2,
+      "prediction_over_catalog": 1.0453295036020005
+    },
+    {
+      "Name": "J1029+0420",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.52,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 210,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 1.6637268140439785,
+      "inferred_stellar_mass_Msun": 203292214023.3621,
+      "mass_at_sigma_minus_plus": [
+        182552720352.36194,
+        225147279481.06638
+      ],
+      "predicted_einstein_arcsec": 1.1741412625588958,
+      "angles_at_sigma_minus_plus": [
+        1.0815641657356148,
+        1.2669949492831059
+      ],
+      "catalog_SIE_arcsec": 1.01,
+      "prediction_over_catalog": 1.1625161015434613
+    },
+    {
+      "Name": "J1029+0420",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.52,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 210,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 1.6637268140439785,
+      "inferred_stellar_mass_Msun": 174745735578.91373,
+      "mass_at_sigma_minus_plus": [
+        155505421812.81036,
+        195107985087.89694
+      ],
+      "predicted_einstein_arcsec": 1.2410085535253783,
+      "angles_at_sigma_minus_plus": [
+        1.138388635198621,
+        1.3438924944872133
+      ],
+      "catalog_SIE_arcsec": 1.01,
+      "prediction_over_catalog": 1.228721340124137
+    },
+    {
+      "Name": "J1029+0420",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.52,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 210,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 1.6637268140439785,
+      "inferred_stellar_mass_Msun": 203292214023.3621,
+      "mass_at_sigma_minus_plus": [
+        182552720352.36194,
+        225147279481.06638
+      ],
+      "predicted_einstein_arcsec": 1.174141262558896,
+      "angles_at_sigma_minus_plus": [
+        1.081564165735615,
+        1.2669949492831059
+      ],
+      "catalog_SIE_arcsec": 1.01,
+      "prediction_over_catalog": 1.1625161015434615
+    },
+    {
+      "Name": "J1029+0420",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.52,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 210,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 1.6637268140439785,
+      "inferred_stellar_mass_Msun": 174734439057.30658,
+      "mass_at_sigma_minus_plus": [
+        155494767004.26144,
+        195096049574.1735
+      ],
+      "predicted_einstein_arcsec": 1.247916761075611,
+      "angles_at_sigma_minus_plus": [
+        1.1445421490171714,
+        1.3515948991442814
+      ],
+      "catalog_SIE_arcsec": 1.01,
+      "prediction_over_catalog": 1.235561149579813
+    },
+    {
+      "Name": "J1106+5228",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.63,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 262,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 1.6442152255253635,
+      "inferred_stellar_mass_Msun": 309102472658.9242,
+      "mass_at_sigma_minus_plus": [
+        279189184886.1657,
+        340537767245.9522
+      ],
+      "predicted_einstein_arcsec": 1.549891347701726,
+      "angles_at_sigma_minus_plus": [
+        1.4405794756907255,
+        1.6594209400484692
+      ],
+      "catalog_SIE_arcsec": 1.23,
+      "prediction_over_catalog": 1.2600742664241675
+    },
+    {
+      "Name": "J1106+5228",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.63,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 262,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 1.6442152255253635,
+      "inferred_stellar_mass_Msun": 274992152641.6373,
+      "mass_at_sigma_minus_plus": [
+        246746401656.047,
+        304766591435.3961
+      ],
+      "predicted_einstein_arcsec": 1.646330944427357,
+      "angles_at_sigma_minus_plus": [
+        1.5263308497315973,
+        1.766504856483534
+      ],
+      "catalog_SIE_arcsec": 1.23,
+      "prediction_over_catalog": 1.3384804426238675
+    },
+    {
+      "Name": "J1106+5228",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.63,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 262,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 1.6442152255253635,
+      "inferred_stellar_mass_Msun": 309102472658.9242,
+      "mass_at_sigma_minus_plus": [
+        279189184886.1657,
+        340537767245.9522
+      ],
+      "predicted_einstein_arcsec": 1.5498913477017258,
+      "angles_at_sigma_minus_plus": [
+        1.4405794756907255,
+        1.6594209400484692
+      ],
+      "catalog_SIE_arcsec": 1.23,
+      "prediction_over_catalog": 1.2600742664241673
+    },
+    {
+      "Name": "J1106+5228",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.63,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 262,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 1.6442152255253635,
+      "inferred_stellar_mass_Msun": 274979678555.56476,
+      "mass_at_sigma_minus_plus": [
+        246734575888.0806,
+        304753471696.1582
+      ],
+      "predicted_einstein_arcsec": 1.6554321598452113,
+      "angles_at_sigma_minus_plus": [
+        1.5345138300280061,
+        1.77656922767788
+      ],
+      "catalog_SIE_arcsec": 1.23,
+      "prediction_over_catalog": 1.3458798047522043
+    },
+    {
+      "Name": "J1112+0826",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 320,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 3.884978840621963,
+      "inferred_stellar_mass_Msun": 1109182023129.1118,
+      "mass_at_sigma_minus_plus": [
+        974867012515.8209,
+        1252162518298.0989
+      ],
+      "predicted_einstein_arcsec": 1.5482137155990532,
+      "angles_at_sigma_minus_plus": [
+        1.4146476210262608,
+        1.6820555261635597
+      ],
+      "catalog_SIE_arcsec": 1.49,
+      "prediction_over_catalog": 1.0390696077845996
+    },
+    {
+      "Name": "J1112+0826",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 320,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 3.884978840621963,
+      "inferred_stellar_mass_Msun": 952024027492.2437,
+      "mass_at_sigma_minus_plus": [
+        827568406011.0222,
+        1085195059126.5562
+      ],
+      "predicted_einstein_arcsec": 1.6852284682837748,
+      "angles_at_sigma_minus_plus": [
+        1.5335877723687492,
+        1.8370365711163992
+      ],
+      "catalog_SIE_arcsec": 1.49,
+      "prediction_over_catalog": 1.1310258176401173
+    },
+    {
+      "Name": "J1112+0826",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 320,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 3.884978840621963,
+      "inferred_stellar_mass_Msun": 1109182023129.1118,
+      "mass_at_sigma_minus_plus": [
+        974867012515.8209,
+        1252162518298.0989
+      ],
+      "predicted_einstein_arcsec": 1.548213715599053,
+      "angles_at_sigma_minus_plus": [
+        1.414647621026261,
+        1.6820555261635597
+      ],
+      "catalog_SIE_arcsec": 1.49,
+      "prediction_over_catalog": 1.0390696077845993
+    },
+    {
+      "Name": "J1112+0826",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 320,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 3.884978840621963,
+      "inferred_stellar_mass_Msun": 951958588658.6552,
+      "mass_at_sigma_minus_plus": [
+        827507411051.1711,
+        1085125198859.9392
+      ],
+      "predicted_einstein_arcsec": 1.69887084157696,
+      "angles_at_sigma_minus_plus": [
+        1.545488182242816,
+        1.8525307380188778
+      ],
+      "catalog_SIE_arcsec": 1.49,
+      "prediction_over_catalog": 1.1401817728704429
+    },
+    {
+      "Name": "J1142+1001",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.89,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 221,
+      "sigma_error_kms": 22,
+      "scale_a_kpc": 4.105552870465041,
+      "inferred_stellar_mass_Msun": 538514919237.1766,
+      "mass_at_sigma_minus_plus": [
+        436635804277.3783,
+        651067084335.6206
+      ],
+      "predicted_einstein_arcsec": 0.9018982319328145,
+      "angles_at_sigma_minus_plus": [
+        0.7449902870899003,
+        1.0607502859637357
+      ],
+      "catalog_SIE_arcsec": 0.98,
+      "prediction_over_catalog": 0.9203043182987903
+    },
+    {
+      "Name": "J1142+1001",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.89,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 221,
+      "sigma_error_kms": 22,
+      "scale_a_kpc": 4.105552870465041,
+      "inferred_stellar_mass_Msun": 429959585536.26,
+      "mass_at_sigma_minus_plus": [
+        339336097855.4331,
+        531345125056.1776
+      ],
+      "predicted_einstein_arcsec": 0.938452450031089,
+      "angles_at_sigma_minus_plus": [
+        0.7618898896047304,
+        1.117348586535722
+      ],
+      "catalog_SIE_arcsec": 0.98,
+      "prediction_over_catalog": 0.95760454084805
+    },
+    {
+      "Name": "J1142+1001",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.89,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 221,
+      "sigma_error_kms": 22,
+      "scale_a_kpc": 4.105552870465041,
+      "inferred_stellar_mass_Msun": 538514919237.1766,
+      "mass_at_sigma_minus_plus": [
+        436635804277.3783,
+        651067084335.6206
+      ],
+      "predicted_einstein_arcsec": 0.9018982319328146,
+      "angles_at_sigma_minus_plus": [
+        0.7449902870899003,
+        1.0607502859637357
+      ],
+      "catalog_SIE_arcsec": 0.98,
+      "prediction_over_catalog": 0.9203043182987904
+    },
+    {
+      "Name": "J1142+1001",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.89,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 221,
+      "sigma_error_kms": 22,
+      "scale_a_kpc": 4.105552870465041,
+      "inferred_stellar_mass_Msun": 429927591037.482,
+      "mass_at_sigma_minus_plus": [
+        339307821989.0914,
+        531309437918.13135
+      ],
+      "predicted_einstein_arcsec": 0.9437106188789485,
+      "angles_at_sigma_minus_plus": [
+        0.7660082479170871,
+        1.1238645214643703
+      ],
+      "catalog_SIE_arcsec": 0.98,
+      "prediction_over_catalog": 0.9629700192642332
+    },
+    {
+      "Name": "J1143-0144",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 269,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.18905904178178,
+      "inferred_stellar_mass_Msun": 910848799099.123,
+      "mass_at_sigma_minus_plus": [
+        824938667206.9226,
+        1001013527999.3181
+      ],
+      "predicted_einstein_arcsec": 1.7013013945462867,
+      "angles_at_sigma_minus_plus": [
+        1.5407850113845538,
+        1.8632965466949916
+      ],
+      "catalog_SIE_arcsec": 1.68,
+      "prediction_over_catalog": 1.0126794015156468
+    },
+    {
+      "Name": "J1143-0144",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 269,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.18905904178178,
+      "inferred_stellar_mass_Msun": 764911734367.1841,
+      "mass_at_sigma_minus_plus": [
+        686153760894.8405,
+        847952263329.3896
+      ],
+      "predicted_einstein_arcsec": 1.7916076490418358,
+      "angles_at_sigma_minus_plus": [
+        1.6140933198362017,
+        1.9707833338591767
+      ],
+      "catalog_SIE_arcsec": 1.68,
+      "prediction_over_catalog": 1.066433124429664
+    },
+    {
+      "Name": "J1143-0144",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 269,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.18905904178178,
+      "inferred_stellar_mass_Msun": 910848799099.123,
+      "mass_at_sigma_minus_plus": [
+        824938667206.9226,
+        1001013527999.3181
+      ],
+      "predicted_einstein_arcsec": 1.7013013945462867,
+      "angles_at_sigma_minus_plus": [
+        1.5407850113845543,
+        1.8632965466949911
+      ],
+      "catalog_SIE_arcsec": 1.68,
+      "prediction_over_catalog": 1.0126794015156468
+    },
+    {
+      "Name": "J1143-0144",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 269,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.18905904178178,
+      "inferred_stellar_mass_Msun": 764895027527.5143,
+      "mass_at_sigma_minus_plus": [
+        686137949947.6251,
+        847934664000.0376
+      ],
+      "predicted_einstein_arcsec": 1.7995988840998152,
+      "angles_at_sigma_minus_plus": [
+        1.621220706554273,
+        1.9796783911955538
+      ],
+      "catalog_SIE_arcsec": 1.68,
+      "prediction_over_catalog": 1.0711898119641758
+    },
+    {
+      "Name": "J1153+4612",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.9,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 226,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 2.0569745533439305,
+      "inferred_stellar_mass_Msun": 305476163705.4813,
+      "mass_at_sigma_minus_plus": [
+        266271914095.30377,
+        347371780565.7856
+      ],
+      "predicted_einstein_arcsec": 1.1810918213207444,
+      "angles_at_sigma_minus_plus": [
+        1.0725225779225844,
+        1.2899050349362593
+      ],
+      "catalog_SIE_arcsec": 1.05,
+      "prediction_over_catalog": 1.1248493536388042
+    },
+    {
+      "Name": "J1153+4612",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.9,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 226,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 2.0569745533439305,
+      "inferred_stellar_mass_Msun": 259109634327.24362,
+      "mass_at_sigma_minus_plus": [
+        223013162236.26642,
+        297914172874.0286
+      ],
+      "predicted_einstein_arcsec": 1.2758896472325565,
+      "angles_at_sigma_minus_plus": [
+        1.1526419663901248,
+        1.3992994480199736
+      ],
+      "catalog_SIE_arcsec": 1.05,
+      "prediction_over_catalog": 1.2151329973643394
+    },
+    {
+      "Name": "J1153+4612",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.9,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 226,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 2.0569745533439305,
+      "inferred_stellar_mass_Msun": 305476163705.4813,
+      "mass_at_sigma_minus_plus": [
+        266271914095.30377,
+        347371780565.7856
+      ],
+      "predicted_einstein_arcsec": 1.1810918213207444,
+      "angles_at_sigma_minus_plus": [
+        1.0725225779225844,
+        1.2899050349362595
+      ],
+      "catalog_SIE_arcsec": 1.05,
+      "prediction_over_catalog": 1.1248493536388042
+    },
+    {
+      "Name": "J1153+4612",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.9,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 226,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 2.0569745533439305,
+      "inferred_stellar_mass_Msun": 259082330183.94525,
+      "mass_at_sigma_minus_plus": [
+        222987850763.28418,
+        297884886596.13617
+      ],
+      "predicted_einstein_arcsec": 1.2860767869988967,
+      "angles_at_sigma_minus_plus": [
+        1.1614375369779768,
+        1.4109721491257552
+      ],
+      "catalog_SIE_arcsec": 1.05,
+      "prediction_over_catalog": 1.2248350352370445
+    },
+    {
+      "Name": "J1204+0358",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.97,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.400776070900481,
+      "inferred_stellar_mass_Msun": 478735001485.18414,
+      "mass_at_sigma_minus_plus": [
+        419713245982.18536,
+        541638265087.02625
+      ],
+      "predicted_einstein_arcsec": 1.4863721593631873,
+      "angles_at_sigma_minus_plus": [
+        1.3550640334673711,
+        1.6179666883000934
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 1.1346352361551049
+    },
+    {
+      "Name": "J1204+0358",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.97,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.400776070900481,
+      "inferred_stellar_mass_Msun": 414629412709.101,
+      "mass_at_sigma_minus_plus": [
+        359686403279.548,
+        473474967988.09894
+      ],
+      "predicted_einstein_arcsec": 1.605286134382485,
+      "angles_at_sigma_minus_plus": [
+        1.4576224783966236,
+        1.7531396141891045
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 1.225409262887393
+    },
+    {
+      "Name": "J1204+0358",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.97,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.400776070900481,
+      "inferred_stellar_mass_Msun": 478735001485.18414,
+      "mass_at_sigma_minus_plus": [
+        419713245982.18536,
+        541638265087.02625
+      ],
+      "predicted_einstein_arcsec": 1.4863721593631873,
+      "angles_at_sigma_minus_plus": [
+        1.3550640334673718,
+        1.6179666883000934
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 1.1346352361551049
+    },
+    {
+      "Name": "J1204+0358",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.97,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.400776070900481,
+      "inferred_stellar_mass_Msun": 414601870098.7181,
+      "mass_at_sigma_minus_plus": [
+        359660749080.59296,
+        473445546765.31366
+      ],
+      "predicted_einstein_arcsec": 1.617110071064109,
+      "angles_at_sigma_minus_plus": [
+        1.4679131916151145,
+        1.7665949467313689
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 1.2344351687512283
+    },
+    {
+      "Name": "J1205+4910",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 281,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 5.4121117962945,
+      "inferred_stellar_mass_Msun": 1100099465223.2056,
+      "mass_at_sigma_minus_plus": [
+        993211721942.4414,
+        1212448626043.863
+      ],
+      "predicted_einstein_arcsec": 1.3603892946097866,
+      "angles_at_sigma_minus_plus": [
+        1.2458626867438254,
+        1.4755064217312308
+      ],
+      "catalog_SIE_arcsec": 1.22,
+      "prediction_over_catalog": 1.1150731923031039
+    },
+    {
+      "Name": "J1205+4910",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 281,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 5.4121117962945,
+      "inferred_stellar_mass_Msun": 908894841062.6976,
+      "mass_at_sigma_minus_plus": [
+        811745969386.0579,
+        1011544237599.2048
+      ],
+      "predicted_einstein_arcsec": 1.443911913172812,
+      "angles_at_sigma_minus_plus": [
+        1.3151087406185333,
+        1.573365258958564
+      ],
+      "catalog_SIE_arcsec": 1.22,
+      "prediction_over_catalog": 1.183534355059682
+    },
+    {
+      "Name": "J1205+4910",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 281,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 5.4121117962945,
+      "inferred_stellar_mass_Msun": 1100099465223.2056,
+      "mass_at_sigma_minus_plus": [
+        993211721942.4414,
+        1212448626043.863
+      ],
+      "predicted_einstein_arcsec": 1.3603892946097862,
+      "angles_at_sigma_minus_plus": [
+        1.2458626867438254,
+        1.4755064217312313
+      ],
+      "catalog_SIE_arcsec": 1.22,
+      "prediction_over_catalog": 1.1150731923031034
+    },
+    {
+      "Name": "J1205+4910",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 281,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 5.4121117962945,
+      "inferred_stellar_mass_Msun": 908854669068.5679,
+      "mass_at_sigma_minus_plus": [
+        811708054175.5087,
+        1011501817412.5468
+      ],
+      "predicted_einstein_arcsec": 1.4520920099514312,
+      "angles_at_sigma_minus_plus": [
+        1.3224059082945225,
+        1.5824723215646646
+      ],
+      "catalog_SIE_arcsec": 1.22,
+      "prediction_over_catalog": 1.1902393524192059
+    },
+    {
+      "Name": "J1213+6708",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 292,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.017385364278933,
+      "inferred_stellar_mass_Msun": 859221546566.6969,
+      "mass_at_sigma_minus_plus": [
+        773212728074.1705,
+        949765100656.3685
+      ],
+      "predicted_einstein_arcsec": 2.0789851164382482,
+      "angles_at_sigma_minus_plus": [
+        1.9103030380825707,
+        2.248310199137281
+      ],
+      "catalog_SIE_arcsec": 1.42,
+      "prediction_over_catalog": 1.4640740256607383
+    },
+    {
+      "Name": "J1213+6708",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 292,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.017385364278933,
+      "inferred_stellar_mass_Msun": 739700651348.3367,
+      "mass_at_sigma_minus_plus": [
+        659842597881.4818,
+        824119046877.9768
+      ],
+      "predicted_einstein_arcsec": 2.2368432794447184,
+      "angles_at_sigma_minus_plus": [
+        2.048304072395646,
+        2.4260097694512788
+      ],
+      "catalog_SIE_arcsec": 1.42,
+      "prediction_over_catalog": 1.5752417460878299
+    },
+    {
+      "Name": "J1213+6708",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 292,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.017385364278933,
+      "inferred_stellar_mass_Msun": 859221546566.6969,
+      "mass_at_sigma_minus_plus": [
+        773212728074.1705,
+        949765100656.3685
+      ],
+      "predicted_einstein_arcsec": 2.078985116438248,
+      "angles_at_sigma_minus_plus": [
+        1.9103030380825714,
+        2.24831019913728
+      ],
+      "catalog_SIE_arcsec": 1.42,
+      "prediction_over_catalog": 1.4640740256607379
+    },
+    {
+      "Name": "J1213+6708",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 292,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 4.017385364278933,
+      "inferred_stellar_mass_Msun": 739680390569.321,
+      "mass_at_sigma_minus_plus": [
+        659823464033.784,
+        824097663861.208
+      ],
+      "predicted_einstein_arcsec": 2.2495975048349486,
+      "angles_at_sigma_minus_plus": [
+        2.059689864546231,
+        2.4402020590939224
+      ],
+      "catalog_SIE_arcsec": 1.42,
+      "prediction_over_catalog": 1.5842235949541892
+    },
+    {
+      "Name": "J1218+0830",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 219,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 4.32091333971854,
+      "inferred_stellar_mass_Msun": 520700103393.9022,
+      "mass_at_sigma_minus_plus": [
+        469705995980.7716,
+        574321541868.131
+      ],
+      "predicted_einstein_arcsec": 1.268061146002208,
+      "angles_at_sigma_minus_plus": [
+        1.1491975016503717,
+        1.3878775574645015
+      ],
+      "catalog_SIE_arcsec": 1.45,
+      "prediction_over_catalog": 0.8745249282773848
+    },
+    {
+      "Name": "J1218+0830",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 219,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 4.32091333971854,
+      "inferred_stellar_mass_Msun": 420753264147.5937,
+      "mass_at_sigma_minus_plus": [
+        374947188679.38446,
+        469207511688.9292
+      ],
+      "predicted_einstein_arcsec": 1.3334271034852547,
+      "angles_at_sigma_minus_plus": [
+        1.199818859533484,
+        1.4681536040116174
+      ],
+      "catalog_SIE_arcsec": 1.45,
+      "prediction_over_catalog": 0.9196048989553481
+    },
+    {
+      "Name": "J1218+0830",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 219,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 4.32091333971854,
+      "inferred_stellar_mass_Msun": 520700103393.9022,
+      "mass_at_sigma_minus_plus": [
+        469705995980.7716,
+        574321541868.131
+      ],
+      "predicted_einstein_arcsec": 1.2680611460022078,
+      "angles_at_sigma_minus_plus": [
+        1.1491975016503717,
+        1.3878775574645015
+      ],
+      "catalog_SIE_arcsec": 1.45,
+      "prediction_over_catalog": 0.8745249282773847
+    },
+    {
+      "Name": "J1218+0830",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.72,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 219,
+      "sigma_error_kms": 11,
+      "scale_a_kpc": 4.32091333971854,
+      "inferred_stellar_mass_Msun": 420736592770.4434,
+      "mass_at_sigma_minus_plus": [
+        374931482066.09375,
+        469189879073.1503
+      ],
+      "predicted_einstein_arcsec": 1.3405456613407873,
+      "angles_at_sigma_minus_plus": [
+        1.206134116350804,
+        1.4761154633749831
+      ],
+      "catalog_SIE_arcsec": 1.45,
+      "prediction_over_catalog": 0.924514249200543
+    },
+    {
+      "Name": "J1402+6321",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.392918456009279,
+      "inferred_stellar_mass_Msun": 984529957573.8611,
+      "mass_at_sigma_minus_plus": [
+        863150308580.0939,
+        1113892020621.377
+      ],
+      "predicted_einstein_arcsec": 1.2949685825228876,
+      "angles_at_sigma_minus_plus": [
+        1.1512785292517407,
+        1.439757031524564
+      ],
+      "catalog_SIE_arcsec": 1.35,
+      "prediction_over_catalog": 0.9592359870539907
+    },
+    {
+      "Name": "J1402+6321",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.392918456009279,
+      "inferred_stellar_mass_Msun": 806185950969.2461,
+      "mass_at_sigma_minus_plus": [
+        696472446748.5638,
+        923941553680.8805
+      ],
+      "predicted_einstein_arcsec": 1.3690174941606816,
+      "angles_at_sigma_minus_plus": [
+        1.2074230292089747,
+        1.5318565981950722
+      ],
+      "catalog_SIE_arcsec": 1.35,
+      "prediction_over_catalog": 1.014087032711616
+    },
+    {
+      "Name": "J1402+6321",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.392918456009279,
+      "inferred_stellar_mass_Msun": 984529957573.8611,
+      "mass_at_sigma_minus_plus": [
+        863150308580.0939,
+        1113892020621.377
+      ],
+      "predicted_einstein_arcsec": 1.2949685825228872,
+      "angles_at_sigma_minus_plus": [
+        1.1512785292517405,
+        1.439757031524564
+      ],
+      "catalog_SIE_arcsec": 1.35,
+      "prediction_over_catalog": 0.9592359870539904
+    },
+    {
+      "Name": "J1402+6321",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.77,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 267,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 5.392918456009279,
+      "inferred_stellar_mass_Msun": 806150320331.7365,
+      "mass_at_sigma_minus_plus": [
+        696439397830.2341,
+        923903353650.1321
+      ],
+      "predicted_einstein_arcsec": 1.3766076748637022,
+      "angles_at_sigma_minus_plus": [
+        1.213960849996558,
+        1.540566590144427
+      ],
+      "catalog_SIE_arcsec": 1.35,
+      "prediction_over_catalog": 1.0197093887879274
+    },
+    {
+      "Name": "J1403+0006",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 213,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.709331116330291,
+      "inferred_stellar_mass_Msun": 344206349497.9804,
+      "mass_at_sigma_minus_plus": [
+        291455203383.6853,
+        401342676462.85266
+      ],
+      "predicted_einstein_arcsec": 0.9019825441961266,
+      "angles_at_sigma_minus_plus": [
+        0.7869250504272699,
+        1.0177742358511563
+      ],
+      "catalog_SIE_arcsec": 0.83,
+      "prediction_over_catalog": 1.0867259568628032
+    },
+    {
+      "Name": "J1403+0006",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 213,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.709331116330291,
+      "inferred_stellar_mass_Msun": 282923505929.2203,
+      "mass_at_sigma_minus_plus": [
+        235191560899.11877,
+        335072847828.1721
+      ],
+      "predicted_einstein_arcsec": 0.9452971636363773,
+      "angles_at_sigma_minus_plus": [
+        0.816301053480373,
+        1.075101071711841
+      ],
+      "catalog_SIE_arcsec": 0.83,
+      "prediction_over_catalog": 1.1389122453450329
+    },
+    {
+      "Name": "J1403+0006",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 213,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.709331116330291,
+      "inferred_stellar_mass_Msun": 344206349497.9804,
+      "mass_at_sigma_minus_plus": [
+        291455203383.6853,
+        401342676462.85266
+      ],
+      "predicted_einstein_arcsec": 0.9019825441961267,
+      "angles_at_sigma_minus_plus": [
+        0.7869250504272699,
+        1.0177742358511563
+      ],
+      "catalog_SIE_arcsec": 0.83,
+      "prediction_over_catalog": 1.0867259568628034
+    },
+    {
+      "Name": "J1403+0006",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.81,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 213,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 2.709331116330291,
+      "inferred_stellar_mass_Msun": 282897628169.83527,
+      "mass_at_sigma_minus_plus": [
+        235168026455.14035,
+        335044640878.3634
+      ],
+      "predicted_einstein_arcsec": 0.9507533758287035,
+      "angles_at_sigma_minus_plus": [
+        0.8208299778149687,
+        1.0815608068597076
+      ],
+      "catalog_SIE_arcsec": 0.83,
+      "prediction_over_catalog": 1.1454859949743417
+    },
+    {
+      "Name": "J1416+5136",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 240,
+      "sigma_error_kms": 25,
+      "scale_a_kpc": 4.010367308242196,
+      "inferred_stellar_mass_Msun": 649019165588.0947,
+      "mass_at_sigma_minus_plus": [
+        520849148078.293,
+        791273800406.6659
+      ],
+      "predicted_einstein_arcsec": 1.0928837896845705,
+      "angles_at_sigma_minus_plus": [
+        0.9225911490105964,
+        1.264174878403411
+      ],
+      "catalog_SIE_arcsec": 1.37,
+      "prediction_over_catalog": 0.7977253939303434
+    },
+    {
+      "Name": "J1416+5136",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 240,
+      "sigma_error_kms": 25,
+      "scale_a_kpc": 4.010367308242196,
+      "inferred_stellar_mass_Msun": 524117496304.95105,
+      "mass_at_sigma_minus_plus": [
+        409427681760.2421,
+        653004061001.6537
+      ],
+      "predicted_einstein_arcsec": 1.1771997132301801,
+      "angles_at_sigma_minus_plus": [
+        0.9809337745785268,
+        1.3744576231887005
+      ],
+      "catalog_SIE_arcsec": 1.37,
+      "prediction_over_catalog": 0.8592698636716642
+    },
+    {
+      "Name": "J1416+5136",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 240,
+      "sigma_error_kms": 25,
+      "scale_a_kpc": 4.010367308242196,
+      "inferred_stellar_mass_Msun": 649019165588.0947,
+      "mass_at_sigma_minus_plus": [
+        520849148078.293,
+        791273800406.6659
+      ],
+      "predicted_einstein_arcsec": 1.0928837896845705,
+      "angles_at_sigma_minus_plus": [
+        0.9225911490105964,
+        1.264174878403411
+      ],
+      "catalog_SIE_arcsec": 1.37,
+      "prediction_over_catalog": 0.7977253939303434
+    },
+    {
+      "Name": "J1416+5136",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.76,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 240,
+      "sigma_error_kms": 25,
+      "scale_a_kpc": 4.010367308242196,
+      "inferred_stellar_mass_Msun": 524063758916.9988,
+      "mass_at_sigma_minus_plus": [
+        409380410546.6805,
+        652943906209.5569
+      ],
+      "predicted_einstein_arcsec": 1.186414545404275,
+      "angles_at_sigma_minus_plus": [
+        0.9881479935350695,
+        1.3858937399083133
+      ],
+      "catalog_SIE_arcsec": 1.37,
+      "prediction_over_catalog": 0.8659960185432664
+    },
+    {
+      "Name": "J1430+4105",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 322,
+      "sigma_error_kms": 32,
+      "scale_a_kpc": 6.861182315691301,
+      "inferred_stellar_mass_Msun": 1834971361967.509,
+      "mass_at_sigma_minus_plus": [
+        1488379031880.208,
+        2217808641606.423
+      ],
+      "predicted_einstein_arcsec": 1.5449753346899606,
+      "angles_at_sigma_minus_plus": [
+        1.2982811697682648,
+        1.7937059866438811
+      ],
+      "catalog_SIE_arcsec": 1.52,
+      "prediction_over_catalog": 1.016431141243395
+    },
+    {
+      "Name": "J1430+4105",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 322,
+      "sigma_error_kms": 32,
+      "scale_a_kpc": 6.861182315691301,
+      "inferred_stellar_mass_Msun": 1520684050399.5928,
+      "mass_at_sigma_minus_plus": [
+        1206041854214.9834,
+        1871827053688.3164
+      ],
+      "predicted_einstein_arcsec": 1.6600780316289336,
+      "angles_at_sigma_minus_plus": [
+        1.3803070730396387,
+        1.9419855904935925
+      ],
+      "catalog_SIE_arcsec": 1.52,
+      "prediction_over_catalog": 1.0921565997558773
+    },
+    {
+      "Name": "J1430+4105",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 322,
+      "sigma_error_kms": 32,
+      "scale_a_kpc": 6.861182315691301,
+      "inferred_stellar_mass_Msun": 1834971361967.509,
+      "mass_at_sigma_minus_plus": [
+        1488379031880.208,
+        2217808641606.423
+      ],
+      "predicted_einstein_arcsec": 1.5449753346899602,
+      "angles_at_sigma_minus_plus": [
+        1.2982811697682648,
+        1.7937059866438811
+      ],
+      "catalog_SIE_arcsec": 1.52,
+      "prediction_over_catalog": 1.0164311412433948
+    },
+    {
+      "Name": "J1430+4105",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.79,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 322,
+      "sigma_error_kms": 32,
+      "scale_a_kpc": 6.861182315691301,
+      "inferred_stellar_mass_Msun": 1520616761535.3757,
+      "mass_at_sigma_minus_plus": [
+        1205982097860.207,
+        1871752289718.8142
+      ],
+      "predicted_einstein_arcsec": 1.6706020758429379,
+      "angles_at_sigma_minus_plus": [
+        1.3886510795266533,
+        1.9549133415217463
+      ],
+      "catalog_SIE_arcsec": 1.52,
+      "prediction_over_catalog": 1.0990803130545643
+    },
+    {
+      "Name": "J1436-0000",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.75,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 224,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 6.030818420926536,
+      "inferred_stellar_mass_Msun": 794203024924.4365,
+      "mass_at_sigma_minus_plus": [
+        678228743123.9474,
+        919326089976.0084
+      ],
+      "predicted_einstein_arcsec": 1.0268551640481254,
+      "angles_at_sigma_minus_plus": [
+        0.8889642700125349,
+        1.1661002096226252
+      ],
+      "catalog_SIE_arcsec": 1.12,
+      "prediction_over_catalog": 0.9168349679001119
+    },
+    {
+      "Name": "J1436-0000",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.75,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 224,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 6.030818420926536,
+      "inferred_stellar_mass_Msun": 609060575926.5798,
+      "mass_at_sigma_minus_plus": [
+        507988850108.415,
+        719368629717.1111
+      ],
+      "predicted_einstein_arcsec": 1.0838917686195693,
+      "angles_at_sigma_minus_plus": [
+        0.9250095239245729,
+        1.2444664537441317
+      ],
+      "catalog_SIE_arcsec": 1.12,
+      "prediction_over_catalog": 0.9677605076960439
+    },
+    {
+      "Name": "J1436-0000",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.75,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 224,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 6.030818420926536,
+      "inferred_stellar_mass_Msun": 794203024924.4365,
+      "mass_at_sigma_minus_plus": [
+        678228743123.9474,
+        919326089976.0084
+      ],
+      "predicted_einstein_arcsec": 1.0268551640481254,
+      "angles_at_sigma_minus_plus": [
+        0.8889642700125346,
+        1.1661002096226252
+      ],
+      "catalog_SIE_arcsec": 1.12,
+      "prediction_over_catalog": 0.9168349679001119
+    },
+    {
+      "Name": "J1436-0000",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.75,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 224,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 6.030818420926536,
+      "inferred_stellar_mass_Msun": 609016435865.83,
+      "mass_at_sigma_minus_plus": [
+        507948769266.02405,
+        719320449184.6945
+      ],
+      "predicted_einstein_arcsec": 1.0911797164986763,
+      "angles_at_sigma_minus_plus": [
+        0.9310584141311178,
+        1.253091910323268
+      ],
+      "catalog_SIE_arcsec": 1.12,
+      "prediction_over_catalog": 0.9742676040166751
+    },
+    {
+      "Name": "J1451-0239",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.98,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 223,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 3.1437353158524974,
+      "inferred_stellar_mass_Msun": 404710940617.76276,
+      "mass_at_sigma_minus_plus": [
+        355490329528.5346,
+        457121776499.81134
+      ],
+      "predicted_einstein_arcsec": 1.2381608993349364,
+      "angles_at_sigma_minus_plus": [
+        1.1045862312422219,
+        1.3726798046382107
+      ],
+      "catalog_SIE_arcsec": 1.04,
+      "prediction_over_catalog": 1.1905393262835926
+    },
+    {
+      "Name": "J1451-0239",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.98,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 223,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 3.1437353158524974,
+      "inferred_stellar_mass_Msun": 336620010057.18506,
+      "mass_at_sigma_minus_plus": [
+        291757619479.67206,
+        384694707820.79346
+      ],
+      "predicted_einstein_arcsec": 1.3025001766778046,
+      "angles_at_sigma_minus_plus": [
+        1.1535746510660865,
+        1.4524762211837912
+      ],
+      "catalog_SIE_arcsec": 1.04,
+      "prediction_over_catalog": 1.2524040160363505
+    },
+    {
+      "Name": "J1451-0239",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.98,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 223,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 3.1437353158524974,
+      "inferred_stellar_mass_Msun": 404710940617.76276,
+      "mass_at_sigma_minus_plus": [
+        355490329528.5346,
+        457121776499.81134
+      ],
+      "predicted_einstein_arcsec": 1.2381608993349364,
+      "angles_at_sigma_minus_plus": [
+        1.1045862312422217,
+        1.3726798046382107
+      ],
+      "catalog_SIE_arcsec": 1.04,
+      "prediction_over_catalog": 1.1905393262835926
+    },
+    {
+      "Name": "J1451-0239",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.98,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 223,
+      "sigma_error_kms": 14,
+      "scale_a_kpc": 3.1437353158524974,
+      "inferred_stellar_mass_Msun": 336604942107.68384,
+      "mass_at_sigma_minus_plus": [
+        291743611754.2186,
+        384678584793.4347
+      ],
+      "predicted_einstein_arcsec": 1.3092343487361844,
+      "angles_at_sigma_minus_plus": [
+        1.159396259921194,
+        1.460180305132845
+      ],
+      "catalog_SIE_arcsec": 1.04,
+      "prediction_over_catalog": 1.2588791814771003
+    },
+    {
+      "Name": "J1525+3327",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.61,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 264,
+      "sigma_error_kms": 26,
+      "scale_a_kpc": 9.529146991443692,
+      "inferred_stellar_mass_Msun": 1686171189550.759,
+      "mass_at_sigma_minus_plus": [
+        1370401183151.3025,
+        2034650439640.9956
+      ],
+      "predicted_einstein_arcsec": 1.059068426141079,
+      "angles_at_sigma_minus_plus": [
+        0.8588820318000275,
+        1.2629088366484194
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 0.8084491802603656
+    },
+    {
+      "Name": "J1525+3327",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.61,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 264,
+      "sigma_error_kms": 26,
+      "scale_a_kpc": 9.529146991443692,
+      "inferred_stellar_mass_Msun": 1285248774875.3943,
+      "mass_at_sigma_minus_plus": [
+        1011514281411.2053,
+        1592011117403.492
+      ],
+      "predicted_einstein_arcsec": 1.1090410934112491,
+      "angles_at_sigma_minus_plus": [
+        0.8799325368551598,
+        1.3428145458955767
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 0.8465962545124038
+    },
+    {
+      "Name": "J1525+3327",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.61,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 264,
+      "sigma_error_kms": 26,
+      "scale_a_kpc": 9.529146991443692,
+      "inferred_stellar_mass_Msun": 1686171189550.759,
+      "mass_at_sigma_minus_plus": [
+        1370401183151.3025,
+        2034650439640.9956
+      ],
+      "predicted_einstein_arcsec": 1.0590684261410785,
+      "angles_at_sigma_minus_plus": [
+        0.8588820318000276,
+        1.2629088366484194
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 0.8084491802603653
+    },
+    {
+      "Name": "J1525+3327",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.61,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 264,
+      "sigma_error_kms": 26,
+      "scale_a_kpc": 9.529146991443692,
+      "inferred_stellar_mass_Msun": 1285177336965.713,
+      "mass_at_sigma_minus_plus": [
+        1011451422625.3942,
+        1591931150253.944
+      ],
+      "predicted_einstein_arcsec": 1.1159335697866304,
+      "angles_at_sigma_minus_plus": [
+        0.8852806121942131,
+        1.3514096894878085
+      ],
+      "catalog_SIE_arcsec": 1.31,
+      "prediction_over_catalog": 0.8518576868600232
+    },
+    {
+      "Name": "J1538+5817",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.82,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 189,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 2.2629791345183095,
+      "inferred_stellar_mass_Msun": 223525942957.15878,
+      "mass_at_sigma_minus_plus": [
+        196042783430.05026,
+        252811276879.48743
+      ],
+      "predicted_einstein_arcsec": 0.8888619996564235,
+      "angles_at_sigma_minus_plus": [
+        0.7957703314607473,
+        0.9825025894227776
+      ],
+      "catalog_SIE_arcsec": 1.0,
+      "prediction_over_catalog": 0.8888619996564235
+    },
+    {
+      "Name": "J1538+5817",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.82,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 189,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 2.2629791345183095,
+      "inferred_stellar_mass_Msun": 183058667873.71222,
+      "mass_at_sigma_minus_plus": [
+        158215022818.9925,
+        209717953993.10556
+      ],
+      "predicted_einstein_arcsec": 0.9273554706366958,
+      "angles_at_sigma_minus_plus": [
+        0.8232351471578094,
+        1.0320968474377736
+      ],
+      "catalog_SIE_arcsec": 1.0,
+      "prediction_over_catalog": 0.9273554706366958
+    },
+    {
+      "Name": "J1538+5817",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.82,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 189,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 2.2629791345183095,
+      "inferred_stellar_mass_Msun": 223525942957.15878,
+      "mass_at_sigma_minus_plus": [
+        196042783430.05026,
+        252811276879.48743
+      ],
+      "predicted_einstein_arcsec": 0.8888619996564235,
+      "angles_at_sigma_minus_plus": [
+        0.7957703314607473,
+        0.9825025894227776
+      ],
+      "catalog_SIE_arcsec": 1.0,
+      "prediction_over_catalog": 0.8888619996564235
+    },
+    {
+      "Name": "J1538+5817",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.82,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 189,
+      "sigma_error_kms": 12,
+      "scale_a_kpc": 2.2629791345183095,
+      "inferred_stellar_mass_Msun": 183043299832.84885,
+      "mass_at_sigma_minus_plus": [
+        158200765068.86932,
+        209701480948.8186
+      ],
+      "predicted_einstein_arcsec": 0.9324541788362584,
+      "angles_at_sigma_minus_plus": [
+        0.8276330218117087,
+        1.0379417189286164
+      ],
+      "catalog_SIE_arcsec": 1.0,
+      "prediction_over_catalog": 0.9324541788362584
+    },
+    {
+      "Name": "J1621+3931",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 236,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 5.030024365749386,
+      "inferred_stellar_mass_Msun": 740014023643.6328,
+      "mass_at_sigma_minus_plus": [
+        619902583437.1829,
+        870754794841.8041
+      ],
+      "predicted_einstein_arcsec": 1.0566385707704726,
+      "angles_at_sigma_minus_plus": [
+        0.90239832298125,
+        1.2123862747396803
+      ],
+      "catalog_SIE_arcsec": 1.29,
+      "prediction_over_catalog": 0.8190996672639322
+    },
+    {
+      "Name": "J1621+3931",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 236,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 5.030024365749386,
+      "inferred_stellar_mass_Msun": 588354020412.8313,
+      "mass_at_sigma_minus_plus": [
+        481648080761.8853,
+        705779360333.3029
+      ],
+      "predicted_einstein_arcsec": 1.1132922774694125,
+      "angles_at_sigma_minus_plus": [
+        0.9380393592247952,
+        1.2903294592521724
+      ],
+      "catalog_SIE_arcsec": 1.29,
+      "prediction_over_catalog": 0.8630172693561337
+    },
+    {
+      "Name": "J1621+3931",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 236,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 5.030024365749386,
+      "inferred_stellar_mass_Msun": 740014023643.6328,
+      "mass_at_sigma_minus_plus": [
+        619902583437.1829,
+        870754794841.8041
+      ],
+      "predicted_einstein_arcsec": 1.0566385707704726,
+      "angles_at_sigma_minus_plus": [
+        0.9023983229812499,
+        1.2123862747396807
+      ],
+      "catalog_SIE_arcsec": 1.29,
+      "prediction_over_catalog": 0.8190996672639322
+    },
+    {
+      "Name": "J1621+3931",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.73,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 236,
+      "sigma_error_kms": 20,
+      "scale_a_kpc": 5.030024365749386,
+      "inferred_stellar_mass_Msun": 588315140278.9025,
+      "mass_at_sigma_minus_plus": [
+        481613061046.2279,
+        705736642492.2485
+      ],
+      "predicted_einstein_arcsec": 1.1201004503284682,
+      "angles_at_sigma_minus_plus": [
+        0.9435886360598204,
+        1.298507122129267
+      ],
+      "catalog_SIE_arcsec": 1.29,
+      "prediction_over_catalog": 0.8682949227352467
+    },
+    {
+      "Name": "J1630+4520",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.84,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 276,
+      "sigma_error_kms": 16,
+      "scale_a_kpc": 4.657558284834793,
+      "inferred_stellar_mass_Msun": 949188389328.3073,
+      "mass_at_sigma_minus_plus": [
+        842327440645.2631,
+        1062429096141.682
+      ],
+      "predicted_einstein_arcsec": 1.518802476935086,
+      "angles_at_sigma_minus_plus": [
+        1.387424028824986,
+        1.6505947030936787
+      ],
+      "catalog_SIE_arcsec": 1.78,
+      "prediction_over_catalog": 0.8532598185028574
+    },
+    {
+      "Name": "J1630+4520",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.84,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 276,
+      "sigma_error_kms": 16,
+      "scale_a_kpc": 4.657558284834793,
+      "inferred_stellar_mass_Msun": 785946275193.1722,
+      "mass_at_sigma_minus_plus": [
+        688752741511.9963,
+        889564753681.4121
+      ],
+      "predicted_einstein_arcsec": 1.6522928409154924,
+      "angles_at_sigma_minus_plus": [
+        1.501497352586645,
+        1.8034669605376594
+      ],
+      "catalog_SIE_arcsec": 1.78,
+      "prediction_over_catalog": 0.9282544050087036
+    },
+    {
+      "Name": "J1630+4520",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.84,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 276,
+      "sigma_error_kms": 16,
+      "scale_a_kpc": 4.657558284834793,
+      "inferred_stellar_mass_Msun": 949188389328.3073,
+      "mass_at_sigma_minus_plus": [
+        842327440645.2631,
+        1062429096141.682
+      ],
+      "predicted_einstein_arcsec": 1.5188024769350863,
+      "angles_at_sigma_minus_plus": [
+        1.387424028824986,
+        1.6505947030936783
+      ],
+      "catalog_SIE_arcsec": 1.78,
+      "prediction_over_catalog": 0.8532598185028575
+    },
+    {
+      "Name": "J1630+4520",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.84,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 276,
+      "sigma_error_kms": 16,
+      "scale_a_kpc": 4.657558284834793,
+      "inferred_stellar_mass_Msun": 785898780905.1274,
+      "mass_at_sigma_minus_plus": [
+        688708346095.0082,
+        889514174301.0939
+      ],
+      "predicted_einstein_arcsec": 1.664960917839358,
+      "angles_at_sigma_minus_plus": [
+        1.5126221708981455,
+        1.817769487961515
+      ],
+      "catalog_SIE_arcsec": 1.78,
+      "prediction_over_catalog": 0.9353713021569428
+    },
+    {
+      "Name": "J1636+4707",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 231,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 3.7053465337679508,
+      "inferred_stellar_mass_Msun": 541494464626.14,
+      "mass_at_sigma_minus_plus": [
+        473453753520.3086,
+        614101666410.2151
+      ],
+      "predicted_einstein_arcsec": 1.1081221998376987,
+      "angles_at_sigma_minus_plus": [
+        0.9954100455401258,
+        1.2213571843532824
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.0166258714107326
+    },
+    {
+      "Name": "J1636+4707",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 231,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 3.7053465337679508,
+      "inferred_stellar_mass_Msun": 439955479662.6698,
+      "mass_at_sigma_minus_plus": [
+        378714837087.8328,
+        505797992330.74774
+      ],
+      "predicted_einstein_arcsec": 1.1818613103165527,
+      "angles_at_sigma_minus_plus": [
+        1.0533971729756537,
+        1.3108825420546453
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.0842764314830757
+    },
+    {
+      "Name": "J1636+4707",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 231,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 3.7053465337679508,
+      "inferred_stellar_mass_Msun": 541494464626.14,
+      "mass_at_sigma_minus_plus": [
+        473453753520.3086,
+        614101666410.2151
+      ],
+      "predicted_einstein_arcsec": 1.1081221998376989,
+      "angles_at_sigma_minus_plus": [
+        0.9954100455401258,
+        1.2213571843532827
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.0166258714107328
+    },
+    {
+      "Name": "J1636+4707",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.78,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 231,
+      "sigma_error_kms": 15,
+      "scale_a_kpc": 3.7053465337679508,
+      "inferred_stellar_mass_Msun": 439920004056.7468,
+      "mass_at_sigma_minus_plus": [
+        378682003078.48315,
+        505759887764.3626
+      ],
+      "predicted_einstein_arcsec": 1.1898934917767585,
+      "angles_at_sigma_minus_plus": [
+        1.060314101164276,
+        1.3201045439110173
+      ],
+      "catalog_SIE_arcsec": 1.09,
+      "prediction_over_catalog": 1.0916454052997784
+    },
+    {
+      "Name": "J2300+0022",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 4.040976756164333,
+      "inferred_stellar_mass_Msun": 850217425201.6163,
+      "mass_at_sigma_minus_plus": [
+        749763298718.4099,
+        956984750022.0297
+      ],
+      "predicted_einstein_arcsec": 1.2168270198894515,
+      "angles_at_sigma_minus_plus": [
+        1.1009621117240902,
+        1.3331890691508996
+      ],
+      "catalog_SIE_arcsec": 1.24,
+      "prediction_over_catalog": 0.9813121128140738
+    },
+    {
+      "Name": "J2300+0022",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 4.040976756164333,
+      "inferred_stellar_mass_Msun": 713817221153.7651,
+      "mass_at_sigma_minus_plus": [
+        621796899164.8268,
+        812192294215.1498
+      ],
+      "predicted_einstein_arcsec": 1.291296762935918,
+      "angles_at_sigma_minus_plus": [
+        1.1614340433947203,
+        1.4216681343655848
+      ],
+      "catalog_SIE_arcsec": 1.24,
+      "prediction_over_catalog": 1.0413683572063854
+    },
+    {
+      "Name": "J2300+0022",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 4.040976756164333,
+      "inferred_stellar_mass_Msun": 850217425201.6163,
+      "mass_at_sigma_minus_plus": [
+        749763298718.4099,
+        956984750022.0297
+      ],
+      "predicted_einstein_arcsec": 1.2168270198894513,
+      "angles_at_sigma_minus_plus": [
+        1.1009621117240904,
+        1.3331890691508994
+      ],
+      "catalog_SIE_arcsec": 1.24,
+      "prediction_over_catalog": 0.9813121128140736
+    },
+    {
+      "Name": "J2300+0022",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.8,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 279,
+      "sigma_error_kms": 17,
+      "scale_a_kpc": 4.040976756164333,
+      "inferred_stellar_mass_Msun": 713773726011.3408,
+      "mass_at_sigma_minus_plus": [
+        621756347033.2441,
+        812145870142.921
+      ],
+      "predicted_einstein_arcsec": 1.2989248684078682,
+      "angles_at_sigma_minus_plus": [
+        1.1680816395373668,
+        1.430337132346366
+      ],
+      "catalog_SIE_arcsec": 1.24,
+      "prediction_over_catalog": 1.0475200551676358
+    },
+    {
+      "Name": "J2341+0000",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.59,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 207,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.76577170347259,
+      "inferred_stellar_mass_Msun": 621397550242.3287,
+      "mass_at_sigma_minus_plus": [
+        545798459728.82166,
+        701898327422.5469
+      ],
+      "predicted_einstein_arcsec": 1.0598198559837961,
+      "angles_at_sigma_minus_plus": [
+        0.927446087329616,
+        1.1939130075873645
+      ],
+      "catalog_SIE_arcsec": 1.44,
+      "prediction_over_catalog": 0.7359860110998585
+    },
+    {
+      "Name": "J2341+0000",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 20,
+      "light_axis_ratio": 0.59,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 207,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.76577170347259,
+      "inferred_stellar_mass_Msun": 476681087554.2857,
+      "mass_at_sigma_minus_plus": [
+        410714857048.99884,
+        547595862805.88416
+      ],
+      "predicted_einstein_arcsec": 1.1047456680252246,
+      "angles_at_sigma_minus_plus": [
+        0.954122226575086,
+        1.257549081545122
+      ],
+      "catalog_SIE_arcsec": 1.44,
+      "prediction_over_catalog": 0.7671844916841838
+    },
+    {
+      "Name": "J2341+0000",
+      "role": "training",
+      "model": "baryons",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.59,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 207,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.76577170347259,
+      "inferred_stellar_mass_Msun": 621397550242.3287,
+      "mass_at_sigma_minus_plus": [
+        545798459728.82166,
+        701898327422.5469
+      ],
+      "predicted_einstein_arcsec": 1.0598198559837961,
+      "angles_at_sigma_minus_plus": [
+        0.9274460873296159,
+        1.1939130075873645
+      ],
+      "catalog_SIE_arcsec": 1.44,
+      "prediction_over_catalog": 0.7359860110998585
+    },
+    {
+      "Name": "J2341+0000",
+      "role": "training",
+      "model": "empirical_extra",
+      "cutoff_in_a": 100,
+      "light_axis_ratio": 0.59,
+      "catalog_good_dispersion": "Yes",
+      "measured_sigma_kms": 207,
+      "sigma_error_kms": 13,
+      "scale_a_kpc": 5.76577170347259,
+      "inferred_stellar_mass_Msun": 476657364225.6817,
+      "mass_at_sigma_minus_plus": [
+        410692937822.43756,
+        547570342287.61847
+      ],
+      "predicted_einstein_arcsec": 1.1112368357319722,
+      "angles_at_sigma_minus_plus": [
+        0.9596607441417181,
+        1.2650532446529745
+      ],
+      "catalog_SIE_arcsec": 1.44,
+      "prediction_over_catalog": 0.7716922470360918
+    }
+  ],
+  "hashes": {
+    "research_work\\results\\lensing-data-readiness\\lens-observations-and-image-models.json": "e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+    "research_work\\results\\lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "research_work\\results\\joint-galaxy-audit\\results.json": "3a9be1474c3b6aa7f6d477da4b0bf27ce2c5821160c300fb80690d871021414f",
+    "research_work\\results\\slacs-motion-lensing-pilot\\protocol.json": "2775566180f24360f6779270fdd67515edc9e8d9f8f506a97ba114c9cb6aa6ca",
+    "research_work\\results\\slacs-motion-lensing-pilot\\model.py": "a975a5e322d3c52bf870f75c4874571711da18856f63eb49c5eb3c1ef771f0af",
+    "research_work\\results\\slacs-motion-lensing-pilot\\run.py": "75a19f540113f38369c908ce1cdbe7b2d26efba22a8dceab87bfcdd9ec24e4eb"
+  }
+}
