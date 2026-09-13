@@ -1,0 +1,5 @@
+# Particle support of fitted interception profiles
+
+No refit. Apply a necessary isotropic bound-particle equilibrium condition to the retained attenuated model at all 149 actual galaxy scales, the Milky Way scale and six lens-transfer scales. Known velocity-space integration requires d rho/d Psi>=0 for a nonnegative isotropic bound distribution. In a positive spherical gravitating mass profile Psi decreases outward, so an outward-increasing density rules this particular support mechanism out.
+
+Derive the central expansion analytically for the exact opacity/attenuation model, locate the threshold in K=k0 a, then evaluate it using the fitted parameters and observed scale inputs. Verify the coefficient against direct angular integration at small radius; this is a formula check, not a new data-resolution investigation. Retain per-object outcomes. A nonpositive central coefficient only passes one necessary test; it does not establish a positive distribution, full equilibrium or stability. This analysis is not a test of arbitrary anisotropic orbits, fields or spacetime bound levels. All six goals remain open.
