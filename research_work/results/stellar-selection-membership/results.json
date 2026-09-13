@@ -1,0 +1,80 @@
+{
+  "scope": "Targeting-metadata recovery for exposed training stars; no selection probability or gravitational fit",
+  "inputs": {
+    "research_work\\data-cache\\bulge-velocity-components\\training-components.parquet": "e83e622eac54e2e1250eefc06088407926da713aed7f281d4c2b14234ea8a9b1",
+    "research_work\\data-cache\\stellar-catalogs\\matched-with-gaia-covariance.parquet": "a60182c30b98fe06d7e928a3aed5f70fa59342bdc44dc65b9f8005ff0b56f959",
+    "research_work\\data-cache\\stellar-catalogs\\allStarLite-dr17-synspec_rev1.fits": "979592c332f1b82be319c026c42b0b0b9d3089715eb5d1049dfb85f19d9136cb"
+  },
+  "outputs": {
+    "research_work\\data-cache\\stellar-selection-membership\\training-membership.parquet": "7fda6f4ddd0e8a5cff497993b6aa3fc800a393bf02b15b6bd7a438a730c9975a",
+    "research_work\\data-cache\\stellar-selection-membership\\training-targeting-candidates.parquet": "dc4eeba37f783f0befa466eb3722953619f7dc6354ba304ccbd0fc8f45fe3083"
+  },
+  "matching_keys": [
+    "APOGEE_ID",
+    "FIELD",
+    "TELESCOPE"
+  ],
+  "recovered_columns": [
+    "EXTRATARG",
+    "TARGFLAGS",
+    "SURVEY",
+    "PROGRAMNAME",
+    "J",
+    "H",
+    "K",
+    "AK_TARG",
+    "AK_TARG_METHOD",
+    "MIN_H",
+    "MAX_H",
+    "MIN_JK",
+    "MAX_JK",
+    "APOGEE_TARGET1",
+    "APOGEE_TARGET2",
+    "APOGEE2_TARGET1",
+    "APOGEE2_TARGET2",
+    "APOGEE2_TARGET3"
+  ],
+  "region_summary": {
+    "all": {
+      "n": 27884,
+      "status_counts": {
+        "main_red": 16221,
+        "non_main": 11663
+      }
+    },
+    "bulge_plane": {
+      "n": 299,
+      "status_counts": {
+        "main_red": 261,
+        "non_main": 38
+      }
+    },
+    "bulge_offplane": {
+      "n": 577,
+      "status_counts": {
+        "main_red": 501,
+        "non_main": 76
+      }
+    },
+    "disk_plane": {
+      "n": 4425,
+      "status_counts": {
+        "main_red": 3352,
+        "non_main": 1073
+      }
+    },
+    "disk_offplane": {
+      "n": 11214,
+      "status_counts": {
+        "non_main": 5670,
+        "main_red": 5544
+      }
+    }
+  },
+  "stars_with_multiple_matches": 0,
+  "documentation": [
+    "https://www.sdss4.org/dr17/irspec/targets/selection-biases/",
+    "https://www.sdss4.org/dr17/irspec/targettingbits/"
+  ],
+  "final_test_opened": false
+}
