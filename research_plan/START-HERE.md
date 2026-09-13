@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Capture-law variety evaluated:** [Solar System family comparison](../research_work/results/isotropic-galaxy-transfer/capture-law-family-report.md) finds no unified full-mass scaling among six formulas (two equivalent). [Radiation-conditioned galaxy capture](../research_work/results/isotropic-galaxy-transfer/radiative-flux-report.md) improves frozen fractional errors but worsens km/s errors; it remains a mixed candidate rather than replacing the reference. Full-mass and extra-gravity targets remain explicitly distinct.
+
 **Three reservoir options now formulated and compared:** [Sun–Earth–Moon specification](sun-earth-moon-three-branches.md) and [executed transfer results](../research_work/results/isotropic-galaxy-transfer/three-reservoirs-report.md). A common normalization calibrated on the Sun fails to predict terrestrial/lunar mass under the declared source/path proxies. Static stored and steady-renewal versions are degenerate; a freely escaping cloud lacks inventory, while independently self-bound states still require a support law.
 
 **Earth conversion source decision:** [Outgoing EM budget](earth-em-conversion-budget.md) uses already emitted terrestrial IR with the retained alpha, not a new ground-state electron drain. It predicts about 0.373 W converted across all outgoing directions before lunar-orbit distance; local retention is separate. Static source energy is distinguished from a hypothetical decaying well requiring replenishment.

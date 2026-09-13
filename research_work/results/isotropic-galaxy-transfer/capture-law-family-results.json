@@ -1,0 +1,520 @@
+{
+  "status": "Exploratory full-mass scaling; source/capture geometry stipulated; no independent support or energy-history solution",
+  "solar_K_seconds": 8.319132624172932e+37,
+  "calibration": [
+    "Sun",
+    "Earth"
+  ],
+  "models": [
+    {
+      "family": "constant",
+      "exponent": 0.0,
+      "predictor_powers": {
+        "mass": 0,
+        "radius": 0,
+        "luminosity": 0
+      },
+      "implicit_exponent_denominator": 1.0,
+      "transfer_log10_RMS": 6.82239416051592,
+      "within_factor_two": 0,
+      "prediction_count": 9,
+      "rows": [
+        {
+          "body": "Mercury",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 3.3e+23,
+          "predicted_mass_kg": 3.0943333613891855e+18,
+          "predicted_over_observed": 9.37676776178541e-06
+        },
+        {
+          "body": "Venus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 4.87e+24,
+          "predicted_mass_kg": 1.3528947027108196e+19,
+          "predicted_over_observed": 2.778017870042751e-06
+        },
+        {
+          "body": "Earth",
+          "role": "calibration",
+          "observed_mass_kg": 5.969999999999999e+24,
+          "predicted_mass_kg": 8.283466447250535e+18,
+          "predicted_over_observed": 1.3875153177974098e-06
+        },
+        {
+          "body": "Moon",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 7.3e+22,
+          "predicted_mass_kg": 1.6746845454014554e+17,
+          "predicted_over_observed": 2.294088418358158e-06
+        },
+        {
+          "body": "Mars",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 6.42e+23,
+          "predicted_mass_kg": 5.383380914593287e+17,
+          "predicted_over_observed": 8.385328527403873e-07
+        },
+        {
+          "body": "Jupiter",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.898e+27,
+          "predicted_mass_kg": 4.308011620015199e+20,
+          "predicted_over_observed": 2.2697637618625915e-07
+        },
+        {
+          "body": "Saturn",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 5.68e+26,
+          "predicted_mass_kg": 7.62774318632112e+19,
+          "predicted_over_observed": 1.342912532803014e-07
+        },
+        {
+          "body": "Uranus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 8.68e+25,
+          "predicted_mass_kg": 1.4514361909134897e+18,
+          "predicted_over_observed": 1.6721615102689975e-08
+        },
+        {
+          "body": "Neptune",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.0199999999999999e+26,
+          "predicted_mass_kg": 5.323149169718787e+17,
+          "predicted_over_observed": 5.218773695802733e-09
+        },
+        {
+          "body": "Pluto",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.3e+22,
+          "predicted_mass_kg": 34341983157220.15,
+          "predicted_over_observed": 2.6416910120938575e-09
+        }
+      ]
+    },
+    {
+      "family": "size",
+      "exponent": -2.8746402551281207,
+      "predictor_powers": {
+        "mass": 0,
+        "radius": 1,
+        "luminosity": 0
+      },
+      "implicit_exponent_denominator": 1.0,
+      "transfer_log10_RMS": 2.742606866052759,
+      "within_factor_two": 0,
+      "prediction_count": 9,
+      "rows": [
+        {
+          "body": "Mercury",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 3.3e+23,
+          "predicted_mass_kg": 3.533110964377373e+25,
+          "predicted_over_observed": 107.06396861749613
+        },
+        {
+          "body": "Venus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 4.87e+24,
+          "predicted_mass_kg": 1.1337742787723098e+25,
+          "predicted_over_observed": 2.328078601175174
+        },
+        {
+          "body": "Earth",
+          "role": "calibration",
+          "observed_mass_kg": 5.969999999999999e+24,
+          "predicted_mass_kg": 5.970000000000006e+24,
+          "predicted_over_observed": 1.000000000000001
+        },
+        {
+          "body": "Moon",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 7.3e+22,
+          "predicted_mass_kg": 5.071964428446092e+24,
+          "predicted_over_observed": 69.47896477323413
+        },
+        {
+          "body": "Mars",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 6.42e+23,
+          "predicted_mass_kg": 2.3749515364831303e+24,
+          "predicted_over_observed": 3.699301458696464
+        },
+        {
+          "body": "Jupiter",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.898e+27,
+          "predicted_mass_kg": 2.9846573476632387e+23,
+          "predicted_over_observed": 0.000157252758043374
+        },
+        {
+          "body": "Saturn",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 5.68e+26,
+          "predicted_mass_kg": 8.634310479091844e+22,
+          "predicted_over_observed": 0.00015201250843471556
+        },
+        {
+          "body": "Uranus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 8.68e+25,
+          "predicted_mass_kg": 1.9344451751873696e+22,
+          "predicted_over_observed": 0.00022286234737181674
+        },
+        {
+          "body": "Neptune",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.0199999999999999e+26,
+          "predicted_mass_kg": 7.76919429696322e+21,
+          "predicted_over_observed": 7.616857153885511e-05
+        },
+        {
+          "body": "Pluto",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.3e+22,
+          "predicted_mass_kg": 3.102385284651264e+21,
+          "predicted_over_observed": 0.23864502189625109
+        }
+      ]
+    },
+    {
+      "family": "well_depth",
+      "exponent": -1.680950347434223,
+      "predictor_powers": {
+        "mass": 1,
+        "radius": -1,
+        "luminosity": 0
+      },
+      "implicit_exponent_denominator": 2.680950347434223,
+      "transfer_log10_RMS": 0.885576265128211,
+      "within_factor_two": 2,
+      "prediction_count": 9,
+      "rows": [
+        {
+          "body": "Mercury",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 3.3e+23,
+          "predicted_mass_kg": 2.2634095459628326e+24,
+          "predicted_over_observed": 6.858816805947977
+        },
+        {
+          "body": "Venus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 4.87e+24,
+          "predicted_mass_kg": 6.936758885593607e+24,
+          "predicted_over_observed": 1.4243858081301044
+        },
+        {
+          "body": "Earth",
+          "role": "calibration",
+          "observed_mass_kg": 5.969999999999999e+24,
+          "predicted_mass_kg": 5.970000000000006e+24,
+          "predicted_over_observed": 1.000000000000001
+        },
+        {
+          "body": "Moon",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 7.3e+22,
+          "predicted_mass_kg": 6.164552651377943e+23,
+          "predicted_over_observed": 8.44459267312047
+        },
+        {
+          "body": "Mars",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 6.42e+23,
+          "predicted_mass_kg": 1.4505824945672088e+24,
+          "predicted_over_observed": 2.2594742906031287
+        },
+        {
+          "body": "Jupiter",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.898e+27,
+          "predicted_mass_kg": 1.1861785955545652e+26,
+          "predicted_over_observed": 0.06249623791119943
+        },
+        {
+          "body": "Saturn",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 5.68e+26,
+          "predicted_mass_kg": 5.587173264740939e+25,
+          "predicted_over_observed": 0.09836572649191795
+        },
+        {
+          "body": "Uranus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 8.68e+25,
+          "predicted_mass_kg": 7.444265520378646e+24,
+          "predicted_over_observed": 0.08576342765413188
+        },
+        {
+          "body": "Neptune",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.0199999999999999e+26,
+          "predicted_mass_kg": 5.020267895195132e+24,
+          "predicted_over_observed": 0.0492183126979915
+        },
+        {
+          "body": "Pluto",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.3e+22,
+          "predicted_mass_kg": 2.045065451526872e+22,
+          "predicted_over_observed": 1.5731272704052863
+        }
+      ]
+    },
+    {
+      "family": "surface_acceleration",
+      "exponent": -4.048059302889856,
+      "predictor_powers": {
+        "mass": 1,
+        "radius": -2,
+        "luminosity": 0
+      },
+      "implicit_exponent_denominator": 5.048059302889856,
+      "transfer_log10_RMS": 0.4286037908700657,
+      "within_factor_two": 3,
+      "prediction_count": 9,
+      "rows": [
+        {
+          "body": "Mercury",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 3.3e+23,
+          "predicted_mass_kg": 1.0516136871292696e+24,
+          "predicted_over_observed": 3.1867081428159683
+        },
+        {
+          "body": "Venus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 4.87e+24,
+          "predicted_mass_kg": 6.048327757687198e+24,
+          "predicted_over_observed": 1.2419564184162624
+        },
+        {
+          "body": "Earth",
+          "role": "calibration",
+          "observed_mass_kg": 5.969999999999999e+24,
+          "predicted_mass_kg": 5.969999999999995e+24,
+          "predicted_over_observed": 0.9999999999999993
+        },
+        {
+          "body": "Moon",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 7.3e+22,
+          "predicted_mass_kg": 3.4243514399129725e+23,
+          "predicted_over_observed": 4.690892383442428
+        },
+        {
+          "body": "Mars",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 6.42e+23,
+          "predicted_mass_kg": 1.2641950186081816e+24,
+          "predicted_over_observed": 1.9691511193273856
+        },
+        {
+          "body": "Jupiter",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.898e+27,
+          "predicted_mass_kg": 6.298445635608763e+26,
+          "predicted_over_observed": 0.3318464507696925
+        },
+        {
+          "body": "Saturn",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 5.68e+26,
+          "predicted_mass_kg": 3.398860489441887e+26,
+          "predicted_over_observed": 0.5983909312397689
+        },
+        {
+          "body": "Uranus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 8.68e+25,
+          "predicted_mass_kg": 3.917441189178393e+25,
+          "predicted_over_observed": 0.4513181093523495
+        },
+        {
+          "body": "Neptune",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.0199999999999999e+26,
+          "predicted_mass_kg": 3.0527900138509063e+25,
+          "predicted_over_observed": 0.29929313861283396
+        },
+        {
+          "body": "Pluto",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.3e+22,
+          "predicted_mass_kg": 3.460804494529093e+22,
+          "predicted_over_observed": 2.6621573034839177
+        }
+      ]
+    },
+    {
+      "family": "density",
+      "exponent": 9.916929718696641,
+      "predictor_powers": {
+        "mass": 1,
+        "radius": -3,
+        "luminosity": 0
+      },
+      "implicit_exponent_denominator": -8.916929718696641,
+      "transfer_log10_RMS": 0.7006940211865724,
+      "within_factor_two": 4,
+      "prediction_count": 9,
+      "rows": [
+        {
+          "body": "Mercury",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 3.3e+23,
+          "predicted_mass_kg": 2.699964240948537e+23,
+          "predicted_over_observed": 0.8181709821056171
+        },
+        {
+          "body": "Venus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 4.87e+24,
+          "predicted_mass_kg": 4.743060072191033e+24,
+          "predicted_over_observed": 0.9739343064047297
+        },
+        {
+          "body": "Earth",
+          "role": "calibration",
+          "observed_mass_kg": 5.969999999999999e+24,
+          "predicted_mass_kg": 5.969999999999995e+24,
+          "predicted_over_observed": 0.9999999999999993
+        },
+        {
+          "body": "Moon",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 7.3e+22,
+          "predicted_mass_kg": 1.2069665278073519e+23,
+          "predicted_over_observed": 1.6533788052155505
+        },
+        {
+          "body": "Mars",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 6.42e+23,
+          "predicted_mass_kg": 9.905355775803359e+23,
+          "predicted_over_observed": 1.5428903077575324
+        },
+        {
+          "body": "Jupiter",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.898e+27,
+          "predicted_mass_kg": 1.2171941839044002e+28,
+          "predicted_over_observed": 6.413035742383562
+        },
+        {
+          "body": "Saturn",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 5.68e+26,
+          "predicted_mass_kg": 8.36015981548992e+27,
+          "predicted_over_observed": 14.718591224454086
+        },
+        {
+          "body": "Uranus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 8.68e+25,
+          "predicted_mass_kg": 7.450862531131083e+26,
+          "predicted_over_observed": 8.583943008215535
+        },
+        {
+          "body": "Neptune",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.0199999999999999e+26,
+          "predicted_mass_kg": 7.50368468767968e+26,
+          "predicted_over_observed": 7.356553615372236
+        },
+        {
+          "body": "Pluto",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.3e+22,
+          "predicted_mass_kg": 8.798904687037579e+22,
+          "predicted_over_observed": 6.768388220798137
+        }
+      ]
+    },
+    {
+      "family": "surface_radiative_flux",
+      "exponent": -1.1121462242663236,
+      "predictor_powers": {
+        "mass": 0,
+        "radius": -2,
+        "luminosity": 1
+      },
+      "implicit_exponent_denominator": 1.0,
+      "transfer_log10_RMS": 0.7006940211865719,
+      "within_factor_two": 4,
+      "prediction_count": 9,
+      "rows": [
+        {
+          "body": "Mercury",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 3.3e+23,
+          "predicted_mass_kg": 2.699964240948537e+23,
+          "predicted_over_observed": 0.8181709821056171
+        },
+        {
+          "body": "Venus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 4.87e+24,
+          "predicted_mass_kg": 4.7430600721910247e+24,
+          "predicted_over_observed": 0.973934306404728
+        },
+        {
+          "body": "Earth",
+          "role": "calibration",
+          "observed_mass_kg": 5.969999999999999e+24,
+          "predicted_mass_kg": 5.970000000000006e+24,
+          "predicted_over_observed": 1.000000000000001
+        },
+        {
+          "body": "Moon",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 7.3e+22,
+          "predicted_mass_kg": 1.2069665278073564e+23,
+          "predicted_over_observed": 1.6533788052155567
+        },
+        {
+          "body": "Mars",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 6.42e+23,
+          "predicted_mass_kg": 9.905355775803307e+23,
+          "predicted_over_observed": 1.5428903077575242
+        },
+        {
+          "body": "Jupiter",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.898e+27,
+          "predicted_mass_kg": 1.217194183904401e+28,
+          "predicted_over_observed": 6.413035742383568
+        },
+        {
+          "body": "Saturn",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 5.68e+26,
+          "predicted_mass_kg": 8.360159815489905e+27,
+          "predicted_over_observed": 14.718591224454059
+        },
+        {
+          "body": "Uranus",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 8.68e+25,
+          "predicted_mass_kg": 7.450862531131064e+26,
+          "predicted_over_observed": 8.583943008215511
+        },
+        {
+          "body": "Neptune",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.0199999999999999e+26,
+          "predicted_mass_kg": 7.503684687679672e+26,
+          "predicted_over_observed": 7.356553615372229
+        },
+        {
+          "body": "Pluto",
+          "role": "exposed_prediction",
+          "observed_mass_kg": 1.3e+22,
+          "predicted_mass_kg": 8.798904687037549e+22,
+          "predicted_over_observed": 6.768388220798114
+        }
+      ]
+    }
+  ]
+}

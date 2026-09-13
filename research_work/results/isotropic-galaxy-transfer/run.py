@@ -8,7 +8,8 @@ from scipy.optimize import minimize
 
 HERE=Path(__file__).resolve().parent; ROOT=HERE.parents[2]
 BASE=ROOT/'temporal_candidate_audit/data'; G=4.30091727003628e-6
-WELL='--well-strength' in sys.argv
+FLUX='--radiative-flux' in sys.argv
+WELL='--well-strength' in sys.argv or FLUX
 STEEP='--steep-capture' in sys.argv
 assert not (WELL and STEEP), 'Candidate modifications must be fitted separately'
 previous=json.loads((HERE.parent/'luminosity-gravity-transfer/results.json').read_text())
@@ -16,11 +17,12 @@ for fn,digest in previous['input_sha256'].items():
     assert hashlib.sha256((BASE/fn).read_bytes()).hexdigest()==digest
 splits=json.loads((BASE/'sparc_frozen.json').read_text())['split']
 assert list(splits)==['train','validation','test'] and len(splits['train'])==89
-rd={}
+rd={}; luminosity={}
 for line in (BASE/'SPARC_Lelli2016c.mrt').read_text().splitlines():
     f=line.split()
     if len(f)!=19: continue
-    try: rd[f[0]]=float(f[11])
+    try:
+        rd[f[0]]=float(f[11]);luminosity[f[0]]=float(f[7])
     except ValueError: pass
 data=[]
 with zipfile.ZipFile(BASE/'Rotmod_LTG.zip') as z:
@@ -42,6 +44,8 @@ class Calculator:
             radius=d['rd'];r=d['R'];g=d['vb']/r
             return g[-1]*(r[-1]/radius)**2 if radius>r[-1] else np.interp(radius,np.r_[0,r],np.r_[0,g])
         self.strength=np.array([strength(d)/1000 for d in data])[:,None]
+        if FLUX:
+            self.strength=np.array([luminosity[d['name']]/d['rd']**2 for d in data])[:,None]
     def predict(self,p,attenuated):
         F=self.strength**p[3] if len(p)==4 else np.ones_like(self.rd)
         C=10**p[0]*F; scale=10**(p[2] if len(p)==4 else p[-1]); a=scale*self.rd
@@ -83,7 +87,7 @@ for attenuated in ([True] if WELL else [False,True]):
     bounds=[(-2,12),(-6,2),(-1,2)] if attenuated else [(-2,12),(-1,2)]
     starts=[[7,-2,0],[7,-1,.5],[6,-4,1]] if attenuated else [[7,0],[7,.5],[6,1]]
     if WELL:
-        bounds+=[(0,2)]
+        bounds+=[(-2,2) if FLUX else (0,2)]
         starts=[p+[q] for p,q in zip(starts,[0.,.5,1.])]
     def loss(p):
         pred=coarse.predict(p,attenuated)
@@ -101,5 +105,5 @@ for attenuated in ([True] if WELL else [False,True]):
     for d,v in zip(data,pred):
         rows.append(dict(model=name,galaxy=d['name'],split=next(s for s in splits if d['name'] in splits[s]),R_kpc=d['R'].tolist(),observed_kms=d['v'].tolist(),predicted_kms=v.tolist()))
 for fn,obj in [('results.json',results),('predictions.json',rows)]:
-    (HERE/(('well-strength-' if WELL else 'steep-capture-' if STEEP else '')+fn)).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    (HERE/(('radiative-flux-' if FLUX else 'well-strength-' if WELL else 'steep-capture-' if STEEP else '')+fn)).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(results['models'],indent=2),flush=True)
