@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Continuing-source maintenance checkpoint
+
+The [constant-floor calculation](../../research_work/results/companion-extensions/threshold-floor-report.md) starts at equilibrium and reduces the input to a continuing floor. Maintaining 90% of the original deposit indefinitely requires 34.09%-68.62% of the original input across the existing 149 intensity proxies; 99% requires 89.09%-96.43%. Capture and release remain equal and nonzero at the final equilibrium. These conditional requirements do not establish the availability of external companion supply or a physical rate. This supplement extends the v1.1 PDF evidence snapshot; it does not constitute a new fit.
+
 ## Post-source retention checkpoint
 
 The [threshold memory calculation](../../research_work/results/companion-extensions/threshold-memory-report.md) compares formation and subsequent release for all 149 existing intensity inputs. Under individually controlled shutoff at 90% equilibrium, losing the first 10% takes 4.92%-41.79% of formation time, independent of the overall rate. Longer half-loss tails do not establish permanent retention. This constrains the stipulated kinetics rather than observed galaxy histories; no age, new fit or preferred alternative is inferred.
