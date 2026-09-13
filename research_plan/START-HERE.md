@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: collective-state normalization.** An empty domain has first-excitation rate factor N, not N^2. Partly excited symmetric states can enhance rates more strongly, but require preparation energy and enhance reverse transitions too. The tested closed ladders reach zero net current. A physically specified protected export remains necessary. See [report](../research_work/results/companion-extensions/collective-normalization-report.md).
+
 **Latest checkpoint: angular-rate consistency.** Matching the source-size-tracking angle with the existing Gaussian overlap suppresses the transfer rate as s^-2 exp[-(s/s_c)^2]. At fixed coupling and target density, redshift accumulation saturates near the source. The favorable observer moments cannot be combined with an unchanged long-path rate in this branch. See [report](../research_work/results/companion-extensions/kernel-rate-closure-report.md).
 
 **Latest checkpoint: observer geometry and delay.** Accounting for kick location gives about 0.520 arcseconds and 5025 seconds mean delay for the fixed-angle optical example over 30.66 Mpc. A source-size-tracking kernel yields much smaller moments but lacks a derived local cause. Stationary scattering still does not explain event time dilation. See [report](../research_work/results/companion-extensions/observer-transport-report.md).

@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Collective normalization checkpoint
+
+The [collective-state audit](../../research_work/results/companion-extensions/collective-normalization-report.md) applies known symmetric-spin matrix factors to loading. First excitation of an empty domain scales as N, so grouping alone supplies no N-squared inelastic enhancement. Partly excited symmetric states can have larger gross rates, with preparation energy and reverse enhancement included. Nine finite stationary distributions exhibit zero net loading without export. Full tensor-product checks verify the factors. This removes a normalization shortcut without excluding driven collective storage; it supplies no new angular-rate compensation or observational fit.
+
 ## Angular-rate closure checkpoint
 
 The [Gaussian rate-closure check](../../research_work/results/companion-extensions/kernel-rate-closure-report.md) matches the angular moment of the source-size-tracking prescription to the earlier spatial overlap. Its rate then falls as s^-2 exp[-(s/s_c)^2] at fixed optical energy, coupling and target density. The two tested gaps yield effective paths below one parsec after normalization at one parsec, rather than continuing accumulation over 30.66 Mpc. This contradicts combining that angular narrowing with the unchanged reference loss rate in this branch. It leaves alternative interactions open, but the previous favorable observer moments remain kinematic benchmarks. Exact angular integration and analytic path integrals verify the limiting calculation; observational fits and the retention reference remain unchanged.
