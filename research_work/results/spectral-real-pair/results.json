@@ -1,0 +1,2263 @@
+{
+  "scope": "Exploratory real SN 2006mk spectral pair with conditional synthetic recovery, not a calibrated timing test",
+  "protocol": {
+    "scope": "Exploratory real SN 2006mk spectral pair with conditional synthetic recovery, not a calibrated timing test",
+    "seeds": [
+      5101,
+      5102,
+      5103,
+      5104,
+      5105,
+      5106,
+      5107,
+      5108,
+      5109,
+      5110
+    ],
+    "adjacent_pixel_correlations": [
+      0,
+      0.5
+    ],
+    "primary_polynomial_degree": 2,
+    "primary_host_basis": false,
+    "sensitivity_degrees": [
+      2,
+      3,
+      5
+    ],
+    "sensitivity_host_basis": [
+      false,
+      true
+    ],
+    "amplitude_rule": "For each injected template and epoch, match its projected whitened signal power to observed quadratic residual power minus n-k; do not fit synthetic truth labels to real dates",
+    "calibration_scope": "14 previously exposed nearby template pairs; labels not independent source clocks; no p-value or confidence interval claim"
+  },
+  "observed_projected_excess_power": [
+    1932.6406996386136,
+    1203.387842672517
+  ],
+  "real_epoch_fits": [
+    {
+      "epoch": 0,
+      "degree": 2,
+      "host_basis": false,
+      "estimated_phase": -3.4,
+      "matches": [
+        {
+          "object": "sn1998es",
+          "phase": -3.4,
+          "correlation": 0.7245773792139482
+        },
+        {
+          "object": "sn2005eq",
+          "phase": -3.5,
+          "correlation": 0.7181811852384669
+        },
+        {
+          "object": "sn1999aa",
+          "phase": -3.1,
+          "correlation": 0.7134215035765521
+        },
+        {
+          "object": "sn2007s",
+          "phase": -2.7,
+          "correlation": 0.7132494794685161
+        },
+        {
+          "object": "sn2000e",
+          "phase": -6.4,
+          "correlation": 0.7114587202208482
+        }
+      ]
+    },
+    {
+      "epoch": 0,
+      "degree": 2,
+      "host_basis": true,
+      "estimated_phase": -3.1,
+      "matches": [
+        {
+          "object": "sn1998es",
+          "phase": -3.4,
+          "correlation": 0.717970956136412
+        },
+        {
+          "object": "sn2005eq",
+          "phase": -3.5,
+          "correlation": 0.7109959113939108
+        },
+        {
+          "object": "sn1999aa",
+          "phase": -3.1,
+          "correlation": 0.7080553183921441
+        },
+        {
+          "object": "sn2007s",
+          "phase": -2.7,
+          "correlation": 0.7053820837072093
+        },
+        {
+          "object": "sn1999dq",
+          "phase": -2.5,
+          "correlation": 0.7037588027798329
+        }
+      ]
+    },
+    {
+      "epoch": 0,
+      "degree": 3,
+      "host_basis": false,
+      "estimated_phase": -3.4,
+      "matches": [
+        {
+          "object": "sn1998es",
+          "phase": -3.4,
+          "correlation": 0.7237135794200678
+        },
+        {
+          "object": "sn2005eq",
+          "phase": -3.5,
+          "correlation": 0.7173654337852858
+        },
+        {
+          "object": "sn1999aa",
+          "phase": -2.1,
+          "correlation": 0.7125486869986724
+        },
+        {
+          "object": "sn2007s",
+          "phase": -2.7,
+          "correlation": 0.7123412808290907
+        },
+        {
+          "object": "sn2000e",
+          "phase": -6.4,
+          "correlation": 0.7107378866414366
+        }
+      ]
+    },
+    {
+      "epoch": 0,
+      "degree": 3,
+      "host_basis": true,
+      "estimated_phase": -3.1,
+      "matches": [
+        {
+          "object": "sn1998es",
+          "phase": -3.4,
+          "correlation": 0.7173598003405321
+        },
+        {
+          "object": "sn2005eq",
+          "phase": -3.5,
+          "correlation": 0.7104662797879481
+        },
+        {
+          "object": "sn1999aa",
+          "phase": -3.1,
+          "correlation": 0.7074278837796575
+        },
+        {
+          "object": "sn2007s",
+          "phase": -2.7,
+          "correlation": 0.7047267369690173
+        },
+        {
+          "object": "sn1999dq",
+          "phase": -2.5,
+          "correlation": 0.7031030350213359
+        }
+      ]
+    },
+    {
+      "epoch": 0,
+      "degree": 5,
+      "host_basis": false,
+      "estimated_phase": -2.7,
+      "matches": [
+        {
+          "object": "sn1998es",
+          "phase": -2.4,
+          "correlation": 0.6383749971747155
+        },
+        {
+          "object": "sn2005eq",
+          "phase": -3.5,
+          "correlation": 0.6286273088253731
+        },
+        {
+          "object": "sn2007s",
+          "phase": -2.7,
+          "correlation": 0.6246941458200517
+        },
+        {
+          "object": "sn1999aa",
+          "phase": -3.1,
+          "correlation": 0.6213300180549244
+        },
+        {
+          "object": "sn1999dq",
+          "phase": -2.5,
+          "correlation": 0.6197504720661776
+        }
+      ]
+    },
+    {
+      "epoch": 0,
+      "degree": 5,
+      "host_basis": true,
+      "estimated_phase": -2.7,
+      "matches": [
+        {
+          "object": "sn1998es",
+          "phase": -2.4,
+          "correlation": 0.635770575809728
+        },
+        {
+          "object": "sn2005eq",
+          "phase": -3.5,
+          "correlation": 0.6264405336030929
+        },
+        {
+          "object": "sn1999aa",
+          "phase": -3.1,
+          "correlation": 0.6217657932758442
+        },
+        {
+          "object": "sn2007s",
+          "phase": -2.7,
+          "correlation": 0.6214130723595139
+        },
+        {
+          "object": "sn1999dq",
+          "phase": -2.5,
+          "correlation": 0.6176621646810962
+        }
+      ]
+    },
+    {
+      "epoch": 1,
+      "degree": 2,
+      "host_basis": false,
+      "estimated_phase": 16.7,
+      "matches": [
+        {
+          "object": "sn2002ck",
+          "phase": 15.7,
+          "correlation": 0.6624751791418487
+        },
+        {
+          "object": "sn1998aq",
+          "phase": 17.9,
+          "correlation": 0.6619909715443624
+        },
+        {
+          "object": "sn2003du",
+          "phase": 18.6,
+          "correlation": 0.661851940573067
+        },
+        {
+          "object": "sn1990n",
+          "phase": 16.7,
+          "correlation": 0.6610901269276231
+        },
+        {
+          "object": "sn1999ee",
+          "phase": 15.7,
+          "correlation": 0.6597248797852077
+        }
+      ]
+    },
+    {
+      "epoch": 1,
+      "degree": 2,
+      "host_basis": true,
+      "estimated_phase": 16.7,
+      "matches": [
+        {
+          "object": "sn2002ck",
+          "phase": 15.7,
+          "correlation": 0.6630985434595182
+        },
+        {
+          "object": "sn1998aq",
+          "phase": 17.9,
+          "correlation": 0.6628884834930778
+        },
+        {
+          "object": "sn2003du",
+          "phase": 18.6,
+          "correlation": 0.6622138881435858
+        },
+        {
+          "object": "sn1990n",
+          "phase": 16.7,
+          "correlation": 0.6621789171746804
+        },
+        {
+          "object": "sn2007fb",
+          "phase": 14.5,
+          "correlation": 0.6611968681066601
+        }
+      ]
+    },
+    {
+      "epoch": 1,
+      "degree": 3,
+      "host_basis": false,
+      "estimated_phase": 16.9,
+      "matches": [
+        {
+          "object": "sn1998aq",
+          "phase": 19.9,
+          "correlation": 0.6671483547110991
+        },
+        {
+          "object": "sn2002ck",
+          "phase": 15.7,
+          "correlation": 0.6658939073832021
+        },
+        {
+          "object": "sn2006lf",
+          "phase": 16.1,
+          "correlation": 0.6646978800583713
+        },
+        {
+          "object": "sn2003du",
+          "phase": 18.6,
+          "correlation": 0.663288052340268
+        },
+        {
+          "object": "sn1994d",
+          "phase": 16.9,
+          "correlation": 0.6629814357684489
+        }
+      ]
+    },
+    {
+      "epoch": 1,
+      "degree": 3,
+      "host_basis": true,
+      "estimated_phase": 16.9,
+      "matches": [
+        {
+          "object": "sn1998aq",
+          "phase": 19.9,
+          "correlation": 0.6675899858296185
+        },
+        {
+          "object": "sn2002ck",
+          "phase": 15.7,
+          "correlation": 0.6662189385923165
+        },
+        {
+          "object": "sn2006lf",
+          "phase": 16.1,
+          "correlation": 0.665272778360979
+        },
+        {
+          "object": "sn1994d",
+          "phase": 16.9,
+          "correlation": 0.6635206256015617
+        },
+        {
+          "object": "sn2003du",
+          "phase": 18.6,
+          "correlation": 0.6634008349767512
+        }
+      ]
+    },
+    {
+      "epoch": 1,
+      "degree": 5,
+      "host_basis": false,
+      "estimated_phase": 17.5,
+      "matches": [
+        {
+          "object": "sn2007bm",
+          "phase": 17.5,
+          "correlation": 0.6365636725567344
+        },
+        {
+          "object": "sn1998aq",
+          "phase": 19.9,
+          "correlation": 0.6364440211127032
+        },
+        {
+          "object": "sn2006lf",
+          "phase": 16.1,
+          "correlation": 0.6356012873075362
+        },
+        {
+          "object": "sn1994d",
+          "phase": 16.9,
+          "correlation": 0.6353332874112575
+        },
+        {
+          "object": "sn2003hv",
+          "phase": 19.1,
+          "correlation": 0.6341058280333413
+        }
+      ]
+    },
+    {
+      "epoch": 1,
+      "degree": 5,
+      "host_basis": true,
+      "estimated_phase": 17.5,
+      "matches": [
+        {
+          "object": "sn2007bm",
+          "phase": 17.5,
+          "correlation": 0.6388405339798758
+        },
+        {
+          "object": "sn1998aq",
+          "phase": 19.9,
+          "correlation": 0.6383053197448962
+        },
+        {
+          "object": "sn2006lf",
+          "phase": 16.1,
+          "correlation": 0.6378297470287422
+        },
+        {
+          "object": "sn1994d",
+          "phase": 16.9,
+          "correlation": 0.6371327037239662
+        },
+        {
+          "object": "sn2003hv",
+          "phase": 19.1,
+          "correlation": 0.6364886077949746
+        }
+      ]
+    }
+  ],
+  "real_spans": [
+    {
+      "degree": 2,
+      "host_basis": false,
+      "estimated_span": 20.099999999999998
+    },
+    {
+      "degree": 2,
+      "host_basis": true,
+      "estimated_span": 19.8
+    },
+    {
+      "degree": 3,
+      "host_basis": false,
+      "estimated_span": 20.299999999999997
+    },
+    {
+      "degree": 3,
+      "host_basis": true,
+      "estimated_span": 20.0
+    },
+    {
+      "degree": 5,
+      "host_basis": false,
+      "estimated_span": 20.2
+    },
+    {
+      "degree": 5,
+      "host_basis": true,
+      "estimated_span": 20.2
+    }
+  ],
+  "synthetic_summary": [
+    {
+      "rho": 0,
+      "n_reused_pairs": 140,
+      "mean_error_days": 0.3992857142857144,
+      "rms_error_days": 5.304048319107639,
+      "error_quantiles_05_50_95": [
+        -6.005,
+        -0.6499999999999986,
+        7.429999999999988
+      ]
+    },
+    {
+      "rho": 0.5,
+      "n_reused_pairs": 140,
+      "mean_error_days": 0.18785714285714294,
+      "rms_error_days": 5.80437642768676,
+      "error_quantiles_05_50_95": [
+        -6.839999999999997,
+        -0.6999999999999993,
+        12.009999999999993
+      ]
+    }
+  ],
+  "synthetic_cases": [
+    {
+      "seed": 5101,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 23.2
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 30.1
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 34.8
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 34.8
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 30.6
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 20.5
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 37.1
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 20.8
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 32.6
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 33.9
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 38.4
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.0
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 31.700000000000003
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 33.4
+        }
+      ],
+      "rms_error_days": 3.435424698220418,
+      "mean_error_days": -0.7357142857142858,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5101,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 23.2
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 30.0
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 36.800000000000004
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 34.8
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 29.799999999999997
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 23.200000000000003
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 35.4
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 20.8
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 37.3
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 37.099999999999994
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 37.3
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.9
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 29.200000000000003
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 30.700000000000003
+        }
+      ],
+      "rms_error_days": 3.6968132995092633,
+      "mean_error_days": -0.4071428571428576,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5102,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 24.8
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 34.199999999999996
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 35.0
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 28.7
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 31.1
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 23.799999999999997
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 43.9
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 23.9
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 33.1
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 24.9
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 38.6
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 35.0
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 35.7
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 48.2
+        }
+      ],
+      "rms_error_days": 6.559453374438192,
+      "mean_error_days": 1.1214285714285714,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5102,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 22.1
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 31.3
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 31.0
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 30.099999999999998
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 31.1
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 23.799999999999997
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 37.599999999999994
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 25.9
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 32.9
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 28.900000000000002
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 41.6
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 35.3
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 35.7
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 34.3
+        }
+      ],
+      "rms_error_days": 3.0142518616920992,
+      "mean_error_days": -0.25714285714285773,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5103,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 21.2
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 35.1
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 31.7
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 36.7
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 37.5
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 23.2
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 35.4
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 24.299999999999997
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 32.2
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 29.2
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 41.1
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.1
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 36.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 37.8
+        }
+      ],
+      "rms_error_days": 4.5197977198732495,
+      "mean_error_days": 0.7000000000000001,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5103,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 22.6
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 35.2
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 32.2
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 36.7
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 52.699999999999996
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 21.7
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 28.6
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 24.0
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 32.2
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 29.099999999999998
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 39.4
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 32.4
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 36.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 33.3
+        }
+      ],
+      "rms_error_days": 7.313392802640527,
+      "mean_error_days": 0.8142857142857144,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5104,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 24.7
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 39.2
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 32.6
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 33.2
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 49.4
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 19.700000000000003
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 36.3
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 22.700000000000003
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 31.700000000000003
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 30.8
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 38.6
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 26.5
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 38.0
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 34.599999999999994
+        }
+      ],
+      "rms_error_days": 6.510211758680138,
+      "mean_error_days": 0.9142857142857148,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5104,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 25.3
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 36.4
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 31.6
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 28.7
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 42.300000000000004
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 18.1
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 36.3
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 22.299999999999997
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 28.799999999999997
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 25.0
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 36.3
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 26.5
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 34.7
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 38.2
+        }
+      ],
+      "rms_error_days": 6.250999920012799,
+      "mean_error_days": -1.05,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5105,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 25.900000000000002
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 36.3
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 35.400000000000006
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 33.2
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 28.5
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 29.099999999999998
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 28.6
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 21.700000000000003
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 30.6
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 31.1
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 36.6
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.0
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 32.9
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 31.2
+        }
+      ],
+      "rms_error_days": 4.294597935612997,
+      "mean_error_days": -0.7928571428571419,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5105,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 34.1
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 36.3
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 37.7
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 33.2
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 28.1
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 27.7
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 25.5
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 22.0
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 30.1
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 34.1
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 36.6
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 32.7
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 34.199999999999996
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 29.2
+        }
+      ],
+      "rms_error_days": 5.367028973277487,
+      "mean_error_days": -0.26428571428571374,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5106,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 23.4
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 30.6
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 39.7
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 35.4
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 28.700000000000003
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 28.1
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 29.6
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 21.700000000000003
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 31.200000000000003
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 29.5
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 38.3
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.1
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 41.0
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 28.599999999999998
+        }
+      ],
+      "rms_error_days": 4.480832193115152,
+      "mean_error_days": -0.4499999999999993,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5106,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 23.4
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 31.4
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 33.6
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 35.4
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 30.200000000000003
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 31.4
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 31.5
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 23.200000000000003
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 31.0
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 29.5
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 41.6
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 34.699999999999996
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 40.0
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 27.5
+        }
+      ],
+      "rms_error_days": 4.006601695059935,
+      "mean_error_days": -0.0571428571428572,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5107,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 29.6
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 31.200000000000003
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 36.1
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 33.0
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 50.8
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 23.7
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 37.1
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 23.9
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 30.6
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 31.7
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 38.6
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.1
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 39.800000000000004
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 32.4
+        }
+      ],
+      "rms_error_days": 6.35149026382223,
+      "mean_error_days": 1.8857142857142863,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5107,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 35.8
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 31.200000000000003
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 31.0
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 35.7
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 54.1
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 24.299999999999997
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 32.9
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 20.8
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 27.1
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 29.4
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 35.4
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.1
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 38.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 33.8
+        }
+      ],
+      "rms_error_days": 8.259669657870274,
+      "mean_error_days": 1.2785714285714285,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5108,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 22.2
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 34.199999999999996
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 34.0
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 32.1
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 28.700000000000003
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 20.900000000000002
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 37.4
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 23.9
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 31.9
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 31.4
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 34.5
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 33.1
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 40.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 32.3
+        }
+      ],
+      "rms_error_days": 2.552169945080349,
+      "mean_error_days": -0.578571428571429,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5108,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 20.599999999999998
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 33.0
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 35.9
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 29.9
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 30.9
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 19.3
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 35.9
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 23.7
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 29.700000000000003
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 30.8
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 35.1
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 31.8
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 40.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 29.700000000000003
+        }
+      ],
+      "rms_error_days": 3.0633781539806204,
+      "mean_error_days": -1.3142857142857143,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5109,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 24.0
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 35.6
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 33.8
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 34.5
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 51.5
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 21.900000000000002
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 37.3
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 24.5
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 31.5
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 31.299999999999997
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 34.5
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 31.2
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 31.4
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 31.8
+        }
+      ],
+      "rms_error_days": 6.528508908734717,
+      "mean_error_days": 0.6857142857142853,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5109,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 22.0
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 35.800000000000004
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 32.7
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 35.699999999999996
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 49.9
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 39.900000000000006
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 35.3
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 40.5
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 31.5
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 30.4
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 41.7
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 31.2
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 28.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 31.8
+        }
+      ],
+      "rms_error_days": 8.799634732679047,
+      "mean_error_days": 2.9785714285714286,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5110,
+      "rho": 0,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 21.599999999999998
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 34.4
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 35.400000000000006
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 30.099999999999998
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 30.299999999999997
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 43.599999999999994
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 35.4
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 24.4
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 31.5
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 31.3
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 36.2
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 34.699999999999996
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 42.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 31.2
+        }
+      ],
+      "rms_error_days": 5.974230374820556,
+      "mean_error_days": 1.242857142857142,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    },
+    {
+      "seed": 5110,
+      "rho": 0.5,
+      "objects": [
+        {
+          "object": "sn1981b",
+          "true_span": 23.8,
+          "estimated_span": 22.5
+        },
+        {
+          "object": "sn1994d",
+          "true_span": 33.7,
+          "estimated_span": 35.9
+        },
+        {
+          "object": "sn1996x",
+          "true_span": 31.7,
+          "estimated_span": 35.400000000000006
+        },
+        {
+          "object": "sn1997br",
+          "true_span": 30.4,
+          "estimated_span": 28.599999999999998
+        },
+        {
+          "object": "sn1998ab",
+          "true_span": 30.1,
+          "estimated_span": 26.200000000000003
+        },
+        {
+          "object": "sn1998eg",
+          "true_span": 23.5,
+          "estimated_span": 36.0
+        },
+        {
+          "object": "sn1999dq",
+          "true_span": 38.3,
+          "estimated_span": 31.7
+        },
+        {
+          "object": "sn1999gp",
+          "true_span": 26.2,
+          "estimated_span": 25.6
+        },
+        {
+          "object": "sn2001eh",
+          "true_span": 34.7,
+          "estimated_span": 30.5
+        },
+        {
+          "object": "sn2001ep",
+          "true_span": 35.5,
+          "estimated_span": 31.3
+        },
+        {
+          "object": "sn2001v",
+          "true_span": 37.3,
+          "estimated_span": 36.2
+        },
+        {
+          "object": "sn2003cg",
+          "true_span": 34.7,
+          "estimated_span": 35.0
+        },
+        {
+          "object": "sn2003du",
+          "true_span": 37.8,
+          "estimated_span": 42.5
+        },
+        {
+          "object": "sn2006lf",
+          "true_span": 27.5,
+          "estimated_span": 30.0
+        }
+      ],
+      "rms_error_days": 4.658019198880878,
+      "mean_error_days": 0.15714285714285786,
+      "amplitude_ranges": [
+        [
+          0.18481219788824463,
+          0.21702606085723772
+        ],
+        [
+          0.3057912939142963,
+          0.34673928738388193
+        ]
+      ]
+    }
+  ],
+  "observer_span_days": 32.07369587499852,
+  "hashes": {
+    "research_work\\results\\spectral-real-pair\\run.py": "78e7183ff7c72c8198da10bb7f0998e41757c924a592e2e64b4a9be561624026",
+    "research_work\\results\\spectral-real-pair\\protocol.json": "4711a9937cef3a34ba0f919fad380acea9ac2aa7b1fa9b68092ee02b58155722",
+    "research_work\\results\\spectral-observed-noise\\run.py": "7b756733116e2aac42c820e63ccb15f7c510eab79be521482fa04e6ffca3f4ee",
+    "research_work\\results\\spectral-feature-strength\\results.json": "55ca5097d42c9dfcd9bea3271a4504a1034856f1f2630098e77889831ef77b87",
+    "research_work\\results\\essence-spectrum-acquisition\\results.json": "3bbd74201e8405bcfd97ea602aa1896fc79cd1cac36a13ace51ace36e6dbe5e1"
+  }
+}
