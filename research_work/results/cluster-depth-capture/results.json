@@ -1,0 +1,78 @@
+{
+  "scope": "Optional isolated-well escape-energy-to-fourth capture, external bath and fixed Plummer potential. No fitted constants, self-consistent storage or observed data.",
+  "rule": "kappa=chi*(-Phi)^4, Phi(infinity)=0; A=chi*(GM)^4/a^3; a*kappa=A/(1+(r/a)^2)^2",
+  "central_curvature_threshold_A": 1.8332747453568032,
+  "cases": [
+    {
+      "A": 0.1,
+      "effective_area_over_a2": 0.9681457718076788,
+      "area_volume_relative_error": 3.2229086066593027e-09,
+      "central_deposition_density": 0.09244652503762558,
+      "relative_central_r2_coefficient": -1.9197935169935885,
+      "numeric_curvature": -1.9197934686410179,
+      "half_deposition_radius_over_a": 2.3086235910553223
+    },
+    {
+      "A": 1.0,
+      "effective_area_over_a2": 8.383788006431386,
+      "area_volume_relative_error": 1.9841618126292815e-08,
+      "central_deposition_density": 0.45593812776599624,
+      "relative_central_r2_coefficient": -1.047935169935885,
+      "numeric_curvature": -1.047935171971659,
+      "half_deposition_radius_over_a": 2.6775703347538404
+    },
+    {
+      "A": 1.8332747453568032,
+      "effective_area_over_a2": 13.921098381756654,
+      "area_volume_relative_error": 1.9486381619415738e-08,
+      "central_deposition_density": 0.4344185659306862,
+      "relative_central_r2_coefficient": -1.1102230246251565e-16,
+      "numeric_curvature": -1.1102230246251565e-08,
+      "half_deposition_radius_over_a": 2.9714707453979936
+    },
+    {
+      "A": 3.0,
+      "effective_area_over_a2": 20.517389775602144,
+      "area_volume_relative_error": 1.6581264805637375e-08,
+      "central_deposition_density": 0.28434067452646455,
+      "relative_central_r2_coefficient": 1.8561944901923448,
+      "numeric_curvature": 1.8561944647998985,
+      "half_deposition_radius_over_a": 3.3186549827938983
+    },
+    {
+      "A": 10.0,
+      "effective_area_over_a2": 49.64527275923937,
+      "area_volume_relative_error": 3.136508253120951e-08,
+      "central_deposition_density": 0.0038820320392676634,
+      "relative_central_r2_coefficient": 22.52064830064115,
+      "numeric_curvature": 22.520649367585577,
+      "half_deposition_radius_over_a": 4.639357129299965
+    }
+  ],
+  "midpoint_comparisons": [
+    {
+      "separation_over_a": 0.5,
+      "depth_based_midpoint_opacity_at_unit_coefficient": 14.173010380622836,
+      "combined_over_sum_of_individual_midpoint_opacities": 8.0,
+      "acceleration_squared_midpoint_opacity": 0.0
+    },
+    {
+      "separation_over_a": 1.0,
+      "depth_based_midpoint_opacity_at_unit_coefficient": 10.239999999999998,
+      "combined_over_sum_of_individual_midpoint_opacities": 8.0,
+      "acceleration_squared_midpoint_opacity": 0.0
+    },
+    {
+      "separation_over_a": 2.0,
+      "depth_based_midpoint_opacity_at_unit_coefficient": 3.9999999999999987,
+      "combined_over_sum_of_individual_midpoint_opacities": 8.0,
+      "acceleration_squared_midpoint_opacity": 0.0
+    },
+    {
+      "separation_over_a": 5.0,
+      "depth_based_midpoint_opacity_at_unit_coefficient": 0.30439952437574314,
+      "combined_over_sum_of_individual_midpoint_opacities": 8.0,
+      "acceleration_squared_midpoint_opacity": 0.0
+    }
+  ]
+}
