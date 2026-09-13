@@ -1,4 +1,6 @@
-Latest predictive diagnostic: [outer radial bins omitted from fits](research_work/results/slacs-outer-bin-check/report.md). Extra force is closer in five of six exposed training systems, but substantial mismatches remain; fitted-parameter uncertainty is not yet included. This is not the reserved independent prediction test.
+Latest predictive diagnostic: [outer stellar motions with mass and orbit uncertainty](research_work/results/slacs-outer-predictive/report.md). Three of six exposed outer measurements remain outside the extra-force model's conditional 95% intervals (four for the baryonic baseline), under both mass priors. All 24 integration checks pass. Fixed structural assumptions remain; this is not the reserved independent prediction test.
+
+Previous predictive diagnostic: [outer radial bins omitted from fits](research_work/results/slacs-outer-bin-check/report.md). Best-fit-only predictions motivated the parameter-uncertainty calculation above.
 
 Latest orbit-boundary check: [six resolved training lenses and comparison chart](research_work/results/slacs-orbit-boundary-extension/report.md). Wider tangential range removes baseline boundary fits; radial chi-square is 152.04 baseline versus 85.87 extra force, with extra force better in five of six. Significant discrepancies remain; no causal validation.
 

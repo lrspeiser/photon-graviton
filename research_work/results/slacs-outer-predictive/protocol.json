@@ -1,0 +1,32 @@
+{
+  "scope": "Parameter-marginalized predictive diagnostic on previously exposed training outer bins",
+  "mass_Msun_bounds": [
+    10000000.0,
+    100000000000000.0
+  ],
+  "beta_bounds": [
+    -2,
+    0.45
+  ],
+  "priors": [
+    "uniform_log_mass_and_beta",
+    "uniform_mass_and_beta"
+  ],
+  "grids": [
+    [
+      801,
+      321
+    ],
+    [
+      1601,
+      641
+    ]
+  ],
+  "numerical_gates": {
+    "maximum_observed_cdf_change": 0.005,
+    "maximum_mean_change_kms": 0.1,
+    "maximum_sd_change_kms": 0.1
+  },
+  "interval": "Central 95% conditional posterior predictive interval; no empirical coverage claim",
+  "fixed": "Light components, seeing, metric, force coefficients, outer cutoff and covariance remain fixed; no outer-bin likelihood in parameter posterior"
+}
