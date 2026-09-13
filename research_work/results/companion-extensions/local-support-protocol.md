@@ -1,0 +1,7 @@
+# Local pressure consistency of the phase selector
+
+Preserve exact-third capture and freeze the shared settling mass/contraction from settling-results.json. Do not refit stellar speeds. Compare original and settled profiles for both ordinary-matter baselines. Use a spherical companion distribution and the angularly averaged ordinary-matter radial force, retaining the same gas monopole as the pilot. This is a spherical support diagnostic, not a three-dimensional equilibrium of the flattened Galaxy.
+
+Compute required isotropic pressure P(r)=integral_r^boundary rho(x) g(x) dx with zero outer pressure. Compute the ideal homogeneous Bose-gas pressure at the condensation threshold Pc=(zeta(5/2)/zeta(3/2))*n*kB*Tc. For P<=Pc infer T/Tc=(P/Pc)^(2/5) and condensed fraction 1-(P/Pc)^(3/5); P>Pc cannot support an ideal condensed gas at that density. Do not apply classical P=n*kB*T below condensation. Compare the implied fraction with the compact fraction assigned by the existing recipe. A mismatch tests that interpretation, not every wave or interacting companion model.
+
+Retain all radius profiles and mass-weighted diagnostics over 0.1-30 kpc. Check refinement, hydrostatic derivative and mass integration, and report the effect of the finite boundary. No local rate, phase feedback, full stability, energy source or new lensing result is asserted. Explore pressure ceilings and required nonthermal support analytically without tuning a new force to the same data.

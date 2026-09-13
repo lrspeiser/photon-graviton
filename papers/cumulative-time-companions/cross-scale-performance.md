@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Local phase support audit
+
+The [local pressure calculation](../../research_work/results/companion-extensions/local-support-report.md) freezes the shared fit and evaluates isotropic support with the proper ideal-Bose pressure law. In 0.1-30 kpc, 90.4%/82.3% of settled mass lies above the condensed-phase pressure ceiling. At 5 kpc the transported compact fractions 81.9%/85.4% contrast with supported ideal condensed fractions 2.53%/8.31%. Retaining those fractions requires about 94%/95% additional pressure. This rules against interpreting the fitted profile as a locally supported homogeneous ideal condensate under the tested assumptions, not against all interacting or wave states. The prior empirical fit remains; global virial balance had not established local support.
+
 ### Shared settling and an explicit cooling ledger
 
 A [follow-up](../../research_work/results/companion-extensions/settling-report.md) selects one effective mass (17.78 eV/c²) and contraction (0.8032) across both Milky Way ordinary-matter baselines using inner-bin errors only. Inner RMS changes from 3.68/11.83 to 2.74/6.70 km/s, while outer RMS remains 8.36/9.78. The baselines are alternative descriptions of one galaxy, not independent validation samples. Newtonian self/external potential energies and necessary global virial support imply release of about 4.5e50 J, approximately 1.2e-8 of deposited rest energy, under fully cooled settling. All tested grid cases have nonnegative release, so the energy constraint does not explain the selected radius. Local relativistic absorption kinematics permit rest-energy growth with recoil accounted for but supply no capture rate. These known conservation and virial formulas are applied conditionally; no local equilibrium, phase formation, relativistic mass-energy completion or new lensing success follows.

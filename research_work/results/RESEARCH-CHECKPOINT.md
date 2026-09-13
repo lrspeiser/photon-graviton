@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Local support audit:** [Frozen phase-profile check](companion-extensions/local-support-report.md) finds the assigned compact fraction incompatible with ideal thermal condensate support. At 5 kpc, assigned 82-85% contrasts with pressure-implied 2.5-8.3%; retaining those fractions needs about 94-95% additional pressure. The empirical rotation fit remains, but interactions, orbital/wave support or revised phase physics are needed. No refit or new observational success.
+
 **Theory-basis paper v1.0, 13 September 2026:** [Editable paper](../../papers/cumulative-time-companions/theory-basis.md) and [PDF](../../output/pdf/theory-basis.pdf) consolidate the core postulates, twelve provenance-labeled equations, current successes/failures and eight requirements for a competitive theory. Nuclear emission is retained as an optional track alongside settling, conversion/time, lensing/field response and cross-system transfer. No superiority claim or newly completed physical goal is made.
 
 **Fictional nuclear-release branch:** [Energy requirements](companion-extensions/nuclear-release.md) reinterpret Sgr A*/M87 core light as companion-powered. Luminosity constrains throughput, not a unique capture law. The Milky Way settling budget divided by the faint Sgr A* reference luminosity gives 1.43e14 years, exposing the need for channel/location/history assumptions. No Hawking detection or brightness prediction is claimed.
