@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: angular-rate consistency.** Matching the source-size-tracking angle with the existing Gaussian overlap suppresses the transfer rate as s^-2 exp[-(s/s_c)^2]. At fixed coupling and target density, redshift accumulation saturates near the source. The favorable observer moments cannot be combined with an unchanged long-path rate in this branch. See [report](../research_work/results/companion-extensions/kernel-rate-closure-report.md).
+
 **Latest checkpoint: observer geometry and delay.** Accounting for kick location gives about 0.520 arcseconds and 5025 seconds mean delay for the fixed-angle optical example over 30.66 Mpc. A source-size-tracking kernel yields much smaller moments but lacks a derived local cause. Stationary scattering still does not explain event time dilation. See [report](../research_work/results/companion-extensions/observer-transport-report.md).
 
 **Latest checkpoint: angular escape geometry.** In an isolated-source toy geometry, small direction changes can reach less populated modes and favor loading. The illustrative cumulative direction spread can be small for distant sources, so this is not a universal image-blurring exclusion. Real source coverage, outgoing-mode filling, kernel strength and observer geometry remain unmodeled. See [report](../research_work/results/companion-extensions/angular-outlet-report.md).

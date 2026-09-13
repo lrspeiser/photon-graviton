@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Angular-rate closure checkpoint
+
+The [Gaussian rate-closure check](../../research_work/results/companion-extensions/kernel-rate-closure-report.md) matches the angular moment of the source-size-tracking prescription to the earlier spatial overlap. Its rate then falls as s^-2 exp[-(s/s_c)^2] at fixed optical energy, coupling and target density. The two tested gaps yield effective paths below one parsec after normalization at one parsec, rather than continuing accumulation over 30.66 Mpc. This contradicts combining that angular narrowing with the unchanged reference loss rate in this branch. It leaves alternative interactions open, but the previous favorable observer moments remain kinematic benchmarks. Exact angular integration and analytic path integrals verify the limiting calculation; observational fits and the retention reference remain unchanged.
+
 ## Observer transport moment checkpoint
 
 The [observer-geometry calculation](../../research_work/results/companion-extensions/observer-transport-report.md) weights angular kicks by source-observer location and computes geometric delay. Eighteen prescribed-kernel cases pass independent quadrature checks. The fixed-angle optical example over 30.66 Mpc gives about 0.520 arcseconds apparent RMS and 5025 seconds mean delay. Tracking apparent source size sharply reduces both, but is an undetermined kernel rather than a derived local law. These moments omit reverse traffic and self-consistent angular populations; they do not establish image compatibility, multimessenger timing or supernova dilation. The empirical reference and observational fits remain unchanged.

@@ -1,0 +1,115 @@
+{
+  "scope": "Match narrow-angle RMS of prescribed source-tracking kernel using earlier Gaussian overlap; fixed optical energy and unchanged coupling/target density",
+  "rows": [
+    {
+      "transfer_eV": 1e-08,
+      "source_distance_pc": 0.1,
+      "coherence_sigma_m": 2.7830248252437695,
+      "longitudinal_mismatch": 0.14103620390713634,
+      "log10_rate_suppression": -15.335328584711203,
+      "log10_rate_relative_to_one_pc": 2.8552256663315787,
+      "cutoff_distance_pc": 0.7090378018529473
+    },
+    {
+      "transfer_eV": 1e-08,
+      "source_distance_pc": 1.0,
+      "coherence_sigma_m": 27.830248252437695,
+      "longitudinal_mismatch": 1.4103620390713636,
+      "log10_rate_suppression": -18.19055425104278,
+      "log10_rate_relative_to_one_pc": 0.0,
+      "cutoff_distance_pc": 0.7090378018529473
+    },
+    {
+      "transfer_eV": 1e-08,
+      "source_distance_pc": 10.0,
+      "coherence_sigma_m": 278.3024825243769,
+      "longitudinal_mismatch": 14.103620390713633,
+      "log10_rate_suppression": -105.71312088420088,
+      "log10_rate_relative_to_one_pc": -87.52256663315809,
+      "cutoff_distance_pc": 0.7090378018529473
+    },
+    {
+      "transfer_eV": 1e-08,
+      "source_distance_pc": 1000.0,
+      "coherence_sigma_m": 27830.248252437686,
+      "longitudinal_mismatch": 1410.3620390713631,
+      "log10_rate_suppression": -863887.6361157809,
+      "log10_rate_relative_to_one_pc": -863869.4455615298,
+      "cutoff_distance_pc": 0.7090378018529473
+    },
+    {
+      "transfer_eV": 1e-08,
+      "source_distance_pc": 1000000.0,
+      "coherence_sigma_m": 27830248.252437696,
+      "longitudinal_mismatch": 1410362.0390713634,
+      "log10_rate_suppression": -863864309455.1661,
+      "log10_rate_relative_to_one_pc": -863864309436.9756,
+      "cutoff_distance_pc": 0.7090378018529473
+    },
+    {
+      "transfer_eV": 2e-10,
+      "source_distance_pc": 0.1,
+      "coherence_sigma_m": 2.7830248184253588,
+      "longitudinal_mismatch": 0.002820724071231953,
+      "log10_rate_suppression": -15.326693397074164,
+      "log10_rate_relative_to_one_pc": 2.0003420902648514,
+      "cutoff_distance_pc": 35.451890179504495
+    },
+    {
+      "transfer_eV": 2e-10,
+      "source_distance_pc": 1.0,
+      "coherence_sigma_m": 27.830248184253584,
+      "longitudinal_mismatch": 0.02820724071231953,
+      "log10_rate_suppression": -17.327035487339018,
+      "log10_rate_relative_to_one_pc": 0.0,
+      "cutoff_distance_pc": 35.451890179504495
+    },
+    {
+      "transfer_eV": 2e-10,
+      "source_distance_pc": 10.0,
+      "coherence_sigma_m": 278.3024818425359,
+      "longitudinal_mismatch": 0.28207240712319526,
+      "log10_rate_suppression": -19.361244513824655,
+      "log10_rate_relative_to_one_pc": -2.03420902648564,
+      "cutoff_distance_pc": 35.451890179504495
+    },
+    {
+      "transfer_eV": 2e-10,
+      "source_distance_pc": 1000.0,
+      "coherence_sigma_m": 27830.248184253585,
+      "longitudinal_mismatch": 28.207240712319525,
+      "log10_rate_suppression": -368.8724120187786,
+      "log10_rate_relative_to_one_pc": -351.54537653143956,
+      "cutoff_distance_pc": 35.451890179504495
+    },
+    {
+      "transfer_eV": 2e-10,
+      "source_distance_pc": 1000000.0,
+      "coherence_sigma_m": 27830248.18425358,
+      "longitudinal_mismatch": 28207.240712319526,
+      "log10_rate_suppression": -345545751.4038516,
+      "log10_rate_relative_to_one_pc": -345545734.07681614,
+      "cutoff_distance_pc": 35.451890179504495
+    }
+  ],
+  "path_checks": [
+    {
+      "transfer_eV": 1e-08,
+      "cutoff_distance_pc": 0.7090378018529473,
+      "effective_path_pc": 0.15784501814203536,
+      "infinite_path_analytic_pc": 0.15784501814203533,
+      "redshift_if_alpha_at_one_pc_is_reference": 3.928751904521465e-11,
+      "uniform_reference_redshift": 0.007660480252135969,
+      "normalization_increase_to_match_reference_path": 194242037.92362177
+    },
+    {
+      "transfer_eV": 2e-10,
+      "cutoff_distance_pc": 35.451890179504495,
+      "effective_path_pc": 0.951556313683174,
+      "infinite_path_analytic_pc": 0.951556313683174,
+      "redshift_if_alpha_at_one_pc_is_reference": 2.3684172766526435e-10,
+      "uniform_reference_redshift": 0.007660480252135969,
+      "normalization_increase_to_match_reference_path": 32221044.15588846
+    }
+  ]
+}
