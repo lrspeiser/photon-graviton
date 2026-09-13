@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Latest checkpoint: observer geometry and delay.** Accounting for kick location gives about 0.520 arcseconds and 5025 seconds mean delay for the fixed-angle optical example over 30.66 Mpc. A source-size-tracking kernel yields much smaller moments but lacks a derived local cause. Stationary scattering still does not explain event time dilation. See [report](companion-extensions/observer-transport-report.md).
+
 **Latest checkpoint: angular escape geometry.** In an isolated-source toy geometry, small direction changes can reach less populated modes and favor loading. The illustrative cumulative direction spread can be small for distant sources, so this is not a universal image-blurring exclusion. Real source coverage, outgoing-mode filling, kernel strength and observer geometry remain unmodeled. See [report](companion-extensions/angular-outlet-report.md).
 
 **Latest checkpoint: self-consistent source and outlet.** A replenished high-energy field and escaping low-energy field can sustain loading with occupations solved together. Slow escape throttles the rate. The terminal protected sink remains imposed; a one-step 2 eV to 1e-8 eV loading route requires processed light power 2e8 times net assembly power. See [report](companion-extensions/source-outlet-report.md).

@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Observer transport moment checkpoint
+
+The [observer-geometry calculation](../../research_work/results/companion-extensions/observer-transport-report.md) weights angular kicks by source-observer location and computes geometric delay. Eighteen prescribed-kernel cases pass independent quadrature checks. The fixed-angle optical example over 30.66 Mpc gives about 0.520 arcseconds apparent RMS and 5025 seconds mean delay. Tracking apparent source size sharply reduces both, but is an undetermined kernel rather than a derived local law. These moments omit reverse traffic and self-consistent angular populations; they do not establish image compatibility, multimessenger timing or supernova dilation. The empirical reference and observational fits remain unchanged.
+
 ## Angular escape-channel checkpoint
 
 The [angular outlet diagnostic](../../research_work/results/companion-extensions/angular-outlet-report.md) relates empty-direction fraction to a uniform source disk and fixed isotropic angular kicks. In dilute modes a reverse/forward ratio of 0.9 requires about 10% empty outputs, attainable at a kick of 0.157242 source radii. An optimistic repeated-kick calculation can give small direction spread for a distant isolated source; it is neither a universal blurring exclusion nor an image-compatibility result. Thirty-six configurations and nine independent overlap integrals check the geometry. Multi-source illumination, returning radiation, physical kernel rate, recoil and actual observer transport remain unresolved. The retention reference and observational fits are unchanged.
