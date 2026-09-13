@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Timing integration refinement completed:** [Eight-case result](timing-fresh-calibration/refinement-report.md) passes inherited exponent-change and curve-change gates in all selected cells; maxima are 0.00453 and 0.09286. Process exit code zero and full hash/array/objective audit verified. This is a selected numerical check, not width-grid convergence, recomputed refined coverage, source-population validation or a physical redshift mechanism. All six objectives remain open.
+
 **First timing refinement passes, batch incomplete:** [One-case audited result](timing-fresh-calibration/refinement-progress.md) changes the exponent by 0.00197 and the likelihood-curve metric by 0.00412, within inherited limits. Saved-objective recomputation is exact. Seven cases remain at this historical checkpoint; the process is separately verified live. This does not establish full convergence, observational timing or a physical cause. All six objectives remain open.
 
 **Coma blank controls and source archive audited:** [Control analysis](cluster-observation-readiness/kubo-controls-report.md) recovers the blank-field means and reproduces reported null summaries within 1%. The source archive contains only manuscript and figures, not covariance or intermediate angular bins. Conditional common-offset subtraction gives zero-shear chi-square 18.3104/6, p=0.00550 under diagonal independent errors; this is a sensitivity check, not evidence selecting our model. All six objectives remain open.

@@ -1,0 +1,65 @@
+{
+  "snapshot_sha256": "d8cd34c11e6b39bda414e69a8a735d856f6dd54a22ba03c46e3f799c4b864607",
+  "completed": 8,
+  "expected": 8,
+  "complete": true,
+  "checked": [
+    {
+      "label": "split_gaussian-snr5-b0-seed1913",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.0019742728505233176,
+      "curve_change": 0.004120847130480044,
+      "gate_pass": true
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed1902",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.0005446521582830322,
+      "curve_change": 0.0036599307042386726,
+      "gate_pass": true
+    },
+    {
+      "label": "split_gaussian-snr20-b0-seed1918",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.0006463263615134884,
+      "curve_change": 0.09285655675299484,
+      "gate_pass": true
+    },
+    {
+      "label": "split_gaussian-snr20-b1-seed1918",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.004530915656197565,
+      "curve_change": 0.06352001389660875,
+      "gate_pass": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed1913",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.0024439105635528646,
+      "curve_change": 0.005565481059424998,
+      "gate_pass": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed1908",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.0025736276779400047,
+      "curve_change": 0.005150123299628004,
+      "gate_pass": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b0-seed1918",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.0030217992762646417,
+      "curve_change": 0.08683500180362226,
+      "gate_pass": true
+    },
+    {
+      "label": "split_gaussian_shoulder-snr20-b1-seed1918",
+      "objective_recomputation_error": 0.0,
+      "delta_b": 0.0004906524746429719,
+      "curve_change": 0.06448296691667331,
+      "gate_pass": true
+    }
+  ],
+  "limitations": "Uses the shared population integrator; does not prove its independent correctness, global optimization, coverage, width-grid convergence or physical validity. Snapshot is not process-liveness evidence."
+}
