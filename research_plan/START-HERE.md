@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Local-capacity comparison.** Replacing CgJ eta(X) by Cg eta(XJ) with fixed transport greatly increases deposits in weakly illuminated regions. Training-only amplitude adjustment yields mixed validation/test RMSE 28.63/25.19 km/s versus matched control 30.82/21.41. No replacement is adopted; occupancy-dependent transport and the physical capacity remain unresolved. [Report](../research_work/results/companion-extensions/local-capacity-report.md).
+
 **Capture/capacity audit.** Interpreting the reference eta=1 profile as capacity gives M_cap=(C/k0) sigma. Incoming power and capacity therefore scale with the same absorption area: size alone cannot change the normalized background rate. An alternative unattenuated volume capacity yields a factor 0.495-0.981 across existing scales, but changes the storage/profile mapping and needs its own local solution. [Report](../research_work/results/companion-extensions/capture-capacity-report.md).
 
 **Uniform-background comparison.** A common additive input strong enough to preserve 90% of every equilibrium deposit worsens frozen galaxy rotation scores. A training-only amplitude adjustment partly compensates, but validation/test RMSE remains 31.54/22.52 km/s versus 30.82/21.41 for the identically adjusted no-background control. This tests a uniform rate proxy with fixed geometry, not actual distant-source transport. [Report](../research_work/results/companion-extensions/background-retention-report.md).

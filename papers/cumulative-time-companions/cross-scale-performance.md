@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Local filling with illumination-independent capacity
+
+The [local-capacity calculation](../../research_work/results/companion-extensions/local-capacity-report.md) substitutes Cg eta(XJ) for CgJ eta(X), preserving the transparent limit but increasing weak-field deposits. Frozen validation/test velocity RMSE is 67.14/66.01 km/s. A training-only amplitude fit gives 28.63/25.19 versus 30.82/21.41 for the matched adjusted reference: a mixed result, not an adopted improvement. All 3150 observed radii are retained and integration convergence is checked. Incident transport is held fixed; a self-consistent occupancy-dependent opacity and global energy ledger are not supplied by this diagnostic.
+
 ## Capture area versus storage capacity
 
 The [capture/capacity audit](../../research_work/results/companion-extensions/capture-capacity-report.md) uses the current exact-third opacity and 149 measured disk scales. If the eta=1 reference profile is interpreted as capacity, its integrated mass-equivalent capacity is (C/k0) sigma, so area cancels from the incident power per capacity. Larger capture area alone cannot fix the uniform-background result. An alternative capacity independent of attenuation produces a geometry factor 0.495-0.981, but requires a new local occupancy/profile calculation. These are conditional capacity mappings, not measured storage or new fitted predictions.
