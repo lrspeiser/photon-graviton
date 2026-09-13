@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Shared settling and an explicit cooling ledger
+
+A [follow-up](../../research_work/results/companion-extensions/settling-report.md) selects one effective mass (17.78 eV/c²) and contraction (0.8032) across both Milky Way ordinary-matter baselines using inner-bin errors only. Inner RMS changes from 3.68/11.83 to 2.74/6.70 km/s, while outer RMS remains 8.36/9.78. The baselines are alternative descriptions of one galaxy, not independent validation samples. Newtonian self/external potential energies and necessary global virial support imply release of about 4.5e50 J, approximately 1.2e-8 of deposited rest energy, under fully cooled settling. All tested grid cases have nonnegative release, so the energy constraint does not explain the selected radius. Local relativistic absorption kinematics permit rest-energy growth with recoil accounted for but supply no capture rate. These known conservation and virial formulas are applied conditionally; no local equilibrium, phase formation, relativistic mass-energy completion or new lensing success follows.
+
 ### New extension assessment
 
 The [companion-extension study](../../research_work/results/companion-extensions/report.md) retains the exact-one-third inventory while testing two distinct modifications. A 60-case axisymmetric gravitational-permittivity sweep gives no selected improvement in 18 outer Milky Way bins after choosing parameters on 20 inner bins. A 2,706-case ideal-Bose phase-selector sweep reduces inner RMS from 3.68/11.83 to 1.81/2.85 km/s for two ordinary-matter baselines; outer RMS changes from 8.36/9.78 to 8.36/9.29. Comparisons use the same spherical gas-monopole approximation, which differs from the earlier full-gas-disk transfer. Data were previously inspected; these are conditional spatial-transfer diagnostics, not blind or cross-galaxy validation.
