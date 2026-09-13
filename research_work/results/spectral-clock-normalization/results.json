@@ -1,0 +1,103 @@
+{
+  "scope": "Shared calibration sensitivity on exposed published spectral-aging estimates",
+  "formula": "aging_rate = a * (1+z)^(-b)",
+  "interpretation": "Effective fit, not a microscopic derivation",
+  "source": "https://arxiv.org/abs/0804.3595",
+  "results": [
+    {
+      "sample": "all_35",
+      "n": 35,
+      "b": 0.8670758781176418,
+      "normalization": 0.9690058508463184,
+      "chi2": 24.58763975739584,
+      "formal_delta_chi2_one_interval": [
+        0.7453250896624121,
+        0.9918416009080455
+      ],
+      "profile_search_bounds": [
+        -8,
+        8
+      ],
+      "fixed_b_free_normalization": {
+        "0": {
+          "chi2": 81.94165499682566,
+          "normalization": 0.8699196076790178
+        },
+        "1": {
+          "chi2": 25.720791747440003,
+          "normalization": 0.9805656365821361
+        }
+      },
+      "fixed_unit_normalization": {
+        "0": 150.56925988953117,
+        "1": 26.94852459529443
+      },
+      "no_stretch_minus_unit_stretch_chi2": 56.22086324938566
+    },
+    {
+      "sample": "nearby_22",
+      "n": 22,
+      "b": 3.293016186367497,
+      "normalization": 1.0016230429607702,
+      "chi2": 20.204924283314796,
+      "formal_delta_chi2_one_interval": [
+        0.8604084796084837,
+        5.760868612543067
+      ],
+      "profile_search_bounds": [
+        -8,
+        8
+      ],
+      "fixed_b_free_normalization": {
+        "0": {
+          "chi2": 22.046093623820084,
+          "normalization": 0.956871409889178
+        },
+        "1": {
+          "chi2": 21.09276140159868,
+          "normalization": 0.970492754310714
+        }
+      },
+      "fixed_unit_normalization": {
+        "0": 26.882528337314536,
+        "1": 23.294412983434967
+      },
+      "no_stretch_minus_unit_stretch_chi2": 0.9533322222214053
+    },
+    {
+      "sample": "distant_13",
+      "n": 13,
+      "b": 0.810731003752274,
+      "normalization": 0.9511965329126914,
+      "chi2": 3.378767762188358,
+      "formal_delta_chi2_one_interval": [
+        0.19634240349240914,
+        1.4301266170131863
+      ],
+      "profile_search_bounds": [
+        -8,
+        8
+      ],
+      "fixed_b_free_normalization": {
+        "0": {
+          "chi2": 5.122430653102075,
+          "normalization": 0.7146044610313765
+        },
+        "1": {
+          "chi2": 3.4728094158000324,
+          "normalization": 1.0158472189205976
+        }
+      },
+      "fixed_unit_normalization": {
+        "0": 123.68673155221666,
+        "1": 3.6541116118594656
+      },
+      "no_stretch_minus_unit_stretch_chi2": 1.6496212373020427
+    }
+  ],
+  "assumptions": "Published diagonal uncertainties; no full shared template covariance or selection likelihood",
+  "hashes": {
+    "spectral-aging-predictions.csv": "de3cd87188503b2db89ec8593ee51e645d1c9cc35cd97d00845869467983934d",
+    "run.py": "ca2402392cecd89fd404f0eccedef47d9dc4b202c52a76463adb6fb26769504f"
+  }
+}
