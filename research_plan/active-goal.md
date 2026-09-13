@@ -1,3 +1,5 @@
+Latest orbit-boundary check: [six resolved training lenses and comparison chart](../research_work/results/slacs-orbit-boundary-extension/report.md). Wider tangential range removes baseline boundary fits; radial chi-square is 152.04 baseline versus 85.87 extra force, with extra force better in five of six. Significant discrepancies remain; no causal validation.
+
 Latest profile refit: [six training lenses with fixed published stellar components](../research_work/results/slacs-component-refit/report.md). Extra-force radial chi-square 95.86 to 85.87; lensing RMS 10.60% to 11.60%. Four baseline orbit-boundary fits retained. No unified solution or reserved score claimed.
 
 Latest stellar-profile audit: [six published component models reconstructed](../research_work/results/slacs-light-profile-audit/report.md). Half-light radii match release within 0.029%; one is 52% larger than our older pilot input. Seventh profile missing. No gravity refit yet; preserve this uncertainty in interpreting earlier results.
