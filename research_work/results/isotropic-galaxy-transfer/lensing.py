@@ -7,6 +7,7 @@ from scipy.interpolate import PchipInterpolator
 from scipy.optimize import minimize,brentq
 from scipy.linalg import cho_factor,cho_solve
 HERE=Path(__file__).resolve().parent
+REGULAR='--regular-optics' in sys.argv
 sys.path.insert(0,str(HERE.parent/'slacs-component-refit'))
 from model import ComponentModel,G,C,ARCSEC
 def read(folder,file='results.json'):return json.loads((HERE.parent/folder/file).read_text())
@@ -17,12 +18,23 @@ pilot={r['Name']:r for r in base['rows'] if r['model']=='empirical_extra' and r[
 cfg=read('slacs-outer-bin-check','protocol.json')
 allowed={r['Name'] for r in read('slacs-outer-bin-check')['rows'] if r['model']=='empirical_extra'}
 capture=json.loads((HERE/'results.json').read_text())['models']
+optical=read('brightness-distance-consistency','regular-area-results.json') if REGULAR else None
+observations={r['Name']:r for r in read('lensing-data-readiness','lens-observations-and-image-models.json')} if REGULAR else None
 mu,w=np.polynomial.legendre.leggauss(96)
 rows=[]
 for item in data['systems']:
     name=item['Name']
     if name not in allowed:continue
     dl=geo[name]['conditional_Dl_Mpc']*1000;ratio=geo[name]['conditional_Dls_over_Ds'];a=pilot[name]['scale_a_kpc']
+    geometry_info=None
+    if REGULAR:
+        alpha=optical['alpha_per_mpc'];q=optical['q'];zl=observations[name]['zFG'];zs=observations[name]['zBG']
+        fl=zl/(1+zl);fs=zs/(1+zs)
+        def H(f):return -(1-f)*np.log1p(-f)*np.sqrt(1+f/(1+q*f))
+        angular_l=H(fl)/alpha
+        newratio=(1+zl)*H(fl)*quad(lambda f:1/H(f)**2,fl,fs,epsabs=1e-9,epsrel=1e-10)[0]
+        geometry_info=dict(z_lens=zl,z_source=zs,path_Dl_Mpc=np.log1p(zl)/alpha,angular_Dl_Mpc=angular_l,angular_Ds_Mpc=H(fs)/alpha,Dls_over_Ds=newratio,previous_Dls_over_Ds=ratio)
+        a*=angular_l*1000/dl;dl=angular_l*1000;ratio=newratio
     Re=profiles[name]['computed_equal_area_half_light_arcsec']*dl/ARCSEC
     equiv=Re/1.67834699
     edges=np.r_[item['inner_arcsec'],item['outer_arcsec'][-1]]*dl/ARCSEC
@@ -66,11 +78,13 @@ for item in data['systems']:
         assert lens_residual(lo)*lens_residual(hi)<0
         angle=brentq(lens_residual,lo,hi,xtol=1e-9)/dl*ARCSEC
         rows.append(dict(Name=name,model=branch,equivalent_disk_scale_kpc=equiv,capture_scale_kpc=ac,mass_Msun=mass,beta=beta,orbit_boundary=bool(np.min(abs(beta-np.array(cfg['constant_beta_bounds'])))<1e-5),inner_chi2=float(fit.fun),outer_observed_kms=float(y[-1]),outer_prediction_kms=float(outer),outer_conditional_standardized_residual=float((y[-1]-outer)/csd),lens_prediction_arcsec=angle,lens_catalog_arcsec=pilot[name]['catalog_SIE_arcsec'],lens_fractional_residual=angle/pilot[name]['catalog_SIE_arcsec']-1,optimizer_successes=sum(bool(f.success) for f in fits),observed_stellar_vrms=y.tolist(),predicted_stellar_vrms=pred.tolist()))
+        if REGULAR:rows[-1]['geometry']=geometry_info
         print(name,branch,fit.fun,angle,flush=True)
 summary=[]
 for branch in capture:
     rr=[d for d in rows if d['model']==branch]
     summary.append(dict(model=branch,n=len(rr),inner_chi2_sum=sum(d['inner_chi2'] for d in rr),outer_conditional_residual_square_sum=sum(d['outer_conditional_standardized_residual']**2 for d in rr),lens_fractional_rms=float(np.sqrt(np.mean([d['lens_fractional_residual']**2 for d in rr]))),orbit_boundary_count=sum(d['orbit_boundary'] for d in rr)))
 out=dict(summary=summary,rows=rows,capture_input_sha256=hashlib.sha256((HERE/'results.json').read_bytes()).hexdigest())
-(HERE/'lensing-results.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+if REGULAR:out['optical_input_sha256']=hashlib.sha256((HERE.parent/'brightness-distance-consistency/regular-area-results.json').read_bytes()).hexdigest()
+(HERE/('regular-optics-results.json' if REGULAR else 'lensing-results.json')).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(summary,indent=2))

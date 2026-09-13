@@ -1,0 +1,7 @@
+# Shared supernova beam law in the six-system lens calculation
+
+Before fitting: retain the supernova-trained q and alpha from regular-area-results.json and both SPARC capture fits. For each of the same six lens systems, compute f=z/(1+z), lambda=f/alpha, and y(lambda)=D_A=D sqrt[1+f/(1+qf)]/(1+z), D=ln(1+z)/alpha. Distinguish local path length from angular diameter distance.
+
+Conditional isotropic-background Jacobi completion: use the scalar optical coefficient implied by y, with no background shear, along each observer-source ray. Reduction of order gives D_ls=(1+z_l)y_l y_s integral_lambda_l^lambda_s d lambda/y^2; hence D_ls/D_s=(1+z_l)y_l integral d lambda/y^2. The lens factor (1+z_l) normalizes affine photon energy at the lens. This is known second-order ODE mathematics applied to the postulated beam law, not a global spacetime solution. Do not replace D_ls with D_s-D_l.
+
+Use revised angular D_l consistently for image profiles, apertures, PSF, computational scale and equivalent disk size. Refit only ordinary mass and stellar anisotropy to inner bins, with the previous bounds/starts. Predict outer motions and lens angles using the same deposits. No fitting q, alpha, capture strength or lensing response. Preserve old geometry/results and report all six. This revises conditional inferred angular distances, not user-stipulated independently measured path distances. Non-geodesic conversion does not automatically inherit this completion. All six goals remain open.
