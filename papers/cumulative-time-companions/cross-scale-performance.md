@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Nonthermal escaping-wave occupation
+
+Free escape of nonthermal low-energy relaxation waves does not justify empty coupled modes in the tested uniform galaxy-scale source. The 120-kpc orbital-heat example over 1 Gyr gives mean occupation 4.67e16 for a narrow band, so negligible thermal return cannot be assumed solely from escape. This is an optically thin occupation diagnostic, not a computed reabsorption rate; actual coupling, geometry and population feedback remain open. The [escape calculation](../../research_work/results/companion-extensions/escape-occupation-report.md) includes finite source fill times, 48 configurations and 144 duration examples. Its long required emission times are inferred requirements, not fixed cosmological ages or exclusions of all nonthermal channels.
+
 ### Thermal-wave capacity at gravitational energy scales
 
 A physical two-polarization, c-speed thermal bath has far too little local cold capacity for the tested heat budgets. In the 120-kpc larger-gap benchmark, prior orbital cooling exceeds available capacity by 5.58e20; a cold thermal outlet would need 2.91e26 years. These are conditional local-volume and throughput requirements, with no imposed universe age. Nonthermal escape and distinct slow/massive baths remain alternatives requiring derivation. The [bath budget](../../research_work/results/companion-extensions/bath-budget-report.md) separately records previous orbital cooling and the stronger conditional identification of all deposit energy with protected excitations. It does not silently count seed mass as newly created gravity or impose a conventional cosmological horizon.
