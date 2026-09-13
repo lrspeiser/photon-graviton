@@ -1,0 +1,5 @@
+# Fixed geometric dilution candidate
+
+Before fitting: replace the previous luminosity ratio by X=(L_3.6/10^10 L_sun)/(R_disk/3 kpc)^2, and use g_extra=A a_star (g_b/a_star)^p X^q. Hold the geometric exponent -2 fixed; fit the same A,p,q bounds, starts, training objective and galaxy partitions as protocol.md. No combined luminosity/size exponent search. Score every original validation/test galaxy with frozen parameters. These are exposed partitions and repeated model exploration, not blind validation.
+
+Motivation: known inverse-square flux dilution gives a characteristic radiation intensity L/(4 pi R_disk^2). This is only a global proxy: an extended disk's local radiation field requires an integral over sources, and companion conversion, external illumination, capture and history remain absent. The formula is a candidate empirical postulate using known mathematics, not derived deposition physics or a novelty claim. q is allowed negative so data can contradict the proposed positive response. A negative q cannot be read as greater capture from a greater intensity. Retain all input/provenance caveats in protocol.md.
