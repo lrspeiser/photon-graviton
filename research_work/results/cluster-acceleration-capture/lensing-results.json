@@ -1,0 +1,138 @@
+{
+  "scope": "Equal-potential weak-lensing shape diagnostic with stationary density proportional to calculated deposit power. Synthetic fixed Plummer ordinary matter; no observed lens fit or reduced-shear calculation.",
+  "formula": "Sigma_deposit(b)=Sigma0+B*b^2+o(b^2), B=int_0^infinity q(r)/r^2 dr>0; DeltaSigma_deposit=-B*b^2/2+o(b^2)",
+  "cases": [
+    {
+      "A": 0.1,
+      "central_surface_power": 0.038602602933467206,
+      "central_surface_curvature_coefficient": 0.05771280092459893,
+      "finite_difference_curvature_relative_error": -3.7622384984059565e-06,
+      "deposit_to_baryon_mass_ratio_for_central_total_shear_sign_change": 8.10573185969879,
+      "profile": [
+        {
+          "radius_over_a": 0.1,
+          "normalized_surface_density": 0.05328943229447572,
+          "normalized_excess_surface_density": -0.0003734261701735607,
+          "deposit_enclosed_mass_fraction": 3.2825193899083457e-06
+        },
+        {
+          "radius_over_a": 1.0,
+          "normalized_surface_density": 0.046530459659435634,
+          "normalized_excess_surface_density": 0.008660082952316784,
+          "deposit_enclosed_mass_fraction": 0.07455004979981639
+        },
+        {
+          "radius_over_a": 3.0,
+          "normalized_surface_density": 0.006227197799251529,
+          "normalized_excess_surface_density": 0.014514435529989135,
+          "deposit_enclosed_mass_fraction": 0.4867649535074386
+        },
+        {
+          "radius_over_a": 10.0,
+          "normalized_surface_density": 0.00020894364181114788,
+          "normalized_excess_surface_density": 0.002549861984353054,
+          "deposit_enclosed_mass_fraction": 0.8307106390573893
+        }
+      ]
+    },
+    {
+      "A": 1.0,
+      "central_surface_power": 0.3320892110739559,
+      "central_surface_curvature_coefficient": 0.48049943642125625,
+      "finite_difference_curvature_relative_error": -3.869065236195013e-06,
+      "deposit_to_baryon_mass_ratio_for_central_total_shear_sign_change": 9.153208036703326,
+      "profile": [
+        {
+          "radius_over_a": 0.1,
+          "normalized_surface_density": 0.048738566374959526,
+          "normalized_excess_surface_density": -0.00033024021214188255,
+          "deposit_enclosed_mass_fraction": 2.9223004501701538e-06
+        },
+        {
+          "radius_over_a": 1.0,
+          "normalized_surface_density": 0.04341862604127681,
+          "normalized_excess_surface_density": 0.007241526560412674,
+          "deposit_enclosed_mass_fraction": 0.06567225562347827
+        },
+        {
+          "radius_over_a": 3.0,
+          "normalized_surface_density": 0.0063971069457400545,
+          "normalized_excess_surface_density": 0.013592434945180127,
+          "deposit_enclosed_mass_fraction": 0.46227008362833066
+        },
+        {
+          "radius_over_a": 10.0,
+          "normalized_surface_density": 0.00022143789828466182,
+          "normalized_excess_surface_density": 0.0025109072469421336,
+          "deposit_enclosed_mass_fraction": 0.8202249778034277
+        }
+      ]
+    },
+    {
+      "A": 10.0,
+      "central_surface_power": 1.0417378655461667,
+      "central_surface_curvature_coefficient": 0.8369761863701641,
+      "finite_difference_curvature_relative_error": -4.4999281757496234e-06,
+      "deposit_to_baryon_mass_ratio_for_central_total_shear_sign_change": 36.404523202739874,
+      "profile": [
+        {
+          "radius_over_a": 0.1,
+          "normalized_surface_density": 0.021932865497508582,
+          "normalized_excess_surface_density": -8.240547248828417e-05,
+          "deposit_enclosed_mass_fraction": 7.117517410780416e-07
+        },
+        {
+          "radius_over_a": 1.0,
+          "normalized_surface_density": 0.02367366649364039,
+          "normalized_excess_surface_density": 6.496205846124978e-05,
+          "deposit_enclosed_mass_fraction": 0.016730209252464736
+        },
+        {
+          "radius_over_a": 3.0,
+          "normalized_surface_density": 0.007295612865404157,
+          "normalized_excess_surface_density": 0.007474241809436913,
+          "deposit_enclosed_mass_fraction": 0.2960151183484723
+        },
+        {
+          "radius_over_a": 10.0,
+          "normalized_surface_density": 0.0003120266084504268,
+          "normalized_excess_surface_density": 0.002225616502167683,
+          "deposit_enclosed_mass_fraction": 0.7432506369462931
+        }
+      ]
+    },
+    {
+      "A": 100.0,
+      "central_surface_power": 0.9138013306710396,
+      "central_surface_curvature_coefficient": 0.03420828567525294,
+      "finite_difference_curvature_relative_error": 9.983061910467939e-08,
+      "deposit_to_baryon_mass_ratio_for_central_total_shear_sign_change": 4471.456002779837,
+      "profile": [
+        {
+          "radius_over_a": 0.1,
+          "normalized_surface_density": 0.003804646808072761,
+          "normalized_excess_surface_density": -7.128138253158905e-07,
+          "deposit_enclosed_mass_fraction": 2.6599319344508395e-14
+        },
+        {
+          "radius_over_a": 1.0,
+          "normalized_surface_density": 0.003963029973632316,
+          "normalized_excess_surface_density": -8.314666995702727e-05,
+          "deposit_enclosed_mass_fraction": 2.2677807475217603e-07
+        },
+        {
+          "radius_over_a": 3.0,
+          "normalized_surface_density": 0.005001699413846063,
+          "normalized_excess_surface_density": -0.0003353366507732318,
+          "deposit_enclosed_mass_fraction": 0.03207934772586197
+        },
+        {
+          "radius_over_a": 10.0,
+          "normalized_surface_density": 0.0005553659357765812,
+          "normalized_excess_surface_density": 0.0013883651542406902,
+          "deposit_enclosed_mass_fraction": 0.5129270958305483
+        }
+      ]
+    }
+  ]
+}
