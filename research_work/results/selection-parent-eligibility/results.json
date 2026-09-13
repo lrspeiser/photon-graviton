@@ -1,0 +1,448 @@
+{
+  "scope": "Candidate parent eligibility audit; weights not authorized by this diagnostic",
+  "input_sha256": {
+    "research_work\\data-cache\\selection-fields\\apogee2Object_300+00.fits": "8a733758d08e4713a8d76bbc0f33885744dcf62fcdb6e878af4db25920cec22b",
+    "research_work\\data-cache\\selection-observed-field\\observed-main-metadata.parquet": "f665882524f942e6784d437d00587c5ad85937a121aa76aa1a3a5ec67665cd0e",
+    "research_work\\data-cache\\selection-fields\\allField.fits": "ddc535c276faa6af49aa91db4d418df18252b1ff34b83875e11b3f5ced5fe616"
+  },
+  "quality_reference": "https://arxiv.org/html/1708.00155#S4.T2",
+  "color_convention_reference": "https://github.com/jobovy/apogee/blob/main/apogee/tools/read.py",
+  "candidate_parent_total": 12150,
+  "observed_total": 1271,
+  "observed_pass": 1229,
+  "cuts": [
+    {
+      "cut": "finite_photometry_extinction",
+      "parent_individual_pass": 44957,
+      "parent_cumulative_pass": 44957,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "radius_at_most_0p8_deg",
+      "parent_individual_pass": 189653,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "JHK_errors_0_to_0p1",
+      "parent_individual_pass": 88799,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "photometric_flags_A_or_B",
+      "parent_individual_pass": 109681,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "read_flags_1_or_2",
+      "parent_individual_pass": 114763,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "confusion_flags_zero",
+      "parent_individual_pass": 94337,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "galaxy_contamination_zero",
+      "parent_individual_pass": 189629,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "extkey_negative_sentinel",
+      "parent_individual_pass": 189659,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "nearest_neighbor_at_least_6arcsec",
+      "parent_individual_pass": 110757,
+      "parent_cumulative_pass": 44954,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1271
+    },
+    {
+      "cut": "selected_midIR_error_0_to_0p1",
+      "parent_individual_pass": 20875,
+      "parent_cumulative_pass": 20874,
+      "observed_individual_fail": 42,
+      "observed_cumulative_pass": 1229
+    },
+    {
+      "cut": "H_10_to_13p3",
+      "parent_individual_pass": 38583,
+      "parent_cumulative_pass": 15993,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1229
+    },
+    {
+      "cut": "dereddened_color_at_least_0p5",
+      "parent_individual_pass": 23827,
+      "parent_cumulative_pass": 12150,
+      "observed_individual_fail": 0,
+      "observed_cumulative_pass": 1229
+    }
+  ],
+  "failures": [
+    {
+      "APOGEE_ID": "2M12183606-6301467",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12193643-6300096",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12184253-6258439",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12175711-6241573",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12191087-6243319",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12180028-6240442",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12185095-6237403",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12181397-6234467",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12182751-6230113",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12195927-6226502",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12243925-6326245",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12223467-6325301",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12234093-6322449",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12281947-6324467",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12250181-6320386",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12272596-6319013",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12253285-6316524",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12200033-6310583",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12230136-6309085",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12252423-6311004",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12285577-6302150",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12292890-6301410",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12211511-6259562",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12223044-6257273",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12245351-6257418",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12274905-6257576",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12290953-6259383",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12305806-6257467",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12201426-6252451",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12213596-6255523",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12262737-6244152",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12242198-6235184",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12223130-6231560",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12300941-6231539",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12302834-6231227",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12274740-6222356",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12233124-6219298",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12204260-6216031",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12273486-6218357",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12253055-6214003",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12281739-6214073",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    },
+    {
+      "APOGEE_ID": "2M12261903-6209182",
+      "failed": [
+        "selected_midIR_error_0_to_0p1"
+      ]
+    }
+  ],
+  "bins": [
+    {
+      "H_min": 10,
+      "H_max": 12.2,
+      "JK_min": 0.5,
+      "JK_max": 0.8,
+      "candidate_parent_count": 3192,
+      "observed_passing_count": 370,
+      "parent_without_midIR_cut": 3222,
+      "observed_without_midIR_cut": 376
+    },
+    {
+      "H_min": 10,
+      "H_max": 12.2,
+      "JK_min": 0.8,
+      "JK_max": null,
+      "candidate_parent_count": 2957,
+      "observed_passing_count": 359,
+      "parent_without_midIR_cut": 2979,
+      "observed_without_midIR_cut": 362
+    },
+    {
+      "H_min": 12.2,
+      "H_max": 12.8,
+      "JK_min": 0.5,
+      "JK_max": 0.8,
+      "candidate_parent_count": 2385,
+      "observed_passing_count": 248,
+      "parent_without_midIR_cut": 2520,
+      "observed_without_midIR_cut": 267
+    },
+    {
+      "H_min": 12.2,
+      "H_max": 12.8,
+      "JK_min": 0.8,
+      "JK_max": null,
+      "candidate_parent_count": 921,
+      "observed_passing_count": 251,
+      "parent_without_midIR_cut": 967,
+      "observed_without_midIR_cut": 264
+    },
+    {
+      "H_min": 12.8,
+      "H_max": 13.3,
+      "JK_min": 0.5,
+      "JK_max": 0.8,
+      "candidate_parent_count": 2011,
+      "observed_passing_count": 0,
+      "parent_without_midIR_cut": 2658,
+      "observed_without_midIR_cut": 1
+    },
+    {
+      "H_min": 12.8,
+      "H_max": 13.3,
+      "JK_min": 0.8,
+      "JK_max": null,
+      "candidate_parent_count": 684,
+      "observed_passing_count": 1,
+      "parent_without_midIR_cut": 847,
+      "observed_without_midIR_cut": 1
+    }
+  ],
+  "H_endpoint_convention": "lower exclusive, upper inclusive; observational bounds are kept separately",
+  "observed_H_boundary_cases": [
+    {
+      "APOGEE_ID": "2M12230577-6255074",
+      "H": 12.800000190734863,
+      "MIN_H": 12.199999809265137,
+      "MAX_H": 12.800000190734863
+    },
+    {
+      "APOGEE_ID": "2M12245437-6300598",
+      "H": 12.800000190734863,
+      "MIN_H": 12.199999809265137,
+      "MAX_H": 12.800000190734863
+    },
+    {
+      "APOGEE_ID": "2M12271605-6253590",
+      "H": 12.800000190734863,
+      "MIN_H": 12.199999809265137,
+      "MAX_H": 12.800000190734863
+    }
+  ],
+  "sensitivity_without_midIR_cut": {
+    "parent": 13193,
+    "observed": 1271,
+    "adopted": false
+  },
+  "reconstructed_color_bound_disagreements": [],
+  "extinction_methods": {
+    "RJCE_IRAC": 1271
+  },
+  "missing_geometry": "Central/off-axis camera masks and fiber allocation not reconstructed",
+  "heldout_kinematics_read": false,
+  "selection_weights_produced": false
+}
