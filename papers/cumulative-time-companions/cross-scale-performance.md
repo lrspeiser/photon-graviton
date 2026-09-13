@@ -1,3 +1,11 @@
+## Free orbital transition radius (after v1.2)
+
+Allowing the orbital transition ra to differ from the projected half-light radius improves total all-motion chi-squared from 161.81/159.83 to 113.56/111.27, about 30%. This adds one stellar nuisance parameter per galaxy; the stellar gradient scale remains Re and exact-third companion gravity is unchanged. Best radii span 0.303-1.333 Re, away from the imposed radius limits. Lensing continues to calibrate stellar mass and all motion bins are fitted, so this is descriptive improvement rather than independent prediction.
+
+J1402+6321 remains the dominant discrepancy, contributing roughly 57% of the total with conditional outer residual 5.47/5.40. Its gradient reaches the lower bound h=-0.8. Other stellar gradient/orbit limits remain active. Every fit passes the imposed necessary central and sampled orbital checks, but distribution-function positivity and stability are unproved. The result identifies a restrictive stellar assumption without establishing a joint physical solution or the radiation origin of gravity.
+
+See [protocol](../../research_work/results/companion-extensions/orbit-transition-protocol.md), [full comparison and provenance](../../research_work/results/companion-extensions/orbit-transition-report.md), and [executable results](../../research_work/results/companion-extensions/orbit-transition-results.json). The v1.2 PDF is an earlier snapshot.
+
 ## All-motion diagnostic with lens calibration and constrained orbits (after v1.2)
 
 Fitting all 40 stellar-motion bins, including the previously reserved outer bins, reduces the total covariance-weighted chi-squared from 193.62/190.91 at the constrained inner-only solutions to 161.81/159.83. Inner contributions worsen to 104.25/103.00; conditional outer contributions improve to 57.57/56.84. This is a descriptive all-bin fit, not a prediction. The standard block-covariance identity is verified to 2.67e-14.

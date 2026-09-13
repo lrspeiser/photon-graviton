@@ -1,3 +1,5 @@
+> Free orbital transition radius: total all-motion chi-squared improves about 30%, to 113.56/111.27, but J1402+6321 still contributes roughly 57% of the residual and multiple stellar parameter boundaries remain. All bins are fitted; no independent prediction or physical solution is established. See orbit-transition-report.md. The v1.2 PDF predates this experiment.
+
 > All-motion diagnostic: fitting all 40 bins reduces total chi-squared from 193.62/190.91 to 161.81/159.83, but J1402+6321 remains the dominant discrepancy. The outer bins are now fitted, not predicted; orbital boundary dependence remains. See all-motion-orbits-report.md. The v1.2 PDF predates this experiment.
 
 > New constrained orbital fit: inner chi-squared 87.58/86.79 and outer residual-square sums 106.03/104.12. All twelve fits satisfy the imposed central and sampled slope/anisotropy conditions, with six cases on the central bound. Positivity, stability and joint agreement remain unresolved. See constrained-gradient-orbits-report.md. The v1.2 PDF predates this experiment.

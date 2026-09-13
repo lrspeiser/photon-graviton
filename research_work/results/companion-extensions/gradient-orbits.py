@@ -10,7 +10,11 @@ P=Path(__file__).resolve().parent;ROOT=P.parents[2];L=P.parent/'isotropic-galaxy
 parser=argparse.ArgumentParser()
 parser.add_argument('--slope-constrained',action='store_true')
 parser.add_argument('--all-motion-bins',action='store_true',help='Diagnostic fit consuming the outer bin; requires --slope-constrained')
+parser.add_argument('--free-orbit-radius',action='store_true',help='Fit 0.1<=ra/Re<=10; requires all-motion diagnostic')
 args=parser.parse_args()
+if args.free_orbit_radius and not args.all_motion_bins:parser.error('--free-orbit-radius requires --all-motion-bins')
+if args.free_orbit_radius:
+    fixed_radius_previous={(r['Name'],r['population']):r for r in json.loads((P/'all-motion-orbits-results.json').read_text())['rows']}
 if args.all_motion_bins and not args.slope_constrained:parser.error('--all-motion-bins requires --slope-constrained')
 if args.all_motion_bins:
     inner_previous={(r['Name'],r['population']):r for r in json.loads((P/'constrained-gradient-orbits-results.json').read_text())['rows']}
@@ -37,6 +41,8 @@ separate_radial={(r['Name'],r['population']):r for r in json.loads((P/'radial-or
 out=dict(scope='Fixed companions; lens-calibrated stellar mass; gradient plus radial anisotropy fitted to inner motions; no positive distribution function or stability established',rows=[],summary=[])
 out['slope_constrained']=args.slope_constrained
 out['all_motion_bins_fitted']=args.all_motion_bins
+out['free_orbit_radius']=args.free_orbit_radius
+if args.free_orbit_radius:out['orbit_radius_bounds_Re']=[.1,10.]
 if args.all_motion_bins:out['scope']='All motion bins fitted with full covariance; lens angle calibrates stellar mass; necessary orbital condition enforced; no held-out prediction or physical stability proof'
 cache={};mu,w=np.polynomial.legendre.leggauss(96)
 for old in source['rows']:
@@ -77,11 +83,12 @@ for old in source['rows']:
     y=np.array(item['vrms_kms']);cov=np.array(item['covariance_kms_squared']);fac=cho_factor(cov[:-1,:-1]);cw=cho_solve(fac,cov[:-1,-1]);csd=np.sqrt(cov[-1,-1]-cov[-1,:-1]@cw)
     full_fac=cho_factor(cov)
     def evaluate(q,inner_only=False):
-        h,b0,bi=q;weight=h*meanH/(1+h*meanH)
+        h,b0,bi=q[:3];orbit_scale=np.exp(q[3]) if len(q)>3 else 1.;ra=Re*orbit_scale
+        weight=h*meanH/(1+h*meanH)
         mass=1e11*needed/((1-weight)*s0+weight*sh)
         force=mass/1e11*((1-weight)*model.forces[0]+weight*model.forces[1])+model.forces[2]
-        beta=b0+(bi-b0)*r*r/(r*r+Re*Re)
-        factor=np.exp(2*b0*np.log(r/model.a)+(bi-b0)*np.log((r*r+Re*Re)/(model.a*model.a+Re*Re)))
+        beta=b0+(bi-b0)*r*r/(r*r+ra*ra)
+        factor=np.exp(2*b0*np.log(r/model.a)+(bi-b0)*np.log((r*r+ra*ra)/(model.a*model.a+ra*ra)))
         pressure=-cumulative_trapezoid((nu*force*factor)[::-1],r[::-1],initial=0)[::-1]/factor
         v2=np.trapezoid(r*r*pressure*(model.W-beta*model.T),r,axis=1)/model.den
         assert min(v2)>0 and np.isfinite(v2).all() and 1e7<mass<1e14
@@ -111,22 +118,31 @@ for old in source['rows']:
             assert nmax>1
             slope_cache[name]=(gamma,fine_gamma,1-1/nmax)
         gamma,fine_gamma,central_gamma=slope_cache[name]
-        fraction=constraint_x**2/(1+constraint_x**2)
-        def central_bound(bi):
+        def central_bound(bi,orbit_scale=1.):
+            fraction=constraint_x**2/(orbit_scale**2+constraint_x**2)
             return min(.45,central_gamma/2,float(np.min((gamma/2-bi*fraction)/(1-fraction))))
         def physical(q):
-            h,t,bi=q;cap=central_bound(bi);assert cap>-2
-            return np.array([h,-2+t*(cap+2),bi])
+            h,t,bi=q[:3];orbit_scale=np.exp(q[3]) if len(q)>3 else 1.
+            cap=central_bound(bi,orbit_scale);assert cap>-2
+            return np.array([h,-2+t*(cap+2),bi]+([q[3]] if len(q)>3 else []))
         def mapped(q):
-            h,b0,bi=q
-            return [h,float(np.clip((b0+2)/(central_bound(bi)+2),0,1)),bi]
+            h,b0,bi=q[:3];orbit_scale=np.exp(q[3]) if len(q)>3 else 1.
+            return [h,float(np.clip((b0+2)/(central_bound(bi,orbit_scale)+2),0,1)),bi]+([q[3]] if len(q)>3 else [])
         prev=previous[key];starts.append([prev['h'],prev['beta0'],prev['beta_infinity']])
         if args.all_motion_bins:
             prior=inner_previous[key];prior_q=[prior['h'],prior['beta0'],prior['beta_infinity']]
             starts.append(prior_q)
             prior_total=evaluate(prior_q)[0]
             assert abs(prior_total-prior['combined_inner_chi2']-prior['combined_outer_residual']**2)<1e-5
-        fits=[minimize(lambda q:evaluate(physical(q))[0],mapped(q),bounds=[bounds[0],(0,1),bounds[2]],method='L-BFGS-B',options={'ftol':1e-11,'maxiter':600}) for q in starts]
+        fit_bounds=[bounds[0],(0,1),bounds[2]]
+        if args.free_orbit_radius:
+            fixed_radius=fixed_radius_previous[key]
+            fixed_q=[fixed_radius['h'],fixed_radius['beta0'],fixed_radius['beta_infinity'],0.]
+            fixed_radius_drift=abs(evaluate(fixed_q)[0]-fixed_radius['all_motion_chi2'])
+            assert fixed_radius_drift<1e-5
+            starts=[list(v)+[0.] for v in starts]+[fixed_q[:3]+[np.log(v)] for v in [.1,1/3,1,3,10]]
+            fit_bounds.append((-np.log(10),np.log(10)))
+        fits=[minimize(lambda q:evaluate(physical(q))[0],mapped(q),bounds=fit_bounds,method='L-BFGS-B',options={'ftol':1e-11,'maxiter':600}) for q in starts]
         for f in fits:f.x=physical(f.x)
     else:
         fits=[minimize(lambda q:evaluate(q)[0],q,bounds=bounds,method='L-BFGS-B',options={'ftol':1e-11,'maxiter':600}) for q in starts]
@@ -135,7 +151,8 @@ for old in source['rows']:
     if args.all_motion_bins:assert score<=prior_total+1e-4
     else:assert score<=(radial_score if args.slope_constrained else min(radial_score,sg['gradient_inner_chi2']))+1e-4
     inner_score=evaluate(opt.x,True)[0]
-    h,b0,bi=opt.x;outer=pred[-1]+cw@(y[:-1]-pred[:-1])
+    h,b0,bi=opt.x[:3];orbit_scale=float(np.exp(opt.x[3])) if args.free_orbit_radius else 1.
+    outer=pred[-1]+cw@(y[:-1]-pred[:-1])
     lens_error=abs(dr*(mass/1e11*((1-weight)*s0+weight*sh)+dc)/target-1)
     assert lens_error<1e-10
     out['rows'].append(dict(Name=name,population=key[1],h=float(h),beta0=float(b0),beta_infinity=float(bi),Re_kpc=Re,
@@ -154,10 +171,13 @@ for old in source['rows']:
         assert decomposition_error<1e-5
         out['rows'][-1].update(all_motion_chi2=score,previous_inner_fit_total_chi2=prior_total,previous_inner_fit_inner_chi2=prior['combined_inner_chi2'],previous_inner_fit_outer_residual=prior['combined_outer_residual'],covariance_decomposition_difference=decomposition_error,motion_bins=len(y))
     if args.slope_constrained:
-        fine_beta=b0+(bi-b0)*check_x**2/(1+check_x**2)
+        fine_beta=b0+(bi-b0)*check_x**2/(orbit_scale**2+check_x**2)
         margin=fine_gamma-2*fine_beta
         assert min(margin)>-1e-6 and central_gamma-2*b0>=-1e-10
-        out['rows'][-1].update(unconstrained_inner_chi2=prev['combined_inner_chi2'],unconstrained_outer_residual=prev['combined_outer_residual'],central_asymptotic_gamma=central_gamma,central_constraint_margin=float(central_gamma-2*b0),slope_constraint_boundary=bool(abs(b0-central_bound(bi))<1e-5),refined_minimum_slope_margin=float(min(margin)),refined_minimum_radius_Re=float(check_x[np.argmin(margin)]))
+        out['rows'][-1].update(unconstrained_inner_chi2=prev['combined_inner_chi2'],unconstrained_outer_residual=prev['combined_outer_residual'],central_asymptotic_gamma=central_gamma,central_constraint_margin=float(central_gamma-2*b0),slope_constraint_boundary=bool(abs(b0-central_bound(bi,orbit_scale))<1e-5),refined_minimum_slope_margin=float(min(margin)),refined_minimum_radius_Re=float(check_x[np.argmin(margin)]))
+    if args.free_orbit_radius:
+        assert score<=fixed_radius['all_motion_chi2']+1e-4
+        out['rows'][-1].update(orbit_transition_radius_Re=orbit_scale,orbit_transition_radius_kpc=Re*orbit_scale,orbit_radius_boundary=bool(min(abs(orbit_scale-.1),abs(orbit_scale-10))<1e-4),fixed_radius_all_motion_chi2=fixed_radius['all_motion_chi2'],fixed_radius_reproduction_difference=fixed_radius_drift,stellar_nuisance_parameters=4)
     print(name,key[1],opt.x,score,out['rows'][-1]['combined_outer_residual'],flush=True)
 for pop in ['Chabrier','Salpeter']:
     rr=[r for r in out['rows'] if r['population']==pop]
@@ -169,7 +189,9 @@ paths += [P.parent/f/n for f,n in [('slacs-resolved-input-audit','results.json')
 paths += [P/'stellar-gradient-results.json',P/'radial-orbits-results.json',P/'gradient-orbits-protocol.md']
 if args.slope_constrained:paths += [P/'gradient-orbits-results.json',P/'orbit_density.py',P/'constrained-gradient-orbits-protocol.md']
 if args.all_motion_bins:paths += [P/'constrained-gradient-orbits-results.json',P/'all-motion-orbits-protocol.md']
+if args.free_orbit_radius:paths += [P/'all-motion-orbits-results.json',P/'orbit-transition-protocol.md']
 out['input_sha256']={str(f.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
 assert len(out['rows'])==12
-(P/('all-motion-orbits-results.json' if args.all_motion_bins else ('constrained-gradient-orbits-results.json' if args.slope_constrained else 'gradient-orbits-results.json'))).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
+output_name=('orbit-transition-results.json' if args.free_orbit_radius else ('all-motion-orbits-results.json' if args.all_motion_bins else ('constrained-gradient-orbits-results.json' if args.slope_constrained else 'gradient-orbits-results.json')))
+(P/output_name).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(out['summary'],indent=2))
