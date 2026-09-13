@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Bounded radial stellar mass-to-light gradients
+
+The [stellar-gradient diagnostic](../../research_work/results/companion-extensions/stellar-gradient-report.md) keeps adjusted-reference companions fixed and fits one fixed-Re M/L gradient plus constant beta, with stellar normalization fixed by the catalogue angle. Inner chi-squared totals improve from 611-614 to 472-477 but remain far above the free constant-M/L inner fits near 45; outer residuals remain poor. Two gradient and two orbital bounds are reached per population. Extreme-gradient endpoint checks do not restore the previous motion fit. This is added per-lens nuisance flexibility, not an independent population measurement, lens prediction or adopted theory revision.
+
 ## Lens-required masses and constant orbital anisotropy
 
 The [exact-angle compatibility experiment](../../research_work/results/companion-extensions/exact-lens-orbits-report.md) fixes stellar masses by each catalogue lens angle and refits constant anisotropy to inner stellar motions. Across four profiles and two population assumptions, inner chi-squared totals rise from 41-46 to 585-625 and conditional outer residual sums worsen. The same three lenses dominate the cost; no anisotropy hits a bound. Exact lens agreement is imposed and is not a prediction. This tests the retained stellar/companion profiles and conditional geometry, leaving radial population/orbital structure and geometry changes open.

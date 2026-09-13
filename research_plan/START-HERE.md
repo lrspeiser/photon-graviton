@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Stellar M/L gradient diagnostic.** A bounded fixed-Re gradient reduces exact-lens inner chi-squared from 611-614 to 472-477, still far above the free inner-motion fits near 45. Two gradients and two anisotropies hit bounds per population. Large-gradient endpoint checks give modest further gains, not reconciliation. These are fitted nuisance profiles, not observed population gradients or an adopted gravity change. [Report](../research_work/results/companion-extensions/stellar-gradient-report.md).
+
 **Exact-angle orbital compatibility.** Fixing stellar mass to the catalogue lens angle and refitting constant anisotropy raises inner-motion chi-squared totals from 41-46 to 585-625; outer residuals worsen too. All fitted anisotropies remain interior. This conditional incompatibility persists across the four profiles and both population proxies; the lens angle is consumed as a constraint, not predicted. [Report](../research_work/results/companion-extensions/exact-lens-orbits-report.md).
 
 **Lens bending budget.** At the current inner-star fits, stars alone exceed the catalogue-angle bending in J0037-0942, J1204+0358 and J1402+6321, under all four profiles and both population assumptions. Positive companion changes alone cannot resolve these three while stars and geometry stay fixed. This is a conditional stellar-model/geometry incompatibility, not a measured excess stellar mass. [Report](../research_work/results/companion-extensions/lens-bending-budget-report.md).
