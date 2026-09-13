@@ -1,0 +1,59 @@
+{
+  "scope": "Synthetic fixed ordinary-matter Plummer well, hypothetical acceleration-squared opacity, external isotropic companions only. No fit, deposit backreaction or microscopic derivation.",
+  "definitions": [
+    "g(r)=GM r/(r^2+a^2)^(3/2)",
+    "kappa(r)=g(r)^2/(ell_star*g_star^2)",
+    "A=G^2 M^2/(ell_star*g_star^2*a^3)",
+    "P_capture=c*u_companion*a^2*sigma_dimensionless"
+  ],
+  "cases": [
+    {
+      "dimensionless_capture_strength": 0.1,
+      "effective_area_over_a2": 0.7348255732416478,
+      "effective_radius_over_a": 0.48363441211672237,
+      "spatial_total_over_a2": 0.7348255726874471,
+      "area_vs_volume_relative": -7.541934854415899e-10,
+      "angular_refinement_relative": -1.92752291905407e-09,
+      "maximum_upstream_column_absolute_error": 3.469446951953614e-18,
+      "half_deposition_radius_over_a": 3.0982696886735703,
+      "deposition_fraction_outside_a": 0.9254499502001836,
+      "deposition_fraction_outside_10a": 0.169289360942535
+    },
+    {
+      "dimensionless_capture_strength": 1.0,
+      "effective_area_over_a2": 6.908537079717046,
+      "effective_radius_over_a": 1.4829213234495047,
+      "spatial_total_over_a2": 6.908537079233981,
+      "area_vs_volume_relative": -6.992295631391698e-11,
+      "angular_refinement_relative": 1.099523361247634e-09,
+      "maximum_upstream_column_absolute_error": 5.551115123125783e-17,
+      "half_deposition_radius_over_a": 3.2869353329172517,
+      "deposition_fraction_outside_a": 0.9343277443765218,
+      "deposition_fraction_outside_10a": 0.17977502219657227
+    },
+    {
+      "dimensionless_capture_strength": 10.0,
+      "effective_area_over_a2": 47.86172267872996,
+      "effective_radius_over_a": 3.9031858139764095,
+      "spatial_total_over_a2": 47.86172332826798,
+      "area_vs_volume_relative": 1.3571137325030236e-08,
+      "angular_refinement_relative": -7.946953439752491e-08,
+      "maximum_upstream_column_absolute_error": 6.661338147750939e-16,
+      "half_deposition_radius_over_a": 4.783481448858475,
+      "deposition_fraction_outside_a": 0.9832697907475353,
+      "deposition_fraction_outside_10a": 0.2567493630537069
+    },
+    {
+      "dimensionless_capture_strength": 100.0,
+      "effective_area_over_a2": 240.27033241295305,
+      "effective_radius_over_a": 8.745308580245105,
+      "spatial_total_over_a2": 240.2703350294711,
+      "area_vs_volume_relative": 1.0889892321230832e-08,
+      "angular_refinement_relative": -7.57260253392289e-08,
+      "maximum_upstream_column_absolute_error": 3.552713678800501e-15,
+      "half_deposition_radius_over_a": 9.699436340204581,
+      "deposition_fraction_outside_a": 0.9999997732219252,
+      "deposition_fraction_outside_10a": 0.4870729041694517
+    }
+  ]
+}
