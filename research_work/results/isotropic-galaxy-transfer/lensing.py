@@ -11,6 +11,8 @@ CAPACITY=next((v.split('=',1)[1] for v in sys.argv if v.startswith('--capacity-b
 assert CAPACITY in [None,'original','reference','local','recycling']
 CAPACITY_REFINE='--capacity-refine' in sys.argv
 assert not CAPACITY_REFINE or CAPACITY is not None
+CAPACITY_EXACT_LENS='--capacity-exact-lens' in sys.argv
+assert not CAPACITY_EXACT_LENS or CAPACITY is not None
 RELAXING='--relaxing-optics' in sys.argv
 REDISTRIBUTION=next((v.split('=',1)[1] for v in sys.argv if v.startswith('--redistribution=')),None)
 assert REDISTRIBUTION in [None,'shared','partial','retention_conditioned','compact_partial']
@@ -116,9 +118,20 @@ for item in data['systems']:
         def objective(q):
             e=y[:-1]-predict(np.exp(q[0]),q[1])[:-1]
             return float(e@cho_solve(fac,e))
-        fits=[minimize(objective,[np.log(1e11),beta],method='L-BFGS-B',bounds=[np.log(cfg['mass_Msun_bounds']),cfg['constant_beta_bounds']],options={'ftol':1e-11,'maxiter':1000}) for beta in cfg['starts_beta']]
+        if CAPACITY_EXACT_LENS:
+            target=pilot[name]['catalog_SIE_arcsec']/ARCSEC
+            impact=target*dl
+            unit_star=4*G*1e11/C**2*quad(lambda t:model.mass_fraction(impact/np.cos(t))/(impact/np.cos(t)),0,np.pi/2,epsabs=1e-8,epsrel=1e-8)[0]
+            companion_bend=4*G/C**2*quad(lambda t:Mextra(impact/np.cos(t))/(impact/np.cos(t)),0,np.pi/2,epsabs=1e-6,epsrel=1e-8,limit=200)[0]
+            lens_mass=1e11*(target/ratio-companion_bend)/unit_star
+            assert cfg['mass_Msun_bounds'][0]<lens_mass<cfg['mass_Msun_bounds'][1]
+            fits=[minimize(lambda q:objective([np.log(lens_mass),q[0]]),[beta],method='L-BFGS-B',bounds=[cfg['constant_beta_bounds']],options={'ftol':1e-11,'maxiter':1000}) for beta in cfg['starts_beta']]
+        else:
+            fits=[minimize(objective,[np.log(1e11),beta],method='L-BFGS-B',bounds=[np.log(cfg['mass_Msun_bounds']),cfg['constant_beta_bounds']],options={'ftol':1e-11,'maxiter':1000}) for beta in cfg['starts_beta']]
         good=[f for f in fits if f.success and np.isfinite(f.fun)];assert good
-        fit=min(good,key=lambda f:f.fun);mass=float(np.exp(fit.x[0]));beta=float(fit.x[1])
+        fit=min(good,key=lambda f:f.fun)
+        mass=float(lens_mass if CAPACITY_EXACT_LENS else np.exp(fit.x[0]))
+        beta=float(fit.x[0] if CAPACITY_EXACT_LENS else fit.x[1])
         pred=predict(mass,beta);outer=pred[-1]+crossw@(y[:-1]-pred[:-1])
         def lens_residual(b):
             def integrand(t):
@@ -149,11 +162,13 @@ if REDISTRIBUTION:
     output='redistribution-'+REDISTRIBUTION+'-optics-results.json'
     out['redistribution_input_sha256']=hashlib.sha256((HERE/redistribution_file).read_bytes()).hexdigest()
 if CAPACITY is not None:
-    output='capacity-'+CAPACITY+('-refined' if CAPACITY_REFINE else '')+'-optics-results.json'
+    output='capacity-'+CAPACITY+('-exact-lens' if CAPACITY_EXACT_LENS else '')+('-refined' if CAPACITY_REFINE else '')+'-optics-results.json'
     out['capacity_branch']=CAPACITY
     out['C0_multiplier']=capacity_multiplier
     out['refined_quadrature']=CAPACITY_REFINE
     if capacity_file is not None:out['training_amplitude_input_sha256']=hashlib.sha256(capacity_file.read_bytes()).hexdigest()
     out['scope']='Existing conditional six-lens geometry and luminosity proxies; shared amplitude frozen from SPARC training, only stellar mass and anisotropy fitted on lens inner bins'
+    if CAPACITY_EXACT_LENS:
+        out['scope']='Exact catalogue lens angle fixes stellar mass; constant anisotropy fits inner stars, outer bin diagnostic. Lens angle is consumed calibration, not a prediction.'
 (HERE/output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(summary,indent=2))

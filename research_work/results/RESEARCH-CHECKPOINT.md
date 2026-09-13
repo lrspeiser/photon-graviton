@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Exact-angle orbital compatibility.** Fixing stellar mass to the catalogue lens angle and refitting constant anisotropy raises inner-motion chi-squared totals from 41-46 to 585-625; outer residuals worsen too. All fitted anisotropies remain interior. This conditional incompatibility persists across the four profiles and both population proxies; the lens angle is consumed as a constraint, not predicted. [Report](companion-extensions/exact-lens-orbits-report.md).
+
 **Lens bending budget.** At the current inner-star fits, stars alone exceed the catalogue-angle bending in J0037-0942, J1204+0358 and J1402+6321, under all four profiles and both population assumptions. Positive companion changes alone cannot resolve these three while stars and geometry stay fixed. This is a conditional stellar-model/geometry incompatibility, not a measured excess stellar mass. [Report](companion-extensions/lens-bending-budget-report.md).
 
 **Capacity profiles transferred to six lenses.** Galaxy-trained amplitudes give lens-angle RMS 13.07%-13.19% for the matched reference, 13.29%-13.46% for local filling and 13.05%-13.16% for refined recycling. Recycling helps only 3/6 systems per population and performs worse on galaxy test motions; outer stellar discrepancies remain. No joint solution is adopted. Conditional geometry and luminosity proxies are retained. [Report](companion-extensions/capacity-lensing-report.md).

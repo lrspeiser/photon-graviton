@@ -1,0 +1,9 @@
+# Exact-angle stellar-mass and orbital compatibility
+
+13 September 2026. Protocol before execution.
+
+For the original and galaxy-training-adjusted reference, local-filling and full-recycling branches, retain the existing six lenses, geometry, light profiles, population proxies and fixed companion profiles. At each catalogue angle solve the stellar mass required by the effective lens equation. Hold that mass fixed and fit only constant anisotropy to the inner stellar Vrms bins with their released covariance and previous beta bounds/starts. Compare inner chi-squared, outer conditional residual and anisotropy boundaries to the unconstrained nuisance fits for the same branch.
+
+The lens angle is deliberately used as a constraint, not predicted. Report the cost of imposing exact agreement, rather than interpreting zero lens residual as success. Catalogue angle/model uncertainty is not supplied as a likelihood here; therefore changes in chi-squared are descriptive compatibility costs, not calibrated exclusion levels. Both population proxies and all six systems must be retained. Negative or out-of-bound required stellar mass is an infeasible case, not a reason to substitute a favorable mass. Do not tune shared companion parameters on these targets or adopt the resulting stellar parameters into the theory.
+
+Run `lensing.py --capacity-branch=BRANCH --capacity-exact-lens` for original, reference, local and recycling, preserving previous outputs under new names. Verify the target-angle residual, equality of observation/geometry inputs, and that the constrained inner minimum does not improve on the unconstrained optimum beyond numerical tolerance. This tests constant orbital anisotropy; general orbital distribution functions, mass-to-light gradients and geometry revisions remain untested.

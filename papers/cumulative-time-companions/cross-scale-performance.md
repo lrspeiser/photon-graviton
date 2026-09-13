@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Lens-required masses and constant orbital anisotropy
+
+The [exact-angle compatibility experiment](../../research_work/results/companion-extensions/exact-lens-orbits-report.md) fixes stellar masses by each catalogue lens angle and refits constant anisotropy to inner stellar motions. Across four profiles and two population assumptions, inner chi-squared totals rise from 41-46 to 585-625 and conditional outer residual sums worsen. The same three lenses dominate the cost; no anisotropy hits a bound. Exact lens agreement is imposed and is not a prediction. This tests the retained stellar/companion profiles and conditional geometry, leaving radial population/orbital structure and geometry changes open.
+
 ## Stellar and companion lens bending budget
 
 The [48-case bending decomposition](../../research_work/results/companion-extensions/lens-bending-budget-report.md) finds the same three stellar-only excesses under every tested profile and population proxy. At the adjusted-reference Chabrier fits, stars in those systems supply 114.39%-117.65% of the required bending at the catalogue angle. Even removing companions leaves a discrepancy, so companion-only changes cannot solve those cases with stars and geometry fixed. Stellar mass profiles, orbital assumptions, joint refitting and the conditional optical geometry must be assessed explicitly. The decomposition reproduces existing lens roots to 3.93e-10 relative and is an inverse diagnostic, not a new fit or an independent stellar-mass measurement.
