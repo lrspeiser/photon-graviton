@@ -1,0 +1,205 @@
+{
+  "scope": "Hypothetical at-rest massive-particle capture followed by radial collisionless motion, random orbit axes and fully mixed phases, in a fixed Plummer potential. No capture energy/momentum mechanism, self-gravity, finite-age mixing or data fit.",
+  "provenance": "Known Newtonian orbit and residence-time equations applied to optional depth-capture birth distribution.",
+  "formulas": [
+    "v(r|apocenter)=sqrt(2*(Psi(r)-Psi(apocenter)))",
+    "P(r<R|apocenter)=integral_0^min(R,apocenter) dr/v divided by integral_0^apocenter dr/v",
+    "M_mixed(<R)=integral birth_weight(apocenter)*P(r<R|apocenter) dapocenter"
+  ],
+  "cases": [
+    {
+      "A": 0.1,
+      "normalization_error": 3.2229086066593027e-09,
+      "birth_half_mass_radius": 2.3086235910553223,
+      "phase_mixed_half_mass_radius": 1.5662224412276113,
+      "half_mass_radius_ratio": 0.6784226095998858,
+      "formal_central_r_squared_density_coefficient": 0.025923505745521717,
+      "central_mass_asymptote_relative_error": 2.6290688106556104e-06,
+      "samples": [
+        {
+          "radius_over_a": 0.001,
+          "birth_mass_fraction": 3.9997969703477894e-10,
+          "phase_mixed_mass_fraction": 0.00032576523727866855,
+          "quadrature_absolute_difference": 3.2526065174565133e-18
+        },
+        {
+          "radius_over_a": 0.1,
+          "birth_mass_fraction": 0.00039541974264414365,
+          "phase_mixed_mass_fraction": 0.0329034367679749,
+          "quadrature_absolute_difference": 9.08995101411847e-16
+        },
+        {
+          "radius_over_a": 1.0,
+          "birth_mass_fraction": 0.17554407456363574,
+          "phase_mixed_mass_fraction": 0.35112678544900916,
+          "quadrature_absolute_difference": 9.769962616701378e-15
+        },
+        {
+          "radius_over_a": 3.0,
+          "birth_mass_fraction": 0.597509481126404,
+          "phase_mixed_mass_fraction": 0.6996655348958831,
+          "quadrature_absolute_difference": 2.2426505097428162e-14
+        },
+        {
+          "radius_over_a": 10.0,
+          "birth_mass_fraction": 0.8710920124613948,
+          "phase_mixed_mass_fraction": 0.9036165031581613,
+          "quadrature_absolute_difference": 8.215650382226158e-14
+        }
+      ]
+    },
+    {
+      "A": 1.0,
+      "normalization_error": 1.984161834833742e-08,
+      "birth_half_mass_radius": 2.6775703347538404,
+      "phase_mixed_half_mass_radius": 1.8368398343053174,
+      "half_mass_radius_ratio": 0.6860099286520461,
+      "formal_central_r_squared_density_coefficient": 0.02126391488161918,
+      "central_mass_asymptote_relative_error": 1.916166128657082e-06,
+      "samples": [
+        {
+          "radius_over_a": 0.001,
+          "birth_mass_fraction": 2.2780012582424455e-10,
+          "phase_mixed_mass_fraction": 0.00026721074713381574,
+          "quadrature_absolute_difference": 5.204170427930421e-18
+        },
+        {
+          "radius_over_a": 0.1,
+          "birth_mass_fraction": 0.00022637159878796987,
+          "phase_mixed_mass_fraction": 0.026932506018278436,
+          "quadrature_absolute_difference": 1.0477729794899915e-15
+        },
+        {
+          "radius_over_a": 1.0,
+          "birth_mass_fraction": 0.12904442232141913,
+          "phase_mixed_mass_fraction": 0.2991317305509845,
+          "quadrature_absolute_difference": 1.021405182655144e-14
+        },
+        {
+          "radius_over_a": 3.0,
+          "birth_mass_fraction": 0.5441099786836661,
+          "phase_mixed_mass_fraction": 0.6579926907046818,
+          "quadrature_absolute_difference": 1.0103029524088925e-14
+        },
+        {
+          "radius_over_a": 10.0,
+          "birth_mass_fraction": 0.8514283285625799,
+          "phase_mixed_mass_fraction": 0.8888551385742777,
+          "quadrature_absolute_difference": 1.7430501486614958e-14
+        }
+      ]
+    },
+    {
+      "A": 3.0,
+      "normalization_error": 1.6581264805637375e-08,
+      "birth_half_mass_radius": 3.3186549827938983,
+      "phase_mixed_half_mass_radius": 2.312957274018471,
+      "half_mass_radius_ratio": 0.6969562325732476,
+      "formal_central_r_squared_density_coefficient": 0.015134253522238196,
+      "central_mass_asymptote_relative_error": 8.501872723609694e-07,
+      "samples": [
+        {
+          "radius_over_a": 0.001,
+          "birth_mass_fraction": 5.805050114989545e-11,
+          "phase_mixed_mass_fraction": 0.00019018280042297476,
+          "quadrature_absolute_difference": 6.342582709040201e-18
+        },
+        {
+          "radius_over_a": 0.1,
+          "birth_mass_fraction": 5.86857423118343e-05,
+          "phase_mixed_mass_fraction": 0.019104368267183997,
+          "quadrature_absolute_difference": 8.708311849403572e-16
+        },
+        {
+          "radius_over_a": 1.0,
+          "birth_mass_fraction": 0.06794286170445576,
+          "phase_mixed_mass_fraction": 0.2243606467694389,
+          "quadrature_absolute_difference": 1.174060848541103e-14
+        },
+        {
+          "radius_over_a": 3.0,
+          "birth_mass_fraction": 0.4583062138579469,
+          "phase_mixed_mass_fraction": 0.5900953041661101,
+          "quadrature_absolute_difference": 2.3314683517128287e-15
+        },
+        {
+          "radius_over_a": 10.0,
+          "birth_mass_fraction": 0.8184499315188815,
+          "phase_mixed_mass_fraction": 0.8640665643831807,
+          "quadrature_absolute_difference": 2.0317081350640365e-14
+        }
+      ]
+    },
+    {
+      "A": 10.0,
+      "normalization_error": 3.136508253120951e-08,
+      "birth_half_mass_radius": 4.639357129299965,
+      "phase_mixed_half_mass_radius": 3.2959331647610686,
+      "half_mass_radius_ratio": 0.7104288531584534,
+      "formal_central_r_squared_density_coefficient": 0.00856985964627481,
+      "central_mass_asymptote_relative_error": 1.760436483255745e-07,
+      "samples": [
+        {
+          "radius_over_a": 0.001,
+          "birth_mass_fraction": 3.2754855805790943e-13,
+          "phase_mixed_mass_fraction": 0.00010769205138662857,
+          "quadrature_absolute_difference": 6.46455545344482e-18
+        },
+        {
+          "radius_over_a": 0.1,
+          "birth_mass_fraction": 3.732769805392493e-07,
+          "phase_mixed_mass_fraction": 0.010787916646119349,
+          "quadrature_absolute_difference": 7.594272433131266e-14
+        },
+        {
+          "radius_over_a": 1.0,
+          "birth_mass_fraction": 0.011010080068599432,
+          "phase_mixed_mass_fraction": 0.1273330396747528,
+          "quadrature_absolute_difference": 4.163336342344337e-16
+        },
+        {
+          "radius_over_a": 3.0,
+          "birth_mass_fraction": 0.30564004661688826,
+          "phase_mixed_mass_fraction": 0.4640237199918407,
+          "quadrature_absolute_difference": 2.4980018054066022e-15
+        },
+        {
+          "radius_over_a": 10.0,
+          "birth_mass_fraction": 0.7517875370364444,
+          "phase_mixed_mass_fraction": 0.8137686747632649,
+          "quadrature_absolute_difference": 2.864375403532904e-14
+        }
+      ]
+    }
+  ],
+  "independent_orbit_checks": [
+    {
+      "apocenter_over_a": 0.3,
+      "fall_time_in_sqrt_a_cubed_over_GM": 1.6492809131330561,
+      "ode_fall_time_relative_error": -1.9897417047332056e-12,
+      "max_cdf_absolute_difference": 4.832911848495769e-12,
+      "relative_energy_drift": 1.0125233984581428e-13
+    },
+    {
+      "apocenter_over_a": 1.0,
+      "fall_time_in_sqrt_a_cubed_over_GM": 2.3609966169314873,
+      "ode_fall_time_relative_error": 1.9895196601282805e-13,
+      "max_cdf_absolute_difference": 2.3550605909861133e-12,
+      "relative_energy_drift": 1.7104095917375162e-12
+    },
+    {
+      "apocenter_over_a": 3.0,
+      "fall_time_in_sqrt_a_cubed_over_GM": 6.797122693490607,
+      "ode_fall_time_relative_error": 7.422951142643797e-13,
+      "max_cdf_absolute_difference": 3.458899833219675e-12,
+      "relative_energy_drift": 1.0358602864357636e-11
+    },
+    {
+      "apocenter_over_a": 10.0,
+      "fall_time_in_sqrt_a_cubed_over_GM": 35.98143717386537,
+      "ode_fall_time_relative_error": 6.45039577307216e-13,
+      "max_cdf_absolute_difference": 6.067091273820324e-13,
+      "relative_energy_drift": 3.982658647316839e-11
+    }
+  ]
+}
