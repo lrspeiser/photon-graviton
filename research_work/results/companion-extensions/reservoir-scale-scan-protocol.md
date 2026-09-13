@@ -1,0 +1,5 @@
+# Fixed capture-scale profile diagnostic
+
+Scope fixed before execution: J1621+3931 only, ac/Re = 0.1, 0.3, 1, 3, 10, 30, 100. Refit the five remaining stellar/orbit/bending parameters using the existing full motion covariance and consumed lens calibration. Keep k0, light model, radial grid, slope constraints and bounds from free-companion.py. Evaluate direct profiles, with no interpolation across capture scales.
+
+Use the recorded stellar-only and free-companion solutions plus twelve grid starts at each scale, and the preceding scale solution when available. Preserve all optimizer outcomes. Compare chi-squared and stored mass, including the analytic exterior-tail bound and conditional E=M c^2. Verify zero-companion reproduction, covariance decomposition, lens closure and refined necessary slope conditions. No independent observations, source histories, formal confidence intervals or distribution-function positivity are supplied. Fixed-scale results are conditional profile minima found by local optimization, not proven global minima. The shared one-third reference is unchanged.

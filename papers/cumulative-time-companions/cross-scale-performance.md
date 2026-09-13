@@ -1,3 +1,9 @@
+## Fixed-scale scan: the extreme reservoir is not uniquely required
+
+The new J1621+3931 profile scan holds ac/Re at 0.1, 0.3, 1, 3, 10, 30 and 100 and refits the five remaining parameters. At 10, chi-squared is 2.762839 with 1.73e14 solar masses; at 100 it is 2.761989 with 8.42e16 solar masses. The mass changes by about 486 times for a score change of only 0.000850. Stellar-only gives 3.093851. Thus the extreme endpoint is not a uniquely measured energy requirement. Free normalization still does not test one-third retention. Doubling angular quadrature preserves the result; support, source supply and independent outer evidence remain open.
+
+See [fixed-scale report](../../research_work/results/companion-extensions/reservoir-scale-scan-report.md). This result follows the v1.3 PDF snapshot and qualifies its frozen extreme-branch predictions; the paper's proposed profile scan has now been executed.
+
 > Current paper: v1.3 (13 September 2026) incorporates evidence through 2054afb, including matched free-companion/NFW fits, the extreme-reservoir inventory and frozen outer predictions. No new fitting was done for this update. Notices below referring to v1.2 are historical; the current manuscript and PDF include those results.
 
 ## Frozen outer-gravity predictions of the free companion fits (after v1.2)

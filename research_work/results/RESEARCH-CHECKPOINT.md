@@ -1,3 +1,5 @@
+> New fixed-scale result: J1621+3931 can store about 486 times less mass than the extreme fit with only 0.000850 higher chi-squared. Stellar-only differs by just 0.332. The huge reservoir is not uniquely required by these inner data. See reservoir-scale-scan-report.md; v1.3 PDF predates this scan.
+
 > Current paper: v1.3 (13 September 2026) incorporates evidence through 2054afb, including matched free-companion/NFW fits, the extreme-reservoir inventory and frozen outer predictions. No new fitting was done for this update. Notices below referring to v1.2 are historical; the current manuscript and PDF include those results.
 
 > Frozen outer predictions: the extended J1621+3931 free-fit reservoir implies a circular-speed peak about 4246 km/s near 9.17 Mpc and radial shear at sampled 1 and 3 Mpc, returning tangential by 10 Mpc. This is an extrapolated test target, not new observed data. No additional critical ring is found in the finite scan. Numerical projection checks pass after resolving the extended envelope. The v1.2 PDF predates this experiment.
