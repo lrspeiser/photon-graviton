@@ -1,3 +1,5 @@
+Latest resolved fit: [seven training lenses, 47 radial bins](../research_work/results/slacs-resolved-fit/report.md). Fixed extra force lowers summed radial chi-square 205.74 to 111.22, but residuals remain and lensing RMS does not improve. Training-only conditional result; all six objectives open.
+
 Latest resolved-input audit: [54 training radial measurements](../research_work/results/slacs-resolved-input-audit/report.md). All covariance matrices numerically valid; correlations reach 0.843. Release PSF FWHM is 0.8 arcsec; J0330-0020 use flag is zero and remains unresolved before fitting. No reserved score opened.
 
 Latest data acquisition: [KCWI radial profiles and covariances for 14 SLACS lenses](../research_work/results/slacs-resolved-data/report.md). Eight overlap training; three validation, two test and one unassigned retained. Pinned source hashes verified; no resolved fit or reserved evaluation performed.
