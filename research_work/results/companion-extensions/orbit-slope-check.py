@@ -1,10 +1,13 @@
 """Necessary density-slope/anisotropy check for a separable augmented-density completion."""
 from pathlib import Path
-import hashlib,json
+import hashlib,json,argparse
 import numpy as np
 from numpy.polynomial.legendre import leggauss
 P=Path(__file__).resolve().parent
-orbits=P/'radial-orbits-results.json';light=P.parent/'slacs-light-profile-audit/results.json'
+parser=argparse.ArgumentParser()
+parser.add_argument('--combined',action='store_true',help='Check the combined gradient/orbit fits without overwriting the radial-only check')
+args=parser.parse_args()
+orbits=P/('gradient-orbits-results.json' if args.combined else 'radial-orbits-results.json');light=P.parent/'slacs-light-profile-audit/results.json'
 fit=json.loads(orbits.read_text());profiles={r['Name']:r for r in json.loads(light.read_text())['rows']}
 def deproject_slope(profile,x,order):
     nodes,weights=leggauss(order);total=np.zeros_like(x);slope_weight=np.zeros_like(x)
@@ -35,7 +38,7 @@ for row in fit['rows']:
         assert derivative_error<.002
         cache[name]=gamma2
         out['profile_checks'].append(dict(Name=name,max_quadrature_slope_difference=difference,max_finite_difference_slope_difference=derivative_error))
-    cases=[('original_bounds',row['beta0'],row['beta_infinity'])]
+    cases=[('combined' if args.combined else 'original_bounds',row['beta0'],row['beta_infinity'])]
     if 'expanded_outer_bound_followup' in row:
         b=row['expanded_outer_bound_followup'];cases.append(('expanded_outer_bound',b['beta0'],b['beta_infinity']))
     for label,b0,bi in cases:
@@ -44,12 +47,13 @@ for row in fit['rows']:
         out['rows'].append(dict(Name=name,population=row['population'],case=label,beta0=b0,beta_infinity=bi,
             minimum_slope_minus_twice_beta=float(margin[i]),minimum_radius_Re=float(x[i]),
             sampled_violation=bool(min(margin)<-1e-6),
+            violation_radius_range_Re=([float(x[margin < -1e-6][0]),float(x[margin < -1e-6][-1])] if np.any(margin < -1e-6) else None),
             margin_at_Re=float(np.interp(0,np.log(x),margin))))
-for label in ['original_bounds','expanded_outer_bound']:
+for label in (['combined'] if args.combined else ['original_bounds','expanded_outer_bound']):
     rr=[r for r in out['rows'] if r['case']==label]
     out['summary'].append(dict(case=label,cases=len(rr),sampled_violations=sum(r['sampled_violation'] for r in rr),
         minimum_margin=min(r['minimum_slope_minus_twice_beta'] for r in rr)))
 out['input_sha256']={str(f.relative_to(P.parents[2])).replace('\\','/'):hashlib.sha256(f.read_bytes()).hexdigest() for f in [orbits,light]}
 out['theorem_reference']='https://arxiv.org/abs/1010.4301'
-(P/'orbit-slope-check-results.json').write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
+(P/('gradient-orbits-slope-results.json' if args.combined else 'orbit-slope-check-results.json')).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(out['summary'],indent=2));print(out['profile_checks'])

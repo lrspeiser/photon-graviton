@@ -1,3 +1,11 @@
+## Combined stellar gradients and radial orbits (after v1.2)
+
+The formerly separate extensions have now been fitted together, with the exact-third companion density unchanged and the catalogue angle used to calibrate stellar mass. Three stellar nuisance parameters fit inner motions. Inner chi-squared falls from the radial-only expanded configuration's 106.88/105.62 to 82.40/81.67; outer residual-square sums fall from 115.71/114.32 to 103.20/101.32. Both populations still have large outer residuals. Boundary dependence remains, and the preferred gradients differ in sign between galaxies.
+
+Unlike the prior radial-only fits, six of these twelve new configurations violate gamma>=2 beta near extrapolated centers: J1402+6321, J1621+3931 and J1630+4520 under both population assumptions. The minimum margin is -0.07228. This rejects the specified separable augmented-density completion with these profiles, not all alternative orbital constructions. A finite-radius pass elsewhere is neither positivity nor stability. The combined fit is therefore an improvement in descriptive flexibility, not an established joint physical solution. The v1.2 PDF remains a historical snapshot before this new experiment.
+
+See [protocol](../../research_work/results/companion-extensions/gradient-orbits-protocol.md), [full results and limitations](../../research_work/results/companion-extensions/gradient-orbits-report.md), and [orbital check](../../research_work/results/companion-extensions/gradient-orbits-slope-results.json).
+
 > Paper updated to v1.2 (13 September 2026): theory-basis.md and output/pdf/theory-basis.pdf now incorporate capacity/recycling, joint lensing, stellar-gradient and radial-orbit results, and the necessary orbit-slope check. No joint physical solution is claimed. Earlier snapshot notices below are historical.
 
 # Cross-scale performance of radiation-conditioned companion deposition

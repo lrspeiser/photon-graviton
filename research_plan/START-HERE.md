@@ -1,3 +1,5 @@
+> New result after paper v1.2: combining stellar gradients and radial orbits lowers inner chi-squared to 82.40/81.67, but outer residual-square sums remain 103.20/101.32 and six of twelve fits fail the necessary orbital condition near extrapolated centers. See the combined-fit report; no physical solution is adopted. The v1.2 PDF predates this experiment.
+
 > Paper updated to v1.2 (13 September 2026): theory-basis.md and output/pdf/theory-basis.pdf now incorporate capacity/recycling, joint lensing, stellar-gradient and radial-orbit results, and the necessary orbit-slope check. No joint physical solution is claimed. Earlier snapshot notices below are historical.
 
 # Start here â€” active research
