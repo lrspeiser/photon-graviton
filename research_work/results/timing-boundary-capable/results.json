@@ -1,0 +1,1832 @@
+{
+  "scope": "Development on all 16 exposed invalid baseline cases; not full recalibration or scientific inference",
+  "source_sha256": "99dc6b389af86486f4a19bf3fe2c679e113e438b698ecff1d6ca7fc4eb559c3b",
+  "implementation_sha256": "70b77abba033e7b83cb7eb938ca82372b384dcb366afe6906bdb9c100275ca68",
+  "integration_sha256": "edf01d32a15a927c5633aa15456ad6bd9535fdf75fccdcfc33fab78df262afea",
+  "cases": [
+    {
+      "label": "split_gaussian-snr5-b1-seed902",
+      "array_sha256": "f6e3bd2abe4c7add3a11c3559261ad8519de73c5582673120f7f1e5982d9d2b6",
+      "original": {
+        "a": 3.3839651589119026,
+        "b": 1.0300322547430871,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 49.16639506186684,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 49.166395061866865,
+            "parameters": [
+              3.383965163413278,
+              1.030032229755701,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 49.16639506186684,
+            "parameters": [
+              3.3839651589119026,
+              1.0300322547430871,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 49.166395061867156,
+            "parameters": [
+              3.3839651250726805,
+              1.0300323364825237,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.3832243385351606,
+            1.0309004496455654,
+            1.6807777770545018e-08
+          ],
+          "objective": 49.15417438956769,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.3832243385351606,
+              1.0309004496455654,
+              1.6807777770545018e-08
+            ],
+            "objective": 49.15417438956769,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.3831728442338016,
+              1.0310555301376192,
+              5.337760709404976e-10
+            ],
+            "objective": 49.15417604108237,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.3835861909199254,
+              1.030475281724608,
+              0.01922248225077152
+            ],
+            "objective": 49.160780119801956,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.3831359218306836,
+              1.0311666492176716,
+              1.2998511272575225e-08
+            ],
+            "objective": 49.15417760852548,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.3835862731188144,
+              1.0304750853650435,
+              0.019222433413376382
+            ],
+            "objective": 49.16078011980168,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.006605730234262808
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed903",
+      "array_sha256": "d8f1ec863c946110f0de2b313e2c9665d57599eed5ce96fbf146f12da0c61a34",
+      "original": {
+        "a": 3.415721781042381,
+        "b": -0.04308925523357725,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 47.15922268986888,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 47.15922268986889,
+            "parameters": [
+              3.4157217706384757,
+              -0.043089225609612494,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.15922268986922,
+            "parameters": [
+              3.415721727759404,
+              -0.043089110021509974,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.15922268986888,
+            "parameters": [
+              3.415721781042381,
+              -0.04308925523357725,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.415718940945501,
+            -0.04312794323547313,
+            0.028831932494127452
+          ],
+          "objective": 47.159192530279924,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.4167788013130442,
+              -0.04814477822344784,
+              1.4259311264604927e-08
+            ],
+            "objective": 47.18136383025905,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.415718940945501,
+              -0.04312794323547313,
+              0.028831932494127452
+            ],
+            "objective": 47.159192530279924,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.416705993907259,
+              -0.04800269047425494,
+              3.590046033318884e-08
+            ],
+            "objective": 47.18136362935851,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.415718994182417,
+              -0.043127845059572345,
+              0.02883157417197811
+            ],
+            "objective": 47.15919253030643,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4167672260570816,
+              -0.048122220037835894,
+              2.065057783612493e-09
+            ],
+            "objective": 47.18136370039654,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.022171299979127923
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed904",
+      "array_sha256": "a962d895939a47fa39e460a78f9e8d0ef7606da82467f18989929443496363c5",
+      "original": {
+        "a": 3.4013713097817204,
+        "b": 0.005377606865683133,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 48.5492316657143,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 48.5492316657143,
+            "parameters": [
+              3.4013713097817204,
+              0.005377606865683133,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 48.54923166571442,
+            "parameters": [
+              3.4013712939878102,
+              0.0053776494326332296,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 48.549231665715126,
+            "parameters": [
+              3.401371392873555,
+              0.005377354790811915,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.401364180002243,
+            0.005404606085043612,
+            0.028982271726869735
+          ],
+          "objective": 48.54922246701293,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.4005542627886984,
+              0.007807360238515293,
+              0.0
+            ],
+            "objective": 48.563854564178726,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4013641786553,
+              0.005404658524771816,
+              0.02898186230270021
+            ],
+            "objective": 48.54922246702547,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4013641925687628,
+              0.005404709431877319,
+              0.028981931795279945
+            ],
+            "objective": 48.54922246702406,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.400554343699959,
+              0.007807284356192157,
+              8.644117461317378e-05
+            ],
+            "objective": 48.56385456418398,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.401364180002243,
+              0.005404606085043612,
+              0.028982271726869735
+            ],
+            "objective": 48.54922246701293,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.014632097171045189
+      }
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed904",
+      "array_sha256": "1e6fc94180227f77bd4676b1353bfc49790bfe12047b7c9842199a99e19b1933",
+      "original": {
+        "a": 3.5126495582369808,
+        "b": -0.012733867192762868,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 47.57056564231015,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 47.570565642310235,
+            "parameters": [
+              3.512649542033768,
+              -0.01273381216060205,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.57056564231051,
+            "parameters": [
+              3.5126495254875993,
+              -0.012733766418366585,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.57056564231015,
+            "parameters": [
+              3.5126495582369808,
+              -0.012733867192762868,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.5119914622368693,
+            -0.011030909297591493,
+            0.004585094779257729
+          ],
+          "objective": 47.516033253891635,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.5114109882024764,
+              -0.009649450934662579,
+              1.4218284029141546e-09
+            ],
+            "objective": 47.516506442280836,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.511410981923602,
+              -0.009649424035040773,
+              5.682211690107688e-06
+            ],
+            "objective": 47.51650644228089,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5114108361490795,
+              -0.009649426839753127,
+              1.621305338663732e-07
+            ],
+            "objective": 47.5165064423254,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.511991324581191,
+              -0.011030539711598205,
+              0.0045850592435384505
+            ],
+            "objective": 47.51603325389673,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5119914622368693,
+              -0.011030909297591493,
+              0.004585094779257729
+            ],
+            "objective": 47.516033253891635,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.00047318843376586983
+      }
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b1-seed904",
+      "array_sha256": "8e6b0fde3caee042696f7e5c020b8255b62d4d991a0ec8de4806a1d672feba3f",
+      "original": {
+        "a": 3.53577163350268,
+        "b": 0.9055054118634984,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 46.90825771731032,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 46.90825771731032,
+            "parameters": [
+              3.53577163350268,
+              0.9055054118634984,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 46.90825771731035,
+            "parameters": [
+              3.5357716255927087,
+              0.9055054344289567,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 46.90825771731083,
+            "parameters": [
+              3.535771592560795,
+              0.9055055245653723,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.5357813989279614,
+            0.9051477072473784,
+            0.02266191510907805
+          ],
+          "objective": 46.897420111650426,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.5367008365533437,
+              0.9030988757618735,
+              5.542364448599992e-07
+            ],
+            "objective": 46.91915261561618,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5357814582469262,
+              0.9051476150844716,
+              0.022661766081932513
+            ],
+            "objective": 46.89742011165556,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5357813822371,
+              0.9051477473256736,
+              0.02266191027161747
+            ],
+            "objective": 46.897420111650874,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5392995317439024,
+              0.8968537273045146,
+              1.3273470223391043e-07
+            ],
+            "objective": 46.91852300190533,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5357813989279614,
+              0.9051477072473784,
+              0.02266191510907805
+            ],
+            "objective": 46.897420111650426,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.021732503965750993
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed905",
+      "array_sha256": "87f30aba183114f78b481f0f05493d137ee6859342c8957a4087153b404819a2",
+      "original": {
+        "a": 3.41491619945464,
+        "b": 0.009280488700209907,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 41.74326577752391,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 41.74326577752391,
+            "parameters": [
+              3.41491619945464,
+              0.009280488700209907,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 41.743265777523966,
+            "parameters": [
+              3.4149161950641456,
+              0.009280489639659972,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 41.743265777524,
+            "parameters": [
+              3.414916187353166,
+              0.009280513303010694,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.41176543896593,
+            0.01864999426378766,
+            4.848009999792109e-23
+          ],
+          "objective": 41.55922416907616,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.4117671278441506,
+              0.018647036283293488,
+              6.78861715846863e-14
+            ],
+            "objective": 41.55922416923133,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.413021209103317,
+              0.014922002515018039,
+              6.596804461264614e-07
+            ],
+            "objective": 41.55937812186978,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.41176543896593,
+              0.01864999426378766,
+              4.848009999792109e-23
+            ],
+            "objective": 41.55922416907616,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4130211690771635,
+              0.01492210665066831,
+              0.0
+            ],
+            "objective": 41.559378121870424,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.413021167535662,
+              0.014922123606537052,
+              3.748216906318029e-07
+            ],
+            "objective": 41.55937812187047,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.00015395279431373865
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed905",
+      "array_sha256": "0072ae56ffce41cfd160f469ce207746e952e5d964e4f2e0a10353b2528ca50d",
+      "original": {
+        "a": 3.4272794521224657,
+        "b": 0.8957006824049917,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 48.68050070829684,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 48.68050070829689,
+            "parameters": [
+              3.427279446212205,
+              0.8957006984052542,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 48.68050070829691,
+            "parameters": [
+              3.4272794436601726,
+              0.8957007129533547,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 48.68050070829684,
+            "parameters": [
+              3.4272794521224657,
+              0.8957006824049917,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.4243940616556663,
+            0.9039141802805221,
+            3.547559119542624e-08
+          ],
+          "objective": 48.58021362761225,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.4243947363241247,
+              0.9039036212542639,
+              3.4669661636065895e-18
+            ],
+            "objective": 48.58021364267254,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4243940616556663,
+              0.9039141802805221,
+              3.547559119542624e-08
+            ],
+            "objective": 48.58021362761225,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4243932896639757,
+              0.9039258233912255,
+              1.6920535068529804e-20
+            ],
+            "objective": 48.580213649377335,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.428305913370888,
+              0.8908107718781801,
+              0.0
+            ],
+            "objective": 48.58123573737421,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4243946201478033,
+              0.9039052856076385,
+              2.020316203401649e-18
+            ],
+            "objective": 48.58021363719077,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.0010221097619549369
+      }
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed905",
+      "array_sha256": "9e7e8a72cb7653ed53ef7b88fc30701a5468e9677cb07e6593064218d3867ed4",
+      "original": {
+        "a": 3.5396592481922697,
+        "b": -0.05506356800334883,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 44.57770748284594,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 44.57770748284594,
+            "parameters": [
+              3.5396592481922697,
+              -0.05506356800334883,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 44.57770748284614,
+            "parameters": [
+              3.539659228870082,
+              -0.05506351593304013,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 44.57770748284609,
+            "parameters": [
+              3.539659233666484,
+              -0.05506353075690461,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.539296437024003,
+            -0.05380894526936282,
+            0.015291760224869224
+          ],
+          "objective": 44.55145184257021,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.5372076960159777,
+              -0.04613713799329486,
+              4.413421175994595e-07
+            ],
+            "objective": 44.552931748536906,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.539296376996091,
+              -0.05380875179625529,
+              0.015292188643268588
+            ],
+            "objective": 44.551451842580924,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5392964005616965,
+              -0.053808859934116215,
+              0.015291789967530993
+            ],
+            "objective": 44.55145184257108,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.539296437024003,
+              -0.05380894526936282,
+              0.015291760224869224
+            ],
+            "objective": 44.55145184257021,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.537207854870684,
+              -0.046137565276582755,
+              2.4831023402033973e-05
+            ],
+            "objective": 44.5529317485339,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.0014799059666970038
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed909",
+      "array_sha256": "8af308986ed1418655c612654da1e5dd66113e58461d493a62f80d59c2b6de43",
+      "original": {
+        "a": 3.449336866578827,
+        "b": -0.06699156591906959,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 41.76390346912588,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 41.76390346912611,
+            "parameters": [
+              3.449336838959726,
+              -0.0669914932650797,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 41.76390346912601,
+            "parameters": [
+              3.4493368476849864,
+              -0.06699151300743611,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 41.76390346912588,
+            "parameters": [
+              3.449336866578827,
+              -0.06699156591906959,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.4475285053284814,
+            -0.06266239782800911,
+            6.20743381385601e-25
+          ],
+          "objective": 41.50022870227003,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.44751949952218,
+              -0.06263991474202352,
+              1.7973309466145674e-19
+            ],
+            "objective": 41.500228727482884,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.441194114175045,
+              -0.04830631355005448,
+              0.0004522905981670676
+            ],
+            "objective": 41.50261710844687,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.447523768271624,
+              -0.0626505875421102,
+              1.2522038413910676e-19
+            ],
+            "objective": 41.50022871540699,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4475285053284814,
+              -0.06266239782800911,
+              6.20743381385601e-25
+            ],
+            "objective": 41.50022870227003,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4475298697632426,
+              -0.06331597840252183,
+              0.0008594338579947594
+            ],
+            "objective": 41.50030839075199,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.002388406176841329
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed909",
+      "array_sha256": "62acdd9ea988d1745bd74581175f7116e0f6009ab4c92d7d2a85f55fec5f9a00",
+      "original": {
+        "a": 3.4422991401340344,
+        "b": 0.9441019653493042,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 47.359886773258566,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 47.359886773258765,
+            "parameters": [
+              3.4422991020925613,
+              0.9441020666324303,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.35988677325891,
+            "parameters": [
+              3.4422990898403314,
+              0.9441021169867773,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 47.359886773258566,
+            "parameters": [
+              3.4422991401340344,
+              0.9441019653493042,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.441560390535616,
+            0.9473157084251658,
+            1.1326346302257119e-23
+          ],
+          "objective": 47.33977830575833,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.443298966870887,
+              0.941095999483626,
+              0.0
+            ],
+            "objective": 47.339835911208986,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.441560390535616,
+              0.9473157084251658,
+              1.1326346302257119e-23
+            ],
+            "objective": 47.33977830575833,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.443298866374142,
+              0.9410986473854577,
+              3.40720881231267e-24
+            ],
+            "objective": 47.33983591016484,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.44329904266357,
+              0.9410944280842015,
+              4.492718150830707e-23
+            ],
+            "objective": 47.33983590978117,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4411900752428015,
+              0.9461764602411542,
+              0.01161504231999771
+            ],
+            "objective": 47.341490991583115,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.0017126858247848986
+      }
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed909",
+      "array_sha256": "40998e9d58333fd0d1fb67dc376caae2b17e6bae93f0fac593ee997ca6f48be1",
+      "original": {
+        "a": 3.5666536007051692,
+        "b": -0.0917850956241679,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 46.577963799920056,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 46.577963799920056,
+            "parameters": [
+              3.5666536007051692,
+              -0.0917850956241679,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 46.57796379992008,
+            "parameters": [
+              3.5666535978081906,
+              -0.09178508537077454,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 46.57796379992066,
+            "parameters": [
+              3.5666535709719165,
+              -0.09178504244871602,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.5643240613440588,
+            -0.08748355906944467,
+            4.126370724126141e-09
+          ],
+          "objective": 46.408527971576305,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.5643221510684993,
+              -0.08748028313283103,
+              8.95188947478624e-18
+            ],
+            "objective": 46.40852797326846,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5643240613440588,
+              -0.08748355906944467,
+              4.126370724126141e-09
+            ],
+            "objective": 46.408527971576305,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5654021212499676,
+              -0.09126242802181239,
+              5.516126373578295e-09
+            ],
+            "objective": 46.40856030975055,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5643515574057383,
+              -0.08753077554503035,
+              5.835538098906992e-10
+            ],
+            "objective": 46.40852822896173,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5643227037441916,
+              -0.08748123890619443,
+              1.7040302123725298e-08
+            ],
+            "objective": 46.40852797371883,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 3.2338174243307094e-05
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b1-seed912",
+      "array_sha256": "b4e9b245e709478c184a2936f7188fd832d718e2d21490c2df6e4bae306e8df8",
+      "original": {
+        "a": 3.436169218794809,
+        "b": 1.044051500627049,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 46.397560136244984,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 46.397560136244984,
+            "parameters": [
+              3.436169218794809,
+              1.044051500627049,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 46.39756013624512,
+            "parameters": [
+              3.436169199373332,
+              1.0440515518126812,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 46.39756013624509,
+            "parameters": [
+              3.436169203821673,
+              1.0440515401349475,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.4376470134815817,
+            1.0388858654494673,
+            9.521925483311784e-07
+          ],
+          "objective": 46.32733580900876,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.437646761834327,
+              1.0388864969717015,
+              7.453618709443087e-09
+            ],
+            "objective": 46.327335809019104,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.437647192770619,
+              1.0388856235993138,
+              5.328129416479726e-26
+            ],
+            "objective": 46.32733580902473,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4376469285552225,
+              1.0388861561794742,
+              1.7596095358638853e-07
+            ],
+            "objective": 46.327335809011,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4376470134815817,
+              1.0388858654494673,
+              9.521925483311784e-07
+            ],
+            "objective": 46.32733580900876,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.437647058245279,
+              1.0388857980448538,
+              4.276943631863667e-24
+            ],
+            "objective": 46.32733580900939,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 1.5973000699887052e-11
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed916",
+      "array_sha256": "27a359d8d7d9b5f76528ec9a717ba5c051e1b1c250f5a90c509fc7d9a6e0ac9b",
+      "original": {
+        "a": 3.4850675670616487,
+        "b": -0.12222042817232946,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 48.49004739863645,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 48.49004739863645,
+            "parameters": [
+              3.4850675670616487,
+              -0.12222042817232946,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 48.49004739863655,
+            "parameters": [
+              3.485067559180615,
+              -0.12222041531412133,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 48.49004739863652,
+            "parameters": [
+              3.485067560031474,
+              -0.12222041674721534,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.4885821859468042,
+            -0.1305837876959098,
+            6.3982668632713286e-24
+          ],
+          "objective": 48.39566076063669,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.4857247318662172,
+              -0.12199295415694993,
+              0.0
+            ],
+            "objective": 48.39570220309348,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4857255627097508,
+              -0.1219948922175233,
+              3.8352527571414724e-05
+            ],
+            "objective": 48.39570220311112,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4885821859468042,
+              -0.1305837876959098,
+              6.3982668632713286e-24
+            ],
+            "objective": 48.39566076063669,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4885151517046,
+              -0.13041217444219783,
+              1.7426278454306492e-20
+            ],
+            "objective": 48.395661807992816,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.4857255085928194,
+              -0.12199476191046181,
+              9.132918019432204e-25
+            ],
+            "objective": 48.395702203032016,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 4.1442474433495136e-05
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed919",
+      "array_sha256": "45789fba57a121517718631073f038495400c21292fe3916a50d82c4ca13f50a",
+      "original": {
+        "a": 3.384444316808761,
+        "b": 0.14414633346444178,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 44.822413431387474,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 44.82241343138752,
+            "parameters": [
+              3.3844443070814676,
+              0.14414635238688925,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 44.822413431387474,
+            "parameters": [
+              3.384444316808761,
+              0.14414633346444178,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 44.822413431387794,
+            "parameters": [
+              3.3844442698904595,
+              0.14414644487678768,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.383489852910303,
+            0.14760106181276772,
+            6.825734206674458e-30
+          ],
+          "objective": 44.80605861090053,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.3834898514889513,
+              0.1476010593065476,
+              0.0
+            ],
+            "objective": 44.806058611022145,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.3846427441282065,
+              0.1443990787571175,
+              0.015475090285831366
+            ],
+            "objective": 44.80813917794815,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.383489852910303,
+              0.14760106181276772,
+              6.825734206674458e-30
+            ],
+            "objective": 44.80605861090053,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.383489851763865,
+              0.1476010751460503,
+              4.219486976468193e-23
+            ],
+            "objective": 44.80605861146673,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.3834899324445216,
+              0.1476008362261357,
+              2.303660302898633e-22
+            ],
+            "objective": 44.80605861774305,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 0.0020805670476207183
+      }
+    },
+    {
+      "label": "split_gaussian-snr5-b0-seed920",
+      "array_sha256": "7874ca344fc14ff613d4c7186790d1a2cf4286d94ce65fcc1445afa747ebba02",
+      "original": {
+        "a": 3.5597683526646553,
+        "b": -0.27314044363870577,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 44.44585475131099,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 44.44585475131119,
+            "parameters": [
+              3.5597683172127508,
+              -0.27314036797126406,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 44.44585475131099,
+            "parameters": [
+              3.5597683526646553,
+              -0.27314044363870577,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 44.44585475131121,
+            "parameters": [
+              3.5597683145809613,
+              -0.2731403593072961,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.559691528678296,
+            -0.2742312632976467,
+            8.851795141893769e-23
+          ],
+          "objective": 44.360423901512355,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.5596921143993763,
+              -0.2742412875819698,
+              8.413869403598523e-10
+            ],
+            "objective": 44.36042391196156,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.5596912663836493,
+              -0.27422677528277833,
+              1.7049787271030426e-09
+            ],
+            "objective": 44.36042390475543,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.559691528678296,
+              -0.2742312632976467,
+              8.851795141893769e-23
+            ],
+            "objective": 44.360423901512355,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.559691607886455,
+              -0.2742327111154892,
+              5.975150424510548e-11
+            ],
+            "objective": 44.36042390248427,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.559691159256434,
+              -0.2742248097766683,
+              2.566432529827736e-08
+            ],
+            "objective": 44.36042391426759,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 1.2755236866723862e-08
+      }
+    },
+    {
+      "label": "split_gaussian_shoulder-snr5-b0-seed920",
+      "array_sha256": "ae874a8a1a288ce295b290e16ad9e922882b3e09ddc26eb84c88ebed6525d9cb",
+      "original": {
+        "a": 3.6473781864183557,
+        "b": -0.23330136365658022,
+        "sigma": 0.029999999999999995,
+        "negative_centered_log_likelihood": 49.192766823489585,
+        "optimizer_success": true,
+        "interior_solution": false,
+        "maximum_population_mass_outside_width_bounds": 0.0,
+        "starts": [
+          {
+            "success": true,
+            "objective": 49.192766823489585,
+            "parameters": [
+              3.6473781864183557,
+              -0.23330136365658022,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 49.192766823489606,
+            "parameters": [
+              3.6473781846129425,
+              -0.2333013587751478,
+              -3.506557897319982
+            ]
+          },
+          {
+            "success": true,
+            "objective": 49.19276682348961,
+            "parameters": [
+              3.6473781814814434,
+              -0.23330134990396764,
+              -3.506557897319982
+            ]
+          }
+        ]
+      },
+      "revised": {
+        "best": {
+          "parameters": [
+            3.6477806070296066,
+            -0.23365464647314999,
+            2.070872546308847e-09
+          ],
+          "objective": 49.14948434108668,
+          "success": true,
+          "message": "Optimization terminated successfully",
+          "maximum_outside": 0.0
+        },
+        "starts": [
+          {
+            "parameters": [
+              3.6477690529363347,
+              -0.23362420255405117,
+              1.727499845713399e-07
+            ],
+            "objective": 49.149484374723194,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.6477368329947204,
+              -0.23353960121939224,
+              3.092269545830601e-22
+            ],
+            "objective": 49.14948447712627,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.6477711902937604,
+              -0.23362989902125436,
+              2.9400931640535734e-20
+            ],
+            "objective": 49.14948434475293,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.6477867603638816,
+              -0.23367090318282238,
+              1.369893247644306e-07
+            ],
+            "objective": 49.14948436944783,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          },
+          {
+            "parameters": [
+              3.6477806070296066,
+              -0.23365464647314999,
+              2.070872546308847e-09
+            ],
+            "objective": 49.14948434108668,
+            "success": true,
+            "message": "Optimization terminated successfully",
+            "maximum_outside": 0.0
+          }
+        ],
+        "successful_starts": 5,
+        "successful_objective_range": 1.360395884830723e-07
+      }
+    }
+  ]
+}
