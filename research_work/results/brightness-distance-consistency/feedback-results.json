@@ -1,0 +1,70 @@
+{
+  "status": "Phenomenological feedback transfer on reused standardized observations",
+  "alpha0_per_mpc": 0.0002488993286382367,
+  "chi": 0.44468294964694743,
+  "boundary_hit": false,
+  "M_calibrator": -19.263783041938442,
+  "train_count": 466,
+  "transfer_count": 494,
+  "train_baseline_chi2": 468.0297459992009,
+  "train_fitted_chi2": 446.1916525027735,
+  "transfer_baseline_chi2": 424.4815024201772,
+  "transfer_feedback_chi2": 450.45564875689325,
+  "scores_use_same_covariance_without_fitted_parameter_uncertainty": true,
+  "bins": [
+    {
+      "z_min": 0.1,
+      "z_max": 0.3,
+      "count": 466,
+      "baseline_mean": 0.12487184095411759,
+      "feedback_mean": 0.03357904839983983
+    },
+    {
+      "z_min": 0.3,
+      "z_max": 0.6,
+      "count": 365,
+      "baseline_mean": 0.18694684698516983,
+      "feedback_mean": 0.020974268236932363
+    },
+    {
+      "z_min": 0.6,
+      "z_max": 1,
+      "count": 104,
+      "baseline_mean": 0.2048202409508971,
+      "feedback_mean": -0.08692490742204526
+    },
+    {
+      "z_min": 1,
+      "z_max": 3,
+      "count": 25,
+      "baseline_mean": 0.34974095498813396,
+      "feedback_mean": -0.1487528293323152
+    }
+  ],
+  "galaxy_results": [
+    {
+      "historical_exposed_split": "train",
+      "count": 104,
+      "baseline_rmse_kms": 457.5774876331605,
+      "feedback_rmse_kms": 457.52490750798813
+    },
+    {
+      "historical_exposed_split": "validation",
+      "count": 35,
+      "baseline_rmse_kms": 437.06521235990385,
+      "feedback_rmse_kms": 434.3785776603746
+    },
+    {
+      "historical_exposed_split": "test",
+      "count": 25,
+      "baseline_rmse_kms": 415.4139782785856,
+      "feedback_rmse_kms": 412.2460465801462
+    }
+  ],
+  "hashes": {
+    "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+    "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+    "all_164_groups.csv": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+    "feedback-protocol.md": "a6696a357b45dbb0c188e686a13f45f7df03cd552ad311d44ea77a035b124d5b"
+  }
+}
