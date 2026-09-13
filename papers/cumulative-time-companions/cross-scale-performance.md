@@ -1,3 +1,9 @@
+## Outer signatures distinguish near-equivalent inner fits
+
+Frozen projections of all seven J1621+3931 scale-profile solutions show that reducing reservoir mass moves the strong gravitational effect inward. At 300 kpc, ac/Re=10 gives an implied circular speed of 843 km/s and reduced shear 0.03823, whereas ac/Re=100 gives 116 km/s and 0.000984 despite almost identical inner scores. The intermediate branch has a different signed shear pattern; compact and stellar-only branches remain nearly indistinguishable outside. These are unobserved conditional predictions, requiring appropriate source geometry, environmental modeling and tracer distributions before an actual comparison.
+
+See [branch comparison and numerical checks](../../research_work/results/companion-extensions/reservoir-branch-outer-report.md). This extends the supplement beyond PDF v1.3 and does not select a physical branch or validate one-third retention.
+
 ## Fixed-scale scan: the extreme reservoir is not uniquely required
 
 The new J1621+3931 profile scan holds ac/Re at 0.1, 0.3, 1, 3, 10, 30 and 100 and refits the five remaining parameters. At 10, chi-squared is 2.762839 with 1.73e14 solar masses; at 100 it is 2.761989 with 8.42e16 solar masses. The mass changes by about 486 times for a score change of only 0.000850. Stellar-only gives 3.093851. Thus the extreme endpoint is not a uniquely measured energy requirement. Free normalization still does not test one-third retention. Doubling angular quadrature preserves the result; support, source supply and independent outer evidence remain open.

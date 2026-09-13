@@ -1,0 +1,5 @@
+# Outer discrimination of frozen J1621+3931 branches
+
+Before execution: project all seven fixed-scale solutions from reservoir-scale-scan-results.json without refitting. Use the same seven physical radii (10,30,100,300,1000,3000,10000 kpc), conditional source geometry and spherical effective gravitational response as outer-companion-predictions.py. Zero-density branches are retained as controls. Compute circular speeds, companion and total convergence, reduced tangential shear, plus peak circular speed on the inherited finite 801-radius scan. Do not repeat a dense critical-curve search; no new critical-curve conclusion is sought.
+
+Use 8001 radial mass points, 192 incoming angles, and projection order 384 with order 192 comparison. Check catalogue lens calibration and projected mass/surface-density derivative consistency. Compare the ac/Re=100 branch with the prior frozen extreme solution. No observations, new fit, source history, confidence interval or claim of physically supported storage is supplied. This is a branch comparison designed to specify distinguishing measurements, not to select a preferred branch from its outer predictions alone.
