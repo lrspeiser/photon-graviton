@@ -1,0 +1,107 @@
+{
+  "status": "Conditional phenomenological decomposition, not a derived interaction or blind test",
+  "input_sha256": "de3cd87188503b2db89ec8593ee51e645d1c9cc35cd97d00845869467983934d",
+  "count": 35,
+  "high_z_count": 13,
+  "calibration_source": "https://arxiv.org/html/2406.05050v2",
+  "comparison_source": "https://arxiv.org/html/0804.3595v1#S4.T3",
+  "calibration": {
+    "published_b": 1.003,
+    "statistical_scale": 0.005,
+    "systematic_estimate": 0.01,
+    "constrained_b": 1.0,
+    "stationary_fraction": 0.0,
+    "method": "Project central estimate onto [0,1]; no joint likelihood or Gaussian systematic"
+  },
+  "sensitivity_bands": [
+    {
+      "multiplier": 1,
+      "lower_b": 0.9879999999999999,
+      "maximum_stationary_fraction": 0.012000000000000122
+    },
+    {
+      "multiplier": 2,
+      "lower_b": 0.9729999999999999,
+      "maximum_stationary_fraction": 0.027000000000000135
+    },
+    {
+      "multiplier": 3,
+      "lower_b": 0.9579999999999999,
+      "maximum_stationary_fraction": 0.04200000000000015
+    }
+  ],
+  "comparisons": [
+    {
+      "stationary_log_shift_fraction": 0.0,
+      "b": 1.0,
+      "des_exponent_residual": -0.0029999999999998916,
+      "diagonal_chi_square": {
+        "all": 26.94852459529445,
+        "low_z": 23.294412983434984,
+        "high_z": 3.654111611859463
+      },
+      "duration_at_z1": 2.0,
+      "bolometric_flux_ratio_at_z1": 0.25
+    },
+    {
+      "stationary_log_shift_fraction": 0.012,
+      "b": 0.988,
+      "des_exponent_residual": -0.014999999999999902,
+      "diagonal_chi_square": {
+        "all": 26.888745688372286,
+        "low_z": 23.328968209797058,
+        "high_z": 3.5597774785752327
+      },
+      "duration_at_z1": 1.9834334614765863,
+      "bolometric_flux_ratio_at_z1": 0.25208811372364875
+    },
+    {
+      "stationary_log_shift_fraction": 0.027,
+      "b": 0.973,
+      "des_exponent_residual": -0.029999999999999916,
+      "diagonal_chi_square": {
+        "all": 26.850362667916173,
+        "low_z": 23.372446334674873,
+        "high_z": 3.4779163332413026
+      },
+      "duration_at_z1": 1.9629181277069585,
+      "bolometric_flux_ratio_at_z1": 0.2547227991541807
+    },
+    {
+      "stationary_log_shift_fraction": 0.1,
+      "b": 0.9,
+      "des_exponent_residual": -0.10299999999999987,
+      "diagonal_chi_square": {
+        "all": 27.261618378561007,
+        "low_z": 23.588556261509435,
+        "high_z": 3.6730621170515723
+      },
+      "duration_at_z1": 1.8660659830736148,
+      "bolometric_flux_ratio_at_z1": 0.2679433656340733
+    },
+    {
+      "stationary_log_shift_fraction": 0.5,
+      "b": 0.5,
+      "des_exponent_residual": -0.5029999999999999,
+      "diagonal_chi_square": {
+        "all": 50.60758180686737,
+        "low_z": 24.90721377249717,
+        "high_z": 25.700368034370193
+      },
+      "duration_at_z1": 1.4142135623730951,
+      "bolometric_flux_ratio_at_z1": 0.3535533905932738
+    },
+    {
+      "stationary_log_shift_fraction": 1.0,
+      "b": 0.0,
+      "des_exponent_residual": -1.003,
+      "diagonal_chi_square": {
+        "all": 150.5692598895312,
+        "low_z": 26.88252833731454,
+        "high_z": 123.68673155221667
+      },
+      "duration_at_z1": 1.0,
+      "bolometric_flux_ratio_at_z1": 0.5
+    }
+  ]
+}
