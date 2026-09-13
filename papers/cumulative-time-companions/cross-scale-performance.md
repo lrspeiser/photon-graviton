@@ -1,3 +1,5 @@
+> Current paper: v1.3 (13 September 2026) incorporates evidence through 2054afb, including matched free-companion/NFW fits, the extreme-reservoir inventory and frozen outer predictions. No new fitting was done for this update. Notices below referring to v1.2 are historical; the current manuscript and PDF include those results.
+
 ## Frozen outer-gravity predictions of the free companion fits (after v1.2)
 
 Without refitting, the extended J1621+3931 reservoir gives an implied circular-speed peak of about 4246 km/s near 9.17 Mpc. Its near-galaxy companion convergence is almost constant at 0.0847 while enclosed extra mass is negligible through the inner few hundred kpc. The extended envelope can therefore affect projected lensing without strong inner Newtonian acceleration, exposing a degeneracy of the inner fit.

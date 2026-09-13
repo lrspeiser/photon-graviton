@@ -2,11 +2,11 @@
 
 ## A phenomenological framework for redshift, additional gravity and reservoir emission in a nonexpanding universe
 
-Working paper v1.2 | 13 September 2026 | Evidence through revision 3f57bcc plus the accompanying orbit-slope check
+Working paper v1.3 | 13 September 2026 | Evidence through revision 2054afb
 
 ### Abstract
 
-We assess a hypothetical nonexpanding-universe framework in which photons transfer energy into traveling companions and some energy enters gravitationally active reservoirs. The empirical exact-third retention law remains the reference. New local-capacity and recycling calculations close selected stationary energy flows but do not improve galaxy predictions consistently. Transfer to six previously studied lens galaxies retains approximately 13% lens-angle RMS. At the motion-fitted stellar masses, three systems already overpredict bending from stars alone, so removing positive companion mass cannot fix those configurations. Imposing lens-required masses and allowing strongly radial outer stellar orbits substantially reduces inner motion residuals, but outer discrepancies and boundary dependence remain. All 18 checked orbital configurations satisfy a sampled necessary density-slope/anisotropy condition; this is neither a positive distribution-function construction nor a stability proof. Known equations, proposed mechanisms and fitted rules are distinguished throughout. No branch yet explains redshift, event durations, gravitational profiles, absolute supply and persistence together.
+We assess a hypothetical nonexpanding-universe framework in which photons transfer energy into traveling companions and some energy enters gravitationally active reservoirs. The empirical exact-third retention law remains the reference. New matched diagnostics combine stellar mass-to-light gradients, varying orbital anisotropy and lens-calibrated stellar masses in six previously studied galaxies. The transferred companion profile gives total motion chi-squared 111.27-113.56, versus 175.09 for a matched stellar-only control. Freeing the added component's scale and normalization gives 26.49 for the companion family and 49.71 for the tested NFW family, each with six local parameters per galaxy. All forty motion bins are fitted; these are descriptive results, not independent predictions or a model-selection verdict. Free normalization no longer tests the one-third law. One extended companion fit implies 8.42e16 solar masses and an extrapolated circular-speed peak near 4246 km/s at 9.17 Mpc. These unobserved outer signatures expose a degeneracy requiring independent tests. Known equations, proposed mechanisms and fitted rules are distinguished throughout. No branch yet explains redshift, event durations, gravitational profiles, absolute supply and persistence together.
 
 ### 1. Motivation and scientific scope
 
@@ -223,7 +223,7 @@ $$
 \beta(r)=\beta_0+(\beta_\infty-\beta_0)\frac{r^2}{r^2+R_e^2}.\tag{20}
 $$
 
-Provenance: (19) is a chosen phenomenological gradient, not a derived companion law or a claim of a unique new mathematical form. Equation (20) is a specialization of established orbital-anisotropy models [14]. Beta measures radial versus tangential velocity dispersion; it does not change the deposited density. Re is fixed to the projected half-light radius. The two extensions have not been combined, and neither is adopted into the reference.
+Provenance: (19) is a chosen phenomenological gradient, not a derived companion law or a claim of a unique new mathematical form. Equation (20) is a specialization of established orbital-anisotropy models [14]. Beta measures radial versus tangential velocity dispersion; it does not change the deposited density. Re is fixed to the projected half-light radius. These initially separate extensions are combined in the later diagnostics below; neither changes the shared companion reference law.
 
 The gradient allows h from -0.8 to 9, keeps density positive, and only modestly reduces the large inner-motion cost of the lens-required masses. Increasing the permitted gradient to much larger values in boundary cases still leaves large residuals. For radial anisotropy, initially both endpoints lie between -2 and 0.45. The same three difficult galaxies hit the outer bound. An adaptive follow-up allows their outer endpoint to reach 0.95; all three hit that new bound. Remaining systems retain their earlier interior fits. The improved combined result is therefore a tested configuration, not a demonstrated global optimum.
 
@@ -277,7 +277,7 @@ Better validation scores accompanied by worse test scores do not establish a pre
 
 #### 5.2 Cost of imposing the lens angles
 
-Each entry below gives Chabrier/Salpeter population-proxy results summed across the same six systems. Inner chi-squared uses the measured covariance; outer scores sum squared covariance-conditioned standardized residuals. These are different diagnostics, not a single combined likelihood. Gradient and anisotropy extensions are separate experiments.
+Each entry below gives Chabrier/Salpeter population-proxy results summed across the same six systems. Inner chi-squared uses the measured covariance; outer scores sum squared covariance-conditioned standardized residuals. These are separately reported diagnostics from the earlier inner-bin fits. With the stated full covariance, their sum equals the all-motion chi-squared; this identity is used in the subsequent all-bin analysis. Gradient and anisotropy extensions in this historical table are separate experiments.
 
 | Stellar prescription | Inner chi-squared | Outer residual-square sum |
 |---|---:|---:|
@@ -288,6 +288,82 @@ Each entry below gives Chabrier/Salpeter population-proxy results summed across 
 | Expanded outer-anisotropy follow-up | 106.88 / 105.62 | 115.71 / 114.32 |
 
 The expanded-orbit fit is a substantial inner improvement, but its outer score remains worse than the free-mass control and the previous radial-bound fit. For J1204+0358 and J1402+6321, Chabrier outer standardized residuals remain about 6.98 and 6.54. These conditional residuals are not model-independent exclusion significances. Passing (21) does not remove this discrepancy.
+
+#### 5.3 Combined stellar freedoms and matched controls
+
+Combining equations (19)-(20) initially reduces inner chi-squared to 82.40/81.67, but six of twelve configurations violate (21) near their extrapolated centers. Refitting with the necessary condition enforced gives 87.58/86.79. The adopted light profiles have central tracer slope 0.75, imposing beta0<=0.375 for the specified completion. This repairs that necessary-condition failure; it does not construct physical orbital distribution functions.
+
+Subsequent fits consume all forty motion bins with their covariance. Releasing the orbital transition radius replaces Re in (20) by ra, while the stellar gradient scale in (19) remains Re. This is the same established anisotropy family [14], with one more fitted stellar parameter. The imposed ranges are h in [-0.8,9], beta0 in [-2,0.375] subject also to the sampled slope condition, beta_infinity in [-2,0.95], and ra/Re in [0.1,10]. Central and 8193-point final slope checks pass; positivity and stability remain unproved.
+
+| Model | Local fitted parameters per galaxy | Total motion chi-squared |
+|---|---:|---:|
+| Transferred companion, fixed ra=Re | 3 | 159.83-161.81 |
+| Transferred companion, free ra | 4 | 111.27-113.56 |
+| Matched stellar-only, free ra | 4 | 175.09 |
+| NFW with free scale and strength | 6 | 49.71 |
+| Companion with free scale and strength | 6 | 26.49 |
+
+The population-proxy ranges describe the same six galaxies, not independent repetitions. Stellar normalization is additionally determined using each catalogue lens angle in every row; the count lists parameters optimized against motions. The stellar-only control omits separate gas and central-black-hole components, as do its matched companion comparisons. The transferred profile improves aggregate chi-squared by 35%-36%, but only J0037-0942 and J1402+6321 improve; the other four slightly prefer the stellar-only control. J1402+6321 still contributes approximately 57% of the transferred profile's residual.
+
+Restricted NFW shapes with radius fixed to 0.3, 1 or 3 times the reference capture scale and normalization fixed to the companion bending give 162.62-194.57. Releasing NFW scale and strength reduces this to 49.71. The restricted comparison therefore cannot establish general superiority over dark halos. The NFW density rho_s/[x(1+x)^2], x=r/rs, is established literature [16], used here as a gravitational comparator without adopting its cosmological formation assumptions. Its ideal untruncated total mass diverges logarithmically and is not treated as a finite source inventory.
+
+#### 5.4 What the freely fitted companion profile establishes
+
+The matched free-companion diagnostic keeps the shared opacity coefficient k0 fixed, recalculates attenuation for each capture scale ac, and fits a positive stored-density amplitude D:
+
+$$
+\rho_d(r)=D\,J(r;a_c,k_0)\left[1+(r/a_c)^2\right]^{-2}.\tag{22}
+$$
+
+Provenance: attenuation and integration are established operations; the opacity shape and its interpretation as deposited companion density are project hypotheses. Equation (22) is a diagnostic relaxation of the reference profile, not a newly derived interaction. The fitted ranges are ac/Re in [0.1,100] and companion fraction of required lens bending f in [0,0.95]. For unit-density bending d_unit, D=f alpha_required/d_unit; remaining bending calibrates stellar mass. This is a calibration identity, not an energy-source calculation. A free D absorbs the factor eta(X), so these fits cannot validate the exponent one-third.
+
+| Galaxy | Free NFW chi-squared | Free companion chi-squared | Fitted ac/Re |
+|---|---:|---:|---:|
+| J0037-0942 | 9.265 | 4.615 | 1.963 |
+| J1112+0826 | 17.641 | 9.060 | 2.532 |
+| J1204+0358 | 13.945 | 8.169 | 0.100 |
+| J1402+6321 | 4.494 | 0.420 | 2.078 |
+| J1621+3931 | 2.820 | 2.762 | 100.000 |
+| J1630+4520 | 1.548 | 1.468 | 0.100 |
+
+Both free families use 36 local motion-fitted parameters across forty motion measurements, plus consumed lens calibration. Active bounds, shared inherited assumptions and prior inspection of every target prevent interpreting the lower raw chi-squared as independent validation or a complexity-adjusted verdict. Numerical direct-profile polishing and refinement support the score precision, not physical correctness or a global optimum.
+
+The compact J1204+0358 and J1630+4520 fits require density amplitudes approximately 2352-2445 and 493-514 times their respective reference values. These are density ratios, not total-mass multipliers. J1621+3931 instead reaches ac about 877 kpc and implies 8.42e16 solar masses within the numerical grid. Since J<=1, its positive exterior tail obeys
+
+$$
+M_d(>R)\leq\frac{4\pi D a_c^4}{R},\qquad E_d=M_d c^2.\tag{23}
+$$
+
+Provenance: the bound is ordinary integration of rho_d<=D ac^4/r^4. The energy relation is the reference effective-mass closure using established mass-energy equivalence, not a unique local gravitational-field energy definition. The tail adds at most about 1.30% for J1621+3931. Its interior energy equivalent is about 1.51e64 J; no source history supplies this in the current calculation. No universe age or size is imposed to close that deficit.
+
+Crucially, the same galaxy's stellar-only chi-squared is 3.09385, compared with 2.76199 for the enormous free reservoir: a raw improvement of only 0.33186 with added freedom. This endpoint comparison does not show that the data require the enormous mass. A profile scan with capture scale fixed at successive values is still needed to quantify that tradeoff; it has not been executed in this paper revision. No free-fit parameters replace the shared exact-third reference.
+
+#### 5.5 Frozen outer predictions and the extended-envelope degeneracy
+
+Without further fitting, the six selected companion profiles have been projected to physical radii from 10 kpc to 10 Mpc. Standard spherical circular dynamics and thin-lens relations [17] give
+
+$$
+v_c^2(r)=\frac{G M(<r)}{r},\quad \kappa=\frac{\Sigma}{\Sigma_{\rm crit}},\quad g_t=\frac{\bar\kappa-\kappa}{1-\kappa}.\tag{24}
+$$
+
+Provenance: these are established gravitational relations. Their application assumes the reference effective-density response and the recorded conditional source geometry; it is not a new conversion law. Here Sigma_crit=c^2/[4 pi G Dl(Dls/Ds)] and bar kappa=M_2d/(pi R^2 Sigma_crit). Circular speed is an ideal orbit diagnostic, not the velocity of every observed star or satellite.
+
+J1621+3931 has negligible extra enclosed mass through the inner few hundred kpc, but almost constant companion convergence near 0.0847 there. Spherical exterior shells exert no interior Newtonian acceleration while contributing to projected lensing. Thus a distant envelope can change bending without comparably changing inner stellar motions. This geometrical degeneracy explains how the large reservoir survives the inner fit; it does not explain how the reservoir forms.
+
+| J1621+3931 radius | Implied circular speed (km/s) | Total reduced tangential shear |
+|---|---:|---:|
+| 100 kpc | 200.72 | 0.009849 |
+| 1 Mpc | 63.76 | -0.001454 |
+| 3 Mpc | 1520.51 | -0.015756 |
+| 10 Mpc | 4236.46 | 0.034307 |
+
+The scanned circular-speed maximum is approximately 4246 km/s near 9.17 Mpc. At the adopted lens distance, 3 and 10 Mpc correspond to about 13.7 and 45.6 arcmin. Negative tangential shear denotes radial image stretching, not repulsive gravity. These are extrapolated model predictions without new observed outer velocities or shear. Comparisons must include source distances, foreground structure, environmental mass and nonspherical geometry; a nearly constant convergence is not directly measured by shear alone.
+
+![Figure 1. Frozen free-companion outer predictions for six fitted galaxies. Markers are calculated radii; connecting lines guide the eye. No outer observations are shown.](../../research_work/results/companion-extensions/outer-companion-predictions.png)
+
+No additional critical curves are found over the finite 0.01-10000 kpc scan beyond the inner radial/tangential pair. J1621+3931 has maximum sampled compactness 2GM/(rc^2) about 4.01e-4 and near-central potential magnitude about 4.79e-4 c^2. The large mass is diffuse, so its size alone is not an automatic horizon or extra-ring argument. These diagnostics do not establish stability, relativistic completion or the accuracy of isolated thin-lens geometry over this environment.
+
+An initial unsplit angular projection failed a central critical-curve refinement check; splitting at capture-scale crossings resolved the distant-envelope contribution. Final catalogue mean-convergence normalization agrees within 1.55e-6, projected-mass derivative consistency within 3.07e-7 in convergence, and refined critical eigenvalue residuals within 1.22e-8. These are numerical checks rather than measurement uncertainties.
 
 ### 6. Evidence that would materially strengthen the theory
 
@@ -325,7 +401,7 @@ These tracks must eventually share one energy and momentum ledger. Until then th
 
 ### 9. Conclusion
 
-The reference remains an empirical radiation-conditioned extra-gravity model with unresolved physical causes. New calculations clarify the distinction between stored capacity, incident supply and stationary recycling; none consistently improves galaxy predictions. The lensing problem is partly a stellar-mass/orbit problem: at three motion-fitted stellar masses, positive companion removal alone cannot fix the bending. Allowing radial orbital variation substantially reduces the cost of imposing the lens-required masses, but retains boundary dependence and poor outer motions. The sampled necessary orbital inequality does not reject these fits, while positivity and stability remain unproved. These results identify specific next calculations rather than establish a unified solution. Redshift, event timing, absolute supply and reservoir persistence still need one consistent mechanism. This paper does not establish a replacement for dark matter, MOND or expanding cosmology.
+The companion density family can describe the six fitted lens galaxies more closely when its scale and strength are independently adjustable. That is progress in identifying useful gravitational profiles, not a derivation of their radiation origin. The shared exact-third prescription retains substantial joint residuals, and freeing normalization removes the test of that exponent. Freely fitted NFW halos also improve strongly, qualifying earlier restricted comparisons. The companion family's lower matched raw residual is accompanied by active bounds and, in one case, an enormous extended reservoir with testable outer predictions. The small gain over stellar-only in that galaxy does not establish that its huge mass is required. Independent outer tests, a quantified scale degeneracy, physical orbital support and a calculated source supply are the next discriminants. Redshift and event timing still require a consistent propagation mechanism. No replacement for dark matter, MOND or expanding cosmology is established.
 
 ### References
 
@@ -359,6 +435,10 @@ The reference remains an empirical radiation-conditioned extra-gravity model wit
 
 [15] Van Hese, E., Baes, M. and Dejonghe, H. (2011). On the universality of the global slope--anisotropy inequality. [doi:10.1088/0004-637X/726/2/80](https://doi.org/10.1088/0004-637X/726/2/80); [arXiv:1010.4301](https://arxiv.org/abs/1010.4301).
 
+[16] Navarro, J. F., Frenk, C. S. and White, S. D. M. (1997). A Universal Density Profile from Hierarchical Clustering. [arXiv:astro-ph/9611107](https://arxiv.org/abs/astro-ph/9611107).
+
+[17] Bartelmann, M. and Schneider, P. (2001). Weak Gravitational Lensing. [arXiv:astro-ph/9912508](https://arxiv.org/abs/astro-ph/9912508).
+
 ### Reproducibility and research status
 
-This v1.2 revision summarizes committed evidence through 3f57bcc plus the accompanying orbit-slope-check report, script and result JSON. Earlier paper snapshots remain recoverable in Git history. The companion-extensions manifest records artifact hashes. Detailed results are indexed in cross-scale-performance.md and research_work/results/companion-extensions/. Newly incorporated executable records are threshold-floor, background-retention, capture-capacity, local-capacity, occupancy-transport, conservative-recycling, local-formation, capacity-lensing, lens-bending-budget, exact-lens-orbits, stellar-gradient, radial-orbits and orbit-slope-check. The normalization correction is recorded at 24534de. The manuscript synthesizes recorded calculations; no new fitting was performed for this revision. The rotation sample contains 149 galaxies and 3150 accepted measurements in already-exposed partitions; the lens diagnostics use six previously examined systems with two alternative population proxies, not twelve independent galaxies. Numerical verification checks calculations, not physical assumptions. Computational assistance was used in analysis and drafting; independent scientific review remains necessary.
+This v1.3 revision summarizes committed evidence through 2054afb. Earlier snapshots remain in Git history. Newly incorporated records in research_work/results/companion-extensions/ are gradient-orbits, constrained-gradient-orbits, all-motion-orbits, orbit-transition, stellar-only-lens-control, nfw-shape-control, free-nfw, free-companion (including refinement and inventory), and outer-companion-predictions. Their protocols, scripts, reports and JSON files retain inputs, parameters and checks; cross-scale-performance.md indexes the historical sequence and the manifest records artifact hashes. The normalization correction remains recorded at 24534de. No new fitting or outer observational comparison was performed for this manuscript update. The rotation sample has 149 galaxies and 3150 accepted measurements in exposed partitions; lens diagnostics contain six systems and forty motion bins. Alternative population proxies are not additional galaxies. Computational assistance was used in analysis and drafting; independent scientific review remains necessary.
