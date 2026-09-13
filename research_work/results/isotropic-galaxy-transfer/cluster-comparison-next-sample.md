@@ -52,3 +52,7 @@ These equations assume the usual lensing response to mass; alternative field str
 Specify candidate source/capture laws and target split before new fitting. An initial cluster fit can calibrate shared quantities, followed by predictions on different clusters. Report separately a freely fitted halo per cluster, a shared halo mapping, fixed galaxy MOND, and companion transfer with fixed normalization. They use different amounts of target information. Do not rank them as equal-information predictions without stating those differences.
 
 The current turn completed the Coma diagnostic and literature comparison, not these ensemble fits. All six goals remain open.
+
+## MOND-guided branch update (13 September 2026)
+
+Carry the SPARC-trained mixture f=0.9235570945357928 and a0=8.563335193921255e-11 m/s^2 as a frozen candidate alongside the original law. Use extended gas-plus-star acceleration to define its target, retain the original companion inventory, and report every mass cap. Neither the old Coma free amplitude nor a newly invented cluster disk proxy supplies that inventory. Specify a positive exterior profile before projecting lensing; the arbitrary SPARC outer-shell completion is insufficient for a unique shear prediction. Keep the same geometry and observed shear definitions across models. No new cluster transfer has been executed by this update. See ../companion-extensions/mond-cross-scale-report.md for the executed Milky Way result and limits.
