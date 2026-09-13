@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Finite reciprocal reservoir checkpoint
+
+The [collective-reservoir calculation](../../research_work/results/companion-extensions/collective-reservoir-report.md) adds a finite protected level with forward and inverse relaxation. Its no-decay occupancy is (n+1)/(n+1+r n), independent of domain size, while collective rates can improve replenishment under leakage. Fifty-four stationary generators close current and energy balances; eighteen no-decay cases match the analytic product distribution. Larger domains require additional energized constituents and do not automatically improve capacity per unit material. Protection lifetime, bath transport and reservoir multiplicity remain hypotheses, with no observational-fit or retention-reference changes.
+
 ## Collective normalization checkpoint
 
 The [collective-state audit](../../research_work/results/companion-extensions/collective-normalization-report.md) applies known symmetric-spin matrix factors to loading. First excitation of an empty domain scales as N, so grouping alone supplies no N-squared inelastic enhancement. Partly excited symmetric states can have larger gross rates, with preparation energy and reverse enhancement included. Nine finite stationary distributions exhibit zero net loading without export. Full tensor-product checks verify the factors. This removes a normalization shortcut without excluding driven collective storage; it supplies no new angular-rate compensation or observational fit.

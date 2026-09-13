@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Latest checkpoint: finite reciprocal protected reservoir.** Collective transfer can replenish leakage faster, but no-decay equilibrium protected occupancy is (n+1)/(n+1+r n), independent of domain size. Returning waves and finite capacity remain essential. Fifty-four stationary cases include the reverse export and close the energy ledger. See [report](companion-extensions/collective-reservoir-report.md).
+
 **Latest checkpoint: collective-state normalization.** An empty domain has first-excitation rate factor N, not N^2. Partly excited symmetric states can enhance rates more strongly, but require preparation energy and enhance reverse transitions too. The tested closed ladders reach zero net current. A physically specified protected export remains necessary. See [report](companion-extensions/collective-normalization-report.md).
 
 **Latest checkpoint: angular-rate consistency.** Matching the source-size-tracking angle with the existing Gaussian overlap suppresses the transfer rate as s^-2 exp[-(s/s_c)^2]. At fixed coupling and target density, redshift accumulation saturates near the source. The favorable observer moments cannot be combined with an unchanged long-path rate in this branch. See [report](companion-extensions/kernel-rate-closure-report.md).
