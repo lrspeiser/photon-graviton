@@ -8,7 +8,8 @@ from scipy.optimize import minimize,brentq
 from scipy.linalg import cho_factor,cho_solve
 HERE=Path(__file__).resolve().parent
 RELAXING='--relaxing-optics' in sys.argv
-REGULAR='--regular-optics' in sys.argv or RELAXING
+RETENTION='--retention-optics' in sys.argv
+REGULAR='--regular-optics' in sys.argv or RELAXING or RETENTION
 OPTICAL_FILE='relaxing-area-results.json' if RELAXING else 'regular-area-results.json'
 sys.path.insert(0,str(HERE.parent/'slacs-component-refit'))
 from model import ComponentModel,G,C,ARCSEC
@@ -20,6 +21,13 @@ pilot={r['Name']:r for r in base['rows'] if r['model']=='empirical_extra' and r[
 cfg=read('slacs-outer-bin-check','protocol.json')
 allowed={r['Name'] for r in read('slacs-outer-bin-check')['rows'] if r['model']=='empirical_extra'}
 capture=json.loads((HERE/'results.json').read_text())['models']
+capture_file='results.json'
+if RETENTION:
+    capture_file='bounded-radiation-retention-results.json'
+    retained=json.loads((HERE/capture_file).read_text())['models']['attenuated']
+    capture={f'attenuated_{imf}':dict(retained,population=imf) for imf in ['Chabrier','Salpeter']}
+    photorows=read('lens-photometric-audit','normalization-sensitivity.json')
+    photo={(r['Name'],r['imf']):r for r in photorows if r['propagation_branch']=='energy_loss_and_event_stretch' and r['model']=='baryons'}
 optical=read('brightness-distance-consistency',OPTICAL_FILE) if REGULAR else None
 observations={r['Name']:r for r in read('lensing-data-readiness','lens-observations-and-image-models.json')} if REGULAR else None
 mu,w=np.polynomial.legendre.leggauss(96)
@@ -49,12 +57,20 @@ for item in data['systems']:
     crossw=cho_solve(fac,cov[:-1,-1]);csd=np.sqrt(cov[-1,-1]-cov[-1,:-1]@crossw)
     for branch,cp in capture.items():
         ac=equiv*cp['scale_to_disk'];x=r/ac;shape=(1+x*x)**-2
-        if branch=='attenuated':
+        if branch.startswith('attenuated'):
             t=x[:,None]*mu;B2=1+x[:,None]**2*(1-mu**2);B=np.sqrt(B2)
             tau=cp['k0_per_kpc']*ac*(t/(2*B2*(B2+t*t))+(np.arctan(t/B)+np.pi/2)/(2*B**3))
             J=.5*np.sum(np.exp(-np.maximum(tau,0))*w,axis=1)
         else:J=np.ones_like(x)
         rho=cp['C_Msun_kpc3']*shape*J
+        retention_info=None
+        if RETENTION:
+            Barea=1+fl/(1+optical['q']*fl)
+            photomass=10**photo[name,cp['population']]['conditional_log10_stellar_mass']*Barea
+            Lproxy=photomass/.5
+            X=Lproxy/1e9/equiv**2;eta=X**cp['q']/(1+X**cp['q'])
+            rho*=2*eta
+            retention_info=dict(population=cp['population'],population_mass_Msun=photomass,L3_6_proxy_Lsun=Lproxy,proxy_X=X,eta=eta,luminosity_mapping='Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity')
         mc=4*np.pi*(rho[0]*r[0]**3/3+cumulative_trapezoid(rho*r*r,r,initial=0))
         mi=PchipInterpolator(np.log(r),mc,extrapolate=False)
         def Mextra(rr):
@@ -83,13 +99,17 @@ for item in data['systems']:
         angle=brentq(lens_residual,lo,hi,xtol=1e-9)/dl*ARCSEC
         rows.append(dict(Name=name,model=branch,equivalent_disk_scale_kpc=equiv,capture_scale_kpc=ac,mass_Msun=mass,beta=beta,orbit_boundary=bool(np.min(abs(beta-np.array(cfg['constant_beta_bounds'])))<1e-5),inner_chi2=float(fit.fun),outer_observed_kms=float(y[-1]),outer_prediction_kms=float(outer),outer_conditional_standardized_residual=float((y[-1]-outer)/csd),lens_prediction_arcsec=angle,lens_catalog_arcsec=pilot[name]['catalog_SIE_arcsec'],lens_fractional_residual=angle/pilot[name]['catalog_SIE_arcsec']-1,optimizer_successes=sum(bool(f.success) for f in fits),observed_stellar_vrms=y.tolist(),predicted_stellar_vrms=pred.tolist()))
         if REGULAR:rows[-1]['geometry']=geometry_info
+        if RETENTION:rows[-1]['retention_mapping']=retention_info
         print(name,branch,fit.fun,angle,flush=True)
 summary=[]
 for branch in capture:
     rr=[d for d in rows if d['model']==branch]
     summary.append(dict(model=branch,n=len(rr),inner_chi2_sum=sum(d['inner_chi2'] for d in rr),outer_conditional_residual_square_sum=sum(d['outer_conditional_standardized_residual']**2 for d in rr),lens_fractional_rms=float(np.sqrt(np.mean([d['lens_fractional_residual']**2 for d in rr]))),orbit_boundary_count=sum(d['orbit_boundary'] for d in rr)))
-out=dict(summary=summary,rows=rows,capture_input_sha256=hashlib.sha256((HERE/'results.json').read_bytes()).hexdigest())
+out=dict(summary=summary,rows=rows,capture_input_sha256=hashlib.sha256((HERE/capture_file).read_bytes()).hexdigest())
 if REGULAR:out['optical_input_sha256']=hashlib.sha256((HERE.parent/'brightness-distance-consistency'/OPTICAL_FILE).read_bytes()).hexdigest()
 output='relaxing-optics-results.json' if RELAXING else 'regular-optics-results.json' if REGULAR else 'lensing-results.json'
+if RETENTION:
+    output='retention-optics-results.json'
+    out['photometric_input_sha256']=hashlib.sha256((HERE.parent/'lens-photometric-audit/normalization-sensitivity.json').read_bytes()).hexdigest()
 (HERE/output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(summary,indent=2))

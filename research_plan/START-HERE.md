@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Retention lens transfer and one-third test:** [Executed results](../research_work/results/isotropic-galaxy-transfer/retention-lensing-report.md) improve outer stellar motion but worsen lens RMS to 13.94–14.11% under two declared photometric-to-3.6-micron proxy mappings. Exact q=1/3 produces nearly unchanged galaxy performance after training-only refits; simplicity is supported, a fundamental exponent is not. The lens run retains fitted q and is not a separate one-third test.
+
 **Improved galaxy candidate:** [Bounded radiation retention](../research_work/results/isotropic-galaxy-transfer/bounded-retention-report.md) changes radiation's role from interception to storage probability eta=X^q/(1+X^q). Training-only q=0.33999 improves both frozen log and km/s errors; depth-dependent retention stays near constant. This candidate still needs motion/lensing transfer and a Solar System source bridge; it is not a unified solution.
 
 **Capture-law variety evaluated:** [Solar System family comparison](../research_work/results/isotropic-galaxy-transfer/capture-law-family-report.md) finds no unified full-mass scaling among six formulas (two equivalent). [Radiation-conditioned galaxy capture](../research_work/results/isotropic-galaxy-transfer/radiative-flux-report.md) improves frozen fractional errors but worsens km/s errors; it remains a mixed candidate rather than replacing the reference. Full-mass and extra-gravity targets remain explicitly distinct.

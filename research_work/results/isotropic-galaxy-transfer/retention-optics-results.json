@@ -1,0 +1,641 @@
+{
+  "summary": [
+    {
+      "model": "attenuated_Chabrier",
+      "n": 6,
+      "inner_chi2_sum": 42.04076396934809,
+      "outer_conditional_residual_square_sum": 44.042083725467094,
+      "lens_fractional_rms": 0.1393772092705754,
+      "orbit_boundary_count": 0
+    },
+    {
+      "model": "attenuated_Salpeter",
+      "n": 6,
+      "inner_chi2_sum": 41.4371776469128,
+      "outer_conditional_residual_square_sum": 42.42611177125202,
+      "lens_fractional_rms": 0.14109721415890006,
+      "orbit_boundary_count": 0
+    }
+  ],
+  "rows": [
+    {
+      "Name": "J0037-0942",
+      "model": "attenuated_Chabrier",
+      "equivalent_disk_scale_kpc": 6.114332773485522,
+      "capture_scale_kpc": 16.830773086191506,
+      "mass_Msun": 811451422178.8389,
+      "beta": -0.3684446182189039,
+      "orbit_boundary": false,
+      "inner_chi2": 7.7523667383308235,
+      "outer_observed_kms": 242.91156866112465,
+      "outer_prediction_kms": 238.40543464310636,
+      "outer_conditional_standardized_residual": 1.5709551252650982,
+      "lens_prediction_arcsec": 1.8271217813775196,
+      "lens_catalog_arcsec": 1.53,
+      "lens_fractional_residual": 0.19419724273040484,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "predicted_stellar_vrms": [
+        290.30781115110875,
+        289.27550999304174,
+        286.4066541989501,
+        276.82772558657547,
+        257.1750044668506,
+        238.034420914313
+      ],
+      "geometry": {
+        "z_lens": 0.1955,
+        "z_source": 0.6322,
+        "path_Dl_Mpc": 717.4165912507436,
+        "angular_Dl_Mpc": 634.9133142536824,
+        "angular_Ds_Mpc": 1324.6614323406195,
+        "Dls_over_Ds": 0.7746570133164056,
+        "previous_Dls_over_Ds": 0.6355296756878466
+      },
+      "retention_mapping": {
+        "population": "Chabrier",
+        "population_mass_Msun": 272377285859.89337,
+        "L3_6_proxy_Lsun": 544754571719.78674,
+        "proxy_X": 14.571448995996953,
+        "eta": 0.713175517338342,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J0037-0942",
+      "model": "attenuated_Salpeter",
+      "equivalent_disk_scale_kpc": 6.114332773485522,
+      "capture_scale_kpc": 16.830773086191506,
+      "mass_Msun": 809681106021.4138,
+      "beta": -0.3577214411657279,
+      "orbit_boundary": false,
+      "inner_chi2": 7.595456225416529,
+      "outer_observed_kms": 242.91156866112465,
+      "outer_prediction_kms": 238.7916169254414,
+      "outer_conditional_standardized_residual": 1.43632197114786,
+      "lens_prediction_arcsec": 1.833168497394361,
+      "lens_catalog_arcsec": 1.53,
+      "lens_fractional_residual": 0.1981493447021967,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "predicted_stellar_vrms": [
+        290.34672237571283,
+        289.2923510032716,
+        286.3863034188495,
+        276.77207689213304,
+        257.21204660586994,
+        238.4262784927948
+      ],
+      "geometry": {
+        "z_lens": 0.1955,
+        "z_source": 0.6322,
+        "path_Dl_Mpc": 717.4165912507436,
+        "angular_Dl_Mpc": 634.9133142536824,
+        "angular_Ds_Mpc": 1324.6614323406195,
+        "Dls_over_Ds": 0.7746570133164056,
+        "previous_Dls_over_Ds": 0.6355296756878466
+      },
+      "retention_mapping": {
+        "population": "Salpeter",
+        "population_mass_Msun": 484362919206.9342,
+        "L3_6_proxy_Lsun": 968725838413.8684,
+        "proxy_X": 25.912107724013712,
+        "eta": 0.7514893833454421,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1112+0826",
+      "model": "attenuated_Chabrier",
+      "equivalent_disk_scale_kpc": 3.821380874123254,
+      "capture_scale_kpc": 10.519020921986284,
+      "mass_Msun": 623542121719.598,
+      "beta": -0.25333778717755795,
+      "orbit_boundary": false,
+      "inner_chi2": 13.912537535884214,
+      "outer_observed_kms": 255.29572377081766,
+      "outer_prediction_kms": 243.34221578941674,
+      "outer_conditional_standardized_residual": 4.403518845067697,
+      "lens_prediction_arcsec": 1.477557720825963,
+      "lens_catalog_arcsec": 1.49,
+      "lens_fractional_residual": -0.00835052293559535,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "predicted_stellar_vrms": [
+        283.4567843198171,
+        282.9018753702039,
+        281.65561178158157,
+        277.8144615775754,
+        267.34732511730306,
+        252.0083902025746,
+        237.852055150296
+      ],
+      "geometry": {
+        "z_lens": 0.273,
+        "z_source": 0.6295,
+        "path_Dl_Mpc": 969.7748921054682,
+        "angular_Dl_Mpc": 814.9662618922268,
+        "angular_Ds_Mpc": 1322.2142128651972,
+        "Dls_over_Ds": 0.6472249946942378,
+        "previous_Dls_over_Ds": 0.505653167045395
+      },
+      "retention_mapping": {
+        "population": "Chabrier",
+        "population_mass_Msun": 271354845025.76596,
+        "L3_6_proxy_Lsun": 542709690051.5319,
+        "proxy_X": 37.16438279312293,
+        "eta": 0.7736760671569329,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1112+0826",
+      "model": "attenuated_Salpeter",
+      "equivalent_disk_scale_kpc": 3.821380874123254,
+      "capture_scale_kpc": 10.519020921986284,
+      "mass_Msun": 621879757223.0475,
+      "beta": -0.24315113104856045,
+      "orbit_boundary": false,
+      "inner_chi2": 13.78037197111506,
+      "outer_observed_kms": 255.29572377081766,
+      "outer_prediction_kms": 243.47700602677426,
+      "outer_conditional_standardized_residual": 4.35386385246983,
+      "lens_prediction_arcsec": 1.480946765400321,
+      "lens_catalog_arcsec": 1.49,
+      "lens_fractional_residual": -0.006075996375623505,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "predicted_stellar_vrms": [
+        283.4737279369769,
+        282.9118851919264,
+        281.6529910315901,
+        277.789955145212,
+        267.3212190679478,
+        252.0685507817242,
+        238.0754312586113
+      ],
+      "geometry": {
+        "z_lens": 0.273,
+        "z_source": 0.6295,
+        "path_Dl_Mpc": 969.7748921054682,
+        "angular_Dl_Mpc": 814.9662618922268,
+        "angular_Ds_Mpc": 1322.2142128651972,
+        "Dls_over_Ds": 0.6472249946942378,
+        "previous_Dls_over_Ds": 0.505653167045395
+      },
+      "retention_mapping": {
+        "population": "Salpeter",
+        "population_mass_Msun": 482544733723.62244,
+        "L3_6_proxy_Lsun": 965089467447.2449,
+        "proxy_X": 66.08865670781535,
+        "eta": 0.8061054937662937,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1204+0358",
+      "model": "attenuated_Chabrier",
+      "equivalent_disk_scale_kpc": 2.465182636055532,
+      "capture_scale_kpc": 6.785847467019341,
+      "mass_Msun": 353962191409.4715,
+      "beta": -0.6407888949472733,
+      "orbit_boundary": false,
+      "inner_chi2": 5.622641277485397,
+      "outer_observed_kms": 219.3733345349746,
+      "outer_prediction_kms": 222.58862171839925,
+      "outer_conditional_standardized_residual": -1.41162638422759,
+      "lens_prediction_arcsec": 1.5314161064361533,
+      "lens_catalog_arcsec": 1.31,
+      "lens_fractional_residual": 0.16901992857721626,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "predicted_stellar_vrms": [
+        267.7252579300742,
+        267.30157322191155,
+        266.39448623451074,
+        263.7572997148596,
+        256.66506501567983,
+        244.810153063656,
+        222.70011181665652
+      ],
+      "geometry": {
+        "z_lens": 0.1644,
+        "z_source": 0.6307,
+        "path_Dl_Mpc": 611.516044346408,
+        "angular_Dl_Mpc": 552.5684101201247,
+        "angular_Ds_Mpc": 1323.3037647740705,
+        "Dls_over_Ds": 0.8203477092073521,
+        "previous_Dls_over_Ds": 0.6887463879509226
+      },
+      "retention_mapping": {
+        "population": "Chabrier",
+        "population_mass_Msun": 143029877692.4003,
+        "L3_6_proxy_Lsun": 286059755384.8006,
+        "proxy_X": 47.07155689342229,
+        "eta": 0.787434820763952,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1204+0358",
+      "model": "attenuated_Salpeter",
+      "equivalent_disk_scale_kpc": 2.465182636055532,
+      "capture_scale_kpc": 6.785847467019341,
+      "mass_Msun": 353290029183.8786,
+      "beta": -0.627901637066644,
+      "orbit_boundary": false,
+      "inner_chi2": 5.675064101986327,
+      "outer_observed_kms": 219.3733345349746,
+      "outer_prediction_kms": 222.72635126118112,
+      "outer_conditional_standardized_residual": -1.4720945929402582,
+      "lens_prediction_arcsec": 1.5336457979806202,
+      "lens_catalog_arcsec": 1.31,
+      "lens_fractional_residual": 0.17072198319131315,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "predicted_stellar_vrms": [
+        267.7368658297352,
+        267.3104873165199,
+        266.39836435908427,
+        263.75120360627596,
+        256.6512695969946,
+        244.82025895312526,
+        222.84055060141344
+      ],
+      "geometry": {
+        "z_lens": 0.1644,
+        "z_source": 0.6307,
+        "path_Dl_Mpc": 611.516044346408,
+        "angular_Dl_Mpc": 552.5684101201247,
+        "angular_Ds_Mpc": 1323.3037647740705,
+        "Dls_over_Ds": 0.8203477092073521,
+        "previous_Dls_over_Ds": 0.6887463879509226
+      },
+      "retention_mapping": {
+        "population": "Salpeter",
+        "population_mass_Msun": 254347086520.78088,
+        "L3_6_proxy_Lsun": 508694173041.56177,
+        "proxy_X": 83.70638042204858,
+        "eta": 0.8183556488007877,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1402+6321",
+      "model": "attenuated_Chabrier",
+      "equivalent_disk_scale_kpc": 5.170257094877397,
+      "capture_scale_kpc": 14.232039240407108,
+      "mass_Msun": 846351531706.9905,
+      "beta": -0.022309484462498246,
+      "orbit_boundary": false,
+      "inner_chi2": 8.005067811968598,
+      "outer_observed_kms": 255.56553429757489,
+      "outer_prediction_kms": 247.5242939228788,
+      "outer_conditional_standardized_residual": 3.4552666154974365,
+      "lens_prediction_arcsec": 1.639438545511225,
+      "lens_catalog_arcsec": 1.35,
+      "lens_fractional_residual": 0.21439892260090732,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "predicted_stellar_vrms": [
+        296.3267005336812,
+        295.37631889501847,
+        292.88050409278895,
+        284.89966229921623,
+        268.4456167834669,
+        253.35292260410654,
+        243.39280579581597
+      ],
+      "geometry": {
+        "z_lens": 0.2046,
+        "z_source": 0.4814,
+        "path_Dl_Mpc": 747.8829398452908,
+        "angular_Dl_Mpc": 657.8534224410206,
+        "angular_Ds_Mpc": 1161.3773837752078,
+        "Dls_over_Ds": 0.6319645105187883,
+        "previous_Dls_over_Ds": 0.5263271208147617
+      },
+      "retention_mapping": {
+        "population": "Chabrier",
+        "population_mass_Msun": 319919026920.7848,
+        "L3_6_proxy_Lsun": 639838053841.5696,
+        "proxy_X": 23.935680951253225,
+        "eta": 0.746417640374005,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1402+6321",
+      "model": "attenuated_Salpeter",
+      "equivalent_disk_scale_kpc": 5.170257094877397,
+      "capture_scale_kpc": 14.232039240407108,
+      "mass_Msun": 843584678335.2198,
+      "beta": -0.014230680817695992,
+      "orbit_boundary": false,
+      "inner_chi2": 7.811482688346494,
+      "outer_observed_kms": 255.56553429757489,
+      "outer_prediction_kms": 247.750210114422,
+      "outer_conditional_standardized_residual": 3.3581919555984574,
+      "lens_prediction_arcsec": 1.641699065762847,
+      "lens_catalog_arcsec": 1.35,
+      "lens_fractional_residual": 0.21607338204655324,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "predicted_stellar_vrms": [
+        296.34962814463375,
+        295.37610763505234,
+        292.84204726583397,
+        284.8231349472696,
+        268.43791338205494,
+        253.54071545347017,
+        243.78847285036807
+      ],
+      "geometry": {
+        "z_lens": 0.2046,
+        "z_source": 0.4814,
+        "path_Dl_Mpc": 747.8829398452908,
+        "angular_Dl_Mpc": 657.8534224410206,
+        "angular_Ds_Mpc": 1161.3773837752078,
+        "Dls_over_Ds": 0.6319645105187883,
+        "previous_Dls_over_Ds": 0.5263271208147617
+      },
+      "retention_mapping": {
+        "population": "Salpeter",
+        "population_mass_Msun": 555955550115.6316,
+        "L3_6_proxy_Lsun": 1111911100231.2632,
+        "proxy_X": 41.595446193768346,
+        "eta": 0.7803114841500722,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1621+3931",
+      "model": "attenuated_Chabrier",
+      "equivalent_disk_scale_kpc": 5.228269810757636,
+      "capture_scale_kpc": 14.391729413197197,
+      "mass_Msun": 636745025508.7726,
+      "beta": -0.24157021369735662,
+      "orbit_boundary": false,
+      "inner_chi2": 3.283304460272379,
+      "outer_observed_kms": 225.7152335933509,
+      "outer_prediction_kms": 229.76465922201987,
+      "outer_conditional_standardized_residual": -0.9463408154603016,
+      "lens_prediction_arcsec": 1.3718296638828056,
+      "lens_catalog_arcsec": 1.29,
+      "lens_fractional_residual": 0.06343384797116713,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "predicted_stellar_vrms": [
+        269.5509892987685,
+        268.2159763766975,
+        265.22039226488005,
+        256.98524278164206,
+        241.12577343575694,
+        227.37729625400507
+      ],
+      "geometry": {
+        "z_lens": 0.2449,
+        "z_source": 0.6021,
+        "path_Dl_Mpc": 880.0956057378102,
+        "angular_Dl_Mpc": 753.5606122760367,
+        "angular_Ds_Mpc": 1296.489689480972,
+        "Dls_over_Ds": 0.6709621767868333,
+        "previous_Dls_over_Ds": 0.5352257396126674
+      },
+      "retention_mapping": {
+        "population": "Chabrier",
+        "population_mass_Msun": 253654508112.12674,
+        "L3_6_proxy_Lsun": 507309016224.2535,
+        "proxy_X": 18.559086565685394,
+        "eta": 0.7296996590883135,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1621+3931",
+      "model": "attenuated_Salpeter",
+      "equivalent_disk_scale_kpc": 5.228269810757636,
+      "capture_scale_kpc": 14.391729413197197,
+      "mass_Msun": 633352545488.7421,
+      "beta": -0.216203063255264,
+      "orbit_boundary": false,
+      "inner_chi2": 3.2078739200253534,
+      "outer_observed_kms": 225.7152335933509,
+      "outer_prediction_kms": 230.1389617922803,
+      "outer_conditional_standardized_residual": -1.033814406050868,
+      "lens_prediction_arcsec": 1.3733653483976116,
+      "lens_catalog_arcsec": 1.29,
+      "lens_fractional_residual": 0.06462430108341977,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "predicted_stellar_vrms": [
+        269.62775319379585,
+        268.2638157851995,
+        265.2181543037115,
+        256.92334361964794,
+        241.16200280220545,
+        227.80272966476838
+      ],
+      "geometry": {
+        "z_lens": 0.2449,
+        "z_source": 0.6021,
+        "path_Dl_Mpc": 880.0956057378102,
+        "angular_Dl_Mpc": 753.5606122760367,
+        "angular_Ds_Mpc": 1296.489689480972,
+        "Dls_over_Ds": 0.6709621767868333,
+        "previous_Dls_over_Ds": 0.5352257396126674
+      },
+      "retention_mapping": {
+        "population": "Salpeter",
+        "population_mass_Msun": 451068589039.34595,
+        "L3_6_proxy_Lsun": 902137178078.6919,
+        "proxy_X": 33.00324150888833,
+        "eta": 0.7665288346909274,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1630+4520",
+      "model": "attenuated_Chabrier",
+      "equivalent_disk_scale_kpc": 4.4185359447060675,
+      "capture_scale_kpc": 12.162794962848407,
+      "mass_Msun": 660970455268.1387,
+      "beta": 0.2063108451518361,
+      "orbit_boundary": false,
+      "inner_chi2": 3.4648461454066823,
+      "outer_observed_kms": 240.80210432173962,
+      "outer_prediction_kms": 231.41559215248927,
+      "outer_conditional_standardized_residual": 2.712210930067836,
+      "lens_prediction_arcsec": 1.7538848381252823,
+      "lens_catalog_arcsec": 1.78,
+      "lens_fractional_residual": -0.01467143925545944,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "predicted_stellar_vrms": [
+        293.19674593921127,
+        292.1915446828777,
+        290.0973349135417,
+        284.4615705450573,
+        271.4324389396499,
+        254.1498652523726,
+        230.73222870994644
+      ],
+      "geometry": {
+        "z_lens": 0.2479,
+        "z_source": 0.7933,
+        "path_Dl_Mpc": 889.7659135656257,
+        "angular_Dl_Mpc": 760.3175779023438,
+        "angular_Ds_Mpc": 1446.016320407639,
+        "Dls_over_Ds": 0.8005421779605962,
+        "previous_Dls_over_Ds": 0.6208213415621675
+      },
+      "retention_mapping": {
+        "population": "Chabrier",
+        "population_mass_Msun": 366582700551.0652,
+        "L3_6_proxy_Lsun": 733165401102.1304,
+        "proxy_X": 37.55304669653768,
+        "eta": 0.7742948272907343,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    },
+    {
+      "Name": "J1630+4520",
+      "model": "attenuated_Salpeter",
+      "equivalent_disk_scale_kpc": 4.4185359447060675,
+      "capture_scale_kpc": 12.162794962848407,
+      "mass_Msun": 658836587701.8962,
+      "beta": 0.21285392031795208,
+      "orbit_boundary": false,
+      "inner_chi2": 3.3669287400230345,
+      "outer_observed_kms": 240.80210432173962,
+      "outer_prediction_kms": 231.71540594505805,
+      "outer_conditional_standardized_residual": 2.625580429778921,
+      "lens_prediction_arcsec": 1.758904164341382,
+      "lens_catalog_arcsec": 1.78,
+      "lens_fractional_residual": -0.011851593066639299,
+      "optimizer_successes": 4,
+      "observed_stellar_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "predicted_stellar_vrms": [
+        293.23171455806096,
+        292.21970366698315,
+        290.11299013617685,
+        284.45424790261023,
+        271.41496375301716,
+        254.20002214496924,
+        231.0604202347559
+      ],
+      "geometry": {
+        "z_lens": 0.2479,
+        "z_source": 0.7933,
+        "path_Dl_Mpc": 889.7659135656257,
+        "angular_Dl_Mpc": 760.3175779023438,
+        "angular_Ds_Mpc": 1446.016320407639,
+        "Dls_over_Ds": 0.8005421779605962,
+        "previous_Dls_over_Ds": 0.6208213415621675
+      },
+      "retention_mapping": {
+        "population": "Salpeter",
+        "population_mass_Msun": 651886468466.4232,
+        "L3_6_proxy_Lsun": 1303772936932.8464,
+        "proxy_X": 66.77980972468313,
+        "eta": 0.806657749584436,
+        "luminosity_mapping": "Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity"
+      }
+    }
+  ],
+  "capture_input_sha256": "74e712baf84e68daffc157d3d8bf125d728a38ad0fe51568645bcfffb5b294e7",
+  "optical_input_sha256": "92c15834096a4c5286097f06e92baf1077e96a58b2c0548115474b3b640d8d40",
+  "photometric_input_sha256": "59fc810ee472eace3adc85d07ce9f9ec8a405689074a5248e95d743fc2834005"
+}
