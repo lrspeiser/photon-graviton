@@ -1,0 +1,99 @@
+{
+  "status": "Retrospective cross-observable comparison, no new blind outcomes",
+  "fitted_alpha_per_mpc": 0.00023507967839297357,
+  "c_alpha_kms_mpc": 70.47511461127903,
+  "formal_delta_chi2_one_c_alpha": [
+    69.47119727870152,
+    71.49344448589812
+  ],
+  "fitted_magnitude_offset": 0.12487184095411756,
+  "formal_offset_sigma": 0.0313558312625276,
+  "original_c_alpha": 74.61814152700677,
+  "nearby_training_bootstrap95_c_alpha": [
+    72.41722973559975,
+    76.88738437794862
+  ],
+  "brightness_train_count": 466,
+  "brightness_transfer_count": 494,
+  "train_baseline_chi2": 468.0297459992008,
+  "train_fitted_chi2": 452.1701400863046,
+  "transfer_baseline_chi2": 424.48150242017726,
+  "transfer_frozen_point_chi2": 391.8423017611608,
+  "scores_use_same_covariance_not_fitted_parameter_prediction_bands": true,
+  "bins": [
+    {
+      "z_min": 0.1,
+      "z_max": 0.3,
+      "count": 466,
+      "baseline_mean": 0.12487184095411756,
+      "revised_mean": 2.6925049646450705e-14
+    },
+    {
+      "z_min": 0.3,
+      "z_max": 0.6,
+      "count": 365,
+      "baseline_mean": 0.1869468469851699,
+      "revised_mean": 0.062075006031079
+    },
+    {
+      "z_min": 0.6,
+      "z_max": 1,
+      "count": 104,
+      "baseline_mean": 0.20482024095089704,
+      "revised_mean": 0.07994839999680586
+    },
+    {
+      "z_min": 1,
+      "z_max": 3,
+      "count": 25,
+      "baseline_mean": 0.3497409549881339,
+      "revised_mean": 0.22486911403404314
+    }
+  ],
+  "invariant_bin_contrasts": [
+    {
+      "bin_index": 1,
+      "minus_first": 0.06207500603105207,
+      "formal_sigma": 0.01270881672861965
+    },
+    {
+      "bin_index": 2,
+      "minus_first": 0.07994839999677894,
+      "formal_sigma": 0.023741483111290165
+    },
+    {
+      "bin_index": 3,
+      "minus_first": 0.22486911403401622,
+      "formal_sigma": 0.06459509816238024
+    }
+  ],
+  "galaxy_results": [
+    {
+      "historical_exposed_split": "train",
+      "count": 104,
+      "original_rmse_kms": 457.5774876331605,
+      "brightness_rate_rmse_kms": 489.4188255518464,
+      "brightness_rate_bias_kms": -177.76362292855111
+    },
+    {
+      "historical_exposed_split": "validation",
+      "count": 35,
+      "original_rmse_kms": 437.06521235990385,
+      "brightness_rate_rmse_kms": 425.982352775204,
+      "brightness_rate_bias_kms": -60.28621111623002
+    },
+    {
+      "historical_exposed_split": "test",
+      "count": 25,
+      "original_rmse_kms": 415.4139782785856,
+      "brightness_rate_rmse_kms": 406.89715225840007,
+      "brightness_rate_bias_kms": -91.43715024196943
+    }
+  ],
+  "hashes": {
+    "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+    "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+    "all_164_groups.csv": "8a2044337ecfe108e56c9592d03d053d48169a1ef0c34405437a34f69a2844a0",
+    "rate-protocol.md": "5ad287e354f63c202a13e421866f269518ef564ab695b9562055da1ebd13e96c"
+  }
+}

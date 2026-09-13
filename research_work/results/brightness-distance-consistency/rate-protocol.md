@@ -1,0 +1,5 @@
+# Cross-observable constant-rate comparison
+
+Retain photon-number conservation, b=1, the same Pantheon+ standardized inputs/covariance, Cepheid calibration attenuation, and redshift groups as opacity-protocol.md. Set epsilon=0. Fit only alpha on 0.1<=zHD<0.3, with c alpha constrained to [20,120] km/s/Mpc. Freeze it before evaluating zHD>=0.3 and the existing 164 independent-distance galaxy redshift rows. All observations are previously exposed; this is retrospective cross-observable transfer, not a final holdout.
+
+Because alpha changes all predicted high-redshift magnitudes by the same offset, fit that offset by GLS and invert its monotone alpha dependence. Report formal delta-chi-square-one alpha bounds, fixed-covariance central-prediction scores, bin contrasts, and galaxy residuals by historical split. Do not refit a joint compromise or choose a new functional form after seeing the result. Preserve the independent nearby alpha fit and its uncertainty. No expansion-based distances or dark halos are adopted; published photometric/covariance reduction assumptions remain conditional.
