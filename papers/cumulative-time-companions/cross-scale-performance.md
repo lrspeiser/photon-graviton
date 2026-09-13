@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Physical site/mode inventory checkpoint
+
+The [site/mode budget](../../research_work/results/companion-extensions/site-mode-budget-report.md) connects the finite-site hypothesis to the fitted Milky Way deposit inventory. If all its Mc^2 is stored in tiny excitations, the previous illustrative site/mode ratios are far too small. A necessary stationary bound follows from positive replenishment in the stimulated-return closure: protected lifetime > mu_min tau p(2p-1)/(1-p). At 120 kpc and p=0.9 the tested energies and bandwidths imply bounds of order 10^32 to 10^41 years. This assumes uniform coupled occupation, the stated escape closure and finite single-excitation sites; it neither fixes the universe's age nor excludes stable or collective states. Seventy-two cases verify the algebra and mode-count quadrature. The empirical one-third reference remains unchanged.
+
 ## Escaping-wave feedback checkpoint
 
 The [finite-site escape calculation](../../research_work/results/companion-extensions/escape-feedback-report.md) tracks emitted radiation, stimulated return and energy still in transit. Eighteen illustrative histories conserve energy. Crowded coupled modes delay protection and permit further loss through the bright state. Under continued illumination a non-decaying protected state has a fully occupied stationary solution, but this assumes its lifetime and provides finite capacity rather than indefinite growth. A positive protected-state decay requires replenishment. Site abundance, mode count, dimensional rates and spatial transport remain unspecified; these examples do not resolve the galaxy-scale occupation or supply problem. The empirical one-third reference is unchanged.
