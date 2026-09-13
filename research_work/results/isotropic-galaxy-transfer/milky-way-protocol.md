@@ -1,0 +1,7 @@
+# Frozen Milky Way rotation and vertical transfer
+
+Before prediction: retain both SPARC-trained branches' parameters exactly. Adopt R_disk=2.6 kpc from the thin-disk star-count fit of Juric et al., https://arxiv.org/abs/astro-ph/0510520. This is a conditional identification of star-count scale with SPARC's 3.6-micron light scale, not a new Milky Way fit. Its binary/population assumptions and different tracer must be disclosed; do not tune the scale to rotation.
+
+Add the resulting same spherical deposited source to each of the two archived ordinary-matter I/II baselines in joint-galaxy-audit/milky-way-predictions.json. Use only rows labeled baryons. Compare 38 Eilers circular-speed summaries, and separately 43 Bovy-Rix vertical-force summaries at z=1.1 kpc. The latter inherit halo/potential/DF assumptions, so they are provisional diagnostics and must not count as dark-matter-independent actuals or goal-4 completion. No excluded halo source is added. Preserve published coordinate conventions, both baselines and inner/outer split; no refitting of exposure, opacity, scale, ordinary mass or positions.
+
+Known spherical formula: v_pred^2=v_b^2+GM_d(<R)/R; |Kz|=|Kz_b|+GM_d(<r)|z|/r^3, r=sqrt(R^2+z^2). Report speed RMS and bias for inner/outer/all, vertical RMS/bias in |Kz|/(2piG) units, and every observed/predicted pair. Compare with baryons alone and the frozen empirical power branch. Do not pool rotation and vertical scores or claim confidence from diagonal residuals. These are exposed observations, not blind tests. All six goals remain open.
