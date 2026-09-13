@@ -162,6 +162,16 @@ For retained geometry and distant illumination, omitted-target cumulative RMS is
 
 Under standard comparison geometry the occupancy penalty gives 23.47 points with distant input, compared with 23.55 without migration and 24.32 for earlier partial migration. This small difference is not a significance claim or new observational success. Inventory, positivity, inward ordering and resolution checks pass. Work released during settling, final-state support, updated occupations, self-gravity and the absolute photon supply remain unresolved. No new lensing or velocity fit or completed research goal follows.
 
+## Feedback from the deposited gravitational field
+
+The [coupled feedback test](../../research_work/results/isotropic-galaxy-transfer/feedback-report.md) updates the exchange-driving potential using stars plus both compact and extended deposits; the occupancy penalty uses current density. Capture, original finite inventory and baryonic gravity remain fixed. Iteration solves a coupled fixed point, with compact radii always referenced to the original source locations. It does not simulate repeated contraction, physical time, evolving baryonic orbits or photon arrival histories.
+
+With old parameters fixed, retained-geometry omitted-target errors worsen to 21.69, 22.66 and 25.63 percentage points for binding, released binding and occupancy rules. Refitting shared parameters gives 20.04, 20.59 and 20.87, respectively. Binding is essentially tied with the earlier 20.01 partial-migration benchmark; the difference is below the refinement scale. Standard-geometry occupancy gives 22.93 versus 23.47 previously, without establishing a new joint observational fit. The updated shared binding rule predicts compact fractions of 33.3-42.5%.
+
+All executed fixed-point and refit-grid cases converge; selected opposite-seed solutions agree within 2.5e-8 in cumulative fraction. This is consistency of the numerical closure, not global uniqueness or dynamical stability. Selected radial refinement shifts cumulative fractions by up to 0.162 percentage points. Turning feedback off reproduces the earlier prescribed-field profiles within 0.118 points. Binding-work diagnostics expose energy that requires a support/heat/radiation channel; they are not an added photon supply.
+
+Frozen traveling/stored inventory ratios of 0, 0.01 and 0.1 are recorded as prescribed Newtonian energy-density sensitivities, with additive enclosed traveling mass separately retained. Their amount and source history are not measured. Directional radiation stresses, a relativistic field equation, evolving ordinary matter and the complete formation energy ledger remain absent. No all-energy gravitational model or new lens/motion likelihood success is claimed.
+
 ## Comparison claims that the evidence permits
 
 A common law that predicts both galaxy and cluster observables with fewer unsupported additions would be a meaningful advance. The present results do not yet show that: MOND is stronger in the matched galaxy test, while the cluster exercise is freely fitted and the lens transfer remains mismatched. A cluster shape fit cannot cancel a galaxy prediction deficit or establish a missing energy budget.
