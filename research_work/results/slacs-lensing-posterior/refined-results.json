@@ -1,0 +1,1141 @@
+{
+  "scope": "Conditional lens-angle uncertainty from inner stellar motions in six exposed training systems",
+  "quantile_levels": [
+    0.025,
+    0.16,
+    0.5,
+    0.84,
+    0.975
+  ],
+  "rows": [
+    {
+      "Name": "J0037-0942",
+      "catalog_SIE_arcsec": 1.53,
+      "predictions": [
+        {
+          "model": "baryons",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                923941235916.1006,
+                937218837233.1719,
+                951249421066.5398,
+                965514022518.227,
+                979604614510.5889
+              ],
+              "angle_quantiles_arcsec": [
+                1.4632604267825837,
+                1.4785384210570307,
+                1.494590048159265,
+                1.5108134687910868,
+                1.5267457986323367
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                924114489769.7336,
+                937389092837.7399,
+                951258330161.4835,
+                965304201102.4592,
+                979000511555.0809
+              ],
+              "angle_quantiles_arcsec": [
+                1.4634603396249333,
+                1.4787337692419522,
+                1.4946002106507612,
+                1.5105755267854322,
+                1.5260646122894435
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0006168706153424353,
+          "max_angle_quantile_change_arcsec": 0.0006811863428932696,
+          "numerical_pass": true
+        },
+        {
+          "model": "baryons",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                924088480780.0884,
+                937450105508.2224,
+                951454643034.3954,
+                965703689746.2622,
+                979799631863.0076
+              ],
+              "angle_quantiles_arcsec": [
+                1.4634303295139395,
+                1.4788037706528236,
+                1.494824132677245,
+                1.5110285378451505,
+                1.5269656644713023
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                924292511136.2032,
+                937602766353.4989,
+                951462736419.4724,
+                965512884676.7063,
+                979243932752.7831
+              ],
+              "angle_quantiles_arcsec": [
+                1.4636657381442937,
+                1.4789789144786836,
+                1.4948333639109235,
+                1.5108121785096627,
+                1.5263391140775158
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0005673167612663121,
+          "max_angle_quantile_change_arcsec": 0.0006265503937865624,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                743174303575.9496,
+                756243787402.7921,
+                769897665169.8097,
+                783751869743.5133,
+                797332985640.7015
+              ],
+              "angle_quantiles_arcsec": [
+                1.5296290447900267,
+                1.5487352262156153,
+                1.568552945439525,
+                1.5885156819594715,
+                1.6079456556526486
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                743409195026.3751,
+                756377542859.2305,
+                769903025546.245,
+                783590720173.506,
+                797031840558.0986
+              ],
+              "angle_quantiles_arcsec": [
+                1.5299736286087444,
+                1.548930065917869,
+                1.5685606974597925,
+                1.5882843101103106,
+                1.6075162916531667
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00037776182870530306,
+          "max_angle_quantile_change_arcsec": 0.00042936399948190207,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                743459926258.3989,
+                756468363988.7407,
+                770139443374.287,
+                784004578471.735,
+                797546437781.8359
+              ],
+              "angle_quantiles_arcsec": [
+                1.5300480451068876,
+                1.5490623558049132,
+                1.568902576174803,
+                1.5888784715655353,
+                1.608249949440668
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                743664792692.3752,
+                756620857977.7317,
+                770143936254.1418,
+                783828778674.4429,
+                797284635856.0625
+              ],
+              "angle_quantiles_arcsec": [
+                1.530348538094122,
+                1.5492844637462257,
+                1.5689090728174155,
+                1.5886260977620532,
+                1.6078767243867018
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0003283130513977994,
+          "max_angle_quantile_change_arcsec": 0.0003732250539660864,
+          "numerical_pass": true
+        }
+      ]
+    },
+    {
+      "Name": "J1112+0826",
+      "catalog_SIE_arcsec": 1.49,
+      "predictions": [
+        {
+          "model": "baryons",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                756033075028.1807,
+                771450687569.0366,
+                787696571808.2026,
+                804370235218.5199,
+                820948573669.4739
+              ],
+              "angle_quantiles_arcsec": [
+                1.1390783793829522,
+                1.156176112779743,
+                1.1740435564269285,
+                1.1922266849380032,
+                1.2101543428425177
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                756238032096.9532,
+                771554379307.9469,
+                787692979934.576,
+                804197899870.2014,
+                820603268290.0812
+              ],
+              "angle_quantiles_arcsec": [
+                1.1393065888122664,
+                1.1562906346134343,
+                1.1740396226324512,
+                1.1920395364480918,
+                1.2097824476571999
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00042070603639743354,
+          "max_angle_quantile_change_arcsec": 0.0003718951853177721,
+          "numerical_pass": true
+        },
+        {
+          "model": "baryons",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                756320929745.9158,
+                771762944894.5784,
+                788035619103.5178,
+                804716300286.2822,
+                821296995542.2415
+              ],
+              "angle_quantiles_arcsec": [
+                1.1393988841139142,
+                1.1565209650087547,
+                1.1744148458668493,
+                1.1926024468496497,
+                1.2105295297318641
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                756569280123.3684,
+                771887827154.1879,
+                788033226528.7673,
+                804544738185.4888,
+                820962958852.4027
+              ],
+              "angle_quantiles_arcsec": [
+                1.139675364218537,
+                1.1566588672762208,
+                1.174412225994103,
+                1.192416170733767,
+                1.2101698343516742
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00040680124185143995,
+          "max_angle_quantile_change_arcsec": 0.0003596953801898728,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                605174858861.2966,
+                619659183732.8954,
+                635069661707.1854,
+                650875338317.8905,
+                666521594269.6644
+              ],
+              "angle_quantiles_arcsec": [
+                1.1943362432958453,
+                1.214813429930312,
+                1.236381647285503,
+                1.258276218342197,
+                1.2797306374446558
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                605245177829.7699,
+                619746422373.7212,
+                635070757154.7026,
+                650761455940.7174,
+                666379437815.6047
+              ],
+              "angle_quantiles_arcsec": [
+                1.194436146758031,
+                1.2149361547334685,
+                1.23638317261305,
+                1.258119269108731,
+                1.2795366725916775
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00021330384053541707,
+          "max_angle_quantile_change_arcsec": 0.00019396485297829003,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                605479879471.0585,
+                620052655931.2576,
+                635450152437.9823,
+                651265109981.0983,
+                666969598988.7037
+              ],
+              "angle_quantiles_arcsec": [
+                1.19476955677015,
+                1.2153668981573977,
+                1.2369113854325182,
+                1.2588133023815964,
+                1.280341801595308
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                605585867675.6082,
+                620121703292.119,
+                635452160972.4332,
+                651147356902.7969,
+                666790518020.5981
+              ],
+              "angle_quantiles_arcsec": [
+                1.194920102762074,
+                1.2154640068377205,
+                1.236914181461349,
+                1.258651059338227,
+                1.280097521698077
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00026853549884719996,
+          "max_angle_quantile_change_arcsec": 0.0002442798972310811,
+          "numerical_pass": true
+        }
+      ]
+    },
+    {
+      "Name": "J1204+0358",
+      "catalog_SIE_arcsec": 1.31,
+      "predictions": [
+        {
+          "model": "baryons",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                394431922603.45557,
+                402382852322.80145,
+                410819759114.72485,
+                419481160255.3436,
+                427660013826.87225
+              ],
+              "angle_quantiles_arcsec": [
+                1.267408311015168,
+                1.2857943107541878,
+                1.3051637362484558,
+                1.3249019628459986,
+                1.343407551262916
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                394489214362.2475,
+                402418059729.69586,
+                410818448266.8772,
+                419420165421.0683,
+                427570728866.9973
+              ],
+              "angle_quantiles_arcsec": [
+                1.2675412612900925,
+                1.2858754376682606,
+                1.3051607378484031,
+                1.3247634739391205,
+                1.343206219905721
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.000208797358986601,
+          "max_angle_quantile_change_arcsec": 0.00020133135719491158,
+          "numerical_pass": true
+        },
+        {
+          "model": "baryons",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                394566510632.5857,
+                402546530883.4798,
+                410996959022.8292,
+                419667711418.0038,
+                427854629495.6055
+              ],
+              "angle_quantiles_arcsec": [
+                1.2677206228640827,
+                1.286171446872587,
+                1.3055690275029508,
+                1.3253254831135544,
+                1.343846343961958
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                394642982858.8019,
+                402582529888.0117,
+                410995079232.4424,
+                419597172744.5668,
+                427745977093.3854
+              ],
+              "angle_quantiles_arcsec": [
+                1.2678980600536738,
+                1.2862543858368118,
+                1.3055647283764995,
+                1.3251653496440812,
+                1.343601378236981
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00025397925613290795,
+          "max_angle_quantile_change_arcsec": 0.00024496572497700875,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                322848764864.5854,
+                330424940735.0565,
+                338488208353.12225,
+                346886822218.257,
+                355336098194.2316
+              ],
+              "angle_quantiles_arcsec": [
+                1.326071076401664,
+                1.3480027846599145,
+                1.3711411607649788,
+                1.3950253776614865,
+                1.418837357772174
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                322938347639.41486,
+                330459157424.84973,
+                338488429389.7431,
+                346821231972.401,
+                355243606658.72125
+              ],
+              "angle_quantiles_arcsec": [
+                1.3263315058100527,
+                1.348101411836447,
+                1.3711417922330653,
+                1.3948396891494867,
+                1.4185778470985535
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00027743748263020507,
+          "max_angle_quantile_change_arcsec": 0.00026042940838855166,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                323019347643.69946,
+                330633946290.6846,
+                338687155926.59656,
+                347092368789.65985,
+                355569036462.51636
+              ],
+              "angle_quantiles_arcsec": [
+                1.3265669609928048,
+                1.3486051693798071,
+                1.371709461866512,
+                1.3956072032656996,
+                1.4194908189254327
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                323131069687.26404,
+                330657513814.41736,
+                338687699756.8273,
+                347035041934.8368,
+                355457913481.46906
+              ],
+              "angle_quantiles_arcsec": [
+                1.3268916849308652,
+                1.3486730856051945,
+                1.3717110151677736,
+                1.3954449452466435,
+                1.4191791058607415
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0003458081638001431,
+          "max_angle_quantile_change_arcsec": 0.00032472393806037836,
+          "numerical_pass": true
+        }
+      ]
+    },
+    {
+      "Name": "J1402+6321",
+      "catalog_SIE_arcsec": 1.35,
+      "predictions": [
+        {
+          "model": "baryons",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                1001107130598.6167,
+                1013384262367.5397,
+                1026511948158.041,
+                1039807366542.7655,
+                1052552804461.7987
+              ],
+              "angle_quantiles_arcsec": [
+                1.3512400837689027,
+                1.364319505699438,
+                1.3782405326198384,
+                1.3922724247182452,
+                1.4056614749506862
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                1001448847766.3567,
+                1013709201071.7059,
+                1026519929915.6361,
+                1039459408580.5142,
+                1052175612927.6676
+              ],
+              "angle_quantiles_arcsec": [
+                1.3516049283388631,
+                1.3646648824850336,
+                1.378248976637624,
+                1.3919060432737491,
+                1.405266104920121
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0003584230013267131,
+          "max_angle_quantile_change_arcsec": 0.000395370030565223,
+          "numerical_pass": true
+        },
+        {
+          "model": "baryons",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                1001333761350.9458,
+                1013536157042.38,
+                1026675751245.617,
+                1039971253847.7538,
+                1052675196365.2263
+              ],
+              "angle_quantiles_arcsec": [
+                1.351482057999666,
+                1.3644809593696678,
+                1.3784138174281875,
+                1.3924449736584192,
+                1.405789754122578
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                1001581285887.5848,
+                1013881906403.6267,
+                1026681460870.5564,
+                1039611969972.8099,
+                1052331045609.9843
+              ],
+              "angle_quantiles_arcsec": [
+                1.351746317540343,
+                1.3648484340619125,
+                1.3784198573694963,
+                1.3920666880083215,
+                1.4054290349638818
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00034553450364782634,
+          "max_angle_quantile_change_arcsec": 0.00037828565009778714,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                786521902345.8988,
+                797984502888.4115,
+                809959577291.8301,
+                822117150492.1708,
+                834140545705.9464
+              ],
+              "angle_quantiles_arcsec": [
+                1.3749471173528038,
+                1.3904519745073427,
+                1.4065602274540006,
+                1.422821692479674,
+                1.4388138074051287
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                786693416968.7399,
+                798107203432.2709,
+                809965764787.7643,
+                821971960646.673,
+                833716483776.8549
+              ],
+              "angle_quantiles_arcsec": [
+                1.3751797428875656,
+                1.390617487692408,
+                1.4065685271049688,
+                1.4226280348065288,
+                1.4382512733226946
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0005085111382250318,
+          "max_angle_quantile_change_arcsec": 0.0005625340824340075,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                786652224594.2834,
+                798188878267.8119,
+                810137097597.2108,
+                822276014768.5177,
+                834297627579.8981
+              ],
+              "angle_quantiles_arcsec": [
+                1.375123875356912,
+                1.3907276551489804,
+                1.4067983362802805,
+                1.423033574503516,
+                1.439022154673595
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                786851283702.8129,
+                798295584695.1566,
+                810141795162.0995,
+                822145627730.476,
+                833911071748.005
+              ],
+              "angle_quantiles_arcsec": [
+                1.3753938408472135,
+                1.390871580145425,
+                1.406804636877143,
+                1.422859674569458,
+                1.438509415148128
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0004634382244468327,
+          "max_angle_quantile_change_arcsec": 0.0005127395254671541,
+          "numerical_pass": true
+        }
+      ]
+    },
+    {
+      "Name": "J1621+3931",
+      "catalog_SIE_arcsec": 1.29,
+      "predictions": [
+        {
+          "model": "baryons",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                766140325109.0325,
+                787527264717.6241,
+                810346516268.3575,
+                833769201462.9315,
+                856104016536.8702
+              ],
+              "angle_quantiles_arcsec": [
+                1.0801445861451449,
+                1.1026258800675939,
+                1.1263829193002413,
+                1.1505302636577668,
+                1.1733395612768305
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                766281603793.5907,
+                787622162338.0939,
+                810347076843.9917,
+                833653513407.2019,
+                855960436470.5131
+              ],
+              "angle_quantiles_arcsec": [
+                1.0802937946843916,
+                1.1027251632276656,
+                1.1263835000682156,
+                1.1504115743473584,
+                1.1731935902191746
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0001843861436512384,
+          "max_angle_quantile_change_arcsec": 0.00014920853924671462,
+          "numerical_pass": true
+        },
+        {
+          "model": "baryons",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                766841419540.6559,
+                788151615400.2161,
+                811006651143.3494,
+                834408495446.7723,
+                856627508287.826
+              ],
+              "angle_quantiles_arcsec": [
+                1.080884939730404,
+                1.103279008755423,
+                1.1270667370905842,
+                1.1511860404783696,
+                1.173871699154929
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                766921408799.4475,
+                788277801647.9524,
+                811005286718.4404,
+                834323267844.846,
+                856535930924.632
+              ],
+              "angle_quantiles_arcsec": [
+                1.0809693933941587,
+                1.103410989686725,
+                1.1270653239130717,
+                1.1510986254535347,
+                1.1737786173618132
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0001600912120025555,
+          "max_angle_quantile_change_arcsec": 0.000131980931302067,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                565107981294.3453,
+                585853851832.5995,
+                608352629501.2372,
+                632003037516.0391,
+                655997975570.8314
+              ],
+              "angle_quantiles_arcsec": [
+                1.0696670022898558,
+                1.0985332963064707,
+                1.1294343191513694,
+                1.161484954442821,
+                1.1935715606609352
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                565237520443.4155,
+                585919230064.7994,
+                608351992677.1294,
+                631935109956.8202,
+                655941361260.7102
+              ],
+              "angle_quantiles_arcsec": [
+                1.0698483919165958,
+                1.0986236903643136,
+                1.129433450270879,
+                1.1613935139579654,
+                1.1934963491188426
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.0002292027516155315,
+          "max_angle_quantile_change_arcsec": 0.0001813896267399695,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                565898771157.6342,
+                586706723956.2206,
+                609232278479.1299,
+                632901674848.0607,
+                657062772113.844
+              ],
+              "angle_quantiles_arcsec": [
+                1.0707740929398077,
+                1.0997122257283172,
+                1.1306342024743437,
+                1.1626943253453188,
+                1.1949857038254177
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                566002049800.159,
+                586746173684.669,
+                609230799085.9956,
+                632865271767.5344,
+                656943720023.4233
+              ],
+              "angle_quantiles_arcsec": [
+                1.0709186408681663,
+                1.0997667426633408,
+                1.1306321850252044,
+                1.162645346518632,
+                1.1948276325778908
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00018248708879653464,
+          "max_angle_quantile_change_arcsec": 0.00015807124752686974,
+          "numerical_pass": true
+        }
+      ]
+    },
+    {
+      "Name": "J1630+4520",
+      "catalog_SIE_arcsec": 1.78,
+      "predictions": [
+        {
+          "model": "baryons",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                798344485387.822,
+                813222444364.7648,
+                829059474506.313,
+                845181931778.6711,
+                860899453725.5815
+              ],
+              "angle_quantiles_arcsec": [
+                1.3268052872724367,
+                1.3452318620644057,
+                1.364699309583614,
+                1.3843655246410163,
+                1.4033934785522797
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                798459120266.6798,
+                813375985495.4417,
+                829059609792.9451,
+                845025365782.5028,
+                860761853626.8275
+              ],
+              "angle_quantiles_arcsec": [
+                1.3269477834460772,
+                1.3454213223607967,
+                1.3646994752453692,
+                1.3841752714253535,
+                1.403227505911834
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00018878799870236662,
+          "max_angle_quantile_change_arcsec": 0.00019025321566279452,
+          "numerical_pass": true
+        },
+        {
+          "model": "baryons",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                798575792358.2267,
+                813537570460.6094,
+                829361063777.8115,
+                845502564703.0587,
+                861239801121.6719
+              ],
+              "angle_quantiles_arcsec": [
+                1.327092803623964,
+                1.345620692865521,
+                1.3650685861112042,
+                1.3847551018155104,
+                1.403803958252107
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                798726041289.3132,
+                813673431693.9163,
+                829363434567.4371,
+                845328437614.1495,
+                861054786885.1174
+              ],
+              "angle_quantiles_arcsec": [
+                1.3272795464901035,
+                1.3457883121093968,
+                1.365071488776876,
+                1.384543540318468,
+                1.4035808279073456
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00021484621568745865,
+          "max_angle_quantile_change_arcsec": 0.0002231303447612909,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_log_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                626915270152.4352,
+                640886688349.7937,
+                655733762257.6785,
+                670877605169.388,
+                685786752513.594
+              ],
+              "angle_quantiles_arcsec": [
+                1.3940554323926733,
+                1.4165555306568902,
+                1.4402452871939229,
+                1.464180987350798,
+                1.487527482601766
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                626995140752.1244,
+                641003319776.2429,
+                655735112438.37,
+                670750167334.351,
+                685626192373.7273
+              ],
+              "angle_quantiles_arcsec": [
+                1.394184641658877,
+                1.4167425033486107,
+                1.4402474313786775,
+                1.4639805055637818,
+                1.4872771909100997
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00023415287306249866,
+          "max_angle_quantile_change_arcsec": 0.0002502916916662379,
+          "numerical_pass": true
+        },
+        {
+          "model": "empirical_extra",
+          "prior": "uniform_mass_and_beta",
+          "resolutions": [
+            {
+              "mass_nodes": 3201,
+              "beta_nodes": 641,
+              "mass_quantiles_Msun": [
+                627185547580.4265,
+                641215866293.1278,
+                656075963587.4066,
+                671222180829.7827,
+                686087588575.1382
+              ],
+              "angle_quantiles_arcsec": [
+                1.394492641708533,
+                1.4170832021571844,
+                1.4407886692723302,
+                1.4647229853506993,
+                1.48799637986913
+              ]
+            },
+            {
+              "mass_nodes": 6401,
+              "beta_nodes": 1281,
+              "mass_quantiles_Msun": [
+                627299582459.0112,
+                641344280860.0844,
+                656075467350.3132,
+                671089412490.817,
+                685966316947.4777
+              ],
+              "angle_quantiles_arcsec": [
+                1.394677084918261,
+                1.4172890201339914,
+                1.440787881381519,
+                1.4645141619621405,
+                1.487807370505516
+              ]
+            }
+          ],
+          "max_log_mass_quantile_change": 0.00020024724403100436,
+          "max_angle_quantile_change_arcsec": 0.0002088233885588764,
+          "numerical_pass": true
+        }
+      ]
+    }
+  ],
+  "complete": true,
+  "hashes": {
+    "research_work\\results\\slacs-lensing-posterior\\protocol.json": "3b7ac85b52a5ae35a1475aa96febef386c4754a222d41919d47907c04771b651",
+    "research_work\\results\\slacs-outer-predictive\\protocol.json": "826655b52718e8e22059321190b888ee0f78ab9f0827b87c7c0749e9300ce26f",
+    "research_work\\results\\slacs-resolved-input-audit\\results.json": "f04541d9ba2890367d47332d0d54b1e9801e7e35c0a4e854b75ca218747e63dd",
+    "research_work\\results\\slacs-light-profile-audit\\results.json": "7018d93494858c84a482b0f2951ee2175237be700ab5a51c7404d4b7a8a56c01",
+    "research_work\\results\\slacs-motion-lensing-pilot\\results.json": "d284e7b0e43514f9863612602226709805c7c8da3819f963ff1caeaeea285760",
+    "research_work\\results\\lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "research_work\\results\\slacs-lensing-posterior\\run.py": "54aecf52966b153b42fba0d61946af3ae23f4517df32276ada8fd805773c5217",
+    "research_work\\results\\slacs-lensing-posterior\\refine.py": "21f5121e8cd473dffc14857e210befed19e265f475bb9ebaafee7387d481df64",
+    "research_work\\results\\slacs-component-refit\\model.py": "6f9c79fe74144c6217978f8c477f33b0ce923cf4861f09ea4af066120eab0d39",
+    "research_work\\results\\slacs-resolved-fit\\model.py": "091c1af40427bcb19e7897332fa3f92a5092934b55b1dd5eb8543c58b57ba8d9"
+  }
+}
