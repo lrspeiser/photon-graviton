@@ -1,3 +1,11 @@
+## Matched stellar-only lens/motion control (after v1.2)
+
+Removing companion gravity while retaining the same four stellar freedoms, lens-calibrated mass, full motion covariance and necessary orbital constraints gives total chi-squared 175.09. The companion result is 113.56/111.27, lower by 35.1%/36.4%. The improvement is concentrated in J0037-0942 and J1402+6321; the other four galaxies fit slightly better without the companion profile. Both population labels recover the same zero-companion control to numerical precision.
+
+This shows that the current added density helps the conditional aggregate fit beyond the effects of flexible stellar modeling. It does not identify a radiation source, derive the one-third exponent or establish a joint physical solution. The control omits separate gas and central-black-hole components, as does the matched companion model. Companions retain their global galaxy-trained parameters; equal stellar freedoms are not equal total theoretical complexity. All bins are fitted and lens angles are consumed calibration. No independent validation or matched dark-halo ranking is supplied by this test.
+
+See [protocol](../../research_work/results/companion-extensions/stellar-only-lens-control-protocol.md), [full matched comparison](../../research_work/results/companion-extensions/stellar-only-lens-control-report.md), and [recorded results](../../research_work/results/companion-extensions/stellar-only-lens-control-results.json). The v1.2 PDF remains the earlier snapshot.
+
 ## Free orbital transition radius (after v1.2)
 
 Allowing the orbital transition ra to differ from the projected half-light radius improves total all-motion chi-squared from 161.81/159.83 to 113.56/111.27, about 30%. This adds one stellar nuisance parameter per galaxy; the stellar gradient scale remains Re and exact-third companion gravity is unchanged. Best radii span 0.303-1.333 Re, away from the imposed radius limits. Lensing continues to calibrate stellar mass and all motion bins are fitted, so this is descriptive improvement rather than independent prediction.

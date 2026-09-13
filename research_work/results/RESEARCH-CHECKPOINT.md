@@ -1,3 +1,5 @@
+> Matched stellar-only control: total motion chi-squared is 175.09 versus 113.56/111.27 with companions, a 35%-36% aggregate improvement. Only J0037-0942 and J1402+6321 improve with the added profile; the other four slightly prefer stellar-only. This supports conditional profile usefulness, not photon origin or a complete solution. The v1.2 PDF predates this experiment.
+
 > Free orbital transition radius: total all-motion chi-squared improves about 30%, to 113.56/111.27, but J1402+6321 still contributes roughly 57% of the residual and multiple stellar parameter boundaries remain. All bins are fitted; no independent prediction or physical solution is established. See orbit-transition-report.md. The v1.2 PDF predates this experiment.
 
 > All-motion diagnostic: fitting all 40 bins reduces total chi-squared from 193.62/190.91 to 161.81/159.83, but J1402+6321 remains the dominant discrepancy. The outer bins are now fitted, not predicted; orbital boundary dependence remains. See all-motion-orbits-report.md. The v1.2 PDF predates this experiment.

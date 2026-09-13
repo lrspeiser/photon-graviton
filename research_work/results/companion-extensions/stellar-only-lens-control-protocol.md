@@ -1,0 +1,11 @@
+# Matched stellar-only control for the flexible lens/motion fit
+
+13 September 2026. Recorded before execution.
+
+Remove the effective companion gravitational density, leaving the stellar light-derived mass distribution as the gravitating source in the same spherical lens/Jeans framework. This is a stellar-only ordinary-matter control, not a claim that the galaxies have no gas or black holes; those separately modeled components are absent from both compared versions. Retain the same conditional nonexpanding geometry, PSF, full motion covariance, six exposed targets, population-proxy labels, light profiles and four stellar nuisance freedoms from orbit-transition-protocol.md.
+
+At each gradient, recalibrate stellar mass to the same lens angle with companion bending set to zero. Fit all motion bins under the same central and finite-radius orbital constraints. Use the prior 27 starts plus the companion model's variable-radius optimum for that case. Require the control objective to be no worse than that feasible starting configuration evaluated under the control's own gravity. Do not compare an objective calculated in one potential against a seed in another without recalculation.
+
+Verify the original companion nested-model scores through an explicit reference evaluation, and preserve all original results. Verify the zero-companion lens equation, positive mass/moments, covariance decomposition and necessary orbital margins. Report total, per-system and residual changes against the companion variable-radius fits, same data and four stellar parameters in both. The shared companion parameters were trained on other exposed galaxy work and are not refitted here. No statistical model-ranking significance or blind prediction claim is made.
+
+The two population proxies affect companion normalization in the reference but should become identical physical stellar-only problems when companions are removed. Retain both runs to check this limit, reporting optimizer-level differences rather than counting them as independent data. A better stellar-only fit would show that the current added profile is not helping this diagnostic; it would not establish that ordinary matter explains all galaxy or cluster phenomena.

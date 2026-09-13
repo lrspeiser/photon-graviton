@@ -11,7 +11,12 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--slope-constrained',action='store_true')
 parser.add_argument('--all-motion-bins',action='store_true',help='Diagnostic fit consuming the outer bin; requires --slope-constrained')
 parser.add_argument('--free-orbit-radius',action='store_true',help='Fit 0.1<=ra/Re<=10; requires all-motion diagnostic')
+parser.add_argument('--stellar-only',action='store_true',help='Matched zero-companion control; requires free orbital radius')
 args=parser.parse_args()
+if args.stellar_only and not args.free_orbit_radius:parser.error('--stellar-only requires --free-orbit-radius')
+companion_scale=0. if args.stellar_only else 1.
+if args.stellar_only:
+    companion_reference={(r['Name'],r['population']):r for r in json.loads((P/'orbit-transition-results.json').read_text())['rows']}
 if args.free_orbit_radius and not args.all_motion_bins:parser.error('--free-orbit-radius requires --all-motion-bins')
 if args.free_orbit_radius:
     fixed_radius_previous={(r['Name'],r['population']):r for r in json.loads((P/'all-motion-orbits-results.json').read_text())['rows']}
@@ -39,11 +44,13 @@ fit=json.loads((L/'third-radiation-retention-results.json').read_text())['models
 separate_gradient={(r['Name'],r['population']):r for r in json.loads((P/'stellar-gradient-results.json').read_text())['rows']}
 separate_radial={(r['Name'],r['population']):r for r in json.loads((P/'radial-orbits-results.json').read_text())['rows']}
 out=dict(scope='Fixed companions; lens-calibrated stellar mass; gradient plus radial anisotropy fitted to inner motions; no positive distribution function or stability established',rows=[],summary=[])
+out['companion_density_multiplier']=companion_scale
 out['slope_constrained']=args.slope_constrained
 out['all_motion_bins_fitted']=args.all_motion_bins
 out['free_orbit_radius']=args.free_orbit_radius
 if args.free_orbit_radius:out['orbit_radius_bounds_Re']=[.1,10.]
 if args.all_motion_bins:out['scope']='All motion bins fitted with full covariance; lens angle calibrates stellar mass; necessary orbital condition enforced; no held-out prediction or physical stability proof'
+if args.stellar_only:out['scope']='Matched stellar-only lens/motion control with four stellar parameters; no separate gas or black hole in either version; all motion bins fitted; legacy comparison fields describe companion fits'
 cache={};mu,w=np.polynomial.legendre.leggauss(96)
 for old in source['rows']:
     name=old['Name'];item=data[name];dl=old['geometry']['angular_Dl_Mpc']*1000;dr=old['geometry']['Dls_over_Ds'];ac=old['capture_scale_kpc']
@@ -79,14 +86,15 @@ for old in source['rows']:
     target=old['lens_catalog_arcsec']/ARCSEC;impact=target*dl
     def bend(fn):return 4*G/C**2*quad(lambda t:fn(impact/np.cos(t))/(impact/np.cos(t)),0,np.pi/2,epsabs=1e-8,epsrel=1e-8,limit=200)[0]
     s0=1e11*bend(model.mass_fraction);sh=1e11*bend(core_fraction);dc=bend(comp_mass)
-    needed=target/dr-dc;assert needed>0
+    needed=target/dr-companion_scale*dc;assert needed>0
     y=np.array(item['vrms_kms']);cov=np.array(item['covariance_kms_squared']);fac=cho_factor(cov[:-1,:-1]);cw=cho_solve(fac,cov[:-1,-1]);csd=np.sqrt(cov[-1,-1]-cov[-1,:-1]@cw)
     full_fac=cho_factor(cov)
-    def evaluate(q,inner_only=False):
+    def evaluate(q,inner_only=False,companion_override=None):
         h,b0,bi=q[:3];orbit_scale=np.exp(q[3]) if len(q)>3 else 1.;ra=Re*orbit_scale
         weight=h*meanH/(1+h*meanH)
-        mass=1e11*needed/((1-weight)*s0+weight*sh)
-        force=mass/1e11*((1-weight)*model.forces[0]+weight*model.forces[1])+model.forces[2]
+        scale=companion_scale if companion_override is None else companion_override
+        mass=1e11*(target/dr-scale*dc)/((1-weight)*s0+weight*sh)
+        force=mass/1e11*((1-weight)*model.forces[0]+weight*model.forces[1])+scale*model.forces[2]
         beta=b0+(bi-b0)*r*r/(r*r+ra*ra)
         factor=np.exp(2*b0*np.log(r/model.a)+(bi-b0)*np.log((r*r+ra*ra)/(model.a*model.a+ra*ra)))
         pressure=-cumulative_trapezoid((nu*force*factor)[::-1],r[::-1],initial=0)[::-1]/factor
@@ -105,7 +113,7 @@ for old in source['rows']:
     grad_seed=[sg['h'],sg['beta'],sg['beta']]
     radial_score=rb.get('inner_chi2',sr['radial_inner_chi2'])
     radial_outer=rb.get('outer_standardized_residual',sr['radial_outer_residual'])
-    rg=evaluate(radial_seed,True);gg=evaluate(grad_seed,True)
+    rg=evaluate(radial_seed,True,1.);gg=evaluate(grad_seed,True,1.)
     radial_drift=abs(rg[0]-radial_score);gradient_drift=abs(gg[0]-sg['gradient_inner_chi2'])
     assert radial_drift<1e-4 and gradient_drift<1e-4
     bounds=[(-.8,9),(-2,.45),(-2,.95)]
@@ -133,15 +141,23 @@ for old in source['rows']:
             prior=inner_previous[key];prior_q=[prior['h'],prior['beta0'],prior['beta_infinity']]
             starts.append(prior_q)
             prior_total=evaluate(prior_q)[0]
-            assert abs(prior_total-prior['combined_inner_chi2']-prior['combined_outer_residual']**2)<1e-5
+            assert abs(evaluate(prior_q,companion_override=1.)[0]-prior['combined_inner_chi2']-prior['combined_outer_residual']**2)<1e-5
         fit_bounds=[bounds[0],(0,1),bounds[2]]
         if args.free_orbit_radius:
             fixed_radius=fixed_radius_previous[key]
             fixed_q=[fixed_radius['h'],fixed_radius['beta0'],fixed_radius['beta_infinity'],0.]
-            fixed_radius_drift=abs(evaluate(fixed_q)[0]-fixed_radius['all_motion_chi2'])
+            fixed_radius_score=evaluate(fixed_q)[0]
+            fixed_radius_drift=abs(evaluate(fixed_q,companion_override=1.)[0]-fixed_radius['all_motion_chi2'])
             assert fixed_radius_drift<1e-5
             starts=[list(v)+[0.] for v in starts]+[fixed_q[:3]+[np.log(v)] for v in [.1,1/3,1,3,10]]
             fit_bounds.append((-np.log(10),np.log(10)))
+        if args.stellar_only:
+            matched=companion_reference[key]
+            matched_q=[matched['h'],matched['beta0'],matched['beta_infinity'],np.log(matched['orbit_transition_radius_Re'])]
+            matched_control_score=evaluate(matched_q)[0]
+            matched_reproduction=abs(evaluate(matched_q,companion_override=1.)[0]-matched['all_motion_chi2'])
+            assert matched_reproduction<1e-5
+            starts.append(matched_q)
         fits=[minimize(lambda q:evaluate(physical(q))[0],mapped(q),bounds=fit_bounds,method='L-BFGS-B',options={'ftol':1e-11,'maxiter':600}) for q in starts]
         for f in fits:f.x=physical(f.x)
     else:
@@ -153,7 +169,7 @@ for old in source['rows']:
     inner_score=evaluate(opt.x,True)[0]
     h,b0,bi=opt.x[:3];orbit_scale=float(np.exp(opt.x[3])) if args.free_orbit_radius else 1.
     outer=pred[-1]+cw@(y[:-1]-pred[:-1])
-    lens_error=abs(dr*(mass/1e11*((1-weight)*s0+weight*sh)+dc)/target-1)
+    lens_error=abs(dr*(mass/1e11*((1-weight)*s0+weight*sh)+companion_scale*dc)/target-1)
     assert lens_error<1e-10
     out['rows'].append(dict(Name=name,population=key[1],h=float(h),beta0=float(b0),beta_infinity=float(bi),Re_kpc=Re,
         stellar_mass_Msun=mass,central_to_outer_ML_ratio=float(1+h),
@@ -176,8 +192,11 @@ for old in source['rows']:
         assert min(margin)>-1e-6 and central_gamma-2*b0>=-1e-10
         out['rows'][-1].update(unconstrained_inner_chi2=prev['combined_inner_chi2'],unconstrained_outer_residual=prev['combined_outer_residual'],central_asymptotic_gamma=central_gamma,central_constraint_margin=float(central_gamma-2*b0),slope_constraint_boundary=bool(abs(b0-central_bound(bi,orbit_scale))<1e-5),refined_minimum_slope_margin=float(min(margin)),refined_minimum_radius_Re=float(check_x[np.argmin(margin)]))
     if args.free_orbit_radius:
-        assert score<=fixed_radius['all_motion_chi2']+1e-4
+        assert score<=fixed_radius_score+1e-4
         out['rows'][-1].update(orbit_transition_radius_Re=orbit_scale,orbit_transition_radius_kpc=Re*orbit_scale,orbit_radius_boundary=bool(min(abs(orbit_scale-.1),abs(orbit_scale-10))<1e-4),fixed_radius_all_motion_chi2=fixed_radius['all_motion_chi2'],fixed_radius_reproduction_difference=fixed_radius_drift,stellar_nuisance_parameters=4)
+    if args.stellar_only:
+        assert score<=matched_control_score+1e-4
+        out['rows'][-1].update(matched_companion_all_motion_chi2=matched['all_motion_chi2'],control_score_at_companion_stellar_parameters=matched_control_score,matched_reference_reproduction_difference=matched_reproduction,companion_density_multiplier=companion_scale)
     print(name,key[1],opt.x,score,out['rows'][-1]['combined_outer_residual'],flush=True)
 for pop in ['Chabrier','Salpeter']:
     rr=[r for r in out['rows'] if r['population']==pop]
@@ -190,8 +209,10 @@ paths += [P/'stellar-gradient-results.json',P/'radial-orbits-results.json',P/'gr
 if args.slope_constrained:paths += [P/'gradient-orbits-results.json',P/'orbit_density.py',P/'constrained-gradient-orbits-protocol.md']
 if args.all_motion_bins:paths += [P/'constrained-gradient-orbits-results.json',P/'all-motion-orbits-protocol.md']
 if args.free_orbit_radius:paths += [P/'all-motion-orbits-results.json',P/'orbit-transition-protocol.md']
+if args.stellar_only:paths += [P/'orbit-transition-results.json',P/'stellar-only-lens-control-protocol.md']
 out['input_sha256']={str(f.relative_to(ROOT)).replace('\\','/'):hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
 assert len(out['rows'])==12
 output_name=('orbit-transition-results.json' if args.free_orbit_radius else ('all-motion-orbits-results.json' if args.all_motion_bins else ('constrained-gradient-orbits-results.json' if args.slope_constrained else 'gradient-orbits-results.json')))
+if args.stellar_only:output_name='stellar-only-lens-control-results.json'
 (P/output_name).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(out['summary'],indent=2))
