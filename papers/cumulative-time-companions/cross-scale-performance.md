@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Settling stop and support-energy cost
+
+The coupled endpoint family has no sampled energy stop between contraction s=1 and 0.4; the prior fitted s=0.803 remains downhill toward further settling. Inverse restoring terms can create a local minimum but consume most of the release budget and need a new force/support solution. Density-dependent transport shutdown and finite receiver capacity remain separate candidates, with no independently derived threshold yet. The [energy-slope audit](../../research_work/results/companion-extensions/stopping-report.md) preserves all six receiver/baryon configurations and 72 sampled endpoints. Positive local curvature after calibrating a restoring coefficient is a one-coordinate inverse construction, not a stability proof or new fit success. A local saturation law must generate its own nonuniform density profile before stellar-speed predictions can be assessed.
+
 ### Coupled circular endpoints
 
 Coupled circular endpoints now converge for both matter baselines and all three receiver bands. Receivers expand 5.4–8.2%, leaving 3.65–4.80e50 J to release. All-bin speed RMS is 6.27–6.28 km/s for I and 8.10–9.26 for II, versus no-settling 6.34/10.91. This preserves a conditional internal-exchange route; it does not derive the torque, contraction, formation rate or collective stability. The [coupled calculation](../../research_work/results/companion-extensions/coupled-torque-report.md) recomputes all companion radii and self-gravity, conserves the imposed scalar angular-momentum allocation, and accounts for circular kinetic and binding energy. Resolution changes remain below 0.084 km/s and 0.039% in released energy. Orientation matching and circular support are assumptions; these reused observations are not a blind validation.

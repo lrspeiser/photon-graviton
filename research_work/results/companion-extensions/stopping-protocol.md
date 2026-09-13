@@ -1,0 +1,7 @@
+# Settling stop: energy-slope diagnostic
+
+Freeze the exact-third inventory, donor fraction, both ordinary-matter baselines and all three receiver bands used in coupled-torque.py. Scan prescribed donor contractions s=0.4,0.5,0.6,0.7,0.8,0.9,1.0, plus the prior fitted s and +/-0.01, +/-0.02 about it. These are diagnostic endpoints, not a dynamical trajectory or a new speed fit. Record convergence failures rather than treating them as solutions.
+
+Evaluate mechanical energy versus contraction. Test whether the prior fitted s is stationary along this family. Report finite-difference slopes and their change when the step halves; evaluate a doubled-resolution center and neighbors. If contraction is still energetically favorable, quantify a hypothetical collective restoring energy A*s^(-p) for p=1,2,3 that would create a stationary point at that s. Derive A from the energy slope, not by a new velocity fit, and check local curvature. This is inverse calibration of a missing support term, not independent prediction or an interaction derivation.
+
+Keep the alternatives distinct: restoring energy changes support and the force model; shutting off transport can arrest evolution without an energy minimum; finite receiver capacity changes the allowed family. A fitted stopping coefficient must not be advertised as explaining the one-third retention exponent. Universe age and size do not enter this local diagnostic.
