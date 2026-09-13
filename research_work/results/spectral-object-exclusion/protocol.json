@@ -1,0 +1,14 @@
+{
+  "scope": "Development check using processed spectra and existing phase labels, not observer-time inference",
+  "template_set": "templates-2.0",
+  "types": "All Ia subtypes with age_flag=0",
+  "training_phase_days": [-15, 50],
+  "target_phase_days": [-10, 30],
+  "target_objects": "22 nearby identities from the exposed aging-rate table",
+  "windows_angstrom": [[4000,7000],[4000,5500]],
+  "matching": "Mean-subtracted normalized dot product at fixed rest wavelengths; best phase per independent template object, median phase of five highest-scoring objects",
+  "coverage": "First/last nonzero support must enclose full 4000-7000 window; same spectra in both windows",
+  "exclusion": "All spectra from the target object removed before matching",
+  "slope_summary": "Unweighted recovered-phase versus labeled-phase slope per target with >=3 epochs and >=15 days span",
+  "limitations": "Not SNID replication; no noise weighting, phase-label recalibration, uncertainty coverage, or raw flux inference"
+}
