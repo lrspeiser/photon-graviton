@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: finite threshold formation histories.** Starting empty, 90%-equilibrium times vary by about 1209 across the existing galaxy sample under one rate scale. Common-duration scans give mixed score changes; none is selected. Equilibrium requires continuing energy turnover and is not automatically permanent storage. See [report](../research_work/results/companion-extensions/threshold-history-report.md).
+
 **Latest checkpoint: finite thresholds on 149 galaxies.** With all original parameters fixed, a 12-decade threshold range changes speeds by at most 0.640 km/s; a six-decade range reaches 7.03 km/s and worsens aggregate validation/test velocity RMSE. This is an exposed-sample sensitivity comparison, not a new blind test or a physical derivation. See [report](../research_work/results/companion-extensions/threshold-galaxies-report.md).
 
 **Latest checkpoint: exact-third threshold mixture.** A known positive mixture of ordinary saturation responses represents the reference exactly. The distribution is inverse-designed, not derived. Finite cutoffs alter the curve; stipulated release kinetics produce slow depletion rather than permanent storage. See [report](../research_work/results/companion-extensions/threshold-mixture-report.md).

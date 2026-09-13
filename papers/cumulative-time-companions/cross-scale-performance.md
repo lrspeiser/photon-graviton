@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Finite formation-history checkpoint
+
+The [threshold history scan](../../research_work/results/companion-extensions/threshold-history-report.md) starts storage empty and applies shared constant-source durations to all 149 existing galaxies. Ninety-percent formation times span about a factor of 1209 in an undetermined microscopic time unit. A modest test-RMSE improvement at one duration is accompanied by worse validation performance, so no new preferred law is selected. The equilibrium limit reproduces prior scores; capture/release integrals close the energy ledger. Source histories and a rate scale remain needed, and exposed partitions provide sensitivity evidence only.
+
 ## Finite thresholds on the galaxy sample
 
 The [frozen galaxy comparison](../../research_work/results/companion-extensions/threshold-galaxies-report.md) applies finite threshold mixtures to all 149 original galaxies without optimization. The reference scores are reproduced from verified inputs. Threshold ranges of 12 and 18 decades shift speeds by at most 0.640 and 0.0634 km/s; six decades reaches 7.03 km/s. Aggregate validation/test velocity RMSE worsens slightly, although the test logarithmic metric can improve. These exposed partitions provide sensitivity evidence only. The mixture can preserve the reference numerically but does not derive its physics or solve its residuals.
