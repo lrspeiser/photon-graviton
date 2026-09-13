@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Constant donor-density saturation
+
+A constant donor-density saturation closure was calibrated to the old mean contraction in baseline I and frozen for II. All six coupled endpoints converge with positive release, but all worsen their uniform-contraction counterparts: all-bin RMS 7.21–7.23/8.19–9.47 km/s versus 6.27–6.28/8.10–9.26. Mean settling alone does not preserve the radial gravity profile. This candidate is recorded, not adopted as the new reference. The [nonuniform packing test](../../research_work/results/companion-extensions/saturation-report.md) uses a shared threshold 0.02218 Msun/pc^3, calibrated to a previous fit rather than measured independently. Ordered shell packing is an endpoint hypothesis, not local evolution, thermal support or a total-density ceiling. Spatial refinement changes speeds by less than 0.084 km/s.
+
 ### Settling stop and support-energy cost
 
 The coupled endpoint family has no sampled energy stop between contraction s=1 and 0.4; the prior fitted s=0.803 remains downhill toward further settling. Inverse restoring terms can create a local minimum but consume most of the release budget and need a new force/support solution. Density-dependent transport shutdown and finite receiver capacity remain separate candidates, with no independently derived threshold yet. The [energy-slope audit](../../research_work/results/companion-extensions/stopping-report.md) preserves all six receiver/baryon configurations and 72 sampled endpoints. Positive local curvature after calibrating a restoring coefficient is a one-coordinate inverse construction, not a stability proof or new fit success. A local saturation law must generate its own nonuniform density profile before stellar-speed predictions can be assessed.
