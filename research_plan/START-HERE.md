@@ -1,5 +1,7 @@
 # Start here — active research
 
+**NFW cluster follow-up:** [Full-profile and omitted-bin Coma checks](../research_work/results/isotropic-galaxy-transfer/cluster-comparison-detail-report.md) reproduce the published NFW fit approximately (3.855 versus 3.87). NFW and transparent companions are essentially tied in omitted-bin prediction (6.82/6.86); point mass deteriorates to 32.17 and is only a control. The initial outer-only ranking is not robust evidence for companions. [Next sample specification](../research_work/results/isotropic-galaxy-transfer/cluster-comparison-next-sample.md).
+
 **Cluster comparison:** [Coma results](../research_work/results/isotropic-galaxy-transfer/cluster-model-comparison-report.md) compare companion, NFW and compact-baryon MOND shear shapes using the same inner/outer bins. Several shapes remain viable; this does not yet test the frozen one-third normalization or multiple clusters. See the linked protocol for the physical inputs needed to do that.
 
 **Matched MOND/dark-halo comparison:** [Rotation benchmarks](../research_work/results/isotropic-galaxy-transfer/model-comparison-report.md) show simple MOND outperforming our exact-one-third candidate on frozen galaxies with fewer shared parameters. A restricted shared NFW mapping performs worse and reaches a scale bound; target-inner-fitted NFW gives much better outer predictions with extra target information. No full-theory ranking or dark-matter exclusion is claimed.
