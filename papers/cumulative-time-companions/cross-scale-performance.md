@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Occupation-driven assembly bias checkpoint
+
+The [two-mode interaction](../../research_work/results/companion-extensions/mode-driven-bias-report.md) makes the previously stipulated forward bias conditional on source occupations. For a reciprocal resonant store-raising interaction, paired rates give r=n_L(1+n_H)/[n_H(1+n_L)]. A forward preference requires n_H>n_L. Smooth thermal occupations give the opposite sign, while closed unequal reservoirs consume their contrast. Distinct maintained source and escape channels remain a possible route, but angular transport, recoil, the absolute rate and the traveling-companion connection are unresolved. Twelve occupation designs, twelve thermal cases and nine operator-matrix checks validate the algebra; no observational fit or retention exponent changes.
+
 ## Restarted assembly and recycling checkpoint
 
 The [restarted ladder](../../research_work/results/companion-extensions/assembly-recycling-report.md) distinguishes probability per attempt from mean completion time with recycling. Ninety-six cases use the exact first-passage sum F=sum (K-j)r^j; twelve independent matrix solves verify it. Gross forward energy is F delta, returned energy (F-K) delta and net input K delta. In the representative unbiased case gross/net traffic is 199,976, requiring losses below about five parts per million of returned energy to keep extra replacement input below the net requirement. Forward-biased assembly reduces this burden, but the bias, maintained source field and terminal protection remain hypotheses. These are first-fill benchmarks, not demonstrated formation histories or new observational fits.

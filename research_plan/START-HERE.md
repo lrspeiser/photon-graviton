@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Latest checkpoint: occupation-driven assembly bias.** A reciprocal two-mode interaction favors loading only when the input mode is more occupied than its paired output mode. Smooth thermal examples do not provide that preference; a closed reservoir consumes an imposed contrast. Sustained loading needs specified source and escape channels, with momentum and field depletion included. See [report](../research_work/results/companion-extensions/mode-driven-bias-report.md).
+
 **Latest checkpoint: restarted assembly and recycling.** Repeated attempts give finite mean completion times for the constant-rate ladder, but unbiased assembly can circulate about 200,000 times its net energy in the representative packet. Keeping replacement input below net assembly then requires returned-energy losses below about five parts per million. A forward bias helps, but its physical source remains unspecified. See [report](../research_work/results/companion-extensions/assembly-recycling-report.md).
 
 **Latest checkpoint: collective release and assembly.** Larger release quanta conditionally reduce the finite-site lifetime bound as K^-4; mere grouping with unchanged radiation does not. Twenty-four designs quantify packet sizes, while a reversible assembly ladder shows strong sensitivity to forward versus reverse rates. A microscopic accumulation mechanism and release spectrum remain required. See [report](../research_work/results/companion-extensions/collective-assembly-report.md).
