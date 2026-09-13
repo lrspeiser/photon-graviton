@@ -1,0 +1,47 @@
+{
+  "scope": "Conditional fixed export per use; failure tracks leaving its allowed energy domain",
+  "units": "Arbitrary energy, c=hbar=1",
+  "receiver_ground_energy": 50.0,
+  "initial_mean_excess": 5.0,
+  "initial_sigma": 0.5,
+  "export_energy_per_use": 5.000000000000001,
+  "incoming_mean_photon_energy": 10.000000000000002,
+  "photon_loss_variance": 0.0095901572477303,
+  "increment_mean": -3.608224830031759e-16,
+  "source_population_is_repeated_independent_identical_photon_packets": true,
+  "boundary_completion_is_absorbing_failure_flag_not_a_physical_repair": true,
+  "rows": [
+    {
+      "uses": 1,
+      "permitted_branch_weight": 1.0,
+      "lower_boundary_failure_weight": 1.9525282618415655e-23,
+      "upper_grid_escape_weight": 0.0,
+      "unbounded_reference_mean_excess": 5.0,
+      "unbounded_reference_excess_variance": 0.2595901572477303
+    },
+    {
+      "uses": 100,
+      "permitted_branch_weight": 0.9999963610535663,
+      "lower_boundary_failure_weight": 3.638946437917211e-06,
+      "upper_grid_escape_weight": 0.0,
+      "unbounded_reference_mean_excess": 5.0,
+      "unbounded_reference_excess_variance": 1.20901572477303
+    },
+    {
+      "uses": 1000,
+      "permitted_branch_weight": 0.8947002879309421,
+      "lower_boundary_failure_weight": 0.10529971206909769,
+      "upper_grid_escape_weight": 8.384457342536356e-212,
+      "unbounded_reference_mean_excess": 5.0,
+      "unbounded_reference_excess_variance": 9.8401572477303
+    },
+    {
+      "uses": 10000,
+      "permitted_branch_weight": 0.39568068354540237,
+      "lower_boundary_failure_weight": 0.6043193164548399,
+      "upper_grid_escape_weight": 3.052271779667913e-22,
+      "unbounded_reference_mean_excess": 5.0,
+      "unbounded_reference_excess_variance": 96.151572477303
+    }
+  ]
+}
