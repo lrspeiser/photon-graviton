@@ -1,0 +1,75 @@
+{
+  "scope": "Conditional effective width fit and exact source/propagation degeneracy on exposed photometry; not source-population validation",
+  "bounds": {
+    "template_start_phase": [
+      -10.0,
+      5.0
+    ],
+    "effective_stretch": [
+      1.0,
+      2.0
+    ]
+  },
+  "optimizer_runs": [
+    {
+      "seed": 6101,
+      "phase": -3.1060721385373573,
+      "effective_stretch": 1.5288768757906688,
+      "score": 40.450390593553976
+    },
+    {
+      "seed": 6102,
+      "phase": -3.106069005819191,
+      "effective_stretch": 1.5288772153855705,
+      "score": 40.45039059353273
+    }
+  ],
+  "best_fit": {
+    "start_phase": -3.106069005819191,
+    "chi_square": 35.67733864662005,
+    "score": 40.45039059353273,
+    "parts": [
+      {
+        "band": "R",
+        "chi_square": 18.37108062519375,
+        "log_determinant": -3.9608312353520034,
+        "score": 14.410249389841745
+      },
+      {
+        "band": "I",
+        "chi_square": 17.306258021426302,
+        "log_determinant": 8.73388318226468,
+        "score": 26.040141203690983
+      }
+    ]
+  },
+  "effective_stretch": 1.5288772153855705,
+  "decompositions": [
+    {
+      "propagation_stretch": 1.0,
+      "intrinsic_source_width": 1.5288772153855705,
+      "effective_stretch": 1.5288772153855705,
+      "score": 40.45039059353273,
+      "max_phase_difference": 0.0
+    },
+    {
+      "propagation_stretch": 1.4754,
+      "intrinsic_source_width": 1.0362459098451746,
+      "effective_stretch": 1.5288772153855708,
+      "score": 40.450390593532724,
+      "max_phase_difference": 7.105427357601002e-15
+    },
+    {
+      "propagation_stretch": 1.5957062624377376,
+      "intrinsic_source_width": 0.9581194555506266,
+      "effective_stretch": 1.5288772153855705,
+      "score": 40.45039059353273,
+      "max_phase_difference": 0.0
+    }
+  ],
+  "interior": true,
+  "hashes": {
+    "research_work\\results\\sn2006mk-phase-profile\\run.py": "6609e06d1e69983cc352175c89c72ad1cfaf47e69117c5d8507e878cdb347969",
+    "research_work\\results\\sn2006mk-intrinsic-width\\run.py": "c1b89cf46f3225de997962570961aaf424861f715d1c5b78de73437dac17fcc5"
+  }
+}
