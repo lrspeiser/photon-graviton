@@ -1,0 +1,150 @@
+{
+  "models": {
+    "transparent_control": {
+      "C_Msun_kpc3": 13547403.055262908,
+      "scale_to_disk": 4.022143000924363,
+      "k0_per_kpc": null,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 37.40478927164572,
+          "log_RMS": 0.15193304104151137
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 35.13624437264521,
+          "log_RMS": 0.1231350842628926
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 42.98686193271282,
+          "log_RMS": 0.10754295476924997
+        }
+      },
+      "finer_scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 37.40564146578369,
+          "log_RMS": 0.15193701288391867
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 35.13687408268423,
+          "log_RMS": 0.12315562187982437
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 42.98709364223014,
+          "log_RMS": 0.10757500456270681
+        }
+      },
+      "refinement_max_RMS_change_kms": 0.0008521941379697751,
+      "refinement_pass": true,
+      "optimizer_success": true,
+      "boundary": false,
+      "starts": [
+        {
+          "parameters": [
+            7.131856051899597,
+            0.6044575071877074
+          ],
+          "loss": 0.023083648960121578,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.1318563321609325,
+            0.6044572037214049
+          ],
+          "loss": 0.023083648960123927,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.1318556208964035,
+            0.6044577506599331
+          ],
+          "loss": 0.0230836489601274,
+          "success": true
+        }
+      ]
+    },
+    "attenuated": {
+      "C_Msun_kpc3": 27173667.81085939,
+      "scale_to_disk": 4.032982757261088,
+      "k0_per_kpc": 0.12255095640073653,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 30.707790930861407,
+          "log_RMS": 0.1409888192176933
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 33.18357482299863,
+          "log_RMS": 0.1199605275925364
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.99289610089266,
+          "log_RMS": 0.09850637563994376
+        }
+      },
+      "finer_scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 30.708730758819556,
+          "log_RMS": 0.14100354899594272
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 33.18419009926001,
+          "log_RMS": 0.11998045142588923
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 23.99377270865721,
+          "log_RMS": 0.09854508145359804
+        }
+      },
+      "refinement_max_RMS_change_kms": 0.0009398279581489533,
+      "refinement_pass": true,
+      "optimizer_success": true,
+      "boundary": false,
+      "starts": [
+        {
+          "parameters": [
+            7.434145923348949,
+            -0.9116872764696674,
+            0.6056269459774658
+          ],
+          "loss": 0.01987784714451337,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.434148261992025,
+            -0.9116832951182141,
+            0.6056263652155605
+          ],
+          "loss": 0.0198778471443994,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.434148558128455,
+            -0.9116829586111737,
+            0.6056258732158379
+          ],
+          "loss": 0.019877847144405165,
+          "success": true
+        }
+      ]
+    }
+  },
+  "input_sha256": {
+    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "sparc_frozen.json": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015"
+  }
+}
