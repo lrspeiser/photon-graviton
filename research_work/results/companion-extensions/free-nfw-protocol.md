@@ -1,0 +1,11 @@
+# NFW scale and strength fitted with the stellar model
+
+13 September 2026. Protocol written before execution.
+
+Use the same six exposed lens systems, all forty motion bins, full covariance, conditional nonexpanding geometry and stellar light/PSF models. Retain four stellar nuisance parameters and their prior bounds and necessary orbital constraints. Add two halo freedoms: rs/Re in [0.1,100] and fraction f of required bending supplied by the halo in [0,0.95]. The latter leaves positive stellar mass. At each h and f, the catalogue angle calibrates stellar mass; the NFW amplitude is fixed by f and rs. All six parameters are fitted to motions. This is a bounded descriptive NFW comparison with two additional local parameters relative to reference companions, not a blind validation or a physical formation model.
+
+No companion normalization, scale or population proxy determines the fitted halo. Use the proxy-independent geometry once per galaxy; verify that the two historical proxy cases have the same geometric and light inputs. Compare these six results with both companion proxy outcomes without counting the halo fit twice as independent evidence.
+
+Precompute the unit NFW deflection on 257 log scale radii and interpolate its logarithm. Use the exact analytic NFW enclosed mass in the force. Check final interpolation against direct quadrature and polish successful candidate optima using direct deflection integration. Use starts from all six recorded NFW shape/population cases with their inherited bending fractions, the stellar-only fit, and a fixed grid of initial rs/Re=[0.3,3,30] and f=[0.1,0.4,0.8] with two stellar seeds. Report local minima, optimizer outcomes and parameter bounds. These are bounded searches, not proofs of an unrestricted global optimum.
+
+Verify recovery of previous NFW shape objectives at their recorded parameters, the zero-halo control, exact lens closure, positive mass/moments, covariance decomposition, and refined necessary orbital conditions. The ideal untruncated NFW shape is retained for this diagnostic; do not treat its logarithmically divergent total mass as a finite energy inventory. No superiority claim is supported by lower raw residuals alone, particularly with 36 fitted local parameters for forty motion measurements plus lens calibration.

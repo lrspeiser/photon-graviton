@@ -1,3 +1,5 @@
+> Broader NFW comparison changes the assessment: fitting halo size and strength gives total chi-squared 49.71 versus companion 111.27-113.56. It adds two fitted parameters per galaxy and retains many boundary solutions. Earlier lens-matched NFW scores were restricted shape tests, not a general advantage over dark matter. See free-nfw-report.md. The v1.2 PDF predates this experiment.
+
 > NFW shape control: at the same added bending at the lens radius, three prescribed NFW scales give total chi-squared 162.62-194.57 versus companion 111.27-113.56. This restricted inherited-normalization comparison favors the current profile, not a general superiority claim over dark matter. Best NFW score lies at the largest tested scale. The v1.2 PDF predates this experiment.
 
 > Matched stellar-only control: total motion chi-squared is 175.09 versus 113.56/111.27 with companions, a 35%-36% aggregate improvement. Only J0037-0942 and J1402+6321 improve with the added profile; the other four slightly prefer stellar-only. This supports conditional profile usefulness, not photon origin or a complete solution. The v1.2 PDF predates this experiment.

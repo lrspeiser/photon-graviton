@@ -1,3 +1,11 @@
+## NFW size and strength fitted: qualification of the restricted comparison (after v1.2)
+
+Releasing the halo scale and bending strength reduces the total all-motion chi-squared to 49.71, versus 111.27-113.56 for the transferred companion profile. The largest improvement is J1402+6321, now 4.49 instead of 63.24/64.97. The previous prescribed-scale, lens-matched NFW results therefore do not establish a general advantage of the companion profile over freely fitted halos.
+
+This diagnostic fits six parameters per galaxy rather than four, giving 36 local fitted parameters for forty motion bins plus consumed lens calibration. All outer-anisotropy endpoints reach bounds, several halo scales are at limits, and physical distribution functions and stability remain unproved. J1204+0358 chooses zero halo, making its halo radius unidentifiable. The improved raw residuals are not independent predictions or a complexity-adjusted model-selection verdict.
+
+A fairer test of profile flexibility can next release companion amplitude and radial scale in the same way, while distinguishing such inverse fits from a shared physical supply/retention prediction. See [protocol](../../research_work/results/companion-extensions/free-nfw-protocol.md), [full result and interpretation](../../research_work/results/companion-extensions/free-nfw-report.md), and [recorded calculations](../../research_work/results/companion-extensions/free-nfw-results.json). The v1.2 PDF remains the earlier snapshot.
+
 ## NFW shapes at matched added-component lens bending (after v1.2)
 
 Three prescribed NFW scales, rs/a_capture=0.3, 1 and 3, were normalized to the companion contribution to bending at the catalogue lens radius. The same four stellar freedoms, full motion covariance, lens-calibrated stellar mass and necessary orbital conditions were retained. NFW total chi-squared is 193.60/194.57, 177.02/177.07 and 163.23/162.62 respectively, versus companion 113.56/111.27. This isolates a radial-shape difference at fixed bending strength, not a free best-fitting NFW or independently calibrated dark-halo comparison.
