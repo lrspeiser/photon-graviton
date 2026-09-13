@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Actual plate allocations recovered:** [Eight-plate history](selection-plate-history/report.md) verifies that both long-cohort exceptions were assigned on every plate despite nominal zero long allocation. All 1,271 observed main stars match drilled normal targets. Of 1,404 unique drilled normal targets, 110 are absent from the field catalog and 23 have EXTRATARG=1. Nominal allocation is not realized completeness; parent eligibility and subsequent sample selection still need modeling. No held-out kinematics read; all six goals remain open.
+
 **Full pilot-field observed membership:** [Targeting audit](selection-observed-field/report.md) recovers 1,271 unique main targets, all matching parent photometry/extinction exactly; 521 are in the existing training subset. Six recorded magnitude/color groups are counted. Two long-cohort stars conflict with a naive interpretation of zero planned long-cohort allocation, so plate histories must be reconciled before selection probabilities. No held-out motions read and no gravity inference made. All six goals remain open.
 
 **Pilot targeting products acquired:** [Field acquisition](selection-field-acquisition/report.md) caches the 189,661-row parent catalog and field/design/plate products with hashes. All 521 main training targets match. Raw parent row counts are not eligible-target denominators.
