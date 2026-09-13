@@ -1,0 +1,89 @@
+{
+  "models": {
+    "attenuated": {
+      "C_Msun_kpc3": 25992388.33014601,
+      "scale_to_disk": 4.174590133144378,
+      "k0_per_kpc": 0.11527795292866777,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 30.71760043153963,
+          "log_RMS": 0.1409747143915638
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 33.255291043662794,
+          "log_RMS": 0.11985782378150284
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 24.1388397521836,
+          "log_RMS": 0.0991113448583333
+        }
+      },
+      "finer_scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 30.718524857323676,
+          "log_RMS": 0.14098932902102507
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 33.25590148484475,
+          "log_RMS": 0.11987776419801136
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 24.139700703201047,
+          "log_RMS": 0.09914983624951451
+        }
+      },
+      "refinement_max_RMS_change_kms": 0.0009244257840457237,
+      "refinement_pass": true,
+      "optimizer_success": true,
+      "boundary": false,
+      "starts": [
+        {
+          "parameters": [
+            7.414849632657107,
+            -0.9382482919045688,
+            0.6206116165328488,
+            -0.02633759145150842
+          ],
+          "loss": 0.01987387009792894,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.414846267970876,
+            -0.9382539607696851,
+            0.6206136473965436,
+            -0.02634124940429983
+          ],
+          "loss": 0.019873870097791745,
+          "success": true
+        },
+        {
+          "parameters": [
+            7.414846186809523,
+            -0.9382537441968185,
+            0.6206138422982538,
+            -0.02634218565221005
+          ],
+          "loss": 0.019873870097782985,
+          "success": true
+        }
+      ],
+      "q": -0.02634218565221005,
+      "source_C_before_retention_Msun_kpc3": 51984776.66029202,
+      "minimum_retention": 0.47158125994705424,
+      "maximum_retention": 0.521833264493642,
+      "retention_proxy": "ordinary_vb2_at_Rdisk_over_1000"
+    }
+  },
+  "input_sha256": {
+    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "sparc_frozen.json": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015"
+  }
+}

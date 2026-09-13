@@ -1,0 +1,122 @@
+[
+  {
+    "candidate": "original",
+    "q": null,
+    "C_Msun_kpc3": 27173667.81085939,
+    "k0_per_kpc": 0.12255095640073653,
+    "scale_to_disk": 4.032982757261088,
+    "scores": {
+      "train": {
+        "n": 89,
+        "RMSE_kms": 30.708730758819556,
+        "log_RMS": 0.14100354899594272
+      },
+      "validation": {
+        "n": 29,
+        "RMSE_kms": 33.18419009926001,
+        "log_RMS": 0.11998045142588923
+      },
+      "test": {
+        "n": 31,
+        "RMSE_kms": 23.99377270865721,
+        "log_RMS": 0.09854508145359804
+      }
+    },
+    "boundary": false,
+    "optimizer_success": true,
+    "retention_range": [
+      null,
+      null
+    ]
+  },
+  {
+    "candidate": "radiative-flux",
+    "q": 0.4644964204254838,
+    "C_Msun_kpc3": 82677829.46143317,
+    "k0_per_kpc": 0.42975392869731593,
+    "scale_to_disk": 2.252509382295559,
+    "scores": {
+      "train": {
+        "n": 89,
+        "RMSE_kms": 28.828012749374594,
+        "log_RMS": 0.13516643930997813
+      },
+      "validation": {
+        "n": 29,
+        "RMSE_kms": 35.340632391655895,
+        "log_RMS": 0.11592166095450984
+      },
+      "test": {
+        "n": 31,
+        "RMSE_kms": 24.50763741350069,
+        "log_RMS": 0.09457212235324525
+      }
+    },
+    "boundary": false,
+    "optimizer_success": true,
+    "retention_range": [
+      null,
+      null
+    ]
+  },
+  {
+    "candidate": "bounded-radiation-retention",
+    "q": 0.33999078225593227,
+    "C_Msun_kpc3": 47834059.79934292,
+    "k0_per_kpc": 0.2059105264817794,
+    "scale_to_disk": 2.75267534655249,
+    "scores": {
+      "train": {
+        "n": 89,
+        "RMSE_kms": 29.018568051818246,
+        "log_RMS": 0.13848790656514917
+      },
+      "validation": {
+        "n": 29,
+        "RMSE_kms": 32.52001990686517,
+        "log_RMS": 0.11538344836156679
+      },
+      "test": {
+        "n": 31,
+        "RMSE_kms": 23.621551503137265,
+        "log_RMS": 0.09099103403751516
+      }
+    },
+    "boundary": false,
+    "optimizer_success": true,
+    "retention_range": [
+      0.2014868870112114,
+      0.7497146592783175
+    ]
+  },
+  {
+    "candidate": "bounded-depth-retention",
+    "q": -0.02634218565221005,
+    "C_Msun_kpc3": 25992388.33014601,
+    "k0_per_kpc": 0.11527795292866777,
+    "scale_to_disk": 4.174590133144378,
+    "scores": {
+      "train": {
+        "n": 89,
+        "RMSE_kms": 30.718524857323676,
+        "log_RMS": 0.14098932902102507
+      },
+      "validation": {
+        "n": 29,
+        "RMSE_kms": 33.25590148484475,
+        "log_RMS": 0.11987776419801136
+      },
+      "test": {
+        "n": 31,
+        "RMSE_kms": 24.139700703201047,
+        "log_RMS": 0.09914983624951451
+      }
+    },
+    "boundary": false,
+    "optimizer_success": true,
+    "retention_range": [
+      0.47158125994705424,
+      0.521833264493642
+    ]
+  }
+]

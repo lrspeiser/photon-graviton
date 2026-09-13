@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Improved galaxy candidate:** [Bounded radiation retention](../research_work/results/isotropic-galaxy-transfer/bounded-retention-report.md) changes radiation's role from interception to storage probability eta=X^q/(1+X^q). Training-only q=0.33999 improves both frozen log and km/s errors; depth-dependent retention stays near constant. This candidate still needs motion/lensing transfer and a Solar System source bridge; it is not a unified solution.
+
 **Capture-law variety evaluated:** [Solar System family comparison](../research_work/results/isotropic-galaxy-transfer/capture-law-family-report.md) finds no unified full-mass scaling among six formulas (two equivalent). [Radiation-conditioned galaxy capture](../research_work/results/isotropic-galaxy-transfer/radiative-flux-report.md) improves frozen fractional errors but worsens km/s errors; it remains a mixed candidate rather than replacing the reference. Full-mass and extra-gravity targets remain explicitly distinct.
 
 **Three reservoir options now formulated and compared:** [Sun–Earth–Moon specification](sun-earth-moon-three-branches.md) and [executed transfer results](../research_work/results/isotropic-galaxy-transfer/three-reservoirs-report.md). A common normalization calibrated on the Sun fails to predict terrestrial/lunar mass under the declared source/path proxies. Static stored and steady-renewal versions are degenerate; a freely escaping cloud lacks inventory, while independently self-bound states still require a support law.

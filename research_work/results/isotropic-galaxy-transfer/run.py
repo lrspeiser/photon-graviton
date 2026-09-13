@@ -8,8 +8,11 @@ from scipy.optimize import minimize
 
 HERE=Path(__file__).resolve().parent; ROOT=HERE.parents[2]
 BASE=ROOT/'temporal_candidate_audit/data'; G=4.30091727003628e-6
-FLUX='--radiative-flux' in sys.argv
-WELL='--well-strength' in sys.argv or FLUX
+RETENTION='--bounded-retention' in sys.argv
+DEPTH='--depth-retention' in sys.argv
+assert not DEPTH or RETENTION
+FLUX='--radiative-flux' in sys.argv or (RETENTION and not DEPTH)
+WELL='--well-strength' in sys.argv or FLUX or RETENTION
 STEEP='--steep-capture' in sys.argv
 assert not (WELL and STEEP), 'Candidate modifications must be fitted separately'
 previous=json.loads((HERE.parent/'luminosity-gravity-transfer/results.json').read_text())
@@ -46,12 +49,14 @@ class Calculator:
         self.strength=np.array([strength(d)/1000 for d in data])[:,None]
         if FLUX:
             self.strength=np.array([luminosity[d['name']]/d['rd']**2 for d in data])[:,None]
+        if DEPTH:self.strength*=self.rd
     def predict(self,p,attenuated):
         F=self.strength**p[3] if len(p)==4 else np.ones_like(self.rd)
+        if RETENTION:F=2*F/(1+F)
         C=10**p[0]*F; scale=10**(p[2] if len(p)==4 else p[-1]); a=scale*self.rd
         y=self.r/a; shape=(1+y*y)**(-3 if STEEP else -2)
         if attenuated:
-            k0=10**p[1]*F
+            k0=10**p[1]*(np.ones_like(F) if RETENTION else F)
             t=y[:,:,None]*self.mu
             B2=1+y[:,:,None]**2*(1-self.mu**2); B=np.sqrt(B2)
             # Integral from upstream infinity to the point; reversing mu leaves J unchanged.
@@ -87,7 +92,7 @@ for attenuated in ([True] if WELL else [False,True]):
     bounds=[(-2,12),(-6,2),(-1,2)] if attenuated else [(-2,12),(-1,2)]
     starts=[[7,-2,0],[7,-1,.5],[6,-4,1]] if attenuated else [[7,0],[7,.5],[6,1]]
     if WELL:
-        bounds+=[(-2,2) if FLUX else (0,2)]
+        bounds+=[(-2,2) if FLUX or RETENTION else (0,2)]
         starts=[p+[q] for p,q in zip(starts,[0.,.5,1.])]
     def loss(p):
         pred=coarse.predict(p,attenuated)
@@ -101,9 +106,14 @@ for attenuated in ([True] if WELL else [False,True]):
     drift=max(abs(cs[s]['RMSE_kms']-fs[s]['RMSE_kms']) for s in splits)
     results['models'][name]=dict(C_Msun_kpc3=float(10**p[0]),scale_to_disk=float(10**(p[2] if WELL else p[-1])),k0_per_kpc=float(10**p[1]) if attenuated else None,scores=cs,finer_scores=fs,refinement_max_RMS_change_kms=drift,refinement_pass=drift<.1,optimizer_success=bool(opt.success),boundary=bool(any(min(abs(v-lo),abs(v-hi))<1e-5 for v,(lo,hi) in zip(p,bounds))),starts=[dict(parameters=o.x.tolist(),loss=float(o.fun),success=bool(o.success)) for o in opts])
     if WELL: results['models'][name]['q']=float(p[3])
+    if RETENTION:
+        eta=coarse.strength**p[3]/(1+coarse.strength**p[3])
+        assert np.all((eta>=0)&(eta<=1))
+        results['models'][name].update(source_C_before_retention_Msun_kpc3=float(2*10**p[0]),minimum_retention=float(eta.min()),maximum_retention=float(eta.max()),retention_proxy='ordinary_vb2_at_Rdisk_over_1000' if DEPTH else 'L3.6_over_Rdisk_squared')
     if STEEP: results['models'][name]['capture_exponent']=3
     for d,v in zip(data,pred):
         rows.append(dict(model=name,galaxy=d['name'],split=next(s for s in splits if d['name'] in splits[s]),R_kpc=d['R'].tolist(),observed_kms=d['v'].tolist(),predicted_kms=v.tolist()))
 for fn,obj in [('results.json',results),('predictions.json',rows)]:
-    (HERE/(('radiative-flux-' if FLUX else 'well-strength-' if WELL else 'steep-capture-' if STEEP else '')+fn)).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    prefix='bounded-depth-retention-' if RETENTION and DEPTH else 'bounded-radiation-retention-' if RETENTION else 'radiative-flux-' if FLUX else 'well-strength-' if WELL else 'steep-capture-' if STEEP else ''
+    (HERE/(prefix+fn)).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(results['models'],indent=2),flush=True)
