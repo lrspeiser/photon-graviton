@@ -1,0 +1,4531 @@
+{
+  "scope": "Conditional test of monotone depth-only attached loading under common exposure; no observation or general capture exclusion",
+  "hashes": {
+    "research_work\\results\\depth-attached-loading\\run.py": "1c6bcdfb7fe922c232dc3681d954a680cedefa84795eec9e092d24b163a3aa4c",
+    "research_work\\results\\baryon-attached-deposits\\results.json": "ca4d399a682f4abd0bc571f3c1189987d4d7da8b2c9c373d76f90d4cbd248c86",
+    "research_work\\results\\full-bar-orbits\\run.py": "6227132d019c04c95075759782e6456454ea59661b91300bc5c6f16b69481d54",
+    "research_work\\data-cache\\full-bar-completion\\axis-disk-ec0d15eb7bb9.npz": "9ce6b854f866cf434391e730e6941c41d3fc1c1a80f991946b33b938539d7567",
+    "research_work\\data-cache\\bar-field\\bar-L64.npz": "df43407af3d59fb992500a44d3b29cdb73d95397638d88d6d7bba37ea9d1b660",
+    "research_work\\data-cache\\bar-field\\nuclei-L16.npz": "b779dcf279eb83fe6deb79e3efb87520dafd188f56b521f076886cd4bbaa26dd",
+    "research_work\\data-cache\\full-bar-completion\\axisymmetric-reference-80-L128-N512.npz": "ebdcc0f52093d0048f18a4d7f4d25443f94dc0d9ca68b6f0d871432bef8476f5",
+    "research_work\\data-cache\\full-bar-completion\\finer.npz": "47014aaaf398ba8ecaf45a50ac792ef81dbaab1b67364acc7d4095f551917d6b"
+  },
+  "cases": [
+    {
+      "field": "ordinary",
+      "subset": "full",
+      "n": 240,
+      "minimum_worst_relative_error": 0.998634515434878,
+      "linear_program_error": 0.9986345154348779,
+      "critical_shallower": {
+        "location": {
+          "R_kpc": 20,
+          "z_kpc": 4,
+          "phi_rad": 0.0,
+          "declared_baryon_density_Msun_kpc3": 4042.0749992014416,
+          "equivalent_extra_density_Msun_kpc3": 1172293.2342358537,
+          "required_extra_per_baryon": 290.0226330455159,
+          "components_Msun_kpc3": {
+            "bar": 2.608525219824165e-12,
+            "nuclei": 3.3438329618612616e-84,
+            "disk_0": 0.1426216013291277,
+            "disk_1": 4041.932377322802,
+            "disk_2": 1.1740039273606255e-13,
+            "disk_3": 1.3176454057724957e-34,
+            "softened_centre": 2.773076932603013e-07
+          }
+        },
+        "negative_potential_kms2": 14901.264724146447
+      },
+      "critical_deeper": {
+        "location": {
+          "R_kpc": 0.5,
+          "z_kpc": 0.1,
+          "phi_rad": 0.7853981633974483,
+          "declared_baryon_density_Msun_kpc3": 2867679500.424758,
+          "equivalent_extra_density_Msun_kpc3": 568219214.0615526,
+          "required_extra_per_baryon": 0.19814599713021924,
+          "components_Msun_kpc3": {
+            "bar": 2850465532.6288,
+            "nuclei": 9895470.391908638,
+            "disk_0": 5595312.208418628,
+            "disk_1": 1684698.5697983226,
+            "disk_2": 38458.08768813098,
+            "disk_3": 0.14210948418552774,
+            "softened_centre": 28.3960349209208
+          }
+        },
+        "negative_potential_kms2": 116163.88935024237
+      },
+      "ordered_rows": [
+        {
+          "index": 239,
+          "negative_potential_kms2": 14870.240871376702,
+          "required_loading": 287.5479585742094,
+          "fitted_loading": 0.392642299165459
+        },
+        {
+          "index": 238,
+          "negative_potential_kms2": 14874.52724780766,
+          "required_loading": 287.8561442076121,
+          "fitted_loading": 0.3930631218910321
+        },
+        {
+          "index": 237,
+          "negative_potential_kms2": 14885.217257317367,
+          "required_loading": 288.66800361518307,
+          "fitted_loading": 0.39417170338111873
+        },
+        {
+          "index": 236,
+          "negative_potential_kms2": 14896.441393931462,
+          "required_loading": 289.5961586129012,
+          "fitted_loading": 0.3954390847045488
+        },
+        {
+          "index": 235,
+          "negative_potential_kms2": 14901.264724146447,
+          "required_loading": 290.0226330455159,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 234,
+          "negative_potential_kms2": 15260.51375015446,
+          "required_loading": 34.76951062905025,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 233,
+          "negative_potential_kms2": 15265.124208839406,
+          "required_loading": 34.80355479180329,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 232,
+          "negative_potential_kms2": 15276.645659549737,
+          "required_loading": 34.89383211924192,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 231,
+          "negative_potential_kms2": 15288.781986501264,
+          "required_loading": 34.998175861031676,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 230,
+          "negative_potential_kms2": 15294.011072449475,
+          "required_loading": 35.04656899463072,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 229,
+          "negative_potential_kms2": 15404.802140926444,
+          "required_loading": 11.676409572863411,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 228,
+          "negative_potential_kms2": 15409.499011896394,
+          "required_loading": 11.687586798393053,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 227,
+          "negative_potential_kms2": 15421.242679120081,
+          "required_loading": 11.71724187237137,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 226,
+          "negative_potential_kms2": 15433.623760819482,
+          "required_loading": 11.751554525280687,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 225,
+          "negative_potential_kms2": 15438.962080463787,
+          "required_loading": 11.767485856881008,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 224,
+          "negative_potential_kms2": 15462.066065957364,
+          "required_loading": 6.28521364722177,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 223,
+          "negative_potential_kms2": 15466.784897298468,
+          "required_loading": 6.285427253806831,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 222,
+          "negative_potential_kms2": 15478.58507257794,
+          "required_loading": 6.286418421049909,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 221,
+          "negative_potential_kms2": 15491.028458257284,
+          "required_loading": 6.288297795614228,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 219,
+          "negative_potential_kms2": 15493.434389533186,
+          "required_loading": 1.3458895682026928,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 214,
+          "negative_potential_kms2": 15495.026471440722,
+          "required_loading": 1.0302954713382049,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 220,
+          "negative_potential_kms2": 15496.394608829638,
+          "required_loading": 6.289426971589549,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 218,
+          "negative_potential_kms2": 15498.160278837348,
+          "required_loading": 1.3457864661137986,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 213,
+          "negative_potential_kms2": 15499.752655150345,
+          "required_loading": 1.030216585717533,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 217,
+          "negative_potential_kms2": 15509.978618568266,
+          "required_loading": 1.345545537613258,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 212,
+          "negative_potential_kms2": 15511.571752598316,
+          "required_loading": 1.030031408978656,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 216,
+          "negative_potential_kms2": 15522.442037363446,
+          "required_loading": 1.3453230593705512,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 211,
+          "negative_potential_kms2": 15524.03600711945,
+          "required_loading": 1.029858772542172,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 215,
+          "negative_potential_kms2": 15527.817138784569,
+          "required_loading": 1.3452394761733435,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 210,
+          "negative_potential_kms2": 15529.411481967763,
+          "required_loading": 1.0297931945278656,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 209,
+          "negative_potential_kms2": 23154.821201714534,
+          "required_loading": 35.063873946870245,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 208,
+          "negative_potential_kms2": 23170.39810627628,
+          "required_loading": 35.16988325148458,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 207,
+          "negative_potential_kms2": 23210.77875939161,
+          "required_loading": 35.4775450266505,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 206,
+          "negative_potential_kms2": 23256.044989484228,
+          "required_loading": 35.895297823452275,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 205,
+          "negative_potential_kms2": 23276.636794333263,
+          "required_loading": 36.12024335574512,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 204,
+          "negative_potential_kms2": 24771.818865483972,
+          "required_loading": 5.686544574037628,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 203,
+          "negative_potential_kms2": 24790.70459901896,
+          "required_loading": 5.701015669136335,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 202,
+          "negative_potential_kms2": 24840.292587602165,
+          "required_loading": 5.744096486680895,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 201,
+          "negative_potential_kms2": 24897.25853465373,
+          "required_loading": 5.806180895374289,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 200,
+          "negative_potential_kms2": 24923.843651494764,
+          "required_loading": 5.842345955210798,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 199,
+          "negative_potential_kms2": 25434.246566364673,
+          "required_loading": 1.8342693226407514,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 198,
+          "negative_potential_kms2": 25454.11631631744,
+          "required_loading": 1.838527483566264,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 197,
+          "negative_potential_kms2": 25506.486878203134,
+          "required_loading": 1.8513599447329634,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 196,
+          "negative_potential_kms2": 25567.11353235306,
+          "required_loading": 1.8703532403102028,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 195,
+          "negative_potential_kms2": 25595.663426174735,
+          "required_loading": 1.8818537503474968,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 194,
+          "negative_potential_kms2": 25691.83536186032,
+          "required_loading": 1.136152580642609,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 193,
+          "negative_potential_kms2": 25711.96263033368,
+          "required_loading": 1.136560663446607,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 192,
+          "negative_potential_kms2": 25765.064845939258,
+          "required_loading": 1.1381945512729952,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 191,
+          "negative_potential_kms2": 25826.664749691816,
+          "required_loading": 1.1415947179405919,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 189,
+          "negative_potential_kms2": 25829.418782178887,
+          "required_loading": 0.9770776472803812,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 184,
+          "negative_potential_kms2": 25837.425181179347,
+          "required_loading": 0.7903183519648713,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 188,
+          "negative_potential_kms2": 25849.629472179502,
+          "required_loading": 0.9766430102343904,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 190,
+          "negative_potential_kms2": 25855.748791192666,
+          "required_loading": 1.144220954216216,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 183,
+          "negative_potential_kms2": 25857.639357880736,
+          "required_loading": 0.7899800685036918,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 187,
+          "negative_potential_kms2": 25902.969012167137,
+          "required_loading": 0.9755300810959494,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 182,
+          "negative_potential_kms2": 25910.988820427672,
+          "required_loading": 0.789109502591056,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 186,
+          "negative_potential_kms2": 25964.88562425216,
+          "required_loading": 0.9743570724224886,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 181,
+          "negative_potential_kms2": 25972.918685325956,
+          "required_loading": 0.788179542410022,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 185,
+          "negative_potential_kms2": 25994.145611789434,
+          "required_loading": 0.9738975723476841,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 180,
+          "negative_potential_kms2": 26002.18606700549,
+          "required_loading": 0.7878073381271417,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 179,
+          "negative_potential_kms2": 30437.420506876857,
+          "required_loading": 15.882423707851098,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 178,
+          "negative_potential_kms2": 30471.907036050354,
+          "required_loading": 15.982290466491772,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 177,
+          "negative_potential_kms2": 30564.294781541197,
+          "required_loading": 16.28953973923585,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 176,
+          "negative_potential_kms2": 30674.14908605957,
+          "required_loading": 16.754927108831403,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 175,
+          "negative_potential_kms2": 30726.892337876096,
+          "required_loading": 17.027284645446176,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 174,
+          "negative_potential_kms2": 34289.45508992457,
+          "required_loading": 2.573006600725047,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 173,
+          "negative_potential_kms2": 34340.612385881606,
+          "required_loading": 2.5856995894766275,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 172,
+          "negative_potential_kms2": 34483.65934860419,
+          "required_loading": 2.629486133433263,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 171,
+          "negative_potential_kms2": 34670.67961487795,
+          "required_loading": 2.7161310946974733,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 170,
+          "negative_potential_kms2": 34771.559536563866,
+          "required_loading": 2.787070788602222,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 169,
+          "negative_potential_kms2": 36070.04045122161,
+          "required_loading": 1.1336755910049345,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 168,
+          "negative_potential_kms2": 36127.23328937433,
+          "required_loading": 1.1357611325419894,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 167,
+          "negative_potential_kms2": 36289.78627951342,
+          "required_loading": 1.1440795761776468,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 166,
+          "negative_potential_kms2": 36512.06170654152,
+          "required_loading": 1.1662462131201377,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 165,
+          "negative_potential_kms2": 36642.12113916359,
+          "required_loading": 1.1943920214306591,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 164,
+          "negative_potential_kms2": 36796.75291738252,
+          "required_loading": 0.9073987325150994,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 163,
+          "negative_potential_kms2": 36855.622867744794,
+          "required_loading": 0.908386542913954,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 162,
+          "negative_potential_kms2": 37023.73025726766,
+          "required_loading": 0.9122761718465802,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 159,
+          "negative_potential_kms2": 37174.30330857409,
+          "required_loading": 0.7183843830407234,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 154,
+          "negative_potential_kms2": 37197.93488717677,
+          "required_loading": 0.5917140848465002,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 158,
+          "negative_potential_kms2": 37233.72581232713,
+          "required_loading": 0.7173836201913093,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 161,
+          "negative_potential_kms2": 37257.13762483126,
+          "required_loading": 0.9226855031855409,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 153,
+          "negative_potential_kms2": 37257.38058651897,
+          "required_loading": 0.5909416101718814,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 160,
+          "negative_potential_kms2": 37399.62224233646,
+          "required_loading": 0.934669784365265,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 157,
+          "negative_potential_kms2": 37403.67864910641,
+          "required_loading": 0.714529225358574,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 152,
+          "negative_potential_kms2": 37427.41109089513,
+          "required_loading": 0.588722217483506,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 156,
+          "negative_potential_kms2": 37641.05005044417,
+          "required_loading": 0.7107947524334544,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 149,
+          "negative_potential_kms2": 37652.58012022685,
+          "required_loading": 9.93638518228315,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 151,
+          "negative_potential_kms2": 37664.954830357565,
+          "required_loading": 0.585777916989831,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 148,
+          "negative_potential_kms2": 37708.819617213834,
+          "required_loading": 10.026242374437663,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 155,
+          "negative_potential_kms2": 37789.72636538395,
+          "required_loading": 0.7077975836790765,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 150,
+          "negative_potential_kms2": 37813.94500798277,
+          "required_loading": 0.5839193962281909,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 147,
+          "negative_potential_kms2": 37859.695551992656,
+          "required_loading": 10.295399874549014,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 146,
+          "negative_potential_kms2": 38038.660457573555,
+          "required_loading": 10.68409030888549,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 145,
+          "negative_potential_kms2": 38123.86981151493,
+          "required_loading": 10.88809703972391,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 119,
+          "negative_potential_kms2": 42789.26432157288,
+          "required_loading": 9.601032986423025,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 118,
+          "negative_potential_kms2": 42841.246600600556,
+          "required_loading": 9.675838649767007,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 117,
+          "negative_potential_kms2": 42975.54714147923,
+          "required_loading": 9.886932224478569,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 116,
+          "negative_potential_kms2": 43124.69192746523,
+          "required_loading": 10.128579527980543,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 115,
+          "negative_potential_kms2": 43191.73955893162,
+          "required_loading": 10.151031163774242,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 89,
+          "negative_potential_kms2": 45026.160822473284,
+          "required_loading": 11.681306645188545,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 88,
+          "negative_potential_kms2": 45060.351264325654,
+          "required_loading": 11.73713048621513,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 87,
+          "negative_potential_kms2": 45146.1734182986,
+          "required_loading": 11.883434136143455,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 86,
+          "negative_potential_kms2": 45237.16484576844,
+          "required_loading": 11.978678226278971,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 144,
+          "negative_potential_kms2": 45242.44548453945,
+          "required_loading": 1.6246805162906819,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 85,
+          "negative_potential_kms2": 45276.620486250395,
+          "required_loading": 12.102761692615395,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 143,
+          "negative_potential_kms2": 45366.278303338884,
+          "required_loading": 1.6422998642296565,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 142,
+          "negative_potential_kms2": 45730.985238431895,
+          "required_loading": 1.705608528795296,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 141,
+          "negative_potential_kms2": 46258.60179547278,
+          "required_loading": 1.8428924154890312,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 140,
+          "negative_potential_kms2": 46569.400852329054,
+          "required_loading": 1.9466475947090576,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 59,
+          "negative_potential_kms2": 46620.208703622586,
+          "required_loading": 34.03808404017846,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 58,
+          "negative_potential_kms2": 46631.46920193338,
+          "required_loading": 34.11547835904125,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 57,
+          "negative_potential_kms2": 46658.985874160884,
+          "required_loading": 34.2774116069587,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 56,
+          "negative_potential_kms2": 46686.93081961691,
+          "required_loading": 33.92513844679468,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 55,
+          "negative_potential_kms2": 46698.6198216809,
+          "required_loading": 33.447128766509124,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 29,
+          "negative_potential_kms2": 47056.936906901654,
+          "required_loading": 264.09397459271247,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 28,
+          "negative_potential_kms2": 47059.93144747004,
+          "required_loading": 259.1833950748902,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 27,
+          "negative_potential_kms2": 47067.34879384286,
+          "required_loading": 264.49554002830695,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 26,
+          "negative_potential_kms2": 47074.72568401106,
+          "required_loading": 262.90471410818446,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 25,
+          "negative_potential_kms2": 47077.75569586968,
+          "required_loading": 259.3500725190024,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 139,
+          "negative_potential_kms2": 49150.93847919213,
+          "required_loading": 0.760134957982736,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 138,
+          "negative_potential_kms2": 49312.73705120872,
+          "required_loading": 0.7640652513346653,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 137,
+          "negative_potential_kms2": 49817.662940172115,
+          "required_loading": 0.7807644028147687,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 136,
+          "negative_potential_kms2": 50681.022370039536,
+          "required_loading": 0.8372194631889501,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 134,
+          "negative_potential_kms2": 50827.40373896647,
+          "required_loading": 0.5574380000195894,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 133,
+          "negative_potential_kms2": 51002.096580674275,
+          "required_loading": 0.558043703622037,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 135,
+          "negative_potential_kms2": 51329.17932586817,
+          "required_loading": 0.9063546738927349,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 132,
+          "negative_potential_kms2": 51561.02062694595,
+          "required_loading": 0.5614149846290931,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 129,
+          "negative_potential_kms2": 51702.928892360826,
+          "required_loading": 0.5279224511083813,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 124,
+          "negative_potential_kms2": 51760.257288003064,
+          "required_loading": 0.47341475281154644,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 128,
+          "negative_potential_kms2": 51882.29371651454,
+          "required_loading": 0.5255519835253651,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 123,
+          "negative_potential_kms2": 51939.82725624859,
+          "required_loading": 0.471463711517039,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 127,
+          "negative_potential_kms2": 52463.05352340052,
+          "required_loading": 0.5175055984590538,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 122,
+          "negative_potential_kms2": 52521.614495823895,
+          "required_loading": 0.46492638355513605,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 131,
+          "negative_potential_kms2": 52615.614270310725,
+          "required_loading": 0.5750825265921768,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 130,
+          "negative_potential_kms2": 53573.392287452625,
+          "required_loading": 0.5730214035820986,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 126,
+          "negative_potential_kms2": 53629.784707403735,
+          "required_loading": 0.49573350216685813,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 121,
+          "negative_potential_kms2": 53694.806815639466,
+          "required_loading": 0.4494684019560138,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 125,
+          "negative_potential_kms2": 54858.78006234686,
+          "required_loading": 0.45609367369657683,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 120,
+          "negative_potential_kms2": 54942.24335188029,
+          "required_loading": 0.42445511134695973,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 114,
+          "negative_potential_kms2": 54960.08710596521,
+          "required_loading": 1.6550730806079994,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 113,
+          "negative_potential_kms2": 55151.654294543965,
+          "required_loading": 1.6643845311775574,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 112,
+          "negative_potential_kms2": 55697.24434310799,
+          "required_loading": 1.7003241809925187,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 111,
+          "negative_potential_kms2": 56436.38600285018,
+          "required_loading": 1.796299527902259,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 110,
+          "negative_potential_kms2": 56857.96278096977,
+          "required_loading": 1.6133096499578126,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 84,
+          "negative_potential_kms2": 60598.02378942961,
+          "required_loading": 2.0021423093213295,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 83,
+          "negative_potential_kms2": 60778.043757567706,
+          "required_loading": 1.9959396401299703,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 82,
+          "negative_potential_kms2": 61267.26534409347,
+          "required_loading": 1.9976918348599333,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 81,
+          "negative_potential_kms2": 61876.12616821187,
+          "required_loading": 1.950100757739781,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 109,
+          "negative_potential_kms2": 61921.2267795406,
+          "required_loading": 0.6537227025237877,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 80,
+          "negative_potential_kms2": 62193.63645677061,
+          "required_loading": 1.6563841138241944,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 108,
+          "negative_potential_kms2": 62255.01310770797,
+          "required_loading": 0.6509451232496861,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 107,
+          "negative_potential_kms2": 63279.64672433824,
+          "required_loading": 0.6417889070783156,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 104,
+          "negative_potential_kms2": 64899.72184863244,
+          "required_loading": 0.4622580025986523,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 106,
+          "negative_potential_kms2": 64981.76450814984,
+          "required_loading": 0.646655914493215,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 103,
+          "negative_potential_kms2": 65302.684742371224,
+          "required_loading": 0.4592638663966617,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 54,
+          "negative_potential_kms2": 65946.13538852858,
+          "required_loading": 2.914366928470971,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 53,
+          "negative_potential_kms2": 66033.67248879602,
+          "required_loading": 2.8978500322607115,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 52,
+          "negative_potential_kms2": 66256.6051854992,
+          "required_loading": 2.749248995877602,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 99,
+          "negative_potential_kms2": 66361.28982442153,
+          "required_loading": 0.42200178743189043,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 105,
+          "negative_potential_kms2": 66361.59034910353,
+          "required_loading": 0.5049891589194118,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 94,
+          "negative_potential_kms2": 66450.02848324405,
+          "required_loading": 0.40905090987534987,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 51,
+          "negative_potential_kms2": 66498.85582779649,
+          "required_loading": 2.5597213138935713,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 102,
+          "negative_potential_kms2": 66591.75112718753,
+          "required_loading": 0.4445368875295251,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 50,
+          "negative_potential_kms2": 66606.06723284222,
+          "required_loading": 2.4811609666538073,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 98,
+          "negative_potential_kms2": 66795.77454085037,
+          "required_loading": 0.4173601833928338,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 93,
+          "negative_potential_kms2": 66886.09936663916,
+          "required_loading": 0.4050015244785137,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 24,
+          "negative_potential_kms2": 67756.21525718988,
+          "required_loading": 3.773152013301895,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 23,
+          "negative_potential_kms2": 67783.42032232338,
+          "required_loading": 3.7629668391535263,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 22,
+          "negative_potential_kms2": 67850.14526287773,
+          "required_loading": 3.7305399926710705,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 21,
+          "negative_potential_kms2": 67918.3950233049,
+          "required_loading": 3.7035195763704243,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 20,
+          "negative_potential_kms2": 67947.12883703102,
+          "required_loading": 3.6966377493908604,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 97,
+          "negative_potential_kms2": 68224.04399840249,
+          "required_loading": 0.4004408751165339,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 92,
+          "negative_potential_kms2": 68322.06215296878,
+          "required_loading": 0.3913049813935467,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 101,
+          "negative_potential_kms2": 69031.21411938623,
+          "required_loading": 0.406124764099677,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 79,
+          "negative_potential_kms2": 70914.56500800322,
+          "required_loading": 0.654819834622272,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 96,
+          "negative_potential_kms2": 71179.9114640059,
+          "required_loading": 0.3638956470197484,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 91,
+          "negative_potential_kms2": 71310.77560679002,
+          "required_loading": 0.3646490261936091,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 78,
+          "negative_potential_kms2": 71325.336357762,
+          "required_loading": 0.638830294790363,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 100,
+          "negative_potential_kms2": 71551.99791471752,
+          "required_loading": 0.3101279752350357,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 77,
+          "negative_potential_kms2": 72517.89207860963,
+          "required_loading": 0.6049215203202832,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 76,
+          "negative_potential_kms2": 74306.06798476558,
+          "required_loading": 0.5170258074108672,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 95,
+          "negative_potential_kms2": 74681.04895724232,
+          "required_loading": 0.3180324486163339,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 90,
+          "negative_potential_kms2": 74877.55153044182,
+          "required_loading": 0.33151336490113886,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 74,
+          "negative_potential_kms2": 75498.3086510004,
+          "required_loading": 0.4378624076212506,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 75,
+          "negative_potential_kms2": 75523.91748877284,
+          "required_loading": 0.3904419574309558,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 73,
+          "negative_potential_kms2": 76054.52466227052,
+          "required_loading": 0.4270705785139425,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 69,
+          "negative_potential_kms2": 77578.8029100705,
+          "required_loading": 0.3858900318853298,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 64,
+          "negative_potential_kms2": 77690.38925121247,
+          "required_loading": 0.3690725241562973,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 72,
+          "negative_potential_kms2": 77714.27209873886,
+          "required_loading": 0.4010238463894495,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 68,
+          "negative_potential_kms2": 78202.80554997739,
+          "required_loading": 0.3798215776328787,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 63,
+          "negative_potential_kms2": 78317.55601746116,
+          "required_loading": 0.364257648558219,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 67,
+          "negative_potential_kms2": 80086.3214259197,
+          "required_loading": 0.36545192937204446,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 62,
+          "negative_potential_kms2": 80211.63484929793,
+          "required_loading": 0.3529421142405396,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 71,
+          "negative_potential_kms2": 80456.6577001105,
+          "required_loading": 0.3344127074023508,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 70,
+          "negative_potential_kms2": 82610.9243777718,
+          "required_loading": 0.27607311125454026,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 49,
+          "negative_potential_kms2": 82849.180650677,
+          "required_loading": 0.5248931659048109,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 48,
+          "negative_potential_kms2": 83164.04305494328,
+          "required_loading": 0.5150305439792686,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 66,
+          "negative_potential_kms2": 83343.70349421549,
+          "required_loading": 0.32888458248261665,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 61,
+          "negative_potential_kms2": 83494.42801674243,
+          "required_loading": 0.3254518465653019,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 47,
+          "negative_potential_kms2": 84018.16513229941,
+          "required_loading": 0.4683724618168444,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 46,
+          "negative_potential_kms2": 85055.44638982027,
+          "required_loading": 0.4008273655864104,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 45,
+          "negative_potential_kms2": 85567.09866073396,
+          "required_loading": 0.3636940216144931,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 65,
+          "negative_potential_kms2": 86089.3191914299,
+          "required_loading": 0.33244470909111706,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 60,
+          "negative_potential_kms2": 86270.80331105931,
+          "required_loading": 0.3419908895896037,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 19,
+          "negative_potential_kms2": 88555.91437647809,
+          "required_loading": 0.49870271848834113,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 18,
+          "negative_potential_kms2": 88682.95676136203,
+          "required_loading": 0.49274376885619214,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 17,
+          "negative_potential_kms2": 89003.31428393525,
+          "required_loading": 0.47506047810464685,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 16,
+          "negative_potential_kms2": 89345.25715081819,
+          "required_loading": 0.4528067079237457,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 15,
+          "negative_potential_kms2": 89494.06697878221,
+          "required_loading": 0.4422814382304443,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 44,
+          "negative_potential_kms2": 92664.43822699403,
+          "required_loading": 0.30086868616066104,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 43,
+          "negative_potential_kms2": 93229.3277938174,
+          "required_loading": 0.2928193456046132,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 42,
+          "negative_potential_kms2": 94800.4856086071,
+          "required_loading": 0.2657777782924753,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 41,
+          "negative_potential_kms2": 96760.58820806745,
+          "required_loading": 0.23810556558647772,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 39,
+          "negative_potential_kms2": 97559.92857542072,
+          "required_loading": 0.2649107927491993,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 40,
+          "negative_potential_kms2": 97736.44366262366,
+          "required_loading": 0.22949090088864157,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 34,
+          "negative_potential_kms2": 97802.37849366991,
+          "required_loading": 0.26320675708476987,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 38,
+          "negative_potential_kms2": 98290.7430407281,
+          "required_loading": 0.25900429718128243,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 33,
+          "negative_potential_kms2": 98542.0915011636,
+          "required_loading": 0.2577162243754382,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 37,
+          "negative_potential_kms2": 100324.82635658792,
+          "required_loading": 0.2435552294567404,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 32,
+          "negative_potential_kms2": 100600.54321063843,
+          "required_loading": 0.24372079523737084,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 36,
+          "negative_potential_kms2": 102816.79954097643,
+          "required_loading": 0.23993601797742506,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 31,
+          "negative_potential_kms2": 103118.64309482975,
+          "required_loading": 0.24256068557802218,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 35,
+          "negative_potential_kms2": 104014.43185776965,
+          "required_loading": 0.24961369941672015,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 14,
+          "negative_potential_kms2": 104023.6429444682,
+          "required_loading": 0.24655362541675344,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 13,
+          "negative_potential_kms2": 104323.93986067604,
+          "required_loading": 0.24060664387337466,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 30,
+          "negative_potential_kms2": 104325.84704534095,
+          "required_loading": 0.25431514107870523,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 12,
+          "negative_potential_kms2": 105090.61000674596,
+          "required_loading": 0.22642183674211924,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 11,
+          "negative_potential_kms2": 105923.86896089798,
+          "required_loading": 0.21311509226899167,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 10,
+          "negative_potential_kms2": 106290.82867392582,
+          "required_loading": 0.20818647895412726,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 9,
+          "negative_potential_kms2": 114489.1719430553,
+          "required_loading": 0.20562649299691027,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 8,
+          "negative_potential_kms2": 114963.86310443007,
+          "required_loading": 0.20239882402782727,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 4,
+          "negative_potential_kms2": 115110.93576697564,
+          "required_loading": 0.20582744217702648,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 3,
+          "negative_potential_kms2": 115597.5079558599,
+          "required_loading": 0.20300256010264972,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 7,
+          "negative_potential_kms2": 116163.88935024237,
+          "required_loading": 0.19814599713021924,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 2,
+          "negative_potential_kms2": 116826.4235454035,
+          "required_loading": 0.2001927992124435,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 6,
+          "negative_potential_kms2": 117442.91871260757,
+          "required_loading": 0.20076534997550963,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 5,
+          "negative_potential_kms2": 117991.96831367108,
+          "required_loading": 0.2052090753505812,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 1,
+          "negative_potential_kms2": 118133.7529447384,
+          "required_loading": 0.20547237764350956,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 0,
+          "negative_potential_kms2": 118693.4578621335,
+          "required_loading": 0.21175549286236775,
+          "fitted_loading": 0.42322183686765213
+        }
+      ]
+    },
+    {
+      "field": "ordinary",
+      "subset": "inner",
+      "n": 120,
+      "minimum_worst_relative_error": 0.7154174686950469,
+      "linear_program_error": 0.715417468695047,
+      "critical_shallower": {
+        "location": {
+          "R_kpc": 8,
+          "z_kpc": 1,
+          "phi_rad": 0.0,
+          "declared_baryon_density_Msun_kpc3": 7761796.424159906,
+          "equivalent_extra_density_Msun_kpc3": 9270627.720985612,
+          "required_extra_per_baryon": 1.1943920214306591,
+          "components_Msun_kpc3": {
+            "bar": 2869.345378684249,
+            "nuclei": 2.753171534890201e-32,
+            "disk_0": 1035028.6852317082,
+            "disk_1": 6722870.552676716,
+            "disk_2": 1027.826513776712,
+            "disk_3": 0.014330285195929594,
+            "softened_centre": 2.873504218913208e-05
+          }
+        },
+        "negative_potential_kms2": 36642.12113916359
+      },
+      "critical_deeper": {
+        "location": {
+          "R_kpc": 0.5,
+          "z_kpc": 0.1,
+          "phi_rad": 0.7853981633974483,
+          "declared_baryon_density_Msun_kpc3": 2867679500.424758,
+          "equivalent_extra_density_Msun_kpc3": 568219214.0615526,
+          "required_extra_per_baryon": 0.19814599713021924,
+          "components_Msun_kpc3": {
+            "bar": 2850465532.6288,
+            "nuclei": 9895470.391908638,
+            "disk_0": 5595312.208418628,
+            "disk_1": 1684698.5697983226,
+            "disk_2": 38458.08768813098,
+            "disk_3": 0.14210948418552774,
+            "softened_centre": 28.3960349209208
+          }
+        },
+        "negative_potential_kms2": 116163.88935024237
+      },
+      "ordered_rows": [
+        {
+          "index": 169,
+          "negative_potential_kms2": 36070.04045122161,
+          "required_loading": 1.1336755910049345,
+          "fitted_loading": 0.32262426936682287
+        },
+        {
+          "index": 168,
+          "negative_potential_kms2": 36127.23328937433,
+          "required_loading": 1.1357611325419894,
+          "fitted_loading": 0.3232177780565796
+        },
+        {
+          "index": 167,
+          "negative_potential_kms2": 36289.78627951342,
+          "required_loading": 1.1440795761776468,
+          "fitted_loading": 0.32558506180293256
+        },
+        {
+          "index": 166,
+          "negative_potential_kms2": 36512.06170654152,
+          "required_loading": 1.1662462131201377,
+          "fitted_loading": 0.3318932994545445
+        },
+        {
+          "index": 165,
+          "negative_potential_kms2": 36642.12113916359,
+          "required_loading": 1.1943920214306591,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 164,
+          "negative_potential_kms2": 36796.75291738252,
+          "required_loading": 0.9073987325150994,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 163,
+          "negative_potential_kms2": 36855.622867744794,
+          "required_loading": 0.908386542913954,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 162,
+          "negative_potential_kms2": 37023.73025726766,
+          "required_loading": 0.9122761718465802,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 159,
+          "negative_potential_kms2": 37174.30330857409,
+          "required_loading": 0.7183843830407234,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 154,
+          "negative_potential_kms2": 37197.93488717677,
+          "required_loading": 0.5917140848465002,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 158,
+          "negative_potential_kms2": 37233.72581232713,
+          "required_loading": 0.7173836201913093,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 161,
+          "negative_potential_kms2": 37257.13762483126,
+          "required_loading": 0.9226855031855409,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 153,
+          "negative_potential_kms2": 37257.38058651897,
+          "required_loading": 0.5909416101718814,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 160,
+          "negative_potential_kms2": 37399.62224233646,
+          "required_loading": 0.934669784365265,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 157,
+          "negative_potential_kms2": 37403.67864910641,
+          "required_loading": 0.714529225358574,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 152,
+          "negative_potential_kms2": 37427.41109089513,
+          "required_loading": 0.588722217483506,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 156,
+          "negative_potential_kms2": 37641.05005044417,
+          "required_loading": 0.7107947524334544,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 151,
+          "negative_potential_kms2": 37664.954830357565,
+          "required_loading": 0.585777916989831,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 155,
+          "negative_potential_kms2": 37789.72636538395,
+          "required_loading": 0.7077975836790765,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 150,
+          "negative_potential_kms2": 37813.94500798277,
+          "required_loading": 0.5839193962281909,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 139,
+          "negative_potential_kms2": 49150.93847919213,
+          "required_loading": 0.760134957982736,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 138,
+          "negative_potential_kms2": 49312.73705120872,
+          "required_loading": 0.7640652513346653,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 137,
+          "negative_potential_kms2": 49817.662940172115,
+          "required_loading": 0.7807644028147687,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 136,
+          "negative_potential_kms2": 50681.022370039536,
+          "required_loading": 0.8372194631889501,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 134,
+          "negative_potential_kms2": 50827.40373896647,
+          "required_loading": 0.5574380000195894,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 133,
+          "negative_potential_kms2": 51002.096580674275,
+          "required_loading": 0.558043703622037,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 135,
+          "negative_potential_kms2": 51329.17932586817,
+          "required_loading": 0.9063546738927349,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 132,
+          "negative_potential_kms2": 51561.02062694595,
+          "required_loading": 0.5614149846290931,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 129,
+          "negative_potential_kms2": 51702.928892360826,
+          "required_loading": 0.5279224511083813,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 124,
+          "negative_potential_kms2": 51760.257288003064,
+          "required_loading": 0.47341475281154644,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 128,
+          "negative_potential_kms2": 51882.29371651454,
+          "required_loading": 0.5255519835253651,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 123,
+          "negative_potential_kms2": 51939.82725624859,
+          "required_loading": 0.471463711517039,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 127,
+          "negative_potential_kms2": 52463.05352340052,
+          "required_loading": 0.5175055984590538,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 122,
+          "negative_potential_kms2": 52521.614495823895,
+          "required_loading": 0.46492638355513605,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 131,
+          "negative_potential_kms2": 52615.614270310725,
+          "required_loading": 0.5750825265921768,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 130,
+          "negative_potential_kms2": 53573.392287452625,
+          "required_loading": 0.5730214035820986,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 126,
+          "negative_potential_kms2": 53629.784707403735,
+          "required_loading": 0.49573350216685813,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 121,
+          "negative_potential_kms2": 53694.806815639466,
+          "required_loading": 0.4494684019560138,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 125,
+          "negative_potential_kms2": 54858.78006234686,
+          "required_loading": 0.45609367369657683,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 120,
+          "negative_potential_kms2": 54942.24335188029,
+          "required_loading": 0.42445511134695973,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 109,
+          "negative_potential_kms2": 61921.2267795406,
+          "required_loading": 0.6537227025237877,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 108,
+          "negative_potential_kms2": 62255.01310770797,
+          "required_loading": 0.6509451232496861,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 107,
+          "negative_potential_kms2": 63279.64672433824,
+          "required_loading": 0.6417889070783156,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 104,
+          "negative_potential_kms2": 64899.72184863244,
+          "required_loading": 0.4622580025986523,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 106,
+          "negative_potential_kms2": 64981.76450814984,
+          "required_loading": 0.646655914493215,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 103,
+          "negative_potential_kms2": 65302.684742371224,
+          "required_loading": 0.4592638663966617,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 99,
+          "negative_potential_kms2": 66361.28982442153,
+          "required_loading": 0.42200178743189043,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 105,
+          "negative_potential_kms2": 66361.59034910353,
+          "required_loading": 0.5049891589194118,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 94,
+          "negative_potential_kms2": 66450.02848324405,
+          "required_loading": 0.40905090987534987,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 102,
+          "negative_potential_kms2": 66591.75112718753,
+          "required_loading": 0.4445368875295251,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 98,
+          "negative_potential_kms2": 66795.77454085037,
+          "required_loading": 0.4173601833928338,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 93,
+          "negative_potential_kms2": 66886.09936663916,
+          "required_loading": 0.4050015244785137,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 97,
+          "negative_potential_kms2": 68224.04399840249,
+          "required_loading": 0.4004408751165339,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 92,
+          "negative_potential_kms2": 68322.06215296878,
+          "required_loading": 0.3913049813935467,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 101,
+          "negative_potential_kms2": 69031.21411938623,
+          "required_loading": 0.406124764099677,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 79,
+          "negative_potential_kms2": 70914.56500800322,
+          "required_loading": 0.654819834622272,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 96,
+          "negative_potential_kms2": 71179.9114640059,
+          "required_loading": 0.3638956470197484,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 91,
+          "negative_potential_kms2": 71310.77560679002,
+          "required_loading": 0.3646490261936091,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 78,
+          "negative_potential_kms2": 71325.336357762,
+          "required_loading": 0.638830294790363,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 100,
+          "negative_potential_kms2": 71551.99791471752,
+          "required_loading": 0.3101279752350357,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 77,
+          "negative_potential_kms2": 72517.89207860963,
+          "required_loading": 0.6049215203202832,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 76,
+          "negative_potential_kms2": 74306.06798476558,
+          "required_loading": 0.5170258074108672,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 95,
+          "negative_potential_kms2": 74681.04895724232,
+          "required_loading": 0.3180324486163339,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 90,
+          "negative_potential_kms2": 74877.55153044182,
+          "required_loading": 0.33151336490113886,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 74,
+          "negative_potential_kms2": 75498.3086510004,
+          "required_loading": 0.4378624076212506,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 75,
+          "negative_potential_kms2": 75523.91748877284,
+          "required_loading": 0.3904419574309558,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 73,
+          "negative_potential_kms2": 76054.52466227052,
+          "required_loading": 0.4270705785139425,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 69,
+          "negative_potential_kms2": 77578.8029100705,
+          "required_loading": 0.3858900318853298,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 64,
+          "negative_potential_kms2": 77690.38925121247,
+          "required_loading": 0.3690725241562973,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 72,
+          "negative_potential_kms2": 77714.27209873886,
+          "required_loading": 0.4010238463894495,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 68,
+          "negative_potential_kms2": 78202.80554997739,
+          "required_loading": 0.3798215776328787,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 63,
+          "negative_potential_kms2": 78317.55601746116,
+          "required_loading": 0.364257648558219,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 67,
+          "negative_potential_kms2": 80086.3214259197,
+          "required_loading": 0.36545192937204446,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 62,
+          "negative_potential_kms2": 80211.63484929793,
+          "required_loading": 0.3529421142405396,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 71,
+          "negative_potential_kms2": 80456.6577001105,
+          "required_loading": 0.3344127074023508,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 70,
+          "negative_potential_kms2": 82610.9243777718,
+          "required_loading": 0.27607311125454026,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 49,
+          "negative_potential_kms2": 82849.180650677,
+          "required_loading": 0.5248931659048109,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 48,
+          "negative_potential_kms2": 83164.04305494328,
+          "required_loading": 0.5150305439792686,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 66,
+          "negative_potential_kms2": 83343.70349421549,
+          "required_loading": 0.32888458248261665,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 61,
+          "negative_potential_kms2": 83494.42801674243,
+          "required_loading": 0.3254518465653019,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 47,
+          "negative_potential_kms2": 84018.16513229941,
+          "required_loading": 0.4683724618168444,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 46,
+          "negative_potential_kms2": 85055.44638982027,
+          "required_loading": 0.4008273655864104,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 45,
+          "negative_potential_kms2": 85567.09866073396,
+          "required_loading": 0.3636940216144931,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 65,
+          "negative_potential_kms2": 86089.3191914299,
+          "required_loading": 0.33244470909111706,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 60,
+          "negative_potential_kms2": 86270.80331105931,
+          "required_loading": 0.3419908895896037,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 19,
+          "negative_potential_kms2": 88555.91437647809,
+          "required_loading": 0.49870271848834113,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 18,
+          "negative_potential_kms2": 88682.95676136203,
+          "required_loading": 0.49274376885619214,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 17,
+          "negative_potential_kms2": 89003.31428393525,
+          "required_loading": 0.47506047810464685,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 16,
+          "negative_potential_kms2": 89345.25715081819,
+          "required_loading": 0.4528067079237457,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 15,
+          "negative_potential_kms2": 89494.06697878221,
+          "required_loading": 0.4422814382304443,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 44,
+          "negative_potential_kms2": 92664.43822699403,
+          "required_loading": 0.30086868616066104,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 43,
+          "negative_potential_kms2": 93229.3277938174,
+          "required_loading": 0.2928193456046132,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 42,
+          "negative_potential_kms2": 94800.4856086071,
+          "required_loading": 0.2657777782924753,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 41,
+          "negative_potential_kms2": 96760.58820806745,
+          "required_loading": 0.23810556558647772,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 39,
+          "negative_potential_kms2": 97559.92857542072,
+          "required_loading": 0.2649107927491993,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 40,
+          "negative_potential_kms2": 97736.44366262366,
+          "required_loading": 0.22949090088864157,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 34,
+          "negative_potential_kms2": 97802.37849366991,
+          "required_loading": 0.26320675708476987,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 38,
+          "negative_potential_kms2": 98290.7430407281,
+          "required_loading": 0.25900429718128243,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 33,
+          "negative_potential_kms2": 98542.0915011636,
+          "required_loading": 0.2577162243754382,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 37,
+          "negative_potential_kms2": 100324.82635658792,
+          "required_loading": 0.2435552294567404,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 32,
+          "negative_potential_kms2": 100600.54321063843,
+          "required_loading": 0.24372079523737084,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 36,
+          "negative_potential_kms2": 102816.79954097643,
+          "required_loading": 0.23993601797742506,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 31,
+          "negative_potential_kms2": 103118.64309482975,
+          "required_loading": 0.24256068557802218,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 35,
+          "negative_potential_kms2": 104014.43185776965,
+          "required_loading": 0.24961369941672015,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 14,
+          "negative_potential_kms2": 104023.6429444682,
+          "required_loading": 0.24655362541675344,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 13,
+          "negative_potential_kms2": 104323.93986067604,
+          "required_loading": 0.24060664387337466,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 30,
+          "negative_potential_kms2": 104325.84704534095,
+          "required_loading": 0.25431514107870523,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 12,
+          "negative_potential_kms2": 105090.61000674596,
+          "required_loading": 0.22642183674211924,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 11,
+          "negative_potential_kms2": 105923.86896089798,
+          "required_loading": 0.21311509226899167,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 10,
+          "negative_potential_kms2": 106290.82867392582,
+          "required_loading": 0.20818647895412726,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 9,
+          "negative_potential_kms2": 114489.1719430553,
+          "required_loading": 0.20562649299691027,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 8,
+          "negative_potential_kms2": 114963.86310443007,
+          "required_loading": 0.20239882402782727,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 4,
+          "negative_potential_kms2": 115110.93576697564,
+          "required_loading": 0.20582744217702648,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 3,
+          "negative_potential_kms2": 115597.5079558599,
+          "required_loading": 0.20300256010264972,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 7,
+          "negative_potential_kms2": 116163.88935024237,
+          "required_loading": 0.19814599713021924,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 2,
+          "negative_potential_kms2": 116826.4235454035,
+          "required_loading": 0.2001927992124435,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 6,
+          "negative_potential_kms2": 117442.91871260757,
+          "required_loading": 0.20076534997550963,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 5,
+          "negative_potential_kms2": 117991.96831367108,
+          "required_loading": 0.2052090753505812,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 1,
+          "negative_potential_kms2": 118133.7529447384,
+          "required_loading": 0.20547237764350956,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 0,
+          "negative_potential_kms2": 118693.4578621335,
+          "required_loading": 0.21175549286236775,
+          "fitted_loading": 0.36324907154823494
+        }
+      ]
+    },
+    {
+      "field": "full",
+      "subset": "full",
+      "n": 240,
+      "minimum_worst_relative_error": 0.998634515434878,
+      "linear_program_error": 0.9986345154348779,
+      "critical_shallower": {
+        "location": {
+          "R_kpc": 20,
+          "z_kpc": 4,
+          "phi_rad": 0.0,
+          "declared_baryon_density_Msun_kpc3": 4042.0749992014416,
+          "equivalent_extra_density_Msun_kpc3": 1172293.2342358537,
+          "required_extra_per_baryon": 290.0226330455159,
+          "components_Msun_kpc3": {
+            "bar": 2.608525219824165e-12,
+            "nuclei": 3.3438329618612616e-84,
+            "disk_0": 0.1426216013291277,
+            "disk_1": 4041.932377322802,
+            "disk_2": 1.1740039273606255e-13,
+            "disk_3": 1.3176454057724957e-34,
+            "softened_centre": 2.773076932603013e-07
+          }
+        },
+        "negative_potential_kms2": -35616.50283536395
+      },
+      "critical_deeper": {
+        "location": {
+          "R_kpc": 0.5,
+          "z_kpc": 0.1,
+          "phi_rad": 0.7853981633974483,
+          "declared_baryon_density_Msun_kpc3": 2867679500.424758,
+          "equivalent_extra_density_Msun_kpc3": 568219214.0615526,
+          "required_extra_per_baryon": 0.19814599713021924,
+          "components_Msun_kpc3": {
+            "bar": 2850465532.6288,
+            "nuclei": 9895470.391908638,
+            "disk_0": 5595312.208418628,
+            "disk_1": 1684698.5697983226,
+            "disk_2": 38458.08768813098,
+            "disk_3": 0.14210948418552774,
+            "softened_centre": 28.3960349209208
+          }
+        },
+        "negative_potential_kms2": 110414.19306568756
+      },
+      "ordered_rows": [
+        {
+          "index": 239,
+          "negative_potential_kms2": -35700.93983277897,
+          "required_loading": 287.5479585742094,
+          "fitted_loading": 0.392642299165459
+        },
+        {
+          "index": 238,
+          "negative_potential_kms2": -35689.37748339527,
+          "required_loading": 287.8561442076121,
+          "fitted_loading": 0.3930631218910321
+        },
+        {
+          "index": 237,
+          "negative_potential_kms2": -35660.40428538301,
+          "required_loading": 288.66800361518307,
+          "fitted_loading": 0.39417170338111873
+        },
+        {
+          "index": 236,
+          "negative_potential_kms2": -35629.753748652845,
+          "required_loading": 289.5961586129012,
+          "fitted_loading": 0.3954390847045488
+        },
+        {
+          "index": 235,
+          "negative_potential_kms2": -35616.50283536395,
+          "required_loading": 290.0226330455159,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 234,
+          "negative_potential_kms2": -34728.57547999017,
+          "required_loading": 34.76951062905025,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 233,
+          "negative_potential_kms2": -34716.3946223959,
+          "required_loading": 34.80355479180329,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 232,
+          "negative_potential_kms2": -34685.80749882557,
+          "required_loading": 34.89383211924192,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 231,
+          "negative_potential_kms2": -34653.33847874344,
+          "required_loading": 34.998175861031676,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 230,
+          "negative_potential_kms2": -34639.26130020009,
+          "required_loading": 35.04656899463072,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 229,
+          "negative_potential_kms2": -34373.22664568712,
+          "required_loading": 11.676409572863411,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 228,
+          "negative_potential_kms2": -34360.912948117475,
+          "required_loading": 11.687586798393053,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 227,
+          "negative_potential_kms2": -34329.976267520346,
+          "required_loading": 11.71724187237137,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 226,
+          "negative_potential_kms2": -34297.108167920764,
+          "required_loading": 11.751554525280687,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 225,
+          "negative_potential_kms2": -34282.84774025378,
+          "required_loading": 11.767485856881008,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 224,
+          "negative_potential_kms2": -34232.73215509509,
+          "required_loading": 6.28521364722177,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 223,
+          "negative_potential_kms2": -34220.39961036128,
+          "required_loading": 6.285427253806831,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 222,
+          "negative_potential_kms2": -34189.4120736401,
+          "required_loading": 6.286418421049909,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 221,
+          "negative_potential_kms2": -34156.48374937747,
+          "required_loading": 6.288297795614228,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 219,
+          "negative_potential_kms2": -34155.83482783631,
+          "required_loading": 1.3458895682026928,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 214,
+          "negative_potential_kms2": -34151.932094399155,
+          "required_loading": 1.0302954713382049,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 218,
+          "negative_potential_kms2": -34143.49899378023,
+          "required_loading": 1.3457864661137986,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 220,
+          "negative_potential_kms2": -34142.19491107725,
+          "required_loading": 6.289426971589549,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 213,
+          "negative_potential_kms2": -34139.596158936925,
+          "required_loading": 1.030216585717533,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 217,
+          "negative_potential_kms2": -34112.50216850988,
+          "required_loading": 1.345545537613258,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 212,
+          "negative_potential_kms2": -34108.59903749304,
+          "required_loading": 1.030031408978656,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 216,
+          "negative_potential_kms2": -34079.56215556466,
+          "required_loading": 1.3453230593705512,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 211,
+          "negative_potential_kms2": -34075.65863618869,
+          "required_loading": 1.029858772542172,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 215,
+          "negative_potential_kms2": -34065.26757156404,
+          "required_loading": 1.3452394761733435,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 210,
+          "negative_potential_kms2": -34061.36385633466,
+          "required_loading": 1.0297931945278656,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 209,
+          "negative_potential_kms2": -17450.48230480022,
+          "required_loading": 35.063873946870245,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 208,
+          "negative_potential_kms2": -17418.502483142758,
+          "required_loading": 35.16988325148458,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 207,
+          "negative_potential_kms2": -17335.060914750185,
+          "required_loading": 35.4775450266505,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 206,
+          "negative_potential_kms2": -17240.449412059457,
+          "required_loading": 35.895297823452275,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 205,
+          "negative_potential_kms2": -17196.96114717438,
+          "required_loading": 36.12024335574512,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 204,
+          "negative_potential_kms2": -14350.721289616728,
+          "required_loading": 5.686544574037628,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 203,
+          "negative_potential_kms2": -14313.642862749604,
+          "required_loading": 5.701015669136335,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 202,
+          "negative_potential_kms2": -14215.645051347552,
+          "required_loading": 5.744096486680895,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 201,
+          "negative_potential_kms2": -14101.684662556736,
+          "required_loading": 5.806180895374289,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 200,
+          "negative_potential_kms2": -14047.860603376093,
+          "required_loading": 5.842345955210798,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 199,
+          "negative_potential_kms2": -13109.162074459931,
+          "required_loading": 1.8342693226407514,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 198,
+          "negative_potential_kms2": -13070.81900133068,
+          "required_loading": 1.838527483566264,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 197,
+          "negative_potential_kms2": -12969.113815116583,
+          "required_loading": 1.8513599447329634,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 196,
+          "negative_potential_kms2": -12849.951853392713,
+          "required_loading": 1.8703532403102028,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 195,
+          "negative_potential_kms2": -12793.152543985732,
+          "required_loading": 1.8818537503474968,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 194,
+          "negative_potential_kms2": -12629.496871803363,
+          "required_loading": 1.136152580642609,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 193,
+          "negative_potential_kms2": -12590.921360779894,
+          "required_loading": 1.136560663446607,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 192,
+          "negative_potential_kms2": -12488.51336484053,
+          "required_loading": 1.1381945512729952,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 189,
+          "negative_potential_kms2": -12373.427642643224,
+          "required_loading": 0.9770776472803812,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 191,
+          "negative_potential_kms2": -12368.310319830296,
+          "required_loading": 1.1415947179405919,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 184,
+          "negative_potential_kms2": -12358.516250269966,
+          "required_loading": 0.7903183519648713,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 188,
+          "negative_potential_kms2": -12334.817798175101,
+          "required_loading": 0.9766430102343904,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 183,
+          "negative_potential_kms2": -12319.90569725425,
+          "required_loading": 0.7899800685036918,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 190,
+          "negative_potential_kms2": -12310.874367599077,
+          "required_loading": 1.144220954216216,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 187,
+          "negative_potential_kms2": -12232.294919166174,
+          "required_loading": 0.9755300810959494,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 182,
+          "negative_potential_kms2": -12217.380019856113,
+          "required_loading": 0.789109502591056,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 186,
+          "negative_potential_kms2": -12111.895521835277,
+          "required_loading": 0.9743570724224886,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 181,
+          "negative_potential_kms2": -12096.974929680473,
+          "required_loading": 0.788179542410022,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 185,
+          "negative_potential_kms2": -12054.32200377712,
+          "required_loading": 0.9738975723476841,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 180,
+          "negative_potential_kms2": -12039.39689985048,
+          "required_loading": 0.7878073381271417,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 179,
+          "negative_potential_kms2": -4077.2068841937694,
+          "required_loading": 15.882423707851098,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 178,
+          "negative_potential_kms2": -4015.8134563547555,
+          "required_loading": 15.982290466491772,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 177,
+          "negative_potential_kms2": -3850.3750714323196,
+          "required_loading": 16.28953973923585,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 176,
+          "negative_potential_kms2": -3651.5636315733263,
+          "required_loading": 16.754927108831403,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 175,
+          "negative_potential_kms2": -3555.1889059000932,
+          "required_loading": 17.027284645446176,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 174,
+          "negative_potential_kms2": 2380.6412573336215,
+          "required_loading": 2.573006600725047,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 173,
+          "negative_potential_kms2": 2465.758758173696,
+          "required_loading": 2.5856995894766275,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 172,
+          "negative_potential_kms2": 2705.165264843395,
+          "required_loading": 2.629486133433263,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 171,
+          "negative_potential_kms2": 3021.9435431918328,
+          "required_loading": 2.7161310946974733,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 170,
+          "negative_potential_kms2": 3194.930590421794,
+          "required_loading": 2.787070788602222,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 169,
+          "negative_potential_kms2": 5275.3195418218165,
+          "required_loading": 1.1336755910049345,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 168,
+          "negative_potential_kms2": 5367.839492751106,
+          "required_loading": 1.1357611325419894,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 167,
+          "negative_potential_kms2": 5632.1760621415215,
+          "required_loading": 1.1440795761776468,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 166,
+          "negative_potential_kms2": 5997.740032435651,
+          "required_loading": 1.1662462131201377,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 165,
+          "negative_potential_kms2": 6214.220358230806,
+          "required_loading": 1.1943920214306591,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 164,
+          "negative_potential_kms2": 6446.977244084725,
+          "required_loading": 0.9073987325150994,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 163,
+          "negative_potential_kms2": 6541.16067851075,
+          "required_loading": 0.908386542913954,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 162,
+          "negative_potential_kms2": 6811.398514278877,
+          "required_loading": 0.9122761718465802,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 159,
+          "negative_potential_kms2": 7056.358494740796,
+          "required_loading": 0.7183843830407234,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 154,
+          "negative_potential_kms2": 7094.59672218944,
+          "required_loading": 0.5917140848465002,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 158,
+          "negative_potential_kms2": 7150.861574170595,
+          "required_loading": 0.7173836201913093,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 153,
+          "negative_potential_kms2": 7189.106742172027,
+          "required_loading": 0.5909416101718814,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 161,
+          "negative_potential_kms2": 7190.561071812922,
+          "required_loading": 0.9226855031855409,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 157,
+          "negative_potential_kms2": 7422.36152727941,
+          "required_loading": 0.714529225358574,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 160,
+          "negative_potential_kms2": 7424.509943042494,
+          "required_loading": 0.934669784365265,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 152,
+          "negative_potential_kms2": 7460.640023883798,
+          "required_loading": 0.588722217483506,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 156,
+          "negative_potential_kms2": 7805.291533505395,
+          "required_loading": 0.7107947524334544,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 151,
+          "negative_potential_kms2": 7843.70431325563,
+          "required_loading": 0.585777916989831,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 149,
+          "negative_potential_kms2": 7884.935772531598,
+          "required_loading": 9.93638518228315,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 148,
+          "negative_potential_kms2": 7975.642182028964,
+          "required_loading": 10.026242374437663,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 155,
+          "negative_potential_kms2": 8047.371823039832,
+          "required_loading": 0.7077975836790765,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 150,
+          "negative_potential_kms2": 8086.184353035297,
+          "required_loading": 0.5839193962281909,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 147,
+          "negative_potential_kms2": 8219.717781597587,
+          "required_loading": 10.295399874549014,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 146,
+          "negative_potential_kms2": 8510.758758951153,
+          "required_loading": 10.68409030888549,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 145,
+          "negative_potential_kms2": 8649.949601323899,
+          "required_loading": 10.88809703972391,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 119,
+          "negative_potential_kms2": 15890.77806988439,
+          "required_loading": 9.601032986423025,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 118,
+          "negative_potential_kms2": 15970.075439757167,
+          "required_loading": 9.675838649767007,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 117,
+          "negative_potential_kms2": 16175.174813484435,
+          "required_loading": 9.886932224478569,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 116,
+          "negative_potential_kms2": 16403.43874051975,
+          "required_loading": 10.128579527980543,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 115,
+          "negative_potential_kms2": 16506.272538868143,
+          "required_loading": 10.151031163774242,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 89,
+          "negative_potential_kms2": 19273.290921529308,
+          "required_loading": 11.681306645188545,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 88,
+          "negative_potential_kms2": 19324.35313196685,
+          "required_loading": 11.73713048621513,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 87,
+          "negative_potential_kms2": 19452.599654337013,
+          "required_loading": 11.883434136143455,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 144,
+          "negative_potential_kms2": 19509.041437462485,
+          "required_loading": 1.6246805162906819,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 86,
+          "negative_potential_kms2": 19588.713373599578,
+          "required_loading": 11.978678226278971,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 85,
+          "negative_potential_kms2": 19647.79585482063,
+          "required_loading": 12.102761692615395,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 143,
+          "negative_potential_kms2": 19691.88284779881,
+          "required_loading": 1.6422998642296565,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 142,
+          "negative_potential_kms2": 20231.449032110086,
+          "required_loading": 1.705608528795296,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 141,
+          "negative_potential_kms2": 21015.37782758071,
+          "required_loading": 1.8428924154890312,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 140,
+          "negative_potential_kms2": 21478.59535089885,
+          "required_loading": 1.9466475947090576,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 59,
+          "negative_potential_kms2": 21649.27945429185,
+          "required_loading": 34.03808404017846,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 58,
+          "negative_potential_kms2": 21665.866520476702,
+          "required_loading": 34.11547835904125,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 57,
+          "negative_potential_kms2": 21706.407773529525,
+          "required_loading": 34.2774116069587,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 56,
+          "negative_potential_kms2": 21747.587327510144,
+          "required_loading": 33.92513844679468,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 55,
+          "negative_potential_kms2": 21764.811585562515,
+          "required_loading": 33.447128766509124,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 29,
+          "negative_potential_kms2": 22295.459480452264,
+          "required_loading": 264.09397459271247,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 28,
+          "negative_potential_kms2": 22299.83703652453,
+          "required_loading": 259.1833950748902,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 27,
+          "negative_potential_kms2": 22310.736462839835,
+          "required_loading": 264.49554002830695,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 26,
+          "negative_potential_kms2": 22321.558603605372,
+          "required_loading": 262.90471410818446,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 25,
+          "negative_potential_kms2": 22325.997812936963,
+          "required_loading": 259.3500725190024,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 139,
+          "negative_potential_kms2": 25272.553153339846,
+          "required_loading": 0.760134957982736,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 138,
+          "negative_potential_kms2": 25502.58526136412,
+          "required_loading": 0.7640652513346653,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 137,
+          "negative_potential_kms2": 26221.13590629222,
+          "required_loading": 0.7807644028147687,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 136,
+          "negative_potential_kms2": 27452.53274557521,
+          "required_loading": 0.8372194631889501,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 134,
+          "negative_potential_kms2": 27724.364430745743,
+          "required_loading": 0.5574380000195894,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 133,
+          "negative_potential_kms2": 27968.833222086396,
+          "required_loading": 0.558043703622037,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 135,
+          "negative_potential_kms2": 28375.673738866575,
+          "required_loading": 0.9063546738927349,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 132,
+          "negative_potential_kms2": 28751.357421082197,
+          "required_loading": 0.5614149846290931,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 129,
+          "negative_potential_kms2": 29011.047022801653,
+          "required_loading": 0.5279224511083813,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 124,
+          "negative_potential_kms2": 29095.875211954914,
+          "required_loading": 0.47341475281154644,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 128,
+          "negative_potential_kms2": 29259.784599041002,
+          "required_loading": 0.5255519835253651,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 123,
+          "negative_potential_kms2": 29344.749742223416,
+          "required_loading": 0.471463711517039,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 127,
+          "negative_potential_kms2": 30065.311723931332,
+          "required_loading": 0.5175055984590538,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 122,
+          "negative_potential_kms2": 30151.21147219913,
+          "required_loading": 0.46492638355513605,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 131,
+          "negative_potential_kms2": 30229.397261768827,
+          "required_loading": 0.5750825265921768,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 130,
+          "negative_potential_kms2": 31565.3538746314,
+          "required_loading": 0.5730214035820986,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 126,
+          "negative_potential_kms2": 31684.83942459871,
+          "required_loading": 0.49573350216685813,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 121,
+          "negative_potential_kms2": 31778.745416351783,
+          "required_loading": 0.4494684019560138,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 125,
+          "negative_potential_kms2": 33381.97830746073,
+          "required_loading": 0.45609367369657683,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 120,
+          "negative_potential_kms2": 33500.54173724555,
+          "required_loading": 0.42445511134695973,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 114,
+          "negative_potential_kms2": 33572.36732502547,
+          "required_loading": 1.6550730806079994,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 113,
+          "negative_potential_kms2": 33835.21801902157,
+          "required_loading": 1.6643845311775574,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 112,
+          "negative_potential_kms2": 34582.9069382217,
+          "required_loading": 1.7003241809925187,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 111,
+          "negative_potential_kms2": 35595.845025173505,
+          "required_loading": 1.796299527902259,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 110,
+          "negative_potential_kms2": 36174.934607865616,
+          "required_loading": 1.6133096499578126,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 84,
+          "negative_potential_kms2": 41362.63943418221,
+          "required_loading": 2.0021423093213295,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 83,
+          "negative_potential_kms2": 41601.655571444804,
+          "required_loading": 1.9959396401299703,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 82,
+          "negative_potential_kms2": 42250.37942008623,
+          "required_loading": 1.9976918348599333,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 81,
+          "negative_potential_kms2": 43056.573205768,
+          "required_loading": 1.950100757739781,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 109,
+          "negative_potential_kms2": 43207.92729533373,
+          "required_loading": 0.6537227025237877,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 80,
+          "negative_potential_kms2": 43476.551484842945,
+          "required_loading": 1.6563841138241944,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 108,
+          "negative_potential_kms2": 43647.20586726567,
+          "required_loading": 0.6509451232496861,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 107,
+          "negative_potential_kms2": 44991.24642046969,
+          "required_loading": 0.6417889070783156,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 106,
+          "negative_potential_kms2": 47217.32007141038,
+          "required_loading": 0.646655914493215,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 104,
+          "negative_potential_kms2": 47284.31565176502,
+          "required_loading": 0.4622580025986523,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 103,
+          "negative_potential_kms2": 47806.82947372426,
+          "required_loading": 0.4592638663966617,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 54,
+          "negative_potential_kms2": 48529.126094071005,
+          "required_loading": 2.914366928470971,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 53,
+          "negative_potential_kms2": 48642.31543242052,
+          "required_loading": 2.8978500322607115,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 52,
+          "negative_potential_kms2": 48930.4069813932,
+          "required_loading": 2.749248995877602,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 105,
+          "negative_potential_kms2": 49019.114202220815,
+          "required_loading": 0.5049891589194118,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 51,
+          "negative_potential_kms2": 49243.17219813407,
+          "required_loading": 2.5597213138935713,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 99,
+          "negative_potential_kms2": 49296.15514320236,
+          "required_loading": 0.42200178743189043,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 50,
+          "negative_potential_kms2": 49381.494948085514,
+          "required_loading": 2.4811609666538073,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 94,
+          "negative_potential_kms2": 49419.440231418,
+          "required_loading": 0.40905090987534987,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 102,
+          "negative_potential_kms2": 49472.66235771362,
+          "required_loading": 0.4445368875295251,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 98,
+          "negative_potential_kms2": 49855.54679280677,
+          "required_loading": 0.4173601833928338,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 93,
+          "negative_potential_kms2": 49980.616222576275,
+          "required_loading": 0.4050015244785137,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 24,
+          "negative_potential_kms2": 50908.566330325346,
+          "required_loading": 3.773152013301895,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 23,
+          "negative_potential_kms2": 50943.456557822865,
+          "required_loading": 3.7629668391535263,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 22,
+          "negative_potential_kms2": 51029.014911553,
+          "required_loading": 3.7305399926710705,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 21,
+          "negative_potential_kms2": 51116.50434422949,
+          "required_loading": 3.7035195763704243,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 20,
+          "negative_potential_kms2": 51153.330681270876,
+          "required_loading": 3.6966377493908604,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 97,
+          "negative_potential_kms2": 51690.25019963981,
+          "required_loading": 0.4004408751165339,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 92,
+          "negative_potential_kms2": 51824.62415450889,
+          "required_loading": 0.3913049813935467,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 101,
+          "negative_potential_kms2": 52615.30693838175,
+          "required_loading": 0.406124764099677,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 79,
+          "negative_potential_kms2": 55142.83735527581,
+          "required_loading": 0.654819834622272,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 96,
+          "negative_potential_kms2": 55485.226369479824,
+          "required_loading": 0.3638956470197484,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 91,
+          "negative_potential_kms2": 55661.98340311045,
+          "required_loading": 0.3646490261936091,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 78,
+          "negative_potential_kms2": 55664.07670489688,
+          "required_loading": 0.638830294790363,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 100,
+          "negative_potential_kms2": 55851.872155885976,
+          "required_loading": 0.3101279752350357,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 77,
+          "negative_potential_kms2": 57173.1585220657,
+          "required_loading": 0.6049215203202832,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 76,
+          "negative_potential_kms2": 59426.01498735463,
+          "required_loading": 0.5170258074108672,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 95,
+          "negative_potential_kms2": 59981.53369419384,
+          "required_loading": 0.3180324486163339,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 90,
+          "negative_potential_kms2": 60246.22626734108,
+          "required_loading": 0.33151336490113886,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 75,
+          "negative_potential_kms2": 60954.54715982693,
+          "required_loading": 0.3904419574309558,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 74,
+          "negative_potential_kms2": 61148.636135476394,
+          "required_loading": 0.4378624076212506,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 73,
+          "negative_potential_kms2": 61845.3100883659,
+          "required_loading": 0.4270705785139425,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 69,
+          "negative_potential_kms2": 63876.73353692483,
+          "required_loading": 0.3858900318853298,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 72,
+          "negative_potential_kms2": 63919.27367413115,
+          "required_loading": 0.4010238463894495,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 64,
+          "negative_potential_kms2": 64023.74869498114,
+          "required_loading": 0.3690725241562973,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 68,
+          "negative_potential_kms2": 64654.949926223344,
+          "required_loading": 0.3798215776328787,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 63,
+          "negative_potential_kms2": 64805.73834798012,
+          "required_loading": 0.364257648558219,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 67,
+          "negative_potential_kms2": 67000.65609171151,
+          "required_loading": 0.36545192937204446,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 62,
+          "negative_potential_kms2": 67164.27301292746,
+          "required_loading": 0.3529421142405396,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 71,
+          "negative_potential_kms2": 67337.56797328967,
+          "required_loading": 0.3344127074023508,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 70,
+          "negative_potential_kms2": 70032.21626913785,
+          "required_loading": 0.27607311125454026,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 49,
+          "negative_potential_kms2": 70260.93353464906,
+          "required_loading": 0.5248931659048109,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 48,
+          "negative_potential_kms2": 70645.96560690213,
+          "required_loading": 0.5150305439792686,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 66,
+          "negative_potential_kms2": 71062.85280997622,
+          "required_loading": 0.32888458248261665,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 61,
+          "negative_potential_kms2": 71258.93193101116,
+          "required_loading": 0.3254518465653019,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 47,
+          "negative_potential_kms2": 71689.22709810297,
+          "required_loading": 0.4683724618168444,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 46,
+          "negative_potential_kms2": 72954.06638778842,
+          "required_loading": 0.4008273655864104,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 45,
+          "negative_potential_kms2": 73577.294749982,
+          "required_loading": 0.3636940216144931,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 65,
+          "negative_potential_kms2": 74553.0685107433,
+          "required_loading": 0.33244470909111706,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 60,
+          "negative_potential_kms2": 74794.57199033245,
+          "required_loading": 0.3419908895896037,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 19,
+          "negative_potential_kms2": 77269.433584804,
+          "required_loading": 0.49870271848834113,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 18,
+          "negative_potential_kms2": 77422.6848579533,
+          "required_loading": 0.49274376885619214,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 17,
+          "negative_potential_kms2": 77808.98364398761,
+          "required_loading": 0.47506047810464685,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 16,
+          "negative_potential_kms2": 78221.08140427417,
+          "required_loading": 0.4528067079237457,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 15,
+          "negative_potential_kms2": 78400.3496888819,
+          "required_loading": 0.4422814382304443,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 44,
+          "negative_potential_kms2": 82426.46675323296,
+          "required_loading": 0.30086868616066104,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 43,
+          "negative_potential_kms2": 83106.56884318458,
+          "required_loading": 0.2928193456046132,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 42,
+          "negative_potential_kms2": 84998.88281102982,
+          "required_loading": 0.2657777782924753,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 41,
+          "negative_potential_kms2": 87366.27587446378,
+          "required_loading": 0.23810556558647772,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 39,
+          "negative_potential_kms2": 88429.77514750448,
+          "required_loading": 0.2649107927491993,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 40,
+          "negative_potential_kms2": 88550.76393842247,
+          "required_loading": 0.22949090088864157,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 34,
+          "negative_potential_kms2": 88726.87081824924,
+          "required_loading": 0.26320675708476987,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 38,
+          "negative_potential_kms2": 89307.7711893025,
+          "required_loading": 0.25900429718128243,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 33,
+          "negative_potential_kms2": 89615.60277994073,
+          "required_loading": 0.2577162243754382,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 37,
+          "negative_potential_kms2": 91758.86617271218,
+          "required_loading": 0.2435552294567404,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 32,
+          "negative_potential_kms2": 92096.69797668529,
+          "required_loading": 0.24372079523737084,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 36,
+          "negative_potential_kms2": 94792.96477254227,
+          "required_loading": 0.23993601797742506,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 31,
+          "negative_potential_kms2": 95165.26965394602,
+          "required_loading": 0.24256068557802218,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 14,
+          "negative_potential_kms2": 95990.33312876007,
+          "required_loading": 0.24655362541675344,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 35,
+          "negative_potential_kms2": 96274.54138271103,
+          "required_loading": 0.24961369941672015,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 13,
+          "negative_potential_kms2": 96345.76684668845,
+          "required_loading": 0.24060664387337466,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 30,
+          "negative_potential_kms2": 96661.44403767174,
+          "required_loading": 0.25431514107870523,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 12,
+          "negative_potential_kms2": 97253.99702080355,
+          "required_loading": 0.22642183674211924,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 11,
+          "negative_potential_kms2": 98242.78361104199,
+          "required_loading": 0.21311509226899167,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 10,
+          "negative_potential_kms2": 98678.95201922503,
+          "required_loading": 0.20818647895412726,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 9,
+          "negative_potential_kms2": 108419.88044185436,
+          "required_loading": 0.20562649299691027,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 8,
+          "negative_potential_kms2": 108983.12977461459,
+          "required_loading": 0.20239882402782727,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 4,
+          "negative_potential_kms2": 109155.20968905186,
+          "required_loading": 0.20582744217702648,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 3,
+          "negative_potential_kms2": 109733.05247223706,
+          "required_loading": 0.20300256010264972,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 7,
+          "negative_potential_kms2": 110414.19306568756,
+          "required_loading": 0.19814599713021924,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 2,
+          "negative_potential_kms2": 111200.57260808468,
+          "required_loading": 0.2001927992124435,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 6,
+          "negative_potential_kms2": 111954.28807958841,
+          "required_loading": 0.20076534997550963,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 5,
+          "negative_potential_kms2": 112621.8850898448,
+          "required_loading": 0.2052090753505812,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 1,
+          "negative_potential_kms2": 112778.60930381682,
+          "required_loading": 0.20547237764350956,
+          "fitted_loading": 0.3960214289597164
+        },
+        {
+          "index": 0,
+          "negative_potential_kms2": 113461.67259135601,
+          "required_loading": 0.21175549286236775,
+          "fitted_loading": 0.42322183686765213
+        }
+      ]
+    },
+    {
+      "field": "full",
+      "subset": "inner",
+      "n": 120,
+      "minimum_worst_relative_error": 0.7154174686950469,
+      "linear_program_error": 0.715417468695047,
+      "critical_shallower": {
+        "location": {
+          "R_kpc": 8,
+          "z_kpc": 1,
+          "phi_rad": 0.0,
+          "declared_baryon_density_Msun_kpc3": 7761796.424159906,
+          "equivalent_extra_density_Msun_kpc3": 9270627.720985612,
+          "required_extra_per_baryon": 1.1943920214306591,
+          "components_Msun_kpc3": {
+            "bar": 2869.345378684249,
+            "nuclei": 2.753171534890201e-32,
+            "disk_0": 1035028.6852317082,
+            "disk_1": 6722870.552676716,
+            "disk_2": 1027.826513776712,
+            "disk_3": 0.014330285195929594,
+            "softened_centre": 2.873504218913208e-05
+          }
+        },
+        "negative_potential_kms2": 6214.220358230806
+      },
+      "critical_deeper": {
+        "location": {
+          "R_kpc": 0.5,
+          "z_kpc": 0.1,
+          "phi_rad": 0.7853981633974483,
+          "declared_baryon_density_Msun_kpc3": 2867679500.424758,
+          "equivalent_extra_density_Msun_kpc3": 568219214.0615526,
+          "required_extra_per_baryon": 0.19814599713021924,
+          "components_Msun_kpc3": {
+            "bar": 2850465532.6288,
+            "nuclei": 9895470.391908638,
+            "disk_0": 5595312.208418628,
+            "disk_1": 1684698.5697983226,
+            "disk_2": 38458.08768813098,
+            "disk_3": 0.14210948418552774,
+            "softened_centre": 28.3960349209208
+          }
+        },
+        "negative_potential_kms2": 110414.19306568756
+      },
+      "ordered_rows": [
+        {
+          "index": 169,
+          "negative_potential_kms2": 5275.3195418218165,
+          "required_loading": 1.1336755910049345,
+          "fitted_loading": 0.32262426936682287
+        },
+        {
+          "index": 168,
+          "negative_potential_kms2": 5367.839492751106,
+          "required_loading": 1.1357611325419894,
+          "fitted_loading": 0.3232177780565796
+        },
+        {
+          "index": 167,
+          "negative_potential_kms2": 5632.1760621415215,
+          "required_loading": 1.1440795761776468,
+          "fitted_loading": 0.32558506180293256
+        },
+        {
+          "index": 166,
+          "negative_potential_kms2": 5997.740032435651,
+          "required_loading": 1.1662462131201377,
+          "fitted_loading": 0.3318932994545445
+        },
+        {
+          "index": 165,
+          "negative_potential_kms2": 6214.220358230806,
+          "required_loading": 1.1943920214306591,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 164,
+          "negative_potential_kms2": 6446.977244084725,
+          "required_loading": 0.9073987325150994,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 163,
+          "negative_potential_kms2": 6541.16067851075,
+          "required_loading": 0.908386542913954,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 162,
+          "negative_potential_kms2": 6811.398514278877,
+          "required_loading": 0.9122761718465802,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 159,
+          "negative_potential_kms2": 7056.358494740796,
+          "required_loading": 0.7183843830407234,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 154,
+          "negative_potential_kms2": 7094.59672218944,
+          "required_loading": 0.5917140848465002,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 158,
+          "negative_potential_kms2": 7150.861574170595,
+          "required_loading": 0.7173836201913093,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 153,
+          "negative_potential_kms2": 7189.106742172027,
+          "required_loading": 0.5909416101718814,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 161,
+          "negative_potential_kms2": 7190.561071812922,
+          "required_loading": 0.9226855031855409,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 157,
+          "negative_potential_kms2": 7422.36152727941,
+          "required_loading": 0.714529225358574,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 160,
+          "negative_potential_kms2": 7424.509943042494,
+          "required_loading": 0.934669784365265,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 152,
+          "negative_potential_kms2": 7460.640023883798,
+          "required_loading": 0.588722217483506,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 156,
+          "negative_potential_kms2": 7805.291533505395,
+          "required_loading": 0.7107947524334544,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 151,
+          "negative_potential_kms2": 7843.70431325563,
+          "required_loading": 0.585777916989831,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 155,
+          "negative_potential_kms2": 8047.371823039832,
+          "required_loading": 0.7077975836790765,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 150,
+          "negative_potential_kms2": 8086.184353035297,
+          "required_loading": 0.5839193962281909,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 139,
+          "negative_potential_kms2": 25272.553153339846,
+          "required_loading": 0.760134957982736,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 138,
+          "negative_potential_kms2": 25502.58526136412,
+          "required_loading": 0.7640652513346653,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 137,
+          "negative_potential_kms2": 26221.13590629222,
+          "required_loading": 0.7807644028147687,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 136,
+          "negative_potential_kms2": 27452.53274557521,
+          "required_loading": 0.8372194631889501,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 134,
+          "negative_potential_kms2": 27724.364430745743,
+          "required_loading": 0.5574380000195894,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 133,
+          "negative_potential_kms2": 27968.833222086396,
+          "required_loading": 0.558043703622037,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 135,
+          "negative_potential_kms2": 28375.673738866575,
+          "required_loading": 0.9063546738927349,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 132,
+          "negative_potential_kms2": 28751.357421082197,
+          "required_loading": 0.5614149846290931,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 129,
+          "negative_potential_kms2": 29011.047022801653,
+          "required_loading": 0.5279224511083813,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 124,
+          "negative_potential_kms2": 29095.875211954914,
+          "required_loading": 0.47341475281154644,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 128,
+          "negative_potential_kms2": 29259.784599041002,
+          "required_loading": 0.5255519835253651,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 123,
+          "negative_potential_kms2": 29344.749742223416,
+          "required_loading": 0.471463711517039,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 127,
+          "negative_potential_kms2": 30065.311723931332,
+          "required_loading": 0.5175055984590538,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 122,
+          "negative_potential_kms2": 30151.21147219913,
+          "required_loading": 0.46492638355513605,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 131,
+          "negative_potential_kms2": 30229.397261768827,
+          "required_loading": 0.5750825265921768,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 130,
+          "negative_potential_kms2": 31565.3538746314,
+          "required_loading": 0.5730214035820986,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 126,
+          "negative_potential_kms2": 31684.83942459871,
+          "required_loading": 0.49573350216685813,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 121,
+          "negative_potential_kms2": 31778.745416351783,
+          "required_loading": 0.4494684019560138,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 125,
+          "negative_potential_kms2": 33381.97830746073,
+          "required_loading": 0.45609367369657683,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 120,
+          "negative_potential_kms2": 33500.54173724555,
+          "required_loading": 0.42445511134695973,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 109,
+          "negative_potential_kms2": 43207.92729533373,
+          "required_loading": 0.6537227025237877,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 108,
+          "negative_potential_kms2": 43647.20586726567,
+          "required_loading": 0.6509451232496861,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 107,
+          "negative_potential_kms2": 44991.24642046969,
+          "required_loading": 0.6417889070783156,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 106,
+          "negative_potential_kms2": 47217.32007141038,
+          "required_loading": 0.646655914493215,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 104,
+          "negative_potential_kms2": 47284.31565176502,
+          "required_loading": 0.4622580025986523,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 103,
+          "negative_potential_kms2": 47806.82947372426,
+          "required_loading": 0.4592638663966617,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 105,
+          "negative_potential_kms2": 49019.114202220815,
+          "required_loading": 0.5049891589194118,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 99,
+          "negative_potential_kms2": 49296.15514320236,
+          "required_loading": 0.42200178743189043,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 94,
+          "negative_potential_kms2": 49419.440231418,
+          "required_loading": 0.40905090987534987,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 102,
+          "negative_potential_kms2": 49472.66235771362,
+          "required_loading": 0.4445368875295251,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 98,
+          "negative_potential_kms2": 49855.54679280677,
+          "required_loading": 0.4173601833928338,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 93,
+          "negative_potential_kms2": 49980.616222576275,
+          "required_loading": 0.4050015244785137,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 97,
+          "negative_potential_kms2": 51690.25019963981,
+          "required_loading": 0.4004408751165339,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 92,
+          "negative_potential_kms2": 51824.62415450889,
+          "required_loading": 0.3913049813935467,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 101,
+          "negative_potential_kms2": 52615.30693838175,
+          "required_loading": 0.406124764099677,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 79,
+          "negative_potential_kms2": 55142.83735527581,
+          "required_loading": 0.654819834622272,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 96,
+          "negative_potential_kms2": 55485.226369479824,
+          "required_loading": 0.3638956470197484,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 91,
+          "negative_potential_kms2": 55661.98340311045,
+          "required_loading": 0.3646490261936091,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 78,
+          "negative_potential_kms2": 55664.07670489688,
+          "required_loading": 0.638830294790363,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 100,
+          "negative_potential_kms2": 55851.872155885976,
+          "required_loading": 0.3101279752350357,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 77,
+          "negative_potential_kms2": 57173.1585220657,
+          "required_loading": 0.6049215203202832,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 76,
+          "negative_potential_kms2": 59426.01498735463,
+          "required_loading": 0.5170258074108672,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 95,
+          "negative_potential_kms2": 59981.53369419384,
+          "required_loading": 0.3180324486163339,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 90,
+          "negative_potential_kms2": 60246.22626734108,
+          "required_loading": 0.33151336490113886,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 75,
+          "negative_potential_kms2": 60954.54715982693,
+          "required_loading": 0.3904419574309558,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 74,
+          "negative_potential_kms2": 61148.636135476394,
+          "required_loading": 0.4378624076212506,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 73,
+          "negative_potential_kms2": 61845.3100883659,
+          "required_loading": 0.4270705785139425,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 69,
+          "negative_potential_kms2": 63876.73353692483,
+          "required_loading": 0.3858900318853298,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 72,
+          "negative_potential_kms2": 63919.27367413115,
+          "required_loading": 0.4010238463894495,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 64,
+          "negative_potential_kms2": 64023.74869498114,
+          "required_loading": 0.3690725241562973,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 68,
+          "negative_potential_kms2": 64654.949926223344,
+          "required_loading": 0.3798215776328787,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 63,
+          "negative_potential_kms2": 64805.73834798012,
+          "required_loading": 0.364257648558219,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 67,
+          "negative_potential_kms2": 67000.65609171151,
+          "required_loading": 0.36545192937204446,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 62,
+          "negative_potential_kms2": 67164.27301292746,
+          "required_loading": 0.3529421142405396,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 71,
+          "negative_potential_kms2": 67337.56797328967,
+          "required_loading": 0.3344127074023508,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 70,
+          "negative_potential_kms2": 70032.21626913785,
+          "required_loading": 0.27607311125454026,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 49,
+          "negative_potential_kms2": 70260.93353464906,
+          "required_loading": 0.5248931659048109,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 48,
+          "negative_potential_kms2": 70645.96560690213,
+          "required_loading": 0.5150305439792686,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 66,
+          "negative_potential_kms2": 71062.85280997622,
+          "required_loading": 0.32888458248261665,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 61,
+          "negative_potential_kms2": 71258.93193101116,
+          "required_loading": 0.3254518465653019,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 47,
+          "negative_potential_kms2": 71689.22709810297,
+          "required_loading": 0.4683724618168444,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 46,
+          "negative_potential_kms2": 72954.06638778842,
+          "required_loading": 0.4008273655864104,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 45,
+          "negative_potential_kms2": 73577.294749982,
+          "required_loading": 0.3636940216144931,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 65,
+          "negative_potential_kms2": 74553.0685107433,
+          "required_loading": 0.33244470909111706,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 60,
+          "negative_potential_kms2": 74794.57199033245,
+          "required_loading": 0.3419908895896037,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 19,
+          "negative_potential_kms2": 77269.433584804,
+          "required_loading": 0.49870271848834113,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 18,
+          "negative_potential_kms2": 77422.6848579533,
+          "required_loading": 0.49274376885619214,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 17,
+          "negative_potential_kms2": 77808.98364398761,
+          "required_loading": 0.47506047810464685,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 16,
+          "negative_potential_kms2": 78221.08140427417,
+          "required_loading": 0.4528067079237457,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 15,
+          "negative_potential_kms2": 78400.3496888819,
+          "required_loading": 0.4422814382304443,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 44,
+          "negative_potential_kms2": 82426.46675323296,
+          "required_loading": 0.30086868616066104,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 43,
+          "negative_potential_kms2": 83106.56884318458,
+          "required_loading": 0.2928193456046132,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 42,
+          "negative_potential_kms2": 84998.88281102982,
+          "required_loading": 0.2657777782924753,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 41,
+          "negative_potential_kms2": 87366.27587446378,
+          "required_loading": 0.23810556558647772,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 39,
+          "negative_potential_kms2": 88429.77514750448,
+          "required_loading": 0.2649107927491993,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 40,
+          "negative_potential_kms2": 88550.76393842247,
+          "required_loading": 0.22949090088864157,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 34,
+          "negative_potential_kms2": 88726.87081824924,
+          "required_loading": 0.26320675708476987,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 38,
+          "negative_potential_kms2": 89307.7711893025,
+          "required_loading": 0.25900429718128243,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 33,
+          "negative_potential_kms2": 89615.60277994073,
+          "required_loading": 0.2577162243754382,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 37,
+          "negative_potential_kms2": 91758.86617271218,
+          "required_loading": 0.2435552294567404,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 32,
+          "negative_potential_kms2": 92096.69797668529,
+          "required_loading": 0.24372079523737084,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 36,
+          "negative_potential_kms2": 94792.96477254227,
+          "required_loading": 0.23993601797742506,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 31,
+          "negative_potential_kms2": 95165.26965394602,
+          "required_loading": 0.24256068557802218,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 14,
+          "negative_potential_kms2": 95990.33312876007,
+          "required_loading": 0.24655362541675344,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 35,
+          "negative_potential_kms2": 96274.54138271103,
+          "required_loading": 0.24961369941672015,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 13,
+          "negative_potential_kms2": 96345.76684668845,
+          "required_loading": 0.24060664387337466,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 30,
+          "negative_potential_kms2": 96661.44403767174,
+          "required_loading": 0.25431514107870523,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 12,
+          "negative_potential_kms2": 97253.99702080355,
+          "required_loading": 0.22642183674211924,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 11,
+          "negative_potential_kms2": 98242.78361104199,
+          "required_loading": 0.21311509226899167,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 10,
+          "negative_potential_kms2": 98678.95201922503,
+          "required_loading": 0.20818647895412726,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 9,
+          "negative_potential_kms2": 108419.88044185436,
+          "required_loading": 0.20562649299691027,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 8,
+          "negative_potential_kms2": 108983.12977461459,
+          "required_loading": 0.20239882402782727,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 4,
+          "negative_potential_kms2": 109155.20968905186,
+          "required_loading": 0.20582744217702648,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 3,
+          "negative_potential_kms2": 109733.05247223706,
+          "required_loading": 0.20300256010264972,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 7,
+          "negative_potential_kms2": 110414.19306568756,
+          "required_loading": 0.19814599713021924,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 2,
+          "negative_potential_kms2": 111200.57260808468,
+          "required_loading": 0.2001927992124435,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 6,
+          "negative_potential_kms2": 111954.28807958841,
+          "required_loading": 0.20076534997550963,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 5,
+          "negative_potential_kms2": 112621.8850898448,
+          "required_loading": 0.2052090753505812,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 1,
+          "negative_potential_kms2": 112778.60930381682,
+          "required_loading": 0.20547237764350956,
+          "fitted_loading": 0.33990310482917674
+        },
+        {
+          "index": 0,
+          "negative_potential_kms2": 113461.67259135601,
+          "required_loading": 0.21175549286236775,
+          "fitted_loading": 0.36324907154823494
+        }
+      ]
+    }
+  ]
+}
