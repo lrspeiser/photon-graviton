@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Capacity branches on stellar motions and lensing
+
+The [matched six-lens transfer](../../research_work/results/companion-extensions/capacity-lensing-report.md) freezes amplitudes from SPARC training and fits only lens inner-star mass/anisotropy. Refined lens-angle RMS is 13.07%-13.19% for the adjusted reference and 13.05%-13.16% for recycling; local filling gives 13.29%-13.46%. The small recycling improvement survives refinement but helps only 3/6 targets per population and accompanies worse galaxy test scores. Conditional outer stellar discrepancies persist. Both population proxies and inherited optical geometry are retained; this is not an independent geometry or raw-image lens test, and no branch is selected as a joint solution.
+
 ## Absolute-capacity normalization correction
 
 The [normalization audit](../../research_work/results/companion-extensions/capacity-normalization-report.md) distinguishes the stored fit parameter C0 from the actual pre-retention density amplitude A=2 C0. Recent capture-capacity and conservative-recycling absolute masses were low by a factor of two and are corrected; area/capacity halves. All 149 recycling velocity arrays and all scores remain unchanged, as do the ratio-based branch comparisons. In the density/rate formulas of these recent reports, C denotes A. Main-paper equation (7) and the historical lens implementation already used the correct factor. This correction precedes, rather than completes, new-profile lensing transfer.

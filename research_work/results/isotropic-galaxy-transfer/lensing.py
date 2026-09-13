@@ -7,10 +7,15 @@ from scipy.interpolate import PchipInterpolator
 from scipy.optimize import minimize,brentq
 from scipy.linalg import cho_factor,cho_solve
 HERE=Path(__file__).resolve().parent
+CAPACITY=next((v.split('=',1)[1] for v in sys.argv if v.startswith('--capacity-branch=')),None)
+assert CAPACITY in [None,'original','reference','local','recycling']
+CAPACITY_REFINE='--capacity-refine' in sys.argv
+assert not CAPACITY_REFINE or CAPACITY is not None
 RELAXING='--relaxing-optics' in sys.argv
 REDISTRIBUTION=next((v.split('=',1)[1] for v in sys.argv if v.startswith('--redistribution=')),None)
 assert REDISTRIBUTION in [None,'shared','partial','retention_conditioned','compact_partial']
-THIRD='--third-retention-optics' in sys.argv or REDISTRIBUTION is not None
+THIRD='--third-retention-optics' in sys.argv or REDISTRIBUTION is not None or CAPACITY is not None
+assert CAPACITY is None or (REDISTRIBUTION is None and not RELAXING)
 RETENTION='--retention-optics' in sys.argv or THIRD
 REGULAR='--regular-optics' in sys.argv or RELAXING or RETENTION
 OPTICAL_FILE='relaxing-area-results.json' if RELAXING else 'regular-area-results.json'
@@ -31,9 +36,17 @@ if RETENTION:
     capture={f'attenuated_{imf}':dict(retained,population=imf) for imf in ['Chabrier','Salpeter']}
     photorows=read('lens-photometric-audit','normalization-sensitivity.json')
     photo={(r['Name'],r['imf']):r for r in photorows if r['propagation_branch']=='energy_loss_and_event_stretch' and r['model']=='baryons'}
+capacity_file=None;capacity_multiplier=1.
+if CAPACITY not in [None,'original']:
+    capacity_file=HERE.parent/'companion-extensions'/('conservative-recycling-results.json' if CAPACITY=='recycling' else 'local-capacity-results.json')
+    capacity_scores=json.loads(capacity_file.read_text())['scores']
+    label='conservative_recycling' if CAPACITY=='recycling' else CAPACITY
+    chosen=next(s for s in capacity_scores if s['branch']==label and s['mode']=='training_C_refit')
+    capacity_multiplier=chosen['C_multiplier']
+    for cp in capture.values():cp['C_Msun_kpc3']*=capacity_multiplier
 optical=read('brightness-distance-consistency',OPTICAL_FILE) if REGULAR else None
 observations={r['Name']:r for r in read('lensing-data-readiness','lens-observations-and-image-models.json')} if REGULAR else None
-mu,w=np.polynomial.legendre.leggauss(96)
+mu,w=np.polynomial.legendre.leggauss(192 if CAPACITY_REFINE else 96)
 rows=[]
 redistribution_file='redistribution-compact-results.json' if REDISTRIBUTION=='compact_partial' else 'redistribution-results.json'
 redistribution=json.loads((HERE/redistribution_file).read_text())['models'][REDISTRIBUTION] if REDISTRIBUTION else None
@@ -57,7 +70,8 @@ for item in data['systems']:
     edges=np.r_[item['inner_arcsec'],item['outer_arcsec'][-1]]*dl/ARCSEC
     psf=item['psf_fwhm_arcsec']*dl/ARCSEC/np.sqrt(8*np.log(2))
     components=[dict(R=q['R_arcsec']*dl/ARCSEC,n=q['n'],amp=q['amp_at_R'],bn=q['bn']) for q in profiles[name]['components']]
-    model=ComponentModel(a,edges,psf,0,.5,1,20,components)
+    model=ComponentModel(a,edges,psf,0,.5,1,20,components,
+        **(dict(n=8001,order=256,deproj_order=512) if CAPACITY_REFINE else {}))
     r=model.r;y=np.array(item['vrms_kms']);cov=np.array(item['covariance_kms_squared']);fac=cho_factor(cov[:-1,:-1])
     crossw=cho_solve(fac,cov[:-1,-1]);csd=np.sqrt(cov[-1,-1]-cov[-1,:-1]@crossw)
     for branch,cp in capture.items():
@@ -75,6 +89,11 @@ for item in data['systems']:
             Lproxy=photomass/.5
             X=Lproxy/1e9/equiv**2;eta=X**cp['q']/(1+X**cp['q'])
             rho*=2*eta
+            if CAPACITY=='local':
+                local_power=(X*J)**cp['q']
+                rho=2*cp['C_Msun_kpc3']*shape*local_power/(1+local_power)
+            elif CAPACITY=='recycling':
+                rho=2*cp['C_Msun_kpc3']*shape*eta
             retention_info=dict(population=cp['population'],population_mass_Msun=photomass,L3_6_proxy_Lsun=Lproxy,proxy_X=X,eta=eta,luminosity_mapping='Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity')
         if REDISTRIBUTION:
             p=redistribution['parameters'];fraction=p[0] if REDISTRIBUTION in ['partial','compact_partial'] else 1.
@@ -114,6 +133,7 @@ for item in data['systems']:
         if REGULAR:rows[-1]['geometry']=geometry_info
         if RETENTION:rows[-1]['retention_mapping']=retention_info
         if REDISTRIBUTION:rows[-1]['redistribution']=dict(candidate=REDISTRIBUTION,fraction=float(fraction),dilation=float(dilation))
+        if CAPACITY is not None:rows[-1]['capacity_branch']=dict(branch=CAPACITY,C0_multiplier=capacity_multiplier,radial_grid_max_over_capture_scale=float(r[-1]/ac))
         print(name,branch,fit.fun,angle,flush=True)
 summary=[]
 for branch in capture:
@@ -128,5 +148,12 @@ if RETENTION:
 if REDISTRIBUTION:
     output='redistribution-'+REDISTRIBUTION+'-optics-results.json'
     out['redistribution_input_sha256']=hashlib.sha256((HERE/redistribution_file).read_bytes()).hexdigest()
-(HERE/output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+if CAPACITY is not None:
+    output='capacity-'+CAPACITY+('-refined' if CAPACITY_REFINE else '')+'-optics-results.json'
+    out['capacity_branch']=CAPACITY
+    out['C0_multiplier']=capacity_multiplier
+    out['refined_quadrature']=CAPACITY_REFINE
+    if capacity_file is not None:out['training_amplitude_input_sha256']=hashlib.sha256(capacity_file.read_bytes()).hexdigest()
+    out['scope']='Existing conditional six-lens geometry and luminosity proxies; shared amplitude frozen from SPARC training, only stellar mass and anisotropy fitted on lens inner bins'
+(HERE/output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8',newline='\n')
 print(json.dumps(summary,indent=2))

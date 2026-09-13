@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Capacity profiles transferred to six lenses.** Galaxy-trained amplitudes give lens-angle RMS 13.07%-13.19% for the matched reference, 13.29%-13.46% for local filling and 13.05%-13.16% for refined recycling. Recycling helps only 3/6 systems per population and performs worse on galaxy test motions; outer stellar discrepancies remain. No joint solution is adopted. Conditional geometry and luminosity proxies are retained. [Report](../research_work/results/companion-extensions/capacity-lensing-report.md).
+
 **Normalization correction.** Recent absolute capacity and conservative-recycling mass outputs used C0 instead of the source amplitude A=2 C0. Those masses are corrected upward by two; area/capacity halves. Rotation predictions and scores are verified unchanged for all 149 galaxies because mass ratios cancel the factor. Main-paper equation (7) and the original lens code were already correct. New-profile lens transfer remains pending. [Audit](../research_work/results/companion-extensions/capacity-normalization-report.md).
 
 **Finite local formation.** Empty local stores under the full-opacity field were tested at six common durations plus equilibrium. Training selection chooses u=10, giving validation/test RMSE 29.41/25.93 km/s versus matched reference 30.82/21.41. The common-history grid is not an improvement across partitions; this is a fixed-field diagnostic, not coupled time-dependent transport or a physical age estimate. [Report](../research_work/results/companion-extensions/local-formation-report.md).

@@ -1,0 +1,9 @@
+# Capacity branches: matched six-lens transfer protocol
+
+13 September 2026, written before executing these lens comparisons.
+
+Compare the original exact-third profile, an amplitude-adjusted reference, local filling under fixed transport, and the conservative-recycling endpoint. Use the corrected density amplitude A=2 C0. Freeze the adjusted C0 multipliers from existing SPARC training-only fits: local-capacity-results.json for reference/local, conservative-recycling-results.json for recycling. No lens angle or outer stellar bin selects these amplitudes, k0 or a/R_d. No new local-capacity or optical parameter is fitted on these targets.
+
+Run the existing lensing program with `--capacity-branch=original`, `reference`, `local`, and `recycling`. Outputs have separate names and do not overwrite the historical lens results. The original run must reproduce the previous six-system results within numerical optimization precision. Keep both Chabrier and Salpeter population proxies and retain identical measured stellar bins, covariance, light profiles, conditional optical geometry, and source mappings. Fit only stellar mass and constant anisotropy on inner stellar bins, as before. Report inner fit, conditional outer residual and lens-angle residual for every case; do not choose a winner from the better population proxy alone.
+
+The new densities are A eta(X)Jg, A eta(XJ)g and A eta(X)g respectively. Their inputs remain conditional: lens X is inferred from population mass through an assumed 3.6-micron luminosity conversion, and angular distances use the project's nonexpanding optical prescription. Published SIE angles are model summaries rather than raw-image fits. These six systems have been used before, so the transfer is not blind. A better lens residual without acceptable stellar motions does not establish a joint solution. Stationarity, source energy, support and microscopic capture remain separate unresolved requirements.
