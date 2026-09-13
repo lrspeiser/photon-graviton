@@ -1,0 +1,145 @@
+{
+  "models": {
+    "fixed_baryonic_force": {
+      "C_Msun_kpc3": 4066677.2628939063,
+      "g0_kms2_per_kpc": 0.01,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 62.559324066208454,
+          "log_RMS": 0.17598245751988809
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 52.11145127435033,
+          "log_RMS": 0.1465266026932082
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 44.464784105345295,
+          "log_RMS": 0.12704588103568518
+        }
+      },
+      "finer_scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 62.559142309956826,
+          "log_RMS": 0.17598994902445625
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 52.11144421724027,
+          "log_RMS": 0.14653474275643746
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 44.46473115656913,
+          "log_RMS": 0.12706155438601482
+        }
+      },
+      "refinement_max_RMS_change_kms": 0.0001817562516279736,
+      "refinement_pass": true,
+      "optimizer_success": true,
+      "boundary": true,
+      "starts": [
+        {
+          "p": [
+            6.60923970756419,
+            -2.0
+          ],
+          "loss": 0.030969825354739217,
+          "success": true
+        },
+        {
+          "p": [
+            6.609239960452982,
+            -2.0
+          ],
+          "loss": 0.030969825354745156,
+          "success": true
+        },
+        {
+          "p": [
+            6.6092397513235355,
+            -2.0
+          ],
+          "loss": 0.030969825354739668,
+          "success": true
+        }
+      ]
+    },
+    "feedback": {
+      "C_Msun_kpc3": 4066451.4808814153,
+      "g0_kms2_per_kpc": 0.01,
+      "scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 62.56066430253229,
+          "log_RMS": 0.1759830234305469
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 52.11057432682384,
+          "log_RMS": 0.14652592655570634
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 44.46387178241293,
+          "log_RMS": 0.12704656437723866
+        }
+      },
+      "finer_scores": {
+        "train": {
+          "n": 89,
+          "RMSE_kms": 62.560479375723204,
+          "log_RMS": 0.17599051529778303
+        },
+        "validation": {
+          "n": 29,
+          "RMSE_kms": 52.11056681623345,
+          "log_RMS": 0.14653406985004921
+        },
+        "test": {
+          "n": 31,
+          "RMSE_kms": 44.463818486298905,
+          "log_RMS": 0.12706223987989362
+        }
+      },
+      "refinement_max_RMS_change_kms": 0.0001849268090836631,
+      "refinement_pass": true,
+      "optimizer_success": true,
+      "boundary": true,
+      "starts": [
+        {
+          "p": [
+            6.609215594855477,
+            -2.0
+          ],
+          "loss": 0.030970024535756414,
+          "success": true
+        },
+        {
+          "p": [
+            6.609214808319538,
+            -2.0
+          ],
+          "loss": 0.03097002453579592,
+          "success": true
+        },
+        {
+          "p": [
+            6.609215605328714,
+            -2.0
+          ],
+          "loss": 0.03097002453575642,
+          "success": true
+        }
+      ]
+    }
+  },
+  "input_sha256": {
+    "SPARC_Lelli2016c.mrt": "5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "sparc_frozen.json": "42bb17aab5f03ce02bbd6dc0e85656873c5c6e431c5504513796ffc24b9d4015"
+  }
+}
