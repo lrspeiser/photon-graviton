@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Torque-channel energy comparison
+
+The [torque budget](../../research_work/results/companion-extensions/torque-report.md) compares the orbital endpoint angular-momentum changes with freely escaping massless ray emission and internal receivers. Direct orbital ray braking requires at least 1,394/1,504 times the prior global cooling energy; this is not a bound on coherent-wave torque, intrinsic spin or internal cancellation. Orientation-matched outer receiver scenarios use 4.5-30.7% of that budget in frozen-potential orbit-energy increments while expanding by about 4-8%. This motivates coupled angular-momentum redistribution with separate cooling, not a completed transport solution. Actual recipient movement requires recalculating self-gravity and the total energy ledger.
+
 ### Orbital support and angular-momentum transport
 
 The [orbital test](../../research_work/results/companion-extensions/orbital-support-report.md) finds resolved density increases that violate a necessary condition for a nonnegative isotropic energy-only distribution in both settled profiles. A singular population of circular orbits with random planes supplies a nonnegative stationary construction in the spherical-average potential, with bound individual orbits and positive radial epicyclic frequencies over 0.1-30 kpc. This preserves the fitted density by construction, so it is not new observational evidence or collective stability. Settling between the assumed initial/final circular states requires mean specific angular-momentum reductions of 17.13%/17.89% for moved mass. Formation, torques and nonspherical dynamics remain missing.
