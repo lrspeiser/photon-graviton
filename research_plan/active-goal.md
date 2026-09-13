@@ -1,3 +1,5 @@
+Latest resolved-input audit: [54 training radial measurements](../research_work/results/slacs-resolved-input-audit/report.md). All covariance matrices numerically valid; correlations reach 0.843. Release PSF FWHM is 0.8 arcsec; J0330-0020 use flag is zero and remains unresolved before fitting. No reserved score opened.
+
 Latest data acquisition: [KCWI radial profiles and covariances for 14 SLACS lenses](../research_work/results/slacs-resolved-data/report.md). Eight overlap training; three validation, two test and one unassigned retained. Pinned source hashes verified; no resolved fit or reserved evaluation performed.
 
 Latest lensing sensitivity: [common orbital anisotropy on 33 training lenses](../research_work/results/slacs-orbit-sensitivity/report.md). Median extra-force angle excess ranges 3.7-15.5%; orbital constraints are needed before a gravity-law conclusion. No beta selected from these scores, reserved roles untouched.
