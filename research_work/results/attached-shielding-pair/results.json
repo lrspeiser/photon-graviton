@@ -1,0 +1,150 @@
+{
+  "scope": "Necessary pairwise shielding feasibility under postulated mass-proportional opacity; not a whole-galaxy fit or supply calculation",
+  "hashes": {
+    "research_work\\results\\attached-shielding-pair\\run.py": "22d683e9d5178f924791438e9c2a148c9ea1a245cd667d191e042057ab62b7f1",
+    "research_work\\results\\baryon-attached-deposits\\results.json": "ca4d399a682f4abd0bc571f3c1189987d4d7da8b2c9c373d76f90d4cbd248c86",
+    "research_work\\results\\depth-attached-loading\\results.json": "3bd945f2f16d517ccaf522816bff8107107f744ea481da42ce137871292b2ab7",
+    "research_work\\results\\bar-field-foundation\\field.py": "9e0f1e007aaab4fc5d77a1cd4705c62e2bd0c904abfd88bb2a1ecdffac36bb4b",
+    "research_work\\results\\bar-field-foundation\\published_bar.py": "0dc81333d56168bea153b3ae94a1f55c64b1bc2a263156ee4cde14eb37e2e5e8"
+  },
+  "locations": [
+    {
+      "R_kpc": 8,
+      "z_kpc": 1,
+      "phi_rad": 0.0,
+      "declared_baryon_density_Msun_kpc3": 7761796.424159906,
+      "equivalent_extra_density_Msun_kpc3": 9270627.720985612,
+      "required_extra_per_baryon": 1.1943920214306591,
+      "components_Msun_kpc3": {
+        "bar": 2869.345378684249,
+        "nuclei": 2.753171534890201e-32,
+        "disk_0": 1035028.6852317082,
+        "disk_1": 6722870.552676716,
+        "disk_2": 1027.826513776712,
+        "disk_3": 0.014330285195929594,
+        "softened_centre": 2.873504218913208e-05
+      }
+    },
+    {
+      "R_kpc": 0.5,
+      "z_kpc": 0.1,
+      "phi_rad": 0.7853981633974483,
+      "declared_baryon_density_Msun_kpc3": 2867679500.424758,
+      "equivalent_extra_density_Msun_kpc3": 568219214.0615526,
+      "required_extra_per_baryon": 0.19814599713021924,
+      "components_Msun_kpc3": {
+        "bar": 2850465532.6288,
+        "nuclei": 9895470.391908638,
+        "disk_0": 5595312.208418628,
+        "disk_1": 1684698.5697983226,
+        "disk_2": 38458.08768813098,
+        "disk_3": 0.14210948418552774,
+        "softened_centre": 28.3960349209208
+      }
+    }
+  ],
+  "cases": [
+    {
+      "boundary_kpc": 30.0,
+      "angular_mu_nodes": 16,
+      "phi_nodes": 32,
+      "segment_nodes": 8,
+      "required_exposure_ratio": 6.0278382542631865,
+      "cross_section_kpc2_per_Msun": 9.729189884701448e-10,
+      "relative_intensities": [
+        0.9100134603420346,
+        0.15096846032629158
+      ],
+      "achieved_ratio": 6.027838254263187,
+      "mean_columns_Msun_kpc2": [
+        133768274.7252711,
+        2590085092.3647785
+      ]
+    },
+    {
+      "boundary_kpc": 30.0,
+      "angular_mu_nodes": 32,
+      "phi_nodes": 64,
+      "segment_nodes": 16,
+      "required_exposure_ratio": 6.0278382542631865,
+      "cross_section_kpc2_per_Msun": 9.684402886231153e-10,
+      "relative_intensities": [
+        0.9132431025958898,
+        0.1515042481357227
+      ],
+      "achieved_ratio": 6.027838254263177,
+      "mean_columns_Msun_kpc2": [
+        124347593.49194016,
+        2663090324.4938946
+      ]
+    },
+    {
+      "boundary_kpc": 30.0,
+      "angular_mu_nodes": 64,
+      "phi_nodes": 128,
+      "segment_nodes": 32,
+      "required_exposure_ratio": 6.0278382542631865,
+      "cross_section_kpc2_per_Msun": 9.675692285720144e-10,
+      "relative_intensities": [
+        0.9136907230240793,
+        0.15157850700089276
+      ],
+      "achieved_ratio": 6.027838254263171,
+      "mean_columns_Msun_kpc2": [
+        126402049.90329501,
+        2687523353.7397876
+      ]
+    },
+    {
+      "boundary_kpc": 60.0,
+      "angular_mu_nodes": 16,
+      "phi_nodes": 32,
+      "segment_nodes": 8,
+      "required_exposure_ratio": 6.0278382542631865,
+      "cross_section_kpc2_per_Msun": 9.72915373012663e-10,
+      "relative_intensities": [
+        0.9100188161305085,
+        0.1509693488352803
+      ],
+      "achieved_ratio": 6.027838254263203,
+      "mean_columns_Msun_kpc2": [
+        133762544.19427377,
+        2590085278.8557224
+      ]
+    },
+    {
+      "boundary_kpc": 60.0,
+      "angular_mu_nodes": 32,
+      "phi_nodes": 64,
+      "segment_nodes": 16,
+      "required_exposure_ratio": 6.0278382542631865,
+      "cross_section_kpc2_per_Msun": 9.68468258552544e-10,
+      "relative_intensities": [
+        0.9132008915648696,
+        0.15149724545429077
+      ],
+      "achieved_ratio": 6.027838254263161,
+      "mean_columns_Msun_kpc2": [
+        124391421.96913615,
+        2663090831.340445
+      ]
+    },
+    {
+      "boundary_kpc": 60.0,
+      "angular_mu_nodes": 64,
+      "phi_nodes": 128,
+      "segment_nodes": 32,
+      "required_exposure_ratio": 6.0278382542631865,
+      "cross_section_kpc2_per_Msun": 9.676561320539133e-10,
+      "relative_intensities": [
+        0.9135597396788397,
+        0.15155677726301378
+      ],
+      "achieved_ratio": 6.027838254263187,
+      "mean_columns_Msun_kpc2": [
+        126566910.13034669,
+        2687524375.9454956
+      ]
+    }
+  ]
+}
