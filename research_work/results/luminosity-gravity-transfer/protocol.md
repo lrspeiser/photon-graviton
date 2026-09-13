@@ -1,0 +1,9 @@
+# Luminosity dependence: formula and galaxy transfer
+
+Use the existing 89/29/31 SPARC galaxy partitions and 3,150 accepted rotation points. These partitions have been examined previously; this is exploratory frozen-parameter transfer, not a blind confirmation. Written before the present fit.
+
+Compare the existing empirical extra acceleration with g_extra=A a_star (g_b/a_star)^p (L_3.6/10^10 L_sun)^q. The power-law ansatz is standard regression mathematics; this particular application is a candidate postulate, with no claim of literature priority. q=0 is the previous model. The circular-speed identity v^2=R(g_b+g_extra) is known Newtonian kinematics. Fix a_star to the prior redshift-trained value. Fit log10 A in [-4,2], p in [0,1], q in [-1,1] using equal-galaxy mean squared log10 speed residuals on training galaxies only. Use three fixed starting points. Freeze all parameters before scoring validation and test groups. No individual galaxy adjustments or new cuts.
+
+L is catalog 3.6-micron luminosity, not bolometric power, past integrated emission, or external illumination. Its shared photometry with stellar mass is a confounder. Fixed stellar mass/light 0.5 disk and 0.7 bulge and signed gas contributions follow the prior audit. Published distances are stipulated; some originate from Hubble-flow calibrations, which are not treated as independent support for a nonexpanding model. Errors in inclination, distance, population mass/light and covariance are not marginalized here. Scores are descriptive, not likelihood significances.
+
+Report fitted parameters, optimizer status/bounds, every predicted speed, per-galaxy errors, and group log and km/s RMS. A positive transferable q could motivate a better source calculation but cannot establish photon conversion. A negative or unhelpful q does not exclude external companion supply or radiation history. Preserve all six main goals as open.
