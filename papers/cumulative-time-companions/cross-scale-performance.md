@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Shared pressure laws and derived equilibrium profiles
+
+The [pressure-law test](../../research_work/results/companion-extensions/interaction-support-report.md) calibrates shared effective polytropic amplitudes to the prior inner required pressure, then solves hydrostatic equilibrium with the exact-third total mass. Gamma=5/3 yields all-bin speed RMS 26.93/19.47 km/s; gamma=2 yields 43.73/35.98, both worse than original 6.34/10.91. Gamma=4/3 mass matches that fail to reach a surface within the computational domain are rejected. These existing polytropic equations are proposed support closures, not a derived interaction or stability proof. A local outward-rising density also prevents an everywhere positive-compressibility barotropic law from exactly reproducing parts of the fitted profile. Orbital and multicomponent support remain alternatives.
+
 ### Local phase support audit
 
 The [local pressure calculation](../../research_work/results/companion-extensions/local-support-report.md) freezes the shared fit and evaluates isotropic support with the proper ideal-Bose pressure law. In 0.1-30 kpc, 90.4%/82.3% of settled mass lies above the condensed-phase pressure ceiling. At 5 kpc the transported compact fractions 81.9%/85.4% contrast with supported ideal condensed fractions 2.53%/8.31%. Retaining those fractions requires about 94%/95% additional pressure. This rules against interpreting the fitted profile as a locally supported homogeneous ideal condensate under the tested assumptions, not against all interacting or wave states. The prior empirical fit remains; global virial balance had not established local support.
