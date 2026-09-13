@@ -1,3 +1,5 @@
+Latest stellar-profile audit: [six published component models reconstructed](research_work/results/slacs-light-profile-audit/report.md). Half-light radii match release within 0.029%; one is 52% larger than our older pilot input. Seventh profile missing. No gravity refit yet; preserve this uncertainty in interpreting earlier results.
+
 Latest resolved fit: [seven training lenses, 47 radial bins](research_work/results/slacs-resolved-fit/report.md). Fixed extra force lowers summed radial chi-square 205.74 to 111.22, but residuals remain and lensing RMS does not improve. Training-only conditional result; all six objectives open.
 
 Latest resolved-input audit: [54 training radial measurements](research_work/results/slacs-resolved-input-audit/report.md). All covariance matrices numerically valid; correlations reach 0.843. Release PSF FWHM is 0.8 arcsec; J0330-0020 use flag is zero and remains unresolved before fitting. No reserved score opened.
