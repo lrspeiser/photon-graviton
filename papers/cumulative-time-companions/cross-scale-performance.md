@@ -112,6 +112,14 @@ The subsequent [lens/profile inverse diagnostic](../../research_work/results/iso
 
 The [regular optical report](../../research_work/results/brightness-distance-consistency/regular-area-report.md) and [restricted source-growth failure](../../research_work/results/brightness-distance-consistency/optical-growth-report.md) distinguish empirical fits from mechanism requirements. No fixed universe age or size is inserted to force success. All six project goals remain open.
 
+## Near and distant companion streams
+
+The [source-flow diagnostic](../../research_work/results/isotropic-galaxy-transfer/companion-streams-report.md) applies the proposed conversion to known inverse-square transport, F_c=L[1-exp(-alpha D)]/(4*pi*D^2), while retaining the one-third factor. In the small-conversion limit a single source gives F_c proportional to 1/D. Near/far illumination contrast is approximately (D+R)/(D-R); sources at 100 receiver radii produce only about 2% contrast. A uniform population in a shell contributes j[1-exp(-alpha D)]dD, allowing distant populations collectively to dominate without individually brighter sources. This is conditional geometry, not a measured cosmic energy supply.
+
+For the cached M87 source field, 797 external galaxy entries give about 53.1% of catalog center intensity from 1-5 Mpc, with angular second-moment eigenvalues 0.127, 0.359 and 0.514. The catalog extends only to about 72 Mpc and cannot establish the distant population's contribution. Integrated galaxy luminosities are estimated inputs, not resolved stars or source histories. No cluster retention proxy is invented; a common one-third factor cancels from fractional shares.
+
+Streams crossing do not automatically merge or bind. Lightlike bending scales are of order 10^-5 radians for the existing lenses; full ray tracing and companion-specific scattering remain unexecuted. The next mechanism test must map source paths through capture into a radial and angular deposit distribution before comparing it to halo targets. This calculation supplies that test's inputs and does not improve the reported rotation or lens scores.
+
 ## Comparison claims that the evidence permits
 
 A common law that predicts both galaxy and cluster observables with fewer unsupported additions would be a meaningful advance. The present results do not yet show that: MOND is stronger in the matched galaxy test, while the cluster exercise is freely fitted and the lens transfer remains mismatched. A cluster shape fit cannot cancel a galaxy prediction deficit or establish a missing energy budget.

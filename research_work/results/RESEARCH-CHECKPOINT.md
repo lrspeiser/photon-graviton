@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Near/far companion streams:** [Source-flow calculations](isotropic-galaxy-transfer/companion-streams-report.md) retain the exact one-third law. Source distance relative to halo radius controls illumination gradients; a uniform distant population can collectively outweigh nearby sources. The cached M87 catalog supplies directional and distance-bin diagnostics only, extending to about 72 Mpc. No billion-year source history, steering solution, or new halo fit is established. All six goals remain open.
+
 **Fitted halo targets mapped:** [Radial deposition comparison](isotropic-galaxy-transfer/halo-deposition-map-report.md) preserves exact one-third inventory and lists NFW densities/masses for both geometries. Finite 5 Re standard targets exceed inventory in J1112/J1630; four others are inventory-feasible but require redistribution/support, and several halo fits remain poorly constrained. No actual photon supply, formation history, or joint success is established.
 
 **NFW under both geometries executed:** [Matched report](isotropic-galaxy-transfer/nfw-geometry-report.md). NFW also struggles in J0037/J1204/J1402 under our retained optical branch. Standard benchmark geometry lowers their motion scores 88.59/54.38/195.85 to 20.20/4.05/43.07. Residuals and boundaries prevent complete-success claims. All six NFW systems improve with standard geometry; the same companion model under standard geometry is not yet tested. All research goals remain open.
