@@ -8,7 +8,9 @@ from scipy.optimize import minimize,brentq
 from scipy.linalg import cho_factor,cho_solve
 HERE=Path(__file__).resolve().parent
 RELAXING='--relaxing-optics' in sys.argv
-THIRD='--third-retention-optics' in sys.argv
+REDISTRIBUTION=next((v.split('=',1)[1] for v in sys.argv if v.startswith('--redistribution=')),None)
+assert REDISTRIBUTION in [None,'shared','partial','retention_conditioned','compact_partial']
+THIRD='--third-retention-optics' in sys.argv or REDISTRIBUTION is not None
 RETENTION='--retention-optics' in sys.argv or THIRD
 REGULAR='--regular-optics' in sys.argv or RELAXING or RETENTION
 OPTICAL_FILE='relaxing-area-results.json' if RELAXING else 'regular-area-results.json'
@@ -33,6 +35,8 @@ optical=read('brightness-distance-consistency',OPTICAL_FILE) if REGULAR else Non
 observations={r['Name']:r for r in read('lensing-data-readiness','lens-observations-and-image-models.json')} if REGULAR else None
 mu,w=np.polynomial.legendre.leggauss(96)
 rows=[]
+redistribution_file='redistribution-compact-results.json' if REDISTRIBUTION=='compact_partial' else 'redistribution-results.json'
+redistribution=json.loads((HERE/redistribution_file).read_text())['models'][REDISTRIBUTION] if REDISTRIBUTION else None
 for item in data['systems']:
     name=item['Name']
     if name not in allowed:continue
@@ -72,6 +76,14 @@ for item in data['systems']:
             X=Lproxy/1e9/equiv**2;eta=X**cp['q']/(1+X**cp['q'])
             rho*=2*eta
             retention_info=dict(population=cp['population'],population_mass_Msun=photomass,L3_6_proxy_Lsun=Lproxy,proxy_X=X,eta=eta,luminosity_mapping='Population mass divided by 0.5; not observed rest-frame 3.6-micron luminosity')
+        if REDISTRIBUTION:
+            p=redistribution['parameters'];fraction=p[0] if REDISTRIBUTION in ['partial','compact_partial'] else 1.
+            dilation=np.exp(p[1] if REDISTRIBUTION in ['partial','compact_partial'] else p[0]*(1-eta) if REDISTRIBUTION=='retention_conditioned' else p[0])
+            xd=x/dilation;td=xd[:,None]*mu;Bd2=1+xd[:,None]**2*(1-mu**2);Bd=np.sqrt(Bd2)
+            taud=cp['k0_per_kpc']*ac*(td/(2*Bd2*(Bd2+td*td))+(np.arctan(td/Bd)+np.pi/2)/(2*Bd**3))
+            Jd=.5*np.sum(np.exp(-np.maximum(taud,0))*w,axis=1)
+            shifted=2*eta*cp['C_Msun_kpc3']*Jd/(1+xd*xd)**2/dilation**3
+            rho=(1-fraction)*rho+fraction*shifted
         mc=4*np.pi*(rho[0]*r[0]**3/3+cumulative_trapezoid(rho*r*r,r,initial=0))
         mi=PchipInterpolator(np.log(r),mc,extrapolate=False)
         def Mextra(rr):
@@ -101,6 +113,7 @@ for item in data['systems']:
         rows.append(dict(Name=name,model=branch,equivalent_disk_scale_kpc=equiv,capture_scale_kpc=ac,mass_Msun=mass,beta=beta,orbit_boundary=bool(np.min(abs(beta-np.array(cfg['constant_beta_bounds'])))<1e-5),inner_chi2=float(fit.fun),outer_observed_kms=float(y[-1]),outer_prediction_kms=float(outer),outer_conditional_standardized_residual=float((y[-1]-outer)/csd),lens_prediction_arcsec=angle,lens_catalog_arcsec=pilot[name]['catalog_SIE_arcsec'],lens_fractional_residual=angle/pilot[name]['catalog_SIE_arcsec']-1,optimizer_successes=sum(bool(f.success) for f in fits),observed_stellar_vrms=y.tolist(),predicted_stellar_vrms=pred.tolist()))
         if REGULAR:rows[-1]['geometry']=geometry_info
         if RETENTION:rows[-1]['retention_mapping']=retention_info
+        if REDISTRIBUTION:rows[-1]['redistribution']=dict(candidate=REDISTRIBUTION,fraction=float(fraction),dilation=float(dilation))
         print(name,branch,fit.fun,angle,flush=True)
 summary=[]
 for branch in capture:
@@ -112,5 +125,8 @@ output='relaxing-optics-results.json' if RELAXING else 'regular-optics-results.j
 if RETENTION:
     output='third-retention-optics-results.json' if THIRD else 'retention-optics-results.json'
     out['photometric_input_sha256']=hashlib.sha256((HERE.parent/'lens-photometric-audit/normalization-sensitivity.json').read_bytes()).hexdigest()
+if REDISTRIBUTION:
+    output='redistribution-'+REDISTRIBUTION+'-optics-results.json'
+    out['redistribution_input_sha256']=hashlib.sha256((HERE/redistribution_file).read_bytes()).hexdigest()
 (HERE/output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(summary,indent=2))

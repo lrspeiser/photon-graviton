@@ -1,0 +1,372 @@
+{
+  "models": {
+    "baseline": {
+      "galaxy": {
+        "parameters": [],
+        "scores": {
+          "train": {
+            "n": 89,
+            "RMSE_kms": 29.02541659047924,
+            "log_RMS": 0.138496708584005
+          },
+          "validation": {
+            "n": 29,
+            "RMSE_kms": 32.49499555261802,
+            "log_RMS": 0.11540118461452924
+          },
+          "test": {
+            "n": 31,
+            "RMSE_kms": 23.591004667985423,
+            "log_RMS": 0.09107541112004754
+          }
+        },
+        "refinement_max_RMS_change_kms": 0.0003312919081217558,
+        "boundary": false,
+        "starts": []
+      },
+      "lens_summary": [
+        {
+          "model": "attenuated_Chabrier",
+          "n": 6,
+          "inner_chi2_sum": 42.15556226668135,
+          "outer_conditional_residual_square_sum": 44.32216368006399,
+          "lens_fractional_rms": 0.1392307638442564,
+          "orbit_boundary_count": 0
+        },
+        {
+          "model": "attenuated_Salpeter",
+          "n": 6,
+          "inner_chi2_sum": 41.55383764372078,
+          "outer_conditional_residual_square_sum": 42.703975966792896,
+          "lens_fractional_rms": 0.14093688861532266,
+          "orbit_boundary_count": 0
+        }
+      ]
+    },
+    "shared": {
+      "galaxy": {
+        "parameters": [
+          -0.00016227954948843374
+        ],
+        "scores": {
+          "train": {
+            "n": 89,
+            "RMSE_kms": 29.02889672585813,
+            "log_RMS": 0.1384967025412093
+          },
+          "validation": {
+            "n": 29,
+            "RMSE_kms": 32.49771367701298,
+            "log_RMS": 0.11539847152961798
+          },
+          "test": {
+            "n": 31,
+            "RMSE_kms": 23.595145623160192,
+            "log_RMS": 0.09107702048242913
+          }
+        },
+        "refinement_max_RMS_change_kms": 0.0003314557189000311,
+        "boundary": false,
+        "starts": [
+          {
+            "parameters": [
+              -0.00016227954948843374
+            ],
+            "loss": 0.01918121590914727,
+            "success": true
+          },
+          {
+            "parameters": [
+              -0.00016227879648911812
+            ],
+            "loss": 0.01918121590914727,
+            "success": true
+          },
+          {
+            "parameters": [
+              -0.00016228060387210174
+            ],
+            "loss": 0.01918121590914727,
+            "success": true
+          }
+        ]
+      },
+      "lens_summary": [
+        {
+          "model": "attenuated_Chabrier",
+          "n": 6,
+          "inner_chi2_sum": 42.15076947475124,
+          "outer_conditional_residual_square_sum": 44.310311355297635,
+          "lens_fractional_rms": 0.1392386930675284,
+          "orbit_boundary_count": 0
+        },
+        {
+          "model": "attenuated_Salpeter",
+          "n": 6,
+          "inner_chi2_sum": 41.549024753928414,
+          "outer_conditional_residual_square_sum": 42.6923237363047,
+          "lens_fractional_rms": 0.14094527871967968,
+          "orbit_boundary_count": 0
+        }
+      ]
+    },
+    "partial": {
+      "galaxy": {
+        "parameters": [
+          0.015718065801392136,
+          -1.3862943611198906
+        ],
+        "scores": {
+          "train": {
+            "n": 89,
+            "RMSE_kms": 28.938650057896712,
+            "log_RMS": 0.1352369630388028
+          },
+          "validation": {
+            "n": 29,
+            "RMSE_kms": 31.748935344847567,
+            "log_RMS": 0.1119981604138736
+          },
+          "test": {
+            "n": 31,
+            "RMSE_kms": 23.14141283578842,
+            "log_RMS": 0.08664809523330673
+          }
+        },
+        "refinement_max_RMS_change_kms": 0.0003068541480608644,
+        "boundary": true,
+        "starts": [
+          {
+            "parameters": [
+              0.015873038199785985,
+              -1.3701018429186353
+            ],
+            "loss": 0.018305827919487722,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.043401183938208104,
+              0.6811626132228795
+            ],
+            "loss": 0.019162123272133857,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.015718065801392136,
+              -1.3862943611198906
+            ],
+            "loss": 0.018288947120387214,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.04340120093571332,
+              0.6811611009677512
+            ],
+            "loss": 0.01916212327213367,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.5409903114346196,
+              -0.0003332317702177715
+            ],
+            "loss": 0.01918121571981722,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.043401353795140374,
+              0.6811571580601852
+            ],
+            "loss": 0.01916212327213447,
+            "success": true
+          }
+        ]
+      },
+      "lens_summary": [
+        {
+          "model": "attenuated_Chabrier",
+          "n": 6,
+          "inner_chi2_sum": 41.04126560712484,
+          "outer_conditional_residual_square_sum": 43.425704716728326,
+          "lens_fractional_rms": 0.14131918088866,
+          "orbit_boundary_count": 0
+        },
+        {
+          "model": "attenuated_Salpeter",
+          "n": 6,
+          "inner_chi2_sum": 40.4416241637015,
+          "outer_conditional_residual_square_sum": 41.883149349743015,
+          "lens_fractional_rms": 0.14312334160482934,
+          "orbit_boundary_count": 0
+        }
+      ]
+    },
+    "retention_conditioned": {
+      "galaxy": {
+        "parameters": [
+          -0.003927320030251892
+        ],
+        "scores": {
+          "train": {
+            "n": 89,
+            "RMSE_kms": 29.06604292477474,
+            "log_RMS": 0.1384955216516038
+          },
+          "validation": {
+            "n": 29,
+            "RMSE_kms": 32.519771222831416,
+            "log_RMS": 0.11536000348655463
+          },
+          "test": {
+            "n": 31,
+            "RMSE_kms": 23.634920480451946,
+            "log_RMS": 0.09110109779111161
+          }
+        },
+        "refinement_max_RMS_change_kms": 0.0003331872536378455,
+        "boundary": false,
+        "starts": [
+          {
+            "parameters": [
+              -0.003927320030251892
+            ],
+            "loss": 0.019180888478136197,
+            "success": true
+          },
+          {
+            "parameters": [
+              -0.003927339047189143
+            ],
+            "loss": 0.019180888478136204,
+            "success": true
+          },
+          {
+            "parameters": [
+              -0.003927329679210167
+            ],
+            "loss": 0.019180888478136204,
+            "success": true
+          }
+        ]
+      },
+      "lens_summary": [
+        {
+          "model": "attenuated_Chabrier",
+          "n": 6,
+          "inner_chi2_sum": 42.12527458472238,
+          "outer_conditional_residual_square_sum": 44.24932942928846,
+          "lens_fractional_rms": 0.1392825272257128,
+          "orbit_boundary_count": 0
+        },
+        {
+          "model": "attenuated_Salpeter",
+          "n": 6,
+          "inner_chi2_sum": 41.52745777587535,
+          "outer_conditional_residual_square_sum": 42.642056263920296,
+          "lens_fractional_rms": 0.14098438153382173,
+          "orbit_boundary_count": 0
+        }
+      ]
+    },
+    "compact_partial": {
+      "galaxy": {
+        "parameters": [
+          0.0036984905650073864,
+          -2.281070803628264
+        ],
+        "scores": {
+          "train": {
+            "n": 89,
+            "RMSE_kms": 28.53921600386836,
+            "log_RMS": 0.13339533041165705
+          },
+          "validation": {
+            "n": 29,
+            "RMSE_kms": 31.666110960874327,
+            "log_RMS": 0.11227093235873462
+          },
+          "test": {
+            "n": 31,
+            "RMSE_kms": 22.590643647295774,
+            "log_RMS": 0.08454434015721381
+          }
+        },
+        "refinement_max_RMS_change_kms": 0.0003224305754976342,
+        "boundary": false,
+        "starts": [
+          {
+            "parameters": [
+              0.0036984888238945014,
+              -2.281071000121098
+            ],
+            "loss": 0.017794235873436374,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.003698486160566822,
+              -2.281071387501942
+            ],
+            "loss": 0.017794235873437595,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.003698483735586183,
+              -2.281071755277182
+            ],
+            "loss": 0.017794235873438854,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.0036984905650073864,
+              -2.281070803628264
+            ],
+            "loss": 0.017794235873435635,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.0036984823787563235,
+              -2.2810717124435884
+            ],
+            "loss": 0.017794235873439736,
+            "success": true
+          },
+          {
+            "parameters": [
+              0.0036984853627370887,
+              -2.2810720588085385
+            ],
+            "loss": 0.0177942358734387,
+            "success": true
+          }
+        ]
+      },
+      "lens_summary": [
+        {
+          "model": "attenuated_Chabrier",
+          "n": 6,
+          "inner_chi2_sum": 42.29186406537739,
+          "outer_conditional_residual_square_sum": 45.03046950659291,
+          "lens_fractional_rms": 0.13914918433084006,
+          "orbit_boundary_count": 0
+        },
+        {
+          "model": "attenuated_Salpeter",
+          "n": 6,
+          "inner_chi2_sum": 41.679647780878796,
+          "outer_conditional_residual_square_sum": 43.40349368832152,
+          "lens_fractional_rms": 0.1408269300636383,
+          "orbit_boundary_count": 0
+        }
+      ]
+    }
+  },
+  "conservation_identity_max_relative_error": 3.3306690738754696e-16
+}

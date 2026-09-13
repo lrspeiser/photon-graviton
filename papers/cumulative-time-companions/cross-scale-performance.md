@@ -77,6 +77,21 @@ The same exact-one-third galaxy capture constants were transferred to six lens g
 
 The exact exponent does not repair the mismatch. The previous fitted-exponent version gave 13.9377%/14.1097%, and the earlier intercepted-source model gave 13.1117%. Better outer motions relative to the older model do not amount to simultaneous lensing and motion success. Population and morphology proxies remain limitations, not license for per-lens retuning. [Executed audit](../../research_work/results/isotropic-galaxy-transfer/cross-test-audit-report.md).
 
+## Exact-one-third redistribution follow-up
+
+Four conservative redistribution variants have now been tested, retaining the one-third law and all three capture constants. They modify only the location of the existing deposits through the known identity rho_new(r)=(1-f)rho_0(r)+f*rho_0(r/s)/s^3. The proposed physical interpretation is companion migration; the mathematical operation conserves the deposit inventory but does not derive transport, support or gravitational work.
+
+Shared dilation and retention-conditioned dilation provide negligible improvement. Partial redistribution first preferred its compact-radius boundary; a separately declared wider-range follow-up converged across six starts to an interior solution, f=0.00369849 and s=0.10217474. Thus approximately 0.37% of the inventory is concentrated inward. All redistribution parameters were fitted on training galaxies only, then frozen for comparison galaxies and lenses.
+
+| Quantity | Original exact-third | Compact redistribution |
+|---|---:|---:|
+| Validation speed RMS | 32.495 km/s | 31.666 km/s |
+| Test speed RMS | 23.591 km/s | 22.591 km/s |
+| Chabrier lens RMS | 13.9231% | 13.9149% |
+| Salpeter lens RMS | 14.0937% | 14.0827% |
+
+This is a modest rotation improvement with two additional shared parameters. The tiny lens change does not resolve the discrepancy or establish significant improvement. MOND remains better on the matched rotation benchmark. The initial partial variant worsens lensing, and every tested variant is retained in the [redistribution report](../../research_work/results/isotropic-galaxy-transfer/redistribution-report.md). This post-boundary exploration does not constitute a new blind test, and the original model remains separately archived. No new cluster normalization-transfer result follows from these tests.
+
 ## Other domains must remain in the assessment
 
 | Domain | Present assessment | Why it matters |
