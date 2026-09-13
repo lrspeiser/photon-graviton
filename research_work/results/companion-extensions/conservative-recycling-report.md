@@ -2,6 +2,8 @@
 
 13 September 2026. Exact limiting solution and comparison on the exposed galaxy sample.
 
+**Normalization correction (13 September 2026).** In the density, capacity and rate equations in this report, C denotes the pre-retention amplitude A=2 C0=9.457178483e7 Msun/kpc^3, where C0=4.728589242e7 is the stored fit parameter. C/original C multipliers are unchanged because the factor of two cancels. See [normalization audit](capacity-normalization-report.md).
+
 ## Finding
 
 If captured energy is released isotropically into the same interacting companion channel without energy loss, a stationary isotropic boundary bath admits the exact interior solution i=J=1. Re-emission replaces captured intensity. With the proposed illumination-independent capacity, the deposited density becomes Cg eta(X), losing the reference's radial attenuation factor.

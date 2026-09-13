@@ -2,6 +2,8 @@
 
 13 September 2026. Audit of the existing exact-third density profile and its possible storage interpretation.
 
+**Normalization correction (13 September 2026).** In the density, capacity and rate equations in this report, C denotes the pre-retention amplitude A=2 C0=9.457178483e7 Msun/kpc^3, where C0=4.728589242e7 is the stored fit parameter. C/original C multipliers are unchanged because the factor of two cancels. See [normalization audit](capacity-normalization-report.md).
+
 ## Finding
 
 If full storage capacity is identified with the existing fitted deposition profile at retention eta=1, its integrated capacity is proportional to its absorption cross section. Consequently, the incoming energy per capacity in a common isotropic bath is independent of galaxy size. Enlarging the capture area alone cannot repair the uniform-background problem under this capacity interpretation.
@@ -49,15 +51,15 @@ Identifying this rate divided by a shared lambda with a dimensionless B is a fur
 
 ## Numerical audit using current reference constants
 
-Use C=4.72858924e7 Msun/kpc^3, k_0=0.2039029004 kpc^-1 and a=2.770766589 R_d from the exact-third reference. This deliberately updates the constants relative to the older pre-third `energy.py` audit without altering that historical calculation.
+Use C=2 C0=9.457178483e7 Msun/kpc^3, k_0=0.2039029004 kpc^-1 and a=2.770766589 R_d from the exact-third reference. This deliberately updates the constants relative to the older pre-third `energy.py` audit without altering that historical calculation.
 
 | Quantity across 149 inputs | Minimum | Maximum |
 |---|---:|---:|
 | Capture scale a (kpc) | 0.49874 | 51.97958 |
 | Central chord optical depth | 0.15974 | 16.64854 |
 | Absorption cross section (kpc^2) | 0.24482 | 139773.47 |
-| Inferred full capacity (Msun equivalent) | 5.6774e7 | 3.2414e13 |
-| Area/capacity (kpc^2/Msun) | 4.31213e-9 | 4.31213e-9 |
+| Inferred full capacity (Msun equivalent) | 1.1355e8 | 6.4828e13 |
+| Area/capacity (kpc^2/Msun) | 2.15606e-9 | 2.15606e-9 |
 
 These capacities are the eta=1 model integrals over the entire infinite profile, not measured galaxy masses or actual occupied deposits. The common area/capacity is exact algebraically; numerical values agree within floating-point precision. Both capture area and capacity can vary enormously while their ratio stays fixed.
 

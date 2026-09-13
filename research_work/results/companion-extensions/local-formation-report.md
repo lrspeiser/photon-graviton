@@ -2,6 +2,8 @@
 
 13 September 2026. Constant-field diagnostic with empty initial storage; no physical age imposed.
 
+**Normalization correction (13 September 2026).** In the density, capacity and rate equations in this report, C denotes the pre-retention amplitude A=2 C0=9.457178483e7 Msun/kpc^3, where C0=4.728589242e7 is the stored fit parameter. C/original C multipliers are unchanged because the factor of two cancels. See [normalization audit](capacity-normalization-report.md).
+
 ## Finding
 
 Finite buildup reduces local filling, but the tested shared durations do not outperform the identically amplitude-adjusted reference across the existing galaxy partitions. Training selection among six finite durations and equilibrium chooses u=10. Its validation/test velocity RMSE is 29.41/25.93 km/s versus 30.82/21.41 for the matched reference. The validation advantage is accompanied by a worse test result and a worse training score. This is not an adopted replacement or a new blind prediction.

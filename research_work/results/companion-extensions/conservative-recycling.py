@@ -10,6 +10,8 @@ BASE=P.parents[2]/'temporal_candidate_audit/data'
 files=[OLD/'third-radiation-retention-results.json',OLD/'third-radiation-retention-predictions.json',P/'occupancy-transport-results.json']
 reference=json.loads(files[0].read_text());saved=json.loads(files[1].read_text());previous=json.loads(files[2].read_text())
 model=reference['models']['attenuated'];prior={r['galaxy']:r for r in previous['rows']}
+source_C=model['source_C_before_retention_Msun_kpc3']
+assert abs(source_C/(2*model['C_Msun_kpc3'])-1)<1e-12
 for name,digest in reference['input_sha256'].items():
     assert hashlib.sha256((BASE/name).read_bytes()).hexdigest()==digest
 def eta(x):
@@ -46,7 +48,7 @@ with zipfile.ZipFile(BASE/'Rotmod_LTG.zip') as archive:
         assert min(v-np.array(p['predicted_kms']))>-.1
         f=float(eta(X))
         out['rows'].append(dict(galaxy=name,split=row['split'],X=X,a_kpc=a,occupancy=f,
-            total_deposit_mass_Msun=float(np.pi**2*model['C_Msun_kpc3']*a**3*f),
+            total_deposit_mass_Msun=float(np.pi**2*source_C*a**3*f),
             R_kpc=arr[:,0].tolist(),predicted_kms=v.tolist(),extra_mass_ratio=ratio.tolist(),
             maximum_speed_change_from_reference_kms=float(max(abs(v-pred))),quadrature_speed_difference_kms=error))
         cache.append(dict(split=row['split'],vb=vb,extra=extra,ratio=ratio,obs=arr[:,1]))

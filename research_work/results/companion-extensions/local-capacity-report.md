@@ -2,6 +2,8 @@
 
 13 September 2026. Exposed-sample diagnostic; the reference is not replaced.
 
+**Normalization correction (13 September 2026).** In the density, capacity and rate equations in this report, C denotes the pre-retention amplitude A=2 C0=9.457178483e7 Msun/kpc^3, where C0=4.728589242e7 is the stored fit parameter. C/original C multipliers are unchanged because the factor of two cancels. See [normalization audit](capacity-normalization-report.md).
+
 ## Outcome
 
 Moving attenuation inside the one-third response produces much more extra gravity in weakly illuminated regions. Keeping all reference constants gives validation/test velocity RMSE 67.14/66.01 km/s, versus 32.49/23.59 for the reference. Reducing the shared amplitude using training galaxies gives a mixed result: validation improves to 28.63 from the matched control's 30.82, but test worsens to 25.19 from 21.41 km/s. This is not a general improvement or fresh observational evidence.

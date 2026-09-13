@@ -2,6 +2,8 @@
 
 13 September 2026. Coupled spherical transfer/occupancy diagnostic; reference retained.
 
+**Normalization correction (13 September 2026).** In the density, capacity and rate equations in this report, C denotes the pre-retention amplitude A=2 C0=9.457178483e7 Msun/kpc^3, where C0=4.728589242e7 is the stored fit parameter. C/original C multipliers are unchanged because the factor of two cancels. See [normalization audit](capacity-normalization-report.md).
+
 ## Result
 
 Allowing filled sites to stop capturing makes the system more transparent and increases illumination and deposited density relative to the fixed-field local-capacity calculation. This feedback does not repair its rotation discrepancy. With the shared amplitude adjusted on training galaxies, validation/test RMSE is 28.64/26.70 km/s, compared with 28.63/25.19 for the fixed-field local rule and 30.82/21.41 for the identically adjusted reference. The validation advantage over the reference remains, but the test disadvantage grows. No new preferred law is selected.

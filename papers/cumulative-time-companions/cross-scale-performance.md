@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Absolute-capacity normalization correction
+
+The [normalization audit](../../research_work/results/companion-extensions/capacity-normalization-report.md) distinguishes the stored fit parameter C0 from the actual pre-retention density amplitude A=2 C0. Recent capture-capacity and conservative-recycling absolute masses were low by a factor of two and are corrected; area/capacity halves. All 149 recycling velocity arrays and all scores remain unchanged, as do the ratio-based branch comparisons. In the density/rate formulas of these recent reports, C denotes A. Main-paper equation (7) and the historical lens implementation already used the correct factor. This correction precedes, rather than completes, new-profile lensing transfer.
+
 ## Finite local formation histories
 
 The [local-formation scan](../../research_work/results/companion-extensions/local-formation-report.md) starts threshold storage empty under the full-opacity field and compares six shared dimensionless durations plus equilibrium. Training selects u=10, with validation/test velocity RMSE 29.41/25.93 km/s against the matched reference at 30.82/21.41. The early linear-illumination limit changes the galaxy-to-galaxy source scaling and is not rescued by one amplitude on this grid. No physical age, preferred duration, or time-dependent transport closure is established.

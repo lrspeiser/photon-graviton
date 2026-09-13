@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Normalization correction.** Recent absolute capacity and conservative-recycling mass outputs used C0 instead of the source amplitude A=2 C0. Those masses are corrected upward by two; area/capacity halves. Rotation predictions and scores are verified unchanged for all 149 galaxies because mass ratios cancel the factor. Main-paper equation (7) and the original lens code were already correct. New-profile lens transfer remains pending. [Audit](../research_work/results/companion-extensions/capacity-normalization-report.md).
+
 **Finite local formation.** Empty local stores under the full-opacity field were tested at six common durations plus equilibrium. Training selection chooses u=10, giving validation/test RMSE 29.41/25.93 km/s versus matched reference 30.82/21.41. The common-history grid is not an improvement across partitions; this is a fixed-field diagnostic, not coupled time-dependent transport or a physical age estimate. [Report](../research_work/results/companion-extensions/local-formation-report.md).
 
 **Conservative-recycling endpoint.** Isotropic same-channel re-emission admits stationary J=1 under an isotropic boundary bath, giving density Cg eta(X). Training-adjusted validation/test RMSE is 28.82/30.88 km/s versus matched reference 30.82/21.41. Stationary recycling avoids a separate escape-channel drain but does not establish formation energy, post-source retention or a physical return mechanism. [Report](../research_work/results/companion-extensions/conservative-recycling-report.md).

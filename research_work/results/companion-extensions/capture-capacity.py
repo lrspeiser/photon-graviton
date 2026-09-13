@@ -22,9 +22,11 @@ for line in (BASE/'SPARC_Lelli2016c.mrt').read_text().splitlines():
     if len(f)==19:
         try: meta[f[0]]=float(f[11])
         except ValueError: pass
-C=model['C_Msun_kpc3']; k=model['k0_per_kpc']; scale=model['scale_to_disk']
+C0=model['C_Msun_kpc3']; C=model['source_C_before_retention_Msun_kpc3']
+assert abs(C/(2*C0)-1)<1e-12
+k=model['k0_per_kpc']; scale=model['scale_to_disk']
 out=dict(scope='Capacity inferred from the existing deposited-density shape at retention one; conditional storage interpretation, no fitted changes',
-    C_Msun_kpc3=C,k0_per_kpc=k,scale_to_disk=scale,
+    fit_C0_Msun_kpc3=C0,source_C_before_retention_Msun_kpc3=C,k0_per_kpc=k,scale_to_disk=scale,
     input_sha256=fit['input_sha256'],
     model_input_sha256={f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in [fitfile,predfile]},rows=[])
 for row in saved:
