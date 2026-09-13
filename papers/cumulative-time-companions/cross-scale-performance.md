@@ -172,6 +172,16 @@ All executed fixed-point and refit-grid cases converge; selected opposite-seed s
 
 Frozen traveling/stored inventory ratios of 0, 0.01 and 0.1 are recorded as prescribed Newtonian energy-density sensitivities, with additive enclosed traveling mass separately retained. Their amount and source history are not measured. Directional radiation stresses, a relativistic field equation, evolving ordinary matter and the complete formation energy ledger remain absent. No all-energy gravitational model or new lens/motion likelihood success is claimed.
 
+## Current Milky Way circular-speed transfer
+
+A [new frozen Milky Way transfer](../../research_work/results/isotropic-galaxy-transfer/milky-way-current-report.md) uses the exact-third capture constants and recent migration/feedback parameters without fitting Milky Way speeds. It compares 38 cached [Eilers et al.](https://arxiv.org/abs/1810.09466) circular-speed summaries across approximately 5-25 kpc, preserving two previously declared ordinary-star/gas baselines. These are Jeans-inferred circular speeds rather than individual star velocities; the paper's separate halo inference is not imported into the prediction.
+
+Exact-third RMS is 6.76/10.41 km/s for ordinary baselines I/II, compared with 52.57/62.34 for ordinary matter alone. The small SPARC rotation-trained partial redistribution gives 6.70/10.02, while the separately halo-trained large partial fraction gives 35.57/28.56. Latest binding feedback gives 15.08/8.32 and released-binding feedback 12.03/5.75. Thus the new feedback improves one ordinary baseline but worsens the other; no variant dominates. At 8.19 kpc under baseline I, observed circular speed is 228.86 km/s versus exact-third 226.60 and ordinary-only 188.43.
+
+The calculation uses Rd=2.6 kpc as a star-count proxy and estimates 3.6-micron luminosity from archived stellar mass with nominal M/L=0.5. These are conditional inputs, not new independent infrared measurements. All predeclared Rd and luminosity sensitivity cases are preserved without selecting a favorable fit. Feedback uses the spherical angular average of the archived stellar potential and a thin-gas monopole; the final baryonic disk force remains the archived one. This is a spherical migration approximation rather than full barred-Galaxy dynamics. Resolution changes fiducial speeds by under 0.001 km/s, but that numerical precision is not an observational uncertainty claim.
+
+The radial result is useful evidence of conditional predictive performance, not verification of photon supply, capture microphysics, individual orbits or the vertical field. These observations were seen previously, so frozen transfer is not blind discovery. No dark-halo source, expansion assumption, Milky Way velocity refit or completed broader goal is introduced.
+
 ## Comparison claims that the evidence permits
 
 A common law that predicts both galaxy and cluster observables with fewer unsupported additions would be a meaningful advance. The present results do not yet show that: MOND is stronger in the matched galaxy test, while the cluster exercise is freely fitted and the lens transfer remains mismatched. A cluster shape fit cannot cancel a galaxy prediction deficit or establish a missing energy budget.
