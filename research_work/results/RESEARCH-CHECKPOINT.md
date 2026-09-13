@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Resolved M87 deposition projection:** [Finite-source surface and enclosed-power profiles](cluster-m87-finite-emitter/projection-report.md) give a finite center and recover the independent ray total within 2.55e-8 relative by volume integration and 6.61e-9 by image integration. Both spherical and projected aperture powers are saved. This remains the spherical M87 contribution only, with no accumulated mass or lensing fit. All six objectives remain open.
+
 **Measured M87 emitter extent tested:** [Published stellar photometry mapped to a spherical finite source](cluster-m87-finite-emitter/report.md) removes the point-emitter singularity, with independently verified finite central volume power. Total M87 deposition decreases only 0.00835%; source extent does not materially raise supply. Bolometric shape and spherical deprojection are assumptions; full projected map, other emitters, histories and gravitational response remain open. All six objectives remain open.
 
 **Spatial projected deposition evaluated:** [1,264 catalog-fed surface-power samples](cluster-projected-deposition/report.md) retain source directions; off-source quadrature differences are at most 4.79e-5 relative. Point internal emitters produce a logarithmically divergent projected cusp: center values continue rising at 32/64/128/256 nodes. No finite peak is claimed. Finite emitter profiles or specified aperture integration, histories and gravitational response are needed before a lensing prediction. All six objectives remain open.
