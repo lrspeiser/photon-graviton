@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Stationary conversion alone fails the published timing comparison:** [Explicit S0 verdict](conversion-first/timing-verdict.md) contrasts its duration ratio 1 with the DES fitted ratio 2.004 at z=1. This is conditional on published reduction/source assumptions, not our raw-data likelihood or a general exclusion of nonexpanding models. Adjusting alpha cannot change stationary event spacing; a revision must derive differential arrival delays and the associated brightness factor, or independently explain source evolution. All six objectives remain open.
+
 **Timing integration refinement completed:** [Eight-case result](timing-fresh-calibration/refinement-report.md) passes inherited exponent-change and curve-change gates in all selected cells; maxima are 0.00453 and 0.09286. Process exit code zero and full hash/array/objective audit verified. This is a selected numerical check, not width-grid convergence, recomputed refined coverage, source-population validation or a physical redshift mechanism. All six objectives remain open.
 
 **First timing refinement passes, batch incomplete:** [One-case audited result](timing-fresh-calibration/refinement-progress.md) changes the exponent by 0.00197 and the likelihood-curve metric by 0.00412, within inherited limits. Saved-objective recomputation is exact. Seven cases remain at this historical checkpoint; the process is separately verified live. This does not establish full convergence, observational timing or a physical cause. All six objectives remain open.

@@ -1,0 +1,70 @@
+{
+  "candidate": "S0: static Euclidean paths, stationary per-photon energy conversion, unchanged c and local clocks, photon count conserved, no source duration evolution.",
+  "provenance": "Known exponential-loss solution and arrival-time bookkeeping; companion interpretation hypothetical. Published timing exponent is an external inferred summary, not our raw-data fit.",
+  "published_source": "https://arxiv.org/html/2406.05050v2",
+  "published_b": 1.003,
+  "published_statistical_uncertainty": 0.005,
+  "published_systematic_estimate": 0.01,
+  "prediction_b": 0.0,
+  "exponent_difference": 1.003,
+  "verdict": "Incompatible with the published duration relation conditional on its source-comparison and reduction assumptions. No calibrated significance from these summary numbers. Not an exclusion of all nonexpanding models.",
+  "formulas": [
+    "1+z=exp(integral alpha ds)",
+    "t_arrival=t_emission+T(D), so dt_arrival/dt_emission=1 for stationary T",
+    "F=L/[4*pi*D^2*(1+z)*S] for photon number conservation and achromatic energy shift",
+    "A revised delay law must give dT/dt_emission=S-1; setting S=(1+z)^b by hand is a fit prescription, not a causal derivation"
+  ],
+  "scope": "Retrospective benchmark. Rows sample a published fitted relation; they are not independent supernova measurements or held-out tests.",
+  "rows": [
+    {
+      "z": 0.1,
+      "stationary_conversion_duration_ratio": 1.0,
+      "published_fitted_duration_ratio": 1.1003145685635907,
+      "fraction_of_fitted_duration_missing": 0.09116899060470196,
+      "stationary_flux_over_same_distance_unshifted_flux": 0.9090909090909091,
+      "flux_if_measured_timing_also_supplied": 0.82621000854118,
+      "required_arrival_delay_derivative": 0.10031456856359067,
+      "required_intrinsic_width_ratio_if_all_stretch_assigned_to_source": 1.1003145685635907
+    },
+    {
+      "z": 0.2,
+      "stationary_conversion_duration_ratio": 1.0,
+      "published_fitted_duration_ratio": 1.2006565371394002,
+      "fraction_of_fitted_duration_missing": 0.16712234592706288,
+      "stationary_flux_over_same_distance_unshifted_flux": 0.8333333333333334,
+      "flux_if_measured_timing_also_supplied": 0.6940647117274477,
+      "required_arrival_delay_derivative": 0.20065653713940024,
+      "required_intrinsic_width_ratio_if_all_stretch_assigned_to_source": 1.2006565371394002
+    },
+    {
+      "z": 0.5,
+      "stationary_conversion_duration_ratio": 1.0,
+      "published_fitted_duration_ratio": 1.5018257031497624,
+      "fraction_of_fitted_duration_missing": 0.334143770543605,
+      "stationary_flux_over_same_distance_unshifted_flux": 0.6666666666666666,
+      "flux_if_measured_timing_also_supplied": 0.44390415297093,
+      "required_arrival_delay_derivative": 0.5018257031497624,
+      "required_intrinsic_width_ratio_if_all_stretch_assigned_to_source": 1.5018257031497624
+    },
+    {
+      "z": 1.0,
+      "stationary_conversion_duration_ratio": 1.0,
+      "published_fitted_duration_ratio": 2.0041632101592652,
+      "fraction_of_fitted_duration_missing": 0.5010386405004745,
+      "stationary_flux_over_same_distance_unshifted_flux": 0.5,
+      "flux_if_measured_timing_also_supplied": 0.2494806797497627,
+      "required_arrival_delay_derivative": 1.0041632101592652,
+      "required_intrinsic_width_ratio_if_all_stretch_assigned_to_source": 2.0041632101592652
+    },
+    {
+      "z": 1.2,
+      "stationary_conversion_duration_ratio": 1.0,
+      "published_fitted_duration_ratio": 2.2052099779174132,
+      "fraction_of_fitted_duration_missing": 0.5465284439967962,
+      "stationary_flux_over_same_distance_unshifted_flux": 0.45454545454545453,
+      "flux_if_measured_timing_also_supplied": 0.2061234345469108,
+      "required_arrival_delay_derivative": 1.2052099779174132,
+      "required_intrinsic_width_ratio_if_all_stretch_assigned_to_source": 2.2052099779174132
+    }
+  ]
+}
