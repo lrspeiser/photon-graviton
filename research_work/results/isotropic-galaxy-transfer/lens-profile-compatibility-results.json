@@ -1,0 +1,2395 @@
+{
+  "scope": "Target-fitted profile compatibility; no predictive success claim",
+  "scales": [
+    0.1,
+    0.25,
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    10.0
+  ],
+  "rows": [
+    {
+      "Name": "J0037-0942",
+      "population": "Chabrier",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 10.178167710516725,
+      "stellar_mass_Msun": 815862113899.3777,
+      "beta": -0.4070738268700645,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        289.9747478238754,
+        289.0503948564328,
+        286.3853880734904,
+        277.1596600248289,
+        257.78401450873696,
+        238.5857403506078
+      ],
+      "observed_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "max_marginal_sigma": 2.0378485956742867,
+      "lens_equation_fractional_residual": 0.2559764102064199,
+      "catalog_angle_arcsec": 1.53,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2849197363.4274344,
+          "new_mass": 2849197363.4274344
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 27372866620.34162,
+          "new_mass": 27372866620.34162
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 212248864455.92316,
+          "new_mass": 212248864455.92316
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 965094140395.5492,
+          "new_mass": 965094140395.5492
+        }
+      ],
+      "eta": 0.7095132805017501,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J0037-0942",
+      "population": "Chabrier",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 219.10770623738475,
+      "stellar_mass_Msun": 633263014834.0421,
+      "beta": 0.33284352004908263,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        285.27137280686406,
+        281.3745175549487,
+        273.1729919016931,
+        254.78795129269534,
+        229.26069244037967,
+        212.41625514915648
+      ],
+      "observed_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "max_marginal_sigma": 13.291601208640515,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.53,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2849197363.4274344,
+          "new_mass": 2849197363.4274344
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 27372866620.34162,
+          "new_mass": 27372866620.34162
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 212248864455.92316,
+          "new_mass": 212248864455.92316
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 965094140395.5492,
+          "new_mass": 965094140395.5492
+        }
+      ],
+      "eta": 0.7095132805017501,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J0037-0942",
+      "population": "Chabrier",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 177.04290611577116,
+      "stellar_mass_Msun": 712547975064.128,
+      "beta": -0.07858328229745114,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "predicted_vrms": [
+        280.5111196280842,
+        278.3841250463035,
+        273.3859035608801,
+        259.656695502353,
+        234.50452767693102,
+        208.8926839923107
+      ],
+      "observed_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "max_marginal_sigma": 10.918852518573363,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.53,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2849197363.4274344,
+          "new_mass": 2522222.68167304
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 27372866620.34162,
+          "new_mass": 20267114.628638063
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 212248864455.92316,
+          "new_mass": 164943219.7184317
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 965094140395.5492,
+          "new_mass": 2849197363.4274344
+        }
+      ],
+      "eta": 0.7095132805017501,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J0037-0942",
+      "population": "Salpeter",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 9.64720828831831,
+      "stellar_mass_Msun": 813724302349.5898,
+      "beta": -0.3924846888149514,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        290.04741198455,
+        289.09086983223136,
+        286.36926303322826,
+        277.07270844382214,
+        257.7547359434842,
+        238.89983845219902
+      ],
+      "observed_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "max_marginal_sigma": 2.01301623469452,
+      "lens_equation_fractional_residual": 0.25897732883681224,
+      "catalog_angle_arcsec": 1.53,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 3001422822.167256,
+          "new_mass": 3001422822.167256
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 28835330130.869698,
+          "new_mass": 28835330130.869698
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 223588788173.92847,
+          "new_mass": 223588788173.92847
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 1016656696269.9159,
+          "new_mass": 1016656696269.9159
+        }
+      ],
+      "eta": 0.7474207929797377,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J0037-0942",
+      "population": "Salpeter",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 219.79752111450358,
+      "stellar_mass_Msun": 628984517594.3656,
+      "beta": 0.3516592996866131,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        285.6412300904977,
+        281.6449585593091,
+        273.26720559943897,
+        254.64881160121013,
+        229.18339184128058,
+        212.88796198920656
+      ],
+      "observed_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "max_marginal_sigma": 13.326578450864927,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.53,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 3001422822.167256,
+          "new_mass": 3001422822.167256
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 28835330130.869698,
+          "new_mass": 28835330130.869698
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 223588788173.92847,
+          "new_mass": 223588788173.92847
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 1016656696269.9159,
+          "new_mass": 1016656696269.9159
+        }
+      ],
+      "eta": 0.7474207929797377,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J0037-0942",
+      "population": "Salpeter",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 177.13289886378874,
+      "stellar_mass_Msun": 712505474067.1543,
+      "beta": -0.0784211016067407,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        2.9810720342444452e-12,
+        0.0,
+        5.960670406866474e-11,
+        8.594597744734576e-11,
+        9.916540508582778e-11,
+        1.0560766710741508e-10,
+        1.0
+      ],
+      "predicted_vrms": [
+        280.5088189551706,
+        278.3812229543604,
+        273.38187414566363,
+        259.65075696475475,
+        234.49717736078748,
+        208.8857999492285
+      ],
+      "observed_vrms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "max_marginal_sigma": 10.922178415024039,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.53,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 3001422822.167256,
+          "new_mass": 2656983.750391834
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 28835330130.869698,
+          "new_mass": 21349956.519394513
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 223588788173.92847,
+          "new_mass": 173755797.28144833
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 1016656696269.9159,
+          "new_mass": 3001423053.2800364
+        }
+      ],
+      "eta": 0.7474207929797377,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Chabrier",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 32.81493588205976,
+      "stellar_mass_Msun": 628277365886.7037,
+      "beta": -0.3332321507508152,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        282.15161620376483,
+        281.69780811421174,
+        280.65227118618594,
+        277.2828155259988,
+        267.6534971882093,
+        253.01341007666215,
+        239.1869573023781
+      ],
+      "observed_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "max_marginal_sigma": 2.898956702610525,
+      "lens_equation_fractional_residual": -0.004826573556087288,
+      "catalog_angle_arcsec": 1.49,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 1875654385.9942791,
+          "new_mass": 1875654385.9942791
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 14742636399.676924,
+          "new_mass": 14742636399.676924
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 86185454343.21437,
+          "new_mass": 86185454343.21437
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 313569693763.9186,
+          "new_mass": 313569693763.9186
+        }
+      ],
+      "eta": 0.7694338094958236,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Chabrier",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 32.869417648668694,
+      "stellar_mass_Msun": 631755452055.802,
+      "beta": -0.3602466407461687,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        282.1702569813296,
+        281.7480424229401,
+        280.7650167065955,
+        277.54111711544084,
+        268.16479464916466,
+        253.72518303997006,
+        239.98026801613454
+      ],
+      "observed_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "max_marginal_sigma": 2.7561913694981017,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.49,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 1875654385.9942791,
+          "new_mass": 1875654385.9942791
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 14742636399.676924,
+          "new_mass": 14742636399.676924
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 86185454343.21437,
+          "new_mass": 86185454343.21437
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 313569693763.9186,
+          "new_mass": 313569693763.9186
+        }
+      ],
+      "eta": 0.7694338094958236,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Chabrier",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 30.079430779173634,
+      "stellar_mass_Msun": 570301938427.8135,
+      "beta": -0.013456921806323253,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.30656030928508254,
+        0.6934396907924154,
+        8.27505292776345e-12,
+        8.164064639538826e-12,
+        9.391850979062191e-14
+      ],
+      "predicted_vrms": [
+        282.2710318949917,
+        281.55526738915313,
+        280.01355639102843,
+        275.6310057382508,
+        264.81860597108255,
+        250.22515540237532,
+        237.06756508206232
+      ],
+      "observed_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "max_marginal_sigma": 3.280365564336992,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.49,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 1875654385.9942791,
+          "new_mass": 5820160371.8219385
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 14742636399.676924,
+          "new_mass": 36644168765.80554
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 86185454343.21437,
+          "new_mass": 137751314792.0653
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 313569693763.9186,
+          "new_mass": 358725998470.0513
+        }
+      ],
+      "eta": 0.7694338094958236,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Salpeter",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 32.26513366268708,
+      "stellar_mass_Msun": 626569031422.1802,
+      "beta": -0.32127577181811906,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        282.18354804932335,
+        281.72142619439654,
+        280.6604773506821,
+        277.2623216965765,
+        267.618144340319,
+        253.05122221261246,
+        239.38079992040176
+      ],
+      "observed_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "max_marginal_sigma": 2.8640725072332915,
+      "lens_equation_fractional_residual": -0.002025211766780055,
+      "catalog_angle_arcsec": 1.49,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 1954327585.9956405,
+          "new_mass": 1954327585.9956405
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 15361007454.962944,
+          "new_mass": 15361007454.962944
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 89800451614.2375,
+          "new_mass": 89800451614.2375
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 326722186790.3867,
+          "new_mass": 326722186790.3867
+        }
+      ],
+      "eta": 0.8017072498664413,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Salpeter",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 32.27468589944639,
+      "stellar_mass_Msun": 628028423049.3208,
+      "beta": -0.3324348689969395,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        282.1911338626456,
+        281.7422844752152,
+        280.70759117734707,
+        277.37053264113064,
+        267.83239320699766,
+        253.34919901920543,
+        239.71263506696928
+      ],
+      "observed_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "max_marginal_sigma": 2.804354978632427,
+      "lens_equation_fractional_residual": -2.220446049250313e-16,
+      "catalog_angle_arcsec": 1.49,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 1954327585.9956405,
+          "new_mass": 1954327585.9956405
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 15361007454.962944,
+          "new_mass": 15361007454.962944
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 89800451614.2375,
+          "new_mass": 89800451614.2375
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 326722186790.3867,
+          "new_mass": 326722186790.3867
+        }
+      ],
+      "eta": 0.8017072498664413,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Salpeter",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 29.918630179430522,
+      "stellar_mass_Msun": 571309950553.8954,
+      "beta": -0.015730305169689703,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        3.4361374431465065e-14,
+        9.812914501350082e-15,
+        0.271549612568541,
+        0.7284503875337601,
+        7.395945033999972e-12,
+        7.350968086132311e-12,
+        0.0
+      ],
+      "predicted_vrms": [
+        282.28650717594866,
+        281.5670812580969,
+        280.01761547103825,
+        275.6142927135886,
+        264.7604809667396,
+        250.14977998680146,
+        237.0619384664879
+      ],
+      "observed_vrms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "max_marginal_sigma": 3.281378138140481,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.49,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 1954327585.9956405,
+          "new_mass": 5594906310.458216
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 15361007454.962944,
+          "new_mass": 35575009677.83827
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 89800451614.2375,
+          "new_mass": 137393122316.52437
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 326722186790.3867,
+          "new_mass": 368399163024.96844
+        }
+      ],
+      "eta": 0.8017072498664413,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Chabrier",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 6.5332371006217915,
+      "stellar_mass_Msun": 348769739548.5571,
+      "beta": -0.5067371652620237,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        268.20608073980276,
+        267.723356164747,
+        266.6983231072986,
+        263.7706038698946,
+        256.09369324520776,
+        243.57429522481388,
+        220.6707573887553
+      ],
+      "observed_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "max_marginal_sigma": 1.3505487286288937,
+      "lens_equation_fractional_residual": 0.20777482556260396,
+      "catalog_angle_arcsec": 1.31,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 888409921.5825542,
+          "new_mass": 888409921.5825542
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 6294708497.52536,
+          "new_mass": 6294708497.52536
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 31362737892.18409,
+          "new_mass": 31362737892.18409
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 99361911258.67082,
+          "new_mass": 99361911258.67082
+        }
+      ],
+      "eta": 0.7831111523879758,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Chabrier",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 164.2595543897272,
+      "stellar_mass_Msun": 283679592004.27985,
+      "beta": 0.2345607505375072,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        262.53824355790266,
+        261.5669428674068,
+        259.5677531763171,
+        254.25467224711616,
+        241.8326622674607,
+        224.05954451217818,
+        195.64937578093674
+      ],
+      "observed_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "max_marginal_sigma": 9.820804336942057,
+      "lens_equation_fractional_residual": -1.1102230246251565e-16,
+      "catalog_angle_arcsec": 1.31,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 888409921.5825542,
+          "new_mass": 888409921.5825542
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 6294708497.52536,
+          "new_mass": 6294708497.52536
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 31362737892.18409,
+          "new_mass": 31362737892.18409
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 99361911258.67082,
+          "new_mass": 99361911258.67082
+        }
+      ],
+      "eta": 0.7831111523879758,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Chabrier",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 131.2727947053309,
+      "stellar_mass_Msun": 312949575033.3467,
+      "beta": -0.09785162940973673,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        1.150686639714511e-12,
+        0.0,
+        0.0,
+        0.0,
+        1.2563449201121961e-12,
+        1.1908538152202716e-12,
+        1.0
+      ],
+      "predicted_vrms": [
+        262.135908743128,
+        261.3587509943884,
+        259.7378314419117,
+        255.28859567870725,
+        244.26843359391236,
+        227.20293064139304,
+        196.864447909078
+      ],
+      "observed_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "max_marginal_sigma": 9.31781131838793,
+      "lens_equation_fractional_residual": -1.1102230246251565e-16,
+      "catalog_angle_arcsec": 1.31,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 888409921.5825542,
+          "new_mass": 919558.362179446
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 6294708497.52536,
+          "new_mass": 7349355.104471365
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 31362737892.18409,
+          "new_mass": 58564590.062521026
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 99361911258.67082,
+          "new_mass": 888409921.8590364
+        }
+      ],
+      "eta": 0.7831111523879758,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Salpeter",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 6.665273033432751,
+      "stellar_mass_Msun": 347859693645.0772,
+      "beta": -0.4895432682539077,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        268.23902849779165,
+        267.75101587181786,
+        266.71577290936403,
+        263.7653929814041,
+        256.05547914209757,
+        243.53159424155913,
+        220.72312942234393
+      ],
+      "observed_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "max_marginal_sigma": 1.3706947388084023,
+      "lens_equation_fractional_residual": 0.20858779907386626,
+      "catalog_angle_arcsec": 1.31,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 923376226.3859518,
+          "new_mass": 923376226.3859518
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 6542457527.141025,
+          "new_mass": 6542457527.141025
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 32597121959.680397,
+          "new_mass": 32597121959.680397
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 103272627236.1892,
+          "new_mass": 103272627236.1892
+        }
+      ],
+      "eta": 0.8139330765742344,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Salpeter",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 165.46697540809186,
+      "stellar_mass_Msun": 282514863823.222,
+      "beta": 0.24535756245962836,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        262.5541252218389,
+        261.57573972377855,
+        259.5627992269837,
+        254.21867799927142,
+        241.74791603875954,
+        223.95406157556516,
+        195.6129035712472
+      ],
+      "observed_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "max_marginal_sigma": 9.835902425705848,
+      "lens_equation_fractional_residual": -1.1102230246251565e-16,
+      "catalog_angle_arcsec": 1.31,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 923376226.3859518,
+          "new_mass": 923376226.3859518
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 6542457527.141025,
+          "new_mass": 6542457527.141025
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 32597121959.680397,
+          "new_mass": 32597121959.680397
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 103272627236.1892,
+          "new_mass": 103272627236.1892
+        }
+      ],
+      "eta": 0.8139330765742344,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Salpeter",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 131.3239201252351,
+      "stellar_mass_Msun": 312936863645.02075,
+      "beta": -0.09770220631005769,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        1.8577483168784682e-13,
+        8.062673122910981e-14,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "predicted_vrms": [
+        262.1348219174256,
+        261.35756542421234,
+        259.7364493565947,
+        255.28673543117606,
+        244.2656411382841,
+        227.19917692629906,
+        196.86022308203331
+      ],
+      "observed_vrms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "max_marginal_sigma": 9.319560233912249,
+      "lens_equation_fractional_residual": -1.1102230246251565e-16,
+      "catalog_angle_arcsec": 1.31,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 923376226.3859518,
+          "new_mass": 955750.504255082
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 6542457527.141025,
+          "new_mass": 7638613.081518305
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 32597121959.680397,
+          "new_mass": 60869592.63279496
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 103272627236.1892,
+          "new_mass": 923376226.4293771
+        }
+      ],
+      "eta": 0.8139330765742344,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Chabrier",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 19.640736336320487,
+      "stellar_mass_Msun": 848540948658.5665,
+      "beta": -0.047519052648629115,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        295.38491615659774,
+        294.5469836289276,
+        292.2630991280055,
+        284.6670796618718,
+        268.5990701690573,
+        253.6502258182932,
+        243.7371918320889
+      ],
+      "observed_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "max_marginal_sigma": 3.344163938421349,
+      "lens_equation_fractional_residual": 0.2582588972943014,
+      "catalog_angle_arcsec": 1.35,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2615411235.642963,
+          "new_mass": 2615411235.642963
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 23055936664.762287,
+          "new_mass": 23055936664.762287
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 158962604392.49448,
+          "new_mass": 158962604392.49448
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 660551112140.2574,
+          "new_mass": 660551112140.2574
+        }
+      ],
+      "eta": 0.7423955192157504,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Chabrier",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 301.2416232971373,
+      "stellar_mass_Msun": 659354337634.5647,
+      "beta": 0.3593055346644792,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        285.543323100673,
+        282.57032604306823,
+        276.34627283930797,
+        262.0397677487315,
+        240.35347388305158,
+        224.48667468093538,
+        214.9498145983982
+      ],
+      "observed_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "max_marginal_sigma": 12.863756764800945,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.35,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2615411235.642963,
+          "new_mass": 2615411235.642963
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 23055936664.762287,
+          "new_mass": 23055936664.762287
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 158962604392.49448,
+          "new_mass": 158962604392.49448
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 660551112140.2574,
+          "new_mass": 660551112140.2574
+        }
+      ],
+      "eta": 0.7423955192157504,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Chabrier",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 251.7336188411071,
+      "stellar_mass_Msun": 585781910429.77,
+      "beta": 0.45,
+      "beta_boundary": true,
+      "mass_boundary": false,
+      "weights": [
+        2.0960126836466348e-08,
+        2.1039587165018237e-08,
+        0.5098758648432368,
+        2.8687141580558982e-08,
+        6.571264540777509e-09,
+        0.0,
+        0.49012405884480664
+      ],
+      "predicted_vrms": [
+        283.2909962789442,
+        280.4064306546893,
+        274.53144029353433,
+        261.76603932896654,
+        243.6952257334717,
+        230.41510682465244,
+        221.12350106023774
+      ],
+      "observed_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "max_marginal_sigma": 13.017901755467225,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.35,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2615411235.642963,
+          "new_mass": 11756871274.188854
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 23055936664.762287,
+          "new_mass": 81060761768.44304
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 158962604392.49448,
+          "new_mass": 267752366926.11206
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 660551112140.2574,
+          "new_mass": 514040217703.6231
+        }
+      ],
+      "eta": 0.7423955192157504,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Salpeter",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 18.814069906653458,
+      "stellar_mass_Msun": 845763318646.9949,
+      "beta": -0.03865440861306053,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        295.4328773567736,
+        294.5689632249894,
+        292.24128553277933,
+        284.59604459423946,
+        268.58253908058276,
+        253.8202782206393,
+        244.11050504685605
+      ],
+      "observed_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "max_marginal_sigma": 3.2386190918629083,
+      "lens_equation_fractional_residual": 0.2589934488546175,
+      "catalog_angle_arcsec": 1.35,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2733893837.8252225,
+          "new_mass": 2733893837.8252225
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 24100410028.859787,
+          "new_mass": 24100410028.859787
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 166163882249.459,
+          "new_mass": 166163882249.459
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 690475207278.4061,
+          "new_mass": 690475207278.4061
+        }
+      ],
+      "eta": 0.7760273059750924,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Salpeter",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 299.8555077060838,
+      "stellar_mass_Msun": 656038614562.9882,
+      "beta": 0.3680785973849328,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        285.69847223499806,
+        282.68373164952766,
+        276.3890849963661,
+        262.00088430948057,
+        240.37710567060518,
+        224.7310342938471,
+        215.41039506444488
+      ],
+      "observed_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "max_marginal_sigma": 12.885653239363409,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.35,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2733893837.8252225,
+          "new_mass": 2733893837.8252225
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 24100410028.859787,
+          "new_mass": 24100410028.859787
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 166163882249.459,
+          "new_mass": 166163882249.459
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 690475207278.4061,
+          "new_mass": 690475207278.4061
+        }
+      ],
+      "eta": 0.7760273059750924,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Salpeter",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 251.82629512638397,
+      "stellar_mass_Msun": 585776775025.8612,
+      "beta": 0.44999999999710094,
+      "beta_boundary": true,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        4.0852994858777066e-11,
+        0.48768535769142607,
+        0.0,
+        6.3801066559395284e-12,
+        1.3773320063132174e-12,
+        0.5123146423141679
+      ],
+      "predicted_vrms": [
+        283.2881977401079,
+        280.4034865449914,
+        274.52818766684925,
+        261.7620566002618,
+        243.6901062982999,
+        230.40929211680674,
+        221.11756582544012
+      ],
+      "observed_vrms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "max_marginal_sigma": 13.020144553929816,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.35,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2733893837.8252225,
+          "new_mass": 11754715528.609419
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 24100410028.859787,
+          "new_mass": 81046109023.96951
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 166163882249.459,
+          "new_mass": 267708260018.14618
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 690475207278.4061,
+          "new_mass": 514060803928.95435
+        }
+      ],
+      "eta": 0.7760273059750924,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Chabrier",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 4.095639097356162,
+      "stellar_mass_Msun": 631130798536.4143,
+      "beta": -0.1914227424352278,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        269.7894656553513,
+        268.36842278047993,
+        265.2073629755692,
+        256.65013169495535,
+        240.44638570848653,
+        226.56218096417726
+      ],
+      "observed_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "max_marginal_sigma": 0.9340356787826303,
+      "lens_equation_fractional_residual": 0.06799241943667522,
+      "catalog_angle_arcsec": 1.29,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2584075011.6818595,
+          "new_mass": 2584075011.6818595
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 22897521845.201736,
+          "new_mass": 22897521845.201736
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 159008332344.7747,
+          "new_mass": 159008332344.7747
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 664454017813.5264,
+          "new_mass": 664454017813.5264
+        }
+      ],
+      "eta": 0.7258470529725874,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Chabrier",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 7.953610620398768,
+      "stellar_mass_Msun": 585923084022.0093,
+      "beta": 0.12430884724526614,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        271.06862365704393,
+        269.00942549554577,
+        264.62958446679517,
+        253.7560625244422,
+        235.27126621770822,
+        220.78213441532324
+      ],
+      "observed_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "max_marginal_sigma": 2.3736908049368286,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.29,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2584075011.6818595,
+          "new_mass": 2584075011.6818595
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 22897521845.201736,
+          "new_mass": 22897521845.201736
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 159008332344.7747,
+          "new_mass": 159008332344.7747
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 664454017813.5264,
+          "new_mass": 664454017813.5264
+        }
+      ],
+      "eta": 0.7258470529725874,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Chabrier",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 3.833336339322906,
+      "stellar_mass_Msun": 458607842173.32776,
+      "beta": 0.45,
+      "beta_boundary": true,
+      "mass_boundary": false,
+      "weights": [
+        0.027404454159179262,
+        1.0936663357039421e-15,
+        0.4497694155516421,
+        6.004573929435551e-16,
+        4.538521366356741e-16,
+        5.289324773453184e-16,
+        0.5228261302891758
+      ],
+      "predicted_vrms": [
+        270.8993660185256,
+        268.85214976701917,
+        264.63753772016486,
+        254.83397666512178,
+        239.20340360521448,
+        224.98461172238123
+      ],
+      "observed_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "max_marginal_sigma": 1.1247107644404737,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.29,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2584075011.6818595,
+          "new_mass": 28508853743.939304
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 22897521845.201736,
+          "new_mass": 99289641079.37901
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 159008332344.7747,
+          "new_mass": 270761806835.45572
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 664454017813.5264,
+          "new_mass": 493879867667.23615
+        }
+      ],
+      "eta": 0.7258470529725874,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Salpeter",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 4.176876739471228,
+      "stellar_mass_Msun": 627145655120.2261,
+      "beta": -0.16231638879283253,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        269.88949093144106,
+        268.4311598709968,
+        265.2041525591558,
+        256.5576990751319,
+        240.42459637644012,
+        226.9213735578884
+      ],
+      "observed_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "max_marginal_sigma": 0.9351099492169805,
+      "lens_equation_fractional_residual": 0.06796967553275057,
+      "catalog_angle_arcsec": 1.29,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2713982375.779799,
+          "new_mass": 2713982375.779799
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 24048632665.83894,
+          "new_mass": 24048632665.83894
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 167002045078.01114,
+          "new_mass": 167002045078.01114
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 697857641790.4724,
+          "new_mass": 697857641790.4724
+        }
+      ],
+      "eta": 0.7623370453155565,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Salpeter",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 7.902906089274942,
+      "stellar_mass_Msun": 581953062878.6287,
+      "beta": 0.1455295502045466,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        271.194109075997,
+        269.10060496592786,
+        264.66180900936445,
+        253.71998376087112,
+        235.34707229433087,
+        221.2494648268274
+      ],
+      "observed_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "max_marginal_sigma": 2.3487780546272483,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.29,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2713982375.779799,
+          "new_mass": 2713982375.779799
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 24048632665.83894,
+          "new_mass": 24048632665.83894
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 167002045078.01114,
+          "new_mass": 167002045078.01114
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 697857641790.4724,
+          "new_mass": 697857641790.4724
+        }
+      ],
+      "eta": 0.7623370453155565,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Salpeter",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 3.836166868716658,
+      "stellar_mass_Msun": 458673910166.6796,
+      "beta": 0.44999999999998713,
+      "beta_boundary": true,
+      "mass_boundary": false,
+      "weights": [
+        0.02604494147030804,
+        2.7974053543838307e-13,
+        0.42829481400241287,
+        7.076689641347939e-14,
+        1.3390364408706206e-20,
+        5.699870900632903e-14,
+        0.5456602445268798
+      ],
+      "predicted_vrms": [
+        270.900613730745,
+        268.85269659496146,
+        264.6367630116315,
+        254.830919498598,
+        239.19956238512486,
+        224.9843700491074
+      ],
+      "observed_vrms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "max_marginal_sigma": 1.124969997625659,
+      "lens_equation_fractional_residual": 2.220446049250313e-16,
+      "catalog_angle_arcsec": 1.29,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2713982375.779799,
+          "new_mass": 28476935230.61878
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 24048632665.83894,
+          "new_mass": 99248800212.01926
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 167002045078.01114,
+          "new_mass": 270738456411.71613
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 697857641790.4724,
+          "new_mass": 493999731562.8042
+        }
+      ],
+      "eta": 0.7623370453155565,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Chabrier",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 9.097670696616927,
+      "stellar_mass_Msun": 675478423459.9937,
+      "beta": 0.13885778468060908,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        292.4741103693636,
+        291.6032714888305,
+        289.77420845436234,
+        284.761576490732,
+        272.8450832602817,
+        256.5257380610727,
+        233.6311647810916
+      ],
+      "observed_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "max_marginal_sigma": 1.8494357509395725,
+      "lens_equation_fractional_residual": -0.0005242785723890142,
+      "catalog_angle_arcsec": 1.78,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2283806225.872745,
+          "new_mass": 2283806225.872745
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 18861540793.186237,
+          "new_mass": 18861540793.186237
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 118555661404.31981,
+          "new_mass": 118555661404.31981
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 457759680656.99396,
+          "new_mass": 457759680656.99396
+        }
+      ],
+      "eta": 0.7700484565408441,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Chabrier",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 9.0986012245267,
+      "stellar_mass_Msun": 675893899362.5796,
+      "beta": 0.13755935486238322,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        292.4921147591119,
+        291.62365027516074,
+        289.79926071157263,
+        284.7975352647462,
+        272.9001848980311,
+        256.59672078226316,
+        233.7088412757849
+      ],
+      "observed_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "max_marginal_sigma": 1.8294024365490202,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.78,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2283806225.872745,
+          "new_mass": 2283806225.872745
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 18861540793.186237,
+          "new_mass": 18861540793.186237
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 118555661404.31981,
+          "new_mass": 118555661404.31981
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 457759680656.99396,
+          "new_mass": 457759680656.99396
+        }
+      ],
+      "eta": 0.7700484565408441,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Chabrier",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 7.903021218941751,
+      "stellar_mass_Msun": 636386591109.7148,
+      "beta": 0.25282605547682285,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        3.662398502851722e-15,
+        8.034980619235434e-16,
+        0.14130274991588004,
+        0.8586972500840405,
+        4.48366497905917e-14,
+        4.558549283231615e-14,
+        1.1479984010185717e-11
+      ],
+      "predicted_vrms": [
+        292.2574624252765,
+        291.2425317630056,
+        289.13843494716866,
+        283.5405488180542,
+        270.84517332002684,
+        254.39590868285865,
+        232.3241986513635
+      ],
+      "observed_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "max_marginal_sigma": 2.1865115095462104,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.78,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2283806225.872745,
+          "new_mass": 4626285707.611313
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 18861540793.186237,
+          "new_mass": 32948594185.986446
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 118555661404.31981,
+          "new_mass": 153795144534.25397
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 457759680656.99396,
+          "new_mass": 489672471213.26843
+        }
+      ],
+      "eta": 0.7700484565408441,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Salpeter",
+      "fit": "original_free",
+      "feasible": true,
+      "stellar_chi2": 8.655665737625005,
+      "stellar_mass_Msun": 672960323187.7225,
+      "beta": 0.14784237064914038,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        292.52945013425256,
+        291.6477486612595,
+        289.79812835422814,
+        284.74321291459205,
+        272.7804510981442,
+        256.4940370940941,
+        233.8544246583678
+      ],
+      "observed_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "max_marginal_sigma": 1.7918554580861086,
+      "lens_equation_fractional_residual": 0.002451352116452421,
+      "catalog_angle_arcsec": 1.78,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2379333062.73904,
+          "new_mass": 2379333062.73904
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 19650479587.548767,
+          "new_mass": 19650479587.548767
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 123514596710.75917,
+          "new_mass": 123514596710.75917
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 476906810497.8268,
+          "new_mass": 476906810497.8268
+        }
+      ],
+      "eta": 0.8022579725907487,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Salpeter",
+      "fit": "original_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 8.675937677041496,
+      "stellar_mass_Msun": 671017696144.0533,
+      "beta": 0.153855437820499,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "predicted_vrms": [
+        292.4458306746578,
+        291.5530029829877,
+        289.6814876166465,
+        284.5755070395181,
+        272.5232509623471,
+        256.16288224922613,
+        233.49247708063
+      ],
+      "observed_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "max_marginal_sigma": 1.8852042844762646,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.78,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2379333062.73904,
+          "new_mass": 2379333062.73904
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 19650479587.548767,
+          "new_mass": 19650479587.548767
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 123514596710.75917,
+          "new_mass": 123514596710.75917
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 476906810497.8268,
+          "new_mass": 476906810497.8268
+        }
+      ],
+      "eta": 0.8022579725907487,
+      "optimizer_success": true
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Salpeter",
+      "fit": "mixture_exact_lens",
+      "feasible": true,
+      "stellar_chi2": 7.843880797972436,
+      "stellar_mass_Msun": 637866154044.1395,
+      "beta": 0.2500488643578582,
+      "beta_boundary": false,
+      "mass_boundary": false,
+      "weights": [
+        0.0,
+        0.0,
+        0.11381013040053851,
+        0.8861898696630557,
+        2.6163273369724693e-12,
+        4.738875844336361e-16,
+        4.87756375687525e-16
+      ],
+      "predicted_vrms": [
+        292.25604046928487,
+        291.24031377053825,
+        289.13415987983575,
+        283.52851862348007,
+        270.8094847257221,
+        254.33276783831454,
+        232.35174301805
+      ],
+      "observed_vrms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "max_marginal_sigma": 2.179407623619096,
+      "lens_equation_fractional_residual": 0.0,
+      "catalog_angle_arcsec": 1.78,
+      "cumulative_mass_changes": [
+        {
+          "radius_Re": 0.5,
+          "baseline_mass": 2379333062.73904,
+          "new_mass": 4344964501.04651
+        },
+        {
+          "radius_Re": 1,
+          "baseline_mass": 19650479587.548767,
+          "new_mass": 31471268302.53403
+        },
+        {
+          "radius_Re": 2,
+          "baseline_mass": 123514596710.75917,
+          "new_mass": 153084903073.362
+        },
+        {
+          "radius_Re": 5,
+          "baseline_mass": 476906810497.8268,
+          "new_mass": 503685608330.6222
+        }
+      ],
+      "eta": 0.8022579725907487,
+      "optimizer_success": true
+    }
+  ],
+  "verification": [
+    {
+      "Name": "J0037-0942",
+      "population": "Chabrier",
+      "baseline_max_velocity_drift_kms": 9.775570845249604e-06
+    },
+    {
+      "Name": "J0037-0942",
+      "population": "Salpeter",
+      "baseline_max_velocity_drift_kms": 1.0257876169816882e-05
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Chabrier",
+      "baseline_max_velocity_drift_kms": 2.095042665928304e-05
+    },
+    {
+      "Name": "J1112+0826",
+      "population": "Salpeter",
+      "baseline_max_velocity_drift_kms": 2.195139379068678e-05
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Chabrier",
+      "baseline_max_velocity_drift_kms": 1.987834482974904e-05
+    },
+    {
+      "Name": "J1204+0358",
+      "population": "Salpeter",
+      "baseline_max_velocity_drift_kms": 2.0713794469884306e-05
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Chabrier",
+      "baseline_max_velocity_drift_kms": 1.5828504444925784e-05
+    },
+    {
+      "Name": "J1402+6321",
+      "population": "Salpeter",
+      "baseline_max_velocity_drift_kms": 1.675949431501067e-05
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Chabrier",
+      "baseline_max_velocity_drift_kms": 8.165388692304987e-06
+    },
+    {
+      "Name": "J1621+3931",
+      "population": "Salpeter",
+      "baseline_max_velocity_drift_kms": 9.244114352213728e-06
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Chabrier",
+      "baseline_max_velocity_drift_kms": 2.5996811160666766e-05
+    },
+    {
+      "Name": "J1630+4520",
+      "population": "Salpeter",
+      "baseline_max_velocity_drift_kms": 2.7212738643811463e-05
+    }
+  ],
+  "capture_input_sha256": "d9c0277a3cedba60fa83b9014d452b27f56ddfabb50c0edfefc53df95424be53",
+  "optical_input_sha256": "92c15834096a4c5286097f06e92baf1077e96a58b2c0548115474b3b640d8d40",
+  "photometric_input_sha256": "59fc810ee472eace3adc85d07ce9f9ec8a405689074a5248e95d743fc2834005"
+}

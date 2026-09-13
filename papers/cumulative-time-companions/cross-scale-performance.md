@@ -94,6 +94,8 @@ This is a modest rotation improvement with two additional shared parameters. The
 
 ## Other domains must remain in the assessment
 
+The subsequent [lens/profile inverse diagnostic](../../research_work/results/isotropic-galaxy-transfer/lens-profile-compatibility-report.md) keeps this exact-one-third inventory but permits target-specific positive mixtures of seven conservative dilations. Forcing the catalog lens angle then leaves severe stellar-motion errors for J0037, J1204 and J1402 in both population cases. J1621 admits a low-residual solution at the orbital bound; J1112 and J1630 have much smaller lens-induced tension. This is an inverse fit, not a prediction. The limited profile basis, fixed geometry and constant orbital anisotropy do not justify ruling out every redistribution. The result motivates testing optical geometry and stellar/orbital modeling before adding an arbitrary light-bending response.
+
 | Domain | Present assessment | Why it matters |
 |---|---|---|
 | Redshift | Fractional-loss law z=exp(integral alpha ds)-1 is calculable; alpha is empirical | The exponential is known mathematics; fitting redshift does not derive its physical cause |
