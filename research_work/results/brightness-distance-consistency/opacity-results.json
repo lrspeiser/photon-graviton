@@ -1,0 +1,59 @@
+{
+  "status": "Retrospective standardized-magnitude revision, not a blind or raw-data test",
+  "alpha_per_mpc": 0.0002488993286382367,
+  "b_fixed": 1,
+  "calibrator_rows": 77,
+  "calibrator_unique_SN": 43,
+  "training_rows": 466,
+  "transfer_test_rows": 494,
+  "epsilon": 0.48118884024562214,
+  "epsilon_formal_sigma": 0.10281493031987665,
+  "opacity_per_mpc": 0.00011976757928534709,
+  "M_at_zero_opacity": -19.263809053689243,
+  "M_at_fitted_opacity": -19.267399808385818,
+  "train_baseline_chi2": 468.02974599920276,
+  "train_revised_chi2": 446.1259834811232,
+  "transfer_baseline_chi2": 424.4815024201787,
+  "transfer_revised_chi2_with_fit_cross_covariance": 403.7279523894279,
+  "transfer_revised_chi2_on_baseline_covariance": 432.55402043951943,
+  "bins": [
+    {
+      "z_min": 0.1,
+      "z_max": 0.3,
+      "count": 466,
+      "baseline_gls_mean_residual": 0.12487184095412134,
+      "revised_gls_mean_residual": 0.03355111255389529,
+      "note": "Correlated descriptive bin means; no independent-bin likelihood"
+    },
+    {
+      "z_min": 0.3,
+      "z_max": 0.6,
+      "count": 365,
+      "baseline_gls_mean_residual": 0.18694684698517333,
+      "revised_gls_mean_residual": 0.023437635502102604,
+      "note": "Correlated descriptive bin means; no independent-bin likelihood"
+    },
+    {
+      "z_min": 0.6,
+      "z_max": 1,
+      "count": 104,
+      "baseline_gls_mean_residual": 0.20482024095090068,
+      "revised_gls_mean_residual": -0.07170493678331584,
+      "note": "Correlated descriptive bin means; no independent-bin likelihood"
+    },
+    {
+      "z_min": 1,
+      "z_max": 3,
+      "count": 25,
+      "baseline_gls_mean_residual": 0.3497409549881376,
+      "revised_gls_mean_residual": -0.09165769897985611,
+      "note": "Correlated descriptive bin means; no independent-bin likelihood"
+    }
+  ],
+  "survival_fraction_at_z1": 0.7163870482229147,
+  "hashes": {
+    "Pantheon+SH0ES.dat": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+    "Pantheon+SH0ES_STAT+SYS.cov": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+    "opacity-protocol.md": "9adb45fb24c3f04d2d98079070b50a31f78b7d7b3a6ba625c5fa8210915e5fed"
+  }
+}
