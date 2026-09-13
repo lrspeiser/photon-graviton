@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Common planetary well law:** [Energy to potential across Earth, Moon and planets](planetary-well-energy-law.md) uses W=G(M+E_retained/c^2)/R and derives solar-fed growth. The same solar history/common geometric capture predicts Earth/Moon added-depth ratio 3.67, versus existing-depth ratio 22.28; it cannot explain their entire gravity on those assumptions. Ordinary-gravity plus a small retained-energy increment remains the stated conditional interpretation.
+
 **Solar-system specialization:** [Photon-fed well formulas](solar-system-photon-feeding.md) calculates solar photon output, conversion at the retained alpha, capture-dependent stored energy and its gravitational effect. Perfect capture within 100 AU bounds solar-generated deposits at about 16,219 kg/year; the solar source loses the emitted energy. No graviton count or capture efficiency is inferred from force strength.
 
 **New theory extension:** [Persistent microwave background and collective spatial modes](persistent-microwave-background.md) adds recording-transition, driven-resonance and spatial-pattern alternatives, with optional boundary-free spherical geometry. Known mode mathematics is distinguished from proposed physics. No radius/age is fixed, no CMB fit is claimed, and energy supply/retention constraints remain. Use the [current checkpoint](../research_work/results/RESEARCH-CHECKPOINT.md) for the latest executed results.
