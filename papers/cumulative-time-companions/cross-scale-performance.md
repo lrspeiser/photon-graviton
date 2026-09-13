@@ -8,6 +8,10 @@ We investigate a phenomenological proposal in which photons transfer energy to t
 
 ## Model definition and provenance
 
+### Redshift transfer versus bound effective mass
+
+The redshift-to-bound-state bridge now separates traveling quantum energy, creation gap and fitted phase mass. Under the illustrative Poisson linewidth case, an optical transfer supplies at most 2.62e-8 eV versus a hypothetical 17.8 eV creation gap. Accumulated storage or soft collective modes remain possible; one redshift step cannot be equated to creation of one fitted-mass particle. The width allowance is a design case, not a measured exclusion. The [scale audit](../../research_work/results/companion-extensions/quantum-bridge-report.md) evaluates seven photon bands, three illustrative widths and single/pair mass-gap assumptions. Pooling counts are optimistic energy requirements, not production rates. A massless traveling field and an effectively massive stored excitation require a derived transition; the phase selector does not identify ordinary gravitons.
+
 ### Constant donor-density saturation
 
 A constant donor-density saturation closure was calibrated to the old mean contraction in baseline I and frozen for II. All six coupled endpoints converge with positive release, but all worsen their uniform-contraction counterparts: all-bin RMS 7.21–7.23/8.19–9.47 km/s versus 6.27–6.28/8.10–9.26. Mean settling alone does not preserve the radial gravity profile. This candidate is recorded, not adopted as the new reference. The [nonuniform packing test](../../research_work/results/companion-extensions/saturation-report.md) uses a shared threshold 0.02218 Msun/pc^3, calibrated to a previous fit rather than measured independently. Ordered shell packing is an endpoint hypothesis, not local evolution, thermal support or a total-density ceiling. Spatial refinement changes speeds by less than 0.084 km/s.
