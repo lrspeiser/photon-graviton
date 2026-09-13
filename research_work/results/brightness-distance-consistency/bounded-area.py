@@ -6,7 +6,8 @@ import pandas as pd
 from scipy.linalg import cho_factor,cho_solve
 from scipy.optimize import minimize_scalar
 HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
-REGULAR='--regular' in sys.argv
+RELAXING='--relaxing' in sys.argv
+REGULAR='--regular' in sys.argv or RELAXING
 basepath=ROOT/'shared_interaction_test/data'
 source=basepath/'Pantheon+SH0ES.dat';covsource=basepath/'Pantheon+SH0ES_STAT+SYS.cov'
 old=json.loads((HERE/'opacity-results.json').read_text())
@@ -27,13 +28,25 @@ baseline=M0+25+5*np.log10(distance*(1+zh));f=1-1/(1+zh);obs=df.m_b_corr.to_numpy
 train=np.flatnonzero(z<.3);test=np.flatnonzero(z>=.3)
 assert len(train)==466 and len(test)==494 and len(cal)==77
 fac=cho_factor(V[np.ix_(train,train)]);testfac=cho_factor(V[np.ix_(test,test)])
-def area(value,fraction):return 1+fraction/(1+value*fraction) if REGULAR else 1+value*fraction
+def area(value,fraction):
+    if RELAXING:return 1+fraction*np.exp(-value*fraction)
+    return 1+fraction/(1+value*fraction) if REGULAR else 1+value*fraction
 def pred(eta):return baseline+2.5*np.log10(area(eta,f))-float(w@(2.5*np.log10(area(eta,fcal))))
 def score(res,factor):return float(res@cho_solve(factor,res))
 def loss(eta):return score((obs-pred(eta))[train],fac)
 upper=100 if REGULAR else 10
 opt=minimize_scalar(loss,bounds=(0,upper),method='bounded',options={'xatol':1e-10})
 eta=min([0.,float(upper),float(opt.x)],key=loss);prediction=pred(eta)
+if RELAXING:
+    # Calibrator response can make this objective non-unimodal at large q.
+    grid=np.linspace(0,upper,401);scores=np.array([loss(v) for v in grid])
+    candidates=[0.,float(upper),float(opt.x)]
+    for i in range(1,len(grid)-1):
+        if scores[i]<=scores[i-1] and scores[i]<=scores[i+1]:
+            local=minimize_scalar(loss,bounds=(grid[i-1],grid[i+1]),method='bounded',options={'xatol':1e-10})
+            assert local.success
+            candidates.append(float(local.x))
+    eta=min(candidates,key=loss);prediction=pred(eta)
 baseline_score=score((obs-baseline)[train],fac)
 assert abs(baseline_score-old['train_baseline_chi2'])<1e-7
 assert abs(score((obs-baseline)[test],testfac)-old['transfer_baseline_chi2'])<1e-7
@@ -46,8 +59,14 @@ if REGULAR:
     for row in bins:row['regular_area_mean_residual']=row.pop('bounded_area_mean_residual')
 out=dict(status='Exposed standardized-data fit; postulated optical response, not a derived metric',boundary=eta in [0,upper],optimizer_success=bool(opt.success),alpha_per_mpc=alpha,b=1,train_baseline_score=baseline_score,train_revised_score=loss(eta),farther_baseline_score=score((obs-baseline)[test],testfac),farther_revised_score=score((obs-prediction)[test],testfac),M_calibrated=M0-float(w@(2.5*np.log10(area(eta,fcal)))),area_ratio_at_z1=area(eta,.5),maximum_area_ratio=area(eta,1.),bins=bins)
 out['q' if REGULAR else 'eta']=eta
+if RELAXING:
+    out['area_ratio_as_z_increases_without_bound']=area(eta,1.)
+    out['maximum_area_ratio']=area(eta,min(1.,1/eta) if eta>0 else 1.)
+    out['area_law']='1+f*exp(-q*f)'
+    out['optimizer_candidates']=[dict(q=v,training_score=loss(v)) for v in candidates]
 if REGULAR:out['observer_optical_focusing_per_Mpc2']=alpha**2*(3*eta+13/4)
 rows=[dict(CID=str(df.iloc[i].CID),zHD=float(z[j]),zHEL=float(zh[j]),role='training' if z[j]<.3 else 'frozen_transfer_exposed',observed_magnitude=float(obs[j]),baseline_prediction=float(baseline[j]),revised_prediction=float(prediction[j])) for j,i in enumerate(ev)]
 for fn,obj in [('bounded-area-results.json',out),('bounded-area-predictions.json',rows)]:
-    (HERE/(fn.replace('bounded-area','regular-area') if REGULAR else fn)).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+    prefix='relaxing-area' if RELAXING else 'regular-area' if REGULAR else 'bounded-area'
+    (HERE/fn.replace('bounded-area',prefix)).write_text(json.dumps(obj,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(out,indent=2))

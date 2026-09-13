@@ -1,0 +1,66 @@
+{
+  "status": "Exposed standardized-data fit; postulated optical response, not a derived metric",
+  "boundary": false,
+  "optimizer_success": true,
+  "alpha_per_mpc": 0.0002488993286382367,
+  "b": 1,
+  "train_baseline_score": 468.02974599920276,
+  "train_revised_score": 444.51794975867836,
+  "farther_baseline_score": 424.4815024201787,
+  "farther_revised_score": 388.1001904249443,
+  "M_calibrated": -19.271110801766966,
+  "area_ratio_at_z1": 1.2037715572257373,
+  "maximum_area_ratio": 1.204921979269555,
+  "bins": [
+    {
+      "z_min": 0.1,
+      "z_max": 0.3,
+      "n": 466,
+      "baseline_mean_residual": 0.12487184095412134,
+      "regular_area_mean_residual": 0.007893162538262442
+    },
+    {
+      "z_min": 0.3,
+      "z_max": 0.6,
+      "n": 365,
+      "baseline_mean_residual": 0.18694684698517333,
+      "regular_area_mean_residual": 0.027412386471527456
+    },
+    {
+      "z_min": 0.6,
+      "z_max": 1,
+      "n": 104,
+      "baseline_mean_residual": 0.20482024095090068,
+      "regular_area_mean_residual": 0.017329236149104404
+    },
+    {
+      "z_min": 1,
+      "z_max": 3,
+      "n": 25,
+      "baseline_mean_residual": 0.3497409549881376,
+      "regular_area_mean_residual": 0.15537473994127882
+    }
+  ],
+  "q": 1.7952170991259697,
+  "area_ratio_as_z_increases_without_bound": 1.1660913901368077,
+  "area_law": "1+f*exp(-q*f)",
+  "optimizer_candidates": [
+    {
+      "q": 0.0,
+      "training_score": 452.39177170160673
+    },
+    {
+      "q": 100.0,
+      "training_score": 468.937468343007
+    },
+    {
+      "q": 99.99999811824792,
+      "training_score": 468.9374683553839
+    },
+    {
+      "q": 1.7952170991259697,
+      "training_score": 444.51794975867836
+    }
+  ],
+  "observer_optical_focusing_per_Mpc2": 5.349861609463039e-07
+}

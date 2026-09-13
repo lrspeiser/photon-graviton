@@ -7,7 +7,9 @@ from scipy.interpolate import PchipInterpolator
 from scipy.optimize import minimize,brentq
 from scipy.linalg import cho_factor,cho_solve
 HERE=Path(__file__).resolve().parent
-REGULAR='--regular-optics' in sys.argv
+RELAXING='--relaxing-optics' in sys.argv
+REGULAR='--regular-optics' in sys.argv or RELAXING
+OPTICAL_FILE='relaxing-area-results.json' if RELAXING else 'regular-area-results.json'
 sys.path.insert(0,str(HERE.parent/'slacs-component-refit'))
 from model import ComponentModel,G,C,ARCSEC
 def read(folder,file='results.json'):return json.loads((HERE.parent/folder/file).read_text())
@@ -18,7 +20,7 @@ pilot={r['Name']:r for r in base['rows'] if r['model']=='empirical_extra' and r[
 cfg=read('slacs-outer-bin-check','protocol.json')
 allowed={r['Name'] for r in read('slacs-outer-bin-check')['rows'] if r['model']=='empirical_extra'}
 capture=json.loads((HERE/'results.json').read_text())['models']
-optical=read('brightness-distance-consistency','regular-area-results.json') if REGULAR else None
+optical=read('brightness-distance-consistency',OPTICAL_FILE) if REGULAR else None
 observations={r['Name']:r for r in read('lensing-data-readiness','lens-observations-and-image-models.json')} if REGULAR else None
 mu,w=np.polynomial.legendre.leggauss(96)
 rows=[]
@@ -30,7 +32,9 @@ for item in data['systems']:
     if REGULAR:
         alpha=optical['alpha_per_mpc'];q=optical['q'];zl=observations[name]['zFG'];zs=observations[name]['zBG']
         fl=zl/(1+zl);fs=zs/(1+zs)
-        def H(f):return -(1-f)*np.log1p(-f)*np.sqrt(1+f/(1+q*f))
+        def H(f):
+            area=1+f*np.exp(-q*f) if RELAXING else 1+f/(1+q*f)
+            return -(1-f)*np.log1p(-f)*np.sqrt(area)
         angular_l=H(fl)/alpha
         newratio=(1+zl)*H(fl)*quad(lambda f:1/H(f)**2,fl,fs,epsabs=1e-9,epsrel=1e-10)[0]
         geometry_info=dict(z_lens=zl,z_source=zs,path_Dl_Mpc=np.log1p(zl)/alpha,angular_Dl_Mpc=angular_l,angular_Ds_Mpc=H(fs)/alpha,Dls_over_Ds=newratio,previous_Dls_over_Ds=ratio)
@@ -85,6 +89,7 @@ for branch in capture:
     rr=[d for d in rows if d['model']==branch]
     summary.append(dict(model=branch,n=len(rr),inner_chi2_sum=sum(d['inner_chi2'] for d in rr),outer_conditional_residual_square_sum=sum(d['outer_conditional_standardized_residual']**2 for d in rr),lens_fractional_rms=float(np.sqrt(np.mean([d['lens_fractional_residual']**2 for d in rr]))),orbit_boundary_count=sum(d['orbit_boundary'] for d in rr)))
 out=dict(summary=summary,rows=rows,capture_input_sha256=hashlib.sha256((HERE/'results.json').read_bytes()).hexdigest())
-if REGULAR:out['optical_input_sha256']=hashlib.sha256((HERE.parent/'brightness-distance-consistency/regular-area-results.json').read_bytes()).hexdigest()
-(HERE/('regular-optics-results.json' if REGULAR else 'lensing-results.json')).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
+if REGULAR:out['optical_input_sha256']=hashlib.sha256((HERE.parent/'brightness-distance-consistency'/OPTICAL_FILE).read_bytes()).hexdigest()
+output='relaxing-optics-results.json' if RELAXING else 'regular-optics-results.json' if REGULAR else 'lensing-results.json'
+(HERE/output).write_text(json.dumps(out,indent=2,allow_nan=False)+'\n',encoding='utf-8')
 print(json.dumps(summary,indent=2))
