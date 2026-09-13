@@ -15,4 +15,3 @@ def deproject_slope(profile,x,order):
         total+=density;slope_weight+=numerator
     assert np.all(total>0)
     return total,slope_weight/total
-
