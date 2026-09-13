@@ -2,11 +2,11 @@
 
 ## A phenomenological framework for redshift, additional gravity and reservoir emission in a nonexpanding universe
 
-Working paper v1.0 | 13 September 2026 | Photon-Graviton research project
+Working paper v1.1 | 13 September 2026 | Evidence through revision 6e6b022
 
 ### Abstract
 
-We formulate a hypothetical nonexpanding-universe model in which photons transfer energy into traveling companion excitations, a fraction of which is captured into gravitationally active reservoirs. An empirical one-third retention prescription supplies an effective deposited density, while optional settling, field-response and emission mechanisms are investigated separately. Existing calculations improve galaxy rotation predictions over ordinary matter alone, but the tested MOND relation performs better in aggregate. Cluster shear profiles can be fitted with free normalizations; transfer of the galaxy normalization and energy supply is not established. Six lens galaxies retain approximately 14% lens-angle discrepancies. A common phase-selector parameter set improves inner Milky Way circular-speed fits under two ordinary-matter baselines while leaving outer predictions unchanged. Conditional energy accounting permits the selected settling if released binding energy escapes. An optional nuclear-emission branch reinterprets black-hole-environment radiation as companion-powered. None of these findings derives the microscopic photon interaction, explains spectral redshift and event-duration stretching together, or establishes superiority to dark matter. We present explicit postulates, equation provenance, reproducible results and discriminating outcomes required for a stronger theory.
+We assess a hypothetical nonexpanding-universe framework in which photons transfer energy into traveling companions and some energy enters gravitationally active reservoirs. The empirical exact-third retention law remains the reference: galaxy rotation predictions improve over ordinary matter alone but remain worse in aggregate than the tested MOND relation; lensing and absolute supply remain unresolved. Updated calculations enforce reciprocal loading, finite storage, outgoing-wave feedback and energy bookkeeping. Collective enhancement can accelerate transfer but does not establish permanent retention. A narrow-angle Gaussian interaction cannot preserve an unchanged long-path transfer rate. A known threshold-mixture identity reproduces the reference curve by inverse design; finite thresholds closely preserve existing galaxy predictions, while assumed formation and release kinetics expose substantial history dependence. These are conditional mechanisms and numerical consistency results, not a unified microscopic derivation or new independent observations. No branch yet explains redshift, event durations, gravity, supply and persistence together.
 
 ### 1. Motivation and scientific scope
 
@@ -91,7 +91,7 @@ Provenance: standard Newtonian spherical-source gravity with the proposed effect
 
 #### 4.1 Phase-dependent settling and its energy outlet
 
-The current selector uses an ideal homogeneous Bose-gas criterion:
+The earlier phase-selector pilot uses an ideal homogeneous Bose-gas criterion:
 
 $$
 T=\frac{m\sigma^2}{k_B},\quad T_c=\frac{2\pi\hbar^2}{mk_B}\left[\frac{\rho_d/m}{\zeta(3/2)}\right]^{2/3},\quad f=\max[0,1-(T/T_c)^{3/2}].\tag{9}
@@ -105,7 +105,7 @@ $$
 E_{\rm mech}=K+U_b+U_d,\qquad Q_{\rm settle}=E_{\rm mech,i}-E_{\rm mech,f}.\tag{10}
 $$
 
-Provenance: standard energy accounting. Ud includes the self-energy factor one-half; Ub does not. K is assigned from the scalar force virial, a necessary global condition rather than a local equilibrium or stability proof. The tested shared model releases about 4.5e50 J, or about 1.2e-8 of deposited rest energy. A fully cooled solution requires this energy to leave the bound subsystem. All tested contractions pass the nonnegative-release condition, so conservation does not explain the fitted stopping radius.
+Provenance: standard energy accounting. Ud includes the self-energy factor one-half; Ub does not. K is assigned from the scalar force virial, a necessary global condition rather than a local equilibrium or stability proof. The tested shared model releases about 4.5e50 J, or about 1.2e-8 of deposited rest energy. A fully cooled solution requires this energy to leave the bound subsystem. Positive energy release alone does not determine the fitted stopping radius. Later coupled circular-endpoint calculations include redistribution of angular momentum to a 30-60 kpc receiving region. Their all-bin RMS changes from 6.34/10.91 to 6.28/8.10 km/s under the two baselines, with release 4.47e50/4.43e50 J. These are endpoint constructions, not evolutionary or collective-stability proofs. Local pressure and saturation alternatives have not supplied a demonstrated joint solution.
 
 #### 4.2 Refraction and relativistic completion
 
@@ -131,6 +131,64 @@ Provenance: ordinary reservoir bookkeeping; attributing nuclear power to compani
 
 At a Sagittarius A* reference luminosity of 1e29 W or less [8], pure photon output corresponds to about 1.77e-11 solar masses/year of energy. The representative M87 core luminosity 2.7e35 W [9] corresponds to 4.77e-5 solar masses/year; its jet beaming, aperture and excluded mechanical power limit that comparison. These values reconstruct required throughput from observed brightness, rather than predicting brightness. Routing the whole Galactic settling budget through the faint Sgr A* reference channel would take about 1.43e14 years. This ratio imposes no universe age: it instead demands an explicit routing, efficiency and activity-history model.
 
+#### 4.5 Transfer, angular scattering and rate consistency
+
+Subsequent fixed-gap calculations separate the energy removed per interaction from the number of interactions. For independent small steps of energy Delta, the conditional relative energy variance is approximately Delta z/E_emit in the no-removal ladder. Maintaining an illustrative relative linewidth of 1e-5 at z=1 for 2 eV input therefore requires Delta no larger than about 2e-10 eV. Added photon-removal channels impose separate brightness constraints. These are design requirements under the stipulated stochastic process, not measured universal limits. The fractional-loss example above and the fixed-gap ladder are distinct mechanisms.
+
+Finite spatial overlap can narrow scattering but also suppress its total rate. In the tested Gaussian heavy-store approximation, matching a scattering angle that decreases with apparent source size produces a rate proportional to inverse source-distance squared times exp[-(distance/cutoff)^2]. At fixed coupling and target density, the effect then saturates near the source. The favorable angular prescription cannot be combined with an unchanged long-path loss coefficient. A positive continuum of gaps alone also fails to flatten the earlier point-interaction color dependence; inverse-designed spectral responses remain hypotheses.
+
+Source-observer geometry further distinguishes accumulated direction change from apparent image width. One fixed-angle optical example over 30.66 Mpc gives about 0.520 arcseconds apparent directional RMS and 5025 seconds mean geometric delay. A prescribed source-size-tracking kernel gives much smaller moments, but lacks a derived local cause and fails the unchanged-rate Gaussian closure. These are conditional moments, not image fits or gamma-ray timing predictions. A stationary delay distribution does not by itself provide redshift-proportional event dilation.
+
+#### 4.6 Reciprocal loading and finite protected storage
+
+A candidate paired-mode interaction raises a store by Delta while transferring a quantum from energy E_H to E_L=E_H-Delta. Its Hermitian conjugate permits reversal. In an incoherent, equally weighted mode-pair approximation, known bosonic factors give
+
+$$
+A=\Gamma n_H(1+n_L),\quad B=\Gamma n_L(1+n_H),\quad r=\frac{B}{A}.\tag{13}
+$$
+
+Provenance: standard ladder-operator factors applied to our proposed effective interaction. Forward preference requires n_H>n_L; smooth same-direction thermal occupations do not supply it. Maintained source and escape fields can sustain loading in the tested open-system closure, but their geometry, absolute coupling, recoil and connection to traveling companions are not derived. For a one-step optical route, a 2 eV input contributing 1e-8 eV processes 2e8 times its net assembly power, with most energy remaining in outgoing light rather than heat.
+
+Normalized collective states do not provide a free N-squared first-excitation rate from an empty domain: the factor is N. Partly excited symmetric states can have stronger enhancement, but require preparation energy and enhance reverse transitions too. These are known collective-spin results [12], not new graviton physics. Repeated assembly can succeed despite a small probability per attempt, while requiring large recycled energy traffic; the representative unbiased ladder circulates about 200,000 times its net assembly energy.
+
+Adding one finite protected level and a relaxation mode with occupation n gives, in the zero-protected-decay equilibrium of the tested model,
+
+$$
+P_{\rm protected}=\frac{n+1}{n+1+rn}.\tag{14}
+$$
+
+Provenance: a derived stationary result of our specified finite-state model. Collective size cancels from this occupancy, although it affects replenishment rates. Fifty-four stationary cases include reverse export and conserve energy. Nonzero leakage requires replenishment; zero leakage is a stipulated lifetime, not an explanation of permanence. One finite level also cannot accumulate unlimited energy.
+
+When the full fitted Milky Way energy inventory is assigned to tiny single-excitation sites, the illustrative site/mode ratios become extremely large. A particular homogeneous escape closure requires protected lifetimes above roughly 1e32-1e41 years for its 120 kpc, 90%-protected examples. These are conditional required lifetimes, not cosmic-age constraints. Larger collective release quanta can ease mode crowding, but require a consistent assembly, reverse-transfer and protection mechanism. Thermal and nonthermal outgoing channels remain separate alternatives; energy in transit is not deposited energy.
+
+#### 4.7 A threshold interpretation of the one-third reference
+
+The reference response has an exact representation as a capacity-weighted mixture of ordinary saturation laws. With positive threshold t and exponent q,
+
+$$
+\rho_q(t)=\frac{\sin(\pi q)}{\pi}\frac{t^{q-1}}{1+2t^q\cos(\pi q)+t^{2q}}.\tag{15}
+$$
+
+$$
+\int_0^\infty\frac{X}{X+t}\rho_q(t)\,dt=\frac{X^q}{1+X^q},\qquad q=\frac{1}{3}.\tag{16}
+$$
+
+Provenance: known positive fractional-response mixture mathematics [13]. Selecting this distribution from the desired curve is inverse design, not a first-principles derivation of one-third. Equilibrium occupied capacity is not automatically permanent capture efficiency. A physical model must derive the threshold weighting and connect it to the incident field and stored mass.
+
+Truncating and renormalizing this distribution to thresholds from 1e-6 to 1e6 changes predicted rotation speeds by at most 0.640 km/s across the existing 149 galaxies without refitting. A narrower 1e-3 to 1e3 range changes some speeds by 7.03 km/s and worsens aggregate validation/test velocity RMSE. Broad cutoffs preserve the reference by construction; they neither establish the distribution's existence nor improve its main residuals.
+
+#### 4.8 Formation history and retention after fading
+
+One explicit local kinetics is df_t/dtime=lambda[X(1-f_t)-t f_t]. From empty storage under constant X, its standard solution is
+
+$$
+f_t(u)=\frac{X}{X+t}[1-e^{-(X+t)u}],\qquad u=\lambda\,\Delta t.\tag{17}
+$$
+
+Provenance: known linear rate-equation solution; applying a shared lambda and the selected threshold distribution to companions is hypothetical. The overall time scale is undetermined. Across the catalogue inputs, reaching 90% equilibrium takes dimensionless durations from 0.08478 to 102.462. Shared-duration scans produce mixed score changes and do not select a new preferred law.
+
+After individually stopping the source at that target, losing the first 10% of formed storage takes 4.92%-41.79% of the formation time. This ratio is independent of lambda and uses no universe age. A slower residual tail persists, but does not make the whole reservoir permanent. These controlled histories are not observations of the named galaxies and do not model continued distant illumination. Equilibrium requires balancing capture and release; a successful amplitude fit does not establish the required energy throughput.
+
 ### 5. Executed results and limits of the evidence
 
 The project record contains both successes and failures. Parameter selection and previously inspected observations must not be described as blind tests. Reported RMS values are descriptive, not likelihood-based evidence for the entire theory.
@@ -140,9 +198,13 @@ The project record contains both successes and failures. Parameter selection and
 | SPARC rotation, 149 galaxies | Companion validation/test RMS 32.49/23.59 km/s; MOND 26.88/16.40 | Companions improve the ordinary-only control, but tested MOND is better |
 | Six Coma shear bins | Companion/NFW omitted-bin sums 6.86/6.82 | Comparable freely fitted shapes; no transferred supply normalization |
 | Six lens galaxies | About 14% lens-angle RMS | A material unresolved motion/lensing discrepancy |
-| Shared Milky Way settling | Inner RMS 3.68/11.83 becomes 2.74/6.70 km/s | A shared conditional inner-fit improvement under two matter baselines |
-| Same Milky Way outer bins | RMS remains 8.36/9.78 km/s | No outer improvement from the selected central rearrangement |
+| Earlier imposed Milky Way settling | Inner RMS 3.68/11.83 becomes 2.74/6.70 km/s | A shared conditional inner-fit improvement under two matter baselines |
+| Earlier pilot outer bins | RMS remains 8.36/9.78 km/s | No outer improvement from the selected central rearrangement |
 | Refraction sweep | No selected outer improvement | No reason to promote the tested refraction family |
+| Coupled Milky Way endpoints, 30-60 kpc receiver | All-bin RMS 6.28/8.10 km/s | Conditional angular-momentum and energy accounting, not stability |
+| Finite thresholds, 149 galaxies | 12-decade range shifts speeds at most 0.640 km/s | Preserves reference approximately; no improved main residuals |
+| Threshold histories, 149 intensity inputs | First 10% loss takes 4.92%-41.79% of formation time | Conditional kinetics, not observed galaxy ages |
+| Reciprocal protected reservoir | 54 stationary cases; balanced energy flows | Replenishment can improve; permanence remains assumed |
 | Nuclear release | Energy-throughput estimates only | A possible diagnostic channel, not a predicted spectrum or luminosity |
 
 SPARC inputs [10] have 89 training, 29 validation and 31 test galaxies in the project split; all have been exposed during development. Companions have three shared fitted constants versus one for the tested MOND law. Restricted shared NFW mappings and per-galaxy NFW fits use different information budgets and cannot be pooled into one ranking. The Milky Way phase pilot uses a spherical gas monopole and two archived stellar baselines, with 20 inner bins for selection and 18 outer bins for comparison. It is not a comparison of two independent galaxies or individual bulge-star orbital predictions [11].
@@ -185,7 +247,7 @@ These tracks must eventually share one energy and momentum ledger. Until then th
 
 ### 9. Conclusion
 
-The current basis is a radiation-conditioned extra-gravity hypothesis with an empirical retention law, several reproducible phenomenological successes, and substantial unresolved mechanisms. Selective settling can improve inner Milky Way fits without increasing the outer force; nuclear brightness can constrain a proposed release channel. Neither establishes photon-derived gravity. The strongest next advance would be a conserved, locally supported model with fixed parameters that predicts a joint gravitational and radiative observation in systems not used to construct it. This is a working hypothesis and results paper, not a demonstrated replacement for dark matter, MOND or expanding cosmology.
+The reference remains an empirical radiation-conditioned extra-gravity model with substantial unresolved physics. New work narrows the permissible mechanisms: angular narrowing must be coupled to its rate cost; collective enhancement must include normalized states and reverse flow; storage must include finite capacity and energy release. A threshold mixture interprets the exact-third curve but does not derive its exponent, and its simplest kinetics does not make deposits permanent. Existing galaxy sensitivities are not fresh blind evidence. The next advance must connect an independently specified interaction and source history to a joint gravitational and radiative prediction. This paper does not establish a replacement for dark matter, MOND or expanding cosmology.
 
 ### References
 
@@ -211,6 +273,10 @@ The current basis is a radiation-conditioned extra-gravity hypothesis with an em
 
 [11] Eilers et al. (2019). The Circular Velocity Curve of the Milky Way from 5 to 25 kpc. [arXiv:1810.09466](https://arxiv.org/abs/1810.09466).
 
+[12] Dicke, R. H. (1954). Coherence in Spontaneous Radiation Processes. [doi:10.1103/PhysRev.93.99](https://link.aps.org/doi/10.1103/PhysRev.93.99). Used for established collective-state physics, not evidence for companions.
+
+[13] Tuncer, E. (2010). Geometrical Description in Binary Composites and Spectral Density Representation. [Materials 3, 585](https://www.mdpi.com/1996-1944/3/1/585). Used for known spectral-mixture mathematics.
+
 ### Reproducibility and research status
 
-This manuscript summarizes the repository at main revision 35a7ea7 and the preceding analysis commits. Supporting records are in research_work/results/isotropic-galaxy-transfer/ and research_work/results/companion-extensions/. The latter includes refraction.py, phase.py, settling.py, their result files, numerical checks, protocols and nuclear-release.md. The companion paper cross-scale-performance.md links the complete cross-scale audit. Historical manuscript PDFs are preserved separately. This document introduces no new numerical fit, independent observational discovery, assigned external authorship or peer-review claim. Computational assistance was used in drafting and analysis; independent scientific review remains necessary.
+This revision summarizes evidence through main revision 6e6b022, updating the earlier v1.0 snapshot at 35a7ea7. The v1.0 source and PDF remain recoverable in Git history. Detailed protocols, formulas, results and provenance are linked in cross-scale-performance.md and research_work/results/companion-extensions/. Key new executable records include coupled-torque, escape-feedback, site-mode-budget, collective-assembly, source-outlet, observer-transport, kernel-rate-closure, collective-normalization, collective-reservoir, threshold-mixture, threshold-galaxies, threshold-history and threshold-memory, each with its report and result JSON. The numerical tables use their recorded outputs; no new fitting is performed for this manuscript revision. The observed-data sample contains 149 galaxies and 3150 accepted rotation measurements in already-exposed partitions. Numerical verification validates stated calculations, not their assumptions. Computational assistance was used in analysis and drafting; independent scientific review remains necessary.

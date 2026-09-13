@@ -73,7 +73,9 @@ def main():
     for index, block in enumerate(blocks):
         if block.startswith("$$"):
             equation_count += 1
-            story.append(Equation(block.strip().removeprefix("$$").removesuffix("$$").strip()))
+            equation = Equation(block.strip().removeprefix("$$").removesuffix("$$").strip())
+            equation.keepWithNext = index + 1 < len(blocks) and blocks[index + 1].startswith("$$")
+            story.append(equation)
         elif block.startswith("!["):
             match = re.fullmatch(r'!\[([^\]]*)\]\(([^)]+)\)', block)
             assert match, block
@@ -108,19 +110,19 @@ def main():
             if index + 1 < len(blocks) and blocks[index + 1].startswith("$$"):
                 paragraph.keepWithNext = True
             story.append(KeepTogether([paragraph]) if re.match(r"(?:\[\d+\]|\d+\.) ", block) else paragraph)
-    assert equation_count == 12
+    assert equation_count == 17
     args.output.parent.mkdir(parents=True, exist_ok=True)
     doc = SimpleDocTemplate(str(args.output), pagesize=(612, 792), rightMargin=58,
                             leftMargin=58, topMargin=49, bottomMargin=48,
                             title="Photon-Energy Transfer and Companion Deposition",
-                            author="", subject="Working theoretical framework, version 1.0")
+                            author="", subject="Working theoretical framework, version 1.1")
 
     def page(canvas, document):
         canvas.saveState()
         canvas.setFont("Times-Roman", 8)
         canvas.setFillColor(colors.HexColor("#526371"))
         canvas.drawString(58, 767, "PHOTON-ENERGY TRANSFER AND COMPANION DEPOSITION")
-        canvas.drawString(58, 28, "Working draft v1.0  |  13 September 2026  |  Theory incomplete")
+        canvas.drawString(58, 28, "Working draft v1.1  |  13 September 2026  |  Theory incomplete")
         canvas.drawRightString(554, 28, str(document.page))
         canvas.restoreState()
 

@@ -1,5 +1,7 @@
 # Start here â€” active research
 
+**Main paper updated to v1.1.** The manuscript and verified PDF now incorporate findings through `6e6b022`: coupled Milky Way endpoints, transfer and scattering constraints, reciprocal storage, and exact-third threshold formation and retention. These remain partial, conditional results. [Manuscript](../papers/cumulative-time-companions/theory-basis.md) | [PDF](../output/pdf/theory-basis.pdf).
+
 **Latest checkpoint: formation versus retention.** In the stipulated threshold kinetics, individually filling to 90% equilibrium and then removing the source loses the first 10% in 4.92%-41.79% of the formation time. The ratio is independent of the unknown rate. A long release tail is not permanent retention; actual histories and other protection laws remain open. See [report](../research_work/results/companion-extensions/threshold-memory-report.md).
 
 **Latest checkpoint: finite threshold formation histories.** Starting empty, 90%-equilibrium times vary by about 1209 across the existing galaxy sample under one rate scale. Common-duration scans give mixed score changes; none is selected. Equilibrium requires continuing energy turnover and is not automatically permanent storage. See [report](../research_work/results/companion-extensions/threshold-history-report.md).

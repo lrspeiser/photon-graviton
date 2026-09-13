@@ -1,6 +1,6 @@
 # Cross-scale performance of radiation-conditioned companion deposition
 
-Working research assessment, 13 September 2026. This is an evolving supplement to the historical manuscript, not a peer-reviewed result or a rebuilt PDF. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
+Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
 ## Post-source retention checkpoint
 
