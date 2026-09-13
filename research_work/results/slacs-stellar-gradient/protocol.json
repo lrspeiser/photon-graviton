@@ -1,0 +1,12 @@
+{
+  "scope": "Exposed training structural sensitivity, inner bins only; no gradient selected from outer or lens results",
+  "mass_Msun_bounds": [10000000, 100000000000000],
+  "constant_beta_bounds": [-2, 0.45],
+  "starts_beta": [-1.5, -0.5, 0, 0.3],
+  "eta_values": [-0.5, 0, 1],
+  "mass_light_shape": "1 + eta / (1 + (r / original_Re)^2), normalized to fitted total mass",
+  "interpretation": "Illustrative central-to-outer mass/light ratios 0.5, 1, 2; not observational prior bounds",
+  "fixed": "Tracer light, seeing, geometry, empirical force coefficients and outer cutoff",
+  "verification": "Same full-covariance inner-bin fitter and doubled radial/angular/deprojection checks as outer-bin-check; eta=0 reproduction required",
+  "max_relative_velocity_refinement": 0.0001
+}

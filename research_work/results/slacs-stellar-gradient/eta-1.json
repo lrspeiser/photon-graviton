@@ -1,0 +1,944 @@
+{
+  "scope": "Exposed training structural sensitivity, inner bins only; no gradient selected from outer or lens results",
+  "rows": [
+    {
+      "Name": "J0037-0942",
+      "model": "baryons",
+      "n_bins": 6,
+      "mass_Msun": 685395378233.3027,
+      "beta": -0.9327468093010151,
+      "beta_at_boundary": false,
+      "chi2": 16.05399571046285,
+      "n_fitted_bins": 5,
+      "nominal_bins_minus_parameters": 3,
+      "outer_raw_prediction_kms": 226.6114758183407,
+      "outer_observed_kms": 242.91156866112465,
+      "outer_conditional_mean_kms": 227.17428326268123,
+      "outer_conditional_error_sigma_kms": 2.868404033665747,
+      "outer_conditional_standardized_residual": 5.486425626842942,
+      "gaussian_factorization_error": 1.7763568394002505e-14,
+      "normalized_log_likelihood": -16.041213246345045,
+      "predicted_vrms_kms": [
+        288.8957158698042,
+        288.6516664297386,
+        287.0870216271806,
+        278.66885738240586,
+        255.9408026348832,
+        226.6114758183407
+      ],
+      "observed_vrms_kms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "predicted_angle_arcsec": 1.4557180104337282,
+      "catalog_angle_arcsec": 1.53,
+      "angle_ratio": 0.9514496800220446,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 16.053995710463308,
+          "parameters": [
+            27.253261718204367,
+            -0.9327468759795384
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 16.05399571046285,
+          "parameters": [
+            27.253261703197133,
+            -0.9327468093010151
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 16.053995710463003,
+          "parameters": [
+            27.253261702972434,
+            -0.9327468099791566
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 16.0539957104657,
+          "parameters": [
+            27.253261719696546,
+            -0.9327467200258245
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.0000055228234321,
+      "fine_total_light_ratio": 1.0000013807069634,
+      "maximum_relative_vrms_refinement": 4.460651574304017e-05,
+      "refinement_whitened_norm": 0.006011876586249401
+    },
+    {
+      "Name": "J0037-0942",
+      "model": "empirical_extra",
+      "n_bins": 6,
+      "mass_Msun": 563233723102.7534,
+      "beta": -0.2887415122649239,
+      "beta_at_boundary": false,
+      "chi2": 8.764972176533403,
+      "n_fitted_bins": 5,
+      "nominal_bins_minus_parameters": 3,
+      "outer_raw_prediction_kms": 234.74854145124482,
+      "outer_observed_kms": 242.91156866112465,
+      "outer_conditional_mean_kms": 235.1426077495566,
+      "outer_conditional_error_sigma_kms": 2.868404033665747,
+      "outer_conditional_standardized_residual": 2.708461158325567,
+      "gaussian_factorization_error": 8.881784197001252e-15,
+      "normalized_log_likelihood": -12.396701479380322,
+      "predicted_vrms_kms": [
+        290.0711920964051,
+        289.1515718956326,
+        286.49307301700554,
+        277.1833502544154,
+        256.97218154566,
+        234.74854145124482
+      ],
+      "observed_vrms_kms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "predicted_angle_arcsec": 1.5341435942068191,
+      "catalog_angle_arcsec": 1.53,
+      "angle_ratio": 1.002708231507725,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 8.764972176533623,
+          "parameters": [
+            27.056960509523854,
+            -0.2887414726430929
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 8.764972176533735,
+          "parameters": [
+            27.056960515318593,
+            -0.28874152089799043
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 8.764972176533403,
+          "parameters": [
+            27.05696051766589,
+            -0.2887415122649239
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 8.764972176533897,
+          "parameters": [
+            27.056960507653702,
+            -0.2887414385227042
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.0000055228234321,
+      "fine_total_light_ratio": 1.0000013807069634,
+      "maximum_relative_vrms_refinement": 2.69066021789549e-05,
+      "refinement_whitened_norm": 0.0035378881883772043
+    },
+    {
+      "Name": "J1112+0826",
+      "model": "baryons",
+      "n_bins": 7,
+      "mass_Msun": 600244378529.4482,
+      "beta": -0.9122144384710202,
+      "beta_at_boundary": false,
+      "chi2": 20.921104994184297,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 228.7461582981811,
+      "outer_observed_kms": 255.29572377081766,
+      "outer_conditional_mean_kms": 238.0008147226236,
+      "outer_conditional_error_sigma_kms": 2.7145354435782263,
+      "outer_conditional_standardized_residual": 6.371222409016101,
+      "gaussian_factorization_error": 1.4210854715202004e-14,
+      "normalized_log_likelihood": -21.29603630289505,
+      "predicted_vrms_kms": [
+        282.71777906359506,
+        282.4603904299964,
+        281.7527535969577,
+        278.82737848175566,
+        268.373215279966,
+        249.41972659777508,
+        228.7461582981811
+      ],
+      "observed_vrms_kms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "predicted_angle_arcsec": 1.1392073523246176,
+      "catalog_angle_arcsec": 1.49,
+      "angle_ratio": 0.7645686928353138,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 20.921104994184468,
+          "parameters": [
+            27.120602706623348,
+            -0.9122144509711888
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 20.92110499419428,
+          "parameters": [
+            27.12060267594529,
+            -0.9122140772467251
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 20.92110499418718,
+          "parameters": [
+            27.12060278270389,
+            -0.9122149959576112
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 20.921104994184297,
+          "parameters": [
+            27.120602706788507,
+            -0.9122144384710202
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.0000055228223674,
+      "fine_total_light_ratio": 1.0000013807059012,
+      "maximum_relative_vrms_refinement": 4.402986711569667e-05,
+      "refinement_whitened_norm": 0.005286533208632075
+    },
+    {
+      "Name": "J1112+0826",
+      "model": "empirical_extra",
+      "n_bins": 7,
+      "mass_Msun": 490172112522.6164,
+      "beta": -0.31098278228990084,
+      "beta_at_boundary": false,
+      "chi2": 16.183146954260582,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 234.35411890587872,
+      "outer_observed_kms": 255.29572377081766,
+      "outer_conditional_mean_kms": 241.2963921151291,
+      "outer_conditional_error_sigma_kms": 2.7145354435782263,
+      "outer_conditional_standardized_residual": 5.157174016204787,
+      "gaussian_factorization_error": 1.7763568394002505e-14,
+      "normalized_log_likelihood": -18.92705728293319,
+      "predicted_vrms_kms": [
+        283.20171073293534,
+        282.75188192265415,
+        281.6971064005481,
+        278.1863708234784,
+        267.7222805950317,
+        251.00665387407068,
+        234.35411890587872
+      ],
+      "observed_vrms_kms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "predicted_angle_arcsec": 1.2025751263328184,
+      "catalog_angle_arcsec": 1.49,
+      "angle_ratio": 0.8070974002233681,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 16.183146954260582,
+          "parameters": [
+            26.918022416423383,
+            -0.31098278228990084
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 16.18314695426124,
+          "parameters": [
+            26.918022405142306,
+            -0.31098271741142935
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 16.183146954261403,
+          "parameters": [
+            26.91802243955034,
+            -0.31098292242874104
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 16.183146954261442,
+          "parameters": [
+            26.918022416393573,
+            -0.3109828243513763
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.0000055228223674,
+      "fine_total_light_ratio": 1.0000013807059012,
+      "maximum_relative_vrms_refinement": 2.7786885319722387e-05,
+      "refinement_whitened_norm": 0.0031574277182757084
+    },
+    {
+      "Name": "J1204+0358",
+      "model": "baryons",
+      "n_bins": 7,
+      "mass_Msun": 316041788618.46063,
+      "beta": -1.902586142368263,
+      "beta_at_boundary": false,
+      "chi2": 3.3312678145309365,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 214.69459768684197,
+      "outer_observed_kms": 219.3733345349746,
+      "outer_conditional_mean_kms": 214.7300405505597,
+      "outer_conditional_error_sigma_kms": 2.277718254171054,
+      "outer_conditional_standardized_residual": 2.0385725828521153,
+      "gaussian_factorization_error": 1.0658141036401503e-14,
+      "normalized_log_likelihood": -11.234366898408732,
+      "predicted_vrms_kms": [
+        267.02292605994734,
+        266.7627615758801,
+        266.1611985192625,
+        264.12889086750346,
+        257.5102398782168,
+        244.2580675454379,
+        214.69459768684197
+      ],
+      "observed_vrms_kms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "predicted_angle_arcsec": 1.2565156172038514,
+      "catalog_angle_arcsec": 1.31,
+      "angle_ratio": 0.9591722268731689,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 3.3312678145309365,
+          "parameters": [
+            26.479140284253543,
+            -1.902586142368263
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 3.3312678145326693,
+          "parameters": [
+            26.4791402854545,
+            -1.902586410370981
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 3.3312678145313246,
+          "parameters": [
+            26.479140270809108,
+            -1.9025857981156238
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 3.3312678145313406,
+          "parameters": [
+            26.47914027411773,
+            -1.902585966451592
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.000005522826369,
+      "fine_total_light_ratio": 1.0000013807098835,
+      "maximum_relative_vrms_refinement": 7.125347649390726e-05,
+      "refinement_whitened_norm": 0.011792833900552456
+    },
+    {
+      "Name": "J1204+0358",
+      "model": "empirical_extra",
+      "n_bins": 7,
+      "mass_Msun": 265468871893.34375,
+      "beta": -0.688379140835823,
+      "beta_at_boundary": false,
+      "chi2": 4.6838701570432,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 219.6419785146923,
+      "outer_observed_kms": 219.3733345349746,
+      "outer_conditional_mean_kms": 219.57871916759711,
+      "outer_conditional_error_sigma_kms": 2.277718254171054,
+      "outer_conditional_standardized_residual": -0.09017121948529694,
+      "gaussian_factorization_error": 3.2959746043559335e-16,
+      "normalized_log_likelihood": -11.910668069664865,
+      "predicted_vrms_kms": [
+        267.5076165521371,
+        267.1337949065629,
+        266.3208522061053,
+        263.87530308531734,
+        256.94615107503284,
+        244.6255653123195,
+        219.6419785146923
+      ],
+      "observed_vrms_kms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "predicted_angle_arcsec": 1.3286956076913863,
+      "catalog_angle_arcsec": 1.31,
+      "angle_ratio": 1.0142714562529667,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 4.683870157043328,
+          "parameters": [
+            26.30476343832336,
+            -0.6883792672822133
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 4.6838701570435335,
+          "parameters": [
+            26.30476342239487,
+            -0.6883791013334875
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 4.6838701570432,
+          "parameters": [
+            26.304763427415295,
+            -0.688379140835823
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 4.683870157043716,
+          "parameters": [
+            26.30476341937937,
+            -0.6883791048503812
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.000005522826369,
+      "fine_total_light_ratio": 1.0000013807098835,
+      "maximum_relative_vrms_refinement": 3.423380501047796e-05,
+      "refinement_whitened_norm": 0.0053951160045112405
+    },
+    {
+      "Name": "J1402+6321",
+      "model": "baryons",
+      "n_bins": 7,
+      "mass_Msun": 783645365084.9208,
+      "beta": -0.40468873818887374,
+      "beta_at_boundary": false,
+      "chi2": 23.99265814128926,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 230.2822181689218,
+      "outer_observed_kms": 255.56553429757489,
+      "outer_conditional_mean_kms": 240.09824527838538,
+      "outer_conditional_error_sigma_kms": 2.3272416486269996,
+      "outer_conditional_standardized_residual": 6.646189504349378,
+      "gaussian_factorization_error": 3.552713678800501e-14,
+      "normalized_log_likelihood": -21.578636849365836,
+      "predicted_vrms_kms": [
+        295.41879107740914,
+        295.30982061555557,
+        294.1992707938917,
+        287.5931562548016,
+        268.76773167200895,
+        247.06845385006278,
+        230.2822181689218
+      ],
+      "observed_vrms_kms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "predicted_angle_arcsec": 1.3653286718008921,
+      "catalog_angle_arcsec": 1.35,
+      "angle_ratio": 1.0113545717043644,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 23.99265814128926,
+          "parameters": [
+            27.387222414507107,
+            -0.40468873818887374
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 23.99265814128956,
+          "parameters": [
+            27.387222410268635,
+            -0.4046887397823391
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 23.992658141289517,
+          "parameters": [
+            27.38722241141956,
+            -0.4046887476008345
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 23.992658141289837,
+          "parameters": [
+            27.387222406183817,
+            -0.4046887221727677
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.000005522822869,
+      "fine_total_light_ratio": 1.0000013807064039,
+      "maximum_relative_vrms_refinement": 3.097550514076578e-05,
+      "refinement_whitened_norm": 0.004255095518174187
+    },
+    {
+      "Name": "J1402+6321",
+      "model": "empirical_extra",
+      "n_bins": 7,
+      "mass_Msun": 626027253772.0725,
+      "beta": -0.01985597911966013,
+      "beta_at_boundary": false,
+      "chi2": 12.210633618411535,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 238.02912841763052,
+      "outer_observed_kms": 255.56553429757489,
+      "outer_conditional_mean_kms": 244.34194448080487,
+      "outer_conditional_error_sigma_kms": 2.3272416486269996,
+      "outer_conditional_standardized_residual": 4.822700652247087,
+      "gaussian_factorization_error": 0.0,
+      "normalized_log_likelihood": -15.687624587926972,
+      "predicted_vrms_kms": [
+        296.0971604955131,
+        295.39935420785366,
+        293.34005814656285,
+        285.86373894983944,
+        268.66530048746876,
+        250.96671168080456,
+        238.02912841763052
+      ],
+      "observed_vrms_kms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "predicted_angle_arcsec": 1.3997870990940309,
+      "catalog_angle_arcsec": 1.35,
+      "angle_ratio": 1.036879332662245,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 12.210633618411535,
+          "parameters": [
+            27.162659743475942,
+            -0.01985597911966013
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 12.210633618411606,
+          "parameters": [
+            27.162659744523687,
+            -0.019855983283725
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 12.210633618411858,
+          "parameters": [
+            27.162659739831312,
+            -0.019855966686077163
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 12.210633618411851,
+          "parameters": [
+            27.16265974036464,
+            -0.019855969277725236
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.000005522822869,
+      "fine_total_light_ratio": 1.0000013807064039,
+      "maximum_relative_vrms_refinement": 2.1453168295151814e-05,
+      "refinement_whitened_norm": 0.0028688056529157548
+    },
+    {
+      "Name": "J1621+3931",
+      "model": "baryons",
+      "n_bins": 6,
+      "mass_Msun": 606882749319.9281,
+      "beta": -1.2895459800909996,
+      "beta_at_boundary": false,
+      "chi2": 6.314347240483863,
+      "n_fitted_bins": 5,
+      "nominal_bins_minus_parameters": 3,
+      "outer_raw_prediction_kms": 215.72327561956607,
+      "outer_observed_kms": 225.7152335933509,
+      "outer_conditional_mean_kms": 219.36759788917539,
+      "outer_conditional_error_sigma_kms": 4.279035166309865,
+      "outer_conditional_standardized_residual": 1.4834268608382455,
+      "gaussian_factorization_error": 6.217248937900877e-15,
+      "normalized_log_likelihood": -13.32542952119632,
+      "predicted_vrms_kms": [
+        267.45886699828975,
+        266.8882249226128,
+        265.22278995201054,
+        258.62114690279145,
+        240.29773220777147,
+        215.72327561956607
+      ],
+      "observed_vrms_kms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "predicted_angle_arcsec": 1.1102487156372847,
+      "catalog_angle_arcsec": 1.29,
+      "angle_ratio": 0.8606579190986703,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 6.314347240486771,
+          "parameters": [
+            27.131601472038984,
+            -1.2895466476652022
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 6.314347240483863,
+          "parameters": [
+            27.131601445129718,
+            -1.2895459800909996
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 6.314347240484832,
+          "parameters": [
+            27.131601455415588,
+            -1.2895463289730849
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 6.3143472404890515,
+          "parameters": [
+            27.131601388129074,
+            -1.289545038310443
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.0000055228277862,
+      "fine_total_light_ratio": 1.0000013807113006,
+      "maximum_relative_vrms_refinement": 5.064491357972542e-05,
+      "refinement_whitened_norm": 0.00564090564336377
+    },
+    {
+      "Name": "J1621+3931",
+      "model": "empirical_extra",
+      "n_bins": 6,
+      "mass_Msun": 469372452393.27203,
+      "beta": -0.16105483957076552,
+      "beta_at_boundary": false,
+      "chi2": 3.8263123274292026,
+      "n_fitted_bins": 5,
+      "nominal_bins_minus_parameters": 3,
+      "outer_raw_prediction_kms": 223.14718050179127,
+      "outer_observed_kms": 225.7152335933509,
+      "outer_conditional_mean_kms": 225.77026019817617,
+      "outer_conditional_error_sigma_kms": 4.279035166309865,
+      "outer_conditional_standardized_residual": -0.01285958228586846,
+      "gaussian_factorization_error": 1.6723818510588906e-17,
+      "normalized_log_likelihood": -12.08141206466899,
+      "predicted_vrms_kms": [
+        269.0574737744372,
+        267.8758829174349,
+        265.17087959518284,
+        257.39343179136364,
+        241.02269766894074,
+        223.14718050179127
+      ],
+      "observed_vrms_kms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "predicted_angle_arcsec": 1.1319511621564178,
+      "catalog_angle_arcsec": 1.29,
+      "angle_ratio": 0.8774815210514866,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 3.8263123274297635,
+          "parameters": [
+            26.874662418680963,
+            -0.16105475614158324
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 3.8263123274292026,
+          "parameters": [
+            26.874662431792604,
+            -0.16105483957076552
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 3.826312327429436,
+          "parameters": [
+            26.874662427712167,
+            -0.16105482307851646
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 3.8263123274301956,
+          "parameters": [
+            26.874662410771943,
+            -0.16105470824138116
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.0000055228277862,
+      "fine_total_light_ratio": 1.0000013807113006,
+      "maximum_relative_vrms_refinement": 2.1495283917696875e-05,
+      "refinement_whitened_norm": 0.002263548468705404
+    },
+    {
+      "Name": "J1630+4520",
+      "model": "baryons",
+      "n_bins": 7,
+      "mass_Msun": 632161165876.9087,
+      "beta": -0.11900200559488469,
+      "beta_at_boundary": false,
+      "chi2": 8.974955350861364,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 218.62884843115262,
+      "outer_observed_kms": 240.80210432173962,
+      "outer_conditional_mean_kms": 220.38361079640495,
+      "outer_conditional_error_sigma_kms": 3.4608341354245566,
+      "outer_conditional_standardized_residual": 5.8998763668949525,
+      "gaussian_factorization_error": 1.4210854715202004e-14,
+      "normalized_log_likelihood": -14.768339385747318,
+      "predicted_vrms_kms": [
+        291.85065872755985,
+        291.1075150911602,
+        289.49365166362315,
+        284.7371035374792,
+        272.09426638001537,
+        252.26718889537216,
+        218.62884843115262
+      ],
+      "observed_vrms_kms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "predicted_angle_arcsec": 1.3287483059774237,
+      "catalog_angle_arcsec": 1.78,
+      "angle_ratio": 0.7464878123468672,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 8.974955350861677,
+          "parameters": [
+            27.172410202414707,
+            -0.11900198884811766
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 8.97495535086227,
+          "parameters": [
+            27.17241019372822,
+            -0.11900194375897052
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 8.974955350861364,
+          "parameters": [
+            27.17241020788283,
+            -0.11900200559488469
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 8.974955350861581,
+          "parameters": [
+            27.172410210006717,
+            -0.11900202344998913
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.000005522822728,
+      "fine_total_light_ratio": 1.0000013807062633,
+      "maximum_relative_vrms_refinement": 2.451818443175767e-05,
+      "refinement_whitened_norm": 0.002630658094028219
+    },
+    {
+      "Name": "J1630+4520",
+      "model": "empirical_extra",
+      "n_bins": 7,
+      "mass_Msun": 506560903488.62476,
+      "beta": 0.184978967172794,
+      "beta_at_boundary": false,
+      "chi2": 5.043900559733933,
+      "n_fitted_bins": 6,
+      "nominal_bins_minus_parameters": 4,
+      "outer_raw_prediction_kms": 225.95310260141542,
+      "outer_observed_kms": 240.80210432173962,
+      "outer_conditional_mean_kms": 227.0299894687909,
+      "outer_conditional_error_sigma_kms": 3.4608341354245566,
+      "outer_conditional_standardized_residual": 3.9794206581527614,
+      "gaussian_factorization_error": 1.2434497875801753e-14,
+      "normalized_log_likelihood": -12.802811990183603,
+      "predicted_vrms_kms": [
+        292.7267307823722,
+        291.81031021367045,
+        289.88052855825083,
+        284.5542379572183,
+        271.67995458421194,
+        253.4668946174486,
+        225.95310260141542
+      ],
+      "observed_vrms_kms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "predicted_angle_arcsec": 1.4056652630746258,
+      "catalog_angle_arcsec": 1.78,
+      "angle_ratio": 0.7896995859969808,
+      "starts": [
+        {
+          "success": true,
+          "chi2": 5.043900559734071,
+          "parameters": [
+            26.950910395451427,
+            0.18497897082709228
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 5.043900559734046,
+          "parameters": [
+            26.950910396164144,
+            0.18497896879654338
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 5.043900559733933,
+          "parameters": [
+            26.95091039721419,
+            0.184978967172794
+          ]
+        },
+        {
+          "success": true,
+          "chi2": 5.043900559734238,
+          "parameters": [
+            26.950910391736027,
+            0.1849789813292184
+          ]
+        }
+      ],
+      "coarse_total_light_ratio": 1.000005522822728,
+      "fine_total_light_ratio": 1.0000013807062633,
+      "maximum_relative_vrms_refinement": 1.7631210689271975e-05,
+      "refinement_whitened_norm": 0.0018308675727601318
+    }
+  ],
+  "excluded": [
+    {
+      "Name": "J0330-0020",
+      "reason": "Release use flag is zero; underlying reason unresolved"
+    },
+    {
+      "Name": "J1538+5817",
+      "reason": "Published component parameters unavailable"
+    }
+  ],
+  "hashes": {
+    "research_work\\results\\slacs-resolved-input-audit\\results.json": "f04541d9ba2890367d47332d0d54b1e9801e7e35c0a4e854b75ca218747e63dd",
+    "research_work\\results\\slacs-motion-lensing-pilot\\results.json": "d284e7b0e43514f9863612602226709805c7c8da3819f963ff1caeaeea285760",
+    "research_work\\results\\lensing-data-readiness\\conditional-geometry.json": "b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "research_work\\results\\slacs-stellar-gradient\\protocol.json": "d4544a61c7a830b55b8174bdcf59a1e33335888b94448f020f37802ad67348d9",
+    "research_work\\results\\slacs-light-profile-audit\\results.json": "7018d93494858c84a482b0f2951ee2175237be700ab5a51c7404d4b7a8a56c01",
+    "research_work\\results\\slacs-stellar-gradient\\run.py": "066431ffdfe2a1f62ee35227ce30045ec56dc3138203a626c60d6fe19f1e3161",
+    "research_work\\results\\slacs-stellar-gradient\\gradient_model.py": "9f0fbc26b9aaf9dcc2b397105bc34f573ea949693140f6da1c50e54d9e989a71",
+    "research_work\\results\\slacs-outer-bin-check\\run.py": "59c803c2c74373c0949a34ccfa87c4dc3ee6603a0fef4be98a063729a3606c77",
+    "research_work\\results\\slacs-component-refit\\model.py": "6f9c79fe74144c6217978f8c477f33b0ce923cf4861f09ea4af066120eab0d39",
+    "research_work\\results\\slacs-motion-lensing-pilot\\model.py": "a975a5e322d3c52bf870f75c4874571711da18856f63eb49c5eb3c1ef771f0af",
+    "research_work\\results\\slacs-resolved-fit\\model.py": "091c1af40427bcb19e7897332fa3f92a5092934b55b1dd5eb8543c58b57ba8d9"
+  }
+}
