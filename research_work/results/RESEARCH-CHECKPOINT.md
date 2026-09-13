@@ -1,5 +1,7 @@
 # Photon–companion–deposit research checkpoint
 
+**Fresh timing calibration launched:** [Frozen 160-case protocol](timing-fresh-calibration/report.md) tests the unchanged boundary-capable estimator with seeds 1901–1920 on the 98 exposed cadence slots. Protocol/runner committed before results. Full outcomes pending; this is fresh-noise synthetic calibration, not an observed-flux or physical-cause test. Milky Way selection uncertainty remains open, as do all six goals.
+
 **Legacy selection-code hypothesis checked:** [Source provenance audit](selection-code-provenance/report.md) finds two different missing-error guards in public legacy routines, but zero missing selected infrared errors among the 44,957 extinction-available parent entries. The guard difference therefore does not explain the 42 exceptions on that subset. Public listed tags predate 2017; no executed-version attribution is established. Candidate selection cases remain conditional, and all six goals remain open.
 
 **Historical science inputs traced:** [Ranked candidate audit](selection-science-inputs/report.md) matches all 2,000 drilled assignments to their design inputs and finds all 42 infrared-error exceptions already flagged normal before drilling. The 2,329 input rows contain 1,745 unique targets, including 1,710 normal targets, and one duplicate design/target pair retained explicitly. Ranked lists are not the complete eligible parent; the infrared-error discrepancy remains unresolved. No held-out kinematics read or selection weights produced; all six goals remain open.
