@@ -1,0 +1,66 @@
+{
+  "scope": "Legacy code provenance and guard illustration; 2017 targeting implementation not established",
+  "manifest": [
+    {
+      "url": "https://svn.sdss.org/public/repo/apogee/apogeetarget/tags/",
+      "path": "research_work\\data-cache\\selection-code-provenance\\tags.xml",
+      "sha256": "75b4f627d63a7a56a1e52cfa5b572a692c19e26b473e1ec2aaadcfca9cdde09d"
+    },
+    {
+      "url": "https://svn.sdss.org/public/repo/apogee/apogeetarget/trunk/pro/check_data_quality.pro",
+      "path": "research_work\\data-cache\\selection-code-provenance\\check_data_quality.pro",
+      "sha256": "0aae15458673f28674642fa281690bd0fc0354d7fb24a1f66a26042c0ff75bce"
+    },
+    {
+      "url": "https://svn.sdss.org/public/repo/apogee/apogeetarget/trunk/pro/select_science.pro",
+      "path": "research_work\\data-cache\\selection-code-provenance\\select_science.pro",
+      "sha256": "1557d4332052d93f1b4e5d39c4a609c8fa2ab5bb70360e7e3b80b06f45e10b06"
+    },
+    {
+      "url": "https://svn.sdss.org/public/repo/apogee/apogeetarget/trunk/pro/select_science2.pro",
+      "path": "research_work\\data-cache\\selection-code-provenance\\select_science2.pro",
+      "sha256": "db37f8bec06a6085765569671ae63ee92f188845f8886da06df45c9c717a4d7d"
+    },
+    {
+      "url": "https://svn.sdss.org/public/repo/apogee/apogeetarget/trunk/pro/compute_second_quant.pro",
+      "path": "research_work\\data-cache\\selection-code-provenance\\compute_second_quant.pro",
+      "sha256": "fd329602b3a0565e9a4292b18d33fba32b013705d12c794ed2e702c75eaaa6a6"
+    }
+  ],
+  "svn_index_revision": "86573",
+  "listed_tags": [
+    "v2011_11_a",
+    "v2011_12_a",
+    "v2012.06.a",
+    "v2012.10.d",
+    "v2012_01_a",
+    "v2012_02_a",
+    "v2012_03_a",
+    "v2012_05_a",
+    "v2013.02.a",
+    "v2013_04.a",
+    "v2013_04.b"
+  ],
+  "illustrative_guard_test": {
+    "errors": [
+      0.05,
+      null,
+      0.15
+    ],
+    "ordinary_mean_guard": false,
+    "nan_aware_mean_guard": true,
+    "ordinary_branch_applies_error_threshold": false,
+    "nan_aware_branch_applies_error_threshold": true
+  },
+  "parent_extinction_available_error_summary": {
+    "rows": 44957,
+    "nonfinite_errors": 0,
+    "finite_errors_above_0p1": 24082,
+    "finite_error_min": 0.02706230618059635,
+    "finite_error_max": 0.3558363616466522
+  },
+  "parent_sha256": "8a733758d08e4713a8d76bbc0f33885744dcf62fcdb6e878af4db25920cec22b",
+  "same_input_as_historical_routine_proven": false,
+  "explains_42_exceptions": false,
+  "heldout_kinematics_read": false
+}
