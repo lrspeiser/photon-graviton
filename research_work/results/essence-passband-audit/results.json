@@ -1,0 +1,93 @@
+{
+  "scope": "Audit of locally available legacy response; not adoption as the 2016 photon throughput",
+  "archive": "research_work/generated/des-photometric-calibration/SNDATA_ROOT_2024-07-03.tar.gz",
+  "archive_members": [
+    "filters/ESSENCE/README",
+    "filters/ESSENCE/CTIO4m_R.dat",
+    "filters/ESSENCE/CTIO4m_I.dat"
+  ],
+  "readme": "The FITS files provided here represent the tranmission functions \nof the CTIO 4m MOSAIC II system as measured using lab-based filter traces \nand standard aluminum and atmospheric transmissions.\n\nThe convention is in the Bessell convention where the sensitivity is\nin energy, i.e. the transmission has been multiplied by an extra factor \nof lambda with respect to a photon-based transmission.\n",
+  "readme_sha256": "47233f8cdcee45b3522fa260ac862068f0b7e3dfb14063ab255c1cc665a4c358",
+  "table_source": "https://lss.fnal.gov/archive/2016/pub/fermilab-pub-16-402-ae.pdf",
+  "table": "B2, printed selected samples only",
+  "rows": [
+    {
+      "band": "R",
+      "filename": "CTIO4m_R.dat",
+      "sha256": "b290673d23a62815626b2b6b5875d6de1e77a191eb935c3f8d7e85455a6b4639",
+      "range_angstrom": [
+        5311.0,
+        9750.0
+      ],
+      "negative_samples": 25,
+      "samples": 4440,
+      "best_amplitude_to_printed_samples": 3304.2212617848627,
+      "anchors": [
+        {
+          "wavelength": 6240.0,
+          "published_total": 0.5338,
+          "rescaled_old": 0.5294528708513648,
+          "relative_difference": -0.008143741379983527
+        },
+        {
+          "wavelength": 7005.0,
+          "published_total": 0.3378,
+          "rescaled_old": 0.3447522106799886,
+          "relative_difference": 0.020580848667817175
+        },
+        {
+          "wavelength": 7775.0,
+          "published_total": 0.1092,
+          "rescaled_old": 0.10835421651441851,
+          "relative_difference": -0.007745270014482553
+        },
+        {
+          "wavelength": 8540.0,
+          "published_total": 0.0185,
+          "rescaled_old": 0.01830630794466169,
+          "relative_difference": -0.010469840829097743
+        }
+      ],
+      "rms_absolute_anchor_difference": 0.004122609352420066
+    },
+    {
+      "band": "I",
+      "filename": "CTIO4m_I.dat",
+      "sha256": "6875ddd3745e07e040adeb57c927c0b0855c1dfe91770052a97b993e44363890",
+      "range_angstrom": [
+        6752.0,
+        9500.0
+      ],
+      "negative_samples": 10,
+      "samples": 2749,
+      "best_amplitude_to_printed_samples": 4794.073027780767,
+      "anchors": [
+        {
+          "wavelength": 7635.0,
+          "published_total": 0.358,
+          "rescaled_old": 0.35501725670070644,
+          "relative_difference": -0.008331685193557425
+        },
+        {
+          "wavelength": 8330.0,
+          "published_total": 0.4729,
+          "rescaled_old": 0.4751288947482421,
+          "relative_difference": 0.004713247511613616
+        },
+        {
+          "wavelength": 9030.0,
+          "published_total": 0.0023,
+          "rescaled_old": 0.002261550860345856,
+          "relative_difference": -0.01671701724093222
+        },
+        {
+          "wavelength": 9725.0,
+          "published_total": 0.0008,
+          "rescaled_old": 0.0,
+          "relative_difference": -1.0
+        }
+      ],
+      "rms_absolute_anchor_difference": 0.0019043507899387897
+    }
+  ]
+}
