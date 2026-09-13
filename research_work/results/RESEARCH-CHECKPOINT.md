@@ -1,5 +1,7 @@
 # Photonâ€“companionâ€“deposit research checkpoint
 
+**Capture/capacity audit.** Interpreting the reference eta=1 profile as capacity gives M_cap=(C/k0) sigma. Incoming power and capacity therefore scale with the same absorption area: size alone cannot change the normalized background rate. An alternative unattenuated volume capacity yields a factor 0.495-0.981 across existing scales, but changes the storage/profile mapping and needs its own local solution. [Report](companion-extensions/capture-capacity-report.md).
+
 **Uniform-background comparison.** A common additive input strong enough to preserve 90% of every equilibrium deposit worsens frozen galaxy rotation scores. A training-only amplitude adjustment partly compensates, but validation/test RMSE remains 31.54/22.52 km/s versus 30.82/21.41 for the identically adjusted no-background control. This tests a uniform rate proxy with fixed geometry, not actual distant-source transport. [Report](companion-extensions/background-retention-report.md).
 
 **Continuing-source checkpoint.** With initially equilibrated stores, maintaining 90% of the deposit indefinitely after fading requires a constant input floor of 34.09%-68.62% across the existing galaxy proxies. This is a requirement on external supply, not a measurement of it. Finite-threshold kinetics requires continuing energy turnover; actual sources and rates remain unspecified. [Report](companion-extensions/threshold-floor-report.md).

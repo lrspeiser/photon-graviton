@@ -2,6 +2,10 @@
 
 Working research assessment, 13 September 2026. This is an evolving supplement to the v1.1 main manuscript and rebuilt PDF, which summarize evidence through 6e6b022. Neither document is peer reviewed. Numerical claims below refer to the linked executable records. Results are conditional on a hypothetical nonexpanding universe and the explicitly stated geometry and matter inputs.
 
+## Capture area versus storage capacity
+
+The [capture/capacity audit](../../research_work/results/companion-extensions/capture-capacity-report.md) uses the current exact-third opacity and 149 measured disk scales. If the eta=1 reference profile is interpreted as capacity, its integrated mass-equivalent capacity is (C/k0) sigma, so area cancels from the incident power per capacity. Larger capture area alone cannot fix the uniform-background result. An alternative capacity independent of attenuation produces a geometry factor 0.495-0.981, but requires a new local occupancy/profile calculation. These are conditional capacity mappings, not measured storage or new fitted predictions.
+
 ## Uniform-background retention and motions
 
 The [uniform-background comparison](../../research_work/results/companion-extensions/background-retention-report.md) adds a common input B to the exact-third response, including it before local-source fading. The minimum B preserving 90% across all existing inputs is 11.2562 in proxy units. Frozen validation/test velocity RMSE worsens to 36.88/30.67 km/s from 32.49/23.59. A separate training-only amplitude fit gives 31.54/22.52, still worse than an identically adjusted B=0 control at 30.82/21.41. This is an exposed-sample diagnostic with unchanged spatial geometry; neither an external supply measurement nor an adopted reference revision.
