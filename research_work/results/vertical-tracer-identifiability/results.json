@@ -1,0 +1,65 @@
+{
+  "scope": "Exact conditional 1D identifiability example using piecewise-linear force surrogates; not a Galactic equilibrium or observed selection fit",
+  "hashes": {
+    "research_work\\results\\vertical-tracer-identifiability\\run.py": "021651c347439458b9f1fc8e1595cfd8abd57098bca9b994de8dd1cad1a9667e",
+    "research_work\\results\\component-vertical-transfer\\results.json": "920ec4c71ec73dd72e7d169badae08424e3b9c21f0901a3f0473e34dfe5f89a3"
+  },
+  "force_knots": {
+    "z_kpc": [
+      0.0,
+      0.1,
+      0.5,
+      1.0,
+      2.0
+    ],
+    "reference": [
+      0.0,
+      754.6277420505456,
+      2064.0363247591563,
+      2705.804520345685,
+      3238.567225576687
+    ],
+    "candidate": [
+      0.0,
+      787.2640150112696,
+      2365.5438364336846,
+      3306.831068121299,
+      4036.622802138063
+    ]
+  },
+  "cases": [
+    {
+      "sigma_kms": 20.0,
+      "density_ratio_new_to_old_z1": 0.4793926860359034,
+      "density_ratio_z2": 0.08340159300543241,
+      "selection_new_range": [
+        0.04170079650271621,
+        0.5
+      ],
+      "maximum_normalized_observed_density_difference": 1.3322676295501878e-15,
+      "collisionless_identity_residual": 7.105427357601002e-15
+    },
+    {
+      "sigma_kms": 40.0,
+      "density_ratio_new_to_old_z1": 0.8320948823321682,
+      "density_ratio_z2": 0.5373949568185803,
+      "selection_new_range": [
+        0.26869747840929015,
+        0.5
+      ],
+      "maximum_normalized_observed_density_difference": 4.440892098500626e-16,
+      "collisionless_identity_residual": 3.552713678800501e-15
+    },
+    {
+      "sigma_kms": 60.0,
+      "density_ratio_new_to_old_z1": 0.9215550155256136,
+      "density_ratio_z2": 0.758805522336849,
+      "selection_new_range": [
+        0.3794027611684245,
+        0.5
+      ],
+      "maximum_normalized_observed_density_difference": 2.220446049250313e-16,
+      "collisionless_identity_residual": 1.7763568394002505e-15
+    }
+  ]
+}
