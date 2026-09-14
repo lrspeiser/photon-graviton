@@ -624,3 +624,17 @@ The [CG-0 check](../../research_work/results/clock-gradient/report.md) asks whet
 - **Only a two-field form** that carries the excess keeps the frame defined.
 
 Clock-field gravity therefore needs an independent vector or a second field. PDF v1.5 predates this supplement.
+
+## Supported reservoir (CR-2)
+
+The [CR-2 test](../../research_work/results/supported-reservoir/report.md) replaces CR-1's coherent mode with a condensate supported by a repulsive contact interaction: a Thomas–Fermi n = 1 polytrope with one constant shared by all systems. The condensate is in equilibrium with each lens's stars. It is fitted jointly to the KCWI stellar motions and exact lensing of six SLACS lenses, with identical geometry and mass conventions.
+
+- **Lenses.** The best shared core size is about 80 kpc in both the flat FLRW comparison geometry and the co-scaling history. χ² is 113.6 and 89.3, against 85.3 and 59.1 for free per-lens NFW halos. That is beyond the declared allowance.
+- **Milky Way.** The same size cuts the rotation RMSE from 52.6 to 22.5 km/s, short of the declared 20.
+- **Separately.**
+  - Supply from each lens's own starlight falls short by 10⁶–10⁹.
+  - The lenses need stellar masses of 1.5–3 times Chabrier.
+  - The polytrope's hard edge, not its scale, is what fails. A two-phase law with a thermal envelope is the proposed next test.
+- **Universal against universal (post hoc).** The owner prefers universal settings to per-system tuning. At equal freedom, the condensate beats an NFW halo with one shared scale on the six lenses (113.6 against 128.6 in FLRW, 89.3 against 105.7 in co-scaling). It loses in the Milky Way (22.5 against 14.1 km/s).
+
+PDF v1.5 predates this supplement.

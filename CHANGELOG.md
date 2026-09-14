@@ -6,6 +6,16 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Supported reservoir CR-2** (protocol a5b2c41). A Thomas–Fermi condensate with one shared constant, in equilibrium with each lens's stars, is fitted jointly to the KCWI stellar motions and exact lensing of six SLACS lenses, with identical geometry and mass conventions.
+  - **Result: it fails the declared rule in both geometries.**
+    - The best shared core size is about 80 kpc in both.
+    - χ² is 113.6 against free NFW's 85.3 (FLRW) and 89.3 against 59.1 (co-scaling), beyond the declared allowance of 10.
+    - The same core size cuts the Milky Way rotation RMSE from 52.6 to 22.5 km/s, short of 20.
+  - **Separate results.** Supply falls short by 10⁶–10⁹. Chabrier population masses cannot fit; the lenses need 1.5–3 times Chabrier.
+  - **Validation.** The archive's benchmark fits are reproduced to 10⁻¹³. The co-scaling benchmarks are new.
+  - **Post hoc, universal against universal** (the owner prefers universal settings to per-system tuning). At equal freedom, the condensate beats an NFW halo with one shared scale on the lenses (113.6 against 128.6; 89.3 against 105.7). It loses in the Milky Way (22.5 against 14.1 km/s).
+
+  See the [report](research_work/results/supported-reservoir/report.md). Its leads section proposes a two-phase support law and a cosmological supply test.
 - **Model contract revised after the owner's review.** Co-scaling is now a separately labeled branch, not a declaration that the nonexpanding requirement is met; the fixed-ruler branch stays open. The contract changes these claims:
   - "the only remaining alternative" becomes "one completion compatible with the kinematics of the tested family; other completions have not been exhaustively classified";
   - "one field does all three jobs" is marked as a goal, with no complete action yet;
