@@ -113,8 +113,10 @@ def main():
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
+    # Bytecode caches under research_work/results are regenerated artifacts; a job refreshing one
+    # would trip the saved-results integrity check, so jobs never write them.
     env = {**os.environ, 'PHOTON_GRAVITON_RESULTS': str(out), 'PYTHONUTF8': '1',
-           'OPENBLAS_NUM_THREADS': '1', 'OMP_NUM_THREADS': '1'}
+           'OPENBLAS_NUM_THREADS': '1', 'OMP_NUM_THREADS': '1', 'PYTHONDONTWRITEBYTECODE': '1'}
     records = []
     for name, extra in jobs:
         start = time.monotonic()

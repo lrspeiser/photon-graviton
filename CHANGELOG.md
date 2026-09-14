@@ -2,6 +2,19 @@
 
 Dated notices that accumulated at the top of `README.md` and `research_plan/START-HERE.md` until 13 September 2026, moved here verbatim (newest first) so that [CURRENT-STATUS.md](CURRENT-STATUS.md) can remain the single authoritative summary. The date and commit are those that last touched each notice (`git blame`). Relative links were rebased to the repository root, and mis-encoded dashes in the START-HERE notices were repaired. Statements such as "latest" or "current" refer to the date of each entry, not to the present state.
 
+## 2026-09-13, after the Codex handover
+
+New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
+
+- **RB-1 consistency revision.** Review found three problems:
+  - mixed incident spectra
+  - an isotropic drag assumption
+  - an energy ledger that omitted the receivers' energy change
+
+  One incident field per labeled spectrum control, per-site pressure-tensor drag and a closed ledger now replace the first evaluation. The threshold-cut spectrum's supply multiplier doubles to 8.2×10^9. The ideal-case angular-momentum debt is a median 33.7. Population shapes are unchanged. The conclusion is narrowed to the tested prescription. See the [report](research_work/results/capture-to-orbit/report.md).
+- `21147a1` **Repository consolidation.** Added CURRENT-STATUS.md and moved the dated notices here. The latest diagnostics gained entry points and archive regression checks.
+- `e04d013` **Capture-to-orbit RB-1.** Receiver-assisted threshold production tested with orbit-averaged populations. Not promoted.
+
 ## 2026-09-13
 
 - 17:23 · `3884b4f4` · from `research_plan/START-HERE.md`

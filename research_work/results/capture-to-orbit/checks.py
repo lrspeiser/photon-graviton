@@ -17,6 +17,7 @@ from scipy.integrate import solve_ivp
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
+import incident as inc          # noqa: E402
 import kinematics as kin        # noqa: E402
 import supported_profile as sp  # noqa: E402
 
@@ -176,6 +177,79 @@ def plummer_support():
                             and abs(np.sqrt(3)*alpha/a - 1) < 1e-12))
 
 
+def spectrum_controls(rng, n=2_000_000, M=1e6):
+    """Threshold-cut S1 versus extends-below S2: deterministic bound rates against exact kinematics."""
+    beta, v_esc = .01, .03
+    iso = lambda mu: np.ones_like(mu)
+    det = {s: inc.bound_rate(inc.separable(s, iso), [beta, 0, 0], v_esc) for s in inc.SPECTRA}
+    th, g = kin.threshold(M), 1/np.sqrt(1 - beta*beta)
+    x_max = 1/np.sqrt(1 - (v_esc + beta)**2) - 1
+    mc = {}
+    for s, (lo, hi) in inc.SPECTRA.items():
+        wlo, whi = max(lo*th, th/(g*(1 + beta))), min(hi*th, th*(1 + x_max)/(g*(1 - beta)))
+        ev, w = window_events(rng, beta, wlo, whi, n, M)
+        bound = ev['ok'] & (np.linalg.norm(ev['X'][:, 1:]/ev['X'][:, :1], axis=1) < v_esc)
+        mc[s] = (whi - wlo)/th*np.mean(w*bound)
+    real = [200/kin.C_KMS, 0, 0], 500/kin.C_KMS
+    realistic = (inc.bound_rate(inc.separable('threshold_cut', iso), *real)
+                 /inc.bound_rate(inc.separable('extends_below', iso), *real))
+    rest = inc.bound_rate(inc.separable('extends_below', iso), [0, 0, 0], v_esc)/(v_esc**3/3)
+    out = dict(deterministic=det, monte_carlo=mc, ratio_deterministic=det['threshold_cut']/det['extends_below'],
+               ratio_monte_carlo=mc['threshold_cut']/mc['extends_below'], ratio_200_500_kms=realistic,
+               rest_rate_over_uniform_ball=rest)
+    out['passed'] = bool(all(abs(mc[s]/det[s] - 1) < .02 for s in det) and abs(realistic - .5) < .002
+                         and abs(rest - 1) < .002)
+    return out
+
+
+def force_controls():
+    """Exact reaction-weighted drag and receiver energy change against the pressure-tensor formula."""
+    out, ok = {}, True
+    fields = dict(isotropic=[1.], equal_uF_plus_P2=[1., .4, .3], equal_uF_minus_P2=[1., .4, -.3])
+    for name, coeffs in fields.items():
+        A = inc.legendre_field(coeffs)
+        m = inc.moments(A)
+        for s in inc.SPECTRA:
+            field = inc.separable(s, A)
+            ch = inc.exact_channels(field, [1e-3, 0, 0], inc.SPECTRA[s], n_E=200, n_mu=32, n_phi=32)
+            k = -ch['dR'][1]/(1e-3*ch['P_abs'])
+            pred = -inc.first_order_force(m, [1e-3, 0, 0])[0]/1e-3
+            ch2 = inc.exact_channels(field, [1e-2, 0, 0], inc.SPECTRA[s], n_E=200, n_mu=32, n_phi=32)
+            e, e_pred = ch2['dR'][0]/ch2['P_abs'], inc.first_order_force(m, [1e-2, 0, 0])[0]*1e-2
+            tol = 1e-3 if s == 'extends_below' else 5e-3
+            ok &= bool(abs(k/pred - 1) < tol and abs(e/e_pred - 1) < .03 and max(ch['residual'], ch2['residual']) < 1e-8)
+            out[f'{name}/{s}'] = dict(p_perp=m['p_perp'], exact_kappa=k, first_order_kappa=pred,
+                                      energy_change_per_absorbed=e, first_order_energy_change=e_pred)
+    for w in [0., .5, 1.]:
+        ch = inc.exact_channels_boosted('extends_below', [w*1e-3, 0, 0], [1e-3, 0, 0], n_E=200, n_mu=32, n_phi=32)
+        k, want = -ch['dR'][1]/(1e-3*ch['P_abs']), kin.drag_coefficient(kin.REFERENCE_CHI)*(1 - w)
+        ok &= bool(abs(k - want) < 1e-3)
+        out[f'boosted_isotropic_w_{w}'] = dict(exact_kappa=k, expected=want)
+    out['passed'] = bool(ok)
+    return out
+
+
+def ledger_closure(rng, n=400_000, M=1e6):
+    """Aggregate exact-kinematics ledger: bound + escaping + receiver change = incident, per channel."""
+    beta, v_esc = .01, .03
+    A = inc.legendre_field([1., .4, .3])
+    out = {}
+    for s, (lo, hi) in inc.SPECTRA.items():
+        u = np.zeros((n, 3))
+        u[:, 0] = beta
+        n_c = kin.isotropic(n, rng)
+        ev = kin.react(rng.uniform(lo, hi, n)*kin.threshold(M), n_c, u, M, kin.isotropic(n, rng))
+        w = ev['weight']*(1 - beta*n_c[:, 0])*A(n_c[:, 2])
+        bound = ev['ok'] & (np.linalg.norm(ev['X'][:, 1:]/ev['X'][:, :1], axis=1) < v_esc)
+        K, dR = w@ev['k'], w@(ev['R'] - ev['P'])
+        Xb, Xe = (w*bound)@ev['X'], (w*~bound)@ev['X']
+        out[s] = dict(incident_energy=float(K[0]), bound_energy=float(Xb[0]), escaping_energy=float(Xe[0]),
+                      receiver_energy_change=float(dR[0]),
+                      closure=float(np.max(np.abs(K - Xb - Xe - dR))/K[0]))
+    out['passed'] = bool(all(out[s]['closure'] < 1e-9 for s in inc.SPECTRA))
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument('--output', type=Path)
@@ -183,7 +257,9 @@ def main():
     rng = np.random.default_rng(20260913)
     results = dict(event_balance=event_balance(rng), drag=drag(), uniform_ball=uniform_ball(rng), line=line(rng),
                    kepler=kepler(), plummer_distribution_function=plummer_df(),
-                   sampling_invariance=sampling_invariance(), plummer_universal_K=plummer_support())
+                   sampling_invariance=sampling_invariance(), plummer_universal_K=plummer_support(),
+                   spectrum_controls=spectrum_controls(rng), force_controls=force_controls(),
+                   ledger_closure=ledger_closure(rng))
     ok = all(v['passed'] for v in results.values())
     results['all_passed'] = ok
     target = args.output
