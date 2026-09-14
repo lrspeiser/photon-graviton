@@ -105,6 +105,11 @@ def main():
         ('bound-cloud-exchange/check.py', []),
         ('bound-pair-production/check.py', []),
         ('pair-production-balance/check.py', []),
+        # Regenerate the latest canonical diagnostics into this run and compare with the archive.
+        ('companion-extensions/mond-inventory.py', []),
+        ('companion-extensions/mond-cross-scale.py', []),
+        ('companion-extensions/coma-inverse.py', []),
+        ('capture-to-orbit/checks.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
