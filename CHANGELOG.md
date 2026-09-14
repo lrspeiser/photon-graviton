@@ -6,7 +6,8 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
-- **RB-1 consistency revision.** Review found three problems:
+- **Self-illumination pilot.** Companion fields derived from declared rotating emitters, with no co-rotation factor. Receiver drag falls to κ=0.19–0.51 in a flat-rotation disk, but the emitters pay instead. With every companion absorbed internally, the combined baryonic loss at ideal efficiency is a median 19× the baryons' angular momentum (above 1 in 146 of 149). This does not relieve the RB-1 debt. See the [report](research_work/results/self-illumination/report.md).
+- `70cebef` **RB-1 consistency revision.** Review found three problems:
   - mixed incident spectra
   - an isotropic drag assumption
   - an energy ledger that omitted the receivers' energy change

@@ -1,6 +1,11 @@
 # Current status: photon–companion research
 
-**Authoritative summary.** Updated 13 September 2026. Reviewed baseline: `main` at `3884b4f` (Codex handover, 13 September 17:23 PDT). Added since then: the capture-to-orbit test, its consistency revision after review, and repository consolidation. Dated history is in [CHANGELOG.md](CHANGELOG.md); standing rules and the foundational index are in [research_plan/START-HERE.md](research_plan/START-HERE.md). All samples below were exposed during development. No genuinely untouched holdout has been opened.
+**Authoritative summary.** Updated 13 September 2026. Reviewed baseline: `main` at `3884b4f` (Codex handover, 13 September 17:23 PDT). Added since then:
+- the capture-to-orbit test and its consistency revision after review
+- the self-illumination pilot
+- repository consolidation
+
+Dated history is in [CHANGELOG.md](CHANGELOG.md); standing rules and the foundational index are in [research_plan/START-HERE.md](research_plan/START-HERE.md). All samples below were exposed during development. No genuinely untouched holdout has been opened.
 
 ## The programme in one paragraph
 
@@ -14,6 +19,7 @@ We study a hypothetical nonexpanding universe with our observed data. Photons tr
 | **MOND-guided fixed-inventory mixture** | Reference inventory redistributed toward the simple-MOND acceleration excess; f=0.923557 and a0=8.563e-11 m/s^2 frozen | SPARC test RMSE 16.24 (simple MOND 16.40; MOND better in log error and train/validation). Both Milky Way fiducials worsen (9.26 / 11.87). 21 galaxies need inventory caps. The shape is borrowed from MOND, not derived |
 | **Coma Plummer support candidate** | n=5 polytrope, P=Kρ^(6/5), fitted to six weak-shear bins | χ² 3.727 versus NFW 3.855 (total gravity only). A universal K implies a∝M^2 for the isolated profile (regression-checked). A baryon-coupled solve is still needed |
 | **Capture-to-orbit RB-1** ([report](research_work/results/capture-to-orbit/report.md)), archived failed candidate | Receiver-assisted s-wave threshold production of one fixed-mass species on ordinary baryons, orbit-averaged in a fixed potential; nothing fitted | **Not promoted, revised after review.** SPARC test RMSE 45.40; Milky Way fiducials 24.98 / 7.76. Supply multiplier 4.1×10^9 (spectrum extending below threshold) or 8.2×10^9 (threshold-cut). Receivers would lose a median 34× their angular momentum even at ideal efficiency. The tested prescription fails at the reference inventory; other capture interactions are not excluded |
+| **Self-illumination pilot** ([report](research_work/results/self-illumination/report.md)), diagnostic | RB-1 reaction under companion fields derived from declared rotating emitters; no co-rotation factor | **Does not relieve the RB-1 debt.** Receiver drag falls to κ=0.19–0.51 in a flat-rotation disk, and to zero inside a rigid ring. Emitters pay instead. With every companion absorbed internally, the combined baryonic loss is a median 19× the baryons' angular momentum at ideal efficiency (above 1 in 146 of 149). Threshold-cut efficiency is still halved |
 
 ## Frozen benchmarks
 
@@ -35,7 +41,7 @@ Current rotation scores on those benchmarks (RMSE km/s):
 
 ## Unresolved failures and open requirements
 
-1. **Formation.** No local interaction yet produces the reservoir that the gravity fits need. The tested RB-1 prescription fails on supply and on receiver back-reaction. It was evaluated with one incident field per spectrum control, per-site anisotropic drag and a closed energy ledger. This does not exclude other capture interactions. Its 0.5 km/s quadrature gate still fails in 18 of 167 systems; passing verification jobs does not mean its full numerical model has converged there.
+1. **Formation.** No local interaction yet produces the reservoir that the gravity fits need. The tested RB-1 prescription fails on supply and on receiver back-reaction. It was evaluated with one incident field per spectrum control, per-site anisotropic drag and a closed energy ledger. Self-illumination by rotating emitters does not change that: momentum conservation leaves the combined baryonic loss at a median 19× at ideal efficiency. Other capture interactions are not excluded. RB-1's 0.5 km/s quadrature gate still fails in 18 of 167 systems; passing verification jobs does not mean its full numerical model has converged there.
 2. **Supply.** C0 is fitted storage, not a demonstrated radiation budget. The recovered 26-galaxy comparison falls short by a median factor of about 5,400 for 10 Gyr at present luminosity. Age is free, but the required histories must be stated.
 3. **Distribution.** The best rotation shape (MOND-guided) is borrowed. It worsens both Milky Way fiducials, and inventory is short in 21 SPARC galaxies (NGC3741 needs 39× its model inventory).
 4. **Outer profile.** The MOND-guided construction completes its exterior arbitrarily beyond the last measured radius. RB-1 shows a forward model can instead return a convergent (r^-4) profile on its own radial domain, independent of which radii are sampled.
@@ -44,19 +50,19 @@ Current rotation scores on those benchmarks (RMSE km/s):
 7. **Redshift and timing.** Conversion microphysics is missing. Whole-photon mixing does not redshift survivors, supernova event stretching is unexplained, and the 74.62 versus 70.48 tension stands.
 8. **Stability.** Collective stability of any reservoir is untested.
 
-## Next experiment
+## Next experiment: a decision for the project owner
 
-**Self-illumination pilot**, declared before it runs.
+RB-1 and the self-illumination pilot pin down what a viable capture channel would have to do:
 
-- **Question.** Does the radiation field of a declared rotating source geometry reduce total receiver torque enough to build the required reservoir? The same account must track the energy and angular momentum lost by the emitters and carried away by escaping particles.
-- **Method.** Start with a controlled ring or disk. Build the field from the emitters, transport it to the receivers and apply the same reaction through the unified incident-field calculator.
-- **Constraints.** Assign no co-rotation factor and no new inventory normalization. Evaluate threshold efficiency alongside, because reduced drag does not fix it. Net rotation of the reservoir is not a success criterion.
+1. **Momentum.** Retained products must be born without drawing their motion from ordinary matter. Products born co-moving with rotating receivers or emitters make the baryons fund the reservoir's angular momentum, or the escaping flux's. The median reference inventory is 12.5× the baryonic mass.
+2. **Energy.** A non-rotating receiver population avoids a net angular-momentum debt but not the drag: at ideal efficiency it drains about 2κ·M_ret/M_rec ≈ 40× the receivers' own kinetic energy (a first-order estimate, not yet computed per galaxy).
+3. **Efficiency.** The retained fraction must be far above the (v_esc/c)^3 ≈ 10^-9–10^-10 of a threshold reaction with a smooth spectrum.
 
-Then, if warranted:
-- a receiver back-reaction bound
-- a two-step absorb-and-emit branch with a fixed internal Q-value, carried through the same closed ledger
+Candidates that could meet these, each needing its own declared protocol:
+- a collective or field-mediated capture in which the reservoir, not ordinary matter, is the receiver, with its own drag and contraction accounting;
+- a two-step absorb-and-emit process with an internal Q-value, which addresses item 3 but must still meet items 1 and 2.
 
-The baryon-coupled Coma polytrope with one universal K stays queued. Keep the original and MOND-guided branches side by side, and freeze any new rule before touching an unexposed sample.
+The cheap next check is item 2's per-galaxy kinetic-energy budget. The baryon-coupled Coma polytrope with one universal K stays queued. Keep the original and MOND-guided branches side by side, and freeze any new rule before touching an unexposed sample.
 
 ## Reproduce
 
@@ -64,6 +70,7 @@ The baryon-coupled Coma polytrope with one universal K stays queued. Keep the or
 python research_work/run_checks.py                          # 49 jobs, fresh output directory
 python research_work/results/capture-to-orbit/runner.py     # RB-1 populations and predictions, about 7 min on 8 workers
 python research_work/results/capture-to-orbit/revision.py   # RB-1 consistency revision, about 20 s
+python research_work/results/self-illumination/pilot.py     # self-illumination pilot, about 4 min
 ```
 
 The three latest canonical diagnostics (`mond-inventory.py`, `mond-cross-scale.py` and `coma-inverse.py` in `research_work/results/companion-extensions/`) regenerate into a fresh directory. Each compares its numbers with the archived result and overwrites the archive only with `--canonical`. The comparison is exact, with one exception: the Coma flexible-mixture fits have non-unique weights and stop at slightly different points under different BLAS threading. Their χ² agrees to about 10^-5 and their derived masses to about 0.1%, so they use documented tolerances; the Coma LP extrema and single-Plummer fit are compared exactly. The working paper is v1.5 (`output/pdf/theory-basis.pdf`). Later results are in the supplement `papers/cumulative-time-companions/cross-scale-performance.md`.

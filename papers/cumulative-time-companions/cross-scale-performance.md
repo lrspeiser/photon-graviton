@@ -567,4 +567,12 @@ RB-1 is not promoted. PDF v1.5 predates this supplement.
 
 The [revised evaluation](../../research_work/results/capture-to-orbit/report.md) uses one incident field per labeled spectrum control. A moving receiver halves slow-product production for the threshold-cut spectrum (0.500 at 200/500 km/s), so its supply multiplier is 8.2×10^9, against 4.1×10^9 when the spectrum extends below threshold. Population shapes and predictions are unchanged. Drag follows the local pressure tensor, κ = 1 + (1+χ) p⊥, checked against exact kinematics on isotropic, boosted and equal-u, equal-F control fields. The ideal-case angular-momentum debt becomes a median 33.7 (above 1 in 148 of 149). The closed ledger shows receivers losing kinetic energy worth about 10^3 times the retained rest energy.
 
-The conclusion is limited to the tested prescription: RB-1 does not produce a viable reservoir at the required reference inventory. Other capture interactions are not excluded. The next calculation is a self-illumination pilot that derives the field from declared rotating emitters and tracks emitter losses, receiver torque, retained efficiency and escaping flux together.
+The conclusion is limited to the tested prescription: RB-1 does not produce a viable reservoir at the required reference inventory. Other capture interactions are not excluded.
+
+## Self-illumination pilot
+
+The [pilot](../../research_work/results/self-illumination/report.md) replaces the external bath by fields derived from declared rotating emitters. It uses steady, optically thin transport with j = D j'(E/D) and isotropic emission in each emitter's frame, and applies the RB-1 reaction beam by beam with exact kinematics. Controls reproduce the isotropic drag for a stationary shell, κ = 1/3 for a steady co-moving flow, and zero torque inside a rigidly rotating ring.
+
+In a flat-rotation disk, receiver drag falls to κ = 0.19–0.51. The emitters instead lose their own r v per unit emitted energy, and the threshold-cut spectrum still loses half its slow products. By angular-momentum conservation, if every companion is absorbed internally, emitters and receivers together lose what the products carry away. Across the galaxy sample at ideal efficiency, that floor is a median 19× the baryons' angular momentum (above 1 in 146 of 149), against 33.7 for the external bath.
+
+Self-illumination therefore shifts the RB-1 momentum debt onto the emitters but does not relieve it. A viable channel must produce retained mass without drawing its motion from ordinary matter, and must retain far more than (v_esc/c)^3. PDF v1.5 predates this supplement.
