@@ -1,0 +1,185 @@
+{
+ "T1": {
+  "linear_index": {
+   "expected_one_plus_z": 2.0,
+   "carrier_ratio": 1.9997851671264977,
+   "carrier_ratio_second_pulse": 1.9998176870883588,
+   "width_ratio": 1.9998167119810695,
+   "spacing_ratio": 1.999894093393242,
+   "energy_times_n_max_drift": 7.598807016984122e-05,
+   "wave_energy_first_last": [
+    168.38342819396377,
+    84.29960303376869
+   ],
+   "index_first_last": [
+    0.6954655997986952,
+    1.3890454889115833
+   ],
+   "arrivals": [
+    0.0,
+    48.0
+   ],
+   "observed": [
+    {
+     "centroid": -0.027946241308594716,
+     "width": 4.242256762875557,
+     "carrier": 0.5000537139881321
+    },
+    {
+     "centroid": 47.96950699923271,
+     "width": 4.242604025449329,
+     "carrier": 0.5000455823830235
+    }
+   ],
+   "emitted": [
+    {
+     "centroid": -99.99999874970968,
+     "width": 2.1213227879634373,
+     "carrier": 0.9999999999999827
+    },
+    {
+     "centroid": -76.00000125029034,
+     "width": 2.1213227879634373,
+     "carrier": 0.9999999999999696
+    }
+   ],
+   "dx": 0.05040322580645162,
+   "dt": 0.005166330645161291,
+   "length": 249.1803732852768,
+   "passed": true
+  },
+  "constant_index": {
+   "expected_one_plus_z": 1.0,
+   "carrier_ratio": 0.9999984020828907,
+   "carrier_ratio_second_pulse": 0.9999984017796179,
+   "width_ratio": 0.9999983577601127,
+   "spacing_ratio": 1.0000000000057767,
+   "energy_times_n_max_drift": 2.986499936241671e-13,
+   "wave_energy_first_last": [
+    208.93705171775858,
+    208.93705171782088
+   ],
+   "index_first_last": [
+    1.0,
+    1.0
+   ],
+   "arrivals": [
+    38.629436111989065,
+    62.629436111989065
+   ],
+   "observed": [
+    {
+     "centroid": 38.588953449260906,
+     "width": 2.121319304242541,
+     "carrier": 1.0000015979196453
+    },
+    {
+     "centroid": 62.58895094881888,
+     "width": 2.1213191380724967,
+     "carrier": 1.000001598222906
+    }
+   ],
+   "emitted": [
+    {
+     "centroid": -99.99999874970968,
+     "width": 2.1213227879634373,
+     "carrier": 0.9999999999999827
+    },
+    {
+     "centroid": -76.00000125029034,
+     "width": 2.1213227879634373,
+     "carrier": 0.9999999999999696
+    }
+   ],
+   "dx": 0.03125,
+   "dt": 0.0078125,
+   "length": 200.62943611198907,
+   "passed": true
+  },
+  "passed": true
+ },
+ "T2": {
+  "free": {
+   "energy_drift": 1.5687451337953462e-12,
+   "photon_number_drift": 1.0153655694011832e-11,
+   "exchange_rate_residual": 8.640447605483246e-07,
+   "reduced_mechanics_max_dn": 6.672440377997191e-12,
+   "field_gain_minus_wave_loss": 1.5693709272082947e-12,
+   "n_range": [
+    1.0,
+    28.289049322988298
+   ],
+   "wave_energy_range": [
+    0.0071140602040867095,
+    0.20125
+   ],
+   "passed": true
+  },
+  "restoring": {
+   "energy_drift": 2.346345340242806e-12,
+   "photon_number_drift": 1.9834245357230884e-11,
+   "exchange_rate_residual": 9.102815411149474e-07,
+   "reduced_mechanics_max_dn": 1.446842645691504e-11,
+   "field_gain_minus_wave_loss": 2.3764354011205406e-12,
+   "n_range": [
+    0.9996214474000367,
+    5.597253519999797
+   ],
+   "wave_energy_range": [
+    0.03595513393864595,
+    0.20132621256091643
+   ],
+   "passed": true
+  },
+  "passed": true
+ },
+ "T3": {
+  "H0_equivalent_kms_Mpc": 74.6181329414794,
+  "alpha_per_Mpc": 0.0002488993,
+  "omega_m": 0.3,
+  "rows": [
+   {
+    "z": 0.1,
+    "DL_PF1_Mpc": 421.21933562994093,
+    "DL_FLRW_Mpc": 431.81187034796704,
+    "delta_mu_PF1_minus_FLRW": -0.05393138977278566,
+    "time_dilation_PF1": 1.1,
+    "energy_loss_factor": 1.1
+   },
+   {
+    "z": 0.5,
+    "DL_PF1_Mpc": 2443.54910665577,
+    "DL_FLRW_Mpc": 2657.6069214775493,
+    "delta_mu_PF1_minus_FLRW": -0.18234837479144908,
+    "time_dilation_PF1": 1.5,
+    "energy_loss_factor": 1.5
+   },
+   {
+    "z": 1.0,
+    "DL_PF1_Mpc": 5569.699718399733,
+    "DL_FLRW_Mpc": 6198.708203902631,
+    "delta_mu_PF1_minus_FLRW": -0.23234705742977235,
+    "time_dilation_PF1": 2.0,
+    "energy_loss_factor": 2.0
+   },
+   {
+    "z": 1.5,
+    "DL_PF1_Mpc": 9203.428172298547,
+    "DL_FLRW_Mpc": 10234.439391425218,
+    "delta_mu_PF1_minus_FLRW": -0.23057215602957032,
+    "time_dilation_PF1": 2.5,
+    "energy_loss_factor": 2.5
+   }
+  ],
+  "redshift_law": "1+z = exp(alpha D) for a linear index; b = 1 exactly",
+  "passed": true
+ },
+ "scope": "PF-1 internal-consistency tests of the proposed propagation-field wave law; not an observational validation.",
+ "protocol_sha256": "481d7e06481cecbb7820fe6ecda9744a100ba43af14072f31f5832902964373b",
+ "source_sha256": {
+  "wave.py": "36b3a49e65586963601dc881ede22fb3ba53eb5996f586b073c728b13c72505e",
+  "pf1.py": "621055bdfab72de10058eb89789005a37bb5bd61209341d9a922d726884f03fa"
+ },
+ "all_passed": true,
+ "runtime_seconds": 2.6137030124664307
+}

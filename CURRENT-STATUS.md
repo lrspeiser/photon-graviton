@@ -4,6 +4,7 @@
 - the capture-to-orbit test and its consistency revision after review
 - the self-illumination pilot
 - repository consolidation
+- the evolving propagation field PF-1, first of the three branches opened by the project owner
 
 Dated history is in [CHANGELOG.md](CHANGELOG.md); standing rules and the foundational index are in [research_plan/START-HERE.md](research_plan/START-HERE.md). All samples below were exposed during development. No genuinely untouched holdout has been opened.
 
@@ -20,6 +21,7 @@ We study a hypothetical nonexpanding universe with our observed data. Photons tr
 | **Coma Plummer support candidate** | n=5 polytrope, P=Kρ^(6/5), fitted to six weak-shear bins | χ² 3.727 versus NFW 3.855 (total gravity only). A universal K implies a∝M^2 for the isolated profile (regression-checked). A baryon-coupled solve is still needed |
 | **Capture-to-orbit RB-1** ([report](research_work/results/capture-to-orbit/report.md)), archived failed candidate | Receiver-assisted s-wave threshold production of one fixed-mass species on ordinary baryons, orbit-averaged in a fixed potential; nothing fitted | **Not promoted, revised after review.** SPARC test RMSE 45.40; Milky Way fiducials 24.98 / 7.76. Supply multiplier 4.1×10^9 (spectrum extending below threshold) or 8.2×10^9 (threshold-cut). Receivers would lose a median 34× their angular momentum even at ideal efficiency. The tested prescription fails at the reference inventory; other capture interactions are not excluded |
 | **Self-illumination pilot** ([report](research_work/results/self-illumination/report.md)), diagnostic | RB-1 reaction under companion fields derived from declared rotating emitters; no co-rotation factor | **Does not relieve the RB-1 debt.** Receiver drag falls to κ=0.19–0.51 in a flat-rotation disk, and to zero inside a rigid ring. Emitters pay instead. With every companion absorbed internally, the combined baryonic loss is a median 19× the baryons' angular momentum at ideal efficiency (above 1 in 146 of 149). Threshold-cut efficiency is still halved |
+| **Evolving propagation field PF-1** ([report](research_work/results/propagation-field/report.md)), diagnostic | One wave law ∂t(n∂tA) − (c²/n)∇²A = 0 for electromagnetic and gravitational waves, with a dynamical homogeneous index n(t); matter standards uncoupled by postulate | **Internally consistent, not promoted.** One driven simulation gives 1+z in carrier, envelope width and pulse spacing to 1.1×10^-4, with photon number conserved, and the radiation–index exchange closes to 10^-12. Its light sector is exactly coasting FLRW with a = n. Pantheon+ Δχ² = +35 against flat FLRW (Ω_m = 0.3) at equal freedom. Nonexpansion rests on a clock/ruler completion that no tested coupling supplies |
 
 ## Frozen benchmarks
 
@@ -27,7 +29,7 @@ We study a hypothetical nonexpanding universe with our observed data. Photons tr
 - **Milky Way.** 38 Eilers circular-speed bins (5–25 kpc) and two ordinary-matter baselines. Fiducial R_d=2.6 kpc, luminosity factor 1, plus 18 declared sensitivities. These are Jeans-inferred speeds, not individual orbits.
 - **Coma.** Six reconstructed Kubo weak-shear bins in dimensionless units: shape only, no matched gas/star model.
 - **Lenses.** Six SLACS systems with stellar motions. Freely fitted companion profiles give total χ² 26.49 versus free NFW 49.71. These are fits, not a test of the one-third law.
-- **Redshift.** 164 groups: cross-validated cz-residual RMS 448.38 km/s for constant conversion versus 448.09 for the linear control. Nearby fit c·α = 74.62 km/s/Mpc versus H0 = 74.92 for the expansion comparator on the same inputs. The supernova-brightness optimum is 70.48, with redshift-dependent residuals.
+- **Redshift.** 164 groups: cross-validated cz-residual RMS 448.38 km/s for constant conversion versus 448.09 for the linear control. Nearby fit c·α = 74.62 km/s/Mpc versus H0 = 74.92 for the expansion comparator on the same inputs. Supernova brightness prefers c·α = 70.48 (z < 0.3) or 69.76 (all z ≥ 0.1), with redshift-dependent residuals.
 
 Current rotation scores on those benchmarks (RMSE km/s):
 
@@ -47,30 +49,35 @@ Current rotation scores on those benchmarks (RMSE km/s):
 4. **Outer profile.** The MOND-guided construction completes its exterior arbitrarily beyond the last measured radius. RB-1 shows a forward model can instead return a convergent (r^-4) profile on its own radial domain, independent of which radii are sampled.
 5. **Joint lensing.** No single response yet predicts motions and lensing together. Only two of six lens systems improve under the transferred profile.
 6. **Clusters.** No matched gas-plus-star and fixed-inventory cluster transfer exists. The Coma fits cover total gravity only.
-7. **Redshift and timing.** Conversion microphysics is missing. Whole-photon mixing does not redshift survivors, supernova event stretching is unexplained, and the 74.62 versus 70.48 tension stands.
+7. **Redshift and timing.** Conversion microphysics is missing, and whole-photon mixing does not redshift survivors. PF-1 derives redshift and event stretching together from one wave law. It does so only with clocks and rulers that no tested matter completion provides, and its light sector is that of a coasting expanding universe. The brightness tension stands: 74.62 from galaxy groups against 69.8–70.5 from supernovae, with high-redshift residuals.
 8. **Stability.** Collective stability of any reservoir is untested.
 
-## Next experiment: a decision for the project owner
+## Next experiments (chosen by the project owner, 13 September 2026)
 
-RB-1 and the self-illumination pilot pin down what a viable capture channel would have to do:
+The owner opened three theoretical branches, in priority order. Observations are held fixed, not the assumption that companions must become slow particles by colliding with ordinary matter. The one-third exponent, spherical geometry and effective-mass mapping remain reference hypotheses. Measured observations are kept apart from model-inferred quantities.
 
-1. **Momentum.** Retained products must be born without drawing their motion from ordinary matter. Products born co-moving with rotating receivers or emitters make the baryons fund the reservoir's angular momentum, or the escaping flux's. The median reference inventory is 12.5× the baryonic mass.
-2. **Energy.** A non-rotating receiver population avoids a net angular-momentum debt but not the drag: at ideal efficiency it drains about 2κ·M_ret/M_rec ≈ 40× the receivers' own kinetic energy (a first-order estimate, not yet computed per galaxy).
-3. **Efficiency.** The retained fraction must be far above the (v_esc/c)^3 ≈ 10^-9–10^-10 of a threshold reaction with a smooth spectrum.
+1. **PF-1, evolving propagation field.** Done: internally consistent, not promoted (table above).
+2. **RPG-1, radiation-polarized gravity.** Next. The field equation ∇·[μ(|∇Φ|/a*)∇Φ] = 4πGρ_b with μ = x/(1+x), solved on the frozen baryons. Its report must include:
+   - a declared lensing response;
+   - the field energy and the outer boundary;
+   - a test of the link a* = ξc|d ln n/dt| to PF-1. At the archived constants ξ ≈ 0.118, and a linear index makes a* grow as 1+z.
+3. **CR-1, driven collective reservoir.** A Gross–Pitaevskii–Poisson reservoir fed by a derived source, started from a counted seed. The test is whether it grows, disperses, overheats or collapses.
 
-Candidates that could meet these, each needing its own declared protocol:
-- a collective or field-mediated capture in which the reservoir, not ordinary matter, is the receiver, with its own drag and contraction accounting;
-- a two-step absorb-and-emit process with an internal Q-value, which addresses item 3 but must still meet items 1 and 2.
+RB-1 and the self-illumination pilot still constrain any capture channel:
+- retained products must not draw their motion from ordinary matter;
+- the retained fraction must far exceed (v_esc/c)^3.
 
-The cheap next check is item 2's per-galaxy kinetic-energy budget. The baryon-coupled Coma polytrope with one universal K stays queued. Keep the original and MOND-guided branches side by side, and freeze any new rule before touching an unexposed sample.
+The owner does not want the per-galaxy kinetic-energy estimate to become the main direction. The baryon-coupled Coma polytrope with one universal K stays queued. Keep the original and MOND-guided branches side by side, and freeze any new rule before touching an unexposed sample.
 
 ## Reproduce
 
 ```sh
-python research_work/run_checks.py                          # 49 jobs, fresh output directory
-python research_work/results/capture-to-orbit/runner.py     # RB-1 populations and predictions, about 7 min on 8 workers
-python research_work/results/capture-to-orbit/revision.py   # RB-1 consistency revision, about 20 s
-python research_work/results/self-illumination/pilot.py     # self-illumination pilot, about 4 min
+python research_work/run_checks.py                            # 51 jobs, fresh output directory
+python research_work/results/capture-to-orbit/runner.py       # RB-1 populations and predictions, about 7 min on 8 workers
+python research_work/results/capture-to-orbit/revision.py     # RB-1 consistency revision, about 20 s
+python research_work/results/self-illumination/pilot.py       # self-illumination pilot, about 4 min
+python research_work/results/propagation-field/pf1.py         # PF-1 T1-T3
+python research_work/results/propagation-field/brightness.py  # PF-1 T4 on exposed Pantheon+
 ```
 
-The three latest canonical diagnostics (`mond-inventory.py`, `mond-cross-scale.py` and `coma-inverse.py` in `research_work/results/companion-extensions/`) regenerate into a fresh directory. Each compares its numbers with the archived result and overwrites the archive only with `--canonical`. The comparison is exact, with one exception: the Coma flexible-mixture fits have non-unique weights and stop at slightly different points under different BLAS threading. Their χ² agrees to about 10^-5 and their derived masses to about 0.1%, so they use documented tolerances; the Coma LP extrema and single-Plummer fit are compared exactly. The working paper is v1.5 (`output/pdf/theory-basis.pdf`). Later results are in the supplement `papers/cumulative-time-companions/cross-scale-performance.md`.
+The latest canonical diagnostics regenerate into a fresh directory: `mond-inventory.py`, `mond-cross-scale.py` and `coma-inverse.py` in `research_work/results/companion-extensions/`, and the two PF-1 scripts. Each compares its numbers with the archived result and overwrites the archive only with `--canonical`. The comparison is exact, with one exception: the Coma flexible-mixture fits have non-unique weights and stop at slightly different points under different BLAS threading. Their χ² agrees to about 10^-5 and their derived masses to about 0.1%, so they use documented tolerances; the Coma LP extrema and single-Plummer fit are compared exactly. The working paper is v1.5 (`output/pdf/theory-basis.pdf`). Later results are in the supplement `papers/cumulative-time-companions/cross-scale-performance.md`.

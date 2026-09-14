@@ -110,6 +110,8 @@ def main():
         ('companion-extensions/mond-cross-scale.py', []),
         ('companion-extensions/coma-inverse.py', []),
         ('capture-to-orbit/checks.py', []),
+        ('propagation-field/pf1.py', []),
+        ('propagation-field/brightness.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

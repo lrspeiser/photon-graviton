@@ -6,6 +6,13 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Evolving propagation field PF-1.** This is the first of three branches opened by the project owner.
+  - One driven simulation reproduces the redshift, envelope stretch and pulse spacing, all equal to 1+z within 1.1×10⁻⁴, with photon number conserved.
+  - The exchange between radiation and the index closes to 10⁻¹².
+  - The light sector is exactly a coasting expanding universe with a = n. The claim of nonexpansion therefore rests on clock and ruler couplings that no tested completion supplies.
+  - On Pantheon+, Δχ² = +35 against flat FLRW (Ω_m = 0.3) at equal freedom.
+
+  Not promoted. See the [report](research_work/results/propagation-field/report.md).
 - **Self-illumination pilot.** Companion fields derived from declared rotating emitters, with no co-rotation factor. Receiver drag falls to κ=0.19–0.51 in a flat-rotation disk, but the emitters pay instead. With every companion absorbed internally, the combined baryonic loss at ideal efficiency is a median 19× the baryons' angular momentum (above 1 in 146 of 149). This does not relieve the RB-1 debt. See the [report](research_work/results/self-illumination/report.md).
 - `70cebef` **RB-1 consistency revision.** Review found three problems:
   - mixed incident spectra

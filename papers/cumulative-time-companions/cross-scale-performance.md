@@ -576,3 +576,9 @@ The [pilot](../../research_work/results/self-illumination/report.md) replaces th
 In a flat-rotation disk, receiver drag falls to κ = 0.19–0.51. The emitters instead lose their own r v per unit emitted energy, and the threshold-cut spectrum still loses half its slow products. By angular-momentum conservation, if every companion is absorbed internally, emitters and receivers together lose what the products carry away. Across the galaxy sample at ideal efficiency, that floor is a median 19× the baryons' angular momentum (above 1 in 146 of 149), against 33.7 for the external bath.
 
 Self-illumination therefore shifts the RB-1 momentum debt onto the emitters but does not relieve it. A viable channel must produce retained mass without drawing its motion from ordinary matter, and must retain far more than (v_esc/c)^3. PDF v1.5 predates this supplement.
+
+## Evolving propagation field (PF-1)
+
+The [PF-1 test](../../research_work/results/propagation-field/report.md) implements the owner's wave law ∂t(n∂tA) − (c²/n)∇²A = 0 for electromagnetic and gravitational waves, with a dynamical homogeneous index. One driven finite-difference run in material-clock time reproduces 1+z in the carrier, envelope width and pulse spacing to 1.1×10⁻⁴, with wave energy × n constant to 7.6×10⁻⁵. The coupled index–radiation integration conserves energy and photon number to about 10⁻¹¹.
+
+Maxwell's equations are conformally invariant, so this radiation sector is exactly that of FLRW with a = n. A linear index gives the coasting law D_L = (1+z) ln(1+z)/α. On exposed Pantheon+ data that law scores χ² 871.55, against 836.51 for flat FLRW with Ω_m = 0.3 at equal freedom. Nonexpansion is carried entirely by the matter standards, and every completion tested in the repository fails there. PF-1 is not promoted. PDF v1.5 predates this supplement.
