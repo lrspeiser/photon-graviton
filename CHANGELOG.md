@@ -6,6 +6,14 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Radiation-polarized gravity RPG-1.** This is the second of the owner's three branches. It solves the AQUAL equation with μ = x/(1+x) and the archived a* on the frozen SPARC and Milky Way baryons, using an axisymmetric solver validated against exact solutions.
+  - Rotation matches algebraic simple MOND, with slightly worse RMSE.
+  - The Milky Way vertical force gets worse, with RMS rising from 15.6 to 42.0 Msun/pc².
+  - The declared lensing response predicts only 0.35–0.74 of the SLACS Einstein radii.
+  - The field energy diverges logarithmically, and ξ = 0.118.
+  - The declared convergence gate failed in one of its three galaxies.
+
+  Not promoted. See the [report](research_work/results/radiation-polarized-gravity/report.md).
 - **Evolving propagation field PF-1.** This is the first of three branches opened by the project owner.
   - One driven simulation reproduces the redshift, envelope stretch and pulse spacing, all equal to 1+z within 1.1×10⁻⁴, with photon number conserved.
   - The exchange between radiation and the index closes to 10⁻¹².

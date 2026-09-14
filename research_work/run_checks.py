@@ -112,6 +112,7 @@ def main():
         ('capture-to-orbit/checks.py', []),
         ('propagation-field/pf1.py', []),
         ('propagation-field/brightness.py', []),
+        ('radiation-polarized-gravity/checks.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

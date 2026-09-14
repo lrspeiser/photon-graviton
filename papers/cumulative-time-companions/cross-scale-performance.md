@@ -582,3 +582,14 @@ Self-illumination therefore shifts the RB-1 momentum debt onto the emitters but 
 The [PF-1 test](../../research_work/results/propagation-field/report.md) implements the owner's wave law ∂t(n∂tA) − (c²/n)∇²A = 0 for electromagnetic and gravitational waves, with a dynamical homogeneous index. One driven finite-difference run in material-clock time reproduces 1+z in the carrier, envelope width and pulse spacing to 1.1×10⁻⁴, with wave energy × n constant to 7.6×10⁻⁵. The coupled index–radiation integration conserves energy and photon number to about 10⁻¹¹.
 
 Maxwell's equations are conformally invariant, so this radiation sector is exactly that of FLRW with a = n. A linear index gives the coasting law D_L = (1+z) ln(1+z)/α. On exposed Pantheon+ data that law scores χ² 871.55, against 836.51 for flat FLRW with Ω_m = 0.3 at equal freedom. Nonexpansion is carried entirely by the matter standards, and every completion tested in the repository fails there. PF-1 is not promoted. PDF v1.5 predates this supplement.
+
+## Radiation-polarized gravity (RPG-1)
+
+The [RPG-1 test](../../research_work/results/radiation-polarized-gravity/report.md) replaces the reservoir with a nonlinear field response, ∇·[μ(|∇Φ|/a*)∇Φ] = 4πGρ_b with μ = x/(1+x). It uses the archived a*, solved on the frozen baryons by an axisymmetric solver that reproduces the exact Kuzmin-disk solution to 0.14%.
+
+- **Rotation.** SPARC RMSE is 22.16 / 29.42 / 16.90 km/s, against 21.28 / 28.32 / 16.30 for the algebraic relation on the same baryons. Milky Way rotation is 9.89 / 13.70 km/s.
+- **Vertical force.** K_z at 1.1 kpc is over-predicted: RMS 42.0 against 15.6 Msun/pc² for baryons alone.
+- **Lensing.** Under the declared response (Φ = Ψ) in PF-1 geometry, SLACS Einstein radii are only 0.35–0.48 of observed with Chabrier masses and 0.56–0.74 with Salpeter, because g_N ≈ 10 a* there.
+- **Field energy.** It grows by M v_f²/3 per e-fold of radius without limit.
+
+RPG-1 is not promoted. PDF v1.5 predates this supplement.
