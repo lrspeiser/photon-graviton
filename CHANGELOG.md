@@ -6,19 +6,40 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Model contract revised after the owner's review.** Co-scaling is now a separately labeled branch, not a declaration that the nonexpanding requirement is met; the fixed-ruler branch stays open. The contract changes these claims:
+  - "the only remaining alternative" becomes "one completion compatible with the kinematics of the tested family; other completions have not been exhaustively classified";
+  - "one field does all three jobs" is marked as a goal, with no complete action yet;
+  - the energy-density argument for baryon dominance is replaced by a requirement for coupling equations;
+  - the claim that lensing and inner dynamics agree becomes a reason for a joint fit with identical conventions;
+  - the claim of no Big Bang singularity is withdrawn.
+
+  See [research_plan/model-contract.md](research_plan/model-contract.md).
+- **Co-scaling completion CC-1** (separately labeled branch; protocol 6ce4c7a). A consistency calculation with matter and light coupled universally to g_m = −c²dt² + n(t)²dx².
+  - **The six declared checks pass.** The coupling determines the clock factor. The measured redshift is n_o/n_e in both frames to 7×10⁻⁹. Atomic clocks and their ratios stay constant to 2×10⁻⁸. Cavities keep 2ℓ/c. Light and gravitational waves arrive together. D_L = (1+z)²D_A holds.
+  - **The energy ledger closes to 9×10⁻¹⁵.** Radiation and free motion pay the field; bound systems and rest mass do not.
+  - **History.** Ruler counts grow. With V = 0 the history is coasting with a turnaround. If the field's energy gravitates, a recombination-hot turnaround needs field energy of at least 5.5% of 3H²c²/8πG.
+
+  See the [report](research_work/results/clock-completion/report.md).
+- **Clock-gradient check CG-0** (protocol bc4a64b). One scalar's gradient cannot be both the rolling frame and the galaxy force:
+  - carrying the total acceleration, X turns negative at every SLACS Einstein radius, inside 2.0 kpc in the Milky Way, in 23 SPARC galaxies and in the Solar System;
+  - a limiting gradient leaves a constant 7×10⁻¹⁰ m/s² force;
+  - only an excess-only, two-field form keeps the frame defined.
+
+  So clock-field gravity needs a vector or a second field. See the [report](research_work/results/clock-gradient/report.md).
+- **CR-1 ground-reference check (post hoc, requested in review).** The excess energies are recomputed against ground states relaxed afresh on each run's grid and on refined grids. See the addendum to the [CR-1 report](research_work/results/collective-reservoir/report.md).
 - **Driven collective reservoir CR-1.** This is the third of the owner's branches: a coherent Gross–Pitaevskii–Poisson condensate, seeded with 10⁹ Msun in the Milky Way potential and fed by the conversion law's photon source.
   - **Supply.** The derived source falls short of the reference inventory in 10 Gyr by 1.3×10⁸ for the light constituent and 4.5×10¹¹ for the heavy one.
   - **Dynamics at the required rate.** Growth into the occupied mode is adiabatic, but the condensate contracts: it reaches 59% of the inventory at 7.4 kpc for the light constituent, and drops below the grid within 1 Gyr for the heavy one. The heavy constituent's analytic endpoint is a stable 1.6 pc soliton. Photon-shaped growth overheats or runs away.
   - **Numerics.** The first execution took 9.8 hours and hid its NaNs. The driver now fails fast, logs its progress and calibrates its time step on energy conservation. That calibration removed a 1.4% energy artifact.
 
   No channel supports a reservoir in this implementation. Zero self-interaction, the collection region and the 10 Gyr span are labeled assumptions. See the [report](research_work/results/collective-reservoir/report.md).
-- **RPG-1 lens-geometry diagnostic (post hoc).** With flat FLRW angular distances and the published population masses, RPG-1's predicted SLACS Einstein radii rise to 0.48–0.58 of the observed values with Chabrier masses and 0.75–0.89 with Salpeter. The declared rule still fails. The remaining need, 2.1–2.7 times the Chabrier mass, is comparable to the archive's masses fitted to the same lenses' inner stellar motions. Lensing and inner dynamics therefore share one inner-mass shortfall. See the addendum to the [RPG-1 report](research_work/results/radiation-polarized-gravity/report.md).
+- **RPG-1 lens-geometry diagnostic (post hoc).** With flat FLRW angular distances and the published population masses, RPG-1's predicted SLACS Einstein radii rise to 0.48–0.58 of the observed values with Chabrier masses and 0.75–0.89 with Salpeter. The declared rule still fails. The remaining need, 2.1–2.7 times the Chabrier mass, is comparable to the archive's masses fitted to the same lenses' inner stellar motions. Those masses were fitted in a different geometry, so the similarity calls for a joint fit with identical conventions. (Corrected after review; this entry first said lensing and inner dynamics share one inner-mass shortfall.) See the addendum to the [RPG-1 report](research_work/results/radiation-polarized-gravity/report.md).
 - `15bd1f6` **Model contract.** A proposal that one clock field does all three jobs:
   - PF-1's propagation field, completed by matter scales that co-evolve with it, so that the measured redshift survives with every clock ratio fixed;
   - its static galaxy response, which gives RPG-1's equation with a* tied to the redshift rate;
   - the companion condensate, reassigned to inner-core and cluster mass.
 
-  The contract separates each branch's general hypothesis from its first implementation, and asks the owner to decide what "nonexpanding" means (decision D1). See [research_plan/model-contract.md](research_plan/model-contract.md).
+  The contract separates each branch's general hypothesis from its first implementation, and asks the owner to decide what "nonexpanding" means (decision D1). See [research_plan/model-contract.md](research_plan/model-contract.md). (Superseded the same day: the owner's review led to the revision entered above.)
 
 ## 2026-09-13, after the Codex handover
 

@@ -592,7 +592,7 @@ The [RPG-1 test](../../research_work/results/radiation-polarized-gravity/report.
 - **Lensing.** Under the declared response (Φ = Ψ) in PF-1 geometry, SLACS Einstein radii are only 0.35–0.48 of observed with Chabrier masses and 0.56–0.74 with Salpeter, because g_N ≈ 10 a* there.
 - **Field energy.** It grows by M v_f²/3 per e-fold of radius without limit.
 
-A post-hoc diagnostic uses flat FLRW distances and the published masses. It raises the lens ratios to 0.48–0.89. The remaining need, 2.1–2.7 times the Chabrier mass, is comparable to the masses fitted to the same lenses' inner stellar motions. RPG-1 is not promoted. PDF v1.5 predates this supplement.
+A post-hoc diagnostic uses flat FLRW distances (an adopted comparison, not a history the model selects) and the published masses. It raises the lens ratios to 0.48–0.89. The remaining need, 2.1–2.7 times the Chabrier mass, is comparable to the masses fitted to the same lenses' inner stellar motions. Those were fitted in a different geometry, so the similarity calls for a joint fit with identical geometry and mass conventions; it does not show that lensing and dynamics agree. RPG-1 is not promoted. PDF v1.5 predates this supplement.
 
 ## Driven collective reservoir (CR-1)
 
@@ -602,4 +602,25 @@ The [CR-1 test](../../research_work/results/collective-reservoir/report.md) evol
 - **Growth into the occupied mode, at the required rate.** The growth is adiabatic, but it contracts the condensate. The light constituent reaches 59% of the inventory at 7.4 kpc. The heavy one drops below the grid within about 1 Gyr; at the full inventory it would be a stable 1.6 pc soliton.
 - **Growth that follows the photons.** It overheats or runs away.
 
-A supported condensate with self-interaction is untested. PDF v1.5 predates this supplement.
+A post-hoc check recomputed the ground-state references at the exact checkpoint masses. On each run's own grid they hold, and the grids' discretization error, at most 7×10⁻⁴ of the ground energy, changes no conclusion. A supported condensate with self-interaction is untested. PDF v1.5 predates this supplement.
+
+## Co-scaling completion (CC-1), a separately labeled branch
+
+The [CC-1 calculation](../../research_work/results/clock-completion/report.md) couples matter and light universally to g_m = −c²dt² + n(t)²dx², with every mass, charge and dimensionless constant fixed in local units. It is a consistency calculation. It does not claim that the nonexpanding premise is met: separations counted in atomic rulers grow.
+
+- **Measured redshift.** The coupling fixes the atomic clock factor, so 1+z = n_o/n_e in both the field frame and the conformal frame, to 7×10⁻⁹ numerically, with nothing counted twice.
+- **Local measurements.** Clock ratios, local light speed and cavity round trips stay constant. Pulse durations stretch by 1+z.
+- **Gravitational waves.** They arrive with the light. As tensor waves of g_m, their siren distance equals D_L; under PF-1's P2 it would be D_L/(1+z).
+- **Energy.** The ledger closes: radiation and free motion pay the field, while bound systems and rest mass do not.
+- **History.** Distances follow from n(t), which only the field's dynamics can supply. With V = 0 the history is coasting and turns around at a finite n. A turnaround as hot as recombination needs field energy at least 1,100 times the radiation's; if that energy gravitates, it is at least 5.5% of 3H²c²/8πG.
+
+PDF v1.5 predates this supplement.
+
+## Clock-gradient check (CG-0)
+
+The [CG-0 check](../../research_work/results/clock-gradient/report.md) asks whether one scalar's gradient can serve both as the rolling frame, which requires X = (χ̇/c)² − |∇χ|² > 0, and as the galaxy force. With the archived link a* = 0.118c²α, X vanishes at 8.5a*.
+- **Carrying the total acceleration,** the gradient turns spacelike at every SLACS Einstein radius, inside 2.0 kpc in the Milky Way, in 23 SPARC galaxies and in the Solar System.
+- **A limiting gradient** keeps X positive but drives it to zero at the same places, and leaves a constant 7×10⁻¹⁰ m/s² force, far above the Cassini bound.
+- **Only a two-field form** that carries the excess keeps the frame defined.
+
+Clock-field gravity therefore needs an independent vector or a second field. PDF v1.5 predates this supplement.

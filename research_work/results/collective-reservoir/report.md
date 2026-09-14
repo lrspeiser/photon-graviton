@@ -139,9 +139,41 @@ Channel C tests only dynamics and cannot support formation on its own.
   - any channel in which something other than the products absorbs the photon's momentum. Channel A records the kinematics for when the products do.
 - **Unresolved is not collapsed.** A nonrelativistic solver stopping on an unresolved core is not a simulation of black-hole formation. The heavy endpoint is a stable soliton at 25% of the Kaup limit.
 
+## Addendum: the ground-state reference (post hoc, requested in review)
+
+Each excess energy E_exc = (E − g)/|g| used as g the lower of two variational upper bounds:
+- the checkpoint density relaxed in imaginary time;
+- the soliton of that mass placed in the baryonic potential.
+
+[ground-check.py](ground-check.py) recomputes g for the final and the largest-excess checkpoint of every run, at the exact checkpoint mass.
+- **Starting shapes.** Two: the scaled soliton, and an exponential of the checkpoint's size.
+- **Grids.** The run's own grid, and a refined grid of 8,191 points spanning 25 times the smaller of the checkpoint's and the soliton's half-mass radius.
+
+Results are in [ground-check.json](ground-check.json).
+
+| Constituent | Run, checkpoint | E_exc archived | Fresh reference, same grid | Refined grid |
+|---|---|---|---|---|
+| 1.34×10⁻²⁴ eV | A, B1, B2 at 10 Gyr | 5.7×10⁻⁷ | 6.3×10⁻⁷ | 6.8×10⁻⁷ |
+| | C, into the mode, 10 Gyr | 1.519×10⁻⁴ | 1.519×10⁻⁴ | 1.41×10⁻⁴ |
+| | C, photon-shaped, stop | 1.088 | 1.087 | 1.088 |
+| 10⁻²² eV | A, B1, B2 at 10 Gyr | 2.356×10⁻⁷ | 2.356×10⁻⁷ | −9.1×10⁻⁶ |
+| | C, into the mode, stop | 1.315×10⁻⁵ | 1.315×10⁻⁵ | −6.8×10⁻⁴ |
+| | C, photon-shaped, stop | 0.0768 | 0.0768 | 0.0765 |
+
+- **On each run's own grid, the archived references hold.** Fresh relaxations lower g by at most 6×10⁻⁸ of |g| (the light condensate's unsourced runs). Every other excess is reproduced to its quoted digits.
+- **Across grids, discretization dominates.** The run grids' energies differ from the refined grids' by 5×10⁻⁸ to 7×10⁻⁴ of |g|. The difference is largest for the compact heavy states, where the runs stopped under the declared resolution rule. An excess must therefore be measured on the grid its state was computed on. A negative value against the refined grid means the coarse grid's energy is biased low, not that a state lies below its ground state.
+- **Error estimate.** As a continuum statement, the heavy condensate's excess at its into-the-mode stopping point is known only to about 10⁻³ (on-grid 1.3×10⁻⁵), and its unsourced excess only to 10⁻⁵ (on-grid 2.4×10⁻⁷). Everything is far below the declared overheating limit of 0.1.
+- **No conclusion changes:**
+  - the unsourced runs stay stationary;
+  - the light condensate's growth into the mode is adiabatic (1.4–1.5×10⁻⁴);
+  - its photon-shaped growth is unbound;
+  - the heavy photon-shaped run heats to 7.6–7.7%.
+- **One correction in this check's own first execution.** It rounded masses to six digits, which merged runs whose masses differ by 1.6×10⁻⁶. The table comes from the corrected execution, at exact masses.
+
 ## Reproduce
 
 ```sh
-python research_work/results/collective-reservoir/cr1.py      # about 50 minutes; fails fast and logs progress
-python research_work/results/collective-reservoir/checks.py   # suite job: V1-V4 and both seeds against the archive, about 3 minutes
+python research_work/results/collective-reservoir/cr1.py            # about 50 minutes; fails fast and logs progress
+python research_work/results/collective-reservoir/checks.py         # suite job: V1-V4 and both seeds against the archive, about 3 minutes
+python research_work/results/collective-reservoir/ground-check.py   # post-hoc ground-reference check, about 5 minutes
 ```

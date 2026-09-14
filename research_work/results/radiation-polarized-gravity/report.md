@@ -170,9 +170,11 @@ RPG-1 is not promoted, for five reasons:
 
 [geometry-diagnostic.py](geometry-diagnostic.py) recomputes the Einstein radii with flat FLRW angular distances (H0 = 70, Ω_m = 0.3) and the published population masses. Those are the conventions the masses were derived in. Results are in [geometry-diagnostic.json](geometry-diagnostic.json).
 
+The FLRW history here is an adopted comparison. Co-scaling rulers ([CC-1](../clock-completion/report.md)) give FLRW-form distances for whatever history n(t) the field's dynamics supply; they do not select this one.
+
 - **The ratios rise, but the rule still fails.** RPG-1's ratios go from 0.35–0.47 to 0.48–0.58 with Chabrier masses, and from 0.56–0.73 to 0.75–0.89 with Salpeter.
-- **Lensing and inner dynamics agree.** In that geometry RPG-1 needs 2.1–2.7 times the Chabrier mass (1.2–1.5 times Salpeter). That is comparable to the archive's masses fitted to the same lenses' inner stellar motions (2.3–2.7 times Chabrier, in its regular-optics geometry). So lensing and inner dynamics point to the same extra inner mass rather than contradicting each other.
-- **The deficit is an inner mass budget.** It needs a heavier IMF or an extra compact component. PF-1's static Euclidean distances make it about 30% worse in Einstein radius.
+- **A reason for a joint fit, not agreement.** In that geometry RPG-1 needs 2.1–2.7 times the Chabrier mass (1.2–1.5 times Salpeter). The archive's masses fitted to the same lenses' inner stellar motions are 2.3–2.7 times Chabrier, but they were derived in a regular-optics geometry with its own mass conventions. The similarity is therefore a reason to fit stellar motions and lensing jointly, with identical geometry and mass conventions; it is not evidence that they agree. (Revised 14 September 2026 after review; the first version of this addendum said they agree.)
+- **In these conventions the deficit is an inner mass budget.** It needs a heavier IMF or an extra compact component. PF-1's static Euclidean distances make it about 30% worse in Einstein radius.
 
 ## Reproduce
 

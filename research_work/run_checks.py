@@ -114,6 +114,8 @@ def main():
         ('propagation-field/brightness.py', []),
         ('radiation-polarized-gravity/checks.py', []),
         ('collective-reservoir/checks.py', []),
+        ('clock-completion/cc1.py', []),
+        ('clock-gradient/timelike.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

@@ -5,7 +5,7 @@
 - the self-illumination pilot
 - repository consolidation
 - the three branches the project owner opened: the evolving propagation field PF-1, radiation-polarized gravity RPG-1 and the driven collective reservoir CR-1
-- a [model contract](research_plan/model-contract.md) proposing one field that connects them, awaiting the owner's decision D1
+- after the owner's review of the [model contract](research_plan/model-contract.md), which was revised accordingly: the separately labeled co-scaling branch CC-1 and the clock-gradient check CG-0
 
 Dated history is in [CHANGELOG.md](CHANGELOG.md); standing rules and the foundational index are in [research_plan/START-HERE.md](research_plan/START-HERE.md). All samples below were exposed during development. No genuinely untouched holdout has been opened.
 
@@ -23,8 +23,10 @@ We study a hypothetical nonexpanding universe with our observed data. Photons tr
 | **Capture-to-orbit RB-1** ([report](research_work/results/capture-to-orbit/report.md)), archived failed candidate | Receiver-assisted s-wave threshold production of one fixed-mass species on ordinary baryons, orbit-averaged in a fixed potential; nothing fitted | **Not promoted, revised after review.** SPARC test RMSE 45.40; Milky Way fiducials 24.98 / 7.76. Supply multiplier 4.1×10^9 (spectrum extending below threshold) or 8.2×10^9 (threshold-cut). Receivers would lose a median 34× their angular momentum even at ideal efficiency. The tested prescription fails at the reference inventory; other capture interactions are not excluded |
 | **Self-illumination pilot** ([report](research_work/results/self-illumination/report.md)), diagnostic | RB-1 reaction under companion fields derived from declared rotating emitters; no co-rotation factor | **Does not relieve the RB-1 debt.** Receiver drag falls to κ=0.19–0.51 in a flat-rotation disk, and to zero inside a rigid ring. Emitters pay instead. With every companion absorbed internally, the combined baryonic loss is a median 19× the baryons' angular momentum at ideal efficiency (above 1 in 146 of 149). Threshold-cut efficiency is still halved |
 | **Evolving propagation field PF-1** ([report](research_work/results/propagation-field/report.md)), diagnostic | One wave law ∂t(n∂tA) − (c²/n)∇²A = 0 for electromagnetic and gravitational waves, with a dynamical homogeneous index n(t); matter standards uncoupled by postulate | **Internally consistent, not promoted.** One driven simulation gives 1+z in carrier, envelope width and pulse spacing to 1.1×10^-4, with photon number conserved, and the radiation–index exchange closes to 10^-12. Its light sector is exactly coasting FLRW with a = n. Pantheon+ Δχ² = +35 against flat FLRW (Ω_m = 0.3) at equal freedom. Nonexpansion rests on a clock/ruler completion that no tested coupling supplies |
-| **Radiation-polarized gravity RPG-1** ([report](research_work/results/radiation-polarized-gravity/report.md)), diagnostic | AQUAL field equation ∇·[μ(\|∇Φ\|/a*)∇Φ] = 4πGρ_b, μ = x/(1+x), archived a* frozen, solved on the frozen baryons; declared lensing Φ = Ψ in PF-1 geometry; link a* = ξc\|d ln n/dt\| | **Not promoted.** Rotation matches algebraic simple MOND on the same baryons, slightly worse in RMSE (SPARC 22.16 / 29.42 / 16.90; Milky Way 9.89 / 13.70). The Milky Way vertical force at 1.1 kpc worsens (RMS 42.0 against 15.6 Msun/pc² for baryons). SLACS Einstein radii are 0.35–0.48 of observed with Chabrier masses and 0.56–0.74 with Salpeter, failing the declared rule. With FLRW distances (post hoc) they are 0.48–0.89, and the remaining need matches the lenses' inner-dynamics masses. Field energy diverges logarithmically; ξ = 0.118. The declared convergence gate failed (bulge galaxies, up to 1.6 km/s) |
-| **Driven collective reservoir CR-1** ([report](research_work/results/collective-reservoir/report.md)), diagnostic | One coherent spherical Gross–Pitaevskii–Poisson condensate with no self-interaction, for two constituent masses; a 10⁹ Msun counted seed in the Milky Way, fed by the conversion law's photon source collected inside r₉₉ | **Does not support a reservoir in this implementation.** In 10 Gyr the derived source adds 1.6×10³ Msun (light constituent) or 0.5 Msun (heavy), 10⁸ to 5×10¹¹ times short of the 2.1×10¹¹ Msun reference. At the required rate, the heavy constituent contracts below resolution within 0.4–1 Gyr (analytic endpoint: a 1.6 pc soliton; rotation RMSE 110 km/s). The light one grows 123× without overheating but reaches 59% of the inventory, and photon-shaped growth disperses. Zero self-interaction, the collection region and the 10 Gyr span are labeled assumptions |
+| **Radiation-polarized gravity RPG-1** ([report](research_work/results/radiation-polarized-gravity/report.md)), diagnostic | AQUAL field equation ∇·[μ(\|∇Φ\|/a*)∇Φ] = 4πGρ_b, μ = x/(1+x), archived a* frozen, solved on the frozen baryons; declared lensing Φ = Ψ in PF-1 geometry; link a* = ξc\|d ln n/dt\| | **Not promoted.** Rotation matches algebraic simple MOND on the same baryons, slightly worse in RMSE (SPARC 22.16 / 29.42 / 16.90; Milky Way 9.89 / 13.70). The Milky Way vertical force at 1.1 kpc worsens (RMS 42.0 against 15.6 Msun/pc² for baryons). SLACS Einstein radii are 0.35–0.48 of observed with Chabrier masses and 0.56–0.74 with Salpeter, failing the declared rule. With FLRW distances (post hoc, an adopted comparison) they are 0.48–0.89. The archived inner-dynamics masses that the remaining need resembles were fitted in a different geometry, so only a joint fit with identical conventions can compare them. Field energy diverges logarithmically; ξ = 0.118. The declared convergence gate failed (bulge galaxies, up to 1.6 km/s) |
+| **Driven collective reservoir CR-1** ([report](research_work/results/collective-reservoir/report.md)), diagnostic | One coherent spherical Gross–Pitaevskii–Poisson condensate with no self-interaction, for two constituent masses; a 10⁹ Msun counted seed in the Milky Way, fed by the conversion law's photon source collected inside r₉₉ | **Does not support a reservoir in this implementation.** In 10 Gyr the derived source adds 1.6×10³ Msun (light constituent) or 0.5 Msun (heavy), 10⁸ to 5×10¹¹ times short of the 2.1×10¹¹ Msun reference. At the required rate, the heavy constituent contracts below resolution within 0.4–1 Gyr (analytic endpoint: a 1.6 pc soliton; rotation RMSE 110 km/s). The light one grows 123× without overheating but reaches 59% of the inventory, and photon-shaped growth disperses. Zero self-interaction, the collection region and the 10 Gyr span are labeled assumptions. A post-hoc check confirms the ground-state references on each run's grid |
+| **Co-scaling completion CC-1** ([report](research_work/results/clock-completion/report.md)), separately labeled branch | Matter and light coupled universally to g_m = −c²dt² + n(t)²dx²; the index's dynamics from L_n with V = 0; a consistency calculation with no fit | **Internally consistent; does not meet the nonexpanding premise.** All six declared checks pass. 1+z = n_o/n_e in both frames to 7×10⁻⁹; atomic clocks and their ratios are constant to 2×10⁻⁸; cavities keep 2ℓ/c; light and gravitational waves arrive together; D_L = (1+z)²D_A; the energy ledger closes to 9×10⁻¹⁵. Ruler counts grow. The V = 0 history is coasting and turns around; a turnaround as hot as recombination needs field energy of at least 1,100 times the radiation's |
+| **Clock-gradient check CG-0** ([report](research_work/results/clock-gradient/report.md)), diagnostic | Can one scalar's gradient be both the rolling frame and the galaxy force? X = (χ̇/c)² − \|∇χ\|² with χ = ln n, three formulations | **Fails as one field.** If the field carries the total acceleration, X < 0 at every SLACS Einstein radius, inside 2.0 kpc in the Milky Way, in 23 SPARC galaxies and in the Solar System. A limiting gradient drives X to zero there and leaves a constant 7×10⁻¹⁰ m/s² force. Only an excess-only, two-field form keeps X/X₀ ≥ 0.986, and with the simple ν it breaks the Cassini bound |
 
 ## Frozen benchmarks
 
@@ -59,34 +61,33 @@ Current rotation scores on those benchmarks (RMSE km/s):
 5. **Joint lensing.** No single response yet predicts motions and lensing together.
    - Only two of six lens systems improve under the transferred profile.
    - RPG-1's declared response in PF-1 geometry gives 0.35–0.74 of the SLACS Einstein radii from population stellar masses; at those radii g_N ≈ 10 a*.
-   - With FLRW distances (post hoc) the lenses still need 2.1–2.7× Chabrier. That matches their inner-dynamics masses, so it is one inner-mass shortfall.
+   - With FLRW distances (post hoc) the lenses still need 2.1–2.7× Chabrier. The archived inner-dynamics masses are similar but were fitted in a different geometry. Whether lensing and dynamics share one shortfall needs a joint fit with identical geometry and mass conventions.
 6. **Clusters.** No matched gas-plus-star and fixed-inventory cluster transfer exists. The Coma fits cover total gravity only.
-7. **Redshift and timing.** Conversion microphysics is missing, and whole-photon mixing does not redshift survivors. PF-1 derives redshift and event stretching together from one wave law. It does so only with clocks and rulers that no tested matter completion provides, and its light sector is that of a coasting expanding universe. The brightness tension stands: 74.62 from galaxy groups against 69.8–70.5 from supernovae, with high-redshift residuals.
-8. **Stability.** CR-1 evolved a coherent seed for 10 Gyr. Without a source it stays stationary. At the required rate the heavy constituent contracts below resolution; its analytic endpoint is a stable 1.6 pc soliton at 25% of the Kaup limit, not a black hole. Photon-shaped growth disperses. A supported reservoir, with self-interaction or a mode population, is untested.
+7. **Redshift and timing.** Conversion microphysics is missing, and whole-photon mixing does not redshift survivors. PF-1 derives redshift and event stretching together from one wave law. It does so only with clocks and rulers that no tested matter completion provides, and its light sector is that of a coasting expanding universe. In the separately labeled co-scaling branch, CC-1 derives the measured redshift, event stretch and fixed clock ratios from an explicit coupling, but ruler counts grow and the history needs dynamics that are not yet declared. The brightness tension stands: 74.62 from galaxy groups against 69.8–70.5 from supernovae, with high-redshift residuals.
+8. **Stability.** CR-1 evolved a coherent seed for 10 Gyr. Without a source it stays stationary. At the required rate the heavy constituent contracts below resolution; its analytic endpoint is a stable 1.6 pc soliton at 25% of the Kaup limit, not a black hole. Photon-shaped growth disperses. A post-hoc check requested in review reproduces every archived excess energy on its own grid. The grids' discretization error, at most 7×10⁻⁴ of the ground energy for the most compact heavy state, is far below the 0.1 overheating limit, so no conclusion changes. A supported reservoir, with self-interaction or a mode population, is untested.
 9. **Vertical force.** Responses that repair Milky Way rotation over-predict K_z at 1.1 kpc: RPG-1 gives RMS 42.0 against 15.6 Msun/pc² for baryons alone, and the archived conservative completion went from 27.99 to 33.31.
 
 ## Next experiments
 
-All three branches the owner opened on 13 September have run, and none is promoted. Each first implementation was narrower than its general hypothesis; section 1 of the [model contract](research_plan/model-contract.md) separates the two.
+All three branches the owner opened on 13 September have run, and none is promoted.
 
-The model contract proposes connecting the branches through one clock field:
-- PF-1's propagation field, completed by matter scales that co-evolve with it;
-- its static response around galaxies, which is RPG-1's equation with a* tied to the redshift rate;
-- its condensate, which supplies only the inner-core and cluster mass that an acceleration-keyed response cannot.
+After the owner's review of the model contract on 14 September, co-scaling is investigated as a separately labeled branch. That is not a declaration that the nonexpanding requirement is met, and other completions are not excluded; the fixed-ruler branch stays open. The revised [model contract](research_plan/model-contract.md) separates results from goals:
+- **CC-1.** The co-scaling completion is internally consistent. Its history needs declared dynamics before any brightness comparison.
+- **CG-0.** One scalar cannot serve as both the rolling frame and the galaxy force, so clock-field gravity needs a named vector or second field.
+- **The unification of redshift, gravity and reservoir.** It remains a goal; no complete action exists.
 
-**Decision for the owner (D1).** Does "nonexpanding" allow matter's rulers to co-scale with the field? Galaxies stay fixed in the field's coordinates, but separations counted in rulers grow. Observationally that is identical to expansion with scale factor n(t).
-- **If yes,** the queue is:
-  1. CC-1, the clock completion with measured ratios;
-  2. CG-1, clock-field gravity with derived lensing;
-  3. CR-2, a supported condensate core.
-- **If ruler counts must stay fixed,** the first test is whether a screened field bends light toward galaxies at all.
+The queue, each item with its own declared protocol:
+1. **CR-2.** One declared repulsive support law with shared parameters, tested against a joint stellar-motion and lensing model with identical geometry and mass conventions. Support, supply and formation history are reported separately.
+2. **CG-1,** only with a named vector or second field. It tests the Milky Way's radial and vertical forces first, with a Solar System–safe interpolating function.
+3. **A declared history for the co-scaling branch,** then its brightness at equal freedom, with no imported distance history.
+4. **The fixed-ruler branch's first test:** whether a screened field can bend light toward galaxies at all.
 
 Standing constraints remain: retained products must not draw their motion from ordinary matter, and the retained fraction must far exceed (v_esc/c)^3. Keep the original and MOND-guided branches side by side, and freeze any new rule before touching an unexposed sample.
 
 ## Reproduce
 
 ```sh
-python research_work/run_checks.py                                                # 53 jobs, fresh output directory
+python research_work/run_checks.py                                                # 55 jobs, fresh output directory
 python research_work/results/capture-to-orbit/runner.py                           # RB-1 populations and predictions, about 7 min on 8 workers
 python research_work/results/capture-to-orbit/revision.py                         # RB-1 consistency revision, about 20 s
 python research_work/results/self-illumination/pilot.py                           # self-illumination pilot, about 4 min
@@ -96,12 +97,16 @@ python research_work/results/radiation-polarized-gravity/rpg1.py                
 python research_work/results/radiation-polarized-gravity/convergence.py           # RPG-1 post-hoc convergence diagnostic, about 5 min
 python research_work/results/radiation-polarized-gravity/geometry-diagnostic.py   # RPG-1 post-hoc lens-geometry diagnostic
 python research_work/results/collective-reservoir/cr1.py                          # CR-1, fails fast and logs progress
+python research_work/results/collective-reservoir/ground-check.py                 # CR-1 post-hoc ground-reference check, about 4 min
+python research_work/results/clock-completion/cc1.py                              # CC-1 co-scaling consistency calculation, about 3 min
+python research_work/results/clock-gradient/timelike.py                           # CG-0 clock-gradient check
 ```
 
 The latest canonical diagnostics regenerate into a fresh directory:
 - `mond-inventory.py`, `mond-cross-scale.py` and `coma-inverse.py` in `research_work/results/companion-extensions/`;
 - the two PF-1 scripts;
 - RPG-1's `rpg1.py`;
-- CR-1's `cr1.py`.
+- CR-1's `cr1.py`;
+- CC-1's `cc1.py` and CG-0's `timelike.py`.
 
 Each compares its numbers with the archived result and overwrites the archive only with `--canonical`. The comparison is exact, with one exception: the Coma flexible-mixture fits have non-unique weights and stop at slightly different points under different BLAS threading. Their χ² agrees to about 10^-5 and their derived masses to about 0.1%, so they use documented tolerances; the Coma LP extrema and single-Plummer fit are compared exactly. The working paper is v1.5 (`output/pdf/theory-basis.pdf`). Later results are in the supplement `papers/cumulative-time-companions/cross-scale-performance.md`.

@@ -1,0 +1,484 @@
+{
+ "branch": "co-scaling (separately labeled); a consistency calculation, not a claim that the nonexpanding premise is met",
+ "N1": {
+  "orbits": 3223,
+  "T": 20000.0,
+  "eccentricity": 0.3,
+  "omega_pre": 1.0000000000253375,
+  "omega_post": 0.9999999929891216,
+  "clock_factor": 0.9999999929637841,
+  "max_frequency_deviation": 4.768297456880788e-08,
+  "max_proper_size_deviation": 2.0810955847494483e-08,
+  "coordinate_size_ratio_post_to_pre": 0.5000000023270313,
+  "passed": true
+ },
+ "N2": {
+  "orbits": 3223,
+  "omega_eta_pre": 1.0000000000253375,
+  "omega_eta_post": 1.9999999859790962,
+  "clock_factor": 1.9999999859284212,
+  "max_deviation_of_omega_eta_over_n": 4.7682975234941694e-08,
+  "passed": true,
+  "max_crossing_time_difference_from_N1": 9.094947017729282e-09
+ },
+ "N3": {
+  "grid": {
+   "N": 2048,
+   "L": 160.0,
+   "dt": 0.05,
+   "pad": 2000.0,
+   "T": 40000.0
+  },
+  "eigenvalues": [
+   -0.6697771382138435,
+   -0.2748913487681812,
+   -0.1514546653888389
+  ],
+  "x2_of_states": [
+   1.191612419981087,
+   8.238526718174835,
+   27.826197574873966
+  ],
+  "w10_pre": 0.39488113540593783,
+  "w20_pre": 0.5183145848436812,
+  "w10_post": 0.39488113538137126,
+  "w20_post": 0.5183145848114248,
+  "splitting_offset": {
+   "w10": -1.1785786799389797e-05,
+   "w20": -1.5218289263985163e-05
+  },
+  "clock_factor": 0.9999999999377874,
+  "clock_ratio_pre": 1.3125838090767588,
+  "max_deviation": {
+   "w10": 6.83992629202379e-09,
+   "w20": 1.9710701404385134e-08,
+   "ratio": 1.2870775223383646e-08
+  },
+  "windows": [
+   {
+    "t_mid": -1000.0,
+    "n_mid": 1.0,
+    "w10": 0.39488113540593783,
+    "w20": 0.5183145848436812
+   },
+   {
+    "t_mid": 1000.0,
+    "n_mid": 1.001541333133436,
+    "w10": 0.3948811353649095,
+    "w20": 0.518314584690502
+   },
+   {
+    "t_mid": 3000.0,
+    "n_mid": 1.0138150398011616,
+    "w10": 0.39488113511970396,
+    "w20": 0.518314583735212
+   },
+   {
+    "t_mid": 5000.0,
+    "n_mid": 1.0380602337443565,
+    "w10": 0.394881134662494,
+    "w20": 0.5183145820404368
+   },
+   {
+    "t_mid": 7000.0,
+    "n_mid": 1.073679917822954,
+    "w10": 0.39488113411589726,
+    "w20": 0.5183145799770743
+   },
+   {
+    "t_mid": 9000.0,
+    "n_mid": 1.1197970171999845,
+    "w10": 0.3948811335761905,
+    "w20": 0.5183145779433618
+   },
+   {
+    "t_mid": 11000.0,
+    "n_mid": 1.175275975834908,
+    "w10": 0.3948811331387314,
+    "w20": 0.5183145762648746
+   },
+   {
+    "t_mid": 13000.0,
+    "n_mid": 1.2387507176420256,
+    "w10": 0.39488113283943005,
+    "w20": 0.5183145751341983
+   },
+   {
+    "t_mid": 15000.0,
+    "n_mid": 1.3086582838174552,
+    "w10": 0.39488113270498,
+    "w20": 0.5183145746273372
+   },
+   {
+    "t_mid": 17000.0,
+    "n_mid": 1.3832773180720472,
+    "w10": 0.39488113272763753,
+    "w20": 0.5183145747129201
+   },
+   {
+    "t_mid": 19000.0,
+    "n_mid": 1.4607704521360776,
+    "w10": 0.3948811328825783,
+    "w20": 0.5183145752948066
+   },
+   {
+    "t_mid": 21000.0,
+    "n_mid": 1.5392295478639224,
+    "w10": 0.3948811331334317,
+    "w20": 0.518314576242288
+   },
+   {
+    "t_mid": 23000.0,
+    "n_mid": 1.6167226819279528,
+    "w10": 0.3948811334461465,
+    "w20": 0.5183145774249113
+   },
+   {
+    "t_mid": 25000.0,
+    "n_mid": 1.6913417161825448,
+    "w10": 0.3948811337882461,
+    "w20": 0.5183145787215893
+   },
+   {
+    "t_mid": 27000.0,
+    "n_mid": 1.7612492823579744,
+    "w10": 0.39488113413725473,
+    "w20": 0.5183145800364524
+   },
+   {
+    "t_mid": 29000.0,
+    "n_mid": 1.8247240241650917,
+    "w10": 0.3948811344667078,
+    "w20": 0.5183145812815451
+   },
+   {
+    "t_mid": 31000.0,
+    "n_mid": 1.8802029828000155,
+    "w10": 0.39488113476119313,
+    "w20": 0.5183145823957658
+   },
+   {
+    "t_mid": 33000.0,
+    "n_mid": 1.926320082177046,
+    "w10": 0.3948811349899558,
+    "w20": 0.5183145833085283
+   },
+   {
+    "t_mid": 35000.0,
+    "n_mid": 1.9619397662556435,
+    "w10": 0.3948811351738807,
+    "w20": 0.518314584025675
+   },
+   {
+    "t_mid": 37000.0,
+    "n_mid": 1.9861849601988384,
+    "w10": 0.39488113530479524,
+    "w20": 0.5183145845219931
+   },
+   {
+    "t_mid": 39000.0,
+    "n_mid": 1.998458666866564,
+    "w10": 0.39488113537139363,
+    "w20": 0.518314584771469
+   },
+   {
+    "t_mid": 41000.0,
+    "n_mid": 2.0,
+    "w10": 0.39488113538137126,
+    "w20": 0.5183145848114248
+   }
+  ],
+  "passed": true
+ },
+ "N4": {
+  "n_o_over_n_e": 2.0,
+  "propagation_factor": {
+   "field": 1.999999999999999,
+   "conformal": 0.999999999999977
+  },
+  "clock_factor": {
+   "N1": 0.9999999929637841,
+   "N2": 1.9999999859284212,
+   "N3": 0.9999999999377874
+  },
+  "one_plus_z": {
+   "field frame, classical atom (N1)": 1.999999985927567,
+   "field frame, quantum clock (N3)": 1.9999999998755738,
+   "conformal frame, classical atom (N2)": 1.9999999859283752
+  },
+  "deviation": {
+   "field frame, classical atom (N1)": -7.0362164983350795e-09,
+   "field frame, quantum clock (N3)": -6.221312354171005e-11,
+   "conformal frame, classical atom (N2)": -7.035812377154116e-09
+  },
+  "passed": true
+ },
+ "N5": {
+  "toy": {
+   "M": 10000000.0,
+   "ndot0": 0.001,
+   "modes": {
+    "k": [
+     1.0,
+     2.0,
+     3.0
+    ],
+    "W": [
+     1.0,
+     0.6,
+     0.4
+    ]
+   },
+   "particles": {
+    "m": [
+     1.0,
+     1.0
+    ],
+    "p": [
+     3.0,
+     0.01
+    ]
+   },
+   "pair": {
+    "mu": 1.0,
+    "kc": 1e-07,
+    "r": 0.001
+   }
+  },
+  "H0": 11.162277658918942,
+  "t_forward": 883.2968837767451,
+  "deltas_n_1_to_2": {
+   "field": 2.3595395212648125,
+   "radiation": -1.0000000000000089,
+   "pair": -3.300724019735142e-13,
+   "free_relativistic": -1.359502022436385,
+   "free_nonrelativistic": -3.749882818637751e-05
+  },
+  "field_gain_over_radiation_loss": 2.3595395212647916,
+  "turnaround": {
+   "n_min": 0.4960312524966676,
+   "n_min_analytic": 0.49603125249669416,
+   "t": -814.3014365605862,
+   "one_plus_z_max": 2.0160020058548995
+  },
+  "checks": {
+   "energy_drift": 1.6209256159527285e-14,
+   "ledger_closure": 8.762884082513016e-15,
+   "mode_invariant_W_drift": 3.774758283725532e-14,
+   "pair_orbit_average_drift": 6.589840007009684e-09,
+   "turnaround_error": 5.362377208939506e-14
+  },
+  "passed": true
+ },
+ "N6": {
+  "max_ndot_ell_over_n": 1e-07,
+  "epochs": [
+   {
+    "n": 1.0,
+    "round_trip_over_2ell": 1.0000000000000033,
+    "comoving_ends_round_trip_over_2ell": 1.0000000000000133
+   },
+   {
+    "n": 1.0061558297024311,
+    "round_trip_over_2ell": 0.9999999999999991,
+    "comoving_ends_round_trip_over_2ell": 1.006155845447209
+   },
+   {
+    "n": 1.0244717418524232,
+    "round_trip_over_2ell": 0.9999999999999994,
+    "comoving_ends_round_trip_over_2ell": 1.024471773474943
+   },
+   {
+    "n": 1.054496737905816,
+    "round_trip_over_2ell": 0.9999999999999972,
+    "comoving_ends_round_trip_over_2ell": 1.0544967857422345
+   },
+   {
+    "n": 1.0954915028125263,
+    "round_trip_over_2ell": 0.9999999999999993,
+    "comoving_ends_round_trip_over_2ell": 1.095491567277347
+   },
+   {
+    "n": 1.1464466094067263,
+    "round_trip_over_2ell": 0.9999999999999991,
+    "comoving_ends_round_trip_over_2ell": 1.1464466905454167
+   },
+   {
+    "n": 1.2061073738537635,
+    "round_trip_over_2ell": 0.9999999999999978,
+    "comoving_ends_round_trip_over_2ell": 1.2061074713710722
+   },
+   {
+    "n": 1.2730047501302266,
+    "round_trip_over_2ell": 0.9999999999999981,
+    "comoving_ends_round_trip_over_2ell": 1.2730048636440168
+   },
+   {
+    "n": 1.3454915028125263,
+    "round_trip_over_2ell": 0.9999999999999981,
+    "comoving_ends_round_trip_over_2ell": 1.3454916307237024
+   },
+   {
+    "n": 1.4217827674798846,
+    "round_trip_over_2ell": 0.9999999999999993,
+    "comoving_ends_round_trip_over_2ell": 1.4217829077970245
+   },
+   {
+    "n": 1.5,
+    "round_trip_over_2ell": 1.0000000000000018,
+    "comoving_ends_round_trip_over_2ell": 1.5000001501757634
+   },
+   {
+    "n": 1.5782172325201154,
+    "round_trip_over_2ell": 0.999999999999998,
+    "comoving_ends_round_trip_over_2ell": 1.5782173885963824
+   },
+   {
+    "n": 1.6545084971874737,
+    "round_trip_over_2ell": 0.9999999999999996,
+    "comoving_ends_round_trip_over_2ell": 1.6545086544938414
+   },
+   {
+    "n": 1.7269952498697736,
+    "round_trip_over_2ell": 0.9999999999999996,
+    "comoving_ends_round_trip_over_2ell": 1.7269954034127297
+   },
+   {
+    "n": 1.7938926261462367,
+    "round_trip_over_2ell": 1.0000000000000018,
+    "comoving_ends_round_trip_over_2ell": 1.7938927714712896
+   },
+   {
+    "n": 1.8535533905932737,
+    "round_trip_over_2ell": 1.0000000000000013,
+    "comoving_ends_round_trip_over_2ell": 1.8535535219125396
+   },
+   {
+    "n": 1.9045084971874737,
+    "round_trip_over_2ell": 0.9999999999999976,
+    "comoving_ends_round_trip_over_2ell": 1.9045086088590364
+   },
+   {
+    "n": 1.945503262094184,
+    "round_trip_over_2ell": 0.9999999999999998,
+    "comoving_ends_round_trip_over_2ell": 1.9455033508129407
+   },
+   {
+    "n": 1.9755282581475768,
+    "round_trip_over_2ell": 0.9999999999999993,
+    "comoving_ends_round_trip_over_2ell": 1.975528318900619
+   },
+   {
+    "n": 1.9938441702975689,
+    "round_trip_over_2ell": 1.0000000000000027,
+    "comoving_ends_round_trip_over_2ell": 1.9938442013226472
+   },
+   {
+    "n": 2.0,
+    "round_trip_over_2ell": 1.0,
+    "comoving_ends_round_trip_over_2ell": 2.0
+   }
+  ],
+  "max_deviation": 3.3306690738754696e-15,
+  "passed": true
+ },
+ "derived": {
+  "O1_measured_redshift": "1+z = n_o/n_e in both frames (N4); the field frame puts it in propagation, the conformal frame in the clocks",
+  "O2_clock_ratio": {
+   "w20_over_w10_pre": 1.3125838090767588,
+   "max_deviation": 1.2870775223383646e-08
+  },
+  "O3_pulse_stretch": {
+   "emitted_before_ramp_at": -1000.0,
+   "arrival": 29715.7287525381,
+   "stretch": 1.9999999996798579,
+   "n_o_over_n_e": 2.0
+  },
+  "O4_local_light_speed": "n dx/dt = 1 on null curves of g_m at every epoch; see N6 for cavities",
+  "O5_gravitational_waves": {
+   "modes": {
+    "field": {
+     "omega_pre": 0.9999999999999282,
+     "omega_post": 0.49999999999996436,
+     "amplitude_pre": 0.9999999999990632,
+     "amplitude_post": 0.9999999999322463,
+     "amplitude_ratio_post_to_pre": 0.9999999999331831
+    },
+    "tensor": {
+     "omega_pre": 0.9999999999999282,
+     "omega_post": 0.4999999999999618,
+     "amplitude_pre": 0.9999999999990632,
+     "amplitude_post": 0.500000000651171,
+     "amplitude_ratio_post_to_pre": 0.5000000006516394
+    },
+    "P2": {
+     "omega_pre": 0.9999999999999282,
+     "omega_post": 0.49999999999996436,
+     "amplitude_pre": 0.9999999999990632,
+     "amplitude_post": 0.9999999999322463,
+     "amplitude_ratio_post_to_pre": 0.9999999999331831
+    }
+   },
+   "arrival_time_difference": "zero: both laws share the null cones of g_m",
+   "siren_distance_over_D_L": {
+    "tensor": "1",
+    "P2": "1/(1+z)"
+   },
+   "P2_over_tensor_amplitude": 1.9999999972598086
+  },
+  "O6_distances_coasting": [
+   {
+    "z": 0.1,
+    "D_M": 0.09531017980432487,
+    "D_L": 0.10484119778475737,
+    "D_A": 0.08664561800393168,
+    "duality": 1.0
+   },
+   {
+    "z": 0.5,
+    "D_M": 0.4054651081081644,
+    "D_L": 0.6081976621622466,
+    "D_A": 0.2703100720721096,
+    "duality": 1.0
+   },
+   {
+    "z": 1.0,
+    "D_M": 0.6931471805599453,
+    "D_L": 1.3862943611198906,
+    "D_A": 0.34657359027997264,
+    "duality": 1.0
+   },
+   {
+    "z": 2.0,
+    "D_M": 1.0986122886681098,
+    "D_L": 3.295836866004329,
+    "D_A": 0.3662040962227033,
+    "duality": 1.0
+   }
+  ],
+  "O8_history_V0": {
+   "T0_K": 2.7255,
+   "u_gamma_J_per_m3": 4.1747952637856344e-14,
+   "present_rate_km_s_Mpc": 70.48,
+   "unit_3H2c2_over_8piG_J_per_m3": 8.385863280888862e-10,
+   "minimum_turnaround": {
+    "recombination, 3000 K": {
+     "one_plus_z_max": 1100.7154650522841,
+     "field_over_radiation_energy": 1099.7154650522841,
+     "q0": -0.0004546630613912739,
+     "field_energy_density_J_per_m3": 4.591086915012092e-11,
+     "over_3H2c2_over_8piG": 0.05474793424637682
+    },
+    "nucleosynthesis, 8e8 K": {
+     "one_plus_z_max": 293524124.0139424,
+     "field_over_radiation_energy": 293524123.0139424,
+     "q0": -1.7034375058033986e-09,
+     "field_energy_density_J_per_m3": 1.2254031185654387e-05,
+     "over_3H2c2_over_8piG": 14612.724743057719
+    }
+   }
+  }
+ },
+ "all_passed": true,
+ "runtime_seconds": 171.2134292125702
+}
