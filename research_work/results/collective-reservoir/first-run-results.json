@@ -1,0 +1,814 @@
+{
+ "validation": {
+  "V1": {
+   "relative_errors": {
+    "E": 1.1223683499039794e-05,
+    "mu": 2.3661334918045895e-05,
+    "r_half": -2.1535051619836487e-05
+   },
+   "virial": 1.865610399140259e-05,
+   "passed": true
+  },
+  "V2": {
+   "dynamical_time": 69.09667485011504,
+   "steps": 138193,
+   "energy_drift": 2.1531054716916742e-10,
+   "density_change": 6.66551997279065e-06,
+   "passed": true
+  },
+  "V3": {
+   "remaining": 5.099665393765101e-06,
+   "reflected_inside": 3.1391799121890166e-06,
+   "absorbed": 0.9999949003346661,
+   "passed": true
+  },
+  "V4": {
+   "mass_error": -1.9484414082171497e-13,
+   "excess_over_ground": -1.356716609836295e-05,
+   "ledger_error": -1.5489972251792712e-11,
+   "passed": true
+  }
+ },
+ "validation_passed": true,
+ "milky_way": {
+  "L_bol_Lsun": 179103376834.0828,
+  "starlight_over_cmb_at_8kpc": 6.280273745947943,
+  "reference_inventory_Msun": 209261954469.3885
+ },
+ "masses": {
+  "1.34e-24": {
+   "m_eV": 1.34e-24,
+   "kappa_kpc_kms": 1430.7107137530436,
+   "grid": {
+    "R_kpc": 800.0,
+    "N": 8191,
+    "dr_kpc": 0.09765625,
+    "absorb_from_kpc": 600.0
+   },
+   "seed": {
+    "mass_Msun": 999999999.9999999,
+    "r_half_kpc": 11.409258404974866,
+    "mu": -23007.762555927253,
+    "energy": -22849172160873.99,
+    "quanta": 8.324001004809173e+98
+   },
+   "source": {
+    "collection_rate_Msun_per_Gyr": 160.81385243424137,
+    "starlight_share": 0.5329351439774089,
+    "collected_in_10Gyr_at_initial_rate_Msun": 1608.1385243424136,
+    "required_rate_factor_K": 129504984.37598789,
+    "reference_inventory_Msun": 209261954469.3885
+   },
+   "analytic_endpoint": {
+    "kaup_limit_Msun": 63127000400791.945,
+    "reference_over_kaup": 0.00331493581416492,
+    "self_gravitating_r_half_kpc": 8.926951323658834,
+    "schwarzschild_radius_kpc": 2.0028109439188914e-05,
+    "rotation": {
+     "reservoir_speed_range_kms": [
+      169.5606965003103,
+      235.71278378022456
+     ],
+     "total_RMSE_kms": 57.40209974491276
+    }
+   },
+   "runs": {
+    "A_no_bound_source": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 999999999.9999999,
+       "r_half_kpc": 11.409258404974866,
+       "central_density": 270886.9230785253,
+       "energy": -22849172160873.99,
+       "excess_over_ground_over_abs": 1.7095805364401368e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 999840130.8349005,
+       "r_half_kpc": 11.410066807801995,
+       "central_density": 270504.02230497374,
+       "energy": -22535045548659.67,
+       "excess_over_ground_over_abs": 0.013589042347932205,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 159869.1654682879
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 999629027.0540555,
+       "r_half_kpc": 11.409945720458895,
+       "central_density": 270753.8319519469,
+       "energy": -22532299917061.57,
+       "excess_over_ground_over_abs": 0.013499492562776216,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 370972.94667711837
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 999417729.8121667,
+       "r_half_kpc": 11.409893892774134,
+       "central_density": 270662.925011784,
+       "energy": -22527084901925.594,
+       "excess_over_ground_over_abs": 0.013517849612046185,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 582270.1889344313
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 999206250.1112238,
+       "r_half_kpc": 11.41008694744395,
+       "central_density": 270559.10438117804,
+       "energy": -22521786528142.008,
+       "excess_over_ground_over_abs": 0.013539684841829578,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 793749.8902487449
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 998994579.8213547,
+       "r_half_kpc": 11.409920572175855,
+       "central_density": 270467.1907800373,
+       "energy": -22516463014744.082,
+       "excess_over_ground_over_abs": 0.013562441853251237,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 1005420.1804767809
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 998994579.8213547,
+     "growth_factor": 0.9989945798213549,
+     "escaped_fraction": 0.001005420180476781,
+     "mass_ledger_error": 1.831646892242134e-12,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       9.434443772498842,
+       14.153486418716986
+      ],
+      "total_RMSE_kms": 52.01637947509856
+     },
+     "seconds": 38.79723262786865
+    },
+    "B1_mode": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 999999999.9999999,
+       "r_half_kpc": 11.409258404974866,
+       "central_density": 270886.9230785253,
+       "energy": -22849172160873.99,
+       "excess_over_ground_over_abs": 1.7095805364401368e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 999840452.5538797,
+       "r_half_kpc": 11.410066792068031,
+       "central_density": 270504.14017405565,
+       "energy": -22535053458808.47,
+       "excess_over_ground_over_abs": 0.013589015702964157,
+       "injected_Msun": 321.62770486849854,
+       "absorbed_Msun": 159869.0735096934
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 999629670.8082927,
+       "r_half_kpc": 11.409945687642507,
+       "central_density": 270754.0793312271,
+       "energy": -22532315874021.66,
+       "excess_over_ground_over_abs": 0.01349943364869422,
+       "injected_Msun": 643.2554097370064,
+       "absorbed_Msun": 370972.4464513351
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 999418695.9013505,
+       "r_half_kpc": 11.409893844059225,
+       "central_density": 270663.32302782196,
+       "energy": -22527108950900.547,
+       "excess_over_ground_over_abs": 0.01351775668472457,
+       "injected_Msun": 964.8831146055179,
+       "absorbed_Msun": 582268.9807438891
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 999207538.8267865,
+       "r_half_kpc": 11.410086881905414,
+       "central_density": 270559.6623032052,
+       "energy": -22521818684168.93,
+       "excess_over_ground_over_abs": 0.013539557499549403,
+       "injected_Msun": 1286.5108194739096,
+       "absorbed_Msun": 793747.6826448094
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 998996191.4504664,
+       "r_half_kpc": 11.409920490280314,
+       "central_density": 270467.91597353324,
+       "energy": -22516503293785.652,
+       "excess_over_ground_over_abs": 0.013562279649965052,
+       "injected_Msun": 1608.1385243425643,
+       "absorbed_Msun": 1005416.6863005055
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 998996191.4504664,
+     "growth_factor": 0.9989961914504665,
+     "escaped_fraction": 0.0010054150694537997,
+     "mass_ledger_error": -1.7573233926668764e-12,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       9.43445140062135,
+       14.153497877003671
+      ],
+      "total_RMSE_kms": 52.0163785719847
+     },
+     "seconds": 40.7164306640625
+    },
+    "B2_local": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 999999999.9999999,
+       "r_half_kpc": 11.409258404974866,
+       "central_density": 270886.9230785253,
+       "energy": -22849172160873.99,
+       "excess_over_ground_over_abs": 1.7095805364401368e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 999840452.5596931,
+       "r_half_kpc": 11.410066828740005,
+       "central_density": 270504.13894533564,
+       "energy": -22535053466314.492,
+       "excess_over_ground_over_abs": 0.013589015380183953,
+       "injected_Msun": 321.627704868471,
+       "absorbed_Msun": 159869.06836556265
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 999629670.8226817,
+       "r_half_kpc": 11.409945635416424,
+       "central_density": 270754.08154781116,
+       "energy": -22532315876674.402,
+       "excess_over_ground_over_abs": 0.01349943354685173,
+       "injected_Msun": 643.2554097369455,
+       "absorbed_Msun": 370972.4334431122
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 999418695.9235479,
+       "r_half_kpc": 11.409893882457947,
+       "central_density": 270663.321529789,
+       "energy": -22527108959404.492,
+       "excess_over_ground_over_abs": 0.013517756334391371,
+       "injected_Msun": 964.883114605462,
+       "absorbed_Msun": 582268.960670966
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 999207538.8574377,
+       "r_half_kpc": 11.41008686811654,
+       "central_density": 270559.6629891881,
+       "energy": -22521818688683.47,
+       "excess_over_ground_over_abs": 0.013539557332282143,
+       "injected_Msun": 1286.510819473831,
+       "absorbed_Msun": 793747.6548762709
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 998996191.4894345,
+       "r_half_kpc": 11.409920480664365,
+       "central_density": 270467.916549335,
+       "energy": -22516503300523.28,
+       "excess_over_ground_over_abs": 0.013562279393537565,
+       "injected_Msun": 1608.138524342377,
+       "absorbed_Msun": 1005416.6509989717
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 998996191.4894345,
+     "growth_factor": 0.9989961914894346,
+     "escaped_fraction": 0.0010054150341523224,
+     "mass_ledger_error": 1.9092292059212927e-12,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       9.434451407535104,
+       14.15349788459394
+      ],
+      "total_RMSE_kms": 52.016378571424134
+     },
+     "seconds": 42.79468393325806
+    },
+    "C_B1_required_rate": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 999999999.9999999,
+       "r_half_kpc": 11.409258404974866,
+       "central_density": 270886.9230785253,
+       "energy": -22849172160873.99,
+       "excess_over_ground_over_abs": 1.7095805364401368e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 36071507605.04901,
+       "r_half_kpc": 9.983289536530815,
+       "central_density": 13535946.401468886,
+       "energy": -1026495718655801.2,
+       "excess_over_ground_over_abs": 0.012969786258389102,
+       "injected_Msun": 35074516864.17519,
+       "absorbed_Msun": 3009259.133991794
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 63075171953.68195,
+       "r_half_kpc": 8.98693436455797,
+       "central_density": 30091207.532092173,
+       "energy": -2120686585153825.5,
+       "excess_over_ground_over_abs": 0.011688372471663875,
+       "injected_Msun": 62086753567.97979,
+       "absorbed_Msun": 11581614.324893557
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 85589243179.74359,
+       "r_half_kpc": 8.421349677478107,
+       "central_density": 48439089.10012198,
+       "energy": -3278145975401247.0,
+       "excess_over_ground_over_abs": 0.011358962343284297,
+       "injected_Msun": 84613969975.5061,
+       "absorbed_Msun": 24726795.825331394
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 105231187513.56807,
+       "r_half_kpc": 7.794015076918697,
+       "central_density": 73563905.92460896,
+       "energy": -4492283483431608.5,
+       "excess_over_ground_over_abs": 0.010905174699161024,
+       "injected_Msun": 104273366593.04956,
+       "absorbed_Msun": 42179079.58146355
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 122819818863.86151,
+       "r_half_kpc": 7.40530242808997,
+       "central_density": 94366032.36374469,
+       "energy": -5755473836435658.0,
+       "excess_over_ground_over_abs": 0.010507059537618194,
+       "injected_Msun": 121883065527.15024,
+       "absorbed_Msun": 63246663.450536676
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 122819818863.86151,
+     "growth_factor": 122.81981886386153,
+     "escaped_fraction": 0.0005146898246655698,
+     "mass_ledger_error": 1.6180986911058428e-10,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       145.796125619313,
+       196.82032651185065
+      ],
+      "total_RMSE_kms": 28.848917302834423
+     },
+     "seconds": 49.48668932914734
+    },
+    "C_B2_required_rate": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 999999999.9999999,
+       "r_half_kpc": 11.409258404974866,
+       "central_density": 270886.9230785253,
+       "energy": -22849172160873.99,
+       "excess_over_ground_over_abs": 1.7095805364401368e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 63041974085972.164,
+       "r_half_kpc": 507.5246764793924,
+       "central_density": 7501288.925409032,
+       "energy": -1.6010854710760247e+19,
+       "excess_over_ground_over_abs": NaN,
+       "injected_Msun": 197590262410529.9,
+       "absorbed_Msun": 134549288324573.94
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 85793224431766.16,
+       "r_half_kpc": 245.993342351842,
+       "central_density": 494836152627729.2,
+       "energy": -7.287172142865973e+20,
+       "excess_over_ground_over_abs": NaN,
+       "injected_Msun": 373092905010880.2,
+       "absorbed_Msun": 287300680595184.4
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 153279521662227.56,
+       "r_half_kpc": 196.77987597837551,
+       "central_density": 745677869286428.6,
+       "energy": -1.354565493528619e+21,
+       "excess_over_ground_over_abs": NaN,
+       "injected_Msun": 559267105538420.8,
+       "absorbed_Msun": 405988583949637.75
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 187755735898316.06,
+       "r_half_kpc": 249.76261696239897,
+       "central_density": 1087900002502039.6,
+       "energy": -2.6024742630894e+21,
+       "excess_over_ground_over_abs": NaN,
+       "injected_Msun": 751476743418491.6,
+       "absorbed_Msun": 563722007703445.6
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 178032581647582.6,
+       "r_half_kpc": 246.28515547465616,
+       "central_density": 1371556910887733.2,
+       "energy": -3.634758241342235e+21,
+       "excess_over_ground_over_abs": NaN,
+       "injected_Msun": 952679284947834.4,
+       "absorbed_Msun": 774647703619608.9
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 178032581647582.6,
+     "growth_factor": 178032.5816475826,
+     "escaped_fraction": 0.8131245244169465,
+     "mass_ledger_error": 0.00031935712500000003,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       2156.4722888277865,
+       4194.817106798937
+      ],
+      "total_RMSE_kms": 2665.8347949802796
+     },
+     "seconds": 32737.904725551605
+    }
+   }
+  },
+  "1e-22": {
+   "m_eV": 1e-22,
+   "kappa_kpc_kms": 19.171523564290784,
+   "grid": {
+    "R_kpc": 20.0,
+    "N": 4095,
+    "dr_kpc": 0.0048828125,
+    "absorb_from_kpc": 15.0
+   },
+   "seed": {
+    "mass_Msun": 1000000000.0000001,
+    "r_half_kpc": 0.12841612917557438,
+    "mu": -233620.43012032073,
+    "energy": -219228535640927.1,
+    "quanta": 1.1154161346444292e+97
+   },
+   "source": {
+    "collection_rate_Msun_per_Gyr": 0.04636196868653102,
+    "starlight_share": 0.9986551090243501,
+    "collected_in_10Gyr_at_initial_rate_Msun": 0.46361968686531024,
+    "required_rate_factor_K": 449208608628.1584,
+    "reference_inventory_Msun": 209261954469.3885
+   },
+   "analytic_endpoint": {
+    "kaup_limit_Msun": 845901805370.612,
+    "reference_over_kaup": 0.2473832697138,
+    "self_gravitating_r_half_kpc": 0.00160292337967618,
+    "schwarzschild_radius_kpc": 2.0028109439188914e-05,
+    "rotation": {
+     "reservoir_speed_range_kms": [
+      190.42536400438414,
+      413.2571491646116
+     ],
+     "total_RMSE_kms": 109.94141643639121
+    }
+   },
+   "runs": {
+    "A_no_bound_source": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 1000000000.0000001,
+       "r_half_kpc": 0.12841612917557438,
+       "central_density": 117606175993.44772,
+       "energy": -219228535640927.1,
+       "excess_over_ground_over_abs": -1.425453119441721e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 999999999.7696046,
+       "r_half_kpc": 0.12849255968814666,
+       "central_density": 117333765592.05838,
+       "energy": -219228534423552.53,
+       "excess_over_ground_over_abs": 5.307494799360555e-09,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.2397278201008564
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 999999999.7488915,
+       "r_half_kpc": 0.12854548715752073,
+       "central_density": 117210250832.95349,
+       "energy": -219228532631938.06,
+       "excess_over_ground_over_abs": 1.3457784155077978e-08,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.2697418970290162
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 999999999.7291266,
+       "r_half_kpc": 0.12863979019154603,
+       "central_density": 116995633092.78323,
+       "energy": -219228526348057.66,
+       "excess_over_ground_over_abs": 4.210032997383615e-08,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.2987806699521467
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 999999999.7054026,
+       "r_half_kpc": 0.12874842403840928,
+       "central_density": 116707908873.82907,
+       "energy": -219228527742668.97,
+       "excess_over_ground_over_abs": 3.5713600955586886e-08,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.331749061555622
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 999999999.6832757,
+       "r_half_kpc": 0.1287575850268121,
+       "central_density": 116688920516.39151,
+       "energy": -219228531532443.66,
+       "excess_over_ground_over_abs": 1.8403155847465314e-08,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.36313476507196474
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 999999999.6832757,
+     "growth_factor": 0.9999999996832756,
+     "escaped_fraction": 3.631347650719647e-10,
+     "mass_ledger_error": 4.6410345478153695e-11,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       13.163750908476688,
+       28.56769737761588
+      ],
+      "total_RMSE_kms": 51.61633034772398
+     },
+     "seconds": 548.307165145874
+    },
+    "B1_mode": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 1000000000.0000001,
+       "r_half_kpc": 0.12841612917557438,
+       "central_density": 117606175993.44772,
+       "energy": -219228535640927.1,
+       "excess_over_ground_over_abs": -1.425453119441721e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 999999999.7696046,
+       "r_half_kpc": 0.12849255968814666,
+       "central_density": 117333765592.05838,
+       "energy": -219228534423552.53,
+       "excess_over_ground_over_abs": 5.307494799360555e-09,
+       "injected_Msun": 0.09272393737306701,
+       "absorbed_Msun": 0.2397278201008564
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 999999999.7488915,
+       "r_half_kpc": 0.12854548715752073,
+       "central_density": 117210250832.95349,
+       "energy": -219228532631938.06,
+       "excess_over_ground_over_abs": 1.3457784155077978e-08,
+       "injected_Msun": 0.18544787474611518,
+       "absorbed_Msun": 0.2697418970290162
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 999999999.7291266,
+       "r_half_kpc": 0.12863979019154603,
+       "central_density": 116995633092.78323,
+       "energy": -219228526348057.66,
+       "excess_over_ground_over_abs": 4.210032997383615e-08,
+       "injected_Msun": 0.2781718121192256,
+       "absorbed_Msun": 0.2987806699521467
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 999999999.7054026,
+       "r_half_kpc": 0.12874842403840928,
+       "central_density": 116707908873.82907,
+       "energy": -219228527742668.97,
+       "excess_over_ground_over_abs": 3.5713600955586886e-08,
+       "injected_Msun": 0.3708957494920906,
+       "absorbed_Msun": 0.331749061555622
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 999999999.6832757,
+       "r_half_kpc": 0.1287575850268121,
+       "central_density": 116688920516.39151,
+       "energy": -219228531532443.66,
+       "excess_over_ground_over_abs": 1.8403155847465314e-08,
+       "injected_Msun": 0.46361968686459987,
+       "absorbed_Msun": 0.36313476507196474
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 999999999.6832757,
+     "growth_factor": 0.9999999996832756,
+     "escaped_fraction": 3.631347649036083e-10,
+     "mass_ledger_error": -4.172093413864461e-10,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       13.163750908476688,
+       28.56769737761588
+      ],
+      "total_RMSE_kms": 51.61633034772398
+     },
+     "seconds": 611.7092456817627
+    },
+    "B2_local": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 1000000000.0000001,
+       "r_half_kpc": 0.12841612917557438,
+       "central_density": 117606175993.44772,
+       "energy": -219228535640927.1,
+       "excess_over_ground_over_abs": -1.425453119441721e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 2.0,
+       "mass_Msun": 999999999.842514,
+       "r_half_kpc": 0.1284925596898021,
+       "central_density": 117333765597.10432,
+       "energy": -219228534440584.12,
+       "excess_over_ground_over_abs": 5.307495084038845e-09,
+       "injected_Msun": 0.09272393737314906,
+       "absorbed_Msun": 0.23972782014529503
+      },
+      {
+       "t_Gyr": 4.0,
+       "mass_Msun": 999999999.8947054,
+       "r_half_kpc": 0.12854548716575429,
+       "central_density": 117210250834.92497,
+       "energy": -219228532665999.97,
+       "excess_over_ground_over_abs": 1.3457784152987019e-08,
+       "injected_Msun": 0.18544787474613486,
+       "absorbed_Msun": 0.2697418971312692
+      },
+      {
+       "t_Gyr": 6.000000000000001,
+       "mass_Msun": 999999999.9478652,
+       "r_half_kpc": 0.12863979023281738,
+       "central_density": 116995633022.44115,
+       "energy": -219228526399154.47,
+       "excess_over_ground_over_abs": 4.210033124693135e-08,
+       "injected_Msun": 0.2781718121191573,
+       "absorbed_Msun": 0.2987806699955919
+      },
+      {
+       "t_Gyr": 8.0,
+       "mass_Msun": 999999999.9970764,
+       "r_half_kpc": 0.1287484240570426,
+       "central_density": 116707908901.67668,
+       "energy": -219228527810803.47,
+       "excess_over_ground_over_abs": 3.5713601942304526e-08,
+       "injected_Msun": 0.37089574949207826,
+       "absorbed_Msun": 0.3317490617580706
+      },
+      {
+       "t_Gyr": 10.0,
+       "mass_Msun": 1000000000.0478998,
+       "r_half_kpc": 0.1287575850346243,
+       "central_density": 116688920556.24031,
+       "energy": -219228531617621.22,
+       "excess_over_ground_over_abs": 1.8403148142868376e-08,
+       "injected_Msun": 0.4636196868652307,
+       "absorbed_Msun": 0.3631347656509897
+      }
+     ],
+     "stopped": null,
+     "final_mass_Msun": 1000000000.0478998,
+     "growth_factor": 1.0000000000478997,
+     "escaped_fraction": 3.631347654826332e-10,
+     "mass_ledger_error": -5.2585198161262495e-11,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       13.1637509108766,
+       28.567697382824115
+      ],
+      "total_RMSE_kms": 51.616330347376575
+     },
+     "seconds": 674.0173580646515
+    },
+    "C_B1_required_rate": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 1000000000.0000001,
+       "r_half_kpc": 0.12841612917557438,
+       "central_density": 117606175993.44772,
+       "energy": -219228535640927.1,
+       "excess_over_ground_over_abs": -1.425453119441721e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 1.0295379471571968,
+       "mass_Msun": 6668824758.929633,
+       "r_half_kpc": 0.048796286989734726,
+       "central_density": 14988191180044.322,
+       "energy": -2383672664200963.5,
+       "excess_over_ground_over_abs": -8.150905786185074e-05,
+       "injected_Msun": 5668824765.802119,
+       "absorbed_Msun": 6.935887368954999
+      }
+     ],
+     "stopped": "half-mass radius 0.0488 kpc below 0.04883 kpc at 1.03 Gyr",
+     "final_mass_Msun": 6668824758.929633,
+     "growth_factor": 6.668824758929633,
+     "escaped_fraction": 1.0400464268490579e-09,
+     "mass_ledger_error": 6.3401254453046e-11,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       33.99415955461433,
+       73.77341530297596
+      ],
+      "total_RMSE_kms": 46.40404283242123
+     },
+     "seconds": 180.2836878299713
+    },
+    "C_B2_required_rate": {
+     "checkpoints": [
+      {
+       "t_Gyr": 0.0,
+       "mass_Msun": 1000000000.0000001,
+       "r_half_kpc": 0.12841612917557438,
+       "central_density": 117606175993.44772,
+       "energy": -219228535640927.1,
+       "excess_over_ground_over_abs": -1.425453119441721e-16,
+       "injected_Msun": 0.0,
+       "absorbed_Msun": 0.0
+      },
+      {
+       "t_Gyr": 0.3631606893661844,
+       "mass_Msun": 5635843762.687874,
+       "r_half_kpc": 0.04786449273477792,
+       "central_density": 13391395168723.236,
+       "energy": -1649796117584785.2,
+       "excess_over_ground_over_abs": 0.08980543645576369,
+       "injected_Msun": 4635986599.073957,
+       "absorbed_Msun": 142836.39881111603
+      }
+     ],
+     "stopped": "half-mass radius 0.04786 kpc below 0.04883 kpc at 0.3632 Gyr",
+     "final_mass_Msun": 5635843762.687874,
+     "growth_factor": 5.635843762687873,
+     "escaped_fraction": 2.5343637054528363e-05,
+     "mass_ledger_error": 1.272751312353648e-11,
+     "rotation": {
+      "reservoir_speed_range_kms": [
+       31.250655283928694,
+       67.79587168068582
+      ],
+      "total_RMSE_kms": 47.32574531958233
+     },
+     "seconds": 54.52725911140442
+    }
+   }
+  }
+ },
+ "protocol_sha256": "1e9b04c6c5013612288329bcb333da8e0ac6a7948577e54c151accd486754292",
+ "source_sha256": {
+  "gpp.py": "65cb34c8ceeb9f87585133f5d5cb485df47f1d35b823ec8aa7ad93d765cb0d55",
+  "cr1.py": "800a36f25e9c00ab9430f65250eec1e0e47cf26c40057ceb7fa12a4ae1d82449"
+ },
+ "runtime_seconds": 35220.79557609558
+}

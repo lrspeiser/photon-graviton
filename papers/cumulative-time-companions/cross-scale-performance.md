@@ -592,4 +592,14 @@ The [RPG-1 test](../../research_work/results/radiation-polarized-gravity/report.
 - **Lensing.** Under the declared response (Φ = Ψ) in PF-1 geometry, SLACS Einstein radii are only 0.35–0.48 of observed with Chabrier masses and 0.56–0.74 with Salpeter, because g_N ≈ 10 a* there.
 - **Field energy.** It grows by M v_f²/3 per e-fold of radius without limit.
 
-RPG-1 is not promoted. PDF v1.5 predates this supplement.
+A post-hoc diagnostic uses flat FLRW distances and the published masses. It raises the lens ratios to 0.48–0.89. The remaining need, 2.1–2.7 times the Chabrier mass, is comparable to the masses fitted to the same lenses' inner stellar motions. RPG-1 is not promoted. PDF v1.5 predates this supplement.
+
+## Driven collective reservoir (CR-1)
+
+The [CR-1 test](../../research_work/results/collective-reservoir/report.md) evolves one coherent Gross–Pitaevskii–Poisson condensate from a 10⁹ Msun seed in the Milky Way potential. The condensate has no self-interaction, and two constituent masses are tried: 1.34×10⁻²⁴ and 10⁻²² eV. It is fed by the conversion law's photon source, collected inside the condensate's r₉₉.
+
+- **Supply.** The derived source falls 10⁸ to 5×10¹¹ times short of the 2.09×10¹¹ Msun reference inventory in 10 Gyr.
+- **Growth into the occupied mode, at the required rate.** The growth is adiabatic, but it contracts the condensate. The light constituent reaches 59% of the inventory at 7.4 kpc. The heavy one drops below the grid within about 1 Gyr; at the full inventory it would be a stable 1.6 pc soliton.
+- **Growth that follows the photons.** It overheats or runs away.
+
+A supported condensate with self-interaction is untested. PDF v1.5 predates this supplement.

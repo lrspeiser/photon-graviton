@@ -166,10 +166,19 @@ RPG-1 is not promoted, for five reasons:
 - a lensing response stronger than the dynamical one;
 - a different geometry.
 
+## Addendum: how much of the lens deficit is geometry (post hoc, not declared)
+
+[geometry-diagnostic.py](geometry-diagnostic.py) recomputes the Einstein radii with flat FLRW angular distances (H0 = 70, Ω_m = 0.3) and the published population masses. Those are the conventions the masses were derived in. Results are in [geometry-diagnostic.json](geometry-diagnostic.json).
+
+- **The ratios rise, but the rule still fails.** RPG-1's ratios go from 0.35–0.47 to 0.48–0.58 with Chabrier masses, and from 0.56–0.73 to 0.75–0.89 with Salpeter.
+- **Lensing and inner dynamics agree.** In that geometry RPG-1 needs 2.1–2.7 times the Chabrier mass (1.2–1.5 times Salpeter). That is comparable to the archive's masses fitted to the same lenses' inner stellar motions (2.3–2.7 times Chabrier, in its regular-optics geometry). So lensing and inner dynamics point to the same extra inner mass rather than contradicting each other.
+- **The deficit is an inner mass budget.** It needs a heavier IMF or an extra compact component. PF-1's static Euclidean distances make it about 30% worse in Einstein radius.
+
 ## Reproduce
 
 ```sh
-python research_work/results/radiation-polarized-gravity/rpg1.py          # about 90 s on 8 workers; exits 1 because V1 failed
-python research_work/results/radiation-polarized-gravity/checks.py        # suite job: analytic V1 and three galaxies against the archive
-python research_work/results/radiation-polarized-gravity/convergence.py   # post-hoc convergence diagnostic
+python research_work/results/radiation-polarized-gravity/rpg1.py                  # about 90 s on 8 workers; exits 1 because V1 failed
+python research_work/results/radiation-polarized-gravity/checks.py                # suite job: analytic V1 and three galaxies against the archive
+python research_work/results/radiation-polarized-gravity/convergence.py           # post-hoc convergence diagnostic
+python research_work/results/radiation-polarized-gravity/geometry-diagnostic.py   # post-hoc lens-geometry diagnostic
 ```

@@ -13,7 +13,7 @@ Each branch's general hypothesis is broader than its first implementation. Each 
 |---|---|---|---|
 | PF-1 ([report](../research_work/results/propagation-field/report.md)) | An evolving propagation field changes frequency, timing, photon number and brightness together, and exchanges energy with the light | Homogeneous n(t); matter left uncoupled by postulate; linear history; one law for light and gravitational waves | The wave law is consistent: one simulation gives all three stretches, and the energy exchange closes. A measured redshift still needs a matter coupling. The linear history's brightness scores Δχ² = +35 against flat FLRW |
 | RPG-1 ([report](../research_work/results/radiation-polarized-gravity/report.md)) | Gravity's response depends on acceleration and on a radiation state s | s omitted; μ = x/(1+x) with the archived a*; lensing Φ = Ψ; PF-1 distances | Rotation matches algebraic simple MOND. The Milky Way vertical force is too strong at 1.1 kpc. SLACS Einstein radii are 0.35–0.74 of observed. With FLRW distances and published masses they are 0.48–0.89 (post hoc) |
-| CR-1 ([protocol](../research_work/results/collective-reservoir/protocol.md)) | A collective reservoir, fed by photons, supports the extra gravity | One coherent spherical mode; no self-interaction; a 10⁹ Msun seed; present-day illumination collected inside r₉₉; a 10 Gyr benchmark | The derived supply is 10⁸–10¹¹ short within the seed's collection volume. Growing at the required rate, the heavy constituent contracts to a compact core, while photon-shaped growth runs away and disperses. See the CR-1 report |
+| CR-1 ([protocol](../research_work/results/collective-reservoir/protocol.md)) | A collective reservoir, fed by photons, supports the extra gravity | One coherent spherical mode; no self-interaction; a 10⁹ Msun seed; present-day illumination collected inside r₉₉; a 10 Gyr benchmark | The derived supply is 10⁸ to 5×10¹¹ times short within the seed's collection volume. Growing at the required rate, the heavy constituent contracts to a compact core, while photon-shaped growth runs away and disperses. See the CR-1 report |
 
 ## 2. The obstruction, stated once
 
@@ -41,13 +41,13 @@ A single field χ, the propagation field of PF-1, with n = e^χ, plays every rol
   - **Prediction.** a*(z) ∝ H(z), with H(z) the same history that the supernovae fix. That turns the a0 ~ cH0 coincidence into a test.
 - **C3. Light bending.**
   - **The requirement.** Weak lensing shows the same radial-acceleration relation as rotation curves, so at low acceleration lensing must equal dynamics. A conformally coupled scalar bends no light ([motion-and-lensing](../research_work/results/gravity-response/motion-and-lensing.md)).
-  - **The construction.** The field must therefore enter the photon light cone through its own rolling frame, the timelike direction of its gradient. This is the structure TeVeS and AeST (arXiv:2109.13287) use with a separate vector. It is a requirement to be derived and checked; nothing assumes it holds.
+  - **The construction.** The field must therefore enter the photon light cone through its own rolling frame, the timelike direction of its gradient. This is the structure TeVeS and AeST (Skordis & Złośnik, arXiv:2007.00082) use with a separate vector. It is a requirement to be derived and checked; nothing assumes it holds.
 - **C4. The reservoir (CR-1, reassigned).** The field's condensate supplies mass only where a response cannot.
   - **Galaxy cores.** At SLACS Einstein radii g_N ≈ 10 a*, so any acceleration-keyed response adds only 15–18%. With FLRW distances, the lenses need 2.1–2.7× Chabrier (1.2–1.5× Salpeter), comparable to the archived masses fitted to the same lenses' inner stellar motions.
   - **Clusters.** They need about 2× more than MOND gives.
   - **The job.** A compact core supported by self-interaction or pressure, not a galaxy-wide halo. CR-1 shows that a single coherent mode cannot be the halo.
 - **C5. The radiation state s.** The field's local state responds to both of its sources: radiation through u_γ/n, and matter through the co-scaling coupling.
-  - **Baryons dominate locally.** Baryon rest-energy density exceeds starlight energy density by about 10⁶–10⁷, so the galaxy-scale field is keyed to baryons, as the radial-acceleration relation requires.
+  - **Baryons dominate locally.** Baryon rest-energy density exceeds starlight energy density by roughly 10⁸–10¹⁰; near the Sun, 0.1 Msun/pc³ against about 1 eV/cm³ gives about 4×10⁹. The galaxy-scale field is therefore keyed to baryons, as the radial-acceleration relation requires.
   - **A pure starlight key fails.** RPG-1 showed it would shift the transition 4.6-fold between gas-rich and gas-poor galaxies.
   - **Radiation's role is cosmological.** It sets the clock, not a local switch. Any local s-dependence must be a small, declared correction.
 

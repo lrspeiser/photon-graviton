@@ -2,6 +2,24 @@
 
 Dated notices that accumulated at the top of `README.md` and `research_plan/START-HERE.md` until 13 September 2026, moved here verbatim (newest first) so that [CURRENT-STATUS.md](CURRENT-STATUS.md) can remain the single authoritative summary. The date and commit are those that last touched each notice (`git blame`). Relative links were rebased to the repository root, and mis-encoded dashes in the START-HERE notices were repaired. Statements such as "latest" or "current" refer to the date of each entry, not to the present state.
 
+## 2026-09-14
+
+New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
+
+- **Driven collective reservoir CR-1.** This is the third of the owner's branches: a coherent Gross–Pitaevskii–Poisson condensate, seeded with 10⁹ Msun in the Milky Way potential and fed by the conversion law's photon source.
+  - **Supply.** The derived source falls short of the reference inventory in 10 Gyr by 1.3×10⁸ for the light constituent and 4.5×10¹¹ for the heavy one.
+  - **Dynamics at the required rate.** Growth into the occupied mode is adiabatic, but the condensate contracts: it reaches 59% of the inventory at 7.4 kpc for the light constituent, and drops below the grid within 1 Gyr for the heavy one. The heavy constituent's analytic endpoint is a stable 1.6 pc soliton. Photon-shaped growth overheats or runs away.
+  - **Numerics.** The first execution took 9.8 hours and hid its NaNs. The driver now fails fast, logs its progress and calibrates its time step on energy conservation. That calibration removed a 1.4% energy artifact.
+
+  No channel supports a reservoir in this implementation. Zero self-interaction, the collection region and the 10 Gyr span are labeled assumptions. See the [report](research_work/results/collective-reservoir/report.md).
+- **RPG-1 lens-geometry diagnostic (post hoc).** With flat FLRW angular distances and the published population masses, RPG-1's predicted SLACS Einstein radii rise to 0.48–0.58 of the observed values with Chabrier masses and 0.75–0.89 with Salpeter. The declared rule still fails. The remaining need, 2.1–2.7 times the Chabrier mass, is comparable to the archive's masses fitted to the same lenses' inner stellar motions. Lensing and inner dynamics therefore share one inner-mass shortfall. See the addendum to the [RPG-1 report](research_work/results/radiation-polarized-gravity/report.md).
+- `15bd1f6` **Model contract.** A proposal that one clock field does all three jobs:
+  - PF-1's propagation field, completed by matter scales that co-evolve with it, so that the measured redshift survives with every clock ratio fixed;
+  - its static galaxy response, which gives RPG-1's equation with a* tied to the redshift rate;
+  - the companion condensate, reassigned to inner-core and cluster mass.
+
+  The contract separates each branch's general hypothesis from its first implementation, and asks the owner to decide what "nonexpanding" means (decision D1). See [research_plan/model-contract.md](research_plan/model-contract.md).
+
 ## 2026-09-13, after the Codex handover
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
