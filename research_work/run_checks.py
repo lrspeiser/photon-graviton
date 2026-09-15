@@ -121,6 +121,7 @@ def main():
         ('companion-supply/cc2a.py', []),
         ('companion-formation/checks.py', []),
         ('radiation-budget/rc1.py', []),
+        ('companion-source/checks.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

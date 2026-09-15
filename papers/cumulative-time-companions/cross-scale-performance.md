@@ -680,3 +680,13 @@ The [RC-1 report](../../research_work/results/radiation-budget/report.md) asks w
 - **Only through a hot, photon-removing history.** A Planck-preserving transfer would need three things: a background that was once 50–340 K, 38–63 Gyr of transfer that removes nearly all its photons, and a coupling that spares starlight. Applied to every beam, it would dim galaxies by 0.8 magnitudes at 1 Gpc.
 
 PDF v1.5 predates this supplement.
+
+## A decaying field as source (CC-2, stage 2B-F1)
+
+The [stage-2B-F1 report](../../research_work/results/companion-source/report.md) feeds a homogeneous field decaying into companion pairs through stage 2A's machinery, with decay speeds of 3–300 km/s and σ/m up to 1 cm²/g.
+- **The shape, from cold infall.** With cold decays (3–10 km/s) and the bath's gravity on, five of six combinations pass the Milky Way's fit, shape and cost gates. The companions' enclosed mass grows as r^1.03–1.31 across 8–20 kpc, against the required r^1.31, with rotation RMSE 6.8–8.7 km/s.
+- **A compensated structure.** The confined companions are 12.6–16.2 baryon masses. The cold bath barely enters the zone of influence, and its shortfall against the uniform density, assigned to the background, brings the net to 0.75–2.6. The net mass peaks near 124 kpc, at 0.8–1.0×10¹² M☉ in total.
+- **Supply.** The field must make 280–360 times the cosmic mean density in companions, 1.7–2.1 million times the microwave background's energy, so as a local stock it cannot be converted light. Its uniform medium is Jeans-unstable within about a gigayear.
+- **Limits.** With the same source Coma keeps no static bath, and a 150 kpc zone fails the gate. Faster decays fail.
+
+No lensing is fitted. PDF v1.5 predates this supplement.

@@ -63,6 +63,7 @@ class FieldModel(mc.Model):
     def __init__(self, *args, q=0., v_d=1., **kw):
         self.q, self.v_d = float(q), float(v_d)
         self.field_pools = self.field_m = self.field_frac = None
+        self._clock = 0.                                   # time since the start of the run, for F4's bookkeeping
         super().__init__(*args, **kw)
 
     def make_field_pools(self, n_per=1000, n_min=100, n_cap=20000):
@@ -117,8 +118,12 @@ class FieldModel(mc.Model):
     def _source_births(self, Delta, L):
         if self.q <= 0 or self.field_pools is None:
             return None
-        for key in ('field_births', 'field_born_mass', 'E_field_births', 'field_exported_mass', 'E_field_exported'):
+        for key in ('field_births', 'field_born_mass', 'E_field_births', 'field_exported_mass', 'E_field_exported',
+                    'seedless_predicted', 'seedless_birth_variance'):
             L.setdefault(key, 0.)
+        if 'ii' in self.channels:
+            self._book_seedless(Delta, L)
+        self._clock += Delta
         xs, vs, ms = [], [], []
         for j, p in enumerate(self.field_pools):
             made = self.q*p['V']*Delta                      # companion mass the field makes in this shell this step
@@ -140,6 +145,22 @@ class FieldModel(mc.Model):
         L['field_births'] += float(len(m)); L['field_born_mass'] += float(m.sum()); L['E_field_births'] += E
         return x, v, m, E
 
+    def _book_seedless(self, Delta, L):
+        """F4's bookkeeping, which draws no random numbers. Stage 2A's engine redraws its seedless pools every ten steps,
+        so F4's prediction integrates the production of the pools each step used, weighted by the exact integral of
+        q² t² over the step (the engine uses the step's midpoint density), together with the variance of the births
+        drawn from them: tracer masses differ between shells, and one event can confine both partners. Called after the
+        step's seedless births, whose pools, density and tracer masses are still in place."""
+        t = self._clock
+        w = self.q*self.q*((t + Delta)**3 - t**3)/3
+        for j, p in enumerate(self.pools):
+            if p['p'] is None or not np.isfinite(self.shell_m[j]):
+                continue
+            g, nc = p['ev'][:, 1], p['ev'][:, 2]
+            unit = .5*self.sm*p['W']
+            L['seedless_predicted'] += unit*p['g_n']*w
+            L['seedless_birth_variance'] += unit*self.rho_inf**2*Delta*self.shell_m[j]*float(np.sum(g*nc*nc))/p['draws']
+
     def _advance_source(self, t_next, Delta):
         if self.q > 0:
             self.rho_inf = self.q*(t_next + .5*Delta)          # the incident density at the middle of the next step
@@ -155,6 +176,7 @@ class FieldModel(mc.Model):
         """As mc.Model.run. Tracer masses come from the end-of-span incident density q T for the seedless channel
         (whose births then total about n_target/3, since the rate grows as t²) and from the current potential for the
         field's births (about n_field over the span)."""
+        self._clock = 0.
         if self.q > 0:
             T = T_gyr*mc.PER_GYR
             rho0 = self.rho_inf
@@ -184,11 +206,25 @@ def confined_fraction(model, r, v_d, n_mu=4001):
     return float(np.trapezoid(conf.astype(float), mu))
 
 
-def born_bound_mass(model, q, T, v_d, n_r=600):
-    """F2's prediction: q T times the integral of the confined fraction over the zone's volume."""
+def born_bound_mass(model, q, T, v_d, n_r=600, n_sub=64):
+    """F2's prediction: q T times the integral of the confined fraction over the zone's volume. For hot decays the
+    fraction falls from 1 to 0 within a sliver of radius (angular momentum barely moves the escape energy), and a fixed
+    grid misplaces that edge by up to half an interval: with 600 points the first canonical run's quadrature was 2.6%
+    high at 300 km/s. So every interval whose ends differ, or lie strictly between 0 and 1, is split n_sub ways, and
+    wholly confined intervals are integrated exactly. n_sub = 0 gives the plain 600-point trapezoid."""
     r = np.geomspace(model.r_lo, model.R_b, n_r)
     P = np.array([confined_fraction(model, ri, v_d) for ri in r])
-    return q*T*float(np.trapezoid(P*4*math.pi*r**3, np.log(r)))
+    if not n_sub:
+        return q*T*float(np.trapezoid(P*4*math.pi*r**3, np.log(r)))
+    lr, tot = np.log(r), 0.
+    for i in range(n_r - 1):
+        if P[i] == P[i + 1] and P[i] in (0., 1.):
+            tot += P[i]*(r[i + 1]**3 - r[i]**3)/3
+        else:
+            x = np.linspace(lr[i], lr[i + 1], n_sub + 1)
+            Ps = np.array([confined_fraction(model, math.exp(xi), v_d) for xi in x])
+            tot += float(np.trapezoid(Ps*np.exp(3*x), x))
+    return 4*math.pi*q*T*tot
 
 
 def cold_density(model, q, T, r_eval, n_u=64, n_s=4000):
@@ -220,8 +256,10 @@ def cold_density(model, q, T, r_eval, n_u=64, n_s=4000):
 
 
 def growing_bath_seedless(model, q, T):
-    """F4's prediction: seedless production after T with the incident density growing as q t, in the model's current
-    (frozen, transparent) potential: the pools' production at unit density times q² T³/3. The pools must exist."""
+    """Seedless production after T with the incident density growing as q t, in the model's current (frozen, transparent)
+    potential, from one set of pools: their production at unit density times q² T³/3. F4 first compared the run with
+    this, from pools drawn after the run; one set's sampling error (about 4% here) is not in the births' standard error,
+    so F4 now uses the pools the run itself used (FieldModel._book_seedless) and keeps this value for the record."""
     rho = model.rho_inf
     model.rho_inf = 1.
     rate = model.production_rate()

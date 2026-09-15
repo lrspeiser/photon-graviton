@@ -259,11 +259,13 @@ def v_f4(spec):
     model, dmax = make_model(sp, s, freeze=True, channels=('ii',))
     res = model.run(T_REF, dmax, [T_REF], n_target=spec['n'], n_field=2000, budget_s=BUDGET)
     L = res['ledger']
-    model.make_pools()
-    pred = FD.growing_bath_seedless(model, model.q, T_REF*mc.PER_GYR)
-    born, n = L['born_mass'], max(L['births'], 1.)
-    err = born/math.sqrt(n)
+    # the prediction from the pools the run used, and the births' own variance (FieldModel._book_seedless)
+    born, pred, n = L['born_mass'], L['seedless_predicted'], L['births']
+    err = math.sqrt(max(L['seedless_birth_variance'], 1e-300))
+    model.make_pools()                                   # for the record: one set of pools drawn after the run
+    one = FD.growing_bath_seedless(model, model.q, T_REF*mc.PER_GYR)
     return dict(engine=born, standard_error=err, prediction=pred, z=(born - pred)/err, births=n,
+                prediction_from_one_pool_after_run=one,
                 tau_r_half=float(np.interp(math.log(s['r_half']), model.lr, model.tau)), passed=bool(abs((born - pred)/err) < 3))
 
 
@@ -300,16 +302,21 @@ def run_tasks(specs, label):
                 log('ERROR TRACEBACK\n' + r.get('traceback', ''))
                 raise RuntimeError(f"task failed: {r['status']}")
             out.append(r)
+    # imap_unordered hands results back as they finish; restore the order the tasks were issued in (each spec's seed is
+    # unique and increasing), so that nothing downstream, the next round's seeds in particular, depends on timing
+    out.sort(key=lambda r: r['spec']['rng'])
     return out
 
 
 def q_start(key, v_d, D):
     """The starting estimate: the rate whose born-bound mass alone reaches ten times the baryons (the cost scale) in
-    the frozen baryons-only potential (F2's quadrature)."""
+    the frozen baryons-only potential (F2's quadrature on its plain grid)."""
     s = system_for(dict(key=key))
     model = FD.FieldModel(s['r'], s['M'], s['R_b'], s['r_half'], np.array([v_d]), np.array([1.]), 0., 1., q=0., v_d=v_d,
                           bath_gravity=False, freeze=True, channels=(), seed=1)
-    V = FD.born_bound_mass(model, 1., 1., v_d)                     # kpc^3 per unit rate and time
+    # kpc^3 per unit rate and time. A ladder's start needs only a rough value, so it keeps the plain 600-point grid of
+    # the first canonical run (n_sub=0), and a rerun reproduces that run's ladders exactly
+    V = FD.born_bound_mass(model, 1., 1., v_d, n_sub=0)
     return 10*s['M_b']/(T_REF*mc.PER_GYR*V)*mc.PER_GYR if V > 0 else None
 
 

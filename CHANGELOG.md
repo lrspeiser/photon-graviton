@@ -6,6 +6,14 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **CC-2 stage 2B-F1, a decaying-field source** (protocol 2cf7ea1), requested in the owner's review of 68eb17c.
+  - **The shape.** Cold decays (3–10 km/s) with the bath's gravity on pass the Milky Way's profile gate in five of six combinations. The rotation RMSE is 6.8–8.7 km/s over the 38 Eilers bins, and the enclosed-mass slope across 8–20 kpc is 1.03–1.31 against the required 1.31, at q\* = 1,160–1,440 M☉ kpc⁻³ Gyr⁻¹. Companions born throughout the zone fall in on radial orbits, so M(<r) ∝ r/v_esc.
+  - **The cost passes on the net.** The confined companions are 12.6–16.2 baryon masses. The cold bath barely enters the zone, and its shortfall against the uniform density, which is assigned to the background, brings the total to 0.75–2.6. With the bath's gravity omitted, no cold combination passes.
+  - **Faster decays fail.** At 30 km/s the slope is 2.3–2.6, and at 100 km/s the cost is 23–56. At 300 km/s only an omitted-gravity run just below the runaway passes, at a million times the cosmic mean.
+  - **Supply and universality.** The field must make 280–360 times the cosmic mean density in companions (1.7–2.1 million times the microwave background's energy), and its uniform medium is Jeans-unstable within about 1.2 Gyr. With the same source Coma keeps no static bath, and a 150 kpc zone fails the gate.
+  - **Numerics.** The first canonical run failed validations F2 and F4 because of the checks, not the engine: a coarse quadrature grid, and a prediction drawn from one fresh set of pools. Both checks were corrected. The rerun then showed that the refinement rounds took their seeds in the order runs finished. The driver now fixes that order, and the canonical run was repeated.
+
+  See the [report](research_work/results/companion-source/report.md).
 - **RC-1 narrowed; stage 2B redirected** (owner's review of 68eb17c).
   - **RC-1 is a local stock bound.** Its energy comparison shows that today's local radiation cannot become today's local bath. The global source requirement needs a power and flux ledger, now queued as RC-2 for open, three-sphere and three-torus backgrounds.
   - **Stage 2B tests phase space too.** The elastic mechanism builds an outer envelope (M ∝ r^1.7–2.7, against the Milky Way's r^1.3), so more supply alone does not help. Stage 2B becomes 2B-F1: a coherent field decaying into companion pairs, propagated through stage 2A's machinery and scored on energy supply and on a hard profile gate.
