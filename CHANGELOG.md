@@ -6,6 +6,12 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Stage-1 corrections after the owner's review of 299ba1f, and the stage-2A protocol.**
+  - **No premise decision is needed.** The stage-1 report had asked whether a dominant, self-interacting companion medium fits the premises. The universe contract already prohibits an inserted halo or bath and permits a gravitating population derived from the permitted supply and interactions. CC-1's clock field stays a separately labeled comparison; the active objective is a source compatible with operational nonexpansion.
+  - **The old density is not a lower bound.** Stage 1 found that seedless formation dominates at CF-1's seeded-only density but did not solve again for the density the complete mechanism needs. Seedless formation grows as the density squared, so the supply is undetermined until it is recomputed.
+  - **Narrowed labels.** Jeans results are instability diagnostics, boundary-volume masses are environmental estimates, and uT is a transport benchmark. The velocity thresholds and the 0.34% fast fraction belong to CF-1's seeded coefficient and the tested distributions.
+  - **Stage 2A** ([protocol](research_work/results/companion-formation/protocol.md)) recomputes the supply with all three collision classes together, evolving mass, energy, orbits, bath depletion and gravity on the Milky Way, J1630 and both Coma brackets, with zero-seed and counted-seed controls and no prescribed profile.
+
 - **CC-2 stage 1, a regime and supply audit** (protocol 5381c68), requested in the owner's review of f13c09f. Is CF-1's incoming bath consistent at the supply CF-1 requires?
   - **No.** Across the Milky Way's and Coma's boundary regions its optical depth is 4–8. For every trial σ/m from 0.1 to 1,000 cm²/g, its own mass there exceeds the baryons by 10¹–10⁷, and in Coma it is Jeans-unstable at every trial scattering strength. It would be the dominant self-gravitating, self-interacting medium, not a trace bath.
   - **The seed stops mattering.** Under the same law, capture from collisions between two incoming companions beats seeded capture by 10²–10⁷, and it is depth-keyed.

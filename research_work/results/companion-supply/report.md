@@ -1,17 +1,17 @@
-# CC-2 stage 1 report: the bath CF-1 needs would be the dominant, self-gravitating medium
+# CC-2 stage 1 report: at CF-1's seeded-only normalization, the bath would be opaque and heavy
 
-**Result.** At the supply CF-1 requires, its incoming companions cannot be the transparent, single-speed, gravitationally negligible background CF-1 assumed. For every trial cross-section from 0.1 to 1,000 cm²/g:
+**Result.** At the supply CF-1's seeded-only capture requires, its incoming companions cannot be the transparent, single-speed, gravitationally negligible background CF-1 assumed. For every trial cross-section from 0.1 to 1,000 cm²/g:
 - **Opaque.** The bath is optically thick across the declared boundary region of the Milky Way and Coma, with optical depth 4–8.
-- **Heavy.** Its own mass inside that region exceeds the system's baryons by 10¹–10⁷.
-- **Unstable.** In Coma, at every trial scattering strength, it is Jeans-unstable on scales smaller than the region.
+- **Heavy, as an environmental estimate.** A uniform bath at that density filling the declared boundary region would hold 10¹–10⁷ times the system's baryons. That is the boundary-volume inventory, not the companion mass at the radii where motions and lensing are measured.
+- **Unstable by the Jeans criterion.** In Coma, at every trial scattering strength, the Jeans criterion permits gravitationally growing perturbations on scales smaller than the region. That is an instability diagnostic, not a simulated collapse.
 
-It would be the dominant self-gravitating, self-interacting component, closer to a self-interacting dark-matter medium than to a trace bath.
+At that normalization the bath's own gravity and collisions could not be neglected.
 
-**The seed stops mattering.** Under the same interaction law, collisions between two incoming companions leave one bound often enough to beat CF-1's seed-driven capture by factors of 10²–10⁷, and they are also depth-keyed.
+**The old normalization is not a requirement.** Under the same interaction law, collisions between two incoming companions can leave one bound. The channel is kinematically allowed and its probability is verified. At the old normalization its initial rate exceeds CF-1's seed-driven capture by 10²–10⁷. Because that rate grows as the square of the incident density, it can lower the required supply substantially, so CF-1's density is not a lower bound for the complete mechanism. Stage 2A recomputes it.
 
-**Depth selectivity survives realistic distributions.** Retention needs a Maxwellian bath dispersion below about 210 km/s in the Milky Way, 330 km/s in a massive elliptical, and 510–700 km/s in Coma.
+**Velocity thresholds of the seeded coefficient.** Averaged over a Maxwellian bath, CF-1's seeded net-retention coefficient changes sign at a dispersion of about 210 km/s in the Milky Way, 330 km/s in a massive elliptical and 510–700 km/s in Coma. These thresholds belong to that coefficient. The complete process, with seedless formation, is evaluated in stage 2A.
 
-This stage predicts no reservoir. It turns CF-1 into requirements for a source (stage 2) and for a coupled test (stage 3), and that test must include the bath's own gravity and collisions.
+This stage predicts no reservoir. The owner's review of 299ba1f narrowed several statements; see the [review qualifications](#review-qualifications-added-after-the-owners-review-of-299ba1f).
 
 Protocol: [protocol.md](protocol.md), declared in 5381c68 before execution. Code: [cc2a.py](cc2a.py). Results: [cc2a-results.json](cc2a-results.json).
 
@@ -40,7 +40,7 @@ For two incoming companions with speed w = √(u² + v_esc²), the probability t
 - **Trading cross-section for density changes nothing.** At fixed A*, raising σ/m while lowering ρ_∞ leaves every entry in this table unchanged.
 - **Where the bath is still transparent.** Only across the half-mass radius, and across the boundary for the lens host.
 
-## A2. The bath would outweigh the baryons, and could collapse
+## A2. A uniform bath at that density would outweigh the baryons, and the Jeans criterion permits it to fragment
 
 | σ/m (cm²/g) | Milky Way: bath mass in R_b / baryons; Jeans length / R_b | J1630 | Coma low | Coma high |
 |---|---|---|---|---|
@@ -51,7 +51,8 @@ For two incoming companions with speed w = √(u² + v_esc²), the probability t
 | 1,000 | 81; 3.2 | 1.1; 13.5 | 988; 0.24 | 258; 0.35 |
 
 - **A far higher density.** The incident density equals A*/(σ/m). In units of the cosmic mean density, that runs from 1.8×10⁷ down to 1.8×10³ for the Milky Way, and from 3×10⁵ down to 15 for Coma.
-- **CF-1's premise does not hold at this supply.** CF-1 put a fixed baryonic potential around a bath of negligible gravity. At the supply CF-1 itself requires, the bath dominates the mass and, in Coma, fragments on its own.
+- **CF-1's premise does not hold at this supply.** CF-1 put a fixed baryonic potential around a bath of negligible gravity. At the supply CF-1 itself requires, a uniform bath over the boundary region would dominate the mass inventory, and in Coma the Jeans criterion permits it to fragment.
+- **What these two columns measure.** The mass ratio fills the whole declared boundary region (for Coma, 30 Mpc) with the uniform incident density: it is an environmental estimate, not the companion mass or acceleration at the tested radii. The Jeans length u√(π/(Gρ_∞)) is an instability diagnostic for that uniform background under a simple support prescription; it does not evolve collapse, fragmentation or heating.
 
 ## A3. Travel and time
 
@@ -61,8 +62,8 @@ For two incoming companions with speed w = √(u² + v_esc²), the probability t
 | J1630 | 10 / 34 / 102 | 1.0 Gyr | 0.03 Gyr |
 | Coma | 0.10 / 0.34 / 1.0 | 98 Gyr | 5.0 Gyr |
 
-- A 300 km/s companion travels only about 3 Mpc in 10 Gyr. Coma's declared 30 Mpc boundary therefore cannot hold a steady bath in that time, and the region that could supply Coma within 10 Gyr is about a tenth as large.
-- A longer history is allowed in the fictional universe, but it would change the exposure and the source's own evolution. It has to be declared.
+- **A transport benchmark, not a source horizon.** A companion moving at a constant 300 km/s covers about 3 Mpc in 10 Gyr (the distance uT). A newly supplied 300 km/s population therefore cannot be assumed to establish CF-1's steady 30 Mpc bath within the 10 Gyr benchmark.
+- That does not exclude a population already present nearby, one produced locally, or one with a longer declared history. Gravity and scattering also change transport relative to the constant-speed estimate. The initial distribution and production history have to be specified.
 
 ## A4. Particle against wave
 
@@ -74,9 +75,9 @@ For the particle treatment, the de Broglie wavelength must be at most a tenth of
 
 The archived 1.34×10⁻²⁴ eV constituent fails in galaxies but passes in Coma. The 10⁻²² eV constituent passes everywhere. For the archived masses, the wavelength is at most 0.6 of the mean free path (the light constituent in the Milky Way).
 
-## A5. The velocity distribution decides the sign
+## A5. The velocity distribution decides the sign of the seeded coefficient
 
-These use CF-1's kernels, which are linear in the incident distribution.
+These use CF-1's seeded kernels, which are linear in the incident distribution.
 
 | | Fast fraction at 3,000 km/s that reverses 300 km/s retention | K with a 1% fast tail (km/s) | K for a Maxwellian bath of 1-D dispersion 100 / 200 / 300 / 500 / 1,000 km/s |
 |---|---|---|---|
@@ -86,9 +87,10 @@ These use CF-1's kernels, which are linear in the incident distribution.
 | Coma, high | 53% | +2,897 | +7,349 / +3,560 / +2,119 / +759 / −825 |
 | Full well (inverse, labeled) | 95% | +19,480 | positive throughout |
 
-- **Retention windows.** Retention reverses at a bath dispersion of about 210 km/s in the Milky Way, 330 km/s in the lens host, and 510 and 700 km/s for Coma's two ends. A Maxwellian's mean speed is 1.6 times its one-dimensional dispersion.
-- **Depth selectivity survives.** A bath with a dispersion of 250–450 km/s erodes the Milky Way but fills Coma.
-- **The source must deliver the whole distribution,** its fast tail included, not a mean speed. The table covers the kernel from 30 to 10,000 km/s. The probability outside that range is below 0.7% for every dispersion, and below 0.03% at 300 km/s and above.
+- **Seeded retention windows.** The seeded coefficient reverses at a bath dispersion of about 210 km/s in the Milky Way, 330 km/s in the lens host, and 510 and 700 km/s for Coma's two ends. A Maxwellian's mean speed is 1.6 times its one-dimensional dispersion.
+- **Depth selectivity of the seeded coefficient survives.** A bath with a dispersion of 250–450 km/s gives the Milky Way a negative seeded coefficient and Coma a positive one.
+- **Scope of these thresholds.** They belong to CF-1's incoming–bound coefficient with a seed-shaped population. They are not the thresholds of the whole formation process, which also has the seedless channel and bound–bound losses. The 0.34% fast fraction belongs to the specific 300 and 3,000 km/s mixture; it is not a general limit on a source's tail.
+- The table covers the kernel from 30 to 10,000 km/s. The probability outside that range is below 0.7% for every dispersion, and below 0.03% at 300 km/s and above.
 
 ## A6. The channels CF-1 left out
 
@@ -104,33 +106,45 @@ At the required exposure, the table gives two rates relative to CF-1's seed-driv
 | 100 | 3×10³; 0.73 | 12; 0.29 | 2×10⁴; 1×10⁻⁵ | 8×10³; 3×10⁻⁵ |
 | 1,000 | 316; 7.3 | 1.2; 2.9 | 2×10³; 1×10⁻⁴ | 771; 3×10⁻⁴ |
 
-- **Seedless capture dominates everywhere,** by 10²–10⁷, except in the lens host at the largest cross-section, where it is comparable. The seed is not needed.
+- **At the old normalization, seedless formation's initial rate exceeds seeded capture everywhere,** by 10²–10⁷, except in the lens host at the largest cross-section, where they are comparable.
   - The owner's kinematic example holds in general: two incoming companions can leave one bound while the other carries the energy away.
   - The channel is itself depth-keyed, through both the capture probability and the focused density.
+  - "Works" here means the channel is allowed and its probability is verified. It does not yet mean a durable reservoir of the right size forms: that needs the new companions' orbits, residence times and later collisions (stage 2A).
 - **Evaporation is negligible in Coma,** but significant for galaxies at σ/m ≳ 100 cm²/g.
 - **Caveat.** These rates use the transparent bath of CF-1 and are computed at its initial distribution. A1 and A2 show that at this supply the bath is itself opaque and self-gravitating, so they are indicators, not predictions.
 
-## Requirements for a stage-2 source
+## Requirements at the old normalization (superseded as source requirements)
 
-The source must deliver, with its energy taken from the clock field and the field's back-reaction included:
-1. **A slow distribution,** with a one-dimensional dispersion below about 200 km/s for any galaxy retention and below 500–700 km/s for Coma. Its tail above 3,000 km/s must stay below about 0.3% for galaxies and below 30–50% for Coma.
-2. **Exposure** A* of 10⁻⁴–10⁻² kpc⁻¹. At that supply the population is opaque on the boundary scale, outweighs the baryons and can collapse on its own, so stage 3 must evolve its gravity and collisions together with any retained mass.
-3. **A declared time and region.** A 300 km/s population reaches Coma from only about 3 Mpc in 10 Gyr.
+After the owner's review of 299ba1f these are no longer requirements for a source: they were derived at CF-1's seeded-only normalization. Stage 2A recomputes the supply with all channels together, and the requirements handed to a source come from it. They are kept as the diagnosis at the old normalization:
+1. **A slow distribution,** with a one-dimensional dispersion below about 200 km/s for positive seeded retention in galaxies and below 500–700 km/s in Coma. For the tested two-speed mixture, the tail at 3,000 km/s had to stay below about 0.3% for galaxies and below 30–50% for Coma.
+2. **Exposure** A* of 10⁻⁴–10⁻² kpc⁻¹. At that supply the population is opaque on the boundary scale, and a uniform bath over the boundary region outweighs the baryons.
+3. **A declared time, region and initial distribution.** The transport benchmark uT is about 3 Mpc for a 300 km/s population in 10 Gyr.
 4. **A companion mass** of at least about 6×10⁻²³ eV for the particle treatment in galaxies, or a wave treatment otherwise.
 
 ## What this does and does not show
 
 **Shown.**
-- CF-1's bath is internally inconsistent at the supply CF-1 requires: it would be opaque, heavy and self-gravitating.
-- The same interaction's seedless channel outruns the seeded one.
-- Depth selectivity survives realistic velocity distributions, but the fast tail decides galaxies.
+- CF-1's bath is internally inconsistent at the supply CF-1's seeded-only capture requires: it would be opaque, and as a uniform environment it would be heavy and Jeans-unstable.
+- The same interaction's seedless channel is allowed, and at that normalization its initial rate outruns the seeded one.
+- The seeded coefficient's depth selectivity survives Maxwellian baths, and its sign depends on the fast tail.
 
 **Not shown.**
-- A source (stage 2).
-- Any reservoir or its survival (stage 3).
+- The supply the complete mechanism requires (stage 2A).
+- A source (stage 2B).
+- Any reservoir or its survival.
 - That the medium this implies would produce the observed halos or cluster excess.
 
-This audit also raises a question for the programme: the bath this mechanism needs behaves like a self-interacting dark-matter medium in its own right. Whether that is compatible with the project's premises is the owner's decision.
+## Review qualifications (added after the owner's review of 299ba1f)
+
+- **No new premise decision is needed.** The first version of this report asked the owner whether a dominant, self-interacting companion medium is compatible with the premises. The [universe contract](../../../research_plan/universe-contract.md) already answers it:
+  - an independently inserted halo or bath, or dark matter under another label, is prohibited;
+  - a gravitating companion population derived from the permitted energy supply and interactions, with its abundance, energy, motion and gravity calculated, is a permitted hypothesis to test.
+
+  A derived population would still be an additional gravitating component; its explained origin and linked predictions are what would distinguish it, not its name.
+- **The old density is not a lower bound.** The stage takes CF-1's density as an input and finds that an omitted channel dominates there. It does not solve again for the density the complete mechanism needs. Seeded capture grows as ρ_∞M_seed and seedless formation as ρ_∞², so the old requirement cannot be carried forward as a minimum. The defensible statement is: *the seeded-only requirement lies outside CF-1's assumed regime; the supply the seedless-inclusive mechanism needs is undetermined* until stage 2A.
+- **Labels.** Jeans results are instability diagnostics, not simulated collapse. Boundary-volume masses are environmental estimates for a uniform bath, not companion mass at the tested radii. uT is a transport benchmark, not a source horizon.
+- **Thresholds keep their scope.** The Maxwellian sign changes and the 0.34% fast fraction belong to CF-1's seeded coefficient and the specific distributions that produced them. A population can gain bound companions through incoming–incoming collisions even where incoming–bound collisions have negative net retention.
+- **CC-1 stays a separately labeled branch.** Its clock field belongs to the co-scaling branch, in which separations counted in atomic rulers grow. A source compatible with operational nonexpansion remains the active objective; a CC-1-based source can only be a labeled comparison.
 
 ## Reproduce
 

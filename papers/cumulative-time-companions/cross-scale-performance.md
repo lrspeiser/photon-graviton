@@ -655,9 +655,9 @@ The initial statistics are depth-keyed from one law. Galaxies face a large heati
 
 ## Supply audit (CC-2, stage 1)
 
-The [stage-1 audit](../../research_work/results/companion-supply/report.md) asks whether CF-1's incoming population is consistent at the supply CF-1 requires. It is not.
+The [stage-1 audit](../../research_work/results/companion-supply/report.md) asks whether CF-1's incoming population is consistent at the supply CF-1's seeded-only capture requires. It is not.
 - **Opaque.** Across the Milky Way's and Coma's boundary regions, the bath's optical depth is 4–8.
-- **Heavy.** For every trial cross-section from 0.1 to 1,000 cm²/g, its mass there exceeds the baryons by 10¹–10⁷.
-- **Unstable.** In Coma it is Jeans-unstable at every trial scattering strength.
+- **Heavy, as an environmental estimate.** For every trial cross-section from 0.1 to 1,000 cm²/g, a uniform bath at that density over the boundary region would hold 10¹–10⁷ times the baryons. That is not the companion mass at the tested radii.
+- **Unstable by the Jeans criterion.** In Coma the criterion permits the uniform bath to fragment at every trial scattering strength. That is an instability diagnostic, not a simulated collapse.
 
-It would be the dominant self-gravitating, self-interacting medium rather than a trace bath. Under the same interaction, collisions between two incoming companions can leave one bound. That seedless channel beats seeded capture by 10²–10⁷ and is itself depth-keyed. With realistic velocity distributions the depth selectivity survives: retention needs a bath dispersion below about 210 km/s in the Milky Way and 510–700 km/s in Coma. PDF v1.5 predates this supplement.
+Under the same interaction, collisions between two incoming companions can leave one bound. At the old normalization that seedless channel's initial rate beats seeded capture by 10²–10⁷, and it is itself depth-keyed. Because it grows as the density squared, the old density is not a lower bound for the complete mechanism; stage 2A recomputes the supply. The seeded coefficient's depth selectivity survives Maxwellian baths, changing sign at a dispersion of about 210 km/s in the Milky Way and 510–700 km/s in Coma. PDF v1.5 predates this supplement.
