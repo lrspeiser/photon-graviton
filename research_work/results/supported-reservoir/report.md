@@ -83,7 +83,11 @@ Not tested:
 
 ## Post hoc: universal against universal
 
-Declared after the results, at the project owner's direction. A law with one universal setting is preferred to per-system tuning, even when its fit is worse. The declared rule measured the condensate's one shared scale against NFW halos tuned lens by lens.
+Declared after the results, at the project owner's direction. The same laws and constants should hold everywhere, with differences coming from each system's specified inputs and environment, not from per-system corrections.
+
+The declared rule measured the condensate against NFW halos tuned lens by lens; its allowance of 10 was an Akaike penalty for their extra parameters. The comparison below matches freedoms instead. Both comparisons stand, because they answer different questions.
+
+An NFW halo with one scale radius for every lens is a restricted benchmark, not NFW's own universal law, in which the scale follows each object's mass and assembly history. That version is not tested here.
 
 [universal-halo.py](universal-halo.py) makes the like-for-like comparison ([universal-halo.json](universal-halo.json)):
 - an NFW halo with one scale radius shared by all six lenses;
@@ -91,7 +95,7 @@ Declared after the results, at the project owner's direction. A law with one uni
 - exact lensing, and the same data, geometry and likelihood;
 - the lens-fixed scale then carried to the Milky Way with only the mass free.
 
-| | Condensate, one shared R_TF | NFW, one shared r_s | Free NFW, tuned per lens |
+| | Condensate, one shared R_TF | NFW, one shared r_s (restricted benchmark) | Free NFW, tuned per lens |
 |---|---|---|---|
 | Parameters | 13 | 13 | 18 |
 | FLRW: six-lens χ² | **113.6** (R_TF = 79.6 kpc) | 128.6 (r_s = 251 kpc) | 85.3 |
@@ -99,10 +103,26 @@ Declared after the results, at the project owner's direction. A law with one uni
 | Milky Way RMSE, 38 bins (inner 20), km/s | 22.5 (25.4) | **14.1 (13.4)** | not a universal law |
 
 - **Lenses.** At equal freedom the condensate fits better, by 15.0 (FLRW) and 16.4 (co-scaling). It wins in J0037, J1112 and J1402, by 3–14. The shared-scale NFW wins in J1621 and J1630, by 2–5. J1204 is a tie.
-- **Milky Way.** The shared-scale NFW does better, because its scale of 250–300 kpc keeps adding mass across the measured disk, while the condensate ends at about 75 kpc.
+- **Milky Way.** The shared-scale NFW does better. Its advantage comes from the interior profile inside the measured 5–25 kpc, analyzed in the next section. The first version of this report blamed the condensate's edge near 75 kpc. Material beyond 25 kpc cannot change these speeds, because the model adds GM(<r)/r to v², so that explanation was wrong.
 - **Neither is as good as the archive's frozen references** in the Milky Way (6.8, 9.3 and 9.5 km/s). Those references use their own universal settings, not lens-fixed ones.
 
-The declared verdict is unchanged. What this diagnostic shows is that the supported law is the better universal description of the six lenses, and that its hard edge is what costs it the Milky Way.
+The declared verdict is unchanged. At equal freedom, the supported law describes the six lenses better than the restricted NFW benchmark. The χ² values measure the stellar-motion discrepancy with the lens angles imposed exactly, so this is a better joint fit, not an independent prediction of lensing.
+
+## Post hoc: what the Milky Way comparison measures
+
+Requested in the owner's review. [milky-way-interior.py](milky-way-interior.py) compares, inside the measured range, the extra enclosed mass each fitted model supplies with the extra mass the observed speeds require, M_req(<r) = r(v_obs² − v_b²)/G. Results: [milky-way-interior.json](milky-way-interior.json). The FLRW-fixed scales are shown; the co-scaling ones agree to 1%.
+
+| Across 5–25 kpc | Extra mass supplied/required at 6, 10, 15, 20, 24 kpc | Enclosed-mass slope, 8–20 kpc | Mean signed residual (km/s) at 5–10, 10–15, 15–20, 20–25 kpc |
+|---|---|---|---|
+| Required by the data | 1 | 1.31 | — |
+| Condensate (R_TF 79.6 kpc) | 0.19, 0.38, 0.65, 1.16, 1.94 | 2.71 | −27, −24, −9, +21 |
+| NFW with one shared r_s (251 kpc) | 0.51, 0.67, 0.83, 1.19, 1.73 | 1.93 | −15, −12, −3, +18 |
+| Baryons only | 0 | — | −38, −52, −61, −56 |
+
+- **The condensate is too uniform across the disk.** Its core (~80 kpc) is much larger than 25 kpc, so its density is nearly constant there, and its enclosed mass grows as r^2.7. The data need about r^1.3. It supplies too little inside about 18 kpc and too much beyond.
+- **Its edge plays no role.** Only 11–12% of its mass lies inside 25 kpc, and nothing outside 25 kpc affects these speeds.
+- **The shared NFW has the same problem, more mildly.** Its density falls as about r⁻¹ inside its scale, so its enclosed mass grows as r^1.9.
+- **What the Milky Way asks for** is extra mass concentrated like the requirement, with density falling roughly as r^−1.7 across the disk. A Thomas–Fermi condensate with the lenses' constant cannot be both extended enough for the lenses and concentrated enough for the Milky Way. That tension belongs to this law; it is not an edge effect.
 
 ## Leads (hypotheses for declared tests, not results)
 
@@ -110,12 +130,13 @@ The declared verdict is unchanged. What this diagnostic shows is that the suppor
   - One constant takes the six lenses from χ² 883 (stars only) to 114 in FLRW and from 1,090 to 89 in co-scaling. That is about 96–97% of the χ² improvement over stars alone that free per-lens NFW halos give, with five fewer parameters.
   - Its size, about 80 kpc, is the same in both geometries, and it also improves the Milky Way.
   - A law with one shared scale is worth pursuing further.
-- **The failure is in the profile's shape.**
-  - The n = 1 polytrope has a hard edge. The lenses that fail and the Milky Way want an extended outer envelope.
-  - The natural next law is two-phase: a Thomas–Fermi core inside an isothermal envelope with one shared velocity dispersion. This is the structure of superfluid dark-matter models (Berezhiani & Khoury, arXiv:1507.01019), and it would supply the second phase that CG-0 found necessary.
+- **The Milky Way failure is the interior slope, not the edge.**
+  - A revised law must concentrate mass inside the Milky Way's disk while staying extended in the lenses.
+  - A two-phase law, with a Thomas–Fermi core inside a thermal component, as in superfluid dark-matter models (Berezhiani & Khoury, arXiv:1507.01019), could do this only if its thermal part is concentrated across the measured region. That must be calculated, not assumed.
+  - A universal interaction can produce different equilibrium dispersions in different hosts. One identical dispersion everywhere is not what universality requires.
 - **Supply must be cosmological if it exists.**
   - Local starlight falls short by 10⁶–10⁹ here, as in CR-1.
-  - [CC-1](../clock-completion/report.md)'s ledger stores all the energy light has lost since the turnaround in the clock field. With V = 0, that store is z_max times today's radiation energy. For z_max ≈ 5,200 it would be about 26% of 3H²c²/8πG.
+  - [CC-1](../clock-completion/report.md)'s ledger stores all the energy light has lost since the turnaround in the clock field. With V = 0, that store is z_max times today's radiation energy. Matching about 26% of 3H²c²/8πG would require z_max ≈ 5,200. That is a required-budget estimate for the toy, not evidence that such a turnaround occurred or that the energy can form halos.
   - Whether that energy can clump into companions is untested. No mechanism for it exists yet, and z_max is free.
 - **The stellar mass is part of the story.** With identical conventions, the lenses need 1.5–3 times Chabrier stellar mass in both geometries. That part of the inner shortfall is an IMF question, not a reservoir question.
 
@@ -125,4 +146,5 @@ The declared verdict is unchanged. What this diagnostic shows is that the suppor
 python research_work/results/supported-reservoir/cr2.py      # about 5 minutes on 6 workers; fails fast and logs progress
 python research_work/results/supported-reservoir/checks.py   # suite job: V1, V2 for all six lenses, one archived fit per geometry
 python research_work/results/supported-reservoir/universal-halo.py   # post-hoc universal comparison, about 1 minute on 6 workers
+python research_work/results/supported-reservoir/milky-way-interior.py   # post-hoc Milky Way interior diagnostic, seconds
 ```

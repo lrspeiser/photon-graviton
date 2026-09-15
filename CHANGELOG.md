@@ -6,6 +6,11 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **CR-2 corrections after the owner's review of e5f6fc3.** The report had said the condensate's edge near 75 kpc costs it the Milky Way. Material beyond the measured 5–25 kpc cannot change those speeds, so that explanation was wrong.
+  - A post-hoc interior diagnostic (`milky-way-interior.py`) finds the actual cause. The condensate is nearly uniform across the disk, so its enclosed mass grows as r^2.7 where the data need r^1.3. It is too thin inside about 18 kpc and too heavy beyond.
+  - The one-scale NFW comparison is relabeled a restricted benchmark. NFW's own universal law lets the scale follow mass and history.
+  - z ≈ 5,200 is relabeled a required-budget estimate.
+  - The queue now starts with CF-1, a conditional transport-and-capture diagnostic, as the owner directed.
 - **Supported reservoir CR-2** (protocol a5b2c41). A Thomas–Fermi condensate with one shared constant, in equilibrium with each lens's stars, is fitted jointly to the KCWI stellar motions and exact lensing of six SLACS lenses, with identical geometry and mass conventions.
   - **Result: it fails the declared rule in both geometries.**
     - The best shared core size is about 80 kpc in both.
@@ -13,7 +18,7 @@ New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md)
     - The same core size cuts the Milky Way rotation RMSE from 52.6 to 22.5 km/s, short of 20.
   - **Separate results.** Supply falls short by 10⁶–10⁹. Chabrier population masses cannot fit; the lenses need 1.5–3 times Chabrier.
   - **Validation.** The archive's benchmark fits are reproduced to 10⁻¹³. The co-scaling benchmarks are new.
-  - **Post hoc, universal against universal** (the owner prefers universal settings to per-system tuning). At equal freedom, the condensate beats an NFW halo with one shared scale on the lenses (113.6 against 128.6; 89.3 against 105.7). It loses in the Milky Way (22.5 against 14.1 km/s).
+  - **Post hoc, universal against universal** (the owner prefers universal settings to per-system tuning). At equal freedom, the condensate beats an NFW halo with one shared scale (a restricted benchmark) on the lenses (113.6 against 128.6; 89.3 against 105.7). It loses in the Milky Way (22.5 against 14.1 km/s).
 
   See the [report](research_work/results/supported-reservoir/report.md). Its leads section proposes a two-phase support law and a cosmological supply test.
 - **Model contract revised after the owner's review.** Co-scaling is now a separately labeled branch, not a declaration that the nonexpanding requirement is met; the fixed-ruler branch stays open. The contract changes these claims:

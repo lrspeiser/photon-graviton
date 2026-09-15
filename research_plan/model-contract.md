@@ -65,7 +65,7 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
 - **The reservoir.** CR-1's failures stand with their stated scope.
   - CR-2's supported condensate, with one shared scale of about 80 kpc, fits the lenses worse than free halos and misses the Milky Way threshold.
   - Its supply from local starlight fails by 10⁶–10⁹.
-  - If reservoirs exist, they need a cosmological supply and a softer, two-phase profile (CR-3, CC-2).
+  - If reservoirs exist, they need a cosmological supply (CC-2). In the Milky Way they also need an interior more concentrated than a Thomas–Fermi core with the lenses' scale: the core is too uniform across 5–25 kpc, and its edge plays no role (CR-3, after CF-1).
 - **The radiation state s.** Whether matter or radiation controls the local field state must come from the coupling equations. The ratio of baryon to starlight energy density alone does not establish it.
 
 **Provenance.** Ingredients exist in published work:
@@ -76,11 +76,16 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
 
 ## 5. Experiment queue (each needs its own declared protocol)
 
-1. **CR-3, a two-phase reservoir.** A Thomas–Fermi core inside an isothermal envelope with one shared velocity dispersion. It is tested exactly as CR-2 was, and support, supply and formation history are reported separately.
-2. **CC-2, cosmological supply.** Can the clock field's stored energy be deposited into clumpable quanta, with a closed ledger?
-3. **CG-1, clock-field gravity,** only with a named vector or second field. It tests the Milky Way radial and vertical forces first, states a Solar System–safe interpolating function, and then SPARC and SLACS.
-4. **The co-scaling history.** A declared V(n) or other dynamics comes before any brightness comparison. No distance history is imported.
-5. **The fixed-ruler branch.** Its first experiment remains whether a screened field can bend light toward galaxies.
+1. **CF-1, transport and capture of a slow companion population** (conditional).
+   - A declared shared incoming distribution.
+   - Entry rate, unbound density, net capture and retained mass kept distinct.
+   - The no-capture limit validated before one declared interaction.
+   - Potentials from ordinary matter plus counted seeds only.
+2. **CC-2, cosmological supply.** Given a declared field state and interaction, what traveling population is produced, and how does extracting that energy change the field's evolution?
+3. **CR-3, a revised supported reservoir,** designed from what CF-1 and CC-2 require. Support, supply and formation history are reported separately.
+4. **CG-1, clock-field gravity,** only with a named vector or second field. It tests the Milky Way radial and vertical forces first, states a Solar System–safe interpolating function, and then SPARC and SLACS.
+5. **The co-scaling history.** A declared V(n) or other dynamics comes before any brightness comparison. No distance history is imported.
+6. **The fixed-ruler branch.** Its first experiment remains whether a screened field can bend light toward galaxies.
 
 ## 6. What would stop each line early
 

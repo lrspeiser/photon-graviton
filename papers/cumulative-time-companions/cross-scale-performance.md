@@ -634,7 +634,7 @@ The [CR-2 test](../../research_work/results/supported-reservoir/report.md) repla
 - **Separately.**
   - Supply from each lens's own starlight falls short by 10⁶–10⁹.
   - The lenses need stellar masses of 1.5–3 times Chabrier.
-  - The polytrope's hard edge, not its scale, is what fails. A two-phase law with a thermal envelope is the proposed next test.
-- **Universal against universal (post hoc).** The owner prefers universal settings to per-system tuning. At equal freedom, the condensate beats an NFW halo with one shared scale on the six lenses (113.6 against 128.6 in FLRW, 89.3 against 105.7 in co-scaling). It loses in the Milky Way (22.5 against 14.1 km/s).
+  - In the Milky Way the condensate is too uniform across the measured 5–25 kpc: its enclosed mass grows as r^2.7 where the data need r^1.3. An earlier version blamed its outer edge near 75 kpc, which cannot affect those speeds.
+- **Equal freedom (post hoc).** At the owner's direction the same laws and constants should hold everywhere. At equal freedom, the condensate beats an NFW halo with one shared scale, a restricted benchmark, on the six lenses: 113.6 against 128.6 in FLRW, 89.3 against 105.7 in co-scaling. It loses in the Milky Way, 22.5 against 14.1 km/s.
 
 PDF v1.5 predates this supplement.
