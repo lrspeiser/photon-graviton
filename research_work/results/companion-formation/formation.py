@@ -142,14 +142,15 @@ def summarize(model, res, s, full, M0):
     lrh = math.log(rh)
     regime = dict(tau_r_half=float(np.interp(lrh, model.lr, model.tau)), tau_centre=float(model.tau[0]),
                   tau_r_half_max_in_history=max(h['tau_r_half'] for h in hist) if hist else None,
-                  bath_self_collision_time_Gyr=1/(model.sm*model.rho_inf*g_bb)/mc.PER_GYR,
+                  bath_self_collision_time_Gyr=(1/(model.sm*model.rho_inf*g_bb)/mc.PER_GYR if model.sm > 0 else None),
                   bath_excess_within_r_half_over_baryons=float(np.interp(lrh, model.lr, Mbx)/np.interp(lrh, model.lr, Mb_grid)),
                   uniform_bath_mass_in_R_b_over_baryons=4/3*math.pi*model.R_b**3*model.rho_inf/Mb,
                   capture_efficiency=(M_T - M0)/inflow,
                   jeans_length_over_R_b=sigma_eff*math.sqrt(math.pi/(mc.G*model.rho_inf))/model.R_b,
                   kJ_R_b_over_pi=kJ*model.R_b/math.pi)
-    mass_ledger = M_T - (M0 + L['born_mass'] + L['captured_mass'] - L['ejected_mass'] - L['evaporated_mass']
-                         - L['escaped_mass'] + L['M_thinning'] + L['M_resample'])
+    # an added source's births (CC-2 stage 2B's field) enter the ledger too; stage 2A has none
+    mass_ledger = M_T - (M0 + L['born_mass'] + L.get('field_born_mass', 0.) + L['captured_mass'] - L['ejected_mass']
+                         - L['evaporated_mass'] - L['escaped_mass'] + L['M_thinning'] + L['M_resample'])
     out = dict(M_T=M_T, M_within_r_half_T=M_rh, B1_ratio=M_T/Mb, B2_ratio=M_rh/(.5*Mb), growth_dlnM_dlnt_at_T=grow,
                tracers=len(m), regime=regime, runtime_s=res['runtime_s'],
                mass_ledger_relative=abs(mass_ledger)/max(M_T, M0, 1e-300),

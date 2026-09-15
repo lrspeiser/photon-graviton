@@ -1008,6 +1008,15 @@ class Model:
         L['M_thinning'] += float(self.m.sum()) - Mt
         L['thinnings'] += 1
 
+    def _source_births(self, Delta, L):
+        """Births from an added source this step: (x, v, m, energy to book), or None. Stage 2A has no added source;
+        CC-2 stage 2B's field source overrides this (companion-source/field.py)."""
+        return None
+
+    def _advance_source(self, t_next, Delta):
+        """Let an added source update the incident density before the next step. None in stage 2A."""
+        return None
+
     def _heavier_births(self, L):
         """Birth-rate control: double the mass of future births (their number per step halves). Existing tracers
         are left alone; thinning them here, repeatedly when production rose sharply, destroyed the statistics."""
@@ -1167,6 +1176,12 @@ class Model:
                         self.add_tracers(bx, bv, bm)
                     if len(pE):
                         exits_E.append(pE); exits_m.append(pm); exits_c.append(np.full(len(pE), 3))
+            added = self._source_births(Delta, L)       # births from an added source (CC-2 stage 2B); none in 2A
+            if added is not None:
+                ax, av, am, E_added = added
+                booked += E_added
+                if len(am):
+                    self.add_tracers(ax, av, am)
             Eafter = self.energy_sum()
             scale = abs(Ebefore) + abs(Eafter) + abs(booked) + 1e-300
             L['closure_max'] = max(L['closure_max'], abs(Eafter - Ebefore - booked)/scale)
@@ -1175,6 +1190,7 @@ class Model:
                 self._thin(L)
             # 4. potential, bath and depletion
             Eb4 = self.energy_sum()
+            self._advance_source(t + Delta, Delta)      # an added source may change the incident density; none in 2A
             self.M_c = self.enclosed_tracer_mass()
             self.rho_c = self.tracer_density()[2] if len(self.x) > 1 else np.zeros(self.n)
             self.update_tau()
