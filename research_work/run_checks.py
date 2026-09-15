@@ -117,6 +117,7 @@ def main():
         ('clock-completion/cc1.py', []),
         ('clock-gradient/timelike.py', []),
         ('supported-reservoir/checks.py', []),
+        ('gravitational-focusing/checks.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

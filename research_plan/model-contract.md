@@ -15,6 +15,7 @@ Each branch's general hypothesis is broader than its implementation. Each failur
 | CR-1 ([report](../research_work/results/collective-reservoir/report.md)) | A collective reservoir, fed by photons, supports the extra gravity | One coherent spherical mode. Labeled assumptions: zero self-interaction, a 10⁹ Msun seed, illumination collected inside r₉₉, a 10 Gyr span | Derived supply 10⁸ to 5×10¹¹ times short in the seed's collection volume. At the required rate, the heavy constituent contracts to a compact core; photon-shaped growth runs away or disperses. The ground-state reference used for its excess energies is checked in the [report](../research_work/results/collective-reservoir/report.md) |
 | CC-1 ([report](../research_work/results/clock-completion/report.md)) | Co-scaling: matter and light share one metric whose scale factor is the propagation index | Homogeneous; universal coupling to g_m = −c²dt² + n²dx²; the index's dynamics from L_n = (M/2)ṅ² − V(n) | **Consistent.** 1+z = n_o/n_e in both frames, all clock ratios fixed, D_L = (1+z)²D_A, the ledger closes. With V = 0 the history is coasting, and ruler counts grow. See section 3 |
 | CR-2 ([report](../research_work/results/supported-reservoir/report.md)) | A repulsively supported reservoir supplies the lenses' extra mass | Thomas–Fermi n = 1 polytrope with one shared constant; Newtonian gravity; six SLACS lenses fitted jointly (motions plus exact lensing) with identical geometry and mass conventions; Milky Way check | **Fails.** The best shared core is about 80 kpc in both geometries. χ² 113.6 against free NFW's 85.3 (FLRW); Milky Way RMSE 22.5 against a limit of 20 km/s. Supply is 10⁶–10⁹ short. The lenses need 1.5–3 times Chabrier stellar mass |
+| CF-1 ([report](../research_work/results/gravitational-focusing/report.md)) | One slow companion population is focused and retained differently in shallow and deep potentials | Conditional; potentials from baryons plus a 1% seed; one declared interaction (elastic companion scattering); trial bath speeds; results per unit incident density | **Depth-keyed, conditionally.** At 300 km/s Coma retains 140–290 times faster than the Milky Way and stays bound. The Milky Way overheats. Faster baths erode every baryonic well. Supply is extreme |
 | CG-0 ([report](../research_work/results/clock-gradient/report.md)) | The clock field's gradient can serve as the rolling frame for galaxy gravity and lensing | One scalar; three formulations of its static response | **Fails as a single field.** The gradient turns spacelike at every SLACS Einstein radius, inside 2 kpc in the Milky Way and in the Solar System. Only a two-field (bi-potential) form keeps the frame defined |
 
 ## 2. The constraint within the tested family
@@ -76,12 +77,8 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
 
 ## 5. Experiment queue (each needs its own declared protocol)
 
-1. **CF-1, transport and capture of a slow companion population** (conditional).
-   - A declared shared incoming distribution.
-   - Entry rate, unbound density, net capture and retained mass kept distinct.
-   - The no-capture limit validated before one declared interaction.
-   - Potentials from ordinary matter plus counted seeds only.
-2. **CC-2, cosmological supply.** Given a declared field state and interaction, what traveling population is produced, and how does extracting that energy change the field's evolution?
+1. **CC-2, cosmological supply.** Given a declared field state and interaction, what traveling population is produced, and how does extracting that energy change the field's evolution?
+2. **CF-2, galaxies' energy sink.** CF-1 found that galaxies' captured companions overheat without one. Declare a sink or a second interaction, and derive the equilibrium profile a retained cluster population reaches, for comparison with lensing under identical conventions.
 3. **CR-3, a revised supported reservoir,** designed from what CF-1 and CC-2 require. Support, supply and formation history are reported separately.
 4. **CG-1, clock-field gravity,** only with a named vector or second field. It tests the Milky Way radial and vertical forces first, states a Solar System–safe interpolating function, and then SPARC and SLACS.
 5. **The co-scaling history.** A declared V(n) or other dynamics comes before any brightness comparison. No distance history is imported.
@@ -92,3 +89,4 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
 - **Co-scaling.** A declared field dynamics that reaches the recombination and nucleosynthesis temperatures cannot fit the brightness at equal freedom, or requires field energy that gravitating tests exclude.
 - **CG-1.** No vector or bi-potential completion gives the radial-acceleration relation, lensing equal to dynamics at low acceleration, the Milky Way vertical force and the Solar System bound together.
 - **CR-3.** No shared-dispersion two-phase law fits the lenses jointly within the declared allowance of free halos while meeting the Milky Way threshold. (CR-2's single-phase law already failed this.)
+- **CF-2.** No declared energy sink lets a galaxy-scale well keep the companions it captures without an energy budget that its baryons or radiation could not carry.

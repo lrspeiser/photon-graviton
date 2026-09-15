@@ -6,6 +6,16 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Focusing and capture CF-1** (protocol 012f6ca). A conditional transport-and-capture diagnostic, as the owner directed. One slow companion bath is placed in potentials built from ordinary matter plus a counted seed: the Milky Way, six SLACS lens hosts, and Coma over bracketed gas-and-star inputs, with a full NFW well only as a labeled inverse diagnostic.
+  - **Transport verified.** Focusing raises the entry rate and the unbound density exactly as predicted, to 10⁻⁵ and 10⁻⁸. With capture off, nothing is retained.
+  - **One interaction: elastic companion scattering.** Retention needs a bath slower than the host.
+    - At 300 km/s, Coma retains 140–290 times faster than the Milky Way and its captured population stays bound.
+    - The Milky Way's captured population overheats, and the lens hosts are marginal.
+    - At the trial speed of 3,000 km/s every system erodes.
+  - **Supply.** It needs 10⁴–10⁶ times the cosmic mean density at 1 cm²/g.
+  - **Correction.** From baryons alone, Coma's escape speed is 1,100–1,500 km/s, not the 4,500 km/s of its inferred well that the earlier focusing estimates used.
+
+  See the [report](research_work/results/gravitational-focusing/report.md).
 - **CR-2 corrections after the owner's review of e5f6fc3.** The report had said the condensate's edge near 75 kpc costs it the Milky Way. Material beyond the measured 5–25 kpc cannot change those speeds, so that explanation was wrong.
   - A post-hoc interior diagnostic (`milky-way-interior.py`) finds the actual cause. The condensate is nearly uniform across the disk, so its enclosed mass grows as r^2.7 where the data need r^1.3. It is too thin inside about 18 kpc and too heavy beyond.
   - The one-scale NFW comparison is relabeled a restricted benchmark. NFW's own universal law lets the scale follow mass and history.

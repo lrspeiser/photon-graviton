@@ -638,3 +638,16 @@ The [CR-2 test](../../research_work/results/supported-reservoir/report.md) repla
 - **Equal freedom (post hoc).** At the owner's direction the same laws and constants should hold everywhere. At equal freedom, the condensate beats an NFW halo with one shared scale, a restricted benchmark, on the six lenses: 113.6 against 128.6 in FLRW, 89.3 against 105.7 in co-scaling. It loses in the Milky Way, 22.5 against 14.1 km/s.
 
 PDF v1.5 predates this supplement.
+
+## Focusing and capture of a slow companion population (CF-1)
+
+The [CF-1 diagnostic](../../research_work/results/gravitational-focusing/report.md) asks whether one slow companion population, under one interaction law, is focused and retained differently in shallow and deep potentials. The potentials are built from ordinary matter plus a counted seed: the Milky Way, six SLACS lens hosts, and Coma over bracketed gas-and-star inputs.
+
+- **Transport.** Focusing raises the entry rate and unbound density exactly as the analytic factors predict. With capture off, nothing is retained.
+- **Retention.** With elastic scattering between incoming and bound companions, retention needs a bath slower than the host.
+  - At 300 km/s, Coma retains 140–290 times faster than the Milky Way, and its captured population stays bound.
+  - The Milky Way's captured population overheats, and the lens hosts are marginal.
+  - At 1,000–3,000 km/s the bath erodes every baryonic well.
+- **Supply.** The incident density required is 10⁴–10⁶ times the cosmic mean at 1 cm²/g.
+
+The pattern is depth-keyed from one law, but it covers galaxies only if they have an energy sink, and it needs a supply nothing yet explains. PDF v1.5 predates this supplement.

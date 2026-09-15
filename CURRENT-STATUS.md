@@ -5,7 +5,7 @@
 - the self-illumination pilot
 - repository consolidation
 - the three branches the project owner opened: the evolving propagation field PF-1, radiation-polarized gravity RPG-1 and the driven collective reservoir CR-1
-- after the owner's review of the [model contract](research_plan/model-contract.md), which was revised accordingly: the separately labeled co-scaling branch CC-1, the clock-gradient check CG-0 and the supported-reservoir test CR-2
+- after the owner's review of the [model contract](research_plan/model-contract.md), which was revised accordingly: the separately labeled co-scaling branch CC-1, the clock-gradient check CG-0, the supported-reservoir test CR-2 and the focusing-and-capture diagnostic CF-1
 
 Dated history is in [CHANGELOG.md](CHANGELOG.md); standing rules and the foundational index are in [research_plan/START-HERE.md](research_plan/START-HERE.md). All samples below were exposed during development. No genuinely untouched holdout has been opened.
 
@@ -28,6 +28,7 @@ We study a hypothetical nonexpanding universe with our observed data. Photons tr
 | **Co-scaling completion CC-1** ([report](research_work/results/clock-completion/report.md)), separately labeled branch | Matter and light coupled universally to g_m = −c²dt² + n(t)²dx²; the index's dynamics from L_n with V = 0; a consistency calculation with no fit | **Internally consistent; does not meet the nonexpanding premise.** All six declared checks pass. 1+z = n_o/n_e in both frames to 7×10⁻⁹; atomic clocks and their ratios are constant to 2×10⁻⁸; cavities keep 2ℓ/c; light and gravitational waves arrive together; D_L = (1+z)²D_A; the energy ledger closes to 9×10⁻¹⁵. Ruler counts grow. The V = 0 history is coasting and turns around; a turnaround as hot as recombination needs field energy of at least 1,100 times the radiation's |
 | **Clock-gradient check CG-0** ([report](research_work/results/clock-gradient/report.md)), diagnostic | Can one scalar's gradient be both the rolling frame and the galaxy force? X = (χ̇/c)² − \|∇χ\|² with χ = ln n, three formulations | **Fails as one field.** If the field carries the total acceleration, X < 0 at every SLACS Einstein radius, inside 2.0 kpc in the Milky Way, in 23 SPARC galaxies and in the Solar System. A limiting gradient drives X to zero there and leaves a constant 7×10⁻¹⁰ m/s² force. Only an excess-only, two-field form keeps X/X₀ ≥ 0.986, and with the simple ν it breaks the Cassini bound |
 | **Supported reservoir CR-2** ([report](research_work/results/supported-reservoir/report.md)), diagnostic | A Thomas–Fermi condensate (P = Kρ²/2, one shared K) in equilibrium with each lens's stars. Fitted jointly to six SLACS lenses' KCWI motions and exact lensing, with identical geometry and mass conventions, then carried to the Milky Way | **Fails the declared rule in both geometries.** The best shared core is about 80 kpc. χ² 113.6 against free NFW's 85.3 (FLRW), and 89.3 against 59.1 (co-scaling). The Milky Way RMSE falls from 52.6 to 22.5 km/s, short of 20. Supply from local starlight is 10⁶–10⁹ short. The lenses need 1.5–3 times Chabrier stellar mass. **Post hoc, universal against universal at equal freedom:** the condensate beats an NFW halo with one shared scale (a restricted benchmark) on the lenses (113.6 against 128.6; 89.3 against 105.7). It loses in the Milky Way (22.5 against 14.1 km/s), where across 5–25 kpc it is too uniform: enclosed mass ∝ r^2.7 against the required r^1.3 |
+| **Focusing and capture CF-1** ([report](research_work/results/gravitational-focusing/report.md)), conditional diagnostic | One slow companion bath (trial speeds 300, 1,000 and 3,000 km/s) in potentials from baryons plus a 1% seed: the Milky Way, six lens hosts, and Coma over bracketed inputs. One declared interaction, elastic companion scattering; results per unit incident density | **Transport verified; retention is strongly depth-keyed, conditionally.** At 300 km/s Coma retains 140–290 times faster than the Milky Way and its captured population stays bound. The Milky Way's overheats (26 times the binding energy per retained companion). At 1,000–3,000 km/s the bath erodes every baryonic well. The supply needed is extreme, 10⁴–10⁶ times the cosmic mean density at 1 cm²/g. No cluster profile or lensing is predicted |
 
 ## Frozen benchmarks
 
@@ -78,16 +79,12 @@ After the owner's review of the model contract on 14 September, co-scaling is in
 - **CC-1.** The co-scaling completion is internally consistent. Its history needs declared dynamics before any brightness comparison.
 - **CG-0.** One scalar cannot serve as both the rolling frame and the galaxy force, so clock-field gravity needs a named vector or second field.
 - **CR-2.** One supported condensate with a shared scale of about 80 kpc fails the declared joint test, and local starlight cannot supply it. In the Milky Way its interior is too uniform across the measured 5–25 kpc; its outer edge plays no role there.
+- **CF-1.** One slow companion bath under one declared interaction (elastic companion scattering) is retained in a strongly depth-keyed way. At 300 km/s, Coma retains 140–290 times faster than the Milky Way and stays bound. The Milky Way's captured population overheats, and the lens hosts are marginal. At 1,000–3,000 km/s the bath erodes every baryonic well. The required supply is extreme: 10⁴–10⁶ times the cosmic mean density at 1 cm²/g.
 - **The unification of redshift, gravity and reservoir.** It remains a goal; no complete action exists.
 
 The queue, each item with its own declared protocol:
-1. **CF-1, transport and capture of a slow companion population** (conditional diagnostic, the owner's direction).
-   - A declared shared incoming distribution, reported per unit incident density.
-   - Entry rate, unbound density, net capture and retained mass kept distinct.
-   - The no-capture limit validated before one declared interaction.
-   - Potentials from ordinary matter plus counted seeds only. Coma's missing gas and star inputs are carried explicitly.
-   - Trial speeds, such as 3,000 km/s, are labeled as trials, not predictions.
-2. **CC-2, cosmological supply.** Given a declared field state and interaction, what traveling population is produced, and how does extracting that energy change the field's evolution? The clock field's store holds all the energy light has lost since the turnaround. Matching about 26% of 3H²c²/8πG would need z ≈ 5,200, which is a required-budget estimate, not evidence.
+1. **CC-2, cosmological supply.** Given a declared field state and interaction, what traveling population is produced, and how does extracting that energy change the field's evolution? The clock field's store holds all the energy light has lost since the turnaround. Matching about 26% of 3H²c²/8πG would need z ≈ 5,200, which is a required-budget estimate, not evidence.
+2. **CF-2, galaxies' energy sink.** A declared energy sink or second interaction for galaxies, whose captured companions overheat in CF-1. Also the equilibrium profile a retained cluster population reaches, compared with lensing under identical conventions.
 3. **CR-3, a revised supported reservoir,** designed from what CF-1 and CC-2 require. It must concentrate mass inside the Milky Way's disk while staying extended in the lenses. The incoming speed is not the envelope's dispersion.
 4. **CG-1,** only with a named vector or second field. It tests the Milky Way's radial and vertical forces first, with a Solar System–safe interpolating function.
 5. **A declared history for the co-scaling branch,** then its brightness at equal freedom, with no imported distance history.
@@ -98,7 +95,7 @@ Standing constraints remain: retained products must not draw their motion from o
 ## Reproduce
 
 ```sh
-python research_work/run_checks.py                                                # 56 jobs, fresh output directory
+python research_work/run_checks.py                                                # 57 jobs, fresh output directory
 python research_work/results/capture-to-orbit/runner.py                           # RB-1 populations and predictions, about 7 min on 8 workers
 python research_work/results/capture-to-orbit/revision.py                         # RB-1 consistency revision, about 20 s
 python research_work/results/self-illumination/pilot.py                           # self-illumination pilot, about 4 min
@@ -113,6 +110,8 @@ python research_work/results/clock-completion/cc1.py                            
 python research_work/results/clock-gradient/timelike.py                           # CG-0 clock-gradient check
 python research_work/results/supported-reservoir/cr2.py                           # CR-2, about 5 minutes on 6 workers
 python research_work/results/supported-reservoir/checks.py                        # CR-2 suite job
+python research_work/results/gravitational-focusing/cf1.py                        # CF-1, about 2.5 minutes
+python research_work/results/gravitational-focusing/checks.py                     # CF-1 suite job
 ```
 
 The latest canonical diagnostics regenerate into a fresh directory:
@@ -120,6 +119,6 @@ The latest canonical diagnostics regenerate into a fresh directory:
 - the two PF-1 scripts;
 - RPG-1's `rpg1.py`;
 - CR-1's `cr1.py`;
-- CC-1's `cc1.py`, CG-0's `timelike.py` and CR-2's `cr2.py`.
+- CC-1's `cc1.py`, CG-0's `timelike.py`, CR-2's `cr2.py` and CF-1's `cf1.py`.
 
 Each compares its numbers with the archived result and overwrites the archive only with `--canonical`. The comparison is exact, with one exception: the Coma flexible-mixture fits have non-unique weights and stop at slightly different points under different BLAS threading. Their χ² agrees to about 10^-5 and their derived masses to about 0.1%, so they use documented tolerances; the Coma LP extrema and single-Plummer fit are compared exactly. The working paper is v1.5 (`output/pdf/theory-basis.pdf`). Later results are in the supplement `papers/cumulative-time-companions/cross-scale-performance.md`.
