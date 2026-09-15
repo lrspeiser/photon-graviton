@@ -6,6 +6,27 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Amendment 1 to RC-2a,** after the owner's review of 1585c9f. The first canonical attempt was stopped during its first round, before any result was read.
+  - **Scope.** One decay speed, 3 km/s, run in three stages:
+    1. controls and the reference at the fixed rate;
+    2. the direct search, only if the controls are interpretable;
+    3. the region-size comparison repeated at the selected rate, frozen.
+  - **Sampling noise.**
+    - A quiet representation for the reference: each shell and step gets its exact converted mass, with stratified radii and paired radial velocities.
+    - C1a, a numerical null without baryons.
+    - C1b, the same with random sampling at two resolutions.
+    - C1c, the reference at two resolutions.
+    - Noise excursions are measured as root-mean-squares over seeds.
+  - **Convergence of the gravitational signal.**
+    - Tested at every aperture (circular speed and net contrast) and at all 38 radii (rotation speed).
+    - Each quantity must both agree and be resolved: its standard error must be small enough to detect a tolerance-sized difference.
+    - The positive inventory is reported but no longer decides.
+    - R_conv needs a comparison with a larger completed region.
+  - **Where the mass came from.** Every tracer carries its birth radius, birth time and angular momentum. The report gives birth distributions for the companions inside 10–200 kpc, and measures the infall horizon instead of estimating it.
+  - **A matched-budget control, C3b:** twice the rate for 5 Gyr, then nothing.
+  - **The engine.** Stage 2A's engine gains optional per-tracer tags. They are absent in every earlier run, which stays bit-identical.
+
+  See the [protocol](research_work/results/donor-companion/protocol.md).
 - **Amendment 1 to the 2B-F1 revision,** after the owner's review of 9232e07. The first canonical attempt was stopped after about 18 minutes, before any results.
   - **F3's tolerance.** Three standard errors of 4% is 12%, so the 5% bound does not bind there. It controls only below 1.67%. F3 stays a statistical check and is no longer called a 5% convergence test.
   - **F3's cap.** The helper passed no tracer cap, so the engine's default of 40,000 applied. 2B-F1's F3 thinned twice and ended with 21,169 tracers, with 32–66 effective samples per bin. The revision caps F3 at four times its births and reports thinnings and each bin's effective sample size.

@@ -147,3 +147,77 @@ In a new directory, `donor-companion/`:
 - `checks.py`, the suite job;
 - `rc2a-results.json`;
 - `report.md`.
+
+## Amendment 1 (15 September 2026), after the owner's review of 1585c9f
+
+Declared before any RC-2a result was read. The first canonical attempt started at 12:48 and was stopped during its first round to apply this amendment. It wrote nothing, and its partial log is not used.
+
+### B1. Scope and order
+
+- **One decay speed:** 3 km/s, the reference case. The 10 km/s comparison is dropped.
+- **Three stages, each declared now.**
+  1. **Controls, and the reference at the fixed rate.**
+     - C1a–C1c (B2), C3 and C3b (B5), and D4.
+     - The region-size comparison at 1,437.8 M☉ kpc⁻³ Gyr⁻¹ over 150–2,400 kpc, with three seeds per region.
+     - C2 is evaluated in every run.
+  2. **The direct search at 1,200 kpc,** as declared, but only if stage 1's controls are interpretable: C1a passes, and the reference demonstrates convergence across resolutions (C1c). Otherwise RC-2a stops after stage 1, and the representation is fixed first.
+  3. **At the selected rate, frozen,** the region-size comparison over 600, 1,200 and 2,400 kpc, with three seeds each and the rules of B3. The rate is not refitted. Convergence at the old rate does not carry over, because a different source strength changes the mass profile and the distances from which material arrives.
+- **J1630 and Coma move to the item after RC-2a,** at the frozen rate, and only if stage 3 converges.
+
+### B2. The representation, and three tests of sampling noise
+
+Over a stationary donor, the daughter medium is Jeans-unstable above about 12 kpc, so sampling noise could seed structure. The tracers should represent the proposed source. Their large individual masses should not silently set its fluctuation spectrum.
+
+- **The quiet representation, used for the reference.**
+  - Each birth shell receives its converted mass exactly, every step. That mass is a whole number of tracers, with the remainder carried forward, rather than a Poisson draw.
+  - Radii are stratified in volume within the shell.
+  - Births come in pairs with opposite radial velocities and the same tangential speed. Their direction cosines are stratified within each step.
+- **Which runs use it.** The reference, C1a, C1c, C3, C3b and stages 2 and 3 use the quiet representation. C1b and D4 use 2B-F1's Poisson draws.
+- **C1a, the numerical null.** The quiet representation, homogeneous production and no baryons, in the 2,400 kpc region, with three seeds.
+  - **It passes** if two things hold at T, against the reference runs in the same region at the same rate:
+    - its net contrast inside each outer aperture, taken as a root-mean-square over the seeds (a noise excursion can have either sign, so a seed mean could hide it), stays below 10% of the companion mass inside that aperture;
+    - its companion mass inside 25 kpc stays below 10% of theirs.
+- **C1b, the numerical-noise test.** The same setup with ordinary random sampling (Poisson counts, random radii and directions), at 16,000 and 64,000 reference births, with three seeds each.
+  - **Reported,** as root-mean-squares over the seeds: the net contrast inside each aperture, and the excess inside 25 kpc over the uniform expectation.
+  - **How they change with resolution.** Growth seeded by noise should fall as the square root of the number of births, so four times the births should give a ratio near 0.5.
+- **C1c, a physical perturbation.** The Milky Way's baryons, declared and fixed, are the perturbation. The reference configuration runs in the 1,200 kpc region at 16,000 and 64,000 reference births, with three seeds each. The two resolutions must demonstrate convergence under B3's rules.
+- **A delta-f representation** is not implemented here. It would treat the uniform component analytically and sample only the deviations.
+
+### B3. Convergence of the gravitational signal, with a precision requirement
+
+These rules apply to each doubling in stages 1 and 3, and to C1c's two resolutions.
+
+- **Reported separately:**
+  - **Positive inventory:** the companion mass inside each aperture. Its tolerance is 5%, as declared; it is reported but does not decide convergence. At 300 kpc a 5% inventory error would be about 70% of the net contrast.
+  - **The net mass contrast inside each aperture,** with an absolute tolerance: the mass that would change the aperture's circular speed by 2 km/s, δM = 2 r v_c δv / G. This stays meaningful when the contrast is near zero.
+  - **The circular speed at each aperture,** v_c = √(G (M_b + net) / r). Tolerance: 2 km/s.
+  - **The rotation speed predicted at each of the 38 Eilers radii.** Tolerance: 2 km/s at every radius.
+  - **The 38-bin RMSE and the 8–20 kpc slope,** with tolerances of 1 km/s and 0.05, as declared.
+- **Two verdicts for each quantity:**
+  - **Agree.** The seed means differ by less than two standard errors of the difference, or by less than the tolerance, whichever is larger. This is the declared rule.
+  - **Resolved.** Two standard errors of the difference are below the tolerance, so the comparison could have detected a difference of that size.
+- **Demonstrated convergence** for a doubling requires every signal quantity to agree and be resolved: the circular speeds, the net contrasts, the rotation speeds, the RMSE and the slope. A comparison that agrees without being resolved is reported as "no statistically resolved difference", never as convergence.
+- **R_conv (demonstrated)** is the smallest region from which every later doubling demonstrates convergence. It needs an actual comparison with a larger completed region, so the largest region never qualifies by default. R_conv (statistical), the declared definition, is reported beside it.
+
+### B4. Where the mass came from
+
+Every tracer carries four values: its birth radius, birth time and birth specific angular momentum, and the time it first came within 25 kpc.
+- **For the companions inside 10, 25, 100 and 200 kpc at each snapshot**, the report gives:
+  - mass-weighted quantiles (10%, 50%, 90%) and histograms of birth radius (logarithmic bins) and birth time (1 Gyr bins);
+  - the distribution of birth angular momentum.
+- **The empirical infall horizon** is the 99th percentile of birth radius among the companions inside 25 kpc at T. It is compared with the pre-stated 334–720 kpc, which is a conditional estimate, not a bound on the self-gravitating run.
+- **Where the tags live.** Stage 2A's engine carries them as an optional per-tracer array that follows every birth, escape and merger. The array is absent in stage 2A and 2B-F1 runs, which must stay bit-identical; their smoke runs and the suite check that.
+
+### B5. A matched-budget comparison (C3b)
+
+C3 stays as declared. C3b converts the same total mass as the continuous run, but early: 2q₀ for 5 Gyr, then nothing. It runs at 3 km/s in the 1,200 kpc region, with three seeds, and is evolved to 10 Gyr.
+
+- **Reported beside C3 and the continuous run** at 2, 5, 8 and 10 Gyr: G1 and G2, the RMSE and slope, and the aperture contrasts.
+- **Descriptive readings, declared now:**
+  - **A persistent reservoir** if C3b passes G1 and G2 at 10 Gyr.
+  - **Continuing infall** if only the continuous run passes at 10 Gyr.
+  - **A transient match** if a history passes at an earlier snapshot but not at 10 Gyr.
+
+### B6. Scope
+
+Unchanged. The donor stays prescribed and stationary, and its initial density belongs to an unmodeled background. Its dynamics, the parent's equation of state and the nonexpanding background's law remain open. Passing RC-2a would establish a transport result, not a complete source or cosmological solution.
