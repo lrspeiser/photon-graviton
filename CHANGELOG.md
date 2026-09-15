@@ -6,6 +6,15 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Corrections after the owner's review of ed96b00.**
+  - **The outer profile.** Each profile row stores its shell's centre as the radius but its enclosed masses at the outer edge, 1.1926 times farther out. The first report paired them, so its outer circular speeds were 9.2% too high. The table and prose now use the outer edge: 166–195 km/s out to about 110 kpc, and 0.8–1.0×10¹² M☉ inside 148 kpc. The fit scores are unaffected.
+  - **The cost gate.** With the bath's gravity on, the subtraction of the uniform density is, for a homogeneous donor, the donor's own depletion, so the G3 net is a mass contrast. Positive inventory, mass contrast and source energy are kept separate; the verdict does not make the source budget small.
+  - **What is robust.** The inner shape holds without the bath's gravity and without scattering: 8.0 km/s and slope 1.32 at 3 km/s, collisionless.
+  - **Narrowed claims.** The normalization search is not exhaustive, since the rescaling root is not in general the RMSE minimum; at 150 kpc no sampled rate passed. The Jeans number is a growth-time diagnostic. F3's bins differ from its quadrature by up to 21%, inside their 12–20% standard errors: a statistical check, not a 5% convergence test.
+  - **Stage 2A's driver** draws the seeds of its rounds 2–4 in task completion order, as F1's did, so its archived canonical is not bit-reproducible. The fix and a rerun are queued with F1's revision.
+  - **The queue** follows the review: F1's revision (a direct search around the best actual RMSE, seed repeats at higher resolution, F3 with more tracers); RC-2 as a time-dependent donor-and-companion calculation whose apertures converge as the region grows; an extended, baryon-triggered source that counts its donor; three-dimensional stability and a common field frame; finite source histories before Bose enhancement.
+
+  See the [report](research_work/results/companion-source/report.md).
 - **CC-2 stage 2B-F1, a decaying-field source** (protocol 2cf7ea1), requested in the owner's review of 68eb17c.
   - **The shape.** Cold decays (3–10 km/s) with the bath's gravity on pass the Milky Way's profile gate in five of six combinations. The rotation RMSE is 6.8–8.7 km/s over the 38 Eilers bins, and the enclosed-mass slope across 8–20 kpc is 1.03–1.31 against the required 1.31, at q\* = 1,160–1,440 M☉ kpc⁻³ Gyr⁻¹. Companions born throughout the zone fall in on radial orbits, so M(<r) ∝ r/v_esc.
   - **The cost passes on the net.** The confined companions are 12.6–16.2 baryon masses. The cold bath barely enters the zone, and its shortfall against the uniform density, which is assigned to the background, brings the total to 0.75–2.6. With the bath's gravity omitted, no cold combination passes.

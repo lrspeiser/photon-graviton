@@ -685,7 +685,7 @@ PDF v1.5 predates this supplement.
 
 The [stage-2B-F1 report](../../research_work/results/companion-source/report.md) feeds a homogeneous field decaying into companion pairs through stage 2A's machinery, with decay speeds of 3–300 km/s and σ/m up to 1 cm²/g.
 - **The shape, from cold infall.** With cold decays (3–10 km/s) and the bath's gravity on, five of six combinations pass the Milky Way's fit, shape and cost gates. The companions' enclosed mass grows as r^1.03–1.31 across 8–20 kpc, against the required r^1.31, with rotation RMSE 6.8–8.7 km/s.
-- **A compensated structure.** The confined companions are 12.6–16.2 baryon masses. The cold bath barely enters the zone of influence, and its shortfall against the uniform density, assigned to the background, brings the net to 0.75–2.6. The net mass peaks near 124 kpc, at 0.8–1.0×10¹² M☉ in total.
+- **A compensated structure.** The confined companions are 12.6–16.2 baryon masses. The cold bath barely enters the zone of influence, and its shortfall against the uniform density, assigned to the background, brings the net to 0.75–2.6. The net mass peaks inside about 150 kpc, at 0.8–1.0×10¹² M☉ in total (radii corrected after the owner's review of ed96b00). For a homogeneous donor the subtraction is the donor's own depletion, so the net is a mass contrast, not a small budget, and the inner shape holds without it.
 - **Supply.** The field must make 280–360 times the cosmic mean density in companions, 1.7–2.1 million times the microwave background's energy, so as a local stock it cannot be converted light. Its uniform medium is Jeans-unstable within about a gigayear.
 - **Limits.** With the same source Coma keeps no static bath, and a 150 kpc zone fails the gate. Faster decays fail.
 

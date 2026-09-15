@@ -6,20 +6,22 @@
   - Best rate: q\* = 1,160–1,440 M☉ kpc⁻³ Gyr⁻¹, nearly the same in every combination.
   - Stage 2A's elastic envelope grew as r^1.7–2.7, and CR-2's condensate as r^2.7. The same machinery, fed by a cold source, gives the Milky Way's shape.
 - **The mechanism is cold radial infall, as the protocol expected.** At these speeds the field binds 98–100% of what it makes inside R_b. The companions fall in on nearly radial orbits (anisotropy β = 0.97–0.997 at 250 kpc), so their density goes as 1/(r²·v_esc).
+- **The inner shape does not come from the bath accounting or from scattering.** With the bath's gravity omitted and no collisions, the 3 km/s run still fits to 8.0 km/s with slope 1.32, and the 10 km/s run to 7.7 km/s with slope 1.35; both fail only the cost gate. At 5–25 kpc the bath term is 0.3–4.2% of the companion mass in the five passes. What matters is where the companions are born, their low angular momentum and their infall.
 - **G3 passes on the net, not on the confined mass.**
   - The confined companions are 12.6–16.2 baryon masses, close to the protocol's estimate of 16. That is above G3's 10 and inside the lenient 20.
-  - A cold incident bath barely enters the zone. Inside R_b it falls 10.5–15.0 baryon masses short of the uniform density, which is assigned to the background. That shortfall brings the net cost to 0.75–2.6.
+  - A cold incident bath barely enters the zone. Inside R_b it falls 10.5–15.0 baryon masses short of the uniform density, which is assigned to the background. That shortfall brings the net cost to 0.75–2.6; in the 3 km/s collisionless run it cancels 93% of the confined inventory.
   - In effect the zone has collapsed inward and left its outer part depleted: a compensated structure. With the bath's gravity omitted, no cold combination passes.
-- **Beyond the fitted range** the net extra mass reaches 7.0–9.4 baryon masses near 124 kpc, a total of 0.8–1.0×10¹² M☉, and the circular speed stays at 180–212 km/s out to about 90 kpc. Toward the zone's edge the depletion takes over.
+  - **The verdict is a mass contrast, not a small budget.** The positive inventory and the source's energy are unchanged by it (What G3 counts).
+- **Beyond the fitted range** the net extra mass reaches 7.0–9.4 baryon masses inside 148 kpc, a total of 0.8–1.0×10¹² M☉, and the circular speed stays at 166–195 km/s out to about 110 kpc. Toward the zone's edge the depletion takes over. These radii were corrected after the owner's review of ed96b00 (deviation 11).
 - **Faster decays fail.**
   - At 30 km/s the slope is 2.3–2.6; at 100 km/s the cost is 23–56.
   - At 300 km/s one combination passes, with the bath's gravity omitted, just below the runaway. It needs q\* = 4.6×10⁶ (a million times the cosmic mean), while the omitted bath excess inside r_half equals the baryons there. Every 300 km/s run with the bath's gravity on ran away or lost its static bath.
 - **The supply is enormous, and it is not radiation.** The passing combinations need the field to make 280–360 times the cosmic mean density in companions by T. That takes a field energy at least 1.7–2.1 million times the microwave background's, turned into companion rest mass: about two million times today's radiation, in a local stock comparison like RC-1's (the flow budget is RC-2).
-- **The medium it implies is Jeans-unstable** above 12–46 kpc, with growth times of 1.1–1.2 Gyr, about a tenth of the span. The smooth bath the model assumes is therefore not self-consistent for these decays.
+- **The medium it implies is Jeans-unstable** above 12–46 kpc, with growth times of 1.1–1.2 Gyr, about a tenth of the span. That is a growth-time diagnostic, not a completed collapse, but it puts the smooth bath the model assumes in doubt for these decays.
 - **It is not universal as modeled.**
   - With the Milky Way's best source unchanged, Coma keeps no static bath in either bracket.
   - J1630 completes, with companions only 0.15–0.25 of the baryons at 3–21 kpc.
-  - With a 150 kpc zone, no rate passes the Milky Way's gate.
+  - With a 150 kpc zone, no sampled rate passes the Milky Way's gate.
 
 Protocol: [protocol.md](protocol.md), declared in 2cf7ea1 before execution (baseline 6a3b14b). Code:
 - [field.py](field.py): the decay kinematics, the field as a source channel of stage 2A's engine, and the validation quadratures;
@@ -66,6 +68,7 @@ Results: [f1-results.json](f1-results.json).
 - **F2 and F4 are the corrected checks.** The first canonical run failed both, for reasons in the checks and not in the engine (deviation 9). The corrections draw no random numbers, and every ladder run and first verification came out identical in all three canonical runs (deviation 10 covers the refinements).
 - **Stage 2A's engine checks carry over.** Its suite job reruns V2, V3, V5, V6 and V7 with the hooks in place. V5 and V6 are recomputed here across every run.
 - **The passing collisional combinations are transparent:** τ(r_half) ≤ 0.011, against the regime's limit of 0.3.
+- **F3 is a statistical check, not a 5% convergence test.** Its 2 kpc bins hold 50–106 tracers each, so each bin's standard error is 12–20%. It passes its declared rule, three standard errors or 5% whichever is larger, with the worst bin at 0.39 of its tolerance, but single bins differ from the quadrature by up to 21%. The revision repeats it with more tracers.
 
 ## The Milky Way's profile gate
 
@@ -139,22 +142,23 @@ The extra mass the model supplies at five radii, over what the observed speeds r
 | 100 | 1 | omitted | 0.094 | 0.63 | 0.76 | 1.2 | 1.9 |
 | 300 | 0 | omitted | 0.82 | 0.93 | 0.95 | 1.1 | 1.5 |
 
-Beyond the fitted range, the net extra mass over the baryons (the confined companions plus, where it gravitates, the bath's excess), with the circular speed from all the mass in brackets (km/s). The profile-gate passes are listed, with the cold collisionless runs without bath gravity for contrast:
+Beyond the fitted range, the net extra mass over the baryons inside each radius (the confined companions plus, where it gravitates, the bath's excess), with the circular speed from all the mass in brackets (km/s). Each radius is the outer edge of a profile shell, where the enclosed masses are evaluated (deviation 11). The profile-gate passes are listed, with the cold collisionless runs without bath gravity for contrast:
 
-| Decay speed | σ/m | Bath gravity | 43 kpc | 87 kpc | 124 kpc | 177 kpc | 252 kpc | profile gate |
+| Decay speed | σ/m | Bath gravity | 52 kpc | 104 kpc | 148 kpc | 211 kpc | 300 kpc | profile gate |
 |---|---|---|---|---|---|---|---|---|
-| 3 | 0 | on | 3.5 (210) | 7.3 (202) | 9 (186) | 8.4 (152) | 1.1 (61) | yes |
-| 3 | 0 | omitted | 3.6 (213) | 7.8 (208) | 11 (202) | 13 (188) | 15 (167) | no |
-| 3 | 0.1 | on | 2.8 (194) | 5.8 (183) | 7 (167) | 6.7 (137) | 0.75 (55) | yes |
-| 10 | 0 | on | 3.1 (201) | 7.5 (204) | 9.4 (190) | 8.9 (156) | 2.6 (79) | yes |
-| 10 | 0 | omitted | 3.4 (208) | 7.5 (204) | 11 (201) | 14 (191) | 15 (167) | no |
-| 10 | 0.1 | on | 3.2 (205) | 7.1 (200) | 8.8 (185) | 8.4 (152) | 2.5 (78) | yes |
-| 10 | 1 | on | 2.5 (187) | 5.7 (181) | 7.1 (167) | 7 (140) | 2 (72) | yes |
-| 300 | 0 | omitted | 3.5 (211) | 5 (172) | 5.3 (148) | 5.4 (125) | 5.4 (105) | yes |
+| 3 | 0 | on | 3.5 (193) | 7.3 (185) | 9 (171) | 8.4 (139) | 1.1 (56) | yes |
+| 3 | 0 | omitted | 3.6 (195) | 7.8 (191) | 11 (185) | 13 (172) | 15 (153) | no |
+| 3 | 0.1 | on | 2.8 (178) | 5.8 (167) | 7 (153) | 6.7 (126) | 0.75 (50) | yes |
+| 10 | 0 | on | 3.1 (184) | 7.5 (187) | 9.4 (174) | 8.9 (143) | 2.6 (72) | yes |
+| 10 | 0 | omitted | 3.4 (190) | 7.5 (187) | 11 (184) | 14 (175) | 15 (153) | no |
+| 10 | 0.1 | on | 3.2 (187) | 7.1 (183) | 8.8 (169) | 8.4 (139) | 2.5 (71) | yes |
+| 10 | 1 | on | 2.5 (171) | 5.7 (166) | 7.1 (153) | 7 (128) | 2 (66) | yes |
+| 300 | 0 | omitted | 3.5 (193) | 5 (157) | 5.3 (136) | 5.4 (114) | 5.4 (96) | yes |
 
 **Why cold decays work.**
 - **Nearly every birth is bound.** A companion born at 3–10 km/s is bound nearly wherever it is born inside 300 kpc. The field binds 98–100% of what it makes in the zone, and 96–100% of the mass made is still confined at T.
 - **The radial-infall profile.** Each companion falls from almost rest on a nearly radial orbit and spends time at radius r in proportion to 1/v_esc(r). The time-averaged density is ρ ∝ 1/(r²·v_esc(r)), so M(<r) ∝ r/v_esc(r). The protocol expected this before running: about r^1.4 in the baryonic potential, and a confined mass of about 16 baryon masses at R_b = 300 kpc.
+- **Radial, but partly coherent.** The anisotropy β is 0.98–0.998 across 5–30 kpc in the 3 km/s collisionless run. It comes from raw second moments of the velocity, which count coherent infall as well as random radial motion; the revision separates the two.
 - **Against the requirement.** In all five cold passes the extra mass is 0.80–1.24 of what is required from 6 to 20 kpc, and 1.24–1.40 at 24 kpc.
 - **Why the rate barely moves between combinations.** The mass inside 25 kpc is set by how much of the zone has fallen in by T, not by the interaction. The confined mass is still growing in proportion to time (d ln M/d ln t = 0.86–1.01 at T).
 - **Scatter.** Across the three canonical runs, seven cold refinement runs were repeated at the same rate with a different seed (deviation 10). Their slopes moved by 0.01–0.19 and their RMSE by up to 2.5 km/s, so a slope carries about ±0.1.
@@ -164,13 +168,15 @@ Beyond the fitted range, the net extra mass over the baryons (the confined compa
 
 **What G3 counts.** The protocol's cost is all gravitating non-baryonic mass inside R_b: the confined companions plus, where it gravitates, the bath's focused excess. The uniform part is assigned to the background, a labeled assumption.
 - **For a cold bath that excess is negative.** Only orbits that reach R_b are populated, and at 3–10 km/s they are nearly radial, so the incident bath fills little of the zone. Inside R_b it falls short of the uniform density by 10.5–15.0 baryon masses, nearly the mass the field made there and bound.
-- **So G3 passes on a compensated structure.** The companions born in the zone have in effect collapsed toward the galaxy and left the zone's outer part depleted. The net gravitating mass inside R_b is therefore small.
+- **So G3 passes on a compensated structure.** The companions born in the zone have in effect collapsed toward the galaxy and left the zone's outer part depleted. The net gravitating mass inside R_b is therefore small: in the 3 km/s collisionless run, 16.18 confined baryon masses minus 15.04 of shortfall leaves 1.14.
+- **The subtraction is the donor's depletion.** The field loses mass at rate q per unit volume, uniformly, as it makes companions, and the incident bath's uniform density is qt. So with the bath's gravity on, the net is what donor accounting gives for a homogeneous, stationary donor: every companion inside R_b, minus the donor mass removed there. With the bath's gravity omitted, only the products are counted. The inner fit barely changes between the two, because the donor's loss inside 25 kpc, about 10⁹ M☉, is small next to the companions that fell in from outside.
+- **Three quantities stay separate.** The positive inventory is the 12.6–16.2 baryon masses of companions; the gravitational mass contrast is the G3 net of 0.75–2.6; the source's energy expenditure is the rest energy of everything the field made (Energy supply). The G3 verdict stands as declared, but it concerns the contrast only: it does not make the source budget small.
 - **Without that accounting nothing passes.** Counted alone, the confined companions (12.6–16.2 baryon masses) fail G3 and pass the lenient 20. With the bath's gravity omitted, no cold combination passes.
 - **The verdict rests on a labeled assumption:** that the uniform density belongs to the background. RC-2 and the global background must settle that.
 
 **The outer profile.**
-- **Inside about 125 kpc.** Out to about 90 kpc the circular speed stays at 180–212 km/s. The total mass reaches 0.8–1.0×10¹² M☉ near 124 kpc. That is the order of the Milky Way's mass that its halo stars and satellites indicate, from which G3's benchmark was declared.
-- **Beyond about 150 kpc** the depleted zone dominates; by 252 kpc the circular speed has fallen to 55–79 km/s. That fall comes from the zone's boundary model and from the unmodeled infall beyond R_b, so it is not a prediction.
+- **Inside about 150 kpc.** Out to about 110 kpc the circular speed stays at 166–195 km/s. The total mass reaches 0.8–1.0×10¹² M☉ inside 148 kpc. That is the order of the Milky Way's mass that its halo stars and satellites indicate, from which G3's benchmark was declared.
+- **Farther out** the depleted zone dominates: by 211 kpc the circular speed has fallen to 126–143 km/s, and by 300 kpc to 50–72 km/s. That fall comes from the zone's boundary model and from the unmodeled infall beyond R_b, so it is not a prediction.
 
 **Faster decays.**
 - **30 km/s.** Pericenters keep companions out of the inner kiloparsecs. The extra mass is 0.22–0.29 of the requirement at 6 kpc and 1.6–1.9 times it at 24 kpc (slope 2.3–2.6). The fits still meet G1 (17.4–19.7 km/s), which is why G2 was declared.
@@ -211,12 +217,13 @@ Beyond the fitted range, the net extra mass over the baryons (the confined compa
 
 **What the field must be.**
 - **Nearly all of its energy becomes companion rest mass.** Per unit of field energy the companions' kinetic share is ε = 5×10⁻¹¹ at 3 km/s and 5.6×10⁻¹⁰ at 10 km/s.
-- **How much the gate needs.** To pass it the field must deliver 1.2–1.4×10⁴ M☉ kpc⁻³ of companions by T, 280–360 times the cosmic mean density (a comparison unit only). Its own energy density is at least 1.7–2.1 million times the microwave background's, larger still since ΓT ≪ 1 is assumed, and it loses 2.2–2.8×10⁻²⁵ W/m³.
+- **How much the gate needs.** To pass it the field must deliver 1.2–1.4×10⁴ M☉ kpc⁻³ of companions by T, 280–360 times the cosmic mean density (a comparison unit only). Its own energy density is at least 1.7–2.1 million times the microwave background's, larger still since ΓT ≪ 1 is assumed, and it loses 2.2–2.8×10⁻²⁵ W/m³. If only 1% of the parent were used up over the span, its initial stock would be about 2×10⁸ times the microwave background's energy (the same local stock accounting).
 - **It is not photon energy.** Today's radiation holds about two million times less energy than the field must, the same kind of local stock shortfall RC-1 found for stage 2A's bath (10⁵–10⁸). Converting today's light cannot supply it; a flow budget is RC-2's.
   - In this toy the companions come from a separate dark sector, and the programme's photon–companion link plays no part in them.
   - The unification problem is sharper, not smaller.
-- **The medium is unstable.** A uniform medium of density qT at 3–10 km/s is Jeans-unstable above 12–46 kpc and grows in 1.1–1.2 Gyr.
-  - So the model's smooth incident bath and uniform background are not self-consistent for the decays that pass: the field's own companions would clump on galaxy scales long before T.
+- **The medium is unstable.** A uniform medium of density qT at 3–10 km/s is Jeans-unstable above 12–46 kpc, with a growth time of 1.1–1.2 Gyr.
+  - That is a growth-timescale diagnostic, not a statement that collapse completes in that time: the outcome depends on the perturbations, the source history and dynamics the model does not include.
+  - It still puts the model's smooth incident bath and uniform background in doubt for the decays that pass, since perturbations in the field's own companions can grow on galaxy scales well before T.
   - What that collapse does, and whether a static background can hold such a field, are questions for RC-2 and the global background.
 
 ## Universality and the zone
@@ -229,12 +236,13 @@ The best-scoring source, run unchanged, in J1630 and Coma (the same field, so th
 | Coma low | no static bath | – | – |
 | Coma high | no static bath | – | – |
 
-With a 150 kpc zone the best rate gives RMSE 30.0 km/s (inner 20: 35.9), slope 0.75 and cost −0.2: G1 no, G2 no, G3 yes, gate no (best point: high edge).
+With a 150 kpc zone, the verification at the rescaling root gives RMSE 30.0 km/s (inner 20: 35.9), slope 0.75 and cost −0.2: G1 no, G2 no, G3 yes, gate no; the root lay beyond the completed rates (high edge).
 
 - **Coma.** As in stage 2A, no static bath exists in either bracket: with the bath's gravity on, the net enclosed mass is not positive. A uniform density qT over the 30 Mpc zone is about 1.4×10¹⁸ M☉, and a cold bath that barely enters leaves most of it as a shortfall.
 - **J1630.** Its companions total 3.3 times its baryons, but inside 21 kpc they are 0.15–0.25 of the baryons (0.17–0.39 in projection): most of them lie farther out. These are predictions, not gates.
 - **The zone.** It sets the cost, since the field binds nearly everything it makes there, and here it also sets the profile.
-  - **With R_b = 150 kpc, no rate passes.** The best-fitting completed rung (3.2×10³) fits to 17.8 km/s, with slope 0.98. The verification at 4.8×10³ gives 30.0 km/s and slope 0.75, with a net shortfall inside the zone (cost −0.2). Rates of 9.6×10³ and above lose the static bath.
+  - **With R_b = 150 kpc, no sampled rate passes.** The best-fitting completed rung (3.2×10³) fits to 17.8 km/s, with slope 0.98. The verification at 4.8×10³, placed by the rescaling root, gives 30.0 km/s and slope 0.75, with a net shortfall inside the zone (cost −0.2). Rates of 9.6×10³ and above lose the static bath.
+  - **The search is not exhaustive.** The best actual sampled RMSE is at the 3.2×10³ rung, not at the verification (deviation 8); the revision searches that neighbourhood directly.
   - **The protocol had expected** a 150 kpc zone to halve the cost.
   - **The zone is not derived.** It comes from CF-1's boundary model, and infall from beyond it is not modeled. A result this sensitive to it needs the global background to set it.
 
@@ -262,6 +270,7 @@ With a 150 kpc zone the best rate gives RMSE 30.0 km/s (inner 20: 35.9), slope 0
    - **The rate** is the root of ln s = 0, interpolated in log q between the runs that bracket it, as stage 2A interpolates its benchmarks. Ladders extend until the root is bracketed: up to three times, by at most a factor of 3, and never past a stopped run.
    - **Refinements.** After the verification run, up to three refinements repeat the interpolation with every run so far. They keep the verification whose own s is closest to 1 and stop once it is within 10%.
    - **What failed first.** A parabola in RMSE against log q was tried in the smoke runs and failed. The RMSE is V-shaped near its minimum, and self-gravity makes the extra mass grow faster than q; one refinement jumped from 29 to 460 km/s.
+   - **A caveat raised in review.** The rescaling root is not in general the rate that minimizes the actual RMSE, because changing q changes the profile's shape as well as its normalization. The two agree where the shape is stable but can differ near boundary failures and runaway, so the search is not exhaustive. The revision keeps the best actual sampled RMSE, brackets its neighbourhood and evaluates it directly.
 9. **Validation corrections after the first canonical run.** The first canonical run (33 minutes) failed F2 and F4. Both failures were in the checks, not in the engine. The corrected checks draw no random numbers, and in the rerun every ladder run and first verification came out identical.
    - **F2** gave z = −1.01 at 100 km/s and −3.80 at 300 km/s.
      - **The cause** was the quadrature's fixed grid of 600 log-radius points, which misplaced the confinement edge. At 300 km/s the confined fraction falls from 1 to 0 within a sliver of radius (angular momentum barely moves the escape energy). There the plain trapezoid was 2.6% high, and 0.25% at 100 km/s.
@@ -279,13 +288,17 @@ With a 150 kpc zone the best rate gives RMSE 30.0 km/s (inner 20: 35.9), slope 0
     - **A direct measure of the scatter.** Across the three runs, 14 refinement runs were repeated at the same rate with a different seed.
       - **Cold decays.** The seven cold-decay runs moved by up to 0.19 in slope and 2.5 km/s in RMSE. For example, 10 km/s, collisionless, bath gravity on, at q = 1.39×10³ gave slope 1.10 and RMSE 9.6 km/s with one seed, and 1.29 and 8.6 km/s with another.
       - **The largest change** was at 100 km/s, 1 cm²/g, bath gravity on: RMSE 17.4 km/s and slope 1.56 with one seed, and 24.4 and 2.16 with another.
+11. **The outer-profile radii (corrected after the owner's review of ed96b00).** Each profile row stores the geometric centre of its shell as its radius, but its enclosed masses at the shell's outer edge, 1.1926 times farther out.
+    - **The error.** The first version of this report paired the two, so its outer circular speeds were 9.2% too high, at radii 1.19 times too small.
+    - **The correction.** The table and prose now use the outer edge, computed from the log-uniform shells. The revision stores both edges and the centre in each row.
+    - **What it does not touch.** The fit scores G1 and G2 count companion mass at the 38 measured radii themselves, so they are unaffected.
 
 ## What this does and does not show
 
 **Shown.**
 - **The phase space was the problem.** Stage 2A's machinery and CF-1's interaction, fed by a cold source, give the Milky Way's required enclosed-mass shape across 5–25 kpc. The elastic envelope came from the source's phase space, as the owner's review argued.
-- **Cold radial infall is the mechanism.** The normalization depends on the zone and the span, not on σ/m below 1 cm²/g.
-- **The cost gate passes only on the net,** through the cold bath's shortfall against the background. The confined companions alone are 12.6–16.2 baryon masses.
+- **Cold radial infall is the mechanism.** The inner shape holds without the bath accounting and without scattering, and the normalization depends on the zone and the span, not on σ/m below 1 cm²/g.
+- **The cost gate passes only on the net,** through the cold bath's shortfall against the background, which for a homogeneous donor is the donor's own depletion. The confined companions alone are 12.6–16.2 baryon masses; the verdict is a mass contrast, not a small budget.
 - **Faster decays fail the gate,** apart from one 300 km/s pass that depends on ignoring the bath's gravity at a million times the cosmic mean.
 - **The field needed is far beyond today's radiation:** 280–360 times the cosmic mean density, and 1.7–2.1 million times the microwave background's energy (a local stock comparison; the flow budget is RC-2). Its uniform medium is Jeans-unstable within about a gigayear.
 - **The passing configuration is not yet universal.** Coma keeps no static bath, and a 150 kpc zone fails.
@@ -295,20 +308,33 @@ With a 150 kpc zone the best rate gives RMSE 30.0 km/s (inner 20: 35.9), slope 0
 - **A global energy or flux budget.** That is RC-2.
 - **The collapse of the uniform companion medium.** A cold medium at these densities is Jeans-unstable within about a gigayear.
 - **Infall from beyond R_b, and so the outer halo.** Beyond about 150 kpc the profile reflects the zone's boundary model.
+- **An exhaustive search in q.** The normalization follows the rescaling root, which is not in general the RMSE minimum.
+- **Stability in three dimensions, or in a common field frame.** The solver is spherical, and the field is at rest in each host.
+- **Donor accounting for a localized source.** For the homogeneous donor the depletion is the uniform subtraction; a localized source's depletion sits where it converts, and changes the answer (Next).
 - **More than one field toy.**
 - **A microscopic model of χ.** The small mass defect is stated, not explained.
 
 ## Next
 
-- **RC-2 comes next, in the owner's order.** For this source it must say three things:
-  - whether a static background can hold a field of at least 280–360 times the cosmic mean density;
-  - what the companions do across the whole volume, including the uniform medium's collapse;
-  - what sets the zone of influence that the profile depends on.
-- **The pre-declared follow-ups** were declared for a failed gate. The gate passed, but two of them answer the weaknesses it exposed, each with its own protocol:
-  - **a field sourced by the baryons.** Production follows the baryons, so there is no uniform medium to deplete or collapse, and the rate differs between systems, which bears on Coma and J1630;
-  - **Bose-enhanced decay.** Production concentrates where companions already are, which also avoids a uniform medium.
-  - A bulk flow through the field frame addresses neither and can wait.
-- **The optimistic reading.** Cold phase space solves the shape problem that defeated stage 2A, with the interaction and machinery unchanged. What remains is a cold source that does not fill the universe uniformly. The next toy should keep the cold infall and localize the production.
+The owner's review of ed96b00 sets the order.
+- **First, a revision of this stage.**
+  - Keep each combination's best actual sampled RMSE, bracket its neighbourhood and evaluate it directly, with several seeds at each rate, instead of relying on the rescaling root alone.
+  - Repeat the selected cases at fixed parameters with independent seeds and four times the tracers before reading any marginal pass.
+  - Repeat F3 with more tracers, as a convergence test.
+  - Store each profile shell's edges and centre, and separate coherent infall from random radial motion in the anisotropy.
+  - Stage 2A's driver draws the seeds of its rounds 2–4 in task completion order, as this driver did. It gets the same fix, and its canonical run is repeated.
+- **Direction 1, the highest priority: RC-2 as a time-dependent donor-and-companion calculation.**
+  - **What it evolves.** The parent's energy, the daughters' production and orbits, the parent's depletion, the escaping energy and the gravity of every sector, together, in a finite-time open region first.
+  - **Boundary convergence.** The computational boundary is kept apart from the observational apertures. The region is enlarged while the same 5–25 kpc profile and outer apertures are measured, and the answer must converge rather than be chosen by R_b.
+  - **Where the depletion comes from.** The depleted region must emerge from the movement and conversion of positive-energy material, not from subtracting an assumed background.
+- **Direction 2: an extended, baryon-triggered source that counts its donor.**
+  - **What the owner's toy found.** An independent simplified calculation in the review found that a source proportional to the baryon density is too central once its donor's depletion is counted. Production spread over tens to hundreds of kiloparsecs keeps the inner slope at a lower conversion cost, but leaves little mass at large radii.
+  - **The test.** One shared length or transport law, fitted on the Milky Way and carried unchanged to J1630 and Coma, must predict the inner concentration, the outer mass and the depleted donor together.
+- **Direction 3: three dimensions and a common field frame.** Perturb a passing collisionless case away from spherical symmetry, let three-dimensional torques act, and check whether the angle-averaged profile and its slope survive. Give the host a physically specified motion through the field instead of the field's rest frame.
+- **Direction 4: finite source histories.**
+  - **What it tests.** A finite production episode within an already-existing universe separates an established reservoir from one sustained by continuing infall. Its energy must still be accounted for.
+  - **What waits.** Bose-enhanced decay waits until the companion mass, the occupied states, depletion and inverse processes are specified. The microwave background is not used to supply an unspecified reservoir.
+- **The reading.** Cold infall is a promising mechanism for the inner profile, with the interaction and machinery unchanged. Homogeneous field decay is not a complete explanation: the profile must still survive a correct total-energy accounting, a physically generated environment and three-dimensional dynamics.
 - **Unification stays explicit.** The field is a separate dark sector. Nothing here connects its decay to redshift, and its energy is not photon energy.
 - **Then the recording-transition toy,** as queued.
 

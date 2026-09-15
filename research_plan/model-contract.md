@@ -102,10 +102,15 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
       - Per unit of field energy it predicts the companion mass, production rate, velocity spectrum and angular distribution, with the field's equal-and-opposite energy loss. It does not assume the requested slow spectrum or abundance.
       - Every predicted spectrum goes straight through stage 2A's machinery. It is scored on energy supply and on a hard profile gate: the Milky Way's required M(<r) across 5–25 kpc, without a total confined mass beyond a declared multiple of the baryons. More supply with stage 2A's phase space only builds a heavier envelope.
       - Cold decays (3–10 km/s) pass the profile gate by radial infall. But the cost passes only on the cold bath's shortfall against the background, and the field must make 280–360 times the cosmic mean density.
-      - Of the follow-ups, a baryon-sourced field and Bose-enhanced decay answer those weaknesses, each with its own protocol.
-   5. **RC-2, the global steady-state energy and flux ledger,** for the open, three-sphere and three-torus backgrounds of item 2.
-      - It gives the source power density, companion flux, crossing time, recirculation, capture fraction, escaped energy and present inventory.
-      - It replaces RC-1's local stock comparison with a flow budget.
+      - The owner's review of ed96b00 keeps cold infall as the promising ingredient for the inner profile: it holds without the bath's gravity. The net cost is a mass contrast, not a small budget. A revision of the normalization search, with seed repeats, comes first.
+   5. **RC-2, redefined as a time-dependent donor-and-companion calculation** (owner's review of ed96b00; the highest priority), for the open, three-sphere and three-torus backgrounds of item 2, an open region first.
+      - It evolves the parent's energy, daughter production, orbital transport, parent depletion, escaping energy and the gravity of every sector together.
+      - The computational boundary is kept apart from the observational apertures. Enlarging the region must leave the 5–25 kpc profile and the outer apertures converged, not chosen by R_b.
+      - The depleted region must emerge from the movement and conversion of positive-energy material, not from subtracting an assumed background.
+      - It replaces RC-1's local stock comparison with a flow budget: source power density, companion flux, crossing time, recirculation, capture fraction, escaped energy and present inventory.
+   6. **An extended, baryon-triggered source that counts its donor.** One shared length or transport law, fitted on the Milky Way and carried unchanged to J1630 and Coma, scored on the inner concentration, the outer mass and the depleted donor together. The baryons may trigger conversion; the energy comes from a separately counted reservoir or a residual parent whose distribution is derived.
+   7. **Three-dimensional stability and a common field frame** for a passing collisionless case.
+   8. **Finite source histories** before Bose-enhanced decay, which waits until its microphysics is specified. The microwave background does not supply an unspecified reservoir.
 2. **The global background, specified separately:** curvature, topology, size, history and the law that keeps the universe nonexpanding, each declared once.
    - Controls: an open boundary, the round three-sphere, and a flat three-torus.
    - Recirculation is not new energy.
