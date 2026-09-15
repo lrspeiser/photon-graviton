@@ -84,3 +84,44 @@ The time-dependent donor-and-companion calculation, boundary convergence, three-
 
 - **In `companion-source/`:** `revision.py` (R1–R3 and R6), `revision-results.json`, a revision section in `report.md`, and a refreshed `f1-results.json`.
 - **In `companion-formation/`:** `formation.py` (R4, R5), with a refreshed `formation-results.json` and report.
+
+## Amendment 1 (2026-09-15), after the owner's review of 9232e07
+
+Declared before any revision run completed. The first canonical attempt started at 11:57 and was stopped at about 12:15 on 2026-09-15, after the review found the F3 cap below. It wrote nothing. Its seeds come from the revision's own counter in a fixed order, so the restarted run draws the same seeds for rounds A–D.
+
+### A1. F3's tolerance, stated correctly (replaces R3's last sentence)
+
+The tolerance stays three standard errors or 5% per bin, whichever is larger. That is a statistical check, not a 5% convergence test.
+- **Where the 5% term would control.** Only where the relative standard error falls below 5%/3 = 1.67%.
+- **At the expected resolution.** 2B-F1's bins had standard errors of 12–20% of the quadrature. An uncapped pilot before this amendment gave the following:
+  - It ran 128,000 births, with no thinning.
+  - It gave 178–366 effective samples per bin, which is relative standard errors of 5.2–7.5%.
+  - Scaled to the revision's 1,024,000 births, those errors become 1.9–2.7%. The allowance is then about 6–8%, so the three-standard-error term still controls.
+- **A genuine 5% test** needs trajectories sampled preferentially where they reach the measured bins at T, with correct weights. It is a separate item, not part of this revision.
+
+### A2. F3's tracer cap
+
+2B-F1's F3 helper passed no cap, so the engine's default of 40,000 applied. The engine thins by merging pairs whenever the population exceeds its cap. So 2B-F1's F3 requested 64,000 tracers and ran at no more than 40,000, and the revision's 1,024,000 would have ended the same way.
+- **The fix.** The revision passes a cap of four times the requested births, so nothing thins.
+- **What it reports:** the thinnings (required: none), the birth-mass doublings, the cap used, and each bin's effective sample size, N_eff = (Σw)²/Σw².
+- **F3's budget** is 12 hours, in its own process.
+- **The disclosure.** A diagnostic rerun of 2B-F1's configuration, made before this amendment, measured how much it thinned.
+  - The population passed 40,000 twice and was halved by pair-merging each time. It ended with 21,169 tracers.
+  - Its 2 kpc bins held 49–94 tracers, with effective sample sizes of 32–66 and relative standard errors of 12–18%. That agrees with the archived 12–20%.
+  - The run took 382 s. An uncapped run at 1,024,000 births is estimated at two to three hours.
+
+### A3. Numerical controls beyond tracer count (new R7)
+
+Four times the tracers tests one source of numerical error. For the reference case (3 km/s, collisionless, bath gravity omitted), three seeds are run at its selected rate under each of three changes, one at a time:
+- the timestep halved;
+- the potential grid doubled (2,048 nodes);
+- the source pools regenerated every 5 steps instead of 10, with twice as many draws per pool.
+
+Each control's seed means are compared with the canonical-size seed means at the same rate. They agree when they differ by less than two standard errors of the difference, or by less than 1 km/s in RMSE and 0.05 in slope, whichever is larger. Round D's result is reported as tracer convergence only.
+
+### A4. The best-source rule
+
+Within a passing tier, round E's rule prefers the lowest net cost. It is kept for this declared experiment. But net cost includes the negative background contrast, so the rule can reward stronger cancellation rather than a smaller source.
+- **So it does not choose the mechanism investigated next.**
+- **The report compares the credible candidates separately:** numerical stability, positive inventory, source energy and transferred predictions.
+- **The reference case.** The report treats cold collisionless decay (3 km/s) as the main physical reference, with the other combinations as comparisons.

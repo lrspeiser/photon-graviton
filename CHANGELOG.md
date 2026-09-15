@@ -6,6 +6,27 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Amendment 1 to the 2B-F1 revision,** after the owner's review of 9232e07. The first canonical attempt was stopped after about 18 minutes, before any results.
+  - **F3's tolerance.** Three standard errors of 4% is 12%, so the 5% bound does not bind there. It controls only below 1.67%. F3 stays a statistical check and is no longer called a 5% convergence test.
+  - **F3's cap.** The helper passed no tracer cap, so the engine's default of 40,000 applied. 2B-F1's F3 thinned twice and ended with 21,169 tracers, with 32–66 effective samples per bin. The revision caps F3 at four times its births and reports thinnings and each bin's effective sample size.
+  - **Numerical controls (R7).** Halved timestep, doubled grid, and doubled pools for the reference case. Round D's extra tracers test tracer convergence only.
+  - **The best-source rule** rewards cancellation within a passing tier, so it no longer chooses the mechanism investigated next.
+
+  See the [protocol](research_work/results/companion-source/revision-protocol.md).
+- **RC-2a declared: a donor-and-companion calculation in an open region,** the owner's highest-priority physical experiment after the reviews of ed96b00 and 9232e07.
+  - **The question.** With the source law and its parameters held fixed, do the masses and velocities at fixed observational radii converge as the computational region grows, or does the boundary choose them?
+  - **The model.** Cold collisionless decay at 3 km/s is the reference case, with 10 km/s as the comparison. The static bath and its subtraction of the incident density are replaced by daughters followed in time, bound and unbound, minus the donor's depletion. So the donor is counted once, and no second −qt is added.
+    - Regions of 150–2,400 kpc run at 2B-F1's best sampled rates for the collisionless, bath-gravity-on combinations, never refitted per region.
+  - **Scoring.** Seed means must agree from one doubling to the next: the 38-bin RMSE within 1 km/s, the 8–20 kpc slope within 0.05, and the companion mass inside each outer aperture within 5% (or two standard errors, whichever is larger).
+    - A direct search at 1,200 kpc gives the normalization.
+    - J1630 and Coma follow as predictions.
+    - Inventory, mass contrast and source energy are reported separately.
+  - **Controls.**
+    - C1: the same source without baryons.
+    - C2: births against depletion at every aperture.
+    - C3: the source switched off after 5 Gyr.
+
+  See the [protocol](research_work/results/donor-companion/protocol.md).
 - **The 2B-F1 revision's code, stage 2A's seed order, and the F1 archive's profile radii** (a53f45c, and the archive refresh after it).
   - **The revision.** `companion-source/revision.py` implements the revision declared in 9232e07. Its first canonical run was stopped after the owner's review of 9232e07 found that F3's helper passes no tracer cap, so the engine's default of 40,000 thinned the 1,024,000 tracers requested. It restarts after an amendment.
   - **Stage 2A's seed order.** Stage 2A's `run_tasks` now returns results in the order the tasks were issued, so its rounds 2–4 no longer draw seeds in completion order. Three smoke runs on 4, 4 and 3 workers agree bit for bit. Its canonical rerun is under way.
