@@ -2,9 +2,21 @@
 
 Dated notices that accumulated at the top of `README.md` and `research_plan/START-HERE.md` until 13 September 2026, moved here verbatim (newest first) so that [CURRENT-STATUS.md](CURRENT-STATUS.md) can remain the single authoritative summary. The date and commit are those that last touched each notice (`git blame`). Relative links were rebased to the repository root, and mis-encoded dashes in the START-HERE notices were repaired. Statements such as "latest" or "current" refer to the date of each entry, not to the present state.
 
-## 2026-09-14
+## 2026-09-15
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
+
+- **CC-2 stage 2A, complete-channel formation** (protocol 1ccd762), requested in the owner's review of 299ba1f.
+  - **Supply.** All three collision classes act together, with mass, energy, orbits, depletion and gravity evolving. Within the model's regime, the incident density that forms B1 is 29–580 times below CF-1's seeded-only requirement in the Milky Way, 2.8–44 times in J1630 and 77–1,600 times in Coma (bath gravity omitted). It is still 19–42,000 times the cosmic mean.
+  - **An outer envelope.** At B1 the companions inside r_half are 0.03–3% of the baryons there, and the enclosed mass grows as r^1.7–2.7 across the tested radii. The inner benchmark needs 2.2–3.9 times the density and a total confined mass 16–670 times the baryons.
+  - **The bath's own gravity.** A stable static bath exists only below a limit density. With its gravity on, B1 lies below the limit in nine galaxy combinations, where it needs 0.16–0.71 of the gravity-omitted density. Coma keeps no static bath with its gravity on: the boundary model's own limit.
+  - **Controls.** The result is seed-independent in all 33 in-regime combinations, and self-gravity matters in 29.
+  - **Numerics.** A first complete canonical run was discarded because its seed controls were wrong. Two defects caused it: tracer splitting with random-removal thinning in dense cores, and production shells switched off for the whole run when their first pool held no event. Both were fixed and the canonical run was repeated. The report lists every deviation from the protocol.
+
+  See the [report](research_work/results/companion-formation/report.md).
+- **Shared constraints with the microwave background** (owner's direction after 2c9a110). The [persistent-background plan](research_plan/persistent-microwave-background.md) now states what the companion mechanism shares with it: the radiation budget and spectrum on the source side, a separately specified global background with an open-boundary, three-sphere and flat three-torus controls, the recording transition first, and one gravity for motions, galaxy lensing and CMB lensing. The queue gains a source-side radiation check before stage 2B, and those three later items.
+
+## 2026-09-14
 
 - **Stage-1 corrections after the owner's review of 299ba1f, and the stage-2A protocol.**
   - **No premise decision is needed.** The stage-1 report had asked whether a dominant, self-interacting companion medium fits the premises. The universe contract already prohibits an inserted halo or bath and permits a gravitating population derived from the permitted supply and interactions. CC-1's clock field stays a separately labeled comparison; the active objective is a source compatible with operational nonexpansion.

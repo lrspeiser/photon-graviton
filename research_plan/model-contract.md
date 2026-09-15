@@ -17,6 +17,7 @@ Each branch's general hypothesis is broader than its implementation. Each failur
 | CR-2 ([report](../research_work/results/supported-reservoir/report.md)) | A repulsively supported reservoir supplies the lenses' extra mass | Thomas–Fermi n = 1 polytrope with one shared constant; Newtonian gravity; six SLACS lenses fitted jointly (motions plus exact lensing) with identical geometry and mass conventions; Milky Way check | **Fails.** The best shared core is about 80 kpc in both geometries. χ² 113.6 against free NFW's 85.3 (FLRW); Milky Way RMSE 22.5 against a limit of 20 km/s. Supply is 10⁶–10⁹ short. The lenses need 1.5–3 times Chabrier stellar mass |
 | CF-1 ([report](../research_work/results/gravitational-focusing/report.md)) | One slow companion population is focused and retained differently in shallow and deep potentials | Conditional; potentials from baryons plus a 1% seed; one declared interaction (elastic companion scattering); trial bath speeds; results per unit incident density | **Depth-keyed, conditionally.** At 300 km/s Coma retains 140–290 times faster than the Milky Way with favorable initial energy statistics; the Milky Way faces a large heating diagnostic. No reservoir was evolved. Faster baths erode every baryonic well. Supply is extreme |
 | CC-2 stage 1 ([report](../research_work/results/companion-supply/report.md)) | CF-1's incoming bath is consistent at the supply it requires | An audit of scattering, gravity, travel, particle against wave, velocity distributions and the omitted collision channels, at CF-1's required exposures | **Not consistent at CF-1's seeded-only normalization.** There the bath is opaque (optical depth 4–8). A uniform bath over the boundary region would hold 10¹–10⁷ times the baryons (an environmental estimate), and in Coma the Jeans criterion permits it to fragment (a diagnostic). The seedless channel's initial rate exceeds seeded capture there, so that density is not a lower bound. The seeded coefficient's depth selectivity survives Maxwellian baths |
+| CC-2 stage 2A ([report](../research_work/results/companion-formation/report.md)) | With every collision class of CF-1's law acting, a baryon-equal population needs less supply than CF-1's seeded-only estimate | CF-1's law and boundaries; trial incident distributions (a single speed of 300 km/s, and the Maxwellian with the same mean energy); labeled benchmarks B1 and B2 at 10 Gyr; the uniform incident density's gravity assigned to the background | **Lower supply; an outer envelope.** Within the regime the B1 density is 2.8–1,600 times below CF-1's, and 19–42,000 times the cosmic mean. Inside r_half the companions are 0.03–3% of the baryons, and B2 needs total confined masses 16–670 times the baryons. The result is seed-independent, and self-gravity matters |
 | CG-0 ([report](../research_work/results/clock-gradient/report.md)) | The clock field's gradient can serve as the rolling frame for galaxy gravity and lensing | One scalar; three formulations of its static response | **Fails as a single field.** The gradient turns spacelike at every SLACS Einstein radius, inside 2 kpc in the Milky Way and in the Solar System. Only a two-field (bi-potential) form keeps the frame defined |
 
 ## 2. The constraint within the tested family
@@ -87,18 +88,30 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
 1. **CC-2, cosmological supply.** Given a declared source and interaction, what traveling population is produced, and how does extracting that energy change the source's evolution?
    In stages:
    1. **Stage 1:** a regime and supply audit of CF-1's bath. Done: at CF-1's seeded-only normalization the bath would be opaque, and as a uniform environment heavy. The seedless channel makes that normalization non-authoritative.
-   2. **Stage 2A:** complete-channel formation and supply revision ([protocol](../research_work/results/companion-formation/protocol.md)).
-      - All three collision classes of the same law act together.
-      - Mass, energy, orbits, bath depletion and gravity evolve together on the Milky Way, J1630 and both Coma brackets.
-      - It has zero-seed and counted-seed controls, and no prescribed profile.
-   3. **Stage 2B:** one field-to-companion source interaction, tested against 2A's revised requirements.
+   2. **Stage 2A:** complete-channel formation and supply revision. Done ([report](../research_work/results/companion-formation/report.md)).
+      - Within the regime the supply falls 2.8–1,600-fold below CF-1's, and it is still 19–42,000 times the cosmic mean.
+      - The companions form an outer envelope. An interior dominated by them needs a total confined mass 16–670 times the baryons.
+      - The result is seed-independent, and self-gravity matters.
+   3. **A source-side radiation budget and spectrum check,** before 2B selects an interaction (owner's direction after 2c9a110; see [the persistent-background plan](persistent-microwave-background.md)).
+      - Every energy transfer into companions must predict the change in photon energy, photon number and spectrum.
+      - Companion self-scattering does not thermalize photons.
+      - The target is the FIRAS spectrum and its residuals.
+   4. **Stage 2B:** one field-to-companion source interaction, tested against 2A's revised requirements and the radiation check.
       - It gives the production rate, spectrum and momentum, and the source's energy loss and back-reaction.
       - It is computed first per unit of available field energy, without assuming the requested slow spectrum or abundance.
-2. **A galaxy energy sink, deferred** until the full elastic interaction's own energy export is known.
-3. **CR-3, a revised supported reservoir,** designed from what CF-1 and CC-2 require. Support, supply and formation history are reported separately.
-4. **CG-1, clock-field gravity,** only with a named vector or second field. It tests the Milky Way radial and vertical forces first, states a Solar System–safe interpolating function, and then SPARC and SLACS.
-5. **The co-scaling history.** A declared V(n) or other dynamics comes before any brightness comparison. No distance history is imported.
-6. **The fixed-ruler branch.** Its first experiment remains whether a screened field can bend light toward galaxies.
+2. **The global background, specified separately:** curvature, topology, size, history and the law that keeps the universe nonexpanding, each declared once.
+   - Controls: an open boundary, the round three-sphere, and a flat three-torus.
+   - Recirculation is not new energy.
+   - Subtracting a periodic mean density does not explain a static background: its gravity and stability need a stated equation.
+3. **A recording-transition toy model** (the persistent-background plan's branch A). A change in the radiation–field coupling within an already-existing universe.
+   - It must derive the collective modes, their radiation coupling, and the temperature and polarization together, from a few shared parameters.
+   - The source history and initial-state energy stay explicit.
+4. **One gravity for motions, galaxy lensing and CMB lensing,** with no independent CMB-lensing strength, no imported sound horizon or cosmic age, and adopted distances kept.
+5. **A galaxy energy sink, deferred** until the full elastic interaction's own energy export is known.
+6. **CR-3, a revised supported reservoir,** designed from what CF-1 and CC-2 require. Support, supply and formation history are reported separately.
+7. **CG-1, clock-field gravity,** only with a named vector or second field. It tests the Milky Way radial and vertical forces first, states a Solar System–safe interpolating function, and then SPARC and SLACS.
+8. **The co-scaling history.** A declared V(n) or other dynamics comes before any brightness comparison. No distance history is imported.
+9. **The fixed-ruler branch.** Its first experiment remains whether a screened field can bend light toward galaxies.
 
 ## 6. What would stop each line early
 

@@ -661,3 +661,13 @@ The [stage-1 audit](../../research_work/results/companion-supply/report.md) asks
 - **Unstable by the Jeans criterion.** In Coma the criterion permits the uniform bath to fragment at every trial scattering strength. That is an instability diagnostic, not a simulated collapse.
 
 Under the same interaction, collisions between two incoming companions can leave one bound. At the old normalization that seedless channel's initial rate beats seeded capture by 10²–10⁷, and it is itself depth-keyed. Because it grows as the density squared, the old density is not a lower bound for the complete mechanism; stage 2A recomputes the supply. The seeded coefficient's depth selectivity survives Maxwellian baths, changing sign at a dispersion of about 210 km/s in the Milky Way and 510–700 km/s in Coma. PDF v1.5 predates this supplement.
+
+## Formation with every collision class (CC-2, stage 2A)
+
+The [stage-2A report](../../research_work/results/companion-formation/report.md) recomputes the supply. All three collision classes of CF-1's law act together, and mass, energy, orbits, bath depletion and gravity evolve together, on the Milky Way, J1630 and both Coma brackets.
+- **Lower supply.** Within the model's regime (0.1–10 cm²/g), the incident density that forms a baryon-equal population in 10 Gyr is 2.8–1,600 times below CF-1's seeded-only requirement, with the bath's gravity omitted. It is still 19–42,000 times the cosmic mean.
+- **An outer envelope.** The formed companions sit far out. At that benchmark they are 0.03–3% of the baryons inside the baryonic half-mass radius, and 0.5–6% at the outermost test radius (3–13% in projection). An interior dominated by companions needs 2.2–3.9 times the density, with a total confined mass 16–670 times the baryons.
+- **Controls.** The result does not depend on a seed, and the companions' own gravity matters.
+- **Limits.** With the bath's own gravity, Coma keeps no static bath under this boundary model, and omitting that gravity is not a small approximation there.
+
+No motions or lensing are fitted. PDF v1.5 predates this supplement.

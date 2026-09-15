@@ -91,6 +91,57 @@ The existing [homogeneous optical-growth supply mismatch](../research_work/resul
 
 No new data-resolution campaign or claimed CMB success is created by this addition. Its deliverable is a common formula that fits selected observations and predicts others with parameters frozen.
 
+## Shared constraints with the companion mechanism (added 14 September 2026, after the owner's direction)
+
+The radiation that supplies companions, the process that made the microwave background, and the structures that lens it must belong to one energy-and-propagation model. This section turns that requirement into checks for the companion work (CC-2) and for this branch. Each needs its own declared protocol; nothing here is a result.
+
+### 1. The radiation budget and spectrum, on the source side
+
+- **Every energy transfer into companions must predict what it does to the photons.** A candidate source in CC-2 stage 2B may not extract energy from radiation while the radiation background is treated as unchanged. The calculation must give the change in photon energy, photon number and spectrum. It must also put the equal and opposite transfer into the companion, field, deposit or material sector of the bookkeeping above.
+- **Companion self-scattering does not thermalize photons.** CF-1's elastic companion–companion law has no photon absorption or emission channel. A bath that is opaque to companions is not thereby opaque to microwaves. A photon–field or photon–matter interaction must be specified separately and meet the same propagation requirements.
+- **A conditional loss benchmark.** Suppose the archived constant fractional-loss coefficient, α₀ = 2.489×10⁻⁴ Mpc⁻¹, applied to microwave photons. Then an unreplenished fixed-volume bath would lose energy with an e-folding length of 4,018 Mpc: an e-folding time of about 13.1 Gyr, and a half-life of 9.1 Gyr. This is a loss timescale under that assumption, not an inferred age. It says what must be calculated: a finite history, replenishment, recycling, a frequency-dependent coupling, or another declared evolution.
+- **The target is the measured spectrum and its residuals,** not only a temperature near 2.725 K. That means the FIRAS monopole residuals, their uncertainties and the calibration. Photon production, absorption and energy redistribution must be modeled separately, because together they decide whether a spectrum approaches or leaves a blackbody.
+- **Two first tests.** A thermal input is a preservation control; a nonthermal input is a thermalization test. Passing the first does not establish the second, and neither derives the angular pattern.
+
+### 2. The global background, specified separately
+
+Curvature, topology, physical size, history and the law that keeps the universe nonexpanding are separate choices. Each is declared once for the whole model, never tuned per object.
+- **Controls.**
+  - An open-boundary control, as in the companion work so far.
+  - The round three-sphere above.
+  - A flat three-torus: a finite region with opposite faces identified, no walls, and locally flat geometry. It gives finite volume and recirculation without also changing local curvature.
+- **Recirculation is not new energy.** If a packet has capture probability p on each circuit, the probability of capture within N circuits is 1 − (1 − p)^N. Repeated encounters make capture more likely but never supply more than the packet's own energy. A periodic calculation must not count a returning packet as new supply, and circulation alone neither cools radiation nor makes it thermal.
+- **The background's gravity is still unexplained.** Integrating Newtonian Poisson gravity over a periodic region gives ∫∇²Φ dV = 0 = 4πG∫ρ dV. An everywhere-positive density therefore cannot source it without separating its uniform part.
+  - CC-2 stage 2A makes the same separation, as a labeled assumption: only the bath's excess over the incident density gravitates.
+  - A density-contrast calculation makes the equation solvable; it does not explain what holds the background static. A complete nonexpanding theory needs a specified field or background equation and a stability assessment, in any topology.
+- **Topology must earn its place observationally.** Published searches for matched patterns and correlations from compact spaces found no detection in the models they tested. Those results are constraints to confront. Their expansion-derived distance scales are not inputs here, and adopted published galaxy distances stay fixed.
+
+### 3. The recording transition first
+
+Branch A is the first to calculate. Can an already-existing universe undergo a change in its radiation–field coupling that leaves a thermal background carrying a correlated pattern? The transition is not the creation of the universe. Its thermal state, correlations and energy source may not be assigned to match the observations.
+- **What to derive.** The collective modes and their coupling to radiation, and the temperature and E-mode polarization together with their cross-correlation, all from a small shared set of interaction and history parameters. A separate amplitude per peak would reproduce the pattern without explaining it.
+- **What to keep explicit.** The source history and the initial-state energy.
+- **Branch B stays separate.** Sustained resonances need a continuing source, a damping law and unequal-time correlations; age alone does not supply them.
+
+### 4. One gravity for motions, galaxy lensing and CMB lensing
+
+The companion distribution and gravitational response used for stellar motions and galaxy lensing must also predict how foreground structure deflects the microwave background, with no independent CMB-lensing strength. Models with similar primary spectra can differ in their lensing predictions, which is what makes the test discriminating. No standard sound horizon, recombination distance or cosmic age enters as data.
+
+| Observable | What it tests |
+|---|---|
+| The microwave frequency spectrum and its residuals | Thermalization and energy exchange |
+| The temperature and polarization patterns and their correlation | The collective modes, their phases and their coupling to radiation |
+| CMB lensing and its correlation with foreground structure | The gravitational field and the propagation geometry |
+| Galaxy clustering features | Whether the same history leaves a compatible pattern in matter |
+
+### Order of work
+
+1. Finish CC-2 stage 2A within its declared regime. Done ([report](../research_work/results/companion-formation/report.md)).
+2. The source-side radiation budget and spectrum check, before stage 2B selects an interaction.
+3. The global background specification, with the open-boundary, three-sphere and flat three-torus controls.
+4. One recording-transition toy model: modes, radiation coupling, and temperature and polarization together.
+5. One gravity for motions, galaxy lensing and CMB lensing.
+
 ## Provenance
 
 Integrated from the user's supplied discussion of spherical/eternal backgrounds, resonances and the three candidate constructions. The supplied text is a proposal and explanatory source, not an empirical result. The primary sources linked above were checked for the mathematical and observational claims used here. The original explanatory discussion also contrasted standard expanding-universe histories; those histories are not adopted as physical premises of this extension.

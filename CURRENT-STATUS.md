@@ -1,11 +1,12 @@
 # Current status: photon–companion research
 
-**Authoritative summary.** Updated 14 September 2026. Reviewed baseline: `main` at `3884b4f` (Codex handover, 13 September 17:23 PDT). Added since then:
+**Authoritative summary.** Updated 15 September 2026. Reviewed baseline: `main` at `3884b4f` (Codex handover, 13 September 17:23 PDT). Added since then:
 - the capture-to-orbit test and its consistency revision after review
 - the self-illumination pilot
 - repository consolidation
 - the three branches the project owner opened: the evolving propagation field PF-1, radiation-polarized gravity RPG-1 and the driven collective reservoir CR-1
 - after the owner's review of the [model contract](research_plan/model-contract.md), which was revised accordingly: the separately labeled co-scaling branch CC-1, the clock-gradient check CG-0, the supported-reservoir test CR-2 and the focusing-and-capture diagnostic CF-1
+- the cosmological supply stages CC-2 1 (a regime audit) and 2A (complete-channel formation)
 
 Dated history is in [CHANGELOG.md](CHANGELOG.md); standing rules and the foundational index are in [research_plan/START-HERE.md](research_plan/START-HERE.md). All samples below were exposed during development. No genuinely untouched holdout has been opened.
 
@@ -30,6 +31,7 @@ We study a hypothetical nonexpanding universe with our observed data. Photons tr
 | **Supported reservoir CR-2** ([report](research_work/results/supported-reservoir/report.md)), diagnostic | A Thomas–Fermi condensate (P = Kρ²/2, one shared K) in equilibrium with each lens's stars. Fitted jointly to six SLACS lenses' KCWI motions and exact lensing, with identical geometry and mass conventions, then carried to the Milky Way | **Fails the declared rule in both geometries.** The best shared core is about 80 kpc. χ² 113.6 against free NFW's 85.3 (FLRW), and 89.3 against 59.1 (co-scaling). The Milky Way RMSE falls from 52.6 to 22.5 km/s, short of 20. Supply from local starlight is 10⁶–10⁹ short. The lenses need 1.5–3 times Chabrier stellar mass. **Post hoc, universal against universal at equal freedom:** the condensate beats an NFW halo with one shared scale (a restricted benchmark) on the lenses (113.6 against 128.6; 89.3 against 105.7). It loses in the Milky Way (22.5 against 14.1 km/s), where across 5–25 kpc it is too uniform: enclosed mass ∝ r^2.7 against the required r^1.3 |
 | **Focusing and capture CF-1** ([report](research_work/results/gravitational-focusing/report.md)), conditional diagnostic | One slow companion bath (trial speeds 300, 1,000 and 3,000 km/s) in potentials from baryons plus a 1% seed: the Milky Way, six lens hosts, and Coma over bracketed inputs. One declared interaction, elastic companion scattering; results per unit incident density | **Transport verified; retention is strongly depth-keyed, conditionally.** At 300 km/s Coma retains 140–290 times faster than the Milky Way with favorable initial energy statistics, while the Milky Way faces a large heating diagnostic (26 times the binding energy per retained companion). These are initial rate coefficients; no reservoir was evolved. At 1,000–3,000 km/s the bath erodes every baryonic well. The supply needed is extreme, 10⁴–10⁶ times the cosmic mean density at 1 cm²/g. No cluster profile or lensing is predicted |
 | **Supply audit, CC-2 stage 1** ([report](research_work/results/companion-supply/report.md)), diagnostic | Is CF-1's incoming bath consistent at the supply CF-1 requires? Covers bath scattering, bath gravity, travel times, particle against wave, velocity distributions, and the channels CF-1 omitted under its own law | **No, at CF-1's seeded-only normalization.** There the bath's optical depth across the boundary region is 4–8 (Milky Way, Coma). A uniform bath over that region would hold 10¹–10⁷ times the baryons for σ/m of 0.1–1,000 cm²/g (an environmental estimate, not mass at the tested radii), and in Coma the Jeans criterion permits it to fragment (an instability diagnostic). Collisions between two incoming companions can leave one bound; at that normalization their initial rate beats seeded capture by 10²–10⁷, and it grows as the density squared, so the old density is not a lower bound. The seeded coefficient changes sign at a bath dispersion of about 210 km/s (Milky Way) or 510–700 km/s (Coma); those thresholds belong to that coefficient, not the whole process |
+| **Complete-channel formation, CC-2 stage 2A** ([report](research_work/results/companion-formation/report.md)), diagnostic | All three collision classes of CF-1's law act together, with mass, energy, orbits, bath depletion and gravity evolved together, on the Milky Way, J1630 and both Coma brackets. Zero-seed and counted-seed controls; no prescribed profile | **The supply falls, but what forms is an outer envelope.** Within the model's regime (0.1–10 cm²/g), the incident density that forms a baryon-equal population in 10 Gyr is 2.8–1,600 times below CF-1's seeded-only requirement (bath gravity omitted). That is still 19–42,000 times the cosmic mean. Inside r_half the companions are only 0.03–3% of the baryons there, and across the tested radii their mass grows as r^1.7–2.7. An interior dominated by companions needs 2.2–3.9 times the density and a total confined mass 16–670 times the baryons. The result is seed-independent in all 33 in-regime combinations, and self-gravity matters in 29. With the bath's own gravity, Coma keeps no static bath under this boundary model |
 
 ## Frozen benchmarks
 
@@ -59,7 +61,7 @@ Current rotation scores on those benchmarks (RMSE km/s):
    - **CR-2.** A supported condensate needs 10⁶–10⁹ times more mass than each lens's own starlight could supply.
 
    Other capture interactions are not excluded.
-2. **Supply.** C0 is fitted storage, not a demonstrated radiation budget. The recovered 26-galaxy comparison falls short by a median factor of about 5,400 for 10 Gyr at present luminosity. Inside a reservoir's own volume the shortfall is far larger: CR-1's seed collects 0.05–160 Msun per Gyr. Age is free, but the required histories must be stated.
+2. **Supply.** C0 is fitted storage, not a demonstrated radiation budget. Under CF-1's elastic law with every collision class, CC-2 stage 2A needs an incident companion density of 19–42,000 times the cosmic mean within its regime ([report](research_work/results/companion-formation/report.md)), and what forms is an outer envelope. The recovered 26-galaxy comparison falls short by a median factor of about 5,400 for 10 Gyr at present luminosity. Inside a reservoir's own volume the shortfall is far larger: CR-1's seed collects 0.05–160 Msun per Gyr. Age is free, but the required histories must be stated.
 3. **Distribution.** The best rotation shape (MOND-guided) is borrowed. It worsens both Milky Way fiducials, and inventory is short in 21 SPARC galaxies (NGC3741 needs 39× its model inventory).
 4. **Outer profile.** The MOND-guided construction completes its exterior arbitrarily beyond the last measured radius. RB-1 shows a forward model can instead return a convergent (r^-4) profile on its own radial domain, independent of which radii are sampled. RPG-1's field energy grows by M v_f²/3 per e-fold of radius, so a field response needs an outer boundary from outside its equation.
 5. **Joint lensing.** No single response yet predicts motions and lensing together.
@@ -86,26 +88,34 @@ After the owner's review of the model contract on 14 September, co-scaling is in
   - Reservoir survival needs coupled mass-and-energy evolution.
 - **CC-2, stage 1.** At the supply CF-1's seeded-only capture requires, its bath would be opaque, and as a uniform environment it would outweigh the baryons and be Jeans-unstable in Coma. Collisions between two incoming companions can leave one bound, and at that normalization they outrun seeded capture. Because that channel grows as the density squared, CF-1's density is not a lower bound, and the supply the complete mechanism needs is undetermined.
   - **No premise decision is needed** (owner's review of 299ba1f). The universe contract prohibits an inserted halo or bath and permits a gravitating population derived from the permitted supply and interactions. CC-1's clock field stays a labeled comparison; the active objective is a source compatible with operational nonexpansion.
+- **CC-2, stage 2A.** With all three collision classes acting together, the supply falls 2.8–1,600-fold below CF-1's within the model's regime (0.1–10 cm²/g), but it is still 19–42,000 times the cosmic mean.
+  - What forms is an extended, still-growing envelope. Inside r_half the companions are 0.03–3% of the baryons, and across 5–25 kpc the Milky Way's companion mass grows as r^1.9–2.7, steeper than the r^1.3 CR-2 found necessary.
+  - An interior dominated by companions needs 2.2–3.9 times the density, with a total confined mass 16–670 times the baryons.
+  - The result is seed-independent, and self-gravity matters. With the bath's own gravity, Coma keeps no static bath under this boundary model.
 - **The unification of redshift, gravity and reservoir.** It remains a goal; no complete action exists.
 
 The queue, each item with its own declared protocol:
 1. **CC-2, cosmological supply.** Given a declared source and interaction, what traveling population is produced, and how does extracting that energy change the source's evolution?
    It runs in stages, in the owner's order:
    1. **Stage 1,** a regime and supply audit of CF-1's bath: done ([report](research_work/results/companion-supply/report.md)). At the seeded-only normalization the bath would be opaque, and that normalization is not a lower bound.
-   2. **Stage 2A, complete-channel formation and supply revision** ([protocol](research_work/results/companion-formation/protocol.md)). All three collision classes act together, with mass, energy, orbits, bath depletion and gravity evolved together on the Milky Way, J1630 and both Coma brackets. It has zero-seed and counted-seed controls and no prescribed profile.
-   3. **Stage 2B,** one field-to-companion source interaction tested against 2A's revised requirements. It gives the production rate, spectrum and momentum, and the source's energy loss and back-reaction, first per unit of available field energy.
-2. **A galaxy energy sink is deferred.** First find out whether the full elastic interaction, with the channels CF-1 omitted, already exports enough energy. The mechanism may contribute mainly in clusters.
-3. **CR-3, a revised supported reservoir,** designed from what CF-1 and CC-2 require. It must concentrate mass inside the Milky Way's disk while staying extended in the lenses. The incoming speed is not the envelope's dispersion.
-4. **CG-1,** only with a named vector or second field. It tests the Milky Way's radial and vertical forces first, with a Solar System–safe interpolating function.
-5. **A declared history for the co-scaling branch,** then its brightness at equal freedom, with no imported distance history.
-6. **The fixed-ruler branch's first test:** whether a screened field can bend light toward galaxies at all.
+   2. **Stage 2A,** complete-channel formation and supply revision: done ([report](research_work/results/companion-formation/report.md)). Within the regime the supply falls 2.8–1,600-fold below CF-1's, but what forms is an outer envelope, and an interior dominated by companions needs a total confined mass 16–670 times the baryons.
+   3. **A source-side radiation budget and spectrum check,** before 2B selects an interaction (owner's direction after 2c9a110; see the [persistent-background plan](research_plan/persistent-microwave-background.md)). Every energy transfer into companions must predict the change in photon energy, photon number and spectrum. Companion self-scattering does not thermalize photons. The target is the FIRAS spectrum and its residuals.
+   4. **Stage 2B,** one field-to-companion source interaction tested against 2A's revised requirements and the radiation check. It gives the production rate, spectrum and momentum, and the source's energy loss and back-reaction, first per unit of available field energy.
+2. **The global background, specified separately:** curvature, topology, size, history and the law that keeps the universe nonexpanding, each declared once. The controls are an open boundary, the round three-sphere and a flat three-torus. Recirculation is not new energy, and subtracting a periodic mean density does not explain a static background.
+3. **A recording-transition toy model:** a change in the radiation–field coupling within an already-existing universe. It must derive the collective modes, their radiation coupling, and the temperature and polarization together, keeping the source history and initial-state energy explicit.
+4. **One gravity for motions, galaxy lensing and CMB lensing,** with no independent CMB-lensing strength, no imported sound horizon or cosmic age, and adopted distances kept.
+5. **A galaxy energy sink is deferred.** First find out whether the full elastic interaction, with the channels CF-1 omitted, already exports enough energy. The mechanism may contribute mainly in clusters.
+6. **CR-3, a revised supported reservoir,** designed from what CF-1 and CC-2 require. It must concentrate mass inside the Milky Way's disk while staying extended in the lenses. The incoming speed is not the envelope's dispersion.
+7. **CG-1,** only with a named vector or second field. It tests the Milky Way's radial and vertical forces first, with a Solar System–safe interpolating function.
+8. **A declared history for the co-scaling branch,** then its brightness at equal freedom, with no imported distance history.
+9. **The fixed-ruler branch's first test:** whether a screened field can bend light toward galaxies at all.
 
 Standing constraints remain: retained products must not draw their motion from ordinary matter, and the retained fraction must far exceed (v_esc/c)^3. Keep the original and MOND-guided branches side by side, and freeze any new rule before touching an unexposed sample.
 
 ## Reproduce
 
 ```sh
-python research_work/run_checks.py                                                # 58 jobs, fresh output directory
+python research_work/run_checks.py                                                # 59 jobs, fresh output directory
 python research_work/results/capture-to-orbit/runner.py                           # RB-1 populations and predictions, about 7 min on 8 workers
 python research_work/results/capture-to-orbit/revision.py                         # RB-1 consistency revision, about 20 s
 python research_work/results/self-illumination/pilot.py                           # self-illumination pilot, about 4 min
@@ -123,6 +133,8 @@ python research_work/results/supported-reservoir/checks.py                      
 python research_work/results/gravitational-focusing/cf1.py                        # CF-1, about 2.5 minutes
 python research_work/results/gravitational-focusing/checks.py                     # CF-1 suite job
 python research_work/results/companion-supply/cc2a.py                             # CC-2 stage 1, about 3.5 minutes; suite job
+python research_work/results/companion-formation/formation.py                     # CC-2 stage 2A, about 80 minutes on 16 workers
+python research_work/results/companion-formation/checks.py                        # CC-2 stage 2A suite job
 ```
 
 The latest canonical diagnostics regenerate into a fresh directory:
@@ -130,6 +142,6 @@ The latest canonical diagnostics regenerate into a fresh directory:
 - the two PF-1 scripts;
 - RPG-1's `rpg1.py`;
 - CR-1's `cr1.py`;
-- CC-1's `cc1.py`, CG-0's `timelike.py`, CR-2's `cr2.py`, CF-1's `cf1.py` and CC-2's `cc2a.py`.
+- CC-1's `cc1.py`, CG-0's `timelike.py`, CR-2's `cr2.py`, CF-1's `cf1.py`, and CC-2's `cc2a.py` (stage 1) and `formation.py` (stage 2A).
 
 Each compares its numbers with the archived result and overwrites the archive only with `--canonical`. The comparison is exact, with one exception: the Coma flexible-mixture fits have non-unique weights and stop at slightly different points under different BLAS threading. Their χ² agrees to about 10^-5 and their derived masses to about 0.1%, so they use documented tolerances; the Coma LP extrema and single-Plummer fit are compared exactly. The working paper is v1.5 (`output/pdf/theory-basis.pdf`). Later results are in the supplement `papers/cumulative-time-companions/cross-scale-performance.md`.
