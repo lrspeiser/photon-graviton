@@ -6,6 +6,16 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **The 2B-F1 revision's results** (protocol 9232e07, with Amendment 1).
+  - **The search.** In 22 of 26 combinations, the direct search (three seeds per rate) selects the rate 2B-F1 sampled best. The minimum is sharp: one step of 3^(1/8) either side raises the RMSE by about 4 km/s.
+  - **Four robust passes.** 3 km/s collisionless, and 10 km/s at 0, 0.1 and 1 cm²/g, all with the bath's gravity on. Each passes on its seed means and again at four times the tracers, with RMSE 7.0–9.2 km/s, slope 1.07–1.26 and net cost 1.0–2.7.
+  - **Two marginal passes fail.** At 3 km/s with 0.1 and 1 cm²/g, the seed-mean slopes are 0.99 and 0.77. The first was 2B-F1's best source.
+  - **Numerical controls.** Halving the timestep raises the reference case's slope from 1.20 to 1.32, while the grid and the pools are converged. So the slope carries a numerical uncertainty of about 0.1.
+  - **F3,** uncapped (1,024,000 births, no thinning), agrees with the quadrature to within −3.4% to +4.7%, at standard errors of 1.8–2.6%.
+  - **The declared best source** is now 3 km/s, collisionless, bath gravity on. J1630 completes and Coma keeps no static bath. As the owner's review asks, this rule does not choose the next mechanism.
+  - **RC-2a's amended code is in place.** Stage 2A's engine gains optional per-tracer tags, bit-identical when unused, and RC-2a's canonical run is under way.
+
+  See the [report](research_work/results/companion-source/report.md).
 - **Amendment 1 to RC-2a,** after the owner's review of 1585c9f. The first canonical attempt was stopped during its first round, before any result was read.
   - **Scope.** One decay speed, 3 km/s, run in three stages:
     1. controls and the reference at the fixed rate;

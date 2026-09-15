@@ -64,12 +64,15 @@ class FieldModel(mc.Model):
         self.q, self.v_d = float(q), float(v_d)
         self.field_pools = self.field_m = self.field_frac = None
         self._clock = 0.                                   # time since the start of the run, for F4's bookkeeping
+        self.pool_factor = 1.                              # scales the pools' draws (the revision's numerical control)
         super().__init__(*args, **kw)
 
     def make_field_pools(self, n_per=1000, n_min=100, n_cap=20000):
         """One pool of births per logarithmic shell: positions uniform in volume, speed v_d, isotropic directions, kept
         when confined in the current potential. After the first pool (n_per draws), a shell's number of draws is set
-        from the previous pool's confined fraction, aiming at n_min confined samples, as in stage 2A's pools."""
+        from the previous pool's confined fraction, aiming at n_min confined samples, as in stage 2A's pools. pool_factor
+        multiplies n_per and n_min."""
+        n_per, n_min = int(round(n_per*self.pool_factor)), int(round(n_min*self.pool_factor))
         edges = np.exp(np.linspace(self.lr[0], self.lr[-1], self.n_shell + 1))
         if self.field_frac is None:
             sizes = np.full(self.n_shell, n_per, np.int64)

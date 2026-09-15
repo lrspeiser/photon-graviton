@@ -1,5 +1,13 @@
 # CC-2 stage 2B-F1 report: cold decays pass the Milky Way's profile gate, as a compensated collapse from a field of about 300 times the cosmic mean density
 
+- **The revision (below) keeps four cold passes and drops two.**
+  - **The normalization.** A direct search around each combination's best sampled rate, with three seeds per rate, selects the same rate as 2B-F1 in 22 of 26 combinations.
+  - **The four robust passes.** 3 km/s collisionless, and 10 km/s at 0, 0.1 and 1 cm²/g, all with the bath's gravity on (RMSE 7.0–9.2 km/s, slope 1.07–1.26). Each passes on its seed means and again at four times the tracers.
+  - **The two that fail.** At 3 km/s with 0.1 and 1 cm²/g, the seed-mean slopes are 0.99 and 0.77, below G2's edge.
+  - **A numerical caveat.** Halving the timestep raises the reference case's slope from 1.20 to 1.32, so the slope carries a numerical uncertainty of about 0.1.
+  - **F3,** now run without the 40,000-tracer cap that thinned it before, passes at 1.8–2.6% standard errors.
+
+  The bullets below report 2B-F1's canonical run.
 - **The profile gate passes for cold decays.** At 3 and 10 km/s with the bath's gravity on, five of the six combinations pass G1, G2 and G3.
   - Rotation RMSE: 6.8–8.7 km/s over the 38 Eilers bins, and 2.3–6.8 over the inner 20.
   - Enclosed-mass slope across 8–20 kpc: 1.03–1.31, against the required 1.31. Two of the five lie within the run-to-run scatter (about ±0.1) of G2's lower edge.
@@ -30,6 +38,8 @@ Protocol: [protocol.md](protocol.md), declared in 2cf7ea1 before execution (base
 - stage 2A's [mc.py](../companion-formation/mc.py), with two added hooks that do nothing by default.
 
 Results: [f1-results.json](f1-results.json).
+
+The revision: [revision-protocol.md](revision-protocol.md) (declared in 9232e07, amended in 1585c9f), [revision.py](revision.py), and [revision-results.json](revision-results.json).
 
 **Why it was run.** It follows the owner's review of 68eb17c. Supply stopped being the principal obstacle; where the mass goes became it.
 - **Stage 2A's result.** Its elastic capture mechanism builds an outer envelope: M(<r) ∝ r^1.7–2.7, while the Milky Way needs about r^1.3.
@@ -246,6 +256,12 @@ With a 150 kpc zone, the verification at the rescaling root gives RMSE 30.0 km/s
   - **The protocol had expected** a 150 kpc zone to halve the cost.
   - **The zone is not derived.** It comes from CF-1's boundary model, and infall from beyond it is not modeled. A result this sensitive to it needs the global background to set it.
 
+- **Under the revision's best source** (3 km/s, collisionless, the bath's gravity on, q = 1,438), J1630 completes.
+  - Its companions total 4.0 times its baryons.
+  - Inside 3, 10 and 21 kpc they are 0.09, 0.14 and 0.24 of the baryons (0.12, 0.22 and 0.42 in projection).
+  - Coma again keeps no static bath.
+- **With a 150 kpc zone,** the revision's direct search selects 3,671. That rate fits to 10.7 km/s (inner 20: 7.8), but its slope is 0.89, so G2 still fails.
+
 ## Deviations from the protocol, and implementation choices
 
 1. **Engine hooks.** Stage 2A's engine (`mc.py`) gained two hooks that do nothing by default:
@@ -302,47 +318,224 @@ With a 150 kpc zone, the verification at the rescaling root gives RMSE 30.0 km/s
 - **Faster decays fail the gate,** apart from one 300 km/s pass that depends on ignoring the bath's gravity at a million times the cosmic mean.
 - **The field needed is far beyond today's radiation:** 280–360 times the cosmic mean density, and 1.7–2.1 million times the microwave background's energy (a local stock comparison; the flow budget is RC-2). Its uniform medium is Jeans-unstable within about a gigayear.
 - **The passing configuration is not yet universal.** Coma keeps no static bath, and a 150 kpc zone fails.
+- **The normalization is sharp, and the revision confirms it.** A direct search with seed repeats selects the same rate as 2B-F1 in 22 of 26 combinations. One step of 3^(1/8) either side of it raises the RMSE by about 4 km/s.
 
 **Not shown.**
 - **Any fit to lensing or clusters.**
 - **A global energy or flux budget.** That is RC-2.
 - **The collapse of the uniform companion medium.** A cold medium at these densities is Jeans-unstable within about a gigayear.
-- **Infall from beyond R_b, and so the outer halo.** Beyond about 150 kpc the profile reflects the zone's boundary model.
-- **An exhaustive search in q.** The normalization follows the rescaling root, which is not in general the RMSE minimum.
+- **Infall from beyond R_b, and so the outer halo.** Beyond about 150 kpc the profile reflects the zone's boundary model. RC-2a, now running, tests it.
+- **Convergence in the timestep.** Halving the timestep moves the reference case's slope from 1.20 to 1.32. The RMSE agrees, and so do both RMSE and slope when the grid or the pools are doubled.
 - **Stability in three dimensions, or in a common field frame.** The solver is spherical, and the field is at rest in each host.
 - **Donor accounting for a localized source.** For the homogeneous donor the depletion is the uniform subtraction; a localized source's depletion sits where it converts, and changes the answer (Next).
 - **More than one field toy.**
 - **A microscopic model of χ.** The small mass defect is stated, not explained.
 
+## The revision: a direct search, repeats at higher resolution, and numerical controls
+
+Protocol 9232e07, with its Amendment 1 (1585c9f), after the owner's reviews of ed96b00 and 9232e07. The results are in `revision-results.json`, from `revision.py`.
+
+**Why it was run.**
+- **The search.** The rescaling root is not in general the rate that minimizes the actual RMSE, because q changes the profile's shape as well as its normalization.
+- **Marginal passes** needed repeats at fixed parameters, with new seeds and more tracers.
+- **F3** could not show 5% convergence with 50–106 tracers per bin. The review of 9232e07 then found that F3's helper passed no tracer cap, so the engine's default of 40,000 had thinned it.
+
+**What was run.**
+- **The search.** For every combination with a completed 2B-F1 run, and for the 150 kpc sensitivity:
+  - five rates around the best sampled RMSE, a step of 3^(1/4) apart, with three seeds each;
+  - an extension outward wherever the best rate sat at an edge;
+  - the two rates a step of 3^(1/8) either side of the best.
+
+  q_sel has the lowest seed-mean RMSE, and the gates are applied to the seed means.
+- **Higher resolution.** Four more seeds at four times the tracers, wherever the seed means at q_sel passed G1 and G2.
+- **Numerical controls.** For the reference case (3 km/s, collisionless, bath gravity omitted): the timestep halved, the potential grid doubled, and the source pools doubled, one change at a time, with three seeds each.
+- **F3** with 1,024,000 births under a cap of four times that, so that nothing thinned.
+- **Universality.** J1630 and Coma were rerun, because the best-scoring source changed.
+
+### The search at q_sel
+
+| Combination | best sampled q (its RMSE) | rescaling-root verification: RMSE, slope, cost | q_sel | RMSE (inner 20), km/s | slope 8–20 kpc | cost | G1 | G2 | G3 | gate | seeds passing all three |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 3 km/s, 0 cm²/g, bath gravity on | 1,438 (6.8) | 6.8, 1.3, 1.1 | 1,438 | 7.5 ± 0.3 (4.4) | 1.25 ± 0.11 | 1.0 ± 0.1 | yes | yes | yes | **yes** | 3 of 3 |
+| 3 km/s, 0 cm²/g, bath gravity omitted | 1,361 (8.0) | 8.0, 1.3, 15 | 1,361 | 7.5 ± 0.4 (3.6) | 1.20 ± 0.06 | 15.2 ± 0.3 | yes | yes | no | **no** | 0 of 3 |
+| 3 km/s, 0.1 cm²/g, bath gravity on | 1,200 (7.5) | 7.5, 1.1, 0.75 | 1,200 | 8.5 ± 0.7 (7.9) | 0.99 ± 0.07 | 0.8 ± 0.1 | yes | no | yes | **no** | 1 of 3 |
+| 3 km/s, 0.1 cm²/g, bath gravity omitted | 1,102 (8.2) | 8.2, 0.95, 12 | 1,102 | 8.2 ± 0.4 (5.6) | 1.11 ± 0.13 | 12.2 ± 0.2 | yes | yes | no | **no** | 0 of 3 |
+| 3 km/s, 1 cm²/g, bath gravity on | 685 (10.9) | 10.9, 0.75, 0.17 | 685 | 13.9 ± 2.4 (10.5) | 0.77 ± 0.06 | 0.2 ± 0.1 | yes | no | yes | **no** | 0 of 3 |
+| 3 km/s, 1 cm²/g, bath gravity omitted | 696 (10.3) | 10.3, 0.74, 7.3 | 696 | 11.9 ± 0.5 (12.2) | 0.75 ± 0.04 | 7.3 ± 0.1 | yes | no | yes | **no** | 0 of 3 |
+| 10 km/s, 0 cm²/g, bath gravity on | 1,466 (8.5) | 8.7, 1.3, 2.6 | 1,466 | 9.2 ± 2.4 (6.5) | 1.26 ± 0.09 | 2.7 ± 0.0 | yes | yes | yes | **yes** | 3 of 3 |
+| 10 km/s, 0 cm²/g, bath gravity omitted | 1,373 (7.7) | 7.7, 1.3, 15 | 1,373 | 7.1 ± 0.4 (3.1) | 1.22 ± 0.06 | 15.4 ± 0.1 | yes | yes | no | **no** | 0 of 3 |
+| 10 km/s, 0.1 cm²/g, bath gravity on | 1,412 (6.9) | 6.9, 1.2, 2.5 | 1,412 | 7.0 ± 0.3 (4.2) | 1.10 ± 0.07 | 2.4 ± 0.1 | yes | yes | yes | **yes** | 3 of 3 |
+| 10 km/s, 0.1 cm²/g, bath gravity omitted | 1,367 (7.5) | 7.5, 1.2, 15 | 1,367 | 7.1 ± 0.4 (3.4) | 1.20 ± 0.08 | 15.2 ± 0.2 | yes | yes | no | **no** | 0 of 3 |
+| 10 km/s, 1 cm²/g, bath gravity on | 1,158 (6.8) | 6.8, 1, 2 | 1,158 | 7.0 ± 0.3 (4.1) | 1.07 ± 0.03 | 1.9 ± 0.1 | yes | yes | yes | **yes** | 3 of 3 |
+| 10 km/s, 1 cm²/g, bath gravity omitted | 1,128 (7.0) | 7.0, 1.1, 12 | 1,128 | 7.2 ± 1.3 (4.6) | 1.04 ± 0.06 | 12.3 ± 0.2 | yes | yes | no | **no** | 0 of 3 |
+| 30 km/s, 0 cm²/g, bath gravity on | 1,885 (18.4) | 18.4, 2.4, 6.4 | 1,885 | 18.5 ± 0.9 (20.2) | 2.43 ± 0.12 | 6.5 ± 0.2 | yes | no | yes | **no** | 0 of 3 |
+| 30 km/s, 0 cm²/g, bath gravity omitted | 2,009 (17.4) | 17.4, 2.3, 21 | 2,009 | 17.7 ± 1.1 (16.2) | 2.33 ± 0.11 | 21.4 ± 0.1 | yes | no | no | **no** | 0 of 3 |
+| 30 km/s, 0.1 cm²/g, bath gravity on | 2,066 (17.9) | 19.7, 2.6, 6.2 | 2,066 | 17.1 ± 1.2 (15.5) | 2.29 ± 0.16 | 6.7 ± 0.0 | yes | no | yes | **no** | 0 of 3 |
+| 30 km/s, 0.1 cm²/g, bath gravity omitted | 1,979 (17.7) | 19.6, 2.5, 20 | 1,979 | 18.0 ± 1.0 (18.9) | 2.43 ± 0.08 | 21.1 ± 0.2 | yes | no | no | **no** | 0 of 3 |
+| 30 km/s, 1 cm²/g, bath gravity on | 1,811 (17.6) | 17.6, 2.5, 6 | 1,811 | 18.5 ± 0.9 (22.3) | 2.30 ± 0.12 | 6.1 ± 0.2 | yes | no | yes | **no** | 0 of 3 |
+| 30 km/s, 1 cm²/g, bath gravity omitted | 1,809 (17.7) | 17.7, 2.4, 19 | 1,809 | 16.8 ± 1.3 (19.1) | 2.16 ± 0.07 | 19.2 ± 0.2 | yes | no | no | **no** | 0 of 3 |
+| 100 km/s, 0 cm²/g, bath gravity on | 7,435 (22.8) | 22.8, 2.4, 25 | 6,481 | 22.2 ± 3.7 (25.0) | 2.32 ± 0.20 | 22.6 ± 0.0 | no | no | no | **no** | 0 of 3 |
+| 100 km/s, 0 cm²/g, bath gravity omitted | 1.09×10⁴ (26.2) | 26.2, 3.4, 56 | 1.09×10⁴ | 26.3 ± 2.8 (26.3) | 2.82 ± 0.07 | 55.0 ± 0.1 | no | no | no | **no** | 0 of 3 |
+| 100 km/s, 0.1 cm²/g, bath gravity on | 6,986 (24.4) | 27.7, 3.1, 23 | 6,089 | 21.7 ± 6.3 (24.8) | 2.44 ± 0.95 | 21.6 ± 0.1 | no | no | no | **no** | 0 of 3 |
+| 100 km/s, 0.1 cm²/g, bath gravity omitted | 1.01×10⁴ (24.0) | 28.0, 2.7, 44 | 1.01×10⁴ | 28.3 ± 4.7 (33.4) | 3.78 ± 0.71 | 46.3 ± 0.4 | no | no | no | **no** | 0 of 3 |
+| 100 km/s, 1 cm²/g, bath gravity on | 6,136 (22.7) | 24.4, 2.2, 23 | 7,040 | 25.3 ± 4.5 (19.6) | 2.62 ± 0.32 | 24.6 ± 0.4 | no | no | no | **no** | 0 of 3 |
+| 100 km/s, 1 cm²/g, bath gravity omitted | 1.03×10⁴ (19.1) | 19.1, 1.9, 50 | 1.03×10⁴ | 27.5 ± 4.3 (28.0) | 3.50 ± 0.85 | 49.7 ± 1.5 | no | no | no | **no** | 0 of 3 |
+| 300 km/s, 0 cm²/g, bath gravity omitted | 4.61×10⁶ (8.2) | 8.2, 1.4, 5.4 | 4.61×10⁶ | 17.1 ± 2.7 (8.0) | 1.55 ± 0.37 | 14.1 ± 2.8 | yes | yes | no | **no** | 0 of 3 |
+| 3 km/s, 0.1 cm²/g, bath gravity on, 150 kpc zone | 3,200 (17.8) | 30.0, 0.75, −0.2 | 3,671 | 10.7 ± 0.7 (7.8) | 0.89 ± 0.04 | 0.1 ± 0.0 | yes | no | yes | **no** | 0 of 3 |
+
+### Four times the tracers
+
+| Combination | RMSE (inner 20), km/s | slope 8–20 kpc | cost | G1 | G2 | G3 | seeds passing all three | robust pass | shift from the canonical-size means: RMSE, slope, cost |
+|---|---|---|---|---|---|---|---|---|---|
+| 3 km/s, 0 cm²/g, bath gravity on | 9.0 ± 2.1 (6.7) | 1.23 ± 0.01 | 1.1 ± 0.0 | yes | yes | yes | 4 of 4 | **yes** | +1.5, −0.02, +0.03 |
+| 3 km/s, 0 cm²/g, bath gravity omitted | 9.0 ± 1.6 (6.9) | 1.25 ± 0.01 | 15.2 ± 0.1 | yes | yes | no | 0 of 4 | **no** | +1.5, +0.06, +0.07 |
+| 3 km/s, 0.1 cm²/g, bath gravity omitted | 11.2 ± 1.2 (8.2) | 1.08 ± 0.03 | 12.2 ± 0.0 | yes | yes | no | 0 of 4 | **no** | +3.0, −0.03, +0.02 |
+| 10 km/s, 0 cm²/g, bath gravity on | 7.8 ± 0.3 (5.0) | 1.28 ± 0.03 | 2.6 ± 0.0 | yes | yes | yes | 4 of 4 | **yes** | −1.5, +0.02, −0.11 |
+| 10 km/s, 0 cm²/g, bath gravity omitted | 7.3 ± 0.5 (3.6) | 1.24 ± 0.04 | 15.4 ± 0.1 | yes | yes | no | 0 of 4 | **no** | +0.2, +0.02, +0.03 |
+| 10 km/s, 0.1 cm²/g, bath gravity on | 7.7 ± 1.4 (3.6) | 1.20 ± 0.02 | 2.5 ± 0.0 | yes | yes | yes | 4 of 4 | **yes** | +0.6, +0.10, +0.11 |
+| 10 km/s, 0.1 cm²/g, bath gravity omitted | 7.2 ± 0.5 (3.5) | 1.20 ± 0.04 | 15.2 ± 0.1 | yes | yes | no | 0 of 4 | **no** | +0.2, −0.00, +0.05 |
+| 10 km/s, 1 cm²/g, bath gravity on | 7.0 ± 0.7 (4.0) | 1.09 ± 0.03 | 2.0 ± 0.0 | yes | yes | yes | 4 of 4 | **yes** | +0.0, +0.01, +0.08 |
+| 10 km/s, 1 cm²/g, bath gravity omitted | 7.5 ± 0.7 (4.5) | 1.12 ± 0.03 | 12.3 ± 0.0 | yes | yes | no | 0 of 4 | **no** | +0.4, +0.07, +0.00 |
+| 300 km/s, 0 cm²/g, bath gravity omitted | 10.9 ± 0.8 (2.5) | 1.49 ± 0.05 | 8.4 ± 0.7 | yes | yes | yes | 4 of 4 | **yes** | −6.2, −0.06, −5.76 |
+
+### Numerical controls for the reference case
+
+The reference case (v_d 3 km/s | 0 cm2/g | bath gravity omitted) at q = 1,361; its canonical-size seed means: RMSE 7.49 km/s, slope 1.20, cost 15.
+
+| Control | RMSE (inner 20), km/s | slope 8–20 kpc | cost | RMSE agrees | slope agrees |
+|---|---|---|---|---|---|
+| timestep halved | 7.9 ± 0.3 (4.1) | 1.32 ± 0.01 | 15.2 ± 0.2 | yes | no |
+| potential grid doubled | 8.2 ± 0.7 (4.6) | 1.24 ± 0.03 | 15.2 ± 0.2 | yes | yes |
+| pools regenerated twice as often, with twice the draws | 7.7 ± 0.1 (3.5) | 1.27 ± 0.08 | 15.3 ± 0.1 | yes | yes |
+
+These controls test the timestep, the potential grid and the source pools. The four-times-tracer repeats above test tracer noise only.
+
+### F3, uncapped
+
+F3 drew 1,024,000 births under a cap of 4,096,000: 0 thinnings, 0 birth-mass doublings, 980,508 tracers at T.
+
+| Bin (kpc) | tracers | effective samples | engine over quadrature, − 1 | standard error over quadrature | deviation over tolerance |
+|---|---|---|---|---|---|
+| 5–7 | 2,771 | 1,581 | +0.025 | 0.026 | 0.32 |
+| 7–9 | 3,095 | 1,762 | +0.034 | 0.025 | 0.46 |
+| 9–11 | 3,431 | 1,939 | +0.016 | 0.023 | 0.24 |
+| 11–13 | 3,596 | 2,027 | −0.023 | 0.022 | 0.36 |
+| 13–15 | 3,978 | 2,213 | −0.010 | 0.021 | 0.16 |
+| 15–17 | 4,344 | 2,440 | +0.047 | 0.021 | 0.73 |
+| 17–19 | 4,476 | 2,501 | −0.010 | 0.020 | 0.16 |
+| 19–21 | 4,713 | 2,609 | −0.034 | 0.019 | 0.60 |
+| 21–23 | 5,054 | 2,810 | −0.009 | 0.019 | 0.16 |
+| 23–25 | 5,311 | 2,937 | −0.004 | 0.018 | 0.08 |
+
+F3 is a statistical check: a bin's tolerance is three standard errors or 5%, whichever is larger. The 5% term controls only where the relative standard error falls below 1.67%, so this is not a 5% convergence test.
+
+### The outer profile at shell edges
+
+| Combination | 52 kpc | 104 kpc | 148 kpc | 211 kpc | 300 kpc |
+|---|---|---|---|---|---|
+| 3 km/s, 0 cm²/g, bath gravity on | 3 (183) | 7 (182) | 8.6 (167) | 8.1 (137) | 1.1 (54) |
+| 3 km/s, 0 cm²/g, bath gravity omitted | 3 (182) | 7.5 (187) | 10 (181) | 13 (172) | 15 (153) |
+| 3 km/s, 0.1 cm²/g, bath gravity omitted | 2.4 (166) | 5.6 (165) | 7.7 (159) | 11 (155) | 12 (138) |
+| 10 km/s, 0 cm²/g, bath gravity on | 3.1 (185) | 7.3 (185) | 9.2 (172) | 9 (143) | 2.6 (72) |
+| 10 km/s, 0 cm²/g, bath gravity omitted | 3.3 (189) | 7.8 (191) | 11 (183) | 14 (173) | 15 (154) |
+| 10 km/s, 0.1 cm²/g, bath gravity on | 3.1 (185) | 7.1 (183) | 8.8 (169) | 8.4 (139) | 2.5 (71) |
+| 10 km/s, 0.1 cm²/g, bath gravity omitted | 3.2 (187) | 7.6 (189) | 11 (184) | 14 (172) | 15 (153) |
+| 10 km/s, 1 cm²/g, bath gravity on | 2.6 (172) | 5.6 (165) | 6.9 (151) | 6.9 (127) | 2 (66) |
+| 10 km/s, 1 cm²/g, bath gravity omitted | 2.6 (172) | 5.7 (166) | 7.9 (160) | 11 (156) | 12 (138) |
+| 300 km/s, 0 cm²/g, bath gravity omitted | 5.1 (225) | 7.9 (191) | 8.4 (165) | 8.4 (138) | 8.4 (116) |
+
+### Coherent infall against random radial motion
+
+| Combination | 5 kpc: β raw, β about the mean, mean v_r / σ_r | 10 kpc: β raw, β about the mean, mean v_r / σ_r | 21 kpc: β raw, β about the mean, mean v_r / σ_r |
+|---|---|---|---|
+| 3 km/s, 0 cm²/g, bath gravity on | 0.979, 0.979, −0.02 | 0.993, 0.992, −0.03 | 0.997, 0.997, +0.00 |
+| 3 km/s, 0 cm²/g, bath gravity omitted | 0.978, 0.978, +0.01 | 0.993, 0.993, −0.02 | 0.997, 0.997, −0.05 |
+| 3 km/s, 0.1 cm²/g, bath gravity omitted | 0.968, 0.968, −0.03 | 0.990, 0.990, −0.01 | 0.996, 0.996, −0.07 |
+| 10 km/s, 0 cm²/g, bath gravity on | 0.437, 0.435, +0.02 | 0.907, 0.907, +0.01 | 0.969, 0.969, −0.01 |
+| 10 km/s, 0 cm²/g, bath gravity omitted | 0.396, 0.392, +0.01 | 0.904, 0.903, +0.00 | 0.968, 0.968, −0.05 |
+| 10 km/s, 0.1 cm²/g, bath gravity on | 0.430, 0.429, −0.01 | 0.903, 0.903, −0.04 | 0.968, 0.968, −0.03 |
+| 10 km/s, 0.1 cm²/g, bath gravity omitted | 0.361, 0.358, +0.04 | 0.902, 0.902, −0.06 | 0.968, 0.968, −0.05 |
+| 10 km/s, 1 cm²/g, bath gravity on | 0.358, 0.357, −0.00 | 0.859, 0.859, −0.02 | 0.956, 0.956, −0.01 |
+| 10 km/s, 1 cm²/g, bath gravity omitted | 0.365, 0.363, −0.02 | 0.870, 0.870, −0.02 | 0.958, 0.958, −0.03 |
+| 300 km/s, 0 cm²/g, bath gravity omitted | −0.120, −0.190, −0.05 | 0.382, 0.379, −0.05 | 0.251, 0.250, −0.01 |
+
+### The best source and universality
+
+The best-scoring source under the revised verdicts: v_d 3 km/s | 0 cm2/g | bath gravity on (tier 0); changed from 2B-F1, so J1630 and Coma were rerun.
+
+| System | status | total companion mass over baryons |
+|---|---|---|
+| J1630 | completed | 4 |
+| Coma low | no static bath | – |
+| Coma high | no static bath | – |
+
+### Deviations
+
+- **The first attempt** started at 11:57. It was stopped at about 12:15, before any result, when the owner's review found F3's missing cap; Amendment 1 fixed it. The restarted run drew the same seeds for rounds A–D.
+- **The second attempt** was stopped within two minutes, when the machine's commit memory ran out: it shared the machine with stage 2A's rerun and with RC-2a. The third attempt ran with 10 workers instead of 16. Seeds are drawn in a fixed order, so the worker count does not change the results.
+
+### What the revision establishes
+
+- **The direct search confirms 2B-F1's normalization.**
+  - In 22 of 26 combinations, the rate with the lowest seed-mean RMSE is the best rate 2B-F1 sampled. Only three 100 km/s combinations and the 150 kpc zone moved, each by one step of 3^(1/8).
+  - The minimum is sharp. For 3 km/s collisionless decay with bath gravity on, the seed-mean RMSE is 7.5 km/s at q_sel = 1,438 and 11.5–11.8 km/s one step either side, so the fitted rate is set to about ±10%.
+- **Four combinations pass the profile gate robustly:** 3 km/s collisionless, and 10 km/s at 0, 0.1 and 1 cm²/g, all with bath gravity on.
+  - Each passes on its seed means with every seed passing, and again at four times the tracers.
+  - At the canonical size: RMSE 7.0–9.2 km/s, slope 1.07–1.26 and net cost 1.0–2.7 baryon masses.
+- **Two 2B-F1 passes do not survive.** At 3 km/s with 0.1 and 1 cm²/g, the seed-mean slopes are 0.99 and 0.77, below G2's lower edge of 1.01. The first was 2B-F1's best source; its pass was marginal, as the review suspected.
+- **The reference case's inner shape is robust, but its slope has not converged in the timestep.**
+  - At 3 km/s, collisionless, with bath gravity omitted: RMSE 7.5 km/s and slope 1.20 at the canonical size; 9.0 km/s and 1.25 with four times the tracers. It fails only the cost gate, at 15 baryon masses.
+  - Doubling the grid or the pools leaves it unchanged.
+  - Halving the timestep moves the slope to 1.32 ± 0.01, beyond both the declared 0.05 and two standard errors. So the slopes above carry a numerical uncertainty of about 0.1, a third of G2's tolerance, and the finer step moves them toward the required 1.31.
+- **Tracer noise does not set the result.**
+  - Four times the tracers moved the cold passes' RMSE by −1.5 to +1.5 km/s and their slopes by at most 0.10.
+  - The exception is 300 km/s, collisionless, with bath gravity omitted: its net cost fell from 14 to 8.4 baryon masses. That drop is why it meets the declared "robust pass" label, and it means the case has not converged in tracer number.
+- **F3, now uncapped, agrees with the radial-orbit quadrature in every 2 kpc bin,** to within −3.4% to +4.7%, against standard errors of 1.8–2.6%. It is a statistical check at that level: the three-standard-error term, about 6–8%, still controls.
+- **The companions' motion is radial, not a mean inflow.**
+  - At 3 km/s, β = 0.98 at 5 kpc and 0.997 at 21 kpc.
+  - The anisotropy about the mean equals the raw anisotropy to 0.001, so the mean radial velocity is below 5% of the dispersion.
+  - At 10 km/s the centre is more isotropic, with β = 0.36–0.44 at 5 kpc.
+- **With bath gravity on, the outer profile is a zone effect.** The net extra mass reaches 7–9 baryon masses at 150–210 kpc, then falls to 1.1–2.6 at the 300 kpc zone's edge, where the circular speed drops to 54–72 km/s. RC-2a tests whether that edge is physical or set by the boundary.
+- **The declared rule picked a new best source:** 3 km/s, collisionless, with bath gravity on, the passing combination with the lowest net cost (1.0 baryon masses).
+  - **J1630**, run unchanged at that rate, completes. Its companions total 4.0 times its baryons, but only 0.09, 0.14 and 0.24 of them inside 3, 10 and 21 kpc (0.12, 0.22 and 0.42 in projection).
+  - **Coma** keeps no static bath.
+  - **As the owner's review of 9232e07 asks, this rule does not choose the next mechanism.** The four robust passes are the candidates. They differ little in RMSE (7.0–9.2 km/s), more in slope (1.07–1.28) and in net cost (1.0–2.7).
+- **With a 150 kpc zone, no rate passes.** The search's best rate, 3,671, fits to 10.7 km/s, but its slope is 0.89.
+
 ## Next
 
-The owner's review of ed96b00 sets the order.
-- **First, a revision of this stage.**
-  - Keep each combination's best actual sampled RMSE, bracket its neighbourhood and evaluate it directly, with several seeds at each rate, instead of relying on the rescaling root alone.
-  - Repeat the selected cases at fixed parameters with independent seeds and four times the tracers before reading any marginal pass.
-  - Repeat F3 with more tracers, as a convergence test.
-  - Store each profile shell's edges and centre, and separate coherent infall from random radial motion in the anisotropy.
-  - Stage 2A's driver draws the seeds of its rounds 2–4 in task completion order, as this driver did. It gets the same fix, and its canonical run is repeated.
-- **Direction 1, the highest priority: RC-2 as a time-dependent donor-and-companion calculation.**
-  - **What it evolves.** The parent's energy, the daughters' production and orbits, the parent's depletion, the escaping energy and the gravity of every sector, together, in a finite-time open region first.
-  - **Boundary convergence.** The computational boundary is kept apart from the observational apertures. The region is enlarged while the same 5–25 kpc profile and outer apertures are measured, and the answer must converge rather than be chosen by R_b.
-  - **Where the depletion comes from.** The depleted region must emerge from the movement and conversion of positive-energy material, not from subtracting an assumed background.
-- **Direction 2: an extended, baryon-triggered source that counts its donor.**
-  - **What the owner's toy found.** An independent simplified calculation in the review found that a source proportional to the baryon density is too central once its donor's depletion is counted. Production spread over tens to hundreds of kiloparsecs keeps the inner slope at a lower conversion cost, but leaves little mass at large radii.
-  - **The test.** One shared length or transport law, fitted on the Milky Way and carried unchanged to J1630 and Coma, must predict the inner concentration, the outer mass and the depleted donor together.
-- **Direction 3: three dimensions and a common field frame.** Perturb a passing collisionless case away from spherical symmetry, let three-dimensional torques act, and check whether the angle-averaged profile and its slope survive. Give the host a physically specified motion through the field instead of the field's rest frame.
-- **Direction 4: finite source histories.**
-  - **What it tests.** A finite production episode within an already-existing universe separates an established reservoir from one sustained by continuing infall. Its energy must still be accounted for.
-  - **What waits.** Bose-enhanced decay waits until the companion mass, the occupied states, depletion and inverse processes are specified. The microwave background is not used to supply an unspecified reservoir.
-- **The reading.** Cold infall is a promising mechanism for the inner profile, with the interaction and machinery unchanged. Homogeneous field decay is not a complete explanation: the profile must still survive a correct total-energy accounting, a physically generated environment and three-dimensional dynamics.
-- **Unification stays explicit.** The field is a separate dark sector. Nothing here connects its decay to redshift, and its energy is not photon energy.
+The owner's reviews of 9232e07 and 1585c9f set the order.
+- **Done: the revision of this stage** (above). Four cold combinations pass robustly at the rates 2B-F1 found, two marginal passes fail, and the slope carries a timestep uncertainty of about 0.1.
+- **Now: RC-2a**, the finite-time, collisionless donor-and-companion calculation in an open region, with its Amendment 1 (`donor-companion/`). The static bath and its subtraction are replaced by daughters followed in time, bound and unbound, minus the donor's depletion, so the donor is counted once.
+  - **Stage 1: controls, and the region-size comparison at the fixed rate.**
+    - A numerical null without baryons.
+    - Random sampling at two resolutions.
+    - The reference at two resolutions.
+    - The source switched off at 5 Gyr, with and without matching the total conversion.
+  - **Stage 2: the direct search at 1,200 kpc,** only if the controls are interpretable.
+  - **Stage 3: convergence repeated at the selected rate,** frozen.
+  - **Birth histories.** They say where the inner and outer mass came from, which sets the target for the next source model.
+- **Then, depending on RC-2a's outcome:**
+  - **If the null control develops structure that depends on resolution:** improve the representation of the homogeneous component, for example with a delta-f method, before interpreting any galaxy formation.
+  - **If the predictions keep changing with region size:** resolve finite-time transport and the environment. Never compensate by refitting the source in each region.
+  - **If the solution converges and the inner profile stays good:** test three-dimensional evolution (the radial-orbit instability) and a common host–field frame. Record where the inner companions were born, their initial angular momentum and when they arrived.
+  - **If it converges but the profile is wrong:** do a source-response feasibility calculation.
+    - In a fixed, declared potential, compute each birth-radius and birth-time bin's response at each aperture: daughters minus the depleted donor.
+    - Ask whether any smooth, non-negative, finite production history reproduces the inner and outer requirements together, and at what minimum conversion cost.
+    - Then put one compact source law through the fully coupled solver. Its shared parameters are frozen across a preselected SPARC trio (a gas-dominated dwarf, a diffuse disk, a compact high-surface-density disk), J1630 and Coma.
+- **The photon connection stays explicit.** Two hypotheses are kept apart:
+  - **Photons as the energy source,** with their changes in spectrum, number, timing and brightness calculated.
+  - **Photons as a trigger or regulator of conversion.** The energy then comes from a separately counted reservoir, and the coupling must be derived.
+
+  No microwave-background acoustic fit comes before the source history is physically specified.
 - **Then the recording-transition toy,** as queued.
 
 ## Reproduce
 
 ```sh
-python research_work/results/companion-source/f1.py       # about 34 minutes on 16 workers
-python research_work/results/companion-source/checks.py   # suite job
+python research_work/results/companion-source/f1.py        # about 38 minutes on 16 workers
+python research_work/results/companion-source/revision.py  # about 2.3 hours on 10 workers; F3 runs in its own process
+python research_work/results/companion-source/checks.py    # suite job
 ```
 
-The driver compares its output with the archived results and overwrites them only with `--canonical`. Wall-clock timings are excluded from the comparison.
+The drivers compare their output with the archived results and overwrite them only with `--canonical`. Wall-clock timings are excluded from the comparison.

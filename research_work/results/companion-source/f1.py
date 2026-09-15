@@ -128,9 +128,13 @@ def make_model(spec, s, freeze=False, channels=None):
     sm = spec['sm']
     if channels is None:
         channels = ('ii', 'ib', 'bb') if sm > 0 else ()
-    return FD.FieldModel(s['r'], s['M'], s['R_b'], s['r_half'], np.array([spec['v_d']]), np.array([1.]), sm,
-                         spec['q']*dmax/2, q=spec['q']/mc.PER_GYR, v_d=spec['v_d'], self_gravity=not freeze,
-                         freeze=freeze, bath_gravity=spec['gravity'], channels=channels, seed=spec['rng']), dmax
+    # spec may double the potential grid (n_grid) or scale the field's pools (pool_factor): the revision's controls
+    model = FD.FieldModel(s['r'], s['M'], s['R_b'], s['r_half'], np.array([spec['v_d']]), np.array([1.]), sm,
+                          spec['q']*dmax/2, q=spec['q']/mc.PER_GYR, v_d=spec['v_d'], self_gravity=not freeze,
+                          freeze=freeze, bath_gravity=spec['gravity'], channels=channels, seed=spec['rng'],
+                          **({'n_grid': int(spec['n_grid'])} if spec.get('n_grid') else {}))
+    model.pool_factor = float(spec.get('pool_factor', 1.))
+    return model, dmax
 
 
 def summarize_f1(model, res, s, spec, D):
@@ -178,7 +182,7 @@ def _task(spec):
     nf = spec.get('n_factor', 1.)
     try:
         res = model.run(T_REF, dmax, SNAPS, n_target=int(N_TARGET*nf), n_field=int(N_FIELD*nf), n_max=int(N_MAX*nf),
-                        budget_s=BUDGET)
+                        budget_s=BUDGET, regen=int(spec.get('regen', 10)))
     except TimeoutError as e:
         out['status'] = f'not completed: {e}'
         return out
@@ -233,24 +237,33 @@ def v_f2(spec):
 
 
 def v_f3(spec):
+    """Cold births (v_d = 1 km/s) in the frozen Milky Way potential against the radial-orbit quadrature, in ten 2 kpc
+    bins over 5-25 kpc. A statistical check: a bin's tolerance is three standard errors or 5%, whichever is larger, and
+    the 5% term controls only where the relative standard error is below 1.67%. spec['n_max'] caps the tracers; without
+    it the engine's default of 40,000 applies and thins a larger population, as it did in 2B-F1's run. The thinnings,
+    birth-mass doublings and each bin's effective sample size, (sum w)^2 / sum w^2, are reported."""
     s = system_for(spec)
     sp = dict(spec, v_d=1.)
     model, dmax = make_model(sp, s, freeze=True, channels=())
-    model.run(T_REF, dmax, [T_REF], n_field=spec['n'], budget_s=BUDGET)
+    kw = dict(n_max=int(spec['n_max'])) if spec.get('n_max') else {}
+    L = model.run(T_REF, dmax, [T_REF], n_field=spec['n'], budget_s=spec.get('budget', BUDGET), **kw)['ledger']
     rr = np.linalg.norm(model.x, axis=1)
     edges = np.linspace(5., 25., 11)
     rows, worst = [], 0.
     for a, b in zip(edges[:-1], edges[1:]):
         sel = (rr >= a) & (rr < b)
+        m = model.m[sel]
         V = 4/3*math.pi*(b**3 - a**3)
-        rho_e, err = float(model.m[sel].sum())/V, se_mass(model.m[sel])/V
+        rho_e, err = float(m.sum())/V, se_mass(m)/V
         sub = np.linspace(a, b, 9)
         pr = FD.cold_density(model, model.q, T_REF*mc.PER_GYR, sub)
         rho_p = float(np.trapezoid(pr*sub**2, sub)/np.trapezoid(sub**2, sub))
         tol = max(3*err, .05*rho_p)
         worst = max(worst, abs(rho_e - rho_p)/tol)
-        rows.append(dict(r_kpc=(float(a), float(b)), engine=rho_e, standard_error=err, quadrature=rho_p, tracers=int(sel.sum())))
-    return dict(rows=rows, worst_over_tolerance=worst, passed=bool(worst < 1))
+        rows.append(dict(r_kpc=(float(a), float(b)), engine=rho_e, standard_error=err, quadrature=rho_p, tracers=int(sel.sum()),
+                         n_eff=float(m.sum()**2/(m @ m)) if len(m) else 0.))
+    return dict(rows=rows, worst_over_tolerance=worst, passed=bool(worst < 1), n_max=kw.get('n_max', 40000),
+                thinnings=int(L['thinnings']), birth_mass_doublings=int(L['birth_mass_doublings']), tracers=int(len(model.m)))
 
 
 def v_f4(spec):

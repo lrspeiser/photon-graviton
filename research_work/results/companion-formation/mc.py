@@ -560,6 +560,7 @@ class Model:
         self.x = np.zeros((0, 3))
         self.v = np.zeros((0, 3))
         self.m = np.zeros(0)
+        self.tags = None                         # optional per-tracer rows that follow x, v and m (collisionless runs)
         self.shell_m = None
         self.pool_frac = None                    # confined fraction per shell in the last pool (sets pool sizes)
         self.T_run = None                        # set by run(): zones expecting a collision within it are collisional
@@ -865,10 +866,13 @@ class Model:
         out['exE'], out['exM'] = cat(exE, 0), cat(exM, 0)
         return out
 
-    def add_tracers(self, x, v, m):
+    def add_tracers(self, x, v, m, tags=None):
         self.x = np.concatenate([self.x, x])
         self.v = np.concatenate([self.v, v])
         self.m = np.concatenate([self.m, m])
+        if self.tags is not None:                # rows for the new tracers; NaN where the caller gives none
+            rows = np.full((len(m), self.tags.shape[1]), np.nan) if tags is None else np.asarray(tags, float)
+            self.tags = np.concatenate([self.tags, rows])
 
     def energy_sum(self):
         if not len(self.x):
@@ -1002,6 +1006,8 @@ class Model:
         idx = np.r_[keep, rest]
         self.x, self.v = self.x[idx], self.v[idx]
         self.m = np.r_[ma + mb, self.m[rest]]
+        if self.tags is not None:                # a merged tracer keeps the rows of the one whose position it takes
+            self.tags = self.tags[idx]
         self.shell_m = 2*self.shell_m
         self.m_floor, self.m_top = 2*self.m_floor, 2*self.m_top
         L['E_thinning'] += self.energy_sum() - Et
@@ -1060,6 +1066,9 @@ class Model:
         t0 = time.time()
         T, Dmax = T_gyr*PER_GYR, Delta_max_gyr*PER_GYR
         self.T_run = T
+        if self.tags is not None and ('bb' in self.channels or len(self.tags) != len(self.m)):
+            raise ValueError('per-tracer tags need one row per tracer and no bound-bound collisions, whose resampling '
+                             'replaces tracers')
         snaps = [s*PER_GYR for s in snaps_gyr]
         L = dict(collisions_ib=0., captures=0., ejections=0., collisions_bb=0., evaporations=0., births=0.,
                  orbit_escapes=0., captured_mass=0., ejected_mass=0., evaporated_mass=0., escaped_mass=0., born_mass=0.,
@@ -1102,6 +1111,8 @@ class Model:
                     L['E_orbit_escapes'] += float(self.m[gone] @ e_out[gone])
                     exits_E.append(e_out[gone]); exits_m.append(self.m[gone]); exits_c.append(np.full(int(gone.sum()), 0))
                     self.x, self.v, self.m = self.x[alive], self.v[alive], self.m[alive]
+                    if self.tags is not None:
+                        self.tags = self.tags[alive]
                 if not (np.isfinite(self.x).all() and np.isfinite(self.v).all()):
                     raise RuntimeError('non-finite tracer state')
             # 2. collisions at fixed positions. Birth control first: at most n_max/20 births per step, otherwise thin
@@ -1160,6 +1171,8 @@ class Model:
                 bbnew = bb['new']
             if N:
                 self.x, self.v, self.m = self.x[alive], self.v[alive], self.m[alive]
+                if self.tags is not None:
+                    self.tags = self.tags[alive]
             if ns:
                 self.add_tracers(sx[:ns].copy(), sv[:ns].copy(), smass[:ns].copy())
             if bbnew is not None and len(bbnew[2]):
@@ -1178,10 +1191,10 @@ class Model:
                         exits_E.append(pE); exits_m.append(pm); exits_c.append(np.full(len(pE), 3))
             added = self._source_births(Delta, L)       # births from an added source (CC-2 stage 2B); none in 2A
             if added is not None:
-                ax, av, am, E_added = added
+                ax, av, am, E_added = added[:4]
                 booked += E_added
                 if len(am):
-                    self.add_tracers(ax, av, am)
+                    self.add_tracers(ax, av, am, added[4] if len(added) > 4 else None)
             Eafter = self.energy_sum()
             scale = abs(Ebefore) + abs(Eafter) + abs(booked) + 1e-300
             L['closure_max'] = max(L['closure_max'], abs(Eafter - Ebefore - booked)/scale)

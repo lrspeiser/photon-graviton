@@ -688,5 +688,10 @@ The [stage-2B-F1 report](../../research_work/results/companion-source/report.md)
 - **A compensated structure.** The confined companions are 12.6–16.2 baryon masses. The cold bath barely enters the zone of influence, and its shortfall against the uniform density, assigned to the background, brings the net to 0.75–2.6. The net mass peaks inside about 150 kpc, at 0.8–1.0×10¹² M☉ in total (radii corrected after the owner's review of ed96b00). For a homogeneous donor the subtraction is the donor's own depletion, so the net is a mass contrast, not a small budget, and the inner shape holds without it.
 - **Supply.** The field must make 280–360 times the cosmic mean density in companions, 1.7–2.1 million times the microwave background's energy, so as a local stock it cannot be converted light. Its uniform medium is Jeans-unstable within about a gigayear.
 - **Limits.** With the same source Coma keeps no static bath, and a 150 kpc zone fails the gate. Faster decays fail.
+- **The revision,** after the owner's reviews of ed96b00 and 9232e07.
+  - **The search.** A direct search with three seeds per rate confirms the normalization in 22 of 26 combinations.
+  - **The passes.** Four combinations pass robustly, on their seed means and again at four times the tracers: 3 km/s collisionless, and 10 km/s at 0, 0.1 and 1 cm²/g, all with the bath's gravity on (RMSE 7.0–9.2 km/s, slope 1.07–1.26).
+  - **What changed.** Two marginal 3 km/s passes fail the shape gate, and halving the timestep raises the reference slope by 0.12.
+  - **F3.** The uncapped cold-infall check agrees with its quadrature to within 5% in every bin, at standard errors of about 2%.
 
 No lensing is fitted. PDF v1.5 predates this supplement.

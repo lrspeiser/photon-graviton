@@ -120,9 +120,11 @@ def main():
         t['evals'], t['skipped'] = {}, []
         log(f"target {t['name']}: best sampled RMSE {t['best_rmse']:.1f} km/s at q = {t['q_s']:.4g}")
     # F3 at higher resolution runs in a process of its own from the start and is collected at the end, so that its long
-    # run does not hold up the rounds; a failure is recorded, not raised, so that the rest of the results survive it
+    # run does not hold up the rounds; a failure is recorded, not raised, so that the rest of the results survive it.
+    # Its cap is four times its births, so the engine never thins it, and it has a budget of its own (amendment A2)
     n3 = int(64000*(.05 if F.SMOKE else 1.)*F3_FACTOR)
-    f3spec = dict(role='validation', name='F3', key='MW', sm=0., q=1e3, gravity=False, n=n3, rng=nxt())
+    f3spec = dict(role='validation', name='F3', key='MW', sm=0., q=1e3, gravity=False, n=n3, n_max=4*n3, rng=nxt(),
+                  budget=float(os.environ.get('F3_BUDGET', '900' if F.SMOKE else '43200')))
     f3pool = Pool(1)
     f3job = f3pool.apply_async(F.task, (f3spec,))
     log(f'F3 with {n3} tracers started in its own process')
@@ -186,6 +188,18 @@ def main():
     hi = {}
     for r in (F.run_tasks(specs, 'round D (four times the tracers)') if specs else []):
         hi.setdefault(r['spec']['target'], []).append(r)
+    # round R7 (amendment A3): numerical controls beyond tracer count, for the reference case at its selected rate, one
+    # change at a time: the timestep halved, the potential grid doubled, and the pools regenerated twice as often with
+    # twice the draws. Round D measures tracer convergence only
+    controls = {}
+    ref = byname.get(f'v_d {F.V_D[0]:g} km/s | 0 cm2/g | bath gravity omitted')
+    if ref is not None and ref['sel'] is not None:
+        variants = dict(timestep_halved=dict(dmax_factor=.5), grid_doubled=dict(n_grid=2048),
+                        pools_doubled=dict(regen=5, pool_factor=2.))
+        specs = [dict(spec(ref, ref['sel'], 'numerical control'), control=name, **kw)
+                 for name, kw in variants.items() for _ in range(SEEDS)]
+        for r in F.run_tasks(specs, 'round R7 (numerical controls for the reference case)'):
+            controls.setdefault(r['spec']['control'], []).append(r)
     # the revised best source; universality reruns only if it changed
     cands = [(t, summary(t['evals'][t['sel']], D)) for t in T if t['sel'] is not None and not t['R_b']]
     best_t, best_s = min(cands, key=lambda ts: (tier(ts[1]['gates']),
@@ -234,6 +248,28 @@ def main():
             entry['high_resolution'] = h
         out['targets'][t['name']] = entry
     out['F3_high_resolution'] = dict({k: v for k, v in f3.items() if k not in ('spec', 'traceback')}, n=n3)
+    # R7: each control's seed means against the canonical-size seed means at the same rate, within two standard errors
+    # of the difference or 1 km/s (RMSE) and 0.05 (slope), whichever is larger
+    nc = None
+    if controls:
+        base_runs = ref['evals'][ref['sel']]
+        base = summary(base_runs, D)
+        nc = dict(target=ref['name'], q=rate(ref, ref['sel']), canonical=dict(mean=base['mean'], sd=base['sd']), variants={})
+        for name, rs in controls.items():
+            ok = [r for r in rs if r['status'] == 'completed' and r.get('mw')]
+            if len(ok) < len(rs):
+                nc['variants'][name] = dict(completed=len(ok), of=len(rs), statuses=[r['status'] for r in rs])
+                continue
+            s = summary(ok, D)
+            agrees = {}
+            for k, floor in (('rmse_38', 1.), ('slope_8_20', .05)):
+                se = float(np.sqrt((s['sd'][k] or 0.)**2/len(ok) + (base['sd'][k] or 0.)**2/len(base_runs)))
+                agrees[k] = bool(abs(s['mean'][k] - base['mean'][k]) <= max(2*se, floor))
+            nc['variants'][name] = dict(mean=s['mean'], sd=s['sd'], agrees=agrees,
+                                        runs=[dict({k: r.get(k) for k in KEEP}, rng=r['spec']['rng']) for r in rs])
+            log(f"numerical control {name}: RMSE {s['mean']['rmse_38']:.2f} against {base['mean']['rmse_38']:.2f}, slope "
+                f"{s['mean']['slope_8_20']:.2f} against {base['mean']['slope_8_20']:.2f}, agrees {agrees}")
+    out['numerical_controls'] = nc
     out['best'] = dict(name=best_t['name'], tier=tier(best_s['gates']), changed=changed)
     out['universality'] = uni
     out['runtime_seconds'] = time.time() - F.T0
