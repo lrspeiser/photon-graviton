@@ -6,11 +6,20 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **CC-2 stage 1, a regime and supply audit** (protocol 5381c68), requested in the owner's review of f13c09f. Is CF-1's incoming bath consistent at the supply CF-1 requires?
+  - **No.** Across the Milky Way's and Coma's boundary regions its optical depth is 4–8. For every trial σ/m from 0.1 to 1,000 cm²/g, its own mass there exceeds the baryons by 10¹–10⁷, and in Coma it is Jeans-unstable at every trial scattering strength. It would be the dominant self-gravitating, self-interacting medium, not a trace bath.
+  - **The seed stops mattering.** Under the same law, capture from collisions between two incoming companions beats seeded capture by 10²–10⁷, and it is depth-keyed.
+  - **Retention windows.** Retention needs a Maxwellian bath dispersion below about 210 km/s (Milky Way) or 510–700 km/s (Coma). A 0.34% tail at 3,000 km/s reverses the Milky Way's.
+  - **Coma's supply region.** A 300 km/s population reaches Coma from only about 3 Mpc in 10 Gyr.
+  - The CF-1 report is qualified to match: its survival statements are initial statistics, and its runaway belongs to the fixed-shape rule.
+
+  See the [report](research_work/results/companion-supply/report.md).
 - **Focusing and capture CF-1** (protocol 012f6ca). A conditional transport-and-capture diagnostic, as the owner directed. One slow companion bath is placed in potentials built from ordinary matter plus a counted seed: the Milky Way, six SLACS lens hosts, and Coma over bracketed gas-and-star inputs, with a full NFW well only as a labeled inverse diagnostic.
   - **Transport verified.** Focusing raises the entry rate and the unbound density exactly as predicted, to 10⁻⁵ and 10⁻⁸. With capture off, nothing is retained.
   - **One interaction: elastic companion scattering.** Retention needs a bath slower than the host.
-    - At 300 km/s, Coma retains 140–290 times faster than the Milky Way and its captured population stays bound.
-    - The Milky Way's captured population overheats, and the lens hosts are marginal.
+    - At 300 km/s, Coma retains 140–290 times faster than the Milky Way with favorable initial energy statistics.
+    - The Milky Way faces a large heating diagnostic, and the lens hosts are marginal.
+    - (Qualified after the owner's review of f13c09f. These are initial rate coefficients. The fixed-shape growth rule does not evolve the heating, so neither survival nor overheating is an evolved result.)
     - At the trial speed of 3,000 km/s every system erodes.
   - **Supply.** It needs 10⁴–10⁶ times the cosmic mean density at 1 cm²/g.
   - **Correction.** From baryons alone, Coma's escape speed is 1,100–1,500 km/s, not the 4,500 km/s of its inferred well that the earlier focusing estimates used.

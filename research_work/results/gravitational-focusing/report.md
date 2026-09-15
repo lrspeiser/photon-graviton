@@ -1,15 +1,21 @@
-# CF-1 report: a slow companion bath is retained by clusters, overheats disks, and erodes everything at 3,000 km/s
+# CF-1 report: one slow companion bath has favorable retention in clusters, a heating warning in disks, and erodes everything at 3,000 km/s
 
 **Result.** This is a conditional transport-and-capture diagnostic, run on potentials built from ordinary matter plus a counted seed.
 - **Transport is verified.** Focusing raises the entry rate and the unbound density exactly as the analytic factors predict. With no capture, nothing is retained.
 - **The declared interaction:** elastic, equal-mass scattering between incoming and bound companions. With it, net retention happens only when the bath is slower than the host's escape speeds.
-  - At 300 km/s, every system retains. Coma retains 140–290 times faster than the Milky Way per unit seed and incident density, and its captured population stays bound.
-  - The Milky Way's captured population overheats: each retained companion brings 26 times the seed's binding energy.
+  - At 300 km/s, every system retains. Coma retains 140–290 times faster than the Milky Way per unit seed and incident density, and its initial collision-energy statistics are favorable.
+  - The Milky Way faces a large heating diagnostic: each net retained companion brings 26 times the seed's binding energy.
+  - These are rate coefficients at the initial distribution, not an evolved reservoir. The growth model evolves mass and potential with a prescribed shape and does not evolve the heating it computes.
   - At 1,000 km/s, only the labeled full-well diagnostic retains.
   - At the trial speed of 3,000 km/s, every system erodes, including the full well.
 - **Supply.** Retaining a mass equal to the baryons in 10 Gyr needs, at σ/m = 1 cm²/g, incident densities 10⁴–10⁶ times the cosmic mean matter density.
 
-So one slow population under one law does produce the depth-keyed pattern: clusters retain, massive ellipticals retain marginally, and disks overheat. But only for a slow bath, and only with a supply that nothing yet explains.
+So one slow population under one law does produce a depth-keyed pattern in its initial statistics:
+- clusters have favorable retention and energy exchange;
+- massive ellipticals are marginal;
+- disks face a large heating diagnostic.
+
+But that holds only for a slow bath, only with a supply nothing yet explains, and only before the coupled mass-and-energy evolution that would show whether any reservoir forms and survives.
 
 Protocol: [protocol.md](protocol.md), declared in 012f6ca before execution. Code:
 - [focus.py](focus.py): transport;
@@ -67,12 +73,12 @@ K is the net retention rate per unit seed mass and per unit (σ/m)ρ_∞, in km/
 
 **Energy decides whether a reservoir can form.**
 - **The ledger.** Elastic scattering conserves the companions' energy, and each incomer arrives with +u²/2.
-- **Milky Way.** It retains net companions at 300 km/s but gains 26 times their binding energy, so without an energy sink its captured population cannot stay bound.
-- **Coma.** It keeps its captured population bound, and at the high end the population even cools, because ejected companions carry away more than incomers bring.
+- **Milky Way.** It retains net companions at 300 km/s but gains 26 times their binding energy. That is a serious warning, not an evolved result: the heating is computed but not fed back into the reservoir's temperature, size or evaporation.
+- **Coma.** Its initial statistics are favorable. Net retention brings in little energy per retained companion, and at the high end the collisions remove net orbital energy, because ejected companions carry away more than incomers bring. That does not establish a cooler or stable configuration. In related self-gravitating models, energy loss can drive contraction instead (compare dissipative self-interacting dark matter, [arXiv:1809.01144](https://arxiv.org/abs/1809.01144)).
 - **Lens hosts.** They are marginal.
 - **What is missing.** CF-1 adds no sink. "What receives the energy" is still the open question for galaxies.
 
-**Feedback.** Retention deepens the well, which raises retention further. Every system with K > 0 runs away once its exposure passes a threshold, so the outcome is a switch rather than a gradual trend.
+**Feedback.** Retention deepens the well, which raises retention further. Under the declared fixed-shape rule, every system with K > 0 runs away once its exposure passes a threshold. In that rule the retained mass keeps the seed's shape while the potential and speeds scale with it. It does not let the reservoir expand, rearrange, deplete its supply or change its collision statistics, so the runaway belongs to the rule, not yet to the physics.
 
 ## Supply (reported separately)
 
@@ -97,19 +103,31 @@ The de Broglie wavelength at 300 km/s is 30 kpc for the archived 1.34×10⁻²�
 
 **Established, conditionally:**
 - Transport and focusing, verified.
-- Under one declared interaction and one shared slow bath, retention is strongly depth-keyed. Clusters retain and stay bound, massive ellipticals are marginal, and a Milky Way–like disk overheats.
+- Under one declared interaction and one shared slow bath, the initial retention statistics are strongly depth-keyed. The same collision can add a companion in a deep well and eject one in a shallow well. Clusters have favorable retention and energy exchange, massive ellipticals are marginal, and a Milky Way–like disk faces a large heating diagnostic.
 - A fast bath (1,000–3,000 km/s) erodes baryonic wells rather than filling them.
 
 **Not established:**
 - That such a bath exists or is supplied. The required density is extreme (CC-2).
 - That clusters' observed excess comes from this. No lensing or mass profile was predicted, and Coma's baryonic inputs are brackets awaiting a matched model.
-- Anything for galaxies, whose captured population cannot stay bound here without an energy sink. Their extra gravity would need another source or another interaction.
+- That any reservoir forms and survives, in clusters or galaxies. No coupled mass-and-energy evolution was run.
+- Anything for galaxies, whose heating diagnostic is large. Their extra gravity may need another source; this mechanism may contribute mainly in clusters.
 - Any fit. Nothing was adjusted to data.
 
 **What would test it next:**
 - a declared energy sink, or a second interaction, for galaxies;
 - the equilibrium profile a retained cluster population would reach, to be compared with lensing under identical conventions;
 - the supply mechanism (CC-2).
+
+## Review qualifications (added after the owner's review of f13c09f)
+
+- **The required bath is not necessarily transparent.** The required exposure (σ/m)ρ_∞ sets a characteristic scattering length of about 1/[(σ/m)ρ_∞] for companions interacting under the same law: 67 kpc for the Milky Way and 3.8–7.7 Mpc for Coma, against boundaries of 300 kpc and 30 Mpc.
+  - Incoming companions may therefore scatter off each other before arriving, so the transparent, single-speed bath is not guaranteed.
+  - Raising σ/m while lowering the density at fixed exposure leaves that length unchanged.
+- **The velocity distribution matters more than its mean.** The kernels are linear in the incident distribution. A fast fraction at 3,000 km/s reverses net retention at 0.34% in the Milky Way, 34% for Coma's low end and 53% for its high end. A 1% fast tail turns the Milky Way's +10 km/s into about −20.
+- **CF-1 omits two channels of its own interaction.**
+  - Incoming–incoming collisions. Two unbound companions can leave one bound and the other faster, which is a possible seedless formation route.
+  - Bound–bound collisions (evaporation).
+- **Stage 1 of CC-2** ([companion-supply](../companion-supply/protocol.md)) audits these before any source model or formation run.
 
 ## Reproduce
 

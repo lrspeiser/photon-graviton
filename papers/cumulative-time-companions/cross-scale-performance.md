@@ -645,9 +645,19 @@ The [CF-1 diagnostic](../../research_work/results/gravitational-focusing/report.
 
 - **Transport.** Focusing raises the entry rate and unbound density exactly as the analytic factors predict. With capture off, nothing is retained.
 - **Retention.** With elastic scattering between incoming and bound companions, retention needs a bath slower than the host.
-  - At 300 km/s, Coma retains 140–290 times faster than the Milky Way, and its captured population stays bound.
-  - The Milky Way's captured population overheats, and the lens hosts are marginal.
+  - At 300 km/s, Coma retains 140–290 times faster than the Milky Way, with favorable initial energy statistics.
+  - The Milky Way faces a large heating diagnostic, and the lens hosts are marginal.
+  - These are initial rate coefficients; whether a reservoir forms and survives needs coupled mass-and-energy evolution.
   - At 1,000–3,000 km/s the bath erodes every baryonic well.
 - **Supply.** The incident density required is 10⁴–10⁶ times the cosmic mean at 1 cm²/g.
 
-The pattern is depth-keyed from one law, but it covers galaxies only if they have an energy sink, and it needs a supply nothing yet explains. PDF v1.5 predates this supplement.
+The initial statistics are depth-keyed from one law. Galaxies face a large heating diagnostic, and the supply is unexplained. PDF v1.5 predates this supplement.
+
+## Supply audit (CC-2, stage 1)
+
+The [stage-1 audit](../../research_work/results/companion-supply/report.md) asks whether CF-1's incoming population is consistent at the supply CF-1 requires. It is not.
+- **Opaque.** Across the Milky Way's and Coma's boundary regions, the bath's optical depth is 4–8.
+- **Heavy.** For every trial cross-section from 0.1 to 1,000 cm²/g, its mass there exceeds the baryons by 10¹–10⁷.
+- **Unstable.** In Coma it is Jeans-unstable at every trial scattering strength.
+
+It would be the dominant self-gravitating, self-interacting medium rather than a trace bath. Under the same interaction, collisions between two incoming companions can leave one bound. That seedless channel beats seeded capture by 10²–10⁷ and is itself depth-keyed. With realistic velocity distributions the depth selectivity survives: retention needs a bath dispersion below about 210 km/s in the Milky Way and 510–700 km/s in Coma. PDF v1.5 predates this supplement.

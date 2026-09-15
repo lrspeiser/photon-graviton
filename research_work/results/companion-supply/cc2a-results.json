@@ -1,0 +1,778 @@
+{
+ "scope": "CC-2 stage 1: regime and supply audit of CF-1 at its required supply; no source, no reservoir, no fit. Reference time 10 Gyr is an assumption; the cosmic mean density is a comparison unit.",
+ "validation": {
+  "V1": {
+   "rows": {
+    "v_esc/u=0.5": {
+     "analytic": 0.08944266084365225,
+     "monte_carlo": 0.08942964024022697,
+     "relative": 0.00014557486665167652,
+     "two_bound": 0
+    },
+    "v_esc/u=1": {
+     "analytic": 0.35355340017230125,
+     "monte_carlo": 0.35317910959764587,
+     "relative": 0.0010586535852094014,
+     "two_bound": 0
+    },
+    "v_esc/u=2": {
+     "analytic": 0.7155417430152504,
+     "monte_carlo": 0.714731504993907,
+     "relative": 0.0011323420740334544,
+     "two_bound": 0
+    },
+    "v_esc/u=4": {
+     "analytic": 0.9130752894183601,
+     "monte_carlo": 0.9130322539508868,
+     "relative": 4.713244129161964e-05,
+     "two_bound": 0
+    },
+    "v_esc/u=8": {
+     "analytic": 0.9770120639915026,
+     "monte_carlo": 0.97693705311258,
+     "relative": 7.677579600828821e-05,
+     "two_bound": 0
+    }
+   },
+   "passed": true
+  },
+  "V3": {
+   "energy": 2.4348302604326237e-15,
+   "momentum": 4.019436694230464e-16,
+   "passed": true
+  },
+  "V2": {
+   "max_relative": 1.9593828449293582e-05,
+   "passed": true
+  }
+ },
+ "systems": {
+  "Milky Way (baryon model I)": {
+   "kind": "galaxy",
+   "R_b_kpc": 300.0,
+   "r_half_kpc": 6.387100049248137,
+   "trials": {
+    "300": {
+     "K_kms": 10.075426886999711,
+     "travel_in_T_kpc": 3068.136495161123,
+     "travel_in_T_over_R_b": 10.227121650537077,
+     "crossing_R_b_Gyr": 0.9777922216731284,
+     "crossing_r_half_Gyr": 0.02081752249067628,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 29.964735118258474,
+      "1e-22 eV": 0.40152745058466355
+     },
+     "min_mass_eV_for_particle_regime": 6.286537669500411e-23,
+     "A_star_per_kpc": 0.015048802864281962,
+     "scattering_length_kpc": 66.45046845377185,
+     "mean_free_path_single_speed_kpc": 49.83785134032889,
+     "mean_free_path_maxwellian_kpc": 46.98757685668483,
+     "optical_depth_R_b": 4.514640859284588,
+     "optical_depth_r_half": 0.09611820951558082,
+     "collision_time_Gyr": 0.2165825039354457,
+     "wavelength_over_mean_free_path": {
+      "1.34e-24 eV": 0.6012445222334646,
+      "1e-22 eV": 0.008056676597928426
+     },
+     "bath_gravity": {
+      "0.1 cm2/g": {
+       "rho_inf_Msun_kpc3": 720582980.6094618,
+       "rho_inf_over_mean": 17662263.488622986,
+       "bath_mass_in_R_b_over_baryons": 811570.8587374361,
+       "jeans_length_over_R_b": 0.03183848482813468
+      },
+      "1 cm2/g": {
+       "rho_inf_Msun_kpc3": 72058298.06094618,
+       "rho_inf_over_mean": 1766226.3488622985,
+       "bath_mass_in_R_b_over_baryons": 81157.08587374362,
+       "jeans_length_over_R_b": 0.10068212930562018
+      },
+      "10 cm2/g": {
+       "rho_inf_Msun_kpc3": 7205829.8060946185,
+       "rho_inf_over_mean": 176622.63488622988,
+       "bath_mass_in_R_b_over_baryons": 8115.708587374363,
+       "jeans_length_over_R_b": 0.3183848482813468
+      },
+      "100 cm2/g": {
+       "rho_inf_Msun_kpc3": 720582.9806094619,
+       "rho_inf_over_mean": 17662.263488622986,
+       "bath_mass_in_R_b_over_baryons": 811.5708587374363,
+       "jeans_length_over_R_b": 1.0068212930562017
+      },
+      "1000 cm2/g": {
+       "rho_inf_Msun_kpc3": 72058.29806094618,
+       "rho_inf_over_mean": 1766.2263488622987,
+       "bath_mass_in_R_b_over_baryons": 81.15708587374363,
+       "jeans_length_over_R_b": 3.1838484828134677
+      }
+     },
+     "channels": {
+      "0.1 cm2/g": {
+       "seedless_over_seed_capture": 3155685.0974694304,
+       "evaporation_over_seed_capture": 0.0007262891847599887
+      },
+      "1 cm2/g": {
+       "seedless_over_seed_capture": 315568.509746943,
+       "evaporation_over_seed_capture": 0.007262891847599886
+      },
+      "10 cm2/g": {
+       "seedless_over_seed_capture": 31556.850974694305,
+       "evaporation_over_seed_capture": 0.07262891847599887
+      },
+      "100 cm2/g": {
+       "seedless_over_seed_capture": 3155.685097469431,
+       "evaporation_over_seed_capture": 0.7262891847599887
+      },
+      "1000 cm2/g": {
+       "seedless_over_seed_capture": 315.56850974694305,
+       "evaporation_over_seed_capture": 7.262891847599887
+      }
+     }
+    },
+    "1000": {
+     "K_kms": -907.5677713946383,
+     "travel_in_T_kpc": 10227.121650537076,
+     "travel_in_T_over_R_b": 34.09040550179025,
+     "crossing_R_b_Gyr": 0.2933376665019385,
+     "crossing_r_half_Gyr": 0.006245256747202884,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 8.989420535477542,
+      "1e-22 eV": 0.12045823517539907
+     },
+     "min_mass_eV_for_particle_regime": 1.8859613008501234e-23
+    },
+    "3000": {
+     "K_kms": -2969.3550145982026,
+     "travel_in_T_kpc": 30681.36495161123,
+     "travel_in_T_over_R_b": 102.27121650537077,
+     "crossing_R_b_Gyr": 0.09777922216731284,
+     "crossing_r_half_Gyr": 0.0020817522490676277,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 2.9964735118258474,
+      "1e-22 eV": 0.04015274505846635
+     },
+     "min_mass_eV_for_particle_regime": 6.286537669500411e-24
+    }
+   },
+   "mixture_fast_fraction_reversing_retention": 0.003381662060879414,
+   "mixture_K_at_1pct_fast": -19.718877527852314,
+   "maxwellian": {
+    "100": {
+     "K_kms": 552.2311769632557,
+     "probability_outside_table": 0.006989805535890903
+    },
+    "200": {
+     "K_kms": 46.79499961363475,
+     "probability_outside_table": 0.0008912340729719803
+    },
+    "300": {
+     "K_kms": -235.06335429248836,
+     "probability_outside_table": 0.00026481345233797526
+    },
+    "500": {
+     "K_kms": -654.2113265772005,
+     "probability_outside_table": 5.703400663481517e-05
+    },
+    "1000": {
+     "K_kms": -1531.255857984137,
+     "probability_outside_table": 6.82732684109677e-06
+    }
+   }
+  },
+  "J1630+4520 (stars, Auger Chabrier, FLRW)": {
+   "kind": "lens host",
+   "R_b_kpc": 300.0,
+   "r_half_kpc": 10.493806032928244,
+   "trials": {
+    "300": {
+     "K_kms": 424.16924681232047,
+     "travel_in_T_kpc": 3068.136495161123,
+     "travel_in_T_over_R_b": 10.227121650537077,
+     "crossing_R_b_Gyr": 0.9777922216731284,
+     "crossing_r_half_Gyr": 0.03420253971581262,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 29.964735118258474,
+      "1e-22 eV": 0.40152745058466355
+     },
+     "min_mass_eV_for_particle_regime": 3.8263281151254446e-23,
+     "A_star_per_kpc": 0.0008403597428041831,
+     "scattering_length_kpc": 1189.9665691542004,
+     "mean_free_path_single_speed_kpc": 892.4749268656502,
+     "mean_free_path_maxwellian_kpc": 841.4334304342258,
+     "optical_depth_R_b": 0.25210792284125494,
+     "optical_depth_r_half": 0.008818572138868564,
+     "collision_time_Gyr": 3.8784668512334535,
+     "wavelength_over_mean_free_path": {
+      "1.34e-24 eV": 0.03357487612956689,
+      "1e-22 eV": 0.00044990334013619626
+     },
+     "bath_gravity": {
+      "0.1 cm2/g": {
+       "rho_inf_Msun_kpc3": 40239009.95416037,
+       "rho_inf_over_mean": 986301.3913131705,
+       "bath_mass_in_R_b_over_baryons": 11198.938665586376,
+       "jeans_length_over_R_b": 0.1347319975049977
+      },
+      "1 cm2/g": {
+       "rho_inf_Msun_kpc3": 4023900.9954160377,
+       "rho_inf_over_mean": 98630.13913131708,
+       "bath_mass_in_R_b_over_baryons": 1119.8938665586377,
+       "jeans_length_over_R_b": 0.426059985819916
+      },
+      "10 cm2/g": {
+       "rho_inf_Msun_kpc3": 402390.09954160376,
+       "rho_inf_over_mean": 9863.013913131706,
+       "bath_mass_in_R_b_over_baryons": 111.98938665586377,
+       "jeans_length_over_R_b": 1.347319975049977
+      },
+      "100 cm2/g": {
+       "rho_inf_Msun_kpc3": 40239.00995416038,
+       "rho_inf_over_mean": 986.3013913131707,
+       "bath_mass_in_R_b_over_baryons": 11.198938665586377,
+       "jeans_length_over_R_b": 4.26059985819916
+      },
+      "1000 cm2/g": {
+       "rho_inf_Msun_kpc3": 4023.9009954160374,
+       "rho_inf_over_mean": 98.63013913131707,
+       "bath_mass_in_R_b_over_baryons": 1.1198938665586375,
+       "jeans_length_over_R_b": 13.47319975049977
+      }
+     },
+     "channels": {
+      "0.1 cm2/g": {
+       "seedless_over_seed_capture": 12263.021913874809,
+       "evaporation_over_seed_capture": 0.0002893592052102578
+      },
+      "1 cm2/g": {
+       "seedless_over_seed_capture": 1226.3021913874811,
+       "evaporation_over_seed_capture": 0.002893592052102578
+      },
+      "10 cm2/g": {
+       "seedless_over_seed_capture": 122.63021913874812,
+       "evaporation_over_seed_capture": 0.028935920521025775
+      },
+      "100 cm2/g": {
+       "seedless_over_seed_capture": 12.263021913874812,
+       "evaporation_over_seed_capture": 0.2893592052102578
+      },
+      "1000 cm2/g": {
+       "seedless_over_seed_capture": 1.2263021913874812,
+       "evaporation_over_seed_capture": 2.893592052102578
+      }
+     }
+    },
+    "1000": {
+     "K_kms": -783.2534562922731,
+     "travel_in_T_kpc": 10227.121650537076,
+     "travel_in_T_over_R_b": 34.09040550179025,
+     "crossing_R_b_Gyr": 0.2933376665019385,
+     "crossing_r_half_Gyr": 0.010260761914743786,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 8.989420535477542,
+      "1e-22 eV": 0.12045823517539907
+     },
+     "min_mass_eV_for_particle_regime": 1.1478984345376333e-23
+    },
+    "3000": {
+     "K_kms": -2927.634073510416,
+     "travel_in_T_kpc": 30681.36495161123,
+     "travel_in_T_over_R_b": 102.27121650537077,
+     "crossing_R_b_Gyr": 0.09777922216731284,
+     "crossing_r_half_Gyr": 0.0034202539715812623,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 2.9964735118258474,
+      "1e-22 eV": 0.04015274505846635
+     },
+     "min_mass_eV_for_particle_regime": 3.826328115125444e-24
+    }
+   },
+   "mixture_fast_fraction_reversing_retention": 0.12654956340680465,
+   "mixture_K_at_1pct_fast": 390.6512136090931,
+   "maxwellian": {
+    "100": {
+     "K_kms": 1500.142673882574,
+     "probability_outside_table": 0.006989805535890903
+    },
+    "200": {
+     "K_kms": 536.7302860461709,
+     "probability_outside_table": 0.0008912340729719803
+    },
+    "300": {
+     "K_kms": 94.33411245682629,
+     "probability_outside_table": 0.00026481345233797526
+    },
+    "500": {
+     "K_kms": -455.257777114285,
+     "probability_outside_table": 5.703400663481517e-05
+    },
+    "1000": {
+     "K_kms": -1430.7973579066158,
+     "probability_outside_table": 6.82732684109677e-06
+    }
+   }
+  },
+  "Coma (gas n_e0=0.0025, stars 5.0e+12)": {
+   "kind": "cluster",
+   "R_b_kpc": 30000.0,
+   "r_half_kpc": 1542.027625804512,
+   "trials": {
+    "300": {
+     "K_kms": 1432.0986232782766,
+     "travel_in_T_kpc": 3068.136495161123,
+     "travel_in_T_over_R_b": 0.10227121650537077,
+     "crossing_R_b_Gyr": 97.77922216731284,
+     "crossing_r_half_Gyr": 5.02594206038911,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 29.964735118258474,
+      "1e-22 eV": 0.40152745058466355
+     },
+     "min_mass_eV_for_particle_regime": 2.603892718038545e-25,
+     "A_star_per_kpc": 0.0002592673364824739,
+     "scattering_length_kpc": 3857.0226915861363,
+     "mean_free_path_single_speed_kpc": 2892.767018689602,
+     "mean_free_path_maxwellian_kpc": 2727.326900410946,
+     "optical_depth_R_b": 7.7780200944742175,
+     "optical_depth_r_half": 0.39979739532472874,
+     "collision_time_Gyr": 12.571222622165592,
+     "wavelength_over_mean_free_path": {
+      "1.34e-24 eV": 0.010358502750018298,
+      "1e-22 eV": 0.00013880393685024517
+     },
+     "bath_gravity": {
+      "0.1 cm2/g": {
+       "rho_inf_Msun_kpc3": 12414517.738194281,
+       "rho_inf_over_mean": 304293.17549342645,
+       "bath_mass_in_R_b_over_baryons": 9878766.98819196,
+       "jeans_length_over_R_b": 0.002425657423397428
+      },
+      "1 cm2/g": {
+       "rho_inf_Msun_kpc3": 1241451.7738194282,
+       "rho_inf_over_mean": 30429.317549342646,
+       "bath_mass_in_R_b_over_baryons": 987876.6988191961,
+       "jeans_length_over_R_b": 0.007670602281231279
+      },
+      "10 cm2/g": {
+       "rho_inf_Msun_kpc3": 124145.17738194282,
+       "rho_inf_over_mean": 3042.9317549342645,
+       "bath_mass_in_R_b_over_baryons": 98787.6698819196,
+       "jeans_length_over_R_b": 0.024256574233974284
+      },
+      "100 cm2/g": {
+       "rho_inf_Msun_kpc3": 12414.517738194281,
+       "rho_inf_over_mean": 304.2931754934264,
+       "bath_mass_in_R_b_over_baryons": 9878.766988191961,
+       "jeans_length_over_R_b": 0.0767060228123128
+      },
+      "1000 cm2/g": {
+       "rho_inf_Msun_kpc3": 1241.4517738194281,
+       "rho_inf_over_mean": 30.429317549342645,
+       "bath_mass_in_R_b_over_baryons": 987.8766988191961,
+       "jeans_length_over_R_b": 0.24256574233974285
+      }
+     },
+     "channels": {
+      "0.1 cm2/g": {
+       "seedless_over_seed_capture": 23657845.142795723,
+       "evaporation_over_seed_capture": 1.2111619353531456e-08
+      },
+      "1 cm2/g": {
+       "seedless_over_seed_capture": 2365784.5142795723,
+       "evaporation_over_seed_capture": 1.2111619353531455e-07
+      },
+      "10 cm2/g": {
+       "seedless_over_seed_capture": 236578.45142795722,
+       "evaporation_over_seed_capture": 1.2111619353531454e-06
+      },
+      "100 cm2/g": {
+       "seedless_over_seed_capture": 23657.84514279572,
+       "evaporation_over_seed_capture": 1.2111619353531455e-05
+      },
+      "1000 cm2/g": {
+       "seedless_over_seed_capture": 2365.784514279572,
+       "evaporation_over_seed_capture": 0.00012111619353531455
+      }
+     }
+    },
+    "1000": {
+     "K_kms": -477.2790336223331,
+     "travel_in_T_kpc": 10227.121650537076,
+     "travel_in_T_over_R_b": 0.34090405501790255,
+     "crossing_R_b_Gyr": 29.33376665019385,
+     "crossing_r_half_Gyr": 1.507782618116733,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 8.989420535477542,
+      "1e-22 eV": 0.12045823517539907
+     },
+     "min_mass_eV_for_particle_regime": 7.811678154115634e-26
+    },
+    "3000": {
+     "K_kms": -2823.115081199166,
+     "travel_in_T_kpc": 30681.36495161123,
+     "travel_in_T_over_R_b": 1.0227121650537077,
+     "crossing_R_b_Gyr": 9.777922216731284,
+     "crossing_r_half_Gyr": 0.5025942060389111,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 2.9964735118258474,
+      "1e-22 eV": 0.04015274505846635
+     },
+     "min_mass_eV_for_particle_regime": 2.6038927180385445e-26
+    }
+   },
+   "mixture_fast_fraction_reversing_retention": 0.3365515160311188,
+   "mixture_K_at_1pct_fast": 1389.546486233502,
+   "maxwellian": {
+    "100": {
+     "K_kms": 3838.5297890841503,
+     "probability_outside_table": 0.006989805535890903
+    },
+    "200": {
+     "K_kms": 1743.9440016620258,
+     "probability_outside_table": 0.0008912340729719803
+    },
+    "300": {
+     "K_kms": 901.3809056546875,
+     "probability_outside_table": 0.00026481345233797526
+    },
+    "500": {
+     "K_kms": 28.101371424431534,
+     "probability_outside_table": 5.703400663481517e-05
+    },
+    "1000": {
+     "K_kms": -1190.9483400689442,
+     "probability_outside_table": 6.82732684109677e-06
+    }
+   }
+  },
+  "Coma (gas n_e0=0.0045, stars 2.0e+13)": {
+   "kind": "cluster",
+   "R_b_kpc": 30000.0,
+   "r_half_kpc": 1542.027625804511,
+   "trials": {
+    "300": {
+     "K_kms": 2953.3472128270587,
+     "travel_in_T_kpc": 3068.136495161123,
+     "travel_in_T_over_R_b": 0.10227121650537077,
+     "crossing_R_b_Gyr": 97.77922216731284,
+     "crossing_r_half_Gyr": 5.025942060389108,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 29.964735118258474,
+      "1e-22 eV": 0.40152745058466355
+     },
+     "min_mass_eV_for_particle_regime": 2.603892718038546e-25,
+     "A_star_per_kpc": 0.00012722838028674272,
+     "scattering_length_kpc": 7859.881559021943,
+     "mean_free_path_single_speed_kpc": 5894.911169266457,
+     "mean_free_path_maxwellian_kpc": 5557.775549707509,
+     "optical_depth_R_b": 3.8168514086022816,
+     "optical_depth_r_half": 0.19618967718851935,
+     "collision_time_Gyr": 25.617770172279062,
+     "wavelength_over_mean_free_path": {
+      "1.34e-24 eV": 0.005083152953089739,
+      "1e-22 eV": 6.811424957140249e-05
+     },
+     "bath_gravity": {
+      "0.1 cm2/g": {
+       "rho_inf_Msun_kpc3": 6092086.281675769,
+       "rho_inf_over_mean": 149323.58381733618,
+       "bath_mass_in_R_b_over_baryons": 2582160.68801457,
+       "jeans_length_over_R_b": 0.0034626721116538207
+      },
+      "1 cm2/g": {
+       "rho_inf_Msun_kpc3": 609208.628167577,
+       "rho_inf_over_mean": 14932.35838173362,
+       "bath_mass_in_R_b_over_baryons": 258216.06880145703,
+       "jeans_length_over_R_b": 0.010949930663170944
+      },
+      "10 cm2/g": {
+       "rho_inf_Msun_kpc3": 60920.862816757704,
+       "rho_inf_over_mean": 1493.235838173362,
+       "bath_mass_in_R_b_over_baryons": 25821.606880145708,
+       "jeans_length_over_R_b": 0.0346267211165382
+      },
+      "100 cm2/g": {
+       "rho_inf_Msun_kpc3": 6092.08628167577,
+       "rho_inf_over_mean": 149.3235838173362,
+       "bath_mass_in_R_b_over_baryons": 2582.1606880145705,
+       "jeans_length_over_R_b": 0.10949930663170944
+      },
+      "1000 cm2/g": {
+       "rho_inf_Msun_kpc3": 609.208628167577,
+       "rho_inf_over_mean": 14.93235838173362,
+       "bath_mass_in_R_b_over_baryons": 258.216068801457,
+       "jeans_length_over_R_b": 0.346267211165382
+      }
+     },
+     "channels": {
+      "0.1 cm2/g": {
+       "seedless_over_seed_capture": 7713431.621632168,
+       "evaporation_over_seed_capture": 3.07863316614556e-08
+      },
+      "1 cm2/g": {
+       "seedless_over_seed_capture": 771343.162163217,
+       "evaporation_over_seed_capture": 3.0786331661455593e-07
+      },
+      "10 cm2/g": {
+       "seedless_over_seed_capture": 77134.3162163217,
+       "evaporation_over_seed_capture": 3.078633166145559e-06
+      },
+      "100 cm2/g": {
+       "seedless_over_seed_capture": 7713.4316216321695,
+       "evaporation_over_seed_capture": 3.078633166145559e-05
+      },
+      "1000 cm2/g": {
+       "seedless_over_seed_capture": 771.343162163217,
+       "evaporation_over_seed_capture": 0.00030786331661455593
+      }
+     }
+    },
+    "1000": {
+     "K_kms": -21.64277670892116,
+     "travel_in_T_kpc": 10227.121650537076,
+     "travel_in_T_over_R_b": 0.34090405501790255,
+     "crossing_R_b_Gyr": 29.33376665019385,
+     "crossing_r_half_Gyr": 1.5077826181167322,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 8.989420535477542,
+      "1e-22 eV": 0.12045823517539907
+     },
+     "min_mass_eV_for_particle_regime": 7.811678154115639e-26
+    },
+    "3000": {
+     "K_kms": -2667.9741307072895,
+     "travel_in_T_kpc": 30681.36495161123,
+     "travel_in_T_over_R_b": 1.0227121650537077,
+     "crossing_R_b_Gyr": 9.777922216731284,
+     "crossing_r_half_Gyr": 0.5025942060389108,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 2.9964735118258474,
+      "1e-22 eV": 0.04015274505846635
+     },
+     "min_mass_eV_for_particle_regime": 2.603892718038546e-26
+    }
+   },
+   "mixture_fast_fraction_reversing_retention": 0.5253830963113331,
+   "mixture_K_at_1pct_fast": 2897.133999391715,
+   "maxwellian": {
+    "100": {
+     "K_kms": 7348.820746952577,
+     "probability_outside_table": 0.006989805535890903
+    },
+    "200": {
+     "K_kms": 3559.7083305996243,
+     "probability_outside_table": 0.0008912340729719803
+    },
+    "300": {
+     "K_kms": 2118.4859373487684,
+     "probability_outside_table": 0.00026481345233797526
+    },
+    "500": {
+     "K_kms": 759.4357370184437,
+     "probability_outside_table": 5.703400663481517e-05
+    },
+    "1000": {
+     "K_kms": -825.4161317618419,
+     "probability_outside_table": 6.82732684109677e-06
+    }
+   }
+  },
+  "Coma inverse diagnostic (NFW 1e15, c=4)": {
+   "kind": "inverse diagnostic",
+   "R_b_kpc": 30000.0,
+   "r_half_kpc": 968.8434727683635,
+   "trials": {
+    "300": {
+     "K_kms": 19691.675308412003,
+     "travel_in_T_kpc": 3068.136495161123,
+     "travel_in_T_over_R_b": 0.10227121650537077,
+     "crossing_R_b_Gyr": 97.77922216731284,
+     "crossing_r_half_Gyr": 3.1577587056389578,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 29.964735118258474,
+      "1e-22 eV": 0.40152745058466355
+     },
+     "min_mass_eV_for_particle_regime": 4.144399604998556e-25,
+     "A_star_per_kpc": 1.9388031634049392e-05,
+     "scattering_length_kpc": 51578.21169652897,
+     "mean_free_path_single_speed_kpc": 38683.658772396724,
+     "mean_free_path_maxwellian_kpc": 36471.30325209093,
+     "optical_depth_R_b": 0.5816409490214818,
+     "optical_depth_r_half": 0.018783967898475303,
+     "collision_time_Gyr": 168.10924734892,
+     "wavelength_over_mean_free_path": {
+      "1.34e-24 eV": 0.000774609643171608,
+      "1e-22 eV": 1.0379769218499549e-05
+     },
+     "bath_gravity": {
+      "0.1 cm2/g": {
+       "rho_inf_Msun_kpc3": 928358.6042696455,
+       "rho_inf_over_mean": 22755.067385400096,
+       "bath_mass_in_R_b_over_baryons": 104994.88455853412,
+       "jeans_length_over_R_b": 0.008870263240918526
+      },
+      "1 cm2/g": {
+       "rho_inf_Msun_kpc3": 92835.86042696456,
+       "rho_inf_over_mean": 2275.50673854001,
+       "bath_mass_in_R_b_over_baryons": 10499.488455853412,
+       "jeans_length_over_R_b": 0.02805023528656942
+      },
+      "10 cm2/g": {
+       "rho_inf_Msun_kpc3": 9283.586042696455,
+       "rho_inf_over_mean": 227.550673854001,
+       "bath_mass_in_R_b_over_baryons": 1049.9488455853411,
+       "jeans_length_over_R_b": 0.08870263240918527
+      },
+      "100 cm2/g": {
+       "rho_inf_Msun_kpc3": 928.3586042696455,
+       "rho_inf_over_mean": 22.755067385400096,
+       "bath_mass_in_R_b_over_baryons": 104.99488455853411,
+       "jeans_length_over_R_b": 0.28050235286569425
+      },
+      "1000 cm2/g": {
+       "rho_inf_Msun_kpc3": 92.83586042696456,
+       "rho_inf_over_mean": 2.27550673854001,
+       "bath_mass_in_R_b_over_baryons": 10.499488455853411,
+       "jeans_length_over_R_b": 0.8870263240918526
+      }
+     },
+     "channels": {
+      "0.1 cm2/g": {
+       "seedless_over_seed_capture": 303758.899393348,
+       "evaporation_over_seed_capture": 1.1168289969520407e-06
+      },
+      "1 cm2/g": {
+       "seedless_over_seed_capture": 30375.8899393348,
+       "evaporation_over_seed_capture": 1.1168289969520408e-05
+      },
+      "10 cm2/g": {
+       "seedless_over_seed_capture": 3037.58899393348,
+       "evaporation_over_seed_capture": 0.00011168289969520407
+      },
+      "100 cm2/g": {
+       "seedless_over_seed_capture": 303.75889939334803,
+       "evaporation_over_seed_capture": 0.0011168289969520407
+      },
+      "1000 cm2/g": {
+       "seedless_over_seed_capture": 30.375889939334805,
+       "evaporation_over_seed_capture": 0.011168289969520408
+      }
+     }
+    },
+    "1000": {
+     "K_kms": 4996.045855104902,
+     "travel_in_T_kpc": 10227.121650537076,
+     "travel_in_T_over_R_b": 0.34090405501790255,
+     "crossing_R_b_Gyr": 29.33376665019385,
+     "crossing_r_half_Gyr": 0.9473276116916873,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 8.989420535477542,
+      "1e-22 eV": 0.12045823517539907
+     },
+     "min_mass_eV_for_particle_regime": 1.2433198814995667e-25,
+     "A_star_per_kpc": 7.460401862985099e-05,
+     "scattering_length_kpc": 13404.103671164361,
+     "mean_free_path_single_speed_kpc": 10053.07775337327,
+     "mean_free_path_maxwellian_kpc": 9478.132601607815,
+     "optical_depth_R_b": 2.2381205588955297,
+     "optical_depth_r_half": 0.07227961649182052,
+     "collision_time_Gyr": 13.106428308164737,
+     "wavelength_over_mean_free_path": {
+      "1.34e-24 eV": 0.0008941958628004422,
+      "1e-22 eV": 1.1982224561525924e-05
+     },
+     "bath_gravity": {
+      "0.1 cm2/g": {
+       "rho_inf_Msun_kpc3": 3572269.9403110873,
+       "rho_inf_over_mean": 87560.1764628098,
+       "bath_mass_in_R_b_over_baryons": 404014.21204035456,
+       "jeans_length_over_R_b": 0.015073045241033383
+      },
+      "1 cm2/g": {
+       "rho_inf_Msun_kpc3": 357226.99403110874,
+       "rho_inf_over_mean": 8756.01764628098,
+       "bath_mass_in_R_b_over_baryons": 40401.42120403546,
+       "jeans_length_over_R_b": 0.047665154236427164
+      },
+      "10 cm2/g": {
+       "rho_inf_Msun_kpc3": 35722.69940311088,
+       "rho_inf_over_mean": 875.6017646280981,
+       "bath_mass_in_R_b_over_baryons": 4040.142120403546,
+       "jeans_length_over_R_b": 0.1507304524103338
+      },
+      "100 cm2/g": {
+       "rho_inf_Msun_kpc3": 3572.2699403110873,
+       "rho_inf_over_mean": 87.5601764628098,
+       "bath_mass_in_R_b_over_baryons": 404.01421204035455,
+       "jeans_length_over_R_b": 0.4766515423642717
+      },
+      "1000 cm2/g": {
+       "rho_inf_Msun_kpc3": 357.22699403110875,
+       "rho_inf_over_mean": 8.75601764628098,
+       "bath_mass_in_R_b_over_baryons": 40.40142120403546,
+       "jeans_length_over_R_b": 1.5073045241033383
+      }
+     },
+     "channels": {
+      "0.1 cm2/g": {
+       "seedless_over_seed_capture": 414625.8103975247,
+       "evaporation_over_seed_capture": 1.1439694573741603e-06
+      },
+      "1 cm2/g": {
+       "seedless_over_seed_capture": 41462.58103975246,
+       "evaporation_over_seed_capture": 1.1439694573741604e-05
+      },
+      "10 cm2/g": {
+       "seedless_over_seed_capture": 4146.258103975247,
+       "evaporation_over_seed_capture": 0.00011439694573741603
+      },
+      "100 cm2/g": {
+       "seedless_over_seed_capture": 414.6258103975246,
+       "evaporation_over_seed_capture": 0.0011439694573741606
+      },
+      "1000 cm2/g": {
+       "seedless_over_seed_capture": 41.462581039752465,
+       "evaporation_over_seed_capture": 0.011439694573741603
+      }
+     }
+    },
+    "3000": {
+     "K_kms": -1002.0298909883174,
+     "travel_in_T_kpc": 30681.36495161123,
+     "travel_in_T_over_R_b": 1.0227121650537077,
+     "crossing_R_b_Gyr": 9.777922216731284,
+     "crossing_r_half_Gyr": 0.3157758705638957,
+     "wavelength_kpc": {
+      "1.34e-24 eV": 2.9964735118258474,
+      "1e-22 eV": 0.04015274505846635
+     },
+     "min_mass_eV_for_particle_regime": 4.144399604998555e-26
+    }
+   },
+   "mixture_fast_fraction_reversing_retention": 0.951578033931915,
+   "mixture_K_at_1pct_fast": 19484.738256418,
+   "maxwellian": {
+    "100": {
+     "K_kms": 45738.870948270975,
+     "probability_outside_table": 0.006989805535890903
+    },
+    "200": {
+     "K_kms": 23409.20507033384,
+     "probability_outside_table": 0.0008912340729719803
+    },
+    "300": {
+     "K_kms": 15434.493856309222,
+     "probability_outside_table": 0.00026481345233797526
+    },
+    "500": {
+     "K_kms": 8776.3750196718,
+     "probability_outside_table": 5.703400663481517e-05
+    },
+    "1000": {
+     "K_kms": 3190.6638979435716,
+     "probability_outside_table": 6.82732684109677e-06
+    }
+   }
+  }
+ },
+ "all_validation_passed": true,
+ "runtime_seconds": 210.35016441345215
+}
