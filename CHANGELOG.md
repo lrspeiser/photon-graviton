@@ -6,6 +6,12 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **RC-1, the source-side radiation check** (protocol cc02334), before stage 2B selects an interaction.
+  - **Energy.** At stage 2A's required densities, the companions carry 1.1×10⁵–2.5×10⁸ times the microwave background's energy per unit volume. Present radiation holds the requirement in none of the 33 in-regime combinations.
+  - **FIRAS.** Within the diagnostic Δχ² = 4, a frequency shift at fixed photon number can take at most 3.3×10⁻⁵ of the background's energy, and whole-photon removal 8.4×10⁻⁵.
+  - **The Planck-preserving law** is the only radiative route left. It needs a past background at 50–340 K, 38–63 Gyr of transfer at α₀, and the removal of all but 10⁻⁶–10⁻⁴ of its photons. Applied to every beam, it dims sources by 0.81 magnitudes at 1 Gpc, so it needs a coupling about 74 times weaker on starlight.
+
+  See the [report](research_work/results/radiation-budget/report.md).
 - **CC-2 stage 2A, complete-channel formation** (protocol 1ccd762), requested in the owner's review of 299ba1f.
   - **Supply.** All three collision classes act together, with mass, energy, orbits, depletion and gravity evolving. Within the model's regime, the incident density that forms B1 is 29–580 times below CF-1's seeded-only requirement in the Milky Way, 2.8–44 times in J1630 and 77–1,600 times in Coma (bath gravity omitted). It is still 19–42,000 times the cosmic mean.
   - **An outer envelope.** At B1 the companions inside r_half are 0.03–3% of the baryons there, and the enclosed mass grows as r^1.7–2.7 across the tested radii. The inner benchmark needs 2.2–3.9 times the density and a total confined mass 16–670 times the baryons.

@@ -1,0 +1,1860 @@
+{
+ "scope": "RC-1: the radiation budget and spectrum on the source side, for CC-2 stage 2A's requirement",
+ "inputs": {
+  "T0_K": 2.72548,
+  "UVmm_nW_m2_sr": [
+   45.0,
+   100.0,
+   170.0
+  ],
+  "alpha0_per_Mpc": 0.0002488993286382367,
+  "U_kms": 300.0,
+  "firas": "time_revision\\data\\firas.txt",
+  "stage_2A": "research_work\\results\\companion-formation\\formation-results.json"
+ },
+ "validation": {
+  "W1": {
+   "max_relative": 2.220446049250313e-16,
+   "passed": true
+  },
+  "W2": {
+   "max_relative": 2.220446049250313e-16,
+   "passed": true
+  },
+  "W3": {
+   "chi2": {
+    "1": 45.01873960582287,
+    "0.9999": 86.00212058637457,
+    "0.999": 4339.9387120325255
+   },
+   "reference": {
+    "1.0": 45.02,
+    "0.9999": 86.0,
+    "0.999": 4339.94
+   },
+   "passed": true
+  },
+  "W4": {
+   "shape_max_relative": 3.774758283725532e-15,
+   "energy_split": 2.9999999999999996,
+   "passed": true
+  }
+ },
+ "radiation": {
+  "u_CMB_J_m3": 4.1746783808003774e-14,
+  "u_UVmm_J_m3": {
+   "45": 1.8862605197565137e-15,
+   "100": 4.1916900439033635e-15,
+   "170": 7.125873074635718e-15
+  }
+ },
+ "firas": {
+  "chi2_no_transfer": 45.01873960582287,
+  "law_a_max_energy_fraction": 3.3014347427830116e-05,
+  "law_b_max_energy_fraction": 8.435767193476889e-05,
+  "law_a_colour_temperature_at_bound": 2.7249313620109383,
+  "law_b_colour_temperature_at_bound": 2.725059462919546
+ },
+ "law_c": {
+  "rate_h_per_Gyr": 0.07631288107277119,
+  "temperature_efold_Gyr": 13.103947668368203,
+  "extra_dimming_mag": {
+   "100 Mpc": 0.08107170373275766,
+   "1000 Mpc": 0.8107170373275765,
+   "3000 Mpc": 2.4321511119827295
+  },
+  "photon_survival": {
+   "100 Mpc": 0.9280498791173735,
+   "1000 Mpc": 0.473928891764763,
+   "3000 Mpc": 0.10644850224823407
+  },
+  "optical_to_microwave_rate_ratio_for_1pct_at_1Gpc": 0.013459706659299103
+ },
+ "controls": {
+  "deviation_from_unit_planck": {
+   "thermal": {
+    "input": 5.313672835072225e-09,
+    "law a": 0.033167128368408516,
+    "law b": 0.01132067993516106,
+    "law c": 1.036845276303211e-09
+   },
+   "starlight proxy": {
+    "input": 12459387713270.445,
+    "law a": 12062707228509.182,
+    "law b": 12582135737501.379,
+    "law c": 12422956812824.998
+   }
+  },
+  "transfer": {
+   "law_a_q": 0.99,
+   "law_b_s": 0.99,
+   "law_c_ht": 0.01
+  },
+  "starlight_dilution": 1e-13,
+  "starlight_temperature_K": 5800.0
+ },
+ "requirement": {
+  "MW | S | 0.1 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "MW | S | 1 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": 164178.76848109346,
+   "rho_B2": null,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 9.986792454900378e-07,
+    "over_CMB": 23922303.81346333,
+    "over_CMB_plus_UVmm170": 20434314.587975428,
+    "law_a_supplies_fraction": 1.3800655524343704e-12,
+    "law_b_supplies_fraction": 3.526318894390635e-12,
+    "law_c_past_temperature_K": 190.6091542694769,
+    "law_c_photons_removed": 0.9999970765361015,
+    "law_c_duration_Gyr_at_alpha0": 55.66007205677687
+   }
+  },
+  "MW | S | 0.1 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 1708314.0746128373,
+   "rho_B2": 3922978.9467435316,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.0391464297594774e-05,
+    "over_CMB": 248916523.6149881,
+    "over_CMB_plus_UVmm170": 212623273.6343422,
+    "law_a_supplies_fraction": 1.3263220516005234e-13,
+    "law_b_supplies_fraction": 3.388994459252902e-13,
+    "law_c_past_temperature_K": 342.33904249443333,
+    "law_c_photons_removed": 0.9999994953855259,
+    "law_c_duration_Gyr_at_alpha0": 63.333436911119776
+   },
+   "B2": {
+    "E_req_J_m3": 2.3862998186993344e-05,
+    "over_CMB": 571612852.7826444,
+    "over_CMB_plus_UVmm170": 488268895.31086534,
+    "law_a_supplies_fraction": 5.775648197396956e-14,
+    "law_b_supplies_fraction": 1.4757833299953083e-13,
+    "law_c_past_temperature_K": 421.42325383374214,
+    "law_c_photons_removed": 0.9999997294961128,
+    "law_c_duration_Gyr_at_alpha0": 66.0569100775805
+   }
+  },
+  "MW | S | 1 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 598502.9982492438,
+   "rho_B2": 1304679.3399899341,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 3.640620088972782e-06,
+    "over_CMB": 87207199.13936928,
+    "over_CMB_plus_UVmm170": 74491961.78786017,
+    "law_a_supplies_fraction": 3.785736470571493e-13,
+    "law_b_supplies_fraction": 9.673246333706183e-13,
+    "law_c_past_temperature_K": 263.378964149335,
+    "law_c_photons_removed": 0.9999988918826812,
+    "law_c_duration_Gyr_at_alpha0": 59.897481260210924
+   },
+   "B2": {
+    "E_req_J_m3": 7.93620387655444e-06,
+    "over_CMB": 190103360.1307724,
+    "over_CMB_plus_UVmm170": 162385357.84154457,
+    "law_a_supplies_fraction": 1.7366524928922612e-13,
+    "law_b_supplies_fraction": 4.437463487059835e-13,
+    "law_c_past_temperature_K": 320.02982079358986,
+    "law_c_photons_removed": 0.9999993823283715,
+    "law_c_duration_Gyr_at_alpha0": 62.45039572670648
+   }
+  },
+  "MW | S | 10 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 244685.89999598454,
+   "rho_B2": 527582.5890536899,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.488394219610565e-06,
+    "over_CMB": 35652907.45403978,
+    "over_CMB_plus_UVmm170": 30454538.683761865,
+    "law_a_supplies_fraction": 9.259931317071116e-13,
+    "law_b_supplies_fraction": 2.3660811406058396e-12,
+    "law_c_past_temperature_K": 210.60406060877168,
+    "law_c_photons_removed": 0.9999978326513632,
+    "law_c_duration_Gyr_at_alpha0": 56.96725454670638
+   },
+   "B2": {
+    "E_req_J_m3": 3.2092199670172026e-06,
+    "over_CMB": 76873466.0321767,
+    "over_CMB_plus_UVmm170": 65664937.65059005,
+    "law_a_supplies_fraction": 4.2946349542781634e-13,
+    "law_b_supplies_fraction": 1.0973574666122057e-12,
+    "law_c_past_temperature_K": 255.20378812334766,
+    "law_c_photons_removed": 0.9999987819428969,
+    "law_c_duration_Gyr_at_alpha0": 59.484293764024926
+   }
+  },
+  "MW | S | 100 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 266649.9913901387,
+   "rho_B2": 802165.6166919295,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 1.6219990847482523e-06,
+    "over_CMB": 38853270.52277689,
+    "over_CMB_plus_UVmm170": 33188273.120555837,
+    "law_a_supplies_fraction": 8.497186204305806e-13,
+    "law_b_supplies_fraction": 2.171185869290361e-12,
+    "law_c_past_temperature_K": 215.1790063666128,
+    "law_c_photons_removed": 0.999997967973791,
+    "law_c_duration_Gyr_at_alpha0": 57.24886347708704
+   },
+   "B2": {
+    "E_req_J_m3": 4.879474735055045e-06,
+    "over_CMB": 116882650.34969096,
+    "over_CMB_plus_UVmm170": 99840586.66530833,
+    "law_a_supplies_fraction": 2.8245721096379474e-13,
+    "law_b_supplies_fraction": 7.217296295248829e-13,
+    "law_c_past_temperature_K": 283.3873845927901,
+    "law_c_photons_removed": 0.999999110414984,
+    "law_c_duration_Gyr_at_alpha0": 60.856963950192736
+   }
+  },
+  "MW | S | 10 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "MW | M | 0.1 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": 201711.55879578172,
+   "rho_B2": null,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.226986590339717e-06,
+    "over_CMB": 29391164.502221532,
+    "over_CMB_plus_UVmm170": 25105788.56570342,
+    "law_a_supplies_fraction": 1.1232745618274066e-12,
+    "law_b_supplies_fraction": 2.8701711335184662e-12,
+    "law_c_past_temperature_K": 200.67681589262244,
+    "law_c_photons_removed": 0.9999974948288953,
+    "law_c_duration_Gyr_at_alpha0": 56.33454160127948
+   }
+  },
+  "MW | S | 1000 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "MW | M | 1 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": 108875.72661993779,
+   "rho_B2": null,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 6.622776472190463e-07,
+    "over_CMB": 15864159.746171229,
+    "over_CMB_plus_UVmm170": 13551087.44771967,
+    "law_a_supplies_fraction": 2.0810649890107186e-12,
+    "law_b_supplies_fraction": 5.317500156611091e-12,
+    "law_c_past_temperature_K": 172.00745688664736,
+    "law_c_photons_removed": 0.9999960217948647,
+    "law_c_duration_Gyr_at_alpha0": 54.314464507258336
+   }
+  },
+  "MW | S | 100 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "MW | S | 1000 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "MW | M | 0.1 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 1233642.9991038805,
+   "rho_B2": 3243017.437003617,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 7.504098556391639e-06,
+    "over_CMB": 179752734.74726787,
+    "over_CMB_plus_UVmm170": 153543904.40469873,
+    "law_a_supplies_fraction": 1.8366534158297092e-13,
+    "law_b_supplies_fraction": 4.69298406243308e-13,
+    "law_c_past_temperature_K": 315.58174747565016,
+    "law_c_photons_removed": 0.9999993558405709,
+    "law_c_duration_Gyr_at_alpha0": 62.26698726018184
+   },
+   "B2": {
+    "E_req_J_m3": 1.9726875996580372e-05,
+    "over_CMB": 472536425.4958078,
+    "over_CMB_plus_UVmm170": 403638297.05333126,
+    "law_a_supplies_fraction": 6.98662487091654e-14,
+    "law_b_supplies_fraction": 1.7852099305626393e-13,
+    "law_c_past_temperature_K": 401.83875779803793,
+    "law_c_photons_removed": 0.9999996879863956,
+    "law_c_duration_Gyr_at_alpha0": 65.43333548104653
+   }
+  },
+  "MW | M | 1 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 425663.043327783,
+   "rho_B2": 1054624.3376699488,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 2.589255912176839e-06,
+    "over_CMB": 62022883.585116364,
+    "over_CMB_plus_UVmm170": 52979642.96057317,
+    "law_a_supplies_fraction": 5.322930105712236e-13,
+    "law_b_supplies_fraction": 1.360105610359145e-12,
+    "law_c_past_temperature_K": 241.86943473496993,
+    "law_c_photons_removed": 0.9999985691766152,
+    "law_c_duration_Gyr_at_alpha0": 58.781079055342246
+   },
+   "B2": {
+    "E_req_J_m3": 6.415150068207168e-06,
+    "over_CMB": 153668126.81213644,
+    "over_CMB_plus_UVmm170": 131262560.24124509,
+    "law_a_supplies_fraction": 2.1484186807451019e-13,
+    "law_b_supplies_fraction": 5.489601108881772e-13,
+    "law_c_past_temperature_K": 303.4512630546647,
+    "law_c_photons_removed": 0.9999992754603618,
+    "law_c_duration_Gyr_at_alpha0": 61.75335525208056
+   }
+  },
+  "MW | M | 10 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": 74530.80741514129,
+   "rho_B2": null,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.533617300442117e-07,
+    "over_CMB": 10859800.17357151,
+    "over_CMB_plus_UVmm170": 9276388.045219095,
+    "law_a_supplies_fraction": 3.0400510967203686e-12,
+    "law_b_supplies_fraction": 7.767884361266825e-12,
+    "law_c_past_temperature_K": 156.45824987564166,
+    "law_c_photons_removed": 0.9999947139216679,
+    "law_c_duration_Gyr_at_alpha0": 53.07288342550969
+   }
+  },
+  "MW | M | 10 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 158000.64908791686,
+   "rho_B2": 377640.3333846451,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 9.610985054759264e-07,
+    "over_CMB": 23022096.981077205,
+    "over_CMB_plus_UVmm170": 19665362.326911412,
+    "law_a_supplies_fraction": 1.4340286836149612e-12,
+    "law_b_supplies_fraction": 3.664204525074579e-12,
+    "law_c_past_temperature_K": 188.7901032287426,
+    "law_c_photons_removed": 0.9999969912138135,
+    "law_c_duration_Gyr_at_alpha0": 55.5344158683341
+   },
+   "B2": {
+    "E_req_J_m3": 2.2971396770747166e-06,
+    "over_CMB": 55025548.49828467,
+    "over_CMB_plus_UVmm170": 47002553.64857614,
+    "law_a_supplies_fraction": 5.999821597209392e-13,
+    "law_b_supplies_fraction": 1.5330637174366121e-12,
+    "law_c_past_temperature_K": 234.73837645846882,
+    "law_c_photons_removed": 0.9999984347752416,
+    "law_c_duration_Gyr_at_alpha0": 58.388924389676326
+   }
+  },
+  "MW | M | 100 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 89827.43467393781,
+   "rho_B2": 265870.36227035103,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 5.464092313179008e-07,
+    "over_CMB": 13088654.537577627,
+    "over_CMB_plus_UVmm170": 11180264.511299688,
+    "law_a_supplies_fraction": 2.5223637260075644e-12,
+    "law_b_supplies_fraction": 6.445098821469951e-12,
+    "law_c_past_temperature_K": 163.93314057246658,
+    "law_c_photons_removed": 0.9999954045428457,
+    "law_c_duration_Gyr_at_alpha0": 53.68443765037923
+   },
+   "B2": {
+    "E_req_J_m3": 1.617256696750615e-06,
+    "over_CMB": 38739671.640059404,
+    "over_CMB_plus_UVmm170": 33091237.512096375,
+    "law_a_supplies_fraction": 8.522103061320499e-13,
+    "law_b_supplies_fraction": 2.177552580170489e-12,
+    "law_c_past_temperature_K": 215.02154895959347,
+    "law_c_photons_removed": 0.9999979635064443,
+    "law_c_duration_Gyr_at_alpha0": 57.23927114305507
+   }
+  },
+  "MW | M | 100 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "MW | M | 1000 cm2/g | bath gravity on": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "MW | M | 1000 cm2/g | bath gravity omitted": {
+   "system": "Milky Way (baryon model I)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "J1630 | S | 0.1 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "J1630 | S | 0.1 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 1187058.3796302073,
+   "rho_B2": 2762878.535604048,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 7.220730048649629e-06,
+    "over_CMB": 172964942.20628458,
+    "over_CMB_plus_UVmm170": 147745805.3076417,
+    "law_a_supplies_fraction": 1.908730578966456e-13,
+    "law_b_supplies_fraction": 4.877154344616305e-13,
+    "law_c_past_temperature_K": 312.5593691047657,
+    "law_c_photons_removed": 0.9999993369726652,
+    "law_c_duration_Gyr_at_alpha0": 62.14088376971819
+   },
+   "B2": {
+    "E_req_J_m3": 1.6806250143333362e-05,
+    "over_CMB": 402575925.8635688,
+    "over_CMB_plus_UVmm170": 343878381.39618856,
+    "law_a_supplies_fraction": 8.200775383428797e-14,
+    "law_b_supplies_fraction": 2.0954475048107404e-13,
+    "law_c_past_temperature_K": 386.0601275516476,
+    "law_c_photons_removed": 0.9999996481446581,
+    "law_c_duration_Gyr_at_alpha0": 64.90842042875256
+   }
+  },
+  "J1630 | S | 1 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": 150469.16714093377,
+   "rho_B2": null,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 9.152854275863752e-07,
+    "over_CMB": 21924693.212196503,
+    "over_CMB_plus_UVmm170": 18727965.409867093,
+    "law_a_supplies_fraction": 1.5058065856750298e-12,
+    "law_b_supplies_fraction": 3.847610140690201e-12,
+    "law_c_past_temperature_K": 186.49894769379745,
+    "law_c_photons_removed": 0.9999968789563592,
+    "law_c_duration_Gyr_at_alpha0": 55.37441357054267
+   }
+  },
+  "J1630 | S | 1 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 385956.9905763026,
+   "rho_B2": 859562.4475918433,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 2.3477288793571072e-06,
+    "over_CMB": 56237359.269506074,
+    "over_CMB_plus_UVmm170": 48037676.46589858,
+    "law_a_supplies_fraction": 5.870536571537008e-13,
+    "law_b_supplies_fraction": 1.5000290381790857e-12,
+    "law_c_past_temperature_K": 236.02023107885444,
+    "law_c_photons_removed": 0.9999984601397627,
+    "law_c_duration_Gyr_at_alpha0": 58.460287492165854
+   },
+   "B2": {
+    "E_req_J_m3": 5.2286125943955245e-06,
+    "over_CMB": 125245878.06433809,
+    "over_CMB_plus_UVmm170": 106984414.76081954,
+    "law_a_supplies_fraction": 2.635962790797062e-13,
+    "law_b_supplies_fraction": 6.735365126462272e-13,
+    "law_c_past_temperature_K": 288.32603572485215,
+    "law_c_photons_removed": 0.9999991553487755,
+    "law_c_duration_Gyr_at_alpha0": 61.0833621191867
+   }
+  },
+  "J1630 | S | 10 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 145253.50703572197,
+   "rho_B2": 289946.5218001921,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 8.835592089845757e-07,
+    "over_CMB": 21164725.24082629,
+    "over_CMB_plus_UVmm170": 18078804.496066447,
+    "law_a_supplies_fraction": 1.5598760225881018e-12,
+    "law_b_supplies_fraction": 3.985767401886456e-12,
+    "law_c_past_temperature_K": 184.86136831812337,
+    "law_c_photons_removed": 0.9999967952769173,
+    "law_c_duration_Gyr_at_alpha0": 55.258844444772585
+   },
+   "B2": {
+    "E_req_J_m3": 1.7637090124550562e-06,
+    "over_CMB": 42247781.78281879,
+    "over_CMB_plus_UVmm170": 36087847.9901419,
+    "law_a_supplies_fraction": 7.81445700452285e-13,
+    "law_b_supplies_fraction": 1.9967361213997566e-12,
+    "law_c_past_temperature_K": 219.7323395771514,
+    "law_c_photons_removed": 0.9999980916982049,
+    "law_c_duration_Gyr_at_alpha0": 57.523258803232395
+   }
+  },
+  "J1630 | S | 10 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": 102438.752646607,
+   "rho_B2": null,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 6.231223266474629e-07,
+    "over_CMB": 14926235.50387124,
+    "over_CMB_plus_UVmm170": 12749917.160096282,
+    "law_a_supplies_fraction": 2.211833480670165e-12,
+    "law_b_supplies_fraction": 5.651637475027782e-12,
+    "law_c_past_temperature_K": 169.40669864628387,
+    "law_c_photons_removed": 0.9999958357455261,
+    "law_c_duration_Gyr_at_alpha0": 54.11481924620896
+   }
+  },
+  "J1630 | S | 100 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "J1630 | S | 1000 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "J1630 | S | 100 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 87244.3634228921,
+   "rho_B2": 173573.31980418853,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 5.306967267601729e-07,
+    "over_CMB": 12712278.129038213,
+    "over_CMB_plus_UVmm170": 10858765.629103472,
+    "law_a_supplies_fraction": 2.597044140531869e-12,
+    "law_b_supplies_fraction": 6.635920885185292e-12,
+    "law_c_past_temperature_K": 162.74170232500356,
+    "law_c_photons_removed": 0.9999953028715717,
+    "law_c_duration_Gyr_at_alpha0": 53.58885261216749
+   },
+   "B2": {
+    "E_req_J_m3": 1.0558251451326366e-06,
+    "over_CMB": 25291173.326990806,
+    "over_CMB_plus_UVmm170": 21603596.212664388,
+    "law_a_supplies_fraction": 1.3053703361637684e-12,
+    "law_b_supplies_fraction": 3.335459009517054e-12,
+    "law_c_past_temperature_K": 193.27925735158993,
+    "law_c_photons_removed": 0.9999971960307042,
+    "law_c_duration_Gyr_at_alpha0": 55.84236177557419
+   }
+  },
+  "J1630 | S | 1000 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "J1630 | M | 0.1 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": 302765.1407759855,
+   "rho_B2": null,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.841683094276993e-06,
+    "over_CMB": 44115568.34526501,
+    "over_CMB_plus_UVmm170": 37683302.11102549,
+    "law_a_supplies_fraction": 7.483604692440418e-13,
+    "law_b_supplies_fraction": 1.912197328493063e-12,
+    "law_c_past_temperature_K": 222.12169125942813,
+    "law_c_photons_removed": 0.9999981526206548,
+    "law_c_duration_Gyr_at_alpha0": 57.66498092144942
+   }
+  },
+  "J1630 | M | 0.1 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 910647.4725986962,
+   "rho_B2": 2434764.4812244275,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 5.53935651519402e-06,
+    "over_CMB": 132689419.63696864,
+    "over_CMB_plus_UVmm170": 113342651.46451873,
+    "law_a_supplies_fraction": 2.488091930626847e-13,
+    "law_b_supplies_fraction": 6.357528140945005e-13,
+    "law_c_past_temperature_K": 292.51764874617277,
+    "law_c_photons_removed": 0.9999991911410848,
+    "law_c_duration_Gyr_at_alpha0": 61.27249262931612
+   },
+   "B2": {
+    "E_req_J_m3": 1.4810372726941044e-05,
+    "over_CMB": 354766795.810066,
+    "over_CMB_plus_UVmm170": 303040056.98945284,
+    "law_a_supplies_fraction": 9.305929364794681e-14,
+    "law_b_supplies_fraction": 2.3778344797502424e-13,
+    "law_c_past_temperature_K": 374.0492093975695,
+    "law_c_photons_removed": 0.9999996131498452,
+    "law_c_duration_Gyr_at_alpha0": 64.49426015777088
+   }
+  },
+  "J1630 | M | 1 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": 136708.66971656142,
+   "rho_B2": 531281.2254912487,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 8.315820150655148e-07,
+    "over_CMB": 19919666.59970779,
+    "over_CMB_plus_UVmm170": 17015281.511345636,
+    "law_a_supplies_fraction": 1.6573744978399596e-12,
+    "law_b_supplies_fraction": 4.234893767549621e-12,
+    "law_c_past_temperature_K": 182.08053518109602,
+    "law_c_photons_removed": 0.9999966461901592,
+    "law_c_duration_Gyr_at_alpha0": 55.060226684380616
+   },
+   "B2": {
+    "E_req_J_m3": 3.2317183173275144e-06,
+    "over_CMB": 77412390.19011383,
+    "over_CMB_plus_UVmm170": 66125284.02308905,
+    "law_a_supplies_fraction": 4.26473686534566e-13,
+    "law_b_supplies_fraction": 1.0897179602334772e-12,
+    "law_c_past_temperature_K": 255.64989582946228,
+    "law_c_photons_removed": 0.9999987883082859,
+    "law_c_duration_Gyr_at_alpha0": 59.507180056930196
+   }
+  },
+  "J1630 | M | 1 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 294576.90398213203,
+   "rho_B2": 772938.0993786027,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.791875057471546e-06,
+    "over_CMB": 42922469.565859206,
+    "over_CMB_plus_UVmm170": 36664162.98533699,
+    "law_a_supplies_fraction": 7.691623469421696e-13,
+    "law_b_supplies_fraction": 1.9653499155106275e-12,
+    "law_c_past_temperature_K": 220.60440357696513,
+    "law_c_photons_removed": 0.999998114239796,
+    "law_c_duration_Gyr_at_alpha0": 57.57516224365572
+   },
+   "B2": {
+    "E_req_J_m3": 4.701687343859078e-06,
+    "over_CMB": 112623941.6545823,
+    "over_CMB_plus_UVmm170": 96202818.58523653,
+    "law_a_supplies_fraction": 2.9313791493007e-13,
+    "law_b_supplies_fraction": 7.490207738732313e-13,
+    "law_c_past_temperature_K": 280.7699865141748,
+    "law_c_photons_removed": 0.9999990853036314,
+    "law_c_duration_Gyr_at_alpha0": 60.73537201398201
+   }
+  },
+  "J1630 | M | 10 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": 68458.6890766951,
+   "rho_B2": 174594.38646205835,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.164257814019608e-07,
+    "over_CMB": 9975038.635721749,
+    "over_CMB_plus_UVmm170": 8520629.078994952,
+    "law_a_supplies_fraction": 3.3096961960229384e-12,
+    "law_b_supplies_fraction": 8.456876711502094e-12,
+    "law_c_past_temperature_K": 153.169275090269,
+    "law_c_photons_removed": 0.9999943660365204,
+    "law_c_duration_Gyr_at_alpha0": 52.794483276259015
+   },
+   "B2": {
+    "E_req_J_m3": 1.062036167964093e-06,
+    "over_CMB": 25439951.801999114,
+    "over_CMB_plus_UVmm170": 21730682.05631662,
+    "law_a_supplies_fraction": 1.2977362411997884e-12,
+    "law_b_supplies_fraction": 3.315952506173377e-12,
+    "law_c_past_temperature_K": 193.56287976042367,
+    "law_c_photons_removed": 0.9999972083383917,
+    "law_c_duration_Gyr_at_alpha0": 55.86157671372246
+   }
+  },
+  "J1630 | M | 10 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 103789.15848247253,
+   "rho_B2": 241986.65977539553,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 6.313366791715094e-07,
+    "over_CMB": 15123001.620318074,
+    "over_CMB_plus_UVmm170": 12917993.81170481,
+    "law_a_supplies_fraction": 2.1830552066776637e-12,
+    "law_b_supplies_fraction": 5.5781037424100096e-12,
+    "law_c_past_temperature_K": 169.96226352460025,
+    "law_c_photons_removed": 0.9999958764479635,
+    "law_c_duration_Gyr_at_alpha0": 54.15772299055076
+   },
+   "B2": {
+    "E_req_J_m3": 1.4719750735063922e-06,
+    "over_CMB": 35259604.19552565,
+    "over_CMB_plus_UVmm170": 30118580.969336785,
+    "law_a_supplies_fraction": 9.363221221870536e-13,
+    "law_b_supplies_fraction": 2.392473592924609e-12,
+    "law_c_past_temperature_K": 210.02082529506512,
+    "law_c_photons_removed": 0.9999978145447603,
+    "law_c_duration_Gyr_at_alpha0": 56.93091485220267
+   }
+  },
+  "J1630 | M | 100 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "J1630 | M | 1000 cm2/g | bath gravity on": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "J1630 | M | 100 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 44878.812125515506,
+   "rho_B2": 103925.72939490102,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 2.729922915529746e-07,
+    "over_CMB": 6539241.269662455,
+    "over_CMB_plus_UVmm170": 5585787.820140934,
+    "law_a_supplies_fraction": 5.048651069198776e-12,
+    "law_b_supplies_fraction": 1.2900223199613384e-11,
+    "law_c_past_temperature_K": 137.82400199483024,
+    "law_c_photons_removed": 0.9999922668857018,
+    "law_c_duration_Gyr_at_alpha0": 51.41114984522765
+   },
+   "B2": {
+    "E_req_J_m3": 6.321674232259434e-07,
+    "over_CMB": 15142901.21445818,
+    "over_CMB_plus_UVmm170": 12934991.947419612,
+    "law_a_supplies_fraction": 2.1801864094780323e-12,
+    "law_b_supplies_fraction": 5.570773442953299e-12,
+    "law_c_past_temperature_K": 170.01814714297188,
+    "law_c_photons_removed": 0.9999958805127638,
+    "law_c_duration_Gyr_at_alpha0": 54.16203086238266
+   }
+  },
+  "J1630 | M | 1000 cm2/g | bath gravity omitted": {
+   "system": "J1630+4520 (stars, Auger Chabrier, FLRW)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": 769209.9341694491,
+   "rho_B2": 814377.8975251052,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 4.6790093736648485e-06,
+    "over_CMB": 112080714.89252736,
+    "over_CMB_plus_UVmm170": 95738796.94940266,
+    "law_a_supplies_fraction": 2.945586799610184e-13,
+    "law_b_supplies_fraction": 7.526510873494899e-13,
+    "law_c_past_temperature_K": 280.4308081352104,
+    "law_c_photons_removed": 0.9999990819806659,
+    "law_c_duration_Gyr_at_alpha0": 60.71953249161594
+   },
+   "B2": {
+    "E_req_J_m3": 4.9537605365689765e-06,
+    "over_CMB": 118662088.0629188,
+    "over_CMB_plus_UVmm170": 101360573.63250591,
+    "law_a_supplies_fraction": 2.7822152775808857e-13,
+    "law_b_supplies_fraction": 7.109066873156614e-13,
+    "law_c_past_temperature_K": 284.45986325243297,
+    "law_c_photons_removed": 0.9999991204389125,
+    "law_c_duration_Gyr_at_alpha0": 60.90646219464157
+   }
+  },
+  "Coma low | S | 0.1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | S | 0.1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 8834.796181886666,
+   "rho_B2": 25178.201024836584,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 5.374097799984959e-08,
+    "over_CMB": 1287308.2210837584,
+    "over_CMB_plus_UVmm170": 1099612.3687095763,
+    "law_a_supplies_fraction": 2.5646031686207994e-11,
+    "law_b_supplies_fraction": 6.553028292148238e-11,
+    "law_c_past_temperature_K": 91.8044471247274,
+    "law_c_photons_removed": 0.9999738339697045,
+    "law_c_duration_Gyr_at_alpha0": 46.086795980505656
+   },
+   "B2": {
+    "E_req_J_m3": 1.5315589850569468e-07,
+    "over_CMB": 3668687.370267104,
+    "over_CMB_plus_UVmm170": 3133774.7582145184,
+    "law_a_supplies_fraction": 8.998953602695904e-12,
+    "law_b_supplies_fraction": 2.2993965803258702e-11,
+    "law_c_past_temperature_K": 119.28084449333855,
+    "law_c_photons_removed": 0.9999880706471973,
+    "law_c_duration_Gyr_at_alpha0": 49.51767169371863
+   }
+  },
+  "Coma low | S | 1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | S | 1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 2820.5273471737573,
+   "rho_B2": 8264.37972706318,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.7156920770080474e-08,
+    "over_CMB": 410975.86939837784,
+    "over_CMB_plus_UVmm170": 351053.5719652054,
+    "law_a_supplies_fraction": 8.033159580916364e-11,
+    "law_b_supplies_fraction": 2.0526186137949892e-10,
+    "law_c_past_temperature_K": 69.00766688202819,
+    "law_c_photons_removed": 0.9999383920205812,
+    "law_c_duration_Gyr_at_alpha0": 42.346364176488805
+   },
+   "B2": {
+    "E_req_J_m3": 5.027120489831836e-08,
+    "over_CMB": 1204193.4806168296,
+    "over_CMB_plus_UVmm170": 1028616.1650478157,
+    "law_a_supplies_fraction": 2.7416148616681623e-11,
+    "law_b_supplies_fraction": 7.005325414281264e-11,
+    "law_c_past_temperature_K": 90.2853232988711,
+    "law_c_photons_removed": 0.9999724908275541,
+    "law_c_duration_Gyr_at_alpha0": 45.86814579574889
+   }
+  },
+  "Coma low | S | 10 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | S | 10 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 939.1699449890937,
+   "rho_B2": 3052.6129659287353,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 5.712855204883808e-09,
+    "over_CMB": 136845.39702884917,
+    "over_CMB_plus_UVmm170": 116892.66696922967,
+    "law_a_supplies_fraction": 2.4125288935272096e-10,
+    "law_b_supplies_fraction": 6.164450815761451e-10,
+    "law_c_past_temperature_K": 52.42052200389785,
+    "law_c_photons_removed": 0.9998594519014973,
+    "law_c_duration_Gyr_at_alpha0": 38.743834002803716
+   },
+   "B2": {
+    "E_req_J_m3": 1.8568669029442047e-08,
+    "over_CMB": 444792.80403588904,
+    "over_CMB_plus_UVmm170": 379939.83167381265,
+    "law_a_supplies_fraction": 7.422410418574641e-11,
+    "law_b_supplies_fraction": 1.896561076738155e-10,
+    "law_c_past_temperature_K": 70.38541598529014,
+    "law_c_photons_removed": 0.9999419394756965,
+    "law_c_duration_Gyr_at_alpha0": 42.60540916953546
+   }
+  },
+  "Coma low | S | 100 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | S | 100 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 338.6756083468716,
+   "rho_B2": 1620.062194680226,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 2.060122049512651e-09,
+    "over_CMB": 49348.04221056379,
+    "over_CMB_plus_UVmm170": 42152.85562353878,
+    "law_a_supplies_fraction": 6.69010277793003e-10,
+    "law_b_supplies_fraction": 1.7094431340319857e-09,
+    "law_c_past_temperature_K": 40.62212904686314,
+    "law_c_photons_removed": 0.9996979763485011,
+    "law_c_duration_Gyr_at_alpha0": 35.4025214507175
+   },
+   "B2": {
+    "E_req_J_m3": 9.854638971886917e-09,
+    "over_CMB": 236057.4413877978,
+    "over_CMB_plus_UVmm170": 201639.10866461354,
+    "law_a_supplies_fraction": 1.398572620025724e-10,
+    "law_b_supplies_fraction": 3.573607823537541e-10,
+    "law_c_past_temperature_K": 60.07556767282587,
+    "law_c_photons_removed": 0.9999066239822305,
+    "law_c_duration_Gyr_at_alpha0": 40.52996857291118
+   }
+  },
+  "Coma low | S | 1000 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": 48.56265584457276,
+   "rho_B2": null,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 2.954006595769739e-10,
+    "over_CMB": 7076.009997214183,
+    "over_CMB_plus_UVmm170": 6044.293034576271,
+    "law_a_supplies_fraction": 4.665672807249824e-09,
+    "law_b_supplies_fraction": 1.1921643972801112e-08,
+    "law_c_past_temperature_K": 24.99801082167303,
+    "law_c_photons_removed": 0.9987039771960053,
+    "law_c_duration_Gyr_at_alpha0": 29.040335838769025
+   }
+  },
+  "Coma low | S | 1000 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": 145.36208099975354,
+   "rho_B2": 6528.678975769108,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 8.842196510471034e-10,
+    "over_CMB": 21180.545431084898,
+    "over_CMB_plus_UVmm170": 18092.318024993547,
+    "law_a_supplies_fraction": 1.5587109187177845e-09,
+    "law_b_supplies_fraction": 3.982790349249658e-09,
+    "law_c_past_temperature_K": 32.88004553751043,
+    "law_c_photons_removed": 0.9994304501165575,
+    "law_c_duration_Gyr_at_alpha0": 32.63173085263254
+   },
+   "B2": {
+    "E_req_J_m3": 3.971315081656617e-08,
+    "over_CMB": 951286.475126074,
+    "over_CMB_plus_UVmm170": 812584.241366936,
+    "law_a_supplies_fraction": 3.470494776397901e-11,
+    "law_b_supplies_fraction": 8.8677463771982e-11,
+    "law_c_past_temperature_K": 85.11790858988613,
+    "law_c_photons_removed": 0.9999671703565592,
+    "law_c_duration_Gyr_at_alpha0": 45.095832412355335
+   }
+  },
+  "Coma low | M | 0.1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | M | 0.1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 7640.347210271037,
+   "rho_B2": 23425.528221394452,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.647529188960923e-08,
+    "over_CMB": 1113266.4040265277,
+    "over_CMB_plus_UVmm170": 950946.7021859037,
+    "law_a_supplies_fraction": 2.9655388241684e-11,
+    "law_b_supplies_fraction": 7.577491930921393e-11,
+    "law_c_past_temperature_K": 88.53049098139223,
+    "law_c_photons_removed": 0.9999708223453233,
+    "law_c_duration_Gyr_at_alpha0": 45.610942939352626
+   },
+   "B2": {
+    "E_req_J_m3": 1.424946055192385e-07,
+    "over_CMB": 3413307.386134957,
+    "over_CMB_plus_UVmm170": 2915630.428307149,
+    "law_a_supplies_fraction": 9.672245623683416e-12,
+    "law_b_supplies_fraction": 2.4714349571162094e-11,
+    "law_c_past_temperature_K": 117.14854025814483,
+    "law_c_photons_removed": 0.9999874073145838,
+    "law_c_duration_Gyr_at_alpha0": 49.28130208380633
+   }
+  },
+  "Coma low | M | 1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | M | 1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 2440.155828581954,
+   "rho_B2": 7709.289982164075,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.4843167629479309e-08,
+    "over_CMB": 355552.36297349323,
+    "over_CMB_plus_UVmm170": 303711.0846075546,
+    "law_a_supplies_fraction": 9.28536858867434e-11,
+    "law_b_supplies_fraction": 2.372580826893782e-10,
+    "law_c_past_temperature_K": 66.55323910029729,
+    "law_c_photons_removed": 0.9999313214042099,
+    "law_c_duration_Gyr_at_alpha0": 41.87179950521534
+   },
+   "B2": {
+    "E_req_J_m3": 4.689466228721372e-08,
+    "over_CMB": 1123311.977825295,
+    "over_CMB_plus_UVmm170": 959527.582055225,
+    "law_a_supplies_fraction": 2.9390185522409456e-11,
+    "law_b_supplies_fraction": 7.509727804922307e-11,
+    "law_c_past_temperature_K": 88.72953255042177,
+    "law_c_photons_removed": 0.9999710182625557,
+    "law_c_duration_Gyr_at_alpha0": 45.64037124866488
+   }
+  },
+  "Coma low | M | 10 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | M | 10 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 795.3755706629581,
+   "rho_B2": 2916.794172149646,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.838171720616631e-09,
+    "over_CMB": 115893.28037502729,
+    "over_CMB_plus_UVmm170": 98995.47168542094,
+    "law_a_supplies_fraction": 2.8486852146213003e-10,
+    "law_b_supplies_fraction": 7.278909671189728e-10,
+    "law_c_past_temperature_K": 50.28732106382252,
+    "law_c_photons_removed": 0.9998407961750606,
+    "law_c_duration_Gyr_at_alpha0": 38.19942817823965
+   },
+   "B2": {
+    "E_req_J_m3": 1.774250002019961e-08,
+    "over_CMB": 425002.80025878263,
+    "over_CMB_plus_UVmm170": 363035.307509588,
+    "law_a_supplies_fraction": 7.76803056538164e-11,
+    "law_b_supplies_fraction": 1.984873320444096e-10,
+    "law_c_past_temperature_K": 69.58909728078439,
+    "law_c_photons_removed": 0.9999399233939273,
+    "law_c_duration_Gyr_at_alpha0": 42.45631015193084
+   }
+  },
+  "Coma low | M | 100 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | M | 100 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 279.723068504794,
+   "rho_B2": 1601.5687016769343,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 1.7015210041162888e-09,
+    "over_CMB": 40758.133894618004,
+    "over_CMB_plus_UVmm170": 34815.39807017739,
+    "law_a_supplies_fraction": 8.100063539020261e-10,
+    "law_b_supplies_fraction": 2.069713793886625e-09,
+    "law_c_past_temperature_K": 38.725696384019784,
+    "law_c_photons_removed": 0.9996513968639021,
+    "law_c_duration_Gyr_at_alpha0": 34.77602695959933
+   },
+   "B2": {
+    "E_req_J_m3": 9.742145329682933e-09,
+    "over_CMB": 233362.77530953535,
+    "over_CMB_plus_UVmm170": 199337.3381168383,
+    "law_a_supplies_fraction": 1.41472209456026e-10,
+    "law_b_supplies_fraction": 3.614872672939195e-10,
+    "law_c_past_temperature_K": 59.90338443876439,
+    "law_c_photons_removed": 0.9999058164798339,
+    "law_c_duration_Gyr_at_alpha0": 40.49235728196764
+   }
+  },
+  "Coma low | M | 1000 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | S | 0.1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma low | M | 1000 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0025, stars 5.0e+12)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": 119.9886707573312,
+   "rho_B2": 5668.274160037797,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 7.298763188924975e-10,
+    "over_CMB": 17483.414345144458,
+    "over_CMB_plus_UVmm170": 14934.246784356093,
+    "law_a_supplies_fraction": 1.8883238008369317e-09,
+    "law_b_supplies_fraction": 4.825011308972205e-09,
+    "law_c_past_temperature_K": 31.34048925328144,
+    "law_c_photons_removed": 0.999342324471259,
+    "law_c_duration_Gyr_at_alpha0": 32.003329637493785
+   },
+   "B2": {
+    "E_req_J_m3": 3.447941420043671e-08,
+    "over_CMB": 825917.8565469815,
+    "over_CMB_plus_UVmm170": 705494.9822604071,
+    "law_a_supplies_fraction": 3.997291881526493e-11,
+    "law_b_supplies_fraction": 1.0213808947956835e-10,
+    "law_c_past_temperature_K": 82.16319990961017,
+    "law_c_photons_removed": 0.9999634996554717,
+    "law_c_duration_Gyr_at_alpha0": 44.632870688172886
+   }
+  },
+  "Coma high | S | 0.1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 7518.731667787043,
+   "rho_B2": 23511.968061515432,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.573551951019975e-08,
+    "over_CMB": 1095545.9400307443,
+    "over_CMB_plus_UVmm170": 935809.9687526071,
+    "law_a_supplies_fraction": 3.013506437430058e-11,
+    "law_b_supplies_fraction": 7.70005792111297e-11,
+    "law_c_past_temperature_K": 88.17607173445788,
+    "law_c_photons_removed": 0.9999704690949403,
+    "law_c_duration_Gyr_at_alpha0": 45.55837785720941
+   },
+   "B2": {
+    "E_req_J_m3": 1.4302040842975452e-07,
+    "over_CMB": 3425902.438077981,
+    "over_CMB_plus_UVmm170": 2926389.0599031076,
+    "law_a_supplies_fraction": 9.636686398563063e-12,
+    "law_b_supplies_fraction": 2.4623489273120016e-11,
+    "law_c_past_temperature_K": 117.25646008721057,
+    "law_c_photons_removed": 0.9999874420525432,
+    "law_c_duration_Gyr_at_alpha0": 49.29336817361066
+   }
+  },
+  "Coma high | S | 1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | S | 1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 2414.91398737509,
+   "rho_B2": 7754.941836946243,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.4689624615577645e-08,
+    "over_CMB": 351874.4026638364,
+    "over_CMB_plus_UVmm170": 300569.3889499935,
+    "law_a_supplies_fraction": 9.382423722185444e-11,
+    "law_b_supplies_fraction": 2.3973801815689354e-10,
+    "law_c_past_temperature_K": 66.38045527898964,
+    "law_c_photons_removed": 0.9999307837098782,
+    "law_c_duration_Gyr_at_alpha0": 41.837735132928714
+   },
+   "B2": {
+    "E_req_J_m3": 4.7172356902119584e-08,
+    "over_CMB": 1129963.8582715348,
+    "over_CMB_plus_UVmm170": 965209.5857075475,
+    "law_a_supplies_fraction": 2.921717113884596e-11,
+    "law_b_supplies_fraction": 7.465519478101519e-11,
+    "law_c_past_temperature_K": 88.8605984489643,
+    "law_c_photons_removed": 0.9999711463142777,
+    "law_c_duration_Gyr_at_alpha0": 45.65971332558965
+   }
+  },
+  "Coma high | S | 10 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | S | 10 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 794.9881956535374,
+   "rho_B2": 2795.8440142556874,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.835815366103138e-09,
+    "over_CMB": 115836.83639782584,
+    "over_CMB_plus_UVmm170": 98947.25751693096,
+    "law_a_supplies_fraction": 2.8500732974480447e-10,
+    "law_b_supplies_fraction": 7.282456475680495e-10,
+    "law_c_past_temperature_K": 50.281197088292,
+    "law_c_photons_removed": 0.9998407379975032,
+    "law_c_duration_Gyr_at_alpha0": 38.19783228607682
+   },
+   "B2": {
+    "E_req_J_m3": 1.700677509337176e-08,
+    "over_CMB": 407379.288703701,
+    "over_CMB_plus_UVmm170": 347981.3903756252,
+    "law_a_supplies_fraction": 8.104080973994343e-11,
+    "law_b_supplies_fraction": 2.0707403217085174e-10,
+    "law_c_past_temperature_K": 68.8561922226701,
+    "law_c_photons_removed": 0.9999379845368791,
+    "law_c_duration_Gyr_at_alpha0": 42.31756885883365
+   }
+  },
+  "Coma high | S | 100 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | S | 100 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 286.16565966284463,
+   "rho_B2": 1402.9127268577352,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 1.740710493331295e-09,
+    "over_CMB": 41696.87661058964,
+    "over_CMB_plus_UVmm170": 35617.26749399681,
+    "law_a_supplies_fraction": 7.917702742139096e-10,
+    "law_b_supplies_fraction": 2.0231172881986273e-09,
+    "law_c_past_temperature_K": 38.94677345900157,
+    "law_c_photons_removed": 0.9996572996522715,
+    "law_c_duration_Gyr_at_alpha0": 34.850621993083145
+   },
+   "B2": {
+    "E_req_J_m3": 8.533745480664865e-09,
+    "over_CMB": 204416.83651397258,
+    "over_CMB_plus_UVmm170": 174611.85916610595,
+    "law_a_supplies_fraction": 1.6150503055834873e-10,
+    "law_b_supplies_fraction": 4.1267477460939353e-10,
+    "law_c_past_temperature_K": 57.952569483450205,
+    "law_c_photons_removed": 0.9998959814227343,
+    "law_c_duration_Gyr_at_alpha0": 40.058510517485914
+   }
+  },
+  "Coma high | S | 1000 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | S | 1000 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "S",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": 121.57218224896438,
+   "rho_B2": 6092.857756581278,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 7.395086244355321e-10,
+    "over_CMB": 17714.146024675367,
+    "over_CMB_plus_UVmm170": 15131.336653363322,
+    "law_a_supplies_fraction": 1.863727858054345e-09,
+    "law_b_supplies_fraction": 4.76216419449522e-09,
+    "law_c_past_temperature_K": 31.443377054184854,
+    "law_c_photons_removed": 0.9993487594302268,
+    "law_c_duration_Gyr_at_alpha0": 32.046278173318754
+   },
+   "B2": {
+    "E_req_J_m3": 3.706210397065703e-08,
+    "over_CMB": 887783.4551544881,
+    "over_CMB_plus_UVmm170": 758340.273164527,
+    "law_a_supplies_fraction": 3.718738757311613e-11,
+    "law_b_supplies_fraction": 9.502054971286814e-11,
+    "law_c_past_temperature_K": 83.660389759066,
+    "law_c_photons_removed": 0.9999654244300595,
+    "law_c_duration_Gyr_at_alpha0": 44.86950325190755
+   }
+  },
+  "Coma high | M | 0.1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | M | 0.1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 0.1,
+   "bath_gravity": false,
+   "rho_B1": 7440.775830285801,
+   "rho_B2": 22588.84165141271,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.5261323743612254e-08,
+    "over_CMB": 1084187.082573165,
+    "over_CMB_plus_UVmm170": 926107.2884230681,
+    "law_a_supplies_fraction": 3.045078470172807e-11,
+    "law_b_supplies_fraction": 7.78073021627945e-11,
+    "law_c_past_temperature_K": 87.94662073292128,
+    "law_c_photons_removed": 0.9999702373547357,
+    "law_c_duration_Gyr_at_alpha0": 45.52423443621656
+   },
+   "B2": {
+    "E_req_J_m3": 1.374051440733315e-07,
+    "over_CMB": 3291394.726484006,
+    "over_CMB_plus_UVmm170": 2811493.23236692,
+    "law_a_supplies_fraction": 1.0030503835405154e-11,
+    "law_b_supplies_fraction": 2.562976456636758e-11,
+    "law_c_past_temperature_K": 116.08818593155321,
+    "law_c_photons_removed": 0.9999870590867974,
+    "law_c_duration_Gyr_at_alpha0": 49.16215340973596
+   }
+  },
+  "Coma high | M | 1 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | M | 1 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1.0,
+   "bath_gravity": false,
+   "rho_B1": 2372.9430435487902,
+   "rho_B2": 7714.020192536649,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 1.4434320529058193e-08,
+    "over_CMB": 345758.8636155204,
+    "over_CMB_plus_UVmm170": 295345.5254892341,
+    "law_a_supplies_fraction": 9.548373419153084e-11,
+    "law_b_supplies_fraction": 2.439783352266381e-10,
+    "law_c_past_temperature_K": 66.09013576438988,
+    "law_c_photons_removed": 0.9999298675410275,
+    "law_c_duration_Gyr_at_alpha0": 41.78029841754574
+   },
+   "B2": {
+    "E_req_J_m3": 4.692343557482938e-08,
+    "over_CMB": 1124001.2114617827,
+    "over_CMB_plus_UVmm170": 960116.3220470932,
+    "law_a_supplies_fraction": 2.937216356279046e-11,
+    "law_b_supplies_fraction": 7.505122865931816e-11,
+    "law_c_past_temperature_K": 88.74313991395475,
+    "law_c_photons_removed": 0.9999710315921913,
+    "law_c_duration_Gyr_at_alpha0": 45.64238068682247
+   }
+  },
+  "Coma high | M | 10 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | M | 10 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 10.0,
+   "bath_gravity": false,
+   "rho_B1": 779.4560088007945,
+   "rho_B2": 2847.9877903346255,
+   "in_regime": true,
+   "B1": {
+    "E_req_J_m3": 4.7413349848064914e-09,
+    "over_CMB": 113573.65891016193,
+    "over_CMB_plus_UVmm170": 97014.06240696329,
+    "law_a_supplies_fraction": 2.9068665872554873e-10,
+    "law_b_supplies_fraction": 7.42757367722887e-10,
+    "law_c_past_temperature_K": 50.033785200094435,
+    "law_c_photons_removed": 0.9998383636930769,
+    "law_c_duration_Gyr_at_alpha0": 38.13319430408738
+   },
+   "B2": {
+    "E_req_J_m3": 1.732395926665609e-08,
+    "over_CMB": 414977.0997049767,
+    "over_CMB_plus_UVmm170": 354471.4032686423,
+    "law_a_supplies_fraction": 7.955703447564045e-11,
+    "law_b_supplies_fraction": 2.0328271606973496e-10,
+    "law_c_past_temperature_K": 69.1750200763494,
+    "law_c_photons_removed": 0.9999388380790942,
+    "law_c_duration_Gyr_at_alpha0": 42.37810460100929
+   }
+  },
+  "Coma high | M | 100 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | M | 100 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 100.0,
+   "bath_gravity": false,
+   "rho_B1": 273.03417531929614,
+   "rho_B2": 1573.2664176071041,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 1.6608332899772603e-09,
+    "over_CMB": 39783.50278707799,
+    "over_CMB_plus_UVmm170": 33982.8729582987,
+    "law_a_supplies_fraction": 8.298501920387325e-10,
+    "law_b_supplies_fraction": 2.120418415297734e-09,
+    "law_c_past_temperature_K": 38.49208916517115,
+    "law_c_photons_removed": 0.9996450112835625,
+    "law_c_duration_Gyr_at_alpha0": 34.69673988633961
+   },
+   "B2": {
+    "E_req_J_m3": 9.569986018451666e-09,
+    "over_CMB": 229238.88131034636,
+    "over_CMB_plus_UVmm170": 195814.72808880807,
+    "law_a_supplies_fraction": 1.4401722447395343e-10,
+    "law_b_supplies_fraction": 3.679902442926532e-10,
+    "law_c_past_temperature_K": 59.63696632298745,
+    "law_c_photons_removed": 0.999904548585458,
+    "law_c_duration_Gyr_at_alpha0": 40.43394796988147
+   }
+  },
+  "Coma high | M | 1000 cm2/g | bath gravity on": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": true,
+   "rho_B1": null,
+   "rho_B2": null,
+   "in_regime": false
+  },
+  "Coma high | M | 1000 cm2/g | bath gravity omitted": {
+   "system": "Coma (gas n_e0=0.0045, stars 2.0e+13)",
+   "bath": "M",
+   "sigma_over_m_cm2g": 1000.0,
+   "bath_gravity": false,
+   "rho_B1": 118.26270120948875,
+   "rho_B2": 5662.673603070206,
+   "in_regime": false,
+   "B1": {
+    "E_req_J_m3": 7.193774585238588e-10,
+    "over_CMB": 17231.92526237047,
+    "over_CMB_plus_UVmm170": 14719.426043305526,
+    "law_a_supplies_fraction": 1.9158826959355424e-09,
+    "law_b_supplies_fraction": 4.895429306380615e-09,
+    "law_c_past_temperature_K": 31.22717884647882,
+    "law_c_photons_removed": 0.9993351391712505,
+    "law_c_duration_Gyr_at_alpha0": 31.95586693640902
+   },
+   "B2": {
+    "E_req_J_m3": 3.444534670158492e-08,
+    "over_CMB": 825101.8056864297,
+    "over_CMB_plus_UVmm170": 704797.9156177321,
+    "law_a_supplies_fraction": 4.001245325158921e-11,
+    "law_b_supplies_fraction": 1.0223910716640466e-10,
+    "law_c_past_temperature_K": 82.1428970048869,
+    "law_c_photons_removed": 0.9999634725838845,
+    "law_c_duration_Gyr_at_alpha0": 44.62963224228001
+   }
+  }
+ },
+ "labels": {
+  "per_combination": {
+   "MW | S | 1 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | S | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | S | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | S | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | M | 0.1 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | M | 1 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | M | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | M | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | M | 10 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "MW | M | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | S | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | S | 1 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | S | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | S | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | S | 10 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | M | 0.1 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | M | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | M | 1 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | M | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | M | 10 cm2/g | bath gravity on": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "J1630 | M | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma low | S | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma low | S | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma low | S | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma low | M | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma low | M | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma low | M | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma high | S | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma high | S | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma high | S | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma high | M | 0.1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma high | M | 1 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   },
+   "Coma high | M | 10 cm2/g | bath gravity omitted": {
+    "present_radiation_can_hold_requirement": false,
+    "firas_permits_law_a": false,
+    "firas_permits_law_b": false
+   }
+  },
+  "law_c_needs_frequency_selectivity": true
+ },
+ "summary": {
+  "in_regime_combinations": 33,
+  "B1_over_CMB_range": [
+   113573.65891016193,
+   248916523.6149881
+  ],
+  "B1_law_c_past_temperature_range_K": [
+   50.033785200094435,
+   342.33904249443333
+  ]
+ },
+ "all_validation_passed": true
+}

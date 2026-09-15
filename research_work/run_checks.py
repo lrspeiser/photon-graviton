@@ -120,6 +120,7 @@ def main():
         ('gravitational-focusing/checks.py', []),
         ('companion-supply/cc2a.py', []),
         ('companion-formation/checks.py', []),
+        ('radiation-budget/rc1.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

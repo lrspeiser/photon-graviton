@@ -137,7 +137,7 @@ The companion distribution and gravitational response used for stellar motions a
 ### Order of work
 
 1. Finish CC-2 stage 2A within its declared regime. Done ([report](../research_work/results/companion-formation/report.md)).
-2. The source-side radiation budget and spectrum check, before stage 2B selects an interaction.
+2. The source-side radiation budget and spectrum check, before stage 2B selects an interaction. Done ([RC-1](../research_work/results/radiation-budget/report.md)).
 3. The global background specification, with the open-boundary, three-sphere and flat three-torus controls.
 4. One recording-transition toy model: modes, radiation coupling, and temperature and polarization together.
 5. One gravity for motions, galaxy lensing and CMB lensing.
