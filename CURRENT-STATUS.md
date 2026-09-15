@@ -124,6 +124,12 @@ The queue, each item with its own declared protocol:
       - **Convergence.** It is judged on circular speeds, net contrasts and rotation speeds, with a precision requirement.
       - **Birth histories.** Every companion's birth radius and time are traced.
       - **Matched budget.** A switch-off run converts the same total mass as the continuous run, early.
+      - **Stage 1 is done** ([report](research_work/results/donor-companion/report.md)). At 2B-F1's rate:
+        - **The fit exists only in the 300 kpc region,** at RMSE 7.9 km/s. From 600 kpc outward the inner rotation overshoots by about 170 km/s.
+        - **The apertures converge to the wrong galaxy:** 8×10¹² M☉ inside 200 kpc.
+        - **The measured infall horizon is 570 kpc.**
+        - **The fit is transient.** Every production history crosses the observed profile on its way up.
+        - **The controls.** The quiet null passes, and random sampling seeds structure at 16,000 births. The gate to the search closed on precision, so stages 2 and 3 did not run.
    6. **An extended, baryon-triggered source that counts its donor.** One shared length or transport law, fitted on the Milky Way and carried unchanged to J1630 and Coma, scored on the inner concentration, the outer gravitating mass and the depleted donor together. In the owner's independent toy calculation, a source proportional to the baryon density is too central once its donor is counted, and a cheap extended source keeps the inner slope but leaves little mass at large radii. The baryons may trigger conversion, but the energy comes from a separately counted reservoir, or from a residual parent whose own distribution is derived, not fitted.
    7. **Three-dimensional stability and a common field frame.** A passing collisionless case is perturbed away from spherical symmetry under three-dimensional torques, and the host moves through the field instead of sitting in its rest frame. Coherent infall is separated from random radial motion.
    8. **Finite source histories,** before Bose-enhanced decay, which waits until the companion mass, occupied states, depletion and inverse processes are specified. A finite episode separates an established reservoir from one sustained by continuing infall; its energy must still be accounted for. The microwave background is not used to supply an unspecified reservoir.

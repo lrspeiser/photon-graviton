@@ -105,6 +105,7 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
       - The owner's review of ed96b00 keeps cold infall as the promising ingredient for the inner profile: it holds without the bath's gravity. The net cost is a mass contrast, not a small budget.
       - The revision (9232e07, with Amendment 1) confirms the normalization in 22 of 26 combinations. Four robust passes remain, all cold with the bath's gravity on. Two marginal 3 km/s passes fail, and the slope carries a timestep uncertainty of about 0.1.
    5. **RC-2, redefined as a time-dependent donor-and-companion calculation** (owner's review of ed96b00; the highest priority), for the open, three-sphere and three-torus backgrounds of item 2, an open region first.
+      - **RC-2a stage 1.** At 2B-F1's rate the Milky Way fits only in a 300 kpc region. The open region converges from 600 kpc to 8×10¹² M☉ inside 200 kpc, with infall from out to 570 kpc, and every production history crosses the observed profile only transiently.
       - It evolves the parent's energy, daughter production, orbital transport, parent depletion, escaping energy and the gravity of every sector together.
       - The computational boundary is kept apart from the observational apertures. Enlarging the region must leave the 5–25 kpc profile and the outer apertures converged, not chosen by R_b.
       - The depleted region must emerge from the movement and conversion of positive-energy material, not from subtracting an assumed background.

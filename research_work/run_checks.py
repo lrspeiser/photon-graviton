@@ -122,6 +122,7 @@ def main():
         ('companion-formation/checks.py', []),
         ('radiation-budget/rc1.py', []),
         ('companion-source/checks.py', []),
+        ('donor-companion/checks.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

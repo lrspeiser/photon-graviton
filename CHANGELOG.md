@@ -6,6 +6,15 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **RC-2a stage 1: the 300 kpc zone had chosen 2B-F1's fit** (protocol 1585c9f, Amendment 1 in 2a25cb3). Cold collisionless decay at 3 km/s, at 2B-F1's rate, with the donor counted and every daughter followed in an open region.
+  - **Only at 300 kpc.** The fit exists in the 300 kpc region (RMSE 7.9 km/s), and there it matches 2B-F1's static-bath result. From 600 kpc outward the inner rotation overshoots by about 170 km/s.
+  - **Convergence to the wrong galaxy.** The apertures converge from 600 kpc (statistically from 1,200) to 8×10¹² M☉ inside 200 kpc, with circular speeds of 410–446 km/s.
+  - **Where the mass came from.** The companions inside 25 kpc were born at 140–570 kpc, so the measured infall horizon is 570 kpc. The 300 kpc runs' supply stopped at their edge.
+  - **A transient.** Continuous, stopped and matched-budget production each cross near the observed profile, then overshoot.
+  - **Controls.** The quiet null passes. Random sampling without baryons seeds central concentrations of up to 7.6×10¹⁰ M☉ at 16,000 births; they vanish at 64,000. The two resolutions agree without being resolved, so the declared gate closed and the search did not run.
+  - **Validation passes.** `donor-companion/checks.py` becomes suite job 62.
+
+  See the [report](research_work/results/donor-companion/report.md).
 - **The 2B-F1 revision's results** (protocol 9232e07, with Amendment 1).
   - **The search.** In 22 of 26 combinations, the direct search (three seeds per rate) selects the rate 2B-F1 sampled best. The minimum is sharp: one step of 3^(1/8) either side raises the RMSE by about 4 km/s.
   - **Four robust passes.** 3 km/s collisionless, and 10 km/s at 0, 0.1 and 1 cm²/g, all with the bath's gravity on. Each passes on its seed means and again at four times the tracers, with RMSE 7.0–9.2 km/s, slope 1.07–1.26 and net cost 1.0–2.7.

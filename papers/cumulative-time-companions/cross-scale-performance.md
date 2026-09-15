@@ -695,3 +695,10 @@ The [stage-2B-F1 report](../../research_work/results/companion-source/report.md)
   - **F3.** The uncapped cold-infall check agrees with its quadrature to within 5% in every bin, at standard errors of about 2%.
 
 No lensing is fitted. PDF v1.5 predates this supplement.
+
+## A donor-and-companion calculation in an open region (RC-2a)
+
+The [RC-2a report](../../research_work/results/donor-companion/report.md) removes 2B-F1's zone and its static bath. The donor is counted once, and every daughter is followed, bound or unbound, in regions of 150–2,400 kpc.
+- **At 2B-F1's rate, the Milky Way fits only in the 300 kpc region.** Beyond it, infall from out to 570 kpc makes the inner rotation overshoot by about 170 km/s. The apertures converge to 8×10¹² M☉ inside 200 kpc.
+- **In every production history, the inner profile crosses the observed one transiently.** It is not a persistent reservoir.
+- **The controls.** A quiet representation's null passes. Random sampling at 2B-F1's resolution seeds central structure without baryons.
