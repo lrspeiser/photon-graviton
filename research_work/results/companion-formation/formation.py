@@ -174,7 +174,8 @@ def summarize(model, res, s, full, M0):
     xs = np.geomspace(a, b, 8)
     ys = np.array([float(m[rr < q].sum()) for q in xs])
     out['log_slope_of_enclosed_mass'] = float(np.polyfit(np.log(xs), np.log(ys), 1)[0]) if (ys > 0).all() else None
-    # profiles
+    # profiles: shell statistics belong to the shell's geometric centre, enclosed masses to its outer edge r_hi. The raw
+    # second moments sigma_r and beta include coherent infall; the _about_mean versions subtract the shell's mean v_r
     edges = np.geomspace(1e-2*rh, model.R_b, 25)
     prof = []
     rhat = model.x/np.maximum(rr, 1e-300)[:, None]
@@ -183,13 +184,18 @@ def summarize(model, res, s, full, M0):
     for lo, hi in zip(edges[:-1], edges[1:]):
         sel = (rr >= lo) & (rr < hi)
         ms = float(m[sel].sum())
-        row = dict(r_kpc=float(math.sqrt(lo*hi)), density=ms/(4/3*math.pi*(hi**3 - lo**3)), tracers=int(sel.sum()),
+        row = dict(r_lo_kpc=float(lo), r_hi_kpc=float(hi), r_center_kpc=float(math.sqrt(lo*hi)),
+                   density=ms/(4/3*math.pi*(hi**3 - lo**3)), tracers=int(sel.sum()),
                    enclosed=float(m[rr < hi].sum()), baryons_enclosed=float(np.interp(math.log(hi), model.lr, Mb_grid)),
                    bath_excess_enclosed=float(np.interp(math.log(hi), model.lr, Mbx)))
         if sel.sum() >= 10:
             s_r2 = float(m[sel] @ vr[sel]**2)/ms
             s_t2 = float(m[sel] @ vt2[sel])/ms/2
-            row.update(sigma_r=math.sqrt(s_r2), sigma_t=math.sqrt(s_t2), beta=(1 - s_t2/s_r2) if s_r2 > 0 else None)
+            v_mean = float(m[sel] @ vr[sel])/ms                   # coherent infall (negative) or outflow
+            s_rr = max(s_r2 - v_mean*v_mean, 0.)                    # random radial motion about that mean
+            row.update(sigma_r=math.sqrt(s_r2), sigma_t=math.sqrt(s_t2), beta=(1 - s_t2/s_r2) if s_r2 > 0 else None,
+                       v_r_mean=v_mean, sigma_r_about_mean=math.sqrt(s_rr),
+                       beta_about_mean=(1 - s_t2/s_rr) if s_rr > 0 else None)
         prof.append(row)
     out['profile'] = prof
     # energy distribution and the speed distribution at r_half
@@ -396,6 +402,9 @@ def run_tasks(specs, label):
                 log('  ERROR TRACEBACK\n' + r.get('traceback', ''))
             if time.time() - T0 > 10*3600:
                 raise RuntimeError('overall wall-clock budget exhausted')
+    # imap_unordered hands results back as they finish; restore the order the tasks were issued in (each spec's seed is
+    # unique and increasing), so that nothing downstream, the next round's seeds in particular, depends on timing
+    results.sort(key=lambda r: r['spec']['rng'])
     return results
 
 
