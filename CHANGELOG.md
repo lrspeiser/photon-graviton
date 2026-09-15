@@ -6,6 +6,10 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **RC-1 narrowed; stage 2B redirected** (owner's review of 68eb17c).
+  - **RC-1 is a local stock bound.** Its energy comparison shows that today's local radiation cannot become today's local bath. The global source requirement needs a power and flux ledger, now queued as RC-2 for open, three-sphere and three-torus backgrounds.
+  - **Stage 2B tests phase space too.** The elastic mechanism builds an outer envelope (M ∝ r^1.7–2.7, against the Milky Way's r^1.3), so more supply alone does not help. Stage 2B becomes 2B-F1: a coherent field decaying into companion pairs, propagated through stage 2A's machinery and scored on energy supply and on a hard profile gate.
+  - **The recording-transition item** now asks first whether one transition can leave both a blackbody and persistent correlated modes. The unification problem stays explicit in the queue.
 - **RC-1, the source-side radiation check** (protocol cc02334), before stage 2B selects an interaction.
   - **Energy.** At stage 2A's required densities, the companions carry 1.1×10⁵–2.5×10⁸ times the microwave background's energy per unit volume. Present radiation holds the requirement in none of the 33 in-regime combinations.
   - **FIRAS.** Within the diagnostic Δχ² = 4, a frequency shift at fixed photon number can take at most 3.3×10⁻⁵ of the background's energy, and whole-photon removal 8.4×10⁻⁵.

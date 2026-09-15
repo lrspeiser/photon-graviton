@@ -1,7 +1,7 @@
-# RC-1 report: radiation cannot supply stage 2A's companions except through a hot, photon-removing history
+# RC-1 report: today's local radiation cannot become stage 2A's local bath, except through a hot, photon-removing history
 
 The check covers stage 2A's 33 combinations within its regime. For each, it compares the companions' energy per unit volume with the radiation present today, and scores three declared ways of taking energy from the microwave background against FIRAS.
-- **Energy.** At the required incident densities, the companions carry 1.1×10⁵–2.5×10⁸ times the energy of the microwave background (rest energy included, since their gravitating mass is what the benchmarks count). Against the microwave plus UV-to-mm background, the factor is 9.7×10⁴–2.1×10⁸. Present radiation holds the requirement in none of the combinations.
+- **Energy, as a local stock.** At the required incident densities, the companions carry 1.1×10⁵–2.5×10⁸ times the energy of the microwave background (rest energy included, since their gravitating mass is what the benchmarks count). Against the microwave plus UV-to-mm background, the factor is 9.7×10⁴–2.1×10⁸. Present radiation holds the requirement in none of the combinations.
 - **Laws (a) and (b) against FIRAS.** The diagnostic χ² may rise by at most 4 above no transfer.
   - Law (a), a frequency shift at fixed photon number, can then take at most 3.3×10⁻⁵ of the microwave background's energy.
   - Law (b), removing whole photons, can take 8.4×10⁻⁵.
@@ -15,6 +15,13 @@ The check covers stage 2A's 33 combinations within its regime. For each, it comp
 - **Controls.**
   - A thermal input stays Planck only under law (c). After a 1% transfer it deviates by 10⁻⁹, against 3.3% under law (a) and 1.1% under law (b).
   - A diluted 5,800 K blackbody stays equally far from any thermal spectrum under all three, so none of the laws thermalizes.
+
+**What kind of bound this is** (narrowed after the owner's review of 68eb17c). The energy comparison is a local stock comparison: the companions' standing energy density at stage 2A's required density, against the radiation's standing energy density at the same place. It is not yet a source budget.
+- **The bath flows.** In stage 2A, companions arrive, a small fraction is captured, and the rest leave. A source must therefore supply power: production sets a companion flux, and that flux, with the residence and recirculation time, capture and escape, sets the steady bath density.
+- **Two effects pull in opposite directions.** The source reservoir may occupy far more volume than one galaxy's bath, which lowers the energy density required of it. Escaping companions carry energy away continuously, which raises the integrated cost above one bath's stock.
+- **RC-2**, the global steady-state flux ledger, calculates both for open, three-sphere and three-torus backgrounds.
+
+What RC-1 does establish is narrower. Today's radiation, converted where it is, cannot become today's required local bath. And FIRAS forbids the non-Planck transfer laws at the scale of that stock.
 
 Protocol: [protocol.md](protocol.md), declared in cc02334 before execution. Code: [rc1.py](rc1.py), which is also a suite job. Results: [rc1-results.json](rc1-results.json).
 
@@ -116,19 +123,20 @@ Only law (c) keeps a thermal spectrum thermal, and none of the three makes a non
 ## What this does and does not show
 
 **Shown.**
-- **Present radiation falls short.** The radiation present today cannot supply stage 2A's requirement: it is 10⁵–10⁸ times short.
+- **Today's local radiation falls short of the local stock.** Converted where it is, the radiation present today falls 10⁵–10⁸ short of the companions' standing energy at stage 2A's required density.
 - **FIRAS rules out laws (a) and (b)** at that scale.
 - **What law (c) would need:** a much hotter past, the removal of nearly all the original photons, tens of billions of years, and a coupling that spares starlight.
 
 **Not shown.**
 - **A thermalization mechanism**, or the origin of the microwave background.
 - **Official FIRAS limits.**
+- **The global source budget.** A flowing, recirculating bath needs a power and flux ledger (RC-2), not a stock comparison.
 - **A source.** Nor its kinematics: one photon cannot become one slow massive companion while conserving momentum.
 - **Any change to the redshift or brightness fits.** The dimming is reported as a cost.
 
 ## Consequences for stage 2B
 
-- **A source drawing on present radiation cannot meet stage 2A's requirement.** Stage 2B must do one of two things.
+- **Converting today's local radiation cannot meet stage 2A's requirement.** Whether a global radiation source could, through flow and recirculation, is RC-2's question. Otherwise stage 2B must do one of two things.
   - **A non-radiative source** with its own energy ledger, such as the owner's example of a field decaying into companion pairs.
   - **Law (c) with its history.** It must supply:
     - a microwave background that was once 50–340 K;

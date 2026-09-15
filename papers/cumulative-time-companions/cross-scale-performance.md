@@ -675,7 +675,7 @@ No motions or lensing are fitted. PDF v1.5 predates this supplement.
 ## The radiation budget on the source side (RC-1)
 
 The [RC-1 report](../../research_work/results/radiation-budget/report.md) asks whether radiation could supply the companions that stage 2A requires.
-- **Not as it is today.** At the required densities, the companions carry 10⁵–2.5×10⁸ times the microwave background's energy.
+- **Not by converting today's local radiation.** In a local stock comparison, the companions at the required densities carry 10⁵–2.5×10⁸ times the microwave background's energy. A flowing, recirculating bath needs a power and flux budget instead, which is RC-2.
 - **Not by the archived loss law.** A frequency shift at fixed photon number, or the removal of whole photons, could take at most a few parts in 10⁵ of the background's energy before the FIRAS spectrum objects.
 - **Only through a hot, photon-removing history.** A Planck-preserving transfer would need three things: a background that was once 50–340 K, 38–63 Gyr of transfer that removes nearly all its photons, and a coupling that spares starlight. Applied to every beam, it would dim galaxies by 0.8 magnitudes at 1 Gpc.
 
