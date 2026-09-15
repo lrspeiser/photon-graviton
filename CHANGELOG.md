@@ -6,6 +6,10 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **The 2B-F1 revision's code, stage 2A's seed order, and the F1 archive's profile radii** (a53f45c, and the archive refresh after it).
+  - **The revision.** `companion-source/revision.py` implements the revision declared in 9232e07. Its first canonical run was stopped after the owner's review of 9232e07 found that F3's helper passes no tracer cap, so the engine's default of 40,000 thinned the 1,024,000 tracers requested. It restarts after an amendment.
+  - **Stage 2A's seed order.** Stage 2A's `run_tasks` now returns results in the order the tasks were issued, so its rounds 2–4 no longer draw seeds in completion order. Three smoke runs on 4, 4 and 3 workers agree bit for bit. Its canonical rerun is under way.
+  - **Profile radii.** Each profile row now stores its shell's lower edge, outer edge and centre, with the mean radial velocity and the radial dispersion about it. The regenerated F1 archive (37.7 min on 16 workers) matches ed96b00 value for value apart from the profile keys, and every row's centre equals its old radius exactly.
 - **Corrections after the owner's review of ed96b00.**
   - **The outer profile.** Each profile row stores its shell's centre as the radius but its enclosed masses at the outer edge, 1.1926 times farther out. The first report paired them, so its outer circular speeds were 9.2% too high. The table and prose now use the outer edge: 166–195 km/s out to about 110 kpc, and 0.8–1.0×10¹² M☉ inside 148 kpc. The fit scores are unaffected.
   - **The cost gate.** With the bath's gravity on, the subtraction of the uniform density is, for a homogeneous donor, the donor's own depletion, so the G3 net is a mass contrast. Positive inventory, mass contrast and source energy are kept separate; the verdict does not make the source budget small.
