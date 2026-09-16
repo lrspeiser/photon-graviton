@@ -38,21 +38,71 @@ The planar ring calculation takes the cylindrical mass, the spherical analytic t
 2. **Row-removal invariance, end to end.** The requirement is invariance of the *predicted force*, not of a stored mass function. The source is built once from the full frozen source inputs and passed separately from the velocity mask; predictions at the full and retained radii are compared at their common radii with the parameters held fixed, and the source's parameters and hash must be unchanged. `sparc_components` is never rebuilt from a shortened rotmod array, because that array also sets the stellar profile, the gas scale and the bulge. The force-proxy contrast measured earlier stays as a separate diagnostic: a model can show that contrast while its prediction path still hides a dependence on the last evaluation radius, and only the end-to-end test catches that.
 3. **Integral agreement.** The closed-form masses must agree to 10⁻⁸ with an independently converged Gauss–Legendre integration of the same interpolated profile, the quadrature's own node refinement being reported so its convergence is shown rather than asserted. The grid's cell-mass construction is then compared against those totals and **reported, not gated**: it spreads a thickened disk over spherical shells, so only its total is commensurable with a cylindrical integral, and it carries its own quadrature and outer-truncation error. Gating that comparison at 10⁻⁸ would be a tolerance no construction in this pipeline can meet — the same point the ruling makes about `_cylinder_mass` — so the measured difference is published instead, and any later step that needs the cells to be accurate must establish that separately. This replaces the earlier wording, which applied 10⁻⁸ to the cell comparison itself.
 
+### Two source-geometry corrections, after the owner's review of e9e931d
+
+Neither changes a fitted parameter or the outer continuation. Both concern integrating the same declared source over the correct volume, and both are fixed in PM-2A's own implementation with RPG-1's archive left intact.
+
+**Correction 8: `m_cyl` added a spherical bulge mass to a cylindrical integral.** The disk terms integrate a surface density over a cylinder; the bulge term added `m_bulge(R)`, which is an enclosed mass inside a *sphere*. Their sum is neither. For a spherical component with cumulative mass M(r), the mass inside an infinite cylinder of radius R is
+
+    M_cyl(R) = M_sph(R) + ∫_R^∞ M′(r)·[1 − √(1 − R²/r²)] dr,
+
+the extra term being the portions of exterior shells that project inside the cylinder (a shell at r > R contributes the fraction 1 − √(1 − R²/r²)). The bracket is evaluated in the cancellation-safe form (R²/r²)/(1 + √(1 − R²/r²)), and the integral under the substitution u = √(r² − R²), which removes the square-root singularity of the integrand's derivative at r = R.
+
+*The analytic test.* For a Plummer sphere M(r) = M r³/(r²+b²)^{3/2}, the projected surface density gives M_cyl(R) = M R²/(R²+b²) in closed form, so M_cyl/M_sph = √(R²+b²)/R. At R = b that is √2: substituting the spherical mass **underestimates the cylindrical mass by 29.2893%**, reproducing the owner's figure. The shell integral above returns the closed form. This test is added before the component-wise agreement test is extended, because the existing integral-agreement gate checks only the stellar interior and cannot see this.
+
+*What it changes here.* A cylinder includes material outside the sphere whenever the source extends past the evaluation radius, so in spherical symmetry M_cyl ≥ M_sph rather than M_cyl = M_sph. The `four_masses` note asserting that the force-equivalent and cylindrical masses coincide in spherical symmetry is therefore wrong and is replaced: it is M_sph that M_force equals in spherical symmetry, by Newton's theorems. **Measured impact on the archived numbers: none at the radii reported.** The adopted bulge's tabulated support ends exactly at the outermost rotmod radius in all 31 bulge galaxies, so at R_last the cylinder already contains the whole bulge and M_cyl = M_sph = M_bulge. At half the bulge support the median change is 0.000%, the 90th percentile 0.005% and the maximum 0.120% (UGC11914), because `np.maximum.accumulate` saturates the adopted bulge mass well inside those radii. The correction is made because the expression is wrong, not because it moved a number; a different bulge prescription, or an inner-radius evaluation, would not be so forgiving.
+
+**Correction 9: the thick-disk builder assigns a thin-disk mass to its inner sphere.** `exponential_disk_cell_masses` builds cells for ρ(R,z) = Σ(R)e^(−|z|/h)/(2h) but returns Σ(0)·πr_in² as the unresolved core, which is the mass inside a *cylinder* of radius r_in at constant Σ — the razor-thin disk's answer. The solver consumes it as the mass inside the inner *sphere*. Doing the z integral first at each cylindrical radius gives the exact spherical inner mass for a varying Σ,
+
+    M_inner = 2π·∫₀^{r_in} R·Σ(R)·[1 − e^(−√(r_in² − R²)/h)] dR  →  2πΣ(0)r_in³/(3h)  for r_in ≪ h,
+
+so the code exceeds it by a leading ratio 3h/(2r_in). At the grid's own scales — h = rd and r_in = 0.01·rd — the exact ratio is **150.5631**, reproducing the owner's figure; at h = 0.1·rd it is 15.57. That is a large relative error in an unresolved core whose absolute contribution can still be small, but it feeds the inner boundary flux and the solver's total mass, so it is **not** to be folded into the published cell-total discrepancy as though that were all quadrature and outer truncation. Stage B's spherical tests use `spherical_cell_masses`, which differences the supplied spherical cumulative mass and is unaffected. Before any disk comparison the thick disk's inner mass is replaced by the spherical integral and its convergence checked as r_in varies.
+
+**Two gate-hardening changes in the same pass.** The row-removal gate recomputes a fingerprint of the live source specification before and after prediction instead of comparing a cached string with itself, and that fingerprint covers the bulge's full radial profile rather than only its total, plus the vertical prescription once one exists. And `gates_passed` additionally requires that the construction-failure list is empty and that the expected number of sources was built, so a future run cannot pass on a reduced sample.
+
 ## Stage B: verify the field equations before any galaxy
 
-**Completion I, one total potential matched to PM-1 in spherical symmetry.** Requiring μ(x)·x = y with x = y + √y, where x = g/a\* and y = g_N/a\*, gives
+Let x = |∇Φ|/a\* for whichever potential the equation solves, and y = g_N/a\*. Every equation below is ∇·[μ(|∇Φ|/a\*)∇Φ] = 4πGρ_b for its own μ.
 
-    μ_PM(x) = (√(1+4x) − 1)/(√(1+4x) + 1) = 4x/(√(1+4x) + 1)²,
+| Equation | μ(x) | spherical solution | ν(y) = x/y | relaxation weight w = 1/(1+η), η = dlnμ/dlnx |
+|---|---|---|---|---|
+| Newtonian | 1 | x = y | 1 | 1 |
+| **Completion I**, total potential | 4x/[1 + √(1+4x)]² | x = y + √y | 1 + 1/√y | √(1+4x)/[1 + √(1+4x)], from η = 1/√(1+4x) |
+| **Completion II**, auxiliary ψ only | x | x = √y | 1/√y | 1/2 |
+| Existing simple-μ comparison | x/(1+x) | x = ½(y + √(y²+4y)) | ½ + √(¼ + 1/y) | (1+x)/(2+x) |
 
-the second form for small x. The field equation is ∇·[μ_PM(|∇Φ|/a\*)∇Φ] = 4πGρ_b with a = −∇Φ. The identity is verified over 10⁻¹⁰ ≤ y ≤ 10¹⁰ before use.
+The μ_PM identity μ_PM(x)·x = y at x = y + √y is verified over 10⁻¹⁰ ≤ y ≤ 10¹⁰ before use. The weights are each the locally matched spherical weight that cancels the first-order iteration error, derived rather than inherited; `aqual.py`'s hardcoded (1+x)/(2+x) is the simple-μ member of that family and is correct only for simple μ. They are numerical iteration weights: not a proof of convergence for a nonspherical solve, and never a physical memory time.
 
-**Completion II, Newtonian gravity plus a separate nonlinear field.** ∇²Φ_N = 4πGρ_b together with ∇·[(|∇ψ|/a\*)∇ψ] = 4πGρ_b and a = −∇Φ_N − ∇ψ. In spherical symmetry g_ψ = √(a\*g_N), so the total matches Completion I; in a disk they need not agree, and that difference is the measurement.
+**Completion II is two solves, added as vectors.** ∇²Φ_N = 4πGρ_b and ∇·[(|∇ψ|/a\*)∇ψ] = 4πGρ_b are solved separately and the accelerations added as vectors, a = −∇Φ_N − ∇ψ, not by summing their magnitudes. The auxiliary μ is never evaluated on the total gradient, and the total boundary gradient is never supplied to the auxiliary solve; either mistake changes the equation while possibly leaving a plausible-looking rotation curve. In spherical symmetry g_ψ = √(a\*g_N), so the total matches Completion I; in a disk they need not agree, and that difference is the measurement.
 
-**The existing simple-μ solver stays a separate comparison.** RPG-1's `aqual.py` implements μ = x/(1+x), whose spherical solution is ½[g_N + √(g_N² + 4a₀g_N)] — a different law: at g_N = a\* it gives 1.618a\* against PM-1's 2.000a\*. Running it unchanged and comparing with PM-1 would mix a change of force law with a change of geometry.
+**Boundary gradients** use the selected equation's own spherical inverse, computed directly from the enclosed mass through y = GM/(r²a\*) rather than as y·ν(y), since ν diverges as y → 0 while x does not.
 
-**Implementation requirement.** Changing `mu()` alone is insufficient: `nu()`, the boundary gradients, the iteration weights and the field-energy function must all be made consistent with whichever equation is being solved, and a test must fail if the three implementations are treated as the same equation.
+**The field functionals are derived, not chosen.** The gradient term in the action and the equation are not independent: with u = |∇U|²/a\*² and x = √u, the requirement is dF/du = μ(√u), and the density is a\*²F(u)/(8πG). This is `aqual.py`'s existing normalization. These follow, in forms free of cancellation:
 
-**Verifications:** both completions reproduce g_N + √(a\*g_N) on a smooth spherical source to 10⁻⁶ relative; the simple-μ solver reproduces its own analytic solution to the same tolerance; the existing disk analytic controls still pass; and the finite-band ring calculation is checked against independently integrated source rings, never against the on-ring expression.
+| Equation | F(u), F(0) = 0 | small-x behaviour |
+|---|---|---|
+| Newtonian | u | exact |
+| Completion I | t³(t + 2/3), with t = 2x/[1 + √(1+4x)] so that x = t² + t | exact, no subtraction; → (2/3)x³ |
+| Completion II | F_N(u_N) + (2/3)u_ψ^{3/2}, evaluated on each field separately | exact |
+| simple-μ | u − 2√u + 2·ln(1 + √u) | series (2/3)x³ − ½x⁴ + (2/5)x⁵ − ⅓x⁶ + … below x = 0.1 |
+
+Here t = √y on the spherical solution, which is why Completion I's form has no subtraction of nearly equal numbers: at x = 10⁻¹² it returns 6.667×10⁻³⁷ = (2/3)x³ exactly. `aqual.py`'s `field_energy_function(y) = y − 2√y + 2·log1p(√y)` is the simple-μ F and *is* cancellation-prone despite `log1p`, because its leading terms cancel to O(x³): at x = 10⁻⁸ it returns exactly 0.0 against a true 6.667×10⁻²⁵, and at x = 10⁻⁶ it is wrong by 7.7×10⁻⁵ relative. PM-2A's implementation takes the series branch below x = 0.1, checked against a high-precision reference at the transition; RPG-1's archived energy results are not silently changed.
+
+**The functional densities and their cross-check.** Completion I's is a\*²F_PM(|∇Φ|²/a\*²)/(8πG); Completion II's is |∇Φ_N|²/(8πG) + |∇ψ|³/(12πGa\*), the two fields entered separately. On the matched spherical solution the two must agree identically,
+
+    E_I = E_II = [a\*²/(8πG)]·[y² + (2/3)y^{3/2}],
+
+which follows from t = √y. This tests the energy implementation independently of checking the final acceleration. These are field-functional contributions, not the complete conserved matter–field energy: calling them an energy reservoir would require the source coupling, gauge convention and boundary terms as well, and none of them explains how matter powers a persistent disturbance.
+
+**What counts as passing.** The source is the same Plummer profile used for the bulge test, M(<r) = M r³/(r²+b²)^{3/2} with g_N = GMr/(r²+b²)^{3/2}, its dimensionless compactness GM/(a\*b²) varied so the weak, transition and strong regimes are all exercised. The 10⁻⁶ relative tolerance applies to identified numerical outputs, not to a mixture of boundary conditions, scalar identities and solutions:
+
+1. **Interior field and flux.** At interior faces, excluding the faces where the answer was imposed as a boundary condition, the solved field must satisfy that equation's own spherical flux identity r²·μ(g/a\*)·g = G·M(<r), with angular symmetry checked too. The auxiliary solve is checked on g_ψ, Completion I on the total solved field.
+2. **Off-grid readout.** Interpolated gradients are tested at radii that are not grid faces. Passing a face-flux test does not establish that the readout used for galaxy observations meets the same accuracy — `midplane_speed` interpolates face quantities in log r while `gradient_at` interpolates cell centres, so they are different numerical paths.
+3. **Actual convergence.** An acceptable equation residual *and* a small iteration change, both bound to explicit criteria. `aqual.py` computes a residual but sets `converged` from the iteration change alone; both measurements are preserved and both are gated.
+4. **Equation distinction.** At g_N = a\*, Completions I and II must give x = 2.000000 and the simple-μ solver 1.618034, and a test must fail if the three are treated as one equation. The two completions **must agree** on the spherical benchmark — requiring them to differ there would itself be a wrong test.
+5. **Gauge.** These isolated models have a logarithmic far field, so Φ(∞) = 0 is not a valid normalization; the finite-radius outer pin is kept and every energy comparison uses the same convention.
+
+A static solve that passes all of this establishes an equation implementation, not path memory, and the solver's relaxation time is a numerical quantity that must never be read as a physical memory time.
 
 ## Stage C: a matched disk comparison
 
