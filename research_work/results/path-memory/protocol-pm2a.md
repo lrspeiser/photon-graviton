@@ -21,10 +21,22 @@ The planar ring calculation takes the cylindrical mass, the spherical analytic t
 
 **Recomputed with the physical source:** the cumulative rule, the collective rule and the mass–speed slopes. **Preserved unchanged:** PM-1's force-proxy versions, under that label.
 
+### The outer-source convention, after the owner's ruling
+
+**Primary.** PM-2A's primary source model retains RPG-1's archived stellar-profile interpolation and endpoint-anchored exponential continuation, its separately normalized gas disk, and its existing bulge prescription. The continuation parameters are fixed from the archived source inputs and are **not** adjusted using rotation-curve residuals. The stellar endpoint is the final retained positive SBdisk sample in the archived source construction — `R_star_source_end` — and it is not assumed to equal the final original photometric measurement.
+
+**Sensitivity.** A second source model removes only the extrapolated stellar tail, without renormalizing the interior stars, the gas or the bulge. Both source models stay fixed under velocity-row removal, and the same frozen endpoint is used in both. The extrapolated stellar-mass fraction and the extrapolated fraction of the total source mass are reported per galaxy, and every compared force law uses matched source models.
+
+**Interpretation.** Continued mass is model-inferred, not directly observed. Tail removal is a source-assumption sensitivity, not an observational confidence bound. Any conclusion that changes between the two prescriptions is reported as outer-source dependent, and **neither prescription is selected by which fits better**.
+
+**What "independent" means here.** The gas scale is fitted to the tabulated gas contribution and the bulge is reconstructed from the tabulated bulge contribution, so this is a source model independent of the observed rotation speeds being fitted — not one that uses no force-model inputs at all. The gas is not truncated at the stellar endpoint: its normalization comes from a separate input, and cutting it there would change two assumptions at once.
+
+**Exact integrals, and the archived quadrature as a diagnostic.** Because the archived construction interpolates ln Σ linearly in radius, the stellar cylindrical mass is analytic piece by piece, and the continuation closes analytically to 2πΣ(R_end)·rd·(R_end + rd); the gas disk's total is its own normalization. Stage A therefore uses those exact expressions. RPG-1's `_cylinder_mass` — 20,001 geometrically spaced points under a trapezoidal sum — is measured against them and reported as a regression diagnostic: on a unit-total exponential it carries relative errors of 1.2×10⁻⁸ to 1.4×10⁻⁷, so agreement between two quantities produced by that route cannot establish 10⁻⁸ accuracy. Conservation and quadrature accuracy are checked separately: telescoping annular masses conserve by construction, which is not evidence that the underlying cumulative mass is accurate.
+
 **Three gates before any fit, run first on analytic sources and then on the galaxies:**
 1. **Mass-preserving refinement.** Refining the annuli must conserve the source mass to 10⁻¹⁰ and must not clip it. The per-ring √N growth is then measured on a genuine density rather than on differenced force-equivalent mass.
-2. **Row-removal invariance.** Holding the physical source fixed, deleting outer observation rows must leave the predicted force at the remaining inner radii unchanged to 10⁻¹⁰. Any rule that fails this is defined by where observation stopped.
-3. **Integral agreement.** Direct mass integrals must agree with the grid's own cell weights to 10⁻⁸.
+2. **Row-removal invariance, end to end.** The requirement is invariance of the *predicted force*, not of a stored mass function. The source is built once from the full frozen source inputs and passed separately from the velocity mask; predictions at the full and retained radii are compared at their common radii with the parameters held fixed, and the source's parameters and hash must be unchanged. `sparc_components` is never rebuilt from a shortened rotmod array, because that array also sets the stellar profile, the gas scale and the bulge. The force-proxy contrast measured earlier stays as a separate diagnostic: a model can show that contrast while its prediction path still hides a dependence on the last evaluation radius, and only the end-to-end test catches that.
+3. **Integral agreement.** The closed-form masses must agree to 10⁻⁸ with an independently converged Gauss–Legendre integration of the same interpolated profile, the quadrature's own node refinement being reported so its convergence is shown rather than asserted. The grid's cell-mass construction is then compared against those totals and **reported, not gated**: it spreads a thickened disk over spherical shells, so only its total is commensurable with a cylindrical integral, and it carries its own quadrature and outer-truncation error. Gating that comparison at 10⁻⁸ would be a tolerance no construction in this pipeline can meet — the same point the ruling makes about `_cylinder_mass` — so the measured difference is published instead, and any later step that needs the cells to be accurate must establish that separately. This replaces the earlier wording, which applied 10⁻⁸ to the cell comparison itself.
 
 ## Stage B: verify the field equations before any galaxy
 
@@ -73,4 +85,6 @@ A completion that reproduces the spherical law, converges, and predicts the disk
 
 ## Files
 
-`pm2a.py` runs the stages and writes `pm2a-results.json`; the field solvers extend RPG-1's machinery under this directory rather than modifying it in place, so RPG-1's own archive stays reproducible. `checks.py` gains the stage A and B verifications.
+`pm2a.py` runs the stages and writes `pm2a-results.json`; the field solvers extend RPG-1's machinery under this directory rather than modifying it in place, so RPG-1's own archive stays reproducible.
+
+The stage A verifications are registered as their own suite job rather than added to PM-1's `checks.py`, so a PM-2A change cannot make PM-1's job fail and the two archives stay independently reproducible. This is where the job lives, not what it tests: `pm2a.py` regenerates its archive, compares every number, and exits nonzero if any gate fails or any number moves. Stage B's verifications join it when they exist.
