@@ -45,6 +45,42 @@ The decisive diagnostic is
 
 reported against both the orbital period and the field-build time: does the model build useful inward attraction before its own drag substantially changes the orbit?
 
+### Corrections after the owner's review of 0c34b78
+
+Five, all conceded, none of which changes a computed force on main — the shipped `self_force` agrees with an independent integration-by-parts route to 10⁻¹⁴, and its measured C converges exactly to the closed form below. What changes is what the map is called and what may be concluded from it.
+
+**Correction 1: the published map is a *mature-field* calculation, not a build-from-zero one.** `stage2_prescribed_orbit` called `self_force` without `n_rev`, selecting S = 1/(1−e^{−T/τ}), the infinite-past finite-retention solution. Every row therefore describes a writer that has already been circling indefinitely. The rows are kept and relabelled, and the finite-age force is added, using the exact decomposition for t = nT + u:
+
+    a(t) = a(T)·(1 − e^{−nT/τ})/(1 − e^{−T/τ}) + e^{−nT/τ}·a(u),
+
+with a(T) and a(u) the fresh-history integrals over those intervals, applied separately to the radial and tangential components. Substituting a fractional revolution count into the geometric factor alone is **not** equivalent.
+
+**Correction 2: "the drag saturates after one revolution" is wrong.** At *integer* revolutions both components carry the same geometric factor, so the drag follows the same build law as the support. Within an orbit it does not: at w/R = 0.1, τ/T = 10 the drag relative to its mature value is 1.03956 at half an orbit, 0.09516 at one, 1.03580 at one and a half, 0.63212 at ten. The correct statement is that the mature drag approaches a **retention-independent limit** as τ grows — asymptotically, not exactly, and not after one revolution.
+
+**Correction 3: an exact drag identity replaces the cancellation-prone route.** With E(u) = exp[−R²(1−cos Ωu)/w²] and H(t) = ∫₀^t e^{−u/τ}E(u)du, integration by parts gives
+
+    drag(t) = (q/ΩR)·[1 − e^{−t/τ}E(t) − H(t)/τ],     drag(∞) = (q/ΩR)·[1 − H(∞)/τ] → (q/ΩR)·[1 − I₀e(α)],
+
+with α = R²/w², and the accumulated backward impulse J_drag(t) = (q/ΩR)·{t − ∫₀^t e^{−u/τ}E(u)[1 + (t−u)/τ]du}, whose product with R is the angular-momentum impulse the driver must supply. Both routes are computed and compared; H(∞) uses the same exact periodic decomposition, since truncating its revolution sum is what makes a naive check disagree.
+
+**Correction 4: `w/R > 4.4·f` is not a survival theorem and C is not a constant.** The Boolean tested was `L_time > τ`, a chosen timescale diagnostic that no freely moving orbit was subjected to; it is renamed `mature_drag_timescale_exceeds_one_retention_time`. An orbit may migrate substantially without being destroyed, and may lose an unacceptable fraction of its angular momentum while passing the inequality. And C varies with width in closed form,
+
+    C_long(b) = b³/(2π)·[1 − I₀e(α)]/[I₀e(α) − I₁e(α)],   b = w/R, α = 1/b²,   C → √(2/π) = 0.797885,  2πC → 5.013257,
+
+so the threshold is solved from the actual force integrals rather than from a representative C. At τ/T = 10 that gives critical w/R = **0.04907** at 1% mature support and **0.39343** at 10% — both timescale crossings, not measured survival thresholds. The accumulated cost is the sharper statement: holding a prescribed orbit to t = τ at 10% mature support requires driver angular momentum of 4.79, 2.27 and 0.98 times the body's own, at w/R = 0.1, 0.2 and 0.4, by which time the support has reached only 63.2% of mature.
+
+**Correction 5: PM-3 does not exclude a broad track, and the inference is withdrawn.** Width does not change the storage equation: Φ_steady = −τ·(steady writing source) is nonzero whether the source is narrow or broad. That a broad collective field might admit a static description raises a question about telling mechanisms apart observationally; it does not make the stored field vanish or bear on whether it forms. "Not a narrow rut" describes geometry, not grounds for discarding a response. (Separately: I₀(100) = 1.07×10⁴² does **not** overflow double precision. The scaled form is still the right implementation — I₀(1000) does overflow while I₀e(1000) is finite — but the stated rationale was wrong.)
+
+### Stage 2C: a collective control, declared
+
+Nothing in the model requires each body to take its support from its own private trail; the potential is a shared function of position, which stage 1 already verifies. With N evenly spaced writers on the same prescribed orbit at **fixed total** writing rate q_total (each writing q_total/N), the mature kernels become
+
+    radial_kernel(u) = mean_j[(1 − cos φ_j)·E_j],   tangential_kernel(u) = mean_j[sin φ_j·E_j],   φ_j = Ωu + 2πj/N,
+
+and the radial contributions largely add while the tangential ones increasingly cancel. Two controls must stay distinct and both are run: **dividing one writer into coincident copies** whose rates sum to the original must leave the field *exactly* unchanged — this is the numerical-subdivision loophole that killed PM-1's per-ring saturation, re-tested here — whereas **placing distinct writers at different physical positions** changes the source distribution, so the field may legitimately change. A single-writer bound therefore cannot be applied to a collective source without this test.
+
+Evenly spaced, held-on-orbit writers are a deliberately favourable symmetry, so the collective arrangement is **not** thereby shown to form, keep its spacing, tolerate phase disturbances, survive differential motion, or obey a completed matter–field energy law. Stage 3 compares one writer with several physically distinct writers at the same total writing rate, both from an empty field, and perturbs the phases rather than testing perfect symmetry alone.
+
 ## Stage 3: release the body and let it write its own trajectory
 
 Declared here and run only after stage 2's map exists. Start from Φ_mem = 0, evolve trajectory and field together, with no circular path imposed and no target speed supplied. Three outcomes are distinguished and **not conflated**:
