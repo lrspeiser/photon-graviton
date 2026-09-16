@@ -143,11 +143,30 @@ No completion passes all four gates, so the "physical optical predictions" miles
 - That the driven variant is anything but a two-parameter fit to exposed supernova data.
 - The RC-2a interface, which is specified above and deferred by the owner's own order.
 
+## Stage 2: a saturating mass removes the standing drain, and the brightness threshold with it
+
+Protocol: [protocol.md](protocol.md), "Stage 2", declared before execution after the owner's review of 392e538. Code: [plateau.py](plateau.py) with the mass-law hook in [modes.py](modes.py). Results: [plateau-results.json](plateau-results.json). Stage 1's archive is untouched and still reproduces bit for bit.
+
+The law is m_C²(n) = m0² + M²·tanh²[(n − n\*)/Δn] with g = M/Δn: stage 1's crossing to leading order, and a constant mass afterwards.
+
+- **The production event survives, if the plateau is far enough from the crossing.** Against the same exp[−π(k²+m0²)/(g|ṅ\*|)], the occupations agree to 0.22% at M/k\* = 20 and 0.16% at 100, but to only **3.07% at M/k\* = 5, which fails the declared 1%**. So the plateau must sit at least tens of production momenta from the mass minimum; at five it bends the event that makes the companions. The owner's independent four-mode test found 0.20% and 0.18% at M = 20k\*, which this reproduces.
+- **Saturation ends the back-reaction.** With the same coupling that traps stage 1's field at Δn = 124, the saturating field rolls past it to 568 and is still rolling at 0.96 of its initial speed. Beyond 5Δn the force is 4.6×10⁻⁴ of its peak, the occupations hold to 3.6×10⁻⁴, the speeds follow k_rms/m_C to 0.5%, and the energy delivered equals N(m_final − m0) to 0.24%. The four controls behave as in stage 1.
+- **The brightness threshold dissolves into a condition on the epoch.** The drain becomes a pulse, so the history coasts on both sides of a step in ṅ of √(1 + 1/R_E) − 1 (4.9% at R_E = 10). The Pantheon+ χ² is then 871.6 — indistinguishable from PF-1's coasting fit — for every crossing at z\* ≥ 3.2 and every stored energy tested, including R_E = 1. A crossing at z\* = 1 needs R_E = 30; crossings at z\* = 0.43 and 0.11 never qualify. **Stage 1's "the field must carry 145 times the companions' rest energy" was a property of indefinite growth, not of the bridge.**
+- **The energy is still the field's, and now it is a pulse.** At the reference point the companions take their rest energy in 1.78 hours, a power of 1.4×10⁻¹¹ W/m³ against the photons' 1.0×10⁻³¹: the ratio is worse instantaneously, and unchanged in total. Coldness is unaffected — 2.1×10⁻⁹ km/s, with the products moving 6.6×10¹¹ m (2×10⁻⁵ kpc) in the 9.8 Gyr since, now at constant speed rather than slowing.
+- **The abundance is no longer fixed to 2B-F1's rate**, per the owner's instruction: it is scanned over 0.1, 1 and 10 times it, and the mapping reports what any abundance implies.
+
+**An independent cross-check of the owner's mapping.** Their illustrative 1 GeV plateau, recomputed here from the same comparison abundance and the archived rate: k\* = 1.0133×10⁻⁵ eV against their 1.01×10⁻⁵, a final speed of 2.099×10⁻⁹ km/s against their 2.10×10⁻⁹, and a saturation time of 1.781 hours against their 1.8. Two independent implementations agree.
+
+**Two corrections, recorded in the protocol.** Correction 1: the driven variant's written definition inverted a sign; the code and every reported number use â = (Ng − λ)/(Kh²), drain minus drive. Correction 2: P2 as declared asked for energy conservation "in every trial", but P1's trials prescribe the field, and a driven field is not a closed system — the three P1 runs return 3×10⁻² to 3×10⁻¹, which is the work the driver did. P2 is now P2a (closed runs, ≤ 10⁻⁸, measured 3.2×10⁻¹¹) and P2b (prescribed runs, the companions' gain against an independent quadrature of the driver's work, ≤ 10⁻⁶, measured 4×10⁻¹³ to 3.7×10⁻⁹). Stage 1's V1 has the same non-closure, 0.36, and stage 1's V2 never included it.
+
+**What stage 2 does not change.** The atomic-reference bound p ≤ 6.6×10⁻⁷ depends on the coupling family, not the mass law, so it stands. Transport is RC-2b: canonical momentum, three-dimensional orbits, and the growing-mass and saturating-mass populations compared at one stated energy budget.
+
 ## Reproduce
 
 ```sh
-python research_work/results/shared-field-bridge/bridge.py    # about a minute on one core
-python research_work/results/shared-field-bridge/checks.py    # suite job: V1, V2, V3, the controls, the identity and the mapping
+python research_work/results/shared-field-bridge/bridge.py     # stage 1, about a minute on one core
+python research_work/results/shared-field-bridge/plateau.py    # stage 2, about twenty seconds
+python research_work/results/shared-field-bridge/checks.py     # suite job: both stages and their anchors
 ```
 
 The driver compares its output with the archived results and overwrites them only with `--canonical`. Wall-clock timings are excluded from the comparison.

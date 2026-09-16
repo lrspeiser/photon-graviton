@@ -711,5 +711,7 @@ The [BRIDGE-1B report](../../research_work/results/shared-field-bridge/report.md
 - **The history pays for the drain.** Producing companions decelerates the field and brightens distant sources, which is the wrong direction for the supernova residuals. The field must carry at least 145 times the companions' rest energy, about 10⁴ times the critical density, for the brightness fit to stay as good as the coasting law's.
 - **The measured shift.** With fixed rulers and a fixed fine-structure constant, the hyperfine-to-optical ratio drifts at twice the surviving shift times the field's rate, so clock comparisons allow at most p ≈ 7×10⁻⁷ of the coordinate shift to be measured. The atomic-reference problem is unchanged by joining the sectors.
 
+- **A saturating mass changes the cost, not the coldness (stage 2).** If the companions' mass stops growing once the field has moved past the production region, the drain on the field becomes a brief pulse instead of a standing load. The brightness then matches the coasting law for any production epoch beyond the supernovae (z ≳ 3), at any field energy down to the companions' own, so the earlier requirement that the field carry 145 times their rest energy belonged to indefinite growth. The products are equally cold, and the plateau must sit tens of production momenta from the mass minimum or it bends the production event itself.
+
 No rotation curve or lensing is fitted here; the transport test is RC-2a's. PDF v1.5 predates this supplement.
 

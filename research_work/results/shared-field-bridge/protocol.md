@@ -157,6 +157,16 @@ Declared before execution, 15 September 2026, after the owner's review of 392e53
 
 **What stage 2 does not do.** It does not repeat calculation 2: the atomic-reference identity depends on the coupling family, not on the companions' mass law, so the bound p ≤ 6.6×10⁻⁷ stands. It does not test transport; that is RC-2b, with canonical momentum (ẋ = p/m, ṗ = −m∇Φ), three-dimensional orbits in a spherical potential, no artificial central reflection, and the growing-mass and saturating-mass populations compared at the same source-energy budget. It does not test the owner's production-cohort idea, which waits on this single-episode result.
 
+## Correction 2, during stage 2's execution: P2 was ill-posed
+
+P2 as declared asked for |ΔE|/E ≤ 10⁻⁸ "in every trial", but P1's trials **prescribe** the field's motion. A prescribed field is not a closed system: the driver does work on the companions, so K ṅ²/2 + V + A/n + ρ_C is not conserved there, and the three P1 runs return 3.0×10⁻², 1.2×10⁻¹ and 3.3×10⁻¹ — the companion energy the driver paid for. Stage 1's V1 has the same structure and the same non-closure (0.36); stage 1's V2 never included it, which is why this went unseen.
+
+P2 is therefore corrected, not relaxed:
+- **P2a, closed runs.** Every trial that integrates the field's own equation — P3, P4, P6 and all five of P5's — must conserve E to 10⁻⁸. Measured: 1.7×10⁻¹² and 3.2×10⁻¹¹ at worst.
+- **P2b, prescribed runs.** For P1 the ledger is checked against the driver instead: the companions' energy gain must equal ∫(∂ρ_C/∂n)ṅ dt along the prescribed history, to 10⁻⁶.
+
+No tolerance was widened to accommodate a result; the quantity being tested was wrong for three of the trials.
+
 ## Correction 1, after the owner's review of 392e538
 
 The driven variant above inverts a sign in its definition. The code sets the net force from `extra = F_C − â·K·h²`, so the declared parameter is **â = (Ng − λ)/(Kh²)**: the drain minus the drive, positive when the companions' drain dominates and negative when the potential outruns it. Every number reported under that parameter was computed with this convention — at â = −0.3 the potential supplies λ/Ng = 5.58 — so the scan and its scores are unaffected. Only the written definition was wrong, and the report now states it as it is coded.

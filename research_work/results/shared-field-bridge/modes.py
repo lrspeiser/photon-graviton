@@ -41,8 +41,14 @@ class Field:
     """One homogeneous trial: field, radiation and companion modes."""
 
     def __init__(self, K=1., g=1., m0=0., n_star=0., A=0., kmax=4., J=120, dV=None, prescribed=None,
-                 track_tau=False):
+                 track_tau=False, M=None, delta_n=None):
         self.K, self.g, self.m0, self.n_star, self.A = K, g, m0, n_star, A
+        # Stage 2's saturating law, m_C^2 = m0^2 + M^2 tanh^2[(n-n*)/delta_n] with g = M/delta_n. When
+        # delta_n is None every expression below is stage 1's, unchanged to the last bit.
+        self.M, self.delta_n = M, delta_n
+        if delta_n is not None:
+            self.M = M if M is not None else g*delta_n
+            self.g = self.M/delta_n
         self.dV = dV or (lambda n: 0.)
         self.prescribed = prescribed          # (t) -> (n, ndot), for trials without back-reaction
         self.track_tau = track_tau            # carry the optical time int dt/n; only for histories with n > 0
@@ -50,7 +56,22 @@ class Field:
         self.J = len(self.k)
 
     def omega(self, n):
-        return np.sqrt(self.k**2 + self.m0**2 + self.g**2*(n - self.n_star)**2)
+        if self.delta_n is None:
+            return np.sqrt(self.k**2 + self.m0**2 + self.g**2*(n - self.n_star)**2)
+        return np.sqrt(self.k**2 + self._mass(n)**2)
+
+    def _mass(self, n):
+        """The companion mass at index n: quadratic in stage 1, saturating in stage 2."""
+        if self.delta_n is None:
+            return np.sqrt(self.m0**2 + self.g**2*(n - self.n_star)**2)
+        return np.sqrt(self.m0**2 + self.M**2*np.tanh((n - self.n_star)/self.delta_n)**2)
+
+    def dmass2(self, n):
+        """d m_C^2 / dn, which is what the back-reaction and the adiabatic coefficient need."""
+        if self.delta_n is None:
+            return 2*self.g**2*(n - self.n_star)
+        u = (n - self.n_star)/self.delta_n
+        return 2*self.M**2*np.tanh(u)/np.cosh(u)**2/self.delta_n
 
     def unpack(self, y):
         J = self.J
@@ -63,10 +84,14 @@ class Field:
             n, nd = self.prescribed(t)
         x = n - self.n_star
         om = self.omega(n)
-        c = self.g**2*x*nd/(2*om**2)          # omega'/(2 omega)
+        if self.delta_n is None:
+            c = self.g**2*x*nd/(2*om**2)          # omega'/(2 omega)
+        else:
+            c = self.dmass2(n)*nd/(4*om**2)
         e = np.exp(2j*th)
         S = float(np.sum(self.w*(np.abs(b)**2 + np.real(a*np.conj(b)*np.conj(e)))/om))
-        ndd = 0. if self.prescribed is not None else (self.A/n**2 - self.dV(n) - self.g**2*x*S)/self.K
+        force = self.g**2*x*S if self.delta_n is None else self.dmass2(n)*S/2
+        ndd = 0. if self.prescribed is not None else (self.A/n**2 - self.dV(n) - force)/self.K
         ad, bd = c*e*b, c*np.conj(e)*a
         tail = [[1/n]] if self.track_tau else []          # the last state, where carried, is the optical time
         return np.concatenate([[nd, ndd], om, ad.real, ad.imag, bd.real, bd.imag] + tail)
@@ -80,13 +105,14 @@ class Field:
         nk = np.abs(b)**2
         rho = float(np.sum(self.w*om*nk))
         num = float(np.sum(self.w*nk))
-        adiab = float(np.max(np.abs(self.g**2*(n - self.n_star)*nd/om**3))) if self.g else 0.
+        half_dm2 = self.g**2*(n - self.n_star) if self.delta_n is None else self.dmass2(n)/2
+        adiab = float(np.max(np.abs(half_dm2*nd/om**3))) if self.g else 0.
         return dict(t=float(t), n=float(n), ndot=float(nd), rho_C=rho, number=num,
                     kinetic=float(self.K*nd**2/2), radiation=float(self.A/n) if self.A else 0.,
                     potential=float(V(n)) if V else 0.,
                     energy=float(self.K*nd**2/2 + (V(n) if V else 0.) + (self.A/n if self.A else 0.) + rho),
                     v_rms=float(np.sqrt(np.sum(self.w*nk*self.k**2/om**2)/num)) if num > 0 else 0.,
-                    mass=float(np.sqrt(self.m0**2 + self.g**2*(n - self.n_star)**2)),
+                    mass=float(self._mass(n)),
                     max_nonadiabaticity=adiab, nk=nk)
 
     def y0(self, n0, v0):
@@ -110,7 +136,8 @@ class Field:
             n, nd = y
             om = self.omega(n)
             S = float(np.sum(self.w*nk/om))
-            return [nd, (self.A/n**2 - self.dV(n) - self.g**2*(n - self.n_star)*S)/self.K]
+            force = self.g**2*(n - self.n_star)*S if self.delta_n is None else self.dmass2(n)*S/2
+            return [nd, (self.A/n**2 - self.dV(n) - force)/self.K]
         sol = solve_ivp(f, (t0, T), [n0, v0], method='DOP853', rtol=rtol, atol=atol,
                         t_eval=np.linspace(t0, T, n_out), events=events, dense_output=True)
         def st(t, y):
@@ -123,7 +150,7 @@ class Field:
                         potential=float(V(n)) if V else 0.,
                         energy=float(self.K*nd**2/2 + (V(n) if V else 0.) + (self.A/n if self.A else 0.) + rho),
                         v_rms=float(np.sqrt(np.sum(self.w*nk*self.k**2/om**2)/num)) if num > 0 else 0.,
-                        mass=float(np.sqrt(self.m0**2 + self.g**2*(n - self.n_star)**2)))
+                        mass=float(self._mass(n)))
         states = [st(sol.t[i], sol.y[:, i]) for i in range(sol.y.shape[1])]
         return dict(sol=sol, states=states,
                     energy_error=float(max(abs(s['energy'] - states[0]['energy']) for s in states)/abs(states[0]['energy'] or 1.)),
