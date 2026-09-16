@@ -702,3 +702,14 @@ The [RC-2a report](../../research_work/results/donor-companion/report.md) remove
 - **At 2B-F1's rate, the Milky Way fits only in the 300 kpc region.** Beyond it, infall from out to 570 kpc makes the inner rotation overshoot by about 170 km/s. The apertures converge to 8×10¹² M☉ inside 200 kpc.
 - **In every production history, the inner profile crosses the observed one transiently.** It is not a persistent reservoir.
 - **The controls.** A quiet representation's null passes. Random sampling at 2B-F1's resolution seeds central structure without baryons.
+
+## One interaction for the photon's loss and the companions' mass (BRIDGE-1B)
+
+The [BRIDGE-1B report](../../research_work/results/shared-field-bridge/report.md) makes the propagation field that reddens light produce the companions as well, and lets them react back on it, in a homogeneous semiclassical calculation with a single accounting of the photon's loss.
+- **The source follows from the dynamics.** Companions are made in one non-adiabatic crossing of their mass minimum; their momenta are then fixed and their mass grows with the field, so the production rate is tied to the redshift rate and the birth speed is not chosen. The products are extremely cold.
+- **Their energy is not today's light.** Radiation supplies about a millionth of their rest energy over the period in which they are made. It supplies all of it only if the history begins at rest at a turnaround of 10⁷–10⁹ K, whose cooled relic would be the microwave background.
+- **The history pays for the drain.** Producing companions decelerates the field and brightens distant sources, which is the wrong direction for the supernova residuals. The field must carry at least 145 times the companions' rest energy, about 10⁴ times the critical density, for the brightness fit to stay as good as the coasting law's.
+- **The measured shift.** With fixed rulers and a fixed fine-structure constant, the hyperfine-to-optical ratio drifts at twice the surviving shift times the field's rate, so clock comparisons allow at most p ≈ 7×10⁻⁷ of the coordinate shift to be measured. The atomic-reference problem is unchanged by joining the sectors.
+
+No rotation curve or lensing is fitted here; the transport test is RC-2a's. PDF v1.5 predates this supplement.
+
