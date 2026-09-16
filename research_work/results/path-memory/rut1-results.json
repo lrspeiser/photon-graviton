@@ -1,0 +1,730 @@
+{
+ "experiment": "RUT-1: can a moving body write an attractive track, and survive writing it?",
+ "protocol": "protocol-rut1.md",
+ "model": {
+  "kernel": "Phi_mem(x,t) = -q int_0^t exp[-(t-s)/tau] exp[-|x - X(s)|^2/(2 w^2)] ds",
+  "differential": "dPhi/dt = -Phi/tau - q exp[-|x - X(t)|^2/(2 w^2)]",
+  "why_not_covered_by_pm3": "a steady writing pattern leaves Phi = -tau (pattern), not zero, unlike a correction proportional to (p - Q) which vanishes when Q = p",
+  "scope": "a low-speed effective model, not derived from general relativity. The writing coefficient's dependence on source mass and the field's energy accounting are not specified, so stages 0-2 are kinematic feasibility tests. The instantaneous-Gaussian kernel is used throughout; a causal version in which a disturbance written at X(s) cannot reach x before |x - X(s)|/c is a separate obligation, since propagation speed and retention time are distinct properties"
+ },
+ "stage_0_normalization": {
+  "rows": [
+   {
+    "source_orbit_radius": 1.0,
+    "on_orbit_inward_acceleration": 0.020022627392896064,
+    "acceleration_times_R": 0.020022627392896064,
+    "acceleration_times_R_squared": 0.020022627392896064,
+    "depth_D": 0.03994437929909668,
+    "depth_approx_A_w_over_sqrt_2pi_R": 0.039894228040143274,
+    "D_over_2R": 0.01997218964954834
+   },
+   {
+    "source_orbit_radius": 2.0,
+    "on_orbit_inward_acceleration": 0.004991464607959073,
+    "acceleration_times_R": 0.009982929215918146,
+    "acceleration_times_R_squared": 0.019965858431836292,
+    "depth_D": 0.019953356281939987,
+    "depth_approx_A_w_over_sqrt_2pi_R": 0.019947114020071637,
+    "D_over_2R": 0.004988339070484997
+   },
+   {
+    "source_orbit_radius": 4.0,
+    "on_orbit_inward_acceleration": 0.0012469869919637389,
+    "acceleration_times_R": 0.004987947967854955,
+    "acceleration_times_R_squared": 0.01995179187141982,
+    "depth_D": 0.009974336468287662,
+    "depth_approx_A_w_over_sqrt_2pi_R": 0.009973557010035819,
+    "D_over_2R": 0.0012467920585359578
+   },
+   {
+    "source_orbit_radius": 8.0,
+    "on_orbit_inward_acceleration": 0.00031169192140495516,
+    "acceleration_times_R": 0.0024935353712396413,
+    "acceleration_times_R_squared": 0.01994828296991713,
+    "depth_D": 0.0049868759115973505,
+    "depth_approx_A_w_over_sqrt_2pi_R": 0.004986778505017909,
+    "D_over_2R": 0.0003116797444748344
+   }
+  ],
+  "w": 0.1,
+  "A": 1.0,
+  "asymptotic_a_R_squared": 0.019947114020071637,
+  "spread_of_a_R_squared": 0.003722406430111568,
+  "spread_of_a_R": 1.8704162340920463,
+  "approaches_inverse_square": true,
+  "largest_R_relative_to_asymptote": 5.860245468669589e-05,
+  "passed": true,
+  "statement": "extra inward acceleration ~ q tau w/(2 sqrt(2 pi) R^2): at fixed writing rate, retention and physical width this family is inverse-SQUARE, so \"can create a supporting track\" and \"can explain flat rotation curves\" are separate claims. Holding D fixed independently at every radius and presenting the resulting 1/R force as a prediction is not permitted; a different width scaling, collective writing process or footprint shape would be a declared mechanism to test"
+ },
+ "stage_1_kernel": {
+  "closed_form": {
+   "rows": [
+    {
+     "r": 1.0,
+     "R": 1.0,
+     "w": 0.1,
+     "angular_integral": -0.039944379299096666,
+     "closed_form": -0.03994437929909668,
+     "relative_difference": 4.440892098500626e-16
+    },
+    {
+     "r": 1.3,
+     "R": 1.0,
+     "w": 0.1,
+     "angular_integral": -0.000389074198164595,
+     "closed_form": -0.00038907419816459996,
+     "relative_difference": 1.2656542480726785e-14
+    },
+    {
+     "r": 0.7,
+     "R": 1.0,
+     "w": 0.1,
+     "angular_integral": -0.0005306608238221512,
+     "closed_form": -0.0005306608238221526,
+     "relative_difference": 2.6645352591003757e-15
+    },
+    {
+     "r": 2.0,
+     "R": 1.0,
+     "w": 0.3,
+     "angular_integral": -0.0003290560266524817,
+     "closed_form": -0.00032905602665248186,
+     "relative_difference": 4.440892098500626e-16
+    },
+    {
+     "r": 0.5,
+     "R": 2.0,
+     "w": 0.25,
+     "angular_integral": -1.5312850231616726e-09,
+     "closed_form": -1.5312850231616751e-09,
+     "relative_difference": 1.5543122344752192e-15
+    }
+   ],
+   "worst_relative_difference": 1.2656542480726785e-14,
+   "tolerance": 1e-12,
+   "passed": true,
+   "note": "the scaled Bessel form is required: I0(r R/w^2) overflows at the illustrative w/R"
+  },
+  "mature_ring_control": {
+   "R": 1.0,
+   "w": 0.1,
+   "D": 0.2,
+   "A": 5.0069622687696365,
+   "extra_inward_acceleration": 0.10025253989465188,
+   "percent_of_newtonian": 10.025253989465188,
+   "supported_speed": 1.0489292349318193,
+   "newtonian_speed": 1.0,
+   "percent_speed_increase": 4.892923493181933,
+   "kappa_squared": 21.14999748348278,
+   "kappa_squared_without_track": 1.0,
+   "kappa_squared_approx_GM_R3_plus_D_w2": 20.999999999999996,
+   "D_over_2R": 0.1,
+   "declared": {
+    "percent_of_newtonian": 10.03,
+    "percent_speed_increase": 4.89,
+    "kappa_squared": 21.15
+   },
+   "passed": true,
+   "note": "a mature FIXED field, held still on purpose: this is motion in an already-built track and is not evidence that a freely evolving body could build it"
+  },
+  "probe_scan": {
+   "probe_radii": [
+    0.5,
+    0.8,
+    0.95,
+    1.0,
+    1.05,
+    1.2,
+    2.0
+   ],
+   "potential_source_fixed": [
+    -1.0553953725771467e-06,
+    -0.03027145597229395,
+    -0.1810965816976175,
+    -0.2,
+    -0.17223540426448936,
+    -0.024703534168135685,
+    -2.725947000084409e-23
+   ],
+   "potential_source_moved_to_probe": [
+    -0.4015422192290784,
+    -0.2501781440047928,
+    -0.2105550522564884,
+    -0.2,
+    -0.1904538416692201,
+    -0.16660247495472688,
+    -0.09990570203899111
+   ],
+   "worst_relative_gap": 1.0,
+   "source_moves_with_probe": false,
+   "off_plane": {
+    "z": [
+     0.0,
+     0.05,
+     0.1,
+     0.2,
+     0.5
+    ],
+    "potential": [
+     -0.2,
+     -0.1764993805169191,
+     -0.1213061319425267,
+     -0.027067056647322542,
+     -7.453306344157356e-07
+    ],
+    "vertical_acceleration": [
+     -0.8824969025406082,
+     -1.2130613193869766,
+     -0.5413411329566881,
+     -3.726653173369515e-05
+    ],
+    "restoring": true,
+    "note": "negative vertical acceleration is directed back toward the plane"
+   },
+   "trough_minimum": 0.9949619262191703,
+   "displaced_inward_of_source_path": 0.005038073780829655,
+   "passed": true,
+   "statement": "the trough bottom lies INSIDE the source path, which is why a body on its own track feels an inward force; a symmetric trough centred on R would give exactly zero there"
+  },
+  "second_test_body": {
+   "probe_radii": [
+    0.9,
+    0.97,
+    1.03,
+    1.1
+   ],
+   "inward_acceleration": [
+    -1.207611140419118,
+    -0.48209033866319917,
+    0.6568370168463789,
+    1.2091635457692207
+   ],
+   "writer_is_not_special": true,
+   "passed": true,
+   "note": "the field is a function of position alone, so a test body that never wrote anything responds to the same track; nothing in the implementation keys on the writer. Inside the trough bottom the force is outward and outside it inward, as a trough requires"
+  },
+  "passed": true
+ },
+ "stage_2_prescribed_orbit": {
+  "rows": [
+   {
+    "width_ratio": 0.05,
+    "memory_revolutions": 1.0,
+    "inward_acceleration_at_q1": 0.06747443797394301,
+    "tangential_acceleration_at_q1": -0.9784736287968256,
+    "drag_over_support": 14.501397242829773,
+    "ratio_times_Nbuild_times_width": 0.7250698621414887,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 0.10975145389565105,
+      "L_time_over_build_time": 0.10975145389565105,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 1.0975145389565109,
+      "L_time_over_build_time": 1.0975145389565109,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9784736287968256
+   },
+   {
+    "width_ratio": 0.05,
+    "memory_revolutions": 3.0,
+    "inward_acceleration_at_q1": 0.18978207056385818,
+    "tangential_acceleration_at_q1": -0.9798692028018546,
+    "drag_over_support": 5.163128423515364,
+    "ratio_times_Nbuild_times_width": 0.7744692635273046,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 0.30825292349310424,
+      "L_time_over_build_time": 0.10275097449770142,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 3.0825292349310423,
+      "L_time_over_build_time": 1.027509744977014,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9798692028018546
+   },
+   {
+    "width_ratio": 0.05,
+    "memory_revolutions": 10.0,
+    "inward_acceleration_at_q1": 0.627729301530483,
+    "tangential_acceleration_at_q1": -0.9800306461470929,
+    "drag_over_support": 1.5612313201847594,
+    "ratio_times_Nbuild_times_width": 0.7806156600923798,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 1.0194193585167162,
+      "L_time_over_build_time": 0.10194193585167162,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 10.194193585167161,
+      "L_time_over_build_time": 1.0194193585167162,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9800306461470929
+   },
+   {
+    "width_ratio": 0.05,
+    "memory_revolutions": 30.0,
+    "inward_acceleration_at_q1": 1.8818989705377913,
+    "tangential_acceleration_at_q1": -0.9800448659369851,
+    "drag_over_support": 0.5207744311890011,
+    "ratio_times_Nbuild_times_width": 0.7811616467835018,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 3.0561205305053525,
+      "L_time_over_build_time": 0.10187068435017842,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 30.561205305053527,
+      "L_time_over_build_time": 1.0187068435017843,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9800448659369851
+   },
+   {
+    "width_ratio": 0.05,
+    "memory_revolutions": 100.0,
+    "inward_acceleration_at_q1": 6.272507760930348,
+    "tangential_acceleration_at_q1": -0.9800464837147289,
+    "drag_over_support": 0.1562447622335611,
+    "ratio_times_Nbuild_times_width": 0.7812238111678056,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 10.18625781861308,
+      "L_time_over_build_time": 0.1018625781861308,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 101.86257818613079,
+      "L_time_over_build_time": 1.0186257818613078,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9800464837147289
+   },
+   {
+    "width_ratio": 0.1,
+    "memory_revolutions": 1.0,
+    "inward_acceleration_at_q1": 0.13456854217760955,
+    "tangential_acceleration_at_q1": -0.9570297860214759,
+    "drag_over_support": 7.111838848327163,
+    "ratio_times_Nbuild_times_width": 0.7111838848327163,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 0.22378873662095358,
+      "L_time_over_build_time": 0.22378873662095358,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 2.2378873662095358,
+      "L_time_over_build_time": 2.2378873662095358,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9570297860214759
+   },
+   {
+    "width_ratio": 0.1,
+    "memory_revolutions": 3.0,
+    "inward_acceleration_at_q1": 0.3803878713251375,
+    "tangential_acceleration_at_q1": -0.9597141178839504,
+    "drag_over_support": 2.522988218684902,
+    "ratio_times_Nbuild_times_width": 0.7568964656054706,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 0.6308192084022265,
+      "L_time_over_build_time": 0.2102730694674088,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 6.308192084022265,
+      "L_time_over_build_time": 2.1027306946740882,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9597141178839504
+   },
+   {
+    "width_ratio": 0.1,
+    "memory_revolutions": 10.0,
+    "inward_acceleration_at_q1": 1.2589515775294748,
+    "tangential_acceleration_at_q1": -0.9600248299199999,
+    "drag_over_support": 0.762558979276964,
+    "ratio_times_Nbuild_times_width": 0.762558979276964,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 2.0871165039955515,
+      "L_time_over_build_time": 0.20871165039955514,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 20.871165039955514,
+      "L_time_over_build_time": 2.0871165039955515,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9600248299199999
+   },
+   {
+    "width_ratio": 0.1,
+    "memory_revolutions": 30.0,
+    "inward_acceleration_at_q1": 3.7744739970185766,
+    "tangential_acceleration_at_q1": -0.9600521989592075,
+    "drag_over_support": 0.254353904601686,
+    "ratio_times_Nbuild_times_width": 0.763061713805058,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 6.2572242931017445,
+      "L_time_over_build_time": 0.2085741431033915,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 62.57224293101745,
+      "L_time_over_build_time": 2.085741431033915,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9600521989592075
+   },
+   {
+    "width_ratio": 0.1,
+    "memory_revolutions": 100.0,
+    "inward_acceleration_at_q1": 12.580677123378894,
+    "tangential_acceleration_at_q1": -0.9600553127385478,
+    "drag_over_support": 0.07631189508507934,
+    "ratio_times_Nbuild_times_width": 0.7631189508507934,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 20.85584991886981,
+      "L_time_over_build_time": 0.2085584991886981,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 208.5584991886981,
+      "L_time_over_build_time": 2.085584991886981,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9600553127385478
+   },
+   {
+    "width_ratio": 0.2,
+    "memory_revolutions": 1.0,
+    "inward_acceleration_at_q1": 0.26932312543621084,
+    "tangential_acceleration_at_q1": -0.9142116029883496,
+    "drag_over_support": 3.3944786639009967,
+    "ratio_times_Nbuild_times_width": 0.6788957327801994,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 0.4688641728240871,
+      "L_time_over_build_time": 0.4688641728240871,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 4.688641728240872,
+      "L_time_over_build_time": 4.688641728240872,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9142116029883496
+   },
+   {
+    "width_ratio": 0.2,
+    "memory_revolutions": 3.0,
+    "inward_acceleration_at_q1": 0.7687286574495314,
+    "tangential_acceleration_at_q1": -0.9191715190281339,
+    "drag_over_support": 1.1957034645719309,
+    "ratio_times_Nbuild_times_width": 0.7174220787431586,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 1.331056970290487,
+      "L_time_over_build_time": 0.44368565676349575,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 13.310569702904873,
+      "L_time_over_build_time": 4.436856567634957,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9191715190281339
+   },
+   {
+    "width_ratio": 0.2,
+    "memory_revolutions": 10.0,
+    "inward_acceleration_at_q1": 2.547233563261536,
+    "tangential_acceleration_at_q1": -0.9197462636245335,
+    "drag_over_support": 0.3610765329453611,
+    "ratio_times_Nbuild_times_width": 0.7221530658907223,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 4.407789722407106,
+      "L_time_over_build_time": 0.4407789722407106,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 44.077897224071066,
+      "L_time_over_build_time": 4.407789722407106,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9197462636245335
+   },
+   {
+    "width_ratio": 0.2,
+    "memory_revolutions": 30.0,
+    "inward_acceleration_at_q1": 7.637683639573971,
+    "tangential_acceleration_at_q1": -0.9197968961803525,
+    "drag_over_support": 0.12042877652257128,
+    "ratio_times_Nbuild_times_width": 0.7225726591354277,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 13.21569044272951,
+      "L_time_over_build_time": 0.4405230147576503,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 132.15690442729513,
+      "L_time_over_build_time": 4.405230147576504,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9197968961803525
+   },
+   {
+    "width_ratio": 0.2,
+    "memory_revolutions": 100.0,
+    "inward_acceleration_at_q1": 25.457422008651342,
+    "tangential_acceleration_at_q1": -0.9198026567171116,
+    "drag_over_support": 0.0361310212952643,
+    "ratio_times_Nbuild_times_width": 0.7226204259052861,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 44.04938952355488,
+      "L_time_over_build_time": 0.44049389523554877,
+      "orbit_survives_the_build": false
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 440.49389523554885,
+      "L_time_over_build_time": 4.404938952355488,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.9198026567171116
+   },
+   {
+    "width_ratio": 0.4,
+    "memory_revolutions": 1.0,
+    "inward_acceleration_at_q1": 0.556689979017046,
+    "tangential_acceleration_at_q1": -0.827423219892673,
+    "drag_over_support": 1.4863267726745573,
+    "ratio_times_Nbuild_times_width": 0.594530709069823,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 1.070793758262898,
+      "L_time_over_build_time": 1.070793758262898,
+      "orbit_survives_the_build": true
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 10.707937582628983,
+      "L_time_over_build_time": 10.707937582628983,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.827423219892673
+   },
+   {
+    "width_ratio": 0.4,
+    "memory_revolutions": 3.0,
+    "inward_acceleration_at_q1": 1.6192983188702368,
+    "tangential_acceleration_at_q1": -0.8358075080871098,
+    "drag_over_support": 0.5161541257390063,
+    "ratio_times_Nbuild_times_width": 0.6193849508868077,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 3.0834771080057615,
+      "L_time_over_build_time": 1.027825702668587,
+      "orbit_survives_the_build": true
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 30.834771080057614,
+      "L_time_over_build_time": 10.278257026685871,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.8358075080871098
+   },
+   {
+    "width_ratio": 0.4,
+    "memory_revolutions": 10.0,
+    "inward_acceleration_at_q1": 5.377904012784321,
+    "tangential_acceleration_at_q1": -0.8367809500740493,
+    "drag_over_support": 0.15559611106573465,
+    "ratio_times_Nbuild_times_width": 0.6223844442629387,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 10.228722427686973,
+      "L_time_over_build_time": 1.0228722427686974,
+      "orbit_survives_the_build": true
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 102.28722427686974,
+      "L_time_over_build_time": 10.228722427686973,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.8367809500740493
+   },
+   {
+    "width_ratio": 0.4,
+    "memory_revolutions": 30.0,
+    "inward_acceleration_at_q1": 16.1284861826875,
+    "tangential_acceleration_at_q1": -0.8368667247797263,
+    "drag_over_support": 0.05188749367426861,
+    "ratio_times_Nbuild_times_width": 0.6226499240912234,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 30.673083593324804,
+      "L_time_over_build_time": 1.0224361197774936,
+      "orbit_survives_the_build": true
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 306.7308359332481,
+      "L_time_over_build_time": 10.224361197774936,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.8368667247797263
+   },
+   {
+    "width_ratio": 0.4,
+    "memory_revolutions": 100.0,
+    "inward_acceleration_at_q1": 53.75963861836159,
+    "tangential_acceleration_at_q1": -0.8368764836787297,
+    "drag_over_support": 0.015567003521353559,
+    "ratio_times_Nbuild_times_width": 0.6226801408541425,
+    "build_law_at_one_memory_time": 0.6321205588285577,
+    "at_support_fraction": {
+     "support_0.1": {
+      "angular_momentum_change_time_in_periods": 102.23865040794745,
+      "L_time_over_build_time": 1.0223865040794744,
+      "orbit_survives_the_build": true
+     },
+     "support_0.01": {
+      "angular_momentum_change_time_in_periods": 1022.3865040794744,
+      "L_time_over_build_time": 10.223865040794744,
+      "orbit_survives_the_build": true
+     }
+    },
+    "driver_power_per_unit_mass_at_q1": 0.8368764836787297
+   }
+  ],
+  "orbital_period": 6.283185307179586,
+  "orbital_speed": 1.0,
+  "support_fractions": [
+   0.1,
+   0.01
+  ],
+  "uniform_ring_control": {
+   "tangential_acceleration": 0.0,
+   "why": "the averaged ring is exactly symmetric in phi, so its tangential force vanishes identically -- and int_0^{2 pi} sin(phi) E(phi) dphi = 0 exactly, since that integrand is a total derivative. Using the averaged ring to argue the writing process is drag-free would be circular: the averaging is what removed the drag"
+  },
+  "drag_always_present": true,
+  "drag_over_support_range": [
+   0.015567003521353559,
+   14.501397242829773
+  ],
+  "scaling": {
+   "product_drag_ratio_Nbuild_width": [
+    0.7250698621414887,
+    0.7744692635273046,
+    0.7806156600923798,
+    0.7811616467835018,
+    0.7812238111678056,
+    0.7111838848327163,
+    0.7568964656054706,
+    0.762558979276964,
+    0.763061713805058,
+    0.7631189508507934,
+    0.6788957327801994,
+    0.7174220787431586,
+    0.7221530658907223,
+    0.7225726591354277,
+    0.7226204259052861,
+    0.594530709069823,
+    0.6193849508868077,
+    0.6223844442629387,
+    0.6226499240912234,
+    0.6226801408541425
+   ],
+   "spread": 0.26212373744224776,
+   "law": "drag/support = C/(N_build * w/R) with C about 0.62 to 0.78, so the ratio falls like the memory time and like the track width, and is independent of the writing rate and of how long the field has been building"
+  },
+  "survival_threshold": {
+   "derivation": "L_time/build = v (w/R)/(f (GM/R^2) C T) with drag/support = C/(N_build w/R), so the N_build cancels: survival depends on the track width and on how much support is being bought, and not on the memory time or the writing rate",
+   "C_range": [
+    0.594530709069823,
+    0.7812238111678056
+   ],
+   "critical_width_over_radius": {
+    "support_0.1": 0.45402079789826755,
+    "support_0.01": 0.04540207978982675
+   },
+   "statement": "the orbit outlives the build only if w/R > 2 pi C f, about 4.4 f. Buying 10% extra inward support therefore needs a \"track\" about 44% of the orbital radius, which is an annulus comparable to the orbit and no longer a rut -- and at that width it is hard to distinguish from a smooth axisymmetric mass, which puts it back inside PM-3's steady-state theorem. Buying 1% needs only 4%, which is a genuine track"
+  },
+  "survival_at_main_fraction": {
+   "support_fraction": 0.1,
+   "rows_surviving": 5,
+   "rows_total": 20,
+   "best": 1.070793758262898
+  },
+  "passed": true,
+  "reading": "a map, not a verdict. Support and drag both scale with the writing rate, so the physical question is what the orbit pays for a given amount of help: at a declared support fraction f, does the angular-momentum-change time exceed the time the track needs to build? The drag is set by the most recent passage and saturates immediately, while the support accumulates over the memory time, which is why long memory and wide tracks are the surviving direction"
+ },
+ "stage_3": "declared in the protocol and not run: release the body from an empty field and evolve trajectory and field together, distinguishing support, stability and settling as three different achievements, with an already-built-track control beside the empty-field formation",
+ "vector_extension": "retained as a proposal behind a narrower dependency. v.[v x curl A] = 0 so its sideways term does no direct work, but the force law also carries -dA/dt, which cannot be dropped while the field grows, and its source law, sign and evolution are unspecified. Not implemented here, so it stays an independent physical proposal rather than an adjustable repair",
+ "passed": true,
+ "input_sha256": {
+  "protocol-rut1.md": "381c79fdf4fd142feac1b26917e0a72ce30b4419b58989621964b576d4eb776f"
+ },
+ "checks_short_run": {
+  "kernel_worst": 1.2656542480726785e-14,
+  "mature_percent": 10.025253989465188,
+  "mature_kappa2": 21.14999748348278,
+  "normalization_aR2_spread": 0.003722406430111568,
+  "normalization_aR_spread": 1.8704162340920463,
+  "drag_over_support_min": 0.015567003521353559,
+  "drag_scaling_spread": 0.26212373744224776,
+  "best_L_time_over_build": 1.070793758262898
+ },
+ "runtime_seconds": 0.2
+}
