@@ -85,6 +85,19 @@ Declared before the corrected run. The first run's fits are unchanged by correct
 
 **Correction 6, candidate C's instability is analytic, and it does not transfer.** Routh–Hurwitz on Tλ³ + (1+q₀)λ² + Tλ + (1+3q₀) requires (1+q₀)T > T(1+3q₀), that is q₀ < 0. So every q₀ > 0 with finite T > 0 has a growing mode — stronger than the grid, which only sampled. The growth rate vanishes in both limits (≈ q₀T/(1+q₀)² as T → 0, ≈ q₀/T as T → ∞), so the e-folding time depends on the actual memory time and "unstable" does not mean "disrupts in one orbit at every memory time". And C's failure says nothing about B-root: in B-root's frozen potential Φ = −GM/r + K ln(r/r₀) with K = β√M, circular orbits are radially stable, κ² = GM/r³ + 2K/r² > 0. Whether they survive when matter and field evolve together is PM-2's question, not PM-1's.
 
+## Correction 7, after the owner's review of the landed run: the mass is force-equivalent
+
+The code builds `M_force = R·v_bar²/G = R²·g_N/G`, the mass a spherical Newtonian source would need to produce the baryon model's radial force. That is an enclosed mass only in spherical symmetry, and the SPARC inputs are disks. Substituting it into the fitted rule gives, identically,
+
+    g = g_N + β√(M_force)/R = g_N + √(a\*·g_N),   a\* = β²/G,
+
+verified here to 4×10⁻¹⁶ across all 149 galaxies. **So PM-1 fitted a local acceleration law — a pointwise function of the local Newtonian field — not a force sourced by the matter inside r.** The broadband ring construction motivates the latter; the code implements the former; they coincide only in spherical symmetry. No observed speed leaked into the predictor: `v_bar` is the ordinary-matter model's own prediction. The scores stand as scores of a one-parameter empirical acceleration law, and the archived run is preserved under that label.
+
+Three consequences are carried forward rather than patched over:
+- **The mass–speed regression is against force-equivalent mass.** It uses `M_force` at the outermost radius, so the reported slopes relate observed speed to that quantity, not to an independently integrated stellar-plus-gas mass. The advertised baryonic mass–speed test has not yet been done.
+- **The collective control's total is not a total source mass.** `M_force` at the last sampled radius depends on where the rotation curve stops. A physical total cannot be defined by where someone stopped observing, and the invariance test is explicit in PM-2A: removing outer observation rows must not change the predicted force at the remaining inner radii.
+- **The √8 demonstration is a mathematical warning, not a physical annulus test.** It differences `M_force` and clips negative increments. A source test must take annular masses from a stated nonnegative density with mass conservation checked.
+
 ## Files and reproduction
 
 `pm1.py` runs every candidate and writes `pm1-results.json`; `checks.py` is a suite job that reruns the cheap parts and the regression anchor. About a minute on one core.

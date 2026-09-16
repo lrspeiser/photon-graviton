@@ -709,6 +709,7 @@ The [PM-1 report](../../research_work/results/path-memory/report.md) scores six 
 - **Delay alone changes nothing.** A memory of density returns the same field, rescaled; a rotating axisymmetric source is indistinguishable from a static one.
 - **A broad wave spectrum reaches the observed phenomenology.** Equal potential weight per logarithmic wavenumber gives a force set by the matter inside the orbit; with the amplitude growing as the square root of that mass it comes within about a tenth of simple MOND's fit quality on one constant. Its acceleration scale is that constant re-expressed, not an independent prediction.
 - **The motivating mechanism does not produce the fitted law.** Independently saturating rings give a field that grows with how finely the same matter is divided; a single collective nonlinear field gives the fitted form exactly.
+- **And the mass used is force-equivalent,** reconstructed from the ordinary-matter force rather than integrated from its density, so what the fit establishes is a local acceleration law. Separating the two, and solving the shared field on an independently specified source, is the next experiment.
 - **The mass–speed relation decides between the sourcing rules,** and the linear one fails it.
 - **A receiver that adapts with a delay is unstable** wherever the adaptation would be needed.
 

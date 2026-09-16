@@ -52,8 +52,10 @@ def sparc():
         R = R[keep]
         v_gas, v_disk, v_bul = rows[keep, 3], rows[keep, 4], rows[keep, 5]
         v_bar2 = np.maximum(np.sign(v_gas)*v_gas**2 + I.UPSILON_DISK*v_disk**2 + I.UPSILON_BULGE*v_bul**2, 0.)
+        # M_force = R v_bar^2/G = R^2 g_N/G is the mass a spherical Newtonian source would need to make the
+        # baryon model's radial force. It equals an enclosed mass only in spherical symmetry (correction 7).
         out.append(dict(name=gal['name'], split=gal['split'], R=R, v_obs=rows[keep, 1], e_v=rows[keep, 2],
-                        v_bar=np.sqrt(v_bar2), M_b=R*v_bar2/G, L36=cat['L9']*1e9, rd=cat['rd'],
+                        v_bar=np.sqrt(v_bar2), M_force=R*v_bar2/G, L36=cat['L9']*1e9, rd=cat['rd'],
                         frozen_radii=len(gal['r'])))
     return out
 
@@ -62,7 +64,7 @@ def milky_way():
     pick = lambda b: next(x for x in I.milky_way_runs()
                           if x['baryons'] == b and abs(x['rd'] - 2.6) < 1e-9 and abs(x['lf'] - 1) < 1e-9)
     mk = lambda r: dict(name='Milky Way ' + r['baryons'], R=np.asarray(r['R']), v_obs=np.asarray(r['y']),
-                        v_bar=np.asarray(r['vb']), M_b=np.asarray(r['R'])*np.asarray(r['vb'])**2/G)
+                        v_bar=np.asarray(r['vb']), M_force=np.asarray(r['R'])*np.asarray(r['vb'])**2/G)
     return mk(pick('I')), mk(pick('II'))
 
 
@@ -116,10 +118,10 @@ def ring_audit():
 
 def ring_representation(gal, splits=(1, 2, 4, 8)):
     """Correction 2: independent per-ring saturation is representation dependent; the cumulative rule is not."""
-    M = gal['M_b'][-1]
+    M = gal['M_force'][-1]
     rows = []
     for n in splits:
-        m = np.diff(np.concatenate([[0.], gal['M_b']]))/n
+        m = np.diff(np.concatenate([[0.], gal['M_force']]))/n
         per_ring = float(np.sum(np.sqrt(np.maximum(np.repeat(m, n), 0.))))
         rows.append(dict(sub_rings_per_annulus=n, sum_sqrt_m=per_ring, sqrt_sum_m=float(np.sqrt(M)),
                          ratio=per_ring/float(np.sqrt(M))))
@@ -132,7 +134,7 @@ def ring_representation(gal, splits=(1, 2, 4, 8)):
 
 def speeds(gal, const, rule):
     """v(r) for g = g_N + g_mem under each declared sourcing rule."""
-    M = np.maximum(gal['M_b'], 0.)
+    M = np.maximum(gal['M_force'], 0.)
     if rule == 'linear':
         extra = const*M                                   # g = const M/r  ->  v^2 = const M
     elif rule == 'root':
@@ -164,8 +166,8 @@ def candidate_b(gals, mw, rule, bracket):
         out.update(implied_a_star_m_s2=a_star, implied_a_star_over_mond=a_star/MOND_A0,
                    implied_a_star_over_repo_fit=a_star/REPO_A0,
                    identity='g_mem = sqrt(a* g_mono) with a* = beta^2/G, so fitting beta is fitting a*')
-    outer = [(g['M_b'][-1], g['v_obs'][-5:].mean(), speeds(g, const, rule)[-5:].mean())
-             for g in gals if len(g['R']) >= 5 and g['M_b'][-1] > 0]
+    outer = [(g['M_force'][-1], g['v_obs'][-5:].mean(), speeds(g, const, rule)[-5:].mean())
+             for g in gals if len(g['R']) >= 5 and g['M_force'][-1] > 0]
     M, v_obs, v_mod = (np.array(x) for x in zip(*outer))
     slope = lambda v: float(np.polyfit(np.log10(M), np.log10(v), 1)[0])
     out.update(mass_speed_slope_observed=slope(v_obs), mass_speed_slope_model=slope(v_mod),
@@ -192,6 +194,35 @@ def c_equilibrium(g_N, a_star):
 
 def c_growth(q0, T):
     return float(np.max(np.real(np.roots([T, 1 + q0, T, 1 + 3*q0]))))
+
+
+def interpretation(gals, beta):
+    """Correction 7: what the fitted law is, given how M_force is built.
+
+    M_force = R v_bar^2/G, so beta sqrt(M_force)/R = sqrt((beta^2/G) g_N): the fitted rule is a pointwise
+    function of the local Newtonian field, not a force sourced by the matter inside r. The two coincide
+    only in spherical symmetry, and the disk inputs are not spherical.
+    """
+    a_star = beta**2/G
+    worst = 0.
+    for g in gals:
+        g_N = g['v_bar']**2/g['R']
+        direct = g_N + np.sqrt(a_star*g_N)
+        coded = g_N + beta*np.sqrt(np.maximum(g['M_force'], 0.))/g['R']
+        ok = np.isfinite(direct) & (direct > 0)
+        worst = max(worst, float(np.max(np.abs(coded[ok]/direct[ok] - 1))))
+    return dict(
+        mass_definition='M_force(R) = R v_bar^2/G = R^2 g_N/G, the mass a spherical Newtonian source would '
+                        'need to produce the baryon model\'s radial force; an enclosed mass only in '
+                        'spherical symmetry',
+        identity='g = g_N + sqrt(a* g_N) with a* = beta^2/G, a local acceleration law, for the disk inputs too',
+        identity_max_relative_difference=worst,
+        mass_speed_label='the regression uses M_force at the outermost radius, so it relates observed speed to '
+                         'force-equivalent mass, not to an independently integrated stellar-plus-gas mass',
+        collective_total='M_force at the last sampled radius, which depends on where the curve stops',
+        representation_test='mathematical: it differences M_force and clips negative increments, so it warns '
+                            'of sqrt(N) growth but is not a physical annulus-convergence test',
+        preserved_as='the force-proxy version; the source-mass version is PM-2A stage A')
 
 
 def candidate_c(gals, a_star=MOND_A0):
@@ -261,6 +292,7 @@ def main():
                   splits={s: sum(1 for g in gals if g['split'] == s) for s in ('train', 'validation', 'test')},
                   milky_way_bins=len(mw[0]['R']), exposed=True, blind=False),
         comparison_scores=dict(baryons_only=BARYONS, simple_mond_fitted=SIMPLE_MOND),
+        interpretation=interpretation(gals, root['constant']),
         candidate_A_control=candidate_a(gals[0]),
         candidate_B=dict(
             root_cumulative=root, linear=linear, collective=collective,

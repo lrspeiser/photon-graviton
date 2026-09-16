@@ -31,6 +31,15 @@
    "mw_II": 12.04
   }
  },
+ "interpretation": {
+  "mass_definition": "M_force(R) = R v_bar^2/G = R^2 g_N/G, the mass a spherical Newtonian source would need to produce the baryon model's radial force; an enclosed mass only in spherical symmetry",
+  "identity": "g = g_N + sqrt(a* g_N) with a* = beta^2/G, a local acceleration law, for the disk inputs too",
+  "identity_max_relative_difference": 4.440892098500626e-16,
+  "mass_speed_label": "the regression uses M_force at the outermost radius, so it relates observed speed to force-equivalent mass, not to an independently integrated stellar-plus-gas mass",
+  "collective_total": "M_force at the last sampled radius, which depends on where the curve stops",
+  "representation_test": "mathematical: it differences M_force and clips negative increments, so it warns of sqrt(N) growth but is not a physical annulus-convergence test",
+  "preserved_as": "the force-proxy version; the source-mass version is PM-2A stage A"
+ },
  "candidate_A_control": {
   "galaxy": "NGC6015",
   "alpha": 0.3,
@@ -321,7 +330,7 @@
   }
  },
  "input_sha256": {
-  "protocol.md": "cd1cc3566602c5c1d64e36254209e38f7f9aaa1a5e3e7c1b1571ad4f4dbfbfc1"
+  "protocol.md": "6801e203094f82e284c553a9cc62f9959e410e64cc9879479b20d8e6d07a8f87"
  },
  "checks_short_run": {
   "root_constant": 0.0931466054039149,
