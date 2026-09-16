@@ -126,6 +126,7 @@ def main():
         ('shared-field-bridge/checks.py', []),
         ('path-memory/checks.py', []),
         ('path-memory/pm2a.py', []),
+        ('path-memory/pm3.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))

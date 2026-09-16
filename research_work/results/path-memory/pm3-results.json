@@ -1,0 +1,414 @@
+{
+ "experiment": "PM-3: what a shared-field memory can and cannot do",
+ "protocol": "protocol-pm3.md",
+ "parameters": {
+  "GM": 0.2,
+  "K": 0.8,
+  "B": 0.4,
+  "tau": 1.0,
+  "j": 1.0,
+  "r_ref": 1.0,
+  "circular_radius": 1.0,
+  "reference_period": 6.283185307179586,
+  "note": "dimensionless and illustrative, as declared; no galaxy data enters PM-3"
+ },
+ "stage_1_control": {
+  "equilibrium": {
+   "j_squared": 1.0,
+   "GM_rc_plus_K_rc2": 1.0,
+   "relative_difference": 0.0,
+   "circular_radius": 1.0,
+   "tolerance": 1e-12,
+   "passed": true,
+   "note": "the equilibrium radius follows from the angular momentum and the force law"
+  },
+  "settling": {
+   "rows": [
+    {
+     "r0": 1.3,
+     "vr0": 0.0,
+     "final_period_max_deviation": 1.3814251742516603e-08,
+     "final_period_radius_range": [
+      0.9999999861857483,
+      1.000000012752273
+     ],
+     "ledger_drift": 4.791722574282176e-13
+    },
+    {
+     "r0": 0.75,
+     "vr0": 0.0,
+     "final_period_max_deviation": 2.108422436641888e-08,
+     "final_period_radius_range": [
+      0.9999999789157756,
+      1.0000000181915931
+     ],
+     "ledger_drift": 7.155942505221446e-13
+    },
+    {
+     "r0": 1.0,
+     "vr0": 0.35,
+     "final_period_max_deviation": 1.4749353516307906e-08,
+     "final_period_radius_range": [
+      0.9999999872784723,
+      1.0000000147493535
+     ],
+     "ledger_drift": 4.656830476790219e-13
+    },
+    {
+     "r0": 1.0,
+     "vr0": -0.3,
+     "final_period_max_deviation": 1.29801130954732e-08,
+     "final_period_radius_range": [
+      0.9999999870198869,
+      1.000000011195538
+     ],
+     "ledger_drift": 3.8835601401387976e-13
+    },
+    {
+     "r0": 1.45,
+     "vr0": 0.2,
+     "final_period_max_deviation": 2.2480590056161986e-08,
+     "final_period_radius_range": [
+      0.9999999806101568,
+      1.00000002248059
+     ],
+     "ledger_drift": 7.639444632445702e-13
+    }
+   ],
+   "periods": 40,
+   "worst_deviation": 2.2480590056161986e-08,
+   "worst_ledger_drift": 7.639444632445702e-13,
+   "tolerances": {
+    "settle": 1e-06,
+    "ledger": 1e-10
+   },
+   "passed": true,
+   "note": "dE/dt = -(B/tau) tanh^2(z) <= 0 exactly, so E + Q is conserved and the memory can only remove disequilibrium energy; where Q goes physically is a hypothesis, and carrying it only keeps the accounting honest"
+  },
+  "no_memory_control": {
+   "r0": 1.3,
+   "final_period_radius_range": [
+    0.8013056759685591,
+    1.299999962556213
+   ],
+   "spread": 0.498694286587654,
+   "circularized": false,
+   "passed": true,
+   "note": "a conservative orbit oscillates indefinitely; settling needs the energy to leave"
+  },
+  "stability": {
+   "kappa_squared": 1.8,
+   "b": 0.4,
+   "rows": [
+    {
+     "tau": 0.001,
+     "max_real_part": -0.00019999971999976399,
+     "routh_hurwitz_margin": 0.00039999999999999996
+    },
+    {
+     "tau": 0.01,
+     "max_real_part": -0.001999720013605162,
+     "routh_hurwitz_margin": 0.004
+    },
+    {
+     "tau": 0.1,
+     "max_real_part": -0.019721395860519117,
+     "routh_hurwitz_margin": 0.04000000000000001
+    },
+    {
+     "tau": 0.3,
+     "max_real_part": -0.05283538908304393,
+     "routh_hurwitz_margin": 0.12
+    },
+    {
+     "tau": 1.0,
+     "max_real_part": -0.06786661517869991,
+     "routh_hurwitz_margin": 0.40000000000000013
+    },
+    {
+     "tau": 3.0,
+     "max_real_part": -0.02929783772881439,
+     "routh_hurwitz_margin": 1.2000000000000002
+    },
+    {
+     "tau": 10.0,
+     "max_real_part": -0.009063293829293426,
+     "routh_hurwitz_margin": 4.0
+    },
+    {
+     "tau": 100.0,
+     "max_real_part": -0.0009090632475135824,
+     "routh_hurwitz_margin": 40.00000000000003
+    },
+    {
+     "tau": 1000.0,
+     "max_real_part": -9.09090632470503e-05,
+     "routh_hurwitz_margin": 400.0
+    }
+   ],
+   "condition": "a1 a2 - a0 a3 = tau(kappa^2 + b) - tau kappa^2 = tau b > 0",
+   "stable_at_every_tau": true,
+   "fastest_decay_tau": 1.0,
+   "passed": true,
+   "contrast": "candidate C's cubic put its extra term in the CONSTANT coefficient, which forced q0 < 0 and left a growing mode for every positive memory time; here the extra term sits in the linear coefficient instead, which is what changes the sign",
+   "caution": "stability is not prompt settling: the decay rate vanishes as tau -> 0 and as tau -> infinity, so a stable law can still fail to settle within a useful time"
+  },
+  "two_histories": {
+   "rows": [
+    {
+     "excursion_at": 1.0,
+     "corrector_amplitudes": [
+      0.153616644993047,
+      0.21163114724562718
+     ],
+     "release_time": 13.168973320757077,
+     "radius_range": [
+      0.8970930500552142,
+      1.156018900671208
+     ],
+     "released": {
+      "r": 0.9999999999999954,
+      "rdot": 4.6235962581904315e-15,
+      "theta": 12.56637061435915
+     },
+     "memory_chi": 0.0010604523634587626,
+     "z": -0.0010604523634633145,
+     "inward_acceleration": 0.9995758192136257,
+     "driver_work": 0.011749193242477645,
+     "ledger": -1.2101430968414206e-13
+    },
+    {
+     "excursion_at": 4.0,
+     "corrector_amplitudes": [
+      -0.42193462053844877,
+      -0.6112681848722041
+     ],
+     "release_time": 12.323901802995463,
+     "radius_range": [
+      0.7855536668898512,
+      1.156018899725152
+     ],
+     "released": {
+      "r": 1.0000000000001048,
+      "rdot": 8.636778900568409e-14,
+      "theta": 12.566370614359291
+     },
+     "memory_chi": -0.003976572884765625,
+     "z": 0.00397657288487043,
+     "inward_acceleration": 1.001590620769599,
+     "driver_work": 0.016736740176683196,
+     "ledger": -2.0805579481475434e-13
+    }
+   ],
+   "state_agreement": 1.4210854715202004e-13,
+   "acceleration_difference": 0.0020148015559733334,
+   "relative_difference": 0.0020116018602742702,
+   "worst_ledger": 2.0805579481475434e-13,
+   "passed": true,
+   "note": "genuine history dependence within this toy: the same present state responds differently because its internal state retains a different history. The size of the difference depends on the preparation driver, which the review did not specify, so this is a reproduction of the structure and not of a particular number"
+  },
+  "passed": true
+ },
+ "stage_2_scope": {
+  "theorem": {
+   "statement": "if tau dQ/dt = F[fields] - Q for any functional F of the instantaneous fields, then in a steady state Q relaxes to F[fields] and is itself time-independent, so the memory contributes a term fixed by the instantaneous fields -- nothing a static constitutive law of those same fields could not also produce",
+   "consequence": "memory buys transients; in a steady state it buys nothing. Rotation-dependent gravity in a steady galaxy must come from a coupling to something stationary but nonzero for a rotating disk and zero for a static one -- the mass current rho v, or a velocity stress -- or from genuine non-steadiness, which in a galaxy means the discreteness of stars rather than a smooth fluid",
+   "for_the_programme": "PM-2A stage C is already the right test of the steady-state content, because the static completions span the whole space of smooth steady memory theories; the memory extension is not a shortcut around it",
+   "settled_memory": {
+    "algebraic_identity_at_z_zero": 0.0,
+    "rows": [
+     {
+      "B": 0.0,
+      "horizons": [
+       {
+        "periods": 64,
+        "radius": 1.2037129692655906,
+        "z": -0.00816225961222089,
+        "memory_part_of_the_force": -0.0,
+        "bound_B_abs_z_over_r": 0.0,
+        "static_part_of_the_force": 0.6646102687487833,
+        "settled": false
+       },
+       {
+        "periods": 128,
+        "radius": 0.9588059005639193,
+        "z": -0.1635512388376557,
+        "memory_part_of_the_force": -0.0,
+        "bound_B_abs_z_over_r": 0.0,
+        "static_part_of_the_force": 0.834371168898191,
+        "settled": false
+       }
+      ],
+      "at_numerical_floor": true,
+      "falls_with_horizon": true
+     },
+     {
+      "B": 0.2,
+      "horizons": [
+       {
+        "periods": 64,
+        "radius": 1.00000005636739,
+        "z": 1.3275342826499004e-07,
+        "memory_part_of_the_force": 2.6550684156405076e-08,
+        "bound_B_abs_z_over_r": 2.6550684156405235e-08,
+        "static_part_of_the_force": 0.7999999549060905,
+        "settled": true
+       },
+       {
+        "periods": 128,
+        "radius": 1.0000000000003015,
+        "z": 2.9812616672646724e-13,
+        "memory_part_of_the_force": 5.962523334527548e-14,
+        "bound_B_abs_z_over_r": 5.962523334527548e-14,
+        "static_part_of_the_force": 0.7999999999997588,
+        "settled": true
+       }
+      ],
+      "at_numerical_floor": true,
+      "falls_with_horizon": true
+     },
+     {
+      "B": 0.4,
+      "horizons": [
+       {
+        "periods": 64,
+        "radius": 1.0000000000001874,
+        "z": -5.4605002272823225e-14,
+        "memory_part_of_the_force": -2.18420009091252e-14,
+        "bound_B_abs_z_over_r": 2.18420009091252e-14,
+        "static_part_of_the_force": 0.7999999999998502,
+        "settled": true
+       },
+       {
+        "periods": 128,
+        "radius": 0.9999999999998674,
+        "z": -9.876836118384592e-14,
+        "memory_part_of_the_force": -3.950734447354361e-14,
+        "bound_B_abs_z_over_r": 3.950734447354361e-14,
+        "static_part_of_the_force": 0.8000000000001061,
+        "settled": true
+       }
+      ],
+      "at_numerical_floor": true,
+      "falls_with_horizon": true
+     },
+     {
+      "B": 0.8,
+      "horizons": [
+       {
+        "periods": 64,
+        "radius": 1.0000000000000373,
+        "z": 6.97339630551835e-14,
+        "memory_part_of_the_force": 5.5787170444144725e-14,
+        "bound_B_abs_z_over_r": 5.5787170444144725e-14,
+        "static_part_of_the_force": 0.7999999999999702,
+        "settled": true
+       },
+       {
+        "periods": 128,
+        "radius": 0.9999999999999275,
+        "z": -1.737593321179543e-14,
+        "memory_part_of_the_force": -1.3900746569437354e-14,
+        "bound_B_abs_z_over_r": 1.3900746569437354e-14,
+        "static_part_of_the_force": 0.800000000000058,
+        "settled": true
+       }
+      ],
+      "at_numerical_floor": true,
+      "falls_with_horizon": true
+     }
+    ],
+    "worst_memory_contribution": 5.962523334527548e-14,
+    "all_settled": true,
+    "all_fall_with_horizon": true,
+    "passed": true,
+    "statement": "the memory produces the SETTLING, not the support: the flat-curve K/r term is assumed in the toy, as the review states, and the memory contributes exactly nothing to the circular orbit it created",
+    "caution": "the residual is a settling rate, not a defect: B = 0.2 has the slowest decay of the three and still carries 2.7e-8 at 64 periods, reaching the floor by 128. Once a residual is below 1e-12 it is the numerical noise of the integrator, so the trend test accepts either a fall or arrival at that floor, rather than comparing one rounding error with another"
+   },
+   "stationary_source": {
+    "rows": [
+     {
+      "tau": 0.1,
+      "horizon_in_tau": 5,
+      "residual_memory_flux_fraction": 0.006737946999085467
+     },
+     {
+      "tau": 0.1,
+      "horizon_in_tau": 10,
+      "residual_memory_flux_fraction": 4.5399929762484854e-05
+     },
+     {
+      "tau": 0.1,
+      "horizon_in_tau": 20,
+      "residual_memory_flux_fraction": 2.061153622438558e-09
+     },
+     {
+      "tau": 1.0,
+      "horizon_in_tau": 5,
+      "residual_memory_flux_fraction": 0.006737946999085467
+     },
+     {
+      "tau": 1.0,
+      "horizon_in_tau": 10,
+      "residual_memory_flux_fraction": 4.5399929762484854e-05
+     },
+     {
+      "tau": 1.0,
+      "horizon_in_tau": 20,
+      "residual_memory_flux_fraction": 2.061153622438558e-09
+     },
+     {
+      "tau": 10.0,
+      "horizon_in_tau": 5,
+      "residual_memory_flux_fraction": 0.006737946999085467
+     },
+     {
+      "tau": 10.0,
+      "horizon_in_tau": 10,
+      "residual_memory_flux_fraction": 4.5399929762484854e-05
+     },
+     {
+      "tau": 10.0,
+      "horizon_in_tau": 20,
+      "residual_memory_flux_fraction": 2.061153622438558e-09
+     },
+     {
+      "tau": 100.0,
+      "horizon_in_tau": 5,
+      "residual_memory_flux_fraction": 0.006737946999085467
+     },
+     {
+      "tau": 100.0,
+      "horizon_in_tau": 10,
+      "residual_memory_flux_fraction": 4.5399929762484854e-05
+     },
+     {
+      "tau": 100.0,
+      "horizon_in_tau": 20,
+      "residual_memory_flux_fraction": 2.061153622438558e-09
+     }
+    ],
+    "decays_as": "exp(-t/tau), independent of eta and of the source",
+    "passed": true,
+    "statement": "a smooth axisymmetric galaxy in steady rotation has a stationary density, hence stationary psi and p = grad(psi), hence Q -> p and a vanishing memory flux. The proposed extension therefore reduces EXACTLY to Completion I for the case it was meant to address",
+    "prior_measurement": "PM-1 candidate A measured the density version: a rigidly rotating axisymmetric source is indistinguishable from a static one to 3.7e-11"
+   }
+  },
+  "passed": true
+ },
+ "stage_3": "declared in the protocol and not run: a source coupling that sees the mass current, with the obligations that killed earlier candidates -- independence of how the same matter is divided into numerical particles, momentum conservation with a central-force limit, and reduction to the verified static equation as the current vanishes",
+ "passed": true,
+ "what_this_is_not": "a galaxy theory. PM-3 reproduces a declared toy and proves a scope statement about it. It establishes neither path memory nor a shared medium, a settling toy is not a rotation curve, and a numerical relaxation time is never a physical memory time",
+ "input_sha256": {
+  "protocol-pm3.md": "fc0798470844918b951c435b012bf08134125fc5b3d1250efcccb9e536785b0c"
+ },
+ "checks_short_run": {
+  "settle_worst": 2.2480590056161986e-08,
+  "ledger_worst": 7.639444632445702e-13,
+  "control_spread": 0.498694286587654,
+  "stability_worst": -9.09090632470503e-05,
+  "history_difference": 0.0020148015559733334,
+  "settled_memory": 5.962523334527548e-14
+ },
+ "runtime_seconds": 14.9
+}
