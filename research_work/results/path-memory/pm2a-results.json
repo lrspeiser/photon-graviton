@@ -1,0 +1,718 @@
+{
+ "experiment": "PM-2A: shared-field completions from an independently specified source",
+ "protocol": "protocol-pm2a.md",
+ "stage": "A, the source audit; stages B-D follow once these gates hold",
+ "source_model": {
+  "primary": "the archived stellar interpolation with its endpoint-anchored exponential continuation, a separately normalized gas disk, and the existing bulge",
+  "sensitivity": "the extrapolated stellar tail removed, with nothing renormalized",
+  "endpoint": "R_star_source_end, the final retained positive SBdisk sample in the archived source construction; not assumed to be the final original photometric measurement",
+  "independence": "independent of the observed rotation speeds being fitted: the gas scale is fitted to the tabulated gas contribution and the bulge is reconstructed from the tabulated bulge contribution, so this is not a source built from no force inputs",
+  "selection": "neither prescription is selected by which fits better",
+  "galaxies": 149,
+  "failures": []
+ },
+ "extrapolated": {
+  "stellar_fraction_median": 0.02769255975383762,
+  "stellar_fraction_90th": 0.15894082835300619,
+  "stellar_fraction_max": 0.5711711965891269,
+  "total_fraction_median": 0.010551450584504556,
+  "total_fraction_90th": 0.07993246825336264,
+  "total_fraction_max": 0.2805171687997143,
+  "largest": [
+   {
+    "galaxy": "UGC06667",
+    "total_fraction": 0.2805171687997143,
+    "stellar_fraction": 0.5711711965891269,
+    "R_star_source_end": 7.85,
+    "rd": 5.15
+   },
+   {
+    "galaxy": "NGC2976",
+    "total_fraction": 0.23125806312522015,
+    "stellar_fraction": 0.2635109520227643,
+    "R_star_source_end": 2.27,
+    "rd": 1.01
+   },
+   {
+    "galaxy": "NGC0055",
+    "total_fraction": 0.2040174861765622,
+    "stellar_fraction": 0.3378008434066542,
+    "R_star_source_end": 12.89,
+    "rd": 6.11
+   },
+   {
+    "galaxy": "NGC4051",
+    "total_fraction": 0.19974256803983664,
+    "stellar_fraction": 0.21774888506502538,
+    "R_star_source_end": 12.19,
+    "rd": 4.65
+   },
+   {
+    "galaxy": "NGC5005",
+    "total_fraction": 0.18008441486300897,
+    "stellar_fraction": 0.2122565147204824,
+    "R_star_source_end": 11.47,
+    "rd": 9.45
+   }
+  ]
+ },
+ "four_masses": {
+  "galaxies": 149,
+  "force_over_cylindrical": {
+   "median": 1.3806721496376582,
+   "tenth": 1.1264452410829322,
+   "ninetieth": 1.7627018813572664,
+   "minimum": 1.040307112666535,
+   "maximum": 3.174479237947625
+  },
+  "force_over_total": {
+   "median": 1.1774641545003024,
+   "tenth": 0.9148438206390581,
+   "ninetieth": 1.3965643569807238,
+   "minimum": 0.6697000343242505,
+   "maximum": 3.0089004624832327
+  },
+  "spherical_mass": {
+   "exactly_spherical_component": "the bulge, whose enclosed mass is spherical by construction",
+   "galaxies_with_a_bulge": 31,
+   "note": "M_sph(<r) of the disks is not defined by the surface density alone: it depends on the declared vertical profile, which the field stages fix. It is therefore left to stage B, where the spherical law is verified on a genuinely spherical source, rather than quoted here from a cylindrical integral"
+  },
+  "note": "M_force is a force-equivalent mass and M_cyl a source integral; they coincide only in spherical symmetry, so a ratio away from one is a statement about disk geometry and about whether the force law holds, not a defect of the source model",
+  "caveat": "v_bar is the archived tabulated ordinary-matter contribution while M_cyl is the mass of the source reconstructed here, and RPG-1 documents that the two differ materially at some radii, so this ratio mixes disk flattening with that reconstruction difference in unknown proportions; separating them needs the source's own Newtonian field on the same grid, which is stage C's recomputed baseline"
+ },
+ "gates": {
+  "mass_preserving": {
+   "analytic": {
+    "source": "analytic exponential disk",
+    "r_out": 30.0,
+    "rows": [
+     {
+      "sub_rings": 1,
+      "annuli": 40,
+      "relative_error": 0.0,
+      "any_negative": false
+     },
+     {
+      "sub_rings": 2,
+      "annuli": 80,
+      "relative_error": 0.0,
+      "any_negative": false
+     },
+     {
+      "sub_rings": 4,
+      "annuli": 160,
+      "relative_error": 0.0,
+      "any_negative": false
+     },
+     {
+      "sub_rings": 8,
+      "annuli": 320,
+      "relative_error": 0.0,
+      "any_negative": false
+     },
+     {
+      "sub_rings": 16,
+      "annuli": 640,
+      "relative_error": 0.0,
+      "any_negative": false
+     }
+    ],
+    "worst_relative_error": 0.0,
+    "clipped": false,
+    "midpoint_quadrature": {
+     "rows": [
+      {
+       "sub_rings": 1,
+       "midpoint_relative_error": 0.002592321305700196
+      },
+      {
+       "sub_rings": 2,
+       "midpoint_relative_error": 0.0006507430828657235
+      },
+      {
+       "sub_rings": 4,
+       "midpoint_relative_error": 0.0001628526215948778
+      },
+      {
+       "sub_rings": 8,
+       "midpoint_relative_error": 4.0723590290170364e-05
+      },
+      {
+       "sub_rings": 16,
+       "midpoint_relative_error": 1.0181549858323535e-05
+      }
+     ],
+     "refinement_ratios": [
+      3.983632517896628,
+      3.99590179447373,
+      3.998975051916929,
+      3.9997437381184513
+     ]
+    }
+   },
+   "galaxies": [
+    {
+     "source": "NGC6015",
+     "r_out": 55.28,
+     "rows": [
+      {
+       "sub_rings": 1,
+       "annuli": 40,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 2,
+       "annuli": 80,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 4,
+       "annuli": 160,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 8,
+       "annuli": 320,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 16,
+       "annuli": 640,
+       "relative_error": 0.0,
+       "any_negative": false
+      }
+     ],
+     "worst_relative_error": 0.0,
+     "clipped": false,
+     "midpoint_quadrature": {
+      "rows": [
+       {
+        "sub_rings": 1,
+        "midpoint_relative_error": 0.01732074454859367
+       },
+       {
+        "sub_rings": 2,
+        "midpoint_relative_error": 0.003944435738656438
+       },
+       {
+        "sub_rings": 4,
+        "midpoint_relative_error": 0.0008829421284761718
+       },
+       {
+        "sub_rings": 8,
+        "midpoint_relative_error": 3.73650243703505e-05
+       },
+       {
+        "sub_rings": 16,
+        "midpoint_relative_error": 3.475981408640472e-05
+       }
+      ],
+      "refinement_ratios": [
+       4.39118436607957,
+       4.4673774321584965,
+       23.63017670548597,
+       1.0749489130600596
+      ]
+     }
+    },
+    {
+     "source": "ESO444-G084",
+     "r_out": 6.78,
+     "rows": [
+      {
+       "sub_rings": 1,
+       "annuli": 40,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 2,
+       "annuli": 80,
+       "relative_error": 2.220446049250313e-16,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 4,
+       "annuli": 160,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 8,
+       "annuli": 320,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 16,
+       "annuli": 640,
+       "relative_error": 0.0,
+       "any_negative": false
+      }
+     ],
+     "worst_relative_error": 2.220446049250313e-16,
+     "clipped": false,
+     "midpoint_quadrature": {
+      "rows": [
+       {
+        "sub_rings": 1,
+        "midpoint_relative_error": 0.0022292779598611645
+       },
+       {
+        "sub_rings": 2,
+        "midpoint_relative_error": 0.0003607348346965633
+       },
+       {
+        "sub_rings": 4,
+        "midpoint_relative_error": 9.368930279229915e-05
+       },
+       {
+        "sub_rings": 8,
+        "midpoint_relative_error": 2.6715695044865484e-05
+       },
+       {
+        "sub_rings": 16,
+        "midpoint_relative_error": 8.591678186453677e-06
+       }
+      ],
+      "refinement_ratios": [
+       6.179824473387357,
+       3.85033108311501,
+       3.5069011917885846,
+       3.1094850697489544
+      ]
+     }
+    },
+    {
+     "source": "UGC04325",
+     "r_out": 11.18,
+     "rows": [
+      {
+       "sub_rings": 1,
+       "annuli": 40,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 2,
+       "annuli": 80,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 4,
+       "annuli": 160,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 8,
+       "annuli": 320,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 16,
+       "annuli": 640,
+       "relative_error": 0.0,
+       "any_negative": false
+      }
+     ],
+     "worst_relative_error": 0.0,
+     "clipped": false,
+     "midpoint_quadrature": {
+      "rows": [
+       {
+        "sub_rings": 1,
+        "midpoint_relative_error": 0.000977134262906132
+       },
+       {
+        "sub_rings": 2,
+        "midpoint_relative_error": 9.88575749805154e-05
+       },
+       {
+        "sub_rings": 4,
+        "midpoint_relative_error": 2.50986532872588e-05
+       },
+       {
+        "sub_rings": 8,
+        "midpoint_relative_error": 6.649861941099289e-06
+       },
+       {
+        "sub_rings": 16,
+        "midpoint_relative_error": 2.0370975877259667e-06
+       }
+      ],
+      "refinement_ratios": [
+       9.88426292167012,
+       3.9387601338235916,
+       3.774311934528635,
+       3.2643806468410768
+      ]
+     }
+    },
+    {
+     "source": "UGC04483",
+     "r_out": 2.1,
+     "rows": [
+      {
+       "sub_rings": 1,
+       "annuli": 40,
+       "relative_error": 1.1102230246251565e-16,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 2,
+       "annuli": 80,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 4,
+       "annuli": 160,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 8,
+       "annuli": 320,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 16,
+       "annuli": 640,
+       "relative_error": 0.0,
+       "any_negative": false
+      }
+     ],
+     "worst_relative_error": 1.1102230246251565e-16,
+     "clipped": false,
+     "midpoint_quadrature": {
+      "rows": [
+       {
+        "sub_rings": 1,
+        "midpoint_relative_error": 0.0010079024987494911
+       },
+       {
+        "sub_rings": 2,
+        "midpoint_relative_error": 0.00013732313763159532
+       },
+       {
+        "sub_rings": 4,
+        "midpoint_relative_error": 3.383031269943437e-05
+       },
+       {
+        "sub_rings": 8,
+        "midpoint_relative_error": 1.2566425874327436e-05
+       },
+       {
+        "sub_rings": 16,
+        "midpoint_relative_error": 3.101626569579352e-06
+       }
+      ],
+      "refinement_ratios": [
+       7.339640763623164,
+       4.0591743520565,
+       2.692118907775358,
+       4.051559912975506
+      ]
+     }
+    },
+    {
+     "source": "UGC07089",
+     "r_out": 18.32,
+     "rows": [
+      {
+       "sub_rings": 1,
+       "annuli": 40,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 2,
+       "annuli": 80,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 4,
+       "annuli": 160,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 8,
+       "annuli": 320,
+       "relative_error": 0.0,
+       "any_negative": false
+      },
+      {
+       "sub_rings": 16,
+       "annuli": 640,
+       "relative_error": 0.0,
+       "any_negative": false
+      }
+     ],
+     "worst_relative_error": 0.0,
+     "clipped": false,
+     "midpoint_quadrature": {
+      "rows": [
+       {
+        "sub_rings": 1,
+        "midpoint_relative_error": 0.000583711259421138
+       },
+       {
+        "sub_rings": 2,
+        "midpoint_relative_error": 0.00020085205543307616
+       },
+       {
+        "sub_rings": 4,
+        "midpoint_relative_error": 4.517919065794018e-05
+       },
+       {
+        "sub_rings": 8,
+        "midpoint_relative_error": 1.3003447686621428e-05
+       },
+       {
+        "sub_rings": 16,
+        "midpoint_relative_error": 3.0976804750171283e-06
+       }
+      ],
+      "refinement_ratios": [
+       2.9061751853250533,
+       4.44567626174987,
+       3.4744009240274565,
+       4.197801481300142
+      ]
+     }
+    }
+   ],
+   "galaxy_count": 149,
+   "worst_relative_error": 2.220446049250313e-16,
+   "clipped": false,
+   "tolerance": 1e-10,
+   "passed": true,
+   "note": "the galaxy rows carry the bulge too, whose enclosed mass is interpolated, so the gate covers the whole source and not only the analytic disks"
+  },
+  "row_removal_end_to_end": {
+   "galaxies": 131,
+   "keep_fraction": 0.8,
+   "worst_relative_change": 0.0,
+   "all_hashes_unchanged": true,
+   "positive_control": {
+    "galaxies": 8,
+    "rows": [
+     {
+      "galaxy": "NGC6015",
+      "hash_changed": true,
+      "max_relative_change": 0.0010902878405607552,
+      "total_mass_ratio": 0.9999121847037254
+     },
+     {
+      "galaxy": "UGC04325",
+      "hash_changed": true,
+      "max_relative_change": 0.02269333747129698,
+      "total_mass_ratio": 1.0861741867222472
+     },
+     {
+      "galaxy": "UGC04483",
+      "hash_changed": true,
+      "max_relative_change": 0.012753623972941108,
+      "total_mass_ratio": 0.9999812721963094
+     },
+     {
+      "galaxy": "UGC07089",
+      "hash_changed": true,
+      "max_relative_change": 0.00974756265935095,
+      "total_mass_ratio": 0.9984480611210818
+     },
+     {
+      "galaxy": "UGC02953",
+      "hash_changed": true,
+      "max_relative_change": 0.00020499560508502324,
+      "total_mass_ratio": 0.999997506196765
+     },
+     {
+      "galaxy": "UGC08286",
+      "hash_changed": true,
+      "max_relative_change": 0.012423338965892206,
+      "total_mass_ratio": 0.9998417742044063
+     },
+     {
+      "galaxy": "UGC06983",
+      "hash_changed": true,
+      "max_relative_change": 0.015546077180714102,
+      "total_mass_ratio": 1.0
+     },
+     {
+      "galaxy": "NGC4013",
+      "hash_changed": true,
+      "max_relative_change": 0.00013517555625874866,
+      "total_mass_ratio": 1.0
+     }
+    ],
+    "smallest_relative_change": 0.00013517555625874866,
+    "all_hashes_changed": true,
+    "detected": true,
+    "note": "rebuilding sparc_components from a shortened rotmod array moves the stellar profile, the gas scale and the bulge at once; that is what must not happen, and the control shows this comparison would see it"
+   },
+   "tolerance": 1e-10,
+   "passed": true,
+   "note": "the force-proxy contrast reported in PM-1's terms stays a separate diagnostic: a model can show that contrast while its prediction path still depends on where the velocity curve stops"
+  },
+  "integral_agreement": {
+   "analytic_disk_relative_error": 8.881784197001252e-16,
+   "galaxies": 149,
+   "rows": [
+    {
+     "galaxy": "NGC6015",
+     "closed_form": 15937565878.332127,
+     "quadrature": 15937565878.332146,
+     "relative_difference": 1.1102230246251565e-15,
+     "quadrature_self_convergence": 2.220446049250313e-16
+    },
+    {
+     "galaxy": "ESO444-G084",
+     "closed_form": 35452678.90578682,
+     "quadrature": 35452678.90578681,
+     "relative_difference": 2.220446049250313e-16,
+     "quadrature_self_convergence": 2.220446049250313e-16
+    },
+    {
+     "galaxy": "UGC04325",
+     "closed_form": 985308266.8100779,
+     "quadrature": 985308266.8100779,
+     "relative_difference": 0.0,
+     "quadrature_self_convergence": 2.220446049250313e-16
+    },
+    {
+     "galaxy": "UGC04483",
+     "closed_form": 6497499.057922948,
+     "quadrature": 6497499.057922946,
+     "relative_difference": 3.3306690738754696e-16,
+     "quadrature_self_convergence": 0.0
+    },
+    {
+     "galaxy": "UGC07089",
+     "closed_form": 1690622633.2661436,
+     "quadrature": 1690622633.2661443,
+     "relative_difference": 4.440892098500626e-16,
+     "quadrature_self_convergence": 2.220446049250313e-16
+    },
+    {
+     "galaxy": "UGC02953",
+     "closed_form": 114534527523.63756,
+     "quadrature": 114534527523.63753,
+     "relative_difference": 2.220446049250313e-16,
+     "quadrature_self_convergence": 0.0
+    },
+    {
+     "galaxy": "UGC08286",
+     "closed_form": 623273728.2227714,
+     "quadrature": 623273728.2227715,
+     "relative_difference": 2.220446049250313e-16,
+     "quadrature_self_convergence": 2.220446049250313e-16
+    },
+    {
+     "galaxy": "UGC06983",
+     "closed_form": 2358907254.344058,
+     "quadrature": 2358907254.3440566,
+     "relative_difference": 5.551115123125783e-16,
+     "quadrature_self_convergence": 0.0
+    }
+   ],
+   "worst_relative_difference": 6.59916565837193e-13,
+   "worst_quadrature_self_convergence": 1.7763568394002505e-15,
+   "cell_construction": {
+    "rows": [
+     {
+      "galaxy": "NGC6015",
+      "cell_construction": 23699582663.18673,
+      "exact": 23698949241.865242,
+      "relative_difference": 2.6727823036587495e-05,
+      "cells": 32800
+     },
+     {
+      "galaxy": "ESO444-G084",
+      "cell_construction": 215172666.72753254,
+      "exact": 215169591.72347206,
+      "relative_difference": 1.4291071688266044e-05,
+      "cells": 31600
+     },
+     {
+      "galaxy": "UGC04325",
+      "cell_construction": 1963307166.269839,
+      "exact": 1963231103.261467,
+      "relative_difference": 3.874378734414208e-05,
+      "cells": 31600
+     },
+     {
+      "galaxy": "UGC04483",
+      "cell_construction": 49190089.220587514,
+      "exact": 49189653.294488855,
+      "relative_difference": 8.862150258526214e-06,
+      "cells": 32560
+     }
+    ],
+    "worst": 3.874378734414208e-05,
+    "note": "the AQUAL cells spread a thickened disk over spherical shells, so only the total is comparable with a cylindrical integral; the difference measures that construction's quadrature and its outer truncation and is reported, not gated"
+   },
+   "tolerance": 1e-08,
+   "passed": true
+  },
+  "collective_tail_algebra": {
+   "galaxies": 149,
+   "worst_inner_mass_change": 0.0,
+   "worst_ratio_difference": 2.220446049250313e-16,
+   "ten_percent_tail_raises_the_term_by": 0.05409255338945984,
+   "passed": true,
+   "note": "algebra of the collective prescription, not a substitute for the field calculation"
+  }
+ },
+ "quadrature_diagnostic": {
+  "galaxies": 149,
+  "median_relative_difference": 2.3725772191340866e-07,
+  "max_relative_difference": 4.523404699696698e-07,
+  "unit_exponential": {
+   "rows": [
+    {
+     "r_out": 3.0,
+     "relative_error": 3.63501884148576e-08
+    },
+    {
+     "r_out": 9.0,
+     "relative_error": 1.271551064441212e-08
+    },
+    {
+     "r_out": 30.0,
+     "relative_error": 1.2042072561335715e-07
+    },
+    {
+     "r_out": 90.0,
+     "relative_error": 1.39771181517645e-07
+    }
+   ],
+   "worst": 1.39771181517645e-07
+  },
+  "tolerance_it_cannot_meet": 1e-08,
+  "note": "a regression diagnostic, not an exact reference: 20,001 geometrically spaced trapezoid points carry 1e-8 to 1e-7 relative error on a unit exponential, so two quantities produced by that route agreeing cannot establish 1e-8 accuracy"
+ },
+ "gates_passed": true,
+ "input_sha256": {
+  "protocol-pm2a.md": "48499538b904f447b910549df99f2ef2c6f3cee3f0726c5414c2bdf863b6b92d"
+ },
+ "checks_short_run": {
+  "mass_worst": 2.220446049250313e-16,
+  "rows_worst": 0.0,
+  "rows_control_smallest": 0.00013517555625874866,
+  "integral_worst": 6.59916565837193e-13,
+  "tail_worst": 2.220446049250313e-16,
+  "extrapolated_total_median": 0.010551450584504556
+ },
+ "runtime_seconds": 0.8
+}

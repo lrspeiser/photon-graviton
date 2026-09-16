@@ -710,6 +710,7 @@ The [PM-1 report](../../research_work/results/path-memory/report.md) scores six 
 - **A broad wave spectrum reaches the observed phenomenology.** Equal potential weight per logarithmic wavenumber gives a force set by the matter inside the orbit; with the amplitude growing as the square root of that mass it comes within about a tenth of simple MOND's fit quality on one constant. Its acceleration scale is that constant re-expressed, not an independent prediction.
 - **The motivating mechanism does not produce the fitted law.** Independently saturating rings give a field that grows with how finely the same matter is divided; a single collective nonlinear field gives the fitted form exactly.
 - **And the mass used is force-equivalent,** reconstructed from the ordinary-matter force rather than integrated from its density, so what the fit establishes is a local acceleration law. Separating the two, and solving the shared field on an independently specified source, is the next experiment.
+- **The separation has now been made, and the gap measured.** Against a frozen source built independently of the speeds being fitted, the force-equivalent mass exceeds the source's own cylindrical mass at every galaxy, by a median 38%. That is the expected sign for a disk, and it is the size of the discrepancy a shared field has to produce by being solved rather than assumed.
 - **The mass–speed relation decides between the sourcing rules,** and the linear one fails it.
 - **A receiver that adapts with a delay is unstable** wherever the adaptation would be needed.
 
