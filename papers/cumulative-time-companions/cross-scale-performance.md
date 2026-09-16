@@ -711,6 +711,7 @@ The [PM-1 report](../../research_work/results/path-memory/report.md) scores six 
 - **The motivating mechanism does not produce the fitted law.** Independently saturating rings give a field that grows with how finely the same matter is divided; a single collective nonlinear field gives the fitted form exactly.
 - **And the mass used is force-equivalent,** reconstructed from the ordinary-matter force rather than integrated from its density, so what the fit establishes is a local acceleration law. Separating the two, and solving the shared field on an independently specified source, is the next experiment.
 - **The separation has now been made, and the gap measured.** Against a frozen source built independently of the speeds being fitted, the force-equivalent mass exceeds the source's own cylindrical mass at every galaxy, by a median 38%. That is the expected sign for a disk, and it is the size of the discrepancy a shared field has to produce by being solved rather than assumed.
+- **The shared field is now implemented and checked on a sphere,** in two forms that must agree there and a third that must not: the flux identity and the acceleration law hold to a few parts in ten million. Which of the two forms survives a disk is the measurement still to come, and the limiting number turned out to be how the field is read off the grid, not how it is solved.
 - **The mass–speed relation decides between the sourcing rules,** and the linear one fails it.
 - **A receiver that adapts with a delay is unstable** wherever the adaptation would be needed.
 

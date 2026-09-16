@@ -1,7 +1,7 @@
 {
  "experiment": "PM-2A: shared-field completions from an independently specified source",
  "protocol": "protocol-pm2a.md",
- "stage": "A, the source audit; stages B-D follow once these gates hold",
+ "stage": "A, the source audit, and B, the field equations; C and D follow",
  "source_model": {
   "primary": "the archived stellar interpolation with its endpoint-anchored exponential continuation, a separately normalized gas disk, and the existing bulge",
   "sensitivity": "the extrapolated stellar tail removed, with nothing renormalized",
@@ -77,7 +77,7 @@
    "galaxies_with_a_bulge": 31,
    "note": "M_sph(<r) of the disks is not defined by the surface density alone: it depends on the declared vertical profile, which the field stages fix. It is therefore left to stage B, where the spherical law is verified on a genuinely spherical source, rather than quoted here from a cylindrical integral"
   },
-  "note": "M_force is a force-equivalent mass and M_cyl a source integral; they coincide only in spherical symmetry, so a ratio away from one is a statement about disk geometry and about whether the force law holds, not a defect of the source model",
+  "note": "M_force is a force-equivalent mass and M_cyl a source integral. In spherical symmetry M_force equals the SPHERICAL enclosed mass, by Newton's theorems, not the cylindrical one: a cylinder also contains material outside the sphere, so M_cyl >= M_sph whenever the source extends past the evaluation radius. A ratio away from one is therefore a statement about geometry and about whether the force law holds, not a defect of the source model (correction 8 replaced an earlier note that said the two coincide in spherical symmetry)",
   "caveat": "v_bar is the archived tabulated ordinary-matter contribution while M_cyl is the mass of the source reconstructed here, and RPG-1 documents that the two differ materially at some radii, so this ratio mixes disk flattening with that reconstruction difference in unknown proportions; separating them needs the source's own Newtonian field on the same grid, which is stage C's recomputed baseline"
  },
  "gates": {
@@ -534,7 +534,7 @@
      {
       "galaxy": "UGC02953",
       "hash_changed": true,
-      "max_relative_change": 0.00020499560508502324,
+      "max_relative_change": 0.00020535274355448774,
       "total_mass_ratio": 0.999997506196765
      },
      {
@@ -552,11 +552,11 @@
      {
       "galaxy": "NGC4013",
       "hash_changed": true,
-      "max_relative_change": 0.00013517555625874866,
+      "max_relative_change": 0.00013517518204175794,
       "total_mass_ratio": 1.0
      }
     ],
-    "smallest_relative_change": 0.00013517555625874866,
+    "smallest_relative_change": 0.00013517518204175794,
     "all_hashes_changed": true,
     "detected": true,
     "note": "rebuilding sparc_components from a shortened rotmod array moves the stellar profile, the gas scale and the bulge at once; that is what must not happen, and the control shows this comparison would see it"
@@ -567,6 +567,46 @@
   },
   "integral_agreement": {
    "analytic_disk_relative_error": 8.881784197001252e-16,
+   "bulge_projection": {
+    "source": "Plummer sphere",
+    "rows": [
+     {
+      "R_over_b": 0.5,
+      "m_sph": 0.08944271909999159,
+      "m_cyl_closed_form": 0.2,
+      "m_cyl_projected": 0.19999999999999998,
+      "relative_difference": 1.1102230246251565e-16,
+      "spherical_underestimates_by": 0.5527864045000421
+     },
+     {
+      "R_over_b": 1.0,
+      "m_sph": 0.35355339059327373,
+      "m_cyl_closed_form": 0.5,
+      "m_cyl_projected": 0.5,
+      "relative_difference": 0.0,
+      "spherical_underestimates_by": 0.29289321881345254
+     },
+     {
+      "R_over_b": 2.0,
+      "m_sph": 0.7155417527999327,
+      "m_cyl_closed_form": 0.8,
+      "m_cyl_projected": 0.7999999999999998,
+      "relative_difference": 2.220446049250313e-16,
+      "spherical_underestimates_by": 0.10557280900008414
+     },
+     {
+      "R_over_b": 5.0,
+      "m_sph": 0.9428660343181925,
+      "m_cyl_closed_form": 0.9615384615384616,
+      "m_cyl_projected": 0.9615384615384607,
+      "relative_difference": 8.881784197001252e-16,
+      "spherical_underestimates_by": 0.01941932430907989
+     }
+    ],
+    "node_refinement": 0.0,
+    "note": "correction 8: substituting M_sph for M_cyl understates the cylinder by 29.2893% at R = b; in spherical symmetry M_force equals M_sph, and M_cyl >= M_sph whenever the source extends past the evaluation radius",
+    "worst_relative_difference": 8.881784197001252e-16
+   },
    "galaxies": 149,
    "rows": [
     {
@@ -635,32 +675,71 @@
       "cell_construction": 23699582663.18673,
       "exact": 23698949241.865242,
       "relative_difference": 2.6727823036587495e-05,
-      "cells": 32800
+      "cells": 32800,
+      "r_in": 0.023,
+      "h": 0.22999999999999998,
+      "inner_mass_inherited": 811496.3350977808,
+      "inner_mass_spherical": 52120.13039360091,
+      "inner_ratio": 15.569729564556363,
+      "leading_ratio": 14.999999999999998,
+      "inner_share_of_total": 3.42409546459357e-05,
+      "cell_total_with_spherical_inner": 23698823286.982025,
+      "relative_difference_after_correction_9": 5.31478766974125e-06
      },
      {
       "galaxy": "ESO444-G084",
       "cell_construction": 215172666.72753254,
       "exact": 215169591.72347206,
       "relative_difference": 1.4291071688266044e-05,
-      "cells": 31600
+      "cells": 31600,
+      "r_in": 0.0046,
+      "h": 0.046000000000000006,
+      "inner_mass_inherited": 3275.900950295247,
+      "inner_mass_spherical": 209.99497445267178,
+      "inner_ratio": 15.599901658758803,
+      "leading_ratio": 15.000000000000002,
+      "inner_share_of_total": 1.5224521776473748e-05,
+      "cell_total_with_spherical_inner": 215169600.82155672,
+      "relative_difference_after_correction_9": 4.228331973443744e-08
      },
      {
       "galaxy": "UGC04325",
       "cell_construction": 1963307166.269839,
       "exact": 1963231103.261467,
       "relative_difference": 3.874378734414208e-05,
-      "cells": 31600
+      "cells": 31600,
+      "r_in": 0.018600000000000002,
+      "h": 0.18600000000000003,
+      "inner_mass_inherited": 73925.20373087566,
+      "inner_mass_spherical": 4740.7111226898405,
+      "inner_ratio": 15.593695084490005,
+      "leading_ratio": 15.0,
+      "inner_share_of_total": 3.765340696602709e-05,
+      "cell_total_with_spherical_inner": 1963237981.777231,
+      "relative_difference_after_correction_9": 3.5036709395974697e-06
      },
      {
       "galaxy": "UGC04483",
       "cell_construction": 49190089.220587514,
       "exact": 49189653.294488855,
       "relative_difference": 8.862150258526214e-06,
-      "cells": 32560
+      "cells": 32560,
+      "r_in": 0.0018,
+      "h": 0.018,
+      "inner_mass_inherited": 443.5316327806001,
+      "inner_mass_spherical": 28.460035668645613,
+      "inner_ratio": 15.584366721972817,
+      "leading_ratio": 14.999999999999998,
+      "inner_share_of_total": 9.016686893809677e-06,
+      "cell_total_with_spherical_inner": 49189674.1489904,
+      "relative_difference_after_correction_9": 4.239611410827848e-07
      }
     ],
     "worst": 3.874378734414208e-05,
-    "note": "the AQUAL cells spread a thickened disk over spherical shells, so only the total is comparable with a cylindrical integral; the difference measures that construction's quadrature and its outer truncation and is reported, not gated"
+    "inherited_inner_over_spherical": 15.58903090323141,
+    "worst_after_correction_9": 5.31478766974125e-06,
+    "note": "the AQUAL cells spread a thickened disk over spherical shells, so only the total is comparable with a cylindrical integral; the difference measures that construction's quadrature and its outer truncation and is reported, not gated",
+    "correction_9": "the inherited builder hands the solver Sigma(0) pi r_in^2 for its inner SPHERE, which is a cylinder mass at constant Sigma; the exact spherical integral is smaller by about 3h/(2 r_in). The two are reported side by side here so this source-volume mismatch is not folded into the quadrature difference above, and PM-2A substitutes the spherical value before any disk comparison"
    },
    "tolerance": 1e-08,
    "passed": true
@@ -673,6 +752,285 @@
    "passed": true,
    "note": "algebra of the collective prescription, not a substitute for the field calculation"
   }
+ },
+ "stage_B": {
+  "scalar_identities": {
+   "constitutive": [
+    {
+     "equation": "newtonian",
+     "mu_x_equals_y": 0.0,
+     "nu_consistent": 0.0,
+     "weight_matches_numeric": 0.0
+    },
+    {
+     "equation": "completion_I",
+     "mu_x_equals_y": 8.881784197001252e-16,
+     "nu_consistent": 4.440892098500626e-16,
+     "weight_matches_numeric": 1.9973356302216416e-10
+    },
+    {
+     "equation": "completion_II_aux",
+     "mu_x_equals_y": 2.220446049250313e-16,
+     "nu_consistent": 3.3306690738754696e-16,
+     "weight_matches_numeric": 0.0
+    },
+    {
+     "equation": "simple_mu",
+     "mu_x_equals_y": 6.661338147750939e-16,
+     "nu_consistent": 4.440892098500626e-16,
+     "weight_matches_numeric": 3.689697436470851e-10
+    }
+   ],
+   "functional_derivative": [
+    {
+     "equation": "newtonian",
+     "max_relative_error": 1.4962808769780622e-10
+    },
+    {
+     "equation": "completion_I",
+     "max_relative_error": 3.499676104468108e-10
+    },
+    {
+     "equation": "completion_II_aux",
+     "max_relative_error": 1.5965673227924526e-10
+    },
+    {
+     "equation": "simple_mu",
+     "max_relative_error": 8.502859971670773e-09
+    }
+   ],
+   "matched_spherical_functional": {
+    "max_relative_difference": 1.3322676295501878e-15,
+    "tolerance": 1e-12,
+    "statement": "F_I(y+sqrt y) == y^2 + (2/3) y^(3/2) == F_N + F_aux on the matched solution",
+    "passed": true
+   },
+   "cancellation": {
+    "completion_I_at_x_1e_12": 6.666666666656664e-37,
+    "expected_two_thirds_x_cubed": 6.666666666666666e-37,
+    "simple_mu_as_written_at_x_1e_8": 0.0,
+    "simple_mu_series_at_x_1e_8": 6.666666616666668e-25,
+    "note": "the inherited form returns exactly 0.0 at x = 1e-8 against a true 6.667e-25; Completion I's t-form has no subtraction of nearly equal numbers at all"
+   },
+   "passed": true
+  },
+  "spherical_solves": {
+   "rows": [
+    {
+     "compactness": 0.01,
+     "a_star": 0.01,
+     "M": 23.250854113535752,
+     "equations": {
+      "newtonian": {
+       "interior_flux_identity": 3.5655968955161654e-07,
+       "angular_spread": 3.4558891974424736e-07,
+       "residual_off_pin": 2.5277218896487223e-13,
+       "residual_including_pin": 2.5277218896487223e-13,
+       "iteration_change": 0.0,
+       "iterations": 0,
+       "converged": true
+      },
+      "completion_I": {
+       "interior_flux_identity": 3.035580221633083e-07,
+       "angular_spread": 1.5334562892371034e-07,
+       "residual_off_pin": 8.454471791668464e-13,
+       "residual_including_pin": 5.266938335383944e-12,
+       "iteration_change": 5.480040566570749e-12,
+       "iterations": 4,
+       "converged": true
+      },
+      "completion_II_aux": {
+       "interior_flux_identity": 3.9569847110065837e-07,
+       "angular_spread": 2.0774294680191963e-07,
+       "residual_off_pin": 1.1351009092676663e-12,
+       "residual_including_pin": 1.1351009092676663e-12,
+       "iteration_change": 1.8843537583499083e-12,
+       "iterations": 2,
+       "converged": true
+      },
+      "simple_mu": {
+       "interior_flux_identity": 2.304348520887345e-07,
+       "angular_spread": 1.0706206721354501e-07,
+       "residual_off_pin": 1.0071958259997544e-12,
+       "residual_including_pin": 2.2404160544132646e-12,
+       "iteration_change": 7.966572427970819e-13,
+       "iterations": 4,
+       "converged": true
+      }
+     },
+     "completions_agree": 2.119174875581109e-07,
+     "against_analytic_law": {
+      "completion_I": 1.5231565009266035e-07,
+      "completion_II": 1.95650869394548e-07
+     },
+     "off_grid_readout": {
+      "inherited_gradient_at": 0.00011844465245541835,
+      "inherited_midplane_speed": 0.00011237991913348733,
+      "face_spline": 1.1173604874681331e-08,
+      "note": "the two inherited paths interpolate cell-centred averages, or face values linearly, and converge at O(h^2); the face spline keeps the solution's own accuracy. Only the face spline is gated, and stage C must not read galaxies through the inherited paths"
+     },
+     "refinement": {
+      "nr": [
+       300,
+       600
+      ],
+      "max_relative_change": 3.0247131510563463e-07
+     }
+    },
+    {
+     "compactness": 1.0,
+     "a_star": 0.01,
+     "M": 2325.085411353575,
+     "equations": {
+      "newtonian": {
+       "interior_flux_identity": 3.5899638439751413e-07,
+       "angular_spread": 3.4788503560103067e-07,
+       "residual_off_pin": 2.1127973979037604e-13,
+       "residual_including_pin": 2.1127973979037604e-13,
+       "iteration_change": 0.0,
+       "iterations": 0,
+       "converged": true
+      },
+      "completion_I": {
+       "interior_flux_identity": 2.1380343340204888e-07,
+       "angular_spread": 1.1198219631575673e-07,
+       "residual_off_pin": 1.120887504934878e-12,
+       "residual_including_pin": 4.845585127549685e-12,
+       "iteration_change": 9.035615332269881e-13,
+       "iterations": 5,
+       "converged": true
+      },
+      "completion_II_aux": {
+       "interior_flux_identity": 2.73199123546064e-07,
+       "angular_spread": 1.3472571459771203e-07,
+       "residual_off_pin": 1.2515921370177749e-12,
+       "residual_including_pin": 1.8308228581625667e-12,
+       "iteration_change": 1.612737606398433e-12,
+       "iterations": 2,
+       "converged": true
+      },
+      "simple_mu": {
+       "interior_flux_identity": 1.9818017660266918e-07,
+       "angular_spread": 1.0122043403474153e-07,
+       "residual_off_pin": 1.0847304107075707e-12,
+       "residual_including_pin": 7.481999706127239e-12,
+       "iteration_change": 1.3584622369678031e-12,
+       "iterations": 5,
+       "converged": true
+      }
+     },
+     "completions_agree": 1.555007758113902e-07,
+     "against_analytic_law": {
+      "completion_I": 1.0939114769570324e-07,
+      "completion_II": 1.3860422742872913e-07
+     },
+     "off_grid_readout": {
+      "inherited_gradient_at": 0.00016488591373192696,
+      "inherited_midplane_speed": 0.0001611556868743036,
+      "face_spline": 1.2643732671957508e-08,
+      "note": "the two inherited paths interpolate cell-centred averages, or face values linearly, and converge at O(h^2); the face spline keeps the solution's own accuracy. Only the face spline is gated, and stage C must not read galaxies through the inherited paths"
+     },
+     "refinement": {
+      "nr": [
+       300,
+       600
+      ],
+      "max_relative_change": 1.8110287558492644e-07
+     }
+    },
+    {
+     "compactness": 100.0,
+     "a_star": 0.01,
+     "M": 232508.54113535752,
+     "equations": {
+      "newtonian": {
+       "interior_flux_identity": 3.580966818628184e-07,
+       "angular_spread": 3.4740519422822963e-07,
+       "residual_off_pin": 1.7838430728884545e-13,
+       "residual_including_pin": 1.8487277656329854e-13,
+       "iteration_change": 0.0,
+       "iterations": 0,
+       "converged": true
+      },
+      "completion_I": {
+       "interior_flux_identity": 3.609140702964808e-07,
+       "angular_spread": 2.3813441489943133e-07,
+       "residual_off_pin": 5.990523874715659e-13,
+       "residual_including_pin": 3.859079143825847e-12,
+       "iteration_change": 7.385799684001202e-13,
+       "iterations": 5,
+       "converged": true
+      },
+      "completion_II_aux": {
+       "interior_flux_identity": 4.397828015090255e-07,
+       "angular_spread": 2.1964486436784993e-07,
+       "residual_off_pin": 1.7603499654550264e-12,
+       "residual_including_pin": 1.7603499654550264e-12,
+       "iteration_change": 3.3981588441706824e-12,
+       "iterations": 2,
+       "converged": true
+      },
+      "simple_mu": {
+       "interior_flux_identity": 2.25599383396613e-07,
+       "angular_spread": 1.2989760423618895e-07,
+       "residual_off_pin": 8.469399074538141e-13,
+       "residual_including_pin": 2.8531221083787857e-12,
+       "iteration_change": 6.27754454602754e-13,
+       "iterations": 5,
+       "converged": true
+      }
+     },
+     "completions_agree": 2.3143224980870514e-07,
+     "against_analytic_law": {
+      "completion_I": 2.3099957002781224e-07,
+      "completion_II": 1.8104314292166634e-07
+     },
+     "off_grid_readout": {
+      "inherited_gradient_at": 0.0002418914245811421,
+      "inherited_midplane_speed": 0.0002403268538309078,
+      "face_spline": 2.2077393913022547e-08,
+      "note": "the two inherited paths interpolate cell-centred averages, or face values linearly, and converge at O(h^2); the face spline keeps the solution's own accuracy. Only the face spline is gated, and stage C must not read galaxies through the inherited paths"
+     },
+     "refinement": {
+      "nr": [
+       300,
+       600
+      ],
+      "max_relative_change": 3.469291722790757e-07
+     }
+    }
+   ],
+   "worst_interior_flux": 4.397828015090255e-07,
+   "worst_against_analytic_law": 2.3099957002781224e-07,
+   "worst_completion_disagreement": 2.3143224980870514e-07,
+   "off_grid_readout": {
+    "face_spline": 2.2077393913022547e-08,
+    "inherited_gradient_at": 0.0002418914245811421,
+    "inherited_midplane_speed": 0.0002403268538309078,
+    "finding": "both inherited readouts are three to four orders worse than the field they read, and converge only at second order; this is a bottleneck for stage C, where a difference between completions smaller than the readout error is unresolved"
+   },
+   "all_converged": true,
+   "tolerance": 1e-06,
+   "passed": true
+  },
+  "equation_distinction": {
+   "values": {
+    "completion_I": 2.0,
+    "completion_II_aux": 1.0,
+    "simple_mu": 1.618033988749895,
+    "completion_II_total": 2.0
+   },
+   "expected": {
+    "completions": 2.0,
+    "simple_mu": 1.618033988749895
+   },
+   "completions_agree": true,
+   "simple_is_distinct": true,
+   "passed": true
+  },
+  "gauge": "the outer equatorial cell is pinned at a finite radius; these isolated models have a logarithmic far field, so Phi(infinity) = 0 is not a valid normalization and every functional comparison uses the same convention",
+  "passed": true,
+  "what_this_is_not": "an equation implementation verified on a spherical source. It is not path memory, and the solver's relaxation time is a numerical quantity that is never a physical memory time"
  },
  "quadrature_diagnostic": {
   "galaxies": 149,
@@ -703,16 +1061,20 @@
   "note": "a regression diagnostic, not an exact reference: 20,001 geometrically spaced trapezoid points carry 1e-8 to 1e-7 relative error on a unit exponential, so two quantities produced by that route agreeing cannot establish 1e-8 accuracy"
  },
  "gates_passed": true,
+ "stage_B_passed": true,
  "input_sha256": {
-  "protocol-pm2a.md": "48499538b904f447b910549df99f2ef2c6f3cee3f0726c5414c2bdf863b6b92d"
+  "protocol-pm2a.md": "29874d8a081796946b471404c01cd7b8df3c80f56223b8da46bb049b97ab3570"
  },
  "checks_short_run": {
   "mass_worst": 2.220446049250313e-16,
   "rows_worst": 0.0,
-  "rows_control_smallest": 0.00013517555625874866,
+  "rows_control_smallest": 0.00013517518204175794,
   "integral_worst": 6.59916565837193e-13,
   "tail_worst": 2.220446049250313e-16,
-  "extrapolated_total_median": 0.010551450584504556
+  "extrapolated_total_median": 0.010551450584504556,
+  "stage_B_flux": 4.397828015090255e-07,
+  "stage_B_law": 2.3099957002781224e-07,
+  "stage_B_readout": 2.2077393913022547e-08
  },
- "runtime_seconds": 0.8
+ "runtime_seconds": 3.7
 }
