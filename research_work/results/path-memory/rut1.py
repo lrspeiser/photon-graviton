@@ -26,9 +26,9 @@ import sys
 import time
 from pathlib import Path
 import numpy as np
-from scipy.special import i0e
+from scipy.special import i0e, i1e
 from scipy.integrate import quad
-from scipy.optimize import minimize_scalar
+from scipy.optimize import minimize_scalar, brentq
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent/'companion-extensions'))
@@ -45,7 +45,9 @@ def phi_ring(r, R, w, A=1.):
     -A/(2pi) int_0^2pi exp[-(r^2 + R^2 - 2 r R cos t)/(2 w^2)] dt
         = -A exp[-(r - R)^2/(2 w^2)] I0e(r R/w^2),
 
-    using the exponentially scaled Bessel function because I0(r R/w^2) overflows at w/R ~ 0.1.
+    The exponentially scaled Bessel function is used because I0 overflows over the parameter range this
+    experiment scans -- I0(1000) is inf in double while I0e(1000) is finite. (I0(100) = 1.07e42 does NOT
+    overflow; the earlier rationale naming it was wrong, though the implementation was right.)
     """
     r = np.asarray(r, float)
     return -A*np.exp(-(r - R)**2/(2*w*w))*i0e(r*R/(w*w))
@@ -117,7 +119,9 @@ def gate_kernel(cases=((1., 1., .1), (1.3, 1., .1), (.7, 1., .1), (2., 1., .3), 
     worst = max(r['relative_difference'] for r in rows)
     return dict(rows=rows, worst_relative_difference=worst, tolerance=TOL_KERNEL,
                 passed=bool(worst < TOL_KERNEL),
-                note='the scaled Bessel form is required: I0(r R/w^2) overflows at the illustrative w/R')
+                note='the scaled Bessel form is used because I0 overflows over the scanned range: I0(1000) '
+                     'is inf in double while I0e(1000) is finite. I0(100) = 1.07e42 does not overflow, so the '
+                     'earlier rationale naming it was wrong even though the implementation was right')
 
 
 def gate_mature_ring(R=1., w=.1, D=.2):
@@ -219,6 +223,147 @@ def self_force(R, w, tau, Omega, q=1., n_rev=None, nodes=240):
     return float(-q*S*I_r/Omega), float(-q*S*I_t/Omega)
 
 
+def _one_revolution(R, w, tau, Omega, nodes=240, a=0., b=None):
+    """Support, drag and H integrands over [a, b] in phase (default one full revolution)."""
+    b = 2*np.pi if b is None else b
+    x, wg = np.polynomial.legendre.leggauss(nodes)
+    out = [0., 0., 0.]
+    mid = .5*(a + b)
+    for lo, hi in ((a, mid), (mid, b)):                 # split so the nodes cluster where E peaks
+        ph = .5*(hi - lo)*(x + 1) + lo
+        ww = .5*(hi - lo)*wg/Omega
+        u = ph/Omega
+        e = np.exp(-u/tau)*np.exp(-R*R*(1 - np.cos(ph))/(w*w))
+        out[0] += float(np.sum(ww*e*R*(1 - np.cos(ph))/(w*w)))
+        out[1] += float(np.sum(ww*e*R*np.sin(ph)/(w*w)))
+        out[2] += float(np.sum(ww*e))
+    return out
+
+
+def self_force_at_age(R, w, tau, Omega, t, q=1.):
+    """Support and drag at elapsed age t, exactly, for t = nT + u:
+
+        a(t) = a(T) (1 - rho^n)/(1 - rho) + rho^n a(u),   rho = exp(-T/tau),
+
+    with a(T) and a(u) the fresh-history integrals over those intervals, applied separately to each
+    component. Substituting a fractional revolution count into the geometric factor alone is NOT
+    equivalent, which is why the mature map cannot display the within-orbit structure of formation.
+    """
+    T = 2*np.pi/Omega
+    n = int(np.floor(t/T + 1e-12))
+    u = t - n*T
+    rho = np.exp(-T/tau)
+    full = _one_revolution(R, w, tau, Omega) if n else (0., 0., 0.)
+    part = _one_revolution(R, w, tau, Omega, b=Omega*u) if u > 1e-15 else (0., 0., 0.)
+    S = (1 - rho**n)/(1 - rho) if n else 0.
+    # signed like self_force: negative radial is inward, negative tangential is backward
+    return (float(-q*(S*full[0] + rho**n*part[0])), float(-q*(S*full[1] + rho**n*part[1])))
+
+
+def drag_identity(R, w, tau, Omega, t=None, q=1.):
+    """drag(t) = (q/Omega R)[1 - e^{-t/tau} E(t) - H(t)/tau], from integrating the tangential term by
+    parts. It avoids computing the drag purely by cancellation in an odd integrand, and at infinite age
+    tends to (q/Omega R)[1 - I0e(R^2/w^2)]. H's tail uses the same exact periodic decomposition: a
+    truncated revolution sum is what makes a naive check of this identity disagree."""
+    T = 2*np.pi/Omega
+    rho = np.exp(-T/tau)
+    if t is None:
+        H = _one_revolution(R, w, tau, Omega)[2]/(1 - rho)
+        return float(q/(Omega*R)*(1 - H/tau))
+    n = int(np.floor(t/T + 1e-12))
+    u = t - n*T
+    H = (1 - rho**n)/(1 - rho)*_one_revolution(R, w, tau, Omega)[2] if n else 0.
+    if u > 1e-15:
+        H += rho**n*_one_revolution(R, w, tau, Omega, b=Omega*u)[2]
+    E_t = np.exp(-R*R*(1 - np.cos(Omega*t))/(w*w))
+    return float(q/(Omega*R)*(1 - np.exp(-t/tau)*E_t - H/tau))
+
+
+def drag_impulse(R, w, tau, Omega, t, q=1., steps=600):
+    """Accumulated backward impulse int_0^t drag dt'; times R it is the angular momentum the driver must
+    supply to hold the prescribed orbit while the track builds."""
+    grid = np.linspace(0., t, steps + 1)
+    vals = np.array([drag_identity(R, w, tau, Omega, tt, q) if tt > 0 else 0. for tt in grid])
+    return float(np.trapezoid(vals, grid))
+
+
+def C_long(b):
+    """The closed-form long-memory coefficient in drag/support = C/(N_build * w/R), b = w/R."""
+    alpha = 1/b**2
+    return float(b**3/(2*np.pi)*(1 - i0e(alpha))/(i0e(alpha) - i1e(alpha)))
+
+
+def collective_force(N, R, w, tau, Omega, q_total=1., nodes=200, max_rev=4000):
+    """Mature support and drag on one member of N evenly spaced writers sharing a fixed TOTAL writing
+    rate. Radial contributions largely add; tangential ones increasingly cancel."""
+    T = 2*np.pi/Omega
+    rho = np.exp(-T/tau)
+    x, wg = np.polynomial.legendre.leggauss(nodes)
+    j = np.arange(N)[:, None]
+    tot_r = tot_t = 0.
+    for lo, hi in ((0., np.pi), (np.pi, 2*np.pi)):
+        ph = .5*(hi - lo)*(x + 1) + lo
+        ww = .5*(hi - lo)*wg/Omega
+        u = ph/Omega
+        phj = ph[None, :] + 2*np.pi*j/N
+        Ej = np.exp(-R*R*(1 - np.cos(phj))/(w*w))
+        dec = np.exp(-u/tau)
+        tot_r += float(np.sum(ww*dec*np.mean((1 - np.cos(phj))*Ej, axis=0)))
+        tot_t += float(np.sum(ww*dec*np.mean(np.sin(phj)*Ej, axis=0)))
+    f = q_total*R/(w*w)/(1 - rho)
+    return float(f*tot_r), float(f*tot_t)
+
+
+def stage2c_collective(R=1., wr=.1, nb=10., counts=(1, 4, 8, 16, 32), q_total=1.):
+    """Several physically distinct writers, at fixed total writing rate, versus one.
+
+    Two controls stay distinct. Dividing ONE writer into coincident copies whose rates sum to the original
+    must leave the field exactly unchanged -- the numerical-subdivision loophole that killed PM-1's
+    per-ring saturation. Placing DISTINCT writers at different physical positions changes the source
+    distribution, so the field may legitimately change.
+    """
+    Omega = np.sqrt(GM/R**3)
+    w, tau = wr*R, nb*2*np.pi/Omega
+    base = collective_force(1, R, w, tau, Omega, q_total)
+    rows = []
+    for N in counts:
+        s, d = collective_force(N, R, w, tau, Omega, q_total)
+        rows.append(dict(writers=N, support=s, drag=d,
+                         support_relative_to_one=float(s/base[0]),
+                         drag_relative_to_one=float(d/base[1]),
+                         drag_over_support=float(d/s)))
+    # the loophole control: M coincident copies at q_total/M each must reproduce one writer exactly
+    coincident = []
+    for M in (2, 5, 17):
+        s, d = collective_force(1, R, w, tau, Omega, q_total/M)
+        coincident.append(dict(copies=M, support_times_M=float(M*s), drag_times_M=float(M*d),
+                               support_relative_error=float(abs(M*s/base[0] - 1)),
+                               drag_relative_error=float(abs(M*d/base[1] - 1))))
+    worst_copy = max(max(c['support_relative_error'], c['drag_relative_error']) for c in coincident)
+    best = min(rows, key=lambda r: r['drag_relative_to_one'])
+    return dict(
+        width_ratio=wr, memory_revolutions=nb, rows=rows,
+        coincident_copy_control=dict(
+            rows=coincident, worst_relative_error=worst_copy, tolerance=1e-12,
+            passed=bool(worst_copy < 1e-12),
+            note='splitting one writer into coincident copies is a relabelling and must change nothing; '
+                 'if it did, the model would be defined by how finely the source was subdivided, which is '
+                 'exactly what withdrew PM-1\'s per-ring saturation'),
+        support_retained=float(min(r['support_relative_to_one'] for r in rows)),
+        best_drag_reduction=float(1/best['drag_relative_to_one']) if best['drag_relative_to_one'] else 0.,
+        passed=bool(worst_copy < 1e-12
+                    and all(r['support_relative_to_one'] > .99 for r in rows)
+                    and rows[-1]['drag_relative_to_one'] < .1),
+        statement='distinct writers sharing one track keep essentially all of the inward support while '
+                  'their tangential contributions cancel: a single-writer drag bound therefore cannot be '
+                  'applied to a collective source',
+        not_shown='evenly spaced writers held on their orbits are a deliberately favourable symmetry. '
+                  'Nothing here shows that such an arrangement forms from an empty field, keeps its '
+                  'spacing, tolerates phase disturbances, survives differential motion, or obeys a '
+                  'completed matter-field energy law. Stage 3 compares one writer with several at the '
+                  'same total rate, both from empty fields, and perturbs the phases')
+
+
 def stage2_prescribed_orbit(R=1., width_ratios=(.05, .1, .2, .4), memory_revs=(1., 3., 10., 30., 100.),
                             support_fractions=(.1, .01), q=1.):
     """Scan w/R and tau/T_orbit; report support, drag and the angular-momentum-change time.
@@ -246,18 +391,49 @@ def stage2_prescribed_orbit(R=1., width_ratios=(.05, .1, .2, .4), memory_revs=(1
                 at_f[f'support_{f}'] = dict(
                     angular_momentum_change_time_in_periods=float(Lt/T),
                     L_time_over_build_time=float(Lt/tau),
-                    orbit_survives_the_build=bool(Lt > tau))
+                    mature_drag_timescale_exceeds_one_retention_time=bool(Lt > tau))
             rows.append(dict(
-                width_ratio=wr, memory_revolutions=nb,
+                width_ratio=wr, memory_revolutions=nb, field_age='mature (infinite past)',
                 inward_acceleration_at_q1=inward, tangential_acceleration_at_q1=a_t,
                 drag_over_support=float(ratio),
                 ratio_times_Nbuild_times_width=float(ratio*nb*wr),
+                C_long_closed_form=C_long(wr),
+                drag_identity_at_q1=drag_identity(R, w, tau, Omega),
+                drag_identity_relative_difference=float(abs(drag_identity(R, w, tau, Omega)/drag - 1)),
                 build_law_at_one_memory_time=float(1 - np.exp(-1.)),
                 at_support_fraction=at_f,
                 driver_power_per_unit_mass_at_q1=float(drag*v)))
+    # the within-orbit structure the mature map cannot display, plus the accumulated driver impulse
+    w_f, nb_f = .1*R, 10.
+    tau_f = nb_f*T
+    mature_f = self_force(R, w_f, tau_f, Omega)
+    ages = []
+    for fr in (.25, .5, 1., 1.5, 2., 10.):
+        s_a, d_a = self_force_at_age(R, w_f, tau_f, Omega, fr*T)
+        ages.append(dict(orbits=fr, support_over_mature=float(s_a/mature_f[0]),
+                         drag_over_mature=float(d_a/mature_f[1])))
+    cost = []
+    for wr in width_ratios:
+        w2, tau2 = wr*R, nb_f*T
+        sup_m, _ = self_force(R, w2, tau2, Omega)
+        q_f = support_fractions[0]*(GM/R**2)/abs(sup_m)
+        J = drag_impulse(R, w2, tau2, Omega, tau2, q=q_f)
+        cost.append(dict(width_ratio=wr, memory_revolutions=nb_f,
+                         driver_angular_momentum_over_body=float(J*R/(R*R*Omega)),
+                         support_reached_fraction_of_mature=float(1 - np.exp(-1.))))
+    crit = {}
+    for f in support_fractions:
+        def gap(b_, f=f):
+            s, d = self_force(R, b_*R, nb_f*T, Omega)
+            return (Omega*R/(f*(GM/R**2)*abs(d/s)))/(nb_f*T) - 1.
+        try:
+            crit[f'support_{f}'] = float(brentq(gap, 1e-3, .95, xtol=1e-10))
+        except ValueError:
+            crit[f'support_{f}'] = None
     scale = np.array([r['ratio_times_Nbuild_times_width'] for r in rows])
     f_main = support_fractions[0]
-    surv = [r for r in rows if r['at_support_fraction'][f'support_{f_main}']['orbit_survives_the_build']]
+    surv = [r for r in rows if r['at_support_fraction'][f'support_{f_main}']
+            ['mature_drag_timescale_exceeds_one_retention_time']]
     return dict(
         rows=rows, orbital_period=T, orbital_speed=v, support_fractions=list(support_fractions),
         uniform_ring_control=dict(
@@ -274,20 +450,42 @@ def stage2_prescribed_orbit(R=1., width_ratios=(.05, .1, .2, .4), memory_revs=(1
                      law='drag/support = C/(N_build * w/R) with C about 0.62 to 0.78, so the ratio falls '
                          'like the memory time and like the track width, and is independent of the writing '
                          'rate and of how long the field has been building'),
-        survival_threshold=dict(
+        field_age_structure=dict(
+            width_ratio=.1, memory_revolutions=nb_f, rows=ages,
+            note='the drag OVERSHOOTS its mature value within an orbit -- about 1.04 at half and at one '
+                 'and a half revolutions -- and matches the build law only at integer revolutions, where '
+                 'both components carry the same geometric factor. "The drag saturates after one '
+                 'revolution" was wrong. What is true is that the MATURE drag approaches a '
+                 'retention-independent limit (q/Omega R)[1 - I0e(R^2/w^2)] as the memory time grows'),
+        formation_cost=dict(
+            rows=cost, support_fraction=support_fractions[0],
+            note='driver angular momentum needed to HOLD the prescribed orbit to t = tau, as a multiple '
+                 'of the body own angular momentum, with the support then at 63.2% of mature. It measures '
+                 'the effort required to prevent the orbit from changing, not a loss a released body '
+                 'would suffer: once it moves, the prescribed-circle history no longer describes it'),
+        timescale_threshold=dict(
             derivation='L_time/build = v (w/R)/(f (GM/R^2) C T) with drag/support = C/(N_build w/R), so '
-                       'the N_build cancels: survival depends on the track width and on how much support '
-                       'is being bought, and not on the memory time or the writing rate',
-            C_range=[float(scale.min()), float(scale.max())],
-            critical_width_over_radius={
-                f'support_{f}': float(2*np.pi*float(np.median(scale))*f) for f in support_fractions},
-            statement='the orbit outlives the build only if w/R > 2 pi C f, about 4.4 f. Buying 10% extra '
-                      'inward support therefore needs a "track" about 44% of the orbital radius, which is '
-                      'an annulus comparable to the orbit and no longer a rut -- and at that width it is '
-                      'hard to distinguish from a smooth axisymmetric mass, which puts it back inside '
-                      "PM-3's steady-state theorem. Buying 1% needs only 4%, which is a genuine track"),
+                       'N_build cancels; but C is a FUNCTION of width, so the crossing is solved from the '
+                       'force integrals rather than from a representative C',
+            C_measured_range=[float(scale.min()), float(scale.max())],
+            C_long_closed_form={f'width_{wr}': C_long(wr) for wr in width_ratios},
+            C_narrow_limit=float(np.sqrt(2/np.pi)), two_pi_C_narrow_limit=float(2*np.sqrt(2*np.pi)),
+            critical_width_over_radius=crit, solved_at_memory_revolutions=nb_f,
+            statement='this is a timescale crossing, NOT a survival theorem: no freely moving orbit is '
+                      'tested by it. An orbit may migrate substantially without being destroyed, and may '
+                      'lose an unacceptable fraction of its angular momentum while passing the '
+                      'inequality. The earlier single coefficient 4.4 came from collapsing C(w/R) to a '
+                      'median and is withdrawn',
+            pm3_inference_withdrawn='a broad track is NOT excluded by PM-3. Width does not change the '
+                                    'storage equation, and Phi_steady = -tau (steady writing source) is '
+                                    'nonzero whether the source is narrow or broad. That a broad '
+                                    'collective field might admit a static description is a question '
+                                    'about telling mechanisms apart observationally, not a proof that '
+                                    'the stored field vanishes'),
         survival_at_main_fraction=dict(
-            support_fraction=f_main, rows_surviving=len(surv), rows_total=len(rows),
+            support_fraction=f_main, rows_crossing=len(surv), rows_total=len(rows),
+            label='rows where the mature drag timescale exceeds one retention time; a timescale crossing, '
+                  'not a tested survival',
             best=(max(rows, key=lambda r: r['at_support_fraction'][f'support_{f_main}']
                       ['L_time_over_build_time'])['at_support_fraction'][f'support_{f_main}']
                   ['L_time_over_build_time'])),
@@ -309,6 +507,7 @@ def main():
     kernel, mature = gate_kernel(), gate_mature_ring()
     probe, second = gate_probe_scan(), gate_second_body()
     s2 = stage2_prescribed_orbit()
+    s2c = stage2c_collective()
     stage1 = bool(kernel['passed'] and mature['passed'] and probe['passed'] and second['passed'])
     result = dict(
         experiment='RUT-1: can a moving body write an attractive track, and survive writing it?',
@@ -328,6 +527,7 @@ def main():
         stage_1_kernel=dict(closed_form=kernel, mature_ring_control=mature, probe_scan=probe,
                             second_test_body=second, passed=stage1),
         stage_2_prescribed_orbit=s2,
+        stage_2C_collective=s2c,
         stage_3='declared in the protocol and not run: release the body from an empty field and evolve '
                 'trajectory and field together, distinguishing support, stability and settling as three '
                 'different achievements, with an already-built-track control beside the empty-field '
@@ -337,7 +537,7 @@ def main():
                          'cannot be dropped while the field grows, and its source law, sign and evolution '
                          'are unspecified. Not implemented here, so it stays an independent physical '
                          'proposal rather than an adjustable repair',
-        passed=bool(s0['passed'] and stage1 and s2['passed']),
+        passed=bool(s0['passed'] and stage1 and s2['passed'] and s2c['passed']),
         input_sha256={'protocol-rut1.md': hashlib.sha256((HERE/'protocol-rut1.md').read_bytes()).hexdigest()},
         checks_short_run=dict(
             kernel_worst=kernel['worst_relative_difference'],
@@ -346,7 +546,10 @@ def main():
             normalization_aR_spread=s0['spread_of_a_R'],
             drag_over_support_min=s2['drag_over_support_range'][0],
             drag_scaling_spread=s2['scaling']['spread'],
-            best_L_time_over_build=s2['survival_at_main_fraction']['best']),
+            best_L_time_over_build=s2['survival_at_main_fraction']['best'],
+            collective_support_retained=s2c['support_retained'],
+            collective_drag_reduction=s2c['best_drag_reduction'],
+            coincident_copy_worst=s2c['coincident_copy_control']['worst_relative_error']),
         runtime_seconds=round(time.time() - t0, 1))
     text = json.dumps(result, indent=1, default=float) + '\n'
     print(text[:1800])

@@ -103,7 +103,7 @@
    "worst_relative_difference": 1.2656542480726785e-14,
    "tolerance": 1e-12,
    "passed": true,
-   "note": "the scaled Bessel form is required: I0(r R/w^2) overflows at the illustrative w/R"
+   "note": "the scaled Bessel form is used because I0 overflows over the scanned range: I0(1000) is inf in double while I0e(1000) is finite. I0(100) = 1.07e42 does not overflow, so the earlier rationale naming it was wrong even though the implementation was right"
   },
   "mature_ring_control": {
    "R": 1.0,
@@ -210,21 +210,25 @@
    {
     "width_ratio": 0.05,
     "memory_revolutions": 1.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.06747443797394301,
     "tangential_acceleration_at_q1": -0.9784736287968256,
     "drag_over_support": 14.501397242829773,
     "ratio_times_Nbuild_times_width": 0.7250698621414887,
+    "C_long_closed_form": 0.7812299599428233,
+    "drag_identity_at_q1": 0.9784736287968171,
+    "drag_identity_relative_difference": 8.770761894538737e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 0.10975145389565105,
       "L_time_over_build_time": 0.10975145389565105,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 1.0975145389565109,
       "L_time_over_build_time": 1.0975145389565109,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9784736287968256
@@ -232,21 +236,25 @@
    {
     "width_ratio": 0.05,
     "memory_revolutions": 3.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.18978207056385818,
     "tangential_acceleration_at_q1": -0.9798692028018546,
     "drag_over_support": 5.163128423515364,
     "ratio_times_Nbuild_times_width": 0.7744692635273046,
+    "C_long_closed_form": 0.7812299599428233,
+    "drag_identity_at_q1": 0.9798692028018514,
+    "drag_identity_relative_difference": 3.3306690738754696e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 0.30825292349310424,
       "L_time_over_build_time": 0.10275097449770142,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 3.0825292349310423,
       "L_time_over_build_time": 1.027509744977014,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9798692028018546
@@ -254,21 +262,25 @@
    {
     "width_ratio": 0.05,
     "memory_revolutions": 10.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.627729301530483,
     "tangential_acceleration_at_q1": -0.9800306461470929,
     "drag_over_support": 1.5612313201847594,
     "ratio_times_Nbuild_times_width": 0.7806156600923798,
+    "C_long_closed_form": 0.7812299599428233,
+    "drag_identity_at_q1": 0.9800306461471089,
+    "drag_identity_relative_difference": 1.6209256159527285e-14,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 1.0194193585167162,
       "L_time_over_build_time": 0.10194193585167162,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 10.194193585167161,
       "L_time_over_build_time": 1.0194193585167162,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9800306461470929
@@ -276,21 +288,25 @@
    {
     "width_ratio": 0.05,
     "memory_revolutions": 30.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 1.8818989705377913,
     "tangential_acceleration_at_q1": -0.9800448659369851,
     "drag_over_support": 0.5207744311890011,
     "ratio_times_Nbuild_times_width": 0.7811616467835018,
+    "C_long_closed_form": 0.7812299599428233,
+    "drag_identity_at_q1": 0.9800448659370486,
+    "drag_identity_relative_difference": 6.483702463810914e-14,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 3.0561205305053525,
       "L_time_over_build_time": 0.10187068435017842,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 30.561205305053527,
       "L_time_over_build_time": 1.0187068435017843,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9800448659369851
@@ -298,21 +314,25 @@
    {
     "width_ratio": 0.05,
     "memory_revolutions": 100.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 6.272507760930348,
     "tangential_acceleration_at_q1": -0.9800464837147289,
     "drag_over_support": 0.1562447622335611,
     "ratio_times_Nbuild_times_width": 0.7812238111678056,
+    "C_long_closed_form": 0.7812299599428233,
+    "drag_identity_at_q1": 0.980046483714973,
+    "drag_identity_relative_difference": 2.4913404672588513e-13,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 10.18625781861308,
       "L_time_over_build_time": 0.1018625781861308,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 101.86257818613079,
       "L_time_over_build_time": 1.0186257818613078,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9800464837147289
@@ -320,21 +340,25 @@
    {
     "width_ratio": 0.1,
     "memory_revolutions": 1.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.13456854217760955,
     "tangential_acceleration_at_q1": -0.9570297860214759,
     "drag_over_support": 7.111838848327163,
     "ratio_times_Nbuild_times_width": 0.7111838848327163,
+    "C_long_closed_form": 0.7631246122240888,
+    "drag_identity_at_q1": 0.9570297860214724,
+    "drag_identity_relative_difference": 3.6637359812630166e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 0.22378873662095358,
       "L_time_over_build_time": 0.22378873662095358,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 2.2378873662095358,
       "L_time_over_build_time": 2.2378873662095358,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9570297860214759
@@ -342,21 +366,25 @@
    {
     "width_ratio": 0.1,
     "memory_revolutions": 3.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.3803878713251375,
     "tangential_acceleration_at_q1": -0.9597141178839504,
     "drag_over_support": 2.522988218684902,
     "ratio_times_Nbuild_times_width": 0.7568964656054706,
+    "C_long_closed_form": 0.7631246122240888,
+    "drag_identity_at_q1": 0.9597141178839472,
+    "drag_identity_relative_difference": 3.3306690738754696e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 0.6308192084022265,
       "L_time_over_build_time": 0.2102730694674088,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 6.308192084022265,
       "L_time_over_build_time": 2.1027306946740882,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9597141178839504
@@ -364,21 +392,25 @@
    {
     "width_ratio": 0.1,
     "memory_revolutions": 10.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 1.2589515775294748,
     "tangential_acceleration_at_q1": -0.9600248299199999,
     "drag_over_support": 0.762558979276964,
     "ratio_times_Nbuild_times_width": 0.762558979276964,
+    "C_long_closed_form": 0.7631246122240888,
+    "drag_identity_at_q1": 0.9600248299199994,
+    "drag_identity_relative_difference": 5.551115123125783e-16,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 2.0871165039955515,
       "L_time_over_build_time": 0.20871165039955514,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 20.871165039955514,
       "L_time_over_build_time": 2.0871165039955515,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9600248299199999
@@ -386,21 +418,25 @@
    {
     "width_ratio": 0.1,
     "memory_revolutions": 30.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 3.7744739970185766,
     "tangential_acceleration_at_q1": -0.9600521989592075,
     "drag_over_support": 0.254353904601686,
     "ratio_times_Nbuild_times_width": 0.763061713805058,
+    "C_long_closed_form": 0.7631246122240888,
+    "drag_identity_at_q1": 0.9600521989592108,
+    "drag_identity_relative_difference": 3.552713678800501e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 6.2572242931017445,
       "L_time_over_build_time": 0.2085741431033915,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 62.57224293101745,
       "L_time_over_build_time": 2.085741431033915,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9600521989592075
@@ -408,21 +444,25 @@
    {
     "width_ratio": 0.1,
     "memory_revolutions": 100.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 12.580677123378894,
     "tangential_acceleration_at_q1": -0.9600553127385478,
     "drag_over_support": 0.07631189508507934,
     "ratio_times_Nbuild_times_width": 0.7631189508507934,
+    "C_long_closed_form": 0.7631246122240888,
+    "drag_identity_at_q1": 0.9600553127385829,
+    "drag_identity_relative_difference": 3.6637359812630166e-14,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 20.85584991886981,
       "L_time_over_build_time": 0.2085584991886981,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 208.5584991886981,
       "L_time_over_build_time": 2.085584991886981,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9600553127385478
@@ -430,21 +470,25 @@
    {
     "width_ratio": 0.2,
     "memory_revolutions": 1.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.26932312543621084,
     "tangential_acceleration_at_q1": -0.9142116029883496,
     "drag_over_support": 3.3944786639009967,
     "ratio_times_Nbuild_times_width": 0.6788957327801994,
+    "C_long_closed_form": 0.7226251505139042,
+    "drag_identity_at_q1": 0.9142116029883487,
+    "drag_identity_relative_difference": 9.992007221626409e-16,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 0.4688641728240871,
       "L_time_over_build_time": 0.4688641728240871,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 4.688641728240872,
       "L_time_over_build_time": 4.688641728240872,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9142116029883496
@@ -452,21 +496,25 @@
    {
     "width_ratio": 0.2,
     "memory_revolutions": 3.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.7687286574495314,
     "tangential_acceleration_at_q1": -0.9191715190281339,
     "drag_over_support": 1.1957034645719309,
     "ratio_times_Nbuild_times_width": 0.7174220787431586,
+    "C_long_closed_form": 0.7226251505139042,
+    "drag_identity_at_q1": 0.9191715190281329,
+    "drag_identity_relative_difference": 1.1102230246251565e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 1.331056970290487,
       "L_time_over_build_time": 0.44368565676349575,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 13.310569702904873,
       "L_time_over_build_time": 4.436856567634957,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9191715190281339
@@ -474,21 +522,25 @@
    {
     "width_ratio": 0.2,
     "memory_revolutions": 10.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 2.547233563261536,
     "tangential_acceleration_at_q1": -0.9197462636245335,
     "drag_over_support": 0.3610765329453611,
     "ratio_times_Nbuild_times_width": 0.7221530658907223,
+    "C_long_closed_form": 0.7226251505139042,
+    "drag_identity_at_q1": 0.9197462636245336,
+    "drag_identity_relative_difference": 2.220446049250313e-16,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 4.407789722407106,
       "L_time_over_build_time": 0.4407789722407106,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 44.077897224071066,
       "L_time_over_build_time": 4.407789722407106,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9197462636245335
@@ -496,21 +548,25 @@
    {
     "width_ratio": 0.2,
     "memory_revolutions": 30.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 7.637683639573971,
     "tangential_acceleration_at_q1": -0.9197968961803525,
     "drag_over_support": 0.12042877652257128,
     "ratio_times_Nbuild_times_width": 0.7225726591354277,
+    "C_long_closed_form": 0.7226251505139042,
+    "drag_identity_at_q1": 0.9197968961803643,
+    "drag_identity_relative_difference": 1.2878587085651816e-14,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 13.21569044272951,
       "L_time_over_build_time": 0.4405230147576503,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 132.15690442729513,
       "L_time_over_build_time": 4.405230147576504,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9197968961803525
@@ -518,21 +574,25 @@
    {
     "width_ratio": 0.2,
     "memory_revolutions": 100.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 25.457422008651342,
     "tangential_acceleration_at_q1": -0.9198026567171116,
     "drag_over_support": 0.0361310212952643,
     "ratio_times_Nbuild_times_width": 0.7226204259052861,
+    "C_long_closed_form": 0.7226251505139042,
+    "drag_identity_at_q1": 0.9198026567171184,
+    "drag_identity_relative_difference": 7.327471962526033e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 44.04938952355488,
       "L_time_over_build_time": 0.44049389523554877,
-      "orbit_survives_the_build": false
+      "mature_drag_timescale_exceeds_one_retention_time": false
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 440.49389523554885,
       "L_time_over_build_time": 4.404938952355488,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.9198026567171116
@@ -540,21 +600,25 @@
    {
     "width_ratio": 0.4,
     "memory_revolutions": 1.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 0.556689979017046,
     "tangential_acceleration_at_q1": -0.827423219892673,
     "drag_over_support": 1.4863267726745573,
     "ratio_times_Nbuild_times_width": 0.594530709069823,
+    "C_long_closed_form": 0.6226831295299105,
+    "drag_identity_at_q1": 0.8274232198926714,
+    "drag_identity_relative_difference": 1.887379141862766e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 1.070793758262898,
       "L_time_over_build_time": 1.070793758262898,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 10.707937582628983,
       "L_time_over_build_time": 10.707937582628983,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.827423219892673
@@ -562,21 +626,25 @@
    {
     "width_ratio": 0.4,
     "memory_revolutions": 3.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 1.6192983188702368,
     "tangential_acceleration_at_q1": -0.8358075080871098,
     "drag_over_support": 0.5161541257390063,
     "ratio_times_Nbuild_times_width": 0.6193849508868077,
+    "C_long_closed_form": 0.6226831295299105,
+    "drag_identity_at_q1": 0.8358075080871074,
+    "drag_identity_relative_difference": 2.886579864025407e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 3.0834771080057615,
       "L_time_over_build_time": 1.027825702668587,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 30.834771080057614,
       "L_time_over_build_time": 10.278257026685871,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.8358075080871098
@@ -584,21 +652,25 @@
    {
     "width_ratio": 0.4,
     "memory_revolutions": 10.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 5.377904012784321,
     "tangential_acceleration_at_q1": -0.8367809500740493,
     "drag_over_support": 0.15559611106573465,
     "ratio_times_Nbuild_times_width": 0.6223844442629387,
+    "C_long_closed_form": 0.6226831295299105,
+    "drag_identity_at_q1": 0.8367809500740476,
+    "drag_identity_relative_difference": 1.9984014443252818e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 10.228722427686973,
       "L_time_over_build_time": 1.0228722427686974,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 102.28722427686974,
       "L_time_over_build_time": 10.228722427686973,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.8367809500740493
@@ -606,21 +678,25 @@
    {
     "width_ratio": 0.4,
     "memory_revolutions": 30.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 16.1284861826875,
     "tangential_acceleration_at_q1": -0.8368667247797263,
     "drag_over_support": 0.05188749367426861,
     "ratio_times_Nbuild_times_width": 0.6226499240912234,
+    "C_long_closed_form": 0.6226831295299105,
+    "drag_identity_at_q1": 0.8368667247797215,
+    "drag_identity_relative_difference": 5.88418203051333e-15,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 30.673083593324804,
       "L_time_over_build_time": 1.0224361197774936,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 306.7308359332481,
       "L_time_over_build_time": 10.224361197774936,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.8368667247797263
@@ -628,21 +704,25 @@
    {
     "width_ratio": 0.4,
     "memory_revolutions": 100.0,
+    "field_age": "mature (infinite past)",
     "inward_acceleration_at_q1": 53.75963861836159,
     "tangential_acceleration_at_q1": -0.8368764836787297,
     "drag_over_support": 0.015567003521353559,
     "ratio_times_Nbuild_times_width": 0.6226801408541425,
+    "C_long_closed_form": 0.6226831295299105,
+    "drag_identity_at_q1": 0.8368764836787022,
+    "drag_identity_relative_difference": 3.2862601528904634e-14,
     "build_law_at_one_memory_time": 0.6321205588285577,
     "at_support_fraction": {
      "support_0.1": {
       "angular_momentum_change_time_in_periods": 102.23865040794745,
       "L_time_over_build_time": 1.0223865040794744,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      },
      "support_0.01": {
       "angular_momentum_change_time_in_periods": 1022.3865040794744,
       "L_time_over_build_time": 10.223865040794744,
-      "orbit_survives_the_build": true
+      "mature_drag_timescale_exceeds_one_retention_time": true
      }
     },
     "driver_power_per_unit_mass_at_q1": 0.8368764836787297
@@ -689,32 +769,190 @@
    "spread": 0.26212373744224776,
    "law": "drag/support = C/(N_build * w/R) with C about 0.62 to 0.78, so the ratio falls like the memory time and like the track width, and is independent of the writing rate and of how long the field has been building"
   },
-  "survival_threshold": {
-   "derivation": "L_time/build = v (w/R)/(f (GM/R^2) C T) with drag/support = C/(N_build w/R), so the N_build cancels: survival depends on the track width and on how much support is being bought, and not on the memory time or the writing rate",
-   "C_range": [
+  "field_age_structure": {
+   "width_ratio": 0.1,
+   "memory_revolutions": 10.0,
+   "rows": [
+    {
+     "orbits": 0.25,
+     "support_over_mature": 0.04983746132100514,
+     "drag_over_mature": 1.039561987286862
+    },
+    {
+     "orbits": 0.5,
+     "support_over_mature": 0.04983746132100512,
+     "drag_over_mature": 1.0395619872868613
+    },
+    {
+     "orbits": 1.0,
+     "support_over_mature": 0.09516258196404048,
+     "drag_over_mature": 0.09516258196404048
+    },
+    {
+     "orbits": 1.5,
+     "support_over_mature": 0.14025738178720576,
+     "drag_over_mature": 1.035797166429015
+    },
+    {
+     "orbits": 2.0,
+     "support_over_mature": 0.1812692469220183,
+     "drag_over_mature": 0.1812692469220183
+    },
+    {
+     "orbits": 10.0,
+     "support_over_mature": 0.6321205588285578,
+     "drag_over_mature": 0.6321205588285579
+    }
+   ],
+   "note": "the drag OVERSHOOTS its mature value within an orbit -- about 1.04 at half and at one and a half revolutions -- and matches the build law only at integer revolutions, where both components carry the same geometric factor. \"The drag saturates after one revolution\" was wrong. What is true is that the MATURE drag approaches a retention-independent limit (q/Omega R)[1 - I0e(R^2/w^2)] as the memory time grows"
+  },
+  "formation_cost": {
+   "rows": [
+    {
+     "width_ratio": 0.05,
+     "memory_revolutions": 10.0,
+     "driver_angular_momentum_over_body": 9.806487695320309,
+     "support_reached_fraction_of_mature": 0.6321205588285577
+    },
+    {
+     "width_ratio": 0.1,
+     "memory_revolutions": 10.0,
+     "driver_angular_momentum_over_body": 4.791105094244209,
+     "support_reached_fraction_of_mature": 0.6321205588285577
+    },
+    {
+     "width_ratio": 0.2,
+     "memory_revolutions": 10.0,
+     "driver_angular_momentum_over_body": 2.2685331602400773,
+     "support_reached_fraction_of_mature": 0.6321205588285577
+    },
+    {
+     "width_ratio": 0.4,
+     "memory_revolutions": 10.0,
+     "driver_angular_momentum_over_body": 0.9774966943535551,
+     "support_reached_fraction_of_mature": 0.6321205588285577
+    }
+   ],
+   "support_fraction": 0.1,
+   "note": "driver angular momentum needed to HOLD the prescribed orbit to t = tau, as a multiple of the body own angular momentum, with the support then at 63.2% of mature. It measures the effort required to prevent the orbit from changing, not a loss a released body would suffer: once it moves, the prescribed-circle history no longer describes it"
+  },
+  "timescale_threshold": {
+   "derivation": "L_time/build = v (w/R)/(f (GM/R^2) C T) with drag/support = C/(N_build w/R), so N_build cancels; but C is a FUNCTION of width, so the crossing is solved from the force integrals rather than from a representative C",
+   "C_measured_range": [
     0.594530709069823,
     0.7812238111678056
    ],
-   "critical_width_over_radius": {
-    "support_0.1": 0.45402079789826755,
-    "support_0.01": 0.04540207978982675
+   "C_long_closed_form": {
+    "width_0.05": 0.7812299599428233,
+    "width_0.1": 0.7631246122240888,
+    "width_0.2": 0.7226251505139042,
+    "width_0.4": 0.6226831295299105
    },
-   "statement": "the orbit outlives the build only if w/R > 2 pi C f, about 4.4 f. Buying 10% extra inward support therefore needs a \"track\" about 44% of the orbital radius, which is an annulus comparable to the orbit and no longer a rut -- and at that width it is hard to distinguish from a smooth axisymmetric mass, which puts it back inside PM-3's steady-state theorem. Buying 1% needs only 4%, which is a genuine track"
+   "C_narrow_limit": 0.7978845608028654,
+   "two_pi_C_narrow_limit": 5.0132565492620005,
+   "critical_width_over_radius": {
+    "support_0.1": 0.39343381464380733,
+    "support_0.01": 0.04906782081336914
+   },
+   "solved_at_memory_revolutions": 10.0,
+   "statement": "this is a timescale crossing, NOT a survival theorem: no freely moving orbit is tested by it. An orbit may migrate substantially without being destroyed, and may lose an unacceptable fraction of its angular momentum while passing the inequality. The earlier single coefficient 4.4 came from collapsing C(w/R) to a median and is withdrawn",
+   "pm3_inference_withdrawn": "a broad track is NOT excluded by PM-3. Width does not change the storage equation, and Phi_steady = -tau (steady writing source) is nonzero whether the source is narrow or broad. That a broad collective field might admit a static description is a question about telling mechanisms apart observationally, not a proof that the stored field vanishes"
   },
   "survival_at_main_fraction": {
    "support_fraction": 0.1,
-   "rows_surviving": 5,
+   "rows_crossing": 5,
    "rows_total": 20,
+   "label": "rows where the mature drag timescale exceeds one retention time; a timescale crossing, not a tested survival",
    "best": 1.070793758262898
   },
   "passed": true,
   "reading": "a map, not a verdict. Support and drag both scale with the writing rate, so the physical question is what the orbit pays for a given amount of help: at a declared support fraction f, does the angular-momentum-change time exceed the time the track needs to build? The drag is set by the most recent passage and saturates immediately, while the support accumulates over the memory time, which is why long memory and wide tracks are the surviving direction"
  },
+ "stage_2C_collective": {
+  "width_ratio": 0.1,
+  "memory_revolutions": 10.0,
+  "rows": [
+   {
+    "writers": 1,
+    "support": 1.2589515775294706,
+    "drag": 0.9600248299199735,
+    "support_relative_to_one": 1.0,
+    "drag_relative_to_one": 1.0,
+    "drag_over_support": 0.7625589792769456
+   },
+   {
+    "writers": 4,
+    "support": 1.2580890612561664,
+    "drag": 0.21005412482348762,
+    "support_relative_to_one": 0.9993148932105897,
+    "drag_relative_to_one": 0.2188007208532278,
+    "drag_over_support": 0.16696284173534942
+   },
+   {
+    "writers": 8,
+    "support": 1.2580599474374292,
+    "drag": 0.08505536743957152,
+    "support_relative_to_one": 0.9992917677629897,
+    "drag_relative_to_one": 0.08859704956450098,
+    "drag_over_support": 0.06760835810155369
+   },
+   {
+    "writers": 16,
+    "support": 1.258057670584159,
+    "drag": 0.022617406031910158,
+    "support_relative_to_one": 0.9992899592317397,
+    "drag_relative_to_one": 0.023559188603273436,
+    "drag_over_support": 0.01797803595236467
+   },
+   {
+    "writers": 32,
+    "support": 1.2580587483963819,
+    "drag": 0.00048598483584645993,
+    "support_relative_to_one": 0.9992908153506262,
+    "drag_relative_to_one": 0.0005062211108508214,
+    "drag_over_support": 0.000386297409771947
+   }
+  ],
+  "coincident_copy_control": {
+   "rows": [
+    {
+     "copies": 2,
+     "support_times_M": 1.2589515775294706,
+     "drag_times_M": 0.9600248299199735,
+     "support_relative_error": 0.0,
+     "drag_relative_error": 0.0
+    },
+    {
+     "copies": 5,
+     "support_times_M": 1.2589515775294706,
+     "drag_times_M": 0.9600248299199736,
+     "support_relative_error": 0.0,
+     "drag_relative_error": 2.220446049250313e-16
+    },
+    {
+     "copies": 17,
+     "support_times_M": 1.2589515775294706,
+     "drag_times_M": 0.9600248299199735,
+     "support_relative_error": 0.0,
+     "drag_relative_error": 0.0
+    }
+   ],
+   "worst_relative_error": 2.220446049250313e-16,
+   "tolerance": 1e-12,
+   "passed": true,
+   "note": "splitting one writer into coincident copies is a relabelling and must change nothing; if it did, the model would be defined by how finely the source was subdivided, which is exactly what withdrew PM-1's per-ring saturation"
+  },
+  "support_retained": 0.9992899592317397,
+  "best_drag_reduction": 1975.4213693681586,
+  "passed": true,
+  "statement": "distinct writers sharing one track keep essentially all of the inward support while their tangential contributions cancel: a single-writer drag bound therefore cannot be applied to a collective source",
+  "not_shown": "evenly spaced writers held on their orbits are a deliberately favourable symmetry. Nothing here shows that such an arrangement forms from an empty field, keeps its spacing, tolerates phase disturbances, survives differential motion, or obeys a completed matter-field energy law. Stage 3 compares one writer with several at the same total rate, both from empty fields, and perturbs the phases"
+ },
  "stage_3": "declared in the protocol and not run: release the body from an empty field and evolve trajectory and field together, distinguishing support, stability and settling as three different achievements, with an already-built-track control beside the empty-field formation",
  "vector_extension": "retained as a proposal behind a narrower dependency. v.[v x curl A] = 0 so its sideways term does no direct work, but the force law also carries -dA/dt, which cannot be dropped while the field grows, and its source law, sign and evolution are unspecified. Not implemented here, so it stays an independent physical proposal rather than an adjustable repair",
  "passed": true,
  "input_sha256": {
-  "protocol-rut1.md": "381c79fdf4fd142feac1b26917e0a72ce30b4419b58989621964b576d4eb776f"
+  "protocol-rut1.md": "e7e4a4d558f0ab9fa7316baa64a2212aa58884cc31090cb93a754cdaeeadaacb"
  },
  "checks_short_run": {
   "kernel_worst": 1.2656542480726785e-14,
@@ -724,7 +962,10 @@
   "normalization_aR_spread": 1.8704162340920463,
   "drag_over_support_min": 0.015567003521353559,
   "drag_scaling_spread": 0.26212373744224776,
-  "best_L_time_over_build": 1.070793758262898
+  "best_L_time_over_build": 1.070793758262898,
+  "collective_support_retained": 0.9992899592317397,
+  "collective_drag_reduction": 1975.4213693681586,
+  "coincident_copy_worst": 2.220446049250313e-16
  },
- "runtime_seconds": 0.2
+ "runtime_seconds": 38.2
 }
