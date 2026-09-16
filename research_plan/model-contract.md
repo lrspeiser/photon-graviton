@@ -129,6 +129,8 @@ CC-1 is a consistency calculation, not a brightness fit. Protocol 6ce4c7a; [repo
 8. **The co-scaling history.** A declared V(n) or other dynamics comes before any brightness comparison. No distance history is imported.
 9. **The fixed-ruler branch.** Its first experiment remains whether a screened field can bend light toward galaxies.
 
+10. **PM-1, path-memory gravity** (protocol dcddb70). Done ([report](../research_work/results/path-memory/report.md)). A memory of density alone is inert; a broad wave spectrum with the amplitude growing as √M reaches within 1.6–10.2% of simple MOND's fit on SPARC (and is much worse on one Milky Way fiducial), with an acceleration scale that is the fitted amplitude re-expressed rather than a second prediction; the linear sourcing rule fails the baryonic mass–speed slope; and a receiver whose response carries a memory is unstable for every positive memory time by Routh–Hurwitz. The fitted law is not produced by independent ring saturation, which is representation dependent by √N, but it is the spherical limit of a collective nonlinear field equation. The spectrum, its confinement and its energy supply remain assumed.
+
 ## 6. What would stop each line early
 
 - **Co-scaling.** A declared field dynamics that reaches the recombination and nucleosynthesis temperatures cannot fit the brightness at equal freedom, or requires field energy that gravitating tests exclude.

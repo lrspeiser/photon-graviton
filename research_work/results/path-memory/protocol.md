@@ -67,6 +67,24 @@ Passing G1–G3 would make B a law worth deriving, not a law demonstrated: the s
 - The data are exposed. Nothing here is a blind test, and the split is reused from earlier work.
 - The owner's own package (`path_memory_gravity_lab.zip`) could not be read from this session, so this is an independent implementation of their equations from the description, not a check of their code.
 
+## Corrections, after the owner's review of the first run
+
+Declared before the corrected run. The first run's fits are unchanged by corrections 1, 4, 5 and 6, which are reporting and proof; corrections 2 and 3 add calculations and replace one that was wrong.
+
+**Correction 1, the acceleration scale is a re-expression of the fitted amplitude, not a second prediction.** With g_mem = β√M_b(<r)/r and the monopole comparison field g_mono = GM_b(<r)/r², identically g_mem = √(a\*·g_mono) with a\* = β²/G. Fitting β *is* fitting a\*, and the asymptote v_f⁴ = β²M_b is built into the √M sourcing choice rather than discovered. What the fit establishes is narrower and still worth stating: one normalization serves 149 galaxies with no per-galaxy freedom, its value lands at 0.55 of MOND's canonical scale, and the finite-radius slope and the individual curve shapes remain genuine tests.
+
+**Correction 2, independent ring saturation does not give the law that was fitted.** With Ċ_i = s·m_i − b·C_i² each ring equilibrates at C_i ∝ √m_i, so a sum of rings gives Σ√m_i, not √(Σm_i): splitting the same matter into N equal pieces multiplies the field by √N. Measured here on the six best-sampled galaxies, the per-ring rule exceeds the cumulative rule by 5.5–8.0 at the outermost radius, and the excess grows with the sampling. The cumulative rule is therefore a fitting law, not a consequence of the declared mechanism. Two things follow, both run:
+- **The collective control**, with no extra parameter: one shared mode saturating as C_total = β√M_total with its weight distributed in proportion to mass, so g = β·M_b(<r)/(r·√M_total). It shares B-root's outer normalization and differs inside by √(M(<r)/M_total).
+- **A derivation that does work.** The spherical limit of the nonlinear field equation ∇·[(|∇ψ|/a\*)∇ψ] = 4πGρ_b gives g_ψ = √(G a\* M_b(<r))/r, which is exactly the fitted form. The square root comes from a collective nonlinear field, not from assigning a square-root charge to each ring. That is a benchmark to compare against, not a claim of path memory, and in a disk it will not equal the enclosed-mass prescription.
+
+**Correction 3, the finite-band row used the on-ring expression at the observation radius.** (C/2R)[J₀(q_min R)² − J₀(q_max R)²] is exact only for r = R_s. The field of a ring at R_s observed at r is C∫J₁(qr)J₀(qR_s)dq. At r = 2, R_s = 1 over [0.01, 100] that is 0.49877 against the on-ring expression's 0.24989, a factor of two, reproduced independently here. The banded calculation is replaced by the source-integrated sum over rings, and the wide-band limit is verified directly rather than assumed: the ring integral is 1/r outside the ring and near zero inside (0.4988 at r = 2, 0.2000 at r = 5, 0.011 at r = 0.5, −0.005 at r = 0.2, for a ring at R_s = 1).
+
+**Correction 4, the luminosity is band-specific.** SPARC's catalogue L₃.₆ is a 3.6 μm luminosity in that band's solar units, and multiplying it by the bolometric solar constant assumes a spectral conversion. Candidate E's deficit is relabelled as conditional on that stated conversion, and the band ratio is reported beside it. A bolometric correction of order a few does not move a deficit of 10⁹, but the number must say what it is.
+
+**Correction 5, the radius count.** 3,152 counts rotmod rows with R > 0; the frozen comparison arrays hold 3,150. Both are reported, with the mask that produces each.
+
+**Correction 6, candidate C's instability is analytic, and it does not transfer.** Routh–Hurwitz on Tλ³ + (1+q₀)λ² + Tλ + (1+3q₀) requires (1+q₀)T > T(1+3q₀), that is q₀ < 0. So every q₀ > 0 with finite T > 0 has a growing mode — stronger than the grid, which only sampled. The growth rate vanishes in both limits (≈ q₀T/(1+q₀)² as T → 0, ≈ q₀/T as T → ∞), so the e-folding time depends on the actual memory time and "unstable" does not mean "disrupts in one orbit at every memory time". And C's failure says nothing about B-root: in B-root's frozen potential Φ = −GM/r + K ln(r/r₀) with K = β√M, circular orbits are radially stable, κ² = GM/r³ + 2K/r² > 0. Whether they survive when matter and field evolve together is PM-2's question, not PM-1's.
+
 ## Files and reproduction
 
 `pm1.py` runs every candidate and writes `pm1-results.json`; `checks.py` is a suite job that reruns the cheap parts and the regression anchor. About a minute on one core.

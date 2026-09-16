@@ -1,0 +1,336 @@
+{
+ "experiment": "PM-1: path-memory gravity against SPARC and the Milky Way",
+ "protocol": "protocol.md, with the corrections after the owner's review",
+ "data": {
+  "galaxies": 149,
+  "radii_rotmod_positive": 3152,
+  "radii_frozen_comparison": 3150,
+  "radius_count_note": "the first counts rotmod rows with R > 0, the second the frozen comparison arrays; both are reported (correction 5)",
+  "splits": {
+   "train": 89,
+   "validation": 29,
+   "test": 31
+  },
+  "milky_way_bins": 38,
+  "exposed": true,
+  "blind": false
+ },
+ "comparison_scores": {
+  "baryons_only": {
+   "train": 52.57,
+   "validation": 58.22,
+   "test": 47.77,
+   "mw_I": 52.57,
+   "mw_II": 62.34
+  },
+  "simple_mond_fitted": {
+   "train": 19.89,
+   "validation": 26.88,
+   "test": 16.4,
+   "mw_I": 9.53,
+   "mw_II": 12.04
+  }
+ },
+ "candidate_A_control": {
+  "galaxy": "NGC6015",
+  "alpha": 0.3,
+  "radii": 44,
+  "static_over_alpha_gN_max_error": 0.0,
+  "rotating_minus_static_max": 3.717559593496844e-11,
+  "note": "delayed density cannot see an orbit: the force law stays 1/R^2 and only G is rescaled",
+  "passed": true
+ },
+ "candidate_B": {
+  "root_cumulative": {
+   "rule": "root",
+   "constant": 0.0931466054039149,
+   "train": 20.21361321084551,
+   "validation": 27.74459936707859,
+   "test": 18.065295171798805,
+   "mw_I": 18.252794534186798,
+   "mw_II": 9.514809154193301,
+   "implied_a_star_m_s2": 6.53766150202093e-11,
+   "implied_a_star_over_mond": 0.5448051251684108,
+   "implied_a_star_over_repo_fit": 0.7634779285321651,
+   "identity": "g_mem = sqrt(a* g_mono) with a* = beta^2/G, so fitting beta is fitting a*",
+   "mass_speed_slope_observed": 0.28943679440654874,
+   "mass_speed_slope_model": 0.2804183573145626,
+   "mass_speed_galaxies": 149,
+   "beats_baryons": true
+  },
+  "linear": {
+   "rule": "linear",
+   "constant": 3.2746295000457107e-07,
+   "train": 30.53397881430634,
+   "validation": 34.02566010514942,
+   "test": 29.458603637988826,
+   "mw_I": 20.4535459801933,
+   "mw_II": 10.304273949334597,
+   "mass_speed_slope_observed": 0.28943679440654874,
+   "mass_speed_slope_model": 0.4119532902055002,
+   "mass_speed_galaxies": 149,
+   "beats_baryons": true
+  },
+  "collective": {
+   "rule": "collective",
+   "constant": 0.10399234562796143,
+   "train": 21.65818259503874,
+   "validation": 29.667413814739877,
+   "test": 18.70648007144142,
+   "mw_I": 20.898546517735454,
+   "mw_II": 12.845329395170257,
+   "mass_speed_slope_observed": 0.28943679440654874,
+   "mass_speed_slope_model": 0.2885908343882025,
+   "mass_speed_galaxies": 149,
+   "beats_baryons": true
+  },
+  "nonlinear_field_identity": {
+   "statement": "g_psi = sqrt(G a* M(<r))/r, which is B-root with beta = sqrt(G a*)",
+   "beta_from_a_star": 0.0931466054039149,
+   "beta_fitted": 0.0931466054039149,
+   "relative_difference": 0.0,
+   "note": "the square root follows from a collective nonlinear field, not from a square-root charge on every ring; in a disk the solution will not equal this enclosed-mass rule"
+  },
+  "ring_audit": {
+   "owner_example": {
+    "r": 2.0,
+    "R_s": 1.0,
+    "source_integrated": 0.49876721208028024,
+    "on_ring_at_r": 0.2498904251119586,
+    "owner_source_integrated": 0.49877,
+    "owner_on_ring": 0.24989
+   },
+   "wide_band_limit": [
+    {
+     "r": 0.2,
+     "R_s": 1.0,
+     "value": -0.004763219655283138,
+     "wide_band_limit": 0.0
+    },
+    {
+     "r": 0.5,
+     "R_s": 1.0,
+     "value": 0.010744162511183764,
+     "wide_band_limit": 0.0
+    },
+    {
+     "r": 2.0,
+     "R_s": 1.0,
+     "value": 0.49876721208028024,
+     "wide_band_limit": 0.5
+    },
+    {
+     "r": 5.0,
+     "R_s": 1.0,
+     "value": 0.2000510658380245,
+     "wide_band_limit": 0.2
+    }
+   ],
+   "note": "a ring contributes C/r outside itself and nothing inside, so the enclosed-mass rule is the wide-band limit; the on-ring expression is not the field of a galaxy at radius r",
+   "reproduces_owner": true
+  },
+  "ring_representation": {
+   "galaxy": "UGC02953",
+   "rows": [
+    {
+     "sub_rings_per_annulus": 1,
+     "sum_sqrt_m": 3436250.0522131003,
+     "sqrt_sum_m": 389113.91776266106,
+     "ratio": 8.830961565114285
+    },
+    {
+     "sub_rings_per_annulus": 2,
+     "sum_sqrt_m": 4859591.427545022,
+     "sqrt_sum_m": 389113.91776266106,
+     "ratio": 12.488865614180154
+    },
+    {
+     "sub_rings_per_annulus": 4,
+     "sum_sqrt_m": 6872500.1044262,
+     "sqrt_sum_m": 389113.91776266106,
+     "ratio": 17.661923130228566
+    },
+    {
+     "sub_rings_per_annulus": 8,
+     "sum_sqrt_m": 9719182.855090044,
+     "sqrt_sum_m": 389113.91776266106,
+     "ratio": 24.97773122836031
+    }
+   ],
+   "growth_over_8x_refinement": 2.82842712474619,
+   "expected_sqrt_8": 2.8284271247461903,
+   "note": "splitting the same matter into N pieces multiplies a per-ring square-root field by sqrt(N), so independent ring saturation cannot be the mechanism behind the fitted law"
+  },
+  "single_wavelength": {
+   "galaxy": "UGC02953",
+   "k": 1.0,
+   "radii": 115,
+   "sign_changes": 35,
+   "first_values": [
+    0.044863466182648165,
+    0.08408250226259091,
+    0.12673528903256676,
+    0.16274782923566572,
+    0.20047015320526668,
+    0.23100959795848036
+   ],
+   "note": "inward where positive, outward where negative"
+  }
+ },
+ "candidate_C": {
+  "owner_root_check": {
+   "expected": [
+    0.1533,
+    1.2858
+   ],
+   "got": [
+    0.1533373124814848,
+    1.2857755564742936
+   ]
+  },
+  "routh_hurwitz": {
+   "condition": "(1+q0) T > T (1+3 q0), i.e. q0 < 0",
+   "holds_for_positive_q0": false,
+   "statement": "every q0 > 0 with finite T > 0 has a growing mode; this is analytic, not a grid result"
+  },
+  "asymptotics": {
+   "small_T": "Re lambda ~ q0 T/(1+q0)^2",
+   "large_T": "Re lambda ~ q0/T",
+   "small_T_check": [
+    0.000249307279313514,
+    0.0024928749058145683
+   ],
+   "large_T_check": [
+    0.008987712161676403,
+    0.0008999876793327893
+   ]
+  },
+  "growth_rate_grid": {
+   "0.001": {
+    "0.1": 8.26445349615991e-05,
+    "0.3": 0.00017751459090347907,
+    "0.5": 0.00022222199176985188,
+    "0.7": 0.00024221431102045346,
+    "0.9": 0.000249307279313514,
+    "0.99": 0.0002499934982786896
+   },
+   "0.01": {
+    "0.1": 0.0008263531558997256,
+    "0.3": 0.0017749459648761304,
+    "0.5": 0.0022219918051455192,
+    "0.7": 0.002421923506384642,
+    "0.9": 0.0024928749058145683,
+    "0.99": 0.002499748142514878
+   },
+   "0.1": {
+    "0.1": 0.008172614629803038,
+    "0.3": 0.017552690163629973,
+    "0.5": 0.02199526519484206,
+    "0.7": 0.024002648416495534,
+    "0.9": 0.024733280679470247,
+    "0.99": 0.02481280357141926
+   },
+   "0.3": {
+    "0.1": 0.022557094142004824,
+    "0.3": 0.04847901555129107,
+    "0.5": 0.06118739967617404,
+    "0.7": 0.06732960933613663,
+    "0.9": 0.06992657639797588,
+    "0.99": 0.07037997123507546
+   },
+   "1": {
+    "0.1": 0.041662210777787534,
+    "0.3": 0.09343514516067065,
+    "0.5": 0.12341390343152467,
+    "0.7": 0.14184355371254237,
+    "0.9": 0.1533373124814848,
+    "0.99": 0.1569456707626598
+   },
+   "3": {
+    "0.1": 0.028270054255297355,
+    "0.3": 0.07465607318750334,
+    "0.5": 0.1098052205419698,
+    "0.7": 0.13677504655076206,
+    "0.9": 0.15784205765199827,
+    "0.99": 0.16582862424902345
+   },
+   "10": {
+    "0.1": 0.009834639179467725,
+    "0.3": 0.028976373800113364,
+    "0.5": 0.047182529161006195,
+    "0.7": 0.06427159838635202,
+    "0.9": 0.08016197234405281,
+    "0.99": 0.08691785585726142
+   },
+   "100": {
+    "0.1": 0.0009998310373391592,
+    "0.3": 0.002998917637408477,
+    "0.5": 0.004996878510506536,
+    "0.7": 0.006993285274381034,
+    "0.9": 0.008987712161676403,
+    "0.99": 0.009884445629439437
+   },
+   "1000": {
+    "0.1": 9.99998310003622e-05,
+    "0.3": 0.00029999891700638326,
+    "0.5": 0.000499996875035158,
+    "0.7": 0.0006999932731230202,
+    "0.9": 0.0008999876793327893,
+    "0.99": 0.0009899843972002026
+   }
+  },
+  "worst_growth_rate": 0.16582862424902345,
+  "q_outer_median": 0.8041150790787631,
+  "q_outer_90th": 0.8706637245609488,
+  "galaxies": 149,
+  "e_folding_orbits_at_median_q": 1.0717131763132546,
+  "b_root_epicyclic": {
+   "statement": "in B-root's frozen potential -GM/r + K ln r, kappa^2 = GM/r^3 + 2K/r^2 > 0, so its circular orbits are radially stable",
+   "transfers_from_C": false
+  },
+  "stable_anywhere": false
+ },
+ "candidate_E": {
+  "galaxies": 149,
+  "v_u_median_km_s": 0.0024896999722840525,
+  "v_f_median_km_s": 107.2,
+  "power_shortfall_median": 1658139760.5434725,
+  "power_shortfall_range": [
+   135071842.54473487,
+   120051374028.85765
+  ],
+  "conversion": "L = (catalogue 3.6 micron luminosity in that band's solar units) x the bolometric solar constant 3.828e26 W; that is an assumed spectral conversion, not a measured bolometric power",
+  "note": "conditional on that conversion; a bolometric correction of order a few does not move a deficit of 10^9, but the number is a band-luminosity ratio and is labelled as one"
+ },
+ "gates": {
+  "G1_shape": {
+   "root": true,
+   "linear": true,
+   "collective": true
+  },
+  "G2_mass_speed": {
+   "observed": 0.28943679440654874,
+   "root": 0.2804183573145626,
+   "linear": 0.4119532902055002,
+   "collective": 0.2885908343882025
+  },
+  "G3_universality": "one constant per rule, fitted on the 89 training galaxies only",
+  "G4_stability": {
+   "candidate_C_stable": false,
+   "b_root_frozen_potential_stable": true
+  }
+ },
+ "input_sha256": {
+  "protocol.md": "cd1cc3566602c5c1d64e36254209e38f7f9aaa1a5e3e7c1b1571ad4f4dbfbfc1"
+ },
+ "checks_short_run": {
+  "root_constant": 0.0931466054039149,
+  "root_train": 20.21361321084551,
+  "root_test": 18.065295171798805,
+  "linear_train": 30.53397881430634,
+  "collective_train": 21.65818259503874,
+  "c_worst_growth": 0.16582862424902345,
+  "ring_source_integrated": 0.49876721208028024
+ },
+ "runtime_seconds": 0.4
+}

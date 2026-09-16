@@ -703,6 +703,17 @@ The [RC-2a report](../../research_work/results/donor-companion/report.md) remove
 - **In every production history, the inner profile crosses the observed one transiently.** It is not a persistent reservoir.
 - **The controls.** A quiet representation's null passes. Random sampling at 2B-F1's resolution seeds central structure without baryons.
 
+## A gravitational field that remembers where matter has been (PM-1)
+
+The [PM-1 report](../../research_work/results/path-memory/report.md) scores six candidate memory laws against SPARC's 149 galaxies and the Milky Way's 38 bins, with one universal constant each.
+- **Delay alone changes nothing.** A memory of density returns the same field, rescaled; a rotating axisymmetric source is indistinguishable from a static one.
+- **A broad wave spectrum reaches the observed phenomenology.** Equal potential weight per logarithmic wavenumber gives a force set by the matter inside the orbit; with the amplitude growing as the square root of that mass it comes within about a tenth of simple MOND's fit quality on one constant. Its acceleration scale is that constant re-expressed, not an independent prediction.
+- **The motivating mechanism does not produce the fitted law.** Independently saturating rings give a field that grows with how finely the same matter is divided; a single collective nonlinear field gives the fitted form exactly.
+- **The mass–speed relation decides between the sourcing rules,** and the linear one fails it.
+- **A receiver that adapts with a delay is unstable** wherever the adaptation would be needed.
+
+The spectrum, its confinement and its energy supply are assumed, not derived, and the data are exposed. PDF v1.5 predates this supplement.
+
 ## One interaction for the photon's loss and the companions' mass (BRIDGE-1B)
 
 The [BRIDGE-1B report](../../research_work/results/shared-field-bridge/report.md) makes the propagation field that reddens light produce the companions as well, and lets them react back on it, in a homogeneous semiclassical calculation with a single accounting of the photon's loss.

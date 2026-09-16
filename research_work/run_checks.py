@@ -124,6 +124,7 @@ def main():
         ('companion-source/checks.py', []),
         ('donor-companion/checks.py', []),
         ('shared-field-bridge/checks.py', []),
+        ('path-memory/checks.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
