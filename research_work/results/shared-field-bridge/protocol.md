@@ -130,3 +130,33 @@ Anything else is reported as what it is. In particular, if the source passes S1�
 - `modes.py`, the semiclassical mode integrator; `bridge.py`, the driver that runs the trials, the mapping and the optical calculation and writes `bridge-results.json`; `checks.py`, a suite job (job 63) that reruns the fast trials and the regression anchor.
 - Wall-clock: about a minute for the full driver on one core, about ten seconds for the suite job; both report their own runtime. Nothing here needs workers or a budget guard.
 - `bridge.py --canonical` overwrites the archive through `evidence_io`, as every other entry point does.
+
+## Stage 2: a saturating mass law
+
+Declared before execution, 15 September 2026, after the owner's review of 392e538. Baseline: `main` at 392e538. Stage 1's code, archive and report stand unchanged; this stage adds a mass law and reruns the same machinery.
+
+**Why.** The owner's review keeps the production and the cooling but stops the mass growing for ever. Indefinite growth does two things the model does not need: it drains the propagation field for billions of years, which is what forced the field to carry 145 times the companions' rest energy, and it keeps contracting bound orbits. Their correction on angular momentum is accepted: total L = r × mv is conserved and only the specific ℓ = L/m falls as 1/m, so a finite growth reduces centrifugal support (adiabatically a ∝ m⁻²) rather than destroying it.
+
+**The law.** m_C²(n) = m0² + M²·tanh²[(n − n\*)/Δn], with g ≡ M/Δn. Near the crossing this is stage 1's m0² + g²(n − n\*)² to leading order, so the production event is unchanged by construction; far from it the mass approaches √(m0² + M²).
+
+**What changes in the inputs.** Stage 1's fixed inputs stand (PF-1's archived rate, the microwave background). **2B-F1's abundance stops being the normalization**: after RC-2a stage 1 that rate is not authoritative, so the abundance is scanned over 0.1, 1 and 10 times it and reported as "what any abundance implies", per the owner's instruction not to engineer the particle physics around the old rate.
+
+**Code-unit trials (declared tolerances).**
+1. **P1, the plateau does not spoil the crossing.** With a prescribed crossing, n_k matches exp[−π(k² + m0²)/(g|ṅ\*|)] to 1% for every mode with n_k ≥ 0.01, at M/k\* = 5, 20 and 100. The weakly populated tail may differ more and is reported, not gated. (The owner's independent four-mode test found 0.20% and 0.18% for its two strongly populated modes at M = 20k\*.)
+2. **P2, energy.** |ΔE|/E ≤ 10⁻⁸, as stage 1.
+3. **P3, saturation ends the back-reaction.** Beyond |n − n\*| = 5Δn the force on the field falls below 10⁻³ of its peak, and a coupling that stage 1's quadratic law would have trapped (Δn_trap = 4π³K ṅ\*^{1/2} e^{πm0²/(gṅ\*)} g^{−5/2} inside the traversed range) leaves the field still rolling here. Both laws are run at the same g.
+4. **P4, momentum and the final speed.** Occupations stay constant to 10⁻³ after the crossing, and v_rms follows k_rms/m_C(n) to 1%, approaching the constant k_rms/√(m0² + M²).
+5. **P5, the owner's four controls,** as stage 1.
+6. **P6, the finite energy.** The companions' energy gain equals N·(m_final − m0) to 1%, and it is delivered within the saturation window Δn/ṅ\*, which is reported in seconds as well as in units of the crossing time.
+
+**Physical mapping.** Parameters: the plateau mass M (1 MeV, 1 GeV, 1 TeV), the crossing index n\* (0.9, 0.7, 0.5, 0.237, 0.1), the field's stored energy R_E (1, 3, 10, 30) and the abundance scale above. Derived: k\* from the abundance, g = k\*²/ṅ\*, Δn = M/g, the saturation time Δn/ṅ\*, the final speed k_rms/M, the distance travelled before saturation, and the pulse's power ρ_C c²/(Δn/ṅ\*) beside the photon power (ṅ/n)u_γ.
+
+**Declared expectations, from a prescribed-history check run before this declaration.** The drain becomes a pulse, so the history coasts on both sides of a step in ṅ of √(1 + 1/R_E) − 1 (41% at R_E = 1, 4.9% at R_E = 10), and the Pantheon+ cost depends on where the crossing sits relative to the data: Δχ² = −0.00 at every tested R_E for z\* = 3.22, and +1.2, +17 and +58 at R_E = 10 for z\* = 1.00, 0.43 and 0.11. The back-reacted run must reproduce this or refute it. If it holds, stage 1's R_E ≥ 145 is a property of indefinite growth, and the plateau replaces it with a condition on the production epoch: the crossing lies beyond the supernova range, or the field must be heavy again.
+
+**Gates.** S1, cold: v_rms ≤ 10 km/s by the end of the saturation window, having travelled under 1 kpc. S2, the field still rolls today. S3, the Pantheon+ χ² within 1 of PF-1's coasting fit. S4, the supply named, now including the pulse's power.
+
+**What stage 2 does not do.** It does not repeat calculation 2: the atomic-reference identity depends on the coupling family, not on the companions' mass law, so the bound p ≤ 6.6×10⁻⁷ stands. It does not test transport; that is RC-2b, with canonical momentum (ẋ = p/m, ṗ = −m∇Φ), three-dimensional orbits in a spherical potential, no artificial central reflection, and the growing-mass and saturating-mass populations compared at the same source-energy budget. It does not test the owner's production-cohort idea, which waits on this single-episode result.
+
+## Correction 1, after the owner's review of 392e538
+
+The driven variant above inverts a sign in its definition. The code sets the net force from `extra = F_C − â·K·h²`, so the declared parameter is **â = (Ng − λ)/(Kh²)**: the drain minus the drive, positive when the companions' drain dominates and negative when the potential outruns it. Every number reported under that parameter was computed with this convention — at â = −0.3 the potential supplies λ/Ng = 5.58 — so the scan and its scores are unaffected. Only the written definition was wrong, and the report now states it as it is coded.

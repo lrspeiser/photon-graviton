@@ -79,7 +79,7 @@ The full six-by-six scan is in the results file. The pattern does not depend on 
 
 **The owner's damping approximation, scored.** Their K n̈ + KΓṅ = u_γ/n gives D = (c/h)·ln[1+(1+γ)z]/(1+γ). The magnitudes at z = 1 reproduce their table exactly (−0.059, −0.274, −0.505 mag at γ = 0.1, 0.5, 1.0); on the same 960 rows those histories score χ² = 896.67, 1045.06 and 1298.32, against PF-1's 871.55. The direction and the size of their diagnostic both stand.
 
-**A driven variant.** A linear potential V′(n) = −λ makes the net force a free parameter. Scanning the net acceleration â = (λ − Ng)/(Kh²):
+**A driven variant.** A linear potential V′(n) = −λ makes the net force a free parameter. Scanning the net deceleration â = (Ng − λ)/(Kh²) — the drain minus the drive, so â > 0 means the companions win and â < 0 means the potential does:
 
 | â | λ / Ng | Δμ(z = 1) | χ² |
 |---:|---:|---:|---:|
