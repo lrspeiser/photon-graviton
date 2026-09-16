@@ -7,22 +7,22 @@ All numbers are at 10 Gyr, for the labeled benchmarks B1 (confined companion mas
   - The declared label, at least ten times lower, holds in 35 of the 47 combinations.
   - The supply is still large: 3,900–42,000 times the cosmic mean density in the Milky Way, 2,500–29,000 in J1630 and 19–220 in Coma. The cosmic mean is a comparison unit only.
 - **Where the mass sits.** What forms is an extended envelope.
-  - At B1 the companions inside r_half are 0.4–3% of the baryons there with the bath's gravity omitted, and 0.03–0.9% with it on.
-  - Across the tested radii the enclosed companion mass rises as r^1.7 to r^2.7.
+  - At B1 the companions inside r_half are 0.4–3% of the baryons there with the bath's gravity omitted, and 0.02–0.9% with it on.
+  - Across the tested radii the enclosed companion mass rises as r^1.5 to r^2.7.
   - At the outermost test radius (25 kpc in the Milky Way, 21 kpc in J1630, 3 Mpc in Coma) companions add 0.5–6% of the baryons' enclosed mass, which is also their share of the acceleration, and 3–13% of the projected mass.
   - The population is still growing at 10 Gyr, with d ln M/d ln t of 1.0–1.4.
 - **The inner benchmark.**
   - Making the interior companion-dominated (B2) takes 2.2–3.9 times the B1 density.
-  - At that density the total confined mass is 16–47 times the baryons in Coma, 88–130 times in J1630 and 410–670 times in the Milky Way.
+  - At that density the total confined mass is 16–47 times the baryons in Coma, 87–130 times in J1630 and 490–670 times in the Milky Way.
 - **The bath's own gravity.**
   - **The static limit.** With its focused excess gravitating, the bath has a stable static state only below a limit density.
-  - **Galaxies.** B1 lies below that limit in nine galaxy combinations at 0.1–10 cm²/g, and there it needs 0.16–0.71 of the gravity-omitted density.
+  - **Galaxies.** B1 lies below that limit in nine galaxy combinations at 0.1–10 cm²/g, and there it needs 0.16–0.67 of the gravity-omitted density.
   - **Coma.** No combination within the regime forms B1 with the bath's gravity on, because every such run loses its static bath: the boundary model's own limit.
   - **What that means for the Coma numbers.** With the bath's gravity omitted, its focused excess inside Coma's r_half is 0.26–5.5 times the baryons, so the Coma results rest on an omission that is not small.
 - **Controls.**
-  - Every combination within the regime is seed-independent: the counted seed changes M(T) by −1% to +8%.
-  - Self-gravity matters in 29 of the 33: a frozen potential forms 0.58–0.97 of the coupled mass.
-- **What leaves.** Each seedless birth's partner escapes. Those partners carry 1.0–1.7 times the confined mass away at 300–500 km/s. Ejections by incoming companions remove a further 0.01–0.72 of it in the galaxies and under 0.4% in Coma.
+  - Every combination within the regime is seed-independent: the counted seed changes M(T) by −1% to +5%.
+  - Self-gravity matters in 29 of the 33: a frozen potential forms 0.59–0.98 of the coupled mass.
+- **What leaves.** Each seedless birth's partner escapes. Those partners carry 1.0–1.7 times the confined mass away at 300–500 km/s. Ejections by incoming companions remove a further 0.01–0.75 of it in the galaxies and under 0.4% in Coma.
 
 Protocol: [protocol.md](protocol.md), declared in 1ccd762 before execution. Code: [mc.py](mc.py) (engine), [formation.py](formation.py) (driver) and [checks.py](checks.py) (suite job). Results: [formation-results.json](formation-results.json).
 
@@ -65,7 +65,7 @@ These are labeled trials and benchmarks, not observational requirements.
 
 The resolution check V8 compares the Milky Way's B1 density (bath S, 1 cm²/g, bath gravity omitted) with a ladder run at twice the tracers and half the step. The two differ by 7.5%, inside the declared 10%.
 
-240 kept runs: 38 thinned (largest mass change from thinning 6.1×10⁻¹⁶ of the final mass); largest resampling mass change 0.27; collisions capped for at least 1% of the mass, or pair probabilities above 1, in 8 runs: J1630 | M | 100 cm2/g | bath gravity omitted, J1630 | M | 1000 cm2/g | bath gravity omitted, J1630 | M | 1000 cm2/g | bath gravity on, J1630 | S | 100 cm2/g | bath gravity omitted.
+240 kept runs: 38 thinned (largest mass change from thinning 3.9×10⁻¹⁶ of the final mass); largest resampling mass change 0.27; collisions capped for at least 1% of the mass, or pair probabilities above 1, in 10 runs: J1630 | M | 100 cm2/g | bath gravity omitted, J1630 | M | 1000 cm2/g | bath gravity omitted, J1630 | M | 1000 cm2/g | bath gravity on, J1630 | S | 100 cm2/g | bath gravity omitted, MW | M | 100 cm2/g | bath gravity omitted.
 
 ## The bath's own gravity: how dense a stable static bath can be
 
@@ -93,15 +93,15 @@ Each system's table gives C1's estimate and the densities that meet B1 (M_sun/kp
 
 | Bath | σ/m | C1 | ρ_B1, bath gravity on | ρ_B1, omitted | B1 check (on / omitted) | ρ_B2, omitted (check) | τ max (on / omitted) | labels (on / omitted) | seed/zero (omitted / on) | frozen/coupled (omitted / on) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| S | 0.1 | 2.2×10⁶ | above the limit; 0.9× limit forms 0.17 M_b | 1.7×10⁶ (2.4×10⁻³) | – / 0.87 | 3.9×10⁶ (1) | – / 0.015 | – / T | 1.02 / – | 0.693 / – |
-| S | 1 | 8.5×10⁵ | 1.6×10⁵ (2.3×10⁻³) | 6×10⁵ (8.3×10⁻³) | 0.91 / 0.96 | 1.3×10⁶ (0.98) | 0.015 / 0.051 | T / T | 1.04 / 1.04 | 0.697 / 0.782 |
-| S | 10 | 7.3×10⁵ | above the limit; 0.9× limit forms 0.046 M_b | 2.4×10⁵ (0.034) | – / 1 | 5.3×10⁵ (0.87) | – / 0.19 | – / – | 1 / – | 0.584 / – |
-| S | 100 | 7.3×10⁵ | above the limit; 0.9× limit forms 0.021 M_b | 2.7×10⁵ (0.37) | – / 0.91 | 8×10⁵ (0.065) | – / 1.2 | – / O | 1 / – | 0.517 / – |
-| S | 1,000 | 7.3×10⁵ | above the limit; 0.9× limit forms 7.8×10⁻³ M_b | not reached | – / – | – (–) | – / – | – / – | – / – | – / – |
-| M | 0.1 | 1.6×10⁶ | 2×10⁵ (2.8×10⁻⁴) | 1.2×10⁶ (1.7×10⁻³) | 1.1 / 0.85 | 3.2×10⁶ (0.91) | 2.4×10⁻³ / 0.011 | T / T | 1.02 / 1 | 0.696 / 0.974 |
-| M | 1 | 5.9×10⁵ | 1.1×10⁵ (1.5×10⁻³) | 4.3×10⁵ (5.9×10⁻³) | 0.96 / 0.96 | 1.1×10⁶ (1.1) | 0.011 / 0.038 | T / T | 1.05 / 1.03 | 0.691 / 0.914 |
+| S | 0.1 | 2.2×10⁶ | above the limit; 0.9× limit forms 0.17 M_b | 1.7×10⁶ (2.4×10⁻³) | – / 0.84 | 3.9×10⁶ (1.1) | – / 0.015 | – / T | 1.04 / – | 0.714 / – |
+| S | 1 | 8.5×10⁵ | 1.6×10⁵ (2.3×10⁻³) | 6×10⁵ (8.3×10⁻³) | 0.92 / 0.95 | 1.3×10⁶ (1.1) | 0.015 / 0.051 | T / T | 1.04 / 1.03 | 0.697 / 0.807 |
+| S | 10 | 7.3×10⁵ | above the limit; 0.9× limit forms 0.048 M_b | 2.4×10⁵ (0.034) | – / 0.97 | 5.3×10⁵ (1.4) | – / 0.19 | – / – | 1.03 / – | 0.587 / – |
+| S | 100 | 7.3×10⁵ | above the limit; 0.9× limit forms 0.021 M_b | 2.7×10⁵ (0.37) | – / 0.91 | 8.1×10⁵ (0.024) | – / 1.2 | – / O | 1.05 / – | 0.504 / – |
+| S | 1,000 | 7.3×10⁵ | above the limit; 0.9× limit forms 7.6×10⁻³ M_b | not reached | – / – | – (–) | – / – | – / – | – / – | – / – |
+| M | 0.1 | 1.6×10⁶ | 2×10⁵ (2.8×10⁻⁴) | 1.2×10⁶ (1.7×10⁻³) | 1.1 / 0.85 | 3.3×10⁶ (1.3) | 2.4×10⁻³ / 0.011 | T / T | 1.02 / 1.01 | 0.686 / 0.976 |
+| M | 1 | 5.9×10⁵ | 1.1×10⁵ (1.5×10⁻³) | 4.3×10⁵ (5.9×10⁻³) | 0.95 / 0.96 | 1.1×10⁶ (1.1) | 0.011 / 0.038 | T / T | 1.05 / 1.04 | 0.691 / 0.914 |
 | M | 10 | 5×10⁵ | 7.5×10⁴ (0.01) | 1.6×10⁵ (0.022) | 0.82 / 1 | 3.8×10⁵ (1.2) | 0.07 / 0.14 | T / – | 0.992 / 1 | 0.597 / 0.747 |
-| M | 100 | 5×10⁵ | above the limit; 0.9× limit forms 0.051 M_b | 9×10⁴ (0.12) | – / 0.87 | 2.7×10⁵ (3) | – / 0.63 | – / O | 0.975 / – | 0.554 / – |
+| M | 100 | 5×10⁵ | above the limit; 0.9× limit forms 0.052 M_b | 9×10⁴ (0.12) | – / 0.87 | 2.7×10⁵ (11) | – / 0.63 | – / O | 0.97 / – | 0.525 / – |
 | M | 1,000 | 5×10⁵ | above the limit; 0.9× limit forms 0.016 M_b | not reached | – / – | – (–) | – / – | – / – | – / – | – / – |
 
 **J1630**
@@ -110,29 +110,29 @@ Each system's table gives C1's estimate and the densities that meet B1 (M_sun/kp
 |---|---|---|---|---|---|---|---|---|---|---|
 | S | 0.1 | 1.5×10⁶ | above the limit; no static bath | 1.2×10⁶ (0.03) | – / 0.84 | 2.8×10⁶ (1.2) | – / 0.011 | – / T | 1.02 / – | 0.685 / – |
 | S | 1 | 5.3×10⁵ | 1.5×10⁵ (0.037) | 3.9×10⁵ (0.096) | 0.89 / 0.82 | 8.6×10⁵ (0.86) | 0.016 / 0.036 | T / T | 1.04 / 1.03 | 0.683 / 0.831 |
-| S | 10 | 4.1×10⁵ | 10⁵ (0.25) | 1.5×10⁵ (0.36) | 0.95 / 0.88 | 2.9×10⁵ (0.44) | 0.1 / 0.14 | – / – | 1.06 / 1.08 | 0.633 / 0.747 |
-| S | 100 | 4.1×10⁵ | above the limit; 0.9× limit forms 0.15 M_b | 8.7×10⁴ (2.2) | – / 0.94 | 1.7×10⁵ (0.23) | – / 0.71 | – / O | 1.01 / – | 0.567 / – |
-| S | 1,000 | 4.1×10⁵ | above the limit; 0.9× limit forms 0.032 M_b | not reached | – / – | – (–) | – / – | – / – | – / – | – / – |
+| S | 10 | 4.1×10⁵ | 9.8×10⁴ (0.24) | 1.5×10⁵ (0.36) | 0.81 / 0.86 | 2.9×10⁵ (0.42) | 0.096 / 0.14 | T / – | 1.05 / 1.05 | 0.637 / 0.725 |
+| S | 100 | 4.1×10⁵ | above the limit; 0.9× limit forms 0.15 M_b | 8.6×10⁴ (2.1) | – / 0.89 | 1.8×10⁵ (1.5) | – / 0.7 | – / O | 0.986 / – | 0.531 / – |
+| S | 1,000 | 4.1×10⁵ | above the limit; 0.9× limit forms 0.031 M_b | not reached | – / – | – (–) | – / – | – / – | – / – | – / – |
 | M | 0.1 | 1.1×10⁶ | 3×10⁵ (7.5×10⁻³) | 9.1×10⁵ (0.023) | 1.1 / 0.88 | 2.4×10⁶ (0.92) | 3.9×10⁻³ / 9.5×10⁻³ | T / T | 1.02 / 1.02 | 0.702 / 0.973 |
 | M | 1 | 3.8×10⁵ | 1.4×10⁵ (0.034) | 2.9×10⁵ (0.073) | 1 / 0.88 | 7.7×10⁵ (1.1) | 0.016 / 0.031 | T / T | 1.03 / 1.03 | 0.681 / 0.911 |
-| M | 10 | 2.8×10⁵ | 6.8×10⁴ (0.17) | 10⁵ (0.26) | 0.98 / 0.89 | 2.4×10⁵ (0.96) | 0.079 / 0.11 | T / – | 1.03 / 1.03 | 0.643 / 0.788 |
-| M | 100 | 2.8×10⁵ | above the limit; 0.9× limit forms 0.6 M_b | 4.5×10⁴ (1.1) | – / 0.8 | 10⁵ (0.42) | – / 0.49 | – / O | 1.05 / – | 0.674 / – |
-| M | 1,000 | 2.8×10⁵ | above the limit; 0.9× limit forms 0.069 M_b | 7.7×10⁵ (191) | – / 1 | 8.1×10⁵ (0.026) | – / 4.3 | – / OU | 5.68 / – | 0.543 / – |
+| M | 10 | 2.8×10⁵ | 6.8×10⁴ (0.17) | 10⁵ (0.26) | 0.98 / 0.89 | 2.4×10⁵ (1.1) | 0.079 / 0.11 | T / – | 1.03 / 1.03 | 0.643 / 0.788 |
+| M | 100 | 2.8×10⁵ | above the limit; 0.9× limit forms 0.6 M_b | 4.5×10⁴ (1.1) | – / 0.8 | 10⁵ (0.5) | – / 0.49 | – / O | 1.03 / – | 0.688 / – |
+| M | 1,000 | 2.8×10⁵ | above the limit; 0.9× limit forms 0.069 M_b | 7.7×10⁵ (191) | – / 0.88 | 8.2×10⁵ (0.024) | – / 4.1 | – / OU | 5.68 / – | 0.543 / – |
 
 **Coma, low bracket**
 
 | Bath | σ/m | C1 | ρ_B1, bath gravity on | ρ_B1, omitted | B1 check (on / omitted) | ρ_B2, omitted (check) | τ max (on / omitted) | labels (on / omitted) | seed/zero (omitted / on) | frozen/coupled (omitted / on) |
 |---|---|---|---|---|---|---|---|---|---|---|
-| S | 0.1 | 1.1×10⁴ | above the limit; static bath lost | 8,835 (7.1×10⁻⁴) | – / 0.89 | 2.5×10⁴ (0.96) | – / 0.01 | – / T | 1.05 / – | 0.717 / – |
+| S | 0.1 | 1.1×10⁴ | above the limit; static bath lost | 8,835 (7.1×10⁻⁴) | – / 0.89 | 2.5×10⁴ (0.97) | – / 0.01 | – / T | 1.05 / – | 0.717 / – |
 | S | 1 | 3,453 | above the limit; static bath lost | 2,821 (2.3×10⁻³) | – / 0.9 | 8,264 (0.9) | – / 0.032 | – / T | 1 / – | 0.705 / – |
 | S | 10 | 1,086 | above the limit; static bath lost | 939 (7.6×10⁻³) | – / 0.94 | 3,053 (1) | – / 0.1 | – / – | 1.05 / – | 0.703 / – |
-| S | 100 | 338 | above the limit; static bath lost | 339 (0.027) | – / 1 | 1,620 (1.1) | – / 0.33 | – / O | 0.996 / – | 0.677 / – |
-| S | 1,000 | 102 | 49 (0.039) | 145 (0.12) | 0.99 / 0.93 | 6,529 (0.6) | 0.52 / 0.98 | O / O | 1.03 / 1.01 | 0.702 / 1.06 |
+| S | 100 | 338 | above the limit; static bath lost | 339 (0.027) | – / 1 | 1,620 (1) | – / 0.33 | – / O | 0.996 / – | 0.677 / – |
+| S | 1,000 | 102 | 49 (0.039) | 145 (0.12) | 0.99 / 0.93 | 6,648 (0.78) | 0.52 / 0.98 | O / O | 1.03 / 1.01 | 0.702 / 1.06 |
 | M | 0.1 | 8,914 | above the limit; static bath lost | 7,640 (6.2×10⁻⁴) | – / 0.97 | 2.3×10⁴ (1) | – / 9.5×10⁻³ | – / T | 1.01 / – | 0.741 / – |
 | M | 1 | 2,813 | above the limit; no static bath | 2,440 (2×10⁻³) | – / 0.97 | 7,709 (0.97) | – / 0.03 | – / T | 1.01 / – | 0.732 / – |
 | M | 10 | 884 | above the limit; static bath lost | 795 (6.4×10⁻³) | – / 0.97 | 2,917 (1.2) | – / 0.095 | – / T | 1.01 / – | 0.761 / – |
 | M | 100 | 274 | above the limit; static bath lost | 280 (0.023) | – / 1 | 1,602 (1.2) | – / 0.3 | – / O | 1.04 / – | 0.744 / – |
-| M | 1,000 | 82 | above the limit; 0.9× limit forms 0.56 M_b | 120 (0.097) | – / 0.97 | 5,668 (0.49) | – / 0.92 | – / O | 1.01 / – | 0.747 / – |
+| M | 1,000 | 82 | above the limit; 0.9× limit forms 0.56 M_b | 120 (0.097) | – / 0.99 | 5,740 (0.45) | – / 0.92 | – / O | 1.02 / – | 0.737 / – |
 
 **Coma, high bracket**
 
@@ -142,16 +142,16 @@ Each system's table gives C1's estimate and the densities that meet B1 (M_sun/kp
 | S | 1 | 2,968 | above the limit; static bath lost | 2,415 (4×10⁻³) | – / 0.9 | 7,755 (1.1) | – / 0.032 | – / T | 1.04 / – | 0.711 / – |
 | S | 10 | 929 | above the limit; static bath lost | 795 (0.013) | – / 0.92 | 2,796 (1) | – / 0.1 | – / – | 1.04 / – | 0.705 / – |
 | S | 100 | 285 | above the limit; static bath lost | 286 (0.047) | – / 1 | 1,403 (0.88) | – / 0.33 | – / O | 1.04 / – | 0.704 / – |
-| S | 1,000 | 84 | above the limit; static bath lost | 122 (0.2) | – / 0.97 | 6,093 (0.66) | – / 0.98 | – / O | 1 / – | 0.684 / – |
+| S | 1,000 | 84 | above the limit; static bath lost | 122 (0.2) | – / 0.97 | 6,048 (0.59) | – / 0.98 | – / O | 1 / – | 0.684 / – |
 | M | 0.1 | 8,435 | above the limit; static bath lost | 7,441 (1.2×10⁻³) | – / 0.99 | 2.3×10⁴ (0.9) | – / 0.01 | – / T | 1 / – | 0.788 / – |
 | M | 1 | 2,657 | above the limit; static bath lost | 2,373 (3.9×10⁻³) | – / 0.97 | 7,714 (1) | – / 0.032 | – / T | 1.01 / – | 0.795 / – |
 | M | 10 | 830 | above the limit; static bath lost | 779 (0.013) | – / 0.99 | 2,848 (1.1) | – / 0.1 | – / – | 1.04 / – | 0.79 / – |
 | M | 100 | 253 | above the limit; static bath lost | 273 (0.045) | – / 1 | 1,573 (1.2) | – / 0.32 | – / O | 1.01 / – | 0.776 / – |
-| M | 1,000 | 73 | above the limit; 0.9× limit forms 0.45 M_b | 118 (0.19) | – / 1 | 5,663 (0.47) | – / 0.98 | – / O | 1.02 / – | 0.789 / – |
+| M | 1,000 | 73 | above the limit; 0.9× limit forms 0.45 M_b | 118 (0.19) | – / 1 | 5,666 (0.39) | – / 0.98 | – / O | 1.02 / – | 0.789 / – |
 
 - **C1 as a guide.** The fixed-background control C1 uses a prescribed seed-shaped population. At 0.1–1 cm²/g it overestimates the coupled B1 density by a factor of 1.2–1.4. In the galaxies at 10 cm²/g its evaporation term holds it on a plateau, and it overestimates by about 3.
-- **The bath's gravity lowers the requirement.** Where a static bath exists, letting its excess gravitate deepens the potential, and B1 then needs 0.16–0.71 of the gravity-omitted density.
-- **Outside the regime.** At 100–1,000 cm²/g the bath becomes opaque inside r_half (τ up to 4.3), so those rows lie outside the model's regime. The one combination labeled U, J1630 M at 1,000 cm²/g, also reached the sub-step cap: with 18% of its verification run's mass and 65% of its seed control's. Its seed/zero ratio of 5.7 reflects that, not the physics.
+- **The bath's gravity lowers the requirement.** Where a static bath exists, letting its excess gravitate deepens the potential, and B1 then needs 0.16–0.67 of the gravity-omitted density.
+- **Outside the regime.** At 100–1,000 cm²/g the bath becomes opaque inside r_half (τ up to 4.1), so those rows lie outside the model's regime. The one combination labeled U, J1630 M at 1,000 cm²/g, also reached the sub-step cap: with 18% of its verification run's mass and 65% of its seed control's. Its seed/zero ratio of 5.7 reflects that, not the physics.
 
 ## Where the formed companions sit
 
@@ -159,21 +159,21 @@ Within the regime, at B1: the companion mass inside r_half over the baryons ther
 
 | Combination | inside r_half | slope | d ln M/d ln t | companions/baryons at the test radii, enclosed (projected) | bath excess inside r_half | tail |
 |---|---|---|---|---|---|---|
-| Milky Way S 0.1, omitted | 4.4×10⁻³ | 1.9 | 1.3 | 5 kpc 3.1×10⁻³ (9.8×10⁻³); 10 kpc 8.5×10⁻³ (0.023); 25 kpc 0.034 (0.077) | 0.02 | 0.26 |
-| Milky Way S 1, omitted | 4.6×10⁻³ | 1.9 | 1.3 | 5 kpc 3.5×10⁻³ (0.01); 10 kpc 8.5×10⁻³ (0.024); 25 kpc 0.035 (0.082) | 6.2×10⁻³ | 0.14 |
-| Milky Way S 1, on | 3.6×10⁻⁴ | 2.6 | 1.3 | 5 kpc 2.2×10⁻⁴ (2.4×10⁻³); 10 kpc 8.9×10⁻⁴ (6.5×10⁻³); 25 kpc 6.9×10⁻³ (0.029) | 2.3×10⁻³ | 0 |
-| Milky Way S 10, omitted | 4.2×10⁻³ | 2 | 0.99 | 5 kpc 2.8×10⁻³ (9.8×10⁻³); 10 kpc 8×10⁻³ (0.023); 25 kpc 0.035 (0.08) | 1.5×10⁻³ | 0.33 |
-| Milky Way M 0.1, omitted | 4.2×10⁻³ | 2 | 1.4 | 5 kpc 3.3×10⁻³ (0.01); 10 kpc 8.4×10⁻³ (0.023); 25 kpc 0.036 (0.079) | 0.025 | 0.18 |
-| Milky Way M 0.1, on | 2.5×10⁻⁴ | 2.7 | 1 | 5 kpc 1.2×10⁻⁴ (2.4×10⁻³); 10 kpc 5.4×10⁻⁴ (6.8×10⁻³); 25 kpc 4.8×10⁻³ (0.032) | 6.9×10⁻³ | 0 |
+| Milky Way S 0.1, omitted | 4.7×10⁻³ | 1.9 | 1.4 | 5 kpc 3.6×10⁻³ (0.01); 10 kpc 9×10⁻³ (0.023); 25 kpc 0.034 (0.075) | 0.02 | 0.3 |
+| Milky Way S 1, omitted | 5×10⁻³ | 1.9 | 1.3 | 5 kpc 3.7×10⁻³ (0.011); 10 kpc 9.4×10⁻³ (0.025); 25 kpc 0.036 (0.083) | 6.2×10⁻³ | 0.22 |
+| Milky Way S 1, on | 5.1×10⁻⁴ | 2.3 | 1.3 | 5 kpc 3.8×10⁻⁴ (2.5×10⁻³); 10 kpc 10⁻³ (6.7×10⁻³); 25 kpc 6.9×10⁻³ (0.03) | 2.3×10⁻³ | 0.12 |
+| Milky Way S 10, omitted | 6×10⁻³ | 1.7 | 1 | 5 kpc 5.5×10⁻³ (0.012); 10 kpc 9.6×10⁻³ (0.024); 25 kpc 0.036 (0.079) | 1.5×10⁻³ | 0.11 |
+| Milky Way M 0.1, omitted | 4×10⁻³ | 2 | 1.3 | 5 kpc 2.9×10⁻³ (9.7×10⁻³); 10 kpc 8.7×10⁻³ (0.023); 25 kpc 0.036 (0.078) | 0.025 | 0.27 |
+| Milky Way M 0.1, on | 1.7×10⁻⁴ | 2.7 | 1 | 5 kpc 1.4×10⁻⁴ (2.6×10⁻³); 10 kpc 9.2×10⁻⁴ (7.3×10⁻³); 25 kpc 5×10⁻³ (0.034) | 6.9×10⁻³ | 0.23 |
 | Milky Way M 1, omitted | 4.2×10⁻³ | 2.1 | 1.4 | 5 kpc 2.8×10⁻³ (0.01); 10 kpc 8.3×10⁻³ (0.024); 25 kpc 0.039 (0.086) | 8.2×10⁻³ | 0.23 |
-| Milky Way M 1, on | 3.3×10⁻⁴ | 2.6 | 1.1 | 5 kpc 2.8×10⁻⁴ (2.6×10⁻³); 10 kpc 1.2×10⁻³ (7.1×10⁻³); 25 kpc 7.3×10⁻³ (0.031) | 2.7×10⁻³ | 0 |
+| Milky Way M 1, on | 8.1×10⁻⁴ | 2 | 1.1 | 5 kpc 5.6×10⁻⁴ (2.9×10⁻³); 10 kpc 1.5×10⁻³ (7.4×10⁻³); 25 kpc 7.6×10⁻³ (0.031) | 2.7×10⁻³ | 0.49 |
 | Milky Way M 10, omitted | 4.5×10⁻³ | 2 | 1.1 | 5 kpc 3.1×10⁻³ (0.01); 10 kpc 8.7×10⁻³ (0.024); 25 kpc 0.038 (0.082) | 2.4×10⁻³ | 0.25 |
 | Milky Way M 10, on | 1.3×10⁻³ | 2.2 | 1.2 | 5 kpc 7.4×10⁻⁴ (4.3×10⁻³); 10 kpc 3.1×10⁻³ (0.011); 25 kpc 0.014 (0.042) | 1.4×10⁻³ | 0.28 |
 | J1630 S 0.1, omitted | 0.011 | 2.2 | 1.4 | 3 kpc 1.3×10⁻³ (6.7×10⁻³); 10 kpc 0.01 (0.027); 21 kpc 0.028 (0.066) | 0.031 | 0.32 |
 | J1630 S 1, omitted | 0.01 | 1.7 | 1.3 | 3 kpc 3.6×10⁻³ (7.9×10⁻³); 10 kpc 9.8×10⁻³ (0.026); 21 kpc 0.028 (0.065) | 9.6×10⁻³ | 0.23 |
 | J1630 S 1, on | 1.8×10⁻³ | 2.3 | 1.2 | 3 kpc 2.9×10⁻⁴ (2.1×10⁻³); 10 kpc 1.6×10⁻³ (9.3×10⁻³); 21 kpc 6.9×10⁻³ (0.028) | 4.5×10⁻³ | 0.081 |
-| J1630 S 10, omitted | 0.013 | 2 | 1.1 | 3 kpc 2.7×10⁻³ (8.1×10⁻³); 10 kpc 0.013 (0.03); 21 kpc 0.033 (0.07) | 2.9×10⁻³ | 0.22 |
-| J1630 S 10, on | 5×10⁻³ | 2 | 1.4 | 3 kpc 1.3×10⁻³ (4.5×10⁻³); 10 kpc 4.7×10⁻³ (0.018); 21 kpc 0.016 (0.048) | 2.3×10⁻³ | 0.19 |
+| J1630 S 10, omitted | 0.013 | 1.5 | 1.2 | 3 kpc 5.4×10⁻³ (0.01); 10 kpc 0.013 (0.029); 21 kpc 0.032 (0.068) | 2.9×10⁻³ | 0.18 |
+| J1630 S 10, on | 6.8×10⁻³ | 2 | 1.3 | 3 kpc 1.4×10⁻³ (4.6×10⁻³); 10 kpc 6.5×10⁻³ (0.018); 21 kpc 0.017 (0.045) | 2.2×10⁻³ | 0.18 |
 | J1630 M 0.1, omitted | 0.011 | 2.2 | 1.4 | 3 kpc 1.3×10⁻³ (7.3×10⁻³); 10 kpc 0.011 (0.029); 21 kpc 0.031 (0.072) | 0.038 | 0.24 |
 | J1630 M 0.1, on | 2.1×10⁻³ | 2.4 | 1 | 3 kpc 3.6×10⁻⁴ (2.6×10⁻³); 10 kpc 1.7×10⁻³ (0.013); 21 kpc 8.3×10⁻³ (0.038) | 0.019 | 0.07 |
 | J1630 M 1, omitted | 9.3×10⁻³ | 2.4 | 1.3 | 3 kpc 1.2×10⁻³ (6.4×10⁻³); 10 kpc 8.6×10⁻³ (0.028); 21 kpc 0.03 (0.072) | 0.012 | 0.23 |
@@ -194,7 +194,7 @@ Within the regime, at B1: the companion mass inside r_half over the baryons ther
 | Coma, high bracket M 10, omitted | 0.03 | 2.4 | 1.3 | 300 kpc 6.9×10⁻³ (0.023); 1000 kpc 0.019 (0.047); 2000 kpc 0.04 (0.083); 3000 kpc 0.061 (0.13) | 0.38 | 0.2 |
 
 - **An outer envelope.** The companions form an envelope that is dilute where the baryons are. At B1 its mass is mostly beyond the tested radii, so it adds little to motions or lensing there.
-- **The Milky Way's shape.** Across 5–25 kpc the Milky Way's companion mass grows as r^1.9–2.7. CR-2 found that the measured curve needs roughly r^1.3 there.
+- **The Milky Way's shape.** Across 5–25 kpc the Milky Way's companion mass grows as r^1.7–2.7. CR-2 found that the measured curve needs roughly r^1.3 there.
 - **The inner benchmark.** Moving the interior to B2 takes 2.2–3.9 times the density. By then the total confined mass is tens to hundreds of times the baryons (table above).
 
 ## Energy exported
@@ -203,10 +203,10 @@ Within the regime, with the bath's gravity omitted: mass exported per unit of co
 
 | Combination | seedless partners | ejections | evaporation | orbit escapes |
 |---|---|---|---|---|
-| Milky Way S 0.1 | 1 (300–500 km/s) | 0.049 (200–300 km/s) | 2.1×10⁻⁶ (100–200 km/s) | 0 |
-| Milky Way S 1 | 1.2 (300–500 km/s) | 0.17 (200–300 km/s) | 8.4×10⁻⁵ (100–200 km/s) | 0 |
-| Milky Way S 10 | 1.7 (300–500 km/s) | 0.72 (200–300 km/s) | 1.3×10⁻³ (100–200 km/s) | 0 |
-| Milky Way M 0.1 | 1 (300–500 km/s) | 0.032 (100–200 km/s) | 5.5×10⁻⁶ (100–200 km/s) | 0 |
+| Milky Way S 0.1 | 1 (300–500 km/s) | 0.05 (200–300 km/s) | 0 | 0 |
+| Milky Way S 1 | 1.2 (300–500 km/s) | 0.18 (200–300 km/s) | 3.8×10⁻⁵ (50–100 km/s) | 0 |
+| Milky Way S 10 | 1.7 (300–500 km/s) | 0.75 (200–300 km/s) | 1.2×10⁻³ (100–200 km/s) | 0 |
+| Milky Way M 0.1 | 1 (300–500 km/s) | 0.035 (100–200 km/s) | 3.2×10⁻⁵ (100–200 km/s) | 0 |
 | Milky Way M 1 | 1.1 (300–500 km/s) | 0.11 (100–200 km/s) | 9.1×10⁻⁵ (100–200 km/s) | 0 |
 | Milky Way M 10 | 1.4 (300–500 km/s) | 0.43 (100–200 km/s) | 1.1×10⁻³ (50–100 km/s) | 0 |
 | J1630 S 0.1 | 1 (300–500 km/s) | 0.039 (200–300 km/s) | 5×10⁻⁵ (50–100 km/s) | 0 |
@@ -287,13 +287,14 @@ The protocol's method was written before the code. Where the implementation depa
 
 ### How the reported run was reached
 
-There were three canonical launches, and only the third is reported.
+There were four canonical launches, and only the fourth is reported.
 - **The first** stopped after three minutes on a NaN birth rate (item 15).
 - **The second** ran to completion in 6,790 s, and every validation passed. Its counted-seed controls were nevertheless wrong: in the Milky Way and J1630 they formed between 0.003 and 6.9 times the zero-seed mass at the same density, where a seed of 1% of the baryons should change little. Two defects were behind this, and the second affected every run:
   - **Splitting and thinning.** Splitting at every collision of unequal masses multiplied tracers in the dense seed cores, with 2–9×10⁵ splits per run. The repeated random-removal thinning that followed moved up to 135 times the final mass, and each thinning doubled the birth masses, so births nearly stopped. Items 2 and 4 replace both.
   - **Switched-off shells.** A production shell whose first pool happened to hold no confined event was switched off for the whole run (item 1). The Milky Way's outermost shell carries a quarter of the production. Twelve runs at one density fell into clusters at 4.7, 6.6 and 8.1×10¹⁰ M☉, exactly according to which of the two outermost shells had been switched off.
 - **After both fixes**, four zero-seed runs at that density (Milky Way, S, 1 cm²/g, bath gravity omitted) agree within ±1%, and four seed controls lie 3% above them. The suite's checks passed, and the regression anchor was regenerated.
-- **The third** canonical run started from scratch and took 4,878 s on 16 workers.
+- **The third** canonical run started from scratch and took 4,878 s on 16 workers. Its verification rounds 2–4 had drawn their seeds in the order runs finished, so they depended on timing.
+- **The fourth** reran from scratch after that was fixed (a53f45c), in 8,462 s on 7 workers while other runs shared the machine. Its rounds 0 and 1 reproduced the third run's line for line. Rounds 2–4 changed with their seeds, and the ranges above moved slightly: for example the Milky Way's shape across 5–25 kpc went from r^1.9–2.7 to r^1.7–2.7, and the gravity-on requirement from 0.16–0.71 to 0.16–0.67 of the gravity-omitted density.
 
 ## What this does and does not show
 
@@ -324,8 +325,8 @@ To the source-side radiation budget and spectrum check, and then to stage 2B:
 ## Reproduce
 
 ```sh
-python research_work/results/companion-formation/formation.py     # about 80 minutes on 16 workers (CC2A_WORKERS)
+python research_work/results/companion-formation/formation.py     # about 80 minutes on 16 otherwise idle workers (CC2A_WORKERS)
 python research_work/results/companion-formation/checks.py        # suite job: V2, V3, V5-V7, C0 and the regression anchor
 ```
 
-The driver compares its output with the archived results and overwrites them only with `--canonical`. Wall-clock timings are excluded from the comparison. Everything else, including the suite job's short-run anchor, reproduced exactly on the same machine and thread settings.
+The driver compares its output with the archived results and overwrites them only with `--canonical`. Wall-clock timings are excluded from the comparison. Everything else, including the suite job's short-run anchor, reproduces exactly on the same machine and thread settings. Since a53f45c the verification rounds take their seeds in the order the tasks were issued, so the output no longer depends on the number of workers or on the order in which runs finish.

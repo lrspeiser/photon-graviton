@@ -12,7 +12,7 @@
   - Rotation RMSE: 6.8–8.7 km/s over the 38 Eilers bins, and 2.3–6.8 over the inner 20.
   - Enclosed-mass slope across 8–20 kpc: 1.03–1.31, against the required 1.31. Two of the five lie within the run-to-run scatter (about ±0.1) of G2's lower edge.
   - Best rate: q\* = 1,160–1,440 M☉ kpc⁻³ Gyr⁻¹, nearly the same in every combination.
-  - Stage 2A's elastic envelope grew as r^1.7–2.7, and CR-2's condensate as r^2.7. The same machinery, fed by a cold source, gives the Milky Way's shape.
+  - Stage 2A's elastic envelope grew as r^1.5–2.7, and CR-2's condensate as r^2.7. The same machinery, fed by a cold source, gives the Milky Way's shape.
 - **The mechanism is cold radial infall, as the protocol expected.** At these speeds the field binds 98–100% of what it makes inside R_b. The companions fall in on nearly radial orbits (anisotropy β = 0.97–0.997 at 250 kpc), so their density goes as 1/(r²·v_esc).
 - **The inner shape does not come from the bath accounting or from scattering.** With the bath's gravity omitted and no collisions, the 3 km/s run still fits to 8.0 km/s with slope 1.32, and the 10 km/s run to 7.7 km/s with slope 1.35; both fail only the cost gate. At 5–25 kpc the bath term is 0.3–4.2% of the companion mass in the five passes. What matters is where the companions are born, their low angular momentum and their infall.
 - **G3 passes on the net, not on the confined mass.**
@@ -42,7 +42,7 @@ Results: [f1-results.json](f1-results.json).
 The revision: [revision-protocol.md](revision-protocol.md) (declared in 9232e07, amended in 1585c9f), [revision.py](revision.py), and [revision-results.json](revision-results.json).
 
 **Why it was run.** It follows the owner's review of 68eb17c. Supply stopped being the principal obstacle; where the mass goes became it.
-- **Stage 2A's result.** Its elastic capture mechanism builds an outer envelope: M(<r) ∝ r^1.7–2.7, while the Milky Way needs about r^1.3.
+- **Stage 2A's result.** Its elastic capture mechanism builds an outer envelope: M(<r) ∝ r^1.5–2.7, while the Milky Way needs about r^1.3.
 - **Why more supply won't do.** A larger source with the same phase space would only build a heavier envelope.
 - **So stage 2B tests a phase-space distribution as well as an energy supply.** The owner's first toy was a coherent field decaying into companion pairs, which also meets RC-1's momentum objection.
 

@@ -6,6 +6,13 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.
 
+- **Stage 2A's archive regenerated after the seed-order fix** (a53f45c). Stage 2A's verification rounds 2–4 had drawn their seeds in the order runs finished, so they depended on timing. The canonical run was repeated from scratch with the fix (8,462 s on 7 workers). Rounds 0 and 1 reproduced the archived run line for line, every validation still passes, and no conclusion changes. What moved:
+  - **Shape.** The Milky Way's companion mass across 5–25 kpc grows as r^1.7–2.7 (was r^1.9–2.7), and across every system and tested radius as r^1.5–2.7 (was r^1.7–2.7).
+  - **The bath's gravity.** With it on, B1 needs 0.16–0.67 of the gravity-omitted density (was 0.16–0.71), and the companions inside r_half are 0.02–0.9% of the baryons there (was 0.03–0.9%).
+  - **B2.** The total confined mass is 490–670 times the baryons in the Milky Way (was 410–670). J1630's lower end, 87, had been printed as 88.
+  - **Controls.** The counted seed changes M(T) by −1% to +5% (was +8%). A frozen potential forms 0.59–0.98 of the coupled mass (was 0.58–0.97). Ejections remove 0.01–0.75 of the confined mass in the galaxies (was 0.72).
+  - **Labels.** One more combination is transparent (26 of 47). Ten runs rather than eight reached the collision cap, all at 100–1,000 cm²/g, outside the regime.
+  - The current documents and 2B-F1's report now cite the new ranges; declared protocols keep the numbers they were written with.
 - **RC-2a stage 1: the 300 kpc zone had chosen 2B-F1's fit** (protocol 1585c9f, Amendment 1 in 2a25cb3). Cold collisionless decay at 3 km/s, at 2B-F1's rate, with the donor counted and every daughter followed in an open region.
   - **Only at 300 kpc.** The fit exists in the 300 kpc region (RMSE 7.9 km/s), and there it matches 2B-F1's static-bath result. From 600 kpc outward the inner rotation overshoots by about 170 km/s.
   - **Convergence to the wrong galaxy.** The apertures converge from 600 kpc (statistically from 1,200) to 8×10¹² M☉ inside 200 kpc, with circular speeds of 410–446 km/s.

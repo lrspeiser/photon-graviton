@@ -666,7 +666,7 @@ Under the same interaction, collisions between two incoming companions can leave
 
 The [stage-2A report](../../research_work/results/companion-formation/report.md) recomputes the supply. All three collision classes of CF-1's law act together, and mass, energy, orbits, bath depletion and gravity evolve together, on the Milky Way, J1630 and both Coma brackets.
 - **Lower supply.** Within the model's regime (0.1–10 cm²/g), the incident density that forms a baryon-equal population in 10 Gyr is 2.8–1,600 times below CF-1's seeded-only requirement, with the bath's gravity omitted. It is still 19–42,000 times the cosmic mean.
-- **An outer envelope.** The formed companions sit far out. At that benchmark they are 0.03–3% of the baryons inside the baryonic half-mass radius, and 0.5–6% at the outermost test radius (3–13% in projection). An interior dominated by companions needs 2.2–3.9 times the density, with a total confined mass 16–670 times the baryons.
+- **An outer envelope.** The formed companions sit far out. At that benchmark they are 0.02–3% of the baryons inside the baryonic half-mass radius, and 0.5–6% at the outermost test radius (3–13% in projection). An interior dominated by companions needs 2.2–3.9 times the density, with a total confined mass 16–670 times the baryons.
 - **Controls.** The result does not depend on a seed, and the companions' own gravity matters.
 - **Limits.** With the bath's own gravity, Coma keeps no static bath under this boundary model, and omitting that gravity is not a small approximation there.
 
