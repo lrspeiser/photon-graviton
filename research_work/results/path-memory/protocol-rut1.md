@@ -91,6 +91,18 @@ Declared here and run only after stage 2's map exists. Start from Φ_mem = 0, ev
 
 A stable oscillating orbit is not a failure merely for not circularizing, and a circularizing orbit is not successful support if it loses most of its angular momentum and spirals in. The same declared parameters carry over from stage 2, and an already-built-track control runs beside the empty-field formation so a formation problem can be told from a mature-field problem.
 
+**The numerical method, declared.** The history integral is not evaluated by storing the trajectory — that costs the whole past at every step. Instead the field's *gradient* is carried on a fixed Cartesian grid, because differentiating the stored potential numerically would reintroduce exactly the readout error PM-2A stage B measured. From ∂Φ/∂t = −Φ/τ − q·Σᵢ exp[−|x−Xᵢ|²/(2w²)] it follows that
+
+    ∂g/∂t = −g/τ + q·Σᵢ (x − Xᵢ)/w²·exp[−|x − Xᵢ|²/(2w²)],   g ≡ ∇Φ,   a_mem = −g,
+
+so each component has an analytic source and the acceleration is read by interpolating g rather than by differencing Φ. Motion is planar and the sources lie in the plane, where the three-dimensional Gaussian factorizes exactly, so a two-dimensional grid is not an approximation; a vertical extension belongs to goal 2's robustness sequence. The decay is integrated exactly over a step and the source deposited at the midpoint,
+
+    g(t+h) = e^{−h/τ}·g(t) + τ(1 − e^{−h/τ})·S(x_mid),
+
+whose weight tends to h as h → 0, so **halving the timestep does not double the writing rate** — that invariance is a declared gate, not an assumption, and is tested directly by comparing the field built at h and at h/2.
+
+**Acceptance criteria.** Convergence is a gate: every reported run is repeated at half the timestep and half the grid spacing, and a conclusion that moves under refinement is reported as unresolved rather than as a result. The writing rate is set from the mature-ring prediction as a *label* only; the support actually achieved is **measured from the evolved field** and reported as such. No body's own footprint is excluded from its own force — the self-force is finite because the Gaussian's gradient vanishes at zero separation, and it is the drag mechanism under test. A body leaving the grid is flagged and its run reported as terminated, never silently truncated.
+
 ## The vector extension is behind a narrower dependency
 
 Retained as a proposal, not made the first formation implementation. Its sideways term does no direct work, since v·[v × ∇×A] = 0, but the force law also carries −∂A/∂t, which cannot be dropped while the field grows, and its source law, sign and evolution are unspecified. Its action, source coupling and conservation analysis proceed separately; a full orbital simulation waits for a declared evolution law, so that it stays an independent physical proposal rather than an adjustable repair applied to whichever scalar run needs help.
