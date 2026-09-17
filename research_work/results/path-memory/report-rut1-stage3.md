@@ -1,5 +1,7 @@
 # RUT-1 stage 3: the collective helps enormously, and still does not survive a 2% perturbation
 
+> **Superseded by [report-rut3.md](report-rut3.md).** Its ejection claims did not survive a close-passage check: the timestep was fixed while the local dynamical time collapses inward, and the no-memory control was a circular orbit, which cannot detect that. The inward migration reported below stands; the ejections, the `bounded` flags and the termination times do not. Its attribution of the trouble to "continued writing" is also narrowed there by split primed controls.
+
 [protocol-rut1.md](protocol-rut1.md), stage 3 declared in 390bc37 with its numerical method in 868fe92, both before this run. Bodies and field are evolved together from Φ_mem = 0. No prescribed trajectory, no velocity resets, no target speed, and no writing rate adjusted to reach a chosen orbit. Support, stability, settling and formation cost are reported separately.
 
 **The milestone is not reached.** The owner's next milestone is a *freely evolving, perturbed collective system* that builds its field from zero, gains measurable inward support, and stays bounded. The perfectly symmetric sixteen-writer ring does survive twenty orbits keeping 80% of its angular momentum. A **2% phase-and-speed perturbation breaks it up within thirteen orbits**, while the identical disturbed start with the memory switched off stays bounded and keeps its angular momentum to ten figures. The failure is attributable to the field, not to the disturbed initial orbits.

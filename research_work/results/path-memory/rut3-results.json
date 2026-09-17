@@ -1,0 +1,328 @@
+{
+ "experiment": "RUT-1 stage 3: formation from an empty field, and the two-stage candidate",
+ "protocol": "protocol-rut1.md",
+ "models": {
+  "one_stage": "dC/dt = S - C/tau_keep (the preserved baseline)",
+  "two_stage": "tau_form dE/dt = S - E,  dC/dt = E - C/tau_keep",
+  "shared": "Phi = -C, a_mem = grad C; the one-stage model is exactly tau_form = 0 and both have steady state C = tau_keep S, so the comparison does not weaken the equilibrium field",
+  "owed": "no field energy or momentum budget, and a formation delay is not spatial causality"
+ },
+ "gates": {
+  "close_passage": {
+   "fixed_step": [
+    {
+     "pericentre": 0.11,
+     "h": 0.01,
+     "energy_error": 4.32953795037605e-09,
+     "angular_momentum_error": 7.549516567451064e-15,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.11,
+     "h": 0.002,
+     "energy_error": 1.212363542890671e-13,
+     "angular_momentum_error": 2.8199664825478976e-14,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.11,
+     "h": 0.0005,
+     "energy_error": 6.394884621840902e-14,
+     "angular_momentum_error": 1.4432899320127035e-14,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.063,
+     "h": 0.01,
+     "energy_error": 0.04433942654879386,
+     "angular_momentum_error": 1.5765166949677223e-14,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.063,
+     "h": 0.002,
+     "energy_error": 4.518607710224387e-14,
+     "angular_momentum_error": 1.0325074129013956e-14,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.063,
+     "h": 0.0005,
+     "energy_error": 1.27675647831893e-13,
+     "angular_momentum_error": 8.393286066166183e-14,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.03,
+     "h": 0.01,
+     "energy_error": 18.104275793478458,
+     "angular_momentum_error": 1.2279066652354231e-13,
+     "spuriously_unbound": true
+    },
+    {
+     "pericentre": 0.03,
+     "h": 0.002,
+     "energy_error": 0.0003142087229655033,
+     "angular_momentum_error": 2.864375403532904e-14,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.03,
+     "h": 0.0005,
+     "energy_error": 4.2721381987576024e-13,
+     "angular_momentum_error": 9.547918011776346e-15,
+     "spuriously_unbound": false
+    }
+   ],
+   "adaptive_step": [
+    {
+     "pericentre": 0.11,
+     "eta": 0.01,
+     "energy_error": 8.08398608265204e-05,
+     "angular_momentum_error": 5.329070518200751e-15,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.063,
+     "eta": 0.01,
+     "energy_error": 0.00022926180208404645,
+     "angular_momentum_error": 4.218847493575595e-15,
+     "spuriously_unbound": false
+    },
+    {
+     "pericentre": 0.03,
+     "eta": 0.01,
+     "energy_error": 0.0006663807394102772,
+     "angular_momentum_error": 2.4980018054066022e-14,
+     "spuriously_unbound": false
+    }
+   ],
+   "worst_energy_error_at_coarsest_fixed": 18.104275793478458,
+   "worst_energy_error_adaptive": 0.0006663807394102772,
+   "angular_momentum_is_no_guide": 1.2279066652354231e-13,
+   "improvement_over_coarsest_fixed": 27168.065826002243,
+   "tolerance": 0.001,
+   "passed": true,
+   "statement": "at pericentre 0.063, the radius RUT-1 plunges reached, fixed h = 0.01 carries a 4.4% energy error while its angular momentum stays good to 1e-14; at 0.03 it throws a bound orbit out and calls it unbound. The adaptive step removes that"
+  },
+  "two_state_ode": {
+   "stepped": 4.803626320395177,
+   "ode": 4.8036263203961065,
+   "absolute_difference": 9.299228054260311e-13,
+   "relative_difference": 1.936228954946273e-13,
+   "steady_state_C": 43.982297150257104,
+   "tolerance": 1e-10,
+   "passed": true,
+   "note": "the steady state tau_keep*S is the same as the one-stage model, so the two-stage response does not weaken the equilibrium field"
+  },
+  "transfer_function": {
+   "omega_per_period": [
+    0.0,
+    0.09999999999999999,
+    1.0,
+    10.0
+   ],
+   "magnitude_ratio": [
+    1.0,
+    0.9578262852211512,
+    0.3162277660168379,
+    0.033314830232638475
+   ],
+   "zero_frequency_unchanged": 0.0,
+   "passed": true,
+   "caveat": "a statement about one harmonic of a prescribed writing pattern, NOT a formula for the drag of a freely evolving collective, where transient torques of either sign stay in the accounting"
+  },
+  "convergence_on_a_disturbed_run": {
+   "baseline": {
+    "radius_change_fraction": -0.017421806304569465,
+    "angular_momentum_final_over_initial": 0.9993506883162285,
+    "support_fraction_mean_late": 0.011759735635941059
+   },
+   "shifts": {
+    "radius_change_fraction": {
+     "half_timestep": 5.177681738688378e-06,
+     "half_spacing": 2.4855966427317355e-06
+    },
+    "angular_momentum_final_over_initial": {
+     "half_timestep": 1.9554743573291233e-06,
+     "half_spacing": 1.9180870913793058e-07
+    },
+    "support_fraction_mean_late": {
+     "half_timestep": 1.582435019527144e-05,
+     "half_spacing": 5.367976331147051e-08
+    }
+   },
+   "worst_shift": 1.582435019527144e-05,
+   "tolerance": 0.005,
+   "passed": true,
+   "note": "the earlier convergence check used the unperturbed ring for ten periods, which never approaches the centre and so could not test the close passages the breakup claim depends on"
+  }
+ },
+ "matched_comparison": {
+  "rows": [
+   {
+    "writers": 16,
+    "width_ratio": 0.1,
+    "seed": 1,
+    "jitter": 0.02,
+    "one_stage": {
+     "status": "entered_unresolved_centre",
+     "orbits": 9.989736661152849,
+     "support_fraction_mean_late": -0.035102238622906824,
+     "angular_momentum_final_over_initial": 0.7117539805182629,
+     "radius_change_fraction": -0.34074094806924027,
+     "radial_velocity_rms_late": 0.25452660849044967,
+     "per_body_L_ratio_spread": 0.1916269154721706,
+     "any_body_positive_energy": false
+    },
+    "two_stage": {
+     "status": "completed",
+     "orbits": 20.0,
+     "support_fraction_mean_late": 0.021153759189026032,
+     "angular_momentum_final_over_initial": 0.9959833492035894,
+     "radius_change_fraction": -0.016415954045677306,
+     "radial_velocity_rms_late": 0.0859652044261779,
+     "per_body_L_ratio_spread": 0.04960407474077888,
+     "any_body_positive_energy": false
+    }
+   },
+   {
+    "writers": 32,
+    "width_ratio": 0.2,
+    "seed": 1,
+    "jitter": 0.02,
+    "one_stage": {
+     "status": "completed",
+     "orbits": 20.0,
+     "support_fraction_mean_late": -0.03957338555081072,
+     "angular_momentum_final_over_initial": 0.8374259676983719,
+     "radius_change_fraction": -0.26083380275063817,
+     "radial_velocity_rms_late": 0.1394267230236487,
+     "per_body_L_ratio_spread": 0.28564311318934466,
+     "any_body_positive_energy": false
+    },
+    "two_stage": {
+     "status": "completed",
+     "orbits": 20.0,
+     "support_fraction_mean_late": 0.038008724079389024,
+     "angular_momentum_final_over_initial": 0.9749445179718486,
+     "radius_change_fraction": -0.057431367342770434,
+     "radial_velocity_rms_late": 0.09139843569607824,
+     "per_body_L_ratio_spread": 0.06099985360988258,
+     "any_body_positive_energy": false
+    }
+   },
+   {
+    "writers": 32,
+    "width_ratio": 0.2,
+    "seed": 2,
+    "jitter": 0.02,
+    "one_stage": {
+     "status": "completed",
+     "orbits": 20.0,
+     "support_fraction_mean_late": -0.01656352696769064,
+     "angular_momentum_final_over_initial": 0.8643982512813827,
+     "radius_change_fraction": -0.20272142544814398,
+     "radial_velocity_rms_late": 0.15365844068135368,
+     "per_body_L_ratio_spread": 0.2730552997148895,
+     "any_body_positive_energy": false
+    },
+    "two_stage": {
+     "status": "completed",
+     "orbits": 20.0,
+     "support_fraction_mean_late": 0.03676275339135251,
+     "angular_momentum_final_over_initial": 0.9941203384592722,
+     "radius_change_fraction": -0.029249130347548946,
+     "radial_velocity_rms_late": 0.059216288819651464,
+     "per_body_L_ratio_spread": 0.03451886200089882,
+     "any_body_positive_energy": false
+    }
+   }
+  ],
+  "orbits": 20.0,
+  "jitter": 0.02,
+  "tau_form_periods": 3.0,
+  "completed_one_stage": 2,
+  "completed_two_stage": 3,
+  "cases": 3,
+  "two_stage_completes_more": true,
+  "note": "identical initial conditions under both equations; the writing rate, retention and width are held fixed, so any difference is the maturation process"
+ },
+ "split_primed_controls": {
+  "rows": [
+   {
+    "writers": 1,
+    "control": "frozen_field",
+    "status": "completed",
+    "orbits": 12.0,
+    "radius_change_fraction": -3.94207143594727e-08,
+    "angular_momentum_final_over_initial": 1.0000004549991341
+   },
+   {
+    "writers": 1,
+    "control": "decaying_no_writing",
+    "status": "completed",
+    "orbits": 12.0,
+    "radius_change_fraction": 0.009744649168031971,
+    "angular_momentum_final_over_initial": 1.0000002168382487
+   },
+   {
+    "writers": 1,
+    "control": "decaying_with_writing",
+    "status": "entered_unresolved_centre",
+    "orbits": 1.415777856818023,
+    "radius_change_fraction": -0.7215046823310378,
+    "angular_momentum_final_over_initial": 0.01465778095196033
+   },
+   {
+    "writers": 16,
+    "control": "frozen_field",
+    "status": "completed",
+    "orbits": 12.0,
+    "radius_change_fraction": 2.916759793691881e-07,
+    "angular_momentum_final_over_initial": 1.0000000009522518
+   },
+   {
+    "writers": 16,
+    "control": "decaying_no_writing",
+    "status": "completed",
+    "orbits": 12.0,
+    "radius_change_fraction": 0.00974482136832222,
+    "angular_momentum_final_over_initial": 1.000000000679792
+   },
+   {
+    "writers": 16,
+    "control": "decaying_with_writing",
+    "status": "completed",
+    "orbits": 12.0,
+    "radius_change_fraction": -0.020423429943604465,
+    "angular_momentum_final_over_initial": 0.8726799291592677
+   }
+  ],
+  "note": "comparing the three isolates whether the trouble is the field already present, its decay, or the new uneven structure a moving body adds"
+ },
+ "no_memory_control": {
+  "status": "completed",
+  "angular_momentum_final_over_initial": 0.9999999999999948,
+  "radius_change_fraction": 0.002693724920595608
+ },
+ "termination_labels": {
+  "completed": "completed",
+  "left_domain": "left_domain",
+  "unresolved": "entered_unresolved_centre",
+  "note": "never interchanged. Unbinding is asserted only from a total energy including the memory potential, which is why the scalar field is carried and not only its gradient"
+ },
+ "passed": true,
+ "what_this_is_not": "one planar ring around a fixed centre, an instantaneous Gaussian kernel with no spatial causality, and no energy or momentum accounting for the field. A run that has not crossed a boundary but is heating is not a success",
+ "input_sha256": {
+  "protocol-rut1.md": "c5216be7628f759068fcf11d6b96e28c8ec8915c241524be95dae4d1305602e9"
+ },
+ "checks_short_run": {
+  "close_passage_adaptive": 0.0006663807394102772,
+  "two_state_ode": 9.299228054260311e-13,
+  "convergence_worst": 1.582435019527144e-05,
+  "completed_one_stage": 2,
+  "completed_two_stage": 3
+ },
+ "runtime_seconds": 844.7
+}

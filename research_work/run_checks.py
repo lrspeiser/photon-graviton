@@ -128,6 +128,7 @@ def main():
         ('path-memory/pm2a.py', []),
         ('path-memory/pm3.py', []),
         ('path-memory/rut1.py', []),
+        ('path-memory/rut3.py', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
