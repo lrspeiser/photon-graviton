@@ -117,6 +117,84 @@ The declared comparison is matched: same bodies, same total writing rate, same r
 
 **Acceptance criteria.** Convergence is a gate: every reported run is repeated at half the timestep and half the grid spacing, and a conclusion that moves under refinement is reported as unresolved rather than as a result. The writing rate is set from the mature-ring prediction as a *label* only; the support actually achieved is **measured from the evolved field** and reported as such. No body's own footprint is excluded from its own force — the self-force is finite because the Gaussian's gradient vanishes at zero separation, and it is the drag mechanism under test. A body leaving the grid is flagged and its run reported as terminated, never silently truncated.
 
+## Stage 4: the instrumented hundred-period campaign, after the owner's review of 78b172a
+
+The two-stage response stays the leading candidate. Stage 4 does not rewrite it; it asks whether the radial motion left in its runs is **initial adjustment, coherent oscillation, or a slow instability**, and it is declared here in full before any of its runs.
+
+### Corrections 12–14
+
+**Correction 12: the close-passage gate measured the endpoint, not the passage.** It read the energy error only after the integration finished, and a symplectic step returns close to its starting energy at the same orbital phase while carrying appreciable error through pericentre. At pericentre 0.063 with fixed h = 0.002 the final relative energy error is 4.5×10⁻¹⁴ and the **maximum 6.05×10⁻²**; so the statement in 454155d that those errors "converge away by h = 0.002" was an endpoint statement and is withdrawn. The gate now records the maximum energy error along the orbit, the maximum position error against the analytic Kepler solution, and the minimum radius, and it binds at the edge of the resolved domain, r = 0.25, where the formation runs stop: with the runs' η = 0.01 the maximum energy error must stay below 10⁻³ and the maximum position error below 5×10⁻³ over ten orbits (measured before declaration at 9.4×10⁻⁵ and 6.7×10⁻⁴). Deeper passages are reported, not gated. None of this invalidates the two-stage results, whose runs never go below 0.25.
+
+**Correction 13: a positive specific orbital energy is not an escape test in an evolving field.** The quantity carried as "total energy" is a body's instantaneous specific orbital energy ε_i = |v_i|²/2 − GM/r_i − C(X_i,t). Along the declared equations dε_i/dt = −∂C/∂t at X_i exactly — for the two-stage model C/τ_keep − E — so a positive value at one instant does not establish permanent escape and a negative one does not guarantee boundness. The fields are renamed and the note corrected. The same identity supplies a much stronger check: R_i(t) = ε_i(t) − ε_i(0) + ∫₀ᵗ ∂C/∂t(X_i(s),s) ds must vanish, testing the moving body, the sampled force, the sampled potential and the field update together. It is not the matter–field energy budget.
+
+**Correction 14: the two-stage field is less mature at 20 T0 than reported.** "86% of mature" was the one-stage constant-source figure. For the two-stage model, C(t)/C_∞ = 1 − [τ_keep e^{−t/τ_keep} − τ_form e^{−t/τ_form}]/(τ_keep − τ_form): **80.72%** at 20 T0, 99.04% at 50 T0, 99.9935% at 100 T0 — reference values for a constant source, not measurements of the moving system's field. Separately, rut3's sixteen-writer comparison ended at 10.0 T0 for the one-stage model and 20 T0 for the two-stage one: the completion outcomes are directly comparable, the final-window heating and migration numbers are **not** measurements over identical intervals, and stage 4 therefore records every model at common times. The transfer-function gate is also rebuilt to drive the shipped update with a sinusoid and fit amplitude and phase, rather than evaluating H(ω) algebraically; it realizes the quadrature-ratio crossover the owner derived, [1 + τ_form/τ_keep]/[1 + (ωτ_form)²] = 1 at a drive period of 2π√(τ_form τ_keep) = 34.4 T0, which suggests maturation suppresses the fast wake while modestly **strengthening** the phase-lagged response to slow variation — a hypothesis to test, not a proof of slow instability.
+
+### The frozen equation and the declared runs
+
+Frozen exactly as in rut3.py: the two-stage model with τ_keep = 10 T0 and τ_form = 3 T0, the one-stage baseline (τ_form = 0), the Gaussian footprint, the 10% writing label, 2% phase and speed jitter, adaptive stepping with η = 0.01 and h_max = 0.01, r_min = 0.25. Horizon **100 T0**. Twenty runs, all declared now:
+
+| group | runs |
+|---|---|
+| Formation from an empty field | two-stage, one-stage and **no-memory** for each of 16 writers w/R 0.1 seed 1; 32 writers w/R 0.2 seeds 1 and 2 (nine runs) |
+| Mature matched challenge | two-stage and one-stage, both initialized with the same supported ring field and the same perturbed bodies launched in equilibrium with it, the two-stage excitation set consistently (E = C/τ_keep); for the 16/0.1 and 32/0.2 seed 1 configurations (four runs) |
+| Grid-rotation control | two-stage 32/0.2 seed 1 with the whole initial condition turned 0.3 rad on the Cartesian grid (one run) |
+| Refinement over the full horizon | **every** two-stage formation configuration at half the timestep and step parameter, and at half the grid spacing (six runs) |
+
+Refining all three configurations removes any choice of which case to refine after seeing the outcomes. The primed challenge is a diagnostic, not proof of formation: it separates "the two-stage response genuinely handles perturbations better" from "much of the benefit is that its force-producing field develops more slowly".
+
+### What is measured during the integration
+
+- **The ε-consistency residual** R_i above, accumulated every step.
+- **The torque identity**: L_i(t) − L_i(0) = ∫(x × ∇C)_z dt = ∫∂C/∂θ dt, every step — exact for a central Newtonian force.
+- **Mode-resolved memory power and torque on every body**, by angular band m ∈ {0, 1, 2, 3–4, 5–8, 9–16, 17–32, 33–64}: C sampled on five rings around each body's own radius, Fourier-decomposed in angle and reassembled at the body; specific torque ∂C_b/∂θ and power v·∇C_b, the radial derivative by a fourth-order stencil. These are accumulated at a cadence of 0.0025 T0, which calibration showed is needed to resolve the reversible epicyclic power exchange in the narrow-track case, and the bands must sum to the every-step totals. Bands extend past the writer-spacing scales of 16 and 32, where fresh fine structure lives. The axisymmetric band carries no torque but can still do work.
+- **Radial mean flow and dispersion** in radial bins of 0.1: the mean radial velocity, and the radial and azimuthal dispersions about each bin's own mean — so a coherent contraction or breathing is not counted as heating, which the bare radial-velocity RMS reported in rut3 could not distinguish.
+- **Angular-mode band powers** of the writing pattern S, the excitation E and the matured field C on fixed rings r ∈ {0.8, 0.9, 1.0, 1.1}.
+- Scalars every 0.05 T0, spectra every 0.5 T0, full per-body states and band accumulations at 5, 10, 20, 50 and 100 T0, and the exact termination state separately from the last scheduled output.
+
+### Analysis, declared
+
+**Windows** early (0, 20], mid (20, 50] and late (50, 100] T0 — the late window beginning where the constant-source two-stage maturity passes 99%. Within each window, block means over 5 T0 and an ordinary least-squares trend on the block means with its standard error, which tames the autocorrelation of dense samples.
+
+**Numerical uncertainty** for each two-stage configuration and each window quantity is the larger of its differences from the half-step and half-spacing runs, for both the window mean and the window change. If the dynamics are chaotic this includes trajectory divergence, which is the honest uncertainty of a single-trajectory statement.
+
+**A window change is resolved** only if it exceeds three standard errors **and** three times its numerical uncertainty.
+
+**Classification of the late window**, with thresholds fixed now:
+
+| verdict | declared test |
+|---|---|
+| candidate heating or instability | any of: secular migration (mean radius change resolved and above 0.01); angular-momentum drift (resolved and above 0.01); dispersion growth (radial dispersion change resolved, positive, above 10% of its window mean and above 0.001); excursion growth (radius spread change resolved, positive, above 10% and above 0.005) |
+| bounded coherent oscillation | none of the above, and the standard deviation of the mean radial flow exceeds the mean radial dispersion |
+| formation adjustment, then stationary | none of the above, and the late-window mean radius differs by more than 0.01 from the **matched no-memory control's** late-window mean |
+| stationary | none of the above |
+
+The adjustment test is referenced to the no-memory control rather than to the starting radius because a smoke test of this pipeline, run at a compressed horizon before declaration, classified a *no-memory* ring as adjusted: every jittered body starts at r = 1 on a slightly eccentric orbit, so the ring's instantaneous mean radius breathes coherently at the orbital frequency, and comparing two instants measures epicyclic phase. Positive support is claimed only if the late-window mean support is positive and exceeds three times its numerical uncertainty. Several flags may hold at once and all are reported; the verdict is the first row that applies. **A contraction that stops is not a failure, and neither is a bounded breathing mode** — the target is to eliminate continuing secular migration and growing random motion, not every radius change.
+
+### Gates
+
+| gate | requirement |
+|---|---|
+| ε-consistency | worst relative residual over all memory runs and bodies below 10⁻³, and the half-step run's residual at least twice smaller than its base run's |
+| torque identity | worst \|ΔL − ∫∂C/∂θ dt\| below 10⁻¹⁰ |
+| band attribution | at the last checkpoint, bands reproduce the every-step torque to 2% and work to 5% of the summed per-body magnitudes (work is cadence-limited) |
+| grid rotation | rotated and unrotated late-window means of radius, dispersion, support and angular momentum agree within the larger of three times the numerical uncertainty and the seed-1-to-seed-2 spread |
+
+### What follows the diagnosis
+
+Only what the diagnosis identifies changes next: bounded breathing → assess it and test slower preparation or broader initial orbital distributions before adding damping; fine-scale angular structure carrying torque or heating → more distributed writers, finite-width annuli and a declared maturation-time scan (τ_form/T0 = 1, 3, 6 at fixed writing rate and retention, run long enough that success cannot mean delayed onset); a growing slow global mode → compare its frequency with the field response, since longer maturation may not help; a work-balance residual that grows under refinement → fix deposition, readout or integration before interpreting physics; a stable field with decaying support → storage and source normalization, not orbital damping. **No third force term, hand-damped radial velocity or imposed symmetry** is added before that diagnosis.
+
+### Stage 4R, in parallel: a reciprocal, energy-accounted form of the same response
+
+A proposed completion from the owner's review, not a change to the model under test. With writing q_i = α m_i and ρ = Σ m_i δ(x − X_i), the two-stage equation is τ_form C_tt + γ C_t + C/τ_keep = α K∗ρ with γ = 1 + τ_form/τ_keep. Writing the Gaussian kernel as a symmetric convolution square, W∗W = K, and C = W∗h, the same dynamics follow from τ_form h_tt + γ h_t + h/τ_keep = α W∗ρ with matter acceleration −∇Φ_N + ∇(W∗h), so source coupling and force come from one interaction term. For a time-independent external potential,
+
+    H = Σ m_i[|v_i|²/2 + Φ_N(X_i) − C(X_i)] + τ_form/(2α)∫h_t² + 1/(2ατ_keep)∫h²,   dH/dt = −(γ/α)∫h_t² ≤ 0,
+
+a derived dissipation rate rather than a variable added afterwards to absorb missing energy; the cancellation was checked in a finite-mode representation to 10⁻¹⁰ before declaration. The benchmark: a spectral periodic box in which deposition and force readout use the same finite mode set, first reproducing the grid two-stage C at prescribed body trajectories, then free motion with the discrete balance H(t) − H(0) + ∫(γ/α)∫h_t² converging under refinement. Its limits are stated now: it assumes writing proportional to mass and the symmetric kernel, it does not identify the physical reservoir, it provides no spatial causality, and it does not finish the momentum accounting for the reservoir and the fixed centre.
+
+### What stage 4 is not
+
+One planar ring around a fixed centre, an instantaneous Gaussian kernel, a writing rate set from a label, and no field energy budget for the grid model. The hashes of formation.py, longrun.py, rut4.py, rut3.py and rut1.py are recorded at launch, so the committed code can be verified to be the code that ran. A verdict classifies **this frozen equation under these conditions** and is not a verdict on gravitational memory in general. `rut4.py` is the science driver; `rut4_checks.py` is the suite job, rerunning a deterministic 5 T0 prefix against the committed series and recomputing the analysis from them.
+
 ## The vector extension is behind a narrower dependency
 
 Retained as a proposal, not made the first formation implementation. Its sideways term does no direct work, since v·[v × ∇×A] = 0, but the force law also carries −∂A/∂t, which cannot be dropped while the field grows, and its source law, sign and evolution are unspecified. Its action, source coupling and conservation analysis proceed separately; a full orbital simulation waits for a declared evolution law, so that it stays an independent physical proposal rather than an adjustable repair applied to whichever scalar run needs help.
