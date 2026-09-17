@@ -9,101 +9,236 @@
  },
  "gates": {
   "close_passage": {
-   "fixed_step": [
-    {
-     "pericentre": 0.11,
-     "h": 0.01,
-     "energy_error": 4.32953795037605e-09,
-     "angular_momentum_error": 7.549516567451064e-15,
-     "spuriously_unbound": false
-    },
-    {
-     "pericentre": 0.11,
-     "h": 0.002,
-     "energy_error": 1.212363542890671e-13,
-     "angular_momentum_error": 2.8199664825478976e-14,
-     "spuriously_unbound": false
-    },
-    {
-     "pericentre": 0.11,
-     "h": 0.0005,
-     "energy_error": 6.394884621840902e-14,
-     "angular_momentum_error": 1.4432899320127035e-14,
-     "spuriously_unbound": false
-    },
-    {
-     "pericentre": 0.063,
-     "h": 0.01,
-     "energy_error": 0.04433942654879386,
-     "angular_momentum_error": 1.5765166949677223e-14,
-     "spuriously_unbound": false
-    },
-    {
-     "pericentre": 0.063,
-     "h": 0.002,
-     "energy_error": 4.518607710224387e-14,
-     "angular_momentum_error": 1.0325074129013956e-14,
-     "spuriously_unbound": false
-    },
-    {
-     "pericentre": 0.063,
-     "h": 0.0005,
-     "energy_error": 1.27675647831893e-13,
-     "angular_momentum_error": 8.393286066166183e-14,
-     "spuriously_unbound": false
-    },
-    {
-     "pericentre": 0.03,
-     "h": 0.01,
-     "energy_error": 18.104275793478458,
-     "angular_momentum_error": 1.2279066652354231e-13,
-     "spuriously_unbound": true
-    },
-    {
-     "pericentre": 0.03,
-     "h": 0.002,
-     "energy_error": 0.0003142087229655033,
-     "angular_momentum_error": 2.864375403532904e-14,
-     "spuriously_unbound": false
-    },
-    {
-     "pericentre": 0.03,
-     "h": 0.0005,
-     "energy_error": 4.2721381987576024e-13,
-     "angular_momentum_error": 9.547918011776346e-15,
-     "spuriously_unbound": false
-    }
-   ],
    "adaptive_step": [
     {
+     "pericentre": 0.25,
+     "eta": 0.01,
+     "h": null,
+     "max_energy_error": 9.365106075875929e-05,
+     "final_energy_error": 1.3253000085144961e-06,
+     "max_position_error": 0.0006678244048426486,
+     "max_angular_momentum_error": 1.4765966227514582e-14,
+     "minimum_radius": 0.2500016113145227
+    },
+    {
+     "pericentre": 0.25,
+     "eta": 0.005,
+     "h": null,
+     "max_energy_error": 2.7845412544635906e-05,
+     "final_energy_error": 9.1280572289687e-07,
+     "max_position_error": 0.000282335678994072,
+     "max_angular_momentum_error": 8.43769498715119e-15,
+     "minimum_radius": 0.25000021180899545
+    },
+    {
      "pericentre": 0.11,
      "eta": 0.01,
-     "energy_error": 8.08398608265204e-05,
-     "angular_momentum_error": 5.329070518200751e-15,
-     "spuriously_unbound": false
+     "h": null,
+     "max_energy_error": 0.0005294966508895271,
+     "final_energy_error": 8.08398608265204e-05,
+     "max_position_error": 0.01462775768113097,
+     "max_angular_momentum_error": 1.0436096431476471e-14,
+     "minimum_radius": 0.10999871976465413
+    },
+    {
+     "pericentre": 0.11,
+     "eta": 0.005,
+     "h": null,
+     "max_energy_error": 0.00013033620808933222,
+     "final_energy_error": 1.151347035910355e-05,
+     "max_position_error": 0.002158996244552802,
+     "max_angular_momentum_error": 3.419486915845482e-14,
+     "minimum_radius": 0.10999974884679731
     },
     {
      "pericentre": 0.063,
      "eta": 0.01,
-     "energy_error": 0.00022926180208404645,
-     "angular_momentum_error": 4.218847493575595e-15,
-     "spuriously_unbound": false
+     "h": null,
+     "max_energy_error": 0.0012208522656322884,
+     "final_energy_error": 0.00022926180208404645,
+     "max_position_error": 0.05354262611527456,
+     "max_angular_momentum_error": 6.439293542825908e-15,
+     "minimum_radius": 0.06299871782105945
+    },
+    {
+     "pericentre": 0.063,
+     "eta": 0.005,
+     "h": null,
+     "max_energy_error": 0.0002864930989758818,
+     "final_energy_error": 3.0341446915937986e-05,
+     "max_position_error": 0.007272664055018139,
+     "max_angular_momentum_error": 2.0650148258027912e-14,
+     "minimum_radius": 0.06299971961250195
     },
     {
      "pericentre": 0.03,
      "eta": 0.01,
-     "energy_error": 0.0006663807394102772,
-     "angular_momentum_error": 2.4980018054066022e-14,
-     "spuriously_unbound": false
+     "h": null,
+     "max_energy_error": 0.003134396026041486,
+     "final_energy_error": 0.0006663807394102772,
+     "max_position_error": 0.1511230399812923,
+     "max_angular_momentum_error": 3.0753177782116836e-14,
+     "minimum_radius": 0.029999196282940302
+    },
+    {
+     "pericentre": 0.03,
+     "eta": 0.005,
+     "h": null,
+     "max_energy_error": 0.0007130936582981917,
+     "final_energy_error": 8.518075407482062e-05,
+     "max_position_error": 0.02888340695487533,
+     "max_angular_momentum_error": 7.771561172376096e-15,
+     "minimum_radius": 0.029999824970516547
     }
    ],
-   "worst_energy_error_at_coarsest_fixed": 18.104275793478458,
-   "worst_energy_error_adaptive": 0.0006663807394102772,
-   "angular_momentum_is_no_guide": 1.2279066652354231e-13,
-   "improvement_over_coarsest_fixed": 27168.065826002243,
-   "tolerance": 0.001,
+   "fixed_step": [
+    {
+     "pericentre": 0.25,
+     "eta": null,
+     "h": 0.01,
+     "max_energy_error": 0.005318713496929917,
+     "final_energy_error": 3.6548541970660153e-13,
+     "max_position_error": 0.037018802564138004,
+     "max_angular_momentum_error": 5.218048215738236e-15,
+     "minimum_radius": 0.2502220888841537
+    },
+    {
+     "pericentre": 0.25,
+     "eta": null,
+     "h": 0.002,
+     "max_energy_error": 0.00021332685186870037,
+     "final_energy_error": 2.531308496145357e-14,
+     "max_position_error": 0.0014832905532061206,
+     "max_angular_momentum_error": 3.175237850427948e-14,
+     "minimum_radius": 0.2500089021115877
+    },
+    {
+     "pericentre": 0.11,
+     "eta": null,
+     "h": 0.01,
+     "max_energy_error": 0.15391622896992985,
+     "final_energy_error": 4.32953795037605e-09,
+     "max_position_error": 0.38764915678860473,
+     "max_angular_momentum_error": 8.548717289613705e-15,
+     "minimum_radius": 0.1110685869073126
+    },
+    {
+     "pericentre": 0.11,
+     "eta": null,
+     "h": 0.002,
+     "max_energy_error": 0.006322064809626937,
+     "final_energy_error": 1.212363542890671e-13,
+     "max_position_error": 0.015793905086864624,
+     "max_angular_momentum_error": 3.774758283725532e-14,
+     "minimum_radius": 0.11004316537986772
+    },
+    {
+     "pericentre": 0.063,
+     "eta": null,
+     "h": 0.01,
+     "max_energy_error": 1.3213313291477924,
+     "final_energy_error": 0.04433942654879386,
+     "max_position_error": 1.9561591459219754,
+     "max_angular_momentum_error": 1.6209256159527285e-14,
+     "minimum_radius": 0.06615199488453422
+    },
+    {
+     "pericentre": 0.063,
+     "eta": null,
+     "h": 0.002,
+     "max_energy_error": 0.06046888634200798,
+     "final_energy_error": 4.518607710224387e-14,
+     "max_position_error": 0.08133030749006688,
+     "max_angular_momentum_error": 1.8540724511240114e-14,
+     "minimum_radius": 0.06312868085276645
+    },
+    {
+     "pericentre": 0.03,
+     "eta": null,
+     "h": 0.01,
+     "max_energy_error": 21.659621080599695,
+     "final_energy_error": 18.104275793478458,
+     "max_position_error": 246.48915359836906,
+     "max_angular_momentum_error": 6.891820447663122e-12,
+     "minimum_radius": 0.03924832630838519
+    },
+    {
+     "pericentre": 0.03,
+     "eta": null,
+     "h": 0.002,
+     "max_energy_error": 1.1529312570199437,
+     "final_energy_error": 0.0003142087229655033,
+     "max_position_error": 0.7109561366850705,
+     "max_angular_momentum_error": 3.175237850427948e-14,
+     "minimum_radius": 0.03055583207405247
+    }
+   ],
+   "resolved_edge": {
+    "pericentre": 0.25,
+    "eta": 0.01,
+    "h": null,
+    "max_energy_error": 9.365106075875929e-05,
+    "final_energy_error": 1.3253000085144961e-06,
+    "max_position_error": 0.0006678244048426486,
+    "max_angular_momentum_error": 1.4765966227514582e-14,
+    "minimum_radius": 0.2500016113145227
+   },
+   "tolerances": {
+    "max_energy_error": 0.001,
+    "max_position_error": 0.005
+   },
    "passed": true,
-   "statement": "at pericentre 0.063, the radius RUT-1 plunges reached, fixed h = 0.01 carries a 4.4% energy error while its angular momentum stays good to 1e-14; at 0.03 it throws a bound orbit out and calls it unbound. The adaptive step removes that"
+   "endpoint_is_no_guide": [
+    {
+     "pericentre": 0.25,
+     "h": 0.01,
+     "final": 3.6548541970660153e-13,
+     "maximum": 0.005318713496929917
+    },
+    {
+     "pericentre": 0.25,
+     "h": 0.002,
+     "final": 2.531308496145357e-14,
+     "maximum": 0.00021332685186870037
+    },
+    {
+     "pericentre": 0.11,
+     "h": 0.01,
+     "final": 4.32953795037605e-09,
+     "maximum": 0.15391622896992985
+    },
+    {
+     "pericentre": 0.11,
+     "h": 0.002,
+     "final": 1.212363542890671e-13,
+     "maximum": 0.006322064809626937
+    },
+    {
+     "pericentre": 0.063,
+     "h": 0.01,
+     "final": 0.04433942654879386,
+     "maximum": 1.3213313291477924
+    },
+    {
+     "pericentre": 0.063,
+     "h": 0.002,
+     "final": 4.518607710224387e-14,
+     "maximum": 0.06046888634200798
+    },
+    {
+     "pericentre": 0.03,
+     "h": 0.01,
+     "final": 18.104275793478458,
+     "maximum": 21.659621080599695
+    },
+    {
+     "pericentre": 0.03,
+     "h": 0.002,
+     "final": 0.0003142087229655033,
+     "maximum": 1.1529312570199437
+    }
+   ],
+   "statement": "judged on the worst error along the orbit, not its endpoint. At the edge of the resolved domain the run stepping keeps both energy and position errors small; below it, errors grow as expected, which is why runs stop at r = 0.25"
   },
   "two_state_ode": {
    "stepped": 4.803626320395177,
@@ -116,21 +251,147 @@
    "note": "the steady state tau_keep*S is the same as the one-stage model, so the two-stage response does not weaken the equilibrium field"
   },
   "transfer_function": {
-   "omega_per_period": [
-    0.0,
-    0.09999999999999999,
-    1.0,
-    10.0
+   "rows": [
+    {
+     "model": "one_stage",
+     "drive_period_T0": 5.0,
+     "measured": {
+      "re": 0.3953863503998086,
+      "im": -4.968539494209413
+     },
+     "analytic": {
+      "re": 0.39538356207336356,
+      "im": -4.9685363758393715
+     },
+     "amplitude_error": 6.680517308232936e-07,
+     "phase_error": 5.080345488739368e-07
+    },
+    {
+     "model": "one_stage",
+     "drive_period_T0": 20.0,
+     "measured": {
+      "re": 5.780525232835833,
+      "im": -18.16000251419795
+     },
+     "analytic": {
+      "re": 5.7805096444447255,
+      "im": -18.160006632992495
+     },
+     "amplitude_error": 4.215757964942668e-08,
+     "phase_error": 8.449721708991831e-07
+    },
+    {
+     "model": "one_stage",
+     "drive_period_T0": 34.41,
+     "measured": {
+      "re": 14.496772123677848,
+      "im": -26.470813973582647
+     },
+     "analytic": {
+      "re": 14.496791293728615,
+      "im": -26.470800946819118
+     },
+     "amplitude_error": 7.347439390237298e-08,
+     "phase_error": 7.644342927548564e-07
+    },
+    {
+     "model": "one_stage",
+     "drive_period_T0": 100.0,
+     "measured": {
+      "re": 45.04773853869657,
+      "im": -28.304323852122174
+     },
+     "analytic": {
+      "re": 45.04772433683886,
+      "im": -28.30431996751022
+     },
+     "amplitude_error": 2.648757082557296e-07,
+     "phase_error": 8.019303643358455e-08
+    },
+    {
+     "model": "two_stage",
+     "drive_period_T0": 5.0,
+     "measured": {
+      "re": -1.2053116694098145,
+      "im": -0.4245983469746925
+     },
+     "analytic": {
+      "re": -1.205316832835566,
+      "im": -0.4245989670981751
+     },
+     "amplitude_error": 3.972184538847401e-06,
+     "phase_error": 8.848016910256717e-07
+    },
+    {
+     "model": "two_stage",
+     "drive_period_T0": 20.0,
+     "measured": {
+      "re": -6.002787657903682,
+      "im": -12.502483297747583
+     },
+     "analytic": {
+      "re": -6.002810521229617,
+      "im": -12.502491002676551
+     },
+     "amplitude_error": 1.2143473253622972e-06,
+     "phase_error": 1.245659227766538e-06
+    },
+    {
+     "model": "two_stage",
+     "drive_period_T0": 34.41,
+     "measured": {
+      "re": -0.0028940315883346605,
+      "im": -26.469247844205636
+     },
+     "analytic": {
+      "re": -0.0028669373522142967,
+      "im": -26.469230458706818
+     },
+     "amplitude_error": 6.569305874837283e-07,
+     "phase_error": 1.023540710409776e-06
+    },
+    {
+     "model": "two_stage",
+     "drive_period_T0": 100.0,
+     "measured": {
+      "re": 38.34991230277577,
+      "im": -35.533109381870645
+     },
+     "analytic": {
+      "re": 38.34989197106754,
+      "im": -35.533104300446304
+     },
+     "amplitude_error": 3.513233544083505e-07,
+     "phase_error": 1.9301701825735762e-07
+    }
    ],
-   "magnitude_ratio": [
-    1.0,
-    0.9578262852211512,
-    0.3162277660168379,
-    0.033314830232638475
-   ],
-   "zero_frequency_unchanged": 0.0,
+   "worst_amplitude_error": 3.972184538847401e-06,
+   "worst_phase_error": 1.245659227766538e-06,
+   "quadrature_ratio_two_over_one": {
+    "5": {
+     "measured": 0.08545737584848442,
+     "analytic": 0.08545755429363129
+    },
+    "20": {
+     "measured": 0.6884626413445056,
+     "analytic": 0.6884629094772708
+    },
+    "34.41": {
+     "measured": 0.9999408356169714,
+     "analytic": 0.9999406709258457
+    },
+    "100": {
+     "measured": 1.2553950967885947,
+     "analytic": 1.2553950895564285
+    }
+   },
+   "crossover_period_T0": 34.41442325727286,
+   "tolerances": {
+    "amplitude": 0.002,
+    "phase": 0.002
+   },
    "passed": true,
-   "caveat": "a statement about one harmonic of a prescribed writing pattern, NOT a formula for the drag of a freely evolving collective, where transient torques of either sign stay in the accounting"
+   "caveat": "a statement about one harmonic of a prescribed writing pattern, NOT a formula for the drag or heating of a freely evolving collective; a phase-shifted response becomes heating only through its coupling to moving matter"
   },
   "convergence_on_a_disturbed_run": {
    "baseline": {
@@ -173,7 +434,7 @@
      "radius_change_fraction": -0.34074094806924027,
      "radial_velocity_rms_late": 0.25452660849044967,
      "per_body_L_ratio_spread": 0.1916269154721706,
-     "any_body_positive_energy": false
+     "any_body_positive_specific_orbital_energy": false
     },
     "two_stage": {
      "status": "completed",
@@ -183,7 +444,7 @@
      "radius_change_fraction": -0.016415954045677306,
      "radial_velocity_rms_late": 0.0859652044261779,
      "per_body_L_ratio_spread": 0.04960407474077888,
-     "any_body_positive_energy": false
+     "any_body_positive_specific_orbital_energy": false
     }
    },
    {
@@ -199,7 +460,7 @@
      "radius_change_fraction": -0.26083380275063817,
      "radial_velocity_rms_late": 0.1394267230236487,
      "per_body_L_ratio_spread": 0.28564311318934466,
-     "any_body_positive_energy": false
+     "any_body_positive_specific_orbital_energy": false
     },
     "two_stage": {
      "status": "completed",
@@ -209,7 +470,7 @@
      "radius_change_fraction": -0.057431367342770434,
      "radial_velocity_rms_late": 0.09139843569607824,
      "per_body_L_ratio_spread": 0.06099985360988258,
-     "any_body_positive_energy": false
+     "any_body_positive_specific_orbital_energy": false
     }
    },
    {
@@ -225,7 +486,7 @@
      "radius_change_fraction": -0.20272142544814398,
      "radial_velocity_rms_late": 0.15365844068135368,
      "per_body_L_ratio_spread": 0.2730552997148895,
-     "any_body_positive_energy": false
+     "any_body_positive_specific_orbital_energy": false
     },
     "two_stage": {
      "status": "completed",
@@ -235,7 +496,7 @@
      "radius_change_fraction": -0.029249130347548946,
      "radial_velocity_rms_late": 0.059216288819651464,
      "per_body_L_ratio_spread": 0.03451886200089882,
-     "any_body_positive_energy": false
+     "any_body_positive_specific_orbital_energy": false
     }
    }
   ],
@@ -310,19 +571,20 @@
   "completed": "completed",
   "left_domain": "left_domain",
   "unresolved": "entered_unresolved_centre",
-  "note": "never interchanged. Unbinding is asserted only from a total energy including the memory potential, which is why the scalar field is carried and not only its gradient"
+  "note": "never interchanged. The specific orbital energy including the memory potential is recorded, but it is not conserved while the field evolves -- its rate of change is -dC/dt at the body -- so a positive value is not a permanent-escape test"
  },
  "passed": true,
  "what_this_is_not": "one planar ring around a fixed centre, an instantaneous Gaussian kernel with no spatial causality, and no energy or momentum accounting for the field. A run that has not crossed a boundary but is heating is not a success",
  "input_sha256": {
-  "protocol-rut1.md": "c5216be7628f759068fcf11d6b96e28c8ec8915c241524be95dae4d1305602e9"
+  "protocol-rut1.md": "d85556cd97c6f0710742987e9e4399ee432951b40119eba19dc4a2b0e05e0122"
  },
  "checks_short_run": {
-  "close_passage_adaptive": 0.0006663807394102772,
+  "close_passage_edge_max_energy": 9.365106075875929e-05,
+  "transfer_worst_amplitude": 3.972184538847401e-06,
   "two_state_ode": 9.299228054260311e-13,
   "convergence_worst": 1.582435019527144e-05,
   "completed_one_stage": 2,
   "completed_two_stage": 3
  },
- "runtime_seconds": 844.7
+ "runtime_seconds": 1003.3
 }

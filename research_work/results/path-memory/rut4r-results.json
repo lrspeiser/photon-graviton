@@ -1,0 +1,106 @@
+{
+ "experiment": "RUT-1 stage 4R: the reciprocal, energy-accounted benchmark",
+ "protocol": "protocol-rut1.md",
+ "model": {
+  "field": "tau_form h_tt + gamma h_t + h/tau_keep = alpha W * rho",
+  "force": "a = -GM x/r^3 + grad(W * h)",
+  "energy": "H = sum m[v^2/2 - GM/r - C(X)] + tau_form/(2 alpha) int h_t^2 + 1/(2 alpha tau_keep) int h^2",
+  "balance": "dH/dt = -(gamma/alpha) int h_t^2",
+  "gamma": 1.3
+ },
+ "same_response": {
+  "orbits": 3.0,
+  "step": 0.005,
+  "box": 5.0,
+  "modes": 64,
+  "rows": {
+   "bodies": {
+    "C_relative": 1.1979415716886017e-05,
+    "grad_relative": 6.58363735721829e-05
+   },
+   "probe_rings_0.9_and_1.1": {
+    "C_relative": 7.4310644022194e-06,
+    "grad_relative": 4.28610678621689e-05
+   }
+  },
+  "worst_relative": 6.58363735721829e-05,
+  "tolerance": 0.001,
+  "passed": true,
+  "note": "the grid model interpolates a cubic spline of carried value and gradient arrays; the spectral model evaluates its truncated Fourier series exactly, so their agreement bounds the grid representation error of the field every formation run uses"
+ },
+ "energy_balance": {
+  "orbits": 3.0,
+  "rows": [
+   {
+    "step": 0.02,
+    "worst_balance_relative_to_kinetic": 5.328201089096887e-06,
+    "dissipated": 0.3201937368337674,
+    "kinetic_scale": 15.92979968759727
+   },
+   {
+    "step": 0.01,
+    "worst_balance_relative_to_kinetic": 1.3397105761042879e-06,
+    "dissipated": 0.3202042970924513,
+    "kinetic_scale": 15.92979968759727
+   },
+   {
+    "step": 0.005,
+    "worst_balance_relative_to_kinetic": 3.352320137157747e-07,
+    "dissipated": 0.32020693094139197,
+    "kinetic_scale": 15.92979968759727
+   }
+  ],
+  "halving_ratios": [
+   3.9771284814296495,
+   3.9963682503191857
+  ],
+  "decay_rates_per_T0": {
+   "slow": 0.09999999999999998,
+   "fast": 0.3333333333333333,
+   "expected_slow": 0.1,
+   "expected_fast": 0.3333333333333333
+  },
+  "tolerance": {
+   "worst_at_finest": 1e-05,
+   "minimum_halving_ratio": 3.0
+  },
+  "passed": true,
+  "note": "the dissipated power has a derived rate and a named destination -- the field damping -- but the physical reservoir that receives it is not identified"
+ },
+ "trajectories": {
+  "orbits": 3.0,
+  "step": 0.005,
+  "rows": [
+   {
+    "t_T0": 1.0,
+    "max_position_difference": 4.824822184017881e-07,
+    "max_velocity_difference": 4.7092108060516934e-07
+   },
+   {
+    "t_T0": 2.0,
+    "max_position_difference": 3.495415206812861e-06,
+    "max_velocity_difference": 3.2550487216118163e-06
+   },
+   {
+    "t_T0": 3.0,
+    "max_position_difference": 9.210858225693577e-06,
+    "max_velocity_difference": 7.663203117425217e-06
+   }
+  ],
+  "worst_position_difference": 9.210858225693577e-06,
+  "tolerance": 0.001,
+  "passed": true,
+  "note": "an independent spatial representation of the same equation reproduces the trajectories the grid formation runs compute"
+ },
+ "passed": true,
+ "limits": "writing proportional to mass and a symmetric Gaussian kernel; no identified physical reservoir; no spatial causality; no momentum accounting for the reservoir and the fixed centre",
+ "input_sha256": {
+  "protocol-rut1.md": "d85556cd97c6f0710742987e9e4399ee432951b40119eba19dc4a2b0e05e0122"
+ },
+ "checks_short_run": {
+  "same_response": 6.58363735721829e-05,
+  "balance_finest": 3.352320137157747e-07,
+  "trajectory": 9.210858225693577e-06
+ },
+ "runtime_seconds": 142.0
+}

@@ -12,7 +12,8 @@ maturation process and not the strength of the equilibrium field.
 
 Each field is carried on a fixed Cartesian grid as its VALUE and its two GRADIENT components, because
 differencing a stored potential would reintroduce the readout error PM-2A stage B measured, while the
-value is needed to state a total energy and so to tell "left the domain" from "unbound". Every source term
+value is needed to state a body's specific orbital energy -- which is not conserved while the field evolves,
+so it supports a consistency check rather than an escape test. Every source term
 is analytic. Motion is planar and the sources lie in the plane, where the 3-D Gaussian factorizes exactly.
 
 The timestep is adaptive, set by the shortest local dynamical time, because a fixed step badly mishandles
@@ -120,7 +121,7 @@ def run(positions, velocities, rates, w, tau_keep, t_end, h_max, tau_form=0., ha
     v = np.array(velocities, float)
     rates = np.asarray(rates, float)
     zero = np.zeros_like(rates)
-    rec = dict(t=[], r=[], L=[], support=[], newtonian=[], vr=[], energy=[])
+    rec = dict(t=[], r=[], L=[], support=[], newtonian=[], vr=[], specific_orbital_energy=[])
     a = _accel(x, field, memory)
     t, status, next_sample = 0., COMPLETED, 0.
     while t < t_end:
@@ -151,7 +152,7 @@ def run(positions, velocities, rates, w, tau_keep, t_end, h_max, tau_form=0., ha
             rec['vr'].append(np.sum(v*x, axis=1)/r)
             rec['support'].append(-np.sum(g*x/r[:, None], axis=1))   # inward memory acceleration
             rec['newtonian'].append(GM/r**2)
-            rec['energy'].append(.5*np.sum(v*v, axis=1) - GM/r + phi_mem)
+            rec['specific_orbital_energy'].append(.5*np.sum(v*v, axis=1) - GM/r + phi_mem)
     out = {k: np.array(val) for k, val in rec.items()}
     out.update(status=status, field=field, t_final=t)
     return out
@@ -195,7 +196,9 @@ def summarize(out, R0, period):
         radial_velocity_rms_early=float(np.sqrt(np.mean(out['vr'][early]**2))),
         oscillation_amplitude_early=amp(early), oscillation_amplitude_late=amp(late),
         settling_ratio=float(amp(late)/amp(early)) if amp(early) > 0 else float('nan'),
-        max_total_energy_final=float(out['energy'][-1].max()),
-        any_body_positive_energy=bool(np.any(out['energy'][-1] > 0)),
-        note='a positive total energy including the memory potential is the only basis for calling a body '
-             'unbound; leaving the domain and entering the unresolved centre are different statements')
+        max_specific_orbital_energy_final=float(out['specific_orbital_energy'][-1].max()),
+        any_body_positive_specific_orbital_energy=bool(np.any(out['specific_orbital_energy'][-1] > 0)),
+        note='the specific orbital energy |v|^2/2 - GM/r - C is NOT conserved in an evolving field: along '
+             'the declared equations its rate of change is -dC/dt at the body, so a positive value at one '
+             'instant is not a permanent-escape test and a negative one is not a boundness guarantee. '
+             'Leaving the domain and entering the unresolved centre are different statements again')

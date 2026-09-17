@@ -14,8 +14,8 @@ with Phi = -C and a_mem = grad C in both. The one-stage model is exactly tau_for
 same steady state C = tau_keep S, so the comparison does not weaken gravity.
 
 Support, stability, settling, heating and formation cost are reported separately, three termination
-labels are distinguished, and unbinding is asserted only from a total energy that includes the memory
-potential.
+labels are distinguished. A body's specific orbital energy is recorded but is not conserved in an evolving
+field, so it is not used as an escape test.
 
 Regenerates rut3-results.json into a fresh directory and compares it with the archived copy;
 --canonical overwrites the archive.
@@ -47,42 +47,66 @@ def _label_rate(w, tau, fraction):
 
 
 # ---------------------------------------------------------------- gates
-def gate_close_passage(pericentres=(.11, .063, .03), steps=(.01, .002, .0005), eta=.01):
-    """A fixed step mishandles close passages while conserving angular momentum; the adaptive step does
-    not. The no-memory circular control could never have caught this, which is why it is replaced."""
-    def kepler(rp, h=None, eta_=None, n_orb=10.):
+def _kepler_exact(t, a, e):
+    """Analytic Kepler position: pericentre on -x, starting at apocentre on +x moving +y, M = pi + n t."""
+    n = np.sqrt(GM/a**3)
+    M = np.pi + n*t
+    E = M
+    for _ in range(60):
+        E = E - (E - e*np.sin(E) - M)/(1 - e*np.cos(E))
+    return np.array([-a*(np.cos(E) - e), -a*np.sqrt(1 - e*e)*np.sin(E)])
+
+
+def gate_close_passage(pericentres=(.25, .11, .063, .03), n_orb=10.):
+    """Close passages judged on the WORST error along the orbit, against an analytic Kepler reference.
+
+    The earlier gate read the energy error only at the end of the integration. A symplectic step returns
+    close to its starting energy at the same orbital phase while carrying appreciable error through
+    pericentre: at pericentre 0.063 with fixed h = 0.002 the final error is 4.5e-14 and the maximum 6.05e-2.
+    So the maximum energy error, the maximum position error against the exact orbit, and the minimum radius
+    are recorded for every case. The gate binds only at the edge of the resolved domain, r_min = 0.25, which
+    is where the formation runs stop; deeper passages are reported and not gated.
+    """
+    def run(rp, eta=None, h=None):
         a, e = 1., 1 - rp
         r = a*(1 + e)
         x, v = np.array([r, 0.]), np.array([0., np.sqrt(GM*(2/r - 1/a))])
         acc = lambda p: -GM*p/np.linalg.norm(p)**3
         E0, L0 = .5*v@v - GM/r, x[0]*v[1] - x[1]*v[0]
         A, t, T = acc(x), 0., n_orb*2*np.pi
+        e_max = p_max = l_max = 0.
+        r_low = r
         while t < T:
             rr = np.linalg.norm(x)
-            step = h if h is not None else min(.01, eta_*np.sqrt(rr**3/GM))
+            step = h if h is not None else min(.01, eta*np.sqrt(rr**3/GM))
             step = min(step, T - t)
             vh = v + .5*step*A
             x = x + step*vh
             A = acc(x)
             v = vh + .5*step*A
             t += step
+            rr = np.linalg.norm(x)
+            r_low = min(r_low, rr)
+            e_max = max(e_max, abs((.5*v@v - GM/rr)/E0 - 1))
+            l_max = max(l_max, abs((x[0]*v[1] - x[1]*v[0])/L0 - 1))
+            p_max = max(p_max, float(np.linalg.norm(x - _kepler_exact(t, a, e))))
         rr = np.linalg.norm(x)
-        return dict(energy_error=float(abs((.5*v@v - GM/rr)/E0 - 1)),
-                    angular_momentum_error=float(abs((x[0]*v[1] - x[1]*v[0])/L0 - 1)),
-                    spuriously_unbound=bool(.5*v@v - GM/rr > 0))
-    fixed = [dict(pericentre=rp, h=h, **kepler(rp, h=h)) for rp in pericentres for h in steps]
-    adaptive = [dict(pericentre=rp, eta=eta, **kepler(rp, eta_=eta)) for rp in pericentres]
-    worst_fixed = max(r['energy_error'] for r in fixed if r['h'] == max(steps))
-    worst_adaptive = max(r['energy_error'] for r in adaptive)
-    return dict(fixed_step=fixed, adaptive_step=adaptive,
-                worst_energy_error_at_coarsest_fixed=worst_fixed,
-                worst_energy_error_adaptive=worst_adaptive,
-                angular_momentum_is_no_guide=float(max(r['angular_momentum_error'] for r in fixed)),
-                improvement_over_coarsest_fixed=float(worst_fixed/max(worst_adaptive, 1e-300)),
-                tolerance=1e-3, passed=bool(worst_adaptive < 1e-3 and worst_fixed/worst_adaptive > 1e3),
-                statement='at pericentre 0.063, the radius RUT-1 plunges reached, fixed h = 0.01 carries a '
-                          '4.4% energy error while its angular momentum stays good to 1e-14; at 0.03 it '
-                          'throws a bound orbit out and calls it unbound. The adaptive step removes that')
+        return dict(pericentre=rp, eta=eta, h=h, max_energy_error=float(e_max),
+                    final_energy_error=float(abs((.5*v@v - GM/rr)/E0 - 1)),
+                    max_position_error=p_max, max_angular_momentum_error=float(l_max),
+                    minimum_radius=float(r_low))
+    adaptive = [run(rp, eta=eta) for rp in pericentres for eta in (.01, .005)]
+    fixed = [run(rp, h=h) for rp in pericentres for h in (.01, .002)]
+    edge = [r for r in adaptive if r['pericentre'] == .25 and r['eta'] == .01][0]
+    return dict(adaptive_step=adaptive, fixed_step=fixed,
+                resolved_edge=edge, tolerances=dict(max_energy_error=1e-3, max_position_error=5e-3),
+                passed=bool(edge['max_energy_error'] < 1e-3 and edge['max_position_error'] < 5e-3),
+                endpoint_is_no_guide=[dict(pericentre=r['pericentre'], h=r['h'],
+                                           final=r['final_energy_error'], maximum=r['max_energy_error'])
+                                      for r in fixed],
+                statement='judged on the worst error along the orbit, not its endpoint. At the edge of the '
+                          'resolved domain the run stepping keeps both energy and position errors small; '
+                          'below it, errors grow as expected, which is why runs stop at r = 0.25')
 
 
 def gate_two_state_ode(tau_keep=10*PERIOD, tau_form=3*PERIOD, S=.7, h=.05, n=400):
@@ -106,18 +130,57 @@ def gate_two_state_ode(tau_keep=10*PERIOD, tau_form=3*PERIOD, S=.7, h=.05, n=400
                      'response does not weaken the equilibrium field')
 
 
-def gate_transfer_function(tau_keep=10*PERIOD, tau_form=3*PERIOD):
-    """H_new(w) = H_old(w)/(1 + i w tau_form): zero frequency untouched, fast variation attenuated."""
-    w = np.array([0., .1, 1., 10.])/PERIOD
-    old = tau_keep/(1 + 1j*w*tau_keep)
-    new = old/(1 + 1j*w*tau_form)
-    return dict(omega_per_period=(w*PERIOD).tolist(),
-                magnitude_ratio=np.abs(new/old).tolist(),
-                zero_frequency_unchanged=float(abs(new[0]/old[0] - 1)),
-                passed=bool(abs(new[0]/old[0] - 1) < 1e-14),
+def gate_transfer_function(tau_keep=10*PERIOD, tau_form=3*PERIOD, periods=(5., 20., 34.41, 100.),
+                           h=.02, settle=12., cycles=2.):
+    """Drive the SHIPPED field update with a sinusoidal source and measure amplitude and phase.
+
+    The earlier gate evaluated H(w) algebraically and checked only its zero-frequency value; it never ran
+    the solver. Here a writer parked at the grid centre writes at rate sin(w t), held at each step's
+    midpoint time, and the response at that cell is fitted over whole drive cycles after the transients
+    have decayed. For a sinusoidal source S0 sin(w t) the linear response is S0 [Re H sin(w t) + Im H cos(w t)].
+    It also realizes, through the code, the quadrature-ratio crossover the owner derived at 2 pi sqrt(tf tk):
+    maturation attenuates fast variation but strengthens the phase-lagged response to slow variation.
+    """
+    rows = []
+    for model, tf in (('one_stage', 0.), ('two_stage', tau_form)):
+        for P in periods:
+            w_ = 2*np.pi/(P*PERIOD)
+            fld = FM.MemoryField(.3, .1, .1, tau_keep, tf)
+            t_end = (settle*tau_keep/PERIOD + cycles*P)*PERIOD
+            n = int(np.ceil(t_end/h))
+            ts, cs = [], []
+            fit_from = t_end - cycles*P*PERIOD
+            for k in range(n):
+                tm = (k + .5)*h
+                fld.advance([[0., 0.]], [np.sin(w_*tm)], h)
+                tt = (k + 1)*h
+                if tt >= fit_from:
+                    ts.append(tt)
+                    cs.append(fld.C[0, fld.n//2, fld.n//2])
+            ts, cs = np.array(ts), np.array(cs)
+            A = np.column_stack([np.sin(w_*ts), np.cos(w_*ts), np.ones_like(ts)])
+            a_, b_, _ = np.linalg.lstsq(A, cs, rcond=None)[0]
+            H = tau_keep/(1 + 1j*w_*tau_keep)/(1 + 1j*w_*tf)
+            rows.append(dict(model=model, drive_period_T0=P, measured=dict(re=float(a_), im=float(b_)),
+                             analytic=dict(re=float(H.real), im=float(H.imag)),
+                             amplitude_error=float(abs(np.hypot(a_, b_)/abs(H) - 1)),
+                             phase_error=float(abs(np.angle(a_ + 1j*b_) - np.angle(H)))))
+    worst_amp = max(r['amplitude_error'] for r in rows)
+    worst_phase = max(r['phase_error'] for r in rows)
+    quad = {}
+    for P in periods:
+        one = [r for r in rows if r['model'] == 'one_stage' and r['drive_period_T0'] == P][0]
+        two = [r for r in rows if r['model'] == 'two_stage' and r['drive_period_T0'] == P][0]
+        quad[f'{P:g}'] = dict(measured=float(two['measured']['im']/one['measured']['im']),
+                              analytic=float((1 + tau_form/tau_keep)/(1 + (2*np.pi/(P*PERIOD)*tau_form)**2)))
+    return dict(rows=rows, worst_amplitude_error=worst_amp, worst_phase_error=worst_phase,
+                quadrature_ratio_two_over_one=quad,
+                crossover_period_T0=float(2*np.pi*np.sqrt(tau_form*tau_keep)/PERIOD),
+                tolerances=dict(amplitude=2e-3, phase=2e-3),
+                passed=bool(worst_amp < 2e-3 and worst_phase < 2e-3),
                 caveat='a statement about one harmonic of a prescribed writing pattern, NOT a formula for '
-                       'the drag of a freely evolving collective, where transient torques of either sign '
-                       'stay in the accounting')
+                       'the drag or heating of a freely evolving collective; a phase-shifted response '
+                       'becomes heating only through its coupling to moving matter')
 
 
 # ---------------------------------------------------------------- the matched comparison
@@ -151,11 +214,13 @@ def matched_comparison(orbits=20., jitter=.02, seeds=(1, 2), tau_form_periods=3.
                 one_stage={k: one[k] for k in ('status', 'orbits', 'support_fraction_mean_late',
                                                'angular_momentum_final_over_initial',
                                                'radius_change_fraction', 'radial_velocity_rms_late',
-                                               'per_body_L_ratio_spread', 'any_body_positive_energy')},
+                                               'per_body_L_ratio_spread',
+                                               'any_body_positive_specific_orbital_energy')},
                 two_stage={k: two[k] for k in ('status', 'orbits', 'support_fraction_mean_late',
                                                'angular_momentum_final_over_initial',
                                                'radius_change_fraction', 'radial_velocity_rms_late',
-                                               'per_body_L_ratio_spread', 'any_body_positive_energy')}))
+                                               'per_body_L_ratio_spread',
+                                               'any_body_positive_specific_orbital_energy')}))
     n_one = sum(r['one_stage']['status'] == FM.COMPLETED for r in rows)
     n_two = sum(r['two_stage']['status'] == FM.COMPLETED for r in rows)
     return dict(rows=rows, orbits=orbits, jitter=jitter, tau_form_periods=tau_form_periods,
@@ -241,8 +306,9 @@ def main():
                                                   'radius_change_fraction')},
         termination_labels=dict(
             completed=FM.COMPLETED, left_domain=FM.LEFT_DOMAIN, unresolved=FM.UNRESOLVED_CENTRE,
-            note='never interchanged. Unbinding is asserted only from a total energy including the memory '
-                 'potential, which is why the scalar field is carried and not only its gradient'),
+            note='never interchanged. The specific orbital energy including the memory potential is '
+                 'recorded, but it is not conserved while the field evolves -- its rate of change is '
+                 '-dC/dt at the body -- so a positive value is not a permanent-escape test'),
         passed=bool(close['passed'] and ode['passed'] and transfer['passed'] and conv['passed']
                     and no_mem['status'] == FM.COMPLETED
                     and abs(no_mem['angular_momentum_final_over_initial'] - 1) < 1e-9),
@@ -251,7 +317,8 @@ def main():
                          'that has not crossed a boundary but is heating is not a success',
         input_sha256={'protocol-rut1.md': hashlib.sha256((HERE/'protocol-rut1.md').read_bytes()).hexdigest()},
         checks_short_run=dict(
-            close_passage_adaptive=close['worst_energy_error_adaptive'],
+            close_passage_edge_max_energy=close['resolved_edge']['max_energy_error'],
+            transfer_worst_amplitude=transfer['worst_amplitude_error'],
             two_state_ode=ode['absolute_difference'],
             convergence_worst=conv['worst_shift'],
             completed_one_stage=matched['completed_one_stage'],
