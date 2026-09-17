@@ -33,6 +33,8 @@ from scipy.optimize import minimize_scalar, brentq
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent/'companion-extensions'))
 import evidence_io  # noqa: E402
+sys.path.insert(0, str(HERE))
+import formation as FM  # noqa: E402
 
 GM = 1.                       # dimensionless and illustrative throughout; no galaxy data enters RUT-1
 TOL_KERNEL = 1e-12
@@ -500,14 +502,173 @@ def stage2_prescribed_orbit(R=1., width_ratios=(.05, .1, .2, .4), memory_revs=(1
                 'the surviving direction')
 
 
+# ---------------------------------------------------------------- stage 3: formation from an empty field
+def _label_rate(R, w, tau, Omega, fraction):
+    """The writing rate that the mature-ring calculation predicts would give `fraction` of Newtonian.
+
+    A LABEL only. What the evolved field actually supplies is measured from the run, never enforced.
+    """
+    sup, _ = self_force(R, w, tau, Omega)
+    return float(fraction*(GM/R**2)/abs(sup))
+
+
+def gate_grid_against_stage2(R=1., wr=.1, nb=10., orbits=8., h=.005, fraction=.1):
+    """The grid must reproduce the independent semi-analytic self-force on a PRESCRIBED circular orbit.
+
+    This is the cross-validation that licenses the free runs: two entirely different routes to the same
+    number -- a 1-D quadrature over the body's own past, and a 2-D grid carrying grad Phi.
+    """
+    Omega = np.sqrt(GM/R**3)
+    T = 2*np.pi/Omega
+    w, tau = wr*R, nb*T
+    q = _label_rate(R, w, tau, Omega, fraction)
+    fld = FM.MemoryField(2., w/5, w, tau)
+    n = int(round(orbits*T/h))
+    for k in range(n):
+        th = Omega*(k + .5)*h
+        fld.deposit([[R*np.cos(th), R*np.sin(th)]], [q], h)
+    th = Omega*n*h
+    x = np.array([[R*np.cos(th), R*np.sin(th)]])
+    g = fld.sample(x)[0]
+    rhat = x[0]/R
+    that = np.array([-rhat[1], rhat[0]])
+    grid_in, grid_back = float(np.dot(g, rhat)), float(np.dot(g, that))
+    s, d = self_force_at_age(R, w, tau, Omega, orbits*T, q=q)
+    return dict(orbits=orbits, writing_rate=q,
+                grid=dict(inward=grid_in, backward=grid_back),
+                semi_analytic=dict(inward=float(-s), backward=float(-d)),
+                relative_difference=dict(inward=float(abs(grid_in/-s - 1)),
+                                         backward=float(abs(grid_back/-d - 1))),
+                tolerance=2e-3,
+                passed=bool(abs(grid_in/-s - 1) < 2e-3 and abs(grid_back/-d - 1) < 2e-3),
+                note='two independent routes to the same force; without this the grid runs would be '
+                     'unvalidated')
+
+
+def gate_deposition_weight(R=1., wr=.1, nb=10., orbits=2., steps=(.02, .01, .005), fraction=.1):
+    """Halving the timestep must not change the field that gets written."""
+    Omega = np.sqrt(GM/R**3)
+    T = 2*np.pi/Omega
+    w, tau = wr*R, nb*T
+    q = _label_rate(R, w, tau, Omega, fraction)
+    rows = []
+    for h in steps:
+        pos, vel, rates = FM.ring_start(1, R, q)
+        o = FM.run(pos, vel, rates, w, tau, t_end=orbits*T, h=h, samples=8)
+        rows.append(dict(h=h, max_abs_g=float(np.max(np.abs(o['field'].g)))))
+    v = np.array([r['max_abs_g'] for r in rows])
+    spread = float((v.max() - v.min())/v.mean())
+    return dict(rows=rows, relative_spread=spread, tolerance=1e-3, passed=bool(spread < 1e-3),
+                note='the deposit weight tau(1 - exp(-h/tau)) tends to h, so the writing rate is a rate '
+                     'and not a per-step quantity; a scheme that deposited a fixed amount each step would '
+                     'double its writing when the timestep halved')
+
+
+def _free_run(n_writers, R, w, tau, orbits, h, fraction, Omega, memory=True, prime=False,
+              phase_jitter=0., speed_jitter=0., seed=0, spacing=None):
+    T = 2*np.pi/Omega
+    q = _label_rate(R, w, tau, Omega, fraction)
+    # a body released into an already-built track is launched in equilibrium with it; one starting from an
+    # empty field is launched at the Newtonian circular speed and the field builds around it
+    extra = ring_inward_acceleration(R, R, w, q*tau) if prime else 0.
+    pos, vel, rates = FM.ring_start(n_writers, R, q, phase_jitter, speed_jitter, seed, extra_inward=extra)
+    o = FM.run(pos, vel, rates, w, tau, t_end=orbits*T, h=h, memory=memory,
+               prime_ring_R=R if prime else None, spacing=spacing)
+    s = FM.summarize(o, R, T)
+    s['writers'] = n_writers
+    s['nominal_support_label'] = fraction
+    s['launched_with_extra_inward'] = float(extra)
+    s['phase_jitter'], s['speed_jitter'], s['memory'] = phase_jitter, speed_jitter, bool(memory)
+    return s
+
+
+def stage3_formation(R=1., wr=.1, nb=10., orbits=20., h=.01, fraction=.1):
+    """Bodies and field evolved together from Phi = 0. No prescribed path, no target speed."""
+    Omega = np.sqrt(GM/R**3)
+    T = 2*np.pi/Omega
+    w, tau = wr*R, nb*T
+    common = dict(R=R, w=w, tau=tau, orbits=orbits, h=h, fraction=fraction, Omega=Omega)
+    free = [_free_run(n, **common) for n in (1, 4, 16)]
+    jitters = ((.02, 1), (.06, 2))
+    perturbed = [_free_run(16, phase_jitter=j, speed_jitter=j, seed=sd, **common) for j, sd in jitters]
+    # the same disturbed starts with the memory OFF: Keplerian spread alone, so that any extra spread
+    # can be attributed to the field rather than to the differing initial orbits
+    perturbed_no_memory = [_free_run(16, phase_jitter=j, speed_jitter=j, seed=sd, memory=False, **common)
+                           for j, sd in jitters]
+    controls = dict(
+        no_memory=_free_run(1, memory=False, **common),
+        already_built_track=_free_run(1, prime=True, **dict(common, orbits=min(orbits, 12.))))
+    conv = dict(
+        baseline=_free_run(16, **dict(common, orbits=10.)),
+        half_timestep=_free_run(16, **dict(common, orbits=10., h=h/2)),
+        half_spacing=_free_run(16, **dict(common, orbits=10., spacing=w/10)))
+    def moved(a, b, key='radius_change_fraction'):
+        return float(abs(a[key] - b[key]))
+    conv['timestep_shift'] = moved(conv['baseline'], conv['half_timestep'])
+    conv['spacing_shift'] = moved(conv['baseline'], conv['half_spacing'])
+    conv['tolerance'] = 5e-3
+    conv['passed'] = bool(conv['timestep_shift'] < 5e-3 and conv['spacing_shift'] < 5e-3)
+    lone, many = free[0], free[-1]
+    return dict(
+        parameters=dict(width_ratio=wr, memory_revolutions=nb, orbits=orbits, timestep=h,
+                        nominal_support_label=fraction,
+                        note='the writing rate is set from the mature-ring prediction as a label; the '
+                             'support reported is what the evolved field actually supplied'),
+        free_runs=free, perturbed=perturbed, perturbed_no_memory=perturbed_no_memory,
+        perturbation_attribution=[
+            dict(jitter=p['phase_jitter'],
+                 orbits_with_memory=p['orbits'], orbits_no_memory=n['orbits'],
+                 bounded_with_memory=p['bounded'], bounded_no_memory=n['bounded'],
+                 radius_spread_with_memory=p['radius_spread_final'],
+                 radius_spread_no_memory=n['radius_spread_final'],
+                 L_retained_with_memory=p['angular_momentum_final_over_initial'],
+                 L_retained_no_memory=n['angular_momentum_final_over_initial'],
+                 comparable=bool(abs(p['orbits'] - n['orbits']) < 1e-6),
+                 note='spreads from runs that terminated at different times are NOT comparable; the '
+                      'attributable statement is the pair of bounded flags and the angular momentum, '
+                      'since the memory-off run is the same disturbed start under Kepler alone')
+            for p, n in zip(perturbed, perturbed_no_memory)],
+        controls=controls, convergence=conv,
+        support=dict(measured_late={f'writers_{r["writers"]}': r.get('support_fraction_mean_late')
+                                    for r in free},
+                     note='inward memory acceleration as a fraction of Newtonian at the body. It can go '
+                          'NEGATIVE once a body has spiralled inside its own older trail, which then '
+                          'pulls outward: that is the spiral geometry, not a sign error'),
+        stability=dict(bounded={f'writers_{r["writers"]}': r.get('bounded') for r in free},
+                       perturbed_bounded=[r.get('bounded') for r in perturbed],
+                       perturbed_bounded_no_memory=[r.get('bounded') for r in perturbed_no_memory]),
+        settling={f'writers_{r["writers"]}': r.get('settling_ratio') for r in free},
+        formation_cost=dict(
+            angular_momentum_retained={f'writers_{r["writers"]}':
+                                       r.get('angular_momentum_final_over_initial') for r in free},
+            radius_change={f'writers_{r["writers"]}': r.get('radius_change_fraction') for r in free},
+            note='no driver acts in stage 3, so there is no external work: the cost appears entirely as '
+                 'the angular momentum and radius the bodies lose to their own field'),
+        headline=dict(
+            lone_writer_survives=bool(lone.get('bounded')),
+            lone_writer_orbits_completed=lone.get('orbits'),
+            lone_writer_L_retained=lone.get('angular_momentum_final_over_initial'),
+            collective_survives=bool(many.get('bounded')),
+            collective_L_retained=many.get('angular_momentum_final_over_initial'),
+            collective_radius_change=many.get('radius_change_fraction')),
+        passed=bool(conv['passed'] and controls['no_memory']['bounded']
+                    and abs(controls['no_memory']['radius_change_fraction']) < 1e-6),
+        what_this_is_not='one planar ring of equal writers around a fixed centre, with an instantaneous '
+                         'Gaussian kernel and no energy accounting. Support, stability, settling and '
+                         'formation cost are reported separately and must not be conflated; "returns to '
+                         'the original radius" is not the success criterion')
+
+
 def main():
     args = evidence_io.parse(__doc__)
     t0 = time.time()
     s0 = stage0_normalization()
     kernel, mature = gate_kernel(), gate_mature_ring()
     probe, second = gate_probe_scan(), gate_second_body()
+    grid_gate, dep_gate = gate_grid_against_stage2(), gate_deposition_weight()
     s2 = stage2_prescribed_orbit()
     s2c = stage2c_collective()
+    s3 = stage3_formation()
     stage1 = bool(kernel['passed'] and mature['passed'] and probe['passed'] and second['passed'])
     result = dict(
         experiment='RUT-1: can a moving body write an attractive track, and survive writing it?',
@@ -528,16 +689,15 @@ def main():
                             second_test_body=second, passed=stage1),
         stage_2_prescribed_orbit=s2,
         stage_2C_collective=s2c,
-        stage_3='declared in the protocol and not run: release the body from an empty field and evolve '
-                'trajectory and field together, distinguishing support, stability and settling as three '
-                'different achievements, with an already-built-track control beside the empty-field '
-                'formation',
+        stage_3_formation=s3,
+        stage_3_gates=dict(grid_against_semi_analytic=grid_gate, deposition_weight=dep_gate),
         vector_extension='retained as a proposal behind a narrower dependency. v.[v x curl A] = 0 so its '
                          'sideways term does no direct work, but the force law also carries -dA/dt, which '
                          'cannot be dropped while the field grows, and its source law, sign and evolution '
                          'are unspecified. Not implemented here, so it stays an independent physical '
                          'proposal rather than an adjustable repair',
-        passed=bool(s0['passed'] and stage1 and s2['passed'] and s2c['passed']),
+        passed=bool(s0['passed'] and stage1 and s2['passed'] and s2c['passed'] and s3['passed']
+                    and grid_gate['passed'] and dep_gate['passed']),
         input_sha256={'protocol-rut1.md': hashlib.sha256((HERE/'protocol-rut1.md').read_bytes()).hexdigest()},
         checks_short_run=dict(
             kernel_worst=kernel['worst_relative_difference'],
@@ -549,7 +709,10 @@ def main():
             best_L_time_over_build=s2['survival_at_main_fraction']['best'],
             collective_support_retained=s2c['support_retained'],
             collective_drag_reduction=s2c['best_drag_reduction'],
-            coincident_copy_worst=s2c['coincident_copy_control']['worst_relative_error']),
+            coincident_copy_worst=s2c['coincident_copy_control']['worst_relative_error'],
+            grid_vs_semi_analytic=grid_gate['relative_difference']['inward'],
+            lone_L_retained=s3['headline']['lone_writer_L_retained'],
+            collective_L_retained=s3['headline']['collective_L_retained']),
         runtime_seconds=round(time.time() - t0, 1))
     text = json.dumps(result, indent=1, default=float) + '\n'
     print(text[:1800])
