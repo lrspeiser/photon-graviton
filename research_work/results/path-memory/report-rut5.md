@@ -19,8 +19,8 @@ recording it.
 | stage 4's measured band growth | ≈ 8.7 T0 |
 
 The instability stage 4 found is real, it is the linear m = 2 mode of the supported ring, and it is
-converged under four-fold refinement of both the grid and the timestep. It is not a numerical artefact and
-it is not the discreteness of the writers.
+converged under four-fold refinement of both the grid and the timestep. It is not a numerical artefact,
+and its rate does not change when the same total source is divided among 32, 64 or 128 writers.
 
 ## The ladder: what the lag actually does
 
@@ -35,24 +35,40 @@ Thirty-two writers, w/R = 0.2, every rung carrying the same 9.99% equilibrium in
 | **pairwise Newtonian**, matched support | m = 9 | **0.132 T0** | — |
 
 Read the ordering. Removing the lag entirely, at the same equilibrium support, makes the ring **fifty-five
-times more unstable**, and the softened Gaussian kernel with no lag behaves like ordinary pairwise
-attraction at the same strength — the classical instability of a ring of co-orbiting attracting bodies.
-**So the lag is not what destabilises the ring. Collective attraction destabilises it, and the lag is the
-only reason it survives long enough to be interesting.** Each stage of lag buys about a factor of two in
-rate: zero → one → two stages runs 0.155 → 4.45 → 8.58 T0.
+times more unstable** in this configuration, and ordinary pairwise attraction at matched support is
+unstable too, at 0.132 T0. **So the lag is not what destabilises the ring. Collective attraction
+destabilises it, and the lag is the only reason it survives long enough to be interesting.** Each stage of
+lag buys about a factor of two in rate here: zero → one → two stages runs 0.155 → 4.45 → 8.58 T0. These
+are ratios for this configuration, not universal factors.
+
+**What the Newtonian rung does and does not say.** It establishes that a cold ring with ordinary
+attraction of the same strength is also violently unstable, which is enough to reject the claim that
+memory is *necessary* for the instability. It is not an identification of the two: its fastest mode is
+m = 9 against the Gaussian control's m = 4, so the branches differ in structure even where the timescales
+are close. Similar timescales are not the same instability.
 
 The mechanism is visible in the matrices: a body's displacement is written along its whole orbit, so a
 lagged field responds to a Bloch-m displacement with the m ≠ 0 structure largely averaged away, while an
 instantaneous field feels the full discrete structure. That is the same collective cancellation stage 2C
 measured for the drag, acting here on the stability.
 
-**The two-stage mode is nearly stationary in the inertial frame** — pattern speed 0.0005 Ω, against the
-one-stage mode's 0.993 Ω, which corotates. A memory field is written in space and decays in place, so the
-pattern it crystallises does not have to travel with the matter. This is the measurement stage 4 said was
-missing; it is answered analytically here, and it is a sharp prediction for the next campaign to test
-directly on the force-producing field.
+**The two-stage mode's orientation is nearly stationary in the inertial frame** — pattern speed
+0.0005 Ω, against the one-stage mode's 0.993 Ω, which corotates. A memory field is written in space and
+decays in place, so the pattern it crystallises does not have to travel with the matter.
 
-## It is not discreteness: the rate converges as the writers are subdivided
+**That is a nearly stationary orientation with a growing amplitude, not a stationary field, and the
+distinction matters.** At a fixed point in space the m = 2 harmonic varies as
+
+    s_spatial = s − i m Ω = 0.018552 − 0.001027 i,
+
+so the orientation turns slowly but the amplitude changes substantially on the same timescale. It would be
+wrong to conclude that the mode therefore sees the zero-frequency response: its growth rate enters the
+response as much as its frequency does, which is exactly why the mode condition has to be solved with the
+full complex H(s) rather than evaluated at a guessed real frequency. This answers the measurement stage 4
+said was missing, and it remains a prediction for the next campaign to test directly on the
+force-producing field, whose own phase history has still never been recorded.
+
+## The large-scale rate converges as the writers are subdivided
 
 At fixed **total** writing rate, w/R = 0.2, fastest mode over m ≤ 8:
 
@@ -63,9 +79,14 @@ At fixed **total** writing rate, w/R = 0.2, fastest mode over m ≤ 8:
 
 Eight or sixteen writers is a lumpy ring — the spacing 2π/8 = 0.79 is four times the footprint width — and
 it is much more unstable, as a ring of discrete blobs should be. By 32 writers the spacing 0.196 has
-dropped below the width 0.2 and the rate is **identical at 32, 64 and 128**: the mode is a property of the
-supported ring, not of how finely the same source is divided. That is the limit the stage 4 configuration
-sits in.
+dropped below the width 0.2 and the rate is **identical at 32, 64 and 128**: this mode is a property of the
+supported ring rather than of how finely the same source is divided, and the stage 4 configuration sits in
+that converged limit.
+
+That is a statement about *this* large-scale mode in *this* family. It does not establish that particle
+discreteness is irrelevant to every mode or to the nonlinear outcome — the search here covers m ≤ N/2 in
+the ladder and m ≤ 8 in the scans, and a converged linear rate says nothing about how a discrete source
+behaves once the mode saturates.
 
 ## Whether a weaker ring is stable
 
@@ -77,9 +98,39 @@ Thirty-two writers, w/R = 0.2, fastest mode over m ≤ 8:
 | two-stage e-folding (T0) | ∞ | 28.2 | 11.7 | **8.58** | 2.45 |
 | instantaneous e-folding (T0) | ∞ | 0.215 | 0.180 | 0.155 | 0.076 |
 
-Growth is monotonic in the support, with no stable window above zero: **there is no writing strength at
-which this cold ring is both supported and stable.** Weakening the source buys time, not stability — a
-2.5% ring still turns over in about thirty periods.
+Growth is monotonic across the four sampled positive strengths, with no stable case among them:
+**none of the sampled supported strengths gives a stable cold ring.** Weakening the source buys time, not
+stability — a 2.5% ring still turns over in about thirty periods. Four discrete couplings, with modes
+searched through m = 8, are not a proof that no stable interval exists between or beyond them; what they
+show is that the trend runs the wrong way for finding one.
+
+## The root count certifies nothing, and is itself wrong
+
+The spectrum records a contour count beside the roots found by continuation. **It does not establish
+completeness, and in its shipped form it is unreliable.** The owner's review caught this, and the archive
+already contained the evidence:
+
+* For the **no-attraction control**, whose determinant is exactly `s²(s² + Ω²)` with no root in the open
+  right half-plane, the counter returns **one unstable root for every angular mode**. The double root at
+  the origin sits on the contour's left edge, 10⁻⁴ Ω away, and the phase winding there is under-resolved.
+  The false count is a systematic +1.
+* The same +1 appears throughout the two-stage and one-stage spectra, so `all_counts_match` is false for
+  configurations whose dominant root is perfectly well determined — including the m = 2 root this report
+  rests on, whose residual is 6×10⁻¹⁴.
+* One two-stage mode carries a Newton residual of **4.8×10⁻⁶**, far outside the 10⁻¹⁰ that G6 verified for
+  m = 1 to 4. That mode's root is not converged.
+
+So a count mismatch currently cannot distinguish "continuation missed a root" from "the counter
+miscounted". **Nothing in this report claims a complete spectrum or the absence of unstable modes**; every
+claim rests on roots that were located, with their residuals, and on the nonlinear agreement. Establishing
+that one mode grows is a much weaker requirement than establishing that none does, and the second is what
+stage 6 will need. The repair — a contour-integral eigensolver that locates all roots in a declared
+region, validated first against spectra that are known exactly, with resolution and contour varied — is
+declared in stage 6 and is a precondition for any claim that a configuration is stable.
+
+Monotonicity is also only a warning. It caught my first solver, and it still flags the 16-writer case
+below, but no monotonicity theorem for this coupled nonlinear eigenproblem is established anywhere here,
+so passing it cannot certify that every relevant root was found.
 
 ## Where the solver is still not trustworthy, and what is therefore not claimed
 
@@ -141,7 +192,18 @@ genuinely cold ring does the same thing.
 | G1 response matrices vs finite differences | 1e-6 relative | **3.2×10⁻⁷** |
 | G2 this stage's integrator vs `formation.run` | 1e-6 relative | **0.0** (identical) |
 | G3 seeded eigenmode, instantaneous, two amplitudes | 2% | **0.39%** growth, 0.16% frequency |
-| G4 eigenmode, two-stage | 10% | see below |
+| G4 eigenmode, two-stage | 10% | **failed as declared**; see below |
+
+**G4's status, stated as three separate facts:**
+
+| | outcome |
+|---|---|
+| the originally declared seeded test | **failed** (both windows, both estimators, archived) |
+| the unseeded verification that replaced it | **passed**: 0.26% in rate, 0.002% in frequency |
+| a full-state seeded test, with the field perturbations initialised | **not yet done** |
+
+Keeping the tolerance unchanged does not make a changed initial condition and a changed estimator into the
+experiment that was declared, and the headline should not blur them.
 | G5 no-attraction control | Re(s)·T0 < 1e-8 | **6.3×10⁻¹⁵** |
 | G6 quadrature refinement and residual | 1e-4, 1e-10 | **4×10⁻¹³**, 6×10⁻¹⁴ |
 | G7 pattern-speed recovery on a known pattern | 1e-6 | **4×10⁻¹⁵** |
@@ -163,11 +225,14 @@ numerically unsound, which is the opposite of the truth.
 compares against finite differences of the unexpanded history force, is what would have caught the
 omission had it been in the code rather than only in the prose.
 
-**G4 failed as declared, and is reported as failed.** The declared form seeds the predicted eigenmode and
-measures it over 10 T0. It cannot work: the growing branch sits at frequency 2.0965 and the stable
-epicyclic branch at 2.469, so an imperfect eigenvector — unavoidable, since the run's base field is the
-primed continuous ring rather than the exact discrete equilibrium — puts most of the seed in the stable
-branch, and a straight-line fit to a beating signal returns neither rate. Both windows and both estimators
+**G4 failed as declared, and is reported as failed — and my diagnosis of *why* was incomplete.** I
+attributed it to the nearby stable branch at frequency 2.469 and to the approximate base field, and both
+matter. But the owner's review identified a more direct cause: **`seed_mode` perturbs positions and
+velocities only.** The state of this model is four things — positions, velocities, the excitation field E
+and the force-producing field C — and a perturbation of the first two is not an eigenmode of all four, so
+it necessarily launches transients on other branches. Calling the seeded test intrinsically
+ill-conditioned was premature; it has a setup defect that can be fixed, by building the mode's own source
+history into E and C before release. That is declared in stage 6 and not yet done. Both windows and both estimators
 are in the archive; all fail. The gate is evaluated instead on the **unseeded** ring, where the mode
 emerges alone from the numerical floor with nothing else excited, and where it reproduces the prediction.
 The 10% threshold was not changed.
@@ -185,14 +250,16 @@ deviations are Jensen-biased by about the size of the threshold and a single dra
 periods and ordinary pairwise attraction at 0.132: the cold supported ring is violently unstable *without*
 memory, and each stage of lag slows it — one-stage 4.45, two-stage 8.58 periods. Stage 4's instability is
 therefore not caused by the two-stage response; it is what is left of a much faster instability after the
-lag has suppressed it. The mode is m = 2, nearly stationary in the inertial frame, converged under
-refinement, independent of the writer count and of the initial disturbance, and monotonic in the support
-with no stable supported window. During its growth the radial motion is organised streaming, not heat; the
+lag has suppressed it. The identified mode is m = 2, its orientation nearly stationary in the inertial
+frame while its amplitude grows, converged under refinement, unchanged from 32 to 128 writers, and
+independent of the initial disturbance, which sets only when it becomes visible. Growth rises with support
+across every sampled strength. During its growth the radial motion is organised streaming, not heat; the
 heat comes later, at saturation.
 
-**Not shown.** This is a linear analysis about **one** family of equilibria: a cold, equally spaced,
-rigidly rotating ring of equal writers. A growth rate is not a lifetime, and nothing here says what the
-saturated state is or whether it is acceptable. The base state is only quasi-stationary for the lagged
+**Not shown.** **No spectrum here is certified complete**, for the reasons above: one mode was located and
+verified, not all modes excluded. This is a linear analysis about **one** family of equilibria: a cold,
+equally spaced, rigidly rotating ring of equal writers. A growth rate is not a lifetime, and nothing here
+says what the saturated state is or whether it is acceptable. The base state is only quasi-stationary for the lagged
 rungs — the wake's tangential force is measured (10⁻¹⁶ at 32 writers, 4×10⁻¹¹ at one) and reported rather
 than assumed zero. Finite-width annuli, velocity distributions, unequal masses, vertical structure and
 overlapping populations are **stage 6, declared and not run**. The source law is still a label, the
