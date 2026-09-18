@@ -1,0 +1,75 @@
+{
+  "baseline_commit": "72aef4456aae63bbb3482706a5ecda6af77422c8",
+  "protocol_commit": "2f1d5ed07046892da9ba3d8c7fdc6aba09688ecd",
+  "focused_tests": {
+    "passed": 15,
+    "failed": 0,
+    "command": "python -B -m research_work.annulus_sampling.checks"
+  },
+  "status": {
+    "numerical_verification": "passed",
+    "historical_archive_reproduction": "not_run",
+    "historical_H6": "failed_preserved_unchanged",
+    "physical_stability": "not_evaluated",
+    "continuum_convergence": "not_evaluated"
+  },
+  "verified_constructions": [
+    {
+      "name": "narrow_cold",
+      "numerical_verification_passed": true,
+      "radial_marginal_max_absolute_error": 3.469446951953614e-16,
+      "mass_relative_error": 1.1102230246251565e-16,
+      "radius_moment_relative_errors": {
+        "R^1": 2.220446049250313e-16,
+        "R^2": 0.0
+      },
+      "corrected_mean_radius": 0.8949753758128854,
+      "old_radius_bias_control_rejected": true,
+      "old_bias_mean_radius_shift": 0.001733356046852652,
+      "variance_over_mean": 0.001733356046852631,
+      "source_unchanged": true,
+      "fixed_point_residual": {
+        "density_relative": 1.0800545061982216e-12,
+        "field_relative": 3.9820744230818104e-13
+      }
+    },
+    {
+      "name": "narrow_warm",
+      "numerical_verification_passed": true,
+      "radial_marginal_max_absolute_error": 4.85722573273506e-16,
+      "mass_relative_error": 2.220446049250313e-16,
+      "radius_moment_relative_errors": {
+        "R^1": 2.220446049250313e-16,
+        "R^2": 1.1102230246251565e-16
+      },
+      "corrected_mean_radius": 0.8636438988303708,
+      "old_radius_bias_control_rejected": true,
+      "old_bias_mean_radius_shift": 0.003085551405747511,
+      "variance_over_mean": 0.003085551405747492,
+      "source_unchanged": true,
+      "fixed_point_residual": {
+        "density_relative": 8.259973343534712e-15,
+        "field_relative": 2.832872549279596e-15
+      }
+    }
+  ],
+  "not_run": [
+    "historical 72-job suite",
+    "corrected live-field simulations",
+    "warm-population stability analysis"
+  ],
+  "not_completed": [
+    "all-four construction audit: session execution limit reached in wide-annulus solve"
+  ],
+  "provenance": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "archived_equilibrium_sha256": "2148bced8ce515f81bbb8bd93938cb23310ac2779a00811c8e7511066f2bdfa8",
+    "implementation_sha256": {
+      "sampling.py": "51a168f21b0c05c9709760c7eb5e16221203a99fb429215e36f6d48e85f8565a",
+      "adapter.py": "bc78197bb06deb88fb40e348df767732badd47858ad996f267d153aebb5ea61a",
+      "audit.py": "cf614b44d8ae07a5b9352d828947cb85cb7eaedabd563d4639ae18e9a357a2af"
+    }
+  }
+}
