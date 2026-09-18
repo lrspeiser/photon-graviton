@@ -18,9 +18,26 @@ recording it.
 | simulation, timestep 0.01 → 0.005 → 0.0025 | 8.61 → 8.52 → 8.60 T0 |
 | stage 4's measured band growth | ≈ 8.7 T0 |
 
-The instability stage 4 found is real, it is the linear m = 2 mode of the supported ring, and it is
-converged under four-fold refinement of both the grid and the timestep. It is not a numerical artefact,
-and its rate does not change when the same total source is divided among 32, 64 or 128 writers.
+The instability stage 4 found is real and it is the linear m = 2 mode of the supported ring. Its rate does
+not change when the same total source is divided among 32, 64 or 128 writers.
+
+> **Correction, from the audit of stage 6.** The two refinement rows above **have no archive and no code
+> in the repository**: they came from a scratch run made while this report was being written, and
+> `rut5.py` never varies the grid spacing or the timestep. They also do not show convergence — the grid
+> sequence's successive differences grow and pass through the prediction, and the timestep sequence is
+> not monotone. What they show is **scatter of about ±0.8% around 8.58**, which is consistent with the
+> prediction and is not "converged under four-fold refinement". The one archived nonlinear measurement
+> is the unseeded cold ring at spacing w/5 and h = 0.01: growth 0.018601, e-folding **8.556 T0**, against
+> the predicted 8.579. Stage 7 declares and archives the refinement properly.
+>
+> **Two further corrections to this stage's spectra.** `Ring.modes()` follows four branches with an
+> independent Newton iteration each and never checks that they stay distinct: for the two-stage ring two
+> of them collapse onto the same root at **every m from 1 to 15**, and the partner lost is the unstable
+> one, so the archived two-stage rows list three distinct roots, not four. And the shipped determinant has
+> **slow unstable roots that no table here reports** — m = 1 at e-folding 285 T0 (a static lopsided mode on
+> a branch continuation cannot reach) and 732 T0, m = 2 at 1533 T0, m = 3 at 852 T0, and slower ones
+> through m = 8. The m = 2 mode at 8.58 T0 is the fastest and everything said about it stands; "the
+> two-stage ring is unstable only at m = 2" was never justified.
 
 ## The ladder: what the lag actually does
 

@@ -1,13 +1,108 @@
 # RUT-1 stage 6, part 1: both repairs hold, a supported population exists in exact equilibrium, and the declared stationary-control gate failed
 
-[protocol-rut6.md](protocol-rut6.md), declared in b5e0401 before any of this ran. Five of six gates pass.
-**H6 failed as declared and is recorded as failed**; it is discussed on its own below, without being
-reworded into something that passes.
+[protocol-rut6.md](protocol-rut6.md), declared in b5e0401 before any of this ran.
+
+> ## Corrections after the owner's review of 72aef44 and an audit of this stage
+>
+> **Status, in the owner's three separate senses.** *Reproduction:* the archive reproduces. *Numerical
+> verification:* H1, H3, H4's rate and frequency, and H5 passed their checks **as coded**; H2 does **not**
+> meet its declared tolerance once it is evaluated on what the contour solver located rather than on
+> Newton's fixed point; several checks could not have failed. *Scientific outcome:* H6 failed as declared;
+> **annulus stability is not established, and both archived annulus runs carry a growing m = 2 mode.**
+>
+> The owner found the first of these. I then had the stage audited, five lenses with adversarial
+> verification, and re-verified the consequential findings myself. **The repaired cold-ring eigenmode
+> results — the m = 2 root and the full-state seeded test — stand. Most of what this report said about the
+> annuli does not.** Nothing below changes an archived number; it changes what the numbers mean.
+>
+> 1. **The sampler draws a different population from the one the solver constructs** (owner). In
+>    (R, L, v_r) the measure is `f dR dL dv_r dtheta` with no factor of R; `sample()` multiplies its node
+>    weights by `2 pi R`, so it draws p(R) proportional to R times the intended distribution. Confirmed: the
+>    sampler's exact node marginal gives mean radii 0.89671 and 0.86673 against an intended 0.89498 and
+>    0.86364, the owner's analytic estimates to five digits. Every annulus *simulation* here evolved a
+>    mis-weighted population.
+> 2. **"The first evidence on temperature" is withdrawn.** Every statistic in `_drift` is an azimuthal
+>    average, second order in any mode amplitude, so it could not see what was happening. Replaying the
+>    archived runs bit for bit and recording the field's azimuthal harmonics: the **warm** run's m = 2
+>    component of the inward pull grows from 5×10⁻⁴ at 5 T0 to 6×10⁻³ at 25 T0, **e-folding 8.2 to 9.1 T0,
+>    inertially stationary** — the signature of the cold ring's mode — and the **cold** run's grows with
+>    e-folding 5.3 to 5.7 T0. The cold run's "+14% dispersion" is that mode: rms v_r rises 12.8% while the
+>    **residual dispersion changes by −0.6%** (frozen control −1.0%) and the m = 2 streaming rms triples.
+>    It is the mistake stage 5 had already corrected once. The contrast is not "14% against 0.2%"; it is an
+>    m = 2 growth rate near 0.030 against 0.018, still confounded by item 1 and by the next item.
+> 3. **The cold/warm comparison was never temperature-only** (owner). The archived narrow populations have
+>    mass 0.026785 and 0.068643 and alpha 1.77354 and 0.99890: the warm one carries 44% more total writing.
+> 4. **"10% support" is not what these populations feel, and the label is not even well defined.** It was
+>    evaluated at the argmax *grid node* of the density, beside the field's maximum where the gradient
+>    passes through zero and changes by 0.05 to 0.065 per node — half the target. `support_at(alpha)` is
+>    therefore a sawtooth with several roots (narrow cold: alpha = 1.37, 1.56, 1.77), the secant returned
+>    whichever its path visited, and the archived alpha moves 10 to 35% with the radial grid. "Support
+>    0.10000" was false precision. The **mass-weighted** support is 13.4% (cold) and 20.3% (warm), with the
+>    memory force running from −16% to +46% and from −28% to +78% of Newtonian across the central 90% of the
+>    mass; the archive's own `support_fraction_max` is 0.83 to 1.30 and this report never mentioned it.
+> 5. **The wide annuli are not equilibria of the declared distribution function.** `circular_energy()`
+>    inverts `L_c(r)` by sorting and interpolating, and in these potentials that map is not monotonic
+>    (kappa² < 0 over dozens of grid radii; three circular radii for some L), so E_circ(L) zig-zags between
+>    branches, up to 5.5 dE from the true minimum, for 7 to 9% of the wide annuli's mass, and is clamped at
+>    the low-L end. They are a narrow core plus a Kepler-like tail — rms widths 0.237 and 0.278 against the
+>    0.135 and 0.174 FWHM the table shows. The narrow annuli are affected only beyond 4.5 widths.
+> 6. **H5 shows a discrete fixed point, not an accurate equilibrium** (owner). `consistency_residual()`
+>    reuses the solver's own quadrature. At fixed alpha the discretization error is about 7×10⁻⁴, not
+>    10⁻¹¹. And a Gaussian factor in energy is not by itself a finite-mass guarantee: the implementation
+>    relied on five-width windows and a bounded radial domain that were never declared as the
+>    distribution's support, and with them the most extended populated orbit reaches r = 2.9 to 3.0, past
+>    the simulator's limit at 2.25.
+> 7. **"An equilibrium of the simulator … stationary to a few parts in 10⁴" is withdrawn as evidence.**
+>    Window averages of r, its spread and rms v_r in a static axisymmetric field are close to orbit
+>    invariants for *any* start. A sample with every body kicked outward by a full sigma_r shows drifts of
+>    0.06%, 0.08% and 0.01% — just as "stationary" — and the mis-weighted sampler of item 1 passed unnoticed.
+> 8. **"Stage 5's spectra were complete" and "exactly one unstable mode" are false below the region's
+>    edge.** The certified region starts at Re s = 0.001, which excludes e-folding times beyond 159 T0, and
+>    that edge was a constant in the code, not a declared limit. Below it the shipped two-stage determinant
+>    has unstable roots at every m from 1 to 8 — m = 1: 5.583×10⁻⁴ + 1.04878i (e-folding 285 T0, a *static
+>    lopsided* mode, pattern speed 2×10⁻⁶ Omega, on a branch continuation cannot reach) and 2.173×10⁻⁴ +
+>    0.00649i (732 T0); m = 2: 1.038×10⁻⁴ + 0.00627i (1533 T0); m = 3: 1.868×10⁻⁴ + 2.47038i (852 T0) — each
+>    with |det| below 10⁻¹³ and winding number 1.0000 on a circle wholly in Re s > 0. Beyn's own moments
+>    located them and the rectangle filter threw them away. H3 passes only because both lists were
+>    filtered by the same edge; it fails at m = 1 as soon as the edge moves to 5×10⁻⁴.
+> 9. **Stage 5's continuation returns a duplicated root.** For the two-stage ring two of the four branches
+>    collapse onto the same root at every m from 1 to 15, and the partner lost is the unstable one. The
+>    stage 5 archive's m = 1 row reads "growth −1.4×10⁻⁶, e-folding infinite".
+> 10. **H2's 1.8×10⁻¹⁶ measures Newton's polish, not the contour solver.** All three solves were polished
+>    on the same determinant before being compared. Unpolished, the m = 2 root this stage rests on moves
+>    5.8×10⁻⁶ under doubled quadrature and 4.5×10⁻⁶ under the shifted contour, **both above the declared
+>    10⁻⁶**; the polish moved it by 1.2×10⁻⁵. The root is in no danger of being missed, only of being
+>    mislocated without the polish, but the gate did not test what the protocol declared. H1's 10⁻¹⁷ is the
+>    polish too (raw: 5×10⁻⁹), and its transcendental case kept 5 of the true 6 eigenvalues with
+>    multiplicity while checking only the distinct count.
+> 11. **Protocol deviations I did not name.** H3's tolerance is declared as 10⁻⁶ and coded as 10⁻⁵ (the
+>    outcome is unchanged at 2.6×10⁻¹⁵, and 8 of the 9 two-stage rows compare an empty list with an empty
+>    list). H6 was declared on "mean radius, **support** and radial dispersion" and evaluated on mean
+>    radius, *radial spread* and rms v_r — and the omitted observable is the one that moved: the support on
+>    the ring fell 22% in the warm run and rose 21% in the cold one over 30 T0. The protocol declared
+>    "annuli of three widths"; two were run.
+> 12. **H4's amplitude-scaling check could not fail**: it read the mode amplitude one step after release,
+>    which is the imposed displacement, and the no-history seed scales by the same 10.0000. (A meaningful
+>    version passes on the archived data: the fitted amplitudes at the start of the measurement window
+>    scale as 9.990.) The archive also holds a two-term Prony estimate that this report never mentioned and
+>    that misses by 10% at the larger amplitude; stage 5's seeded gate was judged on Prony and this one on
+>    the line fit, and that change of estimator should have been stated. H4's rate and frequency agreement,
+>    0.014% and 0.002%, stand, as does the no-field-history control.
+> 13. Smaller: `run_ring_field` returns no status, so a terminated run would be read as complete (none of
+>    the archived runs terminated); `prime()` zeroes the field inside r = 0.3; the FWHM column is quantised
+>    to whole grid cells and low by 3 to 12% (interpolated: 0.099, 0.139, 0.141, 0.184); and the one-stage
+>    ring has one located root at m = 1, not two.
+>
+> **Stage 7 (protocol-rut7.md) replaces the annulus construction, the sampler, H6 and the eigensolver
+> gates, each with a negative control — a deliberately broken input the check must reject.**
+
+What follows is the report as first written. Read it with the corrections above; claims they withdraw are
+marked where they are made.
 
 Part 1 is the two repairs the owner's review of ceb0c86 named as preconditions, plus the construction of
 the state part 2 will test. **No configuration is claimed stable here.**
 
-## R1. The spectrum is now located, not counted — and stage 5's spectra turn out to have been complete
+## R1. The spectrum is now located, not counted — ~~and stage 5's spectra turn out to have been complete~~ (withdrawn: corrections 8 to 10)
 
 The stage 5 contour count returned a false unstable root at every mode of the neutral control. It is
 replaced by a contour-integral eigensolver of Beyn's kind ([beyn.py](beyn.py)), which needs no initial
@@ -27,11 +122,13 @@ guess and returns every eigenvalue inside a declared region.
 |---|---|---|
 | no attraction | none | — |
 | instantaneous | every m from 1 to 8 | 0.155 T0 |
-| one-stage | every m from 1 to 8, two roots per mode | 4.451 T0 |
+| one-stage | every m from 1 to 8, two roots per mode for m ≥ 2 and one at m = 1 | 4.451 T0 |
 | **two-stage** | **m = 2 only, one root** | **8.579 T0** |
 
-So the two-stage cold ring has exactly one unstable mode in that region, and continuation had found it.
-Stage 5's spectra were complete; the only thing broken was the counter that was supposed to certify them.
+So the two-stage cold ring has exactly one unstable mode **with an e-folding time shorter than 159 T0**,
+and continuation had found it. ~~Stage 5's spectra were complete; the only thing broken was the counter
+that was supposed to certify them.~~ **Withdrawn (corrections 8 and 9):** slower unstable roots exist at
+every m from 1 to 8, continuation misses most of them, and its root lists contain a duplicate.
 The region is a declared limit, not the whole plane: it excludes Re s < 0.001, where marginal roots sit on
 the contour and a root is resolved slowly, and it stops at m = 8.
 
@@ -64,7 +161,7 @@ the spun-up state to `run_ring`, which builds its own field, so the bodies were 
 speed into an *empty* field. That measured a formation transient — growth 0.040, frequency 1.77 — and
 seeding made no difference to it, which is what gave it away.
 
-## R3. A supported population in exact self-consistent equilibrium
+## R3. A supported population, self-consistent to the stated residual on the declared discretization
 
 A distribution function of the conserved quantities, `f(E, L) = exp[-(L-L0)²/2dL²]
 exp[-(E-E_circ(L))²/2dE²]`, solved together with the field it writes for writing proportional to mass
@@ -82,9 +179,11 @@ finite mass with edge density below 10⁻³ of peak. The wide warm annulus is an
 support rather than the requested 10%: the outer solve for the writing rate stopped short, and the achieved
 value is reported rather than the label.
 
-**And it is an equilibrium of the simulator, not just of the equations.** Sampled to 64 bodies and evolved
+~~**And it is an equilibrium of the simulator, not just of the equations.** Sampled to 64 bodies and evolved
 with the field held fixed, the narrow warm annulus changes its mean radius by 0.02%, its radial spread by
-0.06% and its dispersion by 0.08% over 20 periods.
+0.06% and its dispersion by 0.08% over 20 periods.~~ **Withdrawn as evidence (correction 7):** those
+window averages are near-invariants of any start in a static axisymmetric field, and a deliberately
+kicked sample passes the same test.
 
 Getting there took four corrections, each of which had produced a "converged" answer that was wrong:
 
@@ -131,7 +230,7 @@ gate ran by accident. `write=False` lets the field **decay** rather than freezin
 support over a retention time and pushes the population outward by 6%. Stage 3 drew exactly this
 distinction between a frozen field and a decaying one, and I reintroduced the confusion here.
 
-## The first evidence on temperature — a measurement, not a stability result
+## ~~The first evidence on temperature~~ — withdrawn (corrections 1 to 3)
 
 The same two runs for the narrow **cold** annulus (σ_r = 0.094 against the warm annulus's 0.167):
 
@@ -140,10 +239,16 @@ The same two runs for the narrow **cold** annulus (σ_r = 0.094 against the warm
 | field written | 0.03906 → 0.04448 (**+13.9%**) | 0.09071 → 0.10341 (**+14.0%**) | 0.99769 → 0.99570 |
 | field frozen | 0.03905 → 0.03908 | 0.09077 → 0.09078 | unchanged |
 
-Under the written field the colder annulus heats by 14% in twenty periods while the warmer one changes by
+~~Under the written field the colder annulus heats by 14% in twenty periods while the warmer one changes by
 0.2%, and both are stationary when the field is frozen. That is the direction one expects if velocity
 dispersion suppresses the collective instability, and it is the first thing in this programme that bears
-on the owner's question.
+on the owner's question.~~
+
+**Withdrawn.** "Radial dispersion" in these tables is rms v_r, which a two-lobed stream raises without any
+random motion changing. Both runs carry a growing, inertially stationary m = 2 field mode — e-folding 8.2
+to 9.1 T0 in the warm run, 5.3 to 5.7 T0 in the cold — that azimuthal averages cannot see; the cold run's
+residual dispersion changes by −0.6%. The warm annulus is not quiet. It is unstable on the cold ring's own
+timescale, and its mode had simply not yet grown large enough in twenty periods to move an average.
 
 **It is not a stability result and should not be read as one.** It is one seed of 64 bodies over 20
 periods with no mode analysis. Heating by discreteness — two-body relaxation mediated by the written field
@@ -169,12 +274,14 @@ space. Part 2 — the complete mode analysis around these states, targeted nonli
 perturbations, the formation test, the reciprocal accounting carried through growth and saturation, and
 complex mode coefficients with full restart states — is declared and not run.
 
-**A note on the exit status.** `rut6.py` exits on whether it reproduces its archive, not on whether every
-declared gate passed; a failed gate is listed in `failed_gates`, here and in the changelog, and the archive
-comparison still turns the suite red if any gate's outcome ever changes. The alternative, tying the exit
-status to the gates, leaves two options when one fails honestly — withhold the result, or reword the gate
-until it passes — and the second is the habit the owner's review told me to stop. This is a change from
-how rut4 and rut5 behave, and it is the owner's to overrule.
+**A note on the exit status, as the owner has now ruled.** `rut6.py` exits on whether it reproduces its
+archive. The owner approved that for a reproduction job and corrected the reasoning: I presented a false
+either/or, withhold a failed result or reword its gate. There is a third option, and it is the right one —
+archive the outcome while reporting **three separate statuses**: *reproduction* (does the run reproduce
+its archive), *numerical verification* (do identities, samplers, integrators and solvers pass their
+correctness checks — a failure blocks every dependent physical conclusion), and *scientific outcome*
+(does the model do what is hoped — a failure is a result). An incorrect sampler must not become acceptable
+because its wrong output reproduces. Stage 7's driver implements all three; this one is left as it ran.
 
 ## Reproduce
 
