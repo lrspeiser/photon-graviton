@@ -151,6 +151,11 @@ def main():
         # CL-2 stage 2 (path-memory/protocol-cl2-stage2.md and its amendments): the disk-force gates, the certificate of the
         # archived galaxy optimum recomputed from the inputs, and the SZ correlation matrices, anchored to cl2s2-results.json.
         ('path-memory/cl2s2_checks.py', []),
+        # NL-1, the root spectrum (path-memory/protocol-nl1.md, amendment 1): the archived optimum's certificate recomputed
+        # from the inputs and the local law's reproduction of the archived reference, anchored to nl1-results.json.
+        ('path-memory/nl1_checks.py', []),
+        # NK-1, shell footprints (path-memory/protocol-nk1.md): the kernel gates and per-galaxy anchors on three galaxies.
+        ('path-memory/nk1_checks.py', []),
         # LAST, and expected to exit non-zero until the owner rules: stage 8 reproduces, but its numerical
         # verification status is FAILED (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
