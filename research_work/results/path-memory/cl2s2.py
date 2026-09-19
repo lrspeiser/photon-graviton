@@ -269,10 +269,13 @@ def joint_solve(gal_loss, quad_blocks, weights, L0, nu0):
         return val, grad
     res = minimize(f, x0, jac=True, method='L-BFGS-B', bounds=[(0, None)]*len(x0), options=dict(maxiter=50000, ftol=1e-15, gtol=1e-12, maxcor=40))
     L, nus = unpack(res.x)
-    # projected-gradient certificate on the full problem
     _, g = f(res.x)
-    pg = float(np.linalg.norm(np.where(res.x > 0, g, np.minimum(g, 0))))
-    return dict(L=L, nus=nus, objective=float(res.fun), projected_gradient=pg, message=str(res.message), iterations=int(res.nit))
+    pg_lbfgs = float(np.linalg.norm(np.where(res.x > 0, g, np.minimum(g, 0))))
+    # amendment 3: polish with the trust-region Newton method in column-scaled variables and certify there
+    J = L2.JointObjective(gal_loss, quad_blocks, weights)
+    L, nus, pol = J.polish(L, nus)
+    return dict(L=L, nus=nus, objective=pol['objective'], projected_gradient=pol['projected_gradient'], lbfgs_objective=float(res.fun),
+                lbfgs_projected_gradient=pg_lbfgs, lbfgs_message=str(res.message), polish=pol, iterations=int(res.nit))
 
 
 def main():
@@ -280,7 +283,7 @@ def main():
     archive = json.loads(ARCHIVE.read_text(encoding='utf-8'))
     ext = json.loads((HERE/'cl2-inputs-xcop-profiles.json').read_text(encoding='utf-8'))
     frac = CS.stellar_fraction_profile(ext)
-    results = dict(experiment='CL-2 stage 2', protocol='protocol-cl2-stage2.md; amendment 1', widths_kpc=W.tolist(),
+    results = dict(experiment='CL-2 stage 2', protocol='protocol-cl2-stage2.md; amendments 1, 2 and 3', widths_kpc=W.tolist(),
                    input_sha256={'cl2-inputs-xcop-profiles.json': sha(HERE/'cl2-inputs-xcop-profiles.json'), 'cl2-results.json': sha(ARCHIVE),
                                  'xcop-release/allfiles.tar.gz': sha(TAR), 'pinned': XA.SHA256})
     gates = {}
@@ -407,7 +410,7 @@ def main():
         js = joint_solve(loss_rec, [block, E, K], [1./block.N, 1./E.N, 1./K.N], L, [nu_c, None, None])
         L, nu_c = js['L'], js['nus'][0]
         ev = lens_evaluate(lenses, 'Chabrier', L)
-        jh.append(dict(iteration=it, objective=js['objective'], projected_gradient=js['projected_gradient'], lens_total=ev['total_kinematics_chi2'], einstein=ev['max_abs_einstein_residual']))
+        jh.append(dict(iteration=it, objective=js['objective'], projected_gradient=js['projected_gradient'], lbfgs_objective=js['lbfgs_objective'], lbfgs_projected_gradient=js['lbfgs_projected_gradient'], lens_total=ev['total_kinematics_chi2'], einstein=ev['max_abs_einstein_residual']))
         new = [e['beta'] for e in ev['per_lens']]
         if it and abs(jh[-1]['objective'] - jh[-2]['objective']) < 1e-6*max(1., jh[-2]['objective']):
             break
@@ -418,7 +421,6 @@ def main():
                        galaxies=dict(rmse_train=loss_rec.rmse(L), described=bool(loss_rec.rmse(L) <= RMSE_LIMIT)),
                        lenses=dict(total_kinematics_chi2=ev['total_kinematics_chi2'], max_abs_einstein_residual=ev['max_abs_einstein_residual'], described=ev['described']),
                        spectrum=CR.spectrum_summary(W, L, CS.G), amplitudes=L.tolist(), betas=betas)
-    gates['G_J_joint_certificate'] = js['projected_gradient'] < 1e-6*max(1., js['objective'])
     print('joint', {k: E1['joint'][k] for k in ('clusters', 'galaxies', 'lenses')}, flush=True)
     results['E1'] = E1
     # ---- E3 transfer
@@ -451,6 +453,7 @@ def main():
     E3['calibrated_on_clusters'] = dict(galaxies=gal_scores(Lc), lenses=lens_evaluate(lenses, 'Chabrier', Lc), milky_way=mw_scores(Lc))
     jg = joint_solve(loss_rec, [block], [1./block.N], Lg, [nu_c])
     Lb = jg['L']
+    gates['G_J_joint_certificate'] = js['projected_gradient'] < 1e-6*max(1., js['objective']) and jg['projected_gradient'] < 1e-6*max(1., jg['objective'])
     E3['calibrated_on_galaxies_and_clusters'] = dict(objective=jg['objective'], projected_gradient=jg['projected_gradient'], galaxies=gal_scores(Lb), clusters_chi2_per_point=cluster_score(Lb),
                                                      lenses=lens_evaluate(lenses, 'Chabrier', Lb), milky_way=mw_scores(Lb), spectrum=CR.spectrum_summary(W, Lb, CS.G))
     E3['milky_way_baryons_only'] = mw_scores(np.zeros(len(W)))

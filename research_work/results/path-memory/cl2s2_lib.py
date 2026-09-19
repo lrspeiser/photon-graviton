@@ -340,3 +340,102 @@ class LensRows:
         i = int(np.argmin(vals))
         res = minimize_scalar(ev, bounds=(grid[max(i - 1, 0)], grid[min(i + 1, 10)]), method='bounded', options={'xatol': 1e-6})
         return (float(res.fun), float(res.x)) if res.fun < vals[i] else (float(vals[i]), float(grid[i]))
+
+
+# ------------------------------------------------------------------ amendment 3: a certified joint objective
+class JointObjective:
+    """sum_b w_b chi2_b(L, nu) + F_gal(L) over L >= 0 and nonnegative nuisances, in column-scaled variables, with the
+    analytic gradient and Hessian for the trust-region Newton polish."""
+    def __init__(self, gal_loss, blocks, weights):
+        self.gal, self.blocks, self.w = gal_loss, list(blocks), list(weights)
+        self.nw = blocks[0].A.shape[1]
+        self.n_nu = [b.n_nuisance for b in self.blocks]
+        cols = [np.maximum(np.max(np.abs(b.A/b.s[:, None]), axis=0), 1e-300) for b in self.blocks]
+        self.cL = np.max(np.vstack(cols), axis=0)
+        if gal_loss is not None:
+            self.cL = np.maximum(self.cL, gal_loss.c)
+        self.cN = [np.maximum(np.max(np.abs(b.nuisance/b.s[:, None]), axis=0), 1e-300) if b.n_nuisance else None for b in self.blocks]
+        self.c = np.concatenate([self.cL] + [cn for cn in self.cN if cn is not None])
+
+    def unpack(self, x):
+        L = x[:self.nw]
+        nus, off = [], self.nw
+        for k in self.n_nu:
+            nus.append(x[off:off + k] if k else None)
+            off += k
+        return L, nus
+
+    def pack(self, L, nus):
+        return np.concatenate([np.asarray(L, float)] + [np.asarray(n, float) for n, k in zip(nus, self.n_nu) if k])
+
+    def value(self, y):
+        L, nus = self.unpack(y/self.c)
+        val = 0. if self.gal is None else self.gal.value(L)
+        if not np.isfinite(val):
+            return np.inf
+        for b, wt, nu in zip(self.blocks, self.w, nus):
+            r = (b.predict(L, nu) - b.y)/b.s
+            val += wt*float(np.sum(r*r))
+        return val
+
+    def gradient(self, y):
+        L, nus = self.unpack(y/self.c)
+        g = np.zeros_like(y)
+        if self.gal is not None:
+            g[:self.nw] += self.gal.gradient(L)
+        off = self.nw
+        for b, wt, nu in zip(self.blocks, self.w, nus):
+            r = (b.predict(L, nu) - b.y)/b.s
+            g[:self.nw] += 2*wt*(b.A/b.s[:, None]).T@r
+            if b.n_nuisance:
+                g[off:off + b.n_nuisance] += 2*wt*(b.nuisance/b.s[:, None]).T@r
+                off += b.n_nuisance
+        return g/self.c
+
+    def hessian(self, y):
+        L, nus = self.unpack(y/self.c)
+        n = len(y)
+        H = np.zeros((n, n))
+        if self.gal is not None:
+            H[:self.nw, :self.nw] += self.gal.hessian(L)
+        off = self.nw
+        for b, wt in zip(self.blocks, self.w):
+            As = b.A/b.s[:, None]
+            H[:self.nw, :self.nw] += 2*wt*As.T@As
+            if b.n_nuisance:
+                Ns = b.nuisance/b.s[:, None]
+                H[off:off + b.n_nuisance, off:off + b.n_nuisance] += 2*wt*Ns.T@Ns
+                H[:self.nw, off:off + b.n_nuisance] += 2*wt*As.T@Ns
+                H[off:off + b.n_nuisance, :self.nw] += 2*wt*Ns.T@As
+                off += b.n_nuisance
+        return H/np.outer(self.c, self.c)
+
+    def projected_gradient(self, y):
+        g = self.gradient(y)
+        return float(np.linalg.norm(np.where(y > 0, g, np.minimum(g, 0))))
+
+    def rescale_jacobi(self, L, nus):
+        """Jacobi scaling from the Hessian's diagonal at the start point (a standard preconditioning), replacing the
+        column-norm scaling; the objective is unchanged."""
+        x = np.maximum(self.pack(L, nus), 0)
+        self.c = np.ones(len(x))
+        d = np.diag(self.hessian(x))
+        self.c = np.sqrt(np.maximum(d, 1e-300*np.max(d)))
+
+    def polish(self, L, nus, maxiter=5000, jacobi=True):
+        from scipy.optimize import Bounds
+        if jacobi:
+            self.rescale_jacobi(L, nus)
+        y0 = np.maximum(self.pack(L, nus)*self.c, 0)
+        big = 1e300
+        f = lambda z: (lambda v: v if np.isfinite(v) else big)(self.value(z))
+        res = minimize(f, y0, jac=self.gradient, hess=self.hessian, method='trust-constr',
+                       bounds=Bounds(np.zeros(len(y0)), np.full(len(y0), np.inf)), options=dict(gtol=1e-13, xtol=1e-16, maxiter=maxiter, verbose=0))
+        y = np.array(res.x)
+        # an interior-point polish leaves bound variables at tiny positive values: those below 1e-9 of the largest
+        # are at the bound, set to zero exactly, and only a negative gradient counts against them (the KKT reading)
+        y[y < 1e-9*np.max(y)] = 0.
+        L1, nus1 = self.unpack(y/self.c)
+        return L1, nus1, dict(objective=float(self.value(y)), projected_gradient=self.projected_gradient(y),
+                              projected_gradient_before_snap=self.projected_gradient(res.x),
+                              start_objective=float(self.value(y0)), iterations=int(res.nit), message=str(res.message))
