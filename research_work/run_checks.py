@@ -145,6 +145,9 @@ def main():
         ('path-memory/cl2_checks.py', []),
         # CL-F1: spherical cluster optics, analytic projection and image-position gates.
         ('path-memory/cluster_lensing_checks.py', []),
+        # TF-1, the transverse coupling of the converted field (experiments/transverse_coupling/protocol.md): the fast
+        # exact-property gates with their controls, anchored to the archived exact stage.
+        ('../experiments/transverse_coupling/tf1_checks.py', []),
         # LAST, and expected to exit non-zero until the owner rules: stage 8 reproduces, but its numerical
         # verification status is FAILED (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
