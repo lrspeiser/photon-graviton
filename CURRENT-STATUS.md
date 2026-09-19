@@ -1,5 +1,7 @@
 # Current status: photon–companion research
 
+**CWC-1 completed, 19 September 2026.** [Plan and results](research_work/experiments/coupled_conversion/report.md), [attribution register](research_work/experiments/coupled_conversion/provenance.md). Ran 164 homogeneous cases and 51 spatial simulations of a reciprocal photon/receiving-wave/clock/material Hamiltonian, including the owner's sign, power and constant variations. The refined 1D model transfers about 18.2% of initial EM energy but fails measured timing, color and material-force requirements. Generated 2D profiles bend light inward, with 0.944% bend refinement; this is a frozen periodic toy fixture, not a cluster fit. Original arrival-resolution and mirror failures remain archived; finer grids and source-symmetry controls diagnose them. None of 66 unusual-law settings passes the complete homogeneous scientific screen. An actual observation-readiness audit finds missing 3D gravity, microscopic matter/clock/ruler completion, normalization and source histories. Established mathematics is credited; no historical novelty is claimed. No dark matter or expanding geometry is used in these tests.
+
 **Authoritative summary.** Updated 19 September 2026. Reviewed baseline: `main` at `3884b4f` (Codex handover, 13 September 17:23 PDT). Added since then:
 - the capture-to-orbit test and its consistency revision after review
 - the self-illumination pilot

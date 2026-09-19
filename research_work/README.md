@@ -4,6 +4,8 @@ Read the [research checkpoint](results/RESEARCH-CHECKPOINT.md) and [roadmap](../
 
 The [PF5 campaign](experiments/photon_five/report.md) runs all five new photon-response hypotheses with static geometry and ordinary sources. Its numerical checks pass; the full mechanism screens fail. [Reproduction commands](experiments/photon_five/README.md) use a separate runner that excludes the historical expanding-geometry and halo comparisons.
 
+The [CWC-1 coupled-conversion campaign](experiments/coupled_conversion/report.md) tests photon energy, receiving waves, clocks, material forces and generated lensing in one reciprocal model. It also executes sign, power and constant variations. The [plan](experiments/coupled_conversion/protocol.md), [attribution audit](experiments/coupled_conversion/provenance.md) and [reproduction commands](experiments/coupled_conversion/README.md) keep known mathematics, new test specifications, failed requirements and unresolved observational predictions distinct.
+
 ## Layout
 
 - `energy/`: reusable energy-ledger and radial-transport modules.

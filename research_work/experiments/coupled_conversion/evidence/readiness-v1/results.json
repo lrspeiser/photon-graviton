@@ -1,0 +1,186 @@
+{
+  "stage": "readiness",
+  "input_sha256": {
+    "temporal_candidate_audit\\data\\spectral_aging.json": "b62b2cc2ede705d5772c045a936004e3141cf81da4225f4f8eac902ab9c3a53c",
+    "temporal_candidate_audit\\data\\Rotmod_LTG.zip": "0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "research_work\\results\\cluster-observation-readiness\\kubo-figure-data.json": "54418e9fdede2057680f0bf57fda5036fba807a6528afdc653ec4e5507ab7e3e",
+    "research_work\\results\\slacs-resolved-input-audit\\results.json": "f04541d9ba2890367d47332d0d54b1e9801e7e35c0a4e854b75ca218747e63dd",
+    "research_work\\results\\path-memory\\cl2-inputs-xcop-profiles.json": "4bb1759b1a5c6dfe0cdbf39d57f6cc192728d2383de107e3a8dd81b52f6928a3"
+  },
+  "inventory": [
+    {
+      "target": "spectral aging and event timing",
+      "count": 35,
+      "available": "Published exposed spectral-aging rows; not a fresh holdout.",
+      "candidate": "Toy measured frequency/arrival relation exists.",
+      "missing": "Object-specific source/path/clock evolution and line formation."
+    },
+    {
+      "target": "disk rotation",
+      "count": 175,
+      "points": 3391,
+      "available": "SPARC published rotation/ordinary-light tables.",
+      "candidate": "Toy material force only.",
+      "missing": "3D source history, dimensional scale, stellar dynamics."
+    },
+    {
+      "target": "resolved lens motions",
+      "count": 6,
+      "systems": [
+        {
+          "name": "J0037-0942",
+          "bins": 6,
+          "minimum_covariance_eigenvalue": 1.3088563505317745
+        },
+        {
+          "name": "J1112+0826",
+          "bins": 7,
+          "minimum_covariance_eigenvalue": 1.1930768649419807
+        },
+        {
+          "name": "J1204+0358",
+          "bins": 7,
+          "minimum_covariance_eigenvalue": 1.3710243337279937
+        },
+        {
+          "name": "J1402+6321",
+          "bins": 7,
+          "minimum_covariance_eigenvalue": 1.277205334071523
+        },
+        {
+          "name": "J1621+3931",
+          "bins": 6,
+          "minimum_covariance_eigenvalue": 4.048952363595194
+        },
+        {
+          "name": "J1630+4520",
+          "bins": 7,
+          "minimum_covariance_eigenvalue": 1.318324386685603
+        }
+      ],
+      "available": "Archived exposed six-lens kinematic bins and covariances.",
+      "candidate": "No aperture or orbit prediction.",
+      "missing": "Universal matter completion and fixed-distance 3D prediction."
+    },
+    {
+      "target": "Coma shear",
+      "count": 6,
+      "available": "Exploratory vector-figure reconstruction; not author machine-readable measurements, raw shapes, full covariance or untouched validation.",
+      "candidate": "Frozen 2D ray bend only.",
+      "missing": "3D generated profile, source geometry and observational covariance."
+    },
+    {
+      "target": "cluster ordinary gas",
+      "count": 12,
+      "clusters": [
+        {
+          "name": "A1644",
+          "density_shells": 65,
+          "valid": true
+        },
+        {
+          "name": "A1795",
+          "density_shells": 65,
+          "valid": true
+        },
+        {
+          "name": "A2029",
+          "density_shells": 63,
+          "valid": true
+        },
+        {
+          "name": "A2142",
+          "density_shells": 65,
+          "valid": true
+        },
+        {
+          "name": "A2255",
+          "density_shells": 58,
+          "valid": true
+        },
+        {
+          "name": "A2319",
+          "density_shells": 69,
+          "valid": true
+        },
+        {
+          "name": "A3158",
+          "density_shells": 68,
+          "valid": true
+        },
+        {
+          "name": "A3266",
+          "density_shells": 69,
+          "valid": true
+        },
+        {
+          "name": "A644",
+          "density_shells": 69,
+          "valid": true
+        },
+        {
+          "name": "A85",
+          "density_shells": 69,
+          "valid": true
+        },
+        {
+          "name": "RXC1825",
+          "density_shells": 57,
+          "valid": true
+        },
+        {
+          "name": "ZW1215",
+          "density_shells": 61,
+          "valid": true
+        }
+      ],
+      "available": "X-COP derived ordinary electron-density shells at adopted published radii.",
+      "candidate": "No cluster hydrostatic prediction.",
+      "missing": "3D source and pressure evolution; physical calibration."
+    }
+  ],
+  "gates": {
+    "timing_rows_finite": true,
+    "timing_errors_positive": true,
+    "coma_errors_positive": true,
+    "lens_covariance_positive": true,
+    "cluster_density_shells_valid": true
+  },
+  "numerical_pass": true,
+  "prerequisites": [
+    {
+      "name": "microscopic_identity",
+      "ready": false,
+      "evidence": "Scalar is effective, not a derived particle/spin or charge interaction."
+    },
+    {
+      "name": "matter_rods_clocks",
+      "ready": false,
+      "evidence": "Clock actions are postulated; rods are fixed and no microscopic bound material is solved."
+    },
+    {
+      "name": "three_dimensional_gravity",
+      "ready": false,
+      "evidence": "Only homogeneous, 1D and 2D TE fixed-space Hamiltonians; no universal metric/stress equation."
+    },
+    {
+      "name": "dimensional_normalization",
+      "ready": false,
+      "evidence": "Dimensionless fixtures have no derived universal conversion to stellar or cluster units."
+    },
+    {
+      "name": "bolometric_source_history",
+      "ready": false,
+      "evidence": "Prepared finite pulses, no inferred light history or formation calculation for actual objects."
+    },
+    {
+      "name": "shared_motion_lensing",
+      "ready": false,
+      "evidence": "Material force depends on I/M; rest-coupling alternatives add a new source and remain postulates."
+    }
+  ],
+  "observational_ready": false,
+  "astrophysical_fits_executed": false,
+  "reason": "Required predictions do not exist; no fictional observational chi-square is computed.",
+  "scope": "Static tests only. Published units/radii retained without refitting distances; no halo fields evaluated."
+}
