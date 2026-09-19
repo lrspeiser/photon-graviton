@@ -148,6 +148,9 @@ def main():
         # TF-1, the transverse coupling of the converted field (experiments/transverse_coupling/protocol.md): the fast
         # exact-property gates with their controls, anchored to the archived exact stage.
         ('../experiments/transverse_coupling/tf1_checks.py', []),
+        # CL-2 stage 2 (path-memory/protocol-cl2-stage2.md and its amendments): the disk-force gates, the certificate of the
+        # archived galaxy optimum recomputed from the inputs, and the SZ correlation matrices, anchored to cl2s2-results.json.
+        ('path-memory/cl2s2_checks.py', []),
         # LAST, and expected to exit non-zero until the owner rules: stage 8 reproduces, but its numerical
         # verification status is FAILED (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
