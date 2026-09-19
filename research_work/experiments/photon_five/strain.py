@@ -31,7 +31,7 @@ def homogeneous(weights,coupling=.2):
                 final_photon_energy=photons[-1],final_field_energy=.5*(q[-1]**2+v[-1]**2)+q[-1]**4/4,
                 final_heat=heat[-1])
 
-def ray(amplitude,tolerance):
+def ray(amplitude,tolerance,max_step=.25):
     def rhs(t,y):
         x,z,px,pz=y
         q=amplitude*np.exp(-.5*(x*x+z*z))
@@ -39,7 +39,7 @@ def ray(amplitude,tolerance):
         H=np.sqrt(ex*px*px+ez*pz*pz)
         factor=(D[0]*ex*px*px+D[2]*ez*pz*pz)/H
         return [ex*px/H,ez*pz/H,-factor*x*q,-factor*z*q]
-    sol=solve_ivp(rhs,[0,16],[1.1,-8,0.,1.],method='DOP853',rtol=tolerance,atol=tolerance*1e-3,max_step=.25)
+    sol=solve_ivp(rhs,[0,16],[1.1,-8,0.,1.],method='DOP853',rtol=tolerance,atol=tolerance*1e-3,max_step=max_step)
     if not sol.success:raise RuntimeError(sol.message)
     x,z,px,pz=sol.y
     q=amplitude*np.exp(-.5*(x*x+z*z))

@@ -4,6 +4,7 @@ from scipy.integrate import quad
 from common import PM, track
 from transport import packets, response
 from cluster_lensing_checks import checks
+from strain import ray
 
 def run():
     track(PM/'cluster_lensing_checks.py')
@@ -32,10 +33,14 @@ def run():
     exact=radius**2/h**4*np.exp(-radius**2/(2*h*h))/(2*np.pi*h*h)
     gaussian_error=np.max(abs(numeric-exact))/np.max(abs(exact))
     optics=checks()
+    timestep_rays=[ray(1e-6,1e-8,.5),ray(1e-6,1e-11,.125)]
+    ray_change=abs(timestep_rays[0]['deflection']/timestep_rays[1]['deflection']-1)
     gates=dict(finite_packet_budget=abs(T-stored-decayed)<1e-10,
                survival=survival_z<5,flight_moments=all(m['z']<5 for m in moments),
                gaussian_curvature=gaussian_error<1e-4,
-               independent_cluster_optics=optics['numerical_verification_passed'])
+               independent_cluster_optics=optics['numerical_verification_passed'],
+               ray_timestep_refinement=ray_change<1e-4)
     return dict(experiment='independent audit',gates=gates,numerical_pass=all(gates.values()),
+                ray_timestep_relative_change=ray_change,timestep_rays=timestep_rays,
                 survival=dict(supplied=T,stored=stored,decayed=decayed,expected_stored=T*probability,z=survival_z),
                 moments=moments,gaussian_curvature_relative_error=gaussian_error,optics=optics)
