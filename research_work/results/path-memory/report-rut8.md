@@ -10,13 +10,80 @@ draws and evolves every population here, by import and unchanged.
 This is item 6 of the owner's handoff: the linear mode calculation around the populations of stage 7, which
 stage 7 said was the only thing that could explain its result, locate the threshold, or exclude slower modes.
 
+> ## Corrections after the owner's review of 3a80fec
+>
+> **The owner's ruling.** A properly specified third ring-limit verification is approved. Stage 8's numerical
+> verification status **stays failed**, and L3 and L3b stay failed in this archive whatever a later version
+> does. The simulation findings, which do not depend on the failed check, are preserved. The failure is not
+> waived, and it does not erase evidence that is independent of it. Nothing below changes an archived number;
+> it changes what this report may claim from them.
+>
+> **What may and may not be claimed from stage 8**, as the owner set it out:
+>
+> | claim | standing |
+> |---|---|
+> | stage 7's corrected construction and sampling checks pass | retained |
+> | the archived live-field simulations show the reported behaviour | retained, within their own verification and scope |
+> | B13, B16 and B24 were predicted before those simulations | retained; the owner checked the forecast values at aaf0bfe against the current archive and they are unchanged |
+> | warmer supported populations are promising candidates for the next stability tests | retained |
+> | the stage 8 linear calculation has passed its declared verification | **not claimed** |
+> | every population's root is independently converged to 5×10⁻⁸ | **not claimed** — see 1 |
+> | a stability boundary has been measured at dE = 0.01993 | **not claimed** — see 3 |
+>
+> The predictions stand as **prospective and partially corroborated**. They do not stand as numerically
+> certified conclusions of this stage.
+>
+> 1. **I extended a convergence result to populations it was not run on.** Gate L4 refined the roots of
+>    `A_cold` and B16 only. This report went on to say that "every other population has as many nodes or more",
+>    and so that the predictions do not depend on the basis defect. A node count is not a convergence
+>    certificate. B13, `B_cold`, the family scan that the threshold is fitted through, and every root-free
+>    population have had no convergence test of their own. For a population where no root is found there is no
+>    root position to compare: the test that matters is whether the root-free conclusion over the declared
+>    domain survives refinement of the basis, the quadrature and the harmonics, and it has not been run.
+> 2. **An approximation I made knowingly, and did not disclose (found by the owner).** The simulated population
+>    is exactly zero outside sharp bounds, `|L − L0| ≤ 4dL` and `E − E_circ(L) ≤ 4dE`. `warm_modes.py`
+>    differentiates the Gaussian *inside* those bounds and omits the boundary terms. With the other bounds
+>    suppressed, `f0 = g Θ(E_max(L) − E)` gives `∂f0/∂E = (∂g/∂E) Θ − g(E_max, L) δ(E − E_max)`, and there are
+>    corresponding terms at both angular-momentum bounds and from the L-dependence of `E_max`. At four widths
+>    the interior factor is e⁻⁸ = 3.35×10⁻⁴: small, but a small density on a boundary does not by itself bound
+>    its contribution to a resonant response. In the prototype I noted that the edges were being ignored and
+>    judged them negligible without calculating them, and I wrote nothing about it in the protocol or here.
+>    **Until those terms are calculated or bounded, no high-precision agreement with the simulated population
+>    may be claimed.** This is not offered as the explanation of B13's shortfall; it may prove negligible.
+>    Replacing the cutoff with a smooth taper would be a different population, not the same prediction.
+> 3. **The threshold is an extrapolation, and I reported it as a location.** The solver resolves nothing below a
+>    growth rate of 0.006. "dE\* = 0.01993" is a quadratic through five resolved roots at dE = 0.014 to 0.018,
+>    carried to zero. Its leave-one-out range, 0.01992 to 0.01994, is not its uncertainty: through the same five
+>    points a straight line crosses at **0.02044** and a cubic at **0.01991** (the owner's check, which I
+>    reproduce). What is supported is *an estimated zero-growth crossing near dE ≈ 0.020, from an extrapolation
+>    of the resolved unstable branch*. "`B_mid` sits at marginal stability" says more than that and is
+>    withdrawn; `B_mid` lies near the extrapolated crossing.
+> 4. **"Growth rates agree to about 20%" is withdrawn as a summary.** The record is more informative than
+>    that: the qualitative ordering and B13's pattern speed agree; **B13's rate has an unresolved 22% shortfall,
+>    5.4 standard errors, cause unknown**; B16's estimate is 33% *above* its prediction and passes the declared
+>    reading only because its uncertainty is large, which is compatibility and not a precise confirmation.
+> 5. **B24 is not certified stable.** What is supported: B24 was predicted to have no unstable root in the
+>    declared search region and showed no growth phase over the declared simulation horizon. The region is
+>    m = 1 to 4, a finite strip of complex frequency, and growth rates of at least 0.006 — an e-folding of 26.5
+>    reference periods — and the run is 40 periods. Slower modes, other angular numbers and a disturbance that
+>    never became detectable are not excluded. "Confirmed" is the declared reading, not a stability result.
+> 6. **Gate L2 is narrower than this report's wording.** It selects **one** kernel column — the one nearest
+>    the mean radius — in each of two populations, and compares that column's response at every node. It does
+>    not test every column of the response matrix, and it does not test the eigenfunction of any mode, B13's
+>    included. "The response matrix agrees with a time-domain experiment" overstated it.
+> 7. **Two unfinished issues, not one.** The ring-limit verification is not passed, and the best-measured new
+>    population grows appreciably more slowly than predicted. Repairing the first will not by itself explain
+>    the second, and B13 is the central scientific discrepancy of this stage, not a blemish on a confirmed
+>    theory.
+
+
 ## The three statuses, kept separate
 
 | status | result |
 |---|---|
 | **reproduction** | **passes.** `rut8_checks.py` re-hashes code, both protocol files and every series file in both archives; recomputes from scratch gate L1 on all eight populations and its control, L5's control, the sub-rectangle holding each unstable root, a member of the family scan, a ring-limit annulus with its exact-ring target, and a new population; re-derives both ring-limit gates, the threshold fit and every part M reading from the committed files; and replays a 2 T0 prefix of a live and frozen pair. Zero differences. |
-| **numerical verification** | **FAILED, and recorded as failed: the ring-limit gate, twice.** L3 failed as declared on one of its four criteria — a ceiling on the order of convergence, 2.507 against 2.5. Amendment 1, written after that failure and before its replacement was run, declared L3b; **L3b failed too**, on its final bound — 0.555% against 0.5%. The amendment said that if L3b failed nothing further would be declared in its place without the owner, and nothing has been. Both misses have one cause, found afterwards by an exploratory check that is not a gate: the declared rule for the kernel nodes gives a very narrow annulus **three nodes**, and the basis is under-resolved there. It does not touch the populations, whose 9 to 26 nodes are converged to 5×10⁻⁸ (gate L4). The other four gates of part L and all six of part M pass, and every negative control is rejected. `rut8_checks.py` exits non-zero, as the protocol says it must. |
-| **scientific outcome** | **reported as it fell, and under the protocol not yet claimable: a failed numerical gate blocks the conclusions that depend on it, and whether the ring-limit failure does is the owner's ruling, not mine.** As it fell: the calculation accounts for stage 7 and locates the threshold; of three blind predictions, two are confirmed by the declared reading and one is unresolved. Every qualitative prediction held: which populations are unstable, that only m = 2 is, that the pattern is nearly stationary in the inertial frame, that growth weakens with temperature, and that the population beyond the threshold is quiet. The growth *rate* of the best-measured new population is 22% below the prediction at five standard errors, and I do not know why. |
+| **numerical verification** | **FAILED, and recorded as failed: the ring-limit gate, twice.** L3 failed as declared on one of its four criteria — a ceiling on the order of convergence, 2.507 against 2.5. Amendment 1, written after that failure and before its replacement was run, declared L3b; **L3b failed too**, on its final bound — 0.555% against 0.5%. The amendment said that if L3b failed nothing further would be declared in its place without the owner, and nothing has been. Both misses have one cause, found afterwards by an exploratory check that is not a gate: the declared rule for the kernel nodes gives a very narrow annulus **three nodes**, and the basis is under-resolved there. ~~It does not touch the populations, whose 9 to 26 nodes are converged to 5×10⁻⁸ (gate L4).~~ **Withdrawn (correction 1): L4 refined two populations, `A_cold` and B16, and no other.** The other four gates of part L and all six of part M pass, and every negative control is rejected. `rut8_checks.py` exits non-zero, as the protocol says it must. |
+| **scientific outcome** | **reported as it fell, and under the protocol not yet claimable: a failed numerical gate blocks the conclusions that depend on it, and whether the ring-limit failure does is the owner's ruling, not mine.** **The owner has since ruled: see the corrections above.** As it fell: the calculation accounts for stage 7 and ~~locates the threshold~~ extrapolates a zero-growth crossing (correction 3); of three blind predictions, two are confirmed by the declared reading and one is unresolved. Every qualitative prediction held: which populations are unstable, that only m = 2 is, that the pattern is nearly stationary in the inertial frame, that growth weakens with temperature, and that the population beyond the ~~threshold is quiet~~ extrapolated crossing showed no growth phase within its horizon (corrections 3 and 5). The growth *rate* of the best-measured new population is 22% below the prediction at five standard errors, and I do not know why. |
 
 ## The calculation
 
@@ -32,7 +99,7 @@ k_m(r_b, ·) = exp[−(r−r_b)²/2w²] I_m^e(r r_b/w²) and collocating on the 
 
     T(s) = P + α H(s) M(s),    M_ab(s) = (2π)² Σ_l ∫ dJ_r dL  G_al G_bl F_l / (ν_l − i s),
 
-G_al being the orbit transform of k_m(r_a, ·). Overlapping Gaussians are nearly dependent, so T is posed in
+G_al being the orbit transform of k_m(r_a, ·). **In F_l the derivatives of f₀ are those of the Gaussian inside the population's sharp bounds; the delta-function terms at the bounds are omitted (correction 2).** Overlapping Gaussians are nearly dependent, so T is posed in
 the orthonormal basis of P's well-represented subspace — the same roots and a determinant of order one. At
 the declared node spacing that is 9 to 26 functions; when the nodes are refined the basis stops growing (13
 for `A_cold` at a spacing of 0.05, 14 at 0.025) and the root does not move. Roots in Re s > 0 are located by stage 7's contour method and
@@ -45,7 +112,7 @@ resolving the resonant denominators: no root above the floor is not stability.
 | gate | result | the control it had to reject |
 |---|---|---|
 | L1 the orbit library | 12,288 orbits per population: mass and four density moments agree with the solver's density to 1.2×10⁻⁵ on all eight populations (declared 5×10⁻⁵); for the most nearly circular orbit of every L, Ω_r matches κ to 3.3×10⁻⁶ and Ω_θ matches Ω_c to 1.1×10⁻⁷ (declared 10⁻³) | with the memory field removed from the potential the moments are off by 223%: rejected |
-| L2 the response matrix, in the time domain | 200,000 bodies under an imposed growing perturbation, +ε and −ε on identical bodies: the kernel-weighted harmonic of the difference equals −M_ab(s)ε to **1.30%** of the largest element for `A_cold` at s = 0.05 − 0.05i and **1.95%** for `A_warm` at 0.03 − 0.10i, real and imaginary parts at every node (declared 3%). In the prototype the same comparison was 2.1% at 100,000 bodies and 0.58% at 400,000: it is sampling noise that remains | keeping only the l = 0 harmonic is off by 99% and 117%: rejected |
+| L2 the response matrix, in the time domain — **one column of it per population, the kernel nearest the mean radius (correction 6)** | 200,000 bodies under an imposed growing perturbation, +ε and −ε on identical bodies: the kernel-weighted harmonic of the difference equals −M_ab(s)ε to **1.30%** of the largest element for `A_cold` at s = 0.05 − 0.05i and **1.95%** for `A_warm` at 0.03 − 0.10i, real and imaginary parts at every node (declared 3%). In the prototype the same comparison was 2.1% at 100,000 bodies and 0.58% at 400,000: it is sampling noise that remains | keeping only the l = 0 harmonic is off by 99% and 117%: rejected |
 | **L3 the ring limit** | **FAILED as declared.** Differences from the exact-history ring 23.35%, 4.67%, 0.63%: falling at every step ✓, last under 2% ✓, control rejected ✓, **order 2.507 against a declared ceiling of 2.5 ✗** | the ring at R = 1 instead of the annulus's radius is off by 72%: rejected |
 | **L3b the ring limit, amendment 1** | **FAILED as amended.** Four annuli: 23.35%, 4.67%, 0.63%, **0.555%** — falling at every step ✓, order 1.86 ≥ 1.5 ✓, control rejected ✓, **last under 0.5% ✗** | the ring at R = 1 is off by 70%: rejected |
 | L4 convergence | doubling the orbit quadrature, doubling the angle nodes, raising the harmonics to 12, refining the kernel nodes to 0.075 and widening their range move the m = 2 root of `A_cold` and of B16 by at most **4.8×10⁻⁸** (declared 10⁻⁴) | with only l = 0 the root disappears: rejected |
@@ -97,8 +164,9 @@ cannot leave a narrow annulus with three nodes, and a convergence check made *on
 the owner's to ask for.
 
 **What the failure does and does not reach.** Gate L4 refined the kernel nodes and widened their range on
-`A_cold` and on B16 and moved their roots by 5×10⁻⁸; every other population has as many nodes or more. So the
-populations' predictions do not depend on the defect, as far as L4 tested.
+`A_cold` and on B16 and moved their roots by 5×10⁻⁸. ~~Every other population has as many nodes or more. So the
+populations' predictions do not depend on the defect, as far as L4 tested.~~ **Withdrawn (correction 1):** that
+is two populations of eight, and a node count is not a convergence certificate.
 But L4 checked convergence on the populations and not on the annuli of L3, which is where it was needed, and
 that is my omission.
 
@@ -134,8 +202,10 @@ smoothly with temperature:
 |---|---|---|---|---|---|---|---|---|---|---|
 | growth rate | 0.0413 | 0.0386 | 0.0355 | 0.0322 | 0.0285 | 0.0245 | 0.0202 | 0.0156 | 0.0106 | none above 0.006 |
 
-A quadratic through the five roots below 0.03 reaches the axis at **dE\* = 0.01993** (0.01992 to 0.01994 under
-dropping each point in turn), σ_r ≈ 0.134. **Stage 7's `B_mid`, at dE = 0.020, sits at marginal stability.**
+A quadratic through the five roots below 0.03 reaches the axis at dE = 0.01993 (0.01992 to 0.01994 under
+dropping each point in turn), σ_r ≈ 0.134 — **an extrapolation, not a location (correction 3): a straight line
+through the same points crosses at 0.02044 and a cubic at 0.01991, and nothing is resolved below 0.006.**
+~~Stage 7's `B_mid`, at dE = 0.020, sits at marginal stability.~~ `B_mid` lies near the extrapolated crossing.
 That is consistent with what stage 7 saw and could not explain — its radial spread rose 10.9% at 64 bodies,
 5.6% at 256 and 0.9% at 1,024. A population at the edge of instability answers shot noise with a large,
 slowly decaying m = 2 disturbance, and the heating that causes falls with N without being two-body
@@ -174,8 +244,8 @@ the instability does to the population (D at 1,024 bodies, percent):
 | mean angular momentum | −1.31 ± 0.03 | −0.73 ± 0.08 | −0.02 ± 0.00 | −2.01 ± 0.05, −0.021 ± 0.005 |
 | mean radius | −0.43 ± 0.05 | −0.39 ± 0.08 | +0.01 ± 0.07 | −0.63 ± 0.04, +0.06 ± 0.03 |
 
-Five temperatures, physics fixed: the damage falls monotonically with temperature and vanishes between
-dE = 0.016 and 0.020, where the calculation puts the threshold.
+Five temperatures, physics fixed: the damage falls monotonically with temperature and is no longer resolved
+between dE = 0.016 and 0.020, the interval in which the extrapolated crossing falls.
 
 **What did not.** B13 at 1,024 bodies is the best-measured cell in the stage — four realizations at 0.0242,
 0.0270, 0.0220 and 0.0274, a clean exponential whose local slope is 0.025 from 8 to 18 T0 — and it is **22%
@@ -228,17 +298,33 @@ already produces the eigenvector.
 * **Below the floor.** No root above a growth rate of 0.006 is not stability. The cold ring's spectrum has
   unstable roots with growth times of hundreds to 10⁵ periods at every m, and this discretization cannot see
   their counterparts in an annulus. A damped mode is invisible to any search of the right half-plane, so
-  `B_mid` is "marginal" only from the unstable side.
-* **The growth rate to better than about 20%.** The pattern speeds, the selection of m = 2, the threshold's
+  ~~`B_mid` is "marginal" only from the unstable side~~ `B_mid` has not been shown to be marginal from
+  either side (correction 3).
+* ~~**The growth rate to better than about 20%.** The pattern speeds, the selection of m = 2, the threshold's
   location and the ordering with temperature are confirmed by simulation; the rate is confirmed at that level
-  and not beyond it.
+  and not beyond it.~~ **Withdrawn (corrections 3 and 4).** The qualitative ordering and B13's pattern speed
+  agree. B13's rate has an unresolved 22% shortfall. B16's uncertainty is too large for a strong rate test. The
+  simulations bracket where growth stops being resolved, between dE = 0.016 and 0.020; they do not measure a
+  threshold.
+* **The boundary terms of the sharp truncation** are omitted from the response (correction 2), uncalculated and
+  unbounded.
+* **Convergence of any root but `A_cold`'s and B16's**, or of any root-free conclusion (correction 1).
 * **What sets the threshold.** One footprint, one pair of response times, one angular-momentum width, one
-  radius, one coupling. dE\* = 0.0199 is a number for that family, not a criterion.
+  radius, one coupling. The extrapolated crossing near dE ≈ 0.020 is a number for that family, not a criterion.
 * Writing proportional to mass is still a label with a declared mass; the dissipation reservoir is
   unidentified; the kernel is instantaneous in space; and the bodies' lost angular momentum still has no
   ledger. No observational comparison is made.
 
 ## Next, in the owner's order
+
+**As ruled on 3a80fec:** first, and in parallel, (1) a third ring-limit verification under its own protocol —
+numerical convergence established on each narrow annulus separately from the physical narrowing, an explicit
+error budget, the old three-node construction as a negative control, the same checks extended to B13, B24 and
+the near-threshold branch, and the forecasts recalculated beside the originals and never over them; and (2) B13
+resolved quantitatively — the boundary-derivative audit, an eigenvalue sensitivity, a time-domain check projected
+on B13's own eigenfunction, and a seeded test that initialises the warm population's δf and its excitation
+field, δE = (s + 1/τ_keep) δC, not a cold-ring displacement. Then the quiet region's scope, then formation and
+the physical accounting. What follows is what this report said before that ruling.
 
 The seeded, full-state eigenmode test of these predictions — which would settle B13's 22% — and with it the
 same calculation pushed below the present floor, which needs a better treatment of the resonant denominators
