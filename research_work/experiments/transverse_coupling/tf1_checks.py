@@ -1,4 +1,4 @@
-"""Suite job for TF-1: reruns the fast exact gates and anchors them to evidence/exact-v1/results.json.
+"""Suite job for TF-1: reruns the fast exact gates and anchors them to evidence/exact-v2/results.json.
 Exit 0 only if every gate passes and the anchors match."""
 import json
 import sys
@@ -9,14 +9,14 @@ import numpy as np
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import transverse as T   # noqa: E402
-from common import read  # noqa: E402
+from common import read, plain  # noqa: E402
 
 
 def main():
     t0 = time.time()
     field = T.load_field()
     axis, phi = field['axis'], field['phi']
-    arch = read(HERE/'evidence/exact-v1/results.json')
+    arch = read(HERE/'evidence/exact-v2/results.json')
     steer = T.steering_rays_2d(axis, phi)
     index = T.index_rays_2d(axis, phi)
     cmp = T.compare_rays(steer, index)
@@ -39,7 +39,7 @@ def main():
                    support_factor=float(np.max(np.abs(np.array(g7['support_quadrature']) - np.array(arch['G7']['support_quadrature'])))))
     ok = all(gates.values()) and all(v < 1e-9 for v in anchors.values())
     out = dict(gates=gates, anchors=anchors, anchor_matches_archive=all(v < 1e-9 for v in anchors.values()), passed=ok, seconds=time.time() - t0)
-    print(json.dumps(out, indent=1))
+    print(json.dumps(plain(out), indent=1))
     sys.exit(0 if ok else 1)
 
 

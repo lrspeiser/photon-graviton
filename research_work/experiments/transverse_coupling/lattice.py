@@ -39,7 +39,7 @@ def power_law(g, y):
                 max_log_residual=float(np.max(np.abs(resid))))
 
 
-def run(out):
+def run(out, fit_max=.1):
     cases = {}
 
     def execute(label, **kw):
@@ -104,7 +104,7 @@ def run(out):
                                        colour=(spread < .01) if spread is not None else None,
                                        fixed_ruler=main['local_clock_speed_max_change'] < .001,
                                        conversion=main['receiving_gain'] > .001)))
-    fit_rows = [t for t in table if t['g'] <= .1]
+    fit_rows = [t for t in table if t['g'] <= fit_max]
     gs = [t['g'] for t in fit_rows]
     fits = dict(receiving_gain=power_law(gs, [t['receiving_gain'] for t in fit_rows]),
                 timing_discrepancy=power_law(gs, [t['timing_discrepancy'] for t in fit_rows]),
@@ -116,7 +116,7 @@ def run(out):
     gates = dict(energy=all(t['energy_relative_error'] < 1e-3 for t in table),
                  reproduction=reproduction_worst < 1e-6,
                  power_laws=all(f['log_scatter'] < .1 for f in fits.values()))
-    return dict(stage='scan', gates=gates, numerical_pass=all(gates.values()), reproduction=repro_rows,
+    return dict(stage='scan', fit_max=fit_max, gates=gates, numerical_pass=all(gates.values()), reproduction=repro_rows,
                 table=table, power_laws=fits, largest_coupling_passing_all_screens=largest_pass,
                 receiving_gain_at_that_coupling=gain_at_pass,
                 cosmological_rate_per_Mpc=70/299792.458,

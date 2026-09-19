@@ -20,12 +20,13 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--stage', choices=['exact', 'scan', 'lenses'], required=True)
     p.add_argument('--output', type=Path, required=True)
+    p.add_argument('--fit-max', type=float, default=.1, help='scan only: the largest g_par in the power-law fits (amendment 1 uses 0.02)')
     a = p.parse_args()
     if a.output.exists():
         raise ValueError('Output already exists; preserve previous evidence')
     a.output.mkdir(parents=True)
     source = sorted(list(HERE.glob('*.py')) + list(HERE.glob('*.md')))
-    meta = dict(stage=a.stage, started_utc=datetime.now(timezone.utc).isoformat(),
+    meta = dict(stage=a.stage, arguments=dict(fit_max=a.fit_max) if a.stage == 'scan' else {}, started_utc=datetime.now(timezone.utc).isoformat(),
                 commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                 source_sha256=hashes(source), consumed_inputs_sha256=hashes([x for x in INPUTS if x.exists()]),
                 python=platform.python_version(), packages={k: importlib.metadata.version(k) for k in ['numpy', 'scipy']})
@@ -33,7 +34,7 @@ def main():
     start = time.monotonic()
     try:
         module = importlib.import_module(dict(exact='exact', scan='lattice', lenses='lenses')[a.stage])
-        result = module.run(a.output)
+        result = module.run(a.output, fit_max=a.fit_max) if a.stage == 'scan' else module.run(a.output)
         save(a.output/'results.json', result)
         print({k: v for k, v in result.items() if k in ['stage', 'numerical_pass', 'gates', 'outcome']}, flush=True)
     except Exception:
