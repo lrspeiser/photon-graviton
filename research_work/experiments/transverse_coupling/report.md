@@ -165,3 +165,8 @@ Return to the shape with CL-2 stage 2 (the review's six items), carrying the lig
 declared options. Keep nonlinear sourcing as the candidate for the mass-to-speed slope. If the steering
 law is to be pursued as physics rather than as a probe, the theoretical question is a reciprocal
 formulation: a field term that receives the momentum the law takes, with the energy budget closed.
+
+## Correction (19 September 2026; text only)
+The universal family in stage 3 is described above and in the protocol as "21 widths from 0.158 kpc to
+10 Mpc". It has 25 widths, five per decade, and every computation used all 25 (the archived lens rows
+have 25 columns). The count was a miscount in the text; no number in the evidence changes.

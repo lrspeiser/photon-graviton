@@ -4,6 +4,7 @@ Dated notices that accumulated at the top of `README.md` and `research_plan/STAR
 
 ## 2026-09-19: corrections to the CL-2 record after review
 
+- **TF-1 text correction:** the universal family in TF-1's stage 3 has 25 widths at or above 0.158 kpc, not 21 as its report and protocol say; every computation used all 25 ([note](research_work/experiments/transverse_coupling/report.md#correction-19-september-2026-text-only)). CL-2 stage 2's protocol repeats the miscount and is amended before its run.
 - **Text only, no archived number changed** ([record](research_work/results/path-memory/report-cl2.md#corrections-after-review-19-september-2026-text-only-no-archived-number-changed)). The "4.64-kpc amplitude" was the 10-kpc column and the neighbouring 3.98-kpc width carried weight in every fit with the bending; the joint fit's largest amplitude (0.1 kpc) sat in a column the galaxies and clusters could not see, so the joint run did not test one law; outcome (c) is the output of the declared procedure and not a certified exclusion; the non-thermal sensitivity's reference carried the thermal fraction twice; two wordings corrected. CL-2 stage 2 is declared to repair them.
 
 ## 2026-09-19: transverse coupling of the converted field (TF-1)
