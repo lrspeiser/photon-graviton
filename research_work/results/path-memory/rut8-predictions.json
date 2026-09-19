@@ -7,8 +7,17 @@
   "numerical_verification": {
    "passed": false,
    "failed_gates": [
-    "L3_ring_limit"
-   ]
+    "L3_ring_limit",
+    "L3b_ring_limit_amended"
+   ],
+   "failed_as_declared": [
+    "L3_ring_limit",
+    "L3b_ring_limit_amended"
+   ],
+   "superseded_by_amendment_1": {
+    "L3_ring_limit": "L3b_ring_limit_amended"
+   },
+   "note": "a gate that failed as declared stays failed in this archive; where amendment 1 declared a replacement before running it, the status follows the replacement and the failure is quoted with it"
   },
   "scientific_outcome": "archived as it fell; never part of the exit status"
  },
@@ -903,6 +912,130 @@
     },
     "passed": false
    },
+   "L3b_ring_limit_amended": {
+    "declared_in": "protocol-rut8-amendment-1.md",
+    "replaces": "L3_ring_limit, which failed as declared and is kept above as it fell",
+    "rows": [
+     {
+      "alpha": 0.03710751716792646,
+      "annulus_root": [
+       0.044633730329502484,
+       -0.012338627791774125
+      ],
+      "counts_agree": true,
+      "dE": 0.004,
+      "dL": 0.04,
+      "growth_relative_difference": 0.23348596868201854,
+      "growth_relative_difference_wrong_radius": 1.1160951389102962,
+      "mean_radius": 0.9147046259598735,
+      "mean_support": 0.09990000000000049,
+      "n_r": 600,
+      "radial_width": 0.027925953358422802,
+      "ring_at_stage5_radius": [
+       0.02109249698124965,
+       -0.0014600793801804457
+      ],
+      "ring_omega": 1.1960207286955258,
+      "ring_root_inertial": [
+       0.036185032876534205,
+       -0.006049444004093463
+      ],
+      "seconds": 73.7
+     },
+     {
+      "alpha": 0.038609813811966015,
+      "annulus_root": [
+       0.034481578066813616,
+       -0.005182380252302812
+      ],
+      "counts_agree": true,
+      "dE": 0.001,
+      "dL": 0.02,
+      "growth_relative_difference": 0.04666908909598955,
+      "growth_relative_difference_wrong_radius": 0.7913505634067284,
+      "mean_radius": 0.9105457827219876,
+      "mean_support": 0.0998999999999997,
+      "n_r": 1200,
+      "radial_width": 0.013349162498058922,
+      "ring_at_stage5_radius": [
+       0.019248928027374913,
+       -0.0011351364126879204
+      ],
+      "ring_omega": 1.2063419568140288,
+      "ring_root_inertial": [
+       0.032944106619787,
+       -0.0045116761726204935
+      ],
+      "seconds": 187.8
+     },
+     {
+      "alpha": 0.03898492355282395,
+      "annulus_root": [
+       0.032423498753601634,
+       -0.004323259016414462
+      ],
+      "counts_agree": true,
+      "dE": 0.00025,
+      "dL": 0.01,
+      "growth_relative_difference": 0.006262770870628431,
+      "growth_relative_difference_wrong_radius": 0.7210486351579213,
+      "mean_radius": 0.9095159783978353,
+      "mean_support": 0.09990000000000081,
+      "n_r": 2400,
+      "radial_width": 0.006604686260619899,
+      "ring_at_stage5_radius": [
+       0.0188393855299891,
+       -0.0010704094805658038
+      ],
+      "ring_omega": 1.2089205960218141,
+      "ring_root_inertial": [
+       0.032221701619298215,
+       -0.004213663567369519
+      ],
+      "seconds": 886.8
+     },
+     {
+      "dL": 0.005,
+      "dE": 6.25e-05,
+      "n_r": 4800,
+      "alpha": 0.039078659957081964,
+      "mean_radius": 0.909259125917595,
+      "radial_width": 0.0032937956863082407,
+      "mean_support": 0.09989999999999952,
+      "counts_agree": true,
+      "annulus_root": [
+       0.03186841676845704,
+       -0.004124626726209259
+      ],
+      "ring_root_inertial": [
+       0.032046209378976724,
+       -0.004143537023823196
+      ],
+      "ring_omega": 1.2095651625803225,
+      "growth_relative_difference": 0.005548007516805509,
+      "ring_at_stage5_radius": [
+       0.01873985356740668,
+       -0.0010550698016538185
+      ],
+      "growth_relative_difference_wrong_radius": 0.7005691455286625,
+      "seconds": 3618.9
+     }
+    ],
+    "differences": [
+     0.23348596868201854,
+     0.04666908909598955,
+     0.006262770870628431,
+     0.005548007516805509
+    ],
+    "falling_at_every_step": true,
+    "observed_order": 1.8634582860163447,
+    "negative_control": {
+     "what": "the ring evaluated at stage 5's radius, R = 1, instead of the annulus's own",
+     "last_difference": 0.7005691455286625,
+     "rejected": true
+    },
+    "passed": false
+   },
    "L4_convergence": {
     "rows": {
      "A_cold": {
@@ -1751,7 +1884,7 @@
   }
  },
  "code_sha256_at_launch": {
-  "rut8.py": "7cd38bfbe0651dfa10766621276c4b70ab0616aabad4cb7d3d753c2411d57d23",
+  "rut8.py": "540b41824d1ffbe50d9173261e7e96201e633a8d49f6aebda0e17950084a1452",
   "rut8_tasks.py": "7c7c4900fbda9c5a7386da87be940c31a14d1fac7f2cde75d4e07a44696a47eb",
   "warm_modes.py": "31a59fcdb693c2b3720ecb3c3c3428c4b2abf628f4e09287b0ddce8f77a5b445",
   "rut7_tasks.py": "5c451c78c6d094847de53959d0dfe83e1b6c8c5f3a8c60c782dd8bdbc35ca0b4",
@@ -1767,7 +1900,8 @@
  },
  "tasks_reused": 111,
  "input_sha256": {
-  "protocol-rut8.md": "9f7ce0d0ccd4ab2d05ac8ea6df7f313b39a24c3c42e6f33d73b259c16bbc1ea8"
+  "protocol-rut8.md": "9f7ce0d0ccd4ab2d05ac8ea6df7f313b39a24c3c42e6f33d73b259c16bbc1ea8",
+  "protocol-rut8-amendment-1.md": "e0ed8da8402c6f380a7c37e69fdffc72c195b0a98198474491ee5e6aa111f115"
  },
  "series_sha256": {
   "modes.json.gz": "244541a7f513f3d7d9b79102c0d5c4533a26445678157edb98dab66249e70a5d",

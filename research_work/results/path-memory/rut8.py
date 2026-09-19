@@ -33,7 +33,18 @@ import warm_modes as WM     # noqa: E402
 
 TASK_CODE = tuple(f for f in CODE if f not in ('rut8.py', 'rut7.py'))
 PROTOCOL = 'protocol-rut8.md'
+AMENDMENT = 'protocol-rut8-amendment-1.md'
 PREDICTIONS = 'rut8-predictions.json'
+
+
+def amendment():
+    """Amendment 1's own machine-readable block: the replacement ring-limit gate, L3b."""
+    import re
+    text = _find(AMENDMENT).read_text(encoding='utf-8')
+    return json.loads(re.search(r'```json\s*(\{.*?\})\s*```', text, re.S).group(1))
+
+
+TH_A = amendment()
 
 
 # ================================================================ part L and part P, from finished tasks
@@ -117,7 +128,9 @@ def predict(results, populations):
     gates['L2_response_matrix_time_domain'] = dict(
         rows=l2, negative_controls_rejected=bool(all(r['negative_control']['rejected'] for r in l2.values())),
         passed=bool(all(r['passed'] for r in l2.values())))
-    l3 = sorted(results['L3'].values(), key=lambda r: -r['radial_width'])
+    declared = {(c[0], c[1]) for c in L['ring_limit']}
+    l3_all = sorted(results['L3'].values(), key=lambda r: -r['radial_width'])
+    l3 = [r for r in l3_all if (r['dL'], r['dE']) in declared]
     diffs = [r['growth_relative_difference'] for r in l3]
     ok = all(d is not None for d in diffs)
     falling = ok and all(b < a for a, b in zip(diffs[:-1], diffs[1:]))
@@ -130,6 +143,22 @@ def predict(results, populations):
                               last_difference=wrong, rejected=bool(wrong is not None and wrong > L['ring_limit_last'])),
         passed=bool(falling and diffs[-1] < L['ring_limit_last'] and lo <= order <= hi
                     and wrong is not None and wrong > L['ring_limit_last']))
+    # L3b, amendment 1: declared AFTER L3 failed as declared. L3 above is kept exactly as it fell.
+    B = TH_A['L3b']
+    wanted = {(c[0], c[1]) for c in B['ring_limit']}
+    l3b = [r for r in l3_all if (r['dL'], r['dE']) in wanted]
+    d_b = [r['growth_relative_difference'] for r in l3b]
+    complete = len(l3b) == len(wanted) and all(d is not None for d in d_b)
+    falling_b = complete and all(b < a for a, b in zip(d_b[:-1], d_b[1:]))
+    order_b = float(np.polyfit(np.log([r['radial_width'] for r in l3b]), np.log(d_b), 1)[0]) if complete else None
+    wrong_b = l3b[-1]['growth_relative_difference_wrong_radius'] if l3b else None
+    gates['L3b_ring_limit_amended'] = dict(
+        declared_in=AMENDMENT, replaces='L3_ring_limit, which failed as declared and is kept above as it fell',
+        rows=l3b, differences=d_b, falling_at_every_step=bool(falling_b), observed_order=order_b,
+        negative_control=dict(what="the ring evaluated at stage 5's radius, R = 1, instead of the annulus's own",
+                              last_difference=wrong_b, rejected=bool(wrong_b is not None and wrong_b > B['control_min'])),
+        passed=bool(falling_b and d_b[-1] < B['last'] and order_b >= B['order_min']
+                    and wrong_b is not None and wrong_b > B['control_min']))
     l4 = {}
     for name in sorted({k.split(':')[0] for k in results['L4']}):
         base = complex(*results['L4'][f'{name}:base']['root'])
@@ -258,8 +287,9 @@ def predict_tasks(new_pops):
     tasks.append((2., 'L1', 'control:A_cold', (pops['A_cold'], False)))
     for name, s_pair in L['time_domain_cases'].items():
         tasks.append((60., 'L2', name, (pops[name], s_pair)))
-    for cfg in L['ring_limit']:
-        tasks.append((10. + cfg[2]/40., 'L3', f'dL{cfg[0]}', (cfg,)))
+    configs = {f'dL{cfg[0]}': cfg for cfg in list(L['ring_limit']) + list(TH_A['L3b']['ring_limit'])}
+    for key, cfg in configs.items():
+        tasks.append((10. + cfg[2]/40., 'L3', key, (list(cfg),)))
     for dE in P['family_B_dE']:
         tasks.append((4., 'family', f'{dE:.3f}', (dE,)))
     return pops, sorted(tasks, key=lambda t: -t[0])
@@ -351,7 +381,7 @@ def main():
 
     series_dir = out_dir/'rut8-series'
     series_dir.mkdir(exist_ok=True)
-    inputs = {PROTOCOL: hashlib.sha256(_find(PROTOCOL).read_bytes()).hexdigest()}
+    inputs = {f: hashlib.sha256(_find(f).read_bytes()).hexdigest() for f in (PROTOCOL, AMENDMENT)}
     with ProcessPoolExecutor(max_workers=args.workers) as pool:
         say(f'stage 8, phase {args.phase}: {args.workers} workers, output {out_dir}')
         new_names = TH['P']['new_populations']
@@ -398,11 +428,18 @@ def main():
                                           passed=bool(derived['all_runs_completed'] and derived['pairs_identical'])))
             body = dict(part_M=dict(gates=gates, comparison=derived['comparison'], run_index=derived['run_index']))
             name_out = 'rut8-results.json'
-    failed = sorted(k for k, g in gates.items() if not g['passed'])
+    superseded = {'L3_ring_limit': 'L3b_ring_limit_amended'} if 'L3b_ring_limit_amended' in gates else {}
+    failed_as_declared = sorted(k for k, g in gates.items() if not g['passed'])
+    failed = [k for k in failed_as_declared if k not in superseded or not gates[superseded[k]]['passed']]
     result = dict(experiment='RUT-1 stage 8: the linear modes of the constructed populations, predicted before they are measured',
                   phase=args.phase, protocol=PROTOCOL,
                   statuses=dict(reproduction='decided by rut8_checks.py against this archive',
-                                numerical_verification=dict(passed=not failed, failed_gates=failed),
+                                numerical_verification=dict(
+                                    passed=not failed, failed_gates=failed, failed_as_declared=failed_as_declared,
+                                    superseded_by_amendment_1={k: v for k, v in superseded.items() if k in failed_as_declared},
+                                    note='a gate that failed as declared stays failed in this archive; where amendment 1 '
+                                         'declared a replacement before running it, the status follows the replacement '
+                                         'and the failure is quoted with it'),
                                 scientific_outcome='archived as it fell; never part of the exit status'),
                   deviations=[], thresholds=TH, **body,
                   code_sha256_at_launch=code, tasks_reused=len(reused), input_sha256=inputs,
