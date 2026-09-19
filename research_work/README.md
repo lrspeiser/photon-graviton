@@ -14,6 +14,15 @@ Local orchestration notes and duplicate `evidence/run-*` copies are not part of 
 
 ## Run
 
+For the new cluster-lensing forward calculation, see the [CL-F1 report](results/path-memory/cluster-lensing-forward/report.md).
+Run `python research_work/results/path-memory/cluster_lensing_checks.py` for its numerical gates,
+then `python research_work/results/path-memory/run_cluster_lensing.py --demo-geometry` for all twelve clusters
+and the Coma shape transfer. Omit the geometry flag for physical deflection/DeltaSigma only, or provide
+`--geometry-json path.json` with explicit adopted distances and `--cluster A1795` to select one source.
+The model uses ordinary matter and the existing written field; its photon coupling and empirical adequacy
+remain unresolved. The default suite includes this check, but its historical RUT-1 stage 8 job still has a
+declared failed numerical gate; passing CL-F1 does not make the full research programme green.
+
 From the repository root, using a virtual environment with `requirements.txt` installed:
 
 ```sh

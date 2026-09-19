@@ -15,6 +15,7 @@
 - PM-1, path-memory gravity scored against SPARC and the Milky Way
 - CL-1, the written-track response at cluster scale and for light: the first domain test of the RUT-1 line
 - CL-2 stage 1, one written-field response tested jointly on galaxies, lenses and clusters, on the X-COP release's measured profiles
+- CL-F1, verified forward lensing for the twelve X-COP sources with CL-2's pressure spectrum frozen: [report and evidence](research_work/results/path-memory/cluster-lensing-forward/report.md). Deflection, shear, magnification and image/critical-curve solves run without a dark-matter source. The Coma shape transfer worsens chi-squared from 4.284 (baryons) to 9.902 (written response), so this is an executable conditional prediction, not a solved observational theory. Angular examples use explicitly fictional distances; absolute cluster-lensing validation and the photon/light coupling remain open.
 
 Dated history is in [CHANGELOG.md](CHANGELOG.md); standing rules and the foundational index are in [research_plan/START-HERE.md](research_plan/START-HERE.md). All samples below were exposed during development. No genuinely untouched holdout has been opened.
 
