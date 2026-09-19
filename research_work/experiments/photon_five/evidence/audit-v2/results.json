@@ -1,0 +1,83 @@
+{
+  "experiment": "independent audit",
+  "gates": {
+    "finite_packet_budget": true,
+    "survival": true,
+    "flight_moments": true,
+    "gaussian_curvature": true,
+    "independent_cluster_optics": true,
+    "ray_timestep_refinement": true
+  },
+  "numerical_pass": true,
+  "ray_timestep_relative_change": 8.881784197001252e-16,
+  "timestep_rays": [
+    {
+      "deflection": -6.146936622406644e-07,
+      "hamiltonian_error": 2.220446049250313e-16,
+      "min_metric": 0.999999111080426
+    },
+    {
+      "deflection": -6.146936622406639e-07,
+      "hamiltonian_error": 2.220446049250313e-16,
+      "min_metric": 0.9999991087661864
+    }
+  ],
+  "survival": {
+    "supplied": 15.0,
+    "stored": 2.9827880859375,
+    "decayed": 12.0172119140625,
+    "expected_stored": 2.9797861590027437,
+    "z": 0.25681561853311297
+  },
+  "moments": [
+    {
+      "scattering_rate": 0.0,
+      "predicted_msd": 15.863148704514167,
+      "packet_msd": 16.19974015825622,
+      "standard_error": 0.16474930786607164,
+      "z": 2.043052308393762
+    },
+    {
+      "scattering_rate": 3.0,
+      "predicted_msd": 1.7323141988237645,
+      "packet_msd": 1.7396267953115219,
+      "standard_error": 0.015104406587850743,
+      "z": 0.484136628951666
+    }
+  ],
+  "gaussian_curvature_relative_error": 1.0401594608304626e-06,
+  "optics": {
+    "gates": {
+      "uniform_sphere_and_zero_response": {
+        "error": 1.997370827546283e-16,
+        "passed": true,
+        "doubled_mass_control_rejected": true
+      },
+      "gaussian_convolution": {
+        "errors": [
+          2.25723415698539e-05,
+          5.720159079165442e-06
+        ],
+        "passed": true,
+        "missing_projection_factor_control_rejected": true,
+        "signed_field_density_preserved": true
+      },
+      "independent_3d_deflection": {
+        "error": 4.689158808159668e-06,
+        "passed": true
+      },
+      "images_and_critical_curves": {
+        "image_error": 4.2182426935430506e-14,
+        "ring_error": 0.0,
+        "max_residual_arcsec": 5.269562564080843e-12,
+        "passed": true
+      },
+      "invalid_inputs": {
+        "rejected": 7,
+        "expected": 7,
+        "passed": true
+      }
+    },
+    "numerical_verification_passed": true
+  }
+}
