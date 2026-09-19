@@ -239,7 +239,7 @@ def joint_solve(gal_loss, quad_blocks, weights, L0, nu0):
     """Minimise sum_b w_b chi2_b(L, nu_b) + F_gal(L) over L >= 0 and nonnegative nuisances (convex)."""
     nw = len(L0)
     n_nu = [b.n_nuisance for b in quad_blocks]
-    x0 = np.concatenate([np.maximum(L0, 0)] + [np.maximum(np.asarray(n, float), 0) for n in nu0])
+    x0 = np.concatenate([np.maximum(np.asarray(L0, float), 0)] + [np.maximum(np.asarray(n, float), 0) for n, k in zip(nu0, n_nu) if k])
 
     def unpack(x):
         L = x[:nw]
@@ -440,7 +440,6 @@ def main():
         return out
 
     def cluster_score(Lv):
-        s = CR.solve([CR.Block('c', np.zeros((block.N, 0)), block.y - block.A@Lv, block.s, nuisance=block.nuisance)], weights=[1.]) if False else None
         # refit the boundary pressures at fixed amplitudes: nonnegative least squares over the nuisances only
         from scipy.optimize import nnls
         nu, _ = nnls(block.nuisance, block.y - block.A@Lv)
