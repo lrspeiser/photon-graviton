@@ -137,6 +137,9 @@ def main():
         # The owner's corrected annulus sampler (2f1d5ed, bde7a7c): a numerical-verification job in its own
         # right, outside the frozen results tree, run as a module from the repository root.
         ('module:research_work.annulus_sampling.checks', []),
+        # CL-1, the written-track response at cluster scale and for light (path-memory/protocol-cl1.md): the
+        # nine numerical gates with their negative controls and a regression anchor.
+        ('path-memory/cl1_checks.py', []),
         # LAST, and expected to exit non-zero until the owner rules: stage 8 reproduces, but its numerical
         # verification status is FAILED (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
