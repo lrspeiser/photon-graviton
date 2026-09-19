@@ -1,0 +1,4148 @@
+{
+ "experiment": "CL-2 stage 1: one written-field response tested jointly on galaxies, lenses and clusters",
+ "protocol": "protocol-cl2.md",
+ "statuses": {
+  "numerical_verification": "passed",
+  "scientific_outcome": "c: even flexible positive spectra fail"
+ },
+ "gates": {
+  "G1_analytic_members": {
+   "log_flat_worst": 1.0282104723202679e-07,
+   "inverse_width_worst": 6.935806595720351e-09,
+   "tolerance": 1e-06,
+   "passed": true,
+   "control": {
+    "name": "the 1/w member against sqrt(pi) M/r^2 in place of sqrt(pi/2)",
+    "worst": 0.29289322371780835,
+    "rejected": true
+   }
+  },
+  "G2_single_gaussian_limit": {
+   "cl1_archived": {
+    "w": 530.8844442309879,
+    "Lambda": 7.773081705514476e-08,
+    "chi2": 4383.199849907316
+   },
+   "spectrum_one_width": {
+    "Lambda": 7.773081705514476e-08,
+    "chi2": 4383.199849907318
+   },
+   "relative_differences": [
+    0.0,
+    4.440892098500626e-16
+   ],
+   "tolerance": 1e-09,
+   "passed": true,
+   "control": {
+    "name": "a second width (100 kpc) with free amplitude",
+    "chi2": 3212.5781645349093,
+    "rejected": true
+   }
+  },
+  "G3_mixture_routes": {
+   "rows": [
+    {
+     "b": 1.0,
+     "three_dimensional": 1.650101748658261,
+     "two_dimensional": 1.6501019730607747,
+     "relative_difference": 1.3599311876610898e-07,
+     "control": 0.6764567082199096
+    },
+    {
+     "b": 4.0,
+     "three_dimensional": 4.144772568936363,
+     "two_dimensional": 4.1447726706980355,
+     "relative_difference": 2.455181047356092e-08,
+     "control": 0.060110567057102715
+    },
+    {
+     "b": 10.0,
+     "three_dimensional": 3.075437879908666,
+     "two_dimensional": 3.0754378067830843,
+     "relative_difference": 2.3777291691118307e-08,
+     "control": 0.06961734725356483
+    },
+    {
+     "b": 25.0,
+     "three_dimensional": 0.6852125737881168,
+     "two_dimensional": 0.6852125669932119,
+     "relative_difference": 9.916492071937455e-09,
+     "control": 0.11333123413332358
+    }
+   ],
+   "worst": 1.3599311876610898e-07,
+   "tolerance": 1e-06,
+   "passed": true,
+   "control": {
+    "name": "the two-dimensional route with the shell kernel",
+    "smallest": 0.060110567057102715,
+    "rejected": true
+   }
+  },
+  "G4_grid_convergence": {
+   "cluster_rows": [
+    {
+     "cluster": "A1644",
+     "retained_widths": 1.3204921520532999e-05
+    },
+    {
+     "cluster": "A1795",
+     "retained_widths": 2.39570637904307e-05
+    },
+    {
+     "cluster": "A2029",
+     "retained_widths": 5.155703214621124e-05
+    },
+    {
+     "cluster": "A2142",
+     "retained_widths": 1.5222634814394046e-05
+    },
+    {
+     "cluster": "A2255",
+     "retained_widths": 3.226460582213688e-05
+    },
+    {
+     "cluster": "A2319",
+     "retained_widths": 1.5738475234314945e-05
+    },
+    {
+     "cluster": "A3158",
+     "retained_widths": 1.04549277731529e-05
+    },
+    {
+     "cluster": "A3266",
+     "retained_widths": 8.871037198688193e-06
+    },
+    {
+     "cluster": "A644",
+     "retained_widths": 2.833736844692283e-05
+    },
+    {
+     "cluster": "A85",
+     "retained_widths": 3.2578124666700335e-05
+    },
+    {
+     "cluster": "RXC1825",
+     "retained_widths": 1.5200565751981936e-05
+    },
+    {
+     "cluster": "ZW1215",
+     "retained_widths": 4.971315103438384e-05
+    }
+   ],
+   "cluster_worst": 5.155703214621124e-05,
+   "galaxy_worst_retained": 0.0005948030987690016,
+   "galaxy_worst_excluded": 0.03364295365324559,
+   "tolerances": {
+    "clusters": 0.0001,
+    "galaxies": 0.001
+   },
+   "excluded_cluster_widths_kpc": [
+    0.1,
+    0.15848931924611134,
+    0.251188643150958,
+    0.3981071705534973,
+    0.6309573444801932,
+    1.0,
+    1.584893192461114,
+    2.511886431509581,
+    3.981071705534973,
+    6.309573444801933
+   ],
+   "excluded_galaxy_widths_kpc": [
+    0.1
+   ],
+   "declared_gate_G4": "FAILED as declared on the excluded galaxy width (amendment 2); G4b applies to the retained columns",
+   "passed": true
+  },
+  "G5_galaxy_anchor": {
+   "measured": {
+    "baryons": 52.56089758785707,
+    "pm1_fitted": 20.213614370747997,
+    "simple_mond": 19.889690433937012
+   },
+   "archived": {
+    "baryons": 52.57,
+    "pm1_fitted": 20.21,
+    "simple_mond": 19.89
+   },
+   "tolerance": 0.02,
+   "passed": true,
+   "control": {
+    "name": "Upsilon_disk = 1 must move the baryon score by more than 5 km/s",
+    "baryons_rmse": 38.38830797999889,
+    "rejected": true
+   }
+  },
+  "G6_lens_anchor": {
+   "rows": [
+    {
+     "lens": "J0037-0942",
+     "chi2": 25.023335231252847,
+     "archived_chi2": 25.02333523124812,
+     "beta": -0.6630889699761572,
+     "archived_beta": -0.6630889831826284,
+     "difference": 1.3206471249915808e-08
+    },
+    {
+     "lens": "J1112+0826",
+     "chi2": 388.4139948006438,
+     "archived_chi2": 388.41399480067514,
+     "beta": -2.0,
+     "archived_beta": -2.0,
+     "difference": 8.060219158778636e-14
+    },
+    {
+     "lens": "J1204+0358",
+     "chi2": 5.780507234176716,
+     "archived_chi2": 5.780507234177457,
+     "beta": -0.8709434626365862,
+     "archived_beta": -0.8709435027331425,
+     "difference": 4.009655629744202e-08
+    },
+    {
+     "lens": "J1402+6321",
+     "chi2": 69.41431775505093,
+     "archived_chi2": 69.41431775504805,
+     "beta": -0.11538444798441573,
+     "archived_beta": -0.11538442615759995,
+     "difference": 2.1826815785330744e-08
+    },
+    {
+     "lens": "J1621+3931",
+     "chi2": 49.81800907183432,
+     "archived_chi2": 49.818009071839455,
+     "beta": -2.0,
+     "archived_beta": -2.0,
+     "difference": 1.0313971898767704e-13
+    },
+    {
+     "lens": "J1630+4520",
+     "chi2": 344.4194198070809,
+     "archived_chi2": 344.4194198070641,
+     "beta": -1.6566388767449116,
+     "archived_beta": -1.656638709936765,
+     "difference": 1.6680814662883847e-07
+    }
+   ],
+   "worst": 1.6680814662883847e-07,
+   "tolerance": 1e-06,
+   "passed": true,
+   "control": {
+    "name": "the PSF doubled must move chi2 by more than 1%",
+    "relative_change": 0.9268060520845469,
+    "rejected": true
+   }
+  },
+  "G7_xcop_ingestion": {
+   "archive_hash_pinned": true,
+   "gas_mass_integral_over_release": {
+    "A1644": 0.959822617785033,
+    "A1795": 0.9732040869654374,
+    "A2029": 0.9896343048795303,
+    "A2142": 0.9668456999612058,
+    "A2255": 0.9862243104973833,
+    "A2319": 0.9681856119824728,
+    "A3158": 0.9755301879237412,
+    "A3266": 0.9716177860887419,
+    "A644": 0.9671589426102153,
+    "A85": 0.9711420325251947,
+    "RXC1825": 0.9901190341432774,
+    "ZW1215": 0.9818345371683247
+   },
+   "release_nfw_floor_chi2_per_point": 5.754846375370807,
+   "tolerances": {
+    "gas_mass": 0.05,
+    "floor": 10.0
+   },
+   "passed": true,
+   "control": {
+    "name": "mu = 1.2 must raise the floor above 10 times its value",
+    "chi2_per_point": 348.67601838614956,
+    "rejected": true
+   }
+  },
+  "G8_solve": {
+   "kkt": {
+    "max_abs_gradient_active": 8.459008226380612e-16,
+    "min_gradient_inactive": 1.3470283446079131e-05,
+    "scale": 3994616943.0183015
+   },
+   "tolerance": 1e-10,
+   "passed": true
+  }
+ },
+ "numerical_verification_passed": true,
+ "E1_spectrum": {
+  "widths_kpc": [
+   0.1,
+   0.15848931924611134,
+   0.251188643150958,
+   0.3981071705534973,
+   0.6309573444801932,
+   1.0,
+   1.584893192461114,
+   2.511886431509581,
+   3.981071705534973,
+   6.309573444801933,
+   10.0,
+   15.848931924611142,
+   25.11886431509582,
+   39.810717055349734,
+   63.095734448019364,
+   100.0,
+   158.48931924611142,
+   251.18864315095823,
+   398.1071705534973,
+   630.9573444801937,
+   1000.0,
+   1584.893192461114,
+   2511.886431509582,
+   3981.0717055349774,
+   6309.573444801943,
+   10000.0
+  ],
+  "excluded_cluster_widths_kpc": [
+   0.1,
+   0.15848931924611134,
+   0.251188643150958,
+   0.3981071705534973,
+   0.6309573444801932,
+   1.0,
+   1.584893192461114,
+   2.511886431509581,
+   3.981071705534973,
+   6.309573444801933
+  ],
+  "excluded_galaxy_widths_kpc": [
+   0.1
+  ],
+  "references": {
+   "clusters": {
+    "release_nfw_floor": {
+     "chi2": 1415.6922083412185,
+     "chi2_per_point": 5.754846375370807,
+     "per_cluster_chi2_per_point": {
+      "A1644": 8.376323212225298,
+      "A1795": 2.5785275024725403,
+      "A2029": 8.229841507019215,
+      "A2142": 3.941983794934712,
+      "A2255": 3.226031884627906,
+      "A2319": 12.381648830487162,
+      "A3158": 4.064926630048699,
+      "A3266": 4.686624806820784,
+      "A644": 4.847777014221286,
+      "A85": 7.0774017553031126,
+      "RXC1825": 4.081215274300522,
+      "ZW1215": 2.3887551653916326
+     }
+    },
+    "newtonian_baryons": {
+     "chi2": 51655.750414952716,
+     "chi2_per_point": 209.98272526403542,
+     "per_cluster_chi2_per_point": {
+      "A1644": 85.10634666701772,
+      "A1795": 368.96340392928954,
+      "A2029": 280.7265312319771,
+      "A2142": 168.9987334348726,
+      "A2255": 64.91492657611451,
+      "A2319": 289.0802369925487,
+      "A3158": 184.73469351345597,
+      "A3266": 135.785322927438,
+      "A644": 92.60843048886326,
+      "A85": 474.0564763722607,
+      "RXC1825": 203.46784874526074,
+      "ZW1215": 99.916966207377
+     }
+    },
+    "pm1_law_repo_a_star": {
+     "chi2": 21800.224080140888,
+     "chi2_per_point": 88.61879707374345,
+     "per_cluster_chi2_per_point": {
+      "A1644": 30.916967348395566,
+      "A1795": 163.54677895384765,
+      "A2029": 127.85007124758062,
+      "A2142": 64.33761606726866,
+      "A2255": 17.441494804109574,
+      "A2319": 133.84417037022118,
+      "A3158": 60.13676345649694,
+      "A3266": 55.7060555681932,
+      "A644": 46.0102136016932,
+      "A85": 190.1082708126043,
+      "RXC1825": 92.7030881789188,
+      "ZW1215": 44.0967759924322
+     }
+    },
+    "pm1_law_fitted_a_star": {
+     "chi2": 24735.842624537643,
+     "chi2_per_point": 100.55220579080343,
+     "per_cluster_chi2_per_point": {
+      "A1644": 35.804194345542854,
+      "A1795": 184.43063723397438,
+      "A2029": 143.37130736358142,
+      "A2142": 74.35805514692014,
+      "A2255": 21.574782986208366,
+      "A2319": 149.39932200502653,
+      "A3158": 71.5223054591717,
+      "A3266": 63.64319001323412,
+      "A644": 50.51729609319672,
+      "A85": 217.97074582410747,
+      "RXC1825": 103.84713897852384,
+      "ZW1215": 49.80917378957987
+     }
+    }
+   },
+   "galaxies_train": {
+    "baryons": {
+     "equal_galaxy_rmse_km_s": 52.56089758785707,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.31235153824221223,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 901738.6607901829
+    },
+    "pm1_law_repo_a_star": {
+     "equal_galaxy_rmse_km_s": 20.925473051480726,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.27579408733417554,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 153199.81570909
+    },
+    "pm1_law_fitted_a_star": {
+     "equal_galaxy_rmse_km_s": 20.213614370747997,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.27709909766857793,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 139457.18210030923
+    },
+    "simple_mond_repo_a_star": {
+     "equal_galaxy_rmse_km_s": 19.889690433937012,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.2719293542664393,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 141683.31709514593
+    }
+   }
+  },
+  "decision_rule": {
+   "cluster_floor_factor": 2.0,
+   "galaxy_rmse_factor": 1.1,
+   "galaxy_slope_tolerance": 0.05,
+   "lens_einstein_tolerance": 0.03,
+   "lens_nfw_factor": 1.5
+  },
+  "clusters_alone": {
+   "chi2": 2103.6152951359254,
+   "chi2_per_point": 8.551281687544412,
+   "spectrum": [
+    {
+     "w_kpc": 63.095734448019364,
+     "Lambda": 6.350196750411291e-07,
+     "w_over_ell": 9.315927340616959
+    },
+    {
+     "w_kpc": 158.48931924611142,
+     "Lambda": 9.94815437900683e-08,
+     "w_over_ell": 3.665906866585032
+    },
+    {
+     "w_kpc": 251.18864315095823,
+     "Lambda": 3.98472813152259e-08,
+     "w_over_ell": 2.3272208922869355
+    },
+    {
+     "w_kpc": 398.1071705534973,
+     "Lambda": 3.671158948831734e-08,
+     "w_over_ell": 3.3981465115678096
+    },
+    {
+     "w_kpc": 630.9573444801937,
+     "Lambda": 2.8155551609683595e-08,
+     "w_over_ell": 4.130503090535185
+    }
+   ],
+   "described": true,
+   "per_cluster_chi2_per_point": {
+    "A1644": 9.56642824541595,
+    "A1795": 2.2814523301400826,
+    "A2029": 10.645017340296706,
+    "A2142": 7.969346124516901,
+    "A2255": 2.414110388189221,
+    "A2319": 13.092105348383008,
+    "A3158": 5.114685786140524,
+    "A3266": 6.654747316348711,
+    "A644": 6.039254609503468,
+    "A85": 7.95585960621001,
+    "RXC1825": 23.79222170410212,
+    "ZW1215": 4.981474803643117
+   }
+  },
+  "galaxies_alone": {
+   "train": {
+    "equal_galaxy_rmse_km_s": 30.987551041329702,
+    "galaxies": 89,
+    "mass_speed_slope_model": 0.38815423910089875,
+    "mass_speed_slope_observed": 0.2894630164165726,
+    "chi2": 325911.9821718561
+   },
+   "validation": {
+    "equal_galaxy_rmse_km_s": 33.603718987038185,
+    "galaxies": 29,
+    "mass_speed_slope_model": 0.41361124888027795,
+    "mass_speed_slope_observed": 0.28252234767875767,
+    "chi2": 30972.680717815536
+   },
+   "test": {
+    "equal_galaxy_rmse_km_s": 27.977923815780308,
+    "galaxies": 31,
+    "mass_speed_slope_model": 0.4102861411434826,
+    "mass_speed_slope_observed": 0.29785014350499484,
+    "chi2": 75110.46955993432
+   },
+   "spectrum": [
+    {
+     "w_kpc": 0.15848931924611134,
+     "Lambda": 2.798713466860242e-05,
+     "w_over_ell": 1.031329282285549
+    },
+    {
+     "w_kpc": 0.3981071705534973,
+     "Lambda": 7.567408041497418e-07,
+     "w_over_ell": 0.07004643927500859
+    },
+    {
+     "w_kpc": 3.981071705534973,
+     "Lambda": 1.3991390492375553e-08,
+     "w_over_ell": 0.01295089519585609
+    },
+    {
+     "w_kpc": 6.309573444801933,
+     "Lambda": 5.538067764054749e-07,
+     "w_over_ell": 0.8124509983726961
+    },
+    {
+     "w_kpc": 15.848931924611142,
+     "Lambda": 3.755001251139176e-07,
+     "w_over_ell": 1.3837224821958143
+    },
+    {
+     "w_kpc": 25.11886431509582,
+     "Lambda": 1.4686518724555966e-08,
+     "w_over_ell": 0.0857744169303967
+    },
+    {
+     "w_kpc": 39.810717055349734,
+     "Lambda": 2.3789932450014565e-07,
+     "w_over_ell": 2.202075069268709
+    },
+    {
+     "w_kpc": 100.0,
+     "Lambda": 1.9848238678956826e-07,
+     "w_over_ell": 4.614885019350627
+    }
+   ],
+   "described": false
+  },
+  "lenses_alone": {
+   "objective": 18.252247286561325,
+   "evaluation": [
+    {
+     "lens": "J0037-0942",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.0738091558463616,
+     "kinematics_chi2": 133.27065689373762,
+     "beta": 0.000519733529932233,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1112+0826",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.09337584575957822,
+     "kinematics_chi2": 27.518368360781,
+     "beta": -1.5204177911474694,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1204+0358",
+     "imf": "Chabrier",
+     "einstein_relative_residual": 0.026553966325362062,
+     "kinematics_chi2": 11.609147002729442,
+     "beta": -2.0,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1402+6321",
+     "imf": "Chabrier",
+     "einstein_relative_residual": 0.06580364475541473,
+     "kinematics_chi2": 42.81428954247871,
+     "beta": -0.07673345509959756,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1621+3931",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.07599840816124716,
+     "kinematics_chi2": 6.478306056010344,
+     "beta": -0.6147470820579588,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1630+4520",
+     "imf": "Chabrier",
+     "einstein_relative_residual": 0.131416687901704,
+     "kinematics_chi2": 186.00313094116083,
+     "beta": -1.970140586550272,
+     "n_bins": 7
+    }
+   ],
+   "spectrum": [
+    {
+     "w_kpc": 0.3981071705534973,
+     "Lambda": 1.1317710348758612e-05,
+     "w_over_ell": 1.0476048157165132
+    },
+    {
+     "w_kpc": 0.6309573444801932,
+     "Lambda": 1.4460246456418273e-05,
+     "w_over_ell": 2.1213611264356715
+    },
+    {
+     "w_kpc": 2.511886431509581,
+     "Lambda": 8.42734498571158e-07,
+     "w_over_ell": 0.4921864847467912
+    },
+    {
+     "w_kpc": 3.981071705534973,
+     "Lambda": 1.1374447929522977e-06,
+     "w_over_ell": 1.052856634415635
+    },
+    {
+     "w_kpc": 25.11886431509582,
+     "Lambda": 9.357009493957147e-07,
+     "w_over_ell": 5.464821504734275
+    },
+    {
+     "w_kpc": 39.810717055349734,
+     "Lambda": 5.567904685664312e-07,
+     "w_over_ell": 5.15383728899924
+    }
+   ],
+   "described": false,
+   "cr2_free_nfw_total_chi2": 85.27173531677211
+  },
+  "joint": {
+   "objective": 273.1357392223414,
+   "chi2_per_block": {
+    "clusters": 2173.220348668945,
+    "sparc_train": 404227.0719672254,
+    "lens_einstein": 190.18373189471876,
+    "lens_kinematics": 1174.9165333998708
+   },
+   "N_per_block": {
+    "clusters": 246,
+    "sparc_train": 1989,
+    "lens_einstein": 6,
+    "lens_kinematics": 40
+   },
+   "clusters": {
+    "chi2_per_point": 8.834229059629857,
+    "described": true
+   },
+   "galaxies": {
+    "train": {
+     "equal_galaxy_rmse_km_s": 31.825447386030717,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.3893558092772679,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 404227.0719672254
+    },
+    "validation": {
+     "equal_galaxy_rmse_km_s": 34.95595786168085,
+     "galaxies": 29,
+     "mass_speed_slope_model": 0.4090411269577394,
+     "mass_speed_slope_observed": 0.28252234767875767,
+     "chi2": 40919.75759802023
+    },
+    "test": {
+     "equal_galaxy_rmse_km_s": 30.723009323151093,
+     "galaxies": 31,
+     "mass_speed_slope_model": 0.404551198827883,
+     "mass_speed_slope_observed": 0.29785014350499484,
+     "chi2": 110857.28964635842
+    },
+    "described": false
+   },
+   "lenses": {
+    "evaluation": [
+     {
+      "lens": "J0037-0942",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.21250915870783704,
+      "kinematics_chi2": 511.36952017901103,
+      "beta": 0.45,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1112+0826",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.20051078292744917,
+      "kinematics_chi2": 54.458651630601025,
+      "beta": 0.3057690256255351,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1204+0358",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.1570804646993714,
+      "kinematics_chi2": 389.4946409041202,
+      "beta": -0.3308515199126851,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1402+6321",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.1067707096356501,
+      "kinematics_chi2": 283.2450247215621,
+      "beta": 0.45,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1621+3931",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.22297575230895436,
+      "kinematics_chi2": 32.03059082955405,
+      "beta": 0.45,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1630+4520",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 0.0028634168995529544,
+      "kinematics_chi2": 37.33562571051242,
+      "beta": 0.14995958528395345,
+      "n_bins": 7
+     }
+    ],
+    "described": false
+   },
+   "spectrum": [
+    {
+     "w_kpc": 0.1,
+     "Lambda": 0.0004960282933734661,
+     "w_over_ell": 11.533081485412573
+    },
+    {
+     "w_kpc": 2.511886431509581,
+     "Lambda": 2.9165464005969464e-07,
+     "w_over_ell": 0.17033653219899714
+    },
+    {
+     "w_kpc": 3.981071705534973,
+     "Lambda": 6.151063707237743e-07,
+     "w_over_ell": 0.5693628625323609
+    },
+    {
+     "w_kpc": 6.309573444801933,
+     "Lambda": 5.083447677276884e-07,
+     "w_over_ell": 0.7457568806552685
+    },
+    {
+     "w_kpc": 15.848931924611142,
+     "Lambda": 3.8684915645163e-07,
+     "w_over_ell": 1.4255437993215363
+    },
+    {
+     "w_kpc": 25.11886431509582,
+     "Lambda": 1.2686810612121842e-07,
+     "w_over_ell": 0.7409542066232725
+    },
+    {
+     "w_kpc": 39.810717055349734,
+     "Lambda": 1.0829151607738907e-07,
+     "w_over_ell": 1.0023821978829708
+    },
+    {
+     "w_kpc": 100.0,
+     "Lambda": 3.019384981582354e-07,
+     "w_over_ell": 7.020327971937215
+    },
+    {
+     "w_kpc": 158.48931924611142,
+     "Lambda": 1.1551742917294839e-07,
+     "w_over_ell": 4.256831173720076
+    },
+    {
+     "w_kpc": 398.1071705534973,
+     "Lambda": 4.564249238791495e-08,
+     "w_over_ell": 4.224820511697284
+    },
+    {
+     "w_kpc": 630.9573444801937,
+     "Lambda": 2.7861965541707898e-08,
+     "w_over_ell": 4.087433141918209
+    }
+   ],
+   "kkt": {
+    "max_abs_gradient_active": 8.459008226380612e-16,
+    "min_gradient_inactive": 1.3470283446079131e-05,
+    "scale": 3994616943.0183015
+   }
+  },
+  "outcome": "c: even flexible positive spectra fail",
+  "outcome_detail": {
+   "clusters_alone": true,
+   "galaxies_alone": false,
+   "lenses_alone": false,
+   "joint": [
+    true,
+    false,
+    false
+   ]
+  },
+  "sensitivities": {
+   "four_per_decade": {
+    "clusters_chi2_per_point": 8.886028351294849,
+    "galaxies": {
+     "equal_galaxy_rmse_km_s": 31.003668152521122,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.38821334182418266,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 326423.6002303372
+    },
+    "active_widths": [
+     0.1778279410038923,
+     0.31622776601683794,
+     5.62341325190349,
+     10.0,
+     17.78279410038923,
+     31.622776601683793,
+     56.23413251903491,
+     100.0,
+     177.82794100389228,
+     316.2277660168379,
+     562.341325190349
+    ]
+   },
+   "six_per_decade": {
+    "clusters_chi2_per_point": 8.909030547779956,
+    "galaxies": {
+     "equal_galaxy_rmse_km_s": 30.956836180637662,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.38866961074675993,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 326641.37893511914
+    },
+    "active_widths": [
+     0.21544346900318834,
+     4.6415888336127775,
+     6.812920690579611,
+     14.67799267622069,
+     21.54434690031882,
+     31.622776601683793,
+     100.0,
+     146.7799267622069,
+     316.2277660168379,
+     464.15888336127773,
+     681.2920690579608
+    ]
+   },
+   "wide": {
+    "clusters_chi2_per_point": 8.932681993567446,
+    "galaxies": {
+     "equal_galaxy_rmse_km_s": 30.99305244618439,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.38815466582065195,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 327168.3114720713
+    },
+    "active_widths": [
+     0.18928720334405796,
+     4.7546795773833415,
+     7.535659294528745,
+     11.943215116604918,
+     18.928720334405806,
+     29.999999999999996,
+     47.546795773833416,
+     119.43215116604912,
+     189.28720334405796,
+     300.0000000000001,
+     475.4679577383344,
+     753.5659294528749
+    ]
+   },
+   "non_thermal_pressure": {
+    "clusters_alone_chi2_per_point": 8.592648286193556,
+    "floor": 10.161543667049182,
+    "spectrum": [
+     {
+      "w_kpc": 63.095734448019364,
+      "Lambda": 6.285127887158268e-07,
+      "w_over_ell": 9.220469384583952
+     },
+     {
+      "w_kpc": 158.48931924611142,
+      "Lambda": 1.1287025648166047e-07,
+      "w_over_ell": 4.159282541317393
+     },
+     {
+      "w_kpc": 251.18864315095823,
+      "Lambda": 1.31444100629167e-08,
+      "w_over_ell": 0.7676796184214898
+     },
+     {
+      "w_kpc": 398.1071705534973,
+      "Lambda": 6.335664322034881e-08,
+      "w_over_ell": 5.864501078396172
+     },
+     {
+      "w_kpc": 630.9573444801937,
+      "Lambda": 1.4738316047522156e-08,
+      "w_over_ell": 2.1621547617854926
+     },
+     {
+      "w_kpc": 10000.0,
+      "Lambda": 1.2783458940950615e-07,
+      "w_over_ell": 297.22633890241696
+     }
+    ]
+   },
+   "mu_0.59": {
+    "clusters_alone_chi2_per_point": 8.550815543901324,
+    "floor": 5.6507007251950645,
+    "spectrum": [
+     {
+      "w_kpc": 63.095734448019364,
+      "Lambda": 6.475940897826761e-07,
+      "w_over_ell": 9.500397741593822
+     },
+     {
+      "w_kpc": 158.48931924611142,
+      "Lambda": 1.0086665510862064e-07,
+      "w_over_ell": 3.716948385445866
+     },
+     {
+      "w_kpc": 251.18864315095823,
+      "Lambda": 4.120685248740771e-08,
+      "w_over_ell": 2.4066246139968923
+     },
+     {
+      "w_kpc": 398.1071705534973,
+      "Lambda": 3.69872267924929e-08,
+      "w_over_ell": 3.4236604148527707
+     },
+     {
+      "w_kpc": 630.9573444801937,
+      "Lambda": 2.886980937821305e-08,
+      "w_over_ell": 4.235286827726645
+     }
+    ]
+   },
+   "mu_0.61": {
+    "clusters_alone_chi2_per_point": 8.55175245573532,
+    "floor": 6.014840076392495,
+    "spectrum": [
+     {
+      "w_kpc": 63.095734448019364,
+      "Lambda": 6.228575361927178e-07,
+      "w_over_ell": 9.137505149507751
+     },
+     {
+      "w_kpc": 158.48931924611142,
+      "Lambda": 9.81418459574139e-08,
+      "w_over_ell": 3.6165388401474767
+     },
+     {
+      "w_kpc": 251.18864315095823,
+      "Lambda": 3.853228624699976e-08,
+      "w_over_ell": 2.250420571285844
+     },
+     {
+      "w_kpc": 398.1071705534973,
+      "Lambda": 3.644498947283416e-08,
+      "w_over_ell": 3.373469129704886
+     },
+     {
+      "w_kpc": 630.9573444801937,
+      "Lambda": 2.7464712128638317e-08,
+      "w_over_ell": 4.0291548857093975
+     }
+    ]
+   },
+   "stars_none": {
+    "clusters_alone_chi2_per_point": 9.149439378585852,
+    "floor": 5.754846375370807,
+    "spectrum": [
+     {
+      "w_kpc": 39.810717055349734,
+      "Lambda": 1.4940244783164154e-06,
+      "w_over_ell": 13.82918620509052
+     },
+     {
+      "w_kpc": 63.095734448019364,
+      "Lambda": 5.468927935015574e-07,
+      "w_over_ell": 8.023079799909446
+     },
+     {
+      "w_kpc": 158.48931924611142,
+      "Lambda": 1.3721112515032095e-07,
+      "w_over_ell": 5.056246482482079
+     },
+     {
+      "w_kpc": 251.18864315095823,
+      "Lambda": 2.5815651454129894e-08,
+      "w_over_ell": 1.5077245279740639
+     },
+     {
+      "w_kpc": 398.1071705534973,
+      "Lambda": 4.4485121623177545e-08,
+      "w_over_ell": 4.117690434204056
+     },
+     {
+      "w_kpc": 630.9573444801937,
+      "Lambda": 2.8886865052868808e-08,
+      "w_over_ell": 4.237788945882715
+     }
+    ]
+   }
+  }
+ },
+ "E2_lenses": {
+  "cr2_benchmarks": {
+   "J0037-0942": {
+    "stars_only": {
+     "chi2": 25.02333523124812,
+     "beta": -0.6630889831826284,
+     "stellar_mass_Msun": 890772498897.038
+    },
+    "nfw": {
+     "chi2": 20.197530011770574,
+     "share": 0.11414627813352836,
+     "rs_over_Re": 1.3682880343593458,
+     "beta": -0.1990412033953208
+    }
+   },
+   "J1112+0826": {
+    "stars_only": {
+     "chi2": 388.41399480067514,
+     "beta": -2.0,
+     "stellar_mass_Msun": 939998709828.2075
+    },
+    "nfw": {
+     "chi2": 11.631593524045307,
+     "share": 0.5515837586522202,
+     "rs_over_Re": 9.444398092257535,
+     "beta": 0.45
+    }
+   },
+   "J1204+0358": {
+    "stars_only": {
+     "chi2": 5.780507234177457,
+     "beta": -0.8709435027331425,
+     "stellar_mass_Msun": 383424496576.71716
+    },
+    "nfw": {
+     "chi2": 4.0467464959484625,
+     "share": 0.24459793165379484,
+     "rs_over_Re": 0.057776301066865945,
+     "beta": -2.0
+    }
+   },
+   "J1402+6321": {
+    "stars_only": {
+     "chi2": 69.41431775504805,
+     "beta": -0.11538442615759995,
+     "stellar_mass_Msun": 897333613731.2639
+    },
+    "nfw": {
+     "chi2": 43.066480490189406,
+     "share": 0.2126529733190866,
+     "rs_over_Re": 0.012229172606123927,
+     "beta": -2.0
+    }
+   },
+   "J1621+3931": {
+    "stars_only": {
+     "chi2": 49.818009071839455,
+     "beta": -2.0,
+     "stellar_mass_Msun": 850161316137.6898
+    },
+    "nfw": {
+     "chi2": 4.76140945069711,
+     "share": 0.27623361993373535,
+     "rs_over_Re": 100.0,
+     "beta": 0.008384508453037263
+    }
+   },
+   "J1630+4520": {
+    "stars_only": {
+     "chi2": 344.4194198070641,
+     "beta": -1.656638709936765,
+     "stellar_mass_Msun": 1046889271507.1803
+    },
+    "nfw": {
+     "chi2": 1.5679753441212405,
+     "share": 0.45766843081812386,
+     "rs_over_Re": 37.31721680100523,
+     "beta": 0.45
+    }
+   }
+  },
+  "held_out": "withdrawn (amendment 1): no published light-profile components",
+  "Chabrier": {
+   "lensing_only": {
+    "spectrum": [
+     {
+      "w_kpc": 3.981071705534973,
+      "Lambda": 2.4760548326242056e-06,
+      "w_over_ell": 2.29191849473315
+     },
+     {
+      "w_kpc": 100.0,
+      "Lambda": 1.2283485566710054e-06,
+      "w_over_ell": 28.56015309172975
+     }
+    ],
+    "evaluation": [
+     {
+      "lens": "J0037-0942",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.04573768471764568,
+      "kinematics_chi2": 627.3926031511669,
+      "beta": 0.45,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1112+0826",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.09582761474974229,
+      "kinematics_chi2": 109.11308782418912,
+      "beta": 0.45,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1204+0358",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 0.04250415985799922,
+      "kinematics_chi2": 487.5465984539771,
+      "beta": 0.45,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1402+6321",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 0.07028374946865769,
+      "kinematics_chi2": 368.7190432406518,
+      "beta": 0.45,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1621+3931",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.07187187397575223,
+      "kinematics_chi2": 116.38656646069057,
+      "beta": 0.45,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1630+4520",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 0.07665648684745784,
+      "kinematics_chi2": 213.53646254843028,
+      "beta": 0.3551831261397922,
+      "n_bins": 7
+     }
+    ],
+    "held_out": "not available",
+    "Lambda_at_4p64_kpc": 0.0,
+    "kinematics_chi2_total": 1922.694361679106,
+    "einstein_max_abs_residual": 0.09582761474974229
+   },
+   "kinematics_only": {
+    "spectrum": [
+     {
+      "w_kpc": 0.3981071705534973,
+      "Lambda": 1.0985995588496546e-05,
+      "w_over_ell": 1.0169001970625373
+     },
+     {
+      "w_kpc": 0.6309573444801932,
+      "Lambda": 1.4121498002234452e-05,
+      "w_over_ell": 2.0716657215536363
+     },
+     {
+      "w_kpc": 2.511886431509581,
+      "Lambda": 1.1254075203059094e-06,
+      "w_over_ell": 0.6572774370411014
+     },
+     {
+      "w_kpc": 3.981071705534973,
+      "Lambda": 9.455123413928028e-07,
+      "w_over_ell": 0.8751975900064823
+     },
+     {
+      "w_kpc": 1584.893192461114,
+      "Lambda": 0.0006977134412897694,
+      "w_over_ell": 257108.2431863296
+     },
+     {
+      "w_kpc": 2511.886431509582,
+      "Lambda": 0.003590061179545984,
+      "w_over_ell": 2096721.5593790703
+     }
+    ],
+    "evaluation": [
+     {
+      "lens": "J0037-0942",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 13.428477931145252,
+      "kinematics_chi2": 77.58661363434958,
+      "beta": 0.05456795864600887,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1112+0826",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 13.767489713085183,
+      "kinematics_chi2": 34.28911328776813,
+      "beta": -1.4300474186414016,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1204+0358",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 6.643965455810214,
+      "kinematics_chi2": 19.06487345875743,
+      "beta": -2.0,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1402+6321",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 13.716358535093828,
+      "kinematics_chi2": 29.35792170746562,
+      "beta": -0.032842083301213444,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1621+3931",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 12.57065833251561,
+      "kinematics_chi2": 8.894043102088537,
+      "beta": -0.5495148565376571,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1630+4520",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 21.42932560423745,
+      "kinematics_chi2": 153.4653533202326,
+      "beta": -2.0,
+      "n_bins": 7
+     }
+    ],
+    "held_out": "not available",
+    "Lambda_at_4p64_kpc": 0.0,
+    "kinematics_chi2_total": 322.6579185106619,
+    "einstein_max_abs_residual": 21.42932560423745
+   },
+   "joint": {
+    "spectrum": [
+     {
+      "w_kpc": 0.3981071705534973,
+      "Lambda": 1.1317710348758612e-05,
+      "w_over_ell": 1.0476048157165132
+     },
+     {
+      "w_kpc": 0.6309573444801932,
+      "Lambda": 1.4460246456418273e-05,
+      "w_over_ell": 2.1213611264356715
+     },
+     {
+      "w_kpc": 2.511886431509581,
+      "Lambda": 8.42734498571158e-07,
+      "w_over_ell": 0.4921864847467912
+     },
+     {
+      "w_kpc": 3.981071705534973,
+      "Lambda": 1.1374447929522977e-06,
+      "w_over_ell": 1.052856634415635
+     },
+     {
+      "w_kpc": 25.11886431509582,
+      "Lambda": 9.357009493957147e-07,
+      "w_over_ell": 5.464821504734275
+     },
+     {
+      "w_kpc": 39.810717055349734,
+      "Lambda": 5.567904685664312e-07,
+      "w_over_ell": 5.15383728899924
+     }
+    ],
+    "evaluation": [
+     {
+      "lens": "J0037-0942",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.0738091558463616,
+      "kinematics_chi2": 133.27065689373762,
+      "beta": 0.000519733529932233,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1112+0826",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.09337584575957822,
+      "kinematics_chi2": 27.518368360781,
+      "beta": -1.5204177911474694,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1204+0358",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 0.026553966325362062,
+      "kinematics_chi2": 11.609147002729442,
+      "beta": -2.0,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1402+6321",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 0.06580364475541473,
+      "kinematics_chi2": 42.81428954247871,
+      "beta": -0.07673345509959756,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1621+3931",
+      "imf": "Chabrier",
+      "einstein_relative_residual": -0.07599840816124716,
+      "kinematics_chi2": 6.478306056010344,
+      "beta": -0.6147470820579588,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1630+4520",
+      "imf": "Chabrier",
+      "einstein_relative_residual": 0.131416687901704,
+      "kinematics_chi2": 186.00313094116083,
+      "beta": -1.970140586550272,
+      "n_bins": 7
+     }
+    ],
+    "held_out": "not available",
+    "Lambda_at_4p64_kpc": 0.0,
+    "kinematics_chi2_total": 407.693898796898,
+    "einstein_max_abs_residual": 0.131416687901704
+   }
+  },
+  "Salpeter": {
+   "lensing_only": {
+    "spectrum": [
+     {
+      "w_kpc": 3.981071705534973,
+      "Lambda": 6.787256746995022e-07,
+      "w_over_ell": 0.6282510008251169
+     },
+     {
+      "w_kpc": 158.48931924611142,
+      "Lambda": 1.0549795980030592e-06,
+      "w_over_ell": 38.87612520959528
+     }
+    ],
+    "evaluation": [
+     {
+      "lens": "J0037-0942",
+      "imf": "Salpeter",
+      "einstein_relative_residual": -0.05394249242461902,
+      "kinematics_chi2": 225.07729829039562,
+      "beta": 0.4247373857523634,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1112+0826",
+      "imf": "Salpeter",
+      "einstein_relative_residual": -0.10016552717964673,
+      "kinematics_chi2": 71.82195873742282,
+      "beta": -0.034316898884921634,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1204+0358",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 0.06300716766184056,
+      "kinematics_chi2": 21.804056082793476,
+      "beta": 0.25848909158454264,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1402+6321",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 0.05106437837580994,
+      "kinematics_chi2": 169.32529875368724,
+      "beta": 0.3238865981362438,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1621+3931",
+      "imf": "Salpeter",
+      "einstein_relative_residual": -0.07900310117833942,
+      "kinematics_chi2": 12.62406803643408,
+      "beta": 0.29219400972133597,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1630+4520",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 0.09514699696686758,
+      "kinematics_chi2": 266.49929862983555,
+      "beta": -0.16830792869346828,
+      "n_bins": 7
+     }
+    ],
+    "held_out": "not available",
+    "Lambda_at_4p64_kpc": 0.0,
+    "kinematics_chi2_total": 767.1519785305688,
+    "einstein_max_abs_residual": 0.10016552717964673
+   },
+   "kinematics_only": {
+    "spectrum": [
+     {
+      "w_kpc": 0.3981071705534973,
+      "Lambda": 5.209702489033369e-06,
+      "w_over_ell": 0.4822273452651396
+     },
+     {
+      "w_kpc": 0.6309573444801932,
+      "Lambda": 3.1733447838480635e-06,
+      "w_over_ell": 0.4655391099675714
+     },
+     {
+      "w_kpc": 2.511886431509581,
+      "Lambda": 3.9718090411380524e-07,
+      "w_over_ell": 0.23196756906922777
+     },
+     {
+      "w_kpc": 3.981071705534973,
+      "Lambda": 4.873295030373292e-08,
+      "w_over_ell": 0.04510883548796942
+     },
+     {
+      "w_kpc": 10000.0,
+      "Lambda": 0.03925667665889729,
+      "w_over_ell": 91275126.19782649
+     }
+    ],
+    "evaluation": [
+     {
+      "lens": "J0037-0942",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 51.05838736426223,
+      "kinematics_chi2": 78.75722946784451,
+      "beta": 0.09316467745939569,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1112+0826",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 52.56225696078843,
+      "kinematics_chi2": 29.64693884486434,
+      "beta": -1.309589463408509,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1204+0358",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 25.21768003217058,
+      "kinematics_chi2": 17.74820116135886,
+      "beta": -2.0,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1402+6321",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 50.63083617215369,
+      "kinematics_chi2": 35.316918050905414,
+      "beta": 0.051486566653544896,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1621+3931",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 47.90559572487525,
+      "kinematics_chi2": 9.19023791265945,
+      "beta": -0.5386064188501917,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1630+4520",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 80.9845411200199,
+      "kinematics_chi2": 168.03440438548955,
+      "beta": -1.8959648165604177,
+      "n_bins": 7
+     }
+    ],
+    "held_out": "not available",
+    "Lambda_at_4p64_kpc": 0.0,
+    "kinematics_chi2_total": 338.6939298231222,
+    "einstein_max_abs_residual": 80.9845411200199
+   },
+   "joint": {
+    "spectrum": [
+     {
+      "w_kpc": 0.3981071705534973,
+      "Lambda": 6.229494210606695e-06,
+      "w_over_ell": 0.5766226501127524
+     },
+     {
+      "w_kpc": 0.6309573444801932,
+      "Lambda": 2.936474316541243e-06,
+      "w_over_ell": 0.4307895085095473
+     },
+     {
+      "w_kpc": 2.511886431509581,
+      "Lambda": 1.786865386856428e-07,
+      "w_over_ell": 0.10435920149984466
+     },
+     {
+      "w_kpc": 3.981071705534973,
+      "Lambda": 2.605371919244989e-07,
+      "w_over_ell": 0.2411618680127293
+     },
+     {
+      "w_kpc": 25.11886431509582,
+      "Lambda": 7.022798436243952e-08,
+      "w_over_ell": 0.4101560433660489
+     },
+     {
+      "w_kpc": 39.810717055349734,
+      "Lambda": 6.90274819176947e-07,
+      "w_over_ell": 6.389412720894845
+     }
+    ],
+    "evaluation": [
+     {
+      "lens": "J0037-0942",
+      "imf": "Salpeter",
+      "einstein_relative_residual": -0.07313712688016169,
+      "kinematics_chi2": 124.82964287498366,
+      "beta": 0.027587773960241833,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1112+0826",
+      "imf": "Salpeter",
+      "einstein_relative_residual": -0.09046570591563748,
+      "kinematics_chi2": 28.66378118656398,
+      "beta": -1.4017155748374066,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1204+0358",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 0.03590629298223863,
+      "kinematics_chi2": 10.430520425561529,
+      "beta": -2.0,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1402+6321",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 0.04395266080174099,
+      "kinematics_chi2": 53.234904732869325,
+      "beta": 0.003098816821505223,
+      "n_bins": 7
+     },
+     {
+      "lens": "J1621+3931",
+      "imf": "Salpeter",
+      "einstein_relative_residual": -0.07771453367953617,
+      "kinematics_chi2": 6.379117490633234,
+      "beta": -0.5875323019358245,
+      "n_bins": 6
+     },
+     {
+      "lens": "J1630+4520",
+      "imf": "Salpeter",
+      "einstein_relative_residual": 0.14420132202387537,
+      "kinematics_chi2": 200.8471856387114,
+      "beta": -1.7990707999861641,
+      "n_bins": 7
+     }
+    ],
+    "held_out": "not available",
+    "Lambda_at_4p64_kpc": 0.0,
+    "kinematics_chi2_total": 424.3851523493231,
+    "einstein_max_abs_residual": 0.14420132202387537
+   }
+  },
+  "held_out_stars_only": "not available"
+ },
+ "E3_transfer": {
+  "calibrated_on_galaxies": {
+   "clusters": {
+    "chi2_per_point": 156.85776712532072,
+    "per_cluster": {
+     "A1644": 70.01344141016764,
+     "A1795": 244.08626447963724,
+     "A2029": 184.64030847067167,
+     "A2142": 121.58939466873628,
+     "A2255": 56.93084353264606,
+     "A2319": 237.98477957154154,
+     "A3158": 144.78879378172707,
+     "A3266": 114.4101680832808,
+     "A644": 71.63304768775502,
+     "A85": 329.0810166665417,
+     "RXC1825": 171.75603049398208,
+     "ZW1215": 80.61601011116446
+    }
+   },
+   "lenses": [
+    {
+     "lens": "J0037-0942",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.38001264276109104,
+     "kinematics_chi2": 1884.5639513866242,
+     "beta": 0.45,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1112+0826",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.34880120312250656,
+     "kinematics_chi2": 639.0118779510459,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1204+0358",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.35059534865319697,
+     "kinematics_chi2": 1387.412865365034,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1402+6321",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.2959950457096539,
+     "kinematics_chi2": 1548.4425278538451,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1621+3931",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.3851133579866037,
+     "kinematics_chi2": 534.0298718079621,
+     "beta": 0.45,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1630+4520",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.16469402059581806,
+     "kinematics_chi2": 225.93781008982882,
+     "beta": 0.45,
+     "n_bins": 7
+    }
+   ],
+   "held_out": "not available",
+   "milky_way": {
+    "milky_way_I": {
+     "rmse_km_s": 25.88637407236061,
+     "baryons_rmse": 52.574925986259
+    },
+    "milky_way_II": {
+     "rmse_km_s": 12.468214046540895,
+     "baryons_rmse": 62.34015306211458
+    }
+   }
+  },
+  "calibrated_on_clusters": {
+   "galaxies": {
+    "train": {
+     "equal_galaxy_rmse_km_s": 42.48690197358686,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.3894049992520319,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 697577.2536807694
+    },
+    "validation": {
+     "equal_galaxy_rmse_km_s": 45.86315765365672,
+     "galaxies": 29,
+     "mass_speed_slope_model": 0.4012710947359275,
+     "mass_speed_slope_observed": 0.28252234767875767,
+     "chi2": 64841.589190871964
+    },
+    "test": {
+     "equal_galaxy_rmse_km_s": 38.167167536528964,
+     "galaxies": 31,
+     "mass_speed_slope_model": 0.40321055312430837,
+     "mass_speed_slope_observed": 0.29785014350499484,
+     "chi2": 120521.53474296941
+    }
+   },
+   "lenses": [
+    {
+     "lens": "J0037-0942",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.5940325756783491,
+     "kinematics_chi2": 4048.345383064354,
+     "beta": 0.45,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1112+0826",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.6036310742062551,
+     "kinematics_chi2": 2122.0521297557243,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1204+0358",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.5478748291092591,
+     "kinematics_chi2": 3532.8945587751723,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1402+6321",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.5339296270284679,
+     "kinematics_chi2": 4393.075344186419,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1621+3931",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.5994436636276403,
+     "kinematics_chi2": 1628.3533314971694,
+     "beta": 0.45,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1630+4520",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.49802096006935703,
+     "kinematics_chi2": 1356.2266075896166,
+     "beta": 0.45,
+     "n_bins": 7
+    }
+   ],
+   "held_out": "not available",
+   "milky_way": {
+    "milky_way_I": {
+     "rmse_km_s": 41.236895045069254,
+     "baryons_rmse": 52.574925986259
+    },
+    "milky_way_II": {
+     "rmse_km_s": 51.860307815411886,
+     "baryons_rmse": 62.34015306211458
+    }
+   }
+  },
+  "calibrated_on_galaxies_and_clusters": {
+   "spectrum": [
+    {
+     "w_kpc": 0.15848931924611134,
+     "Lambda": 2.8174165226100856e-05,
+     "w_over_ell": 1.0382213808484906
+    },
+    {
+     "w_kpc": 0.3981071705534973,
+     "Lambda": 7.580155902336624e-07,
+     "w_over_ell": 0.07016443770396379
+    },
+    {
+     "w_kpc": 3.981071705534973,
+     "Lambda": 1.3313479878986849e-09,
+     "w_over_ell": 0.0012323398642819425
+    },
+    {
+     "w_kpc": 6.309573444801933,
+     "Lambda": 5.706158081040746e-07,
+     "w_over_ell": 0.8371103473858018
+    },
+    {
+     "w_kpc": 15.848931924611142,
+     "Lambda": 3.388594961032164e-07,
+     "w_over_ell": 1.2487013231255684
+    },
+    {
+     "w_kpc": 25.11886431509582,
+     "Lambda": 9.568446654097785e-08,
+     "w_over_ell": 0.5588308217062901
+    },
+    {
+     "w_kpc": 39.810717055349734,
+     "Lambda": 1.527559130677254e-07,
+     "w_over_ell": 1.4139594072265236
+    },
+    {
+     "w_kpc": 100.0,
+     "Lambda": 1.9050077241520307e-07,
+     "w_over_ell": 4.429305667941763
+    },
+    {
+     "w_kpc": 158.48931924611142,
+     "Lambda": 1.6448960097348125e-07,
+     "w_over_ell": 6.061461600988117
+    },
+    {
+     "w_kpc": 398.1071705534973,
+     "Lambda": 4.2266845195547526e-08,
+     "w_over_ell": 3.9123594090616316
+    },
+    {
+     "w_kpc": 630.9573444801937,
+     "Lambda": 2.851691853769905e-08,
+     "w_over_ell": 4.183516692743272
+    }
+   ],
+   "clusters_chi2_per_point": 8.96398899147268,
+   "galaxies": {
+    "train": {
+     "equal_galaxy_rmse_km_s": 31.022063750279262,
+     "galaxies": 89,
+     "mass_speed_slope_model": 0.388175007128175,
+     "mass_speed_slope_observed": 0.2894630164165726,
+     "chi2": 326095.13767819497
+    },
+    "validation": {
+     "equal_galaxy_rmse_km_s": 33.63865764747146,
+     "galaxies": 29,
+     "mass_speed_slope_model": 0.4133443178788448,
+     "mass_speed_slope_observed": 0.28252234767875767,
+     "chi2": 31219.20413554152
+    },
+    "test": {
+     "equal_galaxy_rmse_km_s": 28.00631354318625,
+     "galaxies": 31,
+     "mass_speed_slope_model": 0.41018537793600596,
+     "mass_speed_slope_observed": 0.29785014350499484,
+     "chi2": 75160.48024532136
+    }
+   },
+   "lenses": [
+    {
+     "lens": "J0037-0942",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.37553672220607043,
+     "kinematics_chi2": 1883.8323985354816,
+     "beta": 0.45,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1112+0826",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.34399580137571495,
+     "kinematics_chi2": 639.2169217108868,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1204+0358",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.3488645804251833,
+     "kinematics_chi2": 1386.5831541879352,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1402+6321",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.29164607735517617,
+     "kinematics_chi2": 1548.447396744371,
+     "beta": 0.45,
+     "n_bins": 7
+    },
+    {
+     "lens": "J1621+3931",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.38105874749474433,
+     "kinematics_chi2": 534.1537654774288,
+     "beta": 0.45,
+     "n_bins": 6
+    },
+    {
+     "lens": "J1630+4520",
+     "imf": "Chabrier",
+     "einstein_relative_residual": -0.15718487001618842,
+     "kinematics_chi2": 226.42420365640524,
+     "beta": 0.45,
+     "n_bins": 7
+    }
+   ],
+   "held_out": "not available",
+   "milky_way": {
+    "milky_way_I": {
+     "rmse_km_s": 25.79454115490394,
+     "baryons_rmse": 52.574925986259
+    },
+    "milky_way_II": {
+     "rmse_km_s": 12.378643609748316,
+     "baryons_rmse": 62.34015306211458
+    }
+   }
+  }
+ },
+ "E4_cluster_diagnostics": {
+  "per_cluster": [
+   {
+    "cluster": "A1644",
+    "stars": "median fraction profile of 7 clusters",
+    "points": 20,
+    "r_out_kpc": 1687.551025390625,
+    "chi2_per_point": {
+     "release_nfw": 8.376323212225298,
+     "baryons": 85.10634666701772,
+     "pm1_law": 30.916967348395566,
+     "spectrum_alone": 9.56642824541595
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      17.532,
+      42.905,
+      70.271,
+      97.902,
+      125.2830435426125,
+      140.54,
+      195.8,
+      251.24,
+      306.60029077459177,
+      336.28000000000003,
+      447.02,
+      502.1581364682083,
+      557.99,
+      698.26,
+      699.6118882489124,
+      894.04,
+      897.6971054939773,
+      1096.06931233895,
+      1294.5961610354634,
+      1597.210327127184
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.03269821549013184,
+       0.14468706063550463,
+       0.2840771290647282,
+       0.5385375948096354
+      ],
+      [
+       0.21702321181548043,
+       0.3145903947533957,
+       0.47585099559986005,
+       -0.0074646021687359955
+      ],
+      [
+       0.3670183806135764,
+       0.41074091687543257,
+       0.33189215742880235,
+       -0.10965145491781134
+      ],
+      [
+       0.415283652902117,
+       0.47252989642890614,
+       0.15529252577260452,
+       -0.043106075103627385
+      ],
+      [
+       0.3993462630407503,
+       0.5208305359288606,
+       0.09141956442010053,
+       -0.011596363389711501
+      ],
+      [
+       0.3708006238910474,
+       0.5607952519789484,
+       0.07778069403951146,
+       -0.00937656990950704
+      ],
+      [
+       0.2697743279834701,
+       0.6919288296866886,
+       0.07061328080447427,
+       -0.03231643847463304
+      ],
+      [
+       0.23968620111175773,
+       0.7509620019141685,
+       0.06321891165493232,
+       -0.05386711468085874
+      ],
+      [
+       0.24886596020343507,
+       0.7648532555436449,
+       0.05493884495385062,
+       -0.06865806070093056
+      ],
+      [
+       0.2610944066363225,
+       0.7658990350535906,
+       0.04773450871446621,
+       -0.07472795040437949
+      ],
+      [
+       0.28831366993054885,
+       0.7802242927293962,
+       0.012719838606538934,
+       -0.08125780126648409
+      ],
+      [
+       0.30008871292177564,
+       0.7833455140758143,
+       -0.0083421541927598,
+       -0.07509207280483057
+      ],
+      [
+       0.3041975795691396,
+       0.7982226930453037,
+       -0.0389027690451005,
+       -0.06351750356934276
+      ],
+      [
+       0.3132449202750889,
+       0.8150097571500351,
+       -0.09807373389968091,
+       -0.03018094352544329
+      ],
+      [
+       0.3151562934710598,
+       0.8113235444998872,
+       -0.09623250833696231,
+       -0.030247329633984566
+      ],
+      [
+       0.32098854018272965,
+       0.8139406380935915,
+       -0.13492917827632117,
+       0.0
+      ],
+      [
+       0.32158694232617774,
+       0.8138447885061174,
+       -0.13543173083229532,
+       0.0
+      ],
+      [
+       0.32800909558417657,
+       0.7901790733459936,
+       -0.11818816893017015,
+       0.0
+      ],
+      [
+       0.3257855559850597,
+       0.7602829930049407,
+       -0.08606854899000045,
+       0.0
+      ],
+      [
+       0.2990096973144011,
+       0.7177416653123712,
+       -0.01675136262677226,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      593.9624819086453,
+      1305.8687844929455,
+      1750.4798721496268,
+      1880.5901566897187,
+      1834.4527962179895,
+      1785.9616553400788,
+      1670.7022886975094,
+      1642.3664682112772,
+      1611.290593203246,
+      1589.1243756746048,
+      1500.2563394998574,
+      1467.6276822623663,
+      1442.0804816314335,
+      1362.782244976354,
+      1361.9022712789792,
+      1217.0200303272825,
+      1213.9378367815516,
+      1022.6267776335679,
+      834.0058667712655,
+      580.3746797663682
+     ]
+    }
+   },
+   {
+    "cluster": "A1795",
+    "stars": "release",
+    "points": 20,
+    "r_out_kpc": 1852.7423095703125,
+    "chi2_per_point": {
+     "release_nfw": 2.5785275024725403,
+     "baryons": 368.96340392928954,
+     "pm1_law": 163.54677895384765,
+     "spectrum_alone": 2.2814523301400826
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      22.651999999999997,
+      55.437,
+      90.795,
+      126.49999999999999,
+      154.1581298264945,
+      162.31,
+      198.18,
+      252.98999999999998,
+      324.63,
+      377.26514063803467,
+      396.36,
+      505.99000000000007,
+      617.8948927840522,
+      649.25,
+      830.57,
+      860.8575878287312,
+      1083.6,
+      1104.5972060617962,
+      1348.6900457715776,
+      1592.9730147784985
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.07607902373801895,
+       0.2487046666480854,
+       0.293055932774609,
+       0.3821603768392867
+      ],
+      [
+       0.34831027461392583,
+       0.3362805249365383,
+       0.3670645149389245,
+       -0.05165531448938877
+      ],
+      [
+       0.4544723905159608,
+       0.42633688145358073,
+       0.14536151547612045,
+       -0.026170787445661862
+      ],
+      [
+       0.46395800267552423,
+       0.4636531586866539,
+       0.07251633507670117,
+       -0.00012749643887930337
+      ],
+      [
+       0.42430613383647386,
+       0.5158272299070843,
+       0.05920772526854566,
+       0.0006589109878961803
+      ],
+      [
+       0.4087512126745648,
+       0.5347828874211181,
+       0.05714103502663055,
+       -0.0006751351223134718
+      ],
+      [
+       0.35529995134482945,
+       0.6038019786407337,
+       0.04973154462175129,
+       -0.008833474607314463
+      ],
+      [
+       0.32857562496972453,
+       0.6427651284253353,
+       0.04820267452824957,
+       -0.019543427923309407
+      ],
+      [
+       0.3494321029185119,
+       0.6410852843488029,
+       0.03855326248070169,
+       -0.029070649748016448
+      ],
+      [
+       0.3652318574870629,
+       0.6407344543777097,
+       0.027853363590795682,
+       -0.0338196754555683
+      ],
+      [
+       0.36799040810453015,
+       0.6426876016482898,
+       0.024258597522854655,
+       -0.0349366072756745
+      ],
+      [
+       0.3850760192337193,
+       0.650080226442628,
+       -0.00040890788650403654,
+       -0.034747337789843104
+      ],
+      [
+       0.4082169211988816,
+       0.6510734003447545,
+       -0.03175411822929247,
+       -0.027536203314343692
+      ],
+      [
+       0.4151888906066458,
+       0.6504283148719262,
+       -0.04132253664217157,
+       -0.024294668836400565
+      ],
+      [
+       0.44484442956951814,
+       0.6426683151288272,
+       -0.08004733612332435,
+       -0.007465408575020936
+      ],
+      [
+       0.448065945699497,
+       0.6405015798611243,
+       -0.08359666868372902,
+       -0.00497085687689224
+      ],
+      [
+       0.4583778292982473,
+       0.6314032947888932,
+       -0.08978112408714081,
+       0.0
+      ],
+      [
+       0.45891175069484935,
+       0.6307168588972736,
+       -0.08962860959212299,
+       0.0
+      ],
+      [
+       0.4437582150195936,
+       0.6286124512075467,
+       -0.07237066622714032,
+       0.0
+      ],
+      [
+       0.4096963453273746,
+       0.6334026263957709,
+       -0.0430989717231455,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      3627.4386773586425,
+      7279.071587924538,
+      8283.865818600172,
+      7358.147680989281,
+      6367.664688906942,
+      6107.401221831626,
+      5232.287290955344,
+      4518.598154340545,
+      3997.1333073909022,
+      3684.8131076205973,
+      3579.1385703332608,
+      3057.493764322941,
+      2620.9043716083715,
+      2514.011825076838,
+      1980.0927584468122,
+      1900.9036466142265,
+      1400.5002126884908,
+      1356.9103029993373,
+      935.667365459049,
+      625.0307631166385
+     ]
+    }
+   },
+   {
+    "cluster": "A2029",
+    "stars": "release",
+    "points": 22,
+    "r_out_kpc": 2212.138671875,
+    "chi2_per_point": {
+     "release_nfw": 8.229841507019215,
+     "baryons": 280.7265312319771,
+     "pm1_law": 127.85007124758062,
+     "spectrum_alone": 10.645017340296706
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      27.431000000000004,
+      67.13,
+      109.95,
+      153.18,
+      168.12295300152581,
+      196.55,
+      239.97999999999996,
+      306.36,
+      393.1,
+      411.44071494430057,
+      479.97,
+      566.9,
+      653.88,
+      673.8686149034564,
+      786.2,
+      938.8407019423007,
+      1005.8000000000001,
+      1204.6601881198003,
+      1312.1000000000001,
+      1470.8647932014844,
+      1737.2766896945955,
+      2143.368422178971
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.18781065005947753,
+       0.21560124942806827,
+       0.32229176249326685,
+       0.2742963380191872
+      ],
+      [
+       0.4061062145405028,
+       0.3580381630418153,
+       0.2950629889101762,
+       -0.05920736649249432
+      ],
+      [
+       0.46053050675878704,
+       0.453300541811955,
+       0.09487692318849372,
+       -0.008707971759235792
+      ],
+      [
+       0.4099549590676102,
+       0.5333667368748707,
+       0.05820696421591818,
+       -0.0015286601583989106
+      ],
+      [
+       0.38888968572499805,
+       0.5589834886822433,
+       0.05664975550701579,
+       -0.0045229299142569976
+      ],
+      [
+       0.35246646884356986,
+       0.6034228313775376,
+       0.05595024837145496,
+       -0.01183954859256238
+      ],
+      [
+       0.33531775009702264,
+       0.6417109832668163,
+       0.044980155893675385,
+       -0.02200888925751428
+      ],
+      [
+       0.3490196706210087,
+       0.6427845889357623,
+       0.0421587189541037,
+       -0.03396297851087471
+      ],
+      [
+       0.37383706123639787,
+       0.6470049993588551,
+       0.02451231430159054,
+       -0.04535437489684377
+      ],
+      [
+       0.37926679759270404,
+       0.6480064603576795,
+       0.019756818136489572,
+       -0.047030076086873
+      ],
+      [
+       0.39550699379256865,
+       0.6503865825083677,
+       0.004607122282913319,
+       -0.05050069858384979
+      ],
+      [
+       0.4073318786394794,
+       0.6623317016402425,
+       -0.02046427452782436,
+       -0.04919930575189743
+      ],
+      [
+       0.425880467228345,
+       0.6657633986859235,
+       -0.04851875791298013,
+       -0.0431251080012884
+      ],
+      [
+       0.430226687284985,
+       0.6663193022488942,
+       -0.055224769874343306,
+       -0.04132121965953601
+      ],
+      [
+       0.4493270914897532,
+       0.6708085144767687,
+       -0.09047321686854293,
+       -0.029662389097978893
+      ],
+      [
+       0.4688734383718966,
+       0.6735088544105386,
+       -0.12710756218464547,
+       -0.015274730597789938
+      ],
+      [
+       0.47748005017261275,
+       0.6741405210919805,
+       -0.14231450165503723,
+       -0.009306069609556326
+      ],
+      [
+       0.4762901489697423,
+       0.6890021760663205,
+       -0.16529232503606295,
+       0.0
+      ],
+      [
+       0.4635841493106913,
+       0.7030376009786283,
+       -0.1666217502893195,
+       0.0
+      ],
+      [
+       0.4378755417759714,
+       0.725871562145445,
+       -0.16374710392141636,
+       0.0
+      ],
+      [
+       0.35862381652469877,
+       0.7704552967105309,
+       -0.12907911323522975,
+       0.0
+      ],
+      [
+       0.2221842160191699,
+       0.7941666427605971,
+       -0.016350858779766976,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      6259.864812113972,
+      11554.893912010322,
+      11610.667200800988,
+      9453.051437288581,
+      8774.484042190235,
+      7778.003147909356,
+      6838.438285125841,
+      5993.014991797272,
+      5185.79711090728,
+      5034.275716401922,
+      4540.23493980683,
+      4023.113961268502,
+      3581.112741581011,
+      3489.2288086064955,
+      2995.580416586749,
+      2412.5379779370733,
+      2189.878217265568,
+      1635.8800872864156,
+      1395.1876169840614,
+      1107.620335652434,
+      765.2311512119006,
+      460.83056285759204
+     ]
+    }
+   },
+   {
+    "cluster": "A2142",
+    "stars": "release",
+    "points": 20,
+    "r_out_kpc": 2352.391845703125,
+    "chi2_per_point": {
+     "release_nfw": 3.941983794934712,
+     "baryons": 168.9987334348726,
+     "pm1_law": 64.33761606726866,
+     "spectrum_alone": 7.969346124516901
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      19.2,
+      46.99999999999999,
+      82.60000000000001,
+      156.70000000000002,
+      174.9570973066549,
+      256.7,
+      357.59999999999997,
+      428.1656074679782,
+      458.8,
+      560.2,
+      661.6999999999999,
+      701.2611057330668,
+      816.3999999999999,
+      977.0042458774208,
+      1072.7,
+      1253.6291829533645,
+      1376.5,
+      1530.6549984296612,
+      1807.896509428923,
+      2230.495661091388
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.02398643219450486,
+       0.08450070746747339,
+       0.3524128662716513,
+       0.5390999940663705
+      ],
+      [
+       0.15228878320256428,
+       0.3948962310433467,
+       0.4875088748167406,
+       -0.03469388906265141
+      ],
+      [
+       0.3748109189706166,
+       0.4479375188086191,
+       0.24409536778600768,
+       -0.06684380556524336
+      ],
+      [
+       0.34260422022784415,
+       0.5912707382679773,
+       0.07233421045782104,
+       -0.006209168953642384
+      ],
+      [
+       0.3126788703901076,
+       0.6272266588972194,
+       0.07178467503023031,
+       -0.011690204317557169
+      ],
+      [
+       0.26729203870580276,
+       0.7130142622795539,
+       0.055018537770772036,
+       -0.03532483875612864
+      ],
+      [
+       0.31002305595899243,
+       0.7101512775509319,
+       0.0350443904561977,
+       -0.05521872396612186
+      ],
+      [
+       0.33960700118165993,
+       0.7030418504245051,
+       0.020342362720707618,
+       -0.0629912143268727
+      ],
+      [
+       0.35169268428589506,
+       0.7009734376529625,
+       0.011804902746187304,
+       -0.0644710246850448
+      ],
+      [
+       0.3739789737759382,
+       0.7127626914376647,
+       -0.024362924637525516,
+       -0.062378740576077465
+      ],
+      [
+       0.3908967813902837,
+       0.7235476326285749,
+       -0.06139939259130084,
+       -0.05304502142755773
+      ],
+      [
+       0.3947518902521341,
+       0.7282424411587579,
+       -0.07422753677587804,
+       -0.048766794635013905
+      ],
+      [
+       0.41225022624133145,
+       0.7362766516579762,
+       -0.11282282885660527,
+       -0.03570404904270206
+      ],
+      [
+       0.42678044345645594,
+       0.7423204193530681,
+       -0.1509015660999606,
+       -0.018199296709563727
+      ],
+      [
+       0.4346504389268324,
+       0.7444721548684906,
+       -0.16949493886740397,
+       -0.00962765492791927
+      ],
+      [
+       0.43495828033212247,
+       0.7558256191303917,
+       -0.190783899462514,
+       0.0
+      ],
+      [
+       0.42634033840151453,
+       0.7726526306819811,
+       -0.19899296908349584,
+       0.0
+      ],
+      [
+       0.4001685690822068,
+       0.7964529059261378,
+       -0.1966214750083446,
+       0.0
+      ],
+      [
+       0.3333171045387363,
+       0.8364305138956286,
+       -0.16974761843436478,
+       0.0
+      ],
+      [
+       0.19786288729838789,
+       0.8492726723562518,
+       -0.04713555965463984,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      2567.0789322190967,
+      5559.955102009487,
+      7398.2768769114045,
+      6835.858786847696,
+      6566.923835317573,
+      5833.634099687368,
+      5078.244851659613,
+      4647.192672026396,
+      4487.68478191582,
+      3990.3175079858306,
+      3590.5014563942154,
+      3439.6690750255325,
+      3015.958485233391,
+      2483.7544743497665,
+      2187.0202440096273,
+      1703.259648152269,
+      1426.8609519513884,
+      1148.3802426283996,
+      784.6647653960908,
+      487.093750069884
+     ]
+    }
+   },
+   {
+    "cluster": "A2255",
+    "stars": "median fraction profile of 7 clusters",
+    "points": 16,
+    "r_out_kpc": 2071.475830078125,
+    "chi2_per_point": {
+     "release_nfw": 3.226031884627906,
+     "baryons": 64.91492657611451,
+     "pm1_law": 17.441494804109574,
+     "spectrum_alone": 2.414110388189221
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      57.652,
+      134.53181921508502,
+      141.09,
+      231.08,
+      321.94,
+      329.23446193108157,
+      462.16,
+      539.228990437306,
+      643.89,
+      751.2593706166278,
+      874.83,
+      963.9678351108269,
+      1148.1,
+      1176.9845649491501,
+      1390.167137596764,
+      1715.1212710467628
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.2334105307306682,
+       0.350837549352312,
+       0.5739719513020547,
+       -0.15822003138503488
+      ],
+      [
+       0.2986738690788316,
+       0.6377002284484337,
+       0.08202706659133,
+       -0.018401164118595298
+      ],
+      [
+       0.29451162903315437,
+       0.6484796872321457,
+       0.07532278500172294,
+       -0.018314101267022913
+      ],
+      [
+       0.21754564935070203,
+       0.7729592776029391,
+       0.08280503802918576,
+       -0.07330996498282695
+      ],
+      [
+       0.21022226887139517,
+       0.8275593341917339,
+       0.06061315271677662,
+       -0.09839475577990557
+      ],
+      [
+       0.2121116167919209,
+       0.8262145634193158,
+       0.06114065322642056,
+       -0.09946683343765715
+      ],
+      [
+       0.22727972880167094,
+       0.8657654492129169,
+       0.007991891538786955,
+       -0.10103706955337464
+      ],
+      [
+       0.24530021862872217,
+       0.8726990142555034,
+       -0.0275215216826077,
+       -0.09047771120161793
+      ],
+      [
+       0.27014185681134745,
+       0.8774518169994695,
+       -0.07820701003470057,
+       -0.06938666377611633
+      ],
+      [
+       0.2962432189107206,
+       0.8727196020889947,
+       -0.12240153000795426,
+       -0.04656129099176108
+      ],
+      [
+       0.32687062740806555,
+       0.8597577095135928,
+       -0.16326635312682206,
+       -0.023361983794836203
+      ],
+      [
+       0.3417852838727816,
+       0.8495067915065398,
+       -0.18157990890206896,
+       -0.009712166477252631
+      ],
+      [
+       0.3588517371246223,
+       0.8301157416459147,
+       -0.18896747877053705,
+       0.0
+      ],
+      [
+       0.3604778882834296,
+       0.8273665915563053,
+       -0.187844479839735,
+       0.0
+      ],
+      [
+       0.35273680981019734,
+       0.8131490034080416,
+       -0.16588581321823903,
+       0.0
+      ],
+      [
+       0.2970855066228932,
+       0.8045791561261753,
+       -0.1016646627490684,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      1267.5807050308297,
+      1735.7709836844217,
+      1740.60531002949,
+      1830.5196672360141,
+      2015.2400374369763,
+      2028.3696378858367,
+      2158.7174471152844,
+      2146.556077331253,
+      2078.5504324916706,
+      1948.4113894204017,
+      1763.1263306016492,
+      1627.748447480991,
+      1352.5841050809522,
+      1310.6606146766483,
+      1037.8265185940654,
+      712.4479031993706
+     ]
+    }
+   },
+   {
+    "cluster": "A2319",
+    "stars": "release",
+    "points": 27,
+    "r_out_kpc": 2533.218017578125,
+    "chi2_per_point": {
+     "release_nfw": 12.381648830487162,
+     "baryons": 289.0802369925487,
+     "pm1_law": 133.84417037022118,
+     "spectrum_alone": 13.092105348383008
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      43.627613670133734,
+      89.4180089153046,
+      126.30115898959883,
+      159.85229252665803,
+      162.77777117384844,
+      200.31138187221396,
+      241.2395839524517,
+      285.0338781575037,
+      330.87102526002974,
+      380.0112927191679,
+      391.2002516518773,
+      432.09895988112925,
+      487.85563150074296,
+      550.5945913818722,
+      623.9238632986628,
+      640.7181650794053,
+      711.8376820208024,
+      812.4558098068352,
+      892.655195679165,
+      933.8988410104013,
+      1085.964338781575,
+      1145.397917399567,
+      1265.9589895988115,
+      1398.5067630513827,
+      1476.6472511144134,
+      1651.8129074988137,
+      2037.9272931322955
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.11178410256995744,
+       0.4225224622515537,
+       0.46859719675356,
+       -0.0029037615750711885
+      ],
+      [
+       0.4265482893620769,
+       0.43417354291762084,
+       0.18817774611353452,
+       -0.04889957839323228
+      ],
+      [
+       0.42249591778562234,
+       0.49916661152457337,
+       0.08843960859829765,
+       -0.01010213790849327
+      ],
+      [
+       0.3581803039954446,
+       0.5914440999366563,
+       0.0644018359914405,
+       -0.014026239923541343
+      ],
+      [
+       0.35117551620564014,
+       0.5981719788758761,
+       0.06592045539979857,
+       -0.015267950481314622
+      ],
+      [
+       0.297160062947928,
+       0.6735369267092112,
+       0.061683739886294345,
+       -0.032380729543433455
+      ],
+      [
+       0.2814671625018879,
+       0.7079447097582877,
+       0.06008180422785697,
+       -0.04949367648803251
+      ],
+      [
+       0.2897332158389928,
+       0.7225668094964499,
+       0.05175355179900802,
+       -0.06405357713445069
+      ],
+      [
+       0.3021325118079397,
+       0.7261337276251469,
+       0.04817451643187869,
+       -0.07644075586496561
+      ],
+      [
+       0.31361304641717025,
+       0.7359209234512963,
+       0.03662783210216352,
+       -0.0861618019706299
+      ],
+      [
+       0.31381793714912987,
+       0.7429148161320135,
+       0.03125974418342123,
+       -0.08799249746456443
+      ],
+      [
+       0.3190633045176508,
+       0.7533763457282607,
+       0.019994689414888262,
+       -0.09243433966079996
+      ],
+      [
+       0.324428041993253,
+       0.7694948782427328,
+       -0.0002900450730116704,
+       -0.0936328751629741
+      ],
+      [
+       0.33579775190747496,
+       0.7824368266064454,
+       -0.02735811359672425,
+       -0.09087646491719632
+      ],
+      [
+       0.34281054933827404,
+       0.8027125175399024,
+       -0.062175834958316724,
+       -0.08334723191985974
+      ],
+      [
+       0.34516938828849947,
+       0.8053233904145952,
+       -0.06919740148443551,
+       -0.08129537721865938
+      ],
+      [
+       0.3633766430603216,
+       0.8087529985147047,
+       -0.10147202792803774,
+       -0.07065761364698862
+      ],
+      [
+       0.3798811674869379,
+       0.8180751322731652,
+       -0.1423274422764577,
+       -0.0556288574836453
+      ],
+      [
+       0.39442529003939153,
+       0.8259483203435082,
+       -0.17642110539502118,
+       -0.04395250498787842
+      ],
+      [
+       0.4021284856009736,
+       0.8243817278913276,
+       -0.18861036361156602,
+       -0.03789984988073535
+      ],
+      [
+       0.4140605019421134,
+       0.8390214424488914,
+       -0.2339190265641737,
+       -0.01916291782683087
+      ],
+      [
+       0.4194940145240469,
+       0.8406442819233368,
+       -0.24732357465106922,
+       -0.012814721796314666
+      ],
+      [
+       0.41577863262396125,
+       0.858046381304689,
+       -0.27382501392865044,
+       0.0
+      ],
+      [
+       0.4033526331670999,
+       0.8793780901113645,
+       -0.2827307232784646,
+       0.0
+      ],
+      [
+       0.38993370750835465,
+       0.899222400271689,
+       -0.2891561077800437,
+       0.0
+      ],
+      [
+       0.3550108278452949,
+       0.9323906588945535,
+       -0.2874014867398483,
+       0.0
+      ],
+      [
+       0.23969840597687553,
+       0.977995663353131,
+       -0.21769406933000662,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      4526.560938675284,
+      6329.62949748485,
+      6034.174914046607,
+      5446.932228246451,
+      5399.895292625381,
+      4921.927494253011,
+      4609.318387131319,
+      4386.2138797348825,
+      4209.101317116095,
+      4053.7136085455804,
+      4021.0334903821386,
+      3907.4253991342734,
+      3761.150967161118,
+      3586.685257324791,
+      3365.7635972407384,
+      3316.0368379156153,
+      3111.8531699410173,
+      2811.7404274812197,
+      2576.0447099386743,
+      2460.1683728165135,
+      2057.207037703903,
+      1910.8039176482123,
+      1643.7418891341986,
+      1393.1511919658958,
+      1261.8822043784717,
+      1014.8034121982607,
+      669.4467164277244
+     ]
+    }
+   },
+   {
+    "cluster": "A3158",
+    "stars": "median fraction profile of 7 clusters",
+    "points": 20,
+    "r_out_kpc": 2201.392822265625,
+    "chi2_per_point": {
+     "release_nfw": 4.064926630048699,
+     "baryons": 184.73469351345597,
+     "pm1_law": 60.13676345649694,
+     "spectrum_alone": 5.114685786140524
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      21.805999999999997,
+      53.365,
+      106.73,
+      134.39107632994936,
+      174.80999999999997,
+      243.54000000000002,
+      312.5,
+      328.8900056598854,
+      381.55,
+      487.08000000000004,
+      538.6648433915243,
+      624.99,
+      750.4734423715877,
+      799.53,
+      962.9593463811507,
+      1043.1,
+      1175.7531108119883,
+      1388.7127711052822,
+      1713.3270954569484,
+      2138.6587099900257
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.0444293412903037,
+       0.13364395322872186,
+       0.27429423317238255,
+       0.5476324723085918
+      ],
+      [
+       0.20517253652695688,
+       0.32534159068428425,
+       0.57146510491205,
+       -0.10197923212329095
+      ],
+      [
+       0.31632139729094233,
+       0.5665276049809496,
+       0.14003512209886876,
+       -0.022884124370760595
+      ],
+      [
+       0.31113225792814886,
+       0.6061159945716306,
+       0.083618311759492,
+       -0.0008665642592715027
+      ],
+      [
+       0.27634626730637246,
+       0.6650924780385639,
+       0.069475824583958,
+       -0.010914569928894174
+      ],
+      [
+       0.2372153919652059,
+       0.7274922266948142,
+       0.06936311391486809,
+       -0.03407073257488797
+      ],
+      [
+       0.24205271559037733,
+       0.7534572753151385,
+       0.05055970243436127,
+       -0.04606969333987689
+      ],
+      [
+       0.24525116954833687,
+       0.7551921175566536,
+       0.04773323350008084,
+       -0.048176520605071146
+      ],
+      [
+       0.2626804909338118,
+       0.7568692779182027,
+       0.03388649709128759,
+       -0.05343626594330201
+      ],
+      [
+       0.2970783302667206,
+       0.7548509263273371,
+       0.004602986731556848,
+       -0.056532243325614344
+      ],
+      [
+       0.3188335290771369,
+       0.7503001703715565,
+       -0.014968187540729656,
+       -0.05416551190796358
+      ],
+      [
+       0.34914697761006486,
+       0.7429073913942886,
+       -0.04529522889954024,
+       -0.04675914010481315
+      ],
+      [
+       0.3882877233570964,
+       0.7283273882699082,
+       -0.08341887595528268,
+       -0.033196235671721835
+      ],
+      [
+       0.4037602412385706,
+       0.723726078077345,
+       -0.10037012004770024,
+       -0.027116199268215346
+      ],
+      [
+       0.42885520548586487,
+       0.7147442769750904,
+       -0.13243866205015828,
+       -0.011160820410797046
+      ],
+      [
+       0.43737540507387007,
+       0.7128940183842499,
+       -0.14593555055327048,
+       -0.004333872904849722
+      ],
+      [
+       0.4410067031056195,
+       0.7133343301380205,
+       -0.15434103324364,
+       0.0
+      ],
+      [
+       0.4209797422794075,
+       0.7264026069249784,
+       -0.1473823492043859,
+       0.0
+      ],
+      [
+       0.35669434374672465,
+       0.7587136199747069,
+       -0.11540796372143163,
+       0.0
+      ],
+      [
+       0.23727929285239674,
+       0.7731534280267908,
+       -0.010432720879187512,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      1077.8937918829538,
+      2319.3120266336123,
+      3155.630005894108,
+      3169.8687661703602,
+      3071.926489847391,
+      3007.486329126252,
+      2993.3263069523464,
+      2979.0953738187864,
+      2899.9304366138067,
+      2634.7253250151025,
+      2496.469311939578,
+      2274.8991584450087,
+      1961.4403915811201,
+      1848.0558504305986,
+      1512.4119125570342,
+      1362.185551720021,
+      1133.7260551846227,
+      841.3239892130237,
+      526.1028563708944,
+      293.4971080617287
+     ]
+    }
+   },
+   {
+    "cluster": "A3266",
+    "stars": "median fraction profile of 7 clusters",
+    "points": 20,
+    "r_out_kpc": 1605.2554931640625,
+    "chi2_per_point": {
+     "release_nfw": 4.686624806820784,
+     "baryons": 135.785322927438,
+     "pm1_law": 55.7060555681932,
+     "spectrum_alone": 6.654747316348711
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      21.534000000000002,
+      52.699999999999996,
+      86.313,
+      120.25,
+      144.70696912965073,
+      172.63,
+      240.5,
+      308.59999999999997,
+      354.1356951753397,
+      376.7900000000001,
+      481.00999999999993,
+      580.012880830734,
+      617.1999999999999,
+      753.5899999999999,
+      808.079946841536,
+      925.7999999999998,
+      1036.8763765877818,
+      1130.4,
+      1266.0042264481021,
+      1495.3107726142637
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.045307457634933275,
+       0.1863147079491276,
+       0.30569674216170983,
+       0.46268109225422926
+      ],
+      [
+       0.2898895887046319,
+       0.3102858569339936,
+       0.47221977644703444,
+       -0.07239522208565982
+      ],
+      [
+       0.3788825114249581,
+       0.4556870525556064,
+       0.22446099776109682,
+       -0.0590305617416612
+      ],
+      [
+       0.3872662477271111,
+       0.5325818226408956,
+       0.09059102233858485,
+       -0.010439092706591557
+      ],
+      [
+       0.361593569599905,
+       0.5776075867355793,
+       0.06710161912085612,
+       -0.006302775456340452
+      ],
+      [
+       0.3193659606106824,
+       0.6319471981120983,
+       0.06541315834470338,
+       -0.01672631706748409
+      ],
+      [
+       0.27071581532966377,
+       0.7127045844131144,
+       0.06457640879763886,
+       -0.04799680854041669
+      ],
+      [
+       0.2684482200361581,
+       0.7386787984085449,
+       0.05941124805173772,
+       -0.06653826649644062
+      ],
+      [
+       0.26745686011049635,
+       0.7581848703253194,
+       0.04702528114250012,
+       -0.07266701157831583
+      ],
+      [
+       0.2707593336529346,
+       0.764882752791483,
+       0.038408696521502424,
+       -0.07405078296591998
+      ],
+      [
+       0.2711163057337281,
+       0.7921715399388207,
+       0.0017457754965020922,
+       -0.06503362116905083
+      ],
+      [
+       0.2719752775110706,
+       0.8156889488071093,
+       -0.04385873776666253,
+       -0.04380548855151735
+      ],
+      [
+       0.2752340472019587,
+       0.8205841854252318,
+       -0.06083697377375034,
+       -0.034981258853440354
+      ],
+      [
+       0.28696538509287267,
+       0.817441799467697,
+       -0.09601550081527079,
+       -0.008391683745298919
+      ],
+      [
+       0.29103213937138256,
+       0.8181907246175444,
+       -0.10922286398892689,
+       0.0
+      ],
+      [
+       0.30141753449287645,
+       0.8007890924476506,
+       -0.10220662694052694,
+       0.0
+      ],
+      [
+       0.31220675979400253,
+       0.7797072330288219,
+       -0.09191399282282446,
+       0.0
+      ],
+      [
+       0.31987488911459927,
+       0.7610148974423728,
+       -0.08088978655697215,
+       0.0
+      ],
+      [
+       0.32578164613727484,
+       0.7344715014450167,
+       -0.060253147582291555,
+       0.0
+      ],
+      [
+       0.329997483248172,
+       0.6906292571079234,
+       -0.02062674035609527,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      1331.9768808507597,
+      2792.748282384675,
+      3454.6026798430644,
+      3410.825746100244,
+      3210.915808030124,
+      2990.7248238962234,
+      2731.4531077849465,
+      2682.4639086271336,
+      2677.888493308558,
+      2676.390555935745,
+      2675.155777607063,
+      2645.225633839849,
+      2623.277865781985,
+      2509.895759733979,
+      2441.421015298038,
+      2245.9840912222126,
+      2034.3467731351343,
+      1848.4438163045074,
+      1579.5895418241407,
+      1153.1276645924902
+     ]
+    }
+   },
+   {
+    "cluster": "A644",
+    "stars": "release",
+    "points": 21,
+    "r_out_kpc": 2209.2833343136604,
+    "chi2_per_point": {
+     "release_nfw": 4.847777014221286,
+     "baryons": 92.60843048886326,
+     "pm1_law": 46.0102136016932,
+     "spectrum_alone": 6.039254609503468
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      25.806910569105693,
+      63.15548780487804,
+      103.43495934959348,
+      138.82906092911998,
+      144.1056910569106,
+      206.86991869918697,
+      288.2215447154471,
+      339.7509430121508,
+      369.82723577235777,
+      451.5447154471545,
+      556.4530886820844,
+      576.4430894308942,
+      739.6544715447155,
+      775.2562621705765,
+      903.099593495935,
+      994.7590679966462,
+      1109.451219512195,
+      1214.5800051564768,
+      1434.5721510971198,
+      1769.9060126187535,
+      2209.2833343136604
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.1115218384554567,
+       0.30653062515367,
+       0.29476275436622057,
+       0.2871847820246527
+      ],
+      [
+       0.42052117017303536,
+       0.3245976864676753,
+       0.324855937688141,
+       -0.0699747943288515
+      ],
+      [
+       0.46436131334957714,
+       0.42852557695439314,
+       0.1232769792360947,
+       -0.01616386954006491
+      ],
+      [
+       0.4160342566231184,
+       0.5146814799585513,
+       0.06868613209079166,
+       0.0005981313275387707
+      ],
+      [
+       0.4075243577855599,
+       0.5301168969415092,
+       0.06173043202512496,
+       0.000628313247805854
+      ],
+      [
+       0.3102372112312193,
+       0.6469836183334771,
+       0.05738918378233463,
+       -0.014610013347031034
+      ],
+      [
+       0.31041754802495164,
+       0.6752975156538178,
+       0.04464932934527807,
+       -0.030364393024047507
+      ],
+      [
+       0.32240609386180924,
+       0.6802438743528286,
+       0.03453829979840067,
+       -0.037188268013038414
+      ],
+      [
+       0.3286592640404569,
+       0.679300803645526,
+       0.032318969057472634,
+       -0.04027903674345534
+      ],
+      [
+       0.3510614598098665,
+       0.6804540325945603,
+       0.013169860147632188,
+       -0.04468535255205915
+      ],
+      [
+       0.38256737035595784,
+       0.6794049388227354,
+       -0.020233875347321097,
+       -0.041738433831372115
+      ],
+      [
+       0.3906386096026959,
+       0.6738892347966682,
+       -0.02384056093843934,
+       -0.0406872834609248
+      ],
+      [
+       0.4259762756557634,
+       0.6715035447558939,
+       -0.07317572603041683,
+       -0.02430409438124067
+      ],
+      [
+       0.4321563837883775,
+       0.6694684021631339,
+       -0.08127616121695368,
+       -0.020348624734557917
+      ],
+      [
+       0.45135886798277086,
+       0.6637922907655668,
+       -0.10582536319402747,
+       -0.009325795554310335
+      ],
+      [
+       0.45790772183956907,
+       0.6630011822084664,
+       -0.11681229795303197,
+       -0.004096606095003549
+      ],
+      [
+       0.4557094952801455,
+       0.6660224527527855,
+       -0.12173194803293064,
+       0.0
+      ],
+      [
+       0.4468624557723732,
+       0.6702750264385178,
+       -0.117137482210891,
+       0.0
+      ],
+      [
+       0.4238218919406867,
+       0.6815128449407297,
+       -0.10533473688141648,
+       0.0
+      ],
+      [
+       0.3589462798191127,
+       0.7060937347294161,
+       -0.06504001454852874,
+       0.0
+      ],
+      [
+       0.27167145797896386,
+       0.728328542021036,
+       0.0,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      3443.751903101731,
+      6576.486215457433,
+      6999.33885242833,
+      6172.358669537842,
+      6034.921560377657,
+      4857.167196177854,
+      4265.384568283039,
+      3998.0966833158277,
+      3840.113998060181,
+      3437.3410529182693,
+      2968.6426113823304,
+      2887.577398902385,
+      2343.387174405482,
+      2237.9764427377063,
+      1896.9495720641328,
+      1674.809111402756,
+      1430.4648459389443,
+      1240.345270673122,
+      889.4801059875009,
+      521.6142625755236,
+      235.03473107251557
+     ]
+    }
+   },
+   {
+    "cluster": "A85",
+    "stars": "release",
+    "points": 21,
+    "r_out_kpc": 2310.593994140625,
+    "chi2_per_point": {
+     "release_nfw": 7.0774017553031126,
+     "baryons": 474.0564763722607,
+     "pm1_law": 190.1082708126043,
+     "spectrum_alone": 7.95585960621001
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      20.372999999999998,
+      49.85699999999999,
+      81.657,
+      113.77,
+      145.98,
+      152.4899972451813,
+      178.23,
+      227.53,
+      291.95,
+      356.47,
+      373.1827949027424,
+      455.06,
+      583.9100000000001,
+      611.2087284531864,
+      746.97,
+      851.5423245258422,
+      974.49,
+      1092.6445129798985,
+      1334.0960185834992,
+      1575.735611721284,
+      1944.066756898742
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.10375239633956168,
+       0.15906038724876082,
+       0.24267652031337453,
+       0.49451069609830295
+      ],
+      [
+       0.2786822545463846,
+       0.2870212268272631,
+       0.48412986068730307,
+       -0.04983334206095106
+      ],
+      [
+       0.3634358516008529,
+       0.4414283073037526,
+       0.24941391997878193,
+       -0.054278078883387634
+      ],
+      [
+       0.377379070393249,
+       0.5170549173123186,
+       0.11483827200165027,
+       -0.00927225970721791
+      ],
+      [
+       0.3503725806976173,
+       0.5717056579156785,
+       0.0793457199764046,
+       -0.0014239585897005544
+      ],
+      [
+       0.34475407705511035,
+       0.5894124943116477,
+       0.06826830708119674,
+       -0.0024348784479549294
+      ],
+      [
+       0.31595961778997417,
+       0.6367424685938408,
+       0.05679970663937369,
+       -0.00950179302318834
+      ],
+      [
+       0.2906656757755031,
+       0.6786535171549137,
+       0.055427263220394596,
+       -0.02474645615081143
+      ],
+      [
+       0.30774971719227195,
+       0.6855768056373037,
+       0.04595877531709153,
+       -0.03928529814666716
+      ],
+      [
+       0.3306960704362263,
+       0.6798915655817556,
+       0.03867394356624363,
+       -0.04926157958422536
+      ],
+      [
+       0.3330121178141758,
+       0.6843241234386521,
+       0.03383044872903343,
+       -0.05116668998186138
+      ],
+      [
+       0.342926200755574,
+       0.7023552733367768,
+       0.010775454554593762,
+       -0.0560569286469446
+      ],
+      [
+       0.36376085817220805,
+       0.7174043751177719,
+       -0.03085652795439992,
+       -0.050308705335580066
+      ],
+      [
+       0.36678839892466797,
+       0.7219272649107213,
+       -0.04113075497257548,
+       -0.047584908862813975
+      ],
+      [
+       0.39992409784428545,
+       0.7154686403026458,
+       -0.08291200497756451,
+       -0.03248073316936664
+      ],
+      [
+       0.4206681281827918,
+       0.7129284529821841,
+       -0.11183467592379744,
+       -0.021761905241178724
+      ],
+      [
+       0.43775270404186395,
+       0.710070153608456,
+       -0.13628798753331933,
+       -0.011534870117000516
+      ],
+      [
+       0.4453036900667395,
+       0.7076155418844531,
+       -0.1491176834156719,
+       -0.0038015485355207277
+      ],
+      [
+       0.43108271744067445,
+       0.7204285699111536,
+       -0.15151128735182834,
+       0.0
+      ],
+      [
+       0.3913505147884972,
+       0.7460745660935805,
+       -0.13742508088207747,
+       0.0
+      ],
+      [
+       0.3007407680211617,
+       0.7909051483553182,
+       -0.09164591637647986,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      2146.620105121209,
+      4582.987477737341,
+      5844.276170991445,
+      5939.455764336062,
+      5500.763235449649,
+      5394.414397421476,
+      4988.146769354868,
+      4386.246404657365,
+      3930.262949512464,
+      3656.759422961185,
+      3593.425509302347,
+      3287.716985627743,
+      2867.4706609876575,
+      2779.457776862807,
+      2360.3631688266632,
+      2077.2729316164205,
+      1767.106685852675,
+      1512.5876242522788,
+      1087.945657878371,
+      763.882242297612,
+      438.85895005507024
+     ]
+    }
+   },
+   {
+    "cluster": "RXC1825",
+    "stars": "median fraction profile of 7 clusters",
+    "points": 19,
+    "r_out_kpc": 1798.930419921875,
+    "chi2_per_point": {
+     "release_nfw": 4.081215274300522,
+     "baryons": 203.46784874526074,
+     "pm1_law": 92.7030881789188,
+     "spectrum_alone": 23.79222170410212
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      23.595000000000002,
+      57.742000000000004,
+      94.571,
+      120.03657174018323,
+      131.76,
+      189.14000000000004,
+      263.52,
+      293.760808530135,
+      338.13,
+      412.84,
+      481.1292929834687,
+      527.03,
+      670.3142779021267,
+      716.0600000000001,
+      860.1042858968682,
+      939.72,
+      1050.1693385791348,
+      1240.3823721517383,
+      1530.324042811836
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.08393243494242078,
+       0.1907349505974393,
+       0.29433062992212217,
+       0.4310019845380179
+      ],
+      [
+       0.29697972760529706,
+       0.3237202062063163,
+       0.5157782023137527,
+       -0.13647813612536616
+      ],
+      [
+       0.3450800872005794,
+       0.5096480492075625,
+       0.20390293617597902,
+       -0.05863107258412073
+      ],
+      [
+       0.33774963421258597,
+       0.5751781087764172,
+       0.10096228631035992,
+       -0.013890029299363069
+      ],
+      [
+       0.32620798577682963,
+       0.5930767334657205,
+       0.08719703884720353,
+       -0.006481758089753796
+      ],
+      [
+       0.24761467189265254,
+       0.7079870213276508,
+       0.0720468548692964,
+       -0.02764854808959977
+      ],
+      [
+       0.21440458593937747,
+       0.772886807434441,
+       0.06687794557986487,
+       -0.05416933895368363
+      ],
+      [
+       0.21735882933995435,
+       0.7838132421987326,
+       0.05909934762537135,
+       -0.060271419164058454
+      ],
+      [
+       0.22555664486922136,
+       0.7899821377115377,
+       0.0514093441287704,
+       -0.06694812670952928
+      ],
+      [
+       0.24584873077500058,
+       0.8001341908103219,
+       0.026991155000855898,
+       -0.07297407658617851
+      ],
+      [
+       0.2682903945783523,
+       0.7988085341822496,
+       0.004867337203473806,
+       -0.07196626596407574
+      ],
+      [
+       0.28392800879312774,
+       0.7972420279250668,
+       -0.012798184237044713,
+       -0.06837185248114974
+      ],
+      [
+       0.3294100792111108,
+       0.7953020789579747,
+       -0.07937626983311824,
+       -0.045335888335967016
+      ],
+      [
+       0.3436489118252357,
+       0.7896107499176093,
+       -0.0967445153498936,
+       -0.0365151463929517
+      ],
+      [
+       0.3776662407692028,
+       0.7717605570128692,
+       -0.14204784843990576,
+       -0.007378949342166259
+      ],
+      [
+       0.38356071669709885,
+       0.7696477306209205,
+       -0.15320844731801941,
+       0.0
+      ],
+      [
+       0.39146672420521683,
+       0.7594318889965319,
+       -0.15089861320174894,
+       0.0
+      ],
+      [
+       0.38001394802485056,
+       0.7528205906701808,
+       -0.1328345386950313,
+       0.0
+      ],
+      [
+       0.3272452574314768,
+       0.7460299579544876,
+       -0.07327521538596428,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      742.9026136381625,
+      1548.5257102741361,
+      1929.3028550713952,
+      1989.0176684348662,
+      1991.4461803843012,
+      1989.1848642388654,
+      2075.008430521288,
+      2106.7406736881303,
+      2130.370372984051,
+      2103.452617261259,
+      2022.6857785756981,
+      1957.699652668208,
+      1732.7510712566727,
+      1657.6446795881595,
+      1440.3684441968576,
+      1333.899580722192,
+      1190.2226815081283,
+      971.0651388452518,
+      704.6563620998479
+     ]
+    }
+   },
+   {
+    "cluster": "ZW1215",
+    "stars": "release",
+    "points": 20,
+    "r_out_kpc": 2054.4296875,
+    "chi2_per_point": {
+     "release_nfw": 2.3887551653916326,
+     "baryons": 99.916966207377,
+     "pm1_law": 44.0967759924322,
+     "spectrum_alone": 4.981474803643117
+    },
+    "shell_decomposition": {
+     "radii_kpc": [
+      27.431,
+      67.13,
+      109.95,
+      132.9000832449691,
+      153.18,
+      219.9,
+      306.36,
+      325.2411660052799,
+      393.1,
+      479.97,
+      532.688673422082,
+      612.72,
+      742.1473590692437,
+      786.2,
+      952.2759482755915,
+      959.94,
+      1162.7088830064333,
+      1179.3,
+      1373.305757471562,
+      1694.318565790402
+     ],
+     "fractions_inner_half_to_twice_beyond": [
+      [
+       0.2628493663268785,
+       0.21244118965796635,
+       0.29229009834041736,
+       0.2324193456747376
+      ],
+      [
+       0.46269418702101245,
+       0.321364002026047,
+       0.30609133403572364,
+       -0.0901495230827832
+      ],
+      [
+       0.4665715568176469,
+       0.4462304202585546,
+       0.10175689440116625,
+       -0.014558871477367749
+      ],
+      [
+       0.4204521908737311,
+       0.5086422732542295,
+       0.06982510423526848,
+       0.0010804316367707296
+      ],
+      [
+       0.36854115062953097,
+       0.5662619685145919,
+       0.06550025590029851,
+       -0.00030337504442115934
+      ],
+      [
+       0.25853218477654655,
+       0.6980966765656224,
+       0.0696666570023883,
+       -0.026295518344557265
+      ],
+      [
+       0.241696015108385,
+       0.7444423420408521,
+       0.05670421734991462,
+       -0.042842574499151624
+      ],
+      [
+       0.24412373149036445,
+       0.7502367499549402,
+       0.05058718752833538,
+       -0.04494766897364001
+      ],
+      [
+       0.2570042096192615,
+       0.7594746979646609,
+       0.033103105572308535,
+       -0.0495820131562308
+      ],
+      [
+       0.2834099733791081,
+       0.760119097990618,
+       0.005978567030772899,
+       -0.049507638400499154
+      ],
+      [
+       0.3004562879835608,
+       0.7571582546641961,
+       -0.01192089959946445,
+       -0.045693643048292584
+      ],
+      [
+       0.32185225814365526,
+       0.7532333218717074,
+       -0.03710710691770063,
+       -0.03797847309766213
+      ],
+      [
+       0.35961366806745215,
+       0.7359804740231002,
+       -0.07191561515831169,
+       -0.0236785269322409
+      ],
+      [
+       0.36986064476580627,
+       0.73139035886134,
+       -0.08178683517736722,
+       -0.019464168449779176
+      ],
+      [
+       0.40323211677104037,
+       0.7102731309862917,
+       -0.10810221248999419,
+       -0.005403035267337943
+      ],
+      [
+       0.4020917295483873,
+       0.7095097181954254,
+       -0.10692762129170846,
+       -0.004673826452104361
+      ],
+      [
+       0.42281360232313,
+       0.690403200561816,
+       -0.11321680288494602,
+       0.0
+      ],
+      [
+       0.4245782312930839,
+       0.688728983499564,
+       -0.11330721479264798,
+       0.0
+      ],
+      [
+       0.42463118247919945,
+       0.680516753530636,
+       -0.10514793600983573,
+       0.0
+      ],
+      [
+       0.3833892183661469,
+       0.6879550665059674,
+       -0.07134428487211403,
+       0.0
+      ]
+     ],
+     "total_memory_force": [
+      1919.325932944836,
+      3541.95277641672,
+      3639.6844706071215,
+      3405.0414585884023,
+      3210.9623646291393,
+      2982.4024331581313,
+      3022.8388931753157,
+      3022.7011140687882,
+      2960.384928127683,
+      2770.2831228131727,
+      2647.077061959614,
+      2474.7401257068723,
+      2182.2782544697566,
+      2078.0808538961246,
+      1693.7869741292957,
+      1677.9837960868124,
+      1271.2352333901138,
+      1241.6292823944195,
+      927.4884974379572,
+      555.2200978033151
+     ]
+    }
+   }
+  ],
+  "truncation": {
+   "gas_truncated_at_1_R500": {
+    "chi2_per_point_at_fixed_amplitudes": 8.844539878066463,
+    "refit": 8.503895980921817
+   },
+   "gas_truncated_at_1.5_R500": {
+    "chi2_per_point_at_fixed_amplitudes": 8.587824390182542,
+    "refit": 8.568084010833289
+   },
+   "gas_truncated_at_2_R500": {
+    "chi2_per_point_at_fixed_amplitudes": 8.551281687544412,
+    "refit": 8.551281687544412
+   },
+   "gas_truncated_at_3_R500": {
+    "chi2_per_point_at_fixed_amplitudes": 8.551281687544412,
+    "refit": 8.551281687544412
+   }
+  },
+  "cl1_regression_case": {
+   "note": "CL-1 five-point NFW comparison with the release baryons and the clusters-alone spectrum, at fixed amplitudes",
+   "spectrum_chi2": 2134.7821090754255,
+   "newtonian_chi2": 86192.08989591847,
+   "pm1_law_chi2": 28308.54121415045,
+   "cl1_archived_best_single_width_chi2": 4383.199849907316
+  }
+ },
+ "primary_geometry": "G1_flat_FLRW",
+ "input_sha256": {
+  "protocol-cl2.md": "1fa0261b6bc4cc7a92fda5552cdb3e75ae2fbbaf7b8457dd33461a14fd8cccfb",
+  "cl2-inputs-xcop-profiles.json": "4bb1759b1a5c6dfe0cdbf39d57f6cc192728d2383de107e3a8dd81b52f6928a3",
+  "cl2_response.py": "b488856417a42dcea0f0fae7318e9516d57bd4f3ae9eace37f1d018f6c1b0a55",
+  "cl2_sources.py": "bfe9a5d38669624ddb5cf3963f93ca426e171a370975b6b098ce59d34f87d446"
+ },
+ "checks_short_run": {
+  "G1_flat": 1.0282104723202679e-07,
+  "G1_inv": 6.935806595720351e-09,
+  "G2_dlam": 0.0,
+  "G3_worst": 1.3599311876610898e-07,
+  "G5_baryons": 52.56089758785707,
+  "G7_floor": 5.754846375370807,
+  "E1_clusters_alone_chi2": 2103.6152951359254,
+  "E1_galaxies_alone_rmse": 30.987551041329702,
+  "E1_galaxies_alone_slope": 0.38815423910089875,
+  "E1_joint_objective": 273.1357392223414
+ },
+ "runtime_seconds": 736.7
+}
