@@ -9,3 +9,7 @@ E2: independent fixed seeds 1909, 1910, 1911 for the primary; sensitivity seed 1
 Calibrate one positive coefficient to the old frozen written-response DeltaSigma at 1 Mpc using the low ordinary-mass Coma bracket and primary parameters, seed 1909, 65536 packets. Do this before scoring shear. Use it unchanged for every other run; the upper bracket has a separately stated luminosity scaling equal to its total ordinary-mass ratio. Compare the 5 Mpc contribution with the old frozen response there. Both are conditional optical response quantities. Six exposed Coma measurements have one nonnegative weak-shear geometry nuisance, hence five nominal degrees of freedom; figure uncertainties omit full covariance. The physical radius conversion h=0.7 is an adopted fixed length calibration, not expansion.
 
 E3-E5 detailed integrator choices will be committed before their executions. Failure of a scientific or numerical gate is a recorded outcome, not a reason to alter a threshold.
+
+## E1/E2 refinement declaration after first execution
+E1-v1 retained: 175 disks and 12 clusters; median high-resolution score change 0.05109 fails the fixed 0.05 numerical gate. The proposed factor-three activation contrast fails. Increase nested source samples to 16384/32768/65536 with the same seed, profiles, softening and gates; no mechanism retuning.
+E2-v1 retained: a programming error passed already-expanded matrices to a kernel that adds its own axes. Execution stopped before shear scoring. Pass one-dimensional radii as required; all physics choices and gates unchanged.

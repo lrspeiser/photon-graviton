@@ -6,6 +6,7 @@ from scipy.special import ndtri
 from scipy.stats import qmc
 from common import ROOT, PM, read_json, track, inv_cdf, directions
 
+LEVELS = [16384, 32768, 65536]
 RADII = np.array([0., .5, 1., 2.])
 
 def activation_tensor(P):
@@ -37,7 +38,7 @@ def controls():
                                      for f in [.001, 1000.]))
 
 def run():
-    seq = qmc.Sobol(4, scramble=True, seed=1909).random_base2(14)
+    seq = qmc.Sobol(4, scramble=True, seed=1909).random_base2(16)
     catalogue = {}
     for line in track(ROOT/'temporal_candidate_audit/data/SPARC_Lelli2016c.mrt').read_text().splitlines():
         f = line.split()
@@ -65,7 +66,7 @@ def run():
                                           h*rd*ndtri(seq[:,2])))
                 row = dict(name=key, height=h, scale_kpc=rd,
                            scores={str(n): activation(points[:n], rd, .05)
-                                   for n in [4096,8192,16384]},
+                                   for n in LEVELS},
                            softening_scores={str(s): activation(points,rd,s) for s in [.025,.1]})
                 disks.append(row)
     clusters = []
@@ -82,12 +83,12 @@ def run():
         points = radius[:,None]*directions(seq[:,1],seq[:,2])
         clusters.append(dict(name=name,scale_kpc=scale,
                              scores={str(n):activation(points[:n],scale,.05)
-                                     for n in [4096,8192,16384]},
+                                     for n in LEVELS},
                              softening_scores={str(s):activation(points,scale,s) for s in [.025,.1]}))
     comparisons=[]
     for soft in ['0.025','0.05','0.1']:
         def score(row):
-            return row['scores']['16384'] if soft=='0.05' else row['softening_scores'][soft]
+            return row['scores'][str(LEVELS[-1])] if soft=='0.05' else row['softening_scores'][soft]
         cc = np.array([score(c) for c in clusters])
         for h in [.05,.1,.2]:
             dd = np.array([score(d) for d in disks if d['height']==h])
@@ -98,8 +99,8 @@ def run():
                                     cluster_10_90=np.quantile(cc,[.1,.9],axis=0),
                                     disk_10_90=np.quantile(dd,[.1,.9],axis=0)))
     allrows=disks+clusters
-    change=np.median([np.max(abs(x['scores']['16384']-x['scores']['8192'])) for x in allrows])
-    vals=np.concatenate([x['scores'][str(n)] for x in allrows for n in [4096,8192,16384]])
+    change=np.median([np.max(abs(x['scores'][str(LEVELS[-1])]-x['scores'][str(LEVELS[-2])])) for x in allrows])
+    vals=np.concatenate([x['scores'][str(n)] for x in allrows for n in LEVELS])
     ctl=controls()
     gates=dict(controls=max(ctl.values())<1e-10,bounds=vals.min()>=-1e-10 and vals.max()<=1+1e-10,
                convergence=change<.05)

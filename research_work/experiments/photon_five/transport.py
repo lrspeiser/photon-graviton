@@ -62,8 +62,8 @@ def response(pos, radius):
     weights,_=np.histogram(rp,edges)
     mid=.5*(edges[:-1]+edges[1:])
     h=.25
-    d1=SF.ring_kernel_dR(radius[:,None],mid[None,:],h) @ (weights/len(rp))
-    d2=SF.ring_kernel_d2R(radius[:,None],mid[None,:],h) @ (weights/len(rp))
+    d1=SF.ring_kernel_dR(radius,mid,h) @ (weights/len(rp))
+    d2=SF.ring_kernel_d2R(radius,mid,h) @ (weights/len(rp))
     return (d2-d1/radius)/(2*np.pi*h*h)
 
 def ordinary(ne0,ms,R):
