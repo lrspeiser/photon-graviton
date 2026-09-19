@@ -77,7 +77,7 @@ def main():
     blocks, _ = D.load_galaxies()
     neg = galaxy_root_blocks(blocks)
     tr = blocks['train']
-    out = dict(experiment='NL-1', protocol='protocol-nl1.md; amendment 1', widths_kpc=W.tolist(), members=['local'] + W.tolist(),
+    out = dict(experiment='NL-1', protocol='protocol-nl1.md; amendments 1 and 2', widths_kpc=W.tolist(), members=['local'] + W.tolist(),
                negative_entries=neg, input_sha256={'cl2s2-results.json': hashlib.sha256((HERE/'cl2s2-results.json').read_bytes()).hexdigest()})
     gates = {}
     # ---- R1: the local law at PM-1's fitted a* on the tabulated force reproduces the archived reference
@@ -132,21 +132,23 @@ def main():
     gates['G5_negative_entries'] = neg['train']['negative_entries']/neg['train']['entries'] < 1e-3
     out['galaxies'] = gal
     # ---- clusters: the root columns on the 1500-point grid, the SZ correlations, the corrected boundary fit
-    z = np.load(GEN/'nl1_clusters.npz')
+    # amendment 2: the root columns on stage 2's 6000-point grid, every width included; the same build's linear columns
+    # must reproduce stage 2's archived cache exactly
+    z = np.load(GEN/'nl1_clusters6000.npz')
     corrs = L2.sz_correlations(D.TAR, list(ext['clusters']))
     cls = {}
     g4 = 0.
     z6 = np.load(D.GEN/'cluster_ops.npz')
     for name in ext['clusters']:
-        cl = CS.build_cluster(name, ext['clusters'][name], np.array([100.]), n_grid=1500, frac_profile=frac)
+        cl = CS.build_cluster(name, ext['clusters'][name], np.array([100.]), n_grid=6000, frac_profile=frac)
         cl['ops'] = z[name + '/root']
         assert np.allclose(z[name + '/rp'], cl['rp'])
-        lin, ref6 = z[name + '/linear1500'], z6[f'{name}_6000']
-        d = np.max(np.abs(lin - ref6), axis=0)/np.max(np.abs(ref6), axis=0)
-        g4 = max(g4, float(np.max(d[W >= 1.])))
+        lin, ref6 = z[name + '/linear6000'], z6[f'{name}_6000']
+        g4 = max(g4, float(np.max(np.abs(lin - ref6))/np.max(np.abs(ref6))))
         cls[name] = cl
-    gates['G4_cluster_grid'] = g4 < 1e-3
-    out['G4_worst'] = g4
+    gates['G4b_cluster_identity'] = g4 < 1e-12
+    out['G4b_worst'] = g4
+    out['cluster_negative_samples'] = json.loads((GEN/'nl1_cluster_negatives6000.json').read_text())
     block, Lcs = D.cluster_blocks(cls, corrs)
     csol = D.cluster_solve(block)
     refs = D.cluster_references(cls, Lcs, corrected=True)
