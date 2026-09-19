@@ -133,6 +133,7 @@ def main():
         ('path-memory/rut4r.py', []),
         ('path-memory/rut5.py', []),
         ('path-memory/rut6.py', []),
+        ('path-memory/rut7_checks.py', []),
         # The owner's corrected annulus sampler (2f1d5ed, bde7a7c): a numerical-verification job in its own
         # right, outside the frozen results tree, run as a module from the repository root.
         ('module:research_work.annulus_sampling.checks', []),
