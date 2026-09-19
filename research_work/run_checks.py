@@ -140,6 +140,9 @@ def main():
         # CL-1, the written-track response at cluster scale and for light (path-memory/protocol-cl1.md): the
         # nine numerical gates with their negative controls and a regression anchor.
         ('path-memory/cl1_checks.py', []),
+        # CL-2 stage 1, one written-field response tested jointly on galaxies, lenses and clusters
+        # (path-memory/protocol-cl2.md and its two amendments): eight gates with controls and a regression anchor.
+        ('path-memory/cl2_checks.py', []),
         # LAST, and expected to exit non-zero until the owner rules: stage 8 reproduces, but its numerical
         # verification status is FAILED (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
