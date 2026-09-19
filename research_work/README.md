@@ -2,6 +2,8 @@
 
 Read the [research checkpoint](results/RESEARCH-CHECKPOINT.md) and [roadmap](../research_plan/START-HERE.md). The theory is incomplete; passing these checks verifies the stated calculations, not observational agreement with the universe.
 
+The [PF5 campaign](experiments/photon_five/report.md) runs all five new photon-response hypotheses with static geometry and ordinary sources. Its numerical checks pass; the full mechanism screens fail. [Reproduction commands](experiments/photon_five/README.md) use a separate runner that excludes the historical expanding-geometry and halo comparisons.
+
 ## Layout
 
 - `energy/`: reusable energy-ledger and radial-transport modules.

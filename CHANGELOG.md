@@ -2,6 +2,10 @@
 
 Dated notices that accumulated at the top of `README.md` and `research_plan/START-HERE.md` until 13 September 2026, moved here verbatim (newest first) so that [CURRENT-STATUS.md](CURRENT-STATUS.md) can remain the single authoritative summary. The date and commit are those that last touched each notice (`git blame`). Relative links were rebased to the repository root, and mis-encoded dashes in the START-HERE notices were repaired. Statements such as "latest" or "current" refer to the date of each entry, not to the present state.
 
+## 2026-09-19: five photon-response experiments
+
+- **PF5 completed** ([report](research_work/experiments/photon_five/report.md), [protocol](research_work/experiments/photon_five/protocol.md)). Protocol checkpoint aed39f8 preceded execution. Main checkpoints 57087ba, 2405359 and 924830f published intermediate evidence. Ran angular activation on 175 disk and 12 cluster proxies; 27 transport settings plus sampling/emissivity controls; 24 white-time and finite-correlation probe-orbit runs; nine conservative gas collisions plus controls; reciprocal tensor energy/ray checks and a shared-parameter six-lens screen. Final declared numerical gates and independent transport/optics checks pass. None provides a complete validated solution; long-averaged fluctuation probes show partial success. Preserve the first angular sampling failure and transport array-shape exception. Every calculation uses static coordinates and ordinary sources; excluded historical joint-suite comparisons were not run. Missing bolometric histories, global funding and matter backreaction remain explicit. RUT-8's failure and RUT-9's unrun declaration remain unchanged.
+
 ## 2026-09-16
 
 New entries are added here, newest first; [CURRENT-STATUS.md](CURRENT-STATUS.md) remains the authoritative summary.

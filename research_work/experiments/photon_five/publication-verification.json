@@ -1,0 +1,65 @@
+{
+  "verified": true,
+  "python_modules_parsed": 11,
+  "manifest_entries_resolved": 137,
+  "ancillary_history_resolutions": [
+    {
+      "run": "audit-v2",
+      "path": "research_work/experiments/photon_five/consolidate.py",
+      "resolved_commit": "3d5d10636b07ea0de4b2dbda64e89463c325df7d",
+      "explanation": "Ancillary file snapshot differs from starting commit; hash resolves in history."
+    },
+    {
+      "run": "audit-v2",
+      "path": "research_work/experiments/photon_five/README.md",
+      "resolved_commit": "3d5d10636b07ea0de4b2dbda64e89463c325df7d",
+      "explanation": "Ancillary file snapshot differs from starting commit; hash resolves in history."
+    },
+    {
+      "run": "audit-v2",
+      "path": "research_work/experiments/photon_five/report.md",
+      "resolved_commit": "3d5d10636b07ea0de4b2dbda64e89463c325df7d",
+      "explanation": "Ancillary file snapshot differs from starting commit; hash resolves in history."
+    }
+  ],
+  "unresolved": [],
+  "statuses": [
+    {
+      "run": "e1-v2",
+      "numerical_pass": true,
+      "gates": 3
+    },
+    {
+      "run": "e2-v2",
+      "numerical_pass": true,
+      "gates": 5
+    },
+    {
+      "run": "e3-v1",
+      "numerical_pass": true,
+      "gates": 6
+    },
+    {
+      "run": "e3-colored-v1",
+      "numerical_pass": true,
+      "gates": 6
+    },
+    {
+      "run": "e4-v1",
+      "numerical_pass": true,
+      "gates": 6
+    },
+    {
+      "run": "e5-v1",
+      "numerical_pass": true,
+      "gates": 9
+    },
+    {
+      "run": "audit-v2",
+      "numerical_pass": true,
+      "gates": 6
+    }
+  ],
+  "original_failure_records_retained": true,
+  "scope": "Archive/AST/gate consistency and exact source/input hash recovery; scientific evidence is not rerun."
+}

@@ -1,6 +1,6 @@
 # PF5 results: five photon-response hypotheses
 
-All five primary experiments and the finite-correlation extension were executed. Their final declared numerical gates pass; **none passes its full mechanism screen**. This campaign does not solve cluster lensing. No dark-matter source or expanding-universe dynamics was used.
+All five primary experiments and the finite-correlation extension were executed. Their final declared numerical gates pass; **none establishes a complete cluster-lensing solution**. Long-averaged fluctuation probes do show partial success. No dark-matter source or expanding-universe dynamics was used.
 
 ![Six-panel results overview](overview.png)
 
@@ -20,7 +20,7 @@ The median nested-sampling score change fell from 0.05109 (failed 0.05 limit) to
 
 The frozen primary gives Coma chi2=8.23898, versus ordinary matter 4.28394 and the older pressure-written response 9.90248. These are six exposed bins with one nonnegative geometry nuisance (five nominal degrees of freedom); they are weak-shear shape screens, not absolute lensing predictions. Both ordinary-mass brackets have the same shape here because their adopted gas and stellar profiles are proportional.
 
-The primary contribution at 5 Mpc is 2.636 times the old finite-footprint contribution. The maximum packet-doubling change is 1.54% on the normalized maximum response scale (limit 15%). All 27 settings are published without replacing the declared primary with a scan winner. A positive optical coefficient was calibrated at1 Mpc from the old pressure response before scoring Coma; it is not an independently funded microscopic interaction. Packet propagation is causal; the Gaussian optical readout remains a conditional nonlocal rule.
+The primary contribution at 5 Mpc is 2.636 times the old finite-footprint contribution. The maximum packet-doubling change is 1.54% on the normalized maximum response scale (limit 15%). All 27 settings are published without replacing the declared primary with a scan winner. A positive optical coefficient was calibrated at 1 Mpc from the old pressure response before scoring Coma; it is not an independently funded microscopic interaction. Packet propagation is causal; the Gaussian optical readout remains a conditional nonlocal rule.
 
 ## Fluctuations and orbit stability
 
@@ -35,7 +35,7 @@ The white-time stationary covariance solves agree to 1.34e-14; mean injection/da
 | Finite correlation 0.2 | 1 | 0 | False |
 | Finite correlation 0.2 | 10 | 3 | True |
 
-Each orbit is measured for 20 periods after an initially empty field burns in for at least five averaging times. Quiet means radial standard deviation and median-radius drift each below 5%, with angular-momentum error below1e-5. Refinements compare statistical behavior, not matched Brownian trajectories. These are negligible-mass probes of a radial fixture. The field ledger in expectation and its explicit split-integrator residual are saved; signed stochastic exchanges do not establish a finite positive photon reservoir or matter backreaction.
+Each orbit is measured for 20 periods after an initially empty field burns in for at least five averaging times. Quiet means radial standard deviation and median-radius drift each below 5%, with angular-momentum error below 1e-5. The saved aggregate mechanism flag requires all averaging-time variants to be quiet and is therefore false; this does not reject the successful long-averaging fixtures. Refinements compare statistical behavior, not matched Brownian trajectories. These are negligible-mass probes of a radial fixture. The field ledger in expectation and its explicit split-integrator residual are saved; signed stochastic exchanges do not establish a finite positive photon reservoir or matter backreaction.
 
 ## Gas collision and erasure
 
@@ -51,7 +51,7 @@ Erasure moves optical peaks slightly closer to the passing lights, but gas peaks
 
 ## Tensor optics and lens galaxies
 
-The homogeneous reciprocal mode conserves photon+field+heat energy to 2.73e-13. Isotropic, source-off and zero-coupling controls vanish. The optical metric remains positive. Refined ray agreement is 0; agreement with the analytic weak Gaussian ray is 2.24e-07. Spatial lens refinement changes the unit tensor bend by at most 0.180%.
+The homogeneous reciprocal mode conserves photon+field+heat energy to 2.73e-13. Isotropic, source-off and zero-coupling controls vanish. The optical metric remains positive. The explicit maximum-step ray refinement agrees to 8.88e-16; agreement with the analytic weak Gaussian ray is 2.24e-07. Spatial lens refinement changes the unit tensor bend by at most 0.180%.
 
 The five-lens training screen selects length 30 kpc and coupling 0.17189; maximum tensor eigenvalue magnitude is 2.71e-06, below 1e-3. These settings are carried unchanged to exposed J1630. The largest primary bend error is 22.45%, exceeding 3%.
 
@@ -70,7 +70,7 @@ The stellar mass is fitted only within the adopted Chabrier–Salpeter interval,
 
 An independent finite-packet survival test agrees with its analytic prediction within 0.257 sampling standard errors. Ballistic and constant-scattering displacement checks are within 2.043, 0.484 standard errors. Point-source projected curvature error is 1.04e-06. The isolated CL-F1 analytic and independent 3D optics checks also pass. No historical joint suite containing excluded comparisons was run.
 
-All numerical thresholds were declared before their respective runs. The first E1 sampling failure and the E2 array-shape execution failure remain under evidence/e1-v1 and evidence/e2-v1. Refinement retained the original scientific thresholds. Manifests include source/input hashes and starting commits. The latest runner inventories active repository modules and rejects the excluded CL1/CL2 source loaders. Historical data files contain unused model branches; only the documented ordinary-source measurements and static-registry values enter these calculations.
+All numerical thresholds were declared before their respective runs. The first E1 sampling failure and the E2 array-shape execution failure remain under evidence/e1-v1 and evidence/e2-v1. Refinement retained the original scientific thresholds. Manifests include source/input hashes and starting commits. An additional explicit maximum-step refinement avoids the identical-step limitation of the original tolerance comparison. Archive verification resolves all input/source hashes in Git history; ancillary report snapshots may be committed after a run begins. The latest runner inventories active repository modules and rejects the excluded CL1/CL2 source loaders. Historical data files contain unused model branches; only the documented ordinary-source measurements and static-registry values enter these calculations.
 
 Source and run instructions: [README](README.md). Original [protocol](protocol.md), [E1/E2 implementation](implementation-notes.md), [E3/E4 integrators](integrators-e3-e4.md), [E5 integrator](integrator-e5.md), [extra controls](extended-checks.md).
 
@@ -79,10 +79,11 @@ Source and run instructions: [README](README.md). Original [protocol](protocol.m
 A common photon interaction must still supply the response normalization, conserve energy and momentum with moving matter, predict the bolometric radiation history, and reproduce both cluster shear and galaxy/lens dynamics with shared parameters. Present evidence supports a few toy mechanisms and rejects the complete declared screens. Novel mathematical ingredients are proposals for this fictional universe; historical uniqueness has not been established.
 
 Evidence:
+
 - [e1-v2](evidence/e1-v2/results.json) ([manifest](evidence/e1-v2/manifest.json))
 - [e2-v2](evidence/e2-v2/results.json) ([manifest](evidence/e2-v2/manifest.json))
 - [e3-v1](evidence/e3-v1/results.json) ([manifest](evidence/e3-v1/manifest.json))
 - [e4-v1](evidence/e4-v1/results.json) ([manifest](evidence/e4-v1/manifest.json))
 - [e5-v1](evidence/e5-v1/results.json) ([manifest](evidence/e5-v1/manifest.json))
 - [e3-colored-v1](evidence/e3-colored-v1/results.json) ([manifest](evidence/e3-colored-v1/manifest.json))
-- [audit-v1](evidence/audit-v1/results.json) ([manifest](evidence/audit-v1/manifest.json))
+- [audit-v2](evidence/audit-v2/results.json) ([manifest](evidence/audit-v2/manifest.json))
