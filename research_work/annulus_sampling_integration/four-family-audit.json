@@ -1,0 +1,343 @@
+{
+  "sampler_version": "annulus-phase-space-v2",
+  "status": {
+    "numerical_verification": "passed",
+    "historical_archive_reproduction": "not_run",
+    "historical_H6": "failed_preserved_unchanged",
+    "physical_stability": "not_evaluated",
+    "continuum_convergence": "not_evaluated"
+  },
+  "requested_cases": [
+    "narrow_cold",
+    "narrow_warm",
+    "wide_cold",
+    "wide_warm"
+  ],
+  "completed_cases": 4,
+  "failures": [],
+  "cases": [
+    {
+      "case": "narrow_cold",
+      "numerical_verification_passed": true,
+      "constructed_state": {
+        "mass": 0.026784953089096387,
+        "mean_radius": 0.8949753758128955,
+        "rms_width": 0.03938668530672074,
+        "peak_radius": 0.8903225806451613,
+        "peak_density": 0.04636938827072101,
+        "fwhm": 0.08709677419354844,
+        "support_fraction_at_peak": 0.10000000000246087,
+        "support_fraction_max": 0.9381075915712285,
+        "alpha": 1.773540403994982,
+        "C_peak": 0.26493463382682997,
+        "iterations": 5,
+        "residual": 2.9604791580705082e-12,
+        "edge_density_ratio": 0.0
+      },
+      "fixed_point_residual": {
+        "density_relative": 8.417466709199427e-13,
+        "field_relative": 3.021389801675143e-13
+      },
+      "total_writing_rate": 0.047504196522622645,
+      "requested_support_at_density_peak": 0.1,
+      "achieved_support_at_density_peak": 0.10000000000246087,
+      "sampler": {
+        "numerical_verification_passed": true,
+        "sampler_version": "annulus-phase-space-v2",
+        "tolerance": 1e-12,
+        "radial_marginal_max_absolute_error": 5.412337245047638e-16,
+        "mass_relative_error": 6.661338147750939e-16,
+        "radius_moment_relative_errors": {
+          "R^1": 4.440892098500626e-16,
+          "R^2": 2.220446049250313e-16
+        },
+        "node_mass": 0.02678495308908856,
+        "density_integral_mass": 0.026784953089088577,
+        "node_count": 572832,
+        "moments": {
+          "radius": {
+            "mean": 0.8949753758128519,
+            "variance": 0.001551310979449526
+          },
+          "angular_momentum": {
+            "mean": 0.9995889267174027,
+            "variance": 0.0036592398630594753
+          },
+          "energy": {
+            "mean": -0.7481175613139387,
+            "variance": 0.005763054617610434
+          },
+          "radial_speed_squared": {
+            "mean": 0.00797633188765471,
+            "variance": 8.64805352736186e-05
+          }
+        },
+        "scientific_stability": "not_evaluated",
+        "scope": "Agreement with the declared discrete density, not continuum convergence or finite-mass proof."
+      },
+      "source_unchanged": true,
+      "source_fingerprint": "940ff2a917293a4d180c891ce2eb1bac82d56434813cffcdc3de8c56b58b7599",
+      "deliberate_radius_bias_control": {
+        "rejected": true,
+        "biased_mean_radius": 0.896708731859704,
+        "mean_radius_shift": 0.001733356046852097,
+        "variance_over_mean": 0.0017333560468527575,
+        "radial_marginal_error": 0.0027198072232230974
+      },
+      "quadrature": {
+        "radial_nodes": 280,
+        "L_nodes": 160,
+        "positive_vr_nodes": 96,
+        "reach_in_widths": 5.0,
+        "radial_rule": "trapezoid",
+        "L_rule": "archived equal rectangular weights"
+      },
+      "scope": "Discrete sampling verified; continuum/domain convergence and stability not evaluated."
+    },
+    {
+      "case": "narrow_warm",
+      "numerical_verification_passed": true,
+      "constructed_state": {
+        "mass": 0.06864328492722266,
+        "mean_radius": 0.8636438988303707,
+        "rms_width": 0.051621871780295536,
+        "peak_radius": 0.8516129032258064,
+        "peak_density": 0.08988668810889273,
+        "fwhm": 0.13548387096774184,
+        "support_fraction_at_peak": 0.09999995689170525,
+        "support_fraction_max": 1.2954837447993983,
+        "alpha": 0.9989049346099952,
+        "C_peak": 0.3919071561858662,
+        "iterations": 7,
+        "residual": 5.944092966842744e-15,
+        "edge_density_ratio": 4.7322236979359466e-08
+      },
+      "fixed_point_residual": {
+        "density_relative": 3.2422325273687664e-15,
+        "field_relative": 1.1331490197118237e-15
+      },
+      "total_writing_rate": 0.06856811604164262,
+      "requested_support_at_density_peak": 0.1,
+      "achieved_support_at_density_peak": 0.09999995689170525,
+      "sampler": {
+        "numerical_verification_passed": true,
+        "sampler_version": "annulus-phase-space-v2",
+        "tolerance": 1e-12,
+        "radial_marginal_max_absolute_error": 4.718447854656915e-16,
+        "mass_relative_error": 2.220446049250313e-16,
+        "radius_moment_relative_errors": {
+          "R^1": 1.1102230246251565e-16,
+          "R^2": 1.1102230246251565e-16
+        },
+        "node_mass": 0.0686432849272226,
+        "density_integral_mass": 0.06864328492722259,
+        "node_count": 757632,
+        "moments": {
+          "radius": {
+            "mean": 0.8636438988303706,
+            "variance": 0.0026648176461012657
+          },
+          "angular_momentum": {
+            "mean": 0.9996004589069866,
+            "variance": 0.003640775771418546
+          },
+          "energy": {
+            "mean": -0.8517057744487441,
+            "variance": 0.006959369875282011
+          },
+          "radial_speed_squared": {
+            "mean": 0.023867513474397403,
+            "variance": 0.0007746840672218665
+          }
+        },
+        "scientific_stability": "not_evaluated",
+        "scope": "Agreement with the declared discrete density, not continuum convergence or finite-mass proof."
+      },
+      "source_unchanged": true,
+      "source_fingerprint": "2e29705a29ee28c865b64d695ffeaba8db010493d91ecd0bc7cc822bb1b01bd8",
+      "deliberate_radius_bias_control": {
+        "rejected": true,
+        "biased_mean_radius": 0.8667294502361182,
+        "mean_radius_shift": 0.003085551405747622,
+        "variance_over_mean": 0.0030855514057474584,
+        "radial_marginal_error": 0.002996221895443095
+      },
+      "quadrature": {
+        "radial_nodes": 280,
+        "L_nodes": 160,
+        "positive_vr_nodes": 96,
+        "reach_in_widths": 5.0,
+        "radial_rule": "trapezoid",
+        "L_rule": "archived equal rectangular weights"
+      },
+      "scope": "Discrete sampling verified; continuum/domain convergence and stability not evaluated."
+    },
+    {
+      "case": "wide_cold",
+      "numerical_verification_passed": true,
+      "constructed_state": {
+        "mass": 0.06433135223289872,
+        "mean_radius": 0.9512131813948015,
+        "rms_width": 0.23723155408635266,
+        "peak_radius": 0.8903225806451613,
+        "peak_density": 0.06807661129194038,
+        "fwhm": 0.13548387096774195,
+        "support_fraction_at_peak": 0.100032123561567,
+        "support_fraction_max": 0.8308839752469105,
+        "alpha": 0.7689178116933719,
+        "C_peak": 0.2467667732099421,
+        "iterations": 18,
+        "residual": 9.907986135365416e-12,
+        "edge_density_ratio": 0.0006346931099091497
+      },
+      "fixed_point_residual": {
+        "density_relative": 1.143017473430015e-11,
+        "field_relative": 4.340777488380618e-12
+      },
+      "total_writing_rate": 0.049465522582196005,
+      "requested_support_at_density_peak": 0.1,
+      "achieved_support_at_density_peak": 0.100032123561567,
+      "sampler": {
+        "numerical_verification_passed": true,
+        "sampler_version": "annulus-phase-space-v2",
+        "tolerance": 1e-12,
+        "radial_marginal_max_absolute_error": 3.608224830031759e-16,
+        "mass_relative_error": 1.1102230246251565e-15,
+        "radius_moment_relative_errors": {
+          "R^1": 5.551115123125783e-16,
+          "R^2": 1.5543122344752192e-15
+        },
+        "node_mass": 0.0643313522337328,
+        "density_integral_mass": 0.06433135223373274,
+        "node_count": 1029216,
+        "moments": {
+          "radius": {
+            "mean": 0.9512131814034052,
+            "variance": 0.05627881025748707
+          },
+          "angular_momentum": {
+            "mean": 1.0235376318286242,
+            "variance": 0.022541697324376254
+          },
+          "energy": {
+            "mean": -0.6957307411197935,
+            "variance": 0.03844933717675825
+          },
+          "radial_speed_squared": {
+            "mean": 0.009307211985395993,
+            "variance": 0.00018579949424929348
+          }
+        },
+        "scientific_stability": "not_evaluated",
+        "scope": "Agreement with the declared discrete density, not continuum convergence or finite-mass proof."
+      },
+      "source_unchanged": true,
+      "source_fingerprint": "e5c6972142443de9d21843b82cfa4a9770f147c9c61461a2182719881a11a5ea",
+      "deliberate_radius_bias_control": {
+        "rejected": true,
+        "biased_mean_radius": 1.010378478266149,
+        "mean_radius_shift": 0.059165296862743744,
+        "variance_over_mean": 0.05916529686274342,
+        "radial_marginal_error": 0.004501941378630359
+      },
+      "quadrature": {
+        "radial_nodes": 280,
+        "L_nodes": 160,
+        "positive_vr_nodes": 96,
+        "reach_in_widths": 5.0,
+        "radial_rule": "trapezoid",
+        "L_rule": "archived equal rectangular weights"
+      },
+      "scope": "Discrete sampling verified; continuum/domain convergence and stability not evaluated."
+    },
+    {
+      "case": "wide_warm",
+      "numerical_verification_passed": true,
+      "constructed_state": {
+        "mass": 0.18337329421233592,
+        "mean_radius": 0.9496312625160702,
+        "rms_width": 0.27781631724001843,
+        "peak_radius": 0.8806451612903226,
+        "peak_density": 0.15496698424197825,
+        "fwhm": 0.17419354838709677,
+        "support_fraction_at_peak": 0.09644629693303923,
+        "support_fraction_max": 0.9394981634991182,
+        "alpha": 0.3101474072586622,
+        "C_peak": 0.28326880346207406,
+        "iterations": 40,
+        "residual": 2.3733386455298272e-12,
+        "edge_density_ratio": 0.000792152302487707
+      },
+      "fixed_point_residual": {
+        "density_relative": 3.440633565815641e-13,
+        "field_relative": 2.488772544031764e-13
+      },
+      "total_writing_rate": 0.05687275176043583,
+      "requested_support_at_density_peak": 0.1,
+      "achieved_support_at_density_peak": 0.09644629693303923,
+      "sampler": {
+        "numerical_verification_passed": true,
+        "sampler_version": "annulus-phase-space-v2",
+        "tolerance": 1e-12,
+        "radial_marginal_max_absolute_error": 3.608224830031759e-16,
+        "mass_relative_error": 1.1102230246251565e-16,
+        "radius_moment_relative_errors": {
+          "R^1": 4.440892098500626e-16,
+          "R^2": 2.220446049250313e-16
+        },
+        "node_mass": 0.18337329421227064,
+        "density_integral_mass": 0.18337329421227067,
+        "node_count": 1429248,
+        "moments": {
+          "radius": {
+            "mean": 0.9496312625159695,
+            "variance": 0.07718190612462715
+          },
+          "angular_momentum": {
+            "mean": 1.019045373941418,
+            "variance": 0.02149340413492318
+          },
+          "energy": {
+            "mean": -0.7188778139096599,
+            "variance": 0.03880669452193408
+          },
+          "radial_speed_squared": {
+            "mean": 0.024855151033787184,
+            "variance": 0.0008855413794603978
+          }
+        },
+        "scientific_stability": "not_evaluated",
+        "scope": "Agreement with the declared discrete density, not continuum convergence or finite-mass proof."
+      },
+      "source_unchanged": true,
+      "source_fingerprint": "100368424c267b4a7054bd5d242811b0ce289e0f2e1bf2f9fd41e185b98289f9",
+      "deliberate_radius_bias_control": {
+        "rejected": true,
+        "biased_mean_radius": 1.0309069209437907,
+        "mean_radius_shift": 0.08127565842782114,
+        "variance_over_mean": 0.08127565842781974,
+        "radial_marginal_error": 0.0042801595029147155
+      },
+      "quadrature": {
+        "radial_nodes": 280,
+        "L_nodes": 160,
+        "positive_vr_nodes": 96,
+        "reach_in_widths": 5.0,
+        "radial_rule": "trapezoid",
+        "L_rule": "archived equal rectangular weights"
+      },
+      "scope": "Discrete sampling verified; continuum/domain convergence and stability not evaluated."
+    }
+  ],
+  "provenance": {
+    "python": "3.13.5",
+    "numpy": "2.2.6",
+    "scipy": "1.16.1",
+    "archived_equilibrium_sha256": "2148bced8ce515f81bbb8bd93938cb23310ac2779a00811c8e7511066f2bdfa8",
+    "implementation_sha256": {
+      "sampling.py": "51a168f21b0c05c9709760c7eb5e16221203a99fb429215e36f6d48e85f8565a",
+      "adapter.py": "bc78197bb06deb88fb40e348df767732badd47858ad996f267d153aebb5ea61a",
+      "audit.py": "cf614b44d8ae07a5b9352d828947cb85cb7eaedabd563d4639ae18e9a357a2af"
+    }
+  }
+}

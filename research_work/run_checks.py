@@ -133,6 +133,9 @@ def main():
         ('path-memory/rut4r.py', []),
         ('path-memory/rut5.py', []),
         ('path-memory/rut6.py', []),
+        # The owner's corrected annulus sampler (2f1d5ed, bde7a7c): a numerical-verification job in its own
+        # right, outside the frozen results tree, run as a module from the repository root.
+        ('module:research_work.annulus_sampling.checks', []),
     ]
     if args.baseline:
         jobs.append(('baseline/run_baseline_001.py', []))
@@ -143,9 +146,12 @@ def main():
     records = []
     for name, extra in jobs:
         start = time.monotonic()
-        result = subprocess.run([sys.executable, '-X', 'utf8', str(RESULTS / name), *extra],
+        target = (['-B', '-m', name[len('module:'):]] if name.startswith('module:')
+                  else [str(RESULTS / name)])
+        result = subprocess.run([sys.executable, '-X', 'utf8', *target, *extra],
                                 cwd=ROOT, env=env, capture_output=True, text=True, encoding='utf-8', timeout=3000)
-        (out / (name.replace('/', '__') + '.log')).write_text(result.stdout + result.stderr, encoding='utf-8')
+        (out / (name.replace('/', '__').replace(':', '__') + '.log')).write_text(
+            result.stdout + result.stderr, encoding='utf-8')
         records.append({'script': name, 'exit_code': result.returncode, 'seconds': time.monotonic() - start})
         print(('PASS ' if result.returncode == 0 else 'FAIL ') + name, flush=True)
         if result.returncode:
