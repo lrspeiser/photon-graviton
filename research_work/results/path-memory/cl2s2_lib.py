@@ -439,3 +439,41 @@ class JointObjective:
         return L1, nus1, dict(objective=float(self.value(y)), projected_gradient=self.projected_gradient(y),
                               projected_gradient_before_snap=self.projected_gradient(res.x),
                               start_objective=float(self.value(y0)), iterations=int(res.nit), message=str(res.message))
+
+
+def refine_face(J, L, nus, iters=100, tol=1e-15):
+    """Amendment 4: finish a polished joint solution by Newton steps on the identified free face (exact Hessian),
+    freeing any bound variable whose gradient points inward and binding any free variable the step drives to
+    zero; returns the refined point and its projected gradient. Quadratic convergence on the final face."""
+    y = np.maximum(J.pack(L, nus)*J.c, 0)
+    for _ in range(iters):
+        g = J.gradient(y)
+        free = y > 0
+        release = (~free) & (g < 0)
+        free = free | release
+        if not free.any():
+            break
+        H = J.hessian(y)[np.ix_(free, free)]
+        step = np.zeros_like(y)
+        step[free] = -np.linalg.solve(H + 1e-15*np.trace(H)/len(H)*np.eye(len(H)), g[free])
+        f0 = J.value(y)
+        alpha = 1.
+        neg = step < 0
+        if neg.any():
+            alpha = min(1., float(np.min(-y[neg]/step[neg])) if np.any(y[neg] > 0) else 1.)
+        accepted = False
+        while alpha > 1e-12:
+            yn = np.maximum(y + alpha*step, 0)
+            fn = J.value(yn)
+            if np.isfinite(fn) and fn <= f0 + 1e-12*abs(f0):
+                accepted = True
+                break
+            alpha *= .5
+        if not accepted:
+            break
+        y = yn
+        pg = J.projected_gradient(y)
+        if pg < tol*max(1., abs(J.value(y))):
+            break
+    L1, nus1 = J.unpack(y/J.c)
+    return L1, nus1, dict(objective=float(J.value(y)), projected_gradient=J.projected_gradient(y))

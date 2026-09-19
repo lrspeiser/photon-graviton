@@ -274,8 +274,9 @@ def joint_solve(gal_loss, quad_blocks, weights, L0, nu0):
     # amendment 3: polish with the trust-region Newton method in column-scaled variables and certify there
     J = L2.JointObjective(gal_loss, quad_blocks, weights)
     L, nus, pol = J.polish(L, nus)
-    return dict(L=L, nus=nus, objective=pol['objective'], projected_gradient=pol['projected_gradient'], lbfgs_objective=float(res.fun),
-                lbfgs_projected_gradient=pg_lbfgs, lbfgs_message=str(res.message), polish=pol, iterations=int(res.nit))
+    L, nus, fin = L2.refine_face(J, L, nus)                                  # amendment 4
+    return dict(L=L, nus=nus, objective=fin['objective'], projected_gradient=fin['projected_gradient'], lbfgs_objective=float(res.fun),
+                lbfgs_projected_gradient=pg_lbfgs, lbfgs_message=str(res.message), polish=pol, face_refinement=fin, iterations=int(res.nit))
 
 
 def main():
@@ -283,7 +284,7 @@ def main():
     archive = json.loads(ARCHIVE.read_text(encoding='utf-8'))
     ext = json.loads((HERE/'cl2-inputs-xcop-profiles.json').read_text(encoding='utf-8'))
     frac = CS.stellar_fraction_profile(ext)
-    results = dict(experiment='CL-2 stage 2', protocol='protocol-cl2-stage2.md; amendments 1, 2 and 3', widths_kpc=W.tolist(),
+    results = dict(experiment='CL-2 stage 2', protocol='protocol-cl2-stage2.md; amendments 1 to 4', widths_kpc=W.tolist(),
                    input_sha256={'cl2-inputs-xcop-profiles.json': sha(HERE/'cl2-inputs-xcop-profiles.json'), 'cl2-results.json': sha(ARCHIVE),
                                  'xcop-release/allfiles.tar.gz': sha(TAR), 'pinned': XA.SHA256})
     gates = {}
