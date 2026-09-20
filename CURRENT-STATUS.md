@@ -1,5 +1,8 @@
 # Current status: photon–companion research
 
+**Rotor locality limit and first point-bundle checkpoint, 20 September 2026.** [Locality report](research_work/experiments/spatial_exchange/rotor-locality-report.md). Six separated-cell checks confirm instantaneous finite-kernel rotor coupling inside matter at both grids, despite positive frozen stiffness. A strict local finite-front completion needs distributed internal source dynamics; current derivative/stiffness checks do not supply it. The first shrinking-kernel bundle control finishes (bend -0.009973212 model radians, arrival offset0.01057839) and passes87 independent checks. It is one of seven runs; point-ray convergence and emitter enhancement remain unproved. All twelve goal requirements remain active.
+
+
 **Point-probe interpolation and matched bundle campaign, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/point-probe-report.md), [evolution protocol](research_work/experiments/spatial_exchange/point-bundle-protocol.md). All72 local controls and nine continuum fixtures pass; a4x grid-spacing reduction lowers RHS error by at least15.2x. The positive interpolation kernel shrinks with the grid instead of imposing a fixed photon averaging radius; matter-source radius remains unchanged. Seven matched evolving runs now compare emission-only and direct-companion cases at n32,48,64 plus a time control, with both absolute and paired-effect gates declared before execution. Earlier failed fixed-radius results are preserved. Source/grid refinements continue; all twelve requirements remain active.
 
 

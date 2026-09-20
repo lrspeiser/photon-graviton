@@ -1,0 +1,105 @@
+{
+  "summary": {
+    "passed": true,
+    "count": 6,
+    "finite_kernel_nonlocality_detected": true,
+    "commit": "250bd136f98abaa4a8562adb54098f5d29535c3d",
+    "sources": {
+      "rotor_locality.py": "c894be8925c4fa92de6eafeda90d22ba9401eb5c0d369437f79229bc12bd7768",
+      "rotor_checks.py": "f44b18d5b27ceaac30d3fc86b08d14941456f2c221d241dec1d5261aaf8c49c8",
+      "rotor-locality-protocol.md": "7a8c6c1503b9896d60a8da4a7d56025646aa9d07553afa7c059719cc5a412a54"
+    }
+  },
+  "rows": [
+    {
+      "n": 24,
+      "coupling": 0.0,
+      "separation": 1.3333333333333333,
+      "stencil_response": 0.0,
+      "rotor_response": -0.0,
+      "response_per_cell_volume": -0.0,
+      "factorized_response": -0.0,
+      "error": 0.0,
+      "reciprocity_error": 0.0,
+      "nonlocal_entry": false,
+      "passed": true
+    },
+    {
+      "n": 24,
+      "coupling": 2.0,
+      "separation": 1.3333333333333333,
+      "stencil_response": 0.0,
+      "rotor_response": -0.00015732931890680607,
+      "response_per_cell_volume": -0.004247891610483765,
+      "factorized_response": -0.00015732931890680604,
+      "error": 2.710505431213761e-20,
+      "reciprocity_error": 5.421010862427522e-20,
+      "nonlocal_entry": true,
+      "passed": true
+    },
+    {
+      "n": 24,
+      "coupling": 10.0,
+      "separation": 1.3333333333333333,
+      "stencil_response": 0.0,
+      "rotor_response": -0.003933232972670152,
+      "response_per_cell_volume": -0.10619729026209412,
+      "factorized_response": -0.003933232972670151,
+      "error": 8.673617379884035e-19,
+      "reciprocity_error": 1.734723475976807e-18,
+      "nonlocal_entry": true,
+      "passed": true
+    },
+    {
+      "n": 48,
+      "coupling": 0.0,
+      "separation": 1.3333333333333333,
+      "stencil_response": 0.0,
+      "rotor_response": -0.0,
+      "response_per_cell_volume": -0.0,
+      "factorized_response": -0.0,
+      "error": 0.0,
+      "reciprocity_error": 0.0,
+      "nonlocal_entry": false,
+      "passed": true
+    },
+    {
+      "n": 48,
+      "coupling": 2.0,
+      "separation": 1.3333333333333333,
+      "stencil_response": 0.0,
+      "rotor_response": -2.4809971893496223e-05,
+      "response_per_cell_volume": -0.005358953928995186,
+      "factorized_response": -2.4809971893496227e-05,
+      "error": 3.3881317890172014e-21,
+      "reciprocity_error": 0.0,
+      "nonlocal_entry": true,
+      "passed": true
+    },
+    {
+      "n": 48,
+      "coupling": 10.0,
+      "separation": 1.3333333333333333,
+      "stencil_response": 0.0,
+      "rotor_response": -0.0006202492973374056,
+      "response_per_cell_volume": -0.13397384822487965,
+      "factorized_response": -0.0006202492973374056,
+      "error": 0.0,
+      "reciprocity_error": 0.0,
+      "nonlocal_entry": true,
+      "passed": true
+    }
+  ],
+  "scaling": [
+    {
+      "n": 24,
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 48,
+      "error": 0.0,
+      "passed": true
+    }
+  ]
+}
