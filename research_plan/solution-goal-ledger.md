@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Compatible discrete energy flux, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/discrete-flux-report.md). All24 checks of the unchanged local-transfer RHS against its exact discrete face-flux identity pass; maximum local residual4.75e-11 and region residual4.18e-11. The formula accounts for both nearest-neighbor gradient energy and centered-curl exchange. This is instantaneous semi-discrete conservation, not yet measured integrated transport; RK-stage flux accumulation remains next. Existing refinement runs continue unchanged. Ordinary-matter fuel, full joint dynamics and observational predictions remain incomplete; all twelve goal requirements remain active.
+
+
 **Completed resolution audit and energy-flux identity, 20 September 2026.** [SR-2 final report](../research_work/experiments/common_cone/resolution-report.md): all nine individual runs and214 independent checks pass, but the campaign fails its unchanged1% cross-method accuracy gate at1.012759%. Time, rotation and finest fourth-order refinement gates pass. [Continuum flux](../research_work/experiments/spatial_exchange/local-transfer-flux-report.md) passes24 local energy-continuity fixtures; a compatible discrete surface ledger remains required. Local-transfer refinement now has n40/n48 complete and36 audit checks, with n64 and rotation pending; SE-R has5/7 new runs audited with38 checks. None establishes the full galaxy/cluster solution, and all twelve requirements remain active.
 
 
