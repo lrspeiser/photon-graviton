@@ -1,0 +1,11 @@
+# CC-2S: slow-motion current-strength test
+
+Declared before calculation, 20 September 2026. The 0.2c numerical source fixtures are not galactic rotation speeds. Quantify whether the same weak current coupling remains useful when source and stellar speeds are small.
+
+Use the existing unscreened, linear CC Hamiltonian, not a new fitted law: U=-g^2 integral rho_E/(4 pi distance), beta=-(kappa eta)^2 integral rho_E v_source/(4 pi distance). The physical transverse acceleration to first weak-field order is -grad_perp U - v cross curl(beta). Derive this from qdot=p/m+beta (massive limit) and the massless Hamiltonian, rather than treating canonical force as physical acceleration.
+
+Uniform ordinary-matter ring: radius .7, rest mass6, 2048 equal samples; g=.001,kappa=.5. Source speeds {0.2,0.02,0.002,200/299792.458}, both rotation senses. Coupling eta/g in {1,10,100,1000}. Stellar probe at (r,0,0), v=(0,v_source,0), r/R in {2,4,8}; compute scalar radial acceleration and signed directional increment. Photon flies along +x with impact b/R in {2,4,8}; integrate from minus to plus infinity. Its scalar and vector bends admit independent point-kernel line-integral references. Selectively verify quadrature for speed200/c, eta/g=1 and1000, impact2R, both senses (4 cases), relative tolerance1e-7. Repeat ring quadrature at4096 samples for every result, relative tolerance1e-6.
+
+Record source-speed and probe-speed scaling, the coupling ratio inferred for a unit stellar directional/scalar acceleration ratio using the linear law, and corresponding photon ratio. These are sensitivity diagnostics, not fitted gravity predictions. Record the largest |U| and |beta| along sampled photon paths and at stellar points; flag amplitudes>.01 as outside the chosen weak-field diagnostic range. Even smaller potentials do not prove perturbative force ratios accurate when a correction dominates; full nonlinear tests are still required.
+
+No observed dataset is fitted. The200 km/s value is an illustrative speed, not a claimed measurement of a chosen galaxy. No dark matter or expanding distances. Credit ordinary current-current/post-Newtonian velocity suppression; do not claim the formulas are historically new. Preserve first outputs and protocol/source hashes.
