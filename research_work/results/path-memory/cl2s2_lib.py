@@ -477,3 +477,35 @@ def refine_face(J, L, nus, iters=100, tol=1e-15):
             break
     L1, nus1 = J.unpack(y/J.c)
     return L1, nus1, dict(objective=float(J.value(y)), projected_gradient=J.projected_gradient(y))
+
+
+def refine_face_loss(loss, L, iters=100, tol=1e-15):
+    """The free-face Newton finish for a SpeedLoss alone (as refine_face for a JointObjective), in its scaled variables."""
+    y = np.maximum(np.asarray(L, float)*loss.c, 0)
+    for _ in range(iters):
+        g = loss._gx(y)
+        free = (y > 0) | (g < 0)
+        if not free.any():
+            break
+        H = loss._hx(y)[np.ix_(free, free)]
+        step = np.zeros_like(y)
+        step[free] = -np.linalg.solve(H + 1e-15*np.trace(H)/len(H)*np.eye(len(H)), g[free])
+        f0 = loss._fx(y)
+        alpha = 1.
+        neg = step < 0
+        if neg.any() and np.any(y[neg] > 0):
+            alpha = min(1., float(np.min(-y[neg]/step[neg])))
+        accepted = False
+        while alpha > 1e-12:
+            yn = np.maximum(y + alpha*step, 0)
+            fn = loss._fx(yn)
+            if np.isfinite(fn) and fn <= f0 + 1e-12*abs(f0):
+                accepted = True
+                break
+            alpha *= .5
+        if not accepted:
+            break
+        y = yn
+        if loss.projected_gradient(y/loss.c) < tol*max(1., abs(loss._fx(y))):
+            break
+    return y/loss.c

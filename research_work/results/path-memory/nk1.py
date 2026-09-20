@@ -38,6 +38,7 @@ def certified_solve(A, gN, block, start_cols=None):
         L0 = np.zeros(A.shape[1])
     La, ra = loss.solve_lbfgs(L0)
     Lb, rb = loss.solve_trust_newton(fallback=L0)
+    La, Lb = L2.refine_face_loss(loss, La), L2.refine_face_loss(loss, Lb)        # amendment 1: the free-face finish
     Fa, Fb = loss.value(La), loss.value(Lb)
     best = Lb if Fb <= Fa else La
     return loss, best, dict(F_lbfgs=Fa, F_newton=Fb, solver_agreement=abs(Fa - Fb)/max(abs(Fb), 1e-300), kkt=loss.kkt(best, L0),
@@ -54,7 +55,7 @@ def main():
                  K2_quadrature=k2 < 1e-8, K3_shell=kg['K3_shell_kernel'] < 1e-10 and kg['K3_shell_derivative'] < 1e-10, K4_grid=k4 < 1e-3)
     tr = blocks['train']
     arch2 = json.loads((HERE/'cl2s2-results.json').read_text(encoding='utf-8'))
-    out = dict(experiment='NK-1', protocol='protocol-nk1.md', shells_kpc=RL.SHELLS, widths_kpc=RL.WIDTHS.tolist(), kernel_gates=kg, K2_worst=k2, K4_worst=k4,
+    out = dict(experiment='NK-1', protocol='protocol-nk1.md; amendment 1', shells_kpc=RL.SHELLS, widths_kpc=RL.WIDTHS.tolist(), kernel_gates=kg, K2_worst=k2, K4_worst=k4,
                input_sha256={'cl2s2-results.json': hashlib.sha256((HERE/'cl2s2-results.json').read_bytes()).hexdigest()})
     res = {}
     for label, key in (('reconstructed', 'gN_rec'), ('tabulated', 'gN_tab')):
