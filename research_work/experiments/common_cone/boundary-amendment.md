@@ -1,0 +1,9 @@
+# OB-2: matched first-order absorption after OB-1 fails
+
+Declared20 September2026 after all24 OB-1 layers fail the1% contamination gate. Original outputs remain immutable. The problem is reflected/wrapped signal, not an energy-ledger failure. No change to the running CC-2 equations.
+
+Test an auxiliary first-order1D system: Pdot=D V-gamma P, Vdot=D P-gamma V. In the undamped region V is the field-gradient variable. The characteristics P+V and P-V independently satisfy advection with the same damping, avoiding the impedance mismatch caused by damping P alone. Energy E=dx sum(P^2+V^2)/2 and Qdot=dx sum gamma(P^2+V^2). Use centered skew-adjoint D; its undamped numerical dispersion differs from OB-1, so use a fresh large-domain reference with this same operator. Initialize V with the analytic derivative of OB-1's compact pulse and P=-V; do not claim field-gradient integrability inside the absorbing auxiliary layer.
+
+Keep the declared OB-1 domains, grids, final time, widths, damping strengths, timestep bound, interior region and error/ledger gates:24 layer runs,2 references. Also measure opposite-going characteristic energy relative to initial energy and require<=1e-12. Error energy compares both P,V to the large-domain reference. Choose the narrowest width passing all gates on both grids, then the lowest strength. This remains a1D vacuum prototype, not a drop-in implementation or proof for massive nonlinear3D equations or corners.
+
+Matched absorbing layers are established numerical analysis. Attribution: Steven G. Johnson, Notes on Perfectly Matched Layers, https://arxiv.org/abs/2108.05348 and https://math.mit.edu/~stevenj/18.369/spring16/pml.pdf . The first-order matched construction is not a new gravity law or a project invention. Preserve OB-1 failure and OB-2 evidence separately.
