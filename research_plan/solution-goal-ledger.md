@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Circulation interpolation diagnosis, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/loop-interpolation-report.md). Analytic controls pass, with worst n64 error0.5448% for linear and0.00514% for cubic sampling. On identical saved LR4 fields, cubic sampling lowers the n48 rotation discrepancy from2.5258% to2.2669%, still failing2%; the original failed record is preserved. A separately declared n64 rotated evolution now runs and must pass with both methods, without changing couplings. The remaining source and point-bundle refinements continue. Physical fuel, full light/matter integration and observational predictions remain incomplete; all twelve goal requirements stay active.
+
+
 **Integrated transport and completed rotation audit, 20 September 2026.** [Transport report](../research_work/experiments/spatial_exchange/transport-budget-report.md): three unchanged LR3 replays conserve regional energy plus RK-stage integrated outward flux;39 audit checks pass. Net outgoing energy through radius1.2 is8.11% at n32 over model time1, with spatial dependence and no physical fuel/luminosity claim. [LR4 final report](../research_work/experiments/spatial_exchange/local-transfer-refinement-report.md): all four runs and71 archive checks finish; finest circulation/spin comparisons pass, but common-rotation circulation changes2.529%, failing the unchanged2% gate. Point-bundle refinement has4/7 runs and330 audit checks, still incomplete. Full matter/light integration, ordinary-matter fuel and observational validation remain outstanding; all twelve requirements stay active.
 
 
