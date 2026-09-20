@@ -78,7 +78,8 @@ def main():
     gates, out = {}, dict(experiment='RW-1', protocol='protocol-rw1.md; amendment 1', kernels_galaxies=RW.KERNELS_GAL, kernels_clusters=RW.KERNELS_CL,
                          input_sha256={f: sha(HERE/f) for f in ('cl2s2-results.json', 'cl2-results.json', 'nl1-results.json', 'cl2-inputs-xcop-profiles.json')})
     for f in ('rw1_galaxies.npz', 'rw1_clusters.npz', 'rw1_milky_way.npz'):
-        out['input_sha256'][f] = sha(GEN/f)
+        if (GEN/f).exists() or not os.environ.get('RW1_STOP_AFTER_GALAXIES'):
+            out['input_sha256'][f] = sha(GEN/f)
     # ---------------------------------------------------------------- K1-K6
     kg = RW.kernel_gates()
     out['kernel_gates'] = kg
@@ -110,7 +111,7 @@ def main():
     # K7
     k7 = {}
     for name in ('NGC2403', 'NGC3198', 'DDO154'):
-        key = f'train/{name}/'
+        key = next(k for k in z.files if k.endswith(f'/{name}/nodes256'))[:-len('nodes256')]      # the galaxy's own split
         c, c256, c6000 = z[key + 'cols'], z[key + 'nodes256'], z[key + 'grid6000']
         rel = lambda a, b: float(np.max(np.max(np.abs(a - b), axis=0)/np.max(np.abs(b), axis=0)))
         k7[name] = dict(nodes=rel(c, c256), grid=rel(c, c6000))
