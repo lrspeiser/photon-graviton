@@ -1,0 +1,218 @@
+{
+  "runs": [
+    {
+      "name": "zero",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 0.0,
+      "rotating": true,
+      "initial_energy": 0.0009241209198230952,
+      "final_A_energy": 0.0,
+      "energy_drift": 4.138742449057501e-09,
+      "angular_absolute": 1.141049982365111e-12,
+      "angular_relative": 2.5682095969122473e-09,
+      "edge_fraction": 3.460910631682229e-14,
+      "loops": [
+        {
+          "radius": 1.0,
+          "coarse": 0.0,
+          "fine": 0.0
+        },
+        {
+          "radius": 1.5,
+          "coarse": 0.0,
+          "fine": 0.0
+        },
+        {
+          "radius": 2.0,
+          "coarse": 0.0,
+          "fine": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "rotating",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 2.0,
+      "rotating": true,
+      "initial_energy": 0.0009241209198230952,
+      "final_A_energy": 4.760606827696608e-07,
+      "energy_drift": 4.263148458941096e-09,
+      "angular_absolute": 2.599249862653835e-12,
+      "angular_relative": 5.850241922097004e-09,
+      "edge_fraction": 3.7476240130092825e-13,
+      "loops": [
+        {
+          "radius": 1.0,
+          "coarse": 0.0007329757091754824,
+          "fine": 0.0007327791134560022
+        },
+        {
+          "radius": 1.5,
+          "coarse": 0.0002364486507065877,
+          "fine": 0.00023644558383963726
+        },
+        {
+          "radius": 2.0,
+          "coarse": 1.973215206431453e-05,
+          "fine": 1.9766307686938143e-05
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "negative",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": -2.0,
+      "rotating": true,
+      "initial_energy": 0.0009241209198230952,
+      "final_A_energy": 4.760606827696608e-07,
+      "energy_drift": 4.263148458941096e-09,
+      "angular_absolute": 2.599249862653835e-12,
+      "angular_relative": 5.850241922097004e-09,
+      "edge_fraction": 3.7476240130092825e-13,
+      "loops": [
+        {
+          "radius": 1.0,
+          "coarse": -0.0007329757091754824,
+          "fine": -0.0007327791134560022
+        },
+        {
+          "radius": 1.5,
+          "coarse": -0.0002364486507065877,
+          "fine": -0.00023644558383963726
+        },
+        {
+          "radius": 2.0,
+          "coarse": -1.973215206431453e-05,
+          "fine": -1.9766307686938143e-05
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "nonrotating",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 2.0,
+      "rotating": false,
+      "initial_energy": 0.0009241209198230952,
+      "final_A_energy": 0.0,
+      "energy_drift": 4.1387436222829404e-09,
+      "angular_absolute": 2.2462362643179186e-21,
+      "angular_relative": 2.2462362643179185e-09,
+      "edge_fraction": 4.0949710421912044e-14,
+      "loops": [
+        {
+          "radius": 1.0,
+          "coarse": 0.0,
+          "fine": 0.0
+        },
+        {
+          "radius": 1.5,
+          "coarse": 0.0,
+          "fine": 0.0
+        },
+        {
+          "radius": 2.0,
+          "coarse": 0.0,
+          "fine": 0.0
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "time",
+      "n": 24,
+      "dt": 0.01,
+      "epsilon": 2.0,
+      "rotating": true,
+      "initial_energy": 0.0009241209198230952,
+      "final_A_energy": 4.760606628330571e-07,
+      "energy_drift": 1.361606728863858e-10,
+      "angular_absolute": 1.5016418555661992e-12,
+      "angular_relative": 3.3798090216842244e-09,
+      "edge_fraction": 3.7478957527946746e-13,
+      "loops": [
+        {
+          "radius": 1.0,
+          "coarse": 0.0007329759406684962,
+          "fine": 0.0007327793448902555
+        },
+        {
+          "radius": 1.5,
+          "coarse": 0.0002364486597810805,
+          "fine": 0.0002364455929417836
+        },
+        {
+          "radius": 2.0,
+          "coarse": 1.9732109565371878e-05,
+          "fine": 1.9766265126478433e-05
+        }
+      ],
+      "passed": true
+    },
+    {
+      "name": "space",
+      "n": 32,
+      "dt": 0.01,
+      "epsilon": 2.0,
+      "rotating": true,
+      "initial_energy": 0.0009413999281442743,
+      "final_A_energy": 5.071200524333327e-07,
+      "energy_drift": 1.744658098139048e-10,
+      "angular_absolute": 1.2811518881362949e-12,
+      "angular_relative": 2.8836533264690296e-09,
+      "edge_fraction": 1.2965901221973575e-15,
+      "loops": [
+        {
+          "radius": 1.0,
+          "coarse": 0.0007592375211216371,
+          "fine": 0.0007591705154360275
+        },
+        {
+          "radius": 1.5,
+          "coarse": 0.0002055802906674275,
+          "fine": 0.0002056646282022916
+        },
+        {
+          "radius": 2.0,
+          "coarse": 1.0184222992740366e-05,
+          "fine": 1.0183073971803328e-05
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "comparisons": [
+    {
+      "name": "zero-field",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "nonrotating-field",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "sign-reversal",
+      "error": 0.0,
+      "passed": true
+    },
+    {
+      "name": "time",
+      "relative_error": 3.8495732670458795e-08,
+      "passed": true
+    },
+    {
+      "name": "space",
+      "relative_error": 0.1496657733826233,
+      "passed": false
+    }
+  ],
+  "passed": false
+}

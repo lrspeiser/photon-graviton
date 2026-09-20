@@ -1,11 +1,18 @@
 {
   "audit_passed": true,
-  "checks": 26,
-  "completed_new_runs": 3,
+  "checks": 32,
+  "completed_new_runs": 4,
   "declared_new_runs": 7,
   "complete": false,
   "source_accuracy_passed": null,
   "comparisons": [
+    {
+      "name": "mixed-space",
+      "wave_relative_difference": 0.007585185982361701,
+      "total_relative_difference": 2.637175377606324e-05,
+      "previous_wave_difference": 0.011743052972612952,
+      "passed": true
+    },
     {
       "name": "mixed-time",
       "wave_relative_difference": 3.3474516589927106e-08,
@@ -103,6 +110,31 @@
       ],
       "passed": true,
       "state_sha256": "41e2dd33b931bebcbfe7776ee5b75f3d92be0046f6aec69f7067aa445c1aea93"
+    },
+    "mixed-n56": {
+      "campaign": "source-refinement-v1",
+      "name": "mixed-n56",
+      "matter_source": 6.3294305208357855,
+      "field_source": 0.05117977434168064,
+      "wave_source": 0.028443476417631508,
+      "other_field_source": 0.02273629792404913,
+      "total_coupling_source": 6.380610295177466,
+      "wave_fraction": 0.004457798721719362,
+      "restoring_source": -1.9265017804361826,
+      "integrated_rhs_source": 6.380610295177466,
+      "rhs_error": 0.0,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 1.0493073077100235e-08
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 1.6112888800989822e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "dfda57706d5a67b52de74dee17b88343350647273b23cfdeb8b4d5c00dfec393"
     },
     "mixed-coarse": {
       "campaign": "emitter-v1",
