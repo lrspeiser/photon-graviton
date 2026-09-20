@@ -52,5 +52,20 @@ lines += ['', '![Candidate trajectories](bundles.png)', '',
           'a point-ray result. Positive source enhancement alone is not lens enhancement.',
           'Hamiltonian optics and numerical bundle derivatives are established methods;',
           'the shared response law is a candidate assumption. All twelve goals remain active.']
+if (directory/'summary.json').exists():
+    summary=json.loads((directory/'summary.json').read_text())
+    lines += ['', '## Completed campaign verdict', '',
+              f"All seven executions finished. Overall declared campaign pass: {summary['passed']}.",
+              'The time comparison passes, but the spatial comparison fails. Thus the',
+              'small differences between emitter choices are not resolved accurately.', '',
+              '| Comparison | Bend relative difference | Arrival difference | Matrix difference | Passed |',
+              '|---|---:|---:|---:|---|']
+    for c in summary['comparisons']:
+        lines.append(f"| {c['name']} | {c['bend_relative_difference']:.9g} | {c['arrival_difference']:.9g} | {c['matrix_difference']:.9g} | {c['passed']} |")
+    base=next(r for r in rows if r['config']['name']=='Y');radius=next(r for r in rows if r['config']['name']=='probe-radius')
+    difference=abs(radius['central_bend']-base['central_bend'])/max(abs(base['central_bend']),1e-8)
+    lines += ['', f'Changing the probe kernel radius changes the central bend by {100*difference:.6g}%.',
+              'This radius dependence is a modeling/regularization sensitivity, not an',
+              'observed photon-size effect. A point-ray interpretation is not established.']
 (ROOT/'bundle-report.md').write_text('\n'.join(lines)+'\n')
 print('Reported',len(rows),'completed cases')
