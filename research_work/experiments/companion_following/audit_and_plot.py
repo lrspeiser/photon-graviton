@@ -16,10 +16,10 @@ def read(path): return json.loads(path.read_text(encoding="utf8"))
 def mapping(rows): return {r["id"]: r for r in rows}
 
 def main():
-    screen = read(EVIDENCE/"screen-completion-v1"/"screen.json")
-    refine = read(EVIDENCE/"refine-v1"/"refinement.json")
-    selection = read(EVIDENCE/"refine-v1"/"selection.json")
-    controls = read(EVIDENCE/"controls-v1"/"controls.json")
+    screen = read(EVIDENCE/"scoring-v2"/"screen.json")
+    refine = read(EVIDENCE/"refine-v2"/"refinement.json")
+    selection = read(EVIDENCE/"refine-v2"/"selection.json")
+    controls = read(EVIDENCE/"controls-v2"/"controls.json")
     audit = dict(controls_passed=controls["passed"], controls_count=controls["count"],
                  cases={}, family_counts={}, refinement=[], symmetry=[], trajectory_count=0,
                  nonfinite_trajectories=0, checks=[], inputs_are_exposed=True,
@@ -56,7 +56,7 @@ def main():
     for identifier in selection["phenomenological"]:
         # Compare complete reflected state histories, with omega a pseudoscalar.
         coarse=open_npz(EVIDENCE/"screen-v1"/"phenomenological-chain"/"trajectories.npz")
-        rev=open_npz(EVIDENCE/"refine-v1"/"reverse-turn"/"trajectories.npz")
+        rev=open_npz(EVIDENCE/"refine-v2"/"reverse-turn"/"trajectories.npz")
         ia=list(coarse["ids"]).index(identifier); ib=list(rev["ids"]).index(identifier)
         expected=coarse["state"][ia].copy()
         expected[..., [1,3,5,7,8]] *= -1
@@ -145,7 +145,7 @@ def main():
         axs[0,1].plot(ar["time"],angles[:,i],label=f"packet {i}")
     axs[0,1].set(xlabel="Time (declared units)",ylabel="Velocity angle (rad)",title=f"Selected exposed chain: {best}")
     axs[0,1].legend(frameon=False,ncol=2)
-    long=open_npz(EVIDENCE/"refine-v1"/"conservative-long-ring"/"trajectories.npz")
+    long=open_npz(EVIDENCE/"refine-v2"/"conservative-long-ring"/"trajectories.npz")
     # Plot first selected conservative law, including any late failure.
     bestc=str(long["ids"][0])
     for i in range(long["state"].shape[2]):

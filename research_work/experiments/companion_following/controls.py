@@ -6,7 +6,7 @@ import time
 import numpy as np
 from model import (Mechanics, catalogue, cross, geometry, initial, J,
                    kernel, potential_force)
-from campaign import write_json, manifest
+from campaign import write_json, manifest, best_correlation
 
 def main(output):
     output.mkdir(parents=True, exist_ok=False)
@@ -19,6 +19,11 @@ def main(output):
                            passed=passed, note=note))
         print(f"{'PASS' if passed else 'FAIL'} {name}: {measured:.6g}", flush=True)
     start = time.perf_counter()
+    times=np.arange(161)*.2
+    pulse=np.exp(-((times-5)/1.5)**2)
+    delayed=np.zeros_like(pulse);delayed[90:]=pulse[:-90]
+    corr,lag=best_correlation(delayed,pulse)
+    check("declared full lag window finds lag 18",abs(lag-18)+abs(corr-1),1e-12)
     check("catalogue count", len(rows)-618, 0)
     check("unique structural equations", len(set(r["equation_sha256"] for r in rows))-618, 0)
     rng = np.random.default_rng(61019)

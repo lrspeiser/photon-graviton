@@ -4,10 +4,10 @@ from model import catalogue
 from campaign import HERE, manifest, simulate, write_json
 
 def main():
-    root=HERE/"evidence"/"diagnostics-v1"
+    root=HERE/"evidence"/"diagnostics-v2"
     root.mkdir(exist_ok=False)
     write_json(root/"manifest.json",manifest())
-    selection=json.loads((HERE/"evidence"/"refine-v1"/"selection.json").read_text())
+    selection=json.loads((HERE/"evidence"/"refine-v2"/"selection.json").read_text())
     allrows={r["id"]:r for r in catalogue()}
     p=[allrows[i] for i in selection["phenomenological"]]
     c=[allrows[i] for i in selection["conservative"]]

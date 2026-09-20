@@ -64,7 +64,7 @@ def diagnostics(mech, state, t, chain, amplitude):
 def best_correlation(signal, leader):
     best, lag = -1., 0
     # All nonnegative lags through 20 time units; sample cadence 0.2.
-    for offset in range(min(100, len(signal)//2)+1):
+    for offset in range(min(100, len(signal)-2)+1):
         a = signal[offset:]
         b = leader[:len(a)]
         if np.std(a) <= 1e-14 or np.std(b) <= 1e-14: continue
