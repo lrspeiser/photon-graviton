@@ -26,7 +26,7 @@ def galaxy_score(gals,fit,split,details=False):
     records=[]
     for g in gals:
         if g["split"]!=split:continue
-        ah=0 if fit is None else M.extra(np.array(fit["theta"]),fit["capacity"],M.features(g["gb"],g["r"],g["mass"],fit["family"]))
+        ah=0 if fit is None else M.response(fit,g["gb"],g["r"],g["mass"])
         pred=np.sqrt(g["r"]*(g["gb"]+ah))
         row=dict(name=g["name"],rmse=float(np.sqrt(np.mean((pred-g["y"])**2))),n=len(pred),
             chi2=float(np.sum(((pred-g["y"])/g["error"])**2)))
@@ -40,7 +40,7 @@ def cluster_score(clusters,fit,split,details=False):
     records=[]
     for c in clusters:
         if c["split"]!=split:continue
-        ah=0 if fit is None else M.extra(np.array(fit["theta"]),fit["capacity"],M.features(c["gb"],c["r"],c["mass"],fit["family"]))
+        ah=0 if fit is None else M.response(fit,c["gb"],c["r"],c["mass"])
         resid,pred,bound=D.pressure_residual(c,c["gb"]+ah)
         row=dict(name=c["name"],n=len(resid),chi2=float(np.sum(resid**2)),boundary_pressure=bound)
         if details:row.update(radius_kpc=c["rp"],observed_pressure=c["y"],error=c["error"],prediction=pred,

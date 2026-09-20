@@ -14,6 +14,12 @@ def features(gb,r,mass,family):
     return np.stack([columns[k] for k in FAMILIES[family]],axis=-1)
 def extra(theta,capacity,F):
     return capacity/CODE_TO_SI*expit(F@theta)
+def response(fit,gb,r,mass):
+    value=extra(np.asarray(fit["theta"]),fit["capacity"],features(gb,r,mass,fit["family"]))
+    if "epsilon" in fit:
+        x=np.log(np.maximum(np.asarray(gb)*CODE_TO_SI,1e-30)/1e-10)
+        value=value-fit["epsilon"]*gb*expit(fit["steepness"]*(x-fit["x_flip"]))
+    return value
 def bounds(family):
     limits=dict(c=(-25,5),q=(-2,3),s=(-2,2),m=(-2,2),d=(-10,10))
     return np.array([limits[k][0] for k in FAMILIES[family]]),np.array([limits[k][1] for k in FAMILIES[family]])
@@ -38,7 +44,7 @@ def optical_force(source,fit,reach,eta=1):
         rc=np.minimum(r,reach)
         mc=np.interp(rc,source["r"],source["mb"],left=source["mb"][0],right=source["mass"])
         base=G*mc/rc**2
-        ah=extra(np.asarray(fit["theta"]),fit["capacity"],features(base,rc,source["mass"],fit["family"]))
+        ah=response(fit,base,rc,source["mass"])
         ah*=np.minimum(1.,(reach/r)**2)
         return gb+eta*ah
     return law
