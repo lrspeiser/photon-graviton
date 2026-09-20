@@ -1,50 +1,94 @@
 {
   "module": "phase_junction_network",
-  "status": "exploratory candidate; finite kinematics, exact first-order algebra, continuum scaling, auxiliary stability, and reduced physical transfer-matrix checks completed; local finite quantum gravity dynamics remains open",
+  "status": "exploratory candidate; finite kinematics, constrained local and real-space linear reductions, global fixed-volume control, and reduced transfer-matrix checks completed; finite local quantum implementation and nonlinear closure remain open",
   "created_utc": "2026-09-20",
-  "branch": "agent/phase-junction-microscopic",
-  "dependencies": ["python>=3.11", "numpy>=1.24", "scipy>=1.10 for check_frame_gravity.py"],
-  "commands": [
-    "python phase_junction_network/check_frame_gravity.py --samples 500 --seed 42 --lattice-size 96 --fit-r-min 4 --fit-r-max 20",
-    "python phase_junction_network/microscopic/finite_junction_model.py --output phase_junction_network/microscopic/results.json",
-    "python phase_junction_network/microscopic/search_local_dynamics.py --output phase_junction_network/microscopic/dynamics_results.json",
-    "python phase_junction_network/microscopic/check_first_order_frame.py --samples 500 --seed 43 --output phase_junction_network/microscopic/first_order_results.json",
-    "python phase_junction_network/microscopic/check_first_order_exact.py --output phase_junction_network/microscopic/first_order_exact_results.json",
-    "python phase_junction_network/microscopic/check_auxiliary_stability.py --samples 500 --seed 44 --output phase_junction_network/microscopic/auxiliary_stability_results.json",
-    "python phase_junction_network/microscopic/check_tensor_scaling.py --output phase_junction_network/microscopic/tensor_scaling_results.json",
+  "active_branch": "main",
+  "dependencies": [
+    "python>=3.11",
+    "numpy>=1.24",
+    "scipy>=1.10"
+  ],
+  "latest_commands": [
+    "python phase_junction_network/microscopic/check_constrained_local_reduction.py --sizes 3,5,7 --output phase_junction_network/microscopic/constrained_local_reduction_results.json",
+    "python phase_junction_network/microscopic/check_real_space_reduction.py --sizes 3,5 --output phase_junction_network/microscopic/real_space_reduction_results.json",
+    "python phase_junction_network/microscopic/check_global_volume_constraint.py --output phase_junction_network/microscopic/global_volume_constraint_results.json",
     "python phase_junction_network/microscopic/check_reduced_tt_transfer.py --output phase_junction_network/microscopic/reduced_tt_results.json"
   ],
   "results": {
-    "infrared": {"spectrum_failures": 0, "green_normalized_rms_residual": 0.002409597456672864},
-    "finite_electromagnetic_link": {"minimal_tested_nontrivial_spin": 1.0, "minimal_tested_nontrivial_dimension": 3, "exact_gauss_commutator": true},
-    "finite_gravity_constraints": {"L3_p5_logical_qudits": 58, "L5_p7_logical_qudits": 254, "local_modes_per_site_after_global_modes": 2, "exact_scalar_vector_commutator": true},
-    "local_invariant_square_dynamics": {"dispersion": "omega proportional to k^3", "decision": "rejected for the relativistic tensor target"},
-    "first_order_frame_connection": {"random_failures": 0, "exact_rational_coefficient_failures": 0, "exact_gauge_null_failures": 0},
-    "auxiliary_stability": {"connection_inertia": [8, 0, 10], "full_first_order_block_inertia": [9, 3, 12], "unconstrained_fierz_pauli_inertia": [1, 3, 2], "decision": "connection must be constrained/nonpropagating, contour-integrated, or accompanied by bare frame stiffness"},
-    "finite_size_tensor_scaling": {"omega_L_power": -0.9958910750258307, "maximum_relative_polarization_split": 6.109225681690782e-16, "anisotropy_L_power": -2.0111077654407836},
-    "reduced_tt_transfer": {"gap_scaling_power": -0.9938568506775519, "maximum_relative_energy_gap_error": 4.289572369704812e-15, "maximum_relative_transfer_gap_error": 6.929323754426769e-15, "maximum_low_state_boundary_occupation": 4.746923100054366e-31, "minimum_reflection_kernel_eigenvalue": -2.63511389083254e-15, "first_gap_degeneracy": 2}
+    "finite_electromagnetic_link": {
+      "minimal_tested_nontrivial_spin": 1.0,
+      "minimal_tested_nontrivial_dimension": 3,
+      "exact_gauss_commutator": true
+    },
+    "finite_gravity_constraint_skeleton": {
+      "L3_p5_logical_qudits": 58,
+      "L5_p7_logical_qudits": 254,
+      "exact_scalar_vector_commutator": true
+    },
+    "local_invariant_square_branch": {
+      "dispersion": "omega proportional to k^3",
+      "decision": "rejected for the relativistic tensor target"
+    },
+    "first_order_frame_connection": {
+      "random_failures": 0,
+      "exact_rational_coefficient_failures": 0,
+      "connection_inertia": [8, 0, 10],
+      "decision": "connection must be constrained/nonpropagating, contour-integrated, or accompanied by bare frame stiffness"
+    },
+    "constrained_local_reduction": {
+      "extended_phase_dimension": 48,
+      "second_class_constraints": 36,
+      "first_class_constraints": 4,
+      "physical_phase_dimension": 4,
+      "physical_configuration_modes": 2,
+      "tested_nonzero_modes": 492,
+      "failures": 0,
+      "maximum_relative_frequency_error": 1.9810714906408463e-15,
+      "uses_TT_projector": false
+    },
+    "full_real_space_reduction": {
+      "lattice_sizes": [3, 5],
+      "uses_fourier_during_reduction": false,
+      "uses_TT_projector": false,
+      "L3_physical_phase_dimension": 104,
+      "L5_physical_phase_dimension": 496,
+      "maximum_relative_frequency_error": 2.2044903280835783e-14,
+      "minimum_physical_hessian_eigenvalue": 0.3454915028125236
+    },
+    "periodic_global_sector": {
+      "unconstrained_hamiltonian_inertia": [1, 6, 5],
+      "fixed_volume_constraint_bracket_rank": 2,
+      "fixed_volume_reduced_inertia": [0, 5, 5],
+      "decision": "fixed total volume plus trace momentum removes the one negative homogeneous conformal pair at linear order"
+    },
+    "reduced_transfer_matrix": {
+      "gap_scaling_power": -0.9938568506775519,
+      "first_gap_degeneracy": 2,
+      "maximum_relative_transfer_gap_error": 6.929323754426769e-15,
+      "maximum_low_state_boundary_occupation": 4.746923100054366e-31,
+      "minimum_reflection_kernel_eigenvalue": -2.63511389083254e-15
+    }
   },
   "open_gates": [
-    "derive the reduced physical transfer matrix from local finite frame and connection variables without inserting a TT projector",
-    "nonlinear constraint closure and universal self-coupling",
+    "finite local implementation of P_C=0 and C-Gamma[h]=0 before continuum reduction",
+    "finite local transfer matrix matching the reduced two-mode benchmark without a TT projector",
+    "nonlinear closure of local and fixed-volume constraints with gravitational self-energy",
     "microscopic derivation of Z_g/Z_A",
     "chiral matter defects and protected mass hierarchy",
-    "control of the vacuum-volume term",
+    "local vacuum-energy and cosmological behavior",
     "frozen overconstrained empirical prediction"
   ],
   "file_integrity_note": "git_blob_sha is Git's canonical blob SHA-1 for committed content; this manifest intentionally does not self-hash.",
-  "new_or_updated_files": [
-    {"path": "microscopic/README.md", "git_blob_sha": "54ce0306b6e7212c2887d2d9281cbb6b7dca76dc"},
-    {"path": "microscopic/check_first_order_exact.py", "git_blob_sha": "663ef6806842fa55743c11d851cb846d5e54eb86"},
-    {"path": "microscopic/first_order_exact_results.json", "git_blob_sha": "dc82ff55fc206fb7bb44b4d75d0e56129b81a2a3"},
-    {"path": "microscopic/check_auxiliary_stability.py", "git_blob_sha": "f89aa18ea18ba94e60abb95b36fb37f4919ba21a"},
-    {"path": "microscopic/auxiliary_stability_results.json", "git_blob_sha": "7e09a058d3787e1efb2a9cca8460653eef2ce67d"},
-    {"path": "microscopic/auxiliary_stability_no_go.md", "git_blob_sha": "745d0768083df5d587d5d826829672a8b62fe839"},
-    {"path": "microscopic/check_tensor_scaling.py", "git_blob_sha": "f2a465daaa21bb1ca1633fff6d93c1210cf55799"},
-    {"path": "microscopic/tensor_scaling_results.json", "git_blob_sha": "1efb6ce78ca008d1c344677a16627ca555eef227"},
-    {"path": "microscopic/verification_routes.md", "git_blob_sha": "2ba4bdd6ffe3b8b2adf0aea0a63d1478eeaafe9e"},
-    {"path": "microscopic/check_reduced_tt_transfer.py", "git_blob_sha": "74cbdbf7c0307074c191af7dd8d9cc3ca76b026a"},
-    {"path": "microscopic/reduced_tt_transfer.md", "git_blob_sha": "19af83f89b095db28b61d06961d880bf7e5a9210"},
-    {"path": "microscopic/reduced_tt_results.json", "git_blob_sha": "c052009780b0edc5ed83805407691036c1681fbb"}
+  "latest_files": [
+    {"path": "microscopic/README.md", "git_blob_sha": "8243b028fe367fbbbca3355dc7f2e4a509ee4c4d"},
+    {"path": "microscopic/constrained_local_reduction.md", "git_blob_sha": "ce5c79d9de3c47316267bf58ad4d3ba8bfd0fc01"},
+    {"path": "microscopic/check_constrained_local_reduction.py", "git_blob_sha": "2c14f12420166ccc287f7dca75929dc5950a3a26"},
+    {"path": "microscopic/constrained_local_reduction_results.json", "git_blob_sha": "66a12d8a028b0233bec0b1475e5b0ecf63fe5faf"},
+    {"path": "microscopic/real_space_reduction.md", "git_blob_sha": "f8cb503f7da3829fd05ad9494529c453bf73124a"},
+    {"path": "microscopic/check_real_space_reduction.py", "git_blob_sha": "5d05e5c847cc0ee026b6ef785176b103c45b3d21"},
+    {"path": "microscopic/real_space_reduction_results.json", "git_blob_sha": "7fc10b6a839a16bce44924519656023e4ddc065e"},
+    {"path": "microscopic/global_volume_constraint.md", "git_blob_sha": "8ef050b363ac0e8495eff74646cded3fc0acbde8"},
+    {"path": "microscopic/check_global_volume_constraint.py", "git_blob_sha": "e3a357e7ff5723c5e9475f2b44e74d376a5fb48e"},
+    {"path": "microscopic/global_volume_constraint_results.json", "git_blob_sha": "94f62a6bc023522b2a81f2a2572c40c24d6f9b65"}
   ]
 }
