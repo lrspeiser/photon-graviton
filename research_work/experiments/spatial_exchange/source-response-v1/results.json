@@ -1,0 +1,435 @@
+{
+  "summary": {
+    "passed": true,
+    "sign_symmetry": true,
+    "source_sha256": "f33c9c14a76a131a89777c984a241a8b2dcf2dd70ec28694446f2ae5f96b6275",
+    "protocol_sha256": "13c69c6d8f75a771cdf4284f292b888c2e428b66ed519edc484fa870e1e51b08",
+    "commit": "c16c07c52bd097c2d2982c88d3f66c7d515a1cc9"
+  },
+  "rows": [
+    {
+      "name": "no-emission",
+      "energy": 0.0,
+      "source": 0.0,
+      "response_per_energy": null,
+      "positive_source": 0.0,
+      "negative_source": 0.0,
+      "contributions": {
+        "kinetic": 0.0,
+        "shift": 0.0,
+        "mixing": 0.0
+      },
+      "numerical_source": 0.0,
+      "derivative_error": 0.0,
+      "energy_error": 0.0,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": 0.0,
+          "absolute_source": 0.0
+        }
+      ],
+      "minimum_U": -0.0035437519636631414,
+      "maximum_U": -9.032016182518013e-42,
+      "internal_energy_change": -9.339196083146817e-13,
+      "state_sha256": "bca0a1bab5f0c2b6f669fc4d154e5846a2232c7bc7e5576b234d592e4a43a899",
+      "passed": true
+    },
+    {
+      "name": "no-excitation",
+      "energy": 0.0,
+      "source": 0.0,
+      "response_per_energy": null,
+      "positive_source": 0.0,
+      "negative_source": 0.0,
+      "contributions": {
+        "kinetic": 0.0,
+        "shift": 0.0,
+        "mixing": 0.0
+      },
+      "numerical_source": 0.0,
+      "derivative_error": 0.0,
+      "energy_error": 0.0,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": 0.0,
+          "absolute_source": 0.0
+        }
+      ],
+      "minimum_U": -0.0035387797607936834,
+      "maximum_U": -9.024007205527451e-42,
+      "internal_energy_change": 0.0,
+      "state_sha256": "a9011e89e413cc996966151d0786ed6853670f78b769509d87240448698e8c3c",
+      "passed": true
+    },
+    {
+      "name": "emission-only",
+      "energy": 0.0013634847375500246,
+      "source": 0.002223593299676463,
+      "response_per_energy": 1.630816420924464,
+      "positive_source": 0.002223593299676463,
+      "negative_source": 0.0,
+      "contributions": {
+        "kinetic": 0.0022236095464123235,
+        "shift": -1.624673585997198e-08,
+        "mixing": 0.0
+      },
+      "numerical_source": 0.0022235932984216583,
+      "derivative_error": 1.2548048537730505e-12,
+      "energy_error": 0.0,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 2.9340562516356603e-06,
+          "absolute_source": 2.9340562516356603e-06
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.00036040963448116114,
+          "absolute_source": 0.00036040963448116114
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.0013450060712841944,
+          "absolute_source": 0.0013450060712841944
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": 0.00025568372672247965,
+          "absolute_source": 0.00025568372672247965
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": 0.0002595598109369923,
+          "absolute_source": 0.0002595598109369923
+        }
+      ],
+      "minimum_U": -0.003543823489066939,
+      "maximum_U": -9.032015385432144e-42,
+      "internal_energy_change": -0.0013135207747891897,
+      "state_sha256": "0e262714c2c33c2ea1ba051eb609916420a828b5d03e7851b22b8bee9565f98e",
+      "passed": true
+    },
+    {
+      "name": "exchange-0",
+      "energy": 0.0013359467014695163,
+      "source": -0.007707736646837444,
+      "response_per_energy": -5.769494126044907,
+      "positive_source": 0.0012503914000559343,
+      "negative_source": -0.008958128046893377,
+      "contributions": {
+        "kinetic": 0.0021181794785810936,
+        "shift": -1.4385107310271484e-08,
+        "mixing": -0.009825901740311225
+      },
+      "numerical_source": -0.007707736582231867,
+      "derivative_error": 6.460557696458258e-11,
+      "energy_error": 0.0,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": -0.00023411806526339683,
+          "absolute_source": 0.00023411806526339683
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": -0.0028185253216022905,
+          "absolute_source": 0.0028185253216022905
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.00033271614409371725,
+          "absolute_source": 0.0019707478770793906
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": -0.004640352608864832,
+          "absolute_source": 0.004731003664909105
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": -0.00034745679520064063,
+          "absolute_source": 0.000454124518095129
+        }
+      ],
+      "minimum_U": -0.0035429061102048858,
+      "maximum_U": -9.032015164000143e-42,
+      "internal_energy_change": -0.0012680757186864788,
+      "state_sha256": "5a402ce5334449330c75c6eb846604ad4e08d33ebfff214b96e6eaf19211bcd6",
+      "passed": true
+    },
+    {
+      "name": "exchange-50",
+      "energy": 0.0013467543602643545,
+      "source": -0.003946641818466493,
+      "response_per_energy": -2.930483787475399,
+      "positive_source": 0.002379935535263012,
+      "negative_source": -0.006326577353729504,
+      "contributions": {
+        "kinetic": 0.0021368681405177586,
+        "shift": -1.4762591354026838e-08,
+        "mixing": -0.006083495196392898
+      },
+      "numerical_source": -0.003946641756891883,
+      "derivative_error": 6.157460999411946e-11,
+      "energy_error": 2.168404344971009e-19,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.0004798677558134281,
+          "absolute_source": 0.0004798677558134281
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": -7.202981889084422e-05,
+          "absolute_source": 0.001391806677465482
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.000891499487028871,
+          "absolute_source": 0.0014674485178301372
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": -0.004877111565665196,
+          "absolute_source": 0.00489915607499406
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": -0.00036886767675275235,
+          "absolute_source": 0.00046823386288940986
+        }
+      ],
+      "minimum_U": -0.003543671234362097,
+      "maximum_U": -9.032015170629412e-42,
+      "internal_energy_change": -0.0012824710758621016,
+      "state_sha256": "5afc8246afebc013991101e0839a743746833e4fd749b021a07ccbf7bf145778",
+      "passed": true
+    },
+    {
+      "name": "exchange-200",
+      "energy": 0.0013614993300340517,
+      "source": 0.0017998152116450222,
+      "response_per_energy": 1.321936171353098,
+      "positive_source": 0.006916564614447637,
+      "negative_source": -0.005116749402802615,
+      "contributions": {
+        "kinetic": 0.002184696674471854,
+        "shift": -1.5646785534251617e-08,
+        "mixing": -0.000384865816041298
+      },
+      "numerical_source": 0.0017998152653572047,
+      "derivative_error": 5.3712182488188653e-11,
+      "energy_error": 2.168404344971009e-19,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.0013217324130848879,
+          "absolute_source": 0.0013217324130848879
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.003971011797506318,
+          "absolute_source": 0.003971011797506318
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.0014897481458587699,
+          "absolute_source": 0.0016720334070004065
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": -0.00459155733759534,
+          "absolute_source": 0.00459155733759534
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": -0.00039111980720961257,
+          "absolute_source": 0.0004769790620633009
+        }
+      ],
+      "minimum_U": -0.0035444070523049064,
+      "maximum_U": -9.032015188685802e-42,
+      "internal_energy_change": -0.0013047698733306134,
+      "state_sha256": "bc1b74043c69cd57076a519455aa0ff629461a3751dcb91fc58c6d395e7fffdd",
+      "passed": true
+    },
+    {
+      "name": "exchange-negative",
+      "energy": 0.0013206902952389583,
+      "source": -0.011826463674229121,
+      "response_per_energy": -8.954759277677063,
+      "positive_source": 0.001377115374071556,
+      "negative_source": -0.013203579048300676,
+      "contributions": {
+        "kinetic": 0.0021016341492918404,
+        "shift": -1.4044783710446255e-08,
+        "mixing": -0.013928083778737253
+      },
+      "numerical_source": -0.011826463609419455,
+      "derivative_error": 6.480966631416951e-11,
+      "energy_error": 2.168404344971009e-19,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": -0.0010185267480985246,
+          "absolute_source": 0.0010185267480985246
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": -0.005802601068279281,
+          "absolute_source": 0.005802601068279281
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": -0.0005202789809873277,
+          "absolute_source": 0.0028655336749943234
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": -0.004168510271770675,
+          "absolute_source": 0.004461400472515855
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": -0.0003165466050933133,
+          "absolute_source": 0.000432632458484248
+        }
+      ],
+      "minimum_U": -0.003541725136853111,
+      "maximum_U": -9.032015157027622e-42,
+      "internal_energy_change": -0.0012485768014509624,
+      "state_sha256": "737e10f506befef8e22bd9733ec4fdbf6f8ed9f6bac72e5de843acc63c3e1d21",
+      "passed": true
+    },
+    {
+      "name": "sign-mirror",
+      "energy": 0.0013614993300340517,
+      "source": 0.0017998152116450222,
+      "response_per_energy": 1.321936171353098,
+      "positive_source": 0.006916564614447637,
+      "negative_source": -0.005116749402802615,
+      "contributions": {
+        "kinetic": 0.002184696674471854,
+        "shift": -1.5646785534251617e-08,
+        "mixing": -0.000384865816041298
+      },
+      "numerical_source": 0.0017998152653572047,
+      "derivative_error": 5.3712182488188653e-11,
+      "energy_error": 2.168404344971009e-19,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.0013217324130848879,
+          "absolute_source": 0.0013217324130848879
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.003971011797506318,
+          "absolute_source": 0.003971011797506318
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.0014897481458587699,
+          "absolute_source": 0.0016720334070004065
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": -0.00459155733759534,
+          "absolute_source": 0.00459155733759534
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": -0.00039111980720961257,
+          "absolute_source": 0.0004769790620633009
+        }
+      ],
+      "minimum_U": -0.0035444070523049064,
+      "maximum_U": -9.032015188685802e-42,
+      "internal_energy_change": -0.0013047698733306134,
+      "state_sha256": "9a5210f4c4b7e97274f9b877904ab64e2d98c91035524e9ac4d642bb016ef2cd",
+      "passed": true
+    }
+  ]
+}
