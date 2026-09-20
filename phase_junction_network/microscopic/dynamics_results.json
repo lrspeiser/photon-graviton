@@ -1,0 +1,95 @@
+{
+  "coordinate_invariants": [
+    {
+      "derivative_order": 0,
+      "equation_count": 9,
+      "nullity": 0,
+      "ranks_by_prime": {"1000003": 6, "1000033": 6},
+      "sector": "coordinate_under_vector_gauge",
+      "unknown_coefficients": 6
+    },
+    {
+      "derivative_order": 1,
+      "equation_count": 18,
+      "nullity": 0,
+      "ranks_by_prime": {"1000003": 18, "1000033": 18},
+      "sector": "coordinate_under_vector_gauge",
+      "unknown_coefficients": 18
+    },
+    {
+      "derivative_order": 2,
+      "equation_count": 30,
+      "nullity": 6,
+      "ranks_by_prime": {"1000003": 30, "1000033": 30},
+      "sector": "coordinate_under_vector_gauge",
+      "unknown_coefficients": 36
+    },
+    {
+      "derivative_order": 3,
+      "equation_count": 45,
+      "nullity": 15,
+      "ranks_by_prime": {"1000003": 45, "1000033": 45},
+      "sector": "coordinate_under_vector_gauge",
+      "unknown_coefficients": 60
+    },
+    {
+      "derivative_order": 4,
+      "equation_count": 63,
+      "nullity": 27,
+      "ranks_by_prime": {"1000003": 63, "1000033": 63},
+      "sector": "coordinate_under_vector_gauge",
+      "unknown_coefficients": 90
+    }
+  ],
+  "interpretation": "Squares of the lowest exact local invariants give a k^3 branch. Linear dispersion needs a globally invariant two-derivative bilinear, an area/frame factor linear in curvature, auxiliary variables, or emergent rather than exact microscopic continuous symmetry.",
+  "manifest_local_square_hamiltonian": {
+    "coordinate_stiffness_power": 4,
+    "momentum_stiffness_power": 2,
+    "predicted_omega_power": 3,
+    "prediction": "omega proportional to k^3"
+  },
+  "minimum_coordinate_derivative_order": 2,
+  "minimum_momentum_derivative_order": 1,
+  "momentum_invariants": [
+    {
+      "derivative_order": 0,
+      "equation_count": 6,
+      "nullity": 0,
+      "ranks_by_prime": {"1000003": 6, "1000033": 6},
+      "sector": "momentum_under_scalar_gauge",
+      "unknown_coefficients": 6
+    },
+    {
+      "derivative_order": 1,
+      "equation_count": 10,
+      "nullity": 8,
+      "ranks_by_prime": {"1000003": 10, "1000033": 10},
+      "sector": "momentum_under_scalar_gauge",
+      "unknown_coefficients": 18
+    },
+    {
+      "derivative_order": 2,
+      "equation_count": 15,
+      "nullity": 21,
+      "ranks_by_prime": {"1000003": 15, "1000033": 15},
+      "sector": "momentum_under_scalar_gauge",
+      "unknown_coefficients": 36
+    },
+    {
+      "derivative_order": 3,
+      "equation_count": 21,
+      "nullity": 39,
+      "ranks_by_prime": {"1000003": 21, "1000033": 21},
+      "sector": "momentum_under_scalar_gauge",
+      "unknown_coefficients": 60
+    },
+    {
+      "derivative_order": 4,
+      "equation_count": 28,
+      "nullity": 62,
+      "ranks_by_prime": {"1000003": 28, "1000033": 28},
+      "sector": "momentum_under_scalar_gauge",
+      "unknown_coefficients": 90
+    }
+  ]
+}
