@@ -1,0 +1,603 @@
+{
+  "summary": {
+    "passed": true,
+    "count": 12,
+    "commit": "1f9f18f4d4a3da152f2487ffc75cd0e4bce3b6a0",
+    "sources": {
+      "homogeneous_stability.py": "1115a208cfff85ad06a6d43decd95cf88fbd944d00be2db18d5e2fe3303f9061",
+      "homogeneous-stability-protocol.md": "9e87825ff7de6918f5852aeb70af9cf17350a5c66df5a783c03e20208d249978"
+    }
+  },
+  "controls": [
+    {
+      "error": 1.1290621215742647e-13,
+      "symplectic_generator_error": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "error": 3.478814458723889e-14,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 1.8534306034379e-13,
+      "symplectic_generator_error": 4.336808689942018e-19,
+      "passed": true
+    },
+    {
+      "error": 1.9373391779708982e-14,
+      "symplectic_generator_error": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "error": 4.9704164395425465e-14,
+      "symplectic_generator_error": 3.469446951953614e-18,
+      "passed": true
+    },
+    {
+      "error": 2.752264562089213e-13,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 1.5108552429976552e-13,
+      "symplectic_generator_error": 1.0842021724855044e-19,
+      "passed": true
+    },
+    {
+      "error": 1.487898346197447e-13,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 4.720616259001886e-14,
+      "symplectic_generator_error": 4.336808689942018e-19,
+      "passed": true
+    },
+    {
+      "error": 2.652392194768538e-15,
+      "symplectic_generator_error": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "error": 1.8377140087455501e-13,
+      "symplectic_generator_error": 1.734723475976807e-18,
+      "passed": true
+    },
+    {
+      "error": 6.330027647882819e-14,
+      "symplectic_generator_error": 0.0,
+      "passed": true
+    },
+    {
+      "error": 1.671978527850726e-13,
+      "symplectic_generator_error": 1.0842021724855044e-19,
+      "passed": true
+    },
+    {
+      "error": 6.738967023300901e-15,
+      "symplectic_generator_error": 4.336808689942018e-18,
+      "passed": true
+    },
+    {
+      "error": 9.848025173120334e-14,
+      "symplectic_generator_error": 4.336808689942018e-19,
+      "passed": true
+    },
+    {
+      "error": 3.1981362003108416e-13,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 9.87227660731449e-13,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 1.411761332836825e-14,
+      "symplectic_generator_error": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "error": 4.12495558543835e-14,
+      "symplectic_generator_error": 0.0,
+      "passed": true
+    },
+    {
+      "error": 1.0316400511634072e-14,
+      "symplectic_generator_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "error": 8.814997343176145e-14,
+      "symplectic_generator_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "error": 3.411550555942888e-14,
+      "symplectic_generator_error": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "error": 9.649659543642386e-14,
+      "symplectic_generator_error": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "error": 4.91108889666414e-14,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 7.754213937616328e-16,
+      "symplectic_generator_error": 4.336808689942018e-19,
+      "passed": true
+    },
+    {
+      "error": 7.574921592756745e-13,
+      "symplectic_generator_error": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "error": 3.0973834608261086e-13,
+      "symplectic_generator_error": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "error": 9.214504159693604e-14,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 6.254198547939183e-14,
+      "symplectic_generator_error": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "error": 1.0852299961450207e-13,
+      "symplectic_generator_error": 4.336808689942018e-19,
+      "passed": true
+    },
+    {
+      "error": 9.274417171745153e-13,
+      "symplectic_generator_error": 0.0,
+      "passed": true
+    },
+    {
+      "error": 7.320533068622126e-15,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 8.252079575221671e-15,
+      "symplectic_generator_error": 4.336808689942018e-19,
+      "passed": true
+    },
+    {
+      "error": 8.241324289670615e-13,
+      "symplectic_generator_error": 2.7755575615628914e-17,
+      "passed": true
+    },
+    {
+      "error": 9.785922072680364e-14,
+      "symplectic_generator_error": 4.336808689942018e-19,
+      "passed": true
+    },
+    {
+      "error": 3.534455714215845e-14,
+      "symplectic_generator_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "error": 5.3127641175265694e-14,
+      "symplectic_generator_error": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "error": 4.1271066425485614e-13,
+      "symplectic_generator_error": 1.9081958235744878e-17,
+      "passed": true
+    },
+    {
+      "error": 1.2095793117117282e-13,
+      "symplectic_generator_error": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "error": 5.755812493291046e-14,
+      "symplectic_generator_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "error": 1.1755050058348537e-13,
+      "symplectic_generator_error": 6.938893903907228e-18,
+      "passed": true
+    },
+    {
+      "error": 2.4317353686242882e-14,
+      "symplectic_generator_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "error": 2.379173247302191e-13,
+      "symplectic_generator_error": 8.673617379884035e-19,
+      "passed": true
+    },
+    {
+      "error": 1.3026710786456785e-13,
+      "symplectic_generator_error": 1.3877787807814457e-17,
+      "passed": true
+    },
+    {
+      "error": 1.1648277828402165e-13,
+      "symplectic_generator_error": 0.0,
+      "passed": true
+    },
+    {
+      "error": 9.29555911410862e-14,
+      "symplectic_generator_error": 5.551115123125783e-17,
+      "passed": true
+    },
+    {
+      "error": 7.210725072592794e-14,
+      "symplectic_generator_error": 0.0,
+      "passed": true
+    },
+    {
+      "error": 3.0481693558126466e-14,
+      "symplectic_generator_error": 5.551115123125783e-17,
+      "passed": true
+    }
+  ],
+  "rows": [
+    {
+      "chi": 0,
+      "k0": 0,
+      "channel": "X",
+      "initial_energy": 0.0,
+      "energy_drift": 0.0,
+      "symplectic_error": 9.622147523202784e-11,
+      "maximum_amplification": 20.049875621120893,
+      "endpoint_singular_values": [
+        20.049875621120893,
+        3.889738658076415,
+        1.2074952091645457,
+        0.8281606355984376,
+        0.2570866805983639,
+        0.04987562112089024
+      ],
+      "finite_time_rate": 0.14991114751489848,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 2.2832362271424974e-06
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 5.010251077326426e-06
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 0,
+      "k0": 0,
+      "channel": "Y",
+      "initial_energy": 2.8125000000000003e-05,
+      "energy_drift": 1.513591294942558e-14,
+      "symplectic_error": 3.66168206866746e-11,
+      "maximum_amplification": 20.04901952832425,
+      "endpoint_singular_values": [
+        20.04901952832425,
+        3.8898762724606226,
+        1.207157931573812,
+        0.8283920221272604,
+        0.2570775854953853,
+        0.04987775080907326
+      ],
+      "finite_time_rate": 0.1499090125613204,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 2.04560698899558e-11
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 2.560321834213783e-11
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 0,
+      "k0": 0.5,
+      "channel": "X",
+      "initial_energy": 0.0,
+      "energy_drift": 0.0,
+      "symplectic_error": 3.819800031834575e-11,
+      "maximum_amplification": 20.04987562112089,
+      "endpoint_singular_values": [
+        20.04987562112089,
+        3.0812310055836516,
+        1.10996762369987,
+        0.9009271789582114,
+        0.32454561121443004,
+        0.049875621120890265
+      ],
+      "finite_time_rate": 0.14991114751489848,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 1.7420331217703307e-06
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 3.227740521611477e-06
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 0,
+      "k0": 0.5,
+      "channel": "Y",
+      "initial_energy": 2.8125000000000003e-05,
+      "energy_drift": 5.9519243375029396e-15,
+      "symplectic_error": 3.2611580103036886e-11,
+      "maximum_amplification": 23.189783629075176,
+      "endpoint_singular_values": [
+        23.189783629075176,
+        3.3261213787044603,
+        1.2069396208819354,
+        0.8285418613269591,
+        0.3006504832905883,
+        0.04312243770749364
+      ],
+      "finite_time_rate": 0.15718559104346205,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 2.3488666970843486e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 2.3179716852198724e-09
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 50,
+      "k0": 0,
+      "channel": "X",
+      "initial_energy": 0.0,
+      "energy_drift": 0.0,
+      "symplectic_error": 9.622147523202784e-11,
+      "maximum_amplification": 20.049875621120893,
+      "endpoint_singular_values": [
+        20.049875621120893,
+        3.889738658076415,
+        1.2074952091645457,
+        0.8281606355984376,
+        0.2570866805983639,
+        0.04987562112089024
+      ],
+      "finite_time_rate": 0.14991114751489848,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 8.555438231806497e-06
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 1.7174663713147547e-05
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 50,
+      "k0": 0,
+      "channel": "Y",
+      "initial_energy": 2.8125000000000003e-05,
+      "energy_drift": 4.024541523607247e-15,
+      "symplectic_error": 9.425958492206283e-12,
+      "maximum_amplification": 20.0279470019632,
+      "endpoint_singular_values": [
+        20.0279470019632,
+        4.195670958330238,
+        1.315433881280938,
+        0.7602054456905787,
+        0.23834090183150866,
+        0.049930229988224814
+      ],
+      "finite_time_rate": 0.14985643241335164,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 1.5377405340400298e-10
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 1.7322101920087822e-10
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 50,
+      "k0": 0.5,
+      "channel": "X",
+      "initial_energy": 0.0,
+      "energy_drift": 0.0,
+      "symplectic_error": 3.819800031834575e-11,
+      "maximum_amplification": 20.04987562112089,
+      "endpoint_singular_values": [
+        20.04987562112089,
+        3.0812310055836516,
+        1.10996762369987,
+        0.9009271789582114,
+        0.32454561121443004,
+        0.049875621120890265
+      ],
+      "finite_time_rate": 0.14991114751489848,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 3.6775600341326306e-05
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 7.206564088578388e-05
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 50,
+      "k0": 0.5,
+      "channel": "Y",
+      "initial_energy": 2.8125000000000003e-05,
+      "energy_drift": 5.486161248598534e-15,
+      "symplectic_error": 2.5782598278567548e-11,
+      "maximum_amplification": 14.878425315851628,
+      "endpoint_singular_values": [
+        14.83387238524992,
+        3.0358856650014228,
+        1.1068618293116308,
+        0.9034551318998617,
+        0.3293931690245176,
+        0.06741328049924773
+      ],
+      "finite_time_rate": 0.13484566202112142,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 7.70487289429301e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 3.9107866356757175e-09
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 200,
+      "k0": 0,
+      "channel": "X",
+      "initial_energy": 0.0,
+      "energy_drift": 0.0,
+      "symplectic_error": 9.622147523202784e-11,
+      "maximum_amplification": 20.049875621120893,
+      "endpoint_singular_values": [
+        20.049875621120893,
+        3.889738658076415,
+        1.2074952091645457,
+        0.8281606355984376,
+        0.2570866805983639,
+        0.04987562112089024
+      ],
+      "finite_time_rate": 0.14991114751489848,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 4.296312030787262e-06
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 8.797205340884145e-06
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 200,
+      "k0": 0,
+      "channel": "Y",
+      "initial_energy": 2.8125000000000003e-05,
+      "energy_drift": 2.853847122811712e-15,
+      "symplectic_error": 5.936663405751889e-11,
+      "maximum_amplification": 19.97457485405309,
+      "endpoint_singular_values": [
+        19.97457485405309,
+        4.869094104471637,
+        3.560837809781425,
+        0.28083278526358374,
+        0.20537701234288985,
+        0.05006364377247747
+      ],
+      "finite_time_rate": 0.14972301037618047,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 9.631296288293647e-11
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 1.398453042552425e-10
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 200,
+      "k0": 0.5,
+      "channel": "X",
+      "initial_energy": 0.0,
+      "energy_drift": 0.0,
+      "symplectic_error": 3.819800031834575e-11,
+      "maximum_amplification": 20.04987562112089,
+      "endpoint_singular_values": [
+        20.04987562112089,
+        3.0812310055836516,
+        1.10996762369987,
+        0.9009271789582114,
+        0.32454561121443004,
+        0.049875621120890265
+      ],
+      "finite_time_rate": 0.14991114751489848,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 1.5631336858175005e-06
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 2.857329456766244e-06
+        }
+      ],
+      "passed": true
+    },
+    {
+      "chi": 200,
+      "k0": 0.5,
+      "channel": "Y",
+      "initial_energy": 2.8125000000000003e-05,
+      "energy_drift": 4.771404354519254e-15,
+      "symplectic_error": 1.2280361934667184e-10,
+      "maximum_amplification": 21.719400893258264,
+      "endpoint_singular_values": [
+        21.719400893258264,
+        5.564124507317592,
+        1.3124509489113627,
+        0.7619332370633569,
+        0.17972279352941614,
+        0.04604178563274805
+      ],
+      "finite_time_rate": 0.15391029557509953,
+      "shadows": [
+        {
+          "epsilon": 1e-07,
+          "relative_error": 1.9757098445584274e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "relative_error": 5.26749563731191e-10
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

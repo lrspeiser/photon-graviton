@@ -1,10 +1,12 @@
 # SE-2 generated-source checkpoint
 
-Completed states: 1/10. Diagnostic checks pass: True.
+Completed states: 3/10. Diagnostic checks pass: True.
 
 | Case | Wave energy | Scalar source D | D/energy | D / emission-only D |
 |---|---:|---:|---:|---:|
 | emitter-mixed-chi0 | 0.0011893505 | -0.020370321 | -17.127265 | -9.1609922 |
+| emitter-mixed-chi50 | 0.001241783 | 0.00011009762 | 0.088660913 | 0.049513378 |
+| emitter-mixed-chi200 | 0.0013150007 | 0.029619003 | 22.523945 | 13.320333 |
 
 These are instantaneous wave-sector source derivatives at time 4, not total
 gravity, ray deflection or observational fits. Same finite initial internal
