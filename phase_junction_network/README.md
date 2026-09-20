@@ -1,6 +1,6 @@
 # Phase Junction Network
 
-**Status:** exploratory candidate foundation. Issue #2 supplies a finite linear dressed-frame regulator, issue #4 supplies a finite chiral charged-endpoint prototype, issue #7 supplies a reversible photon–companion integration architecture, issue #6 has both a finite static Coulomb anchor and a detuned pure-gauge two-photon region, and issue #3 now has a first shared-move prototype linking electromagnetic and frame stiffnesses. Interacting QED, observed matter, a full shared microscopic derivation, nonlinear gravity, common-cone recovery, many-body deposits, and empirical predictions remain open.  
+**Status:** exploratory candidate foundation. Issue #2 supplies a finite linear dressed-frame regulator, issue #4 supplies a finite chiral charged-endpoint prototype, issue #7 supplies a reversible photon–companion integration architecture, and issue #6 has both a finite static Coulomb anchor and a detuned pure-gauge two-photon region. Issue #3 now has a shared-move prototype **and** a decisive embedding control: the naïve one-hinge common-Casimir normalization fails in the actual photon phase, so a derived collective charging mechanism is required. Interacting QED, observed matter, the revised shared microscopic derivation, nonlinear gravity, common-cone recovery, many-body deposits, and empirical predictions remain open.  
 **Created:** 2026-09-20  
 **Prior-art boundary:** [`novelty_boundary.md`](novelty_boundary.md)
 
@@ -92,9 +92,11 @@ See [`microscopic/finite_dressed_frame_hamiltonian.md`](microscopic/finite_dress
 
 This closes the **linear finite constrained-regulator** gate, not nonlinear quantum gravity. The gravity scale and clock ratio remain inputs until issue #3 derives shared coefficients. Nonlinear closure and the volume/vacuum sector remain issue #5; universality remains issue #8.
 
-## Stage 3A — shared electromagnetic/frame move
+## Shared electromagnetic/frame mechanism
 
-A first issue-#3 prototype now asks the project-specific question directly: can the same elementary junction move generate both the photon and frame stiffnesses?
+### Stage 3A — one move, one penalty
+
+The first issue-#3 prototype asks the project-specific question directly: can the same elementary junction move generate both the photon and frame stiffnesses?
 
 The finite model uses one swap amplitude `t` and one virtual defect penalty `Delta`. Four swaps close an electromagnetic plaquette, while two swaps move one frame mode through a gapped connection mediator. Exact path counting and finite diagonalization give
 
@@ -114,25 +116,59 @@ Under the explicitly declared common-junction Casimir hypothesis
 U_A=U_g=\Delta,
 \]
 
-the exact common-cone equation `K_A=K_g` fixes
+the exact toy common-cone equation fixes
 
 \[
-\boxed{
-\frac{t}{\Delta}=0.27909563384302527
-}
-\]
-
-and
-
-\[
+\frac{t}{\Delta}=0.27909563384302527,
+\qquad
 K_A/\Delta=K_g/\Delta=0.0685077493800112.
 \]
 
 The electromagnetic and frame mediator bands remain separated by `9.93 K` and `16.60 K`. Negative controls show that independent amplitudes, penalties, or charging normalizations restore an arbitrary impedance ratio.
 
-This reduces four effective stiffness inputs to one scale plus one ratio, and the common-cone condition fixes the ratio in the toy model. It does **not** yet prove that the actual Stage-6B photon model and finite dressed-frame model descend from this graph, that the common Casimir is fundamental, or that physical `Z_g/Z_A=1`, `alpha`, or `G` follows.
+See [`microscopic/shared_junction_move_stage3a.md`](microscopic/shared_junction_move_stage3a.md).
 
-See [`microscopic/shared_junction_move_stage3a.md`](microscopic/shared_junction_move_stage3a.md) and [`microscopic/shared_junction_move_results.json`](microscopic/shared_junction_move_results.json).
+### Stage 3B — actual-regulator compatibility test
+
+Mapping that naïve hypothesis into the actual Stage-6B photon model gives
+
+\[
+\frac{u}{t_{\rm plaq}}
+=\frac{\Delta}{K_A}
+=14.5968888053,
+\]
+
+which is `72.98` times above the demonstrated Stage-6B upper edge `u/t=0.2`.
+
+Exact spin-1 axial calculations at that ratio give gap powers only `0.1389`–`0.1718` and `L=10` gaps of `9.07`–`10.60`, rather than a linearly closing photon branch. Therefore
+
+\[
+\boxed{U_A=U_g=\Delta\text{ is rejected as the shared physical normalization.}}
+\]
+
+A viable shared theory needs a **derived common collective charging factor**
+
+\[
+U_A=U_g=r\Delta.
+\]
+
+Entering the demonstrated photon region requires
+
+\[
+r\le0.01370155,
+\]
+
+while the representative `u/t=0.1` point requires
+
+\[
+r=0.006850775.
+\]
+
+The current self-dual gravity regulator corresponds to `r=0.06850775`, a factor of ten above the representative photon requirement. The photon and gravity clocks therefore cannot remain independently normalized. Both must be rerun at one microscopic value of `r` derived from a finite collective capacitance/constraint matrix.
+
+This negative result is progress: it rejects a superficial unification before it is used to claim a new gravity theory. Independent `r_A` and `r_g` are forbidden because they restore the arbitrary impedance ratio.
+
+See [`microscopic/shared_move_embedding_stage3b.md`](microscopic/shared_move_embedding_stage3b.md) and [`microscopic/shared_move_embedding_results.json`](microscopic/shared_move_embedding_results.json).
 
 ## Finite charged matter prototype
 
@@ -165,7 +201,7 @@ Thus common-cone recovery must be derived under issue #8. The large finite trans
 | Issue | Pillar | Status |
 |---:|---|---|
 | #2 | Finite dressed frame Hamiltonian | Linear finite-regulator scope closed |
-| #3 | Shared microscopic coefficients and `Z_g/Z_A` | Stage 3A prototype passes; full embedding and derivation open |
+| #3 | Shared microscopic coefficients and `Z_g/Z_A` | Stage 3A mechanism passes; Stage 3B rejects the naïve common Casimir; collective charging derivation is now critical |
 | #4 | Chiral matter defects and protected gaps | Finite free-regulator prototype closed |
 | #5 | Nonlinear gravity, self-coupling, many-body binding, and volume/vacuum | Open |
 | #6 | Finite electromagnetic Coulomb/QED phase | Stage 6A static and Stage 6B pure-gauge dynamics pass; interacting matter/QED open |
@@ -175,7 +211,7 @@ Thus common-cone recovery must be derived under issue #8. The large finite trans
 
 The two immediate composed gates are:
 
-1. embed the shared Stage-3A mediator into the actual Stage-6B photon links and dressed-frame Weyl algebra, deriving the full low-band operators without sector-specific amplitudes or penalties;
+1. construct a finite collective capacitance/constraint matrix that derives one common charging suppression `r`, then rerun both photon and gravity regulators at that same value without sector-specific clock rescaling;
 2. embed the minimal `|q|=1` matter endpoint in the Stage-6B photon region and test exact current continuity, a finite Ward identity, photon dressing, vacuum polarization, and the issue-#7 conversion vertex using actual photon eigenmodes.
 
 ## Relationship to the wider repository
@@ -186,4 +222,4 @@ The finite constructions here supply architecture pieces. They do not yet derive
 
 ## Stop rules
 
-Do not claim novelty for finite quantum links, relative-phase modes, domain-wall fermions, first-order discrete gravity, emergent helicity-2 modes, or broad gauge–gravity unification. Do not call the RK equal-time tensor a photon spectrum or its winding free energy a photon gap. Do not call Stage 6B a completed interacting QED continuum, Stage 3A a derivation of `alpha` or `G`, the finite matter charge set observed particles, the companion transition probability an astrophysical rate, one-particle binding a halo, fixed volume a cosmological-constant solution, or the finite gravity regulator nonlinear quantum gravity. Derive the shared finite move set, interacting Ward identities, nonlinear closure, common-cone recovery, regulator universality, and frozen predictions—or reject the combined branch.
+Do not claim novelty for finite quantum links, relative-phase modes, domain-wall fermions, first-order discrete gravity, emergent helicity-2 modes, or broad gauge–gravity unification. Do not call the RK equal-time tensor a photon spectrum or its winding free energy a photon gap. Do not call Stage 6B a completed interacting QED continuum, Stage 3A a derivation of `alpha` or `G`, or the rejected common-Casimir normalization a physical unification. Do not introduce separate photon and gravity charging factors to repair Stage 3B. Do not treat the finite matter charge set as observed particles, the companion transition probability as an astrophysical rate, one-particle binding as a halo, fixed volume as a cosmological-constant solution, or the finite gravity regulator as nonlinear quantum gravity. Derive the shared collective charging mechanism, interacting Ward identities, nonlinear closure, common-cone recovery, regulator universality, and frozen predictions—or reject the combined branch.
