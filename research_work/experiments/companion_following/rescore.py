@@ -19,9 +19,10 @@ def main():
         if data["fixture"] != "chain": continue
         raw=open_npz(summary.with_name("trajectories.npz"))
         t=raw["time"]
+        states=raw["state"]
         lead=np.array([leader_angle(tt,data["amplitude"]) for tt in t])
         for i,r in enumerate(data["results"]):
-            state=raw["state"][i]
+            state=states[i]
             signal=np.mean(np.arctan2(state[:,-4:,3],state[:,-4:,2]),axis=1)
             corr,lag=best_correlation(signal,lead)
             before=dict(pass_value=r["behavioral_pass"],correlation=r["last_four_correlation"],lag=r["best_lag"])

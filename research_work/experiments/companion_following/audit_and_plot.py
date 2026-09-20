@@ -53,6 +53,27 @@ def main():
                     coarse_behavioral_pass=aa["behavioral_pass"],
                     fine_behavioral_pass=bb["behavioral_pass"],
                     fine_conservation_pass=bb["conservation_pass"]))
+    # Independent centered-dot-product lag calculation on cached saved arrays.
+    for group in ("phenomenological","conservative"):
+        raw=open_npz(EVIDENCE/"screen-v1"/f"{group}-chain"/"trajectories.npz")
+        states=raw["state"]; times=raw["time"]
+        leader=np.array([.4*np.sin(np.pi*(t-3)/8)**2 if 3<t<11 else 0 for t in times])
+        max_error=0.; flags=True
+        for i,r in enumerate(screen[group]["chain"]):
+            angles=np.arctan2(states[i,...,3],states[i,...,2])
+            signal=np.mean(angles[:,-4:],axis=1)
+            correlations=[]
+            for lag in range(101):
+                u=signal[lag:];v=leader[:len(u)]
+                uu=u-u.mean();vv=v-v.mean()
+                denom=np.linalg.norm(uu)*np.linalg.norm(vv)
+                correlations.append(float(uu@vv/denom) if min(u.std(),v.std())>1e-14 else -1.)
+            best=max(correlations)
+            max_error=max(max_error,abs(best-r["last_four_correlation"]))
+            flags &= r["behavioral_pass"] == (r["chain_gain"]>=.1 and best>=.7
+                and r["maximum_follower_gain"]<=3 and r["min_separation"]>.1)
+        check(group+" independent corrected correlation",max_error<1e-12,max_error)
+        check(group+" corrected pass flags",flags)
     for identifier in selection["phenomenological"]:
         # Compare complete reflected state histories, with omega a pseudoscalar.
         coarse=open_npz(EVIDENCE/"screen-v1"/"phenomenological-chain"/"trajectories.npz")
