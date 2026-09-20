@@ -27,7 +27,8 @@ def main():
     y=np.load(OUT/(example['spec']['id']+'.npz'))['final_state'];n=32;dx=12/n
     f=y[:4*n**3].reshape((4,n,n,n));c=np.arange(n)*dx-6
     curl=(np.roll(f[2],-1,0)-np.roll(f[2],1,0)-np.roll(f[1],-1,1)+np.roll(f[1],1,1))/(2*dx)
-    im=axes[0,1].pcolormesh(c,c,curl[:,:,n//2].T,cmap='RdBu_r',shading='auto')
+    limit=np.max(abs(curl[:,:,n//2]))
+    im=axes[0,1].pcolormesh(c,c,curl[:,:,n//2].T,cmap='RdBu_r',shading='auto',vmin=-limit,vmax=limit)
     axes[0,1].set(title='B. curl A in the midplane at t=2.5',xlim=(-3,3),ylim=(-3,3),aspect='equal',xlabel='x',ylabel='y')
     fig.colorbar(im,ax=axes[0,1])
     colors={'rest':'#657687','rotating':'#128594','reverse':'#c16539'}
@@ -112,7 +113,7 @@ Final photon angles in milliradians from the initial path:
 |---|---:|---:|---:|
 {chr(10).join(table)}
 
-The sign depends on source rotation and the chosen off-axis light path. A transient vector contribution is not a universal extra scalar attraction. The massive probes are also evolved, but these paths are not circular stellar orbits. The fast source fixture is not a galactic-speed model: [CC-2S](slow-motion-report.md) quantifies the direct-current suppression at illustrative galactic speeds.
+The sign depends on source rotation and the chosen off-axis light path. A transient vector contribution is not a universal extra scalar attraction. The massive probes are also evolved, but these paths are not circular stellar orbits. The archived probe_angle is an absolute xy coordinate heading; it equals the bend from the initial heading for the unrotated cases in this table, but not for the rotated configurations. The fast source fixture is not a galactic-speed model: [CC-2S](slow-motion-report.md) quantifies the direct-current suppression at illustrative galactic speeds.
 
 | Source radius in rotating photon case | Final field energy | Photon angle, mrad |
 |---|---:|---:|
@@ -132,7 +133,14 @@ The Hamiltonian geometry, compact interpolation, finite differences and wave abs
 
 Protocol18dde4a and numerical sourceb69322f precede the original run. The archive pins all numerical sources and includes31 particle paths/momenta,31 final field states, every endpoint's energy/invariant/cone diagnostics, controls and declared comparisons. Full field movies are not stored. `python -B research_work/experiments/common_cone/audit_evolution.py` performs the independent audit; `report_evolution.py` renders this report/figure from the completed archive. The original driver refuses to overwrite evolution-v1. The historical repository-wide suite was not rerun or declared green.
 '''
-    # Link from experiments/common_cone climbs three levels to the repository root.
+    # Keep prose typography readable while preserving literal identifiers/formulas.
+    for old,new in {'length12':'length 12','and32':'and 32','step0.02':'step 0.02','duration2.5':'duration 2.5',
+                    'radius0.9':'radius 0.9','radius0.7':'radius 0.7','magnitude0.2':'magnitude 0.2','a3D':'a 3D',
+                    'is1e-4':'is 1e-4','ceiling0.01':'ceiling 0.01','ceiling5%':'ceiling 5%',
+                    'ceilings1e-4':'ceilings 1e-4','and0.1%':'and 0.1%','passing1D':'passing 1D',
+                    'nonlinear3D':'nonlinear 3D','full3D':'full 3D','Protocol18dde4a':'Protocol 18dde4a',
+                    'sourceb69322f':'source b69322f','includes31':'includes 31',',31 final':', 31 final'}.items():
+        report=report.replace(old,new)
     (HERE/'evolution-report.md').write_text(report,encoding='utf8',newline='\n')
     print('Rendered evolution-report.md and evolution.png from audited complete evidence.')
 

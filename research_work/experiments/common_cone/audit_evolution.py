@@ -64,6 +64,45 @@ def main():
         check('energy gate reconstruction '+name,abs(dr-row['energy_drift']))
         check('ledger monotonic '+name,max(0,-np.diff([m['absorbed'] for m in row['metrics']]).min()),1e-12)
     comparisons=read('comparisons.json')
+    # Reconstruct the declared comparisons from trajectory arrays, not pass labels.
+    byid={r['spec']['id']:r for r in rows}
+    for c in comparisons:
+        if c['kind']=='rotation':
+            name='rotating-eta0.08-photon' if c['n']==32 else 'rotating-space'
+            q=np.load(OUT/(name+'.npz'))['q']
+            qr=np.load(OUT/(f'rotated-n{c["n"]}.npz'))['q']
+            axis=np.array([1.,2.,3.])/np.sqrt(14);angle=np.pi/3
+            x,y,z=axis;cross=np.array([[0,-z,y],[z,0,-x],[-y,x,0]])
+            rotation=np.eye(3)*np.cos(angle)+(1-np.cos(angle))*np.outer(axis,axis)+np.sin(angle)*cross
+            position=np.linalg.norm(q-qr@rotation,axis=2).max()
+            passed=position<=.01
+        else:
+            name=c['source']+'-eta0.08-photon';other=c['source']+'-'+c['kind']
+            q=np.load(OUT/(name+'.npz'))['q'];qr=np.load(OUT/(other+'.npz'))['q']
+            position=np.linalg.norm(q-qr[::1 if c['kind']=='domain' else 2],axis=2).max()
+            fine=byid[other]['metrics'][-1]['field']
+            energy_error=abs(byid[name]['metrics'][-1]['field']-fine)/max(fine,1e-10)
+            check('comparison energy '+other,abs(energy_error-c['field_energy_relative']))
+            passed=position<=(1e-4 if c['kind']=='domain' else .01) and energy_error<=(1e-3 if c['kind']=='domain' else .05)
+        check('comparison position '+str(c),abs(position-c['position']))
+        check('comparison gate '+str(c),int(bool(passed)!=c['passed']),0)
+    # Explicit deposition/interpolation adjoint test at an evolved nonzero state.
+    from evolution import Evolution
+    model=Evolution()
+    state=np.load(OUT/'rotating-eta0.08-photon.npz')['final_state'].copy()
+    f,pi,q,p,alpha,a,s,b,beta,gp,gm,gc,k,j,w,e,abar,bbar,v,force,density=model.ingredients(state)
+    esource=np.einsum('k,kxyz->xyz',e,w)/model.dv
+    psource=np.einsum('ki,kxyz->ixyz',p,w)/model.dv
+    source=np.empty_like(f)
+    source[0]=model.g*alpha*(esource+np.sum(b*psource,axis=0))
+    source[1:]=alpha*model.kappa*model.eta*(psource/s-model.eta**2*a*np.sum(a*psource,axis=0)/s**3)
+    rng=np.random.default_rng(20260923);direction=rng.normal(size=f.shape)
+    expected=np.sum(source*direction)*model.dv
+    shifted=[]
+    for sign in (-1,1):
+        trial=state.copy();trial[:model.nf]+=sign*1e-5*direction.ravel()
+        shifted.append(independent_energy(trial,byid['rotating-eta0.08-photon']['spec'])[2])
+    check('source deposition interpolation adjoint',abs((shifted[1]-shifted[0])/2e-5-expected),2e-7)
     summary=dict(audit_passed=all(c['passed'] for c in checks),checks=checks,evolutions=len(rows),
                  evolution_gate_passes=sum(r['passed'] for r in rows),comparison_passes=sum(c['passed'] for c in comparisons),
                  comparison_count=len(comparisons),maximum_independent_energy_error=max(errors),

@@ -52,3 +52,5 @@ This broad mechanism has substantial prior art: [Damour and Esposito-Farese's sp
 4. Reject the branch as a joint solution if it merely needs object-by-object threshold tuning, still produces the wrong outer force, or cannot satisfy local light/matter tests. Preserve it as an unsuccessful hypothesis instead of renaming a known theory as our own.
 
 No numerical implementation or observational success of this proposed extension is claimed in this note. It is not permission to skip the original12 requirements or the pending coupled3D validation.
+
+Completion update,20 September2026: CC-2 is now finished and independently audited; all31 evolutions and11 comparisons pass. Its source-size sensitivity and OB-1 boundary failures remain. Proceed from that archived control, not from an assumption that the full physical solution is validated.
