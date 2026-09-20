@@ -1,5 +1,8 @@
 # Current status: photon–companion research
 
+**Local transfer refinement running, 20 September 2026.** [Checkpoint](research_work/experiments/spatial_exchange/local-transfer-refinement-report.md). The preregistered n40/48/64 plus rotated-n48 campaign uses unchanged combined equations. n40 finishes and passes20 independent archive checks: A carries10.0936% of initial angular momentum, including0.650193% outside the initial radius1.2. These outer-region values are stored angular momentum, not measured surface flux or established continuum-front evidence. The n48/n64 comparison and common-rotation gates remain pending. Physical ordinary-matter generation, fuel, full light/matter integration and observational validation remain incomplete; all twelve goal requirements remain active.
+
+
 **Local direct-transfer checkpoint, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/local-transfer-report.md). Adding a local direct momentum shift to the curl coupling transfers about10.18% of initial angular momentum into the vector field in a short finite-excitation run while retaining circulation. All48 derivative fixtures and five individual ledger checks pass; the independent archive audit passes137 checks. Field angular momentum changes0.58% across n24/n32, but circulation changes13.55%, failing the unchanged5% spatial gate. This demonstrates finite-excitation transfer, not outward flux, sustained gravity or observational success. Three of seven point-bundle runs now pass249 audit checks; remaining refinements continue. Ordinary-matter generation, physical fuel, joint light/matter dynamics and all twelve goal requirements remain active.
 
 
