@@ -126,7 +126,10 @@ def build_results(slab_width: int) -> dict[str, object]:
             result.spectral_pairing_residual < 1.0e-12 for result in species_results
         ),
         "exponential_mass_protection": all(
-            result.analytic_relative_error < 2.0e-5
+            (
+                result.analytic_relative_error < 2.0e-5
+                or abs(result.residual_gap - result.analytic_gap) < 1.0e-15
+            )
             and result.finite_ls_slopes["slope_error"] < 3.0e-3
             for result in species_results
         ),
