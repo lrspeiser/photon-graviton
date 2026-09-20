@@ -1,0 +1,343 @@
+{
+  "runs": [
+    {
+      "name": "free",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 2.0,
+      "direct": 1.0,
+      "speed": 0.2,
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "free": true,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true,
+        "free": true
+      },
+      "passed": true,
+      "energy_drift": 2.903054538425794e-16,
+      "angular_drift": 5.287405760805603e-16,
+      "momentum_drift": 6.938316608952863e-17,
+      "free_error": 4.0245584642661925e-15,
+      "bend": -1.820556147965243e-16,
+      "seconds": 9.880553299968597
+    },
+    {
+      "name": "baseline",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 0.0,
+      "direct": 0.0,
+      "speed": 0.2,
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "free": false,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true
+      },
+      "passed": true,
+      "energy_drift": 1.7649599070358456e-10,
+      "angular_drift": 0.0003562072955086576,
+      "momentum_drift": 3.635832014014531e-08,
+      "free_error": null,
+      "bend": -0.00871996534592629,
+      "seconds": 9.621547400020063
+    },
+    {
+      "name": "combined",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 2.0,
+      "direct": 1.0,
+      "speed": 0.2,
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "free": false,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true
+      },
+      "passed": true,
+      "energy_drift": 1.7654084289620323e-10,
+      "angular_drift": 0.00035616657439826977,
+      "momentum_drift": 3.635544482477029e-08,
+      "free_error": null,
+      "bend": -0.008717736265465672,
+      "seconds": 8.960405799967702
+    },
+    {
+      "name": "slow-baseline",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 0.0,
+      "direct": 0.0,
+      "speed": 0.0007,
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "free": false,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true
+      },
+      "passed": true,
+      "energy_drift": 1.596658744421328e-10,
+      "angular_drift": 0.0019267710678783664,
+      "momentum_drift": 3.28197799324954e-08,
+      "free_error": null,
+      "bend": -0.00832997200334187,
+      "seconds": 9.712766200012993
+    },
+    {
+      "name": "slow-combined",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 2.0,
+      "direct": 1.0,
+      "speed": 0.0007,
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "free": false,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true
+      },
+      "passed": true,
+      "energy_drift": 1.5966572641489956e-10,
+      "angular_drift": 0.0019267768969479574,
+      "momentum_drift": 3.2820996789019686e-08,
+      "free_error": null,
+      "bend": -0.008329966874362684,
+      "seconds": 9.813707599998452
+    },
+    {
+      "name": "time",
+      "n": 24,
+      "dt": 0.01,
+      "epsilon": 2.0,
+      "direct": 1.0,
+      "speed": 0.2,
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "free": false,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true
+      },
+      "passed": true,
+      "energy_drift": 5.665746389918701e-12,
+      "angular_drift": 0.0003561744368778383,
+      "momentum_drift": 3.635547670091406e-08,
+      "free_error": null,
+      "bend": -0.00871773677076998,
+      "seconds": 19.393293200002518
+    },
+    {
+      "name": "space",
+      "n": 32,
+      "dt": 0.01,
+      "epsilon": 2.0,
+      "direct": 1.0,
+      "speed": 0.2,
+      "rotation": [
+        [
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "free": false,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true
+      },
+      "passed": true,
+      "energy_drift": 5.515397195373629e-11,
+      "angular_drift": 0.0011314268880301013,
+      "momentum_drift": 4.7596432594730304e-08,
+      "free_error": null,
+      "bend": -0.01091021710544757,
+      "seconds": 53.40216870000586
+    },
+    {
+      "name": "rotation",
+      "n": 24,
+      "dt": 0.02,
+      "epsilon": 2.0,
+      "direct": 1.0,
+      "speed": 0.2,
+      "rotation": [
+        [
+          0.8516869862576586,
+          -0.4118739252902558,
+          0.3240202881076177
+        ],
+        [
+          0.4575086987494378,
+          0.8859130663520451,
+          -0.07644494381784266
+        ],
+        [
+          -0.2555681279188447,
+          0.21334926419538852,
+          0.9429565331760226
+        ]
+      ],
+      "free": false,
+      "checks": {
+        "finite": true,
+        "energy": true,
+        "angular": true,
+        "cone": true,
+        "edge": true
+      },
+      "passed": true,
+      "energy_drift": 1.5565220427041424e-10,
+      "angular_drift": 0.0004330529821055769,
+      "momentum_drift": 5.828228012088561e-08,
+      "free_error": null,
+      "bend": -0.008692243438187497,
+      "seconds": 7.666778500017244
+    }
+  ],
+  "comparisons": [
+    {
+      "name": "time",
+      "relative_error": 5.796278556742579e-08,
+      "passed": true
+    },
+    {
+      "name": "space",
+      "relative_error": 0.20095666463751422,
+      "passed": false
+    },
+    {
+      "name": "rotation",
+      "relative_error": 0.014814886131452895,
+      "passed": true
+    }
+  ],
+  "passed": false
+}
