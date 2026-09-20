@@ -203,6 +203,6 @@ def main():
     hashes={p.relative_to(HERE).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in out.rglob("*") if p.is_file()}
     dump(HERE/"evidence-sha256.json",hashes)
     dump(out/"complete.json",dict(complete=True))
-    print(json.dumps({k:v for k,v in audit.items() if k!="comparisons"},indent=2),flush=True)
+    print((out/"audit.json").read_text(encoding="utf8"),flush=True)
 
 if __name__=="__main__":main()
