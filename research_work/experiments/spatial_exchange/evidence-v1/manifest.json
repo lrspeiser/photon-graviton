@@ -1,0 +1,117 @@
+{
+  "source_commit": "906048838c64fe4331d965e6834a91c69dfa304a",
+  "sources": {
+    "protocol.md": "d965d611914f3c0c4605b27ad93090b4cee190786aa0b3e5916c001d5abadade",
+    "model.py": "3017e9bb8bd111ae46c978e6d0f04a5d3faa1e726c45bf375b623296bf3efdea",
+    "run.py": "6ed2dd511d23166eb2a28a468fb87f418464dc42274b71f64d35d41dae247ddc"
+  },
+  "helper_source": {
+    "path": "research_work/experiments/common_cone/model.py",
+    "sha256": "66b9620b8e71a666c976411ab7d60bd98be5c9ef9ca877736e58247fe23f7dfd"
+  },
+  "configurations": [
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "no-emission",
+      "emission": 0.0,
+      "chi": 0.0,
+      "mix": 0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "no-excitation",
+      "excitation": 0.0,
+      "chi": 200.0,
+      "mix": 0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "emission-only",
+      "chi": 0.0,
+      "mix": 0.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "exchange-0",
+      "chi": 0.0,
+      "mix": 0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "exchange-50",
+      "chi": 50.0,
+      "mix": 0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "exchange-200",
+      "chi": 200.0,
+      "mix": 0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "exchange-negative",
+      "chi": -50.0,
+      "mix": 0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "sign-mirror",
+      "chi": 200.0,
+      "mix": -0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "name": "time-refinement",
+      "chi": 200.0,
+      "mix": 0.5
+    },
+    {
+      "n": 40,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "name": "space-refinement",
+      "chi": 200.0,
+      "mix": 0.5
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "name": "rotation",
+      "chi": 200.0,
+      "mix": 0.5,
+      "angle": 1.0471975511965976
+    }
+  ],
+  "numpy": "2.2.6"
+}

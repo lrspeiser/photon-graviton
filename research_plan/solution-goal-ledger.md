@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**SE-1M response diagnostic and spatial checkpoint, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/mode-response-report.md). All 288 declared local mode fixtures pass, with 580 independent audit checks. The candidate's interaction-derived source per unit mode energy ranges from -108.16 to +243.92; this is neither a lensing multiplier nor an observational success. First-run JSON serialization failure is preserved. Six completed SE-1 spatial runs are archived and independently audited (105 checks); initially empty radiation/companion channels are generated from finite internal excitation with reciprocal reactions. Spatial refinements and symmetry checks remain pending. Increasing chi from 0 to 200 reduces the generated companion propagation-energy term in these completed runs, so large local response does not by itself solve the source budget. SR-2 has four of nine archived runs and 148 partial audit checks; 1% bend accuracy remains unproven. All twelve goals remain active.
+
+
 Active objective, 20 September 2026. All twelve requirements remain in scope. A numerical toy pass is not a substitute for an observational solution. Latest spatial-response extension: [SR-1](../research_work/experiments/common_cone/spatial-report.md), with [RB-1 source-budget screen](../research_work/experiments/common_cone/radiation-budget-report.md). Previous coupled evolution: [CC-2](../research_work/experiments/common_cone/evolution-report.md), following [CC-1](../research_work/experiments/common_cone/report.md) and [FM-1](../research_work/experiments/finite_mediator/report.md). No goal item is marked fully achieved.
 
 | Item | Current evidence | Completion evidence still needed |
