@@ -1,5 +1,8 @@
 # Current status: photon–companion research
 
+**Integrated transport and completed rotation audit, 20 September 2026.** [Transport report](research_work/experiments/spatial_exchange/transport-budget-report.md): three unchanged LR3 replays conserve regional energy plus RK-stage integrated outward flux;39 audit checks pass. Net outgoing energy through radius1.2 is8.11% at n32 over model time1, with spatial dependence and no physical fuel/luminosity claim. [LR4 final report](research_work/experiments/spatial_exchange/local-transfer-refinement-report.md): all four runs and71 archive checks finish; finest circulation/spin comparisons pass, but common-rotation circulation changes2.529%, failing the unchanged2% gate. Point-bundle refinement has4/7 runs and330 audit checks, still incomplete. Full matter/light integration, ordinary-matter fuel and observational validation remain outstanding; all twelve requirements stay active.
+
+
 **Compatible discrete energy flux, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/discrete-flux-report.md). All24 checks of the unchanged local-transfer RHS against its exact discrete face-flux identity pass; maximum local residual4.75e-11 and region residual4.18e-11. The formula accounts for both nearest-neighbor gradient energy and centered-curl exchange. This is instantaneous semi-discrete conservation, not yet measured integrated transport; RK-stage flux accumulation remains next. Existing refinement runs continue unchanged. Ordinary-matter fuel, full joint dynamics and observational predictions remain incomplete; all twelve goal requirements remain active.
 
 
