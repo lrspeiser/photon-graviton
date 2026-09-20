@@ -33,7 +33,7 @@ def main():
         inp=np.array([leader_angle(t) for t in h["time"]])
         choices=[]
         # Descriptive wider lag search only: retain at least 12 units of overlap.
-        for offset in range(len(signal)-60+1):
+        for offset in range(len(signal)-61+1):
             u=signal[offset:];v=inp[:len(u)]
             choices.append(float(np.corrcoef(u,v)[0,1]) if min(np.std(u),np.std(v))>1e-14 else -1.)
         j=int(np.argmax(choices))
