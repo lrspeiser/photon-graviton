@@ -1,0 +1,783 @@
+{
+  "summary": {
+    "passed": true,
+    "count": 48,
+    "commit": "a15748c99bc967d0dde3ce35cce325655d606f7b",
+    "sources": {
+      "rotor_model.py": "9073e25af5845191187f2b02852af5adfcdd92b9955958f308ccf848d5c965bc",
+      "check_rotor_full.py": "7a7577509d794f0c58a2a33dc3903eb65bbf3fd270e1f2881050b56d686b5ba1",
+      "rotor-full-protocol.md": "cb71826d7207578a691d06563cce9b6c4b29f965e8eccafb6c0ff8ae8d1282bf",
+      "model.py": "3017e9bb8bd111ae46c978e6d0f04a5d3faa1e726c45bf375b623296bf3efdea"
+    }
+  },
+  "rows": [
+    {
+      "index": 0,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.0,
+        "spin": 1
+      },
+      "gradient_error": 2.8906248271745594e-11,
+      "minimum_mass": 1.0027493756788175,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 1,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.4,
+        "spin": 1
+      },
+      "gradient_error": 2.540577318833892e-11,
+      "minimum_mass": 1.0010581662940667,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 2,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 2.0,
+        "spin": 1
+      },
+      "gradient_error": 6.505520774857665e-11,
+      "minimum_mass": 1.0015076700042604,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 3,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 10.0,
+        "spin": 1
+      },
+      "gradient_error": 3.492578188463158e-11,
+      "minimum_mass": 1.0015380012745005,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 4,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.0,
+        "spin": 1
+      },
+      "gradient_error": 1.4162093373015772e-11,
+      "minimum_mass": 1.0024895063327592,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 5,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.4,
+        "spin": 1
+      },
+      "gradient_error": 1.1531674053155694e-12,
+      "minimum_mass": 1.0012140521859232,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 6,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 2.0,
+        "spin": 1
+      },
+      "gradient_error": 3.334049637933323e-11,
+      "minimum_mass": 1.001621573166223,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 7,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 10.0,
+        "spin": 1
+      },
+      "gradient_error": 4.3429725527649454e-11,
+      "minimum_mass": 1.0023556218671248,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 8,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.0,
+        "spin": -1
+      },
+      "gradient_error": 2.9806188767134145e-11,
+      "minimum_mass": 1.0006387159758328,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 9,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.4,
+        "spin": -1
+      },
+      "gradient_error": 1.82481959230818e-11,
+      "minimum_mass": 1.001277112440931,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 10,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 2.0,
+        "spin": -1
+      },
+      "gradient_error": 2.4906003474878258e-11,
+      "minimum_mass": 1.000180736237774,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 11,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 10.0,
+        "spin": -1
+      },
+      "gradient_error": 2.869825037332685e-12,
+      "minimum_mass": 1.0017390273400144,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 12,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.0,
+        "spin": -1
+      },
+      "gradient_error": 2.7470272584428912e-11,
+      "minimum_mass": 1.0004029578996683,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 13,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.4,
+        "spin": -1
+      },
+      "gradient_error": 1.193288913861612e-11,
+      "minimum_mass": 1.0009758051884994,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 14,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 2.0,
+        "spin": -1
+      },
+      "gradient_error": 2.2452149514573527e-11,
+      "minimum_mass": 1.0017669005039878,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 15,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 10.0,
+        "spin": -1
+      },
+      "gradient_error": 3.5851321911195555e-12,
+      "minimum_mass": 1.0012660170714716,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 16,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.0,
+        "spin": 1
+      },
+      "gradient_error": 1.4497750222552952e-11,
+      "minimum_mass": 1.0036049838570238,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 17,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.4,
+        "spin": 1
+      },
+      "gradient_error": 2.2671608514157615e-11,
+      "minimum_mass": 1.0021377474445854,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 18,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 2.0,
+        "spin": 1
+      },
+      "gradient_error": 1.3067850621051313e-11,
+      "minimum_mass": 1.0019552573891828,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 19,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 10.0,
+        "spin": 1
+      },
+      "gradient_error": 5.5111843907940106e-12,
+      "minimum_mass": 1.001098370353118,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 20,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.0,
+        "spin": 1
+      },
+      "gradient_error": 2.7056026689897816e-11,
+      "minimum_mass": 1.0013610098016756,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 21,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.4,
+        "spin": 1
+      },
+      "gradient_error": 2.2725047971877688e-11,
+      "minimum_mass": 1.0023809063476898,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 22,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 2.0,
+        "spin": 1
+      },
+      "gradient_error": 1.0515621359785676e-11,
+      "minimum_mass": 1.0008182854938426,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 23,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 10.0,
+        "spin": 1
+      },
+      "gradient_error": 3.156051982255992e-11,
+      "minimum_mass": 1.001018364287954,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 24,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.0,
+        "spin": -1
+      },
+      "gradient_error": 9.983566057192306e-12,
+      "minimum_mass": 1.0007562233582679,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 25,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.4,
+        "spin": -1
+      },
+      "gradient_error": 1.906028156486994e-11,
+      "minimum_mass": 1.0017929009499593,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 26,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 2.0,
+        "spin": -1
+      },
+      "gradient_error": 6.636748442478968e-12,
+      "minimum_mass": 1.0012888521341523,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 27,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 10.0,
+        "spin": -1
+      },
+      "gradient_error": 4.4050043994381394e-11,
+      "minimum_mass": 1.0014216382488912,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 28,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.0,
+        "spin": -1
+      },
+      "gradient_error": 2.585563100426791e-11,
+      "minimum_mass": 1.0007510747287982,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 29,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.4,
+        "spin": -1
+      },
+      "gradient_error": 1.944863714520295e-11,
+      "minimum_mass": 1.0011617305493734,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 30,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 2.0,
+        "spin": -1
+      },
+      "gradient_error": 6.7269874566566745e-12,
+      "minimum_mass": 1.0014312485129833,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 31,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 10.0,
+        "spin": -1
+      },
+      "gradient_error": 2.2312835606941306e-11,
+      "minimum_mass": 1.0011139326344263,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 32,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.0,
+        "spin": 1
+      },
+      "gradient_error": 1.3894049105678263e-11,
+      "minimum_mass": 1.0028354099696557,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 33,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.4,
+        "spin": 1
+      },
+      "gradient_error": 1.9734970602147683e-11,
+      "minimum_mass": 1.0019052696898467,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 34,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 2.0,
+        "spin": 1
+      },
+      "gradient_error": 5.9379671318859906e-12,
+      "minimum_mass": 1.0011424865637089,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 35,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 10.0,
+        "spin": 1
+      },
+      "gradient_error": 1.552430579920827e-11,
+      "minimum_mass": 1.0019019692433924,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 36,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.0,
+        "spin": 1
+      },
+      "gradient_error": 1.4809795750858612e-11,
+      "minimum_mass": 1.0008047715515582,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 37,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.4,
+        "spin": 1
+      },
+      "gradient_error": 2.39202277776962e-12,
+      "minimum_mass": 1.001682994239614,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 38,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 2.0,
+        "spin": 1
+      },
+      "gradient_error": 1.1392669793663934e-11,
+      "minimum_mass": 1.0019145884473915,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 39,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 10.0,
+        "spin": 1
+      },
+      "gradient_error": 1.2956300095290363e-11,
+      "minimum_mass": 1.0015149402369745,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 40,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.0,
+        "spin": -1
+      },
+      "gradient_error": 3.4522077470983126e-11,
+      "minimum_mass": 1.001380247983326,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 41,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 0.4,
+        "spin": -1
+      },
+      "gradient_error": 3.143964168866864e-11,
+      "minimum_mass": 1.0002063379197323,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 42,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 2.0,
+        "spin": -1
+      },
+      "gradient_error": 4.111333756079416e-11,
+      "minimum_mass": 1.000575444032025,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 43,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 0.0,
+        "rotor_coupling": 10.0,
+        "spin": -1
+      },
+      "gradient_error": 2.6714058048993294e-11,
+      "minimum_mass": 1.0006979143549672,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 44,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.0,
+        "spin": -1
+      },
+      "gradient_error": 7.272368037630761e-12,
+      "minimum_mass": 1.0015360348085718,
+      "cone_error": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "index": 45,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 0.4,
+        "spin": -1
+      },
+      "gradient_error": 1.0516936280180467e-11,
+      "minimum_mass": 1.0017591842322127,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 46,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 2.0,
+        "spin": -1
+      },
+      "gradient_error": 3.912603747935339e-12,
+      "minimum_mass": 1.003220456012442,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "index": 47,
+      "config": {
+        "n": 12,
+        "length": 10.0,
+        "radius": 1.2,
+        "chi": 200.0,
+        "rotor_coupling": 10.0,
+        "spin": -1
+      },
+      "gradient_error": 1.1739070653049577e-11,
+      "minimum_mass": 1.0012006392638135,
+      "cone_error": 0.0,
+      "reduction_error": null,
+      "passed": true
+    }
+  ]
+}

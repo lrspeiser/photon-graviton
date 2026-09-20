@@ -1,5 +1,8 @@
 # Research changelog
 
+**Full rotor Hamiltonian embedding checked, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/rotor-full-report.md). All 48 full-system derivative fixtures pass, maximum error6.51e-11; twelve zero-coupling reductions exactly reproduce the earlier scalar oscillator. The angular ledger includes canonical rotor spin, and both curl field source and positional/internal reactions are implemented. Source-region propagation/stability and full angular convergence are not established, so no rotor-driven physical evolution result is claimed. Five bundle runs are now audited (260 checks), while source and grid refinements continue. All twelve goal requirements remain active.
+
+
 **Finite rotor/curl coupling derived, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/rotor-report.md). A new candidate internal-mass square couples a finite canonical rotor to sampled curl A, with reciprocal field torque and positional reaction. All 96 local derivative/rotation identities and 48 joint grid interaction checks pass. The derivative-dependent coupling still requires full-system propagation, stability and angular-ledger validation before a 3D evolution; stronger swirl is not claimed. Related spin/rotor and field-torque prior art is explicitly credited. Existing bundle/source/grid campaigns continue unchanged. All twelve goal items remain active.
 
 
