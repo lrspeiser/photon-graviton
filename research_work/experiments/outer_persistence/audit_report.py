@@ -65,6 +65,8 @@ def main():
     fig.tight_layout(rect=(0,.08,1,.94))
     fig.text(.02,.025,"Fixed ordinary sources and distances; no dark matter or expansion. Pressure is not lensing. Radial means are row-weighted; model scores are object-weighted.",fontsize=8)
     fig.savefig(HERE/"comparison.png",dpi=180);fig.savefig(HERE/"comparison.svg");plt.close(fig)
+    svg=HERE/"comparison.svg"
+    svg.write_text("\n".join(x.rstrip() for x in svg.read_text().splitlines())+"\n",encoding="utf8")
     lens=D.read(out/"lensing.json");completion=D.read(out/"complete.json")
     inner=D.read(out/"inner-domain-sensitivity.json")
     paired=D.read(out/"paired-bootstrap.json")["protected"]
