@@ -9,3 +9,8 @@ selected laws at dt0.005 and0.0025, plus the highest and lowest mean inward
 positive-coupling cases. Keep the original absolute angle/position and relative
 exposure tolerances. This is an exposed numerical diagnosis of sharp transport
 boundaries, not a new physical parameter fit or new holdout.
+
+The finer-run finish.py command likewise saved its results, report and completion
+marker before a console-only NumPy integer JSON serialization error returned exit1.
+Its print path was fixed afterward; the numerical evidence was not rerun. Both
+original sources are preserved at their manifest Git commits.

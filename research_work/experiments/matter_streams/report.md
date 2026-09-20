@@ -20,7 +20,7 @@ Seven preliminary controls pass; full-grid chirality reflection is exact, and ze
 
 Additional dt0.005 versus dt0.0025 comparisons pass 78/80 under the original angle/position/exposure limits. The set includes all six selected counter-following laws and two positive-coupling representatives. Unconverged values must not be promoted.
 
-The first command returned exit1 solely while printing a NumPy Boolean as JSON, after all results, the plot and completion marker had been saved. The console serialization was corrected; the first simulation archive was not overwritten or rerun to hide it.
+The first command returned exit1 solely while printing a NumPy Boolean as JSON, after all results, the plot and completion marker had been saved. The console serialization was corrected; the first simulation archive was not overwritten or rerun to hide it. The finer-run command also returned exit1 at its final console print (a NumPy integer), after saving all outputs. That print-only path was fixed as well; both original sources remain pinned in Git.
 
 ## Limits and next extension
 
