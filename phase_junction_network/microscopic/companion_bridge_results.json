@@ -1,0 +1,123 @@
+{
+  "claim_boundary": {
+    "established": [
+      "unambiguous companion identity",
+      "one finite Hermitian common Hamiltonian",
+      "reverse channels and recoil",
+      "source-fuel, energy, momentum and boundary ledgers",
+      "dynamical bound deposit",
+      "one frame for motion, lensing and clock response"
+    ],
+    "open": [
+      "3+1D deconfined QED",
+      "microscopic chiral matter",
+      "nonlinear gravity",
+      "Lorentz-invariant interacting continuum and common cone",
+      "many-body capacity and lifetime",
+      "observational predictions"
+    ]
+  },
+  "decision": "close issue #7 at the finite integration-architecture threshold; route physical scaling to issues #2-#6, #8 and #9",
+  "end_to_end_source_to_receiver": {
+    "basis": [
+      "source_fuel",
+      "high_photon",
+      "low_photon_plus_traveling_chi",
+      "low_photon_plus_bound_chi_plus_recoil",
+      "receiver_plus_bound_chi_plus_recoil"
+    ],
+    "best_event_time": 85.5,
+    "bound_below_free_band_by": 1.2027895096319463,
+    "bound_mode_IPR": 0.8906794017429961,
+    "bound_mode_energy": 0.9972104903680534,
+    "closed_boundary_energy_flux": 0.0,
+    "component_ledger": {
+      "bound_chi": 0.9715526829420794,
+      "capture": 3.124535135831663e-17,
+      "conversion": -2.9853506819388365e-16,
+      "frame_reduced": -0.005087953444709727,
+      "free_chi": 0.005015731217026034,
+      "matter_internal": 3.279429383272598,
+      "photon": 0.013173477283876366,
+      "receiver": 3.359129380903214e-16,
+      "recoil": 0.63328989479579,
+      "source_coupling": -1.2804427657053807e-16,
+      "source_fuel": 0.1026267839333422
+    },
+    "component_ledger_error": 8.881784197001252e-16,
+    "energy_drift": 9.769962616701378e-15,
+    "field_momentum_change": 0.9867482583056614,
+    "forward_reverse_probability_difference": 0.0,
+    "hilbert_dimension": 5,
+    "integrated_reciprocal_force": 0.9867037593192114,
+    "maximum_bound_recoil_probability": 0.9778685459166276,
+    "maximum_receiver_bound_recoil_probability": 0.974264674361759,
+    "momentum_ledger_residual": 4.449898644998118e-05,
+    "receiver_clock_gap_shift_is_derived_below": true,
+    "source_fuel_final_expectation": 0.10262678393334221,
+    "source_fuel_initial": 5.0,
+    "status": "pass",
+    "unit_occupation_reduced_frame_energy": -0.00522232158754822
+  },
+  "field_dictionary": {
+    "companion": "neutral scalar relative-phase quantum chi=varphi",
+    "deposit": "bound state of the same chi sector",
+    "frame": "one constrained shared field sourcing motion, light response, and clock shift",
+    "graviton": "separate transverse frame excitation, not the companion",
+    "matter": "finite source, converter, recoil/capture, and receiver defects",
+    "photon": "high/low frequency bins of one compact-link transverse field"
+  },
+  "free_companion_propagation": {
+    "chi_dispersion": "omega0-2 Jchi cos(k)",
+    "chi_max_group_velocity": 0.6,
+    "chi_polarizations": 1,
+    "chi_to_photon_speed_ratio": 0.35714285714285715,
+    "closed_system_intrinsic_decay_probability": 0.0,
+    "decision": "equal-speed propagation is not established and is owned by issue #8",
+    "photon_max_group_velocity": 1.68,
+    "status": "pass_with_open_common_cone"
+  },
+  "module": "phase_junction_network/microscopic/check_companion_bridge.py",
+  "negative_controls": {
+    "bound_control_reference_IPR": 0.8906794017429961,
+    "bound_control_reference_below_band": 1.2027895096319463,
+    "no_binding_IPR": 0.14285714285714285,
+    "no_binding_below_band_energy": 0.0,
+    "no_conversion_cross_sector_element": 0.0,
+    "no_recoil_capture_probability": 0.0,
+    "one_way_transition_rejected": true,
+    "reason": "removing a Hermitian-conjugate channel makes H non-Hermitian and breaks the energy ledger",
+    "status": "pass"
+  },
+  "reversible_matter_assisted_vertex": {
+    "charge_commutator": 0.0,
+    "energy_drift": 2.5757174171303632e-14,
+    "forward_reverse_probability_difference": 0.0,
+    "hilbert_dimension": 392,
+    "maximum_target_probability": 0.9743285450757632,
+    "momentum_sector_dimension": 56,
+    "on_shell_partition": {
+      "chi": 0.7012081585130132,
+      "matter_internal_gap": 0.17945968963410222,
+      "matter_recoil": 0.20142049798141545,
+      "mismatch": 0.0,
+      "photon_loss": 1.0820883461285309
+    },
+    "selected_Jz_commutator": 0.0,
+    "status": "pass",
+    "target_time": 297.3,
+    "translation_commutator": 0.0
+  },
+  "shared_frame_motion_lensing_clock": {
+    "deposit_normalization": 0.9742646743617591,
+    "frame_equation_residual": 2.7755575615628914e-17,
+    "independent_lensing_multiplier_count": 0,
+    "independent_motion_multiplier_count": 0,
+    "light_deflection": -0.003904996819244015,
+    "material_clock_gap_shift": 0.0031257782037190196,
+    "matter_acceleration": -0.00023318692476411224,
+    "same_field_identity_residual": 0.0,
+    "status": "pass"
+  },
+  "status": "finite reversible integration architecture passes; continuum and empirical viability remain open"
+}

@@ -47,6 +47,11 @@ jobs:
             --slab-width 12 \
             --output /tmp/chiral_matter_results.json
 
+      - name: Check finite reversible photon-companion integration
+        run: |
+          python phase_junction_network/microscopic/check_companion_bridge.py \
+            --output /tmp/companion_bridge_results.json
+
       - name: Check first-order frame connection
         run: |
           python phase_junction_network/microscopic/check_first_order_frame.py \
