@@ -14,7 +14,7 @@ resolutions. The response is a Hessian matrix element per unit nodal amplitude;
 it need not have the same magnitude across resolutions.
 
 Compute the new coupling by actual centered curls and by the independent
-factorized expression -epsilon^2 |Q|^2 (D_x W at input)(D_x W at output)/dV.
+factorized expression +epsilon^2 |Q|^2 (D_x W at input)(D_x W at output)/dV.
 Require agreement to1e-12 absolute plus1e-10 relative. Require zero coupling
 when epsilon0 and proportionality epsilon^2 for the nonzero cases to1e-10.
 Use both directions to check reciprocity to1e-12.
@@ -32,3 +32,9 @@ It tests the claimed scope of our own finite-front interpretation. A causal
 local completion would need internal source degrees of freedom distributed
 through matter with their own propagation equations, rather than one instantly
 shared rotor over the whole kernel. That completion remains undeveloped.
+
+Pre-execution algebra correction: the factorized sign is positive. Summing
+-W D_x delta(A_z) gives +D_x W at the input; the output curl contributes
++D_x W. The two spatial derivatives have opposite signs at the chosen points,
+so the evaluated off-diagonal matrix element is negative. This corrects the
+written formula before any numerical execution; the implemented model is unchanged.
