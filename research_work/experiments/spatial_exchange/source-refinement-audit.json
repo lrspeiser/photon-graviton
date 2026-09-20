@@ -1,7 +1,7 @@
 {
   "audit_passed": true,
-  "checks": 12,
-  "completed_new_runs": 1,
+  "checks": 20,
+  "completed_new_runs": 2,
   "declared_new_runs": 7,
   "complete": false,
   "source_accuracy_passed": null,
@@ -17,6 +17,13 @@
       "name": "Y-time",
       "wave_relative_difference": 2.039876354938293e-08,
       "total_relative_difference": 4.0414509790066837e-10,
+      "previous_wave_difference": null,
+      "passed": true
+    },
+    {
+      "name": "Y-rotation",
+      "wave_relative_difference": 0.0015396971143550437,
+      "total_relative_difference": 3.473685049207067e-05,
       "previous_wave_difference": null,
       "passed": true
     }
@@ -46,6 +53,31 @@
       ],
       "passed": true,
       "state_sha256": "a17985a30ecf022b0d652d93b2921e4d82396a6658e0d2b4baa007f7c29839e2"
+    },
+    "mixed-n40": {
+      "campaign": "source-refinement-v1",
+      "name": "mixed-n40",
+      "matter_source": 6.329019774416209,
+      "field_source": 0.052032805737519505,
+      "wave_source": 0.028995772279165756,
+      "other_field_source": 0.02303703345835375,
+      "total_coupling_source": 6.381052580153729,
+      "wave_fraction": 0.004544042211679629,
+      "restoring_source": -1.9265205258300162,
+      "integrated_rhs_source": 6.381052580153729,
+      "rhs_error": 0.0,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 8.873391799113506e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 1.3314283897614132e-08
+        }
+      ],
+      "passed": true,
+      "state_sha256": "73ed16e8fb773b05c5ce0a609600ee20d57c6954a731c85af0111212e4e981bd"
     },
     "mixed-coarse": {
       "campaign": "emitter-v1",
@@ -121,6 +153,56 @@
       ],
       "passed": true,
       "state_sha256": "64112acbd4d18455b9f4d901f2b497a1abd57c7785f10a888386d28f683675cf"
+    },
+    "Y-n40": {
+      "campaign": "emitter-v1",
+      "name": "space-refinement",
+      "matter_source": 6.329006999009371,
+      "field_source": 0.07209927882477912,
+      "wave_source": 0.04900038361848391,
+      "other_field_source": 0.02309889520629521,
+      "total_coupling_source": 6.40110627783415,
+      "wave_fraction": 0.007654986730678602,
+      "restoring_source": -1.9281249673714451,
+      "integrated_rhs_source": 6.401106277834151,
+      "rhs_error": 8.881784197001252e-16,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 9.55569579019766e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 9.55569579019766e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "fd244c45edc15e2bfd4cf74c7e6dba79f96ea6dcfe087b4f4eb143728d9895aa"
+    },
+    "Y-rotation": {
+      "campaign": "emitter-v1",
+      "name": "rotation",
+      "matter_source": 6.328654129220765,
+      "field_source": 0.07247510759212775,
+      "wave_source": 0.04913043887583192,
+      "other_field_source": 0.023344668716295827,
+      "total_coupling_source": 6.401129236812893,
+      "wave_fraction": 0.007675276823545879,
+      "restoring_source": -1.9281007646067168,
+      "integrated_rhs_source": 6.401129236812894,
+      "rhs_error": 8.881784197001252e-16,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 1.432978180559985e-10
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 8.738486378945254e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "af935fda04fcdc717073cfbf4bd8b06218a7c915add744268f901ffb7ce93629"
     }
   },
   "analysis_sources": {

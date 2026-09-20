@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Three evolving bundle cases and observer convention, 20 September 2026.** [Bundle report](../research_work/experiments/spatial_exchange/bundle-report.md), [observer report](../research_work/experiments/spatial_exchange/observer-report.md). Emission-only, X and mixed cases complete; mixed chi200 increases the coarse central bend by about 0.060%, much less than its wave-sector source ratio. This small difference is not yet demonstrated to survive matching refinements. The action-based observer clock/energy convention passes 48 local and two uniform checks after a preserved JSON output failure; it is not a material-clock model and is not retrofitted onto incomplete detector histories. SE-2 has completed all ten runs and three comparisons with 144 audit checks; SE-R has two completed runs, and the remaining bundle/refinement cases continue. All twelve requirements remain active.
+
+
 **First evolving ray-bundle result audited, 20 September 2026.** [Report and chart](../research_work/experiments/spatial_exchange/bundle-report.md). The emission-only control finishes with central bend -0.011270736 model radians, detector arrival offset 0.0107100 model time and parallel-ray area gain 1.03328. Its background and bundle gates pass; independent crossing, transport-map and full-grid endpoint velocity/energy checks pass. This is one of seven cases, not an emitter comparison or an observed cluster lens. Massive test bodies respond inward relative to free flight during the same evolving field. Six bundle cases and the source/spatial refinements remain pending; stable orbits, physical scaling and observational validation remain required. All twelve goals remain active.
 
 
