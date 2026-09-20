@@ -1,0 +1,159 @@
+{
+  "checks": {
+    "electromagnetic_power_is_four": true,
+    "exact_common_cone": true,
+    "gravity_power_is_two": true,
+    "mediators_remain_separated": true,
+    "negative_controls_restore_freedom": true,
+    "path_coefficient_is_20": true
+  },
+  "claim_boundary": {
+    "established": [
+      "one exact finite mediator model produces both sectors",
+      "the electromagnetic loop is fourth order with coefficient 20",
+      "the frame/connection process is second order with coefficient 1",
+      "a common-cone condition fixes t/Delta in the exact toy model",
+      "the unwanted mediator bands remain separated at that point"
+    ],
+    "not_established": [
+      "the full three-dimensional finite photon and frame Hamiltonians arise from this exact local graph",
+      "the shared-Casimir normalization follows from a fundamental symmetry",
+      "Z_g/Z_A=1 in physical normalization",
+      "the observed values of alpha or G",
+      "nonlinear gravity, matter loops, companion coefficients, or radiative stability",
+      "formal novelty against all published or unpublished prior art"
+    ]
+  },
+  "exact_common_cone_solution": {
+    "K_A_over_Delta": 0.06850774938001117,
+    "K_g_over_Delta": 0.06850774938001115,
+    "consequence": "With one shared Casimir penalty, K_A=K_g implies equal bare cones and Z_g/Z_A=1 in this prototype normalization.",
+    "electromagnetic_next_band_gap_over_K": 9.925815761431478,
+    "gravity_next_band_gap_over_K": 16.59688880527981,
+    "relative_coupling_mismatch": 2.0257252549393554e-16,
+    "relative_shift_from_leading_order": 0.24815361899279087,
+    "shared_charging_assumption": "U_A=U_g=Delta",
+    "x_t_over_Delta_exact": 0.27909563384302527,
+    "x_t_over_Delta_leading_order": 0.22360679774997896
+  },
+  "leading_effective_coefficients": {
+    "K_A": "20*t^4/Delta^3 + O(t^6/Delta^5)",
+    "K_g": "t^2/Delta + O(t^4/Delta^3)",
+    "U_A": "Delta",
+    "U_g": "Delta",
+    "Z_g_over_Z_A": "sqrt(K_A/K_g)=sqrt(20)*t/Delta + higher orders when U_A=U_g",
+    "c_A_over_c_g": "sqrt(K_A/K_g)=sqrt(20)*t/Delta + higher orders"
+  },
+  "microscopic_model": {
+    "electromagnetic_process": "Four elementary link swaps close one plaquette; intermediate partial strings cost Delta per connected component.",
+    "gravity_process": "Two elementary swaps move one frame mode through one gapped connection mediator.",
+    "shared_local_penalty": "H_charge=(Delta/2)(E_A^2+Pi_g^2), with equal generator normalization as an explicit junction-Casimir hypothesis.",
+    "shared_parameters": {
+      "defect_penalty": "Delta",
+      "dimensionless_ratio": "x=t/Delta",
+      "swap_amplitude": "t"
+    }
+  },
+  "module": "phase_junction_network/microscopic/check_shared_junction_move.py",
+  "negative_controls": {
+    "at_shared_point": {
+      "K_A_over_Delta": 0.06850774938001117,
+      "K_g_over_Delta": 0.06850774938001115
+    },
+    "independent_penalties": {
+      "prediction_lost": true,
+      "result": "Replacing Delta by Delta_A and Delta_g restores an arbitrary ratio K_A/K_g approximately 20*t_A^4*Delta_g/(Delta_A^3*t_g^2)."
+    },
+    "independent_swap_amplitudes": {
+      "prediction_lost": true,
+      "result": "Replacing t by t_A and t_g restores an arbitrary ratio K_A/K_g approximately 20*t_A^4/(Delta^2*t_g^2)."
+    },
+    "unequal_charging_casimirs": {
+      "prediction_lost": true,
+      "result": "Even if K_A=K_g, allowing U_A/U_g to float makes Z_g/Z_A=sqrt(U_g/U_A) arbitrary."
+    }
+  },
+  "next_gate": "Embed the shared mediator in the actual finite spin-1 photon link and dressed-frame Weyl algebra, derive the full Schrieffer-Wolff operators, and test whether the exact common-cone root survives without adding sector-specific amplitudes or penalties.",
+  "parameter_count": {
+    "after_common_cone": "The exact finite prototype fixes x=0.2790956338, leaving one overall energy scale Delta.",
+    "after_shared_move": "All four are functions of Delta and x=t/Delta, subject to the explicit shared-Casimir normalization.",
+    "before_shared_move": "U_A, K_A, U_g, K_g are four independent effective inputs."
+  },
+  "path_count": {
+    "denominator_classes": {
+      "1x1x1": 16,
+      "1x2x1": 8
+    },
+    "fourth_order_offdiagonal_coefficient": 20.0,
+    "interpretation": "16 orderings have denominators Delta,Delta,Delta and 8 have Delta,2Delta,Delta, giving 20*t^4/Delta^3.",
+    "permutations": 24
+  },
+  "scaling_fits": {
+    "electromagnetic": {
+      "power": 3.991971927647988,
+      "prefactor": 19.318618510537623
+    },
+    "gravity": {
+      "power": 1.997190806723475,
+      "prefactor": 0.9876725546989007
+    }
+  },
+  "small_x_rows": [
+    {
+      "K_A_exact_over_Delta": 1.9988796637888223e-07,
+      "K_A_fourth_order_over_Delta": 2e-07,
+      "K_A_ratio_exact_to_leading": 0.9994398318944112,
+      "K_g_exact_over_Delta": 9.998000799600337e-05,
+      "K_g_ratio_exact_to_leading": 0.9998000799600336,
+      "K_g_second_order_over_Delta": 0.0001,
+      "x_t_over_Delta": 0.01
+    },
+    {
+      "K_A_exact_over_Delta": 1.0118487617353253e-06,
+      "K_A_fourth_order_over_Delta": 1.0124999999999998e-06,
+      "K_A_ratio_exact_to_leading": 0.9993568017139017,
+      "K_g_exact_over_Delta": 0.00022489884123282355,
+      "K_g_ratio_exact_to_leading": 0.9995504054792158,
+      "K_g_second_order_over_Delta": 0.000225,
+      "x_t_over_Delta": 0.015
+    },
+    {
+      "K_A_exact_over_Delta": 3.192823382427444e-06,
+      "K_A_fourth_order_over_Delta": 3.2e-06,
+      "K_A_ratio_exact_to_leading": 0.9977573070085761,
+      "K_g_exact_over_Delta": 0.0003996805111811504,
+      "K_g_ratio_exact_to_leading": 0.999201277952876,
+      "K_g_second_order_over_Delta": 0.0004,
+      "x_t_over_Delta": 0.02
+    },
+    {
+      "K_A_exact_over_Delta": 1.6118130418254026e-05,
+      "K_A_fourth_order_over_Delta": 1.6199999999999997e-05,
+      "K_A_ratio_exact_to_leading": 0.9949463221144462,
+      "K_g_exact_over_Delta": 0.0008983858096500217,
+      "K_g_ratio_exact_to_leading": 0.9982064551666908,
+      "K_g_second_order_over_Delta": 0.0009,
+      "x_t_over_Delta": 0.03
+    },
+    {
+      "K_A_exact_over_Delta": 5.073902766137953e-05,
+      "K_A_fourth_order_over_Delta": 5.12e-05,
+      "K_A_ratio_exact_to_leading": 0.9909966337722565,
+      "K_g_exact_over_Delta": 0.0015949126470333224,
+      "K_g_ratio_exact_to_leading": 0.9968204043958264,
+      "K_g_second_order_over_Delta": 0.0016,
+      "x_t_over_Delta": 0.04
+    },
+    {
+      "K_A_exact_over_Delta": 0.00012323672084358327,
+      "K_A_fourth_order_over_Delta": 0.00012500000000000003,
+      "K_A_ratio_exact_to_leading": 0.9858937667486659,
+      "K_g_exact_over_Delta": 0.002487623459051946,
+      "K_g_ratio_exact_to_leading": 0.9950493836207782,
+      "K_g_second_order_over_Delta": 0.0025000000000000005,
+      "x_t_over_Delta": 0.05
+    }
+  ],
+  "stage_pass": true,
+  "status": "Stage 3A PASS: one shared swap amplitude and one shared penalty generate both effective sectors and reduce four stiffnesses to one scale plus one dimensionless ratio; full issue #3 remains open"
+}
