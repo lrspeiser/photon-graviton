@@ -1,0 +1,32 @@
+{
+  "axial_lowest_mode": [
+    {"L": 12, "continuum_k": 0.5235987755982988, "lattice_k": 0.5176380902050415, "omega": 0.5176380902050414, "omega_over_continuum_k": 0.988615929465369, "omega_over_lattice_k": 0.9999999999999998, "tt_eigenvalues": [0.2679491924311226, 0.26794919243112264]},
+    {"L": 16, "continuum_k": 0.39269908169872414, "lattice_k": 0.3901806440322565, "omega": 0.3901806440322565, "omega_over_continuum_k": 0.9935868511442058, "omega_over_lattice_k": 1.0, "tt_eigenvalues": [0.1522409349774264, 0.1522409349774265]},
+    {"L": 24, "continuum_k": 0.2617993877991494, "lattice_k": 0.26105238444010315, "omega": 0.26105238444010315, "omega_over_continuum_k": 0.9971466573496369, "omega_over_lattice_k": 1.0, "tt_eigenvalues": [0.06814834742186338, 0.06814834742186342]},
+    {"L": 32, "continuum_k": 0.19634954084936207, "lattice_k": 0.1960342806591212, "omega": 0.19603428065912118, "omega_over_continuum_k": 0.9983943930356183, "omega_over_lattice_k": 0.9999999999999999, "tt_eigenvalues": [0.0384294391935391, 0.038429439193539104]},
+    {"L": 48, "continuum_k": 0.1308996938995747, "lattice_k": 0.13080625846028612, "omega": 0.13080625846028612, "omega_over_continuum_k": 0.9992862058229085, "omega_over_lattice_k": 1.0, "tt_eigenvalues": [0.017110277252379173, 0.017110277252379177]},
+    {"L": 64, "continuum_k": 0.09817477042468103, "lattice_k": 0.09813534865483603, "omega": 0.09813534865483602, "omega_over_continuum_k": 0.999598453149679, "omega_over_lattice_k": 0.9999999999999999, "tt_eigenvalues": [0.009630546655606222, 0.009630546655606228]},
+    {"L": 96, "continuum_k": 0.06544984694978735, "lattice_k": 0.06543816564355227, "omega": 0.06543816564355227, "omega_over_continuum_k": 0.999821522787608, "omega_over_lattice_k": 1.0, "tt_eigenvalues": [0.004282153522792985, 0.0042821535227929855]},
+    {"L": 128, "continuum_k": 0.04908738521234052, "lattice_k": 0.049082457045824576, "omega": 0.049082457045824576, "omega_over_continuum_k": 0.9998996042161418, "omega_over_lattice_k": 1.0, "tt_eigenvalues": [0.0024090875896552143, 0.0024090875896552147]}
+  ],
+  "equal_continuum_norm_direction_test": {
+    "anisotropy_proportional_to_L_power": -2.0111077654407836,
+    "modes": [[3, 0, 0], [2, 2, 1]],
+    "prefactor": 9.211260749816331,
+    "rows": [
+      {"L": 12, "axis_mode_omega": 1.414213562373095, "mixed_mode_omega": 1.5059711791502257, "relative_anisotropy": 0.0628437067507347},
+      {"L": 16, "axis_mode_omega": 1.1111404660392044, "mixed_mode_omega": 1.1505710800429658, "relative_anisotropy": 0.03486794244125852},
+      {"L": 24, "axis_mode_omega": 0.7653668647301795, "mixed_mode_omega": 0.7772044340352856, "relative_anisotropy": 0.015347840731355339},
+      {"L": 32, "axis_mode_omega": 0.5805693545089246, "mixed_mode_omega": 0.5855862952190667, "relative_anisotropy": 0.008604238570232629},
+      {"L": 48, "axis_mode_omega": 0.3901806440322565, "mixed_mode_omega": 0.39167202107899657, "relative_anisotropy": 0.0038149823190226206},
+      {"L": 64, "axis_mode_omega": 0.2934609489107235, "mixed_mode_omega": 0.2940908448807688, "relative_anisotropy": 0.0021441376801203263},
+      {"L": 96, "axis_mode_omega": 0.19603428065912118, "mixed_mode_omega": 0.19622106927532357, "relative_anisotropy": 0.0009523827590043312},
+      {"L": 128, "axis_mode_omega": 0.14712912719933485, "mixed_mode_omega": 0.14720795121482963, "relative_anisotropy": 0.0005356037093217542}
+    ],
+    "target_leading_power": -2.0
+  },
+  "gap_power_fit": {"omega_proportional_to_L_power": -0.9958910750258307, "prefactor": 6.170845408923319, "target_power": -1.0},
+  "interpretation": "The physical tensor gap closes as 1/L, both polarizations remain degenerate, and cubic directional anisotropy vanishes as an O(L^-2) cutoff effect for fixed integer momentum modes.",
+  "maximum_relative_tt_polarization_split": 6.109225681690782e-16,
+  "status": "finite-size tensor scaling verified"
+}
