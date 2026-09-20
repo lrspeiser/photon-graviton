@@ -1,5 +1,8 @@
 # Research changelog
 
+**Finer rotation pass and shared-drift candidate, 20 September 2026.** [Rotation report](research_work/experiments/spatial_exchange/rotation-refinement-report.md): n64 passes the declared radius1.5 comparison with linear1.615% and cubic1.316%;34 independent audit checks pass. Radius2 remains direction-sensitive by roughly13-14%, so broader accuracy is unproved. [Shared-drift candidate](research_work/experiments/spatial_exchange/shifted-transfer-report.md):648 frozen principal/particle fixtures pass positivity, symmetry and reference-photon speed coverage, but full nonlinear coupled equations and sources are not implemented. SE-R has6/7 new runs and44 audit checks; its Y spatial comparison fails the required decreasing-error trend (0.08794% versus previous0.05848%), despite a small absolute change. The final source rotation and point-bundle refinements continue. All twelve goal requirements remain active.
+
+
 **Circulation interpolation diagnosis, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/loop-interpolation-report.md). Analytic controls pass, with worst n64 error0.5448% for linear and0.00514% for cubic sampling. On identical saved LR4 fields, cubic sampling lowers the n48 rotation discrepancy from2.5258% to2.2669%, still failing2%; the original failed record is preserved. A separately declared n64 rotated evolution now runs and must pass with both methods, without changing couplings. The remaining source and point-bundle refinements continue. Physical fuel, full light/matter integration and observational predictions remain incomplete; all twelve goal requirements stay active.
 
 
