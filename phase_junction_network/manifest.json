@@ -1,6 +1,6 @@
 {
   "module": "phase_junction_network",
-  "status": "exploratory candidate; infrared linear checks and finite-state kinematic checks completed; microscopic linear helicity-2 dynamics remains open",
+  "status": "exploratory candidate; infrared linear checks, finite-state kinematics, and a local first-order frame-connection linear architecture are verified; finite quantum helicity-2 dynamics remains open",
   "created_utc": "2026-09-20",
   "branch": "agent/phase-junction-microscopic",
   "dependencies": [
@@ -11,12 +11,14 @@
   "commands": [
     "python phase_junction_network/check_frame_gravity.py --samples 500 --seed 42 --lattice-size 96 --fit-r-min 4 --fit-r-max 20",
     "python phase_junction_network/microscopic/finite_junction_model.py --output phase_junction_network/microscopic/results.json",
-    "python phase_junction_network/microscopic/search_local_dynamics.py --output phase_junction_network/microscopic/dynamics_results.json"
+    "python phase_junction_network/microscopic/search_local_dynamics.py --output phase_junction_network/microscopic/dynamics_results.json",
+    "python phase_junction_network/microscopic/check_first_order_frame.py --samples 500 --seed 43 --output phase_junction_network/microscopic/first_order_results.json"
   ],
   "assumptions": [
     "compact quantum-link representation for electromagnetic links",
     "odd-prime Weyl qudits for exact finite gravitational constraints",
     "continuous frame canonical variables are emergent below a finite-state cutoff",
+    "independent torsion-free frame connection in the first-order linear branch",
     "shared effective frame for electromagnetic and gravitational propagation",
     "periodic cubic lattices are prototype regulators rather than a claim of fundamental spatial anisotropy"
   ],
@@ -49,10 +51,22 @@
       "minimum_momentum_invariant_derivative_order": 1,
       "manifest_local_invariant_square_dispersion": "omega proportional to k^3",
       "decision": "reject pure manifest-local invariant-square dynamics for the intended relativistic tensor phase"
+    },
+    "first_order_frame_connection": {
+      "samples": 500,
+      "failures": 0,
+      "connection_components": 18,
+      "connection_quadratic_rank": 18,
+      "max_relative_gamma_identity_error": 8.367524641123087e-16,
+      "max_relative_schur_complement_error": 7.969903681701772e-16,
+      "max_relative_gauge_null_error": 1.3078774985945164e-15,
+      "max_relative_tt_eigenvalue_error": 9.98589096342929e-16,
+      "decision": "advance the independent frame-plus-connection architecture to a finite transfer-matrix or Hamiltonian test"
     }
   },
   "open_gates": [
-    "finite noncommuting or emergent-symmetry Hamiltonian with two linearly dispersing helicity-2 modes",
+    "finite stable transfer matrix or noncommuting Hamiltonian for the first-order frame-connection branch",
+    "exact discrete or quantitatively protected emergent gauge symmetry in that finite dynamics",
     "nonlinear constraint closure and universal self-coupling",
     "microscopic derivation of Z_g/Z_A",
     "chiral matter defects and protected mass hierarchy",
@@ -67,11 +81,14 @@
     {"path": "check_frame_gravity.py", "git_blob_sha": "6a631c026ac96bc182d83016a4a157f8c859b457"},
     {"path": "checks.json", "git_blob_sha": "bfa12a5a081ee275c5f5d963fac676ba6363cb31"},
     {"path": "validation_protocol.md", "git_blob_sha": "fe02e26062251353d47e8935b24538dd9458e80c"},
-    {"path": "microscopic/README.md", "git_blob_sha": "736a09dcf1fcaf33143377cd478dd7bd6cece395"},
+    {"path": "microscopic/README.md", "git_blob_sha": "7d52d88eccc97e5e66456f8f1060147dcd043d2f"},
     {"path": "microscopic/finite_hilbert_derivation.md", "git_blob_sha": "47471b247fa01f0bc473edb3bf9cac0673fd5b49"},
     {"path": "microscopic/finite_junction_model.py", "git_blob_sha": "4dafc40ef6df792ab094a250b67345bb2223e439"},
     {"path": "microscopic/results.json", "git_blob_sha": "89871220a6af98a473957bddbeffc4a855cb7aeb"},
     {"path": "microscopic/search_local_dynamics.py", "git_blob_sha": "228474cec65b347a577847367fc1f38534e5679b"},
-    {"path": "microscopic/dynamics_results.json", "git_blob_sha": "fb05e0150f60fc9cacb132e0f6e44f42cfcfcaa3"}
+    {"path": "microscopic/dynamics_results.json", "git_blob_sha": "fb05e0150f60fc9cacb132e0f6e44f42cfcfcaa3"},
+    {"path": "microscopic/first_order_frame_connection.md", "git_blob_sha": "c636b6064dc1a8e7da61cb7020471640cd892409"},
+    {"path": "microscopic/check_first_order_frame.py", "git_blob_sha": "7e3133646229ec2f22c16b4cad6a49047d3df497"},
+    {"path": "microscopic/first_order_results.json", "git_blob_sha": "afba3c21e95be5e488d9f410616709ee17473a98"}
   ]
 }
