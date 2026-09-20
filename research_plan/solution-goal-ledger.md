@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Shared matter/light probe equations validated, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/probe-report.md). The same regularized particle Hamiltonian now supplies test-body trajectories for massive probes and light. All 72 derivative/cone/momentum-scaling fixtures and four exact uniform-field flight controls pass. Light matches the averaged front speed; massive probes remain below it. This is implementation validation, not an evolving ray bundle or observed lens. Probe-radius convergence and coupled-stage trajectory evolution remain required. Source and spatial refinement campaigns continue; the full twelve-item objective remains active.
+
+
 **Source convergence campaign SE-R started, 20 September 2026.** [Protocol](../research_work/experiments/spatial_exchange/source-refinement-protocol.md). Seven additional runs test both mixed and direct-companion chi200 emission at finer spatial resolution, with source-specific time/rotation gates and reuse of existing completed runs. No constitutive law or fuel supply is changed. SE-2 now has seven completed runs and 115 partial audit checks; direct-companion chi200 has wave source D=0.0490549 and D/energy=37.9626, still not a total-gravity or lensing multiplier. The zero-excitation case produces no X/Y waves. SR-2 has six completed runs and 170 partial audit checks. All three live campaigns continue; source convergence and the full twelve-item objective remain unproved.
 
 
