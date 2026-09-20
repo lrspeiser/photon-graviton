@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Evolving bundle experiment SE-B started, 20 September 2026.** [Protocol](../research_work/experiments/spatial_exchange/bundle-protocol.md). Seven declared cases integrate nine rays and six massive test bodies at the same RK stages as the source-generated field. A fixed detector plane defines arrival offsets, deflection and a transverse transport map; these are model-coordinate diagnostics, not yet astronomical magnification or observed delays. Infinitesimal probe weight leaves the background energy ledger unchanged, with replay checks against prior states. Code was pinned at b1b436c before execution. SE-R's first run and both reused time comparisons pass source checks; spatial source accuracy remains pending. The full twelve-item objective remains active.
+
+
 **Shared matter/light probe equations validated, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/probe-report.md). The same regularized particle Hamiltonian now supplies test-body trajectories for massive probes and light. All 72 derivative/cone/momentum-scaling fixtures and four exact uniform-field flight controls pass. Light matches the averaged front speed; massive probes remain below it. This is implementation validation, not an evolving ray bundle or observed lens. Probe-radius convergence and coupled-stage trajectory evolution remain required. Source and spatial refinement campaigns continue; the full twelve-item objective remains active.
 
 

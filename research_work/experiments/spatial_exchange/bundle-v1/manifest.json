@@ -1,0 +1,89 @@
+{
+  "commit": "b1b436c23dab62c4c57ea2c743fd8dbf629e7e83",
+  "sources": {
+    "run_bundles.py": "3dafd25ff087c951b2478a4e57b9b20f3eb66b17f3c5c7ca8f428faabed4bff8",
+    "probes.py": "ea6c3bc50a6fb7ec8a59bc9d123cff0ba34dd98692bab2a5997a7e14bf02c950",
+    "emitter_model.py": "9b2c0ec1fe7b10c2d64bf686bcfd4f9c96b428b0c76baa8e432202348b61ec36",
+    "run_emitter.py": "6c551ac2229b98946a2767a3807fc4661ff8afd5d7c93ff5c7bb2ae5f7828f5e",
+    "bundle-protocol.md": "384e9c4820ec27dc7893284a453c8562a9957a38a94d7e9912d0f57a2e84dac4"
+  },
+  "configurations": [
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "chi": 0.0,
+      "mix": 0.0,
+      "emitter_angle": 0.0,
+      "probe_radius": 0.9,
+      "name": "emission-only"
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "chi": 200.0,
+      "mix": 0.5,
+      "emitter_angle": 0.0,
+      "probe_radius": 0.9,
+      "name": "X"
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "chi": 200.0,
+      "mix": 0.5,
+      "emitter_angle": 0.7853981633974483,
+      "probe_radius": 0.9,
+      "name": "mixed"
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "chi": 200.0,
+      "mix": 0.5,
+      "emitter_angle": 1.5707963267948966,
+      "probe_radius": 0.9,
+      "name": "Y"
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "chi": 200.0,
+      "mix": 0.5,
+      "emitter_angle": 1.5707963267948966,
+      "probe_radius": 0.9,
+      "name": "time"
+    },
+    {
+      "n": 40,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "chi": 200.0,
+      "mix": 0.5,
+      "emitter_angle": 1.5707963267948966,
+      "probe_radius": 0.9,
+      "name": "space"
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "chi": 200.0,
+      "mix": 0.5,
+      "emitter_angle": 1.5707963267948966,
+      "probe_radius": 1.2,
+      "name": "probe-radius"
+    }
+  ]
+}

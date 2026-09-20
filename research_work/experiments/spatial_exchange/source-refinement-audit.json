@@ -1,12 +1,52 @@
 {
   "audit_passed": true,
-  "checks": 5,
-  "completed_new_runs": 0,
+  "checks": 12,
+  "completed_new_runs": 1,
   "declared_new_runs": 7,
   "complete": false,
   "source_accuracy_passed": null,
-  "comparisons": [],
+  "comparisons": [
+    {
+      "name": "mixed-time",
+      "wave_relative_difference": 3.3474516589927106e-08,
+      "total_relative_difference": 9.152780958166957e-11,
+      "previous_wave_difference": null,
+      "passed": true
+    },
+    {
+      "name": "Y-time",
+      "wave_relative_difference": 2.039876354938293e-08,
+      "total_relative_difference": 4.0414509790066837e-10,
+      "previous_wave_difference": null,
+      "passed": true
+    }
+  ],
   "states": {
+    "mixed-n32": {
+      "campaign": "source-refinement-v1",
+      "name": "mixed-n32",
+      "matter_source": 6.328431729242691,
+      "field_source": 0.05299133532972518,
+      "wave_source": 0.02961900235058155,
+      "other_field_source": 0.02337233297914363,
+      "total_coupling_source": 6.381423064572417,
+      "wave_fraction": 0.00464144157985961,
+      "restoring_source": -1.9265186745937166,
+      "integrated_rhs_source": 6.3814230645724175,
+      "rhs_error": 8.881784197001252e-16,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 2.37127206759169e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 2.457573256009482e-08
+        }
+      ],
+      "passed": true,
+      "state_sha256": "a17985a30ecf022b0d652d93b2921e4d82396a6658e0d2b4baa007f7c29839e2"
+    },
     "mixed-coarse": {
       "campaign": "emitter-v1",
       "name": "emitter-mixed-chi200",
@@ -56,6 +96,31 @@
       ],
       "passed": true,
       "state_sha256": "d455a76aa483472f1fc58b67aa52c8eec55ea9344522c51f7baaed8320854a7d"
+    },
+    "Y-time": {
+      "campaign": "emitter-v1",
+      "name": "time-refinement",
+      "matter_source": 6.328419292242643,
+      "field_source": 0.07248759981151202,
+      "wave_source": 0.04905491017439169,
+      "other_field_source": 0.023432689637120335,
+      "total_coupling_source": 6.400906892054155,
+      "wave_fraction": 0.007663743747825267,
+      "restoring_source": -1.92807421323711,
+      "integrated_rhs_source": 6.400906892054155,
+      "rhs_error": 0.0,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 5.686788817627075e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 3.194995379374177e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "64112acbd4d18455b9f4d901f2b497a1abd57c7785f10a888386d28f683675cf"
     }
   },
   "analysis_sources": {
