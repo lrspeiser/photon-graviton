@@ -1,0 +1,1212 @@
+{
+  "summary": {
+    "passed": true,
+    "count": 21,
+    "control_error": 6.938893903907228e-18,
+    "commit": "4330a5d89cbb208e60b5cbe28b384c8e3be3920d",
+    "sources": {
+      "circulation.py": "eb8d5cccd7b0f21f5a9b4588c8c0d224b62afb1e4d860f1fa136d381282759f7",
+      "circulation-protocol.md": "e40839b7f06198acb1c906df7c4623a5045fa0e5c37ab5a9df7317e3fbfc1fd6",
+      "audit_emitter.py": "66439f3654fc88ffdc1a9b42c69ddf0c532ff5e7f9a7b02ad92e81861da0998b"
+    }
+  },
+  "rows": [
+    {
+      "campaign": "evidence-v1",
+      "name": "no-emission",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676082715133848,
+            -0.0002676033566500035,
+            -0.00026760213996801654
+          ],
+          "quadrature_error": 1.2166819869847446e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018026521995793987,
+            -0.00018023862218674447,
+            -0.00018023601148370842
+          ],
+          "quadrature_error": 2.610703036051579e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956898418456066,
+            -0.00015961646555375352,
+            -0.0001596183247320796
+          ],
+          "quadrature_error": 1.8591783260753659e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687785028440146,
+            -0.00026879097070806333,
+            -0.00026883730168149306
+          ],
+          "quadrature_error": 4.633097342972639e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396530232458911,
+        "field_orbital": 2.1388822327031348e-05,
+        "XY_orbital": 0.0,
+        "field_spin": -9.945818831140029e-06,
+        "total": 0.839664466249387
+      },
+      "XY_fraction_initial_angular": 0.0,
+      "angular_reconstruction_error": 5.06255254785606e-21,
+      "passed": true,
+      "state_sha256": "bca0a1bab5f0c2b6f669fc4d154e5846a2232c7bc7e5576b234d592e4a43a899"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "no-excitation",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00026745467354035324,
+            -0.0002674497730728642,
+            -0.0002674485595785894
+          ],
+          "quadrature_error": 1.213494274792011e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018030407006093283,
+            -0.00018027746332302568,
+            -0.00018027485270365212
+          ],
+          "quadrature_error": 2.610619373563834e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.0001595740279686116,
+            -0.00015962151703747,
+            -0.000159623376541145
+          ],
+          "quadrature_error": 1.8595036750082734e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687856442501864,
+            -0.0002687981131752814,
+            -0.00026884444590925984
+          ],
+          "quadrature_error": 4.6332733978410225e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396555089481521,
+        "field_orbital": 2.1415905034211993e-05,
+        "XY_orbital": 0.0,
+        "field_spin": -9.95293639385134e-06,
+        "total": 0.8396669719167925
+      },
+      "XY_fraction_initial_angular": 0.0,
+      "angular_reconstruction_error": 4.195440373757646e-21,
+      "passed": true,
+      "state_sha256": "a9011e89e413cc996966151d0786ed6853670f78b769509d87240448698e8c3c"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "emission-only",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676356712081753,
+            -0.0002676307506130588,
+            -0.00026762953258203833
+          ],
+          "quadrature_error": 1.2180310204456396e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025890913835768,
+            -0.00018023231491419398,
+            -0.00018022970503326244
+          ],
+          "quadrature_error": 2.6098809315414605e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.0001595661120984475,
+            -0.00015961359504453558,
+            -0.00015961545433843067
+          ],
+          "quadrature_error": 1.859293895088059e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687764898378423,
+            -0.0002687889582200439,
+            -0.00026883528952054316
+          ],
+          "quadrature_error": 4.633130049926104e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396351525700971,
+        "field_orbital": 2.1667932080401554e-05,
+        "XY_orbital": 2.9332211869955153e-07,
+        "field_spin": -9.94338027672635e-06,
+        "total": 0.8396468771219008
+      },
+      "XY_fraction_initial_angular": 3.49192998451847e-07,
+      "angular_reconstruction_error": 4.1259754826131565e-21,
+      "passed": true,
+      "state_sha256": "0e262714c2c33c2ea1ba051eb609916420a828b5d03e7851b22b8bee9565f98e"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "exchange-0",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676365543240024,
+            -0.00026763163372112527,
+            -0.0002676304156882691
+          ],
+          "quadrature_error": 1.218032856162548e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025993045852771,
+            -0.00018023333617006135,
+            -0.0001802307263317485
+          ],
+          "quadrature_error": 2.6098383128551027e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956565747831395,
+            -0.00015961314144901859,
+            -0.00015961500081054854
+          ],
+          "quadrature_error": 1.8593615299506133e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687767485669346,
+            -0.0002687892170187389,
+            -0.0002688355485240562
+          ],
+          "quadrature_error": 4.633150531730291e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396352117919386,
+        "field_orbital": 2.1668254464803134e-05,
+        "XY_orbital": 2.9471034935384967e-07,
+        "field_spin": -9.942325996159096e-06,
+        "total": 0.8396469377204072
+      },
+      "XY_fraction_initial_angular": 3.5084565399267815e-07,
+      "angular_reconstruction_error": 4.185530668159163e-21,
+      "passed": true,
+      "state_sha256": "5a402ce5334449330c75c6eb846604ad4e08d33ebfff214b96e6eaf19211bcd6"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "exchange-50",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676364282628378,
+            -0.0002676315076480034,
+            -0.0002676302896126138
+          ],
+          "quadrature_error": 1.2180353895635543e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025922731964637,
+            -0.00018023263304283008,
+            -0.0001802300231603098
+          ],
+          "quadrature_error": 2.609882520277114e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.000159565738626088,
+            -0.00015961322221300905,
+            -0.0001596150815570438
+          ],
+          "quadrature_error": 1.859344034749362e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687767027857559,
+            -0.00026878917122443515,
+            -0.00026883550268956574
+          ],
+          "quadrature_error": 4.6331465130590443e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.839635184852857,
+        "field_orbital": 2.1670030207926215e-05,
+        "XY_orbital": 2.950144731776201e-07,
+        "field_spin": -9.942505669946671e-06,
+        "total": 0.839646912377395
+      },
+      "XY_fraction_initial_angular": 3.512077061638334e-07,
+      "angular_reconstruction_error": 5.068248893537617e-21,
+      "passed": true,
+      "state_sha256": "5afc8246afebc013991101e0839a743746833e4fd749b021a07ccbf7bf145778"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "exchange-200",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00026763603964829563,
+            -0.00026763111902966736,
+            -0.0002676299009935107
+          ],
+          "quadrature_error": 1.2180361566365913e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025841642324073,
+            -0.00018023182216808317,
+            -0.00018022921223729513
+          ],
+          "quadrature_error": 2.609930788036261e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956594593605545,
+            -0.00015961342893760895,
+            -0.00015961528824956977
+          ],
+          "quadrature_error": 1.8593119608235984e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687766143226272,
+            -0.00026878908273579436,
+            -0.00026883541412196397
+          ],
+          "quadrature_error": 4.6331386169609894e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396351683247788,
+        "field_orbital": 2.1670591228262065e-05,
+        "XY_orbital": 2.947827326081533e-07,
+        "field_spin": -9.942930623647392e-06,
+        "total": 0.8396468959853834
+      },
+      "XY_fraction_initial_angular": 3.509318245335158e-07,
+      "angular_reconstruction_error": 3.6015557419191985e-21,
+      "passed": true,
+      "state_sha256": "bc1b74043c69cd57076a519455aa0ff629461a3751dcb91fc58c6d395e7fffdd"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "exchange-negative",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.000267636620829035,
+            -0.00026763170025251423,
+            -0.0002676304822252883
+          ],
+          "quadrature_error": 1.2180272259548763e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018026101612392145,
+            -0.00018023442181466695,
+            -0.00018023181204233508
+          ],
+          "quadrature_error": 2.6097723318616473e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956558082852142,
+            -0.00015961306533314757,
+            -0.00015961492471698902
+          ],
+          "quadrature_error": 1.8593838414489652e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687768069553481,
+            -0.00026878927542351957,
+            -0.00026883560697845153
+          ],
+          "quadrature_error": 4.6331554931966414e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396352718820799,
+        "field_orbital": 2.166524927708205e-05,
+        "XY_orbital": 2.942340565249277e-07,
+        "field_spin": -9.942162417084584e-06,
+        "total": 0.8396469949689398
+      },
+      "XY_fraction_initial_angular": 3.50278638720152e-07,
+      "angular_reconstruction_error": 6.180700048254134e-21,
+      "passed": true,
+      "state_sha256": "737e10f506befef8e22bd9733ec4fdbf6f8ed9f6bac72e5de843acc63c3e1d21"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "sign-mirror",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00026763603964829563,
+            -0.00026763111902966736,
+            -0.0002676299009935107
+          ],
+          "quadrature_error": 1.2180361566365913e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025841642324073,
+            -0.00018023182216808317,
+            -0.00018022921223729513
+          ],
+          "quadrature_error": 2.609930788036261e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956594593605545,
+            -0.00015961342893760895,
+            -0.00015961528824956977
+          ],
+          "quadrature_error": 1.8593119608235984e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687766143226272,
+            -0.00026878908273579436,
+            -0.00026883541412196397
+          ],
+          "quadrature_error": 4.6331386169609894e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396351683247788,
+        "field_orbital": 2.1670591228262065e-05,
+        "XY_orbital": 2.947827326081533e-07,
+        "field_spin": -9.942930623647392e-06,
+        "total": 0.8396468959853834
+      },
+      "XY_fraction_initial_angular": 3.509318245335158e-07,
+      "angular_reconstruction_error": 3.6015557419191985e-21,
+      "passed": true,
+      "state_sha256": "9a5210f4c4b7e97274f9b877904ab64e2d98c91035524e9ac4d642bb016ef2cd"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "time-refinement",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676359530666639,
+            -0.0002676310324503715,
+            -0.00026762981441488435
+          ],
+          "quadrature_error": 1.2180354871417498e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025854525088313,
+            -0.00018023195107273203,
+            -0.00018022934117734222
+          ],
+          "quadrature_error": 2.6098953898111114e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956584655893162,
+            -0.00015961332978878338,
+            -0.0001596151891142242
+          ],
+          "quadrature_error": 1.8593254408176291e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00026877667430049806,
+            -0.0002687891428110422,
+            -0.00026883547432289345
+          ],
+          "quadrature_error": 4.63315118512473e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.839635168362302,
+        "field_orbital": 2.1670578172908127e-05,
+        "XY_orbital": 2.947830393984525e-07,
+        "field_spin": -9.942930406422752e-06,
+        "total": 0.8396468960100685
+      },
+      "XY_fraction_initial_angular": 3.509321897600625e-07,
+      "angular_reconstruction_error": 1.7436967312616142e-21,
+      "passed": true,
+      "state_sha256": "54fd33967b149ef4d2a918e7b3323f4679adb96312eaf93be9bfc9e3dd993da3"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "space-refinement",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002563010825452233,
+            -0.0002562885775385635,
+            -0.0002562846751117401
+          ],
+          "quadrature_error": 3.902426823365352e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00017838595725727554,
+            -0.00017836553263476148,
+            -0.00017836116300953695
+          ],
+          "quadrature_error": 4.369625224533765e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00014067605901897716,
+            -0.00014064887012277144,
+            -0.00014066463723753835
+          ],
+          "quadrature_error": 1.576711476691025e-08,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00028818477614658215,
+            -0.00028803540587358953,
+            -0.0002880530099681936
+          ],
+          "quadrature_error": 1.7604094604088943e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.839973866300143,
+        "field_orbital": 2.8546452326085615e-05,
+        "XY_orbital": 4.79070635237101e-07,
+        "field_spin": -9.87122025542918e-06,
+        "total": 0.8399925415322137
+      },
+      "XY_fraction_initial_angular": 5.703221848060726e-07,
+      "angular_reconstruction_error": 1.2920139704699826e-20,
+      "passed": true,
+      "state_sha256": "a9886835674db6b3e49a72621b063772535b75ec9920d82b0f5090d31cf78369"
+    },
+    {
+      "campaign": "evidence-v1",
+      "name": "rotation",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00024263514078765405,
+            -0.000242652184575464,
+            -0.00024264660410435983
+          ],
+          "quadrature_error": 5.580471104177842e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00017102168464974124,
+            -0.00017102602506291869,
+            -0.00017102795799203908
+          ],
+          "quadrature_error": 1.9329291203924476e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00014836809921058047,
+            -0.00014838375855045355,
+            -0.00014838022453914884
+          ],
+          "quadrature_error": 3.534011304705568e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00028328017894416733,
+            -0.00028323616528610427,
+            -0.00028320963114502603
+          ],
+          "quadrature_error": 2.653414107824017e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.840021693235969,
+        "field_orbital": 2.430925095035205e-05,
+        "XY_orbital": 4.845381698158228e-07,
+        "field_spin": -1.0310771882768692e-05,
+        "total": 0.8400356917150366
+      },
+      "XY_fraction_initial_angular": 5.768311545426461e-07,
+      "angular_reconstruction_error": 0.0,
+      "passed": true,
+      "state_sha256": "d70bae705f8a94909d5d40183b1c042ebf55be85878ed4c17317fbf14870d0a3"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "emitter-mixed-chi0",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676381742787174,
+            -0.0002676332536663693,
+            -0.00026763203563211706
+          ],
+          "quadrature_error": 1.2180342522354753e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018026036229088952,
+            -0.00018023376784525032,
+            -0.00018023115797375998
+          ],
+          "quadrature_error": 2.6098714903360475e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956527482713628,
+            -0.0001596127595394459,
+            -0.00015961461895779605
+          ],
+          "quadrature_error": 1.8594183501404425e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687771435699328,
+            -0.00026878961213260303,
+            -0.00026883594391162864
+          ],
+          "quadrature_error": 4.6331779025605025e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396354445654388,
+        "field_orbital": 2.1669504898368854e-05,
+        "XY_orbital": 2.989621221654209e-07,
+        "field_spin": -9.938776684047536e-06,
+        "total": 0.8396471752936531
+      },
+      "XY_fraction_initial_angular": 3.5590728829216773e-07,
+      "angular_reconstruction_error": 2.4492818063666845e-21,
+      "passed": true,
+      "state_sha256": "055777b731a6bc38a0caa7e2ec620993be33cc44624b1f3a84ccd5b96e8bf8c8"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "emitter-mixed-chi50",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676375714135984,
+            -0.0002676326507511222,
+            -0.00026763143270629945
+          ],
+          "quadrature_error": 1.2180448227729762e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025741775193005,
+            -0.00018023082336752864,
+            -0.00018022821331719534
+          ],
+          "quadrature_error": 2.6100503333062117e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.000159565599293027,
+            -0.00015961308241869526,
+            -0.00015961494176426665
+          ],
+          "quadrature_error": 1.859345571389101e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00026877692746456546,
+            -0.0002687893959653196,
+            -0.0002688357275637999
+          ],
+          "quadrature_error": 4.6331598480301925e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396353213875553,
+        "field_orbital": 2.1677761289183107e-05,
+        "XY_orbital": 3.005623641218943e-07,
+        "field_spin": -9.939582258145466e-06,
+        "total": 0.8396470595665863
+      },
+      "XY_fraction_initial_angular": 3.5781233824035037e-07,
+      "angular_reconstruction_error": 8.339305387538619e-22,
+      "passed": true,
+      "state_sha256": "9a73b5c13f2ed152ea07d1bd038baada16c952501d8e34a88b6b870039b15787"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "emitter-mixed-chi200",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00026763597580560885,
+            -0.00026763105512837105,
+            -0.00026762983708052086
+          ],
+          "quadrature_error": 1.2180478501907024e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025430697168649,
+            -0.00018022771268092652,
+            -0.00018022510244895603
+          ],
+          "quadrature_error": 2.6102319704822147e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.0001595664076334396,
+            -0.00015961388848681075,
+            -0.00015961574770522862
+          ],
+          "quadrature_error": 1.8592184178659304e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687765079827998,
+            -0.00026878897636060294,
+            -0.000268835307605717
+          ],
+          "quadrature_error": 4.633124511403989e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396352431527615,
+        "field_orbital": 2.1679988822294974e-05,
+        "XY_orbital": 2.9957038603031245e-07,
+        "field_spin": -9.941485597214346e-06,
+        "total": 0.8396469816559866
+      },
+      "XY_fraction_initial_angular": 3.566314119408481e-07,
+      "angular_reconstruction_error": 7.150997206226795e-22,
+      "passed": true,
+      "state_sha256": "c9bebd83852876c2767da95eb1d3c3caed7f6bccf08e03bdad9fa53ac4bcba0b"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "emitter-Y-chi0",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.000267637004419805,
+            -0.00026763208382079976,
+            -0.00026763086579017706
+          ],
+          "quadrature_error": 1.2180306227060726e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025828459625523,
+            -0.00018023169021468355,
+            -0.00018022908023041523
+          ],
+          "quadrature_error": 2.609984268314193e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.0001595661804753859,
+            -0.00015961366312618663,
+            -0.0001596155224051945
+          ],
+          "quadrature_error": 1.8592790078809235e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00026877652440791355,
+            -0.00026878899277517685,
+            -0.00026883532405796003
+          ],
+          "quadrature_error": 4.63312827831807e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.839635433963166,
+        "field_orbital": 2.166980480939465e-05,
+        "XY_orbital": 2.983725607107658e-07,
+        "field_spin": -9.939406487646942e-06,
+        "total": 0.8396471643614878
+      },
+      "XY_fraction_initial_angular": 3.552054294175783e-07,
+      "angular_reconstruction_error": 6.02197826889413e-21,
+      "passed": true,
+      "state_sha256": "8bf98e38976b4e9d8af7a48bc249aaeca91cc87ef170cfb13e571ac084d36e9a"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "emitter-Y-chi50",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.0002676364398608036,
+            -0.00026763151922025967,
+            -0.00026763030118093315
+          ],
+          "quadrature_error": 1.218039326518483e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.0001802557802517029,
+            -0.00018022918592916552,
+            -0.00018022657579633996
+          ],
+          "quadrature_error": 2.6101328255603417e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.0001595664441748135,
+            -0.00015961392549493703,
+            -0.0001596157847130709
+          ],
+          "quadrature_error": 1.8592181338862764e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00026877633069087695,
+            -0.0002687887990017328,
+            -0.00026883513012618775
+          ],
+          "quadrature_error": 4.633112445496905e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396353200113231,
+        "field_orbital": 2.1677034031640417e-05,
+        "XY_orbital": 2.9971830849566313e-07,
+        "field_spin": -9.94011412821958e-06,
+        "total": 0.8396470569312265
+      },
+      "XY_fraction_initial_angular": 3.5680751011388464e-07,
+      "angular_reconstruction_error": 9.317359192555015e-21,
+      "passed": true,
+      "state_sha256": "470023badd8763c9c993b808acf8bf4f8923e74a2582d3463cc08288d0764963"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "emitter-Y-chi200",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00026763509481562205,
+            -0.00026763017416392415,
+            -0.00026762895612230476
+          ],
+          "quadrature_error": 1.2180416193892374e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025329600617962,
+            -0.00018022670176433942,
+            -0.00018022409148834635
+          ],
+          "quadrature_error": 2.6102759930748606e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956708756637632,
+            -0.00015961456707311279,
+            -0.00015961642618910065
+          ],
+          "quadrature_error": 1.8591159878656848e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00026877595673683815,
+            -0.0002687884249346651,
+            -0.00026883475575193767
+          ],
+          "quadrature_error": 4.633081727257538e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396352451589008,
+        "field_orbital": 2.1678805264620672e-05,
+        "XY_orbital": 2.987767686824073e-07,
+        "field_spin": -9.94179406494358e-06,
+        "total": 0.8396469821701004
+      },
+      "XY_fraction_initial_angular": 3.556866293838182e-07,
+      "angular_reconstruction_error": 8.435178336087335e-22,
+      "passed": true,
+      "state_sha256": "d455a76aa483472f1fc58b67aa52c8eec55ea9344522c51f7baaed8320854a7d"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "no-excitation",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00026745467354035324,
+            -0.0002674497730728642,
+            -0.0002674485595785894
+          ],
+          "quadrature_error": 1.213494274792011e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018030407006093283,
+            -0.00018027746332302568,
+            -0.00018027485270365212
+          ],
+          "quadrature_error": 2.610619373563834e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.0001595740279686116,
+            -0.00015962151703747,
+            -0.000159623376541145
+          ],
+          "quadrature_error": 1.8595036750082734e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.0002687856442501864,
+            -0.0002687981131752814,
+            -0.00026884444590925984
+          ],
+          "quadrature_error": 4.6332733978410225e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396555089481521,
+        "field_orbital": 2.1415905034211993e-05,
+        "XY_orbital": 0.0,
+        "field_spin": -9.95293639385134e-06,
+        "total": 0.8396669719167925
+      },
+      "XY_fraction_initial_angular": 0.0,
+      "angular_reconstruction_error": 4.195440373757646e-21,
+      "passed": true,
+      "state_sha256": "a9011e89e413cc996966151d0786ed6853670f78b769509d87240448698e8c3c"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "time-refinement",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00026763500823450705,
+            -0.00026763008758514246,
+            -0.0002676288695441919
+          ],
+          "quadrature_error": 1.2180409505449172e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00018025342483753775,
+            -0.0001802268306727016,
+            -0.00018022422043210745
+          ],
+          "quadrature_error": 2.6102405941449795e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00015956698818862724,
+            -0.00015961446792365458,
+            -0.00015961632705312182
+          ],
+          "quadrature_error": 1.8591294672362993e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00026877601671467514,
+            -0.000268788485009878,
+            -0.0002688348159528303
+          ],
+          "quadrature_error": 4.633094295226122e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8396352451957835,
+        "field_orbital": 2.1678792249538696e-05,
+        "XY_orbital": 2.987771221889449e-07,
+        "field_spin": -9.941793846998432e-06,
+        "total": 0.8396469821941861
+      },
+      "XY_fraction_initial_angular": 3.556870502249344e-07,
+      "angular_reconstruction_error": 2.5142122124513304e-21,
+      "passed": true,
+      "state_sha256": "64112acbd4d18455b9f4d901f2b497a1abd57c7785f10a888386d28f683675cf"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "space-refinement",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00025629937491190814,
+            -0.0002562868699467168,
+            -0.00025628296748343813
+          ],
+          "quadrature_error": 3.90246327868762e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00017838190930548827,
+            -0.0001783614856955488,
+            -0.00017835711614977009
+          ],
+          "quadrature_error": 4.3695457787251094e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00014067690187966883,
+            -0.00014064971384308907,
+            -0.0001406654803773831
+          ],
+          "quadrature_error": 1.5766534294038874e-08,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00028818404655599607,
+            -0.0002880346777801978,
+            -0.000288052281632349
+          ],
+          "quadrature_error": 1.7603852151221264e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8399737957877916,
+        "field_orbital": 2.8546605535444867e-05,
+        "XY_orbital": 4.730507655549073e-07,
+        "field_spin": -9.869995514332663e-06,
+        "total": 0.8399924723978127
+      },
+      "XY_fraction_initial_angular": 5.631556732796515e-07,
+      "angular_reconstruction_error": 2.2714681623052062e-20,
+      "passed": true,
+      "state_sha256": "fd244c45edc15e2bfd4cf74c7e6dba79f96ea6dcfe087b4f4eb143728d9895aa"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "rotation",
+      "loops": [
+        {
+          "radius": 1,
+          "values": [
+            -0.00024263389278435674,
+            -0.0002426509361227808,
+            -0.00024264535583148303
+          ],
+          "quadrature_error": 5.580291297758522e-09,
+          "passed": true
+        },
+        {
+          "radius": 2,
+          "values": [
+            -0.00017101735285595147,
+            -0.00017102169331844984,
+            -0.00017102362633647747
+          ],
+          "quadrature_error": 1.9330180276268868e-09,
+          "passed": true
+        },
+        {
+          "radius": 3,
+          "values": [
+            -0.00014836934317479287,
+            -0.00014838500135397066,
+            -0.00014838146761061722
+          ],
+          "quadrature_error": 3.533743353435672e-09,
+          "passed": true
+        },
+        {
+          "radius": 4,
+          "values": [
+            -0.00028327944112283693,
+            -0.0002832354297534395,
+            -0.00028320889595327605
+          ],
+          "quadrature_error": 2.6533800163443776e-08,
+          "passed": true
+        }
+      ],
+      "angular_projection": {
+        "matter": 0.8400217532692362,
+        "field_orbital": 2.4305257346379055e-05,
+        "XY_orbital": 4.7376216479315635e-07,
+        "field_spin": -1.0309677872869659e-05,
+        "total": 0.8400357488487098
+      },
+      "XY_fraction_initial_angular": 5.640025771347098e-07,
+      "angular_reconstruction_error": 0.0,
+      "passed": true,
+      "state_sha256": "af935fda04fcdc717073cfbf4bd8b06218a7c915add744268f901ffb7ce93629"
+    }
+  ]
+}

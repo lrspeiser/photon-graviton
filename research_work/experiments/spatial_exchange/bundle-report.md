@@ -1,12 +1,13 @@
 # SE-B evolving bundle checkpoint
 
-3 of seven declared cases have complete archives.
+4 of seven declared cases have complete archives.
 
 | Case | Central bend (model radians) | Arrival offset (model time) | Area gain | Bundle derivative error | Numerical gates |
 |---|---:|---:|---:|---:|---|
 | emission-only | -0.011270736 | 0.0107100034 | 1.03328373 | 0.000397 | True |
 | X | -0.011272043 | 0.0107104647 | 1.03328549 | 0.000397 | True |
 | mixed | -0.0112774617 | 0.0107160817 | 1.03329593 | 0.000397 | True |
+| Y | -0.0112771959 | 0.010718004 | 1.03329702 | 0.000397 | True |
 
 ![Candidate trajectories](bundles.png)
 
