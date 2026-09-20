@@ -14,7 +14,7 @@ ROOT=Path(__file__).resolve().parent
 
 def analyze(directory,cfg):
     path=directory/(cfg['name']+'.npz');state=np.load(path)['final']
-    cls=NewModel if directory.name=='emitter-v1' else OldModel
+    cls=NewModel if 'emitter_angle' in cfg else OldModel
     model=cls(**{k:v for k,v in cfg.items() if k not in ['name','dt']})
     f,pi,q,p,Q,P=model.unpack(state);u=.08*f[0];a=np.exp(4*u);z=np.exp(2*u);alpha=np.exp(u)
     beta=z*.04*f[1:4]/np.sqrt(1+.08**2*np.sum(f[1:4]**2,axis=0))

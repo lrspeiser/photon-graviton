@@ -1,10 +1,10 @@
 {
   "summary": {
     "passed": true,
-    "completed": 16,
+    "completed": 18,
     "declared": 21,
     "complete": false,
-    "source_sha256": "917961e2550b8e7fea8449ae46e0ad58246f3e0fbea969678caae6bb4ce6f6fd",
+    "source_sha256": "4af51d5595a3269a0a076dbd93e4c5bb721d77c1eab7c6d68abbdc2b764fca65",
     "dependencies": {
       "model.py": "3017e9bb8bd111ae46c978e6d0f04a5d3faa1e726c45bf375b623296bf3efdea",
       "emitter_model.py": "9b2c0ec1fe7b10c2d64bf686bcfd4f9c96b428b0c76baa8e432202348b61ec36",
@@ -412,6 +412,56 @@
       ],
       "passed": true,
       "state_sha256": "470023badd8763c9c993b808acf8bf4f8923e74a2582d3463cc08288d0764963"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "emitter-Y-chi200",
+      "matter_source": 6.328419292688567,
+      "field_source": 0.07248759677869313,
+      "wave_source": 0.049054909173732175,
+      "other_field_source": 0.02343268760496095,
+      "total_coupling_source": 6.40090688946726,
+      "wave_fraction": 0.007663743594591634,
+      "restoring_source": -1.928074212350832,
+      "integrated_rhs_source": 6.400906889467262,
+      "rhs_error": 1.7763568394002505e-15,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 9.336504902535125e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 4.895612804034499e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "d455a76aa483472f1fc58b67aa52c8eec55ea9344522c51f7baaed8320854a7d"
+    },
+    {
+      "campaign": "emitter-v1",
+      "name": "no-excitation",
+      "matter_source": 6.32428827321026,
+      "field_source": 0.023307390894958056,
+      "wave_source": 0.0,
+      "other_field_source": 0.023307390894958056,
+      "total_coupling_source": 6.347595664105218,
+      "wave_fraction": 0.0,
+      "restoring_source": -1.923315543023253,
+      "integrated_rhs_source": 6.347595664105218,
+      "rhs_error": 0.0,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 3.400073111947677e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 3.400073111947677e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "a9011e89e413cc996966151d0786ed6853670f78b769509d87240448698e8c3c"
     }
   ]
 }

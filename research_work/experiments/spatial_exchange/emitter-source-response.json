@@ -2,7 +2,7 @@
   "summary": {
     "passed": true,
     "complete": false,
-    "completed_runs": 5,
+    "completed_runs": 7,
     "declared_runs": 10,
     "source_sha256": "0624a74955508ea51cf025de17035dfa51301f227615904e04f798c6bebb2379",
     "baseline_sha256": "761fae6f3d16c6a09acc126e59144fad4c6ba376483a83eaff90163646d247ea"
@@ -282,6 +282,116 @@
       "passed": true,
       "source_relative_to_emission_only": 9.553974620809319,
       "source_relative_to_X_chi200": 11.803519502812474
+    },
+    {
+      "name": "emitter-Y-chi200",
+      "energy": 0.0012921899896569016,
+      "source": 0.049054909173732175,
+      "response_per_energy": 37.96261352152796,
+      "positive_source": 0.049054909173732175,
+      "negative_source": 0.0,
+      "contributions": {
+        "kinetic": 0.001953676110440027,
+        "shift": -1.3935083710770936e-08,
+        "mixing": 0.04710124699837586
+      },
+      "numerical_source": 0.04905490918853672,
+      "derivative_error": 1.4804546477620306e-11,
+      "energy_error": 4.336808689942018e-19,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.00615535509825867,
+          "absolute_source": 0.00615535509825867
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.024556608031293975,
+          "absolute_source": 0.024556608031293975
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.006857232681100064,
+          "absolute_source": 0.006857232681100064
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": 0.009175898779997105,
+          "absolute_source": 0.009175898779997105
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": 0.002309814583082364,
+          "absolute_source": 0.002309814583082364
+        }
+      ],
+      "minimum_U": -0.0035493745636176544,
+      "maximum_U": -9.032017624453081e-42,
+      "internal_energy_change": -0.001285113638415325,
+      "state_sha256": "d455a76aa483472f1fc58b67aa52c8eec55ea9344522c51f7baaed8320854a7d",
+      "passed": true,
+      "source_relative_to_emission_only": 22.061097764986858,
+      "source_relative_to_X_chi200": 27.255525376350292
+    },
+    {
+      "name": "no-excitation",
+      "energy": 0.0,
+      "source": 0.0,
+      "response_per_energy": null,
+      "positive_source": 0.0,
+      "negative_source": 0.0,
+      "contributions": {
+        "kinetic": 0.0,
+        "shift": 0.0,
+        "mixing": 0.0
+      },
+      "numerical_source": 0.0,
+      "derivative_error": 0.0,
+      "energy_error": 0.0,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": 0.0,
+          "absolute_source": 0.0
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": 0.0,
+          "absolute_source": 0.0
+        }
+      ],
+      "minimum_U": -0.0035387797607936834,
+      "maximum_U": -9.024007205527451e-42,
+      "internal_energy_change": 0.0,
+      "state_sha256": "a9011e89e413cc996966151d0786ed6853670f78b769509d87240448698e8c3c",
+      "passed": true,
+      "source_relative_to_emission_only": 0.0,
+      "source_relative_to_X_chi200": 0.0
     }
   ]
 }

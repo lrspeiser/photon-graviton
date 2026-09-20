@@ -1,6 +1,6 @@
 # SE-T: total scalar-source accounting
 
-Completed states: 16/21. Checks pass: True.
+Completed states: 18/21. Checks pass: True.
 
 | Campaign/case | Matter source | Other fields | X/Y waves | Total coupling source | Wave fraction |
 |---|---:|---:|---:|---:|---:|
@@ -20,6 +20,8 @@ Completed states: 16/21. Checks pass: True.
 | emitter-v1/emitter-mixed-chi200 | 6.3284317 | 0.023372331 | 0.029619003 | 6.3814231 | 0.46414% |
 | emitter-v1/emitter-Y-chi0 | 6.3286189 | 0.023355922 | 0.0014556288 | 6.3534305 | 0.022911% |
 | emitter-v1/emitter-Y-chi50 | 6.3285335 | 0.023382663 | 0.021244154 | 6.3731603 | 0.33334% |
+| emitter-v1/emitter-Y-chi200 | 6.3284193 | 0.023432688 | 0.049054909 | 6.4009069 | 0.76637% |
+| emitter-v1/no-excitation | 6.3242883 | 0.023307391 | 0 | 6.3475957 | 0% |
 
 These integrated scalar coupling derivatives are not mass, force or lensing.
 The phi restoring term is recorded separately in JSON and is not included in

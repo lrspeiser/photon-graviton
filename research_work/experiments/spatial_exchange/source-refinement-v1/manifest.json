@@ -1,0 +1,86 @@
+{
+  "source_commit": "3e9906f68b6f29cabcd058e99224005a471abc74",
+  "sources": {
+    "source-refinement-protocol.md": "ea336bfa2a2655fffb232030016df7b6c75b4486187506093771e48a620ef722",
+    "emitter_model.py": "9b2c0ec1fe7b10c2d64bf686bcfd4f9c96b428b0c76baa8e432202348b61ec36",
+    "run_source_refinement.py": "057c8477f283d1234ee9202b3604902d394f6db3777f436ba00d218fce2bf9f2"
+  },
+  "helper_source": {
+    "path": "research_work/experiments/common_cone/model.py",
+    "sha256": "66b9620b8e71a666c976411ab7d60bd98be5c9ef9ca877736e58247fe23f7dfd"
+  },
+  "configurations": [
+    {
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "chi": 200.0,
+      "name": "mixed-n32",
+      "n": 32,
+      "emitter_angle": 0.7853981633974483
+    },
+    {
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "chi": 200.0,
+      "name": "mixed-n40",
+      "n": 40,
+      "emitter_angle": 0.7853981633974483
+    },
+    {
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "chi": 200.0,
+      "name": "mixed-n48",
+      "n": 48,
+      "emitter_angle": 0.7853981633974483
+    },
+    {
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "chi": 200.0,
+      "name": "mixed-n56",
+      "n": 56,
+      "emitter_angle": 0.7853981633974483
+    },
+    {
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "chi": 200.0,
+      "name": "Y-n48",
+      "n": 48,
+      "emitter_angle": 1.5707963267948966
+    },
+    {
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "chi": 200.0,
+      "name": "Y-n56",
+      "n": 56,
+      "emitter_angle": 1.5707963267948966
+    },
+    {
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "chi": 200.0,
+      "name": "mixed-n40-rotation",
+      "n": 40,
+      "emitter_angle": 0.7853981633974483,
+      "angle": 1.0471975511965976
+    }
+  ],
+  "numpy": "2.2.6"
+}

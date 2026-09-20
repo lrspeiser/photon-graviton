@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Source convergence campaign SE-R started, 20 September 2026.** [Protocol](../research_work/experiments/spatial_exchange/source-refinement-protocol.md). Seven additional runs test both mixed and direct-companion chi200 emission at finer spatial resolution, with source-specific time/rotation gates and reuse of existing completed runs. No constitutive law or fuel supply is changed. SE-2 now has seven completed runs and 115 partial audit checks; direct-companion chi200 has wave source D=0.0490549 and D/energy=37.9626, still not a total-gravity or lensing multiplier. The zero-excitation case produces no X/Y waves. SR-2 has six completed runs and 170 partial audit checks. All three live campaigns continue; source convergence and the full twelve-item objective remain unproved.
+
+
 **SE-1 complete; total-source context and new convergence limitation, 20 September 2026.** [SE-1 report](../research_work/experiments/spatial_exchange/report.md), [total source](../research_work/experiments/spatial_exchange/total-source-report.md). Eleven runs and four original comparisons pass, with 152 independent audit checks and maximum ledger drift 1.18e-10. A newly measured wave-source derivative changes 10.92% between coarse and fine grids despite passing the original channel-energy gates; source-specific convergence remains necessary. SE-2's mixed chi200 result contributes about 0.464% of total scalar coupling source, so its 13.3x wave-sector ratio is not a large total-gravity claim. Five of ten emitter runs are audited (99 partial checks); the resolution and emitter campaigns continue. Full spatial stability, source budget, stellar motion and cluster lensing remain unresolved; all twelve goals remain active.
 
 

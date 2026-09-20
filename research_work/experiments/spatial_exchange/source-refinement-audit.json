@@ -1,0 +1,66 @@
+{
+  "audit_passed": true,
+  "checks": 5,
+  "completed_new_runs": 0,
+  "declared_new_runs": 7,
+  "complete": false,
+  "source_accuracy_passed": null,
+  "comparisons": [],
+  "states": {
+    "mixed-coarse": {
+      "campaign": "emitter-v1",
+      "name": "emitter-mixed-chi200",
+      "matter_source": 6.328431729689543,
+      "field_source": 0.05299133429879614,
+      "wave_source": 0.029619003342063334,
+      "other_field_source": 0.023372330956732808,
+      "total_coupling_source": 6.381423063988339,
+      "wave_fraction": 0.004641441735654444,
+      "restoring_source": -1.9265186737353028,
+      "integrated_rhs_source": 6.381423063988341,
+      "rhs_error": 1.7763568394002505e-15,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 6.236176020024686e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 1.5968284472478445e-08
+        }
+      ],
+      "passed": true,
+      "state_sha256": "c9bebd83852876c2767da95eb1d3c3caed7f6bccf08e03bdad9fa53ac4bcba0b"
+    },
+    "Y-coarse": {
+      "campaign": "emitter-v1",
+      "name": "emitter-Y-chi200",
+      "matter_source": 6.328419292688567,
+      "field_source": 0.07248759677869313,
+      "wave_source": 0.049054909173732175,
+      "other_field_source": 0.02343268760496095,
+      "total_coupling_source": 6.40090688946726,
+      "wave_fraction": 0.007663743594591634,
+      "restoring_source": -1.928074212350832,
+      "integrated_rhs_source": 6.400906889467262,
+      "rhs_error": 1.7763568394002505e-15,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 9.336504902535125e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 4.895612804034499e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "d455a76aa483472f1fc58b67aa52c8eec55ea9344522c51f7baaed8320854a7d"
+    }
+  },
+  "analysis_sources": {
+    "audit_source_refinement.py": "0debb45aea287511bdd6da173d73798da0c69b2546549c3635ba5e7e05ad3da1",
+    "total_source.py": "4af51d5595a3269a0a076dbd93e4c5bb721d77c1eab7c6d68abbdc2b764fca65",
+    "audit_emitter.py": "66439f3654fc88ffdc1a9b42c69ddf0c532ff5e7f9a7b02ad92e81861da0998b"
+  }
+}
