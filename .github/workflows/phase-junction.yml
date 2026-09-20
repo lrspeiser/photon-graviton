@@ -50,6 +50,12 @@ jobs:
             --exact-only \
             --output /tmp/finite_em_exact_cube_results.json
 
+      - name: Check detuned finite electromagnetic dynamics
+        run: |
+          python phase_junction_network/microscopic/check_finite_em_dynamics.py \
+            --quick \
+            --output /tmp/finite_em_dynamics_results.json
+
       - name: Check finite chiral matter endpoint
         run: |
           python phase_junction_network/microscopic/check_chiral_matter_defect.py \
