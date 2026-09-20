@@ -37,9 +37,9 @@ def mrhs(t,y,p):
     z[:,6]=np.abs(turn);z[:,7]=capture;z[:,8]=p["off"]*y[:,3]
     return z
 
-def rk(t,y,dt,p):
-    k1=mrhs(t,y,p);k2=mrhs(t+dt/2,y+dt*k1/2,p)
-    k3=mrhs(t+dt/2,y+dt*k2/2,p);k4=mrhs(t+dt,y+dt*k3,p)
+def rk(t,y,dt,p,fun=mrhs):
+    k1=fun(t,y,p);k2=fun(t+dt/2,y+dt*k1/2,p)
+    k3=fun(t+dt/2,y+dt*k2/2,p);k4=fun(t+dt,y+dt*k3,p)
     return y+dt*(k1+2*k2+2*k3+k4)/6
 
 def observer(y,nxt,t,dt,live,exits):
@@ -50,7 +50,7 @@ def observer(y,nxt,t,dt,live,exits):
     nxt[~live]=y[~live];live[hit]=False
     return nxt
 
-def mean_trace(rows,out,dt):
+def mean_trace(rows,out,dt,fun=mrhs,moment_bound=1.):
     out.mkdir(exist_ok=False)
     p=pars(rows,10);imp=np.tile(IMPACTS,len(rows));n=len(imp)
     y=np.zeros((n,9));y[:,0]=-20;y[:,1]=imp
@@ -59,10 +59,10 @@ def mean_trace(rows,out,dt):
     for step in range(round(80/dt)+1):
         t=step*dt
         max_p=max(max_p,float(y[:,3].max()));min_p=min(min_p,float(y[:,3].min()))
-        moment_violation=max(moment_violation,float(np.max(np.linalg.norm(y[:,4:6],axis=1)-y[:,3])))
+        moment_violation=max(moment_violation,float(np.max(np.linalg.norm(y[:,4:6],axis=1)-moment_bound*y[:,3])))
         if step%round(.2/dt)==0:hist.append(y.copy());times.append(t)
         if step==round(80/dt):break
-        y=observer(y,rk(t,y,dt,p),t,dt,live,exits)
+        y=observer(y,rk(t,y,dt,p,fun),t,dt,live,exits)
         if not np.isfinite(y).all():raise FloatingPointError(f"nonfinite at {t}")
     results=[]
     for i in range(n):
@@ -79,7 +79,7 @@ def mean_trace(rows,out,dt):
             pairs.append(dict(id=r["id"],impact=b,arrived=ok,inward=(a["angle"]-c["angle"])/2 if ok else None,
                               sideways=(a["angle"]+c["angle"])/2 if ok else None))
     data=dict(rows=rows,results=results,pairs=pairs,dt=dt,min_p=min_p,max_p=max_p,
-              moment_violation=moment_violation,occupation_pass=min_p>=-1e-8 and max_p<=1+1e-8 and moment_violation<1e-8)
+              moment_violation=moment_violation,moment_bound=moment_bound,occupation_pass=min_p>=-1e-8 and max_p<=1+1e-8 and moment_violation<1e-8)
     np.savez_compressed(out/"trajectories.npz",state=np.stack(hist,axis=1),time=np.array(times),
         ids=np.repeat([r["id"] for r in rows],10),impact=imp,exit_time=exits)
     dump(out/"results.json",data)
@@ -93,13 +93,13 @@ def fly(y,dt,bound,heading,kappa):
     k1=f(y);k2=f(y+dt*k1/2);k3=f(y+dt*k2/2);k4=f(y+dt*k3)
     return y+dt*(k1+2*k2+2*k3+k4)/6
 
-def stochastic(rows,out,dt,seed):
+def stochastic(rows,out,dt,seed,carried="heading"):
     out.mkdir(exist_ok=False)
     count=128;bs=(-2.,-1.,1.,2.)
     p=pars(rows,4*count)
     imp=np.tile(np.repeat(bs,count),len(rows));n=len(imp)
     y=np.zeros((n,3));y[:,0]=-20;y[:,1]=imp
-    bound=np.zeros(n,dtype=bool);heading=np.zeros(n)
+    bound=np.zeros(n,dtype=bool);heading=np.zeros(n);amplitude=np.ones(n)
     captures=np.zeros(n,dtype=int);releases=np.zeros(n,dtype=int)
     live=np.ones(n,dtype=bool);exits=np.full(n,np.nan)
     rng=np.random.default_rng(seed)
@@ -109,14 +109,17 @@ def stochastic(rows,out,dt,seed):
         if step%round(.2/dt)==0:
             hist.append(y.copy());attachments.append(bound.copy());times.append(t)
         if step==round(80/dt):break
-        y=observer(y,fly(y,dt/2,bound,heading,p["kappa"]),t,dt/2,live,exits)
+        y=observer(y,fly(y,dt/2,bound,heading,p["kappa"]*amplitude),t,dt/2,live,exits)
         psi,rate=local(t+dt/2,y,p)
         old=bound.copy()
         attach=live&~old&(rng.random(n)<-np.expm1(-rate*dt))
         release=live&old&(rng.random(n)<-np.expm1(-p["off"]*dt))
         bound[attach]=True;heading[attach]=psi[attach];captures[attach]+=1
+        if carried=="curvature":
+            heading[attach]+=np.pi/2
+            amplitude[attach]=np.sin(np.arctan(p["pitch"][attach]))/np.hypot(y[attach,0],y[attach,1])
         bound[release]=False;releases[release]+=1
-        y=observer(y,fly(y,dt/2,bound,heading,p["kappa"]),t+dt/2,dt/2,live,exits)
+        y=observer(y,fly(y,dt/2,bound,heading,p["kappa"]*amplitude),t+dt/2,dt/2,live,exits)
         if not np.isfinite(y).all():raise FloatingPointError(f"nonfinite MC at {t}")
     angle=np.arctan2(np.sin(y[:,2]),np.cos(y[:,2]))
     ensembles=[]
@@ -135,7 +138,7 @@ def stochastic(rows,out,dt,seed):
     np.savez_compressed(out/"trajectories.npz",state=np.stack(hist,axis=1),bound=np.stack(attachments,axis=1),
         time=np.array(times),ids=np.repeat([r["id"] for r in rows],4*count),impact=imp,
         exit_time=exits,heading=heading,captures=captures,releases=releases)
-    data=dict(dt=dt,seed=seed,per_ensemble=count,rows=rows,ensembles=ensembles,
+    data=dict(dt=dt,seed=seed,carried=carried,per_ensemble=count,rows=rows,ensembles=ensembles,
               total_histories=n,arrivals=int(np.isfinite(exits).sum()))
     dump(out/"results.json",data)
     print(f"{out.name}: {n} event histories, {data['arrivals']} arrivals",flush=True)
