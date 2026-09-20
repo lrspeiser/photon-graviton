@@ -1,0 +1,135 @@
+{
+  "final_formula": {
+    "id": "signed-joint-cap3e-09-k2-release1e-07",
+    "family": "T",
+    "capacity": 3e-09,
+    "theta": [
+      -2.4313890759359333,
+      0.5365242800718946,
+      -0.42161086844114765,
+      0.1287728420908095,
+      0.7119750993680622
+    ],
+    "epsilon": 0.7578728694152812,
+    "x_flip": -1.018863757077332,
+    "steepness": 2.0,
+    "release_acceleration": 1e-07
+  },
+  "models": [
+    {
+      "model": "Ordinary matter",
+      "split": "train",
+      "galaxy_rmse": 52.56089758785707,
+      "galaxy_chi2_per_point": 769.6676343875284,
+      "pressure_chi2_per_point": 238.59522318536702
+    },
+    {
+      "model": "Ordinary matter",
+      "split": "validation",
+      "galaxy_rmse": 58.219215663535394,
+      "galaxy_chi2_per_point": 315.1606624753586,
+      "pressure_chi2_per_point": 225.1831771872269
+    },
+    {
+      "model": "Ordinary matter",
+      "split": "test",
+      "galaxy_rmse": 47.771889244324356,
+      "galaxy_chi2_per_point": 391.0095732521636,
+      "pressure_chi2_per_point": 134.8968452580127
+    },
+    {
+      "model": "Positive joint",
+      "split": "train",
+      "galaxy_rmse": 21.777535855167002,
+      "galaxy_chi2_per_point": 87.73445277161366,
+      "pressure_chi2_per_point": 15.920624535300307
+    },
+    {
+      "model": "Positive joint",
+      "split": "validation",
+      "galaxy_rmse": 28.770371626430844,
+      "galaxy_chi2_per_point": 50.68430106804478,
+      "pressure_chi2_per_point": 10.228519420819634
+    },
+    {
+      "model": "Positive joint",
+      "split": "test",
+      "galaxy_rmse": 20.365150090488342,
+      "galaxy_chi2_per_point": 60.07085518114546,
+      "pressure_chi2_per_point": 4.8303734449076705
+    },
+    {
+      "model": "Signed joint",
+      "split": "train",
+      "galaxy_rmse": 21.228743092329747,
+      "galaxy_chi2_per_point": 75.64118802650475,
+      "pressure_chi2_per_point": 13.25147624305057
+    },
+    {
+      "model": "Signed joint",
+      "split": "validation",
+      "galaxy_rmse": 26.929286908345528,
+      "galaxy_chi2_per_point": 46.875576376058746,
+      "pressure_chi2_per_point": 9.171162908302486
+    },
+    {
+      "model": "Signed joint",
+      "split": "test",
+      "galaxy_rmse": 18.388847897878755,
+      "galaxy_chi2_per_point": 43.006460337736165,
+      "pressure_chi2_per_point": 4.908003204618309
+    },
+    {
+      "model": "Release joint",
+      "split": "train",
+      "galaxy_rmse": 21.228702910335485,
+      "galaxy_chi2_per_point": 75.64205185102195,
+      "pressure_chi2_per_point": 13.249795513707088
+    },
+    {
+      "model": "Release joint",
+      "split": "validation",
+      "galaxy_rmse": 26.928922938385934,
+      "galaxy_chi2_per_point": 46.87545902275391,
+      "pressure_chi2_per_point": 9.171220248434047
+    },
+    {
+      "model": "Release joint",
+      "split": "test",
+      "galaxy_rmse": 18.388064638648068,
+      "galaxy_chi2_per_point": 42.99986954381425,
+      "pressure_chi2_per_point": 4.908289230664119
+    },
+    {
+      "model": "Galaxy-only signed",
+      "split": "train",
+      "galaxy_rmse": 19.02167110303027,
+      "galaxy_chi2_per_point": 62.02056085389912,
+      "pressure_chi2_per_point": 34.78777517563505
+    },
+    {
+      "model": "Galaxy-only signed",
+      "split": "validation",
+      "galaxy_rmse": 25.035464031829147,
+      "galaxy_chi2_per_point": 34.20177040704047,
+      "pressure_chi2_per_point": 29.2596972543382
+    },
+    {
+      "model": "Galaxy-only signed",
+      "split": "test",
+      "galaxy_rmse": 16.069060000078267,
+      "galaxy_chi2_per_point": 37.362085122022336,
+      "pressure_chi2_per_point": 14.507315692019855
+    }
+  ],
+  "fits": 70,
+  "attempts": 210,
+  "response_variants": 35,
+  "all_numerical_checks_passed": true,
+  "complete_observational_match": false,
+  "energy_funding_derived": false,
+  "dark_matter": false,
+  "expansion": false,
+  "distances_adjusted": false,
+  "historical_novelty_established": false
+}

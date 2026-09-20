@@ -1,5 +1,13 @@
 # Research changelog
 
+## 2026-09-19: observation-constrained coherent hitchhiking
+
+- **IH-1 executed** ([report](research_work/experiments/inverse_hitchhiking/report.md), [exact parameters](research_work/experiments/inverse_hitchhiking/summary.json)). Protocol e521c76 was committed before fitting; concurrent RUT-10 update 92ffcc3 was merged cleanly at 49e7e7e. Fixed ordinary-source data, deterministic coupling, no dark matter, expanding background or distance tuning.
+- Twenty positive-response variants, twelve counter-turning variants and three release variants, each with galaxy-only and joint objectives: 70 fits, 210 optimizer starts. All failed physical requirements are retained: positive-only misses downward force requirements; the first signed law tends to 0.243 of ordinary gravity at large acceleration; its declared release amendment restores the limit without materially degrading the fit. Protocols/source commits and all predictions are pinned in the experiment README.
+- Final joint galaxy train/validation/test RMSE 21.23/26.93/18.39 km/s; X-COP pressure scores 13.25/9.17/4.91 per point, with one boundary nuisance per cluster. Coma shape scores 3.8149/3.8158 for two fixed ordinary-source brackets versus 4.2839 for ordinary matter. The improvement is conditional: test-labelled data were already exposed, galaxy measurement-error fit remains inadequate, the joint validation criterion is unmet, and Coma's missing source geometry prevents an absolute prediction.
+- Twelve controls and 42 numerical refinements pass. Independent audit verifies 27 evidence byte hashes, 35 files at recorded source commits, unchanged adopted distances and the final velocity/deflection formula. Preserve 190 inverse negative-response rows, including 52 beyond three quoted velocity errors without ordinary-matter uncertainty. Source/field funding, microscopic binding, swirl formation and the common light-law derivation remain open; no novelty claim.
+
+
 ## 2026-09-19: companion following, cumulative streams and temporary photon attachment
 
 - **GF-1 executed:** [618-formula catalogue and report](research_work/experiments/companion_following/report.md), protocol checkpoint 011dc87. The 600 force/memory combinations and 18 conservative cases produce 1,515 finite trajectories, plus one explicitly unavailable ring initialization. A lag-window scoring bug was corrected with originals retained and selections rerun. All 27 controls and 76 evidence assertions pass. A common-potential null also passes short following/swirl gates; selected longer chains and conservative rings fail. No star-motion or cluster-lensing solution.
