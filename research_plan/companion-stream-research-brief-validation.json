@@ -1,0 +1,48 @@
+{
+  "pages": 7,
+  "source_sha256": "6eeb58bc732b438439176062400938d2d78a7db7025c2790d99de6c61a63b56a",
+  "pdf_sha256": "232c8b00cc751d12ec28b5f42532b82197fd702eedb979f1c498badabf2e7435",
+  "evidence_commit": "f62f51817e82e3d5ed847a0184e63d60820048ea",
+  "evidence_files": {
+    "research_work\\experiments\\coherent_memory_fit\\summary.json": "986aebefc7ecbfa3efc0f87d4f6bc0270be62e2444eeab332156a2262aab865f",
+    "research_work\\experiments\\coherent_memory_fit\\observed-comparison-data.json": "b8728304d8a0edf580fb63d61bc111dfe345ead1394c15ee8d945895195a2643",
+    "research_work\\experiments\\coherent_memory_fit\\audit.json": "395b2d943b8837fd6aa1d46ac3684c8474b6dbec9e90d41cf4562c4696887d7f"
+  },
+  "page_text_lengths": [
+    2809,
+    1929,
+    3186,
+    3090,
+    3183,
+    2922,
+    3100
+  ],
+  "all_text_checks_passed": true,
+  "visual_review": {
+    "completed": true,
+    "pages_reviewed": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "method": "Poppler PNG rendering at 1500-pixel page height; direct visual inspection of all final pages",
+    "result": "Readable text and chart labels; no clipping, overlaps or blank pages",
+    "renderer_notes": "Poppler emitted missing fallback-font configuration warnings; used glyphs rendered correctly"
+  },
+  "review_date": "2026-09-19",
+  "new_physics_experiments_run": false,
+  "rebuild_command": "python research_work/tools/build_companion_stream_brief.py",
+  "build_dependencies": [
+    "numpy",
+    "matplotlib",
+    "reportlab",
+    "pypdf"
+  ],
+  "editable_markdown_sha256": "6557b9c30f38566d025b4cc734ab28ec69b1f6d880b10cd48db4116f14a0c5e4",
+  "builder_sha256": "4d0ac90a092877231ab24a34b934cb56e5fef78f8da7eeb0384fe9350857be60",
+  "source_urls_checked_date": "2026-09-19"
+}

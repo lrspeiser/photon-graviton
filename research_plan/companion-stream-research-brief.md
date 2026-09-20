@@ -1,0 +1,192 @@
+# Companion-stream gravity
+
+How far we can push the idea, and what to test next
+
+19 September 2026 | Fictional-universe research programme
+
+Evidence snapshot: f62f51817e82e3d5ed847a0184e63d60820048ea
+
+## A serious route worth developing
+
+We can push this from an encouraging fitted response toward a testable theory of how ordinary matter generates a persistent gravitational field. The strongest opportunity is a single mechanism that preserves galaxy-scale success while explaining cluster dynamics and lensing, without an independently supplied dark-matter halo.
+
+Our working idea is that ordinary matter sources companion waves or hypothetical gravitons. Their motion influences subsequent carriers, building a persistent, possibly circulating field. Light can accumulate a coherent bend while crossing that field, potentially through temporary attachment and release. These are hypotheses to develop in the project's nonexpanding fictional universe, using measured observations as targets.
+
+### A fair view of MOND and dark matter
+
+Standard MOND does have a residual cluster problem. A 2024 study of five X-COP clusters found that additional gravitating material was still required within MOND, with hydrostatic bias and the external-field effect important to the interpretation. That makes the galaxy-to-cluster transition a legitimate target for a new approach; it does not establish that every MOND extension fails. [S1]
+
+Dark-matter particles have not been confirmed in laboratory detection. As of this brief, LZ has reported a September 2026 candidate nuclear-recoil event with global significance 2.6 sigma, explicitly short of a discovery. This does not erase gravitational evidence such as the separation of lensing peaks from hot gas in merging clusters. Our theory must explain those observations too. [S2, S3]
+
+Many dark-matter rotation-curve analyses fit halo properties galaxy by galaxy. For example, Li et al. fit halo mass and concentration together with other uncertainties and discuss population priors. Their fitted freedom belongs in a fair comparison. Dark matter nevertheless has constraints beyond individual galaxy curves; it is not only a collection of adjustable rotation fits. [S4]
+
+> The case for continuing is the improvement already achieved and the new predictions this mechanism could make. An alternative's unresolved problems are motivation, not evidence that our particular mechanism is correct.
+
+There is no defensible numerical ceiling on how far this idea can go yet. We can already test effective force laws. The next level is a source-generated field with consistent energy, motion and light propagation. A full alternative cosmology would additionally need to explain redshift, timing, microwave observations, abundances and structure under the project contract.
+
+## What the current evidence says
+
+The latest two campaigns explored 132 fitted configurations, 396 optimizer starts and 11 structural basis/memory choices. They reused 149 galaxies, 12 cluster-pressure profiles and six reconstructed Coma shear bins. All samples were previously exposed; these are developmental comparisons, not fresh confirmation. [P1]
+
+| Model | Galaxy test RMSE km/s | Cluster test pressure chi2 per point |
+| --- | --- | --- |
+| Ordinary matter | 47.77 | 134.90 |
+| Matched simple MOND | 16.09 | 58.06 |
+| Previous shared law (IH-1) | 18.39 | 4.91 |
+| Latest shared law (CMF) | 21.72 | 5.06 |
+| Galaxy-only memory law | 15.65 | 195.64 |
+
+Lower is better in both columns. The shared laws markedly improve cluster pressure over this simple-MOND reference, while MOND currently predicts the galaxy test-labelled sample better. Pressure is not lensing. Our galaxy-only memory candidate slightly improves the galaxy point score, but its bootstrap interval includes no improvement and its pressure transfer fails.
+
+Fitted universal coefficients: shared law 11; galaxy-only law 14; simple MOND 1. Pressure scores also fit one boundary pressure per cluster and use diagonal quoted errors. The shared score of 5.06 remains above unity. [P1, S8]
+
+![Observed comparison](../research_work/experiments/coherent_memory_fit/observed-comparison.png)
+
+Same latest shared law in both panels; no object-specific refit. Coma uses two assumed ordinary-source profiles and maximum static source efficiency beta=1. Bands are source brackets, not confidence intervals. Black points have measurement errors; Coma points were reconstructed from a published figure. NGC 3198 is a training-labelled example. Rotation tracers do not track one individual star. [P1, S5, S6]
+
+> At NGC 3198's outer measured radius, 44.08 kpc: observed 149 +/- 3 km/s; our shared law 119.3; ordinary-matter Newtonian gravity 64.7. This closes about 65% of the velocity shortfall. The remaining inward acceleration is about 5.9e-12 m/s^2 at this point.
+
+## Turn the picture into a physical model
+
+We should distinguish three ingredients: source production, collective carrier motion, and how matter/light respond. A fitted radial function does not yet derive any of them. The best latest shared fit actually selected zero radial memory; that is a result about that restricted family, not a test of every possible vector swirl.
+
+### 1. Source and carrier transport
+
+```text
+partial_t f + c_g n . grad_x f + div_n(f Omega)
+    = S_matter + S_conversion - Gamma f
+Omega = nu (I - n n^T) J_R / (|J_R| + J_0)
+```
+
+This is a proposed kinetic scaffold, not a fitted or derived equation. f is the directional carrier density, n a unit travel direction, c_g a propagation speed, and Omega its turning rate. J_R is a retarded local carrier current; the projector keeps turning perpendicular to n. nu and Gamma are rates; J_0>0 has current units and regularizes zero current. div_n is surface divergence on the unit sphere. The source terms have units of f per time. Any nonlocal kernel must respect its declared propagation cone. Turning towards a current is an alignment assumption; an inward attractive force still needs derivation. Alignment mathematics has established precedents; applying it to these carriers is the proposed hypothesis. [S9]
+
+Test direct matter emission and photon-energy conversion as separately funded source hypotheses. Matter emission must draw energy from an identified reservoir; conversion must debit the photons. Carriers leaving the region or decaying remain in the ledger. No arbitrary halo-shaped reservoir may be inserted as an initial condition. Conventional quantum gravitons are not established by assigning that name to f.
+
+### 2. Coherent photon residence and release
+
+```text
+d chi/ds = (chi_eq - chi) / ell_attach
+ d n_gamma/ds = (I - n_gamma n_gamma^T)
+               [2 a_b/c^2 + chi K_g]
+```
+
+Here 0<=chi<=1 is a deterministic coupling fraction, chi_eq in [0,1] its local equilibrium, s photon path length, and ell_attach>0 a length. a_b is ordinary-matter acceleration; K_g is a vector curvature contribution with units of inverse length. This is one candidate closure to test, not a microscopic binding law. Repeated coherent interactions can add a mean bend without compulsory random angular scatter; distinct histories can still create width, delay or chromatic effects. Signed vector contributions must be integrated, so repeated encounters need not all add.
+
+### 3. A common force and an honest energy ledger
+
+```text
+v_circ^2 = r g_total
+alpha(b) = (4/c^2) integral_0^infinity
+           g_total(sqrt(b^2+z^2)) b/sqrt(b^2+z^2) dz
+ dE_total/dt + outward energy flux = external power
+```
+
+The displayed bending rule is the currently stipulated shared spherical weak-field coupling, with g_total the inward acceleration magnitude. Standard gravity already integrates light bending along a path; path accumulation itself is not new. A distinctive theory must derive a changed field, coupling or memory response. E_total must include source fuel, photons, carriers, fields, binding and recoil. A positive force or conserved test-particle energy is not a complete energy budget. [S7]
+
+## First priorities: the gaps we can target
+
+### Priority 1 - Keep outer galaxy support from fading too soon
+
+For a nearly flat rotation curve, the needed inward acceleration is approximately v_flat^2/r. Test whether finite carrier persistence produces that radial behavior over the observed disk, followed by a physically motivated turnover. The turnover should follow a lifetime, escape process or source geometry rather than an independently fitted radius for every object.
+
+Use the existing inner-galaxy successes as constraints. Start with NGC 3198 as a diagnostic, then test all galaxy residuals by radius, baryonic acceleration and ordinary-source concentration. Compare finite propagation, radial retention and saturation variants with the existing CMF and IH-1 laws. Do not tune only to the attractive example chart.
+
+> Desired result: the same source-based rule sustains outer rotation across objects while retaining inner fits and cluster-pressure performance. On a genuinely new galaxy sample, require a predeclared paired improvement over the matched simple-MOND reference, with comparable uncertainty handling.
+
+### Priority 2 - Derive how a swirl creates inward support
+
+Build a three-dimensional ordinary-source simulation with initially absent carriers and a counted emission budget. Test a stationary isotropic source, a rotating disk, a counter-rotating disk and a hot gas-dominated cluster. Include a common-potential control: earlier following tests could also look successful without the proposed extra interaction.
+
+Measure the carrier current, circulation, radial force, growth/saturation, torque and energy exchange. Reverse source rotation: handedness may reverse, but a successful mass-attraction mechanism should not automatically become repulsive. Merely following outgoing headings was insufficient in earlier tests. Determine which interaction supplies the inward component and its reciprocal reaction.
+
+> Desired result: a stable finite-source field forms without being drawn in by hand, remains converged as resolution and domain grow, and yields a calculable force. For a cluster, explain how gas and many differently oriented galaxies contribute without assuming one galaxy-sized rotation axis.
+
+### Priority 3 - Make hitchhiking predict clean lensing
+
+Compare deterministic coupling, finite coherent residence, and explicitly stochastic attachment as separate models. Send bundles with varied entry position, direction, frequency and polarization through the same field. Measure mean bend, image width, missing arrivals, delay, energy change and dependence on numerical step size.
+
+A photon remaining near the stream may feel a larger cumulative effect, but angular cancellation, release and momentum conservation matter. The light-strength coefficient should follow the interaction law and the same source parameters used for matter; it must not become an independent multiplier for each cluster. An observed image-sharpness test requires source/PSF treatment, not just a narrow numerical ray bundle.
+
+## Next priorities: observations that can decide
+
+### Priority 4 - Test pressure, motions and lensing in the same clusters
+
+Acquire calibrated shear or reduced-shear measurements, strong-lens image positions where available, source information, covariance and angular bin definitions for clusters with measured gas and stellar profiles. Begin with a named data-readiness inventory before choosing targets. Inferred dark-matter mass profiles are not observed baryonic sources.
+
+Preserve the project rule of fixed adopted distances and static geometry. If source distances cannot be established consistently, report a conditional geometry range or bound instead of claiming absolute agreement. Coma's present six-bin figure reconstruction cannot settle this question. Its current shared-law best normalization requires beta about 1.72-2.94, although broad errors mean this alone is not a decisive exclusion.
+
+Predict the available measurements jointly. Separate nonthermal support, nonequilibrium dynamics and stellar-profile uncertainty from a gravity change; do not use an unconstrained pressure correction to erase discrepancies. Count every fitted boundary pressure and any additional nuisance parameters.
+
+### Priority 5 - Use mergers and environmental effects as distinctive tests
+
+A field retaining source history could lag moving matter or remain concentrated near some sources after gas is displaced. Compute this from the carrier equations in a controlled merger, then compare lensing centroids, gas and galaxies in observed systems. The Bullet Cluster is one relevant challenge, not a proof that our mechanism already handles mergers. A fitted offset is weaker evidence than a predicted offset and relaxation time. [S3]
+
+Also test source aperture, surrounding matter and exposure history. The current mass proxy and finite force reach are assumptions; a physical law should account for their influence consistently. Check whether the same parameters give the predicted changes in isolated, satellite and interacting galaxies, rather than selecting a different law by object label.
+
+### Priority 6 - Close energy accounting and local constraints early
+
+For every candidate, calculate the power required to establish and maintain the carrier field, how long it takes to form, and where released energy and momentum go. Vary source history and lifetime explicitly; the contract imposes neither a fixed universe age nor permanent storage as a fact.
+
+Test orbital drag, disk heating, binary stability, local light deflection, timing and composition dependence. High-acceleration recovery in an algebraic formula is a useful limit, not a Solar-System pass. Photon conversion must also face its color, flux, delay and redshift consequences. Gravitational-wave propagation and the broader static-universe targets remain later obligations once a definite dynamical model exists.
+
+> The strongest eventual claim would be one funded source law that predicts several kinds of observation and at least one distinctive new effect. We do not need to declare victory over every alternative before learning whether that programme works.
+
+## A fair test and a practical sequence
+
+### First deliverables
+
+| Step | Deliverable | Decision it enables |
+| --- | --- | --- |
+| 1 | Residual map + frozen baseline ledger | Which radii and source conditions need correction? |
+| 2 | Energy-counted vector transport prototype | Does a source generate inward support and circulation? |
+| 3 | Matter orbits + coherent ray bundles | Can one interaction retain rotation and clean bending? |
+| 4 | Matched cluster data and geometry audit | Can absolute predictions be compared responsibly? |
+| 5 | Frozen model on new objects | Does predictive performance survive outside development? |
+
+These are proposed next tasks. This brief does not report their completion or schedule a background run. Priorities 1-3 are the first modelling programme; data acquisition for priority 4 can proceed alongside it. Each numerical campaign needs its own dated protocol, candidate list, scales, units, bounds, controls and selection rule before results are inspected.
+
+### Compare equal tasks, not unequal scoreboards
+
+Use the same objects, radius masks, adopted distances, ordinary-matter assumptions and likelihoods for every active comparison. Record both universal parameters and per-object nuisance terms. Keep training, model choice and final verification distinct. Repeated use of an old test set turns it into development data; labels cannot restore independence.
+
+Under the no-dark-matter testing instruction, keep active baselines to ordinary matter, attributed MOND and our own candidates. Published halo fits may provide context, with their differing assumptions stated; they cannot establish that we beat dark matter. Any future claim of superiority needs an eligible matched comparison. Account for uncertainty and flexibility using object-level predictive performance, not optimizer success or a single striking plot.
+
+### Keep bold variations useful
+
+Reverse signs, vary exponents and test alternative dimensionless couplings in declared branches. Preserve units: changing a power requires a reference scale. Keep measured G, c and adopted distances fixed in the empirical benchmark; any altered-constant fictional variant must be separately labelled and face its own local constraints. Archive unsuccessful, unstable and nonconverged cases alongside successes.
+
+### Know what each milestone means
+
+A better calibration shows that a compact response can approximate the data. Transfer to new objects supports prediction. A source-generated, energy-balanced field supports the physical mechanism. A distinctive prediction that survives an independent test would make the strongest case. None of these stages grants historical originality automatically.
+
+> Recommended immediate focus: combine an outer-force persistence test with a minimal source-generated vector model. The current pressure success is worth protecting while we work on outer rotation and a physically derived optical response.
+
+## Attribution and source register
+
+This is a project research proposal based on archived calculations, not a claim that hypothetical carriers, their binding to photons, or their self-generated swirl have been observed. The carrier and attachment equations on page 3 are proposed scaffolds and have not been run as new experiments in this brief.
+
+The owner's proposed combination is matter-sourced carriers, motion-dependent following, persistent circulation and temporary coherent photon residence. We can credit that project hypothesis without claiming no one has considered related ideas. Kinetic transport, alignment models, memory kernels, force fitting and lensing integrals have established precedents, including collective alignment in Vicsek et al. [S9]. The present scalar force fits do not themselves realize a vector swirl.
+
+Maintain an attribution table for every mathematical ingredient, observation and software component. The existing experiment reports already credit their methods; new derivations should do the same. A similarity search can identify overlaps but cannot certify universal novelty. Distinguish a new implementation, a new combination, a derived consequence and an established result.
+
+[P1] Project evidence: CMF-1/CMF-2 report, plotted data, exact parameters and audit, main commit f62f518. Earlier IH-1 and GF/MS/HH evidence remains in the repository. [Read source](https://github.com/lrspeiser/photon-graviton/tree/f62f51817e82e3d5ed847a0184e63d60820048ea/research_work/experiments/coherent_memory_fit).
+
+[S1] Kelleher & Lelli (2024), Galaxy clusters in Milgromian dynamics: Missing matter, hydrostatic bias, and the external field effect. [Read source](https://arxiv.org/abs/2405.08557).
+
+[S2] LZ Collaboration, September 2026 result; Berkeley Lab's 1 September account explicitly states that discovery is not claimed. Detection status checked 19 September 2026. [Read source](https://newscenter.lbl.gov/2026/09/01/lz-sees-surprising-result-in-search-for-dark-matter/).
+
+[S3] Clowe et al. (2006), A direct empirical proof of the existence of dark matter. The observed lensing/gas separation is a target; the paper's dark-matter interpretation is not an active source in our model. [Read source](https://arxiv.org/abs/astro-ph/0608407).
+
+[S4] Li et al. (2020), A comprehensive catalog of dark matter halo models for SPARC galaxies. [Read source](https://arxiv.org/abs/2001.10538).
+
+[S5] Lelli, McGaugh & Schombert (2016), SPARC mass models and rotation-curve data. [Read source](https://arxiv.org/abs/1606.09251).
+
+[S6] Kubo et al. (2007), The Mass of the Coma Cluster from Weak Lensing in the Sloan Digital Sky Survey. [Read source](https://arxiv.org/abs/0709.0506).
+
+[S7] Bartelmann & Schneider, Weak Gravitational Lensing. Standard optical integration is attributed, not claimed as a project invention. [Read source](https://arxiv.org/abs/astro-ph/9912508).
+
+[S8] Ghirardini et al., X-COP thermodynamic profiles used by the archived pressure reductions. [Read source](https://arxiv.org/abs/1805.00042).
+
+[S9] Vicsek et al. (1995), Novel type of phase transition in a system of self-driven particles. A precedent for collective directional alignment, not a gravitational theory or this proposed carrier model. [Read source](https://arxiv.org/abs/cond-mat/0611743).
+
+All numerical score statements come from the preserved project evidence. No additional fits were performed to prepare this write-up. Fixed published distances, a nonexpanding geometry and no independently supplied dark-matter halo remain the active project constraints.
