@@ -1,149 +1,222 @@
 {
-  "module": "phase_junction_network",
-  "status": "exploratory candidate foundation; linear gravity is internally well tested, a provisional companion ontology is selected, and finite electromagnetism, matter, nonlinear closure, shared parameters, continuum quantum consistency, integration dynamics, and empirical distinctiveness remain open",
-  "created_utc": "2026-09-20",
   "active_branch": "main",
   "architecture_audit": "phase_junction_network/architecture_audit.md",
   "companion_ontology": "phase_junction_network/companion_ontology.md",
-  "master_tracker_issue": 10,
+  "created_utc": "2026-09-20",
   "dependencies": [
     "python>=3.11",
     "numpy>=1.24",
     "scipy>=1.10"
   ],
-  "selected_companion_branch": {
-    "status": "provisional_for_derivation_and_falsification",
-    "identity": "gauge-neutral local matter-geometry relative-phase quantum varphi",
-    "deposit": "bound collective state of the same varphi sector",
-    "photon": "transverse compact-link U(1) quantum",
-    "graviton": "transverse frame excitation, distinct from the companion reservoir",
-    "connection_relative_modes": "gapped by the second-class lock and excluded as low-energy companion candidates",
-    "first_required_calculation": "finite matter-assisted photon-varphi transition with reverse channel and recoil ledger",
-    "issue": 7
-  },
+  "file_integrity_note": "Git blob identifiers are tracked by repository history; this manifest intentionally does not self-hash.",
+  "immediate_work_order": [
+    "build the smallest finite matter-assisted photon-varphi transition with reverse channel and recoil under issue 7",
+    "demonstrate or reject a finite deconfined electromagnetic Coulomb phase with the new dynamical defects under issue 6",
+    "complete the finite dressed frame Hamiltonian under issue 2",
+    "derive r0, eta, U_A, K_A, U_g, and K_g from one microscopic move set under issue 3",
+    "close nonlinear constraints and the volume-vacuum sector under issue 5",
+    "complete mirror removal or symmetric gapping plus interacting continuum consistency under issue 8",
+    "maintain the parameter and observable ledger required by issue 9"
+  ],
+  "master_tracker_issue": 10,
+  "matter_construction": "phase_junction_network/microscopic/chiral_matter_defect.md",
+  "module": "phase_junction_network",
   "pillar_status": {
-    "ontology_and_companion_integration": {
-      "status": "provisional_identity_selected_but_dynamics_open",
-      "issue": 7
-    },
-    "finite_electromagnetic_coulomb_qed_phase": {
-      "status": "partial_kinematics_only",
-      "issue": 6
-    },
-    "linear_gravity": {
-      "status": "established_internally_under_linear_assumptions",
-      "issue": 2
-    },
-    "finite_dressed_gravity_hamiltonian": {
-      "status": "open",
-      "issue": 2
-    },
-    "nonlinear_gravity_and_vacuum": {
-      "status": "open",
-      "issue": 5
+    "continuum_quantum_consistency_and_lorentz_recovery": {
+      "issue": 8,
+      "status": "open_including_matter_mirror_completion"
     },
     "finite_chiral_matter_and_mass_protection": {
-      "status": "open",
-      "issue": 4
+      "downstream_issues": [
+        3,
+        6,
+        8,
+        9
+      ],
+      "issue": 4,
+      "status": "finite_free_regulator_prototype_pass; observed_spectrum_mirror_completion_interactions_and_clocks_open"
     },
-    "shared_microscopic_coefficients_and_impedance_ratio": {
-      "status": "open",
-      "issue": 3
+    "finite_dressed_gravity_hamiltonian": {
+      "issue": 2,
+      "status": "open"
     },
-    "continuum_quantum_consistency_and_lorentz_recovery": {
-      "status": "open",
-      "issue": 8
+    "finite_electromagnetic_coulomb_qed_phase": {
+      "issue": 6,
+      "status": "partial_kinematics_plus_finite_dynamical_endpoint"
     },
     "frozen_predictions_and_empirical_test_ladder": {
-      "status": "open",
-      "issue": 9
+      "issue": 9,
+      "status": "open"
+    },
+    "linear_gravity": {
+      "issue": 2,
+      "status": "established_internally_under_linear_assumptions"
+    },
+    "nonlinear_gravity_and_vacuum": {
+      "issue": 5,
+      "status": "open"
+    },
+    "ontology_and_companion_integration": {
+      "issue": 7,
+      "status": "provisional_identity_selected_but_dynamics_open"
     },
     "reproducibility_and_negative_controls": {
       "status": "established_for_current_checks"
+    },
+    "shared_microscopic_coefficients_and_impedance_ratio": {
+      "issue": 3,
+      "status": "open_including_matter_localization_parameters"
     }
   },
   "results": {
+    "constrained_local_reduction": {
+      "extended_phase_dimension": 48,
+      "failures": 0,
+      "first_class_constraints": 4,
+      "maximum_relative_frequency_error": 1.9810714906408463e-15,
+      "physical_configuration_modes": 2,
+      "physical_phase_dimension": 4,
+      "second_class_constraints": 36,
+      "tested_nonzero_modes": 492,
+      "uses_TT_projector": false
+    },
+    "finite_chiral_matter_defect": {
+      "all_exchange_phases_fermionic": true,
+      "bound_composite_fock_dimension_per_site_layer": 16,
+      "charges": [
+        -11,
+        -5,
+        -1,
+        -1,
+        9,
+        9
+      ],
+      "claim_boundary": "finite free-regulator endpoint prototype; not Standard Model, observed masses, mirror removal, interacting QED, clocks, or radiative stability",
+      "distinct_gaps": {
+        "-1": 8.787634390124283e-12,
+        "-11": 0.0002851842336311982,
+        "-5": 2.1401235300451101e-07,
+        "9": 4.246025991852094e-05
+      },
+      "eta": 0.04,
+      "exact_flux_bundle_gauss_covariance": true,
+      "exact_invariant_binding_band": true,
+      "gap_hierarchy_ratio": 32452901.539883576,
+      "mass_relation": "r_q = r0 + eta*(|q|-1), m5(q) = -1 + r_q",
+      "maximum_frame_derivative_species_difference": 0.0,
+      "maximum_link_bundle_dimension": 177147,
+      "maximum_parallel_spin1_lanes": 11,
+      "maximum_spectral_pairing_residual": 2.6645352591003757e-15,
+      "minimum_nonzero_corner_gap": 1.1674499031546928,
+      "one_physical_weyl_corner_per_species": true,
+      "primitive": true,
+      "r0": 0.12,
+      "remote_mirror_wall_retained": true,
+      "search_first_solution_level": [
+        6,
+        11
+      ],
+      "slab_width": 12,
+      "status": "PASS",
+      "sum_q": 0,
+      "sum_q_cubed": 0,
+      "topological_window_failures": 0,
+      "topological_window_samples": 20,
+      "vectorlike_pair_present": false
+    },
+    "finite_connection_second_class_lock": {
+      "asymptotic_constraint_cost_power": -0.9719057388296217,
+      "asymptotic_constraint_rms_power": -0.4859528694148097,
+      "asymptotic_gap_error_power": -0.9831409015880235,
+      "construction": "gapped Weyl relative oscillator for P_C and C-Ah",
+      "exact_dressed_frame_algebra": true,
+      "maximum_dressed_algebra_residual": 1.3322676295501878e-15,
+      "minimum_tested_gap": 0.8081382192019673,
+      "p3_expected_ground_band_dimension": 9,
+      "p3_ground_band_dimension": 9,
+      "p5_expected_ground_band_dimension": 5,
+      "p5_ground_band_dimension": 5
+    },
     "finite_electromagnetic_link": {
-      "minimal_tested_nontrivial_spin": 1.0,
-      "minimal_tested_nontrivial_dimension": 3,
       "exact_gauss_commutator": true,
-      "finite_coulomb_phase_demonstrated": false
+      "finite_coulomb_phase_demonstrated": false,
+      "minimal_tested_nontrivial_dimension": 3,
+      "minimal_tested_nontrivial_spin": 1.0
     },
     "finite_gravity_constraint_skeleton": {
       "L3_p5_logical_qudits": 58,
       "L5_p7_logical_qudits": 254,
       "exact_scalar_vector_commutator": true
     },
-    "finite_connection_second_class_lock": {
-      "construction": "gapped Weyl relative oscillator for P_C and C-Ah",
-      "exact_dressed_frame_algebra": true,
-      "p3_ground_band_dimension": 9,
-      "p3_expected_ground_band_dimension": 9,
-      "p5_ground_band_dimension": 5,
-      "p5_expected_ground_band_dimension": 5,
-      "minimum_tested_gap": 0.8081382192019673,
-      "asymptotic_constraint_cost_power": -0.9719057388296217,
-      "asymptotic_constraint_rms_power": -0.4859528694148097,
-      "asymptotic_gap_error_power": -0.9831409015880235,
-      "maximum_dressed_algebra_residual": 1.3322676295501878e-15
-    },
-    "rejected_local_invariant_square_branch": {
-      "dispersion": "omega proportional to k^3",
-      "decision": "rejected for the relativistic tensor target"
-    },
     "first_order_frame_connection": {
-      "random_failures": 0,
+      "connection_inertia": [
+        8,
+        0,
+        10
+      ],
+      "decision": "connection must be constrained or nonpropagating, contour-integrated, or accompanied by bare frame stiffness",
       "exact_rational_coefficient_failures": 0,
-      "connection_inertia": [8, 0, 10],
-      "decision": "connection must be constrained or nonpropagating, contour-integrated, or accompanied by bare frame stiffness"
-    },
-    "constrained_local_reduction": {
-      "extended_phase_dimension": 48,
-      "second_class_constraints": 36,
-      "first_class_constraints": 4,
-      "physical_phase_dimension": 4,
-      "physical_configuration_modes": 2,
-      "tested_nonzero_modes": 492,
-      "failures": 0,
-      "maximum_relative_frequency_error": 1.9810714906408463e-15,
-      "uses_TT_projector": false
+      "random_failures": 0
     },
     "full_real_space_reduction": {
-      "lattice_sizes": [3, 5],
-      "uses_fourier_during_reduction": false,
-      "uses_TT_projector": false,
       "L3_physical_phase_dimension": 104,
       "L5_physical_phase_dimension": 496,
+      "lattice_sizes": [
+        3,
+        5
+      ],
       "maximum_relative_frequency_error": 2.2044903280835783e-14,
-      "minimum_physical_hessian_eigenvalue": 0.3454915028125236
+      "minimum_physical_hessian_eigenvalue": 0.3454915028125236,
+      "uses_TT_projector": false,
+      "uses_fourier_during_reduction": false
     },
     "periodic_global_sector": {
-      "unconstrained_hamiltonian_inertia": [1, 6, 5],
+      "decision": "fixed total volume plus trace momentum removes one negative homogeneous conformal pair at linear order; this is not a complete vacuum or cosmological mechanism",
       "fixed_volume_constraint_bracket_rank": 2,
-      "fixed_volume_reduced_inertia": [0, 5, 5],
-      "decision": "fixed total volume plus trace momentum removes one negative homogeneous conformal pair at linear order; this is not a complete vacuum or cosmological mechanism"
+      "fixed_volume_reduced_inertia": [
+        0,
+        5,
+        5
+      ],
+      "unconstrained_hamiltonian_inertia": [
+        1,
+        6,
+        5
+      ]
     },
     "reduced_transfer_matrix": {
-      "gap_scaling_power": -0.9938568506775519,
       "first_gap_degeneracy": 2,
-      "maximum_relative_transfer_gap_error": 6.929323754426769e-15,
+      "gap_scaling_power": -0.9938568506775519,
       "maximum_low_state_boundary_occupation": 4.746923100054366e-31,
+      "maximum_relative_transfer_gap_error": 6.929323754426769e-15,
       "minimum_reflection_kernel_eigenvalue": -2.63511389083254e-15
+    },
+    "rejected_local_invariant_square_branch": {
+      "decision": "rejected for the relativistic tensor target",
+      "dispersion": "omega proportional to k^3"
     }
   },
-  "immediate_work_order": [
-    "build the smallest finite matter-assisted photon-varphi transition with reverse channel and recoil under issue 7",
-    "demonstrate or reject a finite deconfined electromagnetic Coulomb phase under issue 6",
-    "complete the finite dressed frame Hamiltonian under issue 2",
-    "prototype a finite charged matter defect under issue 4",
-    "create the parameter and observable ledger required by issue 9"
-  ],
+  "selected_companion_branch": {
+    "connection_relative_modes": "gapped by the second-class lock and excluded as low-energy companion candidates",
+    "deposit": "bound collective state of the same varphi sector",
+    "first_required_calculation": "finite matter-assisted photon-varphi transition with reverse channel and recoil ledger",
+    "graviton": "transverse frame excitation, distinct from the companion reservoir",
+    "identity": "gauge-neutral local matter-geometry relative-phase quantum varphi",
+    "issue": 7,
+    "matter": "finite charged or neutral defects, distinct from the companion",
+    "photon": "transverse compact-link U(1) quantum",
+    "status": "provisional_for_derivation_and_falsification"
+  },
+  "status": "exploratory candidate foundation; linear gravity is internally well tested, a finite chiral charged-endpoint prototype now passes its declared regulator gates, and finite deconfined electromagnetism, finite dressed gravity, nonlinear closure, shared parameters, interacting continuum consistency, companion dynamics, observed matter, and empirical distinctiveness remain open",
   "stop_rules": [
     "do not treat additional linear tensor precision as closure of another pillar",
-    "do not reidentify the companion as photon, tensor graviton, or connection mode in another calculation without an explicit conversion theory",
+    "do not identify the finite issue-4 charge set with Standard Model particles without a derived mapping and additional gauge structure",
+    "do not treat r0 or eta as predicted constants until derived or explicitly recorded as calibration inputs",
+    "do not hide or silently discard the remote matter mirror wall",
+    "do not infer a deconfined QED phase from exact Gauss-covariant endpoint hopping alone",
+    "do not reidentify the companion as photon, tensor graviton, connection mode, or charged matter in another calculation without an explicit conversion theory",
     "do not fit galaxies or cosmology before local predictions and parameter roles are frozen",
-    "do not derive alpha, G, or masses by independently assigning every microscopic coefficient",
+    "do not derive alpha, G, or observed masses by independently assigning every microscopic coefficient",
     "do not call the linear fixed-volume control a completed cosmological-constant solution"
-  ],
-  "file_integrity_note": "Git blob identifiers are tracked by repository history; this manifest intentionally does not self-hash."
+  ]
 }

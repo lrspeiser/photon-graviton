@@ -41,6 +41,12 @@ jobs:
           python phase_junction_network/microscopic/search_local_dynamics.py \
             --output /tmp/local_dynamics_results.json
 
+      - name: Check finite chiral matter endpoint
+        run: |
+          python phase_junction_network/microscopic/check_chiral_matter_defect.py \
+            --slab-width 12 \
+            --output /tmp/chiral_matter_results.json
+
       - name: Check first-order frame connection
         run: |
           python phase_junction_network/microscopic/check_first_order_frame.py \

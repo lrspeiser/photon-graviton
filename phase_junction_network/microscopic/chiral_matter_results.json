@@ -1,0 +1,465 @@
+{
+  "anomalies": {
+    "primitive": true,
+    "sum_q": 0,
+    "sum_q_cubed": 0,
+    "vectorlike_pair_present": false
+  },
+  "binding_subspace_checks": [
+    {
+      "bound_fock_dimension_for_four_orbitals": 16,
+      "charge": -11,
+      "composite_transition_count": 2,
+      "composite_transition_penalty_residual": 0,
+      "exact_invariant_bound_band": true,
+      "minimum_positive_penalty_in_units_of_Lambda": 10,
+      "one_orbital_dimension": 2048,
+      "strand_count": 11,
+      "zero_penalty_states_per_orbital": 2
+    },
+    {
+      "bound_fock_dimension_for_four_orbitals": 16,
+      "charge": -5,
+      "composite_transition_count": 2,
+      "composite_transition_penalty_residual": 0,
+      "exact_invariant_bound_band": true,
+      "minimum_positive_penalty_in_units_of_Lambda": 4,
+      "one_orbital_dimension": 32,
+      "strand_count": 5,
+      "zero_penalty_states_per_orbital": 2
+    },
+    {
+      "bound_fock_dimension_for_four_orbitals": 16,
+      "charge": -1,
+      "composite_transition_count": 2,
+      "composite_transition_penalty_residual": 0,
+      "exact_invariant_bound_band": true,
+      "minimum_positive_penalty_in_units_of_Lambda": null,
+      "one_orbital_dimension": 2,
+      "strand_count": 1,
+      "zero_penalty_states_per_orbital": 2
+    },
+    {
+      "bound_fock_dimension_for_four_orbitals": 16,
+      "charge": 9,
+      "composite_transition_count": 2,
+      "composite_transition_penalty_residual": 0,
+      "exact_invariant_bound_band": true,
+      "minimum_positive_penalty_in_units_of_Lambda": 8,
+      "one_orbital_dimension": 512,
+      "strand_count": 9,
+      "zero_penalty_states_per_orbital": 2
+    }
+  ],
+  "brillouin_corner_gaps": {
+    "-1": {
+      "000": 8.787634390124283e-12,
+      "001": 1.1674499031546928,
+      "010": 1.1674499031546928,
+      "011": 3.1563783841402424,
+      "100": 1.167449903154693,
+      "101": 3.1563783841402415,
+      "110": 3.1563783841402437,
+      "111": 5.153622861502106
+    },
+    "-11": {
+      "000": 0.0002851842336311982,
+      "001": 1.5631898742419224,
+      "010": 1.5631898742419215,
+      "011": 3.5555900837456726,
+      "100": 1.5631898742419188,
+      "101": 3.555590083745673,
+      "110": 3.5555900837456758,
+      "111": 5.553303153920134
+    },
+    "-5": {
+      "000": 2.1401235300451101e-07,
+      "001": 1.3254728882079918,
+      "010": 1.3254728882079925,
+      "011": 3.3160413120123886,
+      "100": 1.32547288820799,
+      "101": 3.3160413120123895,
+      "110": 3.31604131201239,
+      "111": 5.313489371628039
+    },
+    "9": {
+      "000": 4.246025991852094e-05,
+      "001": 1.4838773335903261,
+      "010": 1.4838773335903281,
+      "011": 3.475733879310104,
+      "100": 1.4838773335903295,
+      "101": 3.475733879310106,
+      "110": 3.4757338793101047,
+      "111": 5.473363463640521
+    }
+  },
+  "charge_search": {
+    "counts_at_six_species_by_charge_bound": {
+      "1": 0,
+      "11": 1,
+      "3": 0,
+      "5": 0,
+      "7": 0,
+      "9": 0
+    },
+    "counts_by_species": {
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 1
+    },
+    "first_representatives": [
+      [
+        -11,
+        -5,
+        -1,
+        -1,
+        9,
+        9
+      ]
+    ],
+    "first_solution_level": [
+      6,
+      11
+    ],
+    "max_abs_charge": 11,
+    "max_species": 6
+  },
+  "charge_statistics_relation": {
+    "binding_constraint": "n_q,a,A = n_q,b,A for every strand pair a,b",
+    "composite_operator": "D_q,A^dagger = product_{a=1}^{|q|} f_q,a,A^dagger",
+    "consequence": "exchanging two composites gives (-1)^(q^2)=-1 for every selected odd charge",
+    "exchange_phases": {
+      "-1": -1,
+      "-11": -1,
+      "-5": -1,
+      "9": -1
+    }
+  },
+  "charges": [
+    -11,
+    -5,
+    -1,
+    -1,
+    9,
+    9
+  ],
+  "checks": {
+    "all_endpoint_charges_odd": true,
+    "all_exchange_phases_fermionic": true,
+    "clifford_algebra": true,
+    "cubic_anomaly_cancels": true,
+    "duplicate_charge_mass_degeneracy": true,
+    "exact_bound_composite_subspace": true,
+    "exact_flux_bundle_gauss_covariance": true,
+    "exponential_mass_protection": true,
+    "linear_anomaly_cancels": true,
+    "no_same_wall_bilinear_mass": true,
+    "no_vectorlike_pair": true,
+    "nontrivial_charge_mass_hierarchy": true,
+    "one_physical_weyl_corner_per_species": true,
+    "opposite_wall_chiralities": true,
+    "particle_antiparticle_pairing": true,
+    "positive_linear_dispersion": true,
+    "selected_charge_set": true,
+    "topological_window_stability": true,
+    "universal_frame_operator": true,
+    "wall_localization": true
+  },
+  "claim_boundary": {
+    "established": [
+      "finite local endpoint/link Hilbert space",
+      "exact quantum-link Gauss covariance of charge-bundle hopping",
+      "fermionic endpoint exchange under the parity constraint",
+      "anomaly-free same-chirality charge spectrum in the searched finite class",
+      "one wall-localized Weyl cone per species and no physical-corner doublers",
+      "stability throughout a finite local Wilson-mass neighborhood",
+      "exponentially protected finite-slab gaps and a charge-linked hierarchy",
+      "universal bare frame operator for every species",
+      "particle/antiparticle spectral pairing"
+    ],
+    "not_established": [
+      "observed Standard Model charge assignments or generations",
+      "observed fermion masses or Yukawa couplings",
+      "a purely 3+1D regulator with the remote mirror wall removed",
+      "nonperturbative mirror-wall symmetric mass generation",
+      "an interacting QED continuum or radiative stability",
+      "common microscopic derivation of r0, eta, gauge stiffness, and gravity stiffness"
+    ]
+  },
+  "failed_checks": [],
+  "finite_hilbert": {
+    "binding_projector": "sum_{a<b,A} Lambda*(n_{a,A}-n_{b,A})^2",
+    "bound_composite_fock_dimension_per_species_site_layer": 16,
+    "fifth_layers": 12,
+    "maximum_link_bundle_dimension": 177147,
+    "maximum_parallel_lanes_per_geometric_link": 11,
+    "maximum_unconstrained_fock_dimension_per_species_site_layer": 17592186044416,
+    "microscopic_fermionic_strands_for_charge_q": "|q|",
+    "physical_sector": "Gauss law plus exact equal-occupation strand binding; all selected |q| are odd",
+    "spin1_dimension_per_electromagnetic_lane": 3,
+    "unconstrained_fock_dimension_for_charge_q": "2^(4|q|)",
+    "wilson_orbitals_per_strand_per_site_per_fifth_layer": 4
+  },
+  "flux_bundle_checks": [
+    {
+      "charge": -11,
+      "expected_transitions": 2048,
+      "max_left_gauss_residual": 0,
+      "max_link_charge_residual": 0,
+      "max_right_gauss_residual": 0,
+      "nonzero_bundle_transitions": 2048,
+      "spin1_lanes": 11
+    },
+    {
+      "charge": -5,
+      "expected_transitions": 32,
+      "max_left_gauss_residual": 0,
+      "max_link_charge_residual": 0,
+      "max_right_gauss_residual": 0,
+      "nonzero_bundle_transitions": 32,
+      "spin1_lanes": 5
+    },
+    {
+      "charge": -1,
+      "expected_transitions": 2,
+      "max_left_gauss_residual": 0,
+      "max_link_charge_residual": 0,
+      "max_right_gauss_residual": 0,
+      "nonzero_bundle_transitions": 2,
+      "spin1_lanes": 1
+    },
+    {
+      "charge": 9,
+      "expected_transitions": 512,
+      "max_left_gauss_residual": 0,
+      "max_link_charge_residual": 0,
+      "max_right_gauss_residual": 0,
+      "nonzero_bundle_transitions": 512,
+      "spin1_lanes": 9
+    }
+  ],
+  "frame_coupling": {
+    "charge_dependence": "only the finite flux-bundle operator U^(q); the frame derivative is identical",
+    "frame_matrix": [
+      [
+        1.03,
+        0.02,
+        -0.01
+      ],
+      [
+        0.01,
+        0.98,
+        0.015
+      ],
+      [
+        0.0,
+        -0.02,
+        1.01
+      ]
+    ],
+    "maximum_derivative_formula_residual": 7.360308902849493e-10,
+    "maximum_species_derivative_difference": 0.0,
+    "momentum": [
+      0.13,
+      0.09,
+      0.05
+    ]
+  },
+  "interpretation": "Finite anomaly-free chiral endpoint prototype passes its declared algebraic and spectral gates; it does not derive the Standard Model, observed masses, mirror-wall removal, or the interacting continuum.",
+  "mass_protection": {
+    "bilinear_audit": {
+      "gauge_neutral_left_left_pair_count": 0,
+      "gauge_neutral_left_left_pairs": [],
+      "minimum_nonzero_singular_value": 3.999999999999999,
+      "two_flavor_same_chirality_mass_map_nullity": 0,
+      "two_flavor_same_chirality_mass_map_rank": 16
+    },
+    "distinct_gaps": {
+      "-1": 8.787634390124283e-12,
+      "-11": 0.0002851842336311982,
+      "-5": 2.1401235300451101e-07,
+      "9": 4.246025991852094e-05
+    },
+    "duplicate_charge_gap_spreads": {
+      "-1": 0.0,
+      "9": 0.0
+    },
+    "eta": 0.04,
+    "gap_hierarchy_ratio": 32452901.539883576,
+    "mechanism": "opposite-chirality wall overlap only; no gauge-invariant same-wall bilinear",
+    "r0": 0.12,
+    "shared_relation": "r_q = r0 + eta*(|q|-1), m5(q) = -1 + r_q",
+    "slab_width": 12
+  },
+  "protocol": "phase-junction finite chiral endpoint v1",
+  "species": [
+    {
+      "analytic_gap": 0.0002851839075041443,
+      "analytic_relative_error": 1.1435662124725177e-06,
+      "charge": -11,
+      "dispersion_max_relative_error": 2.0978271213463634e-09,
+      "finite_ls_slopes": {
+        "fit_intercept": -0.3132118194174825,
+        "fit_log_gap_slope": -0.6540954455248837,
+        "gap_L14": 7.711372537329235e-05,
+        "gap_L6": 0.01444789321693369,
+        "predicted_log_ratio": -0.6539264674066639,
+        "slope_error": 0.00016897811821980913
+      },
+      "fitted_velocity": 1.000000888600364,
+      "left_chirality": -1.0000000000000004,
+      "left_wall_position": -0.9326183607470839,
+      "localization_ratio": 0.52,
+      "multiplicity_index": 1,
+      "nonzero_corner_minimum_gap": 1.5631898742419188,
+      "residual_gap": 0.0002851842336311982,
+      "right_chirality": 1.0000000000000007,
+      "right_wall_position": 0.9326183607470839,
+      "spectral_pairing_residual": 2.4424906541753444e-15,
+      "wilson_mass": -0.48
+    },
+    {
+      "analytic_gap": 2.1401235310622996e-07,
+      "analytic_relative_error": 4.752947254123391e-10,
+      "charge": -5,
+      "dispersion_max_relative_error": 4.868323406895759e-14,
+      "finite_ls_slopes": {
+        "fit_intercept": -0.08164245326440253,
+        "fit_log_gap_slope": -1.2729658041060234,
+        "gap_L14": 1.6778568288557558e-08,
+        "gap_L6": 0.00044411066635292445,
+        "predicted_log_ratio": -1.2729656758128873,
+        "slope_error": 1.2829313611462112e-07
+      },
+      "fitted_velocity": 1.0000000000009703,
+      "left_chirality": -0.9999999999999996,
+      "left_wall_position": -0.9845328282841098,
+      "localization_ratio": 0.28,
+      "multiplicity_index": 1,
+      "nonzero_corner_minimum_gap": 1.32547288820799,
+      "residual_gap": 2.1401235300451101e-07,
+      "right_chirality": 0.9999999999999999,
+      "right_wall_position": 0.9845328282841105,
+      "spectral_pairing_residual": 8.881784197001252e-16,
+      "wilson_mass": -0.72
+    },
+    {
+      "analytic_gap": 8.78770860180111e-12,
+      "analytic_relative_error": 8.445011880543781e-06,
+      "charge": -1,
+      "dispersion_max_relative_error": 4.097103857505525e-14,
+      "finite_ls_slopes": {
+        "fit_intercept": -0.013696042223187923,
+        "fit_log_gap_slope": -2.1203647234880645,
+        "gap_L14": 1.2641555684154356e-13,
+        "gap_L6": 2.9429858304408087e-06,
+        "predicted_log_ratio": -2.120263536200091,
+        "slope_error": 0.00010118728797348098
+      },
+      "fitted_velocity": 0.999999999999961,
+      "left_chirality": -1.0000000000000004,
+      "left_wall_position": -0.997343565525384,
+      "localization_ratio": 0.12,
+      "multiplicity_index": 1,
+      "nonzero_corner_minimum_gap": 1.1674499031546928,
+      "residual_gap": 8.787634390124283e-12,
+      "right_chirality": 1.0000000000000009,
+      "right_wall_position": 0.9973435655253842,
+      "spectral_pairing_residual": 1.3600232051658168e-15,
+      "wilson_mass": -0.88
+    },
+    {
+      "analytic_gap": 8.78770860180111e-12,
+      "analytic_relative_error": 8.445011880543781e-06,
+      "charge": -1,
+      "dispersion_max_relative_error": 4.097103857505525e-14,
+      "finite_ls_slopes": {
+        "fit_intercept": -0.013696042223187923,
+        "fit_log_gap_slope": -2.1203647234880645,
+        "gap_L14": 1.2641555684154356e-13,
+        "gap_L6": 2.9429858304408087e-06,
+        "predicted_log_ratio": -2.120263536200091,
+        "slope_error": 0.00010118728797348098
+      },
+      "fitted_velocity": 0.999999999999961,
+      "left_chirality": -1.0000000000000004,
+      "left_wall_position": -0.997343565525384,
+      "localization_ratio": 0.12,
+      "multiplicity_index": 2,
+      "nonzero_corner_minimum_gap": 1.1674499031546928,
+      "residual_gap": 8.787634390124283e-12,
+      "right_chirality": 1.0000000000000009,
+      "right_wall_position": 0.9973435655253842,
+      "spectral_pairing_residual": 1.3600232051658168e-15,
+      "wilson_mass": -0.88
+    },
+    {
+      "analytic_gap": 4.2460258920112527e-05,
+      "analytic_relative_error": 2.351394966106984e-08,
+      "charge": 9,
+      "dispersion_max_relative_error": 6.815867742794195e-11,
+      "finite_ls_slopes": {
+        "fit_intercept": -0.21487299528510934,
+        "fit_log_gap_slope": -0.8210056376217625,
+        "gap_L14": 8.220306113419224e-06,
+        "gap_L6": 0.005852923498586212,
+        "predicted_log_ratio": -0.8209805520698302,
+        "slope_error": 2.508555193225792e-05
+      },
+      "fitted_velocity": 1.0000000238652322,
+      "left_chirality": -1.0000000000000007,
+      "left_wall_position": -0.9563492624443102,
+      "localization_ratio": 0.44,
+      "multiplicity_index": 1,
+      "nonzero_corner_minimum_gap": 1.4838773335903261,
+      "residual_gap": 4.246025991852094e-05,
+      "right_chirality": 1.0,
+      "right_wall_position": 0.9563492624443102,
+      "spectral_pairing_residual": 2.6645352591003757e-15,
+      "wilson_mass": -0.56
+    },
+    {
+      "analytic_gap": 4.2460258920112527e-05,
+      "analytic_relative_error": 2.351394966106984e-08,
+      "charge": 9,
+      "dispersion_max_relative_error": 6.815867742794195e-11,
+      "finite_ls_slopes": {
+        "fit_intercept": -0.21487299528510934,
+        "fit_log_gap_slope": -0.8210056376217625,
+        "gap_L14": 8.220306113419224e-06,
+        "gap_L6": 0.005852923498586212,
+        "predicted_log_ratio": -0.8209805520698302,
+        "slope_error": 2.508555193225792e-05
+      },
+      "fitted_velocity": 1.0000000238652322,
+      "left_chirality": -1.0000000000000007,
+      "left_wall_position": -0.9563492624443102,
+      "localization_ratio": 0.44,
+      "multiplicity_index": 2,
+      "nonzero_corner_minimum_gap": 1.4838773335903261,
+      "residual_gap": 4.246025991852094e-05,
+      "right_chirality": 1.0,
+      "right_wall_position": 0.9563492624443102,
+      "spectral_pairing_residual": 2.6645352591003757e-15,
+      "wilson_mass": -0.56
+    }
+  ],
+  "status": "PASS",
+  "topological_window_stability": {
+    "failures": 0,
+    "mass_shifts": [
+      -0.05,
+      -0.025,
+      0.0,
+      0.025,
+      0.05
+    ],
+    "minimum_absolute_wall_position": 0.9125202243365962,
+    "minimum_nonzero_corner_gap": 1.118168185854074,
+    "minimum_wall_chirality_magnitude": 0.9999999999999991,
+    "sample_count": 20,
+    "scope": "uniform local Wilson-mass perturbations; interacting radiative stability remains issue #8"
+  }
+}
