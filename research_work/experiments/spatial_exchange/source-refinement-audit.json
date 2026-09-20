@@ -1,10 +1,10 @@
 {
   "audit_passed": true,
-  "checks": 44,
-  "completed_new_runs": 6,
+  "checks": 50,
+  "completed_new_runs": 7,
   "declared_new_runs": 7,
-  "complete": false,
-  "source_accuracy_passed": null,
+  "complete": true,
+  "source_accuracy_passed": false,
   "comparisons": [
     {
       "name": "mixed-space",
@@ -31,6 +31,13 @@
       "name": "Y-time",
       "wave_relative_difference": 2.039876354938293e-08,
       "total_relative_difference": 4.0414509790066837e-10,
+      "previous_wave_difference": null,
+      "passed": true
+    },
+    {
+      "name": "mixed-rotation",
+      "wave_relative_difference": 0.0013493831582015478,
+      "total_relative_difference": 7.764852973007937e-06,
       "previous_wave_difference": null,
       "passed": true
     },
@@ -192,6 +199,31 @@
       ],
       "passed": true,
       "state_sha256": "3e48f3bee58b80d7e8cde629dbf104d7cda54a47e8102f9957ad26f4af17cc32"
+    },
+    "mixed-n40-rotation": {
+      "campaign": "source-refinement-v1",
+      "name": "mixed-n40-rotation",
+      "matter_source": 6.329061362429945,
+      "field_source": 0.05204076565888235,
+      "wave_source": 0.02903489868593831,
+      "other_field_source": 0.023005866972944038,
+      "total_coupling_source": 6.381102128088827,
+      "wave_fraction": 0.004550138534553499,
+      "restoring_source": -1.926524382030966,
+      "integrated_rhs_source": 6.381102128088827,
+      "rhs_error": 0.0,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 9.49482981127403e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 9.49482981127403e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "1acbe14d440f2dfe8bbe215804b9750f93d00dffe5dbfd683e29fc0f8f8c1ea0"
     },
     "mixed-coarse": {
       "campaign": "emitter-v1",
