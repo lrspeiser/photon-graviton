@@ -1,243 +1,289 @@
 # Phase Junction Network Validation Protocol
 
-**Status:** finite kinematic stage partially completed; no observational fit has been performed for this branch.  
-**Date:** 2026-09-20
+**Status:** linear gravitational structure and several finite kinematic constructions are internally checked. The full electromagnetic, matter, nonlinear, continuum, integration, and empirical gates remain open.  
+**Date:** 2026-09-20  
+**Architecture review:** [`architecture_audit.md`](architecture_audit.md)
 
 ## 1. Research rule
 
-Internal consistency must be established before fitting observations. Real measurements are initially used as exclusion walls, not as flexible targets for choosing the action.
-
-The sequence is:
+No single successful spectrum, fit, or regulator implementation verifies the theory. The required sequence is:
 
 \[
-\text{finite junction rules}
+\text{ontology and finite variables}
 \rightarrow
-\text{effective constraints and spectrum}
+\text{physical phases and constraints}
 \rightarrow
-\text{parameter closure}
+\text{matter and shared coefficients}
+\rightarrow
+\text{nonlinear/quantum continuum closure}
 \rightarrow
 \text{frozen predictions}
 \rightarrow
 \text{real-data tests}.
 \]
 
-## 2. Current stage status
+Real measurements are initially exclusion walls, not flexible targets used to choose the action. A claim advances only when its upstream dependencies are declared and its free parameters are counted.
 
-| Gate | Status | Evidence |
+## 2. Current gate status
+
+| Gate | Status | Evidence or issue |
 |---|---|---|
-| Electromagnetic finite local link with exact Gauss symmetry | **Pass** | Spin-S quantum-link plaquette; exact commutators in `microscopic/finite_junction_model.py`. |
-| Nontrivial electric stiffness in the smallest tested link | **Pass at spin 1** | Spin-1/2 has constant \(E^2\); spin-1 is the first three-state nontrivial link. |
-| Four finite gravitational constraints with correct local count | **Pass kinematically** | Exact odd-prime Weyl/CSS algebra leaves two local logical modes per site plus four periodic global modes. |
-| Exact continuous canonical gravity algebra on a full finite local Hilbert space | **Impossible as stated** | Trace obstruction \(\operatorname{tr}[Q,P]=0\ne\operatorname{tr}(iI)\). Must emerge below a cutoff. |
-| Manifest-local exact-invariant-square gravity dynamics | **Rejected for the relativistic target** | Polynomial search forces two coordinate derivatives and one momentum derivative, giving `omega ~ k^3`. |
-| Local finite Hamiltonian with two linearly dispersing helicity-2 modes | **Open** | Requires a global Fierz–Pauli bilinear, frame-curvature term, auxiliary variables, or emergent symmetry. |
-| Nonlinear constraint closure and universal self-coupling | **Open** | Not tested by the linear scripts. |
-| Microscopic calculation of \(Z_g/Z_A\) | **Open** | Symmetry fixes operator structure, not all coefficients. |
-| Chiral matter defects and protected mass hierarchy | **Open** | No finite defect construction yet. |
-| Vacuum-volume term | **Open** | No balancing or unimodular mechanism yet. |
+| Exact finite electromagnetic Gauss symmetry | **Pass kinematically** | Spin-S quantum-link checks |
+| Smallest tested link with nonconstant electric energy | **Pass at spin 1** | Spin-1/2 has constant `E^2`; spin 1 is nontrivial |
+| Finite deconfined Coulomb/QED phase | **Open** | Issue #6 |
+| Four finite gravitational constraints and local two-mode count | **Pass kinematically** | Odd-prime Weyl/CSS skeleton |
+| Local frame/connection reduction to two positive linear modes | **Pass at the linear level** | Constrained local and full real-space reductions; no TT projector |
+| Finite connection second-class lock | **Pass for the linear map** | Relative Weyl oscillator and exact dressed frame algebra |
+| Finite dressed gravity Hamiltonian at finite local dimension | **Open** | Issue #2 |
+| Nonlinear gravitational constraint closure and self-coupling | **Open** | Issue #5 |
+| Linear periodic homogeneous conformal direction | **Controlled by a candidate** | Fixed-volume and trace-momentum second-class pair |
+| Microscopic vacuum/volume mechanism | **Open** | Issue #5 |
+| Finite charged chiral matter and protected masses | **Open** | Issue #4 |
+| Shared microscopic `U_A,K_A,U_g,K_g` and `Z_g/Z_A` | **Open** | Issue #3 |
+| Companion identity and bridge to active redshift/deposition program | **Open** | Issue #7 |
+| Interacting continuum, unitarity, Lorentz recovery, anomalies | **Open** | Issue #8 |
+| Frozen cross-sector predictions and empirical ladder | **Open** | Issue #9 |
+| Reproducible regression suite | **Pass for current checks** | GitHub Actions and frozen outputs |
 
-## 3. Zero-data gates
+## 3. Ontology and integration gate
 
-### Electromagnetic sector
+Before claiming a unified theory, declare one state/field dictionary containing:
 
-The candidate must demonstrate:
+- compact electromagnetic link phase and electric imbalance;
+- frame/tetrad variables and connection variables;
+- neutral relative-phase mode, if retained;
+- charged and neutral matter defects;
+- the active companion excitation used in redshift/capture/deposition work;
+- global or boundary variables such as volume constraints.
 
-1. an exact or controlled local Gauss constraint;
-2. two and only two gapless transverse modes;
-3. positive quadratic energy;
-4. a long-distance Coulomb kernel;
-5. gauge-covariant matter coupling;
-6. absence of a photon mass unless the local rule is explicitly broken;
-7. a stated continuum limit and cutoff corrections.
+Every physical energy contribution must appear exactly once. The same excitation may transform between sectors only through an explicit interaction with reciprocal source terms.
 
-The finite-link pass establishes item 1 and the minimal nontrivial local representation. It does not by itself establish a three-dimensional Coulomb phase for spin 1.
+Issue #7 passes only when one common action or Hamiltonian covers emission, propagation, capture/storage, reverse transitions, stress-energy sourcing, clocks, motion, and lensing.
 
-### Gravitational sector
+## 4. Electromagnetic gates
 
-The candidate must demonstrate:
+A finite electromagnetic candidate must demonstrate:
 
-1. three momentum constraints and one curvature/energy constraint;
-2. four first-class or exact discrete commuting constraints at the microscopic level;
-3. exactly two positive transverse-traceless modes in the continuum phase;
-4. no propagating negative-energy scalar;
-5. a massless long-range static kernel approaching \(-1/r\);
-6. one shared frame coupling to total conserved stress-energy;
-7. a common low-energy characteristic cone for light and gravity;
-8. controlled nonlinear constraint closure.
+1. exact or controlled local Gauss symmetry;
+2. a stable deconfined phase in 3+1 dimensions;
+3. two and only two massless transverse branches;
+4. positive residues and energy;
+5. static charge energy approaching `1/r` over an expanding physical range;
+6. gauge-covariant dynamical charged defects;
+7. finite-size and finite-representation scaling;
+8. Ward identities and a declared QED continuum normalization;
+9. photon mass protection;
+10. cutoff dispersion, birefringence, and Lorentz-violating operators quantified.
 
-The current scripts establish the linear continuum target and an exact finite discrete constraint skeleton. They do not establish the nonlinear finite dynamics.
+The existing finite-link calculation satisfies only the first gate and identifies the first tested nonconstant electric representation. Do not infer a Coulomb phase from one plaquette or from the infinite-rotor continuum target.
 
-## 4. Finite-dimensional rule discovered in this phase
+## 5. Gravitational gates
 
-No finite local matrices obey an exact continuous canonical relation \([Q,P]=iI\) on their full Hilbert space. A microscopic gravity model must therefore choose one of two declared architectures:
+A gravity candidate must demonstrate:
 
-1. **Exact discrete route:** odd-prime Weyl/qudit constraints are exact; continuous frame symmetry is emergent at long wavelength.
-2. **Protected truncation route:** truncated oscillators or collective spins approximate the canonical algebra below a boundary penalty, with all cutoff leakage explicitly bounded.
+1. three momentum constraints and one scalar constraint;
+2. correct first- and second-class classification;
+3. exactly two positive physical tensor modes;
+4. no unconstrained scalar/vector pole;
+5. linear gap closing and regulator-anisotropy control;
+6. long-range attraction with the correct source sign;
+7. one shared frame coupling universally to total stress-energy;
+8. gravitational self-energy in the nonlinear source;
+9. nonlinear constraint preservation without manual projection;
+10. stable strong-field and background solutions;
+11. no low-cutoff strong coupling or regenerated ghost;
+12. a microscopic treatment of the volume/vacuum term.
 
-A submission that silently treats finite matrices as an exact continuum canonical pair fails this protocol.
+The linear mode-count and positive finite-momentum spectrum gates are internally passed. The nonlinear, self-coupling, finite dressed-Hamiltonian, and vacuum gates remain open.
 
-## 5. Immediate microscopic dynamics task
+## 6. Matter gates
 
-Use the finite constraint skeleton and enumerate local gauge-compatible operators. The first polynomial enumeration is complete: exact local coordinate invariants begin at derivative order 2 and exact local momentum invariants at order 1. A Hamiltonian made from their positive squares is therefore excluded for the relativistic target because it gives `omega ~ k^3`.
+A matter construction must provide:
 
-For the gravity qudits, let A denote the scalar Z-constraint matrix and B the vector X-constraint matrix. Candidate operators must satisfy:
+1. an explicit finite local Hilbert-space defect or endpoint;
+2. exact gauge-covariant hopping;
+3. universal coupling through the same frame;
+4. fermionic exchange statistics or a declared alternative matter target;
+5. a controlled treatment of chirality and species doubling;
+6. anomaly cancellation;
+7. particles and antiparticles;
+8. charge assignments derived or constrained by the microscopic algebra;
+9. protected small gaps rather than arbitrary tiny on-site energies;
+10. material clocks and bound-state energies calculable from the same defects.
 
-\[
-Bz=0\pmod p
-\]
+Inserting a continuum Dirac field for convenience is acceptable as an interim infrared comparison, not as closure of the microscopic matter problem.
 
-for Z-type coordinate terms and
+## 7. Shared-parameter gate
 
-\[
-Ax=0\pmod p
-\]
-
-for X-type momentum terms.
-
-For every candidate local move set:
-
-1. enumerate support and symmetries;
-2. verify exact commutation with the finite constraints;
-3. determine whether the dynamical terms commute mutually or can sustain a gapless phase;
-4. calculate the large-p or large-S quadratic kernel;
-5. decompose all modes into scalar, vector, and tensor sectors;
-6. reject all candidates without exactly two positive modes satisfying \(\omega\propto k\);
-7. derive the effective coefficients by perturbation theory or direct spectrum matching.
-
-For every perturbative candidate, calculate
-
-\[
-H_{\rm eff}=PVP+PV\frac{Q}{E_0-H_0}VP+\cdots
-\]
-
-through the first nonzero order. Record all intermediate-state energies, matrix elements, signs, and combinatorial factors. Do not promote the toy coefficient \(40t^4/\Delta^3\) to a universal result.
-
-## 6. Required output of the microscopic stage
-
-A candidate advances only if it produces, from one finite model:
+One finite microscopic model must derive or constrain
 
 \[
 U_A,\ K_A,\ U_g,\ K_g,\ \ell,
 \]
 
-plus the defect hopping and gap parameters, with fewer independent microscopic ratios than low-energy observables.
+plus matter hopping, defect gaps, interaction strengths, and any volume parameters.
 
-The critical dimensionless outputs are
+Define
 
 \[
 Z_A=\sqrt{U_A/K_A},
 \qquad
-Z_g=\sqrt{U_g/K_g},
-\qquad
-\frac{Z_g}{Z_A},
+Z_g=\sqrt{U_g/K_g}.
 \]
 
-and the defect gaps
+A common limiting speed constrains products, not the impedance ratio. Equality of `Z_A` and `Z_g` is an optional hypothesis until derived.
 
-\[
-\mu_s=\frac{m_sc\ell}{\hbar}.
-\]
+Parameter closure requires:
 
-A model that simply assigns independent values to these quantities has not unified them. A common speed condition constrains the products \(U_AK_A\) and \(U_gK_g\), but does not by itself determine the impedance ratio.
+- fewer independent microscopic ratios than low-energy outputs;
+- all perturbative denominators and combinatorial factors recorded;
+- omitted-order estimates;
+- no use of measured `G` or `alpha` to select the microscopic amplitudes before the relation is derived;
+- at least one held-out cross-sector relation.
 
-## 7. Rejection criteria before using data
+## 8. Continuum quantum gate
 
-Reject or explicitly revise a microscopic candidate if any of the following occurs:
+A finite network does not automatically define a healthy quantum field theory. Require:
 
-- a physical negative-energy mode;
-- \(\omega^2<0\) near the proposed vacuum;
-- more than two unsuppressed photon or tensor polarizations;
-- a longitudinal photon in the exact massless phase;
-- an unconstrained gravitational scalar with order-one coupling;
-- a gravity construction that has only a gapped commuting-projector phase;
-- tensor dispersion \(\omega\propto k^2\) or \(k^3\) when the intended target is relativistic;
-- uncontrolled occupation of the finite canonical-pair boundary state;
-- loss of local charge or stress-energy conservation;
-- species-dependent frame coupling without a consistent additional force sector;
-- unrelated photon and gravity propagation cones requiring numerical tuning;
-- absence of a stable or well-defined continuum phase;
-- a vacuum-volume term that is merely deleted rather than controlled by a mechanism;
-- a microscopic local Lorentz-covariant conserved stress tensor that makes the proposed emergent spin-2 construction conflict with the assumptions of the Weinberg–Witten result.
+1. a declared scaling limit or fixed point;
+2. physical propagators with positive residues;
+3. unitarity or reflection positivity;
+4. gauge/constraint Ward identities;
+5. regulator universality across at least two implementations;
+6. Lorentz and rotational recovery for photons, gravitons, and matter;
+7. radiative stability of zero masses and universal couplings;
+8. anomaly accounting;
+9. leading irrelevant-operator inventory;
+10. explicit audit of the assumptions behind emergent-spin-2 no-go results.
 
-## 8. Synthetic tests after finite-model closure
+The reduced free tensor transfer matrix is a useful benchmark. It does not establish the interacting continuum theory.
 
-### Vacuum spectrum
+## 9. Photon–companion bridge gates
 
-Diagonalize the quadratic kernel over representative momenta and verify the complete scalar/vector/tensor spectrum, residues, and signs.
+The bridge to the active repository program must derive from the same microscopic theory:
 
-### Finite-size scaling
+- emitter conversion or excitation production;
+- photon frequency and linewidth response;
+- companion speed, dispersion, polarization, and coherence;
+- capture/binding/storage and escape;
+- reverse conversion and fluctuations;
+- source fuel, recoil, momentum, angular momentum, and boundary flow;
+- gravitational response of stored excitation;
+- common matter and light trajectories;
+- clock response;
+- redshift, duration, brightness, and angular-size predictions;
+- galaxy and cluster motion/lensing from the same sourced frame;
+- background/microwave observables under the universe contract.
 
-Run multiple odd lattice sizes and local dimensions. A putative gapless mode must show a gap closing with the declared power of L, while unwanted sectors remain gapped or constrained.
+A variable-name mapping does not satisfy this gate.
 
-### Static sources
+## 10. Rejection criteria before data fitting
 
-Place conserved charge and energy sources on large finite networks. Measure the Green functions, finite-size corrections, anisotropy, and crossover from microscopic to continuum behavior.
+Reject or explicitly revise a candidate if any of the following occurs:
 
-### Wave packets
+- a physical negative-energy or negative-residue mode;
+- `omega^2<0` near the vacuum;
+- extra unsuppressed photon or tensor polarizations;
+- a finite electromagnetic model that remains confined or gapped;
+- tensor dispersion `omega ~ k^2` or `k^3` in the intended relativistic phase;
+- uncontrolled finite-state boundary occupation;
+- loss of charge or stress-energy conservation;
+- species-dependent gravity without a complete additional-force theory;
+- separately tuned photon, graviton, and matter cones;
+- a volume term deleted by hand;
+- a companion lifetime, capture law, halo, or mass hierarchy inserted without dynamics;
+- one field fitted to motion and another independently fitted to lensing;
+- no stable continuum phase;
+- more adjustable parameters than independent outputs.
 
-Propagate photon and tensor packets to measure speed, dispersion, birefringence, mode leakage, and energy conservation.
+## 11. Synthetic test ladder
 
-### Cutoff leakage
+Run these before observational unblinding:
 
-For truncated oscillator or collective-spin realizations, measure occupation of the boundary states and confirm the predicted \(n/S\) or top-state error bound throughout evolution.
+### A. Vacuum and phase diagram
 
-### Matter response
+Map gaps, residues, order parameters, flux sectors, and phase boundaries across microscopic couplings and local dimensions.
 
-Propagate at least two distinct defect species through the same static frame field. Check universality of free fall and coupling to electromagnetic binding energy.
+### B. Static sources
 
-### Radiation
+Use finite conserved electric charge and energy sources. Measure sign, range, anisotropy, finite-size corrections, and species dependence.
 
-Drive electric dipole and gravitational quadrupole sources. Calculate emitted power and verify that forbidden lower multipoles are absent for the appropriate conservation laws.
+### C. Wave packets and correlators
 
-### Nonlinear closure
+Measure dispersion, speed, polarization, leakage, birefringence, tensor/vector/scalar content, and reflection positivity.
 
-Evolve constraint-violating perturbations and physical perturbations separately. Physical initial data must preserve the full nonlinear constraints without manual projection at every step.
+### D. Matter response
 
-## 9. Freeze before observational testing
+Propagate multiple defect species through identical electromagnetic and frame backgrounds. Test charge response, universal free fall, clocks, and binding energy.
 
-Before loading detailed observations, commit a protocol containing:
+### E. Radiation and reactions
+
+Drive electric dipole and gravitational quadrupole sources. Verify reciprocal backreaction, emitted power, forbidden multipoles, and energy/angular-momentum ledgers.
+
+### F. Nonlinear evolution
+
+Evolve physical and constraint-violating data separately. Physical data must preserve constraints without repeated manual projection.
+
+### G. End-to-end companion experiment
+
+Start from ordinary matter and photons, generate the declared companion excitation, propagate it, capture/store it, source the frame, and detect both matter and light response with one shared parameter set.
+
+## 12. Freeze before empirical testing
+
+Commit a protocol containing:
 
 - exact microscopic Hamiltonian or action;
-- vacuum and phase definition;
-- complete independent parameter list;
-- calibration observables, if any;
+- vacuum/phase definition;
+- complete parameter ledger;
+- derived versus calibrated quantities;
+- calibration observables;
 - held-out predictions;
-- numerical tolerances and failure thresholds;
-- code commit and input hashes;
-- prohibited post-unblinding changes.
+- source/data provenance;
+- numerical and statistical tolerances;
+- prohibited post-unblinding modifications;
+- code commit and input/output hashes.
 
-A fit is informative only when the number of independent observables exceeds the number of adjustable parameters and when the held-out quantities were declared in advance.
+The first empirical package should test local and weak-field consequences before flexible galaxy or cosmological models:
 
-## 10. First real-data test package
-
-After the equations and parameters are frozen, use independent local/weak-field tests before galaxy or cosmological fits:
-
-1. equality of electromagnetic and gravitational propagation cones;
-2. composition dependence of free fall;
-3. Solar-System light propagation and orbital weak-field response;
+1. photon and gravitational propagation cones;
+2. free-fall universality;
+3. Solar-System motion, light bending, delay, and redshift;
 4. gravitational-wave polarization and dispersion;
-5. laboratory or atomic-clock variation of dimensionless couplings;
-6. precision QED bounds on higher-dimension electromagnetic operators.
+5. precision electromagnetic cutoff operators and coupling variation;
+6. binary radiation and strong-field consistency.
 
-Only a branch that passes those tests should be extended to binary pulsars, strong-field waveforms, galaxy dynamics, clusters, lensing, or cosmology.
+Only a branch passing those gates should proceed to galaxies, clusters, redshift phenomenology, or cosmological/background fits.
 
-## 11. Distinctive prediction requirement
+## 13. Distinctive-prediction requirement
 
-The branch is not empirically distinct if it reproduces QED and general relativity by freely choosing all low-energy coefficients. It must eventually provide at least one overconstrained relation such as
+The theory is not empirically distinct if it reproduces QED and general relativity by independently selecting all of their coefficients. It must provide at least one relation of the form
 
 \[
-\mathcal R\left(\alpha,G,m_s,c,\text{correction coefficients}\right)=0
+\mathcal R(\alpha,G,m_s,c,\text{cutoff coefficients},\text{companion response})=0
 \]
 
-that follows from the finite junction model and was not used for calibration.
+that is derived before testing and was not used for calibration.
 
-The preferred target is a correlated set of effects controlled by the same microscopic ratio, for example a fixed relationship among:
+Preferred predictions link more than one sector, for example:
 
-- the photon/gravity cutoff dispersion;
-- a variation of \(\alpha\) through a neutral junction mode;
-- a tensor-sector correction;
-- one or more protected matter-defect gaps.
+- photon and tensor cutoff dispersion;
+- coupling variation and a neutral junction resonance;
+- a defect mass ratio and `Z_g/Z_A`;
+- a redshift-transfer coefficient and a gravitational/storage response;
+- a fixed relationship between motion and lensing corrections.
 
-## 12. Current decision
+## 14. Current decision
 
-The finite kinematic stage has passed for the electromagnetic link and for a discrete version of the four gravity constraints. The next decisive work is a local finite Hamiltonian whose **dynamics**, not just its constraint count, produces a linearly dispersing two-helicity tensor phase and computes a shared electromagnetic/gravitational coupling ratio.
+The linear gravity mode problem is sufficiently developed to stop treating it as the whole project. Continue only gravity calculations that close issue #2 or #5.
+
+The immediate program is:
+
+1. define the Phase Junction/companion ontology and common ledger in issue #7;
+2. demonstrate or reject the finite Coulomb/QED phase in issue #6;
+3. finish the finite dressed gravity Hamiltonian in issue #2;
+4. build the first finite charged matter defect in issue #4;
+5. derive shared coefficients in issue #3;
+6. test nonlinear and continuum consistency in issues #5 and #8;
+7. freeze and test predictions under issue #9.
+
+No one pillar may be used as evidence that another has been solved.
