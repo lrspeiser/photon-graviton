@@ -1,0 +1,644 @@
+{
+  "controls_passed": true,
+  "controls_count": 26,
+  "cases": {
+    "phenomenological": {
+      "count": 600,
+      "chain_pass": 218,
+      "ring_pass": 65,
+      "joint_behavior_pass": 31,
+      "joint_behavior_ids": [
+        "F1-K4-G0-M0",
+        "F1-K4-G0-M1",
+        "F1-K4-G0-M2",
+        "F1-K4-G0-M3",
+        "F1-K4-G1-M1",
+        "F1-K4-G1-M3",
+        "F1-K4-G2-M1",
+        "F1-K4-G2-M3",
+        "F1-K4-G3-M1",
+        "F1-K4-G3-M3",
+        "F1-K4-G4-M1",
+        "F1-K4-G4-M3",
+        "F2-K4-G0-M0",
+        "F2-K4-G0-M1",
+        "F2-K4-G0-M2",
+        "F2-K4-G0-M3",
+        "F2-K4-G1-M2",
+        "F2-K4-G2-M2",
+        "F2-K4-G3-M2",
+        "F2-K4-G4-M2",
+        "F3-K0-G4-M2",
+        "F3-K0-G4-M3",
+        "F3-K3-G3-M2",
+        "F3-K3-G4-M2",
+        "F3-K4-G0-M0",
+        "F3-K4-G0-M1",
+        "F3-K4-G0-M3",
+        "F3-K4-G1-M0",
+        "F3-K4-G2-M0",
+        "F3-K4-G3-M0",
+        "F3-K4-G4-M0"
+      ],
+      "conservative_ring_pass": 0,
+      "unavailable": 0
+    },
+    "conservative": {
+      "count": 18,
+      "chain_pass": 4,
+      "ring_pass": 15,
+      "joint_behavior_pass": 4,
+      "joint_behavior_ids": [
+        "C-K0-E0.5",
+        "C-K1-E0.5",
+        "C-K2-E0.5",
+        "C-K4-E0.5"
+      ],
+      "conservative_ring_pass": 17,
+      "unavailable": 1
+    }
+  },
+  "family_counts": {
+    "F0": {
+      "count": 120,
+      "chain": 27,
+      "ring": 0,
+      "both": 0
+    },
+    "F1": {
+      "count": 120,
+      "chain": 88,
+      "ring": 20,
+      "both": 12
+    },
+    "F2": {
+      "count": 120,
+      "chain": 59,
+      "ring": 16,
+      "both": 8
+    },
+    "F3": {
+      "count": 120,
+      "chain": 44,
+      "ring": 29,
+      "both": 11
+    },
+    "F4": {
+      "count": 120,
+      "chain": 0,
+      "ring": 0,
+      "both": 0
+    },
+    "C": {
+      "count": 18,
+      "chain": 4,
+      "ring": 15,
+      "both": 4
+    }
+  },
+  "refinement": [
+    {
+      "id": "F3-K4-G4-M0",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 8.809685919652921e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G2-M0",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 2.745344029886354e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G1-M0",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 6.85349344498043e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G3-M0",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 6.650181749723316e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K3-G3-M2",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 4.674151338202037e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K3-G4-M2",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 4.0757208219499574e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G0-M1",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 2.1992285548222412e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G0-M3",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 2.4249233177009444e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G0-M0",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 3.416747196283154e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F1-K4-G3-M3",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 1.2522572756523687e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F1-K4-G4-M3",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 1.0051315474379763e-07,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K0-G4-M2",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 3.700622275282228e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G4-M0",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.677302823883565e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G2-M0",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.6709745526432016e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G1-M0",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.6780799800008026e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G3-M0",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.673861132507227e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K3-G3-M2",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.1811330519483363e-11,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K3-G4-M2",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 1.455580100895304e-11,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G0-M1",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.581490576858414e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G0-M3",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.578937063901776e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K4-G0-M0",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.575051283315588e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F1-K4-G3-M3",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 1.4350964860909698e-11,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F1-K4-G4-M3",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 1.1465939309118767e-11,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "F3-K0-G4-M2",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 8.395839579122821e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "C-K4-E0.5",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 3.90611825662468e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "C-K0-E0.5",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 5.2291053320718817e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "C-K1-E0.5",
+      "fixture": "chain",
+      "metric": "chain_gain",
+      "normalized_change": 1.3565031931062066e-08,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": false
+    },
+    {
+      "id": "C-K4-E0.5",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 2.7356942164262253e-12,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": true
+    },
+    {
+      "id": "C-K0-E0.5",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 8.956945303703977e-13,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": true
+    },
+    {
+      "id": "C-K1-E0.5",
+      "fixture": "ring",
+      "metric": "radius_ratio_final",
+      "normalized_change": 9.60858504995325e-13,
+      "converged": true,
+      "coarse_behavioral_pass": true,
+      "fine_behavioral_pass": true,
+      "fine_conservation_pass": true
+    }
+  ],
+  "symmetry": [
+    {
+      "id": "F3-K4-G4-M0",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K4-G2-M0",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K4-G1-M0",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K4-G3-M0",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K3-G3-M2",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K3-G4-M2",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K4-G0-M1",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K4-G0-M3",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K4-G0-M0",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F1-K4-G3-M3",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F1-K4-G4-M3",
+      "reflection_state_error": 0.0
+    },
+    {
+      "id": "F3-K0-G4-M2",
+      "reflection_state_error": 0.0
+    }
+  ],
+  "trajectory_count": 1355,
+  "nonfinite_trajectories": 0,
+  "checks": [
+    {
+      "name": "all selected mirror trajectories reflect",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "zero-input stays straight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "conservative-zero-input stays straight",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all archived source hashes match their recorded commits",
+      "passed": true,
+      "detail": 38
+    },
+    {
+      "name": "refine-v1\\conservative-chain-dt002 IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\conservative-long-ring IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\conservative-long-ring independent energy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\conservative-long-ring independent canonical angular momentum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\conservative-ring-dt002 IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\conservative-ring-dt002 independent energy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\conservative-ring-dt002 independent canonical angular momentum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\conservative-zero-input IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\large-turn IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\long-chain IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\phenomenological-chain-dt002 IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\phenomenological-ring-dt002 IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\reverse-coupling IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\reverse-coupling-ring IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\reverse-turn IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\small-turn IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "refine-v1\\zero-input IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-completion-v1\\conservative-ring IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-completion-v1\\conservative-ring independent energy",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-completion-v1\\conservative-ring independent canonical angular momentum",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-v1\\conservative-chain IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-v1\\phenomenological-chain IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-v1\\phenomenological-ring IDs match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "prescribed leader speed integration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trajectories.npz.part000 byte digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trajectories.npz.part001 byte digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-v1\\phenomenological-chain\\trajectories.npz.parts.json exact reassembly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trajectories.npz.part000 byte digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trajectories.npz.part001 byte digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trajectories.npz.part002 byte digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trajectories.npz.part003 byte digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "trajectories.npz.part004 byte digest",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "screen-v1\\phenomenological-ring\\trajectories.npz.parts.json exact reassembly",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "inputs_are_exposed": true,
+  "observational_fit_performed": false,
+  "max_prescribed_leader_speed_error": 2.4175728086106574e-10,
+  "all_evidence_checks_passed": true
+}
