@@ -49,7 +49,7 @@ def fixture(u, chi, k0, wave_number, branch):
 
 
 def main():
-    directory = ROOT/'mode-response-v1'
+    directory = ROOT/'mode-response-v2'
     directory.mkdir(exist_ok=False)
     rows = [fixture(*args) for args in itertools.product(
         [-.005, -.003, -.001, -.0003, 0., .0003], [-50, 0, 50, 200], [0., .5],
@@ -59,9 +59,9 @@ def main():
                    maximum_scaled_error=max(r['scaled_error'] for r in rows),
                    minimum_response=min(r['source_coefficient'] for r in rows),
                    maximum_response=max(r['source_coefficient'] for r in rows),
-                   massive_enhanced=sum(r['source_coefficient'] > 2+1e-10 for r in massive),
-                   massive_suppressed=sum(r['source_coefficient'] < 2-1e-10 for r in massive),
-                   massive_negative=sum(r['source_coefficient'] < 0 for r in massive),
+                   massive_enhanced=int(sum(r['source_coefficient'] > 2+1e-10 for r in massive)),
+                   massive_suppressed=int(sum(r['source_coefficient'] < 2-1e-10 for r in massive)),
+                   massive_negative=int(sum(r['source_coefficient'] < 0 for r in massive)),
                    commit=subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
                    source_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                    protocol_sha256=hashlib.sha256((ROOT/'mode-response-protocol.md').read_bytes()).hexdigest())
