@@ -1,0 +1,133 @@
+{
+  "canonical_commutator": {
+    "collective_spin_low_excitation_errors": [
+      {
+        "local_dimension": 3,
+        "one_excitation_relative_error": 1.0,
+        "spin": 1.0,
+        "two_excitation_relative_error": 1.0
+      },
+      {
+        "local_dimension": 5,
+        "one_excitation_relative_error": 0.5,
+        "spin": 2.0,
+        "two_excitation_relative_error": 1.0
+      },
+      {
+        "local_dimension": 9,
+        "one_excitation_relative_error": 0.25,
+        "spin": 4.0,
+        "two_excitation_relative_error": 0.5
+      },
+      {
+        "local_dimension": 17,
+        "one_excitation_relative_error": 0.125,
+        "spin": 8.0,
+        "two_excitation_relative_error": 0.25
+      },
+      {
+        "local_dimension": 33,
+        "one_excitation_relative_error": 0.0625,
+        "spin": 16.0,
+        "two_excitation_relative_error": 0.125
+      }
+    ],
+    "finite_dimension_no_go": "No finite matrices Q,P satisfy [Q,P]=iI on the full local Hilbert space because tr([Q,P])=0 while tr(iI)=i*d.",
+    "truncated_oscillators": [
+      {
+        "commutator_over_i_eigenvalues": [-2.0, 0.9999999999999998, 1.0000000000000002],
+        "dimension": 3,
+        "full_space_operator_error": 3.0,
+        "low_subspace_operator_error": 2.220446049250313e-16
+      },
+      {
+        "commutator_over_i_eigenvalues": [-2.9999999999999996, 0.9999999999999994, 0.9999999999999998, 1.0000000000000002],
+        "dimension": 4,
+        "full_space_operator_error": 3.9999999999999996,
+        "low_subspace_operator_error": 5.551115123125783e-16
+      },
+      {
+        "commutator_over_i_eigenvalues": [-3.999999999999999, 0.9999999999999994, 0.9999999999999998, 0.9999999999999998, 1.0000000000000002],
+        "dimension": 5,
+        "full_space_operator_error": 4.999999999999999,
+        "low_subspace_operator_error": 5.551115123125783e-16
+      }
+    ]
+  },
+  "decisions": {
+    "gravity_continuous_option": "Continuous canonical frame symmetry can only be emergent below a truncation or collective-spin boundary.",
+    "gravity_exact_finite_option": "Exact GF(p) Weyl constraints leave two local logical qudits per site plus four periodic global modes.",
+    "minimal_useful_electromagnetic_link_dimension": 3,
+    "minimal_useful_electromagnetic_link_spin": 1.0,
+    "not_yet_solved": ["linear helicity-2 finite dynamics", "nonlinear closure", "Z_g/Z_A", "chiral matter and mass hierarchy", "vacuum-volume term"]
+  },
+  "electromagnetic_quantum_link": [
+    {
+      "electric_stiffness_nontrivial": false,
+      "full_hilbert_dimension": 16,
+      "gauge_commutator_max_abs": 0.0,
+      "local_link_dimension": 2,
+      "neutral_electric_energies": [0.5],
+      "neutral_hamiltonian_eigenvalues": [0.3, 0.7],
+      "neutral_sector_dimension": 2,
+      "spin": 0.5
+    },
+    {
+      "electric_stiffness_nontrivial": true,
+      "full_hilbert_dimension": 81,
+      "gauge_commutator_max_abs": 0.0,
+      "local_link_dimension": 3,
+      "neutral_electric_energies": [0.0, 2.0],
+      "neutral_hamiltonian_eigenvalues": [-0.039230484541326056, 2.0, 2.039230484541326],
+      "neutral_sector_dimension": 3,
+      "spin": 1.0
+    },
+    {
+      "electric_stiffness_nontrivial": true,
+      "full_hilbert_dimension": 256,
+      "gauge_commutator_max_abs": 0.0,
+      "local_link_dimension": 4,
+      "neutral_electric_energies": [0.5, 4.5],
+      "neutral_hamiltonian_eigenvalues": [0.296988766078508, 0.6966723219581978, 4.503011233921493, 4.503327678041803],
+      "neutral_sector_dimension": 4,
+      "spin": 1.5
+    },
+    {
+      "electric_stiffness_nontrivial": true,
+      "full_hilbert_dimension": 625,
+      "gauge_commutator_max_abs": 0.0,
+      "local_link_dimension": 5,
+      "neutral_electric_energies": [0.0, 2.0, 8.0],
+      "neutral_hamiltonian_eigenvalues": [-0.03924904389307369, 1.9986834164707148, 2.0379302637239345, 8.001316583529285, 8.00131878016914],
+      "neutral_sector_dimension": 5,
+      "spin": 2.0
+    }
+  ],
+  "gravity_discrete_constraint_code": [
+    {
+      "component_qudits": 162,
+      "exact_commutator_nonzero_entries": 0,
+      "expected_logical_qudits": 58,
+      "lattice_size": 3,
+      "local_modes_per_site_after_global_modes": 2.0,
+      "logical_qudits": 58,
+      "prime": 5,
+      "scalar_constraint_rank": 26,
+      "sites": 27,
+      "vector_constraint_rank": 78
+    },
+    {
+      "component_qudits": 750,
+      "exact_commutator_nonzero_entries": 0,
+      "expected_logical_qudits": 254,
+      "lattice_size": 5,
+      "local_modes_per_site_after_global_modes": 2.0,
+      "logical_qudits": 254,
+      "prime": 7,
+      "scalar_constraint_rank": 124,
+      "sites": 125,
+      "vector_constraint_rank": 372
+    }
+  ],
+  "status": "finite-state kinematic prototype; dynamics and impedance closure remain open"
+}

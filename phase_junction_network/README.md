@@ -1,8 +1,8 @@
 # Phase Junction Network
 
-**Status:** exploratory candidate theory; internally checked at the linear electromagnetic and gravitational levels, but not a completed fundamental theory or an empirical fit.  
+**Status:** exploratory candidate theory with checked infrared linear structure and a first finite-state kinematic prototype; not a completed fundamental theory or an empirical fit.  
 **Created:** 2026-09-20  
-**Purpose:** preserve the rewritten Phase Junction proposal, the corrected gauge-field construction, the candidate frame-gravity branch, and reproducible zero-data checks in one self-contained research module.
+**Purpose:** preserve the rewritten Phase Junction proposal, the corrected gauge-field construction, the candidate frame-gravity branch, finite-state microscopic work, and reproducible zero-data checks in one self-contained research module.
 
 ## Core idea
 
@@ -27,7 +27,7 @@ The resulting working statement is:
 
 ## What is currently established inside the candidate model
 
-The electromagnetic construction supplies, under the stated lattice/rotor assumptions:
+The electromagnetic infrared construction supplies, under the stated lattice/rotor assumptions:
 
 \[
 H_A=\frac{U_A}{2}\sum_\ell E_\ell^2-K_A\sum_p\cos B_p,
@@ -51,11 +51,18 @@ The candidate gravitational branch supplies, at the linear structural level:
 - a route to universal coupling through one shared frame;
 - a common low-energy photon/gravity causal cone if both sectors use that frame.
 
+The first finite-state microscopic pass additionally establishes:
+
+- a spin-1, three-state quantum link is the smallest tested electromagnetic link with exact Gauss symmetry and non-constant electric energy;
+- six odd-prime qudits per site can impose the three vector and one scalar gravitational constraints as an exact commuting Weyl/CSS algebra;
+- the finite gravity constraint code leaves \(2N+4\) logical qudits on an \(N\)-site periodic lattice: two local modes per site and four global zero modes;
+- exact continuous canonical frame variables cannot exist on a full finite local Hilbert space, so the continuous diffeomorphism-like algebra must emerge below a cutoff or from a discrete microscopic algebra.
+
 ## What is not established
 
 This folder does **not** yet provide:
 
-- a finite-dimensional microscopic junction Hamiltonian that derives both effective sectors;
+- one finite-dimensional local Hamiltonian whose dynamics derives both the electromagnetic Coulomb phase and a rigorously linear helicity-2 phase;
 - a derivation of the numerical impedance ratio \(Z_g/Z_A\), \(G\), or \(\alpha\) from fewer microscopic inputs;
 - a derivation of fermions, chirality, generations, charge assignments, or particle masses;
 - nonlinear strong-field solutions or a proof of quantum consistency;
@@ -72,8 +79,9 @@ The frame-gravity branch deliberately lands in the same low-energy tensor univer
 | [`electromagnetic_derivation.md`](electromagnetic_derivation.md) | Reconstructs the original scalar proposal as a link/loop gauge network, derives its spectrum, quantization, Coulomb limit, and QED route, and separates the scalar sine-Gordon mode from the photon. |
 | [`frame_gravity_derivation.md`](frame_gravity_derivation.md) | Defines the candidate frame-valued gravitational sector, its four constraints, two tensor modes, static limit, universal coupling, and parameter relations. |
 | [`check_frame_gravity.py`](check_frame_gravity.py) | Reproducible no-data numerical checks for constraint counting, the tensor spectrum, the excluded negative scalar branch, and the lattice \(1/r\) Green function. |
-| [`checks.json`](checks.json) | Frozen output of the current verification run. |
-| [`validation_protocol.md`](validation_protocol.md) | Gates for the next microscopic derivation and the later transition to real-data tests. |
+| [`checks.json`](checks.json) | Frozen output of the infrared frame-gravity verification run. |
+| [`microscopic/`](microscopic/) | Finite-state quantum-link and gravitational-constraint construction, code, results, and the canonical-algebra obstruction. |
+| [`validation_protocol.md`](validation_protocol.md) | Gates for microscopic dynamics, parameter closure, and the later transition to real-data tests. |
 | [`manifest.json`](manifest.json) | Machine-readable scope, commands, assumptions, and result summary. |
 
 ## Reproduce the current checks
@@ -82,15 +90,22 @@ From the repository root, using the repository requirements:
 
 ```sh
 pip install -r requirements.txt
+
 python phase_junction_network/check_frame_gravity.py \
   --samples 500 \
   --seed 42 \
   --lattice-size 96 \
   --fit-r-min 4 \
   --fit-r-max 20
+
+python phase_junction_network/microscopic/finite_junction_model.py \
+  --output phase_junction_network/microscopic/results.json
+
+python phase_junction_network/microscopic/search_local_dynamics.py \
+  --output phase_junction_network/microscopic/dynamics_results.json
 ```
 
-The current frozen run reports:
+The frozen infrared run reports:
 
 - spectrum failures: `0 / 500`;
 - maximum relative transverse-tensor eigenvalue error: `1.1250857213591084e-15`;
@@ -98,16 +113,26 @@ The current frozen run reports:
 - unconstrained transverse spectrum: one negative scalar and two positive tensor modes;
 - normalized RMS residual of the fitted lattice \(A/r+B\) kernel over radii 4–20 on a \(96^3\) grid: `0.002409597456672864`.
 
-These results verify the implemented linear algebra and synthetic lattice behavior. They do not establish that nature uses the proposed microscopic interpretation.
+The finite-state run reports:
+
+- exact Gauss commutators on the tested spin-1/2 through spin-2 plaquettes;
+- spin-1/2 has constant electric energy, while spin-1 is the first nontrivial case;
+- exact scalar/vector Weyl commutation on \((L,p)=(3,5)\) and \((5,7)\);
+- exact logical counts `58 = 2*27 + 4` and `254 = 2*125 + 4`;
+- the finite canonical-commutator defect is confined to the top state of a truncated oscillator;
+- exact local coordinate invariants begin at two derivatives and momentum invariants at one, so a manifest-local invariant-square gravity Hamiltonian predicts `omega ~ k^3`, not `omega ~ k`.
+
+These results verify the implemented algebra and synthetic lattice behavior. They do not establish that nature uses the proposed microscopic interpretation.
 
 ## Immediate next task
 
-Construct the smallest finite junction Hilbert space and local move set that simultaneously generates:
+The finite kinematic construction is now in place, and the simplest exact local-invariant-square dynamics has been ruled out because it produces cubic rather than linear dispersion. The next gate is to construct **noncommuting or emergent-symmetry dynamics** on that finite skeleton that simultaneously provides:
 
-1. the electromagnetic Gauss constraint and plaquette ring exchange;
-2. the three gravitational momentum constraints and one curvature/energy constraint;
-3. one shared frame for all matter excitations;
-4. a calculable ratio \(Z_g/Z_A\);
-5. a protected low-energy matter-defect spectrum.
+1. an electromagnetic Coulomb phase from the spin-1 quantum links;
+2. exactly two gravitational helicities with \(\omega\propto k\), not a gapped stabilizer phase or \(k^2/k^3\) dispersion;
+3. nonlinear preservation of the four gravitational constraints;
+4. one shared frame for all matter excitations;
+5. a calculable ratio \(Z_g/Z_A\) from the same microscopic amplitudes and penalties;
+6. a protected low-energy matter-defect spectrum.
 
-The model should be rejected or revised before observational fitting if that finite construction produces extra gapless scalar/vector modes, ghosts, unstable gradients, nonuniversal matter coupling, or independently tunable photon and gravity cones.
+The model should be rejected or revised before observational fitting if that dynamics produces extra gapless scalar/vector modes, ghosts, unstable gradients, nonuniversal matter coupling, independently tunable photon and gravity cones, or no overconstrained parameter relation.

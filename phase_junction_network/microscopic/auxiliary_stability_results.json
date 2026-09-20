@@ -1,0 +1,52 @@
+{
+  "actual_first_order_inertia": {
+    "connection_quadratic_inertia": {
+      "negative": 8,
+      "positive": 10,
+      "zero": 0
+    },
+    "interpretation": "The independent connection is an auxiliary constrained variable, not an ordinary positive-energy oscillator. The three block zero modes are spatial gauge directions; the unconstrained Fierz-Pauli kernel also has one scalar negative direction removed by the scalar constraint.",
+    "samples": 500,
+    "unique_full_first_order_block_inertias": [
+      {
+        "negative": 9,
+        "positive": 12,
+        "zero": 3
+      }
+    ],
+    "unique_unconstrained_fierz_pauli_inertias": [
+      {
+        "negative": 1,
+        "positive": 2,
+        "zero": 3
+      }
+    ]
+  },
+  "bounded_real_hamiltonian_completion": {
+    "failures": 0,
+    "interpretation": "A bounded real Hamiltonian can retain an auxiliary connection only if it also contains a sufficiently positive bare frame stiffness. The connection then localizes or renormalizes the dynamics rather than generating the entire positive stiffness from a zero h-h block.",
+    "maximum_schur_error": 1.3322676295501878e-15,
+    "minimum_full_block_eigenvalue": 0.01645890478796844,
+    "samples": 500
+  },
+  "decision": "Do not quantize the 18 connection components as ordinary real positive-energy oscillators with a zero bare h-h block. Advance three separately labeled candidates: (A) a constrained first-order phase-space/Palatini transfer matrix, (B) a complex Euclidean auxiliary representation with a reflection-positivity test, and (C) a bounded Hamiltonian with explicit bare frame stiffness.",
+  "euclidean_imaginary_auxiliary_route": {
+    "failures": 0,
+    "identity": "Integrating exp[-1/2 C^T A C - i C^T B h] over real C with A>0 produces exp[-1/2 h^T B^T A^-1 B h].",
+    "limitation": "The imaginary mixed term gives a complex pre-integration weight. Reflection positivity, a local transfer matrix, and the required finite gauge constraints must still be established.",
+    "minimum_effective_eigenvalue": -1.5667110293119754e-15,
+    "samples": 500
+  },
+  "physical_tt_sector": {
+    "maximum_relative_tt_eigenvalue_error": 1.0581903664605342e-15,
+    "minimum_physical_tt_eigenvalue": 0.046687240032462024,
+    "samples": 500
+  },
+  "positive_auxiliary_no_go": {
+    "failures": 0,
+    "maximum_largest_eigenvalue": 1.2084381889254514e-15,
+    "samples": 500,
+    "theorem": "For H=1/2 C^T A C + C^T B h with A positive definite and no bare h^2 term, eliminating C gives H_eff=-1/2 h^T B^T A^-1 B h, which is negative semidefinite."
+  },
+  "status": "naive positive auxiliary Hamiltonian rejected; constrained-action, complex Euclidean auxiliary, and positive bare-stiffness routes separated"
+}
