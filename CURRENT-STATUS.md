@@ -1,5 +1,8 @@
 # Current status: photon–companion research
 
+**Finite rotor/curl coupling derived, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/rotor-report.md). A new candidate internal-mass square couples a finite canonical rotor to sampled curl A, with reciprocal field torque and positional reaction. All 96 local derivative/rotation identities and 48 joint grid interaction checks pass. The derivative-dependent coupling still requires full-system propagation, stability and angular-ledger validation before a 3D evolution; stronger swirl is not claimed. Related spin/rotor and field-torque prior art is explicitly credited. Existing bundle/source/grid campaigns continue unchanged. All twelve goal items remain active.
+
+
 **Circulation attribution exposes missing swirl enhancement, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/circulation-report.md). All 21 circulation/angle-ledger diagnostics pass their quadrature checks. Direct-companion chi200 barely changes the vector circulation (a small reduction at radius2); X/Y carry only about 3.6e-7 of initial angular momentum. Coarse-grid rotation changes circulation by about 5.1%, so earlier energy checks did not establish this observable's accuracy. SE-B now has four completed cases; the positive source effect remains a small path effect. SR-2's finest second/fourth-order bend comparison differs about 1.01%, narrowly above its unchanged 1% gate, with remaining runs pending. A working swirl mechanism still needs angular-momentum production/transport, source budget and converged trajectories; all twelve goals remain active.
 
 
