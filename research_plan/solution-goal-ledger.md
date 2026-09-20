@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Local rotor interaction checkpoint, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/local-rotor-report.md). Replacing the shared rotor with local internal vector fields yields a positive principal symmetrizer and real finite characteristic speeds in all288 declared fixtures; all48 canonical energy-derivative cases pass. The tested speeds span0.07884 to3.30278 in reference units, so this candidate has multiple propagation branches. Full matter/light coupling, source fuel, nonlinear evolution and observational success remain unestablished. Two of seven point-bundle cases now pass168 independent archive checks; the coarse paired bend increase is0.05777%, awaiting refinement. Existing campaigns continue unchanged. Candidates are judged by internal consistency and observations, not required agreement with an older gravity law. All twelve goal requirements remain active.
+
+
 **Rotor locality limit and first point-bundle checkpoint, 20 September 2026.** [Locality report](../research_work/experiments/spatial_exchange/rotor-locality-report.md). Six separated-cell checks confirm instantaneous finite-kernel rotor coupling inside matter at both grids, despite positive frozen stiffness. A strict local finite-front completion needs distributed internal source dynamics; current derivative/stiffness checks do not supply it. The first shrinking-kernel bundle control finishes (bend -0.009973212 model radians, arrival offset0.01057839) and passes87 independent checks. It is one of seven runs; point-ray convergence and emitter enhancement remain unproved. All twelve goal requirements remain active.
 
 
