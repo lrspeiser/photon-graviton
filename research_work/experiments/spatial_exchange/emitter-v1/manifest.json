@@ -1,0 +1,118 @@
+{
+  "source_commit": "67b3eb12802bf635ad050b9fde3ddfc02ff53817",
+  "sources": {
+    "emitter-protocol.md": "b93ce3f7a9cc652c5b5ff5451ba008a3b69ecb618548de5d3cf41bc9d81adfec",
+    "emitter_model.py": "9b2c0ec1fe7b10c2d64bf686bcfd4f9c96b428b0c76baa8e432202348b61ec36",
+    "run_emitter.py": "6c551ac2229b98946a2767a3807fc4661ff8afd5d7c93ff5c7bb2ae5f7828f5e",
+    "model.py": "3017e9bb8bd111ae46c978e6d0f04a5d3faa1e726c45bf375b623296bf3efdea"
+  },
+  "helper_source": {
+    "path": "research_work/experiments/common_cone/model.py",
+    "sha256": "66b9620b8e71a666c976411ab7d60bd98be5c9ef9ca877736e58247fe23f7dfd"
+  },
+  "configurations": [
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "emitter-mixed-chi0",
+      "emitter_angle": 0.7853981633974483,
+      "chi": 0.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "emitter-mixed-chi50",
+      "emitter_angle": 0.7853981633974483,
+      "chi": 50.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "emitter-mixed-chi200",
+      "emitter_angle": 0.7853981633974483,
+      "chi": 200.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "emitter-Y-chi0",
+      "emitter_angle": 1.5707963267948966,
+      "chi": 0.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "emitter-Y-chi50",
+      "emitter_angle": 1.5707963267948966,
+      "chi": 50.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "emitter-Y-chi200",
+      "emitter_angle": 1.5707963267948966,
+      "chi": 200.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "no-excitation",
+      "emitter_angle": 1.5707963267948966,
+      "chi": 200.0,
+      "excitation": 0.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "name": "time-refinement",
+      "emitter_angle": 1.5707963267948966,
+      "chi": 200.0
+    },
+    {
+      "n": 40,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.01,
+      "mix": 0.5,
+      "name": "space-refinement",
+      "emitter_angle": 1.5707963267948966,
+      "chi": 200.0
+    },
+    {
+      "n": 32,
+      "length": 16.0,
+      "radius": 0.9,
+      "dt": 0.02,
+      "mix": 0.5,
+      "name": "rotation",
+      "emitter_angle": 1.5707963267948966,
+      "chi": 200.0,
+      "angle": 1.0471975511965976
+    }
+  ],
+  "numpy": "2.2.6"
+}

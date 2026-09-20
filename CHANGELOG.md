@@ -1,5 +1,8 @@
 # Research changelog
 
+**Two-channel emitter SE-2 started, 20 September 2026.** [Protocol](research_work/experiments/spatial_exchange/emitter-protocol.md). The internal matter oscillator now couples to a fixed global combination cos(theta) X + sin(theta) Y. Both field reactions and the positional reaction are derived from the same positive internal-energy square; no external wave reservoir is supplied. All 48 Hamiltonian/control fixtures pass, including theta=0 equivalence with SE-1. The ten declared spatial runs are underway; no enhancement, refinement or observational success is claimed. Source code was pinned and pushed at 67b3eb1 before execution. SE-1 now has nine completed runs with 129 partial archive checks; spatial and rotation cases remain pending. SR-2 remains live with four completed runs. The full twelve-item goal remains active.
+
+
 **Generated-source diagnostic SE-1S, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/source-response-report.md). All eight final-state source diagnostics pass. Despite SE-1M's large local coefficients, chi=200 produces an integrated X/Y scalar-source derivative about 19.1% below emission-only; chi=0, 50 and -50 give negative wave-source integrals. These are wave-sector derivatives, not net gravity or lensing. The next candidate change is a reciprocally derived emitter coupling to both channels, with mode composition and finite fuel accounted for. Eight of eleven SE-1 runs now pass their individual gates, with 121 partial independent audit checks; full refinements are pending. All twelve requirements remain active.
 
 
