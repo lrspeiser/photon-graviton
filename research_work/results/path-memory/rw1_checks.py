@@ -22,7 +22,7 @@ def main():
     kernel = tuple(short['galaxy_F2_whole_kernel'])
     gals = {g['name']: g for g in CS.I.sparc_galaxies()}
     values = {}
-    for name in ('NGC2403', 'DDO154', 'NGC2841'):
+    for name in ('NGC2403', 'DDO064', 'NGC2841'):
         gal = gals[name]
         rec = L2.reconstructed_newton(gal)
         cols, src = RW.galaxy_whirl_columns(gal, rec['R'], [kernel])

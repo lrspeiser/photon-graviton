@@ -545,10 +545,10 @@ def main():
     out['statuses'] = dict(numerical_verification='passed' if all(gates.values()) else 'FAILED on: ' + ', '.join(k for k, v in gates.items() if not v), scientific_outcome=detail)
     out['checks_short_run'] = dict(galaxy_F2_whole_kernel=gw['F2']['kernel'], galaxy_F2_whole_rmse=gw['F2']['rmse'], galaxy_F3_whole=[gw['F3']['kernel'], gw['F3']['lam'], gw['F3']['rmse']],
                                    lambda_NGC2403=gw['F2']['lambda_by_galaxy'][[g['name'] for g in train].index('NGC2403')],
-                                   lambda_DDO154=gw['F2']['lambda_by_galaxy'][[g['name'] for g in train].index('DDO154')],
+                                   lambda_DDO064=gw['F2']['lambda_by_galaxy'][[g['name'] for g in train].index('DDO064')],
                                    lambda_NGC2841=gw['F2']['lambda_by_galaxy'][[g['name'] for g in train].index('NGC2841')],
                                    cluster_F2=[clusters['F2']['kernel'], clusters['F2']['chi2_per_point']],
-                                   rmse_F2_whole_by_name={n: float(np.sqrt(F1[('rec', 'whole')][0][[g['name'] for g in train].index(n), kernel_index(KG, *gw['F2']['kernel'])])) for n in ('NGC2403', 'DDO154', 'NGC2841')})
+                                   rmse_F2_whole_by_name={n: float(np.sqrt(F1[('rec', 'whole')][0][[g['name'] for g in train].index(n), kernel_index(KG, *gw['F2']['kernel'])])) for n in ('NGC2403', 'DDO064', 'NGC2841')})
     out['runtime_seconds'] = time.time() - t0
     OUT.write_text(json.dumps(plain(out), indent=1), encoding='utf-8')
     print('written', OUT, 'gates', gates, 'decision', detail, 'runtime %.0f s' % out['runtime_seconds'], flush=True)
