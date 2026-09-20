@@ -1,0 +1,46 @@
+{
+  "constraints": {
+    "bracket_rank": 2,
+    "poisson_bracket_matrix": [
+      [0.0, 3.0],
+      [-3.0, 0.0]
+    ],
+    "preservation_residual": 0.0,
+    "primary": "V = t_I h_I = 0",
+    "secondary": "P_V = t_I p_I = 0"
+  },
+  "degree_count_on_N_site_periodic_lattice": {
+    "after_fixed_volume": "4N + 6 physical phase dimensions",
+    "before_fixed_volume": "4N + 8 physical phase dimensions",
+    "decomposition_after_fixed_volume": "4(N-1) propagating phase dimensions plus 10 homogeneous trace-free shear phase dimensions"
+  },
+  "interpretation": "Fixing the total spatial volume is not first-class by itself. Hamiltonian preservation generates the homogeneous trace-momentum constraint, and the pair is second-class. It removes exactly the negative conformal canonical pair while leaving five positive global shear momenta and five zero-potential global shape moduli.",
+  "limitation": "This controls the periodic homogeneous ghost at linear order. It does not yet derive a microscopic fixed-volume rule, remove the remaining global shear moduli, or solve the local vacuum-energy and nonlinear cosmological-constant problem.",
+  "reduced_global_sector": {
+    "hamiltonian_inertia": {
+      "negative": 0,
+      "positive": 5,
+      "zero": 5
+    },
+    "minimum_hamiltonian_eigenvalue": 0.0,
+    "phase_dimension": 10,
+    "symplectic_rank": 10
+  },
+  "status": "fixed-global-volume second-class pair removes the homogeneous conformal instability",
+  "unconstrained_global_sector": {
+    "hamiltonian_inertia": {
+      "negative": 1,
+      "positive": 5,
+      "zero": 6
+    },
+    "kinetic_eigenvalues": [
+      -0.5000000000000001,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "phase_dimension": 12
+  }
+}
