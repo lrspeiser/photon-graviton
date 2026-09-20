@@ -3,6 +3,7 @@ caches of rw1_build.py, stage 2's caches and archive, the X-COP extract and corr
 Coma bins; writes rw1-results.json."""
 import hashlib
 import json
+import os
 import sys
 import time
 from pathlib import Path
@@ -212,6 +213,10 @@ def main():
     gates['C2_separability'] = all(galaxies[k]['F2']['C2_relative'] < 1e-12 for k in galaxies if 'F2' in galaxies[k])
     out['galaxies'] = galaxies
     out['galaxy_table'] = [dict(name=g['name'], M=g['M'], R_half=g['R_half'], rd=g['rd'], n=len(g['R']), n_inner=int(g['masks']['inner'].sum())) for g in train]
+    if os.environ.get('RW1_STOP_AFTER_GALAXIES'):                      # a plumbing test of the galaxy section only; never the archived run
+        Path(os.environ['RW1_STOP_AFTER_GALAXIES']).write_text(json.dumps(plain(out), indent=1), encoding='utf-8')
+        print('stopped after the galaxies (test mode) at %.0f s' % (time.time() - t0), flush=True)
+        return
     # ---------------------------------------------------------------- clusters
     ext = CS.load_xcop()
     frac = CS.stellar_fraction_profile(ext)
