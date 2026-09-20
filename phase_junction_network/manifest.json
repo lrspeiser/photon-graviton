@@ -1,18 +1,29 @@
 {
   "module": "phase_junction_network",
-  "status": "exploratory candidate foundation; linear gravity is internally well tested, while finite electromagnetism, matter, nonlinear closure, theory integration, shared parameters, continuum quantum consistency, and empirical distinctiveness remain open",
+  "status": "exploratory candidate foundation; linear gravity is internally well tested, a provisional companion ontology is selected, and finite electromagnetism, matter, nonlinear closure, shared parameters, continuum quantum consistency, integration dynamics, and empirical distinctiveness remain open",
   "created_utc": "2026-09-20",
   "active_branch": "main",
   "architecture_audit": "phase_junction_network/architecture_audit.md",
+  "companion_ontology": "phase_junction_network/companion_ontology.md",
   "master_tracker_issue": 10,
   "dependencies": [
     "python>=3.11",
     "numpy>=1.24",
     "scipy>=1.10"
   ],
+  "selected_companion_branch": {
+    "status": "provisional_for_derivation_and_falsification",
+    "identity": "gauge-neutral local matter-geometry relative-phase quantum varphi",
+    "deposit": "bound collective state of the same varphi sector",
+    "photon": "transverse compact-link U(1) quantum",
+    "graviton": "transverse frame excitation, distinct from the companion reservoir",
+    "connection_relative_modes": "gapped by the second-class lock and excluded as low-energy companion candidates",
+    "first_required_calculation": "finite matter-assisted photon-varphi transition with reverse channel and recoil ledger",
+    "issue": 7
+  },
   "pillar_status": {
     "ontology_and_companion_integration": {
-      "status": "open",
+      "status": "provisional_identity_selected_but_dynamics_open",
       "issue": 7
     },
     "finite_electromagnetic_coulomb_qed_phase": {
@@ -121,7 +132,7 @@
     }
   },
   "immediate_work_order": [
-    "write the Phase Junction and companion ontology plus shared energy ledger under issue 7",
+    "build the smallest finite matter-assisted photon-varphi transition with reverse channel and recoil under issue 7",
     "demonstrate or reject a finite deconfined electromagnetic Coulomb phase under issue 6",
     "complete the finite dressed frame Hamiltonian under issue 2",
     "prototype a finite charged matter defect under issue 4",
@@ -129,7 +140,7 @@
   ],
   "stop_rules": [
     "do not treat additional linear tensor precision as closure of another pillar",
-    "do not identify the companion differently across calculations without an explicit conversion theory",
+    "do not reidentify the companion as photon, tensor graviton, or connection mode in another calculation without an explicit conversion theory",
     "do not fit galaxies or cosmology before local predictions and parameter roles are frozen",
     "do not derive alpha, G, or masses by independently assigning every microscopic coefficient",
     "do not call the linear fixed-volume control a completed cosmological-constant solution"
