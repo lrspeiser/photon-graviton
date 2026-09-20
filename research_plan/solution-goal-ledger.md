@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**First evolving ray-bundle result audited, 20 September 2026.** [Report and chart](../research_work/experiments/spatial_exchange/bundle-report.md). The emission-only control finishes with central bend -0.011270736 model radians, detector arrival offset 0.0107100 model time and parallel-ray area gain 1.03328. Its background and bundle gates pass; independent crossing, transport-map and full-grid endpoint velocity/energy checks pass. This is one of seven cases, not an emitter comparison or an observed cluster lens. Massive test bodies respond inward relative to free flight during the same evolving field. Six bundle cases and the source/spatial refinements remain pending; stable orbits, physical scaling and observational validation remain required. All twelve goals remain active.
+
+
 **Evolving bundle experiment SE-B started, 20 September 2026.** [Protocol](../research_work/experiments/spatial_exchange/bundle-protocol.md). Seven declared cases integrate nine rays and six massive test bodies at the same RK stages as the source-generated field. A fixed detector plane defines arrival offsets, deflection and a transverse transport map; these are model-coordinate diagnostics, not yet astronomical magnification or observed delays. Infinitesimal probe weight leaves the background energy ledger unchanged, with replay checks against prior states. Code was pinned at b1b436c before execution. SE-R's first run and both reused time comparisons pass source checks; spatial source accuracy remains pending. The full twelve-item objective remains active.
 
 

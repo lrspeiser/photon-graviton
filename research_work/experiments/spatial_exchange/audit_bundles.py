@@ -22,6 +22,20 @@ def main():
             energy=reconstruct(raw[endpoint+'_background'],cfg)['ledger']
             reference=doc['background_trace'][0 if endpoint=='initial' else -1]['ledger']
             checks.append(abs(energy-reference)<1e-10)
+            n=cfg['n'];h=cfg['length']/n;nf=6*n**3
+            fields=raw[endpoint+'_background'][:nf].reshape(6,n,n,n)
+            u=.08*fields[0];alpha=np.exp(u);z=np.exp(2*u)
+            beta=.04*z*fields[1:4]/np.sqrt(1+.08**2*np.sum(fields[1:4]**2,axis=0))
+            line=np.arange(n)*h-cfg['length']/2
+            xyz=np.stack(np.meshgrid(line,line,line,indexing='ij'),axis=-1)
+            index=0 if endpoint=='initial' else -1
+            for i in range(15):
+                q,p=states[index,i,:3],states[index,i,3:];mass=0 if i<9 else 1
+                weights=np.maximum(1-np.sum((xyz-q)**2,axis=-1)/cfg['probe_radius']**2,0)**3;weights/=weights.sum()
+                E=np.sqrt(mass*mass+z*np.dot(p,p))
+                velocity=p*np.sum(weights*alpha*z/E)+np.sum(weights*beta,axis=(1,2,3))
+                H=np.sum(weights*(alpha*E+np.einsum('jxyz,j->xyz',beta,p)))
+                checks.append(np.max(abs(velocity-vel[index,i]))<1e-12 and abs(H-energies[index,i])<1e-12)
         event_positions=[];event_velocities=[];event_times=[]
         for i in range(9):
             hits=np.flatnonzero((states[:-1,i,0]<1.5)&(states[1:,i,0]>=1.5))
@@ -47,6 +61,17 @@ def main():
             checks.append(abs(1/abs(np.linalg.det(M))-row['transport']['area_gain'])<1e-10)
             derived[cfg['name']]=(bend,delay,M)
         checks.append(np.max(abs(states[-1,9:,:3]-row['final_body_positions']))<1e-12)
+        trace=doc['background_trace']
+        drift=max(abs(t['ledger']-trace[0]['ledger']) for t in trace)/abs(trace[0]['ledger'])
+        background_pass=drift<1e-5 and row['clearance']>0 and max(t['edge_amplitude'] for t in trace)<1e-5 and max(t['cone_error'] for t in trace)<1e-10
+        checks.append(abs(drift-row['energy_drift'])<1e-12 and background_pass==row['background_passed'])
+        checks.append((len(event_positions)==9)==row['all_crossed'])
+        if len(event_positions)==9:
+            bundle_error=float(np.max(abs(matrices[0]-matrices[1])))
+            checks.append(abs(bundle_error-row['transport']['bundle_error'])<1e-11)
+            expected=background_pass and row['probe_cone_excess']<1e-10 and bundle_error<.001 and (row['background_replay_error'] is None or row['background_replay_error']<1e-12)
+            checks.append(expected==row['passed'])
+        else:checks.append(not row['passed'])
     complete=(directory/'summary.json').exists();campaign=None
     if complete:
         summary=json.loads((directory/'summary.json').read_text());checks.append(len(rows)==7 and rows==summary['runs'])
