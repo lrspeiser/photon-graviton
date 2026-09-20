@@ -313,17 +313,20 @@ class LensWhirl(L2.LensRows):
     """A lens with whirlpool rows: for each kernel the inward pull per unit lambda per 1e11 Msun of the deprojected stars
     on the model grid (a 1000-point evaluation with the cubic spline in ln r, or the full grid), and its bend at b_E by the
     three-dimensional route with the r^-p tail beyond the grid."""
-    def __init__(self, name, kernels=KERNELS_GAL, scenario=L2.LENS_GEOMETRY, n_eval=1000, full=False):
+    def __init__(self, name, kernels=KERNELS_GAL, scenario=L2.LENS_GEOMETRY, n_eval=1000, full=False, cached=None):
         super().__init__(name, scenario, widths=np.array([1.]))
         L = self.L
         r = L.model.r
+        self.kernels = list(kernels)
+        if cached is not None:
+            self.basis, self.basis_bend = cached
+            return
         src = SF.SphericalSource(r, 1e11*L.frac)
         re = r if full else np.geomspace(r[0], r[-1], n_eval)
         rows = []
         for (p, w) in kernels:
             ge = shell_apply(re, src.nodes, src.dM, p, w)
             rows.append(ge if full else CubicSpline(np.log(re), ge)(np.log(r)))
-        self.kernels = list(kernels)
         self.basis = np.array(rows)
         self.basis_bend = np.array([SF.deflection_from_g(self._tail(r, row, p), L.bE) for row, (p, w) in zip(self.basis, self.kernels)])
 
@@ -377,3 +380,44 @@ def project_effective(r, g, R_out, n_R=800):
     Sigma = SF.project_density(r, rho, Rg)
     Mp = np.concatenate([[0.], np.cumsum(.5*(2*np.pi*Rg[1:]*Sigma[1:] + 2*np.pi*Rg[:-1]*Sigma[:-1])*np.diff(Rg))]) + np.pi*Rg[0]**2*Sigma[0]
     return Rg, Sigma, Mp
+
+
+# ------------------------------------------------------------------ the Milky Way columns (the cache builder's construction)
+def milky_way_columns(variant, R, kernels=KERNELS_GAL, n_grid=3000, r_max=300.):
+    """Whirlpool pull per unit lambda at the radii R for baseline I or II: razor-thin disks (the archived projected
+    surface density) through the ring average, the Plummer bulge through the shell average; returns (cols, R_half, M)."""
+    sigma, m_bulge = CS.milky_way_source(variant)
+    Rg = np.geomspace(1e-3, r_max, n_grid)
+    sig = sigma(Rg)
+    Rm = np.sqrt(Rg[1:]*Rg[:-1])
+    mass = np.pi*(Rg[1:]**2 - Rg[:-1]**2)*.5*(sig[1:] + sig[:-1])
+    cols = whirl_columns_disk(R, Rm, mass, kernels)
+    cum = np.concatenate([[0.], np.cumsum(mass)])
+    if m_bulge is not None:
+        Mb = m_bulge(Rg)
+        cols = cols + np.array([shell_apply(R, Rm, np.diff(Mb), p, w) for (p, w) in kernels]).T
+        cum = cum + Mb
+    return cols, float(np.interp(.5*cum[-1], cum, Rg)), float(cum[-1])
+
+
+def regress_loglog(M, lam, seed=7, n_boot=1000):
+    """log10 lam against log10 M by least squares over the systems with lam > 0; bootstrap 16th and 84th percentiles."""
+    M, lam = np.asarray(M, float), np.asarray(lam, float)
+    keep = lam > 0
+    n = int(keep.sum())
+    if n < 3:
+        return dict(n=n, zero=int((~keep).sum()), slope=None, intercept=None)
+    x, y = np.log10(M[keep]), np.log10(lam[keep])
+    a, b = np.polyfit(x, y, 1)
+    resid = y - (a*x + b)
+    rng = np.random.default_rng(seed)
+    boots = []
+    for _ in range(n_boot):
+        idx = rng.integers(0, n, n)
+        if np.ptp(x[idx]) > 0:
+            boots.append(np.polyfit(x[idx], y[idx], 1))
+    boots = np.array(boots)
+    return dict(n=n, zero=int((~keep).sum()), slope=float(a), intercept=float(b), scatter_dex=float(np.sqrt(np.mean(resid**2))),
+                slope_16_84=[float(np.percentile(boots[:, 0], 16)), float(np.percentile(boots[:, 0], 84))],
+                intercept_16_84=[float(np.percentile(boots[:, 1], 16)), float(np.percentile(boots[:, 1], 84))],
+                log10_M_range=[float(x.min()), float(x.max())])

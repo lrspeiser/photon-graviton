@@ -156,6 +156,9 @@ def main():
         ('path-memory/nl1_checks.py', []),
         # NK-1, shell footprints (path-memory/protocol-nk1.md): the kernel gates and per-galaxy anchors on three galaxies.
         ('path-memory/nk1_checks.py', []),
+        # RW-1, the whirlpool beyond the rut (path-memory/protocol-rw1.md, amendment 1): the kernel gates and the archived
+        # G-whole strengths of three galaxies recomputed from the inputs, anchored to rw1-results.json.
+        ('path-memory/rw1_checks.py', []),
         # LAST, and expected to exit non-zero until the owner rules: stage 8 reproduces, but its numerical
         # verification status is FAILED (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
