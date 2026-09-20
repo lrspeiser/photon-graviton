@@ -145,8 +145,12 @@ def main():
         ('path-memory/cl2_checks.py', []),
         # CL-F1: spherical cluster optics, analytic projection and image-position gates.
         ('path-memory/cluster_lensing_checks.py', []),
-        # LAST, and expected to exit non-zero until the owner rules: stage 8 reproduces, but its numerical
-        # verification status is FAILED (the ring-limit gate, as declared and as amended). The job says so.
+        # RUT-1 stage 9, the corrected response calculation (path-memory/protocol-rut9.md): the boundary terms
+        # of the sharp truncation, every ring-limit annulus resolved on its own, and B13's own eigenfunction in
+        # the time domain. Its status is its own and does not touch stage 8's.
+        ('path-memory/rut9_checks.py', []),
+        # LAST, and expected to exit non-zero: by the owner's ruling on 3a80fec stage 8's numerical verification
+        # status stays FAILED in its archive (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
     ]
     if args.baseline:
