@@ -13,7 +13,7 @@ ROOT=Path(__file__).resolve().parent
 
 
 def main():
-    out=ROOT/'observer-controls-v1';out.mkdir(exist_ok=False)
+    out=ROOT/'observer-controls-v2';out.mkdir(exist_ok=False)
     rng=np.random.default_rng(20260927);rows=[];uniform=[]
     for i in range(48):
         n=(24,32)[i%2];radius=(.9,1.2)[(i//2)%2];v=np.array((0.,0.,0.) if (i//4)%2==0 else (.1,-.03,.02))
@@ -33,7 +33,7 @@ def main():
         al,z,beta=arrays;expected=float(al[0,0,0]*np.sqrt(1-np.sum(beta[:,0,0,0]**2)/z[0,0,0]**2))
         rate_error=abs(obs['rate']-expected);energy_error=0.
         if not shifted:energy_error=abs(photon_energy(np.zeros(3),np.array([1.,2.,3.]),obs,.9,16,arrays)-np.sqrt(14))
-        uniform.append(dict(shifted=shifted,rate_error=rate_error,energy_error=energy_error,passed=rate_error<1e-10 and energy_error<1e-10))
+        uniform.append(dict(shifted=shifted,rate_error=rate_error,energy_error=energy_error,passed=bool(rate_error<1e-10 and energy_error<1e-10)))
     summary=dict(passed=all(r['passed'] for r in rows+uniform),fixtures=len(rows),uniform=len(uniform),
                  commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
                  sources={n:hashlib.sha256((ROOT/n).read_bytes()).hexdigest() for n in ['observers.py','check_observers.py','probes.py','observer-protocol.md']})
