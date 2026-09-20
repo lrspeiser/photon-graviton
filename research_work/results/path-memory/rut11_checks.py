@@ -96,7 +96,7 @@ def main():
     eps = 1e-9
     lo = RR.logs(np.array([RR._SMALL*(1 - eps)])*np.exp(.7j))            # the series branch
     hi = RR.logs(np.array([RR._SMALL*(1 + eps)])*np.exp(.7j))            # the closed-form branch
-    worst = max(float(abs(a - b)/abs(b)) for a, b in zip(lo, hi))
+    worst = max(float(abs(a[0] - b[0])/abs(b[0])) for a, b in zip(lo, hi))
     # the seam is set by the closed form, not the series: at |x| = 0.01 the numerator of L2 is x^3/3 computed
     # as a difference of terms of size x, which leaves about 10^-11 of it. The rule's own target is 10^-8.
     check('the series and the closed form agree where the code switches between them', worst < 1e-9,

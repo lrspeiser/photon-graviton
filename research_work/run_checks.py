@@ -166,6 +166,12 @@ def main():
         # RUT-1 stage 10, the seeded full-state experiment (path-memory/protocol-rut10.md): replays the exact
         # preparation of one seeded run, bodies and field, bit for bit, and re-derives every fit, gate and reading.
         ('path-memory/rut10_checks.py', []),
+        # RUT-1 stage 11, the quiet region (path-memory/protocol-rut11.md): the resonant integral done in
+        # closed form below stage 8's floor, the operator bound beyond the searched azimuthal numbers, the
+        # family's boundary bracketed by resolution, and a controlled disturbance replayed bit for bit.
+        # Expected to exit non-zero: two of its ten gates failed, on faults in what the protocol declared
+        # (see the report), and by the owner's ruling on 3a80fec a failed gate is not reworded until it passes.
+        ('path-memory/rut11_checks.py', []),
         # LAST, and expected to exit non-zero: by the owner's ruling on 3a80fec stage 8's numerical verification
         # status stays FAILED in its archive (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
