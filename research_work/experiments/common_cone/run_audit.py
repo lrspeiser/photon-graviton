@@ -149,7 +149,7 @@ def main():
                            summary['fine_rotation_passes']==3 and max(analytic.values())<=1e-12)
     save(out/'summary.json',summary)
     save(out/'hashes.json',{p.name:digest(p) for p in sorted(out.iterdir()) if p.is_file()})
-    print(json.dumps(summary,indent=2),flush=True)
+    print((out/'summary.json').read_text(encoding='utf8'),flush=True)
 
 
 if __name__=='__main__': main()
