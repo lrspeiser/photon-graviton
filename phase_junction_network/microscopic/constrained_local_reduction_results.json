@@ -1,0 +1,115 @@
+{
+  "decision": "The local linear frame/connection system reduces to a positive four-dimensional physical phase space with two equal frequencies |k_hat|. The next unresolved step is a finite local implementation of this reduction and its nonlinear constraint algebra.",
+  "lattices": [
+    {
+      "failures": 0,
+      "lattice_size": 3,
+      "maximum_residuals": {
+        "connection_pullback_residual": 2.6645352591003757e-15,
+        "first_first_bracket_residual": 1.7763568394002505e-15,
+        "first_second_bracket_residual": 8.711118186234453e-17,
+        "gauge_constraint_residual": 2.526656395513911e-15,
+        "hamiltonian_descent_residual": 2.6196731386668918e-15,
+        "maximum_growth_rate": 1.734723475976807e-15,
+        "relative_frequency_error": 9.06493303673679e-16,
+        "symplectic_gauge_residual": 1.6752897254979504e-15
+      },
+      "minimum_physical_hessian_eigenvalue": 0.9999999999999983,
+      "nonzero_modes": 26,
+      "representative": {
+        "connection_pullback_residual": 2.6645352591003757e-15,
+        "constraint_surface_dimension": 8,
+        "first_class_rank": 4,
+        "first_first_bracket_residual": 0.0,
+        "first_second_bracket_residual": 8.711118186234453e-17,
+        "frequencies": [2.9999999999999987, 3.0],
+        "gauge_constraint_residual": 7.502995561136606e-16,
+        "hamiltonian_descent_residual": 1.97597038410854e-15,
+        "maximum_growth_rate": 8.396061623727746e-16,
+        "minimum_physical_hessian_eigenvalue": 1.0,
+        "mode": [-1, -1, -1],
+        "physical_phase_dimension": 4,
+        "relative_frequency_error": 2.960594732333751e-16,
+        "second_class_rank": 36,
+        "symplectic_gauge_residual": 1.6752897254979504e-15
+      }
+    },
+    {
+      "failures": 0,
+      "lattice_size": 5,
+      "maximum_residuals": {
+        "connection_pullback_residual": 2.220446049250313e-15,
+        "first_first_bracket_residual": 3.552713678800501e-15,
+        "first_second_bracket_residual": 2.035164294333313e-16,
+        "gauge_constraint_residual": 3.542574439914069e-15,
+        "hamiltonian_descent_residual": 4.1946801206098965e-15,
+        "maximum_growth_rate": 2.3037127760972e-15,
+        "relative_frequency_error": 1.9810714906408463e-15,
+        "symplectic_gauge_residual": 2.2269272265502468e-15
+      },
+      "minimum_physical_hessian_eigenvalue": 0.9999999999999976,
+      "nonzero_modes": 124,
+      "representative": {
+        "connection_pullback_residual": 1.7763568394002505e-15,
+        "constraint_surface_dimension": 8,
+        "first_class_rank": 4,
+        "first_first_bracket_residual": 3.552713678800501e-15,
+        "first_second_bracket_residual": 2.035164294333313e-16,
+        "frequencies": [3.294556414185327, 3.294556414185328],
+        "gauge_constraint_residual": 2.980243321165485e-15,
+        "hamiltonian_descent_residual": 3.903800366516605e-15,
+        "maximum_growth_rate": 2.3037127760972e-15,
+        "minimum_physical_hessian_eigenvalue": 0.9999999999999997,
+        "mode": [-2, -2, -2],
+        "physical_phase_dimension": 4,
+        "relative_frequency_error": 1.3479484155680372e-16,
+        "second_class_rank": 36,
+        "symplectic_gauge_residual": 2.2269272265502468e-15
+      }
+    },
+    {
+      "failures": 0,
+      "lattice_size": 7,
+      "maximum_residuals": {
+        "connection_pullback_residual": 2.5369985616610313e-15,
+        "first_first_bracket_residual": 1.0658141036401503e-14,
+        "first_second_bracket_residual": 1.2388692197737905e-16,
+        "gauge_constraint_residual": 1.144012116277562e-14,
+        "hamiltonian_descent_residual": 5.787856399228075e-15,
+        "maximum_growth_rate": 2.2343238370581275e-15,
+        "relative_frequency_error": 1.3825798887394355e-15,
+        "symplectic_gauge_residual": 3.315752312568125e-15
+      },
+      "minimum_physical_hessian_eigenvalue": 0.7530203962825328,
+      "nonzero_modes": 342,
+      "representative": {
+        "connection_pullback_residual": 1.7763568394002505e-15,
+        "constraint_surface_dimension": 8,
+        "first_class_rank": 4,
+        "first_first_bracket_residual": 7.105427357601002e-15,
+        "first_second_bracket_residual": 1.463719592883815e-17,
+        "frequencies": [3.3772493552319336, 3.3772493552319354],
+        "gauge_constraint_residual": 7.887407483975119e-15,
+        "hamiltonian_descent_residual": 4.89967797952795e-15,
+        "maximum_growth_rate": 3.191891195797325e-16,
+        "minimum_physical_hessian_eigenvalue": 0.9999999999999999,
+        "mode": [-3, -3, -3],
+        "physical_phase_dimension": 4,
+        "relative_frequency_error": 2.629887006490017e-16,
+        "second_class_rank": 36,
+        "symplectic_gauge_residual": 1.6772682253566944e-15
+      }
+    }
+  ],
+  "method": "Eliminate P_C=0 and C-Gamma[h]=0 as a full-rank second-class set; then quotient the four first-class frame constraints by the null directions of the pulled-back symplectic form.",
+  "phase_space_count": {
+    "extended_phase_dimension": 48,
+    "first_class_constraints": 4,
+    "physical_configuration_modes": 2,
+    "physical_phase_dimension": 4,
+    "second_class_constraints": 36
+  },
+  "status": "linear constrained local-to-physical reduction verified without a TT projector",
+  "uses_transverse_traceless_projector": false,
+  "zero_mode_policy": "k=0 is excluded from the propagating-mode test and retained as the previously identified periodic global frame sector."
+}
