@@ -1,0 +1,47 @@
+{
+  "cases": 24,
+  "passes": 18,
+  "references": [
+    {
+      "n": 256,
+      "ledger_drift": 1.3429333802143542e-06,
+      "passed": true
+    },
+    {
+      "n": 512,
+      "ledger_drift": 5.471973618785538e-08,
+      "passed": true
+    }
+  ],
+  "selected": {
+    "width": 1,
+    "strength": 8
+  },
+  "selected_rows": [
+    {
+      "n": 256,
+      "width": 1,
+      "strength": 8,
+      "relative_interior_state_error": 0.003764753472602736,
+      "ledger_drift": 7.833490973033834e-07,
+      "opposite_characteristic_energy": 0,
+      "energy_removed_fraction": 0.9997987943425785,
+      "initial_energy": 4.849669516922879,
+      "passed": true
+    },
+    {
+      "n": 512,
+      "width": 1,
+      "strength": 8,
+      "relative_interior_state_error": 0.0046098217030145095,
+      "ledger_drift": 2.986761092333845e-08,
+      "opposite_characteristic_energy": 0,
+      "energy_removed_fraction": 0.9999770720462532,
+      "initial_energy": 4.849668854903252,
+      "passed": true
+    }
+  ],
+  "maximum_opposite_characteristic_energy": 0,
+  "maximum_ledger_drift": 8.17252406258427e-07,
+  "scope": "Auxiliary 1D vacuum boundary prototype; not yet integrated into CC-2."
+}

@@ -1,0 +1,41 @@
+{
+  "cases": 24,
+  "passes": 0,
+  "reference_runs": [
+    {
+      "n": 256,
+      "ledger_drift": 1.7241606588069392e-06,
+      "passed": true
+    },
+    {
+      "n": 512,
+      "ledger_drift": 6.090100878746033e-08,
+      "passed": true
+    }
+  ],
+  "selected": null,
+  "current_cc2": [
+    {
+      "n": 256,
+      "width": 1,
+      "strength": 2,
+      "relative_interior_state_error": 0.5138622187101206,
+      "ledger_drift": 1.0670312692464274e-06,
+      "energy_removed_fraction": 0.7302539634077164,
+      "max_remaining_amplitude": 0.5352421758735166,
+      "passed": false
+    },
+    {
+      "n": 512,
+      "width": 1,
+      "strength": 2,
+      "relative_interior_state_error": 0.5211528935177088,
+      "ledger_drift": 3.456351162866479e-08,
+      "energy_removed_fraction": 0.7273287098200524,
+      "max_remaining_amplitude": 0.53589077443782,
+      "passed": false
+    }
+  ],
+  "best_error": 0.03587534670956084,
+  "scope": "1D vacuum compact pulse only; not nonlinear 3D boundary certification."
+}
