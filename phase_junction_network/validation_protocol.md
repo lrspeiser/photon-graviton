@@ -1,12 +1,12 @@
 # Phase Junction Network Validation Protocol
 
-**Status:** the linear gravitational structure and finite dressed-frame regulator, the finite charged-matter prototype, and the finite reversible photon–companion architecture are internally checked at their declared scopes. The deconfined electromagnetic, shared-parameter, nonlinear, interacting-continuum, common-cone, many-body, and empirical gates remain open.  
+**Status:** the linear gravitational structure and finite dressed-frame regulator, the finite charged-matter prototype, the finite reversible photon–companion architecture, and the finite static electromagnetic Coulomb ground-state gate are internally checked at their declared scopes. The relativistic photon/QED, shared-parameter, nonlinear, interacting-continuum, common-cone, many-body, and empirical gates remain open.  
 **Date:** 2026-09-20  
 **Architecture review:** [`architecture_audit.md`](architecture_audit.md)
 
 ## 1. Research rule
 
-No single successful spectrum, finite event, fit, or regulator verifies the theory. The required sequence is
+No single successful spectrum, finite event, fit, static ground state, or regulator verifies the theory. The required sequence is
 
 \[
 \text{ontology and finite variables}
@@ -28,9 +28,11 @@ Real measurements are initially exclusion walls, not flexible targets used to ch
 
 | Gate | Status | Evidence or issue |
 |---|---|---|
-| Exact finite electromagnetic Gauss symmetry | **Pass kinematically** | Spin-S quantum-link checks |
+| Exact finite electromagnetic Gauss symmetry | **Pass** | Spin-S quantum-link checks and issue-#6 Hamiltonian |
 | Smallest tested link with nonconstant electric energy | **Pass at spin 1** | Spin-1/2 has constant `E^2`; spin 1 is nontrivial |
-| Finite deconfined Coulomb/QED phase | **Open** | Issue #6 |
+| Positive finite 3+1D electromagnetic parent | **Pass at RK point** | Weighted graph-Laplacian plaquette terms |
+| Finite static Coulomb ground state | **Stage 6A pass** | Exact `2^3` sector; `L=4,6,8` winding/transverse/Wilson checks; `L=6,8` fixed charges; spin-2 control |
+| Relativistic two-photon phase and QED limit | **Open** | Issue #6 continuation: detuned `z=1` spectrum, matter dynamics, Ward identities, vacuum polarization |
 | Four finite gravitational constraints and local two-mode count | **Pass** | Odd-prime Weyl/CSS skeleton |
 | Local frame/connection reduction to two positive linear modes | **Pass** | Constrained local and full real-space reductions; no TT projector |
 | Finite connection second-class lock | **Pass for the linear map** | Relative Weyl oscillator and exact dressed frame algebra |
@@ -40,7 +42,7 @@ Real measurements are initially exclusion walls, not flexible targets used to ch
 | Nonlinear gravitational closure and self-coupling | **Open** | Issue #5 |
 | Microscopic vacuum/volume mechanism | **Open** | Issue #5 |
 | Shared microscopic coefficients and impedance ratio | **Open** | Issue #3 |
-| Common photon/companion/matter/tensor cone | **Open** | Issue #8; finite bridge currently has speed ratio `0.3571428571` |
+| Common photon/companion/matter/tensor cone | **Open** | Issues #6 and #8; finite bridge currently has speed ratio `0.3571428571` |
 | Mirror completion and interacting anomaly control | **Open** | Issue #8 |
 | Unitarity/reflection positivity and regulator universality | **Open** | Issue #8 |
 | Many-body companion capacity, lifetime, release, and self-gravity | **Open** | Issues #5 and #8 |
@@ -64,20 +66,66 @@ Issue #7 passes only at the **finite architecture** level. Its committed model h
 
 ## 4. Electromagnetic gates
 
-A finite electromagnetic candidate must demonstrate:
+The declared finite electromagnetic Hamiltonian is
 
-1. exact or controlled local Gauss symmetry;
-2. a stable deconfined phase in 3+1 dimensions;
-3. two and only two massless transverse branches;
-4. positive residues and energy;
-5. static charge energy approaching `1/r` over an expanding range;
-6. gauge-covariant dynamical charged defects;
-7. finite-size and finite-representation scaling;
-8. Ward identities and a declared QED continuum normalization;
+\[
+H_A(u,t,v)=\frac{u}{2}\sum_\ell E_\ell^2
+-t\sum_p(W_p+W_p^\dagger)+v\sum_pD_p,
+\]
+
+with
+
+\[
+D_p=\sqrt{W_p^\dagger W_p}+\sqrt{W_pW_p^\dagger}.
+\]
+
+At `u=0, v=t`, each local term is a positive weighted graph Laplacian and commutes exactly with Gauss law.
+
+### 4.1 Stage 6A static acceptance
+
+The static finite Coulomb gate requires:
+
+1. a declared finite local Hamiltonian with no continuum rotor inserted;
+2. exact local Gauss symmetry;
+3. a positive parent at the selected point;
+4. exact closure of a nontrivial periodic three-dimensional gauge sector;
+5. winding variance consistent with `<W^2> proportional to L`;
+6. winding-sector free energy consistent with `Delta F(W=1) proportional to 1/L`;
+7. a rank-two equal-time transverse correlation tensor and no longitudinal component;
+8. a finite Wilson-shift response favoring perimeter over area behavior;
+9. a fixed opposite-charge response consistent with the periodic lattice Green function;
+10. an effective string slope that decreases with size;
+11. at least one larger finite-representation control.
+
+The committed Stage 6A calculation passes these gates. Every acceptance threshold is executable, and the full stochastic outputs are frozen separately from the deterministic CI smoke test.
+
+### 4.2 Claim boundary
+
+The following substitutions are prohibited:
+
+- an equal-time rank-two tensor is **not** a two-branch photon spectrum;
+- a winding-sector free energy is **not** a dynamical photon gap;
+- a single RK surface is **not** a stable relativistic phase;
+- a static charge histogram is **not** dynamical matter or vacuum polarization;
+- exact Gauss-covariant hopping is **not** a Ward-identity proof.
+
+### 4.3 Remaining issue-#6 acceptance
+
+A complete electromagnetic/QED candidate must additionally demonstrate:
+
+1. a finite coupling interval around or away from the static anchor;
+2. two and only two massless transverse **dynamical** branches;
+3. positive residues and energy;
+4. a lowest photon gap closing as `1/L`;
+5. exclusion of a low-energy longitudinal or scalar pole;
+6. gauge-covariant dynamical charged defects from issue #4;
+7. charge renormalization and vacuum polarization;
+8. finite Ward identities and declared QED normalization;
 9. photon mass protection;
-10. cutoff dispersion, birefringence, and Lorentz-violating operators quantified.
+10. cutoff dispersion, birefringence, and Lorentz-violating operators quantified;
+11. spin-1/spin-2 or alternative-regulator universality.
 
-The current finite-link calculation and issue-#4 endpoints satisfy kinematic prerequisites. They do not imply deconfinement or interacting QED.
+Issue #6 remains open until these dynamical and interacting gates pass or the branch is rejected.
 
 ## 5. Gravitational gates
 
@@ -104,10 +152,7 @@ The linear gates through item 8 are internally passed. Every issue-#2 regression
 - exactly two logical Weyl pairs per nonzero propagation block;
 - no TT projector in the Hamiltonian or logical reduction;
 - a positive two-copy compact Hamiltonian or equivalent constrained transfer step;
-- signed-momentum gaps
-  \[
-  \Delta=c_g|\widehat k|+O(|\widehat k|^3);
-  \]
+- signed-momentum gaps `Delta=c_g|k_hat|+O(|k_hat|^3)`;
 - exact two-polarization degeneracy;
 - connection-lock/frame commutator and ground-band leakage below `1e-12`;
 - a lock gap separated from the tensor gap;
@@ -133,7 +178,7 @@ A matter construction must provide:
 10. material clocks and bound-state energies calculable from the same defects;
 11. a healthy interacting continuum and radiative stability.
 
-Issue #4 passes the finite free-regulator gates for an odd-strand endpoint and domain-wall construction. It does not establish the Standard Model, observed masses, mirror removal, bound-state clocks, interacting Ward identities, or radiative stability. Those downstream gates remain issues #3, #6, and #8.
+Issue #4 passes the finite free-regulator gates for an odd-strand endpoint and domain-wall construction. It does not establish the Standard Model, observed masses, mirror removal, bound-state clocks, interacting Ward identities, or radiative stability. Its next electromagnetic test must occur inside the detuned issue-#6 dynamical phase, not in a separate continuum proxy.
 
 ## 7. Shared-parameter gate
 
@@ -143,14 +188,12 @@ One finite microscopic move set must derive or constrain
 U_A,\ K_A,\ U_g,\ K_g,\ r_0,\ \eta,\ \ell,
 \]
 
-plus matter hopping, defect gaps, companion conversion/binding/recoil couplings, and volume parameters.
+plus the issue-#6 RK detuning, matter hopping and defect gaps, companion conversion/binding/recoil couplings, and volume parameters.
 
 Define
 
 \[
-Z_A=\sqrt{U_A/K_A},
-\qquad
-Z_g=\sqrt{U_g/K_g}.
+Z_A=\sqrt{U_A/K_A},\qquad Z_g=\sqrt{U_g/K_g}.
 \]
 
 A common limiting speed constrains products, not the impedance ratio. Equality of `Z_A` and `Z_g` is optional until derived.
@@ -163,7 +206,7 @@ Parameter closure requires:
 - no use of measured `G`, `alpha`, masses, or redshift coefficients to select microscopic amplitudes before relations are derived;
 - at least one held-out cross-sector relation.
 
-The issue-#2 self-dual clock point, issue-#4 localization inputs, and issue-#7 finite couplings are not yet such a derivation.
+The issue-#2 clock point, issue-#4 localization inputs, issue-#6 RK point, and issue-#7 finite couplings are not yet such a derivation.
 
 ## 8. Continuum quantum and common-cone gate
 
@@ -181,7 +224,7 @@ A finite network does not automatically define a healthy quantum field theory. R
 10. leading irrelevant-operator inventory;
 11. explicit audit of the assumptions behind emergent-spin-2 no-go results.
 
-The reduced tensor transfer matrix, compact tensor regulator, finite matter slab, and finite companion bridge are benchmarks. They do not establish the interacting continuum.
+The static electromagnetic RK state, reduced tensor transfer matrix, compact tensor regulator, finite matter slab, and finite companion bridge are benchmarks. They do not establish the interacting continuum.
 
 ## 9. Photon–companion physical gates
 
@@ -208,8 +251,8 @@ Reject or revise a candidate if any of the following occurs:
 - a physical negative-energy or negative-residue mode;
 - `omega^2<0` near the vacuum;
 - extra unsuppressed photon or tensor polarizations;
-- a finite electromagnetic model that remains confined or gapped;
-- tensor dispersion `omega~k^2` or `omega~k^3` in the intended relativistic phase;
+- the issue-#6 detuned finite model confines, remains gapped, or has only an isolated nonrelativistic RK critical point;
+- tensor dispersion `omega~k^2` or `omega~k^3` in the intended relativistic gravity phase;
 - uncontrolled finite-state boundary occupation;
 - low-energy leakage into the connection-relative band;
 - loss of charge, energy, momentum, or stress-energy conservation;
@@ -226,15 +269,15 @@ Reject or revise a candidate if any of the following occurs:
 
 ### A. Vacuum and phase diagram
 
-Map gaps, residues, order parameters, flux sectors, and phase boundaries across couplings, local dimensions, and regulator choices.
+Map gaps, residues, order parameters, flux sectors, and phase boundaries across couplings, local dimensions, and regulator choices. For issue #6, begin from the committed RK anchor but do not assume the detuned phase survives.
 
 ### B. Static sources
 
-Use finite conserved electric charge and energy sources. Measure sign, range, anisotropy, finite-size corrections, and species dependence.
+Use finite conserved electric charge and energy sources. Measure sign, range, anisotropy, finite-size corrections, and species dependence. Preserve the committed fixed-charge Stage 6A results as the static baseline.
 
 ### C. Wave packets and correlators
 
-Measure dispersion, speed, polarization, leakage, birefringence, tensor/vector/scalar content, and reflection positivity.
+Measure dispersion, speed, polarization, leakage, birefringence, tensor/vector/scalar content, and reflection positivity. This is the immediate unresolved electromagnetic gate.
 
 ### D. Matter response
 
@@ -250,7 +293,7 @@ Evolve physical and constraint-violating data separately. Physical data must pre
 
 ### G. End-to-end many-body companion experiment
 
-Start from microscopic matter and photons in the actual finite EM phase, generate the companion, propagate it, capture/store many excitations, release or equilibrate them, source the nonlinear frame, and detect both matter and light response with one parameter set.
+Start from microscopic matter and photons in the actual finite dynamical EM phase, generate the companion, propagate it, capture/store many excitations, release or equilibrate them, source the nonlinear frame, and detect both matter and light response with one parameter set.
 
 ## 12. Freeze before empirical testing
 
@@ -289,14 +332,14 @@ that is not used for calibration.
 
 ## 14. Current decision
 
-Issues #2, #4, and #7 are complete only at their declared finite scopes. Their checks remain mandatory regressions. Reopen issue #2 only for a failed regression or a concrete dependency from shared coefficients, nonlinear gravity, electromagnetic matching, or regulator universality.
+Issues #2, #4, and #7 are complete only at their declared finite scopes. Issue #6 Stage 6A is complete only at the finite static ground-state scope. All of these checks remain mandatory regressions.
 
 The immediate program is:
 
-1. demonstrate or reject the finite deconfined Coulomb/QED phase with dynamical defects under issue #6;
+1. detune issue #6 and demonstrate or reject a stable `z=1` two-photon phase with the actual dynamical defects;
 2. derive shared sector coefficients under issue #3;
 3. close nonlinear gravity and many-body binding under issue #5;
 4. establish mirror completion, common-cone recovery, interacting consistency, and regulator universality under issue #8;
 5. freeze and test predictions under issue #9.
 
-No one finite prototype may be used as evidence that another pillar—or the full theory—has been solved.
+No one finite prototype or static phase may be used as evidence that another pillar—or the full theory—has been solved.

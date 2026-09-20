@@ -1,6 +1,6 @@
 # Microscopic finite-state phase
 
-**Status:** finite electromagnetic kinematics, a finite chiral charged-endpoint prototype, a finite reversible photon–companion bridge, first-order frame–connection algebra, constrained local gravity reduction, the finite connection lock, and a finite dressed linear tensor Hamiltonian are checked. A deconfined finite QED phase, observed matter, shared coefficients, nonlinear closure, common-cone recovery, and interacting regulator universality remain open.  
+**Status:** finite electromagnetic kinematics and a finite static Coulomb ground state, a finite chiral charged-endpoint prototype, a finite reversible photon–companion bridge, first-order frame–connection algebra, constrained local gravity reduction, the finite connection lock, and a finite dressed linear tensor Hamiltonian are checked. Relativistic photon dynamics, interacting QED, observed matter, shared coefficients, nonlinear closure, common-cone recovery, and interacting regulator universality remain open.  
 **Date:** 2026-09-20  
 **Active branch:** `main`
 
@@ -8,27 +8,28 @@ This folder replaces infrared rotor, symmetric-tensor, continuum-matter, and phe
 
 ## Results obtained
 
-1. **Finite electromagnetic link:** a spin-1 quantum link, with three states per oriented lane, is the smallest tested representation with exact local U(1) Gauss symmetry and nonconstant electric-flux energy. Spin-1/2 preserves Gauss symmetry but has constant `E^2`.
-2. **Finite gravitational constraint skeleton:** six odd-prime qudits per site realize three vector constraints and one scalar constraint as an exact commuting Weyl/CSS algebra. The periodic code leaves two local logical modes per site plus the declared global sector.
-3. **Finite canonical obstruction:** no finite matrices obey `[Q,P]=iI` on their full Hilbert space. Continuous frame variables must emerge below a cutoff or from a discrete microscopic algebra.
-4. **Pure stabilizer branch rejected:** exact local coordinate invariants begin at two derivatives and momentum invariants at one. Squaring them gives `omega ~ k^3`, not a relativistic tensor branch.
-5. **First-order frame–connection identity:** an independent torsion-free connection gives a local `C^2+C*partial(h)` form whose constrained elimination is exactly the Fierz–Pauli stiffness.
-6. **Independent verification:** the first-order identity passes random numerical tests, exact rational coefficient comparison, gauge-null checks, finite-size scaling, static response, and a reduced Euclidean transfer benchmark.
-7. **Naïve auxiliary quantization rejected:** a positive real auxiliary block with zero bare frame stiffness induces a nonpositive Schur complement. The accepted branch treats the connection as constrained/nonpropagating.
-8. **Constrained local reduction completed:** the 48-dimensional phase space `(h,p,C,P_C)` has 36 second-class connection constraints and four first-class frame constraints:
+1. **Finite electromagnetic link:** a spin-1 quantum link, with three states per oriented link, is the smallest tested representation with exact local U(1) Gauss symmetry and nonconstant electric-flux energy. Spin-1/2 preserves Gauss symmetry but has constant `E^2`.
+2. **Finite static electromagnetic Coulomb ground state:** the spin-1 links now form a declared local 3+1D Hamiltonian with a positive weighted Rokhsar–Kivelson point. The exact periodic `2^3` zero-charge/zero-winding component contains `146,327` gauge-allowed states and `1,236,144` undirected plaquette transitions. Spin-1 `L=4,6,8` runs show Coulomb winding scaling, an equal-time rank-two transverse tensor with longitudinal fraction below `5.25e-33`, perimeter-favored Wilson-shift overlaps, and a fixed-charge response whose effective string slope falls by 56% from `L=6` to `L=8`. Spin 2 supplies a larger-representation control. This passes the **static Stage 6A** gate; a stable `z=1` photon phase and interacting QED remain open.
+3. **Finite gravitational constraint skeleton:** six odd-prime qudits per site realize three vector constraints and one scalar constraint as an exact commuting Weyl/CSS algebra. The periodic code leaves two local logical modes per site plus the declared global sector.
+4. **Finite canonical obstruction:** no finite matrices obey `[Q,P]=iI` on their full Hilbert space. Continuous frame variables must emerge below a cutoff or from a discrete microscopic algebra.
+5. **Pure stabilizer branch rejected:** exact local coordinate invariants begin at two derivatives and momentum invariants at one. Squaring them gives `omega ~ k^3`, not a relativistic tensor branch.
+6. **First-order frame–connection identity:** an independent torsion-free connection gives a local `C^2+C*partial(h)` form whose constrained elimination is exactly the Fierz–Pauli stiffness.
+7. **Independent verification:** the first-order identity passes random numerical tests, exact rational coefficient comparison, gauge-null checks, finite-size scaling, static response, and a reduced Euclidean transfer benchmark.
+8. **Naïve auxiliary quantization rejected:** a positive real auxiliary block with zero bare frame stiffness induces a nonpositive Schur complement. The accepted branch treats the connection as constrained/nonpropagating.
+9. **Constrained local reduction completed:** the 48-dimensional phase space `(h,p,C,P_C)` has 36 second-class connection constraints and four first-class frame constraints:
 
    ```text
    48 - 36 - 2*4 = 4 physical phase-space dimensions
    ```
 
    The quotient produces two equal positive frequencies `|k_hat|` without constructing a TT projector. All 492 nonzero modes on `L=3,5,7` pass.
-9. **Full real-space reduction completed:** complete periodic real-space matrices, without Fourier reduction during the constraint calculation, leave exactly two positive modes per nonzero momentum on `3^3` and `5^3` lattices.
-10. **Global conformal issue isolated:** the unrestricted periodic zero mode has one negative homogeneous trace-momentum direction.
-11. **Fixed-volume candidate passed:** total-volume and trace-momentum constraints remove exactly that global canonical pair at linear order.
-12. **Reduced finite quantum target passed:** two truncated physical oscillators give a positive transfer matrix, a twofold first excitation, `omega ~ L^-0.993857`, negligible truncation-boundary occupation, and a positive Euclidean reflection kernel to numerical precision.
-13. **Finite chiral charged endpoint passed at prototype scope:** finite spin-1 flux bundles and exact odd-strand binding produce fermionic endpoint operators. The first primitive anomaly-free chiral set in the declared search is `(-11,-5,-1,-1,9,9)`. Hopping is exactly Gauss covariant; a finite domain-wall slab has one Weyl cone per wall, seven gapped physical doublers, opposite wall chirality, and one universal frame derivative. A shared two-parameter localization rule produces gaps spanning `3.245e7`. The mirror wall and interacting continuum remain open.
-14. **Finite reversible photon–companion bridge passed at architecture scope:** a source, two photon-frequency bins, neutral `chi`, matter recoil, a computed bound `chi` mode, capture recoil, a receiver, and one constrained frame form a reversible finite Hamiltonian. Energy and component ledgers close to roundoff and motion/lensing share the same frame. The finite speed ratio `v_chi/v_gamma=0.3571428571` keeps common-cone recovery open.
-15. **Finite dressed linear gravity Hamiltonian passed:** the exact scalar/vector stabilizer quotient produces two logical Weyl pairs at `p=5,7,11` without a TT projector. Two positive clock/Villain copies in the exact dressed frame algebra produce signed-momentum gaps
+10. **Full real-space reduction completed:** complete periodic real-space matrices, without Fourier reduction during the constraint calculation, leave exactly two positive modes per nonzero momentum on `3^3` and `5^3` lattices.
+11. **Global conformal issue isolated:** the unrestricted periodic zero mode has one negative homogeneous trace-momentum direction.
+12. **Fixed-volume candidate passed:** total-volume and trace-momentum constraints remove exactly that global canonical pair at linear order.
+13. **Reduced finite quantum target passed:** two truncated physical oscillators give a positive transfer matrix, a twofold first excitation, `omega ~ L^-0.993857`, negligible truncation-boundary occupation, and a positive Euclidean reflection kernel to numerical precision.
+14. **Finite chiral charged endpoint passed at prototype scope:** finite spin-1 flux bundles and exact odd-strand binding produce fermionic endpoint operators. The first primitive anomaly-free chiral set in the declared search is `(-11,-5,-1,-1,9,9)`. Hopping is exactly Gauss covariant; a finite domain-wall slab has one Weyl cone per wall, seven gapped physical doublers, opposite wall chirality, and one universal frame derivative. A shared two-parameter localization rule produces gaps spanning `3.245e7`. The mirror wall and interacting continuum remain open.
+15. **Finite reversible photon–companion bridge passed at architecture scope:** a source, two photon-frequency bins, neutral `chi`, matter recoil, a computed bound `chi` mode, capture recoil, a receiver, and one constrained frame form a reversible finite Hamiltonian. Energy and component ledgers close to roundoff and motion/lensing share the same frame. The finite speed ratio `v_chi/v_gamma=0.3571428571` keeps common-cone recovery open.
+16. **Finite dressed linear gravity Hamiltonian passed:** the exact scalar/vector stabilizer quotient produces two logical Weyl pairs at `p=5,7,11` without a TT projector. Two positive clock/Villain copies in the exact dressed frame algebra produce signed-momentum gaps
 
    ```text
    Delta = c_g |k_hat| + O(|k_hat|^3)
@@ -37,6 +38,21 @@ This folder replaces infrared rotor, symmetric-tensor, continuum-matter, and phe
    with exact two-polarization degeneracy, maximum fit residual `1.67e-3`, minimum lock/tensor gap ratio `2.49`, connection-band leakage `5.16e-16`, compact-cut occupation falling to `1.89e-4` at `p=11`, and full-symbol polarization splitting below `2.84e-16`.
 
 ## Current interpretation
+
+The electromagnetic result now closes a previously missing **static finite phase** gate:
+
+```text
+finite spin-1 links
+    -> exact U(1) Gauss law
+    -> positive local RK Hamiltonian
+    -> exact 2^3 gauge-sector closure
+    -> Coulomb winding response
+    -> rank-two equal-time transverse tensor
+    -> perimeter-favored Wilson shifts
+    -> decreasing fixed-charge string slope
+```
+
+This is not yet a photon spectrum. The equal-time rank-two tensor cannot be relabeled as two linearly dispersing quantum branches, and the winding-sector free-energy response is not a `1/L` photon gap. Issue #6 remains open for a finite coupling interval with `z=1` dynamics, charged-matter propagation, Ward identities, vacuum polarization, and QED scaling.
 
 The local **linear gravity continuum and finite-regulator bridges are closed under their stated assumptions**:
 
@@ -60,7 +76,7 @@ No TT projector is inserted. The logical fields are derived by modular kernel/ro
 
 so they commute exactly with the connection lock. The accepted object is a constrained transfer-matrix route; the retained frame-only invariant-square branch still gives `omega ~ k^3` and remains rejected.
 
-The self-dual clock ratio and overall gravity scale are regulator inputs. Issue #3 must derive shared coefficients, issue #5 must add nonlinear self-coupling and constraint closure, issue #6 must provide the finite photon phase, and issue #8 must establish common-cone recovery and regulator universality.
+The self-dual clock ratio and overall gravity scale are regulator inputs. Issue #3 must derive shared coefficients, issue #5 must add nonlinear self-coupling and constraint closure, and issue #8 must establish common-cone recovery and regulator universality.
 
 The matter and companion constructions are also finite architecture prototypes rather than complete particle physics or astrophysics. The matter mirror, observed spectrum, bound-state clocks, many-body deposits, continuum rates, and radiative stability remain explicit.
 
@@ -70,6 +86,12 @@ The matter and companion constructions are also finite architecture prototypes r
 |---|---|
 | [`finite_hilbert_derivation.md`](finite_hilbert_derivation.md) | Finite construction, canonical no-go result, discrete constraints, and derivative-order obstruction |
 | [`finite_junction_model.py`](finite_junction_model.py) / [`results.json`](results.json) | Quantum-link and GF(p) kinematic checks |
+| [`finite_em_coulomb_phase.md`](finite_em_coulomb_phase.md) | Issue-#6 Stage 6A Hamiltonian, derivation, frozen diagnostics, claim boundary, and next rejection test |
+| [`check_finite_em_coulomb.py`](check_finite_em_coulomb.py) | Exact cube, RK flux/transverse, Wilson-shift, and fixed-charge calculations |
+| [`finite_em_coulomb_results.json`](finite_em_coulomb_results.json) | Master static Coulomb-stage result and unresolved gates |
+| [`finite_em_exact_cube_results.json`](finite_em_exact_cube_results.json) | Exact periodic `2^3` gauge-sector closure |
+| [`finite_em_flux_results.json`](finite_em_flux_results.json) | Spin-1/spin-2 winding, transverse, and Wilson-shift finite-size results |
+| [`finite_em_charge_results.json`](finite_em_charge_results.json) | Combined `L=6,8` fixed-charge potential and string-slope scaling |
 | [`chiral_matter_defect.md`](chiral_matter_defect.md) | Finite charged endpoint, anomaly search, domain-wall chirality, protected gaps, and claim boundary |
 | [`check_chiral_matter_defect.py`](check_chiral_matter_defect.py) / [`chiral_matter_results.json`](chiral_matter_results.json) | Executable matter prototype checks |
 | [`check_companion_bridge.py`](check_companion_bridge.py) / [`companion_bridge_results.json`](companion_bridge_results.json) | Finite reversible conversion, binding, recoil, ledger, and frame checks |
@@ -96,6 +118,14 @@ Every executable calculation has a neighboring frozen `*_results.json` file.
 From the repository root:
 
 ```sh
+python phase_junction_network/microscopic/check_finite_em_coulomb.py \
+  --quick \
+  --output /tmp/finite_em_quick_results.json
+
+python phase_junction_network/microscopic/check_finite_em_coulomb.py \
+  --exact-only \
+  --output /tmp/finite_em_exact_cube_results.json
+
 python phase_junction_network/microscopic/check_chiral_matter_defect.py \
   --slab-width 12 \
   --output phase_junction_network/microscopic/chiral_matter_results.json
@@ -122,11 +152,12 @@ Every script exits nonzero if a committed claim fails.
 
 ## Immediate next implementation
 
-1. Demonstrate or reject the finite spin-1 deconfined Coulomb/QED phase with the actual dynamical defects under issue #6.
-2. Derive `r0`, `eta`, `U_A`, `K_A`, `U_g`, `K_g`, the gravity clock ratio, and companion coefficients from one microscopic move set under issue #3.
-3. Extend the frame/connection constraints to nonlinear order, include gravitational self-energy, and derive or reject the fixed-volume rule under issue #5.
-4. Test mirror completion, interacting anomaly accounting, Ward identities, common-cone recovery, and regulator universality under issue #8.
-5. Derive many-body companion capacity, lifetime, release, and self-gravity before any galaxy-scale interpretation.
-6. Maintain the parameter and observable ledger under issue #9 and freeze predictions before data fitting.
+1. Detune the finite spin-1 Hamiltonian around the RK point and demonstrate or reject a finite interval with two dynamical transverse gaps scaling as `1/L`, no scalar branch, and consistent spin-2 behavior.
+2. Embed the actual issue-#4 endpoint hopping in that dynamical phase and test finite Ward identities, charge renormalization, and vacuum polarization.
+3. Derive `r0`, `eta`, `U_A`, `K_A`, `U_g`, `K_g`, the gravity clock ratio, and companion coefficients from one microscopic move set under issue #3.
+4. Extend the frame/connection constraints to nonlinear order, include gravitational self-energy, and derive or reject the fixed-volume rule under issue #5.
+5. Test mirror completion, interacting anomaly accounting, common-cone recovery, and regulator universality under issue #8.
+6. Derive many-body companion capacity, lifetime, release, and self-gravity before any galaxy-scale interpretation.
+7. Maintain the parameter and observable ledger under issue #9 and freeze predictions before data fitting.
 
-A later branch fails if it hides a mirror, violates finite Gauss symmetry, reintroduces a TT projector, allows a low-energy connection/scalar/vector state, loses positivity, or obtains a common photon–matter–companion–gravity result only by independently tuning every sector.
+A later branch fails if it hides a mirror, violates finite Gauss symmetry, mistakes an equal-time Coulomb tensor for a photon spectrum, reintroduces a TT projector, allows a low-energy connection/scalar/vector state, loses positivity, or obtains a common photon–matter–companion–gravity result only by independently tuning every sector.

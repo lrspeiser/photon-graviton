@@ -1,20 +1,22 @@
 # Phase Junction Network: Big-Picture Architecture Audit
 
 **Audit date:** 2026-09-20  
-**Updated after issue #2, issue #4, and issue #7 finite-gate closures:** 2026-09-20  
-**Scope:** determine which elements of a candidate fundamental theory are actually established, which remain regulator prototypes, and what work now controls success or failure.
+**Updated after issue #2, issue #4, issue #7, and issue #6 Stage 6A finite gates:** 2026-09-20  
+**Scope:** determine which elements of a candidate fundamental theory are actually established, which remain regulator or static-phase prototypes, and what work now controls success or failure.
 
 ## Executive conclusion
 
-The project is no longer dominated by a single successful gravity calculation. It now has three substantial finite architecture results:
+The project now has four substantial finite architecture results:
 
 1. **Issue #2 — linear finite gravity regulator:** an exact finite scalar/vector quotient, written in the dressed frame Weyl algebra, leaves two positive linearly dispersing tensor branches without a transverse-traceless projector.
 2. **Issue #4 — finite charged-matter prototype:** odd-strand endpoint defects, exact Gauss-covariant hopping, a primitive anomaly-free chiral charge set, and a protected domain-wall gap hierarchy pass their declared free-regulator gates.
 3. **Issue #7 — finite photon–companion integration architecture:** one companion identity, reversible matter-assisted conversion, recoil, binding, reverse transitions, energy/momentum ledgers, and one shared frame for motion and lensing are explicit.
+4. **Issue #6 Stage 6A — finite static electromagnetic Coulomb ground state:** the actual spin-1 links form a positive local RK Hamiltonian with an exactly enumerated three-dimensional gauge sector, Coulomb winding response, a rank-two equal-time transverse tensor, perimeter-favored Wilson shifts, a decreasing fixed-charge string slope, and a spin-2 control.
 
 These are meaningful closures. They do **not** make the framework a complete theory. The decisive open risks are now:
 
-- whether the actual finite electromagnetic model has a deconfined two-photon Coulomb phase with dynamical defects;
+- whether the static RK electromagnetic anchor extends over a finite coupling interval to a `z=1` two-photon quantum phase;
+- whether the issue-#4 defects remain healthy when made dynamical inside that phase and satisfy finite Ward identities and QED renormalization tests;
 - whether all sector coefficients come from one microscopic move set rather than independent choices;
 - whether nonlinear gravity preserves the constraints and universally includes field self-energy;
 - whether the matter mirror can be removed or symmetrically gapped in a healthy interacting theory;
@@ -23,7 +25,7 @@ These are meaningful closures. They do **not** make the framework a complete the
 - whether the companion has a viable many-body capacity, lifetime, release, and self-gravity mechanism;
 - whether the theory makes a frozen cross-sector prediction that survives data.
 
-Linear gravity should now be treated as a regression-tested input, not the dominant research program. The clock normalization, gravity scale, and compact completion used in issue #2 remain regulator choices until issues #3 and #8 derive or universalize them.
+Linear gravity should remain a regression-tested input rather than the dominant research program. Electromagnetism is no longer kinematics-only, but the project must not relabel an equal-time Coulomb tensor as a dynamical photon spectrum. The clock normalization, gravity scale, electromagnetic detuning, and compact completions remain regulator choices until issues #3 and #8 derive or universalize them.
 
 ## Relationship to the wider repository
 
@@ -40,120 +42,138 @@ The current microscopic dictionary is:
 | Frame connection | Constrained auxiliary comparison variable with a gapped relative band |
 | Matter | Finite charged or neutral endpoint defect |
 
-Issue #7 now supplies a finite reversible bridge between photons, companion excitations, matter recoil, a bound mode, and a shared frame. It does not supply a continuum astrophysical conversion rate, a galaxy-scale deposit, a common propagation cone, or empirical success. The finite event probabilities are architecture stress tests, not observed rates.
+Issue #7 supplies a finite reversible bridge between photons, companion excitations, matter recoil, a bound mode, and a shared frame. Issue #6 Stage 6A supplies a static finite Coulomb ground-state environment. Neither result supplies a continuum astrophysical conversion rate, a stable common propagation cone, a galaxy-scale deposit, or empirical success.
 
 ## Master gate matrix
 
 Status meanings:
 
 - **Established internally:** multiple committed checks establish the stated result under explicit assumptions.
-- **Finite prototype pass:** an explicit finite construction passes its declared algebraic or free-regulator gates while physical completion remains open.
-- **Partial:** a target structure exists but the physical phase or complete mechanism is not demonstrated.
+- **Finite prototype pass:** an explicit finite construction passes declared algebraic or free-regulator gates while physical completion remains open.
+- **Static finite phase pass:** a finite ground-state phase anchor passes static deconfinement diagnostics, but dynamical relativistic and interacting-continuum gates remain open.
+- **Partial:** a target structure exists but the full physical phase or complete mechanism is not demonstrated.
 - **Open:** no construction closes the requirement.
 
 | Pillar | Minimum requirement | Current status | Established evidence | Decisive missing work |
 |---|---|---|---|---|
 | Ontology and companion integration | One field dictionary and one reversible source-to-storage-to-gravity Hamiltonian | **Finite architecture pass** | Issue #7: one companion identity, Hermitian reverse channels, recoil, finite bound mode, energy/momentum ledgers, shared frame | Replace proxies with full finite matter/EM sectors; derive physical rates, many-body storage, lifetime, release, and common cone |
-| Finite electromagnetism | Deconfined 3+1D Coulomb phase, two transverse photons, dynamical charge, `1/r`, Ward identities | **Partial** | Exact finite Gauss symmetry; spin-1 is the smallest tested link with nonconstant electric energy; issue-#4 defects are Gauss covariant | Phase diagram and deconfinement with defects, transverse spectrum, static force, scaling, Ward identities; issue #6 |
+| Finite electromagnetism | Deconfined 3+1D phase, two transverse photons, dynamical charge, `1/r`, Ward identities | **Static finite phase pass** | Issue #6 Stage 6A: exact spin-1 Gauss law; positive RK parent; exact `2^3` gauge sector; spin-1 `L=4,6,8` winding scaling; rank-two equal-time tensor; perimeter Wilson shifts; `L=6,8` fixed-charge response; spin-2 control | Detuned phase diagram and `z=1` spectrum; `1/L` photon gap; scalar rejection; issue-#4 matter dynamics; Ward identities, vacuum polarization, regulator scaling |
 | Linear gravity and finite regulator | Four constraints, exactly two positive linear tensor modes, finite positive Hamiltonian/transfer regulator, no TT insertion | **Established internally** | Continuum and exact first-order identities; local/full-real-space reductions; finite Weyl lock; issue-#2 quotient and compact spectra at `p=5,7,11` | Preserve as regression input; derive coefficients in #3, nonlinear completion in #5, universality in #8 |
 | Nonlinear gravity | Closed nonlinear constraints, universal self-coupling, strong-field stability, no extra scalar/ghost | **Open** | Linear first-/second-class structure; finite linear regulator; fixed-volume linear control | Nonlinear frame/connection action, self-energy source, closure, strong-field spectrum; issue #5 |
-| Matter | Finite charged fermionic defects with chirality, anomaly control, protected gaps, clocks, and healthy continuum | **Finite prototype pass** | Issue #4: odd-strand endpoint, exact hopping, `(-11,-5,-1,-1,9,9)`, one cone per wall, protected gaps, common bare frame derivative | Observed or declared reduced spectrum, mirror completion, interactions, bound-state clocks, radiative stability; issues #3, #6, #8 |
-| Shared parameters | One microscopic move set deriving `U_A,K_A,U_g,K_g`, matter localization, and companion couplings with fewer inputs than outputs | **Open** | Current formulas expose required relations; issue-#2 `lambda_g`, issue-#4 `r0,eta`, and issue-#7 couplings are explicit inputs | Derive coefficients and at least one held-out cross-sector relation; issue #3 |
-| Common causal geometry | One cone and one frame coupling for photons, companions, tensor modes, and matter | **Partial** | Shared frame variables; matter species use one bare frame derivative; issue #7 uses one frame for motion and lensing | Finite EM phase and interacting cone recovery; finite bridge currently gives `v_chi/v_gamma=0.3571428571`; issues #6 and #8 |
-| Quantum continuum consistency | Unitary/reflection-positive interacting limit, positive residues, Ward identities, anomaly control, regulator universality | **Open** | Reduced free tensor transfer matrix; positive compact tensor regulator; finite matter topology/anomaly checks | Interactions, mirror completion, renormalization, Lorentz recovery, regulator comparison, no-go audit; issue #8 |
+| Matter | Finite charged fermionic defects with chirality, anomaly control, protected gaps, clocks, and healthy continuum | **Finite prototype pass** | Issue #4: odd-strand endpoint, exact hopping, `(-11,-5,-1,-1,9,9)`, one cone per wall, protected gaps, common bare frame derivative | Observed or declared reduced spectrum, mirror completion, interactions in issue-#6 phase, bound-state clocks, radiative stability; issues #3, #6, #8 |
+| Shared parameters | One microscopic move set deriving `U_A,K_A,U_g,K_g`, matter localization, and companion couplings with fewer inputs than outputs | **Open** | Required relations and regulator inputs are explicit | Derive coefficients and at least one held-out cross-sector relation; issue #3 |
+| Common causal geometry | One cone and one frame coupling for photons, companions, tensor modes, and matter | **Partial** | Shared frame variables; matter species use one bare frame derivative; issue #7 uses one frame for motion and lensing | Dynamical photon speed, finite bridge speed recovery, and interacting cone unification; issues #6 and #8 |
+| Quantum continuum consistency | Unitary/reflection-positive interacting limit, positive residues, Ward identities, anomaly control, regulator universality | **Open** | Reduced free tensor transfer matrix; positive compact tensor regulator; finite matter topology/anomaly checks; static EM phase anchor | Interactions, mirror completion, renormalization, Lorentz recovery, regulator comparison, no-go audit; issue #8 |
 | Vacuum and background | Stable vacuum, derived volume term, thermodynamic/statistical state, admissible background | **Partial at one linear global mode** | Fixed-volume plus trace-momentum pair removes the homogeneous conformal pair at linear order | Microscopic origin, local vacuum energy, nonlinear closure, background solutions; issue #5 |
 | Empirical distinctiveness | Fewer calibration inputs than outputs and at least one frozen cross-sector prediction | **Open** | Parameter roles are becoming explicit; flexible fitting remains prohibited | Parameter ledger, observable dictionary, held-out prediction, staged local-to-cosmological test; issue #9 |
-| Reproducibility | Frozen outputs, controls, CI, finite-size tests, retained failures | **Established internally** | Executable issue-#2, #4, and #7 gates; manifests; negative branches; GitHub Actions | Keep every new claim executable and synchronized |
+| Reproducibility | Frozen outputs, controls, CI, finite-size tests, retained failures | **Established internally** | Executable issue-#2, #4, #6A, and #7 gates; manifests; negative branches; GitHub Actions | Keep every new claim executable and synchronized |
 
-## Issue #2 resolution: finite dressed-frame gravity
+## Issue #6 Stage 6A: finite static Coulomb ground state
 
 ### Construction
 
-The finite connection lock enforces the relative variables through a positive Weyl oscillator while preserving the exact dressed frame algebra
+Each oriented spatial link carries a finite integer-spin representation,
 
 \[
-\overline Z_i=Z_{h_i},
-\qquad
-\overline X_i=X_{h_i}\prod_aX_{C_a}^{A_{ai}}.
+E_\ell=S^z_\ell,\qquad U_\ell=S^+_\ell/\max|S^+_\ell|,
 \]
 
-The scalar and vector finite stabilizers are reduced over `GF(p)`. The code computes—not assumes—the quotient spaces
+with exact
 
 \[
-\ker G/\operatorname{row}C,
-\qquad
-\ker C/\operatorname{row}G,
+[E_\ell,U_\ell]=U_\ell.
 \]
 
-then symplectically dualizes them. For every tested odd prime `p=5,7,11`, the quotient contains exactly two canonical logical Weyl pairs.
-
-For each physical polarization, the positive compact regulator is
+For a plaquette shift `W_p`, define
 
 \[
-H_{p,L}=\frac{\lambda_g}{2}\sum_z
-\left[(2-X_z-X_z^\dagger)+
-(2-Z_{z+1}Z_z^\dagger-Z_zZ_{z+1}^\dagger)\right],
+D_p=\sqrt{W_p^\dagger W_p}+\sqrt{W_pW_p^\dagger}.
 \]
 
-and the tensor Hamiltonian is two identical copies. Equivalently, the parent local evolution is a constrained transfer step with local group averaging over the scalar and vector stabilizers.
+The declared Hamiltonian is
 
-This route does not contradict the retained derivative-order obstruction. A frame-only Hamiltonian made from squares of the lowest exact local invariants still gives `omega~k^3` and remains rejected. Locality belongs to the parent constrained transfer step; the physical logarithm acts on the quotient Hilbert space.
+\[
+H_A(u,t,v)=\frac{u}{2}\sum_\ell E_\ell^2-t\sum_p(W_p+W_p^\dagger)+v\sum_pD_p.
+\]
+
+At `u=0, v=t`, every local term is a positive weighted graph Laplacian. It commutes exactly with all Gauss generators, and an equal-amplitude state on each connected flux component is an exact ground state. No continuum rotor is inserted.
 
 ### Finite results
 
-- finite primes: `5,7,11`;
-- tested lattice sizes: `p=5: L=4–8`, `p=7: L=4–7`, `p=11: L=3–6`;
-- exactly two logical Weyl pairs per nonzero propagation block;
-- exact two-polarization first-gap degeneracy;
-- gap powers between `1.02690` and `1.07049` in `Delta proportional to |k_hat|^s`;
-- maximum residual of the linear-plus-cubic fit: `1.663e-3`;
-- minimum connection-lock/tensor-gap ratio: `2.491`;
-- maximum lock/frame commutator: `1.67e-16`;
-- ground-band leakage norm: `5.16e-16`;
-- `p=11` tensor compact-cut bond fraction: `1.89e-4`;
-- complete three-dimensional relative frequency error: `2.15e-16`;
-- polarization split: `2.84e-16`;
-- cubic-lattice anisotropy recovery: approximately `L^-2.0166`.
+- exact periodic cube: `8` sites, `24` links, `24` plaquettes;
+- exact spin-1 gauge-reduced component: `146,327` states;
+- undirected finite plaquette transitions: `1,236,144`;
+- sampled Gauss residual: `0`;
+- equal-amplitude RK residual: `0`;
+- spin-1 sizes: `L=4,6,8`;
+- spin-1 `<W^2>/L` fractional range: `0.06049`;
+- spin-1 `L Delta F(W=1)` fractional range: `0.17945`;
+- maximum longitudinal equal-time fraction: `5.25e-33`;
+- maximum mean split of the two axis-mode transverse eigenvalues: `0.2188`;
+- Wilson-shift perimeter behavior preferred at every tested spin-1 and spin-2 size;
+- fixed-charge Coulomb amplitudes: `0.8440` at `L=6`, `0.6045` at `L=8`;
+- effective linear-string slopes: `0.007553` at `L=6`, `0.003309` at `L=8`;
+- string-slope reduction from `L=6` to `L=8`: approximately `56%`;
+- spin-2 `<W^2>/L` fractional range between `L=6,8`: `0.04095`.
 
 ### Claim boundary
 
-Issue #2 closes the **linear finite constrained regulator**. It does not establish:
+Stage 6A establishes a finite static Coulomb ground-state anchor. It does not establish:
 
-- nonlinear quantum gravity;
-- a derived Newton constant or shared gravity/photon impedance;
-- a common photon/companion/matter/tensor cone;
-- regulator universality or a unique ultraviolet completion;
-- a vacuum-energy mechanism;
-- a new empirical prediction.
+- a stable finite interval away from the RK surface;
+- a dynamical gap `Delta_gamma ~ 1/L`;
+- two linearly dispersing photon branches with positive residues;
+- absence of an extra dynamical scalar;
+- dynamical issue-#4 matter inside the phase;
+- Ward identities, charge renormalization, vacuum polarization, or QED precision;
+- Lorentz recovery or a common photon/matter/companion/gravity cone.
 
-Those dependencies are owned by issues #3, #5, #6, #8, and #9.
+The equal-time rank-two tensor and winding free energy may not be used as substitutes for those missing dynamical tests.
+
+## Issue #2 resolution: finite dressed-frame gravity
+
+The finite connection lock preserves the exact dressed frame algebra
+
+\[
+\overline Z_i=Z_{h_i},\qquad
+\overline X_i=X_{h_i}\prod_aX_{C_a}^{A_{ai}}.
+\]
+
+The scalar and vector finite stabilizers are reduced over `GF(p)`, producing exactly two canonical logical Weyl pairs for each tested `p=5,7,11`. Two positive compact clock/Villain copies then give two linearly dispersing tensor branches without a TT projector.
+
+Key retained checks are:
+
+- two logical Weyl pairs per nonzero propagation block;
+- exact two-polarization first-gap degeneracy;
+- signed-momentum gaps `Delta=c_g|k_hat|+O(|k_hat|^3)`;
+- maximum linear-plus-cubic fit residual `1.663e-3`;
+- minimum connection-lock/tensor-gap ratio `2.491`;
+- maximum lock/frame commutator `1.67e-16`;
+- ground-band leakage `5.16e-16`;
+- `p=11` compact-cut bond fraction `1.89e-4`;
+- full-symbol polarization split `2.84e-16`;
+- cubic anisotropy recovery approximately `L^-2.0166`.
+
+Issue #2 closes the **linear finite constrained regulator** only. Nonlinear quantum gravity, shared coefficients, a common cone, regulator universality, vacuum closure, and predictions remain downstream.
 
 ## Issue #4 and issue #7 in the combined architecture
 
-The matter prototype now supplies a real finite charged participant rather than a continuum placeholder. The companion bridge supplies a reversible interaction architecture rather than a variable-name mapping. The next task is not to repeat either standalone demonstration. It is to embed all three finite pieces—the issue-#2 frame regulator, issue-#4 endpoint, and issue-#7 conversion architecture—inside the actual issue-#6 electromagnetic phase and derive their couplings jointly under issue #3.
+The matter prototype supplies a real finite charged participant rather than a continuum placeholder. The companion bridge supplies a reversible interaction architecture rather than a variable-name mapping. Stage 6A now supplies a finite static Coulomb environment rather than a single-plaquette target.
 
-The combined model fails if the matter endpoint, conversion vertex, photon phase, or frame regulator each requires an independently selected cone or response multiplier.
-
-## Main strategic finding
-
-The project is still not in a general tuning stage. Three finite architecture gates pass, but the remaining uncertainties are structural:
-
-- deconfinement may fail once dynamical matter is included;
-- the issue-#2 compact completion may not share an interacting universality class with alternative regulators;
-- nonlinear gravity may regenerate forbidden modes;
-- the matter mirror may not admit a healthy completion;
-- the finite companion speed mismatch may survive the scaling limit;
-- shared microscopic coefficients may not close;
-- many-body companion storage may lack adequate capacity, lifetime, or energy supply;
-- no frozen prediction yet distinguishes the theory from QED plus general relativity with selected coefficients.
-
-Further decimal precision on any already-passed finite benchmark does not address these risks.
+The next task is not to repeat these standalone demonstrations. It is to detune issue #6 to a dynamical photon phase, place the issue-#4 endpoint inside it, and replace the issue-#7 photon proxy with the actual finite electromagnetic excitation. The combined model fails if the matter endpoint, conversion vertex, photon phase, or frame regulator each requires an independently selected cone or response multiplier.
 
 ## Correct work order
 
-### Priority 0: finite electromagnetic phase with dynamical matter
+### Priority 0: dynamical electromagnetic continuation
 
-Issue #6 must demonstrate or reject a deconfined spin-1 Coulomb phase containing the actual issue-#4 endpoints. Required outputs include a phase diagram, two transverse branches, expanding-range `1/r`, charge propagation, finite-representation scaling, and Ward identities.
+Issue #6 must scan `(u/t,v/t)` around the RK anchor and demonstrate or reject a finite interval with:
+
+- two and only two transverse dynamical branches;
+- `Delta_gamma(L) proportional to 1/L`;
+- no low-energy scalar or longitudinal pole;
+- positive spectral residues;
+- spin-1/spin-2 consistency;
+- the actual issue-#4 charged endpoint and finite Ward identities.
 
 ### Priority 0: shared microscopic coefficients
 
@@ -163,7 +183,7 @@ Issue #3 must derive, from one move set,
 U_A,\ K_A,\ U_g,\ K_g,\ r_0,\ \eta,
 \]
 
-plus the issue-#7 conversion, binding, and recoil coefficients. A common limiting speed constrains products but does not by itself fix the impedance ratio. The issue-#2 clock point and `lambda_g` cannot be promoted from regulator choices to predictions without this derivation.
+plus electromagnetic detuning, issue-#7 conversion/binding/recoil coefficients, and the gravity clock ratio. A common limiting speed constrains products but does not by itself fix the impedance ratio.
 
 ### Priority 1: nonlinear gravity and many-body binding
 
@@ -180,11 +200,13 @@ Issue #9 should maintain the parameter and observable ledger now. Empirical unbl
 ## Dependency graph
 
 ```text
-   issue #2 finite frame regulator   issue #4 matter prototype   issue #7 bridge
+ issue #2 finite frame regulator   issue #4 matter prototype   issue #7 bridge
                 \                         |                         /
                  +------------------------+------------------------+
                                           |
-                              finite EM phase #6
+                       issue #6 static Coulomb anchor (6A)
+                                          |
+                         issue #6 dynamical z=1/QED continuation
                                           |
                              shared coefficients #3
                                           |
@@ -203,20 +225,22 @@ Exploratory work may proceed in parallel, but downstream claims cannot close whi
 2. Do not call the issue-#2 finite linear regulator nonlinear quantum gravity or a unique ultraviolet theory.
 3. Do not identify the issue-#4 charge set with Standard Model particles without deriving the mapping and additional gauge structure.
 4. Do not hide or silently discard the remote matter mirror wall.
-5. Do not infer a deconfined QED phase from exact Gauss-covariant hopping alone.
-6. Do not treat issue-#7 finite transition probabilities as astrophysical rates or one-particle binding as a halo.
-7. Do not impose equal photon and companion speeds after the finite benchmark found a mismatch; derive common-cone recovery or reject the branch.
-8. Do not retune photon, companion, matter, and gravity sectors independently to obtain the same speed or response.
-9. Do not call the linear fixed-volume control a cosmological-constant solution.
-10. Do not fit galaxy or cosmological data before local predictions and parameter roles are frozen.
-11. Do not count recovery of QED and general relativity after freely selecting all coefficients as a distinct prediction.
+5. Do not call the issue-#6 equal-time rank-two tensor a photon spectrum or its winding free energy a photon gap.
+6. Do not call one RK point a stable relativistic phase without detuned `z=1` spectral scaling.
+7. Do not infer interacting QED from a static fixed-charge potential or Gauss-covariant endpoint hopping.
+8. Do not treat issue-#7 finite transition probabilities as astrophysical rates or one-particle binding as a halo.
+9. Do not impose equal photon and companion speeds after the finite benchmark found a mismatch; derive common-cone recovery or reject the branch.
+10. Do not retune photon, companion, matter, and gravity sectors independently to obtain the same speed or response.
+11. Do not call the linear fixed-volume control a cosmological-constant solution.
+12. Do not fit galaxy or cosmological data before local predictions and parameter roles are frozen.
+13. Do not count recovery of QED and general relativity after freely selecting all coefficients as a distinct prediction.
 
 ## Decision
 
-The finite linear gravity gate is complete. The matter endpoint and companion bridge also pass their declared finite architecture scopes. The program should now be evaluated by whether these pieces can coexist in one deconfined, nonlinear, interacting, universal theory with fewer microscopic inputs than low-energy outputs.
+The finite linear gravity gate is complete. The matter endpoint and companion bridge pass their declared finite architecture scopes. Issue #6 now passes a finite **static Coulomb ground-state** gate and has a sharply defined dynamical continuation.
 
 The next claim threshold is:
 
-> One finite local model contains a deconfined two-polarization photon sector, the two-helicity dressed-frame sector, a healthy protected charged-matter sector, and the declared companion sector; it derives shared coefficients, preserves constraints nonlinearly, reaches one common relativistic continuum, and produces at least one frozen cross-sector prediction.
+> One finite local model contains a stable `z=1` two-polarization photon sector, the two-helicity dressed-frame sector, a healthy protected charged-matter sector, and the declared companion sector; it derives shared coefficients, preserves constraints nonlinearly, reaches one common relativistic continuum, and produces at least one frozen cross-sector prediction.
 
-Nothing currently committed meets that full threshold. Closing issue #2 removes one major uncertainty and makes the remaining integration and continuum risks more sharply testable.
+Nothing currently committed meets that full threshold. Stage 6A removes the prior uncertainty about whether the finite spin-1 links can support a static Coulomb ground-state anchor; it does not remove the dynamical QED and integration risks.
