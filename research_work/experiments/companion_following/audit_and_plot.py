@@ -15,7 +15,7 @@ def read(path): return json.loads(path.read_text(encoding="utf8"))
 def mapping(rows): return {r["id"]: r for r in rows}
 
 def main():
-    screen = read(EVIDENCE/"screen-v1"/"screen.json")
+    screen = read(EVIDENCE/"screen-completion-v1"/"screen.json")
     refine = read(EVIDENCE/"refine-v1"/"refinement.json")
     selection = read(EVIDENCE/"refine-v1"/"selection.json")
     controls = read(EVIDENCE/"controls-v1"/"controls.json")
@@ -32,7 +32,8 @@ def main():
             chain_pass=sum(r["behavioral_pass"] for r in a.values()),
             ring_pass=sum(r["behavioral_pass"] for r in b.values()),
             joint_behavior_pass=len(joint), joint_behavior_ids=joint,
-            conservative_ring_pass=sum(r["conservation_pass"] for r in b.values()))
+            conservative_ring_pass=sum(r["conservation_pass"] for r in b.values()),
+            unavailable=sum(r.get("unavailable",False) for r in b.values()))
         for family in sorted(set(i.split("-")[0] for i in a)):
             ids=[i for i in a if i.split("-")[0]==family]
             audit["family_counts"][family] = dict(count=len(ids),
