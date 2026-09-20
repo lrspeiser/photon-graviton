@@ -2,7 +2,7 @@
   "summary": {
     "passed": true,
     "complete": false,
-    "completed_runs": 3,
+    "completed_runs": 5,
     "declared_runs": 10,
     "source_sha256": "0624a74955508ea51cf025de17035dfa51301f227615904e04f798c6bebb2379",
     "baseline_sha256": "761fae6f3d16c6a09acc126e59144fad4c6ba376483a83eaff90163646d247ea"
@@ -172,6 +172,116 @@
       "passed": true,
       "source_relative_to_emission_only": 13.320333060174697,
       "source_relative_to_X_chi200": 16.45669130387653
+    },
+    {
+      "name": "emitter-Y-chi0",
+      "energy": 0.0011758157999398667,
+      "source": 0.0014556288260245077,
+      "response_per_energy": 1.2379735211067509,
+      "positive_source": 0.0036135686297754507,
+      "negative_source": -0.002157939803750943,
+      "contributions": {
+        "kinetic": 0.001619085704990692,
+        "shift": -8.36695513478726e-09,
+        "mixing": -0.00016344851201104975
+      },
+      "numerical_source": 0.0014556288173515203,
+      "derivative_error": 8.672987458421821e-12,
+      "energy_error": 0.0,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 6.703377053164085e-05,
+          "absolute_source": 6.703377053164085e-05
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": -0.0002124746016630931,
+          "absolute_source": 0.0003927772649346483
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": -0.0016729134830838013,
+          "absolute_source": 0.002032129353506119
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": 0.0028155216688828125,
+          "absolute_source": 0.002821106573197037
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": 0.00045846147135694833,
+          "absolute_source": 0.00045846147135694833
+        }
+      ],
+      "minimum_U": -0.0035439497464892214,
+      "maximum_U": -9.032015356950862e-42,
+      "internal_energy_change": -0.001131267333640995,
+      "state_sha256": "8bf98e38976b4e9d8af7a48bc249aaeca91cc87ef170cfb13e571ac084d36e9a",
+      "passed": true,
+      "source_relative_to_emission_only": 0.6546290754861981,
+      "source_relative_to_X_chi200": 0.8087657091719267
+    },
+    {
+      "name": "emitter-Y-chi50",
+      "energy": 0.0012237842182412392,
+      "source": 0.02124415395211058,
+      "response_per_energy": 17.359395255678002,
+      "positive_source": 0.021252764994925167,
+      "negative_source": -8.61104281459016e-06,
+      "contributions": {
+        "kinetic": 0.0017153669538001591,
+        "shift": -1.0050436969297522e-08,
+        "mixing": 0.019528797048747396
+      },
+      "numerical_source": 0.02124415394684845,
+      "derivative_error": 5.262131008709758e-12,
+      "energy_error": 2.168404344971009e-19,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": 0.0029950522935730615,
+          "absolute_source": 0.0029950522935730615
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": 0.010733044854223488,
+          "absolute_source": 0.010733044854223488
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": 0.0024306888991702308,
+          "absolute_source": 0.0024479109847994115
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": 0.004178982647262368,
+          "absolute_source": 0.004178982647262368
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": 0.0009063852578814317,
+          "absolute_source": 0.0009063852578814317
+        }
+      ],
+      "minimum_U": -0.0035469565150616916,
+      "maximum_U": -9.032015937605793e-42,
+      "internal_energy_change": -0.0011917618291774623,
+      "state_sha256": "470023badd8763c9c993b808acf8bf4f8923e74a2582d3463cc08288d0764963",
+      "passed": true,
+      "source_relative_to_emission_only": 9.553974620809319,
+      "source_relative_to_X_chi200": 11.803519502812474
     }
   ]
 }

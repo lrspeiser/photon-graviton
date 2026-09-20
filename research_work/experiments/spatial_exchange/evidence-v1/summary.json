@@ -1,0 +1,1089 @@
+{
+  "runs": [
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "no-emission",
+        "emission": 0.0,
+        "chi": 0.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.021913416216451622,
+        "matter": 6.102793596498545,
+        "internal_rest": 0.00599999999906542,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707012714997,
+        "ledger": 6.124707012715013,
+        "absorbed": 1.5867853911114852e-14,
+        "momentum": [
+          -2.8080836267374565e-17,
+          1.2450961139036833e-16,
+          1.036362524936621e-20
+        ],
+        "angular": [
+          -4.586021837219644e-22,
+          -2.4917193004045077e-21,
+          0.839664466249387
+        ],
+        "minimum_mass": 1.0009999999998442,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.888478337804401e-08,
+        "source_extent": 1.9136844256379373,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.11957888866352e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.888478337804401e-08,
+      "clearance": 1.0863155743620627,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9136844256379373,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 2.3308682961637713e-16,
+      "angular_drift": 0.00045058571519540624,
+      "wall_seconds": 73.73786590000964,
+      "cpu_seconds": 71.875,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "no-excitation",
+        "excitation": 0.0,
+        "chi": 200.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.118823416311343,
+        "internal_rest": 0.0,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.118823416311343,
+        "ledger": 6.118823416311343,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.0,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.0218726116015749,
+        "matter": 6.096950804019649,
+        "internal_rest": 0.0,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.118823415621224,
+        "ledger": 6.1188234156212395,
+        "absorbed": 1.5840075699530682e-14,
+        "momentum": [
+          -1.6664187391102203e-16,
+          1.525382260913112e-16,
+          3.193692043640541e-20
+        ],
+        "angular": [
+          -1.2416753361668986e-21,
+          2.0216293383198433e-21,
+          0.8396669719167925
+        ],
+        "minimum_mass": 1.0,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.884160369192997e-08,
+        "source_extent": 1.9143455098846855,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.1278362502632269e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.884160369192997e-08,
+      "clearance": 1.0856544901153145,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9143455098846855,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 2.985398241143925e-16,
+      "angular_drift": 0.00044943717215994994,
+      "wall_seconds": 75.51828010001918,
+      "cpu_seconds": 72.921875,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "emission-only",
+        "chi": 0.0,
+        "mix": 0.0
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.02327810725023062,
+        "matter": 6.101428905431398,
+        "internal_rest": 0.0046864792252101495,
+        "radiation_propagation": 0.0013634847375500246,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707012681628,
+        "ledger": 6.124707012681645,
+        "absorbed": 1.6518334283452745e-14,
+        "momentum": [
+          -8.380882793312949e-17,
+          -2.3614394478811197e-16,
+          4.5158866790618114e-20
+        ],
+        "angular": [
+          2.9116466138670213e-21,
+          -3.605215126077353e-21,
+          0.8396468771219008
+        ],
+        "minimum_mass": 1.0007807328506948,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.888572656816996e-08,
+        "source_extent": 1.913601576710271,
+        "radiation_amplitude": 0.007403895221184019,
+        "radiation_center": [
+          -1.632467079756187e-14,
+          -1.7853807309983054e-14,
+          -2.2596160899201556e-16
+        ],
+        "radiation_rms_radius": 2.3788893570070395,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.1740598213460232e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.888572656816996e-08,
+      "clearance": 1.0863984232897295,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.913601576710271,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 2.6949042450838335e-16,
+      "angular_drift": 0.0004713866315757542,
+      "wall_seconds": 74.94649189998745,
+      "cpu_seconds": 72.5,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "exchange-0",
+        "chi": 0.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.02322634394446788,
+        "matter": 6.1014806687359835,
+        "internal_rest": 0.00473192428131286,
+        "radiation_propagation": 0.0012456021640207793,
+        "companion_propagation": 4.82148278757491e-05,
+        "mixing_potential": 4.2129709572987874e-05,
+        "total": 6.124707012680451,
+        "ledger": 6.124707012680468,
+        "absorbed": 1.6516002170077214e-14,
+        "momentum": [
+          -2.7815206735115616e-16,
+          1.2548777562576944e-16,
+          -1.371084248893106e-20
+        ],
+        "angular": [
+          3.798354621169766e-21,
+          -9.389198770831989e-22,
+          0.8396469377204072
+        ],
+        "minimum_mass": 1.000788314329315,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.888428674223309e-08,
+        "source_extent": 1.913602091434321,
+        "radiation_amplitude": 0.007183673438755113,
+        "radiation_center": [
+          -1.7334251191875643e-14,
+          -1.9040261047594582e-14,
+          -2.4773264285590707e-16
+        ],
+        "radiation_rms_radius": 2.335748858316017,
+        "companion_amplitude": 0.0006465863484524908,
+        "companion_center": [
+          1.487434943666903e-16,
+          2.870132851768649e-17,
+          3.129309799547375e-18
+        ],
+        "companion_rms_radius": 2.7693365581784124,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.1759812788190546e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.888428674223309e-08,
+      "clearance": 1.0863979085656794,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.913602091434321,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 3.7424931367549405e-16,
+      "angular_drift": 0.00047127267853219745,
+      "wall_seconds": 75.65378100000089,
+      "cpu_seconds": 73.21875,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "exchange-50",
+        "chi": 50.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.02324521622103441,
+        "matter": 6.101461796459875,
+        "internal_rest": 0.004717528924137238,
+        "radiation_propagation": 0.0012776002682894428,
+        "companion_propagation": 3.204313473631267e-05,
+        "mixing_potential": 3.711095723859916e-05,
+        "total": 6.12470701268091,
+        "ledger": 6.124707012680926,
+        "absorbed": 1.6516260070092437e-14,
+        "momentum": [
+          2.2236986557677696e-16,
+          8.262822944077951e-17,
+          -6.723900368030196e-20
+        ],
+        "angular": [
+          -1.35975892848248e-21,
+          -2.211726438233532e-21,
+          0.839646912377395
+        ],
+        "minimum_mass": 1.0007859132667631,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.888449725978199e-08,
+        "source_extent": 1.9136007338316277,
+        "radiation_amplitude": 0.00729319953140615,
+        "radiation_center": [
+          -1.7054057138876715e-14,
+          -1.861050483015044e-14,
+          -2.3987567900472285e-16
+        ],
+        "radiation_rms_radius": 2.328657066154771,
+        "companion_amplitude": 0.0005724258486124931,
+        "companion_center": [
+          -2.407531408374775e-16,
+          5.69150974510451e-17,
+          -5.231280212189813e-18
+        ],
+        "companion_rms_radius": 2.765847102356775,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.17523299802201e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.888449725978199e-08,
+      "clearance": 1.0863992661683728,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9136007338316277,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 2.634201305012535e-16,
+      "angular_drift": 0.000471330066147857,
+      "wall_seconds": 75.58312689999002,
+      "cpu_seconds": 72.578125,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "exchange-200",
+        "chi": 200.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.023272121695227545,
+        "matter": 6.101434890986207,
+        "internal_rest": 0.004695230126668726,
+        "radiation_propagation": 0.0013292263420123637,
+        "companion_propagation": 1.1223532227855842e-05,
+        "mixing_potential": 2.1049455793832383e-05,
+        "total": 6.1247070126814345,
+        "ledger": 6.124707012681451,
+        "absorbed": 1.6516835383051826e-14,
+        "momentum": [
+          -2.5055912206140007e-16,
+          -5.0962597539392035e-19,
+          -1.950048973380193e-20
+        ],
+        "angular": [
+          2.763045598291568e-21,
+          -2.987147841059427e-21,
+          0.8396468959853834
+        ],
+        "minimum_mass": 1.0007821933424348,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.888493789746055e-08,
+        "source_extent": 1.9135998688924234,
+        "radiation_amplitude": 0.007441486656281742,
+        "radiation_center": [
+          -1.657363125246275e-14,
+          -1.807587422391721e-14,
+          -2.2913461626467384e-16
+        ],
+        "radiation_rms_radius": 2.32852781229727,
+        "companion_amplitude": 0.0003884380940514003,
+        "companion_center": [
+          -1.9715069210035555e-16,
+          1.4383859658040672e-16,
+          -3.845660592372586e-18
+        ],
+        "companion_rms_radius": 2.711839031747087,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.1743759554812087e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.888493789746055e-08,
+      "clearance": 1.0864001311075766,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9135998688924234,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 4.175286616189381e-16,
+      "angular_drift": 0.0004713803790992177,
+      "wall_seconds": 76.1757321000041,
+      "cpu_seconds": 73.65625,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "exchange-negative",
+        "chi": -50.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.0231998171447971,
+        "matter": 6.101507195534866,
+        "internal_rest": 0.004751423198548377,
+        "radiation_propagation": 0.0012026961327491156,
+        "companion_propagation": 7.344448451234379e-05,
+        "mixing_potential": 4.4549677977499164e-05,
+        "total": 6.124707012679663,
+        "ledger": 6.12470701267968,
+        "absorbed": 1.6515699630853754e-14,
+        "momentum": [
+          -2.224782857940255e-16,
+          6.958282355720981e-17,
+          -3.928394869428176e-21
+        ],
+        "angular": [
+          -1.3479986168392426e-21,
+          -5.637852359802317e-22,
+          0.8396469949689398
+        ],
+        "minimum_mass": 1.0007915666164164,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.8884031374186244e-08,
+        "source_extent": 1.9136045805377244,
+        "radiation_amplitude": 0.007032109965022225,
+        "radiation_center": [
+          -1.783673676110797e-14,
+          -1.976194936320663e-14,
+          -2.5343270763475013e-16
+        ],
+        "radiation_rms_radius": 2.3492563838993834,
+        "companion_amplitude": 0.0008994894912612253,
+        "companion_center": [
+          -1.7110375217257246e-16,
+          -3.6597260220329485e-17,
+          -2.8778359633250853e-18
+        ],
+        "companion_rms_radius": 2.739305669177105,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.1772675677085481e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.8884031374186244e-08,
+      "clearance": 1.086395419462276,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9136045805377244,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 2.504560840658746e-16,
+      "angular_drift": 0.00047116575771333213,
+      "wall_seconds": 76.30744730000151,
+      "cpu_seconds": 73.890625,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "sign-mirror",
+        "chi": 200.0,
+        "mix": -0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.023272121695227545,
+        "matter": 6.101434890986207,
+        "internal_rest": 0.004695230126668726,
+        "radiation_propagation": 0.0013292263420123637,
+        "companion_propagation": 1.1223532227855842e-05,
+        "mixing_potential": 2.1049455793832383e-05,
+        "total": 6.1247070126814345,
+        "ledger": 6.124707012681451,
+        "absorbed": 1.6516835383051826e-14,
+        "momentum": [
+          -2.5055912206140007e-16,
+          -5.0962597539392035e-19,
+          -1.950048973380193e-20
+        ],
+        "angular": [
+          2.763045598291568e-21,
+          -2.987147841059427e-21,
+          0.8396468959853834
+        ],
+        "minimum_mass": 1.0007821933424348,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.888493789746055e-08,
+        "source_extent": 1.9135998688924234,
+        "radiation_amplitude": 0.007441486656281742,
+        "radiation_center": [
+          -1.657363125246275e-14,
+          -1.807587422391721e-14,
+          -2.2913461626467384e-16
+        ],
+        "radiation_rms_radius": 2.32852781229727,
+        "companion_amplitude": 0.0003884380940514003,
+        "companion_center": [
+          -1.9715069210035555e-16,
+          1.4383859658040672e-16,
+          -3.845660592372586e-18
+        ],
+        "companion_rms_radius": 2.711839031747087,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.1743759554812087e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.888493789746055e-08,
+      "clearance": 1.0864001311075766,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9135998688924234,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 4.175286616189381e-16,
+      "angular_drift": 0.0004713803790992177,
+      "wall_seconds": 76.58895360000315,
+      "cpu_seconds": 73.5625,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.01,
+        "name": "time-refinement",
+        "chi": 200.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.023272122734101185,
+        "matter": 6.101434890645946,
+        "internal_rest": 0.00469523014232287,
+        "radiation_propagation": 0.0013292263552503903,
+        "companion_propagation": 1.1223534447910761e-05,
+        "mixing_potential": 2.1049455701405143e-05,
+        "total": 6.124707013380047,
+        "ledger": 6.124707013380064,
+        "absorbed": 1.6517187499956755e-14,
+        "momentum": [
+          -4.163336342344337e-16,
+          -9.685913403464795e-17,
+          2.7441030976972274e-20
+        ],
+        "angular": [
+          -3.205916952817831e-21,
+          4.677476902068894e-21,
+          0.8396468960100685
+        ],
+        "minimum_mass": 1.0007821933460528,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.8885463339153186e-08,
+        "source_extent": 1.9135998689159939,
+        "radiation_amplitude": 0.0074414875803174695,
+        "radiation_center": [
+          -1.6645500562932126e-14,
+          -1.8187556509528642e-14,
+          -2.3258433101332677e-16
+        ],
+        "radiation_rms_radius": 2.3285278814463775,
+        "companion_amplitude": 0.00038843812703871886,
+        "companion_center": [
+          6.983819482831428e-17,
+          4.3271189827206613e-17,
+          -7.122198398615701e-19
+        ],
+        "companion_rms_radius": 2.7118390684120777,
+        "time": 4.0
+      },
+      "relative_energy_drift": 3.3729191973764065e-12,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.8885463339153186e-08,
+      "clearance": 1.0864001310840061,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9135998689159939,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 4.733482060567357e-16,
+      "angular_drift": 0.0004713804586998771,
+      "wall_seconds": 150.5740401999792,
+      "cpu_seconds": 145.296875,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 40,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.01,
+        "name": "space-refinement",
+        "chi": 200.0,
+        "mix": 0.5
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400722,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400722,
+        "ledger": 6.124707013400722,
+        "absorbed": 0.0,
+        "momentum": [
+          -2.7755575615628914e-17,
+          0.0,
+          0.0
+        ],
+        "angular": [
+          0.0,
+          0.0,
+          0.8400000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.6,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.02283659616968924,
+        "matter": 6.101870417205845,
+        "internal_rest": 0.004709529069017115,
+        "radiation_propagation": 0.001309991053471461,
+        "companion_propagation": 1.1234691490296109e-05,
+        "mixing_potential": 2.079102246474827e-05,
+        "total": 6.124707013375534,
+        "ledger": 6.124707013375536,
+        "absorbed": 1.3543911456260198e-15,
+        "momentum": [
+          -2.2335025036198887e-16,
+          3.052872902485651e-16,
+          -4.879906806502127e-17
+        ],
+        "angular": [
+          2.8773085429991356e-17,
+          1.6597704958829332e-17,
+          0.8399925415322137
+        ],
+        "minimum_mass": 1.0007845604763712,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 3.792073025365008e-09,
+        "source_extent": 1.914289474003068,
+        "radiation_amplitude": 0.007551515050248492,
+        "radiation_center": [
+          -4.1111802381334363e-16,
+          1.7525022323806506e-17,
+          -4.116495452909967e-18
+        ],
+        "radiation_rms_radius": 2.3580501604817727,
+        "companion_amplitude": 0.0003757322765277682,
+        "companion_center": [
+          2.476457466611441e-17,
+          2.3509415390234643e-16,
+          1.0795670195158422e-16
+        ],
+        "companion_rms_radius": 2.7316960571820657,
+        "time": 4.0
+      },
+      "relative_energy_drift": 4.112209023603885e-12,
+      "cone_error": 0.0,
+      "edge_amplitude": 3.792073025365008e-09,
+      "clearance": 1.085710525996932,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.914289474003068,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 4.180651108713406e-16,
+      "angular_drift": 0.00011912447080231203,
+      "wall_seconds": 337.59985010005767,
+      "cpu_seconds": 327.4375,
+      "passed": true
+    },
+    {
+      "config": {
+        "n": 32,
+        "length": 16.0,
+        "radius": 0.9,
+        "dt": 0.02,
+        "name": "rotation",
+        "chi": 200.0,
+        "mix": 0.5,
+        "angle": 1.0471975511965976
+      },
+      "initial": {
+        "field": 0.0,
+        "matter": 6.124707013400723,
+        "internal_rest": 0.005999999999999339,
+        "radiation_propagation": 0.0,
+        "companion_propagation": 0.0,
+        "mixing_potential": 0.0,
+        "total": 6.124707013400723,
+        "ledger": 6.124707013400723,
+        "absorbed": 0.0,
+        "momentum": [
+          -6.245004513516506e-17,
+          -1.1102230246251565e-16,
+          3.469446951953614e-17
+        ],
+        "angular": [
+          0.4788444419044716,
+          -0.014422220952235809,
+          0.6900000000000001
+        ],
+        "minimum_mass": 1.001,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 0.0,
+        "source_extent": 1.5577392078932923,
+        "radiation_amplitude": 0.0,
+        "radiation_center": null,
+        "radiation_rms_radius": null,
+        "companion_amplitude": 0.0,
+        "companion_center": null,
+        "companion_rms_radius": null,
+        "time": 0.0
+      },
+      "final": {
+        "field": 0.023087792380714428,
+        "matter": 6.1016192203345865,
+        "internal_rest": 0.004696432746609247,
+        "radiation_propagation": 0.0013263119143092487,
+        "companion_propagation": 1.1295022202719589e-05,
+        "mixing_potential": 2.107168321080584e-05,
+        "total": 6.124707012715301,
+        "ledger": 6.124707012715313,
+        "absorbed": 1.2700663215053832e-14,
+        "momentum": [
+          7.003946034256359e-17,
+          -2.2144448208190164e-16,
+          6.665344613591452e-17
+        ],
+        "angular": [
+          0.47895835348623345,
+          -0.014390980910466826,
+          0.6899650516864064
+        ],
+        "minimum_mass": 1.0007818162661852,
+        "cone_error": 0.0,
+        "max_characteristic": 1.0,
+        "edge_amplitude": 4.8985066773756934e-08,
+        "source_extent": 1.9253490458292317,
+        "radiation_amplitude": 0.00749918790968579,
+        "radiation_center": [
+          -6.111495008189914e-15,
+          -1.8234250274811024e-14,
+          -1.2011293808574523e-15
+        ],
+        "radiation_rms_radius": 2.3318217741687217,
+        "companion_amplitude": 0.00039565394851057373,
+        "companion_center": [
+          -6.33979162674583e-17,
+          -5.1201138128298157e-17,
+          -1.7354811748993165e-17
+        ],
+        "companion_rms_radius": 2.7141198361001124,
+        "time": 4.0
+      },
+      "relative_energy_drift": 1.1190901858949072e-10,
+      "cone_error": 0.0,
+      "edge_amplitude": 4.8985066773756934e-08,
+      "clearance": 1.0746509541707683,
+      "null_control_passed": true,
+      "maximum_source_extent": 1.9253490458292317,
+      "maximum_characteristic": 1.0,
+      "momentum_drift": 2.514331738663974e-16,
+      "angular_drift": 0.0003683295912084298,
+      "wall_seconds": 80.06456590001471,
+      "cpu_seconds": 77.921875,
+      "passed": true
+    }
+  ],
+  "comparisons": [
+    {
+      "name": "sign-mirror",
+      "position_difference": 0.0,
+      "channel_energy_relative_difference": 0.0,
+      "matter_state_difference": 0.0,
+      "total_field_relative_difference": 0.0,
+      "passed": true
+    },
+    {
+      "name": "time-refinement",
+      "position_difference": 1.6613159141078272e-10,
+      "channel_energy_relative_difference": 1.978035857925789e-07,
+      "matter_state_difference": null,
+      "total_field_relative_difference": null,
+      "passed": true
+    },
+    {
+      "name": "space-refinement",
+      "position_difference": 0.0011479608306654387,
+      "channel_energy_relative_difference": 0.014471040734704222,
+      "matter_state_difference": null,
+      "total_field_relative_difference": null,
+      "passed": true
+    },
+    {
+      "name": "rotation",
+      "position_difference": 0.001124204055970828,
+      "channel_energy_relative_difference": 0.006369650250240738,
+      "matter_state_difference": null,
+      "total_field_relative_difference": null,
+      "passed": true
+    }
+  ],
+  "passed": true
+}
