@@ -1,0 +1,78 @@
+{
+  "source_commit": "23c049e18dfdcf7f7d8ed5816063d0b64f26e8e1",
+  "sources": {
+    "resolution-protocol.md": "d38b4f6965b9270551a4f81bd3d9bf28d7b1906366447b20a9f7d608b4e2674b",
+    "resolution_model.py": "f9ee27fcd1f04cbd3ca9b1f7f3af62cbae1cbe4433194ade14cdbc675aa41cda",
+    "run_resolution.py": "a1901d65a96a1a545566dc1261172472d596cc1709b9e61f8f59ef32a9ce868a",
+    "spatial_model.py": "e92ddb80f2d3250109dae1370ade9e38650bf5e7310d9eefaa04ca7918a56259",
+    "evolution.py": "227791aa0fdd0cc9ddabe2a9b33121f67e7acd651d4e975de3e040cb23910a05",
+    "model.py": "66b9620b8e71a666c976411ab7d60bd98be5c9ef9ca877736e58247fe23f7dfd"
+  },
+  "numpy": "2.2.6",
+  "configurations": [
+    {
+      "name": "o2-n28",
+      "order": 2,
+      "n": 28,
+      "length": 14.0,
+      "dt": 0.02
+    },
+    {
+      "name": "o4-n28",
+      "order": 4,
+      "n": 28,
+      "length": 14.0,
+      "dt": 0.02
+    },
+    {
+      "name": "o4-n40",
+      "order": 4,
+      "n": 40,
+      "length": 15.0,
+      "dt": 0.01
+    },
+    {
+      "name": "o4-n56",
+      "order": 4,
+      "n": 56,
+      "length": 14.0,
+      "dt": 0.01
+    },
+    {
+      "name": "o4-n70",
+      "order": 4,
+      "n": 70,
+      "length": 14.0,
+      "dt": 0.01
+    },
+    {
+      "name": "o2-n56",
+      "order": 2,
+      "n": 56,
+      "length": 14.0,
+      "dt": 0.01
+    },
+    {
+      "name": "o2-n70",
+      "order": 2,
+      "n": 70,
+      "length": 14.0,
+      "dt": 0.01
+    },
+    {
+      "name": "o4-n56-time",
+      "order": 4,
+      "n": 56,
+      "length": 14.0,
+      "dt": 0.005
+    },
+    {
+      "name": "o4-n56-rotated",
+      "order": 4,
+      "n": 56,
+      "length": 14.0,
+      "dt": 0.01,
+      "angle": 1.0471975511965976
+    }
+  ]
+}
