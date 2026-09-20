@@ -2,7 +2,7 @@
   "module": "phase_junction_network",
   "active_branch": "main",
   "created_utc": "2026-09-20",
-  "status": "exploratory candidate foundation; finite pure-gauge photon dynamics, a finite linear dressed-frame regulator, a finite chiral matter prototype, and a finite reversible companion bridge exist, while Stage 3A provides the first shared electromagnetic-gravity move prototype. Full shared microscopic embedding, interacting QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.",
+  "status": "exploratory candidate foundation; finite pure-gauge photon dynamics, a finite linear dressed-frame regulator, a finite chiral matter prototype, and a finite reversible companion bridge exist. Stage 3A provides a shared electromagnetic-gravity move prototype, while Stage 3B rejects its naive one-hinge common-Casimir normalization and makes a derived collective charging mechanism the critical path. Interacting QED, revised shared embedding, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.",
   "architecture_audit": "phase_junction_network/architecture_audit.md",
   "novelty_boundary": "phase_junction_network/novelty_boundary.md",
   "companion_integration": "phase_junction_network/companion_integration.md",
@@ -19,11 +19,11 @@
     },
     "finite_linear_gravity": {
       "issue": 2,
-      "status": "linear finite constrained-regulator gate passed; coefficient derivation, nonlinear closure, and universality remain open"
+      "status": "linear finite constrained-regulator gate passed; its independently chosen charging normalization must be replaced by the common value derived under issue 3"
     },
     "shared_microscopic_coefficients": {
       "issue": 3,
-      "status": "Stage 3A shared-move prototype passes; embedding in the actual finite photon and dressed-frame algebras remains open"
+      "status": "Stage 3A shared-move mechanism passes as a toy graph; Stage 3B rejects U_A=U_g=Delta in the actual photon regulator; a common collective capacitance/charging derivation is open"
     },
     "finite_chiral_matter": {
       "issue": 4,
@@ -35,7 +35,7 @@
     },
     "companion_integration": {
       "issue": 7,
-      "status": "finite reversible architecture passes; physical rates, common cone, many-body deposits, and empirical viability remain open"
+      "status": "finite reversible architecture passes; physical rates, common charging/cone, many-body deposits, and empirical viability remain open"
     },
     "continuum_quantum_consistency": {
       "issue": 8,
@@ -78,7 +78,8 @@
       "maximum_relative_frequency_error": 2.1447861848524062e-16,
       "maximum_polarization_split": 2.8317063242517616e-16,
       "minimum_connection_lock_to_tensor_gap_ratio": 2.491448893079969,
-      "uses_TT_projector": false
+      "uses_TT_projector": false,
+      "normalization_warning": "the current self-dual U_g/K_g choice was an independent regulator input and must be rerun at the common charging ratio derived under issue 3"
     },
     "shared_junction_move_stage_3A": {
       "acceptance": "PASS at finite mechanism-prototype scope",
@@ -93,7 +94,20 @@
       "electromagnetic_next_band_gap_over_K": 9.925815761431478,
       "gravity_next_band_gap_over_K": 16.59688880527981,
       "shared_casimir_hypothesis": "U_A=U_g=Delta",
-      "claim_boundary": "toy shared graph; full finite photon/frame embedding and physical impedance normalization remain open"
+      "claim_boundary": "toy shared graph; its naive charging normalization is rejected by Stage 3B"
+    },
+    "shared_move_embedding_stage_3B": {
+      "acceptance": "PASS as a rejection/diagnostic gate",
+      "result_file": "phase_junction_network/microscopic/shared_move_embedding_results.json",
+      "naive_implied_u_over_t": 14.596888805279812,
+      "factor_above_demonstrated_stage6B_upper_edge": 72.98444402639906,
+      "exact_spin1_gap_power_range": [0.1388933350649927, 0.17181561492652853],
+      "minimum_L10_gap": 9.07173991460592,
+      "maximum_common_r_to_enter_stage6B_edge": 0.013701549876002235,
+      "representative_r_for_u_over_t_0p1": 0.006850774938001117,
+      "current_gravity_r": 0.06850774938001117,
+      "gravity_to_representative_photon_r_ratio": 10.0,
+      "decision": "reject U_A=U_g=Delta; derive one collective charging/capacitance factor and rerun both photon and gravity regulators at that same value"
     },
     "finite_chiral_matter": {
       "acceptance": "PASS at finite free-regulator endpoint scope",
@@ -126,14 +140,15 @@
       "broad gauge-gravity unification",
       "Schrieffer-Wolff ring exchange"
     ],
-    "candidate_original_content": "one finite matter-geometry junction state space and one microscopic move set deriving electromagnetic, gravitational, matter, and companion coefficients plus cross-sector predictions",
+    "candidate_original_content": "one finite matter-geometry junction state space and one microscopic move/capacitance structure deriving electromagnetic, gravitational, matter, and companion coefficients plus cross-sector predictions",
     "formal_novelty_proven": false
   },
   "immediate_work_order": [
-    "embed the Stage-3A shared mediator in the actual Stage-6B spin-1 photon links and finite dressed-frame Weyl algebra",
+    "construct an explicit finite collective junction capacitance/constraint matrix and derive the common charging suppression r",
+    "rerun the Stage-6B photon spectrum and finite dressed-frame regulator at the same derived r without separate clock rescalings",
     "embed the minimal |q|=1 endpoint in the Stage-6B photon region and test current continuity, a finite Ward identity, photon dressing, and vacuum polarization",
     "replace the issue-7 photon proxy with actual Stage-6B photon eigenmodes",
-    "derive matter localization and companion coefficients from the same microscopic move set",
+    "derive matter localization and companion coefficients from the same microscopic move and capacitance structure",
     "close nonlinear constraints, gravitational self-energy, many-body companion binding, and the volume-vacuum sector",
     "establish common-cone recovery and regulator universality",
     "freeze the parameter and observable ledger before empirical fitting"
@@ -141,7 +156,9 @@
   "stop_rules": [
     "do not claim originality for established component techniques",
     "do not treat Stage 3A as a derivation of alpha, G, or physical Z_g/Z_A",
-    "do not add sector-specific amplitudes or penalties merely to force a common cone",
+    "do not retain the rejected U_A=U_g=Delta normalization",
+    "do not add independent photon and gravity charging factors merely to force both spectra to pass",
+    "do not declare r=1/N without deriving the finite capacitance matrix",
     "do not treat Stage 6B as interacting QED",
     "do not treat the finite gravity regulator as nonlinear quantum gravity",
     "do not identify the finite matter spectrum with observed particles",
