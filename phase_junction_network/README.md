@@ -1,8 +1,8 @@
 # Phase Junction Network
 
-**Status:** exploratory candidate theory with checked infrared linear structure and a first finite-state kinematic prototype; not a completed fundamental theory or an empirical fit.  
+**Status:** exploratory candidate foundation with a well-tested linear gravity branch, finite electromagnetic and gravity kinematics, and a finite connection-lock construction. It is **not** yet a complete unified quantum theory, an integrated photon–companion mechanism, or an empirical fit.  
 **Created:** 2026-09-20  
-**Purpose:** preserve the rewritten Phase Junction proposal, the corrected gauge-field construction, the candidate frame-gravity branch, finite-state microscopic work, and reproducible zero-data checks in one self-contained research module.
+**Big-picture review:** [`architecture_audit.md`](architecture_audit.md)
 
 ## Core idea
 
@@ -16,123 +16,131 @@ F_{\mu\nu}=0,
 
 so the original scalar-gradient proposal is pure gauge. The corrected model moves the physical comparison to **links between neighboring junctions**:
 
-- each link carries a compact phase comparison \(a_\ell\) and conjugate matter–geometry imbalance \(E_\ell\);
-- electromagnetic field strength is the non-closing phase accumulated around a loop;
-- photons are the quantized transverse normal modes of this constrained link network;
-- gravity requires a richer frame-valued comparison, represented at low energy by a symmetric tensor with four first-class constraints and two transverse-traceless modes.
+- each link carries a compact phase comparison and conjugate matter–geometry imbalance;
+- electromagnetism is the non-closing scalar phase accumulated around loops;
+- photons are intended to be quantized transverse normal modes of that constrained link network;
+- gravity compares full local frames and clocks, requiring a richer connection and four constraints;
+- matter is intended to arise as finite charged or massive defects rather than being inserted as a separate continuum field.
 
-The resulting working statement is:
+The working statement is:
 
-> Reality is modeled as a network of microscopic matter–geometry junctions. Electromagnetism is scalar phase holonomy on the network. Gravity is frame-and-clock holonomy on the same network. Matter appears as charged or massive network defects and endpoints, while the network constraints enforce charge and stress-energy conservation.
+> Reality is modeled as a network of microscopic matter–geometry junctions. Electromagnetism is scalar phase holonomy. Gravity is frame-and-clock holonomy. Matter appears as network defects and endpoints. Local constraints enforce charge and stress-energy conservation.
 
-## What is currently established inside the candidate model
+## What is established internally
 
-The electromagnetic infrared construction supplies, under the stated lattice/rotor assumptions:
+### Electromagnetic structure
+
+The infrared target is
 
 \[
 H_A=\frac{U_A}{2}\sum_\ell E_\ell^2-K_A\sum_p\cos B_p,
 \]
 
+with
+
 \[
 c_\gamma=\frac{\ell\sqrt{U_AK_A}}{\hbar},
 \qquad
-\alpha_{\rm bare}=\frac{1}{4\pi}\sqrt{\frac{U_A}{K_A}},
+\alpha_{\rm bare}=\frac{1}{4\pi}\sqrt{\frac{U_A}{K_A}}.
 \]
 
-with two transverse modes, a long-distance Coulomb kernel, and \(E_n=\hbar\omega(n+1/2)\) after canonical quantization.
+Committed checks establish exact finite Gauss symmetry and identify a spin-1, three-state link as the smallest tested representation with nonconstant electric energy. They do **not** yet establish that the complete finite 3+1-dimensional spin-1 model lies in a deconfined Coulomb phase or reproduces interacting QED.
 
-The candidate gravitational branch supplies, at the linear structural level:
+### Linear gravity structure
 
-- four first-class constraints acting on a symmetric spatial frame deformation;
-- exactly two propagating tensor modes;
-- positive transverse-traceless quadratic energy;
-- linear long-wavelength dispersion;
-- a synthetic lattice Green function approaching \(1/r\);
-- a route to universal coupling through one shared frame;
-- a common low-energy photon/gravity causal cone if both sectors use that frame.
+The gravity work is the most mature pillar. It now establishes, under the stated linear assumptions:
 
-The first finite-state microscopic pass additionally establishes:
+- three vector constraints and one scalar constraint;
+- a local independent frame connection whose constrained elimination gives the Fierz–Pauli stiffness;
+- 36 second-class connection constraints and four first-class frame constraints;
+- exactly four physical phase-space dimensions, or two configuration modes, per nonzero momentum;
+- two equal positive frequencies proportional to lattice momentum;
+- the same result from full real-space reduction without a transverse-traceless projector;
+- a synthetic long-distance `1/r` Green function;
+- finite-size tensor gap closing and vanishing lattice anisotropy;
+- a reduced positive transfer-matrix target;
+- a finite odd-prime Weyl lock implementing the connection second-class pair with an exact dressed frame algebra.
 
-- a spin-1, three-state quantum link is the smallest tested electromagnetic link with exact Gauss symmetry and non-constant electric energy;
-- six odd-prime qudits per site can impose the three vector and one scalar gravitational constraints as an exact commuting Weyl/CSS algebra;
-- the finite gravity constraint code leaves \(2N+4\) logical qudits on an \(N\)-site periodic lattice: two local modes per site and four global zero modes;
-- exact continuous canonical frame variables cannot exist on a full finite local Hilbert space, so the continuous diffeomorphism-like algebra must emerge below a cutoff or from a discrete microscopic algebra.
+The unrestricted periodic zero mode contains one negative homogeneous trace-momentum direction. A fixed-total-volume plus trace-momentum second-class pair removes that direction at linear order. This is a control of one global mode, not a completed vacuum-energy or cosmological mechanism.
+
+### Verification infrastructure
+
+The module preserves exact arithmetic checks, numerical checks, finite-size scaling, negative branches, frozen JSON outputs, issue-level acceptance criteria, and a GitHub Actions regression workflow. See [`microscopic/README.md`](microscopic/README.md) for the current calculation inventory.
 
 ## What is not established
 
-This folder does **not** yet provide:
+The project does not yet contain one finite local model that simultaneously supplies:
 
-- one finite-dimensional local Hamiltonian whose dynamics derives both the electromagnetic Coulomb phase and a rigorously linear helicity-2 phase;
-- a derivation of the numerical impedance ratio \(Z_g/Z_A\), \(G\), or \(\alpha\) from fewer microscopic inputs;
-- a derivation of fermions, chirality, generations, charge assignments, or particle masses;
-- nonlinear strong-field solutions or a proof of quantum consistency;
-- a solution to the vacuum-volume/cosmological-constant term;
-- a demonstrated microscopic evasion of the Weinberg–Witten assumptions;
-- a frozen, overconstrained empirical prediction that distinguishes the model from ordinary low-energy QED plus general relativity.
+- a demonstrated deconfined photon/Coulomb phase;
+- a complete finite dressed-frame gravity Hamiltonian;
+- nonlinear gravitational constraint closure and universal self-coupling;
+- finite chiral charged matter and protected particle masses;
+- a microscopic calculation of `Z_g/Z_A`, `G`, and `alpha` from fewer independent inputs;
+- an interacting unitary or reflection-positive relativistic continuum limit;
+- a microscopic vacuum/background mechanism;
+- an unambiguous Phase Junction identity for the active photon–companion excitation;
+- a frozen cross-sector empirical prediction distinguishing the model from QED plus general relativity with selected coefficients.
 
-The frame-gravity branch deliberately lands in the same low-energy tensor universality class as linearized Einstein gravity. The proposed novelty is the microscopic origin of the gauge connection, frame constraints, coupling ratios, defects, and any calculable departures above the junction scale.
+## Big-picture work program
 
-## Files
+The architecture audit found that further linear-gravity polishing is no longer the sole critical path. The project is now organized around these top-level issues:
+
+| Issue | Pillar |
+|---:|---|
+| [#2](https://github.com/lrspeiser/photon-graviton/issues/2) | Finite dressed frame–connection Hamiltonian and two tensor branches |
+| [#3](https://github.com/lrspeiser/photon-graviton/issues/3) | Shared microscopic electromagnetic/gravitational coefficients and `Z_g/Z_A` |
+| [#4](https://github.com/lrspeiser/photon-graviton/issues/4) | Chiral matter defects and protected mass hierarchy |
+| [#5](https://github.com/lrspeiser/photon-graviton/issues/5) | Nonlinear constraints, self-coupling, and volume/vacuum term |
+| [#6](https://github.com/lrspeiser/photon-graviton/issues/6) | Finite electromagnetic Coulomb and QED phase |
+| [#7](https://github.com/lrspeiser/photon-graviton/issues/7) | Integration with the active photon–companion/redshift/deposition program |
+| [#8](https://github.com/lrspeiser/photon-graviton/issues/8) | Continuum quantum consistency, Lorentz recovery, and regulator universality |
+| [#9](https://github.com/lrspeiser/photon-graviton/issues/9) | Frozen predictions and staged empirical tests |
+
+The immediate dependency order is:
+
+```text
+ontology/integration
+    -> finite EM + finite gravity + finite matter
+    -> shared coefficients + nonlinear closure
+    -> interacting continuum consistency
+    -> frozen predictions and data
+```
+
+Exploratory tasks may run in parallel, but later claims cannot be closed while upstream quantities remain arbitrary.
+
+## Relationship to the wider photon–companion repository
+
+The root project is governed by `CURRENT-STATUS.md`, `research_plan/active-goal.md`, and `research_plan/universe-contract.md`. It requires fixed published distances, a nonexpanding operational universe, complete energy accounting, no independently inserted dark halo, and joint predictions across redshift, timing, brightness, galaxy motion, lensing, gravitational waves, and background observations.
+
+Phase Junction is presently a candidate microscopic foundation, not yet the active program's completed mechanism. Issue #7 must decide whether the companion is:
+
+- the neutral relative-phase mode;
+- a frame/tensor excitation;
+- a topological or matter defect;
+- a bound collective junction state;
+- or a distinct field outside this framework.
+
+Until that choice and the corresponding emitter–propagation–capture–gravity Hamiltonian are derived, the two programs must not be treated as already unified.
+
+## Key files
 
 | File | Purpose |
 |---|---|
-| [`electromagnetic_derivation.md`](electromagnetic_derivation.md) | Reconstructs the original scalar proposal as a link/loop gauge network, derives its spectrum, quantization, Coulomb limit, and QED route, and separates the scalar sine-Gordon mode from the photon. |
-| [`frame_gravity_derivation.md`](frame_gravity_derivation.md) | Defines the candidate frame-valued gravitational sector, its four constraints, two tensor modes, static limit, universal coupling, and parameter relations. |
-| [`check_frame_gravity.py`](check_frame_gravity.py) | Reproducible no-data numerical checks for constraint counting, the tensor spectrum, the excluded negative scalar branch, and the lattice \(1/r\) Green function. |
-| [`checks.json`](checks.json) | Frozen output of the infrared frame-gravity verification run. |
-| [`microscopic/`](microscopic/) | Finite-state quantum-link and gravitational-constraint construction, code, results, and the canonical-algebra obstruction. |
-| [`validation_protocol.md`](validation_protocol.md) | Gates for microscopic dynamics, parameter closure, and the later transition to real-data tests. |
-| [`manifest.json`](manifest.json) | Machine-readable scope, commands, assumptions, and result summary. |
+| [`architecture_audit.md`](architecture_audit.md) | Full pillar-by-pillar audit, dependency graph, stop rules, and work order |
+| [`electromagnetic_derivation.md`](electromagnetic_derivation.md) | Corrected link/loop electromagnetic construction and QED target |
+| [`frame_gravity_derivation.md`](frame_gravity_derivation.md) | Frame-valued gravity target, constraints, static limit, and parameter relations |
+| [`microscopic/`](microscopic/) | Finite-state constructions, constrained reductions, exact checks, and frozen outputs |
+| [`validation_protocol.md`](validation_protocol.md) | Acceptance, rejection, freezing, and data-testing rules |
+| [`manifest.json`](manifest.json) | Machine-readable status and result summary |
 
-## Reproduce the current checks
+## Current decision
 
-From the repository root, using the repository requirements:
+Continue only narrow work that closes an architecture gate:
 
-```sh
-pip install -r requirements.txt
+1. construct the finite dressed frame Hamiltonian in issue #2;
+2. demonstrate or rule out the finite spin-1 Coulomb phase in issue #6;
+3. write the companion/field dictionary and shared energy ledger in issue #7;
+4. prototype a finite charged matter defect in issue #4;
+5. begin the parameter ledger required by issue #9.
 
-python phase_junction_network/check_frame_gravity.py \
-  --samples 500 \
-  --seed 42 \
-  --lattice-size 96 \
-  --fit-r-min 4 \
-  --fit-r-max 20
-
-python phase_junction_network/microscopic/finite_junction_model.py \
-  --output phase_junction_network/microscopic/results.json
-
-python phase_junction_network/microscopic/search_local_dynamics.py \
-  --output phase_junction_network/microscopic/dynamics_results.json
-```
-
-The frozen infrared run reports:
-
-- spectrum failures: `0 / 500`;
-- maximum relative transverse-tensor eigenvalue error: `1.1250857213591084e-15`;
-- maximum constraint/gauge residual: `1.0870458088261133e-14`;
-- unconstrained transverse spectrum: one negative scalar and two positive tensor modes;
-- normalized RMS residual of the fitted lattice \(A/r+B\) kernel over radii 4–20 on a \(96^3\) grid: `0.002409597456672864`.
-
-The finite-state run reports:
-
-- exact Gauss commutators on the tested spin-1/2 through spin-2 plaquettes;
-- spin-1/2 has constant electric energy, while spin-1 is the first nontrivial case;
-- exact scalar/vector Weyl commutation on \((L,p)=(3,5)\) and \((5,7)\);
-- exact logical counts `58 = 2*27 + 4` and `254 = 2*125 + 4`;
-- the finite canonical-commutator defect is confined to the top state of a truncated oscillator;
-- exact local coordinate invariants begin at two derivatives and momentum invariants at one, so a manifest-local invariant-square gravity Hamiltonian predicts `omega ~ k^3`, not `omega ~ k`.
-
-These results verify the implemented algebra and synthetic lattice behavior. They do not establish that nature uses the proposed microscopic interpretation.
-
-## Immediate next task
-
-The finite kinematic construction is now in place, and the simplest exact local-invariant-square dynamics has been ruled out because it produces cubic rather than linear dispersion. The next gate is to construct **noncommuting or emergent-symmetry dynamics** on that finite skeleton that simultaneously provides:
-
-1. an electromagnetic Coulomb phase from the spin-1 quantum links;
-2. exactly two gravitational helicities with \(\omega\propto k\), not a gapped stabilizer phase or \(k^2/k^3\) dispersion;
-3. nonlinear preservation of the four gravitational constraints;
-4. one shared frame for all matter excitations;
-5. a calculable ratio \(Z_g/Z_A\) from the same microscopic amplitudes and penalties;
-6. a protected low-energy matter-defect spectrum.
-
-The model should be rejected or revised before observational fitting if that dynamics produces extra gapless scalar/vector modes, ghosts, unstable gradients, nonuniversal matter coupling, independently tunable photon and gravity cones, or no overconstrained parameter relation.
+Do not interpret another successful linear tensor residual as progress on matter, redshift, cosmology, or empirical distinctiveness.
