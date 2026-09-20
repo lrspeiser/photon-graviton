@@ -1,0 +1,215 @@
+{
+  "selected": {
+    "joint": {
+      "id": "RM-ell0-w1-ridge0",
+      "family": "RM",
+      "ell": 0.0,
+      "theta": [
+        0.5806082530120632,
+        2.2647912956077696,
+        -0.2385355238314014,
+        -1.878192663241159,
+        -1.1325876245823272,
+        6.377163618108808,
+        -7.91735473167068,
+        1.452145842871978,
+        -3.7699873523162566,
+        -0.7418699094677752,
+        6.620076267209942
+      ],
+      "basis": [
+        "1",
+        "x",
+        "x2",
+        "x3",
+        "y",
+        "xy",
+        "y2",
+        "z",
+        "xz",
+        "z2",
+        "yz"
+      ],
+      "n_parameters": 11,
+      "weight": 1.0,
+      "ridge": 0.0
+    },
+    "galaxy": {
+      "id": "RMH-ell3-w0-ridge0.001",
+      "family": "RMH",
+      "ell": 3.0,
+      "theta": [
+        0.57673872641156,
+        1.729074891241461,
+        1.5375334350426157,
+        0.1427358872636928,
+        -0.5434341930272534,
+        -0.7989970442444886,
+        -0.27509827871800463,
+        1.0816509465877293,
+        1.0661456799090734,
+        0.8559463647334309,
+        -0.34371173976641173,
+        0.2085386880867626,
+        0.3443971092974767,
+        1.7838504334137442
+      ],
+      "basis": [
+        "1",
+        "x",
+        "x2",
+        "x3",
+        "y",
+        "xy",
+        "y2",
+        "z",
+        "xz",
+        "z2",
+        "yz",
+        "h",
+        "xh",
+        "zh"
+      ],
+      "n_parameters": 14,
+      "weight": 0.0,
+      "ridge": 0.001
+    },
+    "gated": {
+      "id": "RM-ell0-w1-ridge0",
+      "family": "RM",
+      "ell": 0.0,
+      "theta": [
+        0.5806082530120632,
+        2.2647912956077696,
+        -0.2385355238314014,
+        -1.878192663241159,
+        -1.1325876245823272,
+        6.377163618108808,
+        -7.91735473167068,
+        1.452145842871978,
+        -3.7699873523162566,
+        -0.7418699094677752,
+        6.620076267209942
+      ],
+      "basis": [
+        "1",
+        "x",
+        "x2",
+        "x3",
+        "y",
+        "xy",
+        "y2",
+        "z",
+        "xz",
+        "z2",
+        "yz"
+      ],
+      "n_parameters": 11,
+      "weight": 1.0,
+      "ridge": 0.0
+    }
+  },
+  "scores": {
+    "joint": {
+      "train": {
+        "galaxy_rmse": 21.692045688189815,
+        "cluster_chi2_per_point": 10.841242865594241
+      },
+      "validation": {
+        "galaxy_rmse": 23.992654569205506,
+        "cluster_chi2_per_point": 9.826730139345061
+      },
+      "test": {
+        "galaxy_rmse": 21.722081302381206,
+        "cluster_chi2_per_point": 5.057325018645148
+      }
+    },
+    "galaxy": {
+      "train": {
+        "galaxy_rmse": 18.23572249763811,
+        "cluster_chi2_per_point": 473.6145886099787
+      },
+      "validation": {
+        "galaxy_rmse": 24.11027568104904,
+        "cluster_chi2_per_point": 428.00365177193214
+      },
+      "test": {
+        "galaxy_rmse": 15.645477234929736,
+        "cluster_chi2_per_point": 195.63662355468313
+      }
+    },
+    "gated": {
+      "train": {
+        "galaxy_rmse": 21.692045688189815,
+        "cluster_chi2_per_point": 10.841242865594241
+      },
+      "validation": {
+        "galaxy_rmse": 23.992654569205506,
+        "cluster_chi2_per_point": 9.826730139345061
+      },
+      "test": {
+        "galaxy_rmse": 21.722081302381206,
+        "cluster_chi2_per_point": 5.057325018645148
+      }
+    },
+    "MOND": {
+      "train": {
+        "galaxy_rmse": 19.17045857422064,
+        "cluster_chi2_per_point": 107.7311855288514
+      },
+      "validation": {
+        "galaxy_rmse": 26.143569122693894,
+        "cluster_chi2_per_point": 99.86944179038372
+      },
+      "test": {
+        "galaxy_rmse": 16.08942736162235,
+        "cluster_chi2_per_point": 58.059400890810274
+      }
+    }
+  },
+  "paired_bootstrap": {
+    "joint": {
+      "delta_rmse_kms": 5.632653940758857,
+      "percentile95": [
+        2.473829123736937,
+        8.96421560416146
+      ],
+      "resample_fraction_lower": 0.0,
+      "galaxies": 31,
+      "resamples": 10000,
+      "interpretation": "Paired object bootstrap conditional on exposed data and fixed selected models; not post-selection or fresh-test evidence."
+    },
+    "galaxy": {
+      "delta_rmse_kms": -0.4439501266926129,
+      "percentile95": [
+        -1.5390943072799848,
+        0.6471089960452671
+      ],
+      "resample_fraction_lower": 0.7923,
+      "galaxies": 31,
+      "resamples": 10000,
+      "interpretation": "Paired object bootstrap conditional on exposed data and fixed selected models; not post-selection or fresh-test evidence."
+    },
+    "gated": {
+      "delta_rmse_kms": 5.632653940758857,
+      "percentile95": [
+        2.473829123736937,
+        8.96421560416146
+      ],
+      "resample_fraction_lower": 0.0,
+      "galaxies": 31,
+      "resamples": 10000,
+      "interpretation": "Paired object bootstrap conditional on exposed data and fixed selected models; not post-selection or fresh-test evidence."
+    }
+  },
+  "fits": 132,
+  "optimization_starts": 396,
+  "structural_basis_memory_choices": 11,
+  "complete_solution": false,
+  "beats_MOND": false,
+  "beats_dark_matter_established": false,
+  "dark_matter": false,
+  "expansion": false,
+  "distances_adjusted": false,
+  "energy_funding_derived": false
+}

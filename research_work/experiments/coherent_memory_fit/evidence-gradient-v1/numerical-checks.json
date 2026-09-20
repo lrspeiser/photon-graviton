@@ -1,0 +1,3303 @@
+[
+  {
+    "test": "pressure radial refinement",
+    "name": "A1644",
+    "relative_error": 2.1985445931509445e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A1795",
+    "relative_error": 4.4095150074182496e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A2029",
+    "relative_error": 5.033357793761034e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A2142",
+    "relative_error": 3.378957938786305e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A2255",
+    "relative_error": 3.203200397389006e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A2319",
+    "relative_error": 3.406509144805355e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A3158",
+    "relative_error": 3.0806835664403015e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A3266",
+    "relative_error": 2.5048125746687326e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A644",
+    "relative_error": 3.81385248532022e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "A85",
+    "relative_error": 3.212212925847579e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "RXC1825",
+    "relative_error": 2.6223993756919354e-05,
+    "passed": true
+  },
+  {
+    "test": "pressure radial refinement",
+    "name": "ZW1215",
+    "relative_error": 2.7463649011400467e-05,
+    "passed": true
+  },
+  {
+    "test": "source-memory-optical refinement",
+    "model": "joint",
+    "ne0": 0.0025,
+    "relative_error": 2.597463287089568e-06,
+    "passed": true
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "joint",
+    "ne0": 0.0025,
+    "rmin": 0.01,
+    "relative_change": 4.14535304582174e-06,
+    "bounded_chi2": 12.770563809646436,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "joint",
+    "ne0": 0.0025,
+    "rmin": 1.0,
+    "relative_change": 6.284221826194901e-06,
+    "bounded_chi2": 12.770549851457634,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "source-memory-optical refinement",
+    "model": "joint",
+    "ne0": 0.0045,
+    "relative_error": 3.0150129201248004e-06,
+    "passed": true
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "joint",
+    "ne0": 0.0045,
+    "rmin": 0.01,
+    "relative_change": 3.6994959105226707e-06,
+    "bounded_chi2": 7.586769672470293,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "joint",
+    "ne0": 0.0045,
+    "rmin": 1.0,
+    "relative_change": 5.9485107066189934e-06,
+    "bounded_chi2": 7.5867581652854446,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "source-memory-optical refinement",
+    "model": "galaxy",
+    "ne0": 0.0025,
+    "relative_error": 3.727651560809686e-06,
+    "passed": true
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "galaxy",
+    "ne0": 0.0025,
+    "rmin": 0.01,
+    "relative_change": 0.0005037869195014493,
+    "bounded_chi2": 3.8228866582440313,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "galaxy",
+    "ne0": 0.0025,
+    "rmin": 1.0,
+    "relative_change": 0.0033418162592719564,
+    "bounded_chi2": 3.8229327810572977,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "source-memory-optical refinement",
+    "model": "galaxy",
+    "ne0": 0.0045,
+    "relative_error": 3.6798473746554786e-06,
+    "passed": true
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "galaxy",
+    "ne0": 0.0045,
+    "rmin": 0.01,
+    "relative_change": 0.0007080032306403644,
+    "bounded_chi2": 3.816250061290976,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "inner memory boundary sensitivity",
+    "model": "galaxy",
+    "ne0": 0.0045,
+    "rmin": 1.0,
+    "relative_change": 0.004666163319336976,
+    "bounded_chi2": 3.817443071493364,
+    "note": "sensitivity, not a convergence assertion"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC6015",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "ESO444-G084",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC04325",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC04483",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07089",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC02953",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC08286",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06983",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4013",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0100",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4010",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2998",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC00891",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC11557",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC02259",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4085",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC12632",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3769",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC6503",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06446",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "D631-7",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05005",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07866",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2403",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06667",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06614",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC04278",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "IC2574",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "ESO563-G021",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0289",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC09133",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2903",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC11820",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0300",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "D564-8",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC00128",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2915",
+    "maximum_speed_change_kms": 7.105427357601002e-15,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07577",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05253",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05918",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07125",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC7793",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC5005",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3893",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC5371",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4138",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0247",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06930",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "DDO064",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2683",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4217",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3521",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05829",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06923",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05716",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05750",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06917",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC1003",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "CamB",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3953",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC5055",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07261",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2841",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4100",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC08490",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC00191",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06818",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC01281",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC5033",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGCA444",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC08837",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3726",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05764",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "ESO116-G012",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07399",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC03580",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC11914",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07690",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC12506",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05986",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3198",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06787",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "DDO168",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0024",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3992",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC6674",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3741",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC6195",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4183",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC08550",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F571-V1",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3972",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "ESO079-G014",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4559",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "IC4202",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05414",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4157",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC5585",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07603",
+    "maximum_speed_change_kms": 7.105427357601002e-15,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC09037",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4051",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC05721",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC12732",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC11455",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC1090",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4088",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC00731",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3917",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F574-1",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC4068",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "KK98-251",
+    "maximum_speed_change_kms": 7.105427357601002e-15,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F568-V1",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC5985",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC02487",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC03546",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3109",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0891",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0801",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC08699",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC02885",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07151",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3877",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC6946",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC10310",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F565-V2",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F583-4",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC7331",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2955",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGCA442",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC2976",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "DDO154",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "DDO170",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC7814",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F583-1",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F568-3",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC04499",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06399",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC0055",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07559",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07524",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC5907",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "DDO161",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC02916",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "F571-8",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC06786",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "NGC3949",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC03205",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC07323",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "joint",
+    "name": "UGC09992",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC6015",
+    "maximum_speed_change_kms": 0.0006755386596637436,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "ESO444-G084",
+    "maximum_speed_change_kms": 0.008181721029657751,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC04325",
+    "maximum_speed_change_kms": 0.001445997973760882,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC04483",
+    "maximum_speed_change_kms": 0.005387408191605658,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07089",
+    "maximum_speed_change_kms": 0.002702405446498801,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC02953",
+    "maximum_speed_change_kms": 0.0034170334304803873,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC08286",
+    "maximum_speed_change_kms": 0.0010705230405250177,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06983",
+    "maximum_speed_change_kms": 0.0015230401628372192,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4013",
+    "maximum_speed_change_kms": 1.8074411570978555e-05,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0100",
+    "maximum_speed_change_kms": 0.00776214663534347,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4010",
+    "maximum_speed_change_kms": 0.004424066612955357,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2998",
+    "maximum_speed_change_kms": 0.0029480418725995605,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC00891",
+    "maximum_speed_change_kms": 0.0018557014378117742,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC11557",
+    "maximum_speed_change_kms": 0.0030277718829410105,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC02259",
+    "maximum_speed_change_kms": 0.0010369969523651434,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4085",
+    "maximum_speed_change_kms": 0.00025504092747041796,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC12632",
+    "maximum_speed_change_kms": 0.00024004887769990546,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3769",
+    "maximum_speed_change_kms": 0.011618984672011834,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC6503",
+    "maximum_speed_change_kms": 0.0009431336659844192,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06446",
+    "maximum_speed_change_kms": 0.0010466170049312495,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "D631-7",
+    "maximum_speed_change_kms": 0.0014456026420432977,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05005",
+    "maximum_speed_change_kms": 0.003123015327048506,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07866",
+    "maximum_speed_change_kms": 0.0002668214538132929,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2403",
+    "maximum_speed_change_kms": 0.00040689126119275443,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06667",
+    "maximum_speed_change_kms": 0.00494665381818038,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06614",
+    "maximum_speed_change_kms": 0.019799350189657616,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC04278",
+    "maximum_speed_change_kms": 0.014113491431515968,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "IC2574",
+    "maximum_speed_change_kms": 0.00025059791055070946,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "ESO563-G021",
+    "maximum_speed_change_kms": 0.0005382909046716122,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0289",
+    "maximum_speed_change_kms": 0.0014383829804103243,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC09133",
+    "maximum_speed_change_kms": 0.002726149590557725,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2903",
+    "maximum_speed_change_kms": 0.006058124572433599,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC11820",
+    "maximum_speed_change_kms": 0.028826523130902615,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0300",
+    "maximum_speed_change_kms": 0.0003294143057104293,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "D564-8",
+    "maximum_speed_change_kms": 0.000581408845473419,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC00128",
+    "maximum_speed_change_kms": 0.001492702862762485,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2915",
+    "maximum_speed_change_kms": 0.0034902290982898876,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07577",
+    "maximum_speed_change_kms": 0.006842905158180201,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05253",
+    "maximum_speed_change_kms": 0.0006546161548897089,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05918",
+    "maximum_speed_change_kms": 0.0008138348605584156,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07125",
+    "maximum_speed_change_kms": 0.0016038664497841637,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC7793",
+    "maximum_speed_change_kms": 0.0004221666059152085,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC5005",
+    "maximum_speed_change_kms": 0.0020643655855394627,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3893",
+    "maximum_speed_change_kms": 0.003618072995379862,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC5371",
+    "maximum_speed_change_kms": 0.012951841027245337,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4138",
+    "maximum_speed_change_kms": 0.011640851404507657,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0247",
+    "maximum_speed_change_kms": 0.0002615699278436523,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06930",
+    "maximum_speed_change_kms": 0.0025433569560391334,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "DDO064",
+    "maximum_speed_change_kms": 0.03125226374312717,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2683",
+    "maximum_speed_change_kms": 0.0021842223903831837,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4217",
+    "maximum_speed_change_kms": 0.0009006743928807737,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3521",
+    "maximum_speed_change_kms": 0.00025245506895998915,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05829",
+    "maximum_speed_change_kms": 0.004473901686566251,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06923",
+    "maximum_speed_change_kms": 0.0035801187572843673,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05716",
+    "maximum_speed_change_kms": 0.0012476287226235172,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05750",
+    "maximum_speed_change_kms": 0.02836189378278675,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06917",
+    "maximum_speed_change_kms": 0.0010792754357566992,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC1003",
+    "maximum_speed_change_kms": 0.0008463226891848308,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "CamB",
+    "maximum_speed_change_kms": 0.007329226127030353,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3953",
+    "maximum_speed_change_kms": 8.852715424723101e-05,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC5055",
+    "maximum_speed_change_kms": 0.001350193578730341,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07261",
+    "maximum_speed_change_kms": 0.005661023171199986,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2841",
+    "maximum_speed_change_kms": 0.0005330760143351654,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4100",
+    "maximum_speed_change_kms": 8.611151787363269e-05,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC08490",
+    "maximum_speed_change_kms": 0.0009594609231271534,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC00191",
+    "maximum_speed_change_kms": 0.0036975578985050106,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06818",
+    "maximum_speed_change_kms": 0.0013737252007643974,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC01281",
+    "maximum_speed_change_kms": 0.08820821014069935,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC5033",
+    "maximum_speed_change_kms": 0.01632298467833948,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGCA444",
+    "maximum_speed_change_kms": 0.0017685879158761963,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC08837",
+    "maximum_speed_change_kms": 0.0019828627118485542,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3726",
+    "maximum_speed_change_kms": 0.000633589261127554,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05764",
+    "maximum_speed_change_kms": 0.0049203107032695925,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "ESO116-G012",
+    "maximum_speed_change_kms": 0.002717071884262623,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07399",
+    "maximum_speed_change_kms": 0.0022120788129882385,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC03580",
+    "maximum_speed_change_kms": 0.0020022215422272893,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC11914",
+    "maximum_speed_change_kms": 0.0002176470841277478,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07690",
+    "maximum_speed_change_kms": 0.0051840415499100345,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC12506",
+    "maximum_speed_change_kms": 0.006781338101120582,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05986",
+    "maximum_speed_change_kms": 0.0009973813466501724,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3198",
+    "maximum_speed_change_kms": 0.00029219262626156706,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06787",
+    "maximum_speed_change_kms": 0.0024502153771095436,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "DDO168",
+    "maximum_speed_change_kms": 0.0022986156625321996,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0024",
+    "maximum_speed_change_kms": 0.043060257447734784,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3992",
+    "maximum_speed_change_kms": 0.0035063301375259925,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC6674",
+    "maximum_speed_change_kms": 0.018938471270672608,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3741",
+    "maximum_speed_change_kms": 0.0015442521784834184,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC6195",
+    "maximum_speed_change_kms": 0.005724592623437275,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4183",
+    "maximum_speed_change_kms": 0.0007692246390718083,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC08550",
+    "maximum_speed_change_kms": 0.002298484463452155,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F571-V1",
+    "maximum_speed_change_kms": 0.0020815655408341627,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3972",
+    "maximum_speed_change_kms": 0.0006756229755495724,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "ESO079-G014",
+    "maximum_speed_change_kms": 0.00022128533578325005,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4559",
+    "maximum_speed_change_kms": 0.0002422619957940242,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "IC4202",
+    "maximum_speed_change_kms": 0.0011899354261117878,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05414",
+    "maximum_speed_change_kms": 0.002429347000699522,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4157",
+    "maximum_speed_change_kms": 0.00015745045999437934,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC5585",
+    "maximum_speed_change_kms": 0.00209841910522357,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07603",
+    "maximum_speed_change_kms": 0.0012887367866412092,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC09037",
+    "maximum_speed_change_kms": 0.0001339473466259733,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4051",
+    "maximum_speed_change_kms": 0.0010320320026835361,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC05721",
+    "maximum_speed_change_kms": 0.001582893058170498,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC12732",
+    "maximum_speed_change_kms": 0.0004030102362690968,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC11455",
+    "maximum_speed_change_kms": 0.00041128305866777737,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC1090",
+    "maximum_speed_change_kms": 0.00010302605417678024,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4088",
+    "maximum_speed_change_kms": 0.00010222457768804816,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC00731",
+    "maximum_speed_change_kms": 0.0034063966154036507,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3917",
+    "maximum_speed_change_kms": 0.0004237246146487905,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F574-1",
+    "maximum_speed_change_kms": 0.007759103542106516,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC4068",
+    "maximum_speed_change_kms": 0.00954868337586845,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "KK98-251",
+    "maximum_speed_change_kms": 0.0018137285353034827,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F568-V1",
+    "maximum_speed_change_kms": 0.007614319772088152,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC5985",
+    "maximum_speed_change_kms": 0.0002776968693751769,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC02487",
+    "maximum_speed_change_kms": 0.002521899483326706,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC03546",
+    "maximum_speed_change_kms": 0.002078591802671781,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3109",
+    "maximum_speed_change_kms": 0.003307050659458355,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0891",
+    "maximum_speed_change_kms": 0.0051072292381491025,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0801",
+    "maximum_speed_change_kms": 0.03374674004737699,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC08699",
+    "maximum_speed_change_kms": 0.0060552790792200994,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC02885",
+    "maximum_speed_change_kms": 0.04316639411752021,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07151",
+    "maximum_speed_change_kms": 0.0007738848970859635,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3877",
+    "maximum_speed_change_kms": 0.00040607663017055984,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC6946",
+    "maximum_speed_change_kms": 0.06366445206353433,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC10310",
+    "maximum_speed_change_kms": 0.0021277671837651724,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F565-V2",
+    "maximum_speed_change_kms": 0.0011647401880594543,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F583-4",
+    "maximum_speed_change_kms": 0.019728970602301388,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC7331",
+    "maximum_speed_change_kms": 0.0008601800636256485,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2955",
+    "maximum_speed_change_kms": 0.001780187374038178,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGCA442",
+    "maximum_speed_change_kms": 0.011892253711579315,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC2976",
+    "maximum_speed_change_kms": 0.0002622608096203294,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "DDO154",
+    "maximum_speed_change_kms": 0.0006671280679029223,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "DDO170",
+    "maximum_speed_change_kms": 0.0006194618817971786,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC7814",
+    "maximum_speed_change_kms": 0.06657484903803379,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F583-1",
+    "maximum_speed_change_kms": 0.002078778629794442,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F568-3",
+    "maximum_speed_change_kms": 0.0007735948874625365,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC04499",
+    "maximum_speed_change_kms": 0.0016023594778147299,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06399",
+    "maximum_speed_change_kms": 0.0013340823098246801,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC0055",
+    "maximum_speed_change_kms": 0.00016287981131313245,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07559",
+    "maximum_speed_change_kms": 0.001158096894641858,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07524",
+    "maximum_speed_change_kms": 0.0016467155699615432,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC5907",
+    "maximum_speed_change_kms": 0.0010272037140452994,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "DDO161",
+    "maximum_speed_change_kms": 0.000376203681199172,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC02916",
+    "maximum_speed_change_kms": 0.0004801756573442617,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "F571-8",
+    "maximum_speed_change_kms": 0.006198946746593492,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC06786",
+    "maximum_speed_change_kms": 0.01591067878118224,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "NGC3949",
+    "maximum_speed_change_kms": 0.00037249476656597835,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC03205",
+    "maximum_speed_change_kms": 0.0015619314611967638,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC07323",
+    "maximum_speed_change_kms": 0.0007508795330721796,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "galaxy",
+    "name": "UGC09992",
+    "maximum_speed_change_kms": 0.00164828379678994,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC6015",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "ESO444-G084",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC04325",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC04483",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07089",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC02953",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC08286",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06983",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4013",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0100",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4010",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2998",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC00891",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC11557",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC02259",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4085",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC12632",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3769",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC6503",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06446",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "D631-7",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05005",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07866",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2403",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06667",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06614",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC04278",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "IC2574",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "ESO563-G021",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0289",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC09133",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2903",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC11820",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0300",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "D564-8",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC00128",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2915",
+    "maximum_speed_change_kms": 7.105427357601002e-15,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07577",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05253",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05918",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07125",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC7793",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC5005",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3893",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC5371",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4138",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0247",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06930",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "DDO064",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2683",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4217",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3521",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05829",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06923",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05716",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05750",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06917",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC1003",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "CamB",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3953",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC5055",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07261",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2841",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4100",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC08490",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC00191",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06818",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC01281",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC5033",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGCA444",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC08837",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3726",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05764",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "ESO116-G012",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07399",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC03580",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC11914",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07690",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC12506",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05986",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3198",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06787",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "DDO168",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0024",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3992",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC6674",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3741",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC6195",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4183",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC08550",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F571-V1",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3972",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "ESO079-G014",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4559",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "IC4202",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05414",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4157",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC5585",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07603",
+    "maximum_speed_change_kms": 7.105427357601002e-15,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC09037",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4051",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC05721",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC12732",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC11455",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC1090",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4088",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC00731",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3917",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F574-1",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC4068",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "KK98-251",
+    "maximum_speed_change_kms": 7.105427357601002e-15,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F568-V1",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC5985",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC02487",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC03546",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3109",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0891",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0801",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC08699",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC02885",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07151",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3877",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC6946",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC10310",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F565-V2",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F583-4",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC7331",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2955",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGCA442",
+    "maximum_speed_change_kms": 1.4210854715202004e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC2976",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "DDO154",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "DDO170",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC7814",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F583-1",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F568-3",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC04499",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06399",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC0055",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07559",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07524",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC5907",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "DDO161",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC02916",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "F571-8",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC06786",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "NGC3949",
+    "maximum_speed_change_kms": 2.842170943040401e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC03205",
+    "maximum_speed_change_kms": 5.684341886080802e-14,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC07323",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  },
+  {
+    "test": "galaxy profile grid sensitivity",
+    "model": "gated",
+    "name": "UGC09992",
+    "maximum_speed_change_kms": 0.0,
+    "note": "interpolated source-grid sensitivity; no new observed velocity used"
+  }
+]
