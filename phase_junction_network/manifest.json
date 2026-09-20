@@ -1,25 +1,62 @@
 {
   "module": "phase_junction_network",
-  "status": "exploratory candidate; finite kinematics, finite Weyl connection locking, constrained local and real-space linear reductions, global fixed-volume control, and reduced transfer-matrix checks completed; finite dressed frame dynamics and nonlinear closure remain open",
+  "status": "exploratory candidate foundation; linear gravity is internally well tested, while finite electromagnetism, matter, nonlinear closure, theory integration, shared parameters, continuum quantum consistency, and empirical distinctiveness remain open",
   "created_utc": "2026-09-20",
   "active_branch": "main",
+  "architecture_audit": "phase_junction_network/architecture_audit.md",
+  "master_tracker_issue": 10,
   "dependencies": [
     "python>=3.11",
     "numpy>=1.24",
     "scipy>=1.10"
   ],
-  "latest_commands": [
-    "python phase_junction_network/microscopic/check_finite_second_class_lock.py --output phase_junction_network/microscopic/finite_second_class_lock_results.json",
-    "python phase_junction_network/microscopic/check_constrained_local_reduction.py --sizes 3,5,7 --output phase_junction_network/microscopic/constrained_local_reduction_results.json",
-    "python phase_junction_network/microscopic/check_real_space_reduction.py --sizes 3,5 --output phase_junction_network/microscopic/real_space_reduction_results.json",
-    "python phase_junction_network/microscopic/check_global_volume_constraint.py --output phase_junction_network/microscopic/global_volume_constraint_results.json",
-    "python phase_junction_network/microscopic/check_reduced_tt_transfer.py --output phase_junction_network/microscopic/reduced_tt_results.json"
-  ],
+  "pillar_status": {
+    "ontology_and_companion_integration": {
+      "status": "open",
+      "issue": 7
+    },
+    "finite_electromagnetic_coulomb_qed_phase": {
+      "status": "partial_kinematics_only",
+      "issue": 6
+    },
+    "linear_gravity": {
+      "status": "established_internally_under_linear_assumptions",
+      "issue": 2
+    },
+    "finite_dressed_gravity_hamiltonian": {
+      "status": "open",
+      "issue": 2
+    },
+    "nonlinear_gravity_and_vacuum": {
+      "status": "open",
+      "issue": 5
+    },
+    "finite_chiral_matter_and_mass_protection": {
+      "status": "open",
+      "issue": 4
+    },
+    "shared_microscopic_coefficients_and_impedance_ratio": {
+      "status": "open",
+      "issue": 3
+    },
+    "continuum_quantum_consistency_and_lorentz_recovery": {
+      "status": "open",
+      "issue": 8
+    },
+    "frozen_predictions_and_empirical_test_ladder": {
+      "status": "open",
+      "issue": 9
+    },
+    "reproducibility_and_negative_controls": {
+      "status": "established_for_current_checks"
+    }
+  },
   "results": {
     "finite_electromagnetic_link": {
       "minimal_tested_nontrivial_spin": 1.0,
       "minimal_tested_nontrivial_dimension": 3,
-      "exact_gauss_commutator": true
+      "exact_gauss_commutator": true,
+      "finite_coulomb_phase_demonstrated": false
     },
     "finite_gravity_constraint_skeleton": {
       "L3_p5_logical_qudits": 58,
@@ -39,7 +76,7 @@
       "asymptotic_gap_error_power": -0.9831409015880235,
       "maximum_dressed_algebra_residual": 1.3322676295501878e-15
     },
-    "local_invariant_square_branch": {
+    "rejected_local_invariant_square_branch": {
       "dispersion": "omega proportional to k^3",
       "decision": "rejected for the relativistic tensor target"
     },
@@ -47,7 +84,7 @@
       "random_failures": 0,
       "exact_rational_coefficient_failures": 0,
       "connection_inertia": [8, 0, 10],
-      "decision": "connection must be constrained/nonpropagating, contour-integrated, or accompanied by bare frame stiffness"
+      "decision": "connection must be constrained or nonpropagating, contour-integrated, or accompanied by bare frame stiffness"
     },
     "constrained_local_reduction": {
       "extended_phase_dimension": 48,
@@ -73,7 +110,7 @@
       "unconstrained_hamiltonian_inertia": [1, 6, 5],
       "fixed_volume_constraint_bracket_rank": 2,
       "fixed_volume_reduced_inertia": [0, 5, 5],
-      "decision": "fixed total volume plus trace momentum removes the one negative homogeneous conformal pair at linear order"
+      "decision": "fixed total volume plus trace momentum removes one negative homogeneous conformal pair at linear order; this is not a complete vacuum or cosmological mechanism"
     },
     "reduced_transfer_matrix": {
       "gap_scaling_power": -0.9938568506775519,
@@ -83,29 +120,19 @@
       "minimum_reflection_kernel_eigenvalue": -2.63511389083254e-15
     }
   },
-  "open_gates": [
-    "finite dressed frame/Fierz-Pauli Hamiltonian built from Zbar and Xbar on the local constraint skeleton",
-    "finite lattice spectrum showing two linear tensor branches before the p-to-infinity limit",
-    "nonlinear extension of the connection lock and fixed-volume constraints",
-    "nonlinear closure with gravitational self-energy",
-    "microscopic derivation of Z_g/Z_A",
-    "chiral matter defects and protected mass hierarchy",
-    "local vacuum-energy and cosmological behavior",
-    "frozen overconstrained empirical prediction"
+  "immediate_work_order": [
+    "write the Phase Junction and companion ontology plus shared energy ledger under issue 7",
+    "demonstrate or reject a finite deconfined electromagnetic Coulomb phase under issue 6",
+    "complete the finite dressed frame Hamiltonian under issue 2",
+    "prototype a finite charged matter defect under issue 4",
+    "create the parameter and observable ledger required by issue 9"
   ],
-  "file_integrity_note": "git_blob_sha is Git's canonical blob SHA-1 for committed content; this manifest intentionally does not self-hash.",
-  "latest_files": [
-    {"path": "microscopic/finite_second_class_lock.md", "git_blob_sha": "c8b6671e3b8e28763121954c84d83e010d5c8e7c"},
-    {"path": "microscopic/check_finite_second_class_lock.py", "git_blob_sha": "bb5d5abf824e3d53b235c23f4f312b582bbac74d"},
-    {"path": "microscopic/finite_second_class_lock_results.json", "git_blob_sha": "596e22fc711f49b06ef230382e3b52a23b4025ed"},
-    {"path": "microscopic/constrained_local_reduction.md", "git_blob_sha": "ce5c79d9de3c47316267bf58ad4d3ba8bfd0fc01"},
-    {"path": "microscopic/check_constrained_local_reduction.py", "git_blob_sha": "2c14f12420166ccc287f7dca75929dc5950a3a26"},
-    {"path": "microscopic/constrained_local_reduction_results.json", "git_blob_sha": "66a12d8a028b0233bec0b1475e5b0ecf63fe5faf"},
-    {"path": "microscopic/real_space_reduction.md", "git_blob_sha": "f8cb503f7da3829fd05ad9494529c453bf73124a"},
-    {"path": "microscopic/check_real_space_reduction.py", "git_blob_sha": "5d05e5c847cc0ee026b6ef785176b103c45b3d21"},
-    {"path": "microscopic/real_space_reduction_results.json", "git_blob_sha": "7fc10b6a839a16bce44924519656023e4ddc065e"},
-    {"path": "microscopic/global_volume_constraint.md", "git_blob_sha": "8ef050b363ac0e8495eff74646cded3fc0acbde8"},
-    {"path": "microscopic/check_global_volume_constraint.py", "git_blob_sha": "e3a357e7ff5723c5e9475f2b44e74d376a5fb48e"},
-    {"path": "microscopic/global_volume_constraint_results.json", "git_blob_sha": "94f62a6bc023522b2a81f2a2572c40c24d6f9b65"}
-  ]
+  "stop_rules": [
+    "do not treat additional linear tensor precision as closure of another pillar",
+    "do not identify the companion differently across calculations without an explicit conversion theory",
+    "do not fit galaxies or cosmology before local predictions and parameter roles are frozen",
+    "do not derive alpha, G, or masses by independently assigning every microscopic coefficient",
+    "do not call the linear fixed-volume control a completed cosmological-constant solution"
+  ],
+  "file_integrity_note": "Git blob identifiers are tracked by repository history; this manifest intentionally does not self-hash."
 }
