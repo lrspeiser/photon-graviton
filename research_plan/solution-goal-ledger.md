@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Scalar-gradient generation candidate checked, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/density-transfer-report.md). Adding -zeta grad phi to K with its reciprocal scalar reaction passes48 full Hamiltonian derivative fixtures,192 frozen principal fixtures and18 short-time source checks. The companion field now has a nonzero leading seed from a nonuniform source at rest, without inserted excitation. This removes initial velocity suppression but does not prove swirl, stronger attraction or long-duration generation; full matched evolution is next. Point-bundle refinement has5/7 runs and411 audit checks; its control n48/n64 bend differs3.77%, failing the1% spatial gate. All twelve goal requirements remain active.
+
+
 **Joint empty-field evolution completed, 20 September 2026.** [Report](../research_work/experiments/spatial_exchange/joint-evolution-report.md). Eight joint matter/light runs start with all fields empty. Moving particles generate the transfer sector with reciprocal energy accounting; all individual gates and99 independent audit checks pass. The campaign fails spatial bend accuracy (20.10% versus5%); time and rotation pass. Transfer slightly reduces coarse bending, with unresolved paired effects. Slow-motion generation is weak: K/Q energy4.33e-10 versus4.99e-6 for the fast source. The earlier10% transfer from prescribed internal excitation does not describe this matter-driven case. Point-bundle refinement continues. Strong slow-motion response, physical fuel, full stability and galaxy/cluster predictions remain unproved; all twelve goals remain active.
 
 

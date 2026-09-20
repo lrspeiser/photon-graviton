@@ -1,0 +1,4177 @@
+{
+  "seed": 20261008,
+  "commit": "37d98ce200c0f1711056f08272a7b31aba402a7a",
+  "hashes": {
+    "density_transfer.py": "370708e947d75bea3c2c7a4b188b4f864aa1e8926adaae6d8ef922251928d472",
+    "check_density_transfer.py": "4cb8de69ee9154b71a1009532ea73c41caf265a0992f5eaf2134038d4d563f0a",
+    "joint_transfer.py": "1c6ec6886015b426c7ef9109dfbe78729b9568552346f2a23b641c6544db2dd3",
+    "point_probes.py": "5f2dfa3585a423887e069b659196833308f45f1be5c945c8eeb20a2d1c313179",
+    "local_rotor.py": "0241fd01de8cd95fd56895af199c8d3e4deda7b38e4ad6383e42637ba8c092cc",
+    "check_joint_transfer.py": "5f66c6618f6705053643f0de6bdc1c3b99ac4f6aa0964165f0b43d52dc6286a1"
+  },
+  "derivatives": [
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 0,
+      "analytic": 0.007231805498293313,
+      "numerical": [
+        0.007231805376761713,
+        0.007231802712226454
+      ],
+      "errors": [
+        1.2153159988786966e-10,
+        2.7860668589882454e-09
+      ],
+      "step_difference": 2.6645352591003757e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 1,
+      "analytic": 0.062211510493988625,
+      "numerical": [
+        0.06221151060969987,
+        0.06221150883334303
+      ],
+      "errors": [
+        1.1571124614029316e-10,
+        1.6606455932599573e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 2,
+      "analytic": -0.11704275053208978,
+      "numerical": [
+        -0.11704275060253622,
+        -0.11704275060253622
+      ],
+      "errors": [
+        7.044644034781555e-11,
+        7.044644034781555e-11
+      ],
+      "step_difference": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 3,
+      "analytic": -0.0721873299094159,
+      "numerical": [
+        -0.07218732989144883,
+        -0.07218732989144883
+      ],
+      "errors": [
+        1.7967072274416296e-11,
+        1.7967072274416296e-11
+      ],
+      "step_difference": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 4,
+      "analytic": 0.011978447323591402,
+      "numerical": [
+        0.011978448455352009,
+        0.011978448455352009
+      ],
+      "errors": [
+        1.1317606071065134e-09,
+        1.1317606071065134e-09
+      ],
+      "step_difference": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 5,
+      "analytic": -0.03233525666634914,
+      "numerical": [
+        -0.03233525713852714,
+        -0.03233525625034872
+      ],
+      "errors": [
+        4.721779980898511e-10,
+        4.1600042161027417e-10
+      ],
+      "step_difference": 8.881784197001252e-10,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 6,
+      "analytic": -0.06336473678679155,
+      "numerical": [
+        -0.06336473745705007,
+        -0.06336473568069323
+      ],
+      "errors": [
+        6.702585153561813e-10,
+        1.1060983240440692e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "fixture": 7,
+      "analytic": 0.061823683084949295,
+      "numerical": [
+        0.061823682173667294,
+        0.06182368395002413
+      ],
+      "errors": [
+        9.11282001248015e-10,
+        8.650748381522355e-10
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 0,
+      "analytic": -0.1917995150184375,
+      "numerical": [
+        -0.19179951582515287,
+        -0.19179951493697445
+      ],
+      "errors": [
+        8.067153611790445e-10,
+        8.146305852108071e-11
+      ],
+      "step_difference": 8.881784197001252e-10,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 1,
+      "analytic": -0.1472328372588454,
+      "numerical": [
+        -0.1472328374774179,
+        -0.14723283925377473
+      ],
+      "errors": [
+        2.185724934378186e-10,
+        1.994929332838069e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 2,
+      "analytic": -0.0808407229618389,
+      "numerical": [
+        -0.08084072344871629,
+        -0.08084072611325155
+      ],
+      "errors": [
+        4.868773856303577e-10,
+        3.1514126447307333e-09
+      ],
+      "step_difference": 2.6645352591003757e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 3,
+      "analytic": -0.14980485335775642,
+      "numerical": [
+        -0.14980485296689494,
+        -0.14980485296689494
+      ],
+      "errors": [
+        3.9086148206912696e-10,
+        3.9086148206912696e-10
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 4,
+      "analytic": 0.03855336723635533,
+      "numerical": [
+        0.038553368497673546,
+        0.038553366721316706
+      ],
+      "errors": [
+        1.2613182165388537e-09,
+        5.150386228613968e-10
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 5,
+      "analytic": -0.03920494301034462,
+      "numerical": [
+        -0.039204943291792915,
+        -0.039204943291792915
+      ],
+      "errors": [
+        2.814482952251396e-10,
+        2.814482952251396e-10
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 6,
+      "analytic": 0.10293868776203999,
+      "numerical": [
+        0.10293868868416212,
+        0.10293868690780528
+      ],
+      "errors": [
+        9.221221286548342e-10,
+        8.542347107454162e-10
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "fixture": 7,
+      "analytic": -0.10068152600697927,
+      "numerical": [
+        -0.10068152711539824,
+        -0.1006815253390414
+      ],
+      "errors": [
+        1.1084189677212919e-09,
+        6.679378716789586e-10
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 0,
+      "analytic": 0.20352337556255676,
+      "numerical": [
+        0.2035233750419252,
+        0.2035233759301036
+      ],
+      "errors": [
+        5.206315656369753e-10,
+        3.675468540631499e-10
+      ],
+      "step_difference": 8.881784197001252e-10,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 1,
+      "analytic": -0.2389641801750853,
+      "numerical": [
+        -0.23896417999935693,
+        -0.23896418177571377
+      ],
+      "errors": [
+        1.7572837629487026e-10,
+        1.6006284631053802e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 2,
+      "analytic": -0.026138614411975857,
+      "numerical": [
+        -0.026138613939963307,
+        -0.026138613051784887
+      ],
+      "errors": [
+        4.720125505730532e-10,
+        1.3601909702731785e-09
+      ],
+      "step_difference": 8.881784197001252e-10,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 3,
+      "analytic": 0.09995474922026386,
+      "numerical": [
+        0.09995475025448286,
+        0.09995475025448286
+      ],
+      "errors": [
+        1.0342190021050968e-09,
+        1.0342190021050968e-09
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 4,
+      "analytic": 0.06062771617449632,
+      "numerical": [
+        0.060627717068939546,
+        0.060627716180761126
+      ],
+      "errors": [
+        8.944432278168435e-10,
+        6.264808116718257e-12
+      ],
+      "step_difference": 8.881784197001252e-10,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 5,
+      "analytic": 0.0036594865421992993,
+      "numerical": [
+        0.003659485159346332,
+        0.003659485159346332
+      ],
+      "errors": [
+        1.3828529675519174e-09,
+        1.3828529675519174e-09
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 6,
+      "analytic": -0.10872533185746515,
+      "numerical": [
+        -0.1087253318488024,
+        -0.10872533451333766
+      ],
+      "errors": [
+        8.662751072030517e-12,
+        2.655872508028345e-09
+      ],
+      "step_difference": 2.6645352591003757e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "fixture": 7,
+      "analytic": 0.23357879926022432,
+      "numerical": [
+        0.2335787998575256,
+        0.23357880074570403
+      ],
+      "errors": [
+        5.973012917603882e-10,
+        1.4854797114605134e-09
+      ],
+      "step_difference": 8.881784197001252e-10,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 0,
+      "analytic": 0.07324011694462076,
+      "numerical": [
+        0.07324011619402881,
+        0.0732401197467425
+      ],
+      "errors": [
+        7.505919497052815e-10,
+        2.8021217290952194e-09
+      ],
+      "step_difference": 3.552713678800501e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 1,
+      "analytic": 0.07713630573024986,
+      "numerical": [
+        0.07713630623129575,
+        0.07713630267858207
+      ],
+      "errors": [
+        5.010458853371702e-10,
+        3.0516677934633307e-09
+      ],
+      "step_difference": 3.552713678800501e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 2,
+      "analytic": -0.06806845880255474,
+      "numerical": [
+        -0.06806845753715152,
+        -0.06806846286622203
+      ],
+      "errors": [
+        1.2654032266468107e-09,
+        4.063667291553941e-09
+      ],
+      "step_difference": 5.329070518200751e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 3,
+      "analytic": -0.053448593294453325,
+      "numerical": [
+        -0.05344859133060709,
+        -0.05344859133060709
+      ],
+      "errors": [
+        1.963846238406397e-09,
+        1.963846238406397e-09
+      ],
+      "step_difference": 0.0,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 4,
+      "analytic": 0.012238186659047643,
+      "numerical": [
+        0.012238183799695435,
+        0.012238189128765953
+      ],
+      "errors": [
+        2.8593522081316047e-09,
+        2.4697183100691467e-09
+      ],
+      "step_difference": 5.329070518200751e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 5,
+      "analytic": -0.0853582764433941,
+      "numerical": [
+        -0.08535827511479965,
+        -0.08535827333844281
+      ],
+      "errors": [
+        1.3285944427954277e-09,
+        3.104951282195678e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 6,
+      "analytic": -0.06835690583692978,
+      "numerical": [
+        -0.06835690591344701,
+        -0.06835690413709017
+      ],
+      "errors": [
+        7.651722311319276e-11,
+        1.6998396162870577e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "fixture": 7,
+      "analytic": 0.19593669291852658,
+      "numerical": [
+        0.19593669264850178,
+        0.19593669620121545
+      ],
+      "errors": [
+        2.7002480806892493e-10,
+        3.282688870731576e-09
+      ],
+      "step_difference": 3.552713678800501e-09,
+      "reduction_error": 0.0,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 0,
+      "analytic": 0.14722719479065238,
+      "numerical": [
+        0.14722719576809595,
+        0.1472271939917391
+      ],
+      "errors": [
+        9.774435705267592e-10,
+        7.989132688734912e-10
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 1,
+      "analytic": -0.05425704481368392,
+      "numerical": [
+        -0.05425704330264125,
+        -0.05425704685535493
+      ],
+      "errors": [
+        1.5110426729303406e-09,
+        2.0416710058701604e-09
+      ],
+      "step_difference": 3.552713678800501e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 2,
+      "analytic": -0.0099127849022311,
+      "numerical": [
+        -0.009912785259302836,
+        -0.009912785259302836
+      ],
+      "errors": [
+        3.570717367618048e-10,
+        3.570717367618048e-10
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 3,
+      "analytic": -0.11053441465948027,
+      "numerical": [
+        -0.11053441539843334,
+        -0.11053441539843334
+      ],
+      "errors": [
+        7.389530654045018e-10,
+        7.389530654045018e-10
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 4,
+      "analytic": 0.11206534605738437,
+      "numerical": [
+        0.11206534722418837,
+        0.11206534722418837
+      ],
+      "errors": [
+        1.166804000640731e-09,
+        1.166804000640731e-09
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 5,
+      "analytic": 0.08250246386234197,
+      "numerical": [
+        0.08250246530394634,
+        0.08250246708030318
+      ],
+      "errors": [
+        1.441604363661142e-09,
+        3.2179612030613924e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 6,
+      "analytic": -0.021590415124858688,
+      "numerical": [
+        -0.02159041301297293,
+        -0.02159041656568661
+      ],
+      "errors": [
+        2.1118857565505245e-09,
+        1.4408279222499765e-09
+      ],
+      "step_difference": 3.552713678800501e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "fixture": 7,
+      "analytic": 0.13296667341609836,
+      "numerical": [
+        0.13296667233930748,
+        0.13296667233930748
+      ],
+      "errors": [
+        1.0767908786846192e-09,
+        1.0767908786846192e-09
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 0,
+      "analytic": 0.015368987912376283,
+      "numerical": [
+        0.015368989636499464,
+        0.015368993189213143
+      ],
+      "errors": [
+        1.7241231810294355e-09,
+        5.2768368598299364e-09
+      ],
+      "step_difference": 3.552713678800501e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 1,
+      "analytic": 0.02963491414958962,
+      "numerical": [
+        0.029634911413722875,
+        0.029634911413722875
+      ],
+      "errors": [
+        2.7358667449572938e-09,
+        2.7358667449572938e-09
+      ],
+      "step_difference": 0.0,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 2,
+      "analytic": -0.036400469567152156,
+      "numerical": [
+        -0.036400471969955106,
+        -0.03640046131181407
+      ],
+      "errors": [
+        2.4028029496636627e-09,
+        8.25533808673784e-09
+      ],
+      "step_difference": 1.0658141036401503e-08,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 3,
+      "analytic": 0.05547261489067083,
+      "numerical": [
+        0.05547261316962704,
+        0.05547261494598388
+      ],
+      "errors": [
+        1.7210437935899492e-09,
+        5.5313045810301276e-11
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 4,
+      "analytic": 0.11026698921524988,
+      "numerical": [
+        0.11026698842897531,
+        0.11026699198168899
+      ],
+      "errors": [
+        7.862745732278853e-10,
+        2.7664391055726156e-09
+      ],
+      "step_difference": 3.552713678800501e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 5,
+      "analytic": -0.11328481203221522,
+      "numerical": [
+        -0.11328481086536613,
+        -0.11328481264172297
+      ],
+      "errors": [
+        1.1668490895733186e-09,
+        6.095077498269319e-10
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 6,
+      "analytic": -0.023963185414002684,
+      "numerical": [
+        -0.023963186990272334,
+        -0.023963188766629173
+      ],
+      "errors": [
+        1.5762696495280615e-09,
+        3.352626488928312e-09
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "fixture": 7,
+      "analytic": 0.029696735939946376,
+      "numerical": [
+        0.0296967375135182,
+        0.02969673573716136
+      ],
+      "errors": [
+        1.5735718249254571e-09,
+        2.0278501447479336e-10
+      ],
+      "step_difference": 1.7763568394002505e-09,
+      "reduction_error": null,
+      "passed": true
+    }
+  ],
+  "principal": [
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.21610104196886637,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        1.1102230246251565e-16
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.04041708707704603,
+      "symmetry": 1.3877787807814457e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.7755575615628914e-17,
+        6.938893903907228e-18
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.07825710676529964,
+      "symmetry": 1.3877787807814457e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        1.1102230246251565e-16
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.18751534518718105,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        6.938893903907228e-18
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.06566480014158144,
+      "symmetry": 5.551115123125783e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.1102230246251565e-16,
+        0.0
+      ],
+      "coverage": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.2497180415674295,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.23753069387039394,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        0.0
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.1816182161016806,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        5.551115123125783e-17
+      ],
+      "coverage": 1.1102230246251565e-16,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.13417621050559497,
+      "symmetry": 0.0,
+      "imaginary": 1.6732308088360998e-17,
+      "longitudinal": [
+        5.551115123125783e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.07173817718404868,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        2.7755575615628914e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.2234260339759847,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.03487261480004985,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.17445612311583808,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.20982865457788658,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.05315344258977224,
+      "symmetry": 1.3877787807814457e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.08179033892981949,
+      "symmetry": 0.0,
+      "imaginary": 2.0816681711721682e-17,
+      "longitudinal": [
+        1.1102230246251565e-16,
+        5.551115123125783e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.22985698309752028,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.07798878453869647,
+      "symmetry": 5.551115123125783e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        1.1102230246251565e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.11258794170475478,
+      "symmetry": 1.3877787807814457e-17,
+      "imaginary": 3.481625570745511e-17,
+      "longitudinal": [
+        5.551115123125783e-17,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.2455793864492499,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        5.551115123125783e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.1794701888726643,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        5.551115123125783e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.13907032436603609,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        3.469446951953614e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.09290162904807236,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.7755575615628914e-17,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.056271417538301435,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        2.7755575615628914e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.4897757426877174e-19,
+        3.4897757426877174e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.2341624917916505e-19,
+        6.2341624917916505e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.0842021724855044e-19,
+        1.0842021724855044e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.734723475976807e-18,
+        1.734723475976807e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.7947076036992655e-19,
+        3.7947076036992655e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        9.75781955236954e-19,
+        9.75781955236954e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.07218387776125856,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        3.469446951953614e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.1817118224643372,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.05612296889834076,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.12196691351037081,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.1102230246251565e-16,
+        3.2526065174565133e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.18280901751131287,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        5.551115123125783e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.12451269826177669,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.11912801476001031,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.505213034913027e-19,
+        1.1102230246251565e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.21791325739375927,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.734723475976807e-18,
+        5.551115123125783e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.0842021724855044e-19,
+        1.0842021724855044e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.0842021724855044e-18,
+        1.0842021724855044e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.505213034913027e-19,
+        6.505213034913027e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.336808689942018e-19,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.03985565699988679,
+      "symmetry": 5.551115123125783e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.505213034913027e-19,
+        2.7755575615628914e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.04475964991610824,
+      "symmetry": 1.3877787807814457e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.336808689942018e-19,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.06024812973382292,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.2526065174565133e-19,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.10849698629529102,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.421010862427522e-19,
+        2.168404344971009e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.10563872289348955,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        5.551115123125783e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.15901332464819107,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.168404344971009e-19,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.2402821785853729,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.18542783804987129,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        3.7947076036992655e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.168404344971009e-19,
+        2.168404344971009e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.336808689942018e-19,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.6263032587282567e-19,
+        1.6263032587282567e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.336808689942018e-19,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3010426069826053e-18,
+        1.3010426069826053e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.336808689942018e-19,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.15303542314610363,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        5.421010862427522e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.10296494620083638,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        1.1102230246251565e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.20492948397350774,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.06365807580854975,
+      "symmetry": 1.3877787807814457e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        2.7755575615628914e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.11764383139697977,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        5.421010862427522e-20
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.09389708496108629,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.4094628242311558e-18,
+        1.1102230246251565e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.18279910973457802,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.336808689942018e-19,
+        4.336808689942018e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 0.5,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.14626608796134788,
+      "symmetry": 1.3877787807814457e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        5.551115123125783e-17,
+        2.7755575615628914e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.15163965899127074,
+      "symmetry": 1.8045227087074478e-16,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.22895689030352623,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.1436475495944668,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        2.220446049250313e-16
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.04755044001715594,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.881784197001252e-16,
+        2.220446049250313e-16
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.24982182677993928,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.220446049250313e-16,
+        2.220446049250313e-16
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.24517265152893167,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.2450817399889688,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.220446049250313e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.16647594976214886,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 4.440892098500626e-16,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.07062546304895309,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.7755575615628914e-17,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.24304084847500312,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.23886195417587416,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.22863828881888176,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.23007503749025804,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.2472585282627604,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.06872249707284629,
+      "symmetry": 1.1735528152048954e-16,
+      "imaginary": 2.0901539913247276e-16,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.24679294790729323,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.24972488833266054,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.12776108340343326,
+      "symmetry": 9.400099078290174e-18,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.17373172553426944,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.7755575615628914e-17,
+        1.1102230246251565e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.23011624639022218,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.24852419865044356,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        0.0,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.24937125654611503,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.22847893351989199,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        0.0
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 0.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.24000037827669635,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.1102230246251565e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.4094628242311558e-17,
+        1.4094628242311558e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.1275702593849246e-17,
+        1.1275702593849246e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.469446951953614e-18,
+        3.469446951953614e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.07890709238602325,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.469446951953614e-18,
+        1.734723475976807e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.24377488442325096,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.2435955086027873,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        2.0816681711721685e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.1374760169678938,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.220446049250313e-16,
+        8.881784197001252e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.13885395585670357,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.05436948391970017,
+      "symmetry": 3.1591753440082654e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.0408340855860843e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.06663984657582198,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.734723475976807e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.20473625921611674,
+      "symmetry": 5.322528703553902e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.469446951953614e-18,
+        3.469446951953614e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.336808689942018e-18,
+        4.336808689942018e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.469446951953614e-18,
+        3.469446951953614e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.0408340855860843e-17,
+        1.0408340855860843e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.469446951953614e-18,
+        3.469446951953614e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.24990765543212728,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        2.220446049250313e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.24551443848075968,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.881784197001252e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.24022723451813655,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.24982069951454625,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.7755575615628914e-17,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.19792415038541458,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.06968384566160347,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.6020852139652106e-18,
+        2.7755575615628914e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.23060953968922976,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.220446049250313e-16,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 0.5,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.2497586468119836,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        1.0408340855860843e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 0,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 1,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-19,
+        8.673617379884035e-19
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 2,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        8.673617379884035e-18,
+        8.673617379884035e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 3,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.9081958235744878e-17,
+        1.9081958235744878e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 4,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 5,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 6,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        6.938893903907228e-18,
+        6.938893903907228e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.0,
+      "fixture": 7,
+      "minimum_S": 0.25,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.7755575615628914e-17,
+        2.7755575615628914e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 0,
+      "minimum_S": 0.09415887144133384,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.7755575615628914e-17,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 1,
+      "minimum_S": 0.17530818746318824,
+      "symmetry": 3.885639291769062e-17,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        1.734723475976807e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 2,
+      "minimum_S": 0.22358426312146934,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 3,
+      "minimum_S": 0.22442703476532513,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        2.220446049250313e-16,
+        2.220446049250313e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 4,
+      "minimum_S": 0.19478160341997225,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        3.469446951953614e-18
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 5,
+      "minimum_S": 0.23545768417668833,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        1.3877787807814457e-17,
+        4.440892098500626e-16
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 6,
+      "minimum_S": 0.24912508267867908,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        4.440892098500626e-16,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    },
+    {
+      "C": 2.0,
+      "epsilon": 2.0,
+      "zeta": 2.0,
+      "beta_fraction": 0.9,
+      "fixture": 7,
+      "minimum_S": 0.09739337431096029,
+      "symmetry": 0.0,
+      "imaginary": 0.0,
+      "longitudinal": [
+        3.469446951953614e-18,
+        1.3877787807814457e-17
+      ],
+      "coverage": 0.0,
+      "passed": true
+    }
+  ],
+  "kicks": [
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "speed": 0.0,
+      "predicted_max": 0.0,
+      "observed_max": [
+        1.431608687810465e-23,
+        7.158043439565825e-24
+      ],
+      "errors": [
+        1.431608687810465e-23,
+        7.158043439565825e-24
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "speed": 0.0007,
+      "predicted_max": 4.930544116553693e-06,
+      "observed_max": [
+        4.930544116239285e-06,
+        4.930544116475091e-06
+      ],
+      "errors": [
+        1.249285577264343e-13,
+        6.246427945851948e-14
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.0,
+      "speed": 0.2,
+      "predicted_max": 0.0014087268904439123,
+      "observed_max": [
+        0.0014087268902911107,
+        0.0014087268904057122
+      ],
+      "errors": [
+        1.0000208917043333e-08,
+        5.000104459473959e-09
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "speed": 0.0,
+      "predicted_max": 0.018574375510316207,
+      "observed_max": [
+        0.018574375509626193,
+        0.018574375510143706
+      ],
+      "errors": [
+        1.1360148932659797e-12,
+        2.8400892748692286e-13
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "speed": 0.0007,
+      "predicted_max": 0.018574389162479422,
+      "observed_max": [
+        0.018574389161789384,
+        0.018574389162306908
+      ],
+      "errors": [
+        2.451334263444446e-12,
+        1.2255873941581508e-12
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 0.5,
+      "speed": 0.2,
+      "predicted_max": 0.019670767583518167,
+      "observed_max": [
+        0.019670767581438233,
+        0.01967076758299818
+      ],
+      "errors": [
+        1.0002878175069396e-08,
+        5.000771775842683e-09
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "speed": 0.0,
+      "predicted_max": 0.07429750204126483,
+      "observed_max": [
+        0.07429750203850477,
+        0.07429750204057482
+      ],
+      "errors": [
+        4.544059573063919e-12,
+        1.1360357099476914e-12
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "speed": 0.0007,
+      "predicted_max": 0.07429755664991769,
+      "observed_max": [
+        0.07429755664715754,
+        0.07429755664922763
+      ],
+      "errors": [
+        9.804393832616072e-12,
+        4.902113769436351e-12
+      ],
+      "passed": true
+    },
+    {
+      "n": 8,
+      "zeta": 2.0,
+      "speed": 0.2,
+      "predicted_max": 0.07868307033407267,
+      "observed_max": [
+        0.07868307032575293,
+        0.07868307033199272
+      ],
+      "errors": [
+        1.0010885953537496e-08,
+        5.002773709184005e-09
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "speed": 0.0,
+      "predicted_max": 0.0,
+      "observed_max": [
+        5.777754949318123e-23,
+        2.888877475275256e-23
+      ],
+      "errors": [
+        5.777754949318123e-23,
+        2.888877475275256e-23
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "speed": 0.0007,
+      "predicted_max": 1.7188842329203548e-05,
+      "observed_max": [
+        1.7188842325916715e-05,
+        1.718884232838184e-05
+      ],
+      "errors": [
+        4.515831207852331e-13,
+        2.2579156162828995e-13
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.0,
+      "speed": 0.2,
+      "predicted_max": 0.0049110978083438716,
+      "observed_max": [
+        0.004911097806838833,
+        0.004911097807967611
+      ],
+      "errors": [
+        3.614806449094552e-08,
+        1.8074032255059412e-08
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "speed": 0.0,
+      "predicted_max": 0.044816618155854915,
+      "observed_max": [
+        0.04481661815317686,
+        0.044816618155185395
+      ],
+      "errors": [
+        5.366644628690409e-12,
+        1.3416628918960782e-12
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "speed": 0.0007,
+      "predicted_max": 0.044816651096062525,
+      "observed_max": [
+        0.04481665109338446,
+        0.04481665109539301
+      ],
+      "errors": [
+        1.4115701996828705e-10,
+        7.057769602444473e-11
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 0.5,
+      "speed": 0.2,
+      "predicted_max": 0.047462014490526186,
+      "observed_max": [
+        0.04746201448491599,
+        0.04746201448912364
+      ],
+      "errors": [
+        4.1882255960232206e-08,
+        2.0940751719461526e-08
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "speed": 0.0,
+      "predicted_max": 0.17926647262341966,
+      "observed_max": [
+        0.17926647261270745,
+        0.17926647262074158
+      ],
+      "errors": [
+        2.1466578514761636e-11,
+        5.366651567584313e-12
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "speed": 0.0007,
+      "predicted_max": 0.1792666043842501,
+      "observed_max": [
+        0.17926660437353784,
+        0.17926660438157205
+      ],
+      "errors": [
+        5.64618219352545e-10,
+        2.8230831893713494e-10
+      ],
+      "passed": true
+    },
+    {
+      "n": 12,
+      "zeta": 2.0,
+      "speed": 0.2,
+      "predicted_max": 0.18984805796210474,
+      "observed_max": [
+        0.18984805793966397,
+        0.18984805795649456
+      ],
+      "errors": [
+        1.6752450872521696e-07,
+        8.376187809154556e-08
+      ],
+      "passed": true
+    }
+  ],
+  "passed": true
+}
