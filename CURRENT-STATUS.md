@@ -1,5 +1,8 @@
 # Current status: photon–companion research
 
+**First SE-2 generated-source result, 20 September 2026.** [Checkpoint report](research_work/experiments/spatial_exchange/emitter-source-report.md). The first of ten mixed-emitter runs passes its numerical gates and independent energy reconstruction (67 partial audit checks). At theta=pi/4, chi=0, its integrated wave-sector source derivative is -0.0203703 with energy 0.00118935, ratio -17.1273. This is not the desired positive source enhancement and is not a statement about the sign of the complete system's gravity. Nine declared cases and the existing refinement campaigns remain running/pending. No observational solution is claimed; all twelve requirements remain active.
+
+
 **Two-channel emitter SE-2 started, 20 September 2026.** [Protocol](research_work/experiments/spatial_exchange/emitter-protocol.md). The internal matter oscillator now couples to a fixed global combination cos(theta) X + sin(theta) Y. Both field reactions and the positional reaction are derived from the same positive internal-energy square; no external wave reservoir is supplied. All 48 Hamiltonian/control fixtures pass, including theta=0 equivalence with SE-1. The ten declared spatial runs are underway; no enhancement, refinement or observational success is claimed. Source code was pinned and pushed at 67b3eb1 before execution. SE-1 now has nine completed runs with 129 partial archive checks; spatial and rotation cases remain pending. SR-2 remains live with four completed runs. The full twelve-item goal remains active.
 
 

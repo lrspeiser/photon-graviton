@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "passed": true,
+    "complete": false,
+    "completed_runs": 1,
+    "declared_runs": 10,
+    "source_sha256": "0624a74955508ea51cf025de17035dfa51301f227615904e04f798c6bebb2379",
+    "baseline_sha256": "761fae6f3d16c6a09acc126e59144fad4c6ba376483a83eaff90163646d247ea"
+  },
+  "rows": [
+    {
+      "name": "emitter-mixed-chi0",
+      "energy": 0.0011893504741629047,
+      "source": -0.020370320859473542,
+      "response_per_energy": -17.12726509300019,
+      "positive_source": 0.0007573566946913246,
+      "negative_source": -0.021127677554164868,
+      "contributions": {
+        "kinetic": 0.0016219189529284408,
+        "shift": -7.44884376728827e-09,
+        "mixing": -0.021992232363558215
+      },
+      "numerical_source": -0.0203703208652168,
+      "derivative_error": 5.743256564771926e-12,
+      "energy_error": 2.168404344971009e-19,
+      "shells": [
+        {
+          "lower": 0,
+          "upper": 1,
+          "source": -0.00032098283674586187,
+          "absolute_source": 0.00032098283674586187
+        },
+        {
+          "lower": 1,
+          "upper": 2,
+          "source": -0.005156796572044446,
+          "absolute_source": 0.005156796572044446
+        },
+        {
+          "lower": 2,
+          "upper": 3,
+          "source": -0.0023782859420713133,
+          "absolute_source": 0.0037559278083941455
+        },
+        {
+          "lower": 3,
+          "upper": 4,
+          "source": -0.009346242597963073,
+          "absolute_source": 0.009483314121022872
+        },
+        {
+          "lower": 4,
+          "upper": null,
+          "source": -0.00316801291064885,
+          "absolute_source": 0.003168012910648866
+        }
+      ],
+      "minimum_U": -0.00354223310234983,
+      "maximum_U": -9.032012373132823e-42,
+      "internal_energy_change": -0.0011069015166045304,
+      "state_sha256": "055777b731a6bc38a0caa7e2ec620993be33cc44624b1f3a84ccd5b96e8bf8c8",
+      "passed": true,
+      "source_relative_to_emission_only": -9.160992193328456,
+      "source_relative_to_X_chi200": -11.318006830743013
+    }
+  ]
+}
