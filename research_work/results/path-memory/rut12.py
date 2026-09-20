@@ -24,6 +24,7 @@ import rut12_tasks as TASKS     # noqa: E402
 from rut12_tasks import CODE, PROTOCOL, TH, _find, np, run_task   # noqa: E402
 import rut7 as S7               # noqa: E402  (series i/o, by import)
 
+DRIVERS = ('rut12.py', 'rut11.py', 'rut10.py', 'rut9.py', 'rut8.py', 'rut7.py')
 KEYS = ('mean_L', 'sigma_L', 'mean_rc', 'sigma_rc', 'rms_epicycle')
 
 
@@ -78,12 +79,13 @@ def gate_A1(budgets):
 
 def gate_A2(budgets):
     A = TH['A']
-    plain = [r for r in budgets.values() if r['offset'] == 0. and r['step'] == A['reference_step']]
+    # sorted, not in completion order: an average over tasks must not depend on which worker was quickest
+    plain = [r for _, r in sorted(budgets.items()) if r['offset'] == 0. and r['step'] == A['reference_step']]
     vals = {f"box{r['box']}:modes{r['modes']}": r['L_field'] for r in plain}
-    ref = np.mean(list(vals.values()))
+    ref = float(np.mean([vals[k] for k in sorted(vals)]))
     spread = max(abs(v - ref)/abs(ref) for v in vals.values()) if vals else float('inf')
     worst = max(abs(r['angular_balance']) for r in plain) if plain else float('inf')
-    ctrl = [r for r in budgets.values() if r['offset'] != 0.]
+    ctrl = [r for _, r in sorted(budgets.items()) if r['offset'] != 0.]
     c_close = max((abs(r['angular_balance']) for r in ctrl), default=0.)
     c_field = max((abs(r['L_field'] - ref)/abs(ref) for r in ctrl), default=0.)
     rejected = c_close > A['control_closure_min'] and c_field > A['control_field_min']
@@ -238,7 +240,10 @@ def main():
     cache = Path(args.resume_from) if args.resume_from else out/'cache'
     cache.mkdir(parents=True, exist_ok=True)
     code = {f: hashlib.sha256(_find(f).read_bytes()).hexdigest() for f in CODE}
-    stamp = hashlib.sha256((json.dumps(code, sort_keys=True)
+    # the cache is keyed on the code that PRODUCES a task result, not on this driver: correcting an assembly
+    # or a gate must not throw away five hours of finished work.
+    task_code = {f: h for f, h in code.items() if f not in DRIVERS}
+    stamp = hashlib.sha256((json.dumps(task_code, sort_keys=True)
                             + TASKS.protocol_path().read_text(encoding='utf-8')).encode()).hexdigest()[:16]
     results, t0, reused, errors = {}, time.time(), 0, []
 

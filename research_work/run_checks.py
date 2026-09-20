@@ -172,6 +172,10 @@ def main():
         # Expected to exit non-zero: two of its ten gates failed, on faults in what the protocol declared
         # (see the report), and by the owner's ruling on 3a80fec a failed gate is not reworded until it passes.
         ('path-memory/rut11_checks.py', []),
+        # RUT-1 stage 12, formation from an empty field (path-memory/protocol-rut12.md): the angular-momentum
+        # ledger of the reciprocal field, derived here and closing at second order; an annulus in equilibrium
+        # with the bare point mass given an empty field and switched on; both budgets carried through.
+        ('path-memory/rut12_checks.py', []),
         # LAST, and expected to exit non-zero: by the owner's ruling on 3a80fec stage 8's numerical verification
         # status stays FAILED in its archive (the ring-limit gate, as declared and as amended). The job says so.
         ('path-memory/rut8_checks.py', []),
