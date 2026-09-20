@@ -166,7 +166,12 @@ crossings (linear 0.02044, quadratic 0.019927, cubic 0.01991) are reported besid
 | gate | requirement | negative control the gate must reject |
 |---|---|---|
 | D1 the disturbance is as declared | at t = 0 the ring's \|C_m\|/C₀ is the declared target to 2%, and the source the folded sample would write carries \|S_m\|/S₀ under 10⁻¹⁰ **at the harmonic being disturbed**, so what is watched can only be what was put there | an ordinary draw of the same size must be seen to carry that source above 10⁻³ |
-| D2 the apparatus would see growth | B13, given the same disturbance at m = 2, grows, and its fitted rate over the declared window agrees with stage 9's recalculated root to 15% or three standard errors | — (this gate *is* the control every quiet reading rests on) |
+| D2 the apparatus would see growth | B13, given the same kind of disturbance at m = 2, grows, and its fitted rate agrees with stage 9's recalculated root to 15% or three standard errors, in every realization | — (this gate *is* the control every quiet reading rests on) |
+
+The control is kicked at 10⁻⁷, not the 10⁻⁵ the quiet populations get, and is read over its **growth phase** —
+from the first record above three times its initial amplitude to the last below 2×10⁻⁴ — because it is the one
+run that grows, and a fixed window would be reading its saturation rather than its rate. The quiet populations
+cannot be read that way: nothing rises, so their window is the fixed one declared above.
 | D3 completeness | every declared run reaches its horizon | — |
 
 ## The declared reading
@@ -188,6 +193,23 @@ through the operator norm, which is itself only as good as its grid. Growth slow
 band-edge prototype shows is where this rule's convergence begins to degrade. The sharply truncated
 distribution function is still the model; nothing here changes it. And the disturbance is one declared shape at
 one declared amplitude: another shape may excite something this one does not.
+
+## Corrections made before the first run
+
+The protocol and its code were pushed in c92be7c and a dry run was started. Two faults surfaced in the first
+minutes, before any result existed, and were corrected in the commit that carries this paragraph. Both are
+changes to this file; the earlier text is in the history.
+
+1. **The ladder's names.** Stage 9's `family_name` rounds a width to three decimals, so the eight declared
+   widths would have collapsed onto two names and the wrong populations would have been built and searched.
+   The ladder now names each member to the digits that distinguish it.
+2. **The control run's amplitude and window.** B13 given the same 10⁻⁵ kick as the quiet populations passes
+   the nonlinear ceiling near period 15, so a fit over periods 10 to 40 would have been reading saturation and
+   the gate would have failed for a reason that has nothing to do with the apparatus. The control is kicked at
+   10⁻⁷ and read over its growth phase, as stage 8 and stage 10 read a growing run.
+
+Nothing had been computed when these were made: the dry run had finished one task, the reference-integral
+check, and its output was discarded.
 
 ## Declared thresholds (read by the driver; the code holds none of its own)
 
@@ -314,7 +336,11 @@ one declared amplitude: another shape may excite something this one does not.
         "variant_target_small": 1e-06,
         "amplitude_agreement": 0.02,
         "other_harmonic_max": 1e-10,
-        "control_harmonic_min": 0.001
+        "control_harmonic_min": 0.001,
+        "control_target": 1e-07,
+        "control_ceiling": 0.0002,
+        "control_window_lo_factor": 3,
+        "control_window_shortest": 8
     },
     "C": {
         "replay_prefix": 2

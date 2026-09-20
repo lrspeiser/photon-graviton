@@ -211,20 +211,43 @@ def gate_D1(runs):
                 passed=bool(ok and worst > D['control_harmonic_min']))
 
 
+def control_fit(run):
+    """The growing control is read over its growth phase, not over the quiet populations' fixed window: it
+    starts from a kick, not from its eigenmode, and it reaches the nonlinear ceiling. From the first record
+    above the declared factor times the initial amplitude to the last below the ceiling -- stage 8's rule."""
+    D = TH['D']
+    t, a, ph, _ = S10.mode_series(run, run['m'])
+    above = np.nonzero(a > D['control_window_lo_factor']*a[0])[0]
+    if not len(above):
+        return dict(window=None, note='the amplitude never rose above the lower bound')
+    i0 = int(above[0])
+    over = np.nonzero(a[i0:] > D['control_ceiling'])[0]
+    i1 = i0 + int(over[0]) if len(over) else len(a)
+    if t[i1 - 1] - t[i0] < D['control_window_shortest']:
+        return dict(window=[float(t[i0]), float(t[i1 - 1])], note='the window is shorter than the declared minimum')
+    sel = slice(i0, i1)
+    g = np.polyfit(t[sel]*T0, np.log(a[sel]), 1)
+    p = np.polyfit(t[sel]*T0, ph[sel], 1)
+    resid = np.log(a[sel]) - np.polyval(g, t[sel]*T0)
+    return dict(window=[float(t[i0]), float(t[i1 - 1])], records=int(i1 - i0), rate=float(g[0]),
+                pattern_speed=float(-p[0]/run['m']), rms_residual=float(np.sqrt(np.mean(resid**2))),
+                e_foldings=float(np.log(a[i1 - 1]/a[i0])), initial_amplitude=float(a[0]))
+
+
 def gate_D2(runs):
-    """The apparatus would see growth: the population with a known mode, given the same declared disturbance,
+    """The apparatus would see growth: the population with a known mode, given the same kind of disturbance,
     grows at the rate stage 9 recalculated. This gate IS the control the quiet readings rest on."""
     D = TH['D']
     rows = {k: r for k, r in sorted(runs.items())
             if r['name'] == D['control_population'] and r['target'] != 0. and r['variant'] == 'base'}
-    fits = {k: response_fit(r, *D['window']) for k, r in rows.items()}
-    rates = [f['rate'] for f in fits.values() if f]
+    fits = {k: control_fit(r) for k, r in rows.items()}
+    rates = [f['rate'] for f in fits.values() if f and 'rate' in f]
     mean, err = _mean_err(rates)
     pred = D['control_predicted_rate']
-    good = bool(rates) and abs(mean - pred) <= max(D['control_agreement']*pred, 3*(err or 0.))
+    good = bool(rates) and len(rates) == len(rows)         and abs(mean - pred) <= max(D['control_agreement']*pred, 3*(err or 0.))
     return dict(rows=fits, mean_rate=mean, standard_error=err, predicted_rate=pred,
                 relative_difference=None if mean is None else float((mean - pred)/pred),
-                agreement=D['control_agreement'], realizations=len(rates), passed=bool(good))
+                agreement=D['control_agreement'], realizations=len(rates), runs=len(rows), passed=bool(good))
 
 
 def gate_D3(runs):
@@ -307,9 +330,12 @@ def reading_variants(runs):
 def disturbance_jobs():
     D = TH['D']
     jobs = []
-    for name in D['quiet'] + [D['control_population']]:
+    for name in D['quiet']:
         for k in range(D['realizations']):
             jobs.append((name, D['m_primary'], D['quarter'], k, D['target'], 'base', D['horizon']))
+    for k in range(D['realizations']):        # the control is kicked far smaller: it grows, and must stay
+        jobs.append((D['control_population'], D['m_primary'], D['quarter'], k,   # under the nonlinear ceiling
+                     D['control_target'], 'base', D['horizon']))
     for m in D['odd_m']:
         for k in range(D['odd_realizations']):
             jobs.append((D['odd_population'], m, D['quarter'], k, D['target'], 'base', D['horizon']))
@@ -322,7 +348,11 @@ def disturbance_jobs():
 
 
 def first_wave():
-    jobs = [('A1', 'A1', ())]
+    # the live runs are submitted first: they are the long pole, and the pool hands work out in this order
+    jobs = []
+    for name, m, quarter, k, target, variant, horizon in disturbance_jobs():
+        jobs.append(('disturb', f'D:{name}:m{m}:q{quarter}:k{k}:t{target:+.0e}:{variant}',
+                     (name, m, quarter, k, target, variant, horizon)))
     for name in TH['A']['roots']:
         jobs.append(('A2', f'A2:{name}', (name, 2, TH['A']['rect'])))
     for name in TH['L']['quiet'] + [TH['M']['control_population']]:
@@ -332,9 +362,7 @@ def first_wave():
                 jobs.append(('norm', f'norm:{name}:m{m}:refined', (name, m, True)))
     for dE in TH['T']['dE_values']:
         jobs.append(('threshold', f'T:{dE:.5f}', (dE, 2)))
-    for name, m, quarter, k, target, variant, horizon in disturbance_jobs():
-        jobs.append(('disturb', f'D:{name}:m{m}:q{quarter}:k{k}:t{target:+.0e}:{variant}',
-                     (name, m, quarter, k, target, variant, horizon)))
+    jobs.append(('A1', 'A1', ()))
     return jobs
 
 

@@ -51,7 +51,9 @@ def population(name):
     mo = re.fullmatch(r'B_dE([0-9.]+)', name)
     if not mo:
         raise KeyError(name)
-    return R9.task_family_population(float(mo.group(1)))
+    built = R9.task_family_population(float(mo.group(1)))
+    built['name'] = name                      # stage 9's own name rounds to three decimals; keep the asked-for one
+    return built
 
 
 def mean_radius(state):
@@ -222,11 +224,17 @@ def task_norm(name, m, refined=False):
 
 
 # ---------------------------------------------------------------- part T: where the family's threshold is
+def ladder_name(dE):
+    """A name that round-trips: stage 9's `family_name` rounds to three decimals, which would collapse the
+    declared widths of the ladder onto two names and build the wrong populations."""
+    return 'B_dE%g' % float(dE)
+
+
 def task_threshold(dE, m=2):
     """One family B member, built as stage 9 built them, searched from the new floor upward for its fastest
-    root: the family's stability boundary bracketed by resolution instead of extrapolated."""
+    root: the family's boundary bracketed by resolution instead of extrapolated."""
     t0 = time.time()
-    name = R9.family_name(float(dE))
+    name = ladder_name(dE)
     pop = population(name)
     rect = (REP['gamma_min'], TH['T']['re_max'], TH['T']['im_lo'], TH['T']['im_hi'])
     rule, harmonics = rule_for(name, m, rect)
