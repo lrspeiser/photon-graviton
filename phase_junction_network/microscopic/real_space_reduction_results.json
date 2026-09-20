@@ -1,0 +1,68 @@
+{
+  "decision": "The local real-space constraints reduce to exactly two positive propagating modes for every nonzero lattice momentum. The next gate is a finite local implementation of the second-class connection constraints and a principled treatment of the global volume/conformal mode.",
+  "derivative_regulator": "periodic central difference with symbol i*sin(2*pi*n/L)",
+  "lattices": [
+    {
+      "constraint_surface_dimension": 208,
+      "expected_first_class_constraint_rank": 104,
+      "expected_physical_phase_dimension": 104,
+      "expected_positive_frequency_count": 52,
+      "extended_connection_second_class_constraints": 972,
+      "first_class_constraint_rank": 104,
+      "lattice_size": 3,
+      "maximum_frequency": 1.500000000000004,
+      "maximum_gauge_null_singular_value": 2.164674978263013e-15,
+      "maximum_growth_rate": 1.6653345369377348e-15,
+      "maximum_relative_frequency_error": 3.625973214694715e-15,
+      "mean_zero_phase_dimension": 312,
+      "minimum_frequency": 0.8660254037844365,
+      "minimum_nonzero_symplectic_singular_value": 0.9999999999999996,
+      "minimum_physical_hessian_eigenvalue": 0.749999999999998,
+      "physical_phase_dimension": 104,
+      "positive_frequency_count": 52,
+      "scalar_vector_closure_residual": 1.6653345369377348e-16,
+      "sites": 27
+    },
+    {
+      "constraint_surface_dimension": 992,
+      "expected_first_class_constraint_rank": 496,
+      "expected_physical_phase_dimension": 496,
+      "expected_positive_frequency_count": 248,
+      "extended_connection_second_class_constraints": 4500,
+      "first_class_constraint_rank": 496,
+      "lattice_size": 5,
+      "maximum_frequency": 1.6472782070926875,
+      "maximum_gauge_null_singular_value": 4.97007702757538e-15,
+      "maximum_growth_rate": 7.605027718682322e-15,
+      "maximum_relative_frequency_error": 2.2044903280835783e-14,
+      "mean_zero_phase_dimension": 1488,
+      "minimum_frequency": 0.5877852522924705,
+      "minimum_nonzero_symplectic_singular_value": 0.9999999999999953,
+      "minimum_physical_hessian_eigenvalue": 0.3454915028125236,
+      "physical_phase_dimension": 496,
+      "positive_frequency_count": 248,
+      "scalar_vector_closure_residual": 2.220446049250313e-16,
+      "sites": 125
+    }
+  ],
+  "periodic_global_sector": {
+    "hamiltonian_inertia": {
+      "negative": 1,
+      "positive": 5,
+      "zero": 6
+    },
+    "interpretation": "The six constant frame coordinates have zero potential and the homogeneous trace momentum has negative kinetic sign. The propagating test therefore fixes/removes the global frame sector. A fundamental model must gauge, constrain, lift, or otherwise explain this global conformal direction.",
+    "kinetic_eigenvalues": [
+      -0.5000000000000001,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "phase_dimension": 12
+  },
+  "status": "full real-space propagating-sector reduction verified without Fourier block reduction or a TT projector",
+  "uses_fourier_during_reduction": false,
+  "uses_transverse_traceless_projector": false
+}
