@@ -79,5 +79,5 @@ def main():
     (HERE/"report.md").write_text("\n".join(lines),encoding="utf8")
     dump(HERE/"evidence-sha256.json",{p.relative_to(HERE).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
         for folder in (HERE/"evidence-v1",root) for p in folder.rglob("*") if p.is_file()})
-    print(json.dumps({k:v for k,v in summary.items() if k!="comparisons"},indent=2))
+    print((root/"summary.json").read_text(encoding="utf8"))
 if __name__=="__main__":main()
