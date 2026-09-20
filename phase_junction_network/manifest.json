@@ -1,6 +1,6 @@
 {
   "module": "phase_junction_network",
-  "status": "exploratory candidate; finite kinematics, constrained local and real-space linear reductions, global fixed-volume control, and reduced transfer-matrix checks completed; finite local quantum implementation and nonlinear closure remain open",
+  "status": "exploratory candidate; finite kinematics, finite Weyl connection locking, constrained local and real-space linear reductions, global fixed-volume control, and reduced transfer-matrix checks completed; finite dressed frame dynamics and nonlinear closure remain open",
   "created_utc": "2026-09-20",
   "active_branch": "main",
   "dependencies": [
@@ -9,6 +9,7 @@
     "scipy>=1.10"
   ],
   "latest_commands": [
+    "python phase_junction_network/microscopic/check_finite_second_class_lock.py --output phase_junction_network/microscopic/finite_second_class_lock_results.json",
     "python phase_junction_network/microscopic/check_constrained_local_reduction.py --sizes 3,5,7 --output phase_junction_network/microscopic/constrained_local_reduction_results.json",
     "python phase_junction_network/microscopic/check_real_space_reduction.py --sizes 3,5 --output phase_junction_network/microscopic/real_space_reduction_results.json",
     "python phase_junction_network/microscopic/check_global_volume_constraint.py --output phase_junction_network/microscopic/global_volume_constraint_results.json",
@@ -24,6 +25,19 @@
       "L3_p5_logical_qudits": 58,
       "L5_p7_logical_qudits": 254,
       "exact_scalar_vector_commutator": true
+    },
+    "finite_connection_second_class_lock": {
+      "construction": "gapped Weyl relative oscillator for P_C and C-Ah",
+      "exact_dressed_frame_algebra": true,
+      "p3_ground_band_dimension": 9,
+      "p3_expected_ground_band_dimension": 9,
+      "p5_ground_band_dimension": 5,
+      "p5_expected_ground_band_dimension": 5,
+      "minimum_tested_gap": 0.8081382192019673,
+      "asymptotic_constraint_cost_power": -0.9719057388296217,
+      "asymptotic_constraint_rms_power": -0.4859528694148097,
+      "asymptotic_gap_error_power": -0.9831409015880235,
+      "maximum_dressed_algebra_residual": 1.3322676295501878e-15
     },
     "local_invariant_square_branch": {
       "dispersion": "omega proportional to k^3",
@@ -70,9 +84,10 @@
     }
   },
   "open_gates": [
-    "finite local implementation of P_C=0 and C-Gamma[h]=0 before continuum reduction",
-    "finite local transfer matrix matching the reduced two-mode benchmark without a TT projector",
-    "nonlinear closure of local and fixed-volume constraints with gravitational self-energy",
+    "finite dressed frame/Fierz-Pauli Hamiltonian built from Zbar and Xbar on the local constraint skeleton",
+    "finite lattice spectrum showing two linear tensor branches before the p-to-infinity limit",
+    "nonlinear extension of the connection lock and fixed-volume constraints",
+    "nonlinear closure with gravitational self-energy",
     "microscopic derivation of Z_g/Z_A",
     "chiral matter defects and protected mass hierarchy",
     "local vacuum-energy and cosmological behavior",
@@ -80,7 +95,9 @@
   ],
   "file_integrity_note": "git_blob_sha is Git's canonical blob SHA-1 for committed content; this manifest intentionally does not self-hash.",
   "latest_files": [
-    {"path": "microscopic/README.md", "git_blob_sha": "8243b028fe367fbbbca3355dc7f2e4a509ee4c4d"},
+    {"path": "microscopic/finite_second_class_lock.md", "git_blob_sha": "c8b6671e3b8e28763121954c84d83e010d5c8e7c"},
+    {"path": "microscopic/check_finite_second_class_lock.py", "git_blob_sha": "bb5d5abf824e3d53b235c23f4f312b582bbac74d"},
+    {"path": "microscopic/finite_second_class_lock_results.json", "git_blob_sha": "596e22fc711f49b06ef230382e3b52a23b4025ed"},
     {"path": "microscopic/constrained_local_reduction.md", "git_blob_sha": "ce5c79d9de3c47316267bf58ad4d3ba8bfd0fc01"},
     {"path": "microscopic/check_constrained_local_reduction.py", "git_blob_sha": "2c14f12420166ccc287f7dca75929dc5950a3a26"},
     {"path": "microscopic/constrained_local_reduction_results.json", "git_blob_sha": "66a12d8a028b0233bec0b1475e5b0ecf63fe5faf"},
