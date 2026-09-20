@@ -1,1 +1,152 @@
-{"active_branch":"main","architecture_audit":"phase_junction_network/architecture_audit.md","companion_integration":"phase_junction_network/companion_integration.md","companion_ontology":"phase_junction_network/companion_ontology.md","created_utc":"2026-09-20","dependencies":["python>=3.11","numpy>=1.24","scipy>=1.10"],"file_integrity_note":"Git blob identifiers are tracked by repository history; this manifest intentionally does not self-hash.","immediate_work_order":["detune the issue-6 spin-1 Hamiltonian around the RK anchor and demonstrate or reject a stable z=1 two-photon phase with a 1/L dynamical gap and no scalar branch","embed the issue-4 dynamical endpoint and issue-7 bridge in the actual issue-6 electromagnetic phase and test finite Ward identities","derive r0, eta, U_A, K_A, U_g, K_g, the electromagnetic detuning, gravity clock ratio, and companion coefficients from one microscopic move set under issue 3","close nonlinear constraints, gravitational self-energy, many-body companion binding, and the volume-vacuum sector under issue 5","complete mirror removal or symmetric gapping, common-cone recovery, interacting continuum consistency, and regulator universality under issue 8","maintain and freeze the parameter and observable ledger required by issue 9"],"master_tracker_issue":10,"matter_construction":"phase_junction_network/microscopic/chiral_matter_defect.md","module":"phase_junction_network","pillar_status":{"continuum_quantum_consistency_and_lorentz_recovery":{"issue":8,"status":"open_including_electromagnetic_z1_continuation_matter_mirror_completion_companion_common_cone_and_regulator_universality"},"finite_chiral_matter_and_mass_protection":{"downstream_issues":[3,6,8,9],"issue":4,"status":"finite_free_regulator_prototype_pass_observed_spectrum_mirror_completion_interactions_and_clocks_open"},"finite_dressed_gravity_hamiltonian":{"downstream_issues":[3,5,6,8],"issue":2,"status":"linear_finite_constrained_regulator_pass_nonlinear_coefficients_common_cone_and_universality_open"},"finite_electromagnetic_coulomb_qed_phase":{"downstream_issues":[3,8,9],"issue":6,"status":"stage_6A_finite_static_coulomb_ground_state_pass_z1_photon_dynamical_matter_ward_identities_and_qed_limit_open"},"frozen_predictions_and_empirical_test_ladder":{"issue":9,"status":"open"},"linear_gravity":{"issue":2,"status":"established_internally_under_linear_assumptions"},"nonlinear_gravity_and_vacuum":{"issue":5,"status":"open"},"ontology_and_companion_integration":{"issue":7,"status":"finite_architecture_established_physical_scaling_many_body_completion_and_empirical_adequacy_open"},"reproducibility_and_negative_controls":{"status":"established_for_current_issue_2_issue_4_issue_6A_and_issue_7_checks"},"shared_microscopic_coefficients_and_impedance_ratio":{"issue":3,"status":"open_including_electromagnetic_detuning_gravity_clock_matter_localization_and_companion_parameters"}},"results":{"constrained_local_reduction":{"extended_phase_dimension":48,"failures":0,"first_class_constraints":4,"maximum_relative_frequency_error":1.9810714906408463e-15,"physical_configuration_modes":2,"physical_phase_dimension":4,"second_class_constraints":36,"tested_nonzero_modes":492,"uses_TT_projector":false},"finite_chiral_matter_defect":{"all_exchange_phases_fermionic":true,"charges":[-11,-5,-1,-1,9,9],"claim_boundary":"finite free-regulator endpoint prototype; not Standard Model, observed masses, mirror removal, interacting QED, clocks, or radiative stability","exact_flux_bundle_gauss_covariance":true,"gap_hierarchy_ratio":32452901.539883576,"maximum_frame_derivative_species_difference":0.0,"minimum_nonzero_corner_gap":1.1674499031546928,"one_physical_weyl_corner_per_species":true,"primitive":true,"remote_mirror_wall_retained":true,"result_file":"phase_junction_network/microscopic/chiral_matter_results.json","slab_width":12,"status":"PASS","sum_q":0,"sum_q_cubed":0,"vectorlike_pair_present":false},"finite_connection_second_class_lock":{"construction":"gapped Weyl relative oscillator for P_C and C-Ah","exact_dressed_frame_algebra":true,"maximum_dressed_algebra_residual":1.3322676295501878e-15,"minimum_tested_gap":0.8081382192019673,"result_file":"phase_junction_network/microscopic/finite_second_class_lock_results.json"},"finite_dressed_frame_hamiltonian":{"acceptance":"PASS at the linear finite constrained regulator scope","construction":"positive two-copy clock/Villain Hamiltonian on the exact odd-prime scalar/vector quotient using Zbar and dressed Xbar","finite_primes":[5,7,11],"global_sector_policy":"propagating test excludes k=0 and separates four periodic global qudits","ground_band_leakage_operator_norm":5.153550879007343e-16,"logical_frame_qudits_per_nonzero_axis_block":2,"maximum_full_symbol_polarization_split":2.8317063242517616e-16,"maximum_full_symbol_relative_frequency_error":2.1447861848524062e-16,"maximum_linear_plus_cubic_fit_residual":0.001663183064960994,"maximum_lock_frame_commutator":1.6653345369377348e-16,"minimum_connection_lock_to_tensor_gap_ratio":2.491448893079969,"p11_tensor_mean_compact_cut_bond_fraction":0.00018911573225795152,"result_file":"phase_junction_network/microscopic/finite_dressed_frame_results.json","scope":"linear finite constrained regulator; nonlinear closure, coefficient derivation, common cone, and universality remain open","two_polarization_first_gap_degeneracy":2,"uses_TT_projector":false},"finite_electromagnetic_link":{"exact_gauss_commutator":true,"minimal_tested_nontrivial_dimension":3,"minimal_tested_nontrivial_spin":1.0},"finite_electromagnetic_static_coulomb_stage":{"acceptance":"PASS at Stage 6A finite static ground-state scope","charge_coulomb_amplitudes":[0.8440110611541735,0.6044592522834017],"charge_coulomb_weighted_r_squared":[0.47207696630481855,0.5263825825562981],"charge_lattice_sizes":[6,8],"charge_result_file":"phase_junction_network/microscopic/finite_em_charge_results.json","claim_boundary":"static RK Coulomb ground-state anchor; not z=1 photon dynamics, dynamical charged matter, Ward identities, vacuum polarization, or interacting QED","dynamical_charged_matter":false,"effective_linear_string_slopes":[0.007553038485717335,0.0033091265003396516],"effective_string_slope_decreases_with_size":true,"exact_gauss_residual":0,"exact_periodic_cube_dimension":146327,"exact_periodic_cube_transition_edges":1236144,"exact_result_file":"phase_junction_network/microscopic/finite_em_exact_cube_results.json","finite_hamiltonian_no_rotor_inserted":true,"flux_result_file":"phase_junction_network/microscopic/finite_em_flux_results.json","issue_6_closed":false,"larger_representation_static_control":true,"master_result_file":"phase_junction_network/microscopic/finite_em_coulomb_results.json","model":"H(u,t,v)=u/2 sum E^2 - t sum(W+W^dagger) + v sum D with D=sqrt(W^dagger W)+sqrt(W W^dagger)","rk_point":"u=0 and v=t; every local term is a positive weighted graph Laplacian","spin1_L_times_one_flux_free_energy_fractional_range":0.17945239672978677,"spin1_max_axis_mean_transverse_split":0.21876190484541472,"spin1_max_longitudinal_fraction":5.2456763705530775e-33,"spin1_wilson_perimeter_preferred_all_sizes":true,"spin1_winding_variance_over_L_fractional_range":0.0604870565029377,"spin2_max_longitudinal_fraction":4.166663406545607e-33,"spin2_wilson_perimeter_preferred_all_sizes":true,"spin2_winding_variance_over_L_fractional_range":0.04095392829587904,"stage_6A_static_coulomb_passed":true,"ward_identities_vacuum_polarization_and_qed_limit":false,"z1_quantum_photon_and_1_over_L_dynamical_gap":false},"finite_gravity_constraint_skeleton":{"L3_p5_logical_qudits":58,"L5_p7_logical_qudits":254,"exact_scalar_vector_commutator":true},"finite_photon_companion_bridge":{"best_event_component_ledger_sum_error":8.881784197001252e-16,"bound_below_free_band_by":1.2027895096319463,"companion_to_photon_max_speed_ratio":0.35714285714285715,"end_to_end_energy_expectation_drift":9.769962616701378e-15,"end_to_end_forward_reverse_probability_difference":0.0,"frame_equation_max_abs_residual":2.7755575615628914e-17,"independent_lensing_multiplier_count":0,"independent_motion_multiplier_count":0,"negative_controls":{"one_way_transition_rejected":true,"zero_binding_energy_below_free_band":0.0,"zero_conversion_cross_sector_matrix_element":0.0,"zero_recoil_capture_probability":0.0},"result_file":"phase_junction_network/microscopic/companion_bridge_results.json","speed_result":"unequal in the finite benchmark; common-cone recovery remains open under issue 8","status":"finite reversible integration architecture passes; continuum and empirical viability remain open"},"first_order_frame_connection":{"connection_inertia":[8,0,10],"decision":"connection must be constrained or nonpropagating, contour-integrated, or accompanied by bare frame stiffness","exact_rational_coefficient_failures":0,"random_failures":0},"full_real_space_reduction":{"L3_physical_phase_dimension":104,"L5_physical_phase_dimension":496,"lattice_sizes":[3,5],"maximum_relative_frequency_error":2.2044903280835783e-14,"minimum_physical_hessian_eigenvalue":0.3454915028125236,"uses_TT_projector":false,"uses_fourier_during_reduction":false},"periodic_global_sector":{"decision":"fixed total volume plus trace momentum removes one negative homogeneous conformal pair at linear order; this is not a complete vacuum or cosmological mechanism","fixed_volume_constraint_bracket_rank":2,"fixed_volume_reduced_inertia":[0,5,5],"unconstrained_hamiltonian_inertia":[1,6,5]},"reduced_transfer_matrix":{"first_gap_degeneracy":2,"gap_scaling_power":-0.9938568506775519,"maximum_low_state_boundary_occupation":4.746923100054366e-31,"maximum_relative_transfer_gap_error":6.929323754426769e-15,"minimum_reflection_kernel_eigenvalue":-2.63511389083254e-15},"rejected_local_invariant_square_branch":{"decision":"rejected for the relativistic tensor target","dispersion":"omega proportional to k^3"}},"selected_companion_branch":{"connection_relative_modes":"gapped by the issue-2 second-class lock and excluded as low-energy companion candidates","deposit":"bound state of the same chi sector populated with explicit matter recoil","finite_bridge":"phase_junction_network/microscopic/companion_bridge_results.json","finite_derivation":"phase_junction_network/companion_integration.md","graviton":"transverse issue-2 dressed-frame excitation, distinct from the companion reservoir","identity":"gauge-neutral local matter-geometry relative-phase quantum chi=varphi","issue":7,"matter":"finite issue-4-style charged or neutral defects; bridge uses a finite proxy converter/recoil/receiver","photon":"transverse compact-link U(1) quantum; issue-6 Stage 6A supplies a static finite Coulomb anchor but not the dynamical photon spectrum","remaining_gates":["detune the issue-6 finite electromagnetic Hamiltonian to a stable z=1 phase","embed the bridge in that dynamical electromagnetic phase","replace proxy defects with microscopic gauge-covariant matter","derive shared electromagnetic, companion, matter, and frame coefficients","demonstrate a common relativistic propagation cone","derive many-body capture capacity, lifetime, release, and self-gravity","freeze local and cross-sector predictions before observational fitting"],"status":"finite_integration_architecture_checked_physical_scaling_open"},"status":"exploratory candidate foundation; issue 2 has a finite linear dressed-frame regulator, issue 4 has a finite chiral charged-endpoint prototype, issue 6 Stage 6A has a finite static spin-1 Coulomb ground-state anchor, and issue 7 has a finite reversible photon-companion architecture; z=1 photon dynamics and QED, observed matter, nonlinear closure, shared parameters, common-cone and continuum consistency, many-body companion physics, and empirical distinctiveness remain open","stop_rules":["do not treat the issue-2 finite linear regulator as nonlinear quantum gravity or a unique ultraviolet completion","do not reopen issue 2 for smaller residuals absent a failed regression or dependency from issues 3, 5, 6, or 8","do not treat the finite matter prototype as a derivation of observed particle physics","do not identify the issue-4 charge set with Standard Model particles without a derived mapping and additional gauge structure","do not treat r0 or eta as predicted constants until derived or recorded as calibration inputs","do not hide or silently discard the remote matter mirror wall","do not call the issue-6 equal-time rank-two tensor a completed photon spectrum","do not call the issue-6 winding-sector free energy a dynamical photon gap","do not call one solvable RK point a stable z=1 phase without detuned spectral scaling","do not infer interacting QED from a static fixed-charge response or exact Gauss-covariant endpoint hopping","do not treat the finite issue-7 transition probability as an astrophysical rate","do not treat the one-particle chi bound mode as a galaxy halo or closed-system coherence as a cosmological lifetime","do not impose equal photon and companion speeds after the finite benchmark found a ratio of 0.3571428571","do not retune photon, companion, matter, and gravity sectors independently to obtain the same speed or response","do not call the linear fixed-volume control a cosmological-constant solution","do not fit galaxy or cosmological data before local predictions and parameter roles are frozen"]}
+{
+  "module": "phase_junction_network",
+  "active_branch": "main",
+  "created_utc": "2026-09-20",
+  "status": "exploratory candidate foundation; finite pure-gauge photon dynamics, a finite linear dressed-frame regulator, a finite chiral matter prototype, and a finite reversible companion bridge exist, while Stage 3A provides the first shared electromagnetic-gravity move prototype. Full shared microscopic embedding, interacting QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.",
+  "architecture_audit": "phase_junction_network/architecture_audit.md",
+  "novelty_boundary": "phase_junction_network/novelty_boundary.md",
+  "companion_integration": "phase_junction_network/companion_integration.md",
+  "master_tracker_issue": 10,
+  "dependencies": [
+    "python>=3.11",
+    "numpy>=1.24",
+    "scipy>=1.10"
+  ],
+  "pillar_status": {
+    "finite_electromagnetism": {
+      "issue": 6,
+      "status": "Stage 6A static Coulomb and Stage 6B detuned pure-gauge dynamics pass; dynamical matter, Ward identities, vacuum polarization, charge renormalization, and QED continuum remain open"
+    },
+    "finite_linear_gravity": {
+      "issue": 2,
+      "status": "linear finite constrained-regulator gate passed; coefficient derivation, nonlinear closure, and universality remain open"
+    },
+    "shared_microscopic_coefficients": {
+      "issue": 3,
+      "status": "Stage 3A shared-move prototype passes; embedding in the actual finite photon and dressed-frame algebras remains open"
+    },
+    "finite_chiral_matter": {
+      "issue": 4,
+      "status": "finite free-regulator endpoint prototype passes; observed spectrum, mirror completion, interactions, clocks, and radiative stability remain open"
+    },
+    "nonlinear_gravity_and_vacuum": {
+      "issue": 5,
+      "status": "open"
+    },
+    "companion_integration": {
+      "issue": 7,
+      "status": "finite reversible architecture passes; physical rates, common cone, many-body deposits, and empirical viability remain open"
+    },
+    "continuum_quantum_consistency": {
+      "issue": 8,
+      "status": "open"
+    },
+    "frozen_predictions_and_data": {
+      "issue": 9,
+      "status": "open"
+    }
+  },
+  "results": {
+    "finite_em_stage_6A": {
+      "acceptance": "PASS at finite static Coulomb ground-state scope",
+      "result_file": "phase_junction_network/microscopic/finite_em_coulomb_results.json",
+      "exact_periodic_cube_dimension": 146327,
+      "exact_periodic_cube_transition_edges": 1236144,
+      "spin1_winding_variance_over_L_fractional_range": 0.0604870565029377,
+      "maximum_longitudinal_fraction": 5.2456763705530775e-33,
+      "issue_6_closed": false
+    },
+    "finite_em_stage_6B": {
+      "acceptance": "PASS at detuned pure-gauge dynamical scope",
+      "result_file": "phase_junction_network/microscopic/finite_em_dynamics_results.json",
+      "detuned_u_over_t": [0.0, 0.1, 0.2],
+      "detuned_v_over_t": [0.2, 0.4, 0.6],
+      "minimum_gap_power": 0.978963721938896,
+      "maximum_gap_power": 1.1525665975042092,
+      "maximum_linear_plus_cubic_fit_residual": 0.00043111361146185826,
+      "minimum_electric_photon_residue": 0.9925286826895038,
+      "maximum_scalar_residue_in_photon_branch": 5.462757010250332e-31,
+      "minimum_scalar_gap_over_photon_gap": 2.8496021218088687,
+      "rk_control_powers": [1.9603722460774595, 1.8240795021238223],
+      "claim_boundary": "pure-gauge z approximately 1 region only; interacting QED and common-cone normalization remain open"
+    },
+    "finite_dressed_frame": {
+      "acceptance": "PASS at linear finite constrained-regulator scope",
+      "result_file": "phase_junction_network/microscopic/finite_dressed_frame_results.json",
+      "finite_primes": [5, 7, 11],
+      "logical_frame_qudits_per_nonzero_block": 2,
+      "maximum_relative_frequency_error": 2.1447861848524062e-16,
+      "maximum_polarization_split": 2.8317063242517616e-16,
+      "minimum_connection_lock_to_tensor_gap_ratio": 2.491448893079969,
+      "uses_TT_projector": false
+    },
+    "shared_junction_move_stage_3A": {
+      "acceptance": "PASS at finite mechanism-prototype scope",
+      "result_file": "phase_junction_network/microscopic/shared_junction_move_results.json",
+      "shared_parameters": ["t", "Delta"],
+      "electromagnetic_leading_coefficient": "K_A=20*t^4/Delta^3",
+      "gravity_leading_coefficient": "K_g=t^2/Delta",
+      "electromagnetic_small_x_power": 3.991971927647988,
+      "gravity_small_x_power": 1.997190806723475,
+      "exact_common_cone_t_over_Delta": 0.27909563384302527,
+      "common_K_over_Delta": 0.06850774938001117,
+      "electromagnetic_next_band_gap_over_K": 9.925815761431478,
+      "gravity_next_band_gap_over_K": 16.59688880527981,
+      "shared_casimir_hypothesis": "U_A=U_g=Delta",
+      "claim_boundary": "toy shared graph; full finite photon/frame embedding and physical impedance normalization remain open"
+    },
+    "finite_chiral_matter": {
+      "acceptance": "PASS at finite free-regulator endpoint scope",
+      "result_file": "phase_junction_network/microscopic/chiral_matter_results.json",
+      "charges": [-11, -5, -1, -1, 9, 9],
+      "sum_q": 0,
+      "sum_q_cubed": 0,
+      "gap_hierarchy_ratio": 32452901.539883576,
+      "remote_mirror_wall_retained": true
+    },
+    "finite_companion_bridge": {
+      "acceptance": "PASS at finite reversible integration-architecture scope",
+      "result_file": "phase_junction_network/microscopic/companion_bridge_results.json",
+      "companion_identity": "neutral relative-phase quantum chi=varphi",
+      "energy_expectation_drift": 9.769962616701378e-15,
+      "forward_reverse_probability_difference": 0.0,
+      "independent_motion_multiplier_count": 0,
+      "independent_lensing_multiplier_count": 0,
+      "companion_to_photon_max_speed_ratio": 0.35714285714285715
+    }
+  },
+  "originality_policy": {
+    "not_claimed_as_original": [
+      "finite quantum links",
+      "Rokhsar-Kivelson Hamiltonians",
+      "relative-phase or Leggett modes",
+      "domain-wall fermions",
+      "first-order frame and connection gravity",
+      "emergent helicity-2 spin models",
+      "broad gauge-gravity unification",
+      "Schrieffer-Wolff ring exchange"
+    ],
+    "candidate_original_content": "one finite matter-geometry junction state space and one microscopic move set deriving electromagnetic, gravitational, matter, and companion coefficients plus cross-sector predictions",
+    "formal_novelty_proven": false
+  },
+  "immediate_work_order": [
+    "embed the Stage-3A shared mediator in the actual Stage-6B spin-1 photon links and finite dressed-frame Weyl algebra",
+    "embed the minimal |q|=1 endpoint in the Stage-6B photon region and test current continuity, a finite Ward identity, photon dressing, and vacuum polarization",
+    "replace the issue-7 photon proxy with actual Stage-6B photon eigenmodes",
+    "derive matter localization and companion coefficients from the same microscopic move set",
+    "close nonlinear constraints, gravitational self-energy, many-body companion binding, and the volume-vacuum sector",
+    "establish common-cone recovery and regulator universality",
+    "freeze the parameter and observable ledger before empirical fitting"
+  ],
+  "stop_rules": [
+    "do not claim originality for established component techniques",
+    "do not treat Stage 3A as a derivation of alpha, G, or physical Z_g/Z_A",
+    "do not add sector-specific amplitudes or penalties merely to force a common cone",
+    "do not treat Stage 6B as interacting QED",
+    "do not treat the finite gravity regulator as nonlinear quantum gravity",
+    "do not identify the finite matter spectrum with observed particles",
+    "do not treat finite companion probabilities as astrophysical rates",
+    "do not fit galaxy or cosmological data before local predictions and parameter roles are frozen"
+  ],
+  "file_integrity_note": "Git blob identifiers are tracked by repository history; this manifest intentionally does not self-hash."
+}
