@@ -1,0 +1,56 @@
+{
+  "correlator_examples": [
+    {
+      "L": 32,
+      "dimension": 3,
+      "exact_values": [2.428587913763916, 2.3124357652593868, 2.201838829117464, 2.0965314160264046],
+      "maximum_relative_error": 0.0,
+      "reflection_kernel_eigenvalues": [-8.200001331275088e-16, -6.649193490194845e-18, 5.428463843944254e-16, 8.033067907906199],
+      "reflection_kernel_minimum_eigenvalue": -8.200001331275088e-16,
+      "times": [0.25, 0.5, 0.75, 1.0],
+      "values": [2.428587913763916, 2.3124357652593868, 2.201838829117464, 2.0965314160264046]
+    },
+    {
+      "L": 32,
+      "dimension": 8,
+      "exact_values": [2.428587913763916, 2.3124357652593868, 2.201838829117464, 2.0965314160264046],
+      "maximum_relative_error": 0.0,
+      "reflection_kernel_eigenvalues": [-8.200001331275088e-16, -6.649193490194845e-18, 5.428463843944254e-16, 8.033067907906199],
+      "reflection_kernel_minimum_eigenvalue": -8.200001331275088e-16,
+      "times": [0.25, 0.5, 0.75, 1.0],
+      "values": [2.428587913763916, 2.3124357652593868, 2.201838829117464, 2.0965314160264046]
+    }
+  ],
+  "dimension_rows_at_reference_L": [
+    {"L": 32, "dimension": 3, "first_gap": 0.19603428065912126, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 0.0, "omega": 0.1960342806591212, "relative_gap_error": 2.8317063242517616e-16, "relative_transfer_gap_error": 2.8317063242517616e-16, "transfer_matrix_gap": 0.19603428065912126},
+    {"L": 32, "dimension": 4, "first_gap": 0.19603428065912126, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 1.7628827311827674e-31, "omega": 0.1960342806591212, "relative_gap_error": 2.8317063242517616e-16, "relative_transfer_gap_error": 2.8317063242517616e-16, "transfer_matrix_gap": 0.19603428065912126},
+    {"L": 32, "dimension": 5, "first_gap": 0.19603428065912126, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 1.0615241334131703e-32, "omega": 0.1960342806591212, "relative_gap_error": 2.8317063242517616e-16, "relative_transfer_gap_error": 2.8317063242517616e-16, "transfer_matrix_gap": 0.19603428065912126},
+    {"L": 32, "dimension": 6, "first_gap": 0.19603428065912126, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 0.0, "omega": 0.1960342806591212, "relative_gap_error": 2.8317063242517616e-16, "relative_transfer_gap_error": 2.8317063242517616e-16, "transfer_matrix_gap": 0.19603428065912126},
+    {"L": 32, "dimension": 8, "first_gap": 0.19603428065912126, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 4.814839207034508e-33, "omega": 0.1960342806591212, "relative_gap_error": 2.8317063242517616e-16, "relative_transfer_gap_error": 2.8317063242517616e-16, "transfer_matrix_gap": 0.19603428065912126}
+  ],
+  "interpretation": "After solving the constraints, two finite truncated oscillators support a positive transfer matrix, a twofold first excitation, the expected Euclidean tensor correlator, and a 1/L gap. This is a benchmark for the physical sector, not proof that a local finite frame/connection model reduces to it.",
+  "parameters": {
+    "boundary_penalty_in_units_of_omega": 10.0,
+    "dimensions": [3, 4, 5, 6, 8],
+    "sizes": [12, 16, 24, 32, 48, 64],
+    "time_step": 0.25
+  },
+  "spectrum_scaling_rows": [
+    {"L": 12, "dimension": 8, "first_gap": 0.5176380902050393, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 1.3008210441747478e-31, "omega": 0.5176380902050415, "relative_gap_error": 4.289572369704812e-15, "relative_transfer_gap_error": 3.64613651424909e-15, "transfer_matrix_gap": 0.5176380902050396},
+    {"L": 16, "dimension": 8, "first_gap": 0.3901806440322569, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 1.9627445815212796e-32, "omega": 0.3901806440322565, "relative_gap_error": 9.958927090875394e-16, "relative_transfer_gap_error": 5.690815480500225e-16, "transfer_matrix_gap": 0.3901806440322567},
+    {"L": 24, "dimension": 8, "first_gap": 0.2610523844401029, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 1.235790568651022e-34, "omega": 0.26105238444010315, "relative_gap_error": 8.50574896686983e-16, "relative_transfer_gap_error": 2.551724690060949e-15, "transfer_matrix_gap": 0.2610523844401025},
+    {"L": 32, "dimension": 8, "first_gap": 0.19603428065912126, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 4.814839207034508e-33, "omega": 0.1960342806591212, "relative_gap_error": 2.8317063242517616e-16, "relative_transfer_gap_error": 2.8317063242517616e-16, "transfer_matrix_gap": 0.19603428065912126},
+    {"L": 48, "dimension": 8, "first_gap": 0.13080625846028587, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 2.579380252713542e-32, "omega": 0.13080625846028612, "relative_gap_error": 1.909695938719183e-15, "relative_transfer_gap_error": 2.121884376354648e-15, "transfer_matrix_gap": 0.13080625846028585},
+    {"L": 64, "dimension": 8, "first_gap": 0.09813534865483604, "first_gap_degeneracy": 2, "maximum_low_boundary_occupation": 3.4542054440076007e-34, "omega": 0.09813534865483603, "relative_gap_error": 1.4141477049850548e-16, "relative_transfer_gap_error": 2.2626363279760877e-15, "transfer_matrix_gap": 0.09813534865483581}
+  ],
+  "status": "reduced physical TT transfer matrix and Euclidean correlator verified; local microscopic embedding remains open",
+  "summary": {
+    "gap_scaling_power": -0.9938568506775519,
+    "gap_scaling_prefactor": 6.132237204261558,
+    "maximum_low_state_boundary_occupation": 4.746923100054366e-31,
+    "maximum_relative_energy_gap_error": 4.289572369704812e-15,
+    "maximum_relative_transfer_gap_error": 6.929323754426769e-15,
+    "minimum_reflection_kernel_eigenvalue": -2.63511389083254e-15,
+    "target_gap_scaling_power": -1.0
+  }
+}

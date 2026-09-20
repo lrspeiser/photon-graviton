@@ -1,6 +1,6 @@
 # Microscopic finite-state phase
 
-**Status:** finite kinematics, exact first-order algebra, and independent continuum-scaling checks are complete; a stable finite quantum gravity realization remains open  
+**Status:** finite kinematics, exact first-order algebra, continuum scaling, and a reduced physical transfer matrix are checked; a stable local finite quantum gravity realization remains open  
 **Date:** 2026-09-20  
 **Branch:** `agent/phase-junction-microscopic`
 
@@ -16,6 +16,7 @@ This folder replaces the infrared rotor and symmetric-tensor fields with explici
 6. **Exact arithmetic cross-check:** the Schur/Fierz–Pauli equality is verified over the rationals by matching all six independent quadratic momentum coefficients, not only random floating-point samples.
 7. **Continuum scaling cross-check:** the lowest tensor gap fits `omega ~ L^-0.995891`, the two polarizations remain degenerate to `6.11e-16`, and cubic directional anisotropy falls as `L^-2.01111`.
 8. **Naïve auxiliary Hamiltonian rejected:** a positive real auxiliary block with no bare frame stiffness always induces a nonpositive Schur complement. The current 18-component connection must be constrained/nonpropagating, integrated with a nontrivial contour, or accompanied by explicit bare frame stiffness.
+9. **Reduced quantum benchmark passed:** after solving the constraints, two finite truncated oscillators give a positive transfer matrix, exactly two degenerate first excitations, `omega ~ L^-0.993857`, negligible boundary occupation, and a positive Euclidean reflection kernel to numerical precision.
 
 ## Current interpretation
 
@@ -33,9 +34,9 @@ and the full unconstrained first-order block has
 9 negative, 3 gauge zero, 12 positive.
 ```
 
-After eliminating the connection and imposing the scalar constraint, the physical transverse-traceless sector has two positive modes. The next quantum construction must implement that constrained reduction rather than treating every connection component as an independent positive-energy particle.
+After eliminating the connection and imposing the scalar constraint, the physical transverse-traceless sector has two positive modes. A direct finite realization of those two reduced modes works, so finite oscillator truncation is not the obstacle. The unresolved step is deriving that reduced positive transfer matrix from the **local** constrained frame and connection variables without pre-imposing a nonlocal TT projector.
 
-Three branches are now separated:
+Three branches are separated:
 
 1. a constrained first-order/Palatini transfer matrix;
 2. a complex Euclidean auxiliary representation followed by reflection-positivity tests;
@@ -62,7 +63,10 @@ The project does not yet derive `Z_g/Z_A`, chiral fermions, the particle-mass hi
 | [`auxiliary_stability_results.json`](auxiliary_stability_results.json) | Frozen auxiliary stability output. |
 | [`check_tensor_scaling.py`](check_tensor_scaling.py) | Multi-size tensor gap, polarization, and anisotropy checks. |
 | [`tensor_scaling_results.json`](tensor_scaling_results.json) | Frozen finite-size output. |
-| [`verification_routes.md`](verification_routes.md) | Explains the independent ways the theory must be verified. |
+| [`reduced_tt_transfer.md`](reduced_tt_transfer.md) | Physical-sector finite transfer-matrix and reflection-positivity benchmark. |
+| [`check_reduced_tt_transfer.py`](check_reduced_tt_transfer.py) | Two-polarization truncated transfer matrix and correlator checks. |
+| [`reduced_tt_results.json`](reduced_tt_results.json) | Frozen reduced-spectrum and correlator output. |
+| [`verification_routes.md`](verification_routes.md) | Independent verification methods and acceptance criteria. |
 
 ## Reproduce
 
@@ -90,17 +94,20 @@ python phase_junction_network/microscopic/check_auxiliary_stability.py \
 
 python phase_junction_network/microscopic/check_tensor_scaling.py \
   --output phase_junction_network/microscopic/tensor_scaling_results.json
+
+python phase_junction_network/microscopic/check_reduced_tt_transfer.py \
+  --output phase_junction_network/microscopic/reduced_tt_results.json
 ```
 
 Every script exits nonzero if a committed claim fails.
 
 ## Immediate next implementation
 
-Perform the complete constrained canonical reduction of the first-order frame–connection branch. Construct the reduced symplectic form and physical Hamiltonian before truncating the remaining degrees of freedom. Then build a finite transfer matrix on small periodic lattices and test:
+Perform the complete constrained canonical reduction of the local first-order frame–connection branch. Construct its finite-dimensional constraint matrix and reduced symplectic form at finite lattice size without inserting the TT projector. The resulting reduced transfer matrix must match the benchmark above in spectrum and correlators while showing:
 
-- Hermiticity or reflection positivity;
-- exactly two tensor branches;
-- `1/L` gap scaling;
 - no propagating connection or scalar state;
-- finite-state boundary leakage;
-- shared microscopic coefficients with the electromagnetic quantum links.
+- exact or quantitatively controlled constraint preservation;
+- Hermiticity or reflection positivity;
+- `1/L` tensor gap scaling;
+- finite-state boundary leakage below the declared tolerance;
+- coefficients traceable to the same microscopic amplitudes as the electromagnetic quantum links.
