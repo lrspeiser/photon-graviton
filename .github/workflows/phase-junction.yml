@@ -87,3 +87,8 @@ jobs:
         run: |
           python phase_junction_network/microscopic/check_finite_second_class_lock.py \
             --output /tmp/finite_second_class_lock_results.json
+
+      - name: Check finite dressed frame Hamiltonian
+        run: |
+          python phase_junction_network/microscopic/check_finite_dressed_frame_hamiltonian.py \
+            --output /tmp/finite_dressed_frame_results.json

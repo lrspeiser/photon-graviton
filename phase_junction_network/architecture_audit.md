@@ -1,228 +1,222 @@
 # Phase Junction Network: Big-Picture Architecture Audit
 
 **Audit date:** 2026-09-20  
-**Issue #4 update:** finite chiral charged-endpoint prototype committed on 2026-09-20  
-**Scope:** determine whether the project addresses every element required for a new fundamental theory, identify overdeveloped and neglected areas, and set the work order before further narrow tuning.
+**Updated after issue #2, issue #4, and issue #7 finite-gate closures:** 2026-09-20  
+**Scope:** determine which elements of a candidate fundamental theory are actually established, which remain regulator prototypes, and what work now controls success or failure.
 
 ## Executive conclusion
 
-The project has made unusually strong progress on the **linear gravitational constraint and mode problem**. Mutually reinforcing continuum, finite-state, real-space, exact-arithmetic, finite-size, transfer-matrix, and regression checks show how a local frame/connection system can reduce to two positive linearly dispersing tensor modes. That work should be preserved, but it is no longer the main uncertainty.
+The project is no longer dominated by a single successful gravity calculation. It now has three substantial finite architecture results:
 
-The first microscopic matter placeholder has now also been replaced. Issue #4 supplies a finite charged endpoint, exact Gauss-covariant hopping, a finite anomaly-free chiral charge spectrum, one universal bare frame operator, and an exponentially protected finite-width gap hierarchy. This closes the first-defect/regulator scope of the matter pillar. It does **not** derive the Standard Model, remove the regulator mirror, establish interacting QED, or derive the matter parameters from the common microscopic move set.
+1. **Issue #2 — linear finite gravity regulator:** an exact finite scalar/vector quotient, written in the dressed frame Weyl algebra, leaves two positive linearly dispersing tensor branches without a transverse-traceless projector.
+2. **Issue #4 — finite charged-matter prototype:** odd-strand endpoint defects, exact Gauss-covariant hopping, a primitive anomaly-free chiral charge set, and a protected domain-wall gap hierarchy pass their declared free-regulator gates.
+3. **Issue #7 — finite photon–companion integration architecture:** one companion identity, reversible matter-assisted conversion, recoil, binding, reverse transitions, energy/momentum ledgers, and one shared frame for motion and lensing are explicit.
 
-The full theory remains architecturally incomplete because the following pillars are still decisive:
+These are meaningful closures. They do **not** make the framework a complete theory. The decisive open risks are now:
 
-1. a finite electromagnetic deconfined Coulomb/QED phase containing the new dynamical defects;
-2. a complete finite dressed-frame gravity Hamiltonian;
-3. a unified move set fixing electromagnetic, gravitational, companion, and matter coefficients;
-4. nonlinear gravitational closure and a microscopic volume/vacuum mechanism;
-5. an interacting continuum with mirror completion, Ward identities, unitarity, Lorentz recovery, and radiative stability;
-6. one completed photon–companion production/propagation/capture Hamiltonian;
-7. a frozen cross-sector prediction and staged data program.
+- whether the actual finite electromagnetic model has a deconfined two-photon Coulomb phase with dynamical defects;
+- whether all sector coefficients come from one microscopic move set rather than independent choices;
+- whether nonlinear gravity preserves the constraints and universally includes field self-energy;
+- whether the matter mirror can be removed or symmetrically gapped in a healthy interacting theory;
+- whether photons, companions, tensor modes, and matter recover one causal cone;
+- whether different finite regulators flow to one unitary or reflection-positive continuum theory;
+- whether the companion has a viable many-body capacity, lifetime, release, and self-gravity mechanism;
+- whether the theory makes a frozen cross-sector prediction that survives data.
 
-The correct response is not to return to broad linear-gravity polishing or to identify the new matter toy spectrum with observed particles. The next work must integrate the now-explicit finite sectors and close the remaining architecture gates.
+Linear gravity should now be treated as a regression-tested input, not the dominant research program. The clock normalization, gravity scale, and compact completion used in issue #2 remain regulator choices until issues #3 and #8 derive or universalize them.
 
 ## Relationship to the wider repository
 
-The repository's active program is governed by `CURRENT-STATUS.md`, `research_plan/active-goal.md`, and `research_plan/universe-contract.md`. It requires fixed published distances, a nonexpanding operational universe, complete energy accounting, no inserted dark-matter halo, and joint predictions for redshift, timing, brightness, motion, lensing, gravitational waves, and background observations.
+The active program is governed by `CURRENT-STATUS.md`, `research_plan/active-goal.md`, `research_plan/universe-contract.md`, and the solution-goal ledger. It requires fixed published distances, an operationally nonexpanding universe, complete energy accounting, no inserted dark halo, and joint predictions for redshift, timing, brightness, motion, lensing, gravitational waves, and background observations.
 
-`phase_junction_network/` is a candidate microscopic foundation. Its provisional ontology is now explicit:
+The current microscopic dictionary is:
 
-- photon: transverse quantum of the compact U(1) link connection;
-- graviton: transverse frame excitation;
-- companion: neutral relative-phase quantum `varphi`;
-- deposit: bound collective configuration of the same `varphi` sector;
-- matter: finite charged or neutral endpoint defects;
-- frame connection: constrained auxiliary comparison variable, not an additional low-energy particle.
+| Object | Selected role |
+|---|---|
+| Photon | Transverse excitation of the compact U(1) link connection |
+| Companion `chi=varphi` | Neutral matter–geometry relative-phase excitation |
+| Deposit | Bound many-body state of the same companion sector |
+| Graviton | Transverse dressed-frame excitation |
+| Frame connection | Constrained auxiliary comparison variable with a gapped relative band |
+| Matter | Finite charged or neutral endpoint defect |
 
-The matter endpoint is not the companion. Stored companion energy must source the same frame as every other energy contribution, and the same geometry must predict massive-body motion and light bending. Until issue #7 derives the reciprocal source/propagation/capture dynamics, progress in the Phase Junction module does not close the active program's observational or energy-supply requirements.
+Issue #7 now supplies a finite reversible bridge between photons, companion excitations, matter recoil, a bound mode, and a shared frame. It does not supply a continuum astrophysical conversion rate, a galaxy-scale deposit, a common propagation cone, or empirical success. The finite event probabilities are architecture stress tests, not observed rates.
 
 ## Master gate matrix
 
 Status meanings:
 
-- **Established internally:** the stated mathematical result has multiple committed checks under explicit assumptions.
-- **Prototype pass:** an explicit finite construction passes its declared algebraic or free-regulator gates, while interaction or continuum completion remains open.
-- **Partial:** a target structure or kinematic construction exists, but the physical phase or full mechanism is not demonstrated.
-- **Open:** no construction yet closes the requirement.
+- **Established internally:** multiple committed checks establish the stated result under explicit assumptions.
+- **Finite prototype pass:** an explicit finite construction passes its declared algebraic or free-regulator gates while physical completion remains open.
+- **Partial:** a target structure exists but the physical phase or complete mechanism is not demonstrated.
+- **Open:** no construction closes the requirement.
 
-| Pillar | Minimum requirement | Current status | Evidence already present | Decisive missing work |
+| Pillar | Minimum requirement | Current status | Established evidence | Decisive missing work |
 |---|---|---|---|---|
-| Scientific contract and ontology | One declared microscopic state space and unambiguous meanings for matter, geometry, photon, graviton, and companion | **Partial** | Photon, graviton, `varphi` companion, deposit, connection, and finite matter roles are separated in `companion_ontology.md` | Derive one common Hamiltonian and prevent all energy double counting; issue #7 |
-| Finite electromagnetism | A finite 3+1D model with a deconfined Coulomb phase, two transverse photons, dynamical charge, and controlled continuum limit | **Partial** | Exact finite Gauss symmetry; spin 1 is the smallest tested link with nonconstant electric energy; finite gauge-covariant defects now exist | Demonstrate deconfinement, `1/r`, two transverse branches, Ward identities, and scaling with dynamical defects; issue #6 |
-| Linear gravity | Local constraints leaving exactly two positive linearly dispersing tensor modes without a TT projector | **Established internally** | Continuum spectrum, exact coefficient identity, constrained local reduction, full real-space reduction, finite Weyl connection lock, finite-size scaling | Finish the finite dressed-frame Hamiltonian at finite local dimension; issue #2 |
-| Nonlinear gravity | Closed nonlinear constraints, universal self-coupling, strong-field stability, no extra scalar/ghost | **Open** | Linear first-/second-class structure and fixed-volume linear candidate | Nonlinear frame/connection action, self-energy source, constraint closure, strong-field spectrum; issue #5 |
-| Matter | Finite charged fermionic defects with chirality, anomaly control, declared doubling treatment, and protected gaps | **Prototype pass** | Odd-strand endpoint, exact flux-bundle hopping, anomaly-free `(-11,-5,-1,-1,9,9)`, one Weyl cone per wall, protected overlap gaps, universal frame derivative | Derive observed content or a declared reduced target; remove/symmetrically gap the mirror; add interactions, clocks, and bound states; issues #3, #6, #8 |
-| Unification and parameter closure | One move set deriving `U_A`, `K_A`, `U_g`, `K_g`, companion couplings, matter localization, and fewer ratios than outputs | **Open** | Infrared formulas expose the required impedance ratio; matter now gives a two-parameter charge-to-gap relation | Derive all coefficients from common amplitudes and produce a held-out relation; issue #3 |
-| Common causal geometry | One metric/cone for photons, tensor modes, and every matter species beyond leading order | **Partial** | Shared tetrad/frame target; tensor cutoff effects measured; all finite matter species use one bare frame derivative | Demonstrate the finite EM phase on the same frame and interacting common-cone stability; issues #6 and #8 |
-| Quantum continuum consistency | Unitary or reflection-positive continuum limit, positive residues, Ward identities, regulator universality, anomaly control | **Open** | Reduced free tensor transfer matrix; finite free matter anomaly cancellation and topology checks | Full interacting continuum, mirror completion, renormalization, Lorentz recovery, regulator comparison, no-go audits; issue #8 |
-| Vacuum, thermodynamics, and background | Stable vacuum, controlled volume term, thermal/statistical state, admissible nonexpanding background | **Partial at one linear global mode only** | Fixed-volume pair removes the periodic homogeneous conformal instability at linear order | Microscopic reason, local vacuum energy, nonlinear closure, background solutions; issue #5 |
-| Photon–companion integration | One Hamiltonian from emission through propagation, capture/storage, gravity, clocks, and reverse transitions | **Partial ontology only** | Provisional `varphi` identity and energy-ledger rules; finite matter participant now exists | Finite reversible matter-assisted photon–`varphi` transition, propagation, capture, stress-energy, clocks, and lensing; issue #7 |
-| Empirical distinctiveness | Fewer calibration inputs than independent outputs and at least one frozen cross-sector prediction | **Open** | Validation protocol postpones fitting; finite matter supplies a candidate internal charge/gap relation | Parameter ledger, weak-field dictionary, held-out prediction, staged test; issue #9 |
-| Reproducibility and negative controls | Frozen outputs, independent checks, CI, retained failures, explicit rejection gates | **Established internally** | Exact/numerical checks, result manifests, failed branches, GitHub Actions | Keep status files synchronized; add tests as new pillars become executable |
+| Ontology and companion integration | One field dictionary and one reversible source-to-storage-to-gravity Hamiltonian | **Finite architecture pass** | Issue #7: one companion identity, Hermitian reverse channels, recoil, finite bound mode, energy/momentum ledgers, shared frame | Replace proxies with full finite matter/EM sectors; derive physical rates, many-body storage, lifetime, release, and common cone |
+| Finite electromagnetism | Deconfined 3+1D Coulomb phase, two transverse photons, dynamical charge, `1/r`, Ward identities | **Partial** | Exact finite Gauss symmetry; spin-1 is the smallest tested link with nonconstant electric energy; issue-#4 defects are Gauss covariant | Phase diagram and deconfinement with defects, transverse spectrum, static force, scaling, Ward identities; issue #6 |
+| Linear gravity and finite regulator | Four constraints, exactly two positive linear tensor modes, finite positive Hamiltonian/transfer regulator, no TT insertion | **Established internally** | Continuum and exact first-order identities; local/full-real-space reductions; finite Weyl lock; issue-#2 quotient and compact spectra at `p=5,7,11` | Preserve as regression input; derive coefficients in #3, nonlinear completion in #5, universality in #8 |
+| Nonlinear gravity | Closed nonlinear constraints, universal self-coupling, strong-field stability, no extra scalar/ghost | **Open** | Linear first-/second-class structure; finite linear regulator; fixed-volume linear control | Nonlinear frame/connection action, self-energy source, closure, strong-field spectrum; issue #5 |
+| Matter | Finite charged fermionic defects with chirality, anomaly control, protected gaps, clocks, and healthy continuum | **Finite prototype pass** | Issue #4: odd-strand endpoint, exact hopping, `(-11,-5,-1,-1,9,9)`, one cone per wall, protected gaps, common bare frame derivative | Observed or declared reduced spectrum, mirror completion, interactions, bound-state clocks, radiative stability; issues #3, #6, #8 |
+| Shared parameters | One microscopic move set deriving `U_A,K_A,U_g,K_g`, matter localization, and companion couplings with fewer inputs than outputs | **Open** | Current formulas expose required relations; issue-#2 `lambda_g`, issue-#4 `r0,eta`, and issue-#7 couplings are explicit inputs | Derive coefficients and at least one held-out cross-sector relation; issue #3 |
+| Common causal geometry | One cone and one frame coupling for photons, companions, tensor modes, and matter | **Partial** | Shared frame variables; matter species use one bare frame derivative; issue #7 uses one frame for motion and lensing | Finite EM phase and interacting cone recovery; finite bridge currently gives `v_chi/v_gamma=0.3571428571`; issues #6 and #8 |
+| Quantum continuum consistency | Unitary/reflection-positive interacting limit, positive residues, Ward identities, anomaly control, regulator universality | **Open** | Reduced free tensor transfer matrix; positive compact tensor regulator; finite matter topology/anomaly checks | Interactions, mirror completion, renormalization, Lorentz recovery, regulator comparison, no-go audit; issue #8 |
+| Vacuum and background | Stable vacuum, derived volume term, thermodynamic/statistical state, admissible background | **Partial at one linear global mode** | Fixed-volume plus trace-momentum pair removes the homogeneous conformal pair at linear order | Microscopic origin, local vacuum energy, nonlinear closure, background solutions; issue #5 |
+| Empirical distinctiveness | Fewer calibration inputs than outputs and at least one frozen cross-sector prediction | **Open** | Parameter roles are becoming explicit; flexible fitting remains prohibited | Parameter ledger, observable dictionary, held-out prediction, staged local-to-cosmological test; issue #9 |
+| Reproducibility | Frozen outputs, controls, CI, finite-size tests, retained failures | **Established internally** | Executable issue-#2, #4, and #7 gates; manifests; negative branches; GitHub Actions | Keep every new claim executable and synchronized |
 
-## Issue #4 resolution: what changed
+## Issue #2 resolution: finite dressed-frame gravity
 
-The matter pillar previously contained only an infrared expression of the form
+### Construction
+
+The finite connection lock enforces the relative variables through a positive Weyl oscillator while preserving the exact dressed frame algebra
 
 \[
-\psi_x^\dagger e^{iQa_{xy}}\psi_y,
+\overline Z_i=Z_{h_i},
+\qquad
+\overline X_i=X_{h_i}\prod_aX_{C_a}^{A_{ai}}.
 \]
 
-which assumed the field, its charge, its statistics, and its mass. The new finite construction replaces that placeholder with:
+The scalar and vector finite stabilizers are reduced over `GF(p)`. The code computes—not assumes—the quotient spaces
 
-1. eleven parallel spin-1 quantum-link lanes per geometric link;
-2. a charge-`q` endpoint built from `|q|` microscopic fermionic strands;
-3. an exact equal-occupation binding band with sixteen composite Fock states per site/layer;
-4. a composite hopping operator that moves exactly `|q|` finite flux lanes and has zero endpoint Gauss residual on every nonzero bundle transition;
-5. odd charges, so the same endpoint multiplicity gives fermionic exchange `(-1)^(q^2)=-1`;
-6. an exhaustive finite anomaly search selecting `(-11,-5,-1,-1,9,9)` as the first primitive odd chiral spectrum through six species and `|q|<=11`;
-7. a finite open Wilson/domain-wall slab with one light corner per wall, opposite wall chirality, seven gapped physical corners, and particle/antiparticle spectral pairing;
-8. one identical frame derivative for every species;
-9. a common relation `r_q=r_0+eta(|q|-1)` with finite-wall gap `Delta_q ~ r_q^L_s`, producing four gaps from two shared parameters rather than one tiny onsite energy per species;
-10. finite-neighborhood tests showing the one-cone phase survives twenty nearby Wilson-mass samples.
+\[
+\ker G/\operatorname{row}C,
+\qquad
+\ker C/\operatorname{row}G,
+\]
 
-The frozen `L_s=12` hierarchy is approximately `3.245e7`. This is a protected regulator hierarchy, not an observed mass fit. The two shared localization parameters remain inputs until issue #3 derives them from the common move set.
+then symplectically dualizes them. For every tested odd prime `p=5,7,11`, the quotient contains exactly two canonical logical Weyl pairs.
 
-The mirror wall is explicit. That satisfies the requirement to declare and test the doubling treatment, but it does not complete a strictly 3+1-dimensional interacting chiral gauge theory. Mirror decoupling or symmetric gapping remains a hard gate in issue #8.
+For each physical polarization, the positive compact regulator is
+
+\[
+H_{p,L}=\frac{\lambda_g}{2}\sum_z
+\left[(2-X_z-X_z^\dagger)+
+(2-Z_{z+1}Z_z^\dagger-Z_zZ_{z+1}^\dagger)\right],
+\]
+
+and the tensor Hamiltonian is two identical copies. Equivalently, the parent local evolution is a constrained transfer step with local group averaging over the scalar and vector stabilizers.
+
+This route does not contradict the retained derivative-order obstruction. A frame-only Hamiltonian made from squares of the lowest exact local invariants still gives `omega~k^3` and remains rejected. Locality belongs to the parent constrained transfer step; the physical logarithm acts on the quotient Hilbert space.
+
+### Finite results
+
+- finite primes: `5,7,11`;
+- tested lattice sizes: `p=5: L=4–8`, `p=7: L=4–7`, `p=11: L=3–6`;
+- exactly two logical Weyl pairs per nonzero propagation block;
+- exact two-polarization first-gap degeneracy;
+- gap powers between `1.02690` and `1.07049` in `Delta proportional to |k_hat|^s`;
+- maximum residual of the linear-plus-cubic fit: `1.663e-3`;
+- minimum connection-lock/tensor-gap ratio: `2.491`;
+- maximum lock/frame commutator: `1.67e-16`;
+- ground-band leakage norm: `5.16e-16`;
+- `p=11` tensor compact-cut bond fraction: `1.89e-4`;
+- complete three-dimensional relative frequency error: `2.15e-16`;
+- polarization split: `2.84e-16`;
+- cubic-lattice anisotropy recovery: approximately `L^-2.0166`.
+
+### Claim boundary
+
+Issue #2 closes the **linear finite constrained regulator**. It does not establish:
+
+- nonlinear quantum gravity;
+- a derived Newton constant or shared gravity/photon impedance;
+- a common photon/companion/matter/tensor cone;
+- regulator universality or a unique ultraviolet completion;
+- a vacuum-energy mechanism;
+- a new empirical prediction.
+
+Those dependencies are owned by issues #3, #5, #6, #8, and #9.
+
+## Issue #4 and issue #7 in the combined architecture
+
+The matter prototype now supplies a real finite charged participant rather than a continuum placeholder. The companion bridge supplies a reversible interaction architecture rather than a variable-name mapping. The next task is not to repeat either standalone demonstration. It is to embed all three finite pieces—the issue-#2 frame regulator, issue-#4 endpoint, and issue-#7 conversion architecture—inside the actual issue-#6 electromagnetic phase and derive their couplings jointly under issue #3.
+
+The combined model fails if the matter endpoint, conversion vertex, photon phase, or frame regulator each requires an independently selected cone or response multiplier.
 
 ## Main strategic finding
 
-The project is **not** at a stage where only small tuning remains. Two foundations are now relatively concrete—linear gravity and a first finite matter endpoint—but the complete theory is still structurally unbalanced.
+The project is still not in a general tuning stage. Three finite architecture gates pass, but the remaining uncertainties are structural:
 
-More decimal precision on the tensor spectrum or more variants of the free matter slab would not address the largest risks:
+- deconfinement may fail once dynamical matter is included;
+- the issue-#2 compact completion may not share an interacting universality class with alternative regulators;
+- nonlinear gravity may regenerate forbidden modes;
+- the matter mirror may not admit a healthy completion;
+- the finite companion speed mismatch may survive the scaling limit;
+- shared microscopic coefficients may not close;
+- many-body companion storage may lack adequate capacity, lifetime, or energy supply;
+- no frozen prediction yet distinguishes the theory from QED plus general relativity with selected coefficients.
 
-- the finite electromagnetic model may not possess a deconfined Coulomb phase once dynamical defects are included;
-- the finite dressed gravity Hamiltonian is not finished;
-- the matter mirror may fail to decouple in a healthy interacting continuum;
-- the electromagnetic, gravitational, companion, and matter coefficients remain independently adjustable;
-- nonlinear interactions may reintroduce forbidden modes or nonuniversal propagation;
-- the provisional companion has no completed production/capture mechanism;
-- no distinct prediction currently separates the model from QED plus general relativity with selected coefficients.
+Further decimal precision on any already-passed finite benchmark does not address these risks.
 
-These are architecture gaps, not residual-tolerance gaps.
+## Correct work order
 
-## Work order
+### Priority 0: finite electromagnetic phase with dynamical matter
 
-### Priority 0: complete the integration dynamics
+Issue #6 must demonstrate or reject a deconfined spin-1 Coulomb phase containing the actual issue-#4 endpoints. Required outputs include a phase diagram, two transverse branches, expanding-range `1/r`, charge propagation, finite-representation scaling, and Ward identities.
 
-Issue #7 now has both a provisional companion identity and a finite charged matter participant. The next calculation is the smallest reversible matter-assisted photon–`varphi` transition. It must conserve charge and total energy, include recoil, contain the reverse channel, and keep photon loss, companion energy, binding energy, and gravitational sourcing in one ledger.
+### Priority 0: shared microscopic coefficients
 
-### Priority 0: establish the finite electromagnetic phase
-
-Issue #6 must advance from exact Gauss kinematics to a demonstrated finite Coulomb/QED phase using the actual spin-1 links and the new dynamical endpoints. Required outputs include a phase diagram, two transverse branches, expanding-range `1/r`, finite-representation scaling, charge propagation, and Ward identities.
-
-### Priority 0: finish the finite dressed gravity Hamiltonian
-
-Issue #2 should remain narrowly focused on expressing frame dynamics in the exact dressed finite operators and recovering the two tensor branches at finite local dimension. Additional continuum Fierz–Pauli checks count only if required by that finite construction.
-
-### Priority 1: derive shared coefficients
-
-Issue #3 must place the matter relation inside the same microscopic move set as the electromagnetic and gravitational stiffnesses. It now owns at least
+Issue #3 must derive, from one move set,
 
 \[
-U_A, K_A, U_g, K_g, r_0, \eta,
+U_A,\ K_A,\ U_g,\ K_g,\ r_0,\ \eta,
 \]
 
-plus matter hopping and companion couplings. The finite charge/gap relation becomes predictive only when those parameters are derived or their calibration roles are frozen.
+plus the issue-#7 conversion, binding, and recoil coefficients. A common limiting speed constrains products but does not by itself fix the impedance ratio. The issue-#2 clock point and `lambda_g` cannot be promoted from regulator choices to predictions without this derivation.
 
-### Priority 1: nonlinear and interacting continuum closure
+### Priority 1: nonlinear gravity and many-body binding
 
-Issue #5 owns nonlinear constraints, self-energy, strong-field behavior, and the volume/vacuum term. Issue #8 owns unitarity/reflection positivity, positive residues, common-cone recovery, regulator universality, mirror completion, Ward identities, interacting anomaly accounting, radiative stability, and the precise assumptions behind emergent-spin-2 no-go results.
+Issue #5 owns nonlinear constraint closure, gravitational self-energy, strong-field stability, the volume/vacuum term, and the gravitational source of many-body companion deposits.
 
-### Priority 2: freeze predictions before flexible astrophysics
+### Priority 1: interacting continuum and common cone
 
-Issue #9 should maintain the parameter ledger now, but observational unblinding must wait until the common action and calibration roles are frozen. Local and weak-field tests precede galaxy, cluster, and cosmological flexibility.
+Issue #8 owns mirror completion, unitarity/reflection positivity, Ward identities, anomaly accounting, radiative stability, Lorentz recovery, common-cone recovery, regulator universality, and the relevant emergent-spin-2 no-go assumptions.
+
+### Priority 2: frozen predictions and data
+
+Issue #9 should maintain the parameter and observable ledger now. Empirical unblinding waits until the common action and calibration roles are frozen. Local propagation, free fall, light bending/delay, clock response, and gravitational-wave tests precede galaxy or cosmological flexibility.
 
 ## Dependency graph
 
 ```text
-                 +--------------------------------+
-                 | ontology + integration #7      |
-                 | provisional identity selected  |
-                 +---------------+----------------+
-                                 |
-          +----------------------+----------------------+
-          |                      |                      |
-+---------v---------+  +---------v---------+  +---------v---------+
-| finite EM phase #6|  | finite gravity #2 |  | matter prototype  |
-| open              |  | open              |  | issue #4 passed   |
-+---------+---------+  +---------+---------+  +---------+---------+
-          |                      |                      |
-          +----------------------+----------------------+
-                                 |
-                 +---------------v---------------+
-                 | shared coefficients #3        |
-                 | nonlinear closure/vacuum #5   |
-                 +---------------+---------------+
-                                 |
-                 +---------------v---------------+
-                 | interacting continuum #8      |
-                 | includes mirror completion     |
-                 +---------------+---------------+
-                                 |
-                 +---------------v---------------+
-                 | frozen predictions/data #9    |
-                 +-------------------------------+
+   issue #2 finite frame regulator   issue #4 matter prototype   issue #7 bridge
+                \                         |                         /
+                 +------------------------+------------------------+
+                                          |
+                              finite EM phase #6
+                                          |
+                             shared coefficients #3
+                                          |
+                    nonlinear gravity / many-body binding #5
+                                          |
+                interacting continuum / common cone / mirror #8
+                                          |
+                         frozen predictions and data #9
 ```
 
-The dependencies are not entirely serial; exploratory work can proceed in parallel. No later layer should be declared complete while its upstream inputs remain arbitrary.
-
-## Specific integration questions that remain
-
-### How is the companion produced?
-
-A bare photon–scalar vertex does not by itself establish free single-photon conversion. The finite construction must identify the additional participant—ordinary matter recoil, a background field, an inhomogeneous environment, a multiparticle process, or another explicit degree of freedom—and include the reverse transition.
-
-### How does stored energy gravitate?
-
-The same stored `varphi` excitation must enter total stress-energy and therefore the shared frame equations. A separately fitted galaxy-force field and lensing field would fail the integration requirement.
-
-### What makes a material clock?
-
-The finite endpoints supply charged one-particle states, but not atoms, chemistry, nuclei, or bound-state clocks. Clock response cannot be asserted from the one-particle frame derivative alone. It requires interactions and bound states built from the same defects.
-
-### What removes the mirror?
-
-The domain-wall regulator has an opposite-chirality remote wall. A complete theory must remove, symmetrically gap, or demonstrably decouple it while preserving gauge symmetry, anomaly cancellation, locality at the intended scale, and a healthy continuum.
-
-### What fixes the background?
-
-The linear fixed-volume pair controls one periodic zero-mode instability. It does not define the universe's large-scale statistical state, thermal background, boundary conditions, age, size, or origin. Those remain explicit hypotheses under the universe contract.
+Exploratory work may proceed in parallel, but downstream claims cannot close while upstream coefficients or phases remain arbitrary.
 
 ## Stop rules
 
-Until the remaining architecture gates close:
-
-1. Do not interpret another successful linear tensor eigenvalue test as progress on matter, redshift, or cosmology.
-2. Do not identify the issue #4 charge set with Standard Model particles without deriving a mapping and the additional gauge structure.
-3. Do not treat the two matter localization parameters as predicted constants until issue #3 derives them or issue #9 records them as calibration inputs.
-4. Do not hide or silently discard the remote mirror wall.
-5. Do not infer a deconfined QED phase merely because exact Gauss-covariant defects exist.
-6. Do not derive `alpha` from an arbitrary mixing angle; derive the stiffness ratio from microscopic moves.
-7. Do not call the neutral `varphi` mode a photon, graviton, or charged matter defect.
-8. Do not use the fixed-volume condition as a solved cosmological-constant mechanism.
-9. Do not fit galaxy or cosmological data before local weak-field predictions and parameter roles are frozen.
-10. Do not count recovery of QED and general relativity after freely selecting all coefficients as a distinct prediction.
-
-## What narrow work is justified now
-
-The following tasks close architecture gates rather than merely polishing them:
-
-- build the finite reversible matter–photon–`varphi` transition in issue #7;
-- demonstrate or rule out a spin-1 Coulomb phase with dynamical defects in issue #6;
-- build the finite dressed frame/Fierz–Pauli Hamiltonian in issue #2;
-- derive shared gauge, gravity, companion, and matter coefficients in issue #3;
-- close nonlinear constraints and the volume/vacuum mechanism in issue #5;
-- solve mirror completion and interacting continuum consistency in issue #8;
-- maintain the machine-readable parameter ledger required by issue #9.
+1. Do not reopen issue #2 merely for smaller residuals; reopen only for a failed regression or a concrete dependency from #3, #5, #6, or #8.
+2. Do not call the issue-#2 finite linear regulator nonlinear quantum gravity or a unique ultraviolet theory.
+3. Do not identify the issue-#4 charge set with Standard Model particles without deriving the mapping and additional gauge structure.
+4. Do not hide or silently discard the remote matter mirror wall.
+5. Do not infer a deconfined QED phase from exact Gauss-covariant hopping alone.
+6. Do not treat issue-#7 finite transition probabilities as astrophysical rates or one-particle binding as a halo.
+7. Do not impose equal photon and companion speeds after the finite benchmark found a mismatch; derive common-cone recovery or reject the branch.
+8. Do not retune photon, companion, matter, and gravity sectors independently to obtain the same speed or response.
+9. Do not call the linear fixed-volume control a cosmological-constant solution.
+10. Do not fit galaxy or cosmological data before local predictions and parameter roles are frozen.
+11. Do not count recovery of QED and general relativity after freely selecting all coefficients as a distinct prediction.
 
 ## Decision
 
-The linear gravitational foundation is strong enough to stop re-litigating its basic mode count. The finite matter endpoint is explicit enough to close issue #4 at its declared first-defect/regulator scope and to become an input to the electromagnetic, integration, shared-parameter, and continuum programs.
+The finite linear gravity gate is complete. The matter endpoint and companion bridge also pass their declared finite architecture scopes. The program should now be evaluated by whether these pieces can coexist in one deconfined, nonlinear, interacting, universal theory with fewer microscopic inputs than low-energy outputs.
 
 The next claim threshold is:
 
-> A single finite local model contains a deconfined two-polarization photon sector, a finite healthy two-helicity frame sector, the protected charged matter endpoint without an unwanted mirror, and the declared `varphi` companion; it derives shared low-energy coefficients, preserves constraints nonlinearly, and produces at least one frozen cross-sector prediction.
+> One finite local model contains a deconfined two-polarization photon sector, the two-helicity dressed-frame sector, a healthy protected charged-matter sector, and the declared companion sector; it derives shared coefficients, preserves constraints nonlinearly, reaches one common relativistic continuum, and produces at least one frozen cross-sector prediction.
 
-Nothing currently committed meets that full threshold. The updated issue structure makes the remaining dependencies explicit and prevents either the strongest subproblem or the new matter prototype from being mistaken for the complete theory.
+Nothing currently committed meets that full threshold. Closing issue #2 removes one major uncertainty and makes the remaining integration and continuum risks more sharply testable.

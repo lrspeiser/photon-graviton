@@ -1,0 +1,613 @@
+{
+  "acceptance": {
+    "connection_lock_leakage_below_tolerance": true,
+    "declared_finite_positive_hamiltonian_or_transfer_matrix": true,
+    "exact_finite_first_class_quotient": true,
+    "finite_dimension_boundary_error_measured": true,
+    "linear_gap_with_cubic_cutoff_correction": true,
+    "propagating_connection_scalar_or_vector_state": false,
+    "two_low_energy_tensor_branches": true,
+    "uses_nonlocal_TT_projector": false
+  },
+  "boundary_representatives": [
+    {
+      "ground_boundary": {
+        "mean_fraction_of_bonds_on_compact_cut": 0.036856612922826,
+        "probability_any_bond_on_compact_cut": 0.2210249335844162
+      },
+      "lattice_size": 8,
+      "prime": 5,
+      "tensor_boundary": {
+        "mean_fraction_of_bonds_on_compact_cut": 0.04552590220603153,
+        "probability_any_bond_on_compact_cut": 0.29595818651217615
+      }
+    },
+    {
+      "ground_boundary": {
+        "mean_fraction_of_bonds_on_compact_cut": 0.004035588513170969,
+        "probability_any_bond_on_compact_cut": 0.025827069009287
+      },
+      "lattice_size": 7,
+      "prime": 7,
+      "tensor_boundary": {
+        "mean_fraction_of_bonds_on_compact_cut": 0.007380141027363736,
+        "probability_any_bond_on_compact_cut": 0.04931573486286855
+      }
+    },
+    {
+      "ground_boundary": {
+        "mean_fraction_of_bonds_on_compact_cut": 5.487366636580405e-05,
+        "probability_any_bond_on_compact_cut": 0.0003241917895084564
+      },
+      "lattice_size": 6,
+      "prime": 11,
+      "tensor_boundary": {
+        "mean_fraction_of_bonds_on_compact_cut": 0.00018911573225795152,
+        "probability_any_bond_on_compact_cut": 0.001128987713949441
+      }
+    }
+  ],
+  "complete_three_dimensional_harmonic_symbol": {
+    "anisotropy_prefactor": 9.369519829347785,
+    "anisotropy_proportional_to_L_power": -2.016629188651394,
+    "maximum_relative_frequency_error": 2.1447861848524062e-16,
+    "maximum_relative_polarization_split": 2.8317063242517616e-16,
+    "method": "full scalar/vector constrained reduction of the local Fierz-Pauli symbol; no TT projector",
+    "tested_lattice_sizes": [
+      12,
+      16,
+      24,
+      32,
+      48,
+      64
+    ],
+    "uses_transverse_traceless_projector": false
+  },
+  "dispersion_fits_by_prime": {
+    "11": {
+      "cubic_cutoff_coefficient": 0.0009158090725002611,
+      "gap_over_momentum_coefficient_of_variation": 0.005681455211882202,
+      "gap_proportional_to_lattice_momentum_power": 1.0268966421526704,
+      "linear_speed_c_g": 0.11779382888296203,
+      "log_fit_prefactor": 0.1186416635532047,
+      "maximum_relative_linear_plus_cubic_fit_residual": 0.0006476520659845144,
+      "target_power": 1.0
+    },
+    "5": {
+      "cubic_cutoff_coefficient": 0.006830456395831353,
+      "gap_over_momentum_coefficient_of_variation": 0.015468585815844836,
+      "gap_proportional_to_lattice_momentum_power": 1.0704917625708226,
+      "linear_speed_c_g": 0.21955548662192603,
+      "log_fit_prefactor": 0.22699859698193034,
+      "maximum_relative_linear_plus_cubic_fit_residual": 0.001663183064960994,
+      "target_power": 1.0
+    },
+    "7": {
+      "cubic_cutoff_coefficient": 0.002478227804906822,
+      "gap_over_momentum_coefficient_of_variation": 0.006881448017420595,
+      "gap_proportional_to_lattice_momentum_power": 1.0372415496464933,
+      "linear_speed_c_g": 0.1654383442918308,
+      "log_fit_prefactor": 0.16804337988074092,
+      "maximum_relative_linear_plus_cubic_fit_residual": 0.00017776670212509813,
+      "target_power": 1.0
+    }
+  },
+  "dressed_connection_lock": {
+    "expected_ground_band_dimension": 9,
+    "ground_band_dimension": 9,
+    "ground_band_leakage_operator_norm": 5.153550879007343e-16,
+    "hilbert_dimension": 81,
+    "lock_gap": 0.8269933431326876,
+    "maximum_lock_frame_commutator": 1.6653345369377348e-16,
+    "prime": 3
+  },
+  "finite_clock_spectrum_rows": [
+    {
+      "connection_lock_gap": 0.8213727813320326,
+      "gap_over_lattice_momentum": 0.23311666764472275,
+      "lattice_momentum": 1.414213562373095,
+      "lattice_size": 4,
+      "lock_gap_over_tensor_gap": 2.491448893079969,
+      "negative_momentum_index": 3,
+      "one_polarization_hilbert_dimension_after_k0_fix": 125,
+      "positive_momentum_index": 1,
+      "prime": 5,
+      "single_branch_gap": 0.32967675299838817,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8213727813320326,
+      "gap_over_lattice_momentum": 0.2291876548355905,
+      "lattice_momentum": 1.1755705045849463,
+      "lattice_size": 5,
+      "lock_gap_over_tensor_gap": 3.0485997201711217,
+      "negative_momentum_index": 4,
+      "one_polarization_hilbert_dimension_after_k0_fix": 625,
+      "positive_momentum_index": 1,
+      "prime": 5,
+      "single_branch_gap": 0.2694262470397156,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8213727813320326,
+      "gap_over_lattice_momentum": 0.22656759153891395,
+      "lattice_momentum": 0.9999999999999999,
+      "lattice_size": 6,
+      "lock_gap_over_tensor_gap": 3.6252880465075625,
+      "negative_momentum_index": 5,
+      "one_polarization_hilbert_dimension_after_k0_fix": 3125,
+      "positive_momentum_index": 1,
+      "prime": 5,
+      "single_branch_gap": 0.22656759153891393,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8213727813320326,
+      "gap_over_lattice_momentum": 0.2246577120976503,
+      "lattice_momentum": 0.8677674782351162,
+      "lattice_size": 7,
+      "lock_gap_over_tensor_gap": 4.21323424578448,
+      "negative_momentum_index": 6,
+      "one_polarization_hilbert_dimension_after_k0_fix": 15625,
+      "positive_momentum_index": 1,
+      "prime": 5,
+      "single_branch_gap": 0.19495065629304875,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8213727813320326,
+      "gap_over_lattice_momentum": 0.22318547703565506,
+      "lattice_momentum": 0.7653668647301796,
+      "lattice_size": 8,
+      "lock_gap_over_tensor_gap": 4.808445740734693,
+      "negative_momentum_index": 7,
+      "one_polarization_hilbert_dimension_after_k0_fix": 78125,
+      "positive_momentum_index": 1,
+      "prime": 5,
+      "single_branch_gap": 0.1708187688120888,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8081382192019648,
+      "gap_over_lattice_momentum": 0.17040536989313926,
+      "lattice_momentum": 1.414213562373095,
+      "lattice_size": 4,
+      "lock_gap_over_tensor_gap": 3.3534155366821974,
+      "negative_momentum_index": 3,
+      "one_polarization_hilbert_dimension_after_k0_fix": 343,
+      "positive_momentum_index": 1,
+      "prime": 7,
+      "single_branch_gap": 0.24098958520408142,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8081382192019648,
+      "gap_over_lattice_momentum": 0.1688331579726448,
+      "lattice_momentum": 1.1755705045849463,
+      "lattice_size": 5,
+      "lock_gap_over_tensor_gap": 4.071732340253402,
+      "negative_momentum_index": 4,
+      "one_polarization_hilbert_dimension_after_k0_fix": 2401,
+      "positive_momentum_index": 1,
+      "prime": 7,
+      "single_branch_gap": 0.198475280708572,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8081382192019648,
+      "gap_over_lattice_momentum": 0.16791546083340994,
+      "lattice_momentum": 0.9999999999999999,
+      "lattice_size": 6,
+      "lock_gap_over_tensor_gap": 4.812768372792808,
+      "negative_momentum_index": 5,
+      "one_polarization_hilbert_dimension_after_k0_fix": 16807,
+      "positive_momentum_index": 1,
+      "prime": 7,
+      "single_branch_gap": 0.1679154608334099,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8081382192019648,
+      "gap_over_lattice_momentum": 0.16733298314585257,
+      "lattice_momentum": 0.8677674782351162,
+      "lattice_size": 7,
+      "lock_gap_over_tensor_gap": 5.565455606786733,
+      "negative_momentum_index": 6,
+      "one_polarization_hilbert_dimension_after_k0_fix": 117649,
+      "positive_momentum_index": 1,
+      "prime": 7,
+      "single_branch_gap": 0.1452061208100357,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8633693617766993,
+      "gap_over_lattice_momentum": 0.12056676601769789,
+      "lattice_momentum": 1.7320508075688772,
+      "lattice_size": 3,
+      "lock_gap_over_tensor_gap": 4.1343609843419316,
+      "negative_momentum_index": 2,
+      "one_polarization_hilbert_dimension_after_k0_fix": 121,
+      "positive_momentum_index": 1,
+      "prime": 11,
+      "single_branch_gap": 0.2088277644469215,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8633693617766993,
+      "gap_over_lattice_momentum": 0.11954904169143589,
+      "lattice_momentum": 1.414213562373095,
+      "lattice_size": 4,
+      "lock_gap_over_tensor_gap": 5.106643447270223,
+      "negative_momentum_index": 3,
+      "one_polarization_hilbert_dimension_after_k0_fix": 1331,
+      "positive_momentum_index": 1,
+      "prime": 11,
+      "single_branch_gap": 0.1690678761287352,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8633693617766993,
+      "gap_over_lattice_momentum": 0.11905897450295687,
+      "lattice_momentum": 1.1755705045849463,
+      "lattice_size": 5,
+      "lock_gap_over_tensor_gap": 6.1685887062927325,
+      "negative_momentum_index": 4,
+      "one_polarization_hilbert_dimension_after_k0_fix": 14641,
+      "positive_momentum_index": 1,
+      "prime": 11,
+      "single_branch_gap": 0.13996221873180725,
+      "two_polarization_first_gap_degeneracy": 2
+    },
+    {
+      "connection_lock_gap": 0.8633693617766993,
+      "gap_over_lattice_momentum": 0.11878657032314328,
+      "lattice_momentum": 0.9999999999999999,
+      "lattice_size": 6,
+      "lock_gap_over_tensor_gap": 7.268240504191815,
+      "negative_momentum_index": 5,
+      "one_polarization_hilbert_dimension_after_k0_fix": 161051,
+      "positive_momentum_index": 1,
+      "prime": 11,
+      "single_branch_gap": 0.11878657032314327,
+      "two_polarization_first_gap_degeneracy": 2
+    }
+  ],
+  "finite_logical_reduction": [
+    {
+      "component_order": [
+        "xx",
+        "yy",
+        "zz",
+        "xy",
+        "xz",
+        "yz"
+      ],
+      "expected_logical_qudits": 2,
+      "logical_X_exponents_centered": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "logical_Z_exponents_centered": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "logical_pairing_mod_p": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "logical_qudits": 2,
+      "maximum_X_scalar_commutator_mod_p": 0,
+      "maximum_Z_vector_commutator_mod_p": 0,
+      "prime": 5,
+      "scalar_Z_stabilizer": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "uses_transverse_traceless_projector": false,
+      "vector_X_stabilizers": [
+        [
+          0,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          3
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "component_order": [
+        "xx",
+        "yy",
+        "zz",
+        "xy",
+        "xz",
+        "yz"
+      ],
+      "expected_logical_qudits": 2,
+      "logical_X_exponents_centered": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "logical_Z_exponents_centered": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "logical_pairing_mod_p": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "logical_qudits": 2,
+      "maximum_X_scalar_commutator_mod_p": 0,
+      "maximum_Z_vector_commutator_mod_p": 0,
+      "prime": 7,
+      "scalar_Z_stabilizer": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "uses_transverse_traceless_projector": false,
+      "vector_X_stabilizers": [
+        [
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          4
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    {
+      "component_order": [
+        "xx",
+        "yy",
+        "zz",
+        "xy",
+        "xz",
+        "yz"
+      ],
+      "expected_logical_qudits": 2,
+      "logical_X_exponents_centered": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          -1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "logical_Z_exponents_centered": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "logical_pairing_mod_p": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "logical_qudits": 2,
+      "maximum_X_scalar_commutator_mod_p": 0,
+      "maximum_Z_vector_commutator_mod_p": 0,
+      "prime": 11,
+      "scalar_Z_stabilizer": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "uses_transverse_traceless_projector": false,
+      "vector_X_stabilizers": [
+        [
+          0,
+          0,
+          0,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  ],
+  "finite_parent_construction": {
+    "first_class_treatment": "exact GF(p) scalar/vector stabilizer quotient or equivalent local group-averaged transfer step",
+    "frame_coordinate": "Zbar_i = Z_hi",
+    "frame_scale_lambda_g": 0.25,
+    "frame_shift": "Xbar_i = X_hi * product_a X_Ca^(A_ai)",
+    "one_polarization_hamiltonian": "lambda_g/2 sum_z [(2-X-Xdagger)+(2-Znext Zdagger-Z Znextdagger)]",
+    "polarizations": 2,
+    "uses_transverse_traceless_projector": false
+  },
+  "global_sector_policy": "propagating test excludes k=0; four periodic global qudits remain separate",
+  "limitations_owned_elsewhere": [
+    "#3 shared stiffnesses",
+    "#5 nonlinear gravity and volume/vacuum",
+    "#6 finite Coulomb phase/common cone",
+    "#8 interacting continuum and regulator universality"
+  ],
+  "real_space_constraint_counts": [
+    {
+      "expected_logical_qudits_including_global_sector": 10,
+      "global_sector_qudits_separated": 4,
+      "lattice_size": 3,
+      "logical_qudits_including_global_sector": 10,
+      "prime": 5,
+      "propagating_logical_qudits_after_k0_separation": 6,
+      "scalar_constraint_rank": 2,
+      "scalar_vector_commutator_nonzero_entries": 0,
+      "vector_constraint_rank": 6
+    },
+    {
+      "expected_logical_qudits_including_global_sector": 14,
+      "global_sector_qudits_separated": 4,
+      "lattice_size": 5,
+      "logical_qudits_including_global_sector": 14,
+      "prime": 7,
+      "propagating_logical_qudits_after_k0_separation": 10,
+      "scalar_constraint_rank": 4,
+      "scalar_vector_commutator_nonzero_entries": 0,
+      "vector_constraint_rank": 12
+    }
+  ],
+  "scope": "Issue #2 linear finite regulator; coefficient derivation, nonlinear closure, and universality remain open",
+  "status": "finite dressed linear frame Hamiltonian/positive transfer regulator verified on the exact first-class quotient"
+}

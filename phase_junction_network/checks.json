@@ -37,5 +37,25 @@
     "independent_lensing_multiplier_count": 0,
     "companion_to_photon_max_speed_ratio": 0.35714285714285715,
     "physical_scaling_and_empirical_viability": "open"
+  },
+  "finite_dressed_frame_hamiltonian": {
+    "status": "pass for the linear finite constrained regulator",
+    "failures": 0,
+    "finite_primes": [5, 7, 11],
+    "logical_weyl_pairs_per_nonzero_axis_block": 2,
+    "two_polarization_first_gap_degeneracy": 2,
+    "gap_momentum_power_range": [
+      1.0268966421526704,
+      1.0704917625708226
+    ],
+    "maximum_linear_plus_cubic_fit_residual": 0.001663183064960994,
+    "minimum_connection_lock_to_tensor_gap_ratio": 2.491448893079969,
+    "maximum_lock_frame_commutator": 1.6653345369377348e-16,
+    "ground_band_leakage_operator_norm": 5.153550879007343e-16,
+    "p11_tensor_mean_compact_cut_bond_fraction": 0.00018911573225795152,
+    "maximum_full_symbol_relative_frequency_error": 2.1447861848524062e-16,
+    "maximum_full_symbol_polarization_split": 2.8317063242517616e-16,
+    "uses_TT_projector": false,
+    "scope": "linear regulator only; nonlinear closure, shared coefficients, common-cone recovery, and universality remain open"
   }
 }

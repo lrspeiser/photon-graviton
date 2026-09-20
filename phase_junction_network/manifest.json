@@ -11,12 +11,11 @@
   ],
   "file_integrity_note": "Git blob identifiers are tracked by repository history; this manifest intentionally does not self-hash.",
   "immediate_work_order": [
-    "demonstrate or reject a finite deconfined electromagnetic Coulomb phase with the new dynamical defects under issue 6",
-    "complete the finite dressed frame Hamiltonian under issue 2",
-    "integrate the finite issue-4 matter endpoint and issue-7 companion bridge into both finite sectors",
-    "derive r0, eta, U_A, K_A, U_g, K_g, and companion coefficients from one microscopic move set under issue 3",
-    "close nonlinear constraints, many-body companion binding, and the volume-vacuum sector under issue 5",
-    "complete mirror removal or symmetric gapping, companion common-cone recovery, and interacting continuum consistency under issue 8",
+    "demonstrate or reject a finite deconfined electromagnetic Coulomb phase with the dynamical issue-4 defects under issue 6",
+    "embed the issue-2 frame regulator, issue-4 matter endpoint, and issue-7 bridge in one finite model",
+    "derive r0, eta, U_A, K_A, U_g, K_g, the gravity clock ratio, and companion coefficients from one microscopic move set under issue 3",
+    "close nonlinear constraints, gravitational self-energy, many-body companion binding, and the volume-vacuum sector under issue 5",
+    "complete mirror removal or symmetric gapping, common-cone recovery, interacting continuum consistency, and regulator universality under issue 8",
     "maintain and freeze the parameter and observable ledger required by issue 9"
   ],
   "master_tracker_issue": 10,
@@ -25,16 +24,27 @@
   "pillar_status": {
     "continuum_quantum_consistency_and_lorentz_recovery": {
       "issue": 8,
-      "status": "open_including_matter_mirror_completion_and_companion_common_cone"
+      "status": "open_including_matter_mirror_completion_companion_common_cone_and_regulator_universality"
     },
     "finite_chiral_matter_and_mass_protection": {
-      "downstream_issues": [3, 6, 8, 9],
+      "downstream_issues": [
+        3,
+        6,
+        8,
+        9
+      ],
       "issue": 4,
-      "status": "finite_free_regulator_prototype_pass; observed_spectrum_mirror_completion_interactions_and_clocks_open"
+      "status": "finite_free_regulator_prototype_pass_observed_spectrum_mirror_completion_interactions_and_clocks_open"
     },
     "finite_dressed_gravity_hamiltonian": {
+      "downstream_issues": [
+        3,
+        5,
+        6,
+        8
+      ],
       "issue": 2,
-      "status": "open"
+      "status": "linear_finite_constrained_regulator_pass_nonlinear_coefficients_common_cone_and_universality_open"
     },
     "finite_electromagnetic_coulomb_qed_phase": {
       "issue": 6,
@@ -54,14 +64,14 @@
     },
     "ontology_and_companion_integration": {
       "issue": 7,
-      "status": "finite_architecture_established_physical_scaling_and_empirical_adequacy_open"
+      "status": "finite_architecture_established_physical_scaling_many_body_completion_and_empirical_adequacy_open"
     },
     "reproducibility_and_negative_controls": {
-      "status": "established_for_current checks including the issue-7 finite bridge"
+      "status": "established_for_current_issue_2_issue_4_and_issue_7_checks"
     },
     "shared_microscopic_coefficients_and_impedance_ratio": {
       "issue": 3,
-      "status": "open_including_matter_localization_and_companion_parameters"
+      "status": "open_including_gravity_clock_matter_localization_and_companion_parameters"
     }
   },
   "results": {
@@ -79,7 +89,14 @@
     "finite_chiral_matter_defect": {
       "all_exchange_phases_fermionic": true,
       "bound_composite_fock_dimension_per_site_layer": 16,
-      "charges": [-11, -5, -1, -1, 9, 9],
+      "charges": [
+        -11,
+        -5,
+        -1,
+        -1,
+        9,
+        9
+      ],
       "claim_boundary": "finite free-regulator endpoint prototype; not Standard Model, observed masses, mirror removal, interacting QED, clocks, or radiative stability",
       "distinct_gaps": {
         "-1": 8.787634390124283e-12,
@@ -101,7 +118,10 @@
       "primitive": true,
       "r0": 0.12,
       "remote_mirror_wall_retained": true,
-      "search_first_solution_level": [6, 11],
+      "search_first_solution_level": [
+        6,
+        11
+      ],
       "slab_width": 12,
       "status": "PASS",
       "sum_q": 0,
@@ -122,6 +142,59 @@
       "p3_ground_band_dimension": 9,
       "p5_expected_ground_band_dimension": 5,
       "p5_ground_band_dimension": 5
+    },
+    "finite_dressed_frame_hamiltonian": {
+      "acceptance": "PASS at the linear finite constrained regulator scope",
+      "construction": "positive two-copy clock/Villain Hamiltonian on the exact odd-prime scalar/vector quotient using Zbar and dressed Xbar",
+      "finite_lattice_sizes_by_prime": {
+        "5": [
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "7": [
+          4,
+          5,
+          6,
+          7
+        ],
+        "11": [
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "finite_primes": [
+        5,
+        7,
+        11
+      ],
+      "gap_momentum_powers": {
+        "p5": 1.0704917625708226,
+        "p7": 1.0372415496464933,
+        "p11": 1.0268966421526704
+      },
+      "global_sector_policy": "propagating test excludes k=0 and separates four periodic global qudits",
+      "ground_band_leakage_operator_norm": 5.153550879007343e-16,
+      "linear_speeds_at_frame_scale_0_25": {
+        "p5": 0.21955548662192603,
+        "p7": 0.1654383442918308,
+        "p11": 0.11779382888296203
+      },
+      "logical_frame_qudits_per_nonzero_axis_block": 2,
+      "maximum_full_symbol_polarization_split": 2.8317063242517616e-16,
+      "maximum_full_symbol_relative_frequency_error": 2.1447861848524062e-16,
+      "maximum_linear_plus_cubic_fit_residual": 0.001663183064960994,
+      "maximum_lock_frame_commutator": 1.6653345369377348e-16,
+      "minimum_connection_lock_to_tensor_gap_ratio": 2.491448893079969,
+      "p11_tensor_mean_compact_cut_bond_fraction": 0.00018911573225795152,
+      "p11_tensor_probability_any_compact_cut_bond": 0.001128987713949441,
+      "scope": "linear finite constrained regulator; nonlinear closure, coefficient derivation, common cone, and universality remain open",
+      "two_polarization_first_gap_degeneracy": 2,
+      "uses_TT_projector": false
     },
     "finite_electromagnetic_link": {
       "exact_gauss_commutator": true,
@@ -162,7 +235,11 @@
       "vertex_hilbert_dimension": 392
     },
     "first_order_frame_connection": {
-      "connection_inertia": [8, 0, 10],
+      "connection_inertia": [
+        8,
+        0,
+        10
+      ],
       "decision": "connection must be constrained or nonpropagating, contour-integrated, or accompanied by bare frame stiffness",
       "exact_rational_coefficient_failures": 0,
       "random_failures": 0
@@ -170,7 +247,10 @@
     "full_real_space_reduction": {
       "L3_physical_phase_dimension": 104,
       "L5_physical_phase_dimension": 496,
-      "lattice_sizes": [3, 5],
+      "lattice_sizes": [
+        3,
+        5
+      ],
       "maximum_relative_frequency_error": 2.2044903280835783e-14,
       "minimum_physical_hessian_eigenvalue": 0.3454915028125236,
       "uses_TT_projector": false,
@@ -179,8 +259,16 @@
     "periodic_global_sector": {
       "decision": "fixed total volume plus trace momentum removes one negative homogeneous conformal pair at linear order; this is not a complete vacuum or cosmological mechanism",
       "fixed_volume_constraint_bracket_rank": 2,
-      "fixed_volume_reduced_inertia": [0, 5, 5],
-      "unconstrained_hamiltonian_inertia": [1, 6, 5]
+      "fixed_volume_reduced_inertia": [
+        0,
+        5,
+        5
+      ],
+      "unconstrained_hamiltonian_inertia": [
+        1,
+        6,
+        5
+      ]
     },
     "reduced_transfer_matrix": {
       "first_gap_degeneracy": 2,
@@ -195,11 +283,11 @@
     }
   },
   "selected_companion_branch": {
-    "connection_relative_modes": "gapped by the second-class lock and excluded as low-energy companion candidates",
+    "connection_relative_modes": "gapped by the issue-2 second-class lock and excluded as low-energy companion candidates",
     "deposit": "bound state of the same chi sector populated with explicit matter recoil",
     "finite_bridge": "phase_junction_network/microscopic/companion_bridge_results.json",
     "finite_derivation": "phase_junction_network/companion_integration.md",
-    "graviton": "transverse frame excitation, distinct from the companion reservoir",
+    "graviton": "transverse issue-2 dressed-frame excitation, distinct from the companion reservoir",
     "identity": "gauge-neutral local matter-geometry relative-phase quantum chi=varphi",
     "issue": 7,
     "matter": "finite issue-4-style charged or neutral defects; bridge uses a finite proxy converter/recoil/receiver",
@@ -214,20 +302,21 @@
     ],
     "status": "finite_integration_architecture_checked_physical_scaling_open"
   },
-  "status": "exploratory candidate foundation; linear gravity is internally well tested, a finite chiral charged-endpoint prototype passes its declared regulator gates, and issue 7 has a finite reversible photon-companion integration architecture; finite deconfined electromagnetism, finite dressed gravity, nonlinear closure, shared parameters, interacting continuum consistency, physical companion scaling, observed matter, and empirical distinctiveness remain open",
+  "status": "exploratory candidate foundation; issue 2 has a finite linear dressed-frame regulator, issue 4 has a finite chiral charged-endpoint prototype, and issue 7 has a finite reversible photon-companion architecture; finite deconfined electromagnetism, observed matter, nonlinear closure, shared parameters, common-cone and continuum consistency, many-body companion physics, and empirical distinctiveness remain open",
   "stop_rules": [
+    "do not treat the issue-2 finite linear regulator as nonlinear quantum gravity or a unique ultraviolet completion",
+    "do not reopen issue 2 for smaller residuals absent a failed regression or dependency from issues 3, 5, 6, or 8",
     "do not treat the finite matter prototype as a derivation of observed particle physics",
-    "do not identify the finite issue-4 charge set with Standard Model particles without a derived mapping and additional gauge structure",
-    "do not treat r0 or eta as predicted constants until derived or explicitly recorded as calibration inputs",
+    "do not identify the issue-4 charge set with Standard Model particles without a derived mapping and additional gauge structure",
+    "do not treat r0 or eta as predicted constants until derived or recorded as calibration inputs",
     "do not hide or silently discard the remote matter mirror wall",
     "do not infer a deconfined QED phase from exact Gauss-covariant endpoint hopping alone",
     "do not treat the finite issue-7 transition probability as an astrophysical rate",
     "do not treat the one-particle chi bound mode as a galaxy halo or closed-system coherence as a cosmological lifetime",
-    "do not impose equal photon and companion speeds after the finite benchmark found a ratio of 0.3571428571; derive common-cone recovery or reject the branch",
-    "do not treat additional linear tensor precision as closure of another pillar",
-    "do not reidentify the companion as photon, tensor graviton, or connection mode in another calculation without an explicit conversion theory",
+    "do not impose equal photon and companion speeds after the finite benchmark found a ratio of 0.3571428571",
+    "do not retune photon, companion, matter, and gravity sectors independently to force a common cone",
     "do not fit galaxies or cosmology before local predictions and parameter roles are frozen",
-    "do not derive alpha, G, or masses by independently assigning every microscopic coefficient",
+    "do not derive alpha, G, masses, or redshift coefficients by independently assigning every microscopic coefficient",
     "do not call the linear fixed-volume control a completed cosmological-constant solution"
   ]
 }
