@@ -1,0 +1,66 @@
+{
+ "config": {
+  "n": 1024,
+  "dim": 1,
+  "g": 0.05,
+  "b": 2,
+  "m": 0.4,
+  "v": 1.0,
+  "energy": 1.0,
+  "wavelength": 2.0,
+  "clock_energy": 1.0,
+  "reverse": false,
+  "step_factor": 0.08,
+  "free": false
+ },
+ "initial_sectors": [
+  0.9999999999999996,
+  0.0,
+  0.003,
+  0.0
+ ],
+ "final_sectors": [
+  0.9236383394647196,
+  0.0763678650446141,
+  0.002993550414647126,
+  1.5509724849370207e-12
+ ],
+ "sector_order": [
+  "electromagnetic",
+  "receiving",
+  "material_internal",
+  "material_motion"
+ ],
+ "energy_relative_error": 2.4434144327873866e-07,
+ "momentum_error_over_initial_em": 0.00021024241027078902,
+ "min_optical_speed": 0.993757432668225,
+ "max_optical_speed": 1.001827697489045,
+ "local_clock_speed_max_change": 0.0062817817774842855,
+ "em_energy_lost": 0.07636166053527993,
+ "material_internal_energy_lost": 6.449585352874196e-06,
+ "receiving_gain": 0.0763678650446141,
+ "max_final_phi": 0.12435988291555422,
+ "pulse_metrics": {
+  "pulses": [
+   {
+    "clock_centroid": 16.089336648225853,
+    "coordinate_centroid": 16.094532822610415,
+    "frequency": 3.5267034020212855,
+    "frequency_std": 0.1606965981463849,
+    "pulse_width": 0.6215662998715435,
+    "signal_norm": 0.9586042052661741
+   },
+   {
+    "clock_centroid": 20.10405787722995,
+    "coordinate_centroid": 20.127880009926145,
+    "frequency": 3.530580171989546,
+    "frequency_std": 0.2281967077465565,
+    "pulse_width": 0.6248611474539064,
+    "signal_norm": 0.9500801225115365
+   }
+  ],
+  "clock_separation": 4.0147212290040954,
+  "frequency_mean": 3.528641787005416,
+  "phase_bandwidth_fraction": 0.06463433674640605
+ }
+}

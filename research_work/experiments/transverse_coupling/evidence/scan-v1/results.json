@@ -1,0 +1,169 @@
+{
+ "stage": "scan",
+ "gates": {
+  "energy": true,
+  "reproduction": true,
+  "power_laws": false
+ },
+ "numerical_pass": false,
+ "reproduction": {
+  "receiving_gain": 1.8602867915028943e-15,
+  "frequency_mean": 9.83276996232477e-16,
+  "clock_separation": 0.0,
+  "vacuum_frequency": 0.0,
+  "vacuum_1_frequency": 0.0,
+  "vacuum_4_frequency": 7.790361999944385e-16,
+  "coupling_0_05_gain": 1.4537829805462887e-15
+ },
+ "table": [
+  {
+   "g": 0.005,
+   "receiving_gain": 0.0008821118082509523,
+   "em_energy_lost": 0.0008820274248895199,
+   "spectral_stretch": 1.0002017606689337,
+   "event_stretch": 1.000000500293394,
+   "timing_discrepancy": 0.00020121977730280793,
+   "colour_spread": 2.565449169332123e-05,
+   "fixed_ruler_speed_change": 6.796087410654295e-05,
+   "energy_relative_error": 6.887823423394012e-08,
+   "screens": {
+    "timing": true,
+    "colour": true,
+    "fixed_ruler": true,
+    "conversion": false
+   }
+  },
+  {
+   "g": 0.01,
+   "receiving_gain": 0.0035140509765494857,
+   "em_energy_lost": 0.0035137745152509225,
+   "spectral_stretch": 1.0008030275469415,
+   "event_stretch": 1.000002381839639,
+   "timing_discrepancy": 0.0008000032826288583,
+   "colour_spread": 0.00010125374404136936,
+   "fixed_ruler_speed_change": 0.00027113024395997165,
+   "energy_relative_error": 6.809952712517498e-08,
+   "screens": {
+    "timing": true,
+    "colour": true,
+    "fixed_ruler": true,
+    "conversion": true
+   }
+  },
+  {
+   "g": 0.02,
+   "receiving_gain": 0.013825643042441896,
+   "em_energy_lost": 0.013824603760817844,
+   "spectral_stretch": 1.0031795595971593,
+   "event_stretch": 1.000016403446503,
+   "timing_discrepancy": 0.0031531305840466484,
+   "colour_spread": 0.00039317471834074874,
+   "fixed_ruler_speed_change": 0.0010735938279542445,
+   "energy_relative_error": 6.719300113541804e-08,
+   "screens": {
+    "timing": true,
+    "colour": true,
+    "fixed_ruler": false,
+    "conversion": true
+   }
+  },
+  {
+   "g": 0.05,
+   "receiving_gain": 0.0763678650446141,
+   "em_energy_lost": 0.07636166053527993,
+   "spectral_stretch": 1.0170810277574072,
+   "event_stretch": 1.0003832492125422,
+   "timing_discrepancy": 0.016417353277823343,
+   "colour_spread": 0.001970270245858511,
+   "fixed_ruler_speed_change": 0.0062817817774842855,
+   "energy_relative_error": 2.4434144327873866e-07,
+   "screens": {
+    "timing": false,
+    "colour": true,
+    "fixed_ruler": false,
+    "conversion": true
+   }
+  },
+  {
+   "g": 0.1,
+   "receiving_gain": 0.18230001441396634,
+   "em_energy_lost": 0.1822759432123946,
+   "spectral_stretch": 1.0372149317339172,
+   "event_stretch": 1.0045492694764404,
+   "timing_discrepancy": 0.03149362900403818,
+   "colour_spread": 0.014453796421353013,
+   "fixed_ruler_speed_change": 0.020787161052601144,
+   "energy_relative_error": 1.1797920374112143e-06,
+   "screens": {
+    "timing": false,
+    "colour": false,
+    "fixed_ruler": false,
+    "conversion": true
+   }
+  },
+  {
+   "g": 0.2,
+   "receiving_gain": 0.17904062368709678,
+   "em_energy_lost": 0.17896041403445728,
+   "spectral_stretch": 0.9932962523097074,
+   "event_stretch": 1.0081890831432936,
+   "timing_discrepancy": 0.014993342418191835,
+   "colour_spread": 0.03285637156869487,
+   "fixed_ruler_speed_change": 0.06526028029356601,
+   "energy_relative_error": 3.470070361552734e-06,
+   "screens": {
+    "timing": false,
+    "colour": false,
+    "fixed_ruler": false,
+    "conversion": true
+   }
+  },
+  {
+   "g": 0.5,
+   "receiving_gain": 0.27106445712130967,
+   "em_energy_lost": 0.2709999161048373,
+   "spectral_stretch": 0.750773340900512,
+   "event_stretch": 1.0103432915384052,
+   "timing_discrepancy": 0.3457367710027546,
+   "colour_spread": null,
+   "fixed_ruler_speed_change": 0.32216240198649815,
+   "energy_relative_error": 2.2201463338632093e-05,
+   "screens": {
+    "timing": false,
+    "colour": null,
+    "fixed_ruler": false,
+    "conversion": true
+   }
+  }
+ ],
+ "power_laws": {
+  "receiving_gain": {
+   "exponent": 1.8069711183471748,
+   "intercept": 2.6596864942002565,
+   "log_scatter": 0.1441975225648718,
+   "max_log_residual": 0.20108325185350906
+  },
+  "timing_discrepancy": {
+   "exponent": 1.7258288648284825,
+   "intercept": 0.8036885053684681,
+   "log_scatter": 0.20675500985959896,
+   "max_log_residual": 0.28779069560224224
+  },
+  "colour_spread": {
+   "exponent": 2.054678377736169,
+   "intercept": 0.23929139721824694,
+   "log_scatter": 0.1852673575065029,
+   "max_log_residual": 0.31360963426225386
+  },
+  "fixed_ruler_speed_change": {
+   "exponent": 1.9188991013628498,
+   "intercept": 0.6175505368832243,
+   "log_scatter": 0.05289286714343819,
+   "max_log_residual": 0.07254181106838908
+  }
+ },
+ "largest_coupling_passing_all_screens": 0.01,
+ "receiving_gain_at_that_coupling": 0.0035140509765494857,
+ "cosmological_rate_per_Mpc": 0.00023349486663870643,
+ "note": "CWC-1 fixture at n = 1024, b = 2; the transverse channel is silent in one dimension, so every cost here is the longitudinal channel. No fixture-to-galaxy mapping."
+}
