@@ -1,7 +1,7 @@
 {
   "audit_passed": true,
-  "checks": 32,
-  "completed_new_runs": 4,
+  "checks": 38,
+  "completed_new_runs": 5,
   "declared_new_runs": 7,
   "complete": false,
   "source_accuracy_passed": null,
@@ -135,6 +135,31 @@
       ],
       "passed": true,
       "state_sha256": "dfda57706d5a67b52de74dee17b88343350647273b23cfdeb8b4d5c00dfec393"
+    },
+    "Y-n48": {
+      "campaign": "source-refinement-v1",
+      "name": "Y-n48",
+      "matter_source": 6.329221684924986,
+      "field_source": 0.07191906081051573,
+      "wave_source": 0.048971743972678956,
+      "other_field_source": 0.022947316837836775,
+      "total_coupling_source": 6.401140745735502,
+      "wave_fraction": 0.00765047136407747,
+      "restoring_source": -1.9281452190656536,
+      "integrated_rhs_source": 6.4011407457355025,
+      "rhs_error": 8.881784197001252e-16,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 1.5854482171562267e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 2.8554438813443994e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "1b1c4047ee6650bfdf7fc8910246f5f57ae60c4418de424c365bf4e7973275d0"
     },
     "mixed-coarse": {
       "campaign": "emitter-v1",

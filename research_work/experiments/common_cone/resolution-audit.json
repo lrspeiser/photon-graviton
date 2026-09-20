@@ -1,11 +1,11 @@
 {
   "passed": true,
-  "complete": false,
-  "completed_runs": 8,
+  "complete": true,
+  "completed_runs": 9,
   "declared_runs": 9,
-  "count": 192,
+  "count": 214,
   "max_independent_energy_error": 1.7763568394002505e-15,
-  "accuracy_passed": null,
+  "accuracy_passed": false,
   "checks": [
     {
       "name": "current resolution-protocol.md",
@@ -773,6 +773,94 @@
     },
     {
       "name": "o4-n56-time gate honesty",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated configuration",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated horizon",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated initial independent energy",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated initial independent cone",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated initial probe velocity",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated final independent energy",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated final independent cone",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated final probe velocity",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated bend definition",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated extrema bounds",
+      "passed": true
+    },
+    {
+      "name": "o4-n56-rotated gate honesty",
+      "passed": true
+    },
+    {
+      "name": "complete run count",
+      "passed": true
+    },
+    {
+      "name": "accuracy finest_relative_bend_difference",
+      "passed": true
+    },
+    {
+      "name": "accuracy preceding_absolute_difference",
+      "passed": true
+    },
+    {
+      "name": "accuracy latest_absolute_difference",
+      "passed": true
+    },
+    {
+      "name": "accuracy finest_method_relative_difference",
+      "passed": true
+    },
+    {
+      "name": "accuracy time_relative_bend_difference",
+      "passed": true
+    },
+    {
+      "name": "accuracy rotation_direction_error_radians",
+      "passed": true
+    },
+    {
+      "name": "accuracy rotation_error_relative_to_bend",
+      "passed": true
+    },
+    {
+      "name": "accuracy replay_error",
+      "passed": true
+    },
+    {
+      "name": "accuracy decision honest",
+      "passed": true
+    },
+    {
+      "name": "numerical decision honest",
       "passed": true
     }
   ]

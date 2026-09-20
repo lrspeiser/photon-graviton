@@ -1,5 +1,8 @@
 # Shared galaxy and cluster solution: evidence ledger
 
+**Completed resolution audit and energy-flux identity, 20 September 2026.** [SR-2 final report](../research_work/experiments/common_cone/resolution-report.md): all nine individual runs and214 independent checks pass, but the campaign fails its unchanged1% cross-method accuracy gate at1.012759%. Time, rotation and finest fourth-order refinement gates pass. [Continuum flux](../research_work/experiments/spatial_exchange/local-transfer-flux-report.md) passes24 local energy-continuity fixtures; a compatible discrete surface ledger remains required. Local-transfer refinement now has n40/n48 complete and36 audit checks, with n64 and rotation pending; SE-R has5/7 new runs audited with38 checks. None establishes the full galaxy/cluster solution, and all twelve requirements remain active.
+
+
 **Local transfer refinement running, 20 September 2026.** [Checkpoint](../research_work/experiments/spatial_exchange/local-transfer-refinement-report.md). The preregistered n40/48/64 plus rotated-n48 campaign uses unchanged combined equations. n40 finishes and passes20 independent archive checks: A carries10.0936% of initial angular momentum, including0.650193% outside the initial radius1.2. These outer-region values are stored angular momentum, not measured surface flux or established continuum-front evidence. The n48/n64 comparison and common-rotation gates remain pending. Physical ordinary-matter generation, fuel, full light/matter integration and observational validation remain incomplete; all twelve goal requirements remain active.
 
 

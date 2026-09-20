@@ -1,12 +1,14 @@
 # SE-LR4: refinement checkpoint, campaign still running
 
-20 September 2026. Protocol69c6786; numerical runner4b8472d. One of four
-declared runs is complete: n40. The n48,n64 and commonly rotated n48 cases
+20 September 2026. Protocol69c6786; numerical runner4b8472d. Two of four
+declared runs are complete: n40 and n48. The n64 and commonly rotated n48 cases
 remain pending. No overall spatial or rotation accuracy result is available.
 
 The n40 run passes its individual finite-state, energy, angular-momentum,
 boundary-energy and quadrature gates. Independent reconstruction passes20
-checks with maximum endpoint discrepancy2.17e-19. The numerical equations
+checks with maximum endpoint discrepancy2.17e-19 at the first checkpoint;
+the two-run audit now passes36 checks with the same maximum discrepancy.
+The numerical equations
 and parameters are unchanged from SE-LR3; this campaign refines the grid.
 
 | n40 result at model time1 | Value |
@@ -17,6 +19,12 @@ and parameters are unchanged from SE-LR3; this campaign refines the grid.
 | Maximum relative energy drift |4.27e-10|
 | Maximum relative total angular-vector drift |1.38e-6|
 | Maximum edge-energy fraction |1.56e-14|
+
+At n48 the circulation is0.000171654259, the A energy fraction20.6133%,
+and the A angular fraction10.0782%. All individual gates pass. A-sector
+angular momentum outside radius1.2 is0.684015% of initial total angular
+momentum; total outer angular momentum is1.754690%. These are still
+exploratory masked-region diagnostics, not a passing final refinement test.
 
 Compared with the previous n32 run, circulation decreases further. The actual
 acceptance pair is preregistered as n48/n64 with a decreasing difference from
