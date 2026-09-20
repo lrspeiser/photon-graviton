@@ -1,0 +1,68 @@
+{
+  "assumptions": [
+    "large-N compact rotor limit for electromagnetic links",
+    "exact local electromagnetic Gauss constraint in the massless phase",
+    "symmetric spatial frame deformation with four linear first-class constraints",
+    "shared effective frame for electromagnetic and gravitational propagation",
+    "cubic lattice used only as a prototype regulator for current checks"
+  ],
+  "command": "python phase_junction_network/check_frame_gravity.py --samples 500 --seed 42 --lattice-size 96 --fit-r-min 4 --fit-r-max 20",
+  "created_utc": "2026-09-20",
+  "dependencies": [
+    "python>=3.11",
+    "numpy>=1.24",
+    "scipy>=1.10"
+  ],
+  "files": [
+    {
+      "bytes": 6161,
+      "path": "README.md",
+      "sha256": "be0793ff8d0823a3ea0ccda54c8173e4db1a172e7343542ef44c67aece2a372a"
+    },
+    {
+      "bytes": 12883,
+      "path": "electromagnetic_derivation.md",
+      "sha256": "962dbc5ec2c60e9a289ce1bb1df3a94b000ce68ccb6303f2ad8f59d6e2a873c0"
+    },
+    {
+      "bytes": 15611,
+      "path": "frame_gravity_derivation.md",
+      "sha256": "f27e35a47c9cf89bffdfb68e2bd29e2479a8c0c207e1cce5aa3b3f73e680d3aa"
+    },
+    {
+      "bytes": 9901,
+      "path": "check_frame_gravity.py",
+      "sha256": "d1244aadd85601daa57cb952559fca61ac2318e5b9230fd11d41e686f5441503"
+    },
+    {
+      "bytes": 773,
+      "path": "checks.json",
+      "sha256": "74950d6747b5b3ccfa3a3a0a68edaa68195e4feb29b66eabd620899cc5f1f5d1"
+    },
+    {
+      "bytes": 7429,
+      "path": "validation_protocol.md",
+      "sha256": "82fb92cb7a8b4b988ee75a3a0efaea69ba03b964e065410e4abc8e7c3b01796f"
+    }
+  ],
+  "module": "phase_junction_network",
+  "result_summary": {
+    "green_fit_radii": [
+      4,
+      20
+    ],
+    "green_lattice_size": 96,
+    "green_normalized_rms_residual": 0.002409597456672864,
+    "max_constraint_gauge_residual": 1.0870458088261133e-14,
+    "max_relative_tt_eigenvalue_error": 1.1250857213591084e-15,
+    "spectrum_failures": 0,
+    "spectrum_samples": 500
+  },
+  "scope": [
+    "corrected electromagnetic link/loop construction",
+    "candidate frame-valued gravitational infrared branch",
+    "reproducible linear spectrum and lattice Green-function checks",
+    "protocol for finite microscopic closure before observational fitting"
+  ],
+  "status": "exploratory candidate; zero-data linear checks only"
+}
