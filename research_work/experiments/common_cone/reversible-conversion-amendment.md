@@ -1,0 +1,7 @@
+# RC-1 amendment 1: tighten integration accuracy after a reversal failure
+
+20 September 2026. The first 24-run archive is preserved. Every energy/norm check, all seven analytic/no-conversion controls and all twelve omitted-reaction controls pass, but run-19's backward-state error is 5.24614e-7, above the unchanged 1e-7 gate. That first campaign therefore fails its aggregate numerical acceptance despite relative energy error below 8.28e-10.
+
+Repeat all trajectories with DOP853 rtol=1e-12,atol=1e-14, retaining equations, initial conditions, horizon, sampling and all gates. Store new evidence in reversible-conversion-v2, compare endpoints against the first archive, and independently audit both. Do not adjust the reversal threshold. Reuse the pinned derivative controls and budget table because their implementation and inputs are unchanged.
+
+Interpretation clarification from the owner's latest instruction: evaluate this candidate's own conserved energy and predictions, not agreement with an older gravity formula. Equal weak gravitational response is a result of SR-1, not a universal prohibition on inventing a different response. The mixed-mode population |b|^2 is not the same as a converted energy fraction when diagonal energies differ or interaction energy is nonzero. The separate budget table uses an energy fraction, not that population. Spin, full spatial attachment/release, orbital dynamics and observed lensing have not been derived by this local oscillator test.
