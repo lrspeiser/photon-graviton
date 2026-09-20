@@ -1,0 +1,696 @@
+{
+ "stage": "lenses",
+ "gates": {
+  "reproduction": true,
+  "joint_monotone": true,
+  "kkt": true
+ },
+ "numerical_pass": true,
+ "reproduction": {
+  "rows": {
+   "J0037-0942": {
+    "log10_mass": 11.386185683098157,
+    "cl1_log10_mass": 11.386185690493088,
+    "theta_newtonian": 0.501088649254624,
+    "cl1_theta_newtonian_L0": 0.5010886530705496,
+    "theta_projected_route": 0.5010890736673781,
+    "theta_component_route": 0.501086474950963,
+    "stars_only_flrw": {
+     "chi2": 25.023335231252847,
+     "beta": -0.6630889699761572,
+     "stellar_mass_Msun": 890772498897.038
+    },
+    "cl2_stars_only": {
+     "chi2": 25.02333523124812,
+     "beta": -0.6630889831826284,
+     "stellar_mass_Msun": 890772498897.038
+    },
+    "errors": {
+     "mass": 7.394930889859097e-09,
+     "theta": 7.615270414262909e-09,
+     "chi2": 1.8895995879120164e-13,
+     "beta": 1.3206471249915808e-08,
+     "stellar_mass": 0.0
+    }
+   },
+   "J1112+0826": {
+    "log10_mass": 11.374943377054837,
+    "cl1_log10_mass": 11.37494338444976,
+    "theta_newtonian": 0.4449420272169031,
+    "cl1_theta_newtonian_L0": 0.4449420306067276,
+    "theta_projected_route": 0.44494244807294975,
+    "theta_component_route": 0.4449401326654981,
+    "stars_only_flrw": {
+     "chi2": 388.4139948006438,
+     "beta": -2.0,
+     "stellar_mass_Msun": 939998709828.2079
+    },
+    "cl2_stars_only": {
+     "chi2": 388.41399480067514,
+     "beta": -2.0,
+     "stellar_mass_Msun": 939998709828.2075
+    },
+    "errors": {
+     "mass": 7.3949220080749e-09,
+     "theta": 7.618575548207218e-09,
+     "chi2": 8.060219158778636e-14,
+     "beta": 0.0,
+     "stellar_mass": 4.440892098500626e-16
+    }
+   },
+   "J1204+0358": {
+    "log10_mass": 11.111265972483787,
+    "cl1_log10_mass": 11.111265979878715,
+    "theta_newtonian": 0.543735421481824,
+    "cl1_theta_newtonian_L0": 0.5437354251943499,
+    "theta_projected_route": 0.5437355638437011,
+    "theta_component_route": 0.5437333039339045,
+    "stars_only_flrw": {
+     "chi2": 5.780507234176716,
+     "beta": -0.8709434626365862,
+     "stellar_mass_Msun": 383424496576.7173
+    },
+    "cl2_stars_only": {
+     "chi2": 5.780507234177457,
+     "beta": -0.8709435027331425,
+     "stellar_mass_Msun": 383424496576.71716
+    },
+    "errors": {
+     "mass": 7.394927337145418e-09,
+     "theta": 6.827816978471901e-09,
+     "chi2": 1.2811973704174306e-13,
+     "beta": 4.009655629744202e-08,
+     "stellar_mass": 2.220446049250313e-16
+    }
+   },
+   "J1402+6321": {
+    "log10_mass": 11.454763321312422,
+    "cl1_log10_mass": 11.454763328707356,
+    "theta_newtonian": 0.44355855211650214,
+    "cl1_theta_newtonian_L0": 0.44355855590011994,
+    "theta_projected_route": 0.4435593437801809,
+    "theta_component_route": 0.443556618272612,
+    "stars_only_flrw": {
+     "chi2": 69.41431775505093,
+     "beta": -0.11538444798441573,
+     "stellar_mass_Msun": 897333613731.2632
+    },
+    "cl2_stars_only": {
+     "chi2": 69.41431775504805,
+     "beta": -0.11538442615759995,
+     "stellar_mass_Msun": 897333613731.2639
+    },
+    "errors": {
+     "mass": 7.394934442572776e-09,
+     "theta": 8.530142814322517e-09,
+     "chi2": 4.1522341120980855e-14,
+     "beta": 2.1826815785330744e-08,
+     "stellar_mass": 7.771561172376096e-16
+    }
+   },
+   "J1621+3931": {
+    "log10_mass": 11.34879696855869,
+    "cl1_log10_mass": 11.348796975953615,
+    "theta_newtonian": 0.40040417296789177,
+    "cl1_theta_newtonian_L0": 0.40040417595238115,
+    "theta_projected_route": 0.40040442657449715,
+    "theta_component_route": 0.40040244368506217,
+    "stars_only_flrw": {
+     "chi2": 49.81800907183432,
+     "beta": -2.0,
+     "stellar_mass_Msun": 850161316137.6898
+    },
+    "cl2_stars_only": {
+     "chi2": 49.818009071839455,
+     "beta": -2.0,
+     "stellar_mass_Msun": 850161316137.6898
+    },
+    "errors": {
+     "mass": 7.394925560788579e-09,
+     "theta": 7.453691885928038e-09,
+     "chi2": 1.0313971898767704e-13,
+     "beta": 0.0,
+     "stellar_mass": 0.0
+    }
+   },
+   "J1630+4520": {
+    "log10_mass": 11.508373855494229,
+    "cl1_log10_mass": 11.508373862889162,
+    "theta_newtonian": 0.6401372927651886,
+    "cl1_theta_newtonian_L0": 0.6401372974905528,
+    "theta_projected_route": 0.6401377934351559,
+    "theta_component_route": 0.640134628732832,
+    "stars_only_flrw": {
+     "chi2": 344.4194198070809,
+     "beta": -1.6566388767449116,
+     "stellar_mass_Msun": 1046889271507.1814
+    },
+    "cl2_stars_only": {
+     "chi2": 344.4194198070641,
+     "beta": -1.656638709936765,
+     "stellar_mass_Msun": 1046889271507.1803
+    },
+    "errors": {
+     "mass": 7.3949326662159365e-09,
+     "theta": 7.381797950678504e-09,
+     "chi2": 4.8627768478581856e-14,
+     "beta": 1.6680814662883847e-07,
+     "stellar_mass": 1.1102230246251565e-15
+    }
+   }
+  },
+  "worst": 1.6680814662883847e-07,
+  "routes_max_difference": 4.359839035683599e-06
+ },
+ "outcome": "b: the lens verdict is unchanged by the transverse coupling",
+ "joint": {
+  "Chabrier-F1-W": {
+   "total_kinematics_chi2": 327.13291534202784,
+   "max_abs_einstein_residual": 0.13063909752149563,
+   "described": false,
+   "iterations": 6,
+   "monotone": true,
+   "betas": [
+    0.01574543306424356,
+    -0.743028296695395,
+    -2.0,
+    -0.06999717369149427,
+    -0.2797206023345738,
+    -1.4152717743390861
+   ],
+   "widths_active": [
+    3,
+    4,
+    7,
+    11,
+    12
+   ],
+   "objective": 17.08832577484914
+  },
+  "Chabrier-F1-S": {
+   "total_kinematics_chi2": 434.7743281995747,
+   "max_abs_einstein_residual": 0.1521748305894811,
+   "described": false,
+   "iterations": 6,
+   "monotone": true,
+   "betas": [
+    0.4205412336290655,
+    -0.13437932229443877,
+    -0.8642810889658615,
+    0.27301406115024857,
+    0.26241842919915764,
+    -0.4316742709695967
+   ],
+   "widths_active": [
+    2,
+    3,
+    6,
+    7,
+    13,
+    14
+   ],
+   "objective": 21.714464793829528
+  },
+  "Salpeter-F1-W": {
+   "total_kinematics_chi2": 329.54913782455117,
+   "max_abs_einstein_residual": 0.1382803260393819,
+   "described": false,
+   "iterations": 6,
+   "monotone": true,
+   "betas": [
+    0.03965637382614146,
+    -0.6906395756052848,
+    -2.0,
+    0.015772870254640473,
+    -0.27460853672784163,
+    -1.3153590631366248
+   ],
+   "widths_active": [
+    3,
+    4,
+    7,
+    12
+   ],
+   "objective": 17.57296473740714
+  },
+  "Salpeter-F1-S": {
+   "total_kinematics_chi2": 389.0756655820835,
+   "max_abs_einstein_residual": 0.16118104824054477,
+   "described": false,
+   "iterations": 6,
+   "monotone": true,
+   "betas": [
+    0.31084286901111574,
+    -0.3551665445869468,
+    -1.8479923002235472,
+    0.22170883302236166,
+    0.03723936981783614,
+    -0.8018384108957803
+   ],
+   "widths_active": [
+    2,
+    3,
+    6,
+    7,
+    13,
+    14
+   ],
+   "objective": 20.42613047447127
+  }
+ },
+ "per_lens": {
+  "Chabrier-F1-W": {
+   "total_kinematics_chi2": 13.932464478265645,
+   "max_abs_einstein_residual": 9.690124733502285e-10,
+   "betas_on_bound": 6,
+   "worst_kkt": 4.642951909128643e-16
+  },
+  "Chabrier-F1-S": {
+   "total_kinematics_chi2": 13.645980723448439,
+   "max_abs_einstein_residual": 5.158199956816277e-11,
+   "betas_on_bound": 6,
+   "worst_kkt": 2.04870817968237e-16
+  },
+  "Chabrier-F2-W": {
+   "total_kinematics_chi2": 12.911163647993714,
+   "max_abs_einstein_residual": 2.727944666528567e-10,
+   "betas_on_bound": 4,
+   "worst_kkt": 2.5050122252143104e-16
+  },
+  "Chabrier-F2-S": {
+   "total_kinematics_chi2": 13.100117590843931,
+   "max_abs_einstein_residual": 1.9268647050805345e-10,
+   "betas_on_bound": 5,
+   "worst_kkt": 4.484422276967416e-16
+  },
+  "Salpeter-F1-W": {
+   "total_kinematics_chi2": 15.28993271836366,
+   "max_abs_einstein_residual": 5.874543557271757e-10,
+   "betas_on_bound": 6,
+   "worst_kkt": 4.874252590563091e-16
+  },
+  "Salpeter-F1-S": {
+   "total_kinematics_chi2": 15.093819201049168,
+   "max_abs_einstein_residual": 4.463043554743379e-11,
+   "betas_on_bound": 6,
+   "worst_kkt": 2.1149617892336602e-16
+  },
+  "Salpeter-F2-W": {
+   "total_kinematics_chi2": 14.463331854137579,
+   "max_abs_einstein_residual": 2.6666428079706615e-10,
+   "betas_on_bound": 4,
+   "worst_kkt": 2.92155111886152e-16
+  },
+  "Salpeter-F2-S": {
+   "total_kinematics_chi2": 14.650408546472933,
+   "max_abs_einstein_residual": 2.1562898121097883e-10,
+   "betas_on_bound": 5,
+   "worst_kkt": 2.3045628158745436e-16
+  }
+ },
+ "per_lens_chi2": {
+  "Chabrier-F1-W": {
+   "J0037-0942": {
+    "chi2": 3.533080963422823,
+    "beta": -2.0,
+    "einstein_residual": 2.2605941185993295e-10,
+    "active": 5
+   },
+   "J1112+0826": {
+    "chi2": 4.792569738397758,
+    "beta": -2.0,
+    "einstein_residual": 9.690124733502285e-10,
+    "active": 4
+   },
+   "J1204+0358": {
+    "chi2": 2.553357291238958,
+    "beta": -2.0,
+    "einstein_residual": 1.2186059362055615e-10,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.0038377179707584958,
+    "beta": -2.0,
+    "einstein_residual": 5.265345952931687e-13,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 2.075326622613647,
+    "beta": -2.0,
+    "einstein_residual": -1.3771479523727832e-12,
+    "active": 5
+   },
+   "J1630+4520": {
+    "chi2": 0.9742921446216998,
+    "beta": -2.0,
+    "einstein_residual": 1.9912702200143663e-11,
+    "active": 5
+   }
+  },
+  "Chabrier-F1-S": {
+   "J0037-0942": {
+    "chi2": 3.5101397426912544,
+    "beta": -2.0,
+    "einstein_residual": -3.0480292530429533e-15,
+    "active": 6
+   },
+   "J1112+0826": {
+    "chi2": 4.565909499925972,
+    "beta": -2.0,
+    "einstein_residual": 5.158199956816277e-11,
+    "active": 4
+   },
+   "J1204+0358": {
+    "chi2": 2.521600254676499,
+    "beta": -2.0,
+    "einstein_residual": 1.184848394045687e-11,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.003808932450099106,
+    "beta": -2.0,
+    "einstein_residual": 5.176795503529214e-15,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 2.0767358713565764,
+    "beta": -2.0,
+    "einstein_residual": -2.1991743646218284e-12,
+    "active": 5
+   },
+   "J1630+4520": {
+    "chi2": 0.9677864223480377,
+    "beta": -2.0,
+    "einstein_residual": 2.3422478813677685e-12,
+    "active": 5
+   }
+  },
+  "Chabrier-F2-W": {
+   "J0037-0942": {
+    "chi2": 3.459236538442069,
+    "beta": -0.5915393446592243,
+    "einstein_residual": -2.7127460352082285e-12,
+    "active": 5
+   },
+   "J1112+0826": {
+    "chi2": 4.014987393682034,
+    "beta": -2.0,
+    "einstein_residual": -3.703567813090743e-11,
+    "active": 5
+   },
+   "J1204+0358": {
+    "chi2": 2.546236320174143,
+    "beta": -2.0,
+    "einstein_residual": -5.419578197095507e-13,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.0028190231059496635,
+    "beta": -2.0,
+    "einstein_residual": -4.1823058410091276e-14,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 1.9356176925106074,
+    "beta": -1.0872529730728377,
+    "einstein_residual": 2.727944666528567e-10,
+    "active": 4
+   },
+   "J1630+4520": {
+    "chi2": 0.9522666800789111,
+    "beta": -2.0,
+    "einstein_residual": -1.6227186919408833e-12,
+    "active": 5
+   }
+  },
+  "Chabrier-F2-S": {
+   "J0037-0942": {
+    "chi2": 3.4645465964037028,
+    "beta": -0.5691791225427701,
+    "einstein_residual": -1.2199954801679639e-11,
+    "active": 5
+   },
+   "J1112+0826": {
+    "chi2": 4.053688236298936,
+    "beta": -2.0,
+    "einstein_residual": -5.945352936407539e-11,
+    "active": 5
+   },
+   "J1204+0358": {
+    "chi2": 2.5467286433066234,
+    "beta": -2.0,
+    "einstein_residual": -8.653872236413012e-13,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.002858729181006178,
+    "beta": -2.0,
+    "einstein_residual": -6.743457300649896e-14,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 2.078358132714623,
+    "beta": -2.0,
+    "einstein_residual": -1.9268647050805345e-10,
+    "active": 5
+   },
+   "J1630+4520": {
+    "chi2": 0.9539372529390389,
+    "beta": -2.0,
+    "einstein_residual": -2.7322366019243458e-12,
+    "active": 5
+   }
+  },
+  "Salpeter-F1-W": {
+   "J0037-0942": {
+    "chi2": 3.691339391273801,
+    "beta": -2.0,
+    "einstein_residual": 5.873345540057315e-10,
+    "active": 5
+   },
+   "J1112+0826": {
+    "chi2": 5.573916501065655,
+    "beta": -2.0,
+    "einstein_residual": 5.874543557271757e-10,
+    "active": 4
+   },
+   "J1204+0358": {
+    "chi2": 2.6469913648510586,
+    "beta": -2.0,
+    "einstein_residual": 1.3541385640440108e-10,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.004047254466020131,
+    "beta": -2.0,
+    "einstein_residual": 1.474024403899634e-13,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 2.2774790333385484,
+    "beta": -2.0,
+    "einstein_residual": -1.4486222065595168e-12,
+    "active": 5
+   },
+   "J1630+4520": {
+    "chi2": 1.0961591733685778,
+    "beta": -2.0,
+    "einstein_residual": 1.119846517504453e-11,
+    "active": 5
+   }
+  },
+  "Salpeter-F1-S": {
+   "J0037-0942": {
+    "chi2": 3.6071226290676064,
+    "beta": -2.0,
+    "einstein_residual": 1.6072330823420566e-11,
+    "active": 5
+   },
+   "J1112+0826": {
+    "chi2": 5.4839582815760295,
+    "beta": -2.0,
+    "einstein_residual": 4.463043554743379e-11,
+    "active": 5
+   },
+   "J1204+0358": {
+    "chi2": 2.628017675735219,
+    "beta": -2.0,
+    "einstein_residual": 1.3439910927993813e-11,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.004029958053829504,
+    "beta": -2.0,
+    "einstein_residual": 5.244911233838809e-15,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 2.2786183669857785,
+    "beta": -2.0,
+    "einstein_residual": -2.3129097650467626e-12,
+    "active": 5
+   },
+   "J1630+4520": {
+    "chi2": 1.0920722896307051,
+    "beta": -2.0,
+    "einstein_residual": 4.991794687386602e-12,
+    "active": 5
+   }
+  },
+  "Salpeter-F2-W": {
+   "J0037-0942": {
+    "chi2": 3.5281238740023086,
+    "beta": -1.8732415438244008,
+    "einstein_residual": -3.1638543646585858e-12,
+    "active": 5
+   },
+   "J1112+0826": {
+    "chi2": 4.988277802539245,
+    "beta": -2.0,
+    "einstein_residual": -4.203406397645598e-11,
+    "active": 5
+   },
+   "J1204+0358": {
+    "chi2": 2.66866838764906,
+    "beta": -2.0,
+    "einstein_residual": -6.226084918629381e-13,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.004259214552147441,
+    "beta": -2.0,
+    "einstein_residual": -8.003598311377403e-14,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 2.1510050940362384,
+    "beta": -0.6614919293868606,
+    "einstein_residual": -2.6666428079706615e-10,
+    "active": 4
+   },
+   "J1630+4520": {
+    "chi2": 1.1229974813585786,
+    "beta": -2.0,
+    "einstein_residual": -5.446862775686059e-12,
+    "active": 5
+   }
+  },
+  "Salpeter-F2-S": {
+   "J0037-0942": {
+    "chi2": 3.530294561680193,
+    "beta": -1.8420416312560506,
+    "einstein_residual": -4.982439246849142e-12,
+    "active": 5
+   },
+   "J1112+0826": {
+    "chi2": 5.022763580226884,
+    "beta": -2.0,
+    "einstein_residual": -6.735909243885857e-11,
+    "active": 5
+   },
+   "J1204+0358": {
+    "chi2": 2.6690335681059674,
+    "beta": -2.0,
+    "einstein_residual": -9.943548132806586e-13,
+    "active": 5
+   },
+   "J1402+6321": {
+    "chi2": 0.004312903888491588,
+    "beta": -2.0,
+    "einstein_residual": -1.28466267363896e-13,
+    "active": 7
+   },
+   "J1621+3931": {
+    "chi2": 2.2971791548474934,
+    "beta": -2.0,
+    "einstein_residual": -2.1562898121097883e-10,
+    "active": 5
+   },
+   "J1630+4520": {
+    "chi2": 1.126824777723905,
+    "beta": -2.0,
+    "einstein_residual": -8.795464363302557e-12,
+    "active": 5
+   }
+  }
+ },
+ "ceiling_ratio_S_over_W": 1.014634927416444,
+ "ceiling_reading": "indistinguishable",
+ "sensitivity_flrw": {
+  "W": {
+   "total_kinematics_chi2": 407.739253730819,
+   "max_abs_einstein_residual": 0.131416687912255,
+   "described": false
+  },
+  "S": {
+   "total_kinematics_chi2": 492.65889621780775,
+   "max_abs_einstein_residual": 0.1481901253025115,
+   "described": false
+  }
+ },
+ "support_factors": {
+  "-2.0": 0.7980890174223225,
+  "-1.0": 0.7535495197195388,
+  "0.0": 0.6666666666666667,
+  "0.45": 0.5842682540136135
+ },
+ "vector_channel": {
+  "fitted": false,
+  "reason": "G7: zero mean support for a non-rotating population; G8: no focusing",
+  "light_to_matter_ratio": {
+   "200_km_s": 1498.96229,
+   "300_km_s": 999.3081933333333
+  }
+ },
+ "acceptance": {
+  "chi2_limit": 128.0,
+  "einstein_limit": 0.03,
+  "bins": 40
+ },
+ "geometry": "PF1_static_euclidean",
+ "widths_kpc": [
+  0.15848931924611134,
+  0.251188643150958,
+  0.3981071705534973,
+  0.6309573444801932,
+  1.0,
+  1.584893192461114,
+  2.511886431509581,
+  3.981071705534973,
+  6.309573444801933,
+  10.0,
+  15.848931924611142,
+  25.11886431509582,
+  39.810717055349734,
+  63.095734448019364,
+  100.0,
+  158.48931924611142,
+  251.18864315095823,
+  398.1071705534973,
+  630.9573444801937,
+  1000.0,
+  1584.893192461114,
+  2511.886431509582,
+  3981.0717055349774,
+  6309.573444801943,
+  10000.0
+ ],
+ "shells_kpc": [
+  0.2,
+  0.28899655310592465,
+  0.41759503853552765,
+  0.6034176336545164,
+  0.871928081047444,
+  1.2599210498948732,
+  1.8205642030260805,
+  2.63068389691286,
+  3.8012928925953906,
+  5.492802716530588,
+  7.937005259840996,
+  11.468835810388207,
+  16.572270086699938,
+  23.94664466098352,
+  34.602488827383155,
+  50.0
+ ]
+}

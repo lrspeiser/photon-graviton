@@ -145,6 +145,20 @@ def main():
         ('path-memory/cl2_checks.py', []),
         # CL-F1: spherical cluster optics, analytic projection and image-position gates.
         ('path-memory/cluster_lensing_checks.py', []),
+        # TF-1, the transverse coupling of the converted field (experiments/transverse_coupling/protocol.md): the fast
+        # exact-property gates with their controls, anchored to the archived exact stage.
+        ('../experiments/transverse_coupling/tf1_checks.py', []),
+        # CL-2 stage 2 (path-memory/protocol-cl2-stage2.md and its amendments): the disk-force gates, the certificate of the
+        # archived galaxy optimum recomputed from the inputs, and the SZ correlation matrices, anchored to cl2s2-results.json.
+        ('path-memory/cl2s2_checks.py', []),
+        # NL-1, the root spectrum (path-memory/protocol-nl1.md, amendment 1): the archived optimum's certificate recomputed
+        # from the inputs and the local law's reproduction of the archived reference, anchored to nl1-results.json.
+        ('path-memory/nl1_checks.py', []),
+        # NK-1, shell footprints (path-memory/protocol-nk1.md): the kernel gates and per-galaxy anchors on three galaxies.
+        ('path-memory/nk1_checks.py', []),
+        # RW-1, the whirlpool beyond the rut (path-memory/protocol-rw1.md, amendment 1): the kernel gates and the archived
+        # G-whole strengths of three galaxies recomputed from the inputs, anchored to rw1-results.json.
+        ('path-memory/rw1_checks.py', []),
         # RUT-1 stage 9, the corrected response calculation (path-memory/protocol-rut9.md): the boundary terms
         # of the sharp truncation, every ring-limit annulus resolved on its own, and B13's own eigenfunction in
         # the time domain. Its status is its own and does not touch stage 8's.
