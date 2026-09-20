@@ -9,6 +9,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from campaign import HERE, REPO, write_json
+from archive_io import open_npz
 
 EVIDENCE = HERE/"evidence"
 def read(path): return json.loads(path.read_text(encoding="utf8"))
@@ -54,8 +55,8 @@ def main():
                     fine_conservation_pass=bb["conservation_pass"]))
     for identifier in selection["phenomenological"]:
         # Compare complete reflected state histories, with omega a pseudoscalar.
-        coarse=np.load(EVIDENCE/"screen-v1"/"phenomenological-chain"/"trajectories.npz")
-        rev=np.load(EVIDENCE/"refine-v1"/"reverse-turn"/"trajectories.npz")
+        coarse=open_npz(EVIDENCE/"screen-v1"/"phenomenological-chain"/"trajectories.npz")
+        rev=open_npz(EVIDENCE/"refine-v1"/"reverse-turn"/"trajectories.npz")
         ia=list(coarse["ids"]).index(identifier); ib=list(rev["ids"]).index(identifier)
         expected=coarse["state"][ia].copy()
         expected[..., [1,3,5,7,8]] *= -1
@@ -80,7 +81,7 @@ def main():
         count=len(data["results"])
         audit["trajectory_count"]+=count
         audit["nonfinite_trajectories"]+=sum(r["first_nonfinite_time"] is not None for r in data["results"])
-        raw=np.load(summary_path.with_name("trajectories.npz"))
+        raw=open_npz(summary_path.with_name("trajectories.npz"))
         check(str(summary_path.parent.relative_to(EVIDENCE))+" IDs match",
               list(raw["ids"])==[r["id"] for r in data["results"]])
         if data["fixture"]=="chain":
@@ -115,6 +116,16 @@ def main():
                   np.max(np.abs(np.array(L)-raw["angular"]))<1e-10)
     audit["max_prescribed_leader_speed_error"]=max_leader_error
     check("prescribed leader speed integration",max_leader_error<1e-7)
+    for indexpath in sorted(EVIDENCE.rglob("*.parts.json")):
+        index=read(indexpath)
+        digest=hashlib.sha256()
+        size=0
+        for part in index["parts"]:
+            raw=indexpath.with_name(part["name"]).read_bytes()
+            check(part["name"]+" byte digest",hashlib.sha256(raw).hexdigest()==part["sha256"])
+            digest.update(raw);size+=len(raw)
+        check(str(indexpath.relative_to(EVIDENCE))+" exact reassembly",
+              digest.hexdigest()==index["sha256"] and size==index["bytes"])
     audit["all_evidence_checks_passed"]=all(c["passed"] for c in audit["checks"])
     write_json(HERE/"audit.json",audit)
 
@@ -127,14 +138,14 @@ def main():
     axs[0,0].set(xticks=ind,xticklabels=families,ylabel="Passing cases",title="Declared behavioral tests (600 + 18 laws)")
     axs[0,0].legend(frameon=False)
     best=selection["phenomenological"][0]
-    ar=np.load(EVIDENCE/"screen-v1"/"phenomenological-chain"/"trajectories.npz")
+    ar=open_npz(EVIDENCE/"screen-v1"/"phenomenological-chain"/"trajectories.npz")
     ix=list(ar["ids"]).index(best)
     angles=np.arctan2(ar["state"][ix,...,3],ar["state"][ix,...,2])
     for i in (0,1,3,7,11):
         axs[0,1].plot(ar["time"],angles[:,i],label=f"packet {i}")
     axs[0,1].set(xlabel="Time (declared units)",ylabel="Velocity angle (rad)",title=f"Selected exposed chain: {best}")
     axs[0,1].legend(frameon=False,ncol=2)
-    long=np.load(EVIDENCE/"refine-v1"/"conservative-long-ring"/"trajectories.npz")
+    long=open_npz(EVIDENCE/"refine-v1"/"conservative-long-ring"/"trajectories.npz")
     # Plot first selected conservative law, including any late failure.
     bestc=str(long["ids"][0])
     for i in range(long["state"].shape[2]):
@@ -152,7 +163,8 @@ def main():
     plt.close(fig)
     checksums={}
     for p in sorted(EVIDENCE.rglob("*")):
-        if p.is_file(): checksums[p.relative_to(HERE).as_posix()]=hashlib.sha256(p.read_bytes()).hexdigest()
+        if p.is_file() and not p.with_name(p.name+".parts.json").exists():
+            checksums[p.relative_to(HERE).as_posix()]=hashlib.sha256(p.read_bytes()).hexdigest()
     write_json(HERE/"evidence-sha256.json",checksums)
     print(json.dumps({k:v for k,v in audit.items() if k in ("cases","family_counts","trajectory_count",
         "nonfinite_trajectories","all_evidence_checks_passed","max_prescribed_leader_speed_error")},indent=2))
