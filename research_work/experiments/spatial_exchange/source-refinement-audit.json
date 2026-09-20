@@ -1,7 +1,7 @@
 {
   "audit_passed": true,
-  "checks": 20,
-  "completed_new_runs": 2,
+  "checks": 26,
+  "completed_new_runs": 3,
   "declared_new_runs": 7,
   "complete": false,
   "source_accuracy_passed": null,
@@ -78,6 +78,31 @@
       ],
       "passed": true,
       "state_sha256": "73ed16e8fb773b05c5ce0a609600ee20d57c6954a731c85af0111212e4e981bd"
+    },
+    "mixed-n48": {
+      "campaign": "source-refinement-v1",
+      "name": "mixed-n48",
+      "matter_source": 6.329234538663888,
+      "field_source": 0.05154402439722398,
+      "wave_source": 0.028659225476244162,
+      "other_field_source": 0.022884798920979815,
+      "total_coupling_source": 6.380778563061112,
+      "wave_fraction": 0.004491493505534723,
+      "restoring_source": -1.9265112156473405,
+      "integrated_rhs_source": 6.380778563061113,
+      "rhs_error": 8.881784197001252e-16,
+      "derivative_checks": [
+        {
+          "epsilon": 1e-07,
+          "error": 1.3369811924235364e-09
+        },
+        {
+          "epsilon": 5e-08,
+          "error": 1.3369811924235364e-09
+        }
+      ],
+      "passed": true,
+      "state_sha256": "41e2dd33b931bebcbfe7776ee5b75f3d92be0046f6aec69f7067aa445c1aea93"
     },
     "mixed-coarse": {
       "campaign": "emitter-v1",

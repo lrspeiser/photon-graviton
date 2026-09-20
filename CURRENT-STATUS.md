@@ -1,5 +1,8 @@
 # Current status: photon–companion research
 
+**Bundle spatial-accuracy failure and frozen rotor stiffness, 20 September 2026.** Six bundle cases are audited (311 checks); the independently reconstructed Y coarse/fine bend changes about9.2%, failing its declared5% gate. This is much larger than the roughly0.06% emitter effect, which remains unresolved at current accuracy. [Rotor stiffness](research_work/experiments/spatial_exchange/rotor-stiffness-report.md): all eight frozen-source spectral cases pass; conservative timestep bounds apply only to that limited subsystem, not dynamic-rotor stability or propagation. SE-R has three completed runs, with final spatial-source comparisons still pending. No observational success is claimed; all twelve goal requirements remain active.
+
+
 **Full rotor Hamiltonian embedding checked, 20 September 2026.** [Report](research_work/experiments/spatial_exchange/rotor-full-report.md). All 48 full-system derivative fixtures pass, maximum error6.51e-11; twelve zero-coupling reductions exactly reproduce the earlier scalar oscillator. The angular ledger includes canonical rotor spin, and both curl field source and positional/internal reactions are implemented. Source-region propagation/stability and full angular convergence are not established, so no rotor-driven physical evolution result is claimed. Five bundle runs are now audited (260 checks), while source and grid refinements continue. All twelve goal requirements remain active.
 
 

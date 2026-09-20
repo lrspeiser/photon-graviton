@@ -1,8 +1,24 @@
 {
   "passed": true,
-  "checks": 260,
-  "completed_runs": 5,
+  "checks": 366,
+  "completed_runs": 7,
   "declared_runs": 7,
-  "complete": false,
-  "campaign_passed": null
+  "complete": true,
+  "campaign_passed": false,
+  "available_comparisons": [
+    {
+      "name": "time",
+      "bend_relative_difference": 1.3857067347778756e-05,
+      "arrival_difference": 1.0589695520479836e-07,
+      "matrix_difference": 2.786270225652032e-07,
+      "passed": true
+    },
+    {
+      "name": "space",
+      "bend_relative_difference": 0.09217582510304681,
+      "arrival_difference": 0.00012220922916661436,
+      "matrix_difference": 0.007218262523424723,
+      "passed": false
+    }
+  ]
 }

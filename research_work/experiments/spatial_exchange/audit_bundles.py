@@ -82,7 +82,16 @@ def main():
             expected=bend<(.01 if time_case else .05) and delay<(1e-4 if time_case else .001) and matrix<(.001 if time_case else .005)
             checks.append(abs(bend-c['bend_relative_difference'])<1e-10 and abs(delay-c['arrival_difference'])<1e-12 and abs(matrix-c['matrix_difference'])<1e-11 and expected==c['passed'])
         campaign=summary['passed'];checks.append(campaign==all(r['passed'] for r in rows+summary['comparisons']))
-    result=dict(passed=bool(all(checks)),checks=len(checks),completed_runs=len(rows),declared_runs=7,complete=complete,campaign_passed=campaign)
+    available_comparisons=[]
+    if 'Y' in derived:
+        base=derived['Y']
+        for name in ('time','space'):
+            if name not in derived:continue
+            fine=derived[name];time_case=name=='time'
+            bend=abs(base[0]-fine[0])/max(abs(fine[0]),1e-8);delay=abs(base[1]-fine[1]);matrix=float(np.max(abs(base[2]-fine[2])))
+            passed=bend<(.01 if time_case else .05) and delay<(1e-4 if time_case else .001) and matrix<(.001 if time_case else .005)
+            available_comparisons.append(dict(name=name,bend_relative_difference=bend,arrival_difference=delay,matrix_difference=matrix,passed=passed))
+    result=dict(passed=bool(all(checks)),checks=len(checks),completed_runs=len(rows),declared_runs=7,complete=complete,campaign_passed=campaign,available_comparisons=available_comparisons)
     (ROOT/'bundle-audit.json').write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result));assert result['passed']
 

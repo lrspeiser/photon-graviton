@@ -1,0 +1,102 @@
+{
+  "summary": {
+    "passed": true,
+    "count": 8,
+    "commit": "2737a48a75288e3cf2d7189f67f18e1a3bdd81e7",
+    "sources": {
+      "rotor_stiffness.py": "0fcad5e4b259af2243f12fb56c985de3c4f5ed955c165f97ff38a7a1302d0031",
+      "rotor_checks.py": "f44b18d5b27ceaac30d3fc86b08d14941456f2c221d241dec1d5261aaf8c49c8",
+      "rotor-stiffness-protocol.md": "8552798350ccf67272158f5d0f57269a0fde330d90428c3399771f8a88daee95"
+    }
+  },
+  "rows": [
+    {
+      "n": 12,
+      "coupling": 0.0,
+      "largest_eigenvalue": 27.040000000000013,
+      "upper_bound": 27.04,
+      "residual": 2.1698088527424038e-14,
+      "symmetry_error": 8.812956727164944e-17,
+      "checkerboard_error": 1.4210854715202004e-14,
+      "conservative_half_limit": 0.2719641466102106,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "coupling": 2.0,
+      "largest_eigenvalue": 27.039999999999996,
+      "upper_bound": 27.107216092373452,
+      "residual": 2.3048390495757858e-11,
+      "symmetry_error": 1.7020323005337124e-16,
+      "checkerboard_error": null,
+      "conservative_half_limit": 0.2716267509627749,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "coupling": 10.0,
+      "largest_eigenvalue": 27.04000000000002,
+      "upper_bound": 28.720402309336347,
+      "residual": 1.1276546224009037e-10,
+      "symmetry_error": 4.44407530588134e-16,
+      "checkerboard_error": null,
+      "conservative_half_limit": 0.2638880587210854,
+      "passed": true
+    },
+    {
+      "n": 12,
+      "coupling": 100.0,
+      "largest_eigenvalue": 27.040000000000006,
+      "upper_bound": 195.0802309336349,
+      "residual": 4.75791976747245e-11,
+      "symmetry_error": 1.5173003641484838e-16,
+      "checkerboard_error": null,
+      "conservative_half_limit": 0.1012531090262017,
+      "passed": true
+    },
+    {
+      "n": 24,
+      "coupling": 0.0,
+      "largest_eigenvalue": 108.04,
+      "upper_bound": 108.04,
+      "residual": 1.7450194664812175e-10,
+      "symmetry_error": 4.804946536398419e-16,
+      "checkerboard_error": 0.0,
+      "conservative_half_limit": 0.13605756997417964,
+      "passed": true
+    },
+    {
+      "n": 24,
+      "coupling": 2.0,
+      "largest_eigenvalue": 108.04,
+      "upper_bound": 108.30319757642508,
+      "residual": 2.5359050683398435e-10,
+      "symmetry_error": 2.4676121831066346e-16,
+      "checkerboard_error": null,
+      "conservative_half_limit": 0.1358921463936289,
+      "passed": true
+    },
+    {
+      "n": 24,
+      "coupling": 10.0,
+      "largest_eigenvalue": 108.03999999999988,
+      "upper_bound": 114.61993941062664,
+      "residual": 2.5844561897772734e-10,
+      "symmetry_error": 1.2210699675970365e-15,
+      "checkerboard_error": null,
+      "conservative_half_limit": 0.13209455329607175,
+      "passed": true
+    },
+    {
+      "n": 24,
+      "coupling": 100.0,
+      "largest_eigenvalue": 108.03999999999996,
+      "upper_bound": 766.0339410626633,
+      "residual": 3.2199209342582625e-10,
+      "symmetry_error": 6.555281796224494e-16,
+      "checkerboard_error": null,
+      "conservative_half_limit": 0.05109648101401466,
+      "passed": true
+    }
+  ]
+}
