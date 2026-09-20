@@ -9,12 +9,15 @@ import model as M
 from campaign import save,pack,scores
 HERE=Path(__file__).resolve().parent
 
-def fit_one(gp,ct,base,steepness):
+def fit_one(gp,ct,base,steepness,release_acceleration=None):
     Fg=M.features(gp["gb"],gp["r"],gp["mass"],"T")
     Fc=[M.features(c["gb"],c["r"],c["mass"],"T") for c in ct]
     norm=np.sqrt(sum(len(c["y"]) for c in ct)*10);cap=base["capacity"]
     def signed(gb,F,t):
-        return M.extra(t[:5],cap,F)-t[5]*gb*expit(steepness*(F[:,1]-t[6]))
+        opposite=t[5]*gb*expit(steepness*(F[:,1]-t[6]))
+        if release_acceleration is not None:
+            opposite*=expit(2*(np.log(release_acceleration/1e-10)-F[:,1]))
+        return M.extra(t[:5],cap,F)-opposite
     def residual(t):
         pred=np.sqrt(gp["r"]*(gp["gb"]+signed(gp["gb"],Fg,t)))
         chunks=[(pred-gp["y"])*gp["weight"]]
@@ -33,13 +36,13 @@ def fit_one(gp,ct,base,steepness):
             nfev=out.nfev,optimality=out.optimality,objective=float(np.sum(out.fun**2)),seconds=time.monotonic()-start,
             bound_parameters=[n for n,v,a,b in zip(names,out.x,lo,hi) if min(v-a,b-v)<1e-4]))
     best=min(attempts,key=lambda a:a["objective"]);t=best["theta"]
-    return dict(id=f"signed-{base['mode']}-cap{cap:.0e}-k{steepness:g}",mode=base["mode"],family="T",
+    return dict(id=f"signed-{base['mode']}-cap{cap:.0e}-k{steepness:g}"+(f"-release{release_acceleration:.0e}" if release_acceleration is not None else ""),release_acceleration=release_acceleration,mode=base["mode"],family="T",
         capacity=cap,theta=t[:5],epsilon=t[5],x_flip=t[6],steepness=steepness,success=best["success"],
         parameters=dict(zip(M.FAMILIES["T"],t[:5])),bound_parameters=best["bound_parameters"],attempts=attempts)
 
-def main():
-    out=HERE/"evidence-counter-v1";out.mkdir(exist_ok=False)
-    sources=D.FILES+[HERE/p for p in ("data.py","model.py","campaign.py","counter.py","counter-protocol.md","protocol.md",
+def main(recovery=False):
+    out=HERE/("evidence-recovery-v1" if recovery else "evidence-counter-v1");out.mkdir(exist_ok=False)
+    sources=D.FILES+([HERE/"recovery.py",HERE/"recovery-protocol.md"] if recovery else [])+[HERE/p for p in ("data.py","model.py","campaign.py","counter.py","counter-protocol.md","protocol.md",
                                     "evidence-v1/fits.json")]
     save(out/"manifest.json",dict(git_head=subprocess.check_output(["git","rev-parse","HEAD"],cwd=D.ROOT,text=True).strip(),
         inputs_and_sources={p.relative_to(D.ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}))
@@ -54,22 +57,31 @@ def main():
     if not all(c["passed"] for c in controls):raise AssertionError(controls)
     save(out/"controls.json",controls)
     fits=[]
-    for base in bases:
-        for k in (.5,1.,2.):
-            fit=fit_one(gp,ct,base,k)
-            fit["scores"]=scores(gals,clusters,fit,("train","validation"))
-            fits.append(fit);save(out/"fits.json",fits)
-            v=fit["scores"]["validation"]
-            print(f"{fit['id']}: galaxy {v['galaxy']['rmse']:.3f}, cluster {v['cluster']['chi2_per_point']:.3f}; success {fit['success']}",flush=True)
+    cases=([(b,2.,a) for b in bases if b["capacity"]==3e-9 for a in (1e-9,1e-8,1e-7)] if recovery else
+           [(b,k,None) for b in bases for k in (.5,1.,2.)])
+    for base,k,release in cases:
+        fit=fit_one(gp,ct,base,k,release)
+        fit["scores"]=scores(gals,clusters,fit,("train","validation"))
+        fits.append(fit);save(out/"fits.json",fits)
+        v=fit["scores"]["validation"]
+        print(f"{fit['id']}: galaxy {v['galaxy']['rmse']:.3f}, cluster {v['cluster']['chi2_per_point']:.3f}; success {fit['success']}",flush=True)
     selected={}
     for mode in ("galaxy","joint"):
         valid=[f for f in fits if f["mode"]==mode and f["success"]]
         selected[mode]=min(valid,key=lambda f:(f["scores"]["validation"]["joint_objective"] if mode=="joint" else
                                             f["scores"]["validation"]["galaxy"]["rmse"],f["id"]))
-    save(out/"selection-before-test.json",{m:{k:f[k] for k in ("id","family","capacity","theta","epsilon","x_flip","steepness")}
+    save(out/"selection-before-test.json",{m:{k:f[k] for k in ("id","family","capacity","theta","epsilon","x_flip","steepness","release_acceleration")}
                                           for m,f in selected.items()})
     save(out/"selected-predictions.json",{m:scores(gals,clusters,f,("train","validation","test"),True) for m,f in selected.items()})
-    fit=selected["joint"];coma=D.coma_data();light=[]
+    fit=selected["joint"]
+    if recovery:
+        gb=np.array([1e4/D.CODE_TO_SI]);rr=np.array([10.])
+        ratio=(gb+M.response(fit,gb,rr,1e11))/gb
+        bound=fit["capacity"]/1e4+fit["epsilon"]*(fit["release_acceleration"]/1e4)**2
+        controls.append(dict(name="large acceleration ordinary-force limit",error=float(abs(ratio[0]-1)),
+            analytic_bound=bound,passed=bool(abs(ratio[0]-1)<1e-10 and abs(ratio[0]-1)<=bound+1e-15)))
+        save(out/"controls.json",controls)
+    coma=D.coma_data();light=[]
     for ne0,mstar in ((2.5e-3,.5e13),(4.5e-3,2e13)):
         source=D.coma_source(ne0,mstar)
         for reach in (3000.,9000.,30000.):
@@ -94,7 +106,7 @@ def main():
     save(out/"complete.json",dict(complete=True,fits=len(fits),attempts=sum(len(f["attempts"]) for f in fits),
         numerical_passed=all(r["passed"] for r in numerical),
         operational_validation_target=fit["scores"]["validation"]["galaxy"]["rmse"]<=22 and fit["scores"]["validation"]["cluster"]["chi2_per_point"]<=10))
-    save(HERE/"counter-evidence-sha256.json",{p.relative_to(HERE).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
+    save(HERE/("recovery-evidence-sha256.json" if recovery else "counter-evidence-sha256.json"),{p.relative_to(HERE).as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
         for p in out.rglob("*") if p.is_file()})
     print("Completed "+str({m:f["id"] for m,f in selected.items()}),flush=True)
 if __name__=="__main__":main()

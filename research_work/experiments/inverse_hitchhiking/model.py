@@ -18,7 +18,10 @@ def response(fit,gb,r,mass):
     value=extra(np.asarray(fit["theta"]),fit["capacity"],features(gb,r,mass,fit["family"]))
     if "epsilon" in fit:
         x=np.log(np.maximum(np.asarray(gb)*CODE_TO_SI,1e-30)/1e-10)
-        value=value-fit["epsilon"]*gb*expit(fit["steepness"]*(x-fit["x_flip"]))
+        counter=fit["epsilon"]*gb*expit(fit["steepness"]*(x-fit["x_flip"]))
+        if fit.get("release_acceleration") is not None:
+            counter*=expit(2*(np.log(fit["release_acceleration"]/1e-10)-x))
+        value=value-counter
     return value
 def bounds(family):
     limits=dict(c=(-25,5),q=(-2,3),s=(-2,2),m=(-2,2),d=(-10,10))
