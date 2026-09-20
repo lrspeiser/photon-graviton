@@ -41,7 +41,7 @@ The first term in particle force differentiates W at fixed M, and the second dif
 
 ## Tests and run declaration
 
-First pin code, then execute 48 seeded full-state directional Hamiltonian derivative tests (seed20260923), spanning chi={-50,0,50,200}, k0={-.5,.5}, lambda={0,.4}, n=12,L=10,radius=1.2. Random compact fields/momenta plus nonzero internal Q,P exercise every reciprocal derivative. Require scaled finite-difference error <2e-6. Require positive M_i and averaged massive-particle cone bounds. Test the constant-coefficient six-field principal symbol and positive potential eigenvalues analytically/numerically; this does not establish nonlinear stability.
+First pin code, then execute 48 seeded full-state directional Hamiltonian derivative tests (seed20260923), spanning chi={-50,0,50,200}, k0={-.5,.5}, lambda={0,.4}, n=12,L=10,radius=1.2. Random compact fields/momenta plus nonzero internal Q,P exercise every reciprocal derivative. Require scaled finite-difference error <2e-6. Require positive M_i and averaged massive-particle cone bounds. Test the constant-coefficient six-field principal symbol and nonnegative eigenvalues of the frozen two-channel mixing mass matrix analytically/numerically. This is not a claim that the full nonlinear potential Hessian is positive or that a coupled source solution is stable.
 
 Eleven declared 3D runs, in order, all T=4,n=32,L=16,dt=.02,radius=.9 unless changed. Six matter sources form the existing radius .7 rotating ring, initial tangential momentum/mass=.2. Initial internal energy epsilon=.001 per particle, Q_i=sqrt(2 epsilon)/Omega and P_i=0, all equal phase. This prepared internal excitation is counted, not claimed to be a reconstructed stellar emission history.
 
