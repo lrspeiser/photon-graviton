@@ -1,0 +1,78 @@
+name: Phase Junction checks
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "phase_junction_network/**"
+      - "requirements.txt"
+      - ".github/workflows/phase-junction.yml"
+  pull_request:
+    paths:
+      - "phase_junction_network/**"
+      - "requirements.txt"
+      - ".github/workflows/phase-junction.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install numerical dependencies
+        run: python -m pip install --upgrade pip numpy scipy
+
+      - name: Check finite electromagnetic and discrete gravity kinematics
+        run: |
+          python phase_junction_network/microscopic/finite_junction_model.py \
+            --output /tmp/finite_junction_results.json
+          python phase_junction_network/microscopic/search_local_dynamics.py \
+            --output /tmp/local_dynamics_results.json
+
+      - name: Check first-order frame connection
+        run: |
+          python phase_junction_network/microscopic/check_first_order_frame.py \
+            --samples 200 \
+            --seed 43 \
+            --output /tmp/first_order_results.json
+          python phase_junction_network/microscopic/check_first_order_exact.py \
+            --output /tmp/first_order_exact_results.json
+          python phase_junction_network/microscopic/check_auxiliary_stability.py \
+            --samples 200 \
+            --seed 44 \
+            --output /tmp/auxiliary_stability_results.json
+
+      - name: Check tensor scaling and reduced transfer matrix
+        run: |
+          python phase_junction_network/microscopic/check_tensor_scaling.py \
+            --output /tmp/tensor_scaling_results.json
+          python phase_junction_network/microscopic/check_reduced_tt_transfer.py \
+            --output /tmp/reduced_tt_results.json
+
+      - name: Check local constrained reductions
+        run: |
+          python phase_junction_network/microscopic/check_constrained_local_reduction.py \
+            --sizes 3,5,7 \
+            --output /tmp/constrained_local_results.json
+          python phase_junction_network/microscopic/check_real_space_reduction.py \
+            --sizes 3 \
+            --output /tmp/real_space_results.json
+          python phase_junction_network/microscopic/check_global_volume_constraint.py \
+            --output /tmp/global_volume_results.json
+
+      - name: Check finite Weyl connection lock
+        run: |
+          python phase_junction_network/microscopic/check_finite_second_class_lock.py \
+            --output /tmp/finite_second_class_lock_results.json
