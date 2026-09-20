@@ -1,113 +1,102 @@
 # Microscopic finite-state phase
 
-**Status:** finite kinematics, exact first-order algebra, continuum scaling, and a reduced physical transfer matrix are checked; a stable local finite quantum gravity realization remains open  
+**Status:** finite kinematics, first-order frame–connection algebra, constrained local reduction, full real-space propagation, and a reduced finite transfer matrix are checked. A finite **local** quantum implementation and nonlinear closure remain open.  
 **Date:** 2026-09-20  
-**Branch:** `agent/phase-junction-microscopic`
+**Active branch:** `main`
 
-This folder replaces the infrared rotor and symmetric-tensor fields with explicit finite local Hilbert-space candidates and tests which microscopic dynamics can or cannot reach the required continuum theory.
+This folder replaces the infrared rotor and symmetric-tensor fields with explicit finite local candidates and progressively tests whether their constrained dynamics reaches the required photon and helicity-2 continuum theory.
 
 ## Results obtained
 
-1. **Electromagnetism:** a spin-1 quantum link, with three states per oriented link, is the smallest tested representation that has exact local U(1) Gauss symmetry and a non-constant electric-flux energy. Spin-1/2 preserves Gauss symmetry but its `E^2` term is constant.
-2. **Gravity kinematics:** six odd-prime qudits per lattice site realize the three vector constraints and one scalar curvature constraint as an exact commuting Weyl/CSS algebra. The periodic code leaves `2*N + 4` logical qudits: two local modes per site and four global zero modes.
-3. **Finite-dimensional obstruction:** no finite matrices obey `[Q,P]=iI` on their full Hilbert space. Continuous frame variables must emerge below a cutoff or from a discrete microscopic algebra.
-4. **Pure-stabilizer dynamics rejected:** exact local coordinate invariants begin at two derivatives and momentum invariants at one. Squaring them gives `omega ~ k^3`.
-5. **First-order identity verified:** an independent torsion-free connection gives a local `C^2 + C*partial(h)` action whose Schur complement is the Fierz–Pauli stiffness.
-6. **Exact arithmetic cross-check:** the Schur/Fierz–Pauli equality is verified over the rationals by matching all six independent quadratic momentum coefficients, not only random floating-point samples.
-7. **Continuum scaling cross-check:** the lowest tensor gap fits `omega ~ L^-0.995891`, the two polarizations remain degenerate to `6.11e-16`, and cubic directional anisotropy falls as `L^-2.01111`.
-8. **Naïve auxiliary Hamiltonian rejected:** a positive real auxiliary block with no bare frame stiffness always induces a nonpositive Schur complement. The current 18-component connection must be constrained/nonpropagating, integrated with a nontrivial contour, or accompanied by explicit bare frame stiffness.
-9. **Reduced quantum benchmark passed:** after solving the constraints, two finite truncated oscillators give a positive transfer matrix, exactly two degenerate first excitations, `omega ~ L^-0.993857`, negligible boundary occupation, and a positive Euclidean reflection kernel to numerical precision.
+1. **Finite electromagnetic link:** a spin-1 quantum link, with three states per oriented link, is the smallest tested representation with exact local U(1) Gauss symmetry and nonconstant electric-flux energy. Spin-1/2 preserves Gauss symmetry but has constant `E^2`.
+2. **Finite gravitational constraint skeleton:** six odd-prime qudits per site realize the three vector constraints and one scalar constraint as an exact commuting Weyl/CSS algebra. The periodic code leaves two local logical modes per site, with the expected global zero-mode excess.
+3. **Finite canonical obstruction:** no finite matrices obey `[Q,P]=iI` on their full Hilbert space. Continuous frame variables must emerge below a cutoff or from a discrete microscopic algebra.
+4. **Pure stabilizer branch rejected:** exact local coordinate invariants begin at two derivatives and momentum invariants at one. Squaring them gives `omega ~ k^3`, not a relativistic tensor branch.
+5. **First-order frame–connection identity:** an independent torsion-free connection gives a local `C^2 + C*partial(h)` form whose constrained elimination is exactly the Fierz–Pauli stiffness.
+6. **Independent verification:** the first-order identity passes random numerical tests, exact rational coefficient comparison, gauge-null checks, finite-size scaling, static response, and a reduced Euclidean transfer-matrix benchmark.
+7. **Naïve auxiliary quantization rejected:** a positive real auxiliary block with zero bare frame stiffness induces a nonpositive Schur complement. The connection must be constrained/nonpropagating, contour-integrated, or accompanied by explicit bare frame stiffness.
+8. **Constrained local reduction completed:** starting from the 48-dimensional phase space `(h,p,C,P_C)`, the 36 connection constraints are second-class and the four frame constraints are first-class:
+
+   ```text
+   48 - 36 - 2*4 = 4 physical phase-space dimensions
+   ```
+
+   The quotient produces two equal positive frequencies `|k_hat|` without constructing a TT projector. All 492 nonzero modes on `L=3,5,7` pass.
+9. **Full real-space reduction completed:** the reduction was repeated on complete periodic real-space matrices, without Fourier block reduction or a TT projector. The `3^3` and `5^3` lattices leave exactly two positive modes per nonzero momentum; the reduced spectra agree with the central-difference lattice symbols to `2.21e-14` or better.
+10. **Global conformal issue isolated:** the unrestricted periodic zero mode has one negative homogeneous trace-momentum direction.
+11. **Fixed-volume candidate passed:** imposing total-volume and trace-momentum constraints as a second-class pair removes exactly that negative global canonical pair, leaving five positive global shear momenta and five zero-potential global shape moduli.
+12. **Reduced finite quantum target passed:** after the constraints are solved, two truncated oscillators give a positive transfer matrix, a twofold first excitation, `omega ~ L^-0.993857`, negligible truncation-boundary occupation, and a positive Euclidean reflection kernel to numerical precision.
 
 ## Current interpretation
 
-The finite gravity constraint code is kinematic. A commuting-projector or manifest-local-invariant-square Hamiltonian is not the required graviton theory.
-
-The first-order frame–connection identity remains a viable **constrained action architecture**, but it is not a conventional positive oscillator Hamiltonian for all connection components. The connection quadratic form has inertia
+The local **linear continuum bridge is now closed**:
 
 ```text
-8 negative, 0 zero, 10 positive
+local frame + independent connection
+    -> 36 second-class connection constraints
+    -> 4 first-class frame constraints
+    -> 4-dimensional physical phase space
+    -> 2 positive linearly dispersing modes
 ```
 
-and the full unconstrained first-order block has
+This result no longer depends on inserting a transverse-traceless projector. It has also been reproduced in full real space.
 
-```text
-9 negative, 3 gauge zero, 12 positive.
-```
+The remaining microscopic problem is more specific: implement the second-class connection reduction and the four first-class frame constraints in a finite local Hilbert space, then derive the positive reduced transfer matrix from those finite local variables.
 
-After eliminating the connection and imposing the scalar constraint, the physical transverse-traceless sector has two positive modes. A direct finite realization of those two reduced modes works, so finite oscillator truncation is not the obstacle. The unresolved step is deriving that reduced positive transfer matrix from the **local** constrained frame and connection variables without pre-imposing a nonlocal TT projector.
+The connection is not an ordinary collection of positive-energy oscillators. The constrained first-order/Palatini route remains primary; complex Euclidean auxiliary and positive-bare-stiffness models remain independent cross-checks.
 
-Three branches are separated:
-
-1. a constrained first-order/Palatini transfer matrix;
-2. a complex Euclidean auxiliary representation followed by reflection-positivity tests;
-3. a bounded real Hamiltonian with explicit bare frame stiffness, used as a benchmark or fallback.
-
-The project does not yet derive `Z_g/Z_A`, chiral fermions, the particle-mass hierarchy, nonlinear closure, or control of the vacuum-volume term.
+The global periodic conformal mode is controlled at linear order by a fixed-volume second-class pair. A microscopic reason for that rule and its nonlinear closure are still required.
 
 ## Files
 
 | File | Purpose |
 |---|---|
 | [`finite_hilbert_derivation.md`](finite_hilbert_derivation.md) | Finite construction, canonical no-go result, discrete constraints, and derivative-order obstruction. |
-| [`finite_junction_model.py`](finite_junction_model.py) | Quantum-link test, GF(p) gravity constraint code, and finite canonical-pair diagnostics. |
-| [`results.json`](results.json) | Frozen finite-link and finite-constraint results. |
-| [`search_local_dynamics.py`](search_local_dynamics.py) | Polynomial search for exact local gauge invariants. |
-| [`dynamics_results.json`](dynamics_results.json) | Frozen `omega ~ k^3` obstruction. |
-| [`first_order_frame_connection.md`](first_order_frame_connection.md) | Local independent-connection derivation. |
-| [`check_first_order_frame.py`](check_first_order_frame.py) | Floating-point Schur, gauge, and TT checks. |
-| [`first_order_results.json`](first_order_results.json) | Frozen random-momentum results. |
-| [`check_first_order_exact.py`](check_first_order_exact.py) | Exact rational coefficient and gauge-null proof. |
-| [`first_order_exact_results.json`](first_order_exact_results.json) | Frozen exact-arithmetic output. |
-| [`auxiliary_stability_no_go.md`](auxiliary_stability_no_go.md) | Proof that the naïve positive auxiliary Hamiltonian cannot generate the desired stiffness. |
-| [`check_auxiliary_stability.py`](check_auxiliary_stability.py) | Numerical inertia, Schur-sign, Euclidean, and stable-completion checks. |
-| [`auxiliary_stability_results.json`](auxiliary_stability_results.json) | Frozen auxiliary stability output. |
-| [`check_tensor_scaling.py`](check_tensor_scaling.py) | Multi-size tensor gap, polarization, and anisotropy checks. |
-| [`tensor_scaling_results.json`](tensor_scaling_results.json) | Frozen finite-size output. |
-| [`reduced_tt_transfer.md`](reduced_tt_transfer.md) | Physical-sector finite transfer-matrix and reflection-positivity benchmark. |
-| [`check_reduced_tt_transfer.py`](check_reduced_tt_transfer.py) | Two-polarization truncated transfer matrix and correlator checks. |
-| [`reduced_tt_results.json`](reduced_tt_results.json) | Frozen reduced-spectrum and correlator output. |
+| [`finite_junction_model.py`](finite_junction_model.py) / [`results.json`](results.json) | Quantum-link, GF(p) gravity-constraint, and finite canonical-pair checks. |
+| [`search_local_dynamics.py`](search_local_dynamics.py) / [`dynamics_results.json`](dynamics_results.json) | Exact-local invariant search and the `omega ~ k^3` rejection. |
+| [`first_order_frame_connection.md`](first_order_frame_connection.md) | Independent frame–connection derivation. |
+| [`check_first_order_frame.py`](check_first_order_frame.py), [`check_first_order_exact.py`](check_first_order_exact.py) | Floating-point and exact rational first-order checks. |
+| [`auxiliary_stability_no_go.md`](auxiliary_stability_no_go.md) | Schur-sign obstruction for naïve positive auxiliary quantization. |
+| [`check_tensor_scaling.py`](check_tensor_scaling.py) | Tensor gap, polarization, and cutoff-anisotropy scaling. |
+| [`reduced_tt_transfer.md`](reduced_tt_transfer.md) | Reduced finite transfer-matrix and reflection-positivity target. |
+| [`constrained_local_reduction.md`](constrained_local_reduction.md) | Full Dirac/symplectic reduction of `(h,p,C,P_C)` without a TT projector. |
+| [`check_constrained_local_reduction.py`](check_constrained_local_reduction.py) | Complete nonzero-mode reduction on `L=3,5,7`. |
+| [`real_space_reduction.md`](real_space_reduction.md) | Full periodic real-space reduction and global-sector diagnosis. |
+| [`check_real_space_reduction.py`](check_real_space_reduction.py) | Dense real-space checks on `3^3` and `5^3` lattices. |
+| [`global_volume_constraint.md`](global_volume_constraint.md) | Fixed-volume removal of the homogeneous conformal pair. |
+| [`check_global_volume_constraint.py`](check_global_volume_constraint.py) | Exact global constraint and inertia check. |
 | [`verification_routes.md`](verification_routes.md) | Independent verification methods and acceptance criteria. |
 
-## Reproduce
+Every calculation has a neighboring frozen `*_results.json` file.
+
+## Reproduce the latest checks
 
 From the repository root:
 
 ```sh
-python phase_junction_network/microscopic/finite_junction_model.py \
-  --output phase_junction_network/microscopic/results.json
+python phase_junction_network/microscopic/check_constrained_local_reduction.py \
+  --sizes 3,5,7 \
+  --output phase_junction_network/microscopic/constrained_local_reduction_results.json
 
-python phase_junction_network/microscopic/search_local_dynamics.py \
-  --output phase_junction_network/microscopic/dynamics_results.json
+python phase_junction_network/microscopic/check_real_space_reduction.py \
+  --sizes 3,5 \
+  --output phase_junction_network/microscopic/real_space_reduction_results.json
 
-python phase_junction_network/microscopic/check_first_order_frame.py \
-  --samples 500 \
-  --seed 43 \
-  --output phase_junction_network/microscopic/first_order_results.json
-
-python phase_junction_network/microscopic/check_first_order_exact.py \
-  --output phase_junction_network/microscopic/first_order_exact_results.json
-
-python phase_junction_network/microscopic/check_auxiliary_stability.py \
-  --samples 500 \
-  --seed 44 \
-  --output phase_junction_network/microscopic/auxiliary_stability_results.json
-
-python phase_junction_network/microscopic/check_tensor_scaling.py \
-  --output phase_junction_network/microscopic/tensor_scaling_results.json
+python phase_junction_network/microscopic/check_global_volume_constraint.py \
+  --output phase_junction_network/microscopic/global_volume_constraint_results.json
 
 python phase_junction_network/microscopic/check_reduced_tt_transfer.py \
   --output phase_junction_network/microscopic/reduced_tt_results.json
 ```
 
-Every script exits nonzero if a committed claim fails.
+The earlier scripts remain independently reproducible. Every script exits nonzero if a committed claim fails.
 
 ## Immediate next implementation
 
-Perform the complete constrained canonical reduction of the local first-order frame–connection branch. Construct its finite-dimensional constraint matrix and reduced symplectic form at finite lattice size without inserting the TT projector. The resulting reduced transfer matrix must match the benchmark above in spectrum and correlators while showing:
+1. Encode `P_C=0` and `C-Gamma[h]=0` as finite local constraints using the odd-prime Weyl or protected collective-spin variables.
+2. Perform the finite constrained reduction before any continuum approximation and verify that the reduced transfer matrix matches the two-mode benchmark.
+3. Quantify constraint leakage and boundary-state occupation as local dimension increases.
+4. Extend the fixed-volume pair to the first nonlinear order and verify closure with gravitational self-energy.
+5. Derive `U_A`, `K_A`, `U_g`, and `K_g` from one microscopic move set, rather than choosing `Z_g/Z_A` independently.
 
-- no propagating connection or scalar state;
-- exact or quantitatively controlled constraint preservation;
-- Hermiticity or reflection positivity;
-- `1/L` tensor gap scaling;
-- finite-state boundary leakage below the declared tolerance;
-- coefficients traceable to the same microscopic amplitudes as the electromagnetic quantum links.
+A branch fails if it needs a nonlocal TT projector, retains a propagating connection/scalar mode, has a negative physical energy, or obtains the right spectrum only by independently tuning the electromagnetic and gravitational sectors.
