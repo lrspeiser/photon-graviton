@@ -10,6 +10,7 @@ on:
       - "phase_junction_network/construction/coherent_junction/check_frame_area_vertex.py"
       - "phase_junction_network/construction/coherent_junction/frame_area_vertex_results.json"
       - "phase_junction_network/construction/coherent_junction/frame_area_vertex_stage5b.md"
+      - "phase_junction_network/construction/coherent_junction/check_even_odd_cone_parent.py"
       - "phase_junction_network/validation/check_nonlinear_constraint_closure.py"
       - "phase_junction_network/validation/results/nonlinear_constraint_closure_full.json"
       - "phase_junction_network/validation/nonlinear_constraint_closure_stage5c.md"
@@ -21,6 +22,7 @@ on:
     paths:
       - "phase_junction_network/microscopic/check_nonlinear_volume_reduction.py"
       - "phase_junction_network/construction/coherent_junction/check_frame_area_vertex.py"
+      - "phase_junction_network/construction/coherent_junction/check_even_odd_cone_parent.py"
       - "phase_junction_network/validation/check_nonlinear_constraint_closure.py"
       - "phase_junction_network/validation/check_finite_weyl_coherent_frame.py"
       - "phase_junction_network/validation/check_fock_frame_cone_response.py"
@@ -62,6 +64,11 @@ jobs:
           python phase_junction_network/construction/coherent_junction/check_frame_area_vertex.py \
             --quick \
             --output /tmp/frame_area_vertex_results.json
+
+      - name: Check coherent even-odd cone parent
+        run: |
+          python phase_junction_network/construction/coherent_junction/check_even_odd_cone_parent.py \
+            --output /tmp/even_odd_cone_parent.json
 
       - name: Check nonlinear constraint closure and local obstruction
         run: |
