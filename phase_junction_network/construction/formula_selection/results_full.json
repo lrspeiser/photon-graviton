@@ -1,0 +1,112 @@
+{
+  "actual_graph_control": {
+    "dimension": 108,
+    "physical_geometric_source_not_replaced_by_conjugation": true,
+    "projector_stress_graph_vs_symbol_error": 1.1718328473574342e-16,
+    "simultaneous_orbit_derivative_error": 8.21565038222616e-17
+  },
+  "archived_multipair_sha256": "9fc66061e31fe53c4b8a016c5bda9eda8a5f00e0d7efa044314a443a1b5d9400",
+  "area_formula": {
+    "minimum_move_eigenvalue": -0.027841989063170067,
+    "new_sector_adjustments": 0,
+    "operator_errors": {
+      "covariance": 1.214306433183765e-17,
+      "flat_energy": 0.0,
+      "hermiticity": 0.0,
+      "orientation": 1.734723475976807e-18,
+      "trace_formula": 6.938893903907228e-18
+    },
+    "rule_class": "Finite-support coherent repeated-plaquette polynomials with real path weights; not a classification of all theories.",
+    "rules": [
+      {
+        "R3_minus_E3_over_E1": 1.0,
+        "R4_minus_E4_over_E2": 1.0,
+        "cubic_derivative_numerical_error": 4.243161377814886e-12,
+        "curvature_derivatives_at_zero": [-0.10843342807888984, 0.011757808324939775, 0.10843342807888984, -0.011757808324939775],
+        "energy_at_phase_0p4": -0.04129781611145022,
+        "moments": {"1": 1.0, "2": 1.0, "3": 1.0},
+        "name": "single_loop",
+        "nonlinear_weight_variance_identity": 0.0,
+        "path_coefficients": {"1": 1.0},
+        "quartic_derivative_numerical_error": 8.099779527648288e-11
+      },
+      {
+        "R3_minus_E3_over_E1": 4.0,
+        "R4_minus_E4_over_E2": 4.0,
+        "cubic_derivative_numerical_error": 3.3084912587355575e-10,
+        "curvature_derivatives_at_zero": [-0.10843342807888984, 0.011757808324939775, 0.43373371231555935, -0.0470312332997591],
+        "energy_at_phase_0p4": -0.03800117395031942,
+        "moments": {"1": 1.0, "2": 2.0, "3": 4.0},
+        "name": "double_loop_normalized",
+        "nonlinear_weight_variance_identity": 0.0,
+        "path_coefficients": {"2": 0.5},
+        "quartic_derivative_numerical_error": 1.405216845662416e-10
+      },
+      {
+        "R3_minus_E3_over_E1": 2.5000000000000004,
+        "R4_minus_E4_over_E2": 3.25,
+        "cubic_derivative_numerical_error": 1.6673301628244985e-10,
+        "curvature_derivatives_at_zero": [-0.10843342807888984, 0.011757808324939775, 0.2710835701972246, -0.038212877056054265],
+        "energy_at_phase_0p4": -0.039658653432745126,
+        "moments": {"1": 1.0, "2": 1.5, "3": 2.5},
+        "name": "equal_derivative_weight_mixture",
+        "nonlinear_weight_variance_identity": 0.7499999999999996,
+        "path_coefficients": {"1": 0.5, "2": 0.25},
+        "quartic_derivative_numerical_error": 2.4777214308047135e-10
+      }
+    ],
+    "samples": 32
+  },
+  "common_quadratic_kernel": {
+    "L": 12,
+    "full_nonlinear_constraints_shared": false,
+    "linear_polarizations": 2,
+    "maximum_shared_Hessian_directional_error": 3.5275601883988372e-15,
+    "mode": [1, 2, 1],
+    "proof": "Im P(exp(iF))=F+O(F^3), P P_dagger=F^2+O(F^4) when sum n*a_n=1; the traced area energy is identical through total field order two.",
+    "random_directions": 4
+  },
+  "coordinate_stress_refinement": [
+    {"L": 16, "after_error_over_q": 0.15058010137735559, "before_error_over_q": 0.18274324338379663, "fourier_derivative_error": 2.3619776544617956e-16, "original_limit": 0.18812493319903634, "q": 0.39269908169872414, "transported_projector_limit": 0.15487238153006608},
+    {"L": 32, "after_error_over_q": 0.15342893732012294, "before_error_over_q": 0.1864010231195624, "fourier_derivative_error": 2.4990657912950277e-16, "original_limit": 0.18812493319903634, "q": 0.19634954084936207, "transported_projector_limit": 0.15487238153006608},
+    {"L": 64, "after_error_over_q": 0.15446650963527486, "before_error_over_q": 0.1876462997942619, "fourier_derivative_error": 2.324724699707388e-16, "original_limit": 0.18812493319903634, "q": 0.09817477042468103, "transported_projector_limit": 0.15487238153006608},
+    {"L": 128, "after_error_over_q": 0.15476619288236534, "before_error_over_q": 0.18799972250846186, "fourier_derivative_error": 1.1278309615059114e-16, "original_limit": 0.18812493319903634, "q": 0.04908738521234052, "transported_projector_limit": 0.15487238153006608},
+    {"L": 256, "after_error_over_q": 0.15484543216241717, "before_error_over_q": 0.1880930648210675, "fourier_derivative_error": 9.627835802706846e-17, "original_limit": 0.18812493319903634, "q": 0.02454369260617026, "transported_projector_limit": 0.15487238153006608},
+    {"L": 512, "after_error_over_q": 0.15486561566388507, "before_error_over_q": 0.18811691929812394, "fourier_derivative_error": 3.170213489796518e-16, "original_limit": 0.18812493319903634, "q": 0.01227184630308513, "transported_projector_limit": 0.15487238153006608},
+    {"L": 1024, "after_error_over_q": 0.154870688211203, "before_error_over_q": 0.18812292646107434, "fourier_derivative_error": 7.481046634423523e-17, "original_limit": 0.18812493319903634, "q": 0.006135923151542565, "transported_projector_limit": 0.15487238153006608}
+  ],
+  "decision": "STOP consistency-only expansion. Transporting the projectors alone retains a leading regulator-stress defect, and equal weak-field data admit different nonlinear path moments. A microscopic derivation of path weights and full regulator transport is required for formula selection.",
+  "environment": {"numpy": "2.3.5", "python": "3.13.5", "scipy": "1.17.0"},
+  "execution_pass": true,
+  "full_Fock_control": {
+    "derivative_covariance_error": 1.9542536149731203e-16,
+    "dimension": 256,
+    "interacting_spacetime_constraints_proven": false,
+    "quartic_remainder_norm": 0.7888313605202101,
+    "quartic_stress_norm": 0.42799447752856806
+  },
+  "mode": "full",
+  "physical_status": {
+    "Newtonian_force_or_G_derived": false,
+    "conditional_single_loop_curvature_formula_derived": true,
+    "nonlinear_constraint_closure_or_common_quantum_cone_proven": false,
+    "projector_correction_alone_removes_leading_physical_stress_defect": false,
+    "unique_gravity_formula_established": false
+  },
+  "projector_derivative": {
+    "coefficient_of_projector_term": 1,
+    "formula": "delta C = D_H C[delta H] + D_P C[delta P]",
+    "max_errors": {"block_recovery": 1.2112402654045443e-17, "covariance": 3.2972658429606457e-16, "finite_difference": 7.868761456032788e-12},
+    "meaning": "One is fixed by differentiation, not by fitting G or a pole speed.",
+    "minimum_fixed_projector_negative_control": 0.33192651569278764,
+    "physical_coordinate_symmetry_proven": false,
+    "samples": 6
+  },
+  "protocol_commit": "e72c53296622ea25494f88d344c6b8a1a84cd87d",
+  "source_parent": "b6f55a632e707ede4b872cd0092c85f485b459c5",
+  "source_sha256": {
+    "construction/area_stress_model.py": "fb1bbe0d73cc33415d25f87a2bd8ed6671c1bb18ba7184c16e4a4be94079fe74",
+    "construction/check_area_kernel.py": "e56430d0ff8ac44223ef2d3c0a136923ec5f4a4b8e687ee3112970b71404768a",
+    "construction/formula_selection/check_formula_selection.py": "4e0ada033756b7bca3f82e108ca15ba746be6cb08efa87c6d2a40de55f5a6845"
+  }
+}
