@@ -1,0 +1,84 @@
+name: Phase Junction review scope and frozen integration results
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase-junction-review-freeze.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase-junction-review-maintenance
+  cancel-in-progress: false
+
+jobs:
+  freeze-reviewed-results:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            phase_junction_network
+            .github
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.4.6 scipy==1.17.1
+      - name: Apply explicit claim corrections, preserving numerical histories
+        run: python phase_junction_network/validation/apply_review_scope_corrections.py
+      - name: Independently regenerate quick and full integration outputs
+        run: |
+          for MODE in quick full; do
+            FLAGS=()
+            if [ "$MODE" = quick ]; then FLAGS=(--quick); fi
+            for TRACK in chain_embedding shared_matter_ir local_nonlinear; do
+              python "phase_junction_network/validation/check_${TRACK}.py" "${FLAGS[@]}" --output "phase_junction_network/validation/results/${TRACK}_${MODE}.json"
+            done
+          done
+          python phase_junction_network/microscopic/check_finite_em_dynamics.py --quick --output /tmp/em_scope_regression.json
+      - name: Write source and environment provenance
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,platform,subprocess
+          import numpy,scipy
+          root=Path('phase_junction_network')
+          paths=sorted(list(root.rglob('*.py'))+list((root/'validation/results').glob('*.json')))
+          paths=[p for p in paths if p.name!='review_provenance.json']
+          data={'source_parent_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
+                'python':platform.python_version(),'numpy':numpy.__version__,'scipy':scipy.__version__,
+                'sha256':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
+                'archived_multipair_sha256':hashlib.sha256((root/'microscopic/fermionic_multipair_vacuum_results.json').read_bytes()).hexdigest(),
+                'meaning':'Audit PASS means executable diagnostic passed, not physical-theory closure.'}
+          assert data['archived_multipair_sha256']=='9fc66061e31fe53c4b8a016c5bda9eda8a5f00e0d7efa044314a443a1b5d9400'
+          (root/'validation/results/review_provenance.json').write_text(json.dumps(data,indent=2,sort_keys=True)+'\n')
+          PY
+      - name: Commit only explicit reviewed paths, never force push
+        run: |
+          git diff --exit-code -- phase_junction_network/microscopic/fermionic_multipair_vacuum_results.json
+          git add phase_junction_network/README.md phase_junction_network/architecture_audit.md phase_junction_network/microscopic/README.md phase_junction_network/microscopic/finite_em_dynamics.md phase_junction_network/microscopic/seagull_completion_stage3e.md phase_junction_network/microscopic/fermionic_multipair_vacuum_stage3i.md phase_junction_network/microscopic/nonlinear_volume_reduction_stage5a.md phase_junction_network/microscopic/finite_em_dynamics_impl.py phase_junction_network/validation/results
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Correct reduced-model claims and freeze shared-loop and nonlinear integration audits'
+            git push origin HEAD:main
+          fi
+          git rev-parse HEAD
+      - name: Retain source and all frozen outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase-junction-reviewed-source-and-results
+          path: |
+            phase_junction_network
+            .github/workflows
+          include-hidden-files: true
+          retention-days: 30

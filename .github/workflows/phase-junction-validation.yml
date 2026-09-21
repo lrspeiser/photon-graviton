@@ -1,0 +1,57 @@
+name: Phase Junction independent quick and full validation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'phase_junction_network/**'
+      - '.github/workflows/phase-junction-validation.yml'
+  pull_request:
+    paths:
+      - 'phase_junction_network/**'
+      - '.github/workflows/phase-junction-validation.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validation:
+    name: validation-${{ matrix.mode }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [quick, full]
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MODE: ${{ matrix.mode }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            phase_junction_network
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.4.6 scipy==1.17.1
+      - name: Execute declared mode without modifying source or archived results
+        run: |
+          FLAGS=()
+          if [ "$MODE" = quick ]; then FLAGS=(--quick); fi
+          mkdir -p /tmp/phase-validation
+          python phase_junction_network/microscopic/check_fermionic_multipair_vacuum.py "${FLAGS[@]}" --output /tmp/phase-validation/multipair.json
+          python phase_junction_network/validation/check_fixed_cutoff.py "${FLAGS[@]}" --output /tmp/phase-validation/fixed_cutoff.json
+          python phase_junction_network/validation/check_chain_embedding.py "${FLAGS[@]}" --output /tmp/phase-validation/chain_embedding.json
+          python phase_junction_network/validation/check_shared_matter_ir.py "${FLAGS[@]}" --output /tmp/phase-validation/shared_matter_ir.json
+          python phase_junction_network/validation/check_local_nonlinear.py "${FLAGS[@]}" --output /tmp/phase-validation/local_nonlinear.json
+          git diff --exit-code
+      - name: Retain diagnostic and physical-status fields, including negative results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase-junction-validation-${{ matrix.mode }}
+          path: /tmp/phase-validation
+          retention-days: 30
