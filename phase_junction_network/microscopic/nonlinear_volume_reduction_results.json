@@ -1,0 +1,67 @@
+{
+  "module": "phase_junction_network/microscopic/check_nonlinear_volume_reduction.py",
+  "status": "Stage 5A PASS: exact nonlinear homogeneous fixed-volume reduction removes the conformal canonical pair",
+  "stage_pass": true,
+  "run": {
+    "sample_count": 500,
+    "seed": 57,
+    "dewitt_lambda": 0.5,
+    "spatial_dimension": 3
+  },
+  "canonical_constraints": {
+    "volume": "C_V=log det(g)=0",
+    "trace_momentum": "C_P=g_ij pi^ij=0",
+    "poisson_bracket": "{C_V,C_P}=3",
+    "classification": "second class"
+  },
+  "kinetic_form": {
+    "formula": "T=(pi^ij g_ik g_jl pi^kl - 1/2 (g_ij pi^ij)^2)/sqrt(det g)",
+    "unreduced_inertia": "one negative conformal plus five positive shape directions",
+    "reduced_inertia": "five positive shape directions"
+  },
+  "summary": {
+    "full_kinetic_inertia_counts": [[1, 5]],
+    "reduced_kinetic_inertia_counts": [[0, 5]],
+    "maximum_metric_condition_number": 25.272486013258288,
+    "maximum_determinant_error": 1.5543122344752192e-15,
+    "maximum_constraint_bracket_error_from_three": 1.3322676295501878e-15,
+    "minimum_reduced_kinetic_eigenvalue": 0.03751410828456957,
+    "maximum_projected_trace_residual": 1.7763568394002505e-15,
+    "minimum_projected_kinetic_energy": 0.2610448707797323,
+    "maximum_conformal_kinetic_energy": -1.4999999999999947,
+    "maximum_volume_preservation_formula_residual": 7.105427357601002e-15,
+    "maximum_shape_path_determinant_error": 7.771561172376096e-15,
+    "maximum_volume_potential_shape_first_derivative": 1.6653345369377348e-12,
+    "maximum_volume_potential_shape_second_derivative": 3.885780586188048e-08,
+    "minimum_volume_potential_conformal_first_derivative": 3.000000179998741
+  },
+  "checks": {
+    "constraint_pair_has_exact_rank_two": true,
+    "unreduced_dewitt_metric_has_one_negative_direction": true,
+    "reduced_shape_metric_has_five_positive_directions": true,
+    "reduced_kinetic_energy_positive": true,
+    "conformal_direction_negative": true,
+    "trace_projection_exact": true,
+    "hamiltonian_preservation_generates_trace_constraint": true,
+    "tracefree_exponential_path_preserves_volume": true,
+    "pure_volume_term_has_no_shape_force": true,
+    "pure_volume_term_has_conformal_force_before_reduction": true
+  },
+  "claim_boundary": {
+    "established": [
+      "the fixed-volume and trace-momentum pair is exactly second class for finite nonlinear homogeneous metrics",
+      "the pair removes the one negative DeWitt conformal momentum direction",
+      "the five homogeneous tracefree shape directions have positive kinetic energy",
+      "Hamiltonian preservation of fixed volume generates the trace-momentum constraint",
+      "a pure volume energy has no force along the reduced homogeneous shape manifold"
+    ],
+    "not_established": [
+      "local inhomogeneous nonlinear constraint closure",
+      "suppression of local vacuum-energy curvature",
+      "a microscopic reason that selects fixed volume",
+      "gravitational self-energy sourcing and strong-field solutions",
+      "absence of nonlinear scalar modes away from the homogeneous sector"
+    ]
+  },
+  "next_gate": "Promote the exact determinant/trace pair to the local lattice frame and test the scalar/vector constraint algebra through quadratic order. The local calculation must include frame self-energy and must not impose an Einstein-Hilbert vertex by hand."
+}
