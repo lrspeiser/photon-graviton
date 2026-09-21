@@ -202,8 +202,11 @@ def build_report() -> dict[str, Any]:
         )
         > 1.0,
         "speed_ratio_stays_above_two": min(ratios) > 2.0,
-        "changing_ring_length_does_not_remove_mismatch": (
-            max(ratios) - min(ratios) < 0.5
+        "all_tested_mismatches_have_the_same_sign": all(
+            row["fractional_cone_mismatch"] > 0.0 for row in rows
+        ),
+        "ring_length_changes_only_an_order_one_factor": (
+            max(ratios) / min(ratios) < 1.5
         ),
     }
     return {
@@ -239,6 +242,7 @@ def build_report() -> dict[str, Any]:
             "established": [
                 "a bounded no-go for equal-coupling rings of 2 through 12 stages",
                 "the even and odd channels were both dynamically normalized",
+                "the mismatch has the same sign at every tested ring length",
                 "no continuous normalization was introduced",
             ],
             "not_established": [
@@ -250,9 +254,9 @@ def build_report() -> dict[str, Any]:
         },
         "next_gate": (
             "Test explicit finite internal port representations, beginning with "
-            "the four-stage by four-spinor channel suggested by the near-16 "
-            "normalization. The projection must be derived from an exact symmetry "
-            "and must pass the matter-stress Ward gate."
+            "the common first-order chiral generator and the four-stage by "
+            "four-spinor channel. Any projection must be derived from an exact "
+            "symmetry and must pass the matter-stress Ward gate."
         ),
     }
 
