@@ -1,0 +1,76 @@
+name: SM-2 same-density field benchmark
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'research_work/results/screened-memory/run_sm2.py'
+      - '.github/workflows/screened-memory-sm2.yml'
+permissions:
+  contents: read
+jobs:
+  fields:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0, 1, 2, 3]
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0
+      - name: Solve every assigned frozen density
+        run: python research_work/results/screened-memory/run_sm2.py --shard ${{ matrix.shard }} --output-dir /tmp/sm2-shard-${{ matrix.shard }}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sm2-shard-${{ matrix.shard }}-${{ github.sha }}
+          path: /tmp/sm2-shard-${{ matrix.shard }}
+          if-no-files-found: warn
+      - name: Package reproducible source inputs for local continuation
+        if: matrix.shard == 0
+        run: |
+          python - <<'PY'
+          import zipfile
+          from pathlib import Path
+          paths = []
+          for folder in ('research_work/results/path-memory', 'research_work/results/radiation-polarized-gravity', 'research_work/results/capture-to-orbit', 'research_work/results/screened-memory', 'phase_junction_network'):
+              paths += [p for p in Path(folder).rglob('*') if p.is_file() and p.suffix in ('.py', '.md')]
+          paths += [Path(p) for p in ('temporal_candidate_audit/data/Rotmod_LTG.zip', 'temporal_candidate_audit/data/SPARC_Lelli2016c.mrt', 'research_work/results/companion-extensions/mond-inventory-results.json', 'research_work/results/companion-extensions/evidence_io.py', 'research_work/results/isotropic-galaxy-transfer/third-radiation-retention-results.json')]
+          with zipfile.ZipFile('/tmp/sm2-source-inputs.zip', 'w', zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(set(paths)):
+                  z.write(p, str(p))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: matrix.shard == 0
+        with:
+          name: sm2-source-inputs-${{ github.sha }}
+          path: /tmp/sm2-source-inputs.zip
+  summarize:
+    needs: fields
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 scipy==1.17.0
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: sm2-shard-*-${{ github.sha }}
+          path: /tmp/sm2-input
+      - run: python research_work/results/screened-memory/run_sm2.py --aggregate /tmp/sm2-input --output-dir /tmp/sm2-complete
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sm2-complete-${{ github.sha }}
+          path: /tmp/sm2-complete
