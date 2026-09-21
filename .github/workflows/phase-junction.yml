@@ -68,6 +68,9 @@ jobs:
           python phase_junction_network/microscopic/check_plaquette_diagonal_matching.py \
             --quick \
             --output /tmp/plaquette_diagonal_matching_results.json
+          python phase_junction_network/microscopic/check_seagull_completion.py \
+            --quick \
+            --output /tmp/seagull_completion_results.json
 
       - name: Check finite chiral matter endpoint
         run: |
