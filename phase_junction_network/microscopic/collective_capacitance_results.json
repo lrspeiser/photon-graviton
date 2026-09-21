@@ -1,0 +1,156 @@
+{
+  "checks": {
+    "charging_factor_is_one_over_144": true,
+    "coarse_p5_clock_is_negative_control": true,
+    "common_cone_root_found_for_each_tested_v": true,
+    "complete_lock_has_one_uniform_mode": true,
+    "diagonal_plaquette_ratio_is_not_silently_fixed": true,
+    "finite_gravity_fit_residuals_below_0p003": true,
+    "finite_gravity_primes_are_linear": true,
+    "finite_gravity_speed_moves_toward_harmonic_target": true,
+    "partial_lock_controls_have_multiple_clocks": true,
+    "photon_fit_residuals_below_0p002": true,
+    "photon_roots_remain_z1_like": true,
+    "topology_control_keeps_same_uniform_mode": true,
+    "two_independent_structural_counts_equal_144": true
+  },
+  "claim_boundary": {
+    "established": [
+      "an explicit 144 by 144 connected constraint matrix with one uniform mode",
+      "the same channel count from cube-vertex/connection and link/frame bookkeeping",
+      "a derived common charging suppression r=1/144",
+      "common-cone roots using the actual finite photon spectrum",
+      "linear finite gravity spectra at the same r for primes 11, 13, and 17",
+      "failure of the coarse p=5 gravity clock at the same microscopic ratio"
+    ],
+    "not_established": [
+      "that the 144 channels are the unique microscopic bundle",
+      "the microscopic derivation of the internal locking graph strength",
+      "the plaquette diagonal ratio v/t",
+      "a full three-dimensional photon spectrum at the new roots",
+      "exact equality of finite-p gravity and photon speeds before the p limit",
+      "matter and companion coefficients from the same matrix",
+      "physical alpha, G, nonlinear gravity, or formal novelty"
+    ]
+  },
+  "coarse_prime_negative_control": {
+    "fit": {
+      "cubic_cutoff_coefficient": -0.005446186968512341,
+      "gap_power": 0.25018787871635495,
+      "linear_speed": 0.030058535525829135,
+      "maximum_fit_residual": 0.021907814742599903
+    },
+    "interpretation": "The five-state clock is too coarse at the derived charging ratio. Larger finite local dimension is required before the compact frame regulator approaches the linear branch.",
+    "prime": 5,
+    "rows": [
+      {"hilbert_dimension": 125, "lattice_momentum": 1.414213562373095, "lattice_size": 4, "signed_momentum_split": 0.0, "single_branch_gap": 0.027285345731552595},
+      {"hilbert_dimension": 625, "lattice_momentum": 1.1755705045849463, "lattice_size": 5, "signed_momentum_split": 0.0, "single_branch_gap": 0.02592020563486163},
+      {"hilbert_dimension": 3125, "lattice_momentum": 0.9999999999999999, "lattice_size": 6, "signed_momentum_split": 0.0, "single_branch_gap": 0.02502491941043019}
+    ]
+  },
+  "collective_bundle": {
+    "bundle_channels": 144,
+    "complete_internal_lock": {
+      "eigenvalue_multiplicities": {"0": 1, "2": 3, "4": 3, "6": 1, "18": 17, "20": 51, "22": 51, "24": 17},
+      "nullity": 1,
+      "rank": 143,
+      "relative_lock_gap": 2.0,
+      "uniform_mode_residual": 0.0
+    },
+    "cycle_internal_lock_control": {
+      "interpretation": "The 1/N charging result needs connectivity, not an all-to-all internal graph; the relative-mode gap changes but the unique uniform mode does not.",
+      "nullity": 1,
+      "rank": 143,
+      "relative_lock_gap": 0.12061475842818314,
+      "uniform_mode_residual": 0.0
+    },
+    "derived_common_charging_coefficient": "U_A=U_g=Delta/144",
+    "derived_common_charging_factor_r": 0.006944444444444444,
+    "effective_capacitance_in_C0_units": 144.0,
+    "negative_controls": {
+      "internal_lock_only_nullity": 8,
+      "interpretation": "Without both spatial and internal locking there are 18 or 8 independent charging clocks, so one shared photon/gravity normalization is lost.",
+      "spatial_lock_only_nullity": 18
+    },
+    "structural_counts": {
+      "cube_vertices": 8,
+      "link_frame_product": 144,
+      "positive_oriented_links_on_periodic_2_cube": 24,
+      "symmetric_frame_channels_per_link": 6,
+      "torsion_free_connection_channels_per_vertex": 18,
+      "vertex_connection_product": 144
+    }
+  },
+  "common_cone_roots": [
+    {
+      "K_A_over_Delta": 0.0074775906427226035,
+      "K_g_over_Delta": 0.019848177756665957,
+      "harmonic_gravity_speed_in_Delta_units": 0.011740296749001905,
+      "maximum_photon_fit_residual": 8.160592574443066e-05,
+      "photon_cubic_cutoff_coefficient": 0.011590847522551115,
+      "photon_gap_power": 1.0096304792182946,
+      "photon_linear_speed_dimensionless": 1.5700706593289002,
+      "photon_speed_in_Delta_units": 0.011740345670611094,
+      "speed_ratio": 1.0000041669823374,
+      "u_over_t_plaquette": 0.9287008043430364,
+      "v_over_t": 0.2,
+      "x_t_over_Delta": 0.14365262985229493
+    },
+    {
+      "K_A_over_Delta": 0.009439248950526488,
+      "K_g_over_Delta": 0.022409735718852908,
+      "harmonic_gravity_speed_in_Delta_units": 0.012474901390963229,
+      "maximum_photon_fit_residual": 0.00021794865735673958,
+      "photon_cubic_cutoff_coefficient": 0.05790380760468232,
+      "photon_gap_power": 1.0553875789205054,
+      "photon_linear_speed_dimensionless": 1.3215994154169444,
+      "photon_speed_in_Delta_units": 0.012474905894990812,
+      "speed_ratio": 1.000000361047149,
+      "u_over_t_plaquette": 0.7356988337570127,
+      "v_over_t": 0.4,
+      "x_t_over_Delta": 0.1530167579650879
+    },
+    {
+      "K_A_over_Delta": 0.013088120131960715,
+      "K_g_over_Delta": 0.026620145853753524,
+      "harmonic_gravity_speed_in_Delta_units": 0.013596401140904877,
+      "maximum_photon_fit_residual": 0.0002975269002002112,
+      "photon_cubic_cutoff_coefficient": 0.11708899442521015,
+      "photon_gap_power": 1.1358492514912448,
+      "photon_linear_speed_dimensionless": 1.0388348039512192,
+      "photon_speed_in_Delta_units": 0.013596394711375415,
+      "speed_ratio": 0.999999527115345,
+      "u_over_t_plaquette": 0.5305914351661827,
+      "v_over_t": 0.6,
+      "x_t_over_Delta": 0.16744375228881836
+    }
+  ],
+  "finite_gravity_at_same_r": {
+    "v_over_t=0.2": [
+      {"prime": 11, "U_clock_over_Delta": 0.02128448475819943, "K_clock_over_Delta": 0.019848177756665957, "U_clock_over_K_clock": 1.0723646784678302, "gap_power": 1.0326894845860615, "linear_speed_c_g": 0.009674377530745164, "cubic_cutoff_coefficient": 7.845198082884704e-05, "maximum_fit_residual": 0.0004362306233451374, "harmonic_target_speed": 0.011740296749001905, "relative_speed_error": -0.1759682282675158},
+      {"prime": 13, "U_clock_over_Delta": 0.02972791672839424, "K_clock_over_Delta": 0.019848177756665957, "U_clock_over_K_clock": 1.4977655426534155, "gap_power": 1.0280797226784064, "linear_speed_c_g": 0.009927282903468043, "cubic_cutoff_coefficient": 6.902551296982953e-05, "maximum_fit_residual": 0.00038800658548572033, "harmonic_target_speed": 0.011740296749001905, "relative_speed_error": -0.1544265774788014},
+      {"prime": 17, "U_clock_over_Delta": 0.05083649665388128, "K_clock_over_Delta": 0.019848177756665957, "U_clock_over_K_clock": 2.5612677031173794, "gap_power": 1.0240285326045986, "linear_speed_c_g": 0.010173387243173262, "cubic_cutoff_coefficient": 6.044325189987448e-05, "maximum_fit_residual": 0.00034419402750133355, "harmonic_target_speed": 0.011740296749001905, "relative_speed_error": -0.13346421639315487}
+    ],
+    "v_over_t=0.4": [
+      {"prime": 11, "U_clock_over_Delta": 0.02128448475819943, "K_clock_over_Delta": 0.022409735718852908, "U_clock_over_K_clock": 0.9497874060287634, "gap_power": 1.0326589758915181, "linear_speed_c_g": 0.010280701060791961, "cubic_cutoff_coefficient": 8.328944358513204e-05, "maximum_fit_residual": 0.0004357819055430036, "harmonic_target_speed": 0.012474901390963229, "relative_speed_error": -0.1758891923394872},
+      {"prime": 13, "U_clock_over_Delta": 0.02972791672839424, "K_clock_over_Delta": 0.022409735718852908, "U_clock_over_K_clock": 1.3265625753624877, "gap_power": 1.0274139687916082, "linear_speed_c_g": 0.010577568325548542, "cubic_cutoff_coefficient": 7.177622324231623e-05, "maximum_fit_residual": 0.0003786144761817661, "harmonic_target_speed": 0.012474901390963229, "relative_speed_error": -0.1520920291032607},
+      {"prime": 17, "U_clock_over_Delta": 0.05083649665388128, "K_clock_over_Delta": 0.022409735718852908, "U_clock_over_K_clock": 2.2685004986967985, "gap_power": 1.0229259896857863, "linear_speed_c_g": 0.010864863794152012, "cubic_cutoff_coefficient": 6.155362914924956e-05, "maximum_fit_residual": 0.00032872060209036775, "harmonic_target_speed": 0.012474901390963229, "relative_speed_error": -0.12906215018080403}
+    ],
+    "v_over_t=0.6": [
+      {"prime": 11, "U_clock_over_Delta": 0.02128448475819943, "K_clock_over_Delta": 0.026620145853753524, "U_clock_over_K_clock": 0.7995630405307584, "gap_power": 1.0333299517949608, "linear_speed_c_g": 0.011182030316649497, "cubic_cutoff_coefficient": 9.248988908163664e-05, "maximum_fit_residual": 0.00044542592873839256, "harmonic_target_speed": 0.013596401140904877, "relative_speed_error": -0.1775742565429117},
+      {"prime": 13, "U_clock_over_Delta": 0.02972791672839424, "K_clock_over_Delta": 0.026620145853753524, "U_clock_over_K_clock": 1.1167450731380013, "gap_power": 1.0269071743264027, "linear_speed_c_g": 0.011554018241466507, "cubic_cutoff_coefficient": 7.693092407530625e-05, "maximum_fit_residual": 0.0003715297066224609, "harmonic_target_speed": 0.013596401140904877, "relative_speed_error": -0.15021496337687812},
+      {"prime": 17, "U_clock_over_Delta": 0.05083649665388128, "K_clock_over_Delta": 0.026620145853753524, "U_clock_over_K_clock": 1.9097001546561088, "gap_power": 1.0217312722396685, "linear_speed_c_g": 0.011910740330988845, "cubic_cutoff_coefficient": 6.392316221719934e-05, "maximum_fit_residual": 0.0003121769345766476, "harmonic_target_speed": 0.013596401140904877, "relative_speed_error": -0.12397845521376305}
+    ]
+  },
+  "module": "phase_junction_network/microscopic/check_collective_capacitance.py",
+  "next_gate": "Derive the plaquette diagonal/flippability coefficient v from the same virtual move graph. Then choose no spectral input: the derived v and r must fix x, after which the full 3D photon, finite gravity, matter, and companion sectors must all be rerun without sector-specific clock rescaling.",
+  "parameter_count": {
+    "charging_factor": "r=1/144 is fixed by the declared elementary-cube bundle, not by photon or gravity spectral data.",
+    "common_cone": "For each still-undetermined v/t, the common cone fixes the remaining move ratio x=t/Delta.",
+    "overall_scale": "Delta remains the one dimensionful scale.",
+    "remaining_dimensionless_input": "The diagonal plaquette ratio v/t has not yet been derived from the shared virtual paths."
+  },
+  "run_mode": "full",
+  "stage_pass": true,
+  "status": "Stage 3C PASS: a structurally counted 144-channel collective junction derives r=1/144 and admits shared photon/gravity cone roots; the plaquette diagonal ratio and full microscopic embedding remain open"
+}
