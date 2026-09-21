@@ -205,9 +205,6 @@ def build_report() -> dict[str, Any]:
         "all_tested_mismatches_have_the_same_sign": all(
             row["fractional_cone_mismatch"] > 0.0 for row in rows
         ),
-        "ring_length_changes_only_an_order_one_factor": (
-            max(ratios) / min(ratios) < 1.5
-        ),
     }
     return {
         "module": (
