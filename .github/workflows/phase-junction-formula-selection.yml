@@ -1,0 +1,75 @@
+name: Phase Junction formula selection
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'phase_junction_network/construction/**'
+      - 'phase_junction_network/microscopic/**'
+      - '.github/workflows/phase-junction-formula-selection.yml'
+  pull_request:
+    paths:
+      - 'phase_junction_network/construction/**'
+      - 'phase_junction_network/microscopic/**'
+      - '.github/workflows/phase-junction-formula-selection.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  formula-selection:
+    name: formula-selection-${{ matrix.mode }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [quick, full]
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MODE: ${{ matrix.mode }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            phase_junction_network
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.4.6 scipy==1.17.1
+      - name: Run declared mode without changing source or historical results
+        run: |
+          FLAGS=()
+          if [ "$MODE" = quick ]; then FLAGS=(--quick); fi
+          python phase_junction_network/construction/formula_selection/check_formula_selection.py "${FLAGS[@]}" --output /tmp/formula-selection.json
+          git diff --exit-code
+      - name: Verify frozen formula and stress predictions independently
+        run: |
+          python - <<'PY'
+          import json
+          import numpy as np
+          from pathlib import Path
+          root=Path('phase_junction_network/construction/formula_selection')
+          actual=json.loads(Path('/tmp/formula-selection.json').read_text())
+          frozen=json.loads((root/'results_full.json').read_text())
+          assert actual['source_sha256']==frozen['source_sha256']
+          assert actual['physical_status']==frozen['physical_status']
+          assert actual['archived_multipair_sha256']==frozen['archived_multipair_sha256']
+          by_size={row['L']:row for row in frozen['coordinate_stress_refinement']}
+          for row in actual['coordinate_stress_refinement']:
+              prior=by_size[row['L']]
+              for key in ('before_error_over_q','after_error_over_q','original_limit','transported_projector_limit'):
+                  np.testing.assert_allclose(row[key],prior[key],rtol=2e-9,atol=2e-12)
+          for row,prior in zip(actual['area_formula']['rules'],frozen['area_formula']['rules']):
+              for key in ('R3_minus_E3_over_E1','R4_minus_E4_over_E2','curvature_derivatives_at_zero','energy_at_phase_0p4'):
+                  np.testing.assert_allclose(row[key],prior[key],rtol=2e-9,atol=2e-12)
+          print('Frozen diagnostic predictions reproduced; unique-gravity and stress-closure flags remain false.')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: formula-selection-${{ matrix.mode }}
+          path: /tmp/formula-selection.json
+          retention-days: 30
