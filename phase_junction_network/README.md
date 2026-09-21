@@ -1,6 +1,6 @@
 # Phase Junction Network
 
-**Status:** exploratory candidate foundation. The repository contains a finite pure-gauge photon phase, a finite linear dressed-frame regulator, a finite chiral charged-endpoint prototype, a reversible photon–companion architecture, and a structurally derived collective charging mode. Exact Stage-3D matching now rejects the current pure-swap graph as the complete shared microscopic Hamiltonian because it generates a dominant second-order electric self-energy. A symmetry-complete replacement is required.  
+**Status:** exploratory candidate foundation. The repository contains a finite pure-gauge photon phase, a finite linear dressed-frame regulator, a finite chiral charged-endpoint prototype, a reversible photon–companion architecture, and a structurally derived collective charging mode. Stage 3D rejected the pure-swap shared graph; Stage 3E now identifies a symmetry-complete local seagull candidate that cancels the dangerous self-energy and restores one finite relativistic shared-cone root. Its fundamental symmetry, full finite embedding, interactions, nonlinear gravity, and empirical predictions remain open.  
 **Created:** 2026-09-20  
 **Prior-art boundary:** [`novelty_boundary.md`](novelty_boundary.md)
 
@@ -19,7 +19,7 @@ The photon, companion, graviton, and connection-relative mode are distinct. Ener
 
 ## Originality boundary
 
-Finite quantum links, RK Hamiltonians, relative-phase modes, domain-wall fermions, first-order frame/connection gravity, emergent helicity-2 spin models, and broad gauge–gravity unification all have prior art. They are credited in [`novelty_boundary.md`](novelty_boundary.md) and are not claimed as Phase Junction inventions.
+Finite quantum links, RK Hamiltonians, graph-Laplacian/seagull completions, relative-phase modes, domain-wall fermions, first-order frame/connection gravity, emergent helicity-2 spin models, and broad gauge–gravity unification all have prior art. They are credited in [`novelty_boundary.md`](novelty_boundary.md) and are not claimed as Phase Junction inventions.
 
 The potentially original contribution is narrower: one finite matter–geometry junction Hilbert space and one symmetry-complete local move/capacitance structure must generate the electromagnetic, frame, matter, and companion sectors while deriving cross-sector coefficients that would otherwise be independent.
 
@@ -78,7 +78,7 @@ The committed continuum, exact-arithmetic, finite-state, and full-real-space che
 
 See [`microscopic/finite_dressed_frame_hamiltonian.md`](microscopic/finite_dressed_frame_hamiltonian.md).
 
-This is a linear finite regulator, not nonlinear quantum gravity. Its independently chosen old self-dual clock normalization is not treated as fundamental.
+This is a linear finite regulator, not nonlinear quantum gravity. Its old independently chosen self-dual clock normalization is not treated as fundamental.
 
 ## Shared electromagnetic/frame mechanism
 
@@ -126,45 +126,85 @@ An explicit `144 x 144` connected lock matrix has rank 143 and one uniform charg
 U_A=U_g=\Delta/144.
 \]
 
-At this common bare coefficient, the actual finite photon spectrum and harmonic frame target admit a family of common-cone roots indexed by the still-underived diagonal plaquette ratio `v/t`. Finite compact gravity spectra at `p=11,13,17` remain linear at the same charging coefficient and converge toward the harmonic target; a `p=5` control fails.
-
 See [`microscopic/collective_capacitance_stage3c.md`](microscopic/collective_capacitance_stage3c.md).
 
-### Stage 3D — exact diagonal matching rejects the current graph
+### Stage 3D — pure swap rejected
 
-The same four-link spin-1 graph was then matched exactly, not only through its ring exchange. Eliminating the Gauss-violating states generates
+Exact three-state matching of the spin-1 plaquette showed that the same swaps generate
 
 \[
 K=20x^4\Delta+\cdots,
 \qquad
 \delta U=2x^2\Delta+\cdots,
 \qquad
-v=-\frac83x^4\Delta+\cdots,
+v=-\frac83x^4\Delta+\cdots.
 \]
 
-with
-
-\[
-x=t/\Delta,
-\qquad
-v/K\rightarrow-2/15.
-\]
-
-The second-order electric self-energy is parametrically larger than the fourth-order photon loop term. Retaining it together with the Stage-3C bare coefficient produces no photon/gravity common-cone crossing over the controlled scan
-
-\[
-0.05\le x\le0.40.
-\]
-
-Even among the 19 scan points that pass the approximately linear photon criteria, the minimum photon-minus-gravity speed difference remains positive at `0.0423467 Delta`.
-
-Deleting the generated self-energy creates a spurious attractive root at `x=0.139594`; copying the self-energy into gravity creates a speed crossing but fails the photon `z~1` and fit-residual gates. Both are retained as negative controls.
-
-The exact low band also generates a direct `W^2+W^dagger^2` flux-jump operator, reaching `25.4%` of the nearest-neighbor ring amplitude by `x=0.4`.
-
-Therefore the currently declared pure-swap graph is rejected as the complete shared microscopic theory. A viable replacement must include symmetry-linked diagonal or seagull partners that cancel or share the second-order charging correction without photon-only or gravity-only counterterms.
+The second-order electric self-energy dominates the fourth-order loop term and eliminates the counterterm-free common cone. A direct `W^2+W^dagger^2` operator is also generated. The pure-swap graph is therefore rejected as the complete microscopic theory.
 
 See [`microscopic/plaquette_diagonal_matching_stage3d.md`](microscopic/plaquette_diagonal_matching_stage3d.md).
+
+### Stage 3E — local seagull completion
+
+Pair every finite-link move with its algebraic diagonal partner:
+
+\[
+H_A/\Delta
+=
+\frac12\sum G^2
+-x\sum(U+U^\dagger)
++x^2\sum(U^\dagger U+UU^\dagger).
+\]
+
+Use the same completion for the frame mediator. The unit coefficient is fixed by cancellation of each isolated second-order move self-energy; varying it above or below one leaves an uncancelled correction with the corresponding sign.
+
+Exact matching gives
+
+\[
+K_A\propto x^{3.99087},
+\qquad
+\delta U\propto x^{3.99530},
+\qquad
+v\propto x^{3.99587},
+\qquad
+K_g\propto x^{1.99906}.
+\]
+
+The dangerous `O(x^2)` electric correction is gone while the photon ring and frame superexchange remain.
+
+At the shared `r=1/144`, one relativistic common-cone root is
+
+\[
+\boxed{t/\Delta=0.1355417851.}
+\]
+
+There,
+
+\[
+K_A/\Delta=0.00560619757,
+\qquad
+K_g/\Delta=0.01805149687,
+\]
+
+\[
+U/\Delta=0.00678991375,
+\qquad
+v/K_A=-0.129245131,
+\]
+
+and the finite photon gap power is
+
+\[
+0.977345
+\]
+
+with fit residual `2.91e-4`. The photon and harmonic frame speeds agree at `0.01107104814 Delta` within numerical root tolerance.
+
+The complete `2^3` gauge-sector anchor has two lowest equal gaps, exactly zero longitudinal electric norm, and scalar contamination `2.05e-22` in the low multiplet. Compact frame regulators with `p>=7` remain linear at the same physical coefficients and move toward the harmonic speed as `p` grows; `p=5` is a failure control.
+
+See [`microscopic/seagull_completion_stage3e.md`](microscopic/seagull_completion_stage3e.md).
+
+**Claim boundary:** Stage 3E advances a viable candidate, not a completed fundamental theory. A symmetry that requires the completion, its matter/companion analogues, radiative stability, nonlinear gravity, and the full interacting continuum remain open.
 
 ## Finite charged matter prototype
 
@@ -201,7 +241,7 @@ See [`companion_integration.md`](companion_integration.md).
 | Issue | Pillar | Status |
 |---:|---|---|
 | #2 | Finite dressed frame Hamiltonian | Linear finite-regulator scope closed |
-| #3 | Shared microscopic coefficients | Stages 3A–3C identify a shared route; Stage 3D rejects the current pure-swap graph; symmetry-complete replacement open |
+| #3 | Shared microscopic coefficients | Stage 3D rejects pure swap; Stage 3E provides a viable seagull-completed candidate; full cross-sector embedding and symmetry protection open |
 | #4 | Chiral matter defects | Finite free-regulator prototype closed |
 | #5 | Nonlinear gravity, self-coupling, many-body binding, volume/vacuum | Open |
 | #6 | Finite electromagnetic/QED phase | Static and pure-gauge dynamics pass; interacting matter/QED open |
@@ -211,12 +251,12 @@ See [`companion_integration.md`](companion_integration.md).
 
 ## Immediate next gates
 
-1. Enumerate symmetry-complete elementary junction Hamiltonians that include every diagonal partner required by each swap.
-2. Derive both photon and frame self-energies and all symmetry-allowed low-band operators through fourth order.
-3. Reject any candidate needing sector-specific counterterms or clock rescalings.
-4. For surviving candidates, rerun the photon, finite-gravity, matter, and companion gates using one shared coefficient set.
-5. In parallel, embed the minimal `|q|=1` endpoint in the established Stage-6B photon phase and test current continuity, a finite Ward identity, photon dressing, and vacuum polarization.
+1. Construct the seagull-completed moves directly in the dressed-frame, charged-endpoint, and companion finite Hilbert spaces.
+2. Verify exact Gauss and frame constraints and derive the full generated operator inventory in every sector.
+3. Reject the candidate if photon, gravity, matter, or companion requires a different completion coefficient.
+4. Compute the first finite interacting Ward identity and test whether the cancellation is radiatively stable.
+5. Continue the nonlinear gravity and many-body companion program only after the shared finite Hamiltonian survives these gates.
 
 ## Stop rules
 
-Do not claim originality for established component techniques. Do not call Stage 6B interacting QED, Stage 3A a derivation of `alpha` or `G`, Stage 3C a unique microscopic bundle, or the Stage-3D counterterm root a solution. Do not delete the generated `O(x^2)` self-energy, copy it into gravity without derivation, ignore the generated double-flux operator, introduce sector-specific charging factors, identify the finite matter set with observed particles, interpret finite companion probabilities as astrophysical rates, call fixed volume a cosmological-constant solution, or call the linear frame regulator nonlinear quantum gravity. Derive the symmetry-complete shared Hamiltonian—or reject the combined branch.
+Do not claim originality for established component techniques. Do not call Stage 6B interacting QED, Stage 3A a derivation of `alpha` or `G`, Stage 3C a unique microscopic bundle, Stage 3D's counterterm root a solution, or Stage 3E a fundamental symmetry. Do not introduce sector-specific seagulls, ignore generated operators, identify the finite matter set with observed particles, interpret finite companion probabilities as astrophysical rates, call fixed volume a cosmological-constant solution, or call the linear frame regulator nonlinear quantum gravity. Derive one symmetry-complete finite Hamiltonian across all sectors—or reject the combined branch.
