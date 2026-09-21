@@ -1,0 +1,49 @@
+{
+  "archived_full_result_sha256": "9fc66061e31fe53c4b8a016c5bda9eda8a5f00e0d7efa044314a443a1b5d9400",
+  "claim_boundary": "Finite 2x2 spinless charged-endpoint patch only; pole shifts are not infrared speed shifts.",
+  "fit_controls": {
+    "invalid_cases_rejected": 6,
+    "known_power": -3.0000000000000004
+  },
+  "fixed_cutoff_rows": [
+    {
+      "completion_boundary_diagonal_max": 0.00571320552776311,
+      "completion_boundary_off_diagonal_max": 0.0,
+      "dimension": 1599,
+      "ground_energy": -0.020101856108161183,
+      "loop_gap_shift": 1.0492321426740225e-05,
+      "loop_shift_relative_error_to_archived_full": -0.5272750524142311,
+      "maximum_eigen_residual": 1.0771873759327063e-15,
+      "maximum_pairs": 1,
+      "photon_gap": 0.01786994851926333,
+      "photon_residue": 0.9877080120836879
+    },
+    {
+      "completion_boundary_diagonal_max": 0.0045705644222096,
+      "completion_boundary_off_diagonal_max": 0.0,
+      "dimension": 4737,
+      "ground_energy": -0.020142040541130113,
+      "loop_gap_shift": 2.217304444283863e-05,
+      "loop_shift_relative_error_to_archived_full": -0.001007418115830108,
+      "maximum_eigen_residual": 6.698668760551101e-13,
+      "maximum_pairs": 2,
+      "photon_gap": 0.01788162924227943,
+      "photon_residue": 0.9876496826421314
+    }
+  ],
+  "full_four_pair_convergence": null,
+  "method": "Build the four-pair Hamiltonian once, then Q_N H_full Q_N",
+  "mode": "quick",
+  "not_tested": [
+    "full_four_pair_convergence"
+  ],
+  "pure_gauge_gap_recomputed": 0.01785945619783659,
+  "sector_counts": {
+    "0": 115,
+    "1": 1484,
+    "2": 3138,
+    "3": 1484,
+    "4": 115
+  },
+  "status": "PASS"
+}

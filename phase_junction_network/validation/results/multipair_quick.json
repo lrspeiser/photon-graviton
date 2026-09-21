@@ -1,0 +1,480 @@
+{
+  "checks": {
+    "coupling_scan_monotonic": null,
+    "decoupled_control_zero": true,
+    "fermion_exchange_phase_is_minus_one": true,
+    "fermionic_car_exact": true,
+    "finite_cone_shift_is_small_but_nonzero": true,
+    "ground_is_vacuum_dominated": true,
+    "higher_pair_probabilities_are_hierarchical": true,
+    "local_continuity_exact": true,
+    "longitudinal_external_mode_is_pure_gauge": true,
+    "multipair_series_converges": null,
+    "neutral_fock_sector_counts": null,
+    "nonzero_momentum_operator_ward_exact": true,
+    "nonzero_momentum_spectral_ward": true,
+    "pair_creation_is_pauli_nilpotent": true,
+    "pair_gap_suppresses_polarization": true,
+    "photon_residue_retained": true,
+    "same_unit_pair_completion": true,
+    "signed_translation_symmetry_exact": true,
+    "transverse_operator_momentum_character": true,
+    "transverse_virtual_response_nonzero": true
+  },
+  "claim_boundary": {
+    "established": [
+      "an exact antisymmetric neutral fermion Fock space through four pairs on the finite patch",
+      "canonical anticommutation, exchange sign, and Pauli blocking",
+      "exact signed translation symmetry",
+      "exact local and nonzero-momentum Ward identities in the multipair theory",
+      "longitudinal pure-gauge invariance and nonzero transverse multipair polarization",
+      "convergence of the one-pair truncation toward the complete finite Fock result",
+      "controlled dependence on pair gap and pair-creation strength without a new counterterm"
+    ],
+    "not_established": [
+      "the full fifth-dimensional domain-wall multiplet in the interacting patch",
+      "mirror-wall removal or symmetric mass generation",
+      "volume scaling beyond the 2x2 torus",
+      "an infinite-volume fermion determinant or charge-renormalization flow",
+      "matching matter-loop renormalization of the frame cone",
+      "3+1D interacting QED, nonlinear gravity, or observed matter"
+    ]
+  },
+  "coefficients": {
+    "completion_coefficient": 1.0,
+    "new_counterterms": 0,
+    "pair_creation_coupling_over_Delta": 0.0338029748033,
+    "pair_gap_over_Delta": 1.0
+  },
+  "cutoff_semantics": "Rebuilt completed-move Hamiltonians at each pair cutoff; not a fixed-Hamiltonian truncation error. See validation/check_fixed_cutoff.py.",
+  "decoupled_control": {
+    "exact_longitudinal_unitary_equivalence_residual": 4.577566798522237e-16,
+    "longitudinal_curvature": 7.45931094670027e-11,
+    "mixed_curvature": 1.713039432527097e-11,
+    "transversality_ratio": 1.3870967741935485,
+    "transverse_curvature": 5.377642775528102e-11
+  },
+  "fermion_algebra": {
+    "maximum_canonical_anticommutator_residual": 0.0,
+    "maximum_pair_creation_nilpotency_residual": 0.0,
+    "two_creation_exchange_phase": -1.0
+  },
+  "full_multipair_result": {
+    "dimension": 4737,
+    "ground_energy": -0.020142089667712512,
+    "mean_pair_number": 0.008271491396300965,
+    "pair_distribution": {
+      "0": 0.9917488764475766,
+      "1": 0.00823075570852932,
+      "2": 2.0367843885822736e-05
+    },
+    "photon_gap": 0.017881651994791154,
+    "photon_gap_shift_from_pure_gauge": 2.2195796954425223e-05,
+    "photon_multiplicity": 2,
+    "photon_residue": 0.9876495842165691,
+    "sector_counts": {
+      "0": 115,
+      "1": 1484,
+      "2": 3138
+    },
+    "top_groups": [
+      {
+        "fraction": 0.9876495842165691,
+        "gap": 0.017881651994791154,
+        "multiplicity": 2,
+        "residue": 2.504733300194084
+      },
+      {
+        "fraction": 3.223372861161733e-06,
+        "gap": 0.022863143529954062,
+        "multiplicity": 2,
+        "residue": 8.17464966655957e-06
+      },
+      {
+        "fraction": 2.6378766553265294e-06,
+        "gap": 0.02387351548968605,
+        "multiplicity": 2,
+        "residue": 6.689799303304467e-06
+      },
+      {
+        "fraction": 2.1692151779691897e-06,
+        "gap": 0.022942639909302464,
+        "multiplicity": 2,
+        "residue": 5.501248194070485e-06
+      },
+      {
+        "fraction": 7.919757956392141e-08,
+        "gap": 0.023950697366258232,
+        "multiplicity": 2,
+        "residue": 2.0084938828367557e-07
+      },
+      {
+        "fraction": 1.7708865788507555e-09,
+        "gap": 0.03209840329611044,
+        "multiplicity": 2,
+        "residue": 4.491065106287371e-09
+      },
+      {
+        "fraction": 8.450703712932898e-28,
+        "gap": 0.030694782072624986,
+        "multiplicity": 2,
+        "residue": 2.1431446272158234e-27
+      },
+      {
+        "fraction": 6.382112967405473e-28,
+        "gap": 0.03076897927833218,
+        "multiplicity": 2,
+        "residue": 1.618538713580394e-27
+      }
+    ]
+  },
+  "lattice": {
+    "full_neutral_fock_dimension": 6336,
+    "maximum_pairs_in_run": 2,
+    "negative_fermion_modes": 4,
+    "positive_fermion_modes": 4,
+    "shape": [
+      2,
+      2
+    ],
+    "spin1_links": 8
+  },
+  "module": "phase_junction_network/microscopic/check_fermionic_multipair_vacuum.py",
+  "multipair_convergence": {
+    "finite_photon_cone_fractional_shift": 0.0012428036278682164,
+    "full_minus_one_pair_gap": -3.139577407461347e-07,
+    "full_photon_gap_shift": 2.2195796954425223e-05,
+    "interpretation": "The full antisymmetric Fock space changes the one-pair photon shift only slightly. A matching frame-loop calculation is still required before claiming common-cone radiative stability.",
+    "one_pair_photon_gap_shift": 2.2509754695171358e-05,
+    "relative_correction_to_one_pair_shift": -0.01394763048277389
+  },
+  "next_gate": "Couple the finite domain-wall light and mirror modes to this exact antisymmetric Fock construction, then compare photon and frame self-energies from the same matter loop and test whether the shared cone is radiatively stable without a new counterterm.",
+  "not_tested": [
+    "full_four_pair_convergence",
+    "coupling_scan",
+    "full_sector_counts"
+  ],
+  "pair_coupling_scan": [],
+  "pair_gap_scaling": {
+    "domain_wall_first_doubler_gap_control": 1.1674499031546928,
+    "mean_pair_number_power": -2.1050335725353904,
+    "transverse_polarization_power": -3.113503847668179
+  },
+  "pair_gap_scan": [
+    {
+      "dimension": 4737,
+      "ground_energy": -0.0201420896677129,
+      "mean_pair_number": 0.008271491396300944,
+      "pair_distribution": {
+        "0": 0.9917488764475739,
+        "1": 0.008230755708529299,
+        "2": 2.0367843885822648e-05
+      },
+      "pair_gap_over_Delta": 1.0,
+      "photon_gap": 0.017881651994791567,
+      "photon_gap_shift_from_pure_gauge": 2.2195796954838087e-05,
+      "photon_multiplicity": 2,
+      "photon_residue": 0.9876495842165454,
+      "sector_counts": {
+        "0": 115,
+        "1": 1484,
+        "2": 3138
+      },
+      "static_polarization": {
+        "exact_longitudinal_unitary_equivalence_residual": 4.577566798522237e-16,
+        "longitudinal_curvature": -3.122502256758253e-11,
+        "mixed_curvature": -8.673617379884035e-12,
+        "transversality_ratio": 2.2324441429762898e-07,
+        "transverse_curvature": 0.00013986922210718067
+      },
+      "top_groups": [
+        {
+          "fraction": 0.9876495842165454,
+          "gap": 0.017881651994791567,
+          "multiplicity": 2,
+          "residue": 2.5047333001940215
+        },
+        {
+          "fraction": 3.223372861229422e-06,
+          "gap": 0.02286314352995489,
+          "multiplicity": 2,
+          "residue": 8.174649666731226e-06
+        },
+        {
+          "fraction": 2.6378766553367107e-06,
+          "gap": 0.023873515489686786,
+          "multiplicity": 2,
+          "residue": 6.6897993033302814e-06
+        },
+        {
+          "fraction": 2.169215177930457e-06,
+          "gap": 0.022942639909302932,
+          "multiplicity": 2,
+          "residue": 5.501248193972252e-06
+        },
+        {
+          "fraction": 7.9197579574974e-08,
+          "gap": 0.023950697366258832,
+          "multiplicity": 2,
+          "residue": 2.0084938831170538e-07
+        },
+        {
+          "fraction": 1.6327790555516441e-09,
+          "gap": 0.032098403296110994,
+          "multiplicity": 1,
+          "residue": 4.14081688248134e-09
+        },
+        {
+          "fraction": 7.467760657129636e-28,
+          "gap": 0.015479693690523929,
+          "multiplicity": 1,
+          "residue": 1.8938648985134704e-27
+        },
+        {
+          "fraction": 5.2913799857753915e-28,
+          "gap": 0.009360020312230903,
+          "multiplicity": 1,
+          "residue": 1.3419228708393726e-27
+        }
+      ]
+    },
+    {
+      "dimension": 4737,
+      "ground_energy": -0.01850774690384965,
+      "mean_pair_number": 0.0051711244699358,
+      "pair_distribution": {
+        "0": 0.9948370397758505,
+        "1": 0.005154795978345098,
+        "2": 8.16424579535115e-06
+      },
+      "pair_gap_over_Delta": 1.25,
+      "photon_gap": 0.01764799624273834,
+      "photon_gap_shift_from_pure_gauge": -0.0002114599550983899,
+      "photon_multiplicity": 2,
+      "photon_residue": 0.9889624846180244,
+      "sector_counts": {
+        "0": 115,
+        "1": 1484,
+        "2": 3138
+      },
+      "static_polarization": {
+        "exact_longitudinal_unitary_equivalence_residual": 4.577566798522237e-16,
+        "longitudinal_curvature": -8.673617379884035e-12,
+        "mixed_curvature": 4.7704895589362195e-12,
+        "transversality_ratio": 1.242246549219212e-07,
+        "transverse_curvature": 6.982202836736118e-05
+      },
+      "top_groups": [
+        {
+          "fraction": 0.9889624846180244,
+          "gap": 0.01764799624273834,
+          "multiplicity": 2,
+          "residue": 2.56256961485982
+        },
+        {
+          "fraction": 7.674995039731396e-07,
+          "gap": 0.022405836877860477,
+          "multiplicity": 2,
+          "residue": 1.9887214519175558e-06
+        },
+        {
+          "fraction": 7.647012440581051e-07,
+          "gap": 0.024145376172911605,
+          "multiplicity": 2,
+          "residue": 1.981470685640494e-06
+        },
+        {
+          "fraction": 7.233365669315013e-07,
+          "gap": 0.022818252322572598,
+          "multiplicity": 2,
+          "residue": 1.8742877880262705e-06
+        },
+        {
+          "fraction": 7.511589054922858e-09,
+          "gap": 0.023730661524388123,
+          "multiplicity": 2,
+          "residue": 1.94638018841469e-08
+        },
+        {
+          "fraction": 2.2638748528589775e-27,
+          "gap": 0.03072134478677339,
+          "multiplicity": 2,
+          "residue": 5.866083901071699e-27
+        },
+        {
+          "fraction": 7.201196451005342e-28,
+          "gap": 0.015766476753083965,
+          "multiplicity": 1,
+          "residue": 1.8659521976822146e-27
+        },
+        {
+          "fraction": 3.0682786549244084e-28,
+          "gap": 0.014950472254395922,
+          "multiplicity": 1,
+          "residue": 7.950430651643088e-28
+        }
+      ]
+    }
+  ],
+  "pair_number_truncation": [
+    {
+      "dimension": 1599,
+      "ground_energy": -0.02014268286549777,
+      "max_pairs": 1,
+      "mean_pair_number": 0.00823338708938091,
+      "pair_distribution": {
+        "0": 0.9917666129106129,
+        "1": 0.00823338708938091
+      },
+      "photon_gap": 0.0178819659525319,
+      "photon_gap_shift_from_pure_gauge": 2.2509754695171358e-05,
+      "photon_multiplicity": 2,
+      "photon_residue": 0.9876558472031522,
+      "sector_counts": {
+        "0": 115,
+        "1": 1484
+      },
+      "top_groups": [
+        {
+          "fraction": 0.9876558472031522,
+          "gap": 0.0178819659525319,
+          "multiplicity": 2,
+          "residue": 2.5047432751686625
+        },
+        {
+          "fraction": 3.1726774259899917e-06,
+          "gap": 0.022863511703312443,
+          "multiplicity": 2,
+          "residue": 8.046064294087328e-06
+        },
+        {
+          "fraction": 2.653015874398427e-06,
+          "gap": 0.023874110918421548,
+          "multiplicity": 2,
+          "residue": 6.728177319187504e-06
+        },
+        {
+          "fraction": 2.1711959287815117e-06,
+          "gap": 0.02294298551021963,
+          "multiplicity": 2,
+          "residue": 5.506258497926414e-06
+        },
+        {
+          "fraction": 7.970129707260016e-08,
+          "gap": 0.023951183089051076,
+          "multiplicity": 2,
+          "residue": 2.0212636661862704e-07
+        },
+        {
+          "fraction": 1.8079466947718185e-09,
+          "gap": 0.03209907651883797,
+          "multiplicity": 2,
+          "residue": 4.585040769430752e-09
+        },
+        {
+          "fraction": 2.5328571469555935e-29,
+          "gap": 0.015480113237915271,
+          "multiplicity": 1,
+          "residue": 6.42344894101049e-29
+        },
+        {
+          "fraction": 2.027487172347302e-29,
+          "gap": 0.015576379367329057,
+          "multiplicity": 1,
+          "residue": 5.141806100585017e-29
+        }
+      ]
+    },
+    {
+      "dimension": 4737,
+      "ground_energy": -0.020142089667712512,
+      "max_pairs": 2,
+      "mean_pair_number": 0.008271491396300965,
+      "pair_distribution": {
+        "0": 0.9917488764475766,
+        "1": 0.00823075570852932,
+        "2": 2.0367843885822736e-05
+      },
+      "photon_gap": 0.017881651994791154,
+      "photon_gap_shift_from_pure_gauge": 2.2195796954425223e-05,
+      "photon_multiplicity": 2,
+      "photon_residue": 0.9876495842165691,
+      "sector_counts": {
+        "0": 115,
+        "1": 1484,
+        "2": 3138
+      },
+      "top_groups": [
+        {
+          "fraction": 0.9876495842165691,
+          "gap": 0.017881651994791154,
+          "multiplicity": 2,
+          "residue": 2.504733300194084
+        },
+        {
+          "fraction": 3.223372861161733e-06,
+          "gap": 0.022863143529954062,
+          "multiplicity": 2,
+          "residue": 8.17464966655957e-06
+        },
+        {
+          "fraction": 2.6378766553265294e-06,
+          "gap": 0.02387351548968605,
+          "multiplicity": 2,
+          "residue": 6.689799303304467e-06
+        },
+        {
+          "fraction": 2.1692151779691897e-06,
+          "gap": 0.022942639909302464,
+          "multiplicity": 2,
+          "residue": 5.501248194070485e-06
+        },
+        {
+          "fraction": 7.919757956392141e-08,
+          "gap": 0.023950697366258232,
+          "multiplicity": 2,
+          "residue": 2.0084938828367557e-07
+        },
+        {
+          "fraction": 1.7708865788507555e-09,
+          "gap": 0.03209840329611044,
+          "multiplicity": 2,
+          "residue": 4.491065106287371e-09
+        },
+        {
+          "fraction": 8.450703712932898e-28,
+          "gap": 0.030694782072624986,
+          "multiplicity": 2,
+          "residue": 2.1431446272158234e-27
+        },
+        {
+          "fraction": 6.382112967405473e-28,
+          "gap": 0.03076897927833218,
+          "multiplicity": 2,
+          "residue": 1.618538713580394e-27
+        }
+      ]
+    }
+  ],
+  "run_mode": "quick",
+  "stage_pass": true,
+  "static_polarization": {
+    "exact_longitudinal_unitary_equivalence_residual": 4.577566798522237e-16,
+    "longitudinal_curvature": -3.122502256758253e-11,
+    "mixed_curvature": -8.673617379884035e-12,
+    "transversality_ratio": 2.2324441429762898e-07,
+    "transverse_curvature": 0.00013986922210718067
+  },
+  "status": "Stage 3I PASS at finite antisymmetric multipair scope",
+  "translation": {
+    "maximum_signed_translation_commutator": 0.0,
+    "transverse_operator_character_x": -1.0,
+    "transverse_operator_character_y": 1.0
+  },
+  "ward_identity": {
+    "maximum_local_continuity_residual": 0.0,
+    "maximum_low_spectral_ward_residual": 2.734278330759237e-16,
+    "operator_ward_residual": 8.279340978903994e-18,
+    "rho_k_norm_on_ground": 0.12843252648228268
+  }
+}

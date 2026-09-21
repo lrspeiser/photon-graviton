@@ -762,12 +762,23 @@ def public_spectrum(run) -> dict[str, Any]:
 
 
 def logarithmic_fit(xs, ys) -> dict[str, float]:
-    power, log_prefactor = np.polyfit(
-        np.log(np.asarray(xs, dtype=float)),
-        np.log(np.asarray(ys, dtype=float)),
-        1,
-    )
-    return {"power": float(power), "prefactor": float(np.exp(log_prefactor))}
+    # Validation baseline: reject unidentifiable logarithmic fits.
+    x = np.asarray(xs, dtype=float)
+    y = np.asarray(ys, dtype=float)
+    if x.ndim != 1 or y.ndim != 1 or x.shape != y.shape or x.size < 2:
+        raise ValueError("A log fit requires at least two paired samples")
+    if not (np.all(np.isfinite(x)) and np.all(np.isfinite(y))):
+        raise ValueError("Log-fit samples must be finite")
+    if np.any(x <= 0) or np.any(y <= 0):
+        raise ValueError("Log-fit samples must be positive")
+    lx, ly = np.log(x), np.log(y)
+    centered = lx - lx.mean()
+    denominator = float(centered @ centered)
+    if denominator <= 1.0e-24:
+        raise ValueError("A log-fit exponent needs distinct abscissae")
+    power = float(centered @ (ly - ly.mean()) / denominator)
+    prefactor = float(np.exp(ly.mean() - power * lx.mean()))
+    return {"power": power, "prefactor": prefactor}
 
 
 def build_report(quick: bool) -> dict[str, Any]:
@@ -815,7 +826,7 @@ def build_report(quick: bool) -> dict[str, Any]:
         run = spectrum_run(maximum_pairs, gap, 1.0, 38 if quick else 45)
         row = public_spectrum(run)
         row["pair_gap_over_Delta"] = gap
-        if gap in (0.75, 1.0, 1.5):
+        if quick or gap in (0.75, 1.0, 1.5):
             row["static_polarization"] = (
                 target_polarization if gap == 1.0 else polarization(maximum_pairs, pair_gap=gap)
             )
@@ -1050,6 +1061,22 @@ def build_report(quick: bool) -> dict[str, Any]:
         ),
     }
 
+    report["cutoff_semantics"] = (
+        "Rebuilt completed-move Hamiltonians at each pair cutoff; not a "
+        "fixed-Hamiltonian truncation error. See validation/check_fixed_cutoff.py."
+    )
+    report["not_tested"] = (
+        ["full_four_pair_convergence", "coupling_scan", "full_sector_counts"]
+        if quick else []
+    )
+    if quick:
+        for key in ("multipair_series_converges", "coupling_scan_monotonic",
+                    "neutral_fock_sector_counts"):
+            report["checks"][key] = None
+    report["stage_pass"] = all(
+        value for value in report["checks"].values() if value is not None
+    )
+
     if not report["stage_pass"]:
         raise AssertionError(json.dumps(ready(checks), indent=2, sort_keys=True))
     return report
@@ -1062,7 +1089,7 @@ def main() -> int:
         type=Path,
         default=Path(
             "phase_junction_network/microscopic/"
-            "fermionic_multipair_vacuum_results.json"
+            "fermionic_multipair_vacuum_revalidated.json"
         ),
     )
     parser.add_argument("--quick", action="store_true")
@@ -1083,7 +1110,7 @@ def main() -> int:
                 "failed_checks": [
                     key
                     for key, passed in report["checks"].items()
-                    if not passed
+                    if passed is False
                 ],
             },
             indent=2,
