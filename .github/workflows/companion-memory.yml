@@ -21,6 +21,17 @@ jobs:
           python-version: '3.13'
       - run: python -m pip install numpy==2.3.5 scipy==1.17.0
       - run: python phase_junction_network/microscopic/check_companion_memory.py --output-dir /tmp/cm1-results
+      - name: Preserve exact source, protocol, and interpretation
+        if: always()
+        run: |
+          mkdir -p /tmp/cm1-results/reproduction
+          cp phase_junction_network/microscopic/check_companion_bridge.py /tmp/cm1-results/reproduction/
+          cp phase_junction_network/microscopic/check_companion_memory.py /tmp/cm1-results/reproduction/
+          cp phase_junction_network/microscopic/protocol_companion_memory.md /tmp/cm1-results/reproduction/
+          cp research_plan/novelty-and-completion-2026-09-21.md /tmp/cm1-results/reproduction/
+          git rev-parse HEAD > /tmp/cm1-results/reproduction/executed-commit.txt
+          printf 'numpy==2.3.5\nscipy==1.17.0\n' > /tmp/cm1-results/reproduction/requirements.txt
+          (cd /tmp/cm1-results/reproduction && sha256sum *.py *.md requirements.txt > SHA256SUMS.txt)
       - uses: actions/upload-artifact@v4
         if: always()
         with:
