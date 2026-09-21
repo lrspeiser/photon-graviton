@@ -1,0 +1,126 @@
+{
+  "asymptotic": {
+    "K_plaquette": "20 x^4",
+    "delta_U": "2 x^2",
+    "v_diagonal": "-(8/3) x^4",
+    "v_over_K": "-2/15"
+  },
+  "checks": {
+    "additional_double_flux_operator_becomes_material": true,
+    "counterterm_free_scan_has_no_common_cone": true,
+    "electric_self_energy_is_second_order": true,
+    "linked_diagonal_is_fourth_order": true,
+    "low_band_still_separated_at_scan_edge": true,
+    "mirroring_self_energy_into_gravity_still_fails_z1_gate": true,
+    "omitting_predicted_self_energy_creates_spurious_z1_root": true,
+    "ring_exchange_is_fourth_order": true,
+    "small_x_v_over_K_approaches_minus_two_over_fifteen": true,
+    "z1_subscan_has_no_common_cone": true
+  },
+  "claim_boundary": {
+    "established": [
+      "the exact spin-1 low-band ring, electric, diagonal, and double-flux operators",
+      "the O(x^2) independent-link electric renormalization",
+      "the O(x^4) linked diagonal coefficient and its negative sign",
+      "absence of a counterterm-free common cone in the controlled x=0.05..0.40 scan",
+      "the apparent common-cone root obtained by deleting delta_U is spurious",
+      "copying delta_U into gravity does not pass the photon z~1 gate"
+    ],
+    "not_established": [
+      "a symmetry that cancels the electric self-energy",
+      "the complete frame analogue of the diagonal matching",
+      "that no more elaborate shared mediator can work",
+      "the infinite-volume three-dimensional phase outside the scan",
+      "physical alpha, G, nonlinear gravity, or formal novelty"
+    ]
+  },
+  "counterterm_free_scan": {
+    "minimum_speed_difference": 0.017767968992511495,
+    "minimum_speed_difference_x": 0.05,
+    "minimum_z1_speed_difference": 0.042346744052125046,
+    "points": 36,
+    "x_max": 0.4,
+    "x_min": 0.05,
+    "z1_like_point_count": 19
+  },
+  "decision": "Reject the present pure-swap shared graph as the complete microscopic unification. It generates an O(t^2/Delta) photon charging self-energy that dominates the O(t^4/Delta^3) loop term and prevents a z~1 common cone over the controlled scan.",
+  "derived_common_charging_factor": 0.006944444444444444,
+  "generated_operator_inventory": {
+    "double_flux_exchange": "The exact low band also generates a direct m=-1 to m=+1 operator, equivalent to W^2+W^dagger^2.",
+    "double_flux_over_K_at_x_0p22": 0.07352921375387944,
+    "double_flux_over_K_at_x_0p4": 0.25422371495678797,
+    "low_band_gap_over_K_at_x_0p4": 3.9118752550364007
+  },
+  "leading_behavior": {
+    "K_plaquette": "20*x^4",
+    "delta_U": "2*x^2",
+    "v_diagonal": "-(8/3)*x^4",
+    "v_over_K": "-2/15"
+  },
+  "matching_scheme": {
+    "electric_matching": "The exact independent one-link self-energy is assigned to the extensive electric coefficient delta_U.",
+    "low_band": "Canonical polar projection of the three lowest eigenstates onto the exact spin-1 gauge states m=-1,0,+1.",
+    "plaquette_diagonal_matching": "The linked remainder of the edge-center contrast is matched to D=diag(1,2,1), so v=-(linked contrast)."
+  },
+  "mirrored_selfenergy_control": {
+    "common_speed_Delta": 0.053905543446039345,
+    "delta_U_over_Delta": 0.07113915831841641,
+    "photon_fit_residual": 0.006785523916280612,
+    "photon_gap_power": 0.9040838186515568,
+    "u_total_over_t": 3.6235949417311932,
+    "v_over_K": 0.1311417690994089,
+    "x_t_over_Delta": 0.19995956750586627
+  },
+  "module": "phase_junction_network/microscopic/check_plaquette_diagonal_matching.py",
+  "next_gate": "Enumerate symmetry-complete elementary junction Hamiltonians that include the diagonal/seagull partners of each swap. A viable candidate must cancel or share the O(x^2) charging correction by symmetry, derive the frame analogue, and reproduce all generated operators without sector-specific counterterms.",
+  "small_x_fits": {
+    "K_plaquette": {
+      "power": 3.9909048757725047,
+      "prefactor": 19.13626580233556
+    },
+    "delta_U": {
+      "power": 1.9969470114512018,
+      "prefactor": 1.9705732101688607
+    },
+    "v_diagonal": {
+      "power": 3.9584672108839345,
+      "prefactor": 2.180707721623518
+    }
+  },
+  "small_x_representatives": [
+    {
+      "K_over_20x4": 0.9997600178216662,
+      "K_plaquette_over_Delta": 1.2497000222770827e-08,
+      "delta_U_over_2x2": 0.9999187592155526,
+      "delta_U_over_Delta": 4.9995937960777635e-05,
+      "next_neighbor_over_K": 8.169333272596028e-09,
+      "v_over_K": -0.13322921740588967,
+      "v_over_minus_8_over_3_x4": 0.9989793357605917,
+      "x_t_over_Delta": 0.005
+    },
+    {
+      "K_over_20x4": 0.9762163314614917,
+      "K_plaquette_over_Delta": 0.0001220270414326865,
+      "delta_U_over_2x2": 0.9919659957581493,
+      "delta_U_over_Delta": 0.004959829978790747,
+      "next_neighbor_over_K": 0.00029995122160812585,
+      "v_over_K": -0.12217581171828125,
+      "v_over_minus_8_over_3_x4": 0.8945251703171286,
+      "x_t_over_Delta": 0.05
+    }
+  ],
+  "stage_pass": true,
+  "status": "Stage 3D PASS as a rejection gate: exact diagonal matching rejects the current shared-move graph without a derived cancellation or additional microscopic structure",
+  "unearned_counterterm_control": {
+    "common_speed_Delta": 0.011420316327247267,
+    "description": "Dropping the predicted O(x^2) electric self-energy creates an apparently successful z~1 common cone. This root is a negative control because no cancellation mechanism has been derived.",
+    "K_plaquette_over_Delta": 0.006272530043061459,
+    "next_neighbor_over_K": 0.01588160868828399,
+    "omitted_delta_U_over_Delta": 0.036702912070091236,
+    "photon_fit_residual": 6.255429400398302e-06,
+    "photon_gap_power": 0.9890958103572165,
+    "u_bare_over_t": 1.1071201567422133,
+    "v_over_K": -0.018209249652728826,
+    "x_t_over_Delta": 0.13959388983435933
+  }
+}
