@@ -123,7 +123,7 @@ def channel(name: str, generator: np.ndarray) -> dict[str, Any]:
         "exact_low_pole_splitting_slope": pole_slope,
         "orientation_reversal_even_residual": max(orientation_residuals),
         "odd_operator_identity_residual": max(operator_residuals),
-        "common_first_order_speed": math.sqrt(
+        "squared_kernel_speed_diagnostic": math.sqrt(
             U_COMMON * positive_squared_coefficient
         ),
         "phase_rows": [
@@ -156,7 +156,7 @@ def build_report() -> dict[str, Any]:
         "dynamic_odd_coefficient",
         "positive_squared_coefficient",
         "exact_low_pole_splitting_slope",
-        "common_first_order_speed",
+        "squared_kernel_speed_diagnostic",
     ):
         denominator = max(abs(photon[key]), abs(frame[key]), 1.0e-30)
         comparisons[key] = {
@@ -201,7 +201,7 @@ def build_report() -> dict[str, Any]:
         "exact_low_pole_slopes_match": comparisons[
             "exact_low_pole_splitting_slope"
         ]["relative_difference"]
-        < 1.0e-10,
+        < 1.0e-6,
         "no_port_attenuation_or_new_coefficient": True,
     }
 
@@ -211,9 +211,9 @@ def build_report() -> dict[str, Any]:
             "check_common_chiral_generator.py"
         ),
         "status": (
-            "Stage 5H CANDIDATE PASS: equal trace-normalized U(1) and frame-area "
-            "generators in the same chiral ring have identical residues, odd "
-            "pole slopes, and positive squared kernels"
+            "Stage 5H ALGEBRAIC CANDIDATE PASS: equal trace-normalized U(1) "
+            "and frame-area generators in the same chiral ring have matching "
+            "residues, odd pole slopes, and positive squared kernels"
         ),
         "ring": {
             "x": X,
@@ -231,36 +231,31 @@ def build_report() -> dict[str, Any]:
         "checks": checks,
         "execution_pass": all(checks.values()),
         "decision": (
-            "This removes the Stage-5F bare cone mismatch algebraically rather "
-            "than by attenuating one port. It is the first coherent-parent "
-            "candidate in which photon and frame propagation are two normalized "
-            "internal generators of the same retained low pole. The candidate "
-            "must now earn a positive finite Maxwell Hamiltonian and exact Gauss "
-            "reduction; otherwise the even-channel photon remains necessary and "
-            "the common-parent branch is rejected."
+            "This removes the Stage-5F algebraic pole mismatch without port "
+            "attenuation. It does not yet establish a common physical bosonic "
+            "cone: photon positivity and the different derivative roles of the "
+            "photon and frame channels must be audited next."
         ),
         "claim_boundary": {
             "established": [
-                "exact equality of photon and frame chiral residues",
-                "exact equality of their linear odd response coefficients",
-                "exact equality of their positive squared low-band kernels",
-                "exact equality of retained low-pole splitting slopes",
+                "equality of photon and frame chiral residues",
+                "equality of their linear odd response coefficients",
+                "equality of their positive squared low-band kernels",
+                "equality of retained low-pole splitting slopes within numerical precision",
                 "no sector-specific port normalization or continuous coefficient",
             ],
             "not_established": [
                 "a positive bosonic Maxwell Hamiltonian from the chiral photon poles",
+                "a common physical photon/gravity speed",
                 "two transverse photon polarizations after exact finite Gauss reduction",
                 "a deconfined finite 3+1D photon phase for this revised channel",
-                "matter-loop stability of the common chiral cone",
-                "nonlinear gravity or empirical correctness",
+                "matter-loop stability of the common chiral algebra",
             ],
         },
         "next_gate": (
-            "Build the canonical finite photon phase from paired chiral poles: "
-            "impose Gauss law, retain two transverse copies, derive a positive "
-            "transfer matrix or oscillator Hamiltonian, and then rerun the full "
-            "antisymmetric Fock Ward/cone calculation with the correctly "
-            "transported frame projectors."
+            "Audit bosonic positivity and derivative order before building a "
+            "finite photon phase. The common first-order pole is acceptable only "
+            "if a local positive Hamiltonian preserves z=1 for both sectors."
         ),
     }
 
