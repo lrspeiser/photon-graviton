@@ -1,0 +1,39 @@
+name: Joint response observational inputs
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/joint-response-data.yml'
+permissions:
+  contents: read
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bundle only selected public research inputs and forward models
+        shell: python
+        run: |
+          import pathlib, shutil, json, hashlib, os
+          root=pathlib.Path('.')
+          out=pathlib.Path('/tmp/joint-response-inputs')
+          names=['lensing-data-readiness','slacs-motion-lensing-pilot','slacs-light-profile-audit','lens-photometric-audit','slacs-resolved-data','slacs-resolved-input-audit','slacs-resolved-fit','slacs-component-refit','slacs-orbit-boundary-extension','slacs-outer-predictive','lens-distance-revision','joint-galaxy-audit']
+          paths=[]
+          for name in names:
+              d=root/'research_work/results'/name
+              if d.exists():
+                  paths.extend(p for p in d.rglob('*') if p.is_file() and p.suffix in ['.json','.csv','.py','.md','.txt','.npz','.fits','.dat'])
+          manifest={'commit':os.environ['GITHUB_SHA'],'files':{}}
+          for p in sorted(set(paths)):
+              target=out/p
+              target.parent.mkdir(parents=True,exist_ok=True)
+              shutil.copy2(p,target)
+              manifest['files'][str(p)]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size}
+          (out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          print(json.dumps({'files':len(paths),'bytes':sum(p.stat().st_size for p in paths)}))
+      - uses: actions/upload-artifact@v4
+        with:
+          name: joint-response-inputs-${{ github.sha }}
+          path: /tmp/joint-response-inputs
+          if-no-files-found: error
