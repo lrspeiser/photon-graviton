@@ -1,0 +1,1307 @@
+{
+  "area_kernel": [
+    {
+      "L": 8,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 4.037338733494901,
+      "connection_eigenvalues": [
+        -0.05141142230276116,
+        -0.051411422302761134,
+        -0.04461833333095678,
+        -0.04461833333095678,
+        -0.03254021880337058,
+        -0.032540218803370526,
+        -0.025256318277429364,
+        -0.025256318277429354,
+        -0.01868292465038137,
+        -0.018682924650381346,
+        0.031021257479652974,
+        0.031021257479652994,
+        0.035230673745935574,
+        0.035230673745935595,
+        0.038899355621054406,
+        0.03889935562105443,
+        0.07542929534595122,
+        0.07542929534595127
+      ],
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.009545853997737563,
+        -0.009545853997737561,
+        -2.710505431213761e-20,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.7437528507534784e-36,
+        0.010335113904820807,
+        0.010335113904820812,
+        0.010335113904820812,
+        0.010335113904820815
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.7853981633974483,
+        0.0,
+        0.0
+      ],
+      "khat": [
+        0.7653668647301796,
+        0.0,
+        0.0
+      ],
+      "linear_constraint_evolution_relative_residual": 8.757264739663003e-18,
+      "mode_vector": [
+        1,
+        0,
+        0
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 2.5162184272933053e-17,
+        "derived_backward_vector_gauge_residual": 0.0,
+        "effective_gravity_speed_at_this_momentum": [
+          0.010945109388606532,
+          0.010945109388606536,
+          0.010945109388606537,
+          0.010945109388606539
+        ],
+        "first_class_bracket_error": 0.0,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.010335113904820808,
+          0.010335113904820812,
+          0.010335113904820812,
+          0.010335113904820814
+        ],
+        "quadratic_gravity_gaps": [
+          0.008377024056886635,
+          0.008377024056886636,
+          0.008377024056886638,
+          0.00837702405688664
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 5.535265657366183e-17
+      },
+      "reduced_frame_Hessian": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.00039462995354162735,
+          -0.009940483951279187,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          6.059682074221162e-20,
+          -9.735931387154528e-19,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -0.009940483951279186,
+          0.0003946299535416273,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -4.226550973986991e-19,
+          8.770187505434924e-20,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.010335113904820807,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.2368679696103433e-18
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          8.32073649193519e-21,
+          -3.74613237031865e-19,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.00039462995354162724,
+          -0.009940483951279187,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -8.082941060260668e-19,
+          3.54257908040728e-20,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.009940483951279186,
+          0.00039462995354162724,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          2.2564698315197427e-18,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.01033511390482081
+        ]
+      ],
+      "vector_gauge_relative_residual": 0.0
+    },
+    {
+      "L": 8,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 6.769483595878319,
+      "connection_eigenvalues": [
+        -0.0586260865588716,
+        -0.058626086558871596,
+        -0.03256691056485277,
+        -0.03256691056485277,
+        -0.032566910564852766,
+        -0.03256691056485276,
+        -0.031194991332088046,
+        -0.031194991332088046,
+        -0.011094059872139673,
+        -0.011094059872139624,
+        0.035257365507417746,
+        0.03525736550741776,
+        0.0352573655074178,
+        0.03525736550741781,
+        0.036575901217218015,
+        0.03657590121721809,
+        0.07510105631614124,
+        0.07510105631614131
+      ],
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.01838953281415308,
+        -0.01838953281415307,
+        -8.249801450573013e-18,
+        -3.922217406851083e-18,
+        -2.307036258310229e-18,
+        -1.1183576808646043e-18,
+        -1.366458950011534e-19,
+        7.027615295824334e-18,
+        0.02156159392643855,
+        0.02156159392643856,
+        0.031622390054137535,
+        0.03162239005413755
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.7853981633974483,
+        0.7853981633974483,
+        0.0
+      ],
+      "khat": [
+        0.7653668647301796,
+        0.7653668647301796,
+        0.0
+      ],
+      "linear_constraint_evolution_relative_residual": 1.8956436474492863e-16,
+      "mode_vector": [
+        1,
+        1,
+        0
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 1.6599129102420807e-16,
+        "derived_backward_vector_gauge_residual": 6.464403040915849e-17,
+        "effective_gravity_speed_at_this_momentum": [
+          0.011178612611089411,
+          0.011178612611089418,
+          0.0135376979656178,
+          0.013537697965617811
+        ],
+        "first_class_bracket_error": 4.47705192072994e-16,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.021561593926438555,
+          0.02156159392643856,
+          0.03162239005413753,
+          0.03162239005413756
+        ],
+        "quadratic_gravity_gaps": [
+          0.012099643100333372,
+          0.012099643100333379,
+          0.014653098687898918,
+          0.014653098687898929
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 1.3530843112619095e-16
+      },
+      "reduced_frame_Hessian": [
+        [
+          0.0003965076390356856,
+          0.0003965076390356856,
+          -0.0070624281585788895,
+          -0.0005607464807088022,
+          -8.457115552722021e-20,
+          3.99521532581813e-20,
+          -7.065845626517309e-20,
+          -2.377692091105736e-20,
+          0.00706242815857889,
+          1.5844034608385547e-19,
+          8.960927230581107e-21,
+          1.1265357236187007e-20
+        ],
+        [
+          0.00039650763903568563,
+          0.00039650763903568563,
+          -0.00706242815857889,
+          -0.0005607464807088022,
+          8.962182846595213e-20,
+          -1.3416393698513892e-19,
+          -8.787527005632165e-20,
+          -5.088197522319497e-20,
+          0.007062428158578892,
+          1.5844034608385547e-19,
+          8.960927230581044e-21,
+          1.1265357236187118e-20
+        ],
+        [
+          -0.0070624281585788895,
+          -0.00706242815857889,
+          0.0015860305561427412,
+          0.009987781685147907,
+          1.866665598004336e-18,
+          1.753420376069687e-18,
+          -0.007062428158578888,
+          -0.007062428158578888,
+          -5.704917337625551e-19,
+          0.009987781685147905,
+          3.0688654473172905e-18,
+          -4.501791371557878e-18
+        ],
+        [
+          -0.0005607464807088022,
+          -0.0005607464807088021,
+          0.009987781685147908,
+          0.0007930152780713709,
+          -3.571365084532724e-21,
+          6.661779114101213e-20,
+          6.864390027502801e-20,
+          2.66079174329e-20,
+          -0.009987781685147908,
+          -1.5890078905472896e-19,
+          -1.2672664820926127e-20,
+          -1.5931620988393638e-20
+        ],
+        [
+          -1.2290204202289063e-19,
+          6.876449198768004e-20,
+          1.313654030984525e-18,
+          5.230400331899932e-20,
+          0.015811195027068764,
+          -0.015811195027068764,
+          -7.286510587123926e-20,
+          2.1067729920045162e-20,
+          3.3272129873200597e-19,
+          -8.102369802925407e-21,
+          -1.2258895432251301e-18,
+          4.1293290942880694e-18
+        ],
+        [
+          1.1809427864339766e-19,
+          -6.751268903194231e-20,
+          -1.4275333454619886e-18,
+          -4.299784792102319e-20,
+          -0.015811195027068764,
+          0.015811195027068764,
+          5.2081059934317845e-20,
+          -5.38184651890765e-20,
+          -2.7047546432636214e-19,
+          1.2642638040329026e-20,
+          1.659570412219332e-18,
+          -6.297733439259078e-18
+        ],
+        [
+          -4.4871592891414676e-20,
+          -4.4871592891414676e-20,
+          -0.007062428158578889,
+          9.525612760809875e-20,
+          -8.819047627972662e-20,
+          6.486906964819498e-20,
+          0.0003965076390356855,
+          0.0003965076390356854,
+          -0.00706242815857889,
+          -0.0005607464807088021,
+          2.0088078652429796e-19,
+          -2.0906137168934885e-19
+        ],
+        [
+          -5.1194114525830804e-20,
+          -7.197664720355229e-20,
+          -0.007062428158578887,
+          9.525612760809875e-20,
+          -6.346887368301533e-20,
+          2.4554735306710285e-20,
+          0.00039650763903568547,
+          0.0003965076390356854,
+          -0.00706242815857889,
+          -0.0005607464807088021,
+          -1.7656161572466307e-19,
+          2.3061696187127793e-19
+        ],
+        [
+          0.007062428158578889,
+          0.00706242815857889,
+          -5.52272319177449e-19,
+          -0.009987781685147908,
+          6.18872906455073e-19,
+          3.991278536537397e-19,
+          -0.007062428158578891,
+          -0.00706242815857889,
+          0.0015860305561427427,
+          0.00998778168514791,
+          -2.1026713446662585e-18,
+          2.6692745459092444e-18
+        ],
+        [
+          6.935744299468029e-20,
+          8.405291278132818e-20,
+          0.009987781685147908,
+          -1.168691161127717e-19,
+          1.0723935478899861e-19,
+          -6.323217888311672e-20,
+          -0.0005607464807088021,
+          -0.000560746480708802,
+          0.00998778168514791,
+          0.0007930152780713709,
+          -1.7196250585255705e-20,
+          -1.5242103990120213e-20
+        ],
+        [
+          -8.714446570836641e-20,
+          -8.362013889705985e-20,
+          1.0392524888674131e-18,
+          7.665635324824124e-20,
+          -4.181656890753379e-18,
+          4.615337759747581e-18,
+          2.4427220949159013e-19,
+          -1.6391518784609144e-19,
+          -9.45566412109876e-19,
+          -7.528910677173895e-20,
+          0.01581119502706877,
+          -0.015811195027068767
+        ],
+        [
+          9.435707492626231e-20,
+          7.70450878486659e-20,
+          -5.117426884837114e-19,
+          -1.0401310551575223e-19,
+          4.615337759747581e-18,
+          -5.0490186287417824e-18,
+          -2.2882066865898505e-19,
+          2.0017742461817785e-19,
+          8.747873672863482e-19,
+          3.088860728364599e-20,
+          -0.01581119502706877,
+          0.01581119502706876
+        ]
+      ],
+      "vector_gauge_relative_residual": 7.535308066177299e-17
+    },
+    {
+      "L": 8,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 16.745461061725855,
+      "connection_eigenvalues": [
+        -0.04909333015530542,
+        -0.04909333015530534,
+        -0.040657377376668406,
+        -0.040657377376668385,
+        -0.03420036634724287,
+        -0.034200366347242855,
+        -0.011365236019205199,
+        -0.011365236019205196,
+        -0.003926649308993919,
+        -0.003926649308993912,
+        0.027527563963859334,
+        0.027527563963859386,
+        0.04231947309479001,
+        0.04231947309479004,
+        0.04734246195892374,
+        0.04734246195892374,
+        0.06575355310681028,
+        0.06575355310681029
+      ],
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.05955517813175414,
+        -0.05955517813175412,
+        -6.562647383766918e-17,
+        -1.1804527631198929e-17,
+        -2.091029226684716e-18,
+        4.713152031394933e-18,
+        1.401708356012876e-17,
+        2.856911391428326e-17,
+        0.10918070585617412,
+        0.10918070585617427,
+        0.25444030111701255,
+        0.2544403011170129
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.7853981633974483,
+        1.5707963267948966,
+        0.7853981633974483
+      ],
+      "khat": [
+        0.7653668647301796,
+        1.414213562373095,
+        0.7653668647301796
+      ],
+      "linear_constraint_evolution_relative_residual": 0.38496495119964724,
+      "mode_vector": [
+        1,
+        2,
+        1
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 3.934637583181663e-16,
+        "derived_backward_vector_gauge_residual": 1.0791932903361435e-16,
+        "effective_gravity_speed_at_this_momentum": [
+          0.015288600425672948,
+          0.015288600425672951,
+          0.022593639822113227,
+          0.022593639822113248
+        ],
+        "first_class_bracket_error": 3.883358236438522e-15,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.10918070585617419,
+          0.10918070585617426,
+          0.23844204578457662,
+          0.2384420457845769
+        ],
+        "quadratic_gravity_gaps": [
+          0.027227331421658015,
+          0.02722733142165802,
+          0.04023681058635359,
+          0.04023681058635363
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 8.881784197001252e-16
+      },
+      "reduced_frame_Hessian": [
+        [
+          0.029561369901558738,
+          -0.005795192198640035,
+          -0.03928819474698294,
+          -0.006821322797507474,
+          -0.0389505881502927,
+          0.04186267124721795,
+          -2.1861333268263226e-17,
+          -0.021050516847194955,
+          1.1095532514170048e-17,
+          0.012429840232502534,
+          -0.02604246815675034,
+          0.032595410836318776
+        ],
+        [
+          -0.0057951921986400335,
+          0.008270935740495979,
+          -0.005795192198640028,
+          -0.009983902619110868,
+          0.022315009893234337,
+          -0.009983902619110875,
+          0.02105051684719496,
+          1.9560712038340045e-18,
+          0.021050516847194962,
+          0.004135467870248001,
+          -0.04388929690962531,
+          0.004135467870247997
+        ],
+        [
+          -0.03928819474698294,
+          -0.005795192198640032,
+          0.029561369901558738,
+          0.041862671247217945,
+          -0.03895058815029268,
+          -0.006821322797507467,
+          3.7499440130323986e-18,
+          -0.021050516847194944,
+          -6.0105613071309595e-18,
+          0.03259541083631878,
+          -0.02604246815675036,
+          0.012429840232502527
+        ],
+        [
+          -0.006821322797507477,
+          -0.009983902619110871,
+          0.041862671247217945,
+          0.03428494109317511,
+          -0.048881248219180704,
+          -0.006046200114457395,
+          -0.01242984023250254,
+          -0.0041354678702479886,
+          -0.03259541083631882,
+          -1.7176543158941683e-17,
+          0.04182156297450132,
+          -1.082123772451025e-17
+        ],
+        [
+          -0.03895058815029269,
+          0.022315009893234344,
+          -0.038950588150292696,
+          -0.048881248219180704,
+          0.16810227111146903,
+          -0.04888124821918073,
+          0.026042468156750414,
+          0.043889296909625286,
+          0.026042468156750386,
+          -0.041821562974501264,
+          -9.660562682222302e-17,
+          -0.04182156297450124
+        ],
+        [
+          0.041862671247217945,
+          -0.009983902619110873,
+          -0.0068213227975074744,
+          -0.006046200114457405,
+          -0.04888124821918072,
+          0.03428494109317513,
+          -0.032595410836318825,
+          -0.004135467870247996,
+          -0.012429840232502543,
+          -3.213170173246748e-18,
+          0.04182156297450133,
+          -1.4549047220048733e-17
+        ],
+        [
+          -6.376884858890868e-18,
+          0.021050516847194944,
+          1.5668911244296193e-17,
+          -0.012429840232502532,
+          0.02604246815675039,
+          -0.032595410836318825,
+          0.029561369901558762,
+          -0.0057951921986400395,
+          -0.039288194746982946,
+          -0.00682132279750747,
+          -0.03895058815029276,
+          0.04186267124721797
+        ],
+        [
+          -0.021050516847194948,
+          -1.1932195452342477e-18,
+          -0.021050516847194948,
+          -0.004135467870247983,
+          0.04388929690962525,
+          -0.004135467870247984,
+          -0.005795192198640034,
+          0.008270935740495977,
+          -0.005795192198640039,
+          -0.009983902619110875,
+          0.022315009893234334,
+          -0.009983902619110868
+        ],
+        [
+          1.629922159232095e-17,
+          0.021050516847194948,
+          -1.039695859035401e-18,
+          -0.032595410836318804,
+          0.026042468156750403,
+          -0.012429840232502546,
+          -0.039288194746982946,
+          -0.005795192198640023,
+          0.029561369901558766,
+          0.04186267124721797,
+          -0.03895058815029273,
+          -0.006821322797507462
+        ],
+        [
+          0.01242984023250254,
+          0.004135467870247988,
+          0.03259541083631879,
+          -1.0833885962000502e-17,
+          -0.041821562974501236,
+          -1.3421973342067875e-18,
+          -0.006821322797507476,
+          -0.009983902619110864,
+          0.041862671247217965,
+          0.034284941093175134,
+          -0.04888124821918071,
+          -0.006046200114457405
+        ],
+        [
+          -0.02604246815675038,
+          -0.043889296909625286,
+          -0.026042468156750383,
+          0.041821562974501285,
+          -9.590055702314752e-17,
+          0.04182156297450132,
+          -0.03895058815029271,
+          0.022315009893234337,
+          -0.03895058815029275,
+          -0.04888124821918075,
+          0.1681022711114692,
+          -0.04888124821918076
+        ],
+        [
+          0.03259541083631879,
+          0.004135467870247989,
+          0.01242984023250254,
+          8.91416637115909e-18,
+          -0.04182156297450126,
+          -1.1212887757057442e-17,
+          0.04186267124721795,
+          -0.009983902619110875,
+          -0.0068213227975074675,
+          -0.006046200114457404,
+          -0.048881248219180724,
+          0.03428494109317512
+        ]
+      ],
+      "vector_gauge_relative_residual": 0.06032867867069049
+    },
+    {
+      "L": 16,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 2.7862500632066407,
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.002553035061909537,
+        -0.0025530350619095343,
+        -1.1910674249992606e-22,
+        -1.6543247339820857e-24,
+        0.0,
+        2.1685366212119404e-19,
+        4.32549430067508e-19,
+        4.348139622456296e-19,
+        0.002606266173277912,
+        0.0026062661732779127,
+        0.0026062661732779136,
+        0.0026062661732779158
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.39269908169872414,
+        0.0,
+        0.0
+      ],
+      "khat": [
+        0.3901806440322565,
+        0.0,
+        0.0
+      ],
+      "linear_constraint_evolution_relative_residual": 3.807350698199277e-18,
+      "mode_vector": [
+        1,
+        0,
+        0
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 4.73196997817551e-18,
+        "derived_backward_vector_gauge_residual": 1.9997563328841767e-19,
+        "effective_gravity_speed_at_this_momentum": [
+          0.010781415696949863,
+          0.010781415696949865,
+          0.010781415696949865,
+          0.010781415696949868
+        ],
+        "first_class_bracket_error": 0.0,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.002606266173277913,
+          0.0026062661732779136,
+          0.002606266173277915,
+          0.002606266173277916
+        ],
+        "quadratic_gravity_gaps": [
+          0.004206699720215377,
+          0.004206699720215378,
+          0.004206699720215378,
+          0.004206699720215379
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 5.666565744209008e-17
+      },
+      "vector_gauge_relative_residual": 1.9997563328841764e-19
+    },
+    {
+      "L": 16,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 3.277046744927381,
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.0050544533374617725,
+        -0.005054453337461769,
+        -1.7129235604942552e-18,
+        -1.3490326651225586e-18,
+        -4.1633454065725204e-19,
+        6.354133679701485e-19,
+        1.0592363052202647e-18,
+        1.625363594286812e-18,
+        0.0052674458098914065,
+        0.00526744580989141,
+        0.005711357094909323,
+        0.0057113570949093246
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.39269908169872414,
+        0.39269908169872414,
+        0.0
+      ],
+      "khat": [
+        0.3901806440322565,
+        0.3901806440322565,
+        0.0
+      ],
+      "linear_constraint_evolution_relative_residual": 5.478912629347052e-17,
+      "mode_vector": [
+        1,
+        1,
+        0
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 5.416671679929069e-17,
+        "derived_backward_vector_gauge_residual": 4.813128334940212e-17,
+        "effective_gravity_speed_at_this_momentum": [
+          0.010838057432091402,
+          0.010838057432091402,
+          0.011285506811044687,
+          0.01128550681104469
+        ],
+        "first_class_bracket_error": 1.6761676777297734e-17,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.005267445809891406,
+          0.0052674458098914065,
+          0.0057113570949093246,
+          0.005711357094909327
+        ],
+        "quadratic_gravity_gaps": [
+          0.005980426636293811,
+          0.005980426636293811,
+          0.006227328648121309,
+          0.006227328648121312
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 1.2576745200831851e-16
+      },
+      "vector_gauge_relative_residual": 6.003754994130637e-17
+    },
+    {
+      "L": 16,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 4.32149393933567,
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.01568083560029664,
+        -0.015680835600296615,
+        -4.786610427712321e-18,
+        -1.4838578813084417e-18,
+        -1.0171923079100974e-18,
+        2.5316159163538583e-19,
+        2.8662941263937634e-18,
+        7.841902489166875e-18,
+        0.017467028359234152,
+        0.01746702835923417,
+        0.020146483095751892,
+        0.020146483095751903
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.39269908169872414,
+        0.7853981633974483,
+        0.39269908169872414
+      ],
+      "khat": [
+        0.3901806440322565,
+        0.7653668647301796,
+        0.3901806440322565
+      ],
+      "linear_constraint_evolution_relative_residual": 0.0928242966707984,
+      "mode_vector": [
+        1,
+        2,
+        1
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 2.2064361189005032e-16,
+        "derived_backward_vector_gauge_residual": 8.060190719453502e-17,
+        "effective_gravity_speed_at_this_momentum": [
+          0.011542003055753312,
+          0.011542003055753315,
+          0.01238442845973875,
+          0.012384428459738753
+        ],
+        "first_class_bracket_error": 3.8559943829454726e-16,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.01746702835923416,
+          0.01746702835923417,
+          0.020109838967057935,
+          0.020109838967057942
+        ],
+        "quadratic_gravity_gaps": [
+          0.010890345086119121,
+          0.010890345086119125,
+          0.011685207408923797,
+          0.0116852074089238
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 9.71445146547012e-17
+      },
+      "vector_gauge_relative_residual": 0.03272978948024553
+    },
+    {
+      "L": 24,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 2.4701485746942495,
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.0011493105214936345,
+        -0.0011493105214936332,
+        -1.698571430774368e-19,
+        -1.4077030385580049e-19,
+        -4.8678340806551976e-20,
+        -3.2161518070465176e-22,
+        0.0,
+        7.365016405543857e-21,
+        0.0011599759015603725,
+        0.001159975901560373,
+        0.0011599759015603738,
+        0.0011599759015603738
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.2617993877991494,
+        0.0,
+        0.0
+      ],
+      "khat": [
+        0.26105238444010315,
+        0.0,
+        0.0
+      ],
+      "linear_constraint_evolution_relative_residual": 4.993915094303156e-19,
+      "mode_vector": [
+        1,
+        0,
+        0
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 3.854671996084116e-18,
+        "derived_backward_vector_gauge_residual": 1.414041263703144e-19,
+        "effective_gravity_speed_at_this_momentum": [
+          0.010750507041350346,
+          0.010750507041350348,
+          0.01075050704135035,
+          0.01075050704135035
+        ],
+        "first_class_bracket_error": 0.0,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.0011599759015603725,
+          0.0011599759015603727,
+          0.001159975901560373,
+          0.0011599759015603734
+        ],
+        "quadratic_gravity_gaps": [
+          0.0028064454970846264,
+          0.002806445497084627,
+          0.0028064454970846272,
+          0.0028064454970846272
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 3.175747291006655e-17
+      },
+      "vector_gauge_relative_residual": 1.414041263703144e-19
+    },
+    {
+      "L": 24,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 2.716728315538525,
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.00228810208379066,
+        -0.002288102083790657,
+        -3.2339758809793244e-19,
+        -1.6353440098796274e-19,
+        -1.3941721308376008e-20,
+        2.220161174174266e-19,
+        4.436786123839884e-19,
+        5.724461672245162e-19,
+        0.002330766334240292,
+        0.0023307663342402958,
+        0.0024137807172959474,
+        0.002413780717295951
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.2617993877991494,
+        0.2617993877991494,
+        0.0
+      ],
+      "khat": [
+        0.26105238444010315,
+        0.26105238444010315,
+        0.0
+      ],
+      "linear_constraint_evolution_relative_residual": 1.155568080352581e-17,
+      "mode_vector": [
+        1,
+        1,
+        0
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 1.1584562491373165e-17,
+        "derived_backward_vector_gauge_residual": 3.563534475665811e-17,
+        "effective_gravity_speed_at_this_momentum": [
+          0.010775534828188542,
+          0.010775534828188542,
+          0.010965750833004542,
+          0.010965750833004554
+        ],
+        "first_class_bracket_error": 5.1610142769365085e-18,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.0023307663342402923,
+          0.0023307663342402927,
+          0.0024137807172959487,
+          0.0024137807172959513
+        ],
+        "quadratic_gravity_gaps": [
+          0.003978153138053248,
+          0.003978153138053248,
+          0.004048377809824267,
+          0.004048377809824272
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 3.469446951953614e-17
+      },
+      "vector_gauge_relative_residual": 3.2250241557266764e-17
+    },
+    {
+      "L": 24,
+      "TT_projector_inserted": false,
+      "connection_condition_number": 3.1870242602482866,
+      "connection_rank": 18,
+      "frame_Hessian_eigenvalues": [
+        -0.006970866180885436,
+        -0.006970866180885433,
+        -2.0262442862683273e-18,
+        -9.688901073333278e-19,
+        -1.8811554501331347e-19,
+        1.044006613631367e-19,
+        7.835754493264201e-19,
+        1.1005063350749008e-18,
+        0.007297612413490286,
+        0.007297612413490291,
+        0.00774691494294919,
+        0.007746914942949193
+      ],
+      "frame_Hessian_inertia": {
+        "negative": 2,
+        "positive": 4,
+        "zero": 6
+      },
+      "k": [
+        0.2617993877991494,
+        0.5235987755982988,
+        0.2617993877991494
+      ],
+      "khat": [
+        0.26105238444010315,
+        0.5176380902050415,
+        0.26105238444010315
+      ],
+      "linear_constraint_evolution_relative_residual": 0.029092646943316966,
+      "mode_vector": [
+        1,
+        2,
+        1
+      ],
+      "placement_matched_kinetic": {
+        "assumption": "Inherited DeWitt kinetic coefficients with local placement matched to the newly derived coframe gauge generator; not a full quantum derivation of the kinetic rule.",
+        "constraint_evolution_relative_residual": 1.4985524854738911e-16,
+        "derived_backward_vector_gauge_residual": 1.1321540448290992e-16,
+        "effective_gravity_speed_at_this_momentum": [
+          0.011071328083425808,
+          0.011071328083425813,
+          0.011405337383034134,
+          0.011405337383034137
+        ],
+        "first_class_bracket_error": 2.0791915613129974e-16,
+        "local_trace_placement": "trace at common vertex = sum_i pi_ii(x+hat_i)",
+        "new_adjustable_coefficients": 0,
+        "polarizations_per_signed_momentum": 2,
+        "positive_spring_eigenvalues": [
+          0.007297612413490288,
+          0.00729761241349029,
+          0.007744575639397498,
+          0.007744575639397498
+        ],
+        "quadratic_gravity_gaps": [
+          0.007039187374720051,
+          0.007039187374720053,
+          0.007251551603033524,
+          0.007251551603033526
+        ],
+        "quantum_gravity_pole_proven": false,
+        "real_physical_configuration_modes": 4,
+        "unprojected_evolution_constraint_error": 9.367506770274758e-17
+      },
+      "vector_gauge_relative_residual": 0.02184481357437853
+    }
+  ],
+  "claim_boundary": "Classical quadratic kernel derived from the specified area/reference move. Background auxiliary elimination is not a full finite quantum-gravity reduction.",
+  "classical_low_momentum_fits": [
+    {
+      "c_squared_over_inherited_U_times_x": 0.12496416006575678,
+      "extrapolated_classical_c_squared": 0.00011500664475545886,
+      "fit_window_shift_in_c_squared": 2.7419486013923215e-08,
+      "mode_vector": [
+        1,
+        0,
+        0
+      ],
+      "physical_quantum_common_cone": false,
+      "polarization": 0
+    },
+    {
+      "c_squared_over_inherited_U_times_x": 0.12496416006575684,
+      "extrapolated_classical_c_squared": 0.00011500664475545892,
+      "fit_window_shift_in_c_squared": 2.741948601400453e-08,
+      "mode_vector": [
+        1,
+        0,
+        0
+      ],
+      "physical_quantum_common_cone": false,
+      "polarization": 1
+    },
+    {
+      "c_squared_over_inherited_U_times_x": 0.12484923715144608,
+      "extrapolated_classical_c_squared": 0.00011490087924018282,
+      "fit_window_shift_in_c_squared": 1.1615181158706122e-07,
+      "mode_vector": [
+        1,
+        1,
+        0
+      ],
+      "physical_quantum_common_cone": false,
+      "polarization": 0
+    },
+    {
+      "c_squared_over_inherited_U_times_x": 0.11982416447206995,
+      "extrapolated_classical_c_squared": 0.0001102762192720506,
+      "fit_window_shift_in_c_squared": 4.205522382063568e-06,
+      "mode_vector": [
+        1,
+        1,
+        0
+      ],
+      "physical_quantum_common_cone": false,
+      "polarization": 1
+    },
+    {
+      "c_squared_over_inherited_U_times_x": 0.11035659988156302,
+      "extrapolated_classical_c_squared": 0.00010156305833865303,
+      "fit_window_shift_in_c_squared": 1.2158563349086985e-05,
+      "mode_vector": [
+        1,
+        2,
+        1
+      ],
+      "physical_quantum_common_cone": false,
+      "polarization": 0
+    },
+    {
+      "c_squared_over_inherited_U_times_x": 0.05555812381655396,
+      "extrapolated_classical_c_squared": 5.113108755092663e-05,
+      "fit_window_shift_in_c_squared": 5.957737954813839e-05,
+      "mode_vector": [
+        1,
+        2,
+        1
+      ],
+      "physical_quantum_common_cone": false,
+      "polarization": 1
+    }
+  ],
+  "common_x": 0.13554178509861228,
+  "exact_move_Taylor_error_power": 3.999974137720143,
+  "execution_pass": true,
+  "frame_kinetic_U_inherited": 0.006789913753821769,
+  "full_nonlinear_constraints_constructed": false,
+  "mode": "quick",
+  "old_unshifted_constraint_gate_pass": false,
+  "photon_3D_quantum_pole_available": false,
+  "physical_speed_matching_performed": false,
+  "placement_matched_quadratic_constraint_gate_pass": true
+}

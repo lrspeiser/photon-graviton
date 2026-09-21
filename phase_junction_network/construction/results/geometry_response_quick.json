@@ -1,0 +1,376 @@
+{
+  "charges": [
+    -11,
+    -5,
+    -1,
+    -1,
+    9,
+    9
+  ],
+  "claim_boundary": "This failure concerns the declared candidate and Gaussian source. Full interacting Fock, frame, connection and continuum mechanisms remain untested.",
+  "common_kinetic_photon_frame_matching_established": false,
+  "coordinate_stress_Ward": [
+    {
+      "L": 16,
+      "completed_Gaussian_Ward_error": 0.07176310386346339,
+      "completed_Ward_error_over_q": 0.18274324338379666,
+      "completion_source_over_q": 0.18003700989326163,
+      "derived_small_q_limit": 0.18812493319903634,
+      "effective_geometry_Ward_error": 0.01264299318502392,
+      "external_p": [
+        0.19634954084936207,
+        0.19634954084936207,
+        0.19634954084936207
+      ],
+      "internal_spin_or_U1_Ward": false,
+      "q": 0.39269908169872414
+    },
+    {
+      "L": 32,
+      "completed_Gaussian_Ward_error": 0.03659975530337739,
+      "completed_Ward_error_over_q": 0.18640102311956236,
+      "completion_source_over_q": 0.18607745147175245,
+      "derived_small_q_limit": 0.18812493319903634,
+      "effective_geometry_Ward_error": 0.0008243883288470633,
+      "external_p": [
+        0.09817477042468103,
+        0.09817477042468103,
+        0.09817477042468103
+      ],
+      "internal_spin_or_U1_Ward": false,
+      "q": 0.19634954084936207
+    },
+    {
+      "L": 64,
+      "completed_Gaussian_Ward_error": 0.01842213240334253,
+      "completed_Ward_error_over_q": 0.18764629979426187,
+      "completion_source_over_q": 0.1876114565964099,
+      "derived_small_q_limit": 0.18812493319903634,
+      "effective_geometry_Ward_error": 5.207096719288163e-05,
+      "external_p": [
+        0.04908738521234052,
+        0.04908738521234052,
+        0.04908738521234052
+      ],
+      "internal_spin_or_U1_Ward": false,
+      "q": 0.09817477042468103
+    },
+    {
+      "L": 128,
+      "completed_Gaussian_Ward_error": 0.009228414798585993,
+      "completed_Ward_error_over_q": 0.1879997225084619,
+      "completion_source_over_q": 0.18799646346859658,
+      "derived_small_q_limit": 0.18812493319903634,
+      "effective_geometry_Ward_error": 3.263026309805666e-06,
+      "external_p": [
+        0.02454369260617026,
+        0.02454369260617026,
+        0.02454369260617026
+      ],
+      "internal_spin_or_U1_Ward": false,
+      "q": 0.04908738521234052
+    },
+    {
+      "L": 256,
+      "completed_Gaussian_Ward_error": 0.004616498364320738,
+      "completed_Ward_error_over_q": 0.1880930648210675,
+      "completion_source_over_q": 0.18809280947715343,
+      "derived_small_q_limit": 0.18812493319903634,
+      "effective_geometry_Ward_error": 2.040735675480321e-07,
+      "external_p": [
+        0.01227184630308513,
+        0.01227184630308513,
+        0.01227184630308513
+      ],
+      "internal_spin_or_U1_Ward": false,
+      "q": 0.02454369260617026
+    }
+  ],
+  "decision": "The specified Gaussian completed matter sector has a nonvanishing leading coordinate-stress Ward defect. Exact internal Spin(3)/U(1) covariance does not repair spatial diffeomorphism symmetry. Do not publish a physical photon/gravity speed fit or subtract the response by hand.",
+  "execution_pass": true,
+  "full_Fock_completion_contains_quartic_terms": true,
+  "independent_graph_source_control": {
+    "L": 3,
+    "coordinate_source_graph_vs_Bloch_residual": 1.9197541727953317e-11,
+    "width": 1
+  },
+  "mode": "quick",
+  "physical_common_cone_test_pass": false,
+  "quartic_interaction_corrections_in_large_volume_loop": false,
+  "separate_sector_adjustments": 0,
+  "volumes": [
+    {
+      "L": 8,
+      "area_energy_on_uniform_flat_connection": 0.0,
+      "band_filling_controls": [
+        {
+          "abs_charge": 11,
+          "indirect_filled_band_gap": 0.20819142789862613,
+          "maximum_occupied_energy": 0.04071549980577505,
+          "minimum_empty_energy": 0.24890692770440118
+        },
+        {
+          "abs_charge": 5,
+          "indirect_filled_band_gap": 0.18444337356410723,
+          "maximum_occupied_energy": 0.04300766703567684,
+          "minimum_empty_energy": 0.22745104059978408
+        },
+        {
+          "abs_charge": 1,
+          "indirect_filled_band_gap": 0.174937606906156,
+          "maximum_occupied_energy": 0.043380523212429675,
+          "minimum_empty_energy": 0.21831813011858567
+        },
+        {
+          "abs_charge": 9,
+          "indirect_filled_band_gap": 0.1989638204709354,
+          "maximum_occupied_energy": 0.04178561497583031,
+          "minimum_empty_energy": 0.2407494354467657
+        }
+      ],
+      "common_filling_gap": 0.174937606906156,
+      "longitudinal_response_residual": 1.9939605522267811e-13,
+      "operator_photon_Ward_residual": 3.3306690738754696e-15,
+      "physical_pole_fit_permitted": false,
+      "raw_response_rows": [
+        {
+          "frame_bubble": -0.7521528296369894,
+          "frame_contact_completion": 10.263431603648522,
+          "frame_contact_kinetic": -0.50194244993729,
+          "frame_contact_regulator": -12.020185645853202,
+          "frame_static": -3.0108493217789594,
+          "frame_temporal_Euclidean": 1.5221128664661858,
+          "longitudinal_photon_static": 0.0,
+          "n": 0,
+          "photon_static": 0.18366199943383058,
+          "photon_temporal_Euclidean": 84.19488322929493,
+          "q": 0.0,
+          "qhat": 0.0
+        },
+        {
+          "frame_bubble": -0.7179712953587493,
+          "frame_contact_completion": 10.263431603648522,
+          "frame_contact_kinetic": -0.50194244993729,
+          "frame_contact_regulator": -12.020185645853202,
+          "frame_static": -2.9766677875007197,
+          "frame_temporal_Euclidean": 1.3126345157249162,
+          "longitudinal_photon_static": 1.9581558596826198e-13,
+          "n": 1,
+          "photon_static": 1.3108916356477405,
+          "photon_temporal_Euclidean": 67.976712971038,
+          "q": 0.7853981633974483,
+          "qhat": 0.7653668647301796
+        },
+        {
+          "frame_bubble": -0.6469119635276293,
+          "frame_contact_completion": 10.263431603648522,
+          "frame_contact_kinetic": -0.50194244993729,
+          "frame_contact_regulator": -12.020185645853202,
+          "frame_static": -2.9056084556696,
+          "frame_temporal_Euclidean": 0.9929453245535977,
+          "longitudinal_photon_static": 1.9939605522267811e-13,
+          "n": 2,
+          "photon_static": 3.4038704594001965,
+          "photon_temporal_Euclidean": 49.70187296526493,
+          "q": 1.5707963267948966,
+          "qhat": 1.414213562373095
+        },
+        {
+          "frame_bubble": -0.5867257564137357,
+          "frame_contact_completion": 10.263431603648522,
+          "frame_contact_kinetic": -0.50194244993729,
+          "frame_contact_regulator": -12.020185645853202,
+          "frame_static": -2.845422248555706,
+          "frame_temporal_Euclidean": 0.7930936547338103,
+          "longitudinal_photon_static": 1.9406698470447736e-13,
+          "n": 3,
+          "photon_static": 5.060659847707477,
+          "photon_temporal_Euclidean": 40.323266574110896,
+          "q": 2.356194490192345,
+          "qhat": 1.8477590650225735
+        }
+      ],
+      "source_derivative_errors": [
+        {
+          "abs_charge": 11,
+          "first": 1.3834966922088299e-09,
+          "second": 1.840333441194275e-08
+        },
+        {
+          "abs_charge": 5,
+          "first": 1.3832191364526736e-09,
+          "second": 1.8003422752599363e-08
+        },
+        {
+          "abs_charge": 1,
+          "first": 1.3832191364526736e-09,
+          "second": 2.603941506862384e-08
+        },
+        {
+          "abs_charge": 9,
+          "first": 1.3837742479649862e-09,
+          "second": 2.5196888353562485e-08
+        }
+      ],
+      "source_derivative_fits": {
+        "frame": {
+          "constant_subtracted_from_physical_H": false,
+          "heldout_last_mode_residual": 0.00533686238952083,
+          "raw_uniform_response": -3.0108493217789594,
+          "spatial_q_fourth": -0.003109063880214309,
+          "spatial_q_squared": 0.05903395216556233,
+          "temporal_Euclidean_coefficient": 1.5221128664661858,
+          "window_shift_in_q_squared": 0.001691474442490827
+        },
+        "photon": {
+          "constant_subtracted_from_physical_H": false,
+          "heldout_last_mode_residual": 0.4524942381148369,
+          "raw_uniform_response": 0.18366199943383058,
+          "spatial_q_fourth": -0.14218048233529323,
+          "spatial_q_squared": 1.9110317563907695,
+          "temporal_Euclidean_coefficient": 84.19488322929493,
+          "window_shift_in_q_squared": 0.14341431037241925
+        }
+      },
+      "spatial_dimension": 3,
+      "width": 2
+    },
+    {
+      "L": 12,
+      "area_energy_on_uniform_flat_connection": 0.0,
+      "band_filling_controls": [
+        {
+          "abs_charge": 11,
+          "indirect_filled_band_gap": 0.14503100808730612,
+          "maximum_occupied_energy": 0.07364500259891164,
+          "minimum_empty_energy": 0.21867601068621778
+        },
+        {
+          "abs_charge": 5,
+          "indirect_filled_band_gap": 0.12283188982319289,
+          "maximum_occupied_energy": 0.07647277859769923,
+          "minimum_empty_energy": 0.19930466842089212
+        },
+        {
+          "abs_charge": 1,
+          "indirect_filled_band_gap": 0.11576258197855958,
+          "maximum_occupied_energy": 0.07686432541385764,
+          "minimum_empty_energy": 0.19262690739241722
+        },
+        {
+          "abs_charge": 9,
+          "indirect_filled_band_gap": 0.13595741707492587,
+          "maximum_occupied_energy": 0.07498752775010549,
+          "minimum_empty_energy": 0.21094494482503134
+        }
+      ],
+      "common_filling_gap": 0.11576258197855958,
+      "longitudinal_response_residual": 7.299716386910404e-15,
+      "operator_photon_Ward_residual": 4.3298697960381105e-15,
+      "physical_pole_fit_permitted": false,
+      "raw_response_rows": [
+        {
+          "frame_bubble": -0.7495939867082766,
+          "frame_contact_completion": 10.263388066205414,
+          "frame_contact_kinetic": -0.5018359462072539,
+          "frame_contact_regulator": -12.02024888257062,
+          "frame_static": -3.0082907492807385,
+          "frame_temporal_Euclidean": 1.4885747455621328,
+          "longitudinal_photon_static": 0.0,
+          "n": 0,
+          "photon_static": 0.03963973002851878,
+          "photon_temporal_Euclidean": 96.1926205289366,
+          "q": 0.0,
+          "qhat": 0.0
+        },
+        {
+          "frame_bubble": -0.7337462116657212,
+          "frame_contact_completion": 10.263388066205414,
+          "frame_contact_kinetic": -0.5018359462072539,
+          "frame_contact_regulator": -12.02024888257062,
+          "frame_static": -2.992442974238183,
+          "frame_temporal_Euclidean": 1.3813483723250712,
+          "longitudinal_photon_static": -3.3029134982598407e-15,
+          "n": 1,
+          "photon_static": 0.6102253879120584,
+          "photon_temporal_Euclidean": 81.9487740192909,
+          "q": 0.5235987755982988,
+          "qhat": 0.5176380902050415
+        },
+        {
+          "frame_bubble": -0.6937650930362673,
+          "frame_contact_completion": 10.263388066205414,
+          "frame_contact_kinetic": -0.5018359462072539,
+          "frame_contact_regulator": -12.02024888257062,
+          "frame_static": -2.952461855608729,
+          "frame_temporal_Euclidean": 1.1717308893063658,
+          "longitudinal_photon_static": -7.299716386910404e-15,
+          "n": 2,
+          "photon_static": 1.892311332584167,
+          "photon_temporal_Euclidean": 63.42984466579835,
+          "q": 1.0471975511965976,
+          "qhat": 0.9999999999999999
+        },
+        {
+          "frame_bubble": -0.6451264151031746,
+          "frame_contact_completion": 10.263388066205414,
+          "frame_contact_kinetic": -0.5018359462072539,
+          "frame_contact_regulator": -12.02024888257062,
+          "frame_static": -2.9038231776756365,
+          "frame_temporal_Euclidean": 0.9737516062718103,
+          "longitudinal_photon_static": -3.3029134982598407e-15,
+          "n": 3,
+          "photon_static": 3.3236852869155897,
+          "photon_temporal_Euclidean": 50.99236401332133,
+          "q": 1.5707963267948966,
+          "qhat": 1.414213562373095
+        }
+      ],
+      "source_derivative_errors": [
+        {
+          "abs_charge": 11,
+          "first": 6.613019368217898e-10,
+          "second": 1.5961208355008694e-08
+        },
+        {
+          "abs_charge": 5,
+          "first": 6.613019368217898e-10,
+          "second": 1.726800702428477e-08
+        },
+        {
+          "abs_charge": 1,
+          "first": 6.618570483341024e-10,
+          "second": 1.6622286658218854e-08
+        },
+        {
+          "abs_charge": 9,
+          "first": 6.613019368217898e-10,
+          "second": 2.2754762296628428e-08
+        }
+      ],
+      "source_derivative_fits": {
+        "frame": {
+          "constant_subtracted_from_physical_H": false,
+          "heldout_last_mode_residual": 0.0018687401134545867,
+          "raw_uniform_response": -3.0082907492807385,
+          "spatial_q_fourth": -0.0036718809299225125,
+          "spatial_q_squared": 0.05957021085859882,
+          "temporal_Euclidean_coefficient": 1.4885747455621328,
+          "window_shift_in_q_squared": 0.0007881607395960125
+        },
+        "photon": {
+          "constant_subtracted_from_physical_H": false,
+          "heldout_last_mode_residual": 0.3348877418445997,
+          "raw_uniform_response": 0.03963973002851878,
+          "spatial_q_fourth": -0.22440694738900063,
+          "spatial_q_squared": 2.0895218806303615,
+          "temporal_Euclidean_coefficient": 96.1926205289366,
+          "window_shift_in_q_squared": 0.14124241695969975
+        }
+      },
+      "spatial_dimension": 3,
+      "width": 2
+    }
+  ],
+  "x": 0.13554178509861228
+}
