@@ -2,7 +2,7 @@
   "module": "phase_junction_network",
   "active_branch": "main",
   "created_utc": "2026-09-20",
-  "status": "exploratory candidate foundation; finite pure-gauge photon dynamics, a finite linear dressed-frame regulator, a finite chiral matter prototype, and a finite reversible companion bridge exist. Stage 3A derives shared virtual moves, Stage 3B rejects the isolated-hinge normalization, and Stage 3C derives a common r=1/144 collective charging mode with photon/gravity common-cone roots. The diagonal plaquette coefficient, full shared embedding, interacting QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.",
+  "status": "exploratory candidate foundation; finite pure-gauge photon dynamics, a finite linear dressed-frame regulator, a finite chiral matter prototype, and a finite reversible companion bridge exist. Stage 3A derives shared virtual moves, Stage 3B rejects the isolated-hinge normalization, Stage 3C derives r=1/144, and Stage 3D rejects the current pure-swap graph after exact diagonal matching reveals a dominant O(t^2/Delta) electric self-energy. A symmetry-complete shared Hamiltonian is now the critical path.",
   "architecture_audit": "phase_junction_network/architecture_audit.md",
   "novelty_boundary": "phase_junction_network/novelty_boundary.md",
   "companion_integration": "phase_junction_network/companion_integration.md",
@@ -10,8 +10,8 @@
   "dependencies": ["python>=3.11", "numpy>=1.24", "scipy>=1.10"],
   "pillar_status": {
     "finite_electromagnetism": {"issue": 6, "status": "Stage 6A static Coulomb and Stage 6B detuned pure-gauge dynamics pass; dynamical matter, Ward identities, vacuum polarization, charge renormalization, and QED continuum remain open"},
-    "finite_linear_gravity": {"issue": 2, "status": "linear finite constrained-regulator gate passed; Stage 3C reruns the compact frame spectrum at the shared r=1/144 and finds linear branches for p>=11"},
-    "shared_microscopic_coefficients": {"issue": 3, "status": "Stages 3A-3C pass their declared scopes; r=1/144 is structurally derived, but v/t and the full finite shared Hamiltonian remain open"},
+    "finite_linear_gravity": {"issue": 2, "status": "linear finite constrained-regulator gate passed; its microscopic charging and curvature coefficients are not yet derived from a viable shared Hamiltonian"},
+    "shared_microscopic_coefficients": {"issue": 3, "status": "Stages 3A-3C identify a candidate shared route; Stage 3D rejects the current pure-swap graph because its generated electric self-energy prevents a counterterm-free z~1 common cone"},
     "finite_chiral_matter": {"issue": 4, "status": "finite free-regulator endpoint prototype passes; observed spectrum, mirror completion, interactions, clocks, and radiative stability remain open"},
     "nonlinear_gravity_and_vacuum": {"issue": 5, "status": "open"},
     "companion_integration": {"issue": 7, "status": "finite reversible architecture passes; physical rates, common charging/cone, many-body deposits, and empirical viability remain open"},
@@ -19,13 +19,6 @@
     "frozen_predictions_and_data": {"issue": 9, "status": "open"}
   },
   "results": {
-    "finite_em_stage_6A": {
-      "acceptance": "PASS at finite static Coulomb ground-state scope",
-      "result_file": "phase_junction_network/microscopic/finite_em_coulomb_results.json",
-      "exact_periodic_cube_dimension": 146327,
-      "exact_periodic_cube_transition_edges": 1236144,
-      "issue_6_closed": false
-    },
     "finite_em_stage_6B": {
       "acceptance": "PASS at detuned pure-gauge dynamical scope",
       "result_file": "phase_junction_network/microscopic/finite_em_dynamics_results.json",
@@ -39,43 +32,48 @@
       "acceptance": "PASS at linear finite constrained-regulator scope",
       "result_file": "phase_junction_network/microscopic/finite_dressed_frame_results.json",
       "logical_frame_qudits_per_nonzero_block": 2,
-      "uses_TT_projector": false,
-      "normalization_warning": "the old self-dual clock normalization was a regulator choice; Stage 3C applies the common physical U_g before finite clock normalization"
+      "uses_TT_projector": false
     },
     "shared_junction_move_stage_3A": {
       "acceptance": "PASS at finite mechanism-prototype scope",
       "result_file": "phase_junction_network/microscopic/shared_junction_move_results.json",
       "electromagnetic_leading_coefficient": "K_A=20*t^4/Delta^3",
       "gravity_leading_coefficient": "K_g=t^2/Delta",
-      "toy_common_cone_t_over_Delta": 0.27909563384302527,
-      "claim_boundary": "the naive U_A=U_g=Delta normalization is rejected by Stage 3B"
+      "claim_boundary": "the graph is rejected as complete after Stage 3D diagonal matching"
     },
     "shared_move_embedding_stage_3B": {
       "acceptance": "PASS as a rejection/diagnostic gate",
       "result_file": "phase_junction_network/microscopic/shared_move_embedding_results.json",
-      "naive_implied_u_over_t": 14.596888805279812,
-      "exact_spin1_gap_power_range": [0.1388933350649927, 0.17181561492652853],
       "decision": "reject U_A=U_g=Delta and derive one collective charging factor"
     },
     "collective_capacitance_stage_3C": {
-      "acceptance": "PASS at finite structural/common-cone prototype scope",
+      "acceptance": "PASS at finite structural/common-charging scope",
       "result_file": "phase_junction_network/microscopic/collective_capacitance_results.json",
       "bundle_channels": 144,
-      "structural_equalities": ["8*18=144", "24*6=144"],
       "constraint_matrix_rank": 143,
       "uniform_mode_nullity": 1,
-      "complete_lock_gap": 2.0,
-      "topology_control_lock_gap": 0.12061475842818314,
       "derived_common_r": 0.006944444444444444,
-      "common_roots": [
-        {"v_over_t": 0.2, "x_t_over_Delta": 0.14365262985229493, "u_over_t": 0.9287008043430364, "photon_power": 1.0096304792182946, "common_speed": 0.011740296749001905},
-        {"v_over_t": 0.4, "x_t_over_Delta": 0.1530167579650879, "u_over_t": 0.7356988337570127, "photon_power": 1.0553875789205054, "common_speed": 0.012474901390963229},
-        {"v_over_t": 0.6, "x_t_over_Delta": 0.16744375228881836, "u_over_t": 0.5305914351661827, "photon_power": 1.1358492514912448, "common_speed": 0.013596401140904877}
-      ],
-      "finite_gravity_primes": [11, 13, 17],
-      "finite_gravity_power_range": [1.0217312722396685, 1.0333299517949608],
-      "coarse_p5_power_control": 0.25018787871635495,
-      "remaining_dimensionless_input": "v/t has not yet been derived from the shared virtual move graph"
+      "claim_boundary": "the common bare charging coefficient survives, but the pure-swap curvature graph is rejected by Stage 3D"
+    },
+    "plaquette_diagonal_matching_stage_3D": {
+      "acceptance": "PASS as a rejection/diagnostic gate",
+      "result_file": "phase_junction_network/microscopic/plaquette_diagonal_matching_results.json",
+      "ring_exchange_power": 3.9909048757725047,
+      "electric_self_energy_power": 1.9969470114512018,
+      "linked_diagonal_power": 3.9584672108839345,
+      "leading_ring": "20*x^4*Delta",
+      "leading_electric_self_energy": "2*x^2*Delta",
+      "leading_diagonal": "-(8/3)*x^4*Delta",
+      "leading_v_over_K": "-2/15",
+      "controlled_scan_x_range": [0.05, 0.4],
+      "counterterm_free_common_cone_found": false,
+      "minimum_speed_difference": 0.017767968992511495,
+      "minimum_z1_speed_difference": 0.042346744052125046,
+      "spurious_root_if_delta_U_deleted": 0.13959388983435933,
+      "mirrored_selfenergy_root": 0.19995956750586627,
+      "mirrored_root_photon_power": 0.9040838186515568,
+      "double_flux_over_K_at_x_0p4": 0.25422371495678797,
+      "decision": "reject the current pure-swap shared graph and enumerate symmetry-complete junction generators with derived diagonal partners"
     },
     "finite_chiral_matter": {
       "acceptance": "PASS at finite free-regulator endpoint scope",
@@ -97,26 +95,26 @@
   },
   "originality_policy": {
     "not_claimed_as_original": ["finite quantum links", "Rokhsar-Kivelson Hamiltonians", "relative-phase or Leggett modes", "domain-wall fermions", "first-order frame and connection gravity", "emergent helicity-2 spin models", "broad gauge-gravity unification", "Schrieffer-Wolff ring exchange", "parallel capacitance addition", "graph-Laplacian locking"],
-    "candidate_original_content": "the specific 144-channel matter-geometry bundle and one microscopic move/capacitance structure deriving electromagnetic, gravitational, matter, and companion coefficients plus cross-sector predictions",
+    "candidate_original_content": "a symmetry-complete finite matter-geometry junction Hamiltonian deriving electromagnetic, gravitational, matter, and companion coefficients plus cross-sector predictions",
     "formal_novelty_proven": false
   },
   "immediate_work_order": [
-    "derive the diagonal plaquette/flippability coefficient v/t from the same virtual move graph",
-    "with derived v/t and r=1/144, fix x=t/Delta without spectral calibration",
-    "rerun the full 3D photon and increasing-p gravity regulators at that one point",
+    "enumerate symmetry-complete elementary junction Hamiltonians including diagonal or seagull partners of every swap",
+    "derive photon and frame self-energies and every generated low-band operator through fourth order",
+    "reject candidates requiring photon-only or gravity-only counterterms",
+    "rerun the common-cone and finite-spectrum gates for surviving candidates",
     "embed the minimal |q|=1 endpoint and test current continuity, a finite Ward identity, photon dressing, and vacuum polarization",
-    "extend the same capacitance matrix to matter and the companion",
+    "extend the same successful microscopic algebra to the companion and matter localization sectors",
     "close nonlinear constraints, gravitational self-energy, many-body companion binding, and the volume-vacuum sector",
     "establish common-cone recovery and regulator universality",
     "freeze the parameter and observable ledger before empirical fitting"
   ],
   "stop_rules": [
     "do not claim originality for established component techniques",
-    "do not treat Stage 3A as a derivation of alpha, G, or physical Z_g/Z_A",
-    "do not retain the rejected U_A=U_g=Delta normalization",
-    "do not claim the 144-channel bundle is unique or fundamental",
-    "do not choose v/t from the desired common speed",
-    "do not add independent photon and gravity charging factors",
+    "do not delete or fit away the Stage-3D O(x^2) electric self-energy",
+    "do not copy the photon self-energy into gravity without a derived frame calculation",
+    "do not ignore the generated double-flux operator",
+    "do not use sector-specific counterterms or charging factors",
     "do not treat Stage 6B as interacting QED",
     "do not treat the finite gravity regulator as nonlinear quantum gravity",
     "do not identify the finite matter spectrum with observed particles",
