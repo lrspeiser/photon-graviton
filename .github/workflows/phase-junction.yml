@@ -83,6 +83,12 @@ jobs:
             --quick \
             --output /tmp/spatial_gauge_matter_results.json
 
+      - name: Check finite virtual-pair vacuum polarization
+        run: |
+          python phase_junction_network/microscopic/check_virtual_pair_vacuum.py \
+            --quick \
+            --output /tmp/virtual_pair_vacuum_results.json
+
       - name: Check finite chiral matter endpoint
         run: |
           python phase_junction_network/microscopic/check_chiral_matter_defect.py \
