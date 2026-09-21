@@ -1,5 +1,7 @@
 # Start here — active research
 
+**Begin with [Theory first: the physical story and what we are solving for](THEORY-FIRST.md).** At the user's request, explain the overall photon–companion mechanism before choosing a calculation: extended galaxy gravity, the same physical state's lensing response, and ordinary internal planetary dynamics within a galaxy-accelerated solar system. Identify the mechanism, equation, or actual field solution being constructed—not merely the next checklist. This narrative is a working hypothesis, not a claim that the missing mechanisms are solved; SM-1 and other individual equations do not replace the overall theory.
+
 The authoritative current state is [CURRENT-STATUS.md](../CURRENT-STATUS.md). Dated notices that previously accumulated at the top of this page are preserved verbatim in [CHANGELOG.md](../CHANGELOG.md).
 
 ## Standing rules
