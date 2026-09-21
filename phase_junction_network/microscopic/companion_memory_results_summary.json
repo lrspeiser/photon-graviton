@@ -1,0 +1,70 @@
+{
+  "experiment": "CM-1",
+  "protocol_commit": "206fe9934160d202d7e804d96dec185d48470f42",
+  "implementation_commit": "dc9af791ba832554723d9fc054ba2970ae4fdf7a",
+  "executed_commit": "58b91f704c58329dd97a6ae2f12cd7ffa158a22b",
+  "workflow_run": 35659502279,
+  "workflow_conclusion": "success",
+  "full_artifact": 10666995125,
+  "artifact_zip_sha256": "f0e3b6ea78122a209a1b2286174b4089903538f1343c8b35d8b3b56fc05d296c",
+  "full_json_sha256": "f22aa3c3519a5fc94c8d5a85f72551a709581487aedbdb5fc2e6026fc77bc481",
+  "source_sha256": {
+    "check_companion_bridge.py": "db713f2aac6f680c1c2aa9d0265f9b1a542d22837a90d22a36f36cf88544c959",
+    "check_companion_memory.py": "6123216da66864c5416cd8a05a284a596cdf05b474a75c64f828bdfa05981477"
+  },
+  "input_hamiltonian": "unchanged finite five-sector common_hamiltonian at abd026f; rotating-frame nearest-neighbor couplings 0.19,0.17,0.15,0.18",
+  "novelty": "Standard exact projection applied to the existing finite model. Neither projection mathematics, coherent memory nor an added scalar constitute a new fundamental gravity theory.",
+  "retained_indices": [3,4],
+  "eliminated_indices": [0,1,2],
+  "kernel": {
+    "formula": "K00(t)=c^2*(a^2+b^2*cos(Omega*t))/(a^2+b^2), all other entries zero",
+    "a": 0.19,
+    "b": 0.17,
+    "c": 0.15,
+    "Omega": 0.25495097567963926,
+    "period": 24.64468037602168,
+    "constant": 0.012496153846153846,
+    "cosine_amplitude": 0.010003846153846155,
+    "minimum": 0.0024923076923076912,
+    "maximum": 0.0225,
+    "decay_time": null,
+    "time_units": "original dimensionless model time; no conversion to astrophysical years"
+  },
+  "verification": {
+    "component_sum_error": 0.0,
+    "rotating_matrix_error": 0.0,
+    "kernel_matrix_exponential_error": 1.734723475976807e-17,
+    "projected_resolvent_relative_error": 0.0,
+    "eliminated_state_convolution_error": 6.515770535194191e-14,
+    "reduced_equation_error": 9.320611024972544e-15,
+    "omitted_source_control_error": 0.12788092115041325,
+    "maximum_norm_error": 1.1102230246251565e-15,
+    "maximum_energy_drift": 7.993605777301127e-15,
+    "maximum_component_ledger_error": 3.552713678800501e-15,
+    "passed": true
+  },
+  "source_initialized_trajectory": {
+    "peak_bound_probability_in_original_window": 0.9778685459166284,
+    "peak_time": 87.55000000000001,
+    "first_sampled_after_peak_below_0.1_time": 98.0,
+    "probability_at_that_time": 0.09833698688673272,
+    "minimum_sampled_bound_probability_after_time20": 2.2553518716601846e-7,
+    "minimum_time": 751.5500000000001,
+    "exact_infinite_time_average_bound_probability": 0.4087849273304729,
+    "maximum_sampled_return_probability_after_time220": 0.9999913241637195,
+    "return_time": 750.1500000000001
+  },
+  "initial_bound_sector3": {
+    "minimum_sampled_bound_probability_after_time20": 0.0377416023057402,
+    "exact_infinite_time_average_bound_probability": 0.46014797427478493
+  },
+  "initial_bound_sector4": {
+    "minimum_sampled_bound_probability_after_time20": 0.02050644660514545,
+    "exact_infinite_time_average_bound_probability": 0.4520470622686132
+  },
+  "sample_window": [0,2200],
+  "time_spacing": 0.05,
+  "bound_projector_commutator_norm": 0.21213203435596426,
+  "interpretation": "The existing finite chain has exactly derived coherent memory and a nonzero long-time average bound occupancy, but does not establish irreversible capture or a persistent deposit with a derived lifetime. It returns almost entirely to the source. No global rejection of companion or history-dependent gravity follows.",
+  "open_bridge": "Compute an explicit position-space conversion/capture/recoil spectrum, escape and capacity from one microscopic Hamiltonian. Derive its susceptibility and source; do not insert an exponential tau or equate this chi with SM-1's AQUAL potential."
+}
