@@ -1,0 +1,91 @@
+{
+  "module": "phase_junction_network/microscopic/check_all_sector_completed_move.py",
+  "status": "Stage 3F PASS at finite algebra and one-particle scope",
+  "stage_pass": true,
+  "shared_rule": {
+    "formula": "H_move=-x(M+Mdagger)+x^2(Mdagger M+M Mdagger)",
+    "coefficient": 1.0,
+    "shared_x_t_over_Delta": 0.13554178509861228,
+    "factorized_form": "For Q=I-2xM, H_move=(Qdagger Q+Q Qdagger-2I)/4"
+  },
+  "photon_sector": {
+    "factorized_completion_residual": 0.0,
+    "K_A_over_Delta": 0.005606197571911289,
+    "U_over_Delta": 0.006789913753821769,
+    "v_over_K": -0.12924513079019587,
+    "double_flux_over_K": 0.013851221789811033,
+    "photon_gap_power": 0.9773450471048641,
+    "photon_fit_residual": 0.0002905427388639892,
+    "photon_speed_in_Delta_units": 0.011071048137135307
+  },
+  "dressed_frame_sector": {
+    "primes": [3, 5],
+    "maximum_lock_commutator": 2.220446049250313e-16,
+    "maximum_lock_leakage": 1.1696500392250084e-15,
+    "maximum_complete_operator_inventory_residual": 2.71494361445918e-15,
+    "hopping_power_p3": 1.9953317608762067,
+    "hopping_power_p5": 1.9962623297495103,
+    "p3_effective_hopping": 0.016904213963714314,
+    "p5_effective_hopping": 0.01718038460655979,
+    "p5_second_harmonic": -0.00026730554091857156,
+    "minimum_low_band_separation_over_hopping": 44.212221696588195
+  },
+  "charged_endpoint_sector": {
+    "full_hilbert_dimension": 30,
+    "physical_gauss_sector_dimension": 6,
+    "low_band_hopping": 0.03380297480332111,
+    "low_band_common_diagonal": 0.0026027752648789294,
+    "hopping_power": 1.9953316108318904,
+    "residual_selfenergy_power": 3.991293316223891,
+    "maximum_left_gauss_commutator": 0.0,
+    "maximum_right_gauss_commutator": 0.0,
+    "continuity_residual": 0.0,
+    "spectral_ward_residual": 4.649058915617843e-16,
+    "diamagnetic_curvature": 0.06364849404131069,
+    "paramagnetic_curvature": -0.06364849404131064,
+    "total_pure_gauge_curvature": 5.551115123125783e-17,
+    "phase_twist_maximum_spectral_spread": 1.1102230246251565e-15,
+    "next_band_gap_over_hopping": 29.143395127020483
+  },
+  "neutral_companion_sector": {
+    "hilbert_dimension": 3,
+    "conversion_hopping": 0.017442635726261636,
+    "common_diagonal": 0.0009289397814567714,
+    "conversion_power": 1.9971852492044824,
+    "residual_selfenergy_power": 3.995310694826422,
+    "maximum_conversion_probability": 0.9983425549158227,
+    "forward_reverse_probability_residual": 2.7755575615628914e-16,
+    "next_band_gap_over_hopping": 60.38404192403431
+  },
+  "checks": {
+    "same_unit_coefficient_used_in_all_sectors": true,
+    "universal_positive_square_factorization": true,
+    "photon_unit_coefficient_is_unique": true,
+    "frame_moves_commute_with_connection_lock": true,
+    "frame_lock_leakage_is_roundoff": true,
+    "frame_generated_operator_inventory_is_complete": true,
+    "matter_exact_gauss": true,
+    "matter_operator_continuity": true,
+    "matter_spectral_ward_identity": true,
+    "matter_pure_gauge_response_cancels": true,
+    "matter_twist_spectrum_is_gauge_invariant": true,
+    "companion_reciprocity": true,
+    "all_unwanted_bands_remain_separated": true,
+    "photon_root_remains_relativistic": true
+  },
+  "claim_boundary": {
+    "established": [
+      "one identical completion coefficient in photon, dressed-frame, charged-endpoint, and neutral-companion representatives",
+      "exact dressed-frame lock compatibility and finite harmonic inventory",
+      "exact charged-endpoint Gauss law, continuity equation, spectral Ward identity, and pure-gauge response cancellation",
+      "second-order charged hopping and companion conversion with fourth-order residual self-energies"
+    ],
+    "not_established": [
+      "one simultaneous all-sector many-body Hamiltonian",
+      "a nonzero-momentum Ward identity in a spatial photon phase",
+      "transverse photon polarization by dynamical matter",
+      "vacuum pair loops, interacting QED, nonlinear gravity, or formal novelty"
+    ]
+  },
+  "next_gate": "Embed the minimal charged endpoint in a finite spatial photon patch and test nonzero-momentum Ward identities and photon dressing."
+}
