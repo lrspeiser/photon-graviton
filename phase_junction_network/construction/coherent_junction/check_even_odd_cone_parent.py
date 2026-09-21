@@ -71,14 +71,6 @@ def positive_ring_bridge(holonomy: np.ndarray, denominator: float = 2.0):
     return full, coupling, heavy
 
 
-def low_band_splitting(theta: float, denominator: float) -> float:
-    holonomy = np.asarray([[np.exp(1j * theta)]])
-    full, _, _ = positive_ring_bridge(holonomy, denominator)
-    eigenvalues = np.linalg.eigvalsh(full)
-    low = sorted(eigenvalues, key=abs)[:2]
-    return float(abs(low[1] - low[0]))
-
-
 def photon_coefficient(denominator: float, dynamic: bool = True) -> float:
     theta = np.asarray((5.0e-4, 1.0e-3, 2.0e-3, 4.0e-3))
     values = []
@@ -98,17 +90,24 @@ def photon_coefficient(denominator: float, dynamic: bool = True) -> float:
     return float(coefficients[0])
 
 
-def photon_residue(denominator: float) -> float:
+def photon_residue(denominator: float) -> dict[str, Any]:
+    """Retain the full zero-energy residue matrix instead of treating its trace as a pole formula."""
     _, coupling, heavy = positive_ring_bridge(np.eye(1), denominator)
     residue = np.eye(2) + coupling @ np.linalg.solve(heavy @ heavy, adj(coupling))
-    return float(np.trace(residue).real / 2.0)
+    eigenvalues = np.linalg.eigvalsh(0.5 * (residue + residue.conj().T))
+    return {
+        "matrix": residue,
+        "trace_average": float(np.trace(residue).real / 2.0),
+        "eigenvalues": [float(value) for value in eigenvalues],
+        "minimum_eigenvalue": float(np.min(eigenvalues)),
+    }
 
 
 def frame_channel() -> dict[str, float]:
     # B^2=I. F=B/4 is normalized so tr(BF)=1 in four spinor dimensions.
     area = np.diag((1.0, 1.0, -1.0, -1.0)).astype(complex)
     curvature = area / 4.0
-    _, coupling, heavy = bridge_with_area(np.eye(4), area)
+    _, _, coupling, heavy = bridge_with_area(np.eye(4), area)
     residue = np.eye(8) + coupling @ np.linalg.solve(heavy @ heavy, adj(coupling))
     identity = np.eye(4)
     transport = np.vstack((identity, 1j * identity)) / math.sqrt(2.0)
@@ -174,11 +173,13 @@ def build_report() -> dict[str, Any]:
         "frame_derivative_is_scalar_in_physical_spin_space": (
             frame["derivative_matrix_nonidentity_residual"] < 1.0e-12
         ),
-        "positive_ring_residue_reproduces_dynamic_reduction": abs(
-            baseline_dynamic - baseline_static / baseline_residue
-        )
-        / baseline_dynamic
-        < 2.0e-4,
+        "positive_ring_has_nontrivial_positive_residue": (
+            baseline_residue["minimum_eigenvalue"] > 1.0
+        ),
+        "retained_pole_differs_from_zero_energy_schur_value": (
+            baseline_dynamic < baseline_static
+            and abs(baseline_dynamic - baseline_static) / baseline_dynamic > 0.01
+        ),
         "baseline_common_parent_cones_do_not_match": abs(baseline_ratio - 1.0) > 0.1,
         "no_integer_normalization_matches_exactly": abs(
             best["fractional_cone_mismatch"]
@@ -210,8 +211,12 @@ def build_report() -> dict[str, Any]:
         },
         "baseline_two_path_photon": {
             "static_curvature_coefficient": baseline_static,
-            "induced_residue": baseline_residue,
-            "dynamic_curvature_coefficient": baseline_dynamic,
+            "zero_energy_residue": {
+                key: value
+                for key, value in baseline_residue.items()
+                if key != "matrix"
+            },
+            "dynamic_curvature_coefficient_from_exact_low_pole": baseline_dynamic,
             "bare_speed": math.sqrt(2.0 * U_COMMON * baseline_dynamic),
         },
         "frame": frame,
@@ -233,7 +238,7 @@ def build_report() -> dict[str, Any]:
             "established": [
                 "an explicit even photon parent built from Q=K^2",
                 "an explicit odd frame parent built from K and the area operator",
-                "both frequency residues retained in the low-band coefficients",
+                "the photon coefficient is extracted from the retained low-band pole rather than a zero-energy residue shortcut",
                 "the declared two-path parent has a large bare cone mismatch",
                 "integer denominator 16 gives the nearest discrete match but is not exact",
             ],
