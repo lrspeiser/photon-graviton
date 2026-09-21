@@ -1,0 +1,308 @@
+{
+  "audit_pass": true,
+  "candidate_bracket_refinement": [
+    {
+      "L": 12,
+      "derivative": "local central difference",
+      "local_volume_change_under_old_vector_generator_max": 0.8594366926962351,
+      "quadratic_frame_self_energy_mean": 0.00912797266319526,
+      "scalar_self_energy_bracket_direct": 0.0028268610236212156,
+      "scalar_self_energy_bracket_error": 0.001335100577565741,
+      "scalar_self_energy_bracket_target": 0.004161961601186957,
+      "vector_bracket_relative_residual": 0.015110934737430567
+    },
+    {
+      "L": 16,
+      "derivative": "local central difference",
+      "local_volume_change_under_old_vector_generator_max": 0.8770458225639901,
+      "quadratic_frame_self_energy_mean": 0.009137410300887949,
+      "scalar_self_energy_bracket_direct": 0.00373059626280944,
+      "scalar_self_energy_bracket_error": 0.0008234253458610282,
+      "scalar_self_energy_bracket_target": 0.004554021608670468,
+      "vector_bracket_relative_residual": 0.00857930413115127
+    },
+    {
+      "L": 24,
+      "derivative": "local central difference",
+      "local_volume_change_under_old_vector_generator_max": 0.8897543365188336,
+      "quadratic_frame_self_energy_mean": 0.009144340363998171,
+      "scalar_self_energy_bracket_direct": 0.0044607769998695635,
+      "scalar_self_energy_bracket_error": 0.0003905552895736254,
+      "scalar_self_energy_bracket_target": 0.004851332289443189,
+      "vector_bracket_relative_residual": 0.003838248965247578
+    },
+    {
+      "L": 32,
+      "derivative": "local central difference",
+      "local_volume_change_under_old_vector_generator_max": 0.8942281660297862,
+      "quadratic_frame_self_energy_mean": 0.009146803707691668,
+      "scalar_self_energy_bracket_direct": 0.004734206619190953,
+      "scalar_self_energy_bracket_error": 0.00022471279309918893,
+      "scalar_self_energy_bracket_target": 0.004958919412290142,
+      "vector_bracket_relative_residual": 0.002163982473914435
+    },
+    {
+      "L": 48,
+      "derivative": "local central difference",
+      "local_volume_change_under_old_vector_generator_max": 0.8974319916146754,
+      "quadratic_frame_self_energy_mean": 0.00914857536406589,
+      "scalar_self_energy_bracket_direct": 0.004935417424777108,
+      "scalar_self_energy_bracket_error": 0.00010149445498879636,
+      "scalar_self_energy_bracket_target": 0.005036911879765904,
+      "vector_bracket_relative_residual": 0.0009633470753861077
+    }
+  ],
+  "completed_move_energy_algebra": {
+    "coefficient_x": 0.13554178509861228,
+    "derived_commutator": "[h01,h12]=x^2 J02-x^3(J01+J12)",
+    "energy_density_definition": "Each complete h_M, including its diagonal partner",
+    "identity_residual": 0.0,
+    "meaning": "A necessary new composite current is derived, not fitted; these transport densities have not been identified with full gravitational constraints",
+    "nearest_neighbor_current_closure_residual": 0.025981331245176736,
+    "unprojected_total_energy_and_norm_error": 4.440892098500626e-16
+  },
+  "cubic_kinetic_bootstrap": {
+    "assumption": "g transforms as a covariant spatial metric; pi as a weight-one contravariant density",
+    "basis": [
+      "tr(h) tr(pi^2)",
+      "tr(h) (tr pi)^2",
+      "tr(h pi^2)",
+      "tr(pi) tr(h pi)"
+    ],
+    "coefficients": [
+      -0.5000000000000007,
+      0.2500000000000002,
+      2.000000000000002,
+      -0.9999999999999994
+    ],
+    "derived_T3": "2 tr(h pi^2) - tr(pi) tr(h pi) - 1/2 tr(h) tr(pi^2) + 1/4 tr(h) (tr pi)^2",
+    "heldout_covariance_residual": 1.1013412404281553e-13,
+    "microscopic_junction_matching_established": false,
+    "rank": 4
+  },
+  "decision": "Retain the derived commutator/current terms. The naive local central-difference nonlinear extension fails exact closure; the volume pair changes constraint classification. Neither defect is repaired by manually projecting evolved states.",
+  "full_nonlinear_gravity_closed": false,
+  "holonomy": {
+    "decision": "The Hermitian completed unitary loop starts at curvature squared. A first-order frame/area insertion is still needed; this test does not derive it.",
+    "derived_curvature_term": "W=I+epsilon^2[A,B]+O(epsilon^3) for a constant connection",
+    "powers": {
+      "BCH_remainder": 2.999883561858646,
+      "completed_unitary_loop": 3.999366417480783,
+      "missing_commutator": 1.999683232469035
+    }
+  },
+  "local_bracket_error_power": -1.986147836154599,
+  "local_volume": {
+    "decision": "Local determinant/trace conditions gauge-fix two old gauge directions. They cannot be appended as an independent second-class pair while claiming all four old constraints remain first class.",
+    "homogeneous_configurations_after_global_pair": 5,
+    "nonzero_momentum": [
+      {
+        "bracket_matrix": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            -2.0
+          ],
+          [
+            2.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            2.0,
+            -3.0,
+            0.0
+          ]
+        ],
+        "constraint_rank": 6,
+        "k": [
+          1,
+          0,
+          0
+        ],
+        "linear_unprojected_constraint_error": 2.0816681711721685e-16,
+        "linear_unprojected_energy_error": 8.881784197001252e-16,
+        "physical_configurations": 2,
+        "remaining_first_class_constraints": 2,
+        "second_class_constraints": 4
+      },
+      {
+        "bracket_matrix": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            3.191441734503298e-15,
+            -2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            6.382883469006596e-15,
+            -4.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            4.255255646004397e-15,
+            -6.0,
+            0.0
+          ],
+          [
+            -3.191441734503298e-15,
+            -6.382883469006596e-15,
+            -4.255255646004397e-15,
+            0.0,
+            0.0,
+            -28.0
+          ],
+          [
+            2.0,
+            4.0,
+            6.0,
+            0.0,
+            0.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            28.0,
+            -3.0,
+            0.0
+          ]
+        ],
+        "constraint_rank": 6,
+        "k": [
+          1,
+          2,
+          3
+        ],
+        "linear_unprojected_constraint_error": 7.993605777301127e-15,
+        "linear_unprojected_energy_error": 2.753353101070388e-13,
+        "physical_configurations": 2,
+        "remaining_first_class_constraints": 2,
+        "second_class_constraints": 4
+      },
+      {
+        "bracket_matrix": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.5973876940341914e-15,
+            -4.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            -1.686872266717221e-15,
+            2.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.686872266717221e-15,
+            -2.0,
+            0.0
+          ],
+          [
+            -1.5973876940341914e-15,
+            1.686872266717221e-15,
+            -1.686872266717221e-15,
+            0.0,
+            0.0,
+            -12.0
+          ],
+          [
+            4.0,
+            -2.0,
+            2.0,
+            0.0,
+            0.0,
+            3.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            12.0,
+            -3.0,
+            0.0
+          ]
+        ],
+        "constraint_rank": 6,
+        "k": [
+          2,
+          -1,
+          1
+        ],
+        "linear_unprojected_constraint_error": 2.609024107869118e-15,
+        "linear_unprojected_energy_error": 4.3076653355456074e-14,
+        "physical_configurations": 2,
+        "remaining_first_class_constraints": 2,
+        "second_class_constraints": 4
+      }
+    ]
+  },
+  "mode": "full",
+  "not_established": [
+    "junction derivation of the full nonlinear frame/area vertex",
+    "closed finite-lattice gravitational constraint algebra",
+    "unprojected preservation of all nonlinear gravitational constraints",
+    "nonlinear positive physical spectrum or vacuum cancellation"
+  ],
+  "scalar_source_candidate": "S(h)+epsilon*[T_frame(pi)+V_FP(h)]; at first order {C[N],C[M]} gives the momentum source in the smooth control",
+  "smooth_spectral_control": {
+    "L": 16,
+    "derivative": "spectral smooth-mode control",
+    "local_volume_change_under_old_vector_generator_max": 0.9000000000000008,
+    "quadratic_frame_self_energy_mean": 0.009150000000000002,
+    "scalar_self_energy_bracket_direct": 0.0051,
+    "scalar_self_energy_bracket_error": 3.469446951953614e-18,
+    "scalar_self_energy_bracket_target": 0.005099999999999997,
+    "vector_bracket_relative_residual": 1.924946353668216e-15
+  }
+}

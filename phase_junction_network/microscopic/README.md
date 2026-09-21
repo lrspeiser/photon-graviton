@@ -1,5 +1,7 @@
 # Microscopic finite-state phase
 
+> **Validation scope correction — 2026-09-20.** The latest authoritative scope is the validation audit. Earlier Stage 6B chains are reduced models, not proven exact 3D sectors; the shared-speed root is a reduced-model calibration. Full nonlinear and interacting continuum claims remain open. See the [authoritative audit](../validation/README.md) and its executable results.
+
 **Status:** finite electromagnetic kinematics and a finite static Coulomb ground state, a finite chiral charged-endpoint prototype, a finite reversible photon–companion bridge, first-order frame–connection algebra, constrained local gravity reduction, the finite connection lock, and a finite dressed linear tensor Hamiltonian are checked. Relativistic photon dynamics, interacting QED, observed matter, shared coefficients, nonlinear closure, common-cone recovery, and interacting regulator universality remain open.  
 **Date:** 2026-09-20  
 **Active branch:** `main`

@@ -1,5 +1,7 @@
 # Stage 3I: Antisymmetric Multipair Vacuum
 
+> **Validation scope correction — 2026-09-20.** The full 6,336-state result is independently reproduced and retained. The historical 1.3965% comparison rebuilds the completed Hamiltonian after each cutoff; it is not a fixed-Hamiltonian truncation error. The new Q_N H_full Q_N comparison gives loop-correction errors of -52.7275% (one pair), -0.100742% (two), and -0.00004966% (three). These are percentages of the small correction, not the total gap. The 0.1243% number is a finite-momentum pole shift, not an infrared speed measurement. See the [authoritative audit](../validation/README.md) and its executable results.
+
 **Status:** **PASS at finite antisymmetric multipair scope.** The Stage-3H zero/one-pair truncation has been replaced by the complete neutral spinless-fermion Fock space on the periodic `2 x 2` gauge patch. Exact fermionic signs, Pauli blocking, local continuity, nonzero-momentum Ward identities, longitudinal gauge invariance, and transverse virtual polarization survive through all four allowed pairs.  
 **Date:** 2026-09-20  
 **Issues:** #3, #4, #6, and #8  
@@ -131,7 +133,7 @@ The mean pair number is
 
 The ground state remains strongly vacuum dominated, and every higher pair sector is hierarchically suppressed.
 
-## 6. Convergence of the pair truncation
+## 6. Historical comparison across rebuilt cutoff Hamiltonians
 
 The dominant transverse photon pole converges rapidly as the maximum allowed pair number is increased:
 
@@ -324,7 +326,7 @@ Scaling the common pair-creation amplitude gives:
 
 The virtual occupation and pole shift increase monotonically without introducing a new counterterm.
 
-## 11. Finite common-cone diagnostic
+## 11. Finite-momentum pole-shift diagnostic (not an infrared cone)
 
 Relative to the pure-gauge pole, the complete multipair photon gap changes by
 
@@ -375,7 +377,7 @@ Couple the finite domain-wall light and mirror modes to this exact antisymmetric
 
 follows without a new counterterm or sector-specific completion coefficient.
 
-The shared candidate must be rejected if matter dressing preserves the electromagnetic Ward identity but independently shifts the photon and frame cones.
+The shared candidate requires a controlled infrared comparison after both source and kinetic normalizations are derived. Unequal raw shifts at one large lattice momentum do not alone establish unequal limiting speeds.
 
 ## 15. Reproduction
 

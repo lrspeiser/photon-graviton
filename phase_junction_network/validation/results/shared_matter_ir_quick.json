@@ -1,0 +1,229 @@
+{
+  "audit_pass": true,
+  "blocked_by": [
+    "The existing slab frame derivative has an uncancelled zero-momentum shear response even on the determinant-one exponential path; its derived contact is retained and no compensating counterterm was added",
+    "No microscopic map fixes this slab normalization relative to the interacting photon and dressed-frame kinetic residues",
+    "No stress-energy Ward identity or nonlinear frame coupling is supplied by the existing slab",
+    "The photon finite-spin 3D phase is not established by the reduced chains"
+  ],
+  "claim_boundary": "A complete free-slab fermion loop with identical matter in both responses, not a self-consistent interacting gauge/frame pole calculation or mirror completion",
+  "common_cone_established": false,
+  "frame_vertex": "Exact existing e_yy=-e_zz derivative, divided by sqrt(2)",
+  "infrared_gate": {
+    "finite_momentum_shift_relabelled_as_speed": false,
+    "frame_stress_Ward_identity_established": false,
+    "matched_bare_kinetic_normalizations_available": false,
+    "measured_several_momenta_and_volumes": true,
+    "physical_speed_comparison_permitted": false,
+    "volume_preserving_frame_contact_included_as_control": true
+  },
+  "matter_content": [
+    -11,
+    -5,
+    -1,
+    -1,
+    9,
+    9
+  ],
+  "minimal_frame_source_is_massless": false,
+  "mirrors_and_doublers_retained": true,
+  "mode": "quick",
+  "new_counterterms": 0,
+  "normalization": "Unrescaled existing slab_hamiltonian, used identically for photon and frame vertices",
+  "photon_vertex": "Peierls derivative of BOTH kinetic and Wilson hopping",
+  "uniform_background_control": {
+    "frame_linear": {
+      "absolute_difference": 3.7053589529989495e-08,
+      "bubble_plus_contact": -7.5351476604517424,
+      "ground_energy_second_derivative": -7.535147697505332
+    },
+    "frame_volume_preserving": {
+      "absolute_difference": 5.101454725320309e-08,
+      "bubble_plus_contact": -15.070295320903478,
+      "ground_energy_second_derivative": -15.070295371918025
+    },
+    "photon": {
+      "absolute_difference": 1.1960070054328753e-06,
+      "bubble_plus_contact": 56.49598241134646,
+      "ground_energy_second_derivative": 56.495981215339455
+    }
+  },
+  "volumes": [
+    {
+      "L": 8,
+      "infrared_response_coefficients": {
+        "frame": {
+          "d_Pi_d_omega_squared_at_zero": 0.2717892242264164,
+          "fourth_mode_heldout_residual": 0.00846271452863645,
+          "masslike_static_response_NOT_subtracted": -7.0694760250185835,
+          "maximum_fit_residual": 0.004918765928092567,
+          "spatial_q_fourth_coefficient": -0.013542599224703872,
+          "spatial_q_squared_coefficient": 0.25077946609996865,
+          "three_mode_spatial_coefficient": 0.2534240643901677,
+          "window_change_in_spatial_coefficient": 0.0026445982901990295
+        },
+        "photon": {
+          "d_Pi_d_omega_squared_at_zero": 23.570269845228104,
+          "fourth_mode_heldout_residual": 1.4859740052376083,
+          "masslike_static_response_NOT_subtracted": 2.01109683831886,
+          "maximum_fit_residual": 0.9348380048574114,
+          "spatial_q_fourth_coefficient": -1.8851975657309377,
+          "spatial_q_squared_coefficient": 28.832259957958406,
+          "three_mode_spatial_coefficient": 29.29662683459518,
+          "window_change_in_spatial_coefficient": 0.4643668766367739
+        }
+      },
+      "maximum_longitudinal_static_response": 4.3076653355456074e-13,
+      "momentum_rows": [
+        {
+          "frame_static": -7.0694760250185835,
+          "frame_temporal": 0.2717892242264164,
+          "frame_volume_preserving_static": -14.45974223173186,
+          "lattice_momentum": 0.0,
+          "longitudinal_static": 0.0,
+          "momentum": 0.0,
+          "momentum_index": 0,
+          "photon_static": 2.01109683831886,
+          "photon_temporal": 23.570269845228104
+        },
+        {
+          "frame_static": -6.922301134388598,
+          "frame_temporal": 0.24339060111210853,
+          "frame_volume_preserving_static": -14.312567341101875,
+          "lattice_momentum": 0.7653668647301796,
+          "longitudinal_static": -4.098943406916078e-13,
+          "momentum": 0.7853981633974483,
+          "momentum_index": 1,
+          "photon_static": 19.188584159133704,
+          "photon_temporal": 19.196582762718045
+        },
+        {
+          "frame_static": -6.623216150521873,
+          "frame_temporal": 0.20162344039815974,
+          "frame_volume_preserving_static": -14.013482357235151,
+          "lattice_momentum": 1.414213562373095,
+          "longitudinal_static": -3.4505731605349865e-13,
+          "momentum": 1.5707963267948966,
+          "momentum_index": 2,
+          "photon_static": 51.8949663598399,
+          "photon_temporal": 14.005792986780133
+        },
+        {
+          "frame_static": -6.373786920336318,
+          "frame_temporal": 0.17582009809813792,
+          "frame_volume_preserving_static": -13.764053127049596,
+          "lattice_momentum": 1.8477590650225735,
+          "longitudinal_static": -4.3076653355456074e-13,
+          "momentum": 2.356194490192345,
+          "momentum_index": 3,
+          "photon_static": 78.01999882351046,
+          "photon_temporal": 11.238757284591465
+        },
+        {
+          "frame_static": -6.280924069581812,
+          "frame_temporal": 0.16755239057469,
+          "frame_volume_preserving_static": -13.67119027629509,
+          "lattice_momentum": 2.0,
+          "longitudinal_static": -3.4505731605349865e-13,
+          "momentum": 3.141592653589793,
+          "momentum_index": 4,
+          "photon_static": 87.54846911976688,
+          "photon_temporal": 10.418859314335517
+        }
+      ],
+      "operator_gauge_Ward_residual": 2.3092638912203256e-14,
+      "slab_width": 4,
+      "source_H_reproduction_residual": 8.881784197001252e-16,
+      "spatial_dimension": 3,
+      "volume_preserving_frame_response_at_zero": -14.45974223173186
+    },
+    {
+      "L": 12,
+      "infrared_response_coefficients": {
+        "frame": {
+          "d_Pi_d_omega_squared_at_zero": 0.2658624474183512,
+          "fourth_mode_heldout_residual": 0.012198698707382105,
+          "masslike_static_response_NOT_subtracted": -7.052177592149152,
+          "maximum_fit_residual": 0.0019985832312967577,
+          "spatial_q_fourth_coefficient": -0.01463718108364163,
+          "spatial_q_squared_coefficient": 0.2489529498104629,
+          "three_mode_spatial_coefficient": 0.2534545449530743,
+          "window_change_in_spatial_coefficient": 0.004501595142611392
+        },
+        "photon": {
+          "d_Pi_d_omega_squared_at_zero": 26.139392402279164,
+          "fourth_mode_heldout_residual": 3.256299297560929,
+          "masslike_static_response_NOT_subtracted": 0.4679946722287034,
+          "maximum_fit_residual": 0.6282500356622425,
+          "spatial_q_fourth_coefficient": -2.4200321973712224,
+          "spatial_q_squared_coefficient": 30.433675877984562,
+          "three_mode_spatial_coefficient": 31.635323812113658,
+          "window_change_in_spatial_coefficient": 1.2016479341290953
+        }
+      },
+      "maximum_longitudinal_static_response": 3.7614356074300304e-13,
+      "momentum_rows": [
+        {
+          "frame_static": -7.052177592149152,
+          "frame_temporal": 0.2658624474183512,
+          "frame_volume_preserving_static": -14.441229227733771,
+          "lattice_momentum": 0.0,
+          "longitudinal_static": 0.0,
+          "momentum": 0.0,
+          "momentum_index": 0,
+          "photon_static": 0.4679946722287034,
+          "photon_temporal": 26.139392402279164
+        },
+        {
+          "frame_static": -6.984526546723649,
+          "frame_temporal": 0.25115244239849227,
+          "frame_volume_preserving_static": -14.373578182308268,
+          "lattice_momentum": 0.5176380902050415,
+          "longitudinal_static": -3.4727776210274897e-13,
+          "momentum": 0.5235987755982988,
+          "momentum_index": 1,
+          "photon_static": 9.077173087706932,
+          "photon_temporal": 22.42015826125344
+        },
+        {
+          "frame_static": -6.816593536232599,
+          "frame_temporal": 0.22409519938284272,
+          "frame_volume_preserving_static": -14.205645171817217,
+          "lattice_momentum": 0.9999999999999999,
+          "longitudinal_static": -3.6859404417555197e-13,
+          "momentum": 1.0471975511965976,
+          "momentum_index": 2,
+          "photon_static": 28.77579988229438,
+          "photon_temporal": 17.652467605293435
+        },
+        {
+          "frame_static": -6.61481900009409,
+          "frame_temporal": 0.1991145024352598,
+          "frame_volume_preserving_static": -14.003870635678709,
+          "lattice_momentum": 1.414213562373095,
+          "longitudinal_static": -3.4727776210274897e-13,
+          "momentum": 1.5707963267948966,
+          "momentum_index": 3,
+          "photon_static": 51.131100636279754,
+          "photon_temporal": 14.226962469555112
+        },
+        {
+          "frame_static": -6.436321950648582,
+          "frame_temporal": 0.18075246642192666,
+          "frame_volume_preserving_static": -13.825373586233201,
+          "lattice_momentum": 1.7320508075688772,
+          "longitudinal_static": -3.7614356074300304e-13,
+          "momentum": 2.0943951023931953,
+          "momentum_index": 4,
+          "photon_static": 70.1839769917459,
+          "photon_temporal": 12.070010402878076
+        }
+      ],
+      "operator_gauge_Ward_residual": 2.4868995751603507e-14,
+      "slab_width": 4,
+      "source_H_reproduction_residual": 8.881784197001252e-16,
+      "spatial_dimension": 3,
+      "volume_preserving_frame_response_at_zero": -14.441229227733771
+    }
+  ]
+}

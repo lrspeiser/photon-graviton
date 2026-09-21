@@ -1,5 +1,7 @@
 # Phase Junction Network: Big-Picture Architecture Audit
 
+> **Validation scope correction — 2026-09-20.** This historical audit predates the integration tests. The new audit distinguishes reduced chains from a proven 3D phase, rebuilt cutoff models from fixed-Hamiltonian errors, source curvatures from physical speeds, and conditional nonlinear targets from microscopic closure. See the [authoritative audit](validation/README.md) and its executable results.
+
 **Audit date:** 2026-09-20  
 **Updated after issue #2, issue #4, issue #7, and issue #6 Stage 6A finite gates:** 2026-09-20  
 **Scope:** determine which elements of a candidate fundamental theory are actually established, which remain regulator or static-phase prototypes, and what work now controls success or failure.

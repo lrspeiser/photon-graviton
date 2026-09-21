@@ -1,5 +1,7 @@
 # Stage 3E: Symmetry-Complete Local Seagull Candidate
 
+> **Validation scope correction — 2026-09-20.** The speed crossing selects a parameter by matching a reduced-chain photon fit to a harmonic frame target. It is neither an independently predicted physical speed equality nor established equality of the finite regulators. The unit diagonal completion is a selected candidate rule; its symmetry protection remains unestablished. See the [authoritative audit](../validation/README.md) and its executable results.
+
 **Status:** **PASS at candidate scope.** A unit finite-link seagull cancels the dangerous second-order isolated-move self-energy while leaving the photon ring and frame superexchange intact. One relativistic shared-cone root survives finite tests. The microscopic symmetry enforcing this completion and its matter/companion extension remain open.  
 **Date:** 2026-09-20  
 **Issue:** #3  

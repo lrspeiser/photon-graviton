@@ -1,6 +1,8 @@
 # Phase Junction Network
 
-**Status:** exploratory candidate foundation. The repository now contains a finite pure-gauge photon phase, a finite linear dressed-frame regulator, a finite chiral charged-endpoint prototype, a reversible photon–companion architecture, one shared completed-move rule across photon/frame/matter/companion sectors, exact real- and virtual-pair Ward tests, and a complete antisymmetric neutral Fock-space calculation through four pairs on the finite spatial patch. The interacting domain-wall multiplet, matching frame-loop renormalization, infinite-volume QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.  
+> **Validation scope correction — 2026-09-20.** The current finite electromagnetic evidence is a static 3D anchor, reduced-chain dynamics and a separate small full-cube control—not an established finite-spin 3D photon phase. The natural chain embedding fails an exact leakage test. Stage 3I reproduces, but its old cutoff comparison rebuilds Hamiltonians; use the new fixed-Hamiltonian test. Shared free-slab matter loops leave an uncancelled uniform frame-source response. Local nonlinear gravity is not closed. See the [authoritative audit](validation/README.md) and its executable results.
+
+**Status:** exploratory candidate foundation. The repository now contains a finite static electromagnetic anchor with reduced-chain dynamics, a finite linear dressed-frame regulator, a finite chiral charged-endpoint prototype, a reversible photon–companion architecture, one shared completed-move rule across photon/frame/matter/companion sectors, exact real- and virtual-pair Ward tests, and a complete antisymmetric neutral Fock-space calculation through four pairs on the finite spatial patch. The interacting domain-wall multiplet, matching frame-loop renormalization, infinite-volume QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.  
 **Created:** 2026-09-20  
 **Prior-art boundary:** [`novelty_boundary.md`](novelty_boundary.md)
 
@@ -42,7 +44,7 @@ The exact spin-1 RK parent has exact Gauss symmetry, Coulomb winding response, a
 
 ### Stage 6B — detuned pure-gauge dynamics
 
-A finite detuned region supports two transverse photon-like branches. Across spin-1 and spin-2 controls:
+The reduced chains support linearly dispersing photon-like branches over the tested detuned region; two copies are constructed. A finite-spin 3D dynamical phase is not established. Across spin-1 and spin-2 controls:
 
 - gap powers: `0.978964`–`1.152567`;
 - maximum linear-plus-cubic residual: `4.31e-4`;
@@ -93,7 +95,7 @@ with one unit completion coefficient in every sector.
 
 ### Stage 3E common finite normalization
 
-The accepted finite candidate root is
+The selected reduced-chain/harmonic-frame matching root is
 
 \[
 \frac{t}{\Delta}=0.1355417851,
@@ -152,7 +154,7 @@ The photon pole converges rapidly with pair-number cutoff:
 | 3 | 0.01788165160 | `2.21954e-5` | 0.98764958 |
 | 4 | 0.01788165160 | `2.21954e-5` | 0.98764958 |
 
-The full result changes the one-pair photon correction by only `-1.3965%`.
+Across the historical rebuilt-cutoff models, the full result changes the one-pair photon correction by `-1.3965%`.
 
 Across the complete 6,336-state Hamiltonian:
 
@@ -219,7 +221,7 @@ so common-cone recovery for the companion remains open.
 2. Compute photon and frame self-energies from the same matter loop.
 3. Test whether the `0.124%` finite photon-cone correction has the matching frame correction without a new coefficient.
 4. Add spatial-volume scaling beyond the `2 x 2` torus.
-5. Reject the candidate if matter loops require a photon-only or frame-only counterterm.
+5. Require microscopic source completion and controlled infrared kinetic matching; do not tune a photon-only or frame-only counterterm to manufacture agreement.
 
 ## Stop rules
 

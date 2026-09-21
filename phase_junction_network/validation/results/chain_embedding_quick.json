@@ -1,0 +1,203 @@
+{
+  "audit_pass": true,
+  "decision": "Relabel Stage 6B chains as reduced models. The natural sheet embedding has nonzero exact 3D leakage. Only the separately specified Gaussian parent has the demonstrated exact plane-wave reduction.",
+  "finite_link_embedding": [
+    {
+      "L": 2,
+      "action_support_outside_embedding": 208,
+      "embedded_dimension": 9,
+      "exact_invariant_embedding": false,
+      "gauss_residual": 0,
+      "intertwining_residual_after_energy_shift": 10.269079205160205,
+      "isometry_residual": 0,
+      "operator_leakage_norm": 6.928203230275509,
+      "projected_off_diagonal_max": 0.0,
+      "spatial_dimension": 3,
+      "two_chain_off_diagonal_max": 2.0,
+      "vacuum_leakage_norm": 6.928203230275509,
+      "vacuum_leakage_squared_per_site": 5.999999999999999
+    },
+    {
+      "L": 3,
+      "action_support_outside_embedding": 3510,
+      "embedded_dimension": 49,
+      "exact_invariant_embedding": false,
+      "gauss_residual": 0,
+      "intertwining_residual_after_energy_shift": 33.2791749751182,
+      "isometry_residual": 0,
+      "operator_leakage_norm": 12.727922061357855,
+      "projected_off_diagonal_max": 0.0,
+      "spatial_dimension": 3,
+      "two_chain_off_diagonal_max": 1.0,
+      "vacuum_leakage_norm": 12.727922061357855,
+      "vacuum_leakage_squared_per_site": 6.0
+    }
+  ],
+  "finite_spin_exact_reduction_pass": false,
+  "gaussian_3d_control": [
+    {
+      "L": 8,
+      "continuum_k": 0.7853981633974483,
+      "embedding_leakage_residual": 2.371581154861184e-16,
+      "frequency": 0.7653668647301795,
+      "mode": [
+        1,
+        0,
+        0
+      ],
+      "relative_speed_error": -0.025504641595567423
+    },
+    {
+      "L": 8,
+      "continuum_k": 1.3603495231756633,
+      "embedding_leakage_residual": 2.8197116355010327e-15,
+      "frequency": 1.325654296142367,
+      "mode": [
+        1,
+        1,
+        1
+      ],
+      "relative_speed_error": -0.025504641595567423
+    },
+    {
+      "L": 8,
+      "continuum_k": 2.356194490192345,
+      "embedding_leakage_residual": 9.240358616879593e-16,
+      "frequency": 1.8477590650225735,
+      "mode": [
+        3,
+        0,
+        0
+      ],
+      "relative_speed_error": -0.21578669642346282
+    },
+    {
+      "L": 8,
+      "continuum_k": 2.356194490192345,
+      "embedding_leakage_residual": 3.4423527089129342e-15,
+      "frequency": 2.141444941535249,
+      "mode": [
+        2,
+        2,
+        1
+      ],
+      "relative_speed_error": -0.0911425391880809
+    },
+    {
+      "L": 12,
+      "continuum_k": 0.5235987755982988,
+      "embedding_leakage_residual": 4.2667309170006036e-16,
+      "frequency": 0.5176380902050415,
+      "mode": [
+        1,
+        0,
+        0
+      ],
+      "relative_speed_error": -0.011384070534630752
+    },
+    {
+      "L": 12,
+      "continuum_k": 0.9068996821171088,
+      "embedding_leakage_residual": 2.6142949766537455e-15,
+      "frequency": 0.8965754721680534,
+      "mode": [
+        1,
+        1,
+        1
+      ],
+      "relative_speed_error": -0.011384070534630752
+    },
+    {
+      "L": 12,
+      "continuum_k": 1.5707963267948966,
+      "embedding_leakage_residual": 9.30352312218596e-16,
+      "frequency": 1.414213562373095,
+      "mode": [
+        3,
+        0,
+        0
+      ],
+      "relative_speed_error": -0.09968368384289394
+    },
+    {
+      "L": 12,
+      "continuum_k": 1.5707963267948963,
+      "embedding_leakage_residual": 4.00474932258127e-15,
+      "frequency": 1.5059711791502262,
+      "mode": [
+        2,
+        2,
+        1
+      ],
+      "relative_speed_error": -0.04126897073724478
+    },
+    {
+      "L": 16,
+      "continuum_k": 0.39269908169872414,
+      "embedding_leakage_residual": 4.622615529122682e-16,
+      "frequency": 0.39018064403225655,
+      "mode": [
+        1,
+        0,
+        0
+      ],
+      "relative_speed_error": -0.006413148855794137
+    },
+    {
+      "L": 16,
+      "continuum_k": 0.6801747615878316,
+      "embedding_leakage_residual": 3.5421446108335293e-15,
+      "frequency": 0.6758126995938146,
+      "mode": [
+        1,
+        1,
+        1
+      ],
+      "relative_speed_error": -0.006413148855794026
+    },
+    {
+      "L": 16,
+      "continuum_k": 1.1780972450961724,
+      "embedding_leakage_residual": 7.144166916014486e-16,
+      "frequency": 1.1111404660392044,
+      "mode": [
+        3,
+        0,
+        0
+      ],
+      "relative_speed_error": -0.056834679255617915
+    },
+    {
+      "L": 16,
+      "continuum_k": 1.1780972450961724,
+      "embedding_leakage_residual": 5.193628558846649e-15,
+      "frequency": 1.1505710800429656,
+      "mode": [
+        2,
+        2,
+        1
+      ],
+      "relative_speed_error": -0.02336493457376665
+    }
+  ],
+  "gaussian_cutoff_error_power": -1.9915091431670904,
+  "gaussian_equal_norm_direction_control": [
+    {
+      "L": 8,
+      "relative_equal_norm_direction_split": 0.12464415723538197
+    },
+    {
+      "L": 12,
+      "relative_equal_norm_direction_split": 0.05841471310564905
+    },
+    {
+      "L": 16,
+      "relative_equal_norm_direction_split": 0.033469744681851266
+    }
+  ],
+  "mode": "quick",
+  "not_established": [
+    "a controlled dressed embedding for the interacting spin-1 parent",
+    "3D finite-spin dynamical phase or its infinite-volume speed"
+  ]
+}

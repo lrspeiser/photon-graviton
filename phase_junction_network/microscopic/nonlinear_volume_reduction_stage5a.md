@@ -1,5 +1,7 @@
 # Stage 5A: Exact Nonlinear Homogeneous Volume Reduction
 
+> **Validation scope correction — 2026-09-20.** The homogeneous identity remains valid under its stated target kinetic form. Appending determinant/trace conditions locally changes the old constraint classification: at nonzero momentum four conditions are second class and two remain first class, leaving two physical modes. Full nonlinear lattice closure and the microscopic origin of this kinetic geometry remain open. See the [authoritative audit](../validation/README.md) and its executable results.
+
 **Status:** **PASS at nonlinear homogeneous scope.** The fixed-volume condition and its Hamiltonian-preservation partner form an exact nonlinear second-class pair. They remove the one negative homogeneous conformal canonical direction and leave five positive tracefree shape directions.  
 **Date:** 2026-09-20  
 **Issue:** #5  
@@ -176,7 +178,7 @@ Hamiltonian evolution of the volume condition gives
 \frac{2(1-3\lambda)}{\sqrt g}\,C_P.
 \]
 
-At the required spin-2 value
+At the selected target kinetic value
 
 \[
 \lambda=\frac12,
@@ -319,7 +321,7 @@ Promote the determinant/trace pair to the local finite frame lattice and test th
 The next calculation must:
 
 1. define the local nonlinear frame determinant and trace momentum;
-2. retain the existing scalar and vector first-class constraints;
+2. reclassify the existing scalar and vector constraints after adding local volume conditions; do not assume all four remain first class;
 3. compute their brackets through quadratic order in frame amplitude;
 4. include the energy carried by the frame and connection themselves;
 5. verify time preservation without repeated manual projection;

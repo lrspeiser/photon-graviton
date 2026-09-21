@@ -1,6 +1,8 @@
 # Stage 6B: Detuned Finite Electromagnetic Dynamics
 
-**Status:** **PASS at the pure-gauge dynamical stage.** A finite detuned region has two transverse branches with approximately linear long-wavelength gaps; the RK point remains the required approximately quadratic control. Dynamical charged matter, Ward identities, vacuum polarization, and interacting QED remain open.  
+> **Validation scope correction — 2026-09-20.** The chain Hamiltonian is exactly diagonalized as a reduced model, but no exact embedding in the finite-spin 3D parent has been established. The natural sheet embedding now fails on L=2,3,4. Two copies are constructed, not independently discovered 3D polarizations. The cubic tensor is a conditional Gaussian control. All numerical tables below are retained at reduced-model scope. See the [authoritative audit](../validation/README.md) and its executable results.
+
+**Status:** **PASS at reduced-chain dynamical scope, with a separate finite-cube control.** A finite detuned region has two transverse branches with approximately linear long-wavelength gaps; the RK point remains the required approximately quadratic control. Dynamical charged matter, Ward identities, vacuum polarization, and interacting QED remain open.  
 **Date:** 2026-09-20  
 **Issue:** #6  
 **Executable:** `check_finite_em_dynamics.py`  
@@ -42,9 +44,9 @@ D_p=\sqrt{W_p^\dagger W_p}+\sqrt{W_pW_p^\dagger}.
 
 All links remain finite integer-spin quantum links. No continuum rotor replaces them.
 
-## 3. Exact transverse propagation block
+## 3. Reduced-chain model (exact 3D embedding not established)
 
-For propagation along one principal axis, Gauss reduction leaves two independent transverse electric-flux fields. One polarization is the exact finite chain
+The proposed principal-axis reduction is represented by the finite chain below. Its identification with a sector of the full 3D parent is unproven; it is now tested only as a reduced model
 
 \[
 \boxed{
@@ -261,7 +263,7 @@ consistent with an \(O(a^2k^2)\) regulator correction.
 
 ## 11. What Stage 6B establishes
 
-The current finite electromagnetic Hamiltonian has a detuned pure-gauge region whose exact principal-axis transverse sectors support two positive photon-like branches with
+The current finite electromagnetic Hamiltonian has a detuned pure-gauge region whose reduced principal-axis chain models support two positive photon-like branches with
 
 \[
 \Delta_\gamma
@@ -270,7 +272,7 @@ The current finite electromagnetic Hamiltonian has a detuned pure-gauge region w
 
 The RK point is a static Coulomb anchor with approximately quadratic dynamics; detuning toward smaller \(v/t\) produces the linearly dispersing branch.
 
-This completes the pure-gauge dynamical step requested after Stage 6A.
+This completes the reduced-chain calculation, not the finite-spin 3D dynamical phase requirement.
 
 ## 12. Claim boundary
 
