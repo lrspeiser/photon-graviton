@@ -1,0 +1,230 @@
+{
+  "checks": {
+    "cubic_kinetic_coefficients_unique": true,
+    "exact_DD_closure": true,
+    "exact_DH_closure": true,
+    "exact_HH_closure": true,
+    "local_evolution_drift_decreases": true,
+    "local_regulator_errors_fall_quadratically": true,
+    "local_volume_pair_is_gauge_fixing_not_extra_mode_removal": true,
+    "nonlinear_principal_symbol_has_two_modes": true,
+    "strict_finite_local_closure_rejected": true,
+    "unprojected_spectral_evolution_preserves_constraints": true
+  },
+  "claim_boundary": {
+    "established": [
+      "exact nonlinear continuum D-D, D-H and H-H brackets with derived coefficients",
+      "frame kinetic and torsion-free connection/curvature self-energy in one scalar constraint",
+      "unprojected nontrivial constrained evolution in the smooth spectral regulator",
+      "two nonlinear principal configuration modes and no regenerated scalar",
+      "the local determinant/trace pair acts as gauge fixing and preserves the two-mode count",
+      "quadratic convergence, but not exact closure, for the local central-difference regulator"
+    ],
+    "not_established": [
+      "an exact finite local nonlinear diffeomorphism algebra",
+      "a unique microscopic derivation of the temporal kinetic residue",
+      "nonperturbative strong-field global existence or black-hole solutions",
+      "local vacuum-energy sequestering",
+      "a quantum nonlinear constraint algebra or anomaly freedom",
+      "Newton's constant or empirical validity"
+    ]
+  },
+  "continuum_nonlinear_constraint_closure": true,
+  "cubic_kinetic_bootstrap": {
+    "basis": [
+      "tr(h) tr(pi^2)",
+      "tr(h) (tr pi)^2",
+      "tr(h pi^2)",
+      "tr(pi) tr(h pi)"
+    ],
+    "coefficients": [-0.5000000000000007, 0.2500000000000002, 2.000000000000002, -0.9999999999999994],
+    "derived_T3": "2 tr(h pi^2)-tr(pi)tr(h pi)-1/2 tr(h)tr(pi^2)+1/4 tr(h)(tr pi)^2",
+    "heldout_covariance_residual": 1.1013412404281553e-13,
+    "rank": 4
+  },
+  "decision": "The coherent area vertex plus the uniquely covariant DeWitt kinetic completion closes the nonlinear continuum constraint algebra and preserves two modes without projection. A fixed central-difference lattice does not close exactly; it approaches the algebra with O(a^2) errors. Do not relabel continuum closure as an exact finite-lattice result.",
+  "derived_coefficients": {
+    "HH_structure_function": "{H[N],H[M]}=a b D[g^-1(N dM-M dN)]",
+    "a_equals_U_over_two": 0.0033949568769108844,
+    "b_equals_kappa_over_four": 7.135031174451665e-07,
+    "coherent_ring_kappa": 2.854012469780666e-06,
+    "connection_energy_accounting": "the torsion-free connection is eliminated once into sqrt(g)R; no second connection-energy term is added",
+    "frame_kinetic_U": 0.006789913753821769,
+    "scalar_density": "H=a/sqrt(g)(pi^ij pi_ij-pi^2/2)-b sqrt(g) R"
+  },
+  "full_finite_local_nonlinear_closure": false,
+  "local_central_difference_constraint_algebra": [
+    {
+      "DD_measured": -0.0002375196133961145,
+      "DD_relative_error": 0.001361391129442572,
+      "DD_target": -0.00023719669591835816,
+      "DH_measured": 3.2634714701428085e-08,
+      "DH_relative_error": 4.5309359574513464e-05,
+      "DH_target": 3.263323611039908e-08,
+      "HH_measured": -1.4742479743542344e-11,
+      "HH_relative_error": 0.00014001748185155528,
+      "HH_target": -1.4744544237497527e-11,
+      "L": 8,
+      "derivative": "central"
+    },
+    {
+      "DD_measured": -0.000267207524631054,
+      "DD_relative_error": 0.0006222697607665637,
+      "DD_target": -0.00026704135287228736,
+      "DH_measured": 3.458746864545842e-08,
+      "DH_relative_error": 2.0768592523796865e-05,
+      "DH_target": 3.458675032733415e-08,
+      "HH_measured": -1.6577320515154356e-11,
+      "HH_relative_error": 6.426398942817212e-05,
+      "HH_target": -1.6578385908371108e-11,
+      "L": 12,
+      "derivative": "central"
+    },
+    {
+      "DD_measured": -0.00027826863791433347,
+      "DD_relative_error": 0.00035346157649953416,
+      "DD_target": -0.0002781703153961182,
+      "DH_measured": 3.528592608246489e-08,
+      "DH_relative_error": 1.1809395012876341e-05,
+      "DH_target": 3.528550938194637e-08,
+      "HH_measured": -1.7260565164624087e-11,
+      "HH_relative_error": 3.655795926897832e-05,
+      "HH_target": -1.7261196198731654e-11,
+      "L": 16,
+      "derivative": "central"
+    },
+    {
+      "DD_measured": -0.0002863907869786506,
+      "DD_relative_error": 0.00015819115295153405,
+      "DD_target": -0.00028634548965549955,
+      "DH_measured": 3.578962011950003e-08,
+      "DH_relative_error": 5.289367084226892e-06,
+      "DH_target": 3.578943081606271e-08,
+      "HH_measured": -1.7762141126059737e-11,
+      "HH_relative_error": 1.6379272592965192e-05,
+      "HH_target": -1.776243206177639e-11,
+      "L": 24,
+      "derivative": "central"
+    },
+    {
+      "DD_measured": -0.00028927785999185204,
+      "DD_relative_error": 8.919926187216533e-05,
+      "DD_target": -0.0002892520589217012,
+      "DH_measured": 3.5966860178158784e-08,
+      "DH_relative_error": 2.983337135084909e-06,
+      "DH_target": 3.59667528772093e-08,
+      "HH_measured": -1.79404036026385e-11,
+      "HH_relative_error": 9.239334247762966e-06,
+      "HH_target": -1.7940569361555428e-11,
+      "L": 32,
+      "derivative": "central"
+    },
+    {
+      "DD_measured": -0.00029135426369786857,
+      "DD_relative_error": 3.97130271814651e-05,
+      "DD_target": -0.0002913426935975586,
+      "DH_measured": 3.6093761440315895e-08,
+      "DH_relative_error": 1.328495487789008e-06,
+      "DH_target": 3.6093713489980386e-08,
+      "HH_measured": -1.8068602833615257e-11,
+      "HH_relative_error": 4.114643307819421e-06,
+      "HH_target": -1.8068677179776895e-11,
+      "L": 48,
+      "derivative": "central"
+    }
+  ],
+  "local_error_powers": {
+    "DD": -1.9747987649042558,
+    "DH": -1.9721372213825423,
+    "HH": -1.9709809434599355
+  },
+  "module": "phase_junction_network/validation/check_nonlinear_constraint_closure.py",
+  "next_gate": "Either construct a finite local derivative/move algebra with an exact discrete Leibniz rule, or accept diffeomorphism symmetry as emergent and demonstrate regulator universality. In parallel, test strong-field and local vacuum sources with the closed continuum constraints.",
+  "nonlinear_principal_mode_count": {
+    "constraint_ranks": [4],
+    "decision": "The nonlinear principal symbol retains four first-class constraints and two physical configurations. Local determinant/trace conditions are gauge fixings: four second-class plus two first-class constraints, still leaving two configurations.",
+    "local_volume_gauge_classifications": [[4, 2, 2]],
+    "maximum_condition_number": 17.61858703050022,
+    "maximum_first_class_bracket_residual": 5.86533275440867e-14,
+    "physical_configuration_counts": [2],
+    "samples": 200
+  },
+  "run_mode": "full",
+  "smooth_spectral_constraint_algebra": {
+    "DD_measured": -0.00029302395374303084,
+    "DD_relative_error": 1.8500231101179906e-16,
+    "DD_target": -0.0002930239537430309,
+    "DH_measured": 3.619546334254126e-08,
+    "DH_relative_error": 1.0969515440870066e-15,
+    "DH_target": 3.61954633425413e-08,
+    "HH_measured": -1.8171686056104392e-11,
+    "HH_relative_error": 0.0,
+    "HH_target": -1.8171686056104392e-11,
+    "L": 16,
+    "derivative": "spectral"
+  },
+  "stage_pass": true,
+  "status": "Stage 5C PASS at continuum nonlinear-closure and finite-regulator obstruction scope",
+  "unprojected_local_evolution": [
+    {
+      "L": 8,
+      "derivative": "central",
+      "manual_projection_steps": 0,
+      "maximum_metric_change": 0.00024518724377209367,
+      "maximum_momentum": 9.989083160563212e-05,
+      "maximum_scalar_constraint": 7.976146701983976e-17,
+      "maximum_vector_constraint": 1.6296944458040554e-10,
+      "minimum_metric_eigenvalue": 0.9997548127562279,
+      "steps": 50,
+      "time_step": 0.001
+    },
+    {
+      "L": 12,
+      "derivative": "central",
+      "manual_projection_steps": 0,
+      "maximum_metric_change": 0.00027583424005517276,
+      "maximum_momentum": 0.00011237833877303043,
+      "maximum_scalar_constraint": 4.752795375934719e-17,
+      "maximum_vector_constraint": 9.722317088810627e-11,
+      "minimum_metric_eigenvalue": 0.9997241657599448,
+      "steps": 50,
+      "time_step": 0.001
+    },
+    {
+      "L": 16,
+      "derivative": "central",
+      "manual_projection_steps": 0,
+      "maximum_metric_change": 0.0002872527098608524,
+      "maximum_momentum": 0.00011703103720970957,
+      "maximum_scalar_constraint": 3.0183288784786033e-17,
+      "maximum_vector_constraint": 6.292178584456542e-11,
+      "minimum_metric_eigenvalue": 0.9997127472901391,
+      "steps": 50,
+      "time_step": 0.001
+    },
+    {
+      "L": 24,
+      "derivative": "central",
+      "manual_projection_steps": 0,
+      "maximum_metric_change": 0.00029563727152004393,
+      "maximum_momentum": 0.00012044753915990763,
+      "maximum_scalar_constraint": 1.47493799930247e-17,
+      "maximum_vector_constraint": 3.026633487563494e-11,
+      "minimum_metric_eigenvalue": 0.99970436272848,
+      "steps": 50,
+      "time_step": 0.001
+    }
+  ],
+  "unprojected_spectral_evolution": {
+    "L": 12,
+    "derivative": "spectral",
+    "manual_projection_steps": 0,
+    "maximum_metric_change": 0.00043556837360292366,
+    "maximum_momentum": 0.0001478918763985814,
+    "maximum_scalar_constraint": 3.552204194428088e-20,
+    "maximum_vector_constraint": 1.434145824575987e-17,
+    "minimum_metric_eigenvalue": 0.9995644316263971,
+    "steps": 60,
+    "time_step": 0.001
+  }
+}
