@@ -63,7 +63,7 @@ They imply
 \[
 \boxed{
 \frac{u}{t_{\rm plaq}}
-=rac{\Delta}{K_A}
+=\frac{\Delta}{K_A}
 =14.5968888053.
 }
 \]
