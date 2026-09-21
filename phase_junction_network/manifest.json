@@ -2,34 +2,19 @@
   "module": "phase_junction_network",
   "active_branch": "main",
   "created_utc": "2026-09-20",
-  "status": "exploratory candidate foundation; finite pure-gauge photons, a finite linear dressed-frame regulator, charged endpoints, a reversible companion bridge, one shared completed-move rule across four finite sectors, and a finite spatial gauge-matter Ward/polarization patch now exist. Virtual-pair vacuum polarization, interacting QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.",
+  "status": "exploratory candidate foundation; finite pure-gauge photons, a finite linear dressed-frame regulator, charged endpoints, a reversible companion bridge, one shared completed-move rule across four finite sectors, a real-pair Ward patch, and a finite vacuum-plus-virtual-pair photon-dressing calculation now exist. Multi-pair fermionic loops, interacting QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.",
   "architecture_audit": "phase_junction_network/architecture_audit.md",
   "novelty_boundary": "phase_junction_network/novelty_boundary.md",
   "companion_integration": "phase_junction_network/companion_integration.md",
   "master_tracker_issue": 10,
   "dependencies": ["python>=3.11", "numpy>=1.24", "scipy>=1.10"],
   "pillar_status": {
-    "finite_electromagnetism": {
-      "issue": 6,
-      "status": "static Coulomb, detuned pure-gauge dynamics, and one-pair nonzero-momentum Ward/photon-dressing gates pass; virtual-pair vacuum polarization, charge renormalization, and QED continuum remain open"
-    },
-    "finite_linear_gravity": {
-      "issue": 2,
-      "status": "linear finite constrained regulator passes; the shared completed move is compatible with the finite dressed-frame lock, while nonlinear closure remains open"
-    },
-    "shared_microscopic_coefficients": {
-      "issue": 3,
-      "status": "the unit completed move works in four finite sector representatives and survives one spatial gauge-matter Ward patch; virtual-pair and radiative-stability gates remain open"
-    },
-    "finite_chiral_matter": {
-      "issue": 4,
-      "status": "finite free-regulator endpoint prototype and minimal interacting q=1 endpoint pass; mirror completion, observed spectrum, clocks, and radiative stability remain open"
-    },
+    "finite_electromagnetism": {"issue": 6, "status": "static Coulomb, detuned pure-gauge dynamics, real-pair Ward/dressing, and one-virtual-pair Ward/dressing gates pass; multi-pair charge renormalization and QED continuum remain open"},
+    "finite_linear_gravity": {"issue": 2, "status": "linear finite constrained regulator passes; shared completed-move compatibility is established in finite representatives, while nonlinear closure remains open"},
+    "shared_microscopic_coefficients": {"issue": 3, "status": "the unit completed move works across finite photon, frame, matter, companion, real-pair, and one-virtual-pair tests; many-pair radiative stability remains open"},
+    "finite_chiral_matter": {"issue": 4, "status": "finite free-regulator endpoint prototype and minimal interacting q=1 endpoint pass; domain-wall multi-pair completion, observed spectrum, clocks, and mirror removal remain open"},
     "nonlinear_gravity_and_vacuum": {"issue": 5, "status": "open"},
-    "companion_integration": {
-      "issue": 7,
-      "status": "finite reversible architecture and completed companion move pass; physical rates, common propagation cone, many-body deposits, and empirical viability remain open"
-    },
+    "companion_integration": {"issue": 7, "status": "finite reversible architecture and completed companion move pass; physical rates, common propagation cone, many-body deposits, and empirical viability remain open"},
     "continuum_quantum_consistency": {"issue": 8, "status": "open"},
     "frozen_predictions_and_data": {"issue": 9, "status": "open"}
   },
@@ -57,7 +42,6 @@
       "result_file": "phase_junction_network/microscopic/all_sector_completed_move_results.json",
       "shared_completion_coefficient": 1.0,
       "shared_x_t_over_Delta": 0.13554178509861228,
-      "frame_primes": [3, 5],
       "maximum_frame_lock_commutator": 2.220446049250313e-16,
       "maximum_frame_lock_leakage": 1.1696500392250084e-15,
       "matter_hopping_power": 1.9953316108318904,
@@ -70,7 +54,7 @@
       "companion_reciprocity_residual": 2.7755575615628914e-16
     },
     "spatial_gauge_matter_stage_3G": {
-      "acceptance": "PASS at finite spatial one-pair scope",
+      "acceptance": "PASS at finite spatial real-pair scope",
       "result_file": "phase_junction_network/microscopic/spatial_gauge_matter_results.json",
       "lattice_shape": [2, 2],
       "pure_gauge_dimension": 115,
@@ -78,17 +62,34 @@
       "bare_photon_gap": 0.017859456197836753,
       "dressed_photon_gap": 0.03547743491062,
       "photon_gap_shift": 0.017617978712783245,
-      "bare_photon_residue": 0.9893176943138869,
       "dressed_photon_residue": 0.9653959531795769,
       "pole_selfenergy_delta_omega_squared": 0.000939688212154829,
       "local_continuity_residual": 0.0,
-      "nonzero_momentum_operator_ward_residual": 8.279340978903994e-18,
-      "nonzero_momentum_spectral_ward_residual": 2.024873393228818e-15,
-      "longitudinal_unitary_equivalence_residual": 6.938893903907228e-18,
+      "operator_ward_residual": 8.279340978903994e-18,
+      "spectral_ward_residual": 2.024873393228818e-15,
       "transverse_polarization_curvature": 0.04016163199227485,
-      "transversality_ratio": 3.455484032741466e-09,
+      "new_counterterms": 0
+    },
+    "virtual_pair_vacuum_stage_3H": {
+      "acceptance": "PASS at finite vacuum plus one-pair scope",
+      "result_file": "phase_junction_network/microscopic/virtual_pair_vacuum_results.json",
+      "combined_dimension": 1599,
+      "pair_gap_over_Delta": 1.0,
+      "pair_creation_coupling_over_Delta": 0.0338029748033,
+      "completion_coefficient": 1.0,
+      "ground_pair_occupation": 0.008233387089380984,
+      "bare_photon_gap": 0.01785945619783673,
+      "dressed_photon_gap": 0.01788196595253192,
+      "photon_gap_shift": 2.2509754695192175e-05,
+      "pole_selfenergy_delta_omega_squared": 8.045306450620991e-07,
+      "photon_residue_ratio": 0.9983202088466752,
+      "local_continuity_residual": 0.0,
+      "operator_ward_residual": 8.279340978903994e-18,
+      "spectral_ward_residual": 1.592131033197455e-17,
+      "longitudinal_unitary_equivalence_residual": 2.2887833992611187e-16,
+      "transverse_virtual_pair_curvature": 0.00014107386786532672,
       "new_counterterms": 0,
-      "claim_boundary": "response of a real finite neutral pair; virtual vacuum polarization and interacting QED remain open"
+      "claim_boundary": "one-pair-truncation virtual response; no fermion determinant or infinite-volume QED claim"
     },
     "finite_chiral_matter": {
       "acceptance": "PASS at finite free-regulator endpoint scope",
@@ -109,34 +110,21 @@
     }
   },
   "originality_policy": {
-    "not_claimed_as_original": [
-      "finite quantum links",
-      "Rokhsar-Kivelson Hamiltonians",
-      "graph-Laplacian or seagull completion",
-      "relative-phase or Leggett modes",
-      "domain-wall fermions",
-      "first-order frame and connection gravity",
-      "emergent helicity-2 spin models",
-      "broad gauge-gravity unification",
-      "Schrieffer-Wolff ring exchange",
-      "parallel capacitance addition",
-      "finite Ward identities"
-    ],
-    "candidate_original_content": "one finite matter-geometry junction algebra applying the same completed move and collective normalization to photon, frame, matter, and companion sectors and producing cross-sector predictions",
+    "not_claimed_as_original": ["finite quantum links", "Rokhsar-Kivelson Hamiltonians", "graph-Laplacian or seagull completion", "relative-phase or Leggett modes", "domain-wall fermions", "first-order frame and connection gravity", "emergent helicity-2 spin models", "finite Ward identities", "finite vacuum polarization", "broad gauge-gravity unification", "Schrieffer-Wolff ring exchange", "parallel capacitance addition"],
+    "candidate_original_content": "one finite matter-geometry junction algebra applying the same completed move and collective normalization to photon, frame, matter, companion, and pair-creation sectors and producing cross-sector predictions",
     "formal_novelty_proven": false
   },
   "immediate_work_order": [
-    "add vacuum and gauge-invariant pair-creation sectors using the same completed endpoint move",
-    "measure transverse photon self-energy from virtual pairs",
-    "verify finite Ward-Takahashi identities across vacuum-pair sector-changing matrix elements",
-    "reject the candidate if pair creation requires a new completion coefficient or counterterm",
-    "extend the surviving interacting algebra to the companion and dressed frame",
-    "close nonlinear gravitational self-coupling, many-body companion binding, and the volume-vacuum sector",
-    "establish regulator universality and common-cone recovery",
+    "replace the one-pair truncation with antisymmetric multi-pair sectors based on the finite domain-wall endpoint",
+    "test scaling of transverse polarization and photon-pole renormalization with volume, matter gap, and pair number",
+    "verify Ward-Takahashi identities in the enlarged Fock space",
+    "test whether the shared photon-frame cone survives matter dressing",
+    "reject the candidate if matter loops require a new completion coefficient or counterterm",
+    "extend the surviving interacting algebra to the companion and nonlinear frame sectors",
     "freeze the parameter and observable ledger before empirical fitting"
   ],
   "stop_rules": [
-    "do not call Stage 3G an interacting-QED continuum or its real-pair response vacuum polarization",
+    "do not call Stage 3H an interacting-QED continuum or a fermion determinant",
     "do not use different completion coefficients in photon, gravity, matter, companion, or pair sectors",
     "do not ignore generated higher operators",
     "do not identify the finite matter spectrum with observed particles",
