@@ -1,0 +1,118 @@
+{
+  "module": "phase_junction_network/microscopic/check_virtual_pair_vacuum.py",
+  "status": "Stage 3H PASS at finite virtual-pair scope",
+  "run_mode": "full",
+  "stage_pass": true,
+  "lattice": {
+    "shape": [2, 2],
+    "vacuum_dimension": 115,
+    "one_pair_dimension": 1484,
+    "combined_dimension": 1599
+  },
+  "coefficients": {
+    "pair_gap_over_Delta": 1.0,
+    "pair_creation_coupling_over_Delta": 0.0338029748033,
+    "completion_coefficient": 1.0,
+    "new_counterterms": 0
+  },
+  "bare_photon": {
+    "ground_energy": -0.020022724109713817,
+    "operator_norm": 2.539126688159829,
+    "photon_gap": 0.01785945619783673,
+    "photon_multiplicity": 2,
+    "photon_residue": 0.9893176943138873
+  },
+  "virtual_pair_dressed_photon": {
+    "ground_energy": -0.020142682865497752,
+    "operator_norm": 2.536048647169583,
+    "photon_gap": 0.01788196595253192,
+    "photon_multiplicity": 2,
+    "photon_residue": 0.987655847203151
+  },
+  "virtual_pair": {
+    "ground_pair_occupation": 0.008233387089380984,
+    "gap_shift": 2.2509754695192175e-05,
+    "pole_self_energy_delta_omega_squared": 8.045306450620991e-07,
+    "residue_ratio": 0.9983202088466752
+  },
+  "ward_identity": {
+    "maximum_local_continuity_residual": 0.0,
+    "operator_ward_residual": 8.279340978903994e-18,
+    "maximum_low_spectral_ward_residual": 1.592131033197455e-17,
+    "rho_k_norm_on_ground": 0.12820223046328194
+  },
+  "static_polarization": {
+    "exact_longitudinal_unitary_equivalence_residual": 2.2887833992611187e-16,
+    "longitudinal_curvature": -3.469446951953614e-12,
+    "transverse_curvature": 0.00014107386786532672,
+    "mixed_curvature": 2.168404344971009e-12,
+    "transversality_ratio": 2.459312276931154e-08
+  },
+  "decoupled_control": {
+    "exact_longitudinal_unitary_equivalence_residual": 2.2887833992611187e-16,
+    "longitudinal_curvature": -6.938893903907228e-12,
+    "transverse_curvature": -2.7755575615628914e-11,
+    "mixed_curvature": -2.667137344314341e-11
+  },
+  "pair_coupling_scan": [
+    {
+      "pair_coupling_scale": 0.25,
+      "photon_gap": 0.01786093449252324,
+      "gap_shift": 1.4782946865105062e-06,
+      "photon_residue": 0.9892132292298775,
+      "virtual_pair_occupation": 0.0005193963279549703
+    },
+    {
+      "pair_coupling_scale": 0.5,
+      "photon_gap": 0.01786531159499526,
+      "gap_shift": 5.855397158530812e-06,
+      "photon_residue": 0.9889003044405431,
+      "virtual_pair_occupation": 0.002073712544863618
+    },
+    {
+      "pair_coupling_scale": 0.75,
+      "photon_gap": 0.01787241574705818,
+      "gap_shift": 1.2959549221449457e-05,
+      "photon_residue": 0.9883803548503339,
+      "virtual_pair_occupation": 0.004651393128630748
+    },
+    {
+      "pair_coupling_scale": 1.0,
+      "photon_gap": 0.017881965952532084,
+      "gap_shift": 2.250975469535524e-05,
+      "photon_residue": 0.9876558472031473,
+      "virtual_pair_occupation": 0.008233387089380961
+    }
+  ],
+  "checks": {
+    "basis_counts": true,
+    "ground_is_vacuum_dominated": true,
+    "local_continuity_exact": true,
+    "operator_ward_exact": true,
+    "spectral_ward": true,
+    "longitudinal_is_pure_gauge": true,
+    "virtual_transverse_response_nonzero": true,
+    "decoupled_control_zero": true,
+    "photon_dressing_nonzero": true,
+    "photon_residue_retained": true,
+    "coupling_scan_monotonic": true,
+    "same_unit_completion": true
+  },
+  "claim_boundary": {
+    "established": [
+      "one finite Hamiltonian contains vacuum and gauge-invariant neutral-pair sectors",
+      "pair creation and annihilation use the same unit completed-move rule",
+      "exact local and nonzero-momentum Ward identities across sector-changing moves",
+      "longitudinal backgrounds are exactly pure gauge",
+      "virtual-pair admixture produces transverse photon dressing without a new counterterm"
+    ],
+    "not_established": [
+      "relativistic fermionic pair statistics and a determinant",
+      "infinite-volume vacuum polarization or charge renormalization",
+      "3+1D interacting QED",
+      "radiative stability beyond the one-pair truncation",
+      "mirror-wall completion or nonlinear gravity"
+    ]
+  },
+  "next_gate": "Replace the one-pair truncation with the finite domain-wall endpoint spectrum and test multi-pair scaling, charge renormalization, and common-cone stability."
+}
