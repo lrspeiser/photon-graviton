@@ -1,6 +1,6 @@
 # Phase Junction Network
 
-**Status:** exploratory candidate foundation. Issue #2 supplies a finite linear dressed-frame regulator, issue #4 supplies a finite chiral charged-endpoint prototype, issue #7 supplies a reversible photon–companion integration architecture, and issue #6 has both a finite static Coulomb anchor and a detuned pure-gauge two-photon region. Issue #3 now has a shared-move prototype **and** a decisive embedding control: the naïve one-hinge common-Casimir normalization fails in the actual photon phase, so a derived collective charging mechanism is required. Interacting QED, observed matter, the revised shared microscopic derivation, nonlinear gravity, common-cone recovery, many-body deposits, and empirical predictions remain open.  
+**Status:** exploratory candidate foundation. The repository now contains a finite pure-gauge photon phase, a finite linear dressed-frame regulator, a finite chiral charged-endpoint prototype, a reversible photon–companion architecture, and a first structurally derived common charging mode. The full shared microscopic Hamiltonian, interacting QED, observed matter, nonlinear gravity, common-cone universality, many-body deposits, and empirical predictions remain open.  
 **Created:** 2026-09-20  
 **Prior-art boundary:** [`novelty_boundary.md`](novelty_boundary.md)
 
@@ -21,7 +21,7 @@ The photon, companion, graviton, and connection-relative mode are distinct. Ener
 
 Finite quantum links, RK Hamiltonians, relative-phase modes, domain-wall fermions, first-order frame/connection gravity, emergent helicity-2 spin models, and broad gauge–gravity unification all have prior art. They are credited in [`novelty_boundary.md`](novelty_boundary.md) and are not claimed as Phase Junction inventions.
 
-The potentially original contribution is narrower: one finite matter–geometry junction Hilbert space and one local move set must generate the electromagnetic, frame, matter, and companion sectors while deriving cross-sector coefficients that would otherwise be independent. The theory becomes scientifically distinct only if that shared mechanism survives the full finite embedding and produces a held-out prediction.
+The potentially original contribution is narrower: one finite matter–geometry junction Hilbert space and one local move/capacitance structure must generate the electromagnetic, frame, matter, and companion sectors while deriving cross-sector coefficients that would otherwise be independent.
 
 ## Finite electromagnetism
 
@@ -29,150 +29,122 @@ The finite integer-spin link Hamiltonian is
 
 \[
 H_A(u,t,v)=\frac{u}{2}\sum_\ell E_\ell^2
--t\sum_p(W_p+W_p^\dagger)+v\sum_pD_p,
-\qquad
-D_p=\sqrt{W_p^\dagger W_p}+\sqrt{W_pW_p^\dagger}.
+-t\sum_p(W_p+W_p^\dagger)+v\sum_pD_p.
 \]
 
 ### Stage 6A — static Coulomb anchor
 
-At `u/t=0, v/t=1`, every local term is a positive weighted graph Laplacian and commutes exactly with Gauss law. The committed checks establish:
-
-- an exactly enumerated periodic `2^3` spin-1 gauge component with `146,327` states and `1,236,144` undirected plaquette transitions;
-- Coulomb winding scaling over `L=4,6,8`;
-- a rank-two equal-time transverse tensor with no longitudinal component;
-- perimeter-favored finite Wilson shifts;
-- a fixed-charge response consistent with the periodic lattice Green function and a decreasing effective string slope;
-- persistence of the static diagnostics in a spin-2 control.
+At `u/t=0, v/t=1`, the finite spin-1 model has an exact positive RK parent, exact Gauss symmetry, Coulomb winding response, a rank-two equal-time tensor, perimeter-favored Wilson shifts, and a fixed-charge response whose effective string slope decreases with size. The exact periodic `2^3` gauge component has `146,327` states and `1,236,144` plaquette-transition edges.
 
 See [`microscopic/finite_em_coulomb_phase.md`](microscopic/finite_em_coulomb_phase.md).
 
 ### Stage 6B — detuned pure-gauge dynamics
 
-The same finite link operators were scanned over
+A scan over
 
 \[
 u/t\in\{0,0.1,0.2\},
 \qquad
-v/t\in\{0.2,0.4,0.6\},
+v/t\in\{0.2,0.4,0.6\}
 \]
 
-for spin 1 and spin 2. Exact principal-axis Gauss-reduced transverse blocks give two identical photon branches. All 18 detuned spin/coupling fits pass:
+finds a finite detuned region with two transverse photon-like branches:
 
-- finite-size gap powers: `0.978964`–`1.152567`;
-- maximum linear-plus-cubic fit residual: `4.31e-4`;
-- minimum electric-field residue in the first photon branch: `0.992529`;
-- maximum scalar residue in that branch: `5.47e-31`;
-- minimum scalar-gap/photon-gap ratio: `2.8496`;
-- exact `+k/-k` degeneracy at reported precision;
-- full cubic symbol `{0,k_hat^2,k_hat^2}` and anisotropy recovery `L^-2.0111`.
+- gap powers `0.978964`–`1.152567`;
+- maximum linear-plus-cubic residual `4.31e-4`;
+- minimum electric residue `0.992529`;
+- scalar residue below `5.47e-31` in the photon branch;
+- scalar gap at least `2.8496` times the photon gap;
+- full cubic symbol `{0,k_hat^2,k_hat^2}`;
+- anisotropy recovery approximately `L^-2.0111`.
 
-The RK controls remain nonrelativistic, with fitted powers `1.96037` and `1.82408`. Thus the static RK point is not being relabeled as the photon phase; the approximately linear branch appears in a finite detuned region.
+The RK controls remain approximately `z=2`, so the static RK point is not being relabeled as the relativistic phase.
 
-An exact `2^3` full-cube anchor retains continuous overlap with the RK ground state throughout the tested detuning and has an exactly null longitudinal electric operator.
+See [`microscopic/finite_em_dynamics.md`](microscopic/finite_em_dynamics.md).
 
-See [`microscopic/finite_em_dynamics.md`](microscopic/finite_em_dynamics.md), [`microscopic/check_finite_em_dynamics.py`](microscopic/check_finite_em_dynamics.py), and [`microscopic/finite_em_dynamics_results.json`](microscopic/finite_em_dynamics_results.json).
-
-**Claim boundary:** Stage 6B passes the pure-gauge dynamical gate. Issue #6 remains open for dynamical charged matter, finite Ward identities, vacuum polarization, charge renormalization, regulator-universal QED scaling, and precision Lorentz tests.
+Issue #6 remains open for dynamical matter, Ward identities, vacuum polarization, charge renormalization, a regulator-universal QED limit, and precision Lorentz tests.
 
 ## Finite linear gravity regulator
 
-The continuum, exact-arithmetic, finite-state, full-real-space, and finite-size checks establish under their linear assumptions:
+The committed continuum, exact-arithmetic, finite-state, and full-real-space checks establish under linear assumptions:
 
 - three vector and one scalar frame constraints;
 - 36 second-class connection constraints and four first-class frame constraints;
-- four physical phase-space dimensions, or two positive linearly dispersing modes, per nonzero momentum;
+- two positive linearly dispersing configuration modes per nonzero momentum;
 - no inserted transverse-traceless projector;
-- a finite odd-prime Weyl connection lock and exact dressed-frame algebra;
-- two finite logical Weyl pairs at `p=5,7,11` carrying positive compact clock/Villain Hamiltonians;
-- linearly closing tensor gaps with cubic cutoff corrections;
-- connection-lock leakage at roundoff and rapidly decreasing compact-boundary occupation.
+- a finite Weyl connection lock and exact dressed-frame algebra;
+- two finite logical Weyl pairs carrying positive compact clock/Villain Hamiltonians;
+- linear tensor gaps with cubic cutoff corrections and vanishing lattice anisotropy.
 
 See [`microscopic/finite_dressed_frame_hamiltonian.md`](microscopic/finite_dressed_frame_hamiltonian.md).
 
-This closes the **linear finite constrained-regulator** gate, not nonlinear quantum gravity. The gravity scale and clock ratio remain inputs until issue #3 derives shared coefficients. Nonlinear closure and the volume/vacuum sector remain issue #5; universality remains issue #8.
+This is a linear finite regulator, not nonlinear quantum gravity. The independently chosen old self-dual clock normalization is no longer treated as fundamental after the issue-#3 shared-normalization tests.
 
 ## Shared electromagnetic/frame mechanism
 
 ### Stage 3A — one move, one penalty
 
-The first issue-#3 prototype asks the project-specific question directly: can the same elementary junction move generate both the photon and frame stiffnesses?
-
-The finite model uses one swap amplitude `t` and one virtual defect penalty `Delta`. Four swaps close an electromagnetic plaquette, while two swaps move one frame mode through a gapped connection mediator. Exact path counting and finite diagonalization give
+A toy finite mediator uses one elementary swap amplitude `t` and one virtual penalty `Delta`. Exact path counting and diagonalization give
 
 \[
-K_A
-=20\frac{t^4}{\Delta^3}
-+O(t^6/\Delta^5),
+K_A=20\frac{t^4}{\Delta^3}+O(t^6/\Delta^5),
 \qquad
-K_g
-=\frac{t^2}{\Delta}
-+O(t^4/\Delta^3).
+K_g=\frac{t^2}{\Delta}+O(t^4/\Delta^3).
 \]
-
-Under the explicitly declared common-junction Casimir hypothesis
-
-\[
-U_A=U_g=\Delta,
-\]
-
-the exact toy common-cone equation fixes
-
-\[
-\frac{t}{\Delta}=0.27909563384302527,
-\qquad
-K_A/\Delta=K_g/\Delta=0.0685077493800112.
-\]
-
-The electromagnetic and frame mediator bands remain separated by `9.93 K` and `16.60 K`. Negative controls show that independent amplitudes, penalties, or charging normalizations restore an arbitrary impedance ratio.
 
 See [`microscopic/shared_junction_move_stage3a.md`](microscopic/shared_junction_move_stage3a.md).
 
-### Stage 3B — actual-regulator compatibility test
+### Stage 3B — naïve normalization rejected
 
-Mapping that naïve hypothesis into the actual Stage-6B photon model gives
-
-\[
-\frac{u}{t_{\rm plaq}}
-=\frac{\Delta}{K_A}
-=14.5968888053,
-\]
-
-which is `72.98` times above the demonstrated Stage-6B upper edge `u/t=0.2`.
-
-Exact spin-1 axial calculations at that ratio give gap powers only `0.1389`–`0.1718` and `L=10` gaps of `9.07`–`10.60`, rather than a linearly closing photon branch. Therefore
+The assumption
 
 \[
-\boxed{U_A=U_g=\Delta\text{ is rejected as the shared physical normalization.}}
+U_A=U_g=\Delta
 \]
 
-A viable shared theory needs a **derived common collective charging factor**
+maps into the real photon regulator as
 
 \[
-U_A=U_g=r\Delta.
+u/t_{\rm plaq}=14.5969,
 \]
 
-Entering the demonstrated photon region requires
+where the exact finite branch is strongly gapped rather than linearly dispersing. This rules out the simplest apparent unification and requires a collective charging suppression.
+
+See [`microscopic/shared_move_embedding_stage3b.md`](microscopic/shared_move_embedding_stage3b.md).
+
+### Stage 3C — collective capacitance
+
+The elementary cube has two independent counts of the same proposed microscopic bundle:
 
 \[
-r\le0.01370155,
+8\times18=24\times6=144.
 \]
 
-while the representative `u/t=0.1` point requires
+An explicit `144 x 144` connected lock matrix has rank 143 and one uniform charging mode. With identical hinge capacitances, the collective coefficient is
 
 \[
-r=0.006850775.
+\boxed{U_A=U_g=\Delta/144.}
 \]
 
-The current self-dual gravity regulator corresponds to `r=0.06850775`, a factor of ten above the representative photon requirement. The photon and gravity clocks therefore cannot remain independently normalized. Both must be rerun at one microscopic value of `r` derived from a finite collective capacitance/constraint matrix.
+This value is structural; it is not fitted to either spectrum.
 
-This negative result is progress: it rejects a superficial unification before it is used to claim a new gravity theory. Independent `r_A` and `r_g` are forbidden because they restore the arbitrary impedance ratio.
+Using the actual finite photon eigenvalues, common-cone roots exist for the tested diagonal plaquette ratios:
 
-See [`microscopic/shared_move_embedding_stage3b.md`](microscopic/shared_move_embedding_stage3b.md) and [`microscopic/shared_move_embedding_results.json`](microscopic/shared_move_embedding_results.json).
+| `v/t` | `t/Delta` | `u/t_plaquette` | photon gap power | common speed in `Delta` units |
+|---:|---:|---:|---:|---:|
+| 0.2 | 0.143653 | 0.928701 | 1.009630 | 0.0117403 |
+| 0.4 | 0.153017 | 0.735699 | 1.055388 | 0.0124749 |
+| 0.6 | 0.167444 | 0.530591 | 1.135849 | 0.0135964 |
+
+At the same `r=1/144`, finite compact gravity models with `p=11,13,17` retain linear gaps and move toward the common harmonic speed as local dimension increases. A `p=5` control fails, showing that adequate local dimension remains a real requirement.
+
+See [`microscopic/collective_capacitance_stage3c.md`](microscopic/collective_capacitance_stage3c.md).
+
+**Remaining issue-#3 bottleneck:** the diagonal plaquette/flippability ratio `v/t` is still independent. It must be derived from the same virtual process before the common cone is a prediction rather than a one-parameter family.
 
 ## Finite charged matter prototype
 
-Issue #4 constructs finite odd-strand endpoint defects with exact flux-bundle Gauss covariance. Within the declared finite search class, the first primitive non-vectorlike anomaly-free spectrum is
+Issue #4 constructs finite odd-strand endpoint defects with exact flux-bundle Gauss covariance. Within the declared search class, the first primitive non-vectorlike anomaly-free spectrum is
 
 \[
 q=(-11,-5,-1,-1,9,9),
@@ -180,46 +152,47 @@ q=(-11,-5,-1,-1,9,9),
 \sum q=\sum q^3=0.
 \]
 
-A finite Wilson/domain-wall slab supplies one light Weyl corner on each wall, gaps the other seven physical corners, and produces exponentially protected finite-width gaps through a shared charge-to-localization rule. Every species uses the same bare frame derivative.
+A finite domain-wall slab supplies a light Weyl cone, gapped doublers, a remote opposite-chirality wall, exponentially protected finite-width gaps, and one bare frame operator for every species.
 
-This is a regulator prototype, not the Standard Model. The remote mirror wall, observed charges and masses, generations, bound-state clocks, and interacting radiative stability remain open. See [`microscopic/chiral_matter_defect.md`](microscopic/chiral_matter_defect.md).
+This is not the Standard Model. Mirror completion, observed charges and masses, generations, bound-state clocks, and interacting radiative stability remain open.
+
+See [`microscopic/chiral_matter_defect.md`](microscopic/chiral_matter_defect.md).
 
 ## Finite photon–companion bridge
 
-Issue #7 fixes the ontology and supplies a finite reversible source-to-receiver architecture containing a high-frequency photon, lower-frequency photon, neutral `chi`, converter recoil, dynamically computed bound `chi`, capture recoil, receiver, and one constrained frame. Every interaction has its Hermitian reverse, and the energy/component ledgers close to roundoff.
+Issue #7 supplies a reversible finite source-to-receiver architecture containing photons, neutral `chi`, recoil, a computed bound `chi`, a receiver, and one shared frame. The finite ledgers close, and no independent motion or lensing multiplier is introduced.
 
-The finite benchmark uses the same bound source for synthetic clock response, massive-body acceleration, and light bending, with no independent motion or lensing multipliers. It also records an unresolved speed ratio:
+The benchmark also finds
 
 ```text
 maximum chi speed / maximum photon speed = 0.3571428571
 ```
 
-Thus common-cone recovery must be derived under issue #8. The large finite transition probability is an architecture stress test, not an astrophysical conversion rate. See [`companion_integration.md`](companion_integration.md).
+so common-cone recovery is not yet established.
+
+See [`companion_integration.md`](companion_integration.md).
 
 ## Current work program
 
 | Issue | Pillar | Status |
 |---:|---|---|
 | #2 | Finite dressed frame Hamiltonian | Linear finite-regulator scope closed |
-| #3 | Shared microscopic coefficients and `Z_g/Z_A` | Stage 3A mechanism passes; Stage 3B rejects the naïve common Casimir; collective charging derivation is now critical |
-| #4 | Chiral matter defects and protected gaps | Finite free-regulator prototype closed |
-| #5 | Nonlinear gravity, self-coupling, many-body binding, and volume/vacuum | Open |
-| #6 | Finite electromagnetic Coulomb/QED phase | Stage 6A static and Stage 6B pure-gauge dynamics pass; interacting matter/QED open |
+| #3 | Shared microscopic coefficients | Stages 3A–3C pass their declared scopes; `v/t` derivation and full embedding remain open |
+| #4 | Chiral matter defects | Finite free-regulator prototype closed |
+| #5 | Nonlinear gravity, self-coupling, many-body binding, volume/vacuum | Open |
+| #6 | Finite electromagnetic/QED phase | Static and pure-gauge dynamics pass; interacting matter/QED open |
 | #7 | Photon–companion integration | Finite architecture scope closed |
 | #8 | Continuum consistency, mirror completion, Lorentz/common-cone recovery | Open |
-| #9 | Parameter ledger, frozen predictions, and empirical tests | Open |
+| #9 | Parameter ledger, frozen predictions, empirical tests | Open |
 
-The two immediate composed gates are:
+## Immediate next gates
 
-1. construct a finite collective capacitance/constraint matrix that derives one common charging suppression `r`, then rerun both photon and gravity regulators at that same value without sector-specific clock rescaling;
-2. embed the minimal `|q|=1` matter endpoint in the Stage-6B photon region and test exact current continuity, a finite Ward identity, photon dressing, vacuum polarization, and the issue-#7 conversion vertex using actual photon eigenmodes.
-
-## Relationship to the wider repository
-
-The root program remains governed by `CURRENT-STATUS.md`, `research_plan/active-goal.md`, `research_plan/universe-contract.md`, and the solution-goal ledger. It requires fixed published distances, an operationally nonexpanding universe, complete energy accounting, no inserted dark halo, and joint predictions for redshift, timing, brightness, motion, lensing, gravitational waves, and background observations.
-
-The finite constructions here supply architecture pieces. They do not yet derive a physical redshift coefficient, continuum conversion rate, many-body galactic deposit, universal weak-field correction, or observational fit.
+1. Derive the diagonal plaquette coefficient `v/t` from the same virtual move graph, including all return paths and symmetry-allowed counterterms.
+2. With `r=1/144` and derived `v/t`, fix `t/Delta` from the common cone without spectral fitting.
+3. Rerun the full three-dimensional photon model and increasing-`p` gravity regulator at that one point.
+4. Embed the minimal `|q|=1` endpoint and test current continuity, a finite Ward identity, photon dressing, and vacuum polarization.
+5. Extend the same capacitance matrix to matter and the companion rather than introducing new clocks.
 
 ## Stop rules
 
-Do not claim novelty for finite quantum links, relative-phase modes, domain-wall fermions, first-order discrete gravity, emergent helicity-2 modes, or broad gauge–gravity unification. Do not call the RK equal-time tensor a photon spectrum or its winding free energy a photon gap. Do not call Stage 6B a completed interacting QED continuum, Stage 3A a derivation of `alpha` or `G`, or the rejected common-Casimir normalization a physical unification. Do not introduce separate photon and gravity charging factors to repair Stage 3B. Do not treat the finite matter charge set as observed particles, the companion transition probability as an astrophysical rate, one-particle binding as a halo, fixed volume as a cosmological-constant solution, or the finite gravity regulator as nonlinear quantum gravity. Derive the shared collective charging mechanism, interacting Ward identities, nonlinear closure, common-cone recovery, regulator universality, and frozen predictions—or reject the combined branch.
+Do not claim originality for established component techniques. Do not call Stage 6B interacting QED, Stage 3A a derivation of `alpha` or `G`, Stage 3C a unique microscopic bundle, the finite matter set observed particles, the companion transition probability an astrophysical rate, fixed volume a cosmological-constant solution, or the linear frame regulator nonlinear quantum gravity. Do not introduce sector-specific charging factors or choose `v/t` from the desired common speed. Derive the remaining shared coefficients—or reject the combined branch.
