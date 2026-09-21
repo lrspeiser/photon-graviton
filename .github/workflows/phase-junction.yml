@@ -72,6 +72,12 @@ jobs:
             --quick \
             --output /tmp/seagull_completion_results.json
 
+      - name: Check finite spatial gauge-matter Ward patch
+        run: |
+          python phase_junction_network/microscopic/check_spatial_gauge_matter_patch.py \
+            --quick \
+            --output /tmp/spatial_gauge_matter_results.json
+
       - name: Check finite chiral matter endpoint
         run: |
           python phase_junction_network/microscopic/check_chiral_matter_defect.py \
