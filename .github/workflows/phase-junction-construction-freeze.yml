@@ -1,0 +1,84 @@
+name: Freeze area-stress construction evidence
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/phase-junction-construction-freeze.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: phase-junction-construction-freeze
+  cancel-in-progress: false
+
+jobs:
+  freeze:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            phase_junction_network
+            .github
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.4.6 scipy==1.17.1
+      - name: Regenerate independent quick and full evidence
+        run: |
+          for MODE in quick full; do
+            FLAGS=()
+            if [ "$MODE" = quick ]; then FLAGS=(--quick); fi
+            for TRACK in area_stress area_kernel geometry_response; do
+              python "phase_junction_network/construction/check_${TRACK}.py" "${FLAGS[@]}" --output "phase_junction_network/construction/results/${TRACK}_${MODE}.json"
+            done
+          done
+      - name: Record source, results and environment hashes
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,platform,subprocess
+          import numpy,scipy
+          root=Path('phase_junction_network')
+          frozen=root/'microscopic/fermionic_multipair_vacuum_results.json'
+          digest=hashlib.sha256(frozen.read_bytes()).hexdigest()
+          assert digest=='9fc66061e31fe53c4b8a016c5bda9eda8a5f00e0d7efa044314a443a1b5d9400'
+          sources=sorted(root.rglob('*.py'))
+          results=sorted((root/'construction/results').glob('*_*.json'))
+          paths=[p for p in sources+results if p.name!='provenance.json']
+          record={'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
+                  'python':platform.python_version(),'numpy':numpy.__version__,'scipy':scipy.__version__,
+                  'archived_multipair_sha256':digest,
+                  'files_sha256':{str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths},
+                  'meaning':'Execution PASS verifies the declared diagnostics, including expected failed physical gates; it is not full nonlinear or common-cone closure.'}
+          (root/'construction/results/provenance.json').write_text(json.dumps(record,indent=2,sort_keys=True)+'\n')
+          PY
+      - name: Commit only evidence without rewriting any history
+        run: |
+          git diff --exit-code -- phase_junction_network/microscopic/fermionic_multipair_vacuum_results.json
+          git add phase_junction_network/construction/results
+          if ! git diff --cached --quiet; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m 'Freeze area-reference, quadratic-frame and geometry-stress construction results'
+            git push origin HEAD:main
+          fi
+          git rev-parse HEAD
+      - name: Retain complete source snapshot and generated evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: phase-junction-area-stress-source-and-results
+          path: |
+            phase_junction_network
+            .github/workflows
+          include-hidden-files: true
+          retention-days: 30
