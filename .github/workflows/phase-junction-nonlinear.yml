@@ -14,6 +14,7 @@ on:
       - "phase_junction_network/validation/results/nonlinear_constraint_closure_full.json"
       - "phase_junction_network/validation/nonlinear_constraint_closure_stage5c.md"
       - "phase_junction_network/validation/check_finite_weyl_coherent_frame.py"
+      - "phase_junction_network/validation/check_fock_frame_cone_response.py"
       - "phase_junction_network/validation/NONLINEAR_CHECKPOINT.md"
       - ".github/workflows/phase-junction-nonlinear.yml"
   pull_request:
@@ -22,6 +23,7 @@ on:
       - "phase_junction_network/construction/coherent_junction/check_frame_area_vertex.py"
       - "phase_junction_network/validation/check_nonlinear_constraint_closure.py"
       - "phase_junction_network/validation/check_finite_weyl_coherent_frame.py"
+      - "phase_junction_network/validation/check_fock_frame_cone_response.py"
       - ".github/workflows/phase-junction-nonlinear.yml"
   workflow_dispatch:
 
@@ -31,7 +33,7 @@ permissions:
 jobs:
   verify-nonlinear-gravity:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     env:
       OPENBLAS_NUM_THREADS: "1"
       OMP_NUM_THREADS: "1"
@@ -72,3 +74,9 @@ jobs:
           python phase_junction_network/validation/check_finite_weyl_coherent_frame.py \
             --quick \
             --output /tmp/finite_weyl_coherent_frame_results.json
+
+      - name: Check antisymmetric Fock photon-frame response
+        run: |
+          python phase_junction_network/validation/check_fock_frame_cone_response.py \
+            --quick \
+            --output /tmp/fock_frame_cone_response.json
