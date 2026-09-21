@@ -1,0 +1,11 @@
+# JR-1 amendment 2: source shape and stellar nuisance variables
+
+21 September 2026. Added after R7/R8 development; transfer data still unscored. R8 fitted lens-angle RMS is 7.396 percent, fitted lens stellar mean fractional RMS is 3.528 percent, and SPARC validation mean per-galaxy RMSE is 18.079 km/s. Lens kinematic chi-square is still 232.30 over 27 fitted radial measurements, so fractional agreement is not agreement with the quoted covariance. Its anisotropy values lie on bounds and no physical distribution function has been established.
+
+R9 adds one universal shape parameter q_sph and interpolates q between q_disk and q_sph with the source's measured spheroid fraction. q_sph in [0.3,4] keeps positive monotone enclosed companion mass and a finite central potential, but can allow a central density cusp; this is not an automatic Solar-system or full dynamical-stability result.
+
+R9 also permits four fitted lenses' individual stellar-mass offsets within +/-0.2 dex, penalized using their existing published stellar-population log-mass errors. These errors do not cover the conditional-distance/propagation conversion. A shared stellar normalization remains explicit. It permits one constant beta per fitted lens in [-1,0.35], with a zero-centered width-0.3 working orbital prior. Positive Jeans moments do not prove a nonnegative stellar distribution function. Mass/orbital nuisance variables are not independent companion amplitudes and do not rescale observations.
+
+There is no separate lensing multiplier. The same perturbed stellar mass sources baryonic gravity, the common companion production proxy, stellar dynamics and light bending. The two out-of-fit lenses retain their population masses with the common stellar scale, no individual mass correction, and the mean fitted beta as the stated population-point prediction. Source/orbit uncertainty is not thereby fully marginalized.
+
+The additional prior residuals use the same equal-object convention as the existing objective: log-mass offset / published log-mass error / sqrt(4), and beta / 0.3 / sqrt(4). This remains an exploratory balanced objective, not a complete normalized observational likelihood. All earlier scores and parameter-bound flags are retained. The selected model and its parameters must be recorded before any transfer scores are calculated.
