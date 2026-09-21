@@ -1,0 +1,109 @@
+{
+  "candidate_hamiltonians": {
+    "coefficient_principle": "The unit coefficient is fixed by cancelling each individual second-order move self-energy. Cross-move superexchange is left intact.",
+    "electromagnetic": "H/Delta = 1/2 sum G^2 - x sum(U+U^dagger) + x^2 sum(U^dagger U + U U^dagger)",
+    "gravity": "H_g/Delta = [[x^2,-x,0],[-x,1,-x],[0,-x,x^2]]"
+  },
+  "checks": {
+    "finite_gravity_branches_are_linear": true,
+    "finite_gravity_fit_residuals_below_0p002": true,
+    "finite_gravity_speeds_move_toward_target": true,
+    "first_root_is_nonrelativistic_control": true,
+    "full_cube_longitudinal_null": true,
+    "full_cube_scalar_rejected": true,
+    "gravity_superexchange_remains_second_order": true,
+    "linked_diagonal_is_fourth_order": true,
+    "physical_root_is_z1": true,
+    "residual_electric_correction_is_fourth_order": true,
+    "ring_exchange_remains_fourth_order": true,
+    "unit_seagull_uniquely_cancels_second_order_selfenergy": true
+  },
+  "claim_boundary": {
+    "established": [
+      "a unique unit local seagull cancels the O(x^2) isolated-move self-energy",
+      "the O(x^4) photon ring and O(x^2) gravity superexchange survive",
+      "a z~1 finite photon common-cone root exists at the shared r=1/144",
+      "the exact 2^3 gauge cube retains no longitudinal operator at that root",
+      "finite compact gravity remains linear at the same coefficients for adequate local dimension"
+    ],
+    "not_established": [
+      "a fundamental symmetry requiring the seagull completion",
+      "uniqueness against all other local completions",
+      "the full infinite-volume three-dimensional interacting phase",
+      "matter and companion seagull partners",
+      "radiative stability, nonlinear gravity, alpha, G, or formal novelty"
+    ]
+  },
+  "coefficient_controls_at_x_0p005": [
+    {"seagull_coefficient": 0.8, "delta_U_over_x2": 0.39995750473023334, "K_over_20x4": 0.9997599369907749},
+    {"seagull_coefficient": 0.9, "delta_U_over_x2": 0.19997250316636686, "K_over_20x4": 0.9997600084629511},
+    {"seagull_coefficient": 1.0, "delta_U_over_x2": -1.2498459674698155e-05, "K_over_20x4": 0.9997600417540934},
+    {"seagull_coefficient": 1.1, "delta_U_over_x2": -0.19999750001466682, "K_over_20x4": 0.9997599896699112},
+    {"seagull_coefficient": 1.2, "delta_U_over_x2": -0.39998250150769076, "K_over_20x4": 0.9997600768572746}
+  ],
+  "decision": "Advance this seagull-completed graph to the full shared finite embedding. Do not yet call it fundamental: the algebraic origin of the completion and its extension to matter and companion moves remain to be derived.",
+  "derived_common_charging_factor": 0.006944444444444444,
+  "exact_periodic_cube_anchor": {
+    "first_gap_multiplicity_in_computed_window": 2,
+    "gauge_reduced_dimension": 146327,
+    "ground_overlap_with_RK_uniform_state": 0.2954223966997892,
+    "lowest_gaps": [0.0, 3.59702372, 3.59702372, 3.97913085, 4.46820158, 4.73152916, 4.89234824, 5.16248837],
+    "operators": {
+      "longitudinal_x": {"norm": 0.0, "low_multiplet_residue_fraction": 0.0},
+      "scalar_electric_energy": {"norm": 6.99856281057445, "low_multiplet_residue_fraction": 2.0532665618208901e-22},
+      "transverse_y": {"norm": 3.3520703606248214, "low_multiplet_residue_fraction": 0.8041960103917186},
+      "transverse_z": {"norm": 3.3520703606248228, "low_multiplet_residue_fraction": 0.1537924640150277}
+    }
+  },
+  "finite_gravity_same_coefficients": [
+    {"prime": 5, "gap_power": 0.4000039909575745, "linear_speed_c_g": 0.019688844882471507, "maximum_fit_residual": 0.023481465550657842, "relative_speed_error": 0.7784176093844226},
+    {"prime": 7, "gap_power": 1.0625058936848883, "linear_speed_c_g": 0.008471581403997857, "maximum_fit_residual": 0.0012614638307409892, "relative_speed_error": -0.23479861174462047},
+    {"prime": 11, "gap_power": 1.0329025393167837, "linear_speed_c_g": 0.009116858615276075, "maximum_fit_residual": 0.00043933743563802293, "relative_speed_error": -0.17651350600903282},
+    {"prime": 13, "gap_power": 1.0286231446578271, "linear_speed_c_g": 0.009341439937989178, "maximum_fit_residual": 0.00039565893143870255, "relative_speed_error": -0.15622804433180726},
+    {"prime": 17, "gap_power": 1.024817765054451, "linear_speed_c_g": 0.00956062386213198, "maximum_fit_residual": 0.0003552832986978179, "relative_speed_error": -0.13643010637441666},
+    {"prime": 23, "gap_power": 1.022658929915617, "linear_speed_c_g": 0.009693488332039955, "maximum_fit_residual": 0.00033152532048092906, "relative_speed_error": -0.12442903219770873}
+  ],
+  "module": "phase_junction_network/microscopic/check_seagull_completion.py",
+  "next_gate": "Construct the seagull-completed moves directly in the finite dressed-frame, charged-endpoint, and companion Hilbert spaces. Verify exact constraints and derive the complete operator set without adding sector-specific terms.",
+  "nonrelativistic_root_control": {
+    "K_g_over_Delta": 0.008399106036631411,
+    "K_plaquette_over_Delta": 0.0013196526355579948,
+    "delta_U_over_Delta": -3.440421552478349e-05,
+    "double_flux_over_K": 0.0032498784780063765,
+    "gravity_speed_in_Delta_units": 0.007618278060039881,
+    "low_band_separation_over_K": 592.437222515841,
+    "photon_fit_residual": 0.029165740657055343,
+    "photon_gap_power": 0.4561069540932034,
+    "photon_speed_in_Delta_units": 0.0076182781594677715,
+    "speed_ratio": 1.0000000130512214,
+    "u_over_t_plaquette": 5.236256907862618,
+    "v_over_K": -0.13580201222303784,
+    "x_t_over_Delta": 0.09202751457691193
+  },
+  "physical_common_cone_root": {
+    "K_g_over_Delta": 0.01805149686715108,
+    "K_plaquette_over_Delta": 0.005606197571911289,
+    "delta_U_over_Delta": -0.0001545306906226753,
+    "double_flux_over_K": 0.013851221789811033,
+    "gravity_speed_in_Delta_units": 0.011071048137161164,
+    "low_band_separation_over_K": 126.6755503472071,
+    "photon_fit_residual": 0.0002905427388639892,
+    "photon_gap_power": 0.9773450471048641,
+    "photon_speed_in_Delta_units": 0.011071048137135307,
+    "speed_difference": -2.5857788132910287e-14,
+    "speed_ratio": 0.9999999999976642,
+    "u_physical_over_Delta": 0.006789913753821769,
+    "u_over_t_plaquette": 1.2111442143675506,
+    "v_over_K": -0.12924513079019587,
+    "x_t_over_Delta": 0.13554178509861228
+  },
+  "run_mode": "full",
+  "small_x_fits": {
+    "K_g": {"power": 1.9990598205915842, "prefactor": 0.9954458069381893},
+    "K_plaquette": {"power": 3.9908676478853917, "prefactor": 19.132910171976846},
+    "delta_U": {"power": 3.995297503924379, "prefactor": 0.48871433882584814},
+    "v_diagonal": {"power": 3.995868388697322, "prefactor": 2.6141539125160476}
+  },
+  "stage_pass": true,
+  "status": "Stage 3E PASS at candidate scope: the unit local seagull cancels the dangerous second-order self-energy while preserving ring and frame exchange, yielding one z~1 shared-cone root"
+}
