@@ -1,6 +1,6 @@
 # Phase Junction Network
 
-**Status:** exploratory candidate foundation. The repository now contains a finite pure-gauge photon phase, a finite linear dressed-frame regulator, a finite chiral charged-endpoint prototype, a reversible photon–companion architecture, one shared completed-move rule across four finite sectors, and a first spatial gauge–matter Ward/polarization test. Virtual-pair vacuum polarization, interacting QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.  
+**Status:** exploratory candidate foundation. The repository now contains a finite pure-gauge photon phase, a finite linear dressed-frame regulator, a finite chiral charged-endpoint prototype, a reversible photon–companion architecture, one shared completed-move rule across four finite sectors, an interacting real-pair Ward patch, and a first vacuum-plus-virtual-pair photon-dressing calculation. Multi-pair fermionic loops, interacting QED, nonlinear gravity, continuum universality, observed matter, many-body deposits, and empirical predictions remain open.  
 **Created:** 2026-09-20  
 **Prior-art boundary:** [`novelty_boundary.md`](novelty_boundary.md)
 
@@ -19,7 +19,7 @@ The photon, companion, graviton, and connection-relative mode are distinct. Ener
 
 ## Originality boundary
 
-Finite quantum links, RK Hamiltonians, graph-Laplacian/seagull completions, relative-phase modes, domain-wall fermions, first-order frame/connection gravity, emergent helicity-2 spin models, and broad gauge–gravity unification all have prior art. They are not claimed as Phase Junction inventions.
+Finite quantum links, RK Hamiltonians, graph-Laplacian/seagull completions, relative-phase modes, domain-wall fermions, first-order frame/connection gravity, emergent helicity-2 spin models, finite Ward identities, and broad gauge–gravity unification all have prior art. They are not claimed as Phase Junction inventions.
 
 The potentially original contribution is narrower: one finite matter–geometry junction Hilbert space and one symmetry-complete move/capacitance algebra must generate electromagnetic, frame, matter, and companion sectors while deriving cross-sector coefficients that would otherwise be independent.
 
@@ -79,13 +79,13 @@ K_A=20t^4/\Delta^3+\cdots,
 K_g=t^2/\Delta+\cdots.
 \]
 
-A `144 x 144` collective lock matrix gives one uniform charging mode and the structural coefficient
+A `144 x 144` collective lock matrix gives one uniform charging mode and
 
 \[
 U_A=U_g=\Delta/144.
 \]
 
-Exact low-band matching then showed that a pure off-diagonal swap also generates a dominant `O(t^2/Delta)` electric self-energy and a double-flux operator. The pure-swap graph was rejected rather than patched with a sector-specific counterterm.
+Exact low-band matching showed that a pure off-diagonal swap also generates a dominant `O(t^2/Delta)` electric self-energy and a double-flux operator. The pure-swap graph was rejected rather than patched with a sector-specific counterterm.
 
 ### Stage 3E — local completed move
 
@@ -97,13 +97,11 @@ H_M=-x(M+M^\dagger)+x^2(M^\dagger M+MM^\dagger)
 }
 \]
 
-with unit coefficient. The completed photon/frame candidate has the finite common-cone root
+with unit coefficient. The completed photon/frame candidate has
 
 \[
 \frac{t}{\Delta}=0.1355417851,
 \]
-
-with
 
 \[
 K_A/\Delta=0.00560619757,
@@ -119,7 +117,7 @@ See [`microscopic/seagull_completion_stage3e.md`](microscopic/seagull_completion
 
 ### Stage 3F — one rule in four finite sectors
 
-The same unit completion was applied to finite photon, dressed-frame, charged-endpoint, and neutral-companion representatives.
+The same unit completion was applied to photon, dressed-frame, charged-endpoint, and neutral-companion representatives.
 
 Key results:
 
@@ -135,14 +133,9 @@ Key results:
 
 See [`microscopic/all_sector_completed_move_stage3f.md`](microscopic/all_sector_completed_move_stage3f.md).
 
-### Stage 3G — finite spatial gauge–matter Ward patch
+### Stage 3G — finite spatial real-pair Ward patch
 
-A periodic `2 x 2` spin-1 patch now contains the Stage-3E photon operators and one dynamical `q=+1`, `q=-1` endpoint pair in one exact Gauss-law Hilbert space.
-
-The physical dimensions are:
-
-- pure gauge: `115`;
-- neutral charged pair: `1484`.
+A periodic `2 x 2` spin-1 patch contains the Stage-3E photon operators and one dynamical `q=+1`, `q=-1` endpoint pair in one exact Gauss-law Hilbert space.
 
 At momentum `(pi,0)`:
 
@@ -153,23 +146,53 @@ At momentum `(pi,0)`:
 - transverse polarization curvature: `0.040161632 Delta`;
 - transversality ratio: `3.46e-9`.
 
-The transverse photon pole moves from
+The photon pole moves from `0.0178594562 Delta` to `0.0354774349 Delta` while retaining residue `0.965396`. No new counterterm is introduced.
+
+See [`microscopic/spatial_gauge_matter_stage3g.md`](microscopic/spatial_gauge_matter_stage3g.md).
+
+### Stage 3H — finite virtual-pair vacuum
+
+The same `2 x 2` photon patch now contains a no-matter vacuum block and a gauge-invariant one-pair block, coupled by the same unit completed move.
+
+The combined dimension is `1599`. The interacting ground state remains vacuum dominated, with pair occupation
 
 \[
-0.0178594562\Delta
+0.00823338709.
+\]
+
+The photon pole shifts from
+
+\[
+0.0178594561978367\Delta
 \]
 
 to
 
 \[
-0.0354774349\Delta,
+0.0178819659525319\Delta,
 \]
 
-while retaining residue `0.965396`. No new matter- or photon-specific counterterm was introduced.
+giving
 
-This is polarization by a real finite neutral pair, not yet virtual vacuum polarization.
+\[
+\delta\omega_\gamma^2
+=8.04530645062\times10^{-7}\Delta^2.
+\]
 
-See [`microscopic/spatial_gauge_matter_stage3g.md`](microscopic/spatial_gauge_matter_stage3g.md).
+The photon residue ratio is `0.998320209`.
+
+Across the vacuum/pair blocks:
+
+- local continuity residual: `0`;
+- nonzero-momentum operator Ward residual: `8.28e-18`;
+- spectral Ward residual: `1.59e-17`;
+- longitudinal unitary-equivalence residual: `2.29e-16`;
+- transverse virtual-pair response: `1.41074e-4 Delta`;
+- no new pair- or photon-specific counterterm.
+
+This is a finite one-pair-truncation vacuum effect, not an infinite-volume fermion determinant or interacting-QED continuum.
+
+See [`microscopic/virtual_pair_vacuum_stage3h.md`](microscopic/virtual_pair_vacuum_stage3h.md).
 
 ## Finite charged matter prototype
 
@@ -200,22 +223,22 @@ so common-cone recovery for the companion remains open.
 | Issue | Pillar | Status |
 |---:|---|---|
 | #2 | Finite dressed frame Hamiltonian | Linear finite-regulator scope closed |
-| #3 | Shared microscopic coefficients | Stages 3E–3G pass finite candidate and real-pair Ward gates; virtual-pair and radiative stability open |
-| #4 | Chiral matter defects | Finite free-regulator prototype closed; interacting completion open |
+| #3 | Shared microscopic coefficients | Stages 3E–3H pass finite all-sector, real-pair, and virtual-pair gates; many-pair stability open |
+| #4 | Chiral matter defects | Finite free-regulator prototype closed; interacting domain-wall completion open |
 | #5 | Nonlinear gravity, self-coupling, many-body binding, volume/vacuum | Open |
-| #6 | Finite electromagnetic/QED phase | Static, pure-gauge dynamics, and one-pair Ward/dressing pass; virtual-pair QED open |
+| #6 | Finite electromagnetic/QED phase | Static, pure-gauge, real-pair, and one-virtual-pair tests pass; multi-pair QED open |
 | #7 | Photon–companion integration | Finite architecture scope closed; common microscopic propagation open |
 | #8 | Continuum consistency, mirror completion, Lorentz/common-cone recovery | Open |
 | #9 | Parameter ledger, frozen predictions, empirical tests | Open |
 
 ## Immediate next gates
 
-1. Add vacuum plus gauge-invariant pair-creation/annihilation sectors using the same completed endpoint move.
-2. Measure transverse photon self-energy from virtual pairs rather than permanently occupied charges.
-3. Verify Ward–Takahashi identities across vacuum/pair sector-changing matrix elements.
-4. Reject the candidate if pair creation requires a new completion coefficient or counterterm.
-5. Extend the same interacting algebra to the companion and dressed frame before nonlinear-gravity claims.
+1. Replace the one-pair truncation with the finite domain-wall endpoint spectrum and antisymmetric multi-pair sectors.
+2. Test scaling of transverse polarization and photon-pole renormalization with volume, matter gap, and pair number.
+3. Verify Ward–Takahashi identities in the enlarged Fock space.
+4. Test whether the shared photon/frame cone remains stable after matter dressing.
+5. Reject the candidate if a matter-loop-specific completion coefficient or counterterm is required.
 
 ## Stop rules
 
-Do not claim originality for established component techniques. Do not call Stage 3G an interacting-QED continuum or its real-pair response vacuum polarization. Do not introduce sector-specific completion coefficients, ignore generated higher operators, identify the finite matter spectrum with observed particles, interpret finite companion probabilities as astrophysical rates, call fixed volume a cosmological-constant solution, or call the linear frame regulator nonlinear quantum gravity. Derive one symmetry-complete interacting Hamiltonian across all sectors—or reject the combined branch.
+Do not claim originality for established component techniques. Do not call Stage 3H an interacting-QED continuum or its one-pair result an infinite-volume fermion determinant. Do not introduce sector-specific completion coefficients, ignore generated higher operators, identify the finite matter spectrum with observed particles, interpret finite companion probabilities as astrophysical rates, call fixed volume a cosmological-constant solution, or call the linear frame regulator nonlinear quantum gravity. Derive one symmetry-complete interacting Hamiltonian across all sectors—or reject the combined branch.
