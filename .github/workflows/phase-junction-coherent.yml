@@ -1,0 +1,60 @@
+name: Coherent junction solutions
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'phase_junction_network/**'
+      - '.github/workflows/phase-junction-coherent.yml'
+  pull_request:
+    paths:
+      - 'phase_junction_network/**'
+      - '.github/workflows/phase-junction-coherent.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  solve:
+    name: coherent-${{ matrix.mode }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [quick, full]
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MODE: ${{ matrix.mode }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: phase_junction_network
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pip install numpy==2.4.6 scipy==1.17.1
+      - name: Reproduce analytic elimination and retained source limits
+        run: |
+          FLAGS=()
+          if [ "$MODE" = quick ]; then FLAGS=(--quick); fi
+          python phase_junction_network/construction/coherent_junction/solve_coherent_junction.py "${FLAGS[@]}" --output /tmp/coherent.json
+          python - <<'PY'
+          import json, math, hashlib
+          from pathlib import Path
+          root=Path('phase_junction_network')
+          frozen=json.loads((root/'construction/coherent_junction/results_full.json').read_text())
+          fresh=json.loads(Path('/tmp/coherent.json').read_text())
+          for key in ('one_winding_return_rho','normalized_m3','raw_static_bridge_slope','flat_induced_kinetic_residue'):
+              assert math.isclose(fresh['ring_solution'][key],frozen['ring_solution'][key],rel_tol=1e-9,abs_tol=1e-12)
+          assert fresh['archived_multipair_sha256']==frozen['archived_multipair_sha256']
+          # Frozen hashes describe the reviewed source, not all future revisions.
+          assert not fresh['coherent_matter_solution']['full_microscopic_coordinate_Ward_identity_solved']
+          assert not fresh['coherent_matter_solution']['physical_gravity_formula_derived']
+          PY
+          git diff --exit-code
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coherent-${{ matrix.mode }}
+          path: /tmp/coherent.json
+          retention-days: 30
