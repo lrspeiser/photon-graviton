@@ -1,0 +1,101 @@
+{
+  "checks": {
+    "central_regulator_converges_quadratically": true,
+    "exact_heavy_elimination": true,
+    "finite_clifford_area_identity": true,
+    "flat_reference_cancellation": true,
+    "linear_area_curvature_vertex": true,
+    "local_frame_covariance": true,
+    "spectral_palatini_identity": true
+  },
+  "claim_boundary": {
+    "established": [
+      "an exact finite heavy-state elimination with a frame-area entrance port",
+      "a flat-reference cancellation inside the microscopic Hamiltonian",
+      "a fixed anticommutator area-curvature vertex at first order",
+      "the exact three-dimensional Palatini identity for the same finite Clifford area",
+      "an absolute curvature coefficient kappa/4 including the coherent ring residue"
+    ],
+    "not_established": [
+      "uniqueness of the area-port architecture",
+      "a complete finite quantum nonlinear gravity Hamiltonian",
+      "local finite-lattice diffeomorphism closure",
+      "the temporal/kinetic term from the same coherent parent",
+      "strong-field solutions, Newton's constant, or empirical validity"
+    ]
+  },
+  "coherent_junction": {
+    "absolute_curvature_gain_kappa": 2.854012469780666e-06,
+    "alpha": 1.0187089764549548,
+    "central_derivative_epsilons": [0.002, 0.004, 0.008, 0.016],
+    "central_derivative_error_power": 2.0000100685610476,
+    "central_derivative_errors": [
+      3.730534201310353e-12,
+      1.4922845076778784e-11,
+      5.969066185988246e-11,
+      2.3876070107668013e-10
+    ],
+    "exact_zero_energy_schur_rule": "H_LR=-(x^2/2) B [G_00(W)-G_00(I)]^dagger",
+    "linear_vertex": "d H_area/d epsilon|0=-(kappa/2){B,F}, W=exp(i epsilon F)",
+    "maximum_errors": {
+      "diagonal_low_blocks": 0.0,
+      "flat_holonomy": 0.0,
+      "schur_block": 1.1080342425745527e-17,
+      "unitary_covariance": 3.805658712102426e-18
+    },
+    "rho": 0.0003133951506985591,
+    "transport_quadrature": "H_area=(i/2)(H_LR-H_LR^dagger)",
+    "x": 0.13554178509861228
+  },
+  "derived_scalar_curvature_coefficient": {
+    "b_equals_kappa_over_four": 7.135031174451665e-07,
+    "candidate_density": "H_curvature=-b sqrt(det g) R",
+    "convention": "energy is tr(H_area)/4 in the four-component Clifford block"
+  },
+  "module": "phase_junction_network/construction/coherent_junction/check_frame_area_vertex.py",
+  "next_gate": "Use the derived b=kappa/4 with the inherited kinetic residue to test the exact nonlinear scalar/vector constraint algebra, unprojected evolution, and nonlinear mode count.",
+  "palatini_geometry": {
+    "central_difference_error_power": -1.983393543596669,
+    "central_difference_rows": [
+      {
+        "L": 12,
+        "relative_matrix_area_error": 2.2986632449661237e-16,
+        "relative_palatini_error": 0.0002776647691392658,
+        "spin_connection_antisymmetry_error": 0.0022933244200055527
+      },
+      {
+        "L": 16,
+        "relative_matrix_area_error": 2.2870591835519387e-16,
+        "relative_palatini_error": 0.00015791689378206737,
+        "spin_connection_antisymmetry_error": 0.0013029828642520257
+      },
+      {
+        "L": 24,
+        "relative_matrix_area_error": 2.354562817130702e-16,
+        "relative_palatini_error": 7.074417297853049e-05,
+        "spin_connection_antisymmetry_error": 0.000583254847284577
+      },
+      {
+        "L": 32,
+        "relative_matrix_area_error": 2.402337549276219e-16,
+        "relative_palatini_error": 3.990473704410775e-05,
+        "spin_connection_antisymmetry_error": 0.00032890128638947533
+      },
+      {
+        "L": 48,
+        "relative_matrix_area_error": 2.406623498451131e-16,
+        "relative_palatini_error": 1.777088221835772e-05,
+        "spin_connection_antisymmetry_error": 0.00014643924869570075
+      }
+    ],
+    "identity": "sum_{i<j} tr(B^{ij} F_{ij})=epsilon^{ijk} e_i^a F_{jk}^a=sqrt(det g) R",
+    "smooth_spectral_control": {
+      "relative_matrix_area_error": 2.2718052111357645e-16,
+      "relative_palatini_error": 2.379588872663721e-14,
+      "spin_connection_antisymmetry_error": 7.45179712448188e-14
+    }
+  },
+  "run_mode": "full",
+  "stage_pass": true,
+  "status": "Stage 5B PASS: the coherent junction derives a first-order frame-area curvature vertex with fixed absolute amplitude"
+}
