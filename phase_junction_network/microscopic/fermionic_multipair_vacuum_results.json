@@ -1,0 +1,254 @@
+{
+  "checks": {
+    "coupling_scan_monotonic": true,
+    "decoupled_control_zero": true,
+    "fermion_exchange_phase_is_minus_one": true,
+    "fermionic_car_exact": true,
+    "finite_cone_shift_is_small_but_nonzero": true,
+    "ground_is_vacuum_dominated": true,
+    "higher_pair_probabilities_are_hierarchical": true,
+    "local_continuity_exact": true,
+    "longitudinal_external_mode_is_pure_gauge": true,
+    "multipair_series_converges": true,
+    "neutral_fock_sector_counts": true,
+    "nonzero_momentum_operator_ward_exact": true,
+    "nonzero_momentum_spectral_ward": true,
+    "pair_creation_is_pauli_nilpotent": true,
+    "pair_gap_suppresses_polarization": true,
+    "photon_residue_retained": true,
+    "same_unit_pair_completion": true,
+    "signed_translation_symmetry_exact": true,
+    "transverse_operator_momentum_character": true,
+    "transverse_virtual_response_nonzero": true
+  },
+  "claim_boundary": {
+    "established": [
+      "an exact antisymmetric neutral fermion Fock space through four pairs on the finite patch",
+      "canonical anticommutation, exchange sign, and Pauli blocking",
+      "exact signed translation symmetry",
+      "exact local and nonzero-momentum Ward identities in the multipair theory",
+      "longitudinal pure-gauge invariance and nonzero transverse multipair polarization",
+      "convergence of the one-pair truncation toward the complete finite Fock result",
+      "controlled dependence on pair gap and pair-creation strength without a new counterterm"
+    ],
+    "not_established": [
+      "the full fifth-dimensional domain-wall multiplet in the interacting patch",
+      "mirror-wall removal or symmetric mass generation",
+      "volume scaling beyond the 2x2 torus",
+      "an infinite-volume fermion determinant or charge-renormalization flow",
+      "matching matter-loop renormalization of the frame cone",
+      "3+1D interacting QED, nonlinear gravity, or observed matter"
+    ]
+  },
+  "coefficients": {
+    "completion_coefficient": 1.0,
+    "new_counterterms": 0,
+    "pair_creation_coupling_over_Delta": 0.0338029748033,
+    "pair_gap_over_Delta": 1.0
+  },
+  "decoupled_control": {
+    "exact_longitudinal_unitary_equivalence_residual": 4.965068306494546e-16,
+    "longitudinal_curvature": -7.28583859910259e-11,
+    "mixed_curvature": -4.336808689942018e-12,
+    "transversality_ratio": 1.5,
+    "transverse_curvature": -4.85722573273506e-11
+  },
+  "fermion_algebra": {
+    "maximum_canonical_anticommutator_residual": 0.0,
+    "maximum_pair_creation_nilpotency_residual": 0.0,
+    "two_creation_exchange_phase": -1.0
+  },
+  "full_multipair_result": {
+    "dimension": 6336,
+    "ground_energy": -0.0201420890560503,
+    "mean_pair_number": 0.008271536391094843,
+    "pair_distribution": {
+      "0": 0.9917488632871236,
+      "1": 0.008230753237671,
+      "2": 2.0367277428805135e-05,
+      "3": 1.619246886314902e-08,
+      "4": 5.289910928446748e-12
+    },
+    "photon_gap": 0.017881651602332006,
+    "photon_gap_shift_from_pure_gauge": 2.219540449527671e-05,
+    "photon_multiplicity": 2,
+    "photon_residue": 0.9876495825106304,
+    "sector_counts": {
+      "0": 115,
+      "1": 1484,
+      "2": 3138,
+      "3": 1484,
+      "4": 115
+    }
+  },
+  "lattice": {
+    "full_neutral_fock_dimension": 6336,
+    "maximum_pairs_in_run": 4,
+    "negative_fermion_modes": 4,
+    "positive_fermion_modes": 4,
+    "shape": [2, 2],
+    "spin1_links": 8
+  },
+  "module": "phase_junction_network/microscopic/check_fermionic_multipair_vacuum.py",
+  "multipair_convergence": {
+    "finite_photon_cone_fractional_shift": 0.0012427816530027336,
+    "full_minus_one_pair_gap": -3.1435019980791123e-07,
+    "full_photon_gap_shift": 2.219540449527671e-05,
+    "interpretation": "The full antisymmetric Fock space changes the one-pair photon shift only slightly. A matching frame-loop calculation is still required before claiming common-cone radiative stability.",
+    "one_pair_photon_gap_shift": 2.250975469508462e-05,
+    "relative_correction_to_one_pair_shift": -0.013965065548961972
+  },
+  "next_gate": "Couple the finite domain-wall light and mirror modes to this exact antisymmetric Fock construction, then compare photon and frame self-energies from the same matter loop and test whether the shared cone is radiatively stable without a new counterterm.",
+  "pair_coupling_scan": [
+    {
+      "dimension": 6336,
+      "mean_pair_number": 0.0005195486934644329,
+      "pair_coupling_scale": 0.25,
+      "photon_gap": 0.017860933372365415,
+      "photon_gap_shift_from_pure_gauge": 1.4771745286863702e-06,
+      "photon_residue": 0.9892132041553843
+    },
+    {
+      "dimension": 6336,
+      "mean_pair_number": 0.002076139501682628,
+      "pair_coupling_scale": 0.5,
+      "photon_gap": 0.017865293316121304,
+      "photon_gap_shift_from_pure_gauge": 5.837118284574699e-06,
+      "photon_residue": 0.9888999051892595
+    },
+    {
+      "dimension": 6336,
+      "mean_pair_number": 0.004663588764480648,
+      "pair_coupling_scale": 0.75,
+      "photon_gap": 0.017872320268463023,
+      "photon_gap_shift_from_pure_gauge": 1.2864070626294327e-05,
+      "photon_residue": 0.9883783499584183
+    },
+    {
+      "dimension": 6336,
+      "mean_pair_number": 0.008271536391094911,
+      "pair_coupling_scale": 1.0,
+      "photon_gap": 0.01788165160233099,
+      "photon_gap_shift_from_pure_gauge": 2.2195404494260162e-05,
+      "photon_residue": 0.9876495825106327
+    }
+  ],
+  "pair_gap_scaling": {
+    "domain_wall_first_doubler_gap_control": 1.1674499031546928,
+    "mean_pair_number_power": -2.1241770956420574,
+    "transverse_polarization_power": -3.146346684784043
+  },
+  "pair_gap_scan": [
+    {
+      "pair_gap_over_Delta": 0.75,
+      "mean_pair_number": 0.015483147111165965,
+      "photon_gap": 0.018306408279777545,
+      "photon_residue": 0.9848838502547742,
+      "static_polarization": {
+        "longitudinal_curvature": 3.469446951953614e-12,
+        "transverse_curvature": 0.0003546731276726778,
+        "transversality_ratio": 9.782097038813472e-09,
+        "exact_longitudinal_unitary_equivalence_residual": 4.577566798522237e-16
+      }
+    },
+    {
+      "pair_gap_over_Delta": 1.0,
+      "mean_pair_number": 0.008271536391094885,
+      "photon_gap": 0.017881651602331905,
+      "photon_residue": 0.9876495825106321,
+      "static_polarization": {
+        "longitudinal_curvature": -3.226585665316861e-10,
+        "transverse_curvature": 0.00013986847097191557,
+        "transversality_ratio": 2.3068713362604305e-06,
+        "exact_longitudinal_unitary_equivalence_residual": 4.965068306494546e-16
+      }
+    },
+    {
+      "pair_gap_over_Delta": 1.1674499031546928,
+      "mean_pair_number": 0.005964530504653271,
+      "photon_gap": 0.017712736087995187,
+      "photon_residue": 0.9886141668661802
+    },
+    {
+      "pair_gap_over_Delta": 1.25,
+      "mean_pair_number": 0.005171123464057454,
+      "photon_gap": 0.017647994358187168,
+      "photon_residue": 0.9889624910715835
+    },
+    {
+      "pair_gap_over_Delta": 1.5,
+      "mean_pair_number": 0.003545524539285038,
+      "photon_gap": 0.017499087763756714,
+      "photon_residue": 0.9897174449597963,
+      "static_polarization": {
+        "longitudinal_curvature": 3.5735303605122226e-10,
+        "transverse_curvature": 3.9948768251751865e-05,
+        "transversality_ratio": 8.945282963400288e-06,
+        "exact_longitudinal_unitary_equivalence_residual": 9.155133597044475e-16
+      }
+    }
+  ],
+  "pair_number_truncation": [
+    {
+      "max_pairs": 1,
+      "dimension": 1599,
+      "mean_pair_number": 0.008233387089380897,
+      "photon_gap": 0.017881965952531814,
+      "photon_gap_shift_from_pure_gauge": 2.250975469508462e-05,
+      "photon_residue": 0.987655847203148,
+      "static_polarization": {
+        "transverse_curvature": 0.00014107384184447458,
+        "transversality_ratio": 2.7052440036022537e-07
+      }
+    },
+    {
+      "max_pairs": 2,
+      "dimension": 4737,
+      "mean_pair_number": 0.00827149139630095,
+      "photon_gap": 0.01788165199479153,
+      "photon_gap_shift_from_pure_gauge": 2.2195796954799923e-05,
+      "photon_residue": 0.9876495842165613
+    },
+    {
+      "max_pairs": 3,
+      "dimension": 6221,
+      "mean_pair_number": 0.008271536341826615,
+      "photon_gap": 0.017881651601343546,
+      "photon_gap_shift_from_pure_gauge": 2.2195403506817396e-05,
+      "photon_residue": 0.9876495825010143
+    },
+    {
+      "max_pairs": 4,
+      "dimension": 6336,
+      "mean_pair_number": 0.008271536391094843,
+      "photon_gap": 0.017881651602332006,
+      "photon_gap_shift_from_pure_gauge": 2.219540449527671e-05,
+      "photon_residue": 0.9876495825106304,
+      "static_polarization": {
+        "transverse_curvature": 0.00013986847097191557,
+        "transversality_ratio": 2.3068713362604305e-06
+      }
+    }
+  ],
+  "run_mode": "full",
+  "stage_pass": true,
+  "static_polarization": {
+    "exact_longitudinal_unitary_equivalence_residual": 4.965068306494546e-16,
+    "longitudinal_curvature": -3.226585665316861e-10,
+    "mixed_curvature": -5.074066167232161e-11,
+    "transversality_ratio": 2.3068713362604305e-06,
+    "transverse_curvature": 0.00013986847097191557
+  },
+  "status": "Stage 3I PASS at finite antisymmetric multipair scope",
+  "translation": {
+    "maximum_signed_translation_commutator": 0.0,
+    "transverse_operator_character_x": -1.0,
+    "transverse_operator_character_y": 1.0
+  },
+  "ward_identity": {
+    "maximum_local_continuity_residual": 0.0,
+    "maximum_low_spectral_ward_residual": 2.3061769328829818e-17,
+    "operator_ward_residual": 8.279340978903994e-18,
+    "rho_k_norm_on_ground": 0.12843262786472778
+  }
+}
