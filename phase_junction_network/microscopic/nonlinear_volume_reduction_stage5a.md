@@ -122,7 +122,7 @@ Project an arbitrary momentum to
 \pi_T^{ij}
 =
 \pi^{ij}
--rac13(g_{kl}\pi^{kl})g^{ij}.
+-\frac{1}{3}(g_{kl}\pi^{kl})g^{ij}.
 }
 \]
 
