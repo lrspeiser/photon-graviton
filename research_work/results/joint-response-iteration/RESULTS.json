@@ -1,0 +1,121 @@
+{
+  "experiment": "JR-1",
+  "date": "2026-09-21",
+  "baseline_commit": "c22d188949874ea0ef05b7e782d341973d421385",
+  "protocol_commit": "7267c709ace23af6afa56cadd04688c85285cf12",
+  "candidate_count": 12,
+  "candidate_optimizer_starts": 38,
+  "additional_baryon_control_starts": 3,
+  "execution": "Local working container; CPython 3.13.5, NumPy 2.3.5, SciPy 1.17.0. GitHub Actions run 35663965932 exported input data only.",
+  "scope": "Effective source-linked envelope fitting; no microscopic, energy-supply, full lens-image, Solar-system, cluster, gravitational-wave or transient validation",
+  "original_frozen_model": "R9_spheroid_shape_stellar_priors",
+  "latest_substantive_candidate": "R10_spheroid_stellar_population",
+  "R10_status": "Designed after R9 comparison results were exposed; optimization uses original training subset, but comparison performance is not new independent confirmation",
+  "R11_status": "One extra universal temporal-spatial response parameter adds negligible improvement; retain simpler R10",
+  "R11_gamma_chi": 1.0058271473790106,
+  "R10_free_parameters": 20,
+  "R10_parameter_breakdown": "10 universal field/source coefficients and 10 stellar-population/orbit nuisance parameters; no independent per-galaxy companion amplitudes",
+  "R10_parameters": {
+    "logA": 4.003966354086798,
+    "logc": 0.40696294621254714,
+    "p": 0.5262342449687079,
+    "dA": -0.0646633940641299,
+    "dc": 0.22523131090025836,
+    "q": 1.8906354271311694,
+    "logt": 1.1596824778910269,
+    "logu": -0.02126541905803754,
+    "beta": 0.0,
+    "logP0": -2.0,
+    "betainf": 0.0,
+    "logra": 0.0,
+    "logsph": 0.7327392881137837,
+    "core_sph": 1.652351039619069,
+    "q_sph": 1.6760087204080696,
+    "dm_J0037_0942": 0.07760034308044238,
+    "b_J0037_0942": 0.3499999999985152,
+    "dm_J1112p0826": 0.15843984042906145,
+    "b_J1112p0826": -0.13765140184195154,
+    "dm_J1204p0358": 0.13793213980339858,
+    "b_J1204p0358": 0.34845247700610804,
+    "dm_J1402p6321": 0.06199440211306726,
+    "b_J1402p6321": 0.21112622170238576,
+    "logusph": -0.10889793445059864
+  },
+  "R10_bounds_touched": ["b_J0037_0942"],
+  "R10_fitted_lenses": {
+    "galaxies": 4,
+    "radial_bins": 27,
+    "mean_stellar_RMSE_kms": 4.146042177088669,
+    "mean_stellar_fractional_RMS": 0.015630581846467796,
+    "stellar_chi_square": 75.6663880041848,
+    "einstein_angle_fractional_RMS": 0.052573915793906904
+  },
+  "R10_optimizer_excluded_lenses": {
+    "galaxies": 2,
+    "radial_bins": 13,
+    "mean_stellar_RMSE_kms": 7.00988911304724,
+    "mean_stellar_fractional_RMS": 0.02660228938467503,
+    "stellar_chi_square": 52.56179347649342,
+    "einstein_angle_fractional_RMS": 0.11567334781908181,
+    "caveat": "Previously exposed before this formulation was chosen; not fresh independent validation"
+  },
+  "R10_lens_predictions": [
+    {"name":"J0037-0942","role":"fit","observed_angle_arcsec":1.53,"predicted_angle_arcsec":1.569390109078208,"stellar_fractional_RMS":0.012402378950980944},
+    {"name":"J1112+0826","role":"fit","observed_angle_arcsec":1.49,"predicted_angle_arcsec":1.3488427289137168,"stellar_fractional_RMS":0.016928868101493615},
+    {"name":"J1204+0358","role":"fit","observed_angle_arcsec":1.31,"predicted_angle_arcsec":1.3451437981377614,"stellar_fractional_RMS":0.013678336021644718},
+    {"name":"J1402+6321","role":"fit","observed_angle_arcsec":1.35,"predicted_angle_arcsec":1.3856808175164588,"stellar_fractional_RMS":0.019512744311751904},
+    {"name":"J1621+3931","role":"excluded","observed_angle_arcsec":1.29,"predicted_angle_arcsec":1.1365331830439223,"stellar_fractional_RMS":0.03498895112080083},
+    {"name":"J1630+4520","role":"excluded","observed_angle_arcsec":1.78,"predicted_angle_arcsec":1.5801351448696819,"stellar_fractional_RMS":0.018215627648549223}
+  ],
+  "R10_SPARC": {
+    "train":{"galaxies":89,"rows":1989,"mean_galaxy_RMSE_kms":18.633091722123694,"median_galaxy_fractional_RMS":0.1709862113653163,"raw_chi_square":142048.61538198558},
+    "validation":{"galaxies":29,"rows":521,"mean_galaxy_RMSE_kms":17.683662067606903,"median_galaxy_fractional_RMS":0.14022024564021265,"raw_chi_square":20378.0855296921},
+    "comparison":{"galaxies":31,"rows":642,"mean_galaxy_RMSE_kms":15.08921617573822,"median_galaxy_fractional_RMS":0.11367769590520545,"raw_chi_square":48774.04292391207,"below_10_percent_fractional_RMS":12,"below_20_percent_fractional_RMS":22}
+  },
+  "preserved_R9_transfer": {
+    "SPARC_comparison_mean_galaxy_RMSE_kms":15.257903981384912,
+    "two_lens_stellar_fractional_RMS":0.032081799048446345,
+    "two_lens_einstein_angle_fractional_RMS":0.1357042706917374,
+    "caveat":"Excluded from this fit/selection, but historically examined in prior project work; not brand-new blind data"
+  },
+  "initial_R0": {
+    "fitted_lens_stellar_fractional_RMS":0.3940755861260741,
+    "fitted_lens_angle_fractional_RMS":0.6038024790208449,
+    "comparison_SPARC_mean_RMSE_kms":14.393207011497138,
+    "caveat":"Later joint models improve lenses dramatically but do not beat this initial model on comparison-disk velocity RMSE"
+  },
+  "numerical_checks": {
+    "maximum_stellar_refinement_relative_R9":0.0001457241459154046,
+    "maximum_angle_refinement_relative_R9":0.0000067457105337176415,
+    "maximum_independent_lens_quadrature_relative_difference_R9":1.2205636501505523e-10,
+    "maximum_source_integral_relative_difference":6.661338147750939e-16,
+    "no_refit_R9_R10_R11_summary_values_compared":120,
+    "maximum_no_refit_summary_scaled_difference":0.0,
+    "input_hashes_verified":10
+  },
+  "exchange_clock": {
+    "rate_scale_min":1e-12,
+    "rate_scale_max":1e12,
+    "largest_stationary_population_relative_change":1.1102230246251565e-16,
+    "interpretation":"Common rate rescaling changes relaxation time, not stationary occupation. Static data do not determine this clock; no claim that time disappears or propagation is instantaneous."
+  },
+  "input_sha256": {
+    "temporal_candidate_audit/data/Rotmod_LTG.zip":"0a80cc90714828cc28b7dd57923576714d209f2490328c087c4a4ad607faf588",
+    "temporal_candidate_audit/data/SPARC_Lelli2016c.mrt":"5aa0501f6b0d881fa579030e315e7b5b6ef561a5bd3a07472f9929c7e5728243",
+    "research_work/results/companion-extensions/mond-inventory-results.json":"757be04fb8603910c55c0870893fe6525c186df0be135026894a0d97f984e753",
+    "research_work/results/lensing-data-readiness/lens-observations-and-image-models.json":"e2fa68a8f6a8736f490d742856809b26f14cd5ab14de10dc0ea870e0be2b2a5d",
+    "research_work/results/lensing-data-readiness/conditional-geometry.json":"b68ac0cff2970a83ba8c2f49b4a6e39d6216b31c3a17a75f0554f2a0054451af",
+    "research_work/results/slacs-light-profile-audit/results.json":"7018d93494858c84a482b0f2951ee2175237be700ab5a51c7404d4b7a8a56c01",
+    "research_work/results/slacs-resolved-input-audit/results.json":"f04541d9ba2890367d47332d0d54b1e9801e7e35c0a4e854b75ca218747e63dd",
+    "research_work/results/lens-photometric-audit/normalization-sensitivity.json":"59fc810ee472eace3adc85d07ce9f9ec8a405689074a5248e95d743fc2834005",
+    "research_work/results/slacs-component-refit/model.py":"6f9c79fe74144c6217978f8c477f33b0ce923cf4861f09ea4af066120eab0d39",
+    "research_work/results/slacs-resolved-fit/model.py":"091c1af40427bcb19e7897332fa3f92a5092934b55b1dd5eb8543c58b57ba8d9"
+  },
+  "code_sha256": {
+    "run.py":"aaf0de13cb045a33401b59ec1ecf38a9269b73d0e9b50b743b2fafe160e89a7b",
+    "audit.py":"4ff0e5bae1076f6d3b3cf4a6528dc7b0b239231cd9f0fb1f4c3727e8cbbed369",
+    "population_followup.py":"2a9dc99062ad39ea5af39f60cc5077d44601939bd85a0696126aba2ee6707945",
+    "metric_followup.py":"2e279b4c21e62e75fe4894fb9e466eb279e14db07cbe6520f1b7b14976c437bf"
+  },
+  "full_evidence":"Every candidate's parameters, optimizer starts, observational arrays, predictions, source snapshots, logs and numerical audits are retained in the complete originating-conversation JR-1 package. This file is a compact record, not that full archive."
+}
