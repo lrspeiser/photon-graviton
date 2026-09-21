@@ -62,6 +62,9 @@ jobs:
             --output /tmp/shared_junction_move_results.json
           python phase_junction_network/microscopic/check_shared_move_embedding.py \
             --output /tmp/shared_move_embedding_results.json
+          python phase_junction_network/microscopic/check_collective_capacitance.py \
+            --quick \
+            --output /tmp/collective_capacitance_results.json
 
       - name: Check finite chiral matter endpoint
         run: |
