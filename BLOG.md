@@ -3,7 +3,7 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 5).** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 6).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
@@ -345,6 +345,23 @@ support — distinguishes the two regimes. Only the sheer size of the system doe
 is a strong hint, because a scale-dependent trapping length is exactly what a stream
 that is produced and re-absorbed should have.
 
+### 3.10 The Milky Way, with nothing refitted
+
+*Data: 542 Cepheids in twelve radial bins, `research_work/results/milky-way-depth-capture/`.
+`a₀` fitted on SPARC only and never adjusted here.*
+
+| | RMS against the measured rotation proxy |
+|---|---:|
+| Visible matter alone | 75.24 km/s |
+| **This law, zero parameters refitted** | **15.71 km/s** |
+| An earlier model *fitted to this data* | 8.76 km/s |
+
+Mean fractional error 6.4%, against a law calibrated on 149 other galaxies.
+
+But the residual is **not scatter**: all twelve bins are under-predicted, by 7 to 22
+km/s. That systematic needs explaining — most likely the baryonic mass model or the
+Jeans proxy, possibly real — and it is recorded here rather than averaged away.
+
 ---
 
 ## 4. Why this beats the alternatives
@@ -433,6 +450,10 @@ can be killed fastest, which is the point.
 * **`a₀` is measured, not derived.** No part of this work explains its value.
 
 ---
+
+**Publication roadmap:** [PAPER-ROADMAP.md](PAPER-ROADMAP.md) sets out what stands
+between this notebook and a paper, including one contradiction at the centre of the
+argument that has to be resolved first.
 
 *Scripts, data hashes and full numerical output for every claim live under
 `research_work/results/`. Each experiment directory carries its own README with the
