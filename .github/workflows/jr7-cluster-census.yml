@@ -1,0 +1,55 @@
+name: JR-7 cluster characteristics
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/jr7-cluster-census.yml'
+permissions:
+  contents: read
+jobs:
+  census:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read pinned cluster profiles and measure coverage and thermal contrasts
+        shell: python
+        run: |
+          from pathlib import Path
+          import json, hashlib, math, shutil
+          source=Path('research_work/results/path-memory/cl2-inputs-xcop-profiles.json')
+          d=json.loads(source.read_text());out=Path('/tmp/jr7-clusters');out.mkdir()
+          rows=[]
+          for name,c in d['clusters'].items():
+              density=c['density'];temp=c['temperature'];pressure=c['pressure']
+              r=[(a+b)/2 for a,b in zip(density['r_in_kpc'],density['r_out_kpc'])]
+              def nearest(target):
+                  i=min(range(len(r)),key=lambda i:abs(r[i]-target))
+                  return {'requested_kpc':target,'shell_midpoint_kpc':r[i],'ne_cm3':density['ne_cm3'][i]}
+              positiveT=[t*temp['T500_keV'] for t in temp['xray']['T_over_T500'] if t>0]
+              rho100,rho500=nearest(100),nearest(500)
+              values=sorted(positiveT);n=len(values);median=(values[(n-1)//2]+values[n//2])/2
+              rows.append({'name':name,'redshift':c['header']['z'],'density_shells':len(r),
+                'radius_range_kpc':[min(r),max(r)],'xray_temperature_points':len(positiveT),
+                'temperature_range_keV':[min(values),max(values)],'median_xray_temperature_keV':median,
+                'xray_pressure_points':len(pressure['xray']['r_over_R500']),
+                'sz_pressure_points':len(pressure['sz']['r_over_R500']),
+                'density_near_100kpc':rho100,'density_near_500kpc':rho500,
+                'density_ratio_near_100_over_500':rho100['ne_cm3']/rho500['ne_cm3'],
+                'stellar_profile_keys':[k for k in c if 'star' in k.lower()],
+                'profile_keys':list(c),
+                'unavailable_in_this_extract':['resolved gas velocity vectors','stellar velocity field','angular gas-light offset','matched strong/weak lens image likelihood','3D inclination','magnetic orientation']})
+          result={'scope':'Descriptive census of archived release products, not a new cluster gravity fit',
+             'input_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'input_provenance':d['provenance'],
+             'excluded_from_source_inference':['hydrostatic masses','NFW/Einasto mass reconstructions','gas fractions using inferred total mass'],
+             'caveat':'Distances, deprojection, thermal spectral models and T500/P500 normalizations retain release assumptions; nearest shells are reported, not silently interpolated.',
+             'clusters':rows}
+          (out/'results.json').write_text(json.dumps(result,indent=2,allow_nan=False)+'\n')
+          shutil.copy2(source,out/source.name)
+          print(json.dumps(result,indent=2),flush=True)
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jr7-cluster-census-${{ github.sha }}
+          path: /tmp/jr7-clusters
+          if-no-files-found: error
