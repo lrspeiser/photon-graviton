@@ -1,0 +1,1507 @@
+{
+  "experiment": "JR-9F",
+  "protocol": "../PROTOCOL.md",
+  "scope": "One matter-assisted kernel replacing two independently chosen rate laws. Shape and scaling derived; matrix element and gravitational source not.",
+  "constants": {
+    "collision_cross_section_cm2": 1e-15,
+    "mean_particle_mass_mH": 1.4,
+    "reference_photon_angular_frequency_rad_s": 3424821031470642.0
+  },
+  "reduced_example_check": {
+    "note": "Starter convention: z = p_R - p_X relaxes at 2k. Verified against the exact slow pole of the three-variable Bloch system.",
+    "rows": [
+      {
+        "u": 0.02,
+        "delta": 1.0,
+        "gamma": 0.1,
+        "rate_k": 7.920792079207921e-05,
+        "population_difference_decay_2k": 0.00015841584158415842,
+        "exact_slow_pole": 0.00015817022499697625,
+        "relative_difference": -0.0015504547065874341
+      },
+      {
+        "u": 0.02,
+        "delta": 1.0,
+        "gamma": 1.0,
+        "rate_k": 0.0004,
+        "population_difference_decay_2k": 0.0008,
+        "exact_slow_pole": 0.0007999997437952822,
+        "relative_difference": -3.2025589724593573e-07
+      },
+      {
+        "u": 0.02,
+        "delta": 1.0,
+        "gamma": 10.0,
+        "rate_k": 7.920792079207921e-05,
+        "population_difference_decay_2k": 0.00015841584158415842,
+        "exact_slow_pole": 0.00015841830152383177,
+        "relative_difference": 1.552836918805589e-05
+      }
+    ],
+    "worst_relative_difference": 0.0015504547065874341
+  },
+  "scale_separation": {
+    "note": "Collisional dephasing is ~20 orders of magnitude below the optical Doppler shift, so the Lorentzian is a delta function against the medium velocity spread and the rate samples the velocity profile itself.",
+    "rows": [
+      {
+        "phase": "cold molecular cloud",
+        "n_cm3": 1000.0,
+        "T_K": 20.0,
+        "Gamma_per_s": 5.4797883661727706e-08,
+        "Q_dot_v_per_s_at_200kms": 2284794657156.213,
+        "ratio_Gamma_over_Qv": 2.3983723653281084e-20,
+        "lorentzian_velocity_half_width_kms": 4.796744730656216e-18
+      },
+      {
+        "phase": "cold neutral medium",
+        "n_cm3": 30.0,
+        "T_K": 80.0,
+        "Gamma_per_s": 3.287873019703663e-09,
+        "Q_dot_v_per_s_at_200kms": 2284794657156.213,
+        "ratio_Gamma_over_Qv": 1.4390234191968652e-21,
+        "lorentzian_velocity_half_width_kms": 2.8780468383937306e-19
+      },
+      {
+        "phase": "warm neutral medium",
+        "n_cm3": 0.3,
+        "T_K": 8000.0,
+        "Gamma_per_s": 3.287873019703662e-10,
+        "Q_dot_v_per_s_at_200kms": 2284794657156.213,
+        "ratio_Gamma_over_Qv": 1.439023419196865e-22,
+        "lorentzian_velocity_half_width_kms": 2.87804683839373e-20
+      },
+      {
+        "phase": "hot halo gas",
+        "n_cm3": 0.001,
+        "T_K": 1000000.0,
+        "Gamma_per_s": 1.2253179289074824e-11,
+        "Q_dot_v_per_s_at_200kms": 2284794657156.213,
+        "ratio_Gamma_over_Qv": 5.3629236442306096e-24,
+        "lorentzian_velocity_half_width_kms": 1.0725847288461219e-21
+      }
+    ]
+  },
+  "narrow_lorentzian_limit_check": {
+    "lorentzian_over_profile_width": 0.001,
+    "gamma_used_per_s": 91391786.28624852,
+    "numerical_velocity_average": 2.5546102011791017e-17,
+    "analytic_profile_limit": 2.5565037703546616e-17,
+    "relative_difference": -0.0007406870263669818
+  },
+  "directional_response": {
+    "bulk_flow_kms": 200.0,
+    "resonance_velocity_kms": 60.0,
+    "note": "Identical density, temperature, inventory and illumination throughout. Only the angle between the flow and the sightline changes.",
+    "angular_pattern": [
+      {
+        "cos_angle": -1.0,
+        "projected_flow_kms": -200.0,
+        "offset_in_widths": 32.455181941885584,
+        "log10_rate_relative": -239.29203832613862
+      },
+      {
+        "cos_angle": -0.95,
+        "projected_flow_kms": -190.0,
+        "offset_in_widths": 31.206905713351524,
+        "log10_rate_relative": -222.0358094639183
+      },
+      {
+        "cos_angle": -0.9,
+        "projected_flow_kms": -180.0,
+        "offset_in_widths": 29.95862948481746,
+        "log10_rate_relative": -205.45629545903992
+      },
+      {
+        "cos_angle": -0.85,
+        "projected_flow_kms": -170.0,
+        "offset_in_widths": 28.7103532562834,
+        "log10_rate_relative": -189.55349631150358
+      },
+      {
+        "cos_angle": -0.8,
+        "projected_flow_kms": -160.0,
+        "offset_in_widths": 27.46207702774934,
+        "log10_rate_relative": -174.3274120213092
+      },
+      {
+        "cos_angle": -0.75,
+        "projected_flow_kms": -150.0,
+        "offset_in_widths": 26.213800799215278,
+        "log10_rate_relative": -159.77804258845677
+      },
+      {
+        "cos_angle": -0.7,
+        "projected_flow_kms": -140.0,
+        "offset_in_widths": 24.965524570681218,
+        "log10_rate_relative": -145.90538801294633
+      },
+      {
+        "cos_angle": -0.6499999999999999,
+        "projected_flow_kms": -129.99999999999997,
+        "offset_in_widths": 23.717248342147155,
+        "log10_rate_relative": -132.70944829477784
+      },
+      {
+        "cos_angle": -0.6,
+        "projected_flow_kms": -120.0,
+        "offset_in_widths": 22.4689721136131,
+        "log10_rate_relative": -120.19022343395139
+      },
+      {
+        "cos_angle": -0.55,
+        "projected_flow_kms": -110.00000000000001,
+        "offset_in_widths": 21.220695885079035,
+        "log10_rate_relative": -108.34771343046683
+      },
+      {
+        "cos_angle": -0.5,
+        "projected_flow_kms": -100.0,
+        "offset_in_widths": 19.972419656544975,
+        "log10_rate_relative": -97.18191828432428
+      },
+      {
+        "cos_angle": -0.44999999999999996,
+        "projected_flow_kms": -89.99999999999999,
+        "offset_in_widths": 18.724143428010915,
+        "log10_rate_relative": -86.69283799552372
+      },
+      {
+        "cos_angle": -0.3999999999999999,
+        "projected_flow_kms": -79.99999999999999,
+        "offset_in_widths": 17.475867199476852,
+        "log10_rate_relative": -76.88047256406509
+      },
+      {
+        "cos_angle": -0.35,
+        "projected_flow_kms": -70.0,
+        "offset_in_widths": 16.227590970942792,
+        "log10_rate_relative": -67.74482198994846
+      },
+      {
+        "cos_angle": -0.29999999999999993,
+        "projected_flow_kms": -59.999999999999986,
+        "offset_in_widths": 14.979314742408729,
+        "log10_rate_relative": -59.28588627317378
+      },
+      {
+        "cos_angle": -0.25,
+        "projected_flow_kms": -50.0,
+        "offset_in_widths": 13.73103851387467,
+        "log10_rate_relative": -51.50366541374111
+      },
+      {
+        "cos_angle": -0.19999999999999996,
+        "projected_flow_kms": -39.99999999999999,
+        "offset_in_widths": 12.482762285340609,
+        "log10_rate_relative": -44.39815941165039
+      },
+      {
+        "cos_angle": -0.1499999999999999,
+        "projected_flow_kms": -29.999999999999982,
+        "offset_in_widths": 11.234486056806546,
+        "log10_rate_relative": -37.96936826690164
+      },
+      {
+        "cos_angle": -0.09999999999999998,
+        "projected_flow_kms": -19.999999999999996,
+        "offset_in_widths": 9.986209828272488,
+        "log10_rate_relative": -32.21729197949488
+      },
+      {
+        "cos_angle": -0.04999999999999993,
+        "projected_flow_kms": -9.999999999999986,
+        "offset_in_widths": 8.737933599738424,
+        "log10_rate_relative": -27.141930549430075
+      },
+      {
+        "cos_angle": 0.0,
+        "projected_flow_kms": 0.0,
+        "offset_in_widths": 7.489657371204365,
+        "log10_rate_relative": -22.743283976707257
+      },
+      {
+        "cos_angle": 0.050000000000000044,
+        "projected_flow_kms": 10.000000000000009,
+        "offset_in_widths": 6.241381142670304,
+        "log10_rate_relative": -19.021352261326406
+      },
+      {
+        "cos_angle": 0.10000000000000009,
+        "projected_flow_kms": 20.000000000000018,
+        "offset_in_widths": 4.993104914136242,
+        "log10_rate_relative": -15.976135403287527
+      },
+      {
+        "cos_angle": 0.15000000000000013,
+        "projected_flow_kms": 30.00000000000003,
+        "offset_in_widths": 3.7448286856021795,
+        "log10_rate_relative": -13.60763340259062
+      },
+      {
+        "cos_angle": 0.20000000000000018,
+        "projected_flow_kms": 40.000000000000036,
+        "offset_in_widths": 2.4965524570681175,
+        "log10_rate_relative": -11.915846259235689
+      },
+      {
+        "cos_angle": 0.25,
+        "projected_flow_kms": 50.0,
+        "offset_in_widths": 1.248276228534061,
+        "log10_rate_relative": -10.900773973222734
+      },
+      {
+        "cos_angle": 0.30000000000000004,
+        "projected_flow_kms": 60.00000000000001,
+        "offset_in_widths": -8.869536064068917e-16,
+        "log10_rate_relative": -10.562416544551747
+      },
+      {
+        "cos_angle": 0.3500000000000001,
+        "projected_flow_kms": 70.00000000000001,
+        "offset_in_widths": -1.2482762285340627,
+        "log10_rate_relative": -10.900773973222735
+      },
+      {
+        "cos_angle": 0.40000000000000013,
+        "projected_flow_kms": 80.00000000000003,
+        "offset_in_widths": -2.4965524570681255,
+        "log10_rate_relative": -11.915846259235696
+      },
+      {
+        "cos_angle": 0.4500000000000002,
+        "projected_flow_kms": 90.00000000000003,
+        "offset_in_widths": -3.744828685602186,
+        "log10_rate_relative": -13.607633402590631
+      },
+      {
+        "cos_angle": 0.5,
+        "projected_flow_kms": 100.0,
+        "offset_in_widths": -4.993104914136244,
+        "log10_rate_relative": -15.97613540328753
+      },
+      {
+        "cos_angle": 0.55,
+        "projected_flow_kms": 110.00000000000001,
+        "offset_in_widths": -6.241381142670307,
+        "log10_rate_relative": -19.021352261326417
+      },
+      {
+        "cos_angle": 0.6000000000000001,
+        "projected_flow_kms": 120.00000000000001,
+        "offset_in_widths": -7.489657371204368,
+        "log10_rate_relative": -22.743283976707268
+      },
+      {
+        "cos_angle": 0.6500000000000001,
+        "projected_flow_kms": 130.00000000000003,
+        "offset_in_widths": -8.73793359973843,
+        "log10_rate_relative": -27.141930549430096
+      },
+      {
+        "cos_angle": 0.7000000000000002,
+        "projected_flow_kms": 140.00000000000003,
+        "offset_in_widths": -9.986209828272491,
+        "log10_rate_relative": -32.217291979494895
+      },
+      {
+        "cos_angle": 0.75,
+        "projected_flow_kms": 150.0,
+        "offset_in_widths": -11.23448605680655,
+        "log10_rate_relative": -37.969368266901654
+      },
+      {
+        "cos_angle": 0.8,
+        "projected_flow_kms": 160.0,
+        "offset_in_widths": -12.482762285340609,
+        "log10_rate_relative": -44.39815941165039
+      },
+      {
+        "cos_angle": 0.8500000000000001,
+        "projected_flow_kms": 170.00000000000003,
+        "offset_in_widths": -13.731038513874674,
+        "log10_rate_relative": -51.50366541374113
+      },
+      {
+        "cos_angle": 0.9000000000000001,
+        "projected_flow_kms": 180.00000000000003,
+        "offset_in_widths": -14.979314742408736,
+        "log10_rate_relative": -59.28588627317383
+      },
+      {
+        "cos_angle": 0.9500000000000002,
+        "projected_flow_kms": 190.00000000000003,
+        "offset_in_widths": -16.227590970942796,
+        "log10_rate_relative": -67.74482198994849
+      },
+      {
+        "cos_angle": 1.0,
+        "projected_flow_kms": 200.0,
+        "offset_in_widths": -17.475867199476852,
+        "log10_rate_relative": -76.88047256406509
+      }
+    ],
+    "peak_at": {
+      "cos_angle": 0.30000000000000004,
+      "projected_flow_kms": 60.00000000000001
+    },
+    "structural_prediction": "The kernel selects a projected-velocity contour, not a density contour. In a rotating disk the production should trace iso-velocity lines, so its pattern must rotate with the kinematic major axis and not with the surface-brightness or column-density pattern. That is a morphological statement a CO cube can check directly.",
+    "rows": [
+      {
+        "medium": "quiescent molecular gas",
+        "T_K": 20.0,
+        "turbulent_kms": 2.0,
+        "sigma_v_kms": 2.0292658762529485,
+        "on_resonance_offset_widths": 0.0,
+        "off_resonance_offset_widths": -68.99046676846055,
+        "log10_on_over_off": 290.03393380289754,
+        "dlnk_dlnsigma_on_resonance": -1.0,
+        "dlnk_dlnsigma_off_resonance": 4758.684504930059,
+        "regime_on": "suppressed by extra dispersion",
+        "regime_off": "enhanced by extra dispersion"
+      },
+      {
+        "medium": "typical disk molecular gas",
+        "T_K": 30.0,
+        "turbulent_kms": 8.0,
+        "sigma_v_kms": 8.01104737189757,
+        "on_resonance_offset_widths": 0.0,
+        "off_resonance_offset_widths": -17.475867199476852,
+        "log10_on_over_off": 66.31805601951334,
+        "dlnk_dlnsigma_on_resonance": -1.0,
+        "dlnk_dlnsigma_off_resonance": 304.4059343737509,
+        "regime_on": "suppressed by extra dispersion",
+        "regime_off": "enhanced by extra dispersion"
+      },
+      {
+        "medium": "turbulent starburst gas",
+        "T_K": 60.0,
+        "turbulent_kms": 25.0,
+        "sigma_v_kms": 25.007074198905677,
+        "on_resonance_offset_widths": 0.0,
+        "off_resonance_offset_widths": -5.598415827715122,
+        "log10_on_over_off": 6.805885236418545,
+        "dlnk_dlnsigma_on_resonance": -1.0,
+        "dlnk_dlnsigma_off_resonance": 30.342259780011197,
+        "regime_on": "suppressed by extra dispersion",
+        "regime_off": "enhanced by extra dispersion"
+      },
+      {
+        "medium": "warm diffuse gas",
+        "T_K": 8000.0,
+        "turbulent_kms": 10.0,
+        "sigma_v_kms": 12.131281820560366,
+        "on_resonance_offset_widths": 0.0,
+        "off_resonance_offset_widths": -11.540412799801988,
+        "log10_on_over_off": 28.91991440295882,
+        "dlnk_dlnsigma_on_resonance": -1.0,
+        "dlnk_dlnsigma_off_resonance": 132.18112758983355,
+        "regime_on": "suppressed by extra dispersion",
+        "regime_off": "enhanced by extra dispersion"
+      }
+    ]
+  },
+  "dispersion_sign_change": {
+    "condition": "|v_res - v_bulk . nhat| = sigma_v",
+    "analytic_threshold_sigma_v_kms": 140.0,
+    "numerical_bracket_kms": [
+      134.85108980681025,
+      142.2346824153542
+    ],
+    "scan": [
+      {
+        "turbulent_kms": 0.5,
+        "sigma_v_kms": 0.6533605396616549,
+        "dlnk_dlnsigma": 45913.543289341134
+      },
+      {
+        "turbulent_kms": 0.5273770963748972,
+        "sigma_v_kms": 0.6745417678452436,
+        "dlnk_dlnsigma": 43075.298558849594
+      },
+      {
+        "turbulent_kms": 0.5562532035616352,
+        "sigma_v_kms": 0.6973504293105087,
+        "dlnk_dlnsigma": 40303.53603543111
+      },
+      {
+        "turbulent_kms": 0.5867103986871396,
+        "sigma_v_kms": 0.7218788587530398,
+        "dlnk_dlnsigma": 37611.086412791374
+      },
+      {
+        "turbulent_kms": 0.618835252945164,
+        "sigma_v_kms": 0.7482226039586575,
+        "dlnk_dlnsigma": 35009.186396618185
+      },
+      {
+        "turbulent_kms": 0.6527190776652911,
+        "sigma_v_kms": 0.776480643116876,
+        "dlnk_dlnsigma": 32507.340799520578
+      },
+      {
+        "turbulent_kms": 0.6884581838552445,
+        "sigma_v_kms": 0.8067556418793923,
+        "dlnk_dlnsigma": 30113.249820722463
+      },
+      {
+        "turbulent_kms": 0.7261541559542279,
+        "sigma_v_kms": 0.8391542486316601,
+        "dlnk_dlnsigma": 27832.798306773737
+      },
+      {
+        "turbulent_kms": 0.76591414057541,
+        "sigma_v_kms": 0.8737874258195398,
+        "dlnk_dlnsigma": 25670.100674758145
+      },
+      {
+        "turbulent_kms": 0.8078511510582691,
+        "sigma_v_kms": 0.9107708147789648,
+        "dlnk_dlnsigma": 23627.592938067202
+      },
+      {
+        "turbulent_kms": 0.8520843886964568,
+        "sigma_v_kms": 0.9502251313489785,
+        "dlnk_dlnsigma": 21706.161962046517
+      },
+      {
+        "turbulent_kms": 0.8987395815542333,
+        "sigma_v_kms": 0.9922765895854075,
+        "dlnk_dlnsigma": 19905.301642684743
+      },
+      {
+        "turbulent_kms": 0.9479493418345232,
+        "sigma_v_kms": 1.0370573511004464,
+        "dlnk_dlnsigma": 18223.286017925166
+      },
+      {
+        "turbulent_kms": 0.9998535428143714,
+        "sigma_v_kms": 1.0847059978931706,
+        "dlnk_dlnsigma": 16657.35021387299
+      },
+      {
+        "turbulent_kms": 1.0545997164191943,
+        "sigma_v_kms": 1.1353680269667692,
+        "dlnk_dlnsigma": 15203.871407134186
+      },
+      {
+        "turbulent_kms": 1.1123434725658894,
+        "sigma_v_kms": 1.1891963655119833,
+        "dlnk_dlnsigma": 13858.5434687226
+      },
+      {
+        "turbulent_kms": 1.1732489414667377,
+        "sigma_v_kms": 1.246351905939807,
+        "dlnk_dlnsigma": 12616.540489348465
+      },
+      {
+        "turbulent_kms": 1.2374892401512998,
+        "sigma_v_kms": 1.307004060543505,
+        "dlnk_dlnsigma": 11472.665850429325
+      },
+      {
+        "turbulent_kms": 1.3052469645323406,
+        "sigma_v_kms": 1.3713313360409503,
+        "dlnk_dlnsigma": 10421.484817146862
+      },
+      {
+        "turbulent_kms": 1.3767147084144284,
+        "sigma_v_kms": 1.4395219286803496,
+        "dlnk_dlnsigma": 9457.439741274822
+      },
+      {
+        "turbulent_kms": 1.452095610920429,
+        "sigma_v_kms": 1.5117743409786208,
+        "dlnk_dlnsigma": 8574.947853265383
+      },
+      {
+        "turbulent_kms": 1.5316039338918963,
+        "sigma_v_kms": 1.5882980214997757,
+        "dlnk_dlnsigma": 7768.482298136304
+      },
+      {
+        "turbulent_kms": 1.6154656709045567,
+        "sigma_v_kms": 1.669314029371969,
+        "dlnk_dlnsigma": 7032.6375459701
+      },
+      {
+        "turbulent_kms": 1.7039191896299408,
+        "sigma_v_kms": 1.7550557254902543,
+        "dlnk_dlnsigma": 6362.18061203058
+      },
+      {
+        "turbulent_kms": 1.7972159093690117,
+        "sigma_v_kms": 1.8457694925629398,
+        "dlnk_dlnsigma": 5752.089684152998
+      },
+      {
+        "turbulent_kms": 1.8956210156835993,
+        "sigma_v_kms": 1.9417154863388948,
+        "dlnk_dlnsigma": 5197.58180687939
+      },
+      {
+        "turbulent_kms": 1.9994142141569002,
+        "sigma_v_kms": 2.043168420507625,
+        "dlnk_dlnsigma": 4694.131241265087
+      },
+      {
+        "turbulent_kms": 2.108890525425526,
+        "sigma_v_kms": 2.1504183878995544,
+        "dlnk_dlnsigma": 4237.480031239185
+      },
+      {
+        "turbulent_kms": 2.22436112374289,
+        "sigma_v_kms": 2.2637717207363695,
+        "dlnk_dlnsigma": 3823.642182519082
+      },
+      {
+        "turbulent_kms": 2.3461542214574576,
+        "sigma_v_kms": 2.3835518927956274,
+        "dlnk_dlnsigma": 3448.902714769173
+      },
+      {
+        "turbulent_kms": 2.474616001919883,
+        "sigma_v_kms": 2.5101004664644235,
+        "dlnk_dlnsigma": 3109.8126944317482
+      },
+      {
+        "turbulent_kms": 2.6101116034707297,
+        "sigma_v_kms": 2.6437780877674872,
+        "dlnk_dlnsigma": 2803.181203483038
+      },
+      {
+        "turbulent_kms": 2.753026157305641,
+        "sigma_v_kms": 2.7849655325687666,
+        "dlnk_dlnsigma": 2526.065054459371
+      },
+      {
+        "turbulent_kms": 2.90376588216798,
+        "sigma_v_kms": 2.9340648072647872,
+        "dlnk_dlnsigma": 2275.7569283559314
+      },
+      {
+        "turbulent_kms": 3.0627592389804823,
+        "sigma_v_kms": 3.0915003074150373,
+        "dlnk_dlnsigma": 2049.7724915705553
+      },
+      {
+        "turbulent_kms": 3.2304581486978337,
+        "sigma_v_kms": 3.257720037890795,
+        "dlnk_dlnsigma": 1845.8369418031036
+      },
+      {
+        "turbulent_kms": 3.407339276841778,
+        "sigma_v_kms": 3.433196898270709,
+        "dlnk_dlnsigma": 1661.871340671768
+      },
+      {
+        "turbulent_kms": 3.5939053883699184,
+        "sigma_v_kms": 3.6184300373699783,
+        "dlnk_dlnsigma": 1495.9790121093927
+      },
+      {
+        "turbulent_kms": 3.7906867767292485,
+        "sigma_v_kms": 3.813946280961092,
+        "dlnk_dlnsigma": 1346.4322193201801
+      },
+      {
+        "turbulent_kms": 3.9982427711563795,
+        "sigma_v_kms": 4.020301636928654,
+        "dlnk_dlnsigma": 1211.6592779753403
+      },
+      {
+        "turbulent_kms": 4.217163326508747,
+        "sigma_v_kms": 4.238082882299176,
+        "dlnk_dlnsigma": 1090.2322180962385
+      },
+      {
+        "turbulent_kms": 4.44807070014577,
+        "sigma_v_kms": 4.467909236799943,
+        "dlnk_dlnsigma": 980.8550704162576
+      },
+      {
+        "turbulent_kms": 4.691621220626265,
+        "sigma_v_kms": 4.71043412782916,
+        "dlnk_dlnsigma": 882.3528236955838
+      },
+      {
+        "turbulent_kms": 4.94850715324946,
+        "sigma_v_kms": 4.966347051963651,
+        "dlnk_dlnsigma": 793.661076352133
+      },
+      {
+        "turbulent_kms": 5.219458667742219,
+        "sigma_v_kms": 5.2363755383906865,
+        "dlnk_dlnsigma": 713.8163878487976
+      },
+      {
+        "turbulent_kms": 5.50524591368536,
+        "sigma_v_kms": 5.521287219927642,
+        "dlnk_dlnsigma": 641.9473216446287
+      },
+      {
+        "turbulent_kms": 5.806681209578308,
+        "sigma_v_kms": 5.821892017588163,
+        "dlnk_dlnsigma": 577.2661613967775
+      },
+      {
+        "turbulent_kms": 6.124621351764166,
+        "sigma_v_kms": 6.139044444966373,
+        "dlnk_dlnsigma": 519.0612748245172
+      },
+      {
+        "turbulent_kms": 6.459970049778166,
+        "sigma_v_kms": 6.47364603904306,
+        "dlnk_dlnsigma": 466.69009465177174
+      },
+      {
+        "turbulent_kms": 6.81368049504162,
+        "sigma_v_kms": 6.826647924369441,
+        "dlnk_dlnsigma": 419.57268285763865
+      },
+      {
+        "turbulent_kms": 7.186758070202641,
+        "sigma_v_kms": 7.199053517957048,
+        "dlnk_dlnsigma": 377.1858426925182
+      },
+      {
+        "turbulent_kms": 7.580263206824659,
+        "sigma_v_kms": 7.591921382596545,
+        "dlnk_dlnsigma": 339.0577422377014
+      },
+      {
+        "turbulent_kms": 7.995314399545308,
+        "sigma_v_kms": 8.006368236745267,
+        "dlnk_dlnsigma": 304.76301343488205
+      },
+      {
+        "turbulent_kms": 8.43309138527322,
+        "sigma_v_kms": 8.443572129564382,
+        "dlnk_dlnsigma": 273.9182912756095
+      },
+      {
+        "turbulent_kms": 8.8948384964591,
+        "sigma_v_kms": 8.904775790152032,
+        "dlnk_dlnsigma": 246.17815904812102
+      },
+      {
+        "turbulent_kms": 9.381868197972516,
+        "sigma_v_kms": 9.391290160511229,
+        "dlnk_dlnsigma": 221.23146705398537
+      },
+      {
+        "turbulent_kms": 9.895564817637466,
+        "sigma_v_kms": 9.904498122310457,
+        "dlnk_dlnsigma": 198.79799392254057
+      },
+      {
+        "turbulent_kms": 10.437388481030474,
+        "sigma_v_kms": 10.445858428043843,
+        "dlnk_dlnsigma": 178.62542148362633
+      },
+      {
+        "turbulent_kms": 11.008879261725298,
+        "sigma_v_kms": 11.016909847776386,
+        "dlnk_dlnsigma": 160.48659604455506
+      },
+      {
+        "turbulent_kms": 11.611661558781021,
+        "sigma_v_kms": 11.619275543271185,
+        "dlnk_dlnsigma": 144.17705080699537
+      },
+      {
+        "turbulent_kms": 12.247448713915892,
+        "sigma_v_kms": 12.254667681940095,
+        "dlnk_dlnsigma": 129.51276601751454
+      },
+      {
+        "turbulent_kms": 12.918047881490867,
+        "sigma_v_kms": 12.924892303740007,
+        "dlnk_dlnsigma": 116.32814524582523
+      },
+      {
+        "turbulent_kms": 13.625365165145087,
+        "sigma_v_kms": 13.631854454854489,
+        "dlnk_dlnsigma": 104.47418790919892
+      },
+      {
+        "turbulent_kms": 14.37141103568378,
+        "sigma_v_kms": 14.377563602758308,
+        "dlnk_dlnsigma": 93.81683979801633
+      },
+      {
+        "turbulent_kms": 15.158306045618128,
+        "sigma_v_kms": 15.164139348060939,
+        "dlnk_dlnsigma": 84.23550489886594
+      },
+      {
+        "turbulent_kms": 15.988286856600272,
+        "sigma_v_kms": 15.993817449368489,
+        "dlnk_dlnsigma": 75.62170325442257
+      },
+      {
+        "turbulent_kms": 16.863712596885573,
+        "sigma_v_kms": 16.868956178292244,
+        "dlnk_dlnsigma": 67.87786094282237
+      },
+      {
+        "turbulent_kms": 17.787071566892575,
+        "sigma_v_kms": 17.79204302267014,
+        "dlnk_dlnsigma": 60.916219504684896
+      },
+      {
+        "turbulent_kms": 18.760988311920602,
+        "sigma_v_kms": 18.7657017570569,
+        "dlnk_dlnsigma": 54.657853296131336
+      },
+      {
+        "turbulent_kms": 19.78823108212814,
+        "sigma_v_kms": 19.79269990058176,
+        "dlnk_dlnsigma": 49.03178430495286
+      },
+      {
+        "turbulent_kms": 20.87171970097646,
+        "sigma_v_kms": 20.875956583373988,
+        "dlnk_dlnsigma": 43.97418493902012
+      },
+      {
+        "turbulent_kms": 22.0145338645034,
+        "sigma_v_kms": 22.01855084391691,
+        "dlnk_dlnsigma": 39.42766018606946
+      },
+      {
+        "turbulent_kms": 23.2199218950173,
+        "sigma_v_kms": 23.22373038091622,
+        "dlnk_dlnsigma": 35.340601357315485
+      },
+      {
+        "turbulent_kms": 24.491309974092243,
+        "sigma_v_kms": 24.494920784559742,
+        "dlnk_dlnsigma": 31.666604369173264
+      },
+      {
+        "turbulent_kms": 25.83231188110866,
+        "sigma_v_kms": 25.835735273408698,
+        "dlnk_dlnsigma": 28.363946192901523
+      },
+      {
+        "turbulent_kms": 27.246739265019677,
+        "sigma_v_kms": 27.249984964596806,
+        "dlnk_dlnsigma": 25.39511371625713
+      },
+      {
+        "turbulent_kms": 28.738612478539963,
+        "sigma_v_kms": 28.741689706530472,
+        "dlnk_dlnsigma": 22.72637981911934
+      },
+      {
+        "turbulent_kms": 30.31217200555158,
+        "sigma_v_kms": 30.315089504880767,
+        "dlnk_dlnsigma": 20.327421971128697
+      },
+      {
+        "turbulent_kms": 31.971890514208482,
+        "sigma_v_kms": 31.97465657434527,
+        "dlnk_dlnsigma": 18.170979118030363
+      },
+      {
+        "turbulent_kms": 33.72248556999877,
+        "sigma_v_kms": 33.725108050435686,
+        "dlnk_dlnsigma": 16.23254303871039
+      },
+      {
+        "turbulent_kms": 35.568933044900646,
+        "sigma_v_kms": 35.57141939742372,
+        "dlnk_dlnsigma": 14.490080730661063
+      },
+      {
+        "turbulent_kms": 37.51648126074566,
+        "sigma_v_kms": 37.518838550555735,
+        "dlnk_dlnsigma": 12.923784721347042
+      },
+      {
+        "turbulent_kms": 39.57066590699056,
+        "sigma_v_kms": 39.57290083273467,
+        "dlnk_dlnsigma": 11.515848509923622
+      },
+      {
+        "turbulent_kms": 41.73732577529965,
+        "sigma_v_kms": 41.7394446880679,
+        "dlnk_dlnsigma": 10.250264620993791
+      },
+      {
+        "turbulent_kms": 44.02261935566136,
+        "sigma_v_kms": 44.02462827700238,
+        "dlnk_dlnsigma": 9.11264300233686
+      },
+      {
+        "turbulent_kms": 46.43304234121209,
+        "sigma_v_kms": 46.43494698021719,
+        "dlnk_dlnsigma": 8.090047724329605
+      },
+      {
+        "turbulent_kms": 48.975446091522166,
+        "sigma_v_kms": 48.97725186102606,
+        "dlnk_dlnsigma": 7.170850142421733
+      },
+      {
+        "turbulent_kms": 51.657057106824546,
+        "sigma_v_kms": 51.65876913876791,
+        "dlnk_dlnsigma": 6.344596867627696
+      },
+      {
+        "turbulent_kms": 54.48549756853877,
+        "sigma_v_kms": 54.48712072853576,
+        "dlnk_dlnsigma": 5.601891055479828
+      },
+      {
+        "turbulent_kms": 57.46880700447495,
+        "sigma_v_kms": 57.47034590562664,
+        "dlnk_dlnsigma": 4.934285672996403
+      },
+      {
+        "turbulent_kms": 60.61546514029872,
+        "sigma_v_kms": 60.61692415629117,
+        "dlnk_dlnsigma": 4.334187537541911
+      },
+      {
+        "turbulent_kms": 63.93441600220909,
+        "sigma_v_kms": 63.935799279733075,
+        "dlnk_dlnsigma": 3.794771042432778
+      },
+      {
+        "turbulent_kms": 67.4350933393396,
+        "sigma_v_kms": 67.43640480986684,
+        "dlnk_dlnsigma": 3.3099005930747696
+      },
+      {
+        "turbulent_kms": 71.12744743814213,
+        "sigma_v_kms": 71.12869082909131,
+        "dlnk_dlnsigma": 2.8740608754903687
+      },
+      {
+        "turbulent_kms": 75.02197340497105,
+        "sigma_v_kms": 75.02315225029518,
+        "dlnk_dlnsigma": 2.4822941673729253
+      },
+      {
+        "turbulent_kms": 79.1297409972568,
+        "sigma_v_kms": 79.13085864748172,
+        "dlnk_dlnsigma": 2.1301439812570804
+      },
+      {
+        "turbulent_kms": 83.46242608806185,
+        "sigma_v_kms": 83.46348571980428,
+        "dlnk_dlnsigma": 1.81360440089365
+      },
+      {
+        "turbulent_kms": 88.03234385345307,
+        "sigma_v_kms": 88.03334847844526,
+        "dlnk_dlnsigma": 1.5290745362519544
+      },
+      {
+        "turbulent_kms": 92.85248377702123,
+        "sigma_v_kms": 92.85343625066751,
+        "dlnk_dlnsigma": 1.273317580454271
+      },
+      {
+        "turbulent_kms": 97.93654657104544,
+        "sigma_v_kms": 97.93744960053503,
+        "dlnk_dlnsigma": 1.043424004018219
+      },
+      {
+        "turbulent_kms": 103.2989831192456,
+        "sigma_v_kms": 103.29983927124464,
+        "dlnk_dlnsigma": 0.836778468623381
+      },
+      {
+        "turbulent_kms": 108.95503555181456,
+        "sigma_v_kms": 108.95584725975914,
+        "dlnk_dlnsigma": 0.6510300847497841
+      },
+      {
+        "turbulent_kms": 114.92078056947933,
+        "sigma_v_kms": 114.92155014049021,
+        "dlnk_dlnsigma": 0.48406567542953316
+      },
+      {
+        "turbulent_kms": 121.21317513973747,
+        "sigma_v_kms": 121.21390476117604,
+        "dlnk_dlnsigma": 0.333985742432513
+      },
+      {
+        "turbulent_kms": 127.85010469515314,
+        "sigma_v_kms": 127.85079644083727,
+        "dlnk_dlnsigma": 0.19908286185539925
+      },
+      {
+        "turbulent_kms": 134.85043397071297,
+        "sigma_v_kms": 134.85108980681025,
+        "dlnk_dlnsigma": 0.07782226364391231
+      },
+      {
+        "turbulent_kms": 142.23406062473885,
+        "sigma_v_kms": 142.2346824153542,
+        "dlnk_dlnsigma": -0.031175625638440674
+      },
+      {
+        "turbulent_kms": 150.02197179577178,
+        "sigma_v_kms": 150.022561308245,
+        "dlnk_dlnsigma": -0.1291508751971142
+      },
+      {
+        "turbulent_kms": 158.23630375618157,
+        "sigma_v_kms": 158.23686266611,
+        "dlnk_dlnsigma": -0.21721815591319593
+      },
+      {
+        "turbulent_kms": 166.9004048320626,
+        "sigma_v_kms": 166.90093472806308,
+        "dlnk_dlnsigma": -0.29637942011821594
+      },
+      {
+        "turbulent_kms": 176.0389017682561,
+        "sigma_v_kms": 176.03940415647997,
+        "dlnk_dlnsigma": -0.3675352993868475
+      },
+      {
+        "turbulent_kms": 185.67776972713736,
+        "sigma_v_kms": 185.67824603555107,
+        "dlnk_dlnsigma": -0.4314953499336691
+      },
+      {
+        "turbulent_kms": 195.84440612012884,
+        "sigma_v_kms": 195.8448577025722,
+        "dlnk_dlnsigma": -0.4889872621065696
+      },
+      {
+        "turbulent_kms": 206.56770848179943,
+        "sigma_v_kms": 206.56813662183347,
+        "dlnk_dlnsigma": -0.5406651386978426
+      },
+      {
+        "turbulent_kms": 217.87815660789528,
+        "sigma_v_kms": 217.87856252245038,
+        "dlnk_dlnsigma": -0.5871169362110829
+      },
+      {
+        "turbulent_kms": 229.80789919077367,
+        "sigma_v_kms": 229.8082840336083,
+        "dlnk_dlnsigma": -0.628871153707952
+      },
+      {
+        "turbulent_kms": 242.39084519849067,
+        "sigma_v_kms": 242.39121006347042,
+        "dlnk_dlnsigma": -0.6664028453057675
+      },
+      {
+        "turbulent_kms": 255.66276025727447,
+        "sigma_v_kms": 255.66310618148134,
+        "dlnk_dlnsigma": -0.7001390247078123
+      },
+      {
+        "turbulent_kms": 269.6613683113458,
+        "sigma_v_kms": 269.66169627802554,
+        "dlnk_dlnsigma": -0.7304635232360746
+      },
+      {
+        "turbulent_kms": 284.42645884903834,
+        "sigma_v_kms": 284.4267697903952,
+        "dlnk_dlnsigma": -0.7577213566222916
+      },
+      {
+        "turbulent_kms": 300.0,
+        "sigma_v_kms": 300.0002947998465,
+        "dlnk_dlnsigma": -0.7822226502272944
+      }
+    ],
+    "prediction": "Two regions with the same gas mass, the same density and the same illumination, differing only in velocity dispersion across this threshold, must respond to extra turbulence with OPPOSITE sign. The threshold is set by the flow speed projected on the sightline, which resolved CO cubes measure directly. No gravitational quantity appears."
+  },
+  "relation_to_exploratory_laws": {
+    "variable": "h = (v_res - v_bulk . nhat) / sigma_v, the resonance offset in profile widths",
+    "derived_kernel": "k ~ (n / sigma_v) exp(-h^2 / 2)",
+    "exponential_branch": {
+      "form": "a exp(b h) fitted on |h - 0.6| <= 0.4",
+      "fitted_a": 1.1433837908254672,
+      "fitted_b": -0.5655549908201489,
+      "max_relative_error": 0.06178155805548302,
+      "widest_interval_within_5_percent": 0.34487179487179487,
+      "local_fit_scan": [
+        {
+          "half_width_in_sigma": 0.05,
+          "fitted_b": -0.5996641034257522,
+          "max_relative_error": 0.00041373854905324414
+        },
+        {
+          "half_width_in_sigma": 0.07948717948717948,
+          "fitted_b": -0.5992805070092728,
+          "max_relative_error": 0.0010446445530003512
+        },
+        {
+          "half_width_in_sigma": 0.10897435897435898,
+          "fitted_b": -0.5981315683680674,
+          "max_relative_error": 0.0031979732971589847
+        },
+        {
+          "half_width_in_sigma": 0.13846153846153847,
+          "fitted_b": -0.5973671458489047,
+          "max_relative_error": 0.004739016202225388
+        },
+        {
+          "half_width_in_sigma": 0.16794871794871796,
+          "fitted_b": -0.5954614736767683,
+          "max_relative_error": 0.008799681388681924
+        },
+        {
+          "half_width_in_sigma": 0.19743589743589746,
+          "fitted_b": -0.5943217505996472,
+          "max_relative_error": 0.011340609010379588
+        },
+        {
+          "half_width_in_sigma": 0.2269230769230769,
+          "fitted_b": -0.5916731806711025,
+          "max_relative_error": 0.017500547337617522
+        },
+        {
+          "half_width_in_sigma": 0.2564102564102564,
+          "fitted_b": -0.5901664370641982,
+          "max_relative_error": 0.021143867048015963
+        },
+        {
+          "half_width_in_sigma": 0.2858974358974359,
+          "fitted_b": -0.5867941360912499,
+          "max_relative_error": 0.02962206784737975
+        },
+        {
+          "half_width_in_sigma": 0.3153846153846154,
+          "fitted_b": -0.5849313024599462,
+          "max_relative_error": 0.03448463947735392
+        },
+        {
+          "half_width_in_sigma": 0.34487179487179487,
+          "fitted_b": -0.5808597916491166,
+          "max_relative_error": 0.04553063240981081
+        },
+        {
+          "half_width_in_sigma": 0.37435897435897436,
+          "fitted_b": -0.5786544040137539,
+          "max_relative_error": 0.05174561229503949
+        },
+        {
+          "half_width_in_sigma": 0.4038461538461538,
+          "fitted_b": -0.5739132666436891,
+          "max_relative_error": 0.06564381564027744
+        },
+        {
+          "half_width_in_sigma": 0.4333333333333333,
+          "fitted_b": -0.5713813414941882,
+          "max_relative_error": 0.07336305232397988
+        },
+        {
+          "half_width_in_sigma": 0.4628205128205128,
+          "fitted_b": -0.5660049652968142,
+          "max_relative_error": 0.09043806301204849
+        },
+        {
+          "half_width_in_sigma": 0.4923076923076923,
+          "fitted_b": -0.5631648322086,
+          "max_relative_error": 0.09983501870706024
+        },
+        {
+          "half_width_in_sigma": 0.5217948717948718,
+          "fitted_b": -0.5571920259718529,
+          "max_relative_error": 0.1204580581987722
+        },
+        {
+          "half_width_in_sigma": 0.5512820512820513,
+          "fitted_b": -0.5540641151272617,
+          "max_relative_error": 0.13173135429818594
+        },
+        {
+          "half_width_in_sigma": 0.5807692307692308,
+          "fitted_b": -0.5475367555374433,
+          "max_relative_error": 0.15632878774015024
+        },
+        {
+          "half_width_in_sigma": 0.6102564102564103,
+          "fitted_b": -0.5441430705960751,
+          "max_relative_error": 0.1697067536955683
+        },
+        {
+          "half_width_in_sigma": 0.6397435897435898,
+          "fitted_b": -0.5333798686746659,
+          "max_relative_error": 0.17583369694217543
+        },
+        {
+          "half_width_in_sigma": 0.6692307692307693,
+          "fitted_b": -0.511968737001523,
+          "max_relative_error": 0.18839306497754293
+        },
+        {
+          "half_width_in_sigma": 0.6987179487179488,
+          "fitted_b": -0.5013234308017464,
+          "max_relative_error": 0.19482279242684797
+        },
+        {
+          "half_width_in_sigma": 0.7282051282051283,
+          "fitted_b": -0.4801597378266271,
+          "max_relative_error": 0.2079750813487391
+        },
+        {
+          "half_width_in_sigma": 0.7576923076923077,
+          "fitted_b": -0.46964384137014237,
+          "max_relative_error": 0.214694544881747
+        },
+        {
+          "half_width_in_sigma": 0.7871794871794872,
+          "fitted_b": -0.4487500230259388,
+          "max_relative_error": 0.2284118550379597
+        },
+        {
+          "half_width_in_sigma": 0.8166666666666667,
+          "fitted_b": -0.43837446173007755,
+          "max_relative_error": 0.23540620634635756
+        },
+        {
+          "half_width_in_sigma": 0.8461538461538461,
+          "fitted_b": -0.4177717609082871,
+          "max_relative_error": 0.2496570906566684
+        },
+        {
+          "half_width_in_sigma": 0.8756410256410256,
+          "fitted_b": -0.4075468467362055,
+          "max_relative_error": 0.2569097490747909
+        },
+        {
+          "half_width_in_sigma": 0.9051282051282051,
+          "fitted_b": -0.3872552899030014,
+          "max_relative_error": 0.27165934784736323
+        },
+        {
+          "half_width_in_sigma": 0.9346153846153846,
+          "fitted_b": -0.3771907319194822,
+          "max_relative_error": 0.27915205777363017
+        },
+        {
+          "half_width_in_sigma": 0.9641025641025641,
+          "fitted_b": -0.3572291163774865,
+          "max_relative_error": 0.29436227444449936
+        },
+        {
+          "half_width_in_sigma": 0.9935897435897436,
+          "fitted_b": -0.3473340102298712,
+          "max_relative_error": 0.302075211226696
+        },
+        {
+          "half_width_in_sigma": 1.023076923076923,
+          "fitted_b": -0.3277199104580392,
+          "max_relative_error": 0.31770492316295207
+        },
+        {
+          "half_width_in_sigma": 1.0525641025641026,
+          "fitted_b": -0.3180027350755023,
+          "max_relative_error": 0.3256168186072914
+        },
+        {
+          "half_width_in_sigma": 1.082051282051282,
+          "fitted_b": -0.29875250771643225,
+          "max_relative_error": 0.3416221399897199
+        },
+        {
+          "half_width_in_sigma": 1.1115384615384616,
+          "fitted_b": -0.2892211382992512,
+          "max_relative_error": 0.34971041505749256
+        },
+        {
+          "half_width_in_sigma": 1.141025641025641,
+          "fitted_b": -0.27035267176144484,
+          "max_relative_error": 0.36604123586558135
+        },
+        {
+          "half_width_in_sigma": 1.1705128205128206,
+          "fitted_b": -0.2610145187667757,
+          "max_relative_error": 0.37428192627849954
+        },
+        {
+          "half_width_in_sigma": 1.2,
+          "fitted_b": -0.24253649783403686,
+          "max_relative_error": 0.3908969337832784
+        }
+      ],
+      "comment": "An exp(b h) law is a purely local approximation: it tracks the derived kernel only over a limited interval, and its fitted exponent is set by where you centre it, not by any physics. JR-5..JR-8 used b = +2 with no stated interval."
+    },
+    "gaussian_branch": {
+      "form": "a exp(b h^2) fitted on the whole range",
+      "fitted_a": 1.0,
+      "fitted_b": -0.5,
+      "max_relative_error": 0.0,
+      "comment": "This form is exact for the derived kernel, and the fit recovers b = -1/2 to machine precision, which validates the algebra. JR-5..JR-8 used b = +4: the opposite sign and eight times the magnitude. That is a substantive disagreement, not a reparametrization."
+    },
+    "conclusion": "One Gaussian resonance kernel with a single shape parameter replaces two separately fitted functions. It reproduces the exp(b h) branch as a local approximation, and it flatly contradicts the exp(+4 h^2) return law: the derived exponent is negative, so a resonance offset suppresses the return channel rather than amplifying it.",
+    "h": [
+      -1.2,
+      -1.18,
+      -1.16,
+      -1.14,
+      -1.1199999999999999,
+      -1.0999999999999999,
+      -1.08,
+      -1.06,
+      -1.04,
+      -1.02,
+      -1.0,
+      -0.98,
+      -0.96,
+      -0.94,
+      -0.9199999999999999,
+      -0.8999999999999999,
+      -0.8799999999999999,
+      -0.8599999999999999,
+      -0.84,
+      -0.82,
+      -0.7999999999999999,
+      -0.78,
+      -0.76,
+      -0.74,
+      -0.72,
+      -0.7,
+      -0.6799999999999999,
+      -0.6599999999999999,
+      -0.6399999999999999,
+      -0.62,
+      -0.6,
+      -0.58,
+      -0.5599999999999999,
+      -0.5399999999999999,
+      -0.5199999999999999,
+      -0.4999999999999999,
+      -0.48,
+      -0.45999999999999996,
+      -0.43999999999999995,
+      -0.41999999999999993,
+      -0.3999999999999999,
+      -0.3799999999999999,
+      -0.36,
+      -0.33999999999999997,
+      -0.31999999999999995,
+      -0.29999999999999993,
+      -0.2799999999999999,
+      -0.2599999999999999,
+      -0.24,
+      -0.21999999999999997,
+      -0.19999999999999996,
+      -0.17999999999999994,
+      -0.15999999999999992,
+      -0.1399999999999999,
+      -0.11999999999999988,
+      -0.09999999999999987,
+      -0.07999999999999985,
+      -0.05999999999999983,
+      -0.040000000000000036,
+      -0.020000000000000018,
+      0.0,
+      0.020000000000000018,
+      0.040000000000000036,
+      0.06000000000000005,
+      0.08000000000000007,
+      0.10000000000000009,
+      0.1200000000000001,
+      0.14000000000000012,
+      0.16000000000000014,
+      0.18000000000000016,
+      0.20000000000000018,
+      0.21999999999999997,
+      0.24,
+      0.26,
+      0.28,
+      0.30000000000000004,
+      0.32000000000000006,
+      0.3400000000000001,
+      0.3600000000000001,
+      0.3800000000000001,
+      0.40000000000000013,
+      0.42000000000000015,
+      0.44000000000000017,
+      0.4600000000000002,
+      0.48,
+      0.5,
+      0.52,
+      0.54,
+      0.56,
+      0.5800000000000001,
+      0.6000000000000001,
+      0.6200000000000001,
+      0.6400000000000001,
+      0.6600000000000001,
+      0.6800000000000002,
+      0.7000000000000002,
+      0.72,
+      0.74,
+      0.76,
+      0.78,
+      0.8,
+      0.8200000000000001,
+      0.8400000000000001,
+      0.8600000000000001,
+      0.8800000000000001,
+      0.9000000000000001,
+      0.9200000000000002,
+      0.9400000000000002,
+      0.9600000000000002,
+      0.9800000000000002,
+      1.0000000000000002,
+      1.0200000000000002,
+      1.0400000000000003,
+      1.0600000000000003,
+      1.0800000000000003,
+      1.1000000000000003,
+      1.1199999999999999,
+      1.14,
+      1.16,
+      1.18,
+      1.2
+    ],
+    "derived_shape": [
+      0.4867522559599717,
+      0.4984759178374661,
+      0.5102777977955038,
+      0.5221501963579799,
+      0.5340851477595171,
+      0.5460744266397095,
+      0.5581095554166826,
+      0.5701818123376049,
+      0.5822822402018133,
+      0.5944016557502186,
+      0.6065306597126334,
+      0.6186596475026225,
+      0.6307788205474282,
+      0.642878198238472,
+      0.6549476304858832,
+      0.6669768108584745,
+      0.678955290288568,
+      0.6908724913190898,
+      0.7027177228683977,
+      0.7144801954864035,
+      0.7261490370736909,
+      0.7377133090335346,
+      0.7491620228249927,
+      0.7604841568835896,
+      0.7716686738745262,
+      0.7827045382418681,
+      0.7935807340157668,
+      0.804286282838474,
+      0.8148102621687294,
+      0.825141823623021,
+      0.835270211411272,
+      0.8451847808236714,
+      0.8548750167246695,
+      0.8643305520095861,
+      0.8735411859788502,
+      0.8824969025845955,
+      0.8911878885041844,
+      0.8996045509952315,
+      0.9077375354868296,
+      0.9155777428619776,
+      0.9231163463866359,
+      0.9303448082414207,
+      0.9372548956126777,
+      0.9438386963005431,
+      0.9500886338026269,
+      0.9559974818331,
+      0.9615583782382694,
+      0.9667648382711531,
+      0.9716107671891228,
+      0.9760904721403703,
+      0.9801986733067553,
+      0.9839305142725083,
+      0.9872815715902905,
+      0.9902478635182347,
+      0.9928258579038134,
+      0.9950124791926823,
+      0.996805114543033,
+      0.9982016190284373,
+      0.9992003199146837,
+      0.9998000199986667,
+      1.0,
+      0.9998000199986667,
+      0.9992003199146837,
+      0.9982016190284373,
+      0.9968051145430329,
+      0.9950124791926823,
+      0.9928258579038133,
+      0.9902478635182347,
+      0.9872815715902905,
+      0.9839305142725083,
+      0.9801986733067553,
+      0.9760904721403703,
+      0.9716107671891228,
+      0.9667648382711531,
+      0.9615583782382694,
+      0.9559974818330998,
+      0.9500886338026269,
+      0.9438386963005431,
+      0.9372548956126776,
+      0.9303448082414207,
+      0.9231163463866358,
+      0.9155777428619775,
+      0.9077375354868294,
+      0.8996045509952314,
+      0.8911878885041844,
+      0.8824969025845953,
+      0.8735411859788501,
+      0.864330552009586,
+      0.8548750167246695,
+      0.8451847808236713,
+      0.835270211411272,
+      0.825141823623021,
+      0.8148102621687293,
+      0.8042862828384739,
+      0.7935807340157667,
+      0.782704538241868,
+      0.7716686738745262,
+      0.7604841568835896,
+      0.7491620228249927,
+      0.7377133090335346,
+      0.7261490370736908,
+      0.7144801954864034,
+      0.7027177228683976,
+      0.6908724913190897,
+      0.6789552902885679,
+      0.6669768108584743,
+      0.6549476304858831,
+      0.6428781982384719,
+      0.6307788205474282,
+      0.6186596475026224,
+      0.6065306597126333,
+      0.5944016557502184,
+      0.5822822402018132,
+      0.5701818123376048,
+      0.5581095554166825,
+      0.5460744266397093,
+      0.5340851477595171,
+      0.5221501963579799,
+      0.5102777977955038,
+      0.4984759178374661,
+      0.4867522559599717
+    ]
+  },
+  "independent_spectral_consequence": {
+    "statement": "The conversion is velocity selective. Light is preferentially lost along sightlines whose gas has line-of-sight velocity within sigma_v of the resonance velocity v_res = c Delta_0 / omega.",
+    "observable": "A correlation between residual extinction or dimming and the CO or Halpha line-of-sight velocity field, with a Gaussian profile of the locally measured width, at fixed column density.",
+    "why_independent": "It concerns where light is lost as a function of gas velocity. No gravitational quantity enters, so no choice that improves a lensing or rotation fit can tune it.",
+    "data_route": "PHANGS-ALMA CO cubes with PHANGS-MUSE and HST/JWST photometry over the common footprint give velocity, dispersion and extinction per resolution element. The test is a partial correlation at fixed column.",
+    "discriminating_null": "An ordinary dust or opacity effect correlates with column density and not with the velocity offset at fixed column. This kernel predicts the opposite ordering."
+  },
+  "strength_of_the_selectivity": {
+    "finding": "With a single sharp Delta_0 the on-resonance to off-resonance rate ratio reaches many orders of magnitude, so conversion would happen only in a thin projected-velocity slice.",
+    "reading": "This is the honest consequence of one narrow resonance, and it is a discriminating one. If resolved data show a broad, smooth dependence on projected velocity instead, a single sharp Delta_0 is excluded and the companion must carry a spread of energies, which broadens the kernel into the convolution of that spread with the velocity profile.",
+    "next_calculation": "Replace the single Delta_0 with its distribution and refit the width against the same data. The sign-change condition survives that generalisation because it only needs the profile to have a finite width."
+  },
+  "not_established": [
+    "The matrix element is not derived from a specified companion identity, so no absolute rate, no absolute resonance velocity and no energy budget follow.",
+    "Delta_0, and hence v_res, is a free constant of the kernel; only the shape of the dependence on it is derived.",
+    "The collisional cross section is an order-of-magnitude stand-in. It sets the Lorentzian width, which the scale separation makes irrelevant to the result.",
+    "No gravitational source, stress tensor or force law follows from any of this.",
+    "Nothing here has been connected to the six-lens cross-prediction; the redistribution JR-9D requires is not yet shown to be what this kernel produces."
+  ],
+  "code_sha256": "5e933c3f726fcfb9ac35774798f03f45038b11bc4eb9874b83cf38e42cf4e03e"
+}

@@ -1,0 +1,410 @@
+{
+  "experiment": "JR-9B",
+  "protocol": "../PROTOCOL.md",
+  "scope": "Screening diagnostic on the real joint vector. Not a full image or dynamical likelihood, and not a p-value.",
+  "vector": {
+    "n_total": 46,
+    "n_motion": 40,
+    "n_lensing": 6,
+    "motion_units": "km/s seeing-convolved annular V_rms",
+    "lensing_units": "arcsec catalog SIE Einstein angle"
+  },
+  "baseline": "Published JR-1 R10 prediction at its own nuisance convention",
+  "candidate": "JR-9D within-budget angle-closing spherical redistribution",
+  "candidate_shells": [
+    {
+      "name": "J0037-0942",
+      "shell_r_kpc": 67.45507046640331,
+      "shell_r_over_Re": 5.817371370991253,
+      "shell_mass_Msun": -5155437754795.06,
+      "shell_over_stellar_mass": -21.18750691021697,
+      "shell_over_companion_budget": -0.9392120780099013,
+      "delta_penalty": -0.5764389705171986
+    },
+    {
+      "name": "J1112+0826",
+      "shell_r_kpc": 15.417958696442412,
+      "shell_r_over_Re": 2.0201959159070366,
+      "shell_mass_Msun": 790809545291.3472,
+      "shell_over_stellar_mass": 3.33525096332725,
+      "shell_over_companion_budget": 0.22897767477525624,
+      "delta_penalty": -16.919312527752062
+    },
+    {
+      "name": "J1204+0358",
+      "shell_r_kpc": 19.962123210288045,
+      "shell_r_over_Re": 4.3596745561262535,
+      "shell_mass_Msun": -662404634289.0732,
+      "shell_over_stellar_mass": -5.126929934077308,
+      "shell_over_companion_budget": -0.4287345374167212,
+      "delta_penalty": -0.46925118690485235
+    },
+    {
+      "name": "J1402+6321",
+      "shell_r_kpc": 5.186637014206342,
+      "shell_r_over_Re": 0.5257599130855108,
+      "shell_mass_Msun": -23516779910.639175,
+      "shell_over_stellar_mass": -0.08253050945628121,
+      "shell_over_companion_budget": -0.004853011485927219,
+      "delta_penalty": -3.4854066917486115
+    },
+    {
+      "name": "J1621+3931",
+      "shell_r_kpc": 1.0508969813627056,
+      "shell_r_over_Re": 0.10254364076679849,
+      "shell_mass_Msun": 42179740289.319695,
+      "shell_over_stellar_mass": 0.18893261054483368,
+      "shell_over_companion_budget": 0.010108502611610452,
+      "delta_penalty": 0.9823291116840895
+    },
+    {
+      "name": "J1630+4520",
+      "shell_r_kpc": 34.36666434902387,
+      "shell_r_over_Re": 3.9600119656751787,
+      "shell_mass_Msun": 3744300492983.6953,
+      "shell_over_stellar_mass": 11.614401421161784,
+      "shell_over_companion_budget": 0.9590570498954548,
+      "delta_penalty": 7.943253332701301
+    }
+  ],
+  "circularity_note": "The candidate shell mass was solved from the observed angle, so the lensing-block amplitude is fitted by construction and is not evidence. Read the motion-block amplitude and the amplitude difference.",
+  "runs": [
+    {
+      "assumed_fractional_angle_sigma": 0.01,
+      "without_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 506.3953142703561,
+        "fixed_candidate_chi2": 472.53413467414725,
+        "fixed_candidate_chi2_improvement": 33.86117959620884,
+        "nuisance_marginalized": false,
+        "expected_squared_SNR_for_candidate_vs_baseline": 1116.081806700083,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 0.5151696673993487,
+        "common_amplitude_standard_error": 0.029933119923418284,
+        "fitted_common_amplitude_chi2": 210.18744138111884,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.1761015908530969,
+        "diagnostic_amplitude_lensing": 0.7169472103404744,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.0024016209230257996,
+            0.0
+          ],
+          [
+            0.0,
+            0.0014291913702410783
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5408456194873774,
+        "amplitude_difference_standard_error": 0.06189355615301869,
+        "amplitude_difference_in_standard_errors": -8.738318705589501
+      },
+      "with_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 269.07302067679194,
+        "fixed_candidate_chi2": 97.87798456142394,
+        "fixed_candidate_chi2_improvement": 171.195036115368,
+        "nuisance_marginalized": true,
+        "expected_squared_SNR_for_candidate_vs_baseline": 104.2084035222657,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 1.3214070570555743,
+        "common_amplitude_standard_error": 0.09795996668001669,
+        "fitted_common_amplitude_chi2": 87.11299633951795,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.5515158293614166,
+        "diagnostic_amplitude_lensing": 1.2249421724939047,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.03288091216344299,
+            0.012513659940273628
+          ],
+          [
+            0.012513659940273628,
+            0.009961709010230139
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.6734263431324881,
+        "amplitude_difference_standard_error": 0.13347397234339686,
+        "amplitude_difference_in_standard_errors": -5.045375748613534
+      }
+    },
+    {
+      "assumed_fractional_angle_sigma": 0.02,
+      "without_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 222.7699646780976,
+        "fixed_candidate_chi2": 416.60454527656384,
+        "fixed_candidate_chi2_improvement": -193.83458059846623,
+        "nuisance_marginalized": false,
+        "expected_squared_SNR_for_candidate_vs_baseline": 591.3095364382714,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 0.33609719727672505,
+        "common_amplitude_standard_error": 0.041123735614407,
+        "fitted_common_amplitude_chi2": 155.9748553553733,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.1761015908530969,
+        "diagnostic_amplitude_lensing": 0.7169472103404744,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.0024016209230257996,
+            0.0
+          ],
+          [
+            0.0,
+            0.005716765480964313
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5408456194873774,
+        "amplitude_difference_standard_error": 0.09010208878816357,
+        "amplitude_difference_in_standard_errors": -6.0025869184780385
+      },
+      "with_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 177.94681611515847,
+        "fixed_candidate_chi2": 79.0165814376383,
+        "fixed_candidate_chi2_improvement": 98.93023467752018,
+        "nuisance_marginalized": true,
+        "expected_squared_SNR_for_candidate_vs_baseline": 65.29912572656663,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 1.2575157674528474,
+        "common_amplitude_standard_error": 0.1237503160233181,
+        "fitted_common_amplitude_chi2": 74.68631102174074,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.656024183542552,
+        "diagnostic_amplitude_lensing": 1.280121861745502,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.036930382159658035,
+            0.014501729028987194
+          ],
+          [
+            0.014501729028987193,
+            0.015344673903183144
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.6240976782029499,
+        "amplitude_difference_standard_error": 0.15255031302775748,
+        "amplitude_difference_in_standard_errors": -4.091094051635223
+      }
+    },
+    {
+      "assumed_fractional_angle_sigma": 0.03,
+      "without_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 170.2467517906423,
+        "fixed_candidate_chi2": 406.2472139066409,
+        "fixed_candidate_chi2_improvement": -236.00046211599863,
+        "nuisance_marginalized": false,
+        "expected_squared_SNR_for_candidate_vs_baseline": 494.1294863897878,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 0.26119573045491884,
+        "common_amplitude_standard_error": 0.04498623159790732,
+        "fitted_common_amplitude_chi2": 136.53565226723836,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.1761015908530969,
+        "diagnostic_amplitude_lensing": 0.7169472103404744,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.0024016209230257996,
+            0.0
+          ],
+          [
+            0.0,
+            0.012862722332169705
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5408456194873774,
+        "amplitude_difference_standard_error": 0.123548950846195,
+        "amplitude_difference_in_standard_errors": -4.377581645032918
+      },
+      "with_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 131.32811219016034,
+        "fixed_candidate_chi2": 68.06273402214059,
+        "fixed_candidate_chi2_improvement": 63.26537816801975,
+        "nuisance_marginalized": true,
+        "expected_squared_SNR_for_candidate_vs_baseline": 46.53416845728821,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 1.179773382284551,
+        "common_amplitude_standard_error": 0.14659326614011473,
+        "fitted_common_amplitude_chi2": 66.5588209424354,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.7292085406941948,
+        "diagnostic_amplitude_lensing": 1.3210715147094316,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.03948472132521082,
+            0.01584627127528392
+          ],
+          [
+            0.015846271275283926,
+            0.02325934157540783
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5918629740152368,
+        "amplitude_difference_standard_error": 0.1762144158406196,
+        "amplitude_difference_in_standard_errors": -3.3587659170323403
+      }
+    },
+    {
+      "assumed_fractional_angle_sigma": 0.05,
+      "without_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 143.35486679226517,
+        "fixed_candidate_chi2": 400.9442602452404,
+        "fixed_candidate_chi2_improvement": -257.58939345297523,
+        "nuisance_marginalized": false,
+        "expected_squared_SNR_for_candidate_vs_baseline": 444.37330076496414,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 0.21016553761269025,
+        "common_amplitude_standard_error": 0.047437961829523964,
+        "fitted_common_amplitude_chi2": 123.72709664345363,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.1761015908530969,
+        "diagnostic_amplitude_lensing": 0.7169472103404744,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.0024016209230257996,
+            0.0
+          ],
+          [
+            0.0,
+            0.035729784256026964
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5408456194873774,
+        "amplitude_difference_standard_error": 0.19527264319164825,
+        "amplitude_difference_in_standard_errors": -2.7696947746877694
+      },
+      "with_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 94.800486270161,
+        "fixed_candidate_chi2": 58.519201225280064,
+        "fixed_candidate_chi2_improvement": 36.28128504488094,
+        "nuisance_marginalized": true,
+        "expected_squared_SNR_for_candidate_vs_baseline": 32.65100809213006,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 1.055592111314105,
+        "common_amplitude_standard_error": 0.17500550201258486,
+        "fitted_common_amplitude_chi2": 58.418293845050876,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.8008685733120641,
+        "diagnostic_amplitude_lensing": 1.3622768173108581,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.04183576738653552,
+            0.017131587480789596
+          ],
+          [
+            0.017131587480789592,
+            0.04687518405105979
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5614082439987941,
+        "amplitude_difference_standard_error": 0.2333404732917462,
+        "amplitude_difference_in_standard_errors": -2.4059617094239107
+      }
+    },
+    {
+      "assumed_fractional_angle_sigma": 0.1,
+      "without_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 132.0098528085749,
+        "fixed_candidate_chi2": 398.70707666933714,
+        "fixed_candidate_chi2_improvement": -266.6972238607623,
+        "nuisance_marginalized": false,
+        "expected_squared_SNR_for_candidate_vs_baseline": 423.38240995449166,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 0.185039791934874,
+        "common_amplitude_standard_error": 0.048599700699273364,
+        "fitted_common_amplitude_chi2": 117.51335569154448,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.1761015908530969,
+        "diagnostic_amplitude_lensing": 0.7169472103404744,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.0024016209230257996,
+            0.0
+          ],
+          [
+            0.0,
+            0.14291913702410786
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5408456194873774,
+        "amplitude_difference_standard_error": 0.38120959844570235,
+        "amplitude_difference_in_standard_errors": -1.4187618089695422
+      },
+      "with_nuisance_marginalization": {
+        "status": "Prediction diagnostic, not full theory validation",
+        "n_observations": 46,
+        "n_motion": 40,
+        "n_lensing": 6,
+        "baseline_chi2": 74.81231199160366,
+        "fixed_candidate_chi2": 52.851726934315366,
+        "fixed_candidate_chi2_improvement": 21.9605850572883,
+        "nuisance_marginalized": true,
+        "expected_squared_SNR_for_candidate_vs_baseline": 25.43046375829541,
+        "conditional_on_covariance_and_local_forward_templates": true,
+        "amplitude_identifiable": true,
+        "common_diagnostic_amplitude": 0.9317771249870496,
+        "common_amplitude_standard_error": 0.19830006652805376,
+        "fitted_common_amplitude_chi2": 52.73336438385092,
+        "separate_diagnostic_amplitudes_identifiable": true,
+        "diagnostic_amplitude_motion": 0.8469144525048218,
+        "diagnostic_amplitude_lensing": 1.3891501890486533,
+        "diagnostic_amplitude_covariance": [
+          [
+            0.04328954360303952,
+            0.017944512999597758
+          ],
+          [
+            0.017944512999597755,
+            0.15454325502317703
+          ]
+        ],
+        "motion_minus_lensing_amplitude": -0.5422357365438315,
+        "amplitude_difference_standard_error": 0.4024223808724125,
+        "amplitude_difference_in_standard_errors": -1.3474293735063076
+      }
+    }
+  ],
+  "code_sha256": "9ef2351028db7927ecca0ccc73f82d1cbb25cf6968a0dc37f402e61fde1164fe",
+  "vendored_tool_sha256": "1d43056f2959bddddb91387283f1635c2dcb90604b8bbfbfd7e287a88741bc02"
+}

@@ -1,0 +1,328 @@
+{
+  "experiment": "JR-9E",
+  "protocol": "../PROTOCOL.md",
+  "scope": "One universal history coefficient on the companion amplitude, fitted to six cross-predicted Einstein-angle residuals. Development, not validation.",
+  "model": "A_chi -> A_chi * (1 + z_lens)^s; every other R10 coefficient frozen",
+  "why_rotation_is_untouched": "All 149 SPARC galaxies are at z ~ 0, so the factor is 1 and no rotation-curve prediction changes for any s.",
+  "s_fitted": 2.816209712018831,
+  "boost_at_z_0p25": 1.8746444905132267,
+  "frozen_R10": {
+    "rows": [
+      {
+        "name": "J0037-0942",
+        "zFG": 0.1955,
+        "dm_dex": 0.09131771524173111,
+        "beta": 0.35,
+        "dm_in_published_sigma": 1.5219619206955186,
+        "kinematic_chi2": 6.118808337822172,
+        "kinematic_penalty": 9.796287536980474,
+        "angle_observed_arcsec": 1.53,
+        "angle_predicted_arcsec": 1.5957079527420934,
+        "angle_fractional_error": 0.04294637434123749,
+        "vrms_fractional_RMS": 0.007899074127814548
+      },
+      {
+        "name": "J1112+0826",
+        "zFG": 0.273,
+        "dm_dex": 0.1110616150145528,
+        "beta": 0.06654448620308205,
+        "dm_in_published_sigma": 1.2340179446061423,
+        "kinematic_chi2": 25.50829509116877,
+        "kinematic_penalty": 27.080297252601316,
+        "angle_observed_arcsec": 1.49,
+        "angle_predicted_arcsec": 1.2723595907160996,
+        "angle_fractional_error": -0.14606738878114123,
+        "vrms_fractional_RMS": 0.022156900466269083
+      },
+      {
+        "name": "J1204+0358",
+        "zFG": 0.1644,
+        "dm_dex": 0.1607566602133056,
+        "beta": 0.2988312001726611,
+        "dm_in_published_sigma": 2.2965237173329367,
+        "kinematic_chi2": 7.493106894193692,
+        "kinematic_penalty": 13.759351258428971,
+        "angle_observed_arcsec": 1.31,
+        "angle_predicted_arcsec": 1.3844073883610972,
+        "angle_fractional_error": 0.05679953310007413,
+        "vrms_fractional_RMS": 0.006385102821066099
+      },
+      {
+        "name": "J1402+6321",
+        "zFG": 0.2046,
+        "dm_dex": 0.07718774323462561,
+        "beta": 0.1866944456298283,
+        "dm_in_published_sigma": 1.1026820462089373,
+        "kinematic_chi2": 15.700875649506422,
+        "kinematic_penalty": 17.304059078193827,
+        "angle_observed_arcsec": 1.35,
+        "angle_predicted_arcsec": 1.4124673351727457,
+        "angle_fractional_error": 0.04627210012795979,
+        "vrms_fractional_RMS": 0.014717753712400318
+      },
+      {
+        "name": "J1621+3931",
+        "zFG": 0.2449,
+        "dm_dex": 0.0019397969145946933,
+        "beta": 0.35,
+        "dm_in_published_sigma": 0.03232994857657822,
+        "kinematic_chi2": 9.043281729723063,
+        "kinematic_penalty": 10.405438066409138,
+        "angle_observed_arcsec": 1.29,
+        "angle_predicted_arcsec": 1.1392153827460896,
+        "angle_fractional_error": -0.1168873001968298,
+        "vrms_fractional_RMS": 0.018628012643260475
+      },
+      {
+        "name": "J1630+4520",
+        "zFG": 0.2479,
+        "dm_dex": -0.04355175826764926,
+        "beta": 0.3366931637642122,
+        "dm_in_published_sigma": -0.6221679752521322,
+        "kinematic_chi2": 5.4052182503957376,
+        "kinematic_penalty": 7.051892201220126,
+        "angle_observed_arcsec": 1.78,
+        "angle_predicted_arcsec": 1.498600062515325,
+        "angle_fractional_error": -0.15808985251948027,
+        "vrms_fractional_RMS": 0.00943207949379172
+      }
+    ],
+    "angle_fractional_RMS": 0.1058319499347684
+  },
+  "with_history": {
+    "rows": [
+      {
+        "name": "J0037-0942",
+        "zFG": 0.1955,
+        "dm_dex": -0.2265121315374487,
+        "beta": 0.35,
+        "dm_in_published_sigma": -3.775202192290812,
+        "kinematic_chi2": 11.986958423315537,
+        "kinematic_penalty": 27.600221127104,
+        "angle_observed_arcsec": 1.53,
+        "angle_predicted_arcsec": 1.6442856775966728,
+        "angle_fractional_error": 0.0746965213050148,
+        "vrms_fractional_RMS": 0.01575774661748211
+      },
+      {
+        "name": "J1112+0826",
+        "zFG": 0.273,
+        "dm_dex": -0.3038815942688087,
+        "beta": 0.06645257586293235,
+        "dm_in_published_sigma": -3.376462158542319,
+        "kinematic_chi2": 21.235131184805955,
+        "kinematic_penalty": 32.684693946638866,
+        "angle_observed_arcsec": 1.49,
+        "angle_predicted_arcsec": 1.3233287631740263,
+        "angle_fractional_error": -0.11185989048723066,
+        "vrms_fractional_RMS": 0.013913569086855834
+      },
+      {
+        "name": "J1204+0358",
+        "zFG": 0.1644,
+        "dm_dex": -0.05436940304876976,
+        "beta": 0.35,
+        "dm_in_published_sigma": -0.776705757839568,
+        "kinematic_chi2": 10.368254397592557,
+        "kinematic_penalty": 12.332637342964805,
+        "angle_observed_arcsec": 1.31,
+        "angle_predicted_arcsec": 1.42433195884496,
+        "angle_fractional_error": 0.08727630446180146,
+        "vrms_fractional_RMS": 0.00894454219132283
+      },
+      {
+        "name": "J1402+6321",
+        "zFG": 0.2046,
+        "dm_dex": -0.25802075190654794,
+        "beta": 0.19170836777549904,
+        "dm_in_published_sigma": -3.686010741522113,
+        "kinematic_chi2": 14.079253677685356,
+        "kinematic_penalty": 28.074285511803378,
+        "angle_observed_arcsec": 1.35,
+        "angle_predicted_arcsec": 1.4301681218312334,
+        "angle_fractional_error": 0.05938379394906179,
+        "vrms_fractional_RMS": 0.011091867385948318
+      },
+      {
+        "name": "J1621+3931",
+        "zFG": 0.2449,
+        "dm_dex": -0.3,
+        "beta": 0.012442309333555147,
+        "dm_in_published_sigma": -5.0,
+        "kinematic_chi2": 65.57126391715117,
+        "kinematic_penalty": 90.5729840400573,
+        "angle_observed_arcsec": 1.29,
+        "angle_predicted_arcsec": 1.3303616782604055,
+        "angle_fractional_error": 0.03128812268248482,
+        "vrms_fractional_RMS": 0.06313776192403309
+      },
+      {
+        "name": "J1630+4520",
+        "zFG": 0.2479,
+        "dm_dex": -0.35000000000000003,
+        "beta": 0.15201671903591737,
+        "dm_in_published_sigma": -5.0,
+        "kinematic_chi2": 54.47590859563622,
+        "kinematic_penalty": 79.73267618304116,
+        "angle_observed_arcsec": 1.78,
+        "angle_predicted_arcsec": 1.7119733768868508,
+        "angle_fractional_error": -0.03821720399615125,
+        "vrms_fractional_RMS": 0.04231064640390725
+      }
+    ],
+    "angle_fractional_RMS": 0.07265821243036596
+  },
+  "profile": [
+    {
+      "s": -6.0,
+      "angle_fractional_RMS": 0.24274158443848823
+    },
+    {
+      "s": -5.5,
+      "angle_fractional_RMS": 0.21880722618977316
+    },
+    {
+      "s": -5.0,
+      "angle_fractional_RMS": 0.19272962995338416
+    },
+    {
+      "s": -4.5,
+      "angle_fractional_RMS": 0.17036135311579886
+    },
+    {
+      "s": -4.0,
+      "angle_fractional_RMS": 0.14996139906409575
+    },
+    {
+      "s": -3.5,
+      "angle_fractional_RMS": 0.13489066319970813
+    },
+    {
+      "s": -3.0,
+      "angle_fractional_RMS": 0.12417542680083556
+    },
+    {
+      "s": -2.5,
+      "angle_fractional_RMS": 0.12069106840247044
+    },
+    {
+      "s": -2.0,
+      "angle_fractional_RMS": 0.11744695365106705
+    },
+    {
+      "s": -1.5,
+      "angle_fractional_RMS": 0.11501700293596978
+    },
+    {
+      "s": -1.0,
+      "angle_fractional_RMS": 0.11193930335252154
+    },
+    {
+      "s": -0.5,
+      "angle_fractional_RMS": 0.10887287661566306
+    },
+    {
+      "s": 0.0,
+      "angle_fractional_RMS": 0.1058319499347684
+    },
+    {
+      "s": 0.5,
+      "angle_fractional_RMS": 0.10315160505940457
+    },
+    {
+      "s": 1.0,
+      "angle_fractional_RMS": 0.10057528688943236
+    },
+    {
+      "s": 1.5,
+      "angle_fractional_RMS": 0.09862104460074453
+    },
+    {
+      "s": 2.0,
+      "angle_fractional_RMS": 0.0969833469957086
+    },
+    {
+      "s": 2.5,
+      "angle_fractional_RMS": 0.08000333838846443
+    },
+    {
+      "s": 3.0,
+      "angle_fractional_RMS": 0.07550094698227926
+    },
+    {
+      "s": 3.5,
+      "angle_fractional_RMS": 0.11160334671764513
+    },
+    {
+      "s": 4.0,
+      "angle_fractional_RMS": 0.18410168622359677
+    },
+    {
+      "s": 4.5,
+      "angle_fractional_RMS": 0.2775695693691937
+    },
+    {
+      "s": 5.0,
+      "angle_fractional_RMS": 0.3870258346693912
+    },
+    {
+      "s": 5.5,
+      "angle_fractional_RMS": 0.5106505510068237
+    },
+    {
+      "s": 6.0,
+      "angle_fractional_RMS": 0.6495801535863726
+    },
+    {
+      "s": 6.5,
+      "angle_fractional_RMS": 0.8052897063548362
+    },
+    {
+      "s": 7.0,
+      "angle_fractional_RMS": 0.9774771000910973
+    },
+    {
+      "s": 7.5,
+      "angle_fractional_RMS": 1.1673187916461831
+    },
+    {
+      "s": 8.0,
+      "angle_fractional_RMS": 1.3761415041787763
+    },
+    {
+      "s": 8.5,
+      "angle_fractional_RMS": 1.605377399509721
+    },
+    {
+      "s": 9.0,
+      "angle_fractional_RMS": 1.8565367152178995
+    },
+    {
+      "s": 9.5,
+      "angle_fractional_RMS": 2.131187461362439
+    },
+    {
+      "s": 10.0,
+      "angle_fractional_RMS": 2.4309379573049177
+    },
+    {
+      "s": 10.5,
+      "angle_fractional_RMS": 2.757420578866905
+    },
+    {
+      "s": 11.0,
+      "angle_fractional_RMS": 3.1122763225540204
+    },
+    {
+      "s": 11.5,
+      "angle_fractional_RMS": 3.497140451406858
+    },
+    {
+      "s": 12.0,
+      "angle_fractional_RMS": 3.913629850143502
+    }
+  ],
+  "degeneracy_warning": "A companion amplitude growing with lens redshift and a redshift-dependent error in the distance convention are not separable by these six systems. JR-9C shows standard FLRW does not supply the required size or slope, which weakens but does not remove that degeneracy.",
+  "reserved_test": "The KCWI release carries 14 SLACS lenses. Eight are in this project and only six are usable. The remaining systems have never been scored here and would need light components and population masses acquired before they could test this trend. That is a genuinely reserved comparison and must not be opened by fitting.",
+  "code_sha256": "844c5f66d11b04231cf1936ec05d5227361544e725785707caab4b67a8157c84"
+}

@@ -1,0 +1,108 @@
+{
+  "experiment": "JR-9C",
+  "protocol": "../PROTOCOL.md",
+  "scope": "Diagnostic only. The project distance convention is NOT changed here; this reports how much of the residual deflection gap is degenerate with it.",
+  "distance_convention_in_use": "Static Euclidean, frozen exponential redshift rule (research_work/results/lensing-data-readiness/conditional-geometry.json)",
+  "comparison_cosmology": "Flat FLRW, Om=0.3, OL=0.7, H0=70 km/s/Mpc, comoving-difference D_ls",
+  "rows": [
+    {
+      "name": "J0037-0942",
+      "zFG": 0.1955,
+      "zBG": 0.6322,
+      "dm_from_kinematics_dex": 0.09250000000000003,
+      "angle_observed_arcsec": 1.53,
+      "angle_predicted_arcsec": 1.597996778581916,
+      "angle_fractional_error": 0.04444233894242866,
+      "project_Dls_over_Ds": 0.6355296756878466,
+      "flrw_Dls_over_Ds_Om0p3_h0p70": 0.6532146291949051,
+      "flrw_over_project": 1.0278271089196862,
+      "required_ratio_factor": 0.953722320168608,
+      "required_fractional_change": -0.04627767983139197
+    },
+    {
+      "name": "J1112+0826",
+      "zFG": 0.273,
+      "zBG": 0.6295,
+      "dm_from_kinematics_dex": 0.11249999999999993,
+      "angle_observed_arcsec": 1.49,
+      "angle_predicted_arcsec": 1.2746174562730297,
+      "angle_fractional_error": -0.14455204276977873,
+      "project_Dls_over_Ds": 0.505653167045395,
+      "flrw_Dls_over_Ds_Om0p3_h0p70": 0.5234324522056879,
+      "flrw_over_project": 1.0351610279911423,
+      "required_ratio_factor": 1.1921365301009803,
+      "required_fractional_change": 0.1921365301009803
+    },
+    {
+      "name": "J1204+0358",
+      "zFG": 0.1644,
+      "zBG": 0.6307,
+      "dm_from_kinematics_dex": 0.1604166666666667,
+      "angle_observed_arcsec": 1.31,
+      "angle_predicted_arcsec": 1.3838141487894862,
+      "angle_fractional_error": 0.05634667846525665,
+      "project_Dls_over_Ds": 0.6887463879509226,
+      "flrw_Dls_over_Ds_Om0p3_h0p70": 0.7055488093234557,
+      "flrw_over_project": 1.024395658062936,
+      "required_ratio_factor": 0.9391636088075994,
+      "required_fractional_change": -0.060836391192400585
+    },
+    {
+      "name": "J1402+6321",
+      "zFG": 0.2046,
+      "zBG": 0.4814,
+      "dm_from_kinematics_dex": 0.07583333333333331,
+      "angle_observed_arcsec": 1.35,
+      "angle_predicted_arcsec": 1.4100583602013521,
+      "angle_fractional_error": 0.04448767422322364,
+      "project_Dls_over_Ds": 0.5263271208147617,
+      "flrw_Dls_over_Ds_Om0p3_h0p70": 0.5433176673188901,
+      "flrw_over_project": 1.032281343355111,
+      "required_ratio_factor": 0.9544375187233683,
+      "required_fractional_change": -0.04556248127663165
+    },
+    {
+      "name": "J1621+3931",
+      "zFG": 0.2449,
+      "zBG": 0.6021,
+      "dm_from_kinematics_dex": 0.0025000000000000022,
+      "angle_observed_arcsec": 1.29,
+      "angle_predicted_arcsec": 1.1399911892522525,
+      "angle_fractional_error": -0.11628589980445547,
+      "project_Dls_over_Ds": 0.5352257396126674,
+      "flrw_Dls_over_Ds_Om0p3_h0p70": 0.5531303217005,
+      "flrw_over_project": 1.0334523935653577,
+      "required_ratio_factor": 1.142722272081956,
+      "required_fractional_change": 0.1427222720819561
+    },
+    {
+      "name": "J1630+4520",
+      "zFG": 0.2479,
+      "zBG": 0.7933,
+      "dm_from_kinematics_dex": -0.04375000000000001,
+      "angle_observed_arcsec": 1.78,
+      "angle_predicted_arcsec": 1.498238632826158,
+      "angle_fractional_error": -0.15829290290665277,
+      "project_Dls_over_Ds": 0.6208213415621675,
+      "flrw_Dls_over_Ds_Om0p3_h0p70": 0.6388239967515457,
+      "flrw_over_project": 1.0289981255220355,
+      "required_ratio_factor": 1.2110639862526513,
+      "required_fractional_change": 0.21106398625265133
+    }
+  ],
+  "required_change_vs_z_linear_fit": {
+    "intercept": -0.5945040860597626,
+    "slope_per_unit_z": 2.9769756840515194,
+    "residual_rms": 0.04477652300422151,
+    "raw_rms": 0.13524836985112193,
+    "rms_after_constant_rescaling": 0.1183067779442049
+  },
+  "correlation_required_change_with_zFG": 0.9256102514583231,
+  "correlation_required_change_with_flrw_offset": 0.5673048580487122,
+  "mean_flrw_over_project": 1.030352609569378,
+  "interpretation": [
+    "A redshift-dependent distance error and a redshift-independent companion correction are not distinguishable by these six systems alone.",
+    "Reporting both is mandatory; choosing whichever is smaller is not."
+  ],
+  "code_sha256": "cc392f103afc269ce514216442605842e29b4df09c5e58ed8c3f76feb66d2066"
+}

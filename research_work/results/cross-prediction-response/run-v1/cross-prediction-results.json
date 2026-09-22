@@ -1,0 +1,1599 @@
+{
+  "experiment": "JR-9A",
+  "scope": "Same-object cross-prediction with frozen universal R10 coefficients. Historically examined development objects; not a blind test.",
+  "protocol": "../PROTOCOL.md",
+  "frozen_universal_parameters": {
+    "logA": 4.003966354086798,
+    "logc": 0.40696294621254714,
+    "p": 0.5262342449687079,
+    "dA": -0.0646633940641299,
+    "dc": 0.22523131090025836,
+    "q": 1.8906354271311694,
+    "logt": 1.1596824778910269,
+    "logsph": 0.7327392881137837,
+    "core_sph": 1.652351039619069,
+    "q_sph": 1.6760087204080696,
+    "logu": -0.02126541905803754,
+    "logusph": -0.10889793445059864
+  },
+  "priors": {
+    "stellar_log_mass": "published per-lens log10 mass error",
+    "beta_sigma": 0.3,
+    "beta_bounds": [
+      -1.0,
+      0.35
+    ]
+  },
+  "grid": {
+    "dm_points": 241,
+    "dm_half_width_in_sigma": 5.0,
+    "beta_points": 136
+  },
+  "r10_reproduction": [
+    {
+      "name": "J0037-0942",
+      "published_angle": 1.569390109078208,
+      "reproduced_angle": 1.569390109078208,
+      "angle_relative_difference": 0.0,
+      "published_stellar_fractional_RMS": 0.012402378950980944,
+      "reproduced_stellar_fractional_RMS": 0.012402378950980788
+    },
+    {
+      "name": "J1112+0826",
+      "published_angle": 1.3488427289137168,
+      "reproduced_angle": 1.3488427289137168,
+      "angle_relative_difference": 0.0,
+      "published_stellar_fractional_RMS": 0.016928868101493615,
+      "reproduced_stellar_fractional_RMS": 0.016928868101493615
+    },
+    {
+      "name": "J1204+0358",
+      "published_angle": 1.3451437981377614,
+      "reproduced_angle": 1.3451437981377614,
+      "angle_relative_difference": 0.0,
+      "published_stellar_fractional_RMS": 0.013678336021644718,
+      "reproduced_stellar_fractional_RMS": 0.01367833602164469
+    },
+    {
+      "name": "J1402+6321",
+      "published_angle": 1.3856808175164588,
+      "reproduced_angle": 1.3856808175164588,
+      "angle_relative_difference": 0.0,
+      "published_stellar_fractional_RMS": 0.019512744311751904,
+      "reproduced_stellar_fractional_RMS": 0.019512744311751904
+    },
+    {
+      "name": "J1621+3931",
+      "published_angle": 1.1365331830439223,
+      "reproduced_angle": 1.1365331830439223,
+      "angle_relative_difference": 0.0,
+      "published_stellar_fractional_RMS": 0.03498895112080083,
+      "reproduced_stellar_fractional_RMS": 0.03498895112080083
+    },
+    {
+      "name": "J1630+4520",
+      "published_angle": 1.5801351448696819,
+      "reproduced_angle": 1.5801351448696819,
+      "angle_relative_difference": 0.0,
+      "published_stellar_fractional_RMS": 0.018215627648549223,
+      "reproduced_stellar_fractional_RMS": 0.018215627648549223
+    }
+  ],
+  "r10_reproduction_worst_relative_angle_difference": 0.0,
+  "code_sha256": "2546702042f62e63d3a3f7b5a1a09d7eb37175a1f0f1e1fd4ee7b9fecc28b861",
+  "companion_R10": [
+    {
+      "name": "J0037-0942",
+      "companion": true,
+      "theta_observed_arcsec": 1.53,
+      "stellar_log_mass_sigma": 0.06,
+      "Mstar_catalog_Msun": 243324416442.26773,
+      "Re_kpc": 11.595455432460946,
+      "n_bins": 6,
+      "observed_vrms_kms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.21479474095772605,
+        0.4295894819154521,
+        0.6443842228731781,
+        1.0739737047886302,
+        1.6109605571829453
+      ],
+      "outer_arcsec": [
+        0.21479474095772605,
+        0.4295894819154521,
+        0.6443842228731781,
+        1.0739737047886302,
+        1.6109605571829453,
+        2.497467782749249
+      ],
+      "theta_E_over_Re": 0.45893365441746076,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.07770615633910262,
+          0.08657492505421821,
+          0.09614989050916661,
+          0.10622434363558259,
+          0.11652414634514024
+        ],
+        "dm_MAP_dex": 0.09250000000000003,
+        "beta_quantiles": [
+          0.25396118658232125,
+          0.29043554269690114,
+          0.3211167262838969,
+          0.34119963797843167,
+          0.3486249434341299
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 6.079137537834954,
+        "predicted_vrms_at_MAP_kms": [
+          291.84631200939293,
+          289.87903498941915,
+          285.4843719792756,
+          274.62458376612074,
+          257.97202954149213,
+          245.16494189010828
+        ],
+        "vrms_fractional_RMS": 0.007896152721412975,
+        "predicted_angle_quantiles_arcsec": [
+          1.5695919971342216,
+          1.5865607667216832,
+          1.6050852476082205,
+          1.624809040189505,
+          1.6452238693687078
+        ],
+        "predicted_angle_mean_arcsec": 1.6081022393808277,
+        "predicted_angle_sd_arcsec": 0.01925065658160018,
+        "angle_fractional_error_at_median": 0.04907532523413094,
+        "angle_gap_arcsec": -0.07508524760822044,
+        "angle_gap_in_kinematic_sigma": -4.057120807789903,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": -3.176153489365168,
+          "2%": -2.1604009960138884,
+          "3%": -1.5691541667844948,
+          "5%": -0.9900776263934125
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.04947229760986459
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": 1.106714719867341e-11
+        },
+        "dm_dex": 0.05663399478825362,
+        "dm_in_published_sigma": 0.9438999131375604,
+        "stellar_mass_factor": 1.1392892375784207,
+        "beta_best": 0.35,
+        "kinematic_chi2_best_beta": 24.801231330029402,
+        "predicted_vrms_best_beta_kms": [
+          284.8525343791694,
+          282.9283005666307,
+          278.63655570692555,
+          268.0623975218576,
+          251.91408955200234,
+          239.56049100417266
+        ],
+        "vrms_fractional_RMS_best_beta": 0.024632074133030247,
+        "predicted_vrms_marginalized_kms": [
+          284.56445660642225,
+          282.6686356320524,
+          278.4307927860868,
+          267.9523720444484,
+          251.8939941780041,
+          239.57549481197188
+        ],
+        "kinematic_chi2_marginalized": 25.721796119184635,
+        "vrms_fractional_RMS_marginalized": 0.025157895019079918
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.09614989050916661,
+        "dm_lensing_dex": 0.05663399478825362,
+        "delta_dm_dex": -0.03951589572091299,
+        "delta_dm_in_published_stellar_sigma": -0.6585982620152165,
+        "delta_dm_in_kinematic_posterior_sigma": -4.02209312782314,
+        "extra_stellar_mass_factor_demanded_by_lens": 0.9130280167148868,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": 19.642658581349682
+      }
+    },
+    {
+      "name": "J1112+0826",
+      "companion": true,
+      "theta_observed_arcsec": 1.49,
+      "stellar_log_mass_sigma": 0.09,
+      "Mstar_catalog_Msun": 237106458850.23138,
+      "Re_kpc": 7.631912615524711,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.13717568587504445,
+        0.2743513717500889,
+        0.41152705762513336,
+        0.6858784293752223,
+        1.0288176440628334,
+        1.3717568587504445
+      ],
+      "outer_arcsec": [
+        0.13717568587504445,
+        0.2743513717500889,
+        0.41152705762513336,
+        0.6858784293752223,
+        1.0288176440628334,
+        1.3717568587504445,
+        1.8037284278368781
+      ],
+      "theta_E_over_Re": 0.9179070081596061,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.07936310134667984,
+          0.0946152788500418,
+          0.11025470725313036,
+          0.12581549442480655,
+          0.14081583167369577
+        ],
+        "dm_MAP_dex": 0.11249999999999993,
+        "beta_quantiles": [
+          -0.11323634358483026,
+          -0.02662169730043333,
+          0.05478023040555845,
+          0.1291077712334888,
+          0.1955913193309507
+        ],
+        "beta_MAP": 0.06000000000000005,
+        "kinematic_chi2_at_MAP": 25.486411420117307,
+        "predicted_vrms_at_MAP_kms": [
+          282.58300141713147,
+          281.988618733303,
+          280.6889801946416,
+          276.89004216394835,
+          267.24018214929697,
+          254.04394795424395,
+          242.37661946517593
+        ],
+        "vrms_fractional_RMS": 0.02167043445392315,
+        "predicted_angle_quantiles_arcsec": [
+          1.2235935251414896,
+          1.2468245448951512,
+          1.27109791467418,
+          1.2957108388657217,
+          1.319881265275917
+        ],
+        "predicted_angle_mean_arcsec": 1.2741811928048221,
+        "predicted_angle_sd_arcsec": 0.024538724738783286,
+        "angle_fractional_error_at_median": -0.14691415122538243,
+        "angle_gap_arcsec": 0.2189020853258199,
+        "angle_gap_in_kinematic_sigma": 8.79502946842538,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 7.517679074976106,
+          "2%": 5.590731167689703,
+          "3%": 4.232360504786681,
+          "5%": 2.751484312568922
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.1439055271419873
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -7.571721027943568e-14
+        },
+        "dm_dex": 0.23934225549494847,
+        "dm_in_published_sigma": 2.6593583943883163,
+        "stellar_mass_factor": 1.7351708993709039,
+        "beta_best": -0.73,
+        "kinematic_chi2_best_beta": 87.19443593179312,
+        "predicted_vrms_best_beta_kms": [
+          283.7706003818997,
+          284.20774342442456,
+          284.94762923077724,
+          285.9012255688399,
+          284.5775645724481,
+          278.31047213795216,
+          270.0766164020091
+        ],
+        "vrms_fractional_RMS_best_beta": 0.04820840082505283,
+        "predicted_vrms_marginalized_kms": [
+          283.57389059059835,
+          284.0183682463576,
+          284.7728833912217,
+          285.76148280225067,
+          284.5028722516874,
+          278.2976705852319,
+          270.1031930609697
+        ],
+        "kinematic_chi2_marginalized": 87.00636921474995,
+        "vrms_fractional_RMS_marginalized": 0.048092429685998486
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.11025470725313036,
+        "dm_lensing_dex": 0.23934225549494847,
+        "delta_dm_dex": 0.12908754824181812,
+        "delta_dm_in_published_stellar_sigma": 1.4343060915757568,
+        "delta_dm_in_kinematic_posterior_sigma": 8.274785661816148,
+        "extra_stellar_mass_factor_demanded_by_lens": 1.3461316897273004,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": 61.519957794632646
+      }
+    },
+    {
+      "name": "J1204+0358",
+      "companion": true,
+      "theta_observed_arcsec": 1.31,
+      "stellar_log_mass_sigma": 0.07,
+      "Mstar_catalog_Msun": 129201031183.64267,
+      "Re_kpc": 4.578810402771255,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.11223720908506195,
+        0.2244744181701239,
+        0.33671162725518583,
+        0.5611860454253097,
+        0.8417790681379645,
+        1.1223720908506194
+      ],
+      "outer_arcsec": [
+        0.11223720908506195,
+        0.2244744181701239,
+        0.33671162725518583,
+        0.5611860454253097,
+        0.8417790681379645,
+        1.1223720908506194,
+        2.2503431376236263
+      ],
+      "theta_E_over_Re": 0.84820604144018,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.14321135191117634,
+          0.15151799466713883,
+          0.16054472585869115,
+          0.1700452305930234,
+          0.17947983655292654
+        ],
+        "dm_MAP_dex": 0.1604166666666667,
+        "beta_quantiles": [
+          0.20172785199623872,
+          0.24579460966898675,
+          0.2874554548053765,
+          0.322990943684605,
+          0.3444826994049936
+        ],
+        "beta_MAP": 0.30000000000000004,
+        "kinematic_chi2_at_MAP": 7.508821639614998,
+        "predicted_vrms_at_MAP_kms": [
+          268.21261310504934,
+          267.65676165115593,
+          266.4989665698112,
+          263.3299287275694,
+          255.5178890385546,
+          243.41694193410612,
+          220.0144790655761
+        ],
+        "vrms_fractional_RMS": 0.006397453230836435,
+        "predicted_angle_quantiles_arcsec": [
+          1.3541254205011406,
+          1.3683782084962386,
+          1.3840379585785985,
+          1.4007158048392452,
+          1.4174764230413868
+        ],
+        "predicted_angle_mean_arcsec": 1.3870206009509203,
+        "predicted_angle_sd_arcsec": 0.016177094022693978,
+        "angle_fractional_error_at_median": 0.056517525632517884,
+        "angle_gap_arcsec": -0.0740379585785984,
+        "angle_gap_in_kinematic_sigma": -4.761090022897323,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": -3.7000565636128337,
+          "2%": -2.501330285595873,
+          "3%": -1.8122803517708392,
+          "5%": -1.1415849616393623
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.05748286545066666
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -1.4275913784445038e-11
+        },
+        "dm_dex": 0.11692674530090709,
+        "dm_in_published_sigma": 1.670382075727244,
+        "stellar_mass_factor": 1.3089611151282765,
+        "beta_best": 0.35,
+        "kinematic_chi2_best_beta": 36.47222229615812,
+        "predicted_vrms_best_beta_kms": [
+          262.1704324129861,
+          261.5664495405359,
+          260.3135408561216,
+          256.91714675235755,
+          248.6776545962701,
+          236.158352328359,
+          212.52488913542555
+        ],
+        "vrms_fractional_RMS_best_beta": 0.027427456438716056,
+        "predicted_vrms_marginalized_kms": [
+          261.91544738595223,
+          261.3182299610686,
+          260.07893688471813,
+          256.71675125448706,
+          248.54925956757086,
+          236.1186590118116,
+          212.5968141129834
+        ],
+        "kinematic_chi2_marginalized": 37.4410598498222,
+        "vrms_fractional_RMS_marginalized": 0.027881829439789757
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.16054472585869115,
+        "dm_lensing_dex": 0.11692674530090709,
+        "delta_dm_dex": -0.043617980557784056,
+        "delta_dm_in_published_stellar_sigma": -0.6231140079683436,
+        "delta_dm_in_kinematic_posterior_sigma": -4.708525409000162,
+        "extra_stellar_mass_factor_demanded_by_lens": 0.9044447026660046,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": 29.932238210207206
+      }
+    },
+    {
+      "name": "J1402+6321",
+      "companion": true,
+      "theta_observed_arcsec": 1.35,
+      "stellar_log_mass_sigma": 0.07,
+      "Mstar_catalog_Msun": 284946501185.682,
+      "Re_kpc": 9.865029427153711,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.20767545802297957,
+        0.41535091604595914,
+        0.6230263740689387,
+        1.0383772901148978,
+        1.5575659351723465,
+        2.0767545802297955
+      ],
+      "outer_arcsec": [
+        0.20767545802297957,
+        0.41535091604595914,
+        0.6230263740689387,
+        1.0383772901148978,
+        1.5575659351723465,
+        2.0767545802297955,
+        2.523313300043134
+      ],
+      "theta_E_over_Re": 0.49618528487340846,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.056589710329363524,
+          0.06615227281499683,
+          0.07592288771352083,
+          0.08564062493837064,
+          0.0950380563843424
+        ],
+        "dm_MAP_dex": 0.07583333333333331,
+        "beta_quantiles": [
+          0.12031451376206063,
+          0.15057007675800382,
+          0.18056319428088743,
+          0.2093663139943591,
+          0.23687638714325046
+        ],
+        "beta_MAP": 0.18999999999999995,
+        "kinematic_chi2_at_MAP": 15.749242356757765,
+        "predicted_vrms_at_MAP_kms": [
+          295.7350630886392,
+          294.5621743430669,
+          291.7184058218516,
+          283.57218189552634,
+          268.4241681282759,
+          255.32061251403272,
+          246.44179105425678
+        ],
+        "vrms_fractional_RMS": 0.015051891898572,
+        "predicted_angle_quantiles_arcsec": [
+          1.3762786852513909,
+          1.392961955937811,
+          1.410217801539584,
+          1.4275981879814281,
+          1.4446094668028315
+        ],
+        "predicted_angle_mean_arcsec": 1.4128660388292997,
+        "predicted_angle_sd_arcsec": 0.017336959325416547,
+        "angle_fractional_error_at_median": 0.04460577891821038,
+        "angle_gap_arcsec": -0.060217801539584004,
+        "angle_gap_in_kinematic_sigma": -3.6261282990458414,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": -2.8610365054926086,
+          "2%": -1.9592421855675903,
+          "3%": -1.426998278643929,
+          "5%": -0.9020696789320227
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.04476163774575534
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": 0.0
+        },
+        "dm_dex": 0.041288266376276354,
+        "dm_in_published_sigma": 0.5898323768039478,
+        "stellar_mass_factor": 1.0997355553480836,
+        "beta_best": 0.26,
+        "kinematic_chi2_best_beta": 29.541465608199164,
+        "predicted_vrms_best_beta_kms": [
+          294.0688719033472,
+          292.441628456747,
+          288.75763285422767,
+          279.15222928644783,
+          262.63473632662107,
+          249.03071798178922,
+          239.96998020400886
+        ],
+        "vrms_fractional_RMS_best_beta": 0.02808164394969981,
+        "predicted_vrms_marginalized_kms": [
+          293.7636501439047,
+          292.1638155346307,
+          288.5316859534959,
+          279.0221930217475,
+          262.6090776846208,
+          249.05814233626361,
+          240.02477703807813
+        ],
+        "kinematic_chi2_marginalized": 29.548880210643137,
+        "vrms_fractional_RMS_marginalized": 0.028153163188731723
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.07592288771352083,
+        "dm_lensing_dex": 0.041288266376276354,
+        "delta_dm_dex": -0.03463462133724448,
+        "delta_dm_in_published_stellar_sigma": -0.49478030481777824,
+        "delta_dm_in_kinematic_posterior_sigma": -3.5543919894288685,
+        "extra_stellar_mass_factor_demanded_by_lens": 0.9233479273563862,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": 13.799637853885372
+      }
+    },
+    {
+      "name": "J1621+3931",
+      "companion": true,
+      "theta_observed_arcsec": 1.29,
+      "stellar_log_mass_sigma": 0.06,
+      "Mstar_catalog_Msun": 223252831619.08383,
+      "Re_kpc": 10.248290128030682,
+      "n_bins": 6,
+      "observed_vrms_kms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.1824197363442892,
+        0.3648394726885784,
+        0.5472592090328676,
+        0.912098681721446,
+        1.3681480225821692
+      ],
+      "outer_arcsec": [
+        0.1824197363442892,
+        0.3648394726885784,
+        0.5472592090328676,
+        0.912098681721446,
+        1.3681480225821692,
+        2.1086338656859502
+      ],
+      "theta_E_over_Re": 0.5370849979423182,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          -0.01767280999580324,
+          -0.006154439970881476,
+          0.006088690882571848,
+          0.018926144098656627,
+          0.03240047847427246
+        ],
+        "dm_MAP_dex": 0.0025000000000000022,
+        "beta_quantiles": [
+          0.2468722604035597,
+          0.29532800734703063,
+          0.32820933518055223,
+          0.3440760016982914,
+          0.349074375265358
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 9.045159987857218,
+        "predicted_vrms_at_MAP_kms": [
+          266.99163110685424,
+          265.87239263704805,
+          263.44928935134925,
+          257.205721886572,
+          245.75264312279546,
+          233.67418694868243
+        ],
+        "vrms_fractional_RMS": 0.018708679649520325,
+        "predicted_angle_quantiles_arcsec": [
+          1.1123917888259123,
+          1.1280672034717416,
+          1.1449751777801105,
+          1.162981797927716,
+          1.1821915202525863
+        ],
+        "predicted_angle_mean_arcsec": 1.1473008973957195,
+        "predicted_angle_sd_arcsec": 0.01777164321160274,
+        "angle_fractional_error_at_median": -0.11242234280611596,
+        "angle_gap_arcsec": 0.14502482221988955,
+        "angle_gap_in_kinematic_sigma": 8.029595288696502,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 6.498139646147746,
+          "2%": 4.554937677342958,
+          "3%": 3.350887992680986,
+          "5%": 2.132908666065172
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.10975825132775695
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -1.475841671094713e-11
+        },
+        "dm_dex": 0.1041025280497939,
+        "dm_in_published_sigma": 1.7350421341632318,
+        "stellar_mass_factor": 1.2708740971926584,
+        "beta_best": 0.0,
+        "kinematic_chi2_best_beta": 46.440661222576615,
+        "predicted_vrms_best_beta_kms": [
+          266.7662390637479,
+          266.6903678039185,
+          266.2850239817803,
+          264.0900345001713,
+          257.6301945101948,
+          248.86388434566337
+        ],
+        "vrms_fractional_RMS_best_beta": 0.05179138584973524,
+        "predicted_vrms_marginalized_kms": [
+          266.78469600122287,
+          266.70704590305604,
+          266.29810234687835,
+          264.09506546348064,
+          257.6226499166664,
+          248.8458031666946
+        ],
+        "kinematic_chi2_marginalized": 46.3732820783051,
+        "vrms_fractional_RMS_marginalized": 0.05175699227074088
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.006088690882571848,
+        "dm_lensing_dex": 0.1041025280497939,
+        "delta_dm_dex": 0.09801383716722206,
+        "delta_dm_in_published_stellar_sigma": 1.6335639527870345,
+        "delta_dm_in_kinematic_posterior_sigma": 7.8159134488630855,
+        "extra_stellar_mass_factor_demanded_by_lens": 1.2531811022279735,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": 37.328122090447884
+      }
+    },
+    {
+      "name": "J1630+4520",
+      "companion": true,
+      "theta_observed_arcsec": 1.78,
+      "stellar_log_mass_sigma": 0.07,
+      "Mstar_catalog_Msun": 322384284579.7863,
+      "Re_kpc": 8.678424370155756,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.1268529819134526,
+        0.2537059638269052,
+        0.3805589457403577,
+        0.6342649095672629,
+        0.9513973643508944,
+        1.2685298191345258
+      ],
+      "outer_arcsec": [
+        0.1268529819134526,
+        0.2537059638269052,
+        0.3805589457403577,
+        0.6342649095672629,
+        0.9513973643508944,
+        1.2685298191345258,
+        2.338279481723444
+      ],
+      "theta_E_over_Re": 0.8847687071017698,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          -0.059867442554657604,
+          -0.0504497012415036,
+          -0.03997525148116932,
+          -0.02845980062740886,
+          -0.016476514401470452
+        ],
+        "dm_MAP_dex": -0.04375000000000001,
+        "beta_quantiles": [
+          0.2513557780430163,
+          0.2857974515444716,
+          0.31694248978744777,
+          0.3391241990855509,
+          0.3482911900849957
+        ],
+        "beta_MAP": 0.3400000000000001,
+        "kinematic_chi2_at_MAP": 5.396083015726964,
+        "predicted_vrms_at_MAP_kms": [
+          293.3874040102714,
+          292.40455808032567,
+          290.3686322744953,
+          284.96607028757063,
+          272.79490868397346,
+          257.20147033469226,
+          236.47447202185919
+        ],
+        "vrms_fractional_RMS": 0.00938679177061737,
+        "predicted_angle_quantiles_arcsec": [
+          1.4691438047311005,
+          1.4860765943587277,
+          1.5051375068783233,
+          1.5263726589119289,
+          1.5487866149166627
+        ],
+        "predicted_angle_mean_arcsec": 1.508848650378747,
+        "predicted_angle_sd_arcsec": 0.02027676595260148,
+        "angle_fractional_error_at_median": -0.15441713096723408,
+        "angle_gap_arcsec": 0.27486249312167677,
+        "angle_gap_in_kinematic_sigma": 13.372514643365239,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 10.049625720859051,
+          "2%": 6.618356567758664,
+          "3%": 4.747038098435842,
+          "5%": 2.970525620917663
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.15190569433349524
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -3.0882407742183204e-11
+        },
+        "dm_dex": 0.09801334816251996,
+        "dm_in_published_sigma": 1.4001906880359993,
+        "stellar_mass_factor": 1.2531796911782547,
+        "beta_best": -0.05999999999999994,
+        "kinematic_chi2_best_beta": 124.60854336810957,
+        "predicted_vrms_best_beta_kms": [
+          298.8969723618211,
+          298.74174528669784,
+          298.3360008667402,
+          296.75386061979503,
+          291.390784275061,
+          281.8123403742049,
+          264.99940142187154
+        ],
+        "vrms_fractional_RMS_best_beta": 0.06397184729431757,
+        "predicted_vrms_marginalized_kms": [
+          298.8790960122104,
+          298.7242831450487,
+          298.31936450363816,
+          296.73924851110905,
+          291.3801503582313,
+          281.80620156808163,
+          264.99883728356014
+        ],
+        "kinematic_chi2_marginalized": 124.56944408213671,
+        "vrms_fractional_RMS_marginalized": 0.06394760641936219
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": -0.03997525148116932,
+        "dm_lensing_dex": 0.09801334816251996,
+        "delta_dm_dex": 0.13798859964368929,
+        "delta_dm_in_published_stellar_sigma": 1.971265709195561,
+        "delta_dm_in_kinematic_posterior_sigma": 12.550179472411397,
+        "extra_stellar_mass_factor_demanded_by_lens": 1.3740059064849244,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": 119.17336106640975
+      }
+    }
+  ],
+  "companion_R10_summary": {
+    "n_systems": 6,
+    "n_with_lensing_solution": 6,
+    "median_delta_dm_dex": 0.03168960791498879,
+    "mean_delta_dm_in_published_sigma": 0.543773863126169,
+    "n_lensing_dm_inside_kinematic_68": 0,
+    "K_to_L_angle_fractional_RMS": 0.10460998605279885,
+    "L_to_K_total_chi2": 350.66083155484176,
+    "L_to_K_total_bins": 40,
+    "K_to_L_total_chi2": 69.2648559579092
+  },
+  "baryons_only_control": [
+    {
+      "name": "J0037-0942",
+      "companion": false,
+      "theta_observed_arcsec": 1.53,
+      "stellar_log_mass_sigma": 0.06,
+      "Mstar_catalog_Msun": 243324416442.26773,
+      "Re_kpc": 11.595455432460946,
+      "n_bins": 6,
+      "observed_vrms_kms": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.21479474095772605,
+        0.4295894819154521,
+        0.6443842228731781,
+        1.0739737047886302,
+        1.6109605571829453
+      ],
+      "outer_arcsec": [
+        0.21479474095772605,
+        0.4295894819154521,
+        0.6443842228731781,
+        1.0739737047886302,
+        1.6109605571829453,
+        2.497467782749249
+      ],
+      "theta_E_over_Re": 0.45893365441746076,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.2975624999961701,
+          0.2978999999967004,
+          0.298749999998036,
+          0.2995999999993715,
+          0.29993749999990177
+        ],
+        "dm_MAP_dex": 0.3,
+        "beta_quantiles": [
+          0.34021046932646526,
+          0.3415659428043393,
+          0.34497972785972575,
+          0.3483935129151122,
+          0.34974898639298624
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 3966.7531892134,
+        "predicted_vrms_at_MAP_kms": [
+          201.6961932423638,
+          198.59363522372144,
+          192.02079961508036,
+          176.94156030178937,
+          154.35906485661286,
+          135.24852242508982
+        ],
+        "vrms_fractional_RMS": 0.3627086640443811,
+        "predicted_angle_quantiles_arcsec": [
+          0.6991684684908349,
+          0.6996234327796742,
+          0.7007692687663805,
+          0.7019151047530868,
+          0.7023700690419261
+        ],
+        "predicted_angle_mean_arcsec": 0.7024543216827124,
+        "predicted_angle_sd_arcsec": 1.3307162448385172e-07,
+        "angle_fractional_error_at_median": -0.541980870087333,
+        "angle_gap_arcsec": 0.8292307312336196,
+        "angle_gap_in_kinematic_sigma": 6218798.947762981,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 54.087952829149486,
+          "2%": 27.04397641534191,
+          "3%": 18.029317610322654,
+          "5%": 10.817590566222686
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.5408795283119457
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -1.0093259561472223e-11
+        },
+        "dm_dex": 0.7363176734583251,
+        "dm_in_published_sigma": 12.27196122430542,
+        "stellar_mass_factor": 5.449010859934494,
+        "beta_best": -0.73,
+        "kinematic_chi2_best_beta": 27.15789495634645,
+        "predicted_vrms_best_beta_kms": [
+          290.77988111381165,
+          290.49780022430684,
+          288.9794385192454,
+          281.3121014212297,
+          261.3342571656335,
+          236.20166921441506
+        ],
+        "vrms_fractional_RMS_best_beta": 0.01828363433292956,
+        "predicted_vrms_marginalized_kms": [
+          290.61111801334425,
+          290.34559430067173,
+          288.8595036396321,
+          281.2541985945809,
+          261.34531680072683,
+          236.24576264738778
+        ],
+        "kinematic_chi2_marginalized": 27.00973877211424,
+        "vrms_fractional_RMS_marginalized": 0.018183026272748117
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.298749999998036,
+        "dm_lensing_dex": 0.7363176734583251,
+        "delta_dm_dex": 0.43756767346028913,
+        "delta_dm_in_published_stellar_sigma": 7.292794557671486,
+        "delta_dm_in_kinematic_posterior_sigma": 514.785497379737,
+        "extra_stellar_mass_factor_demanded_by_lens": 2.738846378741576,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": -3939.743450441286
+      }
+    },
+    {
+      "name": "J1112+0826",
+      "companion": false,
+      "theta_observed_arcsec": 1.49,
+      "stellar_log_mass_sigma": 0.09,
+      "Mstar_catalog_Msun": 237106458850.23138,
+      "Re_kpc": 7.631912615524711,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.13717568587504445,
+        0.2743513717500889,
+        0.41152705762513336,
+        0.6858784293752223,
+        1.0288176440628334,
+        1.3717568587504445
+      ],
+      "outer_arcsec": [
+        0.13717568587504445,
+        0.2743513717500889,
+        0.41152705762513336,
+        0.6858784293752223,
+        1.0288176440628334,
+        1.3717568587504445,
+        1.8037284278368781
+      ],
+      "theta_E_over_Re": 0.9179070081596061,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.44634374817162314,
+          0.446849998424783,
+          0.44812499906237085,
+          0.44939999969995864,
+          0.4499062499531185
+        ],
+        "dm_MAP_dex": 0.44999999999999996,
+        "beta_quantiles": [
+          0.33644997174850116,
+          0.3412682688808402,
+          0.3448025410005001,
+          0.34833681312016,
+          0.349740127050025
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 685.4292273004413,
+        "predicted_vrms_at_MAP_kms": [
+          251.1956249239492,
+          249.5110766435248,
+          246.01872923942383,
+          236.87510703683066,
+          216.72421522512897,
+          192.50324468356865,
+          172.91926571029018
+        ],
+        "vrms_fractional_RMS": 0.19572078175704655,
+        "predicted_angle_quantiles_arcsec": [
+          0.8194732419419533,
+          0.820228384878586,
+          0.8221302263486239,
+          0.8240320678186618,
+          0.8247872107552945
+        ],
+        "predicted_angle_mean_arcsec": 0.8249270492426471,
+        "predicted_angle_sd_arcsec": 3.955577724005339e-06,
+        "angle_fractional_error_at_median": -0.44823474741703095,
+        "angle_gap_arcsec": 0.6678697736513761,
+        "angle_gap_in_kinematic_sigma": 168135.47783960955,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 44.63576693430781,
+          "2%": 22.3178840569903,
+          "3%": 14.878589444146181,
+          "5%": 8.9271536888578
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.44635768506415424
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -7.94608823184717e-12
+        },
+        "dm_dex": 0.7956656830902158,
+        "dm_in_published_sigma": 8.840729812113509,
+        "stellar_mass_factor": 6.246916243153245,
+        "beta_best": -1.0,
+        "kinematic_chi2_best_beta": 769.6545303913848,
+        "predicted_vrms_best_beta_kms": [
+          323.567994953924,
+          323.60576997670427,
+          323.48846701508785,
+          321.98471107159935,
+          314.24118212821384,
+          298.0003534389073,
+          278.9729553459141
+        ],
+        "vrms_fractional_RMS_best_beta": 0.14801772972279345,
+        "predicted_vrms_marginalized_kms": [
+          323.5976906691404,
+          323.63414120322415,
+          323.51418624627803,
+          322.00404308262824,
+          314.2485161511291,
+          297.9963507843223,
+          278.9623337908872
+        ],
+        "kinematic_chi2_marginalized": 770.3290274895273,
+        "vrms_fractional_RMS_marginalized": 0.1480678156249927
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.44812499906237085,
+        "dm_lensing_dex": 0.7956656830902158,
+        "delta_dm_dex": 0.34754068402784494,
+        "delta_dm_in_published_stellar_sigma": 3.861563155864944,
+        "delta_dm_in_kinematic_posterior_sigma": 272.5807923401203,
+        "extra_stellar_mass_factor_demanded_by_lens": 2.226079570678342,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": 84.89980018908602
+      }
+    },
+    {
+      "name": "J1204+0358",
+      "companion": false,
+      "theta_observed_arcsec": 1.31,
+      "stellar_log_mass_sigma": 0.07,
+      "Mstar_catalog_Msun": 129201031183.64267,
+      "Re_kpc": 4.578810402771255,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.11223720908506195,
+        0.2244744181701239,
+        0.33671162725518583,
+        0.5611860454253097,
+        0.8417790681379645,
+        1.1223720908506194
+      ],
+      "outer_arcsec": [
+        0.11223720908506195,
+        0.2244744181701239,
+        0.33671162725518583,
+        0.5611860454253097,
+        0.8417790681379645,
+        1.1223720908506194,
+        2.2503431376236263
+      ],
+      "theta_E_over_Re": 0.84820604144018,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.34715624999797423,
+          0.34754999999825475,
+          0.34854166666562786,
+          0.3495333333330009,
+          0.34992708333328143
+        ],
+        "dm_MAP_dex": 0.35000000000000003,
+        "beta_quantiles": [
+          0.34007380348538685,
+          0.3414481999258718,
+          0.3449096428130189,
+          0.34837108570016606,
+          0.34974548214065093
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 1978.879922779269,
+        "predicted_vrms_at_MAP_kms": [
+          219.41443316393844,
+          218.39737747531368,
+          216.30638047540555,
+          210.7632865965528,
+          197.82133897004235,
+          179.23273943660146,
+          149.62696266754668
+        ],
+        "vrms_fractional_RMS": 0.22860293542408716,
+        "predicted_angle_quantiles_arcsec": [
+          0.8029322843209421,
+          0.8034870488541856,
+          0.8048842336045767,
+          0.8062814183549679,
+          0.8068361828882114
+        ],
+        "predicted_angle_mean_arcsec": 0.8069389170581069,
+        "predicted_angle_sd_arcsec": 1.0950072449966572e-07,
+        "angle_fractional_error_at_median": -0.38558455450032314,
+        "angle_gap_arcsec": 0.5051157663954233,
+        "angle_gap_in_kinematic_sigma": 4594134.744226545,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 38.40160938353577,
+          "2%": 19.200804692270975,
+          "3%": 12.80053646157609,
+          "5%": 7.680321876964736
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.3840160938487643
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -4.4070969096310364e-11
+        },
+        "dm_dex": 0.634790248815471,
+        "dm_in_published_sigma": 9.0684321259353,
+        "stellar_mass_factor": 4.313107164004516,
+        "beta_best": -0.9299999999999999,
+        "kinematic_chi2_best_beta": 6.249014144866328,
+        "predicted_vrms_best_beta_kms": [
+          269.4845259798143,
+          269.10399786487403,
+          268.27441270987543,
+          265.766669364736,
+          258.6199586894627,
+          245.85822812112113,
+          219.82353211369127
+        ],
+        "vrms_fractional_RMS_best_beta": 0.00831732143029323,
+        "predicted_vrms_marginalized_kms": [
+          270.01205391820594,
+          269.61736842721774,
+          268.75935681403644,
+          266.18063435414825,
+          258.8868871957991,
+          245.94941870698574,
+          219.69735839520223
+        ],
+        "kinematic_chi2_marginalized": 7.177079318497662,
+        "vrms_fractional_RMS_marginalized": 0.009533964375452826
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.34854166666562786,
+        "dm_lensing_dex": 0.634790248815471,
+        "delta_dm_dex": 0.2862485821498431,
+        "delta_dm_in_published_stellar_sigma": 4.089265459283473,
+        "delta_dm_in_kinematic_posterior_sigma": 288.65403221438856,
+        "extra_stellar_mass_factor_demanded_by_lens": 1.933074456578558,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": -1971.7028434607714
+      }
+    },
+    {
+      "name": "J1402+6321",
+      "companion": false,
+      "theta_observed_arcsec": 1.35,
+      "stellar_log_mass_sigma": 0.07,
+      "Mstar_catalog_Msun": 284946501185.682,
+      "Re_kpc": 9.865029427153711,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.20767545802297957,
+        0.41535091604595914,
+        0.6230263740689387,
+        1.0383772901148978,
+        1.5575659351723465,
+        2.0767545802297955
+      ],
+      "outer_arcsec": [
+        0.20767545802297957,
+        0.41535091604595914,
+        0.6230263740689387,
+        1.0383772901148978,
+        1.5575659351723465,
+        2.0767545802297955,
+        2.523313300043134
+      ],
+      "theta_E_over_Re": 0.49618528487340846,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.347156249999997,
+          0.3475499999999974,
+          0.34854166666666514,
+          0.34953333333333286,
+          0.3499270833333333
+        ],
+        "dm_MAP_dex": 0.35000000000000003,
+        "beta_quantiles": [
+          0.3402482785309577,
+          0.3415985168882097,
+          0.3449991171953629,
+          0.34839971750251614,
+          0.34974995585976815
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 3405.348609165544,
+        "predicted_vrms_at_MAP_kms": [
+          223.77139350653258,
+          221.13333342448695,
+          215.5571969752338,
+          202.39804914085983,
+          181.16594034260137,
+          163.70691831126496,
+          151.81066834294975
+        ],
+        "vrms_fractional_RMS": 0.3094990660432109,
+        "predicted_angle_quantiles_arcsec": [
+          0.7132052844448243,
+          0.7137907880238289,
+          0.7152653896302106,
+          0.7167399912365923,
+          0.7173254948155967
+        ],
+        "predicted_angle_mean_arcsec": 0.7174339214042966,
+        "predicted_angle_sd_arcsec": 1.4901161193847656e-08,
+        "angle_fractional_error_at_median": -0.47017378545910327,
+        "angle_gap_arcsec": 0.6347346103697895,
+        "angle_gap_in_kinematic_sigma": 42450790.939492375,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 46.85674656261615,
+          "2%": 23.42837328131878,
+          "3%": 15.61891552088051,
+          "5%": 9.37134931252871
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.4685674656264469
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -2.220446049250313e-16
+        },
+        "dm_dex": 0.6753886546534972,
+        "dm_in_published_sigma": 9.648409352192816,
+        "stellar_mass_factor": 4.735748764709112,
+        "beta_best": -0.17999999999999994,
+        "kinematic_chi2_best_beta": 51.487893066686254,
+        "predicted_vrms_best_beta_kms": [
+          292.9941413159724,
+          292.44529244570367,
+          290.6112525866792,
+          283.25782339155614,
+          265.35024655248935,
+          246.15227149448285,
+          231.58799041096125
+        ],
+        "vrms_fractional_RMS_best_beta": 0.03928201494431338,
+        "predicted_vrms_marginalized_kms": [
+          292.88966426417136,
+          292.3500464901461,
+          290.5337600310154,
+          283.2146621291907,
+          265.34759778931226,
+          246.17182632935794,
+          231.61842278323624
+        ],
+        "kinematic_chi2_marginalized": 51.479196000022476,
+        "vrms_fractional_RMS_marginalized": 0.039255733533560655
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.34854166666666514,
+        "dm_lensing_dex": 0.6753886546534972,
+        "delta_dm_dex": 0.32684698798683204,
+        "delta_dm_in_published_stellar_sigma": 4.6692426855261715,
+        "delta_dm_in_kinematic_posterior_sigma": 329.59360133090803,
+        "extra_stellar_mass_factor_demanded_by_lens": 2.122496525523657,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": -3353.8694131655216
+      }
+    },
+    {
+      "name": "J1621+3931",
+      "companion": false,
+      "theta_observed_arcsec": 1.29,
+      "stellar_log_mass_sigma": 0.06,
+      "Mstar_catalog_Msun": 223252831619.08383,
+      "Re_kpc": 10.248290128030682,
+      "n_bins": 6,
+      "observed_vrms_kms": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.1824197363442892,
+        0.3648394726885784,
+        0.5472592090328676,
+        0.912098681721446,
+        1.3681480225821692
+      ],
+      "outer_arcsec": [
+        0.1824197363442892,
+        0.3648394726885784,
+        0.5472592090328676,
+        0.912098681721446,
+        1.3681480225821692,
+        2.1086338656859502
+      ],
+      "theta_E_over_Re": 0.5370849979423182,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.2975624510905207,
+          0.2978999578626025,
+          0.29874997491821575,
+          0.299599991973829,
+          0.2999374987459108
+        ],
+        "dm_MAP_dex": 0.3,
+        "beta_quantiles": [
+          0.3400816614558576,
+          0.34145496986966195,
+          0.34491367254146543,
+          0.3483723752132689,
+          0.34974568362707326
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 1757.0743578541942,
+        "predicted_vrms_at_MAP_kms": [
+          194.18916850990396,
+          191.95374839752878,
+          187.2495719270177,
+          175.72440597408263,
+          155.65822757319148,
+          137.2320774544886
+        ],
+        "vrms_fractional_RMS": 0.32331380252136244,
+        "predicted_angle_quantiles_arcsec": [
+          0.5555948346941647,
+          0.5559521661717312,
+          0.556852112115232,
+          0.5577520580587327,
+          0.5581093895362993
+        ],
+        "predicted_angle_mean_arcsec": 0.5581755089220811,
+        "predicted_angle_sd_arcsec": 1.1856507598991564e-05,
+        "angle_fractional_error_at_median": -0.5683316960347039,
+        "angle_gap_arcsec": 0.733147887884768,
+        "angle_gap_in_kinematic_sigma": 61723.4446963255,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 56.73055674182268,
+          "2%": 28.365287356619405,
+          "3%": 18.910192680426903,
+          "5%": 11.346115949047677
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.5673058069626926
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -5.28355137419112e-11
+        },
+        "dm_dex": 0.7697015639336451,
+        "dm_in_published_sigma": 12.828359398894085,
+        "stellar_mass_factor": 5.884391560445959,
+        "beta_best": -1.0,
+        "kinematic_chi2_best_beta": 147.3648940611143,
+        "predicted_vrms_best_beta_kms": [
+          290.62898621015563,
+          289.9826898432364,
+          288.19417058136787,
+          281.52735391055074,
+          264.017709485446,
+          241.84256293144304
+        ],
+        "vrms_fractional_RMS_best_beta": 0.0845871603973038,
+        "predicted_vrms_marginalized_kms": [
+          290.87824463294453,
+          290.21471652500935,
+          288.3922450038567,
+          281.6544635376188,
+          264.05388313813626,
+          241.83046336144247
+        ],
+        "kinematic_chi2_marginalized": 149.2215548485514,
+        "vrms_fractional_RMS_marginalized": 0.08510434201123715
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.29874997491821575,
+        "dm_lensing_dex": 0.7697015639336451,
+        "delta_dm_dex": 0.47095158901542933,
+        "delta_dm_in_published_stellar_sigma": 7.849193150257156,
+        "delta_dm_in_kinematic_posterior_sigma": 554.0495757178024,
+        "extra_stellar_mass_factor_demanded_by_lens": 2.9576827540618797,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": -1607.8528030056427
+      }
+    },
+    {
+      "name": "J1630+4520",
+      "companion": false,
+      "theta_observed_arcsec": 1.78,
+      "stellar_log_mass_sigma": 0.07,
+      "Mstar_catalog_Msun": 322384284579.7863,
+      "Re_kpc": 8.678424370155756,
+      "n_bins": 7,
+      "observed_vrms_kms": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ],
+      "inner_arcsec": [
+        0.0,
+        0.1268529819134526,
+        0.2537059638269052,
+        0.3805589457403577,
+        0.6342649095672629,
+        0.9513973643508944,
+        1.2685298191345258
+      ],
+      "outer_arcsec": [
+        0.1268529819134526,
+        0.2537059638269052,
+        0.3805589457403577,
+        0.6342649095672629,
+        0.9513973643508944,
+        1.2685298191345258,
+        2.338279481723444
+      ],
+      "theta_E_over_Re": 0.8847687071017698,
+      "K_to_L": {
+        "dm_quantiles_dex": [
+          0.34715624821685187,
+          0.3475499984637493,
+          0.3485416657522317,
+          0.34953333304071416,
+          0.34992708328761163
+        ],
+        "dm_MAP_dex": 0.35000000000000003,
+        "beta_quantiles": [
+          0.3402265541844396,
+          0.3415798005281325,
+          0.3449879765048408,
+          0.34839615248154904,
+          0.34974939882524203
+        ],
+        "beta_MAP": 0.35,
+        "kinematic_chi2_at_MAP": 899.7112489256017,
+        "predicted_vrms_at_MAP_kms": [
+          249.01680227942435,
+          247.72702901712043,
+          245.0675987642543,
+          238.07309129341346,
+          222.38701463829676,
+          202.02794861755467,
+          173.8206440347876
+        ],
+        "vrms_fractional_RMS": 0.1911405085412417,
+        "predicted_angle_quantiles_arcsec": [
+          0.9692034646576851,
+          0.9699042942422514,
+          0.9716693465293074,
+          0.9734343988163633,
+          0.9741352284009296
+        ],
+        "predicted_angle_mean_arcsec": 0.9742650084021554,
+        "predicted_angle_sd_arcsec": 4.110843918799021e-06,
+        "angle_fractional_error_at_median": -0.4541183446464565,
+        "angle_gap_arcsec": 0.8083306534706927,
+        "angle_gap_in_kinematic_sigma": 196002.33127635732,
+        "tension_vs_assumed_angle_sigma": {
+          "1%": 45.26600955676569,
+          "2%": 22.633005231067155,
+          "3%": 15.088670209931722,
+          "5%": 9.053202143127505
+        },
+        "required_fractional_angle_sigma_for_1sigma": 0.45266010763334713
+      },
+      "L_to_K": {
+        "solve": {
+          "residual_arcsec": -2.6285640331025206e-12
+        },
+        "dm_dex": 0.6994820984626535,
+        "dm_in_published_sigma": 9.992601406609335,
+        "stellar_mass_factor": 5.005899178807231,
+        "beta_best": -1.0,
+        "kinematic_chi2_best_beta": 486.4401080540039,
+        "predicted_vrms_best_beta_kms": [
+          316.10937072452936,
+          316.43792563880896,
+          316.9556783689228,
+          317.33230108429916,
+          314.414747529843,
+          304.3604807301717,
+          278.7641170115885
+        ],
+        "vrms_fractional_RMS_best_beta": 0.12965848786760106,
+        "predicted_vrms_marginalized_kms": [
+          316.22356798061804,
+          316.5481305674692,
+          317.0579126972204,
+          317.41513000860056,
+          314.46005436292114,
+          304.36659673905115,
+          278.7332005325317
+        ],
+        "kinematic_chi2_marginalized": 487.6895305348244,
+        "vrms_fractional_RMS_marginalized": 0.12980353210199275
+      },
+      "consistency": {
+        "dm_kinematics_median_dex": 0.3485416657522317,
+        "dm_lensing_dex": 0.6994820984626535,
+        "delta_dm_dex": 0.3509404327104218,
+        "delta_dm_in_published_stellar_sigma": 5.013434753006025,
+        "delta_dm_in_kinematic_posterior_sigma": 353.8892900737627,
+        "extra_stellar_mass_factor_demanded_by_lens": 2.243574176841768,
+        "lensing_dm_inside_kinematic_68": false,
+        "chi2_penalty_of_lensing_solution": -412.02171839077727
+      }
+    }
+  ],
+  "baryons_only_control_summary": {
+    "n_systems": 6,
+    "n_with_lensing_solution": 6,
+    "median_delta_dm_dex": 0.34924055836913337,
+    "mean_delta_dm_in_published_sigma": 5.4625822936015425,
+    "n_lensing_dm_inside_kinematic_68": 0,
+    "K_to_L_angle_fractional_RMS": 0.48194413182389173,
+    "L_to_K_total_chi2": 1492.9061269635376,
+    "L_to_K_total_bins": 40,
+    "K_to_L_total_chi2": 12693.196555238452
+  },
+  "seconds": 134.09814527900005
+}
