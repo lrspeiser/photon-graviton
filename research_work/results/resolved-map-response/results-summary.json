@@ -1,0 +1,127 @@
+{
+  "experiment": "JR-8",
+  "baseline": "20255778863150392baef9702b6ebb5df35d1342",
+  "primary_3D_solves": 288,
+  "refined_3D_solves": 12,
+  "expanded_domain_solves": 6,
+  "scope": "Observed-shape-conditioned normalized transport solutions; no calibrated absolute stellar-motion or lensing fit",
+  "objects": [
+    {
+      "id": "7443-12703",
+      "phase_contrast_fine": {
+        "companion": 0.000765546289677399,
+        "force_both": 0.0003149248151472772,
+        "lens_both": -1.2909356311707754e-06
+      },
+      "phase_sign_resolved": {"companion": true, "force_both": true, "lens_both": false},
+      "fine_grid_change_Ec": -0.00013407733408254963,
+      "fine_grid_change_force_both": -0.0022916727032478157,
+      "depth_and_proxy_sensitivity": [
+        {"height": 0.2, "proxy_power": 1.0, "Ec": 1.7018230111122812, "change_Ec_vs_primary": 0.0, "phase_Ec_change": 0.000755132131640579},
+        {"height": 0.2, "proxy_power": 0.5, "Ec": 1.7736132037752639, "change_Ec_vs_primary": 0.04218428837441901, "phase_Ec_change": 6.683295264786615e-05},
+        {"height": 0.45, "proxy_power": 1.0, "Ec": 1.7381346315028532, "change_Ec_vs_primary": 0.021336895877814843, "phase_Ec_change": 0.0011316224647750506},
+        {"height": 0.45, "proxy_power": 0.5, "Ec": 1.890128372727057, "change_Ec_vs_primary": 0.11064920405072143, "phase_Ec_change": 0.0007180953701806381}
+      ],
+      "expanded_box_change_Ec": -0.005450921651453111,
+      "expanded_box_phase_change": 0.0007044724893143783,
+      "distinct_stellar_spectral_bins": 1084,
+      "largest_declared_fixed_force_counterfactual": {
+        "epsilon": 0.6, "status": "solved", "force_relative_change": 5.10702591327572e-15,
+        "lensing_relative_change": 0.0021028716069102504, "gas_inventory_error": -2.220446049250313e-16,
+        "gas_fraction_moved": 0.021086602949390847, "min_gas_multiplier": 0.8570924999596915,
+        "max_gas_multiplier": 1.8165704969499914, "force_correction_coefficient": -0.0037984498176461424
+      }
+    },
+    {
+      "id": "8082-12704",
+      "phase_contrast_fine": {
+        "companion": -0.00023274006360429755,
+        "force_both": -2.3473284487041113e-05,
+        "lens_both": 0.002296190760814776
+      },
+      "phase_sign_resolved": {"companion": true, "force_both": true, "lens_both": true},
+      "fine_grid_change_Ec": -0.00036826533509959347,
+      "fine_grid_change_force_both": -0.002115840072922315,
+      "depth_and_proxy_sensitivity": [
+        {"height": 0.2, "proxy_power": 1.0, "Ec": 1.5448147620264483, "change_Ec_vs_primary": 0.0, "phase_Ec_change": -0.00022143630277116078},
+        {"height": 0.2, "proxy_power": 0.5, "Ec": 1.5366512031459694, "change_Ec_vs_primary": -0.005284490465232383, "phase_Ec_change": -0.00011906954835905204},
+        {"height": 0.45, "proxy_power": 1.0, "Ec": 1.7669095332213045, "change_Ec_vs_primary": 0.14376789803815582, "phase_Ec_change": -0.00021298706164463166},
+        {"height": 0.45, "proxy_power": 0.5, "Ec": 1.7713105214994607, "change_Ec_vs_primary": 0.14661677570707643, "phase_Ec_change": -0.0001322752159492735}
+      ],
+      "expanded_box_change_Ec": 0.05316638430516396,
+      "expanded_box_phase_change": -0.00014336553336025126,
+      "distinct_stellar_spectral_bins": 106,
+      "largest_declared_fixed_force_counterfactual": {
+        "epsilon": 0.6, "status": "solved", "force_relative_change": -2.0864421301780567e-12,
+        "lensing_relative_change": 0.0030572062602671757, "gas_inventory_error": 0.0,
+        "gas_fraction_moved": 0.013041522156522012, "min_gas_multiplier": 0.8238688521084058,
+        "max_gas_multiplier": 1.8176242987438835, "force_correction_coefficient": -0.00479667102536618
+      }
+    },
+    {
+      "id": "8081-1901",
+      "phase_contrast_fine": {
+        "companion": -0.0006367111382361568,
+        "force_both": -0.0017044085743876947,
+        "lens_both": 0.0018935968559217198
+      },
+      "phase_sign_resolved": {"companion": true, "force_both": true, "lens_both": true},
+      "fine_grid_change_Ec": -0.00028051732162148735,
+      "fine_grid_change_force_both": -0.001690975842501552,
+      "depth_and_proxy_sensitivity": [
+        {"height": 0.2, "proxy_power": 1.0, "Ec": 1.7422841588614557, "change_Ec_vs_primary": 0.0, "phase_Ec_change": -0.0006323138667939654},
+        {"height": 0.2, "proxy_power": 0.5, "Ec": 1.7902831286757275, "change_Ec_vs_primary": 0.027549449709534102, "phase_Ec_change": -0.000723847679609424},
+        {"height": 0.45, "proxy_power": 1.0, "Ec": 1.857939139309142, "change_Ec_vs_primary": 0.06638123859386069, "phase_Ec_change": 0.0009329436335261398},
+        {"height": 0.45, "proxy_power": 0.5, "Ec": 1.9465565718604796, "change_Ec_vs_primary": 0.11724402816846569, "phase_Ec_change": 0.0006152716037097772}
+      ],
+      "expanded_box_change_Ec": -0.010911876835648204,
+      "expanded_box_phase_change": -0.0005328944053495377,
+      "distinct_stellar_spectral_bins": 176,
+      "largest_declared_fixed_force_counterfactual": {
+        "epsilon": 0.6, "status": "solved", "force_relative_change": -1.887379141862766e-15,
+        "lensing_relative_change": 0.0029885170840822095, "gas_inventory_error": 0.0,
+        "gas_fraction_moved": 0.025503826157145738, "min_gas_multiplier": 0.7258289873279827,
+        "max_gas_multiplier": 1.8093581520727684, "force_correction_coefficient": -0.01696808612107603
+      }
+    }
+  ],
+  "cluster": {
+    "h_turnover": 0.26872794856042753,
+    "n_over_n0_turnover": 0.3674801300438233,
+    "maximum_local_gain_over_zero": 0.27888490093843754,
+    "derivative_absolute_error": 4.3575276720275724e-10,
+    "clusters": 12,
+    "density_shells": 778
+  },
+  "audit": {
+    "checks": 1562,
+    "failed": 0,
+    "scope": "Saved-output arithmetic, input hashes, exact derivatives, and 3 independent primary re-solves; not every historical repository suite"
+  },
+  "numerical_history": "Interrupted primary execution and first incomplete-refinement count failure preserved; completed audit passes without changed thresholds.",
+  "code_git_blob_sha1": {
+    "audit.py": "8a1fbc07fb14b317ba16ded69b664c0b03950033",
+    "cluster_response.py": "e6660431b20b51a3419c2be434466aca0329e634",
+    "fits_images.py": "27a6ec10a3597f99d434691f6ead9b2df40eae6a",
+    "jr7_atlas.py": "a9fdfb08e54ded4e378367e5bede99c7da440fa9",
+    "maps.py": "3dd2ebb657283922cc8005d08936b7b45c0f177c",
+    "response.py": "a7f16be58467dc1ecb80b865e8b735b452b63c6d",
+    "summarize.py": "15660edee2a97dff9291e8d95f3863872ddb47dc",
+    "supplement.py": "b430db004581ed18b1c93f92ce50bb08d7885abd",
+    "write_report.py": "c0cfd0fd914408d80ba6013fadc4cbd2c4753c0e"
+  },
+  "full_results_sha256": {
+    "results/response/primary.json": "bb1c2eb69049baabf67548eddcbb0384ce559678bfa666290d9676ff0bd726f9",
+    "results/response/refinement.json": "fef7ed3d5e541c46ee4358abe39d6353167135658118a48e3e4f41fc9e509186",
+    "results/supplement.json": "b8f4e8846fe8dd987cc400a83f9b1057b28a119dd6123a090b7b667569089862",
+    "results/summary.json": "a8b529ee2b93839e024958931c8bf5f55059f5807690fb9d60f0cbf19fef5d5a",
+    "results/audit.json": "d641e80759cb98ed8b55001f5bdb7d0d41f12c81264437337ac908265dd024c3"
+  },
+  "limitations": [
+    "Unit-normalized light and proxy gas, not physical density or absolute source energy",
+    "Halpha emissivity is not total gas mass; source continuum is not bolometric",
+    "Counterfactual geometry and prescribed drift are not measured 3D depth or pattern speed",
+    "Common-source conditional force/lensing readouts, not an observed lensing or stellar-motion fit",
+    "Recoil, binding-energy work, source sufficiency, cluster force, and Solar-system behavior unclosed"
+  ]
+}
