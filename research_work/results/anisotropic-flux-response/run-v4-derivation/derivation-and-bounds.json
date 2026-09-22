@@ -1,0 +1,67 @@
+{
+  "experiment": "JR-10 stage 4",
+  "exact_general_relativity": {
+    "statement": "These follow from linearised GR with no fitting whatsoever.",
+    "items": [
+      "Phi is sourced by (rho + T^k_k) and Psi by rho, so gamma_chi = Psi/Phi = 1/tau with tau = 1 + w_r + 2 w_t.",
+      "Light deflection carries the companion at weight (1 + gamma_chi)/2 relative to the static-dust value, which is exactly the R11 form.",
+      "A free-streaming radial null flux has w_r = 1, w_t = 0, hence tau = 2 exactly.",
+      "A static radial field gradient has w_r = 1, w_t = -1, hence tau = 0 exactly: zero active gravitational mass, so no force on slow stars, while its energy density still deflects light.",
+      "Writing w_t = -f with w_r = 1 interpolates the two limits as tau = 2(1-f), and f in [0,1] keeps every fitted value inside the energy conditions by construction."
+    ]
+  },
+  "empirical_law": {
+    "statement": "This is an empirical law found by searching a declared grid. It is not derived.",
+    "law": "f(z) = sigmoid(a + b ln z),  tau = 2(1-f),  gamma_chi = 1/tau",
+    "parameters": [
+      4.354965212076219,
+      2.755184001462795
+    ],
+    "leave_one_out_angle_RMS": 0.04663273421687467,
+    "static_dust_baseline_RMS": 0.1058303209200052,
+    "look_elsewhere_p": 0.01649175412293853
+  },
+  "energy_bound": {
+    "dominant_energy_condition": "|p| <= rho, so w_r and w_t each lie in [-1, 1]",
+    "max_tolman_factor": 4.0,
+    "best_possible_energy_saving_factor": 4.0,
+    "measured_starlight_shortfall": 48900.0,
+    "remaining_shortfall_after_best_stress": 12225.0,
+    "verdict": "Stress engineering cannot solve the energy problem. The largest factor any physically allowed stress state can save is tau_max, four. The measured shortfall is about 5e4. Anisotropic stress fixes the DIRECTION of the response, not its cost. The energy arrow remains open and is not addressed by anything in JR-10."
+  },
+  "identification": {
+    "problem": "Across these six systems, lens redshift, lens distance and physical Einstein radius are collinear, so the law predicts well without identifying which variable drives it.",
+    "collinearity": {
+      "zFG vs einstein_radius_kpc": {
+        "pearson": 0.8603935233606212,
+        "rank": 0.8857142857142858
+      },
+      "zFG vs Dl_kpc": {
+        "pearson": 0.9999189965931649,
+        "rank": 1.0
+      },
+      "einstein_radius_kpc vs Dl_kpc": {
+        "pearson": 0.8610833555930842,
+        "rank": 0.8857142857142858
+      }
+    },
+    "redshift_span": [
+      0.1644,
+      0.273
+    ],
+    "what_would_break_it": "Lenses at matched redshift with different Einstein radii, or matched Einstein radii at different redshifts. Neither exists in this six-system set.",
+    "consequence": "Deriving a redshift mechanism now would be deriving a variable the data has not identified. The next acquisition, not the next derivation, is what advances this."
+  },
+  "local_prediction": {
+    "statement": "The law sends tau to 2 exactly as z goes to zero, which is the free-streaming radial null flux state, giving gamma_chi = 1/2.",
+    "consequence": "Around nearby galaxies the companion should deflect light at (1 + 1/2)/2 = 3/4 of the rate a static-dust companion of the same stellar force would produce.",
+    "why_it_is_independent": "This is a statement about local weak lensing at fixed measured rotation. No lens in the fitted set sits near z = 0, and the six SLACS angles cannot produce it.",
+    "caution": "The z -> 0 limit follows from the log-linear form, which the six systems cannot distinguish from the linear form inside the observed range. The linear form does not give tau = 2 at z = 0. This prediction is therefore conditional on a form choice made after seeing the fits."
+  },
+  "scope": {
+    "kinematics": "No V_rms prediction changes for any gamma_chi, because R10 g_chi was fitted to stellar kinematics and already is the Phi gradient.",
+    "sparc": "All 149 SPARC galaxies have no lensing measurement, so not one rotation curve moves and none of them can constrain this law.",
+    "discipline": "Because the law touches only the observable it was fitted to, the discipline has to come from elsewhere: the energy-condition band, which every required value satisfies; the leave-one-out score; and the permutation test over the whole search grid. It does not come from a second observable, and that is a genuine weakness."
+  },
+  "code_sha256": "e6676501341c193a70a8540fa8398127e19d9873f74cbb8a2aeb437116b9b4ff"
+}

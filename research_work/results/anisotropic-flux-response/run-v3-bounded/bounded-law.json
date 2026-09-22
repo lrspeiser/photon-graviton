@@ -1,0 +1,212 @@
+{
+  "experiment": "JR-10 stage 3",
+  "scope": "Physically bounded stress law with the energy conditions enforced by the link function, scored by leave-one-out and by a look-elsewhere permutation test.",
+  "parameterisation": {
+    "relation": "tau = 2(1-f), f = sigmoid(a + b x), so tau in (0,2) and gamma_chi > 1/2 always",
+    "limits": {
+      "free-streaming radial flux (f=0)": 2.0,
+      "anchored field gradient (f=1)": 0.0
+    },
+    "why": "Both limits are exact stress states of a radial stream; f is the fraction of transverse tension developed."
+  },
+  "baseline_static_dust": {
+    "angle_fractional_RMS": 0.1058303209200052,
+    "n_parameters": 0
+  },
+  "best": {
+    "predictor": "zFG",
+    "form": "log_linear",
+    "parameters": [
+      4.354965212076219,
+      2.755184001462795
+    ],
+    "in_sample_angle_fractional_RMS": 0.03352386963200291,
+    "loo_angle_fractional_RMS": 0.04663273421687467,
+    "tau_in_sample": [
+      1.0708968870724875,
+      0.6295214537430301,
+      1.3001593505742424,
+      1.0083402590643824,
+      0.7651267071472558,
+      0.7493428120460784
+    ],
+    "loo": [
+      {
+        "name": "J0037-0942",
+        "tau_predicted": 1.0526990958831353,
+        "gamma_chi": 0.9499390698735951,
+        "angle_error": 0.02413434500720335
+      },
+      {
+        "name": "J1112+0826",
+        "tau_predicted": 0.6058576731225075,
+        "gamma_chi": 1.650552669979629,
+        "angle_error": 0.03786357118329042
+      },
+      {
+        "name": "J1204+0358",
+        "tau_predicted": 1.4282318499050326,
+        "gamma_chi": 0.7001664331085271,
+        "angle_error": -0.03826263033161581
+      },
+      {
+        "name": "J1402+6321",
+        "tau_predicted": 0.976414612107196,
+        "gamma_chi": 1.0241550951822653,
+        "angle_error": 0.055244642827530166
+      },
+      {
+        "name": "J1621+3931",
+        "tau_predicted": 0.7740852715087835,
+        "gamma_chi": 1.2918473413799516,
+        "angle_error": -0.0212694849074595
+      },
+      {
+        "name": "J1630+4520",
+        "tau_predicted": 0.7852301508242544,
+        "gamma_chi": 1.2735119747379824,
+        "angle_error": -0.07786632354431089
+      }
+    ]
+  },
+  "extrapolation": [
+    {
+      "z": 0.0,
+      "tau": 2.0
+    },
+    {
+      "z": 0.02,
+      "tau": 1.9967589329056892
+    },
+    {
+      "z": 0.05,
+      "tau": 1.9602737962614134
+    },
+    {
+      "z": 0.1,
+      "tau": 1.7592916282742401
+    },
+    {
+      "z": 0.2,
+      "tau": 1.0396453972110251
+    },
+    {
+      "z": 0.3,
+      "tau": 0.5231499563223408
+    },
+    {
+      "z": 0.5,
+      "tau": 0.15957802227524534
+    },
+    {
+      "z": 1.0,
+      "tau": 0.02536007613183426
+    },
+    {
+      "z": 2.0,
+      "tau": 0.0037972942479145037
+    }
+  ],
+  "tau_equals_one_crossing_redshift": 0.20584248164373165,
+  "z_zero_limit": "tau -> 2 exactly: free-streaming radial null flux",
+  "ranked_alternatives": [
+    {
+      "predictor": "zFG",
+      "form": "log_linear",
+      "parameters": [
+        4.354965212076219,
+        2.755184001462795
+      ],
+      "loo_angle_fractional_RMS": 0.04663273421687467
+    },
+    {
+      "predictor": "zFG",
+      "form": "linear",
+      "parameters": [
+        -2.706409188433204,
+        12.95137796797579
+      ],
+      "loo_angle_fractional_RMS": 0.05168606383975942
+    },
+    {
+      "predictor": "zBG",
+      "form": "linear",
+      "parameters": [
+        -1.7077637594949986,
+        2.9813609087257142
+      ],
+      "loo_angle_fractional_RMS": 0.10029599559280533
+    },
+    {
+      "predictor": "zBG",
+      "form": "log_linear",
+      "parameters": [
+        1.0393731992625606,
+        1.8390685411335335
+      ],
+      "loo_angle_fractional_RMS": 0.10253156757524519
+    },
+    {
+      "predictor": "zFG",
+      "form": "constant",
+      "parameters": [
+        0.16512716336649627
+      ],
+      "loo_angle_fractional_RMS": 0.11777834846389416
+    },
+    {
+      "predictor": "zBG",
+      "form": "constant",
+      "parameters": [
+        0.16512716336649627
+      ],
+      "loo_angle_fractional_RMS": 0.11777834846389416
+    },
+    {
+      "predictor": "Mstar_Msun",
+      "form": "constant",
+      "parameters": [
+        0.16512716336649627
+      ],
+      "loo_angle_fractional_RMS": 0.11777834846389416
+    },
+    {
+      "predictor": "Mbaryon_Msun",
+      "form": "constant",
+      "parameters": [
+        0.16512716336649627
+      ],
+      "loo_angle_fractional_RMS": 0.11777834846389416
+    },
+    {
+      "predictor": "Re_kpc",
+      "form": "constant",
+      "parameters": [
+        0.16512716336649627
+      ],
+      "loo_angle_fractional_RMS": 0.11777834846389416
+    },
+    {
+      "predictor": "compactness",
+      "form": "constant",
+      "parameters": [
+        0.16512716336649627
+      ],
+      "loo_angle_fractional_RMS": 0.11777834846389416
+    }
+  ],
+  "honest_caveat": "Within the observed range z = 0.164 to 0.273 the linear, log-linear and exponential forms are not distinguishable by these six systems. They differ only on extrapolation. The log-linear form was preferred on leave-one-out score, and its z -> 0 limit happens to be the exact free-streaming stress state, which is suggestive but was not predicted in advance.",
+  "permutation_test": {
+    "n": 2000,
+    "observed": 0.04663273421687467,
+    "null_median": 0.08044171612699488,
+    "null_5th_percentile": 0.05367656892483638,
+    "look_elsewhere_corrected_p": 0.01649175412293853
+  },
+  "interpolation_worst_relative_error": 1.4600966630640144e-05,
+  "excluded_as_circular": [
+    "einstein_radius_kpc",
+    "theta_E_over_Re"
+  ],
+  "code_sha256": "9c6735d8cf6895b2da0781cc60ee734265c27b8a98fbb5388c3b4c8970da1147"
+}
