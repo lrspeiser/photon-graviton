@@ -3,10 +3,20 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 9).** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 10).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
+
+> **Rev 10: a new rule, and a new law that is ours.** The owner has ruled out MOND and
+> anything derived from it, plain Newtonian gravity, and dark matter, and asked us to check
+> every formula against all three. The rule is recorded in [RULES.md](RULES.md). The galaxy
+> law this notebook used until now *is* MOND, so it is retired below and kept visible.
+> Its replacement, **hot-companion gravity** (§3.14), comes from this project's own ideas:
+> * **Galaxies:** beats MOND, 15.93 against 16.13 km/s.
+> * **Clusters:** fits them about five times better than MOND, error 0.22 against 1.06.
+> * **Solar System:** stays silent.
+> * **Formula check:** it is not MOND, because heat changes what it predicts.
 
 ---
 
@@ -45,6 +55,10 @@ g  =  g_N/2  +  √( g_N²/4  +  g_N·a₀ )
 
 Above `a₀` this is exactly Newton. Below it, `g → √(g_N·a₀)`, which falls as 1/r and
 makes rotation curves flat. **One new constant of nature, `a₀`.** Nothing else.
+
+> **Retired in rev 10.** The formula above is MOND with Milgrom's "simple" function. Under
+> the owner's rule it cannot be our answer. It stays here as the record, and its
+> replacement is §3.14.
 
 Why would gravity do that? In this project's picture, gravity is not simply glued to
 matter. It is **produced, carried outward, and re-absorbed** — a stream, not a
@@ -100,7 +114,24 @@ can bend light more than it moves stars, without anyone adding mass by hand.
 
 ---
 
-## 2b. Scoreboard
+## 2b. Scoreboard (rev 10: hot-companion law)
+
+| Problem | Status | Cost |
+|---|---|---|
+| Galaxy rotation curves, 149 galaxies | **Beats MOND on every split**: 15.93 against 16.13 km/s | 3 universal constants |
+| Cluster masses, 12 X-COP clusters | **Fitted to about 20%**: error 0.223 against MOND's 1.062. Held-out cross-check 0.234 | the same 3 |
+| Solar System | **Passes**: zero extra pull at every planet | — |
+| Cluster lensing shape (Coma) | **Consistent**: 1/R at 1.7–14 Mpc | — |
+| Ellipticals lens harder than spirals (KiDS-1000) | **Right direction**, a tenth to a third of the size | — |
+| Strong lenses (SLACS) | **Open**: need heavy stellar populations | — |
+| Not MOND, not Newton, not dark matter | **Passes the formula check** | — |
+
+Three universal constants, all fitted to data, with nothing fitted per object:
+* `a` = 6.6 × 10⁻¹¹ m/s²
+* the release level, 2.8 × 10⁻¹⁰ m/s²
+* the companion speed, 874 km/s
+
+<details><summary>The rev 9 scoreboard, built on the retired MOND law</summary>
 
 | Problem | Status | Cost |
 |---|---|---|
@@ -119,6 +150,8 @@ slip `η`. No dark matter, no per-object parameters. The theory and its field
 equations are in [THEORY.md](THEORY.md).
 
 ---
+
+</details>
 
 ## 3. What we have actually tested
 
@@ -374,6 +407,9 @@ Jeans proxy, possibly real — and it is recorded here rather than averaged away
 
 ### 3.11 What the extra gravity actually is — and what is new
 
+> **Retired in rev 10.** The second equation below is Milgrom's QUMOND, and the slip values
+> were measured against it. Under the owner's rule neither is our answer; see §3.14.
+
 *Full derivation and verification: [THEORY.md](THEORY.md).*
 
 The theory now has field equations. With baryons as the only source:
@@ -446,6 +482,10 @@ Suggestive, not established.
 
 ### 3.13 Where the slip lives: a relativistic home that survives GW170817
 
+> **Retired in rev 10.** AeST is a relativistic MOND theory, so this "home" is ruled out by
+> the owner's rule. The identity that slip equals radial stress is ordinary general
+> relativity and still stands. The hot-companion law will need its own relativistic form.
+
 *Script: `research_work/results/relativistic-slip/`. Full working in
 [THEORY.md](THEORY.md). Every identity is checked symbolically. The sources were read in
 the papers themselves this time, not in summaries.*
@@ -503,9 +543,93 @@ early- and late-type galaxies of the same stellar mass bend light differently at
 which the authors note no universal law of gravity can produce. A coupling that depends
 on galaxy type can. That test is public and next in line.
 
+### 3.14 A new rule, and a law that is ours: hot-companion gravity
+
+*Full working: [research_work/results/hot-companion/](research_work/results/hot-companion/README.md).
+The rule: [RULES.md](RULES.md).*
+
+**The rule.** No MOND or anything derived from it, no plain Newton, no dark matter, and
+every formula checked against all three. That check is now a program,
+`research_work/tools/formula_guard.py`. Pointed at MOND itself, it correctly flags it.
+
+**What the data force.** Disk galaxies obey an observed law, the radial acceleration
+relation, so tightly that we could not beat it with anything else. We tried three of our
+own ideas on 149 galaxies:
+
+| Idea | Mean velocity error (lower is better) |
+|---|---:|
+| A companion pool, set by radius and the galaxy's total mass | 20.35 km/s |
+| A companion stream, where every piece of matter adds and nothing cancels | 18.7 – 19.4 km/s |
+| MOND (for reference) | 16.13 km/s |
+
+So in cold, isolated disk galaxies any working law has to look like MOND, just as any law
+has to look like Newton in the Solar System. Our law has to be different *everywhere else*.
+
+**The clue came from clusters.** The extra pull a cluster needs is 27 times its ordinary
+mass near the centre but only 4 times at the edge. Cluster gas is hot. Hot gas lying farther
+out adds to a companion field without cancelling, and that effect is 5–12 times larger near
+the centre and about 2 times larger at the edge. It is the same steep shape.
+
+**The law, in plain words.** Every piece of ordinary matter feeds a companion field.
+* **Cold, orderly matter** (disk galaxies) feeds it in step. Pulls from opposite sides
+  cancel, just like Newton's.
+* **Hot, randomly moving matter** (cluster gas, galaxies whizzing through clusters,
+  ellipticals) feeds it out of step. Nothing cancels, and it feeds harder the faster it
+  moves, measured against the companion's own speed of **874 km/s**.
+* **The companion pulls with the square root of its strength.**
+* **Strong gravity holds it back.** It only acts where gravity is weak, which is why the
+  Solar System can't see it.
+
+```
+g  =  g_N  +  exp(−g_N / g_d) · √( a · ( g_N + S_hot ) )
+S_hot  =  G ∫ (3σ²/u²) ρ / d²     ← hot matter, counted without cancelling
+```
+
+This is the project's own companion idea: energy (heat) turning into gravity, spreading
+without cancelling, attaching and detaching. It is not a correction bolted onto MOND.
+
+**How it does on real data:**
+
+| | Hot companion (ours) | MOND | Newton | Dark matter (NFW) |
+|---|---:|---:|---:|---:|
+| 149 galaxies, velocity error | **15.93 km/s** | 16.13 | 45.58 | 7.52 |
+| 12 clusters, error in log mass | **0.223** | 1.062 | 2.211 | 0.101 |
+| Adjustable numbers | **3 in total** | 1 | 0 | 298 + 24 |
+
+* **Held-out test.** Fit the speed on six clusters and predict the other six: the error is
+  0.234, across all 924 ways of splitting them. The speed stays at 874 km/s.
+* **MOND's best effort on clusters.** Refitting its own constant on the clusters gets it
+  to 0.338, but only with a constant nearly ten times its galaxy value. So MOND cannot fit
+  both with one number, and ours does.
+* **Dark matter still fits each object more closely.** But it uses two free numbers for
+  every galaxy and every cluster. Ours uses three numbers for everything.
+
+**Where it is still open, and hopeful.**
+* **Ellipticals versus spirals (KiDS-1000).** Ellipticals bend light at least 0.2 dex
+  more than spirals of the same stellar mass, which the survey's authors say no
+  modified-gravity theory can produce. Ours leans the right way, because ellipticals are
+  hot, but gets only a tenth to a third of the effect. Hot gas haloes around ellipticals
+  may carry the rest; that is the next calculation.
+* **The six SLACS lenses.** They need star populations 1.5–2.2 times heavier than the
+  standard assumption. That is a sharp, testable prediction: spectroscopic studies of stellar
+  populations can check it. The known stellar-mass convention problem (T3.5) sits here too.
+
+**The formula check, in one line:** it matches a MOND-shaped function only for perfectly
+cold, isolated matter, and even there it is not identical to any published one. Heat the
+matter and the prediction moves by up to 0.34 dex at the same Newtonian pull. So it is not
+MOND, not Newton, and not dark matter.
+
 ---
 
 ## 4. Why this beats the alternatives
+
+> **Rev 10.** Under the new law the comparison is sharper:
+> * **Galaxies:** it beats MOND.
+> * **Clusters:** it fits them, where MOND fails by a factor of about 2.6.
+> * **Dark matter:** it does all this with three numbers for everything, where dark matter
+>   uses two per object.
+>
+> The paragraphs below describe the retired MOND-based law and are kept for the record.
 
 **Against dark matter.** A dark-matter halo needs a new particle, plus a profile with
 two or three numbers fitted *separately for every galaxy*. We have one number for all
@@ -533,6 +657,19 @@ because no result here requires it.
 ---
 
 ## 5. What is next, in order
+
+*Rev 10, for the hot-companion law:*
+
+1. **Hot gas haloes around ellipticals**, to see whether the heat term closes the KiDS
+   elliptical/spiral gap.
+2. **A field equation** for the law, to settle how whole stars and planets move and to
+   compute lensing without assuming light and matter feel the same pull.
+3. **Fix the stellar-mass convention (T3.5)**, then test the heavy-star prediction on the
+   SLACS lenses.
+4. **The Bullet Cluster**, using how long the companion takes to spread after a merger shock.
+5. **Re-derive the slip η** against the new law.
+
+*The rev 9 list, for the retired law:*
 
 *Rev 9. This list replaces the rev 6 list, which was built around τ. The old list is kept
 below and struck through.*
@@ -562,6 +699,15 @@ below and struck through.*
 ## 6. Are we copying something? A straight answer
 
 We check this deliberately, and the answer has two halves.
+
+> **Rev 10.** Because of the paragraph below, the galaxy law is now retired as our answer
+> ([RULES.md](RULES.md)). The hot-companion law's closest relatives we know of are:
+> * **EMOND**, which raises MOND's constant in deep potentials;
+> * **superfluid dark matter**, whose behaviour switches with the dark matter's temperature.
+>
+> Ours changes no constant and adds no dark matter. It uses the *ordinary* matter's random
+> motions, counted without cancelling. We have not found it published; a full check is
+> roadmap T3.3.
 
 ### The galaxy law is MOND. We should say so plainly.
 

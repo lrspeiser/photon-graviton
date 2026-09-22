@@ -1,5 +1,22 @@
 # Theory: what the extra gravity is, and the equations it obeys
 
+> **Superseded as our solution, 22 September 2026: see [RULES.md](RULES.md).**
+> The owner has ruled out MOND and anything derived from it, plain Newton, and dark matter.
+> The dynamics equation below is Milgrom's QUMOND, and the AeST "relativistic home" is a
+> MOND theory, so neither can be our answer. They are kept here as a record of what was
+> tested.
+>
+> The slip results (η) were measured against that MOND law, so they must be re-derived
+> before they are quoted.
+>
+> The current candidate is **hot-companion gravity**:
+> [research_work/results/hot-companion/](research_work/results/hot-companion/README.md).
+> * **Galaxies:** 15.93 km/s, against MOND's 16.13.
+> * **Clusters:** error 0.223, against MOND's 1.062.
+> * **No anomalous pull in the Solar System.**
+> * **The formula check shows it is not MOND**, because it depends on how hot the matter is.
+
+
 **22 September 2026.** Resolves roadmap tasks T0.1 (the central contradiction), T2.2
 (the gravitational-wave constraint) and T0.2 (field equations, non-relativistic and
 relativistic). Every numerical claim below was computed in this session and is

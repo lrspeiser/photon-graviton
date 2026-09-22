@@ -1,0 +1,723 @@
+{
+  "experiment": "hot-companion v1",
+  "constants": {
+    "a_SI": 6.579701477871118e-11,
+    "a_code": 2030.2837343172528,
+    "lam": 4.280976705054747,
+    "release_scale_SI": 2.816754875298055e-10,
+    "u_kms": 874.0771684301615,
+    "note": "a and lambda fitted on 149 SPARC galaxies; u fitted on 12 X-COP clusters; alternated to convergence"
+  },
+  "solar_system_anomalous_pull_SI": {
+    "Mercury": 0.0,
+    "Earth": 0.0,
+    "Jupiter": 0.0,
+    "Saturn": 0.0,
+    "Neptune": 0.0
+  },
+  "mond_context_a_SI": 8.423121079309676e-11,
+  "galaxies": {
+    "hot companion (ours, 3 universal constants)": {
+      "null": 15.92654023443917,
+      "train": 15.72919297716959,
+      "validation": 19.567952690763143,
+      "test": 13.086635223587459
+    },
+    "MOND simple (context, 1 constant)": {
+      "null": 16.132803006698925,
+      "train": 15.848055044167584,
+      "validation": 19.80349194624183,
+      "test": 13.516434923426157
+    },
+    "Newton, visible matter only (context)": {
+      "null": 45.57763424712291,
+      "train": 45.937159160556504,
+      "validation": 48.63680512953402,
+      "test": 41.683644799203165
+    },
+    "NFW dark matter (context, 2 parameters per galaxy)": {
+      "null": 7.523369595718773
+    }
+  },
+  "clusters": {
+    "radii_R500": [
+      0.1,
+      0.2,
+      0.35,
+      0.5,
+      0.7,
+      1.0
+    ],
+    "ours": {
+      "mean_by_radius": [
+        0.13603764959195683,
+        0.12811405020850994,
+        0.0716800681603185,
+        0.00805909309520725,
+        -0.10433642630460248,
+        -0.25496128216740227
+      ],
+      "rms": 0.22297389126480696,
+      "mean_by_radius_with_context_bias": [
+        0.23034832906319813,
+        0.23347456586633622,
+        0.19384770213452604,
+        0.1473211604287149,
+        0.058182503193172475,
+        -0.05651034344356412
+      ]
+    },
+    "ours_without_heat": {
+      "mean_by_radius": [
+        1.356353440593211,
+        1.258301760174688,
+        1.100717477634752,
+        0.9607571160554523,
+        0.770930642824176,
+        0.5435453798733566
+      ],
+      "rms": 1.0480486067175108
+    },
+    "mond_simple": {
+      "mean_by_radius": [
+        1.3758232258019583,
+        1.2769717704710846,
+        1.1170248191819965,
+        0.973813840694135,
+        0.77876128947391,
+        0.5432246050827656
+      ],
+      "rms": 1.061714711442816
+    },
+    "newton": {
+      "mean_by_radius": [
+        2.4479087462876956,
+        2.3760899271739793,
+        2.2551710257128903,
+        2.1559781449444797,
+        2.027148349712916,
+        1.8917284685622324
+      ],
+      "rms": 2.210865107802784
+    },
+    "nfw_release_fit": {
+      "rms": 0.10100830821333008,
+      "note": "the X-COP release NFW fit, 2 parameters per cluster"
+    },
+    "per_cluster": [
+      {
+        "name": "A1644",
+        "T500_keV": 4.445946263053091,
+        "ln_MHSE_over_Mpred": [
+          -0.19278684055934747,
+          -0.031107921697501782,
+          0.10538930082366002,
+          0.00611888048612512,
+          -0.15833101806814948,
+          -0.2964000794690506
+        ],
+        "own_stellar_profile": false
+      },
+      {
+        "name": "A1795",
+        "T500_keV": 5.396347381898874,
+        "ln_MHSE_over_Mpred": [
+          0.3745724240356604,
+          0.35834602818214156,
+          0.220693257593799,
+          0.1311611533763315,
+          -0.011421928747876973,
+          -0.21627389415299594
+        ],
+        "own_stellar_profile": true
+      },
+      {
+        "name": "A2029",
+        "T500_keV": 8.229501237850764,
+        "ln_MHSE_over_Mpred": [
+          0.2466579652545516,
+          0.22716490327632258,
+          0.1329318266445113,
+          0.06905501351949835,
+          -0.10379228544469153,
+          -0.32940650301623936
+        ],
+        "own_stellar_profile": true
+      },
+      {
+        "name": "A2142",
+        "T500_keV": 8.456233965827558,
+        "ln_MHSE_over_Mpred": [
+          0.014436846617837533,
+          -0.018709788199039425,
+          -0.023851955891269285,
+          -0.1356849279016541,
+          -0.19339344280077178,
+          -0.3036952557518742
+        ],
+        "own_stellar_profile": true
+      },
+      {
+        "name": "A2255",
+        "T500_keV": 5.912230176611652,
+        "ln_MHSE_over_Mpred": [
+          -0.38526914160240555,
+          -0.28038757177151785,
+          -0.26711956529796216,
+          -0.24387318183896273,
+          -0.240109161003772,
+          -0.2910577670489721
+        ],
+        "own_stellar_profile": false
+      },
+      {
+        "name": "A2319",
+        "T500_keV": 7.549502631485914,
+        "ln_MHSE_over_Mpred": [
+          0.04278543806450077,
+          0.13549113939378385,
+          0.006378208911628657,
+          -0.11434039115348914,
+          -0.19971161194832576,
+          -0.4513082628302804
+        ],
+        "own_stellar_profile": true
+      },
+      {
+        "name": "A3158",
+        "T500_keV": 5.105787139371538,
+        "ln_MHSE_over_Mpred": [
+          0.30715257992104655,
+          0.11194165490970233,
+          0.0007605831367875263,
+          -0.021523808052107487,
+          -0.11838024625379372,
+          -0.20022899765529575
+        ],
+        "own_stellar_profile": false
+      },
+      {
+        "name": "A3266",
+        "T500_keV": 8.2744840906568,
+        "ln_MHSE_over_Mpred": [
+          0.14102123184189594,
+          0.20905183657525842,
+          -0.058746742537929046,
+          -0.21926857967789035,
+          -0.25912813512624805,
+          -0.19808338388736593
+        ],
+        "own_stellar_profile": false
+      },
+      {
+        "name": "A644",
+        "T500_keV": 6.392737023342589,
+        "ln_MHSE_over_Mpred": [
+          0.22966783398621637,
+          0.3385497856874957,
+          0.47133000955324217,
+          0.4412241592076421,
+          0.14714571835343238,
+          -0.3021516640089065
+        ],
+        "own_stellar_profile": true
+      },
+      {
+        "name": "A85",
+        "T500_keV": 6.151697402910329,
+        "ln_MHSE_over_Mpred": [
+          0.1679985204781921,
+          0.15735940925869607,
+          0.074480672312306,
+          0.014691560256883295,
+          -0.0884221362545198,
+          -0.2558804652979546
+        ],
+        "own_stellar_profile": true
+      },
+      {
+        "name": "RXC1825",
+        "T500_keV": 4.96976146895225,
+        "ln_MHSE_over_Mpred": [
+          0.6917746915604744,
+          0.2921477807399173,
+          0.1007172862097377,
+          0.07756872191565557,
+          -0.04147424428350777,
+          -0.20483728006782811
+        ],
+        "own_stellar_profile": false
+      },
+      {
+        "name": "ZW1215",
+        "T500_keV": 7.590556604119937,
+        "ln_MHSE_over_Mpred": [
+          -0.005559754495140676,
+          0.03752134614686067,
+          0.09719793646530991,
+          0.09158051700445491,
+          0.014981375922994967,
+          -0.010211832822064035
+        ],
+        "own_stellar_profile": true
+      }
+    ],
+    "mond_simple_refit_on_clusters": {
+      "a0_SI": 8.165127885975318e-10,
+      "times_galaxy_value": 9.693708316780482,
+      "mean_by_radius": [
+        0.3886236243162157,
+        0.28183558077492354,
+        0.11373955975700077,
+        -0.03689761806913776,
+        -0.24170566722498496,
+        -0.4901543912529576
+      ],
+      "rms": 0.33832210654607325
+    },
+    "cross_validation": {
+      "n_splits": 924,
+      "u_median": 874.0775358634719,
+      "u_5_95": [
+        805.3910416277192,
+        948.9889154563716
+      ],
+      "heldout_rms_median": 0.2339593631703646,
+      "heldout_rms_5_95": [
+        0.1857419108854033,
+        0.2741685977371758
+      ]
+    }
+  },
+  "lenses": [
+    {
+      "name": "J0037-0942",
+      "sigma_kms": 274.1297933586995,
+      "theta_obs": 1.53,
+      "mass_log_error": 0.06,
+      "heat_weight": 0.29507619837820925,
+      "theta_newton": 0.5010708809228692,
+      "theta_cold_companion": 0.5531319308462431,
+      "dm_needed_cold_companion": 0.5623227660350978,
+      "dm_needed_sigma_cold_companion": 9.372046100584964,
+      "dm_needed_sigma_salpeter_cold_companion": 5.205379433918297,
+      "vrms_chi2_cold_companion": 6335.175433230359,
+      "vrms_cold_companion": [
+        159.37754398990717,
+        158.6963991009289,
+        157.13439570656465,
+        153.17318341621888,
+        147.2076119652075,
+        143.0676796835021
+      ],
+      "theta_hot_companion": 0.5656302216782589,
+      "dm_needed_hot_companion": 0.55345675897943,
+      "dm_needed_sigma_hot_companion": 9.224279316323834,
+      "dm_needed_sigma_salpeter_hot_companion": 5.057612649657167,
+      "vrms_chi2_hot_companion": 6148.351169219403,
+      "vrms_hot_companion": [
+        160.1699289472804,
+        159.6366283847329,
+        158.4064978307394,
+        155.31200335768125,
+        150.90466525957547,
+        148.31013574975017
+      ],
+      "vrms_obs": [
+        295.93787625565244,
+        287.4389061992009,
+        284.51768614090213,
+        275.3372521398832,
+        258.6354707554338,
+        242.91156866112465
+      ]
+    },
+    {
+      "name": "J1112+0826",
+      "sigma_kms": 272.32451060808876,
+      "theta_obs": 1.49,
+      "mass_log_error": 0.09,
+      "heat_weight": 0.2912025447419815,
+      "theta_newton": 0.44492620504546415,
+      "theta_cold_companion": 0.49416211623737927,
+      "dm_needed_cold_companion": 0.620349581744429,
+      "dm_needed_sigma_cold_companion": 6.892773130493656,
+      "dm_needed_sigma_salpeter_cold_companion": 4.114995352715878,
+      "vrms_chi2_cold_companion": 4763.197949048948,
+      "vrms_cold_companion": [
+        168.19865406351016,
+        167.87337952432503,
+        167.17519372056125,
+        165.21220206931585,
+        160.50913956320383,
+        154.51275949100273,
+        149.50599780650447
+      ],
+      "theta_hot_companion": 0.5055624579733132,
+      "dm_needed_hot_companion": 0.6119586889453464,
+      "dm_needed_sigma_hot_companion": 6.799540988281628,
+      "dm_needed_sigma_salpeter_hot_companion": 4.02176321050385,
+      "vrms_chi2_hot_companion": 4643.223885820805,
+      "vrms_hot_companion": [
+        169.12229495007477,
+        168.86322702854625,
+        168.30483508330798,
+        166.72462096560832,
+        162.9293808279864,
+        158.11720017639348,
+        154.09336001310157
+      ],
+      "vrms_obs": [
+        286.0088739755444,
+        286.1300396681661,
+        280.1565476206317,
+        273.3353432941256,
+        267.6744434980972,
+        257.6706024292386,
+        255.29572377081766
+      ]
+    },
+    {
+      "name": "J1204+0358",
+      "sigma_kms": 254.97090010932334,
+      "theta_obs": 1.31,
+      "mass_log_error": 0.07,
+      "heat_weight": 0.2552718562445713,
+      "theta_newton": 0.5437199682763748,
+      "theta_cold_companion": 0.5871146635660552,
+      "dm_needed_cold_companion": 0.4666020390307153,
+      "dm_needed_sigma_cold_companion": 6.665743414724504,
+      "dm_needed_sigma_salpeter_cold_companion": 3.0943148432959324,
+      "vrms_chi2_cold_companion": 5718.22449242979,
+      "vrms_cold_companion": [
+        163.99282945862308,
+        163.59804746737,
+        162.78407719639432,
+        160.61551368450787,
+        155.57458674721147,
+        148.58199849168034,
+        138.2263621447753
+      ],
+      "theta_hot_companion": 0.5953611887582921,
+      "dm_needed_hot_companion": 0.4604615390102281,
+      "dm_needed_sigma_hot_companion": 6.578021985860401,
+      "dm_needed_sigma_salpeter_hot_companion": 3.0065934144318303,
+      "vrms_chi2_hot_companion": 5602.7240618129235,
+      "vrms_hot_companion": [
+        164.4003332110515,
+        164.03029687818184,
+        163.26880903520998,
+        161.2505827620922,
+        156.61529956903547,
+        150.33069709829206,
+        141.31954247610395
+      ],
+      "vrms_obs": [
+        266.8889115986931,
+        265.17669669169345,
+        267.6138248275147,
+        263.390380043998,
+        258.6554912345515,
+        243.6976618338381,
+        219.3733345349746
+      ]
+    },
+    {
+      "name": "J1402+6321",
+      "sigma_kms": 277.8126875432684,
+      "theta_obs": 1.35,
+      "mass_log_error": 0.07,
+      "heat_weight": 0.30305807048024114,
+      "theta_newton": 0.4435403990185192,
+      "theta_cold_companion": 0.48803149138192664,
+      "dm_needed_cold_companion": 0.5084116261711074,
+      "dm_needed_sigma_cold_companion": 7.2630232310158185,
+      "dm_needed_sigma_salpeter_cold_companion": 3.6915946595872478,
+      "vrms_chi2_cold_companion": 7874.563836221608,
+      "vrms_cold_companion": [
+        165.21081335737478,
+        165.1652328233379,
+        164.84690241312623,
+        163.20345074306599,
+        159.19514601052313,
+        155.2587776036662,
+        152.35773640292865
+      ],
+      "theta_hot_companion": 0.4989930067866333,
+      "dm_needed_hot_companion": 0.5009784209745421,
+      "dm_needed_sigma_hot_companion": 7.156834585350602,
+      "dm_needed_sigma_salpeter_hot_companion": 3.5854060139220305,
+      "vrms_chi2_hot_companion": 7639.1852366403855,
+      "vrms_hot_companion": [
+        166.23723712060075,
+        166.349169628149,
+        166.36905247083183,
+        165.55880052480586,
+        162.97554803184465,
+        160.22403250588428,
+        158.04857183933478
+      ],
+      "vrms_obs": [
+        293.96827325666555,
+        294.3808329277585,
+        293.77476171273497,
+        284.8830388550428,
+        265.0730702298395,
+        257.04330152326276,
+        255.56553429757489
+      ]
+    },
+    {
+      "name": "J1621+3931",
+      "sigma_kms": 254.70633903306882,
+      "theta_obs": 1.29,
+      "mass_log_error": 0.06,
+      "heat_weight": 0.25474238437615776,
+      "theta_newton": 0.40039067497706804,
+      "theta_cold_companion": 0.4437297534878903,
+      "dm_needed_cold_companion": 0.5935016976632421,
+      "dm_needed_sigma_cold_companion": 9.891694961054036,
+      "dm_needed_sigma_salpeter_cold_companion": 5.725028294387369,
+      "vrms_chi2_cold_companion": 3041.6348486559123,
+      "vrms_cold_companion": [
+        155.71482294709548,
+        155.2311854391322,
+        154.21496612956136,
+        151.81641434790836,
+        148.30784239878213,
+        145.96909104426092
+      ],
+      "theta_hot_companion": 0.45309786375320166,
+      "dm_needed_hot_companion": 0.5852667966072507,
+      "dm_needed_sigma_hot_companion": 9.754446610120844,
+      "dm_needed_sigma_salpeter_hot_companion": 5.587779943454178,
+      "vrms_chi2_hot_companion": 2935.0121395423243,
+      "vrms_hot_companion": [
+        156.66949722945506,
+        156.31592635334397,
+        155.58664088078442,
+        153.96758746330522,
+        152.00884883517404,
+        151.16700743571457
+      ],
+      "vrms_obs": [
+        267.42479146491377,
+        270.2374592033945,
+        267.9986931453332,
+        254.3677755572454,
+        242.49408123417527,
+        225.7152335933509
+      ]
+    },
+    {
+      "name": "J1630+4520",
+      "sigma_kms": 276.1880391928841,
+      "theta_obs": 1.78,
+      "mass_log_error": 0.07,
+      "heat_weight": 0.29952386813674475,
+      "theta_newton": 0.6401155019728596,
+      "theta_cold_companion": 0.7186767262325082,
+      "dm_needed_cold_companion": 0.5167630711102884,
+      "dm_needed_sigma_cold_companion": 7.382329587289834,
+      "dm_needed_sigma_salpeter_cold_companion": 3.8109010158612624,
+      "vrms_chi2_cold_companion": 4406.900698445163,
+      "vrms_cold_companion": [
+        184.46942387446848,
+        184.22456835793767,
+        183.69262473187982,
+        182.13421318179547,
+        178.12735789018342,
+        172.33236778805926,
+        163.8938850014939
+      ],
+      "theta_hot_companion": 0.7375357646775685,
+      "dm_needed_hot_companion": 0.5063681534260124,
+      "dm_needed_sigma_hot_companion": 7.233830763228748,
+      "dm_needed_sigma_salpeter_hot_companion": 3.6624021918001763,
+      "vrms_chi2_hot_companion": 4337.227465805149,
+      "vrms_hot_companion": [
+        185.25448206570218,
+        185.05992628183188,
+        184.63365028387935,
+        183.36675871612834,
+        180.0743341818232,
+        175.32921873347357,
+        168.53266722233477
+      ],
+      "vrms_obs": [
+        298.00436389624144,
+        292.63363441366363,
+        290.28872924231496,
+        283.76897468179806,
+        271.43469465531757,
+        256.38377313911354,
+        240.80210432173962
+      ]
+    }
+  ],
+  "kids_early_late_predicted_offset_dex": {
+    "sigma 150 km/s": 0.018384196082318914,
+    "sigma 200 km/s": 0.03167903281546383,
+    "sigma 250 km/s": 0.04765710674284205,
+    "sigma 300 km/s": 0.06571278140372075
+  },
+  "kids_observed": ">= 0.2 dex (factor >= 1.5), early types higher, >= 5.7 sigma (Brouwer et al. 2021, A&A 650, A113)",
+  "guard": [
+    {
+      "name": "MOND simple (control: must be flagged)",
+      "cold_point_mass": {
+        "sigma_kms": 0.0,
+        "max_spread_dex": 2.8893987896738693e-16,
+        "collapses": true,
+        "closest_published": [
+          {
+            "function": "simple (Famaey & Binney 2005)",
+            "max_dev_dex": 2.220446049250313e-16,
+            "a0_scale": 1.0
+          },
+          {
+            "function": "RAR exponential (McGaugh, Lelli & Schombert 2016)",
+            "max_dev_dex": 0.016828783617583998,
+            "a0_scale": 0.9250670671117424
+          },
+          {
+            "function": "delta-family, delta=2 (Famaey & McGaugh 2012)",
+            "max_dev_dex": 0.03780092383554021,
+            "a0_scale": 0.8329849795864647
+          }
+        ],
+        "identical_to": "simple (Famaey & Binney 2005)"
+      },
+      "temperature": {
+        "sigmas_kms": [
+          0.0,
+          100.0,
+          300.0,
+          1000.0
+        ],
+        "max_spread_dex": 0.0,
+        "depends_on_temperature": false
+      },
+      "sparc_local_function": {
+        "rms_beyond_local_gN_dex": 5.225051842149669e-05,
+        "max_abs_dex": 0.002573875243710333
+      },
+      "newton": {
+        "median_within_galaxy_boost_spread_dex": 0.08832043765511867,
+        "reduces_to_newton": false
+      },
+      "dark_matter": {
+        "per_object_free_parameters": 0,
+        "independent_substance": false,
+        "is_dark_matter": false
+      },
+      "verdict": "MOND-CLASS: a function of the local Newtonian acceleration everywhere tested"
+    },
+    {
+      "name": "hot companion (ours)",
+      "cold_point_mass": {
+        "sigma_kms": 0.0,
+        "max_spread_dex": 4.440892098500626e-16,
+        "collapses": true,
+        "closest_published": [
+          {
+            "function": "simple (Famaey & Binney 2005)",
+            "max_dev_dex": 0.03055294666726427,
+            "a0_scale": 0.8596031241353195
+          },
+          {
+            "function": "RAR exponential (McGaugh, Lelli & Schombert 2016)",
+            "max_dev_dex": 0.03411273851674368,
+            "a0_scale": 0.8455558922081566
+          },
+          {
+            "function": "delta-family, delta=2 (Famaey & McGaugh 2012)",
+            "max_dev_dex": 0.06693570419760908,
+            "a0_scale": 0.7203394757781416
+          }
+        ],
+        "identical_to": null
+      },
+      "temperature": {
+        "sigmas_kms": [
+          0.0,
+          100.0,
+          300.0,
+          1000.0
+        ],
+        "max_spread_dex": 0.33889679739291934,
+        "depends_on_temperature": true
+      },
+      "sparc_local_function": {
+        "rms_beyond_local_gN_dex": 0.0015527518191933091,
+        "max_abs_dex": 0.012082277204544578
+      },
+      "newton": {
+        "median_within_galaxy_boost_spread_dex": 0.08703547192150798,
+        "reduces_to_newton": false
+      },
+      "dark_matter": {
+        "per_object_free_parameters": 0,
+        "independent_substance": false,
+        "is_dark_matter": false
+      },
+      "verdict": "cold isolated mass: reduces to a MOND form (closest published: simple (Famaey & Binney 2005), 0.031 dex); same Newtonian pull, different random speeds 0-1000 km/s: predictions differ by 0.339 dex -- NOT a function of g_N alone; SPARC: 0.0016 dex beyond local g_N"
+    },
+    {
+      "name": "companion pool (failed on SPARC)",
+      "cold_point_mass": {
+        "sigma_kms": 0.0,
+        "max_spread_dex": 3.3306690738754696e-16,
+        "collapses": true,
+        "closest_published": [
+          {
+            "function": "Bekenstein toy / FB eq. 5 (g_N + sqrt(a0 g_N))",
+            "max_dev_dex": 2.220446049250313e-16,
+            "a0_scale": 1.0
+          },
+          {
+            "function": "simple (Famaey & Binney 2005)",
+            "max_dev_dex": 0.0712048605246682,
+            "a0_scale": 0.7128261288143385
+          },
+          {
+            "function": "RAR exponential (McGaugh, Lelli & Schombert 2016)",
+            "max_dev_dex": 0.0859756915175155,
+            "a0_scale": 0.6653649517728354
+          }
+        ],
+        "identical_to": "Bekenstein toy / FB eq. 5 (g_N + sqrt(a0 g_N))"
+      },
+      "temperature": {
+        "sigmas_kms": [
+          0.0,
+          100.0,
+          300.0,
+          1000.0
+        ],
+        "max_spread_dex": 0.0,
+        "depends_on_temperature": false
+      },
+      "sparc_local_function": {
+        "rms_beyond_local_gN_dex": 0.13445506872590154,
+        "max_abs_dex": 0.689780514710923
+      },
+      "newton": {
+        "median_within_galaxy_boost_spread_dex": 0.17227470925935573,
+        "reduces_to_newton": false
+      },
+      "dark_matter": {
+        "per_object_free_parameters": 0,
+        "independent_substance": false,
+        "is_dark_matter": false
+      },
+      "verdict": "cold isolated mass: reduces to a MOND form (identical to Bekenstein toy / FB eq. 5 (g_N + sqrt(a0 g_N))); SPARC: 0.1345 dex beyond local g_N"
+    }
+  ],
+  "seconds": 14.36967749699943,
+  "code_sha256": {
+    "run.py": "ced7758d96bf26c4def153e9696a9bd22cc19d5db6ab69979cbb249438e3a078",
+    "law.py": "22293b1143de157d799e7266d66ccaba8770d39fd21efafcbe38f7e1e1f3389c",
+    "formula_guard.py": "02071838a18aa909ccef954ef1a754830209a1a289c717cb71616d773931df7d"
+  }
+}

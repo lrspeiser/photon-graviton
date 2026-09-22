@@ -12,3 +12,13 @@ Owner clarification, 20 September 2026: invent the gravity/companion interaction
 8. Literature is used to avoid false novelty claims and to identify conditional assumptions. A theorem about an older framework is not an automatic veto of a different fictional framework; state which assumptions it shares or replaces. Preserve unsuccessful variants and their limited scope.
 
 The goal remains one source-funded model with stable stellar motion, cluster lensing, light quality/local tests, independently traceable data, shared held-out predictions and reproducible evidence. This clarification changes the judging criteria, not that scope.
+
+
+## 22 September 2026: the standing no-MOND / no-Newton / no-dark-matter rule
+
+The owner has ruled out MOND and anything derived from it, plain Newtonian gravity, and
+dark matter, and asked that every formula be checked against all three. The full rule, the
+automatic check and what the data themselves force are recorded in [RULES.md](../RULES.md).
+Where it conflicts with point 1 above (older laws as context only), the new rule adds an
+obligation. Every candidate must be run through `research_work/tools/formula_guard.py` and
+benchmarked against all three on the same data before it is reported.
