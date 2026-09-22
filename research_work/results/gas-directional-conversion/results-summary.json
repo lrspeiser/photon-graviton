@@ -1,0 +1,82 @@
+{
+  "experiment": "JR-5",
+  "date_local": "2026-09-21",
+  "baseline": "a5805452b97ef0856d364de90e394572a8fd2146",
+  "protocol_commit": "50b36091098f302fbfeed73c52622194f1db46cc",
+  "execution": "working container; not GitHub Actions",
+  "versions": {"python":"3.13.5","numpy":"2.3.5","scipy":"1.17.0","numba":"0.65.1"},
+  "counts": {"toy_geometry_rate_combinations":64,"galaxies":149,"rotation_rows":3152,"optimizer_starts":16,"new_observed_lenses":0,"clusters":0},
+  "source_sha256": {
+    "audit.py":"1b3c2e7ccc0946095707512d95fbb064b7050faeca695c5f67a17c39976870e7",
+    "core.py":"dacbdadbfe8ada7a3d43cfd40fe86906e17be4da29efd49ba649b01db4955ed7",
+    "data_screen.py":"b8a39ab7d86cbd0e6aa46f5798e4a95d15f0c0a3ed62aebb4f053a6a3728ee21",
+    "layers.py":"8e6a49e0bddfe3690568b0a778f994f464f74f0a192eeb3a0ba08474d52cc267",
+    "supplement.py":"25d81a3f5d78f567e70fd25840ab096faacc48c4dcd963980ee0197fdd30ba25",
+    "toys.py":"a81c8b5f1ebe9fa551411edd15fa10063db3fe5b836f197e41696d82558bf8ff"
+  },
+  "model": {
+    "forward_rate_per_kpc":"alpha*rho_g/1e6",
+    "reverse_rate_per_kpc":"beta*(rho_g/1e7)*rho_g/1e6",
+    "density_units":"Msun/kpc^3",
+    "flux_fraction_equation":"df/dr=a*(1-f)-b*f",
+    "stationary_capture_readout":"rho_chi_new=2*f*rho_chi_R10",
+    "scope":"Gas-free empirical R10 capture/residence scaffold and source normalization remain un-derived; fixed initial outgoing fraction 0.5 except the separate pure-photon control. Equal-potential weak-field readout is a postulate."
+  },
+  "pure_photon_layer_order": {
+    "same_column_Msun_pc2":10.0,
+    "same_layers":[{"width_kpc":2.5,"density_Msun_pc3":0.002},{"width_kpc":0.1,"density_Msun_pc3":0.05}],
+    "alpha":0.3,"beta":0.3,
+    "diffuse_then_dense":{"companion_fraction":0.1667319402832151,"photon_fraction":0.8332680597167849},
+    "dense_then_diffuse":{"companion_fraction":0.7231306746017071,"photon_fraction":0.27686932539829284},
+    "scope":"Post-screen attribution toy, no observational refit; fraction sums equal one."
+  },
+  "thin_disk_example": {
+    "alpha":0.3,"beta":0.3,"radius_or_impact_kpc":2,
+    "equatorial_companion_force_ratio_approximately":0.8794,
+    "polar_companion_force_ratio_approximately":1.0052,
+    "face_on_companion_bend_ratio":1.032830750043346,
+    "edge_on_in_plane_impact_bend_ratio":1.0247408582693207,
+    "edge_on_vertical_impact_bend_ratio":1.1477666989417057,
+    "scope":"Companion contributions only, not total galaxy forces or observed lens angles."
+  },
+  "ring_example": {
+    "alpha":3.0,"beta":0.0,
+    "equatorial_companion_force_ratio_approximately":0.9171,
+    "polar_companion_force_ratio_approximately":1.0870,
+    "edge_on_vertical_impact_bend_ratio":1.3225618092333336
+  },
+  "selection": {
+    "model":"reverse_only","alpha":0.0,"beta":0.011004918685215817,
+    "rule":"29-role mean equal-galaxy fractional-squared error; includes null; fixed before 31-role scoring",
+    "fresh_blind_data":false
+  },
+  "all_149": {
+    "baseline":{"mean_velocity_RMS_kms":17.71098701125835,"median_fractional_RMS":0.15051553815400098,"below20pct":95,"raw_chi2":211200.74383558976},
+    "selected":{"mean_velocity_RMS_kms":18.823368519293442,"median_fractional_RMS":0.15632308550588214,"below20pct":86,"rescued20pct":2,"spoiled20pct":11,"raw_chi2":266296.5787272104},
+    "mixed_postselection":{"alpha":1.4426459668470273,"beta":29.99999999738756,"beta_upper_bound":true,"mean_velocity_RMS_kms":19.027996851163163,"median_fractional_RMS":0.18327561121332797,"below20pct":88,"rescued20pct":18,"spoiled20pct":25,"raw_chi2":255252.380820317}
+  },
+  "comparison_31": {
+    "baseline_RMS_kms":15.08921617573822,"selected_RMS_kms":15.316848720224673,"mixed_postselection_RMS_kms":14.717808951348584,
+    "below20pct_baseline_selected_mixed":[22,20,23]
+  },
+  "gas_reconstruction": {
+    "median_normalized_gas_squared_speed_RMS":0.32209341477851017,"above20pct":122,"scale_bound_count":1,
+    "scope":"Exponential inferred gas profiles from gas-only forces and catalog mass, not measured 3-D gas maps."
+  },
+  "gas_height_sensitivity": {
+    "height_over_radial_scale":[0.05,0.1,0.2],"below20pct":[79,86,94],
+    "mean_velocity_RMS_kms":[20.194134433811147,18.823368519293442,18.185150861720068],
+    "scope":"Frozen coefficients, no height chosen from scores."
+  },
+  "numerics": {
+    "maximum_toy_energy_absolute_error":6.519940143334679e-11,
+    "minimum_toy_energy":0.0,
+    "maximum_data_velocity_refinement_relative":0.002586571638867108,
+    "data_refinements_above_one_percent":0,
+    "readback_checks":2235,"readback_failures":0,
+    "independent_disk_force_relative_difference":-0.0003448172898686819,
+    "independent_ring_force_relative_difference":-0.000008001004217161878,
+    "maximum_cylinder_mass_lensing_relative_difference":0.0002752647014372389
+  },
+  "decision":"Directional mechanism works in toy examples; tested smooth-gas laws do not solve the full real sample. No real-lens, cluster, microscopic-production, adequate-fuel or Solar-system validation."
+}
