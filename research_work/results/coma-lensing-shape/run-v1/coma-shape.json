@@ -1,0 +1,78 @@
+{
+  "experiment": "JR-14",
+  "scope": "Shape-only test of the low-acceleration branch against reconstructed Coma tangential shear. The amplitude carries tau and Sigma_crit together and is marginalised, so this tests the radial shape and nothing else.",
+  "prediction": "Delta Sigma proportional to 1/R, from g = sqrt(G M_b a0)/r with no free shape parameter.",
+  "data": {
+    "source": "https://lss.fnal.gov/archive/2007/pub/fermilab-pub-07-453-a-cd.pdf",
+    "n_points": 6,
+    "radius_hinv_Mpc": [
+      1.2091334687408992,
+      2.7532502697453376,
+      4.4648592195300205,
+      6.186943571810895,
+      7.929955561957365,
+      9.657278001605114
+    ],
+    "shear": [
+      0.007847463111441855,
+      0.0030932388814204894,
+      0.0030508765533603798,
+      0.0003729052640212529,
+      0.0014152508381944612,
+      -0.0004491479523249394
+    ],
+    "error": [
+      0.0025339022403197543,
+      0.0014999961241007915,
+      0.0011906762368869579,
+      0.0010211850399292636,
+      0.0008983177847260564,
+      0.0008050917812932601
+    ],
+    "archived_limits": [
+      "Radius retains paper cosmological units; not adopted as a fictional physical distance.",
+      "Do not substitute a fitted NFW curve for data; curve excluded from extraction.",
+      "No bin edges, source weights, full covariance or source geometry recovered.",
+      "Cross component and negative measured shear retained; do not clip."
+    ]
+  },
+  "cross_component_control": {
+    "chi2": 5.645299497946305,
+    "paper_value": 5.65,
+    "note": "The cross component should be consistent with zero if the signal is real lensing rather than a systematic."
+  },
+  "results": {
+    "one_over_R": {
+      "chi2": 4.862777559850633,
+      "dof": 5,
+      "shape_parameters": 0,
+      "reduced_chi2": 0.9725555119701266
+    },
+    "nfw": {
+      "chi2": 5.289244925625101,
+      "dof": 4,
+      "shape_parameters": 1,
+      "scale_radius_hinv_Mpc": 0.13772347493812429,
+      "reduced_chi2": 1.3223112314062753
+    },
+    "free_power_law": {
+      "chi2": 4.197331382731064,
+      "fitted_slope": 1.2427192687988289,
+      "dof": 4,
+      "shape_parameters": 1
+    },
+    "no_signal": {
+      "chi2": 23.335876132644128,
+      "dof": 6,
+      "paper_value": 23.33
+    }
+  },
+  "reading": "The free power law tells us the slope the data prefers on its own. If that sits near 1, the prediction is confirmed as a shape; it does not confirm tau, which needs the critical surface density.",
+  "limitations": [
+    "Figure reconstruction, not author machine-readable measurements.",
+    "No bin edges, source weights, full covariance or source geometry, so the errors are the plotted bars and correlations between bins are not modelled.",
+    "The amplitude is marginalised, so nothing here measures tau. Separating tau needs the critical surface density, which is not recoverable from the figure.",
+    "Coma baryonic mass is not used; only the shape is tested."
+  ],
+  "code_sha256": "b2628f7b3370a1459b5f9ab805500328a2d42200a869c27d744cdbbe6669a8a4"
+}

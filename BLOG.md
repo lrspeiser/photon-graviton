@@ -3,7 +3,7 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026.** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 2).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
@@ -180,6 +180,38 @@ our own smoothed model as the galaxy "observable" rather than the measurements. 
 crossover variable is still unidentified. It is left here because the correction is
 more informative than the claim was.
 
+### 3.6 Cluster weak lensing: a parameter-free shape prediction, and it holds
+
+*Script: `research_work/results/coma-lensing-shape/code/shape.py`. Data: six Coma
+tangential-shear points reconstructed from Kubo et al. 2007, archived in this repo.*
+
+In the low-acceleration branch, `g = √(G·M_b·a₀)/r` means the effective lensing mass
+grows **linearly** with radius, the effective density falls as 1/r², and the quantity
+weak lensing actually measures falls as **1/R**. No shape parameter. Nothing fitted.
+
+| Model | Shape parameters | χ² | Reduced χ² |
+|---|---:|---:|---:|
+| No signal at all | — | 23.34 | — |
+| **1/R — our prediction** | **0** | **4.86** | **0.97** |
+| NFW — what dark matter predicts | 1 (scale radius) | 5.29 | 1.32 |
+| Free power law `R^-p` | 1 (slope) | 4.20 | best p = **1.243** |
+
+The ingestion checks out: our "no signal" χ² of 23.34 reproduces the paper's quoted
+23.33.
+
+**Our parameter-free prediction fits Coma's lensing better than NFW does with a
+fitted scale radius**, and when the data is allowed to pick its own slope it chooses
+1.243 against our predicted 1. Reduced χ² of 0.97 is as good as this data can show.
+
+Honest about the size of it: Δχ² = 0.43 between the two models is not by itself
+decisive with six points and no covariance. What makes it worth reporting is the
+direction and the parameter count — we predicted the shape in advance and spent
+nothing to get it.
+
+Note what this does **not** do: the amplitude carries τ and the critical surface
+density together, so it cannot separate them. Measuring τ from lensing needs source
+geometry we could not recover from a published figure.
+
 ---
 
 ## 4. Why this beats the alternatives
@@ -203,13 +235,15 @@ local: local acceleration, local stress state.
 
 ## 5. What is next, in order
 
-1. **Cluster weak lensing.** τ predicts the lensing-to-dynamical mass ratio is
-   `(1 + 1/τ)/2` — that is 0.75 where the field streams, 1.0 where it stands. This
-   is independent of everything above and we have Coma shear data in the repository.
-2. **Test the predicted hydrostatic bias b ≈ 0.17** against lensing cluster masses.
-3. **Find what actually sets τ.** Light flux is ruled out. Groups, which sit between
-   galaxies and clusters, are the place to look.
-4. **Derive `a₀`.** Right now it is a measured constant with no explanation. A theory
+1. ~~Cluster weak lensing shape.~~ **Done — §3.6. The prediction held.**
+2. **Separate τ from the lensing amplitude.** This needs author shear catalogues with
+   source redshifts, not a figure reconstruction. That single measurement would turn
+   §3.6 from a shape check into a direct reading of the stress state.
+3. **Test the predicted hydrostatic bias b ≈ 0.17** against lensing cluster masses.
+   This is the sharpest falsifiable number on the page.
+4. **Find what actually sets τ.** Light flux is ruled out (§3.5). Groups, which sit
+   between galaxies and clusters, are the place to look.
+5. **Derive `a₀`.** Right now it is a measured constant with no explanation. A theory
    that predicts its value rather than fitting it would be a different order of
    result.
 
