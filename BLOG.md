@@ -3,7 +3,7 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 6).** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 7).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
@@ -53,6 +53,13 @@ strictly tied to its source.
 
 ### Ingredient two: a stream pulls harder than a statue
 
+> **Correction, rev 7.** The Tolman argument below was this project's original
+> motivation and is kept for the record, but it does not survive scrutiny as stated:
+> it needs the extra gravity to carry a stress-energy tensor, and that reading fails on
+> energy by four orders of magnitude. The object that survives is the **gravitational
+> slip** η, which gives the same lensing-versus-dynamics split with no energy cost. See
+> §3.11 and [THEORY.md](THEORY.md).
+
 This is the part that is *not* optional, and it is the part people usually miss.
 
 In general relativity, how hard something pulls on slow-moving matter is not set by
@@ -88,12 +95,13 @@ can bend light more than it moves stars, without anyone adding mass by hand.
 | Cluster lensing shape | **Solved** — beats NFW | 0 parameters |
 | The energy catastrophe | **Dissolved** — it was a units error | 0 |
 | Lensing vs rotation on one object | **10× better** than ordinary matter | 0 |
-| Cluster masses | **Closed to within the scatter** — 1.79–1.89 vs predicted 2.00 | 0 |
-| What sets τ between the two regimes | **Open** — four candidates ruled out | — |
+| ~~Cluster masses~~ | ~~Closed to within the scatter~~ — **retracted, see §3.3** | — |
+| Cluster dynamics | **Open** — the classic deficit, measured at 1.6–1.9× | — |
+| **Gravitational slip η ≠ 1** | **The novel claim** — measured on 6 lenses, lead from groups | 0 |
 
-One new constant of nature, `a₀`. One factor, `τ`, that general relativity fixes
-exactly and we do not get to adjust. No dark matter, no expansion, no per-object
-parameters anywhere.
+One new constant, `a₀` — Milgrom's, attributed. One novel measured quantity, the
+slip `η`. No dark matter, no per-object parameters. The theory and its field
+equations are in [THEORY.md](THEORY.md).
 
 ---
 
@@ -148,44 +156,31 @@ disappears the moment the force is read correctly.
 This is the clearest example so far of the working rule: *when you hit a wall, ask
 what would have to change.* The answer was the interpretation, not the world.
 
-### 3.3 Clusters: the factor is 2, and the measurement agrees
+### 3.3 ~~Clusters: the factor is 2, and the measurement agrees~~ — retracted
 
-At the same `a₀`, the eleven X-COP clusters need **1.61×** more pull than spirals do.
-This is the discrepancy that has historically killed modified-gravity attempts — they
-fix galaxies and then need dark matter anyway for clusters.
+~~At the published hydrostatic bias the gap is 1.79–1.89 against an exactly predicted
+2.00. The cluster problem is not open; it is closed to within the scatter.~~
 
-Our theory does not get to choose this number. τ is fixed by the stress tensor, so
-the gap **must be exactly 2** — free-streaming against standing — or the theory is
-wrong.
+**This does not survive the theory work in [THEORY.md](THEORY.md).** The argument
+used τ, the Tolman active mass of a stress-energy tensor, while elsewhere arguing that
+the extra gravity is not a substance at all. Tested numerically, the substance reading
+fails by four orders of magnitude on energy, so the only viable frame has no stress
+tensor for τ to belong to.
 
-Raw, it is 1.61. But X-ray hydrostatic masses are known to read low, and for **this
-exact sample** the bias has been measured by people who had never heard of this
-theory:
+What survives is narrower and cleaner. τ had been doing two different jobs. In the
+lensing channel it is the **gravitational slip** η — a standard, well-defined object
+that costs no energy (§3.11). In the *dynamical* channel, which is what X-ray
+hydrostatic masses measure, slip cannot act at all: it is a ratio between two
+potentials, not a change in either one.
 
-* Eckert et al. 2022: X-COP hydrostatic masses **10–15% below** lensing estimates
-* Eckert et al. 2019: **7%** at R500 from the constant-gas-fraction method
+And the bias correction runs the wrong way for the rescue. With no τ, the
+cluster/spiral gap should be 1.00. Raw it is 1.611; correcting for the published
+hydrostatic bias moves it to 1.895 — *away* from 1.
 
-Apply it:
-
-| Hydrostatic bias `b` | Cluster/spiral gap | vs predicted 2.00 |
-|---|---:|---:|
-| 0 (raw) | 1.611 | 80.5% |
-| 0.07 — Eckert 2019 | 1.732 | 86.6% |
-| 0.10 — Eckert 2022 low | 1.790 | 89.5% |
-| 0.125 — midpoint | 1.841 | 92.0% |
-| 0.15 — Eckert 2022 high | 1.895 | **94.7%** |
-
-**At the published bias for this sample the gap is 1.79–1.89 against an exactly
-predicted 2.00** — within 5–11%, and the cluster sample's own internal scatter is
-9.5%. The bias that would land it exactly on 2.000 is `b = 0.195`, a little above the
-measured range but the same size.
-
-This is as close as this data can currently come to confirming a parameter-free
-prediction. **The cluster problem is not open; it is closed to within the scatter of
-the measurement**, using a correction nobody derived with our theory in mind.
-
-What would still sharpen it: direct weak-lensing masses for these same eleven
-clusters, which remove the bias question entirely instead of correcting for it.
+**So the cluster dynamical deficit is open.** It is the classic MOND cluster problem,
+now measured precisely at **1.6–1.9×**, and this framework does not currently explain
+it. That the number sits near 2 is, on present analysis, a coincidence. The measured
+facts in the table stand; the interpretation does not.
 
 ### 3.4 Lensing and rotation from the same object
 
@@ -362,6 +357,40 @@ But the residual is **not scatter**: all twelve bins are under-predicted, by 7 t
 km/s. That systematic needs explaining — most likely the baryonic mass model or the
 Jeans proxy, possibly real — and it is recorded here rather than averaged away.
 
+### 3.11 What the extra gravity actually is — and what is new
+
+*Full derivation and verification: [THEORY.md](THEORY.md).*
+
+The theory now has field equations. With baryons as the only source:
+
+```
+∇²Φ_N = 4πG ρ
+∇²Φ   = ∇ · [ ν(|∇Φ_N|/a₀) ∇Φ_N ]        what stars feel
+Ψ     = Φ_N + η (Φ − Φ_N)                 lensing partner
+```
+
+The second equation reproduces the fitted law to **4.4 × 10⁻¹⁶** — machine precision.
+It is Milgrom's quasi-linear MOND, and we say so.
+
+The third is ours. Light is bent by (Φ + Ψ)/2, so the extra gravity enters lensing at
+weight **(1 + η)/2**. Standard relativistic MOND is built to give η = 1 everywhere, so
+lensing tracks dynamics. We measure it is not 1:
+
+| η | Where |
+|---:|---|
+| 0.82 – 0.88 | three over-bent SLACS lenses |
+| 1.36 – 1.54 | three under-bent SLACS lenses |
+| ≈ 2 | galaxy groups, where lensing masses run ~50% above dynamical *(a lead, not yet a measurement)* |
+
+**This is the claim that survives, and it is a good one.** It has no internal
+contradiction, costs no energy, is not a rediscovery, and predicts something standard
+theory does not: *lensing and dynamics disagree, by an amount you can measure object by
+object.*
+
+It also survives GW170817. That event killed TeVeS and most relativistic MOND theories,
+but a class with gravitational waves on the light cone exists — which constrains the
+slip to live in the scalar sector, and tells us where to build.
+
 ---
 
 ## 4. Why this beats the alternatives
@@ -372,14 +401,20 @@ two or three numbers fitted *separately for every galaxy*. We have one number fo
 ordinary matter plus a halo has to change the galaxy's stellar mass by a factor of
 two to three between the two explanations. One law does not.
 
-**Against MOND and its relatives.** They have an `a₀` too, and they do well on
-rotation. They are wrong on clusters by about a factor of two, which is why that
-programme still needs dark matter on top. **That gap is exactly what τ fills** — and
-τ is not a new free function bolted on. Its values are fixed by the stress tensor.
-The factor that rescues clusters has no adjustable freedom in it at all.
+**Against MOND and its relatives.** On dynamics we *are* MOND — our equation for what
+stars feel is Milgrom's, and we say so. ~~They are wrong on clusters by about a factor
+of two, and that gap is exactly what τ fills.~~ **Retracted (§3.3):** we do not
+currently solve the cluster deficit either.
 
-**Against expanding-universe explanations.** Nothing here uses expansion. The law is
-local: local acceleration, local stress state.
+Where we differ is lensing. Relativistic MOND theories are built so that light and
+matter respond to the same potential — slip η = 1. We measure η ≠ 1 on individual
+galaxies, with every constant frozen. If that holds, it is a clean, falsifiable
+departure from the whole MOND family, and it is something dark matter does not predict
+either: a halo bends light and moves stars through one potential.
+
+**Against expanding-universe explanations.** Nothing here uses expansion; every test
+is local, below z = 0.3. The roadmap recommends leaving the position out of any paper,
+because no result here requires it.
 
 ---
 

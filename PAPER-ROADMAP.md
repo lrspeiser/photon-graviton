@@ -5,6 +5,26 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 
 ---
 
+## Status — 22 September 2026, after the first work session on this list
+
+| Task | Status | Result |
+|---|---|---|
+| **T0.1** Resolve the contradiction | **Done** | Branch (a) fails on energy by 1.5 × 10⁴; the field's own energy is 1.7 × 10⁻⁴ of what it would need. Branch (b), a modified propagator, survives. τ splits into two objects: in lensing it is the **gravitational slip η** (legitimate, no energy cost); in cluster dynamics it has **no mechanism**. The cluster "closed within scatter" claim is **retracted**. |
+| **T2.2** GW170817 | **Done** | Survives, with a construction constraint: the modification and the slip must live in the scalar sector. TeVeS-type completions are excluded; a surviving class exists. |
+| **T0.2** Field equations | **Done (non-relativistic)** | Three equations. The dynamics equation reproduces the fitted law to 4.4 × 10⁻¹⁶ and is Milgrom's QUMOND, attributed. The slip equation is ours; JR-10's γ_χ is identically η. Relativistic completion with η ≠ 1 is open. |
+| **T1.2** Cluster lensing masses | **Specified, not acquired** | Network access here is repository-only. Now measures η at cluster scale rather than deciding τ. |
+| **T1.3** Groups | **Specified, not acquired** | SL2S groups carry both weak-lensing and dynamical masses; published lensing masses run ~50% above dynamical — consistent with η ≈ 2, but biased dispersions could do it alone. A lead. |
+
+Full working in [THEORY.md](THEORY.md).
+
+**What changed about the paper.** The headline is no longer "τ solves the cluster
+problem." It is: **the gravitational slip of the extra gravity is not 1**, measured
+object by object with every constant frozen. That is smaller, contradiction-free, not a
+rediscovery, and falsifiable. The cluster dynamical deficit stays open and is reported
+as open.
+
+---
+
 ## The strategic read, before the list
 
 **The galaxy-scale result is not publishable as new.** Our `a₀ = 1.171 × 10⁻¹⁰ m/s²`
@@ -13,10 +33,12 @@ reproduce was published by McGaugh, Lelli and Schombert in 2016 from the same SP
 data. A paper whose headline is "we fit rotation curves with one constant" will be
 desk-rejected as a rediscovery, correctly.
 
-**The novelty is τ, and only τ.** The claim worth a paper is: *the residual factor of
-two that has blocked MOND in clusters for thirty years is the Tolman active-mass
-factor of the gravitational field itself, whose two values general relativity fixes
-exactly.* Everything else in this project is scaffolding for that one sentence.
+**The novelty is the slip η, and only η.** ~~The claim worth a paper is that the
+residual factor of two blocking MOND in clusters is the Tolman active-mass factor of
+the gravitational field.~~ *Superseded by T0.1 — see the status table above.* The
+claim worth a paper is now: *the extra gravity bends light and moves matter through
+potentials that differ, by a slip η ≠ 1 measurable object by object, where every
+relativistic MOND theory and every dark-matter halo predicts η = 1.*
 
 **Nature is the wrong first target.** Nature wants a result that is both novel and
 settled. Ours is novel and *suggestive*: eleven clusters, a factor that needs a
