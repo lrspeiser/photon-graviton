@@ -1,0 +1,174 @@
+{
+  "task": "T1.2",
+  "relation": "M_WL / M_HSE = 1 + f (eta - 1)/2, f = 1 - M_baryon / M_HSE",
+  "bias_source": "Eckert et al. 2022: X-COP hydrostatic masses 10-15 percent below lensing; Eckert et al. 2019: 7 percent at R500",
+  "rows": [
+    {
+      "name": "A85",
+      "M500_1e14": 5.65,
+      "baryon_fraction": 0.16999999999999998,
+      "non_newtonian_fraction": 0.8300000000000001,
+      "implied_eta": {
+        "0.070": 1.181370643865786,
+        "0.100": 1.2677376171352077,
+        "0.125": 1.344234079173838,
+        "0.150": 1.4252303330970943
+      }
+    },
+    {
+      "name": "A644",
+      "M500_1e14": 5.66,
+      "baryon_fraction": 0.152,
+      "non_newtonian_fraction": 0.848,
+      "implied_eta": {
+        "0.070": 1.1775207952931632,
+        "0.100": 1.2620545073375262,
+        "0.125": 1.3369272237196763,
+        "0.150": 1.4162042175360712
+      }
+    },
+    {
+      "name": "A1644",
+      "M500_1e14": 3.48,
+      "baryon_fraction": 0.148,
+      "non_newtonian_fraction": 0.852,
+      "implied_eta": {
+        "0.070": 1.1766873643293456,
+        "0.100": 1.2608242044861764,
+        "0.125": 1.3353454057679408,
+        "0.150": 1.4142502071251037
+      }
+    },
+    {
+      "name": "A1795",
+      "M500_1e14": 4.63,
+      "baryon_fraction": 0.159,
+      "non_newtonian_fraction": 0.841,
+      "implied_eta": {
+        "0.070": 1.178998376229016,
+        "0.100": 1.2642356982428327,
+        "0.125": 1.3397316120264988,
+        "0.150": 1.4196684619150872
+      }
+    },
+    {
+      "name": "A2142",
+      "M500_1e14": 8.95,
+      "baryon_fraction": 0.178,
+      "non_newtonian_fraction": 0.8220000000000001,
+      "implied_eta": {
+        "0.070": 1.1831358082829713,
+        "0.100": 1.2703433360367669,
+        "0.125": 1.3475842891901284,
+        "0.150": 1.4293688278231
+      }
+    },
+    {
+      "name": "A2255",
+      "M500_1e14": 5.26,
+      "baryon_fraction": 0.173,
+      "non_newtonian_fraction": 0.827,
+      "implied_eta": {
+        "0.070": 1.1820285784868227,
+        "0.100": 1.268708853956738,
+        "0.125": 1.3454828122300915,
+        "0.150": 1.4267728856959956
+      }
+    },
+    {
+      "name": "A2319",
+      "M500_1e14": 7.31,
+      "baryon_fraction": 0.209,
+      "non_newtonian_fraction": 0.791,
+      "implied_eta": {
+        "0.070": 1.190313064991912,
+        "0.100": 1.2809383340356792,
+        "0.125": 1.3612064294744446,
+        "0.150": 1.4461961775860788
+      }
+    },
+    {
+      "name": "A3158",
+      "M500_1e14": 4.26,
+      "baryon_fraction": 0.16499999999999998,
+      "non_newtonian_fraction": 0.835,
+      "implied_eta": {
+        "0.070": 1.1802845921061107,
+        "0.100": 1.266134397870925,
+        "0.125": 1.3421727972626174,
+        "0.150": 1.4226840436773514
+      }
+    },
+    {
+      "name": "A3266",
+      "M500_1e14": 8.8,
+      "baryon_fraction": 0.152,
+      "non_newtonian_fraction": 0.848,
+      "implied_eta": {
+        "0.070": 1.1775207952931632,
+        "0.100": 1.2620545073375262,
+        "0.125": 1.3369272237196763,
+        "0.150": 1.4162042175360712
+      }
+    },
+    {
+      "name": "RXC1825",
+      "M500_1e14": 4.08,
+      "baryon_fraction": 0.153,
+      "non_newtonian_fraction": 0.847,
+      "implied_eta": {
+        "0.070": 1.1777303830089758,
+        "0.100": 1.2623638987275352,
+        "0.125": 1.3373250126496878,
+        "0.150": 1.4166956038613794
+      }
+    },
+    {
+      "name": "ZW1215",
+      "M500_1e14": 7.66,
+      "baryon_fraction": 0.126,
+      "non_newtonian_fraction": 0.874,
+      "implied_eta": {
+        "0.070": 1.1722398563027487,
+        "0.100": 1.2542588354945337,
+        "0.125": 1.3269042170644,
+        "0.150": 1.4038228563736708
+      }
+    }
+  ],
+  "implied_eta_by_bias": {
+    "0.070": {
+      "mean": 1.179802750744547,
+      "min": 1.1722398563027487,
+      "max": 1.190313064991912
+    },
+    "0.100": {
+      "mean": 1.2654231082419498,
+      "min": 1.2542588354945337,
+      "max": 1.2809383340356792
+    },
+    "0.125": {
+      "mean": 1.3412582820253638,
+      "min": 1.3269042170644,
+      "max": 1.3612064294744446
+    },
+    "0.150": {
+      "mean": 1.421554348384273,
+      "min": 1.4038228563736708,
+      "max": 1.4461961775860788
+    }
+  },
+  "slacs_eta": {
+    "underbent": [
+      1.36,
+      1.54
+    ],
+    "overbent": [
+      0.82,
+      0.88
+    ]
+  },
+  "not_claimed": "That the hydrostatic bias is slip. It is conventionally attributed to non-thermal pressure support, and simulations support that reading.",
+  "discriminating_test": "Non-thermal pressure predicts the bias grows with dynamical disturbance: merging, unrelaxed clusters read lower. Slip predicts it tracks the non-Newtonian fraction f and does not care about dynamical state. Split a lensing-and-X-ray sample into relaxed and disturbed at fixed f: if the bias is the same in both, slip; if the disturbed half carries it, pressure.",
+  "code_sha256": "971978322ab7d6e647a96da64e48a34d133b76f78e41efc52233971f9fe4809d"
+}

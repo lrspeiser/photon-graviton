@@ -1,0 +1,187 @@
+{
+  "task": "T1.3",
+  "source": "Munoz et al. 2013, A&A, arXiv:1212.2624, Tables 2 and 3",
+  "correction": "An earlier revision attributed to this paper a finding that weak-lensing masses run about 50 percent above dynamical ones. The paper contains no such statement; the figure came from a search-engine summary. The paper concludes instead that group velocity dispersions are always underestimated.",
+  "method": "Isothermal projected mass pi sigma^2 R/G in the 2 Mpc lensing aperture; lensing sees (1+eta)/2 of it where the extra gravity dominates.",
+  "usable_groups": 3,
+  "excluded": {
+    "SL2SJ02141-0405": "no weak-lensing mass: Einstein radius below 3 arcsec, galaxy regime",
+    "SL2SJ02180-0515": "no weak-lensing mass: Einstein radius below 3 arcsec, galaxy regime",
+    "SL2SJ02215-0647": "weak-lensing upper limit only (< 3.1e14)",
+    "SL2SJ08591-0345": "no weak-lensing mass: at the edge of the field of view"
+  },
+  "rows": [
+    {
+      "name": "SL2SJ02140-0535",
+      "z": [
+        0.445
+      ],
+      "MWL_2Mpc_1e14": [
+        5.5,
+        3.7
+      ],
+      "by_sigma_bias": {
+        "1.0": {
+          "Mdyn_2Mpc_1e14": 1.935626444774806,
+          "ratio": 2.8414573560136906,
+          "eta": 4.682914712027381,
+          "eta_16_50_84": [
+            0.8874439706461227,
+            5.197561200699994,
+            14.800723544669722
+          ],
+          "P_eta_below_1": 0.167
+        },
+        "0.9": {
+          "Mdyn_2Mpc_1e14": 2.3896622774997605,
+          "ratio": 2.3015804583710895,
+          "eta": 3.603160916742179,
+          "eta_16_50_84": [
+            0.603443578903031,
+            4.0338087413732,
+            11.579596158254256
+          ],
+          "P_eta_below_1": 0.19435
+        },
+        "0.8": {
+          "Mdyn_2Mpc_1e14": 3.024416319960635,
+          "ratio": 1.8185327078487616,
+          "eta": 2.6370654156975233,
+          "eta_16_50_84": [
+            0.26531634833414935,
+            2.9479704990512423,
+            8.944776718037993
+          ],
+          "P_eta_below_1": 0.24355
+        },
+        "0.7": {
+          "Mdyn_2Mpc_1e14": 3.9502580505608287,
+          "ratio": 1.3923141044467082,
+          "eta": 1.7846282088934164,
+          "eta_16_50_84": [
+            -0.029909040958414956,
+            2.0462724768543756,
+            6.730492138731471
+          ],
+          "P_eta_below_1": 0.324
+        }
+      }
+    },
+    {
+      "name": "SL2SJ08544-0121",
+      "z": [
+        0.351,
+        0.356
+      ],
+      "MWL_2Mpc_1e14": [
+        6.3,
+        2.5
+      ],
+      "by_sigma_bias": {
+        "1.0": {
+          "Mdyn_2Mpc_1e14": 2.19873349910395,
+          "ratio": 2.8652858577755964,
+          "eta": 4.730571715551193,
+          "eta_16_50_84": [
+            2.5387388106864033,
+            5.248406841184736,
+            9.963036459969938
+          ],
+          "P_eta_below_1": 0.04705
+        },
+        "0.9": {
+          "Mdyn_2Mpc_1e14": 2.7144858013629007,
+          "ratio": 2.3208815447982336,
+          "eta": 3.641763089596467,
+          "eta_16_50_84": [
+            1.866178410326921,
+            4.082756632935831,
+            7.8818909642446915
+          ],
+          "P_eta_below_1": 0.07375
+        },
+        "0.8": {
+          "Mdyn_2Mpc_1e14": 3.435521092349922,
+          "ratio": 1.8337829489763817,
+          "eta": 2.6675658979527634,
+          "eta_16_50_84": [
+            1.2488714178275464,
+            3.004008537260023,
+            6.045182639723523
+          ],
+          "P_eta_below_1": 0.12455
+        },
+        "0.7": {
+          "Mdyn_2Mpc_1e14": 4.487211222661124,
+          "ratio": 1.4039900703100419,
+          "eta": 1.8079801406200837,
+          "eta_16_50_84": [
+            0.7330822796474534,
+            2.058638718064275,
+            4.40394850327653
+          ],
+          "P_eta_below_1": 0.2202
+        }
+      }
+    },
+    {
+      "name": "SL2SJ09413-1100",
+      "z": [
+        0.384
+      ],
+      "MWL_2Mpc_1e14": [
+        3.7,
+        3.4
+      ],
+      "by_sigma_bias": {
+        "1.0": {
+          "Mdyn_2Mpc_1e14": 1.7895954555980085,
+          "ratio": 2.0675063676687833,
+          "eta": 3.1350127353375665,
+          "eta_16_50_84": [
+            -0.6069450443276532,
+            3.8164468110602154,
+            21.235610772973224
+          ],
+          "P_eta_below_1": 0.2714
+        },
+        "0.9": {
+          "Mdyn_2Mpc_1e14": 2.2093771056765537,
+          "ratio": 1.6746801578117145,
+          "eta": 2.349360315623429,
+          "eta_16_50_84": [
+            -0.70811758183196,
+            2.951069769464196,
+            17.46684340719626
+          ],
+          "P_eta_below_1": 0.30675
+        },
+        "0.8": {
+          "Mdyn_2Mpc_1e14": 2.7962428993718884,
+          "ratio": 1.3232040753080214,
+          "eta": 1.6464081506160428,
+          "eta_16_50_84": [
+            -0.7250393192218735,
+            2.1692464059942225,
+            13.776310106931895
+          ],
+          "P_eta_below_1": 0.352
+        },
+        "0.7": {
+          "Mdyn_2Mpc_1e14": 3.6522356236694065,
+          "ratio": 1.0130781201577035,
+          "eta": 1.026156240315407,
+          "eta_16_50_84": [
+            -0.7981532033597919,
+            1.391261168652819,
+            9.627962551258356
+          ],
+          "P_eta_below_1": 0.4397
+        }
+      }
+    }
+  ],
+  "verdict": "Taken at face value all three groups point to eta above 1, at eta = 3.1 to 4.7, and SL2SJ08544-0121 excludes eta = 1 with P = 0.05. That direction matches the three under-bent SLACS lenses. But the source paper concludes group velocity dispersions are always underestimated, and a 30 percent underestimate brings every group inside eta = 1 at 68 percent (a 20 percent one leaves SL2SJ08544-0121 just outside). With three usable groups and weak-lensing errors of 40 to 90 percent, the data are suggestive of eta above 1 and cannot establish it.",
+  "aperture_note": "The isothermal aperture correction is not an arbitrary choice here: the law under test makes the far field isothermal, g proportional to 1/r, so the correction is the theory applied to itself.",
+  "code_sha256": "b4dda0853a769a4709bdaa790efe0e4d626baeff85b40842de5b820c500e5d72"
+}

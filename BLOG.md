@@ -3,7 +3,7 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 7).** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 8).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
@@ -97,7 +97,7 @@ can bend light more than it moves stars, without anyone adding mass by hand.
 | Lensing vs rotation on one object | **10× better** than ordinary matter | 0 |
 | ~~Cluster masses~~ | ~~Closed to within the scatter~~ — **retracted, see §3.3** | — |
 | Cluster dynamics | **Open** — the classic deficit, measured at 1.6–1.9× | — |
-| **Gravitational slip η ≠ 1** | **The novel claim** — measured on 6 lenses, lead from groups | 0 |
+| **Gravitational slip η ≠ 1** | **The novel claim** — 6 lenses and 11 clusters agree | 0 |
 
 One new constant, `a₀` — Milgrom's, attributed. One novel measured quantity, the
 slip `η`. No dark matter, no per-object parameters. The theory and its field
@@ -380,7 +380,7 @@ lensing tracks dynamics. We measure it is not 1:
 |---:|---|
 | 0.82 – 0.88 | three over-bent SLACS lenses |
 | 1.36 – 1.54 | three under-bent SLACS lenses |
-| ≈ 2 | galaxy groups, where lensing masses run ~50% above dynamical *(a lead, not yet a measurement)* |
+| 1.27 – 1.42 | eleven X-COP clusters, read from the published hydrostatic bias (§3.12) |
 
 **This is the claim that survives, and it is a good one.** It has no internal
 contradiction, costs no energy, is not a rediscovery, and predicts something standard
@@ -390,6 +390,44 @@ object.*
 It also survives GW170817. That event killed TeVeS and most relativistic MOND theories,
 but a class with gravitational waves on the light cone exists — which constrains the
 slip to live in the scalar sector, and tells us where to build.
+
+### 3.12 Two independent routes to the same slip
+
+*Scripts: `research_work/results/cluster-slip/` and `research_work/results/groups-slip/`.*
+
+**A correction first.** Revision 7 said galaxy groups show weak-lensing masses about
+50% above dynamical ones. The paper cited says no such thing — the only "50%" in it is
+the fraction of galaxies that live in groups. The figure came from a search-engine
+summary, not the source. It has been removed everywhere. The paper's real conclusion
+is that group velocity dispersions read *low*.
+
+**Clusters.** X-ray hydrostatic masses measure what matter feels; weak lensing
+measures what light feels. By the slip equation their ratio is
+`1 + f(η − 1)/2`, where f is the non-Newtonian share of the mass — which the measured
+gas fractions fix at 0.79–0.87. So the hydrostatic bias everyone already publishes is
+a slip reading:
+
+| Published bias | Implied η |
+|---:|---:|
+| 0.10 | 1.25 – 1.28 |
+| 0.125 | 1.33 – 1.36 |
+| 0.15 | 1.40 – 1.45 |
+
+**The X-COP bias implies η = 1.27–1.42. The under-bent strong lenses gave 1.36–1.54
+by a completely different route** — X-ray gas on megaparsec scales against stellar
+orbits on kiloparsec scales. They overlap.
+
+The field explains that bias with non-thermal pressure, and in one comparison the two
+readings are degenerate. They separate cleanly, though: pressure should concentrate the
+bias in disturbed, merging clusters; slip should track the non-Newtonian share and
+ignore dynamical state. **Splitting a lensing-and-X-ray sample into relaxed and
+disturbed halves at matched f is now the sharpest test in the programme**, and the
+catalogues are public.
+
+**Groups.** Three SL2S groups carry real weak-lensing masses. At face value all three
+point to η above 1 (3.1–4.7), and one excludes η = 1 at P = 0.05 — but a 30%
+dispersion underestimate, which the source paper says is present, erases all of it.
+Suggestive, not established.
 
 ---
 

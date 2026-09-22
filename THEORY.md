@@ -131,7 +131,8 @@ re-fitted by renaming it:
 | 1.00 | 1.000 | standard relativistic MOND, everywhere |
 | 0.82 – 0.88 | 0.91 – 0.94 | three over-bent SLACS lenses |
 | 1.36 – 1.54 | 1.18 – 1.27 | three under-bent SLACS lenses |
-| ≈ 2 | ≈ 1.5 | galaxy groups, if the extra term dominates *(lead, see below)* |
+| 1.27 – 1.42 | 1.13 – 1.21 | eleven X-COP clusters, read from the published hydrostatic bias *(T1.2 below)* |
+| 3.1 – 4.7 at face value | — | three SL2S groups, erased by a 30% dispersion bias *(T1.3 below)* |
 
 ### Attribution — stated exactly
 
@@ -149,43 +150,83 @@ re-fitted by renaming it:
    anisotropic stress in the scalar sector — a specific construction task, not a
    conceptual obstacle, but not done.
 2. **What sets η.** The SLACS values range 0.82–1.54 and correlate with redshift; the
-   group lead suggests ≈ 2. This is the "what sets τ" question in its correct form, and
-   it is now a question about a well-defined object rather than a borrowed one.
+   cluster reading gives 1.27–1.42. This is the "what sets τ" question in its correct
+   form, and it is now a question about a well-defined object rather than a borrowed one.
 3. **Cosmological slip constraints.** Combined CMB and lensing analyses bound slip on
    large scales. Our η lives in the galaxy-scale extra-gravity sector, a different
    regime, but the two must be checked for consistency.
 
 ---
 
-## T1.2 and T1.3 — data leads
+## T1.2 and T1.3 — results
 
-Neither can be downloaded from this environment, whose network access is limited to
-the project repository. What follows is the acquisition specification.
+### A correction first
 
-**T1.3 — groups.** The Strong Lensing Legacy Survey (SL2S) groups sit at 0.3 < z < 0.7
-with velocity dispersions of 300–800 km/s and masses of 10¹³–10¹⁴ M☉ — squarely
-between our galaxies and clusters. Several carry **both** weak-lensing and dynamical
-masses, and the published comparison finds weak-lensing masses **about 50% above**
-dynamical ones.
+An earlier revision of this document, the notebook and the published page said the
+SL2S group paper finds weak-lensing masses about 50% above dynamical ones. **It does
+not.** The only "50%" in that paper refers to the fraction of galaxies that live in
+groups. The figure came from a search-engine summary and was never in the source. The
+paper's own conclusion runs the other way: from simulations, it finds group velocity
+dispersions are *always underestimated*, so dynamical masses read low. The claim has
+been removed everywhere it appeared.
 
-That is a lensing-versus-dynamics split — exactly what slip produces. If the extra
-term dominates, (1+η)/2 = 1.5 gives **η ≈ 2**. **This is a lead, not a measurement:**
-group velocity dispersions from few members are notoriously biased, and 50% is well
-within what that systematic can do on its own. It earns a proper analysis, not a
-headline.
+### T1.3 — groups, from the published table
 
-*Acquire:* the SL2S group catalogue with member velocities and weak-lensing profiles
-(Munoz et al. 2013; Foëx et al. 2013). Public wide-field lensing — KiDS, CFHTLenS — for
-stacked group signals.
+*Script: `research_work/results/groups-slip/code/sl2s_slip.py`.* Munoz et al. 2013,
+Tables 2 and 3. Of seven groups, three carry a real weak-lensing mass; the rest have
+only an upper limit, sit in the galaxy-lensing regime, or fall at the field edge.
 
-**T1.2 — cluster lensing masses.** For the eleven X-COP clusters, published
-weak-lensing masses exist (the comparison behind the 10–15% hydrostatic bias). With
-T0.1's correction these no longer decide whether "τ = 2" holds — that is ruled out in
-the dynamical channel — but they now measure something better: **η at cluster scale**,
-from the ratio of lensing to hydrostatic mass in the same systems.
+Weak-lensing masses are projected within 2 Mpc; virial masses within 0.2–1.1 Mpc, so
+they cannot be ratioed directly. The law makes the far field isothermal, so the
+isothermal aperture correction is the theory applied to itself, not an extra choice.
 
-*Acquire:* X-COP weak-lensing masses (Eckert et al. 2022 and the lensing analysis it
-compares against).
+| Group | M_WL (10¹⁴ M☉) | η at face value | 68% range | η with 30% σ bias |
+|---|---:|---:|---:|---:|
+| SL2SJ02140-0535 | 5.5 ± 3.7 | 4.68 | 0.9 – 14.8 | 1.78 |
+| SL2SJ08544-0121 | 6.3 ± 2.5 | 4.73 | 2.5 – 10.0 | 1.81 |
+| SL2SJ09413-1100 | 3.7 ± 3.4 | 3.14 | −0.6 – 21.2 | 1.03 |
+
+At face value all three point to η above 1, and SL2SJ08544-0121 excludes η = 1 with
+P = 0.05 — the same direction as the under-bent lenses. But a 30% dispersion
+underestimate, which the source paper says is present, brings every group inside η = 1
+at 68%. **Suggestive of η > 1; cannot establish it.** A real group test needs stacked
+weak lensing around a large, well-sampled group catalogue.
+
+### T1.2 — clusters: the hydrostatic bias is already a slip measurement
+
+*Script: `research_work/results/cluster-slip/code/cluster_slip.py`.*
+
+Hydrostatic masses measure Φ; weak lensing measures (Φ + Ψ)/2. From equation (3),
+
+```
+M_WL / M_HSE  =  1 + f (η − 1) / 2,        f = 1 − M_baryon / M_HSE
+```
+
+and for X-COP the measured gas fractions fix f at 0.79–0.87. So every published
+X-ray-versus-lensing comparison already contains a slip reading:
+
+| Published bias b | M_WL / M_HSE | Implied η |
+|---:|---:|---:|
+| 0.07 | 1.075 | 1.17 – 1.19 |
+| 0.10 | 1.111 | 1.25 – 1.28 |
+| 0.125 | 1.143 | 1.33 – 1.36 |
+| 0.15 | 1.176 | 1.40 – 1.45 |
+
+**The published X-COP bias implies η = 1.27–1.42. The three under-bent SLACS lenses,
+measured by a completely different route, gave 1.36–1.54.** One is X-ray gas and weak
+lensing on megaparsec scales; the other is stellar kinematics and strong lensing on
+kiloparsec scales. They overlap.
+
+What is *not* claimed: that the bias *is* slip. The field attributes it to non-thermal
+pressure, with good simulation support, and the two readings are degenerate in a
+single comparison.
+
+**The test that separates them.** Non-thermal pressure predicts the bias grows with
+dynamical disturbance — merging, unrelaxed clusters read lower. Slip predicts it tracks
+f and ignores dynamical state. Split a lensing-and-X-ray sample into relaxed and
+disturbed halves at matched f: same bias in both means slip; bias concentrated in the
+disturbed half means pressure. This is cheap, uses public catalogues, and is now the
+sharpest observational test in the programme.
 
 ---
 
@@ -197,8 +238,8 @@ Smaller than the notebook suggested, and on firmer ground.
   own pipeline as a check.
 * **The novel claim:** the gravitational slip of the extra gravity is **not 1**.
   Measured on six individual lens galaxies with every universal constant frozen
-  (η = 0.82–1.54, correlated with redshift), with an independent lead from groups
-  (η ≈ 2).
+  (η = 0.82–1.54, correlated with redshift), and read independently from the published
+  cluster hydrostatic bias (η = 1.27–1.42), which overlaps the under-bent lenses.
 * **Clusters:** the classic dynamical deficit, measured at 1.6–1.9×, **not solved**,
   and reported as such.
 

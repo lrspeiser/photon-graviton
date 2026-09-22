@@ -12,8 +12,8 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 | **T0.1** Resolve the contradiction | **Done** | Branch (a) fails on energy by 1.5 × 10⁴; the field's own energy is 1.7 × 10⁻⁴ of what it would need. Branch (b), a modified propagator, survives. τ splits into two objects: in lensing it is the **gravitational slip η** (legitimate, no energy cost); in cluster dynamics it has **no mechanism**. The cluster "closed within scatter" claim is **retracted**. |
 | **T2.2** GW170817 | **Done** | Survives, with a construction constraint: the modification and the slip must live in the scalar sector. TeVeS-type completions are excluded; a surviving class exists. |
 | **T0.2** Field equations | **Done (non-relativistic)** | Three equations. The dynamics equation reproduces the fitted law to 4.4 × 10⁻¹⁶ and is Milgrom's QUMOND, attributed. The slip equation is ours; JR-10's γ_χ is identically η. Relativistic completion with η ≠ 1 is open. |
-| **T1.2** Cluster lensing masses | **Specified, not acquired** | Network access here is repository-only. Now measures η at cluster scale rather than deciding τ. |
-| **T1.3** Groups | **Specified, not acquired** | SL2S groups carry both weak-lensing and dynamical masses; published lensing masses run ~50% above dynamical — consistent with η ≈ 2, but biased dispersions could do it alone. A lead. |
+| **T1.2** Cluster lensing masses | **Done, via the published bias** | The X-COP hydrostatic bias implies η = 1.27–1.42, overlapping the under-bent SLACS lenses (1.36–1.54). Degenerate with non-thermal pressure in one comparison; a relaxed-versus-disturbed split at matched f separates them. |
+| **T1.3** Groups | **Done, inconclusive** | Three SL2S groups with real weak-lensing masses point to η > 1 at face value, but a 30% dispersion bias the source paper itself reports erases it. **Correction:** an earlier "lensing masses ~50% above dynamical" attribution was not in the paper. |
 
 Full working in [THEORY.md](THEORY.md).
 
