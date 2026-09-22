@@ -1,0 +1,261 @@
+{
+  "experiment": "JR-13",
+  "law": "g = tau * [ g_N/2 + sqrt(g_N^2/4 + g_N a0) ]",
+  "why_no_energy_problem": "R10 fitted p = 0.5262. A force A/r with A proportional to sqrt(M_b) is the baryons own field with a longer range, not a reservoir. No companion matter exists, so none has to be paid for. The 15 to 21 M_star figure came from applying M = r^2 g/G to a non-inverse-square force.",
+  "tau_endpoints": {
+    "standing, dust-like": 1.0,
+    "free-streaming radial flux": 2.0,
+    "note": "Both exact in linearised GR: tau = 1 + w_r + 2 w_t."
+  },
+  "constants": {
+    "a0_kms2_per_kpc": 9079.292169275994,
+    "a0_SI": 2.942398202500404e-10,
+    "F0_Lsun_per_kpc2": 279813.01947056287,
+    "crossover_sharpness": 20.99965679603053,
+    "n_free_numbers": 3,
+    "n_systems": 17
+  },
+  "rows": [
+    {
+      "name": "J0037-0942",
+      "kind": "galaxy",
+      "r_kpc": 5.321544736254101,
+      "Mb_Msun": 180311047750.86435,
+      "gN_over_a0": 0.8027105562466693,
+      "flux_Lsun_kpc2": 168894607.41407084,
+      "tau": 2.0,
+      "g_observed": 30979.465915911627,
+      "g_predicted": 25114.89677454882,
+      "ratio": 1.2335095857254688
+    },
+    {
+      "name": "J1112+0826",
+      "kind": "galaxy",
+      "r_kpc": 7.005386075451842,
+      "Mb_Msun": 175703345553.5942,
+      "gN_over_a0": 0.6647836850801082,
+      "flux_Lsun_kpc2": 94969633.63568442,
+      "tau": 2.0,
+      "g_observed": 22992.93231865108,
+      "g_predicted": 22024.272727251846,
+      "ratio": 1.04398145643196
+    },
+    {
+      "name": "J1204+0358",
+      "kind": "galaxy",
+      "r_kpc": 3.8837746462397225,
+      "Mb_Msun": 95742028867.62953,
+      "gN_over_a0": 1.0975314359097499,
+      "flux_Lsun_kpc2": 168369515.8452869,
+      "tau": 2.0,
+      "g_observed": 31561.66267463939,
+      "g_predicted": 31440.167558062894,
+      "ratio": 1.0038643278968575
+    },
+    {
+      "name": "J1402+6321",
+      "kind": "galaxy",
+      "r_kpc": 4.894882436596822,
+      "Mb_Msun": 211154322007.48193,
+      "gN_over_a0": 1.0155653364452197,
+      "flux_Lsun_kpc2": 233767603.89186117,
+      "tau": 2.0,
+      "g_observed": 36329.409241327536,
+      "g_predicted": 29711.742700177554,
+      "ratio": 1.222728993311807
+    },
+    {
+      "name": "J1621+3931",
+      "kind": "galaxy",
+      "r_kpc": 5.50420288232564,
+      "Mb_Msun": 165437371929.8958,
+      "gN_over_a0": 0.7085788103672076,
+      "flux_Lsun_kpc2": 144848378.16822398,
+      "tau": 2.0,
+      "g_observed": 28148.992376058966,
+      "g_predicted": 23017.4591551485,
+      "ratio": 1.2229409070011386
+    },
+    {
+      "name": "J1630+4520",
+      "kind": "galaxy",
+      "r_kpc": 7.678398309663199,
+      "Mb_Msun": 238896897323.0278,
+      "gN_over_a0": 0.7334260766345082,
+      "flux_Lsun_kpc2": 107482588.422436,
+      "tau": 2.0,
+      "g_observed": 24779.23805007863,
+      "g_predicted": 23575.779894873103,
+      "ratio": 1.051046377280916
+    },
+    {
+      "name": "A85",
+      "kind": "cluster",
+      "r_kpc": 1235.0,
+      "Mb_Msun": 96049999999999.98,
+      "gN_over_a0": 0.02983132550886703,
+      "flux_Lsun_kpc2": 196523.01102443,
+      "tau": 1.0005987532390384,
+      "g_observed": 1593.2195299516454,
+      "g_predicted": 1710.4362234420214,
+      "ratio": 0.931469708204324
+    },
+    {
+      "name": "A644",
+      "kind": "cluster",
+      "r_kpc": 1230.0,
+      "Mb_Msun": 86032000000000.0,
+      "gN_over_a0": 0.02693759959752607,
+      "flux_Lsun_kpc2": 198474.66849541228,
+      "tau": 1.0007367355510985,
+      "g_observed": 1609.0416913480963,
+      "g_predicted": 1618.643012550868,
+      "ratio": 0.994068289840117
+    },
+    {
+      "name": "A1644",
+      "kind": "cluster",
+      "r_kpc": 1054.0,
+      "Mb_Msun": 51504000000000.0,
+      "gN_over_a0": 0.02196184563089652,
+      "flux_Lsun_kpc2": 166186.9430151322,
+      "tau": 1.0000177165260216,
+      "g_observed": 1347.2838720232903,
+      "g_predicted": 1448.9217373169906,
+      "ratio": 0.9298527569322647
+    },
+    {
+      "name": "A1795",
+      "kind": "cluster",
+      "r_kpc": 1153.0,
+      "Mb_Msun": 73617000000000.0,
+      "gN_over_a0": 0.02623183051881036,
+      "flux_Lsun_kpc2": 184765.6581522254,
+      "tau": 1.0001639874751274,
+      "g_observed": 1497.9022227371695,
+      "g_predicted": 1594.662834035343,
+      "ratio": 0.9393222133024084
+    },
+    {
+      "name": "A2142",
+      "kind": "cluster",
+      "r_kpc": 1424.0,
+      "Mb_Msun": 159309999999999.97,
+      "gN_over_a0": 0.03721621105935984,
+      "flux_Lsun_kpc2": 234154.19005394136,
+      "tau": 1.0231821894386453,
+      "g_observed": 1898.2969305694862,
+      "g_predicted": 1973.319104689263,
+      "ratio": 0.9619817322289643
+    },
+    {
+      "name": "A2255",
+      "kind": "cluster",
+      "r_kpc": 1196.0,
+      "Mb_Msun": 90998000000000.0,
+      "gN_over_a0": 0.030135512726551995,
+      "flux_Lsun_kpc2": 195084.2740068552,
+      "tau": 1.0005131827517042,
+      "g_observed": 1581.5556341924892,
+      "g_predicted": 1719.7399593276807,
+      "ratio": 0.9196481279709209
+    },
+    {
+      "name": "A2319",
+      "kind": "cluster",
+      "r_kpc": 1346.0,
+      "Mb_Msun": 152779000000000.0,
+      "gN_over_a0": 0.03994685933393916,
+      "flux_Lsun_kpc2": 214055.37328546616,
+      "tau": 1.00359169793293,
+      "g_observed": 1735.3550580756148,
+      "g_predicted": 2012.236612539453,
+      "ratio": 0.8624010950111815
+    },
+    {
+      "name": "A3158",
+      "kind": "cluster",
+      "r_kpc": 1123.0,
+      "Mb_Msun": 70289999999999.99,
+      "gN_over_a0": 0.026402383062296086,
+      "flux_Lsun_kpc2": 179204.5216551926,
+      "tau": 1.000086323865734,
+      "g_observed": 1452.8178775013937,
+      "g_predicted": 1600.133383808108,
+      "ratio": 0.9079354835056797
+    },
+    {
+      "name": "A3266",
+      "kind": "cluster",
+      "r_kpc": 1430.0,
+      "Mb_Msun": 133760000000000.02,
+      "gN_over_a0": 0.030985840581563624,
+      "flux_Lsun_kpc2": 228301.87282323168,
+      "tau": 1.0137558504014095,
+      "g_observed": 1850.851972043585,
+      "g_predicted": 1769.0569420285433,
+      "ratio": 1.0462365162317777
+    },
+    {
+      "name": "RXC1825",
+      "kind": "cluster",
+      "r_kpc": 1105.0,
+      "Mb_Msun": 62424000000000.0,
+      "gN_over_a0": 0.0242178806650642,
+      "flux_Lsun_kpc2": 177269.68948627397,
+      "tau": 1.0000687283742071,
+      "g_observed": 1437.1321194691363,
+      "g_predicted": 1527.2444656285206,
+      "ratio": 0.9409967767522408
+    },
+    {
+      "name": "ZW1215",
+      "kind": "cluster",
+      "r_kpc": 1358.0,
+      "Mb_Msun": 96516000000000.0,
+      "gN_over_a0": 0.024791846361127304,
+      "flux_Lsun_kpc2": 220357.63704383452,
+      "tau": 1.006586122265492,
+      "g_observed": 1786.4477502260052,
+      "g_predicted": 1556.7286037239853,
+      "ratio": 1.147565314822692
+    }
+  ],
+  "scatter": {
+    "all": 0.11300973978627045,
+    "galaxies": 0.09547189376938724,
+    "clusters": 0.07727435573763101,
+    "mean_ratio_galaxies": 1.129678607941358,
+    "mean_ratio_clusters": 0.9619525468002338
+  },
+  "tau_reached": {
+    "galaxies": [
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "clusters": [
+      1.0005987532390384,
+      1.0007367355510985,
+      1.0000177165260216,
+      1.0001639874751274,
+      1.0231821894386453,
+      1.0005131827517042,
+      1.00359169793293,
+      1.000086323865734,
+      1.0137558504014095,
+      1.0000687283742071,
+      1.006586122265492
+    ]
+  },
+  "limitations": [
+    "Seventeen systems and three numbers. The crossover sharpness is set by the gap between the two classes, not resolved within either.",
+    "Cluster g_obs comes from X-ray hydrostatic masses, which carry their own known bias of order ten to twenty percent.",
+    "Galaxy g_obs is R10 evaluated at the Einstein radius, so it inherits R10 rather than being an independent measurement.",
+    "The flux density uses a declared mass-to-light ratio of three and the stellar mass only; a full radiative-transfer calculation is not done here."
+  ],
+  "code_sha256": "4e5b4be64538eb1d5665d2d51daec4595436ebf7a9b8b554f105445212f1ddd6"
+}
