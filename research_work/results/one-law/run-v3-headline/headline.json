@@ -1,0 +1,40 @@
+{
+  "experiment": "JR-13c",
+  "scope": "One constant against raw SPARC rotation measurements. No companion model, no R10, no fitted per-galaxy parameter appears in the inputs.",
+  "law": "g = g_N/2 + sqrt(g_N^2/4 + g_N a0)",
+  "a0": {
+    "kms2_per_kpc": 3612.060136563683,
+    "SI": 1.170588968280317e-10,
+    "n_free_parameters": 1
+  },
+  "sparc": {
+    "n_galaxies": 149,
+    "n_points": 3150,
+    "mean_v_RMSE_kms": 16.245897988950468,
+    "median_v_RMSE_kms": 11.717149026375886,
+    "within_20pct": 94,
+    "within_10pct": 37,
+    "raw_chi2": 162628.09130994382
+  },
+  "r10_comparison": {
+    "n_fitted_parameters": 20,
+    "mean_validation_RMSE_kms": 17.684,
+    "within_20pct_of_31_comparison": 22,
+    "raw_chi2": 211200.744,
+    "note": "R10 numbers are the published JR-1 values."
+  },
+  "cluster_gap": {
+    "galaxy_mean_factor": 0.8821480342246211,
+    "cluster_mean_factor": 1.4586303674669914,
+    "cluster_over_galaxy": 1.6534984048896955,
+    "free_streaming_tau": 2.0,
+    "implied_hydrostatic_bias": 0.17325079755515227,
+    "prediction": "If the gap is exactly the free-streaming factor tau = 2, then X-ray hydrostatic masses in these clusters must be low by b = 0.173. Published values run b = 0.1 to 0.3, so this is a falsifiable number, testable against cluster weak lensing."
+  },
+  "limitations": [
+    "The flux-driven tau crossover tested in JR-13 does not survive raw data: on SPARC it improves the fit by 0.4 percent, which is nothing. JR-13 read 11.3 percent because its galaxy points came from R10 rather than from measurements.",
+    "No quality cuts are applied to SPARC; inclination and flag cuts would lower the scatter but were not used so the comparison to R10 stays like for like.",
+    "The cluster gap uses X-ray hydrostatic masses and a declared 2 percent stellar fraction."
+  ],
+  "code_sha256": "20772a63f3e29a1e9c2dde6fff7c788de4acfcbf0b6359a7009625991f427b09"
+}
