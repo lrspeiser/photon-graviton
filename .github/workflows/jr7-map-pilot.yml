@@ -1,0 +1,85 @@
+name: JR-7 measured map pilot
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/jr7-map-pilot.yml'
+permissions:
+  contents: read
+jobs:
+  map-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install numpy==2.3.5 astropy==7.1.1
+      - name: Download three documented public examples and measure projected features
+        shell: python
+        run: |
+          from pathlib import Path
+          import urllib.request, json, hashlib, re, traceback
+          import numpy as np
+          from astropy.io import fits
+          out=Path('/tmp/jr7-maps');out.mkdir()
+          # These exact IDs/paths are examples in the SDSS DR17 data-access page.
+          # They are not selected for agreement with our gravitational residuals,
+          # not a counterrotator sample, and not matched to the 149 SPARC objects.
+          objects=['7443-12703','8082-12704','8081-1901']
+          base='https://data.sdss.org/sas/dr17/manga/spectro/analysis/v3_1_1/3.1.0/HYB10-MILESHC-MASTARHC2'
+          results=[]
+          def plane_fit(v,ivar,mask,x,y):
+              good=mask & np.isfinite(v) & np.isfinite(ivar) & (ivar>0)
+              if good.sum()<20:raise ValueError('Fewer than 20 valid map pixels')
+              A=np.column_stack([np.ones(good.sum()),x[good],y[good]])
+              w=np.sqrt(ivar[good]);coef=np.linalg.lstsq(A*w[:,None],v[good]*w,rcond=None)[0]
+              residual=v[good]-A@coef
+              return coef,dict(pixels=int(good.sum()),velocity_plane_coefficients=coef.tolist(),unweighted_residual_RMS_kms=float(np.sqrt(np.mean(residual**2))))
+          for obj in objects:
+              plate,ifu=obj.split('-');name=f'manga-{obj}-MAPS-HYB10-MILESHC-MASTARHC2.fits.gz'
+              url=f'{base}/{plate}/{ifu}/{name}';path=out/name
+              try:
+                  with urllib.request.urlopen(url,timeout=90) as r:path.write_bytes(r.read())
+                  with fits.open(path) as h:
+                      hdus=[v.name for v in h]
+                      lines={str(v):int(k[1:])-1 for k,v in h['EMLINE_GFLUX'].header.items() if re.fullmatch(r'C\d+',k)}
+                      candidates=[(key,val) for key,val in lines.items() if key.lower().startswith('ha-')]
+                      if len(candidates)!=1:raise ValueError('Ambiguous Halpha channel: '+str(lines))
+                      label,ch=candidates[0]
+                      flux=np.asarray(h['EMLINE_GFLUX'].data[ch],float);fi=np.asarray(h['EMLINE_GFLUX_IVAR'].data[ch],float)
+                      gasv=np.asarray(h['EMLINE_GVEL'].data[ch],float);gasi=np.asarray(h['EMLINE_GVEL_IVAR'].data[ch],float)
+                      starv=np.asarray(h['STELLAR_VEL'].data,float);stari=np.asarray(h['STELLAR_VEL_IVAR'].data,float)
+                      light=np.asarray(h['SPX_MFLUX'].data,float)
+                      y,x=np.indices(starv.shape,dtype=float);x-=(x.shape[1]-1)/2;y-=(y.shape[0]-1)/2
+                      sm=(h['STELLAR_VEL_MASK'].data==0)
+                      gm=(h['EMLINE_GVEL_MASK'].data[ch]==0)&(h['EMLINE_GFLUX_MASK'].data[ch]==0)&(flux>0)&(fi>0)&(flux*np.sqrt(np.maximum(fi,0))>=5)
+                      # Joint mask prevents different sky coverage from defining
+                      # different axes. Pixels may share bins: no independent-pixel
+                      # uncertainty or physical 3D inclination is inferred.
+                      common=sm&gm&np.isfinite(light)&(light>0)&np.isfinite(starv)&np.isfinite(gasv)&(stari>0)&(gasi>0)
+                      sc,sd=plane_fit(starv,stari,common,x,y);gc,gd=plane_fit(gasv,gasi,common,x,y)
+                      denom=np.linalg.norm(sc[1:])*np.linalg.norm(gc[1:])
+                      if denom<=0:raise ValueError('Unresolved velocity gradient')
+                      mis=np.degrees(np.arccos(np.clip(np.dot(sc[1:],gc[1:])/denom,-1,1)))
+                      mask=common;L=light[mask];F=flux[mask]
+                      overlap=float(np.mean(L*F)/(np.mean(L)*np.mean(F))-1)
+                      corr=float(np.corrcoef(L,F)[0,1])
+                      result=dict(id=obj,url=url,sha256=hashlib.sha256(path.read_bytes()).hexdigest(),bytes=path.stat().st_size,shape=list(starv.shape),Halpha_channel=label,
+                          valid_common_pixels=int(mask.sum()),projected_velocity_gradient_misalignment_deg=float(mis),star_gradient=sd,ionized_gas_gradient=gd,
+                          projected_continuum_Halpha_fractional_covariance=overlap,projected_continuum_Halpha_Pearson=corr,
+                          status='measured projected map features; not a gravity fit',available_hdus=hdus,
+                          caveats=['Halpha emissivity is not total gas mass density','Continuum map is not bolometric source power','Plane-fit angle is not a full kinematic PA analysis or a 3D spin angle','Masks, beam, inclination and bin covariance matter','No companion coefficient is fitted from these three examples'])
+                      np.savez_compressed(out/(obj+'-maps.npz'),light=light,Halpha=flux,star_velocity=starv,gas_velocity=gasv,common_mask=mask,star_ivar=stari,gas_ivar=gasi)
+              except Exception as e:
+                  result=dict(id=obj,url=url,status='unavailable_or_quality_failure',error=repr(e));traceback.print_exc()
+              results.append(result);print(json.dumps(result),flush=True)
+          summary=dict(experiment='JR-7 map-ingestion pilot',selection='three examples in official SDSS DR17 data-access documentation; not a representative sample',objects=results)
+          (out/'results.json').write_text(json.dumps(summary,indent=2,allow_nan=False)+'\n')
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: jr7-measured-map-pilot-${{ github.sha }}
+          path: /tmp/jr7-maps
+          if-no-files-found: error
