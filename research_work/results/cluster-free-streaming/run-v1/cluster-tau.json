@@ -1,0 +1,223 @@
+{
+  "experiment": "JR-11",
+  "scope": "Transfer test of the Tolman stress factor from galaxies to the eleven X-COP clusters. Uses the archived galaxy-calibrated acceleration transfer and the archived X-ray hydrostatic table; no new fit to cluster data beyond the two comparison models below.",
+  "why_the_ratio_is_tau": "Rotation curves are a dynamical measurement, so a galaxy-calibrated amplitude already contains tau_galaxy. Transferring it predicts cluster dynamical mass short by tau_cluster/tau_galaxy.",
+  "exact_states": {
+    "static dust": 1.0,
+    "free-streaming radial flux": 2.0
+  },
+  "observed": {
+    "n_clusters": 11,
+    "median": 1.8993256490238428,
+    "mean": 1.9617033463439093,
+    "standard_deviation": 0.19619870990638041,
+    "standard_error_of_mean": 0.059156136828295354,
+    "minimum": 1.7037851648882762,
+    "maximum": 2.4163569307735537,
+    "distance_of_mean_from_two_in_standard_errors": 0.6473825998348962,
+    "quoted_M500_fractional_errors": [
+      0.03185840707964602,
+      0.08480565371024734,
+      0.0574712643678161,
+      0.030237580993520523,
+      0.029050279329608943,
+      0.06463878326996199,
+      0.03830369357045144,
+      0.04225352112676056,
+      0.06477272727272726,
+      0.031862745098039214,
+      0.06788511749347259
+    ]
+  },
+  "tests": [
+    {
+      "model": "static dust, tau = 1 (what the transfer assumed)",
+      "tau": 1.0,
+      "n_parameters": 0,
+      "fractional_scatter": 0.9797284376874815
+    },
+    {
+      "model": "free-streaming radial flux, tau = 2 (nothing fitted)",
+      "tau": 2.0,
+      "n_parameters": 0,
+      "fractional_scatter": 0.0954739741051646
+    },
+    {
+      "model": "best fitted constant",
+      "tau": 1.9617033463439093,
+      "n_parameters": 1,
+      "fractional_scatter": 0.09536005038816255
+    },
+    {
+      "model": "crossover tau(R) = 1 + 1/(1+(R0/R)^m)",
+      "n_parameters": 2,
+      "R0_kpc": 904.2392315481744,
+      "m": 10.154673061988108,
+      "fractional_scatter": 0.08824892557992023
+    }
+  ],
+  "per_cluster": [
+    {
+      "name": "A85",
+      "required_over_predicted": 1.8786598692683538,
+      "M500_1e14": 5.65,
+      "R500_kpc": 1235.0,
+      "fgas500": 0.15,
+      "residual_vs_tau2": -0.06067006536582309,
+      "tau_from_crossover": 1.9595166720580597
+    },
+    {
+      "name": "A644",
+      "required_over_predicted": 2.032126947015618,
+      "M500_1e14": 5.66,
+      "R500_kpc": 1230.0,
+      "fgas500": 0.132,
+      "residual_vs_tau2": 0.0160634735078089,
+      "tau_from_crossover": 1.9578858155118763
+    },
+    {
+      "name": "A1644",
+      "required_over_predicted": 1.87889231132761,
+      "M500_1e14": 3.48,
+      "R500_kpc": 1054.0,
+      "fgas500": 0.128,
+      "residual_vs_tau2": -0.06055384433619504,
+      "tau_from_crossover": 1.8258134285236003
+    },
+    {
+      "name": "A1795",
+      "required_over_predicted": 1.8993256490238428,
+      "M500_1e14": 4.63,
+      "R500_kpc": 1153.0,
+      "fgas500": 0.139,
+      "residual_vs_tau2": -0.05033717548807859,
+      "tau_from_crossover": 1.921858867245135
+    },
+    {
+      "name": "A2142",
+      "required_over_predicted": 2.0012751284126056,
+      "M500_1e14": 8.95,
+      "R500_kpc": 1424.0,
+      "fgas500": 0.158,
+      "residual_vs_tau2": 0.0006375642063027875,
+      "tau_from_crossover": 1.9901613865173342
+    },
+    {
+      "name": "A2255",
+      "required_over_predicted": 1.8494679877937075,
+      "M500_1e14": 5.26,
+      "R500_kpc": 1196.0,
+      "fgas500": 0.153,
+      "residual_vs_tau2": -0.07526600610314627,
+      "tau_from_crossover": 1.9447834548766698
+    },
+    {
+      "name": "A2319",
+      "required_over_predicted": 1.7037851648882762,
+      "M500_1e14": 7.31,
+      "R500_kpc": 1346.0,
+      "fgas500": 0.189,
+      "residual_vs_tau2": -0.14810741755586188,
+      "tau_from_crossover": 1.9826985857761399
+    },
+    {
+      "name": "A3158",
+      "required_over_predicted": 1.8235430425330361,
+      "M500_1e14": 4.26,
+      "R500_kpc": 1123.0,
+      "fgas500": 0.145,
+      "residual_vs_tau2": -0.08822847873348194,
+      "tau_from_crossover": 1.9002640723808197
+    },
+    {
+      "name": "A3266",
+      "required_over_predicted": 2.190966307659657,
+      "M500_1e14": 8.8,
+      "R500_kpc": 1430.0,
+      "fgas500": 0.132,
+      "residual_vs_tau2": 0.09548315382982842,
+      "tau_from_crossover": 1.9905687423211336
+    },
+    {
+      "name": "RXC1825",
+      "required_over_predicted": 1.904337471086743,
+      "M500_1e14": 4.08,
+      "R500_kpc": 1105.0,
+      "fgas500": 0.133,
+      "residual_vs_tau2": -0.04783126445662855,
+      "tau_from_crossover": 1.8845334544509091
+    },
+    {
+      "name": "ZW1215",
+      "required_over_predicted": 2.4163569307735537,
+      "M500_1e14": 7.66,
+      "R500_kpc": 1358.0,
+      "fgas500": 0.106,
+      "residual_vs_tau2": 0.20817846538677687,
+      "tau_from_crossover": 1.9841661553920042
+    }
+  ],
+  "residual_structure": {
+    "M500": {
+      "rank": 0.45454545454545453,
+      "pearson": 0.5074918746719647
+    },
+    "R500_kpc": {
+      "rank": 0.4272727272727273,
+      "pearson": 0.49286560389272593
+    },
+    "fgas500": {
+      "rank": -0.6727272727272727,
+      "pearson": -0.757188197855259
+    }
+  },
+  "crossover_extrapolation": [
+    {
+      "R_kpc": 10.0,
+      "tau": 1.0
+    },
+    {
+      "R_kpc": 30.0,
+      "tau": 1.0000000000000009
+    },
+    {
+      "R_kpc": 100.0,
+      "tau": 1.0000000001946503
+    },
+    {
+      "R_kpc": 300.0,
+      "tau": 1.000013622590696
+    },
+    {
+      "R_kpc": 600.0,
+      "tau": 1.0152909594725341
+    },
+    {
+      "R_kpc": 900.0,
+      "tau": 1.4880725565532051
+    },
+    {
+      "R_kpc": 1200.0,
+      "tau": 1.9465257813142087
+    },
+    {
+      "R_kpc": 2000.0,
+      "tau": 1.9996844462006034
+    },
+    {
+      "R_kpc": 5000.0,
+      "tau": 1.9999999712750172
+    }
+  ],
+  "limitations": [
+    "Eleven clusters spanning only R500 = 1054 to 1430 kpc cannot constrain the sharpness m of the crossover; only that galaxies sit at tau = 1 and these clusters near tau = 2.",
+    "X-ray hydrostatic masses carry their own known bias of order ten to twenty percent, which is the same size as the residual scatter here.",
+    "tau = 2 is a claim that the companion is a free-streaming radial null flux in clusters. That is a physical statement needing its own independent check; this test only shows the number it implies is the number the data wants.",
+    "No cluster weak-lensing measurement is used here. The shortfall tested is in hydrostatic dynamical mass."
+  ],
+  "code_sha256": "2ef91b752020f6bcfbbe03370fce6cd80c982b7c2f508e8eb537540fc486148a",
+  "inputs": {
+    "companion_wave_test/cluster_comparison.csv": "591de64b099dd9a82b7eff7e2e6d690449a18094b9f0918a1a3ef80b943aec64",
+    "companion_deposition_fit/cluster_predictions.csv": "2587afa1b9ed5ba3585cdc0e743c9d8c856296cb62161c57263a95a806ed4bcc"
+  }
+}
