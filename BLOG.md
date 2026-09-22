@@ -3,7 +3,7 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 3).** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 4).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
@@ -101,9 +101,10 @@ any kind enters the inputs.*
 That is the single most important result on this page. The elaborate "companion
 envelope" we had been fitting was doing *worse* than a single number.
 
-It also lands within a whisker of the acceleration scale other people have found
-independently from the same kind of data — which is either a good sign or a warning
-that we have rediscovered something. We treat it as both. (See §6.)
+It also lands within a few percent of the acceleration scale Milgrom introduced in
+1983. **This half of the result is a rediscovery, not an invention, and §6 says so
+plainly.** Getting there independently from our own fitted exponent is a check that
+the pipeline is sound; it is not a new result.
 
 ### 3.2 The energy problem, and why it was never real
 
@@ -245,6 +246,70 @@ It also sharpens what to do next. Galaxies do not span whatever variable drives 
 no amount of galaxy data will find it. **Groups are the only systems in between, and
 they are now the single most decisive measurement available to this programme.**
 
+### 3.8 The cluster gap is real — it is not a baryon-counting mistake
+
+*Script: the baryon-budget scan in `research_work/results/one-law/code/`.*
+
+Before attributing the cluster gap to new physics, the cheap explanation has to be
+eliminated: maybe we are simply not counting all the cluster's ordinary matter. X-ray
+gas fractions inside R500 run 0.106–0.189, and clusters are known to be baryon-poor
+there, with the gas fraction rising outward.
+
+| Gas multiplier | Implied baryon fraction | Cluster offset | vs spirals (0.900) |
+|---:|---:|---:|---:|
+| 1.0 (X-ray value) | 0.159 | 1.421 | 1.58× |
+| 1.4 | 0.215 | 1.198 | 1.33× |
+| 1.8 | 0.270 | 1.049 | 1.17× |
+| 2.0 | 0.298 | 0.991 | 1.10× |
+
+**Closing the gap entirely would need 2.39× the measured X-ray gas**, implying a
+baryon fraction of 0.352 — **2.24× the universal value**. That mass does not exist.
+And giving clusters exactly the universal baryon fraction barely moves the number at
+all (1.421 → 1.431).
+
+**The gap is real and it needs gravity to explain it.** That is the strongest thing
+we can say for τ: the ordinary way out has been checked and closed.
+
+### 3.9 Four candidate variables for τ, all ruled out — and that is progress
+
+We now know quite precisely what does *not* set the stress state.
+
+| Candidate | Verdict |
+|---|---|
+| Local starlight flux | Ruled out (§3.5) — 0.4% improvement on raw data |
+| Galaxy mass, size, luminosity, gas fraction, bulge fraction | Ruled out (§3.7) — best of thirteen is rank +0.32 |
+| **Surface density** `Σ/Σ_M` | **Ruled out here** |
+| **Pressure vs rotation support** | **Blocked, not ruled out** |
+
+The surface-density idea was attractive because it costs nothing — the theory already
+owns a critical column density, `Σ_M = a₀/2πG = 134 M☉/pc²`, built from constants
+already in the law. Dense systems would trap the gravitational stream (τ=1), diffuse
+ones would let it free-stream (τ=2).
+
+It fails cleanly. **SPARC galaxies at cluster-like surface density (Σ/Σ_M ≈ 0.05–0.3)
+show offset 0.84, while clusters at the same Σ show 1.42.** Rank correlation across
+all 160 systems: −0.009. Surface density carries no information at all.
+
+The support-mode idea — spirals rotate, clusters are pressure-supported — should have
+been settled by the six SLACS ellipticals, which are pressure-supported at galaxy
+scale and density. It could not be:
+
+| Stellar-mass convention | Elliptical offset |
+|---|---:|
+| This project's rescaled masses | **2.75** |
+| Published Chabrier masses, unchanged | **1.15** |
+
+**The answer moves by a factor of 2.4 purely by choosing a convention**, which swamps
+the 0.9-versus-1.4 signal we are chasing. This is recorded as a blocked test, and it
+flags a systematic worth taking seriously: the project's stellar-mass rescaling is
+doing large work throughout, and pinning those masses independently would sharpen
+more than this one question.
+
+**What survives: scale.** Nothing local — not density, not brightness, not mass, not
+support — distinguishes the two regimes. Only the sheer size of the system does. That
+is a strong hint, because a scale-dependent trapping length is exactly what a stream
+that is produced and re-absorbed should have.
+
 ---
 
 ## 4. Why this beats the alternatives
@@ -283,23 +348,54 @@ local: local acceleration, local stress state.
 
 ---
 
-## 6. Honesty register
+## 6. Are we copying something? A straight answer
 
-Things that are true and inconvenient, kept on the page deliberately:
+We check this deliberately, and the answer has two halves.
 
-* **`a₀` is close to a value others have published** from similar data. Our claimed
-  novelty is not `a₀`; it is τ, the stress factor that handles clusters without new
-  matter. We keep a formal prior-art audit in `research_plan/prior-art/`, which has
-  already caught one of our formulas being an exact rediscovery.
+### The galaxy law is MOND. We should say so plainly.
+
+Our fitted `a₀ = 1.171 × 10⁻¹⁰ m/s²` is, within a few percent, the acceleration scale
+Milgrom introduced in 1983 and that many people have since measured from rotation
+curves. Our interpolation function is the standard "simple" form. **The galaxy-scale
+half of this page is a rediscovery, not an invention.**
+
+We arrived at it independently — from our own model's fitted exponent coming out at
+p = 0.5262 — which is a decent check that our pipeline is sound. But independence of
+derivation is not novelty of result, and we will not present it as such.
+
+This project already keeps a formal prior-art audit in `research_plan/prior-art/`,
+which previously caught one of our own formulas being an exact rediscovery of a
+published function. That register is the right place for this, and it needs updating
+with the above.
+
+### The cluster fix appears to be ours
+
+MOND's cluster problem is long-standing and well documented: a residual factor of
+two to three that the programme has never resolved without adding something. The
+published attempts we can find take a different route from ours — making `a₀` itself
+vary with gravitational potential (EMOND), or with environment, or adding massive
+neutrinos, or proposing faint stellar remnants as uncounted baryons.
+
+**None of those is what we are proposing.** Our claim is that the missing factor is
+the Tolman active-mass factor of the gravitational stream itself — `τ = 1 + w_r + 2w_t`
+— whose two endpoints are fixed exactly by the stress tensor and carry no adjustable
+freedom. Targeted searches did not surface that mechanism in the literature.
+
+That is our novelty claim, and it is the only one we make. It is also the one that
+can be killed fastest, which is the point.
+
+### Standing honesty register
+
 * **SPARC here has no quality cuts.** Applying the usual inclination and flag cuts
   would lower the scatter. We left them off so the comparison against R10 is like for
   like.
 * **Cluster masses are hydrostatic**, with a bias comparable to the residual scatter.
-  That is precisely why §3.3 is phrased as a prediction to test, not a success.
-* **The strong-lens results still inherit R10** in places. Driving them from raw
-  V_rms and Einstein angles is on the list.
+  That is precisely why §3.3 is phrased as a prediction to test.
+* **The project's stellar-mass rescaling moves results by factors of ~3** (§3.9).
+  This is now the largest known systematic in the programme.
 * **τ's two endpoints are exact; the crossover between them is not.** We know the
-  ends, not the middle.
+  ends, not the middle, and four candidate middles are now ruled out.
+* **`a₀` is measured, not derived.** No part of this work explains its value.
 
 ---
 
