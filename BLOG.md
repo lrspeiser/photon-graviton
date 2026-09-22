@@ -3,7 +3,7 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 2).** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 3).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
@@ -212,6 +212,39 @@ Note what this does **not** do: the amplitude carries τ and the critical surfac
 density together, so it cannot separate them. Measuring τ from lensing needs source
 geometry we could not recover from a published figure.
 
+### 3.7 Inside the galaxy population, τ does not vary at all
+
+*Script: the residual scan in `research_work/results/one-law/code/` against all 149
+SPARC galaxies.*
+
+If τ varies with some galaxy property, the per-galaxy residuals should show it. We
+computed the multiplicative offset each galaxy wants at the single fitted `a₀` and
+correlated it against everything the catalogue knows: stellar mass, gas mass, gas
+fraction, size, luminosity, surface brightness, bulge fraction, outermost measured
+radius, flat rotation speed, and the acceleration range probed.
+
+| Best predictors | Rank correlation |
+|---|---:|
+| Flat rotation speed | +0.32 |
+| Outer radius in half-light radii | +0.23 |
+| Surface brightness | +0.18 |
+| Stellar mass | +0.16 |
+| Gas fraction | −0.09 |
+| Bulge fraction | +0.01 |
+
+**Nothing predicts it.** The offsets scatter around 0.90 with a spread of 0.32, and
+the strongest correlation in thirteen candidates is a weak +0.32 with rotation speed
+— which is what you would expect from the known distance and mass-to-light
+systematics in the sample, not from new physics.
+
+This is good news, not bad. It says **τ is uniform across the entire galaxy
+population** — one value, no structure. The τ = 1 versus τ = 2 distinction is a
+galaxy-versus-cluster thing, not a within-galaxy thing.
+
+It also sharpens what to do next. Galaxies do not span whatever variable drives τ, so
+no amount of galaxy data will find it. **Groups are the only systems in between, and
+they are now the single most decisive measurement available to this programme.**
+
 ---
 
 ## 4. Why this beats the alternatives
@@ -241,8 +274,9 @@ local: local acceleration, local stress state.
    §3.6 from a shape check into a direct reading of the stress state.
 3. **Test the predicted hydrostatic bias b ≈ 0.17** against lensing cluster masses.
    This is the sharpest falsifiable number on the page.
-4. **Find what actually sets τ.** Light flux is ruled out (§3.5). Groups, which sit
-   between galaxies and clusters, are the place to look.
+4. **Groups — now the top experimental priority.** Light flux is ruled out (§3.5)
+   and §3.7 shows galaxies carry no information about τ at all. Groups sit between
+   galaxies and clusters and are the only place the crossover can be seen.
 5. **Derive `a₀`.** Right now it is a measured constant with no explanation. A theory
    that predicts its value rather than fitting it would be a different order of
    result.
