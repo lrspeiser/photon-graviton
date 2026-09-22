@@ -1,8 +1,9 @@
 # Theory: what the extra gravity is, and the equations it obeys
 
 **22 September 2026.** Resolves roadmap tasks T0.1 (the central contradiction), T2.2
-(the gravitational-wave constraint) and T0.2 (field equations). Every numerical claim
-below was computed in this session and is reproducible from the commands shown.
+(the gravitational-wave constraint) and T0.2 (field equations, non-relativistic and
+relativistic). Every numerical claim below was computed in this session and is
+reproducible from the scripts named.
 
 This document **corrects** earlier claims in the notebook. Where it does, the
 correction is stated plainly rather than softened.
@@ -90,6 +91,17 @@ narrows T0.2 usefully and early, which was the point of running it first.
 *Sources: Ezquiaga & Zumalacárregui, Phys. Rev. D 97, 061501 (2018), arXiv:1711.07403;
 Phys. Rev. D 100, 104013 (2019) on alternatives with c_T = c.*
 
+**A second GW170817 constraint, and why slip escapes both.** The same event also bounds
+any difference in how light and gravitational waves are delayed by the mass along
+their path: |γ_GW − γ_EM| < 9.8 × 10⁻⁸ (Boran, Desai, Kahya & Woodard, Phys. Rev. D 97,
+041501 (2018)). That rules out every theory in which matter and light respond to the
+extra gravity through a different metric from gravitational waves, TeVeS among them.
+
+GW170817 constrains only what light and gravitational waves feel, and both feel the
+combination Φ + Ψ. Slip concerns Φ, which only slow-moving matter feels. **So a slip built so that light and
+gravitational waves still share one Φ + Ψ passes both tests by construction.** The
+relativistic section of T0.2 below builds exactly that.
+
 ---
 
 ## T0.2 — Field equations
@@ -145,16 +157,116 @@ re-fitted by renaming it:
 
 ### What is still open in T0.2
 
-1. **A relativistic completion with η ≠ 1.** The GW170817-surviving MOND class gives
-   η = 1 in the quasi-static limit, as far as we can establish. Getting η ≠ 1 needs
-   anisotropic stress in the scalar sector — a specific construction task, not a
-   conceptual obstacle, but not done.
-2. **What sets η.** The SLACS values range 0.82–1.54 and correlate with redshift; the
-   cluster reading gives 1.27–1.42. This is the "what sets τ" question in its correct
-   form, and it is now a question about a well-defined object rather than a borrowed one.
+1. ~~**A relativistic completion with η ≠ 1.**~~ **Found: see the next section.** The
+   GW170817-surviving MOND theory gives η = 1, now verified from the paper itself. The
+   smallest addition to it that gives η ≠ 1 and passes GW170817 is a conformal coupling
+   κ of matter to its scalar.
+2. **What sets η** — now, equivalently, what sets κ. The SLACS values range 0.82–1.54
+   and correlate with redshift; the cluster reading gives 1.27–1.42. This is the "what
+   sets τ" question in its correct form, and it is now a question about one coupling
+   constant.
 3. **Cosmological slip constraints.** Combined CMB and lensing analyses bound slip on
    large scales. Our η lives in the galaxy-scale extra-gravity sector, a different
    regime, but the two must be checked for consistency.
+
+---
+
+## T0.2 (relativistic) — where the slip can live
+
+*Script: `research_work/results/relativistic-slip/code/slip_slots.py`. Each identity is
+checked symbolically, and each number is printed by the script.*
+
+### Slip is radial stress
+
+Take any static, weak-field metric, in any theory. The radial component of Einstein's equations then
+gives, exactly,
+
+```
+M_Φ(<R) − M_Ψ(<R)  =  4π R³ p_r(R) / c²
+```
+
+* M_Φ is the mass that sets orbits.
+* M_Ψ is the mass read from the spatial curvature.
+* p_r(R) is the radial stress, at R, of whatever sources the metric beyond ordinary matter.
+
+**The equation is standard**, and Faber & Visser (MNRAS 372, 136, 2006) proposed using
+it to measure the pressure of dark matter from rotation curves plus lensing. What is new is reading it
+without dark matter:
+
+**Inside R, lensing and dynamics can disagree only if the extra gravity carries a
+radial stress at R.** η > 1, where light is bent more than stars are pulled, needs radial
+tension. η < 1 needs radial pressure. Gravity that behaves differently in different
+directions is not an optional flourish here: it is what slip *is*.
+
+A toy galaxy, 10¹¹ M☉ Hernquist under QUMOND with η = 1.34, shows what this looks like:
+* At 1 kpc the needed stress is a radial tension of 13% of the extra gravity's energy density.
+* In the far field it grows to 25%.
+* The sideways stress falls to zero there, so far out the stress points purely along the radius.
+
+### Four places the extra gravity could live — one survives
+
+| Where the extra gravity lives | Light feels it at | η | GW170817 | Our measurements |
+|---|---:|---:|---|---|
+| A scalar that stretches spacetime uniformly (conformal): relativistic AQUAL, 1984 | 0% | −1 | passes | **excluded**: we see 91–127% |
+| A separate metric for matter and light (disformal): TeVeS | 100% | 1 | **fails**, on both speed and Shapiro delay | — |
+| One shared metric, no stress: AeST (Skordis & Złośnik 2021) | 100% | 1 | passes | close, but misses the ±0.4 |
+| **AeST + a small conformal coupling κ of matter to its scalar** | 1/(1+κ) | (1−κ)/(1+κ) | **passes** | **fits** |
+
+**Why light ignores the first row.** Maxwell's equations do not care about the overall
+scale of spacetime. A uniform stretch leaves every light path unchanged. Skordis & Złośnik
+state this directly: "null geodesics are unaltered by conformal transformations."
+
+**AeST's η = 1, verified.** The earlier hedge "as far as we can establish" is removed.
+The paper states that in the weak-field quasistatic limit "(5) leads to Ψ = Φ", and that
+"since Ψ = Φ, (6) leads to the right lensing."
+
+**Why the last row passes GW170817.** Adding a conformal factor does not move light's paths.
+Light and gravitational waves therefore still share one set of paths, one speed and one
+Shapiro delay, and both feel exactly the Φ + Ψ that AeST gives. The slip lives entirely
+in Φ − Ψ, which only slow-moving matter feels.
+
+**What the last row says physically.** Most of the extra gravity is built into the shape
+of spacetime, the AeST part, which light and stars both feel. A small uniform-stretch
+part is felt only by matter:
+
+| Systems | η | κ | The matter-only part |
+|---|---:|---:|---|
+| 11 X-COP clusters | 1.27 – 1.42 | −0.12 to −0.17 | pushes outward, 12–17% |
+| 3 under-bent SLACS lenses | 1.36 – 1.54 | −0.15 to −0.21 | pushes outward, 15–21% |
+| 3 over-bent SLACS lenses | 0.82 – 0.88 | +0.06 to +0.10 | pulls inward, 6–10% |
+
+**Why this is the natural slot:**
+* Within AeST-type theories, a nonminimal G₄(ϕ)R coupling is the same slot seen in another frame.
+* Aether terms give no slip at this order: Einstein-aether has γ = 1 (Foster & Jacobson 2006).
+* G₄(X) and G₅ couplings change the speed of gravitational waves.
+* Beyond-Horndeski theories offer other routes, not explored here.
+
+### Checks it passes
+
+* **Solar system.** At the Cassini ray (1.6 R☉), slip moves γ by at most
+  **3.7 × 10⁻¹²**, against the bound of 2.3 × 10⁻⁵.
+* **The one published direct cluster slip measurement** (see T1.2 below): consistent at
+  about 1σ.
+
+### What it does not yet do
+
+1. **Set κ.** One κ cannot give η > 1 in clusters and η < 1 in three lenses.
+   * Either κ depends on something not yet identified, or the three over-bent lenses carry
+     a systematic. The stellar-mass convention (T3.5) moves lens results by 2.4×.
+   * **A public lead:** Brouwer et al. (A&A 650, A113, 2021) find that early- and
+     late-type galaxies of equal stellar mass sit on different weak-lensing acceleration
+     relations, at ≥6σ. They note that a universal modification of gravity cannot produce
+     this. A κ that depends on galaxy type could. Not yet tested.
+2. **Background drift.** If the scalar's background value drifts in time, particle masses
+   drift at κ times that rate, and lunar laser ranging bounds such drifts near 10⁻¹³ per
+   year. A static background avoids the issue entirely.
+3. **Prior art.** Both ingredients are published: AeST, and a conformally coupled scalar
+   (relativistic AQUAL). We have not found the combination proposed as a source of slip.
+   The full check is T3.3.
+4. **The simple ν in the solar system.** This is separate from slip: the extra pull tends to a₀ at
+   high acceleration rather than switching off. Hees et al. (MNRAS 455, 449, 2016) find
+   that Cassini rules out several popular MOND transition functions and leaves others
+   viable. Whether ours survives is T2.3.
 
 ---
 
@@ -228,6 +340,19 @@ disturbed halves at matched f: same bias in both means slip; bias concentrated i
 disturbed half means pressure. This is cheap, uses public catalogues, and is now the
 sharpest observational test in the programme.
 
+**A pressure-free cross-check already exists.** Pizzuti et al. (arXiv:1602.03385)
+measured slip directly in the relaxed cluster MACS J1206.2-0847, using *galaxy orbits*
+against strong and weak lensing. Galaxy orbits do not feel gas pressure.
+
+* **Their result:** η(r₂₀₀) = 1.01 +0.31/−0.28 for the total potential.
+* **Our prediction:** η_total = 1 + f(η − 1) = **1.21–1.37**. The total is diluted by the
+  baryon share, which is why it sits below the extra-gravity-only range of 1.27–1.42.
+* **Comparison:** our range sits 0.7–1.2σ above their centre. Consistent, at the edge, and not
+  a confirmation.
+
+A stack of such clusters breaks the slip-versus-pressure degeneracy without needing the
+relaxed-versus-disturbed split. The CLASH-VLT sample is the natural place to do it.
+
 ---
 
 ## What the paper is now
@@ -240,6 +365,11 @@ Smaller than the notebook suggested, and on firmer ground.
   Measured on six individual lens galaxies with every universal constant frozen
   (η = 0.82–1.54, correlated with redshift), and read independently from the published
   cluster hydrostatic bias (η = 1.27–1.42), which overlaps the under-bent lenses.
+* **A relativistic home:** the aether-scalar-tensor theory, which survives GW170817,
+  plus a conformal coupling κ of matter to its scalar.
+  * It passes GW170817 by construction and moves the solar-system γ by 10⁻¹².
+  * It turns every slip measurement into a reading of one number, κ.
+  * Clusters need κ ≈ −0.15.
 * **Clusters:** the classic dynamical deficit, measured at 1.6–1.9×, **not solved**,
   and reported as such.
 

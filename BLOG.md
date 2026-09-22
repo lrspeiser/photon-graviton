@@ -3,7 +3,7 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 8).** Every number here is computed
+**Living document. Last updated 22 September 2026 (rev 9).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
@@ -60,6 +60,19 @@ strictly tied to its source.
 > slip** η, which gives the same lensing-versus-dynamics split with no energy cost. See
 > §3.11 and [THEORY.md](THEORY.md).
 
+> **Rev 9: the intuition comes back, in its correct form.** Stress really is what separates
+> lensing from dynamics; that part was right. The radial component of Einstein's
+> equations makes it exact (§3.13): inside any radius, lensing and dynamics can differ
+> only if the extra gravity carries a radial stress there. What was wrong was the
+> carrier. No substance holds the stress: it comes from how matter couples to the shape of
+> spacetime.
+>
+> The measured slips sit *between* the rows of the table below:
+> * clusters at τ = 1/η ≈ 0.70–0.79;
+> * the under-bent lenses at 0.65–0.74.
+>
+> Both are a radial *tension* that bends light more than it pulls stars.
+
 This is the part that is *not* optional, and it is the part people usually miss.
 
 In general relativity, how hard something pulls on slow-moving matter is not set by
@@ -97,7 +110,9 @@ can bend light more than it moves stars, without anyone adding mass by hand.
 | Lensing vs rotation on one object | **10× better** than ordinary matter | 0 |
 | ~~Cluster masses~~ | ~~Closed to within the scatter~~ — **retracted, see §3.3** | — |
 | Cluster dynamics | **Open** — the classic deficit, measured at 1.6–1.9× | — |
-| **Gravitational slip η ≠ 1** | **The novel claim** — 6 lenses and 11 clusters agree | 0 |
+| **Gravitational slip η ≠ 1** | **The novel claim**: measured on 6 lenses and 11 clusters | 0 |
+| Gravitational-wave speed (GW170817) | **Passes by construction**, via the one slot that survives (§3.13) | 0 |
+| Solar system | **Passes**: slip moves γ by 4 × 10⁻¹², bound 2 × 10⁻⁵ | 0 |
 
 One new constant, `a₀` — Milgrom's, attributed. One novel measured quantity, the
 slip `η`. No dark matter, no per-object parameters. The theory and its field
@@ -389,7 +404,7 @@ object.*
 
 It also survives GW170817. That event killed TeVeS and most relativistic MOND theories,
 but a class with gravitational waves on the light cone exists — which constrains the
-slip to live in the scalar sector, and tells us where to build.
+slip to live in the scalar sector, and tells us where to build. §3.13 builds there.
 
 ### 3.12 Two independent routes to the same slip
 
@@ -429,6 +444,65 @@ point to η above 1 (3.1–4.7), and one excludes η = 1 at P = 0.05 — but a 3
 dispersion underestimate, which the source paper says is present, erases all of it.
 Suggestive, not established.
 
+### 3.13 Where the slip lives: a relativistic home that survives GW170817
+
+*Script: `research_work/results/relativistic-slip/`. Full working in
+[THEORY.md](THEORY.md). Every identity is checked symbolically. The sources were read in
+the papers themselves this time, not in summaries.*
+
+**Slip is directional gravity, exactly.** Take any theory at all. The radial part of
+Einstein's equations says that inside a radius R, the mass that moves stars and the mass
+read from the shape of space differ by exactly
+
+```
+M_dynamics − M_space  =  4π R³ × (radial stress at R) / c²
+```
+
+So lensing and dynamics can disagree *only* if the extra gravity pushes or pulls
+differently along the radius than across it. Light bent more than stars are pulled
+(η > 1) means a radial *tension*. This is the "gravity behaves differently in different
+directions" idea, and it turns out not to be optional: it is what slip *is*.
+
+In a toy galaxy with η = 1.34, the tension is 13% of the extra gravity's energy density at 1 kpc
+and 25% far out. The sideways stress falls to zero there, so far out it points purely
+along the radius. The equation itself is textbook, and Faber & Visser used it in 2006 to
+propose weighing dark matter's pressure. We use it with no dark matter at all.
+
+**Four places the extra gravity could live, and one survives.**
+
+| Where it lives | Light feels it at | GW170817 | Our data |
+|---|---:|---|---|
+| A uniform stretch of spacetime (1984's relativistic AQUAL) | 0% | passes | **excluded**: we see 91–127% |
+| A separate metric for light and matter (TeVeS) | 100% | **fails** | — |
+| One shared metric (AeST, 2021) | 100% | passes | close, misses by ±0.4 |
+| **AeST + a small uniform stretch felt only by matter** | **1/(1+κ)** | **passes** | **fits** |
+
+*Light feels it at* is relative to the pull the same extra gravity puts on stars.
+
+Why the stretch is invisible to light: light doesn't care about the overall scale of
+spacetime, only its shape. So light and gravitational waves still travel together, at
+the same speed and with the same delay. That is exactly what GW170817 checks. The slip
+hides where only slow-moving matter can see it.
+
+**What the numbers say:**
+* **Clusters:** the matter-only part pushes outward by 12–17%, so gas and galaxies feel less
+  of the extra gravity than light does.
+* **Three under-bent lenses:** it pushes outward by 15–21%.
+* **Three over-bent lenses:** it pulls inward by 6–10%.
+
+**Checks it passes today:**
+* GW170817 speed and delay: passes by construction.
+* The solar system: slip moves Cassini's γ by at most 3.7 × 10⁻¹², against a bound of 2.3 × 10⁻⁵.
+* **The one published direct cluster slip measurement** (Pizzuti et al., MACS J1206, galaxy
+  orbits against lensing, immune to gas pressure) gives 1.01 +0.31/−0.28. We predict
+  1.21–1.37. That is consistent at about 1σ.
+
+**What it does not do yet: set κ.** One value cannot give a push in clusters and a pull
+in three lenses. There is a promising lead, though. The KiDS-1000 survey (Brouwer et al. 2021) found that
+early- and late-type galaxies of the same stellar mass bend light differently at ≥6σ,
+which the authors note no universal law of gravity can produce. A coupling that depends
+on galaxy type can. That test is public and next in line.
+
 ---
 
 ## 4. Why this beats the alternatives
@@ -439,7 +513,7 @@ two or three numbers fitted *separately for every galaxy*. We have one number fo
 ordinary matter plus a halo has to change the galaxy's stellar mass by a factor of
 two to three between the two explanations. One law does not.
 
-**Against MOND and its relatives.** On dynamics we *are* MOND — our equation for what
+**Against MOND and its relatives.** On dynamics we *are* MOND. Our equation for what
 stars feel is Milgrom's, and we say so. ~~They are wrong on clusters by about a factor
 of two, and that gap is exactly what τ fills.~~ **Retracted (§3.3):** we do not
 currently solve the cluster deficit either.
@@ -448,7 +522,9 @@ Where we differ is lensing. Relativistic MOND theories are built so that light a
 matter respond to the same potential — slip η = 1. We measure η ≠ 1 on individual
 galaxies, with every constant frozen. If that holds, it is a clean, falsifiable
 departure from the whole MOND family, and it is something dark matter does not predict
-either: a halo bends light and moves stars through one potential.
+either: a halo bends light and moves stars through one potential. And the one
+relativistic MOND theory that survives GW170817 only needs a small addition to carry
+it (§3.13).
 
 **Against expanding-universe explanations.** Nothing here uses expansion; every test
 is local, below z = 0.3. The roadmap recommends leaving the position out of any paper,
@@ -458,18 +534,28 @@ because no result here requires it.
 
 ## 5. What is next, in order
 
-1. ~~Cluster weak lensing shape.~~ **Done — §3.6. The prediction held.**
-2. **Separate τ from the lensing amplitude.** This needs author shear catalogues with
-   source redshifts, not a figure reconstruction. That single measurement would turn
-   §3.6 from a shape check into a direct reading of the stress state.
-3. **Test the predicted hydrostatic bias b ≈ 0.17** against lensing cluster masses.
-   This is the sharpest falsifiable number on the page.
-4. **Groups — now the top experimental priority.** Light flux is ruled out (§3.5)
-   and §3.7 shows galaxies carry no information about τ at all. Groups sit between
-   galaxies and clusters and are the only place the crossover can be seen.
-5. **Derive `a₀`.** Right now it is a measured constant with no explanation. A theory
-   that predicts its value rather than fitting it would be a different order of
-   result.
+*Rev 9. This list replaces the rev 6 list, which was built around τ. The old list is kept
+below and struck through.*
+
+1. **Slip from galaxy orbits in a stack of clusters.** Galaxy orbits ignore gas pressure, so
+   this measures η directly. One cluster has already been done by others (§3.13); the
+   CLASH-VLT sample has more.
+2. **Relaxed versus disturbed clusters at matched f** (§3.12). This separates slip from gas
+   pressure using public catalogues.
+3. **Lensing by galaxy type (KiDS-1000).** This is the most direct handle on what sets κ.
+4. **Fix the stellar-mass convention** (roadmap T3.5), then re-read the three over-bent
+   lenses.
+5. **Derive `a₀`.** It is still a measured constant with no explanation.
+
+<details><summary>The rev 6 list, superseded</summary>
+
+1. ~~Cluster weak lensing shape.~~ Done: §3.6. The prediction held.
+2. ~~Separate τ from the lensing amplitude.~~ τ became slip; items 1–3 above do this job.
+3. ~~Test the predicted hydrostatic bias b ≈ 0.17.~~ The τ = 2 cluster claim behind this
+   number is retracted (§3.3).
+4. ~~Groups.~~ Done: §3.12, suggestive but inconclusive.
+
+</details>
 
 ---
 
@@ -493,7 +579,7 @@ which previously caught one of our own formulas being an exact rediscovery of a
 published function. That register is the right place for this, and it needs updating
 with the above.
 
-### The cluster fix appears to be ours
+### ~~The cluster fix appears to be ours~~ — superseded in rev 9, see below
 
 MOND's cluster problem is long-standing and well documented: a residual factor of
 two to three that the programme has never resolved without adding something. The
@@ -506,8 +592,21 @@ the Tolman active-mass factor of the gravitational stream itself — `τ = 1 + w
 — whose two endpoints are fixed exactly by the stress tensor and carry no adjustable
 freedom. Targeted searches did not surface that mechanism in the literature.
 
-That is our novelty claim, and it is the only one we make. It is also the one that
-can be killed fastest, which is the point.
+~~That is our novelty claim, and it is the only one we make.~~ The Tolman cluster
+mechanism was retracted in rev 8 (§3.3), so this novelty claim went with it.
+
+### What is ours now, exactly
+
+* **Ours:** the measurement that the extra gravity's slip is **not 1**, object by
+  object, with every constant frozen. That covers six lenses, plus the reading of the published
+  cluster hydrostatic bias as a slip.
+* **Ours, pending a full literature check:** the relativistic home. Both ingredients are
+  published: AeST (Skordis & Złośnik 2021) and a conformally coupled scalar (Bekenstein &
+  Milgrom 1984). We have not found the combination proposed as a source of slip.
+* **Not ours:**
+  * the dynamics equation (Milgrom's QUMOND);
+  * the stress identity (the radial Einstein equation, used by Faber & Visser 2006);
+  * the idea of measuring slip in clusters (Pizzuti et al. 2016 did it for one cluster).
 
 ### Standing honesty register
 
@@ -518,8 +617,9 @@ can be killed fastest, which is the point.
   That is precisely why §3.3 is phrased as a prediction to test.
 * **The project's stellar-mass rescaling moves results by factors of ~3** (§3.9).
   This is now the largest known systematic in the programme.
-* **τ's two endpoints are exact; the crossover between them is not.** We know the
-  ends, not the middle, and four candidate middles are now ruled out.
+* ~~**τ's two endpoints are exact; the crossover between them is not.**~~ τ became
+  the slip η (rev 8). **κ is measured, not derived, and one κ does not yet fit every
+  system.**
 * **`a₀` is measured, not derived.** No part of this work explains its value.
 
 ---

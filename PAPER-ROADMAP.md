@@ -11,11 +11,24 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 |---|---|---|
 | **T0.1** Resolve the contradiction | **Done** | Branch (a) fails on energy by 1.5 × 10⁴; the field's own energy is 1.7 × 10⁻⁴ of what it would need. Branch (b), a modified propagator, survives. τ splits into two objects: in lensing it is the **gravitational slip η** (legitimate, no energy cost); in cluster dynamics it has **no mechanism**. The cluster "closed within scatter" claim is **retracted**. |
 | **T2.2** GW170817 | **Done** | Survives, with a construction constraint: the modification and the slip must live in the scalar sector. TeVeS-type completions are excluded; a surviving class exists. |
-| **T0.2** Field equations | **Done (non-relativistic)** | Three equations. The dynamics equation reproduces the fitted law to 4.4 × 10⁻¹⁶ and is Milgrom's QUMOND, attributed. The slip equation is ours; JR-10's γ_χ is identically η. Relativistic completion with η ≠ 1 is open. |
-| **T1.2** Cluster lensing masses | **Done, via the published bias** | The X-COP hydrostatic bias implies η = 1.27–1.42, overlapping the under-bent SLACS lenses (1.36–1.54). Degenerate with non-thermal pressure in one comparison; a relaxed-versus-disturbed split at matched f separates them. |
+| **T0.2** Field equations | **Done**; relativistic home identified | Three equations. The dynamics equation reproduces the fitted law to 4.4 × 10⁻¹⁶ and is Milgrom's QUMOND, attributed. The slip equation is ours; JR-10's γ_χ is identically η. **Relativistic:** slip is exactly a radial stress of the extra gravity (the radial Einstein equation). Of four places the extra gravity could live, one passes GW170817 and our data: the aether-scalar-tensor theory (which gives η = 1, verified from the paper) plus a conformal coupling κ of matter to its scalar, giving η = (1−κ)/(1+κ). Clusters need κ ≈ −0.12 to −0.17. What sets κ is open. |
+| **T1.2** Cluster lensing masses | **Done, via the published bias** | The X-COP hydrostatic bias implies η = 1.27–1.42, overlapping the under-bent SLACS lenses (1.36–1.54). Degenerate with non-thermal pressure in one comparison; a relaxed-versus-disturbed split at matched f separates them. A published slip measurement from galaxy orbits, which gas pressure does not affect (Pizzuti et al., MACS J1206), gives 1.01 +0.31/−0.28 against our predicted 1.21–1.37. That is consistent at about 1σ. |
 | **T1.3** Groups | **Done, inconclusive** | Three SL2S groups with real weak-lensing masses point to η > 1 at face value, but a 30% dispersion bias the source paper itself reports erases it. **Correction:** an earlier "lensing masses ~50% above dynamical" attribution was not in the paper. |
+| **T2.3** Solar system (slip part) | **Done** | Slip moves the Cassini γ by at most 3.7 × 10⁻¹², against a bound of 2.3 × 10⁻⁵. Still to check, separately: the simple interpolation function's high-acceleration tail against Cassini (Hees et al. 2016 rule out several popular choices). |
 
-Full working in [THEORY.md](THEORY.md).
+Full working in [THEORY.md](THEORY.md); relativistic slots in
+[research_work/results/relativistic-slip/](research_work/results/relativistic-slip/README.md).
+
+**Next, in order of value per effort:**
+
+1. **Stack galaxy-orbit against lensing slip in CLASH-VLT clusters.** This is pressure-free,
+   builds on a published single-cluster result, and tests η directly.
+2. **Relaxed-versus-disturbed hydrostatic bias at matched f.** This separates slip from
+   non-thermal pressure using public catalogues.
+3. **The weak-lensing acceleration relation by galaxy type (KiDS-1000).** Brouwer et al. report a
+   ≥6σ early/late difference that a universal law cannot make. A type-dependent κ can,
+   and this is the most direct handle on what sets κ.
+4. **T3.5, the stellar-mass convention**, before re-reading the three over-bent lenses.
 
 **What changed about the paper.** The headline is no longer "τ solves the cluster
 problem." It is: **the gravitational slip of the extra gravity is not 1**, measured

@@ -1,0 +1,237 @@
+{
+  "identity": {
+    "-G^t_t == 2 lap Psi": true,
+    "G^r_r == (2/r)(Phi - Psi)'": true,
+    "static conservation holds identically": true,
+    "M_Phi - M_Psi == 4 pi R^3 p_r": true,
+    "G^r_r": "2*(Derivative(Phi(r), r) - Derivative(Psi(r), r))/r",
+    "G^theta_theta": "(r*(Derivative(Phi(r), (r, 2)) - Derivative(Psi(r), (r, 2))) + Derivative(Phi(r), r) - Derivative(Psi(r), r))/r"
+  },
+  "coupling_slots": {
+    "conformal": {
+      "Phi~": "Phi + kappa*phi",
+      "Psi~": "Psi - kappa*phi",
+      "eta of the conformal part": "-1"
+    },
+    "disformal (TeVeS k=1)": {
+      "Phi~": "Phi + 2*k*phi - phi",
+      "Psi~": "Psi + phi",
+      "eta of the scalar part": "1/(2*k - 1)"
+    },
+    "AeST + conformal kappa": {
+      "extra in dynamics": "Phi_A*kappa + Phi_A",
+      "extra in spatial metric": "-Phi_A*kappa + Phi_A",
+      "eta": "(1 - kappa)/(kappa + 1)",
+      "lensing weight (1+eta)/2": "1/(kappa + 1)"
+    }
+  },
+  "toy_galaxy": [
+    {
+      "eta_input": 0.85,
+      "kappa": 0.08108108108108109,
+      "max |identity residual| / M_Phi": 3.647399510031761e-16,
+      "far-field expectation p_r/(rho_x c^2) = 1/eta - 1": 0.17647058823529416,
+      "profile": {
+        "1 kpc": {
+          "gN/a0": 7.441764446427042,
+          "p_r / (rho_x c^2)": 0.09042282290507404,
+          "p_t / (rho_x c^2)": 0.0430240631129447,
+          "eta measured from masses": 0.8500000000000005
+        },
+        "10 kpc": {
+          "gN/a0": 0.7033704404208154,
+          "p_r / (rho_x c^2)": 0.1154815637997439,
+          "p_t / (rho_x c^2)": 0.03049400116982358,
+          "eta measured from masses": 0.8500000000000004
+        },
+        "30 kpc": {
+          "gN/a0": 0.10912795657064517,
+          "p_r / (rho_x c^2)": 0.1424311378773546,
+          "p_t / (rho_x c^2)": 0.01701879102383121,
+          "eta measured from masses": 0.85
+        },
+        "100 kpc": {
+          "gN/a0": 0.0112214307438118,
+          "p_r / (rho_x c^2)": 0.16332672263992568,
+          "p_t / (rho_x c^2)": 0.006570564763520388,
+          "eta measured from masses": 0.8499999999999996
+        },
+        "300 kpc": {
+          "gN/a0": 0.0012967527725393426,
+          "p_r / (rho_x c^2)": 0.17170995892241855,
+          "p_t / (rho_x c^2)": 0.0023787559369303915,
+          "eta measured from masses": 0.8499999999999999
+        }
+      }
+    },
+    {
+      "eta_input": 1.34,
+      "kappa": -0.14529914529914534,
+      "max |identity residual| / M_Phi": 3.7551528310111536e-16,
+      "far-field expectation p_r/(rho_x c^2) = 1/eta - 1": -0.25373134328358216,
+      "profile": {
+        "1 kpc": {
+          "gN/a0": 7.441764446427042,
+          "p_r / (rho_x c^2)": -0.13001071251817725,
+          "p_t / (rho_x c^2)": -0.06186036800275747,
+          "eta measured from masses": 1.3399999999999999
+        },
+        "10 kpc": {
+          "gN/a0": 0.7033704404208154,
+          "p_r / (rho_x c^2)": -0.16604070974703272,
+          "p_t / (rho_x c^2)": -0.043844622731657595,
+          "eta measured from masses": 1.3400000000000005
+        },
+        "30 kpc": {
+          "gN/a0": 0.10912795657064517,
+          "p_r / (rho_x c^2)": -0.20478906669716007,
+          "p_t / (rho_x c^2)": -0.0244698061254456,
+          "eta measured from masses": 1.34
+        },
+        "100 kpc": {
+          "gN/a0": 0.0112214307438118,
+          "p_r / (rho_x c^2)": -0.23483295209952315,
+          "p_t / (rho_x c^2)": -0.009447230039519843,
+          "eta measured from masses": 1.34
+        },
+        "300 kpc": {
+          "gN/a0": 0.0012967527725393426,
+          "p_r / (rho_x c^2)": -0.2468864586957348,
+          "p_t / (rho_x c^2)": -0.003420201327036192,
+          "eta measured from masses": 1.3399999999999999
+        }
+      }
+    },
+    {
+      "eta_input": 1.45,
+      "kappa": -0.18367346938775508,
+      "max |identity residual| / M_Phi": 4.3926876823093013e-16,
+      "far-field expectation p_r/(rho_x c^2) = 1/eta - 1": -0.31034482758620685,
+      "profile": {
+        "1 kpc": {
+          "gN/a0": 7.441764446427042,
+          "p_r / (rho_x c^2)": -0.15901915381131906,
+          "p_t / (rho_x c^2)": -0.0756628679569367,
+          "eta measured from masses": 1.4500000000000017
+        },
+        "10 kpc": {
+          "gN/a0": 0.7033704404208154,
+          "p_r / (rho_x c^2)": -0.2030883411968518,
+          "p_t / (rho_x c^2)": -0.053627400861746215,
+          "eta measured from masses": 1.4500000000000002
+        },
+        "30 kpc": {
+          "gN/a0": 0.10912795657064517,
+          "p_r / (rho_x c^2)": -0.2504823704334221,
+          "p_t / (rho_x c^2)": -0.029929600936237057,
+          "eta measured from masses": 1.4500000000000002
+        },
+        "100 kpc": {
+          "gN/a0": 0.0112214307438118,
+          "p_r / (rho_x c^2)": -0.2872297572512706,
+          "p_t / (rho_x c^2)": -0.01155513128240372,
+          "eta measured from masses": 1.4499999999999997
+        },
+        "300 kpc": {
+          "gN/a0": 0.0012967527725393426,
+          "p_r / (rho_x c^2)": -0.30197268685778295,
+          "p_t / (rho_x c^2)": -0.004183329412903091,
+          "eta measured from masses": 1.45
+        }
+      }
+    }
+  ],
+  "requirements": [
+    {
+      "systems": "three over-bent SLACS lenses",
+      "eta": [
+        0.82,
+        0.88
+      ],
+      "light sees the extra gravity at (1+eta)/2 of its pull on matter": [
+        0.91,
+        0.94
+      ],
+      "conformal share kappa = (1-eta)/(1+eta)": [
+        0.064,
+        0.099
+      ],
+      "radial stress p_r / (mean extra density c^2) = (1/eta-1)/3": [
+        0.045,
+        0.073
+      ],
+      "far-field radial equation of state w_r = 1/eta - 1": [
+        0.136,
+        0.22
+      ]
+    },
+    {
+      "systems": "eleven X-COP clusters (published hydrostatic bias)",
+      "eta": [
+        1.27,
+        1.42
+      ],
+      "light sees the extra gravity at (1+eta)/2 of its pull on matter": [
+        1.135,
+        1.21
+      ],
+      "conformal share kappa = (1-eta)/(1+eta)": [
+        -0.174,
+        -0.119
+      ],
+      "radial stress p_r / (mean extra density c^2) = (1/eta-1)/3": [
+        -0.099,
+        -0.071
+      ],
+      "far-field radial equation of state w_r = 1/eta - 1": [
+        -0.296,
+        -0.213
+      ]
+    },
+    {
+      "systems": "three under-bent SLACS lenses",
+      "eta": [
+        1.36,
+        1.54
+      ],
+      "light sees the extra gravity at (1+eta)/2 of its pull on matter": [
+        1.18,
+        1.27
+      ],
+      "conformal share kappa = (1-eta)/(1+eta)": [
+        -0.213,
+        -0.153
+      ],
+      "radial stress p_r / (mean extra density c^2) = (1/eta-1)/3": [
+        -0.117,
+        -0.088
+      ],
+      "far-field radial equation of state w_r = 1/eta - 1": [
+        -0.351,
+        -0.265
+      ]
+    }
+  ],
+  "solar_system": {
+    "gN at 1.6 Rsun (m/s^2)": 107.13639119514608,
+    "extra / Newtonian deflection": 8.633064584653864e-12,
+    "|gamma - 1| from slip (worst eta)": 3.6707518706402256e-12,
+    "Cassini bound on |gamma - 1|": 2.3e-05
+  },
+  "cluster_kinematic_slip": {
+    "measured eta_total (MACS J1206)": [
+      1.01,
+      0.31,
+      0.28
+    ],
+    "predicted eta_total from the X-COP slip": [
+      1.213,
+      1.365
+    ],
+    "offset in sigma (upper error)": [
+      0.66,
+      1.15
+    ],
+    "AeST (eta_x = 1) prediction": 1.0
+  }
+}
