@@ -1,0 +1,27 @@
+{
+  "experiment": "JR-4",
+  "baseline_commit": "7386427ad7228b8d57319b1be78bbea3c47f31e8",
+  "protocol_commit": "215fc0231056b8c9a935d42eb12bd6db04f80bc3",
+  "implementation_commit": "2fd9e186deb6416fd34b056678a3f0c3a01e5833",
+  "execution": "Local Python 3.13.5, NumPy 2.3.5, SciPy 1.17.0; not GitHub Actions",
+  "scope": {"SPARC_galaxies":149,"rotation_rows":3152,"SLACS_galaxies":6,"stellar_motion_bins":40,"clusters":0},
+  "selection": {"fit_galaxies":89,"validation_galaxies":29,"comparison_galaxies":31,"previously_exposed_data":true,"shared_fit_starts":64,"name":"weaker_spread_companion","effectively_pure_spreading":true,"a":1.3466768155930733e-20,"b":2.3025850929940455,"log10_Sigma0_Msun_pc2":0.7349736572884659,"spread_bound_reached":true},
+  "baseline_all": {"below20":95,"median_fractional_RMS":0.15051553815400098,"mean_galaxy_RMSE_kms":17.71098701125835,"raw_chi2":211200.74383558973},
+  "selected_all": {"below20":85,"median_fractional_RMS":0.17089076060054254,"mean_galaxy_RMSE_kms":19.13147921091186,"raw_chi2":231051.1193988622,"threshold_improved":11,"threshold_harmed":21},
+  "individual_overpredicted_38": {
+    "baseline_median_fractional_RMS":0.3842030204069556,
+    "weaker_total":{"below20":22,"median_fractional_RMS":0.19438175927083653,"median_strength":0.5788552063995598},
+    "weaker_companion":{"below20":22,"median_fractional_RMS":0.18426141406061286,"median_strength":0.44821960926283305},
+    "pure_spreading":{"below20":27,"median_fractional_RMS":0.1438229619727034,"median_spread":1.5466657070142809},
+    "weaker_and_spread_companion":{"below20":27,"median_fractional_RMS":0.1371657035324214,"median_strength":1.0,"median_spread":1.4301493007439354}
+  },
+  "individual_underpredicted_16": {"none_brought_below20":true,"optimum_no_change":true},
+  "individual_fit_caveat":"Per-object inverse feasibility, not a universal predictive law or measurement of real gravity",
+  "six_lenses": {"baseline_stellar_mean_fractional_RMS":0.019287817692536873,"selected_stellar_mean_fractional_RMS":0.025842689799965073,"baseline_angle_fractional_RMS":0.07939008468628077,"selected_angle_fractional_RMS":0.09128700234214854,"baseline_stellar_chi2":128.22818148067822,"selected_stellar_chi2":193.8049766536612},
+  "gas_association": {"individual_strength_Spearman_with_gas_fraction":-0.16218913688693673,"individual_spread_Spearman_with_gas_fraction":0.0942333056876344,"causal_inference":false},
+  "conditional_cloud_half_strength": {"freefall_time_ratio":1.4142135623730951,"Jeans_mass_ratio":2.8284271247461903,"escape_speed_ratio_for_scaled_potential":0.7071067811865476,"Q_ratio_background_only":0.7071067811865476,"Q_ratio_background_and_self_gravity":1.4142135623730951},
+  "conditional_vertical_outlier_median_bounds": {"shared":{"maximum_thickness_ratio":1.2052267289929084,"maximum_freefall_time_ratio":1.097783883038101},"individual_spread":{"maximum_thickness_ratio":1.7030046396473306,"maximum_freefall_time_ratio":1.3049684328391709},"not_observed_thicknesses":true},
+  "numerical": {"baseline_velocity_replay_error_kms":0.0,"input_hashes_unchanged":true,"dilation_mass_error":2.220446049250313e-16,"maximum_lens_stellar_refinement_relative":0.00014561512272326382,"maximum_lens_angle_refinement_relative":5.626670038338943e-6,"independent_lens_quadrature_relative":4.1587089327776994e-10,"cloud_collapse_relative_error":1.5929479957321746e-12,"readback_checks":4336,"readback_failures":0,"exact_published_source_replay_byte_identical_scientific_files":true},
+  "limitations": ["No observed star-formation rates, gas evolution, cloud self-gravity response, or causal gas-abundance fit","No new microscopic gravity, source-energy closure, cluster model, or Solar-system completion","Shared environment law is not an overall successful replacement of R10","Conditional lens geometry and populations unchanged"],
+  "full_arrays": "Originating conversation package Photon-Graviton-JR4-Weaker-Spread-Gas-Complete.zip; includes original JR-1 data, code, every model prediction, inverse diagnostics and replay"
+}
