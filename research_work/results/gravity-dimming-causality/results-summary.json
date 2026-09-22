@@ -1,0 +1,74 @@
+{
+  "experiment": "JR-3",
+  "baseline_commit": "41ede5342a0ddabdff7dbea2a4f1951eceec65c6",
+  "protocol_commit": "2841a36a9d443cb4ca6d513056e3def5b9d1ca08",
+  "scope": "Frozen R10 photometric-transfer diagnostic plus separate reversible energy calculations; not a causal detection or full microscopic theory",
+  "execution": "Local Python 3.13.5, NumPy 2.3.5, SciPy 1.17.0; not GitHub Actions",
+  "sample": {"SPARC_galaxies": 149, "rotation_rows": 3152, "SLACS_lenses": 6, "lens_stellar_bins": 40, "clusters": 0},
+  "original_inputs_unchanged": true,
+  "baseline_R10_replay_max_error_kms": 5.684341886080802e-14,
+  "disk_fractional_objective_results": {
+    "baseline": {"within20": 95, "median_fractional_RMS": 0.15051553815400098, "mean_galaxy_RMSE_kms": 17.71098701125835, "raw_chi2": 211200.74383558973},
+    "all_25_percent_starlight_missing": {"within20": 83, "median_fractional_RMS": 0.17214009881876813, "mean_galaxy_RMSE_kms": 20.47077325873526},
+    "all_50_percent_starlight_missing": {"within20": 57, "median_fractional_RMS": 0.25325276022552934, "mean_galaxy_RMSE_kms": 31.910671505083943},
+    "per_galaxy_dim_only": {"within20": 107, "median_fractional_RMS": 0.10874945283989859, "mean_galaxy_RMSE_kms": 14.499814518952785, "raw_chi2": 157987.3718226582, "positive_dimming": 62, "zero_dimming": 87},
+    "per_galaxy_signed_transfer": {"within20": 117, "median_fractional_RMS": 0.0959062156689198, "mean_galaxy_RMSE_kms": 11.162851726539897, "net_dimming": 63, "net_brightening": 86, "at_tenfold_brightening_bound": 34},
+    "equal_gas_stars_dim_only": {"within20": 106},
+    "original_outlier_direction": {"overpredicted": 38, "underpredicted": 16, "dimming_rescues_overpredicted": 0, "dimming_rescues_underpredicted": 12},
+    "underpredicted_outliers": {"median_initial_RMS": 0.2705427255298936, "median_dimmed_RMS": 0.12691851899498, "median_required_dimming": 0.6808811783564054}
+  },
+  "shared_dimming_laws": {"constant_tau0": 0.0, "selfconsistent_gravity_linked_tau0": 0.0, "fit_galaxies": 89, "previously_exposed_comparison_counts": [29,31]},
+  "shared_reversible_channel": {
+    "post_primary_development": true,
+    "tau": 1.0494299300115335,
+    "incoming_companion_coefficient": 8.999999999999996,
+    "incoming_coefficient_upper_bound": 9,
+    "optimizer_starts": 6,
+    "forward_evaluations": 343,
+    "baseline_training_fractional_square": 0.13705298709008334,
+    "fitted_training_fractional_square": 0.10926911789224812,
+    "net_brightening_galaxies": 148,
+    "net_dimming_galaxies": 1,
+    "median_photon_multiplier": 2.5293232120070774,
+    "all_within20": 76,
+    "all_median_fractional_RMS": 0.19626081203249665,
+    "comparison_mean_galaxy_RMSE_kms": [22.65697338751771,17.387515764290576],
+    "selfconsistency_error": 5.329070518200751e-15,
+    "channel_energy_error": 8.881784197001252e-16,
+    "independent_exponential_error": 1.7763568394002505e-15,
+    "decision": "Not promoted: worsens comparison errors, requires net gain and hits an unmeasured influx bound"
+  },
+  "under_bent_lenses": [
+    {"name":"J1112+0826","required_missing_light":0.16996274604698647,"original_stellar_RMS_percent":1.693,"corrected_RMS_percent":6.948,"corrected_and_orbit_refit_RMS_percent":4.754},
+    {"name":"J1621+3931","required_missing_light":0.21313999381421023,"original_stellar_RMS_percent":3.499,"corrected_RMS_percent":6.051,"corrected_and_orbit_refit_RMS_percent":5.189},
+    {"name":"J1630+4520","required_missing_light":0.20202983897155352,"original_stellar_RMS_percent":1.822,"corrected_RMS_percent":8.174,"corrected_and_orbit_refit_RMS_percent":6.398}
+  ],
+  "reversible_energy_control": {
+    "stationary_rate_fixtures":81,
+    "empty_state_evolutions":4,
+    "stationary_linear_relative_error":1.4140503949285163e-15,
+    "stationary_energy_error":2.220446049250313e-16,
+    "evolution_max_error":3.126922716479274e-09,
+    "result":"With no companion escape and positive return rate, stationary total photon output equals input despite nonzero stored energy. Growth, escaping energy, or band/spatial redistribution is needed for dimness."
+  },
+  "conditional_energy_inventory": {
+    "units":"years as E divided by normalized catalog luminosity, not an age estimate",
+    "unknowns":"B bolometric conversion, eta retention, effective historical duration T",
+    "constraint":"B*eta*T*(u-1) >= Mchi*c^2/(Lcat*Lsun_bol)",
+    "median_total_normalized_years":232925545036707.3,
+    "median_within_last_radius_normalized_years":54822665553259.88,
+    "scope":"Existing R10 reservoir only; conditional E/c^2 gravitational source; no second reservoir added"
+  },
+  "readback_audit":{"checks":6201,"failures":0,"max_recorded_residual":8.881784197001252e-16},
+  "executed_source_sha256": {
+    "test_dimming.py":"cca9a1721c45acc48887700ac0ea63e0ae45f676c2f37fd4556bb6a9402b4ac5",
+    "reversible_followup.py":"8f4e8a90d69b19f886eeeeaa06281889b043a7c6d40c71dc32730c80eb27eaf9",
+    "readback_audit.py":"9737aa33e6967b4633196bcc76dd73b6decf978d216acb9fa3b995cfc38eb44a"
+  },
+  "complete_conversation_bundle": {
+    "name":"Photon-Graviton-JR3-Dimming-Test-Complete.zip",
+    "sha256":"1a30146efa8f0291c330dc6160be4e3906481b90682215c81e3b6c05d52b2982",
+    "contains":"Original JR2/JR1 inputs, exact executed code, full per-object arrays, all signed and dim-only cases, shared fits, energy evolutions, audit, logs, and full report"
+  },
+  "limits":["Fixed intrinsic stellar populations and uniform band flux changes; no multiband spectra or star-formation model","Per-galaxy transfer fits are not measured opacities or independent causal evidence","Shared influx is a hypothesis whose energy supply and replenishment remain unproved","No cluster, Solar-system, age or microscopic energy-to-gravity solution was established"]
+}
