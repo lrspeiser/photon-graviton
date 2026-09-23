@@ -743,3 +743,139 @@ The 1.5 Mpc column is pulled down because our model's galaxies are cut off at 1.
    momentum flux, and a relativistic form.
 4. **Microphysics** (u, g_d, the companion wavelength), **wide binaries**, **cosmology**:
    as in §11.
+
+## 14. Round 5, 23 September 2026: the Bullet main cluster's galaxy speeds, and the lensing masses
+
+Script: `code/bullet_main_v5.py`. Outputs are in `run-bullet-main-v5/` (2.9 Mpc box, 15 kpc
+pixels) and `run-bullet-main-v5-wide/` (`--dx 25`, 4.8 Mpc box).
+* Lensing strengths in 100 kpc apertures, gas residuals and peaks are quoted from the first.
+* Masses inside 250 kpc are quoted from the second, which holds more of the line of sight.
+  The narrow box gives 5–7% less.
+
+Round 4 left the main cluster's galaxies about 20% too slow: 981 km/s (line of sight, averaged
+over the 1.8 Mpc² Barrena et al. surveyed, equivalent radius 757 kpc), against 1,249 +109/−100.
+Round 4's model was built only from Clowe et al.'s two 100 kpc apertures.
+
+### 14.1 What the independent data say about the main cluster
+
+* **Gas: not the problem.** The fitted β model agrees with:
+  * the ROSAT β model of the whole system (Ota & Mitsuda 2004, as used by Paraficz et al. 2016):
+    1.5 against 1.7 × 10¹⁴ inside 1 Mpc and 3.6 against 3.4 × 10¹⁴ inside 2 Mpc;
+  * the gas share of the lensing mass inside 250 kpc (Paraficz et al.: 9 ± 3% of 2.5 × 10¹⁴).
+* **Stars inside 340 kpc: consistent.** Barrena et al.'s R-band light, 1.0 × 10¹² L☉ in
+  5.4 arcmin² (0.37 Mpc²) excluding the subcluster, is 2–3 × 10¹² M☉ for M/L_R 2–3. The model
+  has 2.1–2.7 × 10¹² (M/L_I 1.5–2).
+* **Stars beyond 340 kpc: never measured, and too few in the model.** In the 7 X-COP clusters
+  with measured stellar profiles (Ghizzardi et al. 2021), the cumulative star/gas ratio is 0.074
+  (median) at 0.5 R500 and 0.062 at R500 (range 0.035–0.073). Round 4's model has 0.045 and 0.035
+  at M/L 2, and 0.034 and 0.026 at M/L 1.5. Its NFW was also cut off at 1.5 Mpc.
+
+### 14.2 The galaxy speed
+
+All cases use M/L 1.5 for the central stars unless stated. "Outer stars" is an extended
+component (NFW, scale 800 kpc, cut at 3 Mpc).
+
+| Case | Speed in Barrena et al.'s region | Star/gas at 0.5 / 1 R500 | Stars projected inside 340 kpc |
+|---|---:|---:|---:|
+| A. Round 4 (stars cut off at 1.5 Mpc) | 981 km/s (+2.7σ) | 0.034 / 0.026 | 2.1 × 10¹² |
+| B. The same stars, not cut off | **1,150 (+1.0σ)** | 0.034 / 0.026 | 2.1 |
+| C. Outskirts at the X-COP median ratio (fitted scale 300 kpc) | 1,310 (−0.6σ) | 0.080 / 0.058 | 5.1 (too much) |
+| D. Outer stars from the speed: 8.2 × 10¹² | 1,249 | 0.053 / 0.043 | 3.2 |
+| E / F. The same for 1,149 / 1,358 km/s: 4.9 / 12 × 10¹² | 1,149 / 1,358 | 0.045–0.061 / 0.036–0.051 | 2.7 / 3.7 |
+| G. D with orbits partly radial (anisotropy 0.3) | 1,313 | as D | as D |
+| J. Published M/L 2, outer stars from the speed: 6.2 × 10¹² | 1,249 | 0.059 / 0.048 | 3.6 |
+
+* **Half of round 4's gap was a modelling artefact.** The model's galaxies stopped at 1.5 Mpc, so
+  galaxies near that edge had almost no random motion, and the heat of the outskirts was
+  missing. Letting the same profile continue gives 1,150 km/s.
+* **The rest needs a normal amount of stars in the outskirts.** It takes a star/gas ratio of
+  0.043–0.048 at R500: inside the X-COP range (0.035–0.073) and below its median. Orbits that
+  are partly radial, common in cluster outskirts, would need fewer. The light inside 340 kpc
+  stays close to Barrena et al.'s 2–3 × 10¹².
+* **The speed is a sensitive measure of the stars in our law.** The heat term makes σ grow
+  roughly as the square root of the hot stellar mass, so the galaxy speed is effectively a
+  stellar census of the outskirts.
+
+### 14.3 The lensing, re-examined: Clowe et al.'s kappas are floors
+
+Clowe et al. (2006) state that their reconstruction "does, however, systematically underestimate
+κ in the cores of massive clusters ... our measurements of κ in the peaks of the components are
+only lower bounds." Rounds 3–4 treated 0.36 ± 0.06 and 0.20 ± 0.05 as measurements. They are
+floors, so:
+* round 4's "all four within about 1σ" should read "above both floors, with the gas residuals
+  as measured";
+* lowering the star masses to M/L 1–1.5 was never required.
+
+The calibrated strengths are the projected masses inside 250 kpc of each brightest galaxy, from
+strong (and weak) lensing:
+* Bradač et al. 2006: main 2.8 ± 0.2, sub 2.3 ± 0.2 × 10¹⁴ M☉;
+* Paraficz et al. 2016 (strong lensing, 14 multiple-image systems): main 2.5 ± 0.1, sub
+  2.0 ± 0.2 × 10¹⁴ M☉.
+
+| Case | κ main (floor 0.36) | κ sub (floor 0.20) | Gas residuals (0.05, 0.02 ± 0.06) | Main inside 250 kpc | Sub inside 250 kpc | Peaks from galaxies |
+|---|---:|---:|---|---:|---:|---|
+| A. Round 4 (M/L 1.5, sub 1:8) | 0.43 | 0.19 | 0.04, 0.04 | 1.66 | 0.92 | 19 / 20 kpc |
+| D. Outer stars from the speed (M/L 1.5, sub 1:8) | 0.63 | 0.14 | 0.03, 0.04 | 2.43 | 1.05 | 11 / 19 |
+| L. Published stars (M/L 2), outer stars, sub 1:8 | 0.67 | 0.14 | 0.03, 0.04 | 2.54 | 1.04 | 9 / 16 |
+| L. The same, sub 1:4 | 0.64 | 0.36 | 0.06, 0.06 | 2.49 | 1.52 | 21 / 21 |
+| **L. The same, sub 1:3** | **0.61** | **0.49** | **0.08, 0.10** | **2.42** | **1.93** | **31 / 17** |
+| K. M/L 1.5, sub 1:2 | 0.44 | 0.72 | 0.06, 0.10 | 2.03 | 2.61 | 52 / 10 |
+
+Masses are in 10¹⁴ M☉.
+
+* **The main cluster now fits both its galaxy speed and its lensing mass.** They pull the same
+  way: both needed more pull in the outskirts than round 4 had. With the published star masses
+  and the outer stars the speed requires, the main cluster has 2.42–2.54 × 10¹⁴ inside 250 kpc
+  (Paraficz et al. 2.5 ± 0.1; Bradač et al. 2.8 ± 0.2).
+* **The subcluster's lensing mass says it was a bigger cluster than we assumed.** At 1:8 our law
+  gives it 1.0 × 10¹⁴ inside 250 kpc, about half of the measured 2.0–2.3. It matches at about
+  **1:3 in visible matter** (1.93 × 10¹⁴).
+  * Its pre-collision galaxies then moved at 680, 810 and 900 km/s at 50, 100 and 200 kpc.
+    Barrena et al. inferred about 700 km/s from its X-ray temperature and luminosity.
+  * Dark-matter merger reconstructions use 1:6–1:10 in total mass; the lensing masses themselves
+    are in the ratio 0.8 inside 250 kpc.
+* **Costs of the bigger subcluster.**
+  * The gas residuals rise to 0.08 and 0.10 (+0.5σ and +1.3σ).
+  * The main peak moves to 31 kpc from its galaxies, because the subcluster's broad field tilts
+    the summed map toward it (the superposition effect of §12.4).
+* **Nothing is fitted to the lensing except the subcluster's size.** One number, the outer
+  stars, is inferred from one measurement, the galaxy speed. Another, the subcluster's size, is
+  inferred from the subcluster's lensing mass. Both become predictions.
+
+### 14.4 Predictions from round 5
+
+1. **The main cluster's outskirts** hold stars at about 5% of the gas mass at R500 (4.3–4.8%),
+   within the X-COP range. Wide-field photometry out to 1.5 Mpc can check this.
+2. **The subcluster was about a third of the main cluster before the collision.**
+   * About 7 × 10¹² M☉ of stars came with it. They are now outside its compact core; tidal
+     stripping spreads them around it, where most would be counted as main-cluster members.
+   * About 1.1 × 10¹⁴ M☉ of its gas was stripped into the main cluster's gas.
+   * Its original galaxies moved at about 800 km/s. A phase-space analysis of a larger
+     spectroscopic sample can separate them, since they carry the subcluster's 616 km/s
+     line-of-sight offset.
+3. Unchanged from round 4: lensing stays with the galaxies; it returns around stopped gas at
+   about 200 kpc per Gyr; older collisions show extra lensing around the smaller clump.
+
+### 14.5 What round 5 does and does not change
+
+* **The law and its three constants are unchanged.** Relaxed galaxies and clusters are
+  unaffected.
+* **Corrected:**
+  * round 4's reading of Clowe et al.'s κ (floors, not measurements);
+  * round 4's "subcluster solved" (only against the floor; against the lensing mass it needs a
+    bigger pre-collision subcluster);
+  * the round-4 idea that the stars had to be lighter.
+* **Formula check (RULES.md §9):** no new formula. The inferred numbers are properties of
+  visible matter, checkable by counting stars and galaxies. None is an invisible or free
+  component.
+
+## 15. Open, and next (round 5)
+
+1. **Test the subcluster's size.** Look for the galaxies and stars that came with it, which
+   should be about 7 × 10¹² M☉ moving with the subcluster. Also check whether a 1:3 collision
+   reproduces the shock and X-ray morphology; dark-matter reconstructions use 1:6–1:10.
+2. **A stellar census of the main cluster's outskirts** (predicted: star/gas about 0.045 at
+   R500).
+3. **A field theory for the companion**, with its travel time, momentum flux and a relativistic
+   form.
+4. **Microphysics, wide binaries, cosmology:** as in §13.

@@ -128,3 +128,19 @@ collisions:
   fixed g_N.
 
 Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §12.
+
+## 9. Round 5 passes the check (23 September 2026)
+
+Round 5 adds no formula. It rebuilds the Bullet main cluster's outskirts and reads the lensing
+data correctly:
+* **Not dark matter.** The two numbers inferred are both amounts of visible matter, checkable by
+  counting stars and galaxies:
+  * the main cluster's outer stars, from the galaxy speed (star/gas 0.048 at R500, inside the
+    X-COP range);
+  * the subcluster's pre-collision size, about 1:3, from its lensing mass.
+  Neither is an invisible or free component.
+* **Settled systems unchanged; the guard verdict of §7 stands.**
+* **The blog's new §4** explains each piece of the law with hypotheses for its origin. The cold
+  limit is still reported as MOND-like, as it must be.
+
+Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §14.
