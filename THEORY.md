@@ -11,14 +11,17 @@
 >
 > The current theory is **hot-companion gravity**, locked in at round 3 (23 September 2026):
 > [research_work/results/hot-companion/](research_work/results/hot-companion/README.md), §10.
+> Round 4 (same day, §12) adds no rule. It works out the companion's travel time, which it
+> already had.
 > * **Galaxies:** 15.85 km/s, against MOND's 16.13.
 > * **Clusters:** error 0.227, against MOND's 1.062.
-> * **Bullet Cluster:** lensing on the galaxies, as observed.
+> * **Bullet Cluster:** lensing on the galaxies, as observed. With the companion's memory,
+>   all four measured strengths agree within about 1σ.
 > * **Solar System:** no anomalous pull.
 > * **The formula check shows it is not MOND.**
 
 
-## Hot-companion gravity: the current theory (round 3, 23 September 2026)
+## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
 
 *Details and every number: [research_work/results/hot-companion/](research_work/results/hot-companion/README.md),
 §§8–11. Plain-language account: [BLOG.md](BLOG.md). Proposed here; originality unverified.*
@@ -41,6 +44,14 @@
 6. **Attachment.** Strong fields hold the companion: `f = exp(−|g_N|/g_d)`.
 7. **Momentum.** The companion carries momentum, like any streaming field. Emitters do not
    recoil from what their companion does elsewhere.
+8. **Travel (round 4: made explicit, not added).** The companion leaves its emitter at u
+   relative to the emitter, keeping the emitter's velocity. Galilean invariance requires this:
+   galaxies move at hundreds of km/s, faster than u, yet all obey one rotation law. S, g_hot
+   and the coherent flow are therefore sums over the companion where it is now, emitted by
+   the matter where it was then. For settled or steadily moving systems this is the matter
+   now. After a collision it is the settled pre-collision clusters, riding with the galaxies,
+   except inside a fresh sphere of radius u·t around matter that changed its motion. g_N and
+   the attachment factor use the matter now.
 
 ### What follows
 
@@ -78,8 +89,9 @@ and collisions defy it because the heat rides with the galaxies, not the gas.
 |---|---|
 | 149 galaxies | 15.85 km/s, against MOND's 16.13 |
 | 12 clusters | 0.227 (held-out 0.244; stellar speeds from the law alone 0.329), against MOND's 1.062 |
-| Bullet Cluster | peaks on the galaxies (8 and 34 kpc from the BCGs); gas residuals as observed. Strengths: main 0.51 (obs 0.36 ± 0.06), sub 0.07 (obs 0.20 ± 0.05). **The sub strength is the open problem.** |
-| Collision stack | lensing stays with the galaxies in all 20 modelled substructures |
+| Bullet Cluster | peaks on the galaxies, on the gas side; gas residuals as observed. **Round 4, with the companion's memory:** sub 0.175 (0.13–0.25 for pre-collision ratios 1:6–1:10; obs 0.20 ± 0.05). At star M/L 1–1.5 (published range 0.5–3): main 0.33–0.43 (obs 0.36 ± 0.06), sub 0.19–0.21, gas 0.04–0.05 and 0.04 (obs 0.05 ± 0.06, 0.02 ± 0.06). All four within about 1σ; nothing fitted to the lensing. |
+| Bullet main galaxies | about 1,000 km/s line-of-sight average at M/L 1.5 (1,040–1,070 at M/L 2), against 1,249 +109/−100 (71 galaxies): about 2.5σ low. **Open.** |
+| Collision stack | with memory: moving the gas 40–300 kpc moves the lensing −2 to +10 kpc (β = 0.03, range −0.01 to 0.12); Harvey et al. 2015: 5.8 ± 8.2 kpc, β = −0.04 ± 0.07 |
 | KiDS early/late | 0.17–0.27 dex from early-type stars (obs 0.17 and 0.27) |
 | SLACS lenses | stars 1.05–1.35 × Salpeter; lensing = kinematics to −0.017 ± 0.024 dex |
 | Solar System | 0 anomalous pull; the Sun loses 2.3 × 10⁻¹⁵ of its mass per year to the companion |

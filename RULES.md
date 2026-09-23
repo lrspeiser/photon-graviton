@@ -111,3 +111,20 @@ pull follows the companion's net flow) was run through the guard:
   fixed by the visible matter.
 
 Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §10.
+
+## 8. Round 4 passes the check (23 September 2026)
+
+Round 4 adds no formula. It makes explicit that the companion travels at u relative to the
+matter that emitted it, which Galilean invariance requires, and follows the consequence after
+collisions:
+* **Not dark matter.** The pre-collision companion around a collided cluster is fixed by the
+  visible matter's own history. It has no adjustable amount, it fades as the fresh sphere
+  grows at u, and it is absent in settled systems.
+* **No new parameter.** The pre-collision mass ratio (1:6–1:10) comes from merger
+  reconstructions, and the star mass-to-light ratio (1–1.5) stays inside the published
+  0.5–3. Neither is fitted to the lensing.
+* **Settled systems are unchanged,** so round 3's guard verdict stands: the cold limit is a
+  derived MOND form (RAR-exponential, 0.030 dex away), and predictions differ by 0.93 dex at
+  fixed g_N.
+
+Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §12.

@@ -1,0 +1,88 @@
+{
+  "main": [
+    {
+      "mass_to_light": 1.0,
+      "sigma_r_kms": {
+        "100kpc": 757.4723335883338,
+        "400kpc": 958.6968827855379,
+        "800kpc": 924.3900878352503
+      },
+      "line_of_sight_inside_aperture_kms": {
+        "500kpc": 901.0426320081156,
+        "1000kpc": 881.8491665733346,
+        "1500kpc": 840.4513697410778
+      }
+    },
+    {
+      "mass_to_light": 1.5,
+      "sigma_r_kms": {
+        "100kpc": 849.0439389650136,
+        "400kpc": 1050.8650144045184,
+        "800kpc": 1001.0771091865707
+      },
+      "line_of_sight_inside_aperture_kms": {
+        "500kpc": 988.3701476082645,
+        "1000kpc": 961.8275813287866,
+        "1500kpc": 915.3586855875557
+      }
+    },
+    {
+      "mass_to_light": 2.0,
+      "sigma_r_kms": {
+        "100kpc": 930.4601221538809,
+        "400kpc": 1135.878584233274,
+        "800kpc": 1073.8210604235705
+      },
+      "line_of_sight_inside_aperture_kms": {
+        "500kpc": 1068.8601990458267,
+        "1000kpc": 1036.4410562968774,
+        "1500kpc": 985.4668429900853
+      }
+    }
+  ],
+  "sub_before": [
+    {
+      "ratio": 6.0,
+      "mass_to_light": 1.5,
+      "sigma_before_kms": {
+        "20kpc": 388.0923894839897,
+        "50kpc": 520.4954816961472,
+        "100kpc": 616.9847990954875,
+        "200kpc": 688.7726275971563
+      }
+    },
+    {
+      "ratio": 8.0,
+      "mass_to_light": 1.5,
+      "sigma_before_kms": {
+        "20kpc": 347.63920801790925,
+        "50kpc": 462.274832160354,
+        "100kpc": 548.7959069426884,
+        "200kpc": 612.968668397347
+      }
+    },
+    {
+      "ratio": 10.0,
+      "mass_to_light": 1.5,
+      "sigma_before_kms": {
+        "20kpc": 321.56486946792836,
+        "50kpc": 422.8929666072472,
+        "100kpc": 501.5659269643903,
+        "200kpc": 560.273706336296
+      }
+    }
+  ],
+  "observed": {
+    "main": "1249 +109/-100 km/s, 71 galaxies (Barrena et al. 2002)",
+    "sub": "212 +67/-52 km/s, 7 galaxies; ~700 km/s implied by its X-ray temperature and luminosity"
+  },
+  "note": "the 1.5 Mpc aperture is pulled down by the model galaxies being cut off at 1.5 Mpc",
+  "constants": {
+    "a_SI": 6.561190024871433e-11,
+    "a_code": 2024.571696765057,
+    "lam": 3.447563157408709,
+    "g_d_SI": 2.2620116998504284e-10,
+    "u_kms": 197.41001228101223
+  },
+  "seconds": 42.266291291000016
+}

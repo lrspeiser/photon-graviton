@@ -1,0 +1,94 @@
+{
+  "stream_heat": [
+    {
+      "v_rel_kms": null,
+      "main": 0.5067695478918844,
+      "sub": 0.07283894544745287,
+      "main_gas": 0.04272316388523977,
+      "sub_gas": 0.03534222424427586,
+      "main_peak_from_bcg_kpc": 7.905694150420948,
+      "nearest_peak_to_sub_bcg_kpc": 33.56398213551721,
+      "that_peak_from_sub_gas_kpc": 162.30051637192054
+    },
+    {
+      "v_rel_kms": 2600.0,
+      "main": 0.5027807952232551,
+      "sub": 0.09986513212776987,
+      "main_gas": 0.0546136366591987,
+      "sub_gas": 0.048391299258719475,
+      "main_peak_from_bcg_kpc": 7.905694150420948,
+      "nearest_peak_to_sub_bcg_kpc": 714.4993724122452,
+      "that_peak_from_sub_gas_kpc": 528.6978192588074
+    },
+    {
+      "v_rel_kms": 3000.0,
+      "main": 0.5010429944873646,
+      "sub": 0.10903858919579092,
+      "main_gas": 0.05831832054042541,
+      "sub_gas": 0.05312123802182439,
+      "main_peak_from_bcg_kpc": 25.739075352467502,
+      "nearest_peak_to_sub_bcg_kpc": 697.7372639660376,
+      "that_peak_from_sub_gas_kpc": 510.84004747151465
+    },
+    {
+      "v_rel_kms": 4700.0,
+      "main": 0.4876155877320668,
+      "sub": 0.16223896415660496,
+      "main_gas": 0.07689851981930028,
+      "sub_gas": 0.08483401965735907,
+      "main_peak_from_bcg_kpc": 25.739075352467502,
+      "nearest_peak_to_sub_bcg_kpc": 228.09358683589923,
+      "that_peak_from_sub_gas_kpc": 45.355335549000095
+    }
+  ],
+  "tidal": [
+    {
+      "v_kms": 2600.0,
+      "miss_kpc": 150.0,
+      "squeeze_kms_per_kpc": 12.761222979474663,
+      "stretch_kms_per_kpc": 1.5982682176890197,
+      "kick_kms": {
+        "50kpc": 301.96214128017,
+        "100kpc": 603.92428256034,
+        "200kpc": 1207.84856512068
+      }
+    },
+    {
+      "v_kms": 3000.0,
+      "miss_kpc": 150.0,
+      "squeeze_kms_per_kpc": 11.059726582211374,
+      "stretch_kms_per_kpc": 1.3851657886638171,
+      "kick_kms": {
+        "50kpc": 261.700522442814,
+        "100kpc": 523.401044885628,
+        "200kpc": 1046.802089771256
+      }
+    },
+    {
+      "v_kms": 4700.0,
+      "miss_kpc": 150.0,
+      "squeeze_kms_per_kpc": 7.059399946092366,
+      "stretch_kms_per_kpc": 0.884148375742862,
+      "kick_kms": {
+        "50kpc": 167.04288666562593,
+        "100kpc": 334.08577333125186,
+        "200kpc": 668.1715466625037
+      }
+    }
+  ],
+  "main_pull_law_code_units": {
+    "50kpc": 8736.151599142893,
+    "200kpc": 7073.928321194117,
+    "700kpc": 4380.2856041630275,
+    "1500kpc": 2357.9560097275144
+  },
+  "notes": "stream heat evaluated on the instantaneous field (no memory); tidal kicks are ordered, heat only after phase mixing",
+  "constants": {
+    "a_SI": 6.561190024871433e-11,
+    "a_code": 2024.571696765057,
+    "lam": 3.447563157408709,
+    "g_d_SI": 2.2620116998504284e-10,
+    "u_kms": 197.41001228101223
+  },
+  "seconds": 111.00863417099981
+}

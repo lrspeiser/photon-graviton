@@ -563,3 +563,183 @@ A dynamical, relativistic field theory for the companion is still to be written.
    * KiDS offset flat with radius beyond 100 kpc;
    * galaxy and gas dynamics equal in relaxed clusters;
    * lensing always with the galaxies in mergers.
+
+## 12. Round 4, 23 September 2026: the subcluster, and the companion's memory
+
+Scripts: `code/bullet_v4.py`, `code/collisions_v4.py`, `code/stream_tidal_v4.py` and
+`code/bullet_speeds_v4.py`. Their outputs are in `run-bullet-v4/`, `run-collisions-v4/`,
+`run-stream-tidal-v4/` and `run-bullet-speeds-v4/`. `code/bullet_v3.py` gained three options:
+`v_rel` (stream heat), `star_scale`, and `ghost` (a first version of the memory). Its defaults
+reproduce round 3 exactly.
+
+Round 3 left the Bullet's subcluster lensing at 0.07, against 0.20 ± 0.05. Three physical
+effects were examined. **No new rule was added.**
+
+### 12.1 Streams passing through each other (stream heat)
+
+The heat weight is the mean-square speed of free-streaming matter about its *local* mean
+motion. Where two galaxy streams overlap at relative speed V, that adds
+`ρ_m ρ_s V² / (ρ_m + ρ_s)` to `ρ⟨|v − v̄|²⟩`. Streaming along one axis counts V², not 3V².
+
+* **Galilean invariant, and gas-safe.** Colliding gas has no co-located streams.
+* **Evaluated on the instantaneous field** (no memory), it raises the subcluster's κ from
+  0.073 to 0.100, 0.109 and 0.162 at V = 2,600, 3,000 and 4,700 km/s.
+* **But the heat sits where the two stellar densities are comparable,** between the clusters.
+  So it smears the subcluster's peak away at 2,600–3,000 km/s, and at 4,700 km/s pulls it to
+  45 kpc from the gas.
+* **With the slow companion (§12.3), the heat that switched on in the collision has spread
+  only about u × t ≈ 30–60 kpc.** Today it is negligible for the Bullet; it builds up over
+  the next billion years.
+
+### 12.2 Tidal shaking
+
+As the subcluster crossed the main cluster's core, the main cluster's tides kicked its stars.
+With our law's pull for the main cluster, and a 150 kpc miss distance at 2,600–4,700 km/s,
+the kicks are 170–300 km/s at 50 kpc and 330–600 km/s at 100 kpc from the subcluster's centre.
+A head-on pass diverges, because the pull stays finite at a cluster's centre.
+
+**A fast pass gives every star at a given place the same kick.** That is ordered, converging
+motion, not a spread of speeds, so it becomes heat only as the stars phase-mix, over roughly
+an orbital time (~0.5–1 Gyr). It adds little to the Bullet today, and it predicts stronger
+lensing around the smaller clump in older collisions.
+
+### 12.3 The companion's memory: the decisive effect
+
+Two consequences of the existing rules:
+
+1. **The companion is slow.** At u = 197 km/s it takes about 500 Myr to travel 100 kpc. The
+   field around each Bullet component today was therefore mostly emitted *before* the
+   collision, about 150 Myr ago.
+2. **The companion keeps its emitter's velocity (emission, not a medium).** This is required
+   by Galilean invariance, because galaxies move at hundreds of km/s, well above u. If the
+   companion moved at u through a fixed medium, a galaxy's gravity would depend on how fast it
+   moves through space, yet all galaxies obey one rotation law.
+
+**So the field around each cluster now is that of the settled cluster it was before the
+collision, still moving with the pre-collision motion.** The collisionless galaxies kept that
+motion, so the old field rides with them. Only inside a fresh sphere of radius u × t (30 kpc
+for t = 150 Myr) has it been rebuilt around the stopped gas. The ordinary pull and the release
+factor follow the matter where it is now.
+
+**Model.** `bullet_v4.py`:
+* **Main cluster before the collision:** today's gas and stars, centred on its galaxies.
+* **Subcluster before the collision:** the bullet, its lost atmosphere (β-model, 150 kpc core)
+  and its galaxies (today's core plus satellites), centred on its galaxies.
+  * Baryons: 1/8 of the main's, from merger reconstructions (1:6–1:10).
+  * Stars: 7% of the gas, typical of X-COP clusters.
+  * Star speeds: from each pre-collision cluster's own gravity under our law.
+* **Fresh spheres:** swapped in with a distance-masked vector kernel.
+* **Nothing is fitted to the lensing.**
+
+| Case | Main (0.36 ± 0.06) | Sub (0.20 ± 0.05) | Main gas (0.05 ± 0.06) | Sub gas (0.02 ± 0.06) | Peaks from galaxies (kpc) |
+|---|---:|---:|---:|---:|---|
+| A. No memory, pre-collision star speeds | 0.51 | 0.09 | 0.05 | 0.05 | 12 / 12 |
+| **B. Memory: sub 1/8 of main, stars 7% of gas** | 0.52 | **0.175** | **0.04** | **0.04** | 12 / 17 |
+| C. Memory, sub 1/10 | 0.53 | 0.13 | 0.03 | 0.04 | 10 / 14 |
+| D. Memory, sub 1/6 | 0.51 | 0.25 | 0.05 | 0.04 | 18 / 20 |
+| E / F. Memory, stars 5% / 10% of gas | 0.53 / 0.52 | 0.13 / 0.25 | 0.03 / 0.05 | 0.04 / 0.04 | 10 / 14; 17 / 19 |
+| G. Memory, compact atmosphere (100 kpc core) | 0.52 | 0.19 | 0.04 | 0.03 | 12 / 17 |
+| H. Memory, gas stopped 300 Myr ago (60 kpc sphere) | 0.52 | 0.17 | 0.04 | 0.04 | 13 / 17 |
+| **I. Memory, star M/L 1.5 for both** | **0.43** | **0.19** | **0.04** | **0.04** | **18 / 20** |
+| **J. Memory, star M/L 1.0 for both** | **0.33** | **0.21** | **0.05** | **0.04** | **32 / 19** |
+
+Peaks are refined below the 15 kpc pixel. All of them sit on the gas side of their galaxies; the
+observed subcluster peak is 43 kpc from its brightest galaxy, also on the gas side.
+
+* **Faster stars alone do little.** Giving the subcluster's stars their pre-collision speeds
+  without the memory (case A) lifts it only from 0.07 to 0.09.
+* **The subcluster is solved by the memory.** It lifts the subcluster to 0.13–0.25 across standard
+  pre-collision assumptions (0.175 at the central choice), against 0.20 ± 0.05.
+* **The main cluster matches with lighter stars.** At mass-to-light 1–1.5 for both clusters,
+  inside Clowe et al.'s 0.5–3 (their masses are upper limits because foreground galaxies were
+  not removed), **all four measurements agree within about 1σ** (largest: +1.2σ for the main
+  cluster at 1.5) and both peaks sit on the galaxies.
+* **The subcluster's stars before the collision moved at 460–610 km/s** at 50–200 kpc under our
+  law (520–690 km/s at 1:6; M/L 1.5). That is a prediction for a spectroscopic survey with more than the 7
+  galaxies measured so far (212 +67/−52 km/s, a group picked out by its narrow velocity spread).
+* **Independent support.** Barrena et al. (2002, A&A 386, 816), who measured those 7 galaxies,
+  argued that the subcluster "is in fact the remnant core of a moderately massive cluster,
+  stripped by the collision". Its X-ray temperature and luminosity correspond to a velocity
+  dispersion of about 700 km/s and a pre-merger mass ratio of about 1:6. That is the cluster our
+  memory model needs.
+
+### 12.4 The 72-collision stack, with memory
+
+Same 20 pieces as round 3 (the Bullet as a template; gas lagging its galaxies by 40–300 kpc;
+subcluster mass ×1 and ×3), plus a reference with the gas left on its galaxies. The fresh
+sphere is u × t with t = lag / 1,240 km/s (the Bullet's separation speed), so 6–48 kpc. Stars
+at M/L 1.5. Peaks are refined below the 18 kpc pixel.
+
+* **The lensing does not follow the gas.** Moving the gas 40–300 kpc from its galaxies moves
+  the lensing peak by −2 to +10 kpc (median +3 kpc). As a fraction of the gas offset that is
+  β = 0.03 (median; range −0.01 to 0.12). Straight-line fits over all six stages give
+  −0.012 to +0.026.
+* **Harvey et al. 2015 measure 5.8 ± 8.2 kpc (β = −0.04 ± 0.07).** We agree within 1σ.
+* **Why it holds.** The fresh sphere grows at u = 197 km/s and never catches up with gas
+  separating at about 1,000 km/s. This is exactly the change round 2 asked for (§8.6): its
+  memory failed because the companion was then 874 km/s, so the stopped gas rebuilt its field
+  within 0.3 Gyr. Round 3's refit lowered u for an unrelated reason (stars carry the heat), and
+  that makes the memory safe.
+* **A fixed offset from superposition, the same with the gas left in place.** In the summed map
+  each peak sits 7–41 kpc toward the other cluster even at lag 0, because the other cluster's
+  broad field tilts the map. Harvey et al. fitted each clump separately, which removes it, so
+  the comparable number is the shift above. For the record, raw peak distances from the
+  galaxies are 5–50 kpc (median 17), and round 3's pixel-level fraction was 0.06.
+* **No lensing peak of its own on the main gas.** A weak separate bump on the subcluster's gas
+  (from the gas's own mass) appears in 2 of 20 maps. Offsets across the collision axis are
+  below 0.3 kpc.
+
+### 12.5 A check on the main cluster's galaxy speeds
+
+Round 3 compared our law's star speed at 400 kpc (1,140 km/s at M/L 2) with Barrena et al.'s
+1,249 +109/−100 km/s from 71 main-cluster galaxies. The fair comparison is the line-of-sight
+average over the region they sampled (their virial mass uses an aperture of about 1.5 Mpc):
+
+| Star M/L | Inside 0.5 Mpc | Inside 1 Mpc | Inside 1.5 Mpc |
+|---|---:|---:|---:|
+| 1.0 | 900 km/s | 880 | 840 |
+| 1.5 | 990 | 960 | 915 |
+| 2.0 | 1,070 | 1,040 | 985 |
+
+The 1.5 Mpc column is pulled down because our model's galaxies are cut off at 1.5 Mpc.
+
+* **The lighter stars that match the lensing give galaxies about 20% slower than measured:**
+  2.5–3σ. At the published M/L of 2 it is 1.8σ inside 0.5 Mpc.
+* **Barrena et al. find the main cluster's dynamics undisturbed by the collision**, so we do
+  not lean on merger-inflated speeds.
+* **What would have to change:** the pull on the main cluster's galaxies at 0.3–1.5 Mpc would
+  need to be about half as strong again, with the lensing inside 100 kpc unchanged. Our
+  main-cluster model was built only from Clowe et al.'s 100 kpc apertures. The next steps
+  are a full X-ray gas profile out to 2 Mpc, the same galaxy selection as Barrena et al., and
+  a check on galaxy orbits being partly radial in cluster outskirts. The script is
+  `code/bullet_speeds_v4.py`.
+
+### 12.6 What round 4 does and does not change
+
+* **Relaxed galaxies and clusters are unchanged.** A system moving steadily has its companion
+  simply carried along. Round 3's fits (15.85 km/s; 0.227; u = 197 km/s) stand, and
+  `bullet_v3.py`'s new options default off and reproduce round 3 exactly.
+* **Formula check.** No new constant and no per-object number beyond the star mass-to-light
+  ratio, which is kept inside the published range. The "old" companion is not invisible
+  matter. It is fixed by the visible matter's own history and fades on a known timescale, and it
+  is absent in settled systems.
+* **Memory matters only where matter has recently changed its motion:** collisions, and to a
+  lesser degree galaxies on tight orbits.
+* **Predictions:**
+  * Lensing in a collision reflects the clusters as they were before it, for roughly
+    (distance)/u, which is 500 Myr per 100 kpc.
+  * Lensing reappears on stopped gas only as a sphere growing at 197 km/s, about 200 kpc per
+    Gyr.
+  * Stream heat and tidal heat build up around the smaller clump over the following Gyr.
+
+## 13. Open, and next (round 4)
+
+1. **The main cluster's galaxy speeds (§12.5).** About 1,000 km/s from our law with the lighter
+   stars, against 1,249 ± 100 measured. Needs a full X-ray gas profile to 2 Mpc and the same
+   galaxy selection as Barrena et al.
+2. **Test the collision predictions.** A larger spectroscopic sample of the subcluster (460–610
+   km/s before the collision; 212 ± 60 from 7 galaxies now). Lensing in older collisions.
+3. **A field theory for the companion**, now with its travel time built in (a retarded source),
+   momentum flux, and a relativistic form.
+4. **Microphysics** (u, g_d, the companion wavelength), **wide binaries**, **cosmology**:
+   as in §11.

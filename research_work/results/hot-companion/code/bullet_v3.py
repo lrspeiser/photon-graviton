@@ -211,15 +211,15 @@ def own_sigma_profile(gas, stars, consts, extra_gas=None, n=500, iters=300):
     return r, np.sqrt(np.maximum(sig2, 0.0))
 
 
-def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360., 50.), heat=True, direction='flow', want_force=False, gas_sigma=None):
+def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360., 50.), heat=True, direction='flow', want_force=False, gas_sigma=None, v_rel=None, star_scale=1.0, ghost=None):
     a, lam, u = consts['a_code'], consts['lam'], consts['u_kms']
     gd = lam * a
     x = (np.arange(n) - n / 2 + 0.5) * dx + centre[0]
     y = (np.arange(n) - n / 2 + 0.5) * dx + centre[1]
     z = (np.arange(n) - n / 2 + 0.5) * dx
     rho_g = build_density(comps, pos, x, y, z, 'gas')
-    rho_sm = build_density({k: v for k, v in comps.items() if k == 'st_main'}, pos, x, y, z, 'st')
-    rho_ss = build_density({k: v for k, v in comps.items() if k == 'st_sub'}, pos, x, y, z, 'st')
+    rho_sm = star_scale * build_density({k: v for k, v in comps.items() if k == 'st_main'}, pos, x, y, z, 'st')
+    rho_ss = star_scale * build_density({k: v for k, v in comps.items() if k == 'st_sub'}, pos, x, y, z, 'st')
     rho_b = rho_g + rho_sm + rho_ss
     def kfield(sig, cen):
         if np.isscalar(sig):
@@ -230,6 +230,13 @@ def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360
     k_main = kfield(sig_main, pos[comps['st_main']['centre']])
     k_sub = kfield(sig_sub, pos[comps['st_sub']['centre']])
     krho = (k_main * rho_sm + k_sub * rho_ss) if heat else np.zeros_like(rho_b)
+    if heat and v_rel:
+        # round 4: the heat weight is the mean-square speed of the free-streaming matter about
+        # its LOCAL mean motion. Where the two galaxy streams overlap, their relative speed V adds
+        # rho_m rho_s V^2 / (rho_m + rho_s) to rho <|v - v_mean|^2>  (streaming along one axis)
+        tot = rho_sm + rho_ss
+        overlap = np.where(tot > 0, rho_sm * rho_ss / np.maximum(tot, 1e-30), 0.0).astype(np.float32)
+        krho = krho + (v_rel ** 2 / u ** 2) * overlap
     if heat and gas_sigma is not None:             # round-1 rule: the gas is hot too
         rho_gm = build_density({k: v for k, v in comps.items() if k == 'gas_main'}, pos, x, y, z, 'gas')
         krho = krho + (3 * gas_sigma[0] ** 2 / u ** 2) * rho_gm + (3 * gas_sigma[1] ** 2 / u ** 2) * (rho_g - rho_gm)
@@ -245,13 +252,25 @@ def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360
     S = G * inv_r2(krho * dV) if heat else 0.0
     del inv_r, inv_r2
     mag = np.sqrt(np.sum(gN ** 2, axis=0)) + 1e-30
-    flow = gN + g_hot
-    extra = np.exp(-mag / gd) * np.sqrt(a * (mag + S))
+    # round 4 (memory): the companion now arriving was emitted before the collision, and it
+    # keeps the velocity of what emitted it. Its coherent flow is sourced by where the matter
+    # would be had it kept its pre-collision motion (the ghost); only a fresh sphere of radius
+    # u * (time since the gas was stopped) around the stopped gas has been rebuilt. The
+    # ordinary pull g_N and the release factor stay with the matter where it is now.
+    if ghost is not None:
+        inv_r = Conv(n, dx, lambda r: 1.0 / r, cube_average(lambda r: 1 / r) / dx)
+        rho_ghost = build_density(ghost, pos, x, y, z, 'gas') + rho_sm + rho_ss
+        F = -np.array(np.gradient(-G * inv_r(rho_ghost * dV), dx)); del inv_r
+    else:
+        F = gN
+    Fmag = np.sqrt(np.sum(F ** 2, axis=0)) + 1e-30
+    flow = F + g_hot
+    extra = np.exp(-mag / gd) * np.sqrt(a * (Fmag + S))
     if direction == 'mix':
         # pull along the net flow, weighted by how much of the flow survives: the
         # directions of the ordinary and heat-fed flows mix in proportion to their sizes
         hmag = np.sqrt(np.sum(g_hot ** 2, axis=0)) if heat else 0.0
-        h = gN + extra * flow / (mag + hmag + 1e-30)
+        h = gN + extra * flow / (Fmag + hmag + 1e-30)
     else:
         fmag = np.sqrt(np.sum(flow ** 2, axis=0)) + 1e-30
         h = gN + extra * flow / fmag
