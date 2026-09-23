@@ -17,6 +17,61 @@
 > * **The formula check shows it is not MOND**, because it depends on how hot the matter is.
 
 
+## Hot-companion gravity: the current theory (23 September 2026)
+
+*Details and every number: [research_work/results/hot-companion/](research_work/results/hot-companion/README.md).
+Proposed here; originality unverified.*
+
+### Postulates
+
+1. **Emission.** Every kilogram of ordinary matter emits companion energy at rate ℓ. The
+   energy streams away at speed `u`.
+2. **Coherence.** Cold, orderly matter emits in step, so energy *fluxes* add as vectors.
+   Hot matter has its emitters Doppler-scrambled by random motion (speed σ), so it emits an
+   extra `k ℓ` per kilogram, with `k = 3σ²/u²`, out of step. Energy *densities* add as
+   scalars.
+3. **Amplitude.** The companion's energy density is A²/8πG, and its pull on matter and
+   light equals its amplitude A.
+4. **Attachment.** Strong fields hold the companion. It is released where the ordinary pull
+   is weak: `f = exp(−|g_N|/g_d)`.
+
+### What follows
+
+```
+g  =  g_N  +  exp(−|g_N|/g_d) · √( a (|g_N| + S_hot) ),    a = 2ℓ/u,    S_hot = G ∫ k ρ / d²
+```
+
+* **Constants,** fitted once: a = 6.58 × 10⁻¹¹ m/s², g_d = 2.82 × 10⁻¹⁰ m/s²,
+  u = 874 km/s. Therefore ℓ = 2.9 × 10⁻⁵ W/kg.
+* **Field equation:** ∇²Φ = −∇·h, with h the vector form of the law above, and g = −∇Φ.
+* **Action:** `L = −(1/8πG)[2∇Φ·∇ψ − W(|∇ψ|, S)] + ρ(v²/2 − Φ)`. It conserves momentum,
+  verified in 3D, and it gives hot matter a small reaction force.
+
+### MOND is the cold limit, derived rather than assumed
+
+With σ → 0, the field equation becomes Milgrom's QUMOND:
+* The deep law √(a g_N) comes from companion energy conservation.
+* The Newtonian limit comes from attachment.
+* The scale symmetry is exact.
+* **a₀ = 2ℓ/u** is emission power per kilogram over speed.
+* The interpolating function `ν(y) = 1 + exp(−y/λ)/√y` is fixed, not chosen. The closest
+  published function is 0.031 dex away.
+
+So galaxies obey MOND because disks are cold, and clusters defy it because their gas is hot.
+
+### Status
+
+| Test | Result |
+|---|---|
+| 149 galaxies | 15.93 km/s, against MOND's 16.13 |
+| 12 clusters | error 0.223, against MOND's 1.062; held-out 0.234 |
+| Solar System | 0 anomalous pull |
+| Lenses | no slip needed (gap +0.040 ± 0.026 dex); needs stars 1.2–1.6× Salpeter, a testable prediction |
+| KiDS elliptical/spiral gap | reproduced with hot haloes of about 1 stellar mass |
+| Mergers | lensing moves toward the galaxies, but the rebuild is too fast for the 72-collision stack. **This is the open problem.** |
+
+---
+
 **22 September 2026.** Resolves roadmap tasks T0.1 (the central contradiction), T2.2
 (the gravitational-wave constraint) and T0.2 (field equations, non-relativistic and
 relativistic). Every numerical claim below was computed in this session and is

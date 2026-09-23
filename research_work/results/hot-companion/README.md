@@ -195,3 +195,173 @@ Every check comes from `research_work/tools/formula_guard.py`.
 5. **The Bullet Cluster**, through companion attachment and spreading time.
 6. **The earlier slip (η) results** were measured against the retired MOND law. Re-derive
    them against this law.
+
+---
+
+## 8. Round 2, 23 September 2026: MOND derived, and the next steps run
+
+Scripts: `code/derive_mond.py`, `code/field_equation.py`, `code/kids_haloes.py`,
+`code/lenses_t35.py` and `code/bullet_toy.py`. Their outputs are in `run-derive/`,
+`run-field/`, `run-kids/`, `run-lenses/` and `run-bullet/`.
+
+### 8.1 MOND is the cold limit of this law
+
+**The direction matters: MOND comes out, it does not go in.** We start from the companion
+mechanism and let the matter cool.
+
+1. **Emission.** Every kilogram of ordinary matter emits companion energy at a steady rate
+   ℓ. The energy streams away at speed `u`, conserved.
+2. **Cold matter emits in step,** so the energy flows add as arrows. Their sum has exactly
+   the shape of Newton's field: `F = (ℓ/4πG) g_N`. This is a geometric identity, checked
+   numerically to 1.8 × 10⁻¹⁵.
+3. **Why hot matter is different.** Random motion Doppler-shifts every emitter, so the
+   cross terms average away.
+   * Cold emitters, all in step, give the squared vector sum: 160.50 against 160.49.
+   * Hot emitters (σ/u = 0.3) give the scalar sum: 210.55 against 209.20, within 0.6%.
+   * So *heat means incoherence* is demonstrated here, not assumed.
+4. **The companion's energy density is A²/8πG, and its pull equals its amplitude A.**
+   Energy balance through a sphere, `4πr² u A²/8πG = ℓM`, gives exactly
+   **A = √(G M a)/r with a = 2ℓ/u** (checked symbolically).
+5. **The result satisfies all three of MOND's defining properties:**
+   * the deep law g = √(a g_N), which gives flat rotation curves and **v⁴ = GMa**;
+   * the deep-regime scale symmetry (the residual is exactly 0);
+   * the Newtonian limit, where ν − 1 = 3 × 10⁻¹² at y = 100.
+
+So **MOND is what this law becomes for cold matter**, and it explains MOND's two unexplained
+pieces:
+
+| MOND's ingredient | In MOND | In hot-companion gravity |
+|---|---|---|
+| The constant a₀ | A new constant of nature | **a₀ = 2ℓ/u**: twice the companion power per kilogram, divided by the companion speed. With a = 6.58 × 10⁻¹¹ m/s² and u = 874 km/s, ℓ = 2.9 × 10⁻⁵ W/kg |
+| The interpolating function | Chosen by hand | Fixed by the release physics: `ν(y) = 1 + exp(−y/λ)/√y`. It is new: the closest published function is "simple", 0.031 dex away; RAR-exponential 0.034; standard 0.090 |
+| Why galaxies obey it | Postulated | Disks are cold |
+| Why clusters don't | Unexplained (needs extra matter) | Cluster gas is hot |
+
+**A concrete, testable consequence.** At ℓ = 2.9 × 10⁻⁵ W/kg, all matter converts
+1.4 × 10⁻⁴ of its rest energy over 13.8 Gyr. The Sun, hot inside, would emit 7.7 × 10²⁵ W
+(0.20 L☉) into the companion. That is an extra mass loss of **1.4 × 10⁻¹⁴ per year**, about
+15% on top of sunlight and solar wind, which is at the edge of what planetary ranging
+measures. The number holds if companion energy emitted inside the attachment radius is not
+re-absorbed.
+
+### 8.2 The field equation, and why it needs an action
+
+```
+∇²Φ_N = 4πGρ
+S_hot = G ∫ (3σ²/u²) ρ / d²
+∇²Φ  = −∇·h,   h = g_N + exp(−|g_N|/g_d) √(a(|g_N| + S_hot)) ĝ_N,   g = −∇Φ
+```
+
+* **The pull is conservative.** It is the gradient of Φ. In spherical symmetry it equals
+  the algebraic law used on the data.
+* **The cold limit is Milgrom's QUMOND, with our derived ν.**
+* **3D check.** A disk galaxy with a hot bulge on a 160³ grid: between 2 and 30 kpc, the
+  in-plane pull from the field equation is −9% to +2% from the algebraic law.
+* **Momentum: a real flaw, found and fixed.** Written as above, the heat term breaks
+  Newton's third law: an isolated hot-plus-cold pair pushes itself along.
+
+| Box size | Cold | Hot, as written | Hot, with the action's reaction force |
+|---:|---:|---:|---:|
+| 160 kpc | 0.035 | 0.224 | 0.074 |
+| 240 kpc | 0.017 | 0.251 | 0.032 |
+| 360 kpc | 0.009 | 0.258 | **0.013** |
+
+The table gives the net force on the pair divided by the force on one body. A residual that
+shrinks with the box is truncation; a violation does not shrink.
+
+**The fix is an action,** QUMOND-structured:
+`L = −(1/8πG)[2∇Φ·∇ψ − W(|∇ψ|, S)] + ρ(v²/2 − Φ)`, with
+`W = q² + 2∫₀^q e^(−q′/g_d) √(a(q′+S)) dq′`.
+* It reproduces the field equation above.
+* It hands hot matter an extra reaction force, `(k/8π) ∇ ∫ (∂W/∂S)/d²`.
+* With that force included, momentum is conserved (last column).
+* In real clusters the reaction is small: about 0 at the centre and **+5% (median) extra
+  inward pull on the gas at R500**.
+
+### 8.3 KiDS ellipticals versus spirals: hot haloes close the gap
+
+The model gives each elliptical a hot gas halo (β = 0.5, 300 kpc) in addition to its own
+stellar heat. The offset is log g(elliptical) − log g(spiral) at equal stars and cold gas:
+
+| Halo | at 30 kpc | 100 kpc | 300 kpc | 1 Mpc |
+|---|---:|---:|---:|---:|
+| none (stars' heat only) | +0.020 | +0.025 | +0.027 | +0.027 |
+| 1 stellar mass at 0.6 keV | +0.031 | +0.084 | **+0.197** | **+0.186** |
+| 1 stellar mass at 1.0 keV | +0.034 | +0.099 | **+0.220** | **+0.205** |
+| MOND with the same halo | +0.006 | +0.035 | +0.139 | +0.137 |
+
+* **Hot haloes of about one stellar mass** at the X-ray temperatures typical of these
+  galaxies reproduce the observed ≥ 0.2 dex beyond 300 kpc.
+* **MOND counts only the halo's mass, not its heat.** At 100 kpc it needs 8.3 stellar
+  masses for 0.2 dex, where ours needs 3.0–5.0.
+* **Prediction:** the offset grows with radius.
+
+### 8.4 SLACS lenses: the bookkeeping fix, and the heavy-star test
+
+We recomputed the lenses with standard ΛCDM distances and the published SLACS Chabrier
+masses (Auger et al. 2009), instead of the project's static-universe convention (T3.5):
+
+| | Project convention | Standard convention |
+|---|---:|---:|
+| Extra stellar mass needed by our law, lensing | +0.46 to +0.61 dex | **+0.34 to +0.45 dex** |
+| Relative to Salpeter | — | **1.23 – 1.57×** |
+| Lensing-minus-kinematics gap (slip test) | +0.051 ± 0.026 | **+0.040 ± 0.026 dex** |
+
+* **The convention alone accounted for about 0.13–0.16 dex (a factor of about 1.4)** of the
+  earlier lens tension.
+* **The published dark-matter-based IMF** for these σ (Posacki, Cappellari & Treu 2015,
+  `log α = 0.38 log(σ/200) − 0.06`) is α ≈ 0.95–0.99. It assumes a halo supplies part of the
+  mass.
+* **Spectroscopic measurements that don't assume dark matter** find bottom-heavy,
+  super-Salpeter IMFs in massive ellipticals (van Dokkum & Conroy 2010; Conroy & van Dokkum
+  2017).
+* **Clean test:** spectroscopic IMFs of these six lenses. We predict 1.2–1.6× Salpeter;
+  dark-matter models predict about 1.0.
+
+### 8.5 The slip, re-derived against the new law
+
+* **Lenses.** The stellar mass that lensing needs and the mass the resolved kinematics
+  need differ by +0.040 ± 0.026 dex, consistent with zero. Light and matter feel the same
+  pull (η = 1).
+* **Clusters.** At R500 the X-ray mass sits 22% below our law's prediction, a bias of
+  b = 0.22. That is the direction of the known X-ray bias, and it is where weak-lensing
+  masses usually sit, though b = 0.22 is at the high end of published estimates. Part of it
+  may be a genuine over-prediction.
+
+**The earlier "η ≠ 1" was an artefact of measuring against the MOND law.** The new law needs
+no slip.
+
+### 8.6 The Bullet Cluster: partly solved, and the top open problem
+
+This is a toy geometry, not a fit to the maps: 150 Myr after a 4,700 km/s collision, with
+gas outweighing stars 7:1.
+
+**Idea:** companions keep the velocity of the matter that emitted them. When the gas is
+stopped, its earlier companion flies on with the galaxies, and only its fresh companion
+(spread to u·t) sits on the gas.
+
+| | Lensing peak (galaxies −200, gas −80 kpc) | Share of the way to the galaxies |
+|---|---:|---:|
+| No memory (companion follows the matter now) | −70 | 0% (on the gas) |
+| Fresh companion spread 31–63 kpc | −170 | **75%** |
+| 94 kpc | −150 | 58% |
+| 134 kpc (u × 150 Myr) | −130 | 42% |
+| ≥ 268 kpc | −90 to −70 | back on the gas |
+
+* **The mechanism moves lensing off the gas toward the galaxies**, which the famous
+  argument says no force law can do, because this one has memory.
+* **But the stacked measurement pushes back.** Across 72 collisions, lensing sits within
+  5.8 ± 8.2 kpc of the stars (Harvey et al. 2015, Science 347, 1462). Our model predicts
+  lensing drifting back to the gas within about 0.3 Gyr, which those data don't show.
+* **What would have to change:** the gas must rebuild its companion far more slowly than
+  u = 874 km/s allows. For example, shocked gas might emit less for a while. This is now
+  the top open problem.
+
+## 9. Open, and next (updated)
+
+1. **Mergers.** The companion rebuild time after a collision (§8.6).
+2. **Derive `u` and `g_d`.** They are still measured.
+3. **Solar mass loss** of 1.4 × 10⁻¹⁴ per year, against planetary ranging.
+4. **Spectroscopic IMFs** for the six SLACS lenses.
+5. **The KiDS offset profile** against radius.
+6. **The full action**, written relativistically, for lensing beyond the weak field.

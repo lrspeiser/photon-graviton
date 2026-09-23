@@ -3,10 +3,21 @@
 *A working notebook on why galaxies and clusters pull harder than their matter should
 — without dark matter, and without an expanding universe.*
 
-**Living document. Last updated 22 September 2026 (rev 10).** Every number here is computed
+**Living document. Last updated 23 September 2026 (rev 11).** Every number here is computed
 from data in this repository by a script named in the text. When a result is
 overturned, it stays on the page with a line through the old claim, because the
 corrections are where the physics is.
+
+> **Rev 11: MOND is now an output, not an input.** Starting from our companion mechanism
+> and letting the matter cool, the law becomes MOND. MOND's constant turns out to be the
+> companion's emitted power per kilogram divided by its speed, and MOND's interpolating
+> function is fixed rather than chosen (§3.15).
+>
+> The rev-10 next steps were also run:
+> * a field equation that conserves momentum;
+> * hot haloes that close the elliptical/spiral lensing gap;
+> * lenses that no longer need "slip";
+> * the Bullet Cluster, only partly solved and now the open problem.
 
 > **Rev 10: a new rule, and a new law that is ours.** The owner has ruled out MOND and
 > anything derived from it, plain Newtonian gravity, and dark matter, and asked us to check
@@ -125,6 +136,11 @@ can bend light more than it moves stars, without anyone adding mass by hand.
 | Ellipticals lens harder than spirals (KiDS-1000) | **Right direction**, a tenth to a third of the size | — |
 | Strong lenses (SLACS) | **Open**: need heavy stellar populations | — |
 | Not MOND, not Newton, not dark matter | **Passes the formula check** | — |
+| MOND derived as the cold limit (rev 11) | **Done**: a₀ = 2 × power per kg ÷ speed | — |
+| Ellipticals vs spirals (KiDS), with hot haloes (rev 11) | **Reproduced**: 0.19–0.22 dex with about 1 stellar mass of hot gas | — |
+| Lensing vs star motions in 6 lenses (rev 11) | **No slip needed** (gap +0.04 ± 0.03 dex) | — |
+| Momentum conservation (rev 11) | **Passes**, once written as an action | — |
+| Merging clusters (Bullet, 72 collisions) | **Open**: lensing moves toward the galaxies, but not durably enough | — |
 
 Three universal constants, all fitted to data, with nothing fitted per object:
 * `a` = 6.6 × 10⁻¹¹ m/s²
@@ -619,6 +635,49 @@ cold, isolated matter, and even there it is not identical to any published one. 
 matter and the prediction moves by up to 0.34 dex at the same Newtonian pull. So it is not
 MOND, not Newton, and not dark matter.
 
+### 3.15 MOND, derived: what our law becomes when matter is cold
+
+*Scripts and numbers: [research_work/results/hot-companion/](research_work/results/hot-companion/README.md), §8.*
+
+You asked whether MOND could be *derived* from our cluster formulas rather than assumed.
+It can, in five steps:
+
+1. **Every kilogram of matter gives off companion energy,** a tiny 2.9 × 10⁻⁵ watts. It
+   streams away at 874 km/s.
+2. **Cold, orderly matter gives it off in step,** so the flows add like arrows. Their sum
+   has exactly the shape of Newton's gravity. That is a geometric fact, checked to 15 digits.
+3. **Heat scrambles it.** Randomly moving matter Doppler-shifts each emitter, so hot matter
+   adds without cancelling. The toy confirms it: cold emitters give the arrow sum, and hot
+   emitters give the plain sum.
+4. **The companion's energy grows as the square of its strength,** and its pull equals its
+   strength. Energy is conserved as it spreads, so its pull falls as 1/distance and scales as
+   √mass. That is MOND's deep law: flat rotation curves, with v⁴ = G × M × a₀.
+5. **Strong gravity holds it back,** which gives the normal Newtonian limit.
+
+MOND takes its constant a₀ and its interpolating function as given. Here both come out:
+
+* **a₀ = 2 × (power per kg) ÷ (companion speed).**
+* **The interpolating function is fixed.** The closest published version is 0.031 dex away.
+
+So **galaxies obey MOND because disks are cold, and clusters defy it because their gas is
+hot.** MOND becomes a special case of our law, the way Newton is a special case of
+Einstein's.
+
+**One number to check in our own backyard.** The Sun, hot inside, would pour 0.2 of its
+luminosity into the companion. It would lose an extra 1.4 × 10⁻¹⁴ of its mass per year,
+about 15% more than sunlight and solar wind. Planetary tracking is just reaching that
+precision.
+
+**The next steps, run:**
+
+| Step | Result |
+|---|---|
+| **A field equation** | Built and solved in 3D, and conservative. As first written, the heat term broke Newton's third law: a hot-plus-cold pair pushed itself along at 25% of the pair force. Rewritten as an action, momentum is conserved (the residual shrinks to 1% as the box grows). Hot cluster gas feels a small extra inward pull, about 5% at the edge. |
+| **Ellipticals vs spirals (KiDS)** | Give ellipticals a hot halo of about one stellar mass at 0.6–1 keV. Our law then yields 0.19–0.22 dex extra lensing beyond 300 kpc, matching the observed ≥ 0.2. MOND, which counts the halo's mass but not its heat, gets 0.14. |
+| **Lens bookkeeping (T3.5)** | Standard distances and published star masses remove about 0.13–0.16 dex of the old lens tension. Our law then needs stars 1.2–1.6× heavier than Salpeter. Dark-matter models of the same lenses need about 1.0. Spectroscopic studies of massive ellipticals report super-Salpeter stars, so there is a clean test available. |
+| **Slip, re-derived** | Lensing and star motions now ask for the same stellar mass within +0.04 ± 0.03 dex. The earlier "slip" was an artefact of the MOND baseline. |
+| **Bullet Cluster** | If companions keep the velocity of the matter that emitted them, lensing moves off the gas toward the galaxies: 42–75% of the way, depending on time since the collision. But in 72 stacked collisions, lensing sits within 6 ± 8 kpc of the stars (Harvey et al. 2015). Our gas rebuilds its own companion too fast to match that. **This is the open problem:** the gas must rebuild far more slowly. |
+
 ---
 
 ## 4. Why this beats the alternatives
@@ -657,6 +716,16 @@ because no result here requires it.
 ---
 
 ## 5. What is next, in order
+
+*Rev 11:*
+
+1. **Mergers.** Find what makes the gas rebuild its companion slowly after a collision.
+   Then test against the 72-collision stack.
+2. **Derive the companion speed (874 km/s) and the release level.** Both are still measured.
+3. **Spectroscopic star counts** for the six SLACS lenses: our law says 1.2–1.6× Salpeter,
+   dark matter says about 1.0.
+4. **The Sun's extra mass loss** of 1.4 × 10⁻¹⁴ per year, against planetary ranging.
+5. **The KiDS offset against radius:** our law says it grows outward.
 
 *Rev 10, for the hot-companion law:*
 

@@ -1,0 +1,74 @@
+{
+  "step1": {
+    "max_relative_mismatch": 1.841580706337468e-15,
+    "identity": "F_coh = -(l / 4 pi G) g_N  (Gauss geometry)"
+  },
+  "step2": {
+    "cold": {
+      "sigma_over_u": 0.0,
+      "intensity": 160.49560127758565,
+      "scalar_sum": 209.19733193418517,
+      "squared_vector_sum": 160.49359513272327
+    },
+    "warm": {
+      "sigma_over_u": 0.02,
+      "intensity": 227.97889158958023,
+      "scalar_sum": 209.19733193418517,
+      "squared_vector_sum": 160.49359513272327
+    },
+    "hot": {
+      "sigma_over_u": 0.3,
+      "intensity": 210.54874219689464,
+      "scalar_sum": 209.19733193418517,
+      "squared_vector_sum": 160.49359513272327
+    }
+  },
+  "step3": {
+    "amplitude_from_energy_balance": "sqrt(2)*sqrt(G)*sqrt(M)*sqrt(ell)/(r*sqrt(u))",
+    "amplitude_minus_sqrt_aGM_over_r": "0",
+    "a_equals": "2 l / u",
+    "deep_limit_nu_times_sqrt_y": "1",
+    "newtonian_limit_nu": "1",
+    "deep_scale_invariance_residual": "0",
+    "v4": "G*M*a"
+  },
+  "step4": {
+    "nu_ours": "1 + exp(-y/lambda)/sqrt(y), y = g_N/a, lambda = 4.281",
+    "newtonian_at_y_100": 3.08619796385301e-12,
+    "deep_nu_times_sqrt_y_at_1e4": 1.0099766412445557,
+    "comparison_with_published": {
+      "simple (Famaey & Binney 2005)": {
+        "max_dev_dex": 0.030552946612608878,
+        "a0_scale": 0.8596031241353195
+      },
+      "standard (Milgrom 1983)": {
+        "max_dev_dex": 0.09048177577378352,
+        "a0_scale": 0.6466959417939973
+      },
+      "Bekenstein toy / FB eq. 5 (g_N + sqrt(a0 g_N))": {
+        "max_dev_dex": 0.08720530620205645,
+        "a0_scale": 1.5006850788343202
+      },
+      "RAR exponential (McGaugh, Lelli & Schombert 2016)": {
+        "max_dev_dex": 0.03411273846208829,
+        "a0_scale": 0.8455558922081566
+      },
+      "delta-family, delta=2 (Famaey & McGaugh 2012)": {
+        "max_dev_dex": 0.06693570414295369,
+        "a0_scale": 0.7203394757781416
+      },
+      "n-family, n=3 (Famaey & McGaugh 2012)": {
+        "max_dev_dex": 0.11148037261287458,
+        "a0_scale": 0.5867007734809796
+      }
+    }
+  },
+  "step5": {
+    "emission_power_W_per_kg": 2.8756578849999997e-05,
+    "fraction_of_rest_energy_over_13_8_Gyr": 0.000139333970651229,
+    "sun_companion_power_W": 7.738840555699095e+25,
+    "sun_companion_power_over_luminosity": 0.2021640688531634,
+    "sun_extra_mass_loss_per_year": 1.3664620217898211e-14,
+    "note": "applies if companion energy emitted inside the attachment radius is not re-absorbed"
+  }
+}
