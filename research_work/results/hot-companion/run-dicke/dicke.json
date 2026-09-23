@@ -1,0 +1,126 @@
+{
+  "experiment": "Dicke narrowing of the companion phase (round 3)",
+  "units": "k_c = 1, sigma = 1 (so the Doppler rate k_c sigma = 1); locking rate Gamma = 0.05",
+  "narrowing": [
+    {
+      "tau_c": 1000000.0,
+      "kc_times_free_path": 1000000.0,
+      "coherence_time_numeric": 1.4000000000000001,
+      "coherence_time_theory": 1.4142135623730951
+    },
+    {
+      "tau_c": 1.0,
+      "kc_times_free_path": 1.0,
+      "coherence_time_numeric": 1.86,
+      "coherence_time_theory": 1.8414056604369606
+    },
+    {
+      "tau_c": 0.1,
+      "kc_times_free_path": 0.1,
+      "coherence_time_numeric": 10.02,
+      "coherence_time_theory": 10.1
+    },
+    {
+      "tau_c": 0.01,
+      "kc_times_free_path": 0.01,
+      "coherence_time_numeric": 102.45,
+      "coherence_time_theory": 100.00999999999999
+    }
+  ],
+  "locking": [
+    {
+      "tau_c": 1000000.0,
+      "var_numeric": 421.7890548911478,
+      "var_theory": 399.9920001599968,
+      "suppression_vs_free_streaming": 0.999980000399992,
+      "incoherent_fraction_theory": 1.0
+    },
+    {
+      "tau_c": 200.0,
+      "var_numeric": 365.7007207849155,
+      "var_theory": 363.6363636363636,
+      "suppression_vs_free_streaming": 0.9090909090909091,
+      "incoherent_fraction_theory": 1.0
+    },
+    {
+      "tau_c": 1.0,
+      "var_numeric": 19.062548741048335,
+      "var_theory": 19.047619047619047,
+      "suppression_vs_free_streaming": 0.047619047619047616,
+      "incoherent_fraction_theory": 0.9999999946577507
+    },
+    {
+      "tau_c": 0.1,
+      "var_numeric": 1.9927518504369306,
+      "var_theory": 1.9900497512437814,
+      "suppression_vs_free_streaming": 0.004975124378109454,
+      "incoherent_fraction_theory": 0.8633113751527408
+    },
+    {
+      "tau_c": 0.01,
+      "var_numeric": 0.1994105082127661,
+      "var_theory": 0.1999000499750125,
+      "suppression_vs_free_streaming": 0.0004997501249375313,
+      "incoherent_fraction_theory": 0.18118741067309052
+    },
+    {
+      "tau_c": 0.001,
+      "var_numeric": 0.019999726432626784,
+      "var_theory": 0.0199990000499975,
+      "suppression_vs_free_streaming": 4.999750012499375e-05,
+      "incoherent_fraction_theory": 0.01980034654308882
+    }
+  ],
+  "field": {
+    "scalar_sum": 219.06805863617922,
+    "squared_vector_sum": 19.60846816527801,
+    "runs": [
+      {
+        "emitters": "cold (at rest)",
+        "kc_times_free_path": null,
+        "intensity": 19.608468165278,
+        "intensity_over_scalar_sum": 0.08950856773621699,
+        "intensity_over_squared_vector_sum": 0.9999999999999997,
+        "predicted": 19.60846816527801,
+        "seeds_spread": 1.4503892858778864e-15
+      },
+      {
+        "emitters": "hot, free-streaming (orbits)",
+        "kc_times_free_path": 200.0,
+        "intensity": 218.72414158079891,
+        "intensity_over_scalar_sum": 0.9984300903677087,
+        "intensity_over_squared_vector_sum": 11.15457565257994,
+        "predicted": 219.06805863617922,
+        "seeds_spread": 0.7961820677781429
+      },
+      {
+        "emitters": "hot, colliding, k_c l = 0.1",
+        "kc_times_free_path": 0.1,
+        "intensity": 192.41914981730417,
+        "intensity_over_scalar_sum": 0.8783532889971302,
+        "intensity_over_squared_vector_sum": 9.813063835248146,
+        "predicted": 191.80420150211424,
+        "seeds_spread": 1.47316909763284
+      },
+      {
+        "emitters": "hot, colliding, k_c l = 0.01",
+        "kc_times_free_path": 0.01,
+        "intensity": 55.92056004142841,
+        "intensity_over_scalar_sum": 0.2552656940932652,
+        "intensity_over_squared_vector_sum": 2.85185765507428,
+        "predicted": 55.748034896615636,
+        "seeds_spread": 0.45864868254814894
+      },
+      {
+        "emitters": "hot, colliding, k_c l = 0.001",
+        "kc_times_free_path": 0.001,
+        "intensity": 23.5689686801396,
+        "intensity_over_scalar_sum": 0.10758742660554702,
+        "intensity_over_squared_vector_sum": 1.2019790878858507,
+        "predicted": 23.557837177944428,
+        "seeds_spread": 0.05359058337407859
+      }
+    ]
+  },
+  "heat_weight_mapping": "free streaming: incoherent fraction ~ k_c^2 sigma^2 / Gamma^2 = 3 sigma^2/u^2 with u = sqrt(3) Gamma / k_c; colliding: times Gamma tau_c / (1 + Gamma tau_c)"
+}

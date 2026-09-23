@@ -104,7 +104,14 @@ def analyse(lens, law):
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--output-dir', type=Path, required=True)
-    out = ap.parse_args().output_dir
+    ap.add_argument('--constants', type=Path, default=None,
+                    help='results.json whose constants (a_code, lam, u_kms) replace the round-1 values')
+    args = ap.parse_args(); out = args.output_dir
+    if args.constants:
+        global A, LAM, U
+        c = json.loads(args.constants.read_text())['constants']
+        A, LAM, U = c['a_code'], c['lam'], c['u_kms']
+        print(f'constants from {args.constants}: a = {A * L.KMS2_PER_KPC:.4e} m/s^2, lambda = {LAM:.3f}, u = {U:.1f} km/s')
     if out.exists(): raise FileExistsError('use a fresh output directory')
     out.mkdir(parents=True)
     res = {}

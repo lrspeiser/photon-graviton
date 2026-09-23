@@ -1,0 +1,655 @@
+{
+  "experiment": "Bullet Cluster under round-3 hot-companion gravity",
+  "data": {
+    "apertures": {
+      "gas": {
+        "main_bcg": 5.5,
+        "main_plasma": 6.6,
+        "sub_bcg": 2.7,
+        "sub_plasma": 5.8
+      },
+      "gas_err": {
+        "main_bcg": 0.6,
+        "main_plasma": 0.7,
+        "sub_bcg": 0.3,
+        "sub_plasma": 0.6
+      },
+      "stars": {
+        "main_bcg": 0.54,
+        "main_plasma": 0.23,
+        "sub_bcg": 0.58,
+        "sub_plasma": 0.12
+      },
+      "stars_err": {
+        "main_bcg": 0.08,
+        "main_plasma": 0.02,
+        "sub_bcg": 0.09,
+        "sub_plasma": 0.01
+      },
+      "kappa": {
+        "main_bcg": [
+          0.36,
+          0.06
+        ],
+        "main_plasma": [
+          0.05,
+          0.06
+        ],
+        "sub_bcg": [
+          0.2,
+          0.05
+        ],
+        "sub_plasma": [
+          0.02,
+          0.06
+        ]
+      }
+    },
+    "source": "Clowe et al. 2006 Table 2; Barrena et al. 2002 dispersions"
+  },
+  "sigma_crit_Msun_per_kpc2": 2841468711.8302054,
+  "positions_kpc": {
+    "main_bcg": [
+      -0.0,
+      0.0
+    ],
+    "main_plasma": [
+      189.07343319257217,
+      90.02519999997432
+    ],
+    "sub_bcg": [
+      715.5131883560836,
+      93.55559999992295
+    ],
+    "sub_plasma": [
+      522.7324329440265,
+      116.06189999994864
+    ]
+  },
+  "components": {
+    "gas_main": {
+      "kind": "beta",
+      "M": 362795553525041.1,
+      "scale": 219.84801361208946,
+      "rt": 2000.0,
+      "centre": "main_plasma"
+    },
+    "gas_sub": {
+      "kind": "beta",
+      "M": 6226456098264.004,
+      "scale": 30.000000000000014,
+      "rt": 400.0,
+      "centre": "sub_plasma"
+    },
+    "st_main": {
+      "kind": "nfw",
+      "M": 9022373651405.95,
+      "scale": 466.4664064868925,
+      "rt": 1500.0,
+      "centre": "main_bcg"
+    },
+    "st_sub": {
+      "kind": "nfw",
+      "M": 986217359343.9595,
+      "scale": 12.099385027607205,
+      "rt": 600.0,
+      "centre": "sub_bcg"
+    }
+  },
+  "aperture_check": {
+    "main_bcg": {
+      "gas_model": 5.013596437065935,
+      "gas_obs": 5.5,
+      "stars_model": 0.5400000000000934,
+      "stars_obs": 0.54
+    },
+    "main_plasma": {
+      "gas_model": 6.973454733126418,
+      "gas_obs": 6.6,
+      "stars_model": 0.22999999999992532,
+      "stars_obs": 0.23
+    },
+    "sub_bcg": {
+      "gas_model": 2.935258970892622,
+      "gas_obs": 2.7,
+      "stars_model": 0.5799999999998636,
+      "stars_obs": 0.58
+    },
+    "sub_plasma": {
+      "gas_model": 5.539296334541503,
+      "gas_obs": 5.8,
+      "stars_model": 0.12000000000004155,
+      "stars_obs": 0.12
+    }
+  },
+  "constants": {
+    "a_SI": 6.561190024871433e-11,
+    "a_code": 2024.571696765057,
+    "lam": 3.447563157408709,
+    "g_d_SI": 2.2620116998504284e-10,
+    "u_kms": 197.41001228101223
+  },
+  "own_gravity_star_speeds_kms": {
+    "main": {
+      "20kpc": 618.7855802509025,
+      "50kpc": 795.0896321932727,
+      "100kpc": 930.4601221538809,
+      "200kpc": 1054.1036579120935,
+      "400kpc": 1135.878584233274
+    },
+    "sub_today": {
+      "20kpc": 264.66923695381024,
+      "50kpc": 312.2930411811408,
+      "100kpc": 346.28165039609274,
+      "200kpc": 368.6283394235049,
+      "400kpc": 324.5173963422595
+    },
+    "sub_pre_collision": {
+      "20kpc": 270.9624965121839,
+      "50kpc": 329.50452192049374,
+      "100kpc": 383.3035405007203,
+      "200kpc": 436.51461183065373,
+      "400kpc": 414.2464652356705
+    }
+  },
+  "runs": [
+    {
+      "case": "A. prediction: star speeds from our law and the visible matter (subcluster as it was before the collision)",
+      "sigma_main": {
+        "r_kpc": [
+          20,
+          50,
+          100,
+          200,
+          400
+        ],
+        "sigma": [
+          618.7855802509025,
+          795.0896321932727,
+          930.4601221538809,
+          1054.1036579120935,
+          1135.878584233274
+        ]
+      },
+      "sigma_sub": {
+        "r_kpc": [
+          20,
+          50,
+          100,
+          200,
+          400
+        ],
+        "sigma": [
+          270.9624965121839,
+          329.50452192049374,
+          383.3035405007203,
+          436.51461183065373,
+          414.2464652356705
+        ]
+      },
+      "heat": true,
+      "direction": "mix",
+      "k_main": "radial profile",
+      "k_sub": "radial profile",
+      "kappa_total_apertures": {
+        "main_bcg": 0.48844507336616516,
+        "main_plasma": 0.33262819051742554,
+        "sub_bcg": 0.13731662929058075,
+        "sub_plasma": 0.1829417496919632
+      },
+      "kappa_baryons_apertures": {
+        "main_bcg": 0.059878308326005936,
+        "main_plasma": 0.07838794589042664,
+        "sub_bcg": 0.037278592586517334,
+        "sub_plasma": 0.06138016656041145
+      },
+      "gas_share_of_kappa": {
+        "main_bcg": 0.11024567288428681,
+        "main_plasma": 0.22789195109822913,
+        "sub_bcg": 0.22594348032693506,
+        "sub_plasma": 0.32819399963166934
+      },
+      "grid_baryon_aperture_masses_1e12": {
+        "main_bcg": 5.345178123112413,
+        "main_plasma": 6.997486464224763,
+        "sub_bcg": 3.327761674949638,
+        "sub_plasma": 5.479245715268063
+      },
+      "clowe_style": {
+        "main_bcg": 0.5067695478918844,
+        "sub_bcg": 0.07283894544745287,
+        "main_plasma": 0.04272316388523977,
+        "sub_plasma": 0.03534222424427586,
+        "fit": {
+          "k0_main": 0.5534431416781469,
+          "rc_main": 135.35302761209797,
+          "k0_sub": 0.0658919165036193,
+          "rc_sub": 223.4286010430267,
+          "sheet": -0.03784215693364169
+        }
+      },
+      "peaks": [
+        {
+          "x": 7.5,
+          "y": -2.5,
+          "kappa": 0.5506771802902222,
+          "dist_main_bcg": 7.905694150420948,
+          "dist_main_plasma": 203.78867553515508,
+          "dist_sub_bcg": 714.4993724122452,
+          "dist_sub_plasma": 528.6978192588074
+        },
+        {
+          "x": 682.5,
+          "y": 87.5,
+          "kappa": 0.16240830719470978,
+          "dist_main_bcg": 688.0861137968125,
+          "dist_main_plasma": 493.43302834974975,
+          "dist_sub_bcg": 33.56398213551721,
+          "dist_sub_plasma": 162.30051637192054
+        }
+      ],
+      "kappa_min": 0.010980412364006042,
+      "momentum": {
+        "net_force_over_mass": [
+          -380.57550048828125,
+          -183.95709228515625,
+          -0.00033714890014380217
+        ],
+        "mean_pull": 3628.310255965177,
+        "momentum_budget_over_mass": 3145.37657725021,
+        "net_over_mean_pull": 0.11650137603282928,
+        "net_over_budget": 0.13438871502876282
+      },
+      "main_peak_fraction_stars_to_gas": 0.027204058875509043,
+      "sub_peak_fraction_stars_to_gas": 0.16532680251039414
+    },
+    {
+      "case": "B. same, subcluster as it is today",
+      "sigma_main": {
+        "r_kpc": [
+          20,
+          50,
+          100,
+          200,
+          400
+        ],
+        "sigma": [
+          618.7855802509025,
+          795.0896321932727,
+          930.4601221538809,
+          1054.1036579120935,
+          1135.878584233274
+        ]
+      },
+      "sigma_sub": {
+        "r_kpc": [
+          20,
+          50,
+          100,
+          200,
+          400
+        ],
+        "sigma": [
+          264.66923695381024,
+          312.2930411811408,
+          346.28165039609274,
+          368.6283394235049,
+          324.5173963422595
+        ]
+      },
+      "heat": true,
+      "direction": "mix",
+      "k_main": "radial profile",
+      "k_sub": "radial profile",
+      "kappa_total_apertures": {
+        "main_bcg": 0.48859110474586487,
+        "main_plasma": 0.33188819885253906,
+        "sub_bcg": 0.13346131145954132,
+        "sub_plasma": 0.18051473796367645
+      },
+      "kappa_baryons_apertures": {
+        "main_bcg": 0.059878308326005936,
+        "main_plasma": 0.07838794589042664,
+        "sub_bcg": 0.037278592586517334,
+        "sub_plasma": 0.06138016656041145
+      },
+      "gas_share_of_kappa": {
+        "main_bcg": 0.11021272237094173,
+        "main_plasma": 0.2284000684247579,
+        "sub_bcg": 0.23247034507137157,
+        "sub_plasma": 0.3326065517326489
+      },
+      "grid_baryon_aperture_masses_1e12": {
+        "main_bcg": 5.345178123112413,
+        "main_plasma": 6.997486464224763,
+        "sub_bcg": 3.327761674949638,
+        "sub_plasma": 5.479245715268063
+      },
+      "clowe_style": {
+        "main_bcg": 0.5068523423777875,
+        "sub_bcg": 0.06944321786498686,
+        "main_plasma": 0.04191050223272254,
+        "sub_plasma": 0.0344362478565141,
+        "fit": {
+          "k0_main": 0.5533313485332474,
+          "rc_main": 135.40922030845175,
+          "k0_sub": 0.06193785246789092,
+          "rc_sub": 246.6698265294532,
+          "sheet": -0.038322068039512665
+        }
+      },
+      "peaks": [
+        {
+          "x": 7.5,
+          "y": -2.5,
+          "kappa": 0.550797164440155,
+          "dist_main_bcg": 7.905694150420948,
+          "dist_main_plasma": 203.78867553515508,
+          "dist_sub_bcg": 714.4993724122452,
+          "dist_sub_plasma": 528.6978192588074
+        }
+      ],
+      "kappa_min": 0.01098132599145174,
+      "momentum": null,
+      "main_peak_fraction_stars_to_gas": 0.027204058875509043,
+      "sub_peak_fraction_stars_to_gas": 3.5658630786553918
+    },
+    {
+      "case": "C. measured galaxy speeds, constant (main 1249, sub 212)",
+      "sigma_main": 1249.0,
+      "sigma_sub": 212.0,
+      "heat": true,
+      "direction": "mix",
+      "k_main": 120.09025870658036,
+      "k_sub": 3.459828927871551,
+      "kappa_total_apertures": {
+        "main_bcg": 0.5933972001075745,
+        "main_plasma": 0.3616339862346649,
+        "sub_bcg": 0.13840176165103912,
+        "sub_plasma": 0.1933811604976654
+      },
+      "kappa_baryons_apertures": {
+        "main_bcg": 0.059878308326005936,
+        "main_plasma": 0.07838794589042664,
+        "sub_bcg": 0.037278592586517334,
+        "sub_plasma": 0.06138016656041145
+      },
+      "gas_share_of_kappa": {
+        "main_bcg": 0.09074689899194952,
+        "main_plasma": 0.20961328363120357,
+        "sub_bcg": 0.2241719813285659,
+        "sub_plasma": 0.3104769067292155
+      },
+      "grid_baryon_aperture_masses_1e12": {
+        "main_bcg": 5.345178123112413,
+        "main_plasma": 6.997486464224763,
+        "sub_bcg": 3.327761674949638,
+        "sub_plasma": 5.479245715268063
+      },
+      "clowe_style": {
+        "main_bcg": 0.6080698768781648,
+        "sub_bcg": 0.05887662680415252,
+        "main_plasma": 0.028562597342027984,
+        "sub_plasma": 0.031098967159853448,
+        "fit": {
+          "k0_main": 0.6797365548316097,
+          "rc_main": 120.51925786614049,
+          "k0_sub": 0.059745960477995505,
+          "rc_sub": 229.0604315323151,
+          "sheet": -0.032774953413022535
+        }
+      },
+      "peaks": [
+        {
+          "x": 7.5,
+          "y": -2.5,
+          "kappa": 0.6892797350883484,
+          "dist_main_bcg": 7.905694150420948,
+          "dist_main_plasma": 203.78867553515508,
+          "dist_sub_bcg": 714.4993724122452,
+          "dist_sub_plasma": 528.6978192588074
+        }
+      ],
+      "kappa_min": 0.01255702879279852,
+      "momentum": null,
+      "main_peak_fraction_stars_to_gas": 0.027204058875509043,
+      "sub_peak_fraction_stars_to_gas": 3.5658630786553918
+    },
+    {
+      "case": "D. speeds implied by the lensing mass (circular; reference only: main 660, sub 500)",
+      "sigma_main": 660.0,
+      "sigma_sub": 500.0,
+      "heat": true,
+      "direction": "mix",
+      "k_main": 33.53287382032858,
+      "k_sub": 19.24522143039978,
+      "kappa_total_apertures": {
+        "main_bcg": 0.3364698588848114,
+        "main_plasma": 0.26614800095558167,
+        "sub_bcg": 0.18283265829086304,
+        "sub_plasma": 0.16901299357414246
+      },
+      "kappa_baryons_apertures": {
+        "main_bcg": 0.059878308326005936,
+        "main_plasma": 0.07838794589042664,
+        "sub_bcg": 0.037278592586517334,
+        "sub_plasma": 0.06138016656041145
+      },
+      "gas_share_of_kappa": {
+        "main_bcg": 0.16004094975622352,
+        "main_plasma": 0.2848162941488358,
+        "sub_bcg": 0.1696950502098993,
+        "sub_plasma": 0.3552412347792814
+      },
+      "grid_baryon_aperture_masses_1e12": {
+        "main_bcg": 5.345178123112413,
+        "main_plasma": 6.997486464224763,
+        "sub_bcg": 3.327761674949638,
+        "sub_plasma": 5.479245715268063
+      },
+      "clowe_style": {
+        "main_bcg": 0.3420547409986947,
+        "sub_bcg": 0.12453304566668737,
+        "main_plasma": 0.053521226595104165,
+        "sub_plasma": 0.040583055715208385,
+        "fit": {
+          "k0_main": 0.35661595997078555,
+          "rc_main": 156.56404305515468,
+          "k0_sub": 0.48548192623458525,
+          "rc_sub": 17.706178929675822,
+          "sheet": -0.017520524144212405
+        }
+      },
+      "peaks": [
+        {
+          "x": 7.5,
+          "y": -2.5,
+          "kappa": 0.38322699069976807,
+          "dist_main_bcg": 7.905694150420948,
+          "dist_main_plasma": 203.78867553515508,
+          "dist_sub_bcg": 714.4993724122452,
+          "dist_sub_plasma": 528.6978192588074
+        },
+        {
+          "x": 712.5,
+          "y": 87.5,
+          "kappa": 0.23646685481071472,
+          "dist_main_bcg": 717.8527007680615,
+          "dist_main_plasma": 523.4326580132831,
+          "dist_sub_bcg": 6.763844722367919,
+          "dist_sub_plasma": 191.90495469880514
+        }
+      ],
+      "kappa_min": 0.00912488717585802,
+      "momentum": null,
+      "main_peak_fraction_stars_to_gas": 0.027204058875509043,
+      "sub_peak_fraction_stars_to_gas": 0.011802079307150657
+    },
+    {
+      "case": "E. no heat at all (the cold, MOND-like limit of our law)",
+      "sigma_main": 1249.0,
+      "sigma_sub": 212.0,
+      "heat": false,
+      "direction": "mix",
+      "k_main": 120.09025870658036,
+      "k_sub": 3.459828927871551,
+      "kappa_total_apertures": {
+        "main_bcg": 0.13818925619125366,
+        "main_plasma": 0.18578191101551056,
+        "sub_bcg": 0.09269857406616211,
+        "sub_plasma": 0.13906821608543396
+      },
+      "kappa_baryons_apertures": {
+        "main_bcg": 0.059878308326005936,
+        "main_plasma": 0.07838794589042664,
+        "sub_bcg": 0.037278592586517334,
+        "sub_plasma": 0.06138016656041145
+      },
+      "gas_share_of_kappa": {
+        "main_bcg": 0.38967541518380316,
+        "main_plasma": 0.40802297119745373,
+        "sub_bcg": 0.3346955165300947,
+        "sub_plasma": 0.4317333336190667
+      },
+      "grid_baryon_aperture_masses_1e12": {
+        "main_bcg": 5.345178123112413,
+        "main_plasma": 6.997486464224763,
+        "sub_bcg": 3.327761674949638,
+        "sub_plasma": 5.479245715268063
+      },
+      "clowe_style": {
+        "main_bcg": 0.13887877446854904,
+        "sub_bcg": 0.06854612452613697,
+        "main_plasma": 0.056805567307177375,
+        "sub_plasma": 0.03834356083475452,
+        "fit": {
+          "k0_main": 0.14689004424822566,
+          "rc_main": 317.09215318376465,
+          "k0_sub": 0.06734579375884746,
+          "rc_sub": 427.77654159430256,
+          "sheet": -0.03504034670949582
+        }
+      },
+      "peaks": [
+        {
+          "x": 202.5,
+          "y": 87.5,
+          "kappa": 0.1929135024547577,
+          "dist_main_bcg": 220.5957841845578,
+          "dist_main_plasma": 13.661966596145414,
+          "dist_sub_bcg": 513.048927217116,
+          "dist_sub_plasma": 321.50364421085106
+        },
+        {
+          "x": 487.5,
+          "y": 117.5,
+          "kappa": 0.15203812718391418,
+          "dist_main_bcg": 501.46036732726947,
+          "dist_main_plasma": 299.68863910984277,
+          "dist_sub_bcg": 229.26698051762824,
+          "dist_sub_plasma": 35.26177055630465
+        }
+      ],
+      "kappa_min": 0.007016382180154324,
+      "momentum": null,
+      "main_peak_fraction_stars_to_gas": 1.0527047100019764,
+      "sub_peak_fraction_stars_to_gas": 1.1811608353074703
+    },
+    {
+      "case": "F. rounds 1-2 direction rule (pull along ordinary gravity), speeds as A",
+      "sigma_main": {
+        "r_kpc": [
+          20,
+          50,
+          100,
+          200,
+          400
+        ],
+        "sigma": [
+          618.7855802509025,
+          795.0896321932727,
+          930.4601221538809,
+          1054.1036579120935,
+          1135.878584233274
+        ]
+      },
+      "sigma_sub": {
+        "r_kpc": [
+          20,
+          50,
+          100,
+          200,
+          400
+        ],
+        "sigma": [
+          270.9624965121839,
+          329.50452192049374,
+          383.3035405007203,
+          436.51461183065373,
+          414.2464652356705
+        ]
+      },
+      "heat": true,
+      "direction": "newton",
+      "k_main": "radial profile",
+      "k_sub": "radial profile",
+      "kappa_total_apertures": {
+        "main_bcg": 0.3221605718135834,
+        "main_plasma": 0.47832849621772766,
+        "sub_bcg": 0.1531020998954773,
+        "sub_plasma": 0.2456979751586914
+      },
+      "kappa_baryons_apertures": {
+        "main_bcg": 0.059878308326005936,
+        "main_plasma": 0.07838794589042664,
+        "sub_bcg": 0.037278592586517334,
+        "sub_plasma": 0.06138016656041145
+      },
+      "gas_share_of_kappa": {
+        "main_bcg": 0.16714942948210046,
+        "main_plasma": 0.1584753739881412,
+        "sub_bcg": 0.20264775695342296,
+        "sub_plasma": 0.2443666232586664
+      },
+      "grid_baryon_aperture_masses_1e12": {
+        "main_bcg": 5.345178123112413,
+        "main_plasma": 6.997486464224763,
+        "sub_bcg": 3.327761674949638,
+        "sub_plasma": 5.479245715268063
+      },
+      "clowe_style": {
+        "main_bcg": 0.3452662378337268,
+        "sub_bcg": 0.1311548179434935,
+        "main_plasma": 0.20553004334101202,
+        "sub_plasma": 0.06963035712638246,
+        "fit": {
+          "k0_main": 0.3774972568062232,
+          "rc_main": 236.32190235477793,
+          "k0_sub": 0.12878989980384392,
+          "rc_sub": 493.50199734261736,
+          "sheet": -0.09580332377303125
+        }
+      },
+      "peaks": [
+        {
+          "x": 202.5,
+          "y": 87.5,
+          "kappa": 0.5279237627983093,
+          "dist_main_bcg": 220.5957841845578,
+          "dist_main_plasma": 13.661966596145414,
+          "dist_sub_bcg": 513.048927217116,
+          "dist_sub_plasma": 321.50364421085106
+        }
+      ],
+      "kappa_min": 0.012510809116065502,
+      "momentum": null,
+      "main_peak_fraction_stars_to_gas": 1.0527047100019764,
+      "sub_peak_fraction_stars_to_gas": 2.6217223737622897
+    }
+  ],
+  "grid": {
+    "n": 192,
+    "dx_kpc": 15.0
+  },
+  "seconds": 133.76288317599983
+}
