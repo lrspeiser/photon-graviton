@@ -1005,3 +1005,327 @@ Boost of the pull for a binary of 1.5 suns (velocities scale as its square root)
 3. **Model the heat the subcluster's galaxies gained in the passage**, carried with them.
    This is the leading candidate for its missing lensing.
 4. **Wide binaries:** 19% more pull beyond 7,000 AU (orbits 9% faster).
+
+## 17. Round 7, 23 September 2026: the Milky Way and the standard tests, against the literature
+
+The question: have we compared our law with the Milky Way, and with the stars and lenses the
+field accepts as the standard tests? Until now the Milky Way entered only through the Sun and
+the wide binaries. Round 7 runs the law, unchanged (a, g_d from SPARC, u from X-COP), on every
+standard Galactic measurement we could verify, and on the standard lensing cases, side by side
+with MOND (QUMOND, simple function, a0 = 1.2 × 10⁻¹⁰ m/s²), Newton with visible matter only,
+and, where published, the dark-matter model.
+
+Scripts: `code/mw_model.py` (solver), `code/milky_way_v7.py`, `code/mw_dwarfs_v7.py`,
+`code/strong_field_v7.py`, `code/lensing_census_v7.py`, `code/transition_check_v7.py`.
+Outputs in `run-milky-way-v7/`, `run-mw-dwarfs-v7/`, `run-strong-field-v7/`,
+`run-lensing-census-v7/`, `run-transition-check-v7/`.
+
+New data in `data/`:
+* `mw_literature_v7.json`, `lensing_literature_v7.json`: every measured value used below, each
+  with its paper, page and a verbatim snippet checked by script against the arXiv text;
+* `mw_rotation_curves.json` (Eilers et al. 2019; Zhou et al. 2023; Ou et al. 2024; Jiao et
+  al. 2023), `mw_dwarfs.json` (McConnachie 2012; Crater II; Antlia 2);
+* `brouwer2021_kids/`: the KiDS-1000 lensing RAR data release (excess surface density per bin),
+  and `mistele2024/table1_mrt.txt` (lensing circular velocities to 2.5 Mpc).
+
+### 17.1 The solver
+
+* **Visible matter.** McMillan (2017) best fit: an oblate bulge (8.9 × 10⁹ M☉), thin and thick
+  stellar disks (3.5 and 1.0 × 10¹⁰), HI and H₂ disks with central holes (1.1 and 0.1 × 10¹⁰),
+  plus a stellar halo of 1.4 × 10⁹ M☉ (Deason et al. 2019). Variants:
+  * *local census*: the disks rescaled to the solar-neighbourhood census of McKee et al. 2015
+    (stars and remnants 33.4, gas 13.7 M☉/pc²; McMillan has 45.8 and 12.2);
+  * *BR13*: the short "maximal" stellar disk of Bovy & Rix 2013 (R_d = 2.15 kpc, 38 M☉/pc² at
+    8 kpc);
+  * *+ corona*: a hot gas corona of 1.3 × 10¹⁰ M☉ within 250 kpc (β model of Miller & Bregman
+    2015; gas, so mass only).
+* **g_N** on a 360 × 600 cylindrical grid out to 3 Mpc: Hankel transforms for the disks (exact
+  for separable disks; against Freeman's razor-thin disk they agree to 10⁻⁴ beyond 12 kpc, and
+  the 0.1–0.3% inside is the test disk's 5 pc thickness), the homoeoid formula for the bulge,
+  multipoles beyond 60 kpc.
+* **Heat** from the bulge (σ by the SPARC rule, 0.65 × its peak speed: 88 km/s) and the stellar
+  halo (σ_r, σ_θ, σ_φ = 141, 75, 85 km/s). Disks are cold, as in the SPARC calibration.
+* **The law in field-equation form**: ρ_ph = −∇·(h − g_N)/4πG on the grid, summed over rings
+  (elliptic integrals) at target points on cell edges. The ring sum reproduces the analytic
+  Newtonian pull to 0.05–0.08% in the plane and 0.03% at 1.1 kpc. The companion's extra pull
+  stops beyond its reach, u × 13 Gyr = 2.6 Mpc.
+* Masses inside radius r come from Gauss's law on spheres (the flux of the true pull equals
+  the flux of h); escape speeds from the pull integrated outward along the plane.
+
+### 17.2 Rotation curve (Gaia)
+
+Circular speed (km/s), McMillan's visible matter:
+
+| R (kpc) | 5 | 8.2 | 10 | 15 | 20 | 25 | 27.3 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Eilers et al. 2019 | 227–231 | 228.9 | 225.7 | 217.1 | 199.8 | 198.4 | |
+| Zhou et al. 2023 | 225–234 | 233.2 | 230.3 | 219.6 | 206.7 | 200.6 (24 kpc) | |
+| Ou et al. 2024 | | 232.8 | 229.4 | 218.3 | 203.0 | 191.5 | 173.0 |
+| Jiao et al. 2023 | | | 223.3 (10.5) | 218.8 (15.5) | 202.5 (20.5) | 187.1 (24.5) | 175.7 (26.5) |
+| **Our law** | 201.6 | **211.2** | 211.1 | 204.4 | 197.5 | 192.2 | 190.3 |
+| Our law, BR13 disk | 216.2 | 217.4 | 214.0 | 203.2 | 195.9 | 191.2 | 189.4 |
+| MOND | 215.4 | 222.8 | 221.3 | 213.0 | 206.4 | 202.2 | 200.7 |
+| Newton | 186.2 | 177.4 | 168.1 | 142.8 | 124.3 | 111.3 | 106.5 |
+| Dark matter (McMillan's halo) | 226.5 | 233.7 | 232.6 | 227.2 | 223.4 | 220.8 | 219.8 |
+
+Mean offset (model − data), 5–10 kpc / 15–27 kpc, and rms:
+
+| | Eilers | Zhou | Ou | Jiao |
+|---|---|---|---|---|
+| Our law | −19.5 / −5.7 (14.6) | −23.8 / −12.9 (18.3) | −21.3 / −8.5 (16.2) | −10.4 / −3.1 (11.4) |
+| MOND | −7.4 / +3.3 (8.7) | −11.6 / −4.0 (8.6) | −9.5 / +0.5 (9.4) | +0.2 / +6.2 (10.1) |
+| Dark matter (McMillan) | +3.6 / +19.9 (16.4) | −0.6 / +12.4 (8.8) | +1.4 / +17.2 (14.8) | +11.3 / +23.3 (21.7) |
+
+* **Beyond 15 kpc our law follows the Gaia curves** (3–9 km/s low, 13 against Zhou), and it
+  falls with radius as the newer Gaia DR3 curves do. McMillan's dark-matter model stays near
+  220 km/s and is 17–23 km/s high there.
+* **Near the Sun our law is 8% low**: 211 against 229–234 km/s.
+* **That shortfall is not special to the Milky Way.** At the Sun's Newtonian pull
+  (1.26 × 10⁻¹⁰ m/s²) the median SPARC point sits +0.033 dex above our law and −0.006 dex from
+  MOND (`transition_check_v7.py`). The Milky Way shows the same 0.04 dex gap between the two
+  laws. Our law, as fitted, releases the companion slightly too late in the transition.
+* **What would have to change.** Either:
+  * **a later switch-off**: g_d × 1.5 raises the Sun's speed to 217.6 km/s (× 2: 221; × 3:
+    225). SPARC allows it: × 1.5 gives a typical miss of 15.80 km/s (now 15.85) and moves the
+    median residual in the transition from +0.033 to +0.004. × 2 gives 15.93. Or
+  * **25% more stellar disk** (55–60 M☉/pc² at the Sun: rms 8.3–8.5 km/s against Eilers). That
+    is well above the star counts (33.4 ± 3, McKee; 38 ± 4, Bovy & Rix) and it would push the
+    vertical pull too high (§17.3). So the fix belongs in the law, not the disk.
+
+### 17.3 The vertical pull above the Sun
+
+The pull towards the disk 1.1 kpc above the Sun, as a surface density K_z/2πG (M☉/pc²).
+Measured: 68 ± 4 (Bovy & Rix 2013), 74 ± 6 (Holmberg & Flynn 2004).
+
+| Visible matter | Ours | MOND | Newton | Dark matter |
+|---|---:|---:|---:|---:|
+| Local census (McKee 2015) | **74.1** | 83.5 | 49.0 | |
+| McMillan 2017 | 85.0 | 96.3 | 60.3 | 74.0 |
+| Bovy & Rix 2013 disk | 79.6 | 90.2 | 57.2 | |
+
+* **With the directly counted local matter, our law gives 74**: on Holmberg & Flynn, 1.5σ above
+  Bovy & Rix. MOND gives 84.
+* The same matter gives 195 km/s at the Sun. Together, §§17.2–17.3 say the extra pull near the
+  Sun must lean towards the Galactic Centre more than the Newtonian direction does. Our
+  direction rule already tilts the pull towards the hot matter's flow (the bulge and stellar
+  halo). Near the Sun that flow is only 9% of the Newtonian pull (g_hot = 1.2 × 10⁻¹¹ against
+  g_N = 1.26 × 10⁻¹⁰ m/s²), so the tilt is small. This is the "direction-dependent gravity" door
+  that round 7 leaves open.
+
+### 17.4 Mass inside a radius, escape speed, the inner Galaxy
+
+Mass inside r (10¹¹ M☉; our law and MOND, McMillan's matter):
+
+| r (kpc) | Measured | Ours | MOND | Dark matter |
+|---|---|---:|---:|---:|
+| 20 | 1.91 +0.18/−0.17 (Posti & Helmi 2019) | 1.68 | 1.83 | 2.24 |
+| 21.1 | 2.1 +0.4/−0.3 (Watkins et al. 2019) | 1.75 | 1.92 | 2.36 |
+| 50 | 4.5 ± 0.4 (Correa Magnus & Vasiliev 2022); 5.4 +1.1/−0.8 (Vasiliev 2019) | 3.58 | 4.16 | 5.11 |
+| 100 | 6.07 ± 0.29 ± 1.21 (Deason et al. 2021); 7.3 +0.9/−0.8 (CMV22); 8.5 +3.3/−2.0 (V19) | **6.57** | 7.99 | 8.54 |
+| 200 | 11.0 +2.7/−2.2 (CMV22) | **12.5** | 15.6 | 12.8 |
+
+* **At 100–200 kpc our law agrees; MOND runs high at 200 kpc (+1.8σ).**
+* At 20–50 kpc our law is 10–20% low (1.2–2.3σ). That is the same transition shortfall as §17.2.
+
+**Escape speed at the Sun (km/s).**
+* **Measured:**
+  * 533 +54/−41 (Piffl et al. 2014, to 3 R₃₄₀);
+  * 528 +24/−25 (Deason et al. 2019, to 2 r₂₀₀);
+  * 497 ± 8 (Koppelman & Helmi 2021; 552 after their bias correction);
+  * 580 ± 63 (Monari et al. 2018);
+  * 512 +94/−37 (Prudil et al. 2022);
+  * 486 +10/−5 (Roche et al. 2024);
+  * 445 +25/−8 (Necib & Lin 2022).
+* **Ours:** 507 to 400 kpc, 522 to 540 kpc, 594 to the companion's reach.
+* **MOND:** 546 and 564 (it has no finite escape speed without an external field).
+* **Dark matter:** 560 and 570.
+* **Newton, visible matter only:** 266.
+
+**The inner Galaxy.** Star counts and bulge microlensing say visible matter supplies
+0.88 ± 0.07 of the inner circular speed (Wegg, Gerhard & Portail 2016). The inner 2–3 kpc lie
+above g_d, so our law is nearly Newtonian there: 0.97–0.99 (1.3–1.6σ). MOND gives 0.91–0.93.
+
+### 17.5 The dwarf galaxies around the Milky Way
+
+Method (`mw_dwarfs_v7.py`):
+* each dwarf is a Plummer sphere with the measured half-light radius (circularised);
+* stars weigh 2 × the Sun per unit V-band light, varied 1–3;
+* the Galaxy's Newtonian pull, heat and hot flow at its distance come from the §17.1 model;
+* the pull averaged over directions is exact by Gauss's law, and the speed spread follows from
+  the isotropic Jeans equation, weighted by light.
+
+MOND is computed identically. The isolated MOND limit reproduces σ⁴ = (4/81) G M a₀ to 0.1%.
+
+| Dwarf | Measured σ (km/s) | Ours | Ours, isolated | MOND | Newton |
+|---|---|---:|---:|---:|---:|
+| Fornax | 11.7 ± 0.9 | **12.4** | 12.6 | 13.6 | 5.3 |
+| Leo I | 9.2 ± 1.4 | **9.3** | 9.4 | 10.2 | 4.6 |
+| Leo II | 6.6 ± 0.7 | 5.3 | 5.4 | 5.9 | 2.0 |
+| Sculptor | 9.2 ± 1.4 | 6.7 | 7.2 | 7.5 | 2.9 |
+| Carina | 6.6 ± 1.2 | 3.5 | 4.4 | 4.0 | 1.3 |
+| Sextans | 7.9 ± 1.3 | 2.1 | 4.5 | 2.4 | 0.8 |
+| Draco | 9.1 ± 1.2 | 2.8 | 4.1 | 3.2 | 1.2 |
+| Ursa Minor | 9.5 ± 1.2 | 3.5 | 4.2 | 3.9 | 1.4 |
+| Crater II | 2.7 ± 0.3 | 1.0 | 3.4 | 1.2 | 0.3 |
+| Antlia 2 | 5.7 ± 1.1 | 1.1 | 4.2 | 1.3 | 0.4 |
+
+* **Right for the four bright or distant dwarfs** (Fornax, Leo I within 1σ; Leo II, Sculptor
+  within 2σ).
+* **1.5–5 times too slow for the six faint ones near the Galaxy or very diffuse**, where the
+  Galaxy's pull is as big as or bigger than their own. MOND, computed the same way, is only
+  10–20% higher.
+* Published MOND estimates for these dwarfs (e.g. 2.1 km/s for Crater II, McGaugh 2016) use the
+  estimator σ² = a₀GM/(3 g_e r₁/₂), which gives about 1.7 times our Jeans value.
+* **What would have to change: most of it is the Galaxy's hold.** Weakening how strongly the
+  Galaxy's pull enters each dwarf's law, by a factor c:
+
+  | Galaxy's hold | 1 | 0.3 | 0.1 | 0.03 | 0 |
+  |---|---:|---:|---:|---:|---:|
+  | χ² for 10 dwarfs | 135 | 105 | 82 | 65 | 60 |
+  | Crater II / Antlia 2 (km/s) | 1.0 / 1.1 | 1.3 / 1.5 | 1.7 / 1.9 | 2.3 / 2.6 | 3.4 / 4.2 |
+
+  With no hold, Crater II (3.4 against 2.7 ± 0.3) and Antlia 2 (4.2 against 5.7 ± 1.1) come
+  close. Draco and Ursa Minor would still need about twice their counted stars; those two are
+  also MOND's classic hard cases and are thought to be tidally disturbed.
+
+### 17.6 The precision tests: planets, S2, pulsars, light bending, and Cassini
+
+* **Planets.** The release factor is 10^(−7.6×10⁷) at Mercury and 10^(−12,590) at Neptune. Even
+  at Sedna's far point (937 AU) the extra pull is 10⁻¹⁴ of Newton's.
+* **S2 at the Galactic Centre.** The pull runs from 1.8 m/s² at closest approach to
+  6.7 × 10⁻³ m/s² at the far end of the orbit, and the release factor is 10^(−10⁷) or smaller. So the precession is exactly GR's; GRAVITY measure
+  1.10 ± 0.19 (2020) and 1.135 ± 0.110 (2024).
+* **Binary pulsars.** The orbits are pure GR. Our only new effect, the companion's mass loss
+  (2.3 × 10⁻¹⁵ per year), changes Ṗ_b by 0.4% (Hulse–Taylor) and 1.6% (Double Pulsar) of the
+  measurement error.
+* **Light bending at the Sun.** GR's 1.7516″ (γ = 1). Measured: γ − 1 = (2.1 ± 2.3) × 10⁻⁵
+  (Cassini), γ = 0.99984 ± 0.00015 (VLBI).
+* **Cassini's test of the Galaxy's field inside the Solar System (Q2): fails as the law
+  stands.** In laws like ours and MOND, the Galaxy's pull reshapes the Sun's own extra pull
+  3,000–20,000 AU out, and that reshaping reaches the planets as a quadrupole. Hees et al. 2014
+  measured Q2 = (3 ± 3) × 10⁻²⁷ s⁻² from nine years of Cassini ranging.
+  * Computed exactly from the Sun's "as if" density: **ours 2.4–3.1 × 10⁻²⁶**. That is 2.4
+    with the Galaxy's heat, 2.8 for a 1.9 × 10⁻¹⁰ m/s² Galactic pull, 3.1 for 2.09 × 10⁻¹⁰.
+    MOND gives 2.8–3.1 × 10⁻²⁶, inside the range Hees et al. quote (2.1 × 10⁻²⁷ to 4.1 × 10⁻²⁶).
+    Both are excluded at about 8σ.
+  * Half of it comes from beyond 4,300–4,600 AU. A sharper switch-off makes it larger, not
+    smaller (n = 2: 3.2 × 10⁻²⁶).
+  * A hot flow from the Galaxy steering the Sun's extra pull reduces it: to 9 × 10⁻²⁷ if that
+    flow equalled the Galaxy's Newtonian pull, 4 × 10⁻²⁷ at three times. The Milky Way's
+    actual hot flow is 0.09 of it.
+  * **What would have to change: the release takes time.** If the companion is released only
+    gradually as it travels, F → F·(1 − e^(−r/L)):
+
+    | Release length L | 0 | 10⁴ AU | 3 × 10⁴ AU (0.15 pc, 720 yr at u) | 10⁵ AU (0.48 pc) | 3 × 10⁵ AU |
+    |---|---:|---:|---:|---:|---:|
+    | Q2 (10⁻²⁷ s⁻²) | 26–31 | 11–12 | **4.2–4.6** | **1.4–1.5** | 0.5 |
+    | Wide-binary boost at 7,000 / 20,000 AU | 1.19–1.26 / 1.19–1.27 | 1.09–1.13 / 1.17–1.24 | 1.04–1.05 / 1.09–1.13 | 1.01–1.02 / 1.04–1.05 | 1.00 / 1.01–1.02 |
+
+    * L ≳ 0.15 pc passes Cassini.
+    * It leaves every galaxy, dwarf and cluster untouched, since all are more than a thousand
+      times larger.
+    * It makes wide binaries nearly Newtonian (1–5% extra pull), in line with Banik et al.
+      2024.
+    * The upper limit is set by the smallest dwarfs (tens of pc): L ≲ 10 pc.
+    * Physically, this is "gravity that builds up over time": escape from attachment has a
+      finite rate. It is a candidate, not yet adopted: the fits must be re-run with it.
+
+### 17.7 Lensing: the standard examples
+
+* **Solar light bending, Cassini γ:** GR exactly (§17.6).
+* **Microlensing towards the bulge.** The Einstein radius of a 0.5 M☉ lens halfway there is
+  2.9 AU, where the pull is 1.6 × 10⁶ g_d. So each event is standard, and the optical depths
+  (OGLE-IV: τ₀ = 1.36 ± 0.04 × 10⁻⁶; MOA-II: 1.75 ± 0.04 × 10⁻⁶) count stars, as in Newton.
+  Our inner Galaxy is nearly Newtonian (§17.4).
+* **The Einstein Cross (Q2237+0305).** The ring lies 0.65 kpc from the lens centre, where the
+  pull is 22.7 g_d. The companion's share there is 1.5 × 10⁻¹¹, so our law says the lensing
+  mass inside the ring is the stars. Measured: dark matter ≤ 20% (van de Ven et al. 2010);
+  7%, < 15% at 3σ (Trott et al. 2010).
+* **SLACS (six lenses):** stars 1.05–1.35 × Salpeter; light and matter agree to
+  −0.017 ± 0.024 dex (rounds 3 and 5).
+* **The KiDS-1000 lensing RAR (Brouwer et al. 2021).** Around about 259,000 isolated galaxies.
+  Each law goes through the paper's own steps (`lensing_census_v7.py`): pull → projected
+  excess surface density → g_obs = 4GΔΣ at the radius where g_bar has the bin's value.
+  * Spirals are cold (k = 0.1 for small bulges).
+  * Ellipticals are hot (k = 3σ²/u², σ = 160 km/s).
+  * Median log(observed/predicted) in the seven bins where the isolation is reliable
+    (g_bar ≥ 10⁻¹³). χ² in brackets includes the paper's 0.1 dex conversion uncertainty:
+
+  | Lenses | Ours | MOND (M16 fit) | Newton |
+  |---|---|---|---|
+  | All isolated | **+0.024 (5.4/7)** | +0.048 (6.2/7) | +1.08 |
+  | Blue (spirals) | **−0.005 (6.6/7)** | −0.073 (6.5/7) | +0.85 |
+  | Red (ellipticals) | **+0.021 (1.2/7)** | +0.113 (7.4/7) | +1.16 |
+  | Sérsic n < 2 (disks) | +0.032 (3.0/7) | −0.058 (2.8/7) | |
+  | Sérsic n > 2 (bulges) | **−0.023 (2.7/7)** | +0.066 (8.0/7) | |
+  | GAMA (spectroscopic) | −0.032 (11.4/7) | −0.007 (12.6/7) | |
+
+  * **Our law fits the absolute lensing of both spirals and ellipticals.** MOND's single curve
+    runs 0.07 dex above the spirals and 0.11 below the ellipticals.
+  * The early/late gap is 0.18 dex (ours), against 0.15 observed in the same bins (the paper's
+    reliable-region values: 0.19 by colour, 0.14 by Sérsic index).
+  * The earlier worry that our deep-regime strength, a ≈ 0.55 a₀, would under-predict galaxy
+    lensing is not borne out: spirals sit where the cold law puts them.
+* **Circular velocities from lensing to 2.5 Mpc (Mistele et al. 2024).**
+  * Flat to about 1 Mpc, as in our law. Ours stays flat to the companion's reach (2.0–2.6 Mpc)
+    and then falls: a prediction.
+  * For ellipticals our speeds match: 184 / 221 / 270 km/s against 197 ± 12 / 211 ± 8 /
+    266 ± 5.
+  * For the lightest spirals we are 20–30% below their values: 106 and 149 against 137 ± 8 and
+    180 ± 9. Mistele et al. re-derive masses and velocities from the same data with their own
+    method, and in Brouwer et al.'s framing the spirals agree with us. So this is a check of
+    the conversions as much as of the law.
+* **Colliding clusters beyond the Bullet.** The published values are recorded in
+  `data/lensing_literature_v7.json`, for modelling next:
+  * Abell 520's disputed "dark core" (P3: 2.3–4.4 × 10¹³ M☉ in 150 kpc, depending on the team);
+  * MACS J0025.4−1222 (two 2.5 × 10¹⁴ M☉ clumps, lensing offset from the gas);
+  * El Gordo (M200 ≈ 2–3 × 10¹⁵);
+  * Abell 1689 (Einstein radius 47″; where MOND fails badly).
+
+  Round 4's memory rule predicts lensing around stopped gas inside a sphere growing at
+  200 kpc per Gyr, which bears directly on Abell 520's P3.
+
+### 17.8 The coverage table
+
+| Test | Measured | Ours | MOND | Dark matter | Verdict for ours |
+|---|---|---|---|---|---|
+| SPARC rotation curves (149) | | 15.9 km/s | 16.1 | 7.5 (fitted) | pass |
+| X-COP cluster masses (12) | | 25% | ×2.9 | 11% (fitted) | pass |
+| MW rotation 15–27 kpc (4 Gaia curves) | 173–217 km/s | −3 to −13 km/s | −4 to +6 | +12 to +23 | **pass** |
+| MW rotation at the Sun | 229–234 km/s | 211 | 223 | 234 | **8% low; fix: later switch-off (§17.2)** |
+| Vertical pull at 1.1 kpc | 68 ± 4; 74 ± 6 | 74 (counted matter) | 84 | 74 | pass |
+| Mass inside 100 / 200 kpc | 6.1–7.3 / 11.0 × 10¹¹ | 6.6 / 12.5 | 8.0 / 15.6 | 8.5 / 12.8 | **pass** |
+| Mass inside 20–50 kpc | 1.9–4.5 × 10¹¹ | 10–20% low | 4–8% low | high | 1–2σ low |
+| Escape speed at the Sun | 445–580 km/s | 507–522 | 546–564 | 560–570 | pass |
+| Inner Galaxy: visible share of speed | 0.88 ± 0.07 | 0.97–0.99 | 0.91–0.93 | 0.88 (fitted) | pass at 1.5σ |
+| Dwarfs: Fornax, Leo I, Leo II, Sculptor | 6.6–11.7 km/s | within 1–2σ | within 0–2σ | fitted | pass |
+| Dwarfs: 6 faint or diffuse | 2.7–9.5 km/s | 1.5–5× low | 1.3–4× low | fitted | **fail; fix: weaker Galactic hold** |
+| Planets, Sedna, S2, pulsars, light bending | GR | GR exactly | small effects | GR | **pass** |
+| Cassini Q2 | (3 ± 3) × 10⁻²⁷ s⁻² | 2.4–3.1 × 10⁻²⁶ | 2.8–3.1 × 10⁻²⁶ | ≈ 0 | **fail; fix: gradual release, L ≳ 0.15 pc** |
+| Wide binaries | disputed | 19% (1–5% with gradual release) | 43% | 0 | open |
+| Microlensing, Einstein Cross | stars | stars | stars | stars | pass |
+| SLACS strong lenses | | light = matter | | | pass |
+| KiDS lensing RAR, spirals and ellipticals | | −0.005, +0.021 dex | −0.073, +0.113 | tuned | **pass, better than MOND** |
+| Bullet: lensing on galaxies; main half | | yes | no | yes | pass |
+| Bullet: smaller half's lensing mass | 2.0–2.3 × 10¹⁴ | about half | no | fitted | open |
+| 72 collisions: lensing with galaxies | | yes | no | yes | pass |
+| Abell 520, MACS J0025, El Gordo, Abell 1689 | recorded | not yet run | | | next |
+
+### 17.9 What round 7 changes, and what comes next
+
+* **No change to the law.** All numbers above use the round-3 law and constants.
+* **Two candidate amendments, each required by a specific measurement and each testable:**
+  1. **Gradual release** (L ≳ 0.15 pc), required by Cassini. It turns the wide-binary
+     prediction from 19% into 1–5%.
+  2. **A later switch-off** (g_d × 1.5–2), suggested by the Sun's rotation speed and allowed by
+     SPARC.
+
+  Both must be refit together with SPARC, X-COP and the Bullet before either is adopted.
+* **One open door:** how strongly the Galaxy holds a dwarf's companion. Partial loss of step
+  between a dwarf's companion and the Galaxy's, which move relative to each other at 100–300
+  km/s (comparable to u), is the natural candidate; it would also reduce Cassini's Q2.
+* **Next:**
+  * refit with the gradual release;
+  * model the four recorded collisions and Abell 1689;
+  * the Galaxy's hot flow near the Sun, which sets the direction of the extra pull there
+    (§17.3).

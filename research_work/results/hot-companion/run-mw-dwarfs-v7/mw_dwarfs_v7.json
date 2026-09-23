@@ -1,0 +1,912 @@
+{
+  "hold_scan": {
+    "1.0": {
+      "sigma": {
+        "Draco": 2.8285328244560723,
+        "Ursa Minor": 3.4902040213976937,
+        "Sculptor": 6.715175214144575,
+        "Sextans": 2.1364224186722076,
+        "Carina": 3.525276877839959,
+        "Fornax": 12.361894558012747,
+        "Leo II": 5.28594753337893,
+        "Leo I": 9.34510466782839,
+        "Crater II": 1.0147230013406978,
+        "Antlia 2": 1.1231133268881215
+      },
+      "chi2": 135.4374993526847,
+      "mean_log_ratio": -0.3116328464737149
+    },
+    "0.5": {
+      "sigma": {
+        "Draco": 3.2664064484205406,
+        "Ursa Minor": 3.8187382724987895,
+        "Sculptor": 6.96974785782933,
+        "Sextans": 2.489638272034209,
+        "Carina": 3.9207224792726123,
+        "Fornax": 12.47480939312075,
+        "Leo II": 5.330960029229673,
+        "Leo I": 9.358468950288733,
+        "Crater II": 1.1873506846360231,
+        "Antlia 2": 1.3165605944032381
+      },
+      "chi2": 116.90314300369911,
+      "mean_log_ratio": -0.27404678015116346
+    },
+    "0.3": {
+      "sigma": {
+        "Draco": 3.5624638777836464,
+        "Ursa Minor": 3.9702360741744602,
+        "Sculptor": 7.077909847366874,
+        "Sextans": 2.7946670233713897,
+        "Carina": 4.109063755469842,
+        "Fornax": 12.519187767487226,
+        "Leo II": 5.349073793773374,
+        "Leo I": 9.363628859771529,
+        "Crater II": 1.3367480724332812,
+        "Antlia 2": 1.4838123026148833
+      },
+      "chi2": 104.55655648788694,
+      "mean_log_ratio": -0.25019691034138225
+    },
+    "0.1": {
+      "sigma": {
+        "Draco": 3.9293989752846517,
+        "Ursa Minor": 4.135023019578614,
+        "Sculptor": 7.1888491482115455,
+        "Sextans": 3.572527171977496,
+        "Carina": 4.317552256674402,
+        "Fornax": 12.562058509595198,
+        "Leo II": 5.366847951414195,
+        "Leo I": 9.368548246183895,
+        "Crater II": 1.734712052823571,
+        "Antlia 2": 1.929036138883654
+      },
+      "chi2": 81.96142182558859,
+      "mean_log_ratio": -0.20765446151366157
+    },
+    "0.03": {
+      "sigma": {
+        "Draco": 4.076771930043537,
+        "Ursa Minor": 4.195107902461005,
+        "Sculptor": 7.226811383523871,
+        "Sextans": 4.169937001886657,
+        "Carina": 4.3972614816494255,
+        "Fornax": 12.576051422933824,
+        "Leo II": 5.37274894944213,
+        "Leo I": 9.370128342112318,
+        "Crater II": 2.316776077453813,
+        "Antlia 2": 2.583518121418629
+      },
+      "chi2": 64.70267514592847,
+      "mean_log_ratio": -0.17233413274725734
+    },
+    "0.0": {
+      "sigma": {
+        "Draco": 4.1400909941798405,
+        "Ursa Minor": 4.219167110785434,
+        "Sculptor": 7.241526559476147,
+        "Sextans": 4.489483003332659,
+        "Carina": 4.430877799750439,
+        "Fornax": 12.581188194454503,
+        "Leo II": 5.374959813390554,
+        "Leo I": 9.370638215467151,
+        "Crater II": 3.3881683124080086,
+        "Antlia 2": 4.183270556990236
+      },
+      "chi2": 59.85343192695169,
+      "mean_log_ratio": -0.1303141521577661
+    }
+  },
+  "experiment": "Milky Way dwarf spheroidals: stars speed spread under our law with the Galaxy pull, vs MOND and Newton (round 7)",
+  "constants": {
+    "a_SI": 6.561190024871433e-11,
+    "a_code": 2024.571696765057,
+    "lam": 3.447563157408709,
+    "g_d_SI": 2.2620116998504284e-10,
+    "u_kms": 197.41001228101223
+  },
+  "a0_mond_SI": 1.2e-10,
+  "dwarfs": [
+    {
+      "name": "Draco",
+      "env_SI": {
+        "gN": 1.6353722878857518e-12,
+        "S": 1.5628494200039425e-13
+      },
+      "internal_gN_at_rh_SI": 8.479069399834549e-13,
+      "observed": {
+        "sigma": 9.1,
+        "err": 1.2
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 2.002553115094969,
+            "sigma_inside_rh": 2.2723707544091685,
+            "pull_at_rh_SI": 2.5479527107589377e-12,
+            "newton_pull_at_rh_SI": 4.2395346999172746e-13
+          },
+          "ML2": {
+            "sigma_global": 2.8285328244560723,
+            "sigma_inside_rh": 3.2083511257965043,
+            "pull_at_rh_SI": 5.075272489986197e-12,
+            "newton_pull_at_rh_SI": 8.479069399834549e-13
+          },
+          "ML3": {
+            "sigma_global": 3.4561114404576085,
+            "sigma_inside_rh": 3.9171744906310253,
+            "pull_at_rh_SI": 7.554302932628012e-12,
+            "newton_pull_at_rh_SI": 1.2718604099751823e-12
+          },
+          "isolated_ML2": 4.1400909941798405
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 2.258522411035442,
+            "sigma_inside_rh": 2.562720699169757,
+            "pull_at_rh_SI": 3.240437152242815e-12,
+            "newton_pull_at_rh_SI": 4.2395346999172746e-13
+          },
+          "ML2": {
+            "sigma_global": 3.1891654548115262,
+            "sigma_inside_rh": 3.616986900287039,
+            "pull_at_rh_SI": 6.449085071475733e-12,
+            "newton_pull_at_rh_SI": 8.479069399834549e-13
+          },
+          "ML3": {
+            "sigma_global": 3.8951160688918667,
+            "sigma_inside_rh": 4.413686856758091,
+            "pull_at_rh_SI": 9.586520471874171e-12,
+            "newton_pull_at_rh_SI": 1.2718604099751823e-12
+          },
+          "isolated_ML2": 4.694298106696822
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 0.8166822725665948,
+            "sigma_inside_rh": 0.9268203998951896,
+            "pull_at_rh_SI": 4.2395283007783185e-13,
+            "newton_pull_at_rh_SI": 4.2395346999172746e-13
+          },
+          "ML2": {
+            "sigma_global": 1.154963146013359,
+            "sigma_inside_rh": 1.3107219794158327,
+            "pull_at_rh_SI": 8.479056601556637e-13,
+            "newton_pull_at_rh_SI": 8.479069399834549e-13
+          },
+          "ML3": {
+            "sigma_global": 1.4145351897261567,
+            "sigma_inside_rh": 1.605300022109773,
+            "pull_at_rh_SI": 1.2718584902334956e-12,
+            "newton_pull_at_rh_SI": 1.2718604099751823e-12
+          },
+          "isolated_ML2": 1.154963146013359
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Ursa Minor",
+      "env_SI": {
+        "gN": 1.552697499523518e-12,
+        "S": 1.4835404018517542e-13
+      },
+      "internal_gN_at_rh_SI": 1.9815613774272673e-12,
+      "observed": {
+        "sigma": 9.5,
+        "err": 1.2
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 2.4986833320160167,
+            "sigma_inside_rh": 2.833375820795909,
+            "pull_at_rh_SI": 6.047643170340565e-12,
+            "newton_pull_at_rh_SI": 9.907806887136336e-13
+          },
+          "ML2": {
+            "sigma_global": 3.4902040213976937,
+            "sigma_inside_rh": 3.939471462228437,
+            "pull_at_rh_SI": 1.1578323534702318e-11,
+            "newton_pull_at_rh_SI": 1.9815613774272673e-12
+          },
+          "ML3": {
+            "sigma_global": 4.156883210319076,
+            "sigma_inside_rh": 4.644720917202367,
+            "pull_at_rh_SI": 1.57415731066031e-11,
+            "newton_pull_at_rh_SI": 2.9723420661409015e-12
+          },
+          "isolated_ML2": 4.219167110785434
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 2.8189706669349692,
+            "sigma_inside_rh": 3.1960026345006,
+            "pull_at_rh_SI": 7.692251847642827e-12,
+            "newton_pull_at_rh_SI": 9.907806887136336e-13
+          },
+          "ML2": {
+            "sigma_global": 3.92587717933165,
+            "sigma_inside_rh": 4.4250971748725965,
+            "pull_at_rh_SI": 1.4560879887144864e-11,
+            "newton_pull_at_rh_SI": 1.9815613774272673e-12
+          },
+          "ML3": {
+            "sigma_global": 4.6474175757366,
+            "sigma_inside_rh": 5.174002228518029,
+            "pull_at_rh_SI": 1.9380529323053153e-11,
+            "newton_pull_at_rh_SI": 2.9723420661409015e-12
+          },
+          "isolated_ML2": 4.733352447637926
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 1.0097595361846206,
+            "sigma_inside_rh": 1.1459361474609429,
+            "pull_at_rh_SI": 9.90779193232702e-13,
+            "newton_pull_at_rh_SI": 9.907806887136336e-13
+          },
+          "ML2": {
+            "sigma_global": 1.4280156308078564,
+            "sigma_inside_rh": 1.6205984413528403,
+            "pull_at_rh_SI": 1.981558386465404e-12,
+            "newton_pull_at_rh_SI": 1.9815613774272673e-12
+          },
+          "ML3": {
+            "sigma_global": 1.7489548200989469,
+            "sigma_inside_rh": 1.9848196296320937,
+            "pull_at_rh_SI": 2.9723375796981064e-12,
+            "newton_pull_at_rh_SI": 2.9723420661409015e-12
+          },
+          "isolated_ML2": 1.4280156308078564
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Sculptor",
+      "env_SI": {
+        "gN": 1.2775007361506083e-12,
+        "S": 1.219818808893697e-13
+      },
+      "internal_gN_at_rh_SI": 4.1612295928629635e-12,
+      "observed": {
+        "sigma": 9.2,
+        "err": 1.4
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 5.121260246047855,
+            "sigma_inside_rh": 5.747854065127692,
+            "pull_at_rh_SI": 1.2514568460758653e-11,
+            "newton_pull_at_rh_SI": 2.0806147964314817e-12
+          },
+          "ML2": {
+            "sigma_global": 6.715175214144575,
+            "sigma_inside_rh": 7.378232918473105,
+            "pull_at_rh_SI": 1.9953893199111267e-11,
+            "newton_pull_at_rh_SI": 4.1612295928629635e-12
+          },
+          "ML3": {
+            "sigma_global": 7.745327622373203,
+            "sigma_inside_rh": 8.417851185782823,
+            "pull_at_rh_SI": 2.5723697756889112e-11,
+            "newton_pull_at_rh_SI": 6.241844389294445e-12
+          },
+          "isolated_ML2": 7.241526559476147
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 5.764009800732977,
+            "sigma_inside_rh": 6.451972443314558,
+            "pull_at_rh_SI": 1.5669383709311894e-11,
+            "newton_pull_at_rh_SI": 2.0806147964314817e-12
+          },
+          "ML2": {
+            "sigma_global": 7.461722890555363,
+            "sigma_inside_rh": 8.148304962939545,
+            "pull_at_rh_SI": 2.408979358657245e-11,
+            "newton_pull_at_rh_SI": 4.1612295928629635e-12
+          },
+          "ML3": {
+            "sigma_global": 8.533685560653657,
+            "sigma_inside_rh": 9.204905536433152,
+            "pull_at_rh_SI": 3.043044669140086e-11,
+            "newton_pull_at_rh_SI": 6.241844389294445e-12
+          },
+          "isolated_ML2": 8.029310422219211
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 2.0398769014449316,
+            "sigma_inside_rh": 2.3149755897021533,
+            "pull_at_rh_SI": 2.0806116559587326e-12,
+            "newton_pull_at_rh_SI": 2.0806147964314817e-12
+          },
+          "ML2": {
+            "sigma_global": 2.8848215795950276,
+            "sigma_inside_rh": 3.2738698755194386,
+            "pull_at_rh_SI": 4.161223311917465e-12,
+            "newton_pull_at_rh_SI": 4.1612295928629635e-12
+          },
+          "ML3": {
+            "sigma_global": 3.5331704344887926,
+            "sigma_inside_rh": 4.009655339645851,
+            "pull_at_rh_SI": 6.2418349678761965e-12,
+            "newton_pull_at_rh_SI": 6.241844389294445e-12
+          },
+          "isolated_ML2": 2.8848215795950276
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Sextans",
+      "env_SI": {
+        "gN": 1.1929136058927936e-12,
+        "S": 1.1384214116986466e-13
+      },
+      "internal_gN_at_rh_SI": 1.381360322183439e-13,
+      "observed": {
+        "sigma": 7.9,
+        "err": 1.3
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 1.5107450129137,
+            "sigma_inside_rh": 1.714481075014224,
+            "pull_at_rh_SI": 4.753806779926426e-13,
+            "newton_pull_at_rh_SI": 6.906801610917194e-14
+          },
+          "ML2": {
+            "sigma_global": 2.1364224186722076,
+            "sigma_inside_rh": 2.4244972617240608,
+            "pull_at_rh_SI": 9.506173450434557e-13,
+            "newton_pull_at_rh_SI": 1.381360322183439e-13
+          },
+          "ML3": {
+            "sigma_global": 2.616338737737513,
+            "sigma_inside_rh": 2.969036283055889,
+            "pull_at_rh_SI": 1.4255023178592592e-12,
+            "newton_pull_at_rh_SI": 2.0720404832751583e-13
+          },
+          "isolated_ML2": 4.489483003332659
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 1.7152235086761063,
+            "sigma_inside_rh": 1.9465246251681145,
+            "pull_at_rh_SI": 6.127622167661553e-13,
+            "newton_pull_at_rh_SI": 6.906801610917194e-14
+          },
+          "ML2": {
+            "sigma_global": 2.425513382176503,
+            "sigma_inside_rh": 2.7525360280769777,
+            "pull_at_rh_SI": 1.2252350146205973e-12,
+            "newton_pull_at_rh_SI": 1.381360322183439e-13
+          },
+          "ML3": {
+            "sigma_global": 2.970268559573981,
+            "sigma_inside_rh": 3.3706105024254436,
+            "pull_at_rh_SI": 1.837126334750237e-12,
+            "newton_pull_at_rh_SI": 2.0720404832751583e-13
+          },
+          "isolated_ML2": 5.161562514397711
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 0.5758461865104135,
+            "sigma_inside_rh": 0.6535050542757799,
+            "pull_at_rh_SI": 6.906791185814823e-14,
+            "newton_pull_at_rh_SI": 6.906801610917194e-14
+          },
+          "ML2": {
+            "sigma_global": 0.8143694868038537,
+            "sigma_inside_rh": 0.9241957108361735,
+            "pull_at_rh_SI": 1.3813582371629646e-13,
+            "newton_pull_at_rh_SI": 1.381360322183439e-13
+          },
+          "ML3": {
+            "sigma_global": 0.9973948523808199,
+            "sigma_inside_rh": 1.1319039570087073,
+            "pull_at_rh_SI": 2.0720373557444468e-13,
+            "newton_pull_at_rh_SI": 2.0720404832751583e-13
+          },
+          "isolated_ML2": 0.8143694868038537
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Carina",
+      "env_SI": {
+        "gN": 8.255304270296507e-13,
+        "S": 7.86830313349642e-14
+      },
+      "internal_gN_at_rh_SI": 8.946803183450818e-13,
+      "observed": {
+        "sigma": 6.6,
+        "err": 1.2
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 2.5124852243460247,
+            "sigma_inside_rh": 2.849544982169455,
+            "pull_at_rh_SI": 3.5918882390772248e-12,
+            "newton_pull_at_rh_SI": 4.473401591725409e-13
+          },
+          "ML2": {
+            "sigma_global": 3.525276877839959,
+            "sigma_inside_rh": 3.9872502583033413,
+            "pull_at_rh_SI": 6.997846828466643e-12,
+            "newton_pull_at_rh_SI": 8.946803183450818e-13
+          },
+          "ML3": {
+            "sigma_global": 4.227280781692343,
+            "sigma_inside_rh": 4.7428290271826725,
+            "pull_at_rh_SI": 9.71354714221427e-12,
+            "newton_pull_at_rh_SI": 1.3420204775176228e-12
+          },
+          "isolated_ML2": 4.430877799750439
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 2.87119870288093,
+            "sigma_inside_rh": 3.256111681135345,
+            "pull_at_rh_SI": 4.689266054580196e-12,
+            "newton_pull_at_rh_SI": 4.473401591725409e-13
+          },
+          "ML2": {
+            "sigma_global": 4.023831124640162,
+            "sigma_inside_rh": 4.548676677012677,
+            "pull_at_rh_SI": 9.100063719531438e-12,
+            "newton_pull_at_rh_SI": 8.946803183450818e-13
+          },
+          "ML3": {
+            "sigma_global": 4.803331981359883,
+            "sigma_inside_rh": 5.375898370662322,
+            "pull_at_rh_SI": 1.2405737991621396e-11,
+            "newton_pull_at_rh_SI": 1.3420204775176228e-12
+          },
+          "isolated_ML2": 5.024607616362986
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 0.8855833683785184,
+            "sigma_inside_rh": 1.005013527527229,
+            "pull_at_rh_SI": 4.4733948395885787e-13,
+            "newton_pull_at_rh_SI": 4.473401591725409e-13
+          },
+          "ML2": {
+            "sigma_global": 1.2524040101729494,
+            "sigma_inside_rh": 1.421303760997433,
+            "pull_at_rh_SI": 8.946789679177157e-13,
+            "newton_pull_at_rh_SI": 8.946803183450818e-13
+          },
+          "ML3": {
+            "sigma_global": 1.5338753883695795,
+            "sigma_inside_rh": 1.7407344919711834,
+            "pull_at_rh_SI": 1.3420184518765738e-12,
+            "newton_pull_at_rh_SI": 1.3420204775176228e-12
+          },
+          "isolated_ML2": 1.2524040101729494
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Fornax",
+      "env_SI": {
+        "gN": 4.2585737348110304e-13,
+        "S": 4.050911107238826e-14
+      },
+      "internal_gN_at_rh_SI": 5.5866652756960605e-12,
+      "observed": {
+        "sigma": 11.7,
+        "err": 0.9
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 9.948936867468017,
+            "sigma_inside_rh": 10.702165110073942,
+            "pull_at_rh_SI": 1.617658797288411e-11,
+            "newton_pull_at_rh_SI": 2.7933326378480303e-12
+          },
+          "ML2": {
+            "sigma_global": 12.361894558012747,
+            "sigma_inside_rh": 13.157887644587586,
+            "pull_at_rh_SI": 2.4375530936040427e-11,
+            "newton_pull_at_rh_SI": 5.5866652756960605e-12
+          },
+          "ML3": {
+            "sigma_global": 14.00260110086905,
+            "sigma_inside_rh": 14.860418756704298,
+            "pull_at_rh_SI": 3.111872654295684e-11,
+            "newton_pull_at_rh_SI": 8.379997913544089e-12
+          },
+          "isolated_ML2": 12.581188194454503
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 11.101731988750885,
+            "sigma_inside_rh": 11.856306910048737,
+            "pull_at_rh_SI": 1.9670142985730366e-11,
+            "newton_pull_at_rh_SI": 2.7933326378480303e-12
+          },
+          "ML2": {
+            "sigma_global": 13.614599601180773,
+            "sigma_inside_rh": 14.37119577135847,
+            "pull_at_rh_SI": 2.8804547493614413e-11,
+            "newton_pull_at_rh_SI": 5.5866652756960605e-12
+          },
+          "ML3": {
+            "sigma_global": 15.299623828550661,
+            "sigma_inside_rh": 16.095277871261104,
+            "pull_at_rh_SI": 3.6159917893929485e-11,
+            "newton_pull_at_rh_SI": 8.379997913544089e-12
+          },
+          "isolated_ML2": 13.864347977082781
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 3.77061545636395,
+            "sigma_inside_rh": 4.279122300690387,
+            "pull_at_rh_SI": 2.7933284216014453e-12,
+            "newton_pull_at_rh_SI": 2.7933326378480303e-12
+          },
+          "ML2": {
+            "sigma_global": 5.332455516883515,
+            "sigma_inside_rh": 6.051592792689507,
+            "pull_at_rh_SI": 5.586656843202891e-12,
+            "newton_pull_at_rh_SI": 5.5866652756960605e-12
+          },
+          "ML3": {
+            "sigma_global": 6.530897546226869,
+            "sigma_inside_rh": 7.411657236596779,
+            "pull_at_rh_SI": 8.379985264804335e-12,
+            "newton_pull_at_rh_SI": 8.379997913544089e-12
+          },
+          "isolated_ML2": 5.332455516883515
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Leo II",
+      "env_SI": {
+        "gN": 1.697894635304881e-13,
+        "S": 1.6121180935853643e-14
+      },
+      "internal_gN_at_rh_SI": 2.7050852722969864e-12,
+      "observed": {
+        "sigma": 6.6,
+        "err": 0.7
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 4.288745380937891,
+            "sigma_inside_rh": 4.583363743610022,
+            "pull_at_rh_SI": 1.067246502977074e-11,
+            "newton_pull_at_rh_SI": 1.3525426361484932e-12
+          },
+          "ML2": {
+            "sigma_global": 5.28594753337893,
+            "sigma_inside_rh": 5.595790889161724,
+            "pull_at_rh_SI": 1.5876212350260507e-11,
+            "newton_pull_at_rh_SI": 2.7050852722969864e-12
+          },
+          "ML3": {
+            "sigma_global": 5.961855896563595,
+            "sigma_inside_rh": 6.295067659839572,
+            "pull_at_rh_SI": 2.0111397332959142e-11,
+            "newton_pull_at_rh_SI": 4.05762790844548e-12
+          },
+          "isolated_ML2": 5.374959813390554
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 4.855934136438161,
+            "sigma_inside_rh": 5.15530199370748,
+            "pull_at_rh_SI": 1.3392395625168786e-11,
+            "newton_pull_at_rh_SI": 1.3525426361484932e-12
+          },
+          "ML2": {
+            "sigma_global": 5.915057028696078,
+            "sigma_inside_rh": 6.2137389129962,
+            "pull_at_rh_SI": 1.9405438263350058e-11,
+            "newton_pull_at_rh_SI": 2.7050852722969864e-12
+          },
+          "ML3": {
+            "sigma_global": 6.622062029155321,
+            "sigma_inside_rh": 6.934330914375726,
+            "pull_at_rh_SI": 2.4180019121401953e-11,
+            "newton_pull_at_rh_SI": 4.05762790844548e-12
+          },
+          "isolated_ML2": 6.006621949315661
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 1.3794937956973061,
+            "sigma_inside_rh": 1.5655329304051384,
+            "pull_at_rh_SI": 1.3525405946253346e-12,
+            "newton_pull_at_rh_SI": 1.3525426361484932e-12
+          },
+          "ML2": {
+            "sigma_global": 1.9508988350846699,
+            "sigma_inside_rh": 2.2139979025206413,
+            "pull_at_rh_SI": 2.705081189250669e-12,
+            "newton_pull_at_rh_SI": 2.7050852722969864e-12
+          },
+          "ML3": {
+            "sigma_global": 2.3893533428737754,
+            "sigma_inside_rh": 2.711582576383891,
+            "pull_at_rh_SI": 4.057621783876003e-12,
+            "newton_pull_at_rh_SI": 4.05762790844548e-12
+          },
+          "isolated_ML2": 1.9508988350846699
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Leo I",
+      "env_SI": {
+        "gN": 1.4207165748952188e-13,
+        "S": 1.3485172755650323e-14
+      },
+      "internal_gN_at_rh_SI": 1.0890782746806215e-11,
+      "observed": {
+        "sigma": 9.2,
+        "err": 1.4
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 7.6014296662309055,
+            "sigma_inside_rh": 8.008309010994214,
+            "pull_at_rh_SI": 2.3971923191690584e-11,
+            "newton_pull_at_rh_SI": 5.445391373403108e-12
+          },
+          "ML2": {
+            "sigma_global": 9.34510466782839,
+            "sigma_inside_rh": 9.85594922501084,
+            "pull_at_rh_SI": 3.646114239330365e-11,
+            "newton_pull_at_rh_SI": 1.0890782746806215e-11
+          },
+          "ML3": {
+            "sigma_global": 10.568686610860883,
+            "sigma_inside_rh": 11.16402511965454,
+            "pull_at_rh_SI": 4.6904135520281926e-11,
+            "newton_pull_at_rh_SI": 1.6336174120209318e-11
+          },
+          "isolated_ML2": 9.370638215467151
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 8.38573374680267,
+            "sigma_inside_rh": 8.76049024358014,
+            "pull_at_rh_SI": 2.8426270468488633e-11,
+            "newton_pull_at_rh_SI": 5.445391373403108e-12
+          },
+          "ML2": {
+            "sigma_global": 10.170736827085147,
+            "sigma_inside_rh": 10.628837736178056,
+            "pull_at_rh_SI": 4.2002893751851956e-11,
+            "newton_pull_at_rh_SI": 1.0890782746806215e-11
+          },
+          "ML3": {
+            "sigma_global": 11.41086654302253,
+            "sigma_inside_rh": 11.942800398796239,
+            "pull_at_rh_SI": 5.319021966984618e-11,
+            "newton_pull_at_rh_SI": 1.6336174120209318e-11
+          },
+          "isolated_ML2": 10.20147893694468
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 3.226428369498942,
+            "sigma_inside_rh": 3.661545906040649,
+            "pull_at_rh_SI": 5.445383154148275e-12,
+            "newton_pull_at_rh_SI": 5.445391373403108e-12
+          },
+          "ML2": {
+            "sigma_global": 4.562858758170716,
+            "sigma_inside_rh": 5.178207879574368,
+            "pull_at_rh_SI": 1.089076630829655e-11,
+            "newton_pull_at_rh_SI": 1.0890782746806215e-11
+          },
+          "ML3": {
+            "sigma_global": 5.588337862953779,
+            "sigma_inside_rh": 6.341983543508222,
+            "pull_at_rh_SI": 1.6336149462444823e-11,
+            "newton_pull_at_rh_SI": 1.6336174120209318e-11
+          },
+          "isolated_ML2": 4.562858758170716
+        }
+      },
+      "source": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)"
+    },
+    {
+      "name": "Crater II",
+      "env_SI": {
+        "gN": 7.024708375932297e-13,
+        "S": 6.691678877537332e-14
+      },
+      "internal_gN_at_rh_SI": 1.3009853179035628e-14,
+      "observed": {
+        "sigma": 2.7,
+        "err": 0.3
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 0.7175184930048083,
+            "sigma_inside_rh": 0.8142832730021061,
+            "pull_at_rh_SI": 5.636282873720881e-14,
+            "newton_pull_at_rh_SI": 6.504926589517814e-15
+          },
+          "ML2": {
+            "sigma_global": 1.0147230013406978,
+            "sigma_inside_rh": 1.1515683408566553,
+            "pull_at_rh_SI": 1.1272514171689107e-13,
+            "newton_pull_at_rh_SI": 1.3009853179035628e-14
+          },
+          "ML3": {
+            "sigma_global": 1.2427735876034174,
+            "sigma_inside_rh": 1.410372597690075,
+            "pull_at_rh_SI": 1.6908628119221402e-13,
+            "newton_pull_at_rh_SI": 1.9514779768553446e-14
+          },
+          "isolated_ML2": 3.3881683124080086
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 0.8231211512709297,
+            "sigma_inside_rh": 0.9341274456588702,
+            "pull_at_rh_SI": 7.41743833527645e-14,
+            "newton_pull_at_rh_SI": 6.504926589517814e-15
+          },
+          "ML2": {
+            "sigma_global": 1.1640668677345032,
+            "sigma_inside_rh": 1.3210523981653208,
+            "pull_at_rh_SI": 1.4834785815770671e-13,
+            "newton_pull_at_rh_SI": 1.3009853179035628e-14
+          },
+          "ML3": {
+            "sigma_global": 1.4256803782179566,
+            "sigma_inside_rh": 1.6179454036608343,
+            "pull_at_rh_SI": 2.225195156577517e-13,
+            "newton_pull_at_rh_SI": 1.9514779768553446e-14
+          },
+          "isolated_ML2": 3.926829219927702
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 0.2437572239706519,
+            "sigma_inside_rh": 0.2766304294665566,
+            "pull_at_rh_SI": 6.504916771004206e-15,
+            "newton_pull_at_rh_SI": 6.504926589517814e-15
+          },
+          "ML2": {
+            "sigma_global": 0.344724772065712,
+            "sigma_inside_rh": 0.39121450511669814,
+            "pull_at_rh_SI": 1.3009833542008413e-14,
+            "newton_pull_at_rh_SI": 1.3009853179035628e-14
+          },
+          "ML3": {
+            "sigma_global": 0.4221998966291153,
+            "sigma_inside_rh": 0.47913795875567466,
+            "pull_at_rh_SI": 1.9514750313012617e-14,
+            "newton_pull_at_rh_SI": 1.9514779768553446e-14
+          },
+          "isolated_ML2": 0.344724772065712
+        }
+      },
+      "source": "sigma: Caldwell et al. 2017 (ApJ 839, 20); L_V 1.5e5 (Caldwell); r_h 1066 pc, D_helio 117.5 kpc (Torrealba et al. 2016); D_gc from (l,b) = (282.9, 42.0) with R0 = 8.2"
+    },
+    {
+      "name": "Antlia 2",
+      "env_SI": {
+        "gN": 5.344334867067204e-13,
+        "S": 5.0867324773451534e-14
+      },
+      "internal_gN_at_rh_SI": 6.526579726168587e-15,
+      "observed": {
+        "sigma": 5.71,
+        "err": 1.08
+      },
+      "predictions": {
+        "ours": {
+          "ML1": {
+            "sigma_global": 0.794160580608088,
+            "sigma_inside_rh": 0.9012615991264552,
+            "pull_at_rh_SI": 3.20156218931061e-14,
+            "newton_pull_at_rh_SI": 3.2632898630842933e-15
+          },
+          "ML2": {
+            "sigma_global": 1.1231133268881215,
+            "sigma_inside_rh": 1.2745771726808932,
+            "pull_at_rh_SI": 6.403132352496193e-14,
+            "newton_pull_at_rh_SI": 6.526579726168587e-15
+          },
+          "ML3": {
+            "sigma_global": 1.3755273749273311,
+            "sigma_inside_rh": 1.56103175597549,
+            "pull_at_rh_SI": 9.604694305811775e-14,
+            "newton_pull_at_rh_SI": 9.789869589252876e-15
+          },
+          "isolated_ML2": 4.183270556990236
+        },
+        "mond": {
+          "ML1": {
+            "sigma_global": 0.9140586043786052,
+            "sigma_inside_rh": 1.0373288573592163,
+            "pull_at_rh_SI": 4.241240735144919e-14,
+            "newton_pull_at_rh_SI": 3.2632898630842933e-15
+          },
+          "ML2": {
+            "sigma_global": 1.2926729923273772,
+            "sigma_inside_rh": 1.4670029326841239,
+            "pull_at_rh_SI": 8.48245873351698e-14,
+            "newton_pull_at_rh_SI": 6.526579726168587e-15
+          },
+          "ML3": {
+            "sigma_global": 1.5831924074263766,
+            "sigma_inside_rh": 1.7967010396887884,
+            "pull_at_rh_SI": 1.272363125606807e-13,
+            "newton_pull_at_rh_SI": 9.789869589252876e-15
+          },
+          "isolated_ML2": 4.850551074264821
+        },
+        "newton": {
+          "ML1": {
+            "sigma_global": 0.2535449732119896,
+            "sigma_inside_rh": 0.28773815883776127,
+            "pull_at_rh_SI": 3.2632849374859038e-15,
+            "newton_pull_at_rh_SI": 3.2632898630842933e-15
+          },
+          "ML2": {
+            "sigma_global": 0.35856673978791875,
+            "sigma_inside_rh": 0.4069232066406258,
+            "pull_at_rh_SI": 6.5265698749718076e-15,
+            "newton_pull_at_rh_SI": 6.526579726168587e-15
+          },
+          "ML3": {
+            "sigma_global": 0.439152775606856,
+            "sigma_inside_rh": 0.4983771103833263,
+            "pull_at_rh_SI": 9.789854812457711e-15,
+            "newton_pull_at_rh_SI": 9.789869589252876e-15
+          },
+          "isolated_ML2": 0.35856673978791875
+        }
+      },
+      "source": "Torrealba et al. 2019 (MNRAS 488, 2743): sigma 5.71+-1.08, D_helio 132, M_V -9.03 (L_V = 3.5e5 derived), r_h 2920 pc with 1-b/a = 0.38 (circularised here); D_gc from (l,b) = (264.9, 11.2)"
+    }
+  ],
+  "summary": {
+    "ours": {
+      "mean_log_ratio": -0.3116328464737149,
+      "rms_log_ratio": 0.3938738047513328,
+      "chi2": 135.4374993526847,
+      "n": 10
+    },
+    "mond": {
+      "mean_log_ratio": -0.2606562221940664,
+      "rms_log_ratio": 0.35075757549175074,
+      "chi2": 118.6285479930531,
+      "n": 10
+    },
+    "newton": {
+      "mean_log_ratio": -0.7202813848842751,
+      "rms_log_ratio": 0.7721930724941901,
+      "chi2": 350.3250776240551,
+      "n": 10
+    }
+  },
+  "seconds": 5.035799595999833
+}

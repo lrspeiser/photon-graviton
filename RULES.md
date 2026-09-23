@@ -158,3 +158,21 @@ The wide-binary prediction uses the law unchanged, in the cold limit. It is repo
 MOND (43%) and Newton (0%) and sits at 19%.
 
 Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §16.
+
+## 11. Round 7: the full check against the standard tests (23 September 2026)
+
+No new formula. Round 7 runs the round-3 law, unchanged, against every standard Galactic and
+lensing measurement we could trace to its paper. It adds one standing practice:
+
+* **The coverage table** (BLOG §7; results README §17.8) is re-run whenever the law changes.
+  Every row is a published measurement, with MOND, Newton and dark matter alongside.
+* **A failed row triggers the owner's standing instruction**: we are looking for solutions,
+  so first say what would have to change to solve the problem, then test it.
+  Round 7's three candidate amendments are recorded as candidates, not adopted:
+  * gradual release, for Cassini;
+  * a larger g_d, for the Sun's speed;
+  * a weaker external hold, for dwarfs.
+
+  Each must pass the formula guard and the refit before it enters the law.
+
+Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §17.

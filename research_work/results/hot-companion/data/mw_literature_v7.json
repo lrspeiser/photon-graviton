@@ -1,0 +1,4588 @@
+{
+ "meta": {
+  "generated": "2026-09-23",
+  "method": "All PDFs downloaded from arXiv (or publisher open-access copy where noted) and parsed with pypdf (default and layout modes) and pdfminer.six. Tables were machine-parsed from extracted text; every 'snippet' below was verified programmatically to occur verbatim (after whitespace normalisation and ligature expansion) in the extracted text of the cited PDF page. PDF math extraction sometimes scrambles superscripts/subscripts; where that happens the snippet is kept verbatim and the reading is given in 'snippet_reading'.",
+  "pdf_page_convention": "pdf_page = 1-based page index of the parsed PDF (arXiv version unless stated otherwise).",
+  "working_dir": "(local working folder; source PDFs not committed) (pdfs/, txt/)"
+ },
+ "papers": {
+  "Ou2024": {
+   "authors": "Xiaowei Ou, Anna-Christina Eilers, Lina Necib, Anna Frebel",
+   "year": 2024,
+   "title": "The dark matter profile of the Milky Way inferred from its circular velocity curve",
+   "journal": "MNRAS 528, 693",
+   "doi": "10.1093/mnras/stae034",
+   "arxiv": "2303.12838",
+   "arxiv_version_parsed": "v2 (26 May 2023)",
+   "citation_note": "Journal ref from request; DOI resolves to academic.oup.com/mnras/article/528/1/693 (published PDF behind Cloudflare, not parsed). Numbers are from arXiv v2."
+  },
+  "Jiao2023": {
+   "authors": "Yongjun Jiao, Francois Hammer, Haifeng Wang, Jianling Wang, Philippe Amram, Laurent Chemin, Yanbin Yang",
+   "year": 2023,
+   "title": "Detection of the Keplerian decline in the Milky Way rotation curve",
+   "journal": "A&A 678, A208",
+   "doi": "10.1051/0004-6361/202347513",
+   "arxiv": "2309.00048",
+   "arxiv_version_parsed": "v4 (22 Sep 2023, A&A proofs)"
+  },
+  "Zhou2023": {
+   "authors": "Yuan Zhou, Xinyi Li, Yang Huang, Huawei Zhang",
+   "year": 2023,
+   "title": "The Circular Velocity Curve of the Milky Way from 5 to 25 kpc using luminous red giant branch stars",
+   "journal": "ApJ 946, 73",
+   "doi": "10.3847/1538-4357/acadd9",
+   "arxiv": "2212.10393",
+   "arxiv_version_parsed": "v1 (draft version 21 Dec 2022; only arXiv version)",
+   "citation_note": "Journal ref from request; DOI from arXiv metadata. Published IOP PDF blocked by captcha, so the arXiv v1 text was parsed."
+  },
+  "WangHF2023": {
+   "authors": "Hai-Feng Wang, Zofia Chrobakova, Martin Lopez-Corredoira, Francesco Sylos Labini",
+   "year": 2023,
+   "title": "Mapping the Milky Way Disk with Gaia DR3: 3D extended kinematic maps and rotation curve to ~30 kpc",
+   "journal": "ApJ 942, 12",
+   "doi": "10.3847/1538-4357/aca27c",
+   "arxiv": "2211.05668",
+   "arxiv_version_parsed": "v2",
+   "citation_note": "Journal ref as cited in Jiao et al. 2023 reference list ('Wang et al. 2023a'), which is the Gaia DR3 RC that Jiao et al. re-derive."
+  },
+  "WangJ2022": {
+   "authors": "Jianling Wang, Francois Hammer, Yanbin Yang",
+   "year": 2022,
+   "title": "Milky Way total mass derived by rotation curve and globular cluster kinematics from Gaia EDR3",
+   "journal": "MNRAS 510, 2242",
+   "doi": "10.1093/mnras/stab3258",
+   "arxiv": "2111.09324",
+   "arxiv_version_parsed": "v2",
+   "citation_note": "Journal ref as cited in reference lists of the parsed corpus ('Wang J., Hammer F., Yang Y., 2022, MNRAS, 510, 2242')."
+  },
+  "BovyRix2013": {
+   "authors": "Jo Bovy, Hans-Walter Rix",
+   "year": 2013,
+   "title": "A direct dynamical measurement of the Milky Way's disk surface density profile, disk scale length, and dark matter profile at 4 kpc < R < 9 kpc",
+   "journal": "ApJ 779, 115",
+   "arxiv": "1309.0809",
+   "arxiv_version_parsed": "v3 (4 Dec 2013)",
+   "doi": "10.1088/0004-637X/779/2/115"
+  },
+  "HolmbergFlynn2004": {
+   "authors": "Johan Holmberg, Chris Flynn",
+   "year": 2004,
+   "title": "The local surface density of disc matter mapped by Hipparcos",
+   "journal": "MNRAS 352, 440",
+   "arxiv": "astro-ph/0405155",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.1111/j.1365-2966.2004.07931.x"
+  },
+  "McKee2015": {
+   "authors": "Christopher F. McKee, Antonio Parravano, David J. Hollenbach",
+   "year": 2015,
+   "title": "Stars, Gas, and Dark Matter in the Solar Neighborhood",
+   "journal": "ApJ 814, 13",
+   "arxiv": "1509.05334",
+   "arxiv_version_parsed": "v1 (17 Sep 2015; only arXiv version)",
+   "doi": "10.1088/0004-637X/814/1/13"
+  },
+  "Piffl2014": {
+   "authors": "T. Piffl, C. Scannapieco, J. Binney, M. Steinmetz, R.-D. Scholz, et al. (RAVE)",
+   "year": 2014,
+   "title": "The RAVE survey: the Galactic escape speed and the mass of the Milky Way",
+   "journal": "A&A 562, A91",
+   "arxiv": "1309.4293",
+   "arxiv_version_parsed": "v3",
+   "doi": "10.1051/0004-6361/201322531"
+  },
+  "Monari2018": {
+   "authors": "G. Monari, B. Famaey, I. Carrillo, T. Piffl, M. Steinmetz, R. F. G. Wyse, F. Anders, C. Chiappini, K. Janssen",
+   "year": 2018,
+   "title": "The escape speed curve of the Galaxy obtained from Gaia DR2 implies a heavy Milky Way",
+   "journal": "A&A 616, L9",
+   "arxiv": "1807.04565",
+   "arxiv_version_parsed": "v2",
+   "doi": "10.1051/0004-6361/201833748"
+  },
+  "Deason2019": {
+   "authors": "Alis J. Deason, Azadeh Fattahi, Vasily Belokurov, N. Wyn Evans, Robert J. J. Grand, Federico Marinacci, Ruediger Pakmor",
+   "year": 2019,
+   "title": "The local high velocity tail and the Galactic escape speed",
+   "journal": "MNRAS 485, 3514",
+   "arxiv": "1901.02016",
+   "arxiv_version_parsed": "v2 (28 Feb 2019)",
+   "doi": "10.1093/mnras/stz623"
+  },
+  "KoppelmanHelmi2021": {
+   "authors": "Helmer H. Koppelman, Amina Helmi",
+   "year": 2021,
+   "title": "Determination of the escape velocity of the Milky Way using a proper motion selected halo sample",
+   "journal": "A&A 649, A136",
+   "arxiv": "2006.16283",
+   "arxiv_version_parsed": "v2 (A&A manuscript dated 9 Mar 2021)",
+   "doi": "10.1051/0004-6361/202038777"
+  },
+  "NecibLin2022": {
+   "authors": "Lina Necib, Tongyan Lin",
+   "year": 2022,
+   "title": "Substructure at High Speed. II. The Local Escape Velocity and Milky Way Mass with Gaia eDR3",
+   "journal": "ApJ 926, 189",
+   "arxiv": "2102.02211",
+   "arxiv_version_parsed": "published ApJ PDF (IOP, open access) parsed; arXiv has only v1 (Feb 2021, Gaia DR2) with DIFFERENT numbers",
+   "doi": "10.3847/1538-4357/ac4244"
+  },
+  "Prudil2022": {
+   "authors": "Z. Prudil, A. J. Koch-Hansen, B. Lemasle, E. K. Grebel, T. Marchetti, et al.",
+   "year": 2022,
+   "title": "Milky Way archaeology using RR Lyrae and type II Cepheids II. High velocity RR Lyrae stars, and mass of the Milky Way",
+   "journal": "A&A 664, A148",
+   "arxiv": "2206.00417",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.1051/0004-6361/202142251"
+  },
+  "Roche2024": {
+   "authors": "Cian Roche, Lina Necib, Tongyan Lin, Xiaowei Ou, Tri Nguyen",
+   "year": 2024,
+   "title": "The Escape Velocity Profile of the Milky Way from Gaia DR3",
+   "journal": "ApJ 972, 70",
+   "arxiv": "2402.00108",
+   "arxiv_version_parsed": "v2 (28 May 2026; 'published in ApJ. Typo fixed in Eq. 7')",
+   "doi": "10.3847/1538-4357/ad58d7"
+  },
+  "Watkins2019": {
+   "authors": "Laura L. Watkins, Roeland P. van der Marel, Sangmo Tony Sohn, N. Wyn Evans",
+   "year": 2019,
+   "title": "Evidence for an Intermediate-Mass Milky Way from Gaia DR2 Halo Globular Cluster Motions",
+   "journal": "ApJ 873, 118",
+   "arxiv": "1804.11348",
+   "arxiv_version_parsed": "v3 (draft 11 Feb 2019)",
+   "doi": "10.3847/1538-4357/ab089f"
+  },
+  "PostiHelmi2019": {
+   "authors": "Lorenzo Posti, Amina Helmi",
+   "year": 2019,
+   "title": "Mass and shape of the Milky Way's dark matter halo with globular clusters from Gaia and Hubble",
+   "journal": "A&A 621, A56",
+   "arxiv": "1805.01408",
+   "arxiv_version_parsed": "v2",
+   "doi": "10.1051/0004-6361/201833355"
+  },
+  "Vasiliev2019": {
+   "authors": "Eugene Vasiliev",
+   "year": 2019,
+   "title": "Proper motions and dynamics of the Milky Way globular cluster system from Gaia DR2",
+   "journal": "MNRAS 484, 2832",
+   "arxiv": "1807.09775",
+   "arxiv_version_parsed": "v2 (accepted 11 Jan 2019)",
+   "doi": "10.1093/mnras/stz171"
+  },
+  "Deason2021": {
+   "authors": "Alis J. Deason, Denis Erkal, Vasily Belokurov, Azadeh Fattahi, Facundo A. Gomez, et al.",
+   "year": 2021,
+   "title": "The mass of the Milky Way out to 100 kpc using halo stars",
+   "journal": "MNRAS 501, 5964",
+   "arxiv": "2010.13801",
+   "arxiv_version_parsed": "v2 (draft 19 Jan 2021)",
+   "doi": "10.1093/mnras/staa3984"
+  },
+  "CorreaMagnusVasiliev2022": {
+   "authors": "Lilia Correa Magnus, Eugene Vasiliev",
+   "year": 2022,
+   "title": "Measuring the Milky Way mass distribution in the presence of the LMC",
+   "journal": "MNRAS 511, 2610",
+   "arxiv": "2110.00018",
+   "arxiv_version_parsed": "v2",
+   "doi": "10.1093/mnras/stab3726"
+  },
+  "McMillan2017": {
+   "authors": "Paul J. McMillan",
+   "year": 2017,
+   "title": "The mass distribution and gravitational potential of the Milky Way",
+   "journal": "MNRAS 465, 76",
+   "arxiv": "1608.00971",
+   "arxiv_version_parsed": "v3 (29 Nov 2016)",
+   "doi": "10.1093/mnras/stw2759"
+  },
+  "McConnachie2012": {
+   "authors": "Alan W. McConnachie",
+   "year": 2012,
+   "title": "The observed properties of dwarf galaxies in and around the Local Group",
+   "journal": "AJ 144, 4",
+   "arxiv": "1204.1562",
+   "arxiv_version_parsed": "v2 (5 May 2012)",
+   "doi": "10.1088/0004-6256/144/1/4"
+  },
+  "Caldwell2017": {
+   "authors": "Nelson Caldwell, Matthew G. Walker, Mario Mateo, Edward W. Olszewski, Sergey Koposov, Vasily Belokurov, Gabriel Torrealba, Alex Geringer-Sameth, Christian I. Johnson",
+   "year": 2017,
+   "title": "Crater 2: An Extremely Cold Dark Matter Halo",
+   "journal": "ApJ 839, 20",
+   "arxiv": "1612.06398",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.3847/1538-4357/aa688e"
+  },
+  "Torrealba2016": {
+   "authors": "G. Torrealba, S. E. Koposov, V. Belokurov, M. Irwin",
+   "year": 2016,
+   "title": "The feeble giant. Discovery of a large and diffuse Milky Way dwarf galaxy in the constellation of Crater",
+   "journal": "MNRAS 459, 2370",
+   "arxiv": "1601.07178",
+   "arxiv_version_parsed": "v4 (1 Aug 2016)",
+   "doi": "10.1093/mnras/stw733",
+   "citation_note": "Journal ref as cited in Torrealba et al. 2019 reference list ('2016a, MNRAS, 459, 2370')."
+  },
+  "Torrealba2019": {
+   "authors": "G. Torrealba, V. Belokurov, S. E. Koposov, T. S. Li, M. G. Walker, et al.",
+   "year": 2019,
+   "title": "The hidden giant: discovery of an enormous Galactic dwarf satellite in Gaia DR2",
+   "journal": "MNRAS 488, 2743",
+   "arxiv": "1811.04082",
+   "arxiv_version_parsed": "v3 (preprint 12 June 2019)",
+   "doi": "10.1093/mnras/stz1624",
+   "citation_note": "Journal volume/page from request (not independently verified); DOI from arXiv metadata."
+  },
+  "McGaughWolf2010": {
+   "authors": "Stacy S. McGaugh, Joe Wolf",
+   "year": 2010,
+   "title": "Local Group Dwarf Spheroidals: Correlated Deviations from the Baryonic Tully-Fisher Relation",
+   "journal": "ApJ 722, 248",
+   "arxiv": "1003.3448",
+   "arxiv_version_parsed": "v3",
+   "doi": "10.1088/0004-637X/722/1/248"
+  },
+  "McGaugh2016": {
+   "authors": "Stacy S. McGaugh",
+   "year": 2016,
+   "title": "MOND Prediction for the Velocity Dispersion of the 'Feeble Giant' Crater II",
+   "journal": "ApJL 832, L8",
+   "arxiv": "1610.06189",
+   "arxiv_version_parsed": "v2 (3 Nov 2016)",
+   "doi": "10.3847/2041-8205/832/1/L8"
+  },
+  "GRAVITY2020": {
+   "authors": "GRAVITY Collaboration (R. Abuter et al.)",
+   "year": 2020,
+   "title": "Detection of the Schwarzschild precession in the orbit of the star S2 near the Galactic centre massive black hole",
+   "journal": "A&A 636, L5",
+   "arxiv": "2004.07187",
+   "arxiv_version_parsed": "v1 (after proof, 16 Apr 2020)",
+   "doi": "10.1051/0004-6361/202037813"
+  },
+  "GRAVITY2021": {
+   "authors": "GRAVITY Collaboration (R. Abuter et al.)",
+   "year": 2021,
+   "title": "Improved GRAVITY astrometric accuracy from modeling of optical aberrations",
+   "journal": "A&A 647, A59",
+   "arxiv": "2101.12098",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.1051/0004-6361/202040208"
+  },
+  "GRAVITY2022": {
+   "authors": "GRAVITY Collaboration (R. Abuter et al.)",
+   "year": 2022,
+   "title": "Mass distribution in the Galactic Center based on interferometric astrometry of multiple stellar orbits",
+   "journal": "A&A 657, L12",
+   "arxiv": "2112.07478",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.1051/0004-6361/202142465",
+   "citation_note": "Volume/page as cited in GRAVITY 2024 reference list ('GRAVITY Collaboration. 2022, A&A, 657, L12')."
+  },
+  "GRAVITY2024": {
+   "authors": "GRAVITY Collaboration (K. Abd El Dayem et al.)",
+   "year": 2024,
+   "title": "Improving constraints on the extended mass distribution in the Galactic Center with stellar orbits",
+   "journal": "A&A 692, A242",
+   "arxiv": "2409.12261",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.1051/0004-6361/202452274"
+  },
+  "WeisbergHuang2016": {
+   "authors": "J. M. Weisberg, Y. Huang",
+   "year": 2016,
+   "title": "Relativistic Measurements from Timing the Binary Pulsar PSR B1913+16",
+   "journal": "ApJ 829, 55",
+   "arxiv": "1606.02744",
+   "arxiv_version_parsed": "v1 (accepted version)",
+   "doi": "10.3847/0004-637X/829/1/55"
+  },
+  "Kramer2021": {
+   "authors": "M. Kramer, I. H. Stairs, R. N. Manchester, N. Wex, A. T. Deller, et al.",
+   "year": 2021,
+   "title": "Strong-field Gravity Tests with the Double Pulsar",
+   "journal": "Phys. Rev. X 11, 041050",
+   "arxiv": "2112.06795",
+   "arxiv_version_parsed": "v2",
+   "doi": "10.1103/PhysRevX.11.041050"
+  },
+  "Bertotti2003": {
+   "authors": "B. Bertotti, L. Iess, P. Tortora",
+   "year": 2003,
+   "title": "A test of general relativity using radio links with the Cassini spacecraft",
+   "journal": "Nature 425, 374-376",
+   "arxiv": null,
+   "arxiv_version_parsed": "not on arXiv; abstract parsed from nature.com article page (doi:10.1038/nature01997)",
+   "doi": "10.1038/nature01997"
+  },
+  "Fomalont2009": {
+   "authors": "E. Fomalont, S. Kopeikin, G. Lanyi, J. Benson",
+   "year": 2009,
+   "title": "Progress in Measurements of the Gravitational Bending of Radio Waves Using the VLBA",
+   "journal": "ApJ 699, 1395",
+   "arxiv": "0904.3992",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.1088/0004-637X/699/2/1395"
+  },
+  "LambertLePoncinLafitte2009": {
+   "authors": "S. B. Lambert, C. Le Poncin-Lafitte",
+   "year": 2009,
+   "title": "Determination of the relativistic parameter gamma using very long baseline interferometry",
+   "journal": "A&A 499, 331",
+   "arxiv": "0903.1615",
+   "arxiv_version_parsed": "v1",
+   "doi": "10.1051/0004-6361/200911714",
+   "citation_note": "Journal ref as cited in Will 2014 Living Review (arXiv:1403.7377) reference [219]."
+  }
+ },
+ "items": {
+  "1a_Ou2024_circular_velocity_curve": {
+   "paper": "Ou2024",
+   "location": "Table 1 ('Measurements of the Circular Velocity of the Milky Way'), pdf page 6",
+   "table_columns": {
+    "R_kpc": "weighted-mean Galactocentric cylindrical radius of stars in bin",
+    "vc_kms": "circular velocity",
+    "err_plus_kms": "sigma+_vc",
+    "err_minus_kms": "sigma-_vc",
+    "N_star": "stars per bin"
+   },
+   "table": [
+    {
+     "R_kpc": 6.27,
+     "vc_kms": 231.07,
+     "err_plus_kms": 1.28,
+     "err_minus_kms": 1.0,
+     "N_star": 764
+    },
+    {
+     "R_kpc": 6.78,
+     "vc_kms": 230.93,
+     "err_plus_kms": 0.97,
+     "err_minus_kms": 0.97,
+     "N_star": 676
+    },
+    {
+     "R_kpc": 7.28,
+     "vc_kms": 232.87,
+     "err_plus_kms": 1.13,
+     "err_minus_kms": 0.79,
+     "N_star": 812
+    },
+    {
+     "R_kpc": 7.86,
+     "vc_kms": 234.14,
+     "err_plus_kms": 0.63,
+     "err_minus_kms": 0.62,
+     "N_star": 1631
+    },
+    {
+     "R_kpc": 8.19,
+     "vc_kms": 232.83,
+     "err_plus_kms": 0.56,
+     "err_minus_kms": 0.55,
+     "N_star": 2270
+    },
+    {
+     "R_kpc": 8.71,
+     "vc_kms": 231.27,
+     "err_plus_kms": 0.54,
+     "err_minus_kms": 0.66,
+     "N_star": 1445
+    },
+    {
+     "R_kpc": 9.23,
+     "vc_kms": 230.47,
+     "err_plus_kms": 0.44,
+     "err_minus_kms": 0.46,
+     "N_star": 2179
+    },
+    {
+     "R_kpc": 9.72,
+     "vc_kms": 229.16,
+     "err_plus_kms": 0.54,
+     "err_minus_kms": 0.43,
+     "N_star": 2505
+    },
+    {
+     "R_kpc": 10.24,
+     "vc_kms": 229.37,
+     "err_plus_kms": 0.25,
+     "err_minus_kms": 0.5,
+     "N_star": 2560
+    },
+    {
+     "R_kpc": 10.74,
+     "vc_kms": 227.95,
+     "err_plus_kms": 0.53,
+     "err_minus_kms": 0.34,
+     "N_star": 2528
+    },
+    {
+     "R_kpc": 11.23,
+     "vc_kms": 227.09,
+     "err_plus_kms": 0.44,
+     "err_minus_kms": 0.46,
+     "N_star": 2692
+    },
+    {
+     "R_kpc": 11.73,
+     "vc_kms": 227.15,
+     "err_plus_kms": 0.35,
+     "err_minus_kms": 0.45,
+     "N_star": 2419
+    },
+    {
+     "R_kpc": 12.23,
+     "vc_kms": 226.9,
+     "err_plus_kms": 0.39,
+     "err_minus_kms": 0.41,
+     "N_star": 2285
+    },
+    {
+     "R_kpc": 12.73,
+     "vc_kms": 225.61,
+     "err_plus_kms": 0.64,
+     "err_minus_kms": 0.53,
+     "N_star": 1994
+    },
+    {
+     "R_kpc": 13.22,
+     "vc_kms": 224.95,
+     "err_plus_kms": 0.66,
+     "err_minus_kms": 0.69,
+     "N_star": 1665
+    },
+    {
+     "R_kpc": 13.72,
+     "vc_kms": 222.79,
+     "err_plus_kms": 0.68,
+     "err_minus_kms": 0.53,
+     "N_star": 1308
+    },
+    {
+     "R_kpc": 14.22,
+     "vc_kms": 222.13,
+     "err_plus_kms": 1.04,
+     "err_minus_kms": 0.64,
+     "N_star": 938
+    },
+    {
+     "R_kpc": 14.73,
+     "vc_kms": 220.08,
+     "err_plus_kms": 0.65,
+     "err_minus_kms": 0.89,
+     "N_star": 641
+    },
+    {
+     "R_kpc": 15.24,
+     "vc_kms": 218.25,
+     "err_plus_kms": 1.14,
+     "err_minus_kms": 0.79,
+     "N_star": 449
+    },
+    {
+     "R_kpc": 15.72,
+     "vc_kms": 221.16,
+     "err_plus_kms": 1.06,
+     "err_minus_kms": 1.24,
+     "N_star": 322
+    },
+    {
+     "R_kpc": 16.24,
+     "vc_kms": 218.3,
+     "err_plus_kms": 2.17,
+     "err_minus_kms": 1.88,
+     "N_star": 243
+    },
+    {
+     "R_kpc": 16.77,
+     "vc_kms": 217.07,
+     "err_plus_kms": 1.39,
+     "err_minus_kms": 1.35,
+     "N_star": 164
+    },
+    {
+     "R_kpc": 17.21,
+     "vc_kms": 219.56,
+     "err_plus_kms": 1.8,
+     "err_minus_kms": 1.69,
+     "N_star": 150
+    },
+    {
+     "R_kpc": 17.77,
+     "vc_kms": 215.49,
+     "err_plus_kms": 1.98,
+     "err_minus_kms": 2.08,
+     "N_star": 114
+    },
+    {
+     "R_kpc": 18.23,
+     "vc_kms": 214.62,
+     "err_plus_kms": 2.24,
+     "err_minus_kms": 1.59,
+     "N_star": 102
+    },
+    {
+     "R_kpc": 18.73,
+     "vc_kms": 210.89,
+     "err_plus_kms": 1.42,
+     "err_minus_kms": 1.32,
+     "N_star": 94
+    },
+    {
+     "R_kpc": 19.22,
+     "vc_kms": 208.48,
+     "err_plus_kms": 2.2,
+     "err_minus_kms": 1.65,
+     "N_star": 71
+    },
+    {
+     "R_kpc": 19.71,
+     "vc_kms": 205.97,
+     "err_plus_kms": 1.2,
+     "err_minus_kms": 1.55,
+     "N_star": 70
+    },
+    {
+     "R_kpc": 20.22,
+     "vc_kms": 202.97,
+     "err_plus_kms": 1.55,
+     "err_minus_kms": 2.25,
+     "N_star": 65
+    },
+    {
+     "R_kpc": 20.72,
+     "vc_kms": 195.16,
+     "err_plus_kms": 2.6,
+     "err_minus_kms": 1.97,
+     "N_star": 46
+    },
+    {
+     "R_kpc": 21.22,
+     "vc_kms": 200.2,
+     "err_plus_kms": 2.84,
+     "err_minus_kms": 1.45,
+     "N_star": 38
+    },
+    {
+     "R_kpc": 21.72,
+     "vc_kms": 201.11,
+     "err_plus_kms": 2.72,
+     "err_minus_kms": 3.81,
+     "N_star": 30
+    },
+    {
+     "R_kpc": 22.27,
+     "vc_kms": 196.79,
+     "err_plus_kms": 4.82,
+     "err_minus_kms": 6.25,
+     "N_star": 14
+    },
+    {
+     "R_kpc": 22.71,
+     "vc_kms": 218.65,
+     "err_plus_kms": 14.93,
+     "err_minus_kms": 17.54,
+     "N_star": 11
+    },
+    {
+     "R_kpc": 23.4,
+     "vc_kms": 192.49,
+     "err_plus_kms": 4.25,
+     "err_minus_kms": 4.8,
+     "N_star": 22
+    },
+    {
+     "R_kpc": 25.02,
+     "vc_kms": 191.48,
+     "err_plus_kms": 6.41,
+     "err_minus_kms": 9.61,
+     "N_star": 11
+    },
+    {
+     "R_kpc": 27.31,
+     "vc_kms": 172.98,
+     "err_plus_kms": 15.82,
+     "err_minus_kms": 17.07,
+     "N_star": 7
+    }
+   ],
+   "n_rows": 37,
+   "evidence": [
+    {
+     "pdf_page": 6,
+     "snippet": "Table 1.Measurements of the Circular Velocity of the Milky Way."
+    },
+    {
+     "pdf_page": 6,
+     "snippet": "6.27 231.07 1.28 1.00 764"
+    },
+    {
+     "pdf_page": 6,
+     "snippet": "27.31 172.98 15.82 17.07 7"
+    },
+    {
+     "pdf_page": 3,
+     "snippet": "from234.14kms−1 at𝑅= 7.86kpcto 172.98kms−1at𝑅= 27.31kpc"
+    },
+    {
+     "pdf_page": 3,
+     "snippet": "suming a distance from the Sun to the galactic centre of 8.178kpc (GRAVITYCollaborationetal.2019),aheightoftheSunabovethe galacticplaneof0.0208kpc(Bennett&Bovy2019)"
+    },
+    {
+     "pdf_page": 3,
+     "snippet": "individual systematic uncertainties range between1% to 5% up to 𝑅 = 22kpc, with a total systematic uncertainty between2− 4%."
+    }
+   ],
+   "adopted_solar_parameters": {
+    "R0_kpc": 8.178,
+    "z_sun_kpc": 0.0208,
+    "v_sun_xyz_kms": [
+     5.1,
+     247.3,
+     7.8
+    ]
+   },
+   "definition_caveats": [
+    "Jeans-equation (axisymmetric, steady-state) circular velocity from ~33,335 APOGEE/Gaia DR3 red-giant disc stars ([alpha/Fe]<0.12, |vz|<100 km/s, |z|<1 kpc or |z|/R<tan(pi/30), within a 60-deg wedge toward the Sun); tracer density assumed exponential with fixed 3 kpc scale length; the d(nu<vRvz>)/dz term is neglected.",
+    "Tabulated sigma+/sigma- are statistical only (bootstrap). Systematics are given separately in Fig. 5: total 2-4% (individual terms 1-5%) up to R=22 kpc, rising to ~15% at R>22 kpc (dominated by the neglected asymmetric-drift/cross term).",
+    "R is not evenly spaced (weighted mean of stars per bin); outer bins widened so that each has >=5 stars. Bins at R<6 kpc excluded (bar).",
+    "Jiao et al. 2023 (footnote 4) state they added Ou et al.'s Fig. 5 systematics when fitting this curve (0.14 used where not readable).",
+    "Numbers taken from arXiv v2; published MNRAS version not parsed (paywall/Cloudflare)."
+   ]
+  },
+  "1b_Jiao2023_circular_velocity_curve": {
+   "paper": "Jiao2023",
+   "location": "Table 3 ('Measurements of the Circular Velocity of the Milky Way'), pdf page 5; total mass: abstract (p1), Table 4 (p7)",
+   "table_columns": {
+    "R_kpc": "bin centre (1 kpc bins)",
+    "vc_kms": "circular velocity",
+    "sigma_vc_kms": "uncertainty INCLUDING systematics"
+   },
+   "table": [
+    {
+     "R_kpc": 9.5,
+     "vc_kms": 221.75,
+     "sigma_vc_kms": 3.17
+    },
+    {
+     "R_kpc": 10.5,
+     "vc_kms": 223.32,
+     "sigma_vc_kms": 3.02
+    },
+    {
+     "R_kpc": 11.5,
+     "vc_kms": 220.72,
+     "sigma_vc_kms": 3.47
+    },
+    {
+     "R_kpc": 12.5,
+     "vc_kms": 222.92,
+     "sigma_vc_kms": 3.19
+    },
+    {
+     "R_kpc": 13.5,
+     "vc_kms": 224.16,
+     "sigma_vc_kms": 3.48
+    },
+    {
+     "R_kpc": 14.5,
+     "vc_kms": 221.6,
+     "sigma_vc_kms": 4.2
+    },
+    {
+     "R_kpc": 15.5,
+     "vc_kms": 218.79,
+     "sigma_vc_kms": 4.75
+    },
+    {
+     "R_kpc": 16.5,
+     "vc_kms": 216.38,
+     "sigma_vc_kms": 4.96
+    },
+    {
+     "R_kpc": 17.5,
+     "vc_kms": 213.48,
+     "sigma_vc_kms": 6.13
+    },
+    {
+     "R_kpc": 18.5,
+     "vc_kms": 209.17,
+     "sigma_vc_kms": 4.42
+    },
+    {
+     "R_kpc": 19.5,
+     "vc_kms": 206.25,
+     "sigma_vc_kms": 4.63
+    },
+    {
+     "R_kpc": 20.5,
+     "vc_kms": 202.54,
+     "sigma_vc_kms": 4.4
+    },
+    {
+     "R_kpc": 21.5,
+     "vc_kms": 197.56,
+     "sigma_vc_kms": 4.62
+    },
+    {
+     "R_kpc": 22.5,
+     "vc_kms": 197.0,
+     "sigma_vc_kms": 3.81
+    },
+    {
+     "R_kpc": 23.5,
+     "vc_kms": 191.62,
+     "sigma_vc_kms": 12.95
+    },
+    {
+     "R_kpc": 24.5,
+     "vc_kms": 187.12,
+     "sigma_vc_kms": 8.06
+    },
+    {
+     "R_kpc": 25.5,
+     "vc_kms": 181.44,
+     "sigma_vc_kms": 19.58
+    },
+    {
+     "R_kpc": 26.5,
+     "vc_kms": 175.68,
+     "sigma_vc_kms": 24.68
+    }
+   ],
+   "n_rows": 18,
+   "slope": {
+    "value": -2.18,
+    "err": 0.23,
+    "unit": "km/s/kpc",
+    "note": "linear fit Vc(R)=V(R0)+beta(R-R0); Ou et al. RC gives -2.22+-0.20 (computed by Jiao et al.)"
+   },
+   "total_mass": {
+    "headline_Mdyn": {
+     "value": 206000000000.0,
+     "err_plus": 24000000000.0,
+     "err_minus": 13000000000.0,
+     "unit": "Msun",
+     "note": "average of the TW and O23 estimates (abstract, footnote 7); dynamical mass = baryons + DM virial mass (M200 w.r.t. critical density)"
+    },
+    "Mdyn_this_RC_average": {
+     "value": 199000000000.0,
+     "err_plus": 9000000000.0,
+     "err_minus": 6000000000.0,
+     "unit": "Msun",
+     "Rvir_kpc": {
+      "value": 121.03,
+      "err_plus": 1.8,
+      "err_minus": 1.23
+     }
+    },
+    "Mdyn_Ou_RC_average": {
+     "value": 213000000000.0,
+     "err_plus": 17000000000.0,
+     "err_minus": 12000000000.0,
+     "unit": "Msun",
+     "Rvir_kpc": {
+      "value": 123.8,
+      "err_plus": 3.21,
+      "err_minus": 2.37
+     }
+    },
+    "strict_upper_limit": {
+     "value": 540000000000.0,
+     "unit": "Msun",
+     "note": "obtained by replacing all Ou et al. RC points by their upper error bars"
+    },
+    "Keplerian_enclosed_mass": {
+     "value": 195000000000.0,
+     "unit": "Msun",
+     "note": "'approximately', Keplerian fit beyond R>19 kpc to both RCs"
+    },
+    "Table4_B2_baryon_model": {
+     "Mbar": 61600000000.0,
+     "Mdyn_TW": {
+      "value": 205000000000.0,
+      "err_plus": 8000000000.0,
+      "err_minus": 6000000000.0
+     },
+     "Mdyn_O23": {
+      "value": 219000000000.0,
+      "err_plus": 17000000000.0,
+      "err_minus": 12000000000.0
+     },
+     "Einasto_M0_TW": {
+      "value": 372000000000.0,
+      "err_plus": 45000000000.0,
+      "err_minus": 70000000000.0
+     },
+     "Einasto_h_kpc_TW": {
+      "value": 11.41,
+      "err_plus": 1.15,
+      "err_minus": 1.62
+     },
+     "Einasto_n_TW": {
+      "value": 0.43,
+      "err_plus": 0.12,
+      "err_minus": 0.09
+     }
+    }
+   },
+   "evidence": [
+    {
+     "pdf_page": 5,
+     "snippet": "Table 3. Measurements of the Circular Velocity of the Milky Way. R [kpc] Vc [km s−1] σVc [km s−1] 9.5 221.75 3.17"
+    },
+    {
+     "pdf_page": 5,
+     "snippet": "26.5 175.68 24.68"
+    },
+    {
+     "pdf_page": 5,
+     "snippet": "The red data points are the measurements computed in this work; error bars include systematic un- certainties."
+    },
+    {
+     "pdf_page": 5,
+     "snippet": "3 We note that R⊙ = 8.34 kpc for this RC and 8.178 kpc for RC of Ou et al. (2023)."
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "The total mass is revised downwards to 2.06+0.24 −0.13×1011 M⊙"
+    },
+    {
+     "pdf_page": 6,
+     "snippet": "We find a MW dynamical mass of 1 .99+0.09 −0.06× 1011 M⊙ at Rvir = 121.03+1.80 −1.23 kpc from the present work"
+    },
+    {
+     "pdf_page": 5,
+     "snippet": "−(2.18± 0.23) km s−1 kpc−1, which is similar to the value of β =−(2.22± 0.20) km s−1 kpc−1 obtained by Ou et al. (2023)4."
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "We identify, for the first time, a Keplerian decline of the RC, starting at ∼ 19 kpc and ending at∼ 26.5 kpc"
+    }
+   ],
+   "adopted_solar_parameters": {
+    "R0_kpc": 8.34
+   },
+   "definition_caveats": [
+    "RC is a re-derivation of the Gaia DR3 LIM (Lucy inversion) kinematic maps of Wang, Chrobakova, Lopez-Corredoira & Sylos Labini 2023 (ApJ 942, 12) with |z|<3 kpc, 1-kpc bins re-centred; tracer scale length hR=2.5 kpc; cross term d<VRVz>/dz neglected.",
+    "sigma_vc includes systematic uncertainties (their Fig. 5/7 captions). The point at 27.5 kpc is not derived (lack of data).",
+    "Total mass is defined as baryons + Einasto DM halo mass within r200 (200x critical density, rho_cr=1.34e-7 Msun/pc^3); it is an extrapolation of the RC fit, not a direct measurement.",
+    "'Keplerian decline': fit V=A R^gamma beyond ~19 kpc prefers gamma ~ -0.5; flat RC rejected at 3 sigma (per the paper)."
+   ]
+  },
+  "1c_Zhou2023_circular_velocity_curve": {
+   "paper": "Zhou2023",
+   "location": "Table 4 ('Measured values and errors of the circular velocity of the Milky Way'), pdf page 10; vc(R0) and slope: abstract (p1) and Sect. 4.2.1 (p9-10)",
+   "table_columns": {
+    "R_kpc": "median Galactocentric radius of bin",
+    "vc_kms": "circular velocity",
+    "sigma_vc_kms": "bootstrap error (statistical only)",
+    "N_star": "stars per bin"
+   },
+   "table": [
+    {
+     "R_kpc": 5.24,
+     "vc_kms": 225.1,
+     "sigma_vc_kms": 0.69,
+     "N_star": 845
+    },
+    {
+     "R_kpc": 5.74,
+     "vc_kms": 233.53,
+     "sigma_vc_kms": 0.68,
+     "N_star": 692
+    },
+    {
+     "R_kpc": 6.25,
+     "vc_kms": 234.3,
+     "sigma_vc_kms": 0.62,
+     "N_star": 704
+    },
+    {
+     "R_kpc": 6.77,
+     "vc_kms": 233.17,
+     "sigma_vc_kms": 0.6,
+     "N_star": 759
+    },
+    {
+     "R_kpc": 7.23,
+     "vc_kms": 236.19,
+     "sigma_vc_kms": 0.45,
+     "N_star": 1061
+    },
+    {
+     "R_kpc": 7.83,
+     "vc_kms": 236.0,
+     "sigma_vc_kms": 0.29,
+     "N_star": 2288
+    },
+    {
+     "R_kpc": 8.21,
+     "vc_kms": 233.19,
+     "sigma_vc_kms": 0.26,
+     "N_star": 2550
+    },
+    {
+     "R_kpc": 8.78,
+     "vc_kms": 233.15,
+     "sigma_vc_kms": 0.22,
+     "N_star": 3281
+    },
+    {
+     "R_kpc": 9.26,
+     "vc_kms": 232.15,
+     "sigma_vc_kms": 0.17,
+     "N_star": 4583
+    },
+    {
+     "R_kpc": 9.75,
+     "vc_kms": 231.24,
+     "sigma_vc_kms": 0.16,
+     "N_star": 5061
+    },
+    {
+     "R_kpc": 10.25,
+     "vc_kms": 230.34,
+     "sigma_vc_kms": 0.17,
+     "N_star": 4881
+    },
+    {
+     "R_kpc": 10.75,
+     "vc_kms": 230.54,
+     "sigma_vc_kms": 0.18,
+     "N_star": 4564
+    },
+    {
+     "R_kpc": 11.25,
+     "vc_kms": 229.11,
+     "sigma_vc_kms": 0.19,
+     "N_star": 4005
+    },
+    {
+     "R_kpc": 11.75,
+     "vc_kms": 227.48,
+     "sigma_vc_kms": 0.2,
+     "N_star": 3431
+    },
+    {
+     "R_kpc": 12.24,
+     "vc_kms": 226.69,
+     "sigma_vc_kms": 0.25,
+     "N_star": 2844
+    },
+    {
+     "R_kpc": 12.74,
+     "vc_kms": 225.56,
+     "sigma_vc_kms": 0.27,
+     "N_star": 2312
+    },
+    {
+     "R_kpc": 13.25,
+     "vc_kms": 224.9,
+     "sigma_vc_kms": 0.27,
+     "N_star": 2116
+    },
+    {
+     "R_kpc": 13.74,
+     "vc_kms": 223.57,
+     "sigma_vc_kms": 0.31,
+     "N_star": 1825
+    },
+    {
+     "R_kpc": 14.23,
+     "vc_kms": 221.1,
+     "sigma_vc_kms": 0.4,
+     "N_star": 1362
+    },
+    {
+     "R_kpc": 14.74,
+     "vc_kms": 220.19,
+     "sigma_vc_kms": 0.43,
+     "N_star": 987
+    },
+    {
+     "R_kpc": 15.23,
+     "vc_kms": 219.59,
+     "sigma_vc_kms": 0.5,
+     "N_star": 801
+    },
+    {
+     "R_kpc": 15.74,
+     "vc_kms": 217.36,
+     "sigma_vc_kms": 0.68,
+     "N_star": 563
+    },
+    {
+     "R_kpc": 16.24,
+     "vc_kms": 216.61,
+     "sigma_vc_kms": 0.74,
+     "N_star": 446
+    },
+    {
+     "R_kpc": 16.74,
+     "vc_kms": 217.28,
+     "sigma_vc_kms": 0.87,
+     "N_star": 308
+    },
+    {
+     "R_kpc": 17.23,
+     "vc_kms": 216.25,
+     "sigma_vc_kms": 1.02,
+     "N_star": 257
+    },
+    {
+     "R_kpc": 17.74,
+     "vc_kms": 213.81,
+     "sigma_vc_kms": 1.15,
+     "N_star": 163
+    },
+    {
+     "R_kpc": 18.35,
+     "vc_kms": 217.53,
+     "sigma_vc_kms": 1.45,
+     "N_star": 207
+    },
+    {
+     "R_kpc": 18.9,
+     "vc_kms": 212.1,
+     "sigma_vc_kms": 1.58,
+     "N_star": 97
+    },
+    {
+     "R_kpc": 19.5,
+     "vc_kms": 210.46,
+     "sigma_vc_kms": 1.32,
+     "N_star": 162
+    },
+    {
+     "R_kpc": 20.41,
+     "vc_kms": 206.69,
+     "sigma_vc_kms": 1.71,
+     "N_star": 85
+    },
+    {
+     "R_kpc": 21.28,
+     "vc_kms": 207.71,
+     "sigma_vc_kms": 1.69,
+     "N_star": 93
+    },
+    {
+     "R_kpc": 22.39,
+     "vc_kms": 203.72,
+     "sigma_vc_kms": 2.01,
+     "N_star": 46
+    },
+    {
+     "R_kpc": 23.16,
+     "vc_kms": 205.2,
+     "sigma_vc_kms": 2.5,
+     "N_star": 20
+    },
+    {
+     "R_kpc": 24.0,
+     "vc_kms": 200.64,
+     "sigma_vc_kms": 4.94,
+     "N_star": 10
+    }
+   ],
+   "n_rows": 34,
+   "vc_R0": {
+    "value": 234.04,
+    "unit": "km/s",
+    "note": "from the linear fit to the RC evaluated at R0=8.122 kpc",
+    "err_stat": 0.08,
+    "err_sys": 1.36
+   },
+   "slope": {
+    "value": -1.83,
+    "unit": "km/s/kpc",
+    "err_stat": 0.02,
+    "err_sys": 0.07
+   },
+   "evidence": [
+    {
+     "pdf_page": 10,
+     "snippet": "Measured values and errors of the circular velocity of the Milky Way. R (kpc) Vc (km s−1) σVc (km s−1) Number 5.24 225.10 0.69 845"
+    },
+    {
+     "pdf_page": 10,
+     "snippet": "24.00 200.64 4.94 10"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "The derived RC shows a weak decline along R with a gradient of −1.83± 0.02 (stat.)± 0.07 (sys.) km s−1 kpc−1"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "The circular velocity at the solar position, yielded by our RC, is 234.04± 0.08 (stat.)± 1.36 (sys.) km s−1"
+    },
+    {
+     "pdf_page": 11,
+     "snippet": "New measurements of the RC of the Milky Way are shown as the black circles with the errorbars estimated by bootstrapping (systematics not included here)."
+    },
+    {
+     "pdf_page": 2,
+     "snippet": "We adopt the distance from the Sun to the Galactic center R0 = 8.122± 0.031 kpc (Gravity Collaboration et al. 2018)"
+    }
+   ],
+   "adopted_solar_parameters": {
+    "R0_kpc": 8.122,
+    "z_sun_pc": 25,
+    "V_R_sun_kms": 11.1,
+    "V_phi_sun_kms": 245.6,
+    "V_Z_sun_kms": 7.8
+   },
+   "definition_caveats": [
+    "Jeans-equation RC from ~54,000 thin-disc luminous RGB stars (APOGEE+LAMOST, distances from gradient-boosted trees); tracer density exponential with Rd=2.13 kpc, radial dispersion scale length 24 kpc; stars at R<5 kpc excluded.",
+    "Table errors are bootstrap (statistical) only; systematics (Fig. 12) are ~<1% overall, <1.0-1.5% at 25 kpc for the tracer-scale-length term.",
+    "Jiao et al. 2023 argue Zhou et al.'s distances are over-estimated in the outer disc and that the cross term was not considered.",
+    "Parsed text is arXiv v1 ('Draft version December 21, 2022'); the published ApJ PDF could not be downloaded (captcha), so minor differences from the journal version cannot be excluded."
+   ]
+  },
+  "1d_Wang2023_GaiaDR3_rotation_curve_optional": {
+   "paper": "WangHF2023",
+   "note_on_identity": "No 'Wang, Hammer, Yang 2023' Gaia DR3 rotation-curve paper was found on arXiv. The Gaia DR3 RC used by Jiao et al. 2023 ('Wang et al. 2023a') is Wang H.-F., Chrobakova, Lopez-Corredoira & Sylos Labini 2023, ApJ 942, 12 (arXiv:2211.05668). The Wang J., Hammer & Yang paper is 2022 (MNRAS 510, 2242; arXiv:2111.09324), a Gaia EDR3 total-mass paper that fits an existing RC.",
+   "table": null,
+   "table_note": "arXiv:2211.05668 contains NO numerical table of Vc(R) (values only in figures); arXiv:2111.09324 contains no new RC table either.",
+   "slope": {
+    "value": -2.3,
+    "err": 0.2,
+    "unit": "km/s/kpc",
+    "note": "linear fit out to 27.5 kpc; systematic error on slope ~0.4 km/s/kpc (~20%)"
+   },
+   "evidence": [
+    {
+     "pdf_page": 10,
+     "snippet": "By extending the rotation curve to 27.5 kpc we find that β =−(2.3± 0.2) km s−1kpc−1"
+    },
+    {
+     "pdf_page": 11,
+     "snippet": "We find that the systematic error on the slope of the rotation curve β (see Eq.11) is≈ 0.4 km s−1 kpc−1"
+    },
+    {
+     "pdf_page": 3,
+     "snippet": "by assuming the location of the Sun is R ⊙ = 8.34 kpc (Reid et al. 2014)"
+    }
+   ],
+   "WangJ2022_total_mass": {
+    "paper": "WangJ2022",
+    "value": "5.36(+0.81/-0.68)e11 to 7.84(+3.08/-1.97)e11 Msun (range over mass-profile choices; includes putative massive LMC)",
+    "evidence": [
+     {
+      "pdf_page": 1,
+      "snippet": "leads a total mass of the MW that ranges from 5.36+0.81 −0.68×1011 M⊙ to 7.84+3.08 −1.97×1011"
+     }
+    ]
+   }
+  },
+  "2a_BovyRix2013_local_surface_density": {
+   "paper": "BovyRix2013",
+   "location": "Abstract (p1); eqs. (27)-(28) (p15); Table 3 (p17); Sect. 5.2.1 eqs. (42)-(44) (p21-22)",
+   "values": {
+    "Sigma_1p1_R0": {
+     "value": 68,
+     "err": 4,
+     "unit": "Msun/pc^2",
+     "note": "total (all matter) surface density within |Z|<1.1 kpc at R0; full 3D dynamical model, 13 Msun/pc^2 assumed in thin ISM layer"
+    },
+    "Sigma_star_R0": {
+     "value": 38,
+     "err": 4,
+     "unit": "Msun/pc^2",
+     "note": "stars + stellar remnants; per McKee+2015 Table 3 note f (Bovy, priv. comm.) this is the TOTAL stellar column, not the value within 1.1 kpc"
+    },
+    "Sigma_ISM_assumed": {
+     "value": 13,
+     "unit": "Msun/pc^2",
+     "note": "assumed (fixed), not measured"
+    },
+    "disk_scale_length_Rd": {
+     "value": 2.15,
+     "err": 0.14,
+     "unit": "kpc",
+     "note": "mass-weighted stellar disk scale length (eq. 42)"
+    },
+    "disk_maximality_Vc_disk_over_Vc_at_2p2Rd": {
+     "value": 0.83,
+     "err": 0.04,
+     "note": "Vc,*/Vc at R=2.2 Rd (eq. 43): 'the MW's disk is maximal'"
+    },
+    "M_star_disk": {
+     "value": 46000000000.0,
+     "err": 3000000000.0,
+     "unit": "Msun",
+     "note": "M* = 4.6+-0.3 + 3.0 (R0/kpc - 8) x 1e10 Msun (R0=8 kpc assumed)"
+    },
+    "M_disk_stars_plus_gas": {
+     "value": 53000000000.0,
+     "err": 4000000000.0,
+     "unit": "Msun"
+    },
+    "M_baryonic_total": {
+     "value": 59000000000.0,
+     "err": 5000000000.0,
+     "unit": "Msun",
+     "note": "includes ~6e9 Msun bulge"
+    },
+    "rho_DM_R0": {
+     "value": 0.008,
+     "err": 0.0025,
+     "unit": "Msun/pc^3"
+    },
+    "Vc_R0_implied": {
+     "value": 218,
+     "err": 10,
+     "unit": "km/s",
+     "note": "dlnVc/dlnR = -0.06+-0.05"
+    },
+    "Sigma_1p1_profile_fit": "Sigma_1.1(R) = 69 Msun/pc^2 exp(-(R-R0)/2.5 kpc) (eq. 27; ~2.5% normalisation, 4% scale-length formal errors)",
+    "Kz_1p1_profile_fit": "K_Z,1.1(R)/(2 pi G) = 67 Msun/pc^2 exp(-(R-R0)/2.7 kpc) (eq. 28)"
+   },
+   "Table3_per_MAP_Sigma1p1_and_Kz1p1": [
+    {
+     "FeH": -1.25,
+     "aFe": 0.425,
+     "R_kpc": 4.63,
+     "Sigma_1p1_Msun_pc2": 256.0,
+     "dSigma_1p1": 50.4,
+     "R0_minus_R_kpc": 3.37,
+     "Kz_1p1_over_2piG_Msun_pc2": 217.6,
+     "dKz_1p1": 41.5
+    },
+    {
+     "FeH": -1.15,
+     "aFe": 0.425,
+     "R_kpc": 4.68,
+     "Sigma_1p1_Msun_pc2": 270.9,
+     "dSigma_1p1": 44.3,
+     "R0_minus_R_kpc": 3.32,
+     "Kz_1p1_over_2piG_Msun_pc2": 230.6,
+     "dKz_1p1": 36.8
+    },
+    {
+     "FeH": -1.05,
+     "aFe": 0.375,
+     "R_kpc": 6.71,
+     "Sigma_1p1_Msun_pc2": 89.7,
+     "dSigma_1p1": 20.3,
+     "R0_minus_R_kpc": 1.29,
+     "Kz_1p1_over_2piG_Msun_pc2": 84.2,
+     "dKz_1p1": 18.5
+    },
+    {
+     "FeH": -1.05,
+     "aFe": 0.425,
+     "R_kpc": 4.77,
+     "Sigma_1p1_Msun_pc2": 244.2,
+     "dSigma_1p1": 40.1,
+     "R0_minus_R_kpc": 3.23,
+     "Kz_1p1_over_2piG_Msun_pc2": 209.0,
+     "dKz_1p1": 33.2
+    },
+    {
+     "FeH": -0.95,
+     "aFe": 0.325,
+     "R_kpc": 4.59,
+     "Sigma_1p1_Msun_pc2": 228.4,
+     "dSigma_1p1": 48.3,
+     "R0_minus_R_kpc": 3.41,
+     "Kz_1p1_over_2piG_Msun_pc2": 194.7,
+     "dKz_1p1": 38.6
+    },
+    {
+     "FeH": -0.95,
+     "aFe": 0.375,
+     "R_kpc": 5.04,
+     "Sigma_1p1_Msun_pc2": 207.6,
+     "dSigma_1p1": 34.9,
+     "R0_minus_R_kpc": 2.96,
+     "Kz_1p1_over_2piG_Msun_pc2": 180.5,
+     "dKz_1p1": 29.2
+    },
+    {
+     "FeH": -0.95,
+     "aFe": 0.425,
+     "R_kpc": 5.22,
+     "Sigma_1p1_Msun_pc2": 204.3,
+     "dSigma_1p1": 30.1,
+     "R0_minus_R_kpc": 2.78,
+     "Kz_1p1_over_2piG_Msun_pc2": 179.0,
+     "dKz_1p1": 25.6
+    },
+    {
+     "FeH": -0.95,
+     "aFe": 0.475,
+     "R_kpc": 4.68,
+     "Sigma_1p1_Msun_pc2": 247.9,
+     "dSigma_1p1": 41.3,
+     "R0_minus_R_kpc": 3.32,
+     "Kz_1p1_over_2piG_Msun_pc2": 211.4,
+     "dKz_1p1": 33.7
+    },
+    {
+     "FeH": -0.85,
+     "aFe": 0.275,
+     "R_kpc": 7.38,
+     "Sigma_1p1_Msun_pc2": 65.0,
+     "dSigma_1p1": 11.9,
+     "R0_minus_R_kpc": 0.62,
+     "Kz_1p1_over_2piG_Msun_pc2": 62.2,
+     "dKz_1p1": 11.2
+    },
+    {
+     "FeH": -0.85,
+     "aFe": 0.325,
+     "R_kpc": 6.53,
+     "Sigma_1p1_Msun_pc2": 104.9,
+     "dSigma_1p1": 19.8,
+     "R0_minus_R_kpc": 1.47,
+     "Kz_1p1_over_2piG_Msun_pc2": 97.5,
+     "dKz_1p1": 18.0
+    },
+    {
+     "FeH": -0.85,
+     "aFe": 0.375,
+     "R_kpc": 6.62,
+     "Sigma_1p1_Msun_pc2": 118.1,
+     "dSigma_1p1": 14.0,
+     "R0_minus_R_kpc": 1.38,
+     "Kz_1p1_over_2piG_Msun_pc2": 109.8,
+     "dKz_1p1": 12.9
+    },
+    {
+     "FeH": -0.85,
+     "aFe": 0.425,
+     "R_kpc": 6.66,
+     "Sigma_1p1_Msun_pc2": 127.6,
+     "dSigma_1p1": 14.0,
+     "R0_minus_R_kpc": 1.34,
+     "Kz_1p1_over_2piG_Msun_pc2": 119.0,
+     "dKz_1p1": 12.9
+    },
+    {
+     "FeH": -0.85,
+     "aFe": 0.475,
+     "R_kpc": 5.08,
+     "Sigma_1p1_Msun_pc2": 202.8,
+     "dSigma_1p1": 35.9,
+     "R0_minus_R_kpc": 2.92,
+     "Kz_1p1_over_2piG_Msun_pc2": 176.8,
+     "dKz_1p1": 30.1
+    },
+    {
+     "FeH": -0.75,
+     "aFe": 0.275,
+     "R_kpc": 7.42,
+     "Sigma_1p1_Msun_pc2": 64.4,
+     "dSigma_1p1": 11.6,
+     "R0_minus_R_kpc": 0.58,
+     "Kz_1p1_over_2piG_Msun_pc2": 61.7,
+     "dKz_1p1": 11.0
+    },
+    {
+     "FeH": -0.75,
+     "aFe": 0.325,
+     "R_kpc": 6.53,
+     "Sigma_1p1_Msun_pc2": 125.0,
+     "dSigma_1p1": 16.2,
+     "R0_minus_R_kpc": 1.47,
+     "Kz_1p1_over_2piG_Msun_pc2": 115.9,
+     "dKz_1p1": 14.8
+    },
+    {
+     "FeH": -0.75,
+     "aFe": 0.375,
+     "R_kpc": 7.11,
+     "Sigma_1p1_Msun_pc2": 97.3,
+     "dSigma_1p1": 8.0,
+     "R0_minus_R_kpc": 0.89,
+     "Kz_1p1_over_2piG_Msun_pc2": 92.0,
+     "dKz_1p1": 7.5
+    },
+    {
+     "FeH": -0.75,
+     "aFe": 0.425,
+     "R_kpc": 6.71,
+     "Sigma_1p1_Msun_pc2": 130.6,
+     "dSigma_1p1": 11.8,
+     "R0_minus_R_kpc": 1.29,
+     "Kz_1p1_over_2piG_Msun_pc2": 121.9,
+     "dKz_1p1": 10.9
+    },
+    {
+     "FeH": -0.75,
+     "aFe": 0.475,
+     "R_kpc": 6.53,
+     "Sigma_1p1_Msun_pc2": 103.3,
+     "dSigma_1p1": 19.8,
+     "R0_minus_R_kpc": 1.47,
+     "Kz_1p1_over_2piG_Msun_pc2": 96.1,
+     "dKz_1p1": 18.0
+    },
+    {
+     "FeH": -0.65,
+     "aFe": 0.275,
+     "R_kpc": 7.2,
+     "Sigma_1p1_Msun_pc2": 81.4,
+     "dSigma_1p1": 12.6,
+     "R0_minus_R_kpc": 0.8,
+     "Kz_1p1_over_2piG_Msun_pc2": 77.3,
+     "dKz_1p1": 11.8
+    },
+    {
+     "FeH": -0.65,
+     "aFe": 0.325,
+     "R_kpc": 7.2,
+     "Sigma_1p1_Msun_pc2": 100.2,
+     "dSigma_1p1": 9.9,
+     "R0_minus_R_kpc": 0.8,
+     "Kz_1p1_over_2piG_Msun_pc2": 95.2,
+     "dKz_1p1": 9.3
+    },
+    {
+     "FeH": -0.65,
+     "aFe": 0.375,
+     "R_kpc": 6.34,
+     "Sigma_1p1_Msun_pc2": 159.2,
+     "dSigma_1p1": 12.7,
+     "R0_minus_R_kpc": 1.66,
+     "Kz_1p1_over_2piG_Msun_pc2": 146.3,
+     "dKz_1p1": 11.5
+    },
+    {
+     "FeH": -0.65,
+     "aFe": 0.425,
+     "R_kpc": 6.79,
+     "Sigma_1p1_Msun_pc2": 108.0,
+     "dSigma_1p1": 14.5,
+     "R0_minus_R_kpc": 1.21,
+     "Kz_1p1_over_2piG_Msun_pc2": 101.2,
+     "dKz_1p1": 13.4
+    },
+    {
+     "FeH": -0.55,
+     "aFe": 0.275,
+     "R_kpc": 7.29,
+     "Sigma_1p1_Msun_pc2": 89.2,
+     "dSigma_1p1": 9.6,
+     "R0_minus_R_kpc": 0.71,
+     "Kz_1p1_over_2piG_Msun_pc2": 84.9,
+     "dKz_1p1": 9.1
+    },
+    {
+     "FeH": -0.55,
+     "aFe": 0.325,
+     "R_kpc": 7.29,
+     "Sigma_1p1_Msun_pc2": 93.1,
+     "dSigma_1p1": 7.8,
+     "R0_minus_R_kpc": 0.71,
+     "Kz_1p1_over_2piG_Msun_pc2": 88.5,
+     "dKz_1p1": 7.4
+    },
+    {
+     "FeH": -0.55,
+     "aFe": 0.375,
+     "R_kpc": 7.02,
+     "Sigma_1p1_Msun_pc2": 104.7,
+     "dSigma_1p1": 8.7,
+     "R0_minus_R_kpc": 0.98,
+     "Kz_1p1_over_2piG_Msun_pc2": 98.7,
+     "dKz_1p1": 8.2
+    },
+    {
+     "FeH": -0.55,
+     "aFe": 0.425,
+     "R_kpc": 6.57,
+     "Sigma_1p1_Msun_pc2": 108.3,
+     "dSigma_1p1": 18.7,
+     "R0_minus_R_kpc": 1.43,
+     "Kz_1p1_over_2piG_Msun_pc2": 100.8,
+     "dKz_1p1": 17.1
+    },
+    {
+     "FeH": -0.45,
+     "aFe": 0.225,
+     "R_kpc": 7.56,
+     "Sigma_1p1_Msun_pc2": 77.6,
+     "dSigma_1p1": 8.5,
+     "R0_minus_R_kpc": 0.44,
+     "Kz_1p1_over_2piG_Msun_pc2": 74.5,
+     "dKz_1p1": 8.1
+    },
+    {
+     "FeH": -0.45,
+     "aFe": 0.275,
+     "R_kpc": 6.75,
+     "Sigma_1p1_Msun_pc2": 122.4,
+     "dSigma_1p1": 12.6,
+     "R0_minus_R_kpc": 1.25,
+     "Kz_1p1_over_2piG_Msun_pc2": 114.3,
+     "dKz_1p1": 11.7
+    },
+    {
+     "FeH": -0.45,
+     "aFe": 0.325,
+     "R_kpc": 6.84,
+     "Sigma_1p1_Msun_pc2": 115.7,
+     "dSigma_1p1": 10.1,
+     "R0_minus_R_kpc": 1.16,
+     "Kz_1p1_over_2piG_Msun_pc2": 108.4,
+     "dKz_1p1": 9.4
+    },
+    {
+     "FeH": -0.45,
+     "aFe": 0.375,
+     "R_kpc": 5.54,
+     "Sigma_1p1_Msun_pc2": 189.6,
+     "dSigma_1p1": 24.1,
+     "R0_minus_R_kpc": 2.46,
+     "Kz_1p1_over_2piG_Msun_pc2": 168.6,
+     "dKz_1p1": 20.9
+    },
+    {
+     "FeH": -0.35,
+     "aFe": 0.225,
+     "R_kpc": 7.29,
+     "Sigma_1p1_Msun_pc2": 91.5,
+     "dSigma_1p1": 10.2,
+     "R0_minus_R_kpc": 0.71,
+     "Kz_1p1_over_2piG_Msun_pc2": 87.2,
+     "dKz_1p1": 9.6
+    },
+    {
+     "FeH": -0.35,
+     "aFe": 0.275,
+     "R_kpc": 6.57,
+     "Sigma_1p1_Msun_pc2": 150.9,
+     "dSigma_1p1": 13.5,
+     "R0_minus_R_kpc": 1.43,
+     "Kz_1p1_over_2piG_Msun_pc2": 140.1,
+     "dKz_1p1": 12.4
+    },
+    {
+     "FeH": -0.35,
+     "aFe": 0.325,
+     "R_kpc": 5.67,
+     "Sigma_1p1_Msun_pc2": 190.6,
+     "dSigma_1p1": 22.3,
+     "R0_minus_R_kpc": 2.33,
+     "Kz_1p1_over_2piG_Msun_pc2": 170.6,
+     "dKz_1p1": 19.5
+    },
+    {
+     "FeH": -0.25,
+     "aFe": 0.175,
+     "R_kpc": 7.7,
+     "Sigma_1p1_Msun_pc2": 75.6,
+     "dSigma_1p1": 8.4,
+     "R0_minus_R_kpc": 0.3,
+     "Kz_1p1_over_2piG_Msun_pc2": 72.8,
+     "dKz_1p1": 8.0
+    },
+    {
+     "FeH": -0.25,
+     "aFe": 0.225,
+     "R_kpc": 7.88,
+     "Sigma_1p1_Msun_pc2": 64.6,
+     "dSigma_1p1": 8.5,
+     "R0_minus_R_kpc": 0.12,
+     "Kz_1p1_over_2piG_Msun_pc2": 62.4,
+     "dKz_1p1": 8.2
+    },
+    {
+     "FeH": -0.15,
+     "aFe": 0.125,
+     "R_kpc": 7.7,
+     "Sigma_1p1_Msun_pc2": 76.7,
+     "dSigma_1p1": 8.1,
+     "R0_minus_R_kpc": 0.3,
+     "Kz_1p1_over_2piG_Msun_pc2": 73.9,
+     "dKz_1p1": 7.8
+    },
+    {
+     "FeH": -0.15,
+     "aFe": 0.175,
+     "R_kpc": 6.08,
+     "Sigma_1p1_Msun_pc2": 161.8,
+     "dSigma_1p1": 19.8,
+     "R0_minus_R_kpc": 1.92,
+     "Kz_1p1_over_2piG_Msun_pc2": 147.4,
+     "dKz_1p1": 17.7
+    },
+    {
+     "FeH": -0.05,
+     "aFe": 0.025,
+     "R_kpc": 6.57,
+     "Sigma_1p1_Msun_pc2": 121.9,
+     "dSigma_1p1": 16.4,
+     "R0_minus_R_kpc": 1.43,
+     "Kz_1p1_over_2piG_Msun_pc2": 113.2,
+     "dKz_1p1": 14.9
+    },
+    {
+     "FeH": -0.05,
+     "aFe": 0.075,
+     "R_kpc": 7.92,
+     "Sigma_1p1_Msun_pc2": 71.4,
+     "dSigma_1p1": 7.0,
+     "R0_minus_R_kpc": 0.08,
+     "Kz_1p1_over_2piG_Msun_pc2": 69.2,
+     "dKz_1p1": 6.8
+    },
+    {
+     "FeH": 0.05,
+     "aFe": 0.025,
+     "R_kpc": 8.55,
+     "Sigma_1p1_Msun_pc2": 54.7,
+     "dSigma_1p1": 4.9,
+     "R0_minus_R_kpc": -0.55,
+     "Kz_1p1_over_2piG_Msun_pc2": 53.4,
+     "dKz_1p1": 4.7
+    },
+    {
+     "FeH": 0.05,
+     "aFe": 0.075,
+     "R_kpc": 7.2,
+     "Sigma_1p1_Msun_pc2": 106.8,
+     "dSigma_1p1": 10.0,
+     "R0_minus_R_kpc": 0.8,
+     "Kz_1p1_over_2piG_Msun_pc2": 101.3,
+     "dKz_1p1": 9.4
+    },
+    {
+     "FeH": 0.15,
+     "aFe": 0.025,
+     "R_kpc": 6.03,
+     "Sigma_1p1_Msun_pc2": 145.4,
+     "dSigma_1p1": 20.9,
+     "R0_minus_R_kpc": 1.97,
+     "Kz_1p1_over_2piG_Msun_pc2": 132.4,
+     "dKz_1p1": 18.8
+    },
+    {
+     "FeH": 0.25,
+     "aFe": 0.025,
+     "R_kpc": 4.82,
+     "Sigma_1p1_Msun_pc2": 240.3,
+     "dSigma_1p1": 42.9,
+     "R0_minus_R_kpc": 3.18,
+     "Kz_1p1_over_2piG_Msun_pc2": 206.2,
+     "dKz_1p1": 35.7
+    }
+   ],
+   "evidence": [
+    {
+     "pdf_page": 1,
+     "snippet": "total local surface density of Σ R0(Z = 1. 1 kpc) = 68±4 M⊙ pc−2 of which 38 ±4 M⊙ pc−2 is contributed by stars and stellar remnants."
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "We measure the mass-weighted Galactic disk scale length to be Rd = 2. 15 ± 0. 14 kpc"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "the MW’s disk is maximal in the sense that Vc, disk/V c, total = 0 . 83±0. 04 at R = 2 . 2 Rd."
+    },
+    {
+     "pdf_page": 22,
+     "snippet": "for a total sur- face density to 1 . 1 kpc of Σ 1. 1(R0) = 68 ± 4 M⊙ pc−2, 13 M⊙ pc−2 of which is assumed to be in the thin ISM layer."
+    },
+    {
+     "pdf_page": 15,
+     "snippet": "Σ 1. 1(R) = 69 M⊙ pc−2 exp (−(R − R0)/ 2. 5 kpc) , (27)"
+    },
+    {
+     "pdf_page": 16,
+     "snippet": "We have assumed R0 = 8 kpc throughout the analysis."
+    }
+   ],
+   "definition_caveats": [
+    "Sigma_1.1 = surface density of ALL matter (disk + halo) between -1.1 and +1.1 kpc; K_Z,1.1 is the vertical force at 1.1 kpc in units of 2 pi G; they recommend K_Z,1.1 when the rotation curve is not flat.",
+    "Table 3: each row is one mono-abundance population (MAP); R is where that MAP best measures Sigma; R0-R should be held fixed if a different R0 is used (R0=8 kpc assumed).",
+    "Disk maximality and scale length are from combining K_Z,1.1(R) with terminal velocities, local Vc slope and Sigma*(R0) of Zhang+2013."
+   ]
+  },
+  "2b_HolmbergFlynn2004": {
+   "paper": "HolmbergFlynn2004",
+   "location": "Abstract (p1); reference mass model (p6); results (p7)",
+   "values": {
+    "Sigma_total_1p1kpc": {
+     "value": 74,
+     "err": 6,
+     "unit": "Msun/pc^2",
+     "note": "all gravitating matter (disc + dark halo) within 1.1 kpc of midplane (K_z1.1)"
+    },
+    "Sigma_total_0p8kpc": {
+     "value": 65,
+     "err": 6,
+     "unit": "Msun/pc^2"
+    },
+    "Sigma_disc_dynamical": {
+     "value": 56,
+     "err": 6,
+     "unit": "Msun/pc^2",
+     "note": "dynamical disc surface density"
+    },
+    "Sigma_visible": {
+     "value": 53,
+     "unit": "Msun/pc^2",
+     "note": "estimate of visible matter"
+    },
+    "Kz0p35": {
+     "value": 42,
+     "err": 6,
+     "unit": "Msun/pc^2",
+     "note": "within 350 pc"
+    },
+    "reference_model": "rho0 = 0.102 Msun/pc^3, Sigma_disc = 52.8, Sigma_z1.1 = 70.6 Msun/pc^2 (their mass model)"
+   },
+   "evidence": [
+    {
+     "pdf_page": 1,
+     "snippet": "For all gravitating matter (disc + dark halo) we find the tot al density within 1.1 kpc of the disc midplane to be 74 ± 6 M⊙ pc−2."
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "We derive an estimate of the dynamical disc mass surface density of 56 ± 6 M⊙ pc−2, which may be compared to an estimate of 53 M ⊙ pc−2 in visible matter."
+    },
+    {
+     "pdf_page": 7,
+     "snippet": "mined to be 65 ± 6 M⊙ pc−2 and 74 ± 6 M⊙ pc−2 respectively."
+    }
+   ],
+   "definition_caveats": [
+    "Confirmed: 74 +- 6 Msun/pc^2 within |z|<1.1 kpc (K giants, Hipparcos + DDO SGP cone)."
+   ]
+  },
+  "2c_McKee2015_solar_neighbourhood_baryons": {
+   "paper": "McKee2015",
+   "location": "Abstract (p1); Table 1 (stars, p15); Table 2 (gas, p27); Table 3 (baryon budget, p28); eq. (46) (p29); eq. (55) (p32); eq. (57) (p33); Tables 4-5 (p34)",
+   "values": {
+    "Sigma_M_dwarfs": {
+     "value": 17.3,
+     "err": 2.3,
+     "unit": "Msun/pc^2"
+    },
+    "Sigma_visible_stars_MS_plus_giants": {
+     "value": 27.0,
+     "err": 2.7,
+     "unit": "Msun/pc^2"
+    },
+    "Sigma_white_dwarfs": {
+     "value": 4.9,
+     "err": 0.6,
+     "unit": "Msun/pc^2"
+    },
+    "Sigma_brown_dwarfs": {
+     "value": 1.2,
+     "unit": "Msun/pc^2",
+     "note": "'~1.2, but with considerable uncertainty'"
+    },
+    "Sigma_neutron_stars": {
+     "value": 0.2,
+     "unit": "Msun/pc^2",
+     "note": "Table 1, no error given"
+    },
+    "Sigma_black_holes": {
+     "value": 0.1,
+     "unit": "Msun/pc^2",
+     "note": "Table 1, no error given"
+    },
+    "Sigma_stars_and_remnants_total": {
+     "value": 33.4,
+     "err": 3,
+     "unit": "Msun/pc^2",
+     "within_1p1kpc": {
+      "value": 31.2,
+      "err": 3
+     }
+    },
+    "Sigma_H2": {
+     "value": 1.0,
+     "err": 0.3,
+     "unit": "Msun/pc^2",
+     "within_1p1kpc": {
+      "value": 1.0,
+      "err": 0.3
+     }
+    },
+    "Sigma_HI": {
+     "value": 10.9,
+     "err": 1.6,
+     "unit": "Msun/pc^2",
+     "within_1p1kpc": {
+      "value": 10.7,
+      "err": 1.6
+     }
+    },
+    "Sigma_HII": {
+     "value": 1.8,
+     "err": 0.1,
+     "unit": "Msun/pc^2",
+     "note": "includes 0.11 Msun/pc^2 Gum Nebula; HII scale height 1590 pc",
+     "within_1p1kpc": {
+      "value": 0.9,
+      "err": 0.1
+     }
+    },
+    "Sigma_gas_total": {
+     "value": 13.7,
+     "err": 1.6,
+     "unit": "Msun/pc^2",
+     "note": "gas columns include He and metals (factor 1.4 on H)",
+     "within_1p1kpc": {
+      "value": 12.6,
+      "err": 1.6
+     }
+    },
+    "Sigma_baryons_total": {
+     "value": 47.1,
+     "err": 3.4,
+     "unit": "Msun/pc^2",
+     "within_1p1kpc": {
+      "value": 43.8,
+      "err": 3.4
+     },
+     "within_1p0kpc": {
+      "value": 43.1,
+      "err": 3.3
+     }
+    },
+    "rho_baryons_midplane": {
+     "value": 0.084,
+     "err": 0.012,
+     "unit": "Msun/pc^3",
+     "note": "eq. (46); 15% error assumed; gas midplane rho_g0=0.041 Msun/pc^3 (nH0=1.17 cm^-3)"
+    },
+    "rho_stars_midplane": {
+     "value": 0.043,
+     "unit": "Msun/pc^3",
+     "note": "Table 1 total"
+    },
+    "rho_DM": {
+     "value": 0.013,
+     "err": 0.003,
+     "unit": "Msun/pc^3",
+     "note": "= 0.49 +- 0.13 GeV/cm^3; average over 4 literature Sigma(z) determinations with their Sigma_b"
+    },
+    "rho_total_midplane_Oort_limit": {
+     "value": 0.097,
+     "err": 0.013,
+     "unit": "Msun/pc^3",
+     "note": "eq. (57)"
+    },
+    "Sigma_dyn": null,
+    "Sigma_dyn_note": "McKee et al. do not measure Sigma_dyn themselves. Table 4 adopts literature totals: Kuijken & Gilmore 1991 Sigma_1.1=73.5+-6; Bovy & Rix 2013 Sigma_1.1=68+-4; Zhang+2013 Sigma_1.0=69+-6; Bienayme+2014 Sigma_1.0=70.5+-1 Msun/pc^2 (KG, Zhang, Bienayme converted from Kz/2piG via their eq. 54 with alpha=0)."
+   },
+   "evidence": [
+    {
+     "pdf_page": 1,
+     "snippet": "We find a local total surface density of M dwarfs of 17 .3 ± 2.3 M ⊙ pc−2"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "Our result for the total local surface density of vis ible stars (main sequence stars and giants), 27 .0 ± 2.7 M ⊙ pc−2"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "The total local surface density in white dwarfs is 4 .9 ± 0.6 M⊙ pc−2; in brown dwarfs, it is ∼ 1.2 M⊙ pc−2"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "We find that the total lo cal surface density of stars and stellar remnants is 33 .4 ± 3M⊙ pc−2"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "The local surface density of gas is 13 .7 ± 1.6 M ⊙ pc−2. The total baryonic mass surface density that we derive for the solar neighborhood is 47 .1 ± 3.4 M ⊙ pc−2"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "(43.8 M ⊙ pc−2 within 1.1 kpc of the midplane)"
+    },
+    {
+     "pdf_page": 27,
+     "snippet": "H2 0.15 exp −(z/105 pc)2 0.9 ± 0.3 1.0 ± 0.3 1.0 ± 0.3"
+    },
+    {
+     "pdf_page": 27,
+     "snippet": "Total HI nHI,0 = 1.01 9.7 ± 1.5 10.9 ± 1.6 10.7 ± 1.6"
+    },
+    {
+     "pdf_page": 27,
+     "snippet": "HIId 0.0154 exp −(z/1590 pc) 1.6 ± 0.1 1.8 ± 0.1 0.9 ± 0.1"
+    },
+    {
+     "pdf_page": 29,
+     "snippet": "ρb0 = 0.084 ± 0.012M⊙ pc−3, (46)"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "we find that th e local density of dark matter is ρDM = 0.013 ± 0.003M⊙ pc−3 = 0.49 ± 0.13 GeV cm −3. The local density of all matter is 0 .097 ± 0.013M⊙ pc−3."
+    },
+    {
+     "pdf_page": 15,
+     "snippet": "Total 35.9 0.043 ... 33.4 ± 3 31.2 ± 3"
+    }
+   ],
+   "definition_caveats": [
+    "All surface densities exclude halo stars at z>3 kpc and hot halo gas; 'within 1.1 kpc' values (Sigma_1.1) are given separately.",
+    "Vertical profile of each component in Tables 1-2 (e.g., stellar effective scale heights h = Sigma/(2 rho0): M dwarfs 400 pc, WD 430 pc; H2 Gaussian 105 pc; CNM 127 pc; WNM1 318 pc; WNM2 exponential 403 pc; HII exponential 1590 pc)."
+   ]
+  },
+  "3_escape_speed_at_Sun": {
+   "summary": [
+    {
+     "paper": "Piffl2014",
+     "v_esc_kms": "533 +54/-41 (90% CL) +4% sys",
+     "zero_point": "3 R340",
+     "R0_kpc": 8.28
+    },
+    {
+     "paper": "Monari2018",
+     "v_esc_kms": "580 +- 63",
+     "zero_point": "measured edge; mass fits use inf or 3 r340",
+     "R0_kpc": 8.34
+    },
+    {
+     "paper": "Deason2019",
+     "v_esc_kms": "528 +24/-25 (k prior 1-2.5); 580+-32 with k prior 2.3-3.7",
+     "zero_point": "2 r200",
+     "R0_kpc": 8.3
+    },
+    {
+     "paper": "KoppelmanHelmi2021",
+     "v_esc_kms": "497 +8/-8 (68%); 552 after +10% bias fix",
+     "zero_point": "3 r340",
+     "R0_kpc": 8.2
+    },
+    {
+     "paper": "NecibLin2022 (ApJ, eDR3)",
+     "v_esc_kms": "445 +25/-8 (68%); 1-comp 472 +17/-12",
+     "zero_point": "2 r200",
+     "R0_kpc": 8.122
+    },
+    {
+     "paper": "Prudil2022",
+     "v_esc_kms": "512 +94/-37 (4-12 kpc)",
+     "zero_point": "2 r200 (mass); infinity for unbound flags",
+     "R0_kpc": 8.2
+    },
+    {
+     "paper": "Roche2024",
+     "v_esc_kms": "486.26 +9.94/-5.43 (SEPL, 8-9 kpc bin); 2PL 536.34 +59.84/-31.07",
+     "zero_point": "2 R200c",
+     "R0_kpc": 8.122
+    }
+   ],
+   "entries": [
+    {
+     "paper": "Piffl2014",
+     "location": "Abstract (p1); Sect. 3 (p4: limiting distance 3R340, R0=8.28 kpc); eq. (11) (p12); Table 3 (p13)",
+     "v_esc_R0": {
+      "value": 533,
+      "err_plus": 54,
+      "err_minus": 41,
+      "unit": "km/s",
+      "note": "RAVE + Beers et al. 2000 (B00) data; V300 sample (line-of-sight velocities re-scaled to the solar position, |v_par|>300 km/s; 53 stars); 'Localized' strategy; V_LSR=220 km/s",
+      "confidence": "90% confidence interval",
+      "err_sys_fraction": 0.04
+     },
+     "alternatives": {
+      "V_LSR_240": {
+       "value": 511,
+       "err_plus": 48,
+       "err_minus": 35,
+       "unit": "km/s",
+       "confidence": "90%"
+      },
+      "V200_sample_V220": {
+       "value": 543,
+       "err_plus": 67,
+       "err_minus": 52,
+       "unit": "km/s",
+       "note": "halo-classified stars with |v_par|>200 km/s",
+       "confidence": "90%"
+      },
+      "RAVE_only_V220": {
+       "value": 517,
+       "err_plus": 70,
+       "err_minus": 46,
+       "unit": "km/s",
+       "confidence": "90%"
+      }
+     },
+     "masses": {
+      "M340": {
+       "value": 1300000000000.0,
+       "err_plus": 400000000000.0,
+       "err_minus": 300000000000.0,
+       "unit": "Msun"
+      },
+      "M200": {
+       "value": 1600000000000.0,
+       "err_plus": 500000000000.0,
+       "err_minus": 400000000000.0,
+       "unit": "Msun"
+      },
+      "R340_kpc": {
+       "value": 180,
+       "err": 20
+      }
+     },
+     "definition": "Escape speed = minimum speed required to reach 3 R340 (R340: mean overdensity 340x critical density); v_esc(r|Rmax) = sqrt(2|Phi(r) - Phi(Rmax)|) with Rmax = 3 R340 (430-530 kpc in their simulations). Measured as the truncation of a power-law high-velocity tail (Leonard & Tremaine), prior 2.3<k<3.7 from simulations, line-of-sight velocities only.",
+     "adopted_solar_parameters": {
+      "R0_kpc": 8.28,
+      "V_LSR_kms": 220
+     },
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "Our best estimate of the local Galactic escape speed, which we define as the minimum speed required to reach three virial radii R340, is 533 +54 −41 km s−1 (90% confidence)"
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "with an additional 4% systematic uncertainty, where R340 is the Galactocentric radius encompassing a mean overdensity of 340 times the critical density"
+      },
+      {
+       "pdf_page": 12,
+       "snippet": "Rmax = 3R340 seems to be an appropriate value (cf. Section 3)."
+      },
+      {
+       "pdf_page": 4,
+       "snippet": "R0 = 8.28 kpc."
+      },
+      {
+       "pdf_page": 10,
+       "snippet": "The resulting sample contains 53 stars (34 RA VE stars) and we will refer to it as V300."
+      }
+     ]
+    },
+    {
+     "paper": "Monari2018",
+     "location": "Abstract (p1); eq. (4) (p3); Sect. 5 eqs. (5)-(7) (p3)",
+     "v_esc_R0": {
+      "value": 580,
+      "err": 63,
+      "unit": "km/s",
+      "note": "StarHorse distances, counter-rotating halo stars, r bin at the Sun",
+      "confidence": "~1 sigma (median of 100 bootstrap/MC iterations; error = quadrature of rms of per-iteration 16/84-percentile half-widths and scatter)"
+     },
+     "alternatives": {
+      "McMillan2018_distances": {
+       "value": 593,
+       "err": 76,
+       "unit": "km/s"
+      }
+     },
+     "escape_curve_range": "~650 km/s at ~5 kpc to ~550 km/s at 10.5 kpc (figure only, no table)",
+     "masses": {
+      "M200_ve340_vc240": {
+       "value": 1280000000000.0,
+       "err_plus": 680000000000.0,
+       "err_minus": 500000000000.0,
+       "unit": "Msun",
+       "c200": {
+        "value": 11.09,
+        "err_plus": 2.94,
+        "err_minus": 1.79
+       }
+      },
+      "M200_ve_inf_vc240": {
+       "value": 970000000000.0,
+       "err_plus": 470000000000.0,
+       "err_minus": 360000000000.0,
+       "unit": "Msun"
+      },
+      "M200_ve340_LCDM_c(M)": {
+       "value": 1550000000000.0,
+       "err_plus": 640000000000.0,
+       "err_minus": 510000000000.0,
+       "unit": "Msun",
+       "note": "vc(R0)=228 km/s in that case"
+      }
+     },
+     "definition": "Measured quantity is the truncation speed of a power-law tail f(v|ve,k) (k marginalised over 2.3-3.7). For mass modelling they consider both ve,inf = sqrt(2|Phi|) and ve,340 = sqrt(2|Phi(r)-Phi(3 r340)|) (H=73 km/s/Mpc), with Irrgang et al. 2013 model III disc+bulge and NFW halo; the headline mass uses ve,340.",
+     "adopted_solar_parameters": {
+      "R0_kpc": 8.34,
+      "vc_R0_kms": 240,
+      "UVW_sun_kms": [
+       11.1,
+       12.24,
+       7.25
+      ]
+     },
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "The local Galactic escape at the Sun’s position is estimated to beve(r⊙) = 580±63 km s−1"
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "Defined as the minimum speed required to reach three virial radii, our estimate of the escape speed as a function of radius implies for a Navarro-Frenk-White profile"
+      },
+      {
+       "pdf_page": 3,
+       "snippet": "ve,340(r) = √ 2|Φ(r)− Φ(3r340)|, (7)"
+      },
+      {
+       "pdf_page": 2,
+       "snippet": "the Galaxy of r⊙ = 8.34 kpc, a circular velocity at the Sun of vc(r⊙) = 240 km s−1 (Reid et al. 2014)"
+      }
+     ]
+    },
+    {
+     "paper": "Deason2019",
+     "location": "Abstract (p1); Sect. 3.2 (p5-6); Fig. 9 and Sect. 4.2 (p9)",
+     "v_esc_R0": {
+      "value": 528,
+      "err_plus": 24,
+      "err_minus": 25,
+      "unit": "km/s",
+      "note": "r0 = 8.3 kpc, prior 1<k<2.5",
+      "confidence": "posterior median/interval (Fig. 9 shows 1 and 2 sigma contours; level of quoted interval not stated explicitly)"
+     },
+     "alternatives": {
+      "Piffl_prior_2p3_k_3p7": {
+       "value": 580,
+       "err_plus": 32,
+       "err_minus": 32,
+       "unit": "km/s",
+       "note": "Fig. 9 legend/caption; text quotes 580+31-31"
+      }
+     },
+     "masses": {
+      "M200_tot": {
+       "value": 1000000000000.0,
+       "err_plus": 310000000000.0,
+       "err_minus": 240000000000.0,
+       "unit": "Msun"
+      },
+      "c200": {
+       "value": 10.9,
+       "err_plus": 4.4,
+       "err_minus": 3.3
+      }
+     },
+     "definition": "Escape = reaching 2 r200 (r200 w.r.t. 200x critical density; ~400-500 kpc in Auriga): v_esc(r) = sqrt(2|Phi(r) - Phi(2 r200)|). Power-law tail fit to local (D<~3 kpc) Gaia DR2 stars with v_tot > 300 km/s, radially varying v_esc(r) = v_e,0 (r/r0)^(-gamma/2), prior 1<k<2.5 tailored to radially anisotropic halo stars. They note 3 r340 ~ 2.4 r200.",
+     "adopted_solar_parameters": {
+      "r0_kpc": 8.3,
+      "vc_r0_kms": 230,
+      "UVW_sun_kms": [
+       11.1,
+       12.24,
+       7.25
+      ]
+     },
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "we use the simulations to define an appropriate outer boundary of 2r200, beyond which stars can es- cape."
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "we find a local ( r0 = 8.3 kpc) escape speed of vesc(r0) = 528+24 −25 km s −1."
+      },
+      {
+       "pdf_page": 6,
+       "snippet": "In the remainder of this work we choose 2r200 as the limiting radius in our fiducial definition of vesc."
+      },
+      {
+       "pdf_page": 9,
+       "snippet": "If we adopt the Piffl et al. (2014) prior, we find vesc = 580+31 −31 km s −1"
+      }
+     ]
+    },
+    {
+     "paper": "KoppelmanHelmi2021",
+     "location": "Abstract (p1); Table 1 and Sect. 5 (p9); Sect. 7.1 eq. (20) (p11); Conclusions (p13)",
+     "v_esc_R0": {
+      "value": 497,
+      "err_plus": 8,
+      "err_minus": 8,
+      "unit": "km/s",
+      "note": "5D (tangential-velocity) halo sample, heliocentric distance <= 2 kpc",
+      "confidence": "68% (marginalised ~1 sigma) per the paper; NB Necib & Lin 2022 state KH21 quote 99% intervals"
+     },
+     "alternatives": {
+      "6D_plus": {
+       "value": 497,
+       "err_plus": 12,
+       "err_minus": 8,
+       "unit": "km/s"
+      },
+      "6D_Gaia_only": {
+       "value": 505,
+       "err_plus": 32,
+       "err_minus": 16,
+       "unit": "km/s"
+      },
+      "bias_corrected_plus10pct": {
+       "value": 552,
+       "unit": "km/s",
+       "note": "authors' 'best guess' correction for ~10% low bias found in Auriga mocks"
+      }
+     },
+     "masses": {
+      "M200_plus10pct": {
+       "value": 1110000000000.0,
+       "err_plus": 80000000000.0,
+       "err_minus": 70000000000.0,
+       "unit": "Msun",
+       "note": "McMillan 2017 potential with NFW halo refit, vc(R0)=232.8 km/s fixed, after +10% correction",
+       "c": {
+        "value": 11.8,
+        "err": 0.3
+       }
+      }
+     },
+     "definition": "Measured: power-law truncation of the (tangential) speed distribution (vcut=317 km/s for 5D). For mass modelling: v_esc(r->3 r340) = sqrt(2|Phi(r) - Phi(3 r340)|) (Piffl et al. definition, H=73 km/s/Mpc); they note Deason et al.'s 2 r200 differs by ~5 km/s at R0, and that v_esc in the plane is higher than off-plane by ~20 km/s at 5 kpc height.",
+     "adopted_solar_parameters": {
+      "R0_kpc": 8.2,
+      "v_LSR_kms": 232.8,
+      "UVW_sun_kms": [
+       11.1,
+       12.24,
+       7.25
+      ]
+     },
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "In the solar neighbourhood, we obtain a very precise estimate of the escape velocity which is 497 +8 −8 km/s. This estimate is most likely biased low, our best guess is by 10%."
+      },
+      {
+       "pdf_page": 9,
+       "snippet": "The quoted uncer- tainties correspond to the marginalised 68% confidence levels (i.e. the∼ 1-σ level)."
+      },
+      {
+       "pdf_page": 11,
+       "snippet": "Therefore, we use here the definition of P14, who take the escape velocity to be the velocity required to reach 3r340"
+      },
+      {
+       "pdf_page": 13,
+       "snippet": "Applying the 10% fix would mean that the true es- cape velocity is v+10% esc = 552 km/s."
+      },
+      {
+       "pdf_page": 9,
+       "snippet": "5D 497 +8 −8 3.4+0.4 −0.3 10 000 6D+ 497+12 −8 3.0+0.3 −0.2 2067 6D (Gaia only) 505 +32 −16"
+      }
+     ]
+    },
+    {
+     "paper": "NecibLin2022",
+     "location": "Published ApJ 926:189 PDF: abstract (p1), Sect. 2 (p2), Sect. 5 (p5), Table 2 (p6)",
+     "v_esc_R0": {
+      "value": 445,
+      "err_plus": 25,
+      "err_minus": 8,
+      "unit": "km/s",
+      "note": "Gaia eDR3, retrograde stars, two bound components, vmin=300 km/s, r_GC in [7,9] kpc",
+      "confidence": "68%"
+     },
+     "alternatives": {
+      "retrograde_1comp": {
+       "value": 472,
+       "err_plus": 17,
+       "err_minus": 12,
+       "unit": "km/s"
+      },
+      "retrograde_2comp_vmin350": {
+       "value": 438,
+       "err_plus": 5,
+       "err_minus": 2,
+       "unit": "km/s"
+      },
+      "all_data_3comp_vmin300": {
+       "value": 439,
+       "err_plus": 20,
+       "err_minus": 2,
+       "unit": "km/s"
+      },
+      "arXiv_v1_DR2_superseded": {
+       "value": 484.6,
+       "err_plus": 17.8,
+       "err_minus": 7.4,
+       "unit": "km/s",
+       "note": "arXiv:2102.02211v1 (Gaia DR2, three-component fit) - superseded by the published eDR3 analysis; M200=7.0+1.9-1.2e11 in v1"
+      }
+     },
+     "masses": {
+      "M200_tot": {
+       "value": 460000000000.0,
+       "err_plus": 150000000000.0,
+       "err_minus": 80000000000.0,
+       "unit": "Msun"
+      },
+      "c200": {
+       "value": 19,
+       "err_plus": 11,
+       "err_minus": 7
+      }
+     },
+     "definition": "Measured: truncation speed of multi-component power-law tail (Sausage + relaxed halo). For mass inference: limiting radius 2 r200 as in Deason et al. 2019, v_esc(r0) = sqrt(2|Phi(r0) - Phi(2 r200)|); Pouliasis et al. 2017 model I baryons + NFW; vcirc(R0)=230+-10 km/s constraint (Eilers et al. 2019).",
+     "adopted_solar_parameters": {
+      "R0_kpc": 8.122,
+      "z_sun_pc": 25,
+      "vc_R0_kms_for_transformation": 235,
+      "UVW_sun_kms": [
+       11.1,
+       12.24,
+       7.25
+      ]
+     },
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "we find the escape velocity of the Milky Way at the solar position to be = - +v 445esc 8 25 km s−1.A fit with a single component to the same data gives = - +v 472esc 12 17 km s−1."
+      },
+      {
+       "pdf_page": 6,
+       "snippet": "Retrograde 2 300 - +445 8 25 - +4.6 0.8 1.5"
+      },
+      {
+       "pdf_page": 5,
+       "snippet": "Deason et al. (2019) by taking the limiting radius as 2 r200"
+      },
+      {
+       "pdf_page": 2,
+       "snippet": "Galactocentric distance cut of rGC ä [7.0, 9.0 ] kpc"
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "the Milky Way at the solar position to be vesc = 484.6+17.8 −7.4 km/s."
+      }
+     ],
+     "snippet_reading": "'= - +v 445esc 8 25' is the PDF text rendering of v_esc = 445^{+25}_{-8} km/s; '- +445 8 25 - +4.6 0.8 1.5' reads 445^{+25}_{-8} and 4.6^{+1.5}_{-0.8}."
+    },
+    {
+     "paper": "Prudil2022",
+     "location": "Abstract (p1); Sect. 2.2 (p4); eq. (26) (p9)",
+     "v_esc_R0": {
+      "value": 512,
+      "err_plus": 94,
+      "err_minus": 37,
+      "unit": "km/s",
+      "note": "RR Lyrae, Galactocentric 4-12 kpc bin (centre 8 kpc)",
+      "confidence": "15.9/84.1 percentiles"
+     },
+     "alternatives": {
+      "12_20_kpc": {
+       "value": 436,
+       "err_plus": 44,
+       "err_minus": 22,
+       "unit": "km/s"
+      },
+      "20_28_kpc": {
+       "value": 393,
+       "err_plus": 53,
+       "err_minus": 26,
+       "unit": "km/s"
+      }
+     },
+     "masses": {
+      "M200": {
+       "value": 830000000000.0,
+       "err_plus": 290000000000.0,
+       "err_minus": 160000000000.0,
+       "unit": "Msun"
+      },
+      "M200_bias_corrected": {
+       "value": 1260000000000.0,
+       "err_plus": 400000000000.0,
+       "err_minus": 220000000000.0,
+       "unit": "Msun",
+       "note": "v_esc boosted by ~10%"
+      },
+      "M_lt_20kpc": {
+       "value": 190000000000.0,
+       "err_plus": 20000000000.0,
+       "err_minus": 10000000000.0,
+       "unit": "Msun"
+      },
+      "M_lt_20kpc_corrected": {
+       "value": 210000000000.0,
+       "err_plus": 20000000000.0,
+       "err_minus": 10000000000.0,
+       "unit": "Msun"
+      }
+     },
+     "definition": "Measured: single power-law truncation (1PL, prior 0.1<k<10) in radial bins. Unbound-star flagging uses escape to 'infinity' (r=1e12, Phi=0) in MWPotential2014; for mass modelling the limiting radius is 2 r200: v_esc(R0) = sqrt(2|Phi(R0) - Phi(2 r200)|), with v0=230 km/s circular-velocity constraint.",
+     "adopted_solar_parameters": {
+      "R0_kpc": 8.2,
+      "z_sun_pc": 20.8,
+      "v_rot_kms": 230,
+      "UVW_sun_kms": [
+       11.1,
+       12.24,
+       7.25
+      ]
+     },
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "we estimate the escape velocity in the Solar neighborhood to be 𝑣esc = 512+94 −37 km s−1 (4 to 12 kpc)"
+      },
+      {
+       "pdf_page": 9,
+       "snippet": "will assume that the limiting radius for a star to be considered unbound is two times the virial radius 𝑟200"
+      },
+      {
+       "pdf_page": 4,
+       "snippet": "we assumed the distance between Sun and the Galactic cen- ter to be equal to R(cid:12) = 8.2 kpc"
+      }
+     ]
+    },
+    {
+     "paper": "Roche2024",
+     "location": "Abstract (p1); Sect. 2 (p4); Sect. 6.1 eq. (18) (p14); Appendix Figs. A3-A5 (p23-25)",
+     "v_esc_R0": {
+      "value": 486.26,
+      "err_plus": 9.94,
+      "err_minus": 5.43,
+      "unit": "km/s",
+      "note": "fiducial SEPL (stretched-exponential power-law) fit, 8-9 kpc Galactocentric bin, vmin=310 km/s (Fig. A5 corner-plot label); no tabulated profile in the paper",
+      "confidence": "68%"
+     },
+     "alternatives": {
+      "2PL_8_9kpc": {
+       "value": 536.34,
+       "err_plus": 59.84,
+       "err_minus": 31.07,
+       "unit": "km/s"
+      },
+      "1PL_8_9kpc_vmin310": {
+       "value": 880.18,
+       "err_plus": 80.86,
+       "err_minus": 121.31,
+       "unit": "km/s",
+       "note": "1PL strongly disfavoured by the authors"
+      },
+      "1PL_8_9kpc_vmin400": {
+       "value": 716.51,
+       "err_plus": 91.31,
+       "err_minus": 104.05,
+       "unit": "km/s"
+      }
+     },
+     "escape_profile": "4-11 kpc in 1-kpc bins, shown only in Fig. 4 / A1 (no table)",
+     "masses": {
+      "M200c_DM": {
+       "value": 550000000000.0,
+       "err_plus": 150000000000.0,
+       "err_minus": 140000000000.0,
+       "unit": "Msun"
+      },
+      "M200c_total": {
+       "value": 640000000000.0,
+       "err_plus": 150000000000.0,
+       "err_minus": 140000000000.0,
+       "unit": "Msun"
+      },
+      "c200c_DM": {
+       "value": 13.9,
+       "err_plus": 6.2,
+       "err_minus": 4.3
+      }
+     },
+     "definition": "Limiting radius 2 R200c (H=70 km/s/Mpc): v_esc(r) = sqrt(2|Phi(r) - Phi(2 R200c)|), evaluated with cylindrical r in the disc plane for axisymmetric potentials; Pouliasis+2017 model I baryons + NFW; combined with vcirc(R0)=230 (+10/-10) km/s (Eilers+2019).",
+     "adopted_solar_parameters": {
+      "x_sun_kpc": -8.122,
+      "z_sun_kpc": 0.0208,
+      "v_sun_kms": [
+       12.9,
+       245.6,
+       7.78
+      ]
+     },
+     "evidence": [
+      {
+       "pdf_page": 25,
+       "snippet": "vesc = 486.26+9.94 −5.43"
+      },
+      {
+       "pdf_page": 24,
+       "snippet": "vesc = 536.34+59.84 −31.07"
+      },
+      {
+       "pdf_page": 14,
+       "snippet": "we choose 2R200c as this limiting radius, where R200c is the radius within which the galaxy’s mean density is 200 times the critical density of the universe"
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "MDM 200c = 0.55+0.15 −0.14× 1012 M⊙. This corresponds to a total Milky Way mass of M 200c = 0.64+0.15 −0.14× 1012 M⊙"
+      },
+      {
+       "pdf_page": 25,
+       "snippet": "Figure A5. Stretched exponential power law"
+      }
+     ]
+    }
+   ],
+   "general_caveat": "Different papers use different zero points of the potential (infinity vs 3 r340 vs 2 r200) when converting v_esc to a mass; the MEASURED quantity in all cases is the truncation (edge) of the high-velocity tail of halo stars near the Sun, which is model- and prior-dependent (power-law index k prior, number of components). Simulations (Grand et al. 2019; Koppelman & Helmi) suggest ~7-10% low bias."
+  },
+  "4_enclosed_mass": {
+   "summary": [
+    {
+     "paper": "Watkins2019",
+     "r_kpc": 21.1,
+     "M_1e11Msun": "2.1 +0.4/-0.3"
+    },
+    {
+     "paper": "Watkins2019 (Gaia+HST)",
+     "r_kpc": 39.5,
+     "M_1e11Msun": "4.2 +0.7/-0.6"
+    },
+    {
+     "paper": "PostiHelmi2019",
+     "r_kpc": 20,
+     "M_1e11Msun": "1.91 +0.18/-0.17"
+    },
+    {
+     "paper": "Prudil2022",
+     "r_kpc": 20,
+     "M_1e11Msun": "1.9 +0.2/-0.1"
+    },
+    {
+     "paper": "Vasiliev2019",
+     "r_kpc": 50,
+     "M_1e11Msun": "5.4 +1.1/-0.8"
+    },
+    {
+     "paper": "Vasiliev2019",
+     "r_kpc": 100,
+     "M_1e11Msun": "8.5 +3.3/-2.0"
+    },
+    {
+     "paper": "CorreaMagnusVasiliev2022 (w/ LMC)",
+     "r_kpc": 50,
+     "M_1e11Msun": "4.5 +0.4/-0.4"
+    },
+    {
+     "paper": "CorreaMagnusVasiliev2022 (w/ LMC)",
+     "r_kpc": 100,
+     "M_1e11Msun": "7.3 +0.9/-0.8"
+    },
+    {
+     "paper": "CorreaMagnusVasiliev2022 (w/ LMC)",
+     "r_kpc": 200,
+     "M_1e11Msun": "11.0 +2.7/-2.2"
+    },
+    {
+     "paper": "Deason2021",
+     "r_kpc": 100,
+     "M_1e11Msun": "6.07 +- 0.29 (stat) +- 1.21 (sys)"
+    },
+    {
+     "paper": "Watkins2019",
+     "r_kpc": "virial (Bryan&Norman)",
+     "M_1e11Msun": "12.8 +9.7/-4.8 (Gaia); 15.4 +7.5/-4.4 (Gaia+HST)"
+    },
+    {
+     "paper": "PostiHelmi2019",
+     "r_kpc": "virial (DM halo, Delta~102.5)",
+     "M_1e11Msun": "13 +- 3"
+    },
+    {
+     "paper": "Vasiliev2019",
+     "r_kpc": "virial (100x mean matter)",
+     "M_1e11Msun": "12 +15/-5"
+    },
+    {
+     "paper": "CorreaMagnusVasiliev2022",
+     "r_kpc": "virial (102x mean matter)",
+     "M_1e11Msun": "13 +6/-4"
+    },
+    {
+     "paper": "Deason2021",
+     "r_kpc": "r200c (pre-LMC)",
+     "M_1e11Msun": "10.1 +- 2.4"
+    },
+    {
+     "paper": "Jiao2023",
+     "r_kpc": "r200 (extrapolated Einasto)",
+     "M_1e11Msun": "2.06 +0.24/-0.13"
+    }
+   ],
+   "entries": [
+    {
+     "paper": "Watkins2019",
+     "location": "Abstract (p1); eq. (13) (p9-10)",
+     "measurements": [
+      {
+       "radius_kpc": 21.1,
+       "M": {
+        "value": 210000000000.0,
+        "err_plus": 40000000000.0,
+        "err_minus": 30000000000.0,
+        "unit": "Msun"
+       },
+       "vcirc_kms": {
+        "value": 206,
+        "err_plus": 19,
+        "err_minus": 16
+       },
+       "sample": "34 halo GCs, Gaia DR2 PMs, 2.0<=r<=21.1 kpc"
+      },
+      {
+       "radius_kpc": 39.5,
+       "M": {
+        "value": 420000000000.0,
+        "err_plus": 70000000000.0,
+        "err_minus": 60000000000.0,
+        "unit": "Msun"
+       },
+       "sample": "46 GCs, Gaia DR2 + HST"
+      },
+      {
+       "radius_kpc": "virial",
+       "M": {
+        "value": 1280000000000.0,
+        "err_plus": 970000000000.0,
+        "err_minus": 480000000000.0,
+        "unit": "Msun"
+       },
+       "sample": "Gaia only; extrapolated with NFW grid"
+      },
+      {
+       "radius_kpc": "virial",
+       "M": {
+        "value": 1540000000000.0,
+        "err_plus": 750000000000.0,
+        "err_minus": 440000000000.0,
+        "unit": "Msun"
+       },
+       "sample": "Gaia + HST"
+      }
+     ],
+     "definition": "Power-law (Watkins et al. 2010) tracer mass estimator for M(<r_max); virial mass = mass inside r_vir with Delta_vir from Bryan & Norman 1998 (~100 x critical); 15.9/84.1 percentiles; R0 = 8.29+-0.16 kpc, V0 = 239+-5 km/s (McMillan 2011).",
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "M(< 21.1 kpc) = 0.21+0.04 −0.03× 1012M⊙, which corresponds to a circular velocity atrmax ofvcirc(21.1 kpc) = 206+19 −16km s−1. The implied virial mass is Mvirial = 1.28+0.97 −0.48× 1012M⊙."
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "M(< 39.5 kpc) = 0.42+0.07 −0.06× 1012M⊙, andMvirial = 1.54+0.75 −0.44×1012M⊙."
+      },
+      {
+       "pdf_page": 9,
+       "snippet": "We adopt the prescription for ∆vir from Bryan & Norman (1998)."
+      }
+     ]
+    },
+    {
+     "paper": "PostiHelmi2019",
+     "location": "Abstract (p1); eq. (14) (p8)",
+     "measurements": [
+      {
+       "radius_kpc": 20,
+       "M": {
+        "value": 191000000000.0,
+        "err_plus": 18000000000.0,
+        "err_minus": 17000000000.0,
+        "unit": "Msun"
+       },
+       "M_DM": {
+        "value": 137000000000.0,
+        "err_plus": 18000000000.0,
+        "err_minus": 17000000000.0,
+        "unit": "Msun"
+       },
+       "note": "baryons fixed at 5.4e10 Msun within 20 kpc"
+      },
+      {
+       "radius_kpc": "virial",
+       "M": {
+        "value": 1300000000000.0,
+        "err": 300000000000.0,
+        "unit": "Msun"
+       },
+       "note": "dark-matter halo virial mass (Bryan & Norman Delta~102.5), extrapolated with Dutton & Maccio c(M); r_vir = 287+22-25 kpc"
+      }
+     ],
+     "other": {
+      "DM_halo_axis_ratio_q": {
+       "value": 1.3,
+       "err": 0.25
+      }
+     },
+     "definition": "Action-based DF fit to 75 Gaia DR2 + 20 HST globular clusters; fixed disc+bulge; axisymmetric DM halo of variable flattening q; R0 = 8.3 kpc.",
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "We find the mass of the Galaxy within 20 kpc to be M(< 20 kpc) = 1.91+0.18 −0.17× 1011 M⊙, of which MDM(< 20 kpc) = 1.37+0.18 −0.17×1011 M⊙ is in dark matter"
+      },
+      {
+       "pdf_page": 8,
+       "snippet": "Mvir = 1.3± 0.3× 1012 M⊙ (14) and thus a virial radius of rvir = 287+22 −25 kpc."
+      }
+     ]
+    },
+    {
+     "paper": "Vasiliev2019",
+     "location": "p12 (text and footnote 2)",
+     "measurements": [
+      {
+       "radius_kpc": 50,
+       "M": {
+        "value": 540000000000.0,
+        "err_plus": 110000000000.0,
+        "err_minus": 80000000000.0,
+        "unit": "Msun"
+       }
+      },
+      {
+       "radius_kpc": 100,
+       "M": {
+        "value": 850000000000.0,
+        "err_plus": 330000000000.0,
+        "err_minus": 200000000000.0,
+        "unit": "Msun"
+       }
+      },
+      {
+       "radius_kpc": "virial",
+       "M": {
+        "value": 1200000000000.0,
+        "err_plus": 1500000000000.0,
+        "err_minus": 500000000000.0,
+        "unit": "Msun"
+       },
+       "note": "r_vir = 280+80-50 kpc; Delta = 100 x cosmic MATTER density; poorly constrained extrapolation"
+      }
+     ],
+     "definition": "DF-based models of the GC system (Gaia DR2); total enclosed mass including 6.5e10 Msun of baryons; Sgr clusters excluded (including them raises masses by 10-15%); prior vc(8.2 kpc) = 235+-10 km/s; R0 = 8.2+-0.1 kpc. The abstract also states vc between 10 and 50 kpc is 210-240 km/s.",
+     "evidence": [
+      {
+       "pdf_page": 12,
+       "snippet": "For our models, the mass within 50 kpc is 0.54+0.11 −0.08× 1012M⊙, and within 100 kpc is 0 .85+0.33 −0.20× 1012M⊙."
+      },
+      {
+       "pdf_page": 12,
+       "snippet": "Mvirial = 1.2+1.5 −0.5× 1012M⊙,rvirial = 280+80 −50 kpc."
+      }
+     ]
+    },
+    {
+     "paper": "Deason2021",
+     "location": "Abstract (p1); Sect. 5 (p7)",
+     "measurements": [
+      {
+       "radius_kpc": 100,
+       "M": {
+        "value": 607000000000.0,
+        "unit": "Msun",
+        "err_stat": 29000000000.0,
+        "err_sys": 121000000000.0
+       },
+       "note": "LMC reflex motion approximately corrected (rigid Erkal et al. model), Sgr stars removed, 5% bias correction + 20% systematic included"
+      },
+      {
+       "radius_kpc": "r200c",
+       "M": {
+        "value": 1010000000000.0,
+        "err": 240000000000.0,
+        "unit": "Msun"
+       },
+       "note": "pre-LMC-infall total mass assuming NFW c(M) (Dutton & Maccio), Bovy & Rix 2013 baryons"
+      },
+      {
+       "radius_kpc": "r200c",
+       "M": {
+        "value": 1160000000000.0,
+        "err": 240000000000.0,
+        "unit": "Msun"
+       },
+       "note": "post-infall, including a rigid 1.5e11 Msun LMC"
+      }
+     ],
+     "definition": "DF (power-law tracer in power-law potential) analysis of halo stars at 50-100 kpc (98% 6D); r0 = 8.122 kpc, vc(R0) = 235 km/s used for coordinate transforms.",
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "𝑀 (< 100kpc) = 6.07 ± 0.29(stat.) ± 1.21(sys.) × 1011M(cid:12)."
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "(pre-LMC infall) Milky Way mass of 𝑀200c = 1.01 ± 0.24 × 1012M(cid:12), or (post-LMC infall) mass of 𝑀200c = 1.16 ± 0.24 × 1012 M(cid:12)"
+      }
+     ]
+    },
+    {
+     "paper": "CorreaMagnusVasiliev2022",
+     "location": "Abstract (p1); Table 2 (p10); Sect. 5",
+     "measurements": [
+      {
+       "radius_kpc": 50,
+       "M": {
+        "value": 450000000000.0,
+        "err_plus": 40000000000.0,
+        "err_minus": 40000000000.0,
+        "unit": "Msun"
+       },
+       "row": "both datasets w/ LMC (Zhao halo) - preferred"
+      },
+      {
+       "radius_kpc": 100,
+       "M": {
+        "value": 730000000000.0,
+        "err_plus": 90000000000.0,
+        "err_minus": 80000000000.0,
+        "unit": "Msun"
+       },
+       "row": "both w/ LMC (text quotes +0.09/-0.07); abstract: (0.75 +- 0.1)e12"
+      },
+      {
+       "radius_kpc": 200,
+       "M": {
+        "value": 1100000000000.0,
+        "err_plus": 270000000000.0,
+        "err_minus": 220000000000.0,
+        "unit": "Msun"
+       },
+       "row": "both w/ LMC"
+      },
+      {
+       "radius_kpc": "virial",
+       "M": {
+        "value": 1300000000000.0,
+        "err_plus": 600000000000.0,
+        "err_minus": 400000000000.0,
+        "unit": "Msun"
+       },
+       "row": "both w/ LMC; Delta = 102 x cosmological matter density"
+      }
+     ],
+     "other_rows_Table2": {
+      "GC_no_LMC": {
+       "M50": "0.51+0.12-0.09",
+       "M100": "0.79+0.33-0.20",
+       "M200": "1.08+0.69-0.39",
+       "Mvir": "1.2+1.0-0.5"
+      },
+      "sat_no_LMC": {
+       "M50": "0.50+0.07-0.07",
+       "M100": "0.85+0.12-0.10",
+       "M200": "1.31+0.29-0.20",
+       "Mvir": "1.6+0.6-0.4"
+      },
+      "both_no_LMC": {
+       "M50": "0.54+0.07-0.06",
+       "M100": "0.85+0.11-0.09",
+       "M200": "1.17+0.27-0.23",
+       "Mvir": "1.3+0.6-0.3"
+      },
+      "both_w_LMC_Einasto": {
+       "M50": "0.46+0.05-0.04",
+       "M100": "0.74+0.09-0.07",
+       "M200": "1.00+0.23-0.17",
+       "Mvir": "1.1+0.4-0.3"
+      },
+      "units": "1e12 Msun, median and 16/84 percentiles"
+     },
+     "definition": "Simultaneous potential + DF fits to Gaia EDR3 globular clusters and satellites with orbit rewinding to remove the LMC perturbation (LMC mass 1-2e11 Msun preferred); enclosed mass within SPHERICAL radius; circular velocity pinned to 235+-10 km/s at the Solar radius (McMillan 2017); neglecting the LMC raises M(<100) by ~15%.",
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "measure MW mass within 100 kpc to be (0.75 ± 0.1) × 1012 𝑀(cid:12), while neglecting the LMC perturbation increases it by ∼ 15%."
+      },
+      {
+       "pdf_page": 10,
+       "snippet": "We list the enclosed mass at 50, 100 and 200 kpc, as well as the virial mass (for the overdensity Δ = 102 w.r.t. the cosmological matter density)."
+      },
+      {
+       "pdf_page": 10,
+       "snippet": "0.73+0.09 −0.07 × 1012 𝑀(cid:12) within 100 kpc; the values at other radii and for"
+      }
+     ],
+     "table_reading_note": "Table 2 row 'both w/LMC' was mapped using the layout-mode extraction: 045(+004-004) 073(+009-008) 110(+027-022) 13(+06-04)."
+    },
+    {
+     "paper": "Prudil2022",
+     "location": "Abstract (p1)",
+     "measurements": [
+      {
+       "radius_kpc": 20,
+       "M": {
+        "value": 190000000000.0,
+        "err_plus": 20000000000.0,
+        "err_minus": 10000000000.0,
+        "unit": "Msun"
+       },
+       "note": "from v_esc fits; 2.1(+0.2/-0.1)e11 after +10% v_esc bias correction"
+      }
+     ],
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "The MW mass within 20 kpc then corresponds to 𝑀MW (𝑟 < 20 kpc) = 1.9+0.2"
+      }
+     ]
+    },
+    {
+     "paper": "Jiao2023",
+     "location": "Abstract / Table 4",
+     "measurements": [
+      {
+       "radius_kpc": "r200 (extrapolated)",
+       "M": {
+        "value": 206000000000.0,
+        "err_plus": 24000000000.0,
+        "err_minus": 13000000000.0,
+        "unit": "Msun"
+       }
+      }
+     ],
+     "note": "see item 1b; also enclosed mass from vc^2 R/G stays at 1.9-2.0e11 Msun beyond 19 kpc"
+    }
+   ]
+  },
+  "5_McMillan2017_best_fit_model": {
+   "paper": "McMillan2017",
+   "location": "Table 3 'Parameters and properties of our best fitting model' (pdf p7); fixed parameters: Sect. 2.1-2.3 eqs. (1)-(4) and Table 1 (p2-3); posterior summary Table 2 (p7)",
+   "best_fit_Table3": {
+    "Sigma0_thin": {
+     "value": 896,
+     "unit": "Msun/pc^2"
+    },
+    "Rd_thin": {
+     "value": 2.5,
+     "unit": "kpc"
+    },
+    "Sigma0_thick": {
+     "value": 183,
+     "unit": "Msun/pc^2"
+    },
+    "Rd_thick": {
+     "value": 3.02,
+     "unit": "kpc"
+    },
+    "rho0_bulge": {
+     "value": 98.4,
+     "unit": "Msun/pc^3"
+    },
+    "rho0_halo": {
+     "value": 0.00854,
+     "unit": "Msun/pc^3"
+    },
+    "r_h": {
+     "value": 19.6,
+     "unit": "kpc"
+    },
+    "R0": {
+     "value": 8.21,
+     "unit": "kpc"
+    },
+    "v0_vc_R0": {
+     "value": 233.1,
+     "unit": "km/s"
+    },
+    "M_bulge": {
+     "value": 9230000000.0,
+     "unit": "Msun"
+    },
+    "M_star_total": {
+     "value": 54300000000.0,
+     "unit": "Msun"
+    },
+    "M_vir": {
+     "value": 1370000000000.0,
+     "unit": "Msun",
+     "note": "M200 (200 x critical)"
+    },
+    "c_v_prime": {
+     "value": 15.4,
+     "note": "concentration w.r.t. ~94 x critical"
+    },
+    "Kz_1p1_sun": {
+     "value": 73.9,
+     "unit": "(2 pi G) Msun/pc^2"
+    },
+    "rho_halo_sun": {
+     "value": 0.0101,
+     "unit": "Msun/pc^3"
+    }
+   },
+   "fixed_structure_parameters": {
+    "bulge_profile": "rho_b = rho0_b/(1+r'/r0)^alpha * exp[-(r'/rcut)^2], r' = sqrt(R^2+(z/q)^2)",
+    "bulge_alpha": 1.8,
+    "bulge_r0_kpc": 0.075,
+    "bulge_rcut_kpc": 2.1,
+    "bulge_q": 0.5,
+    "bulge_prior": "Mb = 8.9e9 Msun +-10% <=> rho0_b = 9.93e10 Msun/kpc^3 +-10%",
+    "stellar_discs_profile": "rho_d = Sigma0/(2 zd) exp(-|z|/zd - R/Rd)",
+    "zd_thin_pc": 300,
+    "zd_thick_pc": 900,
+    "gas_discs_profile": "rho_d = Sigma0/(4 zd) exp(-Rm/R - R/Rd) sech^2(z/2zd)",
+    "HI_disc": {
+     "Rd_kpc": 7,
+     "Rm_kpc": 4,
+     "zd_kpc": 0.085,
+     "Sigma0_Msun_pc2": 53.1,
+     "Sigma_sun_Msun_pc2": 10,
+     "M_Msun": 11000000000.0
+    },
+    "H2_disc": {
+     "Rd_kpc": 1.5,
+     "Rm_kpc": 12,
+     "zd_kpc": 0.045,
+     "Sigma0_Msun_pc2": 2180,
+     "Sigma_sun_Msun_pc2": 2,
+     "M_Msun": 1200000000.0
+    },
+    "halo_profile": "rho_h = rho0_h / [x^gamma (1+x)^(3-gamma)], x = r/r_h; gamma = 1 (NFW) in main model"
+   },
+   "posterior_Table2_mean_std": {
+    "Sigma0_thin": {
+     "value": 886.7,
+     "err": 116.2
+    },
+    "Rd_thin": {
+     "value": 2.53,
+     "err": 0.14
+    },
+    "Sigma0_thick": {
+     "value": 156.7,
+     "err": 58.9
+    },
+    "Rd_thick": {
+     "value": 3.38,
+     "err": 0.54
+    },
+    "rho0_b": {
+     "value": 97.3,
+     "err": 9.7
+    },
+    "rho0_h": {
+     "value": 0.0106,
+     "err": 0.0053
+    },
+    "r_h": {
+     "value": 19.0,
+     "err": 4.9
+    },
+    "R0": {
+     "value": 8.2,
+     "err": 0.09
+    },
+    "v0": {
+     "value": 232.8,
+     "err": 3.0
+    },
+    "Mb_1e9": {
+     "value": 9.13,
+     "err": 0.91
+    },
+    "Mstar_1e9": {
+     "value": 54.3,
+     "err": 5.7
+    },
+    "Mv_1e9": {
+     "value": 1300,
+     "err": 300
+    },
+    "cv_prime": {
+     "value": 16.4,
+     "err": 3.1
+    },
+    "Kz_1p1_sun": {
+     "value": 74.8,
+     "err": 4.9
+    },
+    "rho_h_sun": {
+     "value": 0.0101,
+     "err": 0.001
+    },
+    "units": "kpc, km/s, 1e9 Msun, Msun/pc^2, Msun/pc^3; local DM density 0.38+-0.04 GeV/cm^3"
+   },
+   "evidence": [
+    {
+     "pdf_page": 7,
+     "snippet": "Σ0,thin 896 M⊙ pc−2 v0 233.1 km s−1"
+    },
+    {
+     "pdf_page": 7,
+     "snippet": "ρ0,h 0.00854 M⊙ pc−3 Kz,1.1,⊙ 73.9× (2πG) M⊙ pc−2"
+    },
+    {
+     "pdf_page": 7,
+     "snippet": "rh 19.6 kpc ρh,⊙ 0.0101 M⊙ pc−3"
+    },
+    {
+     "pdf_page": 2,
+     "snippet": "with α = 1.8, r0 = 0.075 kpc, rcut = 2.1 kpc, and axis ratio q = 0.5."
+    },
+    {
+     "pdf_page": 2,
+     "snippet": "We hold the scale heights o f the discs fixed as zd,thin = 300 pc and zd,thick = 900 pc."
+    },
+    {
+     "pdf_page": 3,
+     "snippet": "Hi 7 4 0.085 53.1 10 1.1× 1010"
+    },
+    {
+     "pdf_page": 3,
+     "snippet": "H2 1.5 12 0.045 2180 2 1.2× 109"
+    },
+    {
+     "pdf_page": 1,
+     "snippet": "we fi nd that the Sun is R0 = (8.20 ± 0.09) kpc from the Galactic Centre, with the circular speed at t he Sun being v0 = (232.8 ± 3.0) km s−1"
+    }
+   ],
+   "definition_caveats": [
+    "Table 3 gives single best-fit values without errors; Table 2 gives posterior means/stds (quoted uncertainties statistical). Virial mass Mv is the mass within r200 (200x critical density)."
+   ]
+  },
+  "6_dwarf_spheroidals": {
+   "classical_MW_dSphs": {
+    "Draco": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 76,
+      "err": 6,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 19.4,
+      "err": 0.17,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 76,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -8.8,
+      "err": 0.3,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 10.6,
+      "err": 0.2,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 290000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 221,
+      "err": 19,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 10.0,
+      "err": 0.3,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.31,
+      "err": 0.02
+     },
+     "sigma_los_star": {
+      "value": 9.1,
+      "err": 1.2,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 11000000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (18) Walker et al. 2007, (19) Wilkinson et al. 2004; structure: (5) Martin et al. 2008b; distance: (21) Bonanos et al. 2004, velocity (22) Walker et al. 2007",
+     "evidence": [
+      {
+       "pdf_page": 94,
+       "snippet": "Draco 86.4 +34.7 0.027 19.40 0.17 76 6 -291.0 0.1 [ 76, -96]"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "Draco 10.6 0.2 10.00 0.30 25.0 0.2 89 2 0.31 0.02 -8.8 0.3 221 19 26.1 (5)"
+      },
+      {
+       "pdf_page": 105,
+       "snippet": "Draco 0.29 9.1 1.2 N/A N/A N/A N/A N/A N/A N/A 11 (18) (19) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 76,
+       "err": 5,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 17.5,
+       "err": 0.9,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 1.5,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 5.5,
+       "err": 0.42,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": -1.12,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 291,
+       "err": 14,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 840,
+       "err": 150,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Draco 76 ± 5 17 .5 ± 0.9 1.5 5 .50 ± 0.42 − 1.12 − 1.99 0.32 1,4,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Draco 291 ± 14 997 ± 13 4520 ± 360 840 ± 150 6 .9 ± 2.9 0 .31 ± 0.02 1,7,11"
+       }
+      ]
+     }
+    },
+    "Ursa Minor": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 76,
+      "err": 3,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 19.4,
+      "err": 0.1,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 78,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -8.8,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 10.6,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 290000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 181,
+      "err": 27,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 8.2,
+      "err": 1.2,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.56,
+      "err": 0.05
+     },
+     "sigma_los_star": {
+      "value": 9.5,
+      "err": 1.2,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 9500000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (20) Walker et al. 2009c, (19) Wilkinson et al. 2004; structure: (9) Irwin & Hatzidimitriou 1995; distance (23) Carrera et al. 2002",
+     "evidence": [
+      {
+       "pdf_page": 94,
+       "snippet": "Ursa Minor 105.0 +44.8 0.032 19.40 0.10 76 3 -246.9 0.1"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "Ursa Minor 10.6 0.5 8.20 1.20 26.0 0.5 53 5 0.56 0.05 -8.8 0.5 18 1 27 25.2 (9)"
+      },
+      {
+       "pdf_page": 105,
+       "snippet": "Ursa Minor 0.29 9.5 1.2 N/A N/A N/A N/A N/A N/A N/A 9.5 (20) (19) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 66,
+       "err": 3,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 20.0,
+       "err": 1.1,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 1.5,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 5.76,
+       "err": 0.43,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": -1.09,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 588,
+       "err": 58,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 890,
+       "err": 180,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Ursa Minor 66 ± 3 20 .0 ± 1.1 1.5 5 .76 ± 0.43 − 1.09 − 2.03 0.32 1,4,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Ursa Minor 588 ± 58 1495 ± 171 5640 ± 490 890 ± 180 2 .6 ± 1.3 0 .56 ± 0.05 1,6,11"
+       }
+      ]
+     }
+    },
+    "Sculptor": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 86,
+      "err": 6,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 19.67,
+      "err": 0.14,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 86,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -11.1,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 8.6,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 2300000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 283,
+      "err": 45,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 11.3,
+      "err": 1.6,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.32,
+      "err": 0.03
+     },
+     "sigma_los_star": {
+      "value": 9.2,
+      "err": 1.4,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 14000000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (21) Walker et al. 2009b, (22) Walker et al. 2008; structure: (9) Irwin & Hatzidimitriou 1995; distance (25) Pietrzynski et al. 2008",
+     "evidence": [
+      {
+       "pdf_page": 94,
+       "snippet": "Sculptor 287.5 -83.2 0.018 19.67 0.14 86 6 111.4 0.1 [ 86, 79]"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "Sculptor 8.6 0.5 11.30 1.60 23.5 0.5 99 1 0.32 0.03 -11.1 0.5 28 3 45 24.3 (9)"
+      },
+      {
+       "pdf_page": 105,
+       "snippet": "Sculptor 2.3 9.2 1.4 N/A N/A 0.22e N/A N/A N/A N/A 14 (21) (22) (23) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 79,
+       "err": 4,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 15.5,
+       "err": 0.3,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 1.4,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 6.56,
+       "err": 0.42,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": 0.14,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 375,
+       "err": 54,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 1940,
+       "err": 360,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Sculptor 79 ± 4 15 .5 ± 0.3 1.4 6 .56 ± 0.42 0.14 − 1.81 0.34 1,3,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Sculptor 375 ± 54 1758 ± 115 4660 ± 510 1940 ± 360 17 ± 8 0 .32 ± 0.03 1,6,11"
+       }
+      ]
+     }
+    },
+    "Sextans": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 86,
+      "err": 4,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 19.67,
+      "err": 0.1,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 89,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -9.3,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 10.4,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 440000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 695,
+      "err": 44,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 27.8,
+      "err": 1.2,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.35,
+      "err": 0.05
+     },
+     "sigma_los_star": {
+      "value": 7.9,
+      "err": 1.3,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 25000000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (21) Walker et al. 2009b, (22) Walker et al. 2008; structure: (9) Irwin & Hatzidimitriou 1995; distance (27) Lee et al. 2009",
+     "evidence": [
+      {
+       "pdf_page": 94,
+       "snippet": "Sextans (I) 243.5 +42.3 0.047 19.67 0.10 86 4 224.2 0.1 [ 89, 72 ]"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "Sextans 10.4 0.5 27.80 1.20 27.1 0.5 56 5 0.35 0.05 -9.3 0.5 695 44 28.0 (9)"
+      },
+      {
+       "pdf_page": 105,
+       "snippet": "Sextans (I) 0.44 7.9 1.3 N/A N/A N/A N/A N/A N/A N/A 25 (21) (22) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 86,
+       "err": 4,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 12.3,
+       "err": 0.5,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 1.3,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 5.89,
+       "err": 0.42,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": -0.13,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 1019,
+       "err": 62,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 1270,
+       "err": 230,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Sextans 86 ± 4 12 .3 ± 0.5 1.3 5 .89 ± 0.42 − 0.13 − 2.07 0.36 1,3,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Sextans 1019 ± 62 4000 ± 1250 5900 ± 390 1270 ± 230 2 .0 ± 0.9 0 .35 ± 0.05 1,6,11"
+       }
+      ]
+     }
+    },
+    "Carina": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 105,
+      "err": 6,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 20.11,
+      "err": 0.13,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 107,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -9.1,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 11.0,
+      "err": 0.5,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 380000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 250,
+      "err": 39,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 8.2,
+      "err": 1.2,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.33,
+      "err": 0.05
+     },
+     "sigma_los_star": {
+      "value": 6.6,
+      "err": 1.2,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 6300000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (21) Walker et al. 2009b, (22) Walker et al. 2008; structure: (9) Irwin & Hatzidimitriou 1995; distance (29) Pietrzynski et al. 2009",
+     "evidence": [
+      {
+       "pdf_page": 94,
+       "snippet": "Carina 260.1 -22.2 0.061 20.11 0.13 105 6 222.9 0.1 [ 107, 7]"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "Carina 11.0 0.5 8.20 1.20 25.5 0.5 65 5 0.33 0.05 -9.1 0.5 250 39 26.0 (9)"
+      },
+      {
+       "pdf_page": 105,
+       "snippet": "Carina 0.38 6.6 1.2 N/A N/A N/A N/A N/A N/A N/A 6.3 (21) (22) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 101,
+       "err": 5,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 11.1,
+       "err": 0.4,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 1.0,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 5.64,
+       "err": 0.41,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": -0.18,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 334,
+       "err": 37,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 1230,
+       "err": 250,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Carina 101 ± 5 11 .1 ± 0.4 1.0 5 .64 ± 0.41 − 0.18 − 1.80 0.30 1,3,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Carina 334 ± 37 846 ± 106 4220 ± 380 1230 ± 250 10 ± 5 0 .33 ± 0.05 1,6,11"
+       }
+      ]
+     }
+    },
+    "Fornax": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 147,
+      "err": 12,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 20.84,
+      "err": 0.18,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 149,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -13.4,
+      "err": 0.3,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 7.4,
+      "err": 0.3,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 20000000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 710,
+      "err": 77,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 16.6,
+      "err": 1.2,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.3,
+      "err": 0.01
+     },
+     "sigma_los_star": {
+      "value": 11.7,
+      "err": 0.9,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 56000000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (21) Walker et al. 2009b, (22) Walker et al. 2008; structure: (9) Irwin & Hatzidimitriou 1995; distance (29) Pietrzynski et al. 2009",
+     "evidence": [
+      {
+       "pdf_page": 94,
+       "snippet": "Fornax 237.1 -65.7 0.021 20.84 0.18 147 12 55.3 0.1 [ 149, -33]"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "F ornax 7.4 0.3 16.60 1.20 23.3 0.3 41 1 0.30 0.01 -13.4 0.3 710 7 7 24.0 (9)"
+      },
+      {
+       "pdf_page": 106,
+       "snippet": "F ornax 20 11.7 0.9 N/A N/A 0.17f N/A N/A N/A N/A 56 (21) (22) (25) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 138,
+       "err": 8,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 18.5,
+       "err": 0.3,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 1.1,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 7.27,
+       "err": 0.42,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": 0.55,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 944,
+       "err": 53,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 5890,
+       "err": 1160,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Fornax 138 ± 8 18 .5 ± 0.3 1.1 7 .27 ± 0.42 0.55 − 1.29 0.46 1,3,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Fornax 944 ± 53 2854 ± 161 10350 ± 720 5890 ± 1160 22 ± 10 0 .31 ± 0.03 1,6,11"
+       }
+      ]
+     }
+    },
+    "Leo II": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 233,
+      "err": 14,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 21.84,
+      "err": 0.13,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 236,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -9.8,
+      "err": 0.3,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 12.0,
+      "err": 0.3,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 740000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 176,
+      "err": 42,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 2.6,
+      "err": 0.6,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.13,
+      "err": 0.05
+     },
+     "sigma_los_star": {
+      "value": 6.6,
+      "err": 0.7,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 4600000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (18) Walker et al. 2007; structure: (9) Irwin & Hatzidimitriou 1995; distance (37) Bellazzini et al. 2005",
+     "evidence": [
+      {
+       "pdf_page": 95,
+       "snippet": "Leo II 220.2 +67.2 0.017 21.84 0.13 233 14 78.0 0.1 [ 236, 24]"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "Leo II 12.0 0.3 2.60 0.60 24.2 0.3 12 10 0.13 0.05 -9.8 0.3 176 42 24.8 (9)"
+      },
+      {
+       "pdf_page": 106,
+       "snippet": "Leo II 0.74 6.6 0.7 — — N/A N/A N/A N/A N/A 4.6 (18) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 205,
+       "err": 12,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 11.4,
+       "err": 0.8,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 1.4,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 6.03,
+       "err": 0.42,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": 0.16,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 233,
+       "err": 17,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 3400,
+       "err": 610,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Leo II 205 ± 12 11 .4 ± 0.8 1.4 6 .03 ± 0.42 0.16 − 1.74 0.23 1,6,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Leo II 233 ± 17 556 ± 28 6170 ± 540 3400 ± 610 78 ± 33 0 .13 ± 0.05 1,6,11"
+       }
+      ]
+     }
+    },
+    "Leo I": {
+     "source": "McConnachie2012 Tables 2, 3, 4",
+     "D_helio": {
+      "value": 254,
+      "err": 15,
+      "unit": "kpc"
+     },
+     "distance_modulus": {
+      "value": 22.02,
+      "err": 0.13,
+      "unit": "mag"
+     },
+     "D_galactocentric": {
+      "value": 258,
+      "unit": "kpc",
+      "note": "Table 2 col. 8 [D_MW]; computed assuming R0 = 8.5 kpc (no error given)"
+     },
+     "M_V": {
+      "value": -12.0,
+      "err": 0.3,
+      "unit": "mag"
+     },
+     "V_apparent": {
+      "value": 10.0,
+      "err": 0.3,
+      "unit": "mag"
+     },
+     "L_V": {
+      "value": 5500000.0,
+      "unit": "Lsun",
+      "note": "Table 4 'M*' column = mass for stellar M/L = 1, i.e. L_V in solar units"
+     },
+     "r_half_projected": {
+      "value": 251,
+      "err": 27,
+      "unit": "pc",
+      "note": "semi-major-axis half-light radius (NOT circularised); circularised would be r_h*sqrt(1-eps)"
+     },
+     "r_half_arcmin": {
+      "value": 3.4,
+      "err": 0.3,
+      "unit": "arcmin"
+     },
+     "ellipticity": {
+      "value": 0.21,
+      "err": 0.03
+     },
+     "sigma_los_star": {
+      "value": 9.2,
+      "err": 1.4,
+      "unit": "km/s",
+      "note": "single global stellar l.o.s. dispersion"
+     },
+     "M_dyn_within_rh": {
+      "value": 12000000.0,
+      "unit": "Msun"
+     },
+     "references_in_McConnachie": "sigma: (28) Mateo et al. 2008; structure: (9) Irwin & Hatzidimitriou 1995; distance (38) Bellazzini et al. 2004b",
+     "evidence": [
+      {
+       "pdf_page": 95,
+       "snippet": "Leo I 226.0 +49.1 0.036 22.02 0.13 254 15 282.5 0.1 [ 258, 174]"
+      },
+      {
+       "pdf_page": 101,
+       "snippet": "Leo I 10.0 0.3 3.40 0.30 22.6 0.3 79 3 0.21 0.03 -12.0 0.3 251 27 2 3.3 (9)"
+      },
+      {
+       "pdf_page": 106,
+       "snippet": "Leo I 5.5 9.2 1.4 N/A N/A N/A N/A N/A N/A N/A 12 (28) (5)"
+      }
+     ],
+     "McGaughWolf2010": {
+      "D_host": {
+       "value": 250,
+       "err": 30,
+       "unit": "kpc"
+      },
+      "V_c_equals_sqrt3_sigma_los": {
+       "value": 15.5,
+       "err": 0.7,
+       "unit": "km/s",
+       "note": "sigma_los from Wolf et al. 2010"
+      },
+      "Upsilon_V_star": {
+       "value": 0.9,
+       "unit": "Msun/Lsun"
+      },
+      "log10_Mb": {
+       "value": 6.65,
+       "err": 0.42,
+       "unit": "log Msun"
+      },
+      "log10_Fb_BTFR_residual": {
+       "value": 0.24,
+       "note": "Fb = Mb/(45 Vc^4) (BTFR residual). Paper: 'the inverse of the deviations Fb^-1 are proxy estimates for the mass-to-light ratios in MOND' relative to mean Upsilon_V* = 1.3"
+      },
+      "r_half_3D_deprojected": {
+       "value": 388,
+       "err": 64,
+       "unit": "pc"
+      },
+      "tidal_radius_MOND_rtM": {
+       "value": 6660,
+       "err": 1710,
+       "unit": "pc"
+      },
+      "evidence": [
+       {
+        "pdf_page": 2,
+        "snippet": "Leo I 250 ± 30 15 .5 ± 0.7 0.9 6 .65 ± 0.42 0.24 − 1.31 0.25 1,5,10,12"
+       },
+       {
+        "pdf_page": 3,
+        "snippet": "Leo I 388 ± 64 850 ± 63 10230 ± 1680 6660 ± 1710 100 ± 62 0 .21 ± 0.03 1,6,11"
+       }
+      ]
+     }
+    }
+   },
+   "McConnachie_column_definitions_evidence": [
+    {
+     "pdf_page": 23,
+     "snippet": "Radius (arcmins) containing half the light of the galaxy, mea sured on the semi-major axis."
+    },
+    {
+     "pdf_page": 29,
+     "snippet": "Column 2: Mass of the galaxy in stellar masses, assuming a stellar mass -to-light ratio of 1."
+    },
+    {
+     "pdf_page": 15,
+     "snippet": "Galactic rotation velocity at the Sun of 220 km s −1 at a radius of 8.5kpc from the Galactic center;"
+    }
+   ],
+   "extraction_notes": "In the pypdf text some numbers are split by spurious spaces: 'Ursa Minor ... 18 1 27' = r_h 181+-27 pc; 'Sculptor ... 28 3 45' = 283+-45 pc; 'Fornax ... 710 7 7' = 710+-77 pc; 'Leo I ... 2 3.3' = mu_eff 23.3. Verified against the pdfminer column extraction of Table 3 (r_h[pc] column: 221 181 283 695 ... 250 ... 710 ... 176 251; errors 19 27 45 44 ... 39 ... 77 ... 42 27).",
+   "McGaughWolf2010_MOND_predictions": null,
+   "McGaughWolf2010_note": "McGaugh & Wolf 2010 do NOT tabulate MOND velocity-dispersion predictions. They tabulate (Table 1) Galactocentric D, Vc = sqrt(3) sigma_los (sigma from Wolf et al. 2010), assumed Upsilon_V*, log Mb, and the BTFR residual log Fb = log[Mb/(45 Vc^4)] (A = 45+-10 Msun km^-4 s^4), and (Table 2) deprojected r_1/2 and MOND tidal radii r_t,M. In their text Fb^-1 is used as a proxy for the MOND mass-to-light ratio (EFE-dominated regime); Draco and UMi need ~10 Msun/Lsun.",
+   "McGaughWolf2010_evidence": [
+    {
+     "pdf_page": 2,
+     "snippet": "we assume Vc = √ 3σlos. (1)"
+    },
+    {
+     "pdf_page": 2,
+     "snippet": "Mb = AV 4 c (2) with A = 45 ± 10 M ⊙ km−4 s4 (McGaugh et al. 2010)."
+    }
+   ],
+   "Crater_II": {
+    "sigma_los": {
+     "value": 2.7,
+     "err_plus": 0.3,
+     "err_minus": 0.3,
+     "unit": "km/s",
+     "note": "constant-dispersion model; 95% interval +0.7/-0.5; ~62 members; mean v_los 87.5+-0.4 km/s",
+     "source": "Caldwell2017"
+    },
+    "D_helio": {
+     "value": 117.5,
+     "err": 1.1,
+     "unit": "kpc",
+     "note": "m-M = 20.35 +- 0.02",
+     "source": "Torrealba2016"
+    },
+    "D_galactocentric": {
+     "value": 120,
+     "unit": "kpc",
+     "note": "'about 120 kpc from the Galactic center' (approximate)",
+     "source": "McGaugh2016"
+    },
+    "M_V": {
+     "value": -8.2,
+     "err": 0.1,
+     "unit": "mag",
+     "source": "Torrealba2016"
+    },
+    "L_V": {
+     "value": 150000.0,
+     "err": 10000.0,
+     "unit": "Lsun",
+     "note": "McGaugh 2016 uses L_V = 1.6e5 Lsun from the same M_V",
+     "source": "Caldwell2017"
+    },
+    "r_half_projected": {
+     "value": 1066,
+     "err": 84,
+     "unit": "pc",
+     "note": "31.2+-2.5 arcmin; elliptical Plummer fit with 1-b/a < 0.1 (95%) so effectively circular; Caldwell et al. fit R_h = 29.24(+2.4/-2.19) arcmin",
+     "source": "Torrealba2016"
+    },
+    "M_dyn_within_1kpc": {
+     "value": 4400000.0,
+     "err_plus": 1200000.0,
+     "err_minus": 900000.0,
+     "unit": "Msun",
+     "note": "M/L_V = 53+15-11 within ~1 kpc",
+     "source": "Caldwell2017"
+    },
+    "MOND_predictions_McGaugh2016": {
+     "sigma_iso": {
+      "value": 4,
+      "unit": "km/s",
+      "note": "'sigma_iso ~ 4 km/s' for M* ~ 3.3e5 Msun (Upsilon* = 2+2-1), isolated deep-MOND (4/81 a0 G M)^(1/4)"
+     },
+     "sigma_EFE": {
+      "value": 2.1,
+      "err_plus": 0.9,
+      "err_minus": 0.6,
+      "unit": "km/s",
+      "note": "EFE estimator (a0 G M*/(3 g_ex r_1/2))^(1/2); range = factor 2 in M/L; observational errors neglected"
+     },
+     "g_in": "~34 km^2 s^-2 kpc^-1 = 0.009 a0",
+     "g_ex": "~282 km^2 s^-2 kpc^-1 = 0.076 a0 (V_MW = 184 km/s at D_GC = 120 kpc)",
+     "a0": "1.2e-10 m s^-2 = 3700 km^2 s^-2 kpc^-1",
+     "r_1/2": "4 r_h/3 with r_h = 1066 pc"
+    },
+    "evidence": [
+     {
+      "pdf_page": 1,
+      "snippet": "we resolve line-of-sight velocity dispersion σvlos =2.7+0.3 −0.3 km s−1 about mean velocity of ⟨vlos⟩=87.5+0.4 −0.4 km s−1 (solar rest frame)."
+     },
+     {
+      "pdf_page": 7,
+      "snippet": "dwarf galaxies of Crater 2’s luminosity (LV = [1.5±0.1]× 105LV,⊙)."
+     },
+     {
+      "pdf_page": 3,
+      "snippet": "D⊙ 117. 5 ± 1. 1 kpc rh 31. 2 ± 2. 5 arcmin rh 1066 ± 84 pc MV −8. 2 ± 0. 1 mag 1−b/a <0.1 (95%)"
+     },
+     {
+      "pdf_page": 1,
+      "snippet": "This leads to the prediction of a ve ry low velocity dispersion: σef e = 2.1+0.9 −0.6 km s−1."
+     },
+     {
+      "pdf_page": 2,
+      "snippet": "For Crater II, M∗ ≈ 3.3 × 105 M⊙, so σiso ≈ 4 km s−1."
+     },
+     {
+      "pdf_page": 2,
+      "snippet": "The latter corresponds to a luminosity LV = 1 .6 × 105 L⊙."
+     },
+     {
+      "pdf_page": 3,
+      "snippet": "where DGC = 120 kpc is the Galactocentric distance and the circular velocity of the Milky Way at this distance is taken to be VM W = 184 km s −1 (McGaugh 2016 )."
+     }
+    ]
+   },
+   "Antlia_2": {
+    "sigma_los": {
+     "value": 5.71,
+     "err": 1.08,
+     "unit": "km/s",
+     "note": "Table 1 (abstract rounds to 5.7+-1.1); 159 members",
+     "source": "Torrealba2019"
+    },
+    "D_helio": {
+     "value": 132,
+     "err": 6,
+     "unit": "kpc",
+     "note": "(m-M) = 20.6 +- 0.11",
+     "source": "Torrealba2019"
+    },
+    "D_galactocentric": null,
+    "D_galactocentric_note": "not given in the paper",
+    "M_V": {
+     "value": -9.03,
+     "err": 0.15,
+     "unit": "mag",
+     "source": "Torrealba2019"
+    },
+    "L_V": null,
+    "L_V_note": "not stated; paper gives M* = 8.8+-1.2e5 Msun computed as 2.5 x 10^(0.4(4.83 - M_V)), i.e. an implied L_V = 10^(0.4(4.83+9.03)) ~ 3.5e5 Lsun (derived by us, not quoted)",
+    "M_star": {
+     "value": 880000.0,
+     "err": 120000.0,
+     "unit": "Msun",
+     "source": "Torrealba2019"
+    },
+    "r_half_projected": {
+     "value": 2920,
+     "err": 311,
+     "unit": "pc",
+     "note": "1.27+-0.12 deg (text: 1.26+-0.12 deg); elliptical Plummer fit with 1-b/a = 0.38+-0.08, PA 156+-6 deg; not stated whether major-axis or circularised",
+     "source": "Torrealba2019"
+    },
+    "M_within_rh": {
+     "value": 55000000.0,
+     "err": 22000000.0,
+     "unit": "Msun"
+    },
+    "M_over_L_V": {
+     "value": 315,
+     "err": 130,
+     "unit": "Msun/Lsun"
+    },
+    "v_helio": {
+     "value": 290.7,
+     "err": 0.5,
+     "unit": "km/s",
+     "note": "abstract says 290.9+-0.5"
+    },
+    "v_gsr": {
+     "value": 64.3,
+     "err": 0.5,
+     "unit": "km/s"
+    },
+    "evidence": [
+     {
+      "pdf_page": 2,
+      "snippet": "(m−M) 20 .6± 0.11 mag D⊙ 132± 6 kpc rh 1.27± 0.12 deg rh 2920± 311 pc 1−b/a 0 .38± 0.08 PA 156 ± 6 deg MV −9.03± 0.15 mag"
+     },
+     {
+      "pdf_page": 2,
+      "snippet": "rvhelio 290.7± 0.5 km/s rvgsr 64.3± 0.5† km/s σrv 5.71± 1.08 km/s"
+     },
+     {
+      "pdf_page": 2,
+      "snippet": "M⋆ 8.8± 1.2 10 5M⊙ M/LV 315± 130 M⊙/L⊙"
+     },
+     {
+      "pdf_page": 1,
+      "snippet": "its velocity dispersion, 5 .7 ± 1.1 km/s, and mean metallicity, [Fe/H]= −1.4."
+     },
+     {
+      "pdf_page": 7,
+      "snippet": "mass of M⋆ = 2.5× 100.4(4.83−Mv) = (8.8± 1.2)× 105M⊙."
+     }
+    ]
+   }
+  },
+  "7_strong_field_and_precision_tests": {
+   "S2_Schwarzschild_precession_GRAVITY2020": {
+    "paper": "GRAVITY2020",
+    "location": "Abstract (p1); R0 estimate (p12); Table E.1 (p13)",
+    "f_SP": {
+     "value": 1.1,
+     "err": 0.19,
+     "note": "fit error; MCMC gives 1.11+-0.21; f_SP=0 Newton, 1 GR; delta_phi ~ 12 arcmin per orbit"
+    },
+    "M_bh": {
+     "value": 4261000.0,
+     "err": 12000.0,
+     "unit": "Msun"
+    },
+    "R0": {
+     "value": 8246.7,
+     "err": 9.3,
+     "unit": "pc"
+    },
+    "R0_best_estimate": {
+     "value": 8249,
+     "unit": "pc",
+     "note": "with f_SP = f_RS = 1 fixed",
+     "err_stat": 9,
+     "err_sys": 45
+    },
+    "PPN_from_S2": "beta = 1.05+-0.11, gamma = 1.18+-0.34",
+    "evidence": [
+     {
+      "pdf_page": 1,
+      "snippet": "From posterior fitting and MCMC Bayesian analysis with di ﬀerent weighting schemes and bootstrapping we find fSP = 1.10± 0.19."
+     },
+     {
+      "pdf_page": 13,
+      "snippet": "M• 4.261 0.012 0.012 10 6 M⊙ R0 8246.7 9.3 9.3 pc"
+     },
+     {
+      "pdf_page": 12,
+      "snippet": "Our current best estimate is therefore R0 = 8249± 9|stat.± 45|sys. pc."
+     }
+    ]
+   },
+   "SgrA_mass_and_R0_most_recent_GRAVITY2024": {
+    "paper": "GRAVITY2024",
+    "location": "Table B.1 (p10); Sect. 3.2 (p3)",
+    "M_bh": {
+     "value": 4299600.0,
+     "err": 11800.0,
+     "unit": "Msun"
+    },
+    "R0": {
+     "value": 8275.9,
+     "err": 8.6,
+     "unit": "pc"
+    },
+    "f_SP": {
+     "value": 1.135,
+     "err": 0.11,
+     "note": "four-star fit S2+S29+S38+S55 (MCMC 1.133+-0.113); ~10 sigma detection"
+    },
+    "extended_mass_limit": "enclosed extended mass within S2 orbit <~1200 Msun (1 sigma)",
+    "definition_caveats": "Values are best-fit parameters of the four-star fit with f_SP free (statistical errors only). For systematics see GRAVITY 2021: R0 = 8275 +- 9 (stat) +- 33 (sys) pc; GRAVITY 2022 quotes systematics ~30 pc (R0) and ~40,000 Msun (M).",
+    "evidence": [
+     {
+      "pdf_page": 10,
+      "snippet": "M• [106M⊙] 4.2996 0.0118 - - R0 [pc] 8275.9 8.6 - -"
+     },
+     {
+      "pdf_page": 10,
+      "snippet": "fS P 1.1350 0.1104 - -"
+     },
+     {
+      "pdf_page": 3,
+      "snippet": "With this comprehensive dataset, we obtain fS P = 1.135± 0.110 (MCMC fS P = 1.133± 0.113)."
+     }
+    ]
+   },
+   "SgrA_GRAVITY2022": {
+    "paper": "GRAVITY2022",
+    "location": "Sect. 4-5 (p5), Table B.1 (p10)",
+    "M_bh": {
+     "value": 4297000.0,
+     "err": 12000.0,
+     "unit": "Msun"
+    },
+    "R0": {
+     "value": 8277,
+     "err": 9,
+     "unit": "pc"
+    },
+    "f_SP_4star": {
+     "value": 0.997,
+     "err": 0.144
+    },
+    "f_SP_S2_only": {
+     "value": 0.85,
+     "err": 0.16
+    },
+    "systematics": "~30 pc for R0 and ~40,000 Msun for M (per text, citing Gravity Coll. 2021)",
+    "evidence": [
+     {
+      "pdf_page": 5,
+      "snippet": "The best fit further yields R0 = (8277± 9) pc and M• = (4.297±0.012)×106M⊙ (statistical errors, see Gravity"
+     },
+     {
+      "pdf_page": 6,
+      "snippet": "Coll. 2021 for a discussion of the systematics that are≈ 30 pc for R0 and≈ 40, 000M⊙ for M•)."
+     },
+     {
+      "pdf_page": 4,
+      "snippet": "find fSP = 0.997± 0.144, with χ2 r = 2.17"
+     }
+    ]
+   },
+   "SgrA_GRAVITY2021": {
+    "paper": "GRAVITY2021",
+    "location": "eq. (38) (p10); Table 2 (p12)",
+    "R0": {
+     "value": 8275,
+     "unit": "pc",
+     "err_stat": 9,
+     "err_sys": 33
+    },
+    "M_bh": {
+     "value": 4297000.0,
+     "err": 13000.0,
+     "unit": "Msun",
+     "note": "statistical"
+    },
+    "evidence": [
+     {
+      "pdf_page": 10,
+      "snippet": "R0“ 8275˘ 9|stat.˘ 33|sys. pc. (38)"
+     },
+     {
+      "pdf_page": 12,
+      "snippet": "4.297˘ 0.013 R0 rpcs 8274.9˘ 9.3"
+     }
+    ],
+    "snippet_reading": "'˘' is the PDF rendering of '±' and 'rpcs' of '[pc]'."
+   },
+   "Hulse_Taylor_PSR_B1913p16": {
+    "paper": "WeisbergHuang2016",
+    "location": "Abstract (p1); Sect. 4.1 (p5); eqs. (22)-(23) (p7-8)",
+    "Pbdot_intr_over_Pbdot_GR": {
+     "value": 0.9983,
+     "err": 0.0016
+    },
+    "Pbdot_obs": {
+     "value": -2.423e-12,
+     "err": 1e-15,
+     "unit": "s/s"
+    },
+    "Pbdot_gal": {
+     "value": -2.5e-14,
+     "err": 4e-15,
+     "unit": "s/s",
+     "note": "uses R0 = 8.34+-0.16 kpc, Theta0 = 240+-8 km/s (Reid et al. 2014)"
+    },
+    "Pbdot_intr": {
+     "value": -2.398e-12,
+     "err": 4e-15,
+     "unit": "s/s"
+    },
+    "Pbdot_GR": {
+     "value": -2.40263e-12,
+     "err": 5e-17,
+     "unit": "s/s"
+    },
+    "evidence": [
+     {
+      "pdf_page": 1,
+      "snippet": "prediction, is 0.9983±0.0016; thereby confirming the existence and strength of gravitational radiation as predicted by general relativity."
+     },
+     {
+      "pdf_page": 5,
+      "snippet": "Using galactic parameters of R0 = 8.34± 0.16 kpc and Θ0 = 240 ± 8 km/s from Reid et al. (2014)"
+     },
+     {
+      "pdf_page": 8,
+      "snippet": "(−2.40263± 0.00005)× 10−12 = 0.9983±0.0016."
+     }
+    ],
+    "definition_caveats": "Ratio uses the intrinsic Pbdot = observed minus Galactic (differential acceleration + Shklovskii) correction; the correction depends on the adopted Milky Way rotation parameters and pulsar distance and dominates the error."
+   },
+   "Double_Pulsar_J0737m3039": {
+    "paper": "Kramer2021",
+    "location": "Sect. VI A, eqs. (39)-(48) (p22-23)",
+    "Pbdot_GW_over_Pbdot_GW_GR": {
+     "value": 0.999963,
+     "err": 6.3e-05,
+     "note": "written 0.999963(63); GR agreement at 1.3e-4 (95% confidence); 0.999958(64) with extreme EoS prior"
+    },
+    "Pbdot_obs": "-1.247920(78)e-12",
+    "Pbdot_ext": "-1.68(+11/-10)e-16 (Shklovskii +1.72(15)e-16, Galactic -3.40(+25/-24)e-16 using McMillan 2017 potential)",
+    "Pbdot_int": "-1.247752(79)e-12",
+    "Pbdot_GW": "-1.247782(79)e-12",
+    "Pbdot_GW_GR": "-1.247827(+6/-7)e-12 (2.5PN + 3.5PN)",
+    "evidence": [
+     {
+      "pdf_page": 23,
+      "snippet": "b / ˙P GW,GR b = 0.999963(63). (48)"
+     },
+     {
+      "pdf_page": 23,
+      "snippet": "Pulsar at a level of 1.3× 10−4 with 95% confidence."
+     },
+     {
+      "pdf_page": 23,
+      "snippet": "If one takes the potential of [117] to calculate the Galactic gravita- tional accelerations of the SSB and the Double Pulsar"
+     }
+    ]
+   },
+   "Cassini_gamma": {
+    "paper": "Bertotti2003",
+    "location": "Nature abstract (nature.com article page)",
+    "gamma_minus_1": {
+     "value": 2.1e-05,
+     "err": 2.3e-05,
+     "note": "gamma = 1 + (2.1 +- 2.3) x 10^-5, from the Sun-conjunction frequency shift of Cassini radio links (June-July 2002)"
+    },
+    "evidence": [
+     {
+      "source": "https://www.nature.com/articles/nature01997 (abstract)",
+      "snippet": "Our result, γ = 1 + (2.1 ± 2.3) × 10-5, agrees with the predictions of standard general relativity"
+     }
+    ]
+   },
+   "VLBI_light_deflection_gamma": [
+    {
+     "paper": "Fomalont2009",
+     "location": "Abstract (p1); average of four solutions (p11)",
+     "gamma": {
+      "value": 0.9998,
+      "err": 0.0003,
+      "note": "68% confidence; VLBA 43/23/15 GHz, Oct 2005, 3C279 and 3 calibrators"
+     },
+     "evidence": [
+      {
+       "pdf_page": 1,
+       "snippet": "deflection parameter γ = 0 . 9998 ± 0. 0003 (68% confidence level), in agreement with General Relativity."
+      }
+     ]
+    },
+    {
+     "paper": "LambertLePoncinLafitte2009",
+     "location": "Table 1 (p3); abstract",
+     "gamma": {
+      "value": 0.99984,
+      "err": 0.00015,
+      "note": "geodetic VLBI 1979-2008 global solution (3,937 sessions); authors conclude gamma cannot be estimated better than 2e-4"
+     },
+     "other_solutions": {
+      "1984-2008": "0.99986 +- 0.00015",
+      "1984-2002": "0.99993 +- 0.00017",
+      "1979-1999": "0.99983 +- 0.00020"
+     },
+     "evidence": [
+      {
+       "pdf_page": 3,
+       "snippet": "1979–2008 3,937 4,386,112 988 25.0 0 . 99984 ± 0. 00015 0.86"
+      },
+      {
+       "pdf_page": 1,
+       "snippet": "We arrive at the conclusion that the relativistic parameter γcannot be estimated at better than 2 × 10−4."
+      }
+     ]
+    }
+   ],
+   "VLBI_not_verified": "Lambert & Le Poncin-Lafitte 2011 (A&A 529, A70, 'Improved determination of gamma by VLBI') is not on arXiv and the A&A site returned a captcha (403); its value was NOT verified and is not recorded."
+  }
+ },
+ "not_verified_or_missing": [
+  "Ou et al. 2024 and Zhou et al. 2023: published journal PDFs could not be downloaded (Cloudflare/captcha); values are from arXiv v2 and v1 respectively.",
+  "Wang, Hammer & Yang 2023 Gaia DR3 rotation-curve table: no such table found; the relevant Gaia DR3 RC paper (Wang H.-F. et al. 2023, ApJ 942, 12) has no Vc table (figures only).",
+  "McKee et al. 2015: no independent Sigma_dyn measurement (they adopt literature totals).",
+  "McGaugh & Wolf 2010: no tabulated MOND velocity-dispersion predictions (only BTFR residuals and MOND tidal radii).",
+  "Antlia 2: Galactocentric distance and L_V not quoted in Torrealba et al. 2019 (only D_helio and M_V; L_V derivable).",
+  "Roche et al. 2024: escape-velocity profile is only in figures; the solar-bin SEPL value is from the appendix corner plot label.",
+  "Lambert & Le Poncin-Lafitte 2011 (A&A 529, A70) not accessible; 2009 paper used instead.",
+  "Torrealba et al. 2019 journal volume/page (MNRAS 488, 2743) not independently verified (taken from request; DOI from arXiv).",
+  "Necib & Lin 2022: the arXiv version (v1, DR2) differs from the published ApJ version (eDR3); published numbers used."
+ ]
+}

@@ -19,8 +19,21 @@
 >   strong-lensing mass and a Legacy Survey star count agree (§§14, 16). Subcluster: lensing mass
 >   about half the measured value; round 5's "bigger subcluster" is not borne out by the
 >   galaxies and starlight around it (round 6, §16). **Open.**
-> * **Solar System:** no anomalous pull.
+> * **Solar System:** no anomalous pull on the planets.
 > * **The formula check shows it is not MOND.**
+> * **Round 7 (§17 of the results README): the full check against the Milky Way and the
+>   standard tests.**
+>   * Agrees:
+>     * the Milky Way beyond 15 kpc (four Gaia curves), its mass inside 100–200 kpc, its escape
+>       speed and the vertical pull (with the counted local matter);
+>     * S2, binary pulsars, planets and light bending (exactly GR);
+>     * the Einstein Cross and microlensing (stars only);
+>     * KiDS lensing of spirals and ellipticals, better than MOND.
+>   * Shortfalls, each with a candidate amendment not yet adopted:
+>     * the Sun's circular speed, 8% slow → g_d × 1.5–2, which SPARC allows;
+>     * Cassini's Q2, 10× too large (as for MOND) → gradual release over ≳ 0.15 pc of the
+>       companion's travel;
+>     * six faint Milky Way dwarfs, 1.5–5× too slow → a weaker hold by the Galaxy's field.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -54,6 +67,33 @@
    now. After a collision it is the settled pre-collision clusters, riding with the galaxies,
    except inside a fresh sphere of radius u·t around matter that changed its motion. g_N and
    the attachment factor use the matter now.
+
+### Round 7: constraints from the Milky Way and the Solar System (candidate amendments)
+
+Measured constraints found in round 7. None is adopted yet: each must be refit with SPARC,
+X-COP and the Bullet, and pass the formula guard.
+1. **Gradual release (Cassini).**
+   * As the law stands, the Galaxy's field reshapes the Sun's companion 3,000–20,000 AU out
+     and gives Q2 = 2.4–3.1 × 10⁻²⁶ s⁻² inside the Solar System. Cassini measured
+     (3 ± 3) × 10⁻²⁷ (Hees et al. 2014).
+   * If escape from attachment takes time, so the companion is released as F·(1 − e^(−s/L))
+     over its path length s, then L ≥ 0.15 pc (≥ 720 yr at u) gives Q2 ≤ 4.6 × 10⁻²⁷.
+   * Galaxies, dwarfs and clusters, all ≫ L, are unchanged. Wide binaries become nearly
+     Newtonian (1–5% instead of 19%).
+   * The upper limit L ≲ 10 pc comes from the smallest dwarf galaxies.
+2. **The release scale g_d.**
+   * The Milky Way at the Sun (1.26 × 10⁻¹⁰ m/s²) and the median SPARC point at the same pull
+     both sit 0.03–0.07 dex above the law.
+   * g_d × 1.5 lifts the Sun's circular speed from 211 to 218 km/s and leaves the SPARC typical
+     miss at 15.80 km/s (now 15.85).
+3. **The external field (dwarf galaxies).**
+   * With the Galaxy's pull entering each dwarf's law in full, six faint dwarfs come out
+     1.5–5× too slow (MOND, computed identically, is 10–20% higher).
+   * With no hold, Crater II and Antlia 2 come close (3.4 and 4.2 against 2.7 ± 0.3 and
+     5.7 ± 1.1).
+   * A candidate mechanism: companions moving past each other at speeds comparable to u
+     (100–300 km/s) lose step, so the Galaxy's field adds incoherently. This would also lower
+     Q2.
 
 ### What follows
 

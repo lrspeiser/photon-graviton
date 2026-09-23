@@ -5,7 +5,7 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 
 ---
 
-## Status — 23 September 2026 (hot-companion rows updated after round 6)
+## Status — 23 September 2026 (hot-companion rows updated after round 7)
 
 | Task | Status | Result |
 |---|---|---|
@@ -18,6 +18,7 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 | **Slip** Re-derived against the new law | **Not needed** | Lensing and resolved kinematics agree to +0.040 ± 0.026 dex. The earlier η ≠ 1 was an artefact of measuring against the MOND law. Cluster X-ray masses sit 22% below our prediction (b = 0.22), in the direction of the known hydrostatic bias. |
 | **ROUND 3** Collision rule + flow direction | **Done; law locked in** | Gas collides, so its companion stays in step (Dicke narrowing): only stars and galaxies carry heat. The companion pulls along its net energy flow. Refit: u = 197 km/s; galaxies 15.85 km/s (MOND 16.13); clusters 0.227 (held-out 0.244; law-only stellar speeds 0.329). KiDS early/late from early-type stars: 0.17–0.27 dex (obs 0.17/0.27). SLACS: stars 1.05–1.35 × Salpeter; no slip. Momentum is carried by the companion; a matter-only action would push cluster stars outward by 30–70% of gravity, so it is ruled out. Scripts: `code/dicke_toy.py`, `code/run_v3.py`, `code/kids_v3.py`. |
 | **T2.1** Bullet Cluster (round 6) | **Main cluster settled; subcluster lensing mass open** | Legacy Survey DR10 star count (1,652 cluster galaxies by photometric redshift): light rises to 2.5–3 Mpc with 23–28% beyond 1.5 Mpc; total 85–103% of the round-5 model inferred from the galaxy speed. Subcluster: the 1:3 solution's lost galaxies are not in Barrena et al.'s 71 non-core velocities (about 3σ for a compact population, 1.4σ for a wide fast one) or in the starlight within 500 kpc (0.46 of the main's central light; core alone 0.32; 1:3 would give 1.55). In our law its lensing needs its hot stars, so the 2× lensing gap is open. Next: the heat gained in the crossing, carried by the memory. Scripts: `code/bullet_light_v6.py`, `code/bullet_members_v6.py`. |
+| **R7** Full check against the Milky Way and the standard tests (round 7) | **Done: most pass; three shortfalls with candidate fixes** | **T1.1 Milky Way:** with McMillan (2017) matter our law gives 211 km/s at the Sun (Gaia: 229–234; MOND 223), and runs 3–13 km/s below the four Gaia curves from 15 to 27 kpc, where McMillan's dark-matter model is 12–23 km/s too high. The shortfall at the Sun matches our law's 0.03 dex offset in SPARC at the same pull; g_d × 1.5–2 gives 218–221 km/s, and SPARC's typical miss is then 15.80 km/s (now 15.85). Vertical pull at 1.1 kpc: 74 with McKee's counted local matter (68 ± 4, 74 ± 6; MOND 84). Mass inside 100 and 200 kpc: 6.6 and 12.5 × 10¹¹ (measured 6.1–7.3 and 11.0; MOND 8.0 and 15.6). Escape speed 507–522 km/s (measured 445–580). **T1.4 Dwarfs:** Fornax, Leo I, Leo II and Sculptor agree within 1–2σ; Draco, UMi, Sextans, Carina, Crater II and Antlia 2 are 1.5–5× too slow with the Galaxy's field (MOND, computed identically, is 10–20% higher). Without the external hold, Crater II gives 3.4 km/s (2.7 ± 0.3). **T2.3 Solar System:** planets, S2, pulsars and light bending are exactly GR. Cassini's Q2 = 2.4–3.1 × 10⁻²⁶ s⁻² (measured (3 ± 3) × 10⁻²⁷; MOND 2.8–3.1 × 10⁻²⁶); gradual release over L ≥ 0.15 pc brings it to ≤ 4.6 × 10⁻²⁷ and makes wide binaries 1–5%. **Lensing:** Einstein Cross and microlensing are stars only. KiDS-1000 absolute lensing RAR: spirals −0.005 dex, ellipticals +0.021 (MOND −0.073, +0.113). Scripts: `code/milky_way_v7.py`, `code/mw_dwarfs_v7.py`, `code/strong_field_v7.py`, `code/lensing_census_v7.py`, `code/transition_check_v7.py`. |
 | **WB** Wide binaries (round 6) | **Predicted** | Exact orientation-averaged solution of our field equation in the Galaxy's field at the Sun (1.58 × 10⁻¹⁰ m/s², half the companion released): 19% more pull than Newton beyond 7,000 AU; 1.14–1.26 for ±20% in the Galaxy's field. MOND (simple) 43%. Data disputed (Chae ~1.4; Banik et al. Newton). `code/wide_binaries_v6.py`. |
 | **T2.1** Bullet Cluster (round 5, subcluster size superseded by round 6) | **Pattern, speeds and lensing masses reproduced; subcluster size to test** | Main cluster: half of round 4's speed gap was the model cutting its galaxies at 1.5 Mpc; outer stars at star/gas 0.048 at R500 (X-COP 0.035–0.073) give 1,249 km/s and a lensing mass of 2.42–2.54 × 10¹⁴ inside 250 kpc (obs 2.5 ± 0.1, 2.8 ± 0.2). Clowe et al.'s κ are lower bounds, so round 4's "within 1σ" and its lighter stars are withdrawn. Subcluster: its strong-lensing mass (2.0–2.3) needs a pre-collision size of about 1:3 in visible matter (1.93 at 1:3; 1.04 at 1:8); its original galaxies then moved at about 800 km/s (Barrena et al.'s X-ray estimate: about 700). Predictions: about 7 × 10¹² M☉ of its stars now around it; star/gas about 0.05 in the main cluster's outskirts. `code/bullet_main_v5.py`. |
 | **T2.1** Bullet Cluster (round 4, strength readings superseded by round 5) | **Pattern and strengths reproduced; main-cluster galaxy speeds open** | The companion is slow (u = 197 km/s) and keeps its emitter's velocity, so each cluster is still wrapped in the companion of the settled cluster it was before the collision, riding with the galaxies. Only a sphere of radius u·t (30 kpc) has been rebuilt around the stopped gas. No new rule; nothing fitted to the lensing. Subcluster: 0.175 (0.13–0.25 for pre-collision ratios 1:6–1:10), against 0.20 ± 0.05. At star M/L 1–1.5 all four strengths agree within about 1σ. Barrena et al. 2002 independently argued the subcluster is the stripped core of a cluster with a pre-merger ratio of about 1:6. Collision stack with memory: β = 0.03 (−0.01 to 0.12), against −0.04 ± 0.07. Prediction: the subcluster's stars move at 460–610 km/s (7 galaxies now give 212 ± 60). **Open:** the main cluster's galaxies come out about 20% slower than the 1,249 ± 100 km/s measured (2.5σ). Scripts: `code/bullet_v4.py`, `code/collisions_v4.py`, `code/bullet_speeds_v4.py`, `code/stream_tidal_v4.py`. |
@@ -32,6 +33,15 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 
 Full working in [THEORY.md](THEORY.md); relativistic slots in
 [research_work/results/relativistic-slip/](research_work/results/relativistic-slip/README.md).
+
+**Next, after round 7 (hot-companion gravity):**
+
+1. **Refit with the three candidate amendments** (gradual release L ≥ 0.15 pc; g_d × 1.5–2; a weaker external hold for
+   bodies moving past each other at ≳ u), then re-run the coverage table (BLOG §7).
+2. **Model the recorded collisions:** Abell 520 (the disputed dark core vs our fresh-sphere memory rule), MACS J0025,
+   El Gordo, and the dense cluster Abell 1689.
+3. **The Galaxy's hot flow near the Sun**, which sets the direction of the extra pull there (radial vs vertical).
+4. Everything in the round-6 list below that is still open.
 
 **Next, after round 6 (hot-companion gravity):**
 
@@ -162,7 +172,7 @@ retract it when raw data replaced a smoothed model.
 
 ## Tier 1 — Observational work the claim rests on
 
-### T1.1 The Milky Way, properly — *partly done, and it works*
+### T1.1 The Milky Way, properly — *done for hot-companion gravity in round 7 (see the status table); the text below is the earlier MOND-law era*
 
 **Already run today, with nothing refitted:**
 
@@ -195,7 +205,7 @@ unit effort.**
 The only systems between the two regimes. With four candidate variables eliminated we
 now know what to measure against.
 
-### T1.4 Dwarf spheroidals — the test we might fail
+### T1.4 Dwarf spheroidals — the test we might fail (*run in round 7: 4 of 10 agree; the Galaxy's hold is the issue*)
 
 Deepest into the low-acceleration regime, and where MOND-like laws have known
 tensions. If the law breaks here we need to know before the referee does. Run it even
@@ -228,7 +238,7 @@ The simultaneous arrival of gravitational waves and light killed a large class o
 modified-gravity theories overnight. Whatever comes out of T0.2 must be checked
 against it. Do this *early* — it can invalidate a theory before it is written.
 
-### T2.3 Solar system and binary pulsars
+### T2.3 Solar system and binary pulsars (*run in round 7: GR exactly, except Cassini's Q2, which needs gradual release*)
 The law must return to Newton and to standard general relativity where those are
 tested to high precision. The interpolation function does this by construction; the
 τ mechanism needs checking.

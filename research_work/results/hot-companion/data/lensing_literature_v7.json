@@ -1,0 +1,6837 @@
+{
+ "meta": {
+  "compiled": "2026-09-23",
+  "compiler_note": "All numbers transcribed from arXiv PDFs (text extracted with pypdf) or from the authors' data files; each snippet was verified programmatically against the extracted text (ignoring whitespace/hyphens/ligatures) and its PDF page located automatically. PDF extraction flattens superscripts/subscripts: e.g. \"1011\" = 10^11, \"h−2 70\" = h70^-2, \"× 1013\" = x10^13, \"0 .89\" = 0.89. Values under derived_by_compiler were computed here, not published.",
+  "working_folder": "(local working folder; source PDFs not committed)",
+  "pdfs_and_texts": "All source PDFs and extracted .txt files are in working_folder.",
+  "items_skipped": [
+   "5: solar-system light bending (handled elsewhere)"
+  ],
+  "not_found_or_not_obtained": [
+   "Huchra et al. 1985 (Q2237 redshift discovery) not on arXiv; redshifts taken as quoted by van de Ven+2010 and Trott & Webster 2002",
+   "Mistele+2024 ApJL covariance matrices: \"available on reasonable request\" (not public)",
+   "Brouwer+2021 PPL-method g_obs values are not in the data release (only SIS-ready ESD profiles)",
+   "Abell 1689: no tabulated projected M2D(<R) beyond the Einstein radius in the downloaded papers (only figures); spherical M500/M200 and M(45\") recorded",
+   "\"Rusin et al.\" for Q2237: no Q2237-specific Rusin paper identified; van de Ven+2010 cites Rusin+2003 only generically"
+  ]
+ },
+ "item1_brouwer2021_KiDS1000_lensing_RAR": {
+  "summary": "Binned absolute lensing RAR obtained from the authors' public data release (ESD per g_bar bin) and converted to g_obs = 4 G DeltaSigma exactly as the README prescribes. 15 bins in g_bar = 1e-15..5e-12 m/s^2 (stars+cold gas point mass). KiDS isolated g_obs lies 0.02-0.19 dex above the M16/MOND fit with a0=1.2e-10 in 14 of 15 bins (compiler-derived). Paper: chi2_red vs MOND = 4.6 (15 bins), 4.0 (7 bins inside isolation limit), 1.5 / 14 for M* shifted +0.2 / -0.2 dex (7 bins); GAMA chi2_red = 0.8. Early types (red / n>2) have g_obs higher by 0.27 / 0.17 dex at fixed M*.",
+  "paper": {
+   "authors": "Brouwer, M. M.; Oman, K. A.; Valentijn, E. A.; Bilicki, M.; Heymans, C.; Hoekstra, H.; Napolitano, N. R.; Roy, N.; Tortora, C.; Wright, A. H.; et al.",
+   "year": 2021,
+   "journal": "A&A 650, A113",
+   "arxiv": "2106.11677",
+   "doi": "10.1051/0004-6361/202040108"
+  },
+  "data_release": {
+   "obtained": true,
+   "url_in_paper": "http://kids.strw.leidenuniv.nl/sciencedata.php",
+   "files_downloaded": [
+    "http://kids.strw.leidenuniv.nl/sci_data/brouwer2021_rar.tar",
+    "http://kids.strw.leidenuniv.nl/sci_data/brouwer2021_rar_README.txt"
+   ],
+   "saved_to": "research_work/results/hot-companion/data/brouwer2021_kids",
+   "converted_tables_saved_to": [
+    "(local working folder; source PDFs not committed)",
+    "(local working folder; source PDFs not committed)"
+   ],
+   "conversion_script": "(local working folder; source PDFs not committed)",
+   "file_naming": "Fig-X_Description_Type.txt; Type = Nobins | bin-N (Massbin/Colorbin/Sersicbin, ordered low->high observable) | covmatrix",
+   "esd_file_columns": [
+    "col1 Radius: g_bar bin value in m/s^2 for RAR files (Mpc for Fig-3 rotation-curve files). README calls it the mean; for RAR files the values equal the linear midpoints of the log-spaced bin edges 1e-15..5e-12 m/s^2 (verified to 2e-4)",
+    "col2 ESD_t [h70 Msun/pc^2]: tangential excess surface density (used for g_obs)",
+    "col3 ESD_x [h70 Msun/pc^2]: cross component (null test)",
+    "col4 error [h70 Msun/pc^2]: 1-sigma error on ESD_t (sqrt of analytical covariance diagonal; verified)",
+    "col5 bias (1+K) = 0.98531: multiplicative shear calibration; apply ESD/bias and error/bias",
+    "col6 variance(e_s), col7 wk^2, col8 w^2k^2: not needed"
+   ],
+   "covmatrix_columns": [
+    "col1,col2: lower edge of observable bin m,n (-999 if unbinned)",
+    "col3,col4: Radius/g_bar bin i,j",
+    "col5: covariance of ESD [(h70 Msun/pc^2)^2]",
+    "col6: correlation",
+    "col7: bias (1+K_i)(1+K_j); apply covariance/bias"
+   ],
+   "readme_snippets": [
+    {
+     "quantity": "g_obs conversion given in README",
+     "source": {
+      "paper_key": "brouwer_readme",
+      "arxiv": "2106.11677",
+      "location": "data file"
+     },
+     "snippet": "g_obs[m/s^2] = 4 * G[pc^3/(Msun*s^2)] * ESD_t/bias * [pc/m] ,"
+    },
+    {
+     "quantity": "calibration",
+     "source": {
+      "paper_key": "brouwer_readme",
+      "arxiv": "2106.11677",
+      "location": "data file"
+     },
+     "snippet": "ESD_t[corrected] = ESD_t / bias, error[corrected] = error / bias."
+    },
+    {
+     "quantity": "column 1 definition",
+     "source": {
+      "paper_key": "brouwer_readme",
+      "arxiv": "2106.11677",
+      "location": "data file"
+     },
+     "snippet": "Radius(Mpc or m/s^2): The mean projected distance from the lens center; in Megaparsec for the rotation curve data, or in meter-per-second-squared for the RAR data."
+    }
+   ],
+   "files_to_figures": {
+    "Fig-4-5-C1_RAR-KiDS-isolated": "all isolated KiDS-bright lenses (Figs 4,5,C.1)",
+    "Fig-4_RAR-KiDS-isolated_hotgas": "isolated KiDS-bright, g_bar including nominal hot-gas halo (Fig 4 orange crosses)",
+    "Fig-4-C1_RAR-GAMA-isolated": "isolated GAMA lenses (spectroscopic)",
+    "Fig-8_RAR-KiDS-isolated_Colorbin_1/2": "u-r < 2.5 (blue, late) / u-r > 2.5 (red, early), equal M* distributions",
+    "Fig-8_RAR-KiDS-isolated_Sersicbin_1/2": "n < 2 (disc) / n > 2 (bulge), equal M* distributions",
+    "Fig-9_RAR-KiDS-isolated_Massbin-1..4": "isolated, 4 stellar-mass bins",
+    "Fig-10_RAR-KiDS-isolated-dwarfs": "isolated dwarfs M*<1e10, 5 g_bar bins",
+    "Fig-A4_RAR-KiDS-all_Massbin-1..4": "ALL (non-isolated) KiDS-bright, 4 mass bins",
+    "Fig-3_Lensing-rotation-curves_Massbin-1..4": "ESD vs R for lensing rotation curves"
+   }
+  },
+  "rar_tables": {
+   "definitions": {
+    "gbar": "Newtonian acceleration of stars+cold gas treated as a point mass: g_bar = G*Mgal/r^2, Mgal = M*(1+f_cold); lens-source pairs are binned by their own g_bar (15 log bins 1e-15..5e-12 m/s^2). Listed x = bin midpoint, not lens-weighted mean g_bar.",
+    "gobs": "SIS conversion g_obs = 4 G DeltaSigma (B21 Eq.7), computed by compiler from the data release per README with G=4.52e-30 pc^3 Msun^-1 s^-2, pc=3.086e16 m (factor 5.5795e-13 m/s^2 per Msun/pc^2) after dividing by bias (1+K)=0.98531.",
+    "errors": "gobs_err_stat = 1-sigma statistical (shape noise, analytical covariance diagonal). NOT included: the 0.1 dex that B21 add to plotted RAR error bars for ESD->g_obs conversion (Sect. 4.4), the +-0.2 dex systematic stellar-mass band, and off-diagonal covariance (full covariance saved in brouwer2021_RAR_gobs_converted.json).",
+    "units": "m/s^2 with h70=1 (H0=70); axis labels in B21 read [h70 m/s^2].",
+    "reliability": "KiDS isolation reliable only for R < 0.3 h70^-1 Mpc, i.e. g_bar >~ 1e-13 m/s^2 (7.56e-14 for mean Mgal); lower-g_bar bins may be boosted (~30%) by missed satellites. GAMA (spec-z) considered reliable there."
+   },
+   "KiDS_isolated_all": [
+    {
+     "gbar_bin_value": 1.3822e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 1.7644e-15,
+     "ESD_t_corr": 0.76022,
+     "ESD_err_corr": 0.095415,
+     "gobs": 4.2416e-13,
+     "gobs_err_stat": 5.3236e-14,
+     "log10_gobs": -12.3725,
+     "log10_gobs_err_stat": 0.0545
+    },
+    {
+     "gbar_bin_value": 2.4388e-15,
+     "gbar_bin_lo": 1.7644e-15,
+     "gbar_bin_hi": 3.1131e-15,
+     "ESD_t_corr": 1.2804,
+     "ESD_err_corr": 0.12288,
+     "gobs": 7.144e-13,
+     "gobs_err_stat": 6.8558e-14,
+     "log10_gobs": -12.1461,
+     "log10_gobs_err_stat": 0.0417
+    },
+    {
+     "gbar_bin_value": 4.303e-15,
+     "gbar_bin_lo": 3.1131e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 1.7775,
+     "ESD_err_corr": 0.15901,
+     "gobs": 9.9176e-13,
+     "gobs_err_stat": 8.8717e-14,
+     "log10_gobs": -12.0036,
+     "log10_gobs_err_stat": 0.0388
+    },
+    {
+     "gbar_bin_value": 7.5922e-15,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 9.6915e-15,
+     "ESD_t_corr": 2.6218,
+     "ESD_err_corr": 0.20561,
+     "gobs": 1.4628e-12,
+     "gobs_err_stat": 1.1472e-13,
+     "log10_gobs": -11.8348,
+     "log10_gobs_err_stat": 0.0341
+    },
+    {
+     "gbar_bin_value": 1.3396e-14,
+     "gbar_bin_lo": 9.6915e-15,
+     "gbar_bin_hi": 1.71e-14,
+     "ESD_t_corr": 3.0287,
+     "ESD_err_corr": 0.26735,
+     "gobs": 1.6899e-12,
+     "gobs_err_stat": 1.4917e-13,
+     "log10_gobs": -11.7722,
+     "log10_gobs_err_stat": 0.0383
+    },
+    {
+     "gbar_bin_value": 2.3635e-14,
+     "gbar_bin_lo": 1.71e-14,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 3.9252,
+     "ESD_err_corr": 0.34928,
+     "gobs": 2.19e-12,
+     "gobs_err_stat": 1.9488e-13,
+     "log10_gobs": -11.6595,
+     "log10_gobs_err_stat": 0.0386
+    },
+    {
+     "gbar_bin_value": 4.1702e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 5.3234e-14,
+     "ESD_t_corr": 6.2675,
+     "ESD_err_corr": 0.45771,
+     "gobs": 3.4969e-12,
+     "gobs_err_stat": 2.5538e-13,
+     "log10_gobs": -11.4563,
+     "log10_gobs_err_stat": 0.0317
+    },
+    {
+     "gbar_bin_value": 7.358e-14,
+     "gbar_bin_lo": 5.3234e-14,
+     "gbar_bin_hi": 9.3926e-14,
+     "ESD_t_corr": 7.2594,
+     "ESD_err_corr": 0.60098,
+     "gobs": 4.0504e-12,
+     "gobs_err_stat": 3.3532e-13,
+     "log10_gobs": -11.3925,
+     "log10_gobs_err_stat": 0.036
+    },
+    {
+     "gbar_bin_value": 1.2982e-13,
+     "gbar_bin_lo": 9.3926e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 10.735,
+     "ESD_err_corr": 0.79,
+     "gobs": 5.9894e-12,
+     "gobs_err_stat": 4.4078e-13,
+     "log10_gobs": -11.2226,
+     "log10_gobs_err_stat": 0.032
+    },
+    {
+     "gbar_bin_value": 2.2906e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 2.924e-13,
+     "ESD_t_corr": 12.199,
+     "ESD_err_corr": 1.0401,
+     "gobs": 6.8065e-12,
+     "gobs_err_stat": 5.8031e-13,
+     "log10_gobs": -11.1671,
+     "log10_gobs_err_stat": 0.037
+    },
+    {
+     "gbar_bin_value": 4.0416e-13,
+     "gbar_bin_lo": 2.924e-13,
+     "gbar_bin_hi": 5.1591e-13,
+     "ESD_t_corr": 17.186,
+     "ESD_err_corr": 1.3684,
+     "gobs": 9.5892e-12,
+     "gobs_err_stat": 7.635e-13,
+     "log10_gobs": -11.0182,
+     "log10_gobs_err_stat": 0.0346
+    },
+    {
+     "gbar_bin_value": 7.131e-13,
+     "gbar_bin_lo": 5.1591e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 19.455,
+     "ESD_err_corr": 1.8067,
+     "gobs": 1.0855e-11,
+     "gobs_err_stat": 1.0081e-12,
+     "log10_gobs": -10.9644,
+     "log10_gobs_err_stat": 0.0403
+    },
+    {
+     "gbar_bin_value": 1.2582e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 1.6061e-12,
+     "ESD_t_corr": 25.877,
+     "ESD_err_corr": 2.3798,
+     "gobs": 1.4438e-11,
+     "gobs_err_stat": 1.3278e-12,
+     "log10_gobs": -10.8405,
+     "log10_gobs_err_stat": 0.0399
+    },
+    {
+     "gbar_bin_value": 2.22e-12,
+     "gbar_bin_lo": 1.6061e-12,
+     "gbar_bin_hi": 2.8338e-12,
+     "ESD_t_corr": 33.412,
+     "ESD_err_corr": 3.1472,
+     "gobs": 1.8642e-11,
+     "gobs_err_stat": 1.756e-12,
+     "log10_gobs": -10.7295,
+     "log10_gobs_err_stat": 0.0409
+    },
+    {
+     "gbar_bin_value": 3.9169e-12,
+     "gbar_bin_lo": 2.8338e-12,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 34.26,
+     "ESD_err_corr": 4.1729,
+     "gobs": 1.9115e-11,
+     "gobs_err_stat": 2.3283e-12,
+     "log10_gobs": -10.7186,
+     "log10_gobs_err_stat": 0.0529
+    }
+   ],
+   "KiDS_isolated_gbar_incl_hotgas": [
+    {
+     "gbar_bin_value": 1.3822e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 1.7644e-15,
+     "ESD_t_corr": 0.12444,
+     "ESD_err_corr": 0.043208,
+     "gobs": 6.943e-14,
+     "gobs_err_stat": 2.4108e-14,
+     "log10_gobs": -13.1585,
+     "log10_gobs_err_stat": 0.1508
+    },
+    {
+     "gbar_bin_value": 2.4388e-15,
+     "gbar_bin_lo": 1.7644e-15,
+     "gbar_bin_hi": 3.1131e-15,
+     "ESD_t_corr": 0.29091,
+     "ESD_err_corr": 0.053139,
+     "gobs": 1.6231e-13,
+     "gobs_err_stat": 2.9649e-14,
+     "log10_gobs": -12.7896,
+     "log10_gobs_err_stat": 0.0793
+    },
+    {
+     "gbar_bin_value": 4.303e-15,
+     "gbar_bin_lo": 3.1131e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 0.70582,
+     "ESD_err_corr": 0.076508,
+     "gobs": 3.9381e-13,
+     "gobs_err_stat": 4.2687e-14,
+     "log10_gobs": -12.4047,
+     "log10_gobs_err_stat": 0.0471
+    },
+    {
+     "gbar_bin_value": 7.5922e-15,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 9.6915e-15,
+     "ESD_t_corr": 1.2635,
+     "ESD_err_corr": 0.11445,
+     "gobs": 7.0495e-13,
+     "gobs_err_stat": 6.3858e-14,
+     "log10_gobs": -12.1518,
+     "log10_gobs_err_stat": 0.0393
+    },
+    {
+     "gbar_bin_value": 1.3396e-14,
+     "gbar_bin_lo": 9.6915e-15,
+     "gbar_bin_hi": 1.71e-14,
+     "ESD_t_corr": 2.3035,
+     "ESD_err_corr": 0.16894,
+     "gobs": 1.2853e-12,
+     "gobs_err_stat": 9.4261e-14,
+     "log10_gobs": -11.891,
+     "log10_gobs_err_stat": 0.0319
+    },
+    {
+     "gbar_bin_value": 2.3635e-14,
+     "gbar_bin_lo": 1.71e-14,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 3.2042,
+     "ESD_err_corr": 0.24405,
+     "gobs": 1.7878e-12,
+     "gobs_err_stat": 1.3616e-13,
+     "log10_gobs": -11.7477,
+     "log10_gobs_err_stat": 0.0331
+    },
+    {
+     "gbar_bin_value": 4.1702e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 5.3234e-14,
+     "ESD_t_corr": 4.4412,
+     "ESD_err_corr": 0.34722,
+     "gobs": 2.478e-12,
+     "gobs_err_stat": 1.9373e-13,
+     "log10_gobs": -11.6059,
+     "log10_gobs_err_stat": 0.034
+    },
+    {
+     "gbar_bin_value": 7.358e-14,
+     "gbar_bin_lo": 5.3234e-14,
+     "gbar_bin_hi": 9.3926e-14,
+     "ESD_t_corr": 6.9702,
+     "ESD_err_corr": 0.48665,
+     "gobs": 3.889e-12,
+     "gobs_err_stat": 2.7153e-13,
+     "log10_gobs": -11.4102,
+     "log10_gobs_err_stat": 0.0303
+    },
+    {
+     "gbar_bin_value": 1.2982e-13,
+     "gbar_bin_lo": 9.3926e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 8.6792,
+     "ESD_err_corr": 0.67283,
+     "gobs": 4.8425e-12,
+     "gobs_err_stat": 3.7541e-13,
+     "log10_gobs": -11.3149,
+     "log10_gobs_err_stat": 0.0337
+    },
+    {
+     "gbar_bin_value": 2.2906e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 2.924e-13,
+     "ESD_t_corr": 11.772,
+     "ESD_err_corr": 0.92109,
+     "gobs": 6.5681e-12,
+     "gobs_err_stat": 5.1392e-13,
+     "log10_gobs": -11.1826,
+     "log10_gobs_err_stat": 0.034
+    },
+    {
+     "gbar_bin_value": 4.0416e-13,
+     "gbar_bin_lo": 2.924e-13,
+     "gbar_bin_hi": 5.1591e-13,
+     "ESD_t_corr": 15.307,
+     "ESD_err_corr": 1.2487,
+     "gobs": 8.5404e-12,
+     "gobs_err_stat": 6.9674e-13,
+     "log10_gobs": -11.0685,
+     "log10_gobs_err_stat": 0.0354
+    },
+    {
+     "gbar_bin_value": 7.131e-13,
+     "gbar_bin_lo": 5.1591e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 20.112,
+     "ESD_err_corr": 1.6849,
+     "gobs": 1.1222e-11,
+     "gobs_err_stat": 9.4006e-13,
+     "log10_gobs": -10.9499,
+     "log10_gobs_err_stat": 0.0364
+    },
+    {
+     "gbar_bin_value": 1.2582e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 1.6061e-12,
+     "ESD_t_corr": 24.699,
+     "ESD_err_corr": 2.2604,
+     "gobs": 1.3781e-11,
+     "gobs_err_stat": 1.2612e-12,
+     "log10_gobs": -10.8607,
+     "log10_gobs_err_stat": 0.0397
+    },
+    {
+     "gbar_bin_value": 2.22e-12,
+     "gbar_bin_lo": 1.6061e-12,
+     "gbar_bin_hi": 2.8338e-12,
+     "ESD_t_corr": 31.827,
+     "ESD_err_corr": 3.024,
+     "gobs": 1.7758e-11,
+     "gobs_err_stat": 1.6872e-12,
+     "log10_gobs": -10.7506,
+     "log10_gobs_err_stat": 0.0413
+    },
+    {
+     "gbar_bin_value": 3.9169e-12,
+     "gbar_bin_lo": 2.8338e-12,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 36.902,
+     "ESD_err_corr": 4.0474,
+     "gobs": 2.0589e-11,
+     "gobs_err_stat": 2.2582e-12,
+     "log10_gobs": -10.6864,
+     "log10_gobs_err_stat": 0.0476
+    }
+   ],
+   "GAMA_isolated": [
+    {
+     "gbar_bin_value": 1.3822e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 1.7644e-15,
+     "ESD_t_corr": 0.48297,
+     "ESD_err_corr": 0.3641,
+     "gobs": 2.6947e-13,
+     "gobs_err_stat": 2.0315e-13,
+     "log10_gobs": -12.5695,
+     "log10_gobs_err_stat": 0.3274
+    },
+    {
+     "gbar_bin_value": 2.4388e-15,
+     "gbar_bin_lo": 1.7644e-15,
+     "gbar_bin_hi": 3.1131e-15,
+     "ESD_t_corr": 1.289,
+     "ESD_err_corr": 0.47542,
+     "gobs": 7.1919e-13,
+     "gobs_err_stat": 2.6526e-13,
+     "log10_gobs": -12.1432,
+     "log10_gobs_err_stat": 0.1602
+    },
+    {
+     "gbar_bin_value": 4.303e-15,
+     "gbar_bin_lo": 3.1131e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 0.82939,
+     "ESD_err_corr": 0.62475,
+     "gobs": 4.6275e-13,
+     "gobs_err_stat": 3.4858e-13,
+     "log10_gobs": -12.3346,
+     "log10_gobs_err_stat": 0.3271
+    },
+    {
+     "gbar_bin_value": 7.5922e-15,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 9.6915e-15,
+     "ESD_t_corr": 1.4009,
+     "ESD_err_corr": 0.82272,
+     "gobs": 7.8164e-13,
+     "gobs_err_stat": 4.5904e-13,
+     "log10_gobs": -12.107,
+     "log10_gobs_err_stat": 0.255
+    },
+    {
+     "gbar_bin_value": 1.3396e-14,
+     "gbar_bin_lo": 9.6915e-15,
+     "gbar_bin_hi": 1.71e-14,
+     "ESD_t_corr": 1.8887,
+     "ESD_err_corr": 1.0869,
+     "gobs": 1.0538e-12,
+     "gobs_err_stat": 6.0641e-13,
+     "log10_gobs": -11.9772,
+     "log10_gobs_err_stat": 0.2499
+    },
+    {
+     "gbar_bin_value": 2.3635e-14,
+     "gbar_bin_lo": 1.71e-14,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 2.6141,
+     "ESD_err_corr": 1.44,
+     "gobs": 1.4585e-12,
+     "gobs_err_stat": 8.0343e-13,
+     "log10_gobs": -11.8361,
+     "log10_gobs_err_stat": 0.2392
+    },
+    {
+     "gbar_bin_value": 4.1702e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 5.3234e-14,
+     "ESD_t_corr": 5.291,
+     "ESD_err_corr": 1.9081,
+     "gobs": 2.9521e-12,
+     "gobs_err_stat": 1.0646e-12,
+     "log10_gobs": -11.5299,
+     "log10_gobs_err_stat": 0.1566
+    },
+    {
+     "gbar_bin_value": 7.358e-14,
+     "gbar_bin_lo": 5.3234e-14,
+     "gbar_bin_hi": 9.3926e-14,
+     "ESD_t_corr": 8.7338,
+     "ESD_err_corr": 2.5309,
+     "gobs": 4.873e-12,
+     "gobs_err_stat": 1.4121e-12,
+     "log10_gobs": -11.3122,
+     "log10_gobs_err_stat": 0.1259
+    },
+    {
+     "gbar_bin_value": 1.2982e-13,
+     "gbar_bin_lo": 9.3926e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 6.5073,
+     "ESD_err_corr": 3.3609,
+     "gobs": 3.6307e-12,
+     "gobs_err_stat": 1.8752e-12,
+     "log10_gobs": -11.44,
+     "log10_gobs_err_stat": 0.2243
+    },
+    {
+     "gbar_bin_value": 2.2906e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 2.924e-13,
+     "ESD_t_corr": 18.297,
+     "ESD_err_corr": 4.4661,
+     "gobs": 1.0209e-11,
+     "gobs_err_stat": 2.4918e-12,
+     "log10_gobs": -10.991,
+     "log10_gobs_err_stat": 0.106
+    },
+    {
+     "gbar_bin_value": 4.0416e-13,
+     "gbar_bin_lo": 2.924e-13,
+     "gbar_bin_hi": 5.1591e-13,
+     "ESD_t_corr": 29.796,
+     "ESD_err_corr": 5.9281,
+     "gobs": 1.6625e-11,
+     "gobs_err_stat": 3.3076e-12,
+     "log10_gobs": -10.7792,
+     "log10_gobs_err_stat": 0.0864
+    },
+    {
+     "gbar_bin_value": 7.131e-13,
+     "gbar_bin_lo": 5.1591e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 17.123,
+     "ESD_err_corr": 7.8512,
+     "gobs": 9.5539e-12,
+     "gobs_err_stat": 4.3806e-12,
+     "log10_gobs": -11.0198,
+     "log10_gobs_err_stat": 0.1991
+    },
+    {
+     "gbar_bin_value": 1.2582e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 1.6061e-12,
+     "ESD_t_corr": 33.011,
+     "ESD_err_corr": 10.471,
+     "gobs": 1.8418e-11,
+     "gobs_err_stat": 5.8422e-12,
+     "log10_gobs": -10.7348,
+     "log10_gobs_err_stat": 0.1378
+    },
+    {
+     "gbar_bin_value": 2.22e-12,
+     "gbar_bin_lo": 1.6061e-12,
+     "gbar_bin_hi": 2.8338e-12,
+     "ESD_t_corr": 26.762,
+     "ESD_err_corr": 13.913,
+     "gobs": 1.4932e-11,
+     "gobs_err_stat": 7.7626e-12,
+     "log10_gobs": -10.8259,
+     "log10_gobs_err_stat": 0.2258
+    },
+    {
+     "gbar_bin_value": 3.9169e-12,
+     "gbar_bin_lo": 2.8338e-12,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 21.729,
+     "ESD_err_corr": 18.573,
+     "gobs": 1.2124e-11,
+     "gobs_err_stat": 1.0363e-11,
+     "log10_gobs": -10.9164,
+     "log10_gobs_err_stat": 0.3712
+    }
+   ],
+   "KiDS_isolated_late_blue_ur_lt_2p5": [
+    {
+     "gbar_bin_value": 1.3822e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 1.7644e-15,
+     "ESD_t_corr": 0.4355,
+     "ESD_err_corr": 0.15893,
+     "gobs": 2.4299e-13,
+     "gobs_err_stat": 8.8677e-14,
+     "log10_gobs": -12.6144,
+     "log10_gobs_err_stat": 0.1585
+    },
+    {
+     "gbar_bin_value": 2.4388e-15,
+     "gbar_bin_lo": 1.7644e-15,
+     "gbar_bin_hi": 3.1131e-15,
+     "ESD_t_corr": 0.63685,
+     "ESD_err_corr": 0.20559,
+     "gobs": 3.5533e-13,
+     "gobs_err_stat": 1.1471e-13,
+     "log10_gobs": -12.4494,
+     "log10_gobs_err_stat": 0.1402
+    },
+    {
+     "gbar_bin_value": 4.303e-15,
+     "gbar_bin_lo": 3.1131e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 0.94989,
+     "ESD_err_corr": 0.268,
+     "gobs": 5.2999e-13,
+     "gobs_err_stat": 1.4953e-13,
+     "log10_gobs": -12.2757,
+     "log10_gobs_err_stat": 0.1225
+    },
+    {
+     "gbar_bin_value": 7.5922e-15,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 9.6915e-15,
+     "ESD_t_corr": 1.8149,
+     "ESD_err_corr": 0.34947,
+     "gobs": 1.0126e-12,
+     "gobs_err_stat": 1.9499e-13,
+     "log10_gobs": -11.9946,
+     "log10_gobs_err_stat": 0.0836
+    },
+    {
+     "gbar_bin_value": 1.3396e-14,
+     "gbar_bin_lo": 9.6915e-15,
+     "gbar_bin_hi": 1.71e-14,
+     "ESD_t_corr": 1.9903,
+     "ESD_err_corr": 0.45745,
+     "gobs": 1.1105e-12,
+     "gobs_err_stat": 2.5523e-13,
+     "log10_gobs": -11.9545,
+     "log10_gobs_err_stat": 0.0998
+    },
+    {
+     "gbar_bin_value": 2.3635e-14,
+     "gbar_bin_lo": 1.71e-14,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 2.8526,
+     "ESD_err_corr": 0.5998,
+     "gobs": 1.5916e-12,
+     "gobs_err_stat": 3.3466e-13,
+     "log10_gobs": -11.7982,
+     "log10_gobs_err_stat": 0.0913
+    },
+    {
+     "gbar_bin_value": 4.1702e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 5.3234e-14,
+     "ESD_t_corr": 5.3439,
+     "ESD_err_corr": 0.78914,
+     "gobs": 2.9816e-12,
+     "gobs_err_stat": 4.403e-13,
+     "log10_gobs": -11.5255,
+     "log10_gobs_err_stat": 0.0641
+    },
+    {
+     "gbar_bin_value": 7.358e-14,
+     "gbar_bin_lo": 5.3234e-14,
+     "gbar_bin_hi": 9.3926e-14,
+     "ESD_t_corr": 4.402,
+     "ESD_err_corr": 1.037,
+     "gobs": 2.4561e-12,
+     "gobs_err_stat": 5.7861e-13,
+     "log10_gobs": -11.6098,
+     "log10_gobs_err_stat": 0.1023
+    },
+    {
+     "gbar_bin_value": 1.2982e-13,
+     "gbar_bin_lo": 9.3926e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 8.9567,
+     "ESD_err_corr": 1.3675,
+     "gobs": 4.9974e-12,
+     "gobs_err_stat": 7.6299e-13,
+     "log10_gobs": -11.3013,
+     "log10_gobs_err_stat": 0.0663
+    },
+    {
+     "gbar_bin_value": 2.2906e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 2.924e-13,
+     "ESD_t_corr": 10.611,
+     "ESD_err_corr": 1.804,
+     "gobs": 5.9203e-12,
+     "gobs_err_stat": 1.0065e-12,
+     "log10_gobs": -11.2277,
+     "log10_gobs_err_stat": 0.0738
+    },
+    {
+     "gbar_bin_value": 4.0416e-13,
+     "gbar_bin_lo": 2.924e-13,
+     "gbar_bin_hi": 5.1591e-13,
+     "ESD_t_corr": 12.393,
+     "ESD_err_corr": 2.3784,
+     "gobs": 6.9147e-12,
+     "gobs_err_stat": 1.327e-12,
+     "log10_gobs": -11.1602,
+     "log10_gobs_err_stat": 0.0833
+    },
+    {
+     "gbar_bin_value": 7.131e-13,
+     "gbar_bin_lo": 5.1591e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 11.528,
+     "ESD_err_corr": 3.1414,
+     "gobs": 6.4322e-12,
+     "gobs_err_stat": 1.7528e-12,
+     "log10_gobs": -11.1916,
+     "log10_gobs_err_stat": 0.1183
+    },
+    {
+     "gbar_bin_value": 1.2582e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 1.6061e-12,
+     "ESD_t_corr": 15.109,
+     "ESD_err_corr": 4.1465,
+     "gobs": 8.43e-12,
+     "gobs_err_stat": 2.3135e-12,
+     "log10_gobs": -11.0742,
+     "log10_gobs_err_stat": 0.1192
+    },
+    {
+     "gbar_bin_value": 2.22e-12,
+     "gbar_bin_lo": 1.6061e-12,
+     "gbar_bin_hi": 2.8338e-12,
+     "ESD_t_corr": 26.958,
+     "ESD_err_corr": 5.4766,
+     "gobs": 1.5041e-11,
+     "gobs_err_stat": 3.0556e-12,
+     "log10_gobs": -10.8227,
+     "log10_gobs_err_stat": 0.0882
+    },
+    {
+     "gbar_bin_value": 3.9169e-12,
+     "gbar_bin_lo": 2.8338e-12,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 23.28,
+     "ESD_err_corr": 7.2438,
+     "gobs": 1.2989e-11,
+     "gobs_err_stat": 4.0417e-12,
+     "log10_gobs": -10.8864,
+     "log10_gobs_err_stat": 0.1351
+    }
+   ],
+   "KiDS_isolated_early_red_ur_gt_2p5": [
+    {
+     "gbar_bin_value": 1.3822e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 1.7644e-15,
+     "ESD_t_corr": 1.0012,
+     "ESD_err_corr": 0.14442,
+     "gobs": 5.586e-13,
+     "gobs_err_stat": 8.058e-14,
+     "log10_gobs": -12.2529,
+     "log10_gobs_err_stat": 0.0626
+    },
+    {
+     "gbar_bin_value": 2.4388e-15,
+     "gbar_bin_lo": 1.7644e-15,
+     "gbar_bin_hi": 3.1131e-15,
+     "ESD_t_corr": 1.759,
+     "ESD_err_corr": 0.18676,
+     "gobs": 9.8145e-13,
+     "gobs_err_stat": 1.042e-13,
+     "log10_gobs": -12.0081,
+     "log10_gobs_err_stat": 0.0461
+    },
+    {
+     "gbar_bin_value": 4.303e-15,
+     "gbar_bin_lo": 3.1131e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 2.5682,
+     "ESD_err_corr": 0.24266,
+     "gobs": 1.4329e-12,
+     "gobs_err_stat": 1.3539e-13,
+     "log10_gobs": -11.8438,
+     "log10_gobs_err_stat": 0.041
+    },
+    {
+     "gbar_bin_value": 7.5922e-15,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 9.6915e-15,
+     "ESD_t_corr": 3.2883,
+     "ESD_err_corr": 0.31563,
+     "gobs": 1.8347e-12,
+     "gobs_err_stat": 1.761e-13,
+     "log10_gobs": -11.7364,
+     "log10_gobs_err_stat": 0.0417
+    },
+    {
+     "gbar_bin_value": 1.3396e-14,
+     "gbar_bin_lo": 9.6915e-15,
+     "gbar_bin_hi": 1.71e-14,
+     "ESD_t_corr": 4.0625,
+     "ESD_err_corr": 0.41106,
+     "gobs": 2.2667e-12,
+     "gobs_err_stat": 2.2935e-13,
+     "log10_gobs": -11.6446,
+     "log10_gobs_err_stat": 0.0439
+    },
+    {
+     "gbar_bin_value": 2.3635e-14,
+     "gbar_bin_lo": 1.71e-14,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 5.7657,
+     "ESD_err_corr": 0.53769,
+     "gobs": 3.217e-12,
+     "gobs_err_stat": 3e-13,
+     "log10_gobs": -11.4926,
+     "log10_gobs_err_stat": 0.0405
+    },
+    {
+     "gbar_bin_value": 4.1702e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 5.3234e-14,
+     "ESD_t_corr": 7.3276,
+     "ESD_err_corr": 0.70484,
+     "gobs": 4.0884e-12,
+     "gobs_err_stat": 3.9327e-13,
+     "log10_gobs": -11.3884,
+     "log10_gobs_err_stat": 0.0418
+    },
+    {
+     "gbar_bin_value": 7.358e-14,
+     "gbar_bin_lo": 5.3234e-14,
+     "gbar_bin_hi": 9.3926e-14,
+     "ESD_t_corr": 8.8614,
+     "ESD_err_corr": 0.9265,
+     "gobs": 4.9442e-12,
+     "gobs_err_stat": 5.1694e-13,
+     "log10_gobs": -11.3059,
+     "log10_gobs_err_stat": 0.0454
+    },
+    {
+     "gbar_bin_value": 1.2982e-13,
+     "gbar_bin_lo": 9.3926e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 10.733,
+     "ESD_err_corr": 1.2177,
+     "gobs": 5.9883e-12,
+     "gobs_err_stat": 6.7941e-13,
+     "log10_gobs": -11.2227,
+     "log10_gobs_err_stat": 0.0493
+    },
+    {
+     "gbar_bin_value": 2.2906e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 2.924e-13,
+     "ESD_t_corr": 12.454,
+     "ESD_err_corr": 1.6022,
+     "gobs": 6.9487e-12,
+     "gobs_err_stat": 8.9397e-13,
+     "log10_gobs": -11.1581,
+     "log10_gobs_err_stat": 0.0559
+    },
+    {
+     "gbar_bin_value": 4.0416e-13,
+     "gbar_bin_lo": 2.924e-13,
+     "gbar_bin_hi": 5.1591e-13,
+     "ESD_t_corr": 17.618,
+     "ESD_err_corr": 2.1061,
+     "gobs": 9.8298e-12,
+     "gobs_err_stat": 1.1751e-12,
+     "log10_gobs": -11.0075,
+     "log10_gobs_err_stat": 0.0519
+    },
+    {
+     "gbar_bin_value": 7.131e-13,
+     "gbar_bin_lo": 5.1591e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 23.391,
+     "ESD_err_corr": 2.7785,
+     "gobs": 1.3051e-11,
+     "gobs_err_stat": 1.5503e-12,
+     "log10_gobs": -10.8844,
+     "log10_gobs_err_stat": 0.0516
+    },
+    {
+     "gbar_bin_value": 1.2582e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 1.6061e-12,
+     "ESD_t_corr": 30.449,
+     "ESD_err_corr": 3.6646,
+     "gobs": 1.6989e-11,
+     "gobs_err_stat": 2.0447e-12,
+     "log10_gobs": -10.7698,
+     "log10_gobs_err_stat": 0.0523
+    },
+    {
+     "gbar_bin_value": 2.22e-12,
+     "gbar_bin_lo": 1.6061e-12,
+     "gbar_bin_hi": 2.8338e-12,
+     "ESD_t_corr": 36.818,
+     "ESD_err_corr": 4.8261,
+     "gobs": 2.0542e-11,
+     "gobs_err_stat": 2.6927e-12,
+     "log10_gobs": -10.6873,
+     "log10_gobs_err_stat": 0.0569
+    },
+    {
+     "gbar_bin_value": 3.9169e-12,
+     "gbar_bin_lo": 2.8338e-12,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 47.718,
+     "ESD_err_corr": 6.4103,
+     "gobs": 2.6624e-11,
+     "gobs_err_stat": 3.5766e-12,
+     "log10_gobs": -10.5747,
+     "log10_gobs_err_stat": 0.0583
+    }
+   ],
+   "KiDS_isolated_late_disc_sersic_lt_2": [
+    {
+     "gbar_bin_value": 1.3822e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 1.7644e-15,
+     "ESD_t_corr": 0.72233,
+     "ESD_err_corr": 0.16198,
+     "gobs": 4.0302e-13,
+     "gobs_err_stat": 9.0376e-14,
+     "log10_gobs": -12.3947,
+     "log10_gobs_err_stat": 0.0974
+    },
+    {
+     "gbar_bin_value": 2.4388e-15,
+     "gbar_bin_lo": 1.7644e-15,
+     "gbar_bin_hi": 3.1131e-15,
+     "ESD_t_corr": 0.71866,
+     "ESD_err_corr": 0.20991,
+     "gobs": 4.0097e-13,
+     "gobs_err_stat": 1.1712e-13,
+     "log10_gobs": -12.3969,
+     "log10_gobs_err_stat": 0.1269
+    },
+    {
+     "gbar_bin_value": 4.303e-15,
+     "gbar_bin_lo": 3.1131e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 1.2077,
+     "ESD_err_corr": 0.27276,
+     "gobs": 6.7386e-13,
+     "gobs_err_stat": 1.5218e-13,
+     "log10_gobs": -12.1714,
+     "log10_gobs_err_stat": 0.0981
+    },
+    {
+     "gbar_bin_value": 7.5922e-15,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 9.6915e-15,
+     "ESD_t_corr": 2.3226,
+     "ESD_err_corr": 0.35437,
+     "gobs": 1.2959e-12,
+     "gobs_err_stat": 1.9772e-13,
+     "log10_gobs": -11.8874,
+     "log10_gobs_err_stat": 0.0663
+    },
+    {
+     "gbar_bin_value": 1.3396e-14,
+     "gbar_bin_lo": 9.6915e-15,
+     "gbar_bin_hi": 1.71e-14,
+     "ESD_t_corr": 2.1472,
+     "ESD_err_corr": 0.46159,
+     "gobs": 1.1981e-12,
+     "gobs_err_stat": 2.5754e-13,
+     "log10_gobs": -11.9215,
+     "log10_gobs_err_stat": 0.0934
+    },
+    {
+     "gbar_bin_value": 2.3635e-14,
+     "gbar_bin_lo": 1.71e-14,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 2.8266,
+     "ESD_err_corr": 0.60387,
+     "gobs": 1.5771e-12,
+     "gobs_err_stat": 3.3693e-13,
+     "log10_gobs": -11.8021,
+     "log10_gobs_err_stat": 0.0928
+    },
+    {
+     "gbar_bin_value": 4.1702e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 5.3234e-14,
+     "ESD_t_corr": 5.202,
+     "ESD_err_corr": 0.7924,
+     "gobs": 2.9025e-12,
+     "gobs_err_stat": 4.4212e-13,
+     "log10_gobs": -11.5372,
+     "log10_gobs_err_stat": 0.0662
+    },
+    {
+     "gbar_bin_value": 7.358e-14,
+     "gbar_bin_lo": 5.3234e-14,
+     "gbar_bin_hi": 9.3926e-14,
+     "ESD_t_corr": 4.6905,
+     "ESD_err_corr": 1.0406,
+     "gobs": 2.6171e-12,
+     "gobs_err_stat": 5.8059e-13,
+     "log10_gobs": -11.5822,
+     "log10_gobs_err_stat": 0.0963
+    },
+    {
+     "gbar_bin_value": 1.2982e-13,
+     "gbar_bin_lo": 9.3926e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 7.8116,
+     "ESD_err_corr": 1.3674,
+     "gobs": 4.3584e-12,
+     "gobs_err_stat": 7.6293e-13,
+     "log10_gobs": -11.3607,
+     "log10_gobs_err_stat": 0.076
+    },
+    {
+     "gbar_bin_value": 2.2906e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 2.924e-13,
+     "ESD_t_corr": 9.9356,
+     "ESD_err_corr": 1.8007,
+     "gobs": 5.5435e-12,
+     "gobs_err_stat": 1.0047e-12,
+     "log10_gobs": -11.2562,
+     "log10_gobs_err_stat": 0.0787
+    },
+    {
+     "gbar_bin_value": 4.0416e-13,
+     "gbar_bin_lo": 2.924e-13,
+     "gbar_bin_hi": 5.1591e-13,
+     "ESD_t_corr": 11.322,
+     "ESD_err_corr": 2.3736,
+     "gobs": 6.3173e-12,
+     "gobs_err_stat": 1.3243e-12,
+     "log10_gobs": -11.1995,
+     "log10_gobs_err_stat": 0.091
+    },
+    {
+     "gbar_bin_value": 7.131e-13,
+     "gbar_bin_lo": 5.1591e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 16.116,
+     "ESD_err_corr": 3.127,
+     "gobs": 8.9918e-12,
+     "gobs_err_stat": 1.7447e-12,
+     "log10_gobs": -11.0462,
+     "log10_gobs_err_stat": 0.0843
+    },
+    {
+     "gbar_bin_value": 1.2582e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 1.6061e-12,
+     "ESD_t_corr": 20.291,
+     "ESD_err_corr": 4.1132,
+     "gobs": 1.1321e-11,
+     "gobs_err_stat": 2.295e-12,
+     "log10_gobs": -10.9461,
+     "log10_gobs_err_stat": 0.088
+    },
+    {
+     "gbar_bin_value": 2.22e-12,
+     "gbar_bin_lo": 1.6061e-12,
+     "gbar_bin_hi": 2.8338e-12,
+     "ESD_t_corr": 24.867,
+     "ESD_err_corr": 5.4442,
+     "gobs": 1.3875e-11,
+     "gobs_err_stat": 3.0376e-12,
+     "log10_gobs": -10.8578,
+     "log10_gobs_err_stat": 0.0951
+    },
+    {
+     "gbar_bin_value": 3.9169e-12,
+     "gbar_bin_lo": 2.8338e-12,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 27.956,
+     "ESD_err_corr": 7.1856,
+     "gobs": 1.5598e-11,
+     "gobs_err_stat": 4.0092e-12,
+     "log10_gobs": -10.8069,
+     "log10_gobs_err_stat": 0.1116
+    }
+   ],
+   "KiDS_isolated_early_bulge_sersic_gt_2": [
+    {
+     "gbar_bin_value": 1.3822e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 1.7644e-15,
+     "ESD_t_corr": 0.76548,
+     "ESD_err_corr": 0.15062,
+     "gobs": 4.271e-13,
+     "gobs_err_stat": 8.404e-14,
+     "log10_gobs": -12.3695,
+     "log10_gobs_err_stat": 0.0855
+    },
+    {
+     "gbar_bin_value": 2.4388e-15,
+     "gbar_bin_lo": 1.7644e-15,
+     "gbar_bin_hi": 3.1131e-15,
+     "ESD_t_corr": 1.5009,
+     "ESD_err_corr": 0.19547,
+     "gobs": 8.3745e-13,
+     "gobs_err_stat": 1.0906e-13,
+     "log10_gobs": -12.077,
+     "log10_gobs_err_stat": 0.0566
+    },
+    {
+     "gbar_bin_value": 4.303e-15,
+     "gbar_bin_lo": 3.1131e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 2.0838,
+     "ESD_err_corr": 0.25324,
+     "gobs": 1.1627e-12,
+     "gobs_err_stat": 1.413e-13,
+     "log10_gobs": -11.9345,
+     "log10_gobs_err_stat": 0.0528
+    },
+    {
+     "gbar_bin_value": 7.5922e-15,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 9.6915e-15,
+     "ESD_t_corr": 2.878,
+     "ESD_err_corr": 0.32813,
+     "gobs": 1.6058e-12,
+     "gobs_err_stat": 1.8308e-13,
+     "log10_gobs": -11.7943,
+     "log10_gobs_err_stat": 0.0495
+    },
+    {
+     "gbar_bin_value": 1.3396e-14,
+     "gbar_bin_lo": 9.6915e-15,
+     "gbar_bin_hi": 1.71e-14,
+     "ESD_t_corr": 3.8984,
+     "ESD_err_corr": 0.42677,
+     "gobs": 2.1751e-12,
+     "gobs_err_stat": 2.3812e-13,
+     "log10_gobs": -11.6625,
+     "log10_gobs_err_stat": 0.0475
+    },
+    {
+     "gbar_bin_value": 2.3635e-14,
+     "gbar_bin_lo": 1.71e-14,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 5.4534,
+     "ESD_err_corr": 0.5569,
+     "gobs": 3.0427e-12,
+     "gobs_err_stat": 3.1072e-13,
+     "log10_gobs": -11.5167,
+     "log10_gobs_err_stat": 0.0444
+    },
+    {
+     "gbar_bin_value": 4.1702e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 5.3234e-14,
+     "ESD_t_corr": 7.0848,
+     "ESD_err_corr": 0.72902,
+     "gobs": 3.9529e-12,
+     "gobs_err_stat": 4.0676e-13,
+     "log10_gobs": -11.4031,
+     "log10_gobs_err_stat": 0.0447
+    },
+    {
+     "gbar_bin_value": 7.358e-14,
+     "gbar_bin_lo": 5.3234e-14,
+     "gbar_bin_hi": 9.3926e-14,
+     "ESD_t_corr": 9.6756,
+     "ESD_err_corr": 0.95594,
+     "gobs": 5.3985e-12,
+     "gobs_err_stat": 5.3337e-13,
+     "log10_gobs": -11.2677,
+     "log10_gobs_err_stat": 0.0429
+    },
+    {
+     "gbar_bin_value": 1.2982e-13,
+     "gbar_bin_lo": 9.3926e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 11.139,
+     "ESD_err_corr": 1.2561,
+     "gobs": 6.2148e-12,
+     "gobs_err_stat": 7.0081e-13,
+     "log10_gobs": -11.2066,
+     "log10_gobs_err_stat": 0.049
+    },
+    {
+     "gbar_bin_value": 2.2906e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 2.924e-13,
+     "ESD_t_corr": 11.258,
+     "ESD_err_corr": 1.6513,
+     "gobs": 6.2816e-12,
+     "gobs_err_stat": 9.2132e-13,
+     "log10_gobs": -11.2019,
+     "log10_gobs_err_stat": 0.0637
+    },
+    {
+     "gbar_bin_value": 4.0416e-13,
+     "gbar_bin_lo": 2.924e-13,
+     "gbar_bin_hi": 5.1591e-13,
+     "ESD_t_corr": 20.603,
+     "ESD_err_corr": 2.1666,
+     "gobs": 1.1495e-11,
+     "gobs_err_stat": 1.2089e-12,
+     "log10_gobs": -10.9395,
+     "log10_gobs_err_stat": 0.0457
+    },
+    {
+     "gbar_bin_value": 7.131e-13,
+     "gbar_bin_lo": 5.1591e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 22.734,
+     "ESD_err_corr": 2.8543,
+     "gobs": 1.2684e-11,
+     "gobs_err_stat": 1.5926e-12,
+     "log10_gobs": -10.8967,
+     "log10_gobs_err_stat": 0.0545
+    },
+    {
+     "gbar_bin_value": 1.2582e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 1.6061e-12,
+     "ESD_t_corr": 26.657,
+     "ESD_err_corr": 3.7499,
+     "gobs": 1.4873e-11,
+     "gobs_err_stat": 2.0922e-12,
+     "log10_gobs": -10.8276,
+     "log10_gobs_err_stat": 0.0611
+    },
+    {
+     "gbar_bin_value": 2.22e-12,
+     "gbar_bin_lo": 1.6061e-12,
+     "gbar_bin_hi": 2.8338e-12,
+     "ESD_t_corr": 35.982,
+     "ESD_err_corr": 4.9374,
+     "gobs": 2.0076e-11,
+     "gobs_err_stat": 2.7548e-12,
+     "log10_gobs": -10.6973,
+     "log10_gobs_err_stat": 0.0596
+    },
+    {
+     "gbar_bin_value": 3.9169e-12,
+     "gbar_bin_lo": 2.8338e-12,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 44.91,
+     "ESD_err_corr": 6.5351,
+     "gobs": 2.5057e-11,
+     "gobs_err_stat": 3.6463e-12,
+     "log10_gobs": -10.6011,
+     "log10_gobs_err_stat": 0.0632
+    }
+   ],
+   "KiDS_isolated_dwarfs_Mstar_lt_1e10": [
+    {
+     "gbar_bin_value": 3.2464e-15,
+     "gbar_bin_lo": 1e-15,
+     "gbar_bin_hi": 5.4928e-15,
+     "ESD_t_corr": 1.6775,
+     "ESD_err_corr": 0.2691,
+     "gobs": 9.3598e-13,
+     "gobs_err_stat": 1.5015e-13,
+     "log10_gobs": -12.0287,
+     "log10_gobs_err_stat": 0.0697
+    },
+    {
+     "gbar_bin_value": 1.7832e-14,
+     "gbar_bin_lo": 5.4928e-15,
+     "gbar_bin_hi": 3.0171e-14,
+     "ESD_t_corr": 1.4674,
+     "ESD_err_corr": 0.60275,
+     "gobs": 8.1871e-13,
+     "gobs_err_stat": 3.3631e-13,
+     "log10_gobs": -12.0869,
+     "log10_gobs_err_stat": 0.1784
+    },
+    {
+     "gbar_bin_value": 9.7947e-14,
+     "gbar_bin_lo": 3.0171e-14,
+     "gbar_bin_hi": 1.6572e-13,
+     "ESD_t_corr": 7.9369,
+     "ESD_err_corr": 1.3788,
+     "gobs": 4.4284e-12,
+     "gobs_err_stat": 7.6927e-13,
+     "log10_gobs": -11.3538,
+     "log10_gobs_err_stat": 0.0754
+    },
+    {
+     "gbar_bin_value": 5.38e-13,
+     "gbar_bin_lo": 1.6572e-13,
+     "gbar_bin_hi": 9.1028e-13,
+     "ESD_t_corr": 17.933,
+     "ESD_err_corr": 3.1785,
+     "gobs": 1.0006e-11,
+     "gobs_err_stat": 1.7734e-12,
+     "log10_gobs": -10.9997,
+     "log10_gobs_err_stat": 0.077
+    },
+    {
+     "gbar_bin_value": 2.9551e-12,
+     "gbar_bin_lo": 9.1028e-13,
+     "gbar_bin_hi": 5e-12,
+     "ESD_t_corr": 2.5323,
+     "ESD_err_corr": 7.5033,
+     "gobs": 1.4129e-12,
+     "gobs_err_stat": 4.1865e-12,
+     "log10_gobs": -11.8499,
+     "log10_gobs_err_stat": 1.2868
+    }
+   ],
+   "other_tables_in_converted_file": [
+    "Fig-9 isolated mass bins 1-4",
+    "Fig-A4 all (non-isolated) galaxies mass bins 1-4",
+    "Fig-3 lensing rotation curves (v_circ, SIS)"
+   ],
+   "derived_by_compiler": {
+    "log10_gobs_over_M16_fit_a0_1p2e_10_KiDS_isolated_all": [
+     0.017,
+     0.12,
+     0.139,
+     0.184,
+     0.122,
+     0.111,
+     0.19,
+     0.129,
+     0.174,
+     0.104,
+     0.126,
+     0.053,
+     0.048,
+     0.029,
+     -0.093
+    ],
+    "log10_mean_early_over_late_colour": 0.275,
+    "log10_mean_early_over_late_sersic": 0.194,
+    "note": "Computed from the converted data release; compare paper values 0.27 dex (colour) and 0.17 dex (Sersic). M16 = g_bar/(1-exp(-sqrt(g_bar/a0)))."
+   }
+  },
+  "facts": [
+   {
+    "quantity": "data release location",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.12 / Sect. 5"
+    },
+    "snippet": "Tables containing the ESD profile data used to create all results figures (i.e. Figures 3, 4, 5, 8, 9, 10, A.4 and C.1) can be found at: http://kids.strw.leidenuniv.nl/sciencedata.php."
+   },
+   {
+    "quantity": "g_bar binning",
+    "value": [
+     1e-15,
+     5e-12
+    ],
+    "units": "m/s^2",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.3 / Sect. 2.1"
+    },
+    "snippet": "we chose our R-bins such that they corresponded to 15 logarithmic bins between 1×10−15 <g bar < 5×10−12 m s−2"
+   },
+   {
+    "quantity": "ESD to g_obs conversion (SIS)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.4 / Sect. 2.2, Eq. 7 (g_obs = 4 G DeltaSigma)"
+    },
+    "snippet": "Throughout this work, we have used the SIS approximation to convert the ESD into gobs."
+   },
+   {
+    "quantity": "extra error added to plotted RAR",
+    "value": 0.1,
+    "units": "dex",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.11 / Sect. 4.4"
+    },
+    "snippet": "To account for the added uncertainty resulting from the conversion to the RAR, we added 0.1 dex to the error bars of our RAR measurements throughout this work.",
+    "caveats": "Not stated whether added linearly or in quadrature."
+   },
+   {
+    "quantity": "SIS vs PPL difference",
+    "value": 0.038,
+    "units": "dex",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.12 / Sect. 5.1"
+    },
+    "snippet": "we can easily compute that the expected difference in gobs would be ⟨log(gobs,SIS/gobs,PPL)⟩ = 0.038 dex"
+   },
+   {
+    "quantity": "stellar-mass bins (Figs 3, 9)",
+    "value": [
+     8.5,
+     10.3,
+     10.6,
+     10.8,
+     11.0
+    ],
+    "units": "log10(M*/h70^-2 Msun)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.12 / Sects. 5.1 and 5.5"
+    },
+    "snippet": "log 10(M⋆/ h−2 70 M⊙) = [8.5, 10.3, 10.6, 10.8, 11.0]"
+   },
+   {
+    "quantity": "mean Mgal (stars+cold gas) per mass bin",
+    "value": [
+     10.14,
+     10.57,
+     10.78,
+     10.96
+    ],
+    "units": "log10(Mgal/h70^-2 Msun)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.12 / Sects. 5.1 and 5.5"
+    },
+    "snippet": "log10⟨Mgal/ h−2 70 M⊙⟩ = [10.14, 10.57, 10.78, 10.96]"
+   },
+   {
+    "quantity": "isolation criterion",
+    "value": {
+     "f_Mstar": 0.1,
+     "r_sat_Mpc_h70inv": 3.0
+    },
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.8 / Sect. 3.3 / App. A"
+    },
+    "snippet": "We chose fM⋆ = 0.1, which corresponds to 10% of the lens stellar mass, and rsat = 3 h−1 70 Mpc, which is equal to the maximum projected radius of our",
+    "caveats": "3D radius from projected + photometric-redshift distances; satellites = neighbours with >10% of lens M*; flux-limited sample (m_r<20) so <20% false positives estimated."
+   },
+   {
+    "quantity": "stellar-mass cap",
+    "value": 100000000000.0,
+    "units": "h70^-2 Msun",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.8 / Sect. 3.3"
+    },
+    "snippet": "We also restricted our lens stellar masses to M⋆ < 1011 h−2 70 M⊙ since galaxies with higher masses have significantly more satellites",
+    "caveats": "PDF text extraction flattens superscripts: \"1011 h−2 70\" = 10^11 h70^-2."
+   },
+   {
+    "quantity": "isolated sample size (Sect. 3.3)",
+    "value": 259383,
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.8 / Sect. 3.3"
+    },
+    "snippet": "This provided us with an isolated lens sample of 259 383 galaxies."
+   },
+   {
+    "quantity": "isolated sample size (Introduction) - inconsistent with Sect. 3.3",
+    "value": 350000,
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.3 / Sect. 1"
+    },
+    "snippet": "In addition, our sample of ∼ 350 000 isolated lens galaxies allows us to analyse the RAR as a function of colour",
+    "caveats": "Paper quotes both ~350 000 (intro) and 259 383 (Sect. 3.3)."
+   },
+   {
+    "quantity": "isolation reliability limit",
+    "value": 1e-13,
+    "units": "m/s^2",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.13 / Sect. 5.2"
+    },
+    "snippet": "the isolation criterion is no longer reliable when gbar ⪅ 10−13 m s−2"
+   },
+   {
+    "quantity": "isolation reliability limit (radius)",
+    "value": 7.56e-14,
+    "units": "m/s^2",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.27 / App. A (R < 0.3 h70^-1 Mpc)"
+    },
+    "snippet": "(log[Mgal/ h−2 70 M⊙] = 10.69) this corresponds to a baryonic acceleration ofggal > 7.56× 10−14 m s−2."
+   },
+   {
+    "quantity": "cold gas scaling (Boselli+2014)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.10 / Sect. 4.3, Eq. 23"
+    },
+    "snippet": "log( fcold) =−0.69 log( M⋆/ h−2 70 M⊙) + 6.63. (23)",
+    "caveats": "Mgal = M*(1+f_cold), used as point mass = fiducial baryonic mass (secure lower limit on g_bar). Hot gas, missing baryons NOT included in fiducial g_bar."
+   },
+   {
+    "quantity": "stellar-mass statistical uncertainty adopted",
+    "value": 0.12,
+    "units": "dex",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.8 / Sect. 3.3"
+    },
+    "snippet": "we have assumed twice the LePhare estimate:σM⋆ = 0.12 dex.",
+    "caveats": "Systematic uncertainty shown as +-0.2 dex band; KiDS M* normalised to GAMA (offset -0.056 dex); LePhare, BC03, Chabrier IMF."
+   },
+   {
+    "quantity": "hot-gas estimate (Fig. 4 only, and Sect. 5.4 test)",
+    "value": {
+     "R_acc_kpc_h70inv": 100,
+     "Mgas_over_Mstar": 1.0
+    },
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.14 / Fig. 4 caption"
+    },
+    "snippet": "if gbar contained an additional isothermal hot gas contribution within a 100 h−1 70 kpc radius, with a nominal gas mass equal to the stellar mass (orange crosses with 1σ error bars)",
+    "caveats": "Not used in the chi^2 tests vs MOND/EG; order-of-magnitude estimate only."
+   },
+   {
+    "quantity": "hot-gas effect statement",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.15 / Sect. 5.2"
+    },
+    "snippet": "This causes a steepening downward slope of the RAR, such that it finally diverges from the gobs ∝ √gbar relation at very low accelerations (gbar < 10−14 m s−2)."
+   },
+   {
+    "quantity": "MOND EFE vs hot gas",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.15 / Sect. 5.2"
+    },
+    "snippet": "It is therefore unlikely that the MOND EFE can explain the effect of massive (Mgas & M⋆) hot gaseous haloes, if such haloes are detected.",
+    "caveats": "EFE modelled with Chae+2020 Eq. 13, e = g_ext/g_dagger = 0.003."
+   },
+   {
+    "quantity": "comparison with SPARC RAR (M16)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.13 / Sect. 5.2"
+    },
+    "snippet": "We find that these two fully independent RAR observations, respectively from rotation curves and lensing, are in strong agreement"
+   },
+   {
+    "quantity": "M16 fit value used as MOND a0",
+    "value": 1.2e-10,
+    "error": 2.6e-11,
+    "units": "m/s^2",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.5 / Sect. 2.3"
+    },
+    "snippet": "g† = 1.20±0.26×10−10 m s−2"
+   },
+   {
+    "quantity": "chi2 GAMA vs MOND/EG",
+    "value": 0.8,
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.15 / Sect. 5.2"
+    },
+    "snippet": "Comparing the GAMA data to the two MG models results in χ2 red-values of 0.8 for both MOND and EG",
+    "caveats": "N_DOF = 15, no free parameters; full covariance used."
+   },
+   {
+    "quantity": "chi2 KiDS vs MOND/EG (all 15 bins)",
+    "value": {
+     "MOND": 4.6,
+     "EG": 5.0
+    },
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.15 / Sect. 5.2"
+    },
+    "snippet": "When using the KiDS-bright results, neither model provides a good description of the data with:χ2 red = 4.6 and 5.0 for MOND and EG respectively, corresponding to∼ 6 standard deviations (∼ 6σ)."
+   },
+   {
+    "quantity": "chi2 KiDS, 7 bins within isolation limit",
+    "value": {
+     "MOND": 4.0,
+     "EG": 4.4
+    },
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.15 / Sect. 5.2"
+    },
+    "snippet": "we find: χ2 red = 4.0 for MOND and χ2 red = 4.4 for EG, ∼ 3.8σ away from a good fit.",
+    "caveats": "Text says the 7 points are within \"R < 3 h70^-1 Mpc\"; elsewhere the isolation limit is R < 0.3 h70^-1 Mpc (likely typo)."
+   },
+   {
+    "quantity": "chi2 KiDS with M* shifted by +-0.2 dex",
+    "value": {
+     "+0.2dex": 1.5,
+     "-0.2dex": 14
+    },
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.15 / Sect. 5.2"
+    },
+    "snippet": "leads toχ2 red = 1.5 for ∆M⋆ = +0.2 dex andχ2 red = 14 for ∆M⋆ =−0.2 dex with respect to MOND"
+   },
+   {
+    "quantity": "conclusion on M16/MOND extrapolation",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.23 / Sect. 6"
+    },
+    "snippet": "the extrapolated M16 fitting function (Eq. 11), which approximately corresponds to the prediction of both MG models (EG and MOND), holds to scales of 3 h−1 70 Mpc for isolated galaxies"
+   },
+   {
+    "quantity": "early/late split definitions (Sersic)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.18 / Fig. 6 caption"
+    },
+    "snippet": "we define bulge-dominated (early-type) galaxies as those with n> 2 and disc-dominated (late-type) galaxies as those with n< 2"
+   },
+   {
+    "quantity": "early/late split definitions (colour)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.18 / Fig. 6 caption"
+    },
+    "snippet": "red (early-type) galaxies as those with mu− mr > 2.5 and blue (late- type) galaxies as those with mu− mr < 2.5",
+    "caveats": "Both samples trimmed to equal M* distributions (Fig. 7)."
+   },
+   {
+    "quantity": "early vs late chi2",
+    "value": {
+     "sersic": 4.5,
+     "colour": 8.9
+    },
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.17 / Sect. 5.4"
+    },
+    "snippet": "equals 67.8/15 = 4.5 for the lenses split by Sérsic index, and 134.2/15 = 8.9 for those split by u− r colour."
+   },
+   {
+    "quantity": "early vs late significance",
+    "value": 5.7,
+    "units": "sigma",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.17 / Sect. 5.4"
+    },
+    "snippet": "results in RAR difference with a 5 .7σ significance"
+   },
+   {
+    "quantity": "early/late mean g_obs ratio",
+    "value": {
+     "sersic": 0.17,
+     "colour": 0.27
+    },
+    "units": "dex (log10<g_obs,E/g_obs,L>)",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.17 / Sect. 5.4"
+    },
+    "snippet": "is 0.17 dex and 0.27 dex for the Sérsic and colour splits respectively."
+   },
+   {
+    "quantity": "early/late ratio restricted to isolation-reliable region",
+    "value": {
+     "sersic": 0.14,
+     "colour": 0.19
+    },
+    "units": "dex",
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.19 / Sect. 5.4"
+    },
+    "snippet": "we obtain a difference log10(δgE/L obs ) of 0.14 dex and 0.19 dex for the Sérsic and colour split respectively, where the latter has a significance of 3 .2σ."
+   },
+   {
+    "quantity": "mass-bin chi2 vs MOND (all scales)",
+    "value": 1.9,
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.20 / Sect. 5.5"
+    },
+    "snippet": "χ2 red = 117.0/60 = 1.9, which (noting that the prediction for EG is very similar) excludes both models at the ∼ 4.5σ level."
+   },
+   {
+    "quantity": "mass-bin chi2 within R<0.3 Mpc",
+    "value": {
+     "MOND": 1.6,
+     "EG": 1.7
+    },
+    "source": {
+     "paper_key": "brouwer",
+     "arxiv": "2106.11677",
+     "location": "arXiv PDF p.20 / Sect. 5.5"
+    },
+    "snippet": "χ2 red = 49.9/31 = 1.6 for MOND and 51.7/31 = 1.7 for EG respectively"
+   }
+  ]
+ },
+ "item1b_mistele2024_ApJL_flat_velocities_BTFR": {
+  "summary": "Stacked lensing circular velocities (exact deprojection, H0=73, R_isol=4 Mpc/h70) stay flat to ~1 Mpc in all 4 baryonic-mass bins, for LTGs and ETGs; Vflat (50-300 kpc) = 137, 182, 205, 260 km/s at log Mb,eff = 10.10, 10.66, 10.96, 11.29; consistent with the kinematic BTFR (Lelli+2019: log Mb = 3.85 log Vf + 1.99). Full Table 1 (MRT) obtained from IOP.",
+  "paper": {
+   "authors": "Mistele, T.; McGaugh, S.; Lelli, F.; Schombert, J.; Li, P.",
+   "year": 2024,
+   "journal": "ApJ Letters 969, L3 (NOT JCAP)",
+   "arxiv": "2406.09685",
+   "doi": "10.3847/2041-8213/ad54b0"
+  },
+  "note": "The user-cited title \"Indefinitely flat circular velocities and the BTFR from weak lensing\" is ApJL 969, L3 (arXiv:2406.09685). The JCAP 2024 paper by the same authors is the RAR paper (arXiv:2310.15248), recorded separately below.",
+  "table1_machine_readable": {
+   "obtained": true,
+   "url": "https://content.cld.iop.org/journals/2041-8205/969/1/L3/revision1/apjlad54b0t1_mrt.txt",
+   "saved_to": "research_work/results/hot-companion/data/mistele2024/table1_mrt.txt",
+   "columns": "Sample; R [kpc]; for mass bins 1-4 (log10 Mb/Msun edges [9.0,10.5,10.8,11.1,11.5]): Vc, stat err, syst err (from ESD->g_obs conversion) [km/s]. Missing entries = negative stacked g_obs (or too few lenses: ETG bin 1). For the rows \"All (not split by mass)\" and \"GAMA (not split by mass)\" the single Vc is stored under bin1.",
+   "rows": [
+    {
+     "sample": "All",
+     "R_kpc": 33.94,
+     "bin1": {
+      "Vc": 117.6,
+      "stat": 24.66,
+      "syst": 2.77
+     },
+     "bin2": {
+      "Vc": 114.28,
+      "stat": 33.1,
+      "syst": 18.05
+     },
+     "bin3": {
+      "Vc": 167.29,
+      "stat": 19.68,
+      "syst": 5.82
+     },
+     "bin4": {
+      "Vc": 234.59,
+      "stat": 13.73,
+      "syst": 0.61
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 46.13,
+     "bin1": {
+      "Vc": 115.2,
+      "stat": 23.89,
+      "syst": 1.23
+     },
+     "bin2": {
+      "Vc": 148.82,
+      "stat": 23.91,
+      "syst": 0.74
+     },
+     "bin3": {
+      "Vc": 207.91,
+      "stat": 14.86,
+      "syst": 6.25
+     },
+     "bin4": {
+      "Vc": 219.03,
+      "stat": 13.65,
+      "syst": 0.24
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 62.71,
+     "bin1": {
+      "Vc": 129.48,
+      "stat": 20.53,
+      "syst": 5.03
+     },
+     "bin2": {
+      "Vc": 161.44,
+      "stat": 20.97,
+      "syst": 4.78
+     },
+     "bin3": {
+      "Vc": 204.22,
+      "stat": 14.36,
+      "syst": 6.86
+     },
+     "bin4": {
+      "Vc": 266.03,
+      "stat": 10.58,
+      "syst": 2.78
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 85.24,
+     "bin1": {
+      "Vc": 134.24,
+      "stat": 19.29,
+      "syst": 2.23
+     },
+     "bin2": {
+      "Vc": 164.37,
+      "stat": 19.91,
+      "syst": 2.66
+     },
+     "bin3": {
+      "Vc": 202.28,
+      "stat": 14.07,
+      "syst": 4.89
+     },
+     "bin4": {
+      "Vc": 267.8,
+      "stat": 10.21,
+      "syst": 1.68
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 115.88,
+     "bin1": {
+      "Vc": 137.72,
+      "stat": 18.55,
+      "syst": 1.88
+     },
+     "bin2": {
+      "Vc": 195.99,
+      "stat": 16.34,
+      "syst": 0.74
+     },
+     "bin3": {
+      "Vc": 211.54,
+      "stat": 13.16,
+      "syst": 0.22
+     },
+     "bin4": {
+      "Vc": 242.28,
+      "stat": 11.02,
+      "syst": 4.53
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 157.52,
+     "bin1": {
+      "Vc": 153.61,
+      "stat": 16.51,
+      "syst": 3.43
+     },
+     "bin2": {
+      "Vc": 182.84,
+      "stat": 17.37,
+      "syst": 5.2
+     },
+     "bin3": {
+      "Vc": 199.42,
+      "stat": 13.79,
+      "syst": 3.39
+     },
+     "bin4": {
+      "Vc": 254.93,
+      "stat": 10.33,
+      "syst": 2.36
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 214.12,
+     "bin1": {
+      "Vc": 129.24,
+      "stat": 19.63,
+      "syst": 7.02
+     },
+     "bin2": {
+      "Vc": 200.63,
+      "stat": 15.75,
+      "syst": 1.82
+     },
+     "bin3": {
+      "Vc": 186.23,
+      "stat": 14.66,
+      "syst": 4.47
+     },
+     "bin4": {
+      "Vc": 259.31,
+      "stat": 10.09,
+      "syst": 4.97
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 291.07,
+     "bin1": {
+      "Vc": 132.43,
+      "stat": 19.22,
+      "syst": 1.81
+     },
+     "bin2": {
+      "Vc": 169.03,
+      "stat": 18.72,
+      "syst": 7.81
+     },
+     "bin3": {
+      "Vc": 218.5,
+      "stat": 12.49,
+      "syst": 7.13
+     },
+     "bin4": {
+      "Vc": 267.81,
+      "stat": 9.78,
+      "syst": 2.48
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 395.66,
+     "bin1": {
+      "Vc": 121.39,
+      "stat": 21.12,
+      "syst": 6.56
+     },
+     "bin2": {
+      "Vc": 180.77,
+      "stat": 17.6,
+      "syst": 4.37
+     },
+     "bin3": {
+      "Vc": 223.62,
+      "stat": 12.26,
+      "syst": 5.77
+     },
+     "bin4": {
+      "Vc": 256.99,
+      "stat": 10.21,
+      "syst": 6.72
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 537.85,
+     "bin1": {
+      "Vc": 133.65,
+      "stat": 19.38,
+      "syst": 2.91
+     },
+     "bin2": {
+      "Vc": 158.57,
+      "stat": 20.21,
+      "syst": 8.73
+     },
+     "bin3": {
+      "Vc": 231.32,
+      "stat": 11.93,
+      "syst": 5.14
+     },
+     "bin4": {
+      "Vc": 267.75,
+      "stat": 9.86,
+      "syst": 6.16
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 731.13,
+     "bin1": {
+      "Vc": 150.06,
+      "stat": 17.52,
+      "syst": 5.14
+     },
+     "bin2": {
+      "Vc": 157.88,
+      "stat": 20.54,
+      "syst": 5.26
+     },
+     "bin3": {
+      "Vc": 214.62,
+      "stat": 13.01,
+      "syst": 11.59
+     },
+     "bin4": {
+      "Vc": 253.18,
+      "stat": 10.56,
+      "syst": 15.99
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 993.86,
+     "bin1": {
+      "Vc": 118.75,
+      "stat": 22.63,
+      "syst": 12.11
+     },
+     "bin2": {
+      "Vc": 141.44,
+      "stat": 23.4,
+      "syst": 8.69
+     },
+     "bin3": {
+      "Vc": 201.41,
+      "stat": 14.15,
+      "syst": 17.72
+     },
+     "bin4": {
+      "Vc": 253.44,
+      "stat": 10.76,
+      "syst": 20.25
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 1351.01,
+     "bin1": {
+      "Vc": 70.9,
+      "stat": 39.65,
+      "syst": 9.13
+     },
+     "bin2": {
+      "Vc": 110.54,
+      "stat": 31.3,
+      "syst": 14.57
+     },
+     "bin3": {
+      "Vc": 189.4,
+      "stat": 15.72,
+      "syst": 29.8
+     },
+     "bin4": {
+      "Vc": 241.96,
+      "stat": 11.78,
+      "syst": 41.18
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 1836.51,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 132.34,
+      "stat": 30.08,
+      "syst": 35.83
+     },
+     "bin3": {
+      "Vc": 155.53,
+      "stat": 22.01,
+      "syst": 66.31
+     },
+     "bin4": {
+      "Vc": 232.89,
+      "stat": 14.07,
+      "syst": 72.54
+     }
+    },
+    {
+     "sample": "All",
+     "R_kpc": 2496.47,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": 151.68,
+      "stat": 31.7,
+      "syst": 110.98
+     },
+     "bin4": {
+      "Vc": 227.03,
+      "stat": 20.28,
+      "syst": 150.56
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 33.94,
+     "bin1": {
+      "Vc": 102.67,
+      "stat": 29.48,
+      "syst": 1.75
+     },
+     "bin2": {
+      "Vc": 111.47,
+      "stat": 41.71,
+      "syst": 25.3
+     },
+     "bin3": {
+      "Vc": 186.77,
+      "stat": 25.95,
+      "syst": 0.08
+     },
+     "bin4": {
+      "Vc": 183.25,
+      "stat": 43.71,
+      "syst": 13.71
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 46.13,
+     "bin1": {
+      "Vc": 104.83,
+      "stat": 27.43,
+      "syst": 0.48
+     },
+     "bin2": {
+      "Vc": 146.8,
+      "stat": 29.73,
+      "syst": 0.1
+     },
+     "bin3": {
+      "Vc": 217.35,
+      "stat": 20.59,
+      "syst": 9.83
+     },
+     "bin4": {
+      "Vc": 226.75,
+      "stat": 32.09,
+      "syst": 9.87
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 62.71,
+     "bin1": {
+      "Vc": 130.66,
+      "stat": 21.19,
+      "syst": 3.55
+     },
+     "bin2": {
+      "Vc": 134.16,
+      "stat": 30.65,
+      "syst": 9.86
+     },
+     "bin3": {
+      "Vc": 190.42,
+      "stat": 22.24,
+      "syst": 8.98
+     },
+     "bin4": {
+      "Vc": 235.4,
+      "stat": 28.73,
+      "syst": 6.79
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 85.24,
+     "bin1": {
+      "Vc": 134.03,
+      "stat": 20.13,
+      "syst": 2.39
+     },
+     "bin2": {
+      "Vc": 142.03,
+      "stat": 28.04,
+      "syst": 0.4
+     },
+     "bin3": {
+      "Vc": 191.68,
+      "stat": 21.41,
+      "syst": 7.47
+     },
+     "bin4": {
+      "Vc": 267.65,
+      "stat": 24.11,
+      "syst": 6.88
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 115.88,
+     "bin1": {
+      "Vc": 134.53,
+      "stat": 19.77,
+      "syst": 0.99
+     },
+     "bin2": {
+      "Vc": 203.03,
+      "stat": 19.1,
+      "syst": 3.38
+     },
+     "bin3": {
+      "Vc": 188.99,
+      "stat": 21.11,
+      "syst": 5.26
+     },
+     "bin4": {
+      "Vc": 234.65,
+      "stat": 26.75,
+      "syst": 0.8
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 157.52,
+     "bin1": {
+      "Vc": 152.85,
+      "stat": 17.29,
+      "syst": 3.27
+     },
+     "bin2": {
+      "Vc": 198.58,
+      "stat": 19.36,
+      "syst": 3.2
+     },
+     "bin3": {
+      "Vc": 205.24,
+      "stat": 19.1,
+      "syst": 3.36
+     },
+     "bin4": {
+      "Vc": 227.55,
+      "stat": 26.85,
+      "syst": 1.95
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 214.12,
+     "bin1": {
+      "Vc": 130.24,
+      "stat": 20.29,
+      "syst": 7.41
+     },
+     "bin2": {
+      "Vc": 189.99,
+      "stat": 20.1,
+      "syst": 2.07
+     },
+     "bin3": {
+      "Vc": 204.85,
+      "stat": 18.96,
+      "syst": 0.87
+     },
+     "bin4": {
+      "Vc": 168.41,
+      "stat": 35.8,
+      "syst": 16.54
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 291.07,
+     "bin1": {
+      "Vc": 136.31,
+      "stat": 19.45,
+      "syst": 3.06
+     },
+     "bin2": {
+      "Vc": 156.86,
+      "stat": 24.34,
+      "syst": 5.08
+     },
+     "bin3": {
+      "Vc": 213.73,
+      "stat": 18.12,
+      "syst": 5.52
+     },
+     "bin4": {
+      "Vc": 243.98,
+      "stat": 24.69,
+      "syst": 10.94
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 395.66,
+     "bin1": {
+      "Vc": 111.52,
+      "stat": 23.95,
+      "syst": 9.81
+     },
+     "bin2": {
+      "Vc": 164.64,
+      "stat": 23.3,
+      "syst": 1.99
+     },
+     "bin3": {
+      "Vc": 206.89,
+      "stat": 18.75,
+      "syst": 7.55
+     },
+     "bin4": {
+      "Vc": 221.55,
+      "stat": 27.14,
+      "syst": 15.56
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 537.85,
+     "bin1": {
+      "Vc": 124.24,
+      "stat": 21.73,
+      "syst": 4.59
+     },
+     "bin2": {
+      "Vc": 149.31,
+      "stat": 25.88,
+      "syst": 4.09
+     },
+     "bin3": {
+      "Vc": 210.32,
+      "stat": 18.56,
+      "syst": 6.66
+     },
+     "bin4": {
+      "Vc": 256.35,
+      "stat": 23.58,
+      "syst": 12.88
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 731.13,
+     "bin1": {
+      "Vc": 132.87,
+      "stat": 20.62,
+      "syst": 4.68
+     },
+     "bin2": {
+      "Vc": 128.65,
+      "stat": 30.35,
+      "syst": 3.3
+     },
+     "bin3": {
+      "Vc": 176.99,
+      "stat": 22.29,
+      "syst": 15.75
+     },
+     "bin4": {
+      "Vc": 238.18,
+      "stat": 25.63,
+      "syst": 25.07
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 993.86,
+     "bin1": {
+      "Vc": 99.54,
+      "stat": 28.14,
+      "syst": 13.54
+     },
+     "bin2": {
+      "Vc": 101.73,
+      "stat": 39.2,
+      "syst": 2.93
+     },
+     "bin3": {
+      "Vc": 149.29,
+      "stat": 26.94,
+      "syst": 26.32
+     },
+     "bin4": {
+      "Vc": 248.84,
+      "stat": 25.0,
+      "syst": 29.73
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 1351.01,
+     "bin1": {
+      "Vc": 12.07,
+      "stat": 242.65,
+      "syst": 79.45
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": 155.24,
+      "stat": 27.06,
+      "syst": 33.89
+     },
+     "bin4": {
+      "Vc": 255.97,
+      "stat": 25.41,
+      "syst": 55.6
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 1836.51,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 52.47,
+      "stat": 91.39,
+      "syst": 105.32
+     },
+     "bin3": {
+      "Vc": 107.62,
+      "stat": 44.86,
+      "syst": 98.5
+     },
+     "bin4": {
+      "Vc": 251.25,
+      "stat": 29.81,
+      "syst": 104.73
+     }
+    },
+    {
+     "sample": "LTG",
+     "R_kpc": 2496.47,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": 132.65,
+      "stat": 51.12,
+      "syst": 102.1
+     },
+     "bin4": {
+      "Vc": 278.1,
+      "stat": 37.88,
+      "syst": 179.31
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 33.94,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 119.58,
+      "stat": 54.37,
+      "syst": 4.89
+     },
+     "bin3": {
+      "Vc": 148.54,
+      "stat": 30.22,
+      "syst": 12.09
+     },
+     "bin4": {
+      "Vc": 243.24,
+      "stat": 14.46,
+      "syst": 1.34
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 46.13,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 152.76,
+      "stat": 40.23,
+      "syst": 2.3
+     },
+     "bin3": {
+      "Vc": 198.93,
+      "stat": 21.47,
+      "syst": 2.7
+     },
+     "bin4": {
+      "Vc": 217.43,
+      "stat": 15.08,
+      "syst": 1.91
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 62.71,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 207.45,
+      "stat": 28.75,
+      "syst": 2.05
+     },
+     "bin3": {
+      "Vc": 216.17,
+      "stat": 18.81,
+      "syst": 5.16
+     },
+     "bin4": {
+      "Vc": 272.01,
+      "stat": 11.38,
+      "syst": 2.06
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 85.24,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 203.14,
+      "stat": 28.28,
+      "syst": 7.2
+     },
+     "bin3": {
+      "Vc": 211.63,
+      "stat": 18.68,
+      "syst": 2.74
+     },
+     "bin4": {
+      "Vc": 267.84,
+      "stat": 11.26,
+      "syst": 3.44
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 115.88,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 179.98,
+      "stat": 31.55,
+      "syst": 6.25
+     },
+     "bin3": {
+      "Vc": 230.92,
+      "stat": 16.83,
+      "syst": 4.03
+     },
+     "bin4": {
+      "Vc": 243.94,
+      "stat": 12.1,
+      "syst": 5.32
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 157.52,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 143.28,
+      "stat": 39.34,
+      "syst": 11.38
+     },
+     "bin3": {
+      "Vc": 193.62,
+      "stat": 19.93,
+      "syst": 9.57
+     },
+     "bin4": {
+      "Vc": 260.78,
+      "stat": 11.19,
+      "syst": 2.44
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 214.12,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 221.99,
+      "stat": 25.34,
+      "syst": 8.31
+     },
+     "bin3": {
+      "Vc": 166.05,
+      "stat": 23.12,
+      "syst": 9.14
+     },
+     "bin4": {
+      "Vc": 276.14,
+      "stat": 10.51,
+      "syst": 3.41
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 291.07,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 193.07,
+      "stat": 29.29,
+      "syst": 12.78
+     },
+     "bin3": {
+      "Vc": 223.12,
+      "stat": 17.25,
+      "syst": 8.66
+     },
+     "bin4": {
+      "Vc": 273.06,
+      "stat": 10.65,
+      "syst": 4.47
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 395.66,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 211.98,
+      "stat": 26.84,
+      "syst": 8.51
+     },
+     "bin3": {
+      "Vc": 239.18,
+      "stat": 16.21,
+      "syst": 4.27
+     },
+     "bin4": {
+      "Vc": 264.64,
+      "stat": 11.02,
+      "syst": 4.99
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 537.85,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 177.3,
+      "stat": 32.37,
+      "syst": 17.42
+     },
+     "bin3": {
+      "Vc": 250.55,
+      "stat": 15.57,
+      "syst": 3.9
+     },
+     "bin4": {
+      "Vc": 270.38,
+      "stat": 10.86,
+      "syst": 5.73
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 731.13,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 208.64,
+      "stat": 27.89,
+      "syst": 16.49
+     },
+     "bin3": {
+      "Vc": 246.7,
+      "stat": 16.03,
+      "syst": 8.87
+     },
+     "bin4": {
+      "Vc": 256.61,
+      "stat": 11.59,
+      "syst": 14.0
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 993.86,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 203.44,
+      "stat": 29.17,
+      "syst": 22.66
+     },
+     "bin3": {
+      "Vc": 242.89,
+      "stat": 16.62,
+      "syst": 13.2
+     },
+     "bin4": {
+      "Vc": 254.53,
+      "stat": 11.92,
+      "syst": 18.05
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 1351.01,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 203.2,
+      "stat": 30.52,
+      "syst": 32.02
+     },
+     "bin3": {
+      "Vc": 218.53,
+      "stat": 19.31,
+      "syst": 28.02
+     },
+     "bin4": {
+      "Vc": 238.52,
+      "stat": 13.29,
+      "syst": 37.53
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 1836.51,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 224.14,
+      "stat": 31.85,
+      "syst": 61.31
+     },
+     "bin3": {
+      "Vc": 192.16,
+      "stat": 25.25,
+      "syst": 52.15
+     },
+     "bin4": {
+      "Vc": 228.33,
+      "stat": 15.95,
+      "syst": 66.53
+     }
+    },
+    {
+     "sample": "ETG",
+     "R_kpc": 2496.47,
+     "bin1": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin2": {
+      "Vc": 172.16,
+      "stat": 58.27,
+      "syst": 121.2
+     },
+     "bin3": {
+      "Vc": 168.75,
+      "stat": 40.41,
+      "syst": 119.46
+     },
+     "bin4": {
+      "Vc": 213.2,
+      "stat": 24.01,
+      "syst": 142.97
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 33.94,
+     "bin1": {
+      "Vc": 166.34,
+      "stat": 9.78,
+      "syst": 4.14
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 46.13,
+     "bin1": {
+      "Vc": 177.0,
+      "stat": 8.64,
+      "syst": 1.75
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 62.71,
+     "bin1": {
+      "Vc": 197.74,
+      "stat": 7.37,
+      "syst": 2.51
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 85.24,
+     "bin1": {
+      "Vc": 199.34,
+      "stat": 7.1,
+      "syst": 2.69
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 115.88,
+     "bin1": {
+      "Vc": 199.32,
+      "stat": 6.96,
+      "syst": 1.82
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 157.52,
+     "bin1": {
+      "Vc": 201.74,
+      "stat": 6.8,
+      "syst": 0.58
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 214.12,
+     "bin1": {
+      "Vc": 198.47,
+      "stat": 6.88,
+      "syst": 3.94
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 291.07,
+     "bin1": {
+      "Vc": 204.89,
+      "stat": 6.68,
+      "syst": 1.46
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 395.66,
+     "bin1": {
+      "Vc": 202.57,
+      "stat": 6.79,
+      "syst": 4.74
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 537.85,
+     "bin1": {
+      "Vc": 207.41,
+      "stat": 6.68,
+      "syst": 4.12
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 731.13,
+     "bin1": {
+      "Vc": 200.92,
+      "stat": 6.98,
+      "syst": 9.37
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 993.86,
+     "bin1": {
+      "Vc": 189.02,
+      "stat": 7.58,
+      "syst": 15.31
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 1351.01,
+     "bin1": {
+      "Vc": 170.16,
+      "stat": 8.8,
+      "syst": 27.41
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 1836.51,
+     "bin1": {
+      "Vc": 146.1,
+      "stat": 11.78,
+      "syst": 49.75
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "All (not split by mass)",
+     "R_kpc": 2496.47,
+     "bin1": {
+      "Vc": 127.1,
+      "stat": 19.03,
+      "syst": 99.66
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 33.94,
+     "bin1": {
+      "Vc": 169.73,
+      "stat": 32.58,
+      "syst": 15.87
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 46.13,
+     "bin1": {
+      "Vc": 168.12,
+      "stat": 31.26,
+      "syst": 1.35
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 62.71,
+     "bin1": {
+      "Vc": 118.47,
+      "stat": 42.15,
+      "syst": 1.36
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 85.24,
+     "bin1": {
+      "Vc": 228.04,
+      "stat": 21.34,
+      "syst": 3.87
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 115.88,
+     "bin1": {
+      "Vc": 195.4,
+      "stat": 24.46,
+      "syst": 0.83
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 157.52,
+     "bin1": {
+      "Vc": 210.31,
+      "stat": 22.38,
+      "syst": 1.9
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 214.12,
+     "bin1": {
+      "Vc": 203.85,
+      "stat": 22.77,
+      "syst": 0.72
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 291.07,
+     "bin1": {
+      "Vc": 198.58,
+      "stat": 23.18,
+      "syst": 5.25
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 395.66,
+     "bin1": {
+      "Vc": 198.23,
+      "stat": 23.24,
+      "syst": 3.15
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 537.85,
+     "bin1": {
+      "Vc": 192.38,
+      "stat": 23.93,
+      "syst": 4.81
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 731.13,
+     "bin1": {
+      "Vc": 179.84,
+      "stat": 25.72,
+      "syst": 9.96
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 993.86,
+     "bin1": {
+      "Vc": 160.91,
+      "stat": 29.12,
+      "syst": 20.89
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 1351.01,
+     "bin1": {
+      "Vc": 188.59,
+      "stat": 25.74,
+      "syst": 32.13
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 1836.51,
+     "bin1": {
+      "Vc": 203.41,
+      "stat": 27.19,
+      "syst": 53.93
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    },
+    {
+     "sample": "GAMA (not split by mass)",
+     "R_kpc": 2496.47,
+     "bin1": {
+      "Vc": 142.92,
+      "stat": 54.13,
+      "syst": 129.44
+     },
+     "bin2": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin3": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     },
+     "bin4": {
+      "Vc": null,
+      "stat": null,
+      "syst": null
+     }
+    }
+   ],
+   "snippet_check": {
+    "quantity": "Table 1 row (All, R=291.07 kpc)",
+    "source": {
+     "paper_key": "mistele_mrt",
+     "arxiv": "2406.09685",
+     "location": "data file"
+    },
+    "snippet": "All 291.07 132.43 19.22 1.81 169.03 18.72 7.81 218.50 12.49 7.13 267.81 9.78 2.48"
+   }
+  },
+  "table2_BTFR": {
+   "columns": "sample (radial range for Vflat), log10 Mb,eff [Msun], Vflat [km/s] +- stat",
+   "rows": [
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.1,
+     "Vflat": 137.3,
+     "Vflat_err_stat": 11.5
+    },
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.66,
+     "Vflat": 182.1,
+     "Vflat_err_stat": 10.8
+    },
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.96,
+     "Vflat": 204.7,
+     "Vflat_err_stat": 8.2
+    },
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 11.29,
+     "Vflat": 260.2,
+     "Vflat_err_stat": 6.2
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.08,
+     "Vflat": 137.4,
+     "Vflat_err_stat": 11.9
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.66,
+     "Vflat": 180.1,
+     "Vflat_err_stat": 13.6
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.95,
+     "Vflat": 200.5,
+     "Vflat_err_stat": 11.9
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 11.23,
+     "Vflat": 236.1,
+     "Vflat_err_stat": 15.9
+    },
+    {
+     "sample": "ETG",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.68,
+     "Vflat": 197.4,
+     "Vflat_err_stat": 17.7
+    },
+    {
+     "sample": "ETG",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 10.97,
+     "Vflat": 211.0,
+     "Vflat_err_stat": 11.3
+    },
+    {
+     "sample": "ETG",
+     "Vflat_radii": "50 kpc < R < 300 kpc",
+     "log10Mb": 11.3,
+     "Vflat": 266.5,
+     "Vflat_err_stat": 6.7
+    },
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.11,
+     "Vflat": 135.8,
+     "Vflat_err_stat": 9.6
+    },
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.66,
+     "Vflat": 175.3,
+     "Vflat_err_stat": 9.3
+    },
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.96,
+     "Vflat": 211.0,
+     "Vflat_err_stat": 6.6
+    },
+    {
+     "sample": "All",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 11.29,
+     "Vflat": 259.4,
+     "Vflat_err_stat": 5.1
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.08,
+     "Vflat": 131.8,
+     "Vflat_err_stat": 10.4
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.66,
+     "Vflat": 169.4,
+     "Vflat_err_stat": 12.1
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.95,
+     "Vflat": 197.5,
+     "Vflat_err_stat": 10.1
+    },
+    {
+     "sample": "LTG",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 11.23,
+     "Vflat": 238.9,
+     "Vflat_err_stat": 12.8
+    },
+    {
+     "sample": "ETG",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.68,
+     "Vflat": 199.4,
+     "Vflat_err_stat": 14.5
+    },
+    {
+     "sample": "ETG",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 10.97,
+     "Vflat": 227.2,
+     "Vflat_err_stat": 8.7
+    },
+    {
+     "sample": "ETG",
+     "Vflat_radii": "50 kpc < R < 1000 kpc",
+     "log10Mb": 11.3,
+     "Vflat": 264.7,
+     "Vflat_err_stat": 5.6
+    }
+   ],
+   "kinematic_bins_Lelli2019": [
+    {
+     "log10Mb": 8.69,
+     "log10Mb_err": 0.06,
+     "Vflat": 54.2,
+     "Vflat_err": 1.0
+    },
+    {
+     "log10Mb": 9.25,
+     "log10Mb_err": 0.04,
+     "Vflat": 77.9,
+     "Vflat_err": 1.1
+    },
+    {
+     "log10Mb": 9.67,
+     "log10Mb_err": 0.08,
+     "Vflat": 89.1,
+     "Vflat_err": 1.3
+    },
+    {
+     "log10Mb": 10.0,
+     "log10Mb_err": 0.05,
+     "Vflat": 121.7,
+     "Vflat_err": 1.8
+    },
+    {
+     "log10Mb": 10.46,
+     "log10Mb_err": 0.05,
+     "Vflat": 160.7,
+     "Vflat_err": 1.7
+    },
+    {
+     "log10Mb": 10.72,
+     "log10Mb_err": 0.09,
+     "Vflat": 186.6,
+     "Vflat_err": 3.3
+    },
+    {
+     "log10Mb": 11.03,
+     "log10Mb_err": 0.05,
+     "Vflat": 219.3,
+     "Vflat_err": 1.8
+    },
+    {
+     "log10Mb": 11.34,
+     "log10Mb_err": 0.1,
+     "Vflat": 271.0,
+     "Vflat_err": 6.4
+    }
+   ],
+   "derived_by_compiler": {
+    "rows": [
+     {
+      "sample": "All",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.1,
+      "Vflat": 137.3,
+      "A_Mb_over_V4": 35.4,
+      "log10Mb_minus_Lelli2019fit": -0.12
+     },
+     {
+      "sample": "All",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.66,
+      "Vflat": 182.1,
+      "A_Mb_over_V4": 41.6,
+      "log10Mb_minus_Lelli2019fit": -0.032
+     },
+     {
+      "sample": "All",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.96,
+      "Vflat": 204.7,
+      "A_Mb_over_V4": 51.9,
+      "log10Mb_minus_Lelli2019fit": 0.072
+     },
+     {
+      "sample": "All",
+      "Rmax_kpc": 300,
+      "log10Mb": 11.29,
+      "Vflat": 260.2,
+      "A_Mb_over_V4": 42.5,
+      "log10Mb_minus_Lelli2019fit": 0.001
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.08,
+      "Vflat": 137.4,
+      "A_Mb_over_V4": 33.7,
+      "log10Mb_minus_Lelli2019fit": -0.141
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.66,
+      "Vflat": 180.1,
+      "A_Mb_over_V4": 43.4,
+      "log10Mb_minus_Lelli2019fit": -0.014
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.95,
+      "Vflat": 200.5,
+      "A_Mb_over_V4": 55.1,
+      "log10Mb_minus_Lelli2019fit": 0.097
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 300,
+      "log10Mb": 11.23,
+      "Vflat": 236.1,
+      "A_Mb_over_V4": 54.7,
+      "log10Mb_minus_Lelli2019fit": 0.104
+     },
+     {
+      "sample": "ETG",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.68,
+      "Vflat": 197.4,
+      "A_Mb_over_V4": 31.5,
+      "log10Mb_minus_Lelli2019fit": -0.147
+     },
+     {
+      "sample": "ETG",
+      "Rmax_kpc": 300,
+      "log10Mb": 10.97,
+      "Vflat": 211.0,
+      "A_Mb_over_V4": 47.1,
+      "log10Mb_minus_Lelli2019fit": 0.032
+     },
+     {
+      "sample": "ETG",
+      "Rmax_kpc": 300,
+      "log10Mb": 11.3,
+      "Vflat": 266.5,
+      "A_Mb_over_V4": 39.6,
+      "log10Mb_minus_Lelli2019fit": -0.029
+     },
+     {
+      "sample": "All",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.11,
+      "Vflat": 135.8,
+      "A_Mb_over_V4": 37.9,
+      "log10Mb_minus_Lelli2019fit": -0.092
+     },
+     {
+      "sample": "All",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.66,
+      "Vflat": 175.3,
+      "A_Mb_over_V4": 48.4,
+      "log10Mb_minus_Lelli2019fit": 0.031
+     },
+     {
+      "sample": "All",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.96,
+      "Vflat": 211.0,
+      "A_Mb_over_V4": 46.0,
+      "log10Mb_minus_Lelli2019fit": 0.022
+     },
+     {
+      "sample": "All",
+      "Rmax_kpc": 1000,
+      "log10Mb": 11.29,
+      "Vflat": 259.4,
+      "A_Mb_over_V4": 43.1,
+      "log10Mb_minus_Lelli2019fit": 0.006
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.08,
+      "Vflat": 131.8,
+      "A_Mb_over_V4": 39.8,
+      "log10Mb_minus_Lelli2019fit": -0.072
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.66,
+      "Vflat": 169.4,
+      "A_Mb_over_V4": 55.5,
+      "log10Mb_minus_Lelli2019fit": 0.089
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.95,
+      "Vflat": 197.5,
+      "A_Mb_over_V4": 58.6,
+      "log10Mb_minus_Lelli2019fit": 0.122
+     },
+     {
+      "sample": "LTG",
+      "Rmax_kpc": 1000,
+      "log10Mb": 11.23,
+      "Vflat": 238.9,
+      "A_Mb_over_V4": 52.1,
+      "log10Mb_minus_Lelli2019fit": 0.084
+     },
+     {
+      "sample": "ETG",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.68,
+      "Vflat": 199.4,
+      "A_Mb_over_V4": 30.3,
+      "log10Mb_minus_Lelli2019fit": -0.164
+     },
+     {
+      "sample": "ETG",
+      "Rmax_kpc": 1000,
+      "log10Mb": 10.97,
+      "Vflat": 227.2,
+      "A_Mb_over_V4": 35.0,
+      "log10Mb_minus_Lelli2019fit": -0.092
+     },
+     {
+      "sample": "ETG",
+      "Rmax_kpc": 1000,
+      "log10Mb": 11.3,
+      "Vflat": 264.7,
+      "A_Mb_over_V4": 40.6,
+      "log10Mb_minus_Lelli2019fit": -0.018
+     }
+    ],
+    "note": "A = Mb/Vflat^4 in Msun (km/s)^-4; offset relative to Lelli+2019 Vf fit log Mb = 3.85 log Vf + 1.99 (their Table 1). Not given in Mistele+2024."
+   }
+  },
+  "facts": [
+   {
+    "quantity": "main result: flat circular velocities",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.3 / Sect. 4.1"
+    },
+    "snippet": "These circular velocity curves are approximately flat out to ∼ 1 Mpc, with no clear indication of a decline."
+   },
+   {
+    "quantity": "baryonic-mass bins",
+    "value": [
+     9.0,
+     10.5,
+     10.8,
+     11.1,
+     11.5
+    ],
+    "units": "log10(Mb/Msun)",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.2 / Sect. 2"
+    },
+    "snippet": "we use bin edges log 10Mb/M⊙ = [9.0, 10.5, 10.8, 11.1, 11.5]."
+   },
+   {
+    "quantity": "Hubble constant",
+    "value": 73,
+    "units": "km/s/Mpc",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.1 / Sect. 2"
+    },
+    "snippet": "we adopt a Hubble constant H0 = 73 km s−1 Mpc−1."
+   },
+   {
+    "quantity": "isolation criterion",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.2 / Sect. 2"
+    },
+    "snippet": "we require that lens galaxies have no neighbor with a fraction f⋆ > 0.1 of their stellar mass within a 3D distance Risol = 4 Mpc/h70.",
+    "caveats": "Stricter than Brouwer+21 (3 Mpc/h70); considered reliable to >=300 kpc, possibly ~1 Mpc."
+   },
+   {
+    "quantity": "stellar masses",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.2 / Sect. 2"
+    },
+    "snippet": "we adopt the stellar masses of Brouwer et al. (2021) for LTGs and correct the stellar masses of ETGs by a factor of 1.4.",
+    "caveats": "Hot gas added for ETGs (Chae+2021 scaling, Eq. 1), cold gas for LTGs (Eqs. 2-3); LTG/ETG split u-r = 2.5; H0=73 correction applied."
+   },
+   {
+    "quantity": "lens counts per bin",
+    "value": {
+     "LTG": [
+      24297,
+      17183,
+      22083,
+      11570
+     ],
+     "ETG": [
+      1795,
+      5439,
+      14220,
+      32440
+     ]
+    },
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.2 / Sect. 2"
+    },
+    "snippet": "the four mass bins contain [24297, 17183, 22083, 11570] LTG lenses and [1795, 5439, 14220, 32440] ETG lenses."
+   },
+   {
+    "quantity": "definition of stacked Vc",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.3 / Sect. 3.1"
+    },
+    "snippet": "These Vc values are not linear averages of the circular velocities of the individual stacked lens galaxies",
+    "caveats": "Vc = (R g_obs^stacked)^1/2 = sqrt(<Vc^2>); g_obs from exact deprojection (Eq. 5), not SIS."
+   },
+   {
+    "quantity": "Vflat radial range",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.6 / Sect. 4.3"
+    },
+    "snippet": "Our results are most robust over the radial range 50 kpc < R < 300 kpc"
+   },
+   {
+    "quantity": "Table 2 first row",
+    "value": {
+     "log10Mb": 10.1,
+     "Vflat": 137.3
+    },
+    "error": 11.5,
+    "units": "Msun, km/s",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.8 / Table 2"
+    },
+    "snippet": "All (R < 300 kpc) 10 .10 137 .3 ± 11.5"
+   },
+   {
+    "quantity": "Table 2 systematic",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.8 / Table 2 note"
+    },
+    "snippet": "The uncertainty on the mean Mb is statistically negligible for the lensing data, but we adopt 0.1 dex as a systematic uncertainty in M∗/L"
+   },
+   {
+    "quantity": "BTFR normalization vs kinematic",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.7 / Sect. 4.3"
+    },
+    "snippet": "When considering the entire lensing sample, there is no hint of an offset between the kinematic and lensing BTFR.",
+    "caveats": "No fitted BTFR slope/normalization is given in the paper; comparison is to the Lelli+2019 best fit (grey line), see item1d."
+   },
+   {
+    "quantity": "ETG vs LTG BTFR offset",
+    "value": {
+     "R<300kpc": 0.54,
+     "R<1000kpc": 1.86
+    },
+    "units": "sigma",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.7 / Sect. 4.3"
+    },
+    "snippet": "the difference corresponds to 0 .54σ and 1.86σ when Vflat is defined using radii up to 300 kpc and 1000 kpc, respectively."
+   },
+   {
+    "quantity": "Table 1 availability",
+    "source": {
+     "paper_key": "mistele_apjl",
+     "arxiv": "2406.09685",
+     "location": "arXiv PDF p.6 / Table 1 note"
+    },
+    "snippet": "Table 1 is published in its entirety in the machine-readable format."
+   }
+  ]
+ },
+ "item1c_mistele2024_JCAP_lensing_RAR": {
+  "summary": "Independent re-derivation of the KiDS-1000 lensing RAR (Table 1, 15 bins) with SPARC-consistent stellar masses, hot gas for ETGs, stricter isolation and exact deprojection; follows the M16 fit (a0=1.24e-10) down to g_bar~1e-14, ETGs and LTGs consistent; hint of downturn below 1e-14 where systematics dominate.",
+  "paper": {
+   "authors": "Mistele, T.; McGaugh, S.; Lelli, F.; Schombert, J.; Li, P.",
+   "year": 2024,
+   "journal": "JCAP 04 (2024) 020",
+   "arxiv": "2310.15248",
+   "doi": "10.1088/1475-7516/2024/04/020"
+  },
+  "table1_weak_lensing_RAR": {
+   "columns": "log10 g_bar [m/s^2], log10 g_obs [m/s^2], sigma_stat(log10 g_obs), sigma_sys(log10 g_obs) (interpolation/extrapolation only; +0.1 dex M* systematic not listed)",
+   "rows": [
+    {
+     "log10_gbar": -11.41,
+     "log10_gobs": -10.65,
+     "sig_stat": 0.06,
+     "sig_sys": 0.03
+    },
+    {
+     "log10_gbar": -11.65,
+     "log10_gobs": -10.78,
+     "sig_stat": 0.06,
+     "sig_sys": 0.03
+    },
+    {
+     "log10_gbar": -11.9,
+     "log10_gobs": -10.88,
+     "sig_stat": 0.06,
+     "sig_sys": 0.0
+    },
+    {
+     "log10_gbar": -12.15,
+     "log10_gobs": -11.0,
+     "sig_stat": 0.06,
+     "sig_sys": 0.0
+    },
+    {
+     "log10_gbar": -12.39,
+     "log10_gobs": -11.11,
+     "sig_stat": 0.05,
+     "sig_sys": 0.02
+    },
+    {
+     "log10_gbar": -12.64,
+     "log10_gobs": -11.21,
+     "sig_stat": 0.05,
+     "sig_sys": 0.0
+    },
+    {
+     "log10_gbar": -12.89,
+     "log10_gobs": -11.29,
+     "sig_stat": 0.05,
+     "sig_sys": 0.01
+    },
+    {
+     "log10_gbar": -13.13,
+     "log10_gobs": -11.47,
+     "sig_stat": 0.05,
+     "sig_sys": 0.02
+    },
+    {
+     "log10_gbar": -13.38,
+     "log10_gobs": -11.59,
+     "sig_stat": 0.05,
+     "sig_sys": 0.01
+    },
+    {
+     "log10_gbar": -13.63,
+     "log10_gobs": -11.76,
+     "sig_stat": 0.06,
+     "sig_sys": 0.03
+    },
+    {
+     "log10_gbar": -13.87,
+     "log10_gobs": -11.93,
+     "sig_stat": 0.07,
+     "sig_sys": 0.05
+    },
+    {
+     "log10_gbar": -14.12,
+     "log10_gobs": -12.08,
+     "sig_stat": 0.07,
+     "sig_sys": 0.07
+    },
+    {
+     "log10_gbar": -14.37,
+     "log10_gobs": -12.27,
+     "sig_stat": 0.08,
+     "sig_sys": 0.13
+    },
+    {
+     "log10_gbar": -14.61,
+     "log10_gobs": -12.44,
+     "sig_stat": 0.08,
+     "sig_sys": 0.25
+    },
+    {
+     "log10_gbar": -14.86,
+     "log10_gobs": -12.85,
+     "sig_stat": 0.12,
+     "sig_sys": 0.67
+    }
+   ],
+   "verified_against": "arXiv source file plots/RAR-table.tex and PDF p.12",
+   "caveats": "H0=73; Schombert&McGaugh SPS masses (Q_ETG=1.4), hot gas for ETGs, cold gas for LTGs, point masses; R_isol=4 Mpc/h70; log10 M*<11.1; exact deprojection (not SIS); 106,843 lenses; ETGs+LTGs combined; isolation considered reliable to g_bar~1e-13 (ETG) / 1e-14 (LTG)."
+  },
+  "facts": [
+   {
+    "quantity": "Table 1 first row",
+    "value": {
+     "log10_gbar": -11.41,
+     "log10_gobs": -10.65,
+     "sig_stat": 0.06,
+     "sig_sys": 0.03
+    },
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.12 / Table 1"
+    },
+    "snippet": "−11.41 −10.65 0 .06 0 .03"
+   },
+   {
+    "quantity": "Table 1 last row",
+    "value": {
+     "log10_gbar": -14.86,
+     "log10_gobs": -12.85,
+     "sig_stat": 0.12,
+     "sig_sys": 0.67
+    },
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.12 / Table 1"
+    },
+    "snippet": "−14.86 −12.85 0 .12 0 .67"
+   },
+   {
+    "quantity": "Table 1 caveat",
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.12 / Table 1 caption"
+    },
+    "snippet": "For brevity, the additional, fixed0.1 dexsystematic uncertainties ongobs from uncertainties in the stellar masses (shown as a gray band in Fig. 2) are not listed here."
+   },
+   {
+    "quantity": "main result",
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "We find that the RAR inferred from weak-lensing data smoothly continues that inferred from kinematic data by about2.5 dexin acceleration."
+   },
+   {
+    "quantity": "ETG/LTG",
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "Contrary to previous studies, we find that early- and late-type galaxies lie on the same joint RAR",
+    "caveats": "Requires R_isol = 4 Mpc/h70 and ETG masses x1.4 (+hot gas); with B21 masses/isolation they reproduce the B21 ETG/LTG difference (App. D.2)."
+   },
+   {
+    "quantity": "a0 adopted for fit function",
+    "value": 1.24e-10,
+    "units": "m/s^2",
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.10 / Sect. 5.1"
+    },
+    "snippet": "adoptinga0 = 1.24· 10−10 m/s2 [52]."
+   },
+   {
+    "quantity": "sample size",
+    "value": 106843,
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.7 / Sect. 3"
+    },
+    "snippet": "This leaves 106,843 lenses in our sample which is less than the 259,383 used by Ref. [1]."
+   },
+   {
+    "quantity": "stellar-mass correction",
+    "value": {
+     "Q_LTG": 1.0,
+     "Q_ETG": 1.4
+    },
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.8 / Sect. 4"
+    },
+    "snippet": "The agreement in the average mass-to-light ratio is excellent for LTGs:QLTG = 1.0. For ETGs, we find a modest offset:QETG = 1.4."
+   },
+   {
+    "quantity": "downturn",
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.19 / Sect. 7"
+    },
+    "snippet": "At the last few data points – where systematic uncertainties are important – we find hints of a downturn of the RAR."
+   },
+   {
+    "quantity": "LTG isolation depth",
+    "value": 1e-14,
+    "units": "m/s^2",
+    "source": {
+     "paper_key": "mistele_jcap",
+     "arxiv": "2310.15248",
+     "location": "arXiv PDF p.16 / Sect. 5.2"
+    },
+    "snippet": "our LTG sample seems to be sufficiently isolated to derive a robust lensing RAR down togbar≈ 10−14 m/s2."
+   }
+  ]
+ },
+ "item1d_lelli2019_kinematic_BTFR_reference": {
+  "paper": {
+   "authors": "Lelli, F.; McGaugh, S. S.; Schombert, J. M.; Desmond, H.; Katz, H.",
+   "year": 2019,
+   "journal": "MNRAS 484, 3267",
+   "arxiv": "1901.05966",
+   "doi": null
+  },
+  "purpose": "Kinematic BTFR best fit used as the comparison (grey) line in Mistele+2024 ApJL Fig. 3",
+  "facts": [
+   {
+    "quantity": "BTFR fit (Vf)",
+    "value": {
+     "slope": 3.85,
+     "intercept": 1.99,
+     "sigma_perp": 0.026,
+     "sigma_obs": 0.24,
+     "N": 123
+    },
+    "error": {
+     "slope": 0.09,
+     "intercept": 0.18,
+     "sigma_perp": 0.007
+    },
+    "source": {
+     "paper_key": "lelli2019",
+     "arxiv": "1901.05966",
+     "location": "arXiv PDF p.5 / Table 1"
+    },
+    "snippet": "Vf 3.85±0.09 1.99 ±0.18 0.026 ±0.007 0.24 123",
+    "caveats": "log(Mb/Msun) = s log(Vf/km s^-1) + I; Mb = 1.33 M_HI + 0.5 L[3.6]; SPARC."
+   },
+   {
+    "quantity": "fit form",
+    "source": {
+     "paper_key": "lelli2019",
+     "arxiv": "1901.05966",
+     "location": "arXiv PDF p.5 / Table 1 caption"
+    },
+    "snippet": "We fit the linear relation log(Mb/M⊙) = s log(x/km s−1) +I"
+   },
+   {
+    "quantity": "M/L assumption",
+    "source": {
+     "paper_key": "lelli2019",
+     "arxiv": "1901.05966",
+     "location": "arXiv PDF p.5 / Sect. 3"
+    },
+    "snippet": "We assume ϒ⋆ = 0.5 M⊙/L⊙ at [3.6] for all galaxies"
+   }
+  ]
+ },
+ "item2_Q2237_einstein_cross": {
+  "object": "Q2237+0305 (Einstein Cross; lens PGC 069457/2237+0305)",
+  "summary": {
+   "z_lens": 0.0394,
+   "z_source": 1.695,
+   "einstein_radius_arcsec": {
+    "vdV2010": 0.89,
+    "Trott2010": 0.88
+   },
+   "einstein_mass_Msun": {
+    "vdV2010": "1.54e10 (H0=73)",
+    "Trott2010": "(1.67+-0.07)e10 h70 (as printed)",
+    "Trott_Webster2002_model_total": "(1.560+-0.014)e10 (projected, image radius)"
+   },
+   "dark_matter_inside_RE": "vdV2010: stellar M/L 2.8-4.1 vs total 3.4 (I band) -> at most ~20% DM within R<~4\", consistent with none; Trott+2010: best fit 7%, 3sigma upper limit 15% within RE; Trott&Webster2002 model: halo 6.8e8 of 1.56e10 Msun (~4%) within image radius; Bate+2011 microlensing: smooth-matter fraction <=50% (68%), consistent with zero at images A,B."
+  },
+  "facts": [
+   {
+    "quantity": "redshifts, distance, scale",
+    "value": {
+     "z_s": 1.695,
+     "z_l": 0.0394,
+     "D_l_Mpc": 155,
+     "kpc_per_arcsec": 0.75
+    },
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.2 / Sect. 2.1"
+    },
+    "snippet": "at redshift zs = 1.695 is lensed by the bulge of the early-type spiral PGC 069457 at zl = 0.0394 (angular diameter distance Dl = 155 Mpc, 1 ′′ = 0 .75 kpc)",
+    "caveats": "Redshifts originally from Huchra et al. 1985 (pre-arXiv; not downloaded). Cosmology H0=73, Om=0.24."
+   },
+   {
+    "quantity": "Einstein radius and slope",
+    "value": 0.89,
+    "units": "arcsec",
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "Einstein radius RE = 0 .89′′, with a slope that is close to isothermal"
+   },
+   {
+    "quantity": "lens-model table (alpha=1.0 row)",
+    "value": {
+     "alpha": 1.0,
+     "R_E_arcsec": 0.8866,
+     "M_E_1e10Msun": 1.5441,
+     "M_c_1e10Msun": 1.5756
+    },
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.8 / Table 1"
+    },
+    "snippet": "1.0 0.0651 -0.0132 1.7733 -0.0415 0.0002 0.0006 0.0423 -0.0 007 0.0012 0.8866 1.5441 1.5756",
+    "caveats": "R_E ranges 0.8858-0.8878\" and M_E 1.5413-1.5481e10 Msun for slopes alpha=0.8-1.2."
+   },
+   {
+    "quantity": "mass slope",
+    "value": 1.0,
+    "error": 0.1,
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.13 / Sect. 5"
+    },
+    "snippet": "constrained the slope of the total mass surface density Σ ∝ Rα−2 to be α = 1 .0 ± 0.1."
+   },
+   {
+    "quantity": "Einstein mass and M/L",
+    "value": {
+     "M_E": 15400000000.0,
+     "Upsilon_E_I": 3.4
+    },
+    "units": "Msun; Msun/Lsun,I",
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "Einstein mass ME = 1.54 × 1010 M⊙ divided by the (projected) luminosity within RE, which yields a total mass-to-light ratio of Υ E = 3 .4 Υ ⊙,I",
+    "caveats": "\"error of at most a few per cent\" on Upsilon_E; projected (cylinder) mass; scales as 1/H0 (H0=73)."
+   },
+   {
+    "quantity": "dynamical M/L",
+    "value": 3.7,
+    "error": 0.5,
+    "units": "Msun/Lsun,I",
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "total mass-to-light ratio Υ dyn = 3 .7 ± 0.5 Υ ⊙,I (in the I-band)",
+    "caveats": "Axisymmetric Jeans models, mass-follows-light; may be overestimated by residual quasar light."
+   },
+   {
+    "quantity": "central velocity dispersion",
+    "value": 170,
+    "error": 9,
+    "units": "km/s",
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "central ( R < 1′′) value of σ0 = 170 ± 9 km s−1"
+   },
+   {
+    "quantity": "stellar M/L (SSP)",
+    "value": {
+     "range": [
+      2.8,
+      4.1
+     ],
+     "best": 3.3
+    },
+    "units": "Msun/Lsun,I",
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.1 / Abstract / Sect. 4.3"
+    },
+    "snippet": "stellar mass-to-light ratio Υ ⋆ from 2 .8 to 4 .1 Υ ⊙,I. Although a constant dark matter fraction of 20 per cent is not excluded",
+    "caveats": "Vazdekis SSP, Kroupa IMF, colours within R=0.2\"; best fit age ~8 Gyr, [Fe/H]~0.2 -> 3.3."
+   },
+   {
+    "quantity": "dark matter inside Einstein radius",
+    "value": "<~20% (consistent with 0)",
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.13 / Sect. 4.3"
+    },
+    "snippet": "The lower limit implies at most ∼ 20 per cent of dark matter within R ≲ 4′′, but the results are fully consistent with no dark matter at all."
+   },
+   {
+    "quantity": "Salpeter IMF",
+    "source": {
+     "paper_key": "vdv2010",
+     "arxiv": "0807.4175",
+     "location": "arXiv PDF p.13 / Sect. 4.3"
+    },
+    "snippet": "Adopting a Salpeter (1955) IMF with the same lower and upper mass cut-offs, increases Υ ⋆ by about 30 per cent.",
+    "caveats": "Paper: this would make Upsilon_* > Upsilon_tot (unphysical)."
+   },
+   {
+    "quantity": "lens redshift (TW2002)",
+    "value": 0.0394,
+    "source": {
+     "paper_key": "tw2002",
+     "arxiv": "astro-ph/0203196",
+     "location": "arXiv PDF p.2 / Sect. 3"
+    },
+    "snippet": "a barred spiral Sab type galaxy at a redshift of z=0.0394 was first discovered by Huchra et al. (1985)"
+   },
+   {
+    "quantity": "mass enclosed within images (from WP94)",
+    "value": 15900000000.0,
+    "error": 100000000.0,
+    "units": "h70^-1 Msun",
+    "source": {
+     "paper_key": "tw2002",
+     "arxiv": "astro-ph/0203196",
+     "location": "arXiv PDF p.5 / Table 1"
+    },
+    "snippet": "Mass Enclosed (1.48 ±0.01) h −1 75 WP (1994) (×1010M⊙) = (1.59 ±0.01) h −1 70"
+   },
+   {
+    "quantity": "projected mass within image radius by component",
+    "value": {
+     "halo": 6.8,
+     "bulge": 130.3,
+     "disc": 7.1,
+     "bar": 11.8,
+     "total": 156.0
+    },
+    "error": {
+     "halo": 0.2,
+     "bulge": 0.5,
+     "disc": 0.4,
+     "bar": 0.3,
+     "total": 1.4
+    },
+    "units": "1e8 Msun",
+    "source": {
+     "paper_key": "tw2002",
+     "arxiv": "astro-ph/0203196",
+     "location": "arXiv PDF p.6 / Table 4"
+    },
+    "snippet": "Halo 6.8±0.2 Bulge 130.3±0.5 Disc 7.1±0.4 Bar 11.8±0.3 Total 156.0±1.4",
+    "caveats": "Model-dependent (softened isothermal halo, core 13.4 kpc); EdS H0=70."
+   },
+   {
+    "quantity": "M/L and disc",
+    "value": {
+     "disc_ML_I": 1.1,
+     "bulge_ML_I": 2.9
+    },
+    "error": {
+     "disc_ML_I": 0.2,
+     "bulge_ML_I": 0.5
+    },
+    "source": {
+     "paper_key": "tw2002",
+     "arxiv": "astro-ph/0203196",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "The disc mass-to-light ratio is 1.1 ± 0.2 in the I-band and the bulge, 2.9 ± 0.5."
+   },
+   {
+    "quantity": "halo fraction of dynamical mass (30 kpc)",
+    "source": {
+     "paper_key": "tw2002",
+     "arxiv": "astro-ph/0203196",
+     "location": "arXiv PDF p.7 / Sect. 5.1"
+    },
+    "snippet": "The dark matter halo contributes ∼60 per cent of the dynamical mass of the galaxy within the optically visible region."
+   },
+   {
+    "quantity": "mass within Einstein radius",
+    "value": 16700000000.0,
+    "error": 700000000.0,
+    "units": "Msun (printed as h70 Msun)",
+    "source": {
+     "paper_key": "trott2010",
+     "arxiv": "0812.0748",
+     "location": "arXiv PDF p.9 / Sect. 4"
+    },
+    "snippet": "The mass within the Einstein radius (0.88 ′′) is (1.67±0.07)×1010h70M⊙"
+   },
+   {
+    "quantity": "components within Einstein radius",
+    "value": {
+     "halo": 8.8,
+     "bulge": 142.5,
+     "disc": 4.1,
+     "bar": 11.6
+    },
+    "error": {
+     "halo": 2.6,
+     "bulge": 7.0,
+     "disc": 1.0,
+     "bar": 1.9
+    },
+    "units": "1e8 Msun",
+    "source": {
+     "paper_key": "trott2010",
+     "arxiv": "0812.0748",
+     "location": "arXiv PDF p.9 / Table 4"
+    },
+    "snippet": "Halo 8.8 ±2.6 Bulge 142.5 ±7.0 Disc 4.1 ±1.0 Bar 11.6 ±1.9"
+   },
+   {
+    "quantity": "DM fraction within RE",
+    "value": {
+     "best_fit": 0.07,
+     "upper_3sigma": 0.15
+    },
+    "source": {
+     "paper_key": "trott2010",
+     "arxiv": "0812.0748",
+     "location": "arXiv PDF p.10 / Sect. 5"
+    },
+    "snippet": "radius of 20%, which is higher than our best fit value of 7% and our upper limit of 15% (3 σ)."
+   },
+   {
+    "quantity": "bulge/disc M/L (B band)",
+    "value": {
+     "bulge": 6.6,
+     "disc": 1.2
+    },
+    "error": {
+     "bulge": 0.3,
+     "disc": 0.3
+    },
+    "units": "Msun/Lsun,B",
+    "source": {
+     "paper_key": "trott2010",
+     "arxiv": "0812.0748",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "a bulge with M/L B=6.6± 0.3Υ ⊙, and a disc with M/L B =1.2± 0.3Υ ⊙"
+   },
+   {
+    "quantity": "central velocity dispersion",
+    "value": 172,
+    "error": 9,
+    "units": "km/s",
+    "source": {
+     "paper_key": "trott2010",
+     "arxiv": "0812.0748",
+     "location": "arXiv PDF p.11 / App. A"
+    },
+    "snippet": "σ c ≃ 172±9 kms −1, which compares well with the result of van de Ven et al. (2008) of σ c ≃ 166±2 kms −1."
+   },
+   {
+    "quantity": "microlensing smooth-matter fraction (Q2237 images A,B)",
+    "value": "<=50%",
+    "source": {
+     "paper_key": "bate2011",
+     "arxiv": "1103.0353",
+     "location": "arXiv PDF p.4 / Sect. 4"
+    },
+    "snippet": "J0924+0219, and ≤ 50 in Q2237+0305 (68 per cent"
+   },
+   {
+    "quantity": "microlensing conclusion",
+    "source": {
+     "paper_key": "bate2011",
+     "arxiv": "1103.0353",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "In this system, we find a smooth matter percentage that is consistent with zero."
+   }
+  ],
+  "derived_by_compiler": {
+   "g_N_projected_at_RE_m_s2": 4.82e-09,
+   "g_over_a0": 40.1,
+   "note": "G*M_E/R_E^2 with M_E=1.54e10 Msun, R_E=0.89\"*0.75 kpc/\" (vdV2010): Einstein-radius region is deeply Newtonian (g >> a0). Projected mass, so a proxy only."
+  }
+ },
+ "item3a_abell520": {
+  "object": "Abell 520 (z=0.201)",
+  "summary": "P3 = X-ray peak without bright galaxies (\"dark core\"). Mahdavi+07 (CFHT) and Jee+12 (WFPC2) and Jee+14 (ACS) find P3 mass ~3.4-4.4e13 Msun (r<150 kpc) with M/L 326-966 (B) / 266-813 (R); Clowe+12 (ACS+Magellan) find P3 = 2.26+-0.75e13 with M/L (z band, gas-subtracted) 114+-54, consistent with other peaks -> no dark core. Jee+14 attribute part of difference to CTI correction.",
+  "mahdavi2007": [
+   {
+    "quantity": "redshift",
+    "value": 0.201,
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "The rich cluster Abell 520 ( z = 0.201)"
+   },
+   {
+    "quantity": "peak 1 (150 kpc aperture)",
+    "value": {
+     "Mwl_1e13": 3.73,
+     "LB_1e11": 1.59,
+     "ML_B": 234,
+     "Mgas_1e13_ul90": 0.12,
+     "fg_ul90": 0.05
+    },
+    "error": {
+     "Mwl_1e13": 0.99,
+     "ML_B": 62
+    },
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "1 3 .73 ± 0.99 1 .59 234 ± 62 < 0.12 < 0.05"
+   },
+   {
+    "quantity": "peak 2",
+    "value": {
+     "Mwl_1e13": 3.6,
+     "LB_1e11": 4.22,
+     "ML_B": 85,
+     "Mgas_1e13_ul90": 0.28,
+     "fg_ul90": 0.12
+    },
+    "error": {
+     "Mwl_1e13": 1.04,
+     "ML_B": 25
+    },
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "2 3 .60 ± 1.04 4 .22 85 ± 25 < 0.28 < 0.12"
+   },
+   {
+    "quantity": "peak 3 (dark core, X-ray peak)",
+    "value": {
+     "Mwl_1e13": 4.4,
+     "LB_1e11": 0.61,
+     "ML_B": 721,
+     "Mgas_1e13_ul90": 0.52,
+     "fg_ul90": 0.17
+    },
+    "error": {
+     "Mwl_1e13": 1.09,
+     "ML_B": 179
+    },
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "3 4 .40 ± 1.09 0 .61 721 ± 179 < 0.52 < 0.17"
+   },
+   {
+    "quantity": "peak 4",
+    "value": {
+     "Mwl_1e13": 4.82,
+     "LB_1e11": 3.56,
+     "ML_B": 135,
+     "Mgas_1e13_ul90": 0.25,
+     "fg_ul90": 0.07
+    },
+    "error": {
+     "Mwl_1e13": 0.89,
+     "ML_B": 25
+    },
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "4 4 .82 ± 0.89 3 .56 135 ± 25 < 0.25 < 0.07"
+   },
+   {
+    "quantity": "peak 5 (galaxies, low lensing mass)",
+    "value": {
+     "Mwl_1e13": 1.22,
+     "LB_1e11": 2.13,
+     "ML_B": 57,
+     "Mgas_1e13_ul90": 0.22,
+     "fg_ul90": 1
+    },
+    "error": {
+     "Mwl_1e13": 1.06,
+     "ML_B": 49
+    },
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "5 1 .22 ± 1.06 2.13 57 ± 49 < 0.22 < 1"
+   },
+   {
+    "quantity": "cluster (710 kpc)",
+    "value": {
+     "Mwl_1e13": 49.98,
+     "LB_1e11": 21.57,
+     "ML_B": 232,
+     "Mgas_1e13_ul90": 6.44,
+     "fg_ul90": 0.15
+    },
+    "error": {
+     "Mwl_1e13": 5.47,
+     "ML_B": 25
+    },
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "Cluster 49 .98 ± 5.47 21 .57 232 ± 25 < 6.44 < 0.15"
+   },
+   {
+    "quantity": "table definitions",
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Table 2 note"
+    },
+    "snippet": "measured within a 150 kpc aperture from the combined r′, i′, and R catalogs.",
+    "caveats": "Units: Mwl h70^-1 1e13 Msun (projected); LB h70^-2 1e11 LB,sun; M/L h70 Msun/LB,sun; Mg h70^-2.5 1e13 Msun (90% upper limit, cylinder); H0=70, Om=0.3."
+   },
+   {
+    "quantity": "dark fraction of P3",
+    "value": {
+     "dark_fraction_min": 0.85,
+     "dark_mass_Msun": 28000000000000.0
+    },
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.5 / Sect. 3.2"
+    },
+    "snippet": "suggests that /greaterorsimilar85% or 2.8 × 1013 M⊙ of material has to be dark."
+   },
+   {
+    "quantity": "implied SIDM cross-section",
+    "value": 3.8,
+    "error": 1.1,
+    "units": "cm^2/g",
+    "source": {
+     "paper_key": "mahdavi2007",
+     "arxiv": "0706.3048",
+     "location": "arXiv PDF p.6 / Sect. 4.2"
+    },
+    "snippet": "a cross section of σdm/mdm ≈ 0.25/0.066 ≈ 3.8 ± 1.1 cm2 g−1, well above the upper limit of 1 cm 2 g−1"
+   }
+  ],
+  "jee2012": [
+   {
+    "quantity": "P1",
+    "value": {
+     "M_1e13": 2.63,
+     "LB_1e11": 1.54,
+     "ML_B": 171,
+     "fg_ul": 0.06
+    },
+    "error": {
+     "M_1e13": 0.48,
+     "ML_B": 31
+    },
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.6 / Table 1"
+    },
+    "snippet": "P1 (04 54 20.76, +02 57 38.4) (4.4,2.7) 2 .63 ± 0.48 1 .54 171 ± 31 < 0.06"
+   },
+   {
+    "quantity": "P2",
+    "value": {
+     "M_1e13": 3.83,
+     "LB_1e11": 3.58,
+     "ML_B": 106,
+     "fg_ul": 0.08
+    },
+    "error": {
+     "M_1e13": 0.42,
+     "ML_B": 12
+    },
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.6 / Table 1"
+    },
+    "snippet": "P2 (04 54 15.02, +02 57 09.2) (4.0,6.5) 3 .83 ± 0.42 3 .58 106 ± 12 < 0.08"
+   },
+   {
+    "quantity": "P3 dark core",
+    "value": {
+     "M_1e13": 4.0,
+     "LB_1e11": 0.68,
+     "ML_B": 588,
+     "fg_ul": 0.14
+    },
+    "error": {
+     "M_1e13": 0.38,
+     "ML_B": 56
+    },
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.6 / Table 1"
+    },
+    "snippet": "P3 (dark core) (04 54 11.07, +02 55 35.3) (6.7,6.5) 4 .00 ± 0.38 0 .68 588 ± 56 < 0.14"
+   },
+   {
+    "quantity": "P4",
+    "value": {
+     "M_1e13": 3.64,
+     "LB_1e11": 2.95,
+     "ML_B": 123,
+     "fg_ul": 0.08
+    },
+    "error": {
+     "M_1e13": 0.45,
+     "ML_B": 15
+    },
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.6 / Table 1"
+    },
+    "snippet": "P4 (04 54 04.32, +02 53 51.0) (5.1,6.9) 3 .64 ± 0.45 2 .95 123 ± 15 < 0.08"
+   },
+   {
+    "quantity": "P5",
+    "value": {
+     "M_1e13": 3.03,
+     "LB_1e11": 2.12,
+     "ML_B": 143,
+     "fg_ul": 0.05
+    },
+    "error": {
+     "M_1e13": 0.4,
+     "ML_B": 19
+    },
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.6 / Table 1"
+    },
+    "snippet": "P5 (04 54 16.53, +02 55 26.7) (6.5,6.4) 3 .03 ± 0.40 2 .12 143 ± 19 < 0.05"
+   },
+   {
+    "quantity": "P6",
+    "value": {
+     "M_1e13": 3.33,
+     "LB_1e11": 1.23,
+     "ML_B": 270,
+     "fg_ul": 0.06
+    },
+    "error": {
+     "M_1e13": 0.4,
+     "ML_B": 33
+    },
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.6 / Table 1"
+    },
+    "snippet": "P6 (04 54 08.85, +02 53 50.2) (9.6,6.7) 3 .33 ± 0.40 1 .23 270 ± 33 < 0.06",
+    "caveats": "r<150 kpc aperture masses (Fahlman aperture densitometry), h70^-1 1e13 Msun; B-band M/L; WFPC2+CFHT."
+   },
+   {
+    "quantity": "significance",
+    "value": ">10 sigma",
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "is now detected with more than 10 σ significance."
+   },
+   {
+    "quantity": "P3 M/L after gas subtraction",
+    "value": 510,
+    "units": "Msun/LB,sun",
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.7 / Sect. 4"
+    },
+    "snippet": "Subtraction of the X-ray gas mass from the total mass reduces the M/L value further to ∼ 510 M⊙/LB⊙"
+   },
+   {
+    "quantity": "superposition of neighbours",
+    "value": 3000000000000.0,
+    "units": "Msun",
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.7 / Sect. 4"
+    },
+    "snippet": "the resulting aperture mass within a r = 150 kpc would be≈ 3× 1012 M⊙, still an order of magnitude smaller than what is required to produce the lensing signal."
+   },
+   {
+    "quantity": "cluster total",
+    "value": 447000000000000.0,
+    "error": 48000000000000.0,
+    "units": "Msun",
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.3 / Sect. 3.2"
+    },
+    "snippet": "the aperture mass (Fahlman et al. 1994) within r = 710 kpc is (4 .47± 0.48)× 1014 M⊙"
+   },
+   {
+    "quantity": "conclusion",
+    "source": {
+     "paper_key": "jee2012",
+     "arxiv": "1202.6368",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "we conclude that none of these scenarios can be singled out yet as the definite explanation for this puzzle."
+   }
+  ],
+  "clowe2012": [
+   {
+    "quantity": "P1",
+    "value": {
+     "M_1e13": 3.03,
+     "L_1e11_z": 2.43,
+     "Mgas_1e13": 0.25,
+     "ML_z_gas_sub": 114
+    },
+    "error": {
+     "M_1e13": 0.69,
+     "ML": 28
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.11 / Table 1"
+    },
+    "snippet": "P1 04:54:19.60 +02:57:49.09 3.03 ± 0.69 2.43 0.25 114 ± 28"
+   },
+   {
+    "quantity": "P2",
+    "value": {
+     "M_1e13": 4.08,
+     "L_1e11_z": 4.16,
+     "Mgas_1e13": 0.4,
+     "ML_z_gas_sub": 88
+    },
+    "error": {
+     "M_1e13": 0.73,
+     "ML": 18
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.11 / Table 1"
+    },
+    "snippet": "P2 04:54:14.84 +02:57:06.25 4.08 ± 0.73 4.16 0.40 88 ± 18"
+   },
+   {
+    "quantity": "P3 (dark-peak location)",
+    "value": {
+     "M_1e13": 2.26,
+     "L_1e11_z": 1.38,
+     "Mgas_1e13": 0.69,
+     "ML_z_gas_sub": 114
+    },
+    "error": {
+     "M_1e13": 0.75,
+     "ML": 54
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.11 / Table 1"
+    },
+    "snippet": "P3 04:54:11.25 +02:55:37.28 2.26 ± 0.75 1.38 0.69 114 ± 54"
+   },
+   {
+    "quantity": "P4",
+    "value": {
+     "M_1e13": 4.64,
+     "L_1e11_z": 3.11,
+     "Mgas_1e13": 0.5,
+     "ML_z_gas_sub": 133
+    },
+    "error": {
+     "M_1e13": 0.63,
+     "ML": 20
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.11 / Table 1"
+    },
+    "snippet": "P4 04:54:04.57 +02:53:58.60 4.64 ± 0.63 3.11 0.50 133 ± 20"
+   },
+   {
+    "quantity": "P5",
+    "value": {
+     "M_1e13": 3.0,
+     "L_1e11_z": 2.66,
+     "Mgas_1e13": 0.44,
+     "ML_z_gas_sub": 96
+    },
+    "error": {
+     "M_1e13": 0.77,
+     "ML": 29
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.11 / Table 1"
+    },
+    "snippet": "P5 04:54:17.11 +02:55:30.09 3.00 ± 0.77 2.66 0.44 96 ± 29"
+   },
+   {
+    "quantity": "P6",
+    "value": {
+     "M_1e13": 3.03,
+     "L_1e11_z": 1.15,
+     "Mgas_1e13": 0.65,
+     "ML_z_gas_sub": 207
+    },
+    "error": {
+     "M_1e13": 0.66,
+     "ML": 57
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.11 / Table 1"
+    },
+    "snippet": "P6 04:54:09.61 +02:53:55.90 3.03 ± 0.66 1.15 0.65 207 ± 57",
+    "caveats": "r<150 kpc column mass from 2-D KS reconstruction; M/L in z band (Msun/Lz,sun) AFTER gas subtraction -> not comparable to B-band M/L of M07/J12; gas mass h70^-5/2 1e13 Msun."
+   },
+   {
+    "quantity": "P3 aperture densitometry",
+    "value": {
+     "M_zeta_1e13": 2.01,
+     "ML_zeta": 125,
+     "M_zetac_1e13": 2.84,
+     "ML_zetac": 150
+    },
+    "error": {
+     "M_zeta_1e13": 0.73,
+     "ML_zeta": 68,
+     "M_zetac_1e13": 0.64,
+     "ML_zetac": 44
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.12 / Table 2"
+    },
+    "snippet": "P3 2.01 ± 0.73 125 ± 68 2.84 ± 0.64 150 ± 44"
+   },
+   {
+    "quantity": "mean M/L of galaxy peaks vs P3",
+    "value": {
+     "mean_peaks_1245": 108,
+     "P3": 114
+    },
+    "error": {
+     "mean_peaks_1245": 24,
+     "P3": 54
+    },
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.10 / Sect. 3.4"
+    },
+    "snippet": "we obtain a weighted mean mass-to-light ratio of 108 ± 24 M⊙/ L⊙, which is in excellent agreement with the mass-to-light ratio measured for the region of the dark peak (114 ± 54 M ⊙/ L⊙)"
+   },
+   {
+    "quantity": "no dark core",
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "we do not detect the previously claimed “dark core” that contains excess mass with no significant galaxy overdensity at the location of the X-ray plasma."
+   },
+   {
+    "quantity": "conclusion",
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "We conclude that A520 shows no evidence to contradict the collisionless dark matter scenario."
+   },
+   {
+    "quantity": "total mass",
+    "value": 910000000000000.0,
+    "error": 190000000000000.0,
+    "units": "Msun",
+    "source": {
+     "paper_key": "clowe2012",
+     "arxiv": "1209.2143",
+     "location": "arXiv PDF p.12 / Sect. 3.4"
+    },
+    "snippet": "using a fixed concentration c = 3 . 5 gives a measurement of M200 = 9 . 1 ± 1. 9 × 1014 M⊙."
+   }
+  ],
+  "jee2014": [
+   {
+    "quantity": "P3 (old centroid) mass",
+    "value": {
+     "M_1e13": 3.35,
+     "Mgas_1e13_ul90": 0.74
+    },
+    "error": {
+     "M_1e13": 0.34
+    },
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.8 / Table 1"
+    },
+    "snippet": "P3 (old centroid) (04 54 11.07, +02 55 35.3) - 3 . 35 ± 0. 34 < 0. 74"
+   },
+   {
+    "quantity": "P3' (new centroid) mass",
+    "value": {
+     "M_1e13": 3.94,
+     "Mgas_1e13_ul90": 0.85
+    },
+    "error": {
+     "M_1e13": 0.3
+    },
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.8 / Table 1"
+    },
+    "snippet": "P3’ (new centroid) (04 54 07.51, +02 54 41.3) (5.1,6.2) 3 . 94 ± 0. 30 < 0. 85",
+    "caveats": "r<150 kpc aperture masses, h70^-1 1e13 Msun; gas 90% upper limits (h70^-5/2), conservative (x sqrt2 vs M07)."
+   },
+   {
+    "quantity": "P3' M/L",
+    "value": {
+     "LB": 0.32,
+     "LR": 0.38,
+     "L814": 0.54,
+     "ML_B": 966,
+     "ML_R": 813,
+     "ML_814": 572
+    },
+    "error": {
+     "ML_B": 97,
+     "ML_R": 78,
+     "ML_814": 55
+    },
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.14 / Table 2"
+    },
+    "snippet": "P3’ 0.32 0.38 0.54 966 ± 97 813 ± 78 572 ± 55",
+    "caveats": "Gas mass upper limit subtracted; luminosities h70^-2 1e11 Lsun."
+   },
+   {
+    "quantity": "P3 M/L",
+    "value": {
+     "LB": 0.8,
+     "LR": 0.98,
+     "L814": 1.4,
+     "ML_B": 326,
+     "ML_R": 266,
+     "ML_814": 186
+    },
+    "error": {
+     "ML_B": 43,
+     "ML_R": 34,
+     "ML_814": 24
+    },
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.14 / Table 2"
+    },
+    "snippet": "P3 0.80 0.98 1.40 326 ± 43 266 ± 34 186 ± 24"
+   },
+   {
+    "quantity": "normal peaks M/L",
+    "value": 112,
+    "units": "Msun/LR,sun",
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.15 / Fig. 14 caption"
+    },
+    "snippet": "The M/L values of the “normal” peaks ( P1, P2, P4, and P5) are consistent with one another with small scatters around their mean ∼112M⊙/L R⊙."
+   },
+   {
+    "quantity": "CTI sensitivity",
+    "value": 28700000000000.0,
+    "error": 4300000000000.0,
+    "units": "Msun",
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.13 / Sect. 5"
+    },
+    "snippet": "When no CTI correction is applied, the resulting aperture mass becomes Map(r < 150 kpc) = (2 . 87 ± 0. 43) × 1013M⊙"
+   },
+   {
+    "quantity": "P3' significance",
+    "value": 6.6,
+    "units": "sigma",
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.7 / Sect. 4.1"
+    },
+    "snippet": "The mean of the distribution is ∼6. 6σ , and the low-end tail is > 4σ ."
+   },
+   {
+    "quantity": "interpretation",
+    "source": {
+     "paper_key": "jee2014a520",
+     "arxiv": "1401.3356",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "we discuss a revised scenario, wherein dark matter with a more conventional range ( σDM /m DM < 1 cm 2g−1) of self-interacting cross-section can lead to the detection of this dark substructure."
+   }
+  ]
+ },
+ "item3b_MACSJ0025": {
+  "summary": "Two near-equal subclusters: M(<300 kpc, projected) = 2.5(+1.0/-1.7)e14 (SE) and 2.6(+0.5/-1.4)e14 Msun (NW); gas peak between them; total-mass peaks offset from gas peak (compiler-derived from Table 2 dx,dy) by ~0.82 arcmin (~326 kpc, SE) and ~0.50 arcmin (~199 kpc, NW), significant at >4 sigma; within 500 kpc of gas peak: total 6.2(+1.2/-4.0)e14, gas 0.55+-0.06e14, stars 0.05+-0.01e14 Msun; LOS velocity difference 100+-80 km/s, merger speed ~2000 km/s (crude estimate).",
+  "object": "MACS J0025.4-1222 (z=0.586)",
+  "facts": [
+   {
+    "quantity": "redshift / configuration",
+    "value": 0.586,
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "MACS J0025.4 −1222 consists of two merging subclusters of similar richness at z = 0.586."
+   },
+   {
+    "quantity": "angular scale",
+    "value": 6.61,
+    "units": "kpc/arcsec",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.2 / Sect. 1 (H0=70, Om=0.3)"
+    },
+    "snippet": "At a redshift z = 0.586, the length scale is 6.61 kpc/arcsec."
+   },
+   {
+    "quantity": "SE subcluster total mass (r<300 kpc of BCG1)",
+    "value": 250000000000000.0,
+    "error": {
+     "plus": 100000000000000.0,
+     "minus": 170000000000000.0
+    },
+    "units": "Msun (2-D projected, r<300 kpc)",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.6 / Table 3"
+    },
+    "snippet": "SE - BCG1 total 2 . 5+1.0 −1.7"
+   },
+   {
+    "quantity": "NW subcluster total mass (r<300 kpc of BCG3)",
+    "value": 260000000000000.0,
+    "error": {
+     "plus": 50000000000000.0,
+     "minus": 140000000000000.0
+    },
+    "units": "Msun (2-D projected, r<300 kpc)",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.6 / Table 3"
+    },
+    "snippet": "NW - BCG3 total 2 . 6+0.5 −1.4"
+   },
+   {
+    "quantity": "stellar masses in subclusters",
+    "value": {
+     "SE_1e14": 0.027,
+     "NW_1e14": 0.019
+    },
+    "error": {
+     "SE_1e14": 0.008,
+     "NW_1e14": 0.006
+    },
+    "units": "1e14 Msun (r<300 kpc)",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.6 / Table 3"
+    },
+    "snippet": "galaxies 0 . 027 ± 0. 008",
+    "caveats": "NW row \"galaxies 0 . 019 ± 0. 006\"; stellar M/L_K=0.74+-0.30."
+   },
+   {
+    "quantity": "total/gas/stars within 500 kpc of gas peak",
+    "value": {
+     "total_1e14": 6.2,
+     "gas_1e14": 0.55,
+     "stars_1e14": 0.05
+    },
+    "error": {
+     "total_plus": 1.2,
+     "total_minus": 4.0,
+     "gas": 0.06,
+     "stars": 0.01
+    },
+    "units": "1e14 Msun (projected, R<500 kpc)",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.6 / Table 3"
+    },
+    "snippet": "Gas peak total 6 . 2+1.2 −4.0 gas 0 . 55 ± 0. 06 galaxies 0 . 05 ± 0. 01"
+   },
+   {
+    "quantity": "gas mass (spherical, 500 kpc)",
+    "value": 36000000000000.0,
+    "error": 4000000000000.0,
+    "units": "Msun",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.8 / Sect. 6"
+    },
+    "snippet": "Within a spherical radius of 500 kpc, we measure a gas mass of 3.6 ± 0.4 × 1013 M⊙."
+   },
+   {
+    "quantity": "gas and stellar fractions",
+    "value": {
+     "f_gas": 0.09,
+     "f_star": 0.01
+    },
+    "error": {
+     "f_gas": [
+      0.07,
+      0.03
+     ],
+     "f_star": [
+      0.007,
+      0.004
+     ]
+    },
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "We measure the fractions of mass in hot gas (0 .09+0.07 −0.03) and stars (0.010+0.007 −0.004)"
+   },
+   {
+    "quantity": "SE offsets from gas peak (arcmin)",
+    "value": {
+     "total": [
+      -0.7,
+      -0.43
+     ],
+     "galaxies": [
+      -0.79,
+      -0.5
+     ]
+    },
+    "error": {
+     "total": [
+      0.25,
+      0.06
+     ],
+     "galaxies": [
+      0.2,
+      0.2
+     ],
+     "gas": [
+      0.08,
+      0.08
+     ]
+    },
+    "units": "arcmin (dx, dy) from gas peak",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "total − 0. 70 ± 0. 25 − 0. 43 ± 0. 06 SE gas 0 . 0 ± 0. 08 0 . 0 ± 0. 08 galaxies − 0. 79 ± 0. 20 − 0. 50 ± 0. 20"
+   },
+   {
+    "quantity": "NW offsets from gas peak (arcmin)",
+    "value": {
+     "total": [
+      0.46,
+      0.2
+     ],
+     "galaxies": [
+      0.39,
+      0.18
+     ]
+    },
+    "error": {
+     "total": [
+      0.13,
+      0.04
+     ],
+     "galaxies": [
+      0.2,
+      0.2
+     ]
+    },
+    "units": "arcmin",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.6 / Table 2"
+    },
+    "snippet": "total 0 . 46 ± 0. 13 0 . 20 ± 0. 04 NW gas 0 . 0 ± 0. 08 0 . 0 ± 0. 08 galaxies 0 . 39 ± 0. 20 0 . 18 ± 0. 20"
+   },
+   {
+    "quantity": "offset significance",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.8 / Sect. 7"
+    },
+    "snippet": "The offsets between the X-ray and total mass components are significant at > 4σ for both the SE and NW clumps (see Table 2)."
+   },
+   {
+    "quantity": "line-of-sight velocity difference",
+    "value": 100,
+    "error": 80,
+    "units": "km/s",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.3 / Sect. 3"
+    },
+    "snippet": "This implies a line of sight velocity difference between the subclusters of 100 ± 80 km s−1."
+   },
+   {
+    "quantity": "merger velocity (crude estimate)",
+    "value": 2000,
+    "units": "km/s",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.3 / Sect. 3"
+    },
+    "snippet": "we crudely estimate a merger velocity of ∼ 2000 km s−1.",
+    "caveats": "Scaled from Bullet cluster (4500 km/s) by velocity-dispersion ratio; not measured."
+   },
+   {
+    "quantity": "merger geometry",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.3 / Sect. 3"
+    },
+    "snippet": "the merger event is likely to have occured in close to the plane of the sky (within 5 degrees)."
+   },
+   {
+    "quantity": "velocity dispersion",
+    "value": 835,
+    "error": [
+     58,
+     59
+    ],
+    "units": "km/s",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.2 / Sect. 3"
+    },
+    "snippet": "zCl = 0.5857 and σCl = 835 +58 −59 km s−1"
+   },
+   {
+    "quantity": "X-ray temperature",
+    "value": 6.26,
+    "error": [
+     0.5,
+     0.41
+    ],
+    "units": "keV",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.7 / Sect. 5"
+    },
+    "snippet": "we measure a temperature of 6.26+0.50 −0.41 keV"
+   },
+   {
+    "quantity": "M/L of subclusters",
+    "value": {
+     "SE": 70,
+     "NW": 100
+    },
+    "units": "Msun/LK,sun",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.8 / Sect. 6"
+    },
+    "snippet": "we measure mass-to-light ratios of M/LK(< 300kpc) = 70 +40 −50 and 100 +40 −60 for the SE and NW peaks respectively"
+   },
+   {
+    "quantity": "SIDM limit",
+    "value": "<4",
+    "units": "cm^2/g",
+    "source": {
+     "paper_key": "bradac2008",
+     "arxiv": "0806.2320",
+     "location": "arXiv PDF p.9 / Sect. 7.1"
+    },
+    "snippet": "we obtain an estimate for the scattering cross-section of σ/m< 4cm2g−1."
+   }
+  ],
+  "derived_by_compiler": {
+   "offsets_kpc": {
+    "SE_total_to_gas": 326.0,
+    "NW_total_to_gas": 199.0,
+    "SE_galaxies_to_gas": 371.0,
+    "NW_galaxies_to_gas": 170.0,
+    "SE_total_to_NW_total": 524.0
+   },
+   "mass_ratio_NW_over_SE": 1.04,
+   "note": "Offsets = hypot(dx,dy) x 6.61 kpc/arcsec x 60; projected."
+  }
+ },
+ "item3c_el_gordo": {
+  "summary": "Jee+2014 WL: M200c(NW)=1.38+-0.22e15, M200c(SE)=0.78+-0.20e15 h70^-1 Msun (ratio ~1.8), separation ~0.7 Mpc, combined M200a=3.13+-0.56e15; X-ray peak ~8 arcsec (~100 kpc) from SE mass peak (~2 sigma). Kim+2021 update: 9.9e14 / 6.5e14, total M200c=2.13e15 Msun. Menanteau+2012: sigma=1321+-106 km/s, TX=14.5 keV, Mgas=2.2e14, mass ratio ~2:1, LOS dv=586+-96 km/s.",
+  "object": "ACT-CL J0102-4915 \"El Gordo\" (z=0.870)",
+  "jee2014": [
+   {
+    "quantity": "subcluster masses (2-D NFW fit)",
+    "value": {
+     "NW": 1380000000000000.0,
+     "SE": 780000000000000.0
+    },
+    "error": {
+     "NW": 220000000000000.0,
+     "SE": 200000000000000.0
+    },
+    "units": "h70^-1 Msun (M200c)",
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "M200c = (1. 38 ± 0. 22) × 1015h−1 70 M⊙ and (0 . 78 ± 0. 20) × 1015h−1 70 M⊙, respectively",
+    "caveats": "Statistical only; additional 20-30% systematics (triaxiality, LSS, non-NFW). Mass-concentration relation imposed."
+   },
+   {
+    "quantity": "Table 2 NW",
+    "value": {
+     "sigma_v": 1133,
+     "c200c": 2.54,
+     "R500c": 0.63,
+     "M500c_1e14": 4.58,
+     "R200c": 1.65,
+     "M200c_1e14": 13.8
+    },
+    "error": {
+     "M500c_1e14": 0.71,
+     "M200c_1e14": 2.2
+    },
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.13 / Table 2"
+    },
+    "snippet": "NW 1133 +58 −61 2.54± 0.04 0 . 63 ± 0. 03 4 . 58 ± 0. 71 1 . 65 ± 0. 10 13 . 8 ± 2. 2"
+   },
+   {
+    "quantity": "Table 2 SE",
+    "value": {
+     "sigma_v": 1064,
+     "c200c": 2.66,
+     "R500c": 0.53,
+     "M500c_1e14": 3.39,
+     "R200c": 1.37,
+     "M200c_1e14": 7.8
+    },
+    "error": {
+     "M500c_1e14": 0.56,
+     "M200c_1e14": 2.0
+    },
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.13 / Table 2"
+    },
+    "snippet": "SE 1064 +62 −66 2.66± 0.06 0 . 53 ± 0. 03 3 . 39 ± 0. 56 1 . 37 ± 0. 11 7 . 8 ± 2. 0"
+   },
+   {
+    "quantity": "Table 2 NW+SE",
+    "value": {
+     "R500c": 1.34,
+     "M500c_1e14": 18.0,
+     "R200c": 2.09,
+     "M200c_1e14": 27.6
+    },
+    "error": {
+     "M500c_1e14": 3.4,
+     "M200c_1e14": 5.1
+    },
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.13 / Table 2"
+    },
+    "snippet": "NW+SE ... ... 1 . 34 ± 0. 07 18 . 0 ± 3. 4 2 . 09 ± 0. 19 27 . 6 ± 5. 1",
+    "caveats": "Radii h70^-1 Mpc, masses h70^-1 1e14 Msun."
+   },
+   {
+    "quantity": "combined total mass",
+    "value": 3130000000000000.0,
+    "error": 560000000000000.0,
+    "units": "h70^-1 Msun (M200a, extrapolated to r200a=2.4 Mpc)",
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "a combined mass of M200a = (3 . 13 ± 0. 56) × 1015h−1 70 M⊙."
+   },
+   {
+    "quantity": "projected separation",
+    "value": 0.7,
+    "units": "h70^-1 Mpc",
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "subclusters with a projected separation of ∼0. 7h−1 70 Mpc."
+   },
+   {
+    "quantity": "X-ray vs mass offset",
+    "value": {
+     "arcsec": 8,
+     "kpc": 100
+    },
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "The X-ray and mass peaks are spatially offset by ∼8′′ (∼100h−1 70 kpc), which is significant at the ∼2σ confidence level."
+   },
+   {
+    "quantity": "direction of offset",
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "The mass peak, however, does not lead the gas peak in the direction expected if we are viewing the cluster soon after first core passage"
+   },
+   {
+    "quantity": "galaxy number-density offset (SE)",
+    "value": 400,
+    "units": "h70^-1 kpc",
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.9 / Sect. 4.2"
+    },
+    "snippet": "the SE number density centroid is separated from the SE mass peak by ∼400h−1 70 kpc ( ∼50′′)",
+    "caveats": "Galaxy LUMINOSITY peaks coincide with mass peaks; NW number-density centroid offset ~15\"."
+   },
+   {
+    "quantity": "mass ratio statement",
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.18 / Sect. 5.1"
+    },
+    "snippet": "our weak-lensing analysis indicates that the NW cluster is nearly twice as massive as the SE cluster",
+    "caveats": "Zitrin+2013 strong lensing had SE more massive by 1.5."
+   },
+   {
+    "quantity": "LOS velocity difference (quoting M12)",
+    "value": 586,
+    "error": 96,
+    "units": "km/s",
+    "source": {
+     "paper_key": "jee2014eg",
+     "arxiv": "1309.5097",
+     "location": "arXiv PDF p.14 / Sect. 4.3"
+    },
+    "snippet": "M12 report that the line-of-sight velocity difference between the NW and SE components is 586 ± 96 km s −1."
+   }
+  ],
+  "menanteau2012": [
+   {
+    "quantity": "redshift and dispersion",
+    "value": {
+     "z": 0.87,
+     "sigma_gal": 1321
+    },
+    "error": {
+     "sigma_gal": 106
+    },
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "yield a cluster redshift, z = 0.870, and velocity dispersion, σgal = 1321± 106 km s −1."
+   },
+   {
+    "quantity": "X-ray temperature",
+    "value": 14.5,
+    "error": 1.0,
+    "units": "keV",
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "integrated temperature of TX = 14.5± 1.0 keV"
+   },
+   {
+    "quantity": "total mass (scaling relations)",
+    "value": 2160000000000000.0,
+    "error": 320000000000000.0,
+    "units": "h70^-1 Msun",
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "a cluster mass of M200a = (2.16± 0.32)× 1015 h−1 70M⊙.",
+    "caveats": "Combination of sigma_gal, Y_X and SZ scaling relations (not lensing)."
+   },
+   {
+    "quantity": "mass ratio",
+    "value": 2.0,
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "undergoing a major merger between components with a mass ratio of approximately 2 to 1."
+   },
+   {
+    "quantity": "component dynamical masses",
+    "value": {
+     "NW": 1760000000000000.0,
+     "SE": 1060000000000000.0
+    },
+    "error": {
+     "NW": [
+      620000000000000.0,
+      580000000000000.0
+     ],
+     "SE": [
+      640000000000000.0,
+      590000000000000.0
+     ]
+    },
+    "units": "h70^-1 Msun (M200a from sigma_v)",
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.9 / Sect. 3.2"
+    },
+    "snippet": "obtain 1.76+0.62 −0.58×1015h−1 70M⊙ and 1.06+0.64 −0.59× 1015h−1 70M⊙, respectively.",
+    "caveats": "Formally mass ratio 5:1 to 1:1."
+   },
+   {
+    "quantity": "LOS peculiar velocity",
+    "value": 586,
+    "error": 96,
+    "units": "km/s",
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.9 / Sect. 3.2"
+    },
+    "snippet": "The SE component has a line-of-sight peculiar velocity6 of 586± 96 km s −1 with respect to the main (NW) component."
+   },
+   {
+    "quantity": "gas mass",
+    "value": 220000000000000.0,
+    "error": 10000000000000.0,
+    "units": "Msun",
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.11 / Table 2"
+    },
+    "snippet": "Mgas 2.2 ± 0.1 × 1014 M⊙ M500c − Mgas 3.10+0.92"
+   },
+   {
+    "quantity": "gas fraction",
+    "value": {
+     "M500c": 1670000000000000.0,
+     "fgas": 0.133
+    },
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.8 / Sect. 3.1.2"
+    },
+    "snippet": "which yields a value of M500c = 1.67+0.20 −0.20× 1015 h−1 70 M⊙ and implies a gas mass fraction fgas = 0.133."
+   },
+   {
+    "quantity": "stellar fraction",
+    "value": "<1%",
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "We constrain the stellar content of the cluster to be less than 1% of the total mass"
+   },
+   {
+    "quantity": "SZ vs X-ray peak",
+    "value": 1.2,
+    "units": "arcmin",
+    "source": {
+     "paper_key": "menanteau2012",
+     "arxiv": "1109.0953",
+     "location": "arXiv PDF p.6 / Sect. 2.4"
+    },
+    "snippet": "The two lower panels of Fig. 1 show that the SZ and X-ray peaks are displaced by about 1.′2."
+   }
+  ],
+  "kim2021_update": [
+   {
+    "quantity": "updated subcluster masses (no c-M relation)",
+    "value": {
+     "NW": 990000000000000.0,
+     "SE": 650000000000000.0
+    },
+    "error": {
+     "NW": [
+      210000000000000.0,
+      220000000000000.0
+     ],
+     "SE": [
+      190000000000000.0,
+      140000000000000.0
+     ]
+    },
+    "units": "Msun",
+    "source": {
+     "paper_key": "kim2021",
+     "arxiv": "2106.00031",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "M N W 200c = 9.9+2.1 −2.2× 1014 M⊙ and M SE 200c = 6.5+1.9 −1.4× 1014 M⊙"
+   },
+   {
+    "quantity": "updated total mass",
+    "value": 2130000000000000.0,
+    "error": [
+     250000000000000.0,
+     230000000000000.0
+    ],
+    "units": "Msun",
+    "source": {
+     "paper_key": "kim2021",
+     "arxiv": "2106.00031",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "we determine the total mass of El Gordo to be M200c = 2.13+0.25 −0.23× 1015 M⊙, which is ∼23% lower than our previous WL result"
+   },
+   {
+    "quantity": "X-ray offset",
+    "value": {
+     "arcsec": 12,
+     "kpc": 97
+    },
+    "source": {
+     "paper_key": "kim2021",
+     "arxiv": "2106.00031",
+     "location": "arXiv PDF p.11 / Sect. 4.1"
+    },
+    "snippet": "The X-ray peak is ∼12′′ (∼97 kpc) offset from the SE mass centroid at the ∼2σ level."
+   }
+  ],
+  "derived_by_compiler": {
+   "mass_ratio_NW_SE_Jee2014_2D": 1.77,
+   "mass_ratio_NW_SE_Kim2021": 1.52
+  }
+ },
+ "item3d_abell1689": {
+  "summary": "theta_E=47.0+-1.2 arcsec (zs=2); M2D(45\")=1.91+-0.27e14 Msun (Limousin+07); spherical M500=0.88+-0.13e15 and M200=1.15+-0.16e15 h^-1 Msun at r500=1.08, r200=1.60 h^-1 Mpc (Umetsu+15); concentration high: c200c~8-10 (lensing) vs predicted LCDM median log10 c200c = 0.58+-0.16 (i.e. ~3.8), only >~1-2 sigma tail after triaxiality. MOND with baryons alone fails (Nieuwenhuizen 2016/17; Hodson & Zhao 2017); MOND+~2 eV neutrinos can fit.",
+  "object": "Abell 1689 (z=0.183)",
+  "umetsu2015": [
+   {
+    "quantity": "redshift",
+    "value": 0.183,
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.2 / Table 1"
+    },
+    "snippet": "Redshift .................................... 0.183"
+   },
+   {
+    "quantity": "Einstein radius",
+    "value": 47.0,
+    "error": 1.2,
+    "units": "arcsec (z_s=2)",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.2 / Table 1 (from Coe+2010)"
+    },
+    "snippet": "Einstein radius (′′) .................... 47.0± 1.2 atzs = 2"
+   },
+   {
+    "quantity": "baseline triaxial result",
+    "value": {
+     "M200c": 1200000000000000.0,
+     "c200c": 8.4
+    },
+    "error": {
+     "M200c": 200000000000000.0,
+     "c200c": 1.3
+    },
+    "units": "h^-1 Msun (h=0.7)",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "M200c = (1.2±0.2)×1015M⊙h−1 and a halo concentrationc200c = 8.4±1.3, which overlaps with the >"
+   },
+   {
+    "quantity": "spherical WL-only",
+    "value": {
+     "c200c": 8.9,
+     "cvir": 11.2,
+     "M200c": 1310000000000000.0
+    },
+    "error": {
+     "c200c": 1.1,
+     "cvir": 1.4,
+     "M200c": 110000000000000.0
+    },
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.18 / Sect. 8.1.1"
+    },
+    "snippet": "c200c = 8.9± 1.1 (cvir = 11.2± 1.4) at M200c = (1.31± 0.11)× 1015M⊙h−1."
+   },
+   {
+    "quantity": "spherical WL+SL",
+    "value": {
+     "c200c": 10.1,
+     "M200c": 1320000000000000.0
+    },
+    "error": {
+     "c200c": 0.82,
+     "M200c": 90000000000000.0
+    },
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.18 / Sect. 8.1.1"
+    },
+    "snippet": "The combined weak and strong lensing data yield c200c = 10.10± 0.82 at M200c = (1.32± 0.09)× 1015M⊙h−1"
+   },
+   {
+    "quantity": "spherical-overdensity masses (Delta=500)",
+    "value": {
+     "R500_ellipsoidal": 1.89,
+     "M_ellipsoidal": 0.97,
+     "r500": 1.08,
+     "Msph_r500": 0.88
+    },
+    "error": {
+     "R": 0.46,
+     "M": 0.13,
+     "r": 0.06,
+     "Msph": 0.13
+    },
+    "units": "radii h^-1 Mpc; masses 1e15 h^-1 Msun",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.21 / Table 10"
+    },
+    "snippet": "500 1 .89± 0.46 0 .97± 0.13 1 .08± 0.06 0 .88± 0.13"
+   },
+   {
+    "quantity": "spherical-overdensity masses (Delta=200)",
+    "value": {
+     "R200_ellipsoidal": 2.79,
+     "M_ellipsoidal": 1.24,
+     "r200": 1.6,
+     "Msph_r200": 1.15
+    },
+    "error": {
+     "R": 0.69,
+     "M": 0.16,
+     "r": 0.16,
+     "Msph": 0.16
+    },
+    "units": "radii h^-1 Mpc; masses 1e15 h^-1 Msun",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.21 / Table 10"
+    },
+    "snippet": "200 2 .79± 0.69 1 .24± 0.16 1 .60± 0.16 1 .15± 0.16"
+   },
+   {
+    "quantity": "gas fraction",
+    "value": 0.1,
+    "error": [
+     0.031,
+     0.016
+    ],
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.21 / Sect. 8.3"
+    },
+    "snippet": "The gas mass fraction within 0.9Mpc ∼ 1.2r2500c is estimated as fgas(< 0.9Mpc) = 0.100+0.031 −0.016."
+   },
+   {
+    "quantity": "triaxiality",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "the data favor a triaxial geometry with minor–major axis ratio 0.39± 0.15 and major axis closely aligned with the line of sight (22◦± 10◦)."
+   },
+   {
+    "quantity": "concentration issue",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.20 / Fig. 15 caption"
+    },
+    "snippet": "Overall, the inferred range ofc200c is high but overlaps with the∼ 2σ tail of the predicted distribution for high-mass cluster halos."
+   },
+   {
+    "quantity": "hydrostatic bias",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "our lensing measurements yield a spherical mass ratio ofMPlanck/MGL = 0.70± 0.15 and 0.58± 0.10 with and without corrections for lensing projection effects, respectively."
+   },
+   {
+    "quantity": "cosmology",
+    "source": {
+     "paper_key": "umetsu2015",
+     "arxiv": "1503.01482",
+     "location": "arXiv PDF p.3 / Sect. 1"
+    },
+    "snippet": "adopt a concordance ΛCDM cosmology with Ωm = 0.3, ΩΛ = 0 .7, and h ≡ 0.7h70 = 0 .7"
+   }
+  ],
+  "limousin2007": [
+   {
+    "quantity": "projected mass within Einstein radius",
+    "value": 191000000000000.0,
+    "error": 27000000000000.0,
+    "units": "Msun (printed \"h70 Msun\"; presumably h70^-1)",
+    "source": {
+     "paper_key": "limousin2007",
+     "arxiv": "astro-ph/0612165",
+     "location": "arXiv PDF p.2 / Abstract"
+    },
+    "snippet": "We find that the projected mass enclosed within the Einstein radius for Abell 1689 is M (45 ′′) = 1.91 ± 0.27 × 1014 h70 M⊙.",
+    "caveats": "45\" = 136.6 kpc at 3.035 kpc/arcsec (H0=70)."
+   },
+   {
+    "quantity": "WL NFW fit",
+    "value": {
+     "c200": 7.6,
+     "r200_Mpc": 2.16,
+     "M200": 1320000000000000.0
+    },
+    "error": {
+     "c200": 1.6,
+     "r200": 0.1,
+     "M200": 200000000000000.0
+    },
+    "source": {
+     "paper_key": "limousin2007",
+     "arxiv": "astro-ph/0612165",
+     "location": "arXiv PDF p.2 / Abstract"
+    },
+    "snippet": "c200 = 7.6 ± 1.6 and r200 = 2.16 ± 0.10 h−1 70 Mpc (corresponding to a 3 d mass equal to M 200 = 1 .32 ± 0.2 × 1015 h70 M⊙)"
+   },
+   {
+    "quantity": "SL NFW concentration",
+    "value": 6.0,
+    "error": "0.6 (3 sigma)",
+    "source": {
+     "paper_key": "limousin2007",
+     "arxiv": "astro-ph/0612165",
+     "location": "arXiv PDF p.19 / Sect. 6.2"
+    },
+    "snippet": "inner mass profile with a nfw profile ( c200 = 6 .0 ± 0.6 at 3 σ confidence level)"
+   },
+   {
+    "quantity": "galaxy mass fraction vs radius",
+    "value": {
+     "RE_kpc": 136,
+     "frac_gal_RE": 0.13,
+     "frac_gal_364kpc": 0.07
+    },
+    "source": {
+     "paper_key": "limousin2007",
+     "arxiv": "astro-ph/0612165",
+     "location": "arXiv PDF p.20 / Sect. 6.4"
+    },
+    "snippet": "Inside the Einstein radius ( RE ∼ 136 kpc), we find Mgalax = 13% Mtot, whereas inside a radius of 364 kpc (roughly theacs field of view), we find that the contribution"
+   },
+   {
+    "quantity": "concentration vs LCDM",
+    "source": {
+     "paper_key": "limousin2007",
+     "arxiv": "astro-ph/0612165",
+     "location": "arXiv PDF p.26 / Sect. 8"
+    },
+    "snippet": "This value (c200 ∼ 7) is slightly higher than the average value predicted byn-body simulations of cluster",
+    "caveats": "Next sentence: Bullock+2001 predicts c200 ~ 5.5."
+   }
+  ],
+  "mond_and_alternatives": [
+   {
+    "quantity": "Newtonian baryons vs lensing",
+    "source": {
+     "paper_key": "nieuw2017",
+     "arxiv": "1610.01543",
+     "location": "arXiv PDF p.5 / Fig. 2 caption"
+    },
+    "snippet": "Beyond 200 kpc it is an order of magnitude smaller than the other indicators, which points at the need for dark matter already at 50 kpc."
+   },
+   {
+    "quantity": "MOND with baryons only",
+    "source": {
+     "paper_key": "nieuw2017",
+     "arxiv": "1610.01543",
+     "location": "arXiv PDF p.7 / Sect. VI.A"
+    },
+    "snippet": "The role of the MOND parameter a0 appears to be modest, and the fit to the data is very similar to the case of the pure Newton force, i.e., the limit a0 → 0. Again, the fit is very bad"
+   },
+   {
+    "quantity": "Newton without DM, fixed BCG",
+    "value": "chi2/nu ~ 80-100",
+    "source": {
+     "paper_key": "nieuw2017",
+     "arxiv": "1610.01543",
+     "location": "arXiv PDF p.6 / Sect. V"
+    },
+    "snippet": "we get χ 2/ν values of order 80-100, a failing fit."
+   },
+   {
+    "quantity": "neutrino fit mass",
+    "value": 1.92,
+    "error": [
+     0.13,
+     0.16
+    ],
+    "units": "eV (x (12/g)^1/4)",
+    "source": {
+     "paper_key": "nieuw2017",
+     "arxiv": "1610.01543",
+     "location": "arXiv PDF p.7 / Sect. VI.B, Eq. 24"
+    },
+    "snippet": "mν = 1. 92+0. 13 −0. 16 ( 12 g ) 1/ 4 eV c2"
+   },
+   {
+    "quantity": "standard MOND insufficient",
+    "source": {
+     "paper_key": "hodson2017",
+     "arxiv": "1703.10219",
+     "location": "arXiv PDF p.3 / Sect. 3.1"
+    },
+    "snippet": "The realisation that Eqn 7 cannot explain galaxy clusters, due to the MOND enhancement being insufficient to explain the internal dynamics, without the inclusion of dark matter"
+   },
+   {
+    "quantity": "modified frameworks",
+    "source": {
+     "paper_key": "hodson2017",
+     "arxiv": "1703.10219",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "We are able to reproduce the desired acceleration profile of A1689 for GMOND, EMOND and MOG, but not Emergent Gravity."
+   },
+   {
+    "quantity": "MOND cluster residual (Sanders, general clusters)",
+    "source": {
+     "paper_key": "sanders2007",
+     "arxiv": "astro-ph/0703590",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "is a factor of two or three times smaller than the Newtonian dynamical mass but remains significantly larger than the observed baryonic mass",
+    "caveats": "General X-ray clusters, not A1689-specific lensing."
+   },
+   {
+    "quantity": "MOND residual factor",
+    "value": 3,
+    "source": {
+     "paper_key": "sanders2007",
+     "arxiv": "astro-ph/0703590",
+     "location": "arXiv PDF p.1 / Sect. 1"
+    },
+    "snippet": "there remains a discrepancy roughly of a factor of three between the identifiable baryonic mass in gas and stars and the dynamical mass."
+   }
+  ]
+ },
+ "item4_bulge_microlensing": {
+  "summary": "tau(|b|) models of form tau0*exp[c(3deg-|b|)]. MOA-II 2013 all-source values were biased high by star-count incompleteness (Sumi & Penny 2016). OGLE-IV (8000 events) ~30% below earlier all-source values and agrees with Besancon model; MOA-II 9-yr agrees with OGLE-IV. Wegg+2016 (revised MOA-II): inner MW baryon-dominated, baryonic fraction of peak circular velocity f_v=0.88+-0.07 (>0.72 at 2 sigma); their fiducial model has a 12% bulge DM fraction and R_d=2.6 kpc.",
+  "facts": [
+   {
+    "quantity": "MOA-II tau200 (|l|<5 deg)",
+    "value": {
+     "tau0": 2.35e-06,
+     "c": 0.51
+    },
+    "error": {
+     "tau0": 1.8e-07,
+     "c": 0.07
+    },
+    "source": {
+     "paper_key": "sumi2013",
+     "arxiv": "1305.0186",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "τ200 = [2. 35 ± 0. 18]e[0. 51±0. 07](3−|b|) × 10−6",
+    "caveats": "Events tE<=200 d, 427 events, sources Is<=20; later revised downward by Sumi & Penny 2016."
+   },
+   {
+    "quantity": "MOA-II event rate (|l|<5 deg)",
+    "value": {
+     "Gamma0": 2.39e-05,
+     "c": 0.6
+    },
+    "error": {
+     "Gamma0": 1.1e-05,
+     "c": 0.05
+    },
+    "units": "star^-1 yr^-1",
+    "source": {
+     "paper_key": "sumi2013",
+     "arxiv": "1305.0186",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "Γ = [2 . 39 ± 1. 1]e[0. 60±0. 05](3−|b|) × 10−5 star−1 yr−1"
+   },
+   {
+    "quantity": "central field",
+    "value": {
+     "Gamma": 4.57e-05,
+     "tau200": 3.64e-06
+    },
+    "error": {
+     "Gamma": [
+      5.1e-06,
+      4.6e-06
+     ],
+     "tau200": [
+      5.1e-07,
+      4.5e-07
+     ]
+    },
+    "source": {
+     "paper_key": "sumi2013",
+     "arxiv": "1305.0186",
+     "location": "arXiv PDF p.2 / Abstract"
+    },
+    "snippet": "we find Γ = 4 . 57+0. 51 −0. 46 × 10−5 star−1 yr−1 and τ200 = 3. 64+0. 51 −0. 45 × 10−6.",
+    "caveats": "111 events at |b|<=3, 0<=l<=2, centred (0.97, -2.26)."
+   },
+   {
+    "quantity": "all fields combined",
+    "value": 1.87e-06,
+    "error": [
+     1.5e-07,
+     1.3e-07
+    ],
+    "source": {
+     "paper_key": "sumi2013",
+     "arxiv": "1305.0186",
+     "location": "arXiv PDF p.12 / Sect. 5"
+    },
+    "snippet": "found τ200 = 1. 87+0. 15 −0. 13 × 10−6 with 474 events for all source sample",
+    "caveats": "RCG sample: 1.58+0.27-0.23e-6 (83 events) at (l,b)=(1.85,-3.69)."
+   },
+   {
+    "quantity": "revised MOA-II tau200 (|l|<5 deg)",
+    "value": {
+     "tau0": 1.84e-06,
+     "c": 0.44
+    },
+    "error": {
+     "tau0": 1.4e-07,
+     "c": 0.07
+    },
+    "source": {
+     "paper_key": "sumipenny2016",
+     "arxiv": "1603.05797",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "τ200 = [1. 84 ± 0. 14] × 10−6 exp[(0. 44 ± 0. 07)(3 − |b|)]",
+    "caveats": "Corrected for RCG star-count incompleteness f_RC."
+   },
+   {
+    "quantity": "revised MOA-II event rate",
+    "value": {
+     "Gamma0": 1.874e-05,
+     "c": 0.53
+    },
+    "error": {
+     "Gamma0": 9.1e-07,
+     "c": 0.05
+    },
+    "units": "star^-1 yr^-1",
+    "source": {
+     "paper_key": "sumipenny2016",
+     "arxiv": "1603.05797",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "Γ = [18 . 74±0. 91]×10−6 exp[(0. 53±0. 05)(3−|b|)] star −1 yr−1"
+   },
+   {
+    "quantity": "consistency",
+    "source": {
+     "paper_key": "sumipenny2016",
+     "arxiv": "1603.05797",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "Our revised all-source τ measurements are about 2- σ smaller than the other all-source measurements and are consistent with the RCG measurements within 1- σ."
+   },
+   {
+    "quantity": "OGLE-IV fit form and region",
+    "source": {
+     "paper_key": "mroz2019",
+     "arxiv": "1906.02210",
+     "location": "arXiv PDF p.30 / Sect. 8.2"
+    },
+    "snippet": "We fitted the simple exponential models τ300 =τ0 exp(cτ(3◦−|b|) and Γ = Γ 0 exp(cΓ(3◦−|b|) for fields located within |l|< 3◦ and|b|> 2◦",
+    "caveats": "tau300: events tE<=300 d; sources I<21."
+   },
+   {
+    "quantity": "OGLE-IV optical depth",
+    "value": {
+     "tau0": 1.36e-06,
+     "c_tau": 0.39
+    },
+    "error": {
+     "tau0": 4e-08,
+     "c_tau": 0.03
+    },
+    "source": {
+     "paper_key": "mroz2019",
+     "arxiv": "1906.02210",
+     "location": "arXiv PDF p.31 / Sect. 8.2"
+    },
+    "snippet": "We found τ0 = (1.36± 0.04)× 10−6 and cτ = 0.39± 0.03."
+   },
+   {
+    "quantity": "OGLE-IV event rate",
+    "value": {
+     "Gamma0": 1.34e-05,
+     "c_Gamma": 0.49
+    },
+    "error": {
+     "Gamma0": 3e-07,
+     "c_Gamma": 0.02
+    },
+    "units": "yr^-1 per star",
+    "source": {
+     "paper_key": "mroz2019",
+     "arxiv": "1906.02210",
+     "location": "arXiv PDF p.32 / Sect. 8.2"
+    },
+    "snippet": "described using the exponential model with Γ 0 = (13.4± 0.3)× 10−6 yr−1 and cΓ = 0.49± 0.02."
+   },
+   {
+    "quantity": "comparison with earlier all-source values",
+    "source": {
+     "paper_key": "mroz2019",
+     "arxiv": "1906.02210",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "systematically ∼ 30% smaller than the other estimates based on “all-source” samples of microlens-ing events."
+   },
+   {
+    "quantity": "vs MOA-II",
+    "value": 1.4,
+    "source": {
+     "paper_key": "mroz2019",
+     "arxiv": "1906.02210",
+     "location": "arXiv PDF p.34 / Sect. 8.2"
+    },
+    "snippet": "Our values are consistent with the MOA-II red clump sample and are a factor of∼ 1.4 lower than those based on all MOA-II events."
+   },
+   {
+    "quantity": "mass model agreement",
+    "source": {
+     "paper_key": "mroz2019",
+     "arxiv": "1906.02210",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "The new maps agree well with predictions based on the Besan¸ con model of the Galaxy.",
+    "caveats": "Besancon (Robin+2014) via Manchester-Besancon Microlensing Simulator; thin+thick disc, boxy bulge/bar, stellar halo; no parameter adjustment."
+   },
+   {
+    "quantity": "MOA-II 9-yr optical depth and rate",
+    "value": {
+     "tau0": 1.75e-06,
+     "c": 0.34,
+     "Gamma0": 1.608e-05,
+     "c_Gamma": 0.44
+    },
+    "error": {
+     "tau0": 4e-08,
+     "c": 0.02,
+     "Gamma0": 2.8e-07,
+     "c_Gamma": 0.02
+    },
+    "source": {
+     "paper_key": "nunota2025",
+     "arxiv": "2410.23553",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "we estimate an optical depth of τ = [1.75± 0.04]× 10−6 exp[(0.34± 0.02)(3◦−|b|)]",
+    "caveats": "3525 events, tE<760 d, Is<21.4, |l|<5 deg; Gamma = [16.08+-0.28]e-6 exp[(0.44+-0.02)(3-|b|)] star^-1 yr^-1."
+   },
+   {
+    "quantity": "model comparison",
+    "source": {
+     "paper_key": "nunota2025",
+     "arxiv": "2410.23553",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "We find our result is inconsistent with a prediction based on Galactic models, especially in the central region with|b|< 3◦."
+   },
+   {
+    "quantity": "baryonic fraction of inner-MW circular velocity",
+    "value": 0.88,
+    "error": 0.07,
+    "source": {
+     "paper_key": "wegg2016",
+     "arxiv": "1607.06462",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "at the peak of their stellar rotation curve a fraction fv = (0.88± 0.07) of the circular velocity is baryonic (at 1σ, fv > 0.72 at 2σ).",
+    "caveats": "Uses revised MOA-II (Sumi & Penny 2016) optical depths; N-body B/P bulge models + exponential disc."
+   },
+   {
+    "quantity": "fiducial model",
+    "value": {
+     "R_d_kpc": 2.6,
+     "bulge_DM_fraction": 0.12
+    },
+    "source": {
+     "paper_key": "wegg2016",
+     "arxiv": "1607.06462",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "Our fiducial model of a disk with scale length 2.6kpc, and a bulge with a low dark matter fraction of 12%, agrees with both the revised MOA-II and EROS-II microlensing data."
+   },
+   {
+    "quantity": "EROS-II",
+    "value": 0.9,
+    "error": 0.1,
+    "source": {
+     "paper_key": "wegg2016",
+     "arxiv": "1607.06462",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "These results are in agreement with constraints from the EROS-II microlensing survey of brighter resolved stars, where we find fv = (0.9± 0.1) at 1σ."
+   },
+   {
+    "quantity": "LCDM consistency",
+    "source": {
+     "paper_key": "wegg2016",
+     "arxiv": "1607.06462",
+     "location": "arXiv PDF p.1 / Abstract"
+    },
+    "snippet": "The required baryonic fractions, and the resultant low contribution from dark matter, are consistent with the NFW profiles produced by dissipationless cosmological simulations"
+   }
+  ]
+ },
+ "paper_index": {
+  "brouwer": {
+   "authors": "Brouwer, M. M.; Oman, K. A.; Valentijn, E. A.; Bilicki, M.; Heymans, C.; Hoekstra, H.; Napolitano, N. R.; Roy, N.; Tortora, C.; Wright, A. H.; et al.",
+   "year": 2021,
+   "journal": "A&A 650, A113",
+   "arxiv": "2106.11677",
+   "doi": "10.1051/0004-6361/202040108"
+  },
+  "mistele_apjl": {
+   "authors": "Mistele, T.; McGaugh, S.; Lelli, F.; Schombert, J.; Li, P.",
+   "year": 2024,
+   "journal": "ApJ Letters 969, L3 (NOT JCAP)",
+   "arxiv": "2406.09685",
+   "doi": "10.3847/2041-8213/ad54b0"
+  },
+  "mistele_jcap": {
+   "authors": "Mistele, T.; McGaugh, S.; Lelli, F.; Schombert, J.; Li, P.",
+   "year": 2024,
+   "journal": "JCAP 04 (2024) 020",
+   "arxiv": "2310.15248",
+   "doi": "10.1088/1475-7516/2024/04/020"
+  },
+  "lelli2019": {
+   "authors": "Lelli, F.; McGaugh, S. S.; Schombert, J. M.; Desmond, H.; Katz, H.",
+   "year": 2019,
+   "journal": "MNRAS 484, 3267",
+   "arxiv": "1901.05966",
+   "doi": null
+  },
+  "vdv2010": {
+   "authors": "van de Ven, G.; Falcon-Barroso, J.; McDermid, R. M.; Cappellari, M.; Miller, B. W.; de Zeeuw, P. T.",
+   "year": 2010,
+   "journal": "ApJ 719, 1481 (not MNRAS)",
+   "arxiv": "0807.4175",
+   "doi": "10.1088/0004-637X/719/2/1481"
+  },
+  "tw2002": {
+   "authors": "Trott, C. M.; Webster, R. L.",
+   "year": 2002,
+   "journal": "MNRAS 334, 621",
+   "arxiv": "astro-ph/0203196",
+   "doi": null
+  },
+  "trott2010": {
+   "authors": "Trott, C. M.; Treu, T.; Koopmans, L. V. E.; Webster, R. L.",
+   "year": 2010,
+   "journal": "MNRAS 401, 1540",
+   "arxiv": "0812.0748",
+   "doi": "10.1111/j.1365-2966.2009.15780.x"
+  },
+  "bate2011": {
+   "authors": "Bate, N. F.; Floyd, D. J. E.; Webster, R. L.; Wyithe, J. S. B.",
+   "year": 2011,
+   "journal": "ApJ 731, 71",
+   "arxiv": "1103.0353",
+   "doi": "10.1088/0004-637X/731/1/71"
+  },
+  "mahdavi2007": {
+   "authors": "Mahdavi, A.; Hoekstra, H.; Babul, A.; Balam, D. D.; Capak, P. L.",
+   "year": 2007,
+   "journal": "ApJ 668, 806",
+   "arxiv": "0706.3048",
+   "doi": "10.1086/521383"
+  },
+  "jee2012": {
+   "authors": "Jee, M. J.; Mahdavi, A.; Hoekstra, H.; Babul, A.; Dalcanton, J. J.; Carroll, P.; Capak, P.",
+   "year": 2012,
+   "journal": "ApJ 747, 96",
+   "arxiv": "1202.6368",
+   "doi": "10.1088/0004-637X/747/2/96"
+  },
+  "clowe2012": {
+   "authors": "Clowe, D.; Markevitch, M.; Bradac, M.; Gonzalez, A. H.; Chung, S. M.; Massey, R.; Zaritsky, D.",
+   "year": 2012,
+   "journal": "ApJ 758, 128",
+   "arxiv": "1209.2143",
+   "doi": "10.1088/0004-637X/758/2/128"
+  },
+  "jee2014a520": {
+   "authors": "Jee, M. J.; Hoekstra, H.; Mahdavi, A.; Babul, A.",
+   "year": 2014,
+   "journal": "ApJ 783, 78",
+   "arxiv": "1401.3356",
+   "doi": "10.1088/0004-637X/783/2/78"
+  },
+  "bradac2008": {
+   "authors": "Bradac, M.; Allen, S. W.; Treu, T.; Ebeling, H.; Massey, R.; Morris, R. G.; von der Linden, A.; Applegate, D.",
+   "year": 2008,
+   "journal": "ApJ 687, 959",
+   "arxiv": "0806.2320",
+   "doi": "10.1086/591246"
+  },
+  "jee2014eg": {
+   "authors": "Jee, M. J.; Hughes, J. P.; Menanteau, F.; Sifon, C.; Mandelbaum, R.; Barrientos, L. F.; Infante, L.; Ng, K. Y.",
+   "year": 2014,
+   "journal": "ApJ 785, 20",
+   "arxiv": "1309.5097",
+   "doi": "10.1088/0004-637X/785/1/20"
+  },
+  "menanteau2012": {
+   "authors": "Menanteau, F.; Hughes, J. P.; Sifon, C.; Hilton, M.; et al. (ACT)",
+   "year": 2012,
+   "journal": "ApJ 748, 7",
+   "arxiv": "1109.0953",
+   "doi": "10.1088/0004-637X/748/1/7"
+  },
+  "kim2021": {
+   "authors": "Kim, J.; Jee, M. J.; Hughes, J. P.; Yoon, M.; HyeongHan, K.; Menanteau, F.; Sifon, C.; Hovey, L.; Arunachalam, P.",
+   "year": 2021,
+   "journal": "ApJ 923, 101",
+   "arxiv": "2106.00031",
+   "doi": "10.3847/1538-4357/ac294f"
+  },
+  "umetsu2015": {
+   "authors": "Umetsu, K.; Sereno, M.; Medezinski, E.; Nonino, M.; Mroczkowski, T.; Diego, J. M.; Ettori, S.; Okabe, N.; Broadhurst, T.; Lemze, D.",
+   "year": 2015,
+   "journal": "ApJ 806, 207",
+   "arxiv": "1503.01482",
+   "doi": "10.1088/0004-637X/806/2/207"
+  },
+  "limousin2007": {
+   "authors": "Limousin, M.; Richard, J.; Jullo, E.; Kneib, J.-P.; et al.",
+   "year": 2007,
+   "journal": "ApJ 668, 643",
+   "arxiv": "astro-ph/0612165",
+   "doi": "10.1086/521293"
+  },
+  "nieuw2017": {
+   "authors": "Nieuwenhuizen, T. M.",
+   "year": "2016 (arXiv) / 2017 (journal)",
+   "journal": "Fortschritte der Physik 65, 1600050",
+   "arxiv": "1610.01543",
+   "doi": "10.1002/prop.201600050"
+  },
+  "hodson2017": {
+   "authors": "Hodson, A. O.; Zhao, H.",
+   "year": 2017,
+   "journal": "arXiv preprint (no journal ref listed on arXiv)",
+   "arxiv": "1703.10219",
+   "doi": null
+  },
+  "sanders2007": {
+   "authors": "Sanders, R. H.",
+   "year": 2007,
+   "journal": "MNRAS 380, 331",
+   "arxiv": "astro-ph/0703590",
+   "doi": "10.1111/j.1365-2966.2007.12073.x"
+  },
+  "sumi2013": {
+   "authors": "Sumi, T.; Bennett, D. P.; Bond, I. A.; Abe, F.; et al. (MOA)",
+   "year": 2013,
+   "journal": "ApJ 778, 150",
+   "arxiv": "1305.0186",
+   "doi": "10.1088/0004-637X/778/2/150"
+  },
+  "sumipenny2016": {
+   "authors": "Sumi, T.; Penny, M. T.",
+   "year": 2016,
+   "journal": "ApJ 827, 139",
+   "arxiv": "1603.05797",
+   "doi": "10.3847/0004-637X/827/2/139"
+  },
+  "mroz2019": {
+   "authors": "Mroz, P.; Udalski, A.; Skowron, J.; Szymanski, M. K.; et al. (OGLE)",
+   "year": 2019,
+   "journal": "ApJS 244, 29",
+   "arxiv": "1906.02210",
+   "doi": "10.3847/1538-4365/ab426b"
+  },
+  "wegg2016": {
+   "authors": "Wegg, C.; Gerhard, O.; Portail, M.",
+   "year": 2016,
+   "journal": "MNRAS 463, 557",
+   "arxiv": "1607.06462",
+   "doi": "10.1093/mnras/stw1954"
+  },
+  "nunota2025": {
+   "authors": "Nunota, K.; Sumi, T.; Koshimoto, N.; Rattenbury, N. J.; et al. (MOA)",
+   "year": "2025 (arXiv 2024)",
+   "journal": "ApJ 979, 123",
+   "arxiv": "2410.23553",
+   "doi": "10.3847/1538-4357/ada352"
+  },
+  "brouwer_readme": {
+   "authors": "Brouwer, M. M.; Oman, K. A.; Valentijn, E. A.; Bilicki, M.; Heymans, C.; Hoekstra, H.; Napolitano, N. R.; Roy, N.; Tortora, C.; Wright, A. H.; et al.",
+   "year": 2021,
+   "journal": "A&A 650, A113",
+   "arxiv": "2106.11677",
+   "doi": "10.1051/0004-6361/202040108"
+  },
+  "mistele_mrt": {
+   "authors": "Mistele, T.; McGaugh, S.; Lelli, F.; Schombert, J.; Li, P.",
+   "year": 2024,
+   "journal": "ApJ Letters 969, L3 (NOT JCAP)",
+   "arxiv": "2406.09685",
+   "doi": "10.3847/2041-8213/ad54b0"
+  }
+ }
+}
