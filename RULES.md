@@ -96,3 +96,18 @@ with the rule. It is the case §3 anticipated:
 Our derived function, `ν(y) = 1 + e^(−y/λ)/√y`, is not any published one. The closest is
 "simple", 0.031 dex away. It must not be swapped for a published function to simplify
 calculations.
+
+## 7. Round 3 passes the check (23 September 2026)
+
+The round-3 law (stars and galaxies carry the heat; gas collides and counts as cold; the
+pull follows the companion's net flow) was run through the guard:
+* **Cold, isolated mass.** A MOND form: `ν = 1 + e^(−y/λ)/√y`, λ = 3.45. The nearest
+  published function is RAR-exponential, 0.030 dex away. As §6 says, this is an output, not
+  an input.
+* **Same Newtonian pull, random speeds of 0–1000 km/s.** Predictions differ by 0.93 dex, so
+  **not a function of g_N alone**.
+* **SPARC.** 0.022 dex of the prediction is beyond any local function of g_N.
+* **No per-object parameters, and no extra conserved substance.** The companion's amount is
+  fixed by the visible matter.
+
+Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §10.

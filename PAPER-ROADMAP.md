@@ -5,7 +5,7 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 
 ---
 
-## Status — 23 September 2026 (hot-companion rows updated after round 2)
+## Status — 23 September 2026 (hot-companion rows updated after round 3)
 
 | Task | Status | Result |
 |---|---|---|
@@ -16,7 +16,9 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 | **KiDS** Early/late lensing offset | **Reproduced** | Hot gas haloes of about one stellar mass (0.6–1.0 keV) give +0.20 to +0.22 dex beyond 300 kpc, against the observed ≥ 0.2. MOND with the same haloes gives 0.14. Prediction: the offset grows with radius. `code/kids_haloes.py`. |
 | **T3.5** Stellar-mass convention | **Done** | Standard distances plus published Chabrier masses remove 0.13–0.16 dex. Our law then needs stars 1.2–1.6× Salpeter in the six SLACS lenses; dark-matter models need about 1.0. Spectroscopic IMFs are the test. `code/lenses_t35.py`. |
 | **Slip** Re-derived against the new law | **Not needed** | Lensing and resolved kinematics agree to +0.040 ± 0.026 dex. The earlier η ≠ 1 was an artefact of measuring against the MOND law. Cluster X-ray masses sit 22% below our prediction (b = 0.22), in the direction of the known hydrostatic bias. |
-| **T2.1** Bullet Cluster | **Partly; top open problem** | Companions that keep their emitter's velocity move the lensing peak 42–75% of the way from gas toward galaxies in a toy merger. But Harvey et al. 2015 (72 collisions) keep lensing on the stars, which needs a much slower companion rebuild on shocked gas than u = 874 km/s gives. `code/bullet_toy.py`. |
+| **ROUND 3** Collision rule + flow direction | **Done; law locked in** | Gas collides, so its companion stays in step (Dicke narrowing): only stars and galaxies carry heat. The companion pulls along its net energy flow. Refit: u = 197 km/s; galaxies 15.85 km/s (MOND 16.13); clusters 0.227 (held-out 0.244; law-only stellar speeds 0.329). KiDS early/late from early-type stars: 0.17–0.27 dex (obs 0.17/0.27). SLACS: stars 1.05–1.35 × Salpeter; no slip. Momentum is carried by the companion; a matter-only action would push cluster stars outward by 30–70% of gravity, so it is ruled out. Scripts: `code/dicke_toy.py`, `code/run_v3.py`, `code/kids_v3.py`. |
+| **T2.1** Bullet Cluster (round 3) | **Pattern reproduced; strength open** | On Clowe et al. 2006's published masses, both lensing peaks sit on the galaxies (8 and 34 kpc from the BCGs) and the gas residuals match (0.04 vs 0.05 ± 0.06 and 0.02 ± 0.06). The old direction rule, hot gas, or no heat each put the peaks on the gas. Strengths: main 0.51 (obs 0.36 ± 0.06; 0.31–0.41 at M/L 1–1.5), sub 0.07 (obs 0.20 ± 0.05). **The subcluster strength is the open item.** 20 modelled collision pieces all keep lensing with the galaxies (Harvey et al. 2015: 5.8 ± 8.2 kpc). Scripts: `code/bullet_v3.py`, `code/collisions_v3.py`. |
+| **T2.1** Bullet Cluster (round 2, superseded) | **Partly; top open problem** | Companions that keep their emitter's velocity move the lensing peak 42–75% of the way from gas toward galaxies in a toy merger. But Harvey et al. 2015 (72 collisions) keep lensing on the stars, which needs a much slower companion rebuild on shocked gas than u = 874 km/s gives. `code/bullet_toy.py`. |
 | **T0.1** Resolve the contradiction | **Done** | Branch (a) fails on energy by 1.5 × 10⁴; the field's own energy is 1.7 × 10⁻⁴ of what it would need. Branch (b), a modified propagator, survives. τ splits into two objects: in lensing it is the **gravitational slip η** (legitimate, no energy cost); in cluster dynamics it has **no mechanism**. The cluster "closed within scatter" claim is **retracted**. |
 | **T2.2** GW170817 | **Done** | Survives, with a construction constraint: the modification and the slip must live in the scalar sector. TeVeS-type completions are excluded; a surviving class exists. |
 | **T0.2** Field equations | **Done**; relativistic home identified | Three equations. The dynamics equation reproduces the fitted law to 4.4 × 10⁻¹⁶ and is Milgrom's QUMOND, attributed. The slip equation is ours; JR-10's γ_χ is identically η. **Relativistic:** slip is exactly a radial stress of the extra gravity (the radial Einstein equation). Of four places the extra gravity could live, one passes GW170817 and our data: the aether-scalar-tensor theory (which gives η = 1, verified from the paper) plus a conformal coupling κ of matter to its scalar, giving η = (1−κ)/(1+κ). Clusters need κ ≈ −0.12 to −0.17. What sets κ is open. |
@@ -27,14 +29,19 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 Full working in [THEORY.md](THEORY.md); relativistic slots in
 [research_work/results/relativistic-slip/](research_work/results/relativistic-slip/README.md).
 
-**Next, from 23 September 2026 (hot-companion gravity):**
+**Next, after round 3 (hot-companion gravity):**
 
-1. **Mergers:** the companion rebuild time after a collision, against the 72-collision stack.
-2. **Derive `u` and `g_d`**, which are still measured.
-3. **Solar mass loss** of 1.4 × 10⁻¹⁴ per year, against planetary ranging.
-4. **Spectroscopic IMFs** of the six SLACS lenses: 1.2–1.6× Salpeter predicted.
-5. **The KiDS offset against radius.**
-6. **A relativistic form of the action.**
+1. **The Bullet subcluster's lensing strength** (2.5σ low): its stars' pre-collision speeds,
+   its stellar mass, and the effect of galaxy streams interpenetrating at high speed.
+2. **A field theory for the companion,** with a momentum flux and a relativistic form, so
+   lensing is derived.
+3. **Microphysics:** derive `u` and `g_d`; pin the companion wavelength and locking time;
+   check that cluster gas scatters faster than about 0.1–1 Myr.
+4. **Wide binaries:** a proper external-field prediction.
+5. **Tests others can run now:**
+   * spectroscopic IMFs of the six SLACS lenses (1.05–1.35 × Salpeter);
+   * the KiDS offset flat beyond 100 kpc;
+   * galaxy and gas dynamics equal in relaxed clusters.
 
 **Superseded list (22 September, built on the retired MOND law and slip), kept for the record.
 Next, in order of value per effort:**

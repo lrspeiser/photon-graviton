@@ -365,3 +365,201 @@ stopped, its earlier companion flies on with the galaxies, and only its fresh co
 4. **Spectroscopic IMFs** for the six SLACS lenses.
 5. **The KiDS offset profile** against radius.
 6. **The full action**, written relativistically, for lensing beyond the weak field.
+
+## 10. Round 3, 23 September 2026: colliding clusters, and the law locked in
+
+Scripts: `code/dicke_toy.py`, `code/run_v3.py`, `code/bullet_v3.py`, `code/collisions_v3.py`,
+`code/kids_v3.py`, and `code/lenses_t35.py --constants`. Their outputs are in `run-dicke/`,
+`run-v3/`, `run-bullet-v3/`, `run-collisions-v3/`, `run-kids-v3/` and `run-lenses-v3/`.
+
+Colliding clusters are the classic argument for dark matter, so passing them was required
+before this law could stand as an alternative. Two changes, each from first principles, did
+it. Neither changes the law for round, relaxed systems.
+
+### 10.1 Change 1: colliding matter is cold to the companion (Dicke narrowing)
+
+The heat term rests on Doppler scrambling (§8.1): a moving emitter's companion phase drifts
+by `k_c x(t)`, the companion wavenumber times the emitter's displacement. Laboratory
+spectroscopy has a known exception. An emitter that changes direction many times before
+it travels one wavelength drifts only diffusively, and its Doppler effect switches off
+(R. H. Dicke, Phys. Rev. 89, 472, 1953). The confined-emitter version is the recoil-free
+Mössbauer line.
+
+`dicke_toy.py` checks this for the companion. Units are k_c = 1 and σ = 1, with phase locking
+at rate Γ.
+
+* **Coherence time.** Free streaming gives 1.40, against 1.41 predicted. Colliding with
+  k_c ℓ = 0.1 gives 10.0 (theory 10.1). With k_c ℓ = 0.01 it gives 102 (theory 100).
+* **Steady-state phase variance.** It matches `k_c²σ²τ_c / (Γ(1 + Γτ_c))` at every τ_c,
+  for example 0.0200 against 0.0200 at τ_c = 0.001. Free streaming gives `k_c²σ²/Γ²`,
+  proportional to σ². That is the heat weight's form, `k = 3σ²/u²` with `u = √3 Γ/k_c`.
+  Collisions multiply it by `Γτ_c/(1 + Γτ_c)`.
+* **The summed field**, the round-2 step-2 set-up, at one temperature:
+  * free-streaming emitters give 0.998 of the scalar sum;
+  * colliding emitters (k_c ℓ = 0.001) give 1.20 × the squared vector sum, like cold matter
+    (11.2 × for free streamers).
+
+**Rule:** stars and galaxies, which never collide, carry the heat. Gas and plasma, whose
+particles collide or gyrate far faster, add coherently like cold matter. They still count
+in full as ordinary mass. This needs the hot cluster gas to scatter its ions faster than
+about the locking time (0.1–1 Myr is the natural window). That is likely in magnetised
+cluster plasma but not established; it is flagged as an assumption.
+
+### 10.2 The refit: stars now carry the cluster heat
+
+The stars' random speeds come from the isotropic Jeans equation in the measured X-ray
+acceleration. The stellar mass profiles are the X-COP release's (Ghizzardi et al. 2021,
+seven clusters). The other five use the median star-to-gas ratio. Stars dominate cluster
+centres: M*/M_gas is 2–11 at 0.02 R500, about 1 at 0.05, 0.3–0.5 at 0.1, and 0.02–0.07 at
+R500.
+
+| | Round 3 | Round 1 | MOND | Newton | NFW dark matter |
+|---|---:|---:|---:|---:|---:|
+| Constants | a = 6.561 × 10⁻¹¹ m/s², g_d = 2.262 × 10⁻¹⁰ m/s² (λ = 3.448), **u = 197.4 km/s** | u = 874 | 1 | 0 | 2 per object |
+| 149 galaxies, velocity error | **15.85 km/s** | 15.93 | 16.13 | 45.58 | 7.52 |
+| 25 bulge-dominated galaxies | **29.18** | 29.48 | 30.35 | | |
+| 12 clusters, rms ln(M_HSE/M_pred) | **0.227** | 0.223 | 1.062 | 2.211 | 0.101 |
+
+The 25 bulge-dominated galaxies were the worry: their bulges are now 19× hotter per
+kilogram. They improve.
+
+Cluster residuals by radius (0.1 → 1 R500) are +0.06, +0.11, +0.08, +0.03, −0.07, −0.19.
+That is flatter than round 1's +0.14 → −0.25.
+
+Variants and robustness:
+
+| Variant | u (km/s) | rms |
+|---|---:|---:|
+| Stars moving at the gas's speed | 224 | 0.202 |
+| Seven clusters with measured stellar profiles only | — | 0.200 |
+| **Stars' speeds from the law's own gravity (no X-ray input)** | 216 | **0.329** |
+| Held-out, all 924 half-splits | 197 (178–218) | 0.244 (0.197–0.285) |
+
+A free gas share of the heat scores 0.217–0.228 at every weight. The clusters alone cannot
+tell gas from stars; colliding clusters can (§10.4).
+
+### 10.3 Change 2: the companion pulls along its net flow
+
+Energy fluxes add as vectors even when the waves are out of step. So the companion's net
+flow is along `g_N + g_hot`, where `g_hot = G ∫ k ρ_free (x′ − x)/|x′ − x|³` is the
+heat-weighted Newtonian field of the free-streaming matter. The extra pull takes that
+direction, with the two parts mixed in proportion to their sizes. It fades smoothly to
+zero where the parts cancel:
+
+```
+h = g_N + e^(−|g_N|/g_d) √(a(|g_N| + S)) · (g_N + g_hot) / (|g_N| + |g_hot|)
+∇²Φ = −∇·h ,   g = −∇Φ   (the pull on matter and light)
+S = G ∫ k ρ_free / d² ,   k = 3σ²/u² for free-streaming matter, 0 for colliding matter
+```
+
+For spherical systems, and for disks with bulges, `g_hot ∥ g_N`. The pull is then exactly
+the fitted law, so none of §10.2 changes.
+
+A first version used the pure unit vector of the flow. It flips abruptly where the two
+parts oppose, which would plant sheets of negative lensing. The mixed form is continuous;
+the minimum κ in every Bullet map is positive.
+
+### 10.4 The Bullet Cluster, on its published numbers
+
+**Data.** Clowe et al. 2006 (Table 2), 100 kpc apertures:
+
+| Position | Gas (10¹² M☉) | Stars (10¹² M☉) | κ̄ |
+|---|---:|---:|---:|
+| Main BCG | 5.5 | 0.54 | 0.36 ± 0.06 |
+| Main plasma | 6.6 | 0.23 | 0.05 ± 0.06 (excess) |
+| Sub BCG | 2.7 | 0.58 | 0.20 ± 0.05 |
+| Sub plasma | 5.8 | 0.12 | 0.02 ± 0.06 (excess) |
+
+Galaxy speeds are from Barrena et al. 2002: main 1249 (+109/−100) km/s from 71 galaxies;
+subcluster 212 (+67/−52) km/s from 7.
+
+**Model.**
+* Two β-model gas clouds and two NFW-shaped stellar concentrations, fitted to the eight
+  aperture masses. The bullet core has a 30 kpc floor, because the fit otherwise shrinks it
+  to 5 kpc and plants a false lensing bump.
+* The 3D field equation on a 192³ grid at 15 kpc resolution.
+* κ with sources at z = 1 (Σ_crit = 2.84 × 10⁹ M☉/kpc²).
+* The same two-circular-profile decomposition as Clowe et al.
+
+**Prediction (A):** stars' speeds from each cluster's own gravity under our law, with the
+subcluster's pre-collision gas restored at 1:8 of the main cluster.
+
+| | Main BCG | Sub BCG | Main plasma | Sub plasma | Main peak | Sub peak |
+|---|---:|---:|---:|---:|---|---|
+| Observed | 0.36 ± 0.06 | 0.20 ± 0.05 | 0.05 ± 0.06 | 0.02 ± 0.06 | on galaxies | 43 kpc from BCG, toward gas |
+| **Ours (A)** | 0.51 | 0.07 | 0.04 | 0.04 | **8 kpc from BCG** | **34 kpc from BCG, toward gas** |
+| Ours, stars at M/L 1–1.5 | 0.31–0.41 | 0.07 | 0.05 | 0.04 | on galaxies | weak |
+| Rounds 1–2 direction rule | 0.35 | 0.13 | **0.21** | 0.07 | **on the gas** | **on the gas** |
+| Cold limit (no heat) | 0.14 | 0.07 | 0.06 | 0.04 | **on the gas** | **on the gas** |
+
+* The law's own star speeds for the main cluster rise from 620 km/s at 20 kpc to 1,140 km/s
+  at 400 kpc, against the measured 1,249 ± 100.
+* **The pattern is reproduced:** lensing on the galaxies, nothing extra on the gas. Both
+  changes are needed; each old rule puts the peaks on the gas.
+* **The strengths are 2.5σ off in opposite directions.** Lighter stars, within Clowe's stated
+  range, fix the main cluster but not the subcluster. The subcluster needs its stars to move
+  at about 500 km/s or more. Our law gives 270–440 km/s; its 7 measured galaxies give
+  212 ± 60. **This is the open item.**
+
+### 10.5 The 72-collision stack
+
+We used the Bullet as a template and varied the collision stage (gas lagging by 40–300 kpc)
+and the mass ratio: 20 substructures in all.
+* The lensing peak stays with the galaxies in every case, 4–22 kpc from them at 18 kpc
+  resolution. The median fraction of the way to the gas is 0.06.
+* Harvey et al. 2015 measure 5.8 ± 8.2 kpc (β = −0.04 ± 0.07).
+* The drift back to the gas that sank round 2 is gone. The heat rides with the stars at
+  every stage, with no memory needed.
+
+### 10.6 Momentum: the companion carries it
+
+**The round-2 action gave hot matter a reaction force** proportional to k. With stars as the
+hot component (about 5% of the mass), that reaction pushes the stars outward by a median
+32% of the gravity at 0.1 R500 and 73% at 0.3–0.5 R500. Cluster galaxies would then orbit as
+if clusters held a third of their mass. Galaxy kinematics agree with lensing and X-ray
+masses (for example Pizzuti et al. 2016), so that is excluded.
+
+**The consistent alternative is how every streaming field behaves.** The companion carries
+momentum, and an emitter recoils only if it emits unevenly. Gas and galaxies then feel the
+same pull, so η = 1. The price is a small self-force on lopsided hot-and-cold systems, paid
+from the companion's momentum flux `P/u = (a/2) Σ(1 + k)m`. For the Bullet it is 12% of the
+mean pull, and 13% of that budget.
+
+A dynamical, relativistic field theory for the companion is still to be written.
+
+### 10.7 Everything else, re-run under round 3
+
+* **KiDS early/late offset.** The early types' own stars (150–200 km/s, collisionless) give
+  **+0.17 to +0.27 dex**, roughly constant beyond 100 kpc. Brouwer et al. 2021 measure 0.17
+  (Sérsic split) and 0.27 (colour split). Hot haloes now count only as mass. They add
+  +0.02–0.07 dex for 0.3–1 M*, so the prediction is that such haloes are modest.
+* **SLACS**, standard bookkeeping:
+  * stars need **1.05–1.35 × Salpeter** (round 2: 1.23–1.57);
+  * the lensing-minus-kinematics gap is **−0.017 ± 0.024 dex**, so there is no slip.
+* **Solar System.** Zero extra pull, from the release factor. The Sun is collisional plasma,
+  so it has no heat term. Emission is ℓ = a u/2 = 6.5 × 10⁻⁶ W/kg, and the Sun's extra
+  mass loss is **2.3 × 10⁻¹⁵ per year**, 6 times smaller than in round 2.
+* **Guard.** The cold isolated mass takes a MOND form, `ν = 1 + e^(−y/λ)/√y`. The closest
+  published function is RAR-exponential at 0.030 dex (simple 0.035, standard 0.084). Random
+  speeds of 0–1000 km/s at the same Newtonian pull change the prediction by 0.93 dex, and
+  SPARC points sit 0.022 dex beyond any local function of g_N. It is **not MOND, not Newton,
+  and has no dark component or per-object parameters.**
+* **MOND as the cold limit (§8.1)** is unchanged, with a₀ = 2ℓ/u and the new constants.
+
+## 11. Open, and next (round 3)
+
+1. **The subcluster's lensing strength.** It is 2.5σ low: its stars' speeds, its stellar mass,
+   or the time since the collision.
+2. **A field theory for the companion**, with momentum flux and a relativistic form, so
+   lensing is derived rather than assumed equal to dynamics.
+3. **Microphysics.** Derive u and g_d, and pin the companion wavelength and locking time
+   that separate gas from stars.
+4. **Wide binaries.** Near the Sun the Galaxy's pull is close to the release scale g_d, so the
+   release factor is partly on. That makes our external-field boost smaller than MOND's, and
+   the predicted wide-binary signal weaker. It needs a proper external-field calculation. The
+   data are contested (Chae 2024; Banik et al. 2024).
+5. **Checks others can make now:**
+   * spectroscopic IMFs of the six SLACS lenses (1.05–1.35 × Salpeter);
+   * KiDS offset flat with radius beyond 100 kpc;
+   * galaxy and gas dynamics equal in relaxed clusters;
+   * lensing always with the galaxies in mergers.

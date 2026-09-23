@@ -211,7 +211,7 @@ def own_sigma_profile(gas, stars, consts, extra_gas=None, n=500, iters=300):
     return r, np.sqrt(np.maximum(sig2, 0.0))
 
 
-def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360., 50.), heat=True, direction='flow', want_force=False):
+def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360., 50.), heat=True, direction='flow', want_force=False, gas_sigma=None):
     a, lam, u = consts['a_code'], consts['lam'], consts['u_kms']
     gd = lam * a
     x = (np.arange(n) - n / 2 + 0.5) * dx + centre[0]
@@ -230,6 +230,9 @@ def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360
     k_main = kfield(sig_main, pos[comps['st_main']['centre']])
     k_sub = kfield(sig_sub, pos[comps['st_sub']['centre']])
     krho = (k_main * rho_sm + k_sub * rho_ss) if heat else np.zeros_like(rho_b)
+    if heat and gas_sigma is not None:             # round-1 rule: the gas is hot too
+        rho_gm = build_density({k: v for k, v in comps.items() if k == 'gas_main'}, pos, x, y, z, 'gas')
+        krho = krho + (3 * gas_sigma[0] ** 2 / u ** 2) * rho_gm + (3 * gas_sigma[1] ** 2 / u ** 2) * (rho_g - rho_gm)
     dV = dx ** 3
     # cell-averaged 1/r and 1/r^2 at the origin cell (cube of side dx)
     inv_r = Conv(n, dx, lambda r: 1.0 / r, cube_average(lambda r: 1 / r) / dx)
@@ -351,10 +354,17 @@ def main():
              ('C. measured galaxy speeds, constant (main 1249, sub 212)', 1249., 212., 'mix'),
              ('D. speeds implied by the lensing mass (circular; reference only: main 660, sub 500)', 660., 500., 'mix'),
              ('E. no heat at all (the cold, MOND-like limit of our law)', 1249., 212., 'mix'),
-             ('F. rounds 1-2 direction rule (pull along ordinary gravity), speeds as A', prof_main, prof_sub_pre, 'newton')]
+             ('F. rounds 1-2 direction rule (pull along ordinary gravity), speeds as A', prof_main, prof_sub_pre, 'newton'),
+             ('G. round-1 heat rule (gas hot as well; round-1 constants), flow direction', 1249., 212., 'mix')]
     for label, sm, ss, direction in cases:
         heat = 'no heat' not in label
-        res = kappa_map(comps, pos, consts, sm, ss, n=args.n, dx=args.dx, heat=heat, direction=direction, want_force=label.startswith('A.'))
+        if label.startswith('G.'):
+            v1 = json.loads((Path(__file__).resolve().parent.parent / 'run-v1/results.json').read_text())['constants']
+            # gas speeds from the X-ray temperatures: main 14 keV, bullet 6 keV (Markevitch et al. 2002)
+            sg = [float(np.sqrt(T / (0.6 * 938272.088)) * 299792.458) for T in (14.0, 6.0)]
+            res = kappa_map(comps, pos, v1, sm, ss, n=args.n, dx=args.dx, heat=True, direction=direction, gas_sigma=sg)
+        else:
+            res = kappa_map(comps, pos, consts, sm, ss, n=args.n, dx=args.dx, heat=heat, direction=direction, want_force=label.startswith('A.'))
         x, y, Sig_eff, Sig_b, Sig_g = res[:5]
         force = res[5] if len(res) > 5 else None
         kap = Sig_eff / scrit
@@ -370,8 +380,8 @@ def main():
         row = dict(case=label, sigma_main=sm if np.isscalar(sm) else {'r_kpc': [20, 50, 100, 200, 400], 'sigma': [float(np.interp(r0, *sm)) for r0 in (20, 50, 100, 200, 400)]},
                    sigma_sub=ss if np.isscalar(ss) else {'r_kpc': [20, 50, 100, 200, 400], 'sigma': [float(np.interp(r0, *ss)) for r0 in (20, 50, 100, 200, 400)]},
                    heat=heat, direction=direction,
-                   k_main=(3 * sm ** 2 / consts['u_kms'] ** 2) if np.isscalar(sm) else 'radial profile',
-                   k_sub=(3 * ss ** 2 / consts['u_kms'] ** 2) if np.isscalar(ss) else 'radial profile',
+                   k_main=(3 * sm ** 2 / (874.0771684301615 if label.startswith('G.') else consts['u_kms']) ** 2) if np.isscalar(sm) else 'radial profile',
+                   k_sub=(3 * ss ** 2 / (874.0771684301615 if label.startswith('G.') else consts['u_kms']) ** 2) if np.isscalar(ss) else 'radial profile',
                    kappa_total_apertures=total, kappa_baryons_apertures=baryon, gas_share_of_kappa=gasfrac,
                    grid_baryon_aperture_masses_1e12=grid_masses,
                    clowe_style=dec, peaks=pk[:6], kappa_min=kap_min, momentum=force,

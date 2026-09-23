@@ -9,66 +9,80 @@
 > The slip results (η) were measured against that MOND law, so they must be re-derived
 > before they are quoted.
 >
-> The current candidate is **hot-companion gravity**:
-> [research_work/results/hot-companion/](research_work/results/hot-companion/README.md).
-> * **Galaxies:** 15.93 km/s, against MOND's 16.13.
-> * **Clusters:** error 0.223, against MOND's 1.062.
-> * **No anomalous pull in the Solar System.**
-> * **The formula check shows it is not MOND**, because it depends on how hot the matter is.
+> The current theory is **hot-companion gravity**, locked in at round 3 (23 September 2026):
+> [research_work/results/hot-companion/](research_work/results/hot-companion/README.md), §10.
+> * **Galaxies:** 15.85 km/s, against MOND's 16.13.
+> * **Clusters:** error 0.227, against MOND's 1.062.
+> * **Bullet Cluster:** lensing on the galaxies, as observed.
+> * **Solar System:** no anomalous pull.
+> * **The formula check shows it is not MOND.**
 
 
-## Hot-companion gravity: the current theory (23 September 2026)
+## Hot-companion gravity: the current theory (round 3, 23 September 2026)
 
-*Details and every number: [research_work/results/hot-companion/](research_work/results/hot-companion/README.md).
-Proposed here; originality unverified.*
+*Details and every number: [research_work/results/hot-companion/](research_work/results/hot-companion/README.md),
+§§8–11. Plain-language account: [BLOG.md](BLOG.md). Proposed here; originality unverified.*
 
 ### Postulates
 
-1. **Emission.** Every kilogram of ordinary matter emits companion energy at rate ℓ. The
+1. **Emission.** Every kilogram of ordinary matter feeds companion energy at rate ℓ. The
    energy streams away at speed `u`.
-2. **Coherence.** Cold, orderly matter emits in step, so energy *fluxes* add as vectors.
-   Hot matter has its emitters Doppler-scrambled by random motion (speed σ), so it emits an
-   extra `k ℓ` per kilogram, with `k = 3σ²/u²`, out of step. Energy *densities* add as
-   scalars.
-3. **Amplitude.** The companion's energy density is A²/8πG, and its pull on matter and
-   light equals its amplitude A.
-4. **Attachment.** Strong fields hold the companion. It is released where the ordinary pull
-   is weak: `f = exp(−|g_N|/g_d)`.
+2. **Coherence.**
+   * Emitters in step add their energy fluxes as vectors, which reproduces Newton's geometry.
+   * Random motion Doppler-scrambles the companion. Scrambled contributions add as a scalar
+     sum and are fed harder, with heat weight `k = 3σ²/u²`.
+3. **Collisions.** Scrambling needs free flight over a companion wavelength (Dicke
+   narrowing). Stars and galaxies are free-streaming and **hot**. Gas and plasma collide and
+   are **cold** (`k = 0`), though they count in full as mass.
+4. **Amplitude.** The companion's energy density is A²/8πG, and its pull on matter and light
+   equals its amplitude A.
+5. **Direction.** Energy flows add as vectors even out of step, so the extra pull points
+   along the net flow `g_N + g_hot`.
+6. **Attachment.** Strong fields hold the companion: `f = exp(−|g_N|/g_d)`.
+7. **Momentum.** The companion carries momentum, like any streaming field. Emitters do not
+   recoil from what their companion does elsewhere.
 
 ### What follows
 
 ```
-g  =  g_N  +  exp(−|g_N|/g_d) · √( a (|g_N| + S_hot) ),    a = 2ℓ/u,    S_hot = G ∫ k ρ / d²
+S     = G ∫ k ρ_free / d² ,     g_hot = G ∫ k ρ_free (x′ − x) / |x′ − x|³ ,     k = 3σ²/u²
+h     = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) ) · (g_N + g_hot) / (|g_N| + |g_hot|)
+∇²Φ   = −∇·h ,   g = −∇Φ   (matter and light) ,   a = 2ℓ/u
+round, settled systems:   g = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) )
 ```
 
-* **Constants,** fitted once: a = 6.58 × 10⁻¹¹ m/s², g_d = 2.82 × 10⁻¹⁰ m/s²,
-  u = 874 km/s. Therefore ℓ = 2.9 × 10⁻⁵ W/kg.
-* **Field equation:** ∇²Φ = −∇·h, with h the vector form of the law above, and g = −∇Φ.
-* **Action:** `L = −(1/8πG)[2∇Φ·∇ψ − W(|∇ψ|, S)] + ρ(v²/2 − Φ)`. It conserves momentum,
-  verified in 3D, and it gives hot matter a small reaction force.
+* **Constants,** fitted once:
+  * a = 6.56 × 10⁻¹¹ m/s² (galaxies);
+  * g_d = 2.26 × 10⁻¹⁰ m/s² (galaxies);
+  * u = 197 km/s (clusters).
+  * Therefore ℓ = 6.5 × 10⁻⁶ W/kg.
+* **Superseded from rounds 1–2:**
+  * u = 874 km/s with hot gas;
+  * the pull along ĝ_N;
+  * the matter-only action, whose reaction force would push cluster stars outward by 30–70%
+    of gravity. Galaxy kinematics rule that out.
 
 ### MOND is the cold limit, derived rather than assumed
 
-With σ → 0, the field equation becomes Milgrom's QUMOND:
-* The deep law √(a g_N) comes from companion energy conservation.
-* The Newtonian limit comes from attachment.
-* The scale symmetry is exact.
-* **a₀ = 2ℓ/u** is emission power per kilogram over speed.
-* The interpolating function `ν(y) = 1 + exp(−y/λ)/√y` is fixed, not chosen. The closest
-  published function is 0.031 dex away.
+With no free-streaming heat, the law becomes the QUMOND form with
+`ν(y) = 1 + exp(−y/λ)/√y` and λ = 3.45:
+* **a₀ = 2ℓ/u.**
+* The closest published function is RAR-exponential, 0.030 dex away.
 
-So galaxies obey MOND because disks are cold, and clusters defy it because their gas is hot.
+Galaxies obey MOND because disks are cold. Clusters defy it because their galaxies are hot,
+and collisions defy it because the heat rides with the galaxies, not the gas.
 
 ### Status
 
 | Test | Result |
 |---|---|
-| 149 galaxies | 15.93 km/s, against MOND's 16.13 |
-| 12 clusters | error 0.223, against MOND's 1.062; held-out 0.234 |
-| Solar System | 0 anomalous pull |
-| Lenses | no slip needed (gap +0.040 ± 0.026 dex); needs stars 1.2–1.6× Salpeter, a testable prediction |
-| KiDS elliptical/spiral gap | reproduced with hot haloes of about 1 stellar mass |
-| Mergers | lensing moves toward the galaxies, but the rebuild is too fast for the 72-collision stack. **This is the open problem.** |
+| 149 galaxies | 15.85 km/s, against MOND's 16.13 |
+| 12 clusters | 0.227 (held-out 0.244; stellar speeds from the law alone 0.329), against MOND's 1.062 |
+| Bullet Cluster | peaks on the galaxies (8 and 34 kpc from the BCGs); gas residuals as observed. Strengths: main 0.51 (obs 0.36 ± 0.06), sub 0.07 (obs 0.20 ± 0.05). **The sub strength is the open problem.** |
+| Collision stack | lensing stays with the galaxies in all 20 modelled substructures |
+| KiDS early/late | 0.17–0.27 dex from early-type stars (obs 0.17 and 0.27) |
+| SLACS lenses | stars 1.05–1.35 × Salpeter; lensing = kinematics to −0.017 ± 0.024 dex |
+| Solar System | 0 anomalous pull; the Sun loses 2.3 × 10⁻¹⁵ of its mass per year to the companion |
 
 ---
 

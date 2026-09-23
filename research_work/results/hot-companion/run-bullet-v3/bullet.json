@@ -645,11 +645,72 @@
       "momentum": null,
       "main_peak_fraction_stars_to_gas": 1.0527047100019764,
       "sub_peak_fraction_stars_to_gas": 2.6217223737622897
+    },
+    {
+      "case": "G. round-1 heat rule (gas hot as well; round-1 constants), flow direction",
+      "sigma_main": 1249.0,
+      "sigma_sub": 212.0,
+      "heat": true,
+      "direction": "mix",
+      "k_main": 6.125571012442857,
+      "k_sub": 0.17647915840004702,
+      "kappa_total_apertures": {
+        "main_bcg": 0.43874529004096985,
+        "main_plasma": 0.7583867907524109,
+        "sub_bcg": 0.23662054538726807,
+        "sub_plasma": 0.3709491789340973
+      },
+      "kappa_baryons_apertures": {
+        "main_bcg": 0.059878308326005936,
+        "main_plasma": 0.07838794589042664,
+        "sub_bcg": 0.037278592586517334,
+        "sub_plasma": 0.06138016656041145
+      },
+      "gas_share_of_kappa": {
+        "main_bcg": 0.12273398029011166,
+        "main_plasma": 0.09995333285286206,
+        "sub_bcg": 0.1311204700246912,
+        "sub_plasma": 0.16185609226456293
+      },
+      "grid_baryon_aperture_masses_1e12": {
+        "main_bcg": 5.345178123112413,
+        "main_plasma": 6.997486464224763,
+        "sub_bcg": 3.327761674949638,
+        "sub_plasma": 5.479245715268063
+      },
+      "clowe_style": {
+        "main_bcg": 0.45469129633618083,
+        "sub_bcg": 0.20858254764000478,
+        "main_plasma": 0.3434587518654034,
+        "sub_plasma": 0.07727020917959201,
+        "fit": {
+          "k0_main": 0.5081874296321695,
+          "rc_main": 283.003928895651,
+          "k0_sub": 0.22645757013332654,
+          "rc_sub": 580.6744231639921,
+          "sheet": -0.1578621741549547
+        }
+      },
+      "peaks": [
+        {
+          "x": 202.5,
+          "y": 87.5,
+          "kappa": 0.8513016104698181,
+          "dist_main_bcg": 220.5957841845578,
+          "dist_main_plasma": 13.661966596145414,
+          "dist_sub_bcg": 513.048927217116,
+          "dist_sub_plasma": 321.50364421085106
+        }
+      ],
+      "kappa_min": 0.017279300838708878,
+      "momentum": null,
+      "main_peak_fraction_stars_to_gas": 1.0527047100019764,
+      "sub_peak_fraction_stars_to_gas": 2.6217223737622897
     }
   ],
   "grid": {
     "n": 192,
     "dx_kpc": 15.0
   },
-  "seconds": 133.76288317599983
+  "seconds": 151.4096855859998
 }
