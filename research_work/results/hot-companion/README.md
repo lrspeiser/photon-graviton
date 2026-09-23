@@ -879,3 +879,129 @@ Masses are in 10¹⁴ M☉.
 3. **A field theory for the companion**, with its travel time, momentum flux and a relativistic
    form.
 4. **Microphysics, wide binaries, cosmology:** as in §13.
+
+## 16. Round 6, 23 September 2026: three tests of round 5, and the wide-binary prediction
+
+Scripts: `code/bullet_members_v6.py`, `code/bullet_light_v6.py` and `code/wide_binaries_v6.py`.
+Outputs are in `run-bullet-members-v6/`, `run-bullet-light-v6/` and `run-wide-binaries-v6/`.
+New data files in `data/`:
+* `barrena2002_table1.json`: the 78 cluster members with positions and velocities, transcribed
+  from Barrena et al. 2002, Table 1 (astro-ph/0202323);
+* `ls_dr10_bullet.csv.gz`: 26,288 Legacy Survey DR10 galaxies with z < 22.5 and photometric
+  redshifts, in a 1.6° × 0.9° box around the Bullet, from the NOIRLab Astro Data Lab. The query
+  is in the script.
+
+### 16.1 The subcluster's lost galaxies are not in the velocity sample
+
+If the subcluster held a third of the main cluster before the collision (round 5), about
+7 × 10¹² M☉ of its galaxies lie beyond its compact core but still move with it, at +616 km/s.
+
+* **The core is recovered.** The 7 galaxies within 250 kpc of its brightest galaxy that are
+  within 600 km/s of +616 are exactly Barrena et al.'s KMM group: mean +622, spread 205 km/s
+  (theirs: +616 and 212).
+* **A mixture test on the other 71 galaxies.** The model's projected star densities set each
+  galaxy's prior odds of being lost. At 1:3 about 12–15 of them should be lost galaxies.
+* **Result: every variant prefers none.** ln L(1:3) − ln L(1:8) is −3.9 to −0.7, where +0.2 to
+  +0.7 is expected if 1:3 were true.
+  * For a compact or cool lost population (scale 150–300 kpc, spread 600–850 km/s), the
+    observed value falls below every simulated 1:3 sample: about 2.5–3σ.
+  * For a population spread 600 kpc with a 1,200 km/s spread, it falls below 92%: about 1.4σ.
+* **Forecast.** About 450–1,900 velocities would separate 1:3 from 1:8 at 3σ.
+
+### 16.2 A star count from the Legacy Survey
+
+Cluster galaxies are those with z < 21.5 and a photometric redshift within 0.04 (also tested:
+0.06) of 0.296. The field level is measured at 4–6 Mpc. Stars are taken at M/L_I = 2 from the
+z band.
+
+**The main cluster's outskirts: confirmed.** Light inside R, eastern half doubled, relative to
+all the light inside 250 kpc:
+
+| R (kpc) | 500 | 750 | 1,000 | 1,500 | 2,000 | 2,500 | 3,000 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Data (window ±0.04) | 1.57 | 2.39 | 3.10 | 4.05 | 4.99 | 5.24 | 5.23 |
+| Data (window ±0.06) | 1.76 | 2.52 | 3.19 | 4.61 | 5.74 | 6.58 | 6.40 |
+| Round 4 model (stars cut at 1.5 Mpc) | 2.19 | 3.18 | 3.94 | 4.76 | 4.76 | 4.76 | 4.76 |
+| Round 5 model (with the outer stars) | 2.26 | 3.35 | 4.24 | 5.39 | 5.78 | 6.05 | 6.19 |
+
+* **The light keeps rising beyond 1.5 Mpc.** 23–28% of the total out to 3 Mpc lies beyond it.
+  Round 5's model has 13% there; round 4's had none.
+* **The total out to 3 Mpc is 85–103% of round 5's model**, which was inferred from the galaxy
+  speed alone.
+* **Inside 1.5 Mpc the observed light is more concentrated than either model.**
+* **The absolute scale** from these magnitudes is about 1.8 times Clowe et al.'s inside 100 kpc,
+  so we compare shapes.
+
+**The subcluster: little light beyond its core.** We measured the excess light near the
+subcluster, after removing the field and the main cluster's own light at the same distance
+from the main cluster (taken from the eastern side). As a fraction of the main cluster's light
+inside 250 kpc:
+
+| Inside 250 kpc of the subcluster | Excess light ÷ main cluster's light inside 250 kpc |
+|---|---:|
+| Data (both windows) | 0.46 |
+| Model: its core only | 0.32 |
+| Model: core + lost galaxies still in place, 1:8 | 0.68 |
+| Model: core + lost galaxies still in place, 1:3 | 1.55 |
+
+Inside 500 kpc the excess is no larger than inside 250 kpc. **Neither the velocities nor the
+light show the stars that 1:3 needs**, unless they have spread beyond 500 kpc, moved faster than
+1,200 km/s, or are diffuse light too faint for a galaxy catalogue.
+
+### 16.3 The subcluster's lensing mass: open again
+
+* **In our law the subcluster's lensing comes mainly from its hot stars.** At 1:3, lowering its
+  pre-collision stars from 7% to 3% or 1.5% of its gas drops its mass inside 250 kpc from 1.93
+  to 1.23 or 1.05 × 10¹⁴. The 1:2 case with 3% stars gives 1.59. More gas alone does not replace
+  the stars.
+* **So the measured 2.0–2.3 × 10¹⁴ against our 1.0 at 1:8 is again the top open problem.**
+* **What would have to change**, from the most to the least promising within our rules:
+  1. **Heat gained in the passage, carried with the subcluster.** While its galaxies crossed the
+     main cluster at 3,000–4,500 km/s, their random speed relative to the local mean was
+     several times their own, so their companion was fed with a heat weight 10 times larger.
+     That companion keeps their velocity (the memory), so it now surrounds the subcluster.
+     Round 4 evaluated the stream heat only where the streams overlap *now*; the emission
+     history has not been modelled.
+  2. **Diffuse stars stripped from the subcluster's galaxies**, moving with it. A galaxy
+     catalogue cannot see them; deep imaging of the diffuse light can.
+  3. **A wider or faster lost population** (allowed at about 1.4σ by the velocities).
+
+### 16.4 Wide binaries near the Sun: the prediction
+
+* **Setup.** A binary is cold, so our law is h = g_N + e^(−|g_N|/g_d) √(a|g_N|) ĝ_N, with g_N
+  the binary's pull plus the Galaxy's. The Galaxy's own Newtonian pull at the Sun is
+  1.58 × 10⁻¹⁰ m/s², from a 230 km/s rotation at 8.2 kpc. That holds back half of the companion.
+* **Method.** The extra ("as if") density has a closed form. Averaged over the binary's
+  orientation, Gauss's law gives the mean inward pull as G(M + M_extra(<r))/r² exactly. With the
+  Galaxy removed, the script reproduces the isolated law to 3 decimals.
+
+Boost of the pull for a binary of 1.5 suns (velocities scale as its square root):
+
+| Separation (thousand AU) | 1 | 2 | 3 | 5 | 7 | 10 | 15 | 30 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| **Our law** | 1.000 | 1.000 | 1.003 | 1.079 | 1.172 | 1.189 | 1.191 | 1.192 |
+| Our law, Galaxy's pull ±20% | | | | 1.07–1.08 | 1.14–1.21 | 1.14–1.26 | 1.14–1.26 | 1.14–1.27 |
+| MOND (QUMOND, simple function) | 1.013 | 1.051 | 1.109 | 1.255 | 1.384 | 1.428 | 1.433 | 1.434 |
+| Newton | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
+
+* **Our law: 19% more pull (about 9% faster orbits) beyond about 7,000 AU.** That is less than
+  half of MOND's 43%, and it switches on later, past 3,000 AU where MOND already gives 11%.
+  * Binaries of 1–2 suns give the same plateau.
+  * Heat from the local disk (S = 0.1 g_e) adds 0.005.
+* **The data are contested.** Chae (2023, 2024) reports about 1.4 times Newton's pull at the
+  lowest accelerations. Banik et al. (2024) report Newton and exclude MOND. Our law agrees with
+  neither as published, so it is a sharp test once the analyses converge.
+* **If the Newtonian result holds**, the Galaxy's own heat-weighted flow would have to steer
+  the extra pull near the Sun, so that a binary's weak internal field barely changes it. The
+  direction rule (§10) already mixes in the heat flow; how much of the Milky Way's flow
+  reaches the Sun has not been computed.
+
+### 16.5 Predictions and next steps from round 6
+
+1. **The main cluster's stars continue to 3 Mpc** at the level its galaxy speed requires.
+   Confirmed by the star count.
+2. **Around the subcluster**, look for diffuse light and for a wide, fast population of
+   galaxies carrying +616 km/s. About 450–1,900 velocities would settle 1:3 against 1:8.
+3. **Model the heat the subcluster's galaxies gained in the passage**, carried with them.
+   This is the leading candidate for its missing lensing.
+4. **Wide binaries:** 19% more pull beyond 7,000 AU (orbits 9% faster).

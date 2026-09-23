@@ -3,11 +3,16 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated the same day (revs 13 and 14).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated the same day (revs 13–15).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
   line (§6.3), and corrects how rev 13 read one lensing measurement.
+* **Rev 15** tests rev 14 against new data:
+  * a star count from the Legacy Survey confirms the main cluster's outskirts;
+  * the stars the "bigger smaller half" needs don't show up, so its lensing strength is open
+    again (§6.3);
+  * the wide-binary prediction, 19% extra pull, is new (§6.7).
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -53,16 +58,19 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 | 149 galaxies' rotation speeds (typical miss) | **15.9 km/s** | 16.1 km/s | 7.5 km/s |
 | 12 galaxy clusters' masses (typical miss) | **25%** | 2.9× | 11% |
 | Bullet Cluster: lensing on the galaxies, not the gas | **yes** | no | yes |
-| Bullet Cluster: lensing masses and galaxy speeds | **within 1–2σ, if the smaller half was a third of the main before the crash** | no | yes (fitted) |
+| Bullet Cluster: main half's lensing mass, galaxy speeds and star count | **agree** | no | yes (fitted) |
+| Bullet Cluster: smaller half's lensing mass | about half of what is measured (open) | no | yes (fitted) |
 | 72 colliding clusters: lensing stays with the galaxies | **yes** | no | yes |
 | Ellipticals bend light 0.17–0.27 dex more than spirals | **0.17–0.27** | no difference | yes, with tuned haloes |
 | Solar System | **no extra pull** | small extra pull | no extra pull |
+| Wide binary stars (data disputed) | **19% extra pull predicted** | 43% | none |
 | Adjustable numbers | **3 in total** | 1 | 2 per galaxy or cluster (~320) |
 
 **What is still open:**
-* **the Bullet Cluster's smaller half.** Our law needs it to have been a third of the main
-  cluster before the crash, bigger than usually assumed; a census of the galaxies that came
-  with it will tell;
+* **the Bullet Cluster's smaller half.** Its lensing mass is twice what our law gives it.
+  Rev 14's explanation, that it was a bigger cluster before the crash, is not borne out by the
+  galaxies and starlight around it (rev 15). The leading candidate now is heat its galaxies
+  picked up while crossing the main cluster, carried along with them;
 * a full relativistic version of the law.
 
 Both are in §9, with what could close them. Rev 13's open item, the main cluster's galaxy
@@ -495,7 +503,8 @@ rule (§4.7).
 
 **How to test it.**
 * **Wide binary stars near the Sun.** They sit in the Galaxy's pull, where our law has only about
-  half of the companion released, so it predicts a weaker signal than MOND does (§9).
+  half of the companion released. It predicts 19% more pull than Newton beyond about 7,000 AU,
+  against MOND's 43% (§6.7).
 * **Compact galaxies.** If ℓ_d is the companion's wavelength, stars on orbits smaller than a few
   kiloparsecs should partly lose their heat.
 
@@ -630,7 +639,9 @@ how fast the galaxy moves through space (§3.10). Think of a ball thrown from a 
 
 **What it explains.**
 * **The Bullet Cluster's smaller half** still bends light like the bigger cluster it used to be.
-  Its measured lensing mass says that cluster was about a third of the main one (§6.3).
+  Its measured lensing is stronger still, about that of a cluster a third the size of the main
+  one, yet the galaxies that would imply are not there. Heat its galaxies picked up in the
+  crossing, carried by this same rule, is the leading candidate (§6.3).
 * **72 collisions:** the lensing does not follow the gas.
 * **Settled systems:** no change at all.
 
@@ -822,7 +833,7 @@ Script: `code/run_v3.py`, with stellar mass profiles from the X-COP release (Ghi
 | Rev 14, galaxies not cut off at 1.5 Mpc | | | 1,150 |
 | Rev 14, plus the outer stars the speed needs; subcluster 1/8 | 2.54 | 1.04 | 1,249 |
 | Rev 14, subcluster 1/4 of the main before the collision | 2.49 | 1.52 | 1,249 |
-| **Rev 14, subcluster 1/3 of the main before the collision** | **2.42** | **1.93** | **1,249** |
+| Rev 14, subcluster 1/3 of the main before the collision (not borne out in rev 15) | 2.42 | 1.93 | 1,249 |
 
 **What this shows:**
 * **The pattern is reproduced.** Both lensing peaks sit on the galaxies, 31 and 17 kpc from
@@ -846,7 +857,8 @@ Script: `code/run_v3.py`, with stellar mass profiles from the X-COP release (Ghi
   * the lighter star masses it used were never required.
 
   The strong-lensing masses are the calibrated test, and they are what we now compare with.
-* **The smaller half was a bigger cluster than we assumed.**
+* **Rev 14's answer for the smaller half: it was a bigger cluster than we assumed.** (Rev 15's
+  checks, below, do not bear this out.)
   * At 1/8 of the main before the collision, our law gives it half its measured lensing mass.
   * It matches if it held **about a third of the main cluster's visible matter** (1.93 × 10¹⁴
     against 2.0–2.3).
@@ -855,7 +867,7 @@ Script: `code/run_v3.py`, with stellar mass profiles from the X-COP release (Ghi
   * The lensing masses themselves are in the ratio 0.8 inside 250 kpc. Dark-matter
     reconstructions use 1/6 to 1/10 in total mass, so this is where our picture and theirs
     differ, and it can be checked.
-* **Predictions.**
+* **Rev 14's predictions.**
   * About 7 × 10¹² suns of stars came with the smaller half. They now surround it, mostly
     counted as main-cluster galaxies, and carry its 616 km/s offset in line-of-sight speed. A
     larger spectroscopic sample can separate them.
@@ -863,6 +875,32 @@ Script: `code/run_v3.py`, with stellar mass profiles from the X-COP release (Ghi
   * The main cluster's outskirts hold stars at about 5% of the gas mass.
 * **The costs.** The gas residuals rise to 0.08 and 0.10 (within 1.3σ). The main peak moves to
   31 kpc from its galaxies, because the bigger subcluster's broad field tilts the combined map.
+
+**Rev 15: the checks.** We tested rev 14 against two new sets of data. (Scripts:
+`code/bullet_light_v6.py`, `code/bullet_members_v6.py`.)
+* **A star count confirms the main cluster's outskirts.** We counted 1,652 cluster galaxies in
+  the Legacy Survey, a public sky survey, chosen by colour-based distance and with the field
+  level subtracted.
+  * Their light keeps rising out to 2.5–3 Mpc, and 23–28% of it lies beyond 1.5 Mpc.
+  * Rev 13's model had no stars there. Rev 14's, inferred from the galaxy speed alone, has 13%
+    there, and its total out to 3 Mpc is within 15% of what we count.
+* **The smaller half's lost stars are not there.** If it had been a third of the main, about
+  7 × 10¹² suns of its galaxies would still travel with it at +616 km/s.
+  * Among the 71 measured galaxy speeds outside its core, 12–15 such galaxies are expected; the
+    data prefer none (about 3σ for a compact group, 1.4σ if they spread wide and fast).
+  * The starlight within 250 kpc of the smaller half is 0.46 of the main cluster's central
+    light. Its core alone gives 0.32; the lost galaxies at 1:3 would bring it to 1.55.
+* **So the smaller half's lensing strength is open again.** In our law its lensing comes mainly
+  from its fast-moving stars; more gas alone does not replace them. What would have to change,
+  in order of promise:
+  1. **Heat picked up in the crossing.** While its galaxies crossed the main cluster at
+     3,000–4,500 km/s, their speed relative to the stars around them was several times their
+     own random speed, so they fed the companion about ten times harder. By the memory rule
+     (§3.10) that companion travels with them. We have not yet modelled this history.
+  2. **Diffuse starlight** stripped from its galaxies and moving with it, which a galaxy count
+     cannot see and deep images can.
+  3. **Lost galaxies spread wider and moving faster** than assumed, which the speeds allow at
+     about 1.4σ. About 450–1,900 galaxy speeds would settle it.
 
 **Two effects that build up later.**
 * **Streams passing through each other.** Two galaxy streams crossing at 3,000 km/s do look
@@ -931,6 +969,38 @@ Script: `code/lenses_t35.py --constants ../run-v3/results.json`.
 * **Not dark matter.** Nothing invisible is added, and no number is set per object.
 * **The cold limit is MOND-like**, and the check reports it (§5).
 
+### 6.7 Wide binary stars: a prediction
+
+Pairs of stars 1,000–30,000 AU apart pull on each other weakly. Beyond about 5,000 AU the pull
+falls below 10⁻¹⁰ m/s², where galaxies stop following Newton. The Gaia data are disputed:
+* Chae (2023, 2024) reports about 1.4 times Newton's pull at the lowest accelerations;
+* Banik et al. (2024) report Newton and rule MOND out.
+
+**Our law.** A binary is cold, and it sits in the Galaxy's own pull, 1.58 × 10⁻¹⁰ m/s² near the
+Sun (the visible matter's part of a 230 km/s rotation). That holds back half of the companion.
+We solved our field equation exactly for a pair in that pull and averaged over orientations.
+With the Galaxy removed, the calculation reproduces the law's isolated form to 3 decimals.
+
+| Separation (thousand AU) | 2 | 3 | 5 | 7 | 10 | 30 |
+|---|---:|---:|---:|---:|---:|---:|
+| **Our law: pull ÷ Newton's** | 1.000 | 1.003 | 1.08 | 1.17 | 1.19 | 1.19 |
+| MOND (simple function) | 1.05 | 1.11 | 1.26 | 1.38 | 1.43 | 1.43 |
+| Newton | 1 | 1 | 1 | 1 | 1 | 1 |
+
+These are for a pair of 1.5 suns; pairs of 1–2 suns reach the same 1.19.
+
+* **19% more pull beyond about 7,000 AU, so orbits about 9% faster**, less than half of MOND's
+  effect. It switches on later, because the release factor keeps close pairs Newtonian.
+* **If the Galaxy's pull near the Sun is 20% weaker or stronger**, the plateau moves to 1.26 or
+  1.14.
+* **Our law sits between the two published answers and agrees with neither.** That makes wide
+  binaries a clean test once the analyses converge.
+  * If Newton wins, the extra pull near the Sun would have to follow the Galaxy's own heat flow
+    (§3.7) rather than each pair's pull, which we have not yet computed.
+  * If Chae wins, more of the companion must be released near the Sun.
+
+Script: `code/wide_binaries_v6.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -938,8 +1008,9 @@ Script: `code/lenses_t35.py --constants ../run-v3/results.json`.
 | Rotation speeds, 149 galaxies | **15.9 km/s** | 16.1 km/s | 7.5 km/s (298 numbers) |
 | Cluster masses, 12 clusters | **25%** | ×2.9 | 11% (24 numbers) |
 | Bullet Cluster: lensing on galaxies | **yes** | no | yes |
-| Bullet Cluster: lensing masses (strong lensing) | **main 2.4–2.5 against 2.5–2.8; smaller half 1.9 against 2.0–2.3, if it was a third of the main before the crash** | no | yes (fitted) |
-| Bullet Cluster: main galaxies' speeds | **1,249 km/s, with a normal amount of stars in the outskirts** | no | yes (fitted) |
+| Bullet Cluster: main half | **lensing mass 2.4–2.5 against 2.5–2.8; galaxy speed 1,249 km/s; star count agrees** | no | yes (fitted) |
+| Bullet Cluster: smaller half's lensing mass | about half of the measured 2.0–2.3 (open) | no | yes (fitted) |
+| Wide binary stars (data disputed) | **19% extra pull beyond 7,000 AU** | 43% | none |
 | Collisions: lensing stays with galaxies | **yes** | no | yes |
 | Ellipticals lens more than spirals | **yes, 0.17–0.27 dex, from their stars** | no | yes, via tuned haloes |
 | Strong lenses: light and stars agree | **yes** | | yes |
@@ -959,35 +1030,34 @@ does.
    makes it grow with radius.
 3. **In relaxed clusters, galaxy orbits and gas agree.** Both feel the same pull.
 4. **In every collision, lensing stays with the galaxies**, at every stage.
-5. **The Bullet Cluster's smaller half was about a third of the main cluster before the crash.**
-   * Its original galaxies move at about 800 km/s, not the 212 km/s of the tight group of 7
-     measured so far.
-   * About 7 × 10¹² suns of their stars now surround it, carrying its 616 km/s offset in
-     line-of-sight speed.
+5. **The Bullet Cluster's smaller half carries a companion heated during its crossing,** so its
+   lensing is strong although few galaxies travel with it. Deep images should also show
+   whatever diffuse starlight travels with it.
 6. **The Bullet Cluster's main outskirts** hold stars at about 5% of the gas mass at the
-   cluster's edge.
-7. **Lensing in a collision shows the clusters as they were before it.** Around gas that has
+   cluster's edge. Confirmed by the star count in rev 15.
+7. **Wide binary stars:** 19% more pull than Newton beyond about 7,000 AU, less than half of
+   MOND's 43%.
+8. **Lensing in a collision shows the clusters as they were before it.** Around gas that has
    been stopped, lensing comes back only inside a sphere growing at 197 km/s, about 200 kpc per
    billion years.
-8. **Older collisions** (half a billion to a billion years after the pass) show extra lensing
+9. **Older collisions** (half a billion to a billion years after the pass) show extra lensing
    around the smaller clump, as the stream heat and tidal shaking build up.
-9. **The extra pull tracks random motion.** At equal visible mass, systems whose stars move
+10. **The extra pull tracks random motion.** At equal visible mass, systems whose stars move
    randomly and freely pull harder than those whose stars circle in step.
-10. **The Sun's extra mass loss** is 2.3 × 10⁻¹⁵ per year.
+11. **The Sun's extra mass loss** is 2.3 × 10⁻¹⁵ per year.
 
 ## 9. What is still open, and why we are optimistic
 
-**Settled in rev 14:** the main Bullet cluster's galaxy speeds. Half of the gap was a modelling
-artefact, and a normal amount of stars in the outskirts closes the rest; the same stars bring
-its lensing mass into line (§6.3).
+**Settled:** the main Bullet cluster's galaxy speeds and lensing mass (rev 14), and its star
+count (rev 15).
 
-1. **The size of the Bullet Cluster's smaller half (§6.3).** Our law matches its strong-lensing
-   mass if it held about a third of the main cluster's visible matter before the collision.
-   Dark-matter reconstructions use a sixth to a tenth. Three concrete checks:
-   * find the stars and galaxies that came with it, about 7 × 10¹² suns, moving with it;
-   * compare its original galaxy speeds, about 800 km/s by our law, with the ~700 km/s its hot
-     gas suggests;
-   * check that a collision of this size reproduces the shock and the X-ray shape.
+1. **The Bullet Cluster's smaller half (§6.3).** Its measured lensing mass, 2.0–2.3 × 10¹⁴ suns,
+   is twice what our law gives it. Rev 14's explanation, a bigger cluster before the crash, is
+   not borne out: the galaxies and starlight it would need are not there. Next:
+   * **model the heat its galaxies picked up while crossing the main cluster**, carried with
+     them by the memory rule;
+   * look for diffuse starlight moving with it;
+   * measure a few hundred more galaxy speeds around it.
 2. **A full field theory for the companion.** It needs its momentum, its travel time (the
    memory of §3.10), and a relativistic form, so that lensing is derived rather than assumed
    equal to the pull on matter. The data support that equality: the six lenses agree to
@@ -996,9 +1066,9 @@ its lensing mass into line (§6.3).
    wavelength. That wavelength must lie between the gas's collision length and the stars'
    orbits. For cluster gas this requires particles to be scattered, mainly by magnetic
    fields, at least every 0.1–1 million years. That is thought likely but is not measured.
-4. **Wide binary stars.** Near the Sun, the Galaxy's pull is close to the release level. Our
-   law therefore predicts a weaker signal than MOND does. The current data are disputed
-   between groups; we will compute our exact prediction next.
+4. **Wide binary stars (§6.7).** Our prediction is now computed: 19% more pull than Newton
+   beyond about 7,000 AU. The two published analyses find about 40% and none. Whichever holds
+   up will tell us how much of the companion is released near the Sun.
 5. **Cosmology.** The cosmic microwave background and the growth of large-scale structure are
    outside this law's scope as tested so far. Under the project's no-expansion rule they need
    their own treatment.
@@ -1022,12 +1092,17 @@ Each of these is a concrete calculation or measurement, not a wall.
 * **Revision 13 (round 4).** The companion's memory, now safe because the companion is slow.
   The 72-collision stack still holds. We also corrected rev 12's galaxy-speed check for the
   main cluster, which showed a gap to close.
-* **Revision 14 (round 5, this page).**
+* **Revision 14 (round 5).**
   * §4, the law piece by piece.
   * The main cluster's galaxy speed matched, half by removing a modelling artefact and half with
     a normal amount of stars in its outskirts.
   * Both strong-lensing masses within 1–2σ, with the smaller half a third of the main before the
     crash.
+* **Revision 15 (round 6, this page).**
+  * A Legacy Survey star count confirms the main cluster's outskirts.
+  * The galaxy speeds and starlight don't show the stars a bigger smaller half would need, so
+    its lensing strength is open again.
+  * The wide-binary prediction.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
@@ -1040,6 +1115,8 @@ Each of these is a concrete calculation or measurement, not a wall.
   lower bounds, as their paper states. The calibrated test is the strong-lensing mass, and by
   that measure rev 13's smaller half was half as heavy as observed;
 * rev 13's lighter star masses (mass-to-light 1–1.5): never required;
+* rev 14's "the smaller half was a third of the main before the crash": the galaxies and
+  starlight that would need are not seen (rev 15);
 * earlier retractions:
   * a cluster claim (revision 5, retracted in revision 7);
   * a misattributed group-lensing figure (revision 8).
@@ -1087,6 +1164,9 @@ python bullet_speeds_v4.py --output-dir ../run-bullet-speeds-v4  # galaxy speeds
 python stream_tidal_v4.py  --output-dir ../run-stream-tidal-v4   # stream heat and tidal shaking
 python bullet_main_v5.py   --output-dir ../run-bullet-main-v5    # main cluster's speeds and lensing masses
 python bullet_main_v5.py   --output-dir ../run-bullet-main-v5-wide --dx 25   # the same, 4.8 Mpc box
+python bullet_members_v6.py --output-dir ../run-bullet-members-v6  # lost galaxies in 78 velocities
+python bullet_light_v6.py   --output-dir ../run-bullet-light-v6    # Legacy Survey star count
+python wide_binaries_v6.py  --output-dir ../run-wide-binaries-v6   # wide binary stars near the Sun
 python kids_v3.py        --output-dir ../run-kids-v3        # ellipticals vs spirals
 python lenses_t35.py     --output-dir ../run-lenses-v3 --constants ../run-v3/results.json
 python derive_mond.py    --output-dir ../run-derive         # MOND as the cold limit

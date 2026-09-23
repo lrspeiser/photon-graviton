@@ -144,3 +144,17 @@ data correctly:
   limit is still reported as MOND-like, as it must be.
 
 Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §14.
+
+## 10. Round 6 passes the check (23 September 2026)
+
+No new formula. Round 6 tests round 5's inferred amounts of visible matter against data:
+* the main cluster's outer stars: confirmed by a Legacy Survey star count;
+* the subcluster's lost galaxies: not seen, so they are withdrawn as an explanation.
+
+This is the rule working as intended: inferred matter must be found, or the inference is
+dropped.
+
+The wide-binary prediction uses the law unchanged, in the cold limit. It is reported against
+MOND (43%) and Newton (0%) and sits at 19%.
+
+Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §16.

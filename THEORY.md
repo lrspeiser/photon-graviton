@@ -15,9 +15,10 @@
 > already had.
 > * **Galaxies:** 15.85 km/s, against MOND's 16.13.
 > * **Clusters:** error 0.227, against MOND's 1.062.
-> * **Bullet Cluster:** lensing on the galaxies, as observed. Round 5: the main cluster's galaxy
->   speed and both strong-lensing masses agree within 1–2σ if the subcluster held about a third
->   of the main's visible matter before the collision (§14).
+> * **Bullet Cluster:** lensing on the galaxies, as observed. Main cluster: galaxy speed,
+>   strong-lensing mass and a Legacy Survey star count agree (§§14, 16). Subcluster: lensing mass
+>   about half the measured value; round 5's "bigger subcluster" is not borne out by the
+>   galaxies and starlight around it (round 6, §16). **Open.**
 > * **Solar System:** no anomalous pull.
 > * **The formula check shows it is not MOND.**
 
@@ -91,7 +92,9 @@ and collisions defy it because the heat rides with the galaxies, not the gas.
 | 149 galaxies | 15.85 km/s, against MOND's 16.13 |
 | 12 clusters | 0.227 (held-out 0.244; stellar speeds from the law alone 0.329), against MOND's 1.062 |
 | Bullet Cluster | peaks on the galaxies; gas residuals 0.08 and 0.10 (obs 0.05 ± 0.06, 0.02 ± 0.06). Clowe et al.'s κ are lower bounds (their statement): model 0.61 and 0.49 against floors 0.36 and 0.20. **Round 5, calibrated masses inside 250 kpc** (published star masses, outer stars from the galaxy speed, subcluster 1:3 before the collision): main 2.42 (obs 2.5 ± 0.1, 2.8 ± 0.2), sub 1.93 (obs 2.0 ± 0.2, 2.3 ± 0.2) × 10¹⁴ M☉. At 1:8 the sub is 1.04, half the measured. |
-| Bullet main galaxies | 1,249 km/s: half of round 4's gap was the model cutting its galaxies at 1.5 Mpc (1,150 km/s without the cut); the rest needs outer stars at star/gas 0.048 at R500 (X-COP 0.035–0.073). **Settled.** |
+| Bullet main galaxies | 1,249 km/s: half of round 4's gap was the model cutting its galaxies at 1.5 Mpc (1,150 km/s without the cut); the rest needs outer stars at star/gas 0.048 at R500 (X-COP 0.035–0.073). **Settled**; the Legacy Survey star count (round 6) finds light rising to 3 Mpc, 85–103% of the round-5 model. |
+| Bullet subcluster | lensing mass inside 250 kpc 1.04 × 10¹⁴ at 1:8 against 2.0–2.3 measured. A 1:3 subcluster would match (1.93), but its ~7 × 10¹² M☉ of lost galaxies are not in Barrena et al.'s velocities (about 3σ) or in the starlight within 500 kpc. **Open**; leading candidate: heat gained in the crossing, carried by the memory. |
+| Wide binaries | predicted: 19% more pull than Newton beyond 7,000 AU (MOND simple: 43%). Data disputed: Chae ~1.4, Banik et al. Newton. |
 | Collision stack | with memory: moving the gas 40–300 kpc moves the lensing −2 to +10 kpc (β = 0.03, range −0.01 to 0.12); Harvey et al. 2015: 5.8 ± 8.2 kpc, β = −0.04 ± 0.07 |
 | KiDS early/late | 0.17–0.27 dex from early-type stars (obs 0.17 and 0.27) |
 | SLACS lenses | stars 1.05–1.35 × Salpeter; lensing = kinematics to −0.017 ± 0.024 dex |
