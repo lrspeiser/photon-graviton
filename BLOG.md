@@ -235,8 +235,8 @@ gives the observed rule **v⁴ = G M a**, which links a galaxy's mass to its rot
 
 The constant a is not a new constant of nature here. It is twice the power per kilogram
 divided by the companion's speed. With the fitted values, ℓ = 6.5 × 10⁻⁶ watts per
-kilogram. Over 13.8 billion years that is three thousandths of one percent of a kilogram's
-rest energy.
+kilogram. Over 13 billion years, the age of the oldest stars, that is three thousandths of one
+percent of a kilogram's rest energy.
 
 ### 3.4 Strong gravity holds the companion back
 
@@ -465,8 +465,8 @@ release factor, and in the direction.
 ### 4.2 ℓ: every kilogram feeds the companion, 6.5 × 10⁻⁶ watts per kilogram
 
 **What it is.** A steady power fed by each kilogram of matter into the companion. It is tiny.
-Over the age of the universe it adds up to three thousandths of one percent of a kilogram's
-rest energy. For the Sun it is 1.3 × 10²⁵ watts, 3.4% of the Sun's light.
+Over 13 billion years, the age of the oldest stars, it adds up to three thousandths of one
+percent of a kilogram's rest energy. For the Sun it is 1.3 × 10²⁵ watts, 3.4% of the Sun's light.
 
 **Where it may come from.** This is the project's founding intuition: energy converts into
 gravity. Our working guess is that matter continuously sheds a sliver of its energy into a
