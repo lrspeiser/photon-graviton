@@ -5,12 +5,18 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 
 ---
 
-## Status — 22 September 2026, after the first work session on this list
+## Status — 23 September 2026 (hot-companion rows updated after round 2)
 
 | Task | Status | Result |
 |---|---|---|
 | **RULE** No MOND, no Newton, no dark matter; check every formula | **In force** | Recorded in [RULES.md](RULES.md). The automatic check lives in `research_work/tools/formula_guard.py`. It correctly flags MOND itself. The MOND law used until now, and everything built on it (T0.2's dynamics equation, the AeST home, the η values), is retired as our answer. |
-| **NEW** Hot-companion gravity | **Works on galaxies, clusters and the Solar System** | Heat feeds the companion without cancelling, and strong fields hold it back. **Galaxies:** 15.93 km/s, against MOND's 16.13, better on train, validation and test. **Clusters:** error 0.223, against MOND's 1.062; held-out cross-check 0.234. MOND refit on clusters only reaches 0.338, and needs a constant 9.7 times its galaxy value. **Solar System:** zero anomalous pull. Three universal constants. **Open:** SLACS lenses need heavy stellar populations; the KiDS elliptical/spiral offset comes out a tenth to a third of its observed size. Details in [research_work/results/hot-companion/](research_work/results/hot-companion/README.md). |
+| **NEW** Hot-companion gravity | **Works on galaxies, clusters and the Solar System** | Heat feeds the companion without cancelling, and strong fields hold it back. **Galaxies:** 15.93 km/s, against MOND's 16.13, better on train, validation and test. **Clusters:** error 0.223, against MOND's 1.062; held-out cross-check 0.234. MOND refit on clusters only reaches 0.338, and needs a constant 9.7 times its galaxy value. **Solar System:** zero anomalous pull. Three universal constants. **Round 2 (rows below):** MOND is derived as its cold limit, it has a field equation and a momentum-conserving action, and the KiDS, lens and slip problems are resolved or made testable. **Open:** merging clusters. Details in [research_work/results/hot-companion/](research_work/results/hot-companion/README.md). |
+| **NEW-2** MOND from our law | **Done** | Cold matter emits in step, so companion flows add like Newton's field (identity to 1.8 × 10⁻¹⁵). Heat Doppler-scrambles them into a plain sum, shown numerically. Energy balance gives the deep law with **a₀ = 2ℓ/u** (ℓ = 2.9 × 10⁻⁵ W/kg). The resulting interpolating function, `1 + e^(−y/λ)/√y`, is new: 0.031 dex from "simple". MOND is an output, not an input. Test: the Sun's extra mass loss, 1.4 × 10⁻¹⁴ per year. `code/derive_mond.py`. |
+| **T0.2′** Field equation and action for the new law | **Done (non-relativistic)** | Conservative potential form; the cold limit is QUMOND with our ν. The heat term as first written broke momentum (25%); an action adds a reaction force on hot matter and restores it (1.3% at the largest box, shrinking with box size). `code/field_equation.py`. Relativistic form open. |
+| **KiDS** Early/late lensing offset | **Reproduced** | Hot gas haloes of about one stellar mass (0.6–1.0 keV) give +0.20 to +0.22 dex beyond 300 kpc, against the observed ≥ 0.2. MOND with the same haloes gives 0.14. Prediction: the offset grows with radius. `code/kids_haloes.py`. |
+| **T3.5** Stellar-mass convention | **Done** | Standard distances plus published Chabrier masses remove 0.13–0.16 dex. Our law then needs stars 1.2–1.6× Salpeter in the six SLACS lenses; dark-matter models need about 1.0. Spectroscopic IMFs are the test. `code/lenses_t35.py`. |
+| **Slip** Re-derived against the new law | **Not needed** | Lensing and resolved kinematics agree to +0.040 ± 0.026 dex. The earlier η ≠ 1 was an artefact of measuring against the MOND law. Cluster X-ray masses sit 22% below our prediction (b = 0.22), in the direction of the known hydrostatic bias. |
+| **T2.1** Bullet Cluster | **Partly; top open problem** | Companions that keep their emitter's velocity move the lensing peak 42–75% of the way from gas toward galaxies in a toy merger. But Harvey et al. 2015 (72 collisions) keep lensing on the stars, which needs a much slower companion rebuild on shocked gas than u = 874 km/s gives. `code/bullet_toy.py`. |
 | **T0.1** Resolve the contradiction | **Done** | Branch (a) fails on energy by 1.5 × 10⁴; the field's own energy is 1.7 × 10⁻⁴ of what it would need. Branch (b), a modified propagator, survives. τ splits into two objects: in lensing it is the **gravitational slip η** (legitimate, no energy cost); in cluster dynamics it has **no mechanism**. The cluster "closed within scatter" claim is **retracted**. |
 | **T2.2** GW170817 | **Done** | Survives, with a construction constraint: the modification and the slip must live in the scalar sector. TeVeS-type completions are excluded; a surviving class exists. |
 | **T0.2** Field equations | **Done**; relativistic home identified | Three equations. The dynamics equation reproduces the fitted law to 4.4 × 10⁻¹⁶ and is Milgrom's QUMOND, attributed. The slip equation is ours; JR-10's γ_χ is identically η. **Relativistic:** slip is exactly a radial stress of the extra gravity (the radial Einstein equation). Of four places the extra gravity could live, one passes GW170817 and our data: the aether-scalar-tensor theory (which gives η = 1, verified from the paper) plus a conformal coupling κ of matter to its scalar, giving η = (1−κ)/(1+κ). Clusters need κ ≈ −0.12 to −0.17. What sets κ is open. |
@@ -21,7 +27,17 @@ a paper that survives peer review, with the tasks ordered by what blocks what.
 Full working in [THEORY.md](THEORY.md); relativistic slots in
 [research_work/results/relativistic-slip/](research_work/results/relativistic-slip/README.md).
 
-**Next, in order of value per effort:**
+**Next, from 23 September 2026 (hot-companion gravity):**
+
+1. **Mergers:** the companion rebuild time after a collision, against the 72-collision stack.
+2. **Derive `u` and `g_d`**, which are still measured.
+3. **Solar mass loss** of 1.4 × 10⁻¹⁴ per year, against planetary ranging.
+4. **Spectroscopic IMFs** of the six SLACS lenses: 1.2–1.6× Salpeter predicted.
+5. **The KiDS offset against radius.**
+6. **A relativistic form of the action.**
+
+**Superseded list (22 September, built on the retired MOND law and slip), kept for the record.
+Next, in order of value per effort:**
 
 1. **Stack galaxy-orbit against lensing slip in CLASH-VLT clusters.** This is pressure-free,
    builds on a published single-cluster result, and tests η directly.

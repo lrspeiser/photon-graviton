@@ -81,3 +81,18 @@ MOND, just as any law must agree with Newton in the Solar System. That agreement
 
 The first candidate that passes the rule is recorded in
 [research_work/results/hot-companion/](research_work/results/hot-companion/README.md).
+
+## 6. MOND as an output, not an input (23 September 2026)
+
+Round 2 derived MOND's deep law, its constant (`a₀ = 2ℓ/u`) and an interpolating function
+from the hot-companion mechanism, as the limit of cold matter
+([hot-companion §8.1](research_work/results/hot-companion/README.md)). This is consistent
+with the rule. It is the case §3 anticipated:
+* no MOND formula went in;
+* the guard still flags the cold limit as MOND-like, and it should;
+* every result we claim as ours rests on where the law is **not** MOND: hot gas in clusters,
+  hot haloes around ellipticals, and the release of the companion in strong fields.
+
+Our derived function, `ν(y) = 1 + e^(−y/λ)/√y`, is not any published one. The closest is
+"simple", 0.031 dex away. It must not be swapped for a published function to simplify
+calculations.
