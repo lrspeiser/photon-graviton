@@ -1,8 +1,8 @@
 {
  "suite": "hot-companion regression suite",
  "law": {
-  "name": "round3",
-  "description": "the round-3 law with its published constants (run-v3)",
+  "name": "round9",
+  "description": "the round-3 constants (run-v3) with gradual release over 0.15 pc, adopted in round 9",
   "base": "round3",
   "a_code": 2024.571696765057,
   "a_SI": 6.561190024871433e-11,
@@ -10,14 +10,14 @@
   "g_d_SI": 2.2620116998504284e-10,
   "u_kms": 197.41001228101223,
   "reach_kpc": 2624.617073821509,
-  "release_length_au": 0.0,
+  "release_length_au": 30000.0,
   "external_hold": 1.0,
   "gd_scale": 1.0,
   "refit": []
  },
  "tier": "full",
- "date": "2026-09-23 22:27 UTC",
- "commit": "b4ace73",
+ "date": "2026-09-23 23:15 UTC",
+ "commit": "5a428fd+changes",
  "checks": [
   {
    "id": "law.a_SI",
@@ -550,16 +550,6 @@
    "score": 13.54374993526847
   },
   {
-   "id": "precision.cassini_q2_mw_model",
-   "group": "precision",
-   "title": "Cassini Q2 with the Milky Way model's pull and heat at the Sun",
-   "value": 2.3905360378578234e-26,
-   "unit": "1/s^2",
-   "target": "",
-   "status": "info",
-   "score": 6.968453459526078
-  },
-  {
    "id": "precision.planets",
    "group": "precision",
    "title": "planets Mercury-Neptune: largest extra pull relative to Newton",
@@ -603,17 +593,27 @@
    "id": "precision.cassini_q2",
    "group": "precision",
    "title": "Cassini: Galactic distortion of the Sun's field, Q2",
-   "value": 3.087276331046053e-26,
+   "value": 4.590736348390239e-27,
    "unit": "1/s^2",
    "target": "(3 +- 3) x 10^-27 (Hees et al. 2014, eq. 12)",
-   "status": "fail",
-   "score": 9.290921103486843
+   "status": "pass",
+   "score": 0.530245449463413
+  },
+  {
+   "id": "precision.cassini_q2_mw_model",
+   "group": "precision",
+   "title": "Cassini Q2 with the Milky Way model's pull and heat at the Sun",
+   "value": 3.772984103413613e-27,
+   "unit": "1/s^2",
+   "target": "",
+   "status": "info",
+   "score": 0.2576613678045377
   },
   {
    "id": "precision.wide_binaries",
    "group": "precision",
    "title": "wide binaries (1 Msun, 20,000 AU): boost of the pull",
-   "value": 1.191514650037374,
+   "value": 1.09318764911357,
    "unit": "",
    "target": "between the two published analyses, 1.0 (Banik et al. 2024) and 1.4-1.5 (Chae 2023-24)",
    "status": "pass",

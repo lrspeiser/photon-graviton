@@ -43,6 +43,18 @@
 >     * Abell 520's galaxy-poor "dark core" comes from its gas and the surrounding galaxies'
 >       heat;
 >     * El Gordo agrees if its stars are about twice the colour-based estimate.
+> * **Round 9 (§19): the release length adopted, and what it opens.**
+>   * Adopted (postulate 9): the companion is released over L = 0.15 pc of travel. Cassini
+>     passes (Q2 4.6 × 10⁻²⁷ s⁻²) and nothing else changes: the full suite gives 62 pass,
+>     8 close and 6 fail. Wide binaries: 4% at 7,000 AU, 9% at 20,000 AU.
+>   * Opened: with L ≥ 0.5 pc the binaries stay in range even with no external hold. Without
+>     the hold, 6 of 10 dwarfs agree (χ² 135 → 60; MOND 119). Not adopted: no derivation
+>     yet.
+>   * Audit of borrowed assumptions (§19.4): the far collisions used expanding-universe (ΛCDM)
+>     distances, and published star masses cap ages at the Big-Bang timeline. With the
+>     project's static distance law, El Gordo is 1.58× larger with 1.68× the gas, so it must be
+>     redone before "twice the stars" is trusted.
+>   * The owner's ten proposals for completing the theory are evaluated in §19.5 and BLOG §9.1.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -76,12 +88,18 @@
    now. After a collision it is the settled pre-collision clusters, riding with the galaxies,
    except inside a fresh sphere of radius u·t around matter that changed its motion. g_N and
    the attachment factor use the matter now.
+9. **Release length (round 9, adopted).** Breaking free takes travel. Around each emitter the
+   attached companion is released along its path as `R(s) = 1 − exp(−s/L)`, which multiplies
+   the extra pull. L = 0.15 pc, the minimum Cassini allows; the dwarfs allow up to about 10 pc.
+   If attachment is an escape over a barrier (postulate 6, §4.5 of the blog), L/u ≈ 720 years is
+   the escape time.
 
 ### Round 7: constraints from the Milky Way and the Solar System (candidate amendments)
 
-Measured constraints found in round 7. None is adopted yet: each must be refit with SPARC,
-X-COP and the Bullet, and pass the formula guard.
-1. **Gradual release (Cassini).**
+Measured constraints found in round 7. Each must be refit with SPARC, X-COP and the Bullet,
+and pass the formula guard; round 9 adopted the first.
+1. **Gradual release (Cassini). Adopted in round 9 as postulate 9.** It needs no refit, since
+   SPARC, X-COP and the collisions are unchanged to the last digit.
    * As the law stands, the Galaxy's field reshapes the Sun's companion 3,000–20,000 AU out
      and gives Q2 = 2.4–3.1 × 10⁻²⁶ s⁻² inside the Solar System. Cassini measured
      (3 ± 3) × 10⁻²⁷ (Hees et al. 2014).
@@ -124,12 +142,52 @@ results README §18):
   −0.06 dex). The Milky Way's disk shape is the better lever: Bovy & Rix's shorter disk gives
   217 km/s with the law unchanged.
 
+### Round 9: the release length adopted; the dwarfs' way out
+
+* **Adopted: postulate 9, with L = 30,000 AU.** Full-tier suite:
+  * 62 pass, 8 close and 6 fail (from 61, 8, 7);
+  * Cassini's Q2 3.09 × 10⁻²⁶ → 4.59 × 10⁻²⁷ s⁻²; with the Milky Way model's pull and heat
+    2.39 × 10⁻²⁶ → 3.77 × 10⁻²⁷;
+  * wide binaries 1.192 → 1.093;
+  * 80 checks identical.
+
+  The cost is a fourth number, bounded rather than fitted. At 1 pc it holds back at most 0.54%
+  of a dwarf's companion at its half-light radius (Ursa Minor); at 10 pc, 5.5%.
+* **The dwarfs' shortfall is the external field effect.** Inside a dwarf the root contains
+  |g_int + g_ext|. With g_ext/g_int = 0.8–82 at the half-light radius, the dwarf's own term is
+  diluted. χ² over the ten dwarfs:
+  * 135 as the law stands;
+  * 133 without the Galaxy's S;
+  * 80 without its g_N;
+  * 60 without both.
+
+  MOND with the same stars gives 119.
+* **The release length removes the binaries' veto.** With hold c = 0, the boost at 20,000 AU is
+  2.97 for L = 0, 1.96 at 0.15 pc, 1.36 at 0.48 pc and 1.19 at 0.97 pc. Cassini's Q2 is 0 at
+  c = 0.
+* **Candidate `no_hold`** (c = 0, L = 200,000 AU): quick tier 41 pass, 5 close, 2 fail (the baseline's quick subset: 39, 4, 5); 64, 9, 3 in all, since the collisions read neither the hold nor the release. No check drops a grade. Cassini's Q2 → 0; wide binaries 1.19.
+* **A constraint on the mechanism.** Postulate 2 already combines the companions of randomly
+  moving galaxies as a scalar sum inside one root (the heat term). Letting separate systems pull
+  with separate roots would contradict it and change every cluster. So the weaker hold must come
+  from something else. It must also match the dwarf pattern: Crater II prefers c ≈ 0.02, Antlia 2
+  c ≈ 0.
+* **Draco and Ursa Minor** stay at 4.1–4.2 km/s for every c; measured 9.1–9.5. Next: their Jacobi
+  radii under the law against their stellar extents, and tidal signatures in Gaia data.
+* **What L is.**
+  * If L is the companion's near zone (a wave detaches from its source at about λ/2π), then
+    λ ≈ 2πL ≈ 1 pc.
+  * Postulate 3 would then require cluster ions to be pitch-angle scattered on sub-parsec scales,
+    about every 1,000 years. That is far more often than Coulomb collisions manage (their mean
+    free path is ~10 kpc).
+  * Plasma instabilities may supply it. If they do not, L is an escape time unrelated to λ.
+
 ### What follows
 
 ```
 S     = G ∫ k ρ_free / d² ,     g_hot = G ∫ k ρ_free (x′ − x) / |x′ − x|³ ,     k = 3σ²/u²
 h     = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) ) · (g_N + g_hot) / (|g_N| + |g_hot|)
 ∇²Φ   = −∇·h ,   g = −∇Φ   (matter and light) ,   a = 2ℓ/u
+around each emitter (round 9):   extra → R(r) · extra ,   R = 1 − exp(−r/L) ,   L = 0.15 pc
 round, settled systems:   g = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) )
 ```
 
@@ -138,6 +196,7 @@ round, settled systems:   g = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) )
   * g_d = 2.26 × 10⁻¹⁰ m/s² (galaxies);
   * u = 197 km/s (clusters).
   * Therefore ℓ = 6.5 × 10⁻⁶ W/kg.
+  * Round 9: the release length L = 0.15 pc (the Solar System; the minimum Cassini allows).
 * **Superseded from rounds 1–2:**
   * u = 874 km/s with hot gas;
   * the pull along ĝ_N;
@@ -163,11 +222,11 @@ and collisions defy it because the heat rides with the galaxies, not the gas.
 | Bullet Cluster | peaks on the galaxies; gas residuals 0.08 and 0.10 (obs 0.05 ± 0.06, 0.02 ± 0.06). Clowe et al.'s κ are lower bounds (their statement): model 0.61 and 0.49 against floors 0.36 and 0.20. **Round 5, calibrated masses inside 250 kpc** (published star masses, outer stars from the galaxy speed, subcluster 1:3 before the collision): main 2.42 (obs 2.5 ± 0.1, 2.8 ± 0.2), sub 1.93 (obs 2.0 ± 0.2, 2.3 ± 0.2) × 10¹⁴ M☉. At 1:8 the sub is 1.04, half the measured. |
 | Bullet main galaxies | 1,249 km/s: half of round 4's gap was the model cutting its galaxies at 1.5 Mpc (1,150 km/s without the cut); the rest needs outer stars at star/gas 0.048 at R500 (X-COP 0.035–0.073). **Settled**; the Legacy Survey star count (round 6) finds light rising to 3 Mpc, 85–103% of the round-5 model. |
 | Bullet subcluster | lensing mass inside 250 kpc 1.04 × 10¹⁴ at 1:8 against 2.0–2.3 measured. A 1:3 subcluster would match (1.93), but its ~7 × 10¹² M☉ of lost galaxies are not in Barrena et al.'s velocities (about 3σ) or in the starlight within 500 kpc. **Open**; leading candidate: heat gained in the crossing, carried by the memory. |
-| Wide binaries | predicted: 19% more pull than Newton beyond 7,000 AU (MOND simple: 43%). Data disputed: Chae ~1.4, Banik et al. Newton. |
+| Wide binaries | predicted (round 9, with the release length): 4% more pull than Newton at 7,000 AU and 9% at 20,000 AU (round 6: 19%; MOND simple: 43%). Data disputed: Chae ~1.4, Banik et al. Newton. |
 | Collision stack | with memory: moving the gas 40–300 kpc moves the lensing −2 to +10 kpc (β = 0.03, range −0.01 to 0.12); Harvey et al. 2015: 5.8 ± 8.2 kpc, β = −0.04 ± 0.07 |
 | KiDS early/late | 0.17–0.27 dex from early-type stars (obs 0.17 and 0.27) |
 | SLACS lenses | stars 1.05–1.35 × Salpeter; lensing = kinematics to −0.017 ± 0.024 dex |
-| Solar System | 0 anomalous pull; the Sun loses 2.3 × 10⁻¹⁵ of its mass per year to the companion |
+| Solar System | 0 anomalous pull; the Sun loses 2.3 × 10⁻¹⁵ of its mass per year to the companion; Cassini's Q2 4.6 × 10⁻²⁷ s⁻² against (3 ± 3) × 10⁻²⁷ (round 9, with the release length) |
 
 ---
 

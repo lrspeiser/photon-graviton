@@ -84,7 +84,8 @@ def make(id, group, title, value, crit=None, **kw):
 
 def compare(new, old, tol_abs=0.1, tol_rel=0.05):
     """How a check moved relative to the baseline: regressed / improved / worse / better / same /
-    new / known (a fail already in the baseline) / changed (an ungraded number moved by > 0.1%) / error."""
+    new / known (a fail already in the baseline) / changed (the number moved by > 0.1% while its grade and
+    score did not, e.g. a tracked number, or a value moving inside a passing range) / error."""
     if new['status'] == 'error':
         return 'error'
     if old is None:
@@ -101,6 +102,6 @@ def compare(new, old, tol_abs=0.1, tol_rel=0.05):
     if new['status'] == 'fail' and old['status'] == 'fail':
         return 'known'
     v1, v0 = new.get('value'), old.get('value')
-    if (s1 is None or s0 is None) and v1 is not None and v0 is not None and abs(v1 - v0) > 1e-3 * max(abs(v0), 1e-300):
+    if v1 is not None and v0 is not None and abs(v1 - v0) > 1e-3 * max(abs(v0), 1e-300):
         return 'changed'
     return 'same'

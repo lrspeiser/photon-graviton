@@ -5,26 +5,34 @@ that any change to the law, its constants or the code can be checked against eve
 
 ```bash
 cd research_work/results/hot-companion/regression
-python run_suite.py                               # the round-3 law, quick tier (about 1 minute)
+python run_suite.py                               # the adopted law (round 9), quick tier (about 1 minute)
 python run_suite.py --tier full                   # + the colliding clusters (about 20 minutes)
-python run_suite.py --law gradual_release         # a candidate law from candidates/
+python run_suite.py --law no_hold                 # a candidate law from candidates/
+python run_suite.py --law round3                  # the law before round 9 (released at once)
 python run_suite.py --only dwarfs,precision       # some groups only
 python run_suite.py --tier full --save-baseline   # make this run the new baseline
 ```
 
 The runner prints a scoreboard and writes `runs/<law>-<tier>/results.json` and `report.md`
 (both ignored by git). The exit code is 1 when any check got worse in status than in
-`baseline.json`, or crashed.
+`baseline.json`, or crashed. Each run records the commit it came from, marked `+changes` when
+tracked files differ from it.
+
+**The baseline** (`baseline.json`) is the adopted law, round 9, on the full tier: 89 checks,
+62 pass, 8 close, 6 fail and 13 tracked. It changes only when a change is adopted or a test is
+added (RULES.md §12).
 
 ## The law under test
 
 `law_config.py` turns a candidate file into one dictionary that every test reads. Nothing in the
-suite reads constants from anywhere else. A candidate is a small JSON file in `candidates/`:
+suite reads constants from anywhere else. The adopted law (round 9) is the round-3 constants with
+gradual release over 30,000 AU (0.15 pc), adopted for Cassini. A candidate is a small JSON file in
+`candidates/`, a change to the adopted law:
 
-| Key | Meaning | Default (the round-3 law) |
+| Key | Meaning | Default (the adopted law, round 9) |
 |---|---|---|
 | `gd_scale` | the release scale g_d multiplied by this | 1 |
-| `release_length_au` | the companion is released gradually over this length around each emitter, R(r) = 1 − e^(−r/L) | 0 (at once) |
+| `release_length_au` | the companion is released gradually over this length around each emitter, R(r) = 1 − e^(−r/L) | 30,000 AU (adopted in round 9; `round3` has 0, released at once) |
 | `external_hold` | how strongly a subsystem's companion follows an outside galaxy's pull (dwarfs, the Sun, wide binaries) | 1 (fully) |
 | `refit` | constants refitted on their home data after the change: `"a"` on the 149 SPARC galaxies (g_d held), `"u"` on the 12 X-COP clusters | none |
 | `a_SI`, `lam`, `u_kms`, `base` | explicit constants, or another `results.json` to start from | run-v3 |
@@ -35,10 +43,12 @@ Candidates now in the folder:
 |---|---|---|
 | `gd_x1p5.json` | g_d × 1.5 | the Sun's rotation speed (round 7) |
 | `gd_x1p5_refit.json` | g_d × 1.5, then a and u refitted | the same, with the constants re-balanced |
-| `gradual_release.json` | release over 30,000 AU (0.15 pc) | Cassini's Q2 limit (round 7) |
 | `weak_hold.json` | external hold 10% | the six faint dwarf galaxies (round 7) |
+| `no_hold.json` | external hold 0, release over 200,000 AU (about 1 pc) | the dwarfs, once the release length protects the binaries (round 9) |
 | `gd_x1p25.json` | g_d × 1.25 | the smallest useful step toward the Sun's speed |
 | `combined.json` | all three, a and u refitted | together |
+
+`gradual_release.json` (release over 30,000 AU) was adopted in round 9 and is now the default.
 
 Which tests each amendment reaches: g_d reaches everything; the release length reaches only the
 precision tests (below 0.15 pc no galaxy-scale quantity changes); the external hold reaches the
@@ -55,9 +65,13 @@ Each check compares one number from the law with one measurement (`checks.py`):
 * **error**: the test crashed.
 
 Every check also carries a **score** (lower is better): its distance from the measurement in
-standard errors, or its value over a limit. Against the baseline each check is marked
-**regressed** / **improved** (status changed), **worse** / **better** (score moved by more than
-0.1 or 5%), **known** (a fail already in the baseline) or unchanged.
+standard errors, or its value over a limit. Against the baseline each check is marked:
+* **regressed** / **improved**: its status changed;
+* **worse** / **better**: its score moved by more than 0.1 or 5%;
+* **known**: a fail already in the baseline;
+* **changed**: its number moved by more than 0.1% while its grade and score did not (a tracked
+  number, or a value moving inside a passing range);
+* unchanged otherwise.
 
 ## What is tested (89 checks in the full tier)
 
@@ -89,7 +103,22 @@ Copy a file in `candidates/`, change the keys, and run
 `python run_suite.py --law <name> --tier full`. The scoreboard lists what the change fixes
 (improved), what it breaks (regressed), and what moved without changing status.
 
-## What the candidates do (quick tier, against the round-3 baseline)
+## What the candidates do now (quick tier, against the round-9 baseline)
+
+| Candidate | Fixes (fail or close → pass) | Breaks (pass → close or fail) | Moved without changing grade |
+|---|---|---|---|
+| no hold, release over about 1 pc | Carina and Antlia 2 → pass; Sextans and Crater II → close | nothing | Draco 2.8 → 4.1, Ursa Minor 3.5 → 4.2 km/s (still fail); dwarfs χ² 135 → 60; Cassini Q2 → 0; wide binaries 1.09 → 1.19; Fornax 12.36 → 12.58 (11.7 ± 0.9) |
+| external hold 10% | Carina | wide binaries: 1.72 × Newton at 20,000 AU (close) | every dwarf rises (χ² 82) |
+| g_d × 1.25 | nothing (the Sun: 211 → 215 km/s, still close) | pull above the disk: 74.1 → 76.4 | strong lenses −0.017 → −0.037 dex |
+| g_d × 1.5 | the Sun: 217.6 km/s | strong lenses (−0.057 dex); pull above the disk (78.1) | SPARC median residual 0.031 → 0.015 dex |
+
+Quick-tier totals: no_hold 41 / 5 / 2 against the baseline's quick subset of 39 / 4 / 5. With the
+collisions, which read neither the hold nor the release, that is 64 / 9 / 3 in all. The refitted
+candidates were not rerun: the release changes only Cassini and the binaries, so their round-8
+results below stand, with Cassini now passing for `gd_x1p5_refit`. (`combined` already had the
+release.)
+
+## What the candidates did in round 8 (quick tier, against the round-3 baseline)
 
 | Candidate | Fixes (fail or close → pass) | Breaks (pass → close or fail) | Moved without changing grade |
 |---|---|---|---|
@@ -100,10 +129,18 @@ Copy a file in `candidates/`, change the keys, and run
 | g_d × 1.5, a and u refitted | the Sun (216.8) | the same two, and the lensing speeds of spirals (Mistele et al.) | a 4.6% lower, u 196.4 km/s |
 | all three, refitted | the Sun, Cassini, Carina | the same three, and wide binaries (1.76× Newton, close) | Cassini Q2 1.2 × 10⁻²⁷ |
 
-Read across: gradual release costs nothing anywhere else; a 10% external hold helps the dwarfs
+Read across (round 8): gradual release costs nothing anywhere else (adopted in round 9); a 10% external hold helps the dwarfs
 and Cassini but makes wide binaries far stronger than either published analysis allows, so the
 hold has to weaken for the dwarfs without weakening for binaries (they differ: a dwarf moves past
 the Galaxy's companion at 100–300 km/s, a binary's stars move with it); moving the switch-off
 later trades the Sun's speed against the pull above the disk and the strong lenses. The Milky
 Way's own visible matter is the other lever: with Bovy & Rix's (2013) shorter disk instead of
 McMillan's, our law gives 217 km/s at the Sun (round 7), so the disk's shape comes next.
+
+Round 9 adds that the adopted release length, if it is 0.5 pc or more, protects the binaries
+whatever the hold. So the dwarfs' hold no longer has to depend on speed to spare the binaries,
+although it still needs a physical reason (results README §19.2).
+
+**Known borrowed assumptions** (results README §19.4): the collisions use flat-ΛCDM distances and
+published masses computed with them, and the SLACS check grades the ΛCDM convention. Moving them
+to the project's static distance law is the first item of the plan.
