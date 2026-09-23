@@ -176,3 +176,24 @@ lensing measurement we could trace to its paper. It adds one standing practice:
   Each must pass the formula guard and the refit before it enters the law.
 
 Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §17.
+
+## 12. Round 8: the regression suite (23 September 2026)
+
+No new formula. Round 8 turns the coverage table into code and adds one standing practice:
+
+* **Every change is run through the regression suite before it is reported**:
+  a change to the law, to its constants, or to the code that computes any test.
+  The suite is `research_work/results/hot-companion/regression/`
+  (`python run_suite.py --tier full --law <candidate>`).
+  * Each check compares one number with one published measurement and is graded the same way
+    everywhere: pass (within 2 standard errors), close (within 3), fail.
+  * The report states what the change fixes (improved), what it breaks (regressed), and what
+    moved without changing grade.
+* **A regression triggers the owner's standing instruction**: say what would have to change to
+  recover it, then test that.
+* **The baseline (`baseline.json`) records the adopted law.** It changes only when a change is
+  adopted or a new test is added, in the same commit.
+* **Candidate amendments are JSON files in `candidates/`**, never edits to the law's code.
+  The suite's README lists which tests each amendment reaches.
+
+Details: [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md) §18.

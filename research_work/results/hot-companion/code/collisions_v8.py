@@ -15,23 +15,27 @@ Lensing is the projected 'as if' density -div h / 4 pi G; masses in apertures ar
 directly (they do not depend on the source redshift). Distances and masses follow the papers'
 convention (flat LCDM, H0 = 70, Om = 0.3), as for the Bullet.
 
-Inputs (all published; see data/collisions_v8.json, written by this script, for every number and
-its source):
+Inputs (all published; run-collisions-v8/collisions_v8.json, written by this script, repeats every number
+with its source):
 * MACS J0025.4-1222 (z = 0.586; Bradac et al. 2008): two near-equal subclusters 540 kpc apart that
-  collided in the plane of the sky a few 10^8 yr ago at about 2,000 km/s; one gas cloud between them
-  (King core 400 kpc; 3.6e13 Msun inside 500 kpc); stars 2.7 and 1.9 x 10^12 inside 300 kpc of the
-  brightest galaxies; galaxy speed spread 835 km/s. Lensing: 2.5 and 2.6 x 10^14 inside 300 kpc,
-  peaks with the galaxies (> 4 sigma from the gas).
+  collided in the plane of the sky at about 2,000 km/s, a few 10^8 yr (Bradac) or 0.5-1 Gyr (Ma et al.
+  2010) ago; one gas cloud between them (3.6e13 Msun inside a 500 kpc sphere, 5.5e13 projected); stars
+  2.7 and 1.9 x 10^12 inside 300 kpc of the brightest galaxies; galaxy speed spread 835 km/s (1.5 Mpc).
+  Lensing: 2.5 and 2.6 x 10^14 inside 300 kpc, peaks with the galaxies (> 4 sigma from the gas).
 * Abell 520 (z = 0.201; Mahdavi et al. 2007; Jee et al. 2012, 2014; Clowe et al. 2012; Wang et al.
-  2016; Girardi et al. 2008): a 'train wreck' along NE-SW, about 0.5-1 Gyr after the main passage;
-  galaxies in clumps P1, P2 (NE), P4 (SW), P5 (E), P6; the gas stuck in the middle (P3), where two
-  teams disagree on the lensing mass: 3.4-4.0 (Jee) or 2.3 (Clowe) x 10^13 inside 150 kpc.
-  Gas and light per clump from Clowe et al. 2012; galaxy speed spread 1,066 km/s.
+  2016; Girardi et al. 2008): a 'train wreck' along NE-SW, 0.2-0.3 Gyr (Girardi) to 1 Gyr (Mahdavi)
+  after the main passage; galaxies in clumps P1, P2 (NE), P4 (SW), P5 (E), P6; the gas stuck in the
+  middle (P3), where the teams disagree on the lensing mass inside 150 kpc: 3.35 +- 0.34 (Jee 2014),
+  2.84 +- 0.64 (Clowe 2012, unsmoothed) x 10^13. Gas and light per clump from Clowe et al. 2012;
+  galaxy speed spreads per clump from Girardi et al. 2008.
 * El Gordo (z = 0.870; Menanteau et al. 2012; Jee et al. 2014; Ng et al. 2015; Kim et al. 2021):
-  NW and SE subclusters 700 kpc apart, 0.46 (outgoing) or 0.91 Gyr (returning) after pericentre
-  at 2,400 km/s; gas 2.2e14 inside R500 (14.5 keV), with the SE cool core 8 arcsec beyond the SE
-  lensing peak; stars 7.5 (NW) and 5.6 (SE) x 10^12; galaxy speeds 1,290 and 1,089 km/s; lensing
-  M200c 9.9 and 6.5 x 10^14 (Kim et al. 2021, NFW fits consistent with their model-free masses).
+  NW and SE subclusters 750 kpc apart, 0.46 (outgoing, favoured) or 0.91 Gyr (returning) after
+  pericentre at 2,400 km/s; gas 2.2e14 inside R500 (14.5 keV), with the SE cool core about 97 kpc
+  beyond the SE lensing peak; stars 7.5 (NW) and 5.6 (SE) x 10^12 (Chabrier IMF); galaxy speeds 1,290
+  and 1,089 km/s; lensing M200c 9.9 and 6.5 x 10^14 (Kim et al. 2021, NFW fits consistent with their
+  model-free masses).
+Every input and its source is also written into the output JSON; the assumptions not taken from a
+paper are listed there as caveats.
 """
 from __future__ import annotations
 import argparse, copy, json, time
@@ -123,21 +127,25 @@ def macs0025():
             dict(name='NW', galaxies='nw_gal', stars=['st_nw'], gas_share=2.6 / 5.1, rc_pre=150.0, rt_pre=1500.0)]
     return dict(name='MACS J0025.4-1222', z=0.586, kpc_per_arcsec=s, pos=pos,
                 current=dict(gas_icm=icm, st_se=st_se, st_nw=st_nw), gas_total=gas_total, subs=subs,
-                t_gyr=(0.26, 0.15, 0.40), centre=(-80.0, -60.0), dx=15.0,
+                t_gyr=(0.5, 0.26, 1.0), centre=(-80.0, -60.0), dx=15.0,
                 checks=dict(gas_projected_500=[5.5e13, 0.6e13], stars_projected_500=[5.0e12, 1.0e12]),
                 sources=dict(geometry='Bradac et al. 2008 (arXiv:0806.2320) Table 2; 6.61 kpc/arcsec',
                              gas='Sect. 5-6: King core ~60 arcsec (400 kpc); 3.6 +- 0.4e13 in a 500 kpc sphere; 5.5 +- 0.6e13 projected',
                              stars='Table 3: 0.027 +- 0.008 and 0.019 +- 0.006 x 1e14 inside 300 kpc (M/L_K 0.74)',
                              lensing='Table 3: 2.5 +1.0/-1.7 and 2.6 +0.5/-1.4 x 1e14 inside 300 kpc of BCG1 and BCG3; 6.2 +1.2/-4.0 inside 500 kpc of the gas peak',
-                             speeds='Sect. 3: 835 +58/-59 km/s (108 galaxies); merger ~2000 km/s in the sky plane, closest approach a few 1e8 yr ago'))
+                             speeds='Sect. 3: 835 +58/-59 km/s (108 galaxies within 1.5 Mpc); merger ~2000 km/s in the sky plane',
+                             timing='closest approach a few 1e8 yr ago (Bradac et al. 2008); 0.5-1 Gyr (Ma et al. 2010)',
+                             caveats='apertures centred on the galaxy peaks (BCG coordinates unpublished); spherical gas (Riseley et al. 2017 fit an elliptical beta model, axis ratio 2 along the merger axis)'))
 
 
-def abell520(ml_z=2.0):
+def abell520(ml=2.0):
     z = 0.201; s = kpc_per_arcsec(z)
-    # Clowe et al. 2012, Table 1 (r < 150 kpc): positions, z-band light (1e11 Lsun), gas column (1e13)
-    clowe = dict(P1=('04:54:19.60', '+02:57:49.09', 2.43, 0.25), P2=('04:54:14.84', '+02:57:06.25', 4.16, 0.40),
-                 P3=('04:54:11.25', '+02:55:37.28', 1.38, 0.69), P4=('04:54:04.57', '+02:53:58.60', 3.11, 0.50),
-                 P5=('04:54:17.11', '+02:55:30.09', 2.66, 0.44), P6=('04:54:09.61', '+02:53:55.90', 1.15, 0.65))
+    # Clowe et al. 2012 (r < 150 kpc): positions and gas columns (1e13) from Table 1; the light (1e11 Lsun,
+    # F814W, about rest-frame R) is the unsmoothed light of Table 2, (M_zeta_c - gas) / (M/L)_zeta_c: Table 1's
+    # light comes from maps smoothed by 60 kpc, which lowers P2 and P4 by 30-35%
+    clowe = dict(P1=('04:54:19.60', '+02:57:49.09', 2.59, 0.25), P2=('04:54:14.84', '+02:57:06.25', 5.37, 0.40),
+                 P3=('04:54:11.25', '+02:55:37.28', 1.43, 0.69), P4=('04:54:04.57', '+02:53:58.60', 4.14, 0.50),
+                 P5=('04:54:17.11', '+02:55:30.09', 2.68, 0.44), P6=('04:54:09.61', '+02:53:55.90', 1.35, 0.65))
     pos = to_kpc({k: v[:2] for k, v in clowe.items()}, clowe['P3'][:2], s)
     pos.update(to_kpc({'P3_jee': ('04:54:11.07', '+02:55:35.3'), 'P3p_jee': ('04:54:07.51', '+02:54:41.3')}, clowe['P3'][:2], s))
     # gas: one beta model about P3 fitted to the six gas columns
@@ -148,23 +156,25 @@ def abell520(ml_z=2.0):
         return np.log([column(c, pos['P3'], pos[k]) for k in clowe]) - np.log(cols)
     q = least_squares(res, [np.log(1e14), np.log(250.0)], bounds=([np.log(1e12), np.log(30.0)], [np.log(1e16), np.log(1500.0)])).x
     icm = beta(np.exp(q[0]), np.exp(q[1]), 1500.0, 'P3')
-    # stars: each clump's light (z band) at M/L_z = 2 inside 150 kpc, NFW-shaped (scale 100 kpc, cut at 1 Mpc)
+    # stars: each clump's light at M/L = 2 (the Bullet's convention, Clowe et al. 2006) inside 150 kpc,
+    # NFW-shaped (scale 100 kpc, cut at 1 Mpc)
     current = dict(gas_icm=icm)
     for k, v in clowe.items():
-        current[f'st_{k.lower()}'] = with_projected(nfw(1.0, 100.0, 1000.0, k), 150.0, ml_z * v[2] * 1e11)
+        current[f'st_{k.lower()}'] = with_projected(nfw(1.0, 100.0, 1000.0, k), 150.0, ml * v[2] * 1e11)
     Ltot = sum(v[2] for v in clowe.values())
     subs = [dict(name=k, galaxies=k, stars=[f'st_{k.lower()}'], gas_share=v[2] / Ltot, rc_pre=120.0, rt_pre=1500.0)
             for k, v in clowe.items()]
     return dict(name='Abell 520', z=z, kpc_per_arcsec=s, pos=pos, current=current, gas_total=icm['M'], subs=subs,
-                t_gyr=(0.5, 0.3, 1.0), centre=(0.0, 0.0), dx=15.0, mass_to_light_z=ml_z,
+                t_gyr=(0.3, 0.5, 1.0), centre=(0.0, 0.0), dx=15.0, mass_to_light=ml,
                 gas_fit=dict(M=icm['M'], rc=icm['scale'], columns_model=[column(icm, pos['P3'], pos[k]) for k in clowe],
                              columns_obs=cols.tolist()),
                 sources=dict(geometry='Clowe et al. 2012 (arXiv:1209.2143) Table 1; Jee et al. 2014 (arXiv:1401.3356) Table 1',
                              gas='Clowe et al. 2012 Table 1 gas columns inside 150 kpc (fitted by one beta model about P3)',
-                             stars='Clowe et al. 2012 Table 1 z-band light inside 150 kpc, M/L_z = 2 (as M/L_I = 2 for the Bullet)',
-                             lensing='Jee et al. 2014 Table 1 and Clowe et al. 2012 Table 1 (masses inside 150 kpc)',
-                             timing='Markevitch et al. 2005 (shock 2,300 km/s); Mahdavi et al. 2007 (about 1 Gyr)',
-                             speeds='Girardi et al. 2008: 1066 +67/-61 km/s (167 members)'))
+                             stars='Clowe et al. 2012 Table 2 unsmoothed F814W light inside 150 kpc, M/L = 2 (as for the Bullet)',
+                             lensing='Jee et al. 2014 Table 1 and Clowe et al. 2012 Table 2 (unsmoothed aperture masses, zeta_c) inside 150 kpc',
+                             gas_caveat='Clowe P4 and P5 gas columns exceed the 90% upper limits of Jee et al. 2014 (<0.34, <0.21)',
+                             timing='Girardi et al. 2008: 0.2-0.3 Gyr at about 2,200 km/s; Mahdavi et al. 2007: about 1 Gyr (post-shock flow speed)',
+                             speeds='Girardi et al. 2008 Table 4 per lensing peak: P1 811, P2 749, P4 579, P5 668 km/s; the cluster-wide 1066 includes the clumps\' bulk motions'))
 
 
 def el_gordo():
@@ -173,7 +183,7 @@ def el_gordo():
               'com': ('01:02:53.49', '-49:15:33.96')}
     pos = to_kpc(coords, coords['com'], s)
     axis = (pos['se_gal'] - pos['nw_gal']) / np.linalg.norm(pos['se_gal'] - pos['nw_gal'])
-    pos['cool_core'] = pos['se_gal'] + axis * 8.0 * s              # 8 arcsec beyond the SE lensing peak
+    pos['cool_core'] = pos['se_gal'] + axis * 97.0                 # 12 arcsec (97 kpc) beyond Kim's SE centroid (direction assumed: Ng et al. 2015)
     pos['xray_c'] = 0.5 * (pos['cool_core'] + pos['com'])          # the bulk of the X-ray gas: SE half, wake toward NW
     icm = beta(1.0, 250.0, 2500.0, 'xray_c'); icm['M'] = 2.1e14 / sphere(icm, 1300.0)
     core = beta(1.0e13, 30.0, 300.0, 'cool_core')
@@ -184,11 +194,12 @@ def el_gordo():
     return dict(name='El Gordo (ACT-CL J0102-4915)', z=z, kpc_per_arcsec=s, pos=pos,
                 current=dict(gas_icm=icm, gas_core=core, st_nw=st_nw, st_se=st_se), gas_total=gas_total, subs=subs,
                 t_gyr=(0.46, 0.91), centre=tuple(pos['com']), dx=25.0,
-                sources=dict(geometry='Kim et al. 2021 (arXiv:2106.00031) Table 2 centroids; cool core 8 arcsec beyond the SE peak (Jee et al. 2014; Ng et al. 2015)',
+                sources=dict(geometry='Kim et al. 2021 (arXiv:2106.00031) Table 2 centroids (their Planck cosmology is 3% off our 7.71 kpc/arcsec); X-ray peak about 12 arcsec (97 kpc) from the SE mass centroid (Kim et al. 2021), placed along the merger axis beyond the SE clump (the SE lensing peak lies nearer the merger centre: Ng et al. 2015)',
+                             gas_caveat='the cool core (1e13 in 30 kpc), the gas core radius (250 kpc) and its centre are our assumptions; only Mgas(<R500) is published',
                              gas='Menanteau et al. 2012 (arXiv:1109.0953): Mgas = 2.2 +- 0.1e14 (R500 about 1.3 Mpc), T = 14.5 keV',
                              stars='Menanteau et al. 2012 Sect. 3.2: 7.5 +- 1.4 (NW) and 5.6 +- 1.3 (SE) x 1e12 inside r200',
                              lensing='Kim et al. 2021 Table 2: M200c 9.9 +2.1/-2.2 (c 2.54) and 6.5 +1.9/-1.4 (c 3.20) x 1e14; total 21.3 +2.5/-2.3',
-                             timing='Ng et al. 2015 (arXiv:1412.1826): 0.46 (outgoing) or 0.91 Gyr (returning) after pericentre at 2,400 km/s',
+                             timing='Ng et al. 2015 (arXiv:1412.1826): 0.46 (outgoing) or 0.91 Gyr (returning) after pericentre at 2,400 km/s; hydrodynamic fits favour outgoing',
                              speeds='Menanteau et al. 2012: 1290 +- 134 (NW), 1089 +- 200 (SE), 1321 +- 106 km/s (all)'))
 
 
@@ -247,7 +258,7 @@ def measure(name, spec, sol):
                                     galaxies_to_gas=float(np.linalg.norm(pos[f'{w}_gal'] - pos['gas_peak'])),
                                     to_published_lens_peak=p[f'dist_{w}_lens'])
         out['M500_gas_peak'], out['M500_gas_peak_baryons'] = aperture(sol, pos['gas_peak'], 500.0)
-        out['sigma_los_1Mpc'] = float(np.mean([sol['speeds'][k]['1000kpc'] for k in sol['speeds']]))
+        out['sigma_los_1p5Mpc'] = float(np.mean([sol['speeds'][k]['1500kpc'] for k in sol['speeds']]))
     elif name == 'abell520':
         for k in ('P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P3_jee', 'P3p_jee'):
             out[f'M150_{k}'], out[f'M150_{k}_baryons'] = aperture(sol, pos[k], 150.0)
@@ -255,8 +266,7 @@ def measure(name, spec, sol):
         near3 = min(pk, key=lambda d: d['dist_P3'])
         out['peak_near_P3'] = dict(dist=near3['dist_P3'], height_rel=near3['kappa'])
         out['peaks'] = [dict(x=p['x'], y=p['y'], h=p['kappa'], nearest=min(('P1', 'P2', 'P3', 'P4', 'P5', 'P6'), key=lambda k: p[f'dist_{k}'])) for p in pk[:8]]
-        L = {k: spec['current'][f'st_{k.lower()}']['M'] for k in ('P1', 'P2', 'P3', 'P4', 'P5', 'P6')}
-        out['sigma_los_1Mpc'] = float(sum(sol['speeds'][k]['1000kpc'] * L[k] for k in L) / sum(L.values()))
+        out['sigma_los_500kpc'] = {k: sol['speeds'][k]['500kpc'] for k in ('P1', 'P2', 'P4', 'P5')}
     else:
         for w in ('nw', 'se'):
             for R in (500.0, 1000.0):
@@ -312,6 +322,17 @@ def main():
             print(f"{spec['name']}, t = {t} Gyr (fresh sphere {sol['fresh_kpc']:.0f} kpc): " +
                   json.dumps({k: (round(v / 1e13, 2) if isinstance(v, float) and v > 1e9 else v) for k, v in m.items() if k not in ('speeds', 'peaks')}, default=float), flush=True)
             print('   galaxy speeds (line of sight, 1 Mpc): ' + ', '.join(f"{k} {v['1000kpc']:.0f}" for k, v in sol['speeds'].items()), flush=True)
+        # what would have to change: the stars' mass (El Gordo's are SED estimates with a Chabrier IMF, good to
+        # a factor of two by the authors' account; at the X-COP star/gas ratio they would be about 1.5-2 times larger)
+        for f in (2.0,):
+            sv = copy.deepcopy(spec)
+            for k in sv['current']:
+                if k.startswith('st_'): sv['current'][k]['M'] *= f
+            sol = solve(sv, law, spec['t_gyr'][0], n=args.n)
+            m = measure(name, sv, sol); m['t_gyr'] = spec['t_gyr'][0]; m['stars_scale'] = f
+            res[name].setdefault('stars_scaled', []).append(m)
+            print(f"   stars x{f:g}: " + json.dumps({k: (round(v / 1e13, 2) if isinstance(v, float) and v > 1e9 else v) for k, v in m.items() if k not in ('speeds', 'peaks')}, default=float), flush=True)
+            print('   galaxy speeds (line of sight, 0.5 / 1 / 1.5 Mpc): ' + ', '.join(f"{k} {v['500kpc']:.0f}/{v['1000kpc']:.0f}/{v['1500kpc']:.0f}" for k, v in sol['speeds'].items()), flush=True)
         if name == 'el_gordo':
             res[name]['observed_nfw'] = observed_el_gordo(spec)
             print('   El Gordo, Kim et al. 2021 NFW haloes projected: ' + json.dumps({k: round(v / 1e14, 2) for k, v in res[name]['observed_nfw'].items()}), flush=True)

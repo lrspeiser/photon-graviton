@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Run every test of the law, score it, and compare with the saved baseline.
 
-    python run_suite.py                               # the round-3 law, quick tier (about 3 minutes)
-    python run_suite.py --tier full                   # + the Bullet Cluster and the collision stack
+    python run_suite.py                               # the round-3 law, quick tier (about 1 minute)
+    python run_suite.py --tier full                   # + five colliding clusters (about 20 minutes)
     python run_suite.py --law gd_x1p5                 # a candidate from candidates/
     python run_suite.py --only dwarfs,precision       # some groups only
     python run_suite.py --tier full --save-baseline   # make this run the new baseline

@@ -12,7 +12,7 @@ scales the Galaxy's pull and heat as the subsystem feels them.
 """
 from __future__ import annotations
 import numpy as np
-from checks import make, z_check, at_most
+from checks import make, z_check, at_most, range_check
 
 GROUP = 'precision'
 G, MSUN, AU, CL, YR, KPC = 6.674e-11, 1.989e30, 1.496e11, 2.99792458e8, 3.156e7, 3.0857e19
@@ -88,7 +88,9 @@ def run(law, ctx):
         Qm, _ = sun_in_galaxy(MSUN, c * sun['g_N_SI'], c * sun['S_SI'], c * sun['g_hot_SI'], L, a, gd)
         out.append(make('precision.cassini_q2_mw_model', GROUP, 'Cassini Q2 with the Milky Way model\'s pull and heat at the Sun', Qm,
                         unit='1/s^2', crit=('info', abs(Qm - 3e-27) / 3e-27)))
+    # the two published analyses disagree (about 1.4: Chae 2023-24; 1.0: Banik et al. 2024), so anything between
+    # them passes; a boost beyond both is excluded by both
     out.append(make('precision.wide_binaries', GROUP, 'wide binaries (1 Msun, 20,000 AU): boost of the pull', boost[20000],
-                    target='disputed: about 1.4 (Chae 2023-24) or 1.0 (Banik et al. 2024)', crit=('info', None),
-                    detail=dict(boost_3000=boost[3000], boost_7000=boost[7000])))
+                    target='between the two published analyses, 1.0 (Banik et al. 2024) and 1.4-1.5 (Chae 2023-24)',
+                    crit=range_check(boost[20000], 1.0, 1.5, 0.1), detail=dict(boost_3000=boost[3000], boost_7000=boost[7000])))
     return out

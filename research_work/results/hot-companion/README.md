@@ -1302,14 +1302,17 @@ MOND is computed identically. The isolated MOND limit reproduces σ⁴ = (4/81) 
 | Dwarfs: 6 faint or diffuse | 2.7–9.5 km/s | 1.5–5× low | 1.3–4× low | fitted | **fail; fix: weaker Galactic hold** |
 | Planets, Sedna, S2, pulsars, light bending | GR | GR exactly | small effects | GR | **pass** |
 | Cassini Q2 | (3 ± 3) × 10⁻²⁷ s⁻² | 2.4–3.1 × 10⁻²⁶ | 2.8–3.1 × 10⁻²⁶ | ≈ 0 | **fail; fix: gradual release, L ≳ 0.15 pc** |
-| Wide binaries | disputed | 19% (1–5% with gradual release) | 43% | 0 | open |
+| Wide binaries | disputed | 19% (9% at 20,000 AU with gradual release; §18.1) | 43% | 0 | open |
 | Microlensing, Einstein Cross | stars | stars | stars | stars | pass |
 | SLACS strong lenses | | light = matter | | | pass |
 | KiDS lensing RAR, spirals and ellipticals | | −0.005, +0.021 dex | −0.073, +0.113 | tuned | **pass, better than MOND** |
 | Bullet: lensing on galaxies; main half | | yes | no | yes | pass |
 | Bullet: smaller half's lensing mass | 2.0–2.3 × 10¹⁴ | about half | no | fitted | open |
 | 72 collisions: lensing with galaxies | | yes | no | yes | pass |
-| Abell 520, MACS J0025, El Gordo, Abell 1689 | recorded | not yet run | | | next |
+| MACS J0025.4−1222 (§18.2) | 2.5 / 2.6 × 10¹⁴; 835 km/s | 2.0 / 1.6; 770 | no | fitted | **pass** |
+| Abell 520, six clumps and the dark core (§18.2) | 2.1–5.6 × 10¹³ | 5 of 6; P3 3.06 | no | a puzzle | **pass** |
+| El Gordo (§18.2) | 15.8 × 10¹⁴ inside 1 Mpc | 11.3; 16.9 with twice the stars | no | fitted | ~ stars to measure |
+| Abell 1689 | recorded | not yet run | | | next |
 
 ### 17.9 What round 7 changes, and what comes next
 
@@ -1329,3 +1332,158 @@ MOND is computed identically. The isolated MOND limit reproduces σ⁴ = (4/81) 
   * model the four recorded collisions and Abell 1689;
   * the Galaxy's hot flow near the Sun, which sets the direction of the extra pull there
     (§17.3).
+
+## 18. Round 8, 23 September 2026: a regression suite, and three more colliding clusters
+
+The request: build a full regression suite, so that everything can be re-tested whenever the law
+changes, then add the cluster collisions. No change to the law in this round.
+
+### 18.1 The regression suite
+
+`regression/` (its README has the details):
+* `law_config.py`: the law as one dictionary. Candidates are small JSON files in
+  `candidates/` with the round-7 amendments as keys: `gd_scale`, `release_length_au`
+  (gradual release), `external_hold`, and `refit` (a on SPARC, u on X-COP).
+* `checks.py`: one grading rule for every test:
+  * pass: within 2 standard errors, or inside the required range;
+  * close: within 3;
+  * fail: further out;
+  * info: tracked, ungraded.
+
+  Each check also carries a score, its distance in standard errors.
+* `t_*.py`: the tests, grouped as machinery, galaxies, clusters, lensing, milky_way, dwarfs,
+  precision and collisions. Each calls the code that produced the published numbers.
+* `run_suite.py`: runs a tier (quick, about 1 minute; full, about 20 minutes) and compares with
+  `baseline.json`. Every check is marked regressed / improved / worse / better / changed /
+  known. The exit code is 1 on any regression.
+
+**Validation.** On the round-3 law the suite reproduces every published number to the last
+digit:
+* SPARC 15.85 / 12.40 / 19.21 km/s (all / test / validation);
+* X-COP 0.227, held-out 0.244;
+* KiDS +0.024 / −0.005 / +0.021 dex;
+* SLACS −0.017 dex;
+* Milky Way 211.2 km/s, Σ(1.1 kpc) 74.1;
+* dwarfs χ² 135;
+* Cassini Q2 3.09 × 10⁻²⁶ s⁻²;
+* Bullet κ 0.675 / 0.14, M(<250 kpc) 2.405 / 0.941 × 10¹⁴, outer stars 6.23 × 10¹²;
+* collision stack β = 0.027.
+
+**The baseline (round-3 law, full tier):** 89 checks: **61 pass, 8 close, 7 fail**, 13 tracked. Close: lensing.mistele_ltg, mw.v_sun, mw.mass_50, dwarfs.carina, abell520.m150_p6, abell520.sigma_peaks, elgordo.m500, elgordo.sigma_nw. Fail: dwarfs.draco, dwarfs.ursa_minor, dwarfs.sextans, dwarfs.crater_ii, dwarfs.antlia_2, precision.cassini_q2, bullet.m250_sub.
+
+**Candidates (quick tier; full table in `regression/README.md`):**
+
+| Candidate | Fixes | Breaks |
+|---|---|---|
+| gradual release, L = 30,000 AU | Cassini Q2 (3.1 × 10⁻²⁶ → 4.6 × 10⁻²⁷ s⁻²) | nothing |
+| external hold 10% | Cassini (3.8 × 10⁻²⁷); Carina; dwarfs χ² 135 → 82 | wide binaries: 2.5× Newton at 20,000 AU |
+| g_d × 1.25 | – (the Sun 211 → 215 km/s) | Σ(1.1 kpc) 74.1 → 76.4 |
+| g_d × 1.5 | the Sun (217.6 km/s) | SLACS gap −0.057 dex; Σ(1.1 kpc) 78.1 |
+| g_d × 1.5, a and u refitted | the Sun (216.8) | the same, and Mistele's spirals |
+| all three, refitted | the Sun, Cassini, Carina | the same three, and wide binaries (1.76×, close) |
+
+Findings:
+* Gradual release is free.
+* The external hold must be speed-dependent: weaker for a dwarf moving past the Galaxy's
+  companion at 100–300 km/s, not for binary stars that move with it.
+* A later switch-off trades the Sun's speed against Σ(1.1 kpc) and the SLACS gap. The disk's
+  shape is the better lever: Bovy & Rix's shorter disk gives 217 km/s at the Sun (§17.2).
+
+**A correction to round 7.** "1–5%" for wide binaries with gradual release holds at 7,000 AU
+(3.9–5.3% for L = 30,000 AU) or for L ≥ 100,000 AU. At 20,000 AU with L = 30,000 AU it is
+9–13% (`run-strong-field-v7/strong_field_v7.json`; the suite reproduces 1.093).
+
+### 18.2 Three more colliding clusters
+
+`code/collisions_v8.py` → `run-collisions-v8/`. It uses the Bullet machinery unchanged
+(`bullet_v4.kappa_map_v4`: memory, ghosts, fresh sphere u t) and published inputs only. Every
+input and its source is in the output JSON, with the assumptions not taken from a paper listed
+as caveats. An independent read of the papers checked the inputs; its corrections are applied:
+* Kim's 97 kpc cool-core offset;
+* Clowe's unsmoothed light and masses;
+* the 1.5 Mpc aperture for MACS J0025's galaxy speeds;
+* timings.
+
+**MACS J0025.4−1222** (z = 0.586; Bradač et al. 2008). Inputs:
+* two NFW-shaped galaxy populations normalised to 2.7 and 1.9 × 10¹² inside 300 kpc;
+* one β-model gas cloud through the published 3.6 × 10¹³ (500 kpc sphere) and 5.5 × 10¹³
+  (projected), with r_c = 90 kpc;
+* before the collision, each subcluster held half the gas about its galaxies;
+* t = 0.5 Gyr (0.26–1.0 give the same numbers to 1%).
+
+| | Measured | Ours |
+|---|---|---|
+| M(<300 kpc), SE | 2.5 (+1.0/−1.7) × 10¹⁴ | 1.96 (z = −0.3) |
+| M(<300 kpc), NW | 2.6 (+0.5/−1.4) × 10¹⁴ | 1.60 (z = −0.7) |
+| M(<500 kpc), about the gas | 6.2 (+1.2/−4.0) × 10¹⁴ | 4.11 |
+| lensing peaks | on the galaxies (> 4σ from the gas) | 15 / 43 kpc from the galaxies, 356 / 127 from the gas |
+| galaxy speed spread (1.5 Mpc) | 835 ± 59 km/s | 770 km/s |
+
+Stars × 2 overshoots the speeds (1,017 km/s), so the published stars are right for our law here.
+
+**Abell 520** (z = 0.201). Inputs:
+* gas: one β-model about P3 (r_c = 356 kpc) fitted to Clowe et al.'s six gas columns;
+* light: Clowe et al.'s unsmoothed F814W light at M/L = 2 (the Bullet's convention), NFW-shaped
+  (scale 100 kpc);
+* before the collision, each clump held gas in proportion to its light;
+* t = 0.3 Gyr (Girardi et al.; 0.5 and 1.0 change the masses by ≤ 2%).
+
+| M(<150 kpc), 10¹³ | P1 | P2 | P3 | P4 | P5 | P6 |
+|---|---|---|---|---|---|---|
+| Jee et al. 2014 | 2.10 ± 0.43 | 4.05 ± 0.28 | 3.35 ± 0.34 | 4.23 ± 0.28 | 2.93 ± 0.39 | – |
+| Clowe et al. 2012 (ζ_c) | 2.81 ± 0.67 | 4.16 ± 0.67 | 2.84 ± 0.64 | 5.59 ± 0.68 | 3.17 ± 0.66 | 3.68 ± 0.68 |
+| ours | 2.56 | 4.84 | 3.06 | 3.30 | 2.83 | 2.10 |
+| ours, visible matter only | 0.38 | 0.61 | 0.76 | 0.49 | 0.60 | 0.54 |
+
+The "dark core" P3 gets 3.06 × 10¹³ from 0.76 × 10¹³ of visible matter (mostly gas):
+* the companion's boost of ordinary matter;
+* plus the heat of the surrounding hot galaxies (the scalar sum S does not cancel);
+* a lensing peak sits 25 kpc from P3.
+
+The cluster inside 710 kpc: 4.33 × 10¹⁴ against 5.0 ± 0.55 (Mahdavi et al. 2007). Galaxy
+speed spreads near P1/P2/P4/P5 are 432/587/526/438 km/s, against 811/749/579/668 (Girardi et al.
+2008, 6–9 galaxies each; rms z 2.9). Twice the stars would match those speeds (550–760 km/s) but
+overshoot the lensing (P3 4.4 × 10¹³), so Abell 520's lensing prefers its published light.
+
+**El Gordo** (z = 0.870). Inputs:
+* stars 7.5 and 5.6 × 10¹² (Menanteau et al. 2012, Chabrier SED fits);
+* gas 2.1 × 10¹⁴ inside R500 in a β-model (r_c = 250 kpc) plus a 10¹³ cool core 97 kpc beyond
+  the SE lensing peak;
+* before the collision, 60/40 gas shares about the galaxies;
+* t = 0.46 Gyr (outgoing; the returning 0.91 Gyr gives the same masses).
+
+| | Measured | Ours | Ours, stars × 2 |
+|---|---|---|---|
+| M_2D(<0.5 / 1 / 1.5 Mpc) about the centre of mass | 6.70 / 15.78 / 22.57 (Kim et al. 2021 NFW sum, consistent with their aperture masses) | 4.61 / 11.34 / 17.04 | 7.05 / 16.86 / 24.80 |
+| galaxy speed spread NW / SE (1 Mpc) | 1,290 ± 134 / 1,089 ± 200 | 944 / 839 | 1,187 / 1,047 |
+| SE lensing peak from the cool core | about 97 kpc (12″), the peak nearer the centre | 159 kpc (peak 62 kpc from the galaxies, toward the centre) | 148 kpc |
+
+* With the published stars, the lensing is 24–31% low and the speeds 23–27% low.
+* The peak's distance from the cool core depends on where the bulk of the gas sits, which no
+  paper maps (we assumed it), so the suite tracks it without grading. The order along the
+  merger axis matches the observations: cool core, galaxies, lensing peak, centre.
+* Twice the stars recovers both, within 10% and one standard error. That is inside the authors'
+  stated factor-of-two uncertainty.
+* At the X-COP median star/gas ratio (0.062 inside R500, against 0.042 for El Gordo as
+  published) the stars would be 1.5 times the published value, halfway there.
+* Twice the stars overshoots MACS J0025's galaxy speeds (1,017 against 835 ± 59 km/s) and
+  Abell 520's lensing (P3 4.4 × 10¹³). So this is a statement about El Gordo's stars, not a
+  rule for all clusters.
+
+### 18.3 What round 8 changes, and what comes next
+
+* **No change to the law.** The suite makes every future change testable against 89 checks in
+  one command. RULES.md §12 makes that the standing practice.
+* **Collisions:**
+  * MACS J0025 passes everything with its published inputs.
+  * Abell 520's "dark core" comes out of gas and heat alone, between the two teams' masses.
+  * El Gordo passes if its stars are twice the colour-based estimate, a testable statement about
+    its stars.
+* **Next:**
+  1. a speed-dependent external hold (dwarfs and Cassini without touching binaries);
+  2. the Milky Way disk's scale length as the lever for the Sun's speed;
+  3. El Gordo's and Abell 520's stellar masses from independent data (near-infrared,
+     spectroscopy), and A520 with two main pre-collision subclusters instead of one group per
+     clump;
+  4. Abell 1689 and the elliptical gas shape of MACS J0025 (Riseley et al. 2017);
+  5. the Bullet subcluster's crossing heat (§16.3) as a suite candidate.

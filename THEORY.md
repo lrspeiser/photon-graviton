@@ -34,6 +34,15 @@
 >     * Cassini's Q2, 10× too large (as for MOND) → gradual release over ≳ 0.15 pc of the
 >       companion's travel;
 >     * six faint Milky Way dwarfs, 1.5–5× too slow → a weaker hold by the Galaxy's field.
+> * **Round 8 (§18): a regression suite and three more collisions.**
+>   * The suite grades every test the same way and scores any change against a saved baseline.
+>   * The amendments, tested: gradual release is free; the external hold must depend on
+>     relative speed; g_d is not the lever for the Sun's speed.
+>   * The collisions:
+>     * MACS J0025.4−1222 agrees on lensing masses, peak positions and galaxy speeds;
+>     * Abell 520's galaxy-poor "dark core" comes from its gas and the surrounding galaxies'
+>       heat;
+>     * El Gordo agrees if its stars are about twice the colour-based estimate.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -78,8 +87,9 @@ X-COP and the Bullet, and pass the formula guard.
      (3 ± 3) × 10⁻²⁷ (Hees et al. 2014).
    * If escape from attachment takes time, so the companion is released as F·(1 − e^(−s/L))
      over its path length s, then L ≥ 0.15 pc (≥ 720 yr at u) gives Q2 ≤ 4.6 × 10⁻²⁷.
-   * Galaxies, dwarfs and clusters, all ≫ L, are unchanged. Wide binaries become nearly
-     Newtonian (1–5% instead of 19%).
+   * Galaxies, dwarfs and clusters, all ≫ L, are unchanged. Wide binaries get 4% more pull at
+     7,000 AU and 9% at 20,000 AU, instead of 19% (round 8 correction: "1–5%" holds at
+     7,000 AU, or at 20,000 AU only for L ≥ 100,000 AU).
    * The upper limit L ≲ 10 pc comes from the smallest dwarf galaxies.
 2. **The release scale g_d.**
    * The Milky Way at the Sun (1.26 × 10⁻¹⁰ m/s²) and the median SPARC point at the same pull
@@ -94,6 +104,25 @@ X-COP and the Bullet, and pass the formula guard.
    * A candidate mechanism: companions moving past each other at speeds comparable to u
      (100–300 km/s) lose step, so the Galaxy's field adds incoherently. This would also lower
      Q2.
+
+### Round 8: the three amendments through the regression suite
+
+Round 8 ran each amendment against every test at once (`research_work/results/hot-companion/regression/`,
+results README §18):
+* **Gradual release, L = 30,000 AU:** fixes Cassini (Q2 3.1 × 10⁻²⁶ → 4.6 × 10⁻²⁷ s⁻²) and
+  changes nothing else. It is the leading candidate for adoption.
+* **External hold, a single factor 0.1:**
+  * fixes Cassini on its own and lifts every dwarf (χ² 135 → 82; Carina passes);
+  * but makes wide binaries 2.5 times Newtonian at 20,000 AU, beyond both published analyses.
+
+  So the hold cannot be one number. It must weaken with the relative speed of the two
+  companions: a dwarf moving past the Galaxy's companion at 100–300 km/s, not a binary whose
+  stars move together. This speed dependence is exactly what the loss-of-step mechanism above
+  predicts. It is the next candidate to formulate.
+* **g_d × 1.25–1.5:** lifts the Sun's speed to 215–218 km/s, but also the vertical pull at
+  1.1 kpc (76–78 against 69.8 ± 3.3) and the SLACS lensing–kinematics gap (−0.04 to
+  −0.06 dex). The Milky Way's disk shape is the better lever: Bovy & Rix's shorter disk gives
+  217 km/s with the law unchanged.
 
 ### What follows
 

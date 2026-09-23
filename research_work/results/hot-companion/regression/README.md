@@ -5,8 +5,8 @@ that any change to the law, its constants or the code can be checked against eve
 
 ```bash
 cd research_work/results/hot-companion/regression
-python run_suite.py                               # the round-3 law, quick tier (about 2 minutes)
-python run_suite.py --tier full                   # + the colliding clusters (about 12 minutes)
+python run_suite.py                               # the round-3 law, quick tier (about 1 minute)
+python run_suite.py --tier full                   # + the colliding clusters (about 20 minutes)
 python run_suite.py --law gradual_release         # a candidate law from candidates/
 python run_suite.py --only dwarfs,precision       # some groups only
 python run_suite.py --tier full --save-baseline   # make this run the new baseline
@@ -37,6 +37,7 @@ Candidates now in the folder:
 | `gd_x1p5_refit.json` | g_d × 1.5, then a and u refitted | the same, with the constants re-balanced |
 | `gradual_release.json` | release over 30,000 AU (0.15 pc) | Cassini's Q2 limit (round 7) |
 | `weak_hold.json` | external hold 10% | the six faint dwarf galaxies (round 7) |
+| `gd_x1p25.json` | g_d × 1.25 | the smallest useful step toward the Sun's speed |
 | `combined.json` | all three, a and u refitted | together |
 
 Which tests each amendment reaches: g_d reaches everything; the release length reaches only the
@@ -58,7 +59,7 @@ standard errors, or its value over a limit. Against the baseline each check is m
 **regressed** / **improved** (status changed), **worse** / **better** (score moved by more than
 0.1 or 5%), **known** (a fail already in the baseline) or unchanged.
 
-## What is tested (71 checks in the full tier)
+## What is tested (89 checks in the full tier)
 
 | Group | Checks | Data |
 |---|---|---|
@@ -68,8 +69,8 @@ standard errors, or its value over a limit. Against the baseline each check is m
 | lensing | KiDS-1000 lensing pull for six samples and the early/late gap; lensing circular speeds of spirals and ellipticals; SLACS light = matter; Einstein Cross; microlensing | Brouwer et al. 2021; Mistele et al. 2024; Auger et al. 2009 |
 | milky_way | speed at the Sun; 15–27 kpc curve (four Gaia analyses); vertical pull at 1.1 kpc; mass inside 20/50/100/200 kpc; escape speed; inner Galaxy | `data/mw_literature_v7.json` |
 | dwarfs | speed spread of ten dwarf spheroidals, with the Galaxy's pull and heat | `data/mw_dwarfs.json` |
-| precision | planets, S2, the Double Pulsar, light bending, Cassini's Q2; wide binaries (tracked) | Hees et al. 2014 and others |
-| collisions (full) | the Bullet Cluster (round-5 case): outer stars, lensing strengths, gas residuals, peak positions, masses inside 250 kpc; the 72-collision stack (β); MACS J0025.4−1222, Abell 520 and El Gordo (round 8) | Clowe et al. 2006; Harvey et al. 2015; see `code/collisions_v8.py` |
+| precision | planets, S2, the Double Pulsar, light bending, Cassini's Q2; wide binaries (pass between the two published analyses, 1.0–1.5) | Hees et al. 2014; Chae 2023–24; Banik et al. 2024 |
+| collisions (full) | the Bullet Cluster (round-5 case): outer stars, lensing strengths, gas residuals, peak positions, masses inside 250 kpc; the 72-collision stack (β); MACS J0025.4−1222 (lensing inside 300 kpc, peak positions, galaxy speeds); Abell 520 (six clumps inside 150 kpc, 710 kpc, galaxy speeds per clump); El Gordo (lensing inside 0.5 and 1 Mpc, galaxy speeds; the SE peak's offset from the cool core tracked) | Clowe et al. 2006; Harvey et al. 2015; Bradač et al. 2008; Jee et al. 2014; Clowe et al. 2012; Girardi et al. 2008; Menanteau et al. 2012; Kim et al. 2021; `code/collisions_v8.py` |
 
 Every test calls the same code that produced the published numbers (`../code/`); the baseline
 reproduces them to the last digit (SPARC 15.85 km/s, X-COP 0.227, KiDS +0.024 / −0.005 / +0.021,
@@ -87,3 +88,22 @@ The Milky Way's Newtonian fields are cached in `cache/` (they do not depend on t
 Copy a file in `candidates/`, change the keys, and run
 `python run_suite.py --law <name> --tier full`. The scoreboard lists what the change fixes
 (improved), what it breaks (regressed), and what moved without changing status.
+
+## What the candidates do (quick tier, against the round-3 baseline)
+
+| Candidate | Fixes (fail or close → pass) | Breaks (pass → close or fail) | Moved without changing grade |
+|---|---|---|---|
+| gradual release, L = 30,000 AU | Cassini Q2: 3.1 × 10⁻²⁶ → 4.6 × 10⁻²⁷ s⁻² | nothing | wide binaries at 20,000 AU: 19% → 9% extra pull (4% at 7,000 AU) |
+| external hold 10% | Cassini Q2 (3.8 × 10⁻²⁷); the dwarf Carina | wide binaries: 2.5× Newton's pull at 20,000 AU, beyond both published analyses | every dwarf rises (χ² 135 → 82); the five faint ones still fail |
+| g_d × 1.25 | nothing (the Sun: 211 → 215 km/s, still close) | pull above the disk: 74.1 → 76.4 (just past 2σ) | strong lenses −0.017 → −0.037 dex; SPARC median residual halves |
+| g_d × 1.5 | the Sun: 217.6 km/s | strong lenses (−0.057 dex); pull above the disk (78.1) | SPARC median residual 0.031 → 0.015 dex |
+| g_d × 1.5, a and u refitted | the Sun (216.8) | the same two, and the lensing speeds of spirals (Mistele et al.) | a 4.6% lower, u 196.4 km/s |
+| all three, refitted | the Sun, Cassini, Carina | the same three, and wide binaries (1.76× Newton, close) | Cassini Q2 1.2 × 10⁻²⁷ |
+
+Read across: gradual release costs nothing anywhere else; a 10% external hold helps the dwarfs
+and Cassini but makes wide binaries far stronger than either published analysis allows, so the
+hold has to weaken for the dwarfs without weakening for binaries (they differ: a dwarf moves past
+the Galaxy's companion at 100–300 km/s, a binary's stars move with it); moving the switch-off
+later trades the Sun's speed against the pull above the disk and the strong lenses. The Milky
+Way's own visible matter is the other lever: with Bovy & Rix's (2013) shorter disk instead of
+McMillan's, our law gives 217 km/s at the Sun (round 7), so the disk's shape comes next.

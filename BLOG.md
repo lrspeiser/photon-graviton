@@ -3,7 +3,7 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated the same day (revs 13–16).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated the same day (revs 13–17).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
@@ -34,6 +34,22 @@ colliding clusters, with no dark matter and no expanding universe.*
     * Cassini's measurement of the Galaxy's field inside the Solar System.
 
   For each shortfall we found what would have to change, and each fix is testable.
+* **Rev 17** does two things you asked for:
+  * **A regression suite (§6.12)**: every test the law has faced, 89 checks (76 of them
+    graded against published measurements), rerun in one command. It shows what any change fixes and what it
+    breaks. On the unchanged law it reproduces every number published so far.
+  * **Three more colliding clusters (§6.11)**, run with the Bullet's machinery and published
+    inputs only:
+    * **MACS J0025.4−1222** passes on lensing masses, peak positions and galaxy speeds.
+    * **Abell 520**: its disputed "dark core" comes out of ordinary gas and the surrounding
+      galaxies' heat, with a lensing mass between the two teams' measurements.
+    * **El Gordo** passes if its stars weigh about twice the colour-based estimate, which is
+      within that estimate's stated uncertainty.
+
+  The suite's first use tested rev 16's three proposed fixes:
+  * the Cassini fix costs nothing elsewhere;
+  * the dwarf fix must depend on speed;
+  * the Sun's speed is better fixed in the Milky Way's disk than in the law.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -82,9 +98,12 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 | Bullet Cluster: main half's lensing mass, galaxy speeds and star count | **agree** | no | yes (fitted) |
 | Bullet Cluster: smaller half's lensing mass | about half of what is measured (open) | no | yes (fitted) |
 | 72 colliding clusters: lensing stays with the galaxies | **yes** | no | yes |
+| MACS J0025.4−1222: lensing masses, peaks on the galaxies, galaxy speeds | **all four agree** | no | yes (fitted) |
+| Abell 520's "dark core" (lensing without galaxies) | **3.06 × 10¹³ suns from gas and heat; measured 2.84–3.35** | no | not expected |
+| El Gordo: lensing mass and galaxy speeds | **agree if its stars are 2× the colour-based estimate**; 30% low with it | no | yes (fitted) |
 | Ellipticals bend light 0.17–0.27 dex more than spirals | **0.17–0.27** | no difference | yes, with tuned haloes |
 | Solar System | **no extra pull** | small extra pull | no extra pull |
-| Wide binary stars (data disputed) | **19% extra pull predicted** (1–5% if release takes time, §6.10) | 43% | none |
+| Wide binary stars (data disputed) | **19% extra pull predicted** (9% at 20,000 AU if release takes time, §6.10) | 43% | none |
 | Milky Way rotation 15–27 kpc (4 Gaia studies) | **within 1–6%** | within 3% | 6–11% too fast |
 | Milky Way rotation at the Sun (229–234 km/s) | 211 km/s, 8% slow | 223 | 234 |
 | Milky Way mass inside 100 and 200 kpc | **agrees** | 40% high at 200 kpc | agrees |
@@ -94,12 +113,16 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 | Adjustable numbers | **3 in total** | 1 | 2 per galaxy or cluster (~320) |
 
 **What is still open:**
-* **three shortfalls found in rev 16's full check (§§6.8, 6.10), each with a candidate fix:**
-  * the Sun's orbital speed: strong gravity should hold the companion back a little less
-    (g_d 1.5–2 times higher), which SPARC allows;
+* **three shortfalls found in rev 16's full check (§§6.8, 6.10), each with a candidate fix,
+  now tested by the regression suite (§6.12):**
+  * the Sun's orbital speed: a later switch-off helps but costs the pull above the disk; a
+    more compact Milky Way disk is the better lever;
   * Cassini's measurement: the companion should take time to be released, about 700 years of
-    travel;
-  * six faint dwarf galaxies: the Milky Way's pull should hold their companion back less;
+    travel. The suite finds this costs nothing anywhere else;
+  * six faint dwarf galaxies: the Milky Way's pull should hold their companion back less. The
+    suite shows the weakening must depend on speed, or wide binaries would pull far too hard;
+* **cluster stars' masses (§6.11):** in our law they set both lensing and galaxy speeds. MACS
+  J0025 works with its published stars, El Gordo needs about twice its estimate;
 * **the Bullet Cluster's smaller half.** Its lensing mass is twice what our law gives it.
   Rev 14's explanation, that it was a bigger cluster before the crash, is not borne out by the
   galaxies and starlight around it (rev 15). The leading candidate now is heat its galaxies
@@ -1034,7 +1057,8 @@ These are for a pair of 1.5 suns; pairs of 1–2 suns reach the same 1.19.
 
 **Rev 16 update.** Cassini's radio tracking of Saturn (§6.10) now points to the first case. The
 fix it needs, a companion that takes time to be released, lowers the wide-binary prediction to
-**1–5% extra pull**, close to Newton and to Banik et al.
+**about 4% extra pull at 7,000 AU and 9% at 20,000 AU** (rev 17 correction: rev 16 said 1–5%,
+which holds at 7,000 AU, or at 20,000 AU only for a release length of 100,000 AU).
 
 Script: `code/wide_binaries_v6.py`.
 
@@ -1171,11 +1195,8 @@ solver is `code/mw_model.py`.
     266 ± 5 km/s).
   * For the lightest spirals we are 20–30% lower than their numbers, but not lower than
     Brouwer et al.'s conversion of the same data. So the two conversions need reconciling first.
-* **Colliding clusters beyond the Bullet** (Abell 520, MACS J0025, El Gordo) and the dense
-  cluster Abell 1689: the published measurements are now collected, ready to model. Abell 520's
-  disputed "dark core", lensing where there are few galaxies, is a direct test of our memory
-  rule (§3.10). That rule puts lensing around stopped gas inside a sphere that grows about
-  200 kpc per billion years.
+* **Colliding clusters beyond the Bullet** (Abell 520, MACS J0025, El Gordo): now modelled, in
+  §6.11. The dense cluster Abell 1689 is next; its published measurements are collected.
 
 Script: `code/lensing_census_v7.py`.
 
@@ -1211,6 +1232,128 @@ Script: `code/lensing_census_v7.py`.
 
 Script: `code/strong_field_v7.py`.
 
+### 6.11 Three more colliding clusters
+
+The Bullet Cluster is the famous collision, but it is one object. Round 8 runs our law on the
+three other collisions that astronomers have mapped best, with nothing adjusted:
+* the gas and star masses come from the papers;
+* the machinery is the Bullet's (§3.10): the old companion rides with each cluster's galaxies,
+  and a fresh one grows around the stopped gas at the companion's speed, 197 km/s.
+
+Every input and its source is listed in the script (`collisions_v8.py`).
+
+**MACS J0025.4−1222: a second Bullet, and a clean pass.** Two near-equal clusters crossed in the
+plane of the sky about half a billion years ago at about 2,000 km/s. Their gas stuck in the
+middle; their galaxies flew on, 370 and 170 kpc beyond it.
+
+| | Measured (Bradač et al. 2008) | Ours |
+|---|---|---|
+| Lensing mass within 300 kpc of the SE galaxies | 2.5 (+1.0 / −1.7) × 10¹⁴ suns | **2.0** |
+| Lensing mass within 300 kpc of the NW galaxies | 2.6 (+0.5 / −1.4) × 10¹⁴ | **1.6** |
+| Where the lensing peaks sit | on the galaxies, > 4σ from the gas | **15 and 43 kpc from the galaxies** |
+| Galaxies' speed spread | 835 ± 59 km/s | **770** |
+
+All four agree within the measurement errors, and the answer does not depend on the uncertain
+age of the collision (0.26–1 billion years give the same numbers).
+
+**Abell 520: the "dark core", explained by ordinary gas.** This "train wreck" has five or six
+clumps in a line. In its middle sits a lensing clump, P3, on top of the stopped gas but with
+very few galaxies. Two teams measured it differently: 3.35 ± 0.34 (Jee et al. 2014) and
+2.84 ± 0.64 (Clowe et al. 2012, unsmoothed) × 10¹³ suns inside 150 kpc. Taken at face value it
+seemed to need dark matter that had separated from the galaxies, which dark-matter models do not
+expect.
+
+| Mass inside 150 kpc (10¹³ suns) | P1 | P2 | P3 (dark core) | P4 | P5 | P6 |
+|---|---|---|---|---|---|---|
+| Jee et al. 2014 | 2.10 | 4.05 | 3.35 | 4.23 | 2.93 | – |
+| Clowe et al. 2012 | 2.81 | 4.16 | 2.84 | 5.59 | 3.17 | 3.68 |
+| **Ours** | **2.56** | **4.84** | **3.06** | **3.30** | **2.83** | 2.10 |
+
+* **Our law puts a lensing clump on the dark core, with a mass between the two teams' values.**
+  * There is 0.76 × 10¹³ suns of ordinary matter there, mostly gas.
+  * The companion multiplies it about four times, as it does for any ordinary matter.
+  * The heat of the hot galaxies all around adds to it, since heat never cancels.
+  * Nothing dark is needed, and no galaxies either.
+* Five of the six clumps agree within the errors, counting the gap between the two teams as
+  part of the uncertainty. P6 is 2.3 error bars low.
+* The whole cluster inside 710 kpc: 4.3 against 5.0 ± 0.55 × 10¹⁴ suns (Mahdavi et al. 2007).
+* The galaxies' speed spreads come out about a third below those measured near each clump
+  (from only 6–9 galaxies each): 430–590 against 580–810 km/s.
+
+**El Gordo: a very distant giant, where the stars' mass decides everything.** El Gordo is
+seen as it was 7 billion years ago (z = 0.87). It is one of the most massive clusters known:
+two halves 750 kpc apart that passed through each other about half a billion years ago at
+2,400 km/s.
+
+| | Measured | Ours, published star masses | Ours, stars × 2 |
+|---|---|---|---|
+| Lensing mass within 0.5 / 1 / 1.5 Mpc (10¹⁴ suns) | 6.7 / 15.8 / 22.6 (Kim et al. 2021) | 4.6 / 11.3 / 17.0 | **7.0 / 16.9 / 24.8** |
+| NW / SE galaxies' speed spread | 1,290 ± 134 / 1,089 ± 200 km/s | 944 / 839 | **1,187 / 1,047** |
+
+* With the published star masses, the lensing mass and the galaxy speeds both come out 25–30%
+  low.
+* **Twice the published star masses recovers both at once**, within 10% for the lensing and
+  within one error bar for the speeds.
+* The published values come from colour fitting, which its authors say is good only to a factor
+  of two. At the star-to-gas ratio of the X-COP clusters that calibrated u, El Gordo's stars would
+  be about 1.5 times the published values.
+* The same doubling would overshoot MACS J0025. So it is not a rule for every cluster. It says
+  that El Gordo's stars are the number to measure better.
+* Our SE lensing peak sits 60 kpc from the SE galaxies, on the side facing the centre. That
+  puts it 160 kpc from the cool gas core, against about 100 kpc measured. This depends on where
+  the bulk of the gas sits, which no paper maps, so the suite tracks it without grading it.
+
+### 6.12 Every test, every time: the regression suite
+
+A change that fixes one measurement can quietly break another. So every test the law has faced
+now lives in one program: the regression suite.
+* It runs the law through **89 checks**. 76 are graded against published measurements:
+  galaxies, clusters, lensing, the Milky Way, its dwarfs, the Solar System, the Bullet Cluster,
+  the 72-collision stack, and the three collisions above. The other 13 are numbers it tracks,
+  such as the law's constants.
+* Each check is graded the same way:
+  * **pass**: within two error bars;
+  * **close**: within three;
+  * **fail**: further out.
+* Every run is compared with a saved **baseline**, and the report lists what changed:
+  * what a change **fixes**;
+  * what it **breaks**;
+  * what moved without changing its grade.
+* The quick run takes about a minute; everything, including the collisions, takes about 20
+  minutes.
+* On the unchanged law it reproduces every number published so far to the last digit.
+
+**The law today (round 3, unchanged): 61 pass, 8 close, 7 fail** of the 76 graded checks.
+* **Fail (7):**
+  * five faint dwarf galaxies: Draco, Ursa Minor, Sextans, Crater II and Antlia 2;
+  * Cassini's Q2;
+  * the lensing mass of the Bullet's smaller half.
+* **Close (8):**
+  * the dwarf Carina;
+  * the lensing speeds of spirals (Mistele et al.);
+  * the Sun's orbital speed;
+  * the Milky Way's mass inside 50 kpc;
+  * Abell 520's clump P6, and its galaxy speeds;
+  * El Gordo's lensing mass inside 500 kpc, and its NW galaxies' speeds.
+
+**The first thing we did with it: test the fixes proposed in rev 16.**
+
+| Change | Fixes | Breaks |
+|---|---|---|
+| Release over 30,000 AU (for Cassini) | Cassini | nothing |
+| Weaker hold by outside galaxies, 10% (for the dwarfs) | Cassini, Carina; every dwarf improves | wide binaries would pull 2.5× Newton's, more than any analysis allows |
+| Later switch-off, g_d × 1.25 | nothing yet (the Sun 211 → 215 km/s) | the pull above the disk, just |
+| Later switch-off, g_d × 1.5 | the Sun's speed (218 km/s) | strong lenses and the pull above the disk move to "close" |
+
+What we learned, in a few minutes of computer time:
+* **The Cassini fix is free.**
+* **The dwarf fix works, but the hold must weaken only for systems moving past the Galaxy's
+  companion.** Dwarfs move past it at 100–300 km/s; a pair of stars moves with it. So the hold
+  should depend on speed, not be a single number. That is the next candidate.
+* **The Sun's speed is better fixed in the Milky Way's matter than in the law.** A later
+  switch-off helps the Sun but lifts the pull above the disk too. A more compact disk, as in
+  Bovy & Rix (2013), gives 217 km/s at the Sun with less matter near the Sun, not more.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -1222,6 +1365,9 @@ Script: `code/strong_field_v7.py`.
 | Bullet Cluster: smaller half's lensing mass | about half of the measured 2.0–2.3 (open) | no | yes (fitted) |
 | Wide binary stars (data disputed) | **19% extra pull beyond 7,000 AU** | 43% | none |
 | Collisions: lensing stays with galaxies | **yes** | no | yes |
+| MACS J0025.4−1222 (a second Bullet) | **lensing masses, peaks and speeds agree** | no | yes, fitted |
+| Abell 520's galaxy-poor lensing clump | **from its gas and the galaxies' heat** | no | a puzzle |
+| El Gordo (z = 0.87) | **agrees if its stars are twice the colour estimate** | no | yes, fitted |
 | Ellipticals lens more than spirals | **yes, 0.17–0.27 dex, from their stars** | no | yes, via tuned haloes |
 | Strong lenses: light and stars agree | **yes** | | yes |
 | Galaxy lensing (KiDS), spirals / ellipticals | **−0.005 / +0.02 dex** | −0.07 / +0.11 dex | yes, tuned |
@@ -1267,7 +1413,13 @@ about two error bars); ✗ = a shortfall, with the fix we are testing.
 | Bullet Cluster: lensing on galaxies, main half | | yes | ✓ |
 | Bullet Cluster: smaller half's lensing mass | 2.0–2.3 × 10¹⁴ | about half | open |
 | 72 collisions: lensing with the galaxies | | yes | ✓ |
-| Abell 520, MACS J0025, El Gordo, Abell 1689 | collected | not yet run | next |
+| MACS J0025.4−1222: lensing inside 300 kpc, SE / NW | 2.5 / 2.6 × 10¹⁴ | 2.0 / 1.6 | ✓ |
+| MACS J0025.4−1222: galaxies' speed spread | 835 ± 59 km/s | 770 | ✓ |
+| Abell 520: lensing of six clumps inside 150 kpc | 2.1–5.6 × 10¹³ | 5 of 6 within the errors (P6 2.3σ low) | ✓ |
+| Abell 520: the galaxy-poor "dark core" P3 | 2.84–3.35 × 10¹³ | 3.06 | ✓ |
+| El Gordo: lensing inside 1 Mpc | 15.8 × 10¹⁴ | 11.3 (published stars); 16.9 (stars × 2) | ~ stars to measure |
+| Abell 1689 | collected | not yet run | next |
+| The regression suite (§6.12) | 76 graded checks | 61 pass, 8 close, 7 fail | |
 
 ## 8. Predictions anyone can check
 
@@ -1300,6 +1452,12 @@ about two error bars); ✗ = a shortfall, with the fix we are testing.
 14. **The Einstein Cross and similar compact lenses need only their stars** inside the ring.
 15. **Ellipticals and spirals follow two different lensing curves**, set by how randomly their
    stars move (KiDS already agrees).
+16. **El Gordo's stars weigh about twice the colour-based estimate** (about 2.6 × 10¹³ suns in
+   all). Near-infrared imaging and spectra of its galaxies can check this.
+17. **Abell 520's galaxy-poor clump carries about 3 × 10¹³ suns inside 150 kpc**, of which a
+   quarter is visible gas. Its lensing should follow the gas as that gas settles.
+18. **In MACS J0025 the lensing stays on the galaxies as the gas settles.** The published star
+   masses already give the right galaxy speeds (770 km/s against 835).
 
 ## 9. What is still open, and why we are optimistic
 
@@ -1324,13 +1482,22 @@ count (rev 15).
 4. **Wide binary stars (§6.7).** Our prediction is now computed: 19% more pull than Newton
    beyond about 7,000 AU. The two published analyses find about 40% and none. Whichever holds
    up will tell us how much of the companion is released near the Sun.
-5. **Three shortfalls from rev 16's full check, each with a testable fix:**
-   * **The Sun's orbital speed**, 8% slow. A gentler hold (g_d × 1.5–2) fixes most of it, and
-     SPARC fits as well. It must be refit together with the clusters.
+5. **Three shortfalls from rev 16's full check, each tested by the regression suite (§6.12):**
+   * **The Sun's orbital speed**, 8% slow. A gentler hold (g_d × 1.5) fixes it, but lifts the
+     pull above the disk and the strong-lens gap to "close". A more compact disk (Bovy & Rix 2013)
+     gives 217 km/s with nothing changed in the law. Next: the disk's scale length.
    * **Cassini's Q2**, 10 times too big. A companion that takes at least 0.15 pc of travel to
-     be released fixes it, leaves galaxies alone, and makes wide binaries nearly Newtonian.
-   * **Six faint dwarf galaxies**, 1.5–5 times too slow. The Milky Way's hold on them must be
-     weaker. We will test whether companions moving past each other at 100–300 km/s lose step.
+     be released fixes it. The suite finds it costs nothing anywhere else. Wide binaries drop to
+     about 9% extra pull.
+   * **Six faint dwarf galaxies**, 1.5–5 times too slow. A 10% hold helps every dwarf and
+     Cassini, but would make wide binaries pull 2.5 times harder than Newton. So the hold must
+     weaken only for companions moving past each other at 100–300 km/s, as dwarfs do past the
+     Galaxy, and not for pairs of stars that move together. That speed-dependent hold is the
+     next candidate.
+7. **How much cluster stars weigh (§6.11).** In our law the stars carry the heat, so their mass
+   sets both lensing and galaxy speeds. MACS J0025 works with its published stars. El Gordo needs
+   about twice its colour-based estimate, and Abell 520's galaxies move faster than its light
+   alone gives. Independent stellar masses (near-infrared light, spectra) will settle it.
 6. **Cosmology.** The cosmic microwave background and the growth of large-scale structure are
    outside this law's scope as tested so far. Under the project's no-expansion rule they need
    their own treatment.
@@ -1371,6 +1538,9 @@ Each of these is a concrete calculation or measurement, not a wall.
   * Passes: the outer Milky Way, its mass and escape speed, the pull above the disk, S2,
     pulsars and planets, and galaxy lensing of spirals and ellipticals (better than MOND).
   * Shortfalls, each with a candidate fix: the Sun's speed, Cassini's Q2, six faint dwarfs.
+* **Revision 17 (round 8).** A regression suite: every test in one command, graded the same
+  way, compared with a saved baseline. Three more collisions: MACS J0025 passes; Abell 520's dark
+  core comes from gas and heat; El Gordo's stars are the number to measure.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
@@ -1388,7 +1558,8 @@ Each of these is a concrete calculation or measurement, not a wall.
 * rev 16 revisits two earlier statements:
   * "the Solar System is silent" still holds for the planets' own pull. But Cassini's test of
     the Galaxy's field is failed as the law stands (§6.10);
-  * the wide-binary 19% becomes 1–5% if the Cassini fix is adopted;
+  * the wide-binary 19% becomes 1–5% if the Cassini fix is adopted (rev 17: 4% at 7,000 AU,
+    9% at 20,000 AU);
 * earlier retractions:
   * a cluster claim (revision 5, retracted in revision 7);
   * a misattributed group-lensing figure (revision 8).
@@ -1457,4 +1628,14 @@ python kids_v3.py        --output-dir ../run-kids-v3        # ellipticals vs spi
 python lenses_t35.py     --output-dir ../run-lenses-v3 --constants ../run-v3/results.json
 python derive_mond.py    --output-dir ../run-derive         # MOND as the cold limit
 python field_equation.py --output-dir ../run-field          # the 3D field equation
+python collisions_v8.py  --output-dir ../run-collisions-v8  # MACS J0025, Abell 520, El Gordo
+```
+
+The regression suite runs everything at once and compares with the saved baseline:
+
+```
+cd ../regression
+python run_suite.py                        # quick tier, about a minute
+python run_suite.py --tier full            # everything, about 20 minutes
+python run_suite.py --law gradual_release  # a candidate change, scored against the baseline
 ```
