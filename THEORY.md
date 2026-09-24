@@ -102,7 +102,24 @@
 >   * Suite 57 / 9 / 10 (round 10: 58 / 11 / 7). The far clusters recover (12 / 4 / 1 of 17,
 >     from 9 / 7 / 1); galaxy lensing (KiDS, Mistele) in the static distances now reads the
 >     distance law's scale (level ∝ α; centred near 0.87 α) and u (the early/late gap: 0.234
->     against 0.153 ± 0.04).
+>     against 0.153 ± 0.04). *(Round 12: neither reading held; see below.)*
+> * **Round 12 (§22): round 11's next steps, one at a time.**
+>   * MACS J0025 dated by its own clocks: its radio relics (Riseley et al. 2017) sit at its
+>     galaxies' distances, so the shocks have not outrun them; shock and separation clocks give
+>     0.08–0.36 Gyr in our distances. At 0.3 Gyr both lensing peaks sit on their galaxies.
+>   * The lenses' heat measured (SDSS DR17, 119,000 galaxies, de Vaucouleurs fraction × σ_e², disks
+>     at 30 km/s): k = 2.14 (red), 0.55 (blue), 2.15 (bulges), 0.30 (disks) at u = 162.6, against
+>     2.9 / 0.1 assumed. KiDS's early/late gaps 0.132 (colour) and 0.163 (Sérsic) against 0.153 and
+>     0.154: the gap never measured u. The IMF of giant ellipticals adds ≤ 0.09 dex, above 2 × 10¹¹ only.
+>   * The distance scale fitted jointly, constants refitted at each α: Pantheon+ (Cepheid-calibrated,
+>     full covariance) ×0.955 ± 0.013; SPARC's 81 Hubble-flow galaxies, now in the static law,
+>     ×0.87 (0.82–0.92); X-COP and KiDS flat. Adopted ×0.95 (α = 2.3645 × 10⁻⁴ Mpc⁻¹, H0-like 70.9);
+>     a = 6.298 × 10⁻¹¹, g_d = 2.027 × 10⁻¹⁰ m/s², u = 169.4 km/s. Suite 59 / 11 / 7. KiDS's level
+>     follows the lenses' mass at fixed light; circumgalactic gas of 0.5–1 M* within 100 kpc
+>     (Brouwer et al.'s nominal estimate) closes it.
+>   * The dynamical toy: of five local rules (free streaming, scattering, head-on annihilation,
+>     alignment, guided streaming along ĝ_N), only guided streaming gives one stream, div J = ℓρ and
+>     curl J = 0; alignment forms whirlpools on its own. A flux-tube argument makes it exact.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -264,6 +281,7 @@ results README §18):
   local form of round 10), its energy density is |J|/u and the pull ∝ √|J|. With curl J = 0,
   J = (ℓ/4πG)(−g_N) is unique, so the pull is √(a|g_N|) along ĝ_N, the ordered part of round 3,
   with a = 2ℓ/u. The curl-free condition is the one input a dynamical model must still supply.
+  *(Round 12: supplied by guiding; next section.)*
 * **The data's tolerance** (constants refitted at every point, 400 bootstrap resamplings):
   w (ordered cancellation) = 1, SPARC 18.89 → 15.94 km/s from w = 0 to 1; γ (dilution) ≤ 0.1,
   SPARC 15.94 → 27.21 and X-COP 0.221 → 0.505 from γ = 0 to 1; h (heat unsigned) = 1, X-COP
@@ -272,6 +290,28 @@ results README §18):
   m/s², g_d = 2.107 × 10⁻¹⁰ m/s² (λ = 3.22), u = 162.6 km/s (924 half-splits: 148–178), so
   ℓ = au/2 = 5.3 × 10⁻⁶ W/kg, the reach u × 13 Gyr = 2.16 Mpc and the release length's travel
   time 875 years. SPARC 15.94 km/s; X-COP rms 0.221.
+
+### Round 12: the companion guided along the Newtonian field
+
+* **Guided streaming gives the ordered rule with no curl-free assumption.** Suppose the ordered
+  companion's energy moves at u along −ĝ_N (a wave whose group velocity is locked to the local
+  field direction, as an Alfvén wave's is to B). Take a thin tube of field lines. Gauss: |g|A grows
+  by 4πG dM along the tube, with no flux through its walls. The companion: |J|A grows by ℓ dM, with no
+  flux through its walls (J ∥ g). Traced back along +g, every field line ends at a potential minimum,
+  where A → 0 and both fluxes vanish. Hence |J| = (ℓ/4πG)|g| on every line: J = (ℓ/4πG)(−g_N)
+  everywhere, lossless, one stream by construction and curl-free as a consequence.
+* **The toy** (`code/companion_toy_v12.py`; 2D, 128², 64 directions; four source layouts): free
+  streaming f = 0.83–0.87 (flux = J_N); scattering f ≈ 0.12; head-on annihilation keeps 76–81% of the
+  power; alignment f 0.98 but 0.35–0.75 dex and 8–32° off J_N with whirl 0.43–0.58 (steady with
+  resolution); guided f = 1, lossless, J_N to 0.008–0.02 dex (first-order grid error, halving with h).
+* **Consistency:** scrambled (hot) contributions carry no coherent direction and are not guided; they
+  add as the scalar sum S, as X-COP demands (h = 1). Memory: a guided wave is advected with its guiding
+  medium (Alfvén waves with their plasma); a guided companion carried with its matter would carry the
+  memory the collisions use. Not yet modelled: moving sources.
+* **Constants with every data set in the static law** (α ×0.95, SPARC's Hubble-flow galaxies placed
+  there; `run-distance-scale-v12`): a = 6.298 × 10⁻¹¹ m/s², g_d = 2.027 × 10⁻¹⁰ m/s² (λ = 3.22),
+  u = 169.4 km/s, so ℓ = au/2 = 5.3 × 10⁻⁶ W/kg, the reach 2.25 Mpc and the release length's travel
+  time 840 years. SPARC 15.87 km/s; X-COP rms 0.222.
 
 ### What follows
 
@@ -283,11 +323,14 @@ around each emitter (round 9):   extra → R(r) · extra ,   R = 1 − exp(−r/
 round, settled systems:   g = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) )
 ```
 
-* **Constants,** fitted once (round 11: in the project's own distances, X-COP stars deprojected):
-  * a = 6.55 × 10⁻¹¹ m/s² (galaxies);
-  * g_d = 2.11 × 10⁻¹⁰ m/s² (galaxies);
-  * u = 163 km/s (clusters).
+* **Constants,** fitted once (round 12: every data set in the project's own distances, with the
+  distance law's rate fitted to supernovae and SPARC's Hubble-flow galaxies; X-COP stars deprojected):
+  * a = 6.30 × 10⁻¹¹ m/s² (galaxies);
+  * g_d = 2.03 × 10⁻¹⁰ m/s² (galaxies);
+  * u = 169 km/s (clusters).
   * Therefore ℓ = 5.3 × 10⁻⁶ W/kg.
+  * Round 11 had a = 6.55 × 10⁻¹¹, g_d = 2.11 × 10⁻¹⁰ and u = 163 km/s (α ×1, SPARC at its
+    published distances).
   * Round 9: the release length L = 0.15 pc (the Solar System; the minimum Cassini allows).
   * Rounds 3–10 used a = 6.56 × 10⁻¹¹, g_d = 2.26 × 10⁻¹⁰ and u = 197 km/s, fitted in the X-COP
     release's ΛCDM units on its projected stellar profiles.

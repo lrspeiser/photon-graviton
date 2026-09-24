@@ -2590,3 +2590,106 @@ distances (at α0) are rescaled by α0/α and their star masses by (α0/α)² (`
 and UV absorption (late types) and predict the level from it; check the gas's effect on SPARC's outermost
 points (an isothermal halo of M* inside 100 kpc puts 0.3 M* inside 30 kpc, a flatter β-model less).
 
+### 22.4 A dynamical toy of the companion: which local rule gives one stream and no whirlpools?
+
+`code/companion_toy_v12.py` → `run-companion-toy-v12/companion_toy_v12.json` and (with `--convergence`)
+`convergence_v12.json`.
+
+Round 11 derived the ordered rule from three requirements on the companion's steady energy flow J, fed
+at ℓρ (§21.1): no energy lost (div J = ℓρ), one stream (energy density |J|/u, so f = |J|/(nu) = 1), and
+no whirlpools (curl J = 0). The first and third fix J = (ℓ/4πG)(−g_N) uniquely. The third was assumed.
+This toy builds the companion from local rules for its quanta on a 2D grid ([−1, 1]², 128², nothing
+entering at the edges) and grades each rule on all three. Rules:
+* **free:** quanta fly straight from where they are made, in every direction (waves passing through each
+  other);
+* **scatter:** the same, plus isotropic scattering (σ = 10 per unit length: diffusion);
+* **annihilate:** the same, plus head-on pairs annihilating (counter-streams removed);
+* **align:** the same, plus each quantum turning towards the local mean flow (BGK relaxation to a von Mises
+  distribution of width 9° about J, energy kept exactly in every cell: a Vicsek-type rule);
+* **guided:** quanta move along the local Newtonian field line, away from the matter, at u (one stream
+  advected along ĝ; the way Alfvén waves are guided along magnetic field lines).
+
+The first four are solved as a kinetic equation on 64 directions (explicit upwind, to a steady state); the
+guided rule as one density advected along e = J_N/|J_N|. Grades, inside |x|, |y| < 0.8, weighted by
+|J_N|: the power leaving the box over the power fed in; f; the rms log ratio |J|/|J_N| and the mean
+angle between them; and "whirl", the share of J's spatial variation that is rotation, |curl J| /
+(|∂xJx| + |∂yJx| + |∂xJy| + |∂yJy|). The Newtonian pattern itself scores whirl 0.001 on this grid.
+
+| sources | rule | power out ÷ in | one stream f | f < 0.9 on | flux vs J_N (rms dex) | direction (deg) | whirl |
+|---|---|---|---|---|---|---|---|
+| uniform disk | (J_N itself) | | 1 | | 0 | 0 | 0.001 |
+| uniform disk | free | 1.000 | 0.873 | 19% | 0.008 | 0.4 | 0.022 |
+| uniform disk | scatter | 1.000 | 0.123 | 100% | 0.055 | 2.1 | 0.008 |
+| uniform disk | annihilate | 0.760 | 0.863 | 20% | 0.135 | 0.4 | 0.022 |
+| uniform disk | align | 1.000 | 0.984 | 0% | 0.350 | 7.6 | 0.428 |
+| uniform disk | **guided** | 1.000 | 1.000 | 0% | 0.008 | 0.0 | 0.012 |
+| two equal blobs | (J_N itself) | | 1 | | 0 | 0 | 0.001 |
+| two equal blobs | free | 1.000 | 0.842 | 36% | 0.015 | 0.9 | 0.048 |
+| two equal blobs | scatter | 1.000 | 0.124 | 100% | 0.058 | 2.4 | 0.015 |
+| two equal blobs | annihilate | 0.805 | 0.844 | 37% | 0.099 | 2.2 | 0.070 |
+| two equal blobs | align | 1.000 | 0.983 | 1% | 0.689 | 21.2 | 0.579 |
+| two equal blobs | **guided** | 1.000 | 1.000 | 0% | 0.020 | 0.0 | 0.063 |
+| unequal pair 4:1 | (J_N itself) | | 1 | | 0 | 0 | 0.001 |
+| unequal pair 4:1 | free | 1.000 | 0.873 | 27% | 0.016 | 1.0 | 0.049 |
+| unequal pair 4:1 | scatter | 1.000 | 0.126 | 100% | 0.058 | 2.6 | 0.014 |
+| unequal pair 4:1 | annihilate | 0.791 | 0.869 | 29% | 0.111 | 2.5 | 0.053 |
+| unequal pair 4:1 | align | 1.000 | 0.983 | 1% | 0.749 | 25.2 | 0.520 |
+| unequal pair 4:1 | **guided** | 1.000 | 1.000 | 0% | 0.014 | 0.0 | 0.026 |
+| three blobs | (J_N itself) | | 1 | | 0 | 0 | 0.001 |
+| three blobs | free | 1.000 | 0.828 | 38% | 0.014 | 1.2 | 0.048 |
+| three blobs | scatter | 1.000 | 0.123 | 100% | 0.057 | 2.3 | 0.015 |
+| three blobs | annihilate | 0.800 | 0.828 | 40% | 0.107 | 3.6 | 0.093 |
+| three blobs | align | 1.000 | 0.984 | 1% | 0.721 | 32.4 | 0.547 |
+| three blobs | **guided** | 1.000 | 1.000 | 0% | 0.018 | 0.0 | 0.051 |
+
+**Resolution** (two equal blobs; N = 64 / 128 / 256): guided: flux vs J_N 0.038 / 0.020 / 0.011 dex, whirl 0.107 / 0.063 / 0.040 (first-order grid error); free: whirl 0.079 / 0.048 (N = 64 / 128); align: whirl 0.594 / 0.579 and 26° / 21° off (steady: the rule's own whirlpools).
+
+**Reading.**
+* **Free streaming** keeps every watt and carries exactly Newton's pattern (in 2D, like 3D, the ballistic
+  flux from isotropic sources is Gauss's field), but where streams from different places cross, the energy
+  is not one stream: f = 0.83–0.87, below 0.9 on 19–38% of the region. This is round 10's
+  rule 1, which dilutes the pull.
+* **Scattering** keeps every watt and its flux is curl-free (a gradient), close to Newton's pattern inside
+  the box, but it is the opposite of one stream: f ≈ 0.12.
+* **Head-on annihilation** loses 19–24% of the energy and still leaves oblique crossings (f 0.83–0.87).
+* **Alignment** makes one stream (f 0.98) and keeps every watt, but the flow does not follow Newton's
+  pattern: 0.35–0.75 dex and 8–32° off, with whirlpools that form on their own (whirl 0.43–0.58, steady
+  with resolution), as flocks do in the Vicsek model. Merged streams carry energy where Newton's field is
+  weak, the "one stream of everything" that round 11 excluded.
+* **Guided streaming** meets all three: f = 1, every watt kept, and Newton's pattern to the grid's
+  precision (0.008–0.02 dex; its small whirl reading falls as the grid is refined).
+
+**Why the guided rule works, exactly.** Take a thin tube of Newtonian field lines. Along it, Gauss's law
+says the field's flux through the tube, |g|A, grows by 4πG times the mass the tube passes through. If the
+companion flows along the same lines, its flux through the tube, |J|A, grows by ℓ times the same mass,
+and no companion crosses the tube's walls. Both start at zero where the tube starts (the tube leaves a
+potential minimum with zero cross-section). So |J| = (ℓ/4πG)|g| along every line: J = (ℓ/4πG)(−g_N)
+everywhere, with no whirlpools and no energy lost, and one stream by construction. The curl-free condition
+is not needed as an input; it follows from guiding. What remains postulated is the guiding itself: the
+companion is a wave whose energy runs along gravity's own field lines, as an Alfvén wave's energy runs
+along the magnetic field whatever its wave vector. Two consequences to keep:
+* **Heat.** A randomly moving source's contribution has no coherent direction and is not guided (round
+  10's scrambled phases); it adds as a scalar, which the clusters demand (h = 1, §21.1). The guided stream
+  is the ordered part; the scalar sum S is the scrambled part.
+* **Memory.** An Alfvén wave is carried along by the plasma it lives in. The analogue here, a guided
+  stream carried by the matter whose field guides it, would give the memory the collisions need (§3.10 of
+  the blog). The next toy moves the sources.
+
+### 22.5 Where round 12 leaves things, and next
+
+* **Settled this round:** MACS J0025's NW peak (dated by its own clocks, §22.1); the KiDS early/late gap
+  (the lenses' heat measured, §22.2); the distance scale (fitted jointly, ×0.95, with every data set in
+  the static law, §22.3); the no-whirlpool condition of §21.1 (supplied by guiding, §22.4).
+* **Corrected:** round 11's readings of galaxy lensing as a measurement of α and of u (§21.5).
+* **Suite** (round-12 law, full tier): **59 pass, 11 close, 7 fail** (round 11: 57, 9, 10). The seven:
+  five faint dwarfs, the Bullet's smaller half, KiDS's red lenses.
+* **Next:**
+  1. **The guided companion with moving sources:** does a companion carried with its matter keep the
+     memory the collisions use (§3.10 of the blog), and what does the Bullet's smaller half get?
+  2. **The lenses' circumgalactic gas:** weigh it (X-ray stacks for early types, UV absorption for late
+     types), predict KiDS's level from it, and check the gas's effect on SPARC's outermost points.
+  3. **The distance law's shape:** the supernovae's best α drifts with depth (0.967 → 0.944); the
+     bounded beam-area term (η ≈ 0.45) removes the drift. Derive it, or find what else does.
+  4. **MACS J0025's star masses** from infrared light; its galaxy speeds prefer the published ones.
+  5. From round 11's list, still open: the faint dwarfs, the Sun's speed, Abell 1689.
+

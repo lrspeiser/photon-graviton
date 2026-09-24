@@ -132,6 +132,11 @@ colliding clusters, with no dark matter and no expanding universe.*
     depend on this rate, as rev 20 had thought. Its remaining 16% excess is about the lenses' mass:
     gas around them, of the amount the KiDS team itself estimates but leaves out of the visible mass,
     accounts for all of it. The suite reads 59 pass, 11 close, 7 fail.
+  * **A working model of the companion.** Of five simple rules for how the companion's energy could
+    move, only one, following ordinary gravity's field lines outward, keeps all the energy, travels as
+    one stream and forms no whirlpools, and a short argument shows why it must. That turns rev 20's
+    last assumption into a physical property: the companion is a wave guided by gravity's own field
+    lines, as some waves in the Sun's hot gas are guided by its magnetic field.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -157,7 +162,8 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 1. **Every piece of ordinary matter feeds a faint, streaming companion to its gravity.**
 2. **Orderly matter feeds it in step.** Contributions from opposite sides cancel, just as
    Newton's pulls do. Far from a galaxy, what survives falls off slowly enough to keep the
-   outer stars orbiting fast. *Rev 20: this now follows from energy conservation (§4.15).*
+   outer stars orbiting fast. *Rev 20: this now follows from energy conservation (§4.15). Rev 21:
+   and from a companion guided along gravity's field lines, which a working model confirms (§6.16).*
 3. **Matter whose parts move randomly and freely, like stars in elliptical galaxies or
    galaxies in clusters, feeds it out of step.** Nothing cancels, so it pulls much harder.
    That is why clusters need so much extra pull.
@@ -1032,7 +1038,9 @@ the constant a 7.5-fold and slowing the companion to 60 km/s. The galaxies rule 
 
 **What is still assumed.** The "no whirlpools" condition. A companion that scatters off itself,
 the way heat spreads by diffusion, would settle into such a flow on its own. Building that as a
-working model of waves is the next step (§9, item 9).
+working model of waves is the next step (§9, item 9). *Rev 21: built. Scattering keeps the flow
+free of whirlpools but not one stream; a companion guided along gravity's field lines is both, and
+needs no assumption about whirlpools at all (§6.16).*
 
 Script: `code/companion_flow_v11.py`.
 
@@ -2119,6 +2127,59 @@ against 0.153). The locked wide-binary forecast moves from 1.083 to 1.076 at 20,
 
 Scripts: `code/sn_scale_v12.py`, `code/distance_scale_v12.py`, `code/kids_level_v12.py`.
 
+**Step 4: a working model of the companion.** Rev 20 showed that energy conservation fixes how
+orderly matter's companion adds up, provided its flow has no whirlpools (§4.15). That last condition
+was an assumption. We built a small computer model: a flat sheet on which matter gives off the
+companion's energy, and five candidate rules for how that energy moves:
+1. **fly straight**, in every direction, passing through each other;
+2. **bounce off each other at random**, the way heat spreads;
+3. **destroy each other** when they meet head-on;
+4. **turn to follow their neighbours**, like a flock of birds;
+5. **follow the lines of ordinary gravity** outward, the way certain waves in the Sun's hot gas run
+   along its magnetic field lines.
+
+We graded each on the three requirements, with the matter laid out four ways: a disk, two equal
+clumps, an unequal pair and three clumps.
+
+| Rule | Energy kept | One stream (1 = fully) | Off Newton's pattern | Whirlpools |
+|---|---|---|---|---|
+| fly straight | all | 0.83–0.87 | 0.01–0.02 dex | none |
+| bounce at random | all | 0.12–0.13 | 0.06 dex | none |
+| destroy head-on | 76–81% | 0.83–0.87 | 0.10–0.13 dex | none |
+| follow neighbours | all | 0.98 | 0.35–0.75 dex | **they form on their own** |
+| **follow gravity's lines** | **all** | **1.00** | **0.01–0.02 dex** | **none** |
+
+* **Flying straight** keeps every watt and follows Newton's pattern, but where streams from different
+  places cross, the energy is not one stream. That weakens the pull, which the galaxies rule out.
+* **Bouncing at random** keeps every watt, but its energy barely flows at all (one stream: 0.12).
+* **Head-on destruction** throws energy away and still leaves crossing streams.
+* **Following neighbours** makes one stream, but whirlpools appear by themselves, as they do in flocks
+  of birds and schools of fish, and the flow strays far from Newton's pattern.
+* **Following gravity's lines** meets all three. Its small misses are the grid's: they halve each time
+  the grid is made twice as fine (0.038, 0.020,
+  0.011 dex), while the neighbours' whirlpools stay the same
+  (0.59 and 0.58 on our whirlpool scale, where Newton's own pattern scores 0.001).
+
+**Why following gravity's lines works, exactly.** Picture a bundle of gravity's field lines, like a
+bundle of drinking straws, starting at the centre of a clump of matter. As the bundle passes through
+matter, Newton's pull through it grows in proportion to the matter it passes. If the companion flows
+along the same lines, its flow through the bundle grows in proportion to the same matter, and none of
+it leaks out of the sides. Both start at zero at the same point. So they stay in the same proportion
+everywhere: the companion's flow follows Newton's pattern exactly, with no whirlpools, and nothing had
+to be assumed. The model shows it; the argument proves it.
+
+**What this means.** The last assumption in rev 20's derivation becomes a physical property: **the
+companion is a wave guided by gravity's own field lines.** Nature has waves like this. Alfvén waves in
+the Sun's corona carry their energy along magnetic field lines, whichever way their crests face. Two
+more things fit:
+* random motion scrambles a wave's direction, so hot matter's companion is not guided and adds up
+  without cancelling, which is what the clusters need (§4.15);
+* an Alfvén wave is carried along with the gas it lives in, and a guided companion carried along with
+  its matter would have exactly the memory the colliding clusters need (§3.10). That is the next
+  model: sources that move.
+
+Script: `code/companion_toy_v12.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -2350,7 +2411,8 @@ proposals for finishing the theory.
    * *Next:* grade the law against the published lensing profiles directly, without either
      conversion (and item 11).
 8. **Wide binary stars (§6.7).**
-   * *The prediction:* 4% at 7,000 AU and 9% at 20,000 AU (3.5% and 8% with rev 20's constants);
+   * *The prediction:* 4% at 7,000 AU and 9% at 20,000 AU (3.5% and 8% with rev 20's constants,
+     3.2% and 7.6% with rev 21's);
      19–36% if item 2 goes the way of no hold. The two published analyses disagree (0 and about
      40%).
    * *Next:* Gaia's fourth data release. The binaries will measure the release length and decide
@@ -2361,10 +2423,12 @@ proposals for finishing the theory.
      Only the law's own rule fits both galaxies and clusters.
    * *Done in rev 20 (§4.15):* energy conservation derives how orderly matter adds up, given one
      stream and no whirlpools.
-   * *Next:* a model of waves that travel at full speed and cancel head-on, while weakening away
-     from their source, graded on the same galaxies, clusters and Milky Way. It must supply the "no
-     whirlpools" condition; a companion that scatters off itself, as heat diffuses, is the first
-     candidate;
+   * *Done in rev 21 (§6.16):* a working model of five local rules. Only a companion guided along
+     gravity's field lines keeps every watt, travels as one stream and forms no whirlpools, and a
+     short argument shows it must follow Newton's pattern exactly.
+   * *Next:* the guided companion with moving sources: does a companion carried along with its
+     matter keep the memory the collisions need? Then the same rule graded on the galaxies, clusters
+     and Milky Way;
    * a full field theory for the companion, with its travel, its release length and a
      relativistic form, so that lensing is derived;
    * what the release length is;
@@ -2404,7 +2468,7 @@ into our inputs.
 
 | # | Proposal | Where we stand | First step | How hard |
 |---|---|---|---|---|
-| 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15)** | a model of full-speed waves that cancel head-on, with no whirlpools | hard; the foundation |
+| 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15). Rev 21: a companion guided along gravity's field lines gives it with no further assumption (§6.16)** | the guided companion with moving sources: does it keep its memory in a collision? | hard; the foundation |
 | 2 | Predict unseen data with a locked model | **rev 19: the wide-binary forecast locked (§6.7)** | lensing profiles by speed spread for a new galaxy sample | doable now |
 | 3 | Show that random motion makes a steady pull and collisions remove it | Dicke toy: scrambling and its suppression, not yet the force | add test bodies and measure the averaged force | medium; builds on the toy |
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
@@ -2436,8 +2500,8 @@ into our inputs.
 * *First step:* a one-dimensional version with two sources and a test body. Measure the
   time-averaged force against distance and source strength. *Done in 3D in rev 19. Rev 20:
   energy conservation fixes how orderly matter adds up, given one stream and no whirlpools
-  (§4.15). Next: a model of waves that travel at full speed and cancel head-on, while weakening
-  away from their source, which must supply the "no whirlpools" condition.*
+  (§4.15). Rev 21: a companion guided along gravity's field lines supplies both, in a working model
+  and by a short proof (§6.16). Next: the same with moving sources.*
 
 **2. A locked prediction.**
 * *Where we stand:* the suite re-checks known data; passing it again is not a new prediction.
@@ -2640,7 +2704,9 @@ into our inputs.
     matches;
   * the distance law's rate, fitted jointly to supernovae and the galaxies: 5% lower, with every data
     set in our own distances. Galaxy lensing's remaining level points to the gas around the lenses.
-    Suite: 59 pass, 11 close, 7 fail.
+    Suite: 59 pass, 11 close, 7 fail;
+  * a working model of the companion: only a companion guided along gravity's field lines keeps every
+    watt, travels as one stream and forms no whirlpools.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
@@ -2765,6 +2831,8 @@ python kids_heat_v12.py     --output-dir ../run-kids-heat-v12          # galaxy 
 python sn_scale_v12.py      --output ../run-distance-scale-v12/sn_scale_v12.json      # the distance rate from supernovae
 python distance_scale_v12.py --output-dir ../run-distance-scale-v12    # the rate fitted jointly (--adopt 0.95: the constants)
 python kids_level_v12.py    --output ../run-distance-scale-v12/kids_level_v12.json    # what sets the lensing level
+python companion_toy_v12.py --output ../run-companion-toy-v12/companion_toy_v12.json  # five local rules for the companion
+python companion_toy_v12.py --convergence --output ../run-companion-toy-v12/convergence_v12.json  # the same at three resolutions
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:
