@@ -3722,3 +3722,111 @@ leak relative to an isolated piece's 2γ₀):
   cloud (radius 0.5) keeps more, 0.98 and 0.26, with large scatter.
 * **Reading.** With the energy fed back, the motion-opened σ² and the collision rule hold in dilute and moderately
   dense clouds and survive, renormalized, in dense ones. The mixing δ = χw and the quiet store's gap are still inputs.
+
+### 26.4 One kind of matter: every piece both sender and receiver
+
+`code/one_matter_v16.py` → `run-one-matter-v16/`.
+
+The audit's recommended construction: "Keep the quiet and bright internal modes. Give every piece the same
+finite-energy reservoir and the same local coupling to the wave. Derive its outgoing radiation, its energy loss, its
+response to incoming radiation and its mechanical force from that coupling. Include mutual feedback from the
+beginning." Round 15 had two descriptions of matter: sources with a finite quiet store, and receivers with an applied
+pump. Here there is one, and sources and receivers differ only in where they sit and how they move.
+
+**The piece.** Every piece holds:
+* **a quiet oscillation s**, the coherence of an inverted ensemble. It holds energy ready to give, which is the kind
+  of body round 15 found locks ahead of a passing wave. It radiates as a monopole at rate γ₀.
+* **its inversion w**, with energy (1 + w)/2, and **a finite store n** that refills it at W₀n/n₀, debited exactly.
+* **an internal collective gain G** that keeps the quiet oscillation going (its output leaves by an internal channel,
+  tallied). This is what makes the piece self-sustained, as in a superradiant laser.
+* **three passive radiators B**, dipoles that radiate at rate γ = 1 and also lose energy inside at γ_i. Their share
+  of energy that goes into the companion is f = γ/(γ + γ_i).
+* **the motion's mixing** of s into the B's, δ = χw. This is the independent calculation's postulate, still an input.
+
+**The coupling.** Every piece, source or receiver, talks to every other through the single complex symmetric matrix M
+of §26.3 (the exact Green's function, near and far field). The equations are
+```
+ds/dt = −(i/2) w (M z + K z)_s + (G/2) w s − λ s        (−w: inverted; an ensemble with w = −1 responds like a passive oscillator)
+dB/dt = +(i/2)   (M z + K z)_B − γ_i B
+dw/dt = W (1 − w) − g∥ (1 + w) − 2G|s|² − 2 Im(s* (M z + K z)_s),     dn/dt = −W (1 − w)/2
+```
+with K the mixing block [[0, −2δᵀ], [−2δ, 0]]. Each channel loses exactly the power it feeds the wave, so the pieces'
+total loss is z†Im(M)z: the interference between pieces is inside every piece's own budget. The force on a piece is
+(1/ω) Re Σ z_j†∂M_jl z_l, from the same M. Nothing converts power into force, no piece's timing is imposed, and there
+is no strong-field switch.
+
+**Set-up.** 48 source pieces in a ball of radius 3 wavelengths (at least 0.15 apart), and 8 receivers of the same
+matter on a sphere of radius 6, at rest. The constants are γ₀ = 0.01, G = 4, W₀ = 1.6, g∥ = 0.01, γ_i = 4 (so
+f = 0.2), with n₀ large enough that the stores lose under 1% in a run. The sources are at rest, move freely (δ fixed,
+rms q per component), or collide (δ redrawn at rate ν). Each run lasts 8,000 time units and is measured over the
+second half. There are three arrangements, and the isolated-piece heat weight is k = 3q²γ/(γ₀(γ + γ_i)²).
+
+**First, an exact recoil rule** (one receiver, its quiet oscillation held at a given lead, its radiators in their
+steady response to a distant source's wave):
+
+| radiators' share to the companion f | quiet channel, pulled by the source's wave | recoil from its own radiators | radiators | net, lead +1 |
+|---|---|---|---|---|
+| 1 (γ_i = 0) | +1.050 × 10⁻⁴ | −1.050 × 10⁻⁴ | −1.126 × 10⁻⁴ | −1.126 × 10⁻⁴ (pushed) |
+| 1/2 (γ_i = 1) | +1.050 × 10⁻⁴ | −0.525 × 10⁻⁴ | −0.563 × 10⁻⁴ | −0.038 × 10⁻⁴ |
+| 0.1 (γ_i = 9) | +1.050 × 10⁻⁴ | −0.105 × 10⁻⁴ | −0.113 × 10⁻⁴ | +0.833 × 10⁻⁴ (pulled) |
+
+* The quiet channel's pull is exactly the power it feeds the wave, divided by the wave's speed.
+* A piece's own radiators, driven by the same wave, radiate coherently with its quiet oscillation. Their interference
+  takes back a fraction f of the pull on the quiet channel and f again on the radiators: **net (1 − 2f) × fed/c**,
+  minus the radiators' ordinary radiation pressure, which grows as the wave's intensity.
+* Why, in one line: a plane wave A e^{ik·x} drives the radiators to B = −(ωkC₁/(4(γ + γ_i))) n̂A. The coherent
+  monopole-dipole recoil, −(C₀C₁k³/(24π)) Im(s*B), is then exactly −f times the quiet channel's pull, −(C₀k/2) n̂ Im(s*A)
+  (using C₁² = 48πγ/(ωk³)), and the same again on the radiators' side.
+* The rule holds at 6 and at 20 wavelengths. A full probe (γ_i = 9) gave a net pull of 4.89 × 10⁻⁴ against
+  0.8 × 6.18 × 10⁻⁴ predicted.
+* **So one kind of matter can be pulled only if its radiators send less than half of their energy into the
+  companion** and keep the rest inside. With f = 1 a piece that feeds the wave is pushed. This is a new, sharp
+  condition on what matter must be like, and it comes from the equations, not from a choice.
+
+**The decisive test: cold, warm and colliding sources, one matter throughout.** Means over three arrangements (the
+spread between arrangements in brackets where it matters). "Wave" is the sources' wave at the receivers, "from the
+sources" the pull on the receivers' quiet oscillation from that wave, "keeping step" its lead sin(arg E − arg s) on it:
+
+| sources | k (isolated piece) | glow ÷ rest | wave ÷ rest (√ of the glow) | pull from the sources ÷ rest | keeping step | net pull on a receiver | radiators | sources' rhythm spread |
+|---|---|---|---|---|---|---|---|---|
+| at rest | 0 | 1 | 1 | 1 | 0.55 (± 0.08) | **+1.21 × 10⁻⁴** | −1.22 × 10⁻⁴ | 4.7 × 10⁻⁴ |
+| free, q = 0.20 | 0.48 | 1.21 | 1.01 (1.10) | 0.56 | 0.26 | +0.43 × 10⁻⁴ | −0.97 × 10⁻⁴ | 7.7 × 10⁻⁴ |
+| free, q = 0.41 | 2.0 | 2.11 | 1.31 (1.45) | 0.71 | 0.27 | +0.25 × 10⁻⁴ | −1.52 × 10⁻⁴ | 1.2 × 10⁻³ |
+| free, q = 0.82 | 8.1 | 5.00 | 2.24 (2.24) | 1.06 | 0.27 | −1.04 × 10⁻⁴ | −3.47 × 10⁻⁴ | 2.6 × 10⁻³ |
+| free, q = 1.15 | 15.9 | 8.07 | 2.81 (2.84) | 0.91 | 0.16 | −2.92 × 10⁻⁴ | −5.08 × 10⁻⁴ | 3.9 × 10⁻³ |
+| colliding, ν = 5 | 8.1 | 3.92 | 1.91 (1.98) | 0.87 | 0.25 | −0.20 × 10⁻⁴ | −2.27 × 10⁻⁴ | 3.9 × 10⁻⁴ |
+| colliding, ν = 50 | 8.1 | 1.62 | 1.29 (1.27) | 1.06 | 0.44 | **+1.07 × 10⁻⁴** | −1.48 × 10⁻⁴ | 4.3 × 10⁻⁴ |
+
+* **The books balance.** Energy (stores, ensembles, radiators, internal output and radiated power against the start)
+  closes to 10⁻¹² with free motion and 4 × 10⁻⁷ with collisions. The forces balance the momentum carried away to the
+  accuracy of the far-field quadrature (10⁻²–6 × 10⁻², 2,000 directions around a 12-wavelength arrangement).
+* **Same matter, pulled.** A cold source pulls distant pieces of the same matter: they fall a quarter beat ahead by
+  themselves (0.55 on the sources' wave) and are pulled net, +1.21 × 10⁻⁴, after their radiators' push. The pull on the
+  quiet channel is the fed power over the wave's speed, less the recoil rule's share.
+* **The source's glow follows the heat rule.** Glow ×1.21, 2.11, 5.00 and 8.07 at k = 0.5, 2, 8 and 16. That is
+  somewhat below 1 + k, because the inverted mixing draws on the store's throughput.
+* **The wave carries the law's square root.** Its amplitude at the receivers is ×1.01, 1.31, 2.24 and 2.81, against √ of
+  the glow, 1.10, 1.45, 2.24 and 2.84.
+* **But the receivers fall out of step.** Their lead drops from 0.55 to 0.16–0.27, so the pull on them stays flat (×0.56
+  … 1.06). Meanwhile their radiators' push grows with the glow (−1.2 to −5.1 × 10⁻⁴). The net pull turns into a push at
+  k ≥ 8. **The decisive test is not passed** in this construction.
+* **Why: warming puts the source's own pieces out of tune.** The spread of the sources' rhythms grows from 4.7 × 10⁻⁴
+  at rest to 3.9 × 10⁻³ at k = 16.
+  * A warm piece's quiet oscillation drives its radiators, and the radiators feel their neighbours. That shifts each
+    piece's rhythm by an amount that depends on its own motion (∝ |δ|²).
+  * The pieces of a cold source settle into a common beat. A warm source's pieces can't, and a wave with a smeared beat
+    can't be followed from a distance.
+  * The receivers' re-timing rate, (w/2)|E|/|s|, against the sources' rhythm spread: 1.6 at rest (keeping step 0.55),
+    then 0.98, 0.82, 0.58 and 0.43 as the source warms (0.26, 0.27, 0.27, 0.16). Warming strengthens the wave, which
+    speeds up the re-timing as √ of the glow, but spreads the rhythms faster.
+  * Frequent collisions (ν = 50) keep the rhythms together (4.3 × 10⁻⁴), and the receivers keep step again (0.44) and
+    are pulled as by the cold source. At ν = 5 the rhythms stay together too, but the radiators' part of the wave
+    flickers at the collision rate, far faster than the receivers can re-time (0.25).
+* **What this settles and what it leaves.**
+  * Settled: in one kind of matter with every wave fed back, energy closes. A piece pulled by feeding a wave loses
+    (1 − 2f) of it to its own radiators. And the extra glow of warm matter reaches distant matter as the square root of
+    its power, as the law needs.
+  * Open: distant matter has to keep step with a warm source. In this construction warmth scrambles the source's own
+    beat faster than it strengthens its hold on distant matter.
+* **Follow-ups running:** radiators that send a twentieth of their energy into the companion (f = 0.05); and a cold
+  source put out of tune by hand, by the amounts warming produced, to confirm the cause.
