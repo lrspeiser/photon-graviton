@@ -2812,6 +2812,9 @@ pulled as strongly as by the cold source. That matches our law's rule that colli
 * **The cause, confirmed:** a cold source with no heat at all, its pieces put out of tune by hand by the same amounts,
   loses the receivers the same way: keeping step 0.28 at a spread of 7 × 10⁻⁴ (warm: 0.26), 0.12–0.19 at 2.4–3.9 × 10⁻³
   (warm: 0.16–0.27).
+* **Given time, a cold source's pull becomes nearly perfect.** Run three times longer, a cold source's pieces settle
+  into one beat, and the distant pieces lock onto it a quarter beat ahead, by themselves, at 0.91–0.92 on a scale where
+  1 is perfect. A warm source never settles: its pieces stay out of tune and the receivers' step wanders around 0.1.
 
 **Where this leaves us.** Most of the chain now stands on explicit, energy-balanced equations:
 * moving matter glows more, as σ², and collisions hold it back;

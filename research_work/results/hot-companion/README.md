@@ -3802,7 +3802,8 @@ sources" the pull on the receivers' quiet oscillation from that wave, "keeping s
   closes to 10⁻¹² with free motion and 4 × 10⁻⁷ with collisions. The forces balance the momentum carried away to the
   accuracy of the far-field quadrature (10⁻³–6 × 10⁻², 2,000 directions around a 12-wavelength arrangement).
 * **Same matter, pulled.** A cold source pulls distant pieces of the same matter: they fall a quarter beat ahead by
-  themselves (0.55 on the sources' wave) and are pulled net, +1.21 × 10⁻⁴, after their radiators' push. The pull on the
+  themselves (0.55 on the sources' wave over the measured stretch; 0.92 once settled, follow-up 3) and are pulled net,
+  +1.21 × 10⁻⁴, after their radiators' push. The pull on the
   quiet channel is the fed power over the wave's speed, less the recoil rule's share.
 * **The source's glow follows the heat rule.** Glow ×1.21, 2.11, 5.00 and 8.07 at k = 0.5, 2, 8 and 16. That is
   somewhat below 1 + k, because the inverted mixing draws on the store's throughput.
@@ -3863,6 +3864,20 @@ dt = 0.01; two arrangements):
 * **So the one obstacle is now pinned down:** warm, collisionless matter's pieces must stay in tune closely enough
   (rhythm spread well below the receivers' re-timing rate, (w/2)|E|/|s|) for distant matter to follow their wave.
 
+**Follow-up 3: given time** (`code/one_matter_rhythm_v16.py`: the main run's matter and constants, arrangement 1,
+24,000 time units instead of 8,000, reported every 1,000):
+
+| source | sources' rhythm spread | the wave's jitter at the receivers | receivers keeping step |
+|---|---|---|---|
+| at rest | 1.2 × 10⁻³ at t = 1,000, settling to 3–4 × 10⁻⁴ from t ≈ 4,000 | 1–3 × 10⁻⁴ once settled | −0.35 → 0.54 (t = 5,000) → **0.82–0.92** (t = 15,000–24,000) |
+| free, k = 2 | 1.3–2.3 × 10⁻³ throughout | 1–16 × 10⁻³ | wanders between −0.24 and +0.45 (mean 0.10 over the last 12,000) |
+
+* **A cold source settles into one beat, and distant pieces of the same matter lock onto it almost perfectly**, a
+  quarter cycle ahead, by themselves (0.91–0.92 over the last 4,000). The main runs' 0.55 was measured while this was
+  still settling.
+* **A warm source never settles.** Its pieces stay out of tune, its wave jitters ten times more, and the receivers
+  never lock.
+
 ### 26.5 Where round 16 leaves the proof
 
 | link | status after round 16 |
@@ -3871,7 +3886,7 @@ dt = 0.01; two arrangements):
 | random motion releases companion power ∝ σ², collisions hold it back, rotation none | shown with the shared wave's energy balanced, 3.3–4.0 per doubling (§26.3), given the quiet store's gap and the mixing δ = χw. With δ measured against the flowing companion, u is one speed for both of the law's jobs (§26.2, conditional) |
 | a piece pulled by feeding a wave | exact: the fed power over the wave's speed on its quiet channel, less 2f to its own radiators' recoil (§26.4) |
 | released and cold power reach distant matter as waves, as √ of the glow | shown in one kind of matter: the wave's amplitude at the receivers ×2.24 for glow ×5.00 (§26.4) |
-| distant matter keeps step by itself | yes with a cold source (0.55) and with frequently colliding ones (0.44); **not with a warm collisionless source** (0.16–0.27), whose own pieces fall out of tune. A cold source put out of tune by hand loses the receivers the same way (§26.4) |
+| distant matter keeps step by itself | yes with a cold source (0.92 once settled) and with frequently colliding ones (0.44); **not with a warm collisionless source** (0.16–0.27), whose own pieces fall out of tune. A cold source put out of tune by hand loses the receivers the same way (§26.4) |
 | a piece's radiators | must send less than half their energy into the companion (the recoil rule); at f = 0.05 the push is small and the pull net at every heat (§26.4) |
 | the complete energy-conserving law | not yet: the pull on distant matter does not grow with the source's heat in this construction |
 | u from microscopic rates | the flow picture makes u the travel speed by construction; χ and γ still unknown |

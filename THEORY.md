@@ -201,7 +201,9 @@
 >     (net push at k ≥ 8). Frequent collisions restore the lead (0.44). The audit's decisive test is not passed; the
 >     obstacle is keeping step with warm matter. With f = 0.05 the push is small and the pull net at every heat, but the
 >     rhythm spread and the lead are unchanged; a cold source detuned by hand to the same spreads loses the receivers the
->     same way (lead 0.28 at 7 × 10⁻⁴, 0.12–0.19 at 2.4–3.9 × 10⁻³). Warm collisionless matter must stay in tune.
+>     same way (lead 0.28 at 7 × 10⁻⁴, 0.12–0.19 at 2.4–3.9 × 10⁻³). Given 24,000 time units a cold source settles (spread
+>     3–4 × 10⁻⁴) and the receivers lock at 0.91–0.92; a warm one (k = 2) never settles (1.3–2.3 × 10⁻³, lead ~0.1). Warm
+>     collisionless matter must stay in tune.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
