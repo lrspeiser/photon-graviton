@@ -1,0 +1,41 @@
+{
+  "purpose": "Independent exploratory calculation; not an astrophysical fit or full gravity derivation",
+  "inspected_repository": "lrspeiser/photon-graviton",
+  "inspected_commit": "242eb1dcdf1f06b91ada4e428bfade333c5fcd0a",
+  "inspected_paths": [
+    "research_work/results/hot-companion/code/coherent_force_v13.py",
+    "research_work/results/hot-companion/code/singer_v14.py",
+    "BLOG.md"
+  ],
+  "external_primary_background": [
+    "https://arxiv.org/abs/1809.00330",
+    "https://opg.optica.org/josaa/abstract.cfm?URI=josaa-20-3-569"
+  ],
+  "environment_versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "numba": "0.65.1",
+    "matplotlib": "3.10.8"
+  },
+  "date": "2026-09-24",
+  "repository_modified": false,
+  "notes": [
+    "The Claude artifact page could not be fetched; the cited round-14 GitHub commit was read directly.",
+    "The original 153-run experiment and astronomical regression suite were not rerun.",
+    "Motion is prescribed through detuning; the complete translational/mechanical energy budget is not modeled.",
+    "Modal energy balance is exact in the specified reduced equations."
+  ],
+  "sha256": {
+    "README.md": "d9330d112a64c38ce9f84f6ee267efab1dc3ab54a5b34bb379f724dca756ea53",
+    "requirements.txt": "e219cffd6c1cf210a08864234023aa9e4c6e9393f22c921356ea62852eabe952",
+    "power_scaling.png": "8472d1b9385b00bbb30c9057b1b7a8ecaa0919dba0a765832ea891950fd79a6d",
+    "test_dark_bright.py": "0365c85298c5294412b75ef214c98076c5ce17a94c53bb555912f83d13dd8ebe",
+    "finite_reservoir_test.py": "5e6bee5d053dee336b6c5c0c7e998903ec9e4c1be1b04d405cf8ace59631a81d",
+    "results/finite_reservoir.json": "aa74928c288cd6099c031dabb4ec338d3a30c83496012b03b497296efcc98e93",
+    "results/no_internal_sink.json": "b36d111ca63708e40e7c0ac0be760342cfc867b9f7f1b83af8464f529aa2ba8e",
+    "results/static.json": "23b358d8eccffdd37ad4c7aef5156fc1eb3874ff610d458d0acc85e1ac1b3b9a",
+    "results/controls.json": "928594ca22de577987873b0aec19078b3a2e295618603979040996d16972f8d0",
+    "results/collisions.json": "4957cebcb8aa802e61ff77910d0128e11401e3d5e4f79beb44a816d78142a37b",
+    "results/finite_reservoir_summary.csv": "2608310c2c571c79f11bfebee3fe3da6491216f5b1c9b727ade7cceeebca0ad2"
+  }
+}

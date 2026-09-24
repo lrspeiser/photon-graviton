@@ -146,6 +146,27 @@
 >     against 15.87 km/s).
 >   * Darker cold states start the heat-dominated regime at lower speed (q* ≈ 4 × darkness) and test bodies keep
 >     step to q ≈ 1, but the release grows as σ^0.6–0.8 after its onset, against σ² in the law.
+> * **Round 15 (§25): an independent calculation (a finite internal store opened by motion) joined to the local force.**
+>   * The calculation: a quiet internal mode D (γ₀) and three radiating ones B_m (γ), mixed by relative motion,
+>     δ_m = χ w_m: dD/dt = −γ₀D − iΣδ_m B_m, dB_m/dt = −γB_m − iδ_m D; extra radiation 3χ²σ²/(γ₀γ) × the quiet leak
+>     (k with u² = γ₀γ/χ²), γ/(γ + ν) with collisions. Reproduced byte for byte.
+>   * Wave-coupled emitters alone (C_jl = e^{ikR}/(kR), N = 40, R_b = λ/4): rigid rotation and boosts release exactly
+>     nothing (< 10⁻¹²), collisions suppress roughly as 1/(1 + ν/γ_eff) (Dicke narrowing), but the steady leak grows
+>     only ×1.3–1.8 per doubling (σ^0.4–0.9): the collective decay rates fill every decade (10⁻¹⁰–10), with no gap. The
+>     σ² needs γ₀ ≪ δ²/γ ≪ γ: an internal quiet store, not collective subradiance (also round 14's shortfall).
+>   * Receivers from their own equations: an ordinary self-sustained oscillator (the calculation's gain reservoir,
+>     complex amplitude, coupling +iE) locks a quarter cycle behind and is pushed ∝ |E|; an inverted self-sustained
+>     emitter (pumped ensemble with collective gain; the wave's torque carries w) locks a quarter cycle ahead and is
+>     pulled ∝ |E|: round 10's rule derived. Below threshold, an inverted body is pulled ∝ |E|²; in strong waves the
+>     inverted emitter's pull saturates at its pump rate.
+>   * Integration (100 pieces with D, B radiating monopole/dipoles; 64 test bodies at 6λ feeling only the local wave):
+>     released/cold = 1 + k to 3% up to k ≈ 50; pull ∝ √(intensity at the bodies) to 1–3% for locked and inverted bodies
+>     alike; extra-pull ratios per doubling 3.55, 2.95, 2.48, 2.20, 1.97 (law 3.60 … 2.15); collisions: γ/(γ + ν) at the
+>     source to 1%, and slow bodies lose step in the flickering wave; no memory; pull = P/v to 1.1%.
+>   * Energy: F = P/v with v the companion's speed. At the law's a, a·u = 2ℓ per kilogram (mass loss 3.7 × 10⁻¹⁵ /yr);
+>     at v = c, 3,500× more (the Sun: 5 × 10⁻¹² /yr, excluded by ephemerides at ~10⁻¹³). γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹,
+>     γ/χ² = u²/γ₀ = 9.7 × 10³² m²/s; the law's collision rule puts 1/γ between ~100 s (ion gyration) and ~200 Myr
+>     (stellar orbits).
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -408,6 +429,29 @@ results README §18):
   q* ≈ 4 × (radiated ÷ independent at rest) (1/8, 1/16, 1/24 for darkness 1/33, 1/76, 1/107); after onset it grows
   ×1.5–1.7 per doubling (σ^0.6–0.8); the test bodies' wave ∝ √(radiated) to 1–2%; their feeding falls from 0.5 to
   0.25 at q = 1 and 0.1 at q = 2, where the pull collapses.
+
+### Round 15: a finite internal store opened by motion, and receivers that lead by themselves
+
+* **The source** (independent calculation, `independent-r15/`): per piece of matter a quiet mode D and radiating
+  modes B_m (m = 1..3), dD/dt = −γ₀D − iΣ_m δ_m B_m, dB_m/dt = −γB_m − iδ_m D, δ_m = χ w_m with w the relative
+  (radial) velocity. For |δ| ≪ γ, B_m ≈ −iδ_m D/γ, so P_motion/P_cold = Σδ²/(γ₀γ) → 3χ²σ²/(γ₀γ) = 3σ²/u²,
+  u² = γ₀γ/χ²; with δ an Ornstein–Uhlenbeck process of rate ν, × γ/(γ + ν). Energy |D|² + Σ|B|² decreases by exactly
+  what is radiated. If the store is Mc², γ₀ = ℓ/(2c²).
+* **The wave alone** (`code/wave_dark_v15.py`): da_j/dt = −a_j/2 + (i/2)Σ_l C_jl a_l, C_jl = cos(kR)/(k√(R²+ε²))
+  + i sinc(kR); P = a†Sa, S_jl = sinc(kR_jl). S depends only on distances, so rotation and boosts are exact nulls;
+  free motion opens subradiant states and collisions narrow it (Dicke). The leak grows as σ^0.4–0.9 because the
+  collective rates form a gapless ladder; the σ² law needs a gap γ₀ ≪ δ²/γ ≪ γ, i.e. an internal store.
+* **The receiver** (`code/receivers_v15.py`): an inverted, self-sustained emitter, mean-field Bloch equations,
+  ds/dt = (−γ⊥ + (G_c/2)w + iΔ)s − (i/2) b E w, dw/dt = W(1 − w) − γ∥(1 + w) − 2G_c|s|² + i b(E s* − E* s):
+  the wave's torque carries the inversion w > 0, so the stable injection lock is arg s = arg E − π/2 (feeding), and
+  the pull (k/2)|s||E| is ∝ |E| while b|E| ≪ γ⊥, saturating at the pump rate in strong waves. With the ordinary
+  sign (an ordinary laser's cavity field, or the calculation's gain reservoir), the stable lock is arg E + π/2:
+  absorbing, pushed ∝ |E|.
+* **Joined** (`code/reservoir_force_v15.py`): the pieces' D radiate monopoles c0√(2γ₀)D and B_m dipoles c1√(2γ)B_m
+  (c0² = 8π/(ωk), c1² = 24π/(ωk³): radiated = modal loss), test bodies feel F = ½Re(a*∇E): the pull is
+  √(1 + k) times cold in form (k = 3q²γ/γ₀), ×2 per doubling where k ≫ 1. The flux of the pieces' waves is
+  0.6–1.4 × their modal loss per arrangement (mutual interference, not fed back).
+* **Cost:** F = P/v. With v = u, pulling at a costs a·u = 2ℓ per kilogram: the law's own budget.
 
 ### What follows
 

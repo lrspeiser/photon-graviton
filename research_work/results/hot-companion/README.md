@@ -3261,3 +3261,241 @@ Power released by the motion over the power held at rest ("released/held"; the a
      methods makes one want more heat for ellipticals and the other less.
   4. Round 12's list: the guided companion with moving sources (the collisions' memory; the Bullet's smaller half),
      the lenses' gas, the distance law's shape, MACS J0025's star masses, the faint dwarfs, the Sun's speed, Abell 1689.
+
+## 25. Round 15, 24 September 2026: an independent calculation, joined to the local force
+
+The request: "We need to try and lock down a solid first principles proof. Explore this one next", with an
+independent calculation, "Motion-opened radiation from ordinary matter's internal oscillations" (kept as received
+in `independent-r15/first_principles_test/`). Its idea: each piece of matter holds a **quiet internal oscillation**
+D, which carries its internal energy and barely radiates, and three **radiating** ones B_m. Random relative motion
+shifts their frequencies apart by δ_m = χ w_m, and that mixes D into B linearly:
+```
+dD/dt = −γ₀ D − i Σ_m δ_m B_m        dB_m/dt = −γ B_m − i δ_m D
+```
+So the extra radiation is 3χ²σ²/(γ₀γ) times the quiet leak: the law's heat weight k = 3σ²/u², with
+u² = γ₀γ/χ², from linear mixing followed by quadratic energy. Collisions (δ redrawn at rate ν) leave γ/(γ + ν)
+of it. Its README asks for the next step: "use emitted waves from these evolving internal modes to drive test
+emitters, derive forces from a common local interaction, and measure force, phase, energy and momentum
+separately. Do not convert sqrt(radiated power) into a force."
+
+In the order done:
+1. the calculation reproduced (§25.1);
+2. does the wave alone give its postulated coupling? (§25.2);
+3. which test bodies a passing wave pulls, from their own equations (§25.3);
+4. the integration test (§25.4);
+5. what it costs, what it says about the constants, and next (§25.5).
+
+### 25.1 The independent calculation, reproduced
+
+`independent-r15/REPRODUCTION.md`. Rerun here (numba 0.67 instead of 0.65), four of its result files come out
+byte-identical and the fifth (a control in a different wrapper) number for number.
+
+* **Finite store (its part 3; γ = 1, γ₀ = 10⁻⁶, 512 pieces):** the extra radiation per doubling of the detuning
+  is ×4.00, 3.99, 3.98, 3.92, 3.69, 3.01. It is σ² until the stores start to empty. Direction changes at
+  ν = 1, 10 and 20 γ leave 50.7%, 9.2% and 4.8% of it, against γ/(γ + ν) = 50%, 9.1% and 4.8%. Stopped, the extra
+  output dies away; only the spent fuel is gone.
+* **A gain-reservoir oscillator (its part 1)** gives more to a weak incoming wave than it takes, and takes more
+  from a strong one, with the switch at an incoming amplitude of 3.1225. There is no switch in its equations.
+* **Its control (its part 2):** a fixed pump with no internal loss radiates exactly the pump at every speed. A
+  fixed supply cannot shine brighter when hot; a finite store can.
+
+### 25.2 Does the wave alone give the coupling?
+
+`code/wave_dark_v15.py` → `run-reservoir-force-v15/wave_dark_v15.json` (176 runs, 4 minutes). Nothing is
+postulated here. There are N = 40 ordinary oscillators in a ball of radius λ/4. Each has energy |a_j|² and
+radiation rate 1, and they talk only through the scalar wave:
+```
+da_j/dt = −a_j/2 + (i/2) Σ_l C_jl a_l,   C_jl = cos(kR)/(k√(R² + ε²)) + i sin(kR)/(kR)
+```
+The soft core ε = 0.02λ acts on the near-field part only, so d(a†a)/dt = −(radiated power) stays exact. The
+radiating part depends only on the distances between oscillators. A "dissipative" variant drops the near-field
+part. Motion is measured as q = kσ in units of the radiation rate.
+
+| extra radiation ÷ radiation at rest | q = 0.002 | 0.008 | 0.032 | 0.128 | colliding, q = 0.016: ν = 1, 10 | rigid rotation, uniform boost |
+|---|---|---|---|---|---|---|
+| over 200 time units, after settling 400 at rest (full) | 0.56 | 1.17 | 2.01 | 2.15 | 1.33, 0.72 (free: 1.74) | < 10⁻¹² |
+| the same, dissipative | 3.5 | 13.4 | 31.8 | 40.3 | 5.3, 0.93 (free: 22.9) | < 10⁻¹² |
+
+| steady leak rate P/E (second half of 3000) | at rest | q = 0.002 | 0.008 | 0.032 | 0.128 | ×per doubling of q |
+|---|---|---|---|---|---|---|
+| full | 7.5 × 10⁻⁴ | 3.9 × 10⁻³ | 6.8 × 10⁻³ | 1.64 × 10⁻² | 4.05 × 10⁻² | 1.29–1.59 |
+| dissipative | 4.5 × 10⁻⁵ | 8.3 × 10⁻⁴ | 2.2 × 10⁻³ | 7.0 × 10⁻³ | 1.91 × 10⁻² | 1.53–1.82 |
+
+* **Derived from the wave alone:**
+  * Rigid rotation and uniform boosts release exactly nothing: the difference from rest is below 10⁻¹², because
+    the wave's coupling depends only on the distances between emitters. The calculation's coupling, "the rate of
+    change of the distance between particles", is the only kind of motion that can matter.
+  * Free random motion opens the cloud's dark (subradiant) states.
+  * Collisions hold that back, roughly as 1/(1 + ν/γ_eff). At q = 0.032 the extra leak with ν = 1, 10 and 100 is
+    38%, 7.3% and 0.4% of the free one (dissipative; γ_eff ≈ 0.6), or 76%, 31% and 8% (full). This is Dicke
+    narrowing.
+* **Not derived: the σ².** The steady leak grows by ×1.3–1.8 per doubling of the speed (σ^0.4–0.9). That is
+  the same shortfall as round 14's toy (×1.5–1.7 per doubling, §24.3). The spectra show why. The cloud's
+  collective modes decay at rates spread over every decade:
+  * full: the quietest decays at 1.2 × 10⁻⁴ to 1.5 × 10⁻³, and every decade from there to 10 holds 1–17 modes;
+  * dissipative: every decade from 10⁻¹⁰ to 10 holds 1–6 modes.
+
+  There is no gap between quiet and loud. Motion moves the state down this continuous ladder, and the leak settles
+  where the ladder's crowding balances the scrambling: a fractional power of σ.
+* **Reading.** σ² needs one quiet store separated by a wide gap from the radiating channels, γ₀ ≪ δ²/γ ≪ γ (in
+  the calculation, 10⁻⁶ against 1). A cloud's collective quietness has no such gap. So the quiet store must be a
+  property of each piece of matter, an internal oscillation, and not of how the pieces are arranged. This also
+  explains round 14's steepness gap: its darkness was collective.
+
+### 25.3 Which test bodies a passing wave pulls, from their own equations
+
+`code/receivers_v15.py` → `run-reservoir-force-v15/receivers_v15.json`. One test body sits 6 wavelengths from a
+steady source. It feels only the local wave:
+* pull = −½Re(a* ∇E)·r̂;
+* power it feeds the wave = (ω/2) Im(a* E);
+* lead = sin(arg E − arg a): +1 means a quarter cycle ahead (feeding), −1 a quarter cycle behind (absorbing).
+
+The self-sustained bodies start at 8 random phases, and the table gives their zero-detuning values. With a
+detuning of half the locking range, each keeps its sign (lead ±0.78 to ±0.87 in the two weaker waves).
+
+| body (its own equations) | pull at \|E\| = 0.0133 / 0.133 / 1.33 | lead | grows as |
+|---|---|---|---|
+| ordinary oscillator, driven (da/dt = −a/2 + iE) | −1.1 × 10⁻³ / −0.11 / −11 | −1 | intensity (pushed) |
+| inverted, below its own threshold (stimulated emission: da/dt = −a/2 − iE) | +1.1 × 10⁻³ / +0.11 / +11 | +1 | intensity |
+| rounds 10–14: fixed amplitude, held a quarter cycle ahead (the rule, imposed) | +0.042 / +0.42 / +4.2 | +1 | amplitude |
+| **the calculation's gain-reservoir oscillator**, complex amplitude, physical coupling | **−0.071 / −0.76 / −13.3** | **−1** | amplitude (pushed) |
+| **an inverted self-sustained emitter** (pumped ensemble kept oscillating by its own collective emission; Bloch equations; the wave's torque carries the inversion) | **+0.0138 / +0.129 / +0.537** | **+1** | **amplitude** (pulled) |
+| the same, with the wave's torque given the ordinary sign (control) | −0.0138 / −0.134 / −1.24 | −1 | amplitude (pushed) |
+
+* **Pull equals fed power over the wave speed in every case** (1.0000). Attraction requires feeding (§23.3).
+* **The sign comes from the body's own oscillation.**
+  * An ordinary self-sustained oscillator, the calculation's included, locks a quarter cycle *behind* a passing
+    wave. It takes energy from the wave and is pushed, in proportion to the wave's amplitude. Its "gives more to
+    weak waves" is its own free emission, which goes out evenly in all directions and carries no net momentum.
+  * An **inverted** self-sustained emitter (one that holds energy it is ready to give, like the atoms of a laser)
+    locks a quarter cycle *ahead*, by itself. It feeds the wave, and is pulled in proportion to the wave's
+    amplitude: ×9.3 for ×10 in |E| in weak waves.
+* **So round 10's rule is derived for inverted, self-sustained matter:** the quarter-cycle lead and the pull ∝
+  amplitude. The Bloch equations are standard (the steady-state "superradiant laser"; Meiser et al., PRL 102,
+  163601, 2009; Bohnet et al., Nature 484, 78, 2012). A body that only amplifies, below its own threshold, is
+  pulled in proportion to the intensity. That falls off as 1/r², like Newton's pull, not the law's amplitude term.
+* **In strong waves** (the `strong` part) the inverted emitter's pull stops growing. At |E| = 0.13, 1.3, 4.0, 13
+  and 133 it is 0.129, 0.537, 0.602, 0.612 and 0.613: the wave drains the inversion (from 0.29 to 5 × 10⁻⁶), and the body
+  feeds exactly as fast as its pump refills it. The lead stays +1. That is a ceiling, not the switch-off the Solar
+  System needs; the release factor stays separate (§24.2).
+
+### 25.4 The integration test
+
+`code/reservoir_force_v15.py` → `run-reservoir-force-v15/reservoir_force_v15.json` (90 runs, 8 minutes).
+
+**Sources.** 100 pieces of matter are fixed in a ball of radius λ (round 13's geometry). Each has its own D and
+B_m, integrated exactly as the calculation writes them (γ = 1, γ₀ = 10⁻⁶), a random phase of D, and its own
+detunings:
+* at rest;
+* free: fixed, Gaussian, rms q per component;
+* colliding: redrawn at rate ν.
+
+D's quiet leak radiates as a monopole and each B_m as a dipole along axis m. The strengths are set so that
+the power each radiates into the field equals what its modes lose. That was checked through a sphere: 0.6000
+against 0.6, 2.0000003 against 2.
+
+**Test bodies.** 64 test bodies sit on a sphere of radius 6λ. Each feels only the local wave. Three kinds share
+every wave:
+* round 10's body, locked a quarter cycle ahead at rate Γ = 0.1, or Γ = 10;
+* the inverted self-sustained emitter of §25.3 (coupling b = 50), whose timing nobody sets;
+* an amplifier.
+
+Nothing about the law enters.
+
+Five arrangements for each case. Values are relative to rest, per unit of fuel left, to remove the fuel spent:
+
+| q (rms detuning ÷ γ) | k = 3q²γ/γ₀ | released ÷ cold leak (1 + k) | wave intensity at the bodies (its √) | pull, round-10 body | pull, inverted body | pull, amplifier | fuel left at the end |
+|---|---|---|---|---|---|---|---|
+| 0.00025 | 0.19 | 1.19 (1.19) | ×1.27 (1.13) | ×1.13 ± 0.02 | ×1.15 ± 0.02 | ×1.27 | 1.00 |
+| 0.0005 | 0.75 | 1.77 (1.75) | ×2.01 (1.41) | ×1.43 ± 0.06 | ×1.50 ± 0.06 | ×2.01 | 1.00 |
+| 0.001 | 3 | 4.08 (4) | ×4.93 (2.20) | ×2.26 ± 0.14 | ×2.41 ± 0.16 | ×4.93 | 0.99 |
+| 0.002 | 12 | 13.2 (13) | ×16.3 (4.00) | ×4.09 ± 0.30 | ×4.38 ± 0.34 | ×16.3 | 0.97 |
+| 0.004 | 48 | 47.8 (49) | ×59.4 (7.62) | ×7.77 ± 0.59 | ×8.24 ± 0.66 | ×59.4 | 0.89 |
+| 0.008 | 192 | 162 (193) | ×202 (14.0) | ×14.3 ± 1.1 | ×14.8 ± 1.2 | ×202 | 0.66 |
+| 0.016 | 768 | 418 (769) | ×509 (22.3) | ×22.6 ± 1.7 | ×23.1 ± 1.8 | ×508 | 0.29 |
+
+* **The heat term's full form comes out of the equations.**
+  * The released power is 1 + k times the cold leak to within 3% up to k ≈ 50. Beyond that the fastest pieces
+    burn their fuel first.
+  * The round-10 bodies' pull follows the square root of the wave's intensity at their place to 1–3%. That is
+    √(cold + released), the law's √(|g_N| + S_hot) with S_hot = k|g_N| for a point mass.
+  * Nothing converts power into force: the pull is ½Re(a* ∇E), summed over bodies that feel only the local wave.
+* **Doubling σ doubles the extra pull in the heat-dominated regime,** the decisive outcome asked for in round 13.
+  The extra pull's ratio per doubling is 3.55, 2.95, 2.48, 2.20 and 1.97 (± 0.03–0.36), against the law's 3.60,
+  3.10, 2.61, 2.30 and 2.15. The last step, 1.63, is where the fuel runs low.
+* **The inverted bodies do the same with no timing put in.** Their lead is 0.77–0.93 in the faint wave at rest
+  and 0.999–1.000 once motion brightens it. Their pull is ×1.15 … ×23.1.
+* **The amplifier follows the intensity instead** (×1.27 … ×508): an intensity law, not the law's.
+* **Collisions,** at q = 0.002 (k = 12):
+
+| motion | extra radiation ÷ free | γ/(γ + ν) | slow round-10 bodies (Γ = 0.1): extra pull ÷ free, lead | fast ones (Γ = 10) | inverted bodies |
+|---|---|---|---|---|---|
+| ν = 0.3γ | 0.768 | 0.769 | 0.112, 0.33 | | 0.034, 0.24 |
+| ν = γ | 0.502 | 0.500 | 0.039, 0.33 | 0.59, 0.99 | 0.015, 0.27 |
+| ν = 3γ | 0.253 | 0.250 | 0.020, 0.41 | | 0.005, 0.35 |
+| ν = 10γ | 0.094 | 0.091 | 0.010, 0.57 | 0.16, 0.96 | −0.002, 0.49 |
+| ν = 30γ | 0.039 | 0.032 | 0.006, 0.71 | | −0.002, 0.61 |
+
+  Collisions hold the heat back twice.
+  * At the source, the extra radiation falls as γ/(γ + ν), to 1%.
+  * At the test bodies, the colliding pieces' waves flicker. Bodies that re-time faster than the flicker keep
+    step and are pulled by the square root of what is radiated (0.59 and 0.16, against 0.64 and 0.18 expected).
+    Slower ones, and the inverted bodies with their weak coupling, lose step and gain almost nothing. The law's
+    rule, "colliding matter adds no heat", holds whichever way the bodies re-time.
+* **Other checks.**
+  * *Moving in bulk as well,* the pieces' waves re-timed by their own Doppler shifts: extra pull ×1.02 (round-10
+    bodies) and ×0.97 (inverted) of the fixed case.
+  * *No memory:* moved at q = 0.004 until t = 900 and then stopped, the pull returns to 0.954 of the rest value.
+    That is √(fuel left) = √0.915 = 0.957: only the spent fuel is missing.
+* **Energy and momentum, measured separately.**
+  * The stores drain exactly by what they radiate: at rest 0.9976 is left after 1200, which is e^(−2γ₀T).
+  * The flux of the pieces' waves through a sphere is 0.60–1.40 times what their modes lose, depending on the
+    arrangement (mean 1.02 over 85 runs). The pieces' waves interfere with each other, and that is not fed back
+    into their modes. A fully consistent version would let each piece feel the others' waves.
+  * Pull ÷ (fed power / wave speed) = 0.989–1.002 over every run, for every kind of body. It is below 1 because
+    the sources are spread over the ball, so the pull is the radial part of the momentum fed.
+
+### 25.5 What it costs, what it says about the constants, and next
+
+* **Being pulled costs power: F = P/v,** where v is the companion's travel speed. The law has the companion
+  stream at u = 169.4 km/s (§8). Pulled at the law's a = 6.30 × 10⁻¹¹ m/s², a kilogram then feeds
+  a·u = 1.07 × 10⁻⁵ W. That is exactly 2ℓ, twice the companion power it emits when cold (a = 2ℓ/u), and it loses
+  3.7 × 10⁻¹⁵ of its mass per year.
+  * If the companion travelled at light speed, the cost would be 2c/u = 3,500 times larger. The Sun, pulled at
+    about 5 × 10⁻¹¹ m/s² by the Galaxy's companion, would feed 78 solar luminosities into it and lose
+    5 × 10⁻¹² of its mass a year. Planetary ephemerides limit the change of the Sun's GM to about 10⁻¹³ per year
+    (e.g. Pitjeva & Pitjev, MNRAS 432, 3431, 2013).
+  * **So energy and momentum require a slow companion,** as the clusters' fit of u independently says.
+* **The constants.**
+  * If a piece's internal energy is its rest energy, the quiet leak is γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹ (ℓ = au/2
+    = 5.3 × 10⁻⁶ W/kg). Then u² = γ₀γ/χ² fixes γ/χ² = u²/γ₀ = 9.7 × 10³² m²/s.
+  * The law's two rules bound the radiating modes' lifetime 1/γ:
+    * stars carry heat, so their direction changes (orbits, ~200 million years at the Sun) must be slower than
+      γ;
+    * cluster gas does not, so its ions' gyration (~100 s in a microgauss field) must be faster.
+
+    So 1/γ lies between about 100 seconds and 200 million years.
+  * If the frequency shift is a Doppler shift of the companion itself (χ = its wavenumber), the companion's
+    wavelength lies between about 60 parsecs and 500 megaparsecs.
+* **Where the proof chain stands:**
+
+| link | status after round 15 |
+|---|---|
+| random motion releases companion power ∝ σ², collisions hold it back as γ/(γ + ν), rotation and bulk motion release none | derived in the reduced model, given a quiet internal store with a gap and a frequency shift ∝ the rate of change of distances (§25.1, §25.4). The wave alone gives the symmetries and the collision rule, not the gap (§25.2) |
+| released and cold power add, and reach test bodies as waves | derived, energy checked (§25.4) |
+| the pull is the amplitude, √(cold + released), a quarter cycle ahead | derived for inverted, self-sustained test bodies from their Bloch equations (§25.3). Every run has pull = fed power / wave speed |
+| doubling σ doubles the extra pull where heat dominates | measured: ×2.48, 2.20, 1.97 per doubling (§25.4) |
+| the energy bill | a·u = 2ℓ per kilogram with a slow companion; a light-speed one is excluded by the planets (§25.5) |
+| u from microscopic rates | u² = γ₀γ/χ²: one relation between two unknown rates, not yet a number |
+| the release factor (strong fields) | still separate: the inverted body saturates rather than switching off |
+
+* **Suite** unchanged: 59 pass, 11 close, 7 fail (the law is unchanged).
+* **Next:**
+  1. **A physical quiet store with a gap:** an internal two-oscillator structure whose frequencies are pulled apart
+     by relative motion. The motional mixing of a metastable atomic state is the laboratory example. Derive χ
+     and γ, and so u.
+  2. **One kind of matter:** every piece both a source (a quiet store opened by motion) and a receiver (inverted
+     and self-sustained), in one cloud with mutual waves fed back. That removes the ±40% interference noise.
+  3. **The release factor from the receivers:** whether a body's inversion, drained by its own neighbours' waves in
+     strong fields, can switch its pull off rather than cap it.
+  4. Round 14's list: the two KiDS analyses; round 12's list.

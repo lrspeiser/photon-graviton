@@ -3,7 +3,7 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–23).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–24).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
@@ -160,6 +160,24 @@ colliding clusters, with no dark matter and no expanding universe.*
   * **How far the release goes.** The darker cold matter is, the lower the speed at which heat takes over, and test
     bodies keep step up to about the re-timing speed, so a deep enough hold covers the whole heat range. What doesn't
     match yet is the steepness: the release grows about 1.6 times per doubling of speed, not the 4 times our law needs.
+* **Rev 24** takes up an independent calculation you sent, "motion-opened radiation from ordinary matter's internal
+  oscillations", and joins it to our pull (§6.19).
+  * **The idea:** each piece of matter holds a quiet internal vibration (its store of energy) and a few loud ones, and
+    relative motion mixes the quiet into the loud, so the leak grows as σ². We reran it: every number matches.
+  * **The wave alone gives half of it.** In a cloud of particles that talk only through the wave, spinning or moving
+    as a whole releases nothing, and collisions hold the release back, as our law needs. But the release grows too
+    gently (1.3–1.8 times per doubling of speed), for a clear reason: a cloud's quietness has no clean edge. The
+    quiet store has to be inside each piece of matter. That also explains round 14's shortfall.
+  * **Which bodies a wave pulls.** An ordinary self-sustained oscillator, the calculation's included, falls a quarter
+    beat behind a passing wave and is pushed. An *inverted* one, holding energy it is ready to give, falls a quarter
+    beat ahead by itself and is pulled in proportion to the wave's height. That is our round-10 rule, derived for the
+    first time.
+  * **The whole chain in one experiment:** the pull grows as √(cold + released glow), our law's heat term, with no
+    square root put in. Doubling the speed spread doubles the extra pull where heat dominates (×2.48, 2.20, 1.97).
+    Collisions hold it back; stopped, it vanishes.
+  * **The energy bill:** being pulled at our law's strength costs a kilogram twice its cold output if the companion is
+    slow, as ours is. A light-speed companion would cost 3,500 times more, which the planets' orbits already rule
+    out.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -194,7 +212,9 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
    could add up, only this one fits both galaxies and clusters (§4.14). Rev 22: the data still demand point 3, but
    "out of step" is not why. In a simulation, scrambling alone weakens the pull. What works is matter that holds its
    companion back when cold and releases it when moving freely (§6.17). Rev 23: that follows from a power balance,
-   a fixed supply against a loss that grows with the companion's loudness (§6.18).*
+   a fixed supply against a loss that grows with the companion's loudness (§6.18). Rev 24: with a quiet store inside
+   each piece of matter that motion opens, the whole chain works in one experiment: the pull grows as the square root
+   of cold plus released output, and doubling the speed spread doubles the extra pull (§6.19).*
 4. **Gas does not count as "hot" in this sense.** Its particles collide so often that the
    companion sees them as sitting still. That is why, in a collision, the extra pull stays
    with the galaxies and leaves the gas behind.
@@ -242,8 +262,9 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
   their stars, the KiDS team's own middle estimate, would close it; that gas is to be weighed. A gentler heat
   term would also close it, at a cost to massive ellipticals (§6.18);
 * **Abell 1689**, the next cluster to model;
-* **the heat term's mechanism (§6.17):** one rule now gives the right pattern in a simulation, but only at slow
-  speeds, and its physics is still to be derived;
+* **the heat term's mechanism (§6.17–6.19):** since rev 24 the whole chain runs in one experiment, given a quiet
+  internal store in each piece of matter that motion opens; what that store is physically, and the number it sets
+  for the companion's speed, are still to be found;
 * a full relativistic version of the law.
 
 Settled along the way: the main Bullet cluster's galaxy speeds (§6.3, rev 14–15), Cassini's
@@ -2462,6 +2483,139 @@ re-timing speed (three runs each).
 
 Script: `code/release_depth_v14.py`.
 
+### 6.19 Round 15: an independent idea for where the heat term comes from, joined to the pull (rev 24)
+
+You sent us an independent calculation with a new idea for the heat term and asked us to build toward a solid proof
+from first principles. Here is the idea, and what happened when we joined it to our pull.
+
+**The idea: matter has a quiet store, and motion opens it.**
+* Picture each piece of matter holding a **quiet internal vibration**. It carries the piece's internal energy, but
+  its parts swing against each other, so almost nothing leaks out.
+* It also has three **loud vibrations** that radiate freely, one for each direction.
+* When the piece's parts move relative to each other, their rhythms drift slightly apart. That mixes a little of the
+  quiet vibration into the loud ones.
+* The mixing grows in proportion to the speed, and the leaked energy with its square, σ². That is exactly the form
+  of our law's heat term.
+* Collisions keep changing the direction of motion, so the mixing never builds up.
+
+We reran the calculation here and every number matches; four of its five result files are identical to the last
+byte:
+* each doubling of speed multiplies the extra glow by 4.00, 3.99, 3.98 and 3.92, until the store starts to run low;
+* collisions leave 50.7%, 9.2% and 4.8% of it, where the simple formula says 50%, 9.1% and 4.8%.
+
+Two things were missing, and the calculation's own README says so. It did not show a pull, and its pieces were not
+yet sending real waves to anything. That was our job.
+
+**Step 1: does the wave alone give this?** We built a small cloud of 40 ordinary vibrating particles. They talk to
+each other only through the wave, and we assumed nothing about quiet stores or drifting rhythms.
+* **Spinning the cloud, or moving it as a whole, releases exactly nothing** (less than one part in a trillion). The
+  wave cares only about the distances between particles, which is just what the idea assumed.
+* **Random motion releases energy, and collisions hold it back.** With 1, 10 and 100 direction changes per unit
+  time, 38%, 7% and 0.4% of the extra glow survives. That is our law's "gas is cold" rule, from the wave itself.
+* **But the glow grows only 1.3–1.8 times per doubling of speed, not 4 times.** That is the same shortfall as in round
+  14.
+  * The reason: a cloud's quietness comes in every shade. Its patterns of vibration leak at rates spread across ten
+    powers of ten, with no clean line between quiet and loud.
+  * The σ² needs one quiet store that is sharply separated from the loud channels, a million times quieter in the
+    calculation.
+* **That is a useful answer.** The quiet store has to be something inside each piece of matter, not a result of how
+  the pieces are arranged. It also explains why round 14 fell short: its quietness came from the arrangement.
+
+**Step 2: which bodies does a passing wave pull?** We put six kinds of body, one at a time, in a steady wave from a
+distant source, and let each respond by its own equations:
+
+| body | falls into step | pulled or pushed | pull grows with the wave's |
+|---|---|---|---|
+| an ordinary oscillator, just driven by the wave | — | pushed | energy |
+| an "inverted" one, below the point where it would ring by itself (like a laser amplifier) | — | pulled | energy |
+| our round-10 rule, put in by hand | a quarter beat ahead | pulled | height |
+| **the calculation's own oscillator** (a self-sustained ringer with a power supply) | **a quarter beat behind** | **pushed** | height |
+| **an inverted, self-sustained ringer** | **a quarter beat ahead, by itself** | **pulled** | **height** |
+
+* An ordinary self-sustained ringer, like a clock or an ordinary laser, falls into step a quarter beat *behind* a
+  passing wave. It soaks up energy and is pushed away. The calculation's oscillator does this.
+* An **inverted** ringer holds energy it is ready to give, like the excited atoms in a laser. It falls into step a
+  quarter beat *ahead*, feeds the wave and is pulled, in proportion to the wave's height. That is exactly our
+  round-10 rule, which until now we had to put in by hand.
+* It comes out of standard equations for such emitters, the ones used for a real laboratory device, the
+  "superradiant laser". Matter holds an enormous store, its rest energy, so treating it as inverted toward the
+  companion is natural.
+* In very strong waves its pull stops growing, because it can only feed as fast as it is refilled. That is a
+  ceiling, not the switch-off our law uses near the Sun, so our release factor stays a separate question.
+
+**Step 3: the whole chain in one experiment.**
+* 100 pieces of matter, each with its quiet store and its three loud vibrations, sit in a ball one wavelength across.
+  Their waves go out for real.
+* 64 test bodies sit six wavelengths away. Each feels only the wave where it is. Three kinds share every wave: our
+  round-10 bodies, the inverted ringers (whose timing nobody sets), and amplifiers.
+* We measured force, timing, energy and momentum each on its own. Nowhere does the code turn power into force.
+
+With k the heat weight (how much motion adds to the cold glow) and the pull compared with the same ball at rest:
+
+| speed spread | k | glow released ÷ cold glow | pull, round-10 bodies | pull, inverted ringers | pull, amplifiers |
+|---|---|---|---|---|---|
+| 1 | 0.19 | ×1.19 | ×1.13 | ×1.15 | ×1.27 |
+| 4 | 3 | ×4.1 | ×2.26 | ×2.41 | ×4.9 |
+| 8 | 12 | ×13.2 | ×4.1 | ×4.4 | ×16 |
+| 16 | 48 | ×48 | ×7.8 | ×8.2 | ×59 |
+| 32 | 192 | ×162 (the fuel starts to run low) | ×14.3 | ×14.8 | ×202 |
+
+* **The pull grows as the square root of cold plus released glow.** That is exactly our law's heat term,
+  √(|g_N| + S), and no square root was put in anywhere.
+* **Doubling the speed spread doubles the extra pull where heat dominates:** ×2.48, 2.20 and 1.97 on successive
+  doublings. This is the decisive outcome we set ourselves in round 13, now met.
+* **The inverted ringers do the same with no timing put in.** Amplifiers follow the glow itself, not its square root.
+* **Collisions hold the heat back twice.**
+  * At the source, the extra glow falls in proportion to 1/(1 + collision rate), to within 1%.
+  * At the test bodies, the colliding pieces' waves flicker. Bodies that can't re-time fast enough lose step and gain
+    almost nothing. Either way, colliding matter adds almost no heat, as our law says of gas.
+* **No memory.** Stopped, the extra pull disappears; only the spent fuel is gone.
+* **Momentum checks out.** Every body's pull equals the power it feeds the wave divided by the wave's speed, within
+  1.1%, in every run.
+
+**What being pulled costs.** A body pulled by feeding a wave pays for it, and the price depends on how fast the wave
+travels.
+* Our law has the companion streaming at u = 169 km/s. Being pulled at our law's a then costs a kilogram 1.1 × 10⁻⁵
+  watts. That is exactly twice the power it gives off when cold, and about 4 parts in 10¹⁵ of its mass a year.
+* If the companion travelled at light speed, the bill would be 3,500 times larger. The Sun would lose 5 parts in 10¹²
+  of its mass each year to the Galaxy's companion. The planets' orbits would show that: their limit is about 1 part
+  in 10¹³.
+* **So energy and momentum require a slow companion,** which is what the clusters told us independently when they
+  set u.
+
+**What the constants say.** Two of the idea's numbers now have values or bounds:
+* If a piece's quiet store is its rest energy, the store leaks at 3 × 10⁻²³ of itself per second, fixed by our law's
+  5.3 × 10⁻⁶ watts per kilogram.
+* Our law's two rules pin down how long the loud vibrations ring:
+  * stars carry heat, so the loud vibrations must ring out faster than stars change direction, about every 200
+    million years;
+  * cluster gas doesn't, so they must ring longer than its ions take to circle, about 100 seconds.
+
+  So each loud vibration rings for between about 100 seconds and 200 million years.
+* If the drift in rhythm is an ordinary Doppler shift of the companion, its wavelength lies between about 60 parsecs
+  and 500 million parsecs.
+
+**Where the proof stands:**
+* **Now derived, in explicit equations:**
+  * moving matter releases companion power as σ², collisions hold it back, and spinning releases none;
+  * the power travels as waves and adds up;
+  * inverted matter falls into step ahead of the wave and is pulled by its height;
+  * so the pull grows as √(cold + released), and doubling σ doubles the extra pull.
+* **Still assumed:**
+  * that each piece of matter has a quiet internal store with a clean gap to its loud channels. The wave alone
+    gives the symmetries and the collision rule, but not the gap;
+  * the size of the rhythm drift per unit speed, which with the ringing time sets u = 169 km/s.
+* **Still separate:** the release factor that silences the companion near the Sun.
+
+**Next:**
+* find a physical quiet store with a gap (an internal pair of vibrations that relative motion pulls apart, as an
+  electric field mixes a quiet atomic state into a bright one) and derive u from it;
+* one kind of matter that is both source and receiver, in one cloud;
+* whether a receiver drained by its neighbours' loud waves can switch its pull off, which would be the release factor.
+
+Scripts: `code/wave_dark_v15.py`, `code/receivers_v15.py`, `code/reservoir_force_v15.py`; the independent
+calculation and its reproduction are in `independent-r15/`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -2714,8 +2868,13 @@ proposals for finishing the theory.
    * *Done in rev 23 (§6.18):* the rule derived from a power balance (a fixed supply, a loss that grows with
      loudness); its hold fits the galaxies as well as the release factor; the darker cold matter is, the wider the
      range where heat dominates and bodies keep step.
-   * *Next:* what makes the release grow as σ² (the toy's grows as σ^0.7 after its onset); derive why the hold stops at
-     zero instead of pushing; then the guided companion with moving sources, for the collisions' memory;
+   * *Done in rev 24 (§6.19):* an independent calculation's quiet internal store, opened by motion, gives the σ²; in
+     one experiment with real waves, the pull grows as √(cold + released) and doubling σ doubles the extra pull. An
+     inverted, self-sustained body falls into step a quarter beat ahead by itself (round 10's rule, derived). A cloud's
+     own quietness gives the symmetries and the collision rule but not the σ², because it has no clean edge.
+   * *Next:* a physical quiet store with a gap, and u from it; one kind of matter as both source and receiver;
+     whether a drained receiver can switch its pull off (the release factor); derive why the hold stops at zero
+     instead of pushing; then the guided companion with moving sources, for the collisions' memory;
    * a full field theory for the companion, with its travel, its release length and a
      relativistic form, so that lensing is derived;
    * what the release length is;
@@ -2757,14 +2916,14 @@ into our inputs.
 |---|---|---|---|---|
 | 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15). Rev 21: a companion guided along gravity's field lines gives it with no further assumption (§6.16)** | the guided companion with moving sources: does it keep its memory in a collision? | hard; the foundation |
 | 2 | Predict unseen data with a locked model | **rev 19: the wide-binary forecast locked (§6.7)** | lensing profiles by speed spread for a new galaxy sample | doable now |
-| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating). Rev 23: that timing derived from a power balance, with no memory; bodies keep step up to the re-timing speed (§6.18)** | make the release grow as σ² (it grows as σ^0.7 after its onset) | medium; the test bench exists |
+| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating). Rev 23: that timing derived from a power balance, with no memory; bodies keep step up to the re-timing speed (§6.18). Rev 24: with a quiet internal store opened by motion, the full pattern: pull ∝ √(cold + released), ×2 per doubling of σ where heat dominates, collisions suppress as 1/(1 + ν/γ) (§6.19)** | a physical quiet store with a gap, and u from it | medium; the test bench exists |
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
 | 5 | One mechanism for Cassini, dwarfs and wide binaries | release adopted; the dwarfs need a weaker hold, reason unknown | derive the release time and the hold from one transition | hard; biggest payoff |
 | 6 | Evolve the companion through collisions | memory imposed; the Bullet's smaller half at half weight | a time-dependent transport solver | medium to hard |
 | 7 | Measure u independently | u = 169 km/s from the clusters (rev 21: every data set in our distances); the lensing gap agrees with it once the lenses' star speeds are measured (rev 21) | the lensing signature of the growing fresh companion | medium; needs data |
 | 8 | Derive the constants | fitted; clues such as a ≈ cα/11 | the toy's stiffness and inertia give u | hard; after 1 |
 | 9 | Stellar masses without using gravity | **rev 20: every star mass on one basis; the calibrating clusters' corrected; no age-cap correction needed (§6.15)** | infrared light and spectra; the ellipticals' IMF | doable now |
-| 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion | energy balance in the toy; then precision ranging | medium; the test is future |
+| 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion. **Rev 24: being pulled costs power too, force × the companion's speed: 2ℓ per kilogram at the law's a with a slow companion; a light-speed one is excluded by the planets (§6.19)** | precision ranging | medium; the test is future |
 
 **1. One interaction, the whole law.**
 * *Where we stand:* the law is assembled from nine postulates, and two have toy models: the
@@ -3002,19 +3161,28 @@ into our inputs.
   * with one fixed timing, heat weakens the pull, and the reason is exact;
   * emitters that feed quiet waves but absorb loud ones give the right pattern at slow speeds;
   * galaxy lensing pins the heat term's σ² (doubling σ gives 1.8–2.0 times the extra pull).
-* **Revision 23 (round 14, this page).** Rev 22's next steps, one at a time (§6.18):
+* **Revision 23 (round 14).** Rev 22's next steps, one at a time (§6.18):
   * a gentler heat term (σ^1.75) on the full suite: it closes galaxy lensing's common level but costs the massive
     ellipticals, so σ² stays;
   * "feed quiet waves, absorb loud ones" derived from a power balance (a fixed supply, a loss growing with loudness);
     the same loss holds the companion back in a shape the galaxies accept as well as the release factor;
   * how far the release goes: the darker cold matter is, the earlier heat takes over, and bodies keep step up to about
     the re-timing speed; the release's steepness is the open question.
+* **Revision 24 (round 15, this page).** An independent calculation joined to the pull (§6.19):
+  * its quiet internal store, opened by motion, reproduced to the last digit;
+  * the wave alone gives its symmetries and the collision rule, not its σ²: a cloud's quietness has no clean edge;
+  * inverted, self-sustained matter falls into step a quarter beat ahead by itself: round 10's rule, derived;
+  * in one experiment with real waves, the pull grows as √(cold + released) and doubling σ doubles the extra pull;
+  * being pulled costs force × the companion's speed, which requires a slow companion.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
 * round 2's reaction force on hot matter (now the companion carries momentum);
 * revs 12–21's mechanism for the heat term, "scrambled contributions don't cancel, so they pull
   harder": joined with the pull in one experiment, scrambling alone weakens it (rev 22, §6.17);
+* rev 23's guess that a larger ball or a steeper loss would make the release grow as σ²: a cloud's own quietness has
+  no clean edge and grows too gently however it is arranged; the σ² needs a quiet store inside each piece of matter
+  (rev 24, §6.19);
 * round 1's companion speed (874 km/s; 197 in revs 12–19; 163 since rev 20, measured in our own
   distances with the clusters' stars correctly counted);
 * round 2's solar mass-loss figure (1.4 × 10⁻¹⁴ per year; 2.3 × 10⁻¹⁵ in revs 12–19; now
@@ -3144,6 +3312,17 @@ python heat_exponent_v13.py --output ../run-coherent-force-v13/heat_exponent_v13
 python singer_v14.py        --output ../run-coherent-force-v13/singer_v14.json          # a singer that absorbs; a singer with a power balance
 python release_shape_v14.py --output ../run-coherent-force-v13/release_shape_v14.json   # the release factor against the absorbers' hold, on SPARC
 python release_depth_v14.py --output ../run-coherent-force-v13/release_depth_v14.json   # how far the release goes, in three densities
+python wave_dark_v15.py     --output ../run-reservoir-force-v15/wave_dark_v15.json      # dark states of wave-coupled emitters, moved
+python receivers_v15.py     --output ../run-reservoir-force-v15/receivers_v15.json      # which bodies a passing wave pulls
+python reservoir_force_v15.py --output ../run-reservoir-force-v15/reservoir_force_v15.json  # the quiet store, real waves, the pull
+```
+
+The independent calculation of rev 24 reruns from its own folder (about a minute; see `independent-r15/REPRODUCTION.md`):
+
+```
+cd ../independent-r15/first_principles_test
+python finite_reservoir_test.py
+python test_dark_bright.py --out results --part static    # also: collisions, controls, no-sink
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:
