@@ -163,10 +163,15 @@
 >     released/cold = 1 + k to 3% up to k ≈ 50; pull ∝ √(intensity at the bodies) to 1–3% for locked and inverted bodies
 >     alike; extra-pull ratios per doubling 3.55, 2.95, 2.48, 2.20, 1.97 (law 3.60 … 2.15); collisions: γ/(γ + ν) at the
 >     source to 1%, and slow bodies lose step in the flickering wave; no memory; pull = P/v to 1.1%.
->   * Energy: F = P/v with v the companion's speed. At the law's a, a·u = 2ℓ per kilogram (mass loss 3.7 × 10⁻¹⁵ /yr);
->     at v = c, 3,500× more (the Sun: 5 × 10⁻¹² /yr, excluded by ephemerides at ~10⁻¹³). γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹,
+>   * Energy: F = P/v_phase (corrected in round 16; round 15 first used the travel speed u). At the law's a, a·v_phase =
+>     2βℓ per kilogram (β = v_phase/u ≲ 0.5 from the galaxies, §26.1); at v_phase = c, 3,500ℓ (the Sun: 5 × 10⁻¹² /yr,
+>     excluded by ephemerides at ~10⁻¹³). γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹,
 >     γ/χ² = u²/γ₀ = 9.7 × 10³² m²/s; the law's collision rule puts 1/γ between ~100 s (ion gyration) and ~200 Myr
 >     (stellar orbits).
+> * **Round 16 (§26): round 15's next steps, one at a time.**
+>   * The pull's energy bill uses the phase speed (F = P/v_phase), and the fed power joins the stream:
+>     I = |g_N|(1 + 2βW/(aM)). The galaxies allow β = v_phase/u ≲ 0.5 (15.79 against 15.87 km/s at 0.5; β ≈ 1 trends at
+>     2.8σ and fails out of sample); the clusters accept it with a lower u. The law is unchanged.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -451,7 +456,16 @@ results README §18):
   (c0² = 8π/(ωk), c1² = 24π/(ωk³): radiated = modal loss), test bodies feel F = ½Re(a*∇E): the pull is
   √(1 + k) times cold in form (k = 3q²γ/γ₀), ×2 per doubling where k ≫ 1. The flux of the pieces' waves is
   0.6–1.4 × their modal loss per arrangement (mutual interference, not fed back).
-* **Cost:** F = P/v. With v = u, pulling at a costs a·u = 2ℓ per kilogram: the law's own budget.
+* **Cost:** F = P/v_phase. Pulling at a costs a·v_phase = 2βℓ per kilogram (β = v_phase/u); the galaxies allow β ≲ 0.5
+  (round 16), so at most ℓ.
+
+### Round 16: the next steps, one at a time
+
+* **The feeding feedback** (`code/feeding_feedback_v16.py`, `code/feeding_checks_v16.py`): the power a pulled body
+  feeds joins the stream, so I(r) = |g_N|(1 + 2βW/(aM)), W = ∫₀ʳ g_c dM. SPARC (a, g_d refitted): 15.87 (β = 0),
+  15.76 (0.2), 15.79 (0.5), 16.35 km/s (1); the outer residual's slope on W/(aM) +0.074 ± 0.062, −0.023 ± 0.034,
+  −0.054 ± 0.019 (β = 0, 0.5, 1); β fitted on the training galaxies (0.95) does worse out of sample (test 13.80 against
+  12.40 km/s). X-COP accepts β ≤ 1 with u = 170 / 142 / 113 km/s. So v_phase ≲ u/2; round 10's 0.05u was too strict.
 
 ### What follows
 

@@ -1,0 +1,113 @@
+{
+ "experiment": "round 16: robustness of the feeding feedback",
+ "u_kms": 169.4433686899687,
+ "train_fits": {
+  "law (beta = 0), refitted on the training galaxies": {
+   "a_SI": 6.334607142589144e-11,
+   "g_d_SI": 2.3676315495359e-10,
+   "beta": 0.0,
+   "rms_all": 15.809592667385846,
+   "msq_all": 0.2113344582927419,
+   "rms_train": 15.92629788545375,
+   "msq_train": 0.2495088730759389,
+   "rms_validation": 19.09708241342816,
+   "msq_validation": 0.18681063943883283,
+   "rms_test": 12.399142117602917,
+   "msq_test": 0.12467858187528483
+  },
+  "beta free, fitted on the training galaxies": {
+   "a_SI": 2.2561358110428304e-11,
+   "g_d_SI": 1.4603841864863525e-10,
+   "beta": 0.9548593763420321,
+   "rms_all": 16.28301107576258,
+   "msq_all": 0.20532538944531797,
+   "rms_train": 15.977035422157467,
+   "msq_train": 0.2359349779676733,
+   "rms_validation": 19.875915968174194,
+   "msq_validation": 0.18629130918655268,
+   "rms_test": 13.80035273030833,
+   "msq_test": 0.13525232328449754
+  }
+ },
+ "trends": {
+  "beta = 0": {
+   "beta": 0.0,
+   "a_SI": 6.297889390049439e-11,
+   "g_d_SI": 2.027287915237577e-10,
+   "rms_all": 15.871594797361485,
+   "slope_on_W": 0.07429217844048233,
+   "slope_on_W_err": 0.06156084012858523,
+   "slope_on_surface_density": 0.05509123819560876,
+   "slope_on_surface_density_err": 0.024776798645264997,
+   "median_outer_residual": 0.010277619400144457
+  },
+  "beta = 0.95 (fitted)": {
+   "beta": 0.9548593763420321,
+   "a_SI": 2.447928927504638e-11,
+   "g_d_SI": 1.3263229210139194e-10,
+   "rms_all": 16.272666436992637,
+   "slope_on_W": -0.053194116159946264,
+   "slope_on_W_err": 0.020153714736741133,
+   "slope_on_surface_density": 0.032438337896219395,
+   "slope_on_surface_density_err": 0.02576416349704656,
+   "median_outer_residual": -0.007218295035751701
+  },
+  "beta = 0.5": {
+   "beta": 0.5,
+   "a_SI": 3.9929585500806257e-11,
+   "g_d_SI": 1.7108758131040919e-10,
+   "rms_all": 15.790545639361856,
+   "slope_on_W": -0.022540620998204735,
+   "slope_on_W_err": 0.03389611210743727,
+   "slope_on_surface_density": 0.031667712244449274,
+   "slope_on_surface_density_err": 0.025003395478027445,
+   "median_outer_residual": -0.001455220519463603
+  },
+  "beta = 1": {
+   "beta": 1.0,
+   "a_SI": 2.322431664587324e-11,
+   "g_d_SI": 1.2933505582161228e-10,
+   "rms_all": 16.34682091610673,
+   "slope_on_W": -0.05425429928242795,
+   "slope_on_W_err": 0.01905881269120528,
+   "slope_on_surface_density": 0.03391491472848447,
+   "slope_on_surface_density_err": 0.02587112491618835,
+   "median_outer_residual": -0.005925608531653512
+  }
+ },
+ "clusters": [
+  {
+   "tag": "beta = 0",
+   "beta": 0.0,
+   "u_refit": 170.33293047127043,
+   "rms_u_refit": 0.22162991832817192,
+   "rms_u_adopted": 0.22167144139638248,
+   "worst_radius_mean": 0.23921492749443884
+  },
+  {
+   "tag": "beta = 0.95 (fitted)",
+   "beta": 0.9548593763420321,
+   "u_refit": 115.81797429096204,
+   "rms_u_refit": 0.22701317683000372,
+   "rms_u_adopted": 0.3496552729014981,
+   "worst_radius_mean": 0.27472768017822446
+  },
+  {
+   "tag": "beta = 0.5",
+   "beta": 0.5,
+   "u_refit": 142.48668559161533,
+   "rms_u_refit": 0.22257328901668733,
+   "rms_u_adopted": 0.25884948439209987,
+   "worst_radius_mean": 0.2547363799869911
+  },
+  {
+   "tag": "beta = 1",
+   "beta": 1.0,
+   "u_refit": 113.203338101524,
+   "rms_u_refit": 0.2276151037403498,
+   "rms_u_adopted": 0.3601370757562342,
+   "worst_radius_mean": 0.2769367251987544
+  }
+ ],
+ "seconds": 37.67124788199999
+}

@@ -3457,15 +3457,17 @@ Five arrangements for each case. Values are relative to rest, per unit of fuel l
 
 ### 25.5 What it costs, what it says about the constants, and next
 
-* **Being pulled costs power: F = P/v,** where v is the companion's travel speed. The law has the companion
-  stream at u = 169.4 km/s (§8). Pulled at the law's a = 6.30 × 10⁻¹¹ m/s², a kilogram then feeds
-  a·u = 1.07 × 10⁻⁵ W. That is exactly 2ℓ, twice the companion power it emits when cold (a = 2ℓ/u), and it loses
-  3.7 × 10⁻¹⁵ of its mass per year.
-  * If the companion travelled at light speed, the cost would be 2c/u = 3,500 times larger. The Sun, pulled at
-    about 5 × 10⁻¹¹ m/s² by the Galaxy's companion, would feed 78 solar luminosities into it and lose
-    5 × 10⁻¹² of its mass a year. Planetary ephemerides limit the change of the Sun's GM to about 10⁻¹³ per year
-    (e.g. Pitjeva & Pitjev, MNRAS 432, 3431, 2013).
-  * **So energy and momentum require a slow companion,** as the clusters' fit of u independently says.
+* **Being pulled costs power: F = P/v_phase.** *Corrected in round 16 (§26.1):* this paragraph first used the
+  travel speed u. A wave carries momentum k/ω = 1/v_phase per unit energy, so the phase speed sets the cost, as
+  round 10 had it (§20.1, condition 3).
+  * Pulled at the law's a = 6.30 × 10⁻¹¹ m/s², a kilogram feeds a·v_phase = 2(v_phase/u)ℓ. The galaxies allow
+    v_phase up to about u/2 (§26.1), so at most ℓ, the companion power the kilogram emits when cold. That is at
+    most 1.9 × 10⁻¹⁵ of its mass per year.
+  * A light-speed phase would cost a·c = 3,500ℓ. The Sun, pulled at about 5 × 10⁻¹¹ m/s² by the Galaxy's
+    companion, would then feed 78 solar luminosities into it and lose 5 × 10⁻¹² of its mass a year. Planetary
+    ephemerides limit the change of the Sun's GM to about 10⁻¹³ per year (e.g. Pitjeva & Pitjev, MNRAS 432, 3431,
+    2013).
+  * **So energy and momentum require slow crests,** v_phase ≲ u/2 ≈ 85 km/s.
 * **The constants.**
   * If a piece's internal energy is its rest energy, the quiet leak is γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹ (ℓ = au/2
     = 5.3 × 10⁻⁶ W/kg). Then u² = γ₀γ/χ² fixes γ/χ² = u²/γ₀ = 9.7 × 10³² m²/s.
@@ -3485,7 +3487,7 @@ Five arrangements for each case. Values are relative to rest, per unit of fuel l
 | released and cold power add, and reach test bodies as waves | derived, energy checked (§25.4) |
 | the pull is the amplitude, √(cold + released), a quarter cycle ahead | derived for inverted, self-sustained test bodies from their Bloch equations (§25.3). Every run has pull = fed power / wave speed |
 | doubling σ doubles the extra pull where heat dominates | measured: ×2.48, 2.20, 1.97 per doubling (§25.4) |
-| the energy bill | a·u = 2ℓ per kilogram with a slow companion; a light-speed one is excluded by the planets (§25.5) |
+| the energy bill | a·v_phase per kilogram; ≤ ℓ with v_phase ≲ u/2, which the galaxies allow; a light-speed phase is excluded by the planets (§25.5, corrected in §26.1) |
 | u from microscopic rates | u² = γ₀γ/χ²: one relation between two unknown rates, not yet a number |
 | the release factor (strong fields) | still separate: the inverted body saturates rather than switching off |
 
@@ -3499,3 +3501,56 @@ Five arrangements for each case. Values are relative to rest, per unit of fuel l
   3. **The release factor from the receivers:** whether a body's inversion, drained by its own neighbours' waves in
      strong fields, can switch its pull off rather than cap it.
   4. Round 14's list: the two KiDS analyses; round 12's list.
+
+## 26. Round 16, 24 September 2026: the next steps, one at a time
+
+The request: "proceed with the next steps, keep the blog and main current": round 15's list (§25.5). In the
+order done:
+1. the energy bill of being pulled, fed back into the companion, on the galaxies and clusters (§26.1); this also
+   corrects §25.5;
+2. what opens the quiet store (§26.2);
+3. one kind of matter, with every wave fed back (§26.3).
+
+### 26.1 The energy bill of being pulled, fed back into the companion
+
+`code/feeding_feedback_v16.py` and `code/feeding_checks_v16.py` → `run-feeding-feedback-v16/`.
+
+**A correction first.** §25.5 priced the pull with the companion's travel speed u. A wave carries momentum
+k/ω = 1/v_phase per unit energy, so a body pulled with the companion's extra acceleration g_c feeds
+P/m = g_c v_phase into it. That is round 10's condition 3 (§20.1), and §25.5 is corrected above.
+
+**The fed power joins the stream.** It goes into the wave passing the body, which flows on outward. So the stream's
+power through radius r is ℓM(r), each kilogram's own feed, plus v_phase ∫₀ʳ g_c dM, the feeding. With β =
+v_phase/u and a = 2ℓ/u, the ordered companion's intensity becomes
+```
+I(r) = |g_N(r)| (1 + 2β W(r)/(a M(r))),   W(r) = ∫₀ʳ g_c dM,   g_c = exp(−|g_N|/g_d) √(a (I + S))
+```
+solved from the centre out (spherical bookkeeping, as for |g_N| = GM(r)/r²). β = 0 is the law. Round 10
+estimated that β ≈ 1 would spoil the tight v⁴ = G M a and asked for β ≲ 0.05. Here the data measure it.
+
+| β = v_phase/u | a (10⁻¹¹ m/s²) | g_d (10⁻¹⁰ m/s²) | 149 galaxies: typical miss (km/s) | fit statistic | outer residual against W/(aM) |
+|---|---|---|---|---|---|
+| 0 (the law) | 6.30 | 2.03 | 15.87 | 0.2111 | +0.074 ± 0.062 |
+| 0.05 | 6.04 | 2.03 | 15.83 | 0.2103 | |
+| 0.2 | 5.30 | 1.97 | 15.76 | 0.2082 | |
+| 0.5 | 3.99 | 1.71 | 15.79 | 0.2051 | −0.023 ± 0.034 |
+| 1 | 2.32 | 1.29 | 16.35 | 0.2054 | −0.054 ± 0.019 |
+
+a and g_d are refitted at each β, with u held. The residual slope is log₁₀(v²_obs/v²_pred) at each galaxy's last
+point against W/(aM) there, with 400 bootstrap resamples of the galaxies.
+
+* **Up to β ≈ 0.5 the galaxies are as happy as with the law** (15.76–15.83 against 15.87 km/s). A smaller a
+  absorbs most of the extra intensity: a·(1 + 2β⟨W/aM⟩) stays close to 6.3 × 10⁻¹¹.
+* **β ≈ 1 is ruled out.**
+  * The outer residuals trend with W/(aM) at 2.8σ, the other way from β = 0.
+  * Fitted on the 89 training galaxies alone, β runs to 0.95, but the 60 held-out galaxies then do worse than with the
+    law: 19.88 against 19.10 km/s (validation) and 13.80 against 12.40 (test).
+  * The all-galaxy fit statistic's 3% gain at β = 0.5–1 does not survive out of sample.
+* **The clusters accept any of these** with u lowered: X-COP's rms is 0.222 at β = 0 (u = 170 km/s), 0.223 at
+  β = 0.5 (u = 142) and 0.228 at β = 1 (u = 113).
+* **Reading.** The crests must move at no more than about half the companion's travel speed, v_phase ≲ 85 km/s.
+  * Round 10's bound (≲ 0.05u) was ten times too strict: a refitted a takes up most of the feedback.
+  * At the law's a the bill is then at most ℓ per kilogram, and at most 1.9 × 10⁻¹⁵ of its mass per year.
+  * A light-speed phase is out twice over: the planets (§25.5), and the galaxies.
+  * The law is unchanged (β = 0 fits as well as β = 0.5). A small surface-density trend in the outer residuals
+    (+0.055 ± 0.025 at β = 0, +0.032 at β = 0.5) is noted for later.

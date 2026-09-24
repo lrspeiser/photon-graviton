@@ -3,7 +3,7 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–24).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–25).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
@@ -175,9 +175,14 @@ colliding clusters, with no dark matter and no expanding universe.*
   * **The whole chain in one experiment:** the pull grows as √(cold + released glow), our law's heat term, with no
     square root put in. Doubling the speed spread doubles the extra pull where heat dominates (×2.48, 2.20, 1.97).
     Collisions hold it back; stopped, it vanishes.
-  * **The energy bill:** being pulled at our law's strength costs a kilogram twice its cold output if the companion is
-    slow, as ours is. A light-speed companion would cost 3,500 times more, which the planets' orbits already rule
-    out.
+  * **The energy bill:** being pulled costs energy, and the price is set by how fast the companion's crests move.
+    *(Rev 25 corrects rev 24's first figure, which used the companion's travel speed.)* A light-speed wave would cost
+    3,500 times a kilogram's cold output, which the planets' orbits already rule out.
+* **Rev 25** works through rev 24's next steps one at a time, updating this page as each lands (§6.20).
+  * **The energy bill, fed back.** The energy a pulled body feeds into the companion flows on outward and strengthens
+    it further out. The 149 galaxies allow that as long as the companion's crests move at no more than about half its
+    travel speed (85 km/s). Being pulled then costs a kilogram at most what it gives off when cold, 2 parts in 10¹⁵ of
+    its mass a year. Our law is unchanged.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -2573,15 +2578,16 @@ With k the heat weight (how much motion adds to the cold glow) and the pull comp
 * **Momentum checks out.** Every body's pull equals the power it feeds the wave divided by the wave's speed, within
   1.1%, in every run.
 
-**What being pulled costs.** A body pulled by feeding a wave pays for it, and the price depends on how fast the wave
-travels.
-* Our law has the companion streaming at u = 169 km/s. Being pulled at our law's a then costs a kilogram 1.1 × 10⁻⁵
-  watts. That is exactly twice the power it gives off when cold, and about 4 parts in 10¹⁵ of its mass a year.
-* If the companion travelled at light speed, the bill would be 3,500 times larger. The Sun would lose 5 parts in 10¹²
-  of its mass each year to the Galaxy's companion. The planets' orbits would show that: their limit is about 1 part
-  in 10¹³.
-* **So energy and momentum require a slow companion,** which is what the clusters told us independently when they
-  set u.
+**What being pulled costs** *(corrected in rev 25, §6.20)*. A body pulled by feeding a wave pays for it, and the price
+depends on how fast the wave's crests move: a wave carries momentum in proportion to its energy divided by its crests'
+speed.
+* If the crests moved at light speed, being pulled at our law's a would cost a kilogram 3,500 times the power it gives
+  off when cold. The Sun would lose 5 parts in 10¹² of its mass each year to the Galaxy's companion. The planets'
+  orbits would show that: their limit is about 1 part in 10¹³.
+* The galaxies allow crests up to about half the companion's travel speed (§6.20). The bill is then at most what a
+  kilogram gives off when cold: at most 2 parts in 10¹⁵ of its mass a year.
+* **So energy and momentum require slow crests.** Rev 24 first priced the pull with the companion's travel speed
+  (169 km/s) and called the bill "exactly twice" the cold output; that used the wrong speed.
 
 **What the constants say.** Two of the idea's numbers now have values or bounds:
 * If a piece's quiet store is its rest energy, the store leaks at 3 × 10⁻²³ of itself per second, fixed by our law's
@@ -2615,6 +2621,40 @@ travels.
 
 Scripts: `code/wave_dark_v15.py`, `code/receivers_v15.py`, `code/reservoir_force_v15.py`; the independent
 calculation and its reproduction are in `independent-r15/`.
+
+### 6.20 Round 16, step by step (rev 25)
+
+Rev 24 ended with a list of next steps (§9, item 9). This section adds each result as it lands.
+
+**Step 1: the energy bill of being pulled, and a correction.** A body is pulled by the kick it gets from feeding energy
+into the passing companion wave (§6.17). Last round we priced that kick with the companion's travel speed, 169 km/s.
+That was a slip. A wave's momentum is its energy divided by the speed of its crests, which can be slower than the
+speed at which its energy travels. Round 10 had it right.
+
+Where does the fed energy go? Into the passing wave, which flows on outward and pulls whatever lies further out. So
+being pulled makes the companion stronger downstream. We added that to our law. Then we asked the 149 galaxies how much
+of it they allow, for different speeds of the crests compared with the companion's travel speed:
+
+| crests' speed ÷ travel speed | typical miss, 149 galaxies (the pull's strength refitted) |
+|---|---|
+| 0 (our law) | 15.87 km/s |
+| 0.2 | 15.76 |
+| 0.5 | 15.79 |
+| 1 | 16.35 |
+
+* **Up to half the travel speed, the galaxies are as happy as with our law.** The strength constant simply comes out a
+  little smaller and takes up the extra.
+* **At the full travel speed they object.** The leftover errors then line up with how much of each galaxy sits where
+  the companion pulls (2.8σ). A fit made on 89 of the galaxies also does worse on the other 60 than our law does.
+* **The clusters accept all of it,** with a slightly slower companion (142 km/s at half, 113 at the full speed).
+
+So the crests must move at no more than about 85 km/s, half the companion's travel speed. Being pulled then costs a
+kilogram at most as much as it gives off when cold, and at most 2 parts in 10¹⁵ of its mass a year, far too little
+to notice. A light-speed wave is ruled out twice over, by the planets and by the galaxies. Round 10 had guessed the
+crests must be 20 times slower than the energy; the data allow ten times more than that. Our law itself doesn't
+change.
+
+Scripts: `code/feeding_feedback_v16.py`, `code/feeding_checks_v16.py`.
 
 ## 7. How this compares
 
@@ -2923,7 +2963,7 @@ into our inputs.
 | 7 | Measure u independently | u = 169 km/s from the clusters (rev 21: every data set in our distances); the lensing gap agrees with it once the lenses' star speeds are measured (rev 21) | the lensing signature of the growing fresh companion | medium; needs data |
 | 8 | Derive the constants | fitted; clues such as a ≈ cα/11 | the toy's stiffness and inertia give u | hard; after 1 |
 | 9 | Stellar masses without using gravity | **rev 20: every star mass on one basis; the calibrating clusters' corrected; no age-cap correction needed (§6.15)** | infrared light and spectra; the ellipticals' IMF | doable now |
-| 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion. **Rev 24: being pulled costs power too, force × the companion's speed: 2ℓ per kilogram at the law's a with a slow companion; a light-speed one is excluded by the planets (§6.19)** | precision ranging | medium; the test is future |
+| 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion. **Rev 24–25: being pulled costs power too, force × the crests' speed; the galaxies allow crests up to half the travel speed, so at most ℓ per kilogram at the law's a; light-speed crests are excluded by the planets and the galaxies (§6.19–6.20)** | precision ranging | medium; the test is future |
 
 **1. One interaction, the whole law.**
 * *Where we stand:* the law is assembled from nine postulates, and two have toy models: the
@@ -3168,18 +3208,23 @@ into our inputs.
     the same loss holds the companion back in a shape the galaxies accept as well as the release factor;
   * how far the release goes: the darker cold matter is, the earlier heat takes over, and bodies keep step up to about
     the re-timing speed; the release's steepness is the open question.
-* **Revision 24 (round 15, this page).** An independent calculation joined to the pull (§6.19):
+* **Revision 24 (round 15).** An independent calculation joined to the pull (§6.19):
   * its quiet internal store, opened by motion, reproduced to the last digit;
   * the wave alone gives its symmetries and the collision rule, not its σ²: a cloud's quietness has no clean edge;
   * inverted, self-sustained matter falls into step a quarter beat ahead by itself: round 10's rule, derived;
   * in one experiment with real waves, the pull grows as √(cold + released) and doubling σ doubles the extra pull;
-  * being pulled costs force × the companion's speed, which requires a slow companion.
+  * being pulled costs energy, which requires slow crests (corrected in rev 25).
+* **Revision 25 (round 16, this page).** Rev 24's next steps, one at a time (§6.20):
+  * the energy a pulled body feeds into the companion strengthens it further out; the galaxies allow it while the
+    crests move at no more than half the travel speed; being pulled costs at most a kilogram's cold output.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
 * round 2's reaction force on hot matter (now the companion carries momentum);
 * revs 12–21's mechanism for the heat term, "scrambled contributions don't cancel, so they pull
   harder": joined with the pull in one experiment, scrambling alone weakens it (rev 22, §6.17);
+* rev 24's first price for being pulled ("exactly twice" a kilogram's cold output, with the companion's travel speed):
+  the crests' speed sets it, and the galaxies cap it at the cold output (rev 25, §6.20);
 * rev 23's guess that a larger ball or a steeper loss would make the release grow as σ²: a cloud's own quietness has
   no clean edge and grows too gently however it is arranged; the σ² needs a quiet store inside each piece of matter
   (rev 24, §6.19);
@@ -3315,6 +3360,8 @@ python release_depth_v14.py --output ../run-coherent-force-v13/release_depth_v14
 python wave_dark_v15.py     --output ../run-reservoir-force-v15/wave_dark_v15.json      # dark states of wave-coupled emitters, moved
 python receivers_v15.py     --output ../run-reservoir-force-v15/receivers_v15.json      # which bodies a passing wave pulls
 python reservoir_force_v15.py --output ../run-reservoir-force-v15/reservoir_force_v15.json  # the quiet store, real waves, the pull
+python feeding_feedback_v16.py --output ../run-feeding-feedback-v16/feeding_feedback_v16.json  # the energy bill, fed back, on SPARC
+python feeding_checks_v16.py   --output ../run-feeding-feedback-v16/feeding_checks_v16.json    # splits, trends and the clusters
 ```
 
 The independent calculation of rev 24 reruns from its own folder (about a minute; see `independent-r15/REPRODUCTION.md`):
