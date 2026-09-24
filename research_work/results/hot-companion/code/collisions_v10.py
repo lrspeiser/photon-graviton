@@ -33,6 +33,9 @@ C_KMS = 299792.458
 ALPHA = 2.488993286382367e-4          # per Mpc: the project's static redshift law (research_work/results/joint-light-forward)
 
 
+PLANCK15 = (67.74, 0.3089)             # Kim et al. 2021 (El Gordo lensing): "Planck 2016", D_A = 1636 Mpc
+
+
 def lcdm(z, H0=70.0, Om=0.3):
     chi = quad(lambda x: 1 / np.sqrt(Om * (1 + x) ** 3 + 1 - Om), 0, z)[0] * C_KMS / H0
     return dict(DA=chi / (1 + z), DL=chi * (1 + z), chi=chi)
@@ -43,14 +46,47 @@ def static(z):
     return dict(DA=D, DL=(1 + z) * D, chi=D)
 
 
-def factors(z, zs):
-    L, S = lcdm(z), static(z)
-    Ls, Ss = lcdm(zs), static(zs)
+def factors(z, zs, ref=(70.0, 0.3)):
+    """static / LCDM(ref) at the same angle and flux; zs is the effective source redshift in that LCDM."""
+    L, S = lcdm(z, *ref), static(z)
+    Ls, Ss = lcdm(zs, *ref), static(zs)
     lens_L = L['DA'] * Ls['DA'] / ((Ls['chi'] - L['chi']) / (1 + zs))      # flat LCDM: D_ls = (chi_s - chi_l)/(1 + z_s)
     lens_S = S['DA'] * Ss['DA'] / (Ss['DA'] - S['DA'])                     # Euclidean
     return dict(size=S['DA'] / L['DA'], stars=(S['DL'] / L['DL']) ** 2,
                 gas=(S['DL'] / L['DL']) * (S['DA'] / L['DA']) ** 1.5, lens=lens_S / lens_L,
-                kpc_per_arcsec_lcdm=L['DA'] * 1e3 / 206264.806, kpc_per_arcsec_static=S['DA'] * 1e3 / 206264.806, z=z, z_source=zs)
+                kpc_per_arcsec_lcdm=L['DA'] * 1e3 / 206264.806, kpc_per_arcsec_static=S['DA'] * 1e3 / 206264.806, z=z, z_source=zs,
+                reference_cosmology=dict(H0=ref[0], Om=ref[1]))
+
+
+def z_for_beta(zl, beta, ref=(70.0, 0.3)):
+    """The source redshift whose D_ls/D_s equals beta in LCDM(ref) (to express a published <beta> as z_eff)."""
+    from scipy.optimize import brentq
+    cl = lcdm(zl, *ref)['chi']
+    return brentq(lambda zs: (lcdm(zs, *ref)['chi'] - cl) / lcdm(zs, *ref)['chi'] - beta, zl + 1e-3, 20.0)
+
+
+# How each measurement converts (the papers' own conventions; literature check of round 10):
+#  MACS J0025: Bradac et al. 2008, flat 0.3/0.7/70; strong + weak lensing, weak-lensing sources at an assumed z = 1.4
+#              (one spectroscopic arc system at z = 2.38); stars = F814W light x M/L_K 0.74 (no age fitting).
+#  Abell 520:  Jee et al. 2014 and Clowe et al. 2012 clumps, <D_ls/D_s> = 0.73 (z_eff about 0.85, UDF photo-z);
+#              Mahdavi et al. 2007, 710 kpc about P3, <D_ls/D_s> = 0.59 (CFHTLS photo-z); light x M/L 2 (ours).
+#  El Gordo:   Kim et al. 2021, Planck 2015 cosmology, <D_ls/D_s> = 0.254 (z_eff 1.31); aperture masses about the
+#              centre of mass read from their Fig. 11 (5.8, 14.9, 20.1 x 1e14 inside 0.5, 1, 1.5 Mpc, +-9-14%);
+#              stars from SED fits with ages up to 7.0 Gyr (Menanteau et al. 2012, 0.27/0.73/70).
+CONVENTIONS = dict(
+    macs0025=dict(ref=(70.0, 0.3), zs=1.4),
+    abell520=dict(ref=(70.0, 0.3), zs=None, beta_clumps=0.73, beta_710=0.59),
+    el_gordo=dict(ref=PLANCK15, zs=1.31, aperture_Mpc=(0.5, 1.0, 1.5), aperture_M=(5.8e14, 14.9e14, 20.1e14), aperture_err=0.12))
+
+
+def lens_factor(name, which='main'):
+    z = dict(macs0025=0.586, abell520=0.201, el_gordo=0.870)[name]
+    c = CONVENTIONS[name]
+    if name == 'abell520':
+        zs = z_for_beta(z, c['beta_clumps'] if which == 'main' else c['beta_710'], c['ref'])
+    else:
+        zs = c['zs']
+    return factors(z, zs, c['ref'])
 
 
 def rescale(spec, f, star_extra=1.0):
@@ -92,9 +128,13 @@ def solve(spec, law, t_gyr, fs, n=192):
 def measure(name, spec, sol, fs):
     pos = spec['pos']; out = dict(fresh_kpc=sol['fresh_kpc'], speeds=sol['speeds'])
     ap = lambda xy, R: V8.aperture(sol, xy, R * fs)
+    pk = V8.peaks(sol, pos)
     if name == 'macs0025':
         for w in ('se', 'nw'):
             out[f'M300_{w}'], out[f'M300_{w}_baryons'] = ap(pos[f'{w}_gal'], 300.0)
+            p = min(pk, key=lambda d: d[f'dist_{w}_gal'])
+            out[f'peak_{w}'] = dict(to_galaxies=p[f'dist_{w}_gal'], to_gas=p['dist_gas_peak'],
+                                    galaxies_to_gas=float(np.linalg.norm(pos[f'{w}_gal'] - pos['gas_peak'])))
         out['M500_gas_peak'], _ = ap(pos['gas_peak'], 500.0)
         out['sigma_los_1p5Mpc'] = float(np.mean([sol['speeds'][k]['1500kpc'] for k in sol['speeds']]))
     elif name == 'abell520':
@@ -105,6 +145,13 @@ def measure(name, spec, sol, fs):
     else:
         for R in (500.0, 1000.0, 1500.0):
             out[f'M{int(R)}_com'], out[f'M{int(R)}_com_baryons'] = ap(pos['com'], R)
+        # apertures at Kim et al.'s Planck-2015 radii, in the static law
+        fk = lens_factor('el_gordo')['size']
+        for R in CONVENTIONS['el_gordo']['aperture_Mpc']:
+            out[f'Mkim{int(R * 1000)}_com'], _ = V8.aperture(sol, pos['com'], R * 1000 * fk)
+        p = min(pk, key=lambda d: d['dist_se_gal'])
+        out['peak_se'] = dict(to_galaxies=p['dist_se_gal'], to_cool_core=p['dist_cool_core'],
+                              galaxies_to_cool_core=float(np.linalg.norm(pos['se_gal'] - pos['cool_core'])))
     return out
 
 
@@ -120,8 +167,9 @@ OBS = dict(
 
 
 def compare(name, m, f, obs_gordo=None):
-    """Model against the measurements converted to the static law (lensing masses times f['lens'])."""
-    fl = f['lens']; rows = []
+    """Model against the measurements converted to the static law (lensing masses times each measurement's
+    lensing factor, from the paper's own cosmology and source redshifts)."""
+    fl = lens_factor(name)['lens']; rows = []
     if name == 'macs0025':
         for k in ('M300_se', 'M300_nw', 'M500_gas_peak'):
             v, up, lo = OBS[name][k]; v, up, lo = v * fl, up * fl, lo * fl
@@ -136,11 +184,17 @@ def compare(name, m, f, obs_gordo=None):
             mv = m[f'M150_{k}']
             z = 0.0 if lo <= mv <= hi else ((mv - hi) / err if mv > hi else (mv - lo) / err)
             rows.append(dict(check=f'M150_{k}', model=mv, measured_range=[lo, hi], z=z))
-        v, e = OBS[name]['M710_P3']; rows.append(dict(check='M710_P3', model=m['M710_P3'], measured=v * fl, z=(m['M710_P3'] - v * fl) / (e * fl)))
+        f7 = lens_factor(name, '710')['lens']
+        v, e = OBS[name]['M710_P3']; rows.append(dict(check='M710_P3', model=m['M710_P3'], measured=v * f7, z=(m['M710_P3'] - v * f7) / (e * f7)))
     else:
+        c = CONVENTIONS['el_gordo']
+        for R, M in zip(c['aperture_Mpc'], c['aperture_M']):
+            k = f'Mkim{int(R * 1000)}_com'; v = M * fl
+            rows.append(dict(check=f'{k} (aperture)', model=m[k], measured=v, ratio=m[k] / v, z=(m[k] - v) / (c['aperture_err'] * v)))
+        f70 = factors(0.870, c['zs'], (70.0, 0.3))['lens']        # the NFW sums were evaluated in 0.3/0.7/70
         for R in (500, 1000, 1500):
-            v = obs_gordo[f'M{R}_com'] * fl
-            rows.append(dict(check=f'M{R}_com', model=m[f'M{R}_com'], measured=v, ratio=m[f'M{R}_com'] / v, z=(m[f'M{R}_com'] - v) / (0.15 * v)))
+            v = obs_gordo[f'M{R}_com'] * f70
+            rows.append(dict(check=f'M{R}_com (NFW sum)', model=m[f'M{R}_com'], measured=v, ratio=m[f'M{R}_com'] / v, z=(m[f'M{R}_com'] - v) / (0.15 * v)))
         for w in ('NW', 'SE'):
             v, e = OBS[name][f'sigma_{w}']; mv = m['speeds'][w]['1000kpc']
             rows.append(dict(check=f'sigma_{w}', model=mv, measured=v, z=(mv - v) / e))
@@ -150,18 +204,16 @@ def compare(name, m, f, obs_gordo=None):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--output-dir', type=Path, required=True)
     ap.add_argument('--n', type=int, default=192)
-    ap.add_argument('--zs', type=str, default='macs0025:1.2,abell520:1.0,el_gordo:1.3',
-                    help='effective source redshift for each cluster\'s lensing masses')
     args = ap.parse_args(); out = args.output_dir
     out.mkdir(parents=True, exist_ok=True); t0 = time.monotonic()
     law = json.loads((HERE.parent / 'run-v3/results.json').read_text())['constants']
-    zs = {k: float(v) for k, v in (p.split(':') for p in args.zs.split(','))}
     base = dict(macs0025=V8.macs0025(), abell520=V8.abell520(), el_gordo=V8.el_gordo())
     t_main = dict(macs0025=0.5, abell520=0.3, el_gordo=0.46)
     res = dict(experiment='round 10: the three collisions in the static distance law', distance_law=dict(alpha_per_Mpc=ALPHA),
                law_constants=law, results={})
     for name, spec in base.items():
-        f = factors(spec['z'], zs[name])
+        f = factors(spec['z'], 1.0)                        # inputs: positions from coordinates, masses as used in round 8 (0.3/0.7/70)
+        f.update(lens_conventions={w: lens_factor(name, w) for w in (('main', '710') if name == 'abell520' else ('main',))})
         obs_gordo = V8.observed_el_gordo(spec) if name == 'el_gordo' else None
         entry = dict(factors=f, runs={})
         variants = [('published stars', 1.0)] + ([('stars x 2', 2.0)] if name == 'el_gordo' else [])
@@ -171,7 +223,7 @@ def main():
             m = measure(name, st, sol, f['size'])
             rows = compare(name, m, f, obs_gordo)
             entry['runs'][label] = dict(measures={k: v for k, v in m.items() if k != 'speeds'}, speeds=m['speeds'], comparison=rows)
-            print(f"{spec['name']} (static; size x{f['size']:.2f}, stars x{f['stars']:.2f}, gas x{f['gas']:.2f}, lensing x{f['lens']:.2f}), {label}:", flush=True)
+            print(f"{spec['name']} (static; size x{f['size']:.2f}, stars x{f['stars']:.2f}, gas x{f['gas']:.2f}, lensing x{lens_factor(name)['lens']:.2f}), {label}:", flush=True)
             for r in rows:
                 meas = r.get('measured', r.get('measured_range'))
                 ms = f"{meas:.3g}" if isinstance(meas, float) else f"{meas[0]:.3g}-{meas[1]:.3g}"

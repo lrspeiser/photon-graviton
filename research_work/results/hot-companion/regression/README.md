@@ -84,7 +84,7 @@ standard errors, or its value over a limit. Against the baseline each check is m
 | milky_way | speed at the Sun; 15–27 kpc curve (four Gaia analyses); vertical pull at 1.1 kpc; mass inside 20/50/100/200 kpc; escape speed; inner Galaxy | `data/mw_literature_v7.json` |
 | dwarfs | speed spread of ten dwarf spheroidals, with the Galaxy's pull and heat | `data/mw_dwarfs.json` |
 | precision | planets, S2, the Double Pulsar, light bending, Cassini's Q2; wide binaries (pass between the two published analyses, 1.0–1.5) | Hees et al. 2014; Chae 2023–24; Banik et al. 2024 |
-| collisions (full) | the Bullet Cluster (round-5 case): outer stars, lensing strengths, gas residuals, peak positions, masses inside 250 kpc; the 72-collision stack (β); MACS J0025.4−1222 (lensing inside 300 kpc, peak positions, galaxy speeds); Abell 520 (six clumps inside 150 kpc, 710 kpc, galaxy speeds per clump); El Gordo (lensing inside 0.5 and 1 Mpc, galaxy speeds; the SE peak's offset from the cool core tracked) | Clowe et al. 2006; Harvey et al. 2015; Bradač et al. 2008; Jee et al. 2014; Clowe et al. 2012; Girardi et al. 2008; Menanteau et al. 2012; Kim et al. 2021; `code/collisions_v8.py` |
+| collisions (full) | the Bullet Cluster (round-5 case): outer stars, lensing strengths, gas residuals, peak positions, masses inside 250 kpc; the 72-collision stack (β); MACS J0025.4−1222 (lensing inside 300 kpc, peak positions, galaxy speeds); Abell 520 (six clumps inside 150 kpc, 710 kpc, galaxy speeds per clump); El Gordo (aperture lensing masses inside 0.5 and 1 Mpc, galaxy speeds; the SE peak's offset from the cool core tracked); the three in the project's static distances since round 10 | Clowe et al. 2006; Harvey et al. 2015; Bradač et al. 2008; Jee et al. 2014; Clowe et al. 2012; Mahdavi et al. 2007; Girardi et al. 2008; Menanteau et al. 2012; Kim et al. 2021; `code/collisions_v8.py`, `code/collisions_v10.py` |
 
 Every test calls the same code that produced the published numbers (`../code/`); the baseline
 reproduces them to the last digit (SPARC 15.85 km/s, X-COP 0.227, KiDS +0.024 / −0.005 / +0.021,
@@ -144,8 +144,11 @@ although it still needs a physical reason (results README §19.2).
 **Known borrowed assumptions** (results README §19.4, §20.3):
 * The SLACS check moved to the project's static distances in round 10: light = matter −0.012 dex;
   the stars needed are 1.44–1.95 × Salpeter.
-* The three collisions still use flat-ΛCDM distances. Their static version is in
-  `code/collisions_v10.py`, and the switch waits on the papers' source redshifts and on stellar
-  masses without the Big-Bang age cap.
+* The three collisions moved to the static distances in round 10 (`code/collisions_v10.py`), each
+  lensing mass converted with its paper's own cosmology and source redshifts, El Gordo against
+  aperture masses. The suite's tally went from 62 / 8 / 6 to 58 / 11 / 7; every grade that moved
+  is a far cluster whose stars came out 20–29% lighter. Their star masses still carry the
+  Big-Bang age cap or fixed light-to-mass ratios; with 1.4 times the stars the tally would be
+  63 / 7 / 6 (results README §20.6).
 * The Bullet Cluster, KiDS, Mistele and X-COP comparisons still use the papers' ΛCDM
   conversions.

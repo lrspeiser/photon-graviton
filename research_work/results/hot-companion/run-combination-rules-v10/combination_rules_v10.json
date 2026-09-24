@@ -1,0 +1,333 @@
+{
+ "experiment": "round 10, part 2: how the companion adds up (three rules, galaxies and clusters)",
+ "law": {
+  "a_SI": 6.561190024871433e-11,
+  "lam": 3.447563157408709,
+  "u_kms": 197.41001228101223
+ },
+ "A_local_pull": {
+  "identity_checks": [
+   {
+    "config": "one_source",
+    "max_abs_difference": 3.2526065174565133e-19,
+    "typical_force": 0.0002210485320720769
+   },
+   {
+    "config": "two_same_side",
+    "max_abs_difference": 5.583641188300348e-18,
+    "typical_force": 0.00019424415473728824
+   },
+   {
+    "config": "two_opposite",
+    "max_abs_difference": 3.144186300207963e-18,
+    "typical_force": 0.0001598603946750047
+   },
+   {
+    "config": "cloud_of_400",
+    "max_abs_difference": 3.1848438816761693e-18,
+    "typical_force": 0.000268187701739215
+   }
+  ],
+  "counter_propagating": [
+   {
+    "counter_amplitude": 0.0,
+    "mean_pull_over_single_wave": 1.0,
+    "closed_form": 1.0,
+    "net_flux_over_single_wave": 1.0,
+    "round3_pull_over_single_wave": 1.0,
+    "energy_over_single_wave": 1.0
+   },
+   {
+    "counter_amplitude": 0.25,
+    "mean_pull_over_single_wave": 0.9526869000909919,
+    "closed_form": 0.9526869000909921,
+    "net_flux_over_single_wave": 0.9375,
+    "round3_pull_over_single_wave": 0.9682458365518543,
+    "energy_over_single_wave": 1.0625
+   },
+   {
+    "counter_amplitude": 0.5,
+    "mean_pull_over_single_wave": 0.8048865053620233,
+    "closed_form": 0.8048865053620232,
+    "net_flux_over_single_wave": 0.75,
+    "round3_pull_over_single_wave": 0.8660254037844386,
+    "energy_over_single_wave": 1.25
+   },
+   {
+    "counter_amplitude": 0.75,
+    "mean_pull_over_single_wave": 0.5322510721583141,
+    "closed_form": 0.532251072158314,
+    "net_flux_over_single_wave": 0.4375,
+    "round3_pull_over_single_wave": 0.6614378277661477,
+    "energy_over_single_wave": 1.5625
+   },
+   {
+    "counter_amplitude": 0.9,
+    "mean_pull_over_single_wave": 0.27585010794139947,
+    "closed_form": 0.27585010794139986,
+    "net_flux_over_single_wave": 0.18999999999999995,
+    "round3_pull_over_single_wave": 0.4358898943540673,
+    "energy_over_single_wave": 1.81
+   }
+  ]
+ },
+ "C_sparc": [
+  {
+   "h_gas_kpc": 0.2,
+   "stellar_thickness": "1 x 0.196 R_d^0.633 kpc",
+   "disk_pull_model_over_sparc_16_50_84": [
+    0.912375256731558,
+    0.9901064766827716,
+    1.0006629890734944
+   ],
+   "gas_pull_model_over_sparc_16_50_84": [
+    0.991523214771698,
+    0.9992604063096466,
+    1.0061136973608302
+   ],
+   "SN_over_gN_16_50_84": [
+    2.1631726654199177,
+    4.005776022567316,
+    8.247237132874911
+   ],
+   "fits": {
+    "round3": {
+     "rms_at_round9_constants": 15.848910041440478,
+     "a_SI": 6.561226421811283e-11,
+     "lam": 3.447552161595372,
+     "g_d_SI": 2.2620170333232158e-10,
+     "rms_refitted": {
+      "all": 15.848898551924474,
+      "test": 12.404048387252931,
+      "validation": 19.206680145065786
+     },
+     "msq_refitted": 0.21248626372707893
+    },
+    "independent": {
+     "rms_at_round9_constants": 24.727210724994716,
+     "a_SI": 4.58199483311611e-10,
+     "lam": 0.18973971958129457,
+     "g_d_SI": 8.693864147583913e-11,
+     "rms_refitted": {
+      "all": 19.56592085897685,
+      "test": 16.207645445359805,
+      "validation": 21.89543096976885
+     },
+     "msq_refitted": 0.2519273130597482
+    },
+    "one_stream": {
+     "rms_at_round9_constants": 30.81900008493011,
+     "a_SI": 8.711912950464587e-12,
+     "lam": 87.94939473312994,
+     "g_d_SI": 7.662074709610767e-10,
+     "rms_refitted": {
+      "all": 18.972585465286315,
+      "test": 15.759845432134604,
+      "validation": 22.062432623061923
+     },
+     "msq_refitted": 0.2742838368779859
+    }
+   }
+  },
+  {
+   "h_gas_kpc": 0.5,
+   "stellar_thickness": "2 x 0.196 R_d^0.633 kpc",
+   "disk_pull_model_over_sparc_16_50_84": [
+    0.7834576484698632,
+    0.8947800016914709,
+    0.9612684966610091
+   ],
+   "gas_pull_model_over_sparc_16_50_84": [
+    0.992714287547734,
+    0.9994502513067282,
+    1.005144291903172
+   ],
+   "SN_over_gN_16_50_84": [
+    1.9775848379139445,
+    3.4087860755116406,
+    7.247519291611245
+   ],
+   "fits": {
+    "round3": {
+     "rms_at_round9_constants": 15.848910041440478,
+     "a_SI": 6.561226421811283e-11,
+     "lam": 3.447552161595372,
+     "g_d_SI": 2.2620170333232158e-10,
+     "rms_refitted": {
+      "all": 15.848898551924474,
+      "test": 12.404048387252931,
+      "validation": 19.206680145065786
+     },
+     "msq_refitted": 0.21248626372707893
+    },
+    "independent": {
+     "rms_at_round9_constants": 23.607924423507654,
+     "a_SI": 3.732540366635091e-10,
+     "lam": 0.25941112595330384,
+     "g_d_SI": 9.682624991749664e-11,
+     "rms_refitted": {
+      "all": 19.249162583829207,
+      "test": 15.979492173763642,
+      "validation": 21.63939778140768
+     },
+     "msq_refitted": 0.2523096887391058
+    },
+    "one_stream": {
+     "rms_at_round9_constants": 27.88798316924343,
+     "a_SI": 1.0381062908115229e-11,
+     "lam": 60.56615469201168,
+     "g_d_SI": 6.287410619604117e-10,
+     "rms_refitted": {
+      "all": 18.87531800174091,
+      "test": 15.543349215207481,
+      "validation": 21.91652530281937
+     },
+     "msq_refitted": 0.2814919448663747
+    }
+   }
+  }
+ ],
+ "D_xcop": {
+  "round3": {
+   "u_best": 197.41008961049414,
+   "rms": 0.22697887305819345,
+   "mean_residual_by_radius": [
+    0.06422945177252727,
+    0.10855539402721742,
+    0.08096446515360625,
+    0.03003334006751718,
+    -0.06750820018812048,
+    -0.19295619022985355
+   ]
+  },
+  "independent": {
+   "u_best": 74.77845202581922,
+   "rms": 0.38164633196983994,
+   "mean_residual_by_radius": [
+    0.44518548759104104,
+    0.35504738174021006,
+    0.14674099878514293,
+    -0.044694747709857395,
+    -0.29420037625780254,
+    -0.5708153611611324
+   ]
+  },
+  "one_stream": {
+   "u_best": 221.891333045014,
+   "rms": 0.22184190465369702,
+   "mean_residual_by_radius": [
+    0.07402839914361928,
+    0.11121288964704895,
+    0.08013546555266805,
+    0.027811718841117713,
+    -0.07302999598664961,
+    -0.20125284142405475
+   ]
+  },
+  "heat_over_net_pull_by_radius": [
+   26.292773815645976,
+   18.191516703732656,
+   12.84357495064549,
+   9.988422093038341,
+   7.6354835780165855,
+   5.606684565875401
+  ],
+  "radii_over_R500": [
+   0.1,
+   0.2,
+   0.35,
+   0.5,
+   0.7,
+   1.0
+  ]
+ },
+ "E_milky_way": [
+  {
+   "R_kpc": 4.0,
+   "g_N": 8568.145386642762,
+   "S_N": 27468.82312874161,
+   "ratio_gN_over_SN": 0.3119225511222432,
+   "anisotropy_factor": 0.5585002695811733,
+   "v_newton": 185.12855410922177,
+   "v_round3_local": 197.87378231092808,
+   "v_derived_local": 192.3509134492163,
+   "v_round3_own_constants": 197.87385222487782,
+   "v_independent_own_constants": 187.83230203104213,
+   "v_one_stream_own_constants": 204.54297489680187
+  },
+  {
+   "R_kpc": 8.2,
+   "g_N": 3838.455298955989,
+   "S_N": 8853.602540719185,
+   "ratio_gN_over_SN": 0.4335472799125889,
+   "anisotropy_factor": 0.6584430726437851,
+   "v_newton": 177.41288975561812,
+   "v_round3_local": 211.3403295343362,
+   "v_derived_local": 200.3991104257978,
+   "v_round3_own_constants": 211.3404565450286,
+   "v_independent_own_constants": 202.44962264622265,
+   "v_one_stream_own_constants": 205.4993954012993
+  },
+  {
+   "R_kpc": 12.0,
+   "g_N": 2061.418952008279,
+   "S_N": 3845.176933162149,
+   "ratio_gN_over_SN": 0.53610509681099,
+   "anisotropy_factor": 0.7321919808431324,
+   "v_newton": 157.2800922688544,
+   "v_round3_local": 207.32340078155292,
+   "v_derived_local": 195.18344382639606,
+   "v_round3_own_constants": 207.32355347472327,
+   "v_independent_own_constants": 216.1810896090067,
+   "v_one_stream_own_constants": 189.52217925550553
+  },
+  {
+   "R_kpc": 20.0,
+   "g_N": 772.8056947228604,
+   "S_N": 1158.757267216541,
+   "ratio_gN_over_SN": 0.6669262981877321,
+   "anisotropy_factor": 0.8166555566380064,
+   "v_newton": 124.32262020427822,
+   "v_round3_local": 194.553058664321,
+   "v_derived_local": 183.6979433557302,
+   "v_round3_own_constants": 194.55323332523275,
+   "v_independent_own_constants": 236.49957147418033,
+   "v_one_stream_own_constants": 162.04803512874707
+  },
+  {
+   "R_kpc": 30.0,
+   "g_N": 343.26178697344517,
+   "S_N": 434.29760693783476,
+   "ratio_gN_over_SN": 0.7903837863481011,
+   "anisotropy_factor": 0.8890353122053708,
+   "v_newton": 101.47834059149447,
+   "v_round3_local": 184.68059092278966,
+   "v_derived_local": 177.38363783398762,
+   "v_round3_own_constants": 184.6807771870917,
+   "v_independent_own_constants": 248.99230916436267,
+   "v_one_stream_own_constants": 142.83084448130515
+  }
+ ],
+ "summary": {
+  "round3": {
+   "sparc_rms_kms": 15.848898551924474,
+   "xcop_rms": 0.22697887305819345,
+   "sun_local_kms": 211.3404565450286
+  },
+  "independent": {
+   "sparc_rms_kms": 19.56592085897685,
+   "xcop_rms": 0.38164633196983994,
+   "sun_local_kms": 202.44962264622265
+  },
+  "one_stream": {
+   "sparc_rms_kms": 18.972585465286315,
+   "xcop_rms": 0.22184190465369702,
+   "sun_local_kms": 205.4993954012993
+  },
+  "benchmarks": {
+   "sparc_mond_simple_kms": 16.1328,
+   "note": "SPARC: typical speed miss after refitting a and g_d; X-COP: rms of ln(M_obs/M_pred) after refitting u"
+  }
+ },
+ "seconds": 114.23706969199975
+}

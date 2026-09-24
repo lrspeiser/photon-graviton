@@ -65,11 +65,24 @@
 >     galaxy's companion).
 >   * The clusters' verdict: independent random-phase sources would make the pull
 >     √a (g_N + g_hot)/√(S_N + S), weaker inside extended systems. On X-COP that gives rms 0.38
->     and a strong radial trend, against 0.23 for round 3. So the companion adds up as one
->     coherent flow. The next toy is a condensate-like companion.
->   * Our own distances: the far collisions and SLACS redone in the static law (§20.3). El Gordo
->     is unchanged at about twice its published stars; MACS J0025 and Abell 520 are slightly
->     worse. SLACS light = matter holds (−0.012 dex), but its stars must be 1.44–1.95 × Salpeter.
+>     and a strong radial trend, against 0.23 for round 3.
+> * **Round 10, part 2 (§20.5–20.6): how the companion adds up, and the far clusters' stars.**
+>   * The local form of the pull, exact for any field of one frequency: ⟨F⟩ = (q₀/2)|Ψ|∇θ, the
+>     amplitude times the rate at which the phase turns. Any companion not moving with the net
+>     flow dilutes it. A condensate that conserves quanta and momentum dilutes it exactly as
+>     independent waves do, so the condensate analogy fails.
+>   * Three rules tested with refitted constants. SPARC: round 3 15.85 km/s, independent waves
+>     19.57, one stream with nothing cancelling (√(a(S_N + S))) 18.97; MOND 16.13. X-COP rms:
+>     0.227, 0.382, 0.222. Only round 3 passes both. So the data fix three properties: ordered
+>     opposing flows cancel; scrambled companion adds in full; matter reads one stream at the
+>     full phase rate. Candidate picture for the next toy: full-speed waves that annihilate
+>     head-on (as in active media), with strength falling off from the source.
+>   * Our own distances (§20.3): the far collisions and SLACS in the static law, each lensing
+>     mass converted with its paper's own cosmology and source redshifts. The suite now grades
+>     them this way: 58 / 11 / 7 (was 62 / 8 / 6). Every change is a far cluster whose stars came
+>     out 20–29% lighter. With 1.4× the stars in all three: 63 / 7 / 6. El Gordo prefers 1.6–2.
+>     Older stars than the Big-Bang timeline allows would weigh 1.3–1.7× more for their light.
+>     SLACS light = matter holds (−0.012 dex); its stars must be 1.44–1.95 × Salpeter.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -200,7 +213,7 @@ results README §18):
 
 * **The force of a locked emitter** (scalar field, local coupling q ψ, retarded solution):
   ⟨F_r⟩ = −(q₀ A/2)[k sin Δ + cos Δ/R], A = Q/4πR. At Δ = +π/2 it is (q₀k/2) A toward the source,
-  at every distance; it is verified to 3% by a 3D finite-difference simulation. The emitter then
+  at every distance; it is verified to within 4% by a 3D finite-difference simulation. The emitter then
   feeds the passing wave at P = F v_phase.
 * **Conditions:**
   1. matter is an active medium for the companion (it leads, like a gain medium);
@@ -213,6 +226,16 @@ results README §18):
   coherent flow whose density follows the net current, not independent waves.
 * **Separate velocity scales.** The heat weight's scale, Γ/k from the Dicke toy, and the travel
   speed (the group velocity) are distinct quantities that the law identifies. Proposal 7 tests it.
+* **Part 2: the local form and the three rules.** For a field of one frequency,
+  ψ = Im[Ψ e^{iωt}], a quarter-leading emitter feels ⟨F⟩ = (q₀/2) Im(Ψ*∇Ψ)/|Ψ| = (q₀/2)|Ψ|∇θ.
+  The data then choose among three rules (constants refitted; SPARC typical miss / X-COP rms):
+  * independent waves, √a |g_N + g_hot|/√(S_N + S): 19.57 km/s / 0.382;
+  * one stream in which nothing cancels, √(a(S_N + S)): 18.97 km/s / 0.222;
+  * round 3, √(a(|g_N| + S)): 15.85 km/s / 0.227.
+
+  Postulates 2 and 3 are thereby constrained by data rather than chosen: ordered opposing flows
+  cancel (SPARC), scrambled companion adds in full (X-COP), and the phase must turn at the full
+  rate k (the local form).
 
 ### What follows
 

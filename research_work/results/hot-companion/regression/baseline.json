@@ -15,9 +15,9 @@
   "gd_scale": 1.0,
   "refit": []
  },
- "tier": "quick",
- "date": "2026-09-24 00:08 UTC",
- "commit": "a736dc2+changes",
+ "tier": "full",
+ "date": "2026-09-24 00:32 UTC",
+ "commit": "c290770+changes",
  "checks": [
   {
    "id": "law.a_SI",
@@ -490,296 +490,6 @@
    "score": 0.0
   },
   {
-   "id": "bullet.outer_stars",
-   "group": "collisions",
-   "title": "Bullet main cluster: outer stars needed for the galaxy speed",
-   "value": 6231710475932.542,
-   "unit": "Msun",
-   "target": "3.9-6.7 x 10^12 (Legacy Survey star count, round 6: 85-103% of the round-5 total)",
-   "status": "pass",
-   "score": 0.0
-  },
-  {
-   "id": "bullet.kappa_main",
-   "group": "collisions",
-   "title": "Bullet main cluster: lensing strength (kappa) on its galaxies",
-   "value": 0.6747528989219006,
-   "unit": "",
-   "target": "at least 0.36 +- 0.06 (a stated lower bound)",
-   "status": "pass",
-   "score": 0.0
-  },
-  {
-   "id": "bullet.kappa_sub",
-   "group": "collisions",
-   "title": "Bullet subcluster: lensing strength (kappa) on its galaxies",
-   "value": 0.13996555474564384,
-   "unit": "",
-   "target": "at least 0.20 +- 0.05 (a stated lower bound)",
-   "status": "pass",
-   "score": 1.2006889050871232
-  },
-  {
-   "id": "bullet.gas_main",
-   "group": "collisions",
-   "title": "Bullet: leftover lensing on the main cluster's gas",
-   "value": 0.03273822585682634,
-   "unit": "",
-   "target": "0.05 +- 0.06",
-   "status": "pass",
-   "score": 0.28769623571956104
-  },
-  {
-   "id": "bullet.gas_sub",
-   "group": "collisions",
-   "title": "Bullet: leftover lensing on the subcluster's gas",
-   "value": 0.042420243553488585,
-   "unit": "",
-   "target": "0.02 +- 0.06",
-   "status": "pass",
-   "score": 0.37367072589147643
-  },
-  {
-   "id": "bullet.peak_main",
-   "group": "collisions",
-   "title": "Bullet main: lensing peak distance from its galaxies",
-   "value": 9.338369375315398,
-   "unit": "kpc",
-   "target": "within a quarter of the galaxy-gas separation (209 kpc)",
-   "status": "pass",
-   "score": 0.17837332203984096
-  },
-  {
-   "id": "bullet.peak_sub",
-   "group": "collisions",
-   "title": "Bullet sub: lensing peak distance from its galaxies",
-   "value": 16.00961998490473,
-   "unit": "kpc",
-   "target": "within a quarter of the galaxy-gas separation (194 kpc)",
-   "status": "pass",
-   "score": 0.3299420815494567
-  },
-  {
-   "id": "bullet.m250_main",
-   "group": "collisions",
-   "title": "Bullet main cluster: lensing mass inside 250 kpc",
-   "value": 240491962368000.0,
-   "unit": "Msun",
-   "target": "2.5-2.8 x 10^14 (Paraficz 2016; Bradac 2006)",
-   "status": "pass",
-   "score": 0.6338691754666667
-  },
-  {
-   "id": "bullet.m250_sub",
-   "group": "collisions",
-   "title": "Bullet subcluster: lensing mass inside 250 kpc",
-   "value": 94080459571200.0,
-   "unit": "Msun",
-   "target": "2.0-2.3 x 10^14 (Paraficz 2016; Bradac 2006)",
-   "status": "fail",
-   "score": 5.29597702144
-  },
-  {
-   "id": "stack.beta_gas",
-   "group": "collisions",
-   "title": "collision stack: how far the lensing follows the gas (beta, median of 20)",
-   "value": 0.02690756058235244,
-   "unit": "",
-   "target": "-0.04 +- 0.07 (Harvey et al. 2015, 72 collisions)",
-   "status": "pass",
-   "score": 0.9558222940336063
-  },
-  {
-   "id": "stack.offset",
-   "group": "collisions",
-   "title": "collision stack: lensing peak distance from the galaxies (median)",
-   "value": 16.78232868736631,
-   "unit": "kpc",
-   "target": "raw offset; includes the pull of the other cluster",
-   "status": "info",
-   "score": null
-  },
-  {
-   "id": "macs0025.m300_se",
-   "group": "collisions",
-   "title": "MACS J0025 SE subcluster: lensing mass inside 300 kpc",
-   "value": 195912668282880.0,
-   "unit": "Msun",
-   "target": "2.5 (+1.0/-1.7) x 10^14",
-   "status": "pass",
-   "score": 0.3181607748065882
-  },
-  {
-   "id": "macs0025.m300_nw",
-   "group": "collisions",
-   "title": "MACS J0025 NW subcluster: lensing mass inside 300 kpc",
-   "value": 159536929308672.0,
-   "unit": "Msun",
-   "target": "2.6 (+0.5/-1.4) x 10^14",
-   "status": "pass",
-   "score": 0.7175933620809143
-  },
-  {
-   "id": "macs0025.peak_se",
-   "group": "collisions",
-   "title": "MACS J0025 SE: lensing peak distance from its galaxies",
-   "value": 14.871567214229001,
-   "unit": "kpc",
-   "target": "with the galaxies, not the gas (371 kpc away): lensing offset from the gas at > 4 sigma",
-   "status": "pass",
-   "score": 0.08021460772041937
-  },
-  {
-   "id": "macs0025.peak_nw",
-   "group": "collisions",
-   "title": "MACS J0025 NW: lensing peak distance from its galaxies",
-   "value": 43.379883639518034,
-   "unit": "kpc",
-   "target": "with the galaxies, not the gas (170 kpc away): lensing offset from the gas at > 4 sigma",
-   "status": "pass",
-   "score": 0.5092927376163804
-  },
-  {
-   "id": "macs0025.sigma",
-   "group": "collisions",
-   "title": "MACS J0025: galaxies' speed spread (line of sight, inside 1.5 Mpc)",
-   "value": 770.2487876225262,
-   "unit": "km/s",
-   "target": "835 +- 59 (108 galaxies within 1.5 Mpc)",
-   "status": "pass",
-   "score": 1.0974781758893872
-  },
-  {
-   "id": "abell520.m150_p1",
-   "group": "collisions",
-   "title": "Abell 520 P1, a galaxy clump: lensing mass inside 150 kpc",
-   "value": 25604057464832.0,
-   "unit": "Msun",
-   "target": "2.10-2.81 x 10^13 (Jee et al. 2014; Clowe et al. 2012)",
-   "status": "pass",
-   "score": 0.0
-  },
-  {
-   "id": "abell520.m150_p2",
-   "group": "collisions",
-   "title": "Abell 520 P2, a galaxy clump: lensing mass inside 150 kpc",
-   "value": 48393653059584.0,
-   "unit": "Msun",
-   "target": "4.05-4.16 x 10^13 (Jee et al. 2014; Clowe et al. 2012)",
-   "status": "pass",
-   "score": 1.013978068594627
-  },
-  {
-   "id": "abell520.m150_p3",
-   "group": "collisions",
-   "title": "Abell 520 P3, the gas-rich, galaxy-poor centre (\"dark core\"): lensing mass inside 150 kpc",
-   "value": 30576006397952.0,
-   "unit": "Msun",
-   "target": "2.84-3.35 x 10^13 (Jee et al. 2014; Clowe et al. 2012)",
-   "status": "pass",
-   "score": 0.0
-  },
-  {
-   "id": "abell520.m150_p4",
-   "group": "collisions",
-   "title": "Abell 520 P4, a galaxy clump: lensing mass inside 150 kpc",
-   "value": 32963567812608.0,
-   "unit": "Msun",
-   "target": "4.23-5.59 x 10^13 (Jee et al. 2014; Clowe et al. 2012)",
-   "status": "pass",
-   "score": 1.3730047334400008
-  },
-  {
-   "id": "abell520.m150_p5",
-   "group": "collisions",
-   "title": "Abell 520 P5, a galaxy clump: lensing mass inside 150 kpc",
-   "value": 28269793509376.0,
-   "unit": "Msun",
-   "target": "2.93-3.17 x 10^13 (Jee et al. 2014; Clowe et al. 2012)",
-   "status": "pass",
-   "score": 0.15609189251878788
-  },
-  {
-   "id": "abell520.m150_p6",
-   "group": "collisions",
-   "title": "Abell 520 P6, a galaxy clump: lensing mass inside 150 kpc",
-   "value": 20993808531456.0,
-   "unit": "Msun",
-   "target": "3.68-3.68 x 10^13 (Jee et al. 2014; Clowe et al. 2012)",
-   "status": "close",
-   "score": 2.3244399218447054
-  },
-  {
-   "id": "abell520.m710",
-   "group": "collisions",
-   "title": "Abell 520: lensing mass inside 710 kpc of the centre",
-   "value": 432838314819584.0,
-   "unit": "Msun",
-   "target": "5.0 +- 0.55 x 10^14 (Mahdavi et al. 2007)",
-   "status": "pass",
-   "score": 1.2211215487348364
-  },
-  {
-   "id": "abell520.sigma_peaks",
-   "group": "collisions",
-   "title": "Abell 520: galaxies' speed spread at P1, P2, P4, P5 (rms z)",
-   "value": 2.8971240671955805,
-   "unit": "",
-   "target": "Girardi et al. 2008 Table 4: 811, 749, 579, 668 km/s (6-9 galaxies each)",
-   "status": "close",
-   "score": 2.8971240671955805
-  },
-  {
-   "id": "elgordo.m500",
-   "group": "collisions",
-   "title": "El Gordo: lensing mass inside 500 kpc of the centre of mass",
-   "value": 461030144606208.0,
-   "unit": "Msun",
-   "target": "6.70e+14 +- 15%",
-   "status": "close",
-   "score": 2.081005564478569
-  },
-  {
-   "id": "elgordo.m1000",
-   "group": "collisions",
-   "title": "El Gordo: lensing mass inside 1000 kpc of the centre of mass",
-   "value": 1134157786775552.0,
-   "unit": "Msun",
-   "target": "1.58e+15 +- 15%",
-   "status": "pass",
-   "score": 1.874533096830907
-  },
-  {
-   "id": "elgordo.sigma_nw",
-   "group": "collisions",
-   "title": "El Gordo NW: galaxies' speed spread (line of sight, inside 1 Mpc)",
-   "value": 944.3440464507182,
-   "unit": "km/s",
-   "target": "1290 +- 134 (Menanteau et al. 2012)",
-   "status": "close",
-   "score": 2.5795220414125506
-  },
-  {
-   "id": "elgordo.sigma_se",
-   "group": "collisions",
-   "title": "El Gordo SE: galaxies' speed spread (line of sight, inside 1 Mpc)",
-   "value": 839.4902931018017,
-   "unit": "km/s",
-   "target": "1089 +- 200 (Menanteau et al. 2012)",
-   "status": "pass",
-   "score": 1.2475485344909913
-  },
-  {
-   "id": "elgordo.peak_se",
-   "group": "collisions",
-   "title": "El Gordo SE: lensing peak distance from the cool gas core",
-   "value": 158.6995000039856,
-   "unit": "kpc",
-   "target": "about 12 arcsec (97 kpc), the lensing peak nearer the merger centre (Kim et al. 2021; Ng et al. 2015)",
-   "status": "info",
-   "score": null
-  },
-  {
    "id": "lensing.kids_all",
    "group": "lensing",
    "title": "KiDS lensing pull, all isolated lenses (mixture): median log10(observed/predicted)",
@@ -908,6 +618,296 @@
    "target": "standard lensing by stars (OGLE, MOA optical depths)",
    "status": "pass",
    "score": 0.0
+  },
+  {
+   "id": "bullet.outer_stars",
+   "group": "collisions",
+   "title": "Bullet main cluster: outer stars needed for the galaxy speed",
+   "value": 6231710475932.542,
+   "unit": "Msun",
+   "target": "3.9-6.7 x 10^12 (Legacy Survey star count, round 6: 85-103% of the round-5 total)",
+   "status": "pass",
+   "score": 0.0
+  },
+  {
+   "id": "bullet.kappa_main",
+   "group": "collisions",
+   "title": "Bullet main cluster: lensing strength (kappa) on its galaxies",
+   "value": 0.6747528989219006,
+   "unit": "",
+   "target": "at least 0.36 +- 0.06 (a stated lower bound)",
+   "status": "pass",
+   "score": 0.0
+  },
+  {
+   "id": "bullet.kappa_sub",
+   "group": "collisions",
+   "title": "Bullet subcluster: lensing strength (kappa) on its galaxies",
+   "value": 0.13996555474564384,
+   "unit": "",
+   "target": "at least 0.20 +- 0.05 (a stated lower bound)",
+   "status": "pass",
+   "score": 1.2006889050871232
+  },
+  {
+   "id": "bullet.gas_main",
+   "group": "collisions",
+   "title": "Bullet: leftover lensing on the main cluster's gas",
+   "value": 0.03273822585682634,
+   "unit": "",
+   "target": "0.05 +- 0.06",
+   "status": "pass",
+   "score": 0.28769623571956104
+  },
+  {
+   "id": "bullet.gas_sub",
+   "group": "collisions",
+   "title": "Bullet: leftover lensing on the subcluster's gas",
+   "value": 0.042420243553488585,
+   "unit": "",
+   "target": "0.02 +- 0.06",
+   "status": "pass",
+   "score": 0.37367072589147643
+  },
+  {
+   "id": "bullet.peak_main",
+   "group": "collisions",
+   "title": "Bullet main: lensing peak distance from its galaxies",
+   "value": 9.338369375315398,
+   "unit": "kpc",
+   "target": "within a quarter of the galaxy-gas separation (209 kpc)",
+   "status": "pass",
+   "score": 0.17837332203984096
+  },
+  {
+   "id": "bullet.peak_sub",
+   "group": "collisions",
+   "title": "Bullet sub: lensing peak distance from its galaxies",
+   "value": 16.00961998490473,
+   "unit": "kpc",
+   "target": "within a quarter of the galaxy-gas separation (194 kpc)",
+   "status": "pass",
+   "score": 0.3299420815494567
+  },
+  {
+   "id": "bullet.m250_main",
+   "group": "collisions",
+   "title": "Bullet main cluster: lensing mass inside 250 kpc",
+   "value": 240491962368000.0,
+   "unit": "Msun",
+   "target": "2.5-2.8 x 10^14 (Paraficz 2016; Bradac 2006)",
+   "status": "pass",
+   "score": 0.6338691754666667
+  },
+  {
+   "id": "bullet.m250_sub",
+   "group": "collisions",
+   "title": "Bullet subcluster: lensing mass inside 250 kpc",
+   "value": 94080459571200.0,
+   "unit": "Msun",
+   "target": "2.0-2.3 x 10^14 (Paraficz 2016; Bradac 2006)",
+   "status": "fail",
+   "score": 5.29597702144
+  },
+  {
+   "id": "stack.beta_gas",
+   "group": "collisions",
+   "title": "collision stack: how far the lensing follows the gas (beta, median of 20)",
+   "value": 0.02690756058235244,
+   "unit": "",
+   "target": "-0.04 +- 0.07 (Harvey et al. 2015, 72 collisions)",
+   "status": "pass",
+   "score": 0.9558222940336063
+  },
+  {
+   "id": "stack.offset",
+   "group": "collisions",
+   "title": "collision stack: lensing peak distance from the galaxies (median)",
+   "value": 16.78232868736631,
+   "unit": "kpc",
+   "target": "raw offset; includes the pull of the other cluster",
+   "status": "info",
+   "score": null
+  },
+  {
+   "id": "macs0025.m300_se",
+   "group": "collisions",
+   "title": "MACS J0025 SE subcluster: lensing mass inside 300 kpc (LCDM units; 408 kpc static)",
+   "value": 221341310137578.38,
+   "unit": "Msun",
+   "target": "3.46 (+1.38/-2.35) x 10^14",
+   "status": "pass",
+   "score": 0.5295321965438936
+  },
+  {
+   "id": "macs0025.m300_nw",
+   "group": "collisions",
+   "title": "MACS J0025 NW subcluster: lensing mass inside 300 kpc (LCDM units; 408 kpc static)",
+   "value": 190929710348262.56,
+   "unit": "Msun",
+   "target": "3.60 (+0.69/-1.94) x 10^14",
+   "status": "pass",
+   "score": 0.871436836814047
+  },
+  {
+   "id": "macs0025.peak_se",
+   "group": "collisions",
+   "title": "MACS J0025 SE: lensing peak distance from its galaxies",
+   "value": 20.117352180796235,
+   "unit": "kpc",
+   "target": "with the galaxies, not the gas (504 kpc away): lensing offset from the gas at > 4 sigma",
+   "status": "pass",
+   "score": 0.07986279507951279
+  },
+  {
+   "id": "macs0025.peak_nw",
+   "group": "collisions",
+   "title": "MACS J0025 NW: lensing peak distance from its galaxies",
+   "value": 58.845821098117554,
+   "unit": "kpc",
+   "target": "with the galaxies, not the gas (231 kpc away): lensing offset from the gas at > 4 sigma",
+   "status": "pass",
+   "score": 0.5084774398394484
+  },
+  {
+   "id": "macs0025.sigma",
+   "group": "collisions",
+   "title": "MACS J0025: galaxies' speed spread (line of sight, inside 1.5 Mpc)",
+   "value": 707.2225366472458,
+   "unit": "km/s",
+   "target": "835 +- 59 (108 galaxies within 1.5 Mpc)",
+   "status": "close",
+   "score": 2.165719717843292
+  },
+  {
+   "id": "abell520.m150_p1",
+   "group": "collisions",
+   "title": "Abell 520 P1, a galaxy clump: lensing mass inside 150 kpc (LCDM units)",
+   "value": 24473365720675.215,
+   "unit": "Msun",
+   "target": "2.31-3.10 x 10^13 in the static law (Jee et al. 2014; Clowe et al. 2012)",
+   "status": "pass",
+   "score": 0.0
+  },
+  {
+   "id": "abell520.m150_p2",
+   "group": "collisions",
+   "title": "Abell 520 P2, a galaxy clump: lensing mass inside 150 kpc (LCDM units)",
+   "value": 45322561838644.09,
+   "unit": "Msun",
+   "target": "4.46-4.58 x 10^13 in the static law (Jee et al. 2014; Clowe et al. 2012)",
+   "status": "pass",
+   "score": 0.0
+  },
+  {
+   "id": "abell520.m150_p3",
+   "group": "collisions",
+   "title": "Abell 520 P3, the gas-rich, galaxy-poor centre (\"dark core\"): lensing mass inside 150 kpc (LCDM units)",
+   "value": 29858197423204.508,
+   "unit": "Msun",
+   "target": "3.13-3.69 x 10^13 in the static law (Jee et al. 2014; Clowe et al. 2012)",
+   "status": "pass",
+   "score": 0.20430724506950457
+  },
+  {
+   "id": "abell520.m150_p4",
+   "group": "collisions",
+   "title": "Abell 520 P4, a galaxy clump: lensing mass inside 150 kpc (LCDM units)",
+   "value": 30771505543905.133,
+   "unit": "Msun",
+   "target": "4.66-6.16 x 10^13 in the static law (Jee et al. 2014; Clowe et al. 2012)",
+   "status": "close",
+   "score": 2.1145379334243652
+  },
+  {
+   "id": "abell520.m150_p5",
+   "group": "collisions",
+   "title": "Abell 520 P5, a galaxy clump: lensing mass inside 150 kpc (LCDM units)",
+   "value": 27359823826303.5,
+   "unit": "Msun",
+   "target": "3.23-3.49 x 10^13 in the static law (Jee et al. 2014; Clowe et al. 2012)",
+   "status": "pass",
+   "score": 0.6779569251096268
+  },
+  {
+   "id": "abell520.m150_p6",
+   "group": "collisions",
+   "title": "Abell 520 P6, a galaxy clump: lensing mass inside 150 kpc (LCDM units)",
+   "value": 20791440426228.1,
+   "unit": "Msun",
+   "target": "4.06-4.06 x 10^13 in the static law (Jee et al. 2014; Clowe et al. 2012)",
+   "status": "close",
+   "score": 2.637422055776624
+  },
+  {
+   "id": "abell520.m710",
+   "group": "collisions",
+   "title": "Abell 520: lensing mass inside 710 kpc of the centre (LCDM units)",
+   "value": 422771720685659.9,
+   "unit": "Msun",
+   "target": "5.55 +- 0.61 x 10^14 in the static law (Mahdavi et al. 2007; <D_ls/D_s> = 0.59)",
+   "status": "close",
+   "score": 2.1653198514424274
+  },
+  {
+   "id": "abell520.sigma_peaks",
+   "group": "collisions",
+   "title": "Abell 520: galaxies' speed spread at P1, P2, P4, P5 (rms z)",
+   "value": 3.175749383644482,
+   "unit": "",
+   "target": "Girardi et al. 2008 Table 4: 811, 749, 579, 668 km/s (6-9 galaxies each)",
+   "status": "fail",
+   "score": 3.175749383644482
+  },
+  {
+   "id": "elgordo.m500",
+   "group": "collisions",
+   "title": "El Gordo: lensing mass inside 500 kpc of the centre of mass (Planck units)",
+   "value": 669341096824597.0,
+   "unit": "Msun",
+   "target": "8.98e+14 +- 12% (aperture mass)",
+   "status": "close",
+   "score": 2.120389210765282
+  },
+  {
+   "id": "elgordo.m1000",
+   "group": "collisions",
+   "title": "El Gordo: lensing mass inside 1000 kpc of the centre of mass (Planck units)",
+   "value": 1730447314683590.2,
+   "unit": "Msun",
+   "target": "2.31e+15 +- 12% (aperture mass)",
+   "status": "close",
+   "score": 2.080885699088044
+  },
+  {
+   "id": "elgordo.sigma_nw",
+   "group": "collisions",
+   "title": "El Gordo NW: galaxies' speed spread (line of sight, inside 1 Mpc)",
+   "value": 917.1088454923043,
+   "unit": "km/s",
+   "target": "1290 +- 134 (Menanteau et al. 2012)",
+   "status": "close",
+   "score": 2.7827698097589226
+  },
+  {
+   "id": "elgordo.sigma_se",
+   "group": "collisions",
+   "title": "El Gordo SE: galaxies' speed spread (line of sight, inside 1 Mpc)",
+   "value": 822.0252438681238,
+   "unit": "km/s",
+   "target": "1089 +- 200 (Menanteau et al. 2012)",
+   "status": "pass",
+   "score": 1.3348737806593811
+  },
+  {
+   "id": "elgordo.peak_se",
+   "group": "collisions",
+   "title": "El Gordo SE: lensing peak distance from the cool gas core",
+   "value": 240.14930483214343,
+   "unit": "kpc",
+   "target": "about 12 arcsec, the lensing peak nearer the merger centre (Kim et al. 2021; Ng et al. 2015)",
+   "status": "info",
+   "score": null
   }
  ]
 }

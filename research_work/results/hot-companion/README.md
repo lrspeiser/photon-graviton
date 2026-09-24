@@ -1719,13 +1719,17 @@ BLOG §9.1 evaluates each in plain language. In brief:
 | 9 | Stellar masses from non-gravitational evidence | El Gordo ×2, SLACS 1.05–1.35 Salpeter, MACS ×1 (all with ΛCDM distances) | redo with static distances and no age cap (19.4); then NIR photometry and spectra | 19.4 |
 | 10 | Derive and detect the energy cost | ℓ = 6.48 × 10⁻⁶ W/kg; Ṁ/M = −2.3 × 10⁻¹⁵ yr⁻¹ | energy and momentum balance in the toy. Already implied: the power cannot be thermal, since the Earth's 3.9 × 10¹⁹ W is 8 × 10⁵ times its internal heat flow and a 10⁻³ L☉ white dwarf's is 20 times its luminosity. The mass loss mimics Ġ/G = −2.3 × 10⁻¹⁵ yr⁻¹, about 30 times below lunar laser ranging's precision | 1 |
 
-## 20. Round 10, 24 September 2026: first principles, part 1, and our own distances
+## 20. Round 10, 24 September 2026: first principles, and our own distances
 
 The request: proceed to the next steps that solidify the theory and its first principles.
-This round takes the first step of proposal 1 (§19.5), where "the companion pulls with its
-amplitude" can come from. It tests what that step implies against the data, takes the far
-collisions and the strong lenses out of the expanding universe's distances (§19.4), and locks
-a first forecast (proposal 2).
+This round takes the first steps of proposal 1 (§19.5):
+* part 1: where "the companion pulls with its amplitude" can come from (§20.1–20.2);
+* part 2: how the companion of many pieces of matter must add up, with three candidate rules
+  tested on the galaxies and the clusters (§20.5).
+
+It also takes the far collisions and the strong lenses out of the expanding universe's distances
+(§19.4), switches the suite to grade them that way (§20.3), asks how heavy the far clusters'
+stars must then be (§20.6), and locks a first forecast (proposal 2, §20.4).
 
 ### 20.1 The pull of a locked emitter: derived, and simulated
 
@@ -1812,31 +1816,48 @@ data select, round 3's rule, behaves like a single coherent flow:
 
 That is the target of the next toy: a coherent, condensate-like companion, tested the same way.
 The analogy is ours, from the round-3 rule. Superfluid dark-matter theories are dark-matter
-theories and are excluded.
+theories and are excluded. *(Part 2, §20.5: a condensate that conserves its quanta and their
+momentum dilutes the pull exactly as independent waves do, so this analogy fails. What the data
+require is sharper.)*
 
 ### 20.3 The far collisions and the strong lenses in the project's own distances
 
 `code/collisions_v10.py` → `run-collisions-v10/collisions_v10.json`. Every length of the round-8
-models is rescaled by the size factor, gas by the X-ray factor and stars by the luminosity factor.
-Measured lensing masses are multiplied by the lensing factor. Apertures are taken at the same
-angles. The law's physics is unchanged. Effective source redshifts are 1.2 (MACS J0025), 1.0 (Abell 520) and 1.3 (El Gordo). These are
-typical of their weak-lensing catalogues, and are to be replaced by the papers' own values. Only
-the conversion of the measured lensing masses depends on them.
+models is rescaled by the size factor, gas masses by the X-ray factor and star masses by the
+luminosity factor, all at fixed angle and flux. Apertures are taken at the same angles. The law's
+physics is unchanged. Each measured lensing mass is converted with its own paper's conventions,
+from a check of each paper:
 
-| | factors: size / stars / gas / lensing | Ours ÷ measured, lensing (round 8, LCDM) | Galaxy speeds, ours vs measured |
+| Measurement | reference cosmology | background galaxies | lensing factor |
 |---|---|---|---|
-| MACS J0025, M(<300 kpc) SE / NW | 1.36 / 0.73 / 1.36 / 1.39 | 0.64 / 0.53 (0.78 / 0.61); z −0.5 / −0.9 | 707 vs 835 ± 59 km/s, z −2.2 (770) |
-| Abell 520, six clumps inside 150 kpc | 1.08 / 0.80 / 1.00 / 1.10 | P1, P2 (now inside the range), P3, P5 pass; P4 z −2.1 (−1.4); P6 z −2.6 (−2.3) | – |
-| Abell 520, inside 710 kpc | same | 0.77, z −2.1 (0.87, −1.2) | – |
-| El Gordo inside 0.5 / 1 / 1.5 Mpc | 1.58 / 0.71 / 1.68 / 1.60 | 0.66 / 0.71 / 0.76 (0.69 / 0.72 / 0.75) | NW 917, SE 822 vs 1,290 / 1,089 (944 / 839) |
-| El Gordo, twice the published stars | same | 0.92 / 0.94 / 0.98 (1.05 / 1.07 / 1.10) | NW 1,100, SE 974 (1,187 / 1,047) |
+| MACS J0025 (Bradač et al. 2008) | flat, Ω_m 0.3, H₀ 70 | assumed z = 1.4 (one arc system at 2.38) | 1.38 |
+| Abell 520 clumps (Jee et al. 2014; Clowe et al. 2012) | same | ⟨D_ls/D_s⟩ = 0.73 | 1.10 |
+| Abell 520 inside 710 kpc (Mahdavi et al. 2007) | same | ⟨D_ls/D_s⟩ = 0.59 | 1.11 |
+| El Gordo (Kim et al. 2021) | Planck 2015 (67.74, 0.3089) | ⟨D_ls/D_s⟩ = 0.254 (z_eff 1.31) | 1.55 |
 
-* **El Gordo:** the change of distance law is nearly a wash. Its gas and size rise as its stars
-  fall. It still needs about twice the published stars, now 1.9 × 10¹³ M☉ in the static law.
-* **MACS J0025 and Abell 520** do slightly worse, though mostly still passing. Their measured
-  lensing rises by 10–39%; our lensing rises less, because their stars come out 20–27% lighter.
-* **Not yet in the suite.** It still grades the round-8 (LCDM-geometry) collisions. Switching it
-  waits on the papers' own source redshifts and on stellar masses without the age cap (§20.5).
+El Gordo is now graded against Kim et al.'s aperture masses about the centre of mass (their
+Fig. 11: 5.8, 14.9 and 20.1 × 10¹⁴ M☉ inside 0.5, 1 and 1.5 Mpc, ±9–14%; we use ±12%), not
+against the sum of their two NFW fits. Star masses: El Gordo's come from colour fits that allowed
+ages up to 7.0 Gyr (Menanteau et al. 2012); MACS J0025's from F814W light at a fixed M/L_K of 0.74;
+Abell 520's from F814W light at M/L 2 (our choice in round 8, the Bullet's convention).
+
+| | factors: size / stars / gas | lensing: ours ÷ measured (round 8, standard distances) | galaxy speeds, km/s (round 8) |
+|---|---|---|---|
+| MACS J0025, M(<300 kpc) SE / NW | 1.36 / 0.73 / 1.36 | 0.64 / 0.53, z −0.53 / −0.87 (0.78 / 0.61) | 707 vs 835 ± 59, z −2.17 (770) |
+| Abell 520, six clumps inside 150 kpc | 1.08 / 0.80 / 1.00 | P1, P2, P3, P5 pass; P4 z −2.11 (−1.4); P6 z −2.64 (−2.3) | near P1, P2, P4, P5: rms z 3.18 (2.90) |
+| Abell 520, inside 710 kpc | same | 0.76, z −2.17 (0.87, −1.2) | – |
+| El Gordo inside 0.5 / 1 / 1.5 Mpc (apertures) | 1.58 / 0.71 / 1.68 | 0.75 / 0.75 / 0.86, z −2.12 / −2.08 / −1.19 (0.69 / 0.72 / 0.75 against the NFW sums) | NW 917, SE 822 vs 1,290 ± 134 / 1,089 ± 200 (944 / 839) |
+| El Gordo, twice the published stars | same | 1.04 / 1.00 / 1.11 | NW 1,100, SE 974 |
+
+**The suite now grades these collisions in the static law** (`regression/t_new_collisions.py`;
+baseline saved with the full tier). Its tally moves from 62 pass, 8 close, 6 fail to **58 pass,
+11 close, 7 fail**. The five grades that change are all far-cluster checks:
+* from pass to close: MACS J0025's galaxy speeds, Abell 520's clump P4 and its mass inside 710 kpc,
+  El Gordo's mass inside 1 Mpc;
+* from close to fail: Abell 520's galaxy speeds.
+
+All five move the same way, and for the same reason: the same light gives 20–29% less star mass
+in our distances (§20.6).
 
 **The six strong lenses** (the suite's check now uses the static convention):
 * light = matter: −0.012 ± 0.023 dex (was −0.017 ± 0.024);
@@ -1844,11 +1865,11 @@ the conversion of the measured lensing masses depends on them.
   1.05–1.35). Our distances give 1.48 times less starlight mass for the same light, and 1.11 times
   more lensing mass.
 
-**What this means.** With our own distances the measured lensing masses rise by 10–60%, while the
-stars inferred from the same light fall by 20–30%. In our law the stars carry the heat, so every
-far test now leans on the stellar masses. The published ones still carry assumptions from the
-expanding-universe timeline: the age cap of §19.4, where older stars weigh more for their light.
-Redoing them is the next step.
+**What this means.** With our own distances the measured lensing masses rise by 10–55%, while the
+stars inferred from the same light fall by 20–30%. In our law the freely moving stars carry the
+heat, so every far test now leans on the stellar masses. The published ones still carry
+assumptions from the expanding-universe timeline: the age cap of §19.4, where older stars weigh
+more for their light. §20.6 asks how much heavier they would have to be.
 
 ### 20.4 A locked forecast: wide binaries for Gaia DR4 (proposal 2)
 
@@ -1865,17 +1886,144 @@ Pairs of 1.5 and 2 suns give the same values beyond 10,000 AU. The file states w
 as support and as refutation, and carries a SHA-256 of the forecast
 (94a7a470953cf63cb004e7ce39b0fb188720750206c7415520c013a09da22626).
 
-### 20.5 Where this leaves the first principles
+### 20.5 How the companion adds up: three rules, tested on the galaxies and the clusters (part 2)
 
-* **Derived now:**
-  * the pull proportional to the companion's amplitude, from a local coupling, at every distance;
+`code/combination_rules_v10.py` → `run-combination-rules-v10/combination_rules_v10.json`.
+
+**The local form of the pull.** For any companion field of one frequency, ψ = Im[Ψ(x) e^{iωt}], an
+emitter locked a quarter cycle ahead of the field it sits in feels, exactly,
+
+  ⟨F⟩ = (q₀/2) Im(Ψ* ∇Ψ) / |Ψ| = (q₀/2) |Ψ| ∇θ,    Ψ = |Ψ| e^{iθ}
+
+That is, the local amplitude times the rate at which the local phase turns.
+* Checked against the exact time average for four random configurations: they agree to 10⁻¹⁷ of
+  the force.
+* For one travelling wave |∇θ| = k, which is part 1's result.
+* Where companion arrives from several directions at once, |Ψ|∇θ averages to the net current
+  divided by the amplitude. Any companion that does not move with the net flow therefore dilutes
+  the pull.
+* Example: two coherent waves in opposite directions, amplitudes 1 and b. The mean pull is
+  (1 − b)(2/π) K(4b/(1 + b)²) times one wave's: 0.95, 0.81, 0.53, 0.28 for b = 0.25, 0.5, 0.75,
+  0.9. Round 3's rule would give √(1 − b²): 0.97, 0.87, 0.66, 0.44.
+* A condensate that conserves its quanta and their momentum (a superfluid-like companion) has
+  |Ψ|² = the total density and ∇θ ∝ the net current ÷ the density. It dilutes exactly as
+  independent waves do (§20.2).
+
+**Three rules.** In the law's terms, with S_N = G∫ρ/d² the plain total of every piece's Newtonian
+pull, and S and g_hot the heat term's plain total and net flow:
+
+| Rule | extra pull | what the companion does |
+|---|---|---|
+| 1. independent waves (§20.2) | √a \|g_N + g_hot\| / √(S_N + S) | waves pass through each other |
+| 2. one stream carrying everything | √(a (S_N + S)) | always moves at full speed, all in one direction; nothing cancels |
+| 3. round 3 (adopted) | √(a (\|g_N\| + S)) | ordered matter's opposing flows cancel; scrambled companion adds in full; one stream |
+
+All three point along the net flow and use the same release factor.
+
+**SPARC.** S_N at every measured radius, from each galaxy's surface densities:
+* stars from the 3.6-μm profile at M/L 0.5, with an exponential thickness of 0.196 R_d^0.633 kpc
+  (after Bershady et al. 2010, as in SPARC's own mass models);
+* gas by inverting V_gas into thick annuli, by non-negative least squares with light smoothing,
+  0.2 kpc thick;
+* bulges spherical.
+
+The reconstruction reproduces SPARC's own disk and gas pulls to medians of 0.990 and 0.999.
+S_N/|g_N| has a median of 4.0 (16–84%: 2.2–8.3). With a and g_d refitted for each rule:
+
+| Rule | typical miss at the round-9 constants | refitted a, g_d (m/s²) | typical miss, refitted (test, validation) |
+|---|---|---|---|
+| 3. round 3 | 15.85 km/s | 6.56e-11, 2.26e-10 | **15.85** (12.40, 19.21) |
+| 1. independent waves | 24.73 | 4.58e-10, 8.69e-11 | 19.57 (16.21, 21.90) |
+| 2. one stream | 30.82 | 8.71e-12, 7.66e-10 | 18.97 (15.76, 22.06) |
+
+MOND (simple) scores 16.13. With disks twice as thick and 0.5-kpc gas the refitted misses are
+15.85, 19.25 and 18.88: the verdict does not depend on the thickness.
+
+**X-COP** (u refitted, a and g_d held): round 3 u 197.4 km/s, rms 0.227; independent waves 74.8,
+0.382; one stream 221.9, 0.222. In these clusters the heat term is 5.6–26 times the net
+Newtonian pull, so the treatment of cold matter hardly matters there; the treatment of the heat
+does.
+
+**The Milky Way** (local estimate as in §20.2, each rule with its own SPARC constants), circular
+speed at 4 / 8.2 / 12 / 20 / 30 kpc:
+* round 3: 198 / 211 / 207 / 195 / 185 km/s;
+* independent waves: 188 / 202 / 216 / 237 / 249, rising outward;
+* one stream: 205 / 206 / 190 / 162 / 143, falling steeply.
+
+**Verdict: only round 3 passes both the galaxies and the clusters.**
+
+| Rule | SPARC, typical miss (MOND 16.1 km/s) | X-COP, typical miss | Milky Way (local) |
+|---|---|---|---|
+| 1. independent waves | 19.6 km/s | 47% | too fast outside |
+| 2. one stream | 19.0 km/s | 25% | too slow outside |
+| 3. round 3 | **15.9 km/s** | **25%** | 211 km/s at the Sun, 185 at 30 kpc |
+
+(Typical miss for X-COP: e^rms − 1, as elsewhere in the blog.) So the data, not the choice of
+postulates, fix three properties of the companion:
+1. **Ordered matter's opposing flows cancel.** Only the net flow survives (SPARC excludes rule 2).
+2. **Scrambled companion adds its full strength** (X-COP excludes rule 1's dilution).
+3. **Matter reads it as one stream whose phase turns at the full rate.** By the local form, any
+   slower turning dilutes the pull. That happens for waves that pass through each other and for
+   a superfluid-like companion.
+
+A picture with these properties: waves that always travel at full speed and annihilate when they
+meet head-on. Fronts in active (excitable) media behave this way, such as chemical waves, or waves
+of activity in heart tissue. In those media, though, the medium sets the waves' strength. Here the
+strength must still fall off away from its source. A model that does both is the next toy.
+
+### 20.6 How heavy must the far clusters' stars be?
+
+`code/collisions_star_sweep_v10.py` → `run-collisions-v10/star_sweep_v10.json`. The three
+collisions rerun with every star mass multiplied by one common factor, on top of the static-law
+conversion (z-scores; galaxy speeds in km/s):
+
+| Star factor | MACS J0025 | Abell 520 | El Gordo |
+|---|---|---|---|
+| 1 | M300 −0.53 / −0.87; speeds 707 (z −2.17) | P4 −2.11, P6 −2.64, M710 −2.17; speeds rms z 3.18 | apertures −2.12 / −2.08 / −1.19; speeds 917 (−2.78), 822 (−1.33) |
+| 1.4 | −0.27 / −0.67; 793 (−0.71) | P2 +1.45, P4 −1.09, P6 −2.28, M710 −1.09; speeds 2.74 | −1.18 / −1.27 / −0.38; 993 (−2.22), 884 (−1.02) |
+| 1.8 | 0.00 / −0.46; 872 (+0.63) | P2 +2.98, P4 −0.05, P6 −1.90, M710 +0.05; speeds 2.37 | −0.20 / −0.43 / +0.48; 1,060 (−1.68), 945 (−0.72) |
+| 2 | – | – | +0.30 / +0.01 / +0.93; 1,100 (−1.42), 974 (−0.58) |
+
+* With a common factor of 1.4, the 17 graded checks of these three clusters would read 14 pass
+  and 3 close (now 9 pass, 7 close, 1 fail), and the whole suite **63 pass, 7 close, 6 fail**.
+  That is better than before the switch of distances.
+* El Gordo prefers 1.6–2.0.
+* Abell 520's clumps pull different ways. P2 is already heavy enough, while P6 and the galaxy
+  speeds near P1 want more. That points at its clump-by-clump star masses.
+
+**Is 1.4 plausible?** The factor 1.4 roughly undoes the static-law conversion of the star masses
+(1/0.73, 1/0.80 and 1/0.71). The published masses carry assumptions that lower them:
+* El Gordo's colour fits cap the stars' ages at the Big Bang's timeline (7.0 Gyr);
+* MACS J0025's use one fixed light-to-mass ratio;
+* Abell 520's use a ratio of 2 that is on the low side for old stars.
+
+In standard stellar-population models (e.g. Bruzual & Charlot 2003), an old population's
+mass-to-light ratio grows roughly as its age to the power 0.5 (near-infrared) to 0.85 (visible).
+Stars 10–13 billion years old, like those of nearby cluster ellipticals, would weigh roughly
+1.3–1.7 times more for the same light than stars 6–7 billion years old. So the factor is within
+reach. It is not yet a result: the star masses have to be refitted from the photometry with no
+age cap.
+
+### 20.7 Where this leaves the first principles
+
+* **Derived:**
+  * the pull proportional to the companion's amplitude, from a local coupling, at every distance
+    (part 1);
+  * its local form: amplitude × the rate at which the phase turns (part 2);
   * the direction along the net flow;
   * no energy exchange unless the pull is paid by coherent emission.
-* **Required of the microscopic model, now explicit:** an active medium (a quarter cycle
-  ahead), spectral locking (universality), and a slow phase (bookkeeping).
-* **Learned from the data:** the companion adds up as one coherent flow, not as independent waves.
+* **Required of the microscopic model:**
+  * from the model itself (part 1): an active medium (a quarter cycle ahead), spectral locking
+    (universality), and a slow phase (bookkeeping);
+  * from the data (part 2): ordered opposing flows cancel, scrambled companion adds in full, and
+    matter reads one stream at the full phase rate.
+* **Excluded by the data:**
+  * independent waves;
+  * a superfluid-like companion that conserves momentum;
+  * one stream in which nothing cancels.
 * **Next:**
-  1. a coherent-flow (condensate-like) toy, graded on the same X-COP and Milky Way tests;
-  2. stellar masses for the far clusters without the Big-Bang age cap;
+  1. a toy of full-speed waves that annihilate head-on while their strength falls off from the
+     source, graded on SPARC, X-COP and the Milky Way with the code of §20.5;
+  2. star masses for the far clusters from their photometry with no age cap (§20.6);
   3. the Bullet Cluster, KiDS and Mistele's lensing in the project's distances;
   4. the release factor and release length from the bound-to-free transition (proposal 5).
