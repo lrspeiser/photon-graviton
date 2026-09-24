@@ -1431,6 +1431,10 @@ Script: `code/strong_field_v7.py`.
 
 ### 6.11 Three more colliding clusters
 
+*Rev 19: this section keeps round 8's results, computed with the expanding universe's
+distances. §6.14 redoes all three with the project's own: MACS J0025 and Abell 520 then need
+about 1.4 times their published star masses, and El Gordo 1.6–2 times.*
+
 The Bullet Cluster is the famous collision, but it is one object. Round 8 runs our law on the
 three other collisions that astronomers have mapped best, with nothing adjusted:
 * the gas and star masses come from the papers;
@@ -1500,7 +1504,8 @@ two halves 750 kpc apart that passed through each other about half a billion yea
   use the expanding universe's distances. With the project's own distance law, El Gordo is
   1.58 times larger, its gas 1.68 times heavier, its stars 0.71 times as heavy and its lensing
   mass 1.60 times higher. The comparison has to be redone before "twice the stars" can be
-  trusted (§9, item 1).
+  trusted (§9, item 1). *Redone in rev 19 (§6.14): against the masses measured inside fixed
+  circles, El Gordo needs 1.6–2 times its published stars.*
 * Our SE lensing peak sits 60 kpc from the SE galaxies, on the side facing the centre. That
   puts it 160 kpc from the cool gas core, against about 100 kpc measured. This depends on where
   the bulk of the gas sits, which no paper maps, so the suite tracks it without grading it.
