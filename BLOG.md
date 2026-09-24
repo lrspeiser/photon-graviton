@@ -157,6 +157,9 @@ colliding clusters, with no dark matter and no expanding universe.*
     wave's loudness sets each piece of matter's timing, like a generator or a motor on the grid. With it, the heat
     pattern comes back with no memory; and the same loss holds the companion back in a shape the 149 galaxies accept
     as well as our law's exponential release.
+  * **How far the release goes.** The darker cold matter is, the lower the speed at which heat takes over, and test
+    bodies keep step up to about the re-timing speed, so a deep enough hold covers the whole heat range. What doesn't
+    match yet is the steepness: the release grows about 1.6 times per doubling of speed, not the 4 times our law needs.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -190,12 +193,14 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
    *Rev 19: points 2 and 3 are no longer just assumptions. Of three natural ways the companion
    could add up, only this one fits both galaxies and clusters (§4.14). Rev 22: the data still demand point 3, but
    "out of step" is not why. In a simulation, scrambling alone weakens the pull. What works is matter that holds its
-   companion back when cold and releases it when moving freely (§6.17).*
+   companion back when cold and releases it when moving freely (§6.17). Rev 23: that follows from a power balance,
+   a fixed supply against a loss that grows with the companion's loudness (§6.18).*
 4. **Gas does not count as "hot" in this sense.** Its particles collide so often that the
    companion sees them as sitting still. That is why, in a collision, the extra pull stays
    with the galaxies and leaves the gas behind.
 5. **Strong gravity holds the companion back, and breaking free takes about 850 years of
-   travel,** so the Solar System feels nothing.
+   travel,** so the Solar System feels nothing. *Rev 23: the hold may be the same loss that sets matter's timing in
+   loud waves; the 149 galaxies accept its shape as well as ours (§6.18).*
 6. **The companion is slow, and it keeps moving the way its source moved.** After two clusters
    collide, each is still wrapped in the companion it had before, travelling on with its
    galaxies. That is why the smaller cluster in the Bullet Cluster still bends light like the
@@ -2432,6 +2437,31 @@ The galaxies can't tell our exponential from the absorbers' hold. So "strong gra
 
 Scripts: `code/singer_v14.py`, `code/release_shape_v14.py`.
 
+**Step 3: how far the release goes, and whether bodies keep up.** We ran the power-balance singers in three balls of
+increasing density, 33, 76 and 107 times quieter than independent singers when cold, at speeds from 1/64 to twice the
+re-timing speed (three runs each).
+
+| free random motion | 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 | 2 |
+|---|---|---|---|---|---|---|---|
+| released ÷ held, densest ball | 0.8 | 3.3 | 5.1 | 7.7 | 9.3 | 14 | 24 |
+| pull ÷ at rest, densest ball | ×1.52 | **×1.95** | ×1.80 | ×1.68 | ×1.68 | ×1.39 | ×0.76 |
+| pull ÷ at rest, middle ball | ×1.22 | ×1.43 | ×1.71 | ×1.68 | ×1.63 | **×1.73** | ×0.82 |
+
+* **The darker the cold ball, the earlier heat takes over.** The released output passes the held output at 1/8, 1/16
+  and 1/24 of the re-timing speed: about four times the ball's cold darkness.
+* **Bodies keep up further than we feared.** Their pull stays raised up to about the full re-timing speed, because
+  the released wave grows faster than their step slips; only at twice that speed do they lose it. So the range of
+  speeds where heat dominates and bodies keep step widens as matter gets darker: 8-fold, 16-fold, 24-fold. Real
+  matter has vastly more singers per wavelength than our 100, so it can be far darker still.
+* **The square root holds everywhere:** the wave reaching the bodies is always the square root of cold plus released
+  output.
+* **What doesn't match yet is the steepness.** After a steep start, the released output grows only about 1.6 times
+  per doubling of speed. Our law, and the lensing data, want about 4 times. The hold empties too gently. Finding
+  what makes it empty as σ² (a bigger ball, a loss that grows faster with loudness, or matter of several kinds) is
+  the next task.
+
+Script: `code/release_depth_v14.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -2681,9 +2711,11 @@ proposals for finishing the theory.
    * *Done in rev 22 (§6.17):* the pull and the scrambling in one experiment. With one fixed timing, heat weakens
      the pull, for an exact reason. Emitters that feed quiet waves but absorb loud ones give the right pattern at
      slow speeds: a pull up to twice as strong with free random motion, held back by collisions, none from rotation.
-   * *Next:* derive that rule from a saturating emitter, and see whether the same saturation is the law's hold
-     on strong companions (§3.4); make bodies keep in step with a fast-changing wave; then the guided companion with
-     moving sources, for the collisions' memory;
+   * *Done in rev 23 (§6.18):* the rule derived from a power balance (a fixed supply, a loss that grows with
+     loudness); its hold fits the galaxies as well as the release factor; the darker cold matter is, the wider the
+     range where heat dominates and bodies keep step.
+   * *Next:* what makes the release grow as σ² (the toy's grows as σ^0.7 after its onset); derive why the hold stops at
+     zero instead of pushing; then the guided companion with moving sources, for the collisions' memory;
    * a full field theory for the companion, with its travel, its release length and a
      relativistic form, so that lensing is derived;
    * what the release length is;
@@ -2725,7 +2757,7 @@ into our inputs.
 |---|---|---|---|---|
 | 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15). Rev 21: a companion guided along gravity's field lines gives it with no further assumption (§6.16)** | the guided companion with moving sources: does it keep its memory in a collision? | hard; the foundation |
 | 2 | Predict unseen data with a locked model | **rev 19: the wide-binary forecast locked (§6.7)** | lensing profiles by speed spread for a new galaxy sample | doable now |
-| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating)** | derive the rule; keep bodies in step at higher speeds | medium; the test bench exists |
+| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating). Rev 23: that timing derived from a power balance, with no memory; bodies keep step up to the re-timing speed (§6.18)** | make the release grow as σ² (it grows as σ^0.7 after its onset) | medium; the test bench exists |
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
 | 5 | One mechanism for Cassini, dwarfs and wide binaries | release adopted; the dwarfs need a weaker hold, reason unknown | derive the release time and the hold from one transition | hard; biggest payoff |
 | 6 | Evolve the companion through collisions | memory imposed; the Bullet's smaller half at half weight | a time-dependent transport solver | medium to hard |
@@ -2974,7 +3006,9 @@ into our inputs.
   * a gentler heat term (σ^1.75) on the full suite: it closes galaxy lensing's common level but costs the massive
     ellipticals, so σ² stays;
   * "feed quiet waves, absorb loud ones" derived from a power balance (a fixed supply, a loss growing with loudness);
-    the same loss holds the companion back in a shape the galaxies accept as well as the release factor.
+    the same loss holds the companion back in a shape the galaxies accept as well as the release factor;
+  * how far the release goes: the darker cold matter is, the earlier heat takes over, and bodies keep step up to about
+    the re-timing speed; the release's steepness is the open question.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
@@ -3109,6 +3143,7 @@ python strength_offset_v13.py --output ../run-coherent-force-v13/strength_offset
 python heat_exponent_v13.py --output ../run-coherent-force-v13/heat_exponent_v13.json  # how steeply the heat term must grow
 python singer_v14.py        --output ../run-coherent-force-v13/singer_v14.json          # a singer that absorbs; a singer with a power balance
 python release_shape_v14.py --output ../run-coherent-force-v13/release_shape_v14.json   # the release factor against the absorbers' hold, on SPARC
+python release_depth_v14.py --output ../run-coherent-force-v13/release_depth_v14.json   # how far the release goes, in three densities
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:

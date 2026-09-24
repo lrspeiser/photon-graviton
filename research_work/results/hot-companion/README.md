@@ -3068,7 +3068,8 @@ it. Collisions keep it held.
 The request: "proceed with the next steps, keep the blog and main current": round 13's list (§23.10). In the
 order done:
 1. the heat weight's exponent on the full suite (§24.1);
-2. where "feed quiet waves, absorb loud ones" comes from, and whether it is the release factor (§24.2).
+2. where "feed quiet waves, absorb loud ones" comes from, and whether it is the release factor (§24.2);
+3. how the release grows with the speed spread, and when test bodies lose step (§24.3).
 
 ### 24.1 The heat exponent on the full suite
 
@@ -3199,3 +3200,64 @@ wave's intensity; with it, the heat pattern of round 13 appears with no memory, 
 the galaxies accept in place of the exponential release factor. A passive absorber alone gives the darkness but not
 the release: the heat term needs the cold hush to be arranged by the emitters' own timing.
 
+### 24.3 How the release grows, and when test bodies lose step
+
+`code/release_depth_v14.py` → `run-coherent-force-v13/release_depth_v14.json` (153 runs). The power-balance singer
+(P_s = 0.1, c_L = 10) in three clouds of 100 of increasing density, free and colliding, q = 1/64 … 2, three seeds.
+Power released by the motion over the power held at rest ("released/held"; the analogue of the heat weight k):
+
+| free motion | at rest: radiated ÷ independent | q = 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 | 2 |
+|---|---|---|---|---|---|---|---|---|
+| Rb 0.5 (191 per λ³) | 1/33 | −0.05 | 0.08 | 1.07 | 2.0 | 3.3 | 5.8 | 9.8 |
+| Rb 0.35 (557 per λ³) | 1/76 | 0.39 | 1.09 | 3.2 | 4.9 | 7.3 | 11.9 | 19.2 |
+| Rb 0.25 (1,528 per λ³) | 1/107 | 0.78 | 3.3 | 5.1 | 7.7 | 9.3 | 14.3 | 23.8 |
+
+| pull ÷ rest (test bodies' feeding) | at rest | 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 | 2 |
+|---|---|---|---|---|---|---|---|---|
+| Rb 0.5, free | (0.60) | 0.93 | 1.03 | **1.21** (0.51) | 1.17 | 1.10 | 0.89 (0.23) | 0.44 (0.10) |
+| Rb 0.35, free | (0.52) | 1.22 | 1.43 | 1.71 (0.44) | 1.68 | 1.63 | **1.73** (0.25) | 0.82 (0.10) |
+| Rb 0.25, free | (0.47) | 1.52 | **1.95** (0.45) | 1.80 | 1.68 | 1.68 | 1.39 (0.18) | 0.76 (0.08) |
+| Rb 0.35, colliding | | 0.98 | 0.94 | 1.05 | 1.32 | 1.62 | 1.69 | 1.54 |
+| Rb 0.25, colliding | | 0.93 | 1.05 | 1.24 | 1.65 | 1.80 | 1.55 | 1.46 |
+
+* **The square-root law holds at every speed:** the wave at the test bodies grows as the square root of the
+  radiated power in every row to 1–2% (e.g. ×4.47 against √20.2 = 4.49): cold and released power add.
+* **Darkness sets where heat takes over.** Released exceeds held from q* ≈ 1/8, 1/16 and 1/24 in clouds 33, 76 and
+  107 times darker than independent singers: q* ≈ 4 × (radiated ÷ independent at rest). Collisions delay the onset by
+  a factor of 4–5 in speed (Rb 0.35: q ≈ 1/3 instead of 1/16; Rb 0.25: 1/6 instead of 1/24), as round 3's formula
+  has them.
+* **Test bodies keep step up to about the re-timing speed.** Their feeding falls from ≈ 0.5 at rest to ≈ 0.25 at
+  q = 1, but the wave grows faster, so the pull stays raised (×1.4–1.7 in the two densest clouds at q = 1); at q = 2
+  the feeding collapses (0.08–0.10) and the pull with it. The range of speeds over which heat dominates and bodies
+  keep step, q* to 1, widens with darkness: ×8 (Rb 0.5), ×16 (0.35), ×24 (0.25). Round 3's reading, u = √3 Γ/k0,
+  put the heat-dominated regime (k > 1) exactly where bodies lose step; with a dark reservoir the two separate, and
+  the darker cold matter is, the wider the gap.
+* **The steepness does not match yet.** After its onset (×3–6 per doubling, σ^1.6–2.6) the release grows by ×1.5–1.7
+  per doubling (σ^0.6–0.8) over four doublings in every cloud. The law, and the lensing data (§23.8), want about ×4
+  per doubling (σ²) sustained over a factor of ten in σ. In the toy the reservoir empties too gently: scrambled, most
+  emitters still sit in strong waves and keep absorbing, and only a slowly growing share flips to feeding. What makes
+  the share grow as σ² (a larger cloud, a loss that rises faster than |E|², emitters of several strengths) is the
+  next question.
+
+### 24.4 Where round 14 leaves things, and next
+
+* **Settled this round:** the heat exponent on the full suite (p = 1.75 trades KiDS's level for the massive
+  ellipticals' lensing; p = 2 kept); a slip in the suite's refit of u (fixed); the origin of round 13's timing rule
+  (a power balance: fixed supply against a loss that grows with the wave's intensity), with no memory.
+* **Found:** the singers' hold-back in loud waves fits the 149 galaxies as well as the law's exponential release
+  factor (15.86 and 16.08 against 15.87 km/s), so the release factor and the heat mechanism may be one loss. Darker cold
+  matter moves the start of the heat-dominated regime to lower speeds (q* ≈ 4 × darkness), and test bodies keep step
+  up to about the re-timing speed, so a deep enough hold covers the whole heat range.
+* **Not yet:** the release grows as σ^0.6–0.8 after its onset, against σ² in the law and the lensing data; why the
+  hold stops at zero rather than pushing; where the absorbed energy goes (it must return to the emitters' supply, or
+  cold matter would warm).
+* **Suite** unchanged: 59 pass, 11 close, 7 fail (the law is unchanged; the exponent is a switch, `heat_exponent`).
+* **Next:**
+  1. **The release's steepness:** larger clouds (a deeper hold), a loss rising faster than |E|², and emitters of
+     several strengths, in the same test bench; the target is released/held ∝ σ² over a factor of ten.
+  2. **The release factor from the loss:** replace exp(−|g_N|/g_d) by the singers' hold in the whole suite (Cassini,
+     the Milky Way, the dwarfs, lensing), and derive why it stops at zero.
+  3. **The two KiDS analyses** (Brouwer et al.'s relation against Mistele et al.'s circular speeds): what in their
+     methods makes one want more heat for ellipticals and the other less.
+  4. Round 12's list: the guided companion with moving sources (the collisions' memory; the Bullet's smaller half),
+     the lenses' gas, the distance law's shape, MACS J0025's star masses, the faint dwarfs, the Sun's speed, Abell 1689.

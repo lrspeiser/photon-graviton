@@ -134,6 +134,18 @@
 >     √(cold + released power), and the first doubling of σ gives ×1.9 in the extra pull. Limits: q ≲ 1/4 (tracking)
 >     and a release that flattens with σ.
 >   * Data: k ∝ σ^p with p = 1.75–2 from the KiDS gap (X-COP is flat in p); p = 1.75 removes KiDS's common level.
+> * **Round 14 (§24): round 13's next steps, one at a time.**
+>   * The heat exponent on the full suite (every heat weight through `law.heat_weight` / `law.k_from_sig2`; a
+>     slip in the suite's refit of u fixed): p = 1.75 (a 6.181 × 10⁻¹¹, u 132.2) scores 60 / 10 / 7 against
+>     59 / 11 / 7, curing KiDS's level (red lenses fail → pass) but worsening Mistele's ellipticals (2.6 → 5.2) and
+>     SLACS (−0.028 → −0.054). Not adopted.
+>   * Round 13's timing rule from a power balance: a fixed supply P_s (ℓ) against a loss c_L|E|², so
+>     |E| sin(lead) = P_s − c_L|E|² (a synchronous machine's load angle). It reproduces the heat pattern with no
+>     memory. A passive absorber instead (s = a + i c0 E) gives dark, pulled clouds but no release (its only gain is
+>     un-jamming, with memory). The singers' hold in loud waves fits SPARC as well as exp(−|g_N|/g_d) (15.86 / 16.08
+>     against 15.87 km/s).
+>   * Darker cold states start the heat-dominated regime at lower speed (q* ≈ 4 × darkness) and test bodies keep
+>     step to q ≈ 1, but the release grows as σ^0.6–0.8 after its onset, against σ² in the law.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -372,6 +384,30 @@ results README §18):
 * **The heat exponent, from the data** (`code/heat_exponent_v13.py`): k = 3(σ/u)^p with u refitted on X-COP for
   each p; X-COP is flat in p (rms 0.221–0.226 for p = 1–3); the KiDS early/late gap within 1σ needs p = 1–2 (colour)
   and 1.75–2.25 (Sérsic), both 1.75–2. At p = 1.75, u = 134 km/s and KiDS's level falls from +0.065 to +0.011 dex.
+
+### Round 14: the timing rule from a power balance, and the hold as the same loss
+
+* **The heat exponent as a switch** (`law.HEAT_P`, set from the law's `heat_exponent`): k = 3(σ/u)^p everywhere, and
+  for a mean-square speed with prefactor f (3 for 1D, 1 for 3D, 3 − 2β anisotropic), k = 3(f σ²/(3u²))^{p/2}; at
+  p = 2 the arithmetic is each script's own. The suite's refit of u now uses the graded (static, deprojected) X-COP
+  sample for laws based on round 11/12. p = 1.75, a 6.181 × 10⁻¹¹, u 132.2: 60 / 10 / 7 (not adopted; see above).
+* **A singer that absorbs** (`c_abs`): s_j = a_j + i c0 E_j, E_j = Σ_{l≠j} G_jl s_l, so s = (1 − i c0 G)⁻¹ a
+  (c0 ≤ 4π/k0 keeps the passive part passive; with `gamma_abs`, db/dt = −γ_a(b − i c0 E), implicit steps). A lone
+  one: P ∝ |E| − c0|E|², F = (k/2)(|E| − c0|E|²). Cold dense clouds dark and pulled (Rb 0.35, c0 1: 1/47, +0.075);
+  motion's only gain is un-jamming of a half-locked state (locking 0.55 → 0.99, radiated ×4.4), with memory; with
+  γ_a = Γ no release to q = 1, dimmer beyond.
+* **A singer with a power balance** (`supply`, `loss`): |E| sin(arg E − θ) = P_s − c_L|E|², i.e.
+  δ(|E|) = −arcsin(clip(P_s/|E| − c_L|E|, −1, 1)); the switch at |E| = √(P_s/c_L). All twelve clouds at rest dark and
+  pulled; densest (Rb 0.35), four seeds: free ×1.30, 1.51, 1.81 (q = 1/32, 1/16, 1/8), colliding ×0.98–1.08, rotating
+  none; stopped, back to the cold values.
+* **The hold as a release factor:** with |E|² ∝ |g_N|, x = √(g/g_s): A gives R = max(0, 1 − x), B gives
+  R = clip(A(1/x − x), 0, 1). On SPARC (a and the scale refitted): exp 15.87 km/s (statistic 0.21111), A 15.86
+  (0.21169), B 16.08 (0.21103, a third constant); holds that push (1 − x: 16.19) or let the pull return
+  (1 − x/(1 + x²): 16.78) do worse.
+* **The release against σ** (`code/release_depth_v14.py`; three densities): released/held passes 1 at
+  q* ≈ 4 × (radiated ÷ independent at rest) (1/8, 1/16, 1/24 for darkness 1/33, 1/76, 1/107); after onset it grows
+  ×1.5–1.7 per doubling (σ^0.6–0.8); the test bodies' wave ∝ √(radiated) to 1–2%; their feeding falls from 0.5 to
+  0.25 at q = 1 and 0.1 at q = 2, where the pull collapses.
 
 ### What follows
 
