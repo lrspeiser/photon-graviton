@@ -6,7 +6,10 @@ in the flat-LCDM conventions of the papers: every length and mass of the round-8
 from those conventions, apertures are applied at the same angles, and each measured lensing mass is
 converted with its own paper's cosmology and source redshifts. El Gordo is graded against Kim et
 al.'s aperture masses rather than their two-NFW fit. Galaxy speeds are unchanged. Since round 11 every star mass
-is on the Chabrier basis of X-COP, whose clusters calibrate u (MACS J0025's Salpeter-based masses x 10^-0.25)."""
+is on the Chabrier basis of X-COP, whose clusters calibrate u (MACS J0025's Salpeter-based masses x 10^-0.25).
+Since round 12 MACS J0025's time since closest approach is 0.3 Gyr, from the collision's own dynamical clocks
+in our distances (its radio relics' shock fronts, 0.08-0.22 Gyr, and separation over speed, 0.36 Gyr;
+code/macs_timing_v12.py); round 8 had used 0.5 Gyr, between those and the post-starburst estimate (0.5-1 Gyr)."""
 from __future__ import annotations
 import numpy as np
 from checks import make, z_check, range_check, at_most, _grade
@@ -30,8 +33,8 @@ def _model(name, law, t):
 
 
 def macs(law, ctx):
-    ctx.log('MACS J0025.4-1222: lensing map (t = 0.5 Gyr, static distances)')
-    m, f, C = _model('macs0025', law, 0.5)
+    ctx.log('MACS J0025.4-1222: lensing map (t = 0.3 Gyr, the dynamical clocks; static distances)')
+    m, f, C = _model('macs0025', law, 0.3)
     L = C.lens_factor('macs0025')['lens']; R = 300 * f['size']
     ref = 'Bradac et al. 2008 (arXiv:0806.2320), converted to the static distance law (sources at z = 1.4)'
     out = []

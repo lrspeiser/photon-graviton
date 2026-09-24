@@ -3,7 +3,7 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–20).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–21).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
@@ -111,6 +111,13 @@ colliding clusters, with no dark matter and no expanding universe.*
     which depends on the companion's speed. In MACS J0025 the north-western lensing peak slides onto
     the gas unless the collision is younger than about 350 million years.
   * The regression suite: 57 pass, 9 close, 10 fail (rev 19: 58, 11, 7).
+* **Rev 21** works through rev 20's next steps one at a time, updating this page as each lands
+  (§6.16).
+  * **MACS J0025's age, from its own shock fronts.** Its two radio relics, which trace the shock waves
+    the collision launched, sit right beside its two groups of galaxies. So the shocks have not yet
+    outrun the galaxies: the collision is young, 0.1–0.36 billion years old in our distances, not the
+    0.5 we had assumed. At that age its north-western lensing peak sits on its galaxies, as observed. The
+    suite reads 58 pass, 9 close, 9 fail.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -162,7 +169,7 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 | Bullet Cluster: main half's lensing mass, galaxy speeds and star count | **agree** | no | yes (fitted) |
 | Bullet Cluster: smaller half's lensing mass | about half of what is measured (open) | no | yes (fitted) |
 | 72 colliding clusters: lensing stays with the galaxies | **yes** | no | yes |
-| MACS J0025.4−1222: lensing masses, peaks on the galaxies, galaxy speeds | **lensing agrees; SE peak on its galaxies**; the NW peak slides onto the gas unless the collision is under 0.35 billion years old; speeds 2.9 error bars low (§6.15) | no | yes (fitted) |
+| MACS J0025.4−1222: lensing masses, peaks on the galaxies, galaxy speeds | **lensing and both peaks agree** at the age its shock fronts give (§6.16); speeds 2.9 error bars low | no | yes (fitted) |
 | Abell 520's "dark core" (lensing without galaxies) | **3.5 × 10¹³ suns from gas and heat; measured 3.13–3.69** (our distances) | no | not expected |
 | El Gordo: lensing mass and galaxy speeds | **lensing agrees with its published stars** (our distances, §6.15); NW galaxy speeds 22% low | no | yes (fitted) |
 | Ellipticals bend light more than spirals (0.15 ± 0.04 dex, median over bins) | **yes**: 0.18 in the standard distances, 0.23 in ours (§6.15) | no difference | yes, with tuned haloes |
@@ -186,8 +193,6 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 * **galaxy lensing in our own distances (§6.15):** around spirals it is 20% stronger than our law
   predicts, and ellipticals' extra lensing is 0.23 dex against 0.15. The first measures our
   distance law's scale (13% lower would fit); the second the companion's speed;
-* **MACS J0025's north-western lensing peak**, which sits on the gas unless the collision is under
-  about 350 million years old;
 * **Abell 1689**, the next cluster to model;
 * a full relativistic version of the law.
 
@@ -1637,15 +1642,13 @@ now lives in one program: the regression suite.
   minutes.
 * On an unchanged law it reproduces every number published so far to the last digit.
 
-**The law today (rev 20, every test in our own distances, constants refitted there): 57 pass,
-9 close, 10 fail** of the 76 graded checks (rev 19: 58, 11, 7; rev 18: 62, 8, 6; rev 17: 61, 8,
-7). §6.15 has what moved and why.
-* **Fail (10):**
+**The law today (rev 21): 58 pass, 9 close, 9 fail** of the 76 graded checks (rev 20: 57, 9, 10;
+rev 19: 58, 11, 7; rev 18: 62, 8, 6; rev 17: 61, 8, 7). §6.15 and §6.16 have what moved and why.
+* **Fail (9):**
   * five faint dwarf galaxies: Draco, Ursa Minor, Sextans, Crater II and Antlia 2;
   * the lensing mass of the Bullet's smaller half;
   * galaxy lensing around spirals and around disks (KiDS), and the lensing speeds of spirals
-    (Mistele et al.), all in our distances;
-  * MACS J0025's north-western lensing peak, at the collision age the suite uses.
+    (Mistele et al.), all in our distances.
 * **Close (9):**
   * the dwarf Carina;
   * the Sun's orbital speed;
@@ -1900,7 +1903,8 @@ published. Two things follow:
 
   Bradač et al. put the crossing "a few 10⁸ years" ago. A younger collision, or a third more star
   mass, puts the peak back on the galaxies. The suite keeps the 0.5 billion years fixed in rev 17,
-  so this check now fails. It is a knife edge, and a clean test of the collision's age.
+  so this check now fails. It is a knife edge, and a clean test of the collision's age. *(Rev 21: the
+  collision's own shock fronts date it at 0.1–0.36 billion years, and the peak passes; §6.16.)*
 
 **The Bullet Cluster in our own distances** (sizes ×1.14, gas ×1.08, stars ×0.78, lensing ×1.18):
 
@@ -1963,6 +1967,37 @@ Scripts: `code/xcop_static_v11.py`, `code/kids_static_v11.py`, `code/bullet_stat
 `code/distance_variants_v11.py`, `code/macs_peak_scan_v11.py`; the audit of every star mass is
 `literature/star_mass_audit_v11.md`.
 
+### 6.16 Round 12, step by step (rev 21)
+
+Rev 20 ended with four next steps. This section adds each result as it lands.
+
+**Step 1: MACS J0025's age, read from its own shock fronts.** When two clusters collide, the collision
+launches shock waves through their gas. Radio telescopes see where those shocks have lit up particles:
+"radio relics". Riseley et al. (2017) found two relics in MACS J0025, one on each side, lying across
+the direction of the collision.
+* We measured where their radio contours are centred: 150–160 kpc north-west of the centre and
+  315–325 kpc south-east of it, in the paper's units. The two groups of galaxies sit 165 and 360 kpc
+  out. **The shocks have not yet outrun the galaxies, which only happens early in a collision.**
+* A shock moves at most about 1.9 times the speed of sound in the gas (the relic's radio colour limits
+  it), and that speed is about 1,300 km/s. So the shocks took at least 0.06–0.16 billion years to get
+  where they are.
+* The simpler clock, separation over speed, gives 0.26 billion years: 540 kpc between the galaxy groups
+  at about 2,000 km/s.
+* In our distances sizes are 1.36 times larger, so the clocks read **0.08–0.36 billion years**. The
+  0.5 we had used came from averaging with a clock based on the galaxies' star formation (0.5–1 billion
+  years), which dates when star formation stopped. That can begin before the clusters reach each other.
+
+| Age used | Fresh companion around the gas | North-western peak from its galaxies |
+|---|---|---|
+| **0.3 billion years (now used)** | 50 kpc | **72 kpc: on the galaxies** |
+| 0.4 billion years | 67 kpc | 70 kpc: on the galaxies |
+| 0.45 billion years | 75 kpc | 207 kpc: on the gas |
+| 0.5 billion years (rev 17–20) | 83 kpc | 209 kpc: on the gas |
+
+**The peak stays on the galaxies for any age up to 0.4 billion years**, beyond every dynamical clock, and
+nothing else about MACS J0025 depends on the age. The suite now uses 0.3 billion years: **58 pass,
+9 close, 9 fail.** Script: `code/macs_timing_v12.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -1974,7 +2009,7 @@ Scripts: `code/xcop_static_v11.py`, `code/kids_static_v11.py`, `code/bullet_stat
 | Bullet Cluster: smaller half's lensing mass | about half of the measured 2.35–2.70 (our distances; open) | no | yes (fitted) |
 | Wide binary stars (data disputed) | **8% extra pull at 20,000 AU, 3.5% at 7,000 AU** | 43% | none |
 | Collisions: lensing stays with galaxies | **yes** | no | yes |
-| MACS J0025.4−1222 (a second Bullet) | **lensing masses agree; SE peak on its galaxies**; NW peak on the gas unless the collision is under 0.35 billion years old; speeds 2.9σ low (our distances) | no | yes, fitted |
+| MACS J0025.4−1222 (a second Bullet) | **lensing masses and both peaks agree** at the age its shock fronts give; speeds 2.9σ low (our distances) | no | yes, fitted |
 | Abell 520's galaxy-poor lensing clump | **from its gas and the galaxies' heat** | no | a puzzle |
 | El Gordo (z = 0.87) | **lensing agrees with its published stars** (our distances); NW speeds 22% low | no | yes, fitted |
 | Ellipticals lens more than spirals | **yes, from their stars**: 0.23 dex in our distances against 0.15 measured the same way (close) | no | yes, via tuned haloes |
@@ -2023,13 +2058,13 @@ about two error bars); ✗ = a shortfall, with the fix we are testing.
 | Bullet Cluster: smaller half's lensing mass | 2.0–2.3 × 10¹⁴ | about half | open |
 | 72 collisions: lensing with the galaxies | | yes | ✓ |
 | MACS J0025.4−1222: lensing inside 300 kpc, SE / NW (our distances) | 3.5 / 3.6 × 10¹⁴ | 1.9 / 1.7 | ✓ |
-| MACS J0025.4−1222: lensing peaks | on the galaxies | SE on its galaxies; NW on the gas at 0.5 billion years, on its galaxies at ≤ 0.35 | ✗ the collision's age decides |
+| MACS J0025.4−1222: lensing peaks | on the galaxies | both on their galaxies at the age its shock fronts give (0.1–0.36 billion years; on the gas beyond 0.45) | ✓ |
 | MACS J0025.4−1222: galaxies' speed spread | 835 ± 59 km/s | 665 (stars on the calibrating basis); 804 with the published masses | ~ stars to measure |
 | Abell 520: lensing of six clumps inside 150 kpc (our distances) | 2.3–6.2 × 10¹³ | 5 of 6 within the errors (P6 2.3σ low) | ✓ |
 | Abell 520: the galaxy-poor "dark core" P3 (our distances) | 3.13–3.69 × 10¹³ | 3.47 | ✓ |
 | El Gordo: lensing inside 1 Mpc (our distances) | 23.1 × 10¹⁴ | 19.8 (published stars) | ✓ |
 | Abell 1689 | collected | not yet run | next |
-| The regression suite (§6.12) | 76 graded checks | 57 pass, 9 close, 10 fail (everything in our distances) | |
+| The regression suite (§6.12) | 76 graded checks | 58 pass, 9 close, 9 fail (everything in our distances) | |
 
 ## 8. Predictions anyone can check
 
@@ -2070,8 +2105,10 @@ about two error bars); ✗ = a shortfall, with the fix we are testing.
    lensing agrees with its published stars. Near-infrared imaging and spectra can still check them.
 17. **Abell 520's galaxy-poor clump carries about 3 × 10¹³ suns inside 150 kpc**, of which a
    quarter is visible gas. Its lensing should follow the gas as that gas settles.
-18. **MACS J0025's clusters crossed less than about 350 million years ago.** Otherwise, in our
-   law, its north-western lensing peak would sit on the gas, where none is seen (§6.15). Its star
+18. **MACS J0025's clusters crossed less than about 400 million years ago.** Otherwise, in our
+   law, its north-western lensing peak would sit on the gas, where none is seen (§6.15). *Rev 21: its
+   radio relics and its separation date the crossing at 0.1–0.36 billion years (§6.16).* Deeper X-ray
+   data that measure the shocks' Mach numbers would pin it down. Its star
    masses set its galaxy speeds: 665 km/s with the stars on the calibrating clusters' basis, 804
    with the published masses, against 835 ± 59.
 19. **Galaxy lensing and our distance law share one scale.** Our law matches KiDS's lensing if light
@@ -2177,10 +2214,10 @@ proposals for finishing the theory.
    * *Rev 20:* with the companion's speed measured consistently, the far clusters no longer need
      heavier stars. Each cluster's star masses are now on the calibrating clusters' basis.
      MACS J0025 is the exception: its galaxy speeds prefer its published masses, which are on a
-     heavier basis, and its north-western lensing peak needs a younger collision or a third more
-     star mass.
+     heavier basis. *Rev 21:* its north-western lensing peak is settled by its age, which its shock
+     fronts put at 0.1–0.36 billion years (§6.16).
    * *Next:*
-     * MACS J0025's crossing time from its shock fronts, and its star masses from infrared light;
+     * MACS J0025's star masses from infrared light;
      * star masses from infrared light and spectra, with declared assumptions (§9.1, proposal 9);
      * Abell 520 modelled as two main clusters before the crash, not one group per clump.
 7. **Lensing speeds of the lightest spirals (§6.9).**

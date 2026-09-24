@@ -2379,3 +2379,52 @@ fixed geometry stays.
    * the speeds assumed for KiDS's red lenses (160 km/s).
 4. **MACS J0025**: its collision age and star masses decide its NW peak.
 5. **The Bullet's smaller half**, still about half its measured lensing mass.
+
+## 22. Round 12, 24 September 2026: the next steps, one at a time
+
+The request: proceed with round 11's next steps (§21.7), keeping the blog and `main` current as each one
+lands. In the order done:
+1. MACS J0025's collision dated from its own shock fronts (§22.1);
+2. the lenses' heat measured instead of assumed (§22.2);
+3. the distance law's scale, fitted jointly (§22.3);
+4. a dynamical model of the companion (§22.4).
+
+### 22.1 MACS J0025's age, from its shock fronts
+
+`code/macs_timing_v12.py` → `run-collisions-v10/macs_timing_v12.json`.
+
+Round 11 found that MACS J0025's NW lensing peak sits on its galaxies only if the collision is younger
+than about 0.35–0.40 Gyr (§21.4). The suite used 0.5 Gyr, chosen in round 8 between two kinds of
+estimate. This step measures the age with the collision's own clocks, both independent of our law:
+* **Shock fronts.** Riseley et al. 2017 (A&A 597, A96; arXiv:1611.01273) found two radio relics, the
+  usual tracers of merger shocks, NW and SE of the centre and perpendicular to the merger axis.
+  * We measured the centroids of their 325 MHz contours (the 5, 7 and 9σ levels of their low-resolution
+    map) from the centre they adopt: NW 23–25″, SE 49–51″ (150–158 and 315–326 kpc at their
+    6.416 kpc/″).
+  * The relics sit almost exactly where the galaxies are: 26″ (NW) and 56″ (SE) from the X-ray peak
+    (Bradač et al. 2008). So the shocks have not yet outrun the galaxies: a young collision.
+  * The NW relic's spectral index (α < −1.3) limits the shock to Mach < 1.87 (their eq. 1). With the
+    gas's sound speed of about 1,300 km/s (Bradač et al. 2008), a shock launched at closest approach has
+    taken at least d/(Mach c_s): 0.06–0.08 Gyr (NW) and 0.13–0.16 Gyr (SE), for Mach 1.87–1.5.
+* **Separation over speed.** The galaxy concentrations are 540 kpc apart (Bradač et al.'s units), and
+  the collision speed is about 2,000 km/s (their Sect. 3.2): 0.26 Gyr, their "a few 10⁸ years".
+* In our distances sizes are 1.36 times larger and speeds are unchanged, so the clocks read
+  **0.08–0.22 Gyr (shocks) and 0.36 Gyr (separation)**.
+* The post-starburst clock (Ma et al. 2010: 0.5–1 Gyr since first core passage) dates when star
+  formation was triggered and quenched, which can start before closest approach. It is listed, not used,
+  for the time since the gas stopped.
+
+**The suite now uses 0.3 Gyr** (`regression/t_new_collisions.py`), inside the dynamical range. The model
+at nearby ages (round-11 constants, Chabrier-basis stars):
+
+| time since closest approach | fresh companion around the gas | NW peak from its galaxies | grade |
+|---|---|---|---|
+| 0.3 Gyr (adopted) | 50 kpc | 72 kpc | pass |
+| 0.4 Gyr | 67 kpc | 70 kpc | pass |
+| 0.45 Gyr | 75 kpc | 207 kpc, at the gas | fail |
+
+The lensing masses (1.94 and 1.72 × 10¹⁴) and the galaxy speeds (665 km/s) do not depend on the age.
+So the NW peak's knife edge (0.40–0.45 Gyr) lies beyond every dynamical clock.
+
+**The suite** (full tier, baseline saved): **58 pass, 9 close, 9 fail** (round 11: 57, 9, 10). The only
+grade that moves is MACS J0025's NW peak, fail → pass.

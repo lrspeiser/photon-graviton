@@ -1,0 +1,84 @@
+{
+ "experiment": "round 12: MACS J0025's time since closest approach from its shock fronts and its separation",
+ "size_factor_static": 1.3586983211359893,
+ "clocks": {
+  "shock_NW": {
+   "relic_distance_kpc": [
+    150.1344,
+    154.62560000000002,
+    158.4752
+   ],
+   "galaxies_distance_kpc": 165.5328,
+   "age_gyr_at_mach_max": 0.06210719530579953,
+   "age_gyr_at_mach_1p5": 0.07742697014789675,
+   "age_gyr_static": [
+    0.08438494199245482,
+    0.10519989435059367
+   ]
+  },
+  "shock_SE": {
+   "relic_distance_kpc": [
+    315.02560000000005,
+    318.2336,
+    325.9328
+   ],
+   "galaxies_distance_kpc": 359.93760000000003,
+   "age_gyr_at_mach_max": 0.12860146396422478,
+   "age_gyr_at_mach_1p5": 0.1603231584087336,
+   "age_gyr_static": [
+    0.17473059318382264,
+    0.21783080616916561
+   ]
+  },
+  "separation_over_speed": {
+   "separation_kpc": 540.1336737216077,
+   "age_gyr": 0.26406925241435975,
+   "age_gyr_static": 0.35879044991902637
+  },
+  "post_starburst_not_used": {
+   "age_gyr": [
+    0.5,
+    1.0
+   ],
+   "source": "Ma et al. 2010 (MNRAS 406, 121)"
+  }
+ },
+ "dynamical_range_gyr_static": [
+  0.08438494199245482,
+  0.35879044991902637
+ ],
+ "adopted_gyr": 0.3,
+ "model_runs": [
+  {
+   "t_gyr": 0.3,
+   "fresh_companion_kpc": 49.88553704224911,
+   "peak_nw_to_galaxies": 72.16002453227483,
+   "peak_nw_grade": "pass",
+   "peak_se_to_galaxies": 22.121276269478223,
+   "M300_se": 193828384156118.62,
+   "M300_nw": 172198653880958.88,
+   "sigma_los_1p5Mpc": 665.0088323564407
+  },
+  {
+   "t_gyr": 0.4,
+   "fresh_companion_kpc": 66.51404938966549,
+   "peak_nw_to_galaxies": 70.25303631426746,
+   "peak_nw_grade": "pass",
+   "peak_se_to_galaxies": 22.05255244117925,
+   "M300_se": 193560233234081.1,
+   "M300_nw": 172399413183591.6,
+   "sigma_los_1p5Mpc": 665.0088323564407
+  },
+  {
+   "t_gyr": 0.45,
+   "fresh_companion_kpc": 74.82830556337368,
+   "peak_nw_to_galaxies": 207.0048096148137,
+   "peak_nw_grade": "fail",
+   "peak_se_to_galaxies": 22.014800923463973,
+   "M300_se": 193430542523723.5,
+   "M300_nw": 172501377871643.56,
+   "sigma_los_1p5Mpc": 665.0088323564407
+  }
+ ],
+ "seconds": 65.40786153999989
+}
