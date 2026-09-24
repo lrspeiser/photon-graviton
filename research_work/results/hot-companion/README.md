@@ -3778,8 +3778,8 @@ in their steady response):
 * Why, in one line: a plane wave A e^{ik·x} drives the radiators to B = −(ωkC₁/(4(γ + γ_i))) n̂A. The coherent
   monopole-dipole recoil, −(C₀C₁k³/(24π)) Im(s*B), is then exactly −f times the quiet channel's pull, −(C₀k/2) n̂ Im(s*A)
   (using C₁² = 48πγ/(ωk³)), and the same again on the radiators' side.
-* The rule holds at 6 and at 20 wavelengths. A full probe (γ_i = 9) gave a net pull of 4.89 × 10⁻⁴ against
-  0.8 × 6.18 × 10⁻⁴ predicted.
+* The rule holds at 6 and at 20 wavelengths. A full run with a cold source (`--set probe`: γ_i = 9, γ₀ = 0.02, round
+  15's receiver constants) gave a net pull of 4.89 × 10⁻⁴ against 0.8 × 6.18 × 10⁻⁴ = 4.94 × 10⁻⁴ from the fed power.
 * **So one kind of matter can be pulled only if its radiators send less than half of their energy into the
   companion** and keep the rest inside. With f = 1 a piece that feeds the wave is pushed. This is a new, sharp
   condition on what matter must be like, and it comes from the equations, not from a choice.

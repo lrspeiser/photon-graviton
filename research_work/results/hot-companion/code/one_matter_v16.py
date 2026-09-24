@@ -238,6 +238,10 @@ def recoil_check(g0=0.02, g=1.0):
 
 
 def configs(quick=False, which='main'):
+    if which == 'probe':
+        # the first full check of the recoil rule: round 15's receiver constants, gamma_0 = 0.02, radiators with f = 0.1
+        return [dict(Ns=48, Nr=8, Rb=3.0, rp=6.0, gamma0=0.02, gi=9.0, dt=0.02, T=6000.0, burn=3000.0, every=10,
+                     tag='cold', kind='rest', q=0.0, seed=1, set='probe')]
     if which == 'disp':
         # a cold source whose pieces are put out of tune by hand (rms Delta0 in their own rhythms), by the amounts that
         # warming produced in the main run: is being out of tune, by itself, what loses the receivers?
