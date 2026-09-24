@@ -199,7 +199,9 @@
 >     are pulled (+1.2 × 10⁻⁴). Warm source: glow ×1.2–8.1, the wave at the receivers ×√glow (2.24 at 5.00), but the
 >     sources' rhythm spread grows 4.7 × 10⁻⁴ → 3.9 × 10⁻³ and the lead falls to 0.16–0.27, so the pull stays flat
 >     (net push at k ≥ 8). Frequent collisions restore the lead (0.44). The audit's decisive test is not passed; the
->     obstacle is keeping step with warm matter.
+>     obstacle is keeping step with warm matter. With f = 0.05 the push is small and the pull net at every heat, but the
+>     rhythm spread and the lead are unchanged; a cold source detuned by hand to the same spreads loses the receivers the
+>     same way (lead 0.28 at 7 × 10⁻⁴, 0.12–0.19 at 2.4–3.9 × 10⁻³). Warm collisionless matter must stay in tune.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)

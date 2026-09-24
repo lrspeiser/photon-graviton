@@ -2804,8 +2804,24 @@ pieces settle into a common beat; a warm source's can't, and a smeared beat can'
 Collisions keep the beat: with frequent collisions the rhythms stay together, the receivers keep step (0.44) and are
 pulled as strongly as by the cold source. That matches our law's rule that colliding gas behaves as cold.
 
-*Follow-ups running:* radiators that whisper (a twentieth of their energy into the companion), and a cold source put
-out of tune by hand by the same amounts, to confirm the cause.
+**Two follow-ups.**
+* **Radiators that whisper** (a twentieth of their energy into the companion): the radiators' push shrinks four to
+  seven times, and the receivers are pulled at every heat (+1.0 to +1.6 × 10⁻⁴). That problem is solved. But warmth
+  still puts the source out of tune just as much (rhythm spread 3.5 × 10⁻⁴ → 2.2 × 10⁻³), the receivers still fall out
+  of step, and the pull still doesn't grow.
+* **The cause, confirmed:** a cold source with no heat at all, its pieces put out of tune by hand by the same amounts,
+  loses the receivers the same way: keeping step 0.28 at a spread of 7 × 10⁻⁴ (warm: 0.26), 0.12–0.19 at 2.4–3.9 × 10⁻³
+  (warm: 0.16–0.27).
+
+**Where this leaves us.** Most of the chain now stands on explicit, energy-balanced equations:
+* moving matter glows more, as σ², and collisions hold it back;
+* the glow travels as waves and reaches distant matter as its square root;
+* matter that holds energy ready to give falls into step ahead of the wave by itself and is pulled;
+* the pull pays its own bill.
+
+One link is missing, and it is now a single, measurable question: **how does warm matter keep its pieces in tune**
+closely enough for distant matter to follow its wave? Cold matter does it, and colliding matter does it. That is what we
+work on next.
 
 Scripts: `code/stream_store_v16.py`, `code/crossing_heat_v16.py`, `code/shared_wave_v16.py`, `code/one_matter_v16.py`.
 

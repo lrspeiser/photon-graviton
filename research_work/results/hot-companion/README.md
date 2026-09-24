@@ -3757,7 +3757,7 @@ is no strong-field switch.
 
 **Set-up.** 48 source pieces in a ball of radius 3 wavelengths (at least 0.15 apart), and 8 receivers of the same
 matter on a sphere of radius 6, at rest. The constants are γ₀ = 0.01, G = 4, W₀ = 1.6, g∥ = 0.01, γ_i = 4 (so
-f = 0.2), with n₀ large enough that the stores lose under 1% in a run. The sources are at rest, move freely (δ fixed,
+f = 0.2), and n₀ = 10⁵, so the stores lose at most 4% in a run. The sources are at rest, move freely (δ fixed,
 rms q per component), or collide (δ redrawn at rate ν). Each run lasts 8,000 time units and is measured over the
 second half. There are three arrangements, and the isolated-piece heat weight is k = 3q²γ/(γ₀(γ + γ_i)²).
 
@@ -3799,7 +3799,7 @@ sources" the pull on the receivers' quiet oscillation from that wave, "keeping s
 
 * **The books balance.** Energy (stores, ensembles, radiators, internal output and radiated power against the start)
   closes to 10⁻¹² with free motion and 4 × 10⁻⁷ with collisions. The forces balance the momentum carried away to the
-  accuracy of the far-field quadrature (10⁻²–6 × 10⁻², 2,000 directions around a 12-wavelength arrangement).
+  accuracy of the far-field quadrature (10⁻³–6 × 10⁻², 2,000 directions around a 12-wavelength arrangement).
 * **Same matter, pulled.** A cold source pulls distant pieces of the same matter: they fall a quarter beat ahead by
   themselves (0.55 on the sources' wave) and are pulled net, +1.21 × 10⁻⁴, after their radiators' push. The pull on the
   quiet channel is the fed power over the wave's speed, less the recoil rule's share.
@@ -3828,5 +3828,61 @@ sources" the pull on the receivers' quiet oscillation from that wave, "keeping s
     its power, as the law needs.
   * Open: distant matter has to keep step with a warm source. In this construction warmth scrambles the source's own
     beat faster than it strengthens its hold on distant matter.
-* **Follow-ups running:** radiators that send a twentieth of their energy into the companion (f = 0.05); and a cold
-  source put out of tune by hand, by the amounts warming produced, to confirm the cause.
+
+**Follow-up 1: radiators that whisper** (f = 0.05: γ_i = 19; G = 40 and W₀ = 16 so the extra drain stays small;
+dt = 0.01; two arrangements):
+
+| sources | k | glow ÷ rest | wave ÷ rest (√ glow) | pull from the sources ÷ rest | keeping step | net pull | radiators | rhythm spread |
+|---|---|---|---|---|---|---|---|---|
+| at rest | 0 | 1 | 1 | 1 | 0.40 | **+1.64 × 10⁻⁴** | −0.22 × 10⁻⁴ | 3.5 × 10⁻⁴ |
+| free, q = 1.63 | 2.0 | 1.83 | 1.18 (1.35) | 0.56 | 0.19 | **+1.00 × 10⁻⁴** | −0.25 × 10⁻⁴ | 9.3 × 10⁻⁴ |
+| free, q = 3.27 | 8.0 | 4.73 | 2.40 (2.17) | 1.05 | 0.21 | **+1.25 × 10⁻⁴** | −0.73 × 10⁻⁴ | 2.2 × 10⁻³ |
+| colliding, ν = 200 | 8.0 | 1.74 | 1.38 (1.32) | 0.84 | 0.28 | **+1.31 × 10⁻⁴** | −0.25 × 10⁻⁴ | 3.9 × 10⁻⁴ |
+
+* **The push is gone as a problem.** The radiators' push is 4–7 times smaller, and the receivers are pulled net at
+  every heat.
+* **Keeping step is not fixed.** The sources' rhythms spread just as much with warmth (3.5 × 10⁻⁴ → 2.2 × 10⁻³), the
+  receivers' lead falls (0.40 → 0.19–0.21), and the pull still doesn't grow. So the detuning does not travel through
+  the radiators' share. A likely route, still to be tested: each warm piece tugs its neighbours' quiet oscillations
+  through its stirred radiators. At a given heat weight that coupling scales as γ₀√(k/3), whatever f is.
+
+**Follow-up 2: the cause confirmed.** A cold source, no heat at all, with its pieces' own rhythms spread by hand (rms
+Δ₀), against the main run's rest (two arrangements):
+
+| cold source, rhythms spread by hand | glow ÷ rest | wave ÷ rest | sources' rhythm spread | keeping step | pull from the sources ÷ rest |
+|---|---|---|---|---|---|
+| Δ₀ = 0 (the main run) | 1 | 1 | 4.7 × 10⁻⁴ | 0.55 | 1 |
+| Δ₀ = 0.001 | 0.96 | 0.99 | 7.0 × 10⁻⁴ | 0.28 | 0.46 |
+| Δ₀ = 0.0025 | 0.83 | 1.02 | 2.4 × 10⁻³ | 0.12 | 0.21 |
+| Δ₀ = 0.004 | 0.79 | 1.03 | 3.9 × 10⁻³ | 0.19 | 0.39 |
+
+* Being out of tune, by itself, loses the receivers. It does so at the same spreads as warmth does: 0.28 at 7.0 × 10⁻⁴
+  (warm, k = 0.5: 0.26 at 7.7 × 10⁻⁴), and 0.12–0.19 at 2.4–3.9 × 10⁻³ (warm, k = 8–16: 0.27–0.16, a little better
+  because the warm wave is stronger).
+* **So the one obstacle is now pinned down:** warm, collisionless matter's pieces must stay in tune closely enough
+  (rhythm spread well below the receivers' re-timing rate, (w/2)|E|/|s|) for distant matter to follow their wave.
+
+### 26.5 Where round 16 leaves the proof
+
+| link | status after round 16 |
+|---|---|
+| the energy bill of being pulled | a·v_phase per kilogram; the galaxies allow v_phase ≲ u/2, so at most ℓ (§26.1) |
+| random motion releases companion power ∝ σ², collisions hold it back, rotation none | shown with the shared wave's energy balanced, 3.3–4.0 per doubling (§26.3), given the quiet store's gap and the mixing δ = χw. With δ measured against the flowing companion, u is one speed for both of the law's jobs (§26.2, conditional) |
+| a piece pulled by feeding a wave | exact: the fed power over the wave's speed on its quiet channel, less 2f to its own radiators' recoil (§26.4) |
+| released and cold power reach distant matter as waves, as √ of the glow | shown in one kind of matter: the wave's amplitude at the receivers ×2.24 for glow ×5.00 (§26.4) |
+| distant matter keeps step by itself | yes with a cold source (0.55) and with frequently colliding ones (0.44); **not with a warm collisionless source** (0.16–0.27), whose own pieces fall out of tune. A cold source put out of tune by hand loses the receivers the same way (§26.4) |
+| a piece's radiators | must send less than half their energy into the companion (the recoil rule); at f = 0.05 the push is small and the pull net at every heat (§26.4) |
+| the complete energy-conserving law | not yet: the pull on distant matter does not grow with the source's heat in this construction |
+| u from microscopic rates | the flow picture makes u the travel speed by construction; χ and γ still unknown |
+| the release factor (strong fields) | still separate; no strong-field switch was added |
+
+* **Suite** unchanged: 59 pass, 11 close, 7 fail (the law is unchanged).
+* **Next:**
+  1. **Keeping warm matter in tune.** The obstacle is now one number: the spread of a warm source's rhythms against
+     distant matter's re-timing rate. Test what the tugging between warm pieces depends on (the density, the size of
+     the source, whether a large source locks itself to one beat), and whether a matter rule that lets the radiators
+     shift only the store's strength, not its rhythm, keeps the beat. Then add real motion's Doppler shifts to the same
+     budget.
+  2. **A physical quiet store with a gap:** derive χ and γ.
+  3. **The crossing heat** in MACS J0025, Abell 520, El Gordo and the dwarfs.
+  4. Round 14's list: the two KiDS analyses; round 12's list.
