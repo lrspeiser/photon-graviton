@@ -1718,3 +1718,164 @@ BLOG §9.1 evaluates each in plain language. In brief:
 | 8 | Derive the constants (u² = κ/χ; a = 2ℓ/u; g_d = u²/2L_d) | fitted; clues a ≈ cα/10, g_d ≈ cα/3 with α the static redshift rate | after 1; also why L_d ≈ 2.8 kpc (barrier) and L = 0.15 pc (escape time) differ | 1 |
 | 9 | Stellar masses from non-gravitational evidence | El Gordo ×2, SLACS 1.05–1.35 Salpeter, MACS ×1 (all with ΛCDM distances) | redo with static distances and no age cap (19.4); then NIR photometry and spectra | 19.4 |
 | 10 | Derive and detect the energy cost | ℓ = 6.48 × 10⁻⁶ W/kg; Ṁ/M = −2.3 × 10⁻¹⁵ yr⁻¹ | energy and momentum balance in the toy. Already implied: the power cannot be thermal, since the Earth's 3.9 × 10¹⁹ W is 8 × 10⁵ times its internal heat flow and a 10⁻³ L☉ white dwarf's is 20 times its luminosity. The mass loss mimics Ġ/G = −2.3 × 10⁻¹⁵ yr⁻¹, about 30 times below lunar laser ranging's precision | 1 |
+
+## 20. Round 10, 24 September 2026: first principles, part 1, and our own distances
+
+The request: proceed to the next steps that solidify the theory and its first principles.
+This round takes the first step of proposal 1 (§19.5), where "the companion pulls with its
+amplitude" can come from. It tests what that step implies against the data, takes the far
+collisions and the strong lenses out of the expanding universe's distances (§19.4), and locks
+a first forecast (proposal 2).
+
+### 20.1 The pull of a locked emitter: derived, and simulated
+
+`code/first_principles_v10.py` → `run-first-principles-v10/first_principles_v10.json`.
+
+**Model.** A scalar field ψ (the companion) obeys (1/u²)ψ_tt − ∇²ψ = Σ_i q_i(t) δ(x − x_i). The
+only interaction is the local coupling q_i ψ(x_i), so a body feels F = q(t) ∇ψ_other. Each body
+is a self-sustained emitter, q = q₀ sin(ωt + φ), whose phase locks to the wave passing it, with
+offset Δ.
+
+**Exact result** (retarded field of a point source Q; A = Q/4πR is the local amplitude of ψ):
+
+  ⟨F_r⟩ = −(q₀ A / 2) [ k sin Δ + cos Δ / R ]
+
+* **Δ = +π/2**, the emitter a quarter cycle ahead of the passing wave: a pull toward the source
+  of exactly (q₀k/2) × the local amplitude, at every distance, near or far. This is postulate 4
+  with a mechanism.
+* **Δ = 0**, in step: a 1/R² pull, Newton-like. The companion gives no such term at quadrature.
+* **Δ = −π/2**, a quarter cycle behind, which is what a passive absorbing response does: a push.
+
+At Δ = +π/2 the emitter feeds the passing wave coherently at power P = F · v_phase: the pull is
+the recoil of stimulated emission.
+
+**The same from a 3D simulation of the wave equation alone.** The force law is not programmed
+in; the emitter only reads the phase of the field it sits in.
+* Grid: 192³, 16 cells per wavelength.
+* Along the grid axis, pull ÷ (q₀k/2)A is 0.97–1.04 from kR = 1.6 to 19. Along the diagonal it
+  is 0.94–0.98.
+* A·R is constant to 2% out to R = 32 cells, and within 7% out to 64 cells, next to the absorbing
+  layer.
+* The quarter-behind case is pushed with the same size of force.
+
+**Three conditions the microscopic model must meet** (derived here):
+1. **An active medium.** Matter must feed the companion a quarter cycle ahead of the wave passing
+   it, like a gain medium or a laser amplifier. Passive, absorbing matter would be pushed.
+2. **Spectral locking, for universality.**
+   * If all the emitting units in a body lock to one wave, they emit coherently. Power then grows
+     as mass², so a galaxy's extra pull would scale as v² ∝ M, against v⁴ = G M a.
+   * If they lock only weakly, the pull goes as the amplitude squared, which is Newton-like.
+   * What works: each unit locks within its own narrow frequency band. Power then stays
+     proportional to mass, and the pull stays proportional to the amplitude, with the same
+     acceleration for every body.
+3. **A slow phase.** The coherent power that pays for the pull is P = m g_extra v_phase per body.
+   With v_phase = u, that would be 0.25 / 0.75 / 1.6 / 1.1 times the base feed ℓ at
+   g_N = 10⁻¹² / 10⁻¹¹ / 10⁻¹⁰ / 3 × 10⁻¹⁰ m/s². It would amplify a galaxy's outgoing companion
+   by order unity and spoil the tight v⁴ = G M a. So v_phase ≲ 0.05 u: the companion's crests
+   must move much more slowly than its energy does.
+
+A side result: the heat weight's velocity scale in the Dicke toy (§10) is Γ/k, the locking rate
+over the wavenumber. Its travel speed is the group velocity. The law uses one u for both.
+Measuring u from travel alone (proposal 7) therefore tests something new.
+
+### 20.2 How many sources add up, and the clusters' verdict
+
+For sources with independent phases (one frequency band), the pull on a locked emitter is, in
+the Gaussian limit,
+
+  F = (√π/2) (q₀k/2) Σ_j A_j² r̂_j / √(Σ_j A_j²)
+
+Monte Carlo over 2,000 phase sets confirms it to 2–5% (one source: exact; opposite equal
+sources: 0.0003 ± 0.0005 of one source's pull).
+
+In the law's terms this is extra = √a (g_N + g_hot)/√(S_N + S), where S_N = G∫ρ/d² is the
+unsigned sum of Newtonian pulls. It equals the round-3 law for a point mass and in the outskirts.
+Inside extended systems it is weaker by the anisotropy factor √(|g_N|/S_N):
+
+| Where | factor |
+|---|---|
+| uniform sphere at r/R = 0.25 / 0.5 / 0.75 / 0.99 | 0.29 / 0.43 / 0.57 / 0.79 |
+| Milky Way plane at 4 / 8.2 / 12 / 20 / 30 kpc | 0.56 / 0.66 / 0.73 / 0.82 / 0.89 |
+| cluster-like mix at 100 / 250 / 500 / 1,000 / 1,500 kpc (derived ÷ round 3) | 0.28 / 0.39 / 0.49 / 0.59 / 0.65 |
+
+**Tested on data, it fails.**
+* **X-COP**, with a and g_d held and u refitted: best u 75 km/s, rms 0.382. The mean residual
+  runs from +0.45 at the innermost radius to −0.57 at the outermost. The round-3 rule, fitted the
+  same way, gives u 197 km/s and rms 0.227, with residuals from +0.06 to −0.19.
+* **The Milky Way** (local estimate): the Sun's speed would drop from 211 to 200 km/s.
+
+So the companion inside galaxies and clusters does not add up like independent waves. What the
+data select, round 3's rule, behaves like a single coherent flow:
+* its strength is set by all the companion present, with no penalty for arriving from many sides;
+* its direction is set by the net flow;
+* for cold matter, the density follows the net current, the way a superfluid moves as one wave.
+
+That is the target of the next toy: a coherent, condensate-like companion, tested the same way.
+The analogy is ours, from the round-3 rule. Superfluid dark-matter theories are dark-matter
+theories and are excluded.
+
+### 20.3 The far collisions and the strong lenses in the project's own distances
+
+`code/collisions_v10.py` → `run-collisions-v10/collisions_v10.json`. Every length of the round-8
+models is rescaled by the size factor, gas by the X-ray factor and stars by the luminosity factor.
+Measured lensing masses are multiplied by the lensing factor. Apertures are taken at the same
+angles. The law's physics is unchanged. Effective source redshifts are 1.2 (MACS J0025), 1.0 (Abell 520) and 1.3 (El Gordo). These are
+typical of their weak-lensing catalogues, and are to be replaced by the papers' own values. Only
+the conversion of the measured lensing masses depends on them.
+
+| | factors: size / stars / gas / lensing | Ours ÷ measured, lensing (round 8, LCDM) | Galaxy speeds, ours vs measured |
+|---|---|---|---|
+| MACS J0025, M(<300 kpc) SE / NW | 1.36 / 0.73 / 1.36 / 1.39 | 0.64 / 0.53 (0.78 / 0.61); z −0.5 / −0.9 | 707 vs 835 ± 59 km/s, z −2.2 (770) |
+| Abell 520, six clumps inside 150 kpc | 1.08 / 0.80 / 1.00 / 1.10 | P1, P2 (now inside the range), P3, P5 pass; P4 z −2.1 (−1.4); P6 z −2.6 (−2.3) | – |
+| Abell 520, inside 710 kpc | same | 0.77, z −2.1 (0.87, −1.2) | – |
+| El Gordo inside 0.5 / 1 / 1.5 Mpc | 1.58 / 0.71 / 1.68 / 1.60 | 0.66 / 0.71 / 0.76 (0.69 / 0.72 / 0.75) | NW 917, SE 822 vs 1,290 / 1,089 (944 / 839) |
+| El Gordo, twice the published stars | same | 0.92 / 0.94 / 0.98 (1.05 / 1.07 / 1.10) | NW 1,100, SE 974 (1,187 / 1,047) |
+
+* **El Gordo:** the change of distance law is nearly a wash. Its gas and size rise as its stars
+  fall. It still needs about twice the published stars, now 1.9 × 10¹³ M☉ in the static law.
+* **MACS J0025 and Abell 520** do slightly worse, though mostly still passing. Their measured
+  lensing rises by 10–39%; our lensing rises less, because their stars come out 20–27% lighter.
+* **Not yet in the suite.** It still grades the round-8 (LCDM-geometry) collisions. Switching it
+  waits on the papers' own source redshifts and on stellar masses without the age cap (§20.5).
+
+**The six strong lenses** (the suite's check now uses the static convention):
+* light = matter: −0.012 ± 0.023 dex (was −0.017 ± 0.024);
+* the stars needed: 0.465 dex above Chabrier, that is 1.44–1.95 × Salpeter per lens (was
+  1.05–1.35). Our distances give 1.48 times less starlight mass for the same light, and 1.11 times
+  more lensing mass.
+
+**What this means.** With our own distances the measured lensing masses rise by 10–60%, while the
+stars inferred from the same light fall by 20–30%. In our law the stars carry the heat, so every
+far test now leans on the stellar masses. The published ones still carry assumptions from the
+expanding-universe timeline: the age cap of §19.4, where older stars weigh more for their light.
+Redoing them is the next step.
+
+### 20.4 A locked forecast: wide binaries for Gaia DR4 (proposal 2)
+
+`code/forecast_wide_binaries_v10.py` → `forecasts/wide_binaries_gaia_dr4_v10.json`, committed
+before the data. The law is the adopted round-9 form, and the Galaxy's pull at the Sun is as in
+the suite. γ = pull ÷ Newton at 3D separation s, for solar-mass pairs:
+
+| s (AU) | 3,000 | 5,000 | 7,000 | 10,000 | 20,000 | 30,000 | 50,000 |
+|---|---|---|---|---|---|---|---|
+| adopted law | 1.002 | 1.022 | 1.039 | 1.054 | 1.093 | 1.121 | 1.155 |
+| candidate no_hold (not adopted) | 1.000 | 1.005 | 1.015 | 1.040 | 1.188 | 1.427 | 2.151 |
+
+Pairs of 1.5 and 2 suns give the same values beyond 10,000 AU. The file states what would count
+as support and as refutation, and carries a SHA-256 of the forecast
+(94a7a470953cf63cb004e7ce39b0fb188720750206c7415520c013a09da22626).
+
+### 20.5 Where this leaves the first principles
+
+* **Derived now:**
+  * the pull proportional to the companion's amplitude, from a local coupling, at every distance;
+  * the direction along the net flow;
+  * no energy exchange unless the pull is paid by coherent emission.
+* **Required of the microscopic model, now explicit:** an active medium (a quarter cycle
+  ahead), spectral locking (universality), and a slow phase (bookkeeping).
+* **Learned from the data:** the companion adds up as one coherent flow, not as independent waves.
+* **Next:**
+  1. a coherent-flow (condensate-like) toy, graded on the same X-COP and Milky Way tests;
+  2. stellar masses for the far clusters without the Big-Bang age cap;
+  3. the Bullet Cluster, KiDS and Mistele's lensing in the project's distances;
+  4. the release factor and release length from the bound-to-free transition (proposal 5).

@@ -1,0 +1,281 @@
+{
+ "forecast": "wide binary stars near the Sun (3D separation s), for Gaia DR4",
+ "law": {
+  "name": "round9",
+  "description": "the round-3 constants (run-v3) with gradual release over 0.15 pc, adopted in round 9",
+  "a_SI": 6.561190024871433e-11,
+  "g_d_SI": 2.2620116998504284e-10,
+  "u_kms": 197.41001228101223,
+  "release_length_au": 30000.0,
+  "external_hold": 1.0
+ },
+ "galaxy_newtonian_pull_at_sun_SI": 1.5846065861992513e-10,
+ "galaxy_observed_pull_at_sun_SI": 2.0906826691496655e-10,
+ "quantity": "gamma = pull between the stars / Newton (orientation-averaged); speed_ratio = sqrt(gamma)",
+ "adopted_law": {
+  "1": {
+   "1000": {
+    "gamma": 1.0,
+    "speed_ratio": 1.0
+   },
+   "2000": {
+    "gamma": 1.0,
+    "speed_ratio": 1.0
+   },
+   "3000": {
+    "gamma": 1.0016,
+    "speed_ratio": 1.0008
+   },
+   "5000": {
+    "gamma": 1.0215,
+    "speed_ratio": 1.0107
+   },
+   "7000": {
+    "gamma": 1.0389,
+    "speed_ratio": 1.0192
+   },
+   "10000": {
+    "gamma": 1.0541,
+    "speed_ratio": 1.0267
+   },
+   "15000": {
+    "gamma": 1.0753,
+    "speed_ratio": 1.037
+   },
+   "20000": {
+    "gamma": 1.0932,
+    "speed_ratio": 1.0456
+   },
+   "30000": {
+    "gamma": 1.1211,
+    "speed_ratio": 1.0588
+   },
+   "50000": {
+    "gamma": 1.1554,
+    "speed_ratio": 1.0749
+   }
+  },
+  "1.5": {
+   "1000": {
+    "gamma": 1.0,
+    "speed_ratio": 1.0
+   },
+   "2000": {
+    "gamma": 1.0,
+    "speed_ratio": 1.0
+   },
+   "3000": {
+    "gamma": 1.0003,
+    "speed_ratio": 1.0002
+   },
+   "5000": {
+    "gamma": 1.0121,
+    "speed_ratio": 1.006
+   },
+   "7000": {
+    "gamma": 1.0359,
+    "speed_ratio": 1.0178
+   },
+   "10000": {
+    "gamma": 1.0537,
+    "speed_ratio": 1.0265
+   },
+   "15000": {
+    "gamma": 1.0752,
+    "speed_ratio": 1.0369
+   },
+   "20000": {
+    "gamma": 1.0932,
+    "speed_ratio": 1.0455
+   },
+   "30000": {
+    "gamma": 1.1211,
+    "speed_ratio": 1.0588
+   },
+   "50000": {
+    "gamma": 1.1554,
+    "speed_ratio": 1.0749
+   }
+  },
+  "2": {
+   "1000": {
+    "gamma": 1.0,
+    "speed_ratio": 1.0
+   },
+   "2000": {
+    "gamma": 1.0,
+    "speed_ratio": 1.0
+   },
+   "3000": {
+    "gamma": 1.0001,
+    "speed_ratio": 1.0
+   },
+   "5000": {
+    "gamma": 1.0066,
+    "speed_ratio": 1.0033
+   },
+   "7000": {
+    "gamma": 1.0285,
+    "speed_ratio": 1.0142
+   },
+   "10000": {
+    "gamma": 1.053,
+    "speed_ratio": 1.0262
+   },
+   "15000": {
+    "gamma": 1.0751,
+    "speed_ratio": 1.0369
+   },
+   "20000": {
+    "gamma": 1.0931,
+    "speed_ratio": 1.0455
+   },
+   "30000": {
+    "gamma": 1.1211,
+    "speed_ratio": 1.0588
+   },
+   "50000": {
+    "gamma": 1.1554,
+    "speed_ratio": 1.0749
+   }
+  }
+ },
+ "candidate_no_hold_not_adopted": {
+  "note": "external hold 0, release over 200,000 AU (round 9 candidate for the dwarfs)",
+  "values": {
+   "1": {
+    "1000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "2000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "3000": {
+     "gamma": 1.0003,
+     "speed_ratio": 1.0001
+    },
+    "5000": {
+     "gamma": 1.0045,
+     "speed_ratio": 1.0023
+    },
+    "7000": {
+     "gamma": 1.0148,
+     "speed_ratio": 1.0074
+    },
+    "10000": {
+     "gamma": 1.0395,
+     "speed_ratio": 1.0195
+    },
+    "15000": {
+     "gamma": 1.1015,
+     "speed_ratio": 1.0495
+    },
+    "20000": {
+     "gamma": 1.1875,
+     "speed_ratio": 1.0897
+    },
+    "30000": {
+     "gamma": 1.4269,
+     "speed_ratio": 1.1945
+    },
+    "50000": {
+     "gamma": 2.1511,
+     "speed_ratio": 1.4667
+    }
+   },
+   "1.5": {
+    "1000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "2000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "3000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "5000": {
+     "gamma": 1.0022,
+     "speed_ratio": 1.0011
+    },
+    "7000": {
+     "gamma": 1.0093,
+     "speed_ratio": 1.0046
+    },
+    "10000": {
+     "gamma": 1.0283,
+     "speed_ratio": 1.014
+    },
+    "15000": {
+     "gamma": 1.0781,
+     "speed_ratio": 1.0383
+    },
+    "20000": {
+     "gamma": 1.1481,
+     "speed_ratio": 1.0715
+    },
+    "30000": {
+     "gamma": 1.3435,
+     "speed_ratio": 1.1591
+    },
+    "50000": {
+     "gamma": 1.9349,
+     "speed_ratio": 1.391
+    }
+   },
+   "2": {
+    "1000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "2000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "3000": {
+     "gamma": 1.0,
+     "speed_ratio": 1.0
+    },
+    "5000": {
+     "gamma": 1.0011,
+     "speed_ratio": 1.0006
+    },
+    "7000": {
+     "gamma": 1.0061,
+     "speed_ratio": 1.0031
+    },
+    "10000": {
+     "gamma": 1.0215,
+     "speed_ratio": 1.0107
+    },
+    "15000": {
+     "gamma": 1.0638,
+     "speed_ratio": 1.0314
+    },
+    "20000": {
+     "gamma": 1.1242,
+     "speed_ratio": 1.0603
+    },
+    "30000": {
+     "gamma": 1.2932,
+     "speed_ratio": 1.1372
+    },
+    "50000": {
+     "gamma": 1.8055,
+     "speed_ratio": 1.3437
+    }
+   }
+  }
+ },
+ "what_would_count": "the adopted law is supported if the measured gamma is 1.03-1.05 at s = 7,000 AU and 1.08-1.10 at 20,000 AU for solar-mass pairs (within the analysis errors); it is refuted by gamma < 1.02 or > 1.2 at 20,000 AU with errors below 0.03, or by a rise before 3,000 AU",
+ "comparison": {
+  "newton": "gamma = 1",
+  "mond_simple_quoted_in_round_6": "about 1.43 at 10,000-30,000 AU"
+ },
+ "sha256_of_forecast": "94a7a470953cf63cb004e7ce39b0fb188720750206c7415520c013a09da22626",
+ "written_at_commit": "a736dc261bde5b4781064ae1f30c90889ac29a64"
+}

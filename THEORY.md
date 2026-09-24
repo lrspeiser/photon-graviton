@@ -55,6 +55,21 @@
 >     project's static distance law, El Gordo is 1.58× larger with 1.68× the gas, so it must be
 >     redone before "twice the stars" is trusted.
 >   * The owner's ten proposals for completing the theory are evaluated in §19.5 and BLOG §9.1.
+> * **Round 10 (§20): first principles, part 1.**
+>   * Derived and simulated: a self-sustained emitter locked a quarter cycle ahead of the passing
+>     companion is pulled toward its source by (q₀k/2) × the local amplitude, at every distance.
+>     So postulate 4 has a mechanism: the recoil of coherent (stimulated) emission. In step
+>     gives a Newton-like 1/R² term; a passive, lagging response is pushed.
+>   * Required of the microscopic model: an active medium, spectral locking (universality with
+>     power ∝ mass) and v_phase ≲ 0.05 u (so the pull's coherent power does not amplify a
+>     galaxy's companion).
+>   * The clusters' verdict: independent random-phase sources would make the pull
+>     √a (g_N + g_hot)/√(S_N + S), weaker inside extended systems. On X-COP that gives rms 0.38
+>     and a strong radial trend, against 0.23 for round 3. So the companion adds up as one
+>     coherent flow. The next toy is a condensate-like companion.
+>   * Our own distances: the far collisions and SLACS redone in the static law (§20.3). El Gordo
+>     is unchanged at about twice its published stars; MACS J0025 and Abell 520 are slightly
+>     worse. SLACS light = matter holds (−0.012 dex), but its stars must be 1.44–1.95 × Salpeter.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -180,6 +195,24 @@ results README §18):
     about every 1,000 years. That is far more often than Coulomb collisions manage (their mean
     free path is ~10 kpc).
   * Plasma instabilities may supply it. If they do not, L is an escape time unrelated to λ.
+
+### Round 10: toward one microscopic interaction (the first step)
+
+* **The force of a locked emitter** (scalar field, local coupling q ψ, retarded solution):
+  ⟨F_r⟩ = −(q₀ A/2)[k sin Δ + cos Δ/R], A = Q/4πR. At Δ = +π/2 it is (q₀k/2) A toward the source,
+  at every distance; it is verified to 3% by a 3D finite-difference simulation. The emitter then
+  feeds the passing wave at P = F v_phase.
+* **Conditions:**
+  1. matter is an active medium for the companion (it leads, like a gain medium);
+  2. spectral locking, since full locking gives power ∝ M² (v² ∝ M) and weak locking gives
+     pull ∝ A²;
+  3. v_phase ≲ 0.05 u.
+* **Combination.** Random-phase sources give F ∝ Σ A_j² r̂_j/√(Σ A_j²) (Gaussian limit, confirmed by
+  Monte Carlo). That is the law with |g_N| → S_N in the root and |g_N| + |g_hot| → S_N + S in the
+  direction factor. X-COP rejects it (rms 0.38 against 0.23), so postulate 2's "in step" means a
+  coherent flow whose density follows the net current, not independent waves.
+* **Separate velocity scales.** The heat weight's scale, Γ/k from the Dicke toy, and the travel
+  speed (the group velocity) are distinct quantities that the law identifies. Proposal 7 tests it.
 
 ### What follows
 

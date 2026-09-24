@@ -70,7 +70,9 @@ def mistele(law):
 def slacs(law, ctx):
     import lenses_t35 as LT
     LT.A, LT.LAM, LT.U = law['a_code'], law['lam'], law['u_kms']
-    orig, reader = LT.patched_readers('standard'); LT.M.J.read_json = reader
+    # the project's static distances and its stellar masses converted with them (round 10; rounds 3-9 graded
+    # the flat-LCDM convention, whose gap was -0.017 +- 0.024 dex and whose stars needed 1.05-1.35 x Salpeter)
+    orig, reader = LT.patched_readers('project'); LT.M.J.read_json = reader
     try:
         lenses = [LT.M.make_lens(n) for n in LT.M.LENSES]
     finally:
@@ -81,8 +83,9 @@ def slacs(law, ctx):
     return [make('lensing.slacs_light_equals_matter', GROUP, 'SLACS: stellar mass from lensing minus from star speeds (mean of 6)', float(gaps.mean()),
                  crit=z_check(float(gaps.mean()), 0.0, se), unit='dex', target=f'0 +- {se:.3f} (the lenses\' own scatter)',
                  detail=dict(gaps=gaps.tolist()), refs='Bolton et al. 2008; Auger et al. 2009; lenses_t35.py'),
-            make('lensing.slacs_star_mass', GROUP, 'SLACS: stellar mass needed for the Einstein radii, vs Chabrier', float(dm.mean()),
-                 unit='dex', target='Salpeter is +0.25; the IMF trend of Posacki et al. 2015 is derived with dark haloes', crit=('info', None))]
+            make('lensing.slacs_star_mass', GROUP, 'SLACS: stellar mass needed for the Einstein radii, vs Chabrier (static distances)', float(dm.mean()),
+                 unit='dex', target='Salpeter is +0.25; the IMF trend of Posacki et al. 2015 is derived with dark haloes', crit=('info', None),
+                 detail=dict(per_lens=dm.tolist(), salpeter_factor=[float(10 ** (x - 0.25)) for x in dm]))]
 
 
 def point_lenses(law):

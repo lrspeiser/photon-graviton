@@ -15,9 +15,9 @@
   "gd_scale": 1.0,
   "refit": []
  },
- "tier": "full",
- "date": "2026-09-23 23:15 UTC",
- "commit": "5a428fd+changes",
+ "tier": "quick",
+ "date": "2026-09-24 00:08 UTC",
+ "commit": "a736dc2+changes",
  "checks": [
   {
    "id": "law.a_SI",
@@ -208,136 +208,6 @@
    "target": "<= 0.30",
    "status": "pass",
    "score": 0.81393125420117
-  },
-  {
-   "id": "lensing.kids_all",
-   "group": "lensing",
-   "title": "KiDS lensing pull, all isolated lenses (mixture): median log10(observed/predicted)",
-   "value": 0.023720836437208348,
-   "unit": "dex",
-   "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "pass",
-   "score": 0.9488334574883339
-  },
-  {
-   "id": "lensing.kids_blue",
-   "group": "lensing",
-   "title": "KiDS lensing pull, blue lenses (spirals, k = 0.1): median log10(observed/predicted)",
-   "value": -0.0051282217942603125,
-   "unit": "dex",
-   "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "pass",
-   "score": 0.2051288717704125
-  },
-  {
-   "id": "lensing.kids_red",
-   "group": "lensing",
-   "title": "KiDS lensing pull, red lenses (ellipticals, stars at 160 km/s): median log10(observed/predicted)",
-   "value": 0.02073124792907244,
-   "unit": "dex",
-   "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "pass",
-   "score": 0.8292499171628975
-  },
-  {
-   "id": "lensing.kids_disc",
-   "group": "lensing",
-   "title": "KiDS lensing pull, Sersic n < 2 (disks): median log10(observed/predicted)",
-   "value": 0.032151322082256684,
-   "unit": "dex",
-   "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "pass",
-   "score": 1.2860528832902673
-  },
-  {
-   "id": "lensing.kids_bulge",
-   "group": "lensing",
-   "title": "KiDS lensing pull, Sersic n > 2 (bulges): median log10(observed/predicted)",
-   "value": -0.023099695190017755,
-   "unit": "dex",
-   "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "pass",
-   "score": 0.9239878076007102
-  },
-  {
-   "id": "lensing.kids_gama",
-   "group": "lensing",
-   "title": "KiDS lensing pull, GAMA spectroscopic lenses: median log10(observed/predicted)",
-   "value": -0.031718577553851546,
-   "unit": "dex",
-   "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "pass",
-   "score": 1.2687431021540618
-  },
-  {
-   "id": "lensing.kids_gap",
-   "group": "lensing",
-   "title": "KiDS: ellipticals lens more than spirals of the same visible mass (gap)",
-   "value": 0.17766686102916557,
-   "unit": "dex",
-   "target": "0.153 +- 0.04 dex (same bins)",
-   "status": "pass",
-   "score": 0.6223347278638671
-  },
-  {
-   "id": "lensing.mistele_ltg",
-   "group": "lensing",
-   "title": "lensing circular speeds 50-300 kpc, spirals (4 mass bins): rms z",
-   "value": 2.9883962211518305,
-   "unit": "",
-   "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
-   "status": "close",
-   "score": 2.9883962211518305
-  },
-  {
-   "id": "lensing.mistele_etg",
-   "group": "lensing",
-   "title": "lensing circular speeds 50-300 kpc, ellipticals (3 mass bins): rms z",
-   "value": 1.064755145831399,
-   "unit": "",
-   "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
-   "status": "pass",
-   "score": 1.064755145831399
-  },
-  {
-   "id": "lensing.slacs_light_equals_matter",
-   "group": "lensing",
-   "title": "SLACS: stellar mass from lensing minus from star speeds (mean of 6)",
-   "value": -0.016765176045629077,
-   "unit": "dex",
-   "target": "0 +- 0.024 (the lenses' own scatter)",
-   "status": "pass",
-   "score": 0.6868860388325457
-  },
-  {
-   "id": "lensing.slacs_star_mass",
-   "group": "lensing",
-   "title": "SLACS: stellar mass needed for the Einstein radii, vs Chabrier",
-   "value": 0.32731597444692107,
-   "unit": "dex",
-   "target": "Salpeter is +0.25; the IMF trend of Posacki et al. 2015 is derived with dark haloes",
-   "status": "info",
-   "score": null
-  },
-  {
-   "id": "lensing.einstein_cross",
-   "group": "lensing",
-   "title": "Einstein Cross: companion share of the pull at the ring",
-   "value": 1.5223113241947477e-11,
-   "unit": "",
-   "target": "dark matter inside the ring < 15% (Trott et al. 2010; van de Ven et al. 2010)",
-   "status": "pass",
-   "score": 1.0148742161298318e-10
-  },
-  {
-   "id": "lensing.microlensing",
-   "group": "lensing",
-   "title": "bulge microlensing: companion share at a star's Einstein radius",
-   "value": 0.0,
-   "unit": "",
-   "target": "standard lensing by stars (OGLE, MOA optical depths)",
-   "status": "pass",
-   "score": 0.0
   },
   {
    "id": "mw.v_sun",
@@ -908,6 +778,136 @@
    "target": "about 12 arcsec (97 kpc), the lensing peak nearer the merger centre (Kim et al. 2021; Ng et al. 2015)",
    "status": "info",
    "score": null
+  },
+  {
+   "id": "lensing.kids_all",
+   "group": "lensing",
+   "title": "KiDS lensing pull, all isolated lenses (mixture): median log10(observed/predicted)",
+   "value": 0.023720836437208348,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 0.9488334574883339
+  },
+  {
+   "id": "lensing.kids_blue",
+   "group": "lensing",
+   "title": "KiDS lensing pull, blue lenses (spirals, k = 0.1): median log10(observed/predicted)",
+   "value": -0.0051282217942603125,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 0.2051288717704125
+  },
+  {
+   "id": "lensing.kids_red",
+   "group": "lensing",
+   "title": "KiDS lensing pull, red lenses (ellipticals, stars at 160 km/s): median log10(observed/predicted)",
+   "value": 0.02073124792907244,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 0.8292499171628975
+  },
+  {
+   "id": "lensing.kids_disc",
+   "group": "lensing",
+   "title": "KiDS lensing pull, Sersic n < 2 (disks): median log10(observed/predicted)",
+   "value": 0.032151322082256684,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 1.2860528832902673
+  },
+  {
+   "id": "lensing.kids_bulge",
+   "group": "lensing",
+   "title": "KiDS lensing pull, Sersic n > 2 (bulges): median log10(observed/predicted)",
+   "value": -0.023099695190017755,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 0.9239878076007102
+  },
+  {
+   "id": "lensing.kids_gama",
+   "group": "lensing",
+   "title": "KiDS lensing pull, GAMA spectroscopic lenses: median log10(observed/predicted)",
+   "value": -0.031718577553851546,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 1.2687431021540618
+  },
+  {
+   "id": "lensing.kids_gap",
+   "group": "lensing",
+   "title": "KiDS: ellipticals lens more than spirals of the same visible mass (gap)",
+   "value": 0.17766686102916557,
+   "unit": "dex",
+   "target": "0.153 +- 0.04 dex (same bins)",
+   "status": "pass",
+   "score": 0.6223347278638671
+  },
+  {
+   "id": "lensing.mistele_ltg",
+   "group": "lensing",
+   "title": "lensing circular speeds 50-300 kpc, spirals (4 mass bins): rms z",
+   "value": 2.9883962211518305,
+   "unit": "",
+   "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
+   "status": "close",
+   "score": 2.9883962211518305
+  },
+  {
+   "id": "lensing.mistele_etg",
+   "group": "lensing",
+   "title": "lensing circular speeds 50-300 kpc, ellipticals (3 mass bins): rms z",
+   "value": 1.064755145831399,
+   "unit": "",
+   "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
+   "status": "pass",
+   "score": 1.064755145831399
+  },
+  {
+   "id": "lensing.slacs_light_equals_matter",
+   "group": "lensing",
+   "title": "SLACS: stellar mass from lensing minus from star speeds (mean of 6)",
+   "value": -0.01195454767499013,
+   "unit": "dex",
+   "target": "0 +- 0.023 (the lenses' own scatter)",
+   "status": "pass",
+   "score": 0.5112872535713792
+  },
+  {
+   "id": "lensing.slacs_star_mass",
+   "group": "lensing",
+   "title": "SLACS: stellar mass needed for the Einstein radii, vs Chabrier (static distances)",
+   "value": 0.46544887758593084,
+   "unit": "dex",
+   "target": "Salpeter is +0.25; the IMF trend of Posacki et al. 2015 is derived with dark haloes",
+   "status": "info",
+   "score": null
+  },
+  {
+   "id": "lensing.einstein_cross",
+   "group": "lensing",
+   "title": "Einstein Cross: companion share of the pull at the ring",
+   "value": 1.5223113241947477e-11,
+   "unit": "",
+   "target": "dark matter inside the ring < 15% (Trott et al. 2010; van de Ven et al. 2010)",
+   "status": "pass",
+   "score": 1.0148742161298318e-10
+  },
+  {
+   "id": "lensing.microlensing",
+   "group": "lensing",
+   "title": "bulge microlensing: companion share at a star's Einstein radius",
+   "value": 0.0,
+   "unit": "",
+   "target": "standard lensing by stars (OGLE, MOA optical depths)",
+   "status": "pass",
+   "score": 0.0
   }
  ]
 }

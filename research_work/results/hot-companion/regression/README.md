@@ -80,7 +80,7 @@ standard errors, or its value over a limit. Against the baseline each check is m
 | machinery | the standing rule (not MOND, Newton or dark matter: the formula guard); the switch-off in strong pulls; the constants and energy budget (tracked) | `research_work/tools/formula_guard.py` |
 | galaxies | SPARC typical speed miss (all, test, validation) against MOND's; median residual overall and where the switch-off acts; bulge-dominated galaxies | Lelli et al. 2016 |
 | clusters | X-COP mass miss and its trend with radius; the u X-COP prefers; held-out miss over 924 half splits (full tier) | Ettori et al. 2019; Ghizzardi et al. 2021 |
-| lensing | KiDS-1000 lensing pull for six samples and the early/late gap; lensing circular speeds of spirals and ellipticals; SLACS light = matter; Einstein Cross; microlensing | Brouwer et al. 2021; Mistele et al. 2024; Auger et al. 2009 |
+| lensing | KiDS-1000 lensing pull for six samples and the early/late gap; lensing circular speeds of spirals and ellipticals; SLACS light = matter (the project's static distances since round 10); Einstein Cross; microlensing | Brouwer et al. 2021; Mistele et al. 2024; Auger et al. 2009 |
 | milky_way | speed at the Sun; 15–27 kpc curve (four Gaia analyses); vertical pull at 1.1 kpc; mass inside 20/50/100/200 kpc; escape speed; inner Galaxy | `data/mw_literature_v7.json` |
 | dwarfs | speed spread of ten dwarf spheroidals, with the Galaxy's pull and heat | `data/mw_dwarfs.json` |
 | precision | planets, S2, the Double Pulsar, light bending, Cassini's Q2; wide binaries (pass between the two published analyses, 1.0–1.5) | Hees et al. 2014; Chae 2023–24; Banik et al. 2024 |
@@ -141,6 +141,11 @@ Round 9 adds that the adopted release length, if it is 0.5 pc or more, protects 
 whatever the hold. So the dwarfs' hold no longer has to depend on speed to spare the binaries,
 although it still needs a physical reason (results README §19.2).
 
-**Known borrowed assumptions** (results README §19.4): the collisions use flat-ΛCDM distances and
-published masses computed with them, and the SLACS check grades the ΛCDM convention. Moving them
-to the project's static distance law is the first item of the plan.
+**Known borrowed assumptions** (results README §19.4, §20.3):
+* The SLACS check moved to the project's static distances in round 10: light = matter −0.012 dex;
+  the stars needed are 1.44–1.95 × Salpeter.
+* The three collisions still use flat-ΛCDM distances. Their static version is in
+  `code/collisions_v10.py`, and the switch waits on the papers' source redshifts and on stellar
+  masses without the Big-Bang age cap.
+* The Bullet Cluster, KiDS, Mistele and X-COP comparisons still use the papers' ΛCDM
+  conversions.

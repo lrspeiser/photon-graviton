@@ -18,7 +18,7 @@ GROUP = 'precision'
 G, MSUN, AU, CL, YR, KPC = 6.674e-11, 1.989e30, 1.496e11, 2.99792458e8, 3.156e7, 3.0857e19
 
 
-def sun_in_galaxy(M, ge, S, H, L_au, a, gd, rmin_au=10.0, rmax_au=1e9, n_r=8000, n_mu=800):
+def sun_in_galaxy(M, ge, S, H, L_au, a, gd, rmin_au=10.0, rmax_au=1e9, n_r=8000, n_mu=800, seps_au=(3000, 7000, 20000)):
     mu, w = np.polynomial.legendre.leggauss(n_mu)
     r = np.geomspace(rmin_au, rmax_au, n_r) * AU
     gi = G * M / r ** 2
@@ -39,7 +39,7 @@ def sun_in_galaxy(M, ge, S, H, L_au, a, gd, rmin_au=10.0, rmax_au=1e9, n_r=8000,
     Q2 = 3 * G * np.trapezoid(2 * np.pi * (rho * P2[None, :] * w[None, :]).sum(1) / r, r)
     iso = 2 * np.pi * (rho * w[None, :]).sum(1) * r ** 2
     Mph = np.concatenate([[0], np.cumsum(0.5 * (iso[1:] + iso[:-1]) * np.diff(r))])
-    boost = {k: float(1 + np.interp(k * AU, r, Mph) / M) for k in (3000, 7000, 20000)}
+    boost = {k: float(1 + np.interp(k * AU, r, Mph) / M) for k in seps_au}
     return float(Q2), boost
 
 

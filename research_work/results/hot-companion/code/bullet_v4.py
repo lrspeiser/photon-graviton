@@ -47,11 +47,11 @@ def shells_on(r, dr, c):
     return c['M'] / B.mass3d(prof, (c['scale'],), c['rt']) * prof(r, c['scale'], c['rt']) * 4 * np.pi * r ** 2 * dr
 
 
-def own_sigma_multi(gas_list, star_list, consts, n=500, iters=400):
+def own_sigma_multi(gas_list, star_list, consts, n=500, iters=400, rmax=3000.0):
     """Stars' dispersion (all stellar components together) from the isotropic Jeans equation in
     the gravity our law makes from this cluster's own gas and stars, iterated to a fixed point."""
     a, lam, u = consts['a_code'], consts['lam'], consts['u_kms']
-    r = np.geomspace(1.0, 3000.0, n); dr = np.gradient(r)
+    r = np.geomspace(1.0, rmax, n); dr = np.gradient(r)
     dmg = sum(shells_on(r, dr, c) for c in gas_list); dms = sum(shells_on(r, dr, c) for c in star_list)
     gN = G * np.cumsum(dmg + dms) / r ** 2
     W = L.shell_weights(r, r); rho_s = dms / (4 * np.pi * r ** 2 * dr)

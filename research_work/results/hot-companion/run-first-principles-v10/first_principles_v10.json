@@ -1,0 +1,569 @@
+{
+ "experiment": "round 10: the pull of a locked emitter, from one local coupling",
+ "A_analytic": {
+  "formula": "<F_r> = -(q0 A/2) [k sin Delta + cos Delta / R], A = Q/(4 pi R)",
+  "rows": [
+   {
+    "kR": 0.5,
+    "quarter_ahead_force_over_amplitude": 0.5000000000000001,
+    "in_step_force_over_amplitude": 1.0,
+    "quarter_behind_force_over_amplitude": -0.4999999999999999,
+    "quarter_ahead_power_over_force_times_u": 0.9999999999999998
+   },
+   {
+    "kR": 1,
+    "quarter_ahead_force_over_amplitude": 0.5,
+    "in_step_force_over_amplitude": 0.5,
+    "quarter_behind_force_over_amplitude": -0.4999999999999999,
+    "quarter_ahead_power_over_force_times_u": 1.0
+   },
+   {
+    "kR": 2,
+    "quarter_ahead_force_over_amplitude": 0.5,
+    "in_step_force_over_amplitude": 0.25,
+    "quarter_behind_force_over_amplitude": -0.5,
+    "quarter_ahead_power_over_force_times_u": 1.0
+   },
+   {
+    "kR": 5,
+    "quarter_ahead_force_over_amplitude": 0.5,
+    "in_step_force_over_amplitude": 0.1,
+    "quarter_behind_force_over_amplitude": -0.5,
+    "quarter_ahead_power_over_force_times_u": 1.0
+   },
+   {
+    "kR": 10,
+    "quarter_ahead_force_over_amplitude": 0.5,
+    "in_step_force_over_amplitude": 0.05,
+    "quarter_behind_force_over_amplitude": -0.5,
+    "quarter_ahead_power_over_force_times_u": 1.0
+   },
+   {
+    "kR": 30,
+    "quarter_ahead_force_over_amplitude": 0.5,
+    "in_step_force_over_amplitude": 0.016666666666666666,
+    "quarter_behind_force_over_amplitude": -0.5,
+    "quarter_ahead_power_over_force_times_u": 1.0
+   },
+   {
+    "kR": 100,
+    "quarter_ahead_force_over_amplitude": 0.5,
+    "in_step_force_over_amplitude": 0.005,
+    "quarter_behind_force_over_amplitude": -0.5,
+    "quarter_ahead_power_over_force_times_u": 1.0
+   }
+  ]
+ },
+ "B_simulation": {
+  "grid": 192,
+  "wavelength_cells": 16.0,
+  "dt": 0.45,
+  "k_discrete_x": 0.39474629243049764,
+  "seconds": 157.19417468200004,
+  "rows": [
+   {
+    "direction": "x axis",
+    "R_cells": 4.0,
+    "kR": 1.5789851697219905,
+    "amplitude": 0.018667845865877747,
+    "amplitude_times_R": 0.07467138346351099,
+    "pull_quarter_ahead": 0.0038241947830683774,
+    "theory_quarter_ahead": 0.003684531471609617,
+    "ratio_quarter_ahead": 1.0379053110374838,
+    "pull_in_step": 0.0023414882294812834,
+    "theory_in_step": 0.0023334807332347184,
+    "ratio_in_step": 1.0034315673288055,
+    "push_quarter_behind": 0.0038241947830683523
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 5.0,
+    "kR": 1.9737314621524882,
+    "amplitude": 0.014877912639939235,
+    "amplitude_times_R": 0.07438956319969618,
+    "pull_quarter_ahead": 0.0029982616762153536,
+    "theory_quarter_ahead": 0.0029365004268604254,
+    "ratio_quarter_ahead": 1.0210322630264217,
+    "pull_in_step": 0.0014493801809081015,
+    "theory_in_step": 0.0014877912639939235,
+    "ratio_in_step": 0.9741824784058022,
+    "push_quarter_behind": 0.002998261676215338
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 6.0,
+    "kR": 2.368477754582986,
+    "amplitude": 0.01236914137992119,
+    "amplitude_times_R": 0.07421484827952714,
+    "pull_quarter_ahead": 0.002458859914357851,
+    "theory_quarter_ahead": 0.0024413363501362695,
+    "ratio_quarter_ahead": 1.007177857414282,
+    "pull_in_step": 0.0009853187422696277,
+    "theory_in_step": 0.001030761781660099,
+    "ratio_in_step": 0.9559131506435145,
+    "push_quarter_behind": 0.0024588599143578406
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 8.0,
+    "kR": 3.157970339443981,
+    "amplitude": 0.0092583805241759,
+    "amplitude_times_R": 0.0740670441934072,
+    "pull_quarter_ahead": 0.0018145956531576092,
+    "theory_quarter_ahead": 0.001827355692914582,
+    "ratio_quarter_ahead": 0.99301721071248,
+    "pull_in_step": 0.0005418487104291766,
+    "theory_in_step": 0.0005786487827609938,
+    "ratio_in_step": 0.9364034394814977,
+    "push_quarter_behind": 0.001814595653157603
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 10.0,
+    "kR": 3.9474629243049764,
+    "amplitude": 0.007427907474423557,
+    "amplitude_times_R": 0.07427907474423556,
+    "pull_quarter_ahead": 0.0014413763133544761,
+    "theory_quarter_ahead": 0.0014660694680227403,
+    "ratio_quarter_ahead": 0.983156899992217,
+    "pull_in_step": 0.00033882602690832374,
+    "theory_in_step": 0.00037139537372117787,
+    "ratio_in_step": 0.9123054590407867,
+    "push_quarter_behind": 0.0014413763133544724
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 12.0,
+    "kR": 4.736955509165972,
+    "amplitude": 0.006217204427699124,
+    "amplitude_times_R": 0.07460645313238949,
+    "pull_quarter_ahead": 0.001190160943173667,
+    "theory_quarter_ahead": 0.0012271091985583515,
+    "ratio_quarter_ahead": 0.9698900021056867,
+    "pull_in_step": 0.0002395361938084748,
+    "theory_in_step": 0.0002590501844874635,
+    "ratio_in_step": 0.9246710025796834,
+    "push_quarter_behind": 0.0011901609431736644
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 16.0,
+    "kR": 6.315940678887962,
+    "amplitude": 0.004560544589822919,
+    "amplitude_times_R": 0.07296871343716671,
+    "pull_quarter_ahead": 0.0008901457823140571,
+    "theory_quarter_ahead": 0.000900129034148281,
+    "ratio_quarter_ahead": 0.9889090880801659,
+    "pull_in_step": 0.00014824964304875133,
+    "theory_in_step": 0.00014251701843196623,
+    "ratio_in_step": 1.0402241408068869,
+    "push_quarter_behind": 0.0008901457823140555
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 20.0,
+    "kR": 7.894925848609953,
+    "amplitude": 0.0036522560680343373,
+    "amplitude_times_R": 0.07304512136068675,
+    "pull_quarter_ahead": 0.0007063666220731812,
+    "theory_quarter_ahead": 0.000720857270931671,
+    "ratio_quarter_ahead": 0.9798980332961595,
+    "pull_in_step": 7.704313693497666e-05,
+    "theory_in_step": 9.130640170085843e-05,
+    "ratio_in_step": 0.8437868046469335,
+    "push_quarter_behind": 0.0007063666220731802
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 24.0,
+    "kR": 9.473911018331943,
+    "amplitude": 0.0030475342716824038,
+    "amplitude_times_R": 0.0731408225203777,
+    "pull_quarter_ahead": 0.0005960059907795069,
+    "theory_quarter_ahead": 0.0006015014274007529,
+    "ratio_quarter_ahead": 0.9908638011966269,
+    "pull_in_step": 5.557011052460987e-05,
+    "theory_in_step": 6.349029732671674e-05,
+    "ratio_in_step": 0.8752535877828681,
+    "push_quarter_behind": 0.000596005990779506
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 32.0,
+    "kR": 12.631881357775924,
+    "amplitude": 0.0022834683768313854,
+    "amplitude_times_R": 0.07307098805860433,
+    "pull_quarter_ahead": 0.00044785416191568683,
+    "theory_quarter_ahead": 0.00045069533781823794,
+    "ratio_quarter_ahead": 0.9936960166566069,
+    "pull_in_step": 4.789260976236023e-05,
+    "theory_in_step": 3.56791933879904e-05,
+    "ratio_in_step": 1.3423120091745364,
+    "push_quarter_behind": 0.0004478541619156864
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 40.0,
+    "kR": 15.789851697219905,
+    "amplitude": 0.0017657395277309003,
+    "amplitude_times_R": 0.070629581109236,
+    "pull_quarter_ahead": 0.00035928563553739716,
+    "theory_quarter_ahead": 0.0003485095659848754,
+    "ratio_quarter_ahead": 1.0309204412282602,
+    "pull_in_step": 2.379218656435554e-05,
+    "theory_in_step": 2.2071744096636255e-05,
+    "ratio_in_step": 1.0779477353573286,
+    "push_quarter_behind": 0.00035928563553739695
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 48.0,
+    "kR": 18.947822036663887,
+    "amplitude": 0.0015350121375047718,
+    "amplitude_times_R": 0.07368058260022904,
+    "pull_quarter_ahead": 0.00030477935358151533,
+    "theory_quarter_ahead": 0.00030297017505791094,
+    "ratio_quarter_ahead": 1.0059714740015533,
+    "pull_in_step": 2.2457753379707006e-05,
+    "theory_in_step": 1.5989709765674706e-05,
+    "ratio_in_step": 1.4045128841498626,
+    "push_quarter_behind": 0.0003047793535815152
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 56.0,
+    "kR": 22.105792376107868,
+    "amplitude": 0.0012329096443819436,
+    "amplitude_times_R": 0.06904294008538883,
+    "pull_quarter_ahead": 0.00025996015665977646,
+    "theory_quarter_ahead": 0.00024334325551078777,
+    "ratio_quarter_ahead": 1.0682858504301223,
+    "pull_in_step": 2.378399047332433e-05,
+    "theory_in_step": 1.1008121824838781e-05,
+    "ratio_in_step": 2.16058568861929,
+    "push_quarter_behind": 0.00025996015665977624
+   },
+   {
+    "direction": "x axis",
+    "R_cells": 64.0,
+    "kR": 25.26376271555185,
+    "amplitude": 0.0010911095621232957,
+    "amplitude_times_R": 0.06983101197589092,
+    "pull_quarter_ahead": 0.00023129216615070612,
+    "theory_quarter_ahead": 0.00021535572714181735,
+    "ratio_quarter_ahead": 1.0740005349307205,
+    "pull_in_step": 1.1770852449116167e-05,
+    "theory_in_step": 8.524293454088247e-06,
+    "ratio_in_step": 1.3808595999790307,
+    "push_quarter_behind": 0.00023129216615070598
+   },
+   {
+    "direction": "diagonal",
+    "R_cells": 8.485281374238571,
+    "kR": 3.349533362710234,
+    "amplitude": 0.008821399053774062,
+    "amplitude_times_R": 0.07485205308571481,
+    "pull_quarter_ahead": 0.0017038899872920486,
+    "theory_quarter_ahead": 0.0017411072852636055,
+    "ratio_quarter_ahead": 0.9786243511318591,
+    "pull_in_step": 0.00052654607164396,
+    "theory_in_step": 0.0005198059242063528,
+    "ratio_in_step": 1.0129666614475359,
+    "push_quarter_behind": 0.0017038899872920425
+   },
+   {
+    "direction": "diagonal",
+    "R_cells": 16.970562748477143,
+    "kR": 6.699066725420468,
+    "amplitude": 0.004401779526720738,
+    "amplitude_times_R": 0.0747006756631763,
+    "pull_quarter_ahead": 0.0008502526379857997,
+    "theory_quarter_ahead": 0.000868793074134741,
+    "ratio_quarter_ahead": 0.9786595488604622,
+    "pull_in_step": 0.0001477201889042331,
+    "theory_in_step": 0.00012968867302634772,
+    "ratio_in_step": 1.1390369371288276,
+    "push_quarter_behind": 0.0008502526379857982
+   },
+   {
+    "direction": "diagonal",
+    "R_cells": 33.941125496954285,
+    "kR": 13.398133450840936,
+    "amplitude": 0.0022640589797235447,
+    "amplitude_times_R": 0.0768447099633031,
+    "pull_quarter_ahead": 0.0004239027684771948,
+    "theory_quarter_ahead": 0.00044686444404492225,
+    "ratio_quarter_ahead": 0.948616015720823,
+    "pull_in_step": 2.9566612935482715e-05,
+    "theory_in_step": 3.33527386993503e-05,
+    "ratio_in_step": 0.8864823126521439,
+    "push_quarter_behind": 0.00042390276847719435
+   },
+   {
+    "direction": "diagonal",
+    "R_cells": 56.568542494923804,
+    "kR": 22.330222418068224,
+    "amplitude": 0.0013586250056022526,
+    "amplitude_times_R": 0.07685543636407711,
+    "pull_quarter_ahead": 0.00025093938713713343,
+    "theory_quarter_ahead": 0.00026815609188242666,
+    "ratio_quarter_ahead": 0.9357959588967983,
+    "pull_in_step": 2.9442484235259933e-05,
+    "theory_in_step": 1.2008661931887048e-05,
+    "ratio_in_step": 2.4517705971120898,
+    "push_quarter_behind": 0.0002509393871371331
+   }
+  ]
+ },
+ "C_many_sources": [
+  {
+   "config": "one source",
+   "n_sources": 1,
+   "anisotropy_net_over_scalar": 1.0,
+   "mean_force_along_net": 0.000663145596216255,
+   "se": 5.456978129907145e-19,
+   "round3_rule": 0.0006631455962162307,
+   "derived_rule": 0.0005876974828622462,
+   "ratio_to_round3": 1.0000000000000369,
+   "ratio_to_derived": 1.128379167095554
+  },
+  {
+   "config": "two equal, opposite sides",
+   "n_sources": 2,
+   "anisotropy_net_over_scalar": 0.0,
+   "mean_force_magnitude_over_one_source_pull": 0.0003379945726519707,
+   "se_over_one_source_pull": 0.0005205418195927343,
+   "round3_rule": 0.0,
+   "derived_rule": 0.0,
+   "ratio_to_round3": null,
+   "ratio_to_derived": null
+  },
+  {
+   "config": "two, same side",
+   "n_sources": 2,
+   "anisotropy_net_over_scalar": 1.0,
+   "mean_force_along_net": 0.0005786756968120123,
+   "se": 5.792115704221102e-06,
+   "round3_rule": 0.0006369305460118506,
+   "derived_rule": 0.0005644649995190286,
+   "ratio_to_round3": 0.9085381450699738,
+   "ratio_to_derived": 1.0251755154085593
+  },
+  {
+   "config": "3000-part clump seen from outside",
+   "n_sources": 3000,
+   "anisotropy_net_over_scalar": 0.9993687959744724,
+   "mean_force_along_net": 0.0001796185723019635,
+   "se": 2.1149175301602435e-06,
+   "round3_rule": 0.0001988566285944798,
+   "derived_rule": 0.00017617647058062845,
+   "ratio_to_round3": 0.9032566506407605,
+   "ratio_to_derived": 1.0195378060985718
+  },
+  {
+   "config": "inside a uniform sphere (r = R/2)",
+   "n_sources": 6000,
+   "anisotropy_net_over_scalar": 0.20292917668320418,
+   "mean_force_along_net": 2.850486973536561e-05,
+   "se": 2.4921897187265995e-06,
+   "round3_rule": 7.061460437583505e-05,
+   "derived_rule": 2.8191080236649005e-05,
+   "ratio_to_round3": 0.40366819282386623,
+   "ratio_to_derived": 1.0111308079038657
+  },
+  {
+   "config": "in an exponential disk, R = 1 scale lengths",
+   "n_sources": 8000,
+   "anisotropy_net_over_scalar": 0.3530775245647646,
+   "mean_force_along_net": 1.547160175546573e-05,
+   "se": 7.81644779565587e-07,
+   "round3_rule": 3.0277341548583566e-05,
+   "derived_rule": 1.594401584248818e-05,
+   "ratio_to_round3": 0.5109960440430253,
+   "ratio_to_derived": 0.9703704454580667
+  },
+  {
+   "config": "in an exponential disk, R = 2 scale lengths",
+   "n_sources": 8000,
+   "anisotropy_net_over_scalar": 0.32796699400891166,
+   "mean_force_along_net": 8.739887449192008e-06,
+   "se": 4.668314401202338e-07,
+   "round3_rule": 1.769787983754982e-05,
+   "derived_rule": 8.982169627333369e-06,
+   "ratio_to_round3": 0.4938381054350068,
+   "ratio_to_derived": 0.9730263190082629
+  },
+  {
+   "config": "in an exponential disk, R = 4 scale lengths",
+   "n_sources": 8000,
+   "anisotropy_net_over_scalar": 0.6420753523385833,
+   "mean_force_along_net": 7.877553055298133e-06,
+   "se": 1.8498268383165215e-07,
+   "round3_rule": 1.0784247910054534e-05,
+   "derived_rule": 7.658219377575845e-06,
+   "ratio_to_round3": 0.7304684685478727,
+   "ratio_to_derived": 1.0286402970336057
+  }
+ ],
+ "D_bookkeeping": {
+  "note": "power per kg fed coherently = g_extra * v_phase; spontaneous = l = a u / 2; ratio = 2 g_extra v_phase / (a u)",
+  "rows": [
+   {
+    "g_N": 1e-12,
+    "g_extra": 8.06438679940179e-12,
+    "stimulated_over_spontaneous_if_vphase_eq_u": 0.2458208577661127
+   },
+   {
+    "g_N": 1e-11,
+    "g_extra": 2.4507089044753875e-11,
+    "stimulated_over_spontaneous_if_vphase_eq_u": 0.7470318326966636
+   },
+   {
+    "g_N": 1e-10,
+    "g_extra": 5.2058963355606304e-11,
+    "stimulated_over_spontaneous_if_vphase_eq_u": 1.5868756478098316
+   },
+   {
+    "g_N": 3e-10,
+    "g_extra": 3.724470671966381e-11,
+    "stimulated_over_spontaneous_if_vphase_eq_u": 1.1353034000990885
+   }
+  ]
+ },
+ "E_anisotropy": {
+  "uniform_sphere": [
+   {
+    "x": 0.25,
+    "ratio": 0.08512965222373135,
+    "anisotropy_factor": 0.29176986174677355
+   },
+   {
+    "x": 0.5,
+    "ratio": 0.18275262420429705,
+    "anisotropy_factor": 0.4274957592822379
+   },
+   {
+    "x": 0.75,
+    "ratio": 0.31896764152970714,
+    "anisotropy_factor": 0.5647722032197646
+   },
+   {
+    "x": 0.99,
+    "ratio": 0.6266613715693916,
+    "anisotropy_factor": 0.7916194613382062
+   }
+  ],
+  "milky_way": [
+   {
+    "R_kpc": 4.0,
+    "g_N": 8568.145386642762,
+    "S_N": 27468.82312874161,
+    "ratio_gN_over_SN": 0.3119225511222432,
+    "anisotropy_factor": 0.5585002695811733,
+    "v_newton": 185.12855410922177,
+    "v_round3_local": 197.87378231092808,
+    "v_derived_local": 192.3509134492163
+   },
+   {
+    "R_kpc": 8.2,
+    "g_N": 3838.455298955989,
+    "S_N": 8853.602540719185,
+    "ratio_gN_over_SN": 0.4335472799125889,
+    "anisotropy_factor": 0.6584430726437851,
+    "v_newton": 177.41288975561812,
+    "v_round3_local": 211.3403295343362,
+    "v_derived_local": 200.3991104257978
+   },
+   {
+    "R_kpc": 12.0,
+    "g_N": 2061.418952008279,
+    "S_N": 3845.176933162149,
+    "ratio_gN_over_SN": 0.53610509681099,
+    "anisotropy_factor": 0.7321919808431324,
+    "v_newton": 157.2800922688544,
+    "v_round3_local": 207.32340078155292,
+    "v_derived_local": 195.18344382639606
+   },
+   {
+    "R_kpc": 20.0,
+    "g_N": 772.8056947228604,
+    "S_N": 1158.757267216541,
+    "ratio_gN_over_SN": 0.6669262981877321,
+    "anisotropy_factor": 0.8166555566380064,
+    "v_newton": 124.32262020427822,
+    "v_round3_local": 194.553058664321,
+    "v_derived_local": 183.6979433557302
+   },
+   {
+    "R_kpc": 30.0,
+    "g_N": 343.26178697344517,
+    "S_N": 434.29760693783476,
+    "ratio_gN_over_SN": 0.7903837863481011,
+    "anisotropy_factor": 0.8890353122053708,
+    "v_newton": 101.47834059149447,
+    "v_round3_local": 184.68059092278966,
+    "v_derived_local": 177.38363783398762
+   }
+  ],
+  "cluster_like": [
+   {
+    "r_kpc": 100.0,
+    "derived_over_round3": 0.27783115177921613,
+    "vector_over_scalar": 0.2523155999978944
+   },
+   {
+    "r_kpc": 250.0,
+    "derived_over_round3": 0.3932507041542154,
+    "vector_over_scalar": 0.35891011538707523
+   },
+   {
+    "r_kpc": 500.0,
+    "derived_over_round3": 0.4899233577818728,
+    "vector_over_scalar": 0.45729365849823694
+   },
+   {
+    "r_kpc": 1000.0,
+    "derived_over_round3": 0.5868163549328833,
+    "vector_over_scalar": 0.5596491312599045
+   },
+   {
+    "r_kpc": 1500.0,
+    "derived_over_round3": 0.6495034544877266,
+    "vector_over_scalar": 0.6258499658976646
+   }
+  ]
+ },
+ "F_xcop": {
+  "round3": {
+   "u_best": 197.41008961049414,
+   "rms": 0.22697887305819345,
+   "mean_residual_by_radius": [
+    0.06422945177252727,
+    0.10855539402721742,
+    0.08096446515360625,
+    0.03003334006751718,
+    -0.06750820018812048,
+    -0.19295619022985355
+   ],
+   "inner_minus_outer": 0.21662461810885936
+  },
+  "derived": {
+   "u_best": 74.77845202581712,
+   "rms": 0.3816463319698399,
+   "mean_residual_by_radius": [
+    0.4451854875910171,
+    0.3550473817401862,
+    0.14674099878511887,
+    -0.04469474770988172,
+    -0.29420037625782713,
+    -0.5708153611611574
+   ],
+   "inner_minus_outer": 0.832624303375094
+  },
+  "derived_at_u_197": {
+   "rms": 0.8396424045345914,
+   "mean_residual": 0.7546783115454277
+  }
+ },
+ "seconds": 174.64136021800005
+}
