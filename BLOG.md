@@ -200,6 +200,11 @@ colliding clusters, with no dark matter and no expanding universe.*
   * **The shared wave with its energy balanced,** as the audit asked. With the wave's full coupling, including the near
     field the audit's version left out, the heat rule survives: 3.3–3.9 times the extra glow per doubling of speed in
     packed clouds, 4.0 in spread-out ones, and collisions hold it back as before.
+  * **One kind of matter, every piece both sender and receiver** (the audit's decisive test). The books balance, a
+    cold source pulls distant pieces of the same matter, and a warm source's wave reaches them as the square root of its
+    glow, as our law needs. But warming puts the source's own pieces out of tune, the receivers fall out of step, and
+    the pull doesn't grow yet. A new exact rule: a piece's own radiators take back a share 2f of its pull, so matter's
+    loud vibrations must mostly ring inside.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -238,7 +243,8 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
    each piece of matter that motion opens, a first version of the whole chain works in one experiment: the pull grows
    about as the square root of cold plus released output, and doubling the speed spread doubles the extra pull
    (§6.19). Rev 25: an independent audit confirms the pull but finds the pieces' shared wave doesn't yet balance its
-   energy; the version that balances it is next (§6.20).*
+   energy. With the energy balanced, the heat rule survives on the source side. In one kind of matter, a warm source's
+   wave reaches distant matter as the square root of its glow, but distant matter can't yet keep step with it (§6.20).*
 4. **Gas does not count as "hot" in this sense.** Its particles collide so often that the
    companion sees them as sitting still. That is why, in a collision, the extra pull stays
    with the galaxies and leaves the gas behind.
@@ -288,9 +294,10 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 * **Abell 1689**, the next cluster to model;
 * **the heat term's mechanism (§6.17–6.20):** since rev 24 a first version of the whole chain runs in one experiment,
   given a quiet internal store that motion opens. An independent audit (rev 25) confirmed the pull and found the
-  energy gap: the pieces' shared wave doesn't yet balance. Next is one kind of matter, every piece both sender and
-  receiver, with that balance built in. What the store is physically, and the number it sets for the companion's
-  speed, are still to be found;
+  energy gap. With the energy balanced (rev 25) the heat rule survives on the source side. In one kind of matter,
+  distant pieces are pulled by a cold source but can't yet keep step with a warm one, whose own pieces fall out of tune.
+  That is the question now. What the store is physically, and the number it sets for the companion's speed, are still
+  to be found;
 * a full relativistic version of the law.
 
 Settled along the way: the main Bullet cluster's galaxy speeds (§6.3, rev 14–15), Cassini's
@@ -2757,7 +2764,50 @@ carries energy away, and the other, the near field, shuffles energy between clos
   would read as a slightly larger u for tightly packed matter: a correction to size, not a failure.
 * So the heat rule survives the energy fix. It still takes the quiet store and its mixing as given.
 
-Scripts: `code/stream_store_v16.py`, `code/crossing_heat_v16.py`, `code/shared_wave_v16.py`.
+**Step 3b: one kind of matter, every piece both sender and receiver.** This was the audit's main recommendation, and
+the real test. Until now our sources and our test bodies were two different kinds of matter. Now every piece is the
+same:
+* **a quiet oscillation that holds energy ready to give**, the kind of body that falls into step ahead of a passing wave
+  by itself;
+* **a finite store** that keeps it going;
+* **three radiators** that motion stirs, as in the independent calculation.
+
+A ball of 48 such pieces is the source. Eight more of exactly the same matter sit farther out as receivers. All of
+them talk to each other through the complete wave of step 3a. Nothing sets anyone's timing, nothing turns power into
+force, and there is no special switch for strong fields.
+
+**What works:**
+* **The books balance:** energy to about 1 part in a trillion, and momentum as far as we can measure it.
+* **A cold source pulls** distant pieces of the same matter: they fall into step ahead of its wave by themselves
+  (0.55 on a scale where 1 is perfect) and are pulled.
+* **A warming source glows as the heat rule says** (×1.2, 2.1, 5.0 and 8.1 as its heat weight goes 0.5, 2, 8 and 16).
+  The wave reaching the receivers grows as the square root of that glow, ×1.01, 1.31, 2.24 and 2.81, almost exactly.
+  So the square root our law needs is physically there in the wave.
+
+**A new exact rule.** A piece that feeds a passing wave is pulled, but its own radiators, stirred by the same wave, kick
+back. They take back a share f twice over, where f is the share of the radiators' energy that goes into the
+companion: the net pull is (1 − 2f) of the full amount.
+* If the radiators sent everything into the companion, a piece feeding the wave would be pushed.
+* If they keep most of it inside, nearly the whole pull survives.
+
+So matter's loud vibrations must mostly ring inside the piece and only whisper into the companion. That is a sharp new
+requirement, and it came out of the equations rather than being assumed.
+
+**What doesn't work yet: keeping step with warm matter.** As the source warms, the receivers fall out of step (from
+0.55 down to 0.16–0.27), so their pull stays flat instead of growing, while their radiators get pushed harder by the
+brighter wave. From a heat weight of 8 on, the receivers are pushed. **So the audit's decisive test is not passed yet.**
+
+**We found why, and measured it.** Warming puts the source's own pieces out of tune with each other: the spread of their
+rhythms grows eightfold, from 4.7 × 10⁻⁴ to 3.9 × 10⁻³. A warm piece's quiet oscillation drives its radiators, and the
+radiators feel their neighbours, which nudges each piece's rhythm by an amount set by its own motion. A cold source's
+pieces settle into a common beat; a warm source's can't, and a smeared beat can't be followed from a distance.
+Collisions keep the beat: with frequent collisions the rhythms stay together, the receivers keep step (0.44) and are
+pulled as strongly as by the cold source. That matches our law's rule that colliding gas behaves as cold.
+
+*Follow-ups running:* radiators that whisper (a twentieth of their energy into the companion), and a cold source put
+out of tune by hand by the same amounts, to confirm the cause.
+
+Scripts: `code/stream_store_v16.py`, `code/crossing_heat_v16.py`, `code/shared_wave_v16.py`, `code/one_matter_v16.py`.
 
 ## 7. How this compares
 
@@ -3017,10 +3067,15 @@ proposals for finishing the theory.
      grows about as √(cold + released), doubling where heat dominates. The tested cloud's own quietness gives the
      symmetries and the collision rule but not the σ², because it has no clean edge. The shared wave's energy doesn't
      yet balance (independent audit).
-   * *Next:* one kind of matter as both sender and receiver, with every wave fed back so the energy balances, and the
-     σ² shown again; a physical quiet store with a gap, and u from it; whether a drained receiver can switch its pull
-     off (the release factor); derive why the hold stops at zero instead of pushing; then the guided companion with
-     moving sources, for the collisions' memory;
+   * *Done in rev 25 (§6.20):* the shared wave with its energy balanced keeps the σ² (3.3–4.0 per doubling) and the
+     collision rule. Motion measured against the flowing companion gives the heat weight with one speed. One kind of
+     matter: the books balance, a cold source pulls, and a piece's own radiators take back 2f of its pull. A warm
+     source's wave carries the square root of its glow, but distant matter falls out of step because warmth puts the
+     source's pieces out of tune.
+   * *Next:* keeping step with warm matter (radiators that whisper; what keeps a warm source's pieces in tune; the
+     Doppler shifts of real motion); a physical quiet store with a gap, and u from it; whether a drained receiver can
+     switch its pull off (the release factor); derive why the hold stops at zero instead of pushing; then the guided
+     companion with moving sources, for the collisions' memory;
    * a full field theory for the companion, with its travel, its release length and a
      relativistic form, so that lensing is derived;
    * what the release length is;
@@ -3062,7 +3117,7 @@ into our inputs.
 |---|---|---|---|---|
 | 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15). Rev 21: a companion guided along gravity's field lines gives it with no further assumption (§6.16)** | the guided companion with moving sources: does it keep its memory in a collision? | hard; the foundation |
 | 2 | Predict unseen data with a locked model | **rev 19: the wide-binary forecast locked (§6.7)** | lensing profiles by speed spread for a new galaxy sample | doable now |
-| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating). Rev 23: that timing derived from a power balance, with no memory; bodies keep step up to the re-timing speed (§6.18). Rev 24: given a quiet internal store opened by motion, a first version of the full pattern: pull ≈ √(cold + released), ×2 per doubling of σ where heat dominates, collisions suppress as 1/(1 + ν/γ) (§6.19). Rev 25: an independent audit found the shared wave's energy doesn't yet balance; with the balance built in, the σ² must be shown again (§6.20)** | one kind of matter, every wave fed back; a physical quiet store with a gap, and u from it | medium; the test bench exists |
+| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating). Rev 23: that timing derived from a power balance, with no memory; bodies keep step up to the re-timing speed (§6.18). Rev 24: given a quiet internal store opened by motion, a first version of the full pattern: pull ≈ √(cold + released), ×2 per doubling of σ where heat dominates, collisions suppress as 1/(1 + ν/γ) (§6.19). Rev 25: with the shared wave's energy balanced the σ² survives on the source side (×3.3–4.0 per doubling); in one kind of matter a warm source's wave reaches distant matter as √ of its glow, but distant matter can't yet keep step (§6.20)** | keeping step with warm matter; a physical quiet store with a gap, and u from it | medium; the test bench exists |
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
 | 5 | One mechanism for Cassini, dwarfs and wide binaries | release adopted; the dwarfs need a weaker hold, reason unknown | derive the release time and the hold from one transition | hard; biggest payoff |
 | 6 | Evolve the companion through collisions | memory imposed; the Bullet's smaller half at half weight | a time-dependent transport solver | medium to hard |
@@ -3327,7 +3382,12 @@ into our inputs.
   * the energy a pulled body feeds into the companion strengthens it further out; the galaxies allow it while the
     crests move at no more than half the travel speed; being pulled costs at most a kilogram's cold output;
   * an independent audit of rev 24: the pull confirmed, the claims narrowed, the shared wave's energy balance made the
-    next main calculation.
+    next main calculation;
+  * the quiet store opened by motion measured against the flowing companion: the heat weight with one speed; the
+    crossing heat lifts the Bullet's smaller half 12–18%;
+  * the shared wave with its energy balanced: the heat rule survives;
+  * one kind of matter: the books balance, a cold source pulls, a piece's own radiators take back 2f of its pull; a
+    warm source's pieces fall out of tune and distant matter can't yet keep step.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);

@@ -193,6 +193,13 @@
 >     cloud's radiators screen its quiet leak (to ≤ 5%) and the doubling ratio falls (3.88, 3.53, 2.45, 1.42 at t = 1000,
 >     the audit's pattern); with the whole M the leak stays 82–100% and the extra grows ×3.3–3.9 per doubling (dense) and
 >     ×4.0 (dilute), coefficient renormalized ×0.34–0.99; collisions γ/(γ + ν) except in the densest cloud.
+>   * One kind of matter (§26.4): every piece an inverted quiet coherence kept by internal gain from a finite store,
+>     plus passive radiators (share f = γ/(γ + γ_i) into the companion), all coupled by M. Exact recoil rule: a piece
+>     pulled by feeding a plane wave gets (1 − 2f) fed/c. Cold source: receivers of the same matter keep step (0.55) and
+>     are pulled (+1.2 × 10⁻⁴). Warm source: glow ×1.2–8.1, the wave at the receivers ×√glow (2.24 at 5.00), but the
+>     sources' rhythm spread grows 4.7 × 10⁻⁴ → 3.9 × 10⁻³ and the lead falls to 0.16–0.27, so the pull stays flat
+>     (net push at k ≥ 8). Frequent collisions restore the lead (0.44). The audit's decisive test is not passed; the
+>     obstacle is keeping step with warm matter.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -499,6 +506,11 @@ results README §18):
   so d‖z‖²/dt = −z†Γz. Forces F_j = (1/ω) Re Σ_l z_j†∂M_jl z_l, including a piece's own monopole-dipole recoil; they
   balance the radiated momentum. The dissipative half alone lets induced radiators screen the quiet monopoles; the
   reactive half (causally tied to it) prevents that.
+* **One kind of matter** (`code/one_matter_v16.py`): ṡ = −(i/2)w(Mz + Kz)_s + (G/2)ws − λs, Ḃ = (i/2)(Mz + Kz)_B − γ_iB,
+  ẇ = W(1 − w) − g∥(1 + w) − 2G|s|² − 2Im(s*(Mz + Kz)_s), ṅ = −W(1 − w)/2, K the mixing block; F_j = (1/ω)Re Σ z_j†∂M_jl z_l.
+  A plane wave drives a receiver's radiators to B = −(ωkC₁/(4(γ + γ_i))) n̂A; the monopole-dipole recoil
+  −(C₀C₁k³/(24π))Im(s*B) is exactly −f times the quiet channel's pull −(C₀k/2)n̂ Im(s*A), on each channel: net (1 − 2f).
+  The receivers' lead tracks (w/2)|E|/|s| over the sources' rhythm spread (1.6 → 0.43 as k goes 0 → 16).
 
 ### What follows
 
