@@ -2693,3 +2693,372 @@ along the magnetic field whatever its wave vector. Two consequences to keep:
   4. **MACS J0025's star masses** from infrared light; its galaxy speeds prefer the published ones.
   5. From round 11's list, still open: the faint dwarfs, the Sun's speed, Abell 1689.
 
+## 23. Round 13, 24 September 2026: the pull and the scrambling in one experiment
+
+The request: "Connect the local-force model to the coherence model in one experiment. Use the same matter
+distribution and the same microscopic interaction rules. Change only whether the sources move orderly, move
+randomly and freely, or undergo frequent direction-changing collisions. Let test bodies respond to the local wave
+interaction—not to the finished gravity formula. The decisive outcome would be that freely moving random sources
+generate a stronger time-averaged attraction, while collisions suppress that enhancement. In the heat-dominated
+regime of the proposed formula, doubling the velocity dispersion should approximately double the extra pull; that
+scaling should emerge rather than be programmed into the force." It is proposal 3 of §9.1 of the blog.
+
+Mid-round, after part 1's result: "if our exploration of derivation works keep enhancing it, if not look at another
+solution to explore, be optimistic that we can pull these together."
+
+**Short answer.**
+* **Part 1, as asked** (§23.1–23.6). The experiment is built and validated, and the coherence half works in it:
+  collisions protect the cold state by the amount round 3's Dicke formula gives. With round 10's rule the decisive
+  outcome does not appear: free random motion *halves* the pull on the test bodies, and collisions protect it. The
+  reason is exact. The pull on a locked emitter is the power it feeds the passing wave divided by the wave's speed,
+  and in a locked state all identical emitters, test bodies included, sit at the same phase to their own local wave.
+  So a test body is pulled exactly when the cloud's sources feed one another, which makes the cloud a bright chorus,
+  and random motion can only break a chorus up (checked at 16 offsets: no exception). With the opposite offset the
+  cloud's *output* follows the heat term's pattern (dark when cold, released by free motion, kept dark by
+  collisions), but its test bodies are pushed.
+* **Part 2, another solution** (§23.7). One rule escapes: an emitter runs a quarter cycle *ahead* of a weak wave
+  (feeding it) and a quarter cycle *behind* a strong one (absorbing it), sources and test bodies alike. Inside a
+  dense cloud the waves are strong, so a cold cloud goes dark; far away they are weak, so test bodies feed and are
+  pulled. Then in the densest cloud (87 times darker than
+  independent emitters at rest) free random motion raises the pull on the test bodies ×1.32, 1.60, 1.83 and 1.99 as
+  σ doubles from q = 1/32 to 1/4; frequent collisions raise it only ×1.07–1.39, and orderly rotation not at all
+  (×0.90–1.01). The first doubling multiplies the extra pull by 1.9 and the released power by 3.3; later ones less,
+  as the test bodies begin to lose step. The wave at the test bodies grows exactly as √(cold + released power): the
+  law's √(|g_N| + S), unprogrammed.
+* **The data** (§23.8): the heat weight's exponent is pinned by galaxy lensing, not by the clusters: doubling σ
+  multiplies the extra pull by 1.8–2.0, as the law has it.
+* The law is unchanged by this round (the suite still reads 59 pass, 11 close, 7 fail). What changes is the
+  mechanism behind its heat term: the naive one is excluded, and a candidate that works in the experiment, at speeds
+  below a quarter of the re-timing rate, takes its place.
+
+### 23.1 The experiment
+
+`code/coherent_force_v13.py` → `run-coherent-force-v13/coherent_force_v13.json` (135 runs, 870 s on 4 cores).
+
+* **Matter:** N = 100 point emitters of the companion wave, uniform in a ball of radius Rb = 1 companion
+  wavelength (24 per λ³). Each has a fixed strength, its own pitch (natural frequencies spread uniformly over
+  ±w, w = 0.1Γ) and a phase that locks, at rate Γ = 0.1 (per unit time; the wave period is 1), to the phase of
+  the wave around it plus a fixed offset δ:
+  ```
+  dθ_j/dt = dω_j + Γ sin(arg E_j + δ − θ_j),   E_j = Σ_{l≠j} G(R_jl) e^{iθ_l},   G(R) = e^{i k0 R} / (4πR)
+  ```
+  δ = −π/2 is round 10's rule, "a quarter cycle ahead": the offset that feeds the passing wave and is pulled.
+* **Test bodies:** 32 emitters of the same kind, with the same rule and rate, held on a sphere of radius 6λ
+  around the cloud. Each feels only the local wave: F = ½ Re(e^{−iθ_p} ∇E(x_p)), the time average of q∇ψ.
+  Nothing of the law's formula enters.
+* **Motion, the only thing that changes:** at rest; **ordered** (rigid rotation, line-of-sight speed spread σ
+  in the equator); **free** (Maxwellian, 1D spread σ, bouncing off the ball's surface); **colliding** (the same
+  Maxwellian, each velocity redrawn at rate ν = 20 k0σ, so a source changes direction about 80 times while crossing one
+  wavelength). The speed is set by q = k0σ/Γ, the Doppler drift rate over the locking rate:
+  q = 0.3, 1, 3, 10.
+* **Reading q in the law's terms.** Round 3's toy gives a free source's phase variance as (k0σ/Γ)² = q², and
+  equating it with the heat weight, k = 3σ²/u², gives u = √3 Γ/k0 (round 3's mapping). So **q ≈ √k**:
+  the four speeds are heat weights k ≈ 0.09, 1, 9 and 100, from a spiral's bulge (k ≈ 0.1–0.5) through the
+  KiDS red lenses (2.0) to a rich cluster (σ ≈ 1,000 km/s, k ≈ 105). The heat-dominated regime is q ≳ 1.
+* **Measured:** the mean pull on the test bodies toward the cloud (also split into equator and poles); the
+  cloud's radiated power relative to independent emitters, Σ_jl Re(a_j a_l*) sinc(k0R_jl)/N; the locking order
+  ⟨cos(θ − target)⟩. Time averages over 550 wave periods after a 350-period start, three seeds each.
+* **Validation:** one source and one test body locked a quarter cycle ahead: the pull equals (k0/2)|E| (round 10)
+  to five digits at 0.3, 1 and 3 wavelengths (0.83333, 0.25000, 0.08333).
+* **Run sets:** A, round 10's rule (δ = −π/2); B, the same with a pitch spread of ±10Γ, so the sources cannot
+  lock (a "lamp"); D, the opposite offset, δ = +π/2 (the passing wave is absorbed); E, a cloud twice as big
+  (N = 200, same density); C, the offset over half a turn, at rest.
+
+### 23.2 Results
+
+**Round 10's rule (A).** At rest the sources lock into a chorus that radiates 4.39 times what independent
+emitters would, and the test bodies are pulled 1.99 times as hard as by independent emitters. Pull relative to
+rest (radiated power relative to independent emitters in brackets):
+
+| q = k0σ/Γ (k ≈ q²) | ordered | free | colliding |
+|---|---|---|---|
+| 0.3 (0.09) | 0.95 ± 0.04 (4.39) | 0.84 ± 0.02 (3.74) | 0.96 ± 0.01 (4.24) |
+| 1 (1) | 0.64 ± 0.02 (4.35) | **0.49 ± 0.02** (2.35) | 0.94 ± 0.01 (4.06) |
+| 3 (9) | 0.27 ± 0.04 (4.39) | **0.36 ± 0.05** (1.76) | 0.87 ± 0.02 (3.67) |
+| 10 (100) | 0.25 ± 0.03 (4.39) | **0.47 ± 0.01** (1.92) | 0.64 ± 0.01 (2.63) |
+
+* **Free random motion weakens the pull,** to about half, by breaking up the chorus (4.39 → 1.8–2.4).
+* **Collisions protect it** (0.87–0.96 up to q = 3), because they protect the chorus. That is Dicke narrowing
+  in the same experiment, with the same rules.
+* **Orderly rotation leaves the chorus intact** (4.35–4.39) but its wave pattern sweeps past the test bodies:
+  at q = 3 those at the equator keep 0.20 of their pull and those near the poles, who see the pattern turn about
+  their line of sight, 0.43. Random motion is isotropic (0.35 and 0.37).
+* **Twice the cloud (E, N = 200 at the same density):** at rest 1.91 times the independent pull (radiated 4.83);
+  at q = 1, free 0.52 of rest (2.50), colliding 1.08 (4.84). The same as N = 100.
+
+**The opposite offset (D, δ = +π/2).** At rest the cloud is *dark*: it radiates 0.193 of what independent
+emitters would, and its test bodies are *pushed* (−0.27 of the independent pull). Radiated power (push relative to
+rest in brackets):
+
+| q (k ≈ q²) | ordered | free | colliding |
+|---|---|---|---|
+| 0.1 (0.01) | 0.182 (0.97) | 0.189 (1.03) | 0.173 (0.94) |
+| 0.3 (0.09) | 0.189 (0.98) | 0.217 (0.96) | 0.187 (1.01) |
+| 1 (1) | 0.190 (0.72) | **0.425** (0.93) | 0.206 (0.98) |
+| 3 (9) | 0.192 (0.33) | **0.669** (0.56) | 0.266 (0.89) |
+| 10 (100) | 0.187 (0.15) | **0.767** (0.39) | 0.442 (0.80) |
+
+* The cloud's output does exactly what the heat term needs: dark when cold, **released by free random motion**
+  (four times brighter at q = 10), **kept dark by collisions** (0.21 against 0.43 at q = 1; 0.27 against 0.67 at
+  q = 3), and **untouched by orderly motion** (0.18–0.19).
+* The released power grows as σ² while it is small: +0.024 at q = 0.3 and +0.232 at q = 1, ×9.7 for σ ×3.3
+  (σ² would give ×11). §23.4 doubles σ step by step.
+* The collisions' suppression matches round 3's formula: colliding phase variance k0²σ²/(νΓ) against free
+  k0²σ²/Γ², a ratio Γ/ν = 1/(20q); at q = 1 the released power is 0.013 against 0.232 (ratio 0.056; formula 0.05).
+* But the test bodies are pushed, and the push *shrinks* as the cloud brightens (0.39 of rest at q = 10 with four
+  times the power): the released wave changes faster than they can follow (§23.5).
+
+**Sources that cannot lock (B, pitch spread ±10Γ).** Radiated power 1.14 at rest and 1.12–1.17 with any motion;
+the test bodies get only **0.034** of the pull a body following the wave perfectly would get, and motion changes it
+by factors of 1.0–2.3 with large scatter (±0.1–0.6).
+
+**The offset at rest (C):**
+
+| offset δ | −π/2 | −π/4 | 0 | +π/4 | +π/2 | π |
+|---|---|---|---|---|---|---|
+| radiated ÷ independent | 4.70 | 4.66 | 3.48 | 1.26 | **0.198** | 3.89 |
+| pull ÷ independent pull | +2.02 | +2.02 | +1.54 | +0.26 | **−0.28** | +1.67 |
+
+The pull's sign follows the cloud's brightness, not the offset by itself: the only dark cloud pushes. §23.3 explains
+why, and scans the offset over a full turn.
+
+### 23.3 Why random motion weakens the pull here: two exact statements
+
+**1. The pull is the recoil of the power a body feeds the wave.** For an emitter of strength a in a field whose
+local complex amplitude is E, the time-averaged power it gives the field is P = (ω/2) Im(a* E), and the
+time-averaged force is F = ½ Re(a* ∇E). Where the wave is locally travelling, ∇E = i k E, so
+```
+F = −(P / c) k̂
+```
+exactly: a body that feeds the passing wave (P > 0) is pushed backwards along it, toward the wave's source,
+by the momentum the extra wave carries forward. That is round 10's pull, now as momentum bookkeeping. A body
+that absorbs (P < 0) is pushed away. (A spherical wave adds a small term along ∇|E|, ½ cos(θ − arg E)|a|∇|E|,
+smaller by 1/(k0 r) = 2.7% at the test bodies.) **Attraction requires feeding.**
+
+**2. In a locked state, all identical emitters sit at the same phase to their own wave.** Locked at a common
+frequency Ω, each emitter obeys Γ sin(arg E_j + δ − θ_j) = Ω − dω_j; with equal pitches the stable solution is
+the same for all: arg E_j − θ_j = arcsin(Ω/Γ) − δ. Test bodies locked to the cloud obey the same equation. So
+test bodies and sources all feed, or all absorb, together. And the power the sources feed one another is the
+mutual part of the cloud's radiated power: Σ_j Im(a_j* E_j) = (k0/4π) Σ_{j≠l} sinc(k0R_jl) Re(a_j* a_l). So:
+```
+test bodies pulled  ⇔  sources feed one another  ⇔  cloud brighter than independent emitters
+```
+Random motion can only disturb a chorus; so wherever the test bodies are pulled, random motion weakens the pull,
+and wherever it brightens the cloud, the test bodies are being pushed.
+
+**Checked over a full turn** (`code/joint_checks_v13.py`, part "offsets": 16 offsets at rest, two seeds each; "feeding"
+is the mean sin(arg E − θ), positive when an emitter feeds its local wave):
+
+| offset δ/π | −1 | −7/8 | −3/4 | −5/8 | −1/2 | −3/8 | −1/4 | −1/8 | 0 | 1/8 | 1/4 | **3/8** | **1/2** | **5/8** | 3/4 | 7/8 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| radiated ÷ independent | 3.87 | 4.32 | 4.31 | 4.27 | 4.36 | 4.22 | 4.26 | 3.80 | 3.31 | 1.99 | 1.30 | **0.53** | **0.20** | **0.40** | 1.39 | 2.27 |
+| sources feeding | +0.75 | +0.88 | +0.88 | +0.87 | +0.90 | +0.88 | +0.87 | +0.85 | +0.74 | +0.37 | +0.11 | **−0.35** | **−0.63** | **−0.40** | +0.11 | +0.39 |
+| test bodies feeding | +0.81 | +0.90 | +0.90 | +0.89 | +0.90 | +0.88 | +0.88 | +0.86 | +0.75 | +0.43 | +0.19 | **−0.23** | **−0.56** | **−0.24** | +0.30 | +0.48 |
+| pull ÷ independent pull | +1.63 | +1.86 | +1.85 | +1.87 | +1.95 | +1.90 | +1.90 | +1.75 | +1.46 | +0.68 | +0.27 | **−0.15** | **−0.26** | **−0.15** | +0.37 | +0.74 |
+
+At every offset the test bodies feed when the sources feed, and are pulled exactly when the cloud outshines
+independent emitters. The three dark clouds all push.
+
+### 23.4 Doubling the speed spread
+
+`code/joint_checks_v13.py` → `run-coherent-force-v13/joint_checks_v13.json` (part "doubling"): the absorbing offset,
+σ doubled from q = 1/8 to 8, free and colliding (ν = 20 k0σ, as in the main run), two seeds, in the main cloud and in
+one twice as small (N = 100 in Rb = 0.5: 191 per λ³). Power released by the motion, radiated − radiated at rest, in
+units of independent emitters' power:
+
+| q | 1/8 | 1/4 | 1/2 | 1 | 2 | 4 | 8 |
+|---|---|---|---|---|---|---|---|
+| main cloud (at rest 0.197), free | 0.00 | 0.00 | 0.076 | 0.222 | 0.387 | 0.536 | 0.593 |
+| main cloud, colliding | −0.01 | −0.01 | −0.01 | 0.013 | 0.038 | 0.108 | 0.201 |
+| dense cloud (at rest **0.028**), free | 0.028 | 0.059 | 0.104 | 0.182 | 0.266 | 0.384 | 0.427 |
+| dense cloud, colliding | 0.007 | 0.019 | 0.059 | 0.071 | 0.094 | 0.161 | 0.206 |
+
+* **The denser cloud is 35 times darker than independent emitters at rest,** so the heat-dominated regime
+  (released ≫ held) starts at a slower speed: at q = 1/4 the released power is already twice what the cloud emits at
+  rest.
+* **The release grows with σ, steeply at first and then more slowly:** per doubling, ×2.9, 1.7, 1.4 and 1.1 in the
+  main cloud from q = 1/2; ×2.1, 1.75, 1.76, 1.46, 1.44 and 1.1 in the dense one. In the law's terms (power ∝ k ∝ σ^p)
+  that is p ≈ 1.5 falling to 0.5, flatter than the data's 1.75–2 (§23.8). Independent emitters' level is the ceiling.
+* **Collisions hold it back:** 3–17 times less release in the main cloud, 1.5–4 times in the dense one, where
+  ν = 20 k0σ is only 2.5–10 Γ at the slower speeds.
+* The test bodies are pushed throughout (−0.26 → −0.09 in the main cloud, −0.11 → −0.03 in the dense one).
+
+### 23.5 The second obstacle: slow bodies cannot use a scrambled wave
+
+A test body follows the wave's phase at its locking rate Γ. A wave from sources whose Doppler drift k0σ is faster
+than Γ changes faster than it can follow. Set B shows the extreme: a lamp-like wave, with intensity at the test
+bodies equal to independent emitters', gives them 3.4% of the pull a perfect follower would get. In D at q = 10
+the cloud radiates four times more than at rest, yet its test bodies feel 0.39 of the push. In the law's terms,
+Γ/k0 = u/√3 = 98 km/s: **the heat-dominated regime (σ ≳ 100 km/s) is exactly where the scrambled companion
+changes faster than a body locking at the companion's own rate can follow.** So the heat term cannot reach test
+bodies through slow phase-locking, whatever its sign; it needs a receiver that responds to the wave's energy
+rather than its phase, or one that is itself broadband.
+
+### 23.6 Emitters whose strength can change: a first look
+
+A natural escape from §23.3 is to let each emitter's strength vary, as a laser's does: then a cloud could hold its
+output back without every emitter giving up feeding. `code/joint_checks_v13.py`, part "amplitude": Stuart–Landau
+oscillators, dA_j/dt = (μ + i dω_j − (1 + i c)|A_j|²)A_j + K e^{iβ}E_j, μ = 1, with β = −π/2 + arctan c so that a
+lone emitter in a weak wave still locks a quarter cycle ahead (§23.3's reduction: θ − arg E = β − arctan c),
+same cloud, at rest (one seed, 300 wave periods; the lone emitters' lock is what varies with c):
+
+| shear c | K = 0.1 | K = 0.3 | K = 1 |
+|---|---|---|---|
+| 0 | 5.51 (+0.12) | 7.52 (+0.11) | 14.99 (−0.22) |
+| −1 | 5.35 (+0.20) | 7.42 (−0.01) | 14.17 (−0.53) |
+| −3 | 5.48 (+0.28) | 6.72 (−0.11) | 12.07 (−0.77) |
+| +3 | 4.94 (+0.51) | 5.16 (+0.28) | 7.19 (+0.30) |
+
+(radiated power relative to independent emitters of the same rule at rest; pull relative to independent emitters in
+brackets.) **Brighter, not darker:** 5–15 times independent emitters, rising with the coupling, as a gain-type medium
+should. The test bodies lock poorly (0.17–0.45), because the cloud's own strong field shifts its frequency further than
+a weak passing wave can pull a lone emitter. Free amplitudes do not escape §23.3.
+
+### 23.7 Part 2, another solution: an offset that depends on the strength of the wave
+
+§23.3 needs one phase for all locked emitters. It fails if an emitter's offset depends on something that differs
+between the inside of a body and the space around it. The simplest such thing is the strength of the local wave:
+inside a dense cloud the neighbours' waves overlap and are strong; far away the wave is weak. The rule, for sources
+and test bodies alike:
+```
+δ(|E|) = −π/2 + π x⁴ / (1 + x⁴),   x = |E| / E_s
+```
+a quarter cycle **ahead** of a weak wave (feeding it) and a quarter cycle **behind** a strong one (absorbing it).
+**A physical reading:** an amplifier whose gain saturates while its losses do not (every laser medium has some fixed
+loss). A weak wave sees net gain and is fed; a strong one saturates the gain below the loss and is absorbed. E_s is
+the strength at which saturated gain equals the loss.
+
+`code/strength_offset_v13.py` → `run-coherent-force-v13/strength_offset_v13.json` (182 runs). `simulate` in
+`code/coherent_force_v13.py` takes the rule as an option; with it off, the stored runs of §23.2 reproduce exactly.
+
+**At rest, over the switch strength E_s** (two seeds; radiated ÷ independent emitters / pull ÷ independent pull;
+sources' and test bodies' feeding in brackets):
+
+| cloud | E_s = 0.03 | **0.1** | 0.3 | 1 | 3 |
+|---|---|---|---|---|---|
+| Rb = 1 (24 per λ³) | 0.178 / −0.20 (−0.67, −0.35) | **0.169 / +0.19** (−0.67, +0.48) | 0.281 / +0.38 | 1.23 / +0.82 | 3.29 / +1.59 |
+| Rb = 0.5 (191 per λ³) | 0.027 / −0.01 | **0.030 / +0.11** (−0.57, +0.59) | 0.125 / +0.19 | 0.62 / +0.48 | 2.67 / +1.14 |
+| Rb = 0.35 (557 per λ³) | 0.011 / +0.03 | **0.011 / +0.06** (−0.42, +0.50) | 0.030 / +0.09 | 0.41 / +0.24 | 1.60 / +0.66 |
+
+* Too small an E_s puts the test bodies in the strong regime too (Rb = 1 at E_s = 0.03: all absorb, dark and pushed,
+  as in §23.3); too large a one puts the sources in the weak regime (all feed: a bright chorus that pulls).
+* **In between, the cloud is dark and its test bodies are pulled:** E_s = 0.1–0.3 at every density, and up to 1 in the
+  denser clouds. The sources absorb (feeding −0.39 to −0.67) while the test bodies feed (+0.48 to +0.66). §23.3's
+  statement no longer binds, because the two no longer sit at one phase.
+
+**Moving** (E_s = 0.1; four seeds; collisions redraw each velocity 20 times per locking time or per Doppler time,
+whichever is shorter, ν = 20Γ max(1, q)). Pull on the test bodies ÷ the same cloud at rest (± s.e.); radiated power ÷
+at rest in brackets:
+
+| densest cloud (Rb = 0.35; at rest radiated 0.0115 = 1/87, pull 0.057) | q = 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 |
+|---|---|---|---|---|---|---|
+| **free** | **1.32** ± 0.05 (1.44) | **1.60** ± 0.07 (2.47) | **1.83** ± 0.06 (4.50) | **1.99** ± 0.05 (6.86) | 1.91 ± 0.09 (9.18) | 1.66 ± 0.10 (14.1) |
+| colliding | 1.07 ± 0.04 (1.20) | 1.07 ± 0.06 (1.12) | 1.18 ± 0.04 (1.31) | 1.39 ± 0.03 (1.85) | 1.91 ± 0.07 (4.62) | 1.99 ± 0.06 (8.05) |
+| rotating | 1.01 ± 0.06 (1.00) | 0.98 ± 0.06 (1.00) | 0.96 ± 0.05 (1.00) | 0.90 ± 0.04 (1.00) | 0.81 ± 0.04 (1.00) | 0.55 ± 0.04 (1.00) |
+
+| dense cloud (Rb = 0.5; at rest 0.029 = 1/34, pull 0.108) | q = 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 |
+|---|---|---|---|---|---|---|
+| **free** | 0.97 ± 0.04 (0.92) | **1.10** ± 0.02 (1.13) | **1.26** ± 0.04 (2.05) | **1.35** ± 0.03 (3.09) | 1.25 ± 0.04 (4.67) | 1.04 ± 0.06 (7.15) |
+| colliding | 0.93 ± 0.04 (0.91) | 0.90 ± 0.01 (0.98) | 0.95 ± 0.03 (0.92) | 0.94 ± 0.01 (1.06) | 1.23 ± 0.03 (1.88) | 1.32 ± 0.05 (3.44) |
+| rotating | 1.01 ± 0.04 (1.00) | 0.99 ± 0.02 (1.00) | 0.98 ± 0.03 (1.00) | 0.95 ± 0.03 (1.01) | 0.83 ± 0.04 (0.98) | 0.65 ± 0.02 (0.99) |
+
+* **The decisive outcome, at speeds up to a quarter of the re-timing rate:** free random motion strengthens the
+  pull (to ×1.99 in the densest cloud, ×1.35 in the other); frequent collisions suppress the enhancement (×1.07–1.39
+  and ×0.90–0.95), because they keep the cloud dark (released power ×1.1–1.9 against ×1.4–6.9 free); orderly
+  rotation gives none (×0.90–1.01). The same rules, only the motion changed, and test bodies that feel only the wave.
+* **The law's square root, unprogrammed.** The wave at the test bodies (mean |E|, densest cloud, free) grows ×1.20,
+  1.56, 2.12, 2.62, 3.04, 3.76; the square root of the radiated power's growth is 1.20, 1.57, 2.12, 2.62, 3.03, 3.75.
+  Cold and released power add, and the pull follows the square root of the sum: √(|g_N| + S) in the law.
+* **Doubling.** From q = 1/32 to 1/16 the released power grows ×3.3 (σ^1.7), the wave's extra strength at the test
+  bodies ×2.8 and **the extra pull ×1.9**, close to the law's ×4 and ×2 and inside the data's ×3.4–4 and ×1.8–2.0
+  (§23.8). The next doublings give less: released ×2.4 and 1.7, extra pull ×1.4 and 1.2.
+* **Where it stops.** Beyond q ≈ 1/4 the free clouds keep brightening (×9–14) but the pull falls back: the test
+  bodies lose step (their feeding falls from +0.50 to +0.22), as in §23.5. The colliding clouds, whose wave changes
+  more slowly, catch up at q ≥ 1/2. Rotation sweeps the pattern past the test bodies (×0.55 at q = 1).
+* **Reading u again.** Here heat dominates (released > held) from q ≈ 1/32–1/16, far below the re-timing rate,
+  because the cold cloud is so dark. Round 3's mapping, u = √3 Γ/k0, assumed the release comes from phase variance
+  alone; with a dark reservoir, u is set by the locking rate and the darkness together, and the darker cold matter is,
+  the more of the heat-dominated regime the test bodies can follow.
+
+**Why the rule may be more than a device.**
+* It is the same shape as the law's release factor (§3.4 of the blog): **where the companion is strong it is held
+  back, where it is weak it is free.** The law applies that to the Newtonian field, exp(−|g_N|/g_d), and the ordered
+  companion's intensity is |g_N| (§21.1), so g_d plays the part of E_s². Whether one saturation gives both the
+  release factor and the heat term is the first thing to derive.
+* It puts the heat term's energy where §23.9 says it must be: a cold, dense body sits in its own strong wave and
+  absorbs, holding its supply back; random motion scrambles that wave, more emitters find themselves in weak waves
+  and feed, and the supply is tapped.
+
+### 23.8 The heat weight's exponent, from the data
+
+The request's scaling, "doubling σ doubles the extra pull", is the law's heat weight k = 3σ²/u², since the extra
+pull goes as √k where heat dominates. `code/heat_exponent_v13.py` → `run-coherent-force-v13/heat_exponent_v13.json`
+asks the data what power of σ they want: k = 3(σ/u)^p, u refitted on X-COP's 12 clusters (round-12 law, static
+distances) for each p, then the KiDS early/late lensing gap (the lenses' star speeds measured, §22.2) predicted with
+that u. ⟨fσ^p⟩ is approximated as ⟨f⟩(⟨fσ²⟩/⟨f⟩)^{p/2} in each 0.1-dex bin.
+
+| p | u (km/s) | X-COP rms (ln) | k red / blue lenses | gap, colour split (0.153 ± 0.04) | gap, Sérsic split (0.154) | KiDS level, all lenses |
+|---|---|---|---|---|---|---|
+| 1 | 32.8 | 0.2231 | 11.7 / 5.2 | 0.149 | 0.201 | −0.221 |
+| 1.25 | 63.0 | 0.2221 | 7.5 / 2.8 | 0.161 | 0.216 | −0.132 |
+| 1.5 | 97.7 | 0.2215 | 4.8 / 1.6 | 0.160 | 0.210 | −0.055 |
+| 1.75 | 133.7 | 0.2213 | 3.1 / 0.9 | 0.148 | 0.188 | **+0.011** |
+| **2 (the law)** | **169.4** | 0.2215 | 2.0 / 0.5 | 0.126 | 0.155 | +0.065 |
+| 2.25 | 203.9 | 0.2221 | 1.3 / 0.3 | 0.101 | 0.121 | +0.107 |
+| 2.5 | 236.6 | 0.2230 | 0.8 / 0.2 | 0.077 | 0.089 | +0.139 |
+| 3 | 296.3 | 0.2260 | 0.3 / 0.06 | 0.039 | 0.043 | +0.179 |
+
+* **The clusters alone cannot tell** (rms 0.221–0.226 for p = 1–3): their galaxies span too narrow a range of
+  speeds (typically 800 km/s), and u absorbs the change.
+* **The lenses, about six times slower (red lenses' stars ≈ 140 km/s against the clusters' galaxies' ≈ 800), pin it:** within 1σ of the colour-split gap, p = 1–2; of the Sérsic-split gap,
+  p = 1.75–2.25; of both, **p = 1.75–2**. Doubling σ multiplies the extra pull by 2^(p/2) = **1.8–2.0**. The data
+  demand the request's scaling, so whatever the mechanism, it must produce it.
+* **A side lead:** at p = 1.75 the KiDS level, all lenses' common 16% excess over the law (+0.065 dex, §22.3),
+  falls to +0.011 (3%) with the clusters fitted as well (u = 134 km/s). Whether the rest of the suite accepts
+  p = 1.75 is untested (the heat weight enters the galaxies' bulges, every cluster and every collision).
+
+### 23.9 Where the heat term's extra power must come from
+
+If the heat term's extra power, k times ℓ per kilogram, came out of the sources' motion, it would drain their
+kinetic energy per kilogram, (3/2)σ², in
+```
+t = (3/2)σ² / (k ℓ) = u² / (2ℓ) = u / a = 1.694 × 10⁵ m/s ÷ 6.30 × 10⁻¹¹ m/s² = 2.69 × 10¹⁵ s = 85 million years
+```
+(a = 2ℓ/u), whatever the temperature. Clusters and ellipticals are far older and still hot, so the extra power
+comes from matter's own supply, the one that feeds the companion at ℓ in the first place. Motion only unlocks it.
+That is what set D's dark cloud does: its emitters hold their output back when cold, and random motion releases
+it. Collisions keep it held.
+
+### 23.10 What this means, and next
+
+* **Derived and confirmed in one experiment:** round 10's pull, now as momentum bookkeeping (F = −(P/c) k̂: the
+  recoil of the power fed), and round 3's protection of coherence by collisions, with the pull measured and the
+  suppression as round 3's formula gives. "Gas does not count as hot" survives the join.
+* **Excluded:** the heat term's mechanism as the blog stated it ("scrambled contributions don't cancel, so they pull
+  harder"), for any one fixed offset and for free amplitudes. Scrambling weakens a chorus, and a slow body cannot use
+  a scrambled wave. The heat term itself stands on the data (clusters, the elliptical/spiral lensing gap, the
+  collisions), and §23.8 shows the data demand its scaling.
+* **Found:** one rule, the same for every emitter, that puts the heat term's pattern into the pull itself: an offset
+  set by the wave's strength, ahead of weak waves and behind strong ones. Cold dense clouds go dark and still pull;
+  free random motion strengthens the pull (to ×2), frequent collisions suppress the gain, orderly rotation gives
+  none; the pull follows √(cold + released power), the law's √(|g_N| + S); the first doubling of σ gives ×1.9 in the
+  extra pull. The extra energy comes from matter's own supply, as §23.9 requires.
+* **Not yet:**
+  * the gain holds while the motion is slower than about a quarter of the re-timing rate; beyond that the test bodies
+    lose step (§23.5). The darker the cold state, the more of the heat-dominated regime lies below that limit;
+  * the release flattens with σ (released power ×3.3, 2.4, 1.7 per doubling; the data want ×3.4–4 sustained over a
+    factor of ten in σ, from the lenses to the clusters);
+  * the rule is a hypothesis with a physical reading, not yet a derivation.
+* **The test bench stays:** any candidate rule can be dropped into `simulate` in `code/coherent_force_v13.py` and
+  graded by the same runs.
+* **Next (round 14):**
+  1. **Derive the strength-dependent offset** from a saturable emitter (gain that saturates, loss that does not), and
+     test whether the same saturation gives the law's release factor, exp(−|g_N|/g_d).
+  2. **Bodies that keep in step:** a pull drawn from the companion's energy flow (round 12's guided stream) rather
+     than its phase, or a cold state dark enough that the whole heat-dominated regime lies at slow speeds; then u
+     mapped onto the locking rate and the darkness together.
+  3. **The release's steepness:** why the toy's release flattens (σ^1.7 → σ^0.8), and what keeps it near σ² over a
+     factor of ten.
+  4. **The heat exponent p = 1.75 on the full suite** (§23.8): it removes KiDS's common level.
+  5. Round 12's list (§22.5): the guided companion with moving sources, the lenses' gas, the distance law's shape,
+     MACS J0025's star masses, the faint dwarfs, the Sun's speed, Abell 1689.

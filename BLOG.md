@@ -3,7 +3,7 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–21).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–22).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
@@ -137,6 +137,18 @@ colliding clusters, with no dark matter and no expanding universe.*
     one stream and forms no whirlpools, and a short argument shows why it must. That turns rev 20's
     last assumption into a physical property: the companion is a wave guided by gravity's own field
     lines, as some waves in the Sun's hot gas are guided by its magnetic field.
+* **Rev 22** does what you asked next: it joins our two working pieces, the pull (§4.14) and the scrambling
+  (§3.5–3.6), in one experiment where only the motion changes (§6.17).
+  * **With one fixed timing, heat weakens the pull.** Free random motion halves it, and collisions protect it. The
+    reason is exact: a body is pulled by the recoil of what it feeds the passing wave, and bodies in step all feed or
+    all absorb together, so a pull needs a loud chorus that motion can only break up. §3.5's "scrambled contributions
+    don't cancel, so they pull harder" is ruled out as the mechanism, though the data still demand the heat term.
+  * **Another solution works in part:** emitters that feed a quiet wave but absorb a loud one. A cold, dense ball then
+    hushes itself yet still pulls. Free random motion strengthens the pull up to twice, frequent collisions hold the
+    gain back, orderly rotation gives none, and the law's square root appears by itself. It works while the motion is
+    slower than about a quarter of the re-timing speed; beyond that the test bodies lose step.
+  * **The data on "doubling":** galaxy lensing pins how steeply the heat term must grow. Doubling the speed spread
+    multiplies the extra pull by 1.8–2.0; the law has 2.0.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -168,7 +180,9 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
    galaxies in clusters, feeds it out of step.** Nothing cancels, so it pulls much harder.
    That is why clusters need so much extra pull.
    *Rev 19: points 2 and 3 are no longer just assumptions. Of three natural ways the companion
-   could add up, only this one fits both galaxies and clusters (§4.14).*
+   could add up, only this one fits both galaxies and clusters (§4.14). Rev 22: the data still demand point 3, but
+   "out of step" is not why. In a simulation, scrambling alone weakens the pull. What works is matter that holds its
+   companion back when cold and releases it when moving freely (§6.17).*
 4. **Gas does not count as "hot" in this sense.** Its particles collide so often that the
    companion sees them as sitting still. That is why, in a collision, the extra pull stays
    with the galaxies and leaves the gas behind.
@@ -214,6 +228,8 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
   spirals matches; all lenses together sit 16% above our law. Gas around them weighing as much as
   their stars, the KiDS team's own middle estimate, would close it; that gas is to be weighed;
 * **Abell 1689**, the next cluster to model;
+* **the heat term's mechanism (§6.17):** one rule now gives the right pattern in a simulation, but only at slow
+  speeds, and its physics is still to be derived;
 * a full relativistic version of the law.
 
 Settled along the way: the main Bullet cluster's galaxy speeds (§6.3, rev 14–15), Cassini's
@@ -365,6 +381,10 @@ is the arrow sum: 160.50, against a predicted 160.49. With emitters moving rando
 Why this matters is geometry. Inside a big, spread-out cloud, Newton's pulls from all sides
 largely cancel, but the plain total does not. In a cluster, that is exactly the extra pull
 needed: large near the centre and smaller toward the edge.
+
+*Rev 22: joined with the pull of §4.14 in one experiment, scrambling alone makes the pull weaker, not stronger
+(§6.17). The heat term stands on the data, but its mechanism is different: cold matter holds its companion back,
+and free random motion releases it.*
 
 ### 3.6 Collisions switch the scrambling off
 
@@ -713,6 +733,11 @@ predicted for sources in step, and 210.55 against 209.20 for sources moving rand
 lamp. Light from a laser adds wave by wave, so it can cancel. Light from a lamp adds by
 brightness, so it never cancels. Random motion turns part of the companion from "laser" into
 "lamp".
+
+*Rev 22: not quite. In a simulation that joins this with the pull (§6.17), a "lamp" pulls less, because a body
+can't keep in step with it. What works is closer to a laser held just below its threshold: cold matter holds its
+companion back, and free random motion releases it, with the energy coming from matter's own supply. Galaxy lensing
+confirms the σ² (§6.17).*
 
 **Why it matters so much in clusters.** Inside a big, spread-out cloud, Newton's pulls from all
 sides cancel toward the centre, but plain totals don't. So near a cluster's centre S stays large
@@ -2180,6 +2205,142 @@ more things fit:
 
 Script: `code/companion_toy_v12.py`.
 
+### 6.17 Round 13: the pull and the scrambling in one experiment (rev 22)
+
+**What you asked.** Two pieces of the theory worked, but only separately:
+* **the pull** (§4.14): matter that feeds a passing wave a quarter beat ahead of it is pulled toward the wave's source;
+* **the scrambling** (§3.5–3.6): random motion knocks the companion out of step, and frequent collisions keep it in
+  step.
+
+You asked for one experiment that joins them, with the same matter and the same rules, changing only how the matter
+moves: orderly, randomly and freely, or randomly with frequent collisions. Small test bodies would feel only the wave
+where they sit, with nothing of our law built in. Success would be:
+* free random motion pulls *harder*;
+* collisions take the extra pull away;
+* doubling the speed spread roughly doubles the extra pull, without that being programmed in.
+
+This was proposal 3 of §9.1. Midway, when the first answer came out backwards, you asked us to look for another
+solution. We found one, and it works in part.
+
+**The set-up.** Picture 100 tiny singers in a ball about two companion wavelengths across. Each one:
+* sings the companion wave;
+* listens to the wave around it;
+* keeps adjusting its timing to stay a fixed amount ahead of, or behind, what it hears.
+
+Thirty-two more singers of the same kind sit six wavelengths away as test bodies. We measure:
+* how hard, on average over long times, the test bodies are pulled toward the ball;
+* how loudly the ball sings compared with 100 singers who ignore one another.
+
+Speeds are measured against how fast a singer can re-time itself. At speed 1, a moving singer drifts out of step
+exactly as fast as it can correct. That also turns the speeds into our law's heat weight: speed 1 is k ≈ 1, speed 3
+is k ≈ 9 (a giant elliptical's stars), and speed 10 is k ≈ 100 (a rich cluster's galaxies). The model passed its
+check: one singer and one test body give exactly the pull that §4.14 derived, to five digits.
+
+**First try, with the rule from rev 19.** Every singer runs a quarter beat ahead of the wave it hears.
+* **At rest** the singers fall into step and sing 4.4 times louder than independent singers would. The test bodies
+  are pulled twice as hard as by independent singers.
+* **Moving freely at random,** the chorus breaks up, and the pull drops to about half (0.36–0.49 of the pull at rest).
+* **Colliding,** the chorus survives and so does the pull (0.87–0.96). Collisions protect exactly as §3.6 says, and by
+  the amount the Dicke formula behind §3.6 predicts.
+* **Rotating in an orderly way,** the chorus survives, but its pattern sweeps past the test bodies, which can't follow
+  it.
+
+So the scrambling half works, but heat weakens the pull instead of strengthening it.
+
+**Why, exactly.** Two facts decide it, and neither can be tuned away.
+1. **A body is pulled by the recoil of what it adds to the passing wave:** the pull equals the power it feeds the wave,
+   divided by the wave's speed. It is like a rowing boat pushing water backwards: no feeding, no pull.
+2. **When singers are in step, every one of them, test bodies included, sits at the same timing relative to the wave
+   it hears.** So either all of them feed or all of them absorb. If all feed, the ball sings louder than independent
+   singers: a chorus. If all absorb, it sings more quietly: a hush. A hushed ball's test bodies absorb too, so they are
+   pushed.
+
+We checked this at 16 different timings. At every one, the test bodies were pulled exactly when the ball sang louder
+than independent singers. With one fixed timing, heat can only break a chorus up, so it can only weaken the pull.
+
+**What the opposite timing showed.** With singers a quarter beat *behind* the wave:
+* the ball at rest is hushed, at a fifth of independent singers' volume (a denser ball: a 35th);
+* free random motion breaks the hush, making the ball up to four times louder;
+* collisions keep the hush.
+
+That is exactly the pattern our heat term needs, and the extra power comes out of the singers' own supply. It has to:
+if it came out of their motion, a cluster's galaxies would lose their speed in 85 million years, and clusters have
+stayed hot for billions. But the test bodies of a hushed ball are pushed. So we needed one rule that hushes a ball
+from inside and still makes distant bodies feed.
+
+**Another solution: timing that depends on how loud the wave is.** The rule: every singer runs a quarter beat ahead
+of a *quiet* wave, feeding it, and falls a quarter beat behind a *loud* one, absorbing it. Everyone follows the same
+rule.
+* Inside a dense ball, the singers' waves overlap and are loud, so the ball hushes itself.
+* Far away the wave is quiet, so the test bodies feed it and are pulled.
+
+It is how an amplifier with a small built-in loss behaves: a faint signal gets boosted, but a loud one uses up the
+gain, and the loss soaks it up.
+
+**It works, in part: the first time the three pieces behave as the law needs, in one simulation.** In our densest
+ball, 87 times quieter than independent singers when cold, the pull on the test bodies compared with the same ball
+at rest was (four runs each; speeds as fractions of the re-timing speed):
+
+| speed | 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 |
+|---|---|---|---|---|---|---|
+| **moving freely at random** | ×1.32 | ×1.60 | ×1.83 | **×1.99** | ×1.91 | ×1.66 |
+| with frequent collisions | ×1.07 | ×1.07 | ×1.18 | ×1.39 | ×1.91 | ×1.99 |
+| rotating in step | ×1.01 | ×0.98 | ×0.96 | ×0.90 | ×0.81 | ×0.55 |
+
+* **Free random motion strengthens the pull, up to twice.** The motion breaks the hush and the ball gets louder
+  (seven times louder at a quarter of the re-timing speed), and the test bodies feed the louder wave.
+* **Frequent collisions hold the gain back,** at the slower speeds to a small fraction, because they keep the hush.
+  That is what gas needs. In a second, less dense ball, collisions removed the gain entirely (×0.90–0.95, against
+  ×1.10–1.35 moving freely).
+* **Rotating in step gives no gain.**
+* **Our law's square root appears by itself.** The wave reaching the test bodies grows exactly as the square root
+  of the cold output plus the released output. That is the form √(|g_N| + S) our law uses (§3.8), and nobody put it
+  in.
+* **Doubling:** going from 1/32 to 1/16 of the re-timing speed multiplies the released output by 3.3 and the extra
+  pull by 1.9. The law has 4 and 2. After that the gains shrink.
+* **Where it stops:** once the motion is faster than about a quarter of the re-timing speed, the test bodies can't
+  keep in step with the flickering wave, and their pull falls back even though the ball keeps getting louder.
+* **Why that limit may matter less than it looks:** with a hush this deep, heat already dominates at 1/32 of the
+  re-timing speed. So the conversion from speed to heat weight given above is too pessimistic. The deeper the cold
+  hush, the more of the heat range lies at speeds where bodies keep in step.
+
+**What the data say about "doubling".** We asked the real data how steeply the heat weight must grow with the speed
+spread σ, instead of assuming σ². The clusters can't tell: their galaxies all move at similar speeds, and the
+companion's speed adjusts to compensate. Galaxy lensing can, because its lens galaxies' stars move about six times more
+slowly. The difference in lensing between ellipticals and spirals (0.15 dex measured) is matched only if **doubling σ
+multiplies the extra pull by 1.8–2.0**. Our law has 2.0. Whatever the mechanism, it must produce that.
+
+| heat weight grows as | σ¹ | σ^1.5 | σ^1.75 | **σ² (the law)** | σ^2.5 | σ³ |
+|---|---|---|---|---|---|---|
+| companion's speed the clusters then want | 33 km/s | 98 | 134 | **169** | 237 | 296 |
+| clusters' typical miss | 25% | 25% | 25% | **25%** | 25% | 25% |
+| ellipticals' extra lensing (colour split; 0.153 ± 0.04 measured) | 0.149 | 0.160 | 0.148 | **0.126** | 0.077 | 0.039 |
+| the same, by galaxy shape (0.154 measured) | 0.201 | 0.210 | 0.188 | **0.155** | 0.089 | 0.043 |
+| all lenses' common excess over the law | −0.22 | −0.05 | **+0.01** | +0.065 | +0.14 | +0.18 |
+
+One side lead: at σ^1.75 the lenses' common 16% excess (§6.16) almost disappears (+0.01 dex), while the clusters fit
+just as well. That is worth a full regression-suite run.
+
+**What it means.**
+* **The pull and the scrambling now live in one experiment.** Both behave as derived: the pull from feeding a passing
+  wave, and collisions protecting the timing.
+* **The simple story for heat, "scrambled contributions don't cancel, so they pull harder" (§3.5, §4.6), is ruled
+  out:** scrambling weakens a chorus. The heat term itself still stands on the data (clusters, the elliptical–spiral
+  lensing gap, colliding clusters), and the data demand its σ² scaling.
+* **Its likely mechanism is now in view.** Cold matter holds its companion back in a hush, motion releases it, and
+  collisions keep it held. The energy comes from matter's own supply. The one rule we found, "feed quiet waves, absorb
+  loud ones", gives the right signs in the same experiment.
+* **Still to do:**
+  * find the physics behind that rule;
+  * let bodies follow a wave that changes quickly (our test bodies lose the extra pull once the motion outpaces their
+    re-timing);
+  * make the release grow as steeply as the data say.
+  * Also: whether the same rule is what our law calls "strong gravity holds the companion back" (§3.4). That hold
+    works the same way, strong waves held back and weak ones free, so it is the first thing to check.
+
+Scripts: `code/coherent_force_v13.py`, `code/joint_checks_v13.py`, `code/strength_offset_v13.py`,
+`code/heat_exponent_v13.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -2426,9 +2587,12 @@ proposals for finishing the theory.
    * *Done in rev 21 (§6.16):* a working model of five local rules. Only a companion guided along
      gravity's field lines keeps every watt, travels as one stream and forms no whirlpools, and a
      short argument shows it must follow Newton's pattern exactly.
-   * *Next:* the guided companion with moving sources: does a companion carried along with its
-     matter keep the memory the collisions need? Then the same rule graded on the galaxies, clusters
-     and Milky Way;
+   * *Done in rev 22 (§6.17):* the pull and the scrambling in one experiment. With one fixed timing, heat weakens
+     the pull, for an exact reason. Emitters that feed quiet waves but absorb loud ones give the right pattern at
+     slow speeds: a pull up to twice as strong with free random motion, held back by collisions, none from rotation.
+   * *Next:* derive that rule from a saturating emitter, and see whether the same saturation is the law's hold
+     on strong companions (§3.4); make bodies keep in step with a fast-changing wave; then the guided companion with
+     moving sources, for the collisions' memory;
    * a full field theory for the companion, with its travel, its release length and a
      relativistic form, so that lensing is derived;
    * what the release length is;
@@ -2470,7 +2634,7 @@ into our inputs.
 |---|---|---|---|---|
 | 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15). Rev 21: a companion guided along gravity's field lines gives it with no further assumption (§6.16)** | the guided companion with moving sources: does it keep its memory in a collision? | hard; the foundation |
 | 2 | Predict unseen data with a locked model | **rev 19: the wide-binary forecast locked (§6.7)** | lensing profiles by speed spread for a new galaxy sample | doable now |
-| 3 | Show that random motion makes a steady pull and collisions remove it | Dicke toy: scrambling and its suppression, not yet the force | add test bodies and measure the averaged force | medium; builds on the toy |
+| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating)** | derive the rule; keep bodies in step at higher speeds | medium; the test bench exists |
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
 | 5 | One mechanism for Cassini, dwarfs and wide binaries | release adopted; the dwarfs need a weaker hold, reason unknown | derive the release time and the hold from one transition | hard; biggest payoff |
 | 6 | Evolve the companion through collisions | memory imposed; the Bullet's smaller half at half weight | a time-dependent transport solver | medium to hard |
@@ -2531,7 +2695,11 @@ into our inputs.
     "gas" switch.
   * Split one population into arbitrary catalogue groups and check that nothing changes.
 * *Watch out for:* a "force" that is only jitter. Average over long times and check its sign.
-* *First step:* reuse the toy's emitters with proposal 1's interaction.
+* *First step:* reuse the toy's emitters with proposal 1's interaction. *Done in rev 22 (§6.17), with 135 runs plus
+  checks. With one fixed timing, free random motion halves the pull (the reason is exact). With a timing that depends
+  on the wave's loudness, free random motion strengthens the pull up to ×2, collisions hold that back, and rotation
+  adds nothing, at speeds up to a quarter of the re-timing rate. Next: the rule's physics, and bodies that keep in
+  step at higher speeds.*
 
 **4. Light and matter from one coupling.**
 * *Where we stand:* we assume light feels the same landscape Φ as matter, with Einstein's
@@ -2697,7 +2865,7 @@ into our inputs.
     clusters recover without heavier stars.
   * Galaxy lensing becomes a test of our distance law's scale and of the companion's speed.
     Suite: 57 pass, 9 close, 10 fail.
-* **Revision 21 (round 12, this page).** Rev 20's next steps, one at a time:
+* **Revision 21 (round 12).** Rev 20's next steps, one at a time:
   * MACS J0025's age, read from its shock fronts: young, and its north-western lensing peak sits on
     its galaxies;
   * the lensing galaxies' star speeds, measured from SDSS spectra: the ellipticals' extra lensing
@@ -2707,10 +2875,16 @@ into our inputs.
     Suite: 59 pass, 11 close, 7 fail;
   * a working model of the companion: only a companion guided along gravity's field lines keeps every
     watt, travels as one stream and forms no whirlpools.
+* **Revision 22 (round 13, this page).** The pull and the scrambling in one experiment:
+  * with one fixed timing, heat weakens the pull, and the reason is exact;
+  * emitters that feed quiet waves but absorb loud ones give the right pattern at slow speeds;
+  * galaxy lensing pins the heat term's σ² (doubling σ gives 1.8–2.0 times the extra pull).
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
 * round 2's reaction force on hot matter (now the companion carries momentum);
+* revs 12–21's mechanism for the heat term, "scrambled contributions don't cancel, so they pull
+  harder": joined with the pull in one experiment, scrambling alone weakens it (rev 22, §6.17);
 * round 1's companion speed (874 km/s; 197 in revs 12–19; 163 since rev 20, measured in our own
   distances with the clusters' stars correctly counted);
 * round 2's solar mass-loss figure (1.4 × 10⁻¹⁴ per year; 2.3 × 10⁻¹⁵ in revs 12–19; now
@@ -2833,6 +3007,10 @@ python distance_scale_v12.py --output-dir ../run-distance-scale-v12    # the rat
 python kids_level_v12.py    --output ../run-distance-scale-v12/kids_level_v12.json    # what sets the lensing level
 python companion_toy_v12.py --output ../run-companion-toy-v12/companion_toy_v12.json  # five local rules for the companion
 python companion_toy_v12.py --convergence --output ../run-companion-toy-v12/convergence_v12.json  # the same at three resolutions
+python coherent_force_v13.py --output ../run-coherent-force-v13/coherent_force_v13.json  # the pull and the scrambling in one experiment
+python joint_checks_v13.py  --output ../run-coherent-force-v13/joint_checks_v13.json    # 16 timings, doubling the speed, free amplitudes
+python strength_offset_v13.py --output ../run-coherent-force-v13/strength_offset_v13.json  # feed quiet waves, absorb loud ones
+python heat_exponent_v13.py --output ../run-coherent-force-v13/heat_exponent_v13.json  # how steeply the heat term must grow
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:

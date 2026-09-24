@@ -120,6 +120,20 @@
 >   * The dynamical toy: of five local rules (free streaming, scattering, head-on annihilation,
 >     alignment, guided streaming along ĝ_N), only guided streaming gives one stream, div J = ℓρ and
 >     curl J = 0; alignment forms whirlpools on its own. A flux-tube argument makes it exact.
+> * **Round 13 (§23): the pull and the scrambling in one experiment.**
+>   * One set of emitters, one locking rule, test bodies that feel only the local wave; only the motion changes.
+>     The pull is the recoil of the power fed, F = −(P/c) k̂. Locked identical emitters share one phase to their
+>     local wave, so test bodies are pulled iff the cloud outshines independent emitters (16 offsets, no exception).
+>     Round 10's fixed offset therefore gives the opposite of the heat term: free motion halves the pull (0.36–0.49
+>     of rest), collisions protect it (0.64–0.96). Free amplitudes (Stuart–Landau) are brighter still.
+>   * Kept: Dicke protection, quantitatively (phase variance q²Γ/ν); the dark cloud's release of held power
+>     (0.197 → 0.79 free, 0.40 colliding); the energy must come from matter's supply (drawn from motion it would last
+>     u/a = 85 Myr).
+>   * A wave-strength-dependent offset (ahead of weak waves, behind strong ones) gives dark cold clouds that pull; free
+>     motion then strengthens the pull up to ×1.99, collisions suppress the gain, rotation gives none, the pull follows
+>     √(cold + released power), and the first doubling of σ gives ×1.9 in the extra pull. Limits: q ≲ 1/4 (tracking)
+>     and a release that flattens with σ.
+>   * Data: k ∝ σ^p with p = 1.75–2 from the KiDS gap (X-COP is flat in p); p = 1.75 removes KiDS's common level.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -305,13 +319,59 @@ results README §18):
   power; alignment f 0.98 but 0.35–0.75 dex and 8–32° off J_N with whirl 0.43–0.58 (steady with
   resolution); guided f = 1, lossless, J_N to 0.008–0.02 dex (first-order grid error, halving with h).
 * **Consistency:** scrambled (hot) contributions carry no coherent direction and are not guided; they
-  add as the scalar sum S, as X-COP demands (h = 1). Memory: a guided wave is advected with its guiding
+  add as the scalar sum S, as X-COP demands (h = 1). *(Round 13: scrambling alone weakens a locked pull; the heat term's
+  mechanism is a release of held power, next section.)* Memory: a guided wave is advected with its guiding
   medium (Alfvén waves with their plasma); a guided companion carried with its matter would carry the
   memory the collisions use. Not yet modelled: moving sources.
 * **Constants with every data set in the static law** (α ×0.95, SPARC's Hubble-flow galaxies placed
   there; `run-distance-scale-v12`): a = 6.298 × 10⁻¹¹ m/s², g_d = 2.027 × 10⁻¹⁰ m/s² (λ = 3.22),
   u = 169.4 km/s, so ℓ = au/2 = 5.3 × 10⁻⁶ W/kg, the reach 2.25 Mpc and the release length's travel
   time 840 years. SPARC 15.87 km/s; X-COP rms 0.222.
+
+### Round 13: the local pull and the scrambling in one experiment
+
+* **The experiment** (`code/coherent_force_v13.py`): N = 100 emitters in a ball of one wavelength's radius, each
+  locking at rate Γ to its local wave with offset δ, dθ_j/dt = dω_j + Γ sin(arg E_j + δ − θ_j),
+  E_j = Σ_{l≠j} e^{ik0R_jl}/(4πR_jl) e^{iθ_l}; 32 test emitters of the same kind at 6λ feel only
+  F = ½ Re(e^{−iθ_p} ∇E). Only the motion changes: rest, rigid rotation, free Maxwellian, Maxwellian with
+  velocities redrawn at rate ν. Validation: one source, one test body, F = (k0/2)|E| to five digits.
+* **The pull is the recoil of the fed power.** With P = (ω/2) Im(a*E) and F = ½ Re(a*∇E), a locally travelling
+  wave (∇E = ikE) gives F = −(P/c) k̂ exactly: feeding is pulled, absorbing is pushed. Round 10's (k0/2)|E| is the
+  maximum, at a quarter cycle ahead.
+* **One phase for all locked emitters.** Locked at a common Ω with equal pitches, every emitter, test bodies
+  included, has arg E_j − θ_j = arcsin(Ω/Γ) − δ. Since Σ_j Im(a_j* E_j) = (k0/4π) Σ_{j≠l} sinc(k0R_jl)
+  Re(a_j* a_l), the test bodies are pulled iff the cloud outshines independent emitters. Checked at 16 offsets
+  (`code/joint_checks_v13.py`): no exception; the three dark clouds (δ = 3π/8, π/2, 5π/8) push.
+* **Consequences for round 10's rule (δ = −π/2):** the cold cloud is a chorus (radiated 4.39 × independent; pull
+  1.99 × independent); free random motion breaks it (radiated 1.8–2.4) and halves the pull (0.36–0.49 of rest at
+  q = k0σ/Γ = 1–10); collisions (ν = 20 k0σ) protect it (0.64–0.96). Rigid rotation keeps the chorus but sweeps
+  its pattern past the test bodies (0.25 of rest at q = 10).
+* **What survives:**
+  * Dicke protection, quantitatively: a colliding cloud behaves as a free one at the phase variance q²Γ/ν (round
+    3's formula; ratio 0.056 against 0.05 at q = 1).
+  * The heat pattern in a dark cloud's output (δ = +π/2): radiated 0.197 at rest (0.028 at 8× the density), up to
+    0.79 (0.45) moving freely, 0.40 (0.23) colliding, unchanged when rotating. The release grows per doubling of σ
+    by ×2.9 → 1.1 (×2.1 → 1.1), i.e. p ≈ 1.5 → 0.5, flatter than the data's p.
+  * Energy: the heat's extra power k ℓ per kg drawn from motion would empty (3/2)σ² in u/a = 85 Myr, whatever σ;
+    it must come from matter's own supply, which is what a dark cloud's release draws on.
+* **Tracking.** A body locking at Γ cannot follow a wave that changes faster: with the pitch spread at ±10Γ
+  (sources unlocked) the test bodies get 0.034 of a perfect follower's pull. Under round 3's mapping,
+  Γ/k0 = u/√3 = 98 km/s.
+* **Free amplitudes** (Stuart–Landau, dA/dt = (μ + i dω − (1 + ic)|A|²)A + K e^{iβ}E with β = −π/2 + arctan c, so
+  that a lone emitter still locks a quarter cycle ahead): brighter, 5–15 × independent, and test bodies lock poorly.
+* **An offset that depends on the local wave's strength** (`code/strength_offset_v13.py`),
+  δ(|E|) = −π/2 + π x⁴/(1 + x⁴), x = |E|/E_s, the same for every emitter: strong waves inside a dense cloud make it
+  dark, weak waves far away make test bodies feed. With E_s = 0.1–0.3 (up to 1 in denser clouds) cold clouds are dark
+  (1/6 to 1/87 of independent emitters) and pull their test bodies (sources feeding −0.39 to −0.67, test bodies +0.48
+  to +0.66). In the densest cloud (557 per λ³, four seeds) free motion raises the pull ×1.32, 1.60, 1.83, 1.99 for
+  q = 1/32 → 1/4; frequent collisions (ν = 20Γ max(1, q)) ×1.07 → 1.39; rigid rotation ×1.01 → 0.90. The test
+  bodies' wave grows as √(radiated), the law's √(|g_N| + S); the first doubling of σ gives ×3.3 in released power
+  and ×1.9 in the extra pull, later ones less (×2.4, 1.7; ×1.4, 1.2). Beyond q ≈ 1/4 the test bodies lose step and
+  the gain falls back. Reading: a saturable amplifier with a fixed loss (net gain for weak waves, net loss for strong
+  ones), the same shape as the release factor (strong companion held back); not yet derived.
+* **The heat exponent, from the data** (`code/heat_exponent_v13.py`): k = 3(σ/u)^p with u refitted on X-COP for
+  each p; X-COP is flat in p (rms 0.221–0.226 for p = 1–3); the KiDS early/late gap within 1σ needs p = 1–2 (colour)
+  and 1.75–2.25 (Sérsic), both 1.75–2. At p = 1.75, u = 134 km/s and KiDS's level falls from +0.065 to +0.011 dex.
 
 ### What follows
 
