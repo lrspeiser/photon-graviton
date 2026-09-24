@@ -33,6 +33,7 @@ sources' part of their drive, C[receivers, sources] e^{i phi_sources}.
 
     python code/rhythm_protect_v17.py --output run-rhythm-budget-v17/rhythm_protect_v17.json [--processes 4]
     python code/rhythm_protect_v17.py --set compact --output run-rhythm-budget-v17/rhythm_protect_compact_v17.json
+    python code/rhythm_protect_v17.py --set trace --output run-rhythm-budget-v17/rhythm_trace_v17.json
 """
 from __future__ import annotations
 import os
@@ -200,6 +201,37 @@ DIAGNOSTICS = ('heat_tugs_gradient_part_only', 'heat_tugs_nongradient_part_only'
 COMPACT = dict(MAIN, Rb=0.6)          # the same 48 pieces in a ball smaller than a wavelength
 
 
+def trace(args):
+    """A run of the reduced model 24,000 time units long, reported every 2,000: the sources' mean rhythm and spread,
+    the receivers' mean rhythm, their keeping step, and the sources' synchrony."""
+    name, seed, k = args
+    st = STRUCTURES[name]
+    q = q_for_k(st, k, MAIN['gamma0']) if k > 0 else 0.0
+    x, dl, M, dM = arrangement(MAIN, seed, q)
+    Ns = MAIN['Ns']; N = len(dl)
+    p = dict(om.PIECE, **MAIN['piece']); w0, a = steady_amplitude(p)
+    C, Fs, Bsum, parts = reduce(M, dl, st)
+    omv = -0.5 * w0 * np.real(np.diag(C)); Coff = C * (~np.eye(N, dtype=bool)); Esrc = C[Ns:, :Ns]
+    rng = np.random.default_rng(seed + 1000); phi = rng.uniform(0, 2 * np.pi, N)
+    dt = 0.5; win = 2000.0; out = []; mark = phi.copy(); leads = []
+
+    def rhs(ph_):
+        e = np.exp(1j * ph_)
+        return omv - 0.5 * w0 * np.real((Coff @ e) * np.conj(e))
+
+    for s_ in range(1, int(24000.0 / dt) + 1):
+        k1 = rhs(phi); k2 = rhs(phi + .5 * dt * k1); k3 = rhs(phi + .5 * dt * k2); k4 = rhs(phi + dt * k3)
+        phi = phi + dt * (k1 + 2 * k2 + 2 * k3 + k4) / 6
+        E = Esrc @ np.exp(1j * phi[:Ns]); leads.append(np.mean(np.sin(np.angle(E) - phi[Ns:])))
+        if s_ % int(win / dt) == 0:
+            r = (phi - mark) / win
+            out.append(dict(t=s_ * dt, sources_rhythm=float(r[:Ns].mean()), sources_spread=float(r[:Ns].std()),
+                            receivers_rhythm=float(r[Ns:].mean()), receivers_spread=float(r[Ns:].std()),
+                            keeping_step=float(np.mean(leads)), sync=float(abs(np.mean(np.exp(1j * phi[:Ns]))))))
+            mark = phi.copy(); leads = []
+    return dict(structure=name, seed=seed, k=k, q=float(q), windows=out)
+
+
 def job(args):
     name, seed, k, diag, cfg = (tuple(args) + (MAIN,))[:5]
     t0 = time.time()
@@ -211,9 +243,22 @@ def job(args):
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--output', type=Path, required=True)
     ap.add_argument('--processes', type=int, default=4)
-    ap.add_argument('--set', default='main', help="'main' (radius 3 wavelengths/2 pi) or 'compact' (0.6)")
+    ap.add_argument('--set', default='main', help="'main' (radius 3 wavelengths/2 pi), 'compact' (0.6) or 'trace' (long "
+                    "time traces: the valve with the odd parity at k = 8, and a cold source)")
     args = ap.parse_args(); args.output.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.monotonic()
+    if args.set == 'trace':
+        jobs = [('valve, gR = 20, gB = 5, odd', 1, 8.0), ('valve, gR = 20, gB = 5, odd', 2, 8.0), ('single', 1, 0.0)]
+        with Pool(args.processes) as pool:
+            res = list(pool.imap(trace, jobs))
+        for r in res:
+            print(f"{r['structure']} seed {r['seed']} k {r['k']}:")
+            for w in r['windows']:
+                print(f"   t {w['t']:6.0f}: sources {w['sources_rhythm']:+.2e} (spread {w['sources_spread']:.1e}), receivers "
+                      f"{w['receivers_rhythm']:+.2e} (spread {w['receivers_spread']:.1e}), keeping step {w['keeping_step']:+.2f}")
+        args.output.write_text(json.dumps(dict(experiment='round 17 step B: time traces (reduced model)', runs=res), indent=1) + '\n')
+        print('wrote', args.output)
+        return
     if args.set == 'compact':
         names = ['single', 'single, odd', 'bright + dark, Delta = gamma + gi', 'bright + dark, Delta = gamma + gi, odd',
                  'paired, Delta = 4 (gamma + gi), odd', 'valve, gR = 20, gB = 5', 'valve, gR = 20, gB = 5, odd']
