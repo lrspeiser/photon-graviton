@@ -340,11 +340,20 @@ step at every distance, better than with a cold source (dashed). Script `code/on
 * With the outward-only wave, a warm source keeps one beat (70 times tighter than with the two-way wave) and distant
   matter keeps step at 0.98, 0.96, 0.85 and 0.81 at four distances. What matters is that the wave has no way back: any
   one-way order works, and an outflow supplies the natural one, from the centre outward.
-* **In the full simulation, warm matter then pulls distant matter harder than cold matter**, as the law needs: at a
-  heat weight of 8 the net pull on a receiver is +2.4, +2.1, +1.8 and +1.1 (in units of 10⁻⁴) at the four distances,
-  against +1.6, +1.1, +0.4 and +0.5 for the same source cold. Measured against the square root of the wave's extra
-  strength it comes out about 1 on average, exactly what the law's square root requires. Colliding sources pull like
-  cold ones, and a warm source brought to rest goes back to about the cold pull.
+* **In the full simulation, warm matter then pulls distant matter harder than cold matter**, as the law needs. The net
+  pull on receivers of the same matter at four distances (units of 10⁻⁴; a minus sign is a push):
+
+  | Source | r = 6 | 9 | 13.5 | 20 |
+  |---|---:|---:|---:|---:|
+  | Cold, outward-only wave | +1.61 | +1.14 | +0.41 | +0.53 |
+  | **Warm (heat weight 8), outward-only wave** | **+2.36** | **+2.12** | **+1.75** | **+1.07** |
+  | Warm but colliding, outward-only wave | +1.53 | +0.99 | +0.38 | +0.50 |
+  | Warm, wave travelling both ways | −0.89 | −0.55 | −0.03 | −0.09 |
+
+  Measured against the square root of the wave's extra strength, the warm source's extra pull comes out about 1 on
+  average, exactly what the law's square root requires. Colliding sources pull like cold ones, and a warm source brought
+  to rest goes back to about the cold pull. With the wave travelling both ways, the same warm source pushes the nearest
+  matter away instead: the outward-only wave is what turns the push into a pull.
 * The glow stays in proportion to mass (the same per piece for sources of 24, 48 and 96 pieces), and a nice bonus falls
   out: with a wave that only travels outward, a piece feels only the matter nearer the centre than itself. For a round
   source that is Newton's rule that only the mass inside a radius pulls there, which is the form the law already takes.

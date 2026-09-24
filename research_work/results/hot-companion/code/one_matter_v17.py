@@ -316,6 +316,18 @@ def configs(which):
                 runs.append(case('single, odd', 'cold', **kw))
                 runs.append(case('single, odd', 'free', k=8.0, **kw))
         return runs
+    if which == 'oneway_mass':
+        # the one-way wave's mass scaling: sources of 24, 48 and 96 pieces at the same density, receivers at r = 12 and
+        # 18, matter whose radiators mostly ring inside (f = 0.05). The law needs the glow in proportion to the mass and
+        # the pull at a fixed distance in proportion to its square root (sqrt(a g_N) = sqrt(G M a)/r)
+        rec = shells((12.0, 18.0))
+        for sd in (1, 2):
+            for Ns in (24, 48, 96):
+                kw = dict(Ns=Ns, Rb=3.0 * (Ns / 48) ** (1 / 3), receivers=rec, T=8000.0, burn=4000.0, momentum=False,
+                          seed=sd, one_way=0.0, piece=dict(G=40.0, W0=16.0, g_par=0.01), dt=0.01)
+                runs.append(case('single, odd, f = 0.05', 'cold', **kw))
+                runs.append(case('single, odd, f = 0.05', 'free', k=8.0, **kw))
+        return runs
     raise ValueError(which)
 
 
