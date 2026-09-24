@@ -16,8 +16,8 @@
   "refit": []
  },
  "tier": "full",
- "date": "2026-09-24 03:48 UTC",
- "commit": "b436201+changes",
+ "date": "2026-09-24 04:05 UTC",
+ "commit": "ebb185b+changes",
  "checks": [
   {
    "id": "law.a_SI",
@@ -213,91 +213,101 @@
    "id": "lensing.kids_all",
    "group": "lensing",
    "title": "KiDS lensing pull, all isolated lenses (mixture): median log10(observed/predicted), static distances",
-   "value": 0.06257983662310629,
+   "value": 0.07045737268838792,
    "unit": "dex",
    "target": "0 +- 0.025 dex (7 reliable bins)",
    "status": "close",
-   "score": 2.5031934649242515
+   "score": 2.818294907535517
   },
   {
    "id": "lensing.kids_blue",
    "group": "lensing",
-   "title": "KiDS lensing pull, blue lenses (spirals, k = 0.1): median log10(observed/predicted), static distances",
-   "value": 0.07717512406128435,
+   "title": "KiDS lensing pull, blue lenses (k = 0.55, measured): median log10(observed/predicted), static distances",
+   "value": 0.0211773350863389,
    "unit": "dex",
    "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "fail",
-   "score": 3.087004962451374
+   "status": "pass",
+   "score": 0.847093403453556
   },
   {
    "id": "lensing.kids_red",
    "group": "lensing",
-   "title": "KiDS lensing pull, red lenses (ellipticals, stars at 160 km/s): median log10(observed/predicted), static distances",
-   "value": 0.039813358564122936,
+   "title": "KiDS lensing pull, red lenses (k = 2.14, measured): median log10(observed/predicted), static distances",
+   "value": 0.08141217519943567,
    "unit": "dex",
    "target": "0 +- 0.025 dex (7 reliable bins)",
-   "status": "pass",
-   "score": 1.5925343425649174
+   "status": "fail",
+   "score": 3.2564870079774266
   },
   {
    "id": "lensing.kids_disc",
    "group": "lensing",
-   "title": "KiDS lensing pull, Sersic n < 2 (disks): median log10(observed/predicted), static distances",
-   "value": 0.10718041219434404,
+   "title": "KiDS lensing pull, Sersic n < 2 (disks; k = 0.30): median log10(observed/predicted), static distances",
+   "value": 0.07740129546020214,
    "unit": "dex",
    "target": "0 +- 0.025 dex (7 reliable bins)",
    "status": "fail",
-   "score": 4.287216487773762
+   "score": 3.0960518184080854
   },
   {
    "id": "lensing.kids_bulge",
    "group": "lensing",
-   "title": "KiDS lensing pull, Sersic n > 2 (bulges): median log10(observed/predicted), static distances",
-   "value": -0.006401183621479234,
+   "title": "KiDS lensing pull, Sersic n > 2 (bulges; k = 2.15): median log10(observed/predicted), static distances",
+   "value": 0.03676033897607489,
    "unit": "dex",
    "target": "0 +- 0.025 dex (7 reliable bins)",
    "status": "pass",
-   "score": 0.25604734485916936
+   "score": 1.4704135590429956
   },
   {
    "id": "lensing.kids_gama",
    "group": "lensing",
    "title": "KiDS lensing pull, GAMA spectroscopic lenses: median log10(observed/predicted), static distances",
-   "value": 0.007140422632046395,
+   "value": 0.015017958697328027,
    "unit": "dex",
    "target": "0 +- 0.025 dex (7 reliable bins)",
    "status": "pass",
-   "score": 0.2856169052818558
+   "score": 0.6007183478931211
   },
   {
    "id": "lensing.kids_gap",
    "group": "lensing",
-   "title": "KiDS: ellipticals lens more than spirals of the same visible mass (gap)",
-   "value": 0.23424779614352118,
+   "title": "KiDS: red lenses lens more than blue ones of the same visible mass (colour gap)",
+   "value": 0.1320917935358255,
    "unit": "dex",
    "target": "0.153 +- 0.04 dex (same bins)",
-   "status": "close",
-   "score": 2.0368581057227573
+   "status": "pass",
+   "score": 0.5170419594696343
+  },
+  {
+   "id": "lensing.kids_gap_sersic",
+   "group": "lensing",
+   "title": "KiDS: bulge-dominated lenses lens more than disk-dominated ones (Sersic gap)",
+   "value": 0.16303823005730914,
+   "unit": "dex",
+   "target": "0.154 +- 0.04 dex (same bins)",
+   "status": "pass",
+   "score": 0.22359756957991694
   },
   {
    "id": "lensing.mistele_ltg",
    "group": "lensing",
    "title": "lensing circular speeds 50-300 kpc, spirals: rms z (static distances)",
-   "value": 4.359105221311868,
+   "value": 2.981051735446245,
    "unit": "",
    "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
-   "status": "fail",
-   "score": 4.359105221311868
+   "status": "close",
+   "score": 2.981051735446245
   },
   {
    "id": "lensing.mistele_etg",
    "group": "lensing",
    "title": "lensing circular speeds 50-300 kpc, ellipticals: rms z (static distances)",
-   "value": 0.9547786055212342,
+   "value": 2.5246271729737657,
    "unit": "",
    "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
-   "status": "pass",
-   "score": 0.9547786055212342
+   "status": "close",
+   "score": 2.5246271729737657
   },
   {
    "id": "lensing.slacs_light_equals_matter",

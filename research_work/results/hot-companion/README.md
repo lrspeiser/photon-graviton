@@ -2428,3 +2428,59 @@ So the NW peak's knife edge (0.40–0.45 Gyr) lies beyond every dynamical clock.
 
 **The suite** (full tier, baseline saved): **58 pass, 9 close, 9 fail** (round 11: 57, 9, 10). The only
 grade that moves is MACS J0025's NW peak, fail → pass.
+
+### 22.2 The lenses' heat, measured
+
+`code/lens_heat_sdss_v12.py` → `data/lens_heat_sdss_v12.json`; `code/kids_heat_v12.py` →
+`run-kids-heat-v12/kids_heat_v12.json`.
+
+Round 11 found KiDS's early/late gap too large with the new u (0.234 against 0.153 ± 0.04; §21.5) and
+asked whether the ellipticals' heat or their IMF was to blame. The KiDS comparison had assumed one
+number per class: 160 km/s for every star of a red or bulge-dominated lens, and k = 0.1 for every blue
+or disk-dominated one. Both are now measured.
+
+**The measurement.** SDSS DR17 spectra of 119,000 galaxies at 0.1 < z < 0.25 with MPA-JHU stellar
+masses (Kroupa, close to Chabrier), split as Brouwer et al. 2021 split KiDS: observed u − r at 2.5
+(red/blue), and fracDeV_r at 0.5 as a proxy for their Sérsic n = 2.
+* The hot part of each galaxy is its de Vaucouleurs fraction, at the fibre dispersion corrected to one
+  effective radius (σ_R/σ_e = (R/R_e)^−0.066, Cappellari et al. 2006). The rest is a disk at 30 km/s.
+* Median σ_e of red galaxies: 125, 142, 161 and 186 km/s at log M* = 10.0, 10.5, 10.75 and 11.0. Blue
+  galaxies of the same masses have bulges of 73–138 km/s, with de Vaucouleurs fractions of 0.1–0.5.
+* Mean heat weight over log M* = 10.3–10.9 (the KiDS stacks' typical 10.6), with u = 162.6 km/s:
+
+  | | red | blue | bulge-dominated | disk-dominated |
+  |---|---|---|---|---|
+  | measured (SDSS) | 2.14 | 0.55 | 2.15 | 0.30 |
+  | assumed until round 11 | 2.90 | 0.10 | 2.90 | 0.10 |
+
+  The red lenses are cooler than assumed. The blue lenses are warmer, because their bulges carry heat.
+
+**The result** (static distances, round-11 constants; median log10(observed/predicted)):
+
+| | all | blue | red | disks | bulges | GAMA | colour gap (obs 0.153) | Sérsic gap (obs 0.154) | Mistele spirals / ellipticals (rms z) |
+|---|---|---|---|---|---|---|---|---|---|
+| assumed heat (round 11) | +0.063 | +0.077 | +0.040 | +0.107 | −0.006 | +0.007 | 0.234 | 0.234 | 4.36 / 0.95 |
+| **measured heat** | +0.070 | **+0.021** | +0.081 | +0.077 | +0.037 | +0.015 | **0.132** | **0.163** | 2.98 / 2.52 |
+
+* **Both gaps now match** (0.132 and 0.163 against 0.153 and 0.154). The gap was never a problem of u.
+  It came from two assumed numbers.
+* What remains is a common level. Every sample sits 0.02–0.08 dex above the prediction, and Mistele's
+  lensing speeds of both types exceed ours. §22.3 asks whether the distance law's scale sets it.
+
+**The IMF of giant ellipticals, checked.** Spectra show bottom-heavy stars mainly in the centres of the
+most massive ellipticals. Averaged over whole galaxies, the stellar M/L rises by at most 0.09 dex, and
+only above 2 × 10¹¹ M☉ (Domínguez Sánchez et al. 2019, as used by Brouwer et al. 2021 for these
+lenses). So:
+* it does not reach the KiDS lenses (all below 10¹¹);
+* in X-COP it touches only the BCGs (2–19% of the stars inside R500), moving u by at most 2%;
+* it trims the SLACS lenses' star need from 0.445 to about 0.36 dex above Chabrier.
+
+It is not the lever for u or KiDS.
+
+**Adopted in the suite** (`regression/t_lensing.py`): each KiDS sample and each of Mistele's mass bins
+takes its measured heat, and the Sérsic gap is graded too (a new check; 90 checks, 77 graded).
+
+**The suite** (full tier, baseline saved): **59 pass, 10 close, 8 fail** of 77 graded (step 1: 58, 9, 9 of
+76). Moved: KiDS blue fail → pass, the colour gap close → pass, Mistele's spirals fail → close, and the
+new Sérsic gap passes; KiDS red pass → fail (+0.081) and Mistele's ellipticals pass → close (2.52), as
+they join the common level.

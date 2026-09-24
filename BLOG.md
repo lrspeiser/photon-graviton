@@ -118,6 +118,12 @@ colliding clusters, with no dark matter and no expanding universe.*
     outrun the galaxies: the collision is young, 0.1–0.36 billion years old in our distances, not the
     0.5 we had assumed. At that age its north-western lensing peak sits on its galaxies, as observed. The
     suite reads 58 pass, 9 close, 9 fail.
+  * **The lensing galaxies' star speeds, measured.** The comparison with galaxy lensing had assumed
+    one star speed for every elliptical-like lens and no heat at all for spiral-like ones. SDSS spectra
+    of 119,000 galaxies of the same masses show the red lenses' stars are a little slower than assumed,
+    and the blue ones carry real heat in their central bulges. With the measured speeds, the extra
+    lensing of ellipticals over spirals comes out 0.13–0.16 dex against 0.15 measured: **it matches**.
+    The suite reads 59 pass, 10 close, 8 fail.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -172,13 +178,13 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 | MACS J0025.4−1222: lensing masses, peaks on the galaxies, galaxy speeds | **lensing and both peaks agree** at the age its shock fronts give (§6.16); speeds 2.9 error bars low | no | yes (fitted) |
 | Abell 520's "dark core" (lensing without galaxies) | **3.5 × 10¹³ suns from gas and heat; measured 3.13–3.69** (our distances) | no | not expected |
 | El Gordo: lensing mass and galaxy speeds | **lensing agrees with its published stars** (our distances, §6.15); NW galaxy speeds 22% low | no | yes (fitted) |
-| Ellipticals bend light more than spirals (0.15 ± 0.04 dex, median over bins) | **yes**: 0.18 in the standard distances, 0.23 in ours (§6.15) | no difference | yes, with tuned haloes |
+| Ellipticals bend light more than spirals (0.15 ± 0.04 dex, median over bins) | **yes: 0.13–0.16**, with the lenses' star speeds measured (§6.16) | no difference | yes, with tuned haloes |
 | Solar System | **no extra pull** | small extra pull | no extra pull |
 | Wide binary stars (data disputed) | **8% extra pull at 20,000 AU, 3.5% at 7,000 AU** (§6.7) | 43% | none |
 | Milky Way rotation 15–27 kpc (4 Gaia studies) | **within 1–6%** | within 3% | 6–11% too fast |
 | Milky Way rotation at the Sun (229–234 km/s) | 211 km/s, 8% slow | 223 | 234 |
 | Milky Way mass inside 100 and 200 kpc | **agrees** | 40% high at 200 kpc | agrees |
-| Galaxy lensing (KiDS): spirals and ellipticals | **agrees with both** in the standard distances; in ours ellipticals agree and spirals lens 20% more than predicted, which our distance law's scale decides (§6.15) | too high for spirals, too low for ellipticals | yes, with tuned haloes |
+| Galaxy lensing (KiDS): spirals and ellipticals | **agrees with both** in the standard distances; in ours the difference between them matches, and all lenses sit 5–20% above our law (§6.16) | too high for spirals, too low for ellipticals | yes, with tuned haloes |
 | Ten small galaxies around the Milky Way | 4 agree, 6 too slow; 6 agree without the Milky Way's hold (reason still sought, §6.13) | the same 4 | fitted one by one |
 | Cassini: the Galaxy's field inside the Solar System | **passes** since rev 18 (§6.10) | about 10× too big | passes |
 | Adjustable numbers | **4 in total**: 3 fitted to galaxies and clusters, 1 release length set by Cassini | 1 | 2 per galaxy or cluster (~320) |
@@ -190,9 +196,9 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 * **the Bullet Cluster's smaller half.** Its lensing mass is twice what our law gives it. The
   leading candidate is heat its galaxies picked up while crossing the main cluster;
 * **the Sun's orbital speed**, 8% slow. A more compact Milky Way disk is the lever to test;
-* **galaxy lensing in our own distances (§6.15):** around spirals it is 20% stronger than our law
-  predicts, and ellipticals' extra lensing is 0.23 dex against 0.15. The first measures our
-  distance law's scale (13% lower would fit); the second the companion's speed;
+* **galaxy lensing in our own distances (§6.15–6.16):** with the lenses' star speeds measured, the
+  difference between ellipticals and spirals matches, but every sample sits 0.02–0.08 dex above our
+  law;
 * **Abell 1689**, the next cluster to model;
 * a full relativistic version of the law.
 
@@ -1642,7 +1648,7 @@ now lives in one program: the regression suite.
   minutes.
 * On an unchanged law it reproduces every number published so far to the last digit.
 
-**The law today (rev 21): 58 pass, 9 close, 9 fail** of the 76 graded checks (rev 20: 57, 9, 10;
+**The law today (rev 21): 59 pass, 10 close, 8 fail** of the 77 graded checks (rev 20: 57, 9, 10 of 76;
 rev 19: 58, 11, 7; rev 18: 62, 8, 6; rev 17: 61, 8, 7). §6.15 and §6.16 have what moved and why.
 * **Fail (9):**
   * five faint dwarf galaxies: Draco, Ursa Minor, Sextans, Crater II and Antlia 2;
@@ -1940,7 +1946,8 @@ Two separate things have moved:
    its galaxies, so the fair test refits them together; that is next.
 2. **The ellipticals' extra lensing, set by the companion's speed.** An elliptical's stars carry
    heat 3σ²/u². With u = 163 km/s it is 1.5 times what it was at 197, and the ellipticals' extra
-   lensing rises from 0.18 to 0.23 dex against 0.15 measured. Clusters now want a slower companion
+   lensing rises from 0.18 to 0.23 dex against 0.15 measured. *(Rev 21: the real cause was two assumed
+   star speeds; measured, the extra lensing matches, §6.16.)* Clusters now want a slower companion
    than single ellipticals do. The first thing to check is the ellipticals' star masses: spectra
    say giant ellipticals make stars heavy for their light (about 1.85 times Chabrier's rule), and
    that would change the clusters' calibration and KiDS's ellipticals together.
@@ -1998,6 +2005,43 @@ the direction of the collision.
 nothing else about MACS J0025 depends on the age. The suite now uses 0.3 billion years: **58 pass,
 9 close, 9 fail.** Script: `code/macs_timing_v12.py`.
 
+**Step 2: how hot are the galaxies that lens? Measured, not assumed.** In our law a galaxy's extra
+lensing depends on how fast its stars move at random. For galaxy lensing (KiDS) we had used two round
+numbers: 160 km/s for every star of an elliptical-like (red) lens, and a cold disk, with no heat at all,
+for every spiral-like (blue) lens. We measured instead, from SDSS spectra of 119,000 galaxies with the
+same stellar masses, split the same way the KiDS team split theirs.
+* **Red galaxies** of the lenses' typical mass have stars moving at 140–160 km/s, a little cooler than
+  assumed.
+* **Blue galaxies are not cold.** At these masses they have central bulges whose stars move at
+  100–120 km/s and hold 10–35% of their light.
+
+| Heat weight (0 = cold disk) | red lenses | blue lenses | bulge-dominated | disk-dominated |
+|---|---|---|---|---|
+| assumed until rev 20 | 2.9 | 0.1 | 2.9 | 0.1 |
+| **measured** | **2.1** | **0.55** | **2.2** | **0.30** |
+
+What that does (median log of measured ÷ predicted lensing, zero is perfect; our distances):
+
+| | all | spirals | ellipticals | disks | bulges | ellipticals over spirals (measured 0.15) | the same by shape (measured 0.15) |
+|---|---|---|---|---|---|---|---|
+| assumed heat | +0.06 | +0.08 | +0.04 | +0.11 | −0.01 | 0.23 | 0.23 |
+| **measured heat** | +0.07 | **+0.02** | +0.08 | +0.08 | +0.04 | **0.13** | **0.16** |
+
+* **The difference between ellipticals and spirals now matches, both ways of splitting them.** It was
+  never a sign that the companion's speed was wrong. Two assumed numbers caused it.
+* Lensing speeds around spirals (Mistele et al.) improve from 4.4 to 3.0 error bars. Those around
+  ellipticals move from 1.0 to 2.5, as they join the spirals at a common level.
+* **What is left is one common level:** all the lens samples sit 0.02–0.08 dex above our law. Step 3
+  asks whether our distance law's scale sets it.
+* **Heavy stars (the IMF), checked:** spectra show giant ellipticals' stars are heavy for their light
+  mainly in their centres. Averaged over whole galaxies that adds at most 0.09 dex, and only above
+  2 × 10¹¹ suns (Domínguez Sánchez et al. 2019). That is too small to matter for the lenses or for
+  the clusters that calibrate u. It trims the strong lenses' extra star need from 0.45 to about 0.36
+  dex.
+
+The suite now uses the measured heat and also grades the split by shape: **59 pass, 10 close, 8 fail**
+(of 77). Scripts: `code/lens_heat_sdss_v12.py`, `code/kids_heat_v12.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -2012,9 +2056,9 @@ nothing else about MACS J0025 depends on the age. The suite now uses 0.3 billion
 | MACS J0025.4−1222 (a second Bullet) | **lensing masses and both peaks agree** at the age its shock fronts give; speeds 2.9σ low (our distances) | no | yes, fitted |
 | Abell 520's galaxy-poor lensing clump | **from its gas and the galaxies' heat** | no | a puzzle |
 | El Gordo (z = 0.87) | **lensing agrees with its published stars** (our distances); NW speeds 22% low | no | yes, fitted |
-| Ellipticals lens more than spirals | **yes, from their stars**: 0.23 dex in our distances against 0.15 measured the same way (close) | no | yes, via tuned haloes |
+| Ellipticals lens more than spirals | **yes, from their stars**: 0.13–0.16 dex against 0.15 measured, with the lenses' star speeds measured (our distances) | no | yes, via tuned haloes |
 | Strong lenses: light and stars agree | **yes** (−0.032 dex with our own distances) | | yes |
-| Galaxy lensing (KiDS), spirals / ellipticals | **−0.005 / +0.02 dex** (standard distances); +0.08 / +0.04 in ours | −0.07 / +0.11 dex | yes, tuned |
+| Galaxy lensing (KiDS), spirals / ellipticals | **−0.005 / +0.02 dex** (standard distances); +0.02 / +0.08 in ours, with measured star speeds | −0.07 / +0.11 dex | yes, tuned |
 | Milky Way rotation 15–27 kpc | **within 1–6%** | within 3% | 6–11% fast (McMillan) |
 | Milky Way rotation at the Sun | 8% slow | 3% slow | right |
 | Milky Way pull above the disk | **73 against 68–74** | 84 | 74 |
@@ -2052,7 +2096,7 @@ about two error bars); ✗ = a shortfall, with the fix we are testing.
 | Wide binaries | disputed | 8% at 20,000 AU, 3.5% at 7,000 AU | open |
 | Microlensing, Einstein Cross | stars only | stars only | ✓ |
 | Six strong lenses (SLACS), our own distances | | light = matter (−0.032 dex); stars 1.37–1.85 × Salpeter needed | ✓ |
-| Galaxy lensing (KiDS), spirals and ellipticals, our own distances | | ellipticals match; spirals 20% above ours; the ellipticals' extra lensing 0.23 against 0.15 | ✗ decided by the distance law's scale and by u (§6.15) |
+| Galaxy lensing (KiDS), spirals and ellipticals, our own distances | | the ellipticals' extra lensing matches (0.13–0.16 against 0.15); all samples 0.02–0.08 dex above ours | ~ a common level (§6.16) |
 | Flat lensing speeds to 1 Mpc | | flat to 2.2 Mpc | ✓ |
 | Bullet Cluster: lensing on galaxies, main half | | yes | ✓ |
 | Bullet Cluster: smaller half's lensing mass | 2.0–2.3 × 10¹⁴ | about half | open |
@@ -2064,7 +2108,7 @@ about two error bars); ✗ = a shortfall, with the fix we are testing.
 | Abell 520: the galaxy-poor "dark core" P3 (our distances) | 3.13–3.69 × 10¹³ | 3.47 | ✓ |
 | El Gordo: lensing inside 1 Mpc (our distances) | 23.1 × 10¹⁴ | 19.8 (published stars) | ✓ |
 | Abell 1689 | collected | not yet run | next |
-| The regression suite (§6.12) | 76 graded checks | 58 pass, 9 close, 9 fail (everything in our distances) | |
+| The regression suite (§6.12) | 77 graded checks | 59 pass, 10 close, 8 fail (everything in our distances) | |
 
 ## 8. Predictions anyone can check
 
@@ -2248,7 +2292,10 @@ proposals for finishing the theory.
 10. **Cosmology.** The microwave background and the growth of large-scale structure are outside
    the law's tested scope. Under the project's no-expansion rule they need their own treatment.
 11. **Galaxy lensing in our own distances (new in rev 20, §6.15).**
-   * *What is wrong:* around spirals and disks the lensing is 20–28% stronger than our law
+   * *Rev 21:* the ellipticals' extra lensing matches once the lenses' star speeds are measured
+     (0.13–0.16 against 0.15; §6.16). What remains is a common level: every sample 0.02–0.08 dex
+     above our law.
+   * *What was wrong (rev 20):* around spirals and disks the lensing is 20–28% stronger than our law
      predicts (+0.08 and +0.11 dex), and ellipticals' extra lensing over spirals is 0.23 dex
      against 0.15 ± 0.04.
    * *What would have to change:* for the first, the distance law's scale. The lensing pull read
@@ -2283,7 +2330,7 @@ into our inputs.
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
 | 5 | One mechanism for Cassini, dwarfs and wide binaries | release adopted; the dwarfs need a weaker hold, reason unknown | derive the release time and the hold from one transition | hard; biggest payoff |
 | 6 | Evolve the companion through collisions | memory imposed; the Bullet's smaller half at half weight | a time-dependent transport solver | medium to hard |
-| 7 | Measure u independently | u = 163 km/s from the clusters (rev 20: in our distances); KiDS's ellipticals prefer about 200 | the lensing signature of the growing fresh companion | medium; needs data |
+| 7 | Measure u independently | u = 163 km/s from the clusters (rev 20: in our distances); the lensing gap agrees with it once the lenses' star speeds are measured (rev 21) | the lensing signature of the growing fresh companion | medium; needs data |
 | 8 | Derive the constants | fitted; clues such as a ≈ cα/11 | the toy's stiffness and inertia give u | hard; after 1 |
 | 9 | Stellar masses without using gravity | **rev 20: every star mass on one basis; the calibrating clusters' corrected; no age-cap correction needed (§6.15)** | infrared light and spectra; the ellipticals' IMF | doable now |
 | 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion | energy balance in the toy; then precision ranging | medium; the test is future |

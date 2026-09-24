@@ -19,11 +19,12 @@ The runner prints a scoreboard and writes `runs/<law>-<tier>/results.json` and `
 `baseline.json`, or crashed. Each run records the commit it came from, marked `+changes` when
 tracked files differ from it.
 
-**The baseline** (`baseline.json`) is the adopted law, round 11 constants, on the full tier: 89 checks,
-58 pass, 9 close, 9 fail and 13 tracked (round 12, step 1: MACS J0025 at the age its shock fronts give,
-0.3 Gyr; results README §22.1). It changes only when a change is adopted or a test is
-added (RULES.md §12). Earlier baselines: round 9, 62 / 8 / 6; round 10 (the far collisions and
-SLACS in the static distances), 58 / 11 / 7.
+**The baseline** (`baseline.json`) is the adopted law, round 11 constants, on the full tier: 90 checks,
+59 pass, 10 close, 8 fail and 13 tracked (round 12, step 2: the KiDS and Mistele lenses at their
+measured heat, and the Sérsic gap graded; results README §22.2). It changes only when a change is
+adopted or a test is added (RULES.md §12). Earlier baselines: round 9, 62 / 8 / 6; round 10 (the far
+collisions and SLACS in the static distances), 58 / 11 / 7; round 11, 57 / 9 / 10; round 12 step 1
+(MACS J0025 at the age its shock fronts give, 0.3 Gyr; §22.1), 58 / 9 / 9.
 
 ## The law under test
 
