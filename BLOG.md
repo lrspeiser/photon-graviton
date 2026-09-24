@@ -166,23 +166,40 @@ colliding clusters, with no dark matter and no expanding universe.*
     relative motion mixes the quiet into the loud, so the leak grows as σ². We reran it: every number matches.
   * **The wave alone gives half of it.** In a cloud of particles that talk only through the wave, spinning or moving
     as a whole releases nothing, and collisions hold the release back, as our law needs. But the release grows too
-    gently (1.3–1.8 times per doubling of speed), for a clear reason: a cloud's quietness has no clean edge. The
-    quiet store has to be inside each piece of matter. That also explains round 14's shortfall.
+    gently (1.3–1.8 times per doubling of speed), for a clear reason: the cloud's quietness has no clean edge. A
+    quiet store inside each piece of matter is a concrete candidate that would have one. The same missing edge is a
+    likely reason for round 14's shortfall.
   * **Which bodies a wave pulls.** An ordinary self-sustained oscillator, the calculation's included, falls a quarter
     beat behind a passing wave and is pushed. An *inverted* one, holding energy it is ready to give, falls a quarter
-    beat ahead by itself and is pulled in proportion to the wave's height. That is our round-10 rule, derived for the
-    first time.
-  * **The whole chain in one experiment:** the pull grows as √(cold + released glow), our law's heat term, with no
-    square root put in. Doubling the speed spread doubles the extra pull where heat dominates (×2.48, 2.20, 1.97).
-    Collisions hold it back; stopped, it vanishes.
+    beat ahead by itself and is pulled in proportion to the wave's height. That is our round-10 rule, now coming out
+    of a body's own equations for the first time.
+  * **A first version of the whole chain in one experiment,** with the mixing put in as an input: the pull grows
+    roughly as √(cold + released glow), our law's heat term. Doubling the speed spread doubles the extra pull where
+    heat dominates (×2.48, 2.20, 1.97). Collisions hold it back; stopped, it vanishes. *(Rev 25: an independent audit
+    narrowed this; see the next bullet.)*
   * **The energy bill:** being pulled costs energy, and the price is set by how fast the companion's crests move.
     *(Rev 25 corrects rev 24's first figure, which used the companion's travel speed.)* A light-speed wave would cost
-    3,500 times a kilogram's cold output, which the planets' orbits already rule out.
+    3,500 times a kilogram's cold output. As a simple budget, the planets' orbits allow crests up to about 5,700 km/s.
 * **Rev 25** works through rev 24's next steps one at a time, updating this page as each lands (§6.20).
   * **The energy bill, fed back.** The energy a pulled body feeds into the companion flows on outward and strengthens
     it further out. The 149 galaxies allow that as long as the companion's crests move at no more than about half its
     travel speed (85 km/s). Being pulled then costs a kilogram at most what it gives off when cold, 2 parts in 10¹⁵ of
     its mass a year. Our law is unchanged.
+  * **An independent audit of rev 24, and what we changed.** It reproduced our results and agrees on the main
+    advance: a body that holds energy it is ready to give sets its own timing and is pulled. It also found where rev
+    24 said too much. The mixing that motion causes was put in, not derived. The inverted bodies' pull runs 10–20%
+    above the law's √(1 + k). And the pieces' shared wave doesn't yet balance its energy: interference makes it carry
+    0.6 to 1.4 times what the pieces lose. The audit's fix for that, in a reduced test, weakens the growth with speed.
+    We have narrowed every claim to match (§6.19), and the fix is now our next main calculation (§6.20).
+  * **What opens the quiet store.** If motion is measured against the companion streaming past, a piece at rest still
+    feels it rushing by at 169 km/s: that is the cold glow. Random motion then adds exactly our law's heat weight,
+    3σ²/u², with the same 169 km/s. So the law's one speed does both of its jobs by construction (§6.20).
+  * **The crossing heat.** Galaxies ploughing through another cluster's companion are heated too. In the Bullet
+    Cluster that lifts the smaller half's lensing mass by 12–18% and puts the main half in its measured range. It helps
+    but is not the whole answer.
+  * **The shared wave with its energy balanced,** as the audit asked. With the wave's full coupling, including the near
+    field the audit's version left out, the heat rule survives: 3.3–3.9 times the extra glow per doubling of speed in
+    packed clouds, 4.0 in spread-out ones, and collisions hold it back as before.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -217,9 +234,11 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
    could add up, only this one fits both galaxies and clusters (§4.14). Rev 22: the data still demand point 3, but
    "out of step" is not why. In a simulation, scrambling alone weakens the pull. What works is matter that holds its
    companion back when cold and releases it when moving freely (§6.17). Rev 23: that follows from a power balance,
-   a fixed supply against a loss that grows with the companion's loudness (§6.18). Rev 24: with a quiet store inside
-   each piece of matter that motion opens, the whole chain works in one experiment: the pull grows as the square root
-   of cold plus released output, and doubling the speed spread doubles the extra pull (§6.19).*
+   a fixed supply against a loss that grows with the companion's loudness (§6.18). Rev 24: given a quiet store inside
+   each piece of matter that motion opens, a first version of the whole chain works in one experiment: the pull grows
+   about as the square root of cold plus released output, and doubling the speed spread doubles the extra pull
+   (§6.19). Rev 25: an independent audit confirms the pull but finds the pieces' shared wave doesn't yet balance its
+   energy; the version that balances it is next (§6.20).*
 4. **Gas does not count as "hot" in this sense.** Its particles collide so often that the
    companion sees them as sitting still. That is why, in a collision, the extra pull stays
    with the galaxies and leaves the gas behind.
@@ -267,9 +286,11 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
   their stars, the KiDS team's own middle estimate, would close it; that gas is to be weighed. A gentler heat
   term would also close it, at a cost to massive ellipticals (§6.18);
 * **Abell 1689**, the next cluster to model;
-* **the heat term's mechanism (§6.17–6.19):** since rev 24 the whole chain runs in one experiment, given a quiet
-  internal store in each piece of matter that motion opens; what that store is physically, and the number it sets
-  for the companion's speed, are still to be found;
+* **the heat term's mechanism (§6.17–6.20):** since rev 24 a first version of the whole chain runs in one experiment,
+  given a quiet internal store that motion opens. An independent audit (rev 25) confirmed the pull and found the
+  energy gap: the pieces' shared wave doesn't yet balance. Next is one kind of matter, every piece both sender and
+  receiver, with that balance built in. What the store is physically, and the number it sets for the companion's
+  speed, are still to be found;
 * a full relativistic version of the law.
 
 Settled along the way: the main Bullet cluster's galaxy speeds (§6.3, rev 14–15), Cassini's
@@ -2499,8 +2520,8 @@ from first principles. Here is the idea, and what happened when we joined it to 
 * It also has three **loud vibrations** that radiate freely, one for each direction.
 * When the piece's parts move relative to each other, their rhythms drift slightly apart. That mixes a little of the
   quiet vibration into the loud ones.
-* The mixing grows in proportion to the speed, and the leaked energy with its square, σ². That is exactly the form
-  of our law's heat term.
+* The mixing grows in proportion to the speed, and the leaked energy with its square, σ². That is the form of our
+  law's heat term. (The mixing's size per unit speed is an input of the idea, not derived.)
 * Collisions keep changing the direction of motion, so the mixing never builds up.
 
 We reran the calculation here and every number matches; four of its five result files are identical to the last
@@ -2523,8 +2544,10 @@ each other only through the wave, and we assumed nothing about quiet stores or d
     powers of ten, with no clean line between quiet and loud.
   * The σ² needs one quiet store that is sharply separated from the loud channels, a million times quieter in the
     calculation.
-* **That is a useful answer.** The quiet store has to be something inside each piece of matter, not a result of how
-  the pieces are arranged. It also explains why round 14 fell short: its quietness came from the arrangement.
+* **That is a useful answer.** The cloud we tested can't supply the clean gap. A quiet store inside each piece of
+  matter is a concrete candidate that would. *(Rev 25: rev 24 wrote that the store "has to be" inside; one cloud
+  can't rule out every arrangement, so we say "candidate".)* The same missing gap is a likely reason why round 14
+  fell short: its quietness came from the arrangement.
 
 **Step 2: which bodies does a passing wave pull?** We put six kinds of body, one at a time, in a steady wave from a
 distant source, and let each respond by its own equations:
@@ -2540,8 +2563,9 @@ distant source, and let each respond by its own equations:
 * An ordinary self-sustained ringer, like a clock or an ordinary laser, falls into step a quarter beat *behind* a
   passing wave. It soaks up energy and is pushed away. The calculation's oscillator does this.
 * An **inverted** ringer holds energy it is ready to give, like the excited atoms in a laser. It falls into step a
-  quarter beat *ahead*, feeds the wave and is pulled, in proportion to the wave's height. That is exactly our
-  round-10 rule, which until now we had to put in by hand.
+  quarter beat *ahead*, feeds the wave and is pulled, in proportion to the wave's height. That is our round-10 rule,
+  which until now we had to put in by hand. This is the round's firmest result, and the independent audit
+  reproduced it.
 * It comes out of standard equations for such emitters, the ones used for a real laboratory device, the
   "superradiant laser". Matter holds an enormous store, its rest energy, so treating it as inverted toward the
   companion is natural.
@@ -2565,11 +2589,17 @@ With k the heat weight (how much motion adds to the cold glow) and the pull comp
 | 16 | 48 | ×48 | ×7.8 | ×8.2 | ×59 |
 | 32 | 192 | ×162 (the fuel starts to run low) | ×14.3 | ×14.8 | ×202 |
 
-* **The pull grows as the square root of cold plus released glow.** That is exactly our law's heat term,
-  √(|g_N| + S), and no square root was put in anywhere.
+* **The round-10 bodies' pull grows as the square root of cold plus released glow,** to within 1–3%. That is the
+  shape of our law's heat term, √(|g_N| + S), with no square root put in. Two things were put in, though: those
+  bodies' quarter-beat lead, and the mixing that motion causes.
 * **Doubling the speed spread doubles the extra pull where heat dominates:** ×2.48, 2.20 and 1.97 on successive
-  doublings. This is the decisive outcome we set ourselves in round 13, now met.
-* **The inverted ringers do the same with no timing put in.** Amplifiers follow the glow itself, not its square root.
+  doublings, with the round-10 bodies. That is the outcome we set ourselves in round 13, met in this version.
+* **The inverted ringers, which set their own timing, follow the same trend but run 10–20% above the square root:**
+  ×2.41, 4.38 and 8.24 where √(1 + k) is 2.00, 3.61 and 7.00. The size of each cloud, the pieces' waves interfering
+  and the ringers' own response all enter, so the exact law is not yet shown. Amplifiers follow the glow itself, not
+  its square root.
+* **This is still one cloud seen from outside.** Our law also says how the pull spreads through space, which way it
+  points when matter is lopsided, and how it bends light. Those still have to come out of the same equations.
 * **Collisions hold the heat back twice.**
   * At the source, the extra glow falls in proportion to 1/(1 + collision rate), to within 1%.
   * At the test bodies, the colliding pieces' waves flicker. Bodies that can't re-time fast enough lose step and gain
@@ -2577,17 +2607,31 @@ With k the heat weight (how much motion adds to the cold glow) and the pull comp
 * **No memory.** Stopped, the extra pull disappears; only the spent fuel is gone.
 * **Momentum checks out.** Every body's pull equals the power it feeds the wave divided by the wave's speed, within
   1.1%, in every run.
+* **Energy doesn't balance yet, and this is the biggest gap** *(added in rev 25, after the independent audit)*. The
+  pieces' waves interfere with each other, so together they carry 0.6 to 1.4 times the energy the pieces lose,
+  depending on how the pieces sit. Two pieces a tenth of a wavelength apart radiate 1.9 times their share when in
+  step and 0.06 times when opposed.
+  * The fix is standard: each piece must feel the others' waves, with its loss taken from the same coupling that
+    radiates. The audit checked that this balances the budget exactly.
+  * In its reduced test (20 pieces, the mixing still put in), the growth per doubling of the mixing fell from about 4
+    to 3.80, 3.28, 2.02 and 1.64. So the σ² has to be shown again with the fix in, and that is now our next main
+    calculation (§6.20).
 
 **What being pulled costs** *(corrected in rev 25, §6.20)*. A body pulled by feeding a wave pays for it, and the price
 depends on how fast the wave's crests move: a wave carries momentum in proportion to its energy divided by its crests'
 speed.
 * If the crests moved at light speed, being pulled at our law's a would cost a kilogram 3,500 times the power it gives
-  off when cold. The Sun would lose 5 parts in 10¹² of its mass each year to the Galaxy's companion. The planets'
-  orbits would show that: their limit is about 1 part in 10¹³.
+  off when cold, about 1,770 times the cost at 169 km/s. The Sun would lose 5 parts in 10¹² of its mass each year to
+  the Galaxy's companion. The planets' orbits would show that: their limit is about 1 part in 10¹³. Taken as a simple
+  budget, the planets allow crests up to about 5,700 km/s.
 * The galaxies allow crests up to about half the companion's travel speed (§6.20). The bill is then at most what a
   kilogram gives off when cold: at most 2 parts in 10¹⁵ of its mass a year.
-* **So energy and momentum require slow crests.** Rev 24 first priced the pull with the companion's travel speed
-  (169 km/s) and called the bill "exactly twice" the cold output; that used the wrong speed.
+* **So energy and momentum require slow crests:** at most about 5,700 km/s from the planets, 85 km/s from the
+  galaxies. Neither measures the companion's travel speed, 169 km/s; both allow it. In our test wave the crests and
+  the energy move at the same speed, so whether the companion's crests are slower is still to be shown.
+* Rev 24 first priced the pull with the companion's travel speed (169 km/s) and called the bill "exactly twice" the
+  cold output. That used the wrong speed, and "twice" was never a check: it follows from how we define the strength,
+  a = 2ℓ/u.
 
 **What the constants say.** Two of the idea's numbers now have values or bounds:
 * If a piece's quiet store is its rest energy, the store leaks at 3 × 10⁻²³ of itself per second, fixed by our law's
@@ -2601,22 +2645,27 @@ speed.
 * If the drift in rhythm is an ordinary Doppler shift of the companion, its wavelength lies between about 60 parsecs
   and 500 million parsecs.
 
-**Where the proof stands:**
-* **Now derived, in explicit equations:**
+**Where the proof stands** *(narrowed in rev 25, after the independent audit)*:
+* **Shown from a body's own equations:** inverted, self-sustained matter falls into step a quarter beat ahead of a
+  passing wave by itself and is pulled, in proportion to the wave's height in faint waves.
+* **Shown, given two inputs** (a quiet store with a clean gap, and a mixing that grows with speed):
   * moving matter releases companion power as σ², collisions hold it back, and spinning releases none;
-  * the power travels as waves and adds up;
-  * inverted matter falls into step ahead of the wave and is pulled by its height;
-  * so the pull grows as √(cold + released), and doubling σ doubles the extra pull.
-* **Still assumed:**
-  * that each piece of matter has a quiet internal store with a clean gap to its loud channels. The wave alone
-    gives the symmetries and the collision rule, but not the gap;
-  * the size of the rhythm drift per unit speed, which with the ringing time sets u = 169 km/s.
+  * the power travels as real waves, and the pull grows about as √(cold + released), doubling where heat dominates.
+* **Not yet shown:**
+  * the energy balance of the shared wave (above), and the σ² once it is fed back;
+  * the full law in space: how the pull spreads, which way it points, and light bending;
+  * the gap, and the size of the mixing, from physics; with the ringing time they set u = 169 km/s.
 * **Still separate:** the release factor that silences the companion near the Sun.
 
-**Next:**
+In the audit's words: an attractive local response has been demonstrated; the motion-dependent source mechanism
+remains conditional; the complete energy-conserving law has not yet been recovered. We agree, and the next step is
+built around it.
+
+**Next** *(reordered in rev 25, as the audit recommends)*:
+* one kind of matter that is both sender and receiver, in one cloud, with every piece feeling the others' waves from
+  the start so the energy balances; then cold, free and colliding motion again, with no strong-field switch added;
 * find a physical quiet store with a gap (an internal pair of vibrations that relative motion pulls apart, as an
   electric field mixes a quiet atomic state into a bright one) and derive u from it;
-* one kind of matter that is both source and receiver, in one cloud;
 * whether a receiver drained by its neighbours' loud waves can switch its pull off, which would be the release factor.
 
 Scripts: `code/wave_dark_v15.py`, `code/receivers_v15.py`, `code/reservoir_force_v15.py`; the independent
@@ -2655,6 +2704,60 @@ crests must be 20 times slower than the energy; the data allow ten times more th
 change.
 
 Scripts: `code/feeding_feedback_v16.py`, `code/feeding_checks_v16.py`.
+
+**Step 2: what opens the quiet store? The companion flowing past.** The independent calculation says each piece of
+matter has a quiet store that motion opens. But it leaves open what the motion is measured against. We tried the
+simplest answer: against the companion itself, which streams out of all matter at 169 km/s.
+* **A piece sitting still still feels the companion rushing past it at 169 km/s.** So it leaks a little even at rest,
+  and that is the cold glow; no separate quiet leak is needed. In the calculation's own equations the leak comes out at
+  2.0002 × 10⁻⁴, against 2 × 10⁻⁴ expected.
+* **Random motion adds to it exactly as our law's heat weight does, 3σ²/u², factor 3 and all:**
+
+| speed spread ÷ 169 km/s | 0.5 | 1 | 2 | 4 | 8 |
+|---|---|---|---|---|---|
+| glow ÷ cold glow, measured | 1.70 | 3.88 | 12.7 | 48.6 | 198 |
+| our law, 1 + 3σ²/u² | 1.75 | 4 | 13 | 49 | 193 |
+
+* **Collisions** hold the extra back as the law needs: with collision rates 1, 3, 10 and 30 we get 5.90, 2.96, 1.07 and
+  0.38, against 6, 3, 1.09 and 0.39.
+* **Why it matters.** Our law uses one speed, 169 km/s, for two jobs: how fast the companion travels, and how much
+  random motion counts as heat. Until now that was a choice. Here the two are the same speed automatically.
+* **Two consequences.**
+  * A spinning disk must not count as hot. That works only if the companion moves along with the matter that made it:
+    the "memory" the Bullet Cluster already needs (§3.10).
+  * A new prediction: matter falling inward, against the companion's outflow, glows more.
+* **The crossing heat.** Galaxies that plough through another cluster's companion are heated by the relative motion.
+  We added this one term to the Bullet Cluster and changed nothing else:
+
+| | smaller half, lensing mass inside 250 kpc (10¹⁴ suns) | main half |
+|---|---|---|
+| measured (our distances) | 2.47–2.85 | 3.09–3.46 |
+| our law until now | 1.39 | 2.97 |
+| with the crossing heat (for crossing speeds of 2,700 to 4,700 km/s) | 1.56–1.64 | 3.07–3.16 |
+
+  It helps: the main half moves into its measured range, and the smaller half gains 12–18%. But the smaller half still
+  has only about two thirds of its measured mass, so this is part of the answer, not all of it.
+* **Status: conditional.** This rests on the quiet-store idea, which is still an assumption. What it adds is what the
+  motion is measured against, and one speed for both jobs.
+
+**Step 3a: the shared wave with its energy balanced.** The audit's main criticism of rev 24 was that the pieces' shared
+wave didn't balance its energy. So we rebuilt the wave's coupling between pieces completely. It has two halves: one
+carries energy away, and the other, the near field, shuffles energy between close neighbours.
+* **Checks.** The power flowing through a distant sphere equals what the pieces lose, to 1 part in 100,000. Two pieces
+  a tenth of a wavelength apart radiate 1.9355 and 0.0645 times their own share in and out of step, exactly the audit's
+  numbers.
+* **With only the energy-carrying half (the audit's version),** a crowded cloud chokes itself. Each piece's radiators,
+  stirred by their neighbours, re-radiate against the neighbours' quiet glow and cut it to under 5%. Then the doubling
+  rule fails: 3.88, 3.53, 2.45, 1.42 per doubling, the pattern the audit found.
+* **With both halves, as the wave really has them,** the choking mostly goes away: 82–100% of the cold glow remains.
+  Then doubling the speed spread multiplies the extra glow by **3.3–3.9 in packed clouds and 4.0 in spread-out ones**,
+  until the fastest stores run low. Collisions at rates 1 and 10 leave 52% and 9% of the extra, where the simple formula
+  says 50% and 9.1%.
+* **Packed clouds glow less for the same motion,** for example 4.3 times the cold glow instead of 12. In our law that
+  would read as a slightly larger u for tightly packed matter: a correction to size, not a failure.
+* So the heat rule survives the energy fix. It still takes the quiet store and its mixing as given.
+
+Scripts: `code/stream_store_v16.py`, `code/crossing_heat_v16.py`, `code/shared_wave_v16.py`.
 
 ## 7. How this compares
 
@@ -2908,13 +3011,16 @@ proposals for finishing the theory.
    * *Done in rev 23 (§6.18):* the rule derived from a power balance (a fixed supply, a loss that grows with
      loudness); its hold fits the galaxies as well as the release factor; the darker cold matter is, the wider the
      range where heat dominates and bodies keep step.
-   * *Done in rev 24 (§6.19):* an independent calculation's quiet internal store, opened by motion, gives the σ²; in
-     one experiment with real waves, the pull grows as √(cold + released) and doubling σ doubles the extra pull. An
-     inverted, self-sustained body falls into step a quarter beat ahead by itself (round 10's rule, derived). A cloud's
-     own quietness gives the symmetries and the collision rule but not the σ², because it has no clean edge.
-   * *Next:* a physical quiet store with a gap, and u from it; one kind of matter as both source and receiver;
-     whether a drained receiver can switch its pull off (the release factor); derive why the hold stops at zero
-     instead of pushing; then the guided companion with moving sources, for the collisions' memory;
+   * *Done in rev 24 (§6.19), narrowed in rev 25:* an inverted, self-sustained body falls into step a quarter beat
+     ahead by itself and is pulled (round 10's rule, from the body's own equations). Given an independent
+     calculation's quiet internal store and its mixing, the σ² follows, and in one experiment with real waves the pull
+     grows about as √(cold + released), doubling where heat dominates. The tested cloud's own quietness gives the
+     symmetries and the collision rule but not the σ², because it has no clean edge. The shared wave's energy doesn't
+     yet balance (independent audit).
+   * *Next:* one kind of matter as both sender and receiver, with every wave fed back so the energy balances, and the
+     σ² shown again; a physical quiet store with a gap, and u from it; whether a drained receiver can switch its pull
+     off (the release factor); derive why the hold stops at zero instead of pushing; then the guided companion with
+     moving sources, for the collisions' memory;
    * a full field theory for the companion, with its travel, its release length and a
      relativistic form, so that lensing is derived;
    * what the release length is;
@@ -2956,14 +3062,14 @@ into our inputs.
 |---|---|---|---|---|
 | 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15). Rev 21: a companion guided along gravity's field lines gives it with no further assumption (§6.16)** | the guided companion with moving sources: does it keep its memory in a collision? | hard; the foundation |
 | 2 | Predict unseen data with a locked model | **rev 19: the wide-binary forecast locked (§6.7)** | lensing profiles by speed spread for a new galaxy sample | doable now |
-| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating). Rev 23: that timing derived from a power balance, with no memory; bodies keep step up to the re-timing speed (§6.18). Rev 24: with a quiet internal store opened by motion, the full pattern: pull ∝ √(cold + released), ×2 per doubling of σ where heat dominates, collisions suppress as 1/(1 + ν/γ) (§6.19)** | a physical quiet store with a gap, and u from it | medium; the test bench exists |
+| 3 | Show that random motion makes a steady pull and collisions remove it | **rev 22: done in one experiment (§6.17). One fixed timing gives the opposite, for an exact reason; a timing that depends on the wave's loudness gives the pattern at slow speeds (×2 free, less with collisions, none rotating). Rev 23: that timing derived from a power balance, with no memory; bodies keep step up to the re-timing speed (§6.18). Rev 24: given a quiet internal store opened by motion, a first version of the full pattern: pull ≈ √(cold + released), ×2 per doubling of σ where heat dominates, collisions suppress as 1/(1 + ν/γ) (§6.19). Rev 25: an independent audit found the shared wave's energy doesn't yet balance; with the balance built in, the σ² must be shown again (§6.20)** | one kind of matter, every wave fed back; a physical quiet store with a gap, and u from it | medium; the test bench exists |
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
 | 5 | One mechanism for Cassini, dwarfs and wide binaries | release adopted; the dwarfs need a weaker hold, reason unknown | derive the release time and the hold from one transition | hard; biggest payoff |
 | 6 | Evolve the companion through collisions | memory imposed; the Bullet's smaller half at half weight | a time-dependent transport solver | medium to hard |
 | 7 | Measure u independently | u = 169 km/s from the clusters (rev 21: every data set in our distances); the lensing gap agrees with it once the lenses' star speeds are measured (rev 21) | the lensing signature of the growing fresh companion | medium; needs data |
 | 8 | Derive the constants | fitted; clues such as a ≈ cα/11 | the toy's stiffness and inertia give u | hard; after 1 |
 | 9 | Stellar masses without using gravity | **rev 20: every star mass on one basis; the calibrating clusters' corrected; no age-cap correction needed (§6.15)** | infrared light and spectra; the ellipticals' IMF | doable now |
-| 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion. **Rev 24–25: being pulled costs power too, force × the crests' speed; the galaxies allow crests up to half the travel speed, so at most ℓ per kilogram at the law's a; light-speed crests are excluded by the planets and the galaxies (§6.19–6.20)** | precision ranging | medium; the test is future |
+| 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion. **Rev 24–25: being pulled costs power too, force × the crests' speed; the galaxies allow crests up to half the travel speed, so at most ℓ per kilogram at the law's a; light-speed crests are excluded by the planets (as a simple budget, crests below about 5,700 km/s) and the galaxies (§6.19–6.20)** | precision ranging | medium; the test is future |
 
 **1. One interaction, the whole law.**
 * *Where we stand:* the law is assembled from nine postulates, and two have toy models: the
@@ -3210,13 +3316,18 @@ into our inputs.
     the re-timing speed; the release's steepness is the open question.
 * **Revision 24 (round 15).** An independent calculation joined to the pull (§6.19):
   * its quiet internal store, opened by motion, reproduced to the last digit;
-  * the wave alone gives its symmetries and the collision rule, not its σ²: a cloud's quietness has no clean edge;
-  * inverted, self-sustained matter falls into step a quarter beat ahead by itself: round 10's rule, derived;
-  * in one experiment with real waves, the pull grows as √(cold + released) and doubling σ doubles the extra pull;
+  * the wave alone gives its symmetries and the collision rule, not its σ²: the tested cloud's quietness has no clean
+    edge;
+  * inverted, self-sustained matter falls into step a quarter beat ahead by itself: round 10's rule, from the body's
+    own equations;
+  * in one experiment with real waves and the mixing put in, the pull grows about as √(cold + released) and doubling σ
+    doubles the extra pull (narrowed in rev 25);
   * being pulled costs energy, which requires slow crests (corrected in rev 25).
 * **Revision 25 (round 16, this page).** Rev 24's next steps, one at a time (§6.20):
   * the energy a pulled body feeds into the companion strengthens it further out; the galaxies allow it while the
-    crests move at no more than half the travel speed; being pulled costs at most a kilogram's cold output.
+    crests move at no more than half the travel speed; being pulled costs at most a kilogram's cold output;
+  * an independent audit of rev 24: the pull confirmed, the claims narrowed, the shared wave's energy balance made the
+    next main calculation.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
@@ -3225,9 +3336,12 @@ into our inputs.
   harder": joined with the pull in one experiment, scrambling alone weakens it (rev 22, §6.17);
 * rev 24's first price for being pulled ("exactly twice" a kilogram's cold output, with the companion's travel speed):
   the crests' speed sets it, and the galaxies cap it at the cold output (rev 25, §6.20);
-* rev 23's guess that a larger ball or a steeper loss would make the release grow as σ²: a cloud's own quietness has
-  no clean edge and grows too gently however it is arranged; the σ² needs a quiet store inside each piece of matter
-  (rev 24, §6.19);
+* rev 23's guess that a larger ball or a steeper loss would make the release grow as σ²: the tested cloud's own
+  quietness has no clean edge and grows too gently; a quiet store inside each piece of matter is the candidate that
+  would give the σ² (rev 24, §6.19);
+* rev 24's "the exact heat law has been derived" and "the quiet store has to be inside": the mixing was an input, the
+  shared wave's energy doesn't yet balance, and one cloud can't rule out every arrangement (independent audit, rev
+  25, §6.19);
 * round 1's companion speed (874 km/s; 197 in revs 12–19; 163 since rev 20, measured in our own
   distances with the clusters' stars correctly counted);
 * round 2's solar mass-loss figure (1.4 × 10⁻¹⁴ per year; 2.3 × 10⁻¹⁵ in revs 12–19; now

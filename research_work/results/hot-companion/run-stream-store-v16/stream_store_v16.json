@@ -1,0 +1,138 @@
+{
+ "experiment": "round 16: the flow opens the store",
+ "U": 0.01,
+ "gamma": 1.0,
+ "gamma_0": 0.0,
+ "rows": {
+  "cold": {
+   "leak": 0.00020002003654000756,
+   "err": 0.0,
+   "expected": 0.0002
+  },
+  "free": [
+   {
+    "sigma_over_u": 0.25,
+    "ratio": 1.1621769933503223,
+    "ratio_err": 0.01575839216139565,
+    "law": 1.1875
+   },
+   {
+    "sigma_over_u": 0.5,
+    "ratio": 1.6963434612632862,
+    "ratio_err": 0.04458900840219329,
+    "law": 1.75
+   },
+   {
+    "sigma_over_u": 1.0,
+    "ratio": 3.8816355651778722,
+    "ratio_err": 0.1521072965936787,
+    "law": 4.0
+   },
+   {
+    "sigma_over_u": 2.0,
+    "ratio": 12.735421132122111,
+    "ratio_err": 0.5759722412782856,
+    "law": 13.0
+   },
+   {
+    "sigma_over_u": 4.0,
+    "ratio": 48.63127273180633,
+    "ratio_err": 2.295310344319229,
+    "law": 49.0
+   },
+   {
+    "sigma_over_u": 8.0,
+    "ratio": 197.82535774826016,
+    "ratio_err": 9.87033125280025,
+    "law": 193.0
+   }
+  ],
+  "collisional": [
+   {
+    "sigma_over_u": 2.0,
+    "nu": 1.0,
+    "heat": 5.9037869550768765,
+    "heat_err": 0.0440325560132163,
+    "expected": 6.0,
+    "free": 12.0
+   },
+   {
+    "sigma_over_u": 2.0,
+    "nu": 3.0,
+    "heat": 2.9552408195081603,
+    "heat_err": 0.01764088094370653,
+    "expected": 3.0,
+    "free": 12.0
+   },
+   {
+    "sigma_over_u": 2.0,
+    "nu": 10.0,
+    "heat": 1.07486555326471,
+    "heat_err": 0.007421198254456612,
+    "expected": 1.0909090909090908,
+    "free": 12.0
+   },
+   {
+    "sigma_over_u": 2.0,
+    "nu": 30.0,
+    "heat": 0.38303450892120283,
+    "heat_err": 0.004173366704038793,
+    "expected": 0.3870967741935484,
+    "free": 12.0
+   }
+  ],
+  "drift": [
+   {
+    "vr_over_u": -2.0,
+    "ratio": 9.007357051728485,
+    "expected": 9.0
+   },
+   {
+    "vr_over_u": -1.0,
+    "ratio": 4.001224949266728,
+    "expected": 4.0
+   },
+   {
+    "vr_over_u": -0.5,
+    "ratio": 2.2502869970806927,
+    "expected": 2.25
+   },
+   {
+    "vr_over_u": 0.5,
+    "ratio": 0.24998087450398296,
+    "expected": 0.25
+   },
+   {
+    "vr_over_u": 1.0,
+    "ratio": 0.0,
+    "expected": 0.0
+   },
+   {
+    "vr_over_u": 2.0,
+    "ratio": 1.0,
+    "expected": 1.0
+   }
+  ],
+  "rotation": [
+   {
+    "v_rot_over_u": 0.5,
+    "with_memory": 1.0,
+    "without_memory": 1.2500318821940297,
+    "expected_without": 1.25
+   },
+   {
+    "v_rot_over_u": 1.0,
+    "with_memory": 1.0,
+    "without_memory": 2.000204076618263,
+    "expected_without": 2.0
+   },
+   {
+    "v_rot_over_u": 2.0,
+    "with_memory": 1.0,
+    "without_memory": 5.002041990379223,
+    "expected_without": 5.0
+   }
+  ]
+ },
+ "seconds": 4.985299746999772
+}

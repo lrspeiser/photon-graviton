@@ -153,25 +153,46 @@
 >   * Wave-coupled emitters alone (C_jl = e^{ikR}/(kR), N = 40, R_b = λ/4): rigid rotation and boosts release exactly
 >     nothing (< 10⁻¹²), collisions suppress roughly as 1/(1 + ν/γ_eff) (Dicke narrowing), but the steady leak grows
 >     only ×1.3–1.8 per doubling (σ^0.4–0.9): the collective decay rates fill every decade (10⁻¹⁰–10), with no gap. The
->     σ² needs γ₀ ≪ δ²/γ ≪ γ: an internal quiet store, not collective subradiance (also round 14's shortfall).
+>     σ² needs γ₀ ≪ δ²/γ ≪ γ. The tested cloud's collective quietness does not provide it; an internal quiet store is a
+>     concrete candidate that would (narrowed in round 16; likely also round 14's shortfall).
 >   * Receivers from their own equations: an ordinary self-sustained oscillator (the calculation's gain reservoir,
 >     complex amplitude, coupling +iE) locks a quarter cycle behind and is pushed ∝ |E|; an inverted self-sustained
 >     emitter (pumped ensemble with collective gain; the wave's torque carries w) locks a quarter cycle ahead and is
->     pulled ∝ |E|: round 10's rule derived. Below threshold, an inverted body is pulled ∝ |E|²; in strong waves the
->     inverted emitter's pull saturates at its pump rate.
+>     pulled ∝ |E|: round 10's rule, from the body's own equations (reproduced by an independent audit). Below
+>     threshold, an inverted body is pulled ∝ |E|²; in strong waves the inverted emitter's pull saturates at its pump
+>     rate.
 >   * Integration (100 pieces with D, B radiating monopole/dipoles; 64 test bodies at 6λ feeling only the local wave):
->     released/cold = 1 + k to 3% up to k ≈ 50; pull ∝ √(intensity at the bodies) to 1–3% for locked and inverted bodies
->     alike; extra-pull ratios per doubling 3.55, 2.95, 2.48, 2.20, 1.97 (law 3.60 … 2.15); collisions: γ/(γ + ν) at the
->     source to 1%, and slow bodies lose step in the flickering wave; no memory; pull = P/v to 1.1%.
+>     given δ = χw as an input, released/cold = 1 + k to 3% up to k ≈ 50; pull ∝ √(intensity at the bodies) to 1–3% for
+>     the imposed-lead bodies; extra-pull ratios per doubling 3.55, 2.95, 2.48, 2.20, 1.97 (law 3.60 … 2.15); the
+>     inverted bodies ×1.15, 1.50, 2.41, 4.38, 8.24, 14.8 against √(1 + k) = 1.09, 1.32, 2.00, 3.61, 7.00, 13.9 (the trend,
+>     10–20% above); collisions: γ/(γ + ν) at the source to 1%, and slow bodies lose step in the flickering wave; no
+>     memory; pull = P/v to 1.1%. Not yet the full law: one cloud seen from outside, and the shared wave's flux is
+>     0.6–1.4 × the modal loss (interference not fed back).
+>   * Independent audit (round 16): with damping from the same coupling that radiates, ż = −iHz − ½W†Wz
+>     (d‖z‖²/dt = −P_out exactly), a reduced 20-source test's extra radiation per doubling of the detuning fell from
+>     4.13, 4.05, 4.00, 3.91 to 3.80, 3.28, 2.02, 1.64. The σ² must be re-established with the feedback. Summary: an
+>     attractive local response is demonstrated; the motion-dependent source is conditional; the complete
+>     energy-conserving law is not yet recovered.
 >   * Energy: F = P/v_phase (corrected in round 16; round 15 first used the travel speed u). At the law's a, a·v_phase =
 >     2βℓ per kilogram (β = v_phase/u ≲ 0.5 from the galaxies, §26.1); at v_phase = c, 3,500ℓ (the Sun: 5 × 10⁻¹² /yr,
->     excluded by ephemerides at ~10⁻¹³). γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹,
+>     against ephemerides at ~10⁻¹³; as a simple budget v_phase ≲ 5,700 km/s). Round 15's "2ℓ at v = u" is the
+>     identity a = 2ℓ/u, not a check; neither bound measures u. γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹,
 >     γ/χ² = u²/γ₀ = 9.7 × 10³² m²/s; the law's collision rule puts 1/γ between ~100 s (ion gyration) and ~200 Myr
 >     (stellar orbits).
 > * **Round 16 (§26): round 15's next steps, one at a time.**
 >   * The pull's energy bill uses the phase speed (F = P/v_phase), and the fed power joins the stream:
 >     I = |g_N|(1 + 2βW/(aM)). The galaxies allow β = v_phase/u ≲ 0.5 (15.79 against 15.87 km/s at 0.5; β ≈ 1 trends at
 >     2.8σ and fails out of sample); the clusters accept it with a lower u. The law is unchanged.
+>   * The store opened by the flow: with w = v − V_flow (the velocity relative to the companion streaming past) and no
+>     quiet leak of its own, the calculation's equations give the cold leak χ²u²/γ (u the travel speed), released/cold
+>     = 1 + 3σ²/u² (1.70, 3.88, 12.7, 48.6, 198 at σ/u = 0.5–8), γ/(γ + ν) with collisions, (1 − v_r/u)² for a drift,
+>     and no heat from rotation only with the memory. Crossing heat k = 3σ²/u² + p(v² − 2uv cos θ)/u²: the Bullet's
+>     smaller half 1.39 → 1.56–1.64 × 10¹⁴ M☉ (target 2.47–2.85), the main half into range. Conditional.
+>   * The shared wave closed (the audit's repair, ż = −iHz + (i/2)Mz with M the exact Green's function coupling,
+>     Γ = Im M = W†W, J = Re M the near field): energy closes to 10⁻⁵, far-field flux = z†Γz. With Γ alone a dense
+>     cloud's radiators screen its quiet leak (to ≤ 5%) and the doubling ratio falls (3.88, 3.53, 2.45, 1.42 at t = 1000,
+>     the audit's pattern); with the whole M the leak stays 82–100% and the extra grows ×3.3–3.9 per doubling (dense) and
+>     ×4.0 (dilute), coefficient renormalized ×0.34–0.99; collisions γ/(γ + ν) except in the densest cloud.
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -445,7 +466,8 @@ results README §18):
 * **The wave alone** (`code/wave_dark_v15.py`): da_j/dt = −a_j/2 + (i/2)Σ_l C_jl a_l, C_jl = cos(kR)/(k√(R²+ε²))
   + i sinc(kR); P = a†Sa, S_jl = sinc(kR_jl). S depends only on distances, so rotation and boosts are exact nulls;
   free motion opens subradiant states and collisions narrow it (Dicke). The leak grows as σ^0.4–0.9 because the
-  collective rates form a gapless ladder; the σ² law needs a gap γ₀ ≪ δ²/γ ≪ γ, i.e. an internal store.
+  collective rates form a gapless ladder; the σ² law needs a gap γ₀ ≪ δ²/γ ≪ γ, which an internal store is a
+  candidate to provide.
 * **The receiver** (`code/receivers_v15.py`): an inverted, self-sustained emitter, mean-field Bloch equations,
   ds/dt = (−γ⊥ + (G_c/2)w + iΔ)s − (i/2) b E w, dw/dt = W(1 − w) − γ∥(1 + w) − 2G_c|s|² + i b(E s* − E* s):
   the wave's torque carries the inversion w > 0, so the stable injection lock is arg s = arg E − π/2 (feeding), and
@@ -453,9 +475,10 @@ results README §18):
   sign (an ordinary laser's cavity field, or the calculation's gain reservoir), the stable lock is arg E + π/2:
   absorbing, pushed ∝ |E|.
 * **Joined** (`code/reservoir_force_v15.py`): the pieces' D radiate monopoles c0√(2γ₀)D and B_m dipoles c1√(2γ)B_m
-  (c0² = 8π/(ωk), c1² = 24π/(ωk³): radiated = modal loss), test bodies feel F = ½Re(a*∇E): the pull is
-  √(1 + k) times cold in form (k = 3q²γ/γ₀), ×2 per doubling where k ≫ 1. The flux of the pieces' waves is
-  0.6–1.4 × their modal loss per arrangement (mutual interference, not fed back).
+  (c0² = 8π/(ωk), c1² = 24π/(ωk³): radiated = modal loss for one isolated piece), test bodies feel
+  F = ½Re(a*∇E): given δ = χw, the pull is about √(1 + k) times cold (k = 3q²γ/γ₀), ×2 per doubling where k ≫ 1.
+  The flux of the pieces' waves is 0.6–1.4 × their modal loss per arrangement (mutual interference, not fed back).
+  The energy-exact form is ż = −iHz − ½W†Wz, W mapping internal amplitudes to outgoing waves (round 16).
 * **Cost:** F = P/v_phase. Pulling at a costs a·v_phase = 2βℓ per kilogram (β = v_phase/u); the galaxies allow β ≲ 0.5
   (round 16), so at most ℓ.
 
@@ -466,6 +489,16 @@ results README §18):
   15.76 (0.2), 15.79 (0.5), 16.35 km/s (1); the outer residual's slope on W/(aM) +0.074 ± 0.062, −0.023 ± 0.034,
   −0.054 ± 0.019 (β = 0, 0.5, 1); β fitted on the training galaxies (0.95) does worse out of sample (test 13.80 against
   12.40 km/s). X-COP accepts β ≤ 1 with u = 170 / 142 / 113 km/s. So v_phase ≲ u/2; round 10's 0.05u was too strict.
+* **The flow opens the store** (`code/stream_store_v16.py`): δ = χ(v − V_flow), γ₀ = 0. At rest in its own outflow a
+  piece sees |w| = u, so γ₀ = χ²u²/γ and u² = γ₀γ/χ² is an identity with u the travel speed; random motion gives
+  1 + 3σ²/u², collisions γ/(γ + ν), a drift (1 − v_r/u)², rotation nothing only with the memory. Crossing another
+  system's flow (share p): k = 3σ²/u² + p(v² − 2uv cos θ)/u² (`code/crossing_heat_v16.py`, the Bullet: smaller half
+  +12–18%, main half in range).
+* **The shared wave, energy exact** (`code/shared_wave_v16.py`): M_jl from G = e^{ikR}/(4πR) and its derivatives for
+  monopole-monopole, monopole-dipole and dipole-dipole pairs, diagonal i2γ₀, i2γ; passive pieces ż = −iHz + (i/2)Mz,
+  so d‖z‖²/dt = −z†Γz. Forces F_j = (1/ω) Re Σ_l z_j†∂M_jl z_l, including a piece's own monopole-dipole recoil; they
+  balance the radiated momentum. The dissipative half alone lets induced radiators screen the quiet monopoles; the
+  reactive half (causally tied to it) prevents that.
 
 ### What follows
 

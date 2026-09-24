@@ -3337,10 +3337,12 @@ part. Motion is measured as q = kσ in units of the radiation rate.
 
   There is no gap between quiet and loud. Motion moves the state down this continuous ladder, and the leak settles
   where the ladder's crowding balances the scrambling: a fractional power of σ.
-* **Reading.** σ² needs one quiet store separated by a wide gap from the radiating channels, γ₀ ≪ δ²/γ ≪ γ (in
-  the calculation, 10⁻⁶ against 1). A cloud's collective quietness has no such gap. So the quiet store must be a
-  property of each piece of matter, an internal oscillation, and not of how the pieces are arranged. This also
-  explains round 14's steepness gap: its darkness was collective.
+* **Reading** *(narrowed in round 16, after an independent audit)*. σ² needs one quiet store separated by a wide gap
+  from the radiating channels, γ₀ ≪ δ²/γ ≪ γ (in the calculation, 10⁻⁶ against 1).
+  * The tested cloud's collective quietness does not provide that separation.
+  * An internal quiet store is a concrete candidate that would. This one construction does not rule out every
+    collective arrangement.
+  * The same lack of a gap is a likely reason for round 14's steepness shortfall, whose darkness was collective.
 
 ### 25.3 Which test bodies a passing wave pulls, from their own equations
 
@@ -3414,17 +3416,23 @@ Five arrangements for each case. Values are relative to rest, per unit of fuel l
 | 0.008 | 192 | 162 (193) | ×202 (14.0) | ×14.3 ± 1.1 | ×14.8 ± 1.2 | ×202 | 0.66 |
 | 0.016 | 768 | 418 (769) | ×509 (22.3) | ×22.6 ± 1.7 | ×23.1 ± 1.8 | ×508 | 0.29 |
 
-* **The heat term's full form comes out of the equations.**
-  * The released power is 1 + k times the cold leak to within 3% up to k ≈ 50. Beyond that the fastest pieces
-    burn their fuel first.
-  * The round-10 bodies' pull follows the square root of the wave's intensity at their place to 1–3%. That is
-    √(cold + released), the law's √(|g_N| + S_hot) with S_hot = k|g_N| for a point mass.
+* **A conditional demonstration of the heat term's form.** *(Round 16: narrowed after an independent audit; round 15
+  first wrote "the heat term's full form comes out of the equations", which was premature.)*
+  * The mixing δ = χw is an input here, not derived, and the pieces sit at fixed points.
+  * Given it, the released power is 1 + k times the cold leak to within 3% up to k ≈ 50. Beyond that the fastest
+    pieces burn their fuel first.
+  * The round-10 bodies (their lead imposed) are pulled by the square root of the wave's intensity at their place,
+    to 1–3%. That is √(cold + released), the law's √(|g_N| + S_hot) with S_hot = k|g_N| for a point mass.
+  * **The inverted bodies, whose lead comes out of their own equations,** are the first-principles result. Their lead
+    is 0.77–0.93 in the faint wave at rest and 0.999–1.000 once motion brightens it. Their pull, ×1.15, 1.50, 2.41,
+    4.38, 8.24 and 14.8, follows √(1 + k) = 1.09, 1.32, 2.00, 3.61, 7.00 and 13.9 in trend, 10–20% above it. Finite
+    geometry, interference and the receivers' own response all enter, so "exact" is not established.
   * Nothing converts power into force: the pull is ½Re(a* ∇E), summed over bodies that feel only the local wave.
-* **Doubling σ doubles the extra pull in the heat-dominated regime,** the decisive outcome asked for in round 13.
-  The extra pull's ratio per doubling is 3.55, 2.95, 2.48, 2.20 and 1.97 (± 0.03–0.36), against the law's 3.60,
-  3.10, 2.61, 2.30 and 2.15. The last step, 1.63, is where the fuel runs low.
-* **The inverted bodies do the same with no timing put in.** Their lead is 0.77–0.93 in the faint wave at rest
-  and 0.999–1.000 once motion brightens it. Their pull is ×1.15 … ×23.1.
+  * A pull ∝ √(intensity) outside one cloud is not yet the full law. The spatial integral, the pull's direction in an
+    asymmetric system, the potential equation and light bending are still to be derived.
+* **Doubling σ doubles the extra pull where heat dominates,** with the imposed-lead bodies: the extra pull's ratio
+  per doubling is 3.55, 2.95, 2.48, 2.20 and 1.97 (± 0.03–0.36), against the law's 3.60, 3.10, 2.61, 2.30 and 2.15.
+  The last step, 1.63, is where the fuel runs low. The inverted bodies show the same trend.
 * **The amplifier follows the intensity instead** (×1.27 … ×508): an intensity law, not the law's.
 * **Collisions,** at q = 0.002 (k = 12):
 
@@ -3451,7 +3459,18 @@ Five arrangements for each case. Values are relative to rest, per unit of fuel l
   * The stores drain exactly by what they radiate: at rest 0.9976 is left after 1200, which is e^(−2γ₀T).
   * The flux of the pieces' waves through a sphere is 0.60–1.40 times what their modes lose, depending on the
     arrangement (mean 1.02 over 85 runs). The pieces' waves interfere with each other, and that is not fed back
-    into their modes. A fully consistent version would let each piece feel the others' waves.
+    into their modes.
+  * **This is the biggest gap** (round 16, from an independent audit):
+    * The audit reproduced the mismatch (seed 2: 0.6039; seed 3: 1.229; unchanged from 400 to 8,000 points on the
+      sphere).
+    * It showed why with two emitters a tenth of a wavelength apart: in phase they radiate 1.94 times their assigned
+      loss, and in opposite phase 0.065 times.
+    * It tested a repair, damping taken from the same coupling that radiates: ż = −iHz − ½W†Wz, with W the map from
+      internal amplitudes to outgoing waves. That closes the energy budget exactly.
+    * In its reduced test (20 sources, no test bodies, the mixing still assumed), the extra radiation per doubling of
+      the detuning fell from 4.13, 4.05, 4.00, 3.91 to 3.80, 3.28, 2.02, 1.64.
+    * So the σ² scaling has to be re-established with the feedback included (§26.3). Averaging over arrangements is
+      not enough: each cloud needs a budget that closes for its own state.
   * Pull ÷ (fed power / wave speed) = 0.989–1.002 over every run, for every kind of body. It is below 1 because
     the sources are spread over the ball, so the pull is the radial part of the momentum fed.
 
@@ -3459,15 +3478,21 @@ Five arrangements for each case. Values are relative to rest, per unit of fuel l
 
 * **Being pulled costs power: F = P/v_phase.** *Corrected in round 16 (§26.1):* this paragraph first used the
   travel speed u. A wave carries momentum k/ω = 1/v_phase per unit energy, so the phase speed sets the cost, as
-  round 10 had it (§20.1, condition 3).
+  round 10 had it (§20.1, condition 3). This toy's wave has the same phase and travel speeds; whether the
+  companion's crests move more slowly than its energy is still to be established.
+  * Round 15's "exactly 2ℓ at v = u" followed from the law's own definition a = 2ℓ/u. It was an identity, not a
+    check.
   * Pulled at the law's a = 6.30 × 10⁻¹¹ m/s², a kilogram feeds a·v_phase = 2(v_phase/u)ℓ. The galaxies allow
     v_phase up to about u/2 (§26.1), so at most ℓ, the companion power the kilogram emits when cold. That is at
     most 1.9 × 10⁻¹⁵ of its mass per year.
-  * A light-speed phase would cost a·c = 3,500ℓ. The Sun, pulled at about 5 × 10⁻¹¹ m/s² by the Galaxy's
-    companion, would then feed 78 solar luminosities into it and lose 5 × 10⁻¹² of its mass a year. Planetary
-    ephemerides limit the change of the Sun's GM to about 10⁻¹³ per year (e.g. Pitjeva & Pitjev, MNRAS 432, 3431,
-    2013).
-  * **So energy and momentum require slow crests,** v_phase ≲ u/2 ≈ 85 km/s.
+  * A light-speed phase would cost a·c = 3,500ℓ, about 1,770 times the cost at 169 km/s. The Sun, pulled at about
+    5 × 10⁻¹¹ m/s² by the Galaxy's companion, would then feed 78 solar luminosities into it and lose 5 × 10⁻¹² of
+    its mass a year.
+  * Planetary ephemerides limit the change of the Sun's GM to about 10⁻¹³ per year (e.g. Pitjeva & Pitjev, MNRAS
+    432, 3431, 2013). Taken as a simple budget, that bounds the crests' speed at about 5,700 km/s. Applying it needs
+    two more steps: how this power loss changes the Sun's mass and GM, and the Sun's other losses.
+  * **So energy and momentum require slow crests.** The planets allow up to about 5,700 km/s; the galaxies about
+    85 km/s (§26.1). Neither measures u = 169 km/s; both are compatible with it.
 * **The constants.**
   * If a piece's internal energy is its rest energy, the quiet leak is γ₀ = ℓ/(2c²) = 3.0 × 10⁻²³ s⁻¹ (ℓ = au/2
     = 5.3 × 10⁻⁶ W/kg). Then u² = γ₀γ/χ² fixes γ/χ² = u²/γ₀ = 9.7 × 10³² m²/s.
@@ -3483,21 +3508,23 @@ Five arrangements for each case. Values are relative to rest, per unit of fuel l
 
 | link | status after round 15 |
 |---|---|
-| random motion releases companion power ∝ σ², collisions hold it back as γ/(γ + ν), rotation and bulk motion release none | derived in the reduced model, given a quiet internal store with a gap and a frequency shift ∝ the rate of change of distances (§25.1, §25.4). The wave alone gives the symmetries and the collision rule, not the gap (§25.2) |
-| released and cold power add, and reach test bodies as waves | derived, energy checked (§25.4) |
-| the pull is the amplitude, √(cold + released), a quarter cycle ahead | derived for inverted, self-sustained test bodies from their Bloch equations (§25.3). Every run has pull = fed power / wave speed |
-| doubling σ doubles the extra pull where heat dominates | measured: ×2.48, 2.20, 1.97 per doubling (§25.4) |
+| random motion releases companion power ∝ σ², collisions hold it back as γ/(γ + ν), rotation and bulk motion release none | conditional: shown in the reduced model with independent radiation channels, given a quiet store with a gap and the mixing δ = χw as inputs (§25.1, §25.4). The wave alone gives the symmetries and the collision rule, not the gap (§25.2). With the shared wave's feedback the scaling changes (independent audit); to be re-established (§26.3) |
+| released and cold power add, and reach test bodies as waves | shown, but the shared wave's energy budget does not close (flux 0.60–1.40 × the modes' loss) |
+| the pull is the amplitude, √(cold + released), a quarter cycle ahead | an attractive local response demonstrated: inverted, self-sustained test bodies choose the lead themselves (§25.3), pulled ∝ \|E\| in weak waves; 10–20% above √(1 + k) in the integration. Every run has pull = fed power / wave speed |
+| doubling σ doubles the extra pull where heat dominates | measured with imposed-lead bodies: ×2.48, 2.20, 1.97 per doubling (§25.4); to be redone with the feedback |
 | the energy bill | a·v_phase per kilogram; ≤ ℓ with v_phase ≲ u/2, which the galaxies allow; a light-speed phase is excluded by the planets (§25.5, corrected in §26.1) |
 | u from microscopic rates | u² = γ₀γ/χ²: one relation between two unknown rates, not yet a number |
 | the release factor (strong fields) | still separate: the inverted body saturates rather than switching off |
 
 * **Suite** unchanged: 59 pass, 11 close, 7 fail (the law is unchanged).
-* **Next:**
-  1. **A physical quiet store with a gap:** an internal two-oscillator structure whose frequencies are pulled apart
+* **Next** *(reordered in round 16, as an independent audit recommends)*:
+  1. **One kind of matter, with the feedback from the start:** every piece both a source (a quiet store opened by
+     motion) and a receiver (inverted and self-sustained, powered by the same finite store), one local coupling
+     giving its emission, its loss, its response and its force, in one cloud with every wave fed back so the energy
+     budget closes. Then cold, free and colliding motion again. No strong-field switch in that test.
+  2. **A physical quiet store with a gap:** an internal two-oscillator structure whose frequencies are pulled apart
      by relative motion. The motional mixing of a metastable atomic state is the laboratory example. Derive χ
      and γ, and so u.
-  2. **One kind of matter:** every piece both a source (a quiet store opened by motion) and a receiver (inverted
-     and self-sustained), in one cloud with mutual waves fed back. That removes the ±40% interference noise.
   3. **The release factor from the receivers:** whether a body's inversion, drained by its own neighbours' waves in
      strong fields, can switch its pull off rather than cap it.
   4. Round 14's list: the two KiDS analyses; round 12's list.
@@ -3508,8 +3535,11 @@ The request: "proceed with the next steps, keep the blog and main current": roun
 order done:
 1. the energy bill of being pulled, fed back into the companion, on the galaxies and clusters (§26.1); this also
    corrects §25.5;
-2. what opens the quiet store (§26.2);
-3. one kind of matter, with every wave fed back (§26.3).
+2. what opens the quiet store, and the crossing heat in the Bullet Cluster (§26.2);
+3. the shared wave with its energy budget closed, as an independent audit of round 15 asked (§26.3);
+4. one kind of matter, every piece both sender and receiver, with every wave fed back (§26.4).
+
+The audit also narrowed several round-15 claims; §25 is corrected in place and marked.
 
 ### 26.1 The energy bill of being pulled, fed back into the companion
 
@@ -3554,3 +3584,141 @@ point against W/(aM) there, with 400 bootstrap resamples of the galaxies.
   * A light-speed phase is out twice over: the planets (§25.5), and the galaxies.
   * The law is unchanged (β = 0 fits as well as β = 0.5). A small surface-density trend in the outer residuals
     (+0.055 ± 0.025 at β = 0, +0.032 at β = 0.5) is noted for later.
+
+### 26.2 What opens the quiet store: the companion flowing past
+
+`code/stream_store_v16.py` → `run-stream-store-v16/`; `code/crossing_heat_v16.py` → `run-crossing-heat-v16/`.
+
+**The hypothesis.** The independent calculation (§25.1) mixes a piece's quiet store into its radiators by δ = χw,
+with w "a relative velocity" left unspecified, and it needs a separate quiet leak γ₀. Here w is the piece's velocity
+relative to the companion flowing through it, w = v − V_flow. The companion streams away from the matter that emits it
+at u and keeps its sources' mean motion (§12, the memory). There is no quiet leak of its own (γ₀ = 0). The equations
+are the calculation's own, integrated as it writes them (γ = 1; 8 seeds × 64 pieces per point).
+
+| case | measured | expected |
+|---|---|---|
+| at rest in its own flow: the leak per unit store | 2.0002 × 10⁻⁴ | χ²u²·2/γ = 2 × 10⁻⁴ |
+| free random motion, σ/u = 0.25, 0.5, 1, 2, 4, 8: released ÷ cold | 1.16, 1.70, 3.88, 12.7, 48.6, 198 (± 1–5%) | 1 + 3σ²/u² = 1.19, 1.75, 4, 13, 49, 193 |
+| σ = 2u, collision rate ν = 1, 3, 10, 30 (units of γ): extra | 5.90, 2.96, 1.07, 0.383 | 12γ/(γ + ν) = 6, 3, 1.09, 0.387 |
+| a steady drift along the flow, v_r/u = −2, −1, −0.5, +0.5, +1, +2 | 9.01, 4.00, 2.25, 0.250, 0.000, 1.00 | (1 − v_r/u)² |
+| moving across the flow at v/u = 0.5, 1, 2: with memory / without | 1.000, 1.000, 1.000 / 1.25, 2.00, 5.00 | 1 / 1 + v²/u² |
+
+* **The leak comes from the flow.** A piece at rest in its own outflowing companion sees |w| = u, so its cold leak is
+  χ²u²/γ. The calculation's relation u² = γ₀γ/χ² then holds identically, with u the companion's travel speed. The law
+  has used one u for both jobs, the travel speed and the heat scale in k = 3σ²/u², since round 3; here the two are the
+  same speed by construction.
+* **The factor 3 comes out too:** three random velocity components against the flow's one.
+* **Collisions** scramble only the random part, as the law's rule for gas needs.
+* **Ordered rotation carries no heat only if the flow co-moves with its source** (the memory). Without it, a disk
+  turning at 200 km/s through a flow fixed in space would count as hot (k ≈ 1.4). So this reading requires the
+  memory that the colliding clusters already need. Differential rotation (shear) is not yet tested.
+* **A new prediction: drift.** Matter falling inward against the flow leaks more, (1 + |v_r|/u)²; matter flowing out
+  at u leaks nothing. A steady drift survives collisions, so even infalling gas would take this heat.
+* **Status: conditional.** The quiet store with its gap and the linear mixing are still the calculation's postulates
+  (§25.5). What this adds is what the relative velocity is, and that it makes u one speed.
+
+**The crossing heat.** If the store opens to the velocity relative to the flow, matter moving through another
+system's flow is heated. A piece sees its own system's flow (share 1 − p) and the other's (share p, moving outward
+from the other system at u and carrying its velocity), so
+```
+k = 3σ²/u² + p (v² − 2uv cos θ)/u²
+```
+with v its speed relative to the other system and θ the angle between its motion and the other flow (receding
+cos θ = +1, approaching −1). Gas collides, so it takes none.
+
+The Bullet Cluster (round 11's static-distance model, `code/bullet_static_v11.py`) is rerun with this one term added.
+* p is the other system's companion intensity (|g_N| + S, each system's own spherical model before the collision) over
+  the sum, at each of four shells of stars.
+* The history is a straight pass: receding at v_out since pericentre, approaching at v_in before it, from where the
+  other system's flow ends (u × 13 Gyr).
+* The heat emitted a time t ago sits a distance ut from the stars now (the memory), so it enters through a
+  distance-dependent kernel.
+* Grid 192², 15 kpc. The lensing targets span Bradač et al.'s and Paraficz et al.'s masses within 250 kpc (§14), in our
+  distances.
+
+| case | M(<250 kpc), smaller half (10¹⁴ M☉; target 2.47–2.85) | main half (target 3.09–3.46) | κ at the galaxies, smaller / main | crossing heat ÷ all heat (mid-plane) |
+|---|---|---|---|---|
+| the law, no crossing heat | 1.385 | 2.969 | 0.276 / 0.717 | 0 |
+| v_out 3,900 km/s, v_in 3,000, impact parameter 150 kpc | 1.603 | 3.119 | 0.489 / 0.766 | 0.22 |
+| slower: 2,700 and 2,000 | 1.556 | 3.073 | 0.443 / 0.750 | 0.16 |
+| faster: 4,700 and 4,000 | 1.641 | 3.160 | 0.521 / 0.780 | 0.26 |
+| 3,900 and 3,000, head-on | 1.608 | 3.130 | 0.496 / 0.772 | 0.23 |
+| 3,900 and 3,000, impact parameter 300 kpc | 1.590 | 3.106 | 0.472 / 0.760 | 0.21 |
+
+* **The crossing heat lifts the smaller half by 12–18%** (1.56–1.64 against 1.39), and moves the main half into its
+  measured range (3.07–3.16 against 3.09–3.46) in all but the slowest crossing.
+* The gas residuals come out 0.050 and 0.018–0.024, against the measured 0.05 and 0.02 (the law alone: 0.050 and
+  0.052), and the lensing peaks sit on the galaxies (6–15 kpc from them).
+* **Not enough alone.** The smaller half still has 63–66% of the lower end of its measured mass; the term closes about
+  a fifth of the gap. The speeds and the impact parameter matter little: the heat is dominated by v² ≫ u², and the
+  share p where the stars sit.
+* Next for this term: MACS J0025, Abell 520 and El Gordo, where it adds heat to galaxies that crossed; and the dwarfs
+  moving through the Milky Way's flow.
+
+### 26.3 The shared wave with its energy budget closed
+
+`code/shared_wave_v16.py` → `run-shared-wave-v16/`.
+
+An independent audit of round 15 found the combined experiment's biggest gap (§25.4): each piece lost energy at its own
+rate while the pieces' waves were added coherently. It proposed the repair, damping taken from the same coupling that
+radiates: ż = −iHz − ½W†Wz, so that d‖z‖²/dt = −P_out exactly. In its reduced test (20 pieces, dissipative coupling
+only, the mixing still assumed) the extra radiation per doubling of the detuning fell from 4.13, 4.05, 4.00, 3.91 to
+3.80, 3.28, 2.02, 1.64. Its conclusion: the heat law has to be re-established with the feedback included.
+
+**The complete coupling.** Eliminating the wave between pieces with monopole (quiet store D, rate γ₀) and dipole
+(radiators B, rate γ) channels gives one complex symmetric matrix M, built from the exact Green's function e^{ikR}/(4πR)
+and its derivatives (near and far field). Its imaginary part Γ = W†W is the radiated power; its real part J is the
+reactive near field, which moves energy between pieces but radiates none. A passive piece obeys ż = −iHz + (i/2)Mz.
+Checks (`validate()`):
+* z†Γz equals the flux through a distant sphere for 1, 2 and 12 pieces in random states (7.01166 against 7.01162;
+  29.7195 against 29.7195; 164.391 against 164.390);
+* the forces on all pieces balance the momentum radiated, to 10⁻⁵–10⁻⁴ (the sphere's quadrature), including the recoil
+  of a piece whose monopole and dipole are coherent;
+* two monopoles a tenth of a wavelength apart radiate 1.9355 and 0.0645 times their own-rate loss in and out of phase,
+  the audit's numbers.
+
+**Three versions of the damping, same clouds.**
+* *independent*: each piece's own rate (round 15);
+* *dissipative*: −½Γ, the audit's reduced repair;
+* *shared*: the whole coupling, −½Γ + (i/2)J.
+
+The clouds are 20 pieces in a ball of radius 0.5, 1 or 3 wavelengths (at least 0.15 apart), and round 15's 100 pieces
+in radius 1. The pieces' own frequencies are identical, or spread with rms 0.3γ. γ₀ = 10⁻⁶, γ = 1, and the rms
+detuning q runs 0.00025 … 0.016 (k = 0.19 … 768 for an isolated piece). Stores start full at random phases. The
+evolution is the exact matrix exponential; 5 arrangements each.
+
+Extra radiation per unit stored energy, (P/E)_q/(P/E)_0 − 1, ratio per doubling of q (means over arrangements; cold
+leak relative to an isolated piece's 2γ₀):
+
+| cloud, damping | cold leak | t = 50: q 0.00025 → … → 0.016 | t = 1000 |
+|---|---|---|---|
+| any cloud, independent | 1 | 4.00, 4.00, 4.00, 3.99, 3.97, 3.87 | 4.00, 3.99, 3.95, 3.83, 3.39, 2.46 |
+| 20 in radius 1, dissipative | 0.03–0.05 | 3.98, 3.99, 3.98, 3.95, 3.81, 3.27 | **3.88, 3.53, 2.45, 1.42**, 1.36, 1.35 |
+| 20 in radius 1, shared | 0.91 | 3.50, 3.71, 3.84, 3.91, 3.90, 3.75 | 3.50, 3.70, 3.77, 3.63, 3.01, 2.18 |
+| 20 in radius 0.5, shared | 0.91 | 3.28, 3.56, 3.75, 3.85, 3.87, 3.73 | 3.28, 3.54, 3.68, 3.57, 2.94, 1.88 |
+| 100 in radius 1, shared | 0.82 | 9.05, 5.11, 4.43, 4.17, 4.00, 3.70 | 9.10, 5.08, 4.30, 3.71, 2.81, 2.12 |
+| 20 in radius 3, shared | 1.00 | 4.08, 4.04, 4.02, 4.00, 3.96, 3.84 | 4.08, 4.03, 3.96, 3.80, 3.30, 2.48 |
+| 20 in radius 1, frequencies spread, shared | 0.92 | 3.99, 4.00, 3.99, 3.99, 3.94, 3.79 | 5.07, 4.40, 4.12, 3.82, 3.18, 2.23 |
+
+* **The budget closes for each cloud's own state.** Stored energy lost equals the radiated energy to (0.25–1.4) × 10⁻⁵
+  over t = 3000 (trapezoid quadrature), and the flux through a distant sphere equals z†Γz to 10⁻⁵.
+* **The audit's result is reproduced by the dissipative half alone** (bold, t = 1000; its 3.80, 3.28, 2.02, 1.64). The
+  mechanism: in a dense cloud the radiators, driven by their neighbours' quiet monopoles, re-radiate against them. That
+  screens the cold leak down to 5% of an isolated piece's or less, and the doubling ratio falls once the fastest stores
+  have emptied.
+* **The complete coupling removes most of the screening.** The reactive near field is the real part of the same
+  Green's function whose imaginary part is Γ; causality ties the two. With it, the cold leak stays at 82–100% of an
+  isolated piece's, and the σ² survives: 3.3–3.9 per doubling in dense clouds, 4.0 in dilute ones, until the fastest
+  stores empty. Their emptying lowers the late ratios for independent damping just as much.
+* **A dense cloud's heat coefficient is renormalized.** At q = 0.002 (k = 12 for an isolated piece) the extra is
+  11.7, 9.9, 6.9 and 4.3 for the clouds of radius 3, 1, 0.5 and the 100-piece cloud, against 11.8–12.6 with
+  independent damping. In the law that reads as a somewhat larger u for tightly packed matter, a correction to size
+  rather than a failure.
+* **A term linear in the detuning** appears at the smallest q: one piece's quiet monopole interferes with another's
+  radiators. It depends on the stores' phases, averages away over them and shrinks as 1/√N. It is why some ratios at
+  the smallest q depart from 4 (9.05 for the 100-piece cloud).
+* **Collisions,** q = 0.002, the detunings redrawn at ν = 1 and 10 (units of γ), share of the free extra kept at
+  t = 200: 0.55 and 0.091 (radius 3), 0.48 and 0.095 (radius 1), against γ/(γ + ν) = 0.50 and 0.091. The densest
+  cloud (radius 0.5) keeps more, 0.98 and 0.26, with large scatter.
+* **Reading.** With the energy fed back, the motion-opened σ² and the collision rule hold in dilute and moderately
+  dense clouds and survive, renormalized, in dense ones. The mixing δ = χw and the quiet store's gap are still inputs.
