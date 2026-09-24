@@ -389,7 +389,9 @@ cold disks; hot bulges add to it. Script `code/run_v3.py`.*
 ![Measured over predicted cluster mass](blog-figures/clusters.png)
 
 *Twelve clusters with measured gas, temperatures and stars (X-COP). At six radii, the mass needed to hold the gas over
-the mass each law predicts; a perfect law sits on ×1. Script `code/xcop_static_v11.py`.*
+the mass each law predicts; a perfect law sits on ×1. Chart from `code/run_v3.py`, drawn with an earlier fit of
+the constants; the current fit, in the project's own distances (`code/xcop_static_v11.py`), moves our points by at most
+4%.*
 
 | | Typical miss | Adjustable numbers |
 |---|---:|---|
@@ -409,7 +411,8 @@ make each kilogram count dozens of times over.
 
 *The Bullet Cluster, solved in 3D and projected exactly as a lensing map is made. Left: our law puts both lensing peaks
 on the galaxies (dots) and little on the gas (diamonds), as measured. Right: the same law with the heat switched off
-(MOND-like) puts the lensing on the gas. Script `code/bullet_static_v11.py`.*
+(MOND-like) puts the lensing on the gas. Chart from `code/bullet_main_v5.py` and `code/bullet_v3.py`; the current
+constants in the project's own distances (`code/bullet_static_v11.py`) keep the same pattern.*
 
 * **The pattern usually called impossible without dark matter is reproduced:** both lensing peaks sit on the galaxies,
   and the gas regions carry little extra lensing. It takes both ideas of §3.6–3.7: drop either and the lensing lands
@@ -427,7 +430,7 @@ on the galaxies (dots) and little on the gas (diamonds), as measured. Right: the
 `code/collisions_v10.py`.*
 
 * **MACS J0025.4−1222**, a second Bullet: both lensing peaks sit on their galaxies at the age its shock fronts give
-  (0.1–0.36 billion years since the crossing), and its lensing masses agree.
+  (0.1–0.36 billion years since the crossing), and its lensing masses agree within their large errors.
 * **Abell 520**, a "train wreck" whose middle clump has lensing but few galaxies, long called a dark core: ours gives
   3.7 × 10¹³ suns there from its gas and the surrounding galaxies' heat, against 3.3–3.9 measured, and five of its six
   clumps agree.
@@ -438,7 +441,8 @@ on the galaxies (dots) and little on the gas (diamonds), as measured. Right: the
 
 ![The Milky Way's circular speed](blog-figures/milky-way.png)
 
-*The Milky Way's circular speed from 2 to 28 kpc, against four Gaia measurements. Script `code/milky_way_v7.py`.*
+*The Milky Way's circular speed from 2 to 28 kpc, against four Gaia measurements. Script `code/milky_way_v7.py`, drawn
+with an earlier fit of the constants; the current fit lowers our curve by about 2 km/s at the Sun.*
 
 * **Agrees:** the rotation from 15 to 27 kpc (within 1–6%), the pull above the disk (73 against 68–74 in the usual
   units), the Galaxy's mass inside 100 and 200 kpc (6.5 and 12.4 against 6.1–7.3 and 11.0 × 10¹¹ suns), and the
@@ -491,7 +495,8 @@ separates our law from MOND.
 ![Weak lensing around 259,000 isolated galaxies](blog-figures/galaxy-lensing-kids.png)
 
 *Weak lensing around about 259,000 isolated galaxies (KiDS-1000). For each acceleration from visible matter, the
-observed one, separately for spirals (cold) and ellipticals (hot). Script `code/kids_heat_v12.py`.*
+observed one, separately for spirals (cold) and ellipticals (hot). Chart from `code/lensing_census_v7.py`; the numbers
+below, with the lenses' star speeds measured and in the project's own distances, from `code/kids_heat_v12.py`.*
 
 * An elliptical's stars move randomly at 150–250 km/s and never collide, so in our law they are warm (heat weight
   2.4–6.5) and feed the companion harder. A spiral's stars circle in step and are cold.
