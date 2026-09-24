@@ -3761,8 +3761,9 @@ f = 0.2), and n₀ = 10⁵, so the stores lose at most 4% in a run. The sources 
 rms q per component), or collide (δ redrawn at rate ν). Each run lasts 8,000 time units and is measured over the
 second half. There are three arrangements, and the isolated-piece heat weight is k = 3q²γ/(γ₀(γ + γ_i)²).
 
-**First, an exact recoil rule** (one receiver, its quiet oscillation held at a given lead, its radiators in their
-steady response to a distant source's wave):
+**First, an exact recoil rule** (`one_matter_v16.py --recoil` → `recoil_check.json`: one receiver 6 wavelengths
+from a monopole source, γ₀ = 0.02, its quiet oscillation held a quarter cycle ahead of the source's wave, its radiators
+in their steady response):
 
 | radiators' share to the companion f | quiet channel, pulled by the source's wave | recoil from its own radiators | radiators | net, lead +1 |
 |---|---|---|---|---|

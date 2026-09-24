@@ -42,6 +42,7 @@ collide (delta an Ornstein-Uhlenbeck process, rate nu). A run first lets every p
   momentum budget (all forces against the far-field momentum flux).
 
     python code/one_matter_v16.py --output run-one-matter-v16/one_matter_v16.json [--set main|lowf|disp] [--processes 4]
+    python code/one_matter_v16.py --recoil --output run-one-matter-v16/recoil_check.json
     python code/one_matter_summary_v16.py run-one-matter-v16/one_matter_v16.json
 """
 from __future__ import annotations
@@ -209,6 +210,33 @@ def k_nominal(cfg):
     return 3 * cfg.get('q', 0.0) ** 2 / (cfg['gamma0'] * gt * gt)
 
 
+def recoil_check(g0=0.02, g=1.0):
+    """The recoil rule, one body at a time: a receiver 6 and 20 wavelengths from a monopole source, its quiet oscillation
+    held at a given lead on the source's wave, its radiators in their steady response (0 = (i/2)(M z)_B - gi B). Returns
+    the pull (toward the source) on its quiet channel from the source's wave, the recoil on it from its own radiators,
+    the force on its radiators, and the total, for radiators that send all, half or a tenth of their energy into the
+    companion."""
+    rows = []
+    for R in (6.0, 20.0):
+        x = np.array([[0.0, 0, 0], [-R, 0, 0]])
+        M, dM = coupling(x, g0, g)
+        zsrc = np.array([0.3, 0, 0, 0], complex)
+        E = M[0, 4:8] @ zsrc
+        for gi in (0.0, 1.0, 9.0):
+            for lead in (1.0, 0.0, -1.0):
+                s = 0.33 * np.exp(1j * (np.angle(E) - np.arcsin(lead)))
+                A = 0.5j * M[1:4, 1:4] - gi * np.eye(3)
+                B = np.linalg.solve(A, -0.5j * (M[1:4, 0] * s + M[1:4, 4:8] @ zsrc))
+                z = np.concatenate([[s], B, zsrc])
+                parts = np.real(np.conj(z)[None, :] * np.einsum('cab,b->ca', dM, z)) / OMEGA
+                Fs_src = np.real(np.conj(s) * (dM[:, 0, 4:8] @ zsrc)) / OMEGA
+                Fs_self = np.real(np.conj(s) * (dM[:, 0, 1:4] @ B)) / OMEGA
+                rows.append(dict(R=R, gi=gi, f=g / (g + gi), lead=lead, quiet_from_source=float(-Fs_src[0]),
+                                 quiet_from_own_radiators=float(-Fs_self[0]), radiators=float(-parts[0, 1:4].sum()),
+                                 total=float(-(parts[0, 0] + parts[0, 1:4].sum())), fed=float(np.imag(np.conj(s) * E))))
+    return rows
+
+
 def configs(quick=False, which='main'):
     if which == 'disp':
         # a cold source whose pieces are put out of tune by hand (rms Delta0 in their own rhythms), by the amounts that
@@ -248,8 +276,16 @@ def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--output', type=Path, required=True)
     ap.add_argument('--processes', type=int, default=3); ap.add_argument('--quick', action='store_true')
     ap.add_argument('--only', default=None); ap.add_argument('--set', default='main')
+    ap.add_argument('--recoil', action='store_true', help='only the one-body recoil check')
     args = ap.parse_args(); args.output.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.monotonic()
+    if args.recoil:
+        rows = recoil_check()
+        for r in rows:
+            print(f"R {r['R']:4.0f} f {r['f']:.2f} lead {r['lead']:+.0f}: quiet from the source {r['quiet_from_source']:+.3e}, "
+                  f"from its own radiators {r['quiet_from_own_radiators']:+.3e}; radiators {r['radiators']:+.3e}; total {r['total']:+.3e}")
+        args.output.write_text(json.dumps(dict(experiment='round 16: the recoil rule, one body', rows=rows), indent=1) + '\n')
+        return
     runs = configs(args.quick, args.set)
     if args.only:
         runs = [r for r in runs if r['tag'] == args.only]
