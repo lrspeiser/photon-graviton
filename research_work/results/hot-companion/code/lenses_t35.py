@@ -37,13 +37,23 @@ def lcdm(z, H0=70., Om=0.3):
     return Dc(z)
 
 
-def patched_readers(convention):
+def patched_readers(convention, alpha_ratio=1.0):
+    """alpha_ratio = alpha_stored / alpha: the project's stored static distances (alpha = 2.489e-4 per Mpc) at
+    another scale of the distance law. Distances scale as 1/alpha, stellar masses as D_L^2; D_ls/D_s is unchanged."""
     J = M.J
     orig = J.read_json
     obs = {x['Name']: x for x in orig(J.INPUT_NAMES[3])}
     def reader(rel):
         data = orig(rel)
         if convention == 'project':
+            if alpha_ratio == 1.0:
+                return data
+            if rel == J.INPUT_NAMES[4]:
+                return [dict(g, conditional_Dl_Mpc=g['conditional_Dl_Mpc'] * alpha_ratio, conditional_Ds_Mpc=g['conditional_Ds_Mpc'] * alpha_ratio)
+                        if 'conditional_Dl_Mpc' in g else g for g in data]
+            if rel == J.INPUT_NAMES[7]:
+                return [dict(m, conditional_log10_stellar_mass=m['conditional_log10_stellar_mass'] + 2 * np.log10(alpha_ratio))
+                        if m.get('conditional_log10_stellar_mass') is not None else m for m in data]
             return data
         if rel == J.INPUT_NAMES[4]:
             out = []

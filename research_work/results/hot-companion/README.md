@@ -2278,6 +2278,9 @@ times heavier.
 
 ### 21.5 Galaxy lensing in our own distances: it now measures the distance law's scale and the companion's speed
 
+*Round 12 correction (§22.2–22.3): neither reading held. The early/late gap came from two assumed star
+speeds, and with the constants refitted at each α the common level does not measure α.*
+
 `code/kids_static_v11.py` → `run-kids-static-v11/kids_static_v11.json`. The KiDS lenses lie at mean
 z = 0.25, with sources at an effective z = 0.75, and the paper's distances are flat LCDM
 (Ω_m = 0.2793, H0 = 70). At z = 0.25 our distances give:
@@ -2484,3 +2487,106 @@ takes its measured heat, and the Sérsic gap is graded too (a new check; 90 chec
 76). Moved: KiDS blue fail → pass, the colour gap close → pass, Mistele's spirals fail → close, and the
 new Sérsic gap passes; KiDS red pass → fail (+0.081) and Mistele's ellipticals pass → close (2.52), as
 they join the common level.
+
+### 22.3 The distance law's scale, fitted jointly
+
+`code/sn_scale_v12.py` → `run-distance-scale-v12/sn_scale_v12.json`; `code/distance_scale_v12.py` →
+`run-distance-scale-v12/distance_scale_v12.json` and (with `--adopt 0.95`) `adopted_v12.json`;
+`code/kids_level_v12.py` → `run-distance-scale-v12/kids_level_v12.json`.
+
+The static distance law, 1 + z = e^(αD), has one scale. Rounds 10–11 used α0 = 2.4890 × 10⁻⁴ Mpc⁻¹
+(H0-like 74.6, the project's calibration on 164 nearby groups). Round 11 read KiDS's common level as a
+measurement of α: 13% lower would centre it (§21.5). Here α is fitted jointly, with the constants
+refitted at each α. SPARC's 81 Hubble-flow galaxies (f_D = 1, D = cz/H0 with H0 = 73 in Lelli et al.
+2016) now go into the static law too: D × 73/(αc), radii ∝ D, component speeds ∝ √D, g_obs ∝ 1/D. The
+other 68 keep their Cepheid, TRGB, Ursa Major and supernova distances. `run.load_sparc(alpha)` does
+this and reproduces the old loader exactly at alpha = None.
+
+**What each data set prefers:**
+
+| Data | best α/α0 | range | H0-like |
+|---|---|---|---|
+| Pantheon+ supernovae, Cepheid-calibrated, all 1,365 at z > 0.023 | **0.955** | ± 0.013 | 71.2 |
+| the same, z = 0.023–0.15 only (the SH0ES Hubble-flow range) | 0.967 | ± 0.014 | 72.2 |
+| the same, z = 0.1–0.3 only (the lenses' depth) | 0.944 | ± 0.014 | 70.5 |
+| SPARC's Hubble-flow galaxies, by the fit statistic (400 bootstraps) | **0.87** | 0.82–0.92 | 64.9 |
+| the same, by rms speed | 0.94 | 0.90–0.97 | 69.4 |
+| X-COP | flat: rms 0.225 → 0.220 over ×0.80–1.05 (u 183 → 162 km/s) | | |
+| KiDS lensing level | flat: +0.052 → +0.072 over ×0.80–1.05 | | |
+
+* The supernova fit reuses the project's Pantheon+ reduction (brightness-distance-consistency): the 77
+  Cepheid-host rows calibrate M with the static law's two factors of S = e^(αD) at their geometric
+  distances, and the far rows are scored by generalized least squares on the full STAT+SYS covariance.
+  At α0 it reproduces the earlier score for z = 0.1–0.3 (χ² 468.0).
+* The supernovae's best α drifts with depth, 0.967 → 0.944. That drift is the law's shape against the
+  supernovae, not its scale. The bounded beam-area term found earlier (flux × 1/(1 + ηf),
+  f = 1 − 1/(1 + z)) removes it: fitted jointly, ×0.979 at every depth with η = 0.44–0.48, and χ² 1210
+  against 1311 for all 1,365.
+* TRGB (Freedman 2021) and JAGB (Lee et al. 2024) calibrations sit 0.097 and 0.160 mag fainter than the
+  Cepheids. They would lower α by ×0.956 and ×0.928.
+
+Combined by inverse variance (supernovae and SPARC's fit statistic): ×0.949 ± 0.013. **Adopted: ×0.95,
+α = 2.3645 × 10⁻⁴ Mpc⁻¹ (H0-like 70.9).** Refitted there (a and g_d on SPARC, u on X-COP, alternated to
+convergence in four rounds):
+
+| | a (m/s²) | g_d (m/s²) | λ | u (km/s) | reach | SPARC | X-COP rms |
+|---|---|---|---|---|---|---|---|
+| round 11 (α0; SPARC at its published distances) | 6.547 × 10⁻¹¹ | 2.107 × 10⁻¹⁰ | 3.218 | 162.6 | 2.16 Mpc | 15.94 km/s | 0.221 |
+| α0 with SPARC in the static law | 6.743 × 10⁻¹¹ | 2.212 × 10⁻¹⁰ | 3.28 | 165.6 | 2.20 Mpc | 15.98 | 0.221 |
+| **round 12 (×0.95, SPARC in the static law)** | **6.298 × 10⁻¹¹** | **2.027 × 10⁻¹⁰** | **3.219** | **169.4** | **2.25 Mpc** | **15.87** | **0.222** |
+
+Round 11 had left SPARC's distances at H0 = 73, 2% off its own scale. Every data set is now in the same
+distances.
+
+**Correction of round 11 (§21.5).** Lowering α by 13% centres KiDS only if the constants are held
+fixed. Refitted, a follows the Hubble-flow galaxies' distances, and the level moves by only 0.02 dex
+over ×0.80–1.05. The level does not measure α.
+
+**What the level does measure** (`kids_level_v12.py`, the round-12 law; median log10(observed/predicted)):
+
+| one change at a time | all | blue | red | disks | bulges | GAMA |
+|---|---|---|---|---|---|---|
+| round 12 as adopted | +0.065 | +0.011 | +0.078 | +0.066 | +0.034 | +0.009 |
+| the other geometry (D_A = D/(1 + z)) | +0.058 | −0.002 | +0.074 | +0.059 | +0.030 | +0.003 |
+| brightness distance 5% longer | +0.042 | −0.013 | +0.056 | +0.044 | +0.012 | −0.013 |
+| angular-size distance 5% longer | +0.066 | +0.014 | +0.079 | +0.068 | +0.034 | +0.011 |
+| star masses +0.13 dex | −0.005 | −0.062 | +0.010 | −0.003 | −0.034 | −0.060 |
+| circumgalactic gas 0.5 × the stars, within 100 kpc | +0.026 | −0.020 | +0.052 | +0.007 | −0.003 | −0.032 |
+| circumgalactic gas 1 × the stars (Brouwer et al.'s nominal) | −0.002 | −0.053 | +0.018 | −0.031 | −0.021 | −0.068 |
+
+* Geometry and angular sizes hardly matter. In the lensing regime the level follows the lenses' mass at
+  fixed light, and through it their brightness distance. The supernovae fix that distance at the
+  lenses' depth to ±1.4%, and at ×0.95 the law matches them there.
+* So the level is mass the lenses have that KiDS's baryon count (stars and cold gas) leaves out, or a
+  bias in the star masses. A circumgalactic gas halo of 0.5–1 times the stars closes it; that is the
+  amount Brouwer et al. 2021 take as their nominal estimate (isothermal, within 100 kpc). So would star
+  masses 0.13 dex higher, inside their ±0.2 dex systematic range.
+* Hot X-ray haloes are seen mainly around early types, so gas would lower the red lenses more than the
+  blue ones, which is the direction the samples need (red +0.078, blue +0.011).
+
+**Adopted: the round-12 law** (`regression/law_config.py`: `load_law()` now returns 'round12'; 'round11'
+keeps the previous constants). Two settings travel with the law: `alpha_per_Mpc`, which
+`common.apply_distances` writes into `collisions_v10.ALPHA` before any test runs (X-COP, KiDS, Mistele,
+the Bullet, the far collisions), and `sparc_distances = 'static'`. The strong lenses' stored static
+distances (at α0) are rescaled by α0/α and their star masses by (α0/α)² (`lenses_t35.patched_readers`).
+
+**The suite** (full tier, baseline saved from this run): **59 pass, 11 close, 7 fail** (step 2: 59, 10, 8).
+* No grade got worse. Improved: KiDS disks (fail → close, +0.077 → +0.066).
+* Better without a change of grade (14): SPARC's median residuals (0.030 → 0.027), KiDS all, blue,
+  bulges, GAMA and the Sérsic gap, SLACS (−0.032 → −0.028 dex), the Milky Way's vertical pull and mass
+  inside 200 kpc, Fornax, Abell 520 inside 710 kpc (4.92 → 5.27 × 10¹⁴ against 5.84 ± 0.64) and El Gordo
+  inside 500 kpc and 1 Mpc (19.8 → 21.4 × 10¹⁴ against 24.3 ± 12%).
+* Worse without a change of grade (7): six Milky Way numbers, because a is 4% lower (the Sun's speed
+  210.7 → 209.2 km/s; mass inside 50 kpc 3.63 → 3.56 × 10¹¹), and the KiDS colour gap (0.132 → 0.126
+  against 0.153).
+* The locked wide-binary forecast (round 10) at the new constants: γ = 1.032 at 7,000 AU and 1.076 at
+  20,000 AU, against the support windows 1.03–1.05 and 1.08–1.10 "within the analysis errors" and the
+  refutation limits 1.02 and 1.2. It stands as locked. Cassini's Q2: 4.4 × 10⁻²⁷ s⁻².
+* Other moves: the Bullet's smaller half 1.29 → 1.38 × 10¹⁴ (measured 2.47–2.85 in these distances;
+  still failing), MACS J0025's NW peak 72 → 79 kpc from its galaxies (pass), the collision stack's β
+  0.016 → 0.019.
+
+**Next for the level:** weigh the circumgalactic gas of KiDS-like galaxies from X-ray stacks (early types)
+and UV absorption (late types) and predict the level from it; check the gas's effect on SPARC's outermost
+points (an isothermal halo of M* inside 100 kpc puts 0.3 M* inside 30 kpc, a flatter β-model less).
+

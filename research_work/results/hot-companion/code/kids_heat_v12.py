@@ -31,8 +31,10 @@ def heat(u):
     return {s: LH.k_eff(HEAT, s, u) for s in PAIRS}
 
 
-def kids(consts, u, reach, f=None, k=None):
-    """Median log10(observed / predicted) per sample (reliable bins), and the early/late gaps."""
+def kids(consts, u, reach, f=None, k=None, gas_frac=0.0, r_acc_kpc=100.0):
+    """Median log10(observed / predicted) per sample (reliable bins), and the early/late gaps. gas_frac adds a
+    circumgalactic gas halo of gas_frac x the stars' mass, isothermal (enclosed mass rising as r) out to r_acc_kpc in
+    the paper's units, as Brouwer et al. 2021 model it (their nominal case: 1 x the stars within 100 kpc)."""
     tabs = KS.tables()
     k = heat(u) if k is None else k
     fg = 1.0 if f is None else f['stars'] / f['size'] ** 2
@@ -40,7 +42,9 @@ def kids(consts, u, reach, f=None, k=None):
     fm = 1.0 if f is None else f['stars']
     gb = tabs['all']['gbar'] * fg
     Mtyp = 10 ** 10.6 * fm
-    g = {s: LC.gconv_at(gb, Mtyp, 'ours', consts, k=k[s], reach=reach) for s in PAIRS}
+    racc = r_acc_kpc * (1.0 if f is None else f['size'])
+    gas = (lambda r: gas_frac * Mtyp * np.minimum(r, racc) / racc) if gas_frac else None
+    g = {s: LC.gconv_at(gb, Mtyp, 'ours', consts, k=k[s], reach=reach, gas=gas) for s in PAIRS}
     fr = tabs['red']['w'] / (tabs['red']['w'] + tabs['blue']['w'])
     mix = fr * g['red'] + (1 - fr) * g['blue']
     rel = tabs['all']['gbar'] >= 1e-13

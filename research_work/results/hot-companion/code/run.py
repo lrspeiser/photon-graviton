@@ -30,20 +30,24 @@ XR = np.array([0.1, 0.2, 0.35, 0.5, 0.7, 1.0])          # cluster radii in R500
 
 
 # ----------------------------------------------------------------------------- data
-def load_sparc():
+def load_sparc(alpha=None, h0_catalogue=73.0):
+    """The 149 SPARC galaxies. With alpha (per Mpc) the Hubble-flow galaxies (f_D = 1 in Lelli et al. 2016,
+    D = cz/H0 with H0 = 73) take the static law's distance D = ln(1 + z)/alpha instead, D x 73/(alpha c):
+    radii scale with D, the mass models' speeds with sqrt(D) (round 12). Other distances are kept."""
     splits = json.loads((ROOT / 'companion_wave_test/data/sparc_frozen.json').read_text())['split']
     cat = {}
     for line in (ROOT / 'temporal_candidate_audit/data/SPARC_Lelli2016c.mrt').read_text().splitlines():
         f = line.split()
         if len(f) == 19:
-            try: cat[f[0]] = dict(L=float(f[7]) * 1e9, MHI=float(f[13]) * 1e9, Rd=float(f[11]))
+            try: cat[f[0]] = dict(L=float(f[7]) * 1e9, MHI=float(f[13]) * 1e9, Rd=float(f[11]), f_D=int(f[4]))
             except ValueError: pass
     gals = []
     with zipfile.ZipFile(ROOT / 'temporal_candidate_audit/data/Rotmod_LTG.zip') as z:
         for split, names in splits.items():
             for n in names:
+                s = h0_catalogue / (alpha * 299792.458) if (alpha is not None and cat[n]['f_D'] == 1) else 1.0
                 a = np.atleast_2d(np.loadtxt(io.BytesIO(z.read(n + '_rotmod.dat')))); a = a[a[:, 0] > 0]
-                r, v, e, vg, vd, vb = a[:, 0], a[:, 1], a[:, 2], a[:, 3], a[:, 4], a[:, 5]
+                r, v, e, vg, vd, vb = a[:, 0] * s, a[:, 1], a[:, 2], a[:, 3] * np.sqrt(s), a[:, 4] * np.sqrt(s), a[:, 5] * np.sqrt(s)
                 vb2 = 0.7 * vb ** 2
                 gN = (vg * np.abs(vg) + 0.5 * vd ** 2 + vb2) / r
                 # bulge (the only hot component in disk galaxies): spherical mass profile
@@ -52,10 +56,10 @@ def load_sparc():
                 dmb = np.diff(np.r_[0., Mb])
                 sigb = 0.65 * np.sqrt(vb2.max()) if vb2.max() > 0 else 0.
                 ok = gN > 0
-                Msys = 0.5 * cat[n]['L'] + 1.33 * cat[n]['MHI']
+                Msys = (0.5 * cat[n]['L'] + 1.33 * cat[n]['MHI']) * s ** 2
                 gals.append(dict(name=n, split=split, r=r[ok], v=v[ok], err=e[ok], gN=gN[ok],
-                                 sfine=sfine, dmb=dmb, sigb=sigb, Msys=Msys, Rd=cat[n]['Rd'],
-                                 vb2=vb2[ok], vbar2=(vg * np.abs(vg) + 0.5 * vd ** 2 + vb2)[ok]))
+                                 sfine=sfine, dmb=dmb, sigb=sigb, Msys=Msys, Rd=cat[n]['Rd'] * s,
+                                 vb2=vb2[ok], vbar2=(vg * np.abs(vg) + 0.5 * vd ** 2 + vb2)[ok], f_D=cat[n]['f_D']))
     assert len(gals) == 149
     return gals
 

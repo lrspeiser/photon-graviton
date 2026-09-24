@@ -24,6 +24,7 @@ class Context:
         self.cache.mkdir(parents=True, exist_ok=True)
         self.verbose = verbose
         self.shared = {}
+        self.sparc_alpha = None          # per Mpc: SPARC's Hubble-flow galaxies in the static law (round 12)
         self.t0 = time.monotonic()
 
     def log(self, msg):
@@ -37,11 +38,21 @@ class Context:
 
     def sparc(self):
         import run as R
-        return self.get('sparc', R.load_sparc)
+        return self.get('sparc', lambda: R.load_sparc(self.sparc_alpha))
 
     def xcop(self):
         import run_v3 as R3
         return self.get('xcop', R3.prepare_clusters)
+
+
+def apply_distances(law, ctx):
+    """Set the law's distance scale for every conversion to the static law (collisions_v10.ALPHA, read by the
+    X-COP, KiDS, Bullet, far-collision and SLACS tests) and, when asked, put SPARC's Hubble-flow galaxies there."""
+    import collisions_v10 as C10
+    from law_config import ALPHA_ROUND10
+    C10.ALPHA = law.get('alpha_per_Mpc', ALPHA_ROUND10)
+    ctx.sparc_alpha = C10.ALPHA if law.get('sparc_distances', 'published') == 'static' else None
+    ctx.shared.pop('sparc', None)
 
 
 def refit_constants(law, ctx):

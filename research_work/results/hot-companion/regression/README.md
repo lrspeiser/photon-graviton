@@ -5,9 +5,10 @@ that any change to the law, its constants or the code can be checked against eve
 
 ```bash
 cd research_work/results/hot-companion/regression
-python run_suite.py                               # the adopted law (round 11), quick tier (about 1 minute)
+python run_suite.py                               # the adopted law (round 12), quick tier (about 1 minute)
 python run_suite.py --tier full                   # + the colliding clusters (about 20 minutes)
 python run_suite.py --law no_hold                 # a candidate law from candidates/
+python run_suite.py --law round11                 # round 11's constants and distance scale
 python run_suite.py --law round9                  # the same law with the round-3 constants (before round 11)
 python run_suite.py --law round3                  # the law before round 9 (released at once)
 python run_suite.py --only dwarfs,precision       # some groups only
@@ -19,22 +20,31 @@ The runner prints a scoreboard and writes `runs/<law>-<tier>/results.json` and `
 `baseline.json`, or crashed. Each run records the commit it came from, marked `+changes` when
 tracked files differ from it.
 
-**The baseline** (`baseline.json`) is the adopted law, round 11 constants, on the full tier: 90 checks,
-59 pass, 10 close, 8 fail and 13 tracked (round 12, step 2: the KiDS and Mistele lenses at their
-measured heat, and the Sérsic gap graded; results README §22.2). It changes only when a change is
-adopted or a test is added (RULES.md §12). Earlier baselines: round 9, 62 / 8 / 6; round 10 (the far
-collisions and SLACS in the static distances), 58 / 11 / 7; round 11, 57 / 9 / 10; round 12 step 1
-(MACS J0025 at the age its shock fronts give, 0.3 Gyr; §22.1), 58 / 9 / 9.
+**The baseline** (`baseline.json`) is the adopted law, round 12, on the full tier: 90 checks, 59 pass,
+11 close, 7 fail and 13 tracked (round 12, step 3: the distance law's scale fitted jointly, α x0.95,
+SPARC's Hubble-flow galaxies in the static law too, and the constants refitted there; results README
+§22.3). It changes only when a change is adopted or a test is added (RULES.md §12). Earlier baselines:
+round 9, 62 / 8 / 6; round 10 (the far collisions and SLACS in the static distances), 58 / 11 / 7;
+round 11, 57 / 9 / 10; round 12 step 1 (MACS J0025 at the age its shock fronts give, 0.3 Gyr; §22.1),
+58 / 9 / 9; step 2 (the KiDS and Mistele lenses at their measured heat, and the Sérsic gap graded;
+§22.2), 59 / 10 / 8.
+
+**The law's distances.** A law carries its distance scale (`alpha_per_Mpc`) and how SPARC is placed
+(`sparc_distances`); `common.apply_distances` sets both before the tests run, so a candidate can move the
+distance scale like any other constant (`run_suite.py --law round11` runs the previous scale).
 
 ## The law under test
 
 `law_config.py` turns a candidate file into one dictionary that every test reads. Nothing in the
-suite reads constants from anywhere else. The adopted law (round 11) is the round-3 law with
-gradual release over 30,000 AU (0.15 pc), adopted for Cassini in round 9, and its three constants
-refitted in round 11 in the project's own (static) distances with X-COP's stellar profiles
-deprojected: a = 6.547 × 10⁻¹¹ m/s², g_d = 2.107 × 10⁻¹⁰ m/s², u = 162.6 km/s
-(`run-xcop-static-v11`; results README §21.3). `--law round9` loads the round-3 constants
-(fitted in the release's ΛCDM units on projected stars). A candidate is a small JSON file in
+suite reads constants from anywhere else. The adopted law (round 12) is the round-3 law with
+gradual release over 30,000 AU (0.15 pc), adopted for Cassini in round 9, with every data set in the
+project's own (static) distances: the distance scale α = 2.3645 × 10⁻⁴ Mpc⁻¹ (x0.95 of rounds 10–11,
+fitted jointly to Pantheon+ supernovae and SPARC's Hubble-flow galaxies), SPARC's Hubble-flow galaxies
+placed there too, X-COP's stellar profiles deprojected, and the three constants refitted:
+a = 6.298 × 10⁻¹¹ m/s², g_d = 2.027 × 10⁻¹⁰ m/s², u = 169.4 km/s (`run-distance-scale-v12`; results
+README §22.3). `--law round11` loads round 11's (a = 6.547 × 10⁻¹¹, g_d = 2.107 × 10⁻¹⁰, u = 162.6 km/s,
+α x1, SPARC at its published distances); `--law round9` the round-3 constants (fitted in the release's
+ΛCDM units on projected stars). A candidate is a small JSON file in
 `candidates/`, a change to a base law:
 
 | Key | Meaning | Default |
@@ -43,7 +53,8 @@ deprojected: a = 6.547 × 10⁻¹¹ m/s², g_d = 2.107 × 10⁻¹⁰ m/s², u = 
 | `release_length_au` | the companion is released gradually over this length around each emitter, R(r) = 1 − e^(−r/L) | 30,000 AU (adopted in round 9; `round3` has 0, released at once) |
 | `external_hold` | how strongly a subsystem's companion follows an outside galaxy's pull (dwarfs, the Sun, wide binaries) | 1 (fully) |
 | `refit` | constants refitted on their home data after the change: `"a"` on the 149 SPARC galaxies (g_d held), `"u"` on the 12 X-COP clusters | none |
-| `a_SI`, `lam`, `u_kms`, `base` | explicit constants; `base` 'round3' (the round-3 constants, as the rounds 7–9 candidates use), 'round11' (the adopted ones) or another `results.json` | 'round3' |
+| `a_SI`, `lam`, `u_kms`, `base` | explicit constants; `base` 'round3' (the round-3 constants, as the rounds 7–9 candidates use), 'round11', 'round12' (the adopted ones) or another `results.json` | 'round3' |
+| `alpha_per_Mpc`, `sparc_distances` | the static distance law's scale, and 'published' or 'static' SPARC distances | the base's ('round12': 2.3645 × 10⁻⁴, 'static'; others 2.4890 × 10⁻⁴, 'published') |
 
 Candidates now in the folder:
 

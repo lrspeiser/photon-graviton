@@ -61,7 +61,9 @@ def slacs(law, ctx):
     LT.A, LT.LAM, LT.U = law['a_code'], law['lam'], law['u_kms']
     # the project's static distances and its stellar masses converted with them (round 10; rounds 3-9 graded
     # the flat-LCDM convention, whose gap was -0.017 +- 0.024 dex and whose stars needed 1.05-1.35 x Salpeter)
-    orig, reader = LT.patched_readers('project'); LT.M.J.read_json = reader
+    import collisions_v10 as C10
+    from law_config import ALPHA_ROUND10
+    orig, reader = LT.patched_readers('project', alpha_ratio=ALPHA_ROUND10 / C10.ALPHA); LT.M.J.read_json = reader
     try:
         lenses = [LT.M.make_lens(n) for n in LT.M.LENSES]
     finally:
