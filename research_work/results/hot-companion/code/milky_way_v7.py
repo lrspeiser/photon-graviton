@@ -259,7 +259,7 @@ def main():
         d = np.diff(np.concatenate([[0], Ms]))
         dm += d
         if k in ('bulge', 'halo'):
-            dmk += 3 * c.sigma ** 2 / consts['u_kms'] ** 2 * d
+            dmk += LAW.k_from_sig2(c.sigma ** 2, consts['u_kms']) * d
     (out / 'milky_way_v7.json').write_text(json.dumps(dict(
         experiment='The Milky Way under our law vs Gaia rotation curves, vertical pull, enclosed mass, escape speed (round 7)',
         constants=consts, R0_kpc=R0, reach_kpc=REACH, models={k: v for k, v in MOD.items()},

@@ -32,6 +32,7 @@ import numpy as np
 
 HERE = Path(__file__).resolve().parent; sys.path.insert(0, str(HERE))
 import mw_model as MW
+import law as L                                    # the heat weight (round 14: its exponent)
 
 G, K_SI = MW.G, MW.K_SI
 A0_SI = 1.2e-10
@@ -123,11 +124,11 @@ def main():
             res[law] = {}
             for ml in (1.0, 2.0, 3.0):
                 M = ml * d['L_V']
-                k_d = 3 * d['sigma_obs'] ** 2 / u ** 2
+                k_d = L.k_from_sig2(d['sigma_obs'] ** 2, u)
                 glob, inner, gbar_b, gi_b = sigma_los(M, b, env, law, consts, k_d)
                 res[law][f'ML{ml:g}'] = dict(sigma_global=glob, sigma_inside_rh=inner, pull_at_rh_SI=gbar_b, newton_pull_at_rh_SI=gi_b)
             # isolated (no Galaxy) for reference
-            glob_iso, _, _, _ = sigma_los(2.0 * d['L_V'], b, dict(gN=0.0, S=0.0), law, consts, 3 * d['sigma_obs'] ** 2 / u ** 2)
+            glob_iso, _, _, _ = sigma_los(2.0 * d['L_V'], b, dict(gN=0.0, S=0.0), law, consts, L.k_from_sig2(d['sigma_obs'] ** 2, u))
             res[law]['isolated_ML2'] = glob_iso
         rows.append(dict(name=d['name'], env_SI=dict(gN=env['gN'] * K_SI, S=env['S'] * K_SI), internal_gN_at_rh_SI=res['newton']['ML2']['newton_pull_at_rh_SI'],
                          observed=dict(sigma=d['sigma_obs'], err=d['sigma_err']), predictions=res, source=d.get('source', '')))
@@ -148,7 +149,7 @@ def main():
         for d in data['dwarfs']:
             env = galaxy_env(d['D_gc_kpc'], mw, consts)
             env = dict(gN=c * env['gN'], S=c * env['S'])
-            sig.append(sigma_los(2.0 * d['L_V'], d['r_h_pc'] / 1000.0, env, 'ours', consts, 3 * d['sigma_obs'] ** 2 / u ** 2)[0])
+            sig.append(sigma_los(2.0 * d['L_V'], d['r_h_pc'] / 1000.0, env, 'ours', consts, L.k_from_sig2(d['sigma_obs'] ** 2, u))[0])
         chi = float(sum(((s_ - d['sigma_obs']) / d['sigma_err']) ** 2 for s_, d in zip(sig, data['dwarfs'])))
         efe[str(c)] = dict(sigma=dict(zip([d['name'] for d in data['dwarfs']], sig)), chi2=chi,
                            mean_log_ratio=float(np.mean([np.log10(s_ / d['sigma_obs']) for s_, d in zip(sig, data['dwarfs'])])))

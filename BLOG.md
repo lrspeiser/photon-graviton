@@ -3,7 +3,7 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–22).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–23).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
@@ -149,6 +149,10 @@ colliding clusters, with no dark matter and no expanding universe.*
     slower than about a quarter of the re-timing speed; beyond that the test bodies lose step.
   * **The data on "doubling":** galaxy lensing pins how steeply the heat term must grow. Doubling the speed spread
     multiplies the extra pull by 1.8–2.0; the law has 2.0.
+* **Rev 23** works through rev 22's next steps one at a time, updating this page as each lands (§6.18).
+  * **A gentler heat term, tested on everything.** Growing as σ^1.75 instead of σ² erases galaxy lensing's 16%
+    excess, but makes the lensing of massive ellipticals worse: 60 pass, 10 close, 7 fail against 59, 11, 7. It
+    trades one tension for another, so the law keeps σ². Along the way we fixed a slip in the test suite's refit.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -226,7 +230,8 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 * **the Sun's orbital speed**, 8% slow. A more compact Milky Way disk is the lever to test;
 * **galaxy lensing in our own distances (§6.15–6.16):** the difference between ellipticals and
   spirals matches; all lenses together sit 16% above our law. Gas around them weighing as much as
-  their stars, the KiDS team's own middle estimate, would close it; that gas is to be weighed;
+  their stars, the KiDS team's own middle estimate, would close it; that gas is to be weighed. A gentler heat
+  term would also close it, at a cost to massive ellipticals (§6.18);
 * **Abell 1689**, the next cluster to model;
 * **the heat term's mechanism (§6.17):** one rule now gives the right pattern in a simulation, but only at slow
   speeds, and its physics is still to be derived;
@@ -2341,6 +2346,35 @@ just as well. That is worth a full regression-suite run.
 Scripts: `code/coherent_force_v13.py`, `code/joint_checks_v13.py`, `code/strength_offset_v13.py`,
 `code/heat_exponent_v13.py`.
 
+### 6.18 Round 14, step by step (rev 23)
+
+Rev 22 ended with a list of next steps (§9, item 9). This section adds each result as it lands.
+
+**Step 1: a gentler heat term, tested on everything.** Round 13 found that galaxy lensing allows the heat term to
+grow a little more gently with the stars' speed spread, as σ^1.75 instead of σ², and that the gentler version would
+erase the 16% by which all lenses sit above our law. We ran the whole regression suite that way.
+* To do it fairly, we first made the exponent a single switch: every place the code computes the heat weight now
+  goes through one function. With the switch at 2, the suite reproduces its saved results to the last digit.
+* We also found and fixed a slip in the suite. When asked to refit the companion's speed, it used an old version of
+  the cluster data (stars counted in projection, standard distances) and got 192 km/s instead of 169. Fixed, the
+  refit reproduces the adopted law exactly.
+
+The result, with the two constants refitted to the gentler term (the companion's speed becomes 132 km/s):
+
+| | now (σ²) | gentler (σ^1.75) |
+|---|---|---|
+| overall | 59 pass, 11 close, 7 fail | 60 pass, 10 close, 7 fail |
+| all lenses' common level (KiDS) | 16% above (close) | **3% (pass)** |
+| the red lenses, failing since rev 20 | 20% above (fail) | **4% (pass)** |
+| massive ellipticals: SLACS lensing against star speeds | −0.028 dex (pass) | −0.054 (close) |
+| ellipticals' lensing speeds (Mistele et al.) | 2.6 (close) | 5.2 (fail) |
+| bulge-dominated galaxies' rotation speeds | 29.4 km/s (pass) | 30.5 (close; MOND 30.35) |
+
+It trades one tension for another. The ordinary ellipticals in Brouwer et al.'s analysis of the KiDS survey want a
+little more heat; the massive ones (SLACS), and Mistele et al.'s analysis of the same survey, want a little less. We
+keep σ² for now. The switch is ready for when the two KiDS analyses are reconciled. Scripts:
+`regression/candidates/heat_p175.json`, `code/law.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -2875,10 +2909,13 @@ into our inputs.
     Suite: 59 pass, 11 close, 7 fail;
   * a working model of the companion: only a companion guided along gravity's field lines keeps every
     watt, travels as one stream and forms no whirlpools.
-* **Revision 22 (round 13, this page).** The pull and the scrambling in one experiment:
+* **Revision 22 (round 13).** The pull and the scrambling in one experiment:
   * with one fixed timing, heat weakens the pull, and the reason is exact;
   * emitters that feed quiet waves but absorb loud ones give the right pattern at slow speeds;
   * galaxy lensing pins the heat term's σ² (doubling σ gives 1.8–2.0 times the extra pull).
+* **Revision 23 (round 14, this page).** Rev 22's next steps, one at a time (§6.18):
+  * a gentler heat term (σ^1.75) on the full suite: it closes galaxy lensing's common level but costs the massive
+    ellipticals, so σ² stays.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
@@ -3023,4 +3060,5 @@ python run_suite.py --law no_hold          # a candidate change, scored against 
 python run_suite.py --law round11          # rev 20's constants and distance rate
 python run_suite.py --law round9           # revs 18-19's constants
 python run_suite.py --law round3           # the law before rev 18
+python run_suite.py --law heat_p175 --tier full   # rev 23: the heat weight as sigma^1.75, a and u refitted
 ```

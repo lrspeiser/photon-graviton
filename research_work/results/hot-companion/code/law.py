@@ -58,9 +58,26 @@ def scalar_sum(R, s, dm, k):
     return G * (shell_weights(R, s) @ (np.asarray(k) * np.asarray(dm))) / R ** 2
 
 
+HEAT_P = 2.0   # round 14: the heat weight's exponent, k = 3 (sigma / u)^p; the law has 2. Set by the regression
+               # suite from the law's 'heat_exponent' (regression/common.py) before any test runs.
+
+
 def heat_weight(sigma_kms, u_kms):
-    """k = 3 sigma^2 / u^2: random kinetic energy against the companion speed."""
-    return 3.0 * np.asarray(sigma_kms) ** 2 / u_kms ** 2
+    """k = 3 sigma^2 / u^2: random kinetic energy against the companion speed. With HEAT_P = p != 2,
+    k = 3 (sigma / u)^p (round 14)."""
+    if HEAT_P == 2.0:
+        return 3.0 * np.asarray(sigma_kms) ** 2 / u_kms ** 2
+    return 3.0 * (np.abs(np.asarray(sigma_kms)) / u_kms) ** HEAT_P
+
+
+def k_from_sig2(sig2, u_kms, pref=3.0):
+    """The heat weight from a mean-square speed: pref sig2 / u^2 (pref = 3 for a 1D dispersion sig2; 1 for a
+    3D mean square; 3 - 2 beta for an anisotropic radial one). With HEAT_P = p != 2, the same effective
+    1D dispersion sigma_eff^2 = pref sig2 / 3 enters as k = 3 (sigma_eff / u)^p (round 14). At p = 2 the
+    arithmetic is the scripts' own, so results are unchanged to the last digit."""
+    if HEAT_P == 2.0:
+        return pref * sig2 / u_kms ** 2
+    return 3.0 * (np.maximum(pref * np.asarray(sig2) / 3.0, 0.0) / u_kms ** 2) ** (HEAT_P / 2.0)
 
 
 def released(gN, a, lam):

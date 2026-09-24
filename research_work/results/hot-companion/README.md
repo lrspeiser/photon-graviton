@@ -3062,3 +3062,54 @@ it. Collisions keep it held.
   4. **The heat exponent p = 1.75 on the full suite** (§23.8): it removes KiDS's common level.
   5. Round 12's list (§22.5): the guided companion with moving sources, the lenses' gas, the distance law's shape,
      MACS J0025's star masses, the faint dwarfs, the Sun's speed, Abell 1689.
+
+## 24. Round 14, 24 September 2026: the next steps, one at a time
+
+The request: "proceed with the next steps, keep the blog and main current": round 13's list (§23.10). In the
+order done:
+1. the heat weight's exponent on the full suite (§24.1).
+
+### 24.1 The heat exponent on the full suite
+
+Round 13 (§23.8) found that the KiDS early/late gap allows k = 3(σ/u)^p with p = 1.75–2 and that p = 1.75 removes
+KiDS's common level with the clusters unchanged. Here the whole suite judges it.
+
+* **One switch.** Every heat weight in the code now goes through `law.heat_weight` (from σ) or `law.k_from_sig2`
+  (from a mean-square speed, with its prefactor: 3 for a 1D dispersion, 1 for a 3D mean square, 3 − 2β for an
+  anisotropic radial one), with the exponent in `law.HEAT_P`. Nine modules were rewired (`bullet_v3`, `bullet_v4`,
+  `bullet_main_v5`, `mw_model`, `milky_way_v7`, `mw_dwarfs_v7`, `kids_static_v11`, `lens_heat_sdss_v12`, `law`). At
+  p = 2 the arithmetic is each script's own: the quick tier reproduces the baseline to the last digit (54 same, 0
+  changed). For p ≠ 2 an effective 1D dispersion σ_eff² = (prefactor) σ²/3 enters as 3(σ_eff/u)^p; the lenses'
+  bulge and disk parts are weighted separately, as in §23.8. The law's `heat_exponent` sets it
+  (`regression/law_config.py`, `common.apply_distances`).
+* **A slip in the suite, fixed.** Its refit of u (`common.refit_constants`) used the round-3 X-COP sample
+  (projected stars, published distances) while the clusters test grades the static, deprojected one that the
+  adopted constants were fitted on. For the adopted law it returned u = 192 km/s instead of 169.4. Laws based on
+  round 11 or 12 now refit u on the graded sample; older candidates keep the old one, so they still reproduce.
+  The control (`heat_p2_refit`: the adopted law through the same refit) now returns a = 6.298 × 10⁻¹¹ m/s² and
+  u = 169.44 km/s and reproduces the baseline exactly (83 checks the same).
+* **The result** (full tier; `regression/runs/heat_p175-full/`):
+
+| law | a (m/s²) | u (km/s) | pass / close / fail |
+|---|---|---|---|
+| adopted (p = 2) | 6.298 × 10⁻¹¹ | 169.4 | 59 / 11 / 7 |
+| p = 1.75, a and u refitted | 6.181 × 10⁻¹¹ | 132.2 | **60 / 10 / 7** |
+
+| check | p = 2 | p = 1.75 |
+|---|---|---|
+| KiDS, all lenses: level (0 ± 0.025 dex) | 0.065 (close) | **0.012 (pass)** |
+| KiDS, red lenses | 0.078 (fail) | **0.018 (pass)** |
+| KiDS, disk-dominated lenses | 0.066 (close) | **0.038 (pass)** |
+| KiDS early/late gaps (0.153, 0.154) | 0.126, 0.155 | 0.149, 0.189 |
+| Mistele et al.: ellipticals' lensing speeds, 50–300 kpc (rms z) | 2.6 (close) | **5.2 (fail)** |
+| Mistele et al.: spirals | 2.9 (close) | 2.6 (close) |
+| SLACS: lensing minus kinematic star mass (0 ± 0.023 dex) | −0.028 (pass) | −0.054 (close) |
+| SPARC's 25 bulge-dominated galaxies (MOND 30.35 km/s) | 29.4 (pass) | 30.5 (close) |
+| X-COP rms | 0.2215 | 0.2213 |
+| Abell 520: P2 / P6 | pass / close | close / pass |
+
+* **Reading.** p = 1.75 trades one tension for another. Brouwer et al.'s KiDS relation wants a little more heat
+  at the red lenses' ≈ 140 km/s; Mistele et al.'s circular speeds from the same survey, and SLACS's massive
+  lenses (≈ 250 km/s), want a little less. Not adopted: the law keeps p = 2, and the exponent is now a switch for
+  when the two KiDS analyses are reconciled. Round 13's toy release grew as σ^1.7 at its onset (§23.7), so the
+  microscopic model does not choose between the two either.

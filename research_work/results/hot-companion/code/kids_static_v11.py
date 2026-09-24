@@ -25,6 +25,7 @@ sys.path.insert(0, str(HERE)); sys.path.insert(0, str(HERE.parent / 'regression'
 import lensing_census_v7 as LC                    # noqa: E402
 import collisions_v10 as C10                      # noqa: E402
 import common as C                                # noqa: E402
+import law as L                                   # noqa: E402  the heat weight (round 14: its exponent)
 
 WMAP9 = (70.0, 0.2793)
 
@@ -41,7 +42,7 @@ def kids(consts, u, reach, f=None):
     fg = 1.0 if f is None else f['stars'] / f['size'] ** 2
     fl = 1.0 if f is None else f['lens'] / f['size'] ** 2          # Sigma_crit ratio (a surface density)
     fm = 1.0 if f is None else f['stars']
-    kE = 3 * 160.0 ** 2 / u ** 2
+    kE = L.k_from_sig2(160.0 ** 2, u)
     gb = tabs['all']['gbar'] * fg
     Mtyp = 10 ** 10.6 * fm
     late = LC.gconv_at(gb, Mtyp, 'ours', consts, k=0.1, reach=reach)
@@ -69,7 +70,7 @@ def mistele(consts, u, reach, f=None):
     fl = 1.0 if f is None else f['lens'] / f['size'] ** 2        # Delta Sigma scales as Sigma_crit
     logMb = [10.10, 10.66, 10.96, 11.29]
     out = {}
-    for s, k in (('LTG', 0.1), ('ETG', 3 * 160 ** 2 / u ** 2)):
+    for s, k in (('LTG', 0.1), ('ETG', L.k_from_sig2(160 ** 2, u))):
         a = np.array(tab[s]); R = a[:, 0] * fs; m = (a[:, 0] >= 50) & (a[:, 0] <= 300)
         zs, ratios = [], []
         for i, lm in enumerate(logMb):

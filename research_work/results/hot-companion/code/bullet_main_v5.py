@@ -129,7 +129,7 @@ def own_sigma(gas_list, star_list, consts, beta=0.0, n=600, rmax=4000.0, iters=6
     W = L.shell_weights(r, r); rho_s = dms / (4 * np.pi * r ** 2 * dr)
     sig2 = jeans_aniso(r, dr, rho_s, gN + np.sqrt(a * gN), beta)
     for _ in range(iters):
-        S = G * (W @ ((3 - 2 * beta) * sig2 / u ** 2 * dms)) / r ** 2
+        S = G * (W @ (L.k_from_sig2(sig2, u, pref=3 - 2 * beta) * dms)) / r ** 2
         g = gN + np.exp(-gN / (lam * a)) * np.sqrt(a * (gN + S))
         new = jeans_aniso(r, dr, rho_s, g, beta)
         if np.max(np.abs(new - sig2) * dms) < 1e-8 * np.max(new * dms): sig2 = new; break

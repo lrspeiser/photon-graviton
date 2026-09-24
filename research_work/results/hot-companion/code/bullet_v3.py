@@ -28,6 +28,7 @@ from __future__ import annotations
 import argparse, json, time
 from pathlib import Path
 import numpy as np
+import law as Lw                                   # the heat weight (round 14: its exponent)
 from scipy.optimize import least_squares, minimize
 from scipy.integrate import quad
 from scipy.ndimage import gaussian_filter, maximum_filter
@@ -202,7 +203,7 @@ def own_sigma_profile(gas, stars, consts, extra_gas=None, n=500, iters=300):
         return np.where(rho_s > 1e-30, tail / np.maximum(rho_s, 1e-300), 0.0)
     sig2 = jeans(gN + np.sqrt(a * gN))
     for _ in range(iters):
-        k = 3 * sig2 / u ** 2
+        k = Lw.k_from_sig2(sig2, u)
         S = G * (W @ (k * dms)) / r ** 2
         g = gN + np.exp(-gN / (lam * a)) * np.sqrt(a * (gN + S))
         new = jeans(g)
@@ -223,10 +224,10 @@ def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360
     rho_b = rho_g + rho_sm + rho_ss
     def kfield(sig, cen):
         if np.isscalar(sig):
-            return 3 * sig ** 2 / u ** 2
+            return Lw.k_from_sig2(sig ** 2, u)
         rr, ss = sig                                     # a radial dispersion profile about cen
         r3 = np.sqrt((x[:, None, None] - cen[0]) ** 2 + (y[None, :, None] - cen[1]) ** 2 + z[None, None, :] ** 2)
-        return (3 * np.interp(r3, rr, ss) ** 2 / u ** 2).astype(np.float32)
+        return Lw.k_from_sig2(np.interp(r3, rr, ss) ** 2, u).astype(np.float32)
     k_main = kfield(sig_main, pos[comps['st_main']['centre']])
     k_sub = kfield(sig_sub, pos[comps['st_sub']['centre']])
     krho = (k_main * rho_sm + k_sub * rho_ss) if heat else np.zeros_like(rho_b)
@@ -236,10 +237,10 @@ def kappa_map(comps, pos, consts, sig_main, sig_sub, n=192, dx=15.0, centre=(360
         # rho_m rho_s V^2 / (rho_m + rho_s) to rho <|v - v_mean|^2>  (streaming along one axis)
         tot = rho_sm + rho_ss
         overlap = np.where(tot > 0, rho_sm * rho_ss / np.maximum(tot, 1e-30), 0.0).astype(np.float32)
-        krho = krho + (v_rel ** 2 / u ** 2) * overlap
+        krho = krho + Lw.k_from_sig2(v_rel ** 2, u, pref=1.0) * overlap
     if heat and gas_sigma is not None:             # round-1 rule: the gas is hot too
         rho_gm = build_density({k: v for k, v in comps.items() if k == 'gas_main'}, pos, x, y, z, 'gas')
-        krho = krho + (3 * gas_sigma[0] ** 2 / u ** 2) * rho_gm + (3 * gas_sigma[1] ** 2 / u ** 2) * (rho_g - rho_gm)
+        krho = krho + Lw.k_from_sig2(gas_sigma[0] ** 2, u) * rho_gm + Lw.k_from_sig2(gas_sigma[1] ** 2, u) * (rho_g - rho_gm)
     dV = dx ** 3
     # cell-averaged 1/r and 1/r^2 at the origin cell (cube of side dx)
     inv_r = Conv(n, dx, lambda r: 1.0 / r, cube_average(lambda r: 1 / r) / dx)

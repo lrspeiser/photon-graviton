@@ -49,8 +49,10 @@ def apply_distances(law, ctx):
     """Set the law's distance scale for every conversion to the static law (collisions_v10.ALPHA, read by the
     X-COP, KiDS, Bullet, far-collision and SLACS tests) and, when asked, put SPARC's Hubble-flow galaxies there."""
     import collisions_v10 as C10
+    import law as L
     from law_config import ALPHA_ROUND10
     C10.ALPHA = law.get('alpha_per_Mpc', ALPHA_ROUND10)
+    L.HEAT_P = float(law.get('heat_exponent', 2.0))          # round 14: the heat weight's exponent
     ctx.sparc_alpha = C10.ALPHA if law.get('sparc_distances', 'published') == 'static' else None
     ctx.shared.pop('sparc', None)
 
@@ -76,8 +78,16 @@ def refit_constants(law, ctx):
             a = 10 ** r.x; lam = gd / a
             log.append(dict(step='a on SPARC (g_d held)', a_SI=a * K_SI, lam=lam))
         if 'u' in want:
-            u = R3.fit_u3(ctx.xcop(), a, lam)
-            log.append(dict(step='u on X-COP', u_kms=u))
+            if law.get('base') in ('round11', 'round12'):
+                # round 14: laws calibrated since round 11 fit u on the sample the clusters test grades (stars
+                # deprojected, in the static distances; t_clusters.static_clusters), as their constants were fitted;
+                # older candidates keep the round-3 sample so that they reproduce the tests they were made for
+                import t_clusters as TC
+                u = R3.fit_u3(TC.static_clusters(ctx), a, lam)
+                log.append(dict(step='u on X-COP (static, deprojected)', u_kms=u))
+            else:
+                u = R3.fit_u3(ctx.xcop(), a, lam)
+                log.append(dict(step='u on X-COP', u_kms=u))
     out = with_constants(law, a_code=a, lam=lam, u_kms=u)
     out['refit_log'] = log
     return out

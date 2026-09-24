@@ -65,7 +65,13 @@ def binned(d):
 def k_eff(table, sample, u_kms, logM=None, lo=10.3, hi=10.9):
     """Mean heat weight of a sample: at one log M* (nearest bin), or averaged over bins in [lo, hi)."""
     rows = table['samples'][sample]
-    k = lambda r: 3 * (r['mean_f_sigma2'] + r['mean_1_minus_f'] * table['sigma_disk_kms'] ** 2) / u_kms ** 2
+    import law as L
+    def k(r):
+        if L.HEAT_P == 2.0:
+            return 3 * (r['mean_f_sigma2'] + r['mean_1_minus_f'] * table['sigma_disk_kms'] ** 2) / u_kms ** 2
+        # round 14, k = 3 (sigma / u)^p: bulge and disk weighted separately, the bulge at its f-weighted rms speed
+        f = max(1.0 - r['mean_1_minus_f'], 1e-9)
+        return f * L.heat_weight(np.sqrt(r['mean_f_sigma2'] / f), u_kms) + r['mean_1_minus_f'] * L.heat_weight(table['sigma_disk_kms'], u_kms)
     if logM is not None:
         r = min(rows, key=lambda r: abs(r['logM_lo'] + 0.05 - logM))
         return k(r)

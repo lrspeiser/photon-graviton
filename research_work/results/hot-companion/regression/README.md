@@ -52,7 +52,8 @@ README §22.3). `--law round11` loads round 11's (a = 6.547 × 10⁻¹¹, g_d = 
 | `gd_scale` | the release scale g_d multiplied by this | 1 |
 | `release_length_au` | the companion is released gradually over this length around each emitter, R(r) = 1 − e^(−r/L) | 30,000 AU (adopted in round 9; `round3` has 0, released at once) |
 | `external_hold` | how strongly a subsystem's companion follows an outside galaxy's pull (dwarfs, the Sun, wide binaries) | 1 (fully) |
-| `refit` | constants refitted on their home data after the change: `"a"` on the 149 SPARC galaxies (g_d held), `"u"` on the 12 X-COP clusters | none |
+| `heat_exponent` | the heat weight k = 3 (σ/u)^p (round 14). Every heat weight in the code goes through `law.heat_weight` / `law.k_from_sig2`, set from this key by `common.apply_distances`; at p = 2 the arithmetic is the scripts' own, so the suite reproduces its baseline to the last digit | 2 |
+| `refit` | constants refitted on their home data after the change: `"a"` on the 149 SPARC galaxies (g_d held), `"u"` on the 12 X-COP clusters (for bases 'round11' and 'round12', since round 14, the sample the clusters test grades: stars deprojected, static distances, as those constants were fitted; before, the round-3 sample, which gave u = 192 km/s for the adopted law instead of its 169.4) | none |
 | `a_SI`, `lam`, `u_kms`, `base` | explicit constants; `base` 'round3' (the round-3 constants, as the rounds 7–9 candidates use), 'round11', 'round12' (the adopted ones) or another `results.json` | 'round3' |
 | `alpha_per_Mpc`, `sparc_distances` | the static distance law's scale, and 'published' or 'static' SPARC distances | the base's ('round12': 2.3645 × 10⁻⁴, 'static'; others 2.4890 × 10⁻⁴, 'published') |
 
@@ -66,6 +67,8 @@ Candidates now in the folder:
 | `no_hold.json` | external hold 0, release over 200,000 AU (about 1 pc) | the dwarfs, once the release length protects the binaries (round 9) |
 | `gd_x1p25.json` | g_d × 1.25 | the smallest useful step toward the Sun's speed |
 | `combined.json` | all three, a and u refitted | together |
+| `heat_p175.json` | the heat weight k = 3 (σ/u)^1.75, a and u refitted (6.181 × 10⁻¹¹, 132.2 km/s) | the KiDS early/late gap allows p = 1.75–2 and p = 1.75 removes KiDS's level (round 13) |
+| `heat_p2_refit.json` | the adopted law through the same refit | the control: reproduces the baseline exactly |
 
 `gradual_release.json` (release over 30,000 AU) was adopted in round 9 and is now the default.
 
@@ -123,6 +126,18 @@ The Milky Way's Newtonian fields are cached in `cache/` (they do not depend on t
 Copy a file in `candidates/`, change the keys, and run
 `python run_suite.py --law <name> --tier full`. The scoreboard lists what the change fixes
 (improved), what it breaks (regressed), and what moved without changing status.
+
+## Round 14: the heat exponent (full tier, against the round-12 baseline)
+
+| Law | Constants | Pass / close / fail | What moves |
+|---|---|---|---|
+| round 12 (adopted) | a 6.298 × 10⁻¹¹, u 169.4 | 59 / 11 / 7 | |
+| `heat_p2_refit` (control) | the same, refitted: a 6.298 × 10⁻¹¹, u 169.44 | 59 / 11 / 7 | nothing: 83 checks the same |
+| `heat_p175` | a 6.181 × 10⁻¹¹, u 132.2 | **60 / 10 / 7** | better: KiDS all 0.065 → 0.012 dex (pass), red 0.078 → 0.018 (fail → pass), disks 0.066 → 0.038 (pass), Abell 520 P6 (pass); worse: Mistele's ellipticals rms z 2.6 → 5.2 (fail), SLACS light = matter −0.028 → −0.054 (close), SPARC bulges 29.4 → 30.5 km/s (close; MOND 30.35), Abell 520 P2 (close) |
+
+p = 1.75 trades the KiDS level for the lensing of massive ellipticals: Brouwer et al.'s KiDS relation wants a little
+more heat at the red lenses' 140 km/s, Mistele et al.'s circular speeds from the same survey, and SLACS, a little less.
+Not adopted; the law keeps p = 2 (results README §24.1).
 
 ## What the candidates do now (quick tier, against the round-9 baseline)
 

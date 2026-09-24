@@ -36,6 +36,8 @@ Keys of the law dictionary (code units: kpc, km/s, Msun; accelerations in (km/s)
     alpha_per_Mpc       the static distance law's scale, read by every conversion to the project's distances
                         (collisions_v10.ALPHA, set by common.apply_distances); 2.489e-4 before round 12
     sparc_distances     'published' (Lelli et al. 2016) or 'static' (the Hubble-flow galaxies at ln(1 + z)/alpha)
+    heat_exponent       candidate amendment (round 14): the heat weight k = 3 (sigma/u)^p; the law has p = 2. Set
+                        in code/law.py (HEAT_P) by common.apply_distances before any test or refit
 Candidate files (JSON) may set: name, description, base ('round3', 'round11', 'round12' or a path to a results.json
 with a 'constants' block), gd_scale, release_length_au, external_hold, refit (list: 'a' on SPARC with g_d
 held, 'u' on X-COP), and explicit overrides a_SI / lam / u_kms. Amendments a candidate does not set take
@@ -71,7 +73,8 @@ def base_constants(base='round3'):
 
 
 def make_law(a_code, lam, u_kms, name='custom', description='', release_length_au=0.0, external_hold=1.0,
-             gd_scale=1.0, refit=(), base='round3', alpha_per_Mpc=ALPHA_ROUND10, sparc_distances='published'):
+             gd_scale=1.0, refit=(), base='round3', alpha_per_Mpc=ALPHA_ROUND10, sparc_distances='published',
+             heat_exponent=2.0):
     """alpha_per_Mpc: the static distance law's scale, used by every conversion to the project's distances
     (collisions_v10.ALPHA). sparc_distances: 'published' (Lelli et al. 2016) or 'static' (the Hubble-flow
     galaxies at D = ln(1 + z)/alpha, round 12)."""
@@ -79,7 +82,8 @@ def make_law(a_code, lam, u_kms, name='custom', description='', release_length_a
                 a_code=float(a_code), a_SI=float(a_code * K_SI), lam=float(lam), g_d_SI=float(lam * a_code * K_SI),
                 u_kms=float(u_kms), reach_kpc=float(u_kms * KPC_PER_KMS_GYR * AGE_GYR),
                 release_length_au=float(release_length_au), external_hold=float(external_hold),
-                gd_scale=float(gd_scale), refit=list(refit), alpha_per_Mpc=float(alpha_per_Mpc), sparc_distances=sparc_distances)
+                gd_scale=float(gd_scale), refit=list(refit), alpha_per_Mpc=float(alpha_per_Mpc), sparc_distances=sparc_distances,
+                heat_exponent=float(heat_exponent))
 
 
 def load_law(spec=None):
@@ -120,7 +124,8 @@ def load_law(spec=None):
                     release_length_au=cfg.get('release_length_au', ADOPTED['release_length_au']), external_hold=cfg.get('external_hold', 1.0),
                     gd_scale=gs, refit=cfg.get('refit', []), base=cfg.get('base', 'round3'),
                     alpha_per_Mpc=cfg.get('alpha_per_Mpc', c.get('alpha_per_Mpc', ALPHA_ROUND10)),
-                    sparc_distances=cfg.get('sparc_distances', 'static' if cfg.get('base') == 'round12' else 'published'))
+                    sparc_distances=cfg.get('sparc_distances', 'static' if cfg.get('base') == 'round12' else 'published'),
+                    heat_exponent=cfg.get('heat_exponent', 2.0))
 
 
 def with_constants(law, a_code=None, lam=None, u_kms=None):
@@ -130,7 +135,8 @@ def with_constants(law, a_code=None, lam=None, u_kms=None):
     u = law['u_kms'] if u_kms is None else u_kms
     out = make_law(a, lm, u, name=law['name'], description=law['description'], release_length_au=law['release_length_au'],
                    external_hold=law['external_hold'], gd_scale=law['gd_scale'], refit=law['refit'], base=law['base'],
-                   alpha_per_Mpc=law.get('alpha_per_Mpc', ALPHA_ROUND10), sparc_distances=law.get('sparc_distances', 'published'))
+                   alpha_per_Mpc=law.get('alpha_per_Mpc', ALPHA_ROUND10), sparc_distances=law.get('sparc_distances', 'published'),
+                   heat_exponent=law.get('heat_exponent', 2.0))
     for k in ('refit_log',):
         if k in law: out[k] = law[k]
     return out
@@ -146,4 +152,5 @@ def describe(law):
     if law.get('alpha_per_Mpc', ALPHA_ROUND10) != ALPHA_ROUND10:
         parts.append(f"distance scale alpha x{law['alpha_per_Mpc'] / ALPHA_ROUND10:.4f} (H0-like {law['alpha_per_Mpc'] * 299792.458:.1f})")
     if law.get('sparc_distances', 'published') != 'published': parts.append(f"SPARC distances {law['sparc_distances']}")
+    if law.get('heat_exponent', 2.0) != 2.0: parts.append(f"heat weight k = 3 (sigma/u)^{law['heat_exponent']:g}")
     return '; '.join(parts)

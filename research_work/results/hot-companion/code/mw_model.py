@@ -19,6 +19,7 @@ Pieces (all established Newtonian machinery; the law enters only in `solve`):
 """
 from __future__ import annotations
 import numpy as np
+import law as L                                    # the heat weight (round 14: its exponent)
 from scipy.special import j0, j1, ellipk, ellipe, eval_legendre
 
 G = 4.30091727003628e-6                       # kpc (km/s)^2 / Msun
@@ -292,7 +293,7 @@ def heat_fields(comps, grid, u):
     for c in comps:
         if getattr(c, 'sigma', 0.0) > 0 and c.kind == 'stars' and not isinstance(c, Disk):
             M = c.m_profile(s)
-            dmk += 3 * c.sigma ** 2 / u ** 2 * np.diff(np.concatenate([[0.0], M]))
+            dmk += L.k_from_sig2(c.sigma ** 2, u) * np.diff(np.concatenate([[0.0], M]))
     if not dmk.any():
         return np.zeros(r.shape), np.zeros(r.shape), np.zeros(r.shape)
     # S = G sum k dm <1/d^2>_shell  (law.shell_weights logic, vectorised in chunks)

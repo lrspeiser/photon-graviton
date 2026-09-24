@@ -60,7 +60,7 @@ def own_sigma_multi(gas_list, star_list, consts, n=500, iters=400, rmax=3000.0):
         return np.where(rho_s > 1e-30, tail / np.maximum(rho_s, 1e-300), 0.0)
     sig2 = jeans(gN + np.sqrt(a * gN))
     for _ in range(iters):
-        S = G * (W @ (3 * sig2 / u ** 2 * dms)) / r ** 2
+        S = G * (W @ (L.k_from_sig2(sig2, u) * dms)) / r ** 2
         g = gN + np.exp(-gN / (lam * a)) * np.sqrt(a * (gN + S))
         new = jeans(g)
         if np.max(np.abs(new - sig2) * dms) < 1e-7 * np.max(new * dms): sig2 = new; break
@@ -114,7 +114,7 @@ def kappa_map_v4(current, ghost_gas, ghost_stars, pos, consts, n=192, dx=15.0, c
         r3 = np.sqrt((x[:, None, None] - cx) ** 2 + (y[None, :, None] - cy) ** 2 + z[None, None, :] ** 2)
         rho_ghost_st += rho_c
         if heat:
-            krho += (3 * np.interp(r3, prof[0], prof[1]) ** 2 / u ** 2).astype(np.float32) * rho_c
+            krho += L.k_from_sig2(np.interp(r3, prof[0], prof[1]) ** 2, u).astype(np.float32) * rho_c
         del r3, rho_c
     inv_r = B.Conv(n, dx, lambda r: 1.0 / r, B.cube_average(lambda r: 1 / r) / dx)
     gN = -np.array(np.gradient(-G * inv_r(rho_now * dV), dx))
