@@ -4,66 +4,45 @@ microlensing."""
 from __future__ import annotations
 import numpy as np
 import common as C
-from checks import make, z_check, at_most, rms_z
+from checks import make, z_check, at_most, rms_z, _grade
 
 GROUP = 'lensing'
 KIDS_ERR = 0.025        # dex; a median offset within 0.05 passes (stellar-mass systematics are ~0.1 dex)
 
 
 def kids(law, ctx):
-    import lensing_census_v7 as LC
-    u, reach = law['u_kms'], law['reach_kpc']
-    kE = lambda s: 3 * s ** 2 / u ** 2
-    tabs = dict(all=LC.load('Fig-4-5-C1_RAR-KiDS-isolated_Nobins.txt'), blue=LC.load('Fig-8_RAR-KiDS-isolated_Colorbin_1.txt'),
-                red=LC.load('Fig-8_RAR-KiDS-isolated_Colorbin_2.txt'), disc=LC.load('Fig-8_RAR-KiDS-isolated_Sersicbin_1.txt'),
-                bulge=LC.load('Fig-8_RAR-KiDS-isolated_Sersicbin_2.txt'), gama=LC.load('Fig-4-C1_RAR-GAMA-isolated_Nobins.txt'))
-    gb = tabs['all']['gbar']; Mtyp = 10 ** 10.6
-    late = LC.gconv_at(gb, Mtyp, 'ours', law, k=0.1, reach=reach)
-    early = LC.gconv_at(gb, Mtyp, 'ours', law, k=kE(160), reach=reach)
-    fr = tabs['red']['w'] / (tabs['red']['w'] + tabs['blue']['w'])
-    mix = fr * early + (1 - fr) * late
-    rel = gb >= 1e-13
+    """KiDS-1000 lensing RAR of isolated lenses, converted to the static distance law at the lenses' mean
+    redshift (z = 0.25; sources at an effective 0.75): g_bar x stars/size^2, g_obs x Sigma_crit ratio
+    (code/kids_static_v11.py). Round 10 and earlier graded the paper's flat-LCDM units."""
+    import kids_static_v11 as KS
+    import collisions_v10 as C10
+    f = C10.factors(0.25, 0.75, KS.WMAP9)
+    k = KS.kids(dict(a_SI=law['a_SI'], g_d_SI=law['g_d_SI']), law['u_kms'], law['reach_kpc'], f)
     out = []
-    for s, pred, what in (('all', mix, 'all isolated lenses (mixture)'), ('blue', late, 'blue lenses (spirals, k = 0.1)'),
-                          ('red', early, 'red lenses (ellipticals, stars at 160 km/s)'), ('disc', late, 'Sersic n < 2 (disks)'),
-                          ('bulge', early, 'Sersic n > 2 (bulges)'), ('gama', mix, 'GAMA spectroscopic lenses')):
-        c = LC.compare(tabs[s], pred, rel)
-        out.append(make(f'lensing.kids_{s}', GROUP, f'KiDS lensing pull, {what}: median log10(observed/predicted)', c['median_offset_dex'],
-                        crit=z_check(c['median_offset_dex'], 0.0, KIDS_ERR), unit='dex', target='0 +- 0.025 dex (7 reliable bins)',
-                        detail=dict(chi2_with_0p1dex=c['chi2_with_0p1dex'], n=c['n']), refs='Brouwer et al. 2021, A&A 650, A113'))
-    gap_obs = float(np.median(np.log10(tabs['red']['gobs'][rel] / tabs['blue']['gobs'][rel])))
-    gap = float(np.median(np.log10(early[rel] / late[rel])))
-    out.append(make('lensing.kids_gap', GROUP, 'KiDS: ellipticals lens more than spirals of the same visible mass (gap)', gap,
-                    crit=z_check(gap, gap_obs, 0.04), unit='dex', target=f'{gap_obs:.3f} +- 0.04 dex (same bins)'))
+    for s, what in (('all', 'all isolated lenses (mixture)'), ('blue', 'blue lenses (spirals, k = 0.1)'),
+                    ('red', 'red lenses (ellipticals, stars at 160 km/s)'), ('disc', 'Sersic n < 2 (disks)'),
+                    ('bulge', 'Sersic n > 2 (bulges)'), ('gama', 'GAMA spectroscopic lenses')):
+        out.append(make(f'lensing.kids_{s}', GROUP, f'KiDS lensing pull, {what}: median log10(observed/predicted), static distances', k[s],
+                        crit=z_check(k[s], 0.0, KIDS_ERR), unit='dex', target='0 +- 0.025 dex (7 reliable bins)',
+                        refs='Brouwer et al. 2021, A&A 650, A113; converted with code/kids_static_v11.py'))
+    out.append(make('lensing.kids_gap', GROUP, 'KiDS: ellipticals lens more than spirals of the same visible mass (gap)', k['gap_model'],
+                    crit=z_check(k['gap_model'], k['gap_observed'], 0.04), unit='dex', target=f"{k['gap_observed']:.3f} +- 0.04 dex (same bins)"))
     return out
 
 
 def mistele(law):
-    import lensing_census_v7 as LC
-    u, reach = law['u_kms'], law['reach_kpc']
-    rows = [l for l in (C.RESULTS / 'data/mistele2024/table1_mrt.txt').read_text().splitlines()
-            if l[:3] in ('All', 'LTG', 'ETG') and not l.startswith('All (')]
-    tab = {}
-    for l in rows:
-        f = [l[i:i + 6] for i in range(33, 117, 7)]
-        tab.setdefault(l[:24].strip(), []).append([float(l[25:32])] + [float(x) if x.strip() else np.nan for x in f])
-    logMb = [10.10, 10.66, 10.96, 11.29]
+    """Lensing circular speeds 50-300 kpc (Mistele et al. 2024; KiDS-1000 lenses), converted to the static
+    distance law as for KiDS: radii x size, v_c x sqrt(lens/size), stellar masses x stars."""
+    import kids_static_v11 as KS
+    import collisions_v10 as C10
+    f = C10.factors(0.25, 0.75, KS.WMAP9)
+    m = KS.mistele(dict(a_SI=law['a_SI'], g_d_SI=law['g_d_SI']), law['u_kms'], law['reach_kpc'], f)
     out = []
-    for s, k, what in (('LTG', 0.1, 'spirals'), ('ETG', 3 * 160 ** 2 / u ** 2, 'ellipticals')):
-        a = np.array(tab[s]); R = a[:, 0]; m = (R >= 50) & (R <= 300)
-        obs, err, pred = [], [], []
-        for i, lm in enumerate(logMb):
-            vc, es = a[:, 1 + 3 * i], a[:, 2 + 3 * i]
-            ok = m & np.isfinite(vc)
-            if ok.sum() < 2: continue
-            w = 1 / es[ok] ** 2
-            obs.append(float(np.sum(vc[ok] * w) / w.sum())); err.append(float(1 / np.sqrt(w.sum())))
-            r = np.linspace(50, 300, 50)
-            pred.append(float(np.mean(np.sqrt(LC.pull_profile(r, 10 ** lm, 'ours', law, k=k, reach=reach) / C.K_SI * r))))
-        out.append(make(f'lensing.mistele_{s.lower()}', GROUP, f'lensing circular speeds 50-300 kpc, {what} ({len(obs)} mass bins): rms z',
-                        None, crit=rms_z(pred, obs, err), target='Mistele et al. 2024 (ApJL 969, L3), Table 1',
-                        detail=dict(observed=obs, error=err, predicted=pred)))
-        out[-1].value = out[-1].score
+    for s, what in (('LTG', 'spirals'), ('ETG', 'ellipticals')):
+        v = m[s]['rms_z']
+        out.append(make(f'lensing.mistele_{s.lower()}', GROUP, f'lensing circular speeds 50-300 kpc, {what}: rms z (static distances)',
+                        v, crit=_grade(v), target='Mistele et al. 2024 (ApJL 969, L3), Table 1',
+                        detail=dict(observed_over_predicted=m[s]['observed_over_predicted'])))
     return out
 
 

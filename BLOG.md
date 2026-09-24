@@ -3,7 +3,7 @@
 *Hot-companion gravity: one law for rotating galaxies, bending light, galaxy clusters and
 colliding clusters, with no dark matter and no expanding universe.*
 
-**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–19).**
+**Rewritten from scratch on 23 September 2026 (rev 12); updated that day and the next (revs 13–20).**
 * Rev 13 added the companion's memory (§3.10).
 * **Rev 14** adds §4, the law piece by piece: where each part may come from, and why it works
   so widely. It also brings the Bullet Cluster's galaxy speeds and strong-lensing masses into
@@ -84,9 +84,33 @@ colliding clusters, with no dark matter and no expanding universe.*
     same light now means 20–29% less star mass, and five far-cluster grades slip: the suite reads
     58 pass, 11 close, 7 fail. Stars 1.4 times heavier would restore them all, and more (63 pass).
     Stars older than the Big Bang's timeline allows would weigh about that much, so that is the
-    next thing to compute.
+    next thing to compute. *(Rev 20: neither is needed; see below.)*
   * **A first locked forecast (§6.7).** Our prediction for wide binary stars was recorded in the
     repository before Gaia's next data release.
+* **Rev 20** takes rev 19's three next steps.
+  * **Why orderly matter adds up like Newton (§4.15).** If the companion loses no energy on its
+    way out, has no whirlpools, and matter feels it as one stream, its flow must follow Newton's
+    field lines exactly. That is the rule our law has used since round 3, now derived instead of
+    picked by testing. The alternative would carry more energy out of a galaxy than the galaxy puts
+    in. The galaxies and clusters demand the rule to within a few percent.
+  * **A mistake in our inputs, found and fixed (§6.15).** The 12 clusters that set the companion's
+    speed list their stars inside a circle on the sky, which includes stars in front and behind.
+    We had used those as the stars inside a sphere, so we had 1.3 to 2 times too many. Corrected,
+    and with these clusters also put into our own distances, the companion's speed is **163 km/s,
+    not 197**, and the clusters fit slightly better. Rev 20 adopts the refitted constants.
+  * **Everything in our own distances (§6.15).** The Bullet Cluster, galaxy lensing and the
+    calibrating clusters now use the project's distance law, as the far clusters have since rev 19.
+    With the companion's speed measured the same way, the far clusters come back: El Gordo's lensing
+    agrees with its published stars, and rev 19's "1.4 times the stars" is no longer needed. Rev
+    19's idea that the far clusters' stars are older than the Big Bang allows is withdrawn: the
+    observations show they are younger.
+  * **Two sharper tests (§6.15).** In our own distances, lensing around spiral galaxies is about 20%
+    stronger than our law predicts. That depends on one constant of our distance law, the rate at
+    which light loses energy, and a 13% lower rate would fit. So galaxy lensing now measures our
+    distance law. Ellipticals' extra lensing over spirals comes out 0.23 dex against 0.15 measured,
+    which depends on the companion's speed. In MACS J0025 the north-western lensing peak slides onto
+    the gas unless the collision is younger than about 350 million years.
+  * The regression suite: 57 pass, 9 close, 10 fail (rev 19: 58, 11, 7).
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -112,7 +136,7 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 1. **Every piece of ordinary matter feeds a faint, streaming companion to its gravity.**
 2. **Orderly matter feeds it in step.** Contributions from opposite sides cancel, just as
    Newton's pulls do. Far from a galaxy, what survives falls off slowly enough to keep the
-   outer stars orbiting fast.
+   outer stars orbiting fast. *Rev 20: this now follows from energy conservation (§4.15).*
 3. **Matter whose parts move randomly and freely, like stars in elliptical galaxies or
    galaxies in clusters, feeds it out of step.** Nothing cancels, so it pulls much harder.
    That is why clusters need so much extra pull.
@@ -121,7 +145,7 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 4. **Gas does not count as "hot" in this sense.** Its particles collide so often that the
    companion sees them as sitting still. That is why, in a collision, the extra pull stays
    with the galaxies and leaves the gas behind.
-5. **Strong gravity holds the companion back, and breaking free takes about 700 years of
+5. **Strong gravity holds the companion back, and breaking free takes about 900 years of
    travel,** so the Solar System feels nothing.
 6. **The companion is slow, and it keeps moving the way its source moved.** After two clusters
    collide, each is still wrapped in the companion it had before, travelling on with its
@@ -138,16 +162,16 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 | Bullet Cluster: main half's lensing mass, galaxy speeds and star count | **agree** | no | yes (fitted) |
 | Bullet Cluster: smaller half's lensing mass | about half of what is measured (open) | no | yes (fitted) |
 | 72 colliding clusters: lensing stays with the galaxies | **yes** | no | yes |
-| MACS J0025.4−1222: lensing masses, peaks on the galaxies, galaxy speeds | **lensing and peaks agree**; speeds 2.2 error bars low in our own distances, agree with 1.4× the stars (§6.14) | no | yes (fitted) |
-| Abell 520's "dark core" (lensing without galaxies) | **2.99 × 10¹³ suns from gas and heat; measured 3.13–3.69** (our distances) | no | not expected |
-| El Gordo: lensing mass and galaxy speeds | **agree if its stars are 1.6–2× the colour-based estimate**; 14–25% low with it (our distances, §6.14) | no | yes (fitted) |
-| Ellipticals bend light 0.17–0.27 dex more than spirals | **0.17–0.27** | no difference | yes, with tuned haloes |
+| MACS J0025.4−1222: lensing masses, peaks on the galaxies, galaxy speeds | **lensing agrees; SE peak on its galaxies**; the NW peak slides onto the gas unless the collision is under 0.35 billion years old; speeds 2.9 error bars low (§6.15) | no | yes (fitted) |
+| Abell 520's "dark core" (lensing without galaxies) | **3.5 × 10¹³ suns from gas and heat; measured 3.13–3.69** (our distances) | no | not expected |
+| El Gordo: lensing mass and galaxy speeds | **lensing agrees with its published stars** (our distances, §6.15); NW galaxy speeds 22% low | no | yes (fitted) |
+| Ellipticals bend light more than spirals (0.15 ± 0.04 dex, median over bins) | **yes**: 0.18 in the standard distances, 0.23 in ours (§6.15) | no difference | yes, with tuned haloes |
 | Solar System | **no extra pull** | small extra pull | no extra pull |
-| Wide binary stars (data disputed) | **9% extra pull at 20,000 AU, 4% at 7,000 AU** (§6.7) | 43% | none |
+| Wide binary stars (data disputed) | **8% extra pull at 20,000 AU, 3.5% at 7,000 AU** (§6.7) | 43% | none |
 | Milky Way rotation 15–27 kpc (4 Gaia studies) | **within 1–6%** | within 3% | 6–11% too fast |
 | Milky Way rotation at the Sun (229–234 km/s) | 211 km/s, 8% slow | 223 | 234 |
 | Milky Way mass inside 100 and 200 kpc | **agrees** | 40% high at 200 kpc | agrees |
-| Galaxy lensing (KiDS): spirals and ellipticals | **agrees with both** | too high for spirals, too low for ellipticals | yes, with tuned haloes |
+| Galaxy lensing (KiDS): spirals and ellipticals | **agrees with both** in the standard distances; in ours ellipticals agree and spirals lens 20% more than predicted, which our distance law's scale decides (§6.15) | too high for spirals, too low for ellipticals | yes, with tuned haloes |
 | Ten small galaxies around the Milky Way | 4 agree, 6 too slow; 6 agree without the Milky Way's hold (reason still sought, §6.13) | the same 4 | fitted one by one |
 | Cassini: the Galaxy's field inside the Solar System | **passes** since rev 18 (§6.10) | about 10× too big | passes |
 | Adjustable numbers | **4 in total**: 3 fitted to galaxies and clusters, 1 release length set by Cassini | 1 | 2 per galaxy or cluster (~320) |
@@ -159,15 +183,16 @@ gas outweighs the galaxies ten to fifty times. The usual answer is invisible "da
 * **the Bullet Cluster's smaller half.** Its lensing mass is twice what our law gives it. The
   leading candidate is heat its galaxies picked up while crossing the main cluster;
 * **the Sun's orbital speed**, 8% slow. A more compact Milky Way disk is the lever to test;
-* **the far clusters' star masses (§6.14):** in our law they set both lensing and galaxy speeds.
-  In our own distances MACS J0025, Abell 520 and El Gordo need about 1.4 times their published
-  star masses (El Gordo 1.6–2 times). Stars older than the Big Bang's timeline allows would weigh
-  that much;
+* **galaxy lensing in our own distances (§6.15):** around spirals it is 20% stronger than our law
+  predicts, and ellipticals' extra lensing is 0.23 dex against 0.15. The first measures our
+  distance law's scale (13% lower would fit); the second the companion's speed;
+* **MACS J0025's north-western lensing peak**, which sits on the gas unless the collision is under
+  about 350 million years old;
 * **Abell 1689**, the next cluster to model;
 * a full relativistic version of the law.
 
-Settled along the way: the main Bullet cluster's galaxy speeds (§6.3, rev 14–15) and Cassini's
-test (§6.10, rev 18).
+Settled along the way: the main Bullet cluster's galaxy speeds (§6.3, rev 14–15), Cassini's
+test (§6.10, rev 18), and the far clusters' star masses (§6.15, rev 20).
 
 ---
 
@@ -243,7 +268,8 @@ and holds exactly; our script checks it to 2 parts in 10¹⁵. Opposite contribu
 just as Newton's pulls do.
 
 *Rev 19 tested this against the alternatives: if orderly matter's opposing flows did not cancel,
-the inner parts of galaxies would spin much too fast (§4.14).*
+the inner parts of galaxies would spin much too fast (§4.14). Rev 20 derives it from energy
+conservation (§4.15).*
 
 ### 3.3 The companion pulls with its strength
 
@@ -263,9 +289,9 @@ gives the observed rule **v⁴ = G M a**, which links a galaxy's mass to its rot
 (rev 19).*
 
 The constant a is not a new constant of nature here. It is twice the power per kilogram
-divided by the companion's speed. With the fitted values, ℓ = 6.5 × 10⁻⁶ watts per
-kilogram. Over 13 billion years, the age of the oldest stars, that is three thousandths of one
-percent of a kilogram's rest energy.
+divided by the companion's speed. With the fitted values, ℓ = 5.3 × 10⁻⁶ watts per
+kilogram. Over 13 billion years, the age of the oldest stars, that is two and a half thousandths
+of one percent of a kilogram's rest energy.
 
 ### 3.4 Strong gravity holds the companion back
 
@@ -277,13 +303,13 @@ be held back, "attached", where ordinary gravity is strong, and released where i
 released fraction = exp( −|g_N| / g_d )
 ```
 
-Here g_d = 2.26 × 10⁻¹⁰ m/s², measured on the galaxies. At every planet the released
+Here g_d = 2.11 × 10⁻¹⁰ m/s², measured on the galaxies. At every planet the released
 fraction is zero to the precision of a computer. The same factor also improves the galaxy
 fits.
 
 **Breaking free takes time (rev 18).** The companion is not released the instant it leaves the
 strong-pull zone. It has to travel about 0.15 parsec, 30,000 times the Earth–Sun distance or
-about 700 years at its speed, to break free:
+about 900 years at its speed, to break free:
 
 ```
 released share builds up as  1 − exp( −distance from its source / L ),   L = 0.15 pc
@@ -382,10 +408,13 @@ we use for its structure, not its physics (§11).
 
 | Constant | Value | Measured on |
 |---|---|---|
-| a | 6.56 × 10⁻¹¹ m/s² | 149 galaxies |
-| g_d (release level) | 2.26 × 10⁻¹⁰ m/s² | 149 galaxies |
-| u (companion speed) | 197 km/s | 12 clusters |
+| a | 6.55 × 10⁻¹¹ m/s² | 149 galaxies |
+| g_d (release level) | 2.11 × 10⁻¹⁰ m/s² | 149 galaxies |
+| u (companion speed) | 163 km/s | 12 clusters |
 | L (release length, rev 18) | 0.15 pc (at least) | Cassini, in the Solar System |
+
+*Rev 20: measured in the project's own distances, with the clusters' stars correctly counted
+(§6.15). Revs 12–19 used 6.56 × 10⁻¹¹, 2.26 × 10⁻¹⁰ and 197 km/s.*
 
 **For round, settled objects the law is simply**
 
@@ -421,8 +450,8 @@ balance.
 
 Two things follow from what we already have. Nothing new is added.
 
-**It is slow.** It streams at u = 197 km/s, measured on clusters. At that speed it takes about
-500 million years to travel 100 kpc. So most of the companion around a galaxy or a cluster
+**It is slow.** It streams at u = 163 km/s, measured on clusters. At that speed it takes about
+600 million years to travel 100 kpc. So most of the companion around a galaxy or a cluster
 today was given off hundreds of millions of years ago.
 
 **It keeps moving the way its source moved,** like a ball thrown from a moving train keeps
@@ -448,9 +477,9 @@ the release factor use the matter where it is now.
 **An earlier version of this idea failed, and now it doesn't.** In round 2 the companion
 streamed at 874 km/s. The stopped gas rebuilt its companion within about 300 million years,
 and the lensing drifted back to the gas, which 72 observed collisions rule out. Round 3's refit,
-with the stars carrying the heat, lowered u to 197 km/s for a separate reason. The fresh
-companion around stopped gas now grows 4.4 times more slowly, and it never catches up with gas
-separating from its galaxies at 1,000 km/s or more.
+with the stars carrying the heat, lowered u to 197 km/s for a separate reason (163 since rev
+20). The fresh companion around stopped gas now grows 5.4 times more slowly, and it never catches
+up with gas separating from its galaxies at 1,000 km/s or more.
 
 ## 4. The law, piece by piece: what each part is, where it may come from, and why it keeps working
 
@@ -491,11 +520,12 @@ release factor, and in the direction.
   fixes its rotation speed. Dark matter has to be tuned galaxy by galaxy to reproduce that
   tightness. Here it is automatic, because both pulls come from the same matter.
 
-### 4.2 ℓ: every kilogram feeds the companion, 6.5 × 10⁻⁶ watts per kilogram
+### 4.2 ℓ: every kilogram feeds the companion, 5.3 × 10⁻⁶ watts per kilogram
 
 **What it is.** A steady power fed by each kilogram of matter into the companion. It is tiny.
-Over 13 billion years, the age of the oldest stars, it adds up to three thousandths of one
-percent of a kilogram's rest energy. For the Sun it is 1.3 × 10²⁵ watts, 3.4% of the Sun's light.
+Over 13 billion years, the age of the oldest stars, it adds up to two and a half thousandths of
+one percent of a kilogram's rest energy. For the Sun it is 1.1 × 10²⁵ watts, 2.8% of the Sun's
+light.
 
 **Where it may come from.** This is the project's founding intuition: energy converts into
 gravity. Our working guess is that matter continuously sheds a sliver of its energy into a
@@ -504,8 +534,8 @@ gravitational companion, the way a warm object radiates.
 There is a numerical clue. The project's redshift work (no expansion) has light losing energy
 at a steady rate, c·α ≈ 70–75 km/s per megaparsec. Multiplied by the speed of light, that rate
 is an acceleration, c·α ≈ 7 × 10⁻¹⁰ m/s². Our two acceleration constants sit close to it:
-* a ≈ c·α / 10;
-* g_d ≈ c·α / 3.
+* a ≈ c·α / 11;
+* g_d ≈ c·α / 3.4.
 
 If light and matter both exchange energy with the same background, these numbers would be
 linked. A similar near-match has long been noticed for MOND's constant, so this could be a
@@ -513,11 +543,11 @@ coincidence. If it is not, it is the strongest hint of where the feed comes from
 
 **What it explains.** It sets the strength of everything the companion does, through a = 2ℓ/u.
 
-**How to test it.** The Sun's extra mass loss is predicted at 2.3 × 10⁻¹⁵ of its mass per year,
+**How to test it.** The Sun's extra mass loss is predicted at 1.9 × 10⁻¹⁵ of its mass per year,
 below what planetary tracking can see today. A theory that links ℓ to the redshift rate would
-turn "a ≈ c·α / 10" into an exact prediction.
+turn "a ≈ c·α / 11" into an exact prediction.
 
-### 4.3 u: the companion's speed, 197 km/s
+### 4.3 u: the companion's speed, 163 km/s
 
 **What it is.** How fast the companion streams away from the matter that fed it, measured
 relative to that matter.
@@ -530,8 +560,8 @@ and they are a separate thing.
 
 Two clues, which may be coincidences:
 * **u is the rotation speed of a big galaxy.** Our law gives a flat rotation speed of exactly u to
-  a galaxy of 1.7 × 10¹¹ suns (from v⁴ = G a M), which is a Milky-Way-sized galaxy.
-* **u²/a ≈ 19 kpc**, the size of a large galaxy's disk.
+  a galaxy of 8 × 10¹⁰ suns (from v⁴ = G a M), a little more than the Milky Way's visible mass.
+* **u²/a ≈ 13 kpc**, the size of a large galaxy's disk.
 
 Both hint that galaxies may be sized by the companion.
 
@@ -540,19 +570,19 @@ the dividing line between cold and hot:
 
 | System | Random speed of its stars or galaxies, σ | Heat weight k |
 |---|---:|---:|
-| Disk of a spiral galaxy | 10–30 km/s | 0.008–0.07 |
-| Elliptical galaxy | 150–250 km/s | 1.7–4.8 |
-| Galaxies in a cluster | 500–1,200 km/s | 19–110 |
+| Disk of a spiral galaxy | 10–30 km/s | 0.01–0.10 |
+| Elliptical galaxy | 150–250 km/s | 2.6–7.1 |
+| Galaxies in a cluster | 500–1,200 km/s | 28–160 |
 
 So with a single number:
 * disks come out cold, and follow the MOND-like cold limit;
 * ellipticals come out warm, and bend light more than spirals;
 * clusters come out hot, and get the large boosts they need.
 
-u also sets the companion's memory after a collision: 500 million years per 100 kpc (§3.10).
+u also sets the companion's memory after a collision: 600 million years per 100 kpc (§3.10).
 
 **How to test it.**
-* In a collision, lensing returns around stopped gas only as a sphere growing about 200 kpc per
+* In a collision, lensing returns around stopped gas only as a sphere growing about 170 kpc per
   billion years.
 * The Bullet subcluster's galaxies should move at the speeds they had before the collision.
 
@@ -582,7 +612,7 @@ reused.
 * **The rule v⁴ = G M a.** It links a galaxy's visible mass to its rotation speed with a power of
   exactly 4, as observed across galaxies.
 * **Where the flat part starts.** The companion equals Newton's pull where g_N ≈ a,
-  6.6 × 10⁻¹¹ m/s², in the outskirts of galaxies.
+  6.5 × 10⁻¹¹ m/s², in the outskirts of galaxies.
 
 **How to test it.** The power of exactly 4 in v⁴ ∝ M, and the same switch-over pull a in every
 galaxy.
@@ -590,13 +620,13 @@ galaxy.
 ### 4.5 The release factor exp(−|g_N|/g_d): held back where gravity is strong
 
 **What it is.** The share of the companion that is free to pull. It is almost zero where
-ordinary gravity is strong and almost one where it is weak. The level is g_d = 2.26 × 10⁻¹⁰ m/s².
+ordinary gravity is strong and almost one where it is weak. The level is g_d = 2.11 × 10⁻¹⁰ m/s².
 
 **Where it may come from.** Two guesses.
 1. **Escape over a barrier, like evaporation.** Suppose the companion must climb a fixed height ℓ_d
    against the local pull to break free of its source, and its energies are spread like those of
    a warm gas, about u²/2 per kilogram on average. The share with enough energy to climb is
-   exp(−2 g ℓ_d / u²). That is exactly our form, with g_d = u²/2ℓ_d, so ℓ_d ≈ 2.8 kpc. The same
+   exp(−2 g ℓ_d / u²). That is exactly our form, with g_d = u²/2ℓ_d, so ℓ_d ≈ 2.0 kpc. The same
    maths describes molecules evaporating from a liquid and stars leaking out of a star cluster.
 2. **Screening.** In a plasma, electric charges are hidden beyond a short distance, and the
    hiding follows an exponential. Exponential cut-offs are the signature of screening.
@@ -607,28 +637,29 @@ rule (§4.7).
 
 **The release takes time (rev 18).** Any escape takes time: molecules leave a liquid at a rate,
 not all at once. So the released share builds up as the companion travels away from its source,
-as 1 − e^(−r/L), and L = 0.15 pc is about 700 years of travel.
+as 1 − e^(−r/L), and L = 0.15 pc is about 900 years of travel.
 * **What it explains:** Cassini's measurement of the Galaxy's field inside the Solar System
   (§6.10).
 * **What it costs:** one more number, bounded rather than fitted. It must be at least 0.15 pc for
   Cassini, and at most about 10 pc so that the smallest dwarf galaxies are untouched.
 * **How to test it:**
-  * wide binary stars: 4% more pull than Newton at 7,000 AU and 9% at 20,000 AU at the minimum
+  * wide binary stars: 3.5% more pull than Newton at 7,000 AU and 8% at 20,000 AU at the minimum
     length, less for a longer one;
   * a longer length would also let the dwarf galaxies' fix through (§6.13).
 
 **What it explains.**
-* **The Solar System is silent.** At the Earth, g_N is 26 million times g_d, so the released
-  share is e^(−26,000,000): zero.
+* **The Solar System is silent.** At the Earth, g_N is 28 million times g_d, so the released
+  share is e^(−28,000,000): zero.
 * **Galaxy centres behave like Newton.** Where g_N ≈ 10⁻⁹ m/s², only about 1% is released.
 * **The smooth bend of rotation curves** between the Newtonian centre and the flat outskirts. The
   galaxy fits improved when this factor was added.
-* **Clusters are mostly released**: 64–96% for g_N between 10⁻¹⁰ and 10⁻¹¹ m/s².
+* **Clusters are mostly released**: 62–95% for g_N between 10⁻¹⁰ and 10⁻¹¹ m/s².
 
 **How to test it.**
 * **Wide binary stars near the Sun.** They sit in the Galaxy's pull, where our law has only about
   half of the companion released. It predicted 19% more pull than Newton beyond about 7,000 AU,
-  against MOND's 43%. With the release length (rev 18) it is 9% at 20,000 AU (§6.7).
+  against MOND's 43%. With the release length (rev 18) it is 9% at 20,000 AU, 8% with rev 20's
+  constants (§6.7).
 * **Compact galaxies.** If ℓ_d is the companion's wavelength, stars on orbits smaller than a few
   kiloparsecs should partly lose their heat.
 
@@ -665,7 +696,7 @@ matter's pull.
 * **Cluster masses:** a 25% typical miss, against MOND's factor of 2.9.
 * **Ellipticals bend light 0.17–0.27 dex more than spirals** with the same stars.
 * **Galaxies with big, hot bulges.**
-* **Why MOND works for disk galaxies (k ≈ 0) and fails for clusters (k ≈ 20–100).**
+* **Why MOND works for disk galaxies (k ≈ 0) and fails for clusters (k ≈ 30–160).**
 
 **How to test it.**
 * At equal visible mass, systems whose stars move randomly pull harder than those whose stars
@@ -770,7 +801,7 @@ how fast the galaxy moves through space (§3.10). Think of a ball thrown from a 
 * **Settled systems:** no change at all.
 
 **How to test it.**
-* Lensing around stopped gas comes back at about 200 kpc per billion years.
+* Lensing around stopped gas comes back at about 170 kpc per billion years.
 * Older collisions show extra lensing around the smaller clump.
 
 ### 4.12 Why so few pieces cover so much
@@ -813,15 +844,16 @@ fitted to galaxies and clusters, and the release length from the Solar System.
 
 These are hypotheses, recorded because they point to what a microscopic theory must produce.
 
-1. **a ≈ c·α/10 and g_d ≈ c·α/3,** where c·α is the redshift rate of light turned into an
-   acceleration (§4.2). If the companion and the redshift share a cause, the ratios 10, 3 and
-   λ = g_d/a = 3.45 are numbers that theory must derive.
-2. **u⁴ = G a × (1.7 × 10¹¹ suns).** The companion's speed is the rotation speed of a
-   Milky-Way-sized galaxy.
-3. **u²/(2g_d) ≈ 2.8 kpc,** a detachment length, if the release factor is an escape over a
+1. **a ≈ c·α/11 and g_d ≈ c·α/3.4,** where c·α is the redshift rate of light turned into an
+   acceleration (§4.2). If the companion and the redshift share a cause, the ratios 11, 3.4 and
+   λ = g_d/a = 3.22 are numbers that theory must derive. (Galaxy lensing now also measures α,
+   §6.15.)
+2. **u⁴ = G a × (8 × 10¹⁰ suns).** The companion's speed is the rotation speed of a galaxy a
+   little heavier than the Milky Way's visible matter.
+3. **u²/(2g_d) ≈ 2.0 kpc,** a detachment length, if the release factor is an escape over a
    barrier (§4.5).
-4. **The Sun's companion carries 3.4% as much power as its light.**
-5. **Breaking free takes about 700 years (0.15 pc at u).** If the release is an escape, this is
+4. **The Sun's companion carries 2.8% as much power as its light.**
+5. **Breaking free takes about 900 years (0.15 pc at u).** If the release is an escape, this is
    the escape time, and theory must give it along with ℓ_d.
 
 What would pin these down:
@@ -898,6 +930,8 @@ readjusted:
 | 3. **Our law** | **15.9 km/s** | **25%** | 211 km/s at the Sun, 185 at 30 kpc |
 
 MOND scores 16.1 km/s on the same galaxies. The Milky Way numbers are quick local estimates.
+*(Rev 19's numbers, with the constants and conventions of the time; rev 20's rerun in its own
+conventions gives the same verdicts, §4.15.)*
 
 * **The galaxies rule out rule 2.** Inside a disk, a star's neighbours pull from all sides. Their
   plain total is typically four times the net pull. If that total counted, the inner parts of
@@ -931,12 +965,62 @@ on its own (§9.1, proposal 7) therefore tests something new.
 Scripts: `code/first_principles_v10.py` (the pull), `code/combination_rules_v10.py` (the three
 rules).
 
+### 4.15 Why orderly matter adds up like Newton: energy bookkeeping (rev 20)
+
+§4.14 found, by testing, that orderly matter's companion must add up the way Newton's pulls do.
+Rev 20 shows why, from energy conservation.
+
+**The argument, in four steps.**
+1. **No energy is lost on the way.** In a steady state, every watt that matter feeds into the
+   companion flows outward. Through any closed surface, the power flowing out equals the power fed
+   in by the matter inside.
+2. **Matter feels the full pull only from one stream.** §4.14 showed that the pull is full only
+   where the companion passes as a single stream whose crests sweep by at the full rate. The
+   stream's energy is then its energy flow divided by its speed, and the pull goes as the square
+   root of that flow.
+3. **No whirlpools.** Suppose the flow also has no swirl.
+4. **Then there is exactly one possible flow.** A swirl-free flow fixed by where its sources are is
+   Newton's field-line pattern, Gauss's geometry. So the stream's strength follows Newton's pull,
+   and the extra pull goes as the square root of Newton's pull. That is the rule the law has used
+   since round 3, which §4.14 had only picked out by testing.
+
+**The alternative breaks energy conservation.** §4.14's rule 2, "everything merges into one stream
+and nothing cancels", would carry more power out of a region than the matter inside it puts in:
+
+| Where | power carried out ÷ power fed in |
+|---|---|
+| inside a uniform ball, at a quarter / half / all / twice its radius | 11.8 / 5.5 / 1.5 / 1.06 |
+| the Milky Way model, spheres of 4 / 8.2 / 12 / 20 / 30 kpc | 1.70 / 1.36 / 1.22 / 1.11 / 1.06 |
+
+So it fails twice: on the galaxies (§4.14), and on energy conservation. Waves that pass through
+each other (rule 1) do conserve energy, but they weaken the pull. Our law's rule is the only one
+that is both lossless and undiluted.
+
+**How tightly the data demand it.** We built one formula with three dials that contains all the
+rules, and turned each dial with the constants refitted at every setting (400 random resamplings
+of the galaxies and clusters for the spread):
+
+| Dial | What it controls | 149 galaxies (typical miss) | 12 clusters (typical miss, rms) | Verdict |
+|---|---|---|---|---|
+| w, from 0 to 1 | how completely orderly flows cancel | 18.9 → **15.9** km/s | 0.212 → 0.221 | the galaxies demand full cancellation (at 95% the miss is already 16.1) |
+| γ, from 0 to 1 | how much the pull is diluted | **15.9** → 27.2 km/s | **0.221** → 0.505 | both demand no dilution (γ ≤ 0.1) |
+| h, from 0 to 1 | whether heat adds as plain totals | no change | 0.288 → **0.221** | the clusters demand plain totals, in every resampling |
+
+The clusters lean very slightly to less cancellation (0.212 against 0.221), but only by shrinking
+the constant a 7.5-fold and slowing the companion to 60 km/s. The galaxies rule that out.
+
+**What is still assumed.** The "no whirlpools" condition. A companion that scatters off itself,
+the way heat spreads by diffusion, would settle into such a flow on its own. Building that as a
+working model of waves is the next step (§9, item 9).
+
+Script: `code/companion_flow_v11.py`.
+
 ## 5. MOND, as the cold limit of our law, not an input
 
 Switch off the heat (S = 0), as for a cold disk galaxy, and the law becomes
 
 ```
-g = g_N · ν(g_N/a),   ν(y) = 1 + e^(−y/λ) / √y,   λ = g_d/a = 3.45
+g = g_N · ν(g_N/a),   ν(y) = 1 + e^(−y/λ) / √y,   λ = g_d/a = 3.22
 ```
 
 That is a MOND-type formula. **But it came out of the companion mechanism; it was not put
@@ -945,7 +1029,7 @@ in:**
 | MOND's ingredient | In MOND | Here |
 |---|---|---|
 | Its constant a₀ | a new constant of nature | 2 × power per kilogram ÷ companion speed |
-| The switch between Newton and the deep regime | chosen by hand | set by the release factor. Not identical to any published choice; the nearest (McGaugh, Lelli & Schombert's exponential) is 0.030 dex (7%) away |
+| The switch between Newton and the deep regime | chosen by hand | set by the release factor. Not identical to any published choice; the nearest (McGaugh, Lelli & Schombert's exponential) is 0.028 dex (7%) away |
 | Why galaxies obey it | assumed | disks are cold |
 | Why clusters don't | needs extra matter | cluster galaxies are hot |
 | Why collisions don't | needs extra matter | galaxies carry the heat, gas doesn't |
@@ -963,7 +1047,7 @@ training, validation and test sets.
 
 | | All | Training | Validation | Test | Adjustable numbers |
 |---|---:|---:|---:|---:|---|
-| **Ours** | **15.85** | 15.95 | **19.21** | **12.40** | 3 in total |
+| **Ours** | **15.94** | 16.11 | **19.11** | **12.46** | 3 in total |
 | MOND | 16.13 | 15.85 | 19.80 | 13.52 | 1 |
 | Newton, visible matter only | 45.58 | 45.94 | 48.64 | 41.68 | 0 |
 | Dark-matter halo fitted to each galaxy | 7.52 | | | | 298 |
@@ -971,11 +1055,13 @@ training, validation and test sets.
 * Ours beats MOND overall and on the held-back galaxies; MOND is slightly better on the
   training set.
 * **Galaxies with big bulges** were the risk. Their bulges are hot, and the new heat rule
-  makes hot stars count much more. Those 25 galaxies came out better: 29.2 km/s against
+  makes hot stars count much more. Those 25 galaxies came out better: 29.7 km/s against
   MOND's 30.4.
 * Dark matter fits more tightly because it has a hundred times more adjustable numbers.
 
-Script: `code/run_v3.py`.
+*Rev 20's constants; revs 12–19 gave 15.85, 15.95, 19.21 and 12.40 (and 29.2 for the bulges).*
+
+Script: `code/run_v3.py`; the regression suite for rev 20's numbers.
 
 ### 6.2 Galaxy clusters: 12 clusters with measured gas, temperatures and stars
 
@@ -984,9 +1070,9 @@ core to the edge.
 
 | | Typical miss | Adjustable numbers |
 |---|---:|---|
-| **Ours** | **25%** (rms 0.227 in ln M) | same 3 constants |
-| Ours, clusters held out of the fit (924 splits) | 28% (0.244) | |
-| Ours, stars' speeds computed by our law from visible matter alone | 39% (0.329) | |
+| **Ours** | **25%** (rms 0.221 in ln M) | same 3 constants |
+| Ours, clusters held out of the fit (924 splits) | 27% (0.236) | |
+| Ours, stars' speeds computed by our law from visible matter alone (rev 12) | 39% (0.329) | |
 | MOND | ×2.9 (1.062) | 1 |
 | MOND with its constant refitted on clusters | ×1.4 (0.338); needs a constant 9.7× its galaxy value | 1 |
 | Newton | ×9.1 (2.211) | 0 |
@@ -997,16 +1083,21 @@ the most extra pull:
 
 | Radius (fraction of the cluster's size, R500) | 0.02 | 0.05 | 0.1 | 1 |
 |---|---:|---:|---:|---:|
-| Mass in stars ÷ mass in gas | 2 to 11 | about 1 | 0.3 to 0.5 | 0.02 to 0.07 |
+| Mass in stars ÷ mass in gas | 1.4 to 7.5 | 0.35 to 1.25 | 0.16 to 0.33 | 0.03 to 0.06 |
 
 Their random speeds, roughly 300 to 1,200 km/s, make each kilogram count dozens of times
 over.
 
-The companion speed comes out at u = 197 km/s. Across the 924 ways of splitting the clusters
-in half, it stays between 178 and 218 km/s in 90% of them.
+The companion speed comes out at u = 163 km/s. Across the 924 ways of splitting the clusters
+in half, it stays between 148 and 178 km/s in 90% of them.
+
+*Rev 20: the table uses the stars correctly counted inside spheres, and the clusters in our own
+distances (§6.15). Revs 12–19 used the release's star masses inside circles on the sky, which made
+the stars 1.3–2 times too heavy, and found u = 197 km/s (178–218) and a typical miss of 0.227
+(held out 0.244). The MOND and dark-matter rows are rev 12's.*
 
 Script: `code/run_v3.py`, with stellar mass profiles from the X-COP release (Ghizzardi et al.
-2021).
+2021); rev 20: `code/xcop_static_v11.py`.
 
 ### 6.3 Colliding clusters
 
@@ -1044,6 +1135,9 @@ Script: `code/run_v3.py`, with stellar mass profiles from the X-COP release (Ghi
   at 1.5 Mpc and had half the stars typical of cluster outskirts. The 7 X-COP clusters with
   measured star profiles have stars at 3.5–7.3% of the gas mass at their edge. Rev 14 lets the
   galaxies continue and adds the outer stars that the measured galaxy speed requires.
+* *Rev 20: the Bullet is now computed in our own distances with the adopted constants (§6.15).
+  The pattern and the main half's mass hold; the smaller half is still about half its measured
+  mass. The tables below are the record of revs 12–15.*
 
 **Where the lensing sits.** This is the pattern test.
 
@@ -1153,8 +1247,9 @@ lensing sits within 5.8 ± 8.2 kpc of the galaxies; as a fraction of the way to 
   and mass ratios, plus a reference with the gas left on its galaxies.
 * **Moving the gas 40–300 kpc away moved the lensing by −2 to +10 kpc (median 3 kpc).** As a
   fraction of the way to the gas, that is 0.03 (from −0.01 to 0.12). We agree within 1σ.
-* The fresh companion around the gas grows at 197 km/s, so it never catches up with gas
-  moving away at about 1,000 km/s. That is exactly where round 2's version failed.
+* The fresh companion around the gas grows at the companion's speed (163 km/s since rev 20;
+  the stack gives β = 0.016 with it), so it never catches up with gas moving away at about
+  1,000 km/s. That is exactly where round 2's version failed.
 
 Scripts: `code/bullet_main_v5.py` (rev 14), `code/bullet_v4.py`, `code/collisions_v4.py`,
 `code/bullet_speeds_v4.py`, `code/stream_tidal_v4.py` (rev 13), `code/bullet_v3.py`,
@@ -1177,7 +1272,8 @@ Script: `code/kids_v3.py`.
 
 **Six strong lenses (SLACS).** Each lens has a measured ring size and measured star speeds.
 With standard distances and published star masses:
-* **The stars need to be 1.05–1.35 times heavier than the "Salpeter" standard assumption.**
+* **The stars need to be 1.05–1.35 times heavier than the "Salpeter" standard assumption**
+  (1.37–1.85 times in our own distances with rev 20's constants, §6.15).
   Spectra of giant ellipticals already suggest star populations this heavy. Measuring these
   six lenses' star populations directly is the clean test.
 * The mass needed to bend the light and the mass needed to move the stars agree to
@@ -1189,13 +1285,13 @@ Script: `code/lenses_t35.py --constants ../run-v3/results.json`.
 
 * **Planets.** At every planet, the release factor switches the extra pull off entirely.
 * **The Sun.** Its interior is colliding plasma, so it has no heat term. It feeds the
-  companion at ℓ = 6.5 × 10⁻⁶ W/kg: 1.3 × 10²⁵ W, or 3.4% of its light. That means an
-  extra mass loss of 2.3 × 10⁻¹⁵ of its mass per year, below what planetary tracking can see.
+  companion at ℓ = 5.3 × 10⁻⁶ W/kg: 1.1 × 10²⁵ W, or 2.8% of its light. That means an
+  extra mass loss of 1.9 × 10⁻¹⁵ of its mass per year, below what planetary tracking can see.
 
 ### 6.6 The formula check
 
 * **Not MOND.** For the same Newtonian pull, random speeds of 0–1,000 km/s change the
-  prediction by a factor of 8.6 (0.93 dex). Across the 3,150 galaxy measurements, 0.022 dex
+  prediction by a factor of 10 (1.02 dex). Across the 3,150 galaxy measurements, 0.029 dex
   of the prediction depends on more than the local Newtonian pull.
 * **Not Newton.** The boost varies from object to object.
 * **Not dark matter.** Nothing invisible is added, and no number is set per object.
@@ -1252,6 +1348,10 @@ committed to the repository with a fingerprint of its numbers
 
 The two differ most beyond 20,000 AU, so the data will separate them.
 
+**Rev 20: the adopted constants move the prediction slightly, inside the locked window.** With
+u = 163 km/s the pull is 1.035 × Newton's at 7,000 AU and 1.083 at 20,000 AU. The locked forecast
+counts 1.03–1.05 and 1.08–1.10 as support, so the test stands as locked.
+
 Script: `code/wide_binaries_v6.py`.
 
 ### 6.8 The Milky Way, measured star by star
@@ -1284,16 +1384,17 @@ disks, plus the thin halo of old stars) and ran our law on it with nothing adjus
 | Measurement | Measured | Our law | MOND | Dark-matter model |
 |---|---|---|---|---|
 | Rotation at 20 kpc | 200–207 km/s | **198** | 206 | 223 |
-| Rotation at 25–27 kpc | 173–201 km/s | **190–192** | 201–202 | 220–221 |
+| Rotation at 25–27 kpc | 173–201 km/s | **191–193** | 201–202 | 220–221 |
 | Rotation at the Sun | 229–234 km/s | 211 | 223 | 234 |
-| Pull above the disk (as a surface density) | 68 ± 4 and 74 ± 6 M☉/pc² | **74** (with the matter counted near the Sun) | 84 | 74 |
-| Mass inside 100 kpc | 6.1–7.3 × 10¹¹ suns | **6.6** | 8.0 | 8.5 |
-| Mass inside 200 kpc | 11.0 +2.7/−2.2 × 10¹¹ | **12.5** | 15.6 | 12.8 |
+| Pull above the disk (as a surface density) | 68 ± 4 and 74 ± 6 M☉/pc² | **73** (with the matter counted near the Sun) | 84 | 74 |
+| Mass inside 100 kpc | 6.1–7.3 × 10¹¹ suns | **6.7** | 8.0 | 8.5 |
+| Mass inside 200 kpc | 11.0 +2.7/−2.2 × 10¹¹ | **12.7** | 15.6 | 12.8 |
 | Mass inside 20 kpc | 1.9–2.1 × 10¹¹ | 1.7 | 1.8 | 2.2 |
-| Escape speed at the Sun | 445–580 km/s (seven studies) | **507–522** | 546–564 | 560–570 |
+| Escape speed at the Sun | 445–580 km/s (seven studies) | **509–525** | 546–564 | 560–570 |
 | Share of the inner pull from stars | 0.88 ± 0.07 | 0.97–0.99 | 0.91–0.93 | 0.88 (built in) |
 
 The dark-matter model here is McMillan's (2017), which was fitted before the newest Gaia data.
+Our column uses rev 20's constants; the Milky Way is nearby, so they change it by at most 1%.
 
 **What it means.**
 * **Far out, our law runs right along the Gaia measurements**, including the gentle decline the
@@ -1374,7 +1475,10 @@ solver is `code/mw_model.py`.
 | Spirals (blue) | **−0.005 dex** | −0.07 dex |
 | Ellipticals (red) | **+0.02 dex** | +0.11 dex |
 
-*Median of log(measured ÷ predicted) where the isolation is reliable; zero is a perfect match.*
+*Median of log(measured ÷ predicted) where the isolation is reliable; zero is a perfect match.
+These use the paper's standard distances. In our own distances (rev 20, §6.15) they read +0.06,
++0.08 and +0.04: spirals then lens 20% more than our law predicts, by an amount our distance law's
+scale decides.*
 
 * **Our law matches both spirals and ellipticals.** MOND's single curve is too high for spirals
   and too low for ellipticals.
@@ -1382,7 +1486,7 @@ solver is `code/mw_model.py`.
     It doesn't: spirals sit exactly where the cold law puts them.
 * **Flat lensing speeds to about a million light years.** Mistele et al. (2024) find the circular
   speeds from lensing stay flat to about 1 Mpc. So do ours.
-  * **A prediction:** our law's stay flat to the companion's reach, 2.0–2.6 Mpc, and then fall.
+  * **A prediction:** our law's stay flat to the companion's reach, 1.7–2.2 Mpc, and then fall.
   * For ellipticals our speeds match theirs (184 / 221 / 270 against 197 ± 12 / 211 ± 8 /
     266 ± 5 km/s).
   * For the lightest spirals we are 20–30% lower than their numbers, but not lower than
@@ -1400,7 +1504,7 @@ Script: `code/lensing_census_v7.py`.
   precession, 1.10 ± 0.19 (GRAVITY 2020). Our law gives exactly Einstein's value: the pull there
   is 30 million to 8 billion times g_d.
 * **Binary pulsars.** Einstein's orbital decay, exactly. Our one new effect, the companion's
-  tiny mass loss, is 0.4% (Hulse–Taylor) and 1.6% (Double Pulsar) of the measurement error.
+  tiny mass loss, is 0.3% (Hulse–Taylor) and 1.3% (Double Pulsar) of the measurement error.
 * **Cassini's test of the Galaxy's field inside the Solar System: failed by the law as it stood;
   passed since rev 18.**
   * **What it is.** In laws like ours and MOND, the Galaxy's pull slightly reshapes the Sun's own
@@ -1413,13 +1517,14 @@ Script: `code/lensing_census_v7.py`.
     big. MOND gives the same.
   * **What had to change: the release takes time.** The companion leaving the Sun breaks free
     gradually as it travels. The released share builds up as 1 − e^(−distance/L) with
-    L = 0.15 parsec, 30,000 times the Earth–Sun distance, about 700 years at 197 km/s.
-    * **Q2 drops to 4.6 × 10⁻²⁷**, inside Cassini's measurement.
+    L = 0.15 parsec, 30,000 times the Earth–Sun distance, about 900 years at 163 km/s.
+    * **Q2 drops to 4.6 × 10⁻²⁷** (4.5 with rev 20's constants), inside Cassini's measurement.
     * Every galaxy, dwarf and cluster is thousands of times larger than that, so none of them
       changes. The full regression suite confirms it: Cassini moves from fail to pass, none of
       the other 75 graded checks changes its grade, and the only other number that moves is the
       wide-binary prediction (§6.12).
-    * Wide binaries get 4% more pull at 7,000 AU and 9% at 20,000 AU, instead of 19% (§6.7).
+    * Wide binaries get 4% more pull at 7,000 AU and 9% at 20,000 AU, instead of 19% (3.5% and
+      8% with rev 20's constants, §6.7).
   * **Adopted in rev 18.** This is "gravity that builds up over time", one of the project's
     founding ideas, now with a measured length.
     * It costs one number, the release length: at least 0.15 parsec (Cassini), at most about
@@ -1432,14 +1537,16 @@ Script: `code/strong_field_v7.py`.
 ### 6.11 Three more colliding clusters
 
 *Rev 19: this section keeps round 8's results, computed with the expanding universe's
-distances. §6.14 redoes all three with the project's own: MACS J0025 and Abell 520 then need
-about 1.4 times their published star masses, and El Gordo 1.6–2 times.*
+distances. §6.14 redoes all three with the project's own. Rev 20 (§6.15): with the companion's
+speed measured in our own distances too, they no longer need heavier stars, and El Gordo's lensing
+agrees with its published ones.*
 
 The Bullet Cluster is the famous collision, but it is one object. Round 8 runs our law on the
 three other collisions that astronomers have mapped best, with nothing adjusted:
 * the gas and star masses come from the papers;
 * the machinery is the Bullet's (§3.10): the old companion rides with each cluster's galaxies,
-  and a fresh one grows around the stopped gas at the companion's speed, 197 km/s.
+  and a fresh one grows around the stopped gas at the companion's speed (197 km/s in rev 17;
+  163 since rev 20).
 
 Every input and its source is listed in the script (`collisions_v8.py`).
 
@@ -1528,24 +1635,25 @@ now lives in one program: the regression suite.
   * what moved without changing its grade.
 * The quick run takes about a minute; everything, including the collisions, takes about 20
   minutes.
-* On the unchanged law it reproduces every number published so far to the last digit.
+* On an unchanged law it reproduces every number published so far to the last digit.
 
-**The law today (rev 19, with the far clusters in our own distances): 58 pass, 11 close,
-7 fail** of the 76 graded checks (rev 18: 62, 8, 6; rev 17: 61, 8, 7). The change since rev 18 is
-entirely the switch of distances for the far clusters (§6.14). With their stars 1.4 times
-heavier it would be 63 pass, 7 close, 6 fail.
-* **Fail (7):**
+**The law today (rev 20, every test in our own distances, constants refitted there): 57 pass,
+9 close, 10 fail** of the 76 graded checks (rev 19: 58, 11, 7; rev 18: 62, 8, 6; rev 17: 61, 8,
+7). §6.15 has what moved and why.
+* **Fail (10):**
   * five faint dwarf galaxies: Draco, Ursa Minor, Sextans, Crater II and Antlia 2;
   * the lensing mass of the Bullet's smaller half;
-  * Abell 520's galaxy speeds.
-* **Close (11):**
+  * galaxy lensing around spirals and around disks (KiDS), and the lensing speeds of spirals
+    (Mistele et al.), all in our distances;
+  * MACS J0025's north-western lensing peak, at the collision age the suite uses.
+* **Close (9):**
   * the dwarf Carina;
-  * the lensing speeds of spirals (Mistele et al.);
   * the Sun's orbital speed;
   * the Milky Way's mass inside 50 kpc;
+  * galaxy lensing of all lenses together, and ellipticals' extra lensing over spirals;
   * MACS J0025's galaxy speeds;
-  * Abell 520's clumps P4 and P6, and its mass inside 710 kpc;
-  * El Gordo's lensing mass inside 500 kpc and 1 Mpc, and its NW galaxies' speeds.
+  * Abell 520's clump P6 and its galaxy speeds;
+  * El Gordo's NW galaxies' speeds.
 
 **The first thing we did with it: test the fixes proposed in rev 16.**
 
@@ -1693,7 +1801,12 @@ raised by one common factor:
   better than before the switch.
 * A factor of 1.4 roughly undoes the conversion, which made the stars 0.71–0.80 times as heavy.
 
-**Is that plausible? Yes, and it is the next thing to compute.** The published star masses
+*Rev 20: both the factor 1.4 and the "older stars" reading below are withdrawn. The calibrating
+clusters' stars had been overcounted, and the companion's speed measured in the standard
+distances; measured consistently, the far clusters need no heavier stars. And distant cluster stars
+are observed to be younger, not older (§6.15).*
+
+**Is that plausible? (Rev 19's reasoning, kept for the record.)** The published star masses
 carry assumptions of their own:
 * El Gordo's come from colour fits that did not allow stars older than 7 billion years, the Big
   Bang's age at that distance;
@@ -1710,11 +1823,145 @@ cap (§9, item 1) will tell.
 **The six strong lenses.** Light and matter still agree: −0.012 ± 0.023 dex with our distances
 (−0.017 ± 0.024 with the standard ones). Their stars must be heavier, though: 1.44–1.95 times
 Salpeter's rule instead of 1.05–1.35. Our distances again give less star mass for the same light
-(1.48 times less) and more lensing mass (1.11 times). This is prediction 1 (§8), now in our own
+(1.25 times less; rev 19 said 1.48, the energy-loss-only figure, while the lens code itself used the
+right one) and more lensing mass (1.08–1.17 times). This is prediction 1 (§8), now in our own
 distances.
 
 Scripts: `code/collisions_v10.py`, `code/collisions_star_sweep_v10.py`; the lenses in
 `regression/t_lensing.py`.
+
+### 6.15 Everything in our own distances, and the calibrating clusters' stars corrected (rev 20)
+
+Rev 19 moved the far clusters and the strong lenses into the project's own distances. Rev 20 moves
+everything else that depends on distance: the Bullet Cluster, galaxy lensing (KiDS), and the 12
+clusters that set the companion's speed. On the way, a check of where every cluster's star masses
+come from found a mistake in our own inputs, dating from round 1.
+
+**The mistake: the calibrating clusters' stars were counted in projection.**
+* The X-COP release gives each cluster's star mass inside a circle on the sky, that is, inside a
+  long cylinder through the cluster, which includes stars in front of it and behind it. The
+  release's paper says so, and converts to the mass inside a sphere by multiplying by 0.75.
+* We had used the cylinder masses as sphere masses since round 1. That made the stars 1.3 times
+  too heavy at the clusters' edges and up to about twice too heavy in their middles.
+* Corrected with the paper's own galaxy profile, our sphere masses match its published table to
+  within 1–13%. The star-to-gas ratio at the edge becomes 2.7–5.6%, not 3.5–7.4%.
+
+**The companion's speed, remeasured.** The clusters' stars carry the heat term, whose weight is
+3σ²/u². Fewer stars at the same speeds must be balanced by a slower companion. With the clusters
+also converted into our distances (radii ×0.97–1.00, gas ×0.89–0.92, stars ×0.84–0.86):
+
+| X-COP clusters | companion speed u | typical miss (rms) |
+|---|---|---|
+| as used in rounds 1–19 (standard distances, stars in projection) | 197 km/s | 0.227 |
+| stars corrected | 179 km/s | 0.221 |
+| **stars corrected, our distances (adopted)** | **163 km/s** | **0.221** |
+
+Refitting all three constants together gives a = 6.55 × 10⁻¹¹ m/s², g_d = 2.11 × 10⁻¹⁰ m/s² and
+u = 163 km/s, with the 149 galaxies at 15.9 km/s. **Rev 20 adopts these.** It is the same law, with
+its constants now measured in the project's own distances on correctly counted stars. The numbers
+that follow from u move with it: the companion's reach is 2.2 Mpc (was 2.6), breaking free takes
+about 900 years (was 700), and each kilogram feeds the companion 5.3 × 10⁻⁶ W (was 6.5).
+
+**The far clusters come back.** With the constants measured consistently, and every star mass on
+the calibrating clusters' basis (z-scores; within ±2 passes):
+
+| | rev 19 | rev 20 |
+|---|---|---|
+| MACS J0025: lensing inside 300 kpc, SE / NW; galaxy speeds | −0.53 / −0.87; 707 km/s (−2.2) | −0.65 / −0.97; 665 km/s (−2.9) |
+| Abell 520: clumps P4 and P6; inside 710 kpc; galaxy speeds (rms) | −2.1, −2.6; −2.2; 3.2 | **−1.0**, −2.3; **−1.0**; 2.7 |
+| El Gordo: lensing inside 0.5 / 1 / 1.5 Mpc; NW / SE galaxy speeds | −2.1 / −2.1 / −1.2; 917 / 822 km/s | **−1.1 / −1.2** / −0.3; **1,002 / 892** km/s |
+
+* **Of the 17 graded checks of these three clusters, 12 pass, 4 are close and 1 fails** (rev 19:
+  9, 7, 1).
+* **El Gordo's lensing now agrees with its published star masses.** Rev 19's "1.4 times the stars"
+  came mostly from mixing conventions: the far clusters were in our distances, while the companion's
+  speed had been measured in the standard ones, on overcounted stars.
+* **"Older stars" is withdrawn.** Rev 19 suggested that the far clusters' stars might be older, and
+  so heavier, than the Big Bang's timeline allows. Observations say the opposite, without using any
+  distance law: at fixed speed spread, cluster ellipticals at z = 0.83 are 0.24 magnitudes bluer
+  than in the nearby Coma cluster, and a standard age indicator of their starlight (the 4000 Å
+  break) weakens steadily with distance. Distant cluster stars are younger and lighter for their
+  light. With u measured consistently, they don't need to be heavier.
+
+**MACS J0025, the exception.** Its star masses turn out to be on a heavier basis (Salpeter's)
+than the calibrating clusters' (Chabrier's), so on the same basis they are 1.78 times lighter than
+published. Two things follow:
+* its galaxy speeds come out 665 km/s against 835 ± 59; with the published masses they would be 804;
+* its north-western lensing peak moves from the galaxies onto the gas. The galaxies there are only
+  231 kpc from the gas, and the lensing map between them is a nearly flat ridge, highest at the gas
+  by 9%. It depends on the collision's age and the star masses (distance of the NW peak from its
+  galaxies, kpc):
+
+  | Time since the clusters crossed | stars on the calibrating basis | × 1.33 | as published (× 1.78) |
+  |---|---|---|---|
+  | 0.26 billion years | **73** | 60 | 55 |
+  | 0.35 billion years | **71** | 59 | 54 |
+  | 0.5 billion years (the suite) | **209, on the gas** | 58 | 54 |
+
+  Bradač et al. put the crossing "a few 10⁸ years" ago. A younger collision, or a third more star
+  mass, puts the peak back on the galaxies. The suite keeps the 0.5 billion years fixed in rev 17,
+  so this check now fails. It is a knife edge, and a clean test of the collision's age.
+
+**The Bullet Cluster in our own distances** (sizes ×1.14, gas ×1.08, stars ×0.78, lensing ×1.18):
+
+| | rev 19: ours | measured (standard distances) | rev 20: ours | measured, in our distances |
+|---|---|---|---|---|
+| lensing strength on the main / smaller half's galaxies | 0.68 / 0.14 | at least 0.36 / 0.20 | 0.72 / **0.26** | at least 0.36 / 0.20 |
+| main half: stars in its outskirts (10¹² suns) | 6.2 | 3.9–6.7 | 3.3 | 3.0–5.2 |
+| main half: lensing mass inside 250 kpc (286 in ours), 10¹⁴ suns | 2.40 | 2.5–2.8 | 2.83 | 2.94–3.29 |
+| smaller half: the same | 0.94 | 2.0–2.3 | 1.29 | 2.35–2.70 |
+
+The pattern holds: both peaks sit on the galaxies, 14 and 21 kpc from them. The smaller half gains
+37% but is still about half its measured mass.
+
+**The six strong lenses.** Light and matter still agree: −0.032 ± 0.023 dex. Their stars must be
+1.37–1.85 times Salpeter's rule. *A correction to §6.14:* our distances make their stars 1.25 times
+lighter for the same light, not 1.48; the lens code itself had it right.
+
+**Galaxy lensing in our own distances: two new tests.** In our distances the KiDS points move: the
+visible matter's pull ×0.64 and the measured lensing pull ×0.93 at the lenses' typical distance.
+Median of log(measured ÷ predicted), zero being a perfect match:
+
+| | all | spirals (blue) | ellipticals (red) | disks | bulges | extra lensing of ellipticals over spirals (measured 0.15 ± 0.04 this way) |
+|---|---|---|---|---|---|---|
+| standard distances (rev 19) | +0.02 | −0.005 | +0.02 | +0.03 | −0.02 | 0.18 |
+| **our distances (rev 20)** | **+0.06** | **+0.08** | +0.04 | **+0.11** | −0.01 | **0.23** |
+
+Two separate things have moved:
+1. **The level, set by our distance law's scale.** The lensing pull inferred from the same data
+   scales with α, the rate at which light loses energy in our distance law, while the visible
+   matter's pull does not depend on it. At α 10% lower the spirals read +0.03 and the whole sample
+   +0.02; the whole sample centres at 13% lower, an "H0-like" 65 km/s per Mpc instead of 74.6. So
+   **galaxy lensing now measures our distance law.** α also sets SPARC's distances for about half of
+   its galaxies, so the fair test refits them together; that is next.
+2. **The ellipticals' extra lensing, set by the companion's speed.** An elliptical's stars carry
+   heat 3σ²/u². With u = 163 km/s it is 1.5 times what it was at 197, and the ellipticals' extra
+   lensing rises from 0.18 to 0.23 dex against 0.15 measured. Clusters now want a slower companion
+   than single ellipticals do. The first thing to check is the ellipticals' star masses: spectra
+   say giant ellipticals make stars heavy for their light (about 1.85 times Chabrier's rule), and
+   that would change the clusters' calibration and KiDS's ellipticals together.
+
+*The extra lensing is the median over the same bins; Brouwer et al.'s mean differences, 0.17 and
+0.27 dex (§6.4), are a different average of the same data.* Mistele et al.'s lensing speeds tell
+the same story: spirals 17–40% above ours, ellipticals within 9%.
+
+**Two ways to turn angles into sizes.** The project's distance law allows two geometries. We ran
+every test in both. The galaxy lenses lean slightly (0.01 dex) to the second; the clusters clearly
+prefer the one we use (El Gordo's lensing −1.1 against −2.4 error bars; the Bullet's smaller half
+0.26 against 0.12). We keep it.
+
+**The suite, with the adopted constants: 57 pass, 9 close, 10 fail** (rev 19: 58, 11, 7).
+* Improved: Abell 520's clump P4, its mass inside 710 kpc and its galaxy speeds; El Gordo's lensing
+  inside 0.5 and 1 Mpc.
+* Worse: galaxy lensing around spirals and disks (fail), all lenses and the ellipticals' extra
+  lensing (close), Mistele's spirals (fail), MACS J0025's north-western peak (fail).
+
+The balance is honest rather than flattering: what got worse is exactly where our own distances
+now make a sharper test, of the distance law's scale and of the companion's speed.
+
+Scripts: `code/xcop_static_v11.py`, `code/kids_static_v11.py`, `code/bullet_static_v11.py`,
+`code/distance_variants_v11.py`, `code/macs_peak_scan_v11.py`; the audit of every star mass is
+`literature/star_mass_audit_v11.md`.
 
 ## 7. How this compares
 
@@ -1723,21 +1970,21 @@ Scripts: `code/collisions_v10.py`, `code/collisions_star_sweep_v10.py`; the lens
 | Rotation speeds, 149 galaxies | **15.9 km/s** | 16.1 km/s | 7.5 km/s (298 numbers) |
 | Cluster masses, 12 clusters | **25%** | ×2.9 | 11% (24 numbers) |
 | Bullet Cluster: lensing on galaxies | **yes** | no | yes |
-| Bullet Cluster: main half | **lensing mass 2.4–2.5 against 2.5–2.8; galaxy speed 1,249 km/s; star count agrees** | no | yes (fitted) |
-| Bullet Cluster: smaller half's lensing mass | about half of the measured 2.0–2.3 (open) | no | yes (fitted) |
-| Wide binary stars (data disputed) | **9% extra pull at 20,000 AU, 4% at 7,000 AU** | 43% | none |
+| Bullet Cluster: main half | **lensing mass 2.83 against 2.94–3.29 (our distances); galaxy speed 1,249 km/s; star count agrees** | no | yes (fitted) |
+| Bullet Cluster: smaller half's lensing mass | about half of the measured 2.35–2.70 (our distances; open) | no | yes (fitted) |
+| Wide binary stars (data disputed) | **8% extra pull at 20,000 AU, 3.5% at 7,000 AU** | 43% | none |
 | Collisions: lensing stays with galaxies | **yes** | no | yes |
-| MACS J0025.4−1222 (a second Bullet) | **lensing masses and peaks agree**; galaxy speeds agree with 1.4× the stars (our distances) | no | yes, fitted |
+| MACS J0025.4−1222 (a second Bullet) | **lensing masses agree; SE peak on its galaxies**; NW peak on the gas unless the collision is under 0.35 billion years old; speeds 2.9σ low (our distances) | no | yes, fitted |
 | Abell 520's galaxy-poor lensing clump | **from its gas and the galaxies' heat** | no | a puzzle |
-| El Gordo (z = 0.87) | **agrees if its stars are 1.6–2 times the colour estimate** (our distances) | no | yes, fitted |
-| Ellipticals lens more than spirals | **yes, 0.17–0.27 dex, from their stars** | no | yes, via tuned haloes |
-| Strong lenses: light and stars agree | **yes** (−0.012 dex with our own distances) | | yes |
-| Galaxy lensing (KiDS), spirals / ellipticals | **−0.005 / +0.02 dex** | −0.07 / +0.11 dex | yes, tuned |
+| El Gordo (z = 0.87) | **lensing agrees with its published stars** (our distances); NW speeds 22% low | no | yes, fitted |
+| Ellipticals lens more than spirals | **yes, from their stars**: 0.23 dex in our distances against 0.15 measured the same way (close) | no | yes, via tuned haloes |
+| Strong lenses: light and stars agree | **yes** (−0.032 dex with our own distances) | | yes |
+| Galaxy lensing (KiDS), spirals / ellipticals | **−0.005 / +0.02 dex** (standard distances); +0.08 / +0.04 in ours | −0.07 / +0.11 dex | yes, tuned |
 | Milky Way rotation 15–27 kpc | **within 1–6%** | within 3% | 6–11% fast (McMillan) |
 | Milky Way rotation at the Sun | 8% slow | 3% slow | right |
-| Milky Way pull above the disk | **74 against 68–74** | 84 | 74 |
-| Milky Way mass inside 100 / 200 kpc | **6.6 / 12.5 against 6.1–7.3 / 11.0** × 10¹¹ | 8.0 / 15.6 | 8.5 / 12.8 |
-| Escape speed at the Sun | **507–522 against 445–580** | 546–564 | 560–570 |
+| Milky Way pull above the disk | **73 against 68–74** | 84 | 74 |
+| Milky Way mass inside 100 / 200 kpc | **6.7 / 12.7 against 6.1–7.3 / 11.0** × 10¹¹ | 8.0 / 15.6 | 8.5 / 12.8 |
+| Escape speed at the Sun | **509–525 against 445–580** | 546–564 | 560–570 |
 | Ten Milky Way dwarfs | 4 agree, 6 too slow (6 agree without the Milky Way's hold, §6.13) | the same | fitted |
 | Planets, S2, pulsars, light bending | **Einstein's, exactly** | small effects | Einstein's |
 | Cassini Q2 | **passes** (release over 0.15 pc) | about 10× too big | passes |
@@ -1749,43 +1996,44 @@ Dark matter fits individual objects more tightly because it is tuned object by o
 fits everything with four shared numbers, three fitted to galaxies and clusters and one set by
 the Solar System. It also says why each kind of system behaves as it does.
 
-**Every standard test, in one list (rev 18).** ✓ = agrees within the errors; ~ = close (within
+**Every standard test, in one list (rev 20).** ✓ = agrees within the errors; ~ = close (within
 about two error bars); ✗ = a shortfall, with the fix we are testing.
 
 | Test | Measured | Ours | |
 |---|---|---|---|
 | 149 galaxies' rotation (SPARC) | | 15.9 km/s typical miss | ✓ |
-| 12 clusters' masses (X-COP) | | 25% typical miss | ✓ |
-| Milky Way rotation, 15–27 kpc | 173–217 km/s | 3–13 km/s low | ✓ |
+| 12 clusters' masses (X-COP), our distances, stars in spheres | | 25% typical miss | ✓ |
+| Milky Way rotation, 15–27 kpc | 173–217 km/s | 2–12 km/s low | ✓ |
 | Milky Way rotation at the Sun | 229–234 km/s | 211 (217 with a more compact disk) | ~ the Milky Way's disk shape is the lever to test (§9) |
-| Pull above the Milky Way's disk | 68 ± 4, 74 ± 6 | 74 | ✓ |
-| Milky Way mass inside 100 / 200 kpc | 6.1–7.3 / 11.0 × 10¹¹ | 6.6 / 12.5 | ✓ |
+| Pull above the Milky Way's disk | 68 ± 4, 74 ± 6 | 73 | ✓ |
+| Milky Way mass inside 100 / 200 kpc | 6.1–7.3 / 11.0 × 10¹¹ | 6.7 / 12.7 | ✓ |
 | Milky Way mass inside 20–50 kpc | 1.9–4.5 × 10¹¹ | 10–20% low | ~ (same cause as the Sun's speed) |
-| Escape speed at the Sun | 445–580 km/s | 507–522 | ✓ |
+| Escape speed at the Sun | 445–580 km/s | 509–525 | ✓ |
 | Inner Galaxy: share of pull from stars | 0.88 ± 0.07 | 0.97–0.99 | ~ |
 | Dwarfs Fornax, Leo I, Leo II, Sculptor | 6.6–11.7 km/s | within 1–2 error bars | ✓ |
 | Six faint or spread-out dwarfs | 2.7–9.5 km/s | 1.5–5× too slow | ✗ with no hold by the Milky Way, 2 agree and 2 are close; Draco and Ursa Minor stay 2× slow (§6.13) |
 | Planets, Sedna, S2, pulsars, light bending | Einstein's | Einstein's, exactly | ✓ |
-| Cassini Q2 | (3 ± 3) × 10⁻²⁷ s⁻² | 4.6 × 10⁻²⁷ (release over 0.15 pc, rev 18) | ✓ |
-| Wide binaries | disputed | 9% at 20,000 AU, 4% at 7,000 AU | open |
+| Cassini Q2 | (3 ± 3) × 10⁻²⁷ s⁻² | 4.5 × 10⁻²⁷ (release over 0.15 pc, rev 18) | ✓ |
+| Wide binaries | disputed | 8% at 20,000 AU, 3.5% at 7,000 AU | open |
 | Microlensing, Einstein Cross | stars only | stars only | ✓ |
-| Six strong lenses (SLACS), our own distances | | light = matter (−0.012 dex); stars 1.44–1.95 × Salpeter needed | ✓ |
-| Galaxy lensing (KiDS), spirals and ellipticals | | both match | ✓ |
-| Flat lensing speeds to 1 Mpc | | flat to 2.6 Mpc | ✓ |
+| Six strong lenses (SLACS), our own distances | | light = matter (−0.032 dex); stars 1.37–1.85 × Salpeter needed | ✓ |
+| Galaxy lensing (KiDS), spirals and ellipticals, our own distances | | ellipticals match; spirals 20% above ours; the ellipticals' extra lensing 0.23 against 0.15 | ✗ decided by the distance law's scale and by u (§6.15) |
+| Flat lensing speeds to 1 Mpc | | flat to 2.2 Mpc | ✓ |
 | Bullet Cluster: lensing on galaxies, main half | | yes | ✓ |
 | Bullet Cluster: smaller half's lensing mass | 2.0–2.3 × 10¹⁴ | about half | open |
 | 72 collisions: lensing with the galaxies | | yes | ✓ |
-| MACS J0025.4−1222: lensing inside 300 kpc, SE / NW (our distances) | 3.5 / 3.6 × 10¹⁴ | 2.2 / 1.9 | ✓ |
-| MACS J0025.4−1222: galaxies' speed spread | 835 ± 59 km/s | 707; 793 with stars × 1.4 | ~ stars to measure |
-| Abell 520: lensing of six clumps inside 150 kpc (our distances) | 2.3–6.2 × 10¹³ | 4 of 6 within the errors (P4 2.1σ, P6 2.6σ low) | ~ |
-| Abell 520: the galaxy-poor "dark core" P3 (our distances) | 3.13–3.69 × 10¹³ | 2.99 | ✓ |
-| El Gordo: lensing inside 1 Mpc (our distances) | 23.1 × 10¹⁴ | 17.3 (published stars); 23.1 (stars × 2) | ~ stars to measure |
+| MACS J0025.4−1222: lensing inside 300 kpc, SE / NW (our distances) | 3.5 / 3.6 × 10¹⁴ | 1.9 / 1.7 | ✓ |
+| MACS J0025.4−1222: lensing peaks | on the galaxies | SE on its galaxies; NW on the gas at 0.5 billion years, on its galaxies at ≤ 0.35 | ✗ the collision's age decides |
+| MACS J0025.4−1222: galaxies' speed spread | 835 ± 59 km/s | 665 (stars on the calibrating basis); 804 with the published masses | ~ stars to measure |
+| Abell 520: lensing of six clumps inside 150 kpc (our distances) | 2.3–6.2 × 10¹³ | 5 of 6 within the errors (P6 2.3σ low) | ✓ |
+| Abell 520: the galaxy-poor "dark core" P3 (our distances) | 3.13–3.69 × 10¹³ | 3.47 | ✓ |
+| El Gordo: lensing inside 1 Mpc (our distances) | 23.1 × 10¹⁴ | 19.8 (published stars) | ✓ |
 | Abell 1689 | collected | not yet run | next |
-| The regression suite (§6.12) | 76 graded checks | 58 pass, 11 close, 7 fail (far clusters in our distances) | |
+| The regression suite (§6.12) | 76 graded checks | 57 pass, 9 close, 10 fail (everything in our distances) | |
 
 ## 8. Predictions anyone can check
 
-1. **Heavy stars in the six SLACS lenses:** 1.44–1.95 times Salpeter with the project's own
+1. **Heavy stars in the six SLACS lenses:** 1.37–1.85 times Salpeter with the project's own
    distances (1.05–1.35 with the standard ones), measurable from their spectra. Dark-matter
    models expect about 1.0.
 2. **The elliptical/spiral lensing gap is flat beyond 100 kpc.** A hot-gas-halo explanation
@@ -1798,39 +2046,42 @@ about two error bars); ✗ = a shortfall, with the fix we are testing.
 6. **The Bullet Cluster's main outskirts** hold stars at about 5% of the gas mass at the
    cluster's edge. Confirmed by the star count in rev 15.
 7. **Wide binary stars:** 4% more pull than Newton at 7,000 AU and 9% at 20,000 AU, a fifth of
-   MOND's 43% (with the release length adopted in rev 18, §6.10). If the Milky Way's hold turns
-   out weaker (§6.13), 19–36%. **Locked in the repository before Gaia's next data release (rev 19,
-   §6.7).**
+   MOND's 43% (with the release length adopted in rev 18, §6.10); 3.5% and 8% with rev 20's
+   constants, inside the locked window. If the Milky Way's hold turns out weaker (§6.13), 19–36%.
+   **Locked in the repository before Gaia's next data release (rev 19, §6.7).**
 8. **Lensing in a collision shows the clusters as they were before it.** Around gas that has
-   been stopped, lensing comes back only inside a sphere growing at 197 km/s, about 200 kpc per
+   been stopped, lensing comes back only inside a sphere growing at 163 km/s, about 170 kpc per
    billion years.
 9. **Older collisions** (half a billion to a billion years after the pass) show extra lensing
    around the smaller clump, as the stream heat and tidal shaking build up.
 10. **The extra pull tracks random motion.** At equal visible mass, systems whose stars move
    randomly and freely pull harder than those whose stars circle in step.
-11. **The Sun's extra mass loss** is 2.3 × 10⁻¹⁵ per year.
-12. **The Milky Way keeps slowing down beyond 25 kpc:** about 188 km/s at 30 kpc and 177 at
+11. **The Sun's extra mass loss** is 1.9 × 10⁻¹⁵ per year.
+12. **The Milky Way keeps slowing down beyond 25 kpc:** about 189 km/s at 30 kpc and 179 at
    50 kpc, not flat.
-13. **Lensing speeds around isolated galaxies stay flat to about 2–2.6 Mpc and then fall**,
+13. **Lensing speeds around isolated galaxies stay flat to about 1.7–2.2 Mpc and then fall**,
    where the companion has not yet reached.
 14. **The Einstein Cross and similar compact lenses need only their stars** inside the ring.
 15. **Ellipticals and spirals follow two different lensing curves**, set by how randomly their
    stars move (KiDS already agrees).
-16. **The far clusters' stars weigh more than the published estimates.** In the project's own
-   distances, El Gordo needs 1.6–2 times its colour-based star mass (1.5–1.9 × 10¹³ suns in all),
-   and MACS J0025 and Abell 520 about 1.4 times theirs (§6.14). Stars older than the Big Bang's
-   timeline allows would weigh that much. Near-infrared imaging and spectra of their galaxies
-   can check this.
+16. **The far clusters' published star masses are about right** (rev 20, §6.15). Rev 19 predicted
+   1.4–2 times heavier, older stars; with the companion's speed measured in our own distances
+   that is no longer needed, and distant cluster stars are observed to be younger. El Gordo's
+   lensing agrees with its published stars. Near-infrared imaging and spectra can still check them.
 17. **Abell 520's galaxy-poor clump carries about 3 × 10¹³ suns inside 150 kpc**, of which a
    quarter is visible gas. Its lensing should follow the gas as that gas settles.
-18. **In MACS J0025 the lensing stays on the galaxies as the gas settles.** Its star masses also
-   set its galaxy speeds: 707 km/s with the published stars in our distances, 793 with 1.4 times
-   them, against 835 ± 59.
+18. **MACS J0025's clusters crossed less than about 350 million years ago.** Otherwise, in our
+   law, its north-western lensing peak would sit on the gas, where none is seen (§6.15). Its star
+   masses set its galaxy speeds: 665 km/s with the stars on the calibrating clusters' basis, 804
+   with the published masses, against 835 ± 59.
+19. **Galaxy lensing and our distance law share one scale.** Our law matches KiDS's lensing if light
+   loses its energy about 13% more slowly than the rate adopted so far (an "H0-like" 65 km/s per Mpc
+   rather than 74.6). The same rate must then fit the supernovae and the nearby galaxies' distances.
 
 ## 9. What is still open, and why we are optimistic
 
 **Settled so far:** the main Bullet cluster's galaxy speeds and lensing mass (rev 14), its star
-count (rev 15), and Cassini's test (rev 18).
+count (rev 15), Cassini's test (rev 18), and the far clusters' star masses (rev 20).
 
 For each open item below: what is wrong, what would have to change, and the next test. They are
 ordered by how directly they can move the scoreboard, and each ends in a regression-suite run,
@@ -1869,15 +2120,15 @@ proposals for finishing the theory.
      aperture masses instead of its dark-matter-shaped fit. The suite now grades them this way:
      58 pass, 11 close, 7 fail. Every grade that slipped is a far cluster whose stars came out
      lighter.
-   * *Next:*
-     * star masses without the age cap, refitted from the photometry. El Gordo's fits allowed ages
-       up to 7.0 billion years; MACS J0025 and Abell 520 use fixed light-to-mass ratios, with no
-       age fit. A common factor of 1.4 would restore every slipped grade;
-     * the Bullet Cluster, KiDS, Mistele's lensing speeds and X-COP in our distances.
+   * *Done in rev 20 (§6.15):* the Bullet Cluster, KiDS, Mistele's lensing speeds and X-COP in our
+     distances, and the constants refitted there. X-COP's stars turned out to have been counted in
+     projection since round 1; corrected, u = 163 km/s. The far clusters then recover without
+     heavier stars. The age cap turned out not to matter: distant cluster stars are younger.
+   * *Next:* what our distances sharpened, galaxy lensing (new item 11).
 
      The nearby tests (SPARC, X-COP, the Milky Way) change by only a few percent, mostly because
      our distance law's scale corresponds to a Hubble-constant-like 74.6 rather than 70.
-   * *One more to watch:* the companion's reach, 2.6 Mpc, assumes matter has been emitting for
+   * *One more to watch:* the companion's reach, 2.2 Mpc, assumes matter has been emitting for
      13 billion years, the age of the oldest stars. Without a Big Bang, matter may be older than
      its stars. No current test reaches that far, but prediction 13 depends on it, so the reach
      should be measured rather than assumed.
@@ -1899,13 +2150,13 @@ proposals for finishing the theory.
        would leave.
 3. **The Bullet Cluster's smaller half (§6.3).**
    * *What is wrong:* its lensing mass inside 250 kpc is 0.94 × 10¹⁴ suns against a measured
-     2.0–2.3. Rev 14's idea, a bigger cluster before the crash, is not borne out by its galaxies
-     and starlight.
+     2.0–2.3 (rev 20, our distances: 1.29 inside 286 kpc against 2.35–2.70). Rev 14's idea, a
+     bigger cluster before the crash, is not borne out by its galaxies and starlight.
    * *What would have to change:* more pull around it, from something travelling with it.
    * *Next:*
      * build the heat its galaxies picked up while crossing the main cluster (§6.3) as a suite
        candidate, and in time a full transport calculation (§9.1, proposal 6);
-     * redo it with our own distances (item 1): ×1.14 in size, ×1.18 in lensing;
+     * redo it with our own distances (item 1): *done in rev 20*;
      * deep images for diffuse starlight moving with it, and more galaxy speeds around it.
 4. **The Sun's orbital speed and the Milky Way's middle (§6.8).**
    * *What is wrong:* 211 km/s against 229–234 at the Sun, and the mass inside 50 kpc is 20% low.
@@ -1922,37 +2173,57 @@ proposals for finishing the theory.
      mass there.
    * *Next:* model it from its published gas and stars, with our distances, and add it to the
      suite. Grade it against its lensing mass profile and its Einstein ring.
-6. **How much cluster stars weigh (§6.11).**
-   * *What is wrong:* in our own distances, MACS J0025, Abell 520 and El Gordo all come out low
-     with their published stars (§6.14). 1.4 times the stars restores almost everything; El Gordo
-     prefers 1.6–2.
+6. **How much cluster stars weigh (§6.11, §6.15).**
+   * *Rev 20:* with the companion's speed measured consistently, the far clusters no longer need
+     heavier stars. Each cluster's star masses are now on the calibrating clusters' basis.
+     MACS J0025 is the exception: its galaxy speeds prefer its published masses, which are on a
+     heavier basis, and its north-western lensing peak needs a younger collision or a third more
+     star mass.
    * *Next:*
-     * star masses without the age cap (item 1);
-     * then star masses from infrared light and spectra, with declared assumptions (§9.1,
-       proposal 9);
+     * MACS J0025's crossing time from its shock fronts, and its star masses from infrared light;
+     * star masses from infrared light and spectra, with declared assumptions (§9.1, proposal 9);
      * Abell 520 modelled as two main clusters before the crash, not one group per clump.
 7. **Lensing speeds of the lightest spirals (§6.9).**
-   * *What is wrong:* ours are 20–30% below Mistele et al.'s, but agree with Brouwer et al.'s
-     conversion of the same KiDS data.
+   * *What is wrong:* ours are 20–30% below Mistele et al.'s in the standard distances, 17–40% in
+     ours, but agree with Brouwer et al.'s conversion of the same KiDS data in the standard ones.
    * *Next:* grade the law against the published lensing profiles directly, without either
-     conversion and with our distances.
+     conversion (and item 11).
 8. **Wide binary stars (§6.7).**
-   * *The prediction:* 4% at 7,000 AU and 9% at 20,000 AU; 19–36% if item 2 goes the way of no
-     hold. The two published analyses disagree (0 and about 40%).
+   * *The prediction:* 4% at 7,000 AU and 9% at 20,000 AU (3.5% and 8% with rev 20's constants);
+     19–36% if item 2 goes the way of no hold. The two published analyses disagree (0 and about
+     40%).
    * *Next:* Gaia's fourth data release. The binaries will measure the release length and decide
      between the two routes for the dwarfs.
 9. **The theory**, the subject of most of §9.1:
    * *Done in rev 19 (§4.14):* the pull, derived from a local interaction, with the three
      conditions it imposes; and the way the companion adds up, tested against two alternatives.
      Only the law's own rule fits both galaxies and clusters.
+   * *Done in rev 20 (§4.15):* energy conservation derives how orderly matter adds up, given one
+     stream and no whirlpools.
    * *Next:* a model of waves that travel at full speed and cancel head-on, while weakening away
-     from their source, graded on the same galaxies, clusters and Milky Way;
+     from their source, graded on the same galaxies, clusters and Milky Way. It must supply the "no
+     whirlpools" condition; a companion that scatters off itself, as heat diffuses, is the first
+     candidate;
    * a full field theory for the companion, with its travel, its release length and a
      relativistic form, so that lensing is derived;
    * what the release length is;
    * u and g_d derived rather than fitted.
 10. **Cosmology.** The microwave background and the growth of large-scale structure are outside
    the law's tested scope. Under the project's no-expansion rule they need their own treatment.
+11. **Galaxy lensing in our own distances (new in rev 20, §6.15).**
+   * *What is wrong:* around spirals and disks the lensing is 20–28% stronger than our law
+     predicts (+0.08 and +0.11 dex), and ellipticals' extra lensing over spirals is 0.23 dex
+     against 0.15 ± 0.04.
+   * *What would have to change:* for the first, the distance law's scale. The lensing pull read
+     from the data scales with α, and 13% lower centres all the lenses. For the second, the
+     ellipticals' heat, which rose when u fell to 163 km/s.
+   * *Next:*
+     * refit α on KiDS together with SPARC's distances (about half of which come from the same
+       redshift law) and the supernova fit that set it;
+     * test bottom-heavy stars for giant ellipticals, as their spectra suggest (about 1.85 times
+       Chabrier's rule), in the clusters and in KiDS together: it changes the clusters'
+       calibration and the ellipticals' heat at once;
+     * check the speeds assumed for KiDS's ellipticals (160 km/s).
 
 Every item is a concrete calculation or measurement, and the suite now tells us within minutes
 whether a change helps.
@@ -1969,16 +2240,16 @@ into our inputs.
 
 | # | Proposal | Where we stand | First step | How hard |
 |---|---|---|---|---|
-| 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14)** | a model of full-speed waves that cancel head-on | hard; the foundation |
+| 1 | Derive the whole law from one microscopic interaction | **rev 19: the pull derived and simulated; of three ways to add up, only the law's fits galaxies and clusters (§4.14). Rev 20: that rule derived from energy conservation (§4.15)** | a model of full-speed waves that cancel head-on, with no whirlpools | hard; the foundation |
 | 2 | Predict unseen data with a locked model | **rev 19: the wide-binary forecast locked (§6.7)** | lensing profiles by speed spread for a new galaxy sample | doable now |
 | 3 | Show that random motion makes a steady pull and collisions remove it | Dicke toy: scrambling and its suppression, not yet the force | add test bodies and measure the averaged force | medium; builds on the toy |
 | 4 | Light and matter from one coupling | lensing assumed to follow the pull; six lenses agree | a light-like mode in the same toy | hard; after 1 |
 | 5 | One mechanism for Cassini, dwarfs and wide binaries | release adopted; the dwarfs need a weaker hold, reason unknown | derive the release time and the hold from one transition | hard; biggest payoff |
 | 6 | Evolve the companion through collisions | memory imposed; the Bullet's smaller half at half weight | a time-dependent transport solver | medium to hard |
-| 7 | Measure u independently | u from the clusters only | the lensing signature of the growing fresh companion | medium; needs data |
-| 8 | Derive the constants | fitted; clues such as a ≈ cα/10 | the toy's stiffness and inertia give u | hard; after 1 |
-| 9 | Stellar masses without using gravity | **rev 19: our distances done (§6.14)**; the far clusters need about 1.4× their stars | refit without the age cap; infrared light | doable now |
-| 10 | Detect the energy cost of making gravity | the Sun loses 2.3 × 10⁻¹⁵ of its mass a year to the companion | energy balance in the toy; then precision ranging | medium; the test is future |
+| 7 | Measure u independently | u = 163 km/s from the clusters (rev 20: in our distances); KiDS's ellipticals prefer about 200 | the lensing signature of the growing fresh companion | medium; needs data |
+| 8 | Derive the constants | fitted; clues such as a ≈ cα/11 | the toy's stiffness and inertia give u | hard; after 1 |
+| 9 | Stellar masses without using gravity | **rev 20: every star mass on one basis; the calibrating clusters' corrected; no age-cap correction needed (§6.15)** | infrared light and spectra; the ellipticals' IMF | doable now |
+| 10 | Detect the energy cost of making gravity | the Sun loses 1.9 × 10⁻¹⁵ of its mass a year to the companion | energy balance in the toy; then precision ranging | medium; the test is future |
 
 **1. One interaction, the whole law.**
 * *Where we stand:* the law is assembled from nine postulates, and two have toy models: the
@@ -1999,8 +2270,10 @@ into our inputs.
 * *Watch out for:* borrowing a ready-made relativistic theory. The known ones in this area
   (TeVeS, AeST) are built on MOND, which the rules exclude.
 * *First step:* a one-dimensional version with two sources and a test body. Measure the
-  time-averaged force against distance and source strength. *Done in 3D in rev 19. Next: a model
-  of waves that travel at full speed and cancel head-on, while weakening away from their source.*
+  time-averaged force against distance and source strength. *Done in 3D in rev 19. Rev 20:
+  energy conservation fixes how orderly matter adds up, given one stream and no whirlpools
+  (§4.15). Next: a model of waves that travel at full speed and cancel head-on, while weakening
+  away from their source, which must supply the "no whirlpools" condition.*
 
 **2. A locked prediction.**
 * *Where we stand:* the suite re-checks known data; passing it again is not a new prediction.
@@ -2045,7 +2318,8 @@ into our inputs.
 
 **5. One mechanism for Cassini, the dwarfs and wide binaries.**
 * *Where we stand (rev 18):*
-  * the release length is adopted: Cassini passes, and binaries are at 4% and 9%;
+  * the release length is adopted: Cassini passes, and binaries are at 4% and 9% (3.5% and 8%
+    with rev 20's constants);
   * the dwarfs need a much weaker hold by the Milky Way;
   * a release length of 0.5 pc or more already protects the binaries;
   * there is no mechanism for the weaker hold yet.
@@ -2078,10 +2352,12 @@ into our inputs.
 * *First step:* a 2D transport solver, checked against today's memory rule in the steady case.
 
 **7. Measure the companion's speed independently.**
-* *Where we stand:* u = 197 km/s comes only from the 12 X-COP clusters, through the heat term.
+* *Where we stand:* u = 163 km/s (rev 20, in our own distances with the stars correctly counted)
+  comes only from the 12 X-COP clusters, through the heat term. KiDS's ellipticals prefer a faster
+  companion, about 200 km/s (§6.15), so an independent measurement matters even more.
 * *How:*
   * Derive how the fresh companion around stopped gas shows in projected lensing as it grows:
-    30 kpc after 150 million years, 101 kpc after 500 million, 201 kpc after a billion.
+    25 kpc after 150 million years, 83 kpc after 500 million, 166 kpc after a billion.
   * Pick collisions whose timing is known from their shock fronts (X-ray and radio), not from
     lensing or dark-matter simulations.
   * Fit u across several systems.
@@ -2092,43 +2368,46 @@ into our inputs.
   cloud.
 
 **8. Derive the constants.**
-* *Where we stand:* a, g_d and u are fitted and L is bounded, with g_d/a = 3.45.
-  * A clue: a ≈ cα/10 and g_d ≈ cα/3, where α is the rate at which light loses energy in the
-    project's static universe. That is a local process, not expansion.
+* *Where we stand:* a, g_d and u are fitted and L is bounded, with g_d/a = 3.22.
+  * A clue: a ≈ cα/11 and g_d ≈ cα/3.4, where α is the rate at which light loses energy in the
+    project's static universe. That is a local process, not expansion. Galaxy lensing now
+    measures α too (§6.15).
 * *How:* in the toy medium, stiffness κ and inertia χ set u² = κ/χ. The source coupling sets ℓ.
-  The binding sets both the escape length L_d (g_d = u²/2L_d, L_d ≈ 2.8 kpc) and the escape time
+  The binding sets both the escape length L_d (g_d = u²/2L_d, L_d ≈ 2.0 kpc) and the escape time
   (L = 0.15 pc of travel), two different processes, a barrier height and a rate. If light loses
   its energy to the same medium, α and ℓ may share a cause, which would predict a/cα and g_d/cα.
 * *Watch out for:* working numbers backwards from the fits and calling them derived.
 * *First step:* after proposal 1.
 
 **9. Stellar masses without using gravity.**
-* *Where we stand (rev 19, our own distances):* MACS J0025 and Abell 520 need about 1.4 times
-  their published star masses and El Gordo 1.6–2 times (§6.14); the SLACS lenses need 1.44–1.95
-  times Salpeter.
+* *Where we stand (rev 20, §6.15):* every cluster's star masses traced to their source and put on
+  one basis (`literature/star_mass_audit_v11.md`). The calibrating clusters' had been counted in
+  projection; corrected. With the companion's speed measured consistently, the far clusters need
+  no heavier stars. The SLACS lenses need 1.37–1.85 times Salpeter.
+* *The age cap, checked:* distant cluster galaxies are observed to be bluer, with weaker 4000 Å
+  breaks, and lighter for their light, measured without any distance law. Their stars are
+  younger, so the cap does not hide mass.
 * *How:*
-  * First remove the borrowed assumptions of item 1. With our distances El Gordo's star masses
-    drop to 0.71× while its gas rises 1.68×. Also drop the Big-Bang age cap: 6.3 billion years
-    at El Gordo, 7.9 at MACS J0025, and older stars weigh more for their light.
-  * Then take infrared photometry and spectra, with declared assumptions.
+  * Infrared photometry and spectra, with declared assumptions.
+  * The IMF: spectra say giant ellipticals' stars are heavy for their light (about 1.85 times
+    Chabrier's rule). Test it in the clusters and in KiDS together (§9, item 11).
   * Lock, and predict lensing and galaxy speeds.
 * *Watch out for:* this is where borrowed assumptions hide most, because star-mass codes
   build in a timeline.
-* *First step:* our distances are done (rev 19). Next, refit the star masses from the photometry
-  with no age cap. Within reach now.
+* *First step:* the ellipticals' IMF in X-COP and KiDS together. Within reach now.
 
 **10. The energy cost of making gravity.**
-* *Where we stand:* each kilogram feeds ℓ = au/2 = 6.48 × 10⁻⁶ W into its companion. Paid from
-  mass (E = Mc²), that is a loss of 2.3 × 10⁻¹⁵ of the Sun's mass a year.
+* *Where we stand:* each kilogram feeds ℓ = au/2 = 5.32 × 10⁻⁶ W into its companion. Paid from
+  mass (E = Mc²), that is a loss of 1.9 × 10⁻¹⁵ of the Sun's mass a year.
 * *A consequence we can already draw:* the energy cannot come from heat.
-  * The Earth's companion power would be 3.9 × 10¹⁹ W, 800,000 times the heat flowing out of its
+  * The Earth's companion power would be 3.2 × 10¹⁹ W, 680,000 times the heat flowing out of its
     interior.
-  * A typical white dwarf's would be about 20 times its light.
+  * A typical white dwarf's would be about 16 times its light.
   * Both would cool almost at once, and they do not. So the companion must be paid for by mass
     itself.
 * *How:* check energy and momentum balance in the toy (proposal 1), including the recoil of
   lopsided sources. Then look for the mass loss. It acts like gravity weakening by
-  2.3 × 10⁻¹⁵ a year, about 30 times below the precision of today's lunar laser ranging.
+  1.9 × 10⁻¹⁵ a year, about 35 times below the precision of today's lunar laser ranging.
 * *First step:* the energy balance in the toy; then follow planetary and lunar ranging as it
   improves.
 
@@ -2175,19 +2454,29 @@ into our inputs.
   * It also unblocks the dwarf fix: with no hold by the Milky Way, 6 of 10 dwarfs agree
     (χ² 60 against MOND's 119). The physical reason is still to be found.
   * A plan for every open item.
-* **Revision 19 (round 10, this page).**
+* **Revision 19 (round 10).**
   * The pull derived from a local interaction and checked by a 3D simulation.
   * The way the companion adds up tested against two alternatives: only the law's own rule fits
     both galaxies and clusters, which fixes three properties of the companion.
   * The far clusters and the strong lenses in the project's own distances, now graded that way:
     58 pass, 11 close, 7 fail. The slipped grades all trace to lighter stars.
   * A first locked forecast (wide binaries).
+* **Revision 20 (round 11, this page).**
+  * How orderly matter adds up, derived from energy conservation; the data demand it to within a
+    few percent.
+  * The calibrating clusters' stars corrected (counted in projection since round 1), and every
+    test in the project's own distances. The companion's speed, measured again: 163 km/s. The far
+    clusters recover without heavier stars.
+  * Galaxy lensing becomes a test of our distance law's scale and of the companion's speed.
+    Suite: 57 pass, 9 close, 10 fail.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
 * round 2's reaction force on hot matter (now the companion carries momentum);
-* round 1's companion speed (874 km/s, now 197);
-* round 2's solar mass-loss figure (1.4 × 10⁻¹⁴ per year, now 2.3 × 10⁻¹⁵);
+* round 1's companion speed (874 km/s; 197 in revs 12–19; 163 since rev 20, measured in our own
+  distances with the clusters' stars correctly counted);
+* round 2's solar mass-loss figure (1.4 × 10⁻¹⁴ per year; 2.3 × 10⁻¹⁵ in revs 12–19; now
+  1.9 × 10⁻¹⁵);
 * rev 12's "the main cluster's galaxy speeds check out" (a single radius; the average over the
   surveyed region was 20% low in rev 13's model, §6.3);
 * rev 13's "all four Bullet lensing strengths within about 1σ": Clowe et al.'s κ values are
@@ -2203,6 +2492,13 @@ into our inputs.
     9% at 20,000 AU; rev 18 adopts it);
 * rev 16–17's "the dwarf fix must depend on speed": not forced any more, since the release
   length protects the binaries (§6.13);
+* rev 19's "the far clusters need about 1.4 times their stars" and "their stars may be older than
+  the Big Bang allows": the first came from mixing conventions, and distant cluster stars are
+  observed to be younger (rev 20, §6.15);
+* rev 19's "our distances make the strong lenses' stars 1.48 times lighter": 1.25 (the lens code
+  itself was right);
+* rounds 1–10's X-COP star masses, used as masses inside spheres although the release gives them
+  inside circles on the sky (rev 20);
 * earlier retractions:
   * a cluster claim (revision 5, retracted in revision 7);
   * a misattributed group-lensing figure (revision 8).
@@ -2231,7 +2527,13 @@ into our inputs.
   * dwarf galaxies: McConnachie 2012; Caldwell et al. 2017; Torrealba et al. 2016, 2019;
   * precision tests: GRAVITY Collaboration 2020, 2024; Weisberg & Huang 2016; Kramer et al.
     2021; Bertotti et al. 2003; Hees et al. 2014;
-  * lenses: van de Ven et al. 2010; Trott et al. 2010; Mróz et al. 2019.
+  * lenses: van de Ven et al. 2010; Trott et al. 2010; Mróz et al. 2019;
+  * star masses and ages (rev 20): Ghizzardi et al. 2021 and van der Burg et al. 2015 (X-COP's
+    stars and their deprojection); Bradač et al. 2008 and Drory et al. 2004 (MACS J0025);
+    Menanteau et al. 2012 and Hilton et al. 2013 (El Gordo); Holden et al. 2010, Moresco et al.
+    2012, van Dokkum & van der Marel 2007 and Saglia et al. 2010 (distant stars are younger);
+    Treu et al. 2010, Auger et al. 2010, Cappellari et al. 2013 and Conroy & van Dokkum 2012 (the
+    IMF of giant ellipticals).
 
 **Ours, as far as we have found:**
 * the companion mechanism;
@@ -2279,14 +2581,21 @@ python combination_rules_v10.py --output-dir ../run-combination-rules-v10  # how
 python collisions_v10.py --output-dir ../run-collisions-v10    # the far collisions in our own distances
 python collisions_star_sweep_v10.py --output ../run-collisions-v10/star_sweep_v10.json  # how heavy their stars must be
 python forecast_wide_binaries_v10.py --output ../forecasts/wide_binaries_gaia_dr4_v10.json  # the locked forecast
+python companion_flow_v11.py --output-dir ../run-companion-flow-v11    # energy bookkeeping and the three dials
+python xcop_static_v11.py   --output-dir ../run-xcop-static-v11        # X-COP deprojected, in our distances; the constants
+python kids_static_v11.py   --output-dir ../run-kids-static-v11        # galaxy lensing in our distances; the distance scale
+python bullet_static_v11.py --output-dir ../run-bullet-static-v11      # the Bullet Cluster in our distances
+python distance_variants_v11.py --output-dir ../run-distance-variants-v11  # the two static geometries
+python macs_peak_scan_v11.py --output-dir ../run-collisions-v10        # MACS J0025's NW peak by age and star basis
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:
 
 ```
 cd ../regression
-python run_suite.py                        # the adopted law (rev 18), quick tier, about a minute
+python run_suite.py                        # the adopted law (rev 20), quick tier, about a minute
 python run_suite.py --tier full            # everything, about 20 minutes
 python run_suite.py --law no_hold          # a candidate change, scored against the baseline
+python run_suite.py --law round9           # revs 18-19's constants
 python run_suite.py --law round3           # the law before rev 18
 ```

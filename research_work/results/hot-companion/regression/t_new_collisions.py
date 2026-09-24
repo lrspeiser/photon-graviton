@@ -5,7 +5,8 @@ Since round 10 they are graded in the project's static distance law (code/collis
 in the flat-LCDM conventions of the papers: every length and mass of the round-8 models is rescaled
 from those conventions, apertures are applied at the same angles, and each measured lensing mass is
 converted with its own paper's cosmology and source redshifts. El Gordo is graded against Kim et
-al.'s aperture masses rather than their two-NFW fit. Galaxy speeds are unchanged."""
+al.'s aperture masses rather than their two-NFW fit. Galaxy speeds are unchanged. Since round 11 every star mass
+is on the Chabrier basis of X-COP, whose clusters calibrate u (MACS J0025's Salpeter-based masses x 10^-0.25)."""
 from __future__ import annotations
 import numpy as np
 from checks import make, z_check, range_check, at_most, _grade
@@ -23,7 +24,7 @@ def _model(name, law, t):
     import collisions_v10 as C
     spec = dict(macs0025=V8.macs0025, abell520=V8.abell520, el_gordo=V8.el_gordo)[name]()
     f = C.factors(spec['z'], 1.0)                     # static / (0.3, 0.7, 70), the round-8 inputs' convention
-    st = C.rescale(spec, f)
+    st = C.rescale(spec, f, star_extra=C.chabrier_basis(name))   # round 11: star masses on X-COP's (Chabrier) basis
     sol = C.solve(st, law, t, f['size'])
     return C.measure(name, st, sol, f['size']), f, C
 

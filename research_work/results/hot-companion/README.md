@@ -1863,7 +1863,8 @@ in our distances (§20.6).
 * light = matter: −0.012 ± 0.023 dex (was −0.017 ± 0.024);
 * the stars needed: 0.465 dex above Chabrier, that is 1.44–1.95 × Salpeter per lens (was
   1.05–1.35). Our distances give 1.48 times less starlight mass for the same light, and 1.11 times
-  more lensing mass.
+  more lensing mass. *(Round 11 correction, §21.4: 1.25 times less starlight mass, the branch the
+  lens code itself used; lensing masses 1.08–1.17 times more. No result changes.)*
 
 **What this means.** With our own distances the measured lensing masses rise by 10–55%, while the
 stars inferred from the same light fall by 20–30%. In our law the freely moving stars carry the
@@ -2004,6 +2005,10 @@ Stars 10–13 billion years old, like those of nearby cluster ellipticals, would
 reach. It is not yet a result: the star masses have to be refitted from the photometry with no
 age cap.
 
+*Round 11: withdrawn. The calibrating clusters' stars had been counted in projection and u measured
+in the standard distances; measured consistently, the far clusters need no common star factor
+(§21.3–21.4). Distant cluster stars are observed to be younger, not older (§21.2).*
+
 ### 20.7 Where this leaves the first principles
 
 * **Derived:**
@@ -2027,3 +2032,350 @@ age cap.
   2. star masses for the far clusters from their photometry with no age cap (§20.6);
   3. the Bullet Cluster, KiDS and Mistele's lensing in the project's distances;
   4. the release factor and release length from the bound-to-free transition (proposal 5).
+
+## 21. Round 11, 24 September 2026: why orderly matter adds up like Newton, the stars audited, and everything in our own distances
+
+The request: proceed with the next steps of round 10 (§20.7), which were:
+* a model for the companion as one stream: full-speed waves that cancel head-on while weakening away
+  from the source;
+* star masses for the far clusters without the Big-Bang age cap;
+* the Bullet Cluster, KiDS and X-COP in the project's own distances.
+
+This round:
+1. derives, from energy bookkeeping, why orderly matter's companion must add up like Newton's pulls,
+   and measures how tightly the data demand it (§21.1). The dynamical toy of the waves is not built
+   yet; it is the first next step (§21.7);
+2. audits how every cluster's star masses were made (§21.2). Two corrections follow: X-COP's stellar
+   profiles are projected masses, which rounds 1–10 used as spherical ones, and MACS J0025's are on a
+   heavier (Salpeter) basis. Distant cluster stars turn out younger, not older;
+3. moves every distance-dependent test into the static distance law, which recalibrates the
+   companion's speed to u = 162.6 km/s (§21.3). These constants are now the adopted law;
+4. follows what that does to the far collisions, the Bullet Cluster and the strong lenses (§21.4);
+5. finds that galaxy lensing (KiDS) now measures two things: the distance law's scale and the
+   companion's speed (§21.5);
+6. compares the two static geometries in the repository (§21.6).
+
+### 21.1 Why orderly matter's companion adds up like Newton's pulls
+
+`code/companion_flow_v11.py` → `run-companion-flow-v11/companion_flow_v11.json`.
+
+**The argument.**
+* In a steady state the companion's energy flux J obeys div J = ℓρ: every watt emitted flows out, and
+  nothing is lost on the way.
+* By round 10's local form (§20.5), matter feels the companion's full pull only where the companion
+  passes as one stream at the full phase rate. Its energy density is then |J|/u, and the pull is
+  proportional to √|J|.
+* If the flow also has no whirlpools (curl J = 0), J is unique: J = (ℓ/4πG)(−g_N), Gauss's geometry.
+* So the stream's intensity is |g_N|, and the pull is ∝ √|g_N|. That is round 3's rule for ordered
+  matter, obtained from one stream plus energy conservation.
+
+**The alternative is not a consistent flow.** "One stream carrying everything" (round 10's rule 2,
+intensity S_N along the net pull) would carry more power out of a closed surface than the matter inside
+it emits:
+
+| Where | power carried out ÷ power emitted inside |
+|---|---|
+| uniform sphere, at 0.25 / 0.5 / 1 / 2 radii | 11.8 / 5.5 / 1.5 / 1.06 |
+| Plummer sphere, at 0.25 / 0.5 / 1 / 2 scale radii | 8.1 / 4.2 / 2.3 / 1.5 |
+| Hernquist sphere, at 0.25 / 0.5 / 1 / 2 scale radii | 3.3 / 2.5 / 2.0 / 1.6 |
+| the Milky Way model (spheres of 4 / 8.2 / 12 / 20 / 30 kpc) | 1.70 / 1.36 / 1.22 / 1.11 / 1.06 |
+
+Independent waves (rule 1) conserve energy (their net flux is J), but they dilute the pull. Round 3 is
+the one rule that is both lossless and undiluted.
+
+**How tightly do the data demand it?** A three-parameter family contains all the rules:
+
+  I = w|g_N| + (1 − w)S_N + hS + (1 − h)|g_hot|,  D = |g_N + g_hot| / (S_N + S),  extra = release · √(aI) · D^γ
+
+Round 3 is (w, h, γ) = (1, 1, 0). The scans run through it, refitting a and g_d on SPARC and u on
+X-COP at every point. X-COP is taken as the suite now takes it, in our distances with deprojected
+stars (§21.2–21.3), and S_N comes from the surface densities of §20.5. The preferred value comes from
+400 bootstrap resamplings:
+
+| Dial | what it measures | SPARC typical miss along the scan | X-COP rms along the scan | preferred |
+|---|---|---|---|---|
+| w = 0 … 1 | how completely orderly flows cancel | 18.89 → 15.94 km/s | 0.212 → 0.221 (u 60 → 163 km/s; a 7.5 times smaller at w = 0) | SPARC: w = 1 (every resampling); X-COP leans to 0 |
+| γ = 0 … 1 | how much the pull is diluted | 15.94 → 27.21 km/s | 0.221 → 0.505 (u 163 → 305 km/s) | SPARC 0.05 (0–0.1); X-COP 0 (every resampling) |
+| h = 0 … 1 | how much the heat adds unsigned | 15.93 → 15.94 km/s | 0.288 → 0.221 (u 97 → 163 km/s) | X-COP: h = 1 (every resampling); SPARC flat |
+
+So:
+* **the galaxies demand complete cancellation** of orderly flows (w = 1; at w = 0.95 the miss is
+  already 16.11 km/s). X-COP alone leans the other way by 0.009 in rms, but only through a trade:
+  with SPARC's refit at w = 0, a is 7.5 times smaller and u falls to 60 km/s;
+* **galaxies and clusters both demand an undiluted pull** (γ ≤ 0.1);
+* **the clusters demand the heat unsigned** (h = 1 in every resampling). With the heat cancelling
+  like arrows, u falls to 97 km/s and the rms rises to 0.288.
+
+The first version of this scan, run before the X-COP correction of §21.2, gave the same verdicts,
+with h ≥ 0.5 instead of h = 1.
+
+### 21.2 How each cluster's star masses were made: an audit, and two corrections
+
+A literature audit, with every number traced to its paper (`literature/star_mass_audit_v11.md`), put
+every star mass the law uses on one basis. The law's u is calibrated on X-COP, whose stellar masses
+assume a Chabrier IMF (Ghizzardi et al. 2021, arXiv:2007.01084, Sect. 4.1). Everything must therefore
+be compared on that basis.
+
+**Correction 1: X-COP's stellar profiles are projected.**
+* The release's cumulative stellar profiles are masses "within a projected radius": a cylinder along
+  the line of sight. The paper converts them to the R500 sphere by multiplying by 0.75, using a gNFW
+  galaxy distribution (c = 0.72, α = 1.64; van der Burg et al. 2015).
+* 0.75 × the release profile at R500 reproduces the paper's Table 3 for six of the seven clusters
+  within 0.4–4% (A644: 12%).
+* Rounds 1–10 (`run.load_xcop`) used the projected profiles as spherical masses. That overstated the
+  stars by 1.3 at R500 and by up to about 2 in the middle. It also put the star/gas ratio at R500 at
+  0.035–0.074, where the paper's spherical values give 0.023–0.049.
+* `xcop_static_v11.deproject_xcop` fits each profile with two parts:
+  * a BCG (Hernquist, a = 15 kpc);
+  * satellites with that gNFW, R200 = R500/0.65, cut along the line of sight at 1.3 R200 so that
+    their sphere/cylinder ratio at R500 is the paper's 0.75.
+
+  It then replaces the profile by the fit's spherical mass. The five clusters without optical data
+  take the median spherical star/gas ratio of the seven, as before.
+* Check against Table 3 (M_star inside the R500 sphere, 10¹² M☉):
+
+  | | A1795 | A85 | A644 | A2319 | ZW1215 | A2029 | A2142 |
+  |---|---|---|---|---|---|---|---|
+  | deprojected here | 3.17 | 2.27 | 4.19 | 5.30 | 3.17 | 6.82 | 7.02 |
+  | Table 3 | 3.02 | 2.10 | 3.70 | 5.11 | 3.34 | 6.51 | 6.97 |
+
+  The deprojected star/gas ratio at R500 is 0.027–0.056 (median 0.049).
+
+**Correction 2: MACS J0025's star masses are Salpeter-based.**
+* Bradač et al. 2008 convert F814W light to rest-frame K with a non-evolving elliptical template, and
+  multiply by M/L_K = 0.74 ± 0.30 "following Drory et al. (2004)".
+* That value is Drory et al.'s mean for massive galaxies at z = 0.5 (their Table 1), whose fits assume
+  a Salpeter IMF.
+* Bradač et al. do not state the IMF; this is inferred. We convert with the SLACS code's convention,
+  × 10^−0.25 (`collisions_v10.chabrier_basis`).
+
+**The rest are on the same basis:**
+* El Gordo: Menanteau et al. 2012, Chabrier.
+  * Their SED grid's ages run to 7.0 Gyr (the universe's age at z = 0.87 in their cosmology is
+    6.6 Gyr), and they do not report fits piling up at that edge.
+  * An independent estimate agrees within their stated factor of two: Hilton et al. 2013 give
+    10.8 × 10¹² M☉ inside R500 on a Chabrier basis, against Menanteau's 13.1 × 10¹² inside r200.
+* The Bullet: Clowe et al. 2006, M/L_I = 2 after Kauffmann et al. 2003, a Kroupa IMF close to Chabrier.
+  They call it an upper limit, since no colour selection was made.
+* Abell 520: no paper gives a stellar M/L for its galaxies. We keep M/L = 2 on F814W light (the
+  Bullet's convention).
+
+**Star masses without the age cap: distant cluster stars are younger (a correction to §20.6).**
+Round 10 suggested the far clusters' stars could be older, and so heavier, than their published fits
+allow. The observations say otherwise, and not through any distance law:
+* at fixed velocity dispersion, cluster ellipticals' rest-frame U − V is 0.24 ± 0.02 mag bluer at
+  z = 0.83 than in Coma (Holden et al. 2010);
+* the median 4000 Å break of massive passive galaxies falls from 1.99 at z = 0.16 to 1.71 at
+  z = 1.02 (Moresco et al. 2012);
+* the fundamental plane gives d log(M/L_B)/dz = −0.555 ± 0.042 for cluster galaxies (van Dokkum & van
+  der Marel 2007; Holden et al. 2010: −0.60; Saglia et al. 2010: −0.54). Its sizes and brightnesses
+  depend on distances, but its trend agrees with the colours.
+
+Distant cluster galaxies' stars are younger and lighter per unit light, so the age cap does not hide
+extra star mass. With u calibrated consistently (§21.3), the far clusters no longer need heavier stars
+(§21.4).
+
+**The IMF of massive ellipticals, for context (and for §21.7):**
+* about 1.7–1.9 × Chabrier (≈ Salpeter) at σ = 250–300 km/s from lensing with dynamics (Treu et al.
+  2010, arXiv:0911.3392: 1.78; Auger et al. 2010, arXiv:1007.2409: 1.4–1.9);
+* 0.95–1.02 × Salpeter from dynamics (Cappellari et al. 2013);
+* about 1.85 × Chabrier from spectral features (Conroy & van Dokkum 2012, arXiv:1205.6473). This
+  method needs neither dark matter nor any cosmology.
+
+### 21.3 X-COP in our own distances, and the companion's speed recalibrated
+
+`code/xcop_static_v11.py` → `run-xcop-static-v11/xcop_static_v11.json`.
+
+The release gives every profile for flat LCDM (H0 = 70, Ω_m = 0.3). At the clusters' redshifts
+(0.047–0.090), at fixed angle and flux, the static law gives:
+* radii and hydrostatic masses × 0.970–1.000;
+* gas × 0.886–0.917;
+* stars × 0.841–0.859.
+
+Temperatures and the stars' Jeans speeds are unchanged. u refitted with a and g_d held:
+
+| X-COP sample | u (km/s) | rms ln(M_hydrostatic/M_predicted) |
+|---|---|---|
+| the release's units, projected stars (rounds 1–10) | 197.4 | 0.227 |
+| our distances, projected stars | 179.6 | 0.227 |
+| the release's units, deprojected stars | 179.4 | 0.221 |
+| **our distances, deprojected stars** | **163.4** | **0.220** |
+
+The stars carry the heat, with weight k = 3σ²/u². Fewer stars at the same speeds must be balanced by a
+slower companion, and the fit gets slightly better.
+
+A joint refit alternates three times: a and g_d on SPARC, where u enters only through the bulges'
+heat, and u on X-COP. It gives:
+
+| | a (m/s²) | g_d (m/s²) | u (km/s) | SPARC | X-COP rms |
+|---|---|---|---|---|---|
+| round 9 (the release's units, projected stars) | 6.561e-11 | 2.262e-10 | 197.4 | 15.85 km/s | 0.227 |
+| **round 11 (our distances, deprojected stars)** | **6.547e-11** | **2.107e-10** | **162.6** | 15.94 km/s | 0.221 |
+
+**Adopted.** `regression/law_config.load_law()` now returns these constants ('round11'); 'round9'
+still loads the old ones. It is the same law, with its three constants measured in the project's own
+distances and on correctly deprojected stars. Two consequences:
+* the reach, u × 13 billion years, becomes 2.16 Mpc instead of 2.62;
+* the fresh companion around stopped gas grows at 166 kpc per billion years instead of 202.
+
+### 21.4 The far collisions, the Bullet Cluster and the strong lenses with the adopted constants
+
+**The far collisions** (`collisions_v10`, static distances, published stars on the Chabrier basis):
+
+| | round 10 (static distances; u = 197, fitted in the standard ones) | round 11 (u = 163, fitted in our distances) |
+|---|---|---|
+| MACS J0025: lensing SE / NW; speeds | z −0.53 / −0.87; 707 km/s (z −2.17) | z −0.65 / −0.97; 665 km/s (z −2.88) |
+| Abell 520: P4, P6, 710 kpc; speeds | −2.11, −2.64, −2.17; rms z 3.18 | **−1.01**, −2.28, **−1.03**; rms z **2.70** |
+| El Gordo: apertures 0.5 / 1 / 1.5 Mpc; speeds NW / SE | −2.12 / −2.08 / −1.19; 917 / 822 km/s | **−1.07 / −1.18** / −0.28; **1,002 / 892** km/s (z −2.15 / −0.98) |
+
+Of the 17 graded checks of these clusters, 12 now pass, 4 are close and 1 fails (round 10: 9, 7, 1).
+So round 10's "the far clusters need 1.4 times their stars" came mostly from mixing conventions. The far
+clusters were in our distances and their stars on one basis, but the companion's speed had been
+calibrated in the standard distances on projected stars.
+
+**MACS J0025 is the exception, for two reasons.**
+* Its stars, now converted to the Chabrier basis, are 1.78 times lighter than published. Its galaxy
+  speeds fall to 665 km/s (z −2.88); with the published masses they would be 804 (z −0.53).
+* Its NW lensing peak moves from the galaxies (59 kpc from them) to the gas (209 kpc; the galaxies
+  lie 231 kpc from the gas). `code/macs_peak_scan_v11.py` → `run-collisions-v10/macs_peak_scan_v11.json`
+  shows why, and how close it is:
+
+  | time since closest approach | stars × 0.56 (Chabrier) | × 0.75 | × 1 (as published) |
+  |---|---|---|---|
+  | 0.26 Gyr | 73 kpc (pass) | 60 | 55 |
+  | 0.35 Gyr | 71 (pass) | 59 | 54 |
+  | 0.5 Gyr (the suite) | **209, at the gas (fail)** | 58 | 54 |
+
+  Along the 231 kpc from the NW galaxies to the gas, the lensing map is a nearly flat ridge. At
+  0.5 Gyr with Chabrier-basis stars, the map at the galaxies is 9% below its value at the gas. A younger collision
+  (≤ 0.35 Gyr; Bradač et al. 2008: closest approach "a few 10⁸ years ago") or 1.33 times the stars
+  returns the peak to the galaxies. The suite keeps grading at 0.5 Gyr, the value fixed in round 8, so
+  this check now fails.
+
+**The Bullet Cluster** (`code/bullet_static_v11.py` → `run-bullet-static-v11/bullet_static_v11.json`).
+At z = 0.296, lengths are × 1.14, gas × 1.08, stars × 0.78, and lensing masses inside a fixed angle
+× 1.18; κ is compared as measured. The suite now grades the Bullet this way:
+
+| | round 9 (standard distances) | round 11 (our distances) | measured, converted |
+|---|---|---|---|
+| stars in the main cluster's outskirts (10¹² M☉) | 6.23 (target 3.9–6.7) | 3.32 | 3.0–5.2 |
+| κ on the main / sub galaxies | 0.675 / 0.140 | 0.715 / **0.259** | ≥ 0.36 ± 0.06 / ≥ 0.20 ± 0.05 |
+| extra κ on the main / sub gas | 0.033 / 0.042 | 0.046 / 0.048 | 0.05 ± 0.06 / 0.02 ± 0.06 |
+| lensing peaks from their galaxies, main / sub | 9 / 16 kpc | 14 / 21 kpc | on the galaxies |
+| mass inside 250 kpc (286 in ours), main (10¹⁴ M☉) | 2.40 (target 2.50–2.80) | 2.83 (z −0.61) | 2.94–3.29 |
+| the same, sub | 0.94 (target 2.00–2.30; z −5.30) | 1.29 (z −4.53) | 2.35–2.70 |
+
+The smaller half gains 37% but still has about half the measured mass inside 286 kpc.
+
+**The six strong lenses**, with the adopted constants:
+* light = matter −0.032 ± 0.023 dex;
+* stars needed 0.445 dex above Chabrier, 1.37–1.85 × Salpeter.
+
+*Correction to §20.3:* our distances make the lenses' stars 1.25 times lighter (1.23–1.27), not 1.48
+times. The number quoted there was the energy-loss-only branch. The lens code itself used the branch
+with arrival-rate stretching throughout, so no result changes. Their lensing masses are 1.08–1.17
+times heavier.
+
+### 21.5 Galaxy lensing in our own distances: it now measures the distance law's scale and the companion's speed
+
+`code/kids_static_v11.py` → `run-kids-static-v11/kids_static_v11.json`. The KiDS lenses lie at mean
+z = 0.25, with sources at an effective z = 0.75, and the paper's distances are flat LCDM
+(Ω_m = 0.2793, H0 = 70). At z = 0.25 our distances give:
+* g_bar × 0.64, which is (1 + z)⁻²: the static law's surface brightness dims as (1 + z)² instead of
+  (1 + z)⁴;
+* g_obs × 0.934, the ratio of critical densities.
+
+Median log10(observed/predicted):
+
+| | all | blue | red | disks (Sérsic n < 2) | bulges (n > 2) | GAMA | gap (obs 0.153 ± 0.04) |
+|---|---|---|---|---|---|---|---|
+| standard distances, round-9 constants | +0.024 | −0.005 | +0.021 | +0.032 | −0.023 | −0.032 | 0.178 |
+| our distances, round-9 constants | +0.098 | +0.077 | +0.092 | +0.107 | +0.048 | +0.043 | 0.181 |
+| **our distances, round-11 constants** | **+0.063** | **+0.077** | +0.040 | **+0.107** | −0.006 | +0.007 | **0.234** |
+
+Mistele et al.'s lensing speeds, spirals: observed ÷ predicted 1.40, 1.32, 1.22, 1.17 from 50 to 300 kpc
+(rms z 4.36); ellipticals 1.09, 0.98, 1.01 (0.95). Two separate things have moved.
+
+**The level: the distance law's scale.** g_bar does not depend on α: the stars and the area both scale
+as 1/α². The critical density, and with it every measured g_obs, scales as α. Holding the constants:
+
+| α (1 + z = e^{αD}) | all | blue | red | disks | bulges | GAMA |
+|---|---|---|---|---|---|---|
+| × 0.8 | −0.034 | −0.020 | −0.057 | +0.010 | −0.103 | −0.090 |
+| × 0.9 | +0.017 | +0.031 | −0.006 | +0.061 | −0.052 | −0.039 |
+| × 1 (adopted) | +0.063 | +0.077 | +0.040 | +0.107 | −0.006 | +0.007 |
+| × 1.1 | +0.104 | +0.119 | +0.081 | +0.149 | +0.035 | +0.049 |
+
+The spirals' excess (+0.077) does not depend on u: their heat weight is small. The whole sample
+centres at α ≈ 0.87 times the adopted value, an "H0-like" scale of 65 instead of 74.6 km/s/Mpc; the
+spirals alone at 0.84 (63), the disks at about 0.78. The adopted α comes from the project's own
+light-transport fit (`research_work/results/joint-light-forward`). SPARC's Hubble-flow distances,
+about half its galaxies, would move with α too, which would change a. So the consistent test is a
+joint one (§21.7). The geometry barely matters here (the "metric" rows of `alpha_scan` sit
+0.004–0.014 dex lower).
+
+**The gap between ellipticals and spirals: the companion's speed.** The red lenses' stars (160 km/s)
+carry heat k = 3σ²/u², which is 2.9 at u = 162.6 and 2.0 at 197.4. The model's gap rises from 0.18 to
+0.234 against the measured 0.153 ± 0.04. The gap does not depend on α. So the clusters (X-COP, with
+correctly counted stars) want a slower companion than single ellipticals do. §21.7 lists the
+candidates, first among them the ellipticals' IMF.
+
+### 21.6 The two static geometries
+
+`code/distance_variants_v11.py` → `run-distance-variants-v11/distance_variants_v11.json`. Both keep
+1 + z = e^{αD} and D_L = (1 + z)D. They differ in how an angle becomes a size:
+* "fixed": D_A = D, the fixed-material transport branch, used since round 10;
+* "metric": D_A = D/(1 + z), the material-coasting geometry of
+  `five_candidate_tests/prior/conformal_action_derivation_derivation.md`, eq. 13.
+
+Each geometry refits its own constants (X-COP deprojected):
+
+| | fixed (adopted) | metric |
+|---|---|---|
+| u; SPARC; X-COP rms | 162.6 km/s; 15.94; 0.221 | 161.2 km/s; 15.94; 0.221 |
+| KiDS all / blue / disks; gap | +0.063 / +0.077 / +0.107; 0.234 | +0.055 / +0.063 / +0.100; 0.233 |
+| Mistele, spirals / ellipticals (rms z) | 4.36 / 0.95 | 4.25 / 0.90 |
+| SLACS: light = matter; stars needed | −0.032 ± 0.023; 1.37–1.85 × Salpeter | +0.000 ± 0.025; 1.24–1.61 × Salpeter |
+| MACS J0025: lensing SE / NW; speeds | −0.65 / −0.97; z −2.88 | −0.72 / −1.09; z −3.43 |
+| Abell 520: P4, P6, 710 kpc; speeds | −1.01, −2.28, −1.03; rms z 2.70 | −1.12, −2.47, −1.43; 2.77 |
+| El Gordo: apertures 0.5 / 1 / 1.5 Mpc; speeds NW / SE | −1.07 / −1.18 / −0.28; z −2.15 / −0.98 | −2.33 / −2.52 / −1.89; z −2.75 / −1.36 |
+| Bullet: κ sub; mass inside 286 kpc, main / sub | 0.259; z −0.61 / −4.53 | 0.117 (z −1.66); z −0.71 / −5.61 |
+
+The galaxy lenses lean slightly (0.01 dex) towards "metric"; the clusters clearly prefer "fixed". The
+fixed geometry stays.
+
+### 21.7 The suite, where this leaves things, and next
+
+**The suite with the adopted constants** (full tier, baseline saved): **57 pass, 9 close, 10 fail** (round 10's baseline:
+58 pass, 11 close, 7 fail).
+* **Improved (5):** Abell 520's clump P4 and its mass inside 710 kpc (close → pass), its galaxy
+  speeds (fail → close); El Gordo's lensing inside 0.5 and 1 Mpc (close → pass).
+* **Regressed (6):** KiDS all (pass → close), blue and disks (pass → fail), the early/late gap
+  (pass → close); Mistele's spirals (close → fail); MACS J0025's NW peak (pass → fail).
+* **Still failing, as before (6):** the five faint dwarfs and the Bullet's smaller half.
+* Nearby tests move by at most a few percent: SPARC 15.85 → 15.94 km/s; X-COP 0.227 → 0.221
+  (held out 0.244 → 0.236); the Sun's speed 211.2 → 210.7 km/s; Cassini's Q2 4.6 → 4.5 × 10⁻²⁷
+  s⁻²; wide binaries at 20,000 AU 1.093 → 1.083 (at 7,000 AU 1.039 → 1.035, inside the locked
+  forecast's window of 1.03–1.05 and 1.08–1.10); the collision stack's β 0.027 → 0.016.
+
+**Where this leaves the first principles.**
+* **Derived:** the ordered companion's rule, from energy conservation plus one stream. The "one stream
+  of everything" rule is excluded not only by the data (§20.5) but by energy conservation.
+* **Required:** the companion's flow has no whirlpools. A dynamical model still has to supply this.
+* **Measured more cleanly:** the companion's speed, u = 162.6 km/s, now in the project's own distances
+  and on correctly counted stars.
+
+**Next:**
+1. **The dynamical toy** of full-speed waves (not built this round). A concrete route: a companion that
+   scatters off itself relaxes towards a flow without whirlpools, as heat does when it diffuses, and
+   such a flow's steady flux follows Newton's field lines. The toy would show whether a local rule
+   gives the curl-free condition of §21.1, graded with the code of §20.5.
+2. **The distance law's scale, from galaxy lensing.** Refit α jointly on KiDS, SPARC's Hubble-flow
+   distances and the light-transport fit that set it.
+3. **The ellipticals' heat.** Clusters want u = 163 km/s, single ellipticals' lensing gap wants about
+   200. Candidates:
+   * the IMF: spectra say massive ellipticals carry 1.7–1.9 times Chabrier's star mass, which would
+     change X-COP's calibration and KiDS's ellipticals together;
+   * the speeds assumed for KiDS's red lenses (160 km/s).
+4. **MACS J0025**: its collision age and star masses decide its NW peak.
+5. **The Bullet's smaller half**, still about half its measured lensing mass.

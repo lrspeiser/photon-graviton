@@ -1,4 +1,11 @@
-"""Clusters: the 12 X-COP hydrostatic mass profiles (the data u was fitted on)."""
+"""Clusters: the 12 X-COP hydrostatic mass profiles (the data u was fitted on).
+
+Since round 11 the profiles are converted from the release's flat-LCDM units (H0 = 70, Omega_m = 0.3) to
+the project's static distance law at each cluster's redshift (code/xcop_static_v11.py): radii and
+hydrostatic masses x D_A ratio, gas x D_L D_A^1.5 ratio, stars x D_L^2 ratio. The release's stellar
+profiles are masses inside a projected radius (Ghizzardi et al. 2021, Sect. 4.1); since round 11 they are
+deprojected first (xcop_static_v11.deproject_xcop). The 'round11' constants were refitted this way; the
+round-3/9 constants were fitted in the release's units with the projected stars."""
 from __future__ import annotations
 import itertools
 import numpy as np
@@ -7,14 +14,25 @@ from checks import make, at_most
 GROUP = 'clusters'
 
 
+def static_clusters(ctx):
+    def build():
+        import json
+        import xcop_static_v11 as XS
+        R = XS.RUN                        # the hot-companion run.py (a bare 'import run' can resolve to another project's)
+        raw = json.loads((R.ROOT / 'research_work/results/path-memory/cl2-inputs-xcop-profiles.json').read_text())['clusters']
+        dep, _ = XS.deproject_xcop(ctx.xcop(), raw)            # round 11: the release's stellar profiles are projected
+        return [XS.to_static(c, raw[c['name']]['header']['z']) for c in dep]
+    return ctx.get('xcop_static', build)
+
+
 def run(law, ctx):
     import run_v3 as R3
     a, lam, u = law['a_code'], law['lam'], law['u_kms']
-    cls = ctx.xcop()
+    cls = static_clusters(ctx)
     ctx.log('X-COP masses')
     res = R3.resid(cls, lambda c: R3.cluster_M3(c, a, u, lam))
     rms = R3.rms(res)
-    out = [make('clusters.xcop_rms', GROUP, 'X-COP: typical mass miss, rms ln(M_hydrostatic/M_predicted)', rms,
+    out = [make('clusters.xcop_rms', GROUP, 'X-COP: typical mass miss, rms ln(M_hydrostatic/M_predicted) (static distances)', rms,
                 crit=at_most(rms, 0.30, 0.45), target='<= 0.30 (hydrostatic masses carry 10-20% bias and error); MOND 1.06, NFW fit 0.10',
                 refs='Ettori et al. 2019; Ghizzardi et al. 2021 (X-COP)')]
     mb = res.mean(0)

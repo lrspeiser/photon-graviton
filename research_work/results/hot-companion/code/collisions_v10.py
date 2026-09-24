@@ -41,9 +41,23 @@ def lcdm(z, H0=70.0, Om=0.3):
     return dict(DA=chi / (1 + z), DL=chi * (1 + z), chi=chi)
 
 
+# Which static geometry turns angles into sizes (round 11). Both share the brightness law D_L = (1 + z) D
+# (energy loss and arrival-rate stretching), with D = ln(1 + z) / ALPHA the path length; they differ in D_A:
+#   'fixed'  (the fixed-material transport branch, adopted since round 10): D_A = D;
+#   'metric' (the material-coasting geometry of five_candidate_tests/prior/conformal_action_derivation_derivation.md,
+#             eq. 13, where rulers co-scale): D_A = D / (1 + z), so that D_L = (1 + z)^2 D_A.
+VARIANT = 'fixed'
+
+
 def static(z):
     D = np.log1p(z) / ALPHA
-    return dict(DA=D, DL=(1 + z) * D, chi=D)
+    DA = D if VARIANT == 'fixed' else D / (1 + z)
+    return dict(DA=DA, DL=(1 + z) * D, chi=D)
+
+
+def static_Dls(zl, zs):
+    Sl, Ss = static(zl), static(zs)
+    return (Ss['DA'] - Sl['DA']) if VARIANT == 'fixed' else (Ss['chi'] - Sl['chi']) / (1 + zs)
 
 
 def factors(z, zs, ref=(70.0, 0.3)):
@@ -51,7 +65,7 @@ def factors(z, zs, ref=(70.0, 0.3)):
     L, S = lcdm(z, *ref), static(z)
     Ls, Ss = lcdm(zs, *ref), static(zs)
     lens_L = L['DA'] * Ls['DA'] / ((Ls['chi'] - L['chi']) / (1 + zs))      # flat LCDM: D_ls = (chi_s - chi_l)/(1 + z_s)
-    lens_S = S['DA'] * Ss['DA'] / (Ss['DA'] - S['DA'])                     # Euclidean
+    lens_S = S['DA'] * Ss['DA'] / static_Dls(z, zs)                         # Euclidean (or the metric variant)
     return dict(size=S['DA'] / L['DA'], stars=(S['DL'] / L['DL']) ** 2,
                 gas=(S['DL'] / L['DL']) * (S['DA'] / L['DA']) ** 1.5, lens=lens_S / lens_L,
                 kpc_per_arcsec_lcdm=L['DA'] * 1e3 / 206264.806, kpc_per_arcsec_static=S['DA'] * 1e3 / 206264.806, z=z, z_source=zs,
@@ -77,6 +91,19 @@ CONVENTIONS = dict(
     macs0025=dict(ref=(70.0, 0.3), zs=1.4),
     abell520=dict(ref=(70.0, 0.3), zs=None, beta_clumps=0.73, beta_710=0.59),
     el_gordo=dict(ref=PLANCK15, zs=1.31, aperture_Mpc=(0.5, 1.0, 1.5), aperture_M=(5.8e14, 14.9e14, 20.1e14), aperture_err=0.12))
+
+
+# The stars' IMF basis (round 11). The law's u is calibrated on X-COP, whose stellar masses assume a Chabrier IMF
+# (Ghizzardi et al. 2021), so every star mass the law is compared with should be on that basis. MACS J0025's
+# masses use M/L_K = 0.74 after Drory et al. (2004), whose masses assume a Salpeter IMF (the IMF is not stated by
+# Bradac et al. 2008; inferred in the round-11 literature audit): x 10^-0.25 to Chabrier, the convention of the
+# SLACS code (Auger et al. 2009). El Gordo (Menanteau et al. 2012) is Chabrier; Abell 520 and the Bullet use
+# M/L = 2 after Clowe et al. 2006, who cite Kauffmann et al. 2003 (Kroupa, close to Chabrier).
+CHABRIER_BASIS = dict(macs0025=10 ** -0.25, abell520=1.0, el_gordo=1.0)
+
+
+def chabrier_basis(name):
+    return CHABRIER_BASIS.get(name, 1.0)
 
 
 def lens_factor(name, which='main'):

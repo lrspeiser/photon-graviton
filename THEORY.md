@@ -83,6 +83,26 @@
 >     out 20–29% lighter. With 1.4× the stars in all three: 63 / 7 / 6. El Gordo prefers 1.6–2.
 >     Older stars than the Big-Bang timeline allows would weigh 1.3–1.7× more for their light.
 >     SLACS light = matter holds (−0.012 dex); its stars must be 1.44–1.95 × Salpeter.
+> * **Round 11 (§21): energy bookkeeping, the stars audited, everything in our own distances.**
+>   * Derived: a steady, lossless (div J = ℓρ), whirl-free (curl J = 0) companion that matter
+>     reads as one stream has J = (ℓ/4πG)(−g_N). So its intensity is |g_N| and the pull ∝ √|g_N|:
+>     round 3's rule for ordered matter. "One stream of everything" (S_N) carries more power out
+>     of a closed surface than the matter inside emits (uniform sphere at 0.25 R: 11.8×; the Milky
+>     Way model at 4 kpc: 1.70×), so it is excluded by energy conservation as well as by the data.
+>   * Dials through the family I = w|g_N| + (1 − w)S_N + hS + (1 − h)|g_hot|,
+>     extra = release·√(aI)·D^γ: SPARC demands w = 1 (every resampling); both demand γ ≤ 0.1;
+>     X-COP demands h = 1 (every resampling; h = 0 gives rms 0.288 with u 97 km/s).
+>   * Audit: the X-COP release's stellar profiles are projected (cylinder) masses (Ghizzardi et
+>     al. 2021, Sect. 4.1); rounds 1–10 used them as spherical, overstating the stars 1.3× at R500.
+>     Deprojected, and with the profiles in the static distances, u = 162.6 km/s (joint refit:
+>     a = 6.547 × 10⁻¹¹, g_d = 2.107 × 10⁻¹⁰ m/s²; SPARC 15.94 km/s, X-COP 0.221). **Adopted.**
+>     MACS J0025's stars were Salpeter-based (Drory et al. 2004), now × 10^−0.25. Distant cluster
+>     stars are younger (bluer, weaker 4000 Å breaks, M/L falling with z), so the age cap hides no
+>     mass.
+>   * Suite 57 / 9 / 10 (round 10: 58 / 11 / 7). The far clusters recover (12 / 4 / 1 of 17,
+>     from 9 / 7 / 1); galaxy lensing (KiDS, Mistele) in the static distances now reads the
+>     distance law's scale (level ∝ α; centred near 0.87 α) and u (the early/late gap: 0.234
+>     against 0.153 ± 0.04).
 
 
 ## Hot-companion gravity: the current theory (round 3, 23 September 2026; round 4 consequence added)
@@ -237,6 +257,22 @@ results README §18):
   cancel (SPARC), scrambled companion adds in full (X-COP), and the phase must turn at the full
   rate k (the local form).
 
+### Round 11: the ordered rule from energy conservation, and the constants in our own distances
+
+* **Energy bookkeeping.** In a steady state the companion's energy flux obeys div J = ℓρ. If matter
+  feels the companion's full pull only where it passes as one stream at the full phase rate (the
+  local form of round 10), its energy density is |J|/u and the pull ∝ √|J|. With curl J = 0,
+  J = (ℓ/4πG)(−g_N) is unique, so the pull is √(a|g_N|) along ĝ_N, the ordered part of round 3,
+  with a = 2ℓ/u. The curl-free condition is the one input a dynamical model must still supply.
+* **The data's tolerance** (constants refitted at every point, 400 bootstrap resamplings):
+  w (ordered cancellation) = 1, SPARC 18.89 → 15.94 km/s from w = 0 to 1; γ (dilution) ≤ 0.1,
+  SPARC 15.94 → 27.21 and X-COP 0.221 → 0.505 from γ = 0 to 1; h (heat unsigned) = 1, X-COP
+  0.288 → 0.221 from h = 0 to 1.
+* **Constants in the project's static distances, X-COP stars deprojected:** a = 6.547 × 10⁻¹¹
+  m/s², g_d = 2.107 × 10⁻¹⁰ m/s² (λ = 3.22), u = 162.6 km/s (924 half-splits: 148–178), so
+  ℓ = au/2 = 5.3 × 10⁻⁶ W/kg, the reach u × 13 Gyr = 2.16 Mpc and the release length's travel
+  time 875 years. SPARC 15.94 km/s; X-COP rms 0.221.
+
 ### What follows
 
 ```
@@ -247,12 +283,14 @@ around each emitter (round 9):   extra → R(r) · extra ,   R = 1 − exp(−r/
 round, settled systems:   g = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) )
 ```
 
-* **Constants,** fitted once:
-  * a = 6.56 × 10⁻¹¹ m/s² (galaxies);
-  * g_d = 2.26 × 10⁻¹⁰ m/s² (galaxies);
-  * u = 197 km/s (clusters).
-  * Therefore ℓ = 6.5 × 10⁻⁶ W/kg.
+* **Constants,** fitted once (round 11: in the project's own distances, X-COP stars deprojected):
+  * a = 6.55 × 10⁻¹¹ m/s² (galaxies);
+  * g_d = 2.11 × 10⁻¹⁰ m/s² (galaxies);
+  * u = 163 km/s (clusters).
+  * Therefore ℓ = 5.3 × 10⁻⁶ W/kg.
   * Round 9: the release length L = 0.15 pc (the Solar System; the minimum Cassini allows).
+  * Rounds 3–10 used a = 6.56 × 10⁻¹¹, g_d = 2.26 × 10⁻¹⁰ and u = 197 km/s, fitted in the X-COP
+    release's ΛCDM units on its projected stellar profiles.
 * **Superseded from rounds 1–2:**
   * u = 874 km/s with hot gas;
   * the pull along ĝ_N;
@@ -262,7 +300,7 @@ round, settled systems:   g = g_N + exp(−|g_N|/g_d) · √( a (|g_N| + S) )
 ### MOND is the cold limit, derived rather than assumed
 
 With no free-streaming heat, the law becomes the QUMOND form with
-`ν(y) = 1 + exp(−y/λ)/√y` and λ = 3.45:
+`ν(y) = 1 + exp(−y/λ)/√y` and λ = 3.22 (3.45 with the round-3 constants):
 * **a₀ = 2ℓ/u.**
 * The closest published function is RAR-exponential, 0.030 dex away.
 
@@ -273,6 +311,7 @@ and collisions defy it because the heat rides with the galaxies, not the gas.
 
 | Test | Result |
 |---|---|
+| **Round 11 (adopted constants; our distances)** | suite 57 pass, 9 close, 10 fail. SPARC 15.94 km/s; X-COP 0.221 (held-out 0.236); KiDS all / blue / red +0.063 / +0.077 / +0.040 dex, gap 0.234 (obs 0.153); SLACS light = matter −0.032 ± 0.023, stars 1.37–1.85 × Salpeter; Bullet κ 0.715 / 0.259, masses inside 286 kpc 2.83 (main, obs 2.94–3.29) and 1.29 (sub, obs 2.35–2.70) × 10¹⁴; far clusters 12 / 4 / 1 of 17; wide binaries 1.035 (7,000 AU) and 1.083 (20,000 AU); Cassini 4.5 × 10⁻²⁷ s⁻². The rows below are the round-3 to round-10 record. |
 | 149 galaxies | 15.85 km/s, against MOND's 16.13 |
 | 12 clusters | 0.227 (held-out 0.244; stellar speeds from the law alone 0.329), against MOND's 1.062 |
 | Bullet Cluster | peaks on the galaxies; gas residuals 0.08 and 0.10 (obs 0.05 ± 0.06, 0.02 ± 0.06). Clowe et al.'s κ are lower bounds (their statement): model 0.61 and 0.49 against floors 0.36 and 0.20. **Round 5, calibrated masses inside 250 kpc** (published star masses, outer stars from the galaxy speed, subcluster 1:3 before the collision): main 2.42 (obs 2.5 ± 0.1, 2.8 ± 0.2), sub 1.93 (obs 2.0 ± 0.2, 2.3 ± 0.2) × 10¹⁴ M☉. At 1:8 the sub is 1.04, half the measured. |

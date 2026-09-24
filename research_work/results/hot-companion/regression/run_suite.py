@@ -99,7 +99,7 @@ def report_md(payload):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument('--law', default=None, help="candidate name in candidates/, a JSON path, or 'round3' (default: the adopted law, round 9)")
+    ap.add_argument('--law', default=None, help="candidate name in candidates/, a JSON path, 'round9' or 'round3' (default: the adopted law, round 11)")
     ap.add_argument('--tier', choices=('quick', 'full'), default='quick')
     ap.add_argument('--only', default='', help='comma-separated groups (machinery, galaxies, clusters, lensing, milky_way, dwarfs, precision, collisions)')
     ap.add_argument('--baseline', type=Path, default=HERE / 'baseline.json')

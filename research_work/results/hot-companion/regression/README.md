@@ -5,9 +5,10 @@ that any change to the law, its constants or the code can be checked against eve
 
 ```bash
 cd research_work/results/hot-companion/regression
-python run_suite.py                               # the adopted law (round 9), quick tier (about 1 minute)
+python run_suite.py                               # the adopted law (round 11), quick tier (about 1 minute)
 python run_suite.py --tier full                   # + the colliding clusters (about 20 minutes)
 python run_suite.py --law no_hold                 # a candidate law from candidates/
+python run_suite.py --law round9                  # the same law with the round-3 constants (before round 11)
 python run_suite.py --law round3                  # the law before round 9 (released at once)
 python run_suite.py --only dwarfs,precision       # some groups only
 python run_suite.py --tier full --save-baseline   # make this run the new baseline
@@ -18,24 +19,29 @@ The runner prints a scoreboard and writes `runs/<law>-<tier>/results.json` and `
 `baseline.json`, or crashed. Each run records the commit it came from, marked `+changes` when
 tracked files differ from it.
 
-**The baseline** (`baseline.json`) is the adopted law, round 9, on the full tier: 89 checks,
-62 pass, 8 close, 6 fail and 13 tracked. It changes only when a change is adopted or a test is
-added (RULES.md §12).
+**The baseline** (`baseline.json`) is the adopted law, round 11, on the full tier: 89 checks,
+57 pass, 9 close, 10 fail and 13 tracked. It changes only when a change is adopted or a test is
+added (RULES.md §12). Earlier baselines: round 9, 62 / 8 / 6; round 10 (the far collisions and
+SLACS in the static distances), 58 / 11 / 7.
 
 ## The law under test
 
 `law_config.py` turns a candidate file into one dictionary that every test reads. Nothing in the
-suite reads constants from anywhere else. The adopted law (round 9) is the round-3 constants with
-gradual release over 30,000 AU (0.15 pc), adopted for Cassini. A candidate is a small JSON file in
-`candidates/`, a change to the adopted law:
+suite reads constants from anywhere else. The adopted law (round 11) is the round-3 law with
+gradual release over 30,000 AU (0.15 pc), adopted for Cassini in round 9, and its three constants
+refitted in round 11 in the project's own (static) distances with X-COP's stellar profiles
+deprojected: a = 6.547 × 10⁻¹¹ m/s², g_d = 2.107 × 10⁻¹⁰ m/s², u = 162.6 km/s
+(`run-xcop-static-v11`; results README §21.3). `--law round9` loads the round-3 constants
+(fitted in the release's ΛCDM units on projected stars). A candidate is a small JSON file in
+`candidates/`, a change to a base law:
 
-| Key | Meaning | Default (the adopted law, round 9) |
+| Key | Meaning | Default |
 |---|---|---|
 | `gd_scale` | the release scale g_d multiplied by this | 1 |
 | `release_length_au` | the companion is released gradually over this length around each emitter, R(r) = 1 − e^(−r/L) | 30,000 AU (adopted in round 9; `round3` has 0, released at once) |
 | `external_hold` | how strongly a subsystem's companion follows an outside galaxy's pull (dwarfs, the Sun, wide binaries) | 1 (fully) |
 | `refit` | constants refitted on their home data after the change: `"a"` on the 149 SPARC galaxies (g_d held), `"u"` on the 12 X-COP clusters | none |
-| `a_SI`, `lam`, `u_kms`, `base` | explicit constants, or another `results.json` to start from | run-v3 |
+| `a_SI`, `lam`, `u_kms`, `base` | explicit constants; `base` 'round3' (the round-3 constants, as the rounds 7–9 candidates use), 'round11' (the adopted ones) or another `results.json` | 'round3' |
 
 Candidates now in the folder:
 
@@ -86,9 +92,11 @@ standard errors, or its value over a limit. Against the baseline each check is m
 | precision | planets, S2, the Double Pulsar, light bending, Cassini's Q2; wide binaries (pass between the two published analyses, 1.0–1.5) | Hees et al. 2014; Chae 2023–24; Banik et al. 2024 |
 | collisions (full) | the Bullet Cluster (round-5 case): outer stars, lensing strengths, gas residuals, peak positions, masses inside 250 kpc; the 72-collision stack (β); MACS J0025.4−1222 (lensing inside 300 kpc, peak positions, galaxy speeds); Abell 520 (six clumps inside 150 kpc, 710 kpc, galaxy speeds per clump); El Gordo (aperture lensing masses inside 0.5 and 1 Mpc, galaxy speeds; the SE peak's offset from the cool core tracked); the three in the project's static distances since round 10 | Clowe et al. 2006; Harvey et al. 2015; Bradač et al. 2008; Jee et al. 2014; Clowe et al. 2012; Mahdavi et al. 2007; Girardi et al. 2008; Menanteau et al. 2012; Kim et al. 2021; `code/collisions_v8.py`, `code/collisions_v10.py` |
 
-Every test calls the same code that produced the published numbers (`../code/`); the baseline
-reproduces them to the last digit (SPARC 15.85 km/s, X-COP 0.227, KiDS +0.024 / −0.005 / +0.021,
-Bullet κ 0.675 and 0.14, collision stack β 0.027).
+Every test calls the same code that produced the published numbers (`../code/`); with
+`--law round9` the suite reproduces the round-9 numbers for the tests whose conventions did not
+change (SPARC 15.85 km/s, collision stack β 0.027). The round-11 baseline gives SPARC 15.94 km/s,
+X-COP 0.221 (static distances, deprojected stars), KiDS +0.063 / +0.077 / +0.040 (static
+distances), Bullet κ 0.715 and 0.259, collision stack β 0.016.
 
 ## Adding a test
 
@@ -150,5 +158,23 @@ although it still needs a physical reason (results README §19.2).
   is a far cluster whose stars came out 20–29% lighter. Their star masses still carry the
   Big-Bang age cap or fixed light-to-mass ratios; with 1.4 times the stars the tally would be
   63 / 7 / 6 (results README §20.6).
-* The Bullet Cluster, KiDS, Mistele and X-COP comparisons still use the papers' ΛCDM
-  conversions.
+* Round 11 moved the rest (results README §21):
+  * X-COP (`t_clusters.static_clusters`): profiles converted to the static distances
+    (`code/xcop_static_v11.py`), with the stellar profiles deprojected. The release's profiles are
+    projected (cylinder) masses, which rounds 1–10 used as spherical ones;
+  * KiDS and Mistele (`t_lensing`): g_bar × stars/size², g_obs × Σ_crit(static)/Σ_crit(ΛCDM), at
+    z_l = 0.25 with sources at 0.75 (`code/kids_static_v11.py`);
+  * the Bullet Cluster (`t_collisions.bullet`): inputs and targets converted at z = 0.296
+    (`code/bullet_static_v11.py`);
+  * MACS J0025's star masses put on X-COP's (Chabrier) basis, × 10^−0.25
+    (`collisions_v10.chabrier_basis`).
+
+  With the constants refitted in these conventions (the adopted law), the tally is 57 / 9 / 10
+  against round 10's 58 / 11 / 7. Five grades improved: Abell 520's P4, its mass inside 710 kpc
+  and its galaxy speeds; El Gordo inside 0.5 and 1 Mpc. Six regressed: KiDS all (close), blue
+  and disks (fail) and the early/late gap (close); Mistele's spirals (fail); MACS J0025's NW
+  lensing peak (fail; `code/macs_peak_scan_v11.py`: at 0.5 Gyr with Chabrier-basis stars the NW
+  side is a flat ridge from the galaxies to the gas, highest at the gas; at ≤ 0.35 Gyr, or with
+  1.33 times the stars, the peak returns to the galaxies).
+  The KiDS level scales with the static distance law's α (Σ_crit ∝ α; g_bar does not depend on
+  α), and the gap with u.

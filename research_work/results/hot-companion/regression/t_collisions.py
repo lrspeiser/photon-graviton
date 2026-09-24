@@ -20,67 +20,40 @@ def bullet_setup(ctx):
 
 
 def bullet(law, ctx, n=192, dx=15.0):
-    import bullet_v3 as B, bullet_v4 as V, bullet_main_v5 as BM, collisions_v4 as C4
-    pos, comps0, scrit = bullet_setup(ctx)
-    gas = dict(comps0['gas_main'], centre='main_bcg')
-    cm = copy.deepcopy(comps0)                   # published star masses (M/L_I = 2)
-    inner = dict(cm['st_main'])
-    target = BM.OBS_SIGMA[0]
-
-    def los(M_out):
-        stars = [inner] + ([BM.fixed_outer(inner, M_out, 800.0)] if M_out > 0 else [])
-        r, sr, g, dms = BM.own_sigma([gas], stars, law)
-        return BM.sigma_los_aperture(r, dms, sr, 0.0, BM.BARRENA_RAP), (r, sr, stars)
-
-    ctx.log('Bullet: outer stars that give the measured galaxy speed (1,249 km/s)')
-    lo, hi = 11.0, 13.8
-    if los(10 ** lo)[0] > target:
-        M_out = 0.0
-    else:
-        for _ in range(40):
-            mid = 0.5 * (lo + hi)
-            lo, hi = (mid, hi) if los(10 ** mid)[0] < target else (lo, mid)
-        M_out = 10 ** (0.5 * (lo + hi))
-    _, (r, sr, stars) = los(M_out)
-    ghost_gas, sub_sats, pre = V.pre_collision_models(cm, 8.0, 0.07, 150.0)
-    rs_s, ss_s, _ = V.own_sigma_multi([dict(cm['gas_sub']), ghost_gas['gas_atm_ghost']], [cm['st_sub'], sub_sats], law)
-    cur = dict(cm); cur['st_main'] = stars[0]
-    ghost_stars = [(dict(stars[0]), (r, sr))]
-    if len(stars) > 1:
-        cur['st_main_outer'] = stars[1]; ghost_stars.append((dict(stars[1]), (r, sr)))
-    ghost_stars += [(dict(cm['st_sub']), (rs_s, ss_s))] + ([(sub_sats, (rs_s, ss_s))] if sub_sats['M'] > 0 else [])
-    fresh = 30.0 * law['u_kms'] / U0
-    ctx.log(f'Bullet: lensing map ({n}^3 cells of {dx:g} kpc)')
-    x, y, Se, Sb = V.kappa_map_v4(cur, ghost_gas, ghost_stars, pos, law, n=n, dx=dx, fresh_kpc=fresh)
-    kap = Se / scrit
-    dec = B.clowe_decomposition(x, y, kap, pos)
-    pk = C4.refined_peaks(x, y, kap, pos, smooth_kpc=40.0)
-    mp = min(pk, key=lambda d: d['dist_main_bcg']); sp = min(pk, key=lambda d: d['dist_sub_bcg'])
-    m250 = {w: BM.mass_within(x, y, kap, pos[f'{w}_bcg'], 250.0, scrit) for w in ('main', 'sub')}
-    sep = {w: float(np.linalg.norm(pos[f'{w}_plasma'] - pos[f'{w}_bcg'])) for w in ('main', 'sub')}
-    ref = 'Clowe et al. 2006; Bradac et al. 2006; Paraficz et al. 2016; Barrena et al. 2002'
-    out = [make('bullet.outer_stars', GROUP, 'Bullet main cluster: outer stars needed for the galaxy speed', M_out,
-                crit=range_check(M_out, 3.9e12, 6.7e12, 0.7e12), unit='Msun',
-                target='3.9-6.7 x 10^12 (Legacy Survey star count, round 6: 85-103% of the round-5 total)', refs=ref),
-           make('bullet.kappa_main', GROUP, 'Bullet main cluster: lensing strength (kappa) on its galaxies', dec['main_bcg'],
-                crit=floor_check(dec['main_bcg'], 0.36, 0.06), target='at least 0.36 +- 0.06 (a stated lower bound)', refs=ref),
-           make('bullet.kappa_sub', GROUP, 'Bullet subcluster: lensing strength (kappa) on its galaxies', dec['sub_bcg'],
-                crit=floor_check(dec['sub_bcg'], 0.20, 0.05), target='at least 0.20 +- 0.05 (a stated lower bound)', refs=ref),
-           make('bullet.gas_main', GROUP, 'Bullet: leftover lensing on the main cluster\'s gas', dec['main_plasma'],
-                crit=z_check(dec['main_plasma'], 0.05, 0.06), target='0.05 +- 0.06', refs=ref),
-           make('bullet.gas_sub', GROUP, 'Bullet: leftover lensing on the subcluster\'s gas', dec['sub_plasma'],
-                crit=z_check(dec['sub_plasma'], 0.02, 0.06), target='0.02 +- 0.06', refs=ref)]
-    for w, p in (('main', mp), ('sub', sp)):
-        d = p[f'dist_{w}_bcg']
+    """The round-5 case in the project's static distance law (code/bullet_static_v11.py): lengths x size,
+    gas x gas, stars x stars (also the outer stars' target from the star count), lensing masses inside a
+    fixed angle x lens; kappa is an observable and is compared as measured. Round 10 and earlier graded the
+    papers' flat-LCDM units."""
+    import bullet_static_v11 as BS
+    import collisions_v10 as C10
+    ctx.log('Bullet: outer stars, then the lensing map (static distances)')
+    f = C10.factors(0.296, 1.0, (70.0, 0.3))
+    r = BS.run_bullet(law, dict(f), n=n, dx=dx)
+    ch = r['checks']; fs, fst, fl = f['size'], f['stars'], f['lens']
+    ref = 'Clowe et al. 2006; Bradac et al. 2006; Paraficz et al. 2016; Barrena et al. 2002; converted to the static law'
+    M_out = ch['outer_stars']['value']
+    out = [make('bullet.outer_stars', GROUP, 'Bullet main cluster: outer stars needed for the galaxy speed (static distances)', M_out,
+                crit=range_check(M_out, 3.9e12 * fst, 6.7e12 * fst, 0.7e12 * fst), unit='Msun',
+                target=f'{3.9 * fst:.1f}-{6.7 * fst:.1f} x 10^12 (Legacy Survey star count, round 6, converted)', refs=ref),
+           make('bullet.kappa_main', GROUP, 'Bullet main cluster: lensing strength (kappa) on its galaxies', ch['kappa_main']['value'],
+                crit=floor_check(ch['kappa_main']['value'], 0.36, 0.06), target='at least 0.36 +- 0.06 (a stated lower bound)', refs=ref),
+           make('bullet.kappa_sub', GROUP, 'Bullet subcluster: lensing strength (kappa) on its galaxies', ch['kappa_sub']['value'],
+                crit=floor_check(ch['kappa_sub']['value'], 0.20, 0.05), target='at least 0.20 +- 0.05 (a stated lower bound)', refs=ref),
+           make('bullet.gas_main', GROUP, 'Bullet: leftover lensing on the main cluster\'s gas', ch['gas_main']['value'],
+                crit=z_check(ch['gas_main']['value'], 0.05, 0.06), target='0.05 +- 0.06', refs=ref),
+           make('bullet.gas_sub', GROUP, 'Bullet: leftover lensing on the subcluster\'s gas', ch['gas_sub']['value'],
+                crit=z_check(ch['gas_sub']['value'], 0.02, 0.06), target='0.02 +- 0.06', refs=ref)]
+    for w in ('main', 'sub'):
+        d = ch[f'peak_{w}']['value']
+        lim = float(ch[f'peak_{w}']['target'].split('<=')[1].split('kpc')[0])
         out.append(make(f'bullet.peak_{w}', GROUP, f'Bullet {w}: lensing peak distance from its galaxies', d,
-                        crit=at_most(d, 0.25 * sep[w], 0.5 * sep[w]), unit='kpc',
-                        target=f'within a quarter of the galaxy-gas separation ({sep[w]:.0f} kpc)'))
-    out.append(make('bullet.m250_main', GROUP, 'Bullet main cluster: lensing mass inside 250 kpc', m250['main'],
-                    crit=range_check(m250['main'], 2.5e14, 2.8e14, 0.15e14), unit='Msun', target='2.5-2.8 x 10^14 (Paraficz 2016; Bradac 2006)'))
-    out.append(make('bullet.m250_sub', GROUP, 'Bullet subcluster: lensing mass inside 250 kpc', m250['sub'],
-                    crit=range_check(m250['sub'], 2.0e14, 2.3e14, 0.2e14), unit='Msun', target='2.0-2.3 x 10^14 (Paraficz 2016; Bradac 2006)',
-                    note='the subcluster\'s size before the collision (1:8 here) is the main uncertainty'))
-    ctx.shared['bullet_map'] = dict(x=x, y=y, kappa=kap)
+                        crit=at_most(d, lim, 2 * lim), unit='kpc', target=f'within a quarter of the galaxy-gas separation ({4 * lim:.0f} kpc)'))
+    for w, lo, hi, e in (('main', 2.5e14, 2.8e14, 0.15e14), ('sub', 2.0e14, 2.3e14, 0.2e14)):
+        v = ch[f'm250_{w}']['value']
+        out.append(make(f'bullet.m250_{w}', GROUP, f'Bullet {"main cluster" if w == "main" else "subcluster"}: lensing mass inside {250 * fs:.0f} kpc (250 in LCDM units)', v,
+                        crit=range_check(v, lo * fl, hi * fl, e * fl), unit='Msun',
+                        target=f'{lo * fl / 1e14:.2f}-{hi * fl / 1e14:.2f} x 10^14 (Paraficz 2016; Bradac 2006; converted)',
+                        note='the subcluster\'s size before the collision (1:8 here) is the main uncertainty' if w == 'sub' else ''))
     return out
 
 
