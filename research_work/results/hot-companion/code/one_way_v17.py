@@ -20,6 +20,7 @@ receiver is its lead times the wave's amplitude, so R(sigma, r) = lead(sigma, r)
 
     python code/one_way_v17.py --output run-rhythm-budget-v17/one_way_v17.json [--processes 3]
     python code/one_way_v17.py --set mass --output run-rhythm-budget-v17/one_way_mass_v17.json
+    python code/one_way_v17.py --set order --output run-rhythm-budget-v17/one_way_order_v17.json
 """
 from __future__ import annotations
 import os
@@ -59,10 +60,11 @@ def geometry(seed, q, Ns=48, Rb=3.0):
     return x, dl, M
 
 
-def directional(M, x, eps=0.0, core=0.0):
+def directional(M, x, eps=0.0, core=0.0, order=None):
     """M with the inward part multiplied by eps: j receives from l fully when l is nearer the centre (or both lie inside
-    the core), and eps times otherwise."""
-    r = np.linalg.norm(x, axis=1); N = len(x)
+    the core), and eps times otherwise. order: a rank for each piece to use in place of its distance from the centre
+    (e.g. a random one-way order among the sources, the receivers after them)."""
+    r = np.linalg.norm(x, axis=1) if order is None else np.asarray(order, float); N = len(x)
     w = np.where(r[:, None] > r[None, :], 1.0, eps)
     if core > 0:
         inside = r < core
@@ -74,11 +76,16 @@ def directional(M, x, eps=0.0, core=0.0):
 def run(args):
     name, seed, k, eps, core = args[:5]
     Ns = args[5] if len(args) > 5 else 48
+    random_order = len(args) > 6 and args[6] == 'random order'
     t0 = time.time()
     st = rp.STRUCTURES[name]
     q = rp.q_for_k(st, k, MAIN['gamma0']) if k > 0 else 0.0
     x, dl, M = geometry(seed, q, Ns=Ns, Rb=3.0 * (Ns / 48) ** (1 / 3))
-    M = directional(M, x, eps, core)
+    order = None
+    if random_order:                                                # a random one-way order among the sources
+        rr = np.linalg.norm(x, axis=1)
+        order = np.concatenate([np.random.default_rng(seed + 77).permutation(Ns).astype(float), 1e3 + rr[Ns:]])
+    M = directional(M, x, eps, core, order)
     N = len(x)
     p = dict(om.PIECE, **MAIN['piece']); w0, a = steady_amplitude(p)
     C, Fs, Bsum, parts = rp.reduce(M, dl, st)
@@ -101,7 +108,8 @@ def run(args):
     rh = (phi - ph0) / ((nstep - 1 - nb) * dt)
     lead /= cnt; amp /= cnt
     shell = lambda v: [float(v[4 * i:4 * i + 4].mean()) for i in range(len(RADII))]
-    return dict(structure=name, seed=seed, k=k, q=float(q), eps=eps, core=core, Ns=Ns, spread=float(rh[:Ns].std()),
+    return dict(structure=name, seed=seed, k=k, q=float(q), eps=eps, core=core, Ns=Ns, order='random' if random_order else 'radius',
+                spread=float(rh[:Ns].std()),
                 common_rhythm=float(rh[:Ns].mean()), receivers_rhythm=shell(rh[Ns:]), own_offset_spread=float(omv[:Ns].std()),
                 lead_by_radius=shell(lead), wave_by_radius=shell(amp), seconds=time.time() - t0)
 
@@ -114,7 +122,9 @@ def main():
                     "square root of the number of pieces (power in proportion to mass) or faster")
     args = ap.parse_args(); args.output.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.monotonic()
-    if args.set == 'mass':
+    if args.set == 'order':
+        jobs = [('single', sd, k, 0.0, 0.0, 48, 'random order') for sd in (1, 2, 3) for k in (0.0, 8.0, 16.0)]
+    elif args.set == 'mass':
         jobs = [('single', sd, k, eps, 0.0, Ns) for eps in (1.0, 0.0) for Ns in (24, 48, 96) for sd in (1, 2, 3) for k in (0.0, 8.0)]
     else:
         variants = [(1.0, 0.0), (0.5, 0.0), (0.3, 0.0), (0.1, 0.0), (0.0, 0.0), (0.0, 1.5)]
