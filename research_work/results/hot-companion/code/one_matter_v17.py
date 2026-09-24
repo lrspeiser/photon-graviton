@@ -27,6 +27,8 @@ and (step C) the pull on receivers at several distances, sources of several size
     python code/one_matter_v17.py --set parity --output run-one-matter-v17/parity.json [--processes 3]
     python code/one_matter_v17.py --set best --output run-one-matter-v17/best.json
     python code/one_matter_v17.py --set distance --output run-one-matter-v17/distance.json
+    python code/one_matter_v17.py --set oneway_distance --output run-one-matter-v17/oneway_distance.json
+    python code/one_matter_v17.py --set oneway_lowf --output run-one-matter-v17/oneway_lowf.json
     python code/one_matter_v17.py --set mass --output run-one-matter-v17/mass.json
     python code/one_matter_summary_v16.py run-one-matter-v17/parity.json
 """
@@ -42,7 +44,8 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from shared_wave_v16 import coupling, far_field, ball_min_sep, OMEGA   # noqa: E402
 from one_matter_v16 import PIECE, sphere_points                        # noqa: E402
-from rhythm_protect_v17 import STRUCTURES, q_for_k                     # noqa: E402
+from rhythm_protect_v17 import STRUCTURES as _STRUCTURES, EXTRA, q_for_k   # noqa: E402
+STRUCTURES = dict(_STRUCTURES, **EXTRA)
 
 MIX = dict(even=(-2.0, -2.0), odd=(2.0j, -2.0j))       # (into the family, back onto s), times c_f delta
 
@@ -110,6 +113,16 @@ def simulate(cfg):
     p = dict(PIECE, **cfg.get('piece', {}))
     st = STRUCTURES[cfg['structure']]
     mat = Matter(x, g0, p, st, Delta)
+    if cfg.get('one_way') is not None:
+        # the hypothesis of code/one_way_v17.py in the full model: the wave carried from piece l to piece j is kept when
+        # l is nearer the centre than j, times eps otherwise (each piece's own self-coupling kept). The pieces then no
+        # longer exchange energy and momentum with the wave alone: what they give it, Im(z^dagger M z), is shared
+        # between the outgoing wave and the flow that carries it, and the recoil of the upstream pieces is taken up by
+        # the flow. Both are booked as "to the wave and its flow".
+        r = np.linalg.norm(x, axis=1)
+        wgt = np.where(r[:, None] > r[None, :], 1.0, cfg['one_way']); np.fill_diagonal(wgt, 1.0)
+        mask = np.kron(wgt, np.ones((4, 4)))
+        mat.M = mat.M * mask; mat.dM = mat.dM * mask[None]; mat.Gam = mat.M.imag
     w0 = 2 * mat.lam / p['G']
     amp0 = np.sqrt((p['W0'] * (1 - w0) - p['g_par'] * (1 + w0)) / (2 * p['G']))
     s = amp0 * np.exp(1j * rng.uniform(0, 2 * np.pi, N))
@@ -129,6 +142,7 @@ def simulate(cfg):
     acc = dict(src_out=0.0, src_out_cold=0.0, src_bright=0.0, pull=0.0, pull_s=0.0, pull_B=0.0, lead=0.0, fed=0.0,
                amp_r=0.0, amp_s=0.0, w_r=0.0, w_s=0.0, E_r=0.0, sync=0.0, lead_src=0.0, fed_src=0.0, E_src=0.0, pull_s_src=0.0)
     cnt = 0; mom = []; pulls = np.zeros(Nr); pulls_src = np.zeros(Nr); s_prev = None; freq = np.zeros(N)
+    lead_each = np.zeros(Nr); E2_each = np.zeros(Nr); fed_each = np.zeros(Nr)      # per receiver: R(sigma, r) needs them
     src4 = np.repeat(np.arange(N) < Ns, 4)
     Mrs = mat.M[4 * Ns::4, :][:, src4]
     dMrs = mat.dM[:, 4 * Ns::4, :][:, :, src4]
@@ -159,9 +173,9 @@ def simulate(cfg):
             pl = -(Ftot[Ns:] * rhat).sum(1); pls = -(Fs_[Ns:] * rhat).sum(1)
             acc['pull'] += pl.mean(); acc['pull_s'] += pls.mean(); acc['pull_B'] += (pl - pls).mean(); pulls += pl
             zsrc = z * src
-            acc['src_out'] += float(np.real(np.conj(zsrc) @ (mat.Gam @ zsrc)))
+            acc['src_out'] += float(np.imag(np.vdot(zsrc, mat.M @ zsrc)))
             zb = zsrc.reshape(N, 4).copy(); zb[:, 0] = 0; zb = zb.ravel()
-            acc['src_bright'] += float(np.real(np.conj(zb) @ (mat.Gam @ zb)))
+            acc['src_bright'] += float(np.imag(np.vdot(zb, mat.M @ zb)))
             acc['src_out_cold'] += float(np.sum(2 * g0 * np.abs(s[:Ns]) ** 2))
             internal['src_fam'] += float(np.sum(2 * mat.loss[None, :, None] * np.abs(F[:Ns]) ** 2))
             if R is not None:
@@ -175,6 +189,8 @@ def simulate(cfg):
             acc['w_r'] += float(np.mean(w[Ns:])); acc['w_s'] += float(np.mean(w[:Ns]))
             acc['sync'] += float(np.abs(np.mean(np.exp(1j * np.angle(s[:Ns])))))
             Esrc = Mrs @ z[src4]
+            lead_each += np.sin(np.angle(Esrc) - np.angle(s[Ns:])); E2_each += np.abs(Esrc) ** 2
+            fed_each += np.imag(np.conj(s[Ns:]) * Esrc)
             acc['lead_src'] += float(np.mean(np.sin(np.angle(Esrc) - np.angle(s[Ns:]))))
             acc['fed_src'] += float(np.mean(np.imag(np.conj(s[Ns:]) * Esrc)))
             acc['E_src'] += float(np.mean(np.abs(Esrc)))
@@ -196,6 +212,7 @@ def simulate(cfg):
     res['rhythm_spread_sources'] = float(np.std(freq[:Ns]) / span); res['rhythm_spread_receivers'] = float(np.std(freq[Ns:]) / span)
     E_end = energy(F, R, w, n)
     res.update(cfg=cfg, pull_each=(pulls / cnt).tolist(), pull_s_src_each=(pulls_src / cnt).tolist(),
+               lead_src_each=(lead_each / cnt).tolist(), intensity_src_each=(E2_each / cnt).tolist(), fed_src_each=(fed_each / cnt).tolist(),
                receiver_distance=np.linalg.norm(rc, axis=1).tolist(),
                pull_se=float((pulls / cnt).std(ddof=1) / np.sqrt(Nr)) if Nr > 1 else None,
                energy=dict(start=E_start, end=E_end, internal_out=sink_tot, radiated=rad_tot,
@@ -234,6 +251,7 @@ def case(structure, tag, k=0.0, nu=0.0, seed=1, **kw):
     return dict(BASE, **dict(dict(structure=structure, tag=tag, kind=kind, k=k, q=q, nu=nu, seed=seed, dt=dt), **kw))
 
 
+
 def configs(which):
     runs = []
     if which == 'parity':
@@ -260,13 +278,34 @@ def configs(which):
         # units (the far receivers re-time slowly); R(sigma, r) = (F(sigma, r)/F(0, r)) sqrt(I(0, r)/I(sigma, r))
         rec = shells((6.0, 9.0, 13.5, 20.0))
         for sd in (1, 2):
-            for stn in ('single', 'paired, Delta = 4 (gamma + gi), odd'):
+            for stn in ('single', 'single, odd'):
                 kw = dict(receivers=rec, T=16000.0, burn=8000.0, momentum=False, seed=sd)
+                runs.append(case(stn, 'cold', **kw))
+                for k in (2.0, 8.0):
+                    runs.append(case(stn, 'free', k=k, **kw))
+        return runs
+    if which == 'oneway_distance':
+        # the one-way hypothesis in the full model: pull, energy and keeping step at four distances
+        rec = shells((6.0, 9.0, 13.5, 20.0))
+        for sd in (1, 2):
+            for stn in ('single', 'single, odd'):
+                kw = dict(receivers=rec, T=16000.0, burn=8000.0, momentum=False, seed=sd, one_way=0.0)
                 runs.append(case(stn, 'cold', **kw))
                 for k in (2.0, 8.0):
                     runs.append(case(stn, 'free', k=k, **kw))
                 runs.append(case(stn, 'collisional', k=8.0, nu=50.0, **kw))
                 runs.append(case(stn, 'stopped', k=8.0, t_stop=4000.0, **kw))
+        return runs
+    if which == 'oneway_lowf':
+        # the same, with matter whose radiators send a twentieth of their energy into the companion (round 16's
+        # follow-up 1: gi = 19, and G, W0 ten times larger so the extra drain stays small beside the throughput)
+        rec = shells((6.0, 9.0, 13.5, 20.0))
+        for sd in (1, 2):
+            kw = dict(receivers=rec, T=16000.0, burn=8000.0, momentum=False, seed=sd, one_way=0.0,
+                      piece=dict(G=40.0, W0=16.0, g_par=0.01), dt=0.01)
+            runs.append(case('single, odd, f = 0.05', 'cold', **kw))
+            for k in (2.0, 8.0):
+                runs.append(case('single, odd, f = 0.05', 'free', k=k, **kw))
         return runs
     if which == 'mass':
         # step C: sources of 24, 48 and 96 pieces at the same density, receivers at the same distances

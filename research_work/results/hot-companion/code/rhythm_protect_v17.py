@@ -195,6 +195,9 @@ STRUCTURES = {
     'valve, gR = 20, gB = 5': dict(parity='even', families=[fam(0.0)], valve=dict(gR=20.0, gB=5.0, c=1.0, into=0)),
     'valve, gR = 20, gB = 5, odd': dict(parity='odd', families=[fam(0.0)], valve=dict(gR=20.0, gB=5.0, c=1.0, into=0)),
 }
+# round 16's low-f matter (radiators sending a twentieth of their energy into the companion), with the velocity's parity;
+# used by code/one_matter_v17.py, not in this script's comparison
+EXTRA = {'single, odd, f = 0.05': dict(parity='odd', families=[fam(loss=19.0)])}
 DIAGNOSTICS = ('heat_tugs_gradient_part_only', 'heat_tugs_nongradient_part_only', 'no_heat_tugs_among_sources', 'no_heat_offsets')
 
 
