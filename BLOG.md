@@ -354,9 +354,12 @@ step at every distance, better than with a cold source (dashed). Script `code/on
   average, exactly what the law's square root requires. Colliding sources pull like cold ones, and a warm source brought
   to rest goes back to about the cold pull. With the wave travelling both ways, the same warm source pushes the nearest
   matter away instead: the outward-only wave is what turns the push into a pull.
-* The glow stays in proportion to mass (the same per piece for sources of 24, 48 and 96 pieces), and a nice bonus falls
-  out: with a wave that only travels outward, a piece feels only the matter nearer the centre than itself. For a round
-  source that is Newton's rule that only the mass inside a radius pulls there, which is the form the law already takes.
+* **The glow stays in proportion to mass, and the pull grows as its square root, just as the law says.** In the full
+  simulation the glow per piece is the same within 8% for sources of 24, 48 and 96 pieces, and four times the mass
+  gives ×1.7 the pull for a cold source and ×2.1 for a warm one, where the law's √(G M a)/r gives ×2. A nice bonus
+  falls out as well: with a wave that only travels outward, a piece feels only the matter nearer the centre than
+  itself. For a round source that is Newton's rule that only the mass inside a radius pulls there, which is the form
+  the law already takes.
 * **Status.** The one-way wave was imposed in these tests. Whether the companion's wave really is one-way is now a
   concrete question about the companion as a flowing medium. There is an encouraging hint: the galaxies require the
   companion's crests to move outward at no more than half its travel speed (§4.5), which is just the range in which a

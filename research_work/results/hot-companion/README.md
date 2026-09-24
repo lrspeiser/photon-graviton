@@ -4219,13 +4219,70 @@ the velocity's parity, at the same four distances, two arrangements each.
 * R_net averages 1.12 at k = 2 and 1.00 at k = 8, and the net pull is ×1.50 and ×1.69 of cold. The sources' rhythm
   spread at k = 8 is 1.9 × 10⁻⁵ (1.8 × 10⁻⁴ at rest); the books balance to 5 × 10⁻¹².
 
-*Running at the time of writing:* the same four distances with the two-way wave in the full model (the baseline for
-R_net), and sources of 24, 48 and 96 pieces at the same density (the glow per piece, and the pull at r = 12 and 18).
+**The same distances with the two-way wave** (`--set distance` → `distance.json`, `distance_summary.json`; the
+baseline for R_net: the same matter, arrangements and times, round 16's two-way coupling):
+
+**Two-way wave, round 16's matter (single)**
+
+| source | glow ÷ rest | keeping step (all receivers) | net pull at r = 6, 9, 13.5, 20 (10⁻⁴) | R_net(σ, r) at 6, 9, 13.5, 20 | R from the quiet channel |
+|---|---|---|---|---|---|
+| at rest | 1.00 | 0.30 | +0.75, +0.71, +0.38, +0.22 | 1 | 1 |
+| free, k = 2 | 1.95 | 0.29 | +0.57, +0.87, +0.34, +0.00 | 0.57, 1.02, 0.73, 0.01 | 0.89, 1.15, 0.72, 1.04 |
+| free, k = 8 | 4.69 | 0.11 | -0.89, -0.55, -0.03, -0.09 | -0.53, -0.42, -0.04, -0.24 | 0.49, 0.33, 0.30, 0.27 |
+
+**Two-way wave, with the velocity's parity (single, odd)**
+
+| source | glow ÷ rest | keeping step (all receivers) | net pull at r = 6, 9, 13.5, 20 (10⁻⁴) | R_net(σ, r) at 6, 9, 13.5, 20 | R from the quiet channel |
+|---|---|---|---|---|---|
+| at rest | 1.00 | 0.30 | +0.75, +0.71, +0.38, +0.22 | 1 | 1 |
+| free, k = 2 | 1.92 | 0.28 | +0.42, +0.41, +0.35, +0.32 | 0.37, 0.48, 0.73, 1.07 | 0.79, 0.94, 0.67, 2.70 |
+| free, k = 8 | 4.65 | 0.16 | -0.64, -0.23, -0.03, -0.02 | -0.39, -0.18, -0.04, -0.05 | 0.61, 0.55, 0.31, 1.33 |
+
+* **With the two-way wave, a warm source pushes the nearer receivers instead of pulling them:** −0.89 × 10⁻⁴ at r = 6
+  and −0.55 at r = 9 (k = 8, single), where the same source with the one-way wave pulls +2.36 and +2.12. Distant matter
+  keeps step at only 0.11–0.16 (0.30 at rest); the receivers' own radiators, pushed in proportion to the wave's
+  intensity, then outweigh their quiet channel (−1.30 against +0.91 × 10⁻⁴ averaged, k = 8). The sources' rhythm spread
+  is 4.1 × 10⁻³ at k = 8, ninety times the one-way wave's.
+* **The cold pull is weaker too:** +0.75, +0.71, +0.38 and +0.22 × 10⁻⁴, against +1.61, +1.14, +0.41 and +0.53 with the
+  one-way wave, because distant matter keeps step less well (0.30 against 0.63).
+* So in the full model the one-way wave turns a warm source's push into a pull, and doubles the cold pull at the inner
+  shells.
+
+**Mass, with the two-way wave** (`--set mass` → `mass.json`, `mass_summary.json`: sources of 24, 48 and 96 pieces at
+the same density, the velocity's parity, receivers at r = 12 and 18, two arrangements, 8,000 time units):
+
+| source pieces | glow per piece at rest | glow at k = 8 ÷ rest | keeping step, rest / k = 8 | net pull at r = 12, 18, rest (10⁻⁴) | at k = 8 |
+|---|---|---|---|---|---|
+| 24 | 2.74 × 10⁻³ | 5.24 | 0.30 / 0.05 | +0.20, +0.17 | -0.27, +0.18 |
+| 48 | 2.78 × 10⁻³ | 4.75 | 0.17 / 0.36 | +0.21, -0.04 | +0.42, +0.55 |
+| 96 | 2.88 × 10⁻³ | 4.72 | 0.40 / 0.09 | +0.69, +0.49 | -0.77, -0.11 |
+
+* **The glow is in proportion to mass in the full model:** 2.74, 2.78 and 2.88 × 10⁻³ per piece at rest for 24, 48 and
+  96 pieces (within 5%), and heat multiplies it by about the same factor at every size (×5.24, 4.75 and 4.72 at k = 8).
+* With the two-way wave the pull is erratic at every size (keeping step 0.05–0.40), as §27.1's damage predicts.
+
+**Mass, with the one-way wave** (`--set oneway_mass` → `oneway_mass.json`, `oneway_mass_summary.json`: sources of
+24, 48 and 96 pieces at the same density, the f = 0.05 matter with the velocity's parity, receivers at r = 12 and 18,
+two arrangements, 8,000 time units):
+
+| source pieces | glow per piece at rest | glow at k = 8 ÷ rest | keeping step, rest / k = 8 | net pull at r = 12, 18, rest (10⁻⁴) | at k = 8 | R_net at r = 12, 18 |
+|---|---|---|---|---|---|---|
+| 24 | 2.19 × 10⁻³ | 5.94 | 0.62 / 0.63 | +1.07, +0.30 | +1.89, +1.00 | 0.88, 1.40 |
+| 48 | 2.30 × 10⁻³ | 5.22 | 0.46 / 0.71 | +1.03, +0.69 | +3.11, +1.65 | 1.42, 1.16 |
+| 96 | 2.37 × 10⁻³ | 5.46 | 0.61 / 0.88 | +1.13, +1.21 | +3.32, +2.79 | 1.51, 1.06 |
+
+* **The glow is in proportion to mass** (2.19, 2.30 and 2.37 × 10⁻³ per piece at rest, within 8%), with about the same
+  heat multiplier at every size (×5.2–5.9 at k = 8).
+* **The pull grows as the square root of the mass, as the law needs.** Four times the mass (24 → 96 pieces) raises the
+  net pull averaged over the receivers ×1.71 at rest and ×2.11 at k = 8, where the law's √(G M a)/r gives ×2. Shell by
+  shell the doublings scatter (×0.97–2.28), following how well each shell keeps step (0.42–0.94) in 8,000 time units.
+* **At every size the warm source pulls harder in proportion to the square root of its extra wave:** R_net averages
+  1.14, 1.29 and 1.28 for 24, 48 and 96 pieces.
 
 **What this establishes, and what not.** In the full, energy-booked model, with one kind of matter for sources and
 receivers, a companion wave that only travels outward lets motion raise the output and the pull together, with the net
-pull growing as the square root of the wave's extra strength (R ≈ 1) at four distances; collisions and stopping switch
-the extra pull off. The one-way coupling is still imposed by hand: whether the companion's wave is one-way is the
+pull growing as the square root of the wave's extra strength (R ≈ 1) at four distances and as the square root of the
+source's mass; collisions and stopping switch the extra pull off, and with a two-way wave the same warm source pushes. The one-way coupling is still imposed by hand: whether the companion's wave is one-way is the
 question the next round has to answer from the companion as a flowing medium.
 
 ### 27.5 Where round 17 leaves the proof
@@ -4238,7 +4295,7 @@ question the next round has to answer from the companion as a flowing medium.
 | a companion wave that only travels outward | **removes the damage in the reduced model:** one beat, R(σ, r) = 1.0–1.5 at four distances, power ∝ mass; needs an inward leak ≲ 10% throughout the source (§27.3). **In the full, energy-booked model it does the same:** warm matter pulls distant matter harder than cold matter at all four distances (net pull ×1.98 of cold at k = 8), R_net = 1.06 on average (0.94 with the velocity's parity), and colliding and stopped sources pull like cold ones (§27.4). The one-way coupling is imposed, not yet derived |
 | the frequency requirement | a warm source's common beat must stay where cold matter's is, or far receivers cannot follow (§27.2); the one-way wave meets it (within 3 × 10⁻⁵) |
 | the net pull | the receivers' radiators are pushed in proportion to the wave's intensity; radiators that mostly ring inside (f ≪ 1/2) are needed (round 16); with the one-way wave and radiators that mostly ring inside (f = 0.05) they take only 8–11% of the pull, and R_net = 1.00 on average at k = 8 (§27.4) |
-| power in proportion to mass | reduced model: the wave's intensity per source piece is the same for 24, 48 and 96 pieces at the same density (§27.3); the full model's run at 24, 48 and 96 pieces is in progress |
+| power in proportion to mass | **holds in the full model:** the glow per piece is the same within 8% for 24, 48 and 96 pieces at the same density, with either wave, and heat multiplies it by about the same factor at every size. With the one-way wave the pull at a fixed distance grows as the square root of the mass: ×1.71 at rest and ×2.11 at k = 8 for four times the mass, where the law gives ×2 (§27.4) |
 | every kind of matter falls alike | not tested: the model does not yet say what a piece's inertia is. In it, a locked receiver's pull is (1 − 2f) × its fed power over the wave's speed, so equal acceleration needs every kind of matter to share f (or f ≪ 1) and an inertia in proportion to its quiet amplitude — requirements for the microscopic model |
 | the law and the suite | unchanged (59 pass, 11 close, 7 fail); no astrophysical fit was changed this round, as the review asked |
 

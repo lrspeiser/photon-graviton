@@ -551,7 +551,10 @@ results README §18):
   heat: R_net = (F(σ, r)/F(0, r))·√(I(0, r)/I(σ, r)) averages 1.06 at k = 8 and 1.12 at k = 2 (0.94 and 1.14 with the
   velocity's parity), with collisions (ν = 50) and stopping restoring the cold pull. The receivers' radiators take a
   share of the quiet channel's pull that grows with the wave's intensity (40% at rest, 52% at k = 8, for f = 0.2).
-  With f = 0.05 the share falls to 8–11% (the rule 2f) and R_net averages 1.00 at k = 8.
+  With f = 0.05 the share falls to 8–11% (the rule 2f) and R_net averages 1.00 at k = 8. The two-way baseline at the
+  same distances: a warm source pushes the nearer receivers (−0.89 × 10⁻⁴ at r = 6, k = 8). Mass: the glow per piece is
+  the same within 8% for 24, 48 and 96 pieces, and with the one-way wave the pull at fixed r grows as √M (×1.71 at
+  rest, ×2.11 at k = 8, for four times the mass; √(G M a)/r gives ×2).
 
 ### What follows
 
