@@ -516,6 +516,43 @@ results README §18):
   −(C₀C₁k³/(24π))Im(s*B) is exactly −f times the quiet channel's pull −(C₀k/2)n̂ Im(s*A), on each channel: net (1 − 2f).
   The receivers' lead tracks (w/2)|E|/|s| over the sources' rhythm spread (1.6 → 0.43 as k goes 0 → 16).
 
+### Round 17: keeping warm matter in tune
+
+* **The rhythm equation** (`code/rhythm_budget_v17.py`): the radiators (rate γ + γᵢ = 5) eliminated in linear response,
+  dφ_j/dt = ω_j − (w₀/2) Σ_{l≠j} |C_jl| cos(φ_l − φ_j + arg C_jl), ω_j = −(w₀/2) Re C_jj,
+  C = M_ss − (i/2) Xᵀ Y⁻¹ X, X = M_Bs − 2D, Y = (i/2) M_BB − γᵢ. Exact split C = C₀ + C₁(δ) + C₂(δδ). Measured (3
+  arrangements, k = 12q²): own offsets 2.0 × 10⁻⁴ (cold) ⊕ 3.3 × 10⁻⁴ √k (linear) ⊕ 1.9 × 10⁻⁴ k (quadratic); tugs
+  (rms sum per piece) 1.9 × 10⁻³ ⊕ 2.7 × 10⁻³ √k ⊕ 1.9 × 10⁻³ k, about half non-gradient (Re C). The full model's rhythms
+  equal the budget's three terms to 1.5 × 10⁻⁷. Diagnostic: keeping only Im C of the heat tugs gives 0.75 / 0.88 at
+  k = 2 / 8 (cold 0.63); only Re C gives 0.15 / 0.00. The damage is the non-gradient part of the two-way heat tugs.
+* **The review's pair** (`code/paired_channel_v17.py`): for separate channels the first-order sensitivity of the quiet
+  mode's rate to a common shift ε of the families is ∝ Σ± 1/(γ ± iΔ)², zero at Δ = γ; for families sharing one channel
+  (P = A + Γ uuᵀ, A = diag(γᵢ ± iΔ)) it is −s²/(1 + Γs)² with s = uᵀA⁻¹u = 2γᵢ/(γᵢ² + Δ²) > 0: never zero.
+* **Reciprocity fixes the heat tugs.** At equal isolated glow the rms heat tug is 1.64–1.76 × 10⁻² (k = 8) for twelve
+  structures (`code/rhythm_protect_v17.py`): the loop s_l → emission → M → reception → s_j has emission and reception
+  amplitudes equal (C symmetric). Onsager–Casimir: a coupling linear in v between modes of equal time-reversal parity
+  satisfies L_sB(v) = −L_Bs(v) exactly, so it cannot be one-way at every speed.
+* **The velocity's parity.** A mixing linear in the velocity between the (T-even) quiet and radiator modes must be
+  imaginary-antisymmetric (the convective term −2iω V·∇ between real standing modes): K_Fs = +2i c δ, K_sF = −2i c δᵀ.
+  Then C₂ is unchanged, C₁ = M_sB Y⁻¹ D − Dᵀ Y⁻¹ M_Bs is antisymmetric and diag C₁ = 0 identically; an isolated piece's
+  radiators respond in phase (B = Y⁻¹δ s), so its radiation has no first-order forward-backward asymmetry.
+* **A one-way wave** (`code/one_way_v17.py`, reduced model, imposed): M_jl kept for r_l < r_j, × ε otherwise. With
+  ε = 0 there are no echoes, so C_jj is the isolated value (ω_j = 0), the innermost matter sets the beat and each
+  piece locks on its upstream field with lead +1 (the stable fixed point of dφ/dt = −(w₀/2)|E| cos(arg E − φ)).
+  Measured: spread 6 × 10⁻⁵ (k = 8), receivers 0.98 / 0.96 / 0.85 / 0.81 at r = 6 / 9 / 13.5 / 20, R(σ, r) = 1.1–1.5;
+  needs ε ≲ 0.1; wave intensity per source piece constant for N = 24, 48, 96; any acyclic order works as well (a
+  random one-way order among the sources: 1.00 / 0.99 / 0.81 / 0.84). A convected wave with ω = k·V ± c_w|k| has group
+  velocity V ± c_w k̂, so no part of it moves upstream where |V| ≥ c_w; round 16's bound on the crests' speed (≤ u/2)
+  would put c_w between u/2 and u if the crests are the slow mode of a medium streaming at u. Whether the companion
+  streams as one medium inside a source (needed for the radius ordering) is the open question.
+* **The one-way wave in the full model** (`code/one_matter_v17.py`, sets `oneway_distance`, `oneway_lowf`): the coupling
+  masked as above in round 16's energy-booked model, what the pieces give the wave, Im(z†Mz), booked as "to the wave and
+  its flow" (residual 2 × 10⁻¹²). The net pull on receivers of the same matter at r = 6, 9, 13.5, 20 then grows with
+  heat: R_net = (F(σ, r)/F(0, r))·√(I(0, r)/I(σ, r)) averages 1.06 at k = 8 and 1.12 at k = 2 (0.94 and 1.14 with the
+  velocity's parity), with collisions (ν = 50) and stopping restoring the cold pull. The receivers' radiators take a
+  share of the quiet channel's pull that grows with the wave's intensity (40% at rest, 52% at k = 8, for f = 0.2).
+  With f = 0.05 the share falls to 8–11% (the rule 2f) and R_net averages 1.00 at k = 8.
+
 ### What follows
 
 ```

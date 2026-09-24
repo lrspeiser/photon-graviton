@@ -3902,3 +3902,356 @@ dt = 0.01; two arrangements):
   2. **A physical quiet store with a gap:** derive χ and γ.
   3. **The crossing heat** in MACS J0025, Abell 520, El Gordo and the dwarfs.
   4. Round 14's list: the two KiDS analyses; round 12's list.
+
+## 27. Round 17, 24 September 2026: keeping warm matter in tune
+
+Round 16 (§26.4) ended on one open link: in one kind of matter, a warm source's pieces fall out of tune and distant
+matter cannot keep step with its wave, so the pull does not grow with the source's heat. An independent review set this
+round's objective: "derive a mechanism that lets motion increase the companion's output without destroying the rhythm
+needed to produce attraction", in three steps:
+* **A**, find exactly which term of the energy-balanced equations shifts a warm piece's rhythm, as an equation with its
+  terms measured;
+* **B**, a structural protection, the same inside every piece, not phase resets; its candidate was a pair of internal
+  radiating responses at ±Δ whose pulls cancel;
+* **C**, require the net pull, not just the wave, to follow: R(σ, r) = (F(σ, r)/F(0, r))·√(I(0, r)/I(σ, r)) ≈ 1 at
+  increasing distance, for cold, free, colliding and stopped sources, with the microscopic constants fixed, the power in
+  proportion to mass, and the same acceleration for any receiving matter. Only then the astrophysical fits.
+
+### 27.1 Step A: the rhythm budget, and the term that does the damage
+
+`code/rhythm_budget_v17.py` → `run-rhythm-budget-v17/rhythm_budget_v17.json`.
+
+**The reduction.** Each piece's radiators relax at γ + γᵢ = 5, a thousand times faster than the rhythms move, so they can
+be eliminated exactly in linear response. With every piece at its steady inversion w₀ and amplitude, the rhythms obey
+```
+dφ_j/dt = ω_j − (w₀/2) Σ_{l≠j} |C_jl| cos(φ_l − φ_j + arg C_jl),      ω_j = −(w₀/2) Re C_jj,
+C = M_ss − (i/2) Xᵀ Y⁻¹ X,     X = M_Bs − 2D,     Y = (i/2) M_BB − γᵢ
+```
+(D holds each piece's mixing δ_j). ω_j is a piece's own rhythm offset: zero for an isolated piece, nonzero in a cloud,
+where its radiators' response picks up its neighbours' waves. C_jl is how piece l tugs piece j. The imaginary part of
+C is a "gradient" coupling: it acts like the ordinary pull toward a common beat, and a system coupled only that way
+always settles. The real part is not: it shifts a piece's rhythm by an amount that depends on its neighbours' phases,
+which can keep a system from ever settling.
+
+**The budget is exact.** In the full model (arrangement 1), each piece's rhythm equals the sum of three terms to
+1.5 × 10⁻⁷ (correlation 1.0000):
+
+| source | rhythm spread | tug of the others' quiet oscillations | of their radiators | of its own radiators, through its mixing |
+|---|---|---|---|---|
+| at rest | 4.4 × 10⁻⁴ | 4.8 × 10⁻⁴ | 3.6 × 10⁻⁴ | 0 |
+| k = 2 | 1.2 × 10⁻³ | 8.6 × 10⁻⁴ | 1.1 × 10⁻³ | 1.4 × 10⁻³ |
+| k = 8 | 2.6 × 10⁻³ | 6.1 × 10⁻⁴ | 1.7 × 10⁻³ | 2.4 × 10⁻³ |
+
+**The reduced model reproduces the full one** (three arrangements): rhythm spread 3.3 × 10⁻⁴, 1.1 × 10⁻³ and 3.0 × 10⁻³
+at k = 0, 2 and 8 (full model, §26.4: 4.7 × 10⁻⁴, 1.2 × 10⁻³, 2.6 × 10⁻³), receivers keeping step 0.63, 0.31, 0.17
+(full: 0.55, 0.27, 0.27).
+
+**The equation, term by term.** X is linear in the mixing and Y does not depend on it, so C = C₀ + C₁ + C₂ exactly: the
+cold coupling (radiators passive), a part linear in δ (one piece's quiet oscillation reaching another's through one set
+of stirred radiators) and a part quadratic in δ (through two). Means over three arrangements, with k = 12q² for these
+constants:
+
+| heat weight k | 0.5 | 2 | 8 | 16 | fitted |
+|---|---|---|---|---|---|
+| own offsets: cold part | 2.0 × 10⁻⁴ | 2.0 × 10⁻⁴ | 2.0 × 10⁻⁴ | 2.0 × 10⁻⁴ | 2.0 × 10⁻⁴ |
+| own offsets: linear part | 2.3 × 10⁻⁴ | 4.7 × 10⁻⁴ | 9.3 × 10⁻⁴ | 1.3 × 10⁻³ | 3.3 × 10⁻⁴ √k |
+| own offsets: quadratic part | 0.9 × 10⁻⁴ | 3.9 × 10⁻⁴ | 1.6 × 10⁻³ | 3.1 × 10⁻³ | 1.9 × 10⁻⁴ k |
+| tugs on a piece (rms sum): cold | 1.9 × 10⁻³ | 1.9 × 10⁻³ | 1.9 × 10⁻³ | 1.9 × 10⁻³ | 1.9 × 10⁻³ |
+| tugs: linear | 1.9 × 10⁻³ | 3.8 × 10⁻³ | 7.6 × 10⁻³ | 1.1 × 10⁻² | 2.7 × 10⁻³ √k |
+| tugs: quadratic | 0.9 × 10⁻³ | 3.8 × 10⁻³ | 1.5 × 10⁻² | 3.0 × 10⁻² | 1.9 × 10⁻³ k |
+
+So the warm source's pieces are tugged by their neighbours' stirred radiators up to 16 times harder than the cold
+coupling that lets a source settle, and about half of every heat-induced tug is of the non-gradient kind (gradient share
+0.49 linear, 0.53 quadratic).
+
+**Which part does the damage** (`code/rhythm_protect_v17.py`, diagnostics; three arrangements; the receivers keep step on
+the sources' part of their actual drive):
+
+| round 16's matter, parts of the heat switched off by hand | keeping step, k = 2 | k = 8 |
+|---|---|---|
+| everything (the model as it is) | 0.34 | 0.18 |
+| **heat tugs: only their gradient part** | **0.75** | **0.88** |
+| heat tugs: only their non-gradient part | 0.15 | 0.00 |
+| no heat tugs among the source's pieces | 0.66 | 0.63 |
+| no heat offsets (tugs kept) | 0.36 | 0.24 |
+| for comparison: a cold source | 0.63 | 0.63 |
+
+* **The term that puts warm matter out of tune is the non-gradient part of the tugs between warm pieces**, the part that
+  shifts a piece's rhythm by an amount set by its neighbours' phases.
+* **With it removed, warmth helps.** Keeping only the gradient part of the heat tugs, the warm source settles (rhythm
+  spread 3.9 × 10⁻⁴ at k = 8) and distant matter keeps step at 0.88, better than with a cold source, because the
+  warm source's wave is stronger.
+* The own offsets matter much less: removing them alone barely helps (0.36, 0.24).
+
+### 27.2 Step B: what an internal structure can and cannot protect
+
+`code/paired_channel_v17.py` → `paired_channel_v17.json`; `code/rhythm_protect_v17.py` → `rhythm_protect_v17.json`,
+`rhythm_protect_compact_v17.json` (all in `run-rhythm-budget-v17/`).
+
+**The review's pair, reproduced for one piece.** A quiet mode D mixed by the motion (strength g) into two radiating
+families at +Δ and −Δ, each radiating at γ through its own channel:
+
+| check | result | review |
+|---|---|---|
+| added decay per doubling of g (0.0025 → 0.02), Δ = γ | ×4.00000, 4.00000, 4.00000 | ×4.00008, 4.00030, 4.00120 |
+| largest rhythm shift | 4.3 × 10⁻¹⁹ | < 1.1 × 10⁻¹⁸ |
+| opposite 1% deviations of the two couplings: shift ÷ added decay | 0.0200 | about 2% |
+| collisions at ν = γ: extra glow kept, pair / one resonant family | 0.800 / 0.500 | 80% |
+
+* At Δ = γ the first correction to the g² law cancels as well, so we get ×4 exactly. The review's small excesses are what
+  a single resonant family gives, 4(1 + 3g₁²/γ²); either way the added decay grows as g².
+* The pair keeps more of its glow under collisions than a single family (0.8 against 0.5). Our law needs collisions to
+  hold the heat back, so this is a cost to watch.
+
+**Why the pair's protection is lost in a shared wave.** The review's cancellation protects the rhythm against a common
+shift of the two families' own frequencies: to first order the sensitivity is proportional to Σ± 1/(γ ± iΔ)², which
+vanishes at Δ = γ. In one kind of matter both families radiate into the same wave, and what the surroundings change is
+the channel they share (the sum B₊ + B₋), not each family's frequency. The first-order sensitivity is then proportional
+to χ², with χ = Σ± 1/(γᵢ ± iΔ) the channel's own response, which is real and never zero:
+
+| Δ/γ | 0 | 0.5 | 1 | 2 |
+|---|---|---|---|---|
+| rhythm shift per unit reactive change of the surroundings, per unit added decay: separate channels | 1.00 | 0.60 | **0.00** | −0.60 |
+| the same, both families in one shared channel (f = 0.2) | 1.67 | 1.32 | 0.82 | 0.32 |
+
+**A general limit.** Twelve internal structures, all energy-consistent and identical in every piece, compared at equal
+glow in the reduced model (three arrangements):
+
+| structure | mixing q at k = 8 | keeping step, k = 0 | k = 2 | k = 8 | k = 16 | rhythm spread, k = 8 | own offsets, k = 8 | tugs, k = 8 |
+|---|---|---|---|---|---|---|---|---|
+| single (round 16) | 0.82 | 0.63 | 0.34 | 0.18 | 0.17 | 2.7 × 10⁻³ | 1.9 × 10⁻³ | 1.65 × 10⁻² |
+| single, odd parity | 0.82 | 0.63 | 0.34 | **0.33** | 0.23 | 2.2 × 10⁻³ | 1.6 × 10⁻³ | 1.70 × 10⁻² |
+| paired, Δ = γ + γᵢ (the review's) | 1.41 | 0.71 | 0.33 | 0.18 | 0.16 | 2.6 × 10⁻³ | 1.6 × 10⁻³ | 1.66 × 10⁻² |
+| paired, Δ = γ + γᵢ, odd | 1.41 | 0.71 | 0.39 | 0.26 | 0.17 | 2.2 × 10⁻³ | 1.3 × 10⁻³ | 1.71 × 10⁻² |
+| paired, Δ = (γ + γᵢ)/2 | 0.87 | 0.53 | 0.35 | 0.18 | 0.15 | 3.3 × 10⁻³ | 2.5 × 10⁻³ | 1.64 × 10⁻² |
+| paired, Δ = γ + γᵢ, 1% asymmetry | 1.41 | 0.71 | 0.28 | 0.09 | 0.07 | 3.2 × 10⁻³ | 3.8 × 10⁻³ | 1.66 × 10⁻² |
+| paired, Δ = 4(γ + γᵢ) | 12.2 | 0.83 | 0.40 | 0.25 | 0.19 | 2.3 × 10⁻³ | 1.9 × 10⁻⁴ | 1.71 × 10⁻² |
+| **paired, Δ = 4(γ + γᵢ), odd** | 12.2 | **0.83** | 0.39 | **0.41** | **0.26** | 1.6 × 10⁻³ | 1.5 × 10⁻⁴ | 1.76 × 10⁻² |
+| bright + dark partner, Δ = γ + γᵢ | 1.63 | 0.49 | 0.33 | 0.23 | 0.17 | 3.1 × 10⁻³ | 1.5 × 10⁻³ | 1.69 × 10⁻² |
+| bright + dark partner, odd | 1.63 | 0.49 | 0.44 | 0.34 | 0.22 | 2.0 × 10⁻³ | 1.4 × 10⁻³ | 1.73 × 10⁻² |
+| valve (damped chamber, gR = 20, gB = 5) | 4.08 | 0.68 | 0.44 | 0.34 | 0.23 | 1.8 × 10⁻³ | 1.4 × 10⁻³ | 1.69 × 10⁻² |
+| valve, odd | 4.08 | 0.68 | **0.67** | 0.21 | 0.20 | 7.5 × 10⁻⁴ | 1.3 × 10⁻³ | 1.70 × 10⁻² |
+
+* **At equal glow the heat tugs have the same size in every structure**, 1.64–1.76 × 10⁻² at k = 8. This is
+  reciprocity: a piece that sends its motion-opened glow into the shared wave receives its neighbours' glow through the
+  same channel, with the same strength. And the Onsager–Casimir relations forbid a mixing linear in the velocity from
+  being one-way (sending without receiving) at every speed. So no internal structure can remove the heat tugs. It can
+  only change their character, and a piece's own offsets.
+* **The velocity's parity, a correction from first principles.** A velocity changes sign when time runs backwards. A
+  coupling proportional to it, between two internal modes that do not, must then be imaginary and antisymmetric (like
+  the Coriolis force, or the drag of a flowing medium on a sound wave), not real and symmetric as round 16 and the
+  independent calculation had it. Both are energy-conserving, and for one isolated piece they give the same glow. In a
+  cloud the odd form makes the linear part of the coupling antisymmetric, so each piece's own linear offset vanishes
+  identically (10⁻¹⁹ against 3.3 × 10⁻⁴ √k). Distant matter's keeping step at k = 8 goes from 0.18 to 0.33.
+* **The review's pair at a large detuning makes each piece a poor scatterer.** Families at ±4(γ + γᵢ) answer an outside
+  wave weakly (their responses nearly cancel) while the motion still drives them hard. The pieces' own offsets fall
+  tenfold (1.5 × 10⁻⁴ at k = 8), a cold source settles better (keeping step 0.83 against 0.63), and with the odd parity
+  this is the best structure at k = 8 and 16 (0.41, 0.26).
+* **The valve with the odd parity keeps a mildly warm source fully in tune.** At k = 2, rhythm spread 3.0 × 10⁻⁴ (cold:
+  3.3 × 10⁻⁴) and keeping step 0.67 (cold: 0.68).
+* **A second requirement, found with the valve.** At k = 8 the valve-odd source does settle (arrangement 2: spread
+  1 × 10⁻⁴ from t = 10,000 on), but all together at a rhythm shifted by +3.1 × 10⁻³, while the cold receivers stay near
+  +1.0 × 10⁻³ and cannot follow. A source's beat has to stay where cold matter's is, or distant matter, whose hold on the
+  beat weakens with distance, eventually cannot follow at all.
+* **A source smaller than a wavelength is worse**, even cold: keeping step 0.02–0.04 at radius 0.6 wavelengths/2π,
+  where the pieces' near fields dominate every coupling (`rhythm_protect_compact_v17.json`).
+
+**The velocity's parity in the full model** (`code/one_matter_v17.py --set parity` → `run-one-matter-v17/parity.json`;
+round 16's set-up, three arrangements, 8,000 time units; `code/one_matter_summary_v17.py`):
+
+| source | glow ÷ rest | keeping step: round 16's mixing / the velocity's parity | pull of the sources' wave on the receivers' quiet channel ÷ rest (√ of the glow) | net pull on a receiver |
+|---|---|---|---|---|
+| at rest | 1 | 0.55 / 0.55 | 1 | +1.21 × 10⁻⁴ / +1.21 × 10⁻⁴ |
+| free, k = 2 | 2.07 | 0.38 / **0.46** | 1.02 / **1.14** (1.44) | +0.52 / +0.73 × 10⁻⁴ |
+| free, k = 8 | 5.00 | 0.23 / **0.33** | 0.85 / **1.22** (2.24) | −1.11 / −0.48 × 10⁻⁴ |
+| free, k = 16 | 8.10 | 0.16 / **0.24** | 0.70 / **1.13** (2.85) | −2.95 / −2.43 × 10⁻⁴ |
+| colliding, k = 8, ν = 5 | 3.9 | 0.25 / 0.16 | 0.87 / 0.62 | −0.19 / −0.70 × 10⁻⁴ |
+| colliding, k = 8, ν = 50 | 1.6 | 0.44 / 0.48 | 1.06 / 1.09 | +1.07 / +1.13 × 10⁻⁴ |
+
+* The full model confirms the reduced one: with the velocity's parity distant matter keeps step better at every heat,
+  and the pull of the warm source's wave on it now grows with the heat (×1.14, 1.22 and 1.13 of the cold value), where
+  round 16's form made it shrink (×0.85 and 0.70 at k = 8 and 16). It still grows only about half as fast as the
+  square root of the glow that our law needs. Energy closes to 10⁻¹² (free) and 4 × 10⁻⁷ (collisions).
+* The net pull still turns negative at k ≥ 8. That is the receivers' own radiators, pushed by the brighter wave in
+  proportion to its intensity (−1.2 × 10⁻⁴ at rest, −3.1 at k = 8, −5.0 at k = 16): round 16's second problem, which
+  radiators that mostly ring inside (f = 0.05) remove (§26.4, follow-up 1).
+
+### 27.3 A wave that only travels outward: a hypothesis test
+
+`code/one_way_v17.py` → `run-rhythm-budget-v17/one_way_v17.json`, `one_way_mass_v17.json`, `one_way_order_v17.json`.
+
+Step A says what does the damage: the two-way exchange between warm pieces (each piece's rhythm pushed around by
+neighbours whose own rhythms it pushes back). Step B says that no structure inside a piece can remove it, because at a
+given glow reciprocity fixes its size. What would remove it is a wave that cannot come back. The companion streams
+outward from the matter that emits it (§26.2). If its crests are carried outward by that stream faster than they can
+move against it (the review's "one medium for crest and transport speeds"), a piece can hear only matter nearer the
+source's centre, and never its own echo.
+
+**The test.** The reduced model of §27.1, with the coupling made one-way before the reduction: the part carrying a wave
+from piece l to piece j is kept when l is nearer the source's centre than j, and multiplied by a leak ε otherwise (ε = 1
+is round 16's two-way wave). Each piece's own self-coupling is kept. Receivers of the same matter sit on four shells,
+radius 6, 9, 13.5 and 20 (four on each). In the reduced model a locked receiver's pull is its lead times the wave's
+amplitude, so R(σ, r) = lead(σ, r)/lead(0, r). Three arrangements, 16,000 time units (the second half measured):
+
+| wave | source | sources' rhythm spread | keeping step at r = 6 | 9 | 13.5 | 20 | R(σ, r) at 6, 9, 13.5, 20 |
+|---|---|---|---|---|---|---|---|
+| two-way (ε = 1), round 16's matter | at rest | 3.1 × 10⁻⁴ | 0.52 | 0.29 | 0.28 | 0.48 | 1 |
+| | k = 2 | 1.5 × 10⁻³ | 0.31 | 0.25 | 0.34 | 0.11 | 0.60, 0.86, 1.23, 0.24 |
+| | k = 8 | 4.5 × 10⁻³ | 0.19 | 0.23 | 0.10 | 0.09 | 0.36, 0.79, 0.35, 0.19 |
+| | k = 16 | 8.8 × 10⁻³ | 0.12 | 0.06 | −0.01 | 0.06 | 0.24, 0.20, −0.02, 0.12 |
+| **outward only (ε = 0)** | at rest | 1.5 × 10⁻⁴ | 0.88 | 0.79 | 0.59 | 0.76 | 1 |
+| | k = 2 | 7.7 × 10⁻⁵ | 0.97 | 0.73 | 0.83 | 0.58 | 1.11, 0.92, 1.41, 0.77 |
+| | k = 8 | 6.3 × 10⁻⁵ | **0.98** | **0.96** | **0.85** | **0.81** | **1.11, 1.21, 1.45, 1.07** |
+| | k = 16 | 6.0 × 10⁻⁶ | **1.00** | **0.97** | **0.84** | **0.77** | **1.14, 1.22, 1.43, 1.01** |
+| outward only, odd parity | k = 8 | 1.1 × 10⁻⁵ | 0.97 | 0.92 | 0.89 | 0.82 | 1.11, 1.17, 1.51, 1.07 |
+| | k = 16 | 3.0 × 10⁻⁵ | 0.87 | 0.94 | 0.94 | 0.97 | 0.99, 1.20, 1.60, 1.27 |
+
+* **With a wave that only travels outward, warmth no longer spoils the beat.** The warm source's pieces share one
+  rhythm (spread 6 × 10⁻⁵ at k = 8, 6 × 10⁻⁶ at k = 16, against 4.5 × 10⁻³ and 8.8 × 10⁻³ two-way), its common beat
+  stays where cold matter's is (within 3 × 10⁻⁵), and distant matter keeps step at every distance tested, better the
+  warmer the source. **R(σ, r) is 1.0 to 1.5 at all four distances,** where the two-way wave gives 0.1–0.4 once the
+  source is hot.
+* **Why:** no piece hears its own echo, so there are no own offsets (exactly zero); the innermost matter sets the beat
+  and everything farther out locks onto it a quarter cycle ahead, with nothing coming back to disturb it.
+* **What matters is that the wave has no way back, not the direction.** With the sources put in a random one-way order
+  instead (each hears only those before it; `one_way_order_v17.json`), a warm source again keeps one beat (spread
+  8 × 10⁻⁶ at k = 8) and distant matter keeps step at 1.00, 0.99, 0.81 and 0.84 (k = 8) and 0.99, 0.98, 0.85, 0.93
+  (k = 16). Any coupling without loops protects the beat; an outflow supplies the natural order, by distance from the
+  centre.
+* **How strict it has to be:**
+
+| inward leak ε | 1 | 0.5 | 0.3 | 0.1 | 0 | 0, but two-way inside a core of half the radius |
+|---|---|---|---|---|---|---|
+| keeping step at r = 6, 9, 13.5, 20, k = 8, odd parity | 0.23, 0.14, 0.15, 0.12 | 0.28, 0.16, 0.17, 0.04 | 0.25, 0.22, 0.18, 0.10 | 0.84, 0.77, 0.61, 0.32 | 0.97, 0.92, 0.89, 0.82 | 0.66, 0.73, 0.43, 0.34 |
+
+  The protection needs the wave to be nearly one-way (an inward leak of about 10% or less) throughout the source; a
+  two-way core of half the radius loses much of it.
+* **The power stays in proportion to mass.** A chain of pieces each locking ahead of the passing wave could build it up
+  coherently, so that the power grew as the square of the mass. It does not: at the same density, the wave's intensity
+  at the outer shells per source piece is about the same for 24, 48 and 96 pieces (at r = 13.5: 9.8, 5.2, 5.6 × 10⁻⁸
+  cold; 3.1, 3.2, 3.7 × 10⁻⁷ at k = 8), and keeping step improves with size (0.92–1.00 at k = 8 with 96 pieces).
+* **A consequence worth noticing.** With a wave that only travels outward, a piece feels only the matter nearer the
+  centre than itself. For a round source that is exactly the rule that Newton's gravity obeys (only the mass inside a
+  radius pulls there), and it is the form our law already takes, through g_N of the enclosed mass.
+* **What this is and is not.** It is a test of a hypothesis about the companion, made by hand in the reduced model:
+  the one-way coupling is imposed, not derived, and the reduced model tracks rhythms, not energy or forces. Making it
+  real means deriving the companion as a flowing medium (the crests' speed against its outflow speed, and whether the
+  wave's energy is exchanged with the flow) and then building the one-way coupling into the full, energy-balanced model.
+
+### 27.4 Step C in the full model: the one-way wave with every watt booked
+
+`code/one_matter_v17.py --set oneway_distance` → `run-one-matter-v17/oneway_distance.json`; summary by
+`code/one_matter_summary_v17.py` → `oneway_distance_summary.json`.
+
+**The test.** Round 16's full model (§26.4: 48 source pieces of one kind of matter, every piece coupled to every other
+through the complete wave, near field and far field), with §27.3's one-way coupling imposed on the whole coupling, quiet
+oscillations and radiators alike: the wave from piece l reaches piece j only when l is nearer the centre (ε = 0), and
+each piece keeps its own self-coupling. What the pieces then give the wave, Im(z†Mz), is shared between the outgoing
+wave and the flow that carries it, and the recoil of the upstream pieces is taken up by the flow; both are booked as "to
+the wave and its flow", and the books balance to 2 × 10⁻¹² (3 × 10⁻⁷ with collisions). Receivers of the same matter sit
+on four shells, r = 6, 9, 13.5 and 20 (four on each). Sources at rest, free at k = 2 and 8, colliding (k = 8, ν = 50),
+and warm (k = 8) but stopped at t = 4,000. Two arrangements each, 16,000 time units, the second half measured. Two kinds
+of matter: round 16's single family ("single"), and the same with the velocity's time-reversal parity of §27.2
+("single, odd"). R_net(σ, r) = (F(σ, r)/F(0, r))·√(I(0, r)/I(σ, r)) with F the net pull on the receivers and I the
+source wave's intensity at them; "from the quiet channel" uses only the pull of the source wave on the receivers' quiet
+oscillations.
+
+**One-way wave, round 16's matter (single)**
+
+| source | glow ÷ rest | keeping step (all receivers) | net pull at r = 6, 9, 13.5, 20 (10⁻⁴) | R_net(σ, r) at 6, 9, 13.5, 20 | R from the quiet channel |
+|---|---|---|---|---|---|
+| at rest | 1.00 | 0.63 | +1.61, +1.14, +0.41, +0.53 | 1 | 1 |
+| free, k = 2 | 1.98 | 0.78 | +2.17, +1.64, +1.28, +0.54 | 0.85, 1.05, 1.83, 0.77 | 1.06, 1.25, 2.00, 0.75 |
+| free, k = 8 | 4.75 | 0.93 | +2.36, +2.12, +1.75, +1.07 | 0.68, 1.01, 1.65, 0.89 | 1.09, 1.24, 1.96, 1.25 |
+| colliding, k = 8, ν = 50 | 1.62 | 0.46 | +1.53, +0.99, +0.38, +0.50 | 0.72, 0.66, 0.65, 0.66 | 0.81, 0.72, 0.78, 0.71 |
+| k = 8, stopped at t = 4,000 | 1.01 | 0.62 | +1.85, +1.06, +0.63, +0.11 | 1.06, 0.88, 1.70, 0.24 | 1.08, 1.01, 1.46, 0.42 |
+
+**One-way wave, with the velocity's parity (single, odd)**
+
+| source | glow ÷ rest | keeping step (all receivers) | net pull at r = 6, 9, 13.5, 20 (10⁻⁴) | R_net(σ, r) at 6, 9, 13.5, 20 | R from the quiet channel |
+|---|---|---|---|---|---|
+| at rest | 1.00 | 0.63 | +1.61, +1.14, +0.41, +0.53 | 1 | 1 |
+| free, k = 2 | 2.05 | 0.87 | +2.01, +1.74, +1.40, +0.99 | 0.90, 1.05, 1.62, 0.97 | 1.03, 1.16, 2.04, 1.08 |
+| free, k = 8 | 4.78 | 0.79 | +1.50, +1.80, +1.73, +0.88 | 0.59, 0.86, 1.67, 0.64 | 0.93, 1.08, 2.12, 0.90 |
+| colliding, k = 8, ν = 50 | 1.61 | 0.47 | +1.45, +1.06, +0.37, +0.49 | 0.71, 0.71, 0.64, 0.66 | 0.80, 0.77, 0.74, 0.72 |
+| k = 8, stopped at t = 4,000 | 1.00 | 0.70 | +1.67, +1.15, +0.57, +0.76 | 0.99, 1.00, 1.11, 1.02 | 1.00, 1.03, 1.19, 1.13 |
+
+Keeping step by shell at k = 8: 0.98, 0.98, 0.84, 0.93 (single) and 0.94, 0.86, 0.78, 0.60 (odd), against 0.84, 0.68,
+0.32, 0.68 at rest.
+
+* **Warm matter now pulls distant matter harder than cold matter, at every distance.** Single matter at k = 8:
+  +2.36, +2.12, +1.75 and +1.07 × 10⁻⁴ at r = 6, 9, 13.5 and 20, against +1.61, +1.14, +0.41 and +0.53 at rest, with
+  k = 2 in between. Averaged over the receivers the net pull is ×1.98 of cold at k = 8 (×1.53 at k = 2), and the
+  source wave's pull on the receivers' quiet channel ×2.69 (×2.14 for odd matter), where the two-way wave gave ×0.85
+  with round 16's mixing form and ×1.22 with the velocity's parity (§27.2).
+* **The pull follows the square root of the wave's extra strength.** R_net averages 1.06 over the four shells (single,
+  k = 8; 1.12 at k = 2) and 0.94 (odd, k = 8; 1.14 at k = 2): what the law needs is 1. Shell by shell it scatters
+  (0.59–1.83), and the scatter follows the cold reference: at r = 13.5 the cold source's receivers keep step at only
+  0.32, so the warm-to-cold ratio there is large (1.65). From the quiet channel alone R is 1.26–1.39 on average; the
+  difference is the receivers' own radiators, which push back in proportion to the wave's intensity (they take 40% of
+  the quiet channel's pull at rest and 52% at k = 8, with this matter's f = 0.2).
+* **Heat now helps the beat.** The warm source's pieces share one rhythm (spread 4.6 × 10⁻⁵ at k = 8, against
+  1.7 × 10⁻⁴ at rest and 2.6 × 10⁻³ with the two-way wave, §27.1), and distant matter keeps step at 0.93 on average
+  (0.63 at rest).
+* **Colliding sources pull like cold ones.** At ν = 50 the glow falls from ×4.75 to ×1.62 of rest and the net pull is
+  +1.53, +0.99, +0.38 and +0.50: the cold pull, within 5–13%. The little extra glow that survives the collisions adds
+  no pull (R_net ≈ 0.67), which is the law's rule for gas (k = 0).
+* **A warm source brought to rest returns to the cold pull.** Stopped at t = 4,000, its glow returns to ×1.01 and its
+  pull to +1.85, +1.06, +0.63 and +0.11 (single) or +1.67, +1.15, +0.57 and +0.76 (odd), the cold values within the
+  scatter except at the outermost shell of single matter.
+* **The velocity's parity is not needed here:** with the one-way wave, round 16's mixing form does as well as the
+  velocity's (R_net 1.06 against 0.94 at k = 8). The parity still matters for the two-way part of any real wave.
+
+**Matter whose radiators mostly ring inside** (`--set oneway_lowf` → `oneway_lowf.json`, `oneway_lowf_summary.json`):
+round 16's follow-up matter (§26.4: the radiators send a twentieth of their energy into the companion, f = 0.05), with
+the velocity's parity, at the same four distances, two arrangements each.
+
+**One-way wave, radiators that mostly ring inside (f = 0.05, with the velocity's parity)**
+
+| source | glow ÷ rest | keeping step (all receivers) | net pull at r = 6, 9, 13.5, 20 (10⁻⁴) | R_net(σ, r) at 6, 9, 13.5, 20 | R from the quiet channel |
+|---|---|---|---|---|---|
+| at rest | 1.00 | 0.65 | +2.14, +1.28, +0.49, +0.50 | 1 | 1 |
+| free, k = 2 | 2.01 | 0.80 | +2.64, +1.77, +1.46, +0.73 | 0.94, 1.02, 1.52, 1.01 | 0.96, 1.04, 1.80, 0.96 |
+| free, k = 8 | 4.76 | 0.73 | +2.85, +1.84, +1.98, +0.77 | 0.81, 0.85, 1.67, 0.67 | 0.85, 0.92, 1.92, 0.82 |
+
+* The receivers' own radiators now take 8% of the quiet channel's pull at rest and 11% at k = 8, as the rule 2f = 10%
+  says (§26.4), against 40–52% at f = 0.2.
+* R_net averages 1.12 at k = 2 and 1.00 at k = 8, and the net pull is ×1.50 and ×1.69 of cold. The sources' rhythm
+  spread at k = 8 is 1.9 × 10⁻⁵ (1.8 × 10⁻⁴ at rest); the books balance to 5 × 10⁻¹².
+
+*Running at the time of writing:* the same four distances with the two-way wave in the full model (the baseline for
+R_net), and sources of 24, 48 and 96 pieces at the same density (the glow per piece, and the pull at r = 12 and 18).
+
+**What this establishes, and what not.** In the full, energy-booked model, with one kind of matter for sources and
+receivers, a companion wave that only travels outward lets motion raise the output and the pull together, with the net
+pull growing as the square root of the wave's extra strength (R ≈ 1) at four distances; collisions and stopping switch
+the extra pull off. The one-way coupling is still imposed by hand: whether the companion's wave is one-way is the
+question the next round has to answer from the companion as a flowing medium.
+
+### 27.5 Where round 17 leaves the proof
+
+| link | status after round 17 |
+|---|---|
+| which term puts warm matter out of tune | **found:** the non-gradient part of the two-way tugs between warm pieces, through their stirred radiators. With it switched off, distant matter keeps step at 0.88 with a k = 8 source (cold: 0.63) (§27.1) |
+| a protection inside each piece | **none can remove the tugs:** at equal glow reciprocity fixes their size (twelve structures, ±4%), and a coupling linear in the velocity cannot be one-way. The review's pair protects only when its halves radiate through separate channels, not in a shared wave. What helps: the velocity's time-reversal parity (a first-principles correction) and a widely detuned pair (a poor scatterer): 0.18 → 0.41 at k = 8 (§27.2) |
+| the motion's mixing | **corrected:** odd under time reversal, as a velocity's coupling must be. Full model, k = 8: keeping step 0.23 → 0.33, the warm wave's pull on the receivers' quiet channel ×0.85 → ×1.22 of cold (§27.2) |
+| a companion wave that only travels outward | **removes the damage in the reduced model:** one beat, R(σ, r) = 1.0–1.5 at four distances, power ∝ mass; needs an inward leak ≲ 10% throughout the source (§27.3). **In the full, energy-booked model it does the same:** warm matter pulls distant matter harder than cold matter at all four distances (net pull ×1.98 of cold at k = 8), R_net = 1.06 on average (0.94 with the velocity's parity), and colliding and stopped sources pull like cold ones (§27.4). The one-way coupling is imposed, not yet derived |
+| the frequency requirement | a warm source's common beat must stay where cold matter's is, or far receivers cannot follow (§27.2); the one-way wave meets it (within 3 × 10⁻⁵) |
+| the net pull | the receivers' radiators are pushed in proportion to the wave's intensity; radiators that mostly ring inside (f ≪ 1/2) are needed (round 16); with the one-way wave and radiators that mostly ring inside (f = 0.05) they take only 8–11% of the pull, and R_net = 1.00 on average at k = 8 (§27.4) |
+| power in proportion to mass | reduced model: the wave's intensity per source piece is the same for 24, 48 and 96 pieces at the same density (§27.3); the full model's run at 24, 48 and 96 pieces is in progress |
+| every kind of matter falls alike | not tested: the model does not yet say what a piece's inertia is. In it, a locked receiver's pull is (1 − 2f) × its fed power over the wave's speed, so equal acceleration needs every kind of matter to share f (or f ≪ 1) and an inertia in proportion to its quiet amplitude — requirements for the microscopic model |
+| the law and the suite | unchanged (59 pass, 11 close, 7 fail); no astrophysical fit was changed this round, as the review asked |
+
+**Next:**
+1. **The companion as a flowing medium.** Derive the companion's wave in its own outflow: the crests' speed against the
+   stream (round 16's galaxy bound, crests at no more than half the travel speed, would put it between u/2 and u if the
+   crests are the stream's slow wave), whether the companion inside a source streams as one medium, and the wave's
+   exchange of energy and momentum with the stream. That decides whether the wave is one-way, and it gives the
+   coupling to build into the full model in place of the imposed one.
+2. **Then Step C with that wave:** R(σ, r) at more distances, cold, free, colliding and stopped sources, mass scaling
+   (physical mass and refinement separately), receivers of different kinds, with the energy and momentum the stream
+   takes booked explicitly.
+3. **What inertia is** for a piece of this matter, so that "every kind of matter falls alike" can be tested.
+4. A physical quiet store with a gap (χ and γ, and u from them); the release factor from drained receivers; the
+   Doppler shifts of real motion.
+5. Only then the astrophysical fits.
