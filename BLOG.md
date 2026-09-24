@@ -153,6 +153,10 @@ colliding clusters, with no dark matter and no expanding universe.*
   * **A gentler heat term, tested on everything.** Growing as σ^1.75 instead of σ² erases galaxy lensing's 16%
     excess, but makes the lensing of massive ellipticals worse: 60 pass, 10 close, 7 fail against 59, 11, 7. It
     trades one tension for another, so the law keeps σ². Along the way we fixed a slip in the test suite's refit.
+  * **Where "feed quiet waves, absorb loud ones" comes from.** A fixed supply of power plus a loss that grows with the
+    wave's loudness sets each piece of matter's timing, like a generator or a motor on the grid. With it, the heat
+    pattern comes back with no memory; and the same loss holds the companion back in a shape the 149 galaxies accept
+    as well as our law's exponential release.
 * Every number below is computed from public data by a script in this repository, named
   where the number appears (§12).
 * The earlier notebook (revisions 1–11), with all its retracted and retired claims left
@@ -2375,6 +2379,59 @@ little more heat; the massive ones (SLACS), and Mistele et al.'s analysis of the
 keep σ² for now. The switch is ready for when the two KiDS analyses are reconciled. Scripts:
 `regression/candidates/heat_p175.json`, `code/law.py`.
 
+**Step 2: where "feed quiet waves, absorb loud ones" comes from.** Round 13's rule worked, but we had put it in by
+hand. We tried two physical versions of a piece of matter and dropped each into the same experiment.
+
+*A singer that also absorbs.* Every piece of matter keeps singing as before (a quarter beat ahead of the wave
+around it), and also soaks up a little of any wave passing through it, as most materials do. A lone body then
+gains from a quiet wave in proportion to its strength, but loses to a loud one in proportion to the strength
+squared. So it feeds quiet waves and absorbs loud ones, without any switch.
+* **A cold, dense ball goes dark and still pulls:** 47 times quieter than independent singers, with its test bodies
+  pulled. The absorbing part swallows the ball's own chorus.
+* **But heat doesn't release it.** When we made the absorbing part tune itself like a real resonance, random motion
+  released nothing (×1.04–1.07 up to the re-timing speed). An absorber keeps absorbing whatever arrives, so motion
+  can't free what it holds. A simpler version did show a big gain, up to four times the pull, but that came from
+  motion shaking a jammed ball into step. It also had a memory: stopped again, two of four balls stayed bright.
+
+*A singer with a power balance.* Give each piece of matter a fixed supply of power (our law's 5.3 × 10⁻⁶ watts per
+kilogram) and a loss that grows with the loudness of the wave around it (the same absorption as above). Whatever it
+doesn't lose, it must feed into the wave. That fixes its timing, the way the power balance fixes whether a machine
+on the electrical grid runs as a generator or a motor:
+* in a **quiet** wave its supply beats its loss: it runs ahead and feeds the wave, and is pulled;
+* in a **loud** wave its loss beats its supply: it falls behind and draws from the wave, and is pushed.
+
+That is round 13's rule, derived from two physical numbers. In our densest ball (four runs each):
+
+| speed | 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 |
+|---|---|---|---|---|---|---|
+| **moving freely at random** | ×1.30 | ×1.51 | **×1.81** | ×1.71 | ×1.65 | ×1.69 |
+| with frequent collisions | ×0.98 | ×1.01 | ×1.08 | ×1.31 | ×1.68 | ×1.75 |
+| rotating in step | ×0.98 | ×0.95 | ×0.93 | ×0.88 | ×0.80 | ×0.52 |
+
+(pull on the test bodies compared with the same ball at rest)
+* The heat pattern comes back: free random motion strengthens the pull, frequent collisions hold the gain back, and
+  rotation gives none.
+* **No memory:** stopped again, all four balls went back to their dark, cold state. The gain is a true response to
+  the motion.
+* Beyond about an eighth of the re-timing speed the test bodies lose step again, as in round 13 (step 3 looks at
+  this).
+
+**And the release factor may be the same thing.** Our law holds the companion back where ordinary gravity is strong,
+using an exponential we fitted, not derived (§3.4). Both singers above hold back in loud waves too, with shapes of
+their own. We let the 149 galaxies judge (typical miss in rotation speed, constants refitted):
+
+| how the companion is held back | typical miss |
+|---|---|
+| the law's exponential | 15.87 km/s |
+| the singer that absorbs | **15.86 km/s** |
+| the singer with a power balance | 16.08 km/s (and the best fit by the measure the fits use) |
+| variants that push in strong gravity, or let the pull come back there | 16.19–16.78 km/s |
+
+The galaxies can't tell our exponential from the absorbers' hold. So "strong gravity holds the companion back" and
+"loud waves are absorbed" may be one effect: the same loss that sets each singer's timing.
+
+Scripts: `code/singer_v14.py`, `code/release_shape_v14.py`.
+
 ## 7. How this compares
 
 | | Ours | MOND | Dark matter |
@@ -2915,7 +2972,9 @@ into our inputs.
   * galaxy lensing pins the heat term's σ² (doubling σ gives 1.8–2.0 times the extra pull).
 * **Revision 23 (round 14, this page).** Rev 22's next steps, one at a time (§6.18):
   * a gentler heat term (σ^1.75) on the full suite: it closes galaxy lensing's common level but costs the massive
-    ellipticals, so σ² stays.
+    ellipticals, so σ² stays;
+  * "feed quiet waves, absorb loud ones" derived from a power balance (a fixed supply, a loss growing with loudness);
+    the same loss holds the companion back in a shape the galaxies accept as well as the release factor.
 
 **Superseded along the way, kept on the record:**
 * round 2's hot-gas-halo explanation of the ellipticals (now it is their stars);
@@ -3048,6 +3107,8 @@ python coherent_force_v13.py --output ../run-coherent-force-v13/coherent_force_v
 python joint_checks_v13.py  --output ../run-coherent-force-v13/joint_checks_v13.json    # 16 timings, doubling the speed, free amplitudes
 python strength_offset_v13.py --output ../run-coherent-force-v13/strength_offset_v13.json  # feed quiet waves, absorb loud ones
 python heat_exponent_v13.py --output ../run-coherent-force-v13/heat_exponent_v13.json  # how steeply the heat term must grow
+python singer_v14.py        --output ../run-coherent-force-v13/singer_v14.json          # a singer that absorbs; a singer with a power balance
+python release_shape_v14.py --output ../run-coherent-force-v13/release_shape_v14.json   # the release factor against the absorbers' hold, on SPARC
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:

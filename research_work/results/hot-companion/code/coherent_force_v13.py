@@ -56,12 +56,32 @@ def simulate(cfg):
     Optional (code/strength_offset_v13.py): E_s. Then the offset depends on the strength of the local wave,
     delta(|E|) = delta + (delta_strong - delta) x^n / (1 + x^n), x = |E| / E_s (delta_strong = +pi/2, n = 4 by
     default), for sources and test bodies alike: delta in weak waves, delta_strong in strong ones.
+
+    Optional (code/singer_absorber_v14.py): c_abs = c0 > 0. Then every emitter also absorbs: besides its own
+    locked oscillation a_j = e^{i theta_j} it carries a passive part driven by the wave around it, i c0 E_j (a
+    quarter cycle behind: it takes energy from the wave), so its total source is s_j = a_j + i c0 E_j with
+    E_j = sum_{l != j} G_jl s_l, solved each step as s = (1 - i c0 G)^{-1} a. Test bodies do the same in the cloud's
+    wave. c0 <= 4 pi / k0 = 2 keeps the passive part passive (c0 = 1: the largest absorption).
+    Optional (round 14): supply = P_s and loss = c_L. Then the offset is set by each emitter's power balance, as a
+    synchronous machine's load angle is: it has a fixed supply P_s and loses c_L |E|^2 to the wave around it, so it
+    must feed the wave the difference, |E| sin(arg E - theta) = P_s - c_L |E|^2 (units of a unit-strength emitter):
+    delta(|E|) = -arcsin(clip(P_s/|E| - c_L |E|, -1, 1)). A quarter cycle ahead (feeding) in weak waves, behind
+    (absorbing) in strong ones, with the switch at |E| = sqrt(P_s / c_L); the same for sources and test bodies.
+    With gamma_abs as well, the passive part is resonant, with line width gamma_abs: it follows its drive only as
+    fast as db_j/dt = -gamma_abs (b_j - i c0 E_j) lets it (implicit steps), so a wave whose phase at j drifts
+    faster than gamma_abs (a Doppler shift) is absorbed less. Test bodies' passive parts do the same.
     """
     N, Rb, kind = cfg['N'], cfg['Rb'], cfg['kind']
     sigma, nu, w, Gamma, delta = cfg['sigma'], cfg['nu'], cfg['w'], cfg['Gamma'], cfg['delta']
     Es = cfg.get('E_s'); d_strong = cfg.get('delta_strong', np.pi / 2); n_s = cfg.get('n_s', 4)
+    c0 = cfg.get('c_abs', 0.0); gam_a = cfg.get('gamma_abs')
+    t_stop = cfg.get('stop_at')                       # optional: the sources stop moving at this time (round 14 check)
+
+    Ps, cL = cfg.get('supply'), cfg.get('loss', 0.0)
 
     def offset(A):
+        if Ps is not None:
+            return -np.arcsin(np.clip(Ps / np.maximum(A, 1e-12) - cL * A, -1.0, 1.0))
         if not Es: return delta
         y = (A / Es) ** n_s
         return delta + (d_strong - delta) * y / (1 + y)
@@ -78,29 +98,44 @@ def simulate(cfg):
     dt = min(rates)
     n = int(cfg['T'] / dt); nb = int(cfg['burn'] / dt)
     F_acc = np.zeros(cfg['P']); I_acc = np.zeros(cfg['P']); inc_acc = np.zeros(cfg['P'])
-    lock = rad = feed = feed_p = fld = fld_p = 0.0; cnt = 0
+    lock = rad = feed = feed_p = fld = fld_p = absb = 0.0; cnt = 0
     for s in range(n):
         D = x[:, None, :] - x[None, :, :]; R = np.linalg.norm(D, axis=2); np.fill_diagonal(R, 1.0)
         G = np.exp(1j * K0 * R) / (4 * np.pi * R); np.fill_diagonal(G, 0.0)
-        a = np.exp(1j * th); E = G @ a
+        a = np.exp(1j * th)
+        if c0 and gam_a:                                                   # resonant passive parts (implicit step)
+            if s == 0:
+                b = np.linalg.solve(np.eye(N) - 1j * c0 * G, a) - a
+            h = dt * gam_a
+            b = np.linalg.solve((1 + h) * np.eye(N) - 1j * h * c0 * G, b + 1j * h * c0 * (G @ a))
+            src = a + b
+        else:
+            src = np.linalg.solve(np.eye(N) - 1j * c0 * G, a) if c0 else a     # the sources, with their passive parts
+        E = G @ src
         tgt = np.angle(E) + offset(np.abs(E))
         Dp = xp[:, None, :] - x[None, :, :]; Rp = np.linalg.norm(Dp, axis=2)
         Gp = np.exp(1j * K0 * Rp) / (4 * np.pi * Rp)
-        Ep = Gp @ a
+        Ep = Gp @ src
+        if c0 and gam_a:
+            bp = (1j * c0 * Ep) if s == 0 else (bp + dt * gam_a * 1j * c0 * Ep) / (1 + dt * gam_a)
         if s >= nb:
-            gE = ((Gp * (1j * K0 - 1 / Rp))[:, :, None] * (Dp / Rp[:, :, None]) * a[None, :, None]).sum(1)
-            F = 0.5 * np.real(np.exp(-1j * thp)[:, None] * gE)
+            gE = ((Gp * (1j * K0 - 1 / Rp))[:, :, None] * (Dp / Rp[:, :, None]) * src[None, :, None]).sum(1)
+            sp = np.exp(1j * thp) + ((bp if gam_a else 1j * c0 * Ep) if c0 else 0.0)   # a test body's own source
+            F = 0.5 * np.real(np.conj(sp)[:, None] * gE)
             F_acc += -(F * rhat).sum(1)                                   # toward the cloud: positive
             I_acc += np.abs(Ep) ** 2; inc_acc += (np.abs(Gp) ** 2).sum(1)
             lock += np.mean(np.cos(th - tgt))
             feed += np.mean(np.sin(np.angle(E) - th)); feed_p += np.mean(np.sin(np.angle(Ep) - thp))   # > 0: feeding the local wave
             fld += np.mean(np.abs(E)); fld_p += np.mean(np.abs(Ep))
+            if c0: absb += (-np.mean(np.imag(np.conj(src - a) * E)) if gam_a else c0 * np.mean(np.abs(E) ** 2)) / (K0 / (4 * np.pi))   # taken from the wave by the passive parts
             if s % 10 == 0:
                 Rz = R.copy(); np.fill_diagonal(Rz, 0.0)
-                rad += 10 * np.real(np.conj(a) @ (np.sinc(K0 * Rz / np.pi) @ a)) / N
+                rad += 10 * np.real(np.conj(src) @ (np.sinc(K0 * Rz / np.pi) @ src)) / N
             cnt += 1
         th = th + dt * (dw + Gamma * np.sin(tgt - th))
         thp = thp + dt * Gamma * np.sin(np.angle(Ep) + offset(np.abs(Ep)) - thp)
+        if t_stop is not None and s * dt >= t_stop:
+            continue
         if kind == 'ordered':
             c, s_ = np.cos(Om * dt), np.sin(Om * dt)
             x = np.c_[c * x[:, 0] - s_ * x[:, 1], s_ * x[:, 0] + c * x[:, 1], x[:, 2]]
@@ -120,7 +155,7 @@ def simulate(cfg):
                 pull_se=float(pull.std(ddof=1) / np.sqrt(len(pull))),
                 intensity_over_independent=float(np.mean(I_acc / cnt / inc)), radiated_over_independent=float(rad / cnt),
                 locking=float(lock / cnt), feeding_sources=float(feed / cnt), feeding_test_bodies=float(feed_p / cnt),
-                field_sources=float(fld / cnt), field_test_bodies=float(fld_p / cnt),
+                field_sources=float(fld / cnt), field_test_bodies=float(fld_p / cnt), absorbed_over_independent=float(absb / cnt),
                 independent_pull=float(np.mean(0.5 * K0 * (np.sqrt(np.pi) / 2) * np.sqrt(inc))))
 
 

@@ -3067,7 +3067,8 @@ it. Collisions keep it held.
 
 The request: "proceed with the next steps, keep the blog and main current": round 13's list (§23.10). In the
 order done:
-1. the heat weight's exponent on the full suite (§24.1).
+1. the heat weight's exponent on the full suite (§24.1);
+2. where "feed quiet waves, absorb loud ones" comes from, and whether it is the release factor (§24.2).
 
 ### 24.1 The heat exponent on the full suite
 
@@ -3113,3 +3114,88 @@ KiDS's common level with the clusters unchanged. Here the whole suite judges it.
   lenses (≈ 250 km/s), want a little less. Not adopted: the law keeps p = 2, and the exponent is now a switch for
   when the two KiDS analyses are reconciled. Round 13's toy release grew as σ^1.7 at its onset (§23.7), so the
   microscopic model does not choose between the two either.
+
+### 24.2 Where "feed quiet waves, absorb loud ones" comes from
+
+`code/singer_v14.py` → `run-coherent-force-v13/singer_v14.json` (297 runs); `code/release_shape_v14.py` →
+`run-coherent-force-v13/release_shape_v14.json`. `simulate` in `code/coherent_force_v13.py` gains options for both
+emitters below (and `stop_at`, to stop the motion mid-run); with them off, every stored run reproduces exactly.
+
+**A. A singer that also absorbs.** Each emitter keeps round 10's locked oscillation (a quarter cycle ahead of its
+wave) and gains a passive part driven by the wave, i c0 E_j, which takes energy in proportion to |E|²; the sources
+are solved each step as s = (1 − i c0 G)⁻¹ a (c0 ≤ 4π/k0 keeps the passive part passive). A lone one in a wave of
+strength E is pulled by (k/2)(|E| − c0|E|²): it feeds quiet waves and absorbs loud ones, with no switch put in.
+
+| at rest (two seeds): radiated ÷ independent / pull ÷ independent pull | c0 = 0.25 | 0.5 | 1 | 2 |
+|---|---|---|---|---|
+| Rb = 1 | 1.92 / +1.25 | 1.11 / +0.90 | 0.47 / +0.56 | 0.28 / +0.23 |
+| Rb = 0.5 | 1.66 / +1.16 | 0.59 / +0.70 | **0.17 / +0.37** | 0.22 / +0.05 |
+| Rb = 0.35 | 1.13 / +1.01 | 0.34 / +0.54 | **0.021 / +0.075** | 0.27 / −0.01 |
+
+* **Dark and pulled, derived.** The singers all feed (they keep round 10's timing), and the passive parts swallow the
+  cold chorus: at c0 = 1 the densest cloud radiates 1/47 of what independent singers would, and its test bodies are
+  pulled. §23.3's statement is escaped by a second channel, not by changing the singers' timing.
+* **Moving** (densest cloud, c0 = 1, three seeds; pull ÷ rest, radiated ÷ rest in brackets): free ×1.14, 1.59, 1.83,
+  3.62, 3.98, 3.83 (q = 1/32 … 1; radiated ×1.3–4.6); colliding ×1.08, 1.21, 1.07, 1.47, 2.16, 3.84; rotating ×1.00 →
+  0.60. **But the gain is un-jamming, not release:** at rest the dense cloud's singers are only half locked (locking
+  0.55, unchanged over 900 locking times), and free motion at q ≥ 1/4 lets them lock (0.90–0.99), which makes the
+  cloud five times brighter. It has memory: moved at q = 1/2 and then stopped, 2 of 4 clouds stayed bright and locked
+  (radiated 0.10–0.12, locking 0.997) and 2 went back (0.021–0.022).
+* **With resonant passive parts** (line width γ_a = Γ; narrower ones cannot follow the singers, and the cold cloud is
+  bright: 0.9 at γ_a = 0.03, 7 at 0.01), the cold cloud is dark and well locked (0.110; locking 0.93), and motion
+  releases nothing: ×1.04–1.07 up to q = 1, then dimmer (free q = 8: ×0.73). A separate absorber keeps absorbing
+  whatever reaches it, so motion cannot free what it holds.
+
+**B. A singer with a power balance.** Give each emitter a fixed supply P_s (the law's ℓ per kilogram) and a loss to
+the wave around it, c_L|E|² (the same absorption as in A). In a steady state it must feed its wave the difference,
+|E| sin(lead) = P_s − c_L|E|², so its timing is set as a synchronous machine's load angle is: a generator, ahead of a
+quiet wave; a motor, behind a loud one (the switch at |E| = √(P_s/c_L)). Round 13's rule, now from two physical
+numbers: δ(|E|) = −arcsin(clip(P_s/|E| − c_L|E|, −1, 1)).
+
+| at rest (two seeds): radiated ÷ independent / pull ÷ independent pull | P_s 0.05, E_s 0.1 | P_s 0.1, E_s 0.1 | P_s 0.05, E_s 0.2 | P_s 0.2, E_s 0.3 |
+|---|---|---|---|---|
+| Rb = 1 | 0.179 / +0.13 | 0.170 / +0.20 | 0.514 / +0.47 | 0.294 / +0.38 |
+| Rb = 0.5 | 0.032 / +0.10 | 0.030 / +0.12 | 0.218 / +0.26 | 0.137 / +0.20 |
+| Rb = 0.35 | 0.012 / +0.06 | **0.013 / +0.07** | 0.113 / +0.16 | 0.070 / +0.13 |
+
+All twelve are dark and pulled (sources feeding −0.24 to −0.67, test bodies +0.35 to +0.64).
+
+| moving (P_s 0.1, E_s 0.1; four seeds): pull ÷ rest (radiated ÷ rest) | q = 1/32 | 1/16 | 1/8 | 1/4 | 1/2 | 1 |
+|---|---|---|---|---|---|---|
+| densest (Rb 0.35), **free** | **1.30** (1.5) | **1.51** (2.2) | **1.81** (4.6) | 1.71 (6.0) | 1.65 (8.6) | 1.69 (13.4) |
+| densest, colliding | 0.98 (1.1) | 1.01 (1.1) | 1.08 (1.2) | 1.31 (1.6) | 1.68 (4.4) | 1.75 (7.4) |
+| densest, rotating | 0.98 | 0.95 | 0.93 | 0.88 | 0.80 | 0.52 |
+| dense (Rb 0.5), free | 0.94 (1.0) | 1.05 (1.2) | 1.22 (2.1) | 1.20 (3.2) | 1.11 (4.4) | 0.91 (7.0) |
+| dense, colliding | 0.96 | 0.95 | 0.92 | 0.96 (1.1) | 1.18 (1.8) | 1.18 (3.4) |
+
+* **Round 13's pattern, from the power balance:** free random motion strengthens the pull (×1.3–1.8 in the densest
+  cloud up to q = 1/8), frequent collisions hold the gain back (×0.98–1.08 there), rotation gives none. The first
+  doublings multiply the released power by 2.5 and 3.0 and the extra pull by 1.7 and 1.6.
+* **No memory:** moved at q = 1/4 and stopped, all four clouds return to their cold values (radiated 0.009–0.015,
+  pull 0.050–0.071 of independent, against 0.0125 and 0.063 at rest). The gain is a steady response to motion.
+* **Limits, as in round 13:** the pull stops growing beyond q ≈ 1/8 while the release goes on (×13 at q = 1): the
+  test bodies lose step. The less dense cloud gains less (×1.2). §24.3 looks at both.
+
+**The hold-back shape, on the galaxies.** A lone emitter of either kind is held back in loud waves: A by
+1 − |E|/E_s, B by (P_s − c_L|E|²)/|E| (the full round-10 pull in quiet waves). The ordered companion's intensity
+is |E|² ∝ |g_N| (§21.1), so each gives a release factor R(|g_N|) to set against the law's exp(−|g_N|/g_d). The 149
+SPARC galaxies judge them (a and the scale refitted; u and the heat held at the round-12 law):
+
+| R(g), x = √(g/g_s) | constants | halves the pull at g_N (m/s²) | typical miss (km/s) | fit statistic |
+|---|---|---|---|---|
+| exp(−g/g_d) (the law) | a, g_d | 1.41 × 10⁻¹⁰ | 15.87 | 0.21111 |
+| A: 1 − x, stopped at 0 | a, g_s | 1.35 × 10⁻¹⁰ | **15.86** | 0.21169 |
+| B: clip(A (1/x − x), 0, 1) | a, g_s, A | 1.23 × 10⁻¹⁰ | 16.08 | **0.21103** |
+| A with its push (1 − x) | a, g_s | 2.64 × 10⁻¹⁰ | 16.19 | 0.21475 |
+| an absorber that saturates, 1 − x/(1 + x²) | a, g_s | 6.95 × 10⁻¹⁰ | 16.78 | 0.21709 |
+
+**The galaxies cannot tell the law's exponential from the absorbers' hold** (15.86 and 16.08 km/s against 15.87; the
+fit statistic, which the fits minimise, is lowest for B). Holds that push in strong fields, or let the pull return in
+them, do worse. So the release factor, "strong gravity holds the companion back", may be the same loss that sets the
+emitters' timing. What stops the hold at zero rather than letting it push is the next thing to derive.
+
+**Reading.** "Feed quiet waves, absorb loud ones" follows from a fixed supply and a loss that grows with the
+wave's intensity; with it, the heat pattern of round 13 appears with no memory, and the same loss gives a hold-back
+the galaxies accept in place of the exponential release factor. A passive absorber alone gives the darkness but not
+the release: the heat term needs the cold hush to be arranged by the emitters' own timing.
+
