@@ -265,7 +265,7 @@ working models (§4), and some pieces are still assumptions. Keeping them apart:
 | The pull points along the companion's net flow; the companion remembers its source's motion | **assumed** (motivated, not derived) |
 | The field equation ∇²Φ = −∇·h | **borrowed** form (Milgrom's QUMOND) |
 | Light responds to Φ as in Einstein's theory | **assumed**; to be derived in a relativistic version |
-| Warm matter pulls harder, by the square root of its extra glow | **shown in a full simulation** only with the companion's wave made one-way by hand (§4.4); deriving that from the companion as a flowing medium is the next step |
+| Warm matter pulls harder, by the square root of its extra glow | **shown in a full simulation** with the companion's wave made one-way by hand; with a derived, push-free medium (a stream that absorbs counter-moving waves), 73–84% of it (§4.4) |
 | What a piece's inertia is, and why all matter falls alike | **open**: the working models do not yet say |
 | MOND as the cold limit | **derived** from the law |
 
@@ -384,6 +384,8 @@ step at every distance, better than with a cold source (dashed). Script `code/on
   | **Warm (heat weight 8), outward-only wave** | **+2.36** | **+2.12** | **+1.75** | **+1.07** |
   | Warm but colliding, outward-only wave | +1.53 | +0.99 | +0.38 | +0.50 |
   | Warm, wave travelling both ways | −0.89 | −0.55 | −0.03 | −0.09 |
+  | Cold, stream that absorbs inward waves (round 18, κ = 5) | +1.36 | +0.76 | +0.56 | +0.47 |
+  | Warm, stream that absorbs inward waves (round 18, κ = 5) | +1.72 | +1.38 | +1.23 | +0.60 |
 
   Measured against the square root of the wave's extra strength, the warm source's extra pull comes out 1.06 on
   average, close to the 1 the law's square root requires; distance by distance it ranges from 0.6 to 1.8, because the
@@ -393,10 +395,9 @@ step at every distance, better than with a cold source (dashed). Script `code/on
 * **The glow stays in proportion to mass, and the pull grows about as its square root, as the law needs.** In the full
   simulation the glow per piece is the same within 8% for sources of 24, 48 and 96 pieces, and four times the mass
   gives ×1.7 the pull for a cold source and ×2.1 for a warm one, where the law's √(G M a)/r gives ×2 (two arrangements
-  each; a proper fit of the exponent, with its uncertainty, over a wider range is still to be done). A nice bonus
-  falls out as well: with a wave that only travels outward, a piece feels only the matter nearer the centre than
-  itself. For a round source that is Newton's rule that only the mass inside a radius pulls there, which is the form
-  the law already takes.
+  each; a proper fit of the exponent, with its uncertainty, over a wider range is still to be done). With the rule
+  imposed in these tests every piece hears every piece nearer the centre, which for a round source is Newton's rule
+  that only the mass inside a radius pulls there; round 18 found that the physical one-way media hear less (below).
 * **Status, and what round 18 found.** The one-way wave was imposed in these tests, by deleting every inward coupling
   by hand. Round 18 gave the wave its own local equations, first in one dimension, solved exactly and checked against a
   direct simulation of the medium (forces and powers agree within 1–4%):
@@ -410,7 +411,16 @@ step at every distance, better than with a cold source (dashed). Script `code/on
   * **A version with no push:** waves that travel at their own speed through matter's frame, with the stream absorbing
     the part that moves against it. Emission is then symmetric (no push), the coupling is one-way (a wave loses a
     factor e^(−κ) for every unit of distance it travels inward), and the energy bill is the static one (crests at most
-    u/2). Testing it in the full three-dimensional simulation is the next step.
+    u/2). In the full three-dimensional simulation (table above) it removes the push, colliding sources pull like cold
+    ones, and a warm source pulls distant matter harder than a cold one at every distance: 73–84% of the square-root
+    growth the law needs, with every watt booked (the stream absorbs 33–48% of what the pieces give the wave) and the
+    medium passive, unlike the rule imposed by hand, which could in principle create energy.
+  * **What it does not yet do** is keep a warm source on one beat. In it a piece hears only the inner matter on its
+    own side of the source, because a wave that must cross the centre is absorbed; for strong absorption a distant
+    receiver hears mainly the near half of a source. The imposed rule let every piece hear everything nearer the
+    centre, which is what gave one beat and Newton's rule. So those two results belonged to the rule, not to the
+    physical media found so far, and the law's counting of all matter (its |g_N| and S) now has to be reconciled
+    with a medium that hears less: the review's hot-shell benchmark, in general form.
 
 ### 4.5 What being pulled costs
 
@@ -642,7 +652,9 @@ An independent review (25 September 2026) set out what a paper would need. In or
    its waves, what happens at a source's centre and where streams meet), with the flow's energy and momentum followed,
    and repeat the warm-source tests with that wave instead of one made one-way by hand. This is the main step now under
    way: waves carried by the stream turn out one-way but push every emitter downstream; waves the stream absorbs when
-   they move against it are one-way with no push, and are being tested in three dimensions (§4.4).
+   they move against it are one-way with no push, and in the full simulation make the pull grow with heat at 73–84% of
+   the square root the law needs, though a warm source keeps no single beat (§4.4). Next: strong absorption as a full
+   wave problem, and what sets the absorption.
 2. **The law's numbers from the working models,** not only its trends: the exponent of the square root with its
    uncertainty over a wide range of mass, the full dependence on heat (why the model's glow grows more slowly than
    1 + k, §4.3), and a clean benchmark: a small system inside a shell of hot matter. The law's plain total S counts the
@@ -669,8 +681,10 @@ Why optimistic: the four constants have held across galaxies, clusters, collisio
 every piece of the law is tied to something measured about matter. Several links that began as assumptions now come
 out of explicit, energy-balanced models: the square root, the heat weight with its one speed, the collision rule and
 the pull's energy bill. The one link that resisted, keeping warm matter in tune, now has a precise diagnosis and a
-mechanism that works in the full simulation, and turning that mechanism from an imposed rule into a derived one is a
-well-posed calculation. Each open item is a concrete calculation or measurement.
+mechanism that works in the full simulation when imposed by hand, and a first physical medium, a stream that absorbs
+waves moving against it, already delivers most of it with no push and every watt booked. What remains (strong
+absorption as a full wave problem, what sets the absorption, and a law that counts only what the medium hears) is
+well posed. Each open item is a concrete calculation or measurement.
 
 **What is borrowed and what is ours.** Borrowed and credited: Newton's and Einstein's gravity in strong fields; Gauss's
 flux geometry; Dicke narrowing and the Mössbauer effect as known physics; the Bloch equations of inverted, self-sustained

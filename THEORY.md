@@ -556,6 +556,31 @@ results README §18):
   the same within 8% for 24, 48 and 96 pieces, and with the one-way wave the pull at fixed r grows as √M (×1.71 at
   rest, ×2.11 at k = 8, for four times the mass; √(G M a)/r gives ×2).
 
+### Round 18: the review's checklist, and the companion as a medium
+
+* **Waves carried by the stream** (`code/flowing_medium_v18.py`, one dimension, exact, checked against a direct
+  simulation of the local equations): (∂_t + U∂_x)²ψ − c²∂_x²ψ = Σ_j Q_j δ(x − x_j); for U > c,
+  g(x) = (i/2ωc)(e^{ik_f x} − e^{ik_s x}) H(x), k_{f,s} = ω/(U ± c). A lone piece feeds no net pseudo-energy and is
+  pushed downstream by |q|²/(4(U² − c²)), its stream-frame power over U (wave drag). A receiver leading by a quarter
+  cycle: F = −(k_f + k_s)|q||φ|/4, P = (ω/2)|q||φ|, so P/|F| = (U² − c²)/U, and the galaxies' feedback bound
+  (P/F ≤ u/2, round 16) needs c ≥ U/√2. In three dimensions the characteristics move at V ± c: for a stream at u
+  everywhere along the field lines of g_N, dr/dt ≥ u − c > 0, so the domain of influence of every point is strictly
+  outward, into the centre; a pressure-driven (Chevalier–Clegg) wind is subsonic inside its source. The drag per
+  kilogram is at least of order ℓ/u = a/2, larger than √(a g_N) in galaxies' outskirts: ruled out as it stands.
+* **Waves the stream absorbs when they move against it** (`code/flowing_medium_v18.py`, `code/absorbing_stream_v18.py`,
+  `code/absorb_reduced_v18.py`): loss rate κ max(0, −n·e), which along a straight path integrates to T = exp(−κ L),
+  L = r_l − (smallest radius reached). Symmetric emission (no drag), P/F = c. Full model (two arrangements, receivers at
+  r = 6–20): no push; colliding sources pull like cold ones; R_net 0.62 (κ = 2.3) and 0.73 (κ = 5) at k = 8, 0.81 and
+  0.84 at k = 2; the stream absorbs 33–48% of the power. The dissipative part (M − M†)/2i is passive to 10⁻³–10⁻² of
+  its largest eigenvalue for κ ≤ 5 (round 17's imposed mask: −0.87 of 4.9; κ = 20: −0.46, beyond the ray form). A warm
+  source keeps no single beat (spread 2–3 × 10⁻³): for strong absorption a point x hears only matter with
+  x·x′ ≥ |x′|² (the ball on the diameter from the centre to x), a distant receiver the near half of a source. Round
+  17's single beat and "Newton's rule" were properties of the imposed radius rule.
+* **The heat factor** (`code/heat_factor_v18.py`): k is defined in linear response (k = 12q² exactly for round 16's
+  matter); nearly independent pieces reach 76–87% of 1 + k as their inversion falls (by up to 24%), dense balls 45–61%.
+* **Cassini** (`code/cassini_2026_v18.py`): against Park et al. 2026, Q₂ = (1.6 ± 1.8) × 10⁻²⁷ s⁻², the adopted law
+  gives 4.38 × 10⁻²⁷ (1.54σ); L ≥ 0.19 pc meets 1σ (wide binaries at 20,000 AU: 7.6% → 6.0%).
+
 ### What follows
 
 ```

@@ -4312,3 +4312,260 @@ question the next round has to answer from the companion as a flowing medium.
 4. A physical quiet store with a gap (χ and γ, and u from them); the release factor from drained receivers; the
    Doppler shifts of real motion.
 5. Only then the astrophysical fits.
+
+## 28. Round 18, 25 September 2026: the review's checklist, and the companion as a medium
+
+An independent review of the fresh write-up and of round 17 (25 September 2026) set out ten items between this work
+and a paper, in dependency order: (1) derive the outward-only wave from a local medium, with the medium's own energy
+and momentum; (2) recover the law's numbers, not only its trends, including a hot-shell benchmark; (3) define inertia
+and show why different matter falls alike; (4) screening, the external field and light's coupling, derived or stated
+as assumptions (with Cassini's 2026 value); (5) collisions as a causal calculation; (6) a statistical inference in
+place of the scoreboard; (7) the remaining discrepancies explained or delimited; (8) a literature search and one
+bounded claim; (9) a frozen, reproducible release; (10) a manuscript written to the strength of the evidence. Its
+shortest path: derive the medium and its one-way response first, then force scaling and inertia with it, then freeze
+the law and validate it statistically. This round does the write-up items at once and starts item 1.
+
+### 28.1 The write-up matched to the evidence
+
+`BLOG.md` and the page: the subtitle says "a few stated assumptions, worked out step by step" instead of "from first
+principles"; a new §3.10 lists every piece of the law as assumed, derived (and where), borrowed or open; the scoreboard
+and the comparison table carry a statement that they are typical misses, not a statistical comparison, with the
+uncertain inputs uncounted; the regression suite is described as an engineering tool (a pass is within two standard
+deviations of one measurement; the checks are not independent); "Einstein's, exactly" becomes "no measurable extra
+pull, with Einstein's theory assumed in strong fields"; strong-lens agreement is stated with light's response assumed;
+"no structure inside a piece can remove it" becomes "none of the twelve we tried, and reciprocity suggests why for
+structures that send and receive through one channel"; "exactly what the law requires" becomes the measured values
+with their spread (R_net 1.06 on average, 0.6–1.8 by distance; ×1.7 and ×2.1 for four times the mass, two
+arrangements); the collision rule is conditional (the lensing follows the companion's net flow; it can sit on dense
+gas among converging hot galaxies, as in Abell 520's clump, and returns around long-stopped gas); the "explains why"
+row is gone; §9 is the review's checklist.
+
+### 28.2 Cassini, 2026
+
+`code/cassini_2026_v18.py` → `run-cassini-2026-v18/cassini_2026_v18.json`. Park, Hees, Famaey, Desmond & Durakovic
+(Phys. Rev. D, 28 July 2026; arXiv:2602.17884) re-estimated the Galaxy's quadrupole in the Sun's field with the DE440
+data, simultaneously with the other ephemeris parameters: Q₂ = (1.6 ± 1.8) × 10⁻²⁷ s⁻², 40% tighter than Hees et al.
+2014's (3 ± 3) × 10⁻²⁷, which set the release length L in round 9. The adopted law (round-12 constants, the Galaxy's
+Newtonian pull at the Sun 1.638 × 10⁻¹⁰ m/s², the suite's formula):
+
+| release length L | Q₂ (10⁻²⁷ s⁻²) | from the 2026 value | wide binaries: extra pull at 7,000 / 20,000 AU |
+|---|---:|---:|---|
+| 0 (released at once) | 29.4 | +15.4σ | 15.4% / 15.6% |
+| 0.10 pc | 6.13 | +2.5σ | 4.4% / 9.7% |
+| **0.145 pc (adopted)** | **4.38** | **+1.54σ** | **3.2% / 7.6%** |
+| 0.20 pc | 3.26 | +0.9σ | 2.4% / 6.0% |
+| 0.30 pc | 2.22 | +0.3σ | 1.6% / 4.3% |
+| 0.50 pc | 1.35 | −0.1σ | 1.0% / 2.7% |
+| 1.0 pc | 0.69 | −0.5σ | 0.5% / 1.4% |
+
+The adopted law sits 1.54σ above the new value (it was 0.46σ from the old one). A release length of at least 0.19 pc
+meets 1σ, at least 0.12 pc 2σ; the wide-binary forecast falls with it. The suite's check now uses the 2026 value (still
+a pass under its two-sigma rule, flagged "worse"). L is not refitted here: it is one of the pieces to be derived
+(review item 4), and the law is to be frozen only after item 1.
+
+### 28.3 Why the model's glow grows more slowly than 1 + k
+
+`code/heat_factor_v18.py` → `run-heat-factor-v18/heat_factor_v18.json`. The heat weight k is defined for one piece in
+linear response (the mixing q is chosen so that one piece's released glow is k times its cold glow: k = 12 q² for round
+16's matter, exactly linear). In the full model at k = 8 a source of 48 pieces glows ×4.75 of its cold output, not ×9.
+The same matter, 48 pieces in a dense ball (radius 3, spacing below a wavelength) and in a dilute one (radius 30,
+spacing about two wavelengths), and one isolated piece, 4,000 time units:
+
+| glow ÷ cold at k = 2, 8, 16 (1 + k = 3, 9, 17) | round 16's matter (f = 0.2) | f = 0.05 matter |
+|---|---|---|
+| dilute ball: pieces nearly independent | 2.60, 6.97, 11.8 (76–87%) | 2.62, 7.23, 12.9 (76–87%) |
+| dense ball | 1.81, 4.54, 7.57 (45–60%) | 1.82, 4.40, 7.63 (45–61%) |
+| one isolated piece (a single velocity draw) | 1.54, 3.14, 5.19 | 1.55, 3.17, 5.30 |
+| the pieces' inversion at k = 16 ÷ cold (dilute) | 0.76 | 0.88 |
+
+* **Two causes.** Nearly independent pieces reach 76–87% of 1 + k: the extra glow draws on each piece's supply, and its
+  inversion falls (by 14% at k = 8 and 24% at k = 16 for round 16's matter), while its quiet amplitude hardly changes
+  (−3%). In a dense ball the shared wave holds back a further part (45–61% of 1 + k), round 16's "renormalization"
+  of dense clouds (§26.3).
+* A single isolated piece depends on its one random velocity (its |δ|² is one draw of three squared normal numbers), so
+  it is not the ensemble value.
+* **In the law** this reads as an effective u larger than the microscopic one, by 1/√0.8 in dilute matter and 1/√0.5
+  in dense; the fitted u absorbs a common factor, but a factor that depends on packing would make the heat term differ
+  between ellipticals and clusters. Which way real matter goes is part of review item 2.
+
+### 28.4 The companion as a flowing medium, exactly in one dimension
+
+`code/flowing_medium_v18.py` → `run-flowing-medium-v18/flowing_medium_v18.json` (units c = ω = 1). Round 17 made the
+wave one-way by deleting the inward couplings and booked the energy "to the wave and its flow". Here the wave gets its
+own local equations, in two versions, and everything the review asked for follows from them.
+
+**A. Waves carried by the stream.** The companion streams at U and its waves move at c relative to it:
+```
+(∂_t + U ∂_x)² ψ − c² ∂_x² ψ = Σ_j Q_j(t) δ(x − x_j)
+```
+(the one-dimensional analogue-acoustics equation; its three-dimensional form, for an irrotational stream of density
+ρ₀, is Unruh's). The pieces enter through L_int = Σ Q_j ψ(x_j): piece j feeds the medium the power Q_j ∂_tψ(x_j) and
+feels the force Q_j ∂_xψ(x_j). The steady medium conserves the pseudo-energy H = π²/2 − Uπψ_x + c²ψ_x²/2 (π = ψ_t + Uψ_x)
+and the pseudo-momentum.
+
+* **Speeds, with their frames.** A disturbance moves at U ± c in the lab (c relative to the stream). For U > c both
+  move downstream: nothing travels upstream. In the time-harmonic problem the two waves have lab wavenumbers
+  k_f = ω/(U + c) and k_s = ω/(U − c); their crests move at U + c and U − c, and so does their energy (no dispersion).
+  In the stream's frame the slow wave's frequency is negative (ω' = −ωc/(U − c)), so it carries negative lab
+  pseudo-energy and pseudo-momentum pointing upstream.
+* **The Green's function is exact:** for U > c, g(x) = (i/2ωc)(e^{ik_f x} − e^{ik_s x}) downstream and 0 upstream; for
+  U < c, (i/2ωc) e^{ik_± x} on either side.
+* **One-way is derived:** for U > c no piece hears any piece downstream of it. In three dimensions, for a stream that
+  moves at u everywhere along the field lines of g_N (the guided stream of rounds 12–13, whose density falls as |g_N|
+  toward a source's centre while its speed stays u), every characteristic moves outward (dr/dt ≥ u − c > 0), so the
+  domain of influence of every point lies strictly outward, right into the centre. A pressure-driven wind would not do:
+  its speed grows from zero at the centre and is below its own wave speed inside the source (the Chevalier–Clegg
+  solution), so waves travel both ways exactly where the warm pieces are.
+* **A lone piece in the stream:**
+
+| U/c | one-way | pseudo-energy fed, per \|q\|² | push downstream, per \|q\|² | power in the stream's frame | pull on a locked receiver, per \|q_R\|\|φ\| | power fed ÷ pull |
+|---|---|---:|---:|---:|---:|---|
+| 0 | no | 0.250 | 0 | 0.250 | 0.500 | c |
+| 0.5 | no | 0.250 | 0.167 | 0.333 | 0.333 | 3.0 U |
+| 1.1 | yes | 0 | 1.190 | 1.310 | 2.619 | 0.17 U |
+| 1.2 | yes | 0 | 0.568 | 0.682 | 1.364 | 0.31 U |
+| √2 | yes | 0 | 0.250 | 0.354 | 0.707 | 0.50 U |
+| 2 | yes | 0 | 0.083 | 0.167 | 0.333 | 0.75 U |
+
+* **The energy bill.** A receiver that leads the local wave by a quarter cycle feeds P = (ω/2)|q_R||φ| and is pulled by
+  F = (k_f + k_s)|q_R||φ|/4 toward the source, exactly (the two waves' beating cancels in the ratio). Both waves pull.
+  So P/F = 2ω/(k_f + k_s) = (U² − c²)/U, not a crest speed. The galaxies' bound on the feeding feedback (round 16,
+  P/F ≤ u/2) then needs c ≥ U/√2; with one-way (c < U) the window is **0.71 ≤ c/U < 1**. (The blog's earlier hint, "c
+  between U/2 and U", used the slow wave's crest speed alone.)
+* **But the stream pushes every emitter downstream.** A lone piece in a supersonic stream feeds no net pseudo-energy
+  (its two waves' pseudo-energies cancel) but feels a downstream push |q|²/(4(U² − c²)), exactly its power in the
+  stream's frame divided by U: wave drag, like wind on a sail. The push is independent of any other source, while the
+  pull on a receiver falls with the incoming wave: their ratio is |q_R|/(2(U/c)|φ|). Per kilogram, with the emission
+  equal to the cold glow ℓ, the push is the stream-frame power over u: (U/c)/((U/c)² − 1) × ℓ/u in one dimension,
+  at least 0.71 a in the window. Three dimensions change the factor, not its order (a source moving through its medium
+  radiates at least its static power, so the push is at least of order ℓ/u = a/2): larger than the law's own pull
+  √(a g_N) through the outskirts of galaxies. **As it stands this medium is ruled out.** (Subsonic streams push too,
+  and are two-way.)
+
+**B. Waves the stream absorbs when they move against it.** Waves travel at c through the matter's frame; the stream
+absorbs the part that moves against it, amplitude e^{−κ} per unit length travelled inward:
+```
+(∂_t − c ∂_x) u₊ = S − c κ_L(x) u₊,    (∂_t + c ∂_x) u₋ = S − c κ_R(x) u₋,    ψ_t = (u₊ + u₋)/2,  ψ_x = (u₊ − u₋)/2c
+```
+(the undamped equations are ψ_tt − c²ψ_xx = S; an outflow from x = 0 damps left-movers at x > 0 and right-movers at
+x < 0). Emission is symmetric, so a lone piece feels **no push**; the pull and the energy bill are the static ones (P/F =
+c, so the galaxies need c ≤ u/2); a wave from x = 2 reaches x = 1 at 0.37 of the outward coupling for κ = 1, 0.10 for
+κ = 2.3 and 0.007 for κ = 5. The absorbed energy and momentum go to the stream.
+
+**Checks against a direct simulation of the local equations** (grid 0.01, RK4, pieces as prescribed oscillators; the
+receiver leads the source's wave by a quarter cycle; force and power as time averages of Q ∂_xψ and Q ∂_tψ):
+
+| case | force on source / receiver: simulated | exact | power fed, source / receiver: simulated | exact |
+|---|---|---|---|---|
+| A, U = 0.5 | +0.570 / −0.005 | +0.574 / 0.000 | 0.455 / 0.499 | 0.454 / 0.500 |
+| A, U = 1.3 | +0.360 / −0.504 | +0.362 / −0.499 | 0.001 / 0.460 | 0 / 0.457 |
+| B, κ = 0 | −0.177 / −0.251 | −0.179 / −0.250 | 0.073 / 0.502 | 0.071 / 0.500 |
+| B, κ = 2 | −0.008 / −0.259 | 0 / −0.250 | 0.242 / 0.494 | 0.250 / 0.500 |
+
+In A at U = 0.5 the receiver's pull and its drag happen to cancel; at U = 1.3 the source, which nothing upstream
+reaches, feels only its drag (+0.36).
+
+### 28.5 The absorbing stream in the full model
+
+`code/absorbing_stream_v18.py` (sets `distance`, `strong`) → `run-absorbing-stream-v18/distance.json`, `strong.json`
+and their summaries; the option `absorb` in `code/one_matter_v17.py`; `code/absorb_reduced_v18.py` →
+`reduced_scan.json`.
+
+**The medium in the full model.** Round 16's model of one kind of matter (48 source pieces in a ball of radius 3,
+receivers on shells at r = 6, 9, 13.5 and 20, every piece coupled to every other through the complete wave), with the
+stream of §28.4 B: a wave travelling in direction n through a point where the stream moves along e = x/|x| loses
+amplitude at the rate κ max(0, −n·e). Along the straight path from piece l to piece j this integrates exactly to
+T_jl = exp(−κ L_jl), L_jl = r_l minus the smallest radius the path reaches before it turns outward or ends: κ is the
+attenuation per unit of distance travelled inward. Every block of the coupling between two pieces is multiplied by
+T_jl, the force carries its derivative with respect to the receiving piece's position, and each piece's own terms are
+unchanged (emission stays symmetric: no drag). The energy the pieces give the wave, Im(z†Mz), is split into what
+reaches infinity (every piece's far-field pattern, each direction attenuated by its own inward travel along the ray)
+and what the stream absorbs. Round 16's matter (f = 0.2), two arrangements, 16,000 time units, the second half measured.
+
+| wave | source | net pull at r = 6, 9, 13.5, 20 (10⁻⁴) | keeping step | sources' rhythm spread | R_net at 6, 9, 13.5, 20 | absorbed |
+|---|---|---|---|---|---|---|
+| two-way (§27.4) | cold | +0.75, +0.71, +0.38, +0.22 | 0.30 | 3.3 × 10⁻⁴ | 1 | – |
+| | k = 8 | −0.89, −0.55, −0.03, −0.09 | 0.11 | 4.1 × 10⁻³ | pushed | – |
+| absorbing, κ = 2.3 | cold | +1.54, +0.95, +0.62, +0.37 | 0.64 | 3.1 × 10⁻⁴ | 1 | 33% |
+| | k = 8 | +0.68, +1.51, +0.72, +0.60 | 0.50 | 3.3 × 10⁻³ | 0.21, 0.87, 0.51, 0.88 | 38% |
+| | colliding, ν = 50 | +1.29, +0.77, +0.52, +0.35 | 0.46 | 3.3 × 10⁻⁴ | 0.74, 0.72, 0.75, 0.79 | 33% |
+| absorbing, κ = 5 | cold | +1.36, +0.76, +0.56, +0.47 | 0.72 | 2.5 × 10⁻⁴ | 1 | 37% |
+| | k = 2 | +1.42, +1.33, +1.04, +0.27 | 0.70 | 9.0 × 10⁻⁴ | 0.86, 0.95, 1.00, 0.56 | 43% |
+| | k = 8 | +1.72, +1.38, +1.23, +0.60 | 0.67 | 3.0 × 10⁻³ | 0.54, 0.81, 0.82, 0.75 | 44% |
+| | colliding, ν = 50 | +1.22, +0.72, +0.55, +0.44 | 0.51 | 2.5 × 10⁻⁴ | 0.72, 0.70, 0.74, 0.76 | 37% |
+| absorbing, κ = 20 (not passive: see below) | cold | +1.25, +0.94, +0.44, +0.50 | 0.75 | 1.0 × 10⁻⁴ | 1 | 42% |
+| | k = 2 | +1.02, +1.14, +0.81, +0.44 | 0.65 | 7.2 × 10⁻⁴ | 0.66, 0.97, 1.36, 0.71 | 47% |
+| | k = 8 | +1.63, +1.60, +1.26, +0.56 | 0.70 | 1.9 × 10⁻³ | 0.59, 0.89, 1.25, 0.73 | 48% |
+| | colliding, ν = 50 | +1.15, +0.89, +0.29, +0.49 | 0.52 | 1.1 × 10⁻⁴ | 0.71, 0.79, 0.55, 0.77 | 42% |
+| imposed radius mask (§27.4) | cold | +1.61, +1.14, +0.41, +0.53 | 0.63 | 1.7 × 10⁻⁴ | 1 | – |
+| | k = 8 | +2.36, +2.12, +1.75, +1.07 | 0.93 | 4.6 × 10⁻⁵ | 0.68, 1.01, 1.65, 0.89 | – |
+
+* **No push, and the pull grows with heat.** With the absorbing stream a warm source pulls distant matter at every
+  distance, where the two-way wave pushed it; the gain over cold comes closer to the law's square root as the
+  absorption strengthens: R_net averages 0.62 at κ = 2.3 and 0.73 at κ = 5 (k = 8; 0.81 and 0.84 at k = 2), and 0.87
+  (0.93) at κ = 20, where, however, the ray form of the medium is no longer passive (below). The imposed mask gave
+  1.06.
+* **Colliding sources pull like cold ones** at every κ (R_net 0.7–0.8: their small surviving extra glow adds no pull).
+* **Every watt booked.** The pieces' own budgets close to 2 × 10⁻¹² (3 × 10⁻⁷ with collisions); the stream absorbs
+  33–48% of what they give the wave (the part emitted inward), and absorbs more from warm sources.
+* **Passivity.** The dissipative part of a coupling, (M − M†)/2i, must have no negative eigenvalue, or some state of the
+  pieces could draw energy from the medium. For the same arrangement: the static two-way coupling, smallest eigenvalue
+  +9 × 10⁻⁶ of a largest 5.59 (passive); round 17's imposed mask −0.87 of 4.90 (not passive: the hand-made coupling
+  could create energy); the absorbing stream +3 × 10⁻⁴, −8 × 10⁻⁴ and −8 × 10⁻³ of about 4.8 at κ = 1, 2.3 and 5
+  (passive to within the ray approximation's accuracy), but −0.09 at κ = 10 and −0.46 at κ = 20: an absorption length (1/κ = 0.05) far
+  below the wavelength (2π) and the pieces' spacing (about 1) is outside the ray form's range, so the κ = 20 run is an
+  extrapolation of the approximation, not a physical medium (κ = 10 is borderline); strong absorption needs a full
+  wave treatment.
+* **But a warm source keeps no single beat** (rhythm spread 2–3 × 10⁻³, against 4.6 × 10⁻⁵ for the imposed mask). The
+  reduced model (three arrangements, the same geometry) shows why:
+
+| medium | sources' rhythm spread, k = 8 | keeping step at r = 6, 9, 13.5, 20: k = 8 (cold) | pairs still two-way |
+|---|---:|---|---:|
+| two-way | 4.5 × 10⁻³ | 0.19, 0.23, 0.10, 0.09 (0.52, 0.29, 0.28, 0.48) | 100% |
+| imposed radius mask | 6.3 × 10⁻⁵ | 0.98, 0.96, 0.85, 0.81 (0.88, 0.79, 0.59, 0.76) | 0 |
+| inward absorption, κ = 2.3 | 4.1 × 10⁻³ | 0.51, 0.53, 0.42, 0.39 (0.46, 0.45, 0.27, 0.25) | 36% |
+| κ = 5 | 3.6 × 10⁻³ | 0.74, 0.63, 0.60, 0.53 (0.75, 0.59, 0.43, 0.42) | 17% |
+| κ = 10 (ray form not passive) | 3.0 × 10⁻³ | 0.81, 0.70, 0.81, 0.45 (0.82, 0.59, 0.47, 0.36) | 8% |
+| κ = 20 (not passive) | 2.3 × 10⁻³ | 0.91, 0.88, 0.83, 0.61 (0.92, 0.82, 0.60, 0.52) | 3% |
+| inward and sideways absorption ("kinetic"), κ = 5 | 1.5 × 10⁻³ | 0.59, 0.33, 0.55, 0.21 (0.74, 0.17, 0.45, −0.02) | 15% |
+| κ = 10 | 8.2 × 10⁻⁴ | 0.58, 0.46, 0.21, 0.15 (0.45, 0.32, 0.46, 0.16) | 6% |
+
+  ("Pairs still two-way": the sources' coupling, summed over pairs, that the weaker direction keeps.) Stronger inward
+  absorption lets distant matter keep step, better with a warm source than a cold one, but even with 97% of the
+  two-way coupling gone the source keeps no single beat. **The reason is what a physical one-way medium lets a piece
+  hear.** In the absorbing stream a wave that must pass the centre to get from one side of the source to the other is
+  absorbed, so for strong absorption a point hears only the matter inside the ball whose diameter joins it to the
+  centre, and a distant receiver mainly the near half of a source. Round 17's rule let every piece hear every piece
+  nearer the centre, so the innermost pieces set one beat for all; in the absorbing stream the two sides follow
+  their own inner pieces. A stream that also absorbs sideways waves tightens the beat but cuts distant matter off from
+  most of the source.
+* **What this changes.** Two of round 17's results were properties of the imposed rule rather than of any medium found
+  so far: one beat for a warm source, and "a piece feels exactly the matter nearer the centre, Newton's rule for a
+  round source". With the physical media the heard region is smaller, which is the review's hot-shell benchmark in
+  general form: the law's |g_N| and S count all matter, a one-way medium does not. The pull's growth with heat does
+  survive in a physical, drag-free, nearly passive medium: 73–84% of the square root the law needs where the medium's
+  ray form is passive (κ ≤ 5).
+
+### 28.6 Where round 18 leaves the proof, against the review's checklist
+
+| review item | status after round 18 |
+|---|---|
+| 1. the one-way wave from a local medium | **started.** Waves carried by the stream: one-way derived (exactly in 1D; by characteristics in 3D for a stream at u everywhere, into the centre), energy bill window 0.71 ≤ c/u < 1, but wave drag of order the emitted power over u, larger than the law's pull in galaxies' outskirts: ruled out as it stands. Waves the stream absorbs when they move against it: one-way with no drag, passive to within the ray approximation, and in the full 3D model removes the push, lets colliding sources pull like cold ones and makes the warm source's pull grow with heat at 73–84% of the square root (κ ≤ 5, where its ray form is passive); but a warm source keeps no single beat, because each piece hears only the inner matter on its own side (§28.5). Still to do: the absorption from the stream's own microphysics (what sets κ), the wave's momentum given to the stream followed as the stream's evolution, and where the streams of two bodies meet |
+| 2. the law's numbers from the models | the heat factor explained (76–87% of 1 + k for nearly independent pieces, 45–61% in dense balls; §28.3); the hot-shell benchmark stated: in the absorbing medium a system inside a shell of hot matter hears nothing from the shell, while the law's S counts it, so the medium predicts a one-way S whose effect on the cluster fits is the next quantitative test; the mass exponent with its uncertainty still to be fitted |
+| 3. inertia and universal free fall | open |
+| 4. screening, light, Cassini | Cassini updated to the 2026 value (1.54σ; L ≥ 0.19 pc for 1σ); the release factor and light's response still assumed, now stated as such |
+| 5. collisions as a calculation | open |
+| 6. statistical inference | open; the write-up no longer presents the suite's tally or the parameter count as evidence of probability |
+| 7. remaining discrepancies | listed in BLOG §9, each with the measurement that would settle it |
+| 8. novelty and scope | literature search owed; the review's suggested first claim ("motion-enhanced attraction in an active streaming medium") adopted as the working scope |
+| 9. reproducible release | open (figures drawn with earlier fits are marked) |
+| 10. the manuscript | the write-up's claims matched to the evidence (§28.1) |
+
+**Next:**
+1. **Strong absorption as a wave problem,** not in the ray form: the absorbing stream's full wave equation (a
+   direction-dependent loss in the medium), its Green's function between pieces closer than a wavelength, and whether
+   a passive medium with strong absorption reaches the law's square root and a single beat.
+2. **What sets κ:** the absorption of counter-moving waves from the stream's own degrees of freedom (a two-component kinetic model: wave quanta scattering off the streaming companion, with the rate set by the relative speed), energy and momentum followed in both.
+3. **The one-way law it implies,** tested before any fit is changed: S and the pull's direction with the absorption factor along each path (the hot-shell benchmark), first against the X-COP cluster profiles and the collision maps, with every other constant fixed.
+4. **Mass scaling and distance with the absorbing medium:** the exponent with its uncertainty over a wider range of mass, physical mass and resolution varied separately.
+5. **Inertia**, then the statistical programme (review items 3, 6, 9).
