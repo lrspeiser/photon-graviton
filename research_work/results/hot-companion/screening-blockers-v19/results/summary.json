@@ -1,0 +1,54 @@
+{
+  "status": "candidate stochastic mechanism, not validated gravity",
+  "python": "3.13.5",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "config": {
+    "n_per_seed": 200000,
+    "seeds": [
+      11,
+      23,
+      37,
+      53,
+      71
+    ]
+  },
+  "constants": {
+    "u_m_s": 169000.0,
+    "g_d_m_s2": 2.03e-10,
+    "L_pc": 0.15,
+    "L_m": 4628516372237051.0,
+    "tau_s": 27387670841.639355,
+    "tau_years": 867.8629186515881,
+    "gamma_per_s": 3.6512779994406515e-11,
+    "eta_s_m": 0.17986591130249516,
+    "v_b_m_s": 5.559697180852789,
+    "v_b_over_u": 3.289761645475023e-05,
+    "gd_L_m2_s2": 939588.8235641214,
+    "single_speed_L_pc": 4559.600851518252,
+    "single_speed_length_mismatch": 30397.33901012168,
+    "response_corner_per_s": 3.6512779994406515e-11,
+    "a_m_s2": 6.3e-11,
+    "ell_W_kg": 5.3235e-06,
+    "capture_packet_energy_over_area_J_m2": 35288.468310834476,
+    "L019_v_b_m_s": 7.042283095746866
+  },
+  "master": {
+    "max_abs_open_error": 1.2212453270876722e-14,
+    "max_abs_normalization_error": 1.787459069646502e-14,
+    "max_upper_probability": 4.6439194737653054e-43
+  },
+  "stochastic": {
+    "realizations_per_condition": 1000000,
+    "n_seeds": 5,
+    "burn_lifetimes": 25.0,
+    "max_abs_z": 2.1668917349074945,
+    "max_count_balance_error": 0,
+    "note": "Exact count balance is NOT a complete physical energy/momentum audit."
+  },
+  "reset_gate": {
+    "max_abs_z": 2.3260716493370976,
+    "realizations_per_condition": 1000000
+  },
+  "seconds": 8.254402081999956
+}

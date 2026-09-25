@@ -54,6 +54,8 @@ L_THICK = (2.0, 3.0)
 Z_THIN, Z_THICK = 0.300, 0.900
 
 _STATE = {}
+BULGE_SIGMA = None                       # None: the SPARC rule (0.65 x the bulge's peak circular speed, 87.7 km/s at
+                                         # McMillan's mass, growing as the square root of the mass); or a measured value
 
 
 def setup():
@@ -110,7 +112,8 @@ def evaluate(p, shapes, law, laws='ours', R_eval=None, R0=8.275):
     consts = dict(a_code=law['a_code'], lam=law['lam'], u_kms=law['u_kms'])
     if laws == 'ours':
         Hb, Hh = st['Hb'], st['Hh']
-        S, hR, hz = (fb ** 2 * Hb[i] + Hh[i] for i in range(3))
+        fk = fb ** 2 if BULGE_SIGMA is None else fb * (BULGE_SIGMA / st['sigma_bulge_1']) ** 2
+        S, hR, hz = (fk * Hb[i] + Hh[i] for i in range(3))
         eR, ez = M.law_extra(gR, gz, S, hR, hz, consts, law='ours', reach=law['reach_kpc'], grid=grid)
         rho = rho_b - M.divergence(grid, eR, ez) / (4 * np.pi * G)
     else:
@@ -155,7 +158,9 @@ def chi2(p, shapes, law, laws, data, return_parts=False):
 
 
 def fit_one(args):
-    shapes, laws, dname, data = args
+    global BULGE_SIGMA
+    shapes, laws, dname, data = args[:4]
+    BULGE_SIGMA = args[4] if len(args) > 4 else None
     from law_config import load_law
     law = load_law('round12')
     x0 = np.array([33.4, 0.12, 13.7 / 12.23, 1.2e10 / 8.878e9])
@@ -163,7 +168,7 @@ def fit_one(args):
     r = minimize(f, x0, method='Nelder-Mead', options=dict(xatol=1e-3, fatol=1e-3, maxiter=400, initial_simplex=np.array(
         [x0, x0 * [1.15, 1, 1, 1], x0 * [1, 1.6, 1, 1], x0 * [1, 1, 1.2, 1], x0 * [1, 1, 1, 1.3]])))
     parts = chi2(r.x, shapes, law, laws, data, return_parts=True)
-    return dict(shapes=dict(L_thin=shapes[0], L_thick=shapes[1]), law=laws, data=dname, params=dict(Sigma_star=float(r.x[0]),
+    return dict(shapes=dict(L_thin=shapes[0], L_thick=shapes[1]), law=laws, data=dname, bulge_sigma=BULGE_SIGMA, params=dict(Sigma_star=float(r.x[0]),
                 thick_share=float(r.x[1]), gas_factor=float(r.x[2]), bulge_factor=float(r.x[3])), nfev=int(r.nfev), **parts)
 
 
@@ -189,12 +194,17 @@ def cassini_binaries(sun, law, Ls_pc=(0.0, 0.05, 0.10, 0.15, 0.19, 0.25, 0.30, 0
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--output', type=Path, required=True)
     ap.add_argument('--processes', type=int, default=4)
+    ap.add_argument('--bulge-sigma', type=float, default=None, help='the bulge\'s measured dispersion (km/s) in place of the SPARC rule')
     args = ap.parse_args(); args.output.parent.mkdir(parents=True, exist_ok=True)
     t0 = time.monotonic()
     setup()                                                           # builds the field library once (cached)
     data = curves()
-    jobs = [(sh, laws, 'Feng2026', data['Feng2026']) for sh in itertools.product(L_THIN, L_THICK) for laws in ('ours', 'newton')]
-    jobs += [(sh, 'ours', k, data[k]) for sh in itertools.product(L_THIN, L_THICK) for k in ('Eilers2019', 'Zhou2023', 'Ou2024')]
+    bs = args.bulge_sigma
+    if bs is None:
+        jobs = [(sh, laws, 'Feng2026', data['Feng2026']) for sh in itertools.product(L_THIN, L_THICK) for laws in ('ours', 'newton')]
+        jobs += [(sh, 'ours', k, data[k]) for sh in itertools.product(L_THIN, L_THICK) for k in ('Eilers2019', 'Zhou2023', 'Ou2024')]
+    else:                                                             # the measured-dispersion variant: the law only
+        jobs = [(sh, 'ours', k, data[k], bs) for sh in itertools.product(L_THIN, L_THICK) for k in ('Feng2026', 'Eilers2019', 'Zhou2023')]
     res = []
     with Pool(args.processes) as pool:
         for r in pool.imap_unordered(fit_one, jobs):
@@ -208,14 +218,17 @@ def main():
     from law_config import load_law
     law = load_law('round12')
     best = {}
-    for laws in ('ours', 'newton'):
+    for laws in (('ours', 'newton') if bs is None else ('ours',)):
         rs = [r for r in res if r['data'] == 'Feng2026' and r['law'] == laws]
         b = min(rs, key=lambda r: r['total']); best[laws] = b
     # Cassini and wide binaries from the best fit and from every shape's fit (the spread they give)
+    global BULGE_SIGMA
+    BULGE_SIGMA = bs
     cas = dict(best=cassini_binaries(best['ours']['sun'], law),
                spread=[dict(shapes=r['shapes'], total=r['total'], sun=r['sun'], rows=cassini_binaries(r['sun'], law))
                        for r in res if r['data'] == 'Feng2026' and r['law'] == 'ours'])
     out = dict(experiment='round 19: the Milky Way fitted to independent constraints, with Cassini and wide binaries', data=FENG, priors=PRIORS,
+               bulge_sigma=bs if bs is not None else 'SPARC rule (0.65 x peak bulge circular speed)',
                floor_kms=FLOOR, scale_prior=SCALE_PRIOR, fits=res, best=best, cassini_binaries=cas, seconds=time.monotonic() - t0)
     args.output.write_text(json.dumps(out, indent=1, default=float) + '\n')
     for laws, b in best.items():

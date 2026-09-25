@@ -1,0 +1,53 @@
+/home/user/photon-graviton/research_work/results/hot-companion/code/mw_model.py:45: RuntimeWarning: overflow encountered in cosh
+  return 1.0 / np.cosh(z / (2 * self.zd)) ** 2 / (4 * self.zd)
+/home/user/photon-graviton/research_work/results/hot-companion/code/mw_model.py:45: RuntimeWarning: overflow encountered in square
+  return 1.0 / np.cosh(z / (2 * self.zd)) ** 2 / (4 * self.zd)
+/home/user/photon-graviton/research_work/results/hot-companion/code/mw_model.py:45: RuntimeWarning: overflow encountered in cosh
+  return 1.0 / np.cosh(z / (2 * self.zd)) ** 2 / (4 * self.zd)
+/home/user/photon-graviton/research_work/results/hot-companion/code/mw_model.py:45: RuntimeWarning: overflow encountered in square
+  return 1.0 / np.cosh(z / (2 * self.zd)) ** 2 / (4 * self.zd)
+[  130 s] Feng2026   newton L_thin 2.1 L_thick 2.0: chi2  532.82 (curve 478.67 on 12, scale 0.730; K_z 66.8) Sigma* 32.8, thick 0.15, gas x2.06, bulge x0.74; priors Sigma_star 0.0, thick_share 0.7, Sigma_gas 49.6, M_bulge 2.4, L_thin 1.0, L_thick 0.0, Kz11 0.4
+[  172 s] Feng2026   ours   L_thin 2.1 L_thick 2.0: chi2   39.55 (curve  28.97 on 12, scale 0.961; K_z 76.2) Sigma* 29.9, thick 0.13, gas x1.20, bulge x2.35; priors Sigma_star 1.4, thick_share 0.0, Sigma_gas 0.3, M_bulge 6.4, L_thin 1.0, L_thick 0.0, Kz11 1.5
+[  281 s] Feng2026   ours   L_thin 2.1 L_thick 3.0: chi2   39.96 (curve  26.57 on 12, scale 0.958; K_z 76.7) Sigma* 31.2, thick 0.14, gas x1.18, bulge x2.39; priors Sigma_star 0.5, thick_share 0.3, Sigma_gas 0.1, M_bulge 6.9, L_thin 1.0, L_thick 2.8, Kz11 1.8
+[  289 s] Feng2026   newton L_thin 2.1 L_thick 3.0: chi2  510.38 (curve 447.56 on 12, scale 0.732; K_z 68.3) Sigma* 37.3, thick 0.26, gas x2.01, bulge x0.83; priors Sigma_star 1.7, thick_share 11.9, Sigma_gas 43.5, M_bulge 1.8, L_thin 1.0, L_thick 2.8, Kz11 0.1
+[  376 s] Feng2026   newton L_thin 2.6 L_thick 2.0: chi2  449.56 (curve 404.43 on 12, scale 0.730; K_z 71.9) Sigma* 42.6, thick 0.09, gas x1.91, bulge x1.17; priors Sigma_star 9.4, thick_share 0.6, Sigma_gas 34.7, M_bulge 0.2, L_thin 0.0, L_thick 0.0, Kz11 0.1
+[  406 s] Feng2026   ours   L_thin 2.6 L_thick 2.0: chi2   34.97 (curve  23.17 on 12, scale 0.949; K_z 77.1) Sigma* 34.6, thick 0.14, gas x1.12, bulge x2.56; priors Sigma_star 0.2, thick_share 0.2, Sigma_gas 0.0, M_bulge 9.4, L_thin 0.0, L_thick 0.0, Kz11 2.0
+[  491 s] Feng2026   newton L_thin 2.6 L_thick 3.0: chi2  436.87 (curve 384.93 on 12, scale 0.730; K_z 71.9) Sigma* 44.9, thick 0.18, gas x1.88, bulge x1.35; priors Sigma_star 14.7, thick_share 2.3, Sigma_gas 32.0, M_bulge 0.0, L_thin 0.0, L_thick 2.8, Kz11 0.1
+[  497 s] Feng2026   ours   L_thin 2.6 L_thick 3.0: chi2   40.80 (curve  24.39 on 12, scale 0.945; K_z 77.1) Sigma* 35.1, thick 0.12, gas x1.10, bulge x2.68; priors Sigma_star 0.3, thick_share 0.0, Sigma_gas 0.1, M_bulge 11.3, L_thin 0.0, L_thick 2.8, Kz11 2.0
+[  584 s] Feng2026   newton L_thin 3.1 L_thick 2.0: chi2  398.49 (curve 345.32 on 12, scale 0.731; K_z 74.1) Sigma* 48.0, thick 0.07, gas x1.80, bulge x1.68; priors Sigma_star 23.7, thick_share 1.7, Sigma_gas 25.4, M_bulge 0.7, L_thin 1.0, L_thick 0.0, Kz11 0.7
+[  596 s] Feng2026   ours   L_thin 3.1 L_thick 2.0: chi2   43.31 (curve  26.60 on 12, scale 0.943; K_z 76.2) Sigma* 35.7, thick 0.16, gas x1.08, bulge x2.74; priors Sigma_star 0.6, thick_share 1.0, Sigma_gas 0.2, M_bulge 12.4, L_thin 1.0, L_thick 0.0, Kz11 1.5
+[  682 s] Feng2026   newton L_thin 3.1 L_thick 3.0: chi2  393.11 (curve 335.48 on 12, scale 0.730; K_z 73.6) Sigma* 49.1, thick 0.13, gas x1.79, bulge x1.85; priors Sigma_star 27.3, thick_share 0.1, Sigma_gas 24.3, M_bulge 1.6, L_thin 1.0, L_thick 2.8, Kz11 0.5
+[  716 s] Feng2026   ours   L_thin 3.1 L_thick 3.0: chi2   53.97 (curve  32.34 on 12, scale 0.937; K_z 75.4) Sigma* 35.4, thick 0.12, gas x1.05, bulge x2.92; priors Sigma_star 0.4, thick_share 0.0, Sigma_gas 0.3, M_bulge 15.9, L_thin 1.0, L_thick 2.8, Kz11 1.2
+[  822 s] Eilers2019 ours   L_thin 2.1 L_thick 2.0: chi2   33.88 (curve  31.54 on 38, scale 0.966; K_z 75.3) Sigma* 33.8, thick 0.13, gas x1.06, bulge x1.46; priors Sigma_star 0.0, thick_share 0.0, Sigma_gas 0.1, M_bulge 0.1, L_thin 1.0, L_thick 0.0, Kz11 1.1
+[  856 s] Zhou2023   ours   L_thin 2.1 L_thick 2.0: chi2   35.42 (curve  32.55 on 34, scale 0.947; K_z 76.4) Sigma* 34.6, thick 0.13, gas x1.09, bulge x1.33; priors Sigma_star 0.2, thick_share 0.1, Sigma_gas 0.0, M_bulge 0.0, L_thin 1.0, L_thick 0.0, Kz11 1.6
+[  962 s] Ou2024     ours   L_thin 2.1 L_thick 2.0: chi2   61.74 (curve  57.41 on 35, scale 0.956; K_z 76.5) Sigma* 35.2, thick 0.13, gas x0.97, bulge x1.30; priors Sigma_star 0.4, thick_share 0.0, Sigma_gas 1.2, M_bulge 0.0, L_thin 1.0, L_thick 0.0, Kz11 1.7
+[ 1015 s] Eilers2019 ours   L_thin 2.1 L_thick 3.0: chi2   36.68 (curve  30.37 on 38, scale 0.965; K_z 75.9) Sigma* 35.3, thick 0.12, gas x1.01, bulge x1.52; priors Sigma_star 0.4, thick_share 0.0, Sigma_gas 0.5, M_bulge 0.2, L_thin 1.0, L_thick 2.8, Kz11 1.4
+[ 1127 s] Zhou2023   ours   L_thin 2.1 L_thick 3.0: chi2   37.54 (curve  30.43 on 34, scale 0.948; K_z 77.1) Sigma* 36.3, thick 0.13, gas x1.03, bulge x1.42; priors Sigma_star 0.9, thick_share 0.0, Sigma_gas 0.3, M_bulge 0.0, L_thin 1.0, L_thick 2.8, Kz11 2.0
+[ 1149 s] Ou2024     ours   L_thin 2.1 L_thick 3.0: chi2   65.37 (curve  56.24 on 35, scale 0.954; K_z 77.2) Sigma* 36.6, thick 0.11, gas x0.92, bulge x1.34; priors Sigma_star 1.1, thick_share 0.0, Sigma_gas 2.1, M_bulge 0.0, L_thin 1.0, L_thick 2.8, Kz11 2.1
+[ 1292 s] Eilers2019 ours   L_thin 2.6 L_thick 2.0: chi2   57.12 (curve  40.91 on 38, scale 0.964; K_z 74.8) Sigma* 40.0, thick 0.18, gas x0.77, bulge x1.85; priors Sigma_star 4.9, thick_share 1.9, Sigma_gas 6.9, M_bulge 1.6, L_thin 0.0, L_thick 0.0, Kz11 0.9
+[ 1298 s] Zhou2023   ours   L_thin 2.6 L_thick 2.0: chi2   54.98 (curve  34.89 on 34, scale 0.951; K_z 76.2) Sigma* 41.7, thick 0.18, gas x0.75, bulge x1.78; priors Sigma_star 7.6, thick_share 2.2, Sigma_gas 7.5, M_bulge 1.2, L_thin 0.0, L_thick 0.0, Kz11 1.6
+[ 1449 s] Eilers2019 ours   L_thin 2.6 L_thick 3.0: chi2   77.66 (curve  53.61 on 38, scale 0.957; K_z 74.7) Sigma* 40.1, thick 0.07, gas x0.68, bulge x2.02; priors Sigma_star 4.9, thick_share 1.7, Sigma_gas 10.9, M_bulge 2.9, L_thin 0.0, L_thick 2.8, Kz11 0.9
+[ 1460 s] Ou2024     ours   L_thin 2.6 L_thick 2.0: chi2   84.18 (curve  63.19 on 35, scale 0.945; K_z 76.3) Sigma* 41.6, thick 0.17, gas x0.70, bulge x1.56; priors Sigma_star 7.4, thick_share 1.7, Sigma_gas 10.0, M_bulge 0.3, L_thin 0.0, L_thick 0.0, Kz11 1.6
+[ 1623 s] Ou2024     ours   L_thin 2.6 L_thick 3.0: chi2  103.94 (curve  74.43 on 35, scale 0.937; K_z 76.6) Sigma* 41.9, thick 0.07, gas x0.62, bulge x1.72; priors Sigma_star 7.9, thick_share 1.7, Sigma_gas 14.5, M_bulge 0.8, L_thin 0.0, L_thick 2.8, Kz11 1.7
+[ 1652 s] Zhou2023   ours   L_thin 2.6 L_thick 3.0: chi2   77.26 (curve  47.78 on 34, scale 0.945; K_z 76.2) Sigma* 41.9, thick 0.06, gas x0.65, bulge x1.97; priors Sigma_star 8.0, thick_share 2.1, Sigma_gas 12.7, M_bulge 2.5, L_thin 0.0, L_thick 2.8, Kz11 1.5
+[ 1808 s] Eilers2019 ours   L_thin 3.1 L_thick 2.0: chi2  104.11 (curve  67.44 on 38, scale 0.959; K_z 71.6) Sigma* 40.6, thick 0.26, gas x0.63, bulge x2.03; priors Sigma_star 5.7, thick_share 13.1, Sigma_gas 13.8, M_bulge 3.0, L_thin 1.0, L_thick 0.0, Kz11 0.1
+[ 1835 s] Zhou2023   ours   L_thin 3.1 L_thick 2.0: chi2  106.60 (curve  61.33 on 34, scale 0.948; K_z 72.8) Sigma* 42.6, thick 0.28, gas x0.59, bulge x1.96; priors Sigma_star 9.4, thick_share 16.1, Sigma_gas 16.0, M_bulge 2.4, L_thin 1.0, L_thick 0.0, Kz11 0.3
+[ 1981 s] Ou2024     ours   L_thin 3.1 L_thick 2.0: chi2  132.93 (curve  90.20 on 35, scale 0.940; K_z 73.1) Sigma* 42.5, thick 0.26, gas x0.56, bulge x1.71; priors Sigma_star 9.2, thick_share 12.9, Sigma_gas 18.4, M_bulge 0.8, L_thin 1.0, L_thick 0.0, Kz11 0.4
+[ 2023 s] Eilers2019 ours   L_thin 3.1 L_thick 3.0: chi2  152.02 (curve 114.70 on 38, scale 0.941; K_z 67.4) Sigma* 37.1, thick 0.10, gas x0.47, bulge x2.41; priors Sigma_star 1.5, thick_share 0.2, Sigma_gas 24.4, M_bulge 7.2, L_thin 1.0, L_thick 2.8, Kz11 0.3
+[ 2143 s] Zhou2023   ours   L_thin 3.1 L_thick 3.0: chi2  164.00 (curve 117.70 on 34, scale 0.927; K_z 68.0) Sigma* 38.9, thick 0.10, gas x0.38, bulge x2.38; priors Sigma_star 3.4, thick_share 0.2, Sigma_gas 32.0, M_bulge 6.8, L_thin 1.0, L_thick 2.8, Kz11 0.2
+[ 2189 s] Ou2024     ours   L_thin 3.1 L_thick 3.0: chi2  181.93 (curve 138.37 on 35, scale 0.921; K_z 69.8) Sigma* 40.1, thick 0.10, gas x0.39, bulge x2.09; priors Sigma_star 4.9, thick_share 0.2, Sigma_gas 31.1, M_bulge 3.5, L_thin 1.0, L_thick 2.8, Kz11 0.0
+best ours: chi2 34.97 (curve 23.17 on 12), shapes {'L_thin': 2.6, 'L_thick': 2.0}, params {'Sigma_star': 34.569721665726114, 'thick_share': 0.1362162632726392, 'gas_factor': 1.1190953294475479, 'bulge_factor': 2.5633364340862097}, K_z 77.1, sun {'g_N_SI': 1.3701899813089274e-10, 'S_SI': 9.743788458519422e-11, 'g_hot_SI': 9.516319704830617e-11}
+best newton: chi2 393.11 (curve 335.48 on 12), shapes {'L_thin': 3.1, 'L_thick': 3.0}, params {'Sigma_star': 49.060486577110716, 'thick_share': 0.1343406113778724, 'gas_factor': 1.7852378923917944, 'bulge_factor': 1.851476981591699}, K_z 73.6, sun {'g_N_SI': 1.2950462582774397e-10, 'S_SI': 0.0, 'g_hot_SI': 0.0}
+  L = 0.00 pc: Q2 = 1.42e-26 (+7.02 sigma), binaries +12.0% at 7000 AU, +12.0% at 20000 AU
+  L = 0.05 pc: Q2 = 5.07e-27 (+1.93 sigma), binaries +5.9% at 7000 AU, +10.3% at 20000 AU
+  L = 0.10 pc: Q2 = 2.83e-27 (+0.68 sigma), binaries +3.5% at 7000 AU, +7.4% at 20000 AU
+  L = 0.15 pc: Q2 = 1.96e-27 (+0.20 sigma), binaries +2.4% at 7000 AU, +5.7% at 20000 AU
+  L = 0.19 pc: Q2 = 1.57e-27 (-0.02 sigma), binaries +2.0% at 7000 AU, +4.8% at 20000 AU
+  L = 0.25 pc: Q2 = 1.21e-27 (-0.22 sigma), binaries +1.5% at 7000 AU, +3.9% at 20000 AU
+  L = 0.30 pc: Q2 = 1.02e-27 (-0.32 sigma), binaries +1.3% at 7000 AU, +3.3% at 20000 AU
+  L = 0.40 pc: Q2 = 7.72e-28 (-0.46 sigma), binaries +1.0% at 7000 AU, +2.6% at 20000 AU
+  L = 0.50 pc: Q2 = 6.21e-28 (-0.54 sigma), binaries +0.8% at 7000 AU, +2.1% at 20000 AU
+  L = 0.75 pc: Q2 = 4.17e-28 (-0.66 sigma), binaries +0.5% at 7000 AU, +1.5% at 20000 AU
+  L = 1.00 pc: Q2 = 3.14e-28 (-0.71 sigma), binaries +0.4% at 7000 AU, +1.1% at 20000 AU
+  L = 1.50 pc: Q2 = 2.10e-28 (-0.77 sigma), binaries +0.3% at 7000 AU, +0.8% at 20000 AU
+  L = 2.00 pc: Q2 = 1.58e-28 (-0.80 sigma), binaries +0.2% at 7000 AU, +0.6% at 20000 AU
