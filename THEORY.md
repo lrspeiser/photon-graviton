@@ -591,7 +591,10 @@ results README §18):
   absorbers about a wavelength across (form factor) are passive at every κ, and the ray form is exact to 1–10% for
   κλ ≤ 0.5 (inward rule) and κλ ≤ 2.3 (cardioid); stronger absorption cannot make the backward coupling smaller than a
   few per cent (cardioid) to 10–28% (inward rule) at 1–2 λ. Self-force −0.015 to −0.13 P/c (against the stream);
-  SPARC allows a constant self-pull up to ~0.05 a.
+  SPARC allows a constant self-pull up to ~0.05 a. *Correction (25 September audit):* the calculation has the absorbers
+  moving at the wave's speed (u = c). The energy bill of the absorbing stream needs the companion's stream at u ≥ 2c,
+  and absorbers carried at u would amplify forward waves with cos θ > c/u, so the passive one-way medium needs
+  absorbers that are a separate component moving at the crests' speed, not the stream itself.
 * **What the medium hears** (`code/hot_shell_v19.py`, `code/law.py` HOT_GEOMETRY): for a round source a stream that
   absorbs every inward wave hears exactly half of every inner shell, in the 1/d² sum (artanh x/2x) and in the net
   flux (1/2); only outer shells differ. X-COP: 69% of S at 0.1 R500 comes from outside the receiver; strict one-way
@@ -617,6 +620,18 @@ results README §18):
 * **A frozen prediction** (`code/frozen_prediction_v19.py`, SHA-256 01219170…): at log M* = 10.6, isolated
   bulge-dominated lenses, g_obs relative to σ_e = 200 km/s: −0.183, −0.087, 0, +0.077, +0.144 dex at σ_e = 100, 150,
   200, 250, 300 km/s (the deep-regime √((1 + k₁)/(1 + k₂)) gives 0.176 dex for 250 against 150). MOND: 0.
+
+### A step back (25 September 2026)
+
+[STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md) lists every result we would prefer were different, what was tried and why it
+was not enough, and which "ruled out" verdicts hold generally and which only inside a particular model. The main
+theoretical finding: since round 10 every matter model makes the pull by rhythm-locking (a self-sustained emitter a
+quarter of a beat ahead of the wave), and every setback with warm matter since then (dilution, scrambled waves, warm
+sources out of tune, the one-way wave, no heat gain in the medium the data allow) follows from needing a shared
+rhythm. The alternative round 13 named, a pull that follows the companion's energy and flow rather than its phase,
+was never modelled; the data-selected rule (strength from all the companion present, direction from its net flow,
+warm parts adding without cancelling) is what it would give. Most model exclusions rest on simplifications (no moving
+pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and receivers).
 
 ### What follows
 

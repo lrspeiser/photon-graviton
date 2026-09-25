@@ -4,7 +4,8 @@
 assumptions, worked out step by step and tested on public data, with no dark matter and no expanding universe.*
 
 24 September 2026, updated 25 September 2026 with round 19 (the companion's medium tested against the data, the
-Milky Way refitted with its matter held to independent measurements, a frozen prediction). This is a fresh write-up
+Milky Way refitted with its matter held to independent measurements, a frozen prediction) and a step back over the
+whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9). This is a fresh write-up
 of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
@@ -414,9 +415,12 @@ step at every distance, better than with a cold source (dashed). Script `code/on
     the part that moves against it. Emission is then symmetric (no push), the coupling is one-way (a wave loses a
     factor e^(−κ) for every unit of distance it travels inward), and the energy bill is the static one (crests at most
     u/2). In the full three-dimensional simulation (table above) it removes the push, colliding sources pull like cold
-    ones, and a warm source pulls distant matter harder than a cold one at every distance: 73–84% of the square-root
-    growth the law needs, with every watt booked (the stream absorbs 33–48% of what the pieces give the wave) and the
-    medium passive, unlike the rule imposed by hand, which could in principle create energy.
+    ones, and a warm source pulls distant matter harder than a cold one at every distance, with every watt booked
+    (the stream absorbs 33–48% of what the pieces give the wave) and the medium passive, unlike the rule imposed by
+    hand, which could in principle create energy. How much harder: 73–84% of the square root of the model's own extra
+    glow; but the model's glow grows only about half as fast as the law's, so against the law's heat gain the pull
+    rises about 1.6 times where the law needs 3 (corrected 25 September; an earlier version of this page said "73–84%
+    of the square-root growth the law needs").
   * **What it does not yet do** is keep a warm source on one beat. In it a piece hears only the inner matter on its
     own side of the source, because a wave that must cross the centre is absorbed; for strong absorption a distant
     receiver hears mainly the near half of a source. The imposed rule let every piece hear everything nearer the
@@ -427,7 +431,7 @@ step at every distance, better than with a cold source (dashed). Script `code/on
   how one-way it may be; and with that allowed amount, the working models give the law's cold part but not its heat
   part.
   * **The absorbing stream as an exact wave medium.** Solved exactly (for a uniform stream, the geometry a distant
-    receiver sees), it needs absorbers that ride along with the stream at the wave's own speed. A wave moving with the
+    receiver sees), it needs absorbers that move along the stream at the wave's own speed. A wave moving with the
     stream then doesn't oscillate at all as they see it, and nothing passive can absorb a wave that doesn't oscillate,
     so the medium is one-way with no tuning: the Doppler effect alone does it. The absorbers must be at least about a
     wavelength across; point-like ones would drag every emitter downstream, which rules them out. With that, the medium
@@ -436,7 +440,10 @@ step at every distance, better than with a cold source (dashed). Script `code/on
     within what the 149 galaxies allow). Round 18's
     simple description, a loss of e^(−κ) per unit distance travelled inward, is accurate when the absorption is weak
     (an absorption length of a wavelength or more). A passive medium cannot be strongly one-way over only a few
-    wavelengths, so round 18's strong-absorption runs overstated how one-way it was.
+    wavelengths, so round 18's strong-absorption runs overstated how one-way it was. *A catch found by the step back
+    (§9):* those absorbers must move at the wave's speed, but to pay the pull's energy bill the companion's own stream
+    must move at least twice as fast. Absorbers carried by the stream would amplify some waves instead of absorbing
+    them, so they would have to be something separate from the stream, and what they could be is open.
   * **What the clusters allow (the hot-shell benchmark).** In a cluster, most of the law's heat term at a given radius
     comes from hot galaxies farther out: 69% at a tenth of the cluster's radius, 28% at its edge. A strictly one-way
     medium would never let that inner point hear them. Tested on the 12 X-COP clusters, the law, which hears all hot
@@ -463,8 +470,10 @@ Script `code/hot_shell_v19.py`.*
     the pull grows as mass to the power 0.58 ± 0.13 and falls with distance as the power 1.11 ± 0.22 (0.80 ± 0.29
     and 0.93 ± 0.20 with the two-way wave), against the law's 0.5 and 1. Colliding sources pull 0.78–0.90 times as
     hard as cold ones, where the law says 1. **But warm sources do not pull harder:** 0.90–0.97 times the cold pull
-    where the law needs 1.73 at the milder heat, and at the stronger heat they push the nearer receivers away. And the
-    models' pull depends on a source's size at fixed mass (sources with a radius of one or two wavelengths pull 2–15
+    where the law needs 1.73 at the milder heat, and at the stronger heat they push the nearer receivers away. These
+    are averages over three arrangements that scatter widely: with the plain two-way wave one arrangement did show the
+    law's full gain (2.2 and 1.8 times the cold pull at the two distances) while the others pulled less or pushed, so
+    three arrangements cannot settle it. And the models' pull depends on a source's size at fixed mass (sources with a radius of one or two wavelengths pull 2–15
     times less than those of three or four), which real galaxies don't show. Every watt is booked in every run.
   * **What this means.** The law's cold part now comes out of the working models with honest error bars, and so does
     the collision rule. The heat term is still required by the data, which make their case on their own (the
@@ -732,15 +741,38 @@ with shared inputs and a frozen law is on the list (§9).
 
 ## 9. What is still open, and why we are optimistic
 
+**A step back (25 September 2026).** Before going further we went through the whole record, every round from the
+first idea to round 19, and listed every result we would prefer were different, what we tried, and whether each
+"ruled out" holds in general or only inside one particular model. The full list is in
+[STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md). The main points:
+
+* **The law is not cornered.** Its misses (five faint dwarf galaxies, the Bullet Cluster's smaller half, lensing by
+  red galaxies, heavy stars in strong lenses, the Milky Way's 3–6%) each have remedies not yet tried, and several
+  come from our own conventions rather than physics. For example, galaxy lensing sits 16% above the law in our
+  distances but only 3% in the survey's own, so the exact form of our distance law matters; and the speeds of the
+  stars in clusters are worked out from the X-ray-measured pull that the law is asked to predict.
+* **The models are in a corner we made ourselves, and the record marks the way out.** Since round 10, every small
+  model makes the pull the same way: matter behaves like a laser medium that keeps a fixed rhythm with the companion
+  wave. Every setback with warm matter since then (§4.4) comes from needing that shared rhythm. Round 13 already
+  named the alternative, a pull that follows the companion's energy and flow rather than its rhythm, and it was
+  never tried. It is the one that fits what the data select: the pull's strength set by all the companion present,
+  its direction by the companion's net flow, warm contributions adding without cancelling.
+* **Most "ruled out"s from the models are narrow.** The models never had moving matter (heat was a frozen random
+  mixing), never reached the heat of cluster galaxies, and never had more than about a hundred pieces.
+* **What stays closed is what should:** Newton, MOND and dark matter as answers; an extra pull that is not switched
+  off near stars; a pull diluted by sources on all sides.
+* **Seven small slips in our write-ups were corrected** (listed in the audit); none changes the law or a forecast.
+
 An independent review (25 September 2026) set out what a paper would need. In order:
 
 1. **The companion as a flowing medium.** Done in round 19 for a uniform stream (§4.4): the absorbing stream is a
-   proper wave medium (absorbers riding with the stream, at least a wavelength across), it never creates energy and it
-   barely pulls on itself. Still to do: the round geometry of a real source exactly, and what sets the absorption.
+   proper wave medium (absorbers moving at the wave's speed, at least a wavelength across; the step back found they
+   cannot simply be the companion's own stream, which must move faster), it never creates energy and it barely pulls
+   on itself. Still to do: the round geometry of a real source exactly, and what sets the absorption.
 2. **The law's numbers from the working models.** Done in round 19 (§4.4). The clusters allow only weak one-way
    absorption (a wave must survive about 300 kpc or more inward): the hot glow has to reach inward, as the law's
    total S says. With that, the models give the cold law (mass to the power 0.58 ± 0.13, distance to −1.11 ± 0.22,
-   against 0.5 and −1) and the collision rule, but no extra pull from heat, and a dependence on a source's size that
+   against 0.5 and −1) and the collision rule, but no extra pull from heat on average, and a dependence on a source's size that
    real galaxies don't show. The heat term's mechanism is the open problem now: something that keeps warm matter in
    step, lets the hot glow reach inward, and doesn't depend on size.
 3. **Inertia, and why all matter falls alike.** The working models do not yet define a piece's inertia, so equal

@@ -2297,7 +2297,8 @@ Median log10(observed/predicted):
 | **our distances, round-11 constants** | **+0.063** | **+0.077** | +0.040 | **+0.107** | −0.006 | +0.007 | **0.234** |
 
 Mistele et al.'s lensing speeds, spirals: observed ÷ predicted 1.40, 1.32, 1.22, 1.17 from 50 to 300 kpc
-(rms z 4.36); ellipticals 1.09, 0.98, 1.01 (0.95). Two separate things have moved.
+(rms z 4.36); ellipticals 1.09, 0.98, 1.01 (0.95). Two separate things have moved. *(Correction, 25 September: the
+four ratios are bins of stellar mass, log M* 10.10–11.29, each averaged over 50–300 kpc, not four radii; §30.)*
 
 **The level: the distance law's scale.** g_bar does not depend on α: the stars and the area both scale
 as 1/α². The critical density, and with it every measured g_obs, scales as α. Holding the constants:
@@ -4053,8 +4054,10 @@ glow in the reduced model (three arrangements):
   1 × 10⁻⁴ from t = 10,000 on), but all together at a rhythm shifted by +3.1 × 10⁻³, while the cold receivers stay near
   +1.0 × 10⁻³ and cannot follow. A source's beat has to stay where cold matter's is, or distant matter, whose hold on the
   beat weakens with distance, eventually cannot follow at all.
-* **A source smaller than a wavelength is worse**, even cold: keeping step 0.02–0.04 at radius 0.6 wavelengths/2π,
-  where the pieces' near fields dominate every coupling (`rhythm_protect_compact_v17.json`).
+* **A source about a wavelength across is worse**, even cold: keeping step 0.02–0.04 at radius 0.6 wavelengths
+  (corrected 25 September: the label read "wavelengths/2π"; the models use wavelength 1), where the pieces' near
+  fields dominate every coupling (`rhythm_protect_compact_v17.json`). This ball is also 125 times denser than the
+  main runs, so size and density are not separated here.
 
 **The velocity's parity in the full model** (`code/one_matter_v17.py --set parity` → `run-one-matter-v17/parity.json`;
 round 16's set-up, three arrangements, 8,000 time units; `code/one_matter_summary_v17.py`):
@@ -4368,8 +4371,9 @@ a pass under its two-sigma rule, flagged "worse"). L is not refitted here: it is
 `code/heat_factor_v18.py` → `run-heat-factor-v18/heat_factor_v18.json`. The heat weight k is defined for one piece in
 linear response (the mixing q is chosen so that one piece's released glow is k times its cold glow: k = 12 q² for round
 16's matter, exactly linear). In the full model at k = 8 a source of 48 pieces glows ×4.75 of its cold output, not ×9.
-The same matter, 48 pieces in a dense ball (radius 3, spacing below a wavelength) and in a dilute one (radius 30,
-spacing about two wavelengths), and one isolated piece, 4,000 time units:
+The same matter, 48 pieces in a dense ball (radius 3 wavelengths, mean spacing about 1.3 wavelengths) and in a
+dilute one (radius 30, mean spacing about 13 wavelengths; both labels corrected 25 September, the models use
+wavelength 1), and one isolated piece, 4,000 time units:
 
 | glow ÷ cold at k = 2, 8, 16 (1 + k = 3, 9, 17) | round 16's matter (f = 0.2) | f = 0.05 matter |
 |---|---|---|
@@ -4513,7 +4517,7 @@ and what the stream absorbs. Round 16's matter (f = 0.2), two arrangements, 16,0
   +9 × 10⁻⁶ of a largest 5.59 (passive); round 17's imposed mask −0.87 of 4.90 (not passive: the hand-made coupling
   could create energy); the absorbing stream +3 × 10⁻⁴, −8 × 10⁻⁴ and −8 × 10⁻³ of about 4.8 at κ = 1, 2.3 and 5
   (passive to within the ray approximation's accuracy), but −0.09 at κ = 10 and −0.46 at κ = 20: an absorption length (1/κ = 0.05) far
-  below the wavelength (2π) and the pieces' spacing (about 1) is outside the ray form's range, so the κ = 20 run is an
+  below the wavelength (1; corrected 25 September from "2π") and the pieces' spacing (about 1.3) is outside the ray form's range, so the κ = 20 run is an
   extrapolation of the approximation, not a physical medium (κ = 10 is borderline); strong absorption needs a full
   wave treatment.
 * **But a warm source keeps no single beat** (rhythm spread 2–3 × 10⁻³, against 4.6 × 10⁻⁵ for the imposed mask). The
@@ -4544,7 +4548,9 @@ and what the stream absorbs. Round 16's matter (f = 0.2), two arrangements, 16,0
   round source". With the physical media the heard region is smaller, which is the review's hot-shell benchmark in
   general form: the law's |g_N| and S count all matter, a one-way medium does not. The pull's growth with heat does
   survive in a physical, drag-free, nearly passive medium: 73–84% of the square root the law needs where the medium's
-  ray form is passive (κ ≤ 5).
+  ray form is passive (κ ≤ 5). *(Correction, 25 September: R_net divides by the model's own intensity gain, not by
+  √(1 + k). The model's glow grows only ×4.75 at k = 8, so against the law's heat gain the raw pull ratios at k = 8
+  (κ = 5: 1.26, 1.82, 2.20, 1.28 by shell) are about 1.6 against the law's 3, about half; §30.)*
 
 ### 28.6 Where round 18 leaves the proof, against the review's checklist
 
@@ -4605,8 +4611,8 @@ stream (the geometry a receiver sees far from a source), in Fourier space: a med
 G(q) = 1/(q² − k² − iΠ(q)), and it is passive (no arrangement of emitters can draw energy from it) exactly when
 Π(q) ≥ 0 for every wavevector q. Units: wavelength 1, k = 2π.
 
-**What absorbs.** Absorbers carried by the stream at the wave's own speed see a wave of wavevector q at the frequency
-ω − u q·e = k − q_z. A wave moving with the stream is at zero frequency for them, and every passive absorber is
+**What absorbs.** Absorbers moving along the stream at the wave's own speed see a wave of wavevector q at the frequency
+ω − u q·e = k − q_z (the calculation sets u = c = 1; see the correction below the Reading). A wave moving with the stream is at zero frequency for them, and every passive absorber is
 transparent at zero frequency: the medium is one-way for propagating waves with no tuning (the Doppler effect does
 it), with the attenuation (κ/2)(1 − cos θ) per unit length for a wave at angle θ to the stream (a cardioid). Two kinds:
 
@@ -4651,6 +4657,13 @@ about a wavelength across; it is passive at every strength, keeps the near field
 It is accurately described by round 18's ray form at weak absorption (an absorption length of a wavelength or more),
 and it cannot be strongly one-way over distances shorter than a few wavelengths. The next section finds that the data
 allow only weak absorption anyway.
+
+*Correction (25 September, §30).* The calculation takes the absorbers to move at the wave's own speed (u = c). But the
+energy bill of a stream that absorbs counter-moving waves (§28.4B) needs the companion's stream to move at least twice
+as fast as the wave's crests (c ≤ u/2). Absorbers carried by that stream at u would see forward waves within
+cos θ > c/u (within 60° of the stream at c = u/2) at negative frequency and amplify them, the pumping that rules out
+point absorbers above. So the passive, one-way medium found here exists only if the absorbers are a separate component
+moving at the crests' speed, not the companion's stream itself. What such absorbers are is open.
 
 ### 29.3 What the medium hears, tested on the clusters and the full suite (the hot-shell benchmark)
 
@@ -4734,7 +4747,12 @@ standard error over the three arrangements):
   receivers (gain 0.47 ± 0.74 and −0.52 ± 0.15; the law 3). Colliding sources pull 0.78 ± 0.11 and 0.90 ± 0.05 as hard
   as cold ones (the law: 1). So in the medium the data allow, the models reproduce the cold law and the collision rule
   but not the law's heat term; the absorption that made warm sources pull harder in rounds 17–18 (κR ≈ 7–15 across the
-  source, or a rule imposed by hand) is what the clusters exclude.
+  source, or a rule imposed by hand) is what the clusters exclude. *(Correction, 25 September, §30: the quoted errors
+  treat two distances × three arrangements as six independent values, which understates them. The arrangements
+  scatter widely: with the two-way wave at k = 2 one arrangement gives 2.21 and 1.79 at r = 9 and 18, the others
+  0.85/0.29 and 0.26/0.01; at k = 8 one gives 1.70 and 3.47 while the other two push. The fair reading is "not
+  reproduced on average, with very large scatter"; three arrangements cannot settle the heat gain in the two-way
+  medium. At κ = 1 the k = 8 sources push in every arrangement.)*
 * **Size matters in the models, and should not.** At fixed mass, sources of radius 1–2 wavelengths pull 2–15 times less
   than sources of radius 3–4.5 (and sometimes push): their pieces, within a wavelength of each other, settle into
   collective states that radiate weakly. Real galaxies of one mass rotate alike whatever their size (the baryonic
@@ -4855,7 +4873,9 @@ separately named candidate, not adopted.
 
 `code/frozen_prediction_v19.py` → `run-frozen-prediction-v19/frozen_prediction_v19.json` and `SHA256`
 (01219170346b60123a0dc5bf979cf847976ad9e7cbd178efca52c10a8b0fd093), written before this project looked at any lensing
-split by velocity dispersion.
+split by velocity dispersion. *(Note, 25 September: the fingerprint is the SHA-256 of the prediction text as the
+script wrote it, without the file's final newline; `sha256sum` of the file itself gives
+c0b1056771313364fae91530f51adf921236d64d9738e523fad63cd8b201c427. The content is unchanged.)*
 
 At fixed stellar mass and isolation, the law's heat term makes a galaxy whose stars move faster lens more: far out,
 √(a G M (1 + k)), k = 3σ²/u². For isolated bulge-dominated lenses (the whole stellar mass at the central dispersion
@@ -4902,3 +4922,46 @@ measured σ_e (SDSS/GAMA spectra), stack each group's excess surface density, an
    statistic; then the Milky Way again.
 5. **The frozen prediction:** σ-split lensing from KiDS × GAMA or SDSS × HSC.
 6. **Inertia;** the likelihood programme with the frozen law; a reproducible release.
+
+## 30. A step back, 25 September 2026: what did not go our way, and which doors are still open
+
+The owner asked for a list of the results we would prefer were different, what was tried and why it was not
+enough, and whether the derivation work closed doors or boxed itself in. The full answer is
+[STEP-BACK-AUDIT.md](../../../STEP-BACK-AUDIT.md), from eight read-throughs of the whole record (§1–§29, THEORY, the
+roadmap, the novelty audit, the rules and the earlier photon–companion era), with the key numbers re-checked against
+the result files. It changes nothing in the law, its constants or the locked forecasts. In short:
+
+* **The law is not cornered.** Its standing misses (five faint dwarfs, the Bullet's smaller half, KiDS's red lenses;
+  heavy stars in strong lenses; the Milky Way's 3–6%; the clusters' radial trend) each have untried remedies, and
+  several trace to our own conventions: the static distance law's exact form (in the survey's own distances KiDS's
+  level is +0.013, red lenses +0.029), star-mass conventions, and cluster stars' speeds taken from the X-ray-measured
+  gravity they are used to predict (with the law's own gravity the X-COP miss rises from 0.227 to 0.329, §10.2).
+* **The derivation work is in a corner of its own making, with a marked way out.** Since round 10 every matter model
+  makes the pull by rhythm-locking (§20.1). Every setback with warm matter since then follows from needing a shared
+  rhythm: dilution by independent sources (§20.2), scrambled waves (§23.5), warm sources out of tune (§26.4, §27),
+  the one-way wave (§27.3–§28.5), no heat gain in the medium the data allow (§29.4). §23.5 and §23.10 named the way
+  out, "a receiver that responds to the wave's energy rather than its phase" and "a pull drawn from the companion's
+  energy flow", and it was never tried. The data-selected rule (strength from all the companion present, direction
+  from its net flow, warm contributions adding without cancelling) is what such a pull would give.
+* **Most model exclusions are narrow.** The matter models never had moving pieces (heat was a frozen random mixing,
+  no Doppler shifts), never went beyond k = 16 (cluster galaxies have about 25–150), never had more than about 100
+  pieces or sources more than 4.5 wavelengths across, and always used one scalar channel with senders and receivers
+  identical. The strength-dependent rhythm rule of §23.7, which gave the heat term's pattern, was dropped with the
+  move to the store model, not refuted. The reciprocity argument of §27.2 covers linear, passive, time-invariant,
+  single-channel structures only; the two best structures were never run in the full model.
+* **Owner's decisions:** the QUMOND-form field equation against RULES.md §1; the dwarf fix `no_hold` shelved for
+  lack of a derivation while L was adopted without one; the distance law's form, and writing the no-expanding-universe
+  rule into RULES.md.
+
+**Corrections made with the audit** (none changes the law, a constant, a forecast or a figure):
+1. §29.2: the passive one-way medium needs absorbers moving at the wave's speed; the companion's stream must be at
+   least twice as fast (§28.4B), so the absorbers cannot be the stream itself (note after §29.2's Reading).
+2. §28.5: "73–84% of the square root the law needs" is relative to the model's own glow; against the law's heat gain
+   the raw ratio at k = 8 is about 1.6 against 3 (note in place; blog and page corrected).
+3. §29.7: the fingerprint is over the text without the file's final newline (note in place).
+4. §29.4: the heat-gain errors are understated and the arrangements scatter widely (note in place).
+5. §27.2 and §28.3, §28.5: unit labels (wavelength 1, not 2π; the dense and dilute balls' spacings are about 1.3 and
+   13 wavelengths).
+6. §21.5: Mistele et al.'s four ratios are stellar-mass bins, not radii.
+7. §27.4: the one-way full-model runs (`run-one-matter-v17/oneway_*.json`) booked energy but ran with momentum
+   bookkeeping off, so momentum balance was not checked there.

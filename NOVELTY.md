@@ -53,8 +53,9 @@ same as new).
 > measured velocity dispersion.
 
 The first two clauses need the directed search on injection-locked particles; the third needs the passive directional
-medium actually built (round 18 reached 73–84% of the square root with an absorbing stream); the prediction needs a
-frozen law.
+medium actually built (round 18 reached 73–84% of the square root of the model's own glow with an absorbing stream,
+about half of the law's heat gain; round 19 found no heat gain on average in the medium the data allow, see
+STEP-BACK-AUDIT.md); the prediction needs a frozen law.
 
 ## 5. Searches still owed
 
