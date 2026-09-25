@@ -1,0 +1,30 @@
+[   68 s]                   single           isolated piece k  16.0: output 1.2019e-02
+[   69 s]                   single           isolated piece k   0.0: output 2.3172e-03
+[   69 s]                   single           isolated piece k   2.0: output 3.5723e-03
+[   72 s]                   single           isolated piece k   8.0: output 7.2702e-03
+[  162 s]                   single    dense ball (radius 3) k   0.0: output 1.3929e-01
+[  164 s]                   single    dense ball (radius 3) k   8.0: output 6.3202e-01
+[  164 s]                   single    dense ball (radius 3) k   2.0: output 2.5232e-01
+[  166 s]                   single    dense ball (radius 3) k  16.0: output 1.0543e+00
+[  257 s]                   single  dilute ball (radius 30) k   0.0: output 1.1314e-01
+[  259 s]                   single  dilute ball (radius 30) k   2.0: output 2.9402e-01
+[  262 s]                   single  dilute ball (radius 30) k   8.0: output 7.8821e-01
+[  264 s]                   single  dilute ball (radius 30) k  16.0: output 1.3318e+00
+[  410 s]    single, odd, f = 0.05           isolated piece k   0.0: output 2.0742e-03
+[  411 s]    single, odd, f = 0.05           isolated piece k   2.0: output 3.2086e-03
+[  413 s]    single, odd, f = 0.05           isolated piece k   8.0: output 6.5774e-03
+[  423 s]    single, odd, f = 0.05           isolated piece k  16.0: output 1.0992e-02
+[  641 s]    single, odd, f = 0.05    dense ball (radius 3) k   2.0: output 2.4553e-01
+[  641 s]    single, odd, f = 0.05    dense ball (radius 3) k   0.0: output 1.3475e-01
+[  642 s]    single, odd, f = 0.05    dense ball (radius 3) k   8.0: output 5.9241e-01
+[  650 s]    single, odd, f = 0.05    dense ball (radius 3) k  16.0: output 1.0287e+00
+[  831 s]    single, odd, f = 0.05  dilute ball (radius 30) k   8.0: output 7.3256e-01
+[  831 s]    single, odd, f = 0.05  dilute ball (radius 30) k   2.0: output 2.6604e-01
+[  834 s]    single, odd, f = 0.05  dilute ball (radius 30) k   0.0: output 1.0136e-01
+[  841 s]    single, odd, f = 0.05  dilute ball (radius 30) k  16.0: output 1.3096e+00
+single | isolated piece | glow ÷ rest {'0': 1.0, '2': 1.54, '8': 3.14, '16': 5.19} | quiet amplitude ÷ rest {'0': 1.0, '2': 0.998, '8': 0.991, '16': 0.98}
+single | dense ball (radius 3) | glow ÷ rest {'0': 1.0, '2': 1.81, '8': 4.54, '16': 7.57} | quiet amplitude ÷ rest {'0': 1.0, '2': 0.992, '8': 0.967, '16': 0.933}
+single | dilute ball (radius 30) | glow ÷ rest {'0': 1.0, '2': 2.6, '8': 6.97, '16': 11.77} | quiet amplitude ÷ rest {'0': 1.0, '2': 0.993, '8': 0.968, '16': 0.935}
+single, odd, f = 0.05 | isolated piece | glow ÷ rest {'0': 1.0, '2': 1.55, '8': 3.17, '16': 5.3} | quiet amplitude ÷ rest {'0': 1.0, '2': 0.999, '8': 0.995, '16': 0.99}
+single, odd, f = 0.05 | dense ball (radius 3) | glow ÷ rest {'0': 1.0, '2': 1.82, '8': 4.4, '16': 7.63} | quiet amplitude ÷ rest {'0': 1.0, '2': 0.996, '8': 0.985, '16': 0.969}
+single, odd, f = 0.05 | dilute ball (radius 30) | glow ÷ rest {'0': 1.0, '2': 2.62, '8': 7.23, '16': 12.92} | quiet amplitude ÷ rest {'0': 1.0, '2': 0.996, '8': 0.985, '16': 0.969}

@@ -1,7 +1,7 @@
 # Gravity that streams
 
-*One law for spinning galaxies, bending light, galaxy clusters and colliding clusters, built from first principles
-and tested on public data, with no dark matter and no expanding universe.*
+*One proposed law for spinning galaxies, bending light, galaxy clusters and colliding clusters: a few stated
+assumptions, worked out step by step and tested on public data, with no dark matter and no expanding universe.*
 
 24 September 2026. This is a fresh write-up of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
@@ -12,7 +12,7 @@ Every number below is computed from public data by a script in this repository (
 **Contents**
 1. [The puzzle](#1-the-puzzle)
 2. [How we work](#2-how-we-work)
-3. [The idea, from first principles](#3-the-idea-from-first-principles)
+3. [The idea, step by step](#3-the-idea-step-by-step)
 4. [How the physics works inside matter](#4-how-the-physics-works-inside-matter)
 5. [The data](#5-the-data)
 6. [Why stars and light lens the way we see](#6-why-stars-and-light-lens-the-way-we-see)
@@ -53,9 +53,14 @@ Solar System):
 | 12 galaxy clusters' masses (typical miss) | **25%** | ×2.9 | 11%, with 24 adjustable numbers |
 | Colliding clusters: lensing sits on the galaxies, not the gas | **yes** (Bullet Cluster, 72-collision stack, three more) | no | yes |
 | Ellipticals bend light more than spirals (measured 0.15 ± 0.04 dex) | **yes: 0.13–0.16**, from their stars' random motion | no difference | yes, with tuned haloes |
-| Light and matter feel the same pull (six strong lenses) | **yes** (−0.03 ± 0.02 dex) | | yes |
+| Light and matter feel the same pull (six strong lenses) | **yes** (−0.03 ± 0.02 dex), with light's response assumed as in Einstein's theory | | yes |
 | Milky Way rotation from 15 to 27 kpc | **within 1–6%** | within 3% | 6–11% too fast |
-| Solar System, planets, pulsars, Cassini | **Einstein's, exactly** | small effects; Cassini about 10× too big | Einstein's |
+| Solar System, planets, pulsars | **no measurable extra pull** (switched off where gravity is strong) | small effects | Einstein's |
+| Cassini's limit on the Galaxy's distortion of the Sun's field (2026 re-analysis) | **1.5σ above**; within 1σ with a 0.19 pc release length | common form about 20× too big | Einstein's |
+
+These are typical misses and simple checks, not a full statistical comparison: each model here uses its own treatment
+of the uncertain inputs every model needs (star masses, gas, distances), and "four constants" does not count those
+inputs. A proper comparison, with shared inputs, their uncertainties and fair baselines, is still to be done (§9).
 
 ---
 
@@ -94,9 +99,10 @@ invisible mass).
 
 The order of work is always the same: first principles, then a small model that can be solved exactly, then real
 data. A regression suite reruns every test the law has faced (77 graded checks) in one command, so any change shows at
-once what it fixes and what it breaks.
+once what it fixes and what it breaks. It is an engineering tool: a "pass" means within two standard deviations of one
+measurement, the checks are not all independent, and the tally is not a measure of how likely the law is to be right.
 
-## 3. The idea, from first principles
+## 3. The idea, step by step
 
 ### 3.1 Matter feeds a companion to its gravity
 
@@ -243,6 +249,29 @@ a new constant of nature, its switch between Newton and the flat regime comes fr
 why disks obey it (they are cold) and why clusters and collisions don't (their galaxies are hot, their gas is not).
 Everything we claim as ours lies where the law is not MOND.
 
+### 3.10 What is assumed, what is derived, and what is still open
+
+The law rests on a few assumptions. Some consequences follow from them exactly, some have been derived in small
+working models (§4), and some pieces are still assumptions. Keeping them apart:
+
+| Piece of the law | Status |
+|---|---|
+| Matter feeds a companion at ℓ watts per kilogram, which streams outward at u | **assumed** (ℓ and u fitted to galaxies and clusters) |
+| Its energy density is A²/8πG and it pulls with its strength A | **assumed**; §4.1 shows a kind of matter (inverted, self-sustained) that a wave pulls in proportion to its height |
+| Flat rotation curves, v⁴ = G M a, and contributions adding up along Newton's direction | **derived** from the two lines above (energy balance and Gauss's geometry) |
+| Strong gravity holds the companion back, exp(−\|g_N\|/g_d), released over L = 0.15 pc | **assumed** (g_d fitted to galaxies, L set by Cassini); not yet derived |
+| The heat weight k = 3σ²/u², with the same u | **derived** in a working model (§4.2), given a quiet store inside matter that the flowing companion opens; the store itself is assumed |
+| Collisions switch the heat off | **derived** in the same working model; the physics is borrowed (Dicke narrowing) |
+| The pull points along the companion's net flow; the companion remembers its source's motion | **assumed** (motivated, not derived) |
+| The field equation ∇²Φ = −∇·h | **borrowed** form (Milgrom's QUMOND) |
+| Light responds to Φ as in Einstein's theory | **assumed**; to be derived in a relativistic version |
+| Warm matter pulls harder, by the square root of its extra glow | **shown in a full simulation** only with the companion's wave made one-way by hand (§4.4); deriving that from the companion as a flowing medium is the next step |
+| What a piece's inertia is, and why all matter falls alike | **open**: the working models do not yet say |
+| MOND as the cold limit | **derived** from the law |
+
+So "from first principles" means here: a few stated assumptions, followed exactly wherever we can, and tested at each
+step. Several links are still assumptions, and the working models that support others are simplified.
+
 ## 4. How the physics works inside matter
 
 Section 3 is the law. This section is about the machinery underneath it: what kind of matter, and what kind of wave,
@@ -303,9 +332,14 @@ the law needs. With the wave travelling both ways, though, the pull on the recei
 * **The books balance:** energy to about 1 part in a trillion, and momentum as far as it can be measured.
 * **A cold source pulls** distant pieces of the same matter: they settle a quarter beat ahead of its wave and are
   pulled, reaching 0.92 on a scale where 1 is perfect step.
-* **A warming source glows as the heat rule says** (×1.2, 2.1, 5.0 and 8.1 of its cold glow at heat weights 0.5, 2, 8
-  and 16), and the wave reaching distant matter grows as the square root of that glow (×1.01, 1.31, 2.24, 2.81). The
-  square root the law needs is physically there in the wave.
+* **A warming source glows more, but by less than the heat rule's 1 + k:** ×1.2, 2.1, 5.0 and 8.1 of its cold glow at
+  heat weights 0.5, 2, 8 and 16, where 1 + k gives 1.5, 3, 9 and 17. Two things hold it back. Each piece's extra glow
+  draws on its own supply: pieces far apart reach only 76–87% of 1 + k (×2.6, 7.0 and 11.8 at k = 2, 8 and 16), as
+  their inner reserve falls by up to a quarter. And in a dense source, whose pieces sit closer than a wavelength, the
+  shared wave holds back part of the rest (45–60% of 1 + k). In the law this would read as a larger effective u for
+  densely packed matter; whether that is the same for all real systems is an open question (§9). The wave reaching
+  distant matter grows as the square root of whatever glow there is (×1.01, 1.31, 2.24, 2.81): the square root the law
+  needs is physically there in the wave.
 * **An exact rule about matter:** a piece's own loud inner vibrations, stirred by the same wave, kick back and take a
   share 2f of its pull, where f is the share of their energy they send into the companion. So matter's loud vibrations
   must mostly ring inside and only whisper into the companion.
@@ -324,10 +358,11 @@ and the pull doesn't grow with the heat. We found exactly why, and a way out.
   into a common rhythm, and a sideways one that can keep it churning forever. Switch off only the sideways half and
   distant matter keeps step at 0.88 with a warm source, better than the 0.63 of a cold one, because the warm source's
   wave is stronger.
-* **No structure inside a piece can remove it.** Whatever lets a piece send its glow into the wave lets it receive its
-  neighbours' glow just as strongly (a basic rule of waves, reciprocity). We tried twelve inner structures and the
-  pushes came out the same size in all of them. What does help: motion must enter the equations the way a velocity
-  does (it flips sign when time runs backwards, like the Coriolis force), which is a correction from first principles.
+* **None of the twelve inner structures we tried removes it.** At equal glow the pushes came out the same size in all
+  of them, within 4%. A basic rule of waves (reciprocity) suggests why, for any structure that sends and receives
+  through the same channel: whatever lets a piece send its glow into the wave lets it receive its neighbours' glow just
+  as strongly. What does help: motion must enter the equations the way a velocity does (it flips sign when time runs
+  backwards, like the Coriolis force), which is a correction from first principles.
 * **A wave that only travels outward removes the damage completely.** The companion streams outward from the matter
   that makes it. If its crests are carried outward by that stream faster than they can move against it, a piece hears
   only matter nearer the centre, and never its own echo.
@@ -350,20 +385,32 @@ step at every distance, better than with a cold source (dashed). Script `code/on
   | Warm but colliding, outward-only wave | +1.53 | +0.99 | +0.38 | +0.50 |
   | Warm, wave travelling both ways | −0.89 | −0.55 | −0.03 | −0.09 |
 
-  Measured against the square root of the wave's extra strength, the warm source's extra pull comes out about 1 on
-  average, exactly what the law's square root requires. Colliding sources pull like cold ones, and a warm source brought
+  Measured against the square root of the wave's extra strength, the warm source's extra pull comes out 1.06 on
+  average, close to the 1 the law's square root requires; distance by distance it ranges from 0.6 to 1.8, because the
+  cold source that serves as the reference keeps step unevenly. Colliding sources pull like cold ones, and a warm source brought
   to rest goes back to about the cold pull. With the wave travelling both ways, the same warm source pushes the nearest
   matter away instead: the outward-only wave is what turns the push into a pull.
-* **The glow stays in proportion to mass, and the pull grows as its square root, just as the law says.** In the full
+* **The glow stays in proportion to mass, and the pull grows about as its square root, as the law needs.** In the full
   simulation the glow per piece is the same within 8% for sources of 24, 48 and 96 pieces, and four times the mass
-  gives ×1.7 the pull for a cold source and ×2.1 for a warm one, where the law's √(G M a)/r gives ×2. A nice bonus
+  gives ×1.7 the pull for a cold source and ×2.1 for a warm one, where the law's √(G M a)/r gives ×2 (two arrangements
+  each; a proper fit of the exponent, with its uncertainty, over a wider range is still to be done). A nice bonus
   falls out as well: with a wave that only travels outward, a piece feels only the matter nearer the centre than
   itself. For a round source that is Newton's rule that only the mass inside a radius pulls there, which is the form
   the law already takes.
-* **Status.** The one-way wave was imposed in these tests. Whether the companion's wave really is one-way is now a
-  concrete question about the companion as a flowing medium. There is an encouraging hint: the galaxies require the
-  companion's crests to move outward at no more than half its travel speed (§4.5), which is just the range in which a
-  wave carried by the stream cannot travel back inward.
+* **Status, and what round 18 found.** The one-way wave was imposed in these tests, by deleting every inward coupling
+  by hand. Round 18 gave the wave its own local equations, first in one dimension, solved exactly and checked against a
+  direct simulation of the medium (forces and powers agree within 1–4%):
+  * **Waves carried by the companion's own stream are one-way whenever the stream outruns them** (the stream's speed u
+    above the waves' speed c relative to it). This is now derived, not imposed, and for a stream that moves at u
+    everywhere, as ours does, it holds right into the centre of a source. With both of the stream's waves included, the
+    pull's energy bill fits the galaxies' limit (§4.5) when c is at least 71% of u.
+  * **But a stream flowing past a body pushes on anything that emits into it,** like wind on a sail: each piece is
+    pushed downstream by about its emitted power divided by the stream's speed. For the companion that push is as
+    large as the law's own pull in the outskirts of galaxies, so this version fails as it stands.
+  * **A version with no push:** waves that travel at their own speed through matter's frame, with the stream absorbing
+    the part that moves against it. Emission is then symmetric (no push), the coupling is one-way (a wave loses a
+    factor e^(−κ) for every unit of distance it travels inward), and the energy bill is the static one (crests at most
+    u/2). Testing it in the full three-dimensional simulation is the next step.
 
 ### 4.5 What being pulled costs
 
@@ -474,10 +521,16 @@ with an earlier fit of the constants; the current fit lowers our curve by about 
 
 ### 5.5 The Solar System and wide binary stars
 
-* **Planets, the star S2 around the Galaxy's central black hole, and binary pulsars** follow Einstein exactly: the
-  release factor switches the companion off completely where gravity is strong.
-* **Cassini's radio tracking** of Saturn measured the Galaxy's field inside the Solar System: (3 ± 3) × 10⁻²⁷ s⁻²; ours,
-  4.4 × 10⁻²⁷, because the companion needs 0.15 pc of travel to break free. MOND gives about ten times too much.
+* **Planets, the star S2 around the Galaxy's central black hole, and binary pulsars:** the release factor switches the
+  law's extra pull off where gravity is strong (at the Earth it is e to the power −28 million), so these orbits are as
+  in Einstein's theory, which we assume holds in strong fields. The companion's other possible effects there are
+  computed only in part (its emission changes the Double Pulsar's orbit by 1% of the measurement error).
+* **Cassini's radio tracking** of Saturn limits the Galaxy's distortion of the Sun's field. The 2026 re-analysis (Park,
+  Hees, Famaey, Desmond & Durakovic) gives (1.6 ± 1.8) × 10⁻²⁷ s⁻²; ours is 4.4 × 10⁻²⁷, 1.5 standard deviations
+  above, allowed but not comfortable. It depends on the release length: 0.19 pc instead of 0.15 would bring it within
+  one standard deviation, and would lower the wide-binary forecast below from 8% to 6% at 20,000 AU. MOND in its
+  widely used "simple" form gives 3 × 10⁻²⁶, about twenty times the measured value (forms that switch faster between
+  its two regimes can pass).
 * **Wide binary stars** (pairs 5,000–30,000 AU apart, where the mutual pull is weak): our law predicts 3% more pull than
   Newton at 7,000 AU and 8% at 20,000 AU, against MOND's 43%. The Gaia data are disputed; the forecast is locked in the
   repository ahead of Gaia's next release.
@@ -523,9 +576,12 @@ needs them 1.4–1.9 times heavier than the standard "Salpeter" assumption (in t
 giant ellipticals already suggest star populations this heavy, and measuring these six lenses' stars directly is a
 clean test. Compact lenses like the Einstein Cross need only their stars, as observed.
 
-**And in collisions, the lensing sits on the galaxies** (§5.3): the galaxies are hot and carry their old companion with
-them, while the colliding gas is cold and its fresh companion has barely begun to grow. The pull follows the companion's
-flow, so the light bends around the galaxies, not the gas, just as the Bullet Cluster and 72 other collisions show.
+**And in collisions, the lensing follows the companion's flow** (§5.3). Soon after a crossing the hot galaxies carry
+their old companion with them, while the colliding gas is cold and its fresh companion has barely begun to grow, so the
+light bends around the galaxies rather than the gas, as the Bullet Cluster and 72 other collisions show. The rule is
+conditional, not "always on the galaxies": where dense gas sits among hot galaxies whose flow converges on it, as in
+Abell 520's galaxy-poor clump, the lensing can sit on the gas, and around gas that has stopped for long enough the
+fresh companion grows back.
 
 ## 7. How it compares
 
@@ -536,19 +592,23 @@ flow, so the light bends around the galaxies, not the gas, just as the Bullet Cl
 | Collisions: lensing stays with the galaxies | **yes** | no | yes |
 | Abell 520's galaxy-poor lensing clump | **from its gas and the galaxies' heat** | no | a puzzle |
 | Ellipticals lens more than spirals | **yes, from their stars** | no | yes, via tuned haloes |
-| Strong lenses: light and stars agree | **yes** | | yes |
+| Strong lenses: light and stars agree | **yes**, with light's response assumed | | yes |
 | Milky Way rotation 15–27 kpc | **within 1–6%** | within 3% | 6–11% fast |
 | Milky Way rotation at the Sun | 9% slow | 3% slow | right |
 | Milky Way mass inside 100 / 200 kpc | **agrees** | 30–40% high | agrees |
 | Ten Milky Way dwarfs | 4 agree, 6 too slow | the same | fitted |
-| Solar System, pulsars, Cassini | **Einstein's; Cassini passes** | Cassini about 10× too big | Einstein's |
+| Solar System, pulsars | **no extra pull** | small effects | Einstein's |
+| Cassini, 2026 re-analysis | **1.5σ above** | common form about 20× too big | passes |
 | Wide binary stars (data disputed) | **3% / 8% extra pull at 7,000 / 20,000 AU** | 43% | none |
-| Explains *why* | disks are cold; cluster galaxies are hot; gas collides | no | no |
-| Adjustable numbers | **4 in total** | 1 | ~320 |
+| Fitted constants (not counting the uncertain inputs every model needs) | **4** | 1 | about 320 (two per halo) |
 
-Dark matter fits individual objects more tightly because it is tuned object by object. Our law fits everything with
-four shared numbers and says why each kind of system behaves as it does. On the regression suite's 77 graded checks
-it scores 59 pass, 11 close and 7 fail, everything in the project's own distances.
+Dark matter fits individual objects more tightly because it is tuned object by object; our law uses four shared
+constants and ties the differences between systems to things measured about their matter (how randomly it moves,
+whether it collides). But this table is not a statistical comparison: the three columns do not treat the uncertain
+inputs (star masses, gas, distances, inclinations) the same way, the misses are not independent, and some data helped
+choose the law's form. On the regression suite's 77 graded checks the law scores 59 pass, 11 close and 7 fail,
+everything in the project's own distances; that tally tracks regressions, not probability. A likelihood comparison
+with shared inputs and a frozen law is on the list (§9).
 
 ## 8. Predictions anyone can check
 
@@ -558,9 +618,11 @@ it scores 59 pass, 11 close and 7 fail, everything in the project's own distance
    radius.
 3. **Lensing around isolated galaxies stays flat to about 2 Mpc and then falls,** where the companion has not yet
    reached.
-4. **Wide binary stars:** 3% more pull than Newton at 7,000 AU and 8% at 20,000 AU, locked ahead of Gaia's next release.
-5. **In every collision, lensing stays with the galaxies,** at every stage. Around stopped gas it comes back only inside
-   a sphere growing at 169 km/s, about 170 kpc per billion years.
+4. **Wide binary stars:** 3% more pull than Newton at 7,000 AU and 8% at 20,000 AU (6% if the release length is
+   lengthened to 0.19 pc to fit the 2026 Cassini value), locked ahead of Gaia's next release.
+5. **After a collision, lensing stays with the galaxies while the gas moves away from them faster than a fresh companion
+   grows around it** (169 km/s). Around stopped gas it comes back only inside a sphere growing at 169 km/s, about
+   170 kpc per billion years, so in old collisions whose gas has long stopped, some lensing should return to the gas.
 6. **Older collisions show extra lensing around the smaller clump,** as the heat from crossing and tidal shaking builds
    up.
 7. **At equal visible mass, systems whose stars move randomly and freely pull harder** than those whose stars circle in
@@ -574,27 +636,41 @@ it scores 59 pass, 11 close and 7 fail, everything in the project's own distance
 
 ## 9. What is still open, and why we are optimistic
 
-* **The companion as a medium.** The clearest next step. Our tests show that a companion wave that only travels
-  outward keeps warm matter in tune and makes the pull grow with heat as the law needs. Whether the companion's wave
-  really is one-way depends on how fast its crests move against its own outflow, and the galaxies' limit on the crest
-  speed already points the right way. Working that out, and then repeating the full tests with the derived wave, is
-  concrete and doable.
-* **What matter's quiet store is**, physically, and the companion's speed from it.
-* **The Bullet Cluster's smaller half** has about 60% of its measured lensing mass with the crossing heat included; a
-  full calculation of the heat its galaxies picked up, and diffuse starlight travelling with it, are the next steps.
-* **Six faint dwarf galaxies** come out too slow unless the Milky Way's hold on their companion is weaker than the law
-  says; the reason is still to be found.
-* **The Sun's orbital speed**, 9% slow: the Milky Way disk's shape is the lever to test.
-* **The gas around lensing galaxies**, to be weighed.
-* **A relativistic version** of the law, with light's bending derived rather than assumed, and the constants derived
-  rather than fitted.
+An independent review (25 September 2026) set out what a paper would need. In order:
 
-Why optimistic: every piece of the law is now tied to something measurable about matter, and the four constants have
-held across galaxies, clusters, collisions, lenses and the Solar System. The machinery underneath is no longer a list
-of assumptions: the square root, the heat weight with its one speed, the collision rule and the pull's energy bill
-all come out of explicit, energy-balanced models. The one link that resisted, keeping warm matter in tune, now has a
-precise diagnosis and a mechanism that works in the full simulation. Each open item is a concrete calculation or
-measurement, and the regression suite tells us within minutes whether a change helps.
+1. **The companion as a flowing medium.** Derive the one-way wave from the companion's own local equations (its flow,
+   its waves, what happens at a source's centre and where streams meet), with the flow's energy and momentum followed,
+   and repeat the warm-source tests with that wave instead of one made one-way by hand. This is the main step now under
+   way: waves carried by the stream turn out one-way but push every emitter downstream; waves the stream absorbs when
+   they move against it are one-way with no push, and are being tested in three dimensions (§4.4).
+2. **The law's numbers from the working models,** not only its trends: the exponent of the square root with its
+   uncertainty over a wide range of mass, the full dependence on heat (why the model's glow grows more slowly than
+   1 + k, §4.3), and a clean benchmark: a small system inside a shell of hot matter. The law's plain total S counts the
+   shell; a strictly outward-only wave would not carry the shell's influence inward. The completed medium must say
+   which.
+3. **Inertia, and why all matter falls alike.** The working models do not yet define a piece's inertia, so equal
+   acceleration for different kinds of matter is a requirement, not yet a result.
+4. **The release factor and light's response,** derived rather than assumed, and one prescription for the Solar
+   System, wide binaries and dwarf galaxies (Cassini's 2026 value now prefers a release length of at least 0.19 pc).
+5. **Collisions as a calculation from before the crossing,** with the companion's emission, transport and the heat of
+   crossing followed in time. The Bullet Cluster's smaller half still has only about 60% of its measured lensing mass.
+6. **A proper statistical comparison:** a frozen law, a full list of fitted and measured inputs with their
+   uncertainties, likelihoods, fair baselines for MOND and dark matter, and at least one test chosen in advance, such as
+   lensing against independently measured star speeds at fixed visible mass.
+7. **The remaining misses,** each explained or stated as a limit: six faint dwarf galaxies too slow, all galaxy lenses
+   16% above the law (the gas around them to be weighed), strong lenses needing heavy stars (to be measured), and the
+   Sun's orbital speed 9% slow (the disk's measured structure to be used).
+8. **A full literature search** before any claim of priority, and a paper with one bounded claim; the review suggests
+   "motion-enhanced attraction in an active streaming medium" first, with the astronomy as motivation.
+9. **A frozen, reproducible release:** every figure regenerated with one version of the law, with inputs, seeds and
+   commands archived.
+
+Why optimistic: the four constants have held across galaxies, clusters, collisions, lenses and the Solar System, and
+every piece of the law is tied to something measured about matter. Several links that began as assumptions now come
+out of explicit, energy-balanced models: the square root, the heat weight with its one speed, the collision rule and
+the pull's energy bill. The one link that resisted, keeping warm matter in tune, now has a precise diagnosis and a
+mechanism that works in the full simulation, and turning that mechanism from an imposed rule into a derived one is a
+well-posed calculation. Each open item is a concrete calculation or measurement.
 
 **What is borrowed and what is ours.** Borrowed and credited: Newton's and Einstein's gravity in strong fields; Gauss's
 flux geometry; Dicke narrowing and the Mössbauer effect as known physics; the Bloch equations of inverted, self-sustained

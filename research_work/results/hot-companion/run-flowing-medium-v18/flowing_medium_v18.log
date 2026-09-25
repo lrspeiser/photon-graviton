@@ -1,0 +1,20 @@
+A  M = 0.000 (two-way): lone piece feeds pseudo-energy 0.250, feels drag +0.000 (stream-frame power 0.250); a locked receiver: force -0.500 per |q||phi|, P/|F| = 1.000
+A  M = 0.500 (two-way): lone piece feeds pseudo-energy 0.250, feels drag +0.167 (stream-frame power 0.333); a locked receiver: force -0.333 per |q||phi|, P/|F| = 1.500 = 3.000 U
+A  M = 0.900 (two-way): lone piece feeds pseudo-energy 0.250, feels drag +1.184 (stream-frame power 1.316); a locked receiver: force -0.263 per |q||phi|, P/|F| = 1.900 = 2.111 U
+A  M = 1.050 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +2.439 (stream-frame power 2.561); a locked receiver: force -5.122 per |q||phi|, P/|F| = 0.098 = 0.093 U
+A  M = 1.100 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +1.190 (stream-frame power 1.310); a locked receiver: force -2.619 per |q||phi|, P/|F| = 0.191 = 0.174 U
+A  M = 1.200 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +0.568 (stream-frame power 0.682); a locked receiver: force -1.364 per |q||phi|, P/|F| = 0.367 = 0.306 U
+A  M = 1.300 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +0.362 (stream-frame power 0.471); a locked receiver: force -0.942 per |q||phi|, P/|F| = 0.531 = 0.408 U
+A  M = 1.414 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +0.250 (stream-frame power 0.354); a locked receiver: force -0.707 per |q||phi|, P/|F| = 0.707 = 0.500 U
+A  M = 1.500 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +0.200 (stream-frame power 0.300); a locked receiver: force -0.600 per |q||phi|, P/|F| = 0.833 = 0.556 U
+A  M = 2.000 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +0.083 (stream-frame power 0.167); a locked receiver: force -0.333 per |q||phi|, P/|F| = 1.500 = 0.750 U
+A  M = 3.000 (one-way): lone piece feeds pseudo-energy 0.000, feels drag +0.031 (stream-frame power 0.094); a locked receiver: force -0.188 per |q||phi|, P/|F| = 2.667 = 0.889 U
+B  kappa = 0.0: a wave from x = 2 reaches x = 1 at 1.000 of the outward coupling; across the centre from 1.5 to -1.5 at 1.000; lone piece drag 0; P/|F| = c
+B  kappa = 0.5: a wave from x = 2 reaches x = 1 at 0.607 of the outward coupling; across the centre from 1.5 to -1.5 at 0.472; lone piece drag 0; P/|F| = c
+B  kappa = 1.0: a wave from x = 2 reaches x = 1 at 0.368 of the outward coupling; across the centre from 1.5 to -1.5 at 0.223; lone piece drag 0; P/|F| = c
+B  kappa = 2.3: a wave from x = 2 reaches x = 1 at 0.100 of the outward coupling; across the centre from 1.5 to -1.5 at 0.032; lone piece drag 0; P/|F| = c
+B  kappa = 5.0: a wave from x = 2 reaches x = 1 at 0.007 of the outward coupling; across the centre from 1.5 to -1.5 at 0.001; lone piece drag 0; P/|F| = c
+check A, U = 0.5: force source/receiver sim +0.5700/-0.0047 exact +0.5744/+0.0000; power sim +0.4548/+0.4987 exact +0.4539/+0.5000
+check A, U = 1.3: force source/receiver sim +0.3601/-0.5043 exact +0.3623/-0.4994; power sim +0.0011/+0.4603 exact +0.0000/+0.4574
+check B, kappa = 0.0: force source/receiver sim -0.1774/-0.2507 exact -0.1786/-0.2500; power sim +0.0728/+0.5021 exact +0.0714/+0.5000
+check B, kappa = 2.0: force source/receiver sim -0.0083/-0.2590 exact -0.0000/-0.2500; power sim +0.2419/+0.4937 exact +0.2500/+0.5000

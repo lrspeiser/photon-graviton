@@ -80,14 +80,16 @@ def run(law, ctx):
     ge, gobs = galactic_pull(law)
     ctx.log(f'Cassini Q2 (g_e {ge:.3e}, hold x{c:g}, release length {L:g} AU)')
     Q2, boost = sun_in_galaxy(MSUN, c * ge, 0.0, 0.0, L, a, gd)
+    # round 18: the 2026 re-estimate with the DE440 data (40% tighter than Hees et al. 2014's (3 +- 3) x 10^-27)
     out.append(make('precision.cassini_q2', GROUP, 'Cassini: Galactic distortion of the Sun\'s field, Q2', Q2,
-                    crit=z_check(Q2, 3e-27, 3e-27), unit='1/s^2', target='(3 +- 3) x 10^-27 (Hees et al. 2014, eq. 12)',
-                    detail=dict(g_e=ge, g_obs=gobs), refs='Hees, Folkner, Jacobson & Park 2014, PRD 89, 102002'))
+                    crit=z_check(Q2, 1.6e-27, 1.8e-27), unit='1/s^2', target='(1.6 +- 1.8) x 10^-27 (Park et al. 2026)',
+                    detail=dict(g_e=ge, g_obs=gobs, z_2014=(Q2 - 3e-27) / 3e-27),
+                    refs='Park, Hees, Famaey, Desmond & Durakovic 2026, PRD (arXiv:2602.17884); before: Hees et al. 2014, PRD 89, 102002'))
     sun = ctx.shared.get('mw_sun')
     if sun:
         Qm, _ = sun_in_galaxy(MSUN, c * sun['g_N_SI'], c * sun['S_SI'], c * sun['g_hot_SI'], L, a, gd)
         out.append(make('precision.cassini_q2_mw_model', GROUP, 'Cassini Q2 with the Milky Way model\'s pull and heat at the Sun', Qm,
-                        unit='1/s^2', crit=('info', abs(Qm - 3e-27) / 3e-27)))
+                        unit='1/s^2', crit=('info', abs(Qm - 1.6e-27) / 1.8e-27)))
     # the two published analyses disagree (about 1.4: Chae 2023-24; 1.0: Banik et al. 2024), so anything between
     # them passes; a boost beyond both is excluded by both
     out.append(make('precision.wide_binaries', GROUP, 'wide binaries (1 Msun, 20,000 AU): boost of the pull', boost[20000],
