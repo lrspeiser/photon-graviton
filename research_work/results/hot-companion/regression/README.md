@@ -57,6 +57,7 @@ README §22.3). `--law round11` loads round 11's (a = 6.547 × 10⁻¹¹, g_d = 
 | `refit` | constants refitted on their home data after the change: `"a"` on the 149 SPARC galaxies (g_d held), `"u"` on the 12 X-COP clusters (for bases 'round11' and 'round12', since round 14, the sample the clusters test grades: stars deprojected, static distances, as those constants were fitted; before, the round-3 sample, which gave u = 192 km/s for the adopted law instead of its 169.4) | none |
 | `a_SI`, `lam`, `u_kms`, `base` | explicit constants; `base` 'round3' (the round-3 constants, as the rounds 7–9 candidates use), 'round11', 'round12' (the adopted ones) or another `results.json` | 'round3' |
 | `alpha_per_Mpc`, `sparc_distances` | the static distance law's scale, and 'published' or 'static' SPARC distances | the base's ('round12': 2.3645 × 10⁻⁴, 'static'; others 2.4890 × 10⁻⁴, 'published') |
+| `distance_variant`, `eta_path` | round 21, registered comparisons: the distance geometry, 'fixed' (the adopted law, D_A = D) or 'metric' (D_A = D/(1 + z), so D_L = (1 + z)² D_A), and a path factor √(1 + η z/(1 + z)) on D (`collisions_v10.VARIANT`, `ETA_PATH`). They reach every conversion that goes through `collisions_v10.static` (KiDS, Mistele, the Bullet, the far collisions); SLACS keeps its own conversion, and SPARC's Hubble-flow distances take α but not the path factor (under 1% at their redshifts) | 'fixed', 0 |
 
 Candidates now in the folder:
 
@@ -67,6 +68,9 @@ Candidates now in the folder:
 | `weak_hold.json` | external hold 10% | the six faint dwarf galaxies (round 7) |
 | `no_hold.json` | external hold 0, release over 200,000 AU (about 1 pc) | the dwarfs, once the release length protects the binaries (round 9) |
 | `no_hold_r12.json` | the same on the round-12 law (round 20, a registered comparison, not adopted) | the review's request to rerun it under today's inputs |
+| `dist_metric_eta_r12.json` | the supplied distance law: path factor with η = 1/2, metric geometry, α from the supernovae at η = 1/2 (H₀-like 73.2); a and u refitted (round 21) | the owner's feedback: round 12's beam-area term read as a path correction, with distance duality |
+| `dist_fixed_eta_r12.json` | the path factor with η = 1/2 in the adopted fixed geometry, same α; a and u refitted | separates the path factor from the geometry |
+| `dist_metric_r12.json` | the metric geometry alone at the adopted α; a and u refitted | separates the geometry from the path factor |
 | `gd_x1p25.json` | g_d × 1.25 | the smallest useful step toward the Sun's speed |
 | `combined.json` | all three, a and u refitted | together |
 | `heat_p175.json` | the heat weight k = 3 (σ/u)^1.75, a and u refitted (6.181 × 10⁻¹¹, 132.2 km/s) | the KiDS early/late gap allows p = 1.75–2 and p = 1.75 removes KiDS's level (round 13) |
@@ -166,6 +170,20 @@ the release length (neither is derived); not adopted.
 |---|---|---|
 | round 12 (adopted) | 59 / 11 / 7 | |
 | `no_hold_r12` | **61 / 12 / 4** | better: Carina 3.47 → 4.39 km/s (pass), Antlia 2 1.11 → 4.14 (pass), Sextans 2.10 → 4.45 (close), Crater II 1.00 → 3.35 (close), the ten dwarfs' χ² 137.7 → 60.4; unchanged failures: Draco 2.79 → 4.10 and Ursa Minor 3.44 → 4.18 (against 9.1 and 9.5), the Bullet's smaller half, KiDS's red lenses; changed predictions: Cassini's Q2 → 0 (the Galaxy's pull no longer enters the Sun's law), wide binaries 1.076 → 1.182 at 20,000 AU |
+
+## Round 21: the supplied distance law, in parts (full tier, against the round-12 baseline)
+
+The results README §32.3; the reports are kept in `../run-distance-eta-v21/suite/`. Registered comparisons, a and u
+refitted on their home data; none adopted.
+
+| Law | Pass / close / fail | What moves |
+|---|---|---|
+| round 12 (adopted) | 59 / 11 / 7 | |
+| `dist_fixed_eta_r12` (η = 1/2, H₀-like 73.2, D_A = D*) | **62 / 8 / 7** | improved: KiDS all, red and disk lenses (+0.035, +0.048, +0.036 dex), El Gordo NW speeds; masses up in MACS J0025, El Gordo and the Bullet's smaller half (1.50 against 2.45–2.81); regressed: Mistele's ellipticals 2.55 → 3.71 (fail), Abell 520 P2 (close) |
+| `dist_metric_eta_r12` (η = 1/2, H₀-like 73.2, D_A = D*/(1 + z): the proposal) | **62 / 8 / 7** | improved: KiDS all, red and disk lenses (+0.027, +0.042, +0.029 dex); regressed: Mistele's ellipticals 4.03 (fail); the Bullet's smaller half 0.91 against 1.89–2.17 |
+| `dist_metric_r12` (the metric geometry alone, η = 0, H₀-like 70.9) | 57 / 13 / 7 | regressed: MACS J0025's galaxy speeds (631 km/s, fail), El Gordo's masses (close); KiDS red fail → close |
+
+The path factor (with its own scale) is what helps; the metric geometry alone costs the far clusters.
 
 ## What the candidates do now (quick tier, against the round-9 baseline)
 

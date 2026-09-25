@@ -5,8 +5,10 @@ assumptions, worked out step by step and tested on public data, with no dark mat
 
 24 September 2026, updated 25 September 2026 with round 19 (the companion's medium tested against the data, the
 Milky Way refitted with its matter held to independent measurements, a frozen prediction) and a step back over the
-whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9), and round 20 (a second way to derive the pull, tested in
-small models, and the clusters checked without their X-ray input). This is a fresh write-up
+whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9), round 20 (a second way to derive the pull, tested in
+small models, and the clusters checked without their X-ray input), and round 21 (three proposals from the project's
+owner checked against the data: a faster glow from colliding clusters, a refined distance law, and a first
+relativistic version, §5.3 and §9). This is a fresh write-up
 of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
@@ -94,7 +96,8 @@ The three standard responses each fail somewhere:
 
 The project runs under four rules ([RULES.md](RULES.md)): no dark matter; no MOND or anything derived from it as an
 input; no plain Newtonian gravity as the answer; and no expanding universe. Distances are the project's own, from a
-static universe in which light loses energy slowly as it travels (its rate is fitted to 1,365 supernovae).
+static universe in which light loses energy slowly as it travels (its rate is fitted to 1,365 supernovae). A
+refinement of that law, and what it requires, was tested in round 21 (§9).
 
 Every candidate formula goes through an automatic check,
 [research_work/tools/formula_guard.py](research_work/tools/formula_guard.py), that asks whether it is secretly MOND
@@ -268,7 +271,7 @@ working models (§4), and some pieces are still assumptions. Keeping them apart:
 | Collisions switch the heat off | **derived** in the same working model; the physics is borrowed (Dicke narrowing) |
 | The pull points along the companion's net flow; the companion remembers its source's motion | **assumed** (motivated, not derived) |
 | The field equation ∇²Φ = −∇·h | **borrowed** form (Milgrom's QUMOND) |
-| Light responds to Φ as in Einstein's theory | **assumed**; to be derived in a relativistic version |
+| Light responds to Φ as in Einstein's theory | **assumed**; to be derived in a relativistic version (a first proposed action was checked in round 21: what it gets right and four fixes, §9) |
 | Warm matter pulls harder, by the square root of its extra glow | **required by the data** (clusters, the lensing of ellipticals, collisions); shown in the working models only with strongly one-way waves, which the clusters now rule out (§4.4). The mechanism is **open** again |
 | What a piece's inertia is, and why all matter falls alike | **open**: the working models do not yet say |
 | MOND as the cold limit | **derived** from the law |
@@ -602,6 +605,21 @@ constants in the project's own distances (`code/bullet_static_v11.py`) keep the 
 * **72 collisions stacked** (Harvey et al. 2015): the lensing sits a fraction −0.04 ± 0.07 of the way from the galaxies
   to the gas; ours, 0.03. The fresh companion around stopped gas grows at 169 km/s, so it never catches up with gas
   moving away at about 1,000 km/s.
+* **The smaller half is still short, and round 21 tested a way to close it.** With the law alone it has 1.4 × 10¹⁴
+  suns inside 250 kpc against 2.5–2.9 measured; the heat its galaxies picked up crossing the other cluster raises that
+  to 1.6. The project's owner suggested that the heat made in a collision spreads faster than the settled companion,
+  at its own speed. At 600 km/s both halves land inside their measured masses (2.5 and 3.4), with both lensing peaks
+  still on the galaxies (chart below). The catch is energy: a glow that spreads 3.5 times faster with the same power is
+  3.5 times thinner, and with that counted the smaller half reaches only 1.8. So the idea works if the collision puts
+  about 3.3 times more power into this fast glow than the law's heat rule gives: a definite target for the physics to
+  explain.
+
+![The Bullet Cluster against the speed of the collision's glow](blog-figures/bullet-fast-glow.png)
+
+*The Bullet Cluster's two halves against the speed at which the collision's heat spreads. Shaded: the measured lensing
+masses inside 250 kpc. Teal: as proposed; both halves are in range from about 570 to 820 km/s. Orange: with the energy
+counted, a faster glow is thinner and the smaller half stays near 1.7–1.8. Solid: the smaller half; dashed: the main
+cluster. Script `code/hot_mode_speed_v21.py`.*
 
 ![Three more collisions](blog-figures/three-more-collisions.png)
 
@@ -615,6 +633,12 @@ constants in the project's own distances (`code/bullet_static_v11.py`) keep the 
   clumps agree.
 * **El Gordo**, seen 7 billion years ago: its lensing inside 1 Mpc comes out 21.4 against 24.3 × 10¹⁴ suns with its
   published stars.
+
+The heat of crossing had never been added to these clusters. Round 21 added it to the two with a clean two-body
+history, and it moves both toward their measured masses: El Gordo's lensing inside 1 Mpc from 21.4 to 22.1 × 10¹⁴ suns
+with the law's own speed, or 23.7 with the faster glow as proposed (24.3 measured); MACS J0025's two halves from 2.1
+and 1.9 to 2.2–2.6 and 2.0–2.5 (3.6 and 3.8 measured, with large errors), with its north-western lensing peak moving
+from 79 to 18–44 kpc from its galaxies.
 
 ### 5.4 Our own galaxy
 
@@ -828,6 +852,26 @@ not every piece keeping one rhythm (§4.6).
   independent measurements of the cluster galaxies' speeds and lensing masses the priority, alongside the frozen
   lensing test.
 
+**Round 21: three proposals checked.** The project's owner sent three ideas for the hardest open problems; each was run
+against the data.
+* **A faster glow from collisions** (§5.3). Reproduced: at 600 km/s both halves of the Bullet Cluster land in their
+  measured masses, and the same heat of crossing brings MACS J0025 and El Gordo closer to theirs. The condition: the
+  collision must put about 3.3 times more power into this glow than the law's heat rule gives, which the physics now
+  has to explain.
+* **A refined distance law.** A factor that grows smoothly with distance, whose simplest value (η = 1/2) may be
+  derivable, fits 1,365 supernovae as well as the standard expanding-universe model does, and in the regression suite
+  it removes most of the 16% offset in galaxy lensing (62 checks pass, against 59). Two conditions came out. The light
+  must arrive as the same photons, each with less energy: the alternative, the same energy spread over more photons,
+  is rejected by the supernovae. And the stretching of distant supernovae's light curves, exact to 1% (White et al.
+  2024), requires something in intergalactic space that changes slowly over time, about 7.5 parts in 100 billion per
+  year, without reaching laboratories: if nothing changed with time, pulses sent one second apart would arrive one
+  second apart. It stays a registered comparison until that process is identified.
+* **A relativistic version.** The proposed action has the right skeleton (the amount of companion sets the pull's
+  size, its flow the direction), and four concrete fixes came out: a sign, a finite response speed, keeping the
+  companion's fields independent of the matter's, and putting the extra pull into space-time itself, so that
+  gravitational waves feel it as light does. GW170817's waves and light arrived within 1.7 seconds; if only light felt
+  the extra pull, the Milky Way's alone would have separated them by about three and a half years.
+
 An independent review (25 September 2026) set out what a paper would need. In order:
 
 1. **The companion as a flowing medium.** Done in round 19 for a uniform stream (§4.4): the absorbing stream is a
@@ -847,7 +891,9 @@ An independent review (25 September 2026) set out what a paper would need. In or
    0.15 pc (§5.4, §5.5); a supplied derivation gives screening and release from one lifetime and predicts a step in
    wide binaries (§5.5), still to be found in the matter model.
 5. **Collisions as a calculation from before the crossing,** with the companion's emission, transport and the heat of
-   crossing followed in time. The Bullet Cluster's smaller half still has only about 60% of its measured lensing mass.
+   crossing followed in time. The Bullet Cluster's smaller half still has only about 60% of its measured lensing mass;
+   a faster glow from the collision closes the gap if the collision puts about 3.3 times more power into it (round
+   21, §5.3).
 6. **A proper statistical comparison:** a frozen law, a full list of fitted and measured inputs with their
    uncertainties, likelihoods, fair baselines for MOND and dark matter, and at least one test chosen in advance. The
    test is now frozen (§8, prediction 13): lensing against the stars' measured speeds at fixed visible mass.
@@ -868,8 +914,10 @@ predicts in the same way, and turned the cold law and the collision rule into re
 model with error bars. The one link that resists, heat making the pull stronger, is now boxed in precisely: the
 data need it and say how it must work (the hot glow reaching inward, weak one-way absorption at most, no dependence on
 a source's size), and the models say which mechanisms don't do it. That is a much smaller search than before, and the
-frozen lensing test will check the heat term directly in data, whatever its mechanism turns out to be. Each open
-item is a concrete calculation or measurement.
+frozen lensing test will check the heat term directly in data, whatever its mechanism turns out to be. Round 21
+added three concrete leads: a way to close the Bullet Cluster's gap with a stated energy requirement, a distance
+factor that fits the supernovae as well as the standard model and fixes galaxy lensing, and a relativistic skeleton
+with a short list of fixes. Each open item is a concrete calculation or measurement.
 
 **What is borrowed and what is ours.** Borrowed and credited: Newton's and Einstein's gravity in strong fields; Gauss's
 flux geometry; Dicke narrowing and the Mössbauer effect as known physics; the Bloch equations of inverted, self-sustained
@@ -902,6 +950,8 @@ python derive_mond.py       --output-dir ../run-derive             # MOND as the
 python receivers_v15.py     --output ../run-reservoir-force-v15/receivers_v15.json      # which bodies a wave pulls
 python stream_store_v16.py  --output ../run-stream-store-v16/stream_store_v16.json        # heat from the flowing companion
 python one_matter_v17.py    --set oneway_distance --output ../run-one-matter-v17/oneway_distance.json  # one kind of matter
+python hot_mode_speed_v21.py --grid coarse --output ../run-hot-mode-v21/hot_mode_speed_coarse.json    # the Bullet, faster glow
+python distance_eta_v21.py  --output ../run-distance-eta-v21/distance_eta_v21.json         # supernovae and the path factor
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:

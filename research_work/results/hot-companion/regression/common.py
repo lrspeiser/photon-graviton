@@ -52,6 +52,8 @@ def apply_distances(law, ctx):
     import law as L
     from law_config import ALPHA_ROUND10
     C10.ALPHA = law.get('alpha_per_Mpc', ALPHA_ROUND10)
+    C10.VARIANT = law.get('distance_variant', 'fixed')         # round 21: 'metric' is a registered comparison
+    C10.ETA_PATH = float(law.get('eta_path', 0.0))              # round 21: the path factor (0 = the adopted law)
     L.HEAT_P = float(law.get('heat_exponent', 2.0))          # round 14: the heat weight's exponent
     L.HOT_GEOMETRY = law.get('hot_geometry', 'two_way')      # round 19: how the hot matter's glow is heard
     L.STREAM_KAPPA = float(law.get('stream_kappa_per_Mpc', 0.0)) / 1000.0

@@ -1,0 +1,86 @@
+{
+ "experiment": "round 21: weak-field checks on the proposed relativistic action",
+ "constants": {
+  "a": 6.297889390049439e-11,
+  "g_d": 2.027e-10,
+  "u_kms": 169.4
+ },
+ "sign": {
+  "M_msun": 60000000000.0,
+  "rows": [
+   {
+    "r_kpc": 5.0,
+    "v_newton": 227.20833831152058,
+    "v_constraint_plus": 236.47801498956107,
+    "v_constraint_as_written": 217.54403329708154
+   },
+   {
+    "r_kpc": 10.0,
+    "v_newton": 160.66055676220344,
+    "v_constraint_plus": 201.58280739886038,
+    "v_constraint_as_written": 104.82366507366716
+   },
+   {
+    "r_kpc": 20.0,
+    "v_newton": 113.60416915576029,
+    "v_constraint_plus": 181.95365486721263,
+    "v_constraint_as_written": -85.41263384532483
+   },
+   {
+    "r_kpc": 40.0,
+    "v_newton": 80.33027838110172,
+    "v_constraint_plus": 168.16466853373993,
+    "v_constraint_as_written": -123.98971124045742
+   }
+  ]
+ },
+ "lambda_mass_fraction": {
+  "M_msun": 60000000000.0,
+  "r_kpc": [
+   1.0,
+   1000.0
+  ],
+  "fraction": 1.1859585980200216e-06,
+  "v_flat_kms": 149.65520155074412
+ },
+ "reaction_ratio_vs_round2": {
+  "g_N": 1e-10,
+  "rows": [
+   {
+    "S_over_gN": 0.01,
+    "ratio": 0.39748010939841905
+   },
+   {
+    "S_over_gN": 0.1,
+    "ratio": 0.48164124463113983
+   },
+   {
+    "S_over_gN": 0.3,
+    "ratio": 0.5562911922218859
+   },
+   {
+    "S_over_gN": 1.0,
+    "ratio": 0.6510244721159539
+   },
+   {
+    "S_over_gN": 3.0,
+    "ratio": 0.7174801443942019
+   },
+   {
+    "S_over_gN": 10.0,
+    "ratio": 0.7540583937522491
+   },
+   {
+    "S_over_gN": 100.0,
+    "ratio": 0.7714536531195454
+   }
+  ]
+ },
+ "shapiro_mw": {
+  "M_msun": 60000000000.0,
+  "reach_kpc": 2252.216729881275,
+  "delay_s": 112752673.57891591,
+  "delay_years": 3.5726449169491734,
+  "gw170817_observed_s": 1.7
+ }
+}

@@ -5151,3 +5151,222 @@ It stays a registered comparison until the rule has a physical basis; the blocke
   * the frozen lensing test (§29.7) stands;
   * `no_hold_r12` and alternative static distance laws are registered comparisons.
 
+
+## 32. Round 21, 25 September 2026: three proposals checked (a faster glow from collisions, a distance law with its own time stretch, a relativistic action)
+
+The owner supplied feedback with three proposals:
+1. **A separate spreading speed for the heat made in collisions.** Keep u = 169.4 km/s for the heat weight and for the
+   cold companion's memory, but let the heat a collision generates spread at its own speed v_h. The feedback reports
+   that v_h ≈ 600–625 km/s puts both halves of the Bullet Cluster inside their lensing masses (smaller half
+   2.50 × 10¹⁴, main 3.44 × 10¹⁴ suns inside 250 kpc).
+2. **A distance law read as a path correction.** Round 12's bounded beam-area term (flux × 1/(1 + η b), b = z/(1 + z),
+   §22.3) becomes a correction to the distance itself, D* = (ln(1 + z)/α) √(1 + η b), with D_A = D*/(1 + z) and
+   D_L = (1 + z) D*, which keeps distance duality. b = z/(1 + z) solves db/dy = 1 − b with y = ln(1 + z), and η = 1/2
+   may be allowed. Redshift and the supernovae's time stretch would come together from a temporal-dilation operation,
+   a_out(ω) = √s a_in(sω), s = 1 + z.
+3. **A relativistic action.** The companion's occupation I sets the size of the extra pull and its flow direction s^μ
+   the direction, through a constraint on a response field χ; matter and light see one metric with Φ_N + χ in both of
+   its parts (no slip).
+
+Each was checked against the data and the law's own bookkeeping. Nothing in the adopted law, its constants or the
+locked forecasts changes.
+
+### 32.1 The Bullet with a faster glow: reproduced, and what it costs in energy
+
+`code/hot_mode_speed_v21.py` → `run-hot-mode-v21/` (`hot_mode_speed_coarse.json`, `_fine.json`, `_power.json`).
+
+**Setup.** Round 16's crossing-heat model (§26.2, `code/crossing_heat_v16.py`), unchanged except for where the heat
+sits. There, the heat a star picked up a time t ago now sits a distance d = u t from it; here d = v_h t. The history is
+round 16's: a straight pass, receding at 3,900 km/s since pericentre and approaching at 3,000 before it, impact
+parameter 150 kpc; the round-12 law in the static distances. Two versions:
+* **as proposed**: only the timing changes;
+* **energy booked**: a glow emitted with the same power but spreading v_h/u times faster is v_h/u times thinner
+  (energy density = power per area ÷ speed), so its heat weight carries u/v_h. This is the bookkeeping behind the
+  law's own a = 2ℓ/u (§31.5). "As proposed" is the same as "energy booked" with the collision putting v_h/u times more
+  power into the fast glow.
+
+Masses inside 250 kpc in 10¹⁴ suns (targets 2.47–2.85 for the smaller half, 3.09–3.46 for the main one); gas
+residuals measured 0.05 ± 0.06 (main) and 0.02 ± 0.06 (smaller half). Grid 22.5 kpc; the 600 km/s rows repeated at
+15 kpc (in brackets).
+
+| v_h (km/s) | as proposed: smaller half | main | peaks from galaxies (kpc) | gas residuals | energy booked: smaller half | main | gas residuals |
+|---|---|---|---|---|---|---|---|
+| no crossing heat | 1.372 (1.385) | 2.953 (2.969) | 16, 26 | 0.050, 0.048 | | | |
+| 169.4 (round 16) | 1.586 | 3.101 | 15, 8 | 0.050, 0.018 | 1.586 | 3.101 | 0.050, 0.018 |
+| 300 | 1.863 | 3.204 | 15, 8 | 0.055, 0.009 | 1.644 | 3.101 | 0.053, 0.009 |
+| 450 | 2.241 | 3.303 | 17, 8 | 0.059, 0.069 | 1.711 | 3.100 | 0.055, 0.024 |
+| **600** | **2.536 (2.559)** | **3.372 (3.392)** | 20, 9 (19, 8) | 0.051, 0.100 (0.052, 0.101) | 1.745 (1.759) | 3.096 (3.113) | 0.056, 0.036 |
+| 800 | 2.833 | 3.427 | 24, 10 | 0.029, 0.120 | 1.755 | 3.089 | 0.057, 0.043 |
+| 1200 | 3.195 | 3.527 | 37, 13 | 0.016, 0.138 | 1.720 | 3.078 | 0.059, 0.048 |
+
+**How much power the fast glow needs** (energy booked, with the collision's power into the fast glow multiplied by m;
+smaller half / main):
+
+| v_h (km/s) | m = 2.5 | m = 3 | m = v_h/u (as proposed) |
+|---|---|---|---|
+| 600 | 2.256 / 3.274 | 2.396 / 3.324 | 2.536 / 3.372 (m = 3.54) |
+| 800 | 2.273 / 3.256 | 2.414 / 3.302 | 2.833 / 3.427 (m = 4.72) |
+
+The smaller half reaches the bottom of its range, 2.47, at m ≈ 3.2–3.3 at either speed: the requirement is set by the
+power more than by the speed.
+
+**Findings:**
+* **Reproduced.** At 600 km/s both halves land inside their measured masses: 2.54 and 3.37 (2.56 and 3.39 on the finer
+  grid), against the feedback's 2.50 and 3.44. Both stay in range for v_h ≈ 570–820 km/s. The lensing peaks stay on
+  the galaxies (19–20 and 8–9 kpc). The price is lensing over the smaller half's gas: 0.10 against 0.02 ± 0.06 measured
+  (1.3σ), growing with v_h (0.14 at 1,200 km/s).
+* **Why it works.** Since the crossing (213 Myr ago in this history) the heat has spread to u t ≈ 37 kpc at 169 km/s,
+  but to 130 kpc at 600 km/s, filling the 250 kpc aperture with the heat made when the two clusters were closest.
+* **With the energy booked, most of the gain goes.** The smaller half reaches at most 1.76 (71% of the lower end of
+  its range), against round 16's 1.59; the main half stays at 3.08–3.11. So the proposal works only if the collision
+  puts at least about 3.3 times more power into the fast glow than the law's heat rule gives (the table above), or if
+  this glow's pull follows its power per area rather than its energy density. That is a definite requirement for the
+  microscopic model, as the feedback says for the ratio v_h/u itself.
+
+### 32.2 The same rule in MACS J0025 and El Gordo
+
+`code/hot_mode_collisions_v21.py` → `run-hot-mode-v21/hot_mode_collisions_v21.json`. Round 16's crossing heat had only
+been applied to the Bullet; the suite's far collisions have none. Here it is added to the two far collisions with a
+clean two-body history (Abell 520's clumps have no agreed history): straight passes with the suite's times since
+pericentre (MACS J0025 0.3 Gyr, from its shock fronts, §22.1; El Gordo 0.46 Gyr, outgoing, Ng et al. 2015), receding at
+the galaxies' separation over that time, approaching at 2,000 km/s (MACS J0025, Bradač et al. 2008) and 2,400 km/s (El
+Gordo's pericentre speed), impact parameter 150 kpc (not measured). Grid and apertures as in the suite (the "none"
+rows reproduce it).
+
+In the static distances the histories are: MACS J0025 now 772 kpc apart, receding at 2,420 km/s; El Gordo 1,246 kpc
+apart, receding at 2,590 km/s (faster than its pericentre speed: the static distances make it larger than in the
+papers' convention, a caveat on the straight-pass history).
+
+| cluster: lensing masses (10¹⁴ suns) | no crossing heat (the suite) | round 16's rule (v_h = u) | v_h = 600, as proposed | v_h = 600, energy booked |
+|---|---|---|---|---|
+| MACS J0025 SE, inside 300 kpc (3.64, +1.46/−2.48) | 2.05 (z −0.64) | 2.24 (−0.57) | 2.58 (−0.43) | 2.23 (−0.57) |
+| MACS J0025 NW, inside 300 kpc (3.79, +0.73/−2.04) | 1.85 (−0.95) | 2.03 (−0.86) | 2.50 (−0.63) | 2.06 (−0.85) |
+| MACS J0025 lensing peaks from their galaxies (kpc; gas 530 and 244 kpc away) | 24, 79 | 13, 18 | 18, 25 | 21, 44 |
+| El Gordo inside 500 kpc (9.45 ± 12%) | 8.42 (−0.91) | 8.86 (−0.52) | 9.75 (+0.27) | 8.84 (−0.54) |
+| El Gordo inside 1,000 kpc (24.3 ± 12%) | 21.4 (−0.98) | 22.1 (−0.75) | 23.7 (−0.19) | 22.1 (−0.74) |
+| crossing heat ÷ all heat (mid-plane), MACS J0025 / El Gordo | 0 | 0.26 / 0.15 | 0.53 / 0.37 | 0.24 / 0.14 |
+
+* **The heat of crossing helps both clusters, already at the law's own speed.** Both move toward their measured
+  masses, and MACS J0025's NW lensing peak, 79 kpc from its galaxies in the suite, moves to 18 kpc.
+* **The faster glow as proposed passes here too:** El Gordo lands on its measured masses (z +0.27 and −0.19) and
+  MACS J0025 rises further (−0.43 and −0.63), with the peaks on the galaxies. Nothing overshoots.
+* **With the energy booked,** the results are those of round 16's rule, as in the Bullet.
+* The 72-collision stack (Harvey et al. 2015) has no individual histories and is not rerun here; in all three clusters
+  the extra lensing rides with the galaxies, which is what the stack measures.
+
+### 32.3 The distance law: η = 1/2 fits, the photons must be conserved, and the stretch needs change over time
+
+`code/distance_eta_v21.py` → `run-distance-eta-v21/distance_eta_v21.json`: round 12's Pantheon+ reduction
+(`code/sn_scale_v12.py`: Cepheid-calibrated magnitudes, the full STAT+SYS covariance), 1,365 supernovae at z > 0.023.
+
+| | all 1,365 | z < 0.15 (490) | z > 0.15 (875) |
+|---|---|---|---|
+| η = 0 (the adopted law): Δχ² | +100.9 | +7.4 | +27.5 |
+| best η (Δχ² ≤ 1 range) | **0.449** (0.41–0.49) | 0.56 (0.35–0.77) | 0.38 (0.31–0.46) |
+| η = 1/2: Δχ² | **+1.09** | +0.08 | +2.15 |
+| the scale at η = 1/2, as H₀ (km/s/Mpc) | 73.2 | 73.0 | 73.2 |
+| pulse energy conserved (D_L = (1 + z)^½ D*), η refitted: Δχ² | **+59.9** (η = 2.4) | −0.2 | +12.1 |
+| the power of (1 + z) left free: power, η, Δχ² | 0.89, 0.80, −2.5 | – | 0.80, 1.26, −3.5 |
+| for scale only, flat ΛCDM fitted the same way: its χ² minus ours | −2.1 (Ω_m 0.33) | +0.2 | −2.4 |
+
+**Findings:**
+* **η = 1/2 is allowed** (Δχ² = 1.1 against the best, η = 0.45), and b = z/(1 + z) is exactly the solution of
+  db/dy = 1 − b from b = 0 (checked to 4 × 10⁻¹²): a state relaxing at the redshift's own rate. η = 1/2 is worth
+  deriving rather than fitting.
+* **It fits as well as the standard model's distances:** χ² 1210.4 against 1208.3, with two fitted numbers each (the
+  standard model is shown only as a yardstick; it is excluded as an answer). To second order,
+  α D* = z − (1 − η) z²/2: the expanding-universe form with deceleration parameter q₀ = −η. The standard fit has
+  q₀ = −0.51; η = 1/2 is q₀ = −1/2; the adopted law (η = 0) is the coasting form, q₀ = 0. The supernovae measure the
+  same bend in both readings and cannot choose between them: the path factor is our law's version of what the standard
+  reading calls cosmic acceleration.
+* **The operation must conserve the photons, not the energy.** a_out(ω) = √s a_in(sω) keeps each pulse's energy and
+  multiplies the number of photons by 1 + z, so the flux is dimmed by the stretching alone: D_L = (1 + z)^½ D*. The
+  data reject that by Δχ² = 60 (η would have to be 2.4). What fits is a_out(ω) = a_in(sω): each photon arrives with
+  1/(1 + z) of its energy, stretched by 1 + z, so the medium must take up the fraction z/(1 + z) of the light's
+  energy. (Left free, the power of (1 + z) comes out 0.89 with η 0.80: Δχ² −2.5 for one more number.)
+* **The stretch needs something that changes in time.** If nothing along the way changes with time, pulses sent one
+  second apart arrive one second apart, and a linear medium cannot change light's frequency at all; a gravitational
+  redshift between two points is a blueshift the other way. The measured stretch is exact (b = 1.003 ± 0.011 in
+  (1 + z)^b, 1,504 supernovae; White et al. 2024), so the travel time from a fixed galaxy must grow by z seconds every
+  second: the optical length of the path grows at α c ≈ 7.5 × 10⁻¹¹ per year. The laboratory "time lens" the feedback
+  cites works exactly this way: an electronic modulator changes the medium while the pulse passes. If that growth also
+  happened inside laboratories, optical cavities would drift against atomic clocks by 2.4 × 10⁻¹⁸ per second; the
+  earlier-era comparison (`nature_tests/report.md`) found that 9–47 times the drifts measured in four silicon cavities
+  (Lee et al. 2025), a tension rather than an exclusion, since each instrument's own drift is not independently known.
+  So the changing property has to be confined to the space between galaxies (for example, a property of the
+  intergalactic companion), or be shared by rulers and clocks, in which case it cannot be told apart from expansion.
+
+**The suite** (full tier, registered comparisons, a and u refitted; reports in `run-distance-eta-v21/suite/`):
+
+| candidate | pass / close / fail | what moves |
+|---|---|---|
+| round 12, adopted (fixed geometry D_A = D; η = 0; H₀-like 70.9) | 59 / 11 / 7 | |
+| `dist_fixed_eta_r12`: η = 1/2 with its scale (H₀-like 73.2), fixed geometry | **62 / 8 / 7** | KiDS's all, red and disk lenses pass (+0.035, +0.048, +0.036 dex, from +0.065, +0.078, +0.066); El Gordo's NW galaxy speeds pass; lensing masses rise in MACS J0025 (2.43 and 2.17 × 10¹⁴), El Gordo (1.09 and 1.07 of its two aperture masses) and the Bullet's smaller half (0.61 of the lower end of its range, from 0.56); Mistele's ellipticals 2.55 → 3.71 (fail); Abell 520 P2 → close |
+| `dist_metric_eta_r12`: the proposal (η = 1/2, H₀-like 73.2, D_A = D*/(1 + z)) | **62 / 8 / 7** | KiDS's all, red and disk lenses pass (+0.027, +0.042, +0.029 dex); Mistele's ellipticals 4.03 (fail); the Bullet's smaller half 0.48 of the lower end of its range; El Gordo 0.89 and 0.86 of its aperture masses |
+| `dist_metric_r12`: the metric geometry alone (η = 0, H₀-like 70.9) | 57 / 13 / 7 | MACS J0025's galaxy speeds fail (631 km/s against 835 ± 59); El Gordo falls to 0.73 and 0.70 of its aperture masses (close); the Bullet's smaller half 0.45; KiDS's red lenses fail → close |
+
+* **The path factor helps; the metric geometry alone does not.** With η = 1/2 (and the scale its fit gives), the
+  lensing level of 259,000 KiDS galaxies, 16% above the law in our distances until now (§30), falls to 6–8%, inside
+  the test's tolerance. The geometry D_A = D/(1 + z) shrinks the far clusters (El Gordo at z = 0.87, MACS J0025 at
+  0.59) and costs them mass and galaxy speed. The price of η = 1/2 in both geometries is Mistele et al.'s ellipticals
+  (lensing speeds 50–300 kpc), which fail.
+* All three stay registered comparisons (`regression/candidates/dist_*.json`); none is adopted. SPARC's Hubble-flow
+  distances take the new scale but not the path factor (under 1% at their redshifts), and SLACS keeps its own
+  conversion.
+
+### 32.4 The relativistic action: a good skeleton, and what has to change
+
+`code/action_checks_v21.py` → `run-action-checks-v21/action_checks_v21.json` (weak field; a Milky-Way-sized mass,
+6 × 10¹⁰ suns, where a number is needed).
+
+**What it gets right.** The split, with the occupation I setting the size of the pull and the flow s^μ its
+direction, is what the clusters' hot shells asked for (§29), and deriving everything from one action is the right
+way to settle where momentum goes (§10.6).
+
+**The checks:**
+1. **The sign.** With s pointing outward, the constraint as written, s·∇χ = −f√(aI), makes the extra pull repel: at
+   10 kpc a Milky-Way-sized mass would hold a circular speed of 105 km/s instead of Newton's 161, and beyond about
+   14 kpc the net pull points outward. With s·∇χ = +f√(aI): 202 km/s at 10 kpc, 168 at 40. A one-sign fix.
+2. **The constraint field λ is harmless as mass, but it acts instantly.** Varying χ, with matter coupled to Φ_N + χ,
+   gives div(λ s) = −8πGρ, so λ = −2 G M(r)/r² around a round source. Its energy between 1 kpc and 1 Mpc is
+   1.2 × 10⁻⁶ of the source's mass (of order (v_f/c)² ln(r₂/r₁)): no hidden mass. But χ and λ are fixed by
+   integrating along each flow line through space, so a change in I anywhere along a line resets χ along all of it at
+   once, which needs a preferred frame. Imposing the constraint along the companion's world lines (moving at u)
+   instead of its direction in space would make changes travel at u: the law's memory (§12, §26.2).
+3. **I and s must be the companion's own fields.** If I contains the heat term S computed from the matter's positions
+   and speeds, varying the matter adds a force on warm matter of the same form as round 2's reaction (§8.2): 40–77% as
+   strong (0.65–0.75 where the heat matches or exceeds the cold pull, as in clusters). Round 3 excluded round 2's push:
+   32–73% of gravity on cluster stars (§10.6). With I and s as independent fields that matter feeds by emitting evenly
+   in all directions, the reaction lands on the companion, as §10.6 concluded.
+4. **Light and gravitational waves.** A single field χ that enters matter's metric as an overall rescaling bends no
+   light (light's paths ignore such a rescaling). Getting χ into the spatial part with the same sign needs a unit
+   time-like vector field: the construction of TeVeS and AeST, which RULES.md excludes. And gravitational waves must
+   feel χ as light does. From the Milky Way's χ alone (the law's constants, the companion's 2.25 Mpc reach), light from
+   GW170817 would have arrived about 3.6 years after the waves if the waves did not feel it; they arrived within 1.7 s
+   (Boran et al. 2018 make the same argument against dark-matter emulators). So χ has to live in the metric itself:
+   the metric's own field equation must change, not only matter's coupling to it.
+5. **√(aI) is inserted.** Round 20 (§31.5) found where it can come from: the companion's energy balance, with energy
+   density |∇Φ|²/8πG carried at u and fed at ℓ, gives the deep equation. An action built from that balance would
+   derive the square root instead of assuming it.
+
+### 32.5 Where round 21 leaves things
+
+* **The Bullet's smaller half has a candidate fix with a definite physical requirement.** A faster glow from the
+  collision, v_h ≈ 570–820 km/s, puts both halves in range and keeps the lensing peaks on the galaxies, and the same
+  heat of crossing moves MACS J0025 and El Gordo toward their measured masses (§32.2). It needs the collision to put
+  at least about 3.3 times as much power into that glow as the law's heat rule gives (§32.1), or the glow's pull to
+  follow its power per area rather than its energy density. Next: derive v_h/u and that power from the medium's
+  dispersion (the feedback's own programme), with every watt booked; then the 72-collision stack with the heat of
+  crossing.
+* **The distance law has a strong candidate refinement.** The path factor with η = 1/2 has a derivable form (a state
+  relaxing at the redshift's own rate), fits the supernovae as well as the standard model, and brings KiDS's lensing
+  level into the suite's tolerance. Its conditions: the photons are conserved (the intergalactic medium takes up
+  z/(1 + z) of the light's energy), and something in intergalactic space changes slowly with time (7.5 × 10⁻¹¹ per
+  year) without reaching laboratories. Next: derive η = 1/2 and the photon-conserving stretch from one intergalactic
+  process, and say what in the intergalactic companion changes; test the geometry (fixed or metric: angular sizes
+  differ by 1 + z) with standard rulers and surface brightness.
+* **The relativistic action keeps its skeleton with four changes:** the sign; the constraint along the companion's
+  world lines; I and s as the companion's own fields, fed by emission even in all directions; and χ in the metric that
+  gravitational waves feel. The last is the hardest and decides whether a relativistic version can exist outside the
+  MOND family's constructions.
+* **Unchanged:** the adopted law, its constants, the locked forecasts and the frozen lensing test (§29.7).

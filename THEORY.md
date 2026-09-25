@@ -663,6 +663,39 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   * `no_hold` on the round-12 law: 61 / 12 / 4, dwarfs χ² 137.7 → 60.4, Draco and Ursa Minor unchanged, wide binaries
     +18% at 20,000 AU (a registered comparison).
 
+### Round 21: three proposals checked (a faster glow from collisions, a distance law with its own time stretch, a relativistic action)
+
+* **A separate spreading speed for collision heat** (`code/hot_mode_speed_v21.py`, `code/hot_mode_collisions_v21.py`):
+  round 16's crossing heat with the heat a collision makes spreading at v_h instead of u (d = v_h t), everything else
+  unchanged. As proposed (timing only), the Bullet's two halves are both in range for v_h ≈ 570–820 km/s: 2.56 and
+  3.39 × 10¹⁴ suns inside 250 kpc at 600 km/s (targets 2.47–2.85, 3.09–3.46), peaks 19 and 8 kpc from the galaxies,
+  lensing over the smaller half's gas 0.10 (measured 0.02 ± 0.06). With the energy booked (a glow of the same power
+  spreading v_h/u times faster is v_h/u times thinner, the bookkeeping behind a = 2ℓ/u), the smaller half reaches at
+  most 1.76 (round 16: 1.59; no crossing heat 1.39); it reaches 2.47 only if the collision puts about 3.2–3.3 times
+  more power into the fast glow (at 600 or 800 km/s). The heat of crossing, added for the first time to MACS J0025 and
+  El Gordo, moves both toward their measured lensing masses (El Gordo inside 1 Mpc: 21.4 → 22.1 at u, 23.7 as
+  proposed, 24.3 measured; MACS J0025's NW peak 79 → 18–44 kpc from its galaxies).
+* **The distance law** (`code/distance_eta_v21.py`; Pantheon+, 1,365 supernovae, full covariance): the path factor
+  D* = (ln(1 + z)/α)√(1 + η z/(1 + z)) with D_L = (1 + z) D* fits with η = 0.449 (0.41–0.49); η = 1/2 costs Δχ² = 1.1;
+  z/(1 + z) solves db/dy = 1 − b exactly. It matches the standard model's distances (χ² 1210.4 against 1208.3) because
+  to second order α D* = z − (1 − η) z²/2, the expanding form with q₀ = −η. The proposed operation
+  a_out(ω) = √s a_in(sω) conserves pulse energy, so D_L = (1 + z)^½ D*: rejected by Δχ² = 60. What fits conserves the
+  photons, a_out(ω) = a_in(sω), so the medium takes up z/(1 + z) of the light's energy. An exact (1 + z) stretch
+  (b = 1.003 ± 0.011, White et al. 2024) needs the path's optical length to grow at α c ≈ 7.5 × 10⁻¹¹ per year, which
+  laboratories do not see at that rate (the earlier cavity comparison: 9–47× the silicon cavities' drifts): confined
+  to intergalactic space, or shared by rulers and clocks. Suite (full tier, a and u refitted): η = 1/2 with its scale
+  (H₀-like 73.2) gives 62 / 8 / 7 in either geometry (KiDS's lensing level from +16% to +6–8%; Mistele's ellipticals
+  fail); the metric geometry alone gives 57 / 13 / 7 (the far clusters shrink). Registered comparisons, not adopted.
+* **The relativistic action** (`code/action_checks_v21.py`): the split (occupation I for the size, flow s^μ for the
+  direction) is right, but: (1) the constraint's sign must flip (as written it repels: 105 instead of 161 km/s at
+  10 kpc around 6 × 10¹⁰ suns, and outward beyond about 14 kpc); (2) the multiplier λ = −2 G M(r)/r² carries
+  1.2 × 10⁻⁶ of the source's mass (no hidden mass) but fixes χ instantly along each flow line: impose the constraint
+  along the companion's world lines (speed u) instead; (3) I and s must be the companion's own fields: with S from the
+  matter inside the action the reaction on warm matter is 0.40–0.77 of round 2's excluded push; (4) χ must enter the
+  metric that gravitational waves also travel on (the Milky Way's χ alone would delay GW170817's light by about 3.6
+  years relative to the waves; observed 1.7 s), and a single scalar cannot enter the spatial metric without a
+  time-like vector (TeVeS/AeST, excluded); (5) √(aI) can come from the energy balance of round 20.
+
 ### What follows
 
 ```

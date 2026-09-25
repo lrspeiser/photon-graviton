@@ -47,10 +47,15 @@ def lcdm(z, H0=70.0, Om=0.3):
 #   'metric' (the material-coasting geometry of five_candidate_tests/prior/conformal_action_derivation_derivation.md,
 #             eq. 13, where rulers co-scale): D_A = D / (1 + z), so that D_L = (1 + z)^2 D_A.
 VARIANT = 'fixed'
+# Round 21 (a registered comparison, 0 = the adopted law): a path-distance factor sqrt(1 + ETA_PATH z/(1 + z)) on D,
+# the supplied proposal's reading of round 12's bounded beam-area term (code/distance_eta_v21.py).
+ETA_PATH = 0.0
 
 
 def static(z):
     D = np.log1p(z) / ALPHA
+    if ETA_PATH:
+        D = D * np.sqrt(1 + ETA_PATH * z / (1 + z))
     DA = D if VARIANT == 'fixed' else D / (1 + z)
     return dict(DA=DA, DL=(1 + z) * D, chi=D)
 
