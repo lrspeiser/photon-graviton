@@ -581,6 +581,43 @@ results README §18):
 * **Cassini** (`code/cassini_2026_v18.py`): against Park et al. 2026, Q₂ = (1.6 ± 1.8) × 10⁻²⁷ s⁻², the adopted law
   gives 4.38 × 10⁻²⁷ (1.54σ); L ≥ 0.19 pc meets 1σ (wide binaries at 20,000 AU: 7.6% → 6.0%).
 
+### Round 19: the medium tested against the data, and the Milky Way refitted
+
+* **The absorbing stream solved exactly** (uniform stream, Fourier space; `code/full_wave_v19.py`): the medium adds
+  −iΠ(q), G(q) = 1/(q² − k² − iΠ); passive exactly when Π(q) ≥ 0 for all q. Absorbers carried at the wave's speed see
+  a wave at ω − u q·e; waves moving with the stream are at zero frequency, where every passive absorber is transparent:
+  one-way with the cardioid attenuation (κ/2)(1 − cos θ). Point absorbers (Π = κ(k − q_z)) have Π < 0 for the near
+  field's q_z > k and drag every emitter (self-force +0.06 → +0.54 P/c as the cut-off goes 4k → 32k at κ = 0.5);
+  absorbers about a wavelength across (form factor) are passive at every κ, and the ray form is exact to 1–10% for
+  κλ ≤ 0.5 (inward rule) and κλ ≤ 2.3 (cardioid); stronger absorption cannot make the backward coupling smaller than a
+  few per cent (cardioid) to 10–28% (inward rule) at 1–2 λ. Self-force −0.015 to −0.13 P/c (against the stream);
+  SPARC allows a constant self-pull up to ~0.05 a.
+* **What the medium hears** (`code/hot_shell_v19.py`, `code/law.py` HOT_GEOMETRY): for a round source a stream that
+  absorbs every inward wave hears exactly half of every inner shell, in the 1/d² sum (artanh x/2x) and in the net
+  flux (1/2); only outer shells differ. X-COP: 69% of S at 0.1 R500 comes from outside the receiver; strict one-way
+  hearing gives rms 0.41 (0.28 with u refitted, 11 suite failures after refitting a and u); an absorbing stream is
+  allowed with an absorption length ≳ 300 kpc (3/Mpc: 35 / 8 / 6 after refitting, u = 140 km/s).
+* **The law the models produce** (`code/emergent_law_v19.py`, 84 runs, 24–96 pieces, receivers at r = 9 and 18): cold
+  sources give pull ∝ M^p r^(−q) with p = 0.58 ± 0.13, q = 1.11 ± 0.22 (absorbing stream, κ = 1, the strongest the
+  clusters allow) and 0.80 ± 0.29, 0.93 ± 0.20 (two-way); colliding sources 0.78–0.90 of cold; warm sources 0.90–0.97 of
+  cold at k = 2 (the law √3) and a push at k = 8, in both media; at fixed mass, sources 1–2 wavelengths across pull
+  2–15 times less (the law has no size term). The heat term's mechanism is open again.
+* **The Milky Way with independent matter** (`code/mw_joint_v19.py`): fitted to the 2026 Cepheid curve (Feng et al.;
+  and Eilers, Zhou, Ou) and K_z(1.1), the law follows the curves' shape with the matter at its measured values; the
+  measured curves sit 3–6% above it in speed, the same offset the law has in SPARC at this acceleration (+0.026 dex);
+  Newton with the same matter misses by 27%. The fitted field at the Sun gives Cassini Q₂ = 1.96–2.37 × 10⁻²⁷
+  (0.2–0.4σ from Park et al. 2026) at L = 0.15 pc; wide-binary amendments 1.024–1.028 / 1.057–1.068 at 7,000 /
+  20,000 AU (the round-10 forecast kept).
+* **One process for screening and release** (supplied derivation, `screening-blockers-v19/`; `code/blocker_release_v19.py`):
+  blockers created at ηg, removed at γ each; open when none: exp(−g/g_d), g_d = γ/η; launch with the local equilibrium
+  plus one blocker: exp(−g/g_d)(1 − e^{−r/L}), L = u/γ; in a changing field ṁ = ηg − γm, open fraction (1 − s)e^{−m}.
+  Launched in the Sun's field (g/g_d ≈ 10¹²), the load clears only after ln(load) lifetimes: the release becomes a
+  switch at L ln(load) (0.4–4 pc at 868 years); Cassini becomes a lower bound on the lifetime (6–60 years for the
+  adopted Q₂), and wide binaries a step in separation (+12% at 20,000 AU at the same Q₂). A candidate, not adopted.
+* **A frozen prediction** (`code/frozen_prediction_v19.py`, SHA-256 01219170…): at log M* = 10.6, isolated
+  bulge-dominated lenses, g_obs relative to σ_e = 200 km/s: −0.183, −0.087, 0, +0.077, +0.144 dex at σ_e = 100, 150,
+  200, 250, 300 km/s (the deep-regime √((1 + k₁)/(1 + k₂)) gives 0.176 dex for 250 against 150). MOND: 0.
+
 ### What follows
 
 ```

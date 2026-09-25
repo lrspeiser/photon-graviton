@@ -53,6 +53,7 @@ README §22.3). `--law round11` loads round 11's (a = 6.547 × 10⁻¹¹, g_d = 
 | `release_length_au` | the companion is released gradually over this length around each emitter, R(r) = 1 − e^(−r/L) | 30,000 AU (adopted in round 9; `round3` has 0, released at once) |
 | `external_hold` | how strongly a subsystem's companion follows an outside galaxy's pull (dwarfs, the Sun, wide binaries) | 1 (fully) |
 | `heat_exponent` | the heat weight k = 3 (σ/u)^p (round 14). Every heat weight in the code goes through `law.heat_weight` / `law.k_from_sig2`, set from this key by `common.apply_distances`; at p = 2 the arithmetic is the scripts' own, so the suite reproduces its baseline to the last digit | 2 |
+| `hot_geometry`, `stream_kappa_per_Mpc` | how the hot matter's extra glow is heard (round 19; `law.HOT_GEOMETRY`, `law.STREAM_KAPPA`): 'two_way' (the law: every shell, inside and outside the receiver), 'one_way' (inner shells only), 'one_way_vector' (the inner shells' net flux), or 'stream' (a stream absorbing inward-travelling waves at κ per Mpc, which also filters the clusters' cold glow in `run_v3.cluster_M3`). Spherical sums only: the collision maps' 3D sums stay two-way. The stream's weights come from a table of the part it removes (`law._absorbed_table`, cached in `cache/`), exact to 0.3% | 'two_way', 0 |
 | `refit` | constants refitted on their home data after the change: `"a"` on the 149 SPARC galaxies (g_d held), `"u"` on the 12 X-COP clusters (for bases 'round11' and 'round12', since round 14, the sample the clusters test grades: stars deprojected, static distances, as those constants were fitted; before, the round-3 sample, which gave u = 192 km/s for the adopted law instead of its 169.4) | none |
 | `a_SI`, `lam`, `u_kms`, `base` | explicit constants; `base` 'round3' (the round-3 constants, as the rounds 7–9 candidates use), 'round11', 'round12' (the adopted ones) or another `results.json` | 'round3' |
 | `alpha_per_Mpc`, `sparc_distances` | the static distance law's scale, and 'published' or 'static' SPARC distances | the base's ('round12': 2.3645 × 10⁻⁴, 'static'; others 2.4890 × 10⁻⁴, 'published') |
@@ -138,6 +139,22 @@ Copy a file in `candidates/`, change the keys, and run
 p = 1.75 trades the KiDS level for the lensing of massive ellipticals: Brouwer et al.'s KiDS relation wants a little
 more heat at the red lenses' 140 km/s, Mistele et al.'s circular speeds from the same survey, and SLACS, a little less.
 Not adopted; the law keeps p = 2 (results README §24.1).
+
+## Round 19: how the hot glow is heard (quick tier, against the round-12 baseline)
+
+The results README §29.3; the runs are kept in `../run-hot-shell-v19/suite/`.
+
+| Law | Constants | Pass / close / fail | What moves |
+|---|---|---|---|
+| round 12 (adopted) | a 6.298 × 10⁻¹¹, u 169.4 | 36 / 7 / 6 | |
+| `stream_k3` (no refit) | the same | 35 / 8 / 6 | only the X-COP radial trend, 0.239 → 0.285 (close) |
+| `stream_k3_refit` | a 6.206 × 10⁻¹¹, u 139.7 | 35 / 8 / 6 | better: KiDS all 0.065 → 0.024, red 0.078 → 0.029 (pass); worse: Mistele's ellipticals 2.55 → 5.15 (fail), SLACS −0.028 → −0.060 (close), SPARC bulges 29.4 → 30.4 km/s (close), X-COP trend 0.251 (close): round 14's trade, since a lower u makes every hot star louder |
+| `stream_k10_refit` | a 6.116 × 10⁻¹¹, u 119.9 | 32 / 10 / 7 | the same, further |
+| `stream_k30_refit` | a 6.020 × 10⁻¹¹, u 104.4 | 30 / 9 / 10 | the same, further |
+| `one_way_refit` | a 6.083 × 10⁻¹¹, u 113.8 | 32 / 6 / 11 | X-COP trend 0.399 (fail), bulges, KiDS bulges and GAMA, Mistele, SLACS fail |
+
+The data want the hot glow heard from all around: an absorbing stream only with an absorption length of about 300 kpc
+or more. None adopted.
 
 ## What the candidates do now (quick tier, against the round-9 baseline)
 

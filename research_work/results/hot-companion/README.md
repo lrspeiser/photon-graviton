@@ -4569,3 +4569,336 @@ and what the stream absorbs. Round 16's matter (f = 0.2), two arrangements, 16,0
 3. **The one-way law it implies,** tested before any fit is changed: S and the pull's direction with the absorption factor along each path (the hot-shell benchmark), first against the X-COP cluster profiles and the collision maps, with every other constant fixed.
 4. **Mass scaling and distance with the absorbing medium:** the exponent with its uncertainty over a wider range of mass, physical mass and resolution varied separately.
 5. **Inertia**, then the statistical programme (review items 3, 6, 9).
+
+## 29. Round 19, 25 September 2026: the medium tested against the data, and the Milky Way refitted
+
+A second review (25 September 2026) set the order of work: finish the medium and the law it produces (the absorbing
+medium in full wave form: what absorbs, energy and momentum, convergence, passivity, no self-push; then the law's
+dependence on mass, distance, dispersion, density and shape, with uncertainties, the hot-shell benchmark and the
+absorbed power, tested on clusters before anything is refitted); improve the joint Milky Way and Solar-System
+analysis alongside (vary the Galaxy's matter within independent uncertainties, fit the radial and vertical pull
+together, add the January 2026 Cepheid rotation curve, constrain the release length jointly, keep the original
+wide-binary forecast and label revisions as amendments); complete the novelty review now; then test a frozen
+prediction. This round does each of these once.
+
+### 29.1 What is borrowed, what may be new
+
+`NOVELTY.md` maps every central claim to the closest published work found (checked on 25 September 2026, abstracts
+and summaries only): the field equation's architecture is Milgrom's QUMOND (borrowed); the heat weight has the form of
+Tolman and Whittaker's active mass ρ + 3p/c² with the companion's u for c (known form; our differences are the speed
+and that colliding gas does not count); collisions switching the heat off is Dicke narrowing (borrowed physics); a
+streaming medium mediating attraction is the Fatio–Le Sage class with its drag and heating objections (known class);
+in-phase emitters attracting is Bjerknes' (known class); gain bodies pulled toward the light they amplify is published
+(Mizrahi & Fainman 2010; Gao et al. 2017); one-way coupling through a reservoir is cascaded-systems theory and
+Metelmann & Clerk's reservoir engineering (known class). Not found in this search: an above-threshold, self-sustained
+emitter pulled in proportion to the wave's height; lensing that follows the galaxies in colliding clusters because
+hot galaxies carry the companion; a velocity-dispersion-weighted source of lensing at fixed visible mass. The document
+ends with a candidate novelty statement and the searches still owed.
+
+### 29.2 The absorbing stream as an exact wave medium
+
+`code/full_wave_v19.py` → `run-full-wave-v19/full_wave_v19.json`; `code/self_force_sparc_v19.py` →
+`run-full-wave-v19/self_force_sparc_v19.json`.
+
+Round 18 built the stream that absorbs counter-moving waves in its ray form. Here it is solved exactly, for a uniform
+stream (the geometry a receiver sees far from a source), in Fourier space: a medium adds −iΠ(q) to the wave equation,
+G(q) = 1/(q² − k² − iΠ(q)), and it is passive (no arrangement of emitters can draw energy from it) exactly when
+Π(q) ≥ 0 for every wavevector q. Units: wavelength 1, k = 2π.
+
+**What absorbs.** Absorbers carried by the stream at the wave's own speed see a wave of wavevector q at the frequency
+ω − u q·e = k − q_z. A wave moving with the stream is at zero frequency for them, and every passive absorber is
+transparent at zero frequency: the medium is one-way for propagating waves with no tuning (the Doppler effect does
+it), with the attenuation (κ/2)(1 − cos θ) per unit length for a wave at angle θ to the stream (a cardioid). Two kinds:
+
+* **Point-like absorbers** (Π = κ(k − q_z) for every q) act on the emitters' near fields too, where components move
+  more slowly than the stream (q_z > k, Π < 0): the stream pumps them and drags every emitter downstream. The drag,
+  in units of the emitted power over the wave speed, grows without bound with the emitter's sharpness (the integral
+  cut at 4, 8, 16, 32 k): +0.06, +0.13, +0.27, +0.54 at κ = 0.5; +0.25, +0.59, +1.2, +2.5 at κ = 2.3. **Ruled out.**
+* **Absorbers about a wavelength across**, which cannot respond to finer structure (a form factor e^{−(|q| − k)²/2w²},
+  direction read from q̂): Π ≥ 0 everywhere, **passive at every strength, by construction.** The smallest eigenvalue
+  of 24 emitters' dissipative matrix stays at the free medium's +0.016 (+0.016 to +0.040) at κ = 0.5–20.
+
+| medium (w = k/2) | κ | backward transmission at 1, 2, 4 λ (ray form) | sideways at 2 λ (ray) | with the stream at 2 λ | near field changed at 0.15 λ | self-force / (P/c) | power fed |
+|---|---|---|---|---|---|---|---|
+| cardioid (the Doppler absorbers) | 0.5 | 0.619, 0.372, 0.135 (0.607, 0.368, 0.135) | 0.611 (0.607) | 0.996 | 7% | −0.015 | ×0.94 |
+| | 2.3 | 0.108, 0.009, 0.000 (0.100, 0.010, 0.000) | 0.098 (0.100) | 0.973 | 23% | −0.044 | ×0.81 |
+| | 5 | 0.053, 0.004, 0.000 (0.007, 0.000, 0.000) | 0.008 (0.007) | 0.921 | 37% | −0.063 | ×0.70 |
+| | 20 | 0.022, 0.007, 0.001 (0, 0, 0) | 0.009 (0) | 0.620 | 63% | −0.088 | ×0.50 |
+| inward only (round 18's rule) | 0.5 | 0.611, 0.367, 0.133 (0.607, 0.368, 0.135) | 0.924 (1) | 0.997 | 4% | −0.015 | ×0.97 |
+| | 2.3 | 0.091, 0.033, 0.013 (0.100, 0.010, 0.000) | 0.744 (1) | 0.986 | 15% | −0.048 | ×0.90 |
+| | 5 | 0.171, 0.059, 0.030 (0.007, 0, 0) | 0.618 (1) | 0.971 | 24% | −0.075 | ×0.85 |
+| | 20 | 0.279, 0.224, 0.135 (0, 0, 0) | 0.523 (1) | 0.913 | 42% | −0.127 | ×0.75 |
+
+(With w = k/4, larger absorbers, the same pattern with more leakage and about twice the self-force: backward
+transmission 0.225 and 0.073 at κ = 2.3 for the inward rule; self-force −0.03 to −0.22.)
+
+* **The ray form is right where absorption is weak, and wrong where it is strong.** At κ = 0.5 (an absorption length
+  of two wavelengths) the exact medium matches the ray form to 1–5%; the cardioid matches it to 10% up to κ = 2.3.
+  Beyond, a passive medium cannot be more one-way than its absorbers can resolve: the backward coupling levels off at
+  a few per cent (cardioid) to 10–28% (inward rule, whose sharp edge at 90° diffracts) at 1–2 wavelengths, where the
+  ray form gives 0.7% and less. Round 18's strong-absorption runs (κ = 5, 20) overstated the one-way property.
+* **The near field** is kept to within 4–7% at a sixth of a wavelength at κ = 0.5, but not at strong absorption.
+* **Energy and momentum.** An emitter feeds the absorbing medium 3–30% less power than empty space (its surroundings
+  absorb part of its own field). What the stream absorbs, with the momentum of the absorbed waves, goes to the stream.
+* **A self-pull, not a push.** A lone emitter is pulled against the stream (toward a source's centre) by 1.5% of its
+  emitted power over the wave speed at κ = 0.5, 4–9% at κ = 2.3–20 (twice that with larger absorbers). Per kilogram
+  this is a constant acceleration η a (a = 2ℓ/u) where the companion is released, η ≈ (0.015–0.09) × u/2c. **SPARC
+  allows it:** with a refitted, η = 0.01, 0.03, 0.05, 0.1 give 15.89, 15.95, 16.03, 16.24 km/s against 15.87 (the
+  held-out galaxies 18.98, 18.93, 18.92, 18.96 against 19.01), a absorbing most of it (6.3 → 5.9, 5.3, 4.8, 4.0 × 10⁻¹¹).
+
+**Reading.** A physically consistent absorbing stream exists: Doppler absorbers carried at the wave's speed, at least
+about a wavelength across; it is passive at every strength, keeps the near field and pulls emitters only slightly.
+It is accurately described by round 18's ray form at weak absorption (an absorption length of a wavelength or more),
+and it cannot be strongly one-way over distances shorter than a few wavelengths. The next section finds that the data
+allow only weak absorption anyway.
+
+### 29.3 What the medium hears, tested on the clusters and the full suite (the hot-shell benchmark)
+
+`code/hot_shell_v19.py` → `run-hot-shell-v19/hot_shell_v19.json`; the suite runs in `run-hot-shell-v19/suite/`
+(candidates `regression/candidates/stream_k3*.json`, `stream_k10_refit`, `stream_k30_refit`, `one_way_refit`); the
+hearing rules in `code/law.py` (`HOT_GEOMETRY`, `STREAM_KAPPA`, `stream_weights`).
+
+**A geometric result first.** For a round source, a stream that absorbs every inward-travelling wave lets a receiver
+at radius R hear, of a shell of radius s < R, exactly the cap cos θ ≥ s/R, and that cap carries **exactly half** of
+the shell's 1/d² sum (artanh(x)/2x against artanh(x)/x, x = s/R) and **exactly half** of its net flux (1/2 against
+Gauss's 1). So for round sources the absorbing stream only halves what is heard of all inner matter, cold and hot
+alike, which rescales a; the one real difference from the law is that shells outside the receiver are not heard.
+
+**How much of the law's heat term comes from outside.** In the 12 X-COP clusters, the median share of S at 0.1, 0.2,
+0.3, 0.5, 0.7 and 1 R500 that comes from hot galaxies farther out than the receiver: 69, 63, 53, 46, 37, 28%.
+
+| hearing (hot glow; cold glow for the stream) | X-COP rms, adopted constants | u refitted | X-COP rms | mean miss by radius (0.1 … 1 R500) |
+|---|---|---|---|---|
+| two-way (the law) | 0.222 | 169.4 | 0.222 | +0.10 +0.12 +0.08 +0.02 −0.09 −0.24 |
+| one-way, inner shells only | 0.408 | 115.9 | 0.281 | +0.30 +0.23 +0.09 −0.03 −0.20 −0.40 |
+| one-way net flux (Gauss) | 0.486 | 101.4 | 0.288 | +0.31 +0.24 +0.10 −0.03 −0.21 −0.42 |
+| absorbing stream, 1/Mpc | 0.226 | 155.5 | 0.215 | +0.10 +0.13 +0.08 +0.02 −0.09 −0.24 |
+| 3/Mpc (333 kpc) | 0.258 | 140.9 | 0.210 | +0.10 +0.13 +0.08 +0.02 −0.10 −0.25 |
+| 10/Mpc (100 kpc) | 0.340 | 121.8 | 0.211 | +0.12 +0.15 +0.09 +0.02 −0.11 −0.27 |
+| 30/Mpc (33 kpc) | 0.429 | 106.9 | 0.221 | +0.15 +0.17 +0.09 +0.01 −0.13 −0.30 |
+| 100/Mpc (10 kpc) | 0.512 | 95.6 | 0.237 | +0.19 +0.19 +0.09 +0.00 −0.15 −0.33 |
+
+(The stream hears the near side of outer shells within an absorption length, which a strict one-way rule does not:
+that is why it keeps the clusters' shape where the strict rule doubles the radial trend.)
+
+**Without refitting**, the stream at 3/Mpc changes only the clusters in the whole suite (35 pass, 8 close, 6 fail
+against 36/7/6; the X-COP radial trend 0.239 → 0.285). **With a refitted on SPARC and u on X-COP:**
+
+| candidate | a (10⁻¹¹), u | pass / close / fail | SPARC bulges (km/s) | X-COP rms, trend | KiDS all, red | lensing speeds of ellipticals (rms z) | SLACS light vs matter (dex) |
+|---|---|---|---|---|---|---|---|
+| the law | 6.30, 169.4 | 36 / 7 / 6 | 29.4 | 0.222, 0.239 | 0.065, 0.078 | 2.55 | −0.028 |
+| stream 3/Mpc | 6.21, 139.7 | 35 / 8 / 6 | 30.4 | 0.210, 0.251 | 0.024, 0.029 | 5.15 | −0.060 |
+| stream 10/Mpc | 6.12, 119.9 | 32 / 10 / 7 | 31.7 | 0.211, 0.271 | −0.012, −0.014 | 7.67 | −0.094 |
+| stream 30/Mpc | 6.02, 104.4 | 30 / 9 / 10 | 33.4 | 0.221, 0.300 | −0.048, −0.056 | 10.2 | −0.131 |
+| one-way (inner shells) | 6.08, 113.8 | 32 / 6 / 11 | 32.3 | 0.281, 0.399 | −0.026, −0.030 | 8.60 | −0.083 |
+
+**Reading.** The data need the hot glow to reach inward. A strictly one-way medium fails (11 failures after
+refitting); an absorbing stream is tolerated only with an absorption length of about 300 kpc or more (3/Mpc: the
+clusters and KiDS improve, the ellipticals' lensing speeds and SLACS worsen, because the lower u the clusters then ask
+for makes hot stars louder in every galaxy; the same trade as round 14's heat exponent 1.75, §24.1). So on the scale of galaxies and clusters the medium can be at most weakly
+one-way: an absorption length longer than a galaxy and comparable to a cluster's radius. That is also where the exact
+medium of §29.2 agrees with its ray form. It also means the strong one-way absorption the models used to keep a warm
+source in step (κ R ≈ 7–15 across the source) is excluded at the scale of clusters: the warm source must keep its
+beat some other way, or be smaller than the medium's wavelength (§29.4 tests sources of about a wavelength).
+
+### 29.4 The law the models produce: mass, distance, heat and density, with their spread
+
+`code/emergent_law_v19.py` → `run-emergent-law-v19/emergent_law_v19.json` (84 runs).
+
+Round 16's one kind of matter (structure 'single'), sources of 24, 48 and 96 pieces at round 16's density (radius
+2.38, 3, 3.78), and 48 pieces squeezed or spread (radius 1, 2 and 4.5; radius 1 is about a wavelength), cold, warm
+(k = 2, 8) and colliding (k = 8, ν = 50); 12 receivers of the same matter at each of r = 9 and 18; three
+arrangements each. Two media: the two-way wave, and the stream that absorbs inward waves at κ = 1 per wavelength in its
+ray form, the strongest the clusters allow (§29.3: a source three wavelengths across is then three absorption lengths
+across) and where the ray form is exact to 5% (§29.2). Mean net pull on the receivers (10⁻⁵; the spread is the
+standard error over the three arrangements):
+
+| source | medium | r = 9 | r = 18 |
+|---|---|---|---|
+| cold, 24 / 48 / 96 pieces | two-way | +3.6 ± 1.3 / +7.1 ± 1.2 / +13.5 ± 2.3 | +1.8 ± 1.5 / +3.5 ± 1.1 / +5.3 ± 0.8 |
+| | absorbing, κ = 1 | +3.2 ± 0.6 / +7.5 ± 0.4 / +11.2 ± 1.9 | +1.5 ± 1.1 / +3.6 ± 1.1 / +3.4 ± 0.6 |
+| warm k = 2, 48 pieces | two-way / κ = 1 | +6.5 ± 2.7 / +7.1 ± 1.0 | +2.5 ± 2.3 / +3.3 ± 1.1 |
+| warm k = 8, 24 / 48 / 96 pieces | two-way | −0.6 / −0.3 / −9.8 ± 2.4 | +0.6 / +1.0 / −3.8 ± 1.7 |
+| | κ = 1 | −0.6 / −4.2 ± 1.7 / −3.6 ± 4.2 | +1.1 / −1.5 ± 0.8 / +2.5 ± 2.2 |
+| colliding k = 8, 48 pieces | two-way / κ = 1 | +4.8 ± 1.7 / +6.6 ± 0.3 | +3.4 ± 1.2 / +3.5 ± 1.3 |
+| cold, 48 pieces, radius 1 / 2 / 3 / 4.5 | two-way | +0.5 / −1.6 / +7.1 / +8.9 | +1.4 / +0.3 / +3.5 / +2.5 |
+| | κ = 1 | −0.6 / +3.9 / +7.5 / +6.3 | +1.5 / +1.4 / +3.6 / +2.8 |
+
+* **Cold matter gives about the law's √M/r.** Fitting pull = A M^p r^(−q) over the cold sources, with the arrangements
+  resampled: p = 0.58 ± 0.13 and q = 1.11 ± 0.22 in the absorbing stream, 0.80 ± 0.29 and 0.93 ± 0.20 two-way (the
+  law: 0.5 and 1). The pull halves from r = 9 to 18 (×2.1 for 48 pieces), and four times the mass gives ×2.3 at
+  r = 18 but ×3.5 at r = 9, where the largest source is only 2.4 of its radii away: far receivers see the square root,
+  near ones closer to a straight proportion.
+* **The heat gain is not there.** Against cold sources of the same size and arrangement, warm sources at k = 2 pull
+  0.90 ± 0.37 (two-way) and 0.97 ± 0.16 (κ = 1) as hard, where the law needs √3 = 1.73; at k = 8 they push nearer
+  receivers (gain 0.47 ± 0.74 and −0.52 ± 0.15; the law 3). Colliding sources pull 0.78 ± 0.11 and 0.90 ± 0.05 as hard
+  as cold ones (the law: 1). So in the medium the data allow, the models reproduce the cold law and the collision rule
+  but not the law's heat term; the absorption that made warm sources pull harder in rounds 17–18 (κR ≈ 7–15 across the
+  source, or a rule imposed by hand) is what the clusters exclude.
+* **Size matters in the models, and should not.** At fixed mass, sources of radius 1–2 wavelengths pull 2–15 times less
+  than sources of radius 3–4.5 (and sometimes push): their pieces, within a wavelength of each other, settle into
+  collective states that radiate weakly. Real galaxies of one mass rotate alike whatever their size (the baryonic
+  Tully–Fisher relation has no size term), so either real sources are always many companion wavelengths across (a
+  wavelength well below a kiloparsec, which with the clusters' absorption length makes the absorption per wavelength
+  tiny) or the models' collective states are wrong for real matter.
+* **Energy** is booked to 10⁻¹² (10⁻⁷ with collisions) in every run; the warm sources' rhythm spread is 3–7 × 10⁻³
+  against 3–6 × 10⁻⁴ cold, in both media.
+
+**Reading.** Review item 2 asked for the law the medium produces. The cold part comes out close to the law's
+square-root-of-mass, inverse-distance form (within its uncertainties at the far receivers), and colliding matter pulls
+like cold matter, as the law says; the heat term does not, in the only media the data allow. The data's case for the
+heat term (the clusters' masses, the ellipticals' lensing, the collisions) stands on its own; its mechanism is open
+again, and it now has two hard constraints: the hot glow must reach inward (§29.3), and whatever keeps a warm source in
+step must work without strong one-way absorption.
+
+### 29.5 The Milky Way fitted to independent constraints; Cassini and wide binaries from it
+
+`code/mw_joint_v19.py` → `run-mw-joint-v19/mw_joint_v19.json` (the bulge's heat by the SPARC rule, as in every galaxy)
+and `mw_joint_v19_bulge120.json` (the bulge's measured dispersion, 120 km/s); the literature values (checked against
+the papers) are listed in the script's header.
+
+**The data and the priors.** The rotation curve of Feng, Huang, Zhang & Liu 2026 (MNRAS 546, stag011; arXiv:2512.21780):
+903 classical Cepheids from Gaia DR3, 6.6–17.6 kpc in 12 bins, with R0 = 8.275 kpc and the Sun's azimuthal speed
+250.2 km/s (the Sgr A* proper motion); statistical errors 0.9–2.2 km/s, to which a 3 km/s floor is added for the dip
+and bump no axisymmetric model has, and a common scale (1 ± 0.02, the Sun's own speed) marginalised in closed form.
+The curves already in the suite (Eilers 2019, Zhou 2023, Ou 2024) are fitted separately, each in its own convention
+(R0 = 8.122–8.178 kpc; all four tie the Sun's speed to R0 through the same Sgr A* motion). The vertical pull:
+K_z(1.1 kpc)/2πG = 70 ± 5 M☉/pc² (Bland-Hawthorn & Gerhard 2016's consensus of 67–74). The matter, varied within
+independent measurements: stars at the Sun 33.4 ± 3 M☉/pc² (McKee, Parravano & Hollenbach 2015), the thick disk's
+share 0.12 ± 0.04 and the scale lengths 2.6 ± 0.5 (thin) and 2.0 ± 0.6 kpc (thick; Bland-Hawthorn & Gerhard 2016),
+gas 13.7 ± 1.6 M☉/pc² (McKee et al.), the bulge (1.2 ± 0.35) × 10¹⁰ M☉ (Licquia & Newman 2015's 0.91 to
+Bland-Hawthorn & Gerhard's 1.4–1.7). Scale lengths on a grid (thin 2.1, 2.6, 3.1; thick 2.0, 3.0 kpc), heights fixed
+at 0.3 and 0.9 kpc, normalisations fitted continuously. The law's constants are held (SPARC and X-COP).
+
+| curve (points) | law | best χ² (curve part) | common scale | stars Σ* (33.4 ± 3) | bulge (10¹⁰) | K_z(1.1) |
+|---|---|---|---|---|---|---|
+| Feng 2026 (12) | ours | 35.0 (23.2) | 0.949 | 34.6 | 2.28 | 77.1 |
+| | Newton, same matter | 393 (335) | 0.730 | 49.1 | 1.64 | 73.6 |
+| | ours, bulge at its measured 120 km/s | 38.1 (27.6) | 0.935 | 35.4 | 2.14 | 78.1 |
+| Eilers 2019 (38) | ours | 33.9 (31.5) | 0.966 | 33.8 | 1.30 | 75.3 |
+| Zhou 2023 (34) | ours | 35.4 (32.6) | 0.947 | 34.6 | 1.19 | 76.4 |
+| Ou 2024 (35) | ours | 61.7 (57.4) | 0.956 | 35.2 | 1.15 | 76.5 |
+
+(The curve part includes the scale's own prior term; with Feng's curve the best thin disk is 2.6 kpc, with the others
+2.1 kpc, close to Bovy & Rix's mass-weighted 2.15.)
+
+* **The shape fits; the level is 3–6% low.** With the matter at its measured values the law follows every curve's
+  shape (after the common scale, the Cepheid residuals are within ±6 km/s, χ² ≈ 17 for 12 points with the 3 km/s
+  floor), but each measured curve must be scaled down by 3.4–6.5% to meet it: the law's speed is 3–6% below the
+  Galaxy's. Newton with the same matter fails by far (27%).
+* **This is the offset the law has in the galaxies too.** In SPARC, at the Milky Way's acceleration (log g_N = −10 to
+  −9.75), the median log(g_obs/g_law) is +0.026 ± 0.015 dex, and +0.022 to +0.038 dex in every bin from −11.25 to
+  −9.25: the law runs about 6% low in acceleration, 3% in speed, for the typical galaxy (the fit minimises a mean
+  square, not the median). The Milky Way is 1–3% lower still in speed: not an outlier. The round-7 shortfall ("209
+  against 229–234 km/s", 20–25% in acceleration) was mostly McMillan's matter model, itself fitted together with a
+  dark halo, whose stars at the Sun (45.8 M☉/pc²) exceed the local census by 4σ and whose disk is long.
+* **What the Cepheid curve still asks.** Its high inner points (243 km/s at 6.6 kpc) want a heavier bulge than the
+  prior (2.1–2.3 × 10¹⁰, 3σ; with the bulge's measured dispersion as heavy), and the vertical pull comes out 1.4σ high
+  (77–78 against 70 ± 5). The other three curves are met with the bulge at its prior.
+
+**Cassini and wide binaries from the fitted Galaxy** (`regression/t_precision.sun_in_galaxy` with the fitted pull and
+heat at the Sun: g_N = 1.37 × 10⁻¹⁰, S = 9.7 × 10⁻¹¹ m/s² for the best fit):
+
+| Galactic field at the Sun | Q₂ at L = 0.15 pc (10⁻²⁷ s⁻²) | from (1.6 ± 1.8) | L for 1σ, 2σ (pc) | wide binaries at 7,000 / 20,000 AU |
+|---|---|---|---|---|
+| the suite's (230 km/s inverted, no heat) | 4.38 | +1.54σ | 0.19, 0.12 | +3.2%, +7.6% |
+| fitted Galaxy, bulge by the SPARC rule | 1.96 (1.47–2.30 over the six disk shapes) | +0.20σ (−0.07 to +0.39) | 0.087, 0.049 | +2.4%, +5.7% |
+| fitted Galaxy, bulge at 120 km/s | 2.37 | +0.43σ | 0.10, 0.06 | +2.8%, +6.8% |
+
+With the Galaxy fitted to its own measurements, Cassini's 2026 value is met at the adopted release length (0.2–0.4σ;
+it was 1.5σ with the suite's rough field). **Wide binaries: the forecast locked in round 10 is unchanged**
+(`forecasts/wide_binaries_gaia_dr4_v10.json`: 1.039 at 7,000 AU, 1.093 at 20,000 AU, SHA-256 94a7a470…); the values
+above are **amendments** (the round-12 constants and the fitted Galactic field), labelled as such: 1.024–1.028 and
+1.057–1.068.
+
+### 29.6 One process for screening and release (a supplied derivation), carried to the Solar System
+
+`screening-blockers-v19/` (supplied by the user on 25 September 2026; `PROVENANCE.md`); `code/blocker_release_v19.py` →
+`run-blocker-release-v19/blocker_release_v19.json`.
+
+**The proposal.** A coupling element of the companion holds n temporary "blockers", created at rate η g and each
+removed at rate γ, and couples only when it holds none. The stationary population is Poisson, so the open fraction is
+exp(−ηg/γ) = exp(−g/g_d) with g_d = γ/η: the law's screening, emerging from the chance of holding no blocker. If a newly
+emitted element inherits the local equilibrium population plus one blocker made by the emission, its open fraction in
+a constant field is exp(−g/g_d)(1 − e^{−r/L}) with L = u/γ: the round-9 release, from the same lifetime (868 years for
+L = 0.15 pc; g_d L = u/η). In a changing field the load m obeys dm/dt = ηg − γm and the open fraction is (1 − s)e^{−m}:
+the logarithm of the open fraction relaxes, not the fraction itself, which a strong-to-weak field step distinguishes
+from a plain relaxation (half release after 2.7 lifetimes against 0.7 for g/g_d = 10 → 0), while small disturbances
+cannot. **Checked here:** the package's master equation and event simulation reproduce (`PROVENANCE.md`); in a
+constant field our implementation gives back 1 − e^{−r/L} to 10⁻⁹.
+
+**What it does to the Sun's companion.** The companion is launched in the Sun's own field, g/g_d ≈ 1.4 × 10¹² at the
+surface, and moves outward at u while the field falls much faster than blockers clear (for r ≪ L). It carries a load
+that clears only after about ln(load) lifetimes, so the release becomes a sharp switch far beyond L:
+
+| launch preparation (Galactic field from §29.5) | half release at L = 0.15 pc | Q₂ (10⁻²⁷) | binaries 7,000 / 20,000 AU | lifetime for the adopted law's Q₂ → half release, binaries |
+|---|---|---|---|---|
+| adopted scalar release (1 − e^{−r/L}) | 20,800 AU | 2.02 (+0.23σ) | +2.5%, +5.8% | – |
+| equilibrium at the surface + one blocker | 850,000 AU (4.1 pc) | ≈ 0 | 0, 0 | 6 yr → 5,800 AU, +11.7%, +12.0% |
+| empty at the surface + one blocker | 380,000 AU | ≈ 0 | 0, 0 | 9 yr → 5,900 AU, +11.2%, +12.0% |
+| K = 10 sites, full at launch | 79,000 AU | ≈ 0 | 0, 0 | 58 yr → 7,400 AU, +5.3%, +11.9% |
+| K = 100 sites, full at launch | 149,000 AU | ≈ 0 | 0, 0 | 29 yr → 6,400 AU, +7.7%, +12.0% |
+
+**Reading.** The derivation is a real step: one lifetime gives both of the law's factors in constant fields, and a
+changing field distinguishes it from a plain relaxation. For the Solar System it changes the logic: with a load made
+at launch, the release is a switch at L·ln(load), so Cassini sets a *lower* bound on the lifetime (about 6–60 years
+for the adopted Q₂, depending on the launch), not a value to be tuned, and at the derivation's own calibration
+(868 years) the Sun's companion stays closed out to 0.4–4 pc: no Q₂ at all (the measurement is 0.9σ from zero) and
+wide binaries exactly Newtonian. Wide binaries then decide: a switch shows as a **step** in the extra pull with
+separation (nothing inside the switch radius, the full effect beyond), unlike the adopted law's gradual rise; with the
+same Cassini standing the step gives +12% at 20,000 AU, twice the adopted law. Galaxies are unaffected (every star's
+launch load clears within a few parsecs). It adds no constant (η, γ replace g_d, L), the blockers are not yet found in
+the matter model, and whether the force follows the open fraction or its square root is open; it is recorded as a
+separately named candidate, not adopted.
+
+### 29.7 A frozen prediction: lensing against the stars' own speeds
+
+`code/frozen_prediction_v19.py` → `run-frozen-prediction-v19/frozen_prediction_v19.json` and `SHA256`
+(01219170346b60123a0dc5bf979cf847976ad9e7cbd178efca52c10a8b0fd093), written before this project looked at any lensing
+split by velocity dispersion.
+
+At fixed stellar mass and isolation, the law's heat term makes a galaxy whose stars move faster lens more: far out,
+√(a G M (1 + k)), k = 3σ²/u². For isolated bulge-dominated lenses (the whole stellar mass at the central dispersion
+σ_e) of log M* = 10.6 at z = 0.25 (the KiDS-1000 stacks' typical lens), computed with the adopted law and the suite's
+own forward model at the survey's g_bar bins, the lensing acceleration relative to σ_e = 200 km/s, median over the
+reliable bins below 10⁻¹² m/s²:
+
+| σ_e (km/s) | 100 | 150 | 200 | 250 | 300 |
+|---|---|---|---|---|---|
+| k = 3σ²/u² | 1.05 | 2.35 | 4.18 | 6.53 | 9.41 |
+| log g_obs − log g_obs(200) | −0.183 | −0.087 | 0 | +0.077 | +0.144 |
+
+So 250 against 150 km/s: +0.164 dex (×1.46; the deep-regime √((1 + k₁)/(1 + k₂)) gives 0.176). MOND predicts no
+dependence at fixed visible mass; in dark-matter models any dependence runs through the halo mass that goes with σ at
+fixed stellar mass, a separate, measurable relation. The test: split isolated lenses of one stellar-mass bin by their
+measured σ_e (SDSS/GAMA spectra), stack each group's excess surface density, and compare the ratios with this table.
+
+### 29.8 Where round 19 leaves the checklist
+
+| review item | status after round 19 |
+|---|---|
+| 1. the one-way medium in full wave form | **done for a uniform stream** (§29.2): what absorbs (Doppler absorbers at the wave's speed, at least a wavelength across; point absorbers drag and are ruled out), passive at every strength, the near field kept at weak absorption, the self-force (−0.015 to −0.13 P/c, allowed by SPARC up to ≈ 0.05 a), the ray form's range of validity. Still to do: the radial geometry exactly, and what sets κ |
+| 2. the law the medium produces | **the hot-shell benchmark run on data** (§29.3): the hot glow must reach inward; a stream is allowed only with absorption lengths ≳ 300 kpc. **Exponents** (§29.4): cold matter gives about the law's √M/r (p = 0.58 ± 0.13, q = 1.11 ± 0.22 in the absorbing stream, 0.80 ± 0.29 and 0.93 ± 0.20 two-way; the law 0.5 and 1) and colliding matter pulls like cold matter (0.78–0.90); the heat gain is absent in both media (0.90–0.97 at k = 2 against the law's 1.73; pushes at k = 8), and compact sources pull 2–15 times less at the same mass, where the law has no size term |
+| 3. inertia and universal free fall | open |
+| 4. screening, light, Cassini | Cassini with the fitted Galaxy: 0.2–0.4σ at the adopted L (§29.5); a candidate process for screening and release from one lifetime, with a distinct Solar-System signature (§29.6); light's response still assumed |
+| 5. collisions as a calculation | open |
+| 6. statistical inference | a frozen prediction written (§29.7); the likelihood programme open |
+| 7. remaining discrepancies | the Milky Way's shortfall reduced to the law's own 3–6% level with independent matter (§29.5) |
+| 8. novelty and scope | `NOVELTY.md` (§29.1) |
+| 9. reproducible release | open (the suite's candidate runs and every new script's outputs are in the repository) |
+| 10. the manuscript | the write-up updated to the evidence (blog, page) |
+
+**Next, after round 19:**
+1. **Keep a warm source in step without strong one-way absorption.** The data allow at most weak absorption (§29.3), and
+   there the models give no heat gain (§29.4). Candidates: the reservoir-engineered (Metelmann–Clerk) one-way coupling
+   applied inside a source only, with the far field two-way; receivers whose locking survives a detuned source; and
+   the models' collective states in sources about a wavelength across, which also make size matter where it should
+   not.
+2. **The radial medium exactly** (partial waves), with κ set by the stream's density, and the self-force's scaling.
+3. **The blocker candidate in the matter model:** look for a metastable blocking excitation, measure its formation
+   against the field and its lifetime separately, and derive whether the force follows the open fraction or its square
+   root; then wide binaries as the test (a step against a gradual rise).
+4. **The law's 3% at the Milky Way's pull:** the SPARC median offset (+0.026 dex at g_N ≈ 10⁻¹⁰) with a robust fit
+   statistic; then the Milky Way again.
+5. **The frozen prediction:** σ-split lensing from KiDS × GAMA or SDSS × HSC.
+6. **Inertia;** the likelihood programme with the frozen law; a reproducible release.

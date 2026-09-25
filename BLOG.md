@@ -3,7 +3,9 @@
 *One proposed law for spinning galaxies, bending light, galaxy clusters and colliding clusters: a few stated
 assumptions, worked out step by step and tested on public data, with no dark matter and no expanding universe.*
 
-24 September 2026. This is a fresh write-up of where the project stands. The full working notebook, with every
+24 September 2026, updated 25 September 2026 with round 19 (the companion's medium tested against the data, the
+Milky Way refitted with its matter held to independent measurements, a frozen prediction). This is a fresh write-up
+of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
 technical record is in [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md).
@@ -54,9 +56,9 @@ Solar System):
 | Colliding clusters: lensing sits on the galaxies, not the gas | **yes** (Bullet Cluster, 72-collision stack, three more) | no | yes |
 | Ellipticals bend light more than spirals (measured 0.15 ± 0.04 dex) | **yes: 0.13–0.16**, from their stars' random motion | no difference | yes, with tuned haloes |
 | Light and matter feel the same pull (six strong lenses) | **yes** (−0.03 ± 0.02 dex), with light's response assumed as in Einstein's theory | | yes |
-| Milky Way rotation from 15 to 27 kpc | **within 1–6%** | within 3% | 6–11% too fast |
+| Milky Way rotation from 15 to 27 kpc | **within 1–6%**; with the Galaxy's matter held to its own measurements (2026 Cepheids included) the curves' shape is followed, 3–6% slow overall (§5.4) | within 3% | 6–11% too fast |
 | Solar System, planets, pulsars | **no measurable extra pull** (switched off where gravity is strong) | small effects | Einstein's |
-| Cassini's limit on the Galaxy's distortion of the Sun's field (2026 re-analysis) | **1.5σ above**; within 1σ with a 0.19 pc release length | common form about 20× too big | Einstein's |
+| Cassini's limit on the Galaxy's distortion of the Sun's field (2026 re-analysis) | **within 0.2–0.4σ** with the Galaxy's pull at the Sun from the refitted Galaxy (1.5σ with a rough estimate of it) | common form about 20× too big | Einstein's |
 
 These are typical misses and simple checks, not a full statistical comparison: each model here uses its own treatment
 of the uncertain inputs every model needs (star masses, gas, distances), and "four constants" does not count those
@@ -258,14 +260,14 @@ working models (§4), and some pieces are still assumptions. Keeping them apart:
 |---|---|
 | Matter feeds a companion at ℓ watts per kilogram, which streams outward at u | **assumed** (ℓ and u fitted to galaxies and clusters) |
 | Its energy density is A²/8πG and it pulls with its strength A | **assumed**; §4.1 shows a kind of matter (inverted, self-sustained) that a wave pulls in proportion to its height |
-| Flat rotation curves, v⁴ = G M a, and contributions adding up along Newton's direction | **derived** from the two lines above (energy balance and Gauss's geometry) |
-| Strong gravity holds the companion back, exp(−\|g_N\|/g_d), released over L = 0.15 pc | **assumed** (g_d fitted to galaxies, L set by Cassini); not yet derived |
+| Flat rotation curves, v⁴ = G M a, and contributions adding up along Newton's direction | **derived** from the two lines above (energy balance and Gauss's geometry); the working models now reproduce the square root of mass and the fall with distance, with uncertainties (§4.4) |
+| Strong gravity holds the companion back, exp(−\|g_N\|/g_d), released over L = 0.15 pc | **assumed** (g_d fitted to galaxies, L set by Cassini); a candidate process now gives both factors from one lifetime (§5.5), not yet found in the matter model |
 | The heat weight k = 3σ²/u², with the same u | **derived** in a working model (§4.2), given a quiet store inside matter that the flowing companion opens; the store itself is assumed |
 | Collisions switch the heat off | **derived** in the same working model; the physics is borrowed (Dicke narrowing) |
 | The pull points along the companion's net flow; the companion remembers its source's motion | **assumed** (motivated, not derived) |
 | The field equation ∇²Φ = −∇·h | **borrowed** form (Milgrom's QUMOND) |
 | Light responds to Φ as in Einstein's theory | **assumed**; to be derived in a relativistic version |
-| Warm matter pulls harder, by the square root of its extra glow | **shown in a full simulation** with the companion's wave made one-way by hand; with a derived, push-free medium (a stream that absorbs counter-moving waves), 73–84% of it (§4.4) |
+| Warm matter pulls harder, by the square root of its extra glow | **required by the data** (clusters, the lensing of ellipticals, collisions); shown in the working models only with strongly one-way waves, which the clusters now rule out (§4.4). The mechanism is **open** again |
 | What a piece's inertia is, and why all matter falls alike | **open**: the working models do not yet say |
 | MOND as the cold limit | **derived** from the law |
 
@@ -421,6 +423,55 @@ step at every distance, better than with a cold source (dashed). Script `code/on
     centre, which is what gave one beat and Newton's rule. So those two results belonged to the rule, not to the
     physical media found so far, and the law's counting of all matter (its |g_N| and S) now has to be reconciled
     with a medium that hears less: the review's hot-shell benchmark, in general form.
+* **What round 19 found.** Three things, in order: the absorbing stream works as a real wave medium; the clusters say
+  how one-way it may be; and with that allowed amount, the working models give the law's cold part but not its heat
+  part.
+  * **The absorbing stream as an exact wave medium.** Solved exactly (for a uniform stream, the geometry a distant
+    receiver sees), it needs absorbers that ride along with the stream at the wave's own speed. A wave moving with the
+    stream then doesn't oscillate at all as they see it, and nothing passive can absorb a wave that doesn't oscillate,
+    so the medium is one-way with no tuning: the Doppler effect alone does it. The absorbers must be at least about a
+    wavelength across; point-like ones would drag every emitter downstream, which rules them out. With that, the medium
+    can never create energy, at any absorption strength, and it pulls a lone emitter only slightly toward the source's
+    centre (at the weak absorption the data allow, below, by 1.5% of its emitted power divided by the wave speed,
+    within what the 149 galaxies allow). Round 18's
+    simple description, a loss of e^(−κ) per unit distance travelled inward, is accurate when the absorption is weak
+    (an absorption length of a wavelength or more). A passive medium cannot be strongly one-way over only a few
+    wavelengths, so round 18's strong-absorption runs overstated how one-way it was.
+  * **What the clusters allow (the hot-shell benchmark).** In a cluster, most of the law's heat term at a given radius
+    comes from hot galaxies farther out: 69% at a tenth of the cluster's radius, 28% at its edge. A strictly one-way
+    medium would never let that inner point hear them. Tested on the 12 X-COP clusters, the law, which hears all hot
+    matter, misses their masses by a typical 25%. Hearing only the matter nearer the centre misses by 50%, still 32%
+    with the companion's speed refitted, and then fails 11 of the regression suite's 49 checks against the law's 6.
+    A stream that absorbs inward waves is tolerated only if a wave survives about 300 kpc or more before it is
+    absorbed. That is longer than a galaxy and comparable to a cluster's radius. With stronger absorption the clusters
+    can be rescued only by slowing the companion (to 141 km/s at 333 kpc, 96 km/s at 10 kpc), which makes hot stars
+    louder in every galaxy and spoils the lensing of ellipticals and the strong lenses. For a round source there is
+    also an exact result: a stream that absorbs every inward wave hears exactly half of every inner shell of matter,
+    so the only real difference from the law is the outer shells.
+
+![What the clusters allow](blog-figures/what-the-medium-hears.png)
+
+*The typical miss in 12 clusters' masses against how far an inward-travelling wave survives before the stream absorbs
+it. Orange: the constants as fitted. Teal: with the companion's speed refitted to the clusters (numbers: that speed in
+km/s; the law's is 169), which the rest of the suite rejects below about 300 kpc. Dashed: a strictly one-way medium.
+Script `code/hot_shell_v19.py`.*
+
+  * **The law the working models produce.** With that weak absorption (one absorption length per wavelength, the most
+    the clusters allow for sources a few wavelengths across), and with the plain two-way wave for comparison, we ran
+    84 full, energy-balanced simulations: sources of 24 to 96 pieces, cold, warm and colliding, packed at different
+    densities, with receivers of the same matter at two distances and three arrangements of each. For cold sources
+    the pull grows as mass to the power 0.58 ± 0.13 and falls with distance as the power 1.11 ± 0.22 (0.80 ± 0.29
+    and 0.93 ± 0.20 with the two-way wave), against the law's 0.5 and 1. Colliding sources pull 0.78–0.90 times as
+    hard as cold ones, where the law says 1. **But warm sources do not pull harder:** 0.90–0.97 times the cold pull
+    where the law needs 1.73 at the milder heat, and at the stronger heat they push the nearer receivers away. And the
+    models' pull depends on a source's size at fixed mass (sources with a radius of one or two wavelengths pull 2–15
+    times less than those of three or four), which real galaxies don't show. Every watt is booked in every run.
+  * **What this means.** The law's cold part now comes out of the working models with honest error bars, and so does
+    the collision rule. The heat term is still required by the data, which make their case on their own (the
+    clusters' masses, the extra lensing of ellipticals, the pull following galaxies in collisions), but its mechanism
+    is open again: the strong one-way absorption that made warm sources pull harder in rounds 17–18 is the kind the
+    clusters exclude. The next mechanism has two clear targets: the hot glow must reach inward, and a warm source must
+    keep its beat without strong one-way absorption.
 
 ### 4.5 What being pulled costs
 
@@ -516,9 +567,20 @@ with an earlier fit of the constants; the current fit lowers our curve by about 
 * **Agrees:** the rotation from 15 to 27 kpc (within 1–6%), the pull above the disk (73 against 68–74 in the usual
   units), the Galaxy's mass inside 100 and 200 kpc (6.5 and 12.4 against 6.1–7.3 and 11.0 × 10¹¹ suns), and the
   escape speed at the Sun (509–525 against 445–580 km/s).
-* **Falls short:** the Sun's own orbital speed (209 against 229–234 km/s). The Sun sits right in the switch-over where
-  about half the companion is released, and a more compact disk (Bovy & Rix's) already gives 217 km/s: the disk's shape
-  is the lever to test.
+* **Refitted in round 19, with the matter held to independent measurements.** The figure above uses McMillan's (2017)
+  matter, which was fitted together with a dark halo: its stars at the Sun (45.8 suns per square parsec) exceed the
+  local census (33.4 ± 3) by four standard deviations, and its disk is long. Held instead to the census, the disk's
+  measured lengths, the gas and the bulge, and fitted to the newest curve (903 Cepheids, Feng et al. 2026) and the
+  pull above the disk together, the law follows the measured curves' shape, with every piece of matter within its
+  measured range except a bulge on the heavy side. What remains is an overall level: the law runs 3–6% slow against
+  all four Gaia curves. That is about the offset it has for the typical galaxy at this pull (3% in speed in SPARC), so
+  the Milky Way is no longer an outlier. Newton with the same matter is 27% slow.
+
+![The Milky Way against 903 Cepheids](blog-figures/milky-way-2026.png)
+
+*The Milky Way from 6.6 to 17.6 kpc: Cepheids measured in 2026 (points) against our law with the Galaxy's matter held to
+independent measurements (solid), the same raised by 5.4% (dashed), and Newton with the same matter (orange). Script
+`code/mw_joint_v19.py`.*
 
 ![Ten Milky Way dwarf galaxies](blog-figures/dwarf-galaxies.png)
 
@@ -536,14 +598,31 @@ with an earlier fit of the constants; the current fit lowers our curve by about 
   in Einstein's theory, which we assume holds in strong fields. The companion's other possible effects there are
   computed only in part (its emission changes the Double Pulsar's orbit by 1% of the measurement error).
 * **Cassini's radio tracking** of Saturn limits the Galaxy's distortion of the Sun's field. The 2026 re-analysis (Park,
-  Hees, Famaey, Desmond & Durakovic) gives (1.6 ± 1.8) × 10⁻²⁷ s⁻²; ours is 4.4 × 10⁻²⁷, 1.5 standard deviations
-  above, allowed but not comfortable. It depends on the release length: 0.19 pc instead of 0.15 would bring it within
-  one standard deviation, and would lower the wide-binary forecast below from 8% to 6% at 20,000 AU. MOND in its
-  widely used "simple" form gives 3 × 10⁻²⁶, about twenty times the measured value (forms that switch faster between
-  its two regimes can pass).
-* **Wide binary stars** (pairs 5,000–30,000 AU apart, where the mutual pull is weak): our law predicts 3% more pull than
-  Newton at 7,000 AU and 8% at 20,000 AU, against MOND's 43%. The Gaia data are disputed; the forecast is locked in the
-  repository ahead of Gaia's next release.
+  Hees, Famaey, Desmond & Durakovic) gives (1.6 ± 1.8) × 10⁻²⁷ s⁻². With the Galaxy's pull and heat at the Sun taken
+  from the refitted Galaxy (§5.4), ours is 2.0–2.4 × 10⁻²⁷, within half a standard deviation (with the rougher estimate
+  used before, 4.4 × 10⁻²⁷, 1.5 standard deviations). MOND in its widely used "simple" form gives 3 × 10⁻²⁶, about
+  twenty times the measured value (forms that switch faster between its two regimes can pass).
+* **Wide binary stars** (pairs 5,000–30,000 AU apart, where the mutual pull is weak): the forecast locked in the
+  repository in round 10, ahead of Gaia's next release, is 4% more pull than Newton at 7,000 AU and 9% at 20,000 AU,
+  against MOND's 43%; it stays as it was. Amended with the refitted Galaxy (labelled as an amendment, not a new
+  forecast): 2.4–2.8% and 5.7–6.8%. The Gaia data are disputed.
+* **Where the switch-off could come from (round 19).** A derivation supplied to the project proposes one process for
+  both of the law's switch-offs: the companion carries temporary "blockers" that stop it coupling to matter; strong
+  pull makes more of them, each lasts the same time, and emission adds one. The chance of holding none gives the
+  screening exactly, and the extra blocker gives the release length, both from one lifetime (868 years for 0.15 pc).
+  We checked the derivation and followed it to the Sun, and it changes the picture near stars. The Sun's companion is
+  launched in the Sun's enormous pull and carries out a huge load of blockers, which take many lifetimes to clear. So
+  the release becomes a sudden switch far out, not a gradual one. Cassini then only sets a minimum lifetime (about 6
+  to 60 years, depending on how emission loads the companion), instead of a value to be tuned. Wide binaries become
+  the decisive test: in this version the extra pull is **absent below a certain separation and then jumps to about
+  12%**, where the adopted law rises gradually. With its own 868-year lifetime, the Sun's companion stays closed out to
+  several light-years and wide binaries are exactly Newtonian. It is recorded as a named candidate, not adopted.
+
+![Wide binaries: a gradual rise or a step](blog-figures/wide-binaries-step.png)
+
+*Extra pull between two Sun-like stars, against their separation. Solid: the adopted law. Dashed, and purple with ten
+blocker sites: the blocker switch with the same Cassini standing. Orange: the switch with an 868-year lifetime (none at
+all). Far out, every version reaches the same 12% the Galaxy's own pull sets. Script `code/blocker_release_v19.py`.*
 
 ## 6. Why stars and light lens the way we see
 
@@ -604,12 +683,12 @@ fresh companion grows back.
 | Ellipticals lens more than spirals | **yes, from their stars** | no | yes, via tuned haloes |
 | Strong lenses: light and stars agree | **yes**, with light's response assumed | | yes |
 | Milky Way rotation 15–27 kpc | **within 1–6%** | within 3% | 6–11% fast |
-| Milky Way rotation at the Sun | 9% slow | 3% slow | right |
+| Milky Way rotation at the Sun | 9% slow with McMillan's matter; 3–6% with the matter held to its measurements | 3% slow | right |
 | Milky Way mass inside 100 / 200 kpc | **agrees** | 30–40% high | agrees |
 | Ten Milky Way dwarfs | 4 agree, 6 too slow | the same | fitted |
 | Solar System, pulsars | **no extra pull** | small effects | Einstein's |
-| Cassini, 2026 re-analysis | **1.5σ above** | common form about 20× too big | passes |
-| Wide binary stars (data disputed) | **3% / 8% extra pull at 7,000 / 20,000 AU** | 43% | none |
+| Cassini, 2026 re-analysis | **within 0.2–0.4σ** (refitted Galaxy) | common form about 20× too big | passes |
+| Wide binary stars (data disputed) | **4% / 9% at 7,000 / 20,000 AU** (locked; 2–3% / 6–7% amended) | 43% | none |
 | Fitted constants (not counting the uncertain inputs every model needs) | **4** | 1 | about 320 (two per halo) |
 
 Dark matter fits individual objects more tightly because it is tuned object by object; our law uses four shared
@@ -628,8 +707,9 @@ with shared inputs and a frozen law is on the list (§9).
    radius.
 3. **Lensing around isolated galaxies stays flat to about 2 Mpc and then falls,** where the companion has not yet
    reached.
-4. **Wide binary stars:** 3% more pull than Newton at 7,000 AU and 8% at 20,000 AU (6% if the release length is
-   lengthened to 0.19 pc to fit the 2026 Cassini value), locked ahead of Gaia's next release.
+4. **Wide binary stars:** 4% more pull than Newton at 7,000 AU and 9% at 20,000 AU, locked ahead of Gaia's next release
+   (amended with the refitted Galaxy: 2.4–2.8% and 5.7–6.8%). If the switch-off works by blockers (§5.5), the extra
+   pull instead jumps from zero to about 12% at one separation, or is absent altogether.
 5. **After a collision, lensing stays with the galaxies while the gas moves away from them faster than a fresh companion
    grows around it** (169 km/s). Around stopped gas it comes back only inside a sphere growing at 169 km/s, about
    170 kpc per billion years, so in old collisions whose gas has long stopped, some lensing should return to the gas.
@@ -643,57 +723,68 @@ with shared inputs and a frozen law is on the list (§9).
     ellipticals than spirals.
 11. **Abell 520's galaxy-poor clump carries about 3 × 10¹³ suns inside 150 kpc,** a quarter of it visible gas.
 12. **The Sun loses 2 parts in 10¹⁵ of its mass a year** to its companion.
+13. **Frozen on 25 September 2026: lensing grows with the stars' speed at fixed visible mass.** For isolated,
+    bulge-dominated galaxies of one stellar mass (4 × 10¹⁰ suns), the pull measured by weak lensing should rise with
+    the central speed spread of their stars: relative to 200 km/s, −0.18, −0.09, +0.08 and +0.14 dex at 100, 150, 250
+    and 300 km/s, so galaxies at 250 km/s lens about 46% more than those at 150. MOND predicts no difference; dark
+    matter predicts whatever difference the halo masses of such galaxies happen to have. The numbers and their
+    fingerprint are in `research_work/results/hot-companion/run-frozen-prediction-v19/`.
 
 ## 9. What is still open, and why we are optimistic
 
 An independent review (25 September 2026) set out what a paper would need. In order:
 
-1. **The companion as a flowing medium.** Derive the one-way wave from the companion's own local equations (its flow,
-   its waves, what happens at a source's centre and where streams meet), with the flow's energy and momentum followed,
-   and repeat the warm-source tests with that wave instead of one made one-way by hand. This is the main step now under
-   way: waves carried by the stream turn out one-way but push every emitter downstream; waves the stream absorbs when
-   they move against it are one-way with no push, and in the full simulation make the pull grow with heat at 73–84% of
-   the square root the law needs, though a warm source keeps no single beat (§4.4). Next: strong absorption as a full
-   wave problem, and what sets the absorption.
-2. **The law's numbers from the working models,** not only its trends: the exponent of the square root with its
-   uncertainty over a wide range of mass, the full dependence on heat (why the model's glow grows more slowly than
-   1 + k, §4.3), and a clean benchmark: a small system inside a shell of hot matter. The law's plain total S counts the
-   shell; a strictly outward-only wave would not carry the shell's influence inward. The completed medium must say
-   which.
+1. **The companion as a flowing medium.** Done in round 19 for a uniform stream (§4.4): the absorbing stream is a
+   proper wave medium (absorbers riding with the stream, at least a wavelength across), it never creates energy and it
+   barely pulls on itself. Still to do: the round geometry of a real source exactly, and what sets the absorption.
+2. **The law's numbers from the working models.** Done in round 19 (§4.4). The clusters allow only weak one-way
+   absorption (a wave must survive about 300 kpc or more inward): the hot glow has to reach inward, as the law's
+   total S says. With that, the models give the cold law (mass to the power 0.58 ± 0.13, distance to −1.11 ± 0.22,
+   against 0.5 and −1) and the collision rule, but no extra pull from heat, and a dependence on a source's size that
+   real galaxies don't show. The heat term's mechanism is the open problem now: something that keeps warm matter in
+   step, lets the hot glow reach inward, and doesn't depend on size.
 3. **Inertia, and why all matter falls alike.** The working models do not yet define a piece's inertia, so equal
    acceleration for different kinds of matter is a requirement, not yet a result.
 4. **The release factor and light's response,** derived rather than assumed, and one prescription for the Solar
-   System, wide binaries and dwarf galaxies (Cassini's 2026 value now prefers a release length of at least 0.19 pc).
+   System, wide binaries and dwarf galaxies. With the refitted Galaxy, Cassini's 2026 value is met at the adopted
+   0.15 pc (§5.4, §5.5); a supplied derivation gives screening and release from one lifetime and predicts a step in
+   wide binaries (§5.5), still to be found in the matter model.
 5. **Collisions as a calculation from before the crossing,** with the companion's emission, transport and the heat of
    crossing followed in time. The Bullet Cluster's smaller half still has only about 60% of its measured lensing mass.
 6. **A proper statistical comparison:** a frozen law, a full list of fitted and measured inputs with their
-   uncertainties, likelihoods, fair baselines for MOND and dark matter, and at least one test chosen in advance, such as
-   lensing against independently measured star speeds at fixed visible mass.
+   uncertainties, likelihoods, fair baselines for MOND and dark matter, and at least one test chosen in advance. The
+   test is now frozen (§8, prediction 13): lensing against the stars' measured speeds at fixed visible mass.
 7. **The remaining misses,** each explained or stated as a limit: six faint dwarf galaxies too slow, all galaxy lenses
-   16% above the law (the gas around them to be weighed), strong lenses needing heavy stars (to be measured), and the
-   Sun's orbital speed 9% slow (the disk's measured structure to be used).
+   16% above the law (the gas around them to be weighed), and strong lenses needing heavy stars (to be measured). The
+   Milky Way is now down to the law's own typical 3–6% (§5.4).
 8. **A full literature search** before any claim of priority, and a paper with one bounded claim; the review suggests
-   "motion-enhanced attraction in an active streaming medium" first, with the astronomy as motivation.
+   "motion-enhanced attraction in an active streaming medium" first, with the astronomy as motivation. A first check,
+   claim by claim, is in [NOVELTY.md](NOVELTY.md). Since the models no longer show the heat gain in the medium the data
+   allow, the bounded claim for now is the cold law and the collision rule from an active medium.
 9. **A frozen, reproducible release:** every figure regenerated with one version of the law, with inputs, seeds and
    commands archived.
 
 Why optimistic: the four constants have held across galaxies, clusters, collisions, lenses and the Solar System, and
-every piece of the law is tied to something measured about matter. Several links that began as assumptions now come
-out of explicit, energy-balanced models: the square root, the heat weight with its one speed, the collision rule and
-the pull's energy bill. The one link that resisted, keeping warm matter in tune, now has a precise diagnosis and a
-mechanism that works in the full simulation when imposed by hand, and a first physical medium, a stream that absorbs
-waves moving against it, already delivers most of it with no push and every watt booked. What remains (strong
-absorption as a full wave problem, what sets the absorption, and a law that counts only what the medium hears) is
-well posed. Each open item is a concrete calculation or measurement.
+every piece of the law is tied to something measured about matter. Round 19 made the Milky Way ordinary (3–6%, like
+the typical galaxy), put Cassini within half a standard deviation, froze a new test that neither MOND nor dark matter
+predicts in the same way, and turned the cold law and the collision rule into results of an explicit, energy-balanced
+model with error bars. The one link that resists, heat making the pull stronger, is now boxed in precisely: the
+data need it and say how it must work (the hot glow reaching inward, weak one-way absorption at most, no dependence on
+a source's size), and the models say which mechanisms don't do it. That is a much smaller search than before, and the
+frozen lensing test will check the heat term directly in data, whatever its mechanism turns out to be. Each open
+item is a concrete calculation or measurement.
 
 **What is borrowed and what is ours.** Borrowed and credited: Newton's and Einstein's gravity in strong fields; Gauss's
 flux geometry; Dicke narrowing and the Mössbauer effect as known physics; the Bloch equations of inverted, self-sustained
 emitters (as in the "superradiant laser"); the mathematical form of Milgrom's QUMOND field equation; and the data (SPARC,
 X-COP, Clowe et al. 2006, Barrena et al. 2002, Harvey et al. 2015, KiDS-1000, SLACS, Gaia-based Milky Way studies,
-dwarf-galaxy catalogues, and the precision tests of gravity; full list in the archived notebook). Ours, as far as we
+dwarf-galaxy catalogues, and the precision tests of gravity; full list in the archived notebook). A first literature
+check, claim by claim, is in [NOVELTY.md](NOVELTY.md): it finds, among others, that the heat weight has the form of
+Tolman and Whittaker's active mass (with u in place of the speed of light), that in-phase emitters attracting is
+Bjerknes', and that one-way coupling through a reservoir is established physics. Ours, as far as we
 have found: the companion mechanism, heat as extra glow opened by motion against the companion's flow, collisions
 switching it off, the pull along the companion's net flow, its memory after collisions, its release length, MOND's
-constant and switch derived from it, and the one-way companion as what keeps warm matter in tune. A full literature
+constant and switch derived from it, and the stream that absorbs inward waves as an exact, passive wave medium. A full literature
 search is still owed before any claim of priority.
 
 ## 10. Reproduce it
