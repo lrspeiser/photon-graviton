@@ -5,7 +5,8 @@ assumptions, worked out step by step and tested on public data, with no dark mat
 
 24 September 2026, updated 25 September 2026 with round 19 (the companion's medium tested against the data, the
 Milky Way refitted with its matter held to independent measurements, a frozen prediction) and a step back over the
-whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9). This is a fresh write-up
+whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9), and round 20 (a second way to derive the pull, tested in
+small models, and the clusters checked without their X-ray input). This is a fresh write-up
 of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
@@ -490,6 +491,44 @@ move at no more than about half the companion's travel speed (85 km/s). Being pu
 what it gives off when cold: 2 parts in 10¹⁵ of its mass a year. Light-speed crests are ruled out twice over, by the
 planets and by the galaxies.
 
+### 4.6 A second route: attraction from the energy of a shared state (round 20)
+
+After the step back (§9), a review of the audit proposed a different kind of mechanism. Every piece of matter would no
+longer need to keep one rhythm with the companion. Instead, bodies would attract because where they sit changes the
+energy of the combined state of matter and companion, much as two marbles on a stretched sheet roll together because
+that lowers the sheet's energy. The review came with a new calculation, which we reproduced exactly.
+
+* **What it already shows.** In a small model of eight pieces sharing one medium, attraction comes from correlations
+  between the pieces, with no rhythm on any single piece, whether one piece or several are excited. When every piece
+  is excited the pull vanishes, so more stored energy does not automatically mean more pull.
+* **A medium that stiffens when energized reaches less far, not farther.** We gave the shared medium a stiffening term
+  and energized it (exact statistics on a 32 × 32 × 32 lattice). Its reach fell from 3.2 lattice spacings to 0.9 as
+  the energy rose, and the pull fell off faster. Energizing only a region around a source did the same. With the
+  medium tuned so that its reach is unlimited, a weak source pulls like Newton (1/r²) and a strong one saturates. The
+  law's square root of mass with a 1/r fall never appears.
+* **A probe outside a cluster.** For clusters of 3 to 13 pieces and a separate probe, solved exactly (1,260 cases):
+  * the probe is always attracted;
+  * the pull fades with distance at least as fast as the medium's own short range, and much faster when only a few
+    pieces are excited;
+  * how it grows with the cluster's size depends on how many pieces are excited, from about in proportion to the size
+    down to about its cube root, never the law's square root.
+
+![How fast the pull fades](blog-figures/how-fast-the-pull-fades.png)
+
+*The pull on a probe against its distance from a source cluster of nine pieces, relative to its value at distance
+2.5. The law needs 1/r (teal) and Newton falls as 1/r² (dashed); the shared-state model falls far faster, with half
+its pieces excited (purple) or one (orange). Script `code/finite_population_probe_v20.py`.*
+
+* **What it means.** A medium that has settled into equilibrium cannot give the law's long reach and its square root
+  of mass: whatever we did, it only changed how far the medium reaches. That points somewhere specific. The companion
+  is never settled, because matter feeds it energy that flows continuously outward. A medium carrying a steady
+  outward flow of energy is the next thing to build, with the same careful bookkeeping.
+* **The target is known.** Read the companion as a field whose energy density equals that of the outflow. The balance
+  of energy flowing outward is then exactly the equation Bekenstein and Milgrom wrote for MOND in 1984 (in its deep
+  regime, with our constant a). So any route of this kind ends up with the MOND family's equation for cold matter, as
+  the galaxy data demand. What can be new is where it comes from, the heat term, collisions and the switch-off near
+  stars.
+
 ## 5. The data
 
 ### 5.1 Galaxies: 3,150 measured speeds, three constants
@@ -533,6 +572,17 @@ the constants; the current fit, in the project's own distances (`code/xcop_stati
 Why the stars can do it: they are concentrated in the middle, exactly where clusters need the most extra pull (near the
 very centre there is 1.4 to 7.5 times more mass in stars than in gas), and their random speeds of 300 to 1,200 km/s
 make each kilogram count dozens of times over.
+
+**A check without the X-ray input (round 20).** The stars' random speeds used above are worked out from the pull
+measured with X-rays, which is the very thing the law is asked to predict.
+* With the stars' speeds taken from the law's own pull instead, the typical miss grows from 25% to 40%, or 36% with the
+  companion's speed refitted to 186 km/s.
+* In the outskirts the law's own pull comes out 26–51% stronger than the X-ray pull. X-COP's own analysis allows only
+  about 6–10% of extra support there (inferred using the standard cosmology's share of ordinary matter).
+
+So the cluster fit leans on the X-ray input. Either the heat term is too strong in cluster outskirts, or the outer
+galaxies move on stretched orbits or are still falling in; both would lower their heat weight. Measured speed spreads
+of the cluster galaxies and lensing masses are the independent test.
 
 ### 5.3 Colliding clusters: the pull follows the galaxies
 
@@ -599,6 +649,11 @@ independent measurements (solid), the same raised by 5.4% (dashed), and Newton w
 * Four agree (Fornax, Leo I, Leo II, Sculptor). Six faint or spread-out ones come out 1.5 to 5 times too slow, because
   the Milky Way's own strong pull holds their companion back. Without that hold, six of the ten agree; the reason the
   hold would be weaker is still being sought.
+* **Rerun on today's law without the hold** (round 20; recorded as a comparison, not adopted):
+  * the whole suite scores 61 pass, 12 close and 4 fail, against 59, 11 and 7;
+  * Carina and Antlia 2 agree, and Sextans and Crater II come close;
+  * Draco and Ursa Minor stay below half their measured speeds;
+  * wide binaries would then show 18% extra pull at 20,000 AU.
 
 ### 5.5 The Solar System and wide binary stars
 
@@ -757,11 +812,21 @@ first idea to round 19, and listed every result we would prefer were different, 
   named the alternative, a pull that follows the companion's energy and flow rather than its rhythm, and it was
   never tried. It is the one that fits what the data select: the pull's strength set by all the companion present,
   its direction by the companion's net flow, warm contributions adding without cancelling.
-* **Most "ruled out"s from the models are narrow.** The models never had moving matter (heat was a frozen random
-  mixing), never reached the heat of cluster galaxies, and never had more than about a hundred pieces.
+* **Most "ruled out"s from the models are narrow.** The force experiments never had moving matter (heat was a
+  frozen random mixing; an earlier calculation of the glow alone did move its pieces), never reached the heat of
+  cluster galaxies, and never had more than about a hundred pieces.
 * **What stays closed is what should:** Newton, MOND and dark matter as answers; an extra pull that is not switched
   off near stars; a pull diluted by sources on all sides.
 * **Seven small slips in our write-ups were corrected** (listed in the audit); none changes the law or a forecast.
+
+**Round 20: a second route, and a stricter cluster check.** Following a review of the step back, a second way to
+derive the pull now has its own line of work: attraction from the energy of the shared state of matter and companion,
+not every piece keeping one rhythm (§4.6).
+* **The first results:** the attraction is robust, but a settled medium only changes how far it reaches. The law's long
+  reach must come from the companion's steady outward flow, which is the next calculation.
+* **On the data side:** without their X-ray input the clusters fit worse (40% instead of 25%, §5.2). That makes
+  independent measurements of the cluster galaxies' speeds and lensing masses the priority, alongside the frozen
+  lensing test.
 
 An independent review (25 September 2026) set out what a paper would need. In order:
 

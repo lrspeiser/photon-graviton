@@ -66,6 +66,7 @@ Candidates now in the folder:
 | `gd_x1p5_refit.json` | g_d × 1.5, then a and u refitted | the same, with the constants re-balanced |
 | `weak_hold.json` | external hold 10% | the six faint dwarf galaxies (round 7) |
 | `no_hold.json` | external hold 0, release over 200,000 AU (about 1 pc) | the dwarfs, once the release length protects the binaries (round 9) |
+| `no_hold_r12.json` | the same on the round-12 law (round 20, a registered comparison, not adopted) | the review's request to rerun it under today's inputs |
 | `gd_x1p25.json` | g_d × 1.25 | the smallest useful step toward the Sun's speed |
 | `combined.json` | all three, a and u refitted | together |
 | `heat_p175.json` | the heat weight k = 3 (σ/u)^1.75, a and u refitted (6.181 × 10⁻¹¹, 132.2 km/s) | the KiDS early/late gap allows p = 1.75–2 and p = 1.75 removes KiDS's level (round 13) |
@@ -155,6 +156,16 @@ The results README §29.3; the runs are kept in `../run-hot-shell-v19/suite/`.
 
 The data want the hot glow heard from all around: an absorbing stream only with an absorption length of about 300 kpc
 or more. None adopted.
+
+## Round 20: the no-hold rule on today's law (full tier, against the round-12 baseline)
+
+The results README §31.7; the run is kept in `../run-no-hold-v20/`. A registered comparison, held to the same standard as
+the release length (neither is derived); not adopted.
+
+| Law | Pass / close / fail | What moves |
+|---|---|---|
+| round 12 (adopted) | 59 / 11 / 7 | |
+| `no_hold_r12` | **61 / 12 / 4** | better: Carina 3.47 → 4.39 km/s (pass), Antlia 2 1.11 → 4.14 (pass), Sextans 2.10 → 4.45 (close), Crater II 1.00 → 3.35 (close), the ten dwarfs' χ² 137.7 → 60.4; unchanged failures: Draco 2.79 → 4.10 and Ursa Minor 3.44 → 4.18 (against 9.1 and 9.5), the Bullet's smaller half, KiDS's red lenses; changed predictions: Cassini's Q2 → 0 (the Galaxy's pull no longer enters the Sun's law), wide binaries 1.076 → 1.182 at 20,000 AU |
 
 ## What the candidates do now (quick tier, against the round-9 baseline)
 

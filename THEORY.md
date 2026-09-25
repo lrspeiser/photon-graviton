@@ -633,6 +633,36 @@ was never modelled; the data-selected rule (strength from all the companion pres
 warm parts adding without cancelling) is what it would give. Most model exclusions rest on simplifications (no moving
 pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and receivers).
 
+### Round 20: a second mechanism track (the energy and stress of a shared state)
+
+* **The reframing** (the owner's review, `research_work/results/hot-companion/energy-shift-v20/`): from "gravity
+  requires synchronized emitters" to "gravity comes from the energy and stress of a coupled matter–medium state". The
+  force is −⟨∂H/∂X⟩ in the shared state. Its supplied check (eight two-level pieces, exchange kernel
+  J = −C e^{−κr}/r) gives attraction through pair correlations with zero one-point amplitude at every partial filling
+  (rms force 1, 1.72, 2.15, 2.29, … for 1, 2, 3, 4 excitations; zero when all are excited). It also gives two limits:
+  a local-energy-only receiver gives M^q/r^(2q+1), and positive Yukawa mixtures are never slower than 1/r².
+* **Energized stiffening medium** (`code/anharmonic_medium_v20.py`): the lattice medium with + β X⁴/4, exact classical
+  statistics. The range falls from 3.18 to 0.93 spacings as the excitation grows (β = 1, T = 0.03 → 3), in agreement
+  with m_eff² = m₀² + 3β⟨X²⟩ to within 7%. Force exponents only steepen (≥ 2.8 at r = 3), including for energized
+  regions around a source. With the gap closed, −∇²φ + βφ³ = source gives 1/r² for weak sources and saturates for
+  strong ones (source exponent 1 → 0, distance exponent 2.1–2.8 → 2). The review's stop rule is met: equilibrium
+  media only change a length. Long reach and √M need a non-equilibrium medium, such as the companion's steady outward
+  energy flux.
+* **Probe outside a source cluster** (`code/finite_population_probe_v20.py`, Ns = 3–13, exact): all 1,260 cases
+  attract. At exact half filling the pull follows the kernel's Yukawa slope (exponent 4.9 → 8.5 over D = 2.5 → 6) with
+  mass exponent 1.1. With one or two excitations it is second order (exponent 9.7 → 17), with mass exponents 1.0
+  (Ns ≤ 9) and 0.35. There is no universal mass law and never √M/r in the linear medium.
+* **For comparison: the macroscopic target.** A static field whose energy density |∇Φ|²/8πG is the companion
+  outflow's (fed at ℓ, carried at u) obeys ∇·(|∇Φ|∇Φ) = 4πG a ρ with a = 2ℓ/u: AQUAL's deep-MOND equation
+  (Bekenstein & Milgrom 1984) with a₀ → a. Any conservative construction that reproduces the cold law lands in the
+  MOND family's field equations; what can be new is the origin, the heat term, collisions and the release.
+* **Data:**
+  * the cluster heat with the stars' speeds from the law's own gravity: X-COP 25% → 40% (36% with u refitted to
+    186 km/s); the law's gravity is 1.26–1.51× the hydrostatic gravity at 0.7–1 R500
+    (`code/xcop_selfconsistent_v20.py`);
+  * `no_hold` on the round-12 law: 61 / 12 / 4, dwarfs χ² 137.7 → 60.4, Draco and Ursa Minor unchanged, wide binaries
+    +18% at 20,000 AU (a registered comparison).
+
 ### What follows
 
 ```

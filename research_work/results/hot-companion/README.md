@@ -4943,8 +4943,8 @@ the result files. It changes nothing in the law, its constants or the locked for
   out, "a receiver that responds to the wave's energy rather than its phase" and "a pull drawn from the companion's
   energy flow", and it was never tried. The data-selected rule (strength from all the companion present, direction
   from its net flow, warm contributions adding without cancelling) is what such a pull would give.
-* **Most model exclusions are narrow.** The matter models never had moving pieces (heat was a frozen random mixing,
-  no Doppler shifts), never went beyond k = 16 (cluster galaxies have about 25–150), never had more than about 100
+* **Most model exclusions are narrow.** The force experiments never had moving pieces (heat was a frozen random
+  mixing, no Doppler shifts; round 15's glow-only `wave_dark_v15.py` did move its pieces, §31.1), never went beyond k = 16 (cluster galaxies have about 25–150), never had more than about 100
   pieces or sources more than 4.5 wavelengths across, and always used one scalar channel with senders and receivers
   identical. The strength-dependent rhythm rule of §23.7, which gave the heat term's pattern, was dropped with the
   move to the store model, not refuted. The reciprocity argument of §27.2 covers linear, passive, time-invariant,
@@ -4965,3 +4965,189 @@ the result files. It changes nothing in the law, its constants or the locked for
 6. §21.5: Mistele et al.'s four ratios are stellar-mass bins, not radii.
 7. §27.4: the one-way full-model runs (`run-one-matter-v17/oneway_*.json`) booked energy but ran with momentum
    bookkeeping off, so momentum balance was not checked there.
+
+## 31. Round 20, 25 September 2026: a second mechanism track, and the cluster heat without X-ray input
+
+The owner supplied a review of the step-back audit (§30) with a new calculation ([energy-shift-v20/](energy-shift-v20/),
+reproduced here to 1 part in 10⁹; its provenance in `energy-shift-v20/PROVENANCE.md`). Its recommendations:
+* Make the energy-shift approach the next independent mechanism track: "gravity comes from the energy and stress of a
+  coupled matter–medium state", not "gravity requires synchronized emitters".
+* Keep the adopted law and the phase-locked models as comparison cases.
+* Make the immediate goal a nonlinear, finite-population response.
+* In parallel, run the strongest data-side test: the cluster heat input without the X-ray gravity.
+
+This round takes the first steps on each. Nothing in the adopted law, its constants or the locked forecasts changes.
+
+### 31.1 The audit narrowed
+
+Four statements in `STEP-BACK-AUDIT.md` were broader than the evidence, and are now corrected there (its §8), in §30
+and in the blog and page:
+1. **"Pulled only if it feeds the wave"** holds for the travelling-wave recoil mechanism of §20.1, not for every force.
+   Conservative forces between bodies that share a field (Casimir) and optical pulling by redirected momentum are
+   different.
+2. **The 85-million-year drain (§23.9)** applies to continuous-emission mechanisms paid for by motion, not to every
+   static attraction.
+3. **"No moving matter".** Round 15's `wave_dark_v15.py` moves its pieces (free, colliding, rotating, boosted) and
+   recomputes their couplings, but measures only the released glow. The missing experiment is hot motion with the
+   forces, the wave and the recoil evolved together.
+4. **"No energy-sensitive receiver".** Round 15's `receivers_v15.py` has passive and below-threshold receivers whose
+   forces follow the intensity (§25.3). What is missing is a nonlinear, many-direction response.
+
+### 31.2 The supplied check: attraction through correlations, at any partial filling
+
+**Setup.** Eight identical two-level pieces share one medium, exchanging excitations through
+J(r) = −C e^{−κr}/r (C = 0.04/4π, κ = 1.354; the kernel comes from the owner's earlier structured-medium derivation,
+which was not supplied here). Every excitation number is diagonalised exactly.
+
+| excited pieces | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
+|---|---|---|---|---|---|---|---|---|---|
+| rms internal force ÷ one excitation | 0 | 1 | 1.72 | 2.15 | 2.29 | 2.15 | 1.72 | 1 | 0 |
+
+**Results:**
+* In every partially filled sector, all 28 pair contributions attract.
+* Every piece's own mean oscillation is exactly zero: the force comes from pair correlations, not from a rhythm on
+  any piece.
+* The force equals the energy's derivative to 6 × 10⁻¹³.
+* With every piece excited, the exchange force vanishes: more stored energy is not automatically more attraction.
+
+**Two algebraic limits.**
+* A receiver whose energy depends only on the local intensity I = KM/r² feels F = 2I f′(I)/r, so f = I^q gives
+  M^q/r^(2q+1): never √M/r.
+* A fixed-weight positive mixture of Yukawa forces never falls more slowly than 1/r².
+
+### 31.3 A stiffening medium, energized: only the range changes
+
+`code/anharmonic_medium_v20.py` → `run-anharmonic-medium-v20/` (`mc.json`, `hot.json`, `critical.json`).
+
+**The test.** This is the review's item 3. The gapped, positive-energy medium on a lattice gets a local quartic term,
+E = Σ[(m₀²/2)X² + (β/4)X⁴] + ½Σ(X_n − X_m)² with m₀² = 0.1, so the bare range is 3.2 spacings. It is energized to a
+temperature T; the classical statistics are exact (Metropolis, 32³, 40,000 sweeps).
+
+**How the results are read.** The static response χ(r) = ⟨X₀X_r⟩/T is the exchange kernel: two sources coupled to
+the medium feel a force proportional to χ′(r).
+
+| β | T | ⟨X²⟩ (MC; self-consistent estimate) | range (MC; estimate; bare 3.18) | force exponent at r = 3, 6 |
+|---|---|---|---|---|
+| 0 (control) | 1 | 0.2267; 0.2267 | 3.18; 3.18 | 2.76, 3.34 |
+| 0.3 | 0.03 / 0.3 / 3 | 0.0068 / 0.0659 / 0.568 | 3.13 / 2.64 / 1.35 | 2.79, 3.58 / 2.93, 3.84 / 3.74, 5.78 |
+| 1 | 0.03 / 0.3 / 1 / 3 | 0.0067 / 0.0625 / 0.187 / 0.473 | 2.76 / 1.91 / 1.24 / 0.93 | 2.83, 3.56 / 3.23, 4.49 / 3.81, 5.51 / 4.64, 6.21 |
+
+* **Uniform energizing only shortens the range**, as the self-consistent harmonic estimate m_eff² = m₀² + 3β⟨X²⟩
+  predicts (ranges agree to within 7%). The force falls more steeply as the excitation grows.
+* **Energized regions** do the same, in the local form of the same estimate (96³ static Green's function). Tried: a
+  hot ball of radius 6, heating falling as 1/r, and heating falling as 1/r².
+  * The smallest force exponent anywhere is 2.9–3.2, against 2.2 in the cold medium.
+  * The response does depend on where the medium is energized, but always toward a shorter reach.
+* **With the gap closed** (m₀ = 0; the exact radial solution of −∇²φ + βφ³ = source):
+  * weak sources give Newton's 1/r²;
+  * strong sources saturate. The source-strength exponent falls from 1 to 0, passing 1/2 only in a narrow crossover,
+    and the distance exponent is 2.1–2.8, tending to 2 with logarithmic corrections.
+  * The law's √M/r never appears.
+
+**Reading.** This is the review's stop rule: the nonlinearity only changed a Yukawa length. The general reason: in
+equilibrium, a medium with a gap has static correlations that die off exponentially, and a positive quartic term only
+widens the gap. Closing the gap gives at best Newton's 1/r², with the source's strength saturating. So the long reach
+and the square root cannot come from a settled medium. They must come from a medium held out of equilibrium, and
+energy flowing continuously outward from matter is the companion's defining property. That is the next construction.
+
+### 31.4 A probe outside a source: the pull's mass and distance laws in the linear medium
+
+`code/finite_population_probe_v20.py` → `run-finite-population-v20/finite_population_probe_v20.json`.
+
+**Setup.** The supplied Hamiltonian and constants, for a source cluster of Ns = 3–13 pieces at unit density (its
+"mass") and one probe piece at distance D = 2.5–6 from the cluster's centre:
+* six random clusters each;
+* the lowest state of each excitation sector, as in the supplied check (how it forms is not shown);
+* the pull on the probe is −⟨∂H/∂R⟩ (checked against the energy's finite difference to 5 × 10⁻¹³).
+
+| filling | distance exponent, D = 2.5 → 6 (Ns = 9 and 13) | mass exponent (median pull, D = 3 and 6) |
+|---|---|---|
+| exactly half the pieces excited | 4.9, 5.6, 6.2, 7.2, 8.5: exactly the kernel's own Yukawa slope, 2 + (κD)²/(1 + κD) | 1.13, 1.11 (Ns 3–13, odd) |
+| one excitation | 9.7, 11.0, 12.4, 14.3, 17.0 (twice the kernel's decay: the probe is correlated only at second order) | 1.0 for Ns 3–9, then levels off (0.8 overall) |
+| two excitations | the same as one | 0.34, 0.39 (Ns 4–13) |
+
+**Results:**
+* All 1,260 cases attract.
+* The cluster's arrangement moves the pull by up to 4.7× at one excitation and 1.6× at half filling.
+
+**Reading.** In the linear medium the pull is at best Newton-like in mass, never falls more slowly than the medium's
+own Yukawa kernel, and its mass law depends on the filling. That confirms the review: the next model must change the
+medium's collective spatial response itself, not its gap or its occupation alone.
+
+### 31.5 What the cold law asks of any static, conservative medium (for comparison, as the review asks)
+
+**Read the companion as a static field Φ:**
+* its energy density |∇Φ|²/8πG is the energy density of the outflow;
+* that outflow is fed at ℓ per kilogram and carried outward at u along ∇Φ.
+
+Conservation of that energy flux, ∇·(u |∇Φ| ∇Φ/8πG) = ℓρ, is ∇·(|∇Φ| ∇Φ) = 4πG a ρ with a = 2ℓ/u. That is exactly the
+deep-regime field equation of Bekenstein & Milgrom's AQUAL (1984), with their a₀ replaced by a; for a point mass it
+gives |∇Φ| = √(G M a)/r. (The law's guided stream, §22.4, gives the algebraic QUMOND form instead.)
+
+**What follows:**
+* Any conservative "energy and stress" construction that reproduces the cold law has one of the MOND family's field
+  equations at long range, as the galaxy data force.
+* What can be new lies elsewhere: the microscopic origin, the heat term with its collision rule, and the release near
+  stars.
+* This bears on the owner's field-equation decision (audit §4.3). Deriving our own field equation from the companion's
+  energy balance leads to the AQUAL form, which is also named in RULES.md §1.
+
+### 31.6 The cluster heat without the X-ray input
+
+`code/xcop_selfconsistent_v20.py` → `run-xcop-selfconsistent-v20/xcop_selfconsistent_v20.json`.
+
+**Setup.** The suite takes the stars' random speeds from the Jeans equation in the measured (hydrostatic) gravity, the
+quantity being predicted (§10.2; audit §1.6). Here they come from the law's own gravity, iterated to a fixed point
+with round 3's solver, on today's inputs: the round-12 law, static distances, deprojected stars.
+
+| stars' speeds from | u (km/s) | typical miss (rms ln) | mean miss at 0.1 … 1 R500 |
+|---|---|---|---|
+| the X-ray gravity (the suite) | 169.4 | 25% (0.222) | +0.10 +0.12 +0.08 +0.02 −0.09 −0.24 |
+| the law's own gravity | 169.4 | 40% (0.335) | +0.04 +0.03 −0.04 −0.11 −0.24 −0.40 |
+| the law's own gravity, u refitted | 186.2 | 36% (0.306) | +0.18 +0.17 +0.09 +0.01 −0.12 −0.28 |
+
+**The comparison, at 0.1 … 1 R500 (medians):**
+* The law's own gravity over the measured one: 0.83, 0.83, 0.94, 1.07, 1.26, 1.51.
+* The stars' speeds, law's own over X-ray: 0.94, 1.00, 1.05, 1.15, 1.22, 1.25.
+
+**Reading.** The cluster fit leans on the X-ray input. With the law's own gravity, the outskirts are over-predicted by
+up to 1.5×. That is well beyond the non-thermal pressure X-COP's own analysis finds, about 6% at R500 and 10% at R200
+(Eckert et al. 2019; that estimate uses the standard cosmology's baryon fraction). Three possible causes:
+* the heat term is too strong in cluster outskirts;
+* the outer galaxies' orbits are radially biased: the law's weight is 3 − 2β for an anisotropic spread (§24.1), and
+  β ≈ 0.3–0.5 in cluster outskirts would lower it by 20–33%;
+* the outer galaxies are still falling in.
+
+The decisive data are independent velocity-dispersion profiles of the cluster galaxies and weak-lensing masses.
+
+### 31.7 The no-hold rule on today's law (a registered comparison, not adopted)
+
+`regression/candidates/no_hold_r12.json` → `run-no-hold-v20/` (the suite report).
+
+**Setup.** Round 9's rule (the Galaxy's pull does not hold back a separate system's companion; release over 1 pc) on
+the round-12 law. It is held to the same standard as the release length, since neither is derived.
+
+**Results:**
+* **Tally:** 61 pass / 12 close / 4 fail, against 59 / 11 / 7.
+* **Improved:** Carina and Antlia 2 pass; Sextans and Crater II are close; the ten dwarfs' χ² falls from 137.7 to 60.4.
+* **Unchanged:** Draco and Ursa Minor stay at 4.1–4.2 km/s against 9.1 and 9.5.
+* **Changed predictions:** Cassini's Q₂ goes to zero, and wide binaries to +18% at 20,000 AU (against 7.6%).
+
+It stays a registered comparison until the rule has a physical basis; the blocker picture (§29.6) is one candidate.
+
+### 31.8 Where round 20 leaves the tracks
+
+* **The rhythm track** (§20.1–§29): kept as the active-recoil control.
+* **The energy-shift track:**
+  * attraction through correlations is robust (§31.2, §31.4);
+  * equilibrium media, stiffening or at their gap's closing, cannot give the law's reach or its square root (§31.3);
+  * the linear medium's pull is at best Newton-like in mass with a Yukawa range (§31.4).
+  
+  **Next:** a medium carrying the companion's steady outward energy flux, a non-equilibrium steady state. Derive its
+  energy density, energy flux, stress and correlations around a source, and the energy shift and force on a probe
+  (§31.5 gives the macroscopic target), with every watt booked. Then add real motion with its recoil.
+* **Data:**
+  * the cluster heat needs independent galaxy dispersions and weak-lensing masses (§31.6);
+  * the frozen lensing test (§29.7) stands;
+  * `no_hold_r12` and alternative static distance laws are registered comparisons.
+

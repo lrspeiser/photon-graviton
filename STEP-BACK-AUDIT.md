@@ -32,8 +32,10 @@ forecasts.** It corrects a few statements in the write-ups (§5).
      round 19's "no extra pull from heat".
    * Round 13 wrote down the way out ("a receiver that responds to the wave's energy rather than its phase";
      "a pull drawn from the companion's energy flow rather than its phase"). It was never taken.
-3. **Almost every "ruled out" from the models is narrower than it sounds.** The models never had:
-   * moving matter: "heat" was a frozen random mixing inside each piece, with no Doppler shifts;
+3. **Almost every "ruled out" from the models is narrower than it sounds.** The force experiments never had:
+   * moving matter: "heat" was a frozen random mixing inside each piece, with no Doppler shifts (round 15's
+     glow-only calculation did move its pieces, but no run has evolved hot motion, the forces, the wave and the recoil
+     together; narrowed after review, §8);
    * cluster-level heat: heat weights of at most 16, against about 25–150 for galaxies in clusters;
    * large sources: never more than about 100 pieces, or more than 4.5 wavelengths across.
    
@@ -180,8 +182,10 @@ planned in rounds 8–14 and never done.
 
 ### 2.1 The pull needs laser-like matter (round 10, confirmed in round 15)
 
-* **The general rule:** a wave pulls a body toward its source only if the body feeds the wave. This holds for any
-  wave far from its source.
+* **The rule for the mechanism our models use:** in a travelling wave far from its source, a body that takes its
+  pull from the wave's recoil is pulled toward the source only if it feeds the wave. *(Narrowed after review, §8: this
+  is not a general law of physics. Conservative forces between bodies that share a field, such as Casimir forces, and
+  pulling forces from redirected scattered light work differently.)*
   * Ordinary absorbing matter is pushed.
   * An amplifier below its threshold is pulled only as the wave's intensity, which gives a Newton-like 1/r² pull.
   * Only an inverted, self-sustained emitter locked a quarter of a beat ahead is pulled in proportion to the wave's
@@ -280,8 +284,10 @@ share the same radiator share, and to have an inertia in proportion to its quiet
 
 ### 2.9 Energy
 
-* The heat term's extra power cannot come from motion: that would drain the motion in 85 million years. It must come
-  from a store inside matter, and that store is postulated.
+* If the heat term is paid for by continuous extra emission, that power cannot come from the random motion itself:
+  it would drain the motion in 85 million years. It must then come from a store inside matter, and that store is
+  postulated. *(Narrowed after review, §8: this bill belongs to continuous-emission mechanisms; a static,
+  conservative attraction does not need a running power supply to hold a settled arrangement together.)*
 * The Sun would lose 2.3 parts in 10¹⁵ of its mass a year, about 30 times below current precision.
 
 ### 2.10 Gas not counting as hot
@@ -319,10 +325,10 @@ share the same radiator share, and to have an inertia in proportion to its quiet
   * heat cancelling like arrows: X-COP, 0.288 against 0.221;
   * a diluted pull from independent waves: galaxies and X-COP.
 * **Collisions:** lensing sitting on the gas in colliding clusters.
-* **General physics:**
-  * heat powered by motion (the 85-million-year drain);
-  * a wave pull without feeding;
-  * passive or below-threshold receivers giving the amplitude term;
+* **General physics, within the mechanisms they apply to** (§8):
+  * for continuous-emission mechanisms, heat powered by motion (the 85-million-year drain);
+  * for travelling-wave recoil, a pull without feeding;
+  * passive or below-threshold receivers giving the amplitude term (they respond to intensity, a Newton-like pull);
   * crests moving at light speed, ruled out by the planets and by the galaxies.
 * **Media:**
   * hot matter heard strictly one way, with outer shells unheard: 11 suite failures even after refitting;
@@ -341,7 +347,7 @@ share the same radiator share, and to have an inertia in proportion to its quiet
 
 | verdict | what it rests on |
 |---|---|
-| "Warm matter cannot pull harder" (rounds 13, 16, 17, 19) | Heat as a frozen random mixing: no moving pieces, no Doppler shifts. Heat weights of at most 16; cluster galaxies have about 25–150. 24–100 pieces. Sources 1–4.5 wavelengths across. One scalar wave carrying both cold and hot glow. Senders and receivers identical. A pull that works only through a locked rhythm. Three arrangements, with very large scatter between them (§2.5) |
+| "Warm matter cannot pull harder" (rounds 13, 16, 17, 19) | In the force experiments, heat as a frozen random mixing: no moving pieces, no Doppler shifts (round 15 moved pieces only to measure their glow). Heat weights of at most 16; cluster galaxies have about 25–150. 24–100 pieces. Sources 1–4.5 wavelengths across. One scalar wave carrying both cold and hot glow. Senders and receivers identical. A pull that works only through a locked rhythm. Three arrangements, with very large scatter between them (§2.5) |
 | "No internal structure keeps warm matter in tune" (round 17) | Designs that are linear, passive, unchanging and single-channel, in a reduced model; the two best designs never run in full |
 | "Free amplitudes do not escape" (round 13) | One seed, at rest, one sparse cloud |
 | The strength-dependent rhythm rule (rounds 13–14) | Dropped, not refuted |
@@ -367,7 +373,14 @@ share the same radiator share, and to have an inertia in proportion to its quiet
      would need no shared beat at all.
    * Neither our locked-rhythm models nor simple incoherent receivers can give that structure (§2.2), so it needs a
      genuinely new receiver or medium. **This is the most promising unopened door.**
-2. **Real motion in the matter models:** moving pieces with Doppler shifts, at cluster-level heat.
+   * *Refined after review (§8):* receivers that respond to intensity were tested (round 15's passive and
+     below-threshold amplifiers give a Newton-like, intensity pull). What was never built is a nonlinear response
+     that turns the companion's total energy and flow into the law. And "energy instead of rhythm" is not enough on
+     its own: a body whose energy depends only on the local strength of the companion cannot give both the square
+     root of mass and the inverse distance. The target is a force from the energy and stress of the coupled
+     matter–medium state.
+2. **Real motion in the force experiments:** moving pieces with Doppler shifts at cluster-level heat, with the
+   forces, the wave and the recoil evolved together (round 15 moved pieces only to measure their glow).
 3. **Large, dilute sources:** many wavelengths across, with hundreds or thousands of pieces, measured for the pull.
    So far only their glow has been measured.
 4. **Separate channels for the hot and the cold glow.** For example, the cold glow guided along gravity's lines and
@@ -506,3 +519,28 @@ None changes the law, a constant, a forecast or a figure.
 * Several of the data misses trace to conventions we can revisit cheaply.
 * The doors that are genuinely closed are the ones that should stay closed: Newton, MOND and dark matter as answers;
   an instant switch-on near stars; dilution. They are also what makes the law distinctive.
+
+---
+
+## 8. Refinements after review (25 September 2026)
+
+A review of this audit (supplied by the owner, with a new calculation; `research_work/results/hot-companion/
+energy-shift-v20/`, taken up in the log's §31) narrowed four statements. The corrections are made above.
+
+1. **"A wave pulls a body only if the body feeds it"** holds for the travelling-wave recoil mechanism our models use,
+   not for every force. Conservative forces between bodies sharing a field (Casimir forces) and pulling forces from
+   redirected scattered momentum (optical pulling, Chen et al. 2011) are different.
+2. **The 85-million-year drain** applies when the heat term is continuous extra emission paid for by motion. It is not
+   a cost of every static attraction.
+3. **"Our simulations never had moving matter"** was too broad. Round 15's `wave_dark_v15.py` moves its pieces
+   (free, colliding, rotating, boosted) and recomputes their couplings, but it measures only the released glow. The
+   missing experiment is hot motion with the forces, the wave and the recoil all evolved together.
+4. **"An energy-sensitive receiver was never tried"** was too broad. Round 15's `receivers_v15.py` has passive and
+   below-threshold receivers whose forces follow the wave's intensity. What is missing is the specific nonlinear,
+   many-direction response that would turn the companion's energy and flow into the law.
+
+The review also sharpened the way out: not "energy instead of rhythm" but "a force from the energy and stress of a
+coupled matter–medium state". Its new calculation shows attraction through correlations between pieces with no
+rhythm on any single piece (with up to eight pieces and any number of them excited), and it proves two limits. A body
+whose energy depends only on the local companion strength cannot give both of the law's exponents, and a fixed blend
+of short-range forces cannot fall more slowly than 1/r².
