@@ -123,6 +123,14 @@ def simulate(cfg):
         wgt = np.where(r[:, None] > r[None, :], 1.0, cfg['one_way']); np.fill_diagonal(wgt, 1.0)
         mask = np.kron(wgt, np.ones((4, 4)))
         mat.M = mat.M * mask; mat.dM = mat.dM * mask[None]; mat.Gam = mat.M.imag
+    if cfg.get('absorb') is not None:
+        # round 18 (code/absorbing_stream_v18.py): the stream absorbs the part of a wave that travels against it, amplitude
+        # exp(-kappa) per unit of distance travelled inward; the force carries the factor's derivative (product rule)
+        from absorbing_stream_v18 import absorption_factors, passivity
+        Tn, dTn = absorption_factors(x, cfg['absorb'])
+        Tb = np.kron(Tn, np.ones((4, 4))); dTb = np.stack([np.kron(dTn[c_], np.ones((4, 4))) for c_ in range(3)])
+        mat.dM = mat.dM * Tb[None] + mat.M[None] * dTb
+        mat.M = mat.M * Tb; mat.Gam = mat.M.imag
     w0 = 2 * mat.lam / p['G']
     amp0 = np.sqrt((p['W0'] * (1 - w0) - p['g_par'] * (1 + w0)) / (2 * p['G']))
     s = amp0 * np.exp(1j * rng.uniform(0, 2 * np.pi, N))
@@ -142,6 +150,7 @@ def simulate(cfg):
     acc = dict(src_out=0.0, src_out_cold=0.0, src_bright=0.0, pull=0.0, pull_s=0.0, pull_B=0.0, lead=0.0, fed=0.0,
                amp_r=0.0, amp_s=0.0, w_r=0.0, w_s=0.0, E_r=0.0, sync=0.0, lead_src=0.0, fed_src=0.0, E_src=0.0, pull_s_src=0.0)
     cnt = 0; mom = []; pulls = np.zeros(Nr); pulls_src = np.zeros(Nr); s_prev = None; freq = np.zeros(N)
+    book = dict(given=0.0, far=0.0, far_static=0.0, n=0)                  # round 18: the absorbing stream's energy booking
     lead_each = np.zeros(Nr); E2_each = np.zeros(Nr); fed_each = np.zeros(Nr)      # per receiver: R(sigma, r) needs them
     src4 = np.repeat(np.arange(N) < Ns, 4)
     Mrs = mat.M[4 * Ns::4, :][:, src4]
@@ -200,6 +209,11 @@ def simulate(cfg):
             if s_prev is not None:
                 freq += np.angle(s * np.conj(s_prev))
             s_prev = s.copy()
+            if cnt % 50 == 0 and cfg.get('absorb') is not None:
+                from absorbing_stream_v18 import far_field_absorbed
+                zb = mat.wave_vector(s, F)
+                Pf, Pf0, _ = far_field_absorbed(x, zb, g0, 1.0, cfg['absorb'])
+                book['given'] += float(np.imag(np.vdot(zb, mat.M @ zb))); book['far'] += Pf; book['far_static'] += Pf0; book['n'] += 1
             if cnt % 50 == 0 and cfg.get('momentum', True):
                 Pf, pf = far_field(x, z, g0, 1.0, ndir=2000)
                 mom.append(dict(force_sum=Ftot.sum(0).tolist(), momentum_out=pf.tolist(), power_far=Pf,
@@ -211,6 +225,13 @@ def simulate(cfg):
     res['rhythm_sources'] = float(np.mean(freq[:Ns]) / span); res['rhythm_receivers'] = float(np.mean(freq[Ns:]) / span)
     res['rhythm_spread_sources'] = float(np.std(freq[:Ns]) / span); res['rhythm_spread_receivers'] = float(np.std(freq[Ns:]) / span)
     E_end = energy(F, R, w, n)
+    if cfg.get('absorb') is not None and book['n']:
+        from absorbing_stream_v18 import passivity
+        pmin, pmax = passivity(mat.M)
+        res['absorb_booking'] = dict(given=book['given'] / book['n'], to_infinity=book['far'] / book['n'],
+                                     to_infinity_static=book['far_static'] / book['n'],
+                                     absorbed_fraction=1 - book['far'] / book['given'] if book['given'] else None,
+                                     passivity_min=pmin, passivity_max=pmax)
     res.update(cfg=cfg, pull_each=(pulls / cnt).tolist(), pull_s_src_each=(pulls_src / cnt).tolist(),
                lead_src_each=(lead_each / cnt).tolist(), intensity_src_each=(E2_each / cnt).tolist(), fed_src_each=(fed_each / cnt).tolist(),
                receiver_distance=np.linalg.norm(rc, axis=1).tolist(),

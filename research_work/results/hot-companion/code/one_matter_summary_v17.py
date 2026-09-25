@@ -20,8 +20,13 @@ KEYS = ('src_out', 'pull', 'pull_s', 'pull_s_src', 'pull_B', 'lead_src', 'E_src'
         'rhythm_sources', 'rhythm_receivers', 'amp_s', 'w_s', 'src_fam', 'src_chamber')
 
 
+def medium(c):
+    # round 18: runs with the absorbing stream are grouped by its kappa; otherwise by the one-way leak (None: two-way)
+    return ('absorb', c['absorb']) if c.get('absorb') is not None else c.get('one_way')
+
+
 def key(c):
-    return (c['structure'], c.get('one_way'), c['tag'], round(c.get('k', 0.0), 3), c.get('nu', 0.0), c['Ns'])
+    return (c['structure'], medium(c), c['tag'], round(c.get('k', 0.0), 3), c.get('nu', 0.0), c['Ns'])
 
 
 def summarize(path):
@@ -34,7 +39,14 @@ def summarize(path):
     rows = []
     for kk in order:
         rs = groups[kk]
-        row = dict(structure=kk[0], one_way=kk[1], tag=kk[2], k=kk[3], nu=kk[4], Ns=kk[5], arrangements=len(rs))
+        ab = isinstance(kk[1], tuple)
+        row = dict(structure=kk[0], one_way=None if ab else kk[1], tag=kk[2], k=kk[3], nu=kk[4], Ns=kk[5], arrangements=len(rs))
+        if ab:
+            row['absorb'] = kk[1][1]
+            bk = [r.get('absorb_booking') for r in rs if r.get('absorb_booking')]
+            if bk:
+                row['absorbed_fraction'] = float(np.mean([b['absorbed_fraction'] for b in bk]))
+                row['passivity_min'] = float(min(b['passivity_min'] for b in bk))
         for name in KEYS:
             v = np.array([r.get(name, np.nan) for r in rs], float)
             row[name] = float(np.nanmean(v)); row[name + '_sd'] = float(np.nanstd(v, ddof=1)) if len(v) > 1 else None
@@ -73,7 +85,8 @@ def main():
         rows = summarize(p)
         print(p)
         for r in rows:
-            head = (f"{r['structure']:>36} {'one-way' if r['one_way'] is not None else 'two-way':>7} Ns {r['Ns']:3d} {r['tag']:>11} "
+            med = f"absorb {r['absorb']:g}" if r.get('absorb') is not None else ('one-way' if r['one_way'] is not None else 'two-way')
+            head = (f"{r['structure']:>36} {med:>10} Ns {r['Ns']:3d} {r['tag']:>11} "
                     f"k {r['k']:5.1f} nu {r['nu']:4.0f} | out {r['src_out']:.3e} (x{r.get('output_rel_rest', 1):.2f}) wave x{r.get('wave_rel_rest', 1):.2f} | "
                     f"pull {r['pull']:+.2e} quiet {r['pull_s']:+.2e} from src {r['pull_s_src']:+.2e} (x{r.get('pull_from_sources_rel_rest', 1):.2f}) "
                     f"rad {r['pull_B']:+.2e} | step {r['lead_src']:+.2f} | spread {r['rhythm_spread_sources']:.1e} | E res {r['energy_residual_max']:.0e}")
