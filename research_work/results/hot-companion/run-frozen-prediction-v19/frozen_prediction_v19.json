@@ -1,0 +1,172 @@
+{
+ "frozen": "2026-09-25, round 19, before this project looked at any sigma-split lensing data",
+ "how_to_test": "split isolated KiDS/GAMA (or SDSS/HSC) lenses of one stellar-mass bin by measured sigma_e (e.g. SDSS/GAMA spectra), stack each group's excess surface density, convert to g_obs at the same g_bar bins, and compare the ratios with this table; the environment (isolation) and the mass bin must be the same for both groups.",
+ "k_by_sigma": {
+  "100": 1.0448936759144045,
+  "150": 2.35101077080741,
+  "200": 4.179574703657618,
+  "250": 6.5305854744650285,
+  "300": 9.40404308322964
+ },
+ "law": {
+  "a_SI": 6.297889390049439e-11,
+  "g_d_SI": 2.027287915237577e-10,
+  "name": "round12",
+  "reach_kpc": 2252.79332780985,
+  "u_kms": 169.4433686899687
+ },
+ "lens": {
+  "heat": "whole stellar mass at sigma_e (pure spheroid)",
+  "isolated": true,
+  "log10_Mstar": 10.6,
+  "sources_z": 0.75,
+  "z": 0.25
+ },
+ "statement": "At fixed stellar mass (log M* = 10.6) and isolation, bulge-dominated lenses whose stars move faster lens more: g_obs rises with the central stellar velocity dispersion sigma_e as tabulated (relative to sigma_e = 200 km/s), about +0.17 dex from 150 to 250 km/s in the deep regime; MOND predicts no dependence at fixed visible mass.",
+ "summary": {
+  "deep-regime expectation sqrt((1+k250)/(1+k150)), dex": 0.17582645925854695,
+  "sigma 100 vs 200 (median over reliable bins below 1e-12 m/s^2), dex": -0.18338719950833332,
+  "sigma 150 vs 200 (median over reliable bins below 1e-12 m/s^2), dex": -0.08742743804523298,
+  "sigma 200 vs 200 (median over reliable bins below 1e-12 m/s^2), dex": 0.0,
+  "sigma 250 vs 150, dex": 0.16409706607383445,
+  "sigma 250 vs 200 (median over reliable bins below 1e-12 m/s^2), dex": 0.07666962802860146,
+  "sigma 300 vs 200 (median over reliable bins below 1e-12 m/s^2), dex": 0.1437431383345244
+ },
+ "table": [
+  {
+   "g_bar": 1.3822e-15,
+   "reliable": false,
+   "sigma 100": -6.268128532596371e-16,
+   "sigma 150": -3.857309866213166e-15,
+   "sigma 200": 0.0,
+   "sigma 250": -1.027008751879263e-14,
+   "sigma 300": 9.546841918877437e-15
+  },
+  {
+   "g_bar": 2.4388e-15,
+   "reliable": false,
+   "sigma 100": -0.1905313569963359,
+   "sigma 150": -0.0904456395242255,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07884717305553819,
+   "sigma 300": 0.14752777906804573
+  },
+  {
+   "g_bar": 4.303e-15,
+   "reliable": false,
+   "sigma 100": -0.1902244968865319,
+   "sigma 150": -0.09031660232680033,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07875462026012861,
+   "sigma 300": 0.14736721042740492
+  },
+  {
+   "g_bar": 7.5922e-15,
+   "reliable": false,
+   "sigma 100": -0.18988866973263147,
+   "sigma 150": -0.09017532369448593,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07865323303699046,
+   "sigma 300": 0.14719128618284077
+  },
+  {
+   "g_bar": 1.3396e-14,
+   "reliable": false,
+   "sigma 100": -0.18946861780308877,
+   "sigma 150": -0.08999852357171081,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07852627432093703,
+   "sigma 300": 0.14697094841526026
+  },
+  {
+   "g_bar": 2.3635e-14,
+   "reliable": false,
+   "sigma 100": -0.1889243982635724,
+   "sigma 150": -0.08976931394752546,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07836154850909226,
+   "sigma 300": 0.14668499493862056
+  },
+  {
+   "g_bar": 4.1702e-14,
+   "reliable": false,
+   "sigma 100": -0.18821079029463997,
+   "sigma 150": -0.08946851082932203,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07814514379610256,
+   "sigma 300": 0.14630920881423912
+  },
+  {
+   "g_bar": 7.358e-14,
+   "reliable": false,
+   "sigma 100": -0.18727467279942417,
+   "sigma 150": -0.08907348091934725,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07786055829157325,
+   "sigma 300": 0.14581481686746087
+  },
+  {
+   "g_bar": 1.2982e-13,
+   "reliable": true,
+   "sigma 100": -0.1860447288085891,
+   "sigma 150": -0.08855371160777299,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07748542924626639,
+   "sigma 300": 0.14516276422732133
+  },
+  {
+   "g_bar": 2.2906e-13,
+   "reliable": true,
+   "sigma 100": -0.18443561606823158,
+   "sigma 150": -0.08787242342364182,
+   "sigma 200": 0.0,
+   "sigma 250": 0.0769925557633077,
+   "sigma 300": 0.14430541433168884
+  },
+  {
+   "g_bar": 4.0416e-13,
+   "reliable": true,
+   "sigma 100": -0.18233878294843503,
+   "sigma 150": -0.08698245266682413,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07634670029389522,
+   "sigma 300": 0.14318086233736
+  },
+  {
+   "g_bar": 7.131e-13,
+   "reliable": true,
+   "sigma 100": -0.17961712471581578,
+   "sigma 150": -0.08582359386347907,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07550227796729433,
+   "sigma 300": 0.14170869537154923
+  },
+  {
+   "g_bar": 1.2582e-12,
+   "reliable": true,
+   "sigma 100": -0.17611023458654956,
+   "sigma 150": -0.08432423826793657,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07440394415684892,
+   "sigma 300": 0.13979066563445505
+  },
+  {
+   "g_bar": 2.22e-12,
+   "reliable": true,
+   "sigma 100": -0.1716083315666522,
+   "sigma 150": -0.08238930276926286,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07297677266335661,
+   "sigma 300": 0.13729295514720558
+  },
+  {
+   "g_bar": 3.9169e-12,
+   "reliable": true,
+   "sigma 100": -0.16587886064047436,
+   "sigma 150": -0.07991020006249873,
+   "sigma 200": 0.0,
+   "sigma 250": 0.07113198116036402,
+   "sigma 300": 0.13405519478267577
+  }
+ ]
+}

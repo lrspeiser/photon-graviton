@@ -1,0 +1,3740 @@
+{
+ "experiment": "round 19: the absorbing stream as an exact wave medium (uniform stream, Fourier space)",
+ "units": "wavelength 1, k = 2 pi, c = 1; kappa per unit length",
+ "eps": 0.02,
+ "media": {
+  "inward, kappa 0.5, w 0.25k": {
+   "medium": "inward",
+   "kappa": 0.5,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.9483626733389905,
+    "force_over_power_c": -0.032454927872122466
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.0479778218375768,
+     "ray": 1.0,
+     "phase_shift": -0.03524349969113933
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9971331815312077,
+     "ray": 1.0,
+     "phase_shift": 0.017046362420595696
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9963632449619974,
+     "ray": 1.0,
+     "phase_shift": 0.009319936181739385
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9982700121520167,
+     "ray": 1.0,
+     "phase_shift": 0.004863460899341409
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.0324833672473646,
+     "ray": 1.0,
+     "phase_shift": 0.007773319432932312
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.0193186375218999,
+     "ray": 1.0,
+     "phase_shift": -0.006579813793122673
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9904047737993605,
+     "ray": 1.0,
+     "phase_shift": -0.008752852272558079
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0100582298395764,
+     "ray": 1.0,
+     "phase_shift": 9.221953716439127e-05
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.9602564198527671,
+     "ray": 1.0,
+     "phase_shift": 0.03077109653236595
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.9446065696155788,
+     "ray": 1.0,
+     "phase_shift": 0.04002847620741215
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.9241671745663772,
+     "ray": 1.0,
+     "phase_shift": 0.06012653243384996
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.8962213612992779,
+     "ray": 1.0,
+     "phase_shift": 0.0843188602383966
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.8604700277883244,
+     "ray": 0.8379668855787558,
+     "phase_shift": -0.038037011808831366
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.7432882057308419,
+     "ray": 0.7021885013265596,
+     "phase_shift": -0.0638750039945139
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.499124387839801,
+     "ray": 0.49306869139523984,
+     "phase_shift": -0.06894262499248399
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.25622656714145975,
+     "ray": 0.24311673443421425,
+     "phase_shift": -0.0571675178417851
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.7961853642689004,
+     "ray": 0.7788007830714049,
+     "phase_shift": -0.10748597302893474
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.6396459043872853,
+     "ray": 0.6065306597126334,
+     "phase_shift": -0.01650366449742465
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.3858478385604768,
+     "ray": 0.36787944117144233,
+     "phase_shift": -0.012382644291491628
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.13328640021089205,
+     "ray": 0.1353352832366127,
+     "phase_shift": 0.041777231582947424
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.015845577610964435,
+     "correction_against": 0.017960887414916922
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.02944408742362112,
+     "correction_against": 0.037844463872599536
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.04071237639190693,
+     "correction_against": 0.05938111708514214
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.06067217830597732,
+     "correction_against": 0.1304589677926267
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.016006107631539097,
+    "exact_max": 1.3225457559944784,
+    "ray_min": 0.021279455133731886,
+    "ray_max": 1.3722418220194483,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 2.3, w 0.25k": {
+   "medium": "inward",
+   "kappa": 2.3,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.8567438283324906,
+    "force_over_power_c": -0.09450229370165376
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.1400995995105534,
+     "ray": 1.0,
+     "phase_shift": -0.07879299564896887
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9632607229091271,
+     "ray": 1.0,
+     "phase_shift": 0.05766744423727633
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9801691311530105,
+     "ray": 1.0,
+     "phase_shift": 0.03632604931929231
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.990800243566828,
+     "ray": 1.0,
+     "phase_shift": 0.02060154985190837
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.0762629444542464,
+     "ray": 1.0,
+     "phase_shift": 0.02968277250212929
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.0627642764425913,
+     "ray": 1.0,
+     "phase_shift": -0.011469982761234286
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9706644543503591,
+     "ray": 1.0,
+     "phase_shift": -0.04058885054309975
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0395253271672371,
+     "ray": 1.0,
+     "phase_shift": 0.008641802689818153
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.8810283206238947,
+     "ray": 1.0,
+     "phase_shift": 0.07373831137880103
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.8204419893594198,
+     "ray": 1.0,
+     "phase_shift": 0.10895491308177709
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.7516132942603136,
+     "ray": 1.0,
+     "phase_shift": 0.15698152122518969
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.6807118534780093,
+     "ray": 1.0,
+     "phase_shift": 0.17038601623220648
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.6246872313472424,
+     "ray": 0.443448858026878,
+     "phase_shift": -0.116445218611563
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.34046168554893175,
+     "ray": 0.1966468896853422,
+     "phase_shift": -0.34080827730872454
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.06088528751117066,
+     "ray": 0.03866999922291914,
+     "phase_shift": -2.818387933772708
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.045220995404125726,
+     "ray": 0.001495368839900567,
+     "phase_shift": -0.5123091446698652
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.4428946859210654,
+     "ray": 0.3166367693790532,
+     "phase_shift": -0.37159024474129676
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.22538413349636874,
+     "ray": 0.10025884372280375,
+     "phase_shift": 0.37178636342851595
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.0728950118676099,
+     "ray": 0.010051835744633584,
+     "phase_shift": 2.1205280957091643
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.02258977569596954,
+     "ray": 0.00010103940183709342,
+     "phase_shift": 1.6776334156955905
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.04522292334486264,
+     "correction_against": 0.05126688417187807
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.08390001043826112,
+     "correction_against": 0.10786435261193981
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.1157087586627761,
+     "correction_against": 0.16882616837446685
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.1700836512631538,
+     "correction_against": 0.36573703609287106
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.016102225998671907,
+    "exact_max": 1.1892752370399677,
+    "ray_min": 0.034506660333875776,
+    "ray_max": 1.3096833060799717,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 5.0, w 0.25k": {
+   "medium": "inward",
+   "kappa": 5.0,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.7959222295047261,
+    "force_over_power_c": -0.13919024822058126
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.2033866780748494,
+     "ray": 1.0,
+     "phase_shift": -0.09428692308842306
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9176739675986427,
+     "ray": 1.0,
+     "phase_shift": 0.08915050107194018
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9560514500845037,
+     "ray": 1.0,
+     "phase_shift": 0.06315623235707522
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9781025305512846,
+     "ray": 1.0,
+     "phase_shift": 0.039511486207849056
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.09381064616816,
+     "ray": 1.0,
+     "phase_shift": 0.05099555230823271
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.0974521960020052,
+     "ray": 1.0,
+     "phase_shift": -0.004847129049758145
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9630993612351558,
+     "ray": 1.0,
+     "phase_shift": -0.07842917698427783
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.065541913002137,
+     "ray": 1.0,
+     "phase_shift": 0.028945240178437182
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.8197827572137492,
+     "ray": 1.0,
+     "phase_shift": 0.09317036338126355
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.7226092306638134,
+     "ray": 1.0,
+     "phase_shift": 0.14629560582019563
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.6280018255920347,
+     "ray": 1.0,
+     "phase_shift": 0.1807898557381124
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.5730892615941083,
+     "ray": 1.0,
+     "phase_shift": 0.1280066071812085
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.4798250342972106,
+     "ray": 0.1707137753997681,
+     "phase_shift": -0.19084097249575493
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.164752465525542,
+     "ray": 0.029143193111242464,
+     "phase_shift": -1.0537303224372188
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.18602341032085323,
+     "ray": 0.0008493257047191702,
+     "phase_shift": 2.969659856031149
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.09504307201380627,
+     "ray": 7.213541526967151e-07,
+     "phase_shift": -0.8302575026157868
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.23446703314813128,
+     "ray": 0.0820849986238988,
+     "phase_shift": -0.7552040268031881
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.17523036321594485,
+     "ray": 0.006737946999085467,
+     "phase_shift": 1.0788204528243641
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.10235616724447015,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 1.8515926592227216
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.05500784517048297,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 1.5927040441159475
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.06545903185672496,
+     "correction_against": 0.07422145685563929
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.12128382483095652,
+     "correction_against": 0.15598414250717002
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.16691065587250362,
+     "correction_against": 0.24366522976272248
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.24263404787115134,
+     "correction_against": 0.5220674061945485
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.015846635958151004,
+    "exact_max": 1.117069529490264,
+    "ray_min": 0.047523515365821306,
+    "ray_max": 1.2709483237502737,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 10.0, w 0.25k": {
+   "medium": "inward",
+   "kappa": 10.0,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.7430150787820359,
+    "force_over_power_c": -0.18107984618019066
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.25790382846303,
+     "ray": 1.0,
+     "phase_shift": -0.0998767720501362
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.86182428470942,
+     "ray": 1.0,
+     "phase_shift": 0.11687572256486581
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9195909856581925,
+     "ray": 1.0,
+     "phase_shift": 0.09171217549243867
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9551125495834409,
+     "ray": 1.0,
+     "phase_shift": 0.06429987858772161
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.1003826818236329,
+     "ray": 1.0,
+     "phase_shift": 0.07494109689272267
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.1303483827378782,
+     "ray": 1.0,
+     "phase_shift": 0.010208999667043894
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9693406273392015,
+     "ray": 1.0,
+     "phase_shift": -0.12188487340320416
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.082873034734147,
+     "ray": 1.0,
+     "phase_shift": 0.061723142175328705
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.7591298965840049,
+     "ray": 1.0,
+     "phase_shift": 0.10366292770355519
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.6307310952388683,
+     "ray": 1.0,
+     "phase_shift": 0.16545186028265188
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.5381817641708516,
+     "ray": 1.0,
+     "phase_shift": 0.14148054174490052
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.5332928124306362,
+     "ray": 1.0,
+     "phase_shift": 0.06273954765741448
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.3627027633286579,
+     "ray": 0.029143193111242464,
+     "phase_shift": -0.29390899882541716
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.1837401319065186,
+     "ray": 0.0008493257047191702,
+     "phase_shift": -2.088125656335904
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.18818853895201446,
+     "ray": 7.213541526967151e-07,
+     "phase_shift": 2.6526692146388204
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.11852631070520843,
+     "ray": 5.203518136127959e-13,
+     "phase_shift": -1.303875001792181
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.13489035778975006,
+     "ray": 0.006737946999085467,
+     "phase_shift": -1.7738745889616263
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.20010739580713963,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 1.2438359354694963
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.14520640389966388,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 1.0309627287400418
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.09721626956873937,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": 1.3993970611500484
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.08370733881635886,
+     "correction_against": 0.09495729377512702
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.154860732802526,
+     "correction_against": 0.1993570275787441
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.21261590594453683,
+     "correction_against": 0.3108337590582997
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.30537323212074186,
+     "correction_against": 0.6587439504173026
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.015454296442535868,
+    "exact_max": 1.0640932635506486,
+    "ray_min": 0.06382278366730351,
+    "ray_max": 1.2315015475420976,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 20.0, w 0.25k": {
+   "medium": "inward",
+   "kappa": 20.0,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.6964179212376627,
+    "force_over_power_c": -0.22090437250096304
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.3038974259017846,
+     "ray": 1.0,
+     "phase_shift": -0.09951428700462374
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.8003666884456423,
+     "ray": 1.0,
+     "phase_shift": 0.13924748763283024
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.8699859684951239,
+     "ray": 1.0,
+     "phase_shift": 0.1185347163907648
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9173455577877174,
+     "ray": 1.0,
+     "phase_shift": 0.09344135355561015
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.0982458926440826,
+     "ray": 1.0,
+     "phase_shift": 0.10141124642669537
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.160285419769305,
+     "ray": 1.0,
+     "phase_shift": 0.0321006170484134
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9916055017653732,
+     "ray": 1.0,
+     "phase_shift": -0.1616197141679712
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0811722961855028,
+     "ray": 1.0,
+     "phase_shift": 0.0983862611325252
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.6987628804560595,
+     "ray": 1.0,
+     "phase_shift": 0.1071442523138337
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.5492950622442726,
+     "ray": 1.0,
+     "phase_shift": 0.16188891649134707
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.49598537691396893,
+     "ray": 1.0,
+     "phase_shift": 0.0563103771206927
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.5191972973060094,
+     "ray": 1.0,
+     "phase_shift": 0.036589765985108554
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.2695103509350896,
+     "ray": 0.0008493257047191702,
+     "phase_shift": -0.4545368627451677
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.26621634541502215,
+     "ray": 7.213541526967151e-07,
+     "phase_shift": -2.453472126145307
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.1688240743080642,
+     "ray": 5.203518136127959e-13,
+     "phase_shift": 2.1877422977882635
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.1320490860149124,
+     "ray": 2.7076600993012583e-25,
+     "phase_shift": -1.5541785710099953
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.2081918866749339,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": -2.706911449267325
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.2133777699473284,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 1.032227564400477
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.23920719486289427,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": 0.6444865221279852
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.1548882015038809,
+     "ray": 1.804851387845415e-35,
+     "phase_shift": 1.0454942106083225
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.10050992166010396,
+     "correction_against": 0.1141158061392333
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.18561090339294423,
+     "correction_against": 0.23935769587257794
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.2541381519642337,
+     "correction_against": 0.37252256283153456
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.36007402380762443,
+     "correction_against": 0.7808444675708688
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.014985288147941624,
+    "exact_max": 1.023230839473414,
+    "ray_min": 0.08623115033886573,
+    "ray_max": 1.1926076785669957,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 0.5, w 0.5k": {
+   "medium": "inward",
+   "kappa": 0.5,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.9702875140235125,
+    "force_over_power_c": -0.014883434513588058
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.0162485930961087,
+     "ray": 1.0,
+     "phase_shift": -0.01331800778433427
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9938409951823778,
+     "ray": 1.0,
+     "phase_shift": 0.007539584643569298
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9968681650192899,
+     "ray": 1.0,
+     "phase_shift": 0.003999107201866988
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9983837711921397,
+     "ray": 1.0,
+     "phase_shift": 0.002084968800969444
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.013402223464259,
+     "ray": 1.0,
+     "phase_shift": 0.013269757359900878
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.0151555255440319,
+     "ray": 1.0,
+     "phase_shift": -0.004867900961101031
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9902702294676652,
+     "ray": 1.0,
+     "phase_shift": -0.008660547818321486
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0100979408141801,
+     "ray": 1.0,
+     "phase_shift": 4.297482764176055e-05
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.9567727766588845,
+     "ray": 1.0,
+     "phase_shift": 0.025329936395992854
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.9431853758198473,
+     "ray": 1.0,
+     "phase_shift": 0.04193162107002042
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.9235167308629547,
+     "ray": 1.0,
+     "phase_shift": 0.06200539846423043
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.8958080226249308,
+     "ray": 1.0,
+     "phase_shift": 0.08506903630214085
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.8696870609036409,
+     "ray": 0.8379668855787558,
+     "phase_shift": -0.03728676159624303
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.7306407607295315,
+     "ray": 0.7021885013265596,
+     "phase_shift": -0.06515394076174284
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.48556200351070117,
+     "ray": 0.49306869139523984,
+     "phase_shift": -0.07371390127737702
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.25308851682483907,
+     "ray": 0.24311673443421425,
+     "phase_shift": -0.05808905837156127
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.8118430430088821,
+     "ray": 0.7788007830714049,
+     "phase_shift": -0.0892372799939774
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.6110193873884929,
+     "ray": 0.6065306597126334,
+     "phase_shift": -0.04595127858167725
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.36698796169176173,
+     "ray": 0.36787944117144233,
+     "phase_shift": -0.027559187300106515
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.13279313744549798,
+     "ray": 0.1353352832366127,
+     "phase_shift": 0.020404373285575716
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.00971828017596506,
+     "correction_against": 0.012164769428180556
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.017088359501088002,
+     "correction_against": 0.026787784167317984
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.022278307509787872,
+     "correction_against": 0.04377580322410915
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.02734966442580823,
+     "correction_against": 0.10665680846043228
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.01742865126679224,
+    "exact_max": 1.3422052798434487,
+    "ray_min": 0.021279455133731886,
+    "ray_max": 1.3722418220194483,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 2.3, w 0.5k": {
+   "medium": "inward",
+   "kappa": 2.3,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.9037592167004052,
+    "force_over_power_c": -0.04812764373014308
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.0571159099670446,
+     "ray": 1.0,
+     "phase_shift": -0.041525953521106634
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.97318508334815,
+     "ray": 1.0,
+     "phase_shift": 0.02840150461204301
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9859152630431675,
+     "ray": 1.0,
+     "phase_shift": 0.01649975953572714
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9926241978364991,
+     "ray": 1.0,
+     "phase_shift": 0.009061800992198051
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.0409992262184755,
+     "ray": 1.0,
+     "phase_shift": 0.047744759081062446
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.0585198754845002,
+     "ray": 1.0,
+     "phase_shift": -0.011305128217770855
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9685268489045415,
+     "ray": 1.0,
+     "phase_shift": -0.0408594162235618
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0402194848050943,
+     "ray": 1.0,
+     "phase_shift": 0.008367446174830491
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.8569115672104257,
+     "ray": 1.0,
+     "phase_shift": 0.08381449252875359
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.8064945227230919,
+     "ray": 1.0,
+     "phase_shift": 0.13049512814670727
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.7435182601784875,
+     "ray": 1.0,
+     "phase_shift": 0.16216708751851588
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.6786514302003045,
+     "ray": 1.0,
+     "phase_shift": 0.1680158496114264
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.5934754494818554,
+     "ray": 0.443448858026878,
+     "phase_shift": -0.14217475664244117
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.2784968662877324,
+     "ray": 0.1966468896853422,
+     "phase_shift": -0.4598511269076873
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.06026536758216589,
+     "ray": 0.03866999922291914,
+     "phase_shift": -2.7885916140266067
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.05117766784393989,
+     "ray": 0.001495368839900567,
+     "phase_shift": -0.45725084441686376
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.4185253499243713,
+     "ray": 0.3166367693790532,
+     "phase_shift": -0.40301647719842293
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.09142507831412677,
+     "ray": 0.10025884372280375,
+     "phase_shift": 0.7403288956302467
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.033488618568097324,
+     "ray": 0.010051835744633584,
+     "phase_shift": 2.0156565107342654
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.013085656379590145,
+     "ray": 0.00010103940183709342,
+     "phase_shift": 2.1965379822780067
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.033353991959334174,
+     "correction_against": 0.04153604184473684
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.058680840615139486,
+     "correction_against": 0.0910436598372554
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.07644460302388516,
+     "correction_against": 0.1478911400070933
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.09302672416266562,
+     "correction_against": 0.3509436302962705
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.020220813854720923,
+    "exact_max": 1.2231673227813311,
+    "ray_min": 0.034506660333875776,
+    "ray_max": 1.3096833060799717,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 5.0, w 0.5k": {
+   "medium": "inward",
+   "kappa": 5.0,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.8505741847766398,
+    "force_over_power_c": -0.07469874204322748
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.0952509367193668,
+     "ray": 1.0,
+     "phase_shift": -0.06137893491024958
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9480319318740487,
+     "ray": 1.0,
+     "phase_shift": 0.04963503174556503
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9709316176566947,
+     "ray": 1.0,
+     "phase_shift": 0.03127677234718467
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9842941282984378,
+     "ray": 1.0,
+     "phase_shift": 0.018222353276882118
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.059814648881896,
+     "ray": 1.0,
+     "phase_shift": 0.08146166970002496
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.102343124506511,
+     "ray": 1.0,
+     "phase_shift": -0.008696626795318687
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9587910440846591,
+     "ray": 1.0,
+     "phase_shift": -0.0823984515012552
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0672928509964483,
+     "ray": 1.0,
+     "phase_shift": 0.02962208445645334
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.7732514702450993,
+     "ray": 1.0,
+     "phase_shift": 0.1289909513856947
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.6929866461793245,
+     "ray": 1.0,
+     "phase_shift": 0.18062827088786548
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.6178125320979165,
+     "ray": 1.0,
+     "phase_shift": 0.16751986399895458
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.5761008523850705,
+     "ray": 1.0,
+     "phase_shift": 0.12397947240830061
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.40141447808950087,
+     "ray": 0.1707137753997681,
+     "phase_shift": -0.287076873890099
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.16877838718718233,
+     "ray": 0.029143193111242464,
+     "phase_shift": -1.5581079476827995
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.1427612731001727,
+     "ray": 0.0008493257047191702,
+     "phase_shift": 2.8421127388484146
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.0928108345754816,
+     "ray": 7.213541526967151e-07,
+     "phase_shift": -0.9089156457259117
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.1941546177247961,
+     "ray": 0.0820849986238988,
+     "phase_shift": -1.1582488546396643
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.17069036796081466,
+     "ray": 0.006737946999085467,
+     "phase_shift": 1.879088990453555
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.05942765500589804,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 1.9918580093823814
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.030087281748825138,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 2.1248305936420606
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.05407669815750487,
+     "correction_against": 0.06700599593386171
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.0951937558645928,
+     "correction_against": 0.14621921393417184
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.12392877758785,
+     "correction_against": 0.23615375613747364
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.14964683665756287,
+     "correction_against": 0.5463954063090561
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.022111615693001456,
+    "exact_max": 1.1534503032979262,
+    "ray_min": 0.047523515365821306,
+    "ray_max": 1.2709483237502737,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 10.0, w 0.5k": {
+   "medium": "inward",
+   "kappa": 10.0,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.7994681484042547,
+    "force_over_power_c": -0.10087993926658903
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.137945598757437,
+     "ray": 1.0,
+     "phase_shift": -0.0776383048812989
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9141356321831886,
+     "ray": 1.0,
+     "phase_shift": 0.07483403499268519
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9476578042993692,
+     "ray": 1.0,
+     "phase_shift": 0.051311611189615476
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9701133639555559,
+     "ray": 1.0,
+     "phase_shift": 0.032178075470864695
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.0745461330670485,
+     "ray": 1.0,
+     "phase_shift": 0.1206150113921404
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.1505696441189444,
+     "ray": 1.0,
+     "phase_shift": 0.0038302458567734217
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.9674849833631901,
+     "ray": 1.0,
+     "phase_shift": -0.13233729421342033
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0832833352678055,
+     "ray": 1.0,
+     "phase_shift": 0.06473998285861751
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.6886788735757814,
+     "ray": 1.0,
+     "phase_shift": 0.16633650049340482
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.5890594447074857,
+     "ray": 1.0,
+     "phase_shift": 0.18656637123003691
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.5447320391085163,
+     "ray": 1.0,
+     "phase_shift": 0.10360777862600595
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.5350986155501671,
+     "ray": 1.0,
+     "phase_shift": 0.06879892859807756
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.2585292586415995,
+     "ray": 0.029143193111242464,
+     "phase_shift": -0.5812177937453765
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.23950541778573214,
+     "ray": 0.0008493257047191702,
+     "phase_shift": -2.1341704021918515
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.1652542435900771,
+     "ray": 7.213541526967151e-07,
+     "phase_shift": 2.403810053467149
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.11744871708041224,
+     "ray": 5.203518136127959e-13,
+     "phase_shift": -1.283751455117356
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.233433502753481,
+     "ray": 0.006737946999085467,
+     "phase_shift": -2.4149056472191224
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.2135902837927892,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 1.445669326568377
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.13520396385917482,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 1.6560735004473621
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.0651788546182015,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": 1.9780637233141583
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.07588627420373546,
+     "correction_against": 0.09351776817683295
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.1336537680625312,
+     "correction_against": 0.2030595507436637
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.1738384212746043,
+     "correction_against": 0.32583683627125476
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.2080168114741085,
+     "correction_against": 0.7326408148747804
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.023845646836435596,
+    "exact_max": 1.1007644802971746,
+    "ray_min": 0.06382278366730351,
+    "ray_max": 1.2315015475420976,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "inward, kappa 20.0, w 0.5k": {
+   "medium": "inward",
+   "kappa": 20.0,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.751522181475812,
+    "force_over_power_c": -0.1267627692704586
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.1847837968584956,
+     "ray": 1.0,
+     "phase_shift": -0.09018139022834805
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.871068740408411,
+     "ray": 1.0,
+     "phase_shift": 0.10411790869218257
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.91323332835478,
+     "ray": 1.0,
+     "phase_shift": 0.07756144070074847
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9462833362356001,
+     "ray": 1.0,
+     "phase_shift": 0.05288439515795626
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 1.0845013355031896,
+     "ray": 1.0,
+     "phase_shift": 0.1646614882153392
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 1.1970852159218628,
+     "ray": 1.0,
+     "phase_shift": 0.027450687911042417
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 1.000278642328365,
+     "ray": 1.0,
+     "phase_shift": -0.17330810471610741
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 1.0764604395908393,
+     "ray": 1.0,
+     "phase_shift": 0.09997259718463705
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.6060190539004835,
+     "ray": 1.0,
+     "phase_shift": 0.18734468973255772
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.5128890874775178,
+     "ray": 1.0,
+     "phase_shift": 0.12820951738283895
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.5234750792379912,
+     "ray": 1.0,
+     "phase_shift": 0.04433780493841721
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.5169459112394088,
+     "ray": 1.0,
+     "phase_shift": 0.03551469138859827
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.19680874628616185,
+     "ray": 0.0008493257047191702,
+     "phase_shift": -1.114839241442513
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.275435870560915,
+     "ray": 7.213541526967151e-07,
+     "phase_shift": -2.231611268698555
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.18312622677042148,
+     "ray": 5.203518136127959e-13,
+     "phase_shift": 2.176081715478597
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.12807362370534797,
+     "ray": 2.7076600993012583e-25,
+     "phase_shift": -1.528743971489746
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.3795493126117174,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": -2.8376244482863053
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.2790539182073966,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 0.8020803773276698
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.22399473567326958,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": 1.255366468697623
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.13488088781811328,
+     "ray": 1.804851387845415e-35,
+     "phase_shift": 1.6598850650933628
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.09855431085344946,
+     "correction_against": 0.12077206343918445
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.17361476862661848,
+     "correction_against": 0.2608237310335437
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.22548609183641277,
+     "correction_against": 0.4155523419404787
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.2667556646023967,
+     "correction_against": 0.9050707981738898
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.02546294097373654,
+    "exact_max": 1.0577373618161667,
+    "ray_min": 0.08623115033886573,
+    "ray_max": 1.1926076785669957,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 0.5, w 0.25k": {
+   "medium": "cardioid",
+   "kappa": 0.5,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.8974401836930427,
+    "force_over_power_c": -0.031366171769821455
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 1.0158699890061038,
+     "ray": 1.0,
+     "phase_shift": 0.03729008767671063
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9972873718247005,
+     "ray": 1.0,
+     "phase_shift": 0.038351862404507164
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.995922799365942,
+     "ray": 1.0,
+     "phase_shift": 0.039172577216403645
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9977158240628955,
+     "ray": 1.0,
+     "phase_shift": 0.03948433394747973
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.980752076347218,
+     "ray": 0.9640504493872408,
+     "phase_shift": 0.022812521993715834
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.9322906515978462,
+     "ray": 0.9293932689637409,
+     "phase_shift": 0.023510725097671027
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.8653058511457346,
+     "ray": 0.8637718483951085,
+     "phase_shift": 0.023102467773617883
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.7481673194837098,
+     "ray": 0.7461018060799022,
+     "phase_shift": 0.020068602362156695
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.8981271268161962,
+     "ray": 0.8824969025845955,
+     "phase_shift": -0.0033156516051463885
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.7962492447501257,
+     "ray": 0.7788007830714049,
+     "phase_shift": -0.0011281444861405596
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.6201166496988227,
+     "ray": 0.6065306597126334,
+     "phase_shift": 0.00030861092676971784
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.37338323728657064,
+     "ray": 0.3678794411714424,
+     "phase_shift": 0.0018914516780909661
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.8201736747605873,
+     "ray": 0.8078423526138261,
+     "phase_shift": -0.015208821605302986
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.685176174202762,
+     "ray": 0.6526092666766413,
+     "phase_shift": -0.013243551169329626
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.44695588515482176,
+     "ray": 0.42589885495222357,
+     "phase_shift": -0.00413700064629812
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.18373556600973323,
+     "ray": 0.18138983464961517,
+     "phase_shift": 0.02298536057720871
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.7897590346323812,
+     "ray": 0.7788007830714049,
+     "phase_shift": -0.015457930304239283
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.64503579060092,
+     "ray": 0.6065306597126334,
+     "phase_shift": -0.015357711121760148
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.3904282525377582,
+     "ray": 0.36787944117144233,
+     "phase_shift": -0.0013504148658057416
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.1357012009676384,
+     "ray": 0.1353352832366127,
+     "phase_shift": 0.0448030038447551
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.03246095417256152,
+     "correction_against": 0.034502257063034024
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.060695085280856646,
+     "correction_against": 0.06878814883351628
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.08280834001110067,
+     "correction_against": 0.10075676047508231
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.10233293965569132,
+     "correction_against": 0.16963100155869387
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.016510749236135186,
+    "exact_max": 1.2234408083028254,
+    "ray_min": 0.035708366665715086,
+    "ray_max": 1.2987538993092533,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 2.3, w 0.25k": {
+   "medium": "cardioid",
+   "kappa": 2.3,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.7142039350570664,
+    "force_over_power_c": -0.08465571427853047
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.9825734038982077,
+     "ray": 1.0,
+     "phase_shift": 0.13274069671782673
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9559019139923979,
+     "ray": 1.0,
+     "phase_shift": 0.1566313284032413
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9693040064542875,
+     "ray": 1.0,
+     "phase_shift": 0.1697181608167173
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9776775820032828,
+     "ray": 1.0,
+     "phase_shift": 0.17562273609875736
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.8970146528633368,
+     "ray": 0.845004267942886,
+     "phase_shift": 0.06814386507892549
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.7474001659276285,
+     "ray": 0.7140322128416927,
+     "phase_shift": 0.06738447568719733
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.5383040636136791,
+     "ray": 0.5098420009756043,
+     "phase_shift": 0.048322752202629854
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.27143969473212987,
+     "ray": 0.2599388659588081,
+     "phase_shift": -0.029551532387107164
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.6981773071945689,
+     "ray": 0.5627048688069558,
+     "phase_shift": -0.027525212696121806
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.4191840140287018,
+     "ray": 0.31663676937905333,
+     "phase_shift": -0.003918957021751891
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.10767356652259495,
+     "ray": 0.10025884372280379,
+     "phase_shift": 0.03502193570972781
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.0009715354912103021,
+     "ray": 0.010051835744633595,
+     "phase_shift": -2.979518020246655
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.5390756602987385,
+     "ray": 0.37471617764711074,
+     "phase_shift": -0.0015629969236045196
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.2513793114466825,
+     "ray": 0.14041221379046107,
+     "phase_shift": 0.04127460485774677
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.020584807177195966,
+     "ray": 0.019715589781538145,
+     "phase_shift": 2.289376608198501
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.001858739003382782,
+     "ray": 0.0003887044804338914,
+     "phase_shift": -2.220289402456464
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.494100175562807,
+     "ray": 0.3166367693790532,
+     "phase_shift": 0.05064824850532357
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.20300923379172012,
+     "ray": 0.10025884372280375,
+     "phase_shift": 0.09451199301282473
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.03815733592192645,
+     "ray": 0.010051835744633584,
+     "phase_shift": 2.6767389878839856
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.0028085529858243217,
+     "ray": 0.00010103940183709342,
+     "phase_shift": -0.9384548237852699
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.09283084644621693,
+     "correction_against": 0.09811640332664251
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.17339091007638485,
+     "correction_against": 0.1942305408672519
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.23575187123827768,
+     "correction_against": 0.2815491119002765
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.2848920115886753,
+     "correction_against": 0.4489381963437893
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.017455869848964207,
+    "exact_max": 0.9149820372261523,
+    "ray_min": 0.09486900142801458,
+    "ray_max": 1.0840664912913418,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 5.0, w 0.25k": {
+   "medium": "cardioid",
+   "kappa": 5.0,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.5925628991159262,
+    "force_over_power_c": -0.11669688296194435
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.907736979745234,
+     "ray": 1.0,
+     "phase_shift": 0.21846242883092712
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.8841885764127663,
+     "ray": 1.0,
+     "phase_shift": 0.29199138848548106
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9140023369610423,
+     "ray": 1.0,
+     "phase_shift": 0.3346485581877992
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9250642804893093,
+     "ray": 1.0,
+     "phase_shift": 0.35800694283648504
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.8020659779303309,
+     "ray": 0.6934219965323514,
+     "phase_shift": 0.1048291440721501
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.5776683072322706,
+     "ray": 0.48083406527491235,
+     "phase_shift": 0.09095264402491987
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.2825819926125337,
+     "ray": 0.23120139832879866,
+     "phase_shift": -0.025221599849463535
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.060054116291834575,
+     "ray": 0.053454086589191825,
+     "phase_shift": -0.6057691067858414
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.5533058907885823,
+     "ray": 0.28650479686019015,
+     "phase_shift": -0.0555167038585801
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.18463418270510498,
+     "ray": 0.08208499862389883,
+     "phase_shift": 0.03177378999346952
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.04606064732362031,
+     "ray": 0.006737946999085473,
+     "phase_shift": 3.0294616325687205
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.003471422969146972,
+     "ray": 4.5399929762484935e-05,
+     "phase_shift": -0.3531969385825491
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.38469857872300933,
+     "ray": 0.11837668697328257,
+     "phase_shift": 0.051633733415560615
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.06137022800034153,
+     "ray": 0.014013040018770528,
+     "phase_shift": 0.41718056738509746
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.05686302365319059,
+     "ray": 0.00019636529056766432,
+     "phase_shift": 3.04050313063273
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.0021056736921508563,
+     "ray": 3.8559327339723246e-08,
+     "phase_shift": 0.3869349297734785
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.3592328109009354,
+     "ray": 0.0820849986238988,
+     "phase_shift": 0.16755530114751852
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.04383363177545203,
+     "ray": 0.006737946999085467,
+     "phase_shift": 1.0264899327750039
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.04952591393624897,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 3.0871455100675678
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.0020761896598344757,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 1.7987533875948083
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.13461233653535895,
+     "correction_against": 0.14160650465104635
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.25126763607913244,
+     "correction_against": 0.27871766457656233
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.3408043880405218,
+     "correction_against": 0.4006670749629375
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.4062900507606522,
+     "correction_against": 0.6120270189138701
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.017753024576509634,
+    "exact_max": 0.7331772482272852,
+    "ray_min": 0.16558127269242584,
+    "ray_max": 0.9561695765116328,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 10.0, w 0.25k": {
+   "medium": "cardioid",
+   "kappa": 10.0,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.4867525983814704,
+    "force_over_power_c": -0.14077541427517481
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.8017380482105679,
+     "ray": 1.0,
+     "phase_shift": 0.3126991847520915
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.7767289884709836,
+     "ray": 1.0,
+     "phase_shift": 0.47140687033555784
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.808963482191427,
+     "ray": 1.0,
+     "phase_shift": 0.5702790050089247
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.804642903557774,
+     "ray": 1.0,
+     "phase_shift": 0.6307452173925958
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.6894815940557641,
+     "ray": 0.48083406527491235,
+     "phase_shift": 0.14567414633577003
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.4039030931430278,
+     "ray": 0.23120139832879866,
+     "phase_shift": 0.09653652757227897
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.0972383559485895,
+     "ray": 0.053454086589191825,
+     "phase_shift": -0.6467715648164818
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.027678463587773084,
+     "ray": 0.002857339373084817,
+     "phase_shift": -2.41333573355537
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.4198511241235665,
+     "ray": 0.08208499862389883,
+     "phase_shift": -0.08595473213527269
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.022460535747271106,
+     "ray": 0.006737946999085473,
+     "phase_shift": 1.0265123778618714
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.05344098624435815,
+     "ray": 4.5399929762484935e-05,
+     "phase_shift": -3.116593993407037
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.0016516000961179279,
+     "ray": 2.0611536224385653e-09,
+     "phase_shift": 1.7714794704334538
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.27206049179251,
+     "ray": 0.014013040018770528,
+     "phase_shift": 0.14432384818533261
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.06340265175204386,
+     "ray": 0.00019636529056766432,
+     "phase_shift": 2.688769231298288
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.015866647901196552,
+     "ray": 3.8559327339723246e-08,
+     "phase_shift": -2.4087665214811795
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.005755787138283516,
+     "ray": 1.4868217248919283e-15,
+     "phase_shift": 2.766071933503893
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.27378562292108055,
+     "ray": 0.006737946999085467,
+     "phase_shift": 0.2966671329809749
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.08071386476506773,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 2.618467804506575
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.014036987054875228,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": -1.4710016909912882
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.0045348720026522045,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": 2.9251117500607844
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.17246313939228194,
+     "correction_against": 0.18058724536270382
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.3216748177734187,
+     "correction_against": 0.35339952248935086
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.43518996648287017,
+     "correction_against": 0.5037844539205175
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.5128966554281241,
+     "correction_against": 0.7371575514392821
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.017749499294208982,
+    "exact_max": 0.594580756393206,
+    "ray_min": 0.2622572332264089,
+    "ray_max": 0.8306783706389719,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 20.0, w 0.25k": {
+   "medium": "cardioid",
+   "kappa": 20.0,
+   "form_factor_width_over_k": 0.25,
+   "self": {
+    "power_ratio": 0.3935662654224344,
+    "force_over_power_c": -0.15679821649559897
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.6723884356523165,
+     "ray": 1.0,
+     "phase_shift": 0.4204966380872421
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.6390640311486796,
+     "ray": 1.0,
+     "phase_shift": 0.7110955901283517
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.6438941520155228,
+     "ray": 1.0,
+     "phase_shift": 0.89910710922744
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.589607979242862,
+     "ray": 1.0,
+     "phase_shift": 1.005048842745885
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.5632222904149257,
+     "ray": 0.23120139832879866,
+     "phase_shift": 0.19618122776292946
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.24007946063014504,
+     "ray": 0.053454086589191825,
+     "phase_shift": 0.06479377532392784
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.11297606019450745,
+     "ray": 0.002857339373084817,
+     "phase_shift": -1.9948790282581939
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.02462589818058575,
+     "ray": 8.164388292980736e-06,
+     "phase_shift": 1.9127052463897738
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.2967907078372977,
+     "ray": 0.006737946999085473,
+     "phase_shift": -0.11461635920948524
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.10498631990131653,
+     "ray": 4.5399929762484935e-05,
+     "phase_shift": 2.82627234382838
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.010971249286986014,
+     "ray": 2.0611536224385653e-09,
+     "phase_shift": -1.5893533158532913
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.005216423933842838,
+     "ray": 4.248354255291619e-18,
+     "phase_shift": 3.0635633193227876
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.18858492539051705,
+     "ray": 0.00019636529056766432,
+     "phase_shift": 0.2807325241406875
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.11608890091029041,
+     "ray": 3.8559327339723246e-08,
+     "phase_shift": 2.9680916801525394
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.03922363284784108,
+     "ray": 1.4868217248919283e-15,
+     "phase_shift": -0.43865318057546665
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.0046632685664871045,
+     "ray": 2.210638841610609e-30,
+     "phase_shift": -0.8883366519616885
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.21045118602417417,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 0.4028106384826658
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.11048334006748409,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 2.8955462034902144
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.04508095339600646,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": -0.3884818427339982
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.006402392897290508,
+     "ray": 1.804851387845415e-35,
+     "phase_shift": -0.7151023064749403
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.2074874675658892,
+     "correction_against": 0.21629380879307375
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.38660381224109525,
+     "correction_against": 0.42079752894819744
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.521518988396814,
+     "correction_against": 0.5947243096890827
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.6082738093568666,
+     "correction_against": 0.8329680182209623
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.01749833659211623,
+    "exact_max": 0.48087205350933193,
+    "ray_min": 0.37474244286966574,
+    "ray_max": 0.7016180564143155,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 0.5, w 0.5k": {
+   "medium": "cardioid",
+   "kappa": 0.5,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.940974616319081,
+    "force_over_power_c": -0.014500280394763393
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.99083831892855,
+     "ray": 1.0,
+     "phase_shift": 0.03839844628029335
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9932271592371512,
+     "ray": 1.0,
+     "phase_shift": 0.038653183860125534
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9962738743487887,
+     "ray": 1.0,
+     "phase_shift": 0.039244818718595954
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9977910034617311,
+     "ray": 1.0,
+     "phase_shift": 0.0395158538019471
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.9605395010889719,
+     "ray": 0.9640504493872408,
+     "phase_shift": 0.026706343462473414
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.9275805800011324,
+     "ray": 0.9293932689637409,
+     "phase_shift": 0.025532786310688883
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.863969551560011,
+     "ray": 0.8637718483951085,
+     "phase_shift": 0.024056685454238905
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.747025059173192,
+     "ray": 0.7461018060799022,
+     "phase_shift": 0.02037044380428918
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.8896898004522328,
+     "ray": 0.8824969025845955,
+     "phase_shift": 0.0013587066566336473
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.7853201976919025,
+     "ray": 0.7788007830714049,
+     "phase_shift": 0.00021575008540673047
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.6109436767755319,
+     "ray": 0.6065306597126334,
+     "phase_shift": 0.0007282313536649722
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.3696398289289847,
+     "ray": 0.3678794411714424,
+     "phase_shift": 0.0015740295985721042
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.8222729709646883,
+     "ray": 0.8078423526138261,
+     "phase_shift": -0.019494355945626075
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.6639457059869627,
+     "ray": 0.6526092666766413,
+     "phase_shift": -0.016032439663582115
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.4307494537756735,
+     "ray": 0.42589885495222357,
+     "phase_shift": -0.003410376912534196
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.18187501317632981,
+     "ray": 0.18138983464961517,
+     "phase_shift": 0.022677010822007005
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.7954075277694319,
+     "ray": 0.7788007830714049,
+     "phase_shift": -0.026681922333379158
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.6191849140899578,
+     "ray": 0.6065306597126334,
+     "phase_shift": -0.020110109312251594
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.37243778616237944,
+     "ray": 0.36787944117144233,
+     "phase_shift": 0.0006246518803140178
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.135401263853038,
+     "ray": 0.1353352832366127,
+     "phase_shift": 0.043552400887269284
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.02043341815767578,
+     "correction_against": 0.022835072480942076
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.0371871950056088,
+     "correction_against": 0.046695464879716424
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.04931077926706334,
+     "correction_against": 0.07033790230064038
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.05692112616043327,
+     "correction_against": 0.13353377229055416
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.019482434574450744,
+    "exact_max": 1.2621487718183189,
+    "ray_min": 0.035708366665715086,
+    "ray_max": 1.2987538993092533,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 2.3, w 0.5k": {
+   "medium": "cardioid",
+   "kappa": 2.3,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.8079187739842502,
+    "force_over_power_c": -0.04363549242023272
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.9456044145681641,
+     "ray": 1.0,
+     "phase_shift": 0.14918991357559244
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.961091177434898,
+     "ray": 1.0,
+     "phase_shift": 0.16273029388210472
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9729146859076409,
+     "ray": 1.0,
+     "phase_shift": 0.17158620670136737
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9785922354543031,
+     "ray": 1.0,
+     "phase_shift": 0.1762792590565778
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.8471895536471423,
+     "ray": 0.845004267942886,
+     "phase_shift": 0.09799723820760785
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.7292359307003412,
+     "ray": 0.7140322128416927,
+     "phase_shift": 0.08669824684242837
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.5263148469638614,
+     "ray": 0.5098420009756043,
+     "phase_shift": 0.05058926382291172
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.2685745933458476,
+     "ray": 0.2599388659588081,
+     "phase_shift": -0.03673064697310564
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.6346556592961835,
+     "ray": 0.5627048688069558,
+     "phase_shift": 0.005782421093103171
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.35102780176254017,
+     "ray": 0.31663676937905333,
+     "phase_shift": -0.0026652689686403742
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.09802899282965798,
+     "ray": 0.10025884372280379,
+     "phase_shift": 0.0029630747895253566
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.007141164182426409,
+     "ray": 0.010051835744633595,
+     "phase_shift": 0.008223903584645862
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.4625259217506878,
+     "ray": 0.37471617764711074,
+     "phase_shift": -0.021917267332910016
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.155085993968988,
+     "ray": 0.14041221379046107,
+     "phase_shift": 0.09943166641259378
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.013621951557550874,
+     "ray": 0.019715589781538145,
+     "phase_shift": 0.8049246010133959
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.00023357034009168504,
+     "ray": 0.0003887044804338914,
+     "phase_shift": 2.6911717093832843
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.404634402982429,
+     "ray": 0.3166367693790532,
+     "phase_shift": -0.006918048232666585
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.10837739566153651,
+     "ray": 0.10025884372280375,
+     "phase_shift": 0.23018490213852258
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.00858201734263672,
+     "ray": 0.010051835744633584,
+     "phase_shift": 1.5866420735401796
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.00020219954836633134,
+     "ray": 0.00010103940183709342,
+     "phase_shift": -2.9055596981050806
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.07020492206395182,
+     "correction_against": 0.07775563709226231
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.12780525213167215,
+     "correction_against": 0.1575362376205576
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.16916061393736187,
+     "correction_against": 0.23431523508948204
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.19463662873712015,
+     "correction_against": 0.4206466328294826
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.026474906873865046,
+    "exact_max": 0.9827272244153088,
+    "ray_min": 0.09486900142801458,
+    "ray_max": 1.0840664912913418,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 5.0, w 0.5k": {
+   "medium": "cardioid",
+   "kappa": 5.0,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.701549838555721,
+    "force_over_power_c": -0.06293799732139185
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.8795999646275523,
+     "ray": 1.0,
+     "phase_shift": 0.2718738019782079
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.9062900133788004,
+     "ray": 1.0,
+     "phase_shift": 0.3151713993474651
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.9212894964422662,
+     "ray": 1.0,
+     "phase_shift": 0.3449382108349972
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.9267261472838358,
+     "ray": 1.0,
+     "phase_shift": 0.36171753315989646
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.7302454053722234,
+     "ray": 0.6934219965323514,
+     "phase_shift": 0.17277656696479457
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.5399179983606596,
+     "ray": 0.48083406527491235,
+     "phase_shift": 0.12595559749230475
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.26794495749428565,
+     "ray": 0.23120139832879866,
+     "phase_shift": -0.0642133899501273
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.06376206837039072,
+     "ray": 0.053454086589191825,
+     "phase_shift": -0.573623343568264
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.4301285642722493,
+     "ray": 0.28650479686019015,
+     "phase_shift": 0.010381904368813694
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.08921774731071938,
+     "ray": 0.08208499862389883,
+     "phase_shift": -0.04919363247190572
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.008101538597384269,
+     "ray": 0.006737946999085473,
+     "phase_shift": 3.1096955041547534
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 7.96424348787069e-05,
+     "ray": 4.5399929762484935e-05,
+     "phase_shift": -0.7080389466141412
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.23052639516458462,
+     "ray": 0.11837668697328257,
+     "phase_shift": 0.07609576006217578
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.039966234547315495,
+     "ray": 0.014013040018770528,
+     "phase_shift": 2.3188718352200848
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.0037925634317509537,
+     "ray": 0.00019636529056766432,
+     "phase_shift": -1.9350175515135795
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.00021247007670676993,
+     "ray": 3.8559327339723246e-08,
+     "phase_shift": 3.137466373585585
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.18336293391971276,
+     "ray": 0.0820849986238988,
+     "phase_shift": 0.22023669530284187
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.05339815542787689,
+     "ray": 0.006737946999085467,
+     "phase_shift": 2.460977522712721
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.004253342197751754,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": -1.5068561816339623
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.00031529290931830636,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 3.111056136263514
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.11396875976108305,
+     "correction_against": 0.12507184429808024
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.20759407686929646,
+     "correction_against": 0.25108039850407493
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.2743798947791458,
+     "correction_against": 0.36882621627183887
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.3159517847363289,
+     "correction_against": 0.6271441219617166
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.031548738054301376,
+    "exact_max": 0.8114459832031422,
+    "ray_min": 0.16558127269242584,
+    "ray_max": 0.9561695765116328,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 10.0, w 0.5k": {
+   "medium": "cardioid",
+   "kappa": 10.0,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.5993398551376629,
+    "force_over_power_c": -0.07775902075547841
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.7856647151763373,
+     "ray": 1.0,
+     "phase_shift": 0.4348963655607271
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.8118101171372716,
+     "ray": 1.0,
+     "phase_shift": 0.5320731400041424
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.8121906288308225,
+     "ray": 1.0,
+     "phase_shift": 0.6035971760402373
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.8018533311388545,
+     "ray": 1.0,
+     "phase_shift": 0.6417586829146551
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.5947701764462087,
+     "ray": 0.48083406527491235,
+     "phase_shift": 0.2715303816479826
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.34663763500352107,
+     "ray": 0.23120139832879866,
+     "phase_shift": 0.10815114944434448
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.11396008412423039,
+     "ray": 0.053454086589191825,
+     "phase_shift": -0.7568789153570528
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.020819447019952947,
+     "ray": 0.002857339373084817,
+     "phase_shift": -2.4541946799931758
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.2410231299388605,
+     "ray": 0.08208499862389883,
+     "phase_shift": 0.011854071579805005
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.06121664149299918,
+     "ray": 0.006737946999085473,
+     "phase_shift": -2.986287790123626
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.005353060334799358,
+     "ray": 4.5399929762484935e-05,
+     "phase_shift": -0.06413092207108782
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.0001236007719508516,
+     "ray": 2.0611536224385653e-09,
+     "phase_shift": -1.0761336636262966
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.07499748520851088,
+     "ray": 0.014013040018770528,
+     "phase_shift": 0.6395589083928016
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.06357811022148956,
+     "ray": 0.00019636529056766432,
+     "phase_shift": 2.9163986266109796
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.0012139620835423862,
+     "ray": 3.8559327339723246e-08,
+     "phase_shift": 0.4554812529365111
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.00035628855190746983,
+     "ray": 1.4868217248919283e-15,
+     "phase_shift": 2.8809140752228313
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.07965350825023607,
+     "ray": 0.006737946999085467,
+     "phase_shift": 1.1274169273941923
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.05280915209612849,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 2.975632251431495
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.0046614949756687675,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": 1.7007042914671608
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.0007431160390272422,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": 2.61498069839188
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.16016678814052082,
+     "correction_against": 0.1739642739603998
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.29186508163527863,
+     "correction_against": 0.3455551790199194
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.38503163654366795,
+     "correction_against": 0.5003474855184188
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.4443983796799082,
+     "correction_against": 0.799336364043253
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.036147278304507945,
+    "exact_max": 0.6773287761680666,
+    "ray_min": 0.2622572332264089,
+    "ray_max": 0.8306783706389719,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  },
+  "cardioid, kappa 20.0, w 0.5k": {
+   "medium": "cardioid",
+   "kappa": 20.0,
+   "form_factor_width_over_k": 0.5,
+   "self": {
+    "power_ratio": 0.5034520972714925,
+    "force_over_power_c": -0.087694970516178
+   },
+   "transmissions": [
+    {
+     "angle_deg": 0,
+     "R": 0.5,
+     "transmission": 0.6669251231083235,
+     "ray": 1.0,
+     "phase_shift": 0.6542648539494589
+    },
+    {
+     "angle_deg": 0,
+     "R": 1.0,
+     "transmission": 0.6681255368706903,
+     "ray": 1.0,
+     "phase_shift": 0.8384022069097131
+    },
+    {
+     "angle_deg": 0,
+     "R": 2.0,
+     "transmission": 0.6198339913881119,
+     "ray": 1.0,
+     "phase_shift": 0.9714151780353873
+    },
+    {
+     "angle_deg": 0,
+     "R": 4.0,
+     "transmission": 0.5725034837054346,
+     "ray": 1.0,
+     "phase_shift": 1.0121436079761548
+    },
+    {
+     "angle_deg": 45,
+     "R": 0.5,
+     "transmission": 0.44853660917269383,
+     "ray": 0.23120139832879866,
+     "phase_shift": 0.4095365155329357
+    },
+    {
+     "angle_deg": 45,
+     "R": 1.0,
+     "transmission": 0.19070072756934633,
+     "ray": 0.053454086589191825,
+     "phase_shift": -0.1278865955102173
+    },
+    {
+     "angle_deg": 45,
+     "R": 2.0,
+     "transmission": 0.10581649989928237,
+     "ray": 0.002857339373084817,
+     "phase_shift": -1.6731913642350609
+    },
+    {
+     "angle_deg": 45,
+     "R": 4.0,
+     "transmission": 0.023117618383324982,
+     "ray": 8.164388292980736e-06,
+     "phase_shift": 1.98602687938147
+    },
+    {
+     "angle_deg": 90,
+     "R": 0.5,
+     "transmission": 0.08093886531875642,
+     "ray": 0.006737946999085473,
+     "phase_shift": -0.039905720408869506
+    },
+    {
+     "angle_deg": 90,
+     "R": 1.0,
+     "transmission": 0.09700579020706634,
+     "ray": 4.5399929762484935e-05,
+     "phase_shift": -3.02567382372094
+    },
+    {
+     "angle_deg": 90,
+     "R": 2.0,
+     "transmission": 0.008633930647896774,
+     "ray": 2.0611536224385653e-09,
+     "phase_shift": -0.7921603785037417
+    },
+    {
+     "angle_deg": 90,
+     "R": 4.0,
+     "transmission": 0.0003558612367968151,
+     "ray": 4.248354255291619e-18,
+     "phase_shift": -2.3586585748374347
+    },
+    {
+     "angle_deg": 135,
+     "R": 0.5,
+     "transmission": 0.07324764165594855,
+     "ray": 0.00019636529056766432,
+     "phase_shift": 2.2731354940524837
+    },
+    {
+     "angle_deg": 135,
+     "R": 1.0,
+     "transmission": 0.026309224449423973,
+     "ray": 3.8559327339723246e-08,
+     "phase_shift": -2.6531712125248927
+    },
+    {
+     "angle_deg": 135,
+     "R": 2.0,
+     "transmission": 0.009811073750493546,
+     "ray": 1.4868217248919283e-15,
+     "phase_shift": 2.4564243719047485
+    },
+    {
+     "angle_deg": 135,
+     "R": 4.0,
+     "transmission": 0.0008132924262159865,
+     "ray": 2.210638841610609e-30,
+     "phase_shift": 2.7135846526257072
+    },
+    {
+     "angle_deg": 180,
+     "R": 0.5,
+     "transmission": 0.086140364147909,
+     "ray": 4.5399929762484854e-05,
+     "phase_shift": 2.124803776123378
+    },
+    {
+     "angle_deg": 180,
+     "R": 1.0,
+     "transmission": 0.021643532161341624,
+     "ray": 2.061153622438558e-09,
+     "phase_shift": -1.972678916421999
+    },
+    {
+     "angle_deg": 180,
+     "R": 2.0,
+     "transmission": 0.007420203094715053,
+     "ray": 4.248354255291589e-18,
+     "phase_shift": 2.2946687032827797
+    },
+    {
+     "angle_deg": 180,
+     "R": 4.0,
+     "transmission": 0.0013579358223353931,
+     "ray": 1.804851387845415e-35,
+     "phase_shift": 1.7526526888888228
+    }
+   ],
+   "near_field": [
+    {
+     "R": 0.05,
+     "correction_with_stream": 0.2083140733289444,
+     "correction_against": 0.2237995781200119
+    },
+    {
+     "R": 0.1,
+     "correction_with_stream": 0.3795043072162073,
+     "correction_against": 0.43927542110557327
+    },
+    {
+     "R": 0.15,
+     "correction_with_stream": 0.4991208249657734,
+     "correction_against": 0.6256748352028941
+    },
+    {
+     "R": 0.3,
+     "correction_with_stream": 0.5771922253107704,
+     "correction_against": 0.9312139217743389
+    }
+   ],
+   "passivity": {
+    "n": 24,
+    "radius": 1.0,
+    "exact_min": 0.04028520079643451,
+    "exact_max": 0.5572088068562496,
+    "ray_min": 0.37474244286966574,
+    "ray_max": 0.7016180564143155,
+    "free_min": 0.016003433150570893,
+    "free_max": 1.4085500090324576
+   }
+  }
+ },
+ "check_free": {
+  "self": {
+   "power_ratio": 0.99960062070496,
+   "force_over_power_c": -0.0
+  },
+  "dG_at_1": 0.0
+ },
+ "doppler_point_absorbers": [
+  {
+   "kappa": 0.5,
+   "cutoff_over_k": [
+    4,
+    8,
+    16,
+    32
+   ],
+   "force_over_power_c": [
+    0.05799216734041989,
+    0.13005682633535467,
+    0.26729332297923325,
+    0.538522912746655
+   ],
+   "power_ratio": [
+    0.9863285718014937,
+    0.9934246374868324,
+    0.9967784891331165,
+    0.9984331725235276
+   ]
+  },
+  {
+   "kappa": 2.3,
+   "cutoff_over_k": [
+    4,
+    8,
+    16,
+    32
+   ],
+   "force_over_power_c": [
+    0.2541816341883587,
+    0.5861164527323265,
+    1.2173225787320805,
+    2.4646783341957015
+   ],
+   "power_ratio": [
+    0.9391330455166051,
+    0.9706243275564409,
+    0.9855696667757017,
+    0.9929498747531411
+   ]
+  },
+  {
+   "kappa": 5.0,
+   "cutoff_over_k": [
+    4,
+    8,
+    16,
+    32
+   ],
+   "force_over_power_c": [
+    0.515760878002465,
+    1.2364004924514538,
+    2.607519032911309,
+    5.317939538844526
+   ],
+   "power_ratio": [
+    0.869762641279112,
+    0.936525685601643,
+    0.9687130606266416,
+    0.9846635395605818
+   ]
+  }
+ ],
+ "seconds": 1146.7473703760002
+}

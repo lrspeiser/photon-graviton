@@ -285,6 +285,25 @@ def ring_sum(tR, tz, grid, rho, mask=None, chunk=4000, potential=False):
 
 
 # ----------------------------------------------------------------------------- the law
+_TABLES = {}
+
+
+def _stream_table(s):
+    """The absorbing stream's scalar shell weights (law.stream_weights) on 81 field radii from 1e-3 to 3000 kpc,
+    interpolated in log radius (round 19; the weights vary smoothly with R at fixed shells)."""
+    key = (L.STREAM_KAPPA, s.tobytes())
+    if key not in _TABLES:
+        Rt = np.geomspace(1e-3, 3000.0, 81)
+        W, _ = L.stream_weights(Rt, s, L.STREAM_KAPPA)
+        lR = np.log(Rt)
+        def f(r):
+            lr = np.log(np.clip(r, Rt[0], Rt[-1]))
+            j = np.clip(np.searchsorted(lR, lr) - 1, 0, len(Rt) - 2); t = ((lr - lR[j]) / (lR[j + 1] - lR[j]))[:, None]
+            return (1 - t) * W[j] + t * W[j + 1]
+        _TABLES[key] = f
+    return _TABLES[key]
+
+
 def heat_fields(comps, grid, u):
     """S and g_hot of the hot free-streaming stars (spherical stand-ins; k = 3 sigma^2 / u^2)."""
     r = np.sqrt(grid.RR ** 2 + grid.ZZ ** 2) + 1e-9
@@ -300,8 +319,13 @@ def heat_fields(comps, grid, u):
     S = np.zeros(r.size); rf = r.ravel()
     for i in range(0, rf.size, 4000):
         x = s[None, :] / rf[i:i + 4000, None]
-        w = np.where(x < 1, np.arctanh(np.clip(x, 1e-12, 1 - 1e-12)) / np.clip(x, 1e-12, None),
-                     0.5 * np.log((x + 1) / np.maximum(x - 1, 1e-12)) / x)
+        if L.HOT_GEOMETRY == 'two_way':
+            w = np.where(x < 1, np.arctanh(np.clip(x, 1e-12, 1 - 1e-12)) / np.clip(x, 1e-12, None),
+                         0.5 * np.log((x + 1) / np.maximum(x - 1, 1e-12)) / x)
+        elif L.HOT_GEOMETRY == 'stream':                 # round 19: the absorbing stream, tabulated in the field radius
+            w = _stream_table(s)(rf[i:i + 4000])
+        else:                                            # round 19: the one-way hearing rules (law.HOT_GEOMETRY)
+            w = L.shell_weight_fn(x)
         S[i:i + 4000] = G * (w @ dmk) / rf[i:i + 4000] ** 2
     Mk = np.interp(r, s, np.cumsum(dmk))
     gh = -G * Mk / r ** 2

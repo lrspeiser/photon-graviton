@@ -90,6 +90,9 @@ def cluster_M3(c, a, u, lam, sigma='hse', gas_weight=0.0, stars_weight=1.0):
     if gas_weight:
         src = src + gas_weight * L.heat_weight(np.sqrt(c['sig2']), u) * c['dmg']
     S = G * (c['W'] @ src) / c['Rk'] ** 2
+    if L.HOT_GEOMETRY == 'stream':          # round 19: the cold glow heard through the absorbing stream too
+        heard = G * (L.stream_cold_weights(c['Rk'], c['s']) @ (c['dmg'] + c['dms'])) / c['Rk'] ** 2
+        return L.total_heard(gN, heard, S, a, lam) * c['Rk'] ** 2 / G
     return L.total(gN, S, a, lam) * c['Rk'] ** 2 / G
 
 

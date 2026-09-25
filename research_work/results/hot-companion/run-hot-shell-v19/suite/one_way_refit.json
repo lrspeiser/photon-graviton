@@ -1,0 +1,1332 @@
+{
+ "suite": "hot-companion regression suite",
+ "law": {
+  "name": "one_way_refit",
+  "description": "Round 19: hot matter heard one way only (inner shells, the law's weights), a and u refitted.",
+  "base": "round12",
+  "a_code": 1877.0664399206173,
+  "a_SI": 6.083158043405802e-11,
+  "lam": 3.332624108681798,
+  "g_d_SI": 2.027287915237577e-10,
+  "u_kms": 113.79205713421358,
+  "reach_kpc": 1512.894774529408,
+  "release_length_au": 30000.0,
+  "external_hold": 1.0,
+  "gd_scale": 1.0,
+  "refit": [
+   "a",
+   "u"
+  ],
+  "alpha_per_Mpc": 0.00023645436220632487,
+  "sparc_distances": "static",
+  "heat_exponent": 2.0,
+  "hot_geometry": "one_way",
+  "stream_kappa_per_Mpc": 0.0,
+  "refit_log": [
+   {
+    "step": "a on SPARC (g_d held)",
+    "a_SI": 6.299749651596887e-11,
+    "lam": 3.218045203945036
+   },
+   {
+    "step": "u on X-COP (static, deprojected)",
+    "u_kms": 115.95590249981613
+   },
+   {
+    "step": "a on SPARC (g_d held)",
+    "a_SI": 6.095331878487702e-11,
+    "lam": 3.3259680615464084
+   },
+   {
+    "step": "u on X-COP (static, deprojected)",
+    "u_kms": 113.91445421481131
+   },
+   {
+    "step": "a on SPARC (g_d held)",
+    "a_SI": 6.083158043405802e-11,
+    "lam": 3.332624108681798
+   },
+   {
+    "step": "u on X-COP (static, deprojected)",
+    "u_kms": 113.79205713421358
+   }
+  ]
+ },
+ "tier": "quick",
+ "only": null,
+ "date": "2026-09-25 03:32 UTC",
+ "commit": "36e6ef5+changes",
+ "baseline": "baseline.json (round12, full, 2026-09-24 04:37 UTC)",
+ "seconds": 22.988753783999982,
+ "seconds_by_group": {
+  "machinery": 0.4,
+  "galaxies": 0.0,
+  "clusters": 0.0,
+  "lensing": 2.6,
+  "milky_way": 13.5,
+  "dwarfs": 0.7,
+  "precision": 4.8,
+  "collisions": 0.0
+ },
+ "summary": {
+  "status": {
+   "pass": 32,
+   "close": 6,
+   "fail": 11,
+   "info": 11,
+   "error": 0
+  },
+  "movement": {
+   "regressed": 8,
+   "improved": 3,
+   "worse": 6,
+   "better": 9,
+   "changed": 22,
+   "new": 0,
+   "known": 5,
+   "same": 7,
+   "error": 0
+  },
+  "not_run": [
+   "abell520.m150_p1",
+   "abell520.m150_p2",
+   "abell520.m150_p3",
+   "abell520.m150_p4",
+   "abell520.m150_p5",
+   "abell520.m150_p6",
+   "abell520.m710",
+   "abell520.sigma_peaks",
+   "bullet.gas_main",
+   "bullet.gas_sub",
+   "bullet.kappa_main",
+   "bullet.kappa_sub",
+   "bullet.m250_main",
+   "bullet.m250_sub",
+   "bullet.outer_stars",
+   "bullet.peak_main",
+   "bullet.peak_sub",
+   "clusters.xcop_crossval",
+   "elgordo.m1000",
+   "elgordo.m500",
+   "elgordo.peak_se",
+   "elgordo.sigma_nw",
+   "elgordo.sigma_se",
+   "macs0025.m300_nw",
+   "macs0025.m300_se",
+   "macs0025.peak_nw",
+   "macs0025.peak_se",
+   "macs0025.sigma",
+   "stack.beta_gas",
+   "stack.offset"
+  ]
+ },
+ "checks": [
+  {
+   "id": "law.a_SI",
+   "group": "machinery",
+   "title": "deep-regime strength a",
+   "value": 6.083158043405802e-11,
+   "unit": "m/s^2",
+   "target": "constant of the law under test",
+   "status": "info",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 6.297889390049439e-11,
+    "status": "info",
+    "score": null
+   }
+  },
+  {
+   "id": "law.g_d_SI",
+   "group": "machinery",
+   "title": "release scale g_d",
+   "value": 2.027287915237577e-10,
+   "unit": "m/s^2",
+   "target": "constant of the law under test",
+   "status": "info",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "same",
+   "baseline": {
+    "value": 2.027287915237577e-10,
+    "status": "info",
+    "score": null
+   }
+  },
+  {
+   "id": "law.u_kms",
+   "group": "machinery",
+   "title": "companion speed u",
+   "value": 113.79205713421358,
+   "unit": "km/s",
+   "target": "constant of the law under test",
+   "status": "info",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 169.4433686899687,
+    "status": "info",
+    "score": null
+   }
+  },
+  {
+   "id": "law.reach_kpc",
+   "group": "machinery",
+   "title": "reach u x 13 Gyr",
+   "value": 1512.894774529408,
+   "unit": "kpc",
+   "target": "constant of the law under test",
+   "status": "info",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 2252.79332780985,
+    "status": "info",
+    "score": null
+   }
+  },
+  {
+   "id": "law.emission",
+   "group": "machinery",
+   "title": "companion emission per kg of matter, l = a u / 2",
+   "value": 3.461075338158419e-06,
+   "unit": "W/kg",
+   "target": "energy budget (round 3: 6.48e-6)",
+   "status": "info",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 5.3356779694339464e-06,
+    "status": "info",
+    "score": null
+   }
+  },
+  {
+   "id": "machinery.guard_class",
+   "group": "machinery",
+   "title": "standing rule: not MOND, not Newton, not dark matter",
+   "value": 1.1707586626810442,
+   "unit": "dex",
+   "target": "no forbidden class in the guard verdict; value = spread of the pull with random speed 0-1000 km/s",
+   "status": "pass",
+   "score": null,
+   "note": "cold isolated mass: reduces to a MOND form (closest published: RAR exponential (McGaugh, Lelli & Schombert 2016), 0.029 dex); same Newtonian pull, different random speeds 0-1000 km/s: predictions differ by 1.171 dex -- NOT a function of g_N alone; SPARC: 0.0467 dex beyond local g_N",
+   "refs": "RULES.md; research_work/tools/formula_guard.py",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 0.9994147954226451,
+    "status": "pass",
+    "score": null
+   }
+  },
+  {
+   "id": "machinery.guard_sparc_local",
+   "group": "machinery",
+   "title": "SPARC pull is not a function of g_N alone",
+   "value": 0.0467340489871854,
+   "unit": "dex",
+   "target": ">= 0.005 dex beyond a local function of g_N",
+   "status": "pass",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 0.027491518978320865,
+    "status": "pass",
+    "score": null
+   }
+  },
+  {
+   "id": "machinery.strong_field_off",
+   "group": "machinery",
+   "title": "extra pull at 100 g_d, relative to Newton",
+   "value": 0.0,
+   "unit": "",
+   "target": "< 1e-12",
+   "status": "pass",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "same",
+   "baseline": {
+    "value": 0.0,
+    "status": "pass",
+    "score": null
+   }
+  },
+  {
+   "id": "galaxies.sparc_rms_all",
+   "group": "galaxies",
+   "title": "SPARC typical speed miss (all galaxies)",
+   "value": 16.344668214383503,
+   "unit": "km/s",
+   "target": "no worse than MOND (16.13); within 5% is close",
+   "status": "close",
+   "score": 1.0131327614786958,
+   "note": "",
+   "refs": "Lelli, McGaugh & Schombert 2016 (SPARC)",
+   "detail": {},
+   "move": "regressed",
+   "baseline": {
+    "value": 15.871594797361485,
+    "status": "pass",
+    "score": 0.9838090596400801
+   }
+  },
+  {
+   "id": "galaxies.sparc_msq",
+   "group": "galaxies",
+   "title": "SPARC mean squared log residual (the fitted statistic)",
+   "value": 0.21335892466220277,
+   "unit": "",
+   "target": "",
+   "status": "info",
+   "score": 0.21335892466220277,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 0.21111044326253212,
+    "status": "info",
+    "score": 0.21111044326253212
+   }
+  },
+  {
+   "id": "galaxies.sparc_rms_test",
+   "group": "galaxies",
+   "title": "SPARC typical speed miss (test galaxies)",
+   "value": 13.070991362912192,
+   "unit": "km/s",
+   "target": "no worse than MOND (13.52); within 5% is close",
+   "status": "pass",
+   "score": 0.967046799659095,
+   "note": "",
+   "refs": "Lelli, McGaugh & Schombert 2016 (SPARC)",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 12.352197748874401,
+    "status": "pass",
+    "score": 0.9138674313333728
+   }
+  },
+  {
+   "id": "galaxies.sparc_rms_validation",
+   "group": "galaxies",
+   "title": "SPARC typical speed miss (validation galaxies)",
+   "value": 18.999245494514536,
+   "unit": "km/s",
+   "target": "no worse than MOND (19.80); within 5% is close",
+   "status": "pass",
+   "score": 0.9593882644236895,
+   "note": "",
+   "refs": "Lelli, McGaugh & Schombert 2016 (SPARC)",
+   "detail": {},
+   "move": "same",
+   "baseline": {
+    "value": 19.01434881438757,
+    "status": "pass",
+    "score": 0.9601509235431904
+   }
+  },
+  {
+   "id": "galaxies.sparc_median",
+   "group": "galaxies",
+   "title": "SPARC median residual log10(observed/predicted pull)",
+   "value": 0.02122688737270747,
+   "unit": "dex",
+   "target": "0 +- 0.02 dex (stellar mass-to-light zero point)",
+   "status": "pass",
+   "score": 1.0613443686353734,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "better",
+   "baseline": {
+    "value": 0.027126571335271986,
+    "status": "pass",
+    "score": 1.3563285667635994
+   }
+  },
+  {
+   "id": "galaxies.sparc_median_switch",
+   "group": "galaxies",
+   "title": "SPARC median residual where the release switches (g_N 10^-10.25 to 10^-9.5)",
+   "value": 0.011859481491804904,
+   "unit": "dex",
+   "target": "0 +- 0.02 dex",
+   "status": "pass",
+   "score": 0.5929740745902452,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "better",
+   "baseline": {
+    "value": 0.027064038836967397,
+    "status": "pass",
+    "score": 1.3532019418483698
+   }
+  },
+  {
+   "id": "galaxies.sparc_bulges",
+   "group": "galaxies",
+   "title": "bulge-dominated galaxies (25): typical speed miss",
+   "value": 32.26902331584499,
+   "unit": "km/s",
+   "target": "no worse than MOND (30.35)",
+   "status": "fail",
+   "score": 1.063310343645317,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "regressed",
+   "baseline": {
+    "value": 29.435830479800696,
+    "status": "pass",
+    "score": 0.969952598707668
+   }
+  },
+  {
+   "id": "clusters.xcop_rms",
+   "group": "clusters",
+   "title": "X-COP: typical mass miss, rms ln(M_hydrostatic/M_predicted) (static distances)",
+   "value": 0.28087981897475583,
+   "unit": "",
+   "target": "<= 0.30 (hydrostatic masses carry 10-20% bias and error); MOND 1.06, NFW fit 0.10",
+   "status": "pass",
+   "score": 0.9362660632491862,
+   "note": "",
+   "refs": "Ettori et al. 2019; Ghizzardi et al. 2021 (X-COP)",
+   "detail": {},
+   "move": "worse",
+   "baseline": {
+    "value": 0.22152828446272135,
+    "status": "pass",
+    "score": 0.7384276148757378
+   }
+  },
+  {
+   "id": "clusters.xcop_radial_trend",
+   "group": "clusters",
+   "title": "X-COP: worst mean miss at any of the six radii (0.1-1 R500)",
+   "value": 0.3991661748799175,
+   "unit": "",
+   "target": "<= 0.25 (the usual hydrostatic bias at R500)",
+   "status": "fail",
+   "score": 1.59666469951967,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "mean_by_radius": [
+     0.3021553985258798,
+     0.22697868713401895,
+     0.09123773226980265,
+     -0.028702425954766936,
+     -0.19684380636430973,
+     -0.3991661748799175
+    ]
+   },
+   "move": "regressed",
+   "baseline": {
+    "value": 0.2389136588659999,
+    "status": "pass",
+    "score": 0.9556546354639996
+   }
+  },
+  {
+   "id": "clusters.u_preferred",
+   "group": "clusters",
+   "title": "the companion speed X-COP prefers for these a and g_d",
+   "value": 113.79205713421358,
+   "unit": "km/s",
+   "target": "law uses 113.8",
+   "status": "info",
+   "score": 0.0,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 169.4433686899687,
+    "status": "info",
+    "score": 0.0
+   }
+  },
+  {
+   "id": "lensing.kids_all",
+   "group": "lensing",
+   "title": "KiDS lensing pull, all isolated lenses (mixture): median log10(observed/predicted), static distances",
+   "value": -0.02545055334956814,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 1.0180221339827256,
+   "note": "",
+   "refs": "Brouwer et al. 2021, A&A 650, A113; converted with code/kids_static_v11.py; heat from code/lens_heat_sdss_v12.py",
+   "detail": {},
+   "move": "improved",
+   "baseline": {
+    "value": 0.06475542119133948,
+    "status": "close",
+    "score": 2.590216847653579
+   }
+  },
+  {
+   "id": "lensing.kids_blue",
+   "group": "lensing",
+   "title": "KiDS lensing pull, blue lenses (k = 1.12, measured): median log10(observed/predicted), static distances",
+   "value": -0.041126602777532995,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 1.6450641111013198,
+   "note": "",
+   "refs": "Brouwer et al. 2021, A&A 650, A113; converted with code/kids_static_v11.py; heat from code/lens_heat_sdss_v12.py",
+   "detail": {},
+   "move": "worse",
+   "baseline": {
+    "value": 0.011155668720862266,
+    "status": "pass",
+    "score": 0.44622674883449065
+   }
+  },
+  {
+   "id": "lensing.kids_red",
+   "group": "lensing",
+   "title": "KiDS lensing pull, red lenses (k = 4.37, measured): median log10(observed/predicted), static distances",
+   "value": -0.02983368835686484,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 1.1933475342745936,
+   "note": "",
+   "refs": "Brouwer et al. 2021, A&A 650, A113; converted with code/kids_static_v11.py; heat from code/lens_heat_sdss_v12.py",
+   "detail": {},
+   "move": "improved",
+   "baseline": {
+    "value": 0.07776237399165709,
+    "status": "fail",
+    "score": 3.1104949596662834
+   }
+  },
+  {
+   "id": "lensing.kids_disc",
+   "group": "lensing",
+   "title": "KiDS lensing pull, Sersic n < 2 (disks; k = 0.62): median log10(observed/predicted), static distances",
+   "value": 0.03075499159274564,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "pass",
+   "score": 1.2301996637098256,
+   "note": "",
+   "refs": "Brouwer et al. 2021, A&A 650, A113; converted with code/kids_static_v11.py; heat from code/lens_heat_sdss_v12.py",
+   "detail": {},
+   "move": "improved",
+   "baseline": {
+    "value": 0.0662676587409674,
+    "status": "close",
+    "score": 2.6507063496386962
+   }
+  },
+  {
+   "id": "lensing.kids_bulge",
+   "group": "lensing",
+   "title": "KiDS lensing pull, Sersic n > 2 (bulges; k = 4.38): median log10(observed/predicted), static distances",
+   "value": -0.07838137116075927,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "fail",
+   "score": 3.135254846430371,
+   "note": "",
+   "refs": "Brouwer et al. 2021, A&A 650, A113; converted with code/kids_static_v11.py; heat from code/lens_heat_sdss_v12.py",
+   "detail": {},
+   "move": "regressed",
+   "baseline": {
+    "value": 0.03364331498305795,
+    "status": "pass",
+    "score": 1.345732599322318
+   }
+  },
+  {
+   "id": "lensing.kids_gama",
+   "group": "lensing",
+   "title": "KiDS lensing pull, GAMA spectroscopic lenses: median log10(observed/predicted), static distances",
+   "value": -0.08088996734062803,
+   "unit": "dex",
+   "target": "0 +- 0.025 dex (7 reliable bins)",
+   "status": "fail",
+   "score": 3.2355986936251213,
+   "note": "",
+   "refs": "Brouwer et al. 2021, A&A 650, A113; converted with code/kids_static_v11.py; heat from code/lens_heat_sdss_v12.py",
+   "detail": {},
+   "move": "regressed",
+   "baseline": {
+    "value": 0.009316007200279586,
+    "status": "pass",
+    "score": 0.37264028801118343
+   }
+  },
+  {
+   "id": "lensing.kids_gap",
+   "group": "lensing",
+   "title": "KiDS: red lenses lens more than blue ones of the same visible mass (colour gap)",
+   "value": 0.17999545596818406,
+   "unit": "dex",
+   "target": "0.153 +- 0.04 dex (same bins)",
+   "status": "pass",
+   "score": 0.6805496013393294,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 0.1262971846871556,
+    "status": "pass",
+    "score": 0.6619071806863823
+   }
+  },
+  {
+   "id": "lensing.kids_gap_sersic",
+   "group": "lensing",
+   "title": "KiDS: bulge-dominated lenses lens more than disk-dominated ones (Sersic gap)",
+   "value": 0.22985453130635664,
+   "unit": "dex",
+   "target": "0.154 +- 0.04 dex (same bins)",
+   "status": "pass",
+   "score": 1.8940051008061043,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "worse",
+   "baseline": {
+    "value": 0.15533230886324673,
+    "status": "pass",
+    "score": 0.030949539728356706
+   }
+  },
+  {
+   "id": "lensing.mistele_ltg",
+   "group": "lensing",
+   "title": "lensing circular speeds 50-300 kpc, spirals: rms z (static distances)",
+   "value": 2.7974222766759853,
+   "unit": "",
+   "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
+   "status": "close",
+   "score": 2.7974222766759853,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "observed_over_predicted": [
+     1.2725987790756643,
+     1.1337211570268673,
+     0.9634241985718551,
+     0.8627563709414668
+    ]
+   },
+   "move": "changed",
+   "baseline": {
+    "value": 2.8586662948485637,
+    "status": "close",
+    "score": 2.8586662948485637
+   }
+  },
+  {
+   "id": "lensing.mistele_etg",
+   "group": "lensing",
+   "title": "lensing circular speeds 50-300 kpc, ellipticals: rms z (static distances)",
+   "value": 8.59852883530701,
+   "unit": "",
+   "target": "Mistele et al. 2024 (ApJL 969, L3), Table 1",
+   "status": "fail",
+   "score": 8.59852883530701,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "observed_over_predicted": [
+     0.9988515861993223,
+     0.8398544242876645,
+     0.8077172061088684
+    ]
+   },
+   "move": "regressed",
+   "baseline": {
+    "value": 2.5531692196967417,
+    "status": "close",
+    "score": 2.5531692196967417
+   }
+  },
+  {
+   "id": "lensing.slacs_light_equals_matter",
+   "group": "lensing",
+   "title": "SLACS: stellar mass from lensing minus from star speeds (mean of 6)",
+   "value": -0.08327615122129155,
+   "unit": "dex",
+   "target": "0 +- 0.021 (the lenses' own scatter)",
+   "status": "fail",
+   "score": 3.8897900201443623,
+   "note": "",
+   "refs": "Bolton et al. 2008; Auger et al. 2009; lenses_t35.py",
+   "detail": {
+    "gaps": [
+     -0.13244688195501392,
+     -0.006097249447396147,
+     -0.08845158115488144,
+     -0.13548509065814224,
+     -0.03548324980983125,
+     -0.10169285430248426
+    ]
+   },
+   "move": "regressed",
+   "baseline": {
+    "value": -0.027746384214349617,
+    "status": "pass",
+    "score": 1.210207998096058
+   }
+  },
+  {
+   "id": "lensing.slacs_star_mass",
+   "group": "lensing",
+   "title": "SLACS: stellar mass needed for the Einstein radii, vs Chabrier (static distances)",
+   "value": 0.3675256608119712,
+   "unit": "dex",
+   "target": "Salpeter is +0.25; the IMF trend of Posacki et al. 2015 is derived with dark haloes",
+   "status": "info",
+   "score": null,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "per_lens": [
+     0.38052391011343617,
+     0.4352157416482363,
+     0.328576230305444,
+     0.35714325058348495,
+     0.4196664430813414,
+     0.2840283891398844
+    ],
+    "salpeter_factor": [
+     1.3505911827013597,
+     1.5318482390007082,
+     1.1983294436216445,
+     1.27980337341037,
+     1.4779728051897287,
+     1.0815046452267292
+    ]
+   },
+   "move": "changed",
+   "baseline": {
+    "value": 0.42643504118671166,
+    "status": "info",
+    "score": null
+   }
+  },
+  {
+   "id": "lensing.einstein_cross",
+   "group": "lensing",
+   "title": "Einstein Cross: companion share of the pull at the ring",
+   "value": 1.055001434635421e-12,
+   "unit": "",
+   "target": "dark matter inside the ring < 15% (Trott et al. 2010; van de Ven et al. 2010)",
+   "status": "pass",
+   "score": 7.033342897569473e-12,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 1.0734603673908986e-12,
+    "status": "pass",
+    "score": 7.156402449272657e-12
+   }
+  },
+  {
+   "id": "lensing.microlensing",
+   "group": "lensing",
+   "title": "bulge microlensing: companion share at a star's Einstein radius",
+   "value": 0.0,
+   "unit": "",
+   "target": "standard lensing by stars (OGLE, MOA optical depths)",
+   "status": "pass",
+   "score": 0.0,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "same",
+   "baseline": {
+    "value": 0.0,
+    "status": "pass",
+    "score": 0.0
+   }
+  },
+  {
+   "id": "mw.v_sun",
+   "group": "milky_way",
+   "title": "rotation speed at the Sun (8.2 kpc)",
+   "value": 210.9633354326604,
+   "unit": "km/s",
+   "target": "229-234 (Eilers 2019, Zhou 2023, Ou 2024, Jiao 2023); +-7 for the visible-matter model",
+   "status": "close",
+   "score": 2.576666366762802,
+   "note": "",
+   "refs": "data/mw_rotation_curves.json",
+   "detail": {},
+   "move": "better",
+   "baseline": {
+    "value": 209.17368380046838,
+    "status": "close",
+    "score": 2.832330885647374
+   }
+  },
+  {
+   "id": "mw.rc_outer",
+   "group": "milky_way",
+   "title": "rotation curve 15-27 kpc: mean offset over the four Gaia analyses",
+   "value": -6.338578789966871,
+   "unit": "km/s",
+   "target": "0 +- 5 (the analyses differ by about 10)",
+   "status": "pass",
+   "score": 1.2677157579933742,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "Eilers2019": -4.511219920747757,
+    "Ou2024": -7.33747803514229,
+    "Jiao2023": -1.7533702458459903,
+    "Zhou2023": -11.752246958131447
+   },
+   "move": "better",
+   "baseline": {
+    "value": -8.672074673535956,
+    "status": "pass",
+    "score": 1.7344149347071913
+   }
+  },
+  {
+   "id": "mw.rc_rms_eilers",
+   "group": "milky_way",
+   "title": "rotation curve 5-27 kpc: typical miss against Eilers et al. 2019",
+   "value": 14.456074314530191,
+   "unit": "km/s",
+   "target": "",
+   "status": "info",
+   "score": 1.4456074314530192,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "better",
+   "baseline": {
+    "value": 15.94257646115828,
+    "status": "info",
+    "score": 1.594257646115828
+   }
+  },
+  {
+   "id": "mw.vertical_pull",
+   "group": "milky_way",
+   "title": "vertical pull 1.1 kpc above the Sun (as surface density), counted local matter",
+   "value": 71.40197975275933,
+   "unit": "Msun/pc^2",
+   "target": "69.8 +- 3.3 (Bovy & Rix 2013: 68 +- 4; Holmberg & Flynn 2004: 74 +- 6)",
+   "status": "pass",
+   "score": 0.48544840992707095,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "with_McMillan_matter": 82.13892121470872
+   },
+   "move": "better",
+   "baseline": {
+    "value": 72.28765137349475,
+    "status": "pass",
+    "score": 0.7538337495438656
+   }
+  },
+  {
+   "id": "mw.mass_20",
+   "group": "milky_way",
+   "title": "mass inside 20 kpc (as inferred from orbits)",
+   "value": 170780298444.60077,
+   "unit": "Msun",
+   "target": "1.91e+11 +- 1.8e+10 (Posti & Helmi 2019)",
+   "status": "pass",
+   "score": 1.123316753077735,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "better",
+   "baseline": {
+    "value": 166099822378.32504,
+    "status": "pass",
+    "score": 1.3833432012041642
+   }
+  },
+  {
+   "id": "mw.mass_50",
+   "group": "milky_way",
+   "title": "mass inside 50 kpc (as inferred from orbits)",
+   "value": 369352826467.951,
+   "unit": "Msun",
+   "target": "4.50e+11 +- 4.0e+10 (Correa Magnus & Vasiliev 2022)",
+   "status": "close",
+   "score": 2.0161793383012254,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "better",
+   "baseline": {
+    "value": 355549557580.3578,
+    "status": "close",
+    "score": 2.361261060491055
+   }
+  },
+  {
+   "id": "mw.mass_100",
+   "group": "milky_way",
+   "title": "mass inside 100 kpc (as inferred from orbits)",
+   "value": 681762126118.0898,
+   "unit": "Msun",
+   "target": "6.90e+11 +- 7.0e+10 (Deason 2021 + Correa Magnus & Vasiliev 2022)",
+   "status": "pass",
+   "score": 0.11768391259871652,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "better",
+   "baseline": {
+    "value": 653344358620.6371,
+    "status": "pass",
+    "score": 0.5236520197051845
+   }
+  },
+  {
+   "id": "mw.mass_200",
+   "group": "milky_way",
+   "title": "mass inside 200 kpc (as inferred from orbits)",
+   "value": 1300384304929.64,
+   "unit": "Msun",
+   "target": "1.10e+12 +- 2.5e+11 (Correa Magnus & Vasiliev 2022)",
+   "status": "pass",
+   "score": 0.8015372197185596,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "worse",
+   "baseline": {
+    "value": 1243094823580.896,
+    "status": "pass",
+    "score": 0.572379294323584
+   }
+  },
+  {
+   "id": "mw.v_escape",
+   "group": "milky_way",
+   "title": "escape speed at the Sun (to 400 kpc)",
+   "value": 512.6707119463352,
+   "unit": "km/s",
+   "target": "445-580 (seven analyses 2014-2024)",
+   "status": "pass",
+   "score": 0.0,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "to_540kpc": 528.3862091856821
+   },
+   "move": "changed",
+   "baseline": {
+    "value": 504.3546485928708,
+    "status": "pass",
+    "score": 0.0
+   }
+  },
+  {
+   "id": "mw.inner_share",
+   "group": "milky_way",
+   "title": "inner Galaxy (bar region, 2-3 kpc): share of the rotation speed from visible matter",
+   "value": 0.9801774056329382,
+   "unit": "",
+   "target": "0.88 +- 0.07 (Wegg, Gerhard & Portail 2016, bulge microlensing)",
+   "status": "pass",
+   "score": 1.4311057947562598,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "at_2kpc": 0.9893357877349752,
+    "at_3kpc": 0.9710190235309011
+   },
+   "move": "changed",
+   "baseline": {
+    "value": 0.9841536152013713,
+    "status": "pass",
+    "score": 1.487908788591019
+   }
+  },
+  {
+   "id": "dwarfs.draco",
+   "group": "dwarfs",
+   "title": "Draco: stars' speed spread",
+   "value": 2.7044969482624777,
+   "unit": "km/s",
+   "target": "9.1 +- 1.2",
+   "status": "fail",
+   "score": 5.329585876447935,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "known",
+   "baseline": {
+    "value": 2.7876499716368506,
+    "status": "fail",
+    "score": 5.2602916903026244
+   }
+  },
+  {
+   "id": "dwarfs.ursa_minor",
+   "group": "dwarfs",
+   "title": "Ursa Minor: stars' speed spread",
+   "value": 3.349860873608152,
+   "unit": "km/s",
+   "target": "9.5 +- 1.2",
+   "status": "fail",
+   "score": 5.1251159386598735,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "known",
+   "baseline": {
+    "value": 3.442233172891016,
+    "status": "fail",
+    "score": 5.04813902259082
+   }
+  },
+  {
+   "id": "dwarfs.sculptor",
+   "group": "dwarfs",
+   "title": "Sculptor: stars' speed spread",
+   "value": 6.525439321065206,
+   "unit": "km/s",
+   "target": "9.2 +- 1.4",
+   "status": "pass",
+   "score": 1.910400484953424,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 6.63894474402748,
+    "status": "pass",
+    "score": 1.8293251828375139
+   }
+  },
+  {
+   "id": "dwarfs.sextans",
+   "group": "dwarfs",
+   "title": "Sextans: stars' speed spread",
+   "value": 2.0374471167766828,
+   "unit": "km/s",
+   "target": "7.9 +- 1.3",
+   "status": "fail",
+   "score": 4.509656064017936,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "known",
+   "baseline": {
+    "value": 2.104467417911389,
+    "status": "fail",
+    "score": 4.458101986222009
+   }
+  },
+  {
+   "id": "dwarfs.carina",
+   "group": "dwarfs",
+   "title": "Carina: stars' speed spread",
+   "value": 3.3618561242903895,
+   "unit": "km/s",
+   "target": "6.6 +- 1.2",
+   "status": "close",
+   "score": 2.6984532297580084,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 3.472253804522378,
+    "status": "close",
+    "score": 2.606455162898018
+   }
+  },
+  {
+   "id": "dwarfs.fornax",
+   "group": "dwarfs",
+   "title": "Fornax: stars' speed spread",
+   "value": 12.191249208100697,
+   "unit": "km/s",
+   "target": "11.7 +- 0.9",
+   "status": "pass",
+   "score": 0.5458324534452194,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 12.25486090863924,
+    "status": "pass",
+    "score": 0.6165121207102666
+   }
+  },
+  {
+   "id": "dwarfs.leo_ii",
+   "group": "dwarfs",
+   "title": "Leo II: stars' speed spread",
+   "value": 5.182526701722493,
+   "unit": "km/s",
+   "target": "6.6 +- 0.7",
+   "status": "close",
+   "score": 2.024961854682153,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "regressed",
+   "baseline": {
+    "value": 5.234378841222392,
+    "status": "pass",
+    "score": 1.9508873696822973
+   }
+  },
+  {
+   "id": "dwarfs.leo_i",
+   "group": "dwarfs",
+   "title": "Leo I: stars' speed spread",
+   "value": 9.221792315327455,
+   "unit": "km/s",
+   "target": "9.2 +- 1.4",
+   "status": "pass",
+   "score": 0.015565939519611558,
+   "note": "",
+   "refs": "McConnachie 2012 (AJ 144, 4), Tables 2-4; r_h circularised as r_h,major * sqrt(1 - ellipticity)",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 9.264493635258615,
+    "status": "pass",
+    "score": 0.04606688232758291
+   }
+  },
+  {
+   "id": "dwarfs.crater_ii",
+   "group": "dwarfs",
+   "title": "Crater II: stars' speed spread",
+   "value": 0.9633727291259497,
+   "unit": "km/s",
+   "target": "2.7 +- 0.3",
+   "status": "fail",
+   "score": 5.788757569580168,
+   "note": "",
+   "refs": "sigma: Caldwell et al. 2017 (ApJ 839, 20); L_V 1.5e5 (Caldwell); r_h 1066 pc, D_helio 117.5 kpc (Torrealba et al. 2016); D_gc from (l,b) = (282.9, 42.0) with R0 = 8.2",
+   "detail": {},
+   "move": "known",
+   "baseline": {
+    "value": 0.9986458801295439,
+    "status": "fail",
+    "score": 5.671180399568188
+   }
+  },
+  {
+   "id": "dwarfs.antlia_2",
+   "group": "dwarfs",
+   "title": "Antlia 2: stars' speed spread",
+   "value": 1.0669825103184805,
+   "unit": "km/s",
+   "target": "5.71 +- 1.08",
+   "status": "fail",
+   "score": 4.299090268223629,
+   "note": "",
+   "refs": "Torrealba et al. 2019 (MNRAS 488, 2743): sigma 5.71+-1.08, D_helio 132, M_V -9.03 (L_V = 3.5e5 derived), r_h 2920 pc with 1-b/a = 0.38 (circularised here); D_gc from (l,b) = (264.9, 11.2)",
+   "detail": {},
+   "move": "known",
+   "baseline": {
+    "value": 1.1053936007980874,
+    "status": "fail",
+    "score": 4.2635244437054745
+   }
+  },
+  {
+   "id": "dwarfs.chi2",
+   "group": "dwarfs",
+   "title": "all ten dwarfs: chi-squared (MOND with the same stars: 119)",
+   "value": 142.33011387330598,
+   "unit": "",
+   "target": "",
+   "status": "info",
+   "score": 14.233011387330597,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 137.6971874071253,
+    "status": "info",
+    "score": 13.76971874071253
+   }
+  },
+  {
+   "id": "precision.planets",
+   "group": "precision",
+   "title": "planets Mercury-Neptune: largest extra pull relative to Newton",
+   "value": 0.0,
+   "unit": "",
+   "target": "< 1e-12 (planetary ephemerides)",
+   "status": "pass",
+   "score": 0.0,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "same",
+   "baseline": {
+    "value": 0.0,
+    "status": "pass",
+    "score": 0.0
+   }
+  },
+  {
+   "id": "precision.S2",
+   "group": "precision",
+   "title": "star S2 at the Galactic Centre (far point): extra pull relative to Newton",
+   "value": 0.0,
+   "unit": "",
+   "target": "GR precession 1.10 +- 0.19 (GRAVITY 2020)",
+   "status": "pass",
+   "score": 0.0,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "same",
+   "baseline": {
+    "value": 0.0,
+    "status": "pass",
+    "score": 0.0
+   }
+  },
+  {
+   "id": "precision.double_pulsar",
+   "group": "precision",
+   "title": "Double Pulsar: orbit change from the companion emission, in measurement errors",
+   "value": 0.008723454290210037,
+   "unit": "",
+   "target": "< 0.5 of the error on the orbital decay (Kramer et al. 2021)",
+   "status": "pass",
+   "score": 0.017446908580420074,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "changed",
+   "baseline": {
+    "value": 0.013448289426257866,
+    "status": "pass",
+    "score": 0.026896578852515732
+   }
+  },
+  {
+   "id": "precision.light_bending",
+   "group": "precision",
+   "title": "light bending at the Sun's limb: extra relative to GR",
+   "value": 0.0,
+   "unit": "",
+   "target": "gamma - 1 = (2.1 +- 2.3) x 10^-5 (Cassini)",
+   "status": "pass",
+   "score": 0.0,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "same",
+   "baseline": {
+    "value": 0.0,
+    "status": "pass",
+    "score": 0.0
+   }
+  },
+  {
+   "id": "precision.cassini_q2",
+   "group": "precision",
+   "title": "Cassini: Galactic distortion of the Sun's field, Q2",
+   "value": 4.305492435268918e-27,
+   "unit": "1/s^2",
+   "target": "(1.6 +- 1.8) x 10^-27 (Park et al. 2026)",
+   "status": "pass",
+   "score": 1.503051352927177,
+   "note": "",
+   "refs": "Park, Hees, Famaey, Desmond & Durakovic 2026, PRD (arXiv:2602.17884); before: Hees et al. 2014, PRD 89, 102002",
+   "detail": {
+    "g_e": 1.6464292118375345e-10,
+    "g_obs": 2.0906826691496655e-10,
+    "z_2014": 0.43516414508963935
+   },
+   "move": "worse",
+   "baseline": {
+    "value": 4.376707450275145e-27,
+    "status": "pass",
+    "score": 0.4589024834250482
+   }
+  },
+  {
+   "id": "precision.cassini_q2_mw_model",
+   "group": "precision",
+   "title": "Cassini Q2 with the Milky Way model's pull and heat at the Sun",
+   "value": 2.862656206544096e-27,
+   "unit": "1/s^2",
+   "target": "",
+   "status": "info",
+   "score": 0.7014756703022756,
+   "note": "",
+   "refs": "",
+   "detail": {},
+   "move": "worse",
+   "baseline": {
+    "value": 3.471879250849995e-27,
+    "status": "info",
+    "score": 0.1572930836166649
+   }
+  },
+  {
+   "id": "precision.wide_binaries",
+   "group": "precision",
+   "title": "wide binaries (1 Msun, 20,000 AU): boost of the pull",
+   "value": 1.0738625852998689,
+   "unit": "",
+   "target": "between the two published analyses, 1.0 (Banik et al. 2024) and 1.4-1.5 (Chae 2023-24)",
+   "status": "pass",
+   "score": 0.0,
+   "note": "",
+   "refs": "",
+   "detail": {
+    "boost_3000": 1.0011124585110818,
+    "boost_7000": 1.0311701626720517
+   },
+   "move": "changed",
+   "baseline": {
+    "value": 1.075853515336735,
+    "status": "pass",
+    "score": 0.0
+   }
+  }
+ ]
+}

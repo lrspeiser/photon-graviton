@@ -53,6 +53,10 @@ def apply_distances(law, ctx):
     from law_config import ALPHA_ROUND10
     C10.ALPHA = law.get('alpha_per_Mpc', ALPHA_ROUND10)
     L.HEAT_P = float(law.get('heat_exponent', 2.0))          # round 14: the heat weight's exponent
+    L.HOT_GEOMETRY = law.get('hot_geometry', 'two_way')      # round 19: how the hot matter's glow is heard
+    L.STREAM_KAPPA = float(law.get('stream_kappa_per_Mpc', 0.0)) / 1000.0
+    for key in ('xcop', 'xcop_static'):                       # their shell weights depend on it
+        ctx.shared.pop(key, None)
     ctx.sparc_alpha = C10.ALPHA if law.get('sparc_distances', 'published') == 'static' else None
     ctx.shared.pop('sparc', None)
 
