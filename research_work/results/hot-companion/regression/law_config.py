@@ -48,6 +48,9 @@ Keys of the law dictionary (code units: kpc, km/s, Msun; accelerations in (km/s)
                         so that D_L = (1 + z)^2 D_A); set in code/collisions_v10.py (VARIANT). The SLACS test keeps its own
                         conversion (lenses_t35's project distances) and does not see it
     eta_path            registered comparison (round 21): the path factor sqrt(1 + eta z/(1 + z)) on D (collisions_v10.ETA_PATH)
+    collision_field     registered comparison (round 24): the field on the collision maps. 'law' (the adopted law's
+                        bullet_v4.kappa_map_v4) or a mode of code/eft_field_v24.py (MODES: 'eft', the Casimir-EFT note's
+                        local equation; 'eft_memory', 'eft_scalar', ...), installed by common.apply_distances
 Candidate files (JSON) may set: name, description, base ('round3', 'round11', 'round12' or a path to a results.json
 with a 'constants' block), gd_scale, release_length_au, external_hold, refit (list: 'a' on SPARC with g_d
 held, 'u' on X-COP), and explicit overrides a_SI / lam / u_kms. Amendments a candidate does not set take
@@ -84,7 +87,8 @@ def base_constants(base='round3'):
 
 def make_law(a_code, lam, u_kms, name='custom', description='', release_length_au=0.0, external_hold=1.0,
              gd_scale=1.0, refit=(), base='round3', alpha_per_Mpc=ALPHA_ROUND10, sparc_distances='published',
-             heat_exponent=2.0, hot_geometry='two_way', stream_kappa_per_Mpc=0.0, distance_variant='fixed', eta_path=0.0):
+             heat_exponent=2.0, hot_geometry='two_way', stream_kappa_per_Mpc=0.0, distance_variant='fixed', eta_path=0.0,
+             collision_field='law'):
     """alpha_per_Mpc: the static distance law's scale, used by every conversion to the project's distances
     (collisions_v10.ALPHA). sparc_distances: 'published' (Lelli et al. 2016) or 'static' (the Hubble-flow
     galaxies at D = ln(1 + z)/alpha, round 12)."""
@@ -94,7 +98,8 @@ def make_law(a_code, lam, u_kms, name='custom', description='', release_length_a
                 release_length_au=float(release_length_au), external_hold=float(external_hold),
                 gd_scale=float(gd_scale), refit=list(refit), alpha_per_Mpc=float(alpha_per_Mpc), sparc_distances=sparc_distances,
                 heat_exponent=float(heat_exponent), hot_geometry=hot_geometry,
-                stream_kappa_per_Mpc=float(stream_kappa_per_Mpc), distance_variant=distance_variant, eta_path=float(eta_path))
+                stream_kappa_per_Mpc=float(stream_kappa_per_Mpc), distance_variant=distance_variant, eta_path=float(eta_path),
+                collision_field=collision_field)
 
 
 def load_law(spec=None):
@@ -138,7 +143,8 @@ def load_law(spec=None):
                     sparc_distances=cfg.get('sparc_distances', 'static' if cfg.get('base') == 'round12' else 'published'),
                     heat_exponent=cfg.get('heat_exponent', 2.0), hot_geometry=cfg.get('hot_geometry', 'two_way'),
                     stream_kappa_per_Mpc=cfg.get('stream_kappa_per_Mpc', 0.0),
-                    distance_variant=cfg.get('distance_variant', 'fixed'), eta_path=cfg.get('eta_path', 0.0))
+                    distance_variant=cfg.get('distance_variant', 'fixed'), eta_path=cfg.get('eta_path', 0.0),
+                    collision_field=cfg.get('collision_field', 'law'))
 
 
 def with_constants(law, a_code=None, lam=None, u_kms=None):
@@ -151,7 +157,8 @@ def with_constants(law, a_code=None, lam=None, u_kms=None):
                    alpha_per_Mpc=law.get('alpha_per_Mpc', ALPHA_ROUND10), sparc_distances=law.get('sparc_distances', 'published'),
                    heat_exponent=law.get('heat_exponent', 2.0), hot_geometry=law.get('hot_geometry', 'two_way'),
                    stream_kappa_per_Mpc=law.get('stream_kappa_per_Mpc', 0.0),
-                   distance_variant=law.get('distance_variant', 'fixed'), eta_path=law.get('eta_path', 0.0))
+                   distance_variant=law.get('distance_variant', 'fixed'), eta_path=law.get('eta_path', 0.0),
+                   collision_field=law.get('collision_field', 'law'))
     for k in ('refit_log',):
         if k in law: out[k] = law[k]
     return out
@@ -173,4 +180,5 @@ def describe(law):
     elif law.get('hot_geometry', 'two_way') != 'two_way': parts.append(f"hot matter heard {law['hot_geometry'].replace('_', ' ')}")
     if law.get('distance_variant', 'fixed') != 'fixed': parts.append(f"distance geometry {law['distance_variant']} (D_A = D/(1 + z))")
     if law.get('eta_path', 0.0): parts.append(f"path factor sqrt(1 + {law['eta_path']:g} z/(1 + z))")
+    if law.get('collision_field', 'law') != 'law': parts.append(f"collision maps: {law['collision_field']} (code/eft_field_v24.py)")
     return '; '.join(parts)

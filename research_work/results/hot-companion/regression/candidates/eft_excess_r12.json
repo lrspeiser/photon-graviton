@@ -1,0 +1,7 @@
+{
+  "name": "eft_excess_r12",
+  "base": "round12",
+  "description": "Round 24, the proposed repair of the Casimir-EFT note, kept as close to the note as possible: its source rho + k rho_stars (the net flow of the cold and hot glow, with the law's memory on the collision maps) plus one term for the part of the hot glow's intensity that does not add up to a net flow, S_ex = S - |g_hot| >= 0: L = -|grad phi|^3/(12 pi G a) + S_ex |grad phi|/(4 pi G) - rho_phi phi. Spherical tests: identical to the law (two-way S). Collision maps: code/eft_field_v24.py mode 'eft_excess' (curl field neglected). Strong-field hold kept. Registered comparison, not adopted.",
+  "hot_geometry": "two_way",
+  "collision_field": "eft_excess"
+}

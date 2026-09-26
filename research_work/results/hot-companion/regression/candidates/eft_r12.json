@@ -1,0 +1,7 @@
+{
+  "name": "eft_r12",
+  "base": "round12",
+  "description": "Round 24, test A of the Casimir-EFT note (round24-casimir-eft.md, section 10): its local field equation div((|grad phi|/a) grad phi) = 4 pi G (rho + k rho_stars), with the adopted constants. The heat counts as extra source mass: in the spherical tests the inner shells' net flux (Gauss, hot_geometry 'one_way_vector'), on the collision maps the Newtonian field of today's rho + k rho_stars (code/eft_field_v24.py, mode 'eft'; no memory). The law's strong-field hold is kept, as the note does not replace it. Registered comparison, not adopted.",
+  "hot_geometry": "one_way_vector",
+  "collision_field": "eft"
+}

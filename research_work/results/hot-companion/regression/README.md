@@ -58,6 +58,7 @@ README §22.3). `--law round11` loads round 11's (a = 6.547 × 10⁻¹¹, g_d = 
 | `a_SI`, `lam`, `u_kms`, `base` | explicit constants; `base` 'round3' (the round-3 constants, as the rounds 7–9 candidates use), 'round11', 'round12' (the adopted ones) or another `results.json` | 'round3' |
 | `alpha_per_Mpc`, `sparc_distances` | the static distance law's scale, and 'published' or 'static' SPARC distances | the base's ('round12': 2.3645 × 10⁻⁴, 'static'; others 2.4890 × 10⁻⁴, 'published') |
 | `distance_variant`, `eta_path` | round 21, registered comparisons: the distance geometry, 'fixed' (the adopted law, D_A = D) or 'metric' (D_A = D/(1 + z), so D_L = (1 + z)² D_A), and a path factor √(1 + η z/(1 + z)) on D (`collisions_v10.VARIANT`, `ETA_PATH`). They reach every conversion that goes through `collisions_v10.static` (KiDS, Mistele, the Bullet, the far collisions); SLACS keeps its own conversion, and SPARC's Hubble-flow distances take α but not the path factor (under 1% at their redshifts) | 'fixed', 0 |
+| `collision_field` | round 24, registered comparisons: the field on the collision maps. 'law' (the adopted law's `bullet_v4.kappa_map_v4`) or a mode of `code/eft_field_v24.py`, installed by `common.apply_distances` for every collision code (they all call `bullet_v4.kappa_map_v4` at run time): 'eft' (the Casimir-EFT note's local equation, heat as extra source mass, today's matter), 'eft_memory' (the same with the law's memory), 'eft_excess' / 'eft_excess_local' (the note's source plus the hot glow's non-flowing brightness S − \|g_hot\|, with / without memory), 'eft_scalar' / 'eft_scalar_local' (brightness only), and '_aqual' variants solved exactly (curl field kept; standalone runs only). Mode 'law' reproduces the law's map to 2 × 10⁻¹⁶ | 'law' |
 
 Candidates now in the folder:
 
@@ -75,6 +76,13 @@ Candidates now in the folder:
 | `combined.json` | all three, a and u refitted | together |
 | `heat_p175.json` | the heat weight k = 3 (σ/u)^1.75, a and u refitted (6.181 × 10⁻¹¹, 132.2 km/s) | the KiDS early/late gap allows p = 1.75–2 and p = 1.75 removes KiDS's level (round 13) |
 | `heat_p2_refit.json` | the adopted law through the same refit | the control: reproduces the baseline exactly |
+| `eft_r12.json` | the Casimir-EFT note's local equation (round 24): heat as extra source mass (Gauss in round systems, `hot_geometry` 'one_way_vector'; collision maps 'eft'), hold kept | test A of round24-casimir-eft.md |
+| `eft_r12_refit.json` | the same, a and u refitted (5.98 × 10⁻¹¹, 98.6 km/s) | whether the constants can absorb the change |
+| `eft_nohold_r12.json` | the same without the strong-field hold (lam = 10⁹): the note's equation exactly as written | why the hold is needed |
+| `eft_memory_r12.json` | the note's equation with the law's memory on the collision maps | separates memory from how the heat adds up |
+| `eft_excess_r12.json` | the proposed repair: the note's source plus the hot glow's non-flowing brightness S_ex = S − \|g_hot\| (round systems: the law exactly), with memory | the repair (round 24, results README §35.3) |
+| `eft_excess_local_r12.json` | the repair with no memory (today's matter only) | a purely local field equation |
+| `eft_scalar_r12.json`, `eft_scalar_local_r12.json` | brightness only (the heat enters through S, the direction from the cold flow), with / without memory | an alternative repair |
 
 `gradual_release.json` (release over 30,000 AU) was adopted in round 9 and is now the default.
 
@@ -184,6 +192,24 @@ refitted on their home data; none adopted.
 | `dist_metric_r12` (the metric geometry alone, η = 0, H₀-like 70.9) | 57 / 13 / 7 | regressed: MACS J0025's galaxy speeds (631 km/s, fail), El Gordo's masses (close); KiDS red fail → close |
 
 The path factor (with its own scale) is what helps; the metric geometry alone costs the far clusters.
+
+## Round 24: the Casimir-EFT candidate (full tier, against the round-12 baseline)
+
+The results README §35; the reports are kept in `../run-eft-v24/suite/` (and `../run-eft-v24/suite_table_v24.json`,
+from `code/eft_suite_table_v24.py`). Registered comparisons; none adopted. (Cassini's Q2 shows as "worse" for every
+law, the adopted one included: its target became Park et al. 2026 in round 18, after this baseline was saved.)
+
+| Law | Pass / close / fail | What moves |
+|---|---|---|
+| round 12 (adopted) | 59 / 11 / 7 | |
+| `eft_r12` (the note's local equation, hold kept) | 47 / 13 / 17 | regressed: X-COP's miss and radial trend (0.486, 0.715), the Bullet (outer stars, smaller half's κ 0.067 and peak 845 kpc, main mass 2.39), the stack (β 0.180), MACS J0025 (NW peak 249 kpc, speeds 571 km/s), Abell 520 (P4, 710 kpc, speeds), El Gordo (masses, NW speeds) |
+| `eft_r12_refit` (a 5.98 × 10⁻¹¹, u 98.6) | 50 / 12 / 15 | the collisions mostly back (21 / 3 / 3); regressed: SPARC (16.7, close; bulges fail), X-COP trend (0.419), KiDS bulge and GAMA, both Mistele samples (ellipticals z 11.3), SLACS (−0.108) |
+| `eft_nohold_r12` (no hold) | 41 / 12 / 24 | regressed: the planets (3 × 10⁻³ of the Sun's pull), S2, SPARC (18.3), microlensing, SLACS, the Milky Way's vertical pull, and the clusters as `eft_r12`; improved: the Sun's speed 234 km/s |
+| `eft_memory_r12` | 50 / 12 / 15 | as `eft_r12` outside the collisions; the Bullet's smaller half recovers its peak, the rest does not |
+| `eft_excess_r12` (the repair) | **59 / 11 / 7** | nothing changes status; the collision numbers move by 1% or less (peaks by up to 4 kpc) |
+| `eft_excess_local_r12` (the repair, no memory) | **58 / 11 / 8** | regressed: MACS J0025's NW peak (259 kpc); the Bullet's smaller half κ 0.114 (still passes), stack β 0.061 |
+| `eft_scalar_r12` (brightness only) | 59 / 10 / 8 | regressed: MACS J0025's NW peak (223 kpc); improved: Abell 520 P6 |
+| `eft_scalar_local_r12` | 51 / 11 / 15 | the lensing follows the gas: Bullet peaks 265 and 617 kpc, stack β 0.98, MACS J0025 both peaks |
 
 ## What the candidates do now (quick tier, against the round-9 baseline)
 

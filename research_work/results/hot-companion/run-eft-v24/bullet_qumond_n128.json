@@ -1,0 +1,77 @@
+{
+ "experiment": "round 24: the Casimir-EFT local field equation on the Bullet Cluster (suite case, static distances)",
+ "law": "round12",
+ "constants": {
+  "a_SI": 6.297889390049439e-11,
+  "g_d_SI": 2.027287915237577e-10,
+  "u_kms": 169.4433686899687
+ },
+ "n": 128,
+ "dx": 22.5,
+ "rows": [
+  {
+   "mode": "law",
+   "settings": {
+    "source": "memory",
+    "magnitude": "scalar",
+    "direction": "law",
+    "solver": "qumond"
+   },
+   "hearing": "two_way",
+   "seconds": 98.3621892279998,
+   "outer_stars": 3711267975055.379,
+   "kappa_main": 0.7175367534159809,
+   "kappa_sub": 0.270271050870261,
+   "gas_main": 0.04990858165157556,
+   "gas_sub": 0.04828166732833039,
+   "peak_main": 16.465839776151793,
+   "peak_sub": 25.804996408518,
+   "m250_main": 295251222625561.1,
+   "m250_sub": 137177407220360.78,
+   "targets": {
+    "outer_stars": "3.37-5.79 x 10^12",
+    "kappa_main": ">= 0.36 +- 0.06",
+    "kappa_sub": ">= 0.20 +- 0.05",
+    "gas_main": "0.05 +- 0.06",
+    "gas_sub": "0.02 +- 0.06",
+    "peak_main": "<= 63 kpc",
+    "peak_sub": "<= 58 kpc",
+    "m250_main": "3.09-3.46 x 10^14",
+    "m250_sub": "2.47-2.85 x 10^14"
+   },
+   "aqual": []
+  },
+  {
+   "mode": "eft_excess",
+   "settings": {
+    "source": "memory",
+    "magnitude": "excess",
+    "direction": "unit",
+    "solver": "qumond"
+   },
+   "hearing": "two_way",
+   "seconds": 100.06808465299946,
+   "outer_stars": 3711267975055.379,
+   "kappa_main": 0.7187178425716189,
+   "kappa_sub": 0.2702730314540964,
+   "gas_main": 0.050246016156732645,
+   "gas_sub": 0.048403899394104055,
+   "peak_main": 16.53108127096078,
+   "peak_sub": 25.783138679938205,
+   "m250_main": 295458489149403.9,
+   "m250_sub": 137143903091181.36,
+   "targets": {
+    "outer_stars": "3.37-5.79 x 10^12",
+    "kappa_main": ">= 0.36 +- 0.06",
+    "kappa_sub": ">= 0.20 +- 0.05",
+    "gas_main": "0.05 +- 0.06",
+    "gas_sub": "0.02 +- 0.06",
+    "peak_main": "<= 63 kpc",
+    "peak_sub": "<= 58 kpc",
+    "m250_main": "3.09-3.46 x 10^14",
+    "m250_sub": "2.47-2.85 x 10^14"
+   },
+   "aqual": []
+  }
+ ]
+}

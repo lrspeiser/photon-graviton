@@ -1,0 +1,92 @@
+{
+ "note_section_11": {
+  "alpha_G": 5.906149417423905e-39,
+  "R_b_fm": 1.7161207072866629,
+  "E_X_keV": 33.13610955949797,
+  "Gamma_X_per_s": 1.5997573388527767e-18,
+  "ell_micro_W_per_kg": 5.077714019262828e-06,
+  "a_micro": 5.99493981022766e-11,
+  "a_micro_over_a_fit": 0.951879931760505,
+  "ordinary_GR_gap": 6217383.981721352,
+  "g_star": 5.877391970811431e-11,
+  "g_star_over_g_d": 0.28995520329607455,
+  "M_D_TeV": 8.708732453257946
+ },
+ "compact_form": {
+  "prefactor": 0.042034313725490206,
+  "G_mp3_c_u_over_hbar2": 1.4262014242407495e-09,
+  "a": 5.994939810227662e-11,
+  "a_over_u_micro": 3.538925507808536e-16,
+  "a_over_u_fit": 3.717827626918536e-16,
+  "u_for_exact_match_kms": 177.96362161632518,
+  "note": "a_micro is proportional to u, which is itself fitted (X-COP); the model predicts a/u"
+ },
+ "g_star_identity": {
+  "g_star_over_a_micro": 0.980392156862745,
+  "one_over_2C8": 0.9803921568627451,
+  "g_d_over_a_fit": 3.218482057796126,
+  "note": "g_* = a_micro/(2 C_8) identically: the same scale as a, not a second one"
+ },
+ "test_B_bound": {
+  "E_eV": 1e+20,
+  "propagation_Mpc": 100,
+  "P0_W": 8.922444425463479e-33,
+  "P0_eV_per_s": 5.568951784790215e-14,
+  "allowed_enhancement": 1.7446033411018637e+17,
+  "gamma": 106578892478.88947,
+  "c_over_u_squared": 3131948.3681443143,
+  "rules": [
+   {
+    "rule": "saturating: 1 + v^2/u^2, v < c (section 3 as written)",
+    "enhancement": 3131949.3681443143,
+    "loss_eV_per_s": 1.7441675023599866e-07,
+    "loss_time_s": 5.7333942906683365e+26,
+    "distance_before_losing_energy_Mpc": 5570343374150.8545,
+    "margin": 55703433741.508545
+   },
+   {
+    "rule": "growing with energy: gamma v^2/u^2",
+    "enhancement": 3.337995883778862e+17,
+    "loss_eV_per_s": 18589.138134592686,
+    "loss_time_s": 5379485550968559.0,
+    "distance_before_losing_energy_Mpc": 52.264993782042694,
+    "margin": 0.522649937820427
+   },
+   {
+    "rule": "growing with momentum squared: (gamma v)^2/u^2",
+    "enhancement": 3.5575990439224297e+28,
+    "loss_eV_per_s": 1981209754521978.0,
+    "loss_time_s": 50474.211411364566,
+    "distance_before_losing_energy_Mpc": 4.903878485357225e-10,
+    "margin": 4.903878485357225e-12
+   }
+  ],
+  "note": "order of magnitude only: the energy loss must stay below E/t; a canonical calculation (the note's test B) decides which rule the coupling T^mn dX dX/M_D^4 gives"
+ },
+ "no_hold_solar_system": {
+  "Mercury": {
+   "g_N": 0.0395960635595118,
+   "extra_no_hold": 1.5791643622429089e-06,
+   "extra_over_gN": 3.988185239347008e-05,
+   "hold_factor": 0.0
+  },
+  "Earth": {
+   "g_N": 0.005930262843244523,
+   "extra_no_hold": 6.111366081880057e-07,
+   "extra_over_gN": 0.00010305388215366944,
+   "hold_factor": 0.0
+  },
+  "Saturn": {
+   "g_N": 6.461642473712766e-05,
+   "extra_no_hold": 6.379296536409245e-08,
+   "extra_over_gN": 0.0009872561910321531,
+   "hold_factor": 0.0
+  },
+  "Neptune": {
+   "g_N": 6.545471731266236e-06,
+   "extra_no_hold": 2.0303541800265972e-08,
+   "extra_over_gN": 0.00310192185282545,
+   "hold_factor": 0.0
+  }
+ }
+}

@@ -1,0 +1,1280 @@
+{
+ "runs": {
+  "round12 (the law)": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "two_way",
+   "collision_field": "law",
+   "total": "59 / 11 / 7",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "22 / 4 / 1"
+   },
+   "regressed": [],
+   "improved": [],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 15.871594797361485,
+     "status": "pass"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.435830479800696,
+     "status": "pass"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.22152828446272135,
+     "status": "pass"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.2389136588659999,
+     "status": "pass"
+    },
+    "clusters.u_preferred": {
+     "value": 169.4433686899687,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.027746384214349617,
+     "status": "pass"
+    },
+    "mw.v_sun": {
+     "value": 209.17368380046838,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.376707450275145e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 3711267975055.379,
+     "status": "pass"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.2764404561794175,
+     "status": "pass"
+    },
+    "bullet.gas_main": {
+     "value": 0.04956641606538461,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 15.677769590351035,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 22.971876230556386,
+     "status": "pass"
+    },
+    "bullet.m250_main": {
+     "value": 296861165247772.75,
+     "status": "pass"
+    },
+    "bullet.m250_sub": {
+     "value": 138495338528792.78,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.019136227733650826,
+     "status": "pass"
+    },
+    "macs0025.peak_nw": {
+     "value": 79.19790739205413,
+     "status": "pass"
+    },
+    "macs0025.sigma": {
+     "value": 668.6590074208184,
+     "status": "close"
+    },
+    "abell520.m710": {
+     "value": 527180347427273.0,
+     "status": "pass"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.696834124822046,
+     "status": "close"
+    },
+    "elgordo.m500": {
+     "value": 842317643805374.4,
+     "status": "pass"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1013.6683540265178,
+     "status": "close"
+    }
+   }
+  },
+  "eft_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "one_way_vector",
+   "collision_field": "eft",
+   "total": "47 / 13 / 17",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "1 / 0 / 2",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "12 / 6 / 9"
+   },
+   "regressed": [
+    "abell520.m150_p4",
+    "abell520.m710",
+    "abell520.sigma_peaks",
+    "bullet.kappa_sub",
+    "bullet.m250_main",
+    "bullet.outer_stars",
+    "bullet.peak_sub",
+    "clusters.xcop_radial_trend",
+    "clusters.xcop_rms",
+    "elgordo.m1000",
+    "elgordo.m500",
+    "elgordo.sigma_nw",
+    "macs0025.peak_nw",
+    "macs0025.sigma",
+    "stack.beta_gas"
+   ],
+   "improved": [],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 15.881970656438838,
+     "status": "pass"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.364079999416514,
+     "status": "pass"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.48610427464042877,
+     "status": "fail"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.7145742405643022,
+     "status": "fail"
+    },
+    "clusters.u_preferred": {
+     "value": 101.36118153895615,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.010551350325782935,
+     "status": "pass"
+    },
+    "mw.v_sun": {
+     "value": 209.03590422312044,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.376707450275145e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 17235714393657.256,
+     "status": "fail"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.06705405754480707,
+     "status": "close"
+    },
+    "bullet.gas_main": {
+     "value": 0.030770750397007784,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 24.65728488211306,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 845.4541360761305,
+     "status": "fail"
+    },
+    "bullet.m250_main": {
+     "value": 238571446820625.1,
+     "status": "fail"
+    },
+    "bullet.m250_sub": {
+     "value": 113101483764090.55,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.1803062110657027,
+     "status": "fail"
+    },
+    "macs0025.peak_nw": {
+     "value": 248.5413044755154,
+     "status": "fail"
+    },
+    "macs0025.sigma": {
+     "value": 570.6585983313287,
+     "status": "fail"
+    },
+    "abell520.m710": {
+     "value": 453016296365697.7,
+     "status": "close"
+    },
+    "abell520.sigma_peaks": {
+     "value": 3.5248958563857435,
+     "status": "fail"
+    },
+    "elgordo.m500": {
+     "value": 643070402487224.4,
+     "status": "close"
+    },
+    "elgordo.sigma_nw": {
+     "value": 862.8972279994682,
+     "status": "fail"
+    }
+   }
+  },
+  "eft_r12_refit": {
+   "constants": {
+    "a_SI": 5.982780295254692e-11,
+    "u_kms": 98.59888326197078,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "one_way_vector",
+   "collision_field": "eft",
+   "total": "50 / 12 / 15",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "3 / 2 / 1",
+    "clusters": "2 / 0 / 1",
+    "lensing": "4 / 4 / 5",
+    "milky_way": "8 / 1 / 0",
+    "dwarfs": "3 / 2 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "21 / 3 / 3"
+   },
+   "regressed": [
+    "abell520.m150_p2",
+    "abell520.m710",
+    "bullet.outer_stars",
+    "clusters.xcop_radial_trend",
+    "dwarfs.leo_ii",
+    "galaxies.sparc_bulges",
+    "galaxies.sparc_rms_all",
+    "galaxies.sparc_rms_test",
+    "lensing.kids_blue",
+    "lensing.kids_bulge",
+    "lensing.kids_gama",
+    "lensing.kids_gap_sersic",
+    "lensing.mistele_etg",
+    "lensing.mistele_ltg",
+    "lensing.slacs_light_equals_matter",
+    "macs0025.peak_nw"
+   ],
+   "improved": [
+    "abell520.m150_p6",
+    "elgordo.sigma_nw",
+    "lensing.kids_disc",
+    "lensing.kids_red",
+    "macs0025.sigma",
+    "mw.mass_50"
+   ],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 16.67463471306489,
+     "status": "close"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 34.14601117168808,
+     "status": "fail"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.2881860064700759,
+     "status": "pass"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.41877661922646864,
+     "status": "fail"
+    },
+    "clusters.u_preferred": {
+     "value": 98.59888326197078,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": -0.07384989466010694,
+     "status": "close"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1977599031634092,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 11.326293284161736,
+     "status": "fail"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.10811310751095975,
+     "status": "fail"
+    },
+    "mw.v_sun": {
+     "value": 211.89908016459893,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.27169111701692e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 1432737512743.4185,
+     "status": "fail"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.14149293480767883,
+     "status": "pass"
+    },
+    "bullet.gas_main": {
+     "value": 0.025888120023770306,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 15.897154361545537,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 8.839821100822315,
+     "status": "pass"
+    },
+    "bullet.m250_main": {
+     "value": 289927267092318.25,
+     "status": "pass"
+    },
+    "bullet.m250_sub": {
+     "value": 136521982353221.02,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.04707761447865306,
+     "status": "pass"
+    },
+    "macs0025.peak_nw": {
+     "value": 243.4191858676762,
+     "status": "fail"
+    },
+    "macs0025.sigma": {
+     "value": 728.9192898682647,
+     "status": "pass"
+    },
+    "abell520.m710": {
+     "value": 718622399287071.0,
+     "status": "close"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.3353126585830326,
+     "status": "close"
+    },
+    "elgordo.m500": {
+     "value": 962513433824358.9,
+     "status": "pass"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1075.9145509617647,
+     "status": "pass"
+    }
+   }
+  },
+  "eft_nohold_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 0.0629788939004944
+   },
+   "hot_geometry": "one_way_vector",
+   "collision_field": "eft",
+   "total": "41 / 12 / 24",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "1 / 0 / 5",
+    "clusters": "1 / 1 / 1",
+    "lensing": "6 / 4 / 3",
+    "milky_way": "7 / 1 / 1",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "4 / 0 / 2",
+    "collisions": "15 / 5 / 7"
+   },
+   "regressed": [
+    "abell520.m150_p4",
+    "abell520.sigma_peaks",
+    "bullet.kappa_sub",
+    "bullet.m250_main",
+    "bullet.outer_stars",
+    "clusters.xcop_radial_trend",
+    "clusters.xcop_rms",
+    "elgordo.m500",
+    "elgordo.sigma_nw",
+    "galaxies.sparc_bulges",
+    "galaxies.sparc_median_switch",
+    "galaxies.sparc_rms_all",
+    "galaxies.sparc_rms_test",
+    "galaxies.sparc_rms_validation",
+    "lensing.microlensing",
+    "lensing.slacs_light_equals_matter",
+    "macs0025.peak_nw",
+    "macs0025.sigma",
+    "mw.vertical_pull",
+    "precision.S2",
+    "precision.planets",
+    "stack.beta_gas"
+   ],
+   "improved": [
+    "mw.v_sun"
+   ],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 18.332214818227758,
+     "status": "fail"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 40.65896160382048,
+     "status": "fail"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.4441977946488052,
+     "status": "close"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.653396374996599,
+     "status": "fail"
+    },
+    "clusters.u_preferred": {
+     "value": 107.6904333404739,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07730786985950644,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1263280487244442,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.6425161675026825,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.09193390753032837,
+     "status": "fail"
+    },
+    "mw.v_sun": {
+     "value": 233.59691536283748,
+     "status": "pass"
+    },
+    "precision.planets": {
+     "value": 0.0030981811533602574,
+     "status": "fail"
+    },
+    "precision.cassini_q2": {
+     "value": 3.748202207528118e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 12558437792422.084,
+     "status": "fail"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.08235298901933347,
+     "status": "close"
+    },
+    "bullet.gas_main": {
+     "value": 0.03102535155063688,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 22.107693389224046,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 26.740474925447018,
+     "status": "pass"
+    },
+    "bullet.m250_main": {
+     "value": 252016543971123.44,
+     "status": "fail"
+    },
+    "bullet.m250_sub": {
+     "value": 115402910042477.11,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.14556327422427512,
+     "status": "close"
+    },
+    "macs0025.peak_nw": {
+     "value": 248.67481105969307,
+     "status": "fail"
+    },
+    "macs0025.sigma": {
+     "value": 579.6428801124123,
+     "status": "fail"
+    },
+    "abell520.m710": {
+     "value": 479256087142337.56,
+     "status": "pass"
+    },
+    "abell520.sigma_peaks": {
+     "value": 3.455983874182805,
+     "status": "fail"
+    },
+    "elgordo.m500": {
+     "value": 687692609189798.9,
+     "status": "close"
+    },
+    "elgordo.sigma_nw": {
+     "value": 885.3492277715518,
+     "status": "fail"
+    }
+   }
+  },
+  "eft_memory_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "one_way_vector",
+   "collision_field": "eft_memory",
+   "total": "50 / 12 / 15",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "1 / 0 / 2",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "15 / 5 / 7"
+   },
+   "regressed": [
+    "abell520.m150_p4",
+    "abell520.m710",
+    "abell520.sigma_peaks",
+    "bullet.m250_main",
+    "bullet.outer_stars",
+    "clusters.xcop_radial_trend",
+    "clusters.xcop_rms",
+    "elgordo.m1000",
+    "elgordo.m500",
+    "elgordo.sigma_nw",
+    "macs0025.peak_nw",
+    "macs0025.sigma"
+   ],
+   "improved": [],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 15.881970656438838,
+     "status": "pass"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.364079999416514,
+     "status": "pass"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.48610427464042877,
+     "status": "fail"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.7145742405643022,
+     "status": "fail"
+    },
+    "clusters.u_preferred": {
+     "value": 101.36118153895615,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.010551350325782935,
+     "status": "pass"
+    },
+    "mw.v_sun": {
+     "value": 209.03590422312044,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.376707450275145e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 17235714393657.256,
+     "status": "fail"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.11581893036600198,
+     "status": "pass"
+    },
+    "bullet.gas_main": {
+     "value": 0.02343159248050942,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 20.64880139933303,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 20.056761389940853,
+     "status": "pass"
+    },
+    "bullet.m250_main": {
+     "value": 239115499480458.53,
+     "status": "fail"
+    },
+    "bullet.m250_sub": {
+     "value": 128000100695243.22,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.0858833344365412,
+     "status": "pass"
+    },
+    "macs0025.peak_nw": {
+     "value": 227.9146094936719,
+     "status": "fail"
+    },
+    "macs0025.sigma": {
+     "value": 570.6585983313287,
+     "status": "fail"
+    },
+    "abell520.m710": {
+     "value": 448779700476487.8,
+     "status": "close"
+    },
+    "abell520.sigma_peaks": {
+     "value": 3.5248958563857435,
+     "status": "fail"
+    },
+    "elgordo.m500": {
+     "value": 643038726832249.6,
+     "status": "close"
+    },
+    "elgordo.sigma_nw": {
+     "value": 862.8972279994682,
+     "status": "fail"
+    }
+   }
+  },
+  "eft_excess_local_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "two_way",
+   "collision_field": "eft_excess_local",
+   "total": "58 / 11 / 8",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "21 / 4 / 2"
+   },
+   "regressed": [
+    "macs0025.peak_nw"
+   ],
+   "improved": [],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 15.871594797361485,
+     "status": "pass"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.435830479800696,
+     "status": "pass"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.22152828446272135,
+     "status": "pass"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.2389136588659999,
+     "status": "pass"
+    },
+    "clusters.u_preferred": {
+     "value": 169.4433686899687,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.027746384214349617,
+     "status": "pass"
+    },
+    "mw.v_sun": {
+     "value": 209.17368380046838,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.376707450275145e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 3711267975055.379,
+     "status": "pass"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.11428778087794933,
+     "status": "pass"
+    },
+    "bullet.gas_main": {
+     "value": 0.04817870341471083,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 14.929549650602016,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 17.428752748378503,
+     "status": "pass"
+    },
+    "bullet.m250_main": {
+     "value": 296516421072798.56,
+     "status": "pass"
+    },
+    "bullet.m250_sub": {
+     "value": 103320075083441.9,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.061100909882843044,
+     "status": "pass"
+    },
+    "macs0025.peak_nw": {
+     "value": 259.4048020039143,
+     "status": "fail"
+    },
+    "macs0025.sigma": {
+     "value": 668.6590074208184,
+     "status": "close"
+    },
+    "abell520.m710": {
+     "value": 532347927845134.25,
+     "status": "pass"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.696834124822046,
+     "status": "close"
+    },
+    "elgordo.m500": {
+     "value": 843568859116517.0,
+     "status": "pass"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1013.6683540265178,
+     "status": "close"
+    }
+   }
+  },
+  "eft_excess_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "two_way",
+   "collision_field": "eft_excess",
+   "total": "59 / 11 / 7",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "22 / 4 / 1"
+   },
+   "regressed": [],
+   "improved": [],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 15.871594797361485,
+     "status": "pass"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.435830479800696,
+     "status": "pass"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.22152828446272135,
+     "status": "pass"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.2389136588659999,
+     "status": "pass"
+    },
+    "clusters.u_preferred": {
+     "value": 169.4433686899687,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.027746384214349617,
+     "status": "pass"
+    },
+    "mw.v_sun": {
+     "value": 209.17368380046838,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.376707450275145e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 3711267975055.379,
+     "status": "pass"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.27644332772635494,
+     "status": "pass"
+    },
+    "bullet.gas_main": {
+     "value": 0.04989874084022583,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 15.746980288367606,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 22.957306253099716,
+     "status": "pass"
+    },
+    "bullet.m250_main": {
+     "value": 297068810379819.56,
+     "status": "pass"
+    },
+    "bullet.m250_sub": {
+     "value": 138463912298174.66,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.01942387190277959,
+     "status": "pass"
+    },
+    "macs0025.peak_nw": {
+     "value": 83.00484449802828,
+     "status": "pass"
+    },
+    "macs0025.sigma": {
+     "value": 668.6590074208184,
+     "status": "close"
+    },
+    "abell520.m710": {
+     "value": 527301539933728.8,
+     "status": "pass"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.696834124822046,
+     "status": "close"
+    },
+    "elgordo.m500": {
+     "value": 842548492257301.6,
+     "status": "pass"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1013.6683540265178,
+     "status": "close"
+    }
+   }
+  },
+  "eft_scalar_local_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "two_way",
+   "collision_field": "eft_scalar_local",
+   "total": "51 / 11 / 15",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "14 / 4 / 9"
+   },
+   "regressed": [
+    "abell520.m150_p3",
+    "abell520.m150_p4",
+    "bullet.gas_main",
+    "bullet.m250_main",
+    "bullet.peak_main",
+    "bullet.peak_sub",
+    "macs0025.peak_nw",
+    "macs0025.peak_se",
+    "stack.beta_gas"
+   ],
+   "improved": [
+    "abell520.m150_p6"
+   ],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 15.871594797361485,
+     "status": "pass"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.435830479800696,
+     "status": "pass"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.22152828446272135,
+     "status": "pass"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.2389136588659999,
+     "status": "pass"
+    },
+    "clusters.u_preferred": {
+     "value": 169.4433686899687,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.027746384214349617,
+     "status": "pass"
+    },
+    "mw.v_sun": {
+     "value": 209.17368380046838,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.376707450275145e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 3711267975055.379,
+     "status": "pass"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.17042293215349438,
+     "status": "pass"
+    },
+    "bullet.gas_main": {
+     "value": 0.30071536779640123,
+     "status": "fail"
+    },
+    "bullet.peak_main": {
+     "value": 265.0755412612137,
+     "status": "fail"
+    },
+    "bullet.peak_sub": {
+     "value": 617.2559862019191,
+     "status": "fail"
+    },
+    "bullet.m250_main": {
+     "value": 251600343960578.22,
+     "status": "fail"
+    },
+    "bullet.m250_sub": {
+     "value": 124563822250983.34,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.9837038552666172,
+     "status": "fail"
+    },
+    "macs0025.peak_nw": {
+     "value": 243.0374770110467,
+     "status": "fail"
+    },
+    "macs0025.sigma": {
+     "value": 668.6590074208184,
+     "status": "close"
+    },
+    "abell520.m710": {
+     "value": 553705440907747.94,
+     "status": "pass"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.696834124822046,
+     "status": "close"
+    },
+    "elgordo.m500": {
+     "value": 830373952641178.1,
+     "status": "pass"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1013.6683540265178,
+     "status": "close"
+    }
+   }
+  },
+  "eft_scalar_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10
+   },
+   "hot_geometry": "two_way",
+   "collision_field": "eft_scalar",
+   "total": "59 / 10 / 8",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "22 / 3 / 2"
+   },
+   "regressed": [
+    "macs0025.peak_nw"
+   ],
+   "improved": [
+    "abell520.m150_p6"
+   ],
+   "key_values": {
+    "galaxies.sparc_rms_all": {
+     "value": 15.871594797361485,
+     "status": "pass"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.435830479800696,
+     "status": "pass"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.22152828446272135,
+     "status": "pass"
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.2389136588659999,
+     "status": "pass"
+    },
+    "clusters.u_preferred": {
+     "value": 169.4433686899687,
+     "status": "info"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass"
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close"
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.027746384214349617,
+     "status": "pass"
+    },
+    "mw.v_sun": {
+     "value": 209.17368380046838,
+     "status": "close"
+    },
+    "precision.planets": {
+     "value": 0.0,
+     "status": "pass"
+    },
+    "precision.cassini_q2": {
+     "value": 4.376707450275145e-27,
+     "status": "pass"
+    },
+    "bullet.outer_stars": {
+     "value": 3711267975055.379,
+     "status": "pass"
+    },
+    "bullet.kappa_sub": {
+     "value": 0.3122335759524008,
+     "status": "pass"
+    },
+    "bullet.gas_main": {
+     "value": 0.09227541079236819,
+     "status": "pass"
+    },
+    "bullet.peak_main": {
+     "value": 56.616115595149836,
+     "status": "pass"
+    },
+    "bullet.peak_sub": {
+     "value": 33.228811480462035,
+     "status": "pass"
+    },
+    "bullet.m250_main": {
+     "value": 284150861233974.8,
+     "status": "pass"
+    },
+    "bullet.m250_sub": {
+     "value": 158275170822828.03,
+     "status": "fail"
+    },
+    "stack.beta_gas": {
+     "value": 0.022970856148299176,
+     "status": "pass"
+    },
+    "macs0025.peak_nw": {
+     "value": 223.39144702181397,
+     "status": "fail"
+    },
+    "macs0025.sigma": {
+     "value": 668.6590074208184,
+     "status": "close"
+    },
+    "abell520.m710": {
+     "value": 536067454841996.25,
+     "status": "pass"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.696834124822046,
+     "status": "close"
+    },
+    "elgordo.m500": {
+     "value": 844462591578430.8,
+     "status": "pass"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1013.6683540265178,
+     "status": "close"
+    }
+   }
+  }
+ },
+ "keys": [
+  "galaxies.sparc_rms_all",
+  "galaxies.sparc_bulges",
+  "clusters.xcop_rms",
+  "clusters.xcop_radial_trend",
+  "clusters.u_preferred",
+  "lensing.kids_red",
+  "lensing.kids_gap",
+  "lensing.mistele_etg",
+  "lensing.slacs_light_equals_matter",
+  "mw.v_sun",
+  "precision.planets",
+  "precision.cassini_q2",
+  "bullet.outer_stars",
+  "bullet.kappa_sub",
+  "bullet.gas_main",
+  "bullet.peak_main",
+  "bullet.peak_sub",
+  "bullet.m250_main",
+  "bullet.m250_sub",
+  "stack.beta_gas",
+  "macs0025.peak_nw",
+  "macs0025.sigma",
+  "abell520.m710",
+  "abell520.sigma_peaks",
+  "elgordo.m500",
+  "elgordo.sigma_nw"
+ ]
+}

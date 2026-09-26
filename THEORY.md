@@ -729,6 +729,33 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   MACS J0025 and El Gordo change little (within their errors, slightly lower; MACS J0025's peaks onto its galaxies).
   The flicker helps most in unequal collisions. A registered comparison, not adopted.
 
+### Round 24 review: the Casimir-EFT candidate against the data
+
+* **The note** (the owner, `research_work/results/hot-companion/round24-casimir-eft.md`): a proton-scale bag whose
+  boundary leaks companion energy at α_G strength (a_micro = 0.952 a_fit; strictly a prediction of a/u, since
+  a_micro ∝ u), a response-model derivation of 1 + 3σ²/u² and of collision suppression, the 6.2 × 10⁶ gap for ordinary
+  gravity, a slow sector (U^μ, u²/c² = 3.19 × 10⁻⁷), a T^μν∂X∂X coupling (M_D ~ 8.7 TeV) and the nonlinear equation
+  ∇·((|∇φ|/a)∇φ) = 4πG(ρ_cold + (1 + k)ρ_free). Every number reproduces; g_* = a_micro/(2C₈) identically, so it is the
+  same scale as a, not a second one.
+* **Test A** (`code/eft_field_v24.py`; suite candidates `eft_*`, results README §35): the note's local source, hold
+  kept, scores 47 / 13 / 17 against the law's 59 / 11 / 7. X-COP 0.222 → 0.486: the hot galaxies outside each radius
+  are lost and opposite pulls cancel. The collisions 22 / 4 / 1 → 12 / 6 / 9. The law's memory alone gives 50 / 12 / 15.
+  A refit (u = 98.6 km/s) gives 50 / 12 / 15 and drops the bag match to 58%. Without the hold, 41 / 12 / 24 (the planets
+  would feel 3 × 10⁻³ of the Sun's pull).
+* **Repair: the hot glow's non-flowing brightness.** L = −|∇φ|³/(12πGa) + S_ex|∇φ|/(4πG) − ρ_φφ, with
+  S_ex = S − |g_hot| ≥ 0; in the note's X field, (4πG/ℓ)(u U_X − |J_X|) for the hot glow, zero for a single travelling
+  wave. Round systems: |∇φ|² = a(g_N + S), the law exactly. Suite: **59 / 11 / 7** with the law's memory (nothing
+  changes status) and **58 / 11 / 8** with none (only MACS J0025's NW peak fails). Brightness only, with the direction
+  from the cold flow: 59 / 10 / 8 with memory, 51 / 11 / 15 without, so the note's source is what keeps the lensing on
+  the galaxies.
+* **Exact solution** (the curl field kept, Bullet): the note's equation converges in three steps and changes by less
+  than 2%. For the repair the simple iteration oscillates by about 10% where the brightness dominates the net flow;
+  its states pass the Bullet's checks (κ 0.709 / 0.257 with memory). A robust solver is the next numerical step.
+* **Test B, bounded:** a 10²⁰ eV proton crossing 100 Mpc allows 1.7 × 10¹⁷ times the rest emission. A heat factor
+  saturating at 1 + c²/u² is safe by 5.6 × 10¹⁰; γv²/u² is marginal (52 Mpc); (γv)²/u² fails by 2 × 10¹¹.
+* **Rules:** the φ action is AQUAL's deep-regime form, not allowed as our law (RULES.md) unless derived from the
+  mechanism or the owner decides otherwise. The note is registered as an exploration, as are all `eft_*` candidates.
+
 ### What follows
 
 ```

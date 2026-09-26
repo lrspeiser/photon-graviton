@@ -1,0 +1,170 @@
+{
+ "experiment": "round 24: the Casimir-EFT local field equation on the Bullet Cluster (suite case, static distances)",
+ "law": "round12",
+ "constants": {
+  "a_SI": 6.297889390049439e-11,
+  "g_d_SI": 2.027287915237577e-10,
+  "u_kms": 169.4433686899687
+ },
+ "n": 192,
+ "dx": 15.0,
+ "check_law_mode_max_rel_diff": 1.7039640316106435e-16,
+ "rows": [
+  {
+   "mode": "law",
+   "settings": {
+    "source": "memory",
+    "magnitude": "scalar",
+    "direction": "law",
+    "solver": "qumond"
+   },
+   "seconds": 148.44721149399993,
+   "outer_stars": 3711267975055.379,
+   "kappa_main": 0.7168257686822568,
+   "kappa_sub": 0.2764404561794175,
+   "gas_main": 0.04956641606538461,
+   "gas_sub": 0.05160307758690895,
+   "peak_main": 15.677769590351035,
+   "peak_sub": 22.971876230556386,
+   "m250_main": 296861165247772.75,
+   "m250_sub": 138495338528792.78,
+   "targets": {
+    "outer_stars": "3.37-5.79 x 10^12",
+    "kappa_main": ">= 0.36 +- 0.06",
+    "kappa_sub": ">= 0.20 +- 0.05",
+    "gas_main": "0.05 +- 0.06",
+    "gas_sub": "0.02 +- 0.06",
+    "peak_main": "<= 63 kpc",
+    "peak_sub": "<= 58 kpc",
+    "m250_main": "3.09-3.46 x 10^14",
+    "m250_sub": "2.47-2.85 x 10^14"
+   },
+   "aqual": []
+  },
+  {
+   "mode": "eft",
+   "settings": {
+    "source": "local",
+    "magnitude": "vector",
+    "direction": "unit",
+    "solver": "qumond"
+   },
+   "seconds": 109.75726551000002,
+   "outer_stars": 3711267975055.379,
+   "kappa_main": 0.4297610124205674,
+   "kappa_sub": 0.0959798160049648,
+   "gas_main": 0.031069128059267148,
+   "gas_sub": 0.029536163240387544,
+   "peak_main": 17.57417758674332,
+   "peak_sub": 10.099624961866905,
+   "m250_main": 210848743167566.2,
+   "m250_sub": 97642996155292.53,
+   "targets": {
+    "outer_stars": "3.37-5.79 x 10^12",
+    "kappa_main": ">= 0.36 +- 0.06",
+    "kappa_sub": ">= 0.20 +- 0.05",
+    "gas_main": "0.05 +- 0.06",
+    "gas_sub": "0.02 +- 0.06",
+    "peak_main": "<= 63 kpc",
+    "peak_sub": "<= 58 kpc",
+    "m250_main": "3.09-3.46 x 10^14",
+    "m250_sub": "2.47-2.85 x 10^14"
+   },
+   "aqual": []
+  },
+  {
+   "mode": "eft_memory",
+   "settings": {
+    "source": "memory",
+    "magnitude": "vector",
+    "direction": "unit",
+    "solver": "qumond"
+   },
+   "seconds": 150.2388593799999,
+   "outer_stars": 3711267975055.379,
+   "kappa_main": 0.42326130907211207,
+   "kappa_sub": 0.18460793059567313,
+   "gas_main": 0.02328106386474708,
+   "gas_sub": 0.021258908475518243,
+   "peak_main": 15.907816253204201,
+   "peak_sub": 11.78890286321622,
+   "m250_main": 211078121097286.9,
+   "m250_sub": 122588616247742.56,
+   "targets": {
+    "outer_stars": "3.37-5.79 x 10^12",
+    "kappa_main": ">= 0.36 +- 0.06",
+    "kappa_sub": ">= 0.20 +- 0.05",
+    "gas_main": "0.05 +- 0.06",
+    "gas_sub": "0.02 +- 0.06",
+    "peak_main": "<= 63 kpc",
+    "peak_sub": "<= 58 kpc",
+    "m250_main": "3.09-3.46 x 10^14",
+    "m250_sub": "2.47-2.85 x 10^14"
+   },
+   "aqual": []
+  },
+  {
+   "mode": "eft_scalar_local",
+   "settings": {
+    "source": "local",
+    "magnitude": "scalar",
+    "direction": "unit",
+    "solver": "qumond"
+   },
+   "seconds": 121.4067741240001,
+   "outer_stars": 3711267975055.379,
+   "kappa_main": 0.4408532581012786,
+   "kappa_sub": 0.17042293215349438,
+   "gas_main": 0.30071536779640123,
+   "gas_sub": 0.09978996353714194,
+   "peak_main": 265.0755412612137,
+   "peak_sub": 617.2559862019191,
+   "m250_main": 251600343960578.22,
+   "m250_sub": 124563822250983.34,
+   "targets": {
+    "outer_stars": "3.37-5.79 x 10^12",
+    "kappa_main": ">= 0.36 +- 0.06",
+    "kappa_sub": ">= 0.20 +- 0.05",
+    "gas_main": "0.05 +- 0.06",
+    "gas_sub": "0.02 +- 0.06",
+    "peak_main": "<= 63 kpc",
+    "peak_sub": "<= 58 kpc",
+    "m250_main": "3.09-3.46 x 10^14",
+    "m250_sub": "2.47-2.85 x 10^14"
+   },
+   "aqual": []
+  },
+  {
+   "mode": "eft_scalar",
+   "settings": {
+    "source": "memory",
+    "magnitude": "scalar",
+    "direction": "unit",
+    "solver": "qumond"
+   },
+   "seconds": 141.21558712699994,
+   "outer_stars": 3711267975055.379,
+   "kappa_main": 0.6500469165260787,
+   "kappa_sub": 0.3122335759524008,
+   "gas_main": 0.09227541079236819,
+   "gas_sub": 0.07371246493204946,
+   "peak_main": 56.616115595149836,
+   "peak_sub": 33.228811480462035,
+   "m250_main": 284150861233974.8,
+   "m250_sub": 158275170822828.03,
+   "targets": {
+    "outer_stars": "3.37-5.79 x 10^12",
+    "kappa_main": ">= 0.36 +- 0.06",
+    "kappa_sub": ">= 0.20 +- 0.05",
+    "gas_main": "0.05 +- 0.06",
+    "gas_sub": "0.02 +- 0.06",
+    "peak_main": "<= 63 kpc",
+    "peak_sub": "<= 58 kpc",
+    "m250_main": "3.09-3.46 x 10^14",
+    "m250_sub": "2.47-2.85 x 10^14"
+   },
+   "aqual": []
+  }
+ ],
+ "note": "First run (the law check, 1.7e-16). Made before hearing_for() existed: in every row the stars' speeds (the spherical Jeans parts, which set their heat) use the law's two-way hearing, also for the 'vector' modes. The graded comparison is the suite (run-eft-v24/suite/), where each mode is paired with its own hearing."
+}

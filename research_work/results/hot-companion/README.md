@@ -5606,3 +5606,190 @@ faster than u).
 * **A registered comparison,** not adopted: the suite's Bullet has no heat of crossing, so none of rounds 16–23 enters
   its tally.
 * **Unchanged:** the adopted law, its constants, the locked forecasts and the frozen lensing test (§29.7).
+
+## 35. Round 24 review, 26 September 2026: the Casimir-EFT candidate checked and run on the data
+
+The owner registered a new candidate on main ([round24-casimir-eft.md](round24-casimir-eft.md), commit 32e04ba): a
+proton-sized "bag" whose boundary leaks companion energy at gravitational strength, a response model for the heat and
+collision rules, and a field theory (an effective field theory, EFT) whose nonlinear equation is meant to replace the
+law's S + direction rule. The request: "Review the latest checkins on main on casmir eft and run the real data we have
+against it to look for solutions". Three steps:
+1. **Review** the note's arithmetic and logic (§35.1).
+2. **Run its test A**, the local field equation, on the full suite: all 77 graded checks, including the five
+   colliding-cluster systems on 3D grids (§35.2).
+3. **Look for a repair** that keeps the note's architecture and passes the data (§35.3).
+
+Nothing in the adopted law, its constants, the baseline or the locked forecasts changes.
+
+### 35.1 The note, checked
+
+`code/eft_checks_v24.py` → `run-eft-v24/eft_checks_v24.json`.
+
+**Every number in the note reproduces** (its section-11 script, run as written): R_b = 1.7161 fm, E_X = 33.14 keV,
+Γ_X = 1.600 × 10⁻¹⁸ s⁻¹, ℓ_micro = 5.078 × 10⁻⁶ W/kg, a_micro = 5.995 × 10⁻¹¹ m/s² (0.952 of the fitted a), the
+6.2-million-fold gap for ordinary gravity, g_* = 0.290 g_d and M_D = 8.71 TeV. What the numbers imply:
+
+* **The bag model predicts a/u, not a.** Its compact form is a = [χC₈/(8x_q²)] · G m_p³ c u/ħ² = 0.042 ×
+  (1.43 × 10⁻⁹ m/s²): proportional to u, which is itself fitted (on X-COP). So the prediction is a/u =
+  3.54 × 10⁻¹⁶ s⁻¹ against the fitted 3.72 × 10⁻¹⁶ s⁻¹; it would be exact at u = 178 km/s, 5% above the adopted
+  169.4. A striking match from a proton-scale calculation with no astronomical input, with three imported numbers
+  (x_q, χ, C₈) and two chosen ingredients (eight channels, leakage at α_G): suggestive, as the note says, not decisive.
+* **The strong-field lead is the same scale again.** g_* = ħΓ_X/(m_p R_b) equals a_micro/(2C₈) identically
+  (0.980 a_micro), so it is not a second prediction: the model gives one acceleration scale, and the hold's
+  g_d = 3.2 a stays unexplained.
+* **The ordinary-gravity gap is right and important:** the companion's energy, gravitating as ordinary energy, is 6.2
+  million times too weak. The law's force rule is a new gravitational response (a constitutive law), as round 18 stated.
+* **The heat and collision algebra is right:** (|u + v|² + |u − v|²)/(2u²) = 1 + v²/u², and the relaxation filter gives
+  k_eff = k γ/(γ + ν) (6, 3, 1.09, 0.39 for k = 12).
+* **The rule book.** The note's gravity sector, L = −|∇φ|³/(12πGa) − ρ_φ φ, is the deep-regime AQUAL action with a new
+  source, and a slow scalar with a unit timelike vector recalls TeVeS/AeST. RULES.md does not allow those as our law.
+  The note registers them as an exploration, so there is no conflict today; adopting them would need the owner's
+  decision on RULES.md, or a derivation of the |∇φ|³ form from the companion mechanism (as round 2 derived the cold
+  limit).
+* **Test B, bounded.** A 10²⁰ eV proton that reaches us across 100 Mpc can lose at most ~10⁴ eV per second: 1.7 × 10¹⁷
+  times the law's emission per proton at rest (5.6 × 10⁻¹⁴ eV/s). Everything depends on how the heat factor continues
+  to near light speed:
+
+| heat factor at v → c | enhancement | energy lost per second | distance before the proton's energy is gone |
+|---|---|---|---|
+| 1 + v²/u² with v < c (the note's section 3 as written) | 3.1 × 10⁶ | 1.7 × 10⁻⁷ eV | 6 × 10¹² Mpc (safe by 5.6 × 10¹⁰) |
+| growing with the energy, γ v²/u² | 3.3 × 10¹⁷ | 1.9 × 10⁴ eV | 52 Mpc (marginal: fails by 2 for 100 Mpc) |
+| growing with the momentum squared, (γv)²/u² | 3.6 × 10²⁸ | 2 × 10¹⁵ eV | ~100 AU (fails by 2 × 10¹¹) |
+
+  The coupling T^μν∂X∂X grows with the particle's energy, so the canonical calculation the note asks for is decisive,
+  and the answer is extremely sensitive to where the proton's boundary stops responding (the rate goes as a high power
+  of that cutoff). A first rough estimate is too uncertain to call either way.
+
+### 35.2 Test A as the note states it: the local equation on the full suite
+
+`code/eft_field_v24.py` solves the note's equation on the suite's own 3D collision grids (same densities, heat
+profiles and grid as the law's `bullet_v4.kappa_map_v4`; its 'law' mode reproduces the law's Bullet map to 2 × 10⁻¹⁶).
+The heat counts as extra source mass, ρ_φ = ρ + kρ_stars, added as a vector. For round systems that is exactly Gauss's
+net flux of the inner shells (`hot_geometry` 'one_way_vector'), so the whole suite runs on it (candidates `eft_r12`,
+`eft_r12_refit`, `eft_nohold_r12`, `eft_memory_r12`; runs in `run-eft-v24/suite/`). The hold is not part of the note's
+equation; it is kept as in the law, and dropped in `eft_nohold_r12` to show why it is needed. The equation is solved in
+the same field form as the law (the curl field of the exact solution is checked in §35.3).
+
+| | the law | the note's equation (hold kept) | refitted (a = 5.98 × 10⁻¹¹, u = 98.6) | no hold | with the law's memory |
+|---|---|---|---|---|---|
+| **all 77 graded checks** (pass / close / fail) | **59 / 11 / 7** | **47 / 13 / 17** | **50 / 12 / 15** | **41 / 12 / 24** | **50 / 12 / 15** |
+| galaxies (6) | 6 / 0 / 0 | 6 / 0 / 0 | 3 / 2 / 1 | 1 / 0 / 5 | 6 / 0 / 0 |
+| clusters (3) | 3 / 0 / 0 | 1 / 0 / 2 | 2 / 0 / 1 | 1 / 1 / 1 | 1 / 0 / 2 |
+| lensing (13) | 8 / 4 / 1 | 8 / 4 / 1 | 4 / 4 / 5 | 6 / 4 / 3 | 8 / 4 / 1 |
+| Milky Way (9) | 7 / 2 / 0 | 7 / 2 / 0 | 8 / 1 / 0 | 7 / 1 / 1 | 7 / 2 / 0 |
+| dwarf galaxies (10) | 4 / 1 / 5 | 4 / 1 / 5 | 3 / 2 / 5 | 4 / 1 / 5 | 4 / 1 / 5 |
+| Solar System, binaries (6) | 6 / 0 / 0 | 6 / 0 / 0 | 6 / 0 / 0 | 4 / 0 / 2 | 6 / 0 / 0 |
+| colliding clusters (27) | 22 / 4 / 1 | 12 / 6 / 9 | 21 / 3 / 3 | 15 / 5 / 7 | 15 / 5 / 7 |
+| X-COP mass miss (≤ 0.30), worst radius (≤ 0.25) | 0.222, 0.239 | 0.486, 0.715 | 0.288, 0.419 | 0.444, 0.653 | 0.486, 0.715 |
+| ellipticals' lensing speeds (rms z) | 2.55 | 2.55 | 11.3 | 2.64 | 2.55 |
+| Bullet, smaller half: κ (≥ 0.20 ± 0.05), peak from galaxies (≤ 58 kpc) | 0.276, 23 | 0.067, 845 | 0.141, 9 | 0.082, 27 | 0.116, 20 |
+| Bullet, main: lensing mass inside 301 kpc (3.09–3.46 × 10¹⁴) | 2.97 | 2.39 | 2.90 | 2.52 | 2.39 |
+| collision stack β (−0.04 ± 0.07) | 0.019 | 0.180 | 0.047 | 0.146 | 0.086 |
+| MACS J0025 NW: peak from its galaxies, kpc (the gas is 244 away) | 79 | 249 | 243 | 249 | 228 |
+| galaxies' speeds, MACS J0025 (835 ± 59 km/s), El Gordo NW (1,290 ± 134) | 669, 1,014 | 571, 863 | 729, 1,076 | 580, 885 | 571, 863 |
+
+(The graded checks by group, and each candidate's full list, are in `run-eft-v24/suite_table_v24.json` and the
+`suite/*-full/report.md` files.)
+
+**Findings:**
+* **Galaxies, galaxy lensing, the Milky Way, the dwarfs and the Solar System are unchanged** (with the hold kept): the
+  local equation and the law agree wherever the hot matter sits inside the radius being tested.
+* **The clusters fail.** X-COP's mass miss doubles (0.222 → 0.486) and its trend with radius triples (0.24 → 0.71). The
+  note's source counts only the hot galaxies inside each radius, and pulls from hot galaxies on opposite sides cancel;
+  in the law, their glow adds from all around (69% of the heat term at 0.1 R500 comes from galaxies farther out, §29.3).
+  The galaxies' speeds in MACS J0025, Abell 520 and El Gordo drop by about 15% for the same reason.
+* **The collisions fail** (22 / 4 / 1 → 12 / 6 / 9). In the Bullet, the lensing peak on the smaller cluster disappears
+  (the nearest peak is 845 kpc away), the lensing masses fall by 20% and the collision stack's lensing starts to follow
+  the gas (β = 0.18 against −0.04 ± 0.07).
+* **The law's memory alone does not rescue it** (`eft_memory_r12`, 50 / 12 / 15): the loss is in how the heat adds up,
+  not in the timing.
+* **Refitting does not rescue it either.** With a and u refitted (a = 5.98 × 10⁻¹¹ m/s², u = 98.6 km/s) the collisions
+  come back (21 / 3 / 3), because a slower companion makes hot stars three times louder, but galaxy lensing breaks (the
+  ellipticals' lensing speeds miss by z = 11.3, SLACS and two KiDS samples fail) and X-COP's radial trend still fails.
+  And u = 98.6 km/s moves the note's own microscopic match from 95% to 58%.
+* **Without the hold** (the note's equation exactly as written) the Solar System fails at once: the planets would feel
+  an extra pull of 3 × 10⁻³ of the Sun's (ephemerides allow 10⁻¹²), and SPARC fails (18.3 km/s against MOND's 16.1).
+
+### 35.3 A repair that keeps the note's architecture: let the hot glow's brightness in
+
+**The idea.** A hot star's extra glow spreads the same way in every direction. Seen from a point with hot stars all
+around, their glows fill space with companion energy (a brightness) while their flows largely cancel (a net flow). The
+law uses both: the net flow sets the direction, and the brightness S sets the size. The note's source keeps only the
+net flow. The difference between the two,
+
+    S_ex = S − |g_hot| ≥ 0      (S = G∫kρ_stars/d², g_hot = G∫kρ_stars (x′ − x)/|x′ − x|³),
+
+is the part of the hot glow's energy that is not flowing; it can never be negative, because a sum of lengths is never
+shorter than the length of the vector sum. Put it into the note's action as one term:
+
+    L = −|∇φ|³/(12πGa) + S_ex |∇φ|/(4πG) − ρ_φ φ,    ρ_φ = ρ_cold + (1 + k) ρ_free,
+    ⇒  ∇·[(|∇φ|/a − S_ex/|∇φ|) ∇φ] = 4πG ρ_φ.
+
+For a round system this gives |∇φ|² = a(g_N + S), the adopted law exactly; everything else about the note (its source,
+its nonlinear operator, the direction from the field equation) is kept. In the note's own field language S_ex is
+local: it is (4πG/ℓ)(u U_X − |J_X|) for the hot glow, its energy density U_X times u minus its energy flux, which is
+zero for a single travelling wave and positive where waves arrive from many directions. The "all-around" hearing then
+comes from the companion's transport, not from action at a distance. The split itself (orderly matter's glow counted
+as pure flow, the hot extra as brightness) is the law's existing assumption, not yet derived from the companion's
+dynamics.
+
+`code/eft_field_v24.py` modes 'eft_excess' (with the law's memory) and 'eft_excess_local' (today's matter only);
+candidates `eft_excess_r12`, `eft_excess_local_r12` (round systems: the law's two-way S).
+
+| | the law | repaired, no memory | repaired, with memory | brightness only, no memory | brightness only, with memory |
+|---|---|---|---|---|---|
+| **all 77 graded checks** (pass / close / fail) | **59 / 11 / 7** | **58 / 11 / 8** | **59 / 11 / 7** | 51 / 11 / 15 | 59 / 10 / 8 |
+| colliding clusters (27) | 22 / 4 / 1 | 21 / 4 / 2 | 22 / 4 / 1 | 14 / 4 / 9 | 22 / 3 / 2 |
+| Bullet, smaller half: κ, peak from galaxies (kpc) | 0.276, 23 | 0.114, 17 | 0.276, 23 | 0.170, 617 | 0.312, 33 |
+| Bullet, main: κ, peak (kpc), mass inside 301 kpc (10¹⁴) | 0.717, 16, 2.97 | 0.722, 15, 2.97 | 0.718, 16, 2.97 | 0.441, 265, 2.52 | 0.650, 57, 2.84 |
+| Bullet, gas lensing, main / smaller (0.05 ± 0.06, 0.02 ± 0.06) | 0.050, 0.052 | 0.048, 0.054 | 0.050, 0.052 | 0.301, 0.100 | 0.092, 0.074 |
+| collision stack β (−0.04 ± 0.07) | 0.019 | 0.061 | 0.019 | 0.984 | 0.023 |
+| MACS J0025 peaks from galaxies, SE / NW (kpc) | 24, 79 | 40, 259 | 25, 83 | 531, 243 | 115, 223 |
+| Abell 520, mass inside 710 kpc (5.84 ± 0.64 × 10¹⁴) | 5.27 | 5.32 | 5.27 | 5.54 | 5.36 |
+| El Gordo, mass inside 500 kpc (9.45 × 10¹⁴ ± 12%) | 8.42 | 8.44 | 8.43 | 8.30 | 8.44 |
+
+"Brightness only" (`eft_scalar_r12`, `eft_scalar_local_r12`): the heat enters only through S, with the direction from
+the cold flow alone, L = −|∇φ|³/(12πGa) + S|∇φ|/(4πG) − ρφ. Round systems: the law again.
+
+**Findings:**
+* **The repaired EFT passes everything the law passes: 59 / 11 / 7, with no check changing status.** The Bullet,
+  the collision stack, MACS J0025, Abell 520 and El Gordo match the law closely: lensing masses within 0.5%, lensing
+  peaks within 4 kpc (Bullet lensing 0.718 / 0.276, stack β = 0.019, MACS J0025's NW peak 83 kpc from its galaxies).
+* **Even with no memory at all it keeps 58 / 11 / 8.** Only MACS J0025's NW lensing peak fails (259 kpc from its
+  galaxies); the Bullet's smaller half keeps its peak (κ = 0.11, still inside the bound) and the stack stays with the
+  galaxies (β = 0.061). So a purely local, instantaneous field equation nearly suffices; the memory is needed for one
+  check.
+* **The note's source is what keeps the lensing on the galaxies.** Keeping only the brightness, with the direction set
+  by the cold flow alone, needs the memory, and even then MACS J0025's NW peak drifts to 223 kpc (59 / 10 / 8); with
+  no memory the lensing follows the gas (stack β = 0.98). So the note was right to put the hot stars into the source;
+  what it misses is only the part of their glow that does not flow.
+* **The exact solution** (`run-eft-v24/bullet_aqual*.json`, `bullet_qumond_n128.json`). The runs above set the field
+  along the net flow, as the law's field form does. The exact solution of a nonlinear equation of this kind adds a
+  small correction that swirls (the curl field). For the note's own equation it changes nothing that matters: on the
+  Bullet the exact solution converges in three steps and moves the lensing by less than 2% (κ 0.453 / 0.067 against
+  0.455 / 0.067). For the repaired equation the undamped iteration oscillates by about 10% where the brightness
+  dominates the net flow, in the clusters' centres and between them; with damping (relaxation 0.3) it settles, with
+  the leftover swirl at 1% of the field. Against the field form on the same grid (128 cells of 22.5 kpc), the exact
+  solution moves the Bullet's lensing peaks about 20 kpc toward the gas (17 → 33 and 26 → 48 kpc, limits 63 and 58),
+  raises the gas lensing a little (0.050 → 0.067, 0.048 → 0.072; the measurements 0.05 ± 0.06 and 0.02 ± 0.06), and
+  lowers the lensing masses by 1–2% (2.96 → 2.93 and 1.37 → 1.35 × 10¹⁴): every Bullet check still passes. The
+  exact solution for the collision stack and the three other collisions is running (candidate
+  `eft_excess_aqual_r12`) and will be added when it finishes.
+
+### 35.4 Where round 24 leaves things
+
+* **The note's numbers all check, and its bag model's 95% match is a real lead** (strictly, a prediction of a/u).
+  Its strong-field lead is the same scale again, not a second one.
+* **Test A, as stated, fails:** the local source loses the clusters and the collisions (47 / 13 / 17), and neither the
+  law's memory nor a refit rescues it; the refit would also spoil the bag model's match (95% → 58%).
+* **One added term repairs it:** the hot glow's non-flowing energy, S_ex|∇φ|/(4πG), gives 59 / 11 / 7 on all 77 checks,
+  exactly the law's tally. This is the law's own picture (orderly matter adds as a flow, hot matter adds as
+  brightness, §2) written in the note's field language, so the EFT and the law now agree.
+* **Still open for the EFT:** the exact (curl-field) solution in every collision (the Bullet passes; the stack and the
+  other three are running), the hold (not in its equation; required by the Solar System), how S_ex arises from the
+  companion's own dynamics (the hot/cold split), test B (the heat factor's form near light speed decides it), and the
+  RULES.md decision on the AQUAL-type action.
+* **Unchanged:** the adopted law, its constants, the baseline, the locked forecasts and the frozen lensing test (§29.7).
+  All EFT candidates are registered comparisons, not adopted. (The suite marks Cassini's Q2 as "worse" for every
+  candidate, the adopted law included: its target was updated to Park et al. 2026 in round 18, after the baseline was
+  saved.)
