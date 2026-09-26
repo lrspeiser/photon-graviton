@@ -1,0 +1,411 @@
+{
+ "sign": {
+  "n": 43,
+  "law_below": 36,
+  "law_above": 7,
+  "above_ids": [
+   "mw.vertical_pull",
+   "mw.mass_200",
+   "dwarfs.fornax",
+   "dwarfs.leo_i",
+   "abell520.m150_p1",
+   "abell520.m150_p2",
+   "abell520.m150_p3"
+  ],
+  "p_two_sided": 8.963039363152348e-06,
+  "passes": {
+   "n": 25,
+   "law_below": 18
+  },
+  "not_passing": {
+   "n": 18,
+   "law_below": 18
+  },
+  "median_res_pass": 0.10263473112458048,
+  "median_res_not": 0.5033183598153428
+ },
+ "vs_gN_checks": {
+  "n": 41,
+  "spearman": -0.23057824037037855,
+  "p": 0.14695016847317824,
+  "table": [
+   {
+    "log10_gN": -12.09093373734645,
+    "res": 0.17000498791154728,
+    "status": "close",
+    "family": "kids"
+   },
+   {
+    "log10_gN": -12.09093373734645,
+    "res": 0.011918665851818944,
+    "status": "pass",
+    "family": "kids"
+   },
+   {
+    "log10_gN": -12.09093373734645,
+    "res": 0.17136995129481578,
+    "status": "fail",
+    "family": "kids"
+   },
+   {
+    "log10_gN": -12.09093373734645,
+    "res": 0.1400871643747093,
+    "status": "close",
+    "family": "kids"
+   },
+   {
+    "log10_gN": -12.09093373734645,
+    "res": 0.14895638207525727,
+    "status": "pass",
+    "family": "kids"
+   },
+   {
+    "log10_gN": -12.09093373734645,
+    "res": 0.1548091858599581,
+    "status": "pass",
+    "family": "kids"
+   },
+   {
+    "log10_gN": -10.565401976541082,
+    "res": 0.08394821920183383,
+    "status": "pass",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -9.905193476273437,
+    "res": 0.20282988740226932,
+    "status": "close",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -9.376091179596418,
+    "res": 0.2237201808103142,
+    "status": "pass",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -9.90775833266621,
+    "res": -0.0350193077618168,
+    "status": "pass",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -10.65013992788717,
+    "res": 0.13968448079384616,
+    "status": "pass",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -11.424521838786536,
+    "res": 0.235582940760299,
+    "status": "close",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -12.024406892568942,
+    "res": 0.0545872587374899,
+    "status": "pass",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -12.6262405826632,
+    "res": -0.12229391588130548,
+    "status": "pass",
+    "family": "mw"
+   },
+   {
+    "log10_gN": -11.734683195420587,
+    "res": 2.3661509533994862,
+    "status": "fail",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -11.599042555107753,
+    "res": 2.0303427193603802,
+    "status": "fail",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -11.361220147263813,
+    "res": 0.6525009145773414,
+    "status": "pass",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -11.920498632327591,
+    "res": 2.6456006649373793,
+    "status": "fail",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -11.914582732418612,
+    "res": 1.2845315090502192,
+    "status": "close",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -11.251589238488618,
+    "res": -0.09266765069543291,
+    "status": "pass",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -11.566965232955877,
+    "res": 0.4636429334435652,
+    "status": "pass",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -10.962903955362957,
+    "res": -0.013971441363751823,
+    "status": "pass",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -12.15329723265321,
+    "res": 1.9892136210590983,
+    "status": "fail",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -12.272073955348828,
+    "res": 3.2840351046100467,
+    "status": "fail",
+    "family": "dwarfs"
+   },
+   {
+    "log10_gN": -10.588270821087365,
+    "res": 0.09945929954378055,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.645804542963619,
+    "res": 0.6527954058884254,
+    "status": "fail",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.870869097374246,
+    "res": 0.5728340047230113,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.845264898417282,
+    "res": 0.7145707368122736,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -11.214063071429633,
+    "res": 0.44431499913588873,
+    "status": "close",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.840709339683015,
+    "res": -0.10339954808819964,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.837335139753026,
+    "res": -0.24038404140367295,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.901990884617192,
+    "res": -0.03459926314039523,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.832884657645451,
+    "res": 0.3247463563288151,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.83344452448859,
+    "res": 0.024270922180003845,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.839150754823796,
+    "res": 0.5245038521553463,
+    "status": "close",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.86822349173521,
+    "res": 0.10263473112458048,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -11.145816880563554,
+    "res": 0.6006984681504235,
+    "status": "close",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.769213770050586,
+    "res": 0.11505855181893383,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.889968987650693,
+    "res": 0.12517297730221985,
+    "status": "pass",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.935826193136043,
+    "res": 0.48213286747533923,
+    "status": "close",
+    "family": "collisions"
+   },
+   {
+    "log10_gN": -10.969690085532852,
+    "res": 0.37336666280752384,
+    "status": "pass",
+    "family": "collisions"
+   }
+  ]
+ },
+ "vs_gN_families": {
+  "sparc": {
+   "n": 3150,
+   "spearman": -0.027458905837560246,
+   "p": 0.12336398242906621
+  },
+  "xcop": {
+   "n": 72,
+   "spearman": 0.5460479773618883,
+   "p": 7.007206601122399e-07
+  },
+  "kids": {
+   "n": 42,
+   "spearman": -0.7376071498537724,
+   "p": 2.512774696949533e-08
+  },
+  "mw": {
+   "n": 134,
+   "spearman": 0.7717601115199747,
+   "p": 9.99404552743344e-28
+  },
+  "dwarfs": {
+   "n": 10,
+   "spearman": -0.8424242424242423,
+   "p": 0.002220031225916843
+  },
+  "collisions": {
+   "n": 20,
+   "spearman": -0.35187969924812035,
+   "p": 0.12814195208704127
+  }
+ },
+ "dwarfs_outside_pull": {
+  "spearman": 0.8666666666666665,
+  "p": 0.0011735381801554685,
+  "mannwhitney_p": 0.004761904761904762,
+  "table": [
+   {
+    "name": "leo_i",
+    "ext_over_int": 0.013045128232971612,
+    "res": -0.013971441363751823,
+    "status": "pass",
+    "chi": 0.00439532792762491
+   },
+   {
+    "name": "leo_ii",
+    "ext_over_int": 0.06276676941363615,
+    "res": 0.4636429334435652,
+    "status": "pass",
+    "chi": 0.01434514768992456
+   },
+   {
+    "name": "fornax",
+    "ext_over_int": 0.07622747246621898,
+    "res": -0.09266765069543291,
+    "status": "pass",
+    "chi": 0.016546856525984824
+   },
+   {
+    "name": "sculptor",
+    "ext_over_int": 0.30700078129351105,
+    "res": 0.6525009145773414,
+    "status": "pass",
+    "chi": 0.03604151632919987
+   },
+   {
+    "name": "ursa_minor",
+    "ext_over_int": 0.7835727508675212,
+    "res": 2.0303427193603802,
+    "status": "fail",
+    "chi": 0.03651174400168611
+   },
+   {
+    "name": "carina",
+    "ext_over_int": 0.9227099446611949,
+    "res": 1.2845315090502192,
+    "status": "close",
+    "chi": 0.029410598319873176
+   },
+   {
+    "name": "draco",
+    "ext_over_int": 1.9287167149707052,
+    "res": 2.3661509533994862,
+    "status": "fail",
+    "chi": 0.008124258909658379
+   },
+   {
+    "name": "sextans",
+    "ext_over_int": 8.635788843328163,
+    "res": 2.6456006649373793,
+    "status": "fail",
+    "chi": 0.0007363337687609258
+   },
+   {
+    "name": "crater_ii",
+    "ext_over_int": 53.995293253978225,
+    "res": 1.9892136210590983,
+    "status": "fail",
+    "chi": 1.5883195784654822e-05
+   },
+   {
+    "name": "antlia_2",
+    "ext_over_int": 81.8856903814241,
+    "res": 3.2840351046100467,
+    "status": "fail",
+    "chi": 2.9088585062057574e-05
+   }
+  ]
+ },
+ "unfrustrated": {
+  "sparc": {
+   "n": 2656,
+   "median_res": 0.0731226297996917
+  },
+  "kids": {
+   "n": 42,
+   "median_res": 0.15084589534514853
+  },
+  "mistele": {
+   "n": 7,
+   "median_res": 0.11838038152239289
+  },
+  "mw": {
+   "n": 128,
+   "median_res": 0.15197715300349152
+  },
+  "dwarfs": {
+   "n": 5,
+   "median_res": 2.3661509533994862
+  }
+ }
+}

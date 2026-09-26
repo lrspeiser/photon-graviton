@@ -5800,3 +5800,182 @@ the cold flow alone, L = −|∇φ|³/(12πGa) + S|∇φ|/(4πG) − ρφ. Round
   All EFT candidates are registered comparisons, not adopted. (The suite marks Cassini's Q2 as "worse" for every
   candidate, the adopted law included: its target was updated to Park et al. 2026 in round 18, after the baseline was
   saved.)
+
+
+## 36. Round 25, 26 September 2026: flow frustration, tested as registered
+
+The owner proposed a common thread for the law's misses: the law does well where the companion's energy has one clean
+place to go, and falls short where that energy is *directionally frustrated*: streams that cancel, a larger outside
+current that overwhelms a smaller one, a strong-field region that blocks release, or a collision that makes energy
+faster than the slow stream carries it away. The proposal's measure, with the law's own fields:
+
+    chi = 1 - |g_N + g_hot| / (|g_N| + S)        ("flow frustration")
+
+and the test: does the law's residual (observed / law - 1) grow with chi? Nothing is fitted first; a recycling
+(redistribution) equation is derived and run on the suite only if the misses line up.
+
+The test was registered and pushed before any chi was computed ([round25-flow-frustration.md](round25-flow-frustration.md),
+commit e74f3f8). Five steps:
+1. **The proposal's numbers** (§36.1).
+2. **What chi means inside the law**, exactly (§36.2).
+3. **The registered test** at 3,435 test points (§36.3).
+4. **The transport picture:** flicker, and a companion that keeps turning (§36.4).
+5. **What does organise the misses** (exploratory, not registered) (§36.5).
+
+Nothing in the adopted law, its constants, the baseline or the locked forecasts changes.
+
+### 36.1 The proposal's numbers, checked
+
+Every number quoted in the proposal reproduces from `regression/baseline.json` and the law's constants:
+
+| Quoted | Suite |
+|---|---|
+| KiDS red lenses 1.20× above the law | 0.0778 dex = 1.196× |
+| Milky Way at the Sun: 229–234 against 209 km/s | 209.2 |
+| Milky Way inside 50 kpc: 4.5 against 3.56 × 10¹¹ | 3.555 × 10¹¹ |
+| Draco / Ursa Minor / Sextans: 9.1 / 9.5 / 7.9 against 2.8 / 3.4 / 2.1 km/s | 2.788 / 3.442 / 2.104 |
+| Antlia 2: 5.71 against 1.11 km/s | 1.105 |
+| Bullet smaller half: 2.47–2.85 against 1.38 × 10¹⁴ | 1.385 × 10¹⁴ |
+| MACS J0025 galaxies: 835 against 669 km/s | 668.7 |
+| Abell 520 P6: 4.27 against 2.53 × 10¹³ | 2.527 × 10¹³ |
+| El Gordo NW galaxies: 1,290 against 1,014 km/s | 1,014 |
+| τ = u/a = 85.3 Myr; L_turn = u²/a = 14.8 kpc | 85.26 Myr; 14.77 kpc |
+
+R(v) = v²/a: 46 kpc at 300 km/s, 185 at 600, 329 at 800, 359 at 835, 529 at 1,014, 856 at 1,290
+(`code/frustration_transport_v25.py`). The proposal's list leaves out three non-passes, all also underpredictions:
+Crater II (1.0 against 2.7 km/s), Carina (3.5 against 6.6) and Abell 520's galaxy speeds (452–617 against 579–811).
+The one-sidedness is real, and broader than stated: see §36.5.
+
+### 36.2 What chi means inside the law (exact)
+
+Write the companion's total intensity as |g_N| + S (cold flux plus hot brightness) and its net flow as |g_N + g_hot|.
+Then:
+* **|g_hot| ≤ S** everywhere (the triangle inequality on G∫kρ/d²), so 0 ≤ chi ≤ 1.
+* **The non-flowing part splits in two:** Q = (|g_N| + S) − |g_N + g_hot| = Q_hot + Q_dir, with
+  * Q_hot = S − |g_hot| ≥ 0, the hot glow's non-flowing brightness: round 24's S_ex, (4πG/ℓ)(uU_X − |J_X|);
+  * Q_dir = |g_N| + |g_hot| − |g_N + g_hot| ≥ 0, the misalignment of the cold and hot flows.
+* **The law already spends Q_hot in full.** The pull's size is exp(−|g_N|/g_d)√(a(|g_N| + S)): all of the hot
+  energy, flowing or not. Only Q_dir costs pull, through the direction factor |g_N + g_hot| / (|g_N| + |g_hot|) =
+  (1 − chi)(|g_N| + S) / (|g_N| + |g_hot|). In a round system Q_dir = 0 and chi = Q_hot / (|g_N| + S) is entirely
+  energy the law already uses.
+* **What the law does not count:** the cold glow's own cancellations (|g_N| is a vector sum) and Q_dir. Neither is
+  in chi's numerator beyond Q_dir.
+* **Flicker.** Where two coherent streams of intensities I₁ and I₂ meet head-on, the flow efficiency is
+  f = |I₁ − I₂| / (I₁ + I₂) and the standing pattern's depth is m = 2√(I₁I₂) / (I₁ + I₂), so **m² + f² = 1** exactly.
+  For any set of coherent plane waves, 2⟨δI²⟩/⟨I⟩² = 2(1 − ΣI_j²/(ΣI_j)²) ≥ 1 − f², with equality only for two
+  opposed waves (400 random wave sets: smallest margin +0.003). Incoherent (hot) glow shows no pattern once averaged
+  over its random phases (depth 0.005, sampling noise). So frustration makes flicker only in the cold, in-step glow.
+
+The clusters show why this matters: at the X-COP radii the stars' brightness is S = 3–45 times |g_N|, and their net
+hot flow 1.8–9 times; chi runs from 0.24 to 0.86. Most of a cluster's companion energy is "frustrated", and the law
+counts all of it.
+
+### 36.3 The registered test
+
+`code/frustration_v25.py` → `run-frustration-v25/frustration_v25.json` (the collision fields recomputed line for line
+from `bullet_v4.kappa_map_v4`; the suite's aperture masses reproduce). Residual: ln(observed / law) of the pull, an
+enclosed or aperture mass, a speed squared or a dispersion squared.
+
+| Family | Points | chi: range (median) | Observed / law (median) | ρ(chi) (p) | ρ at fixed pull (p) | chi_all (median) | ρ(chi_all) (p) | at fixed pull (p) |
+|---|---:|---|---:|---|---|---:|---|---|
+| SPARC | 3,150 | 0.00–0.96 (0.000) | 1.06 | −0.03 (0.09) | −0.02 (0.37) | 0.38 | +0.02 (0.35) | +0.02 (0.39) |
+| X-COP | 72 | 0.24–0.86 (0.57) | 1.00 | +0.28 (0.018) | **−0.56 (4 × 10⁻⁷)** | 0.64 | +0.30 (0.011) | −0.44 (10⁻⁴) |
+| KiDS bins | 42 | 0 | 1.16 | — | — | 0 | — | — |
+| Mistele bins | 7 | 0 | 1.13 | — | — | 0 | — | — |
+| Milky Way | 134 | 0.00–0.09 (0.007) | 1.17 | +0.09 (0.30) | +0.05 (0.55) | 0.14 | +0.77 (10⁻²⁷) | −0.10 (0.27) |
+| Dwarfs | 10 | 0.00–0.04 (0.011) | 5.14 | −0.37 (0.29) | +0.19 (0.63) | 0.48 | −0.72 (0.019) | −0.19 (0.63) |
+| Collisions | 20 | 0.19–0.58 (0.43) | 1.42 | +0.10 (0.68) | −0.04 (0.87) | 0.55 | +0.13 (0.59) | −0.01 (0.97) |
+
+(ρ: Spearman rank correlation of the residual with chi; "at fixed pull": partial rank correlation controlling for
+ln|g_N|, and for X-COP also r/R500. SPARC: 1,132 points with bulge heat; the rest have chi = 0 exactly. Milky Way:
+127 rotation-curve points from four Gaia analyses plus the seven other graded radii. Collisions: the 13 lensing
+apertures, weighted by the companion's inward flux through the aperture's wall, and the 7 galaxy-speed checks.)
+
+**Pooled** (chi shuffled within each family, 20,000 permutations): sum of the within-family correlations +0.065,
+p = 0.44; at fixed pull −0.38, p = 0.81. **Graded checks** (43 with a pull-like measurement): the passes' median chi
+is 0.092, the closes' and fails' 0.006; p = 0.95 for "non-passes more frustrated".
+
+**Verdict, as registered:** (a) pooled correlation positive at p < 0.01: **no** (p = 0.44); (b) positive in every
+family spanning 0.1 and surviving the control: **no** (SPARC −0.03; pooled partial −0.38); (c) non-passes more
+frustrated: **no** (the reverse). The idea, in this accounting, is not supported, and no recycling equation is run.
+
+What the table shows instead:
+* **The most frustrated systems pass.** X-COP (chi 0.24–0.86) and the colliding clusters' masses (0.19–0.58) are the
+  law's frustrated cases, and nearly all pass. At fixed radius, the more frustrated clusters are the ones the law
+  slightly *over*predicts (ρ = −0.56), the opposite sign.
+* **The misses sit at almost no frustration:** the dwarfs (≤ 0.04; Crater II and Antlia 2 at 0.000), the Milky
+  Way's Sun and 50-kpc mass (0.008, 0.004), and KiDS and Mistele (0 exactly: point lenses).
+* **In the collisions, frustration does not separate passes from misses:** the Bullet's smaller half (fail) has
+  0.36, its main cluster (pass) 0.58; the galaxy speeds (close or low) sit at 0.41–0.52, the same as the aperture
+  masses; today's collision field around the galaxies gives the same (0.42–0.61).
+* **The secondary accounting** (chi_all: cold energy also counted as brightness) does no better: pooled +0.49,
+  p = 0.13; the Milky Way's +0.77 is its radius (−0.10 at fixed pull); the dwarfs run the other way (−0.72).
+
+### 36.4 The transport picture
+
+`code/frustration_transport_v25.py` → `run-frustration-v25/transport_v25.json`.
+
+* **Flicker** (§36.2): exact for two opposed coherent streams, a bound for many, absent for incoherent glow.
+* **Universal turning.** If the companion's direction were randomised at the rate 1/τ with τ = u/a = 85.3 Myr (turning
+  length L = u²/a = 14.8 kpc), the moment equations ∂U/∂t + ∇·J = q, (u²/3)∇U = −J/τ give, around a steady source,
+  U = (3q/4πuLr) · erfc(r/√(4Dt)) beyond L (D = uL/3, t = 13 Gyr): energy piled up ×(1 + 3r/L), and a reach of
+  √(4Dt) = 211 kpc instead of u t = 2,253 kpc. A random walk with the same numbers agrees (×2.1 at 8.6 kpc, ×9.3 at
+  153 kpc, ×0.56 at 400 kpc, nothing at 1 Mpc; the formula gives 2.6, 9.8, 0.60, 5 × 10⁻¹⁰).
+  * If the pull follows the companion's energy (the proposal's "energy conserved when flux cancels"), the pull at
+    30–200 kpc rises by √(6–11) = 2.4–3.3×: lensing 2–3 times too strong where the law is within 16%, and rotation
+    curves rising as r^(1/4) instead of flat.
+  * If the pull follows only the net flow, the flux is unchanged inside the reach but nothing arrives beyond about
+    500 kpc (×0.08 at 500 kpc, 0 at 750), while lensing speeds around isolated galaxies stay flat with no sign of a
+    decline out to 1 Mpc (Mistele et al. 2024, ApJL 969, L3).
+  * With τ = v/a instead (v a local speed): v = 230 km/s gives L = 20 kpc and a reach of 245 kpc; v = 1,000 km/s,
+    87 kpc and 512 kpc; v = 9.1 km/s, 0.8 kpc and 49 kpc. Same conclusion. **The companion streams straight.**
+* **Redirection only where streams oppose** (a turning rate that grows with 1 − f) is not excluded by these numbers:
+  a single clean source keeps the law. But §36.3 finds no sign of it in the residuals, so there is nothing yet for it
+  to explain.
+
+### 36.5 What does organise the misses (exploratory, found after looking)
+
+`code/frustration_explore_v25.py` → `run-frustration-v25/explore_v25.json`. These patterns were found after the test,
+so each is a lead for a new registered test, not a result.
+
+* **The misses are one-sided, passes included.** Of the 43 graded checks with a pull-like measurement, the law is
+  below the data in 36 (p = 9 × 10⁻⁶): all 18 closes and fails and 18 of the 25 passes. Only seven are above: the
+  Milky Way's vertical pull and mass inside 200 kpc, Fornax, Leo I, and Abell 520's P1, P2 and P3.
+* **Even with nothing frustrated (chi < 0.01) the law is short:** by 8% on SPARC (2,656 points), 16% on KiDS, 13% on
+  Mistele's speeds and 16% in the Milky Way. That is a modest, broad deficit, not a frustration effect: the
+  circumgalactic gas still to be weighed (round 12's hot haloes, §22) and the SPARC fit's own median (+0.027 dex) are
+  the first candidates.
+* **The dwarfs follow the Galaxy's pull over their own,** η = g_Galaxy / g_own at the half-light radius:
+
+  | Dwarf | Leo I | Leo II | Fornax | Sculptor | Ursa Minor | Carina | Draco | Sextans | Crater II | Antlia 2 |
+  |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+  | η | 0.01 | 0.06 | 0.08 | 0.31 | 0.78 | 0.92 | 1.93 | 8.6 | 54 | 82 |
+  | grade | pass | pass | pass | pass | fail | close | fail | fail | fail | fail |
+  | chi | 0.004 | 0.014 | 0.017 | 0.036 | 0.037 | 0.029 | 0.008 | 0.001 | 0.000 | 0.000 |
+
+  Rank correlation of the miss with η: +0.87 (p = 0.001); every non-pass has a larger η than every pass (p = 0.005).
+  This is the proposal's "a larger outside current overwhelms a smaller one", and chi cannot see it: one dominant
+  current flows cleanly. The data point the other way from the law, which merges the dwarf's companion into the
+  Galaxy's and gives its stars only the sideways share: the dwarfs behave as if the outside current does not take
+  over their own. Round 20's registered comparison `no_hold_r12` (§31.7) does exactly that: 61 / 12 / 4 on the suite,
+  the dwarfs' χ² 137.7 → 60.4, Crater II 1.0 → 3.4 (2.7 ± 0.3), Antlia 2 1.1 → 4.1 (5.7 ± 1.1), Sextans 2.1 → 4.4,
+  Carina 3.5 → 4.4; Draco and Ursa Minor stay near 4.1–4.2 against 9.1 and 9.5.
+* **The collisions' galaxy speeds are all low** (7 of 7: 669 against 835, 452–617 against 579–811, 904–1,014 against
+  1,089–1,290 km/s), while their lensing masses mostly pass. The predictions use the settled pre-collision clusters;
+  merging clusters' measured spreads include the subclusters' motions along the line of sight.
+
+### 36.6 Where round 25 leaves things
+
+* **Flow frustration, as registered, does not organise the misses** (all three conditions fail), and a universal
+  turning of the companion is excluded by galaxy lensing and flat rotation curves. The reason is structural: the law
+  already counts the hot glow's non-flowing energy in the pull's size (round 24's S_ex), so the most frustrated
+  systems, the clusters, are where it works best.
+* **Two leads replace it:**
+  1. **The outside-current rule for small systems.** Register a test on dwarf galaxies the law has not used (M31's
+     satellites with measured dispersions; the Galaxy's other faint satellites), with the law's merging rule and the
+     no-hold rule side by side, before computing. The flow picture offers a physical reason to look for: separate
+     systems need not be in step with each other, and streams that are not in step add like brightness rather than
+     merging (the cold glow adds as a vector sum because its sources emit in step, §8 and §21).
+  2. **The broad 8–16% deficit** where nothing is frustrated: weigh the lenses' circumgalactic gas and recheck the SPARC
+     fit statistic's median.
+* **Unchanged:** the adopted law, its constants, the baseline, the locked forecasts and the frozen lensing test.

@@ -1,0 +1,76 @@
+[    1 s] SPARC
+[    1 s] X-COP
+[    1 s] KiDS and Mistele
+[    3 s] Milky Way
+[   37 s] dwarfs
+[   37 s] Bullet
+[  235 s] macs0025
+[  335 s] abell520
+[  455 s] el_gordo
+[  573 s] statistics
+{
+ "verdict": {
+  "a_pooled": false,
+  "b_every_family_and_control": false,
+  "c_nonpasses_higher": false,
+  "supported": false
+ },
+ "pooled": {
+  "chi": {
+   "families": [
+    "sparc",
+    "xcop",
+    "mw",
+    "dwarfs",
+    "collisions"
+   ],
+   "sum_of_correlations": 0.0650391004947152,
+   "p_one_sided": 0.44377781110944453
+  },
+  "chi_partial": {
+   "families": [
+    "sparc",
+    "xcop",
+    "mw",
+    "dwarfs",
+    "collisions"
+   ],
+   "sum_of_correlations": -0.38073708384883725,
+   "p_one_sided": 0.8106094695265237
+  },
+  "chi_all": {
+   "families": [
+    "sparc",
+    "xcop",
+    "mw",
+    "dwarfs",
+    "collisions"
+   ],
+   "sum_of_correlations": 0.49130112492496714,
+   "p_one_sided": 0.1328433578321084
+  },
+  "families_spanning_0p1": [
+   "collisions",
+   "sparc",
+   "xcop"
+  ]
+ },
+ "checks": {
+  "n_pass": 25,
+  "n_not": 18,
+  "chi_median_pass": 0.09158967395822369,
+  "chi_median_not": 0.005616883017039134,
+  "mannwhitney_p": 0.9457848077228171,
+  "chi_all_median_pass": 0.48245763368850103,
+  "chi_all_median_not": 0.20732006718730947,
+  "mannwhitney_p_all": 0.940133440428062
+ }
+}
+sparc      n= 3150 chi 0.000/0.000/0.963  res med +0.062  rho (-0.02984921885436124, 0.09393589193671237)  partial (-0.016078744923378577, 0.3670706018716494)  | chi_all med 0.376 rho (0.01667862462777534, 0.3493869652103064) partial (0.015448263063897391, 0.38616038601771524)
+xcop       n=   72 chi 0.236/0.566/0.860  res med +0.003  rho (0.27734902566081426, 0.018340451777749754)  partial (-0.5631063809870894, 3.885038868124424e-07)  | chi_all med 0.636 rho (0.2980255965013828, 0.011001960108051255) partial (-0.44436420726121456, 0.00011637099277568946)
+kids       n=   42 chi 0.000/0.000/0.000  res med +0.151  rho (None, None)  partial (None, None)  | chi_all med 0.000 rho (None, None) partial (None, None)
+mistele    n=    7 chi 0.000/0.000/0.000  res med +0.118  rho (None, None)  partial (None, None)  | chi_all med 0.000 rho (None, None) partial (None, None)
+mw         n=  134 chi 0.000/0.007/0.092  res med +0.153  rho (0.08949190248297641, 0.3038072119354748)  partial (0.05222106709563805, 0.5505304425977982)  | chi_all med 0.142 rho (0.7699894761357499, 1.5615699874323623e-27) partial (-0.09586360148994422, 0.2723584947803513)
+dwarfs     n=   10 chi 0.000/0.011/0.037  res med +1.637  rho (-0.3696969696969697, 0.29305007529282234)  partial (0.18668618581209365, 0.63055901734173)  | chi_all med 0.483 rho (-0.7212121212121211, 0.01857315508946023) partial (-0.18630358372969938, 0.631272433290922)
+collisions n=   20 chi 0.190/0.426/0.576  res med +0.349  rho (0.09774436090225563, 0.6818324385070821)  partial (-0.040459210846101205, 0.869375795516238)  | chi_all med 0.552 rho (0.12781954887218044, 0.5912462398946647) partial (-0.010083368762853833, 0.9673203969014434)
+[  588 s] wrote run-frustration-v25/frustration_v25.json

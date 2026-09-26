@@ -65,3 +65,6 @@ A positive secondary result would need its own registered test.
 **Known before registration (from the code, not from any computed value).** chi is exactly zero wherever the model
 has a single centre and no extended hot matter: the KiDS and Mistele point lenses and the SPARC galaxies without a
 bulge. There the test can only ask whether the residuals are zero at chi = 0.
+
+**Results** (added after the run): README section 36; data in `run-frustration-v25/`. All three conditions failed; the
+idea is not supported in this accounting.

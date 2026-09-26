@@ -3,7 +3,7 @@
 *One proposed law for spinning galaxies, bending light, galaxy clusters and colliding clusters: a few stated
 assumptions, worked out step by step and tested on public data, with no dark matter and no expanding universe.*
 
-24 September 2026, updated 25 September 2026 with round 19 (the companion's medium tested against the data, the
+24 September 2026, updated 26 September 2026 with round 19 (the companion's medium tested against the data, the
 Milky Way refitted with its matter held to independent measurements, a frozen prediction) and a step back over the
 whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9), round 20 (a second way to derive the pull, tested in
 small models, and the clusters checked without their X-ray input), and round 21 (three proposals from the project's
@@ -11,7 +11,8 @@ owner checked against the data: a faster glow from colliding clusters, a refined
 relativistic version, §5.3 and §9), round 22 (the faster glow taken as far as the model allows: how it must spread,
 where its energy comes from, and what the companion's medium must do, §5.3 and §9), and round 23 (what happens when
 the two clusters' companions interfere, §5.3 and §9), and round 24 (a field-theory foundation proposed by the owner,
-checked on every test, and a one-term repair that matches the law, §9). This is a fresh write-up
+checked on every test, and a one-term repair that matches the law, §9), and round 25 (the owner's "flow frustration"
+idea tested as registered: not supported, with two new leads on what the misses do follow, §9). This is a fresh write-up
 of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
@@ -942,6 +943,50 @@ law's rules for the pull's size and direction.
 
 ![The regression suite's 77 graded checks for the adopted law and six versions of the field equation from the round-24 note (pass, close, fail): the law 59 / 11 / 7; the note's equation as written 47 / 13 / 17; refitted 50 / 12 / 15; without the strong-field hold 41 / 12 / 24; with the law's memory 50 / 12 / 15; the repaired equation 58 / 11 / 8 without memory, 59 / 11 / 7 with it, and 58 / 11 / 8 when solved exactly.](blog-figures/eft-scoreboard.png)
 
+**Round 25: does the law fall short where the companion's energy is stuck?** The project's owner proposed a common
+thread for the misses: the law might come up short wherever the companion's energy cannot flow cleanly, where streams
+meet head-on, a big current swamps a small one, a strong pull blocks the release, or a collision makes energy faster
+than the slow stream can carry it off. The proposed measure is "flow frustration": the share of the companion's energy
+that is not part of one net flow (0 for a clean stream, 1 for energy that goes nowhere). We wrote down the test and its
+pass mark and pushed them before computing anything
+([round25-flow-frustration.md](research_work/results/hot-companion/round25-flow-frustration.md)), then measured it at
+3,435 test points: every SPARC point, X-COP radius, lensing bin, Milky Way radius, dwarf galaxy and collision aperture.
+* **The misses do not follow frustration.** The most frustrated systems are the galaxy clusters (0.24 to 0.86: most of
+  their companion's energy is the galaxies' glow arriving from all around), and there the law does best. The biggest
+  misses, the dwarf galaxies, the Milky Way and galaxy lensing, sit at almost none (below 0.1). The typical pass has a
+  frustration of 0.09, the typical miss 0.006. All three conditions fixed in advance fail, so the idea, measured this
+  way, is not supported, and the "recycling" rule it would have led to was not run.
+* **Why:** when the law sets the pull's size it already counts all of the hot glow's energy, flowing or not (round
+  24's repair). There is no hidden store left over to recycle where frustration is high.
+* **Two parts of the picture checked on their own.** Where two in-step streams meet head-on, their energy is not lost:
+  it sits in a standing ripple exactly as deep as the flow is cancelled (the ripple's depth squared plus the flowing
+  share squared is always 1). This holds only for in-step (cold) glow; the hot glow's random phases wash it out. And a
+  companion that turned in a random direction every 85 million years (every 14.8 kpc) fails either way. Its energy
+  would pile up near each galaxy, about 10 times higher at 100 kpc, so a pull that followed it would make galaxy
+  lensing 2 to 3 times too strong and rotation curves climb. A pull that followed only the net flow would get nothing
+  beyond about 500 kpc in 13 billion years, yet lensing speeds around isolated galaxies stay flat out to 1 Mpc. The
+  companion streams straight, as the law has it.
+
+![The law's misses against flow frustration: each graded measurement placed by the share of the companion's energy that is not flowing there and by how far the measurement is above the law. The X-COP clusters (grey, 0.24 to 0.86) pass; the misses (dwarf galaxies up to 27 times, galaxy lensing and the Milky Way about 1.15 to 1.3 times) sit near zero frustration; the colliding clusters sit at 0.19 to 0.58, passes and misses alike.](blog-figures/flow-frustration.png)
+
+![Companion energy around a galaxy relative to straight streaming, if the companion turned in a random direction every 14.8 kpc: it piles up to about 10 times at 60–150 kpc and fades out beyond about 400 kpc, gone by 750 kpc (moment equations and a random walk agree), while galaxy lensing is graded at 44–241 kpc and lensing speeds stay flat to 1 Mpc.](blog-figures/companion-turning.png)
+
+What the misses do follow is encouraging:
+* **They are one-sided.** In 36 of the 43 graded measurements that weigh the pull, the law is below the data: all 18
+  misses and 18 of the 25 passes. Only 7 are above. Even where nothing is frustrated, the law is short by a modest 8–16%
+  (SPARC, galaxy lensing, the Milky Way). The gas around galaxies, still to be weighed, is the first suspect.
+* **The dwarf galaxies line up with one number:** how much the Galaxy's pull outweighs the dwarf's own. The four dwarfs
+  whose own pull dominates all pass; the six where the Galaxy's pull is comparable or larger all fall short. That is
+  the proposal's "big current swamps a small one", but it points the other way from the law: the dwarfs behave as if
+  the Galaxy's current does not take over their own companion. A rule that does exactly that was registered in round
+  20 ("no hold"). It scores 61 pass, 12 close and 4 fail on the suite, against the law's 59, 11 and 7, and brings
+  Crater II, Antlia 2, Sextans and Carina close. What it needs now is a physical reason (one candidate: separate
+  systems are not in step with each other, so their streams would not merge) and a test fixed in advance on dwarf
+  galaxies the law has not yet seen, such as Andromeda's. The pattern was found after looking, so it is a lead, not
+  yet a result.
+
+![The ten dwarf galaxies: measured speed spread over the prediction, against how much the Galaxy's pull outweighs the dwarf's own. The four dwarfs whose own pull dominates pass; the six where the Galaxy's pull is comparable or larger miss. Open circles: the no-hold rule of round 20, which closes most of the gap for Crater II, Antlia 2, Sextans and Carina; Draco and Ursa Minor stay short under both.](blog-figures/dwarfs-outside-pull.png)
+
 An independent review (25 September 2026) set out what a paper would need. In order:
 
 1. **The companion as a flowing medium.** Done in round 19 for a uniform stream (§4.4): the absorbing stream is a
@@ -967,8 +1012,9 @@ An independent review (25 September 2026) set out what a paper would need. In or
 6. **A proper statistical comparison:** a frozen law, a full list of fitted and measured inputs with their
    uncertainties, likelihoods, fair baselines for MOND and dark matter, and at least one test chosen in advance. The
    test is now frozen (§8, prediction 13): lensing against the stars' measured speeds at fixed visible mass.
-7. **The remaining misses,** each explained or stated as a limit: six faint dwarf galaxies too slow, all galaxy lenses
-   16% above the law (the gas around them to be weighed), and strong lenses needing heavy stars (to be measured). The
+7. **The remaining misses,** each explained or stated as a limit: six faint dwarf galaxies too slow (round 25: exactly
+   the six where the Galaxy's pull is comparable to or larger than their own), all galaxy lenses 16% above the law (the
+   gas around them to be weighed), and strong lenses needing heavy stars (to be measured). The
    Milky Way is now down to the law's own typical 3–6% (§5.4).
 8. **A full literature search** before any claim of priority, and a paper with one bounded claim; the review suggests
    "motion-enhanced attraction in an active streaming medium" first, with the astronomy as motivation. A first check,
@@ -988,8 +1034,9 @@ frozen lensing test will check the heat term directly in data, whatever its mech
 added three concrete leads: a way to close the Bullet Cluster's gap with a stated energy requirement, a distance
 factor that fits the supernovae as well as the standard model and fixes galaxy lensing, and a relativistic skeleton
 with a short list of fixes. Round 24 wrote the law as a single field equation that passes the same 77 checks, next to
-a proton-scale calculation that lands within 5% of the pull's strength. Each open item is a concrete calculation or
-measurement.
+a proton-scale calculation that lands within 5% of the pull's strength. Round 25 tested an idea the way it should be
+tested, rules first, and even in ruling it out found the clearest pattern yet in the dwarf galaxies, pointing at a rule
+that already improves the whole suite. Each open item is a concrete calculation or measurement.
 
 **What is borrowed and what is ours.** Borrowed and credited: Newton's and Einstein's gravity in strong fields; Gauss's
 flux geometry; Dicke narrowing and the Mössbauer effect as known physics; the Bloch equations of inverted, self-sustained

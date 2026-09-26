@@ -213,6 +213,17 @@ law, the adopted one included: its target became Park et al. 2026 in round 18, a
 | `eft_scalar_r12` (brightness only) | 59 / 10 / 8 | regressed: MACS J0025's NW peak (223 kpc); improved: Abell 520 P6 |
 | `eft_scalar_local_r12` | 51 / 11 / 15 | the lensing follows the gas: Bullet peaks 265 and 617 kpc, stack β 0.98, MACS J0025 both peaks |
 
+## Round 25: flow frustration (a diagnostic on the suite's own models; no candidate)
+
+The results README §36. The registered test ([../round25-flow-frustration.md](../round25-flow-frustration.md)) reads
+the suite's models where they make their predictions (`code/frustration_v25.py`; the collision fields are recomputed
+line for line from `bullet_v4.kappa_map_v4`, and the aperture masses reproduce the baseline) and asks whether each
+check's miss grows with the share of the companion's energy that is not flowing. It does not (pooled p = 0.44; the
+passes are more frustrated than the misses), so, as registered, no recycling candidate was written or run. The
+exploratory follow-up (`code/frustration_explore_v25.py`) finds the dwarfs' misses ordered by how much the Galaxy's
+pull outweighs their own, which points back to `no_hold_r12` (round 20: 61 / 12 / 4) as the comparison to test on
+new dwarfs.
+
 ## What the candidates do now (quick tier, against the round-9 baseline)
 
 | Candidate | Fixes (fail or close → pass) | Breaks (pass → close or fail) | Moved without changing grade |

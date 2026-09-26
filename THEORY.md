@@ -758,6 +758,30 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
 * **Rules:** the φ action is AQUAL's deep-regime form, not allowed as our law (RULES.md) unless derived from the
   mechanism or the owner decides otherwise. The note is registered as an exploration, as are all `eft_*` candidates.
 
+### Round 25: flow frustration, tested as registered
+
+* **The proposal (the owner):** the law falls short where the companion's energy is directionally frustrated; measure
+  chi = 1 − |g_N + g_hot| / (|g_N| + S) and ask whether the misses grow with it. Registered before the run
+  (`research_work/results/hot-companion/round25-flow-frustration.md`); results README §36.
+* **Exact relations.** |g_hot| ≤ S, so 0 ≤ chi ≤ 1. The non-flowing energy splits as Q = Q_hot + Q_dir, with
+  Q_hot = S − |g_hot| (round 24's S_ex, (4πG/ℓ)(uU_X − |J_X|)) and Q_dir = |g_N| + |g_hot| − |g_N + g_hot|. The pull's size
+  √(a(|g_N| + S)) already spends Q_hot in full; only Q_dir costs pull, through the direction factor
+  |g_N + g_hot|/(|g_N| + |g_hot|) = (1 − chi)(|g_N| + S)/(|g_N| + |g_hot|). In round systems Q_dir = 0.
+* **Flicker.** Two coherent streams meeting head-on: flow efficiency f = |I₁ − I₂|/(I₁ + I₂), pattern depth
+  m = 2√(I₁I₂)/(I₁ + I₂), so m² + f² = 1 exactly; for any coherent set 2⟨δI²⟩/⟨I⟩² ≥ 1 − f²; none for incoherent glow.
+  Round 23's collision driver m is therefore the frustration of the two clusters' in-step glows.
+* **The test** (`code/frustration_v25.py`, 3,435 points): no family shows the misses rising with chi at fixed pull;
+  pooled p = 0.44; passes median chi 0.092, non-passes 0.006. X-COP is the most frustrated (0.24–0.86) and passes; at
+  fixed radius the more frustrated clusters are slightly overpredicted (ρ = −0.56). Not supported; no recycling rule run.
+* **Universal turning** (`code/frustration_transport_v25.py`): with τ = u/a = 85.3 Myr (L = u²/a = 14.8 kpc) the moment
+  equations give U = (3q/4πuLr) erfc(r/√(4Dt)), D = uL/3: ×(1 + 3r/L) inside, a 13-Gyr reach of 211 kpc (u t = 2,253). A
+  pull following U would make lensing 2–3× too strong at 30–200 kpc and rotation curves rise as r^(1/4); a pull following
+  J gets nothing beyond ~500 kpc, where lensing speeds stay flat to 1 Mpc (Mistele et al. 2024). Excluded either way.
+* **What orders the misses instead** (exploratory): 36 of 43 pull-like checks have the law low (18/18 non-passes);
+  8–16% short even at chi < 0.01; the dwarfs by η = g_Galaxy/g_own (ρ = +0.87; all six with η ≥ 0.78 miss, all four
+  with η ≤ 0.31 pass), the case round 20's `no_hold_r12` addresses. Physical question: do separate systems add their
+  cold glows in step (vector, the law) or not (brightness, independent pulls)?
+
 ### What follows
 
 ```
