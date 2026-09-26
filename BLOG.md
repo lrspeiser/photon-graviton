@@ -16,7 +16,7 @@ of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
 technical record is in [research_work/results/hot-companion/README.md](research_work/results/hot-companion/README.md).
-Every number below is computed from public data by a script in this repository (§10).
+Every number below is computed from public data by a script in this repository (§10). An animated visual guide, with the law drawn as currents on a weather map (what works, what fails, and what gravity would have to do there), is in [research_work/results/hot-companion/run-currents-v24/gravitys_currents.html](research_work/results/hot-companion/run-currents-v24/gravitys_currents.html).
 
 **Contents**
 1. [The puzzle](#1-the-puzzle)
