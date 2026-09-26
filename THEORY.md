@@ -696,6 +696,25 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   years relative to the waves; observed 1.7 s), and a single scalar cannot enter the spatial metric without a
   time-like vector (TeVeS/AeST, excluded); (5) √(aI) can come from the energy balance of round 20.
 
+### Round 22: the fast glow from collisions, taken as far as the model allows
+
+* **Not a matter of frame** (`code/crossing_frame_v22.py`): a collision glow that keeps only a fraction μ of its star's
+  motion (so it drifts back from the star at up to (1 − μ)v + u, with round 16's energy in every time slice) never lifts
+  the Bullet's smaller half above 1.68 × 10¹⁴ suns (target 2.47–2.85), and for μ = 0.8–0.9 moves its lensing peak
+  93–189 kpc toward its gas, with lensing over the gas 0.15–0.17 (measured 0.02 ± 0.06). The fast glow must spread
+  evenly around its stars.
+* **The energy bill** (`code/crossing_energy_v22.py`): round 16's heat of crossing costs the smaller half's inner stars
+  1.3 × 10¹³ J/kg, 1.8 times the collision's kinetic energy per kilogram; the fast glow's 3.3× power, 4.3 × 10¹³ J/kg,
+  5.8 times it: 4.7 × 10⁻⁴ of rest energy, a quarter of what a cluster galaxy's settled heat costs over 10 Gyr. It must
+  come from matter's internal store, not the motion.
+* **What the medium must do** (`code/fast_glow_medium_v22.py`): with crests at v_phase ≲ 0.05 u, a collision drives each
+  star at the crest-crossing frequency ω′ = ω₀|1 − w_r/v_phase|, 350–2,300 ω₀. An even glow at 600 km/s needs
+  v_g(ω′) ≈ 3.5 u: impossible for a single power law with slow crests (v_g would rise 260–1,560-fold), possible for a
+  two-regime dispersion ω = u(k − k₀) + β(k − k₀)² with β ≈ 0.12–0.16 u/k₀.
+* **The collision stack** (`code/crossing_offsets_v22.py`): on the Bullet, the even glow shifts the lensing peaks by
+  −0.02 to −0.04 of the galaxy–gas separation (β from +0.02 to 0.00 to −0.02, measured −0.04 ± 0.07); the glow left
+  behind by +0.17 to +0.36 (3–6σ).
+
 ### What follows
 
 ```

@@ -1,0 +1,61 @@
+{
+ "experiment": "round 22: the frame the collision glow travels in (memory fraction mu), energy booked",
+ "law": "round12",
+ "grid": {
+  "n": 128,
+  "dx_kpc": 22.5,
+  "sigma_cells": 0.5
+ },
+ "crossing": {
+  "v_out": 3900.0,
+  "v_in": 3000.0,
+  "b": 150.0
+ },
+ "runs": [
+  {
+   "mu": 0.0,
+   "peak_toward_gas_main": 17.127704421838047,
+   "peak_toward_gas_sub": 28.91102707176682,
+   "m250_sub": 148621206251981.78,
+   "m250_main": 308187912399161.4,
+   "peak_main": 17.80641437175638,
+   "peak_sub": 30.527069101870115,
+   "gas_main": 0.06615314444586372,
+   "gas_sub": 0.06376594785038532,
+   "kappa_sub": 0.29996816042455776,
+   "kappa_main": 0.7498844605362381,
+   "S_cross_share": 0.18309844612706408,
+   "kernels": [
+    {
+     "system": "sub_bcg",
+     "dt_myr": 2.6050868332581003,
+     "t_max_myr": 945.0797947556084,
+     "slices": 363,
+     "weight_dropped_fraction": 0.0
+    },
+    {
+     "system": "main_bcg",
+     "dt_myr": 2.6050868332581003,
+     "t_max_myr": 945.0797947556084,
+     "slices": 363,
+     "weight_dropped_fraction": 0.0
+    }
+   ],
+   "targets": {
+    "m250_main": [
+     309344320966215.2,
+     346465639482161.0
+    ],
+    "m250_sub": [
+     247475456772972.12,
+     284596775288917.94
+    ]
+   },
+   "peak_limits": {
+    "main": 63.06752937579062,
+    "sub": 58.45315861751188
+   }
+  }
+ ],
+ "seconds": 989.379927629
+}

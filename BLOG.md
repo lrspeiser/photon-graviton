@@ -8,7 +8,8 @@ Milky Way refitted with its matter held to independent measurements, a frozen pr
 whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9), round 20 (a second way to derive the pull, tested in
 small models, and the clusters checked without their X-ray input), and round 21 (three proposals from the project's
 owner checked against the data: a faster glow from colliding clusters, a refined distance law, and a first
-relativistic version, §5.3 and §9). This is a fresh write-up
+relativistic version, §5.3 and §9), and round 22 (the faster glow taken as far as the model allows: how it must spread,
+where its energy comes from, and what the companion's medium must do, §5.3 and §9). This is a fresh write-up
 of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
@@ -621,6 +622,11 @@ masses inside 250 kpc. Teal: as proposed; both halves are in range from about 57
 counted, a faster glow is thinner and the smaller half stays near 1.7–1.8. Solid: the smaller half; dashed: the main
 cluster. Script `code/hot_mode_speed_v21.py`.*
 
+Round 22 checked whether the fast glow could simply be glow left behind in the other cluster, like a boat's wake, which
+would need no new speed and no extra energy. It cannot: left behind, the glow adds almost nothing to the smaller half
+(at most 1.7) and drags its lensing up to 190 kpc onto the gas, which is not what is seen. So the glow must spread
+evenly around the stars that made it: a genuinely faster kind of wave in the companion's medium.
+
 ![Three more collisions](blog-figures/three-more-collisions.png)
 
 *Three more collisions, with published inputs only (lines: our lensing; circles: galaxies; diamonds: gas). Script
@@ -872,6 +878,21 @@ against the data.
   gravitational waves feel it as light does. GW170817's waves and light arrived within 1.7 seconds; if only light felt
   the extra pull, the Milky Way's alone would have separated them by about three and a half years.
 
+**Round 22: the fast glow, taken as far as the model allows.** Three results sharpen what the collision glow must be.
+* **It must spread evenly** around the stars that made it: a glow left behind in the other cluster adds no mass and
+  moves the lensing onto the gas (§5.3).
+* **Its energy must come from inside matter.** Even the law's present heat of crossing carries 1.8 times the smaller
+  cluster's energy of motion, and the fast glow 5.8 times, so it cannot be paid for by slowing the collision down. It
+  needs about 0.05% of the stars' mass-energy, a quarter of what the law already asks of stars in cluster galaxies
+  over 10 billion years.
+* **The companion's medium must have two regimes.** A collision shakes each star at the rate at which it crosses the
+  other cluster's slow wave crests: hundreds to thousands of times the companion's own rate. For the glow to travel 3.5
+  times faster there, the medium's wave speed must rise gently at such high rates; a medium of the simplest kind would
+  make the glow hundreds of times faster and far too thin to matter. That is now a concrete design target for the
+  microscopic model.
+* The evenly spreading glow also passes the 72-collision stack: the lensing moves toward the gas by between 0.00 and
+  −0.02 of the gas's lag, against −0.04 ± 0.07 measured.
+
 An independent review (25 September 2026) set out what a paper would need. In order:
 
 1. **The companion as a flowing medium.** Done in round 19 for a uniform stream (§4.4): the absorbing stream is a
@@ -893,7 +914,7 @@ An independent review (25 September 2026) set out what a paper would need. In or
 5. **Collisions as a calculation from before the crossing,** with the companion's emission, transport and the heat of
    crossing followed in time. The Bullet Cluster's smaller half still has only about 60% of its measured lensing mass;
    a faster glow from the collision closes the gap if the collision puts about 3.3 times more power into it (round
-   21, §5.3).
+   21, §5.3); round 22 found it must spread evenly around the stars and draw on matter's internal store.
 6. **A proper statistical comparison:** a frozen law, a full list of fitted and measured inputs with their
    uncertainties, likelihoods, fair baselines for MOND and dark matter, and at least one test chosen in advance. The
    test is now frozen (§8, prediction 13): lensing against the stars' measured speeds at fixed visible mass.
@@ -952,6 +973,7 @@ python stream_store_v16.py  --output ../run-stream-store-v16/stream_store_v16.js
 python one_matter_v17.py    --set oneway_distance --output ../run-one-matter-v17/oneway_distance.json  # one kind of matter
 python hot_mode_speed_v21.py --grid coarse --output ../run-hot-mode-v21/hot_mode_speed_coarse.json    # the Bullet, faster glow
 python distance_eta_v21.py  --output ../run-distance-eta-v21/distance_eta_v21.json         # supernovae and the path factor
+python crossing_frame_v22.py --mu 1,0.85,0 --output ../run-crossing-frame-v22/frame.json    # the collision glow's frame
 ```
 
 The regression suite runs everything at once and compares with the saved baseline:

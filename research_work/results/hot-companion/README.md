@@ -5370,3 +5370,150 @@ way to settle where momentum goes (§10.6).
   gravitational waves feel. The last is the hardest and decides whether a relativistic version can exist outside the
   MOND family's constructions.
 * **Unchanged:** the adopted law, its constants, the locked forecasts and the frozen lensing test (§29.7).
+
+## 33. Round 22, 26 September 2026: the fast glow from collisions, taken as far as the model allows
+
+The request: "proceed with the next step", the first item of round 21's list (§32.5): derive the fast glow's speed and
+power from the medium, with every watt booked, then test it on the collision stack. Four steps:
+1. **Could the glow's speed be a matter of frame?** If the glow a collision makes is left partly behind in the other
+   system's frame, like a boat's wake, it would spread away from the stars at hundreds of km/s with no new speed and no
+   extra power (§33.1).
+2. **The energy bill** of the heat of crossing, and of the fast glow's extra power (§33.2).
+3. **What an evenly spreading fast glow requires of the medium** (§33.3).
+4. **The collision stack:** which way each version moves the lensing, the quantity the 72-collision stack measures
+   (§33.4).
+
+Nothing in the adopted law, its constants or the locked forecasts changes.
+
+### 33.1 A glow left behind (a wake) does not work
+
+`code/crossing_frame_v22.py` → `run-crossing-frame-v22/` (`frame_a.json` … `frame_d.json`).
+
+**Setup.** Round 16's heat of crossing and history, with one change: the glow a star emitted a time t ago keeps only a
+fraction μ of the star's motion relative to the other system. It still travels at u in its own frame, so the sphere it
+fills has radius u t, but the sphere's centre has fallen behind the star by (1 − μ) × the path the star has travelled
+relative to the other system since. μ = 1 is round 16; μ = 0 is a glow that stays where it was emitted. Each time slice
+carries exactly round 16's energy (Gaussian shells of width 11 kpc on the 22.5 kpc grid); only where it sits changes.
+Seen from the star, the glow drifts backwards at up to (1 − μ) v + u: 560–950 km/s for μ = 0.9–0.8. The check at μ = 1
+against round 16's own kernel: 1.603 / 3.104 against 1.586 / 3.101.
+
+Masses inside 250 kpc in 10¹⁴ suns (targets 2.47–2.85 for the smaller half, 3.09–3.46 for the main one); peak offsets
+along the collision axis, positive toward each system's own gas (the suite allows a quarter of the galaxy–gas
+separation: 63 and 58 kpc); gas residuals measured 0.05 ± 0.06 and 0.02 ± 0.06. Grid 22.5 kpc.
+
+| μ (share of the star's motion the glow keeps) | glow drifts back from the star at up to (km/s) | smaller half | main | peaks toward the gas: main, smaller (kpc) | gas residuals |
+|---|---|---|---|---|---|
+| no heat of crossing | – | 1.372 | 2.953 | +16, +25 | 0.050, 0.048 |
+| 1 (round 16) | 169 | 1.603 | 3.104 | +14, +7 | 0.051, 0.013 |
+| 0.9 | 560 | 1.675 | 3.133 | +27, **+93** | 0.054, **0.154** |
+| 0.85 | 760 | 1.631 | 3.142 | +21, **+125** | 0.056, **0.174** |
+| 0.8 | 950 | 1.590 | 3.143 | +20, **+189** | 0.064, **0.160** |
+| 0.7 | 1,340 | 1.534 | 3.151 | +29, +45 | 0.080, 0.125 |
+| 0.5 | 2,120 | 1.505 | 3.147 | +22, +35 | 0.078, 0.089 |
+| 0 (a wake) | 4,070 | 1.486 | 3.082 | +17, +29 | 0.066, 0.064 |
+| for comparison: the even fast glow of round 21 (600 km/s, as proposed) | 600 | 2.536 | 3.372 | +19, +9 | 0.051, 0.100 |
+
+**Findings:**
+* **A glow left behind never lifts the smaller half.** Its mass stays at 1.49–1.68, at most 68% of the lower end of
+  its range, against 2.54 for the evenly spreading glow at the same speed. The energy is the same; it is simply
+  deposited behind the stars instead of around them.
+* **It drags the lensing onto the gas.** For μ = 0.8–0.9, where the drift matches round 21's speeds, the smaller half's
+  lensing peak moves 93–189 kpc toward its gas (the suite allows 58), and the lensing over that gas rises to 0.15–0.17
+  (2.2–2.6σ above the measured 0.02 ± 0.06). A glow left further behind (μ ≤ 0.7) moves the peak less, because the
+  glow ends up beyond the gas, near the other cluster, but it adds nothing to the smaller half either.
+* **So the fast glow cannot be a matter of frame.** It has to spread evenly around the stars that made it: a
+  genuinely faster mode of the companion's medium, with its own power (§33.2, §33.3).
+
+### 33.2 The energy bill
+
+`code/crossing_energy_v22.py` → `run-crossing-frame-v22/crossing_energy_v22.json`.
+
+The cold companion carries ℓ = a u / 2 = 5.3 × 10⁻⁶ W per kilogram of matter; warm matter carries (1 + k) ℓ. Integrated over
+round 16's crossing history (the other system's flow reaches the stars for the last 950 Myr), the heat of crossing
+costs, per kilogram of stars:
+
+| stars | largest k | ∫ k dt (Myr) | energy (J/kg) | peak power (W/kg) |
+|---|---|---|---|---|
+| smaller half, inner 60 kpc | 214 | 76,700 | 1.3 × 10¹³ | 1.1 × 10⁻³ |
+| smaller half, 60–180 kpc | 313 | 129,000 | 2.2 × 10¹³ | 1.7 × 10⁻³ |
+| main cluster, inner 60 kpc | 89 | 18,000 | 3.0 × 10¹² | 4.7 × 10⁻⁴ |
+
+**For scale,** per kilogram of the smaller half's inner stars:
+* the kinetic energy of the relative motion (centre-of-mass frame) is 7.3 × 10¹² J/kg at 3,900 km/s: **round 16's glow
+  already carries 1.8 times that**, and the fast glow's 3.3 times the power would carry 5.8 times it. The glow cannot be
+  paid for by slowing the collision down (it would stop the smaller cluster); it has to come from energy stored inside
+  matter, as round 16's quiet store assumes;
+* the fast glow's total, 4.3 × 10¹³ J/kg, is 4.7 × 10⁻⁴ of the stars' rest energy, and a quarter (0.24) of what the
+  law's settled heat already asks of a cluster galaxy's stars over 10 Gyr (k = 3σ²/u² at σ = 1,000 km/s:
+  1.8 × 10¹⁴ J/kg). So the extra power is large, but in line with what the heat term already requires of warm matter;
+* at its peak, round 16's glow is 5.9 times a Sun-like star's light output per kilogram (19 times for the fast glow).
+  It is dark (companion, not light), but the store that feeds it must hold at least this energy: a quantitative
+  target for the store's model, which has been assumed since round 16.
+
+### 33.3 What an evenly spreading fast glow requires of the medium
+
+`code/fast_glow_medium_v22.py` → `run-crossing-frame-v22/fast_glow_medium_v22.json`.
+
+**Where a hot glow would live.** Round 10 (§20.1, condition 3) requires the companion's crests to move much more
+slowly than its energy, v_phase ≲ 0.05 u. A star crossing another system's flow at speed w therefore meets that flow's
+crests at the Doppler-shifted frequency ω′ = ω₀ |1 − w_r/v_phase|: the collision drives each star hundreds to
+thousands of times faster than the companion's own frequency ω₀. That is the natural home of a distinct "hot" glow,
+and its speed is the medium's group velocity at ω′.
+
+| relative speed | crest speed | ω′/ω₀ | needed rise of the group velocity, as a power of frequency | single power law ω ∝ kⁿ with v_g/v_phase = 20: v_g rises by | two-regime medium: curvature needed |
+|---|---|---|---|---|---|
+| 3,900 km/s | 0.05 u | 459 | ω^0.21 | ×338 | β = 0.12 u/k₀ |
+| 3,900 km/s | 0.01 u | 2,301 | ω^0.16 | ×1,563 | 0.12 u/k₀ |
+| 3,000 km/s | 0.05 u | 353 | ω^0.22 | ×263 | 0.16 u/k₀ |
+
+* **A single power-law medium cannot do it.** Such a medium has v_g/v_phase = n at every frequency, so slow crests at
+  ω₀ (n ≥ 20) make the group velocity rise several hundredfold by ω′: the hot glow would race away at 45,000–265,000
+  km/s and, with its energy booked, be far too thin to matter. The 3.5-fold rise needs n ≈ 1.2–1.3, which contradicts
+  the slow crests.
+* **A two-regime medium can.** A frequency that crosses zero at a finite wavenumber k₀ and rises as ω = u q + β q²
+  above it (q = k − k₀) has slow crests just above k₀ (the carrier at q ≈ 0.05 k₀) and a group velocity u + 2βq that
+  reaches 3.5 u at ω′ for β ≈ 0.12–0.16 u/k₀.
+* So "v_h/u ≈ 3.5" becomes a concrete statement about the medium's dispersion, which the microscopic model has to
+  produce, together with the power (§33.2). It is not yet derived.
+
+### 33.4 The collision stack: which way the heat moves the lensing
+
+`code/crossing_offsets_v22.py` → `run-crossing-frame-v22/crossing_offsets_v22.json`, with the frame runs of §33.1.
+
+The stack's own family (regression/t_collisions.py) holds the galaxies fixed and moves only the gas, so a heat of
+crossing with one history adds the same lensing to every member and cannot change its β. What changes β is heat that
+moves toward the gas as time goes on. Both the gas lag and any such drift grow with the time since the crossing, so on
+the Bullet the change in β is estimated as (peak offset with the heat − without) / (galaxy–gas separation):
+
+| version | peaks toward the gas: main, smaller (kpc) | change in β: main, smaller, mean |
+|---|---|---|
+| no heat of crossing | +15.9, +25.1 | 0 |
+| round 16's rule (u) | +14.3, +8.1 | −0.006, −0.073, **−0.04** |
+| even fast glow, 600 km/s, as proposed | +19.2, +8.6 | +0.013, −0.071, **−0.03** |
+| even fast glow, 600 km/s, energy booked | +17.2, +15.7 | +0.005, −0.040, **−0.02** |
+| glow left behind, μ = 0.9 / 0.85 / 0.8 | +27 / +21 / +20, +93 / +125 / +189 | **+0.17 / +0.22 / +0.36** |
+| glow left behind, μ = 0.5 / 0 | +22 / +17, +35 / +29 | +0.03 / +0.01 |
+
+* **The evenly spreading glow passes the stack.** The suite's β without the heat of crossing is +0.02; the even glow
+  moves it by −0.02 to −0.04, to between 0.00 and −0.02, against Harvey et al.'s −0.04 ± 0.07. Heat centred on the
+  galaxies pulls the smaller half's peak onto them (from 25 to 8 kpc).
+* **The glow left behind fails it** where it matches round 21's speeds: β +0.19 to +0.38, 3–6σ from the measurement.
+* This is an estimate from the Bullet's stage, not a rerun of the twelve-member family, which would need collision
+  histories for every member.
+
+### 33.5 Where round 22 leaves things
+
+* **The fast glow is now a sharply defined target.** It must spread evenly around the stars that made it (a glow left
+  behind drags the lensing onto the gas and adds no mass, §33.1), at about 3.5 times the settled companion's speed,
+  with about 3.3 times the power the heat rule gives (§32.1). That power is 5.8 times the collision's energy of motion,
+  so it must come from matter's internal store; the store must hold at least 4 × 10¹³ J/kg for the Bullet's stars,
+  a quarter of what the settled heat of a cluster galaxy already costs over 10 Gyr (§33.2).
+* **In the medium,** the collision drives each star at the frequency at which it crosses the other system's slow
+  crests, 350–2,300 times the companion's own. An even glow at 600 km/s needs the group velocity to rise about 3.5-fold
+  up to there: impossible for a single power-law medium with slow crests (which would make the glow hundreds of times
+  faster and far too thin), possible for a two-regime one (§33.3).
+* **It passes the stack** (β between 0.00 and −0.02, measured −0.04 ± 0.07), MACS J0025 and El Gordo (§32.2).
+* **Next:** a microscopic medium with that two-regime dispersion, driven at the crest-crossing frequency, to compute the
+  hot glow's speed and power from first principles with every watt booked; and a store model with the capacity §33.2
+  requires. The rest of round 21's list stands (§32.5).
+* **Unchanged:** the adopted law, its constants, the locked forecasts and the frozen lensing test (§29.7).

@@ -1,0 +1,68 @@
+{
+ "experiment": "round 22: signed lensing-peak offsets toward the gas, Bullet, with and without the heat of crossing",
+ "law": "round12",
+ "grid": {
+  "n": 128,
+  "dx_kpc": 22.5
+ },
+ "crossing": {
+  "v_out": 3900.0,
+  "v_in": 3000.0,
+  "b": 150.0
+ },
+ "runs": [
+  {
+   "case": "none",
+   "m250_sub": 137177407220360.78,
+   "m250_main": 295251222625561.1,
+   "peak_toward_gas_main": 15.916963690576846,
+   "peak_toward_gas_sub": 25.07199575719594,
+   "galaxy_gas_separation_kpc": {
+    "main": 252.27011750316248,
+    "sub": 233.81263447004753
+   },
+   "gas_main": 0.04990858165157556,
+   "gas_sub": 0.04828166732833039
+  },
+  {
+   "case": "u",
+   "m250_sub": 158590803747896.1,
+   "m250_main": 310135229483824.75,
+   "peak_toward_gas_main": 14.286874282832487,
+   "peak_toward_gas_sub": 8.09608788242003,
+   "galaxy_gas_separation_kpc": {
+    "main": 252.27011750316248,
+    "sub": 233.81263447004753
+   },
+   "gas_main": 0.05049499546521337,
+   "gas_sub": 0.018250990637153967
+  },
+  {
+   "case": "spread600",
+   "m250_sub": 253623317112969.72,
+   "m250_main": 337236499585673.4,
+   "peak_toward_gas_main": 19.24505177657118,
+   "peak_toward_gas_sub": 8.583463090619507,
+   "galaxy_gas_separation_kpc": {
+    "main": 252.27011750316248,
+    "sub": 233.81263447004753
+   },
+   "gas_main": 0.05134913637187345,
+   "gas_sub": 0.1000847353732554
+  },
+  {
+   "case": "energy600",
+   "m250_sub": 174476654416849.47,
+   "m250_main": 309576536084360.0,
+   "peak_toward_gas_main": 17.224825844865418,
+   "peak_toward_gas_sub": 15.71215169590552,
+   "galaxy_gas_separation_kpc": {
+    "main": 252.27011750316248,
+    "sub": 233.81263447004753
+   },
+   "gas_main": 0.05561554282886105,
+   "gas_sub": 0.03621554085829181
+  }
+ ],
+ "seconds": 728.9997353000003
+}

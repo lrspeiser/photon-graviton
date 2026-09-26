@@ -1,0 +1,105 @@
+{
+ "experiment": "round 22: the frame the collision glow travels in (memory fraction mu), energy booked",
+ "law": "round12",
+ "grid": {
+  "n": 128,
+  "dx_kpc": 22.5,
+  "sigma_cells": 0.5
+ },
+ "crossing": {
+  "v_out": 3900.0,
+  "v_in": 3000.0,
+  "b": 150.0
+ },
+ "runs": [
+  {
+   "mu": 1.0,
+   "peak_toward_gas_main": 14.159910359000767,
+   "peak_toward_gas_sub": 7.456539338582229,
+   "m250_sub": 160250058531857.0,
+   "m250_main": 310419446407439.3,
+   "peak_main": 14.686301974407378,
+   "peak_sub": 7.7381822287784745,
+   "gas_main": 0.05050582714976732,
+   "gas_sub": 0.013298950204101646,
+   "kappa_sub": 0.4867009401045512,
+   "kappa_main": 0.7657103316385383,
+   "S_cross_share": 0.21711179889510215,
+   "kernels": [
+    {
+     "system": "sub_bcg",
+     "dt_myr": 5.0,
+     "t_max_myr": 945.0797947556084,
+     "slices": 190,
+     "weight_dropped_fraction": 0.0
+    },
+    {
+     "system": "main_bcg",
+     "dt_myr": 5.0,
+     "t_max_myr": 945.0797947556084,
+     "slices": 190,
+     "weight_dropped_fraction": 0.0
+    }
+   ],
+   "targets": {
+    "m250_main": [
+     309344320966215.2,
+     346465639482161.0
+    ],
+    "m250_sub": [
+     247475456772972.12,
+     284596775288917.94
+    ]
+   },
+   "peak_limits": {
+    "main": 63.06752937579062,
+    "sub": 58.45315861751188
+   }
+  },
+  {
+   "mu": 0.9,
+   "peak_toward_gas_main": 26.704604178387985,
+   "peak_toward_gas_sub": 92.57950210032206,
+   "m250_sub": 167488012932396.9,
+   "m250_main": 313319281202403.1,
+   "peak_main": 27.66992330463994,
+   "peak_sub": 95.58260368803151,
+   "gas_main": 0.0536322273815363,
+   "gas_sub": 0.15383546032727566,
+   "kappa_sub": 0.36349497502019085,
+   "kappa_main": 0.7627304353813391,
+   "S_cross_share": 0.2172120723388279,
+   "kernels": [
+    {
+     "system": "sub_bcg",
+     "dt_myr": 5.0,
+     "t_max_myr": 945.0797947556084,
+     "slices": 190,
+     "weight_dropped_fraction": 0.0
+    },
+    {
+     "system": "main_bcg",
+     "dt_myr": 5.0,
+     "t_max_myr": 945.0797947556084,
+     "slices": 190,
+     "weight_dropped_fraction": 0.0
+    }
+   ],
+   "targets": {
+    "m250_main": [
+     309344320966215.2,
+     346465639482161.0
+    ],
+    "m250_sub": [
+     247475456772972.12,
+     284596775288917.94
+    ]
+   },
+   "peak_limits": {
+    "main": 63.06752937579062,
+    "sub": 58.45315861751188
+   }
+  }
+ ],
+ "seconds": 1181.159625473
+}
