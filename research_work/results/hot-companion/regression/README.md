@@ -59,6 +59,7 @@ README §22.3). `--law round11` loads round 11's (a = 6.547 × 10⁻¹¹, g_d = 
 | `alpha_per_Mpc`, `sparc_distances` | the static distance law's scale, and 'published' or 'static' SPARC distances | the base's ('round12': 2.3645 × 10⁻⁴, 'static'; others 2.4890 × 10⁻⁴, 'published') |
 | `distance_variant`, `eta_path` | round 21, registered comparisons: the distance geometry, 'fixed' (the adopted law, D_A = D) or 'metric' (D_A = D/(1 + z), so D_L = (1 + z)² D_A), and a path factor √(1 + η z/(1 + z)) on D (`collisions_v10.VARIANT`, `ETA_PATH`). They reach every conversion that goes through `collisions_v10.static` (KiDS, Mistele, the Bullet, the far collisions); SLACS keeps its own conversion, and SPARC's Hubble-flow distances take α but not the path factor (under 1% at their redshifts) | 'fixed', 0 |
 | `collision_field` | round 24, registered comparisons: the field on the collision maps. 'law' (the adopted law's `bullet_v4.kappa_map_v4`) or a mode of `code/eft_field_v24.py`, installed by `common.apply_distances` for every collision code (they all call `bullet_v4.kappa_map_v4` at run time): 'eft' (the Casimir-EFT note's local equation, heat as extra source mass, today's matter), 'eft_memory' (the same with the law's memory), 'eft_excess' / 'eft_excess_local' (the note's source plus the hot glow's non-flowing brightness S − \|g_hot\|, with / without memory), 'eft_scalar' / 'eft_scalar_local' (brightness only), and '_aqual' variants solved exactly (curl field kept; standalone runs only). Mode 'law' reproduces the law's map to 2 × 10⁻¹⁶ | 'law' |
+| `companion_trapping` | round 25, registered comparisons (`../round25-trapped-suite.md`): the self-energy repair's trapping, glow born where n < 0 (Q > a/4 + √(aT)) heard only where n < 0 (`code/trapping_v25.py`; each hook reads the switch when it runs). 'own_heat' or 'cluster_heat': the heat a cluster galaxy's own glow carries inside it. Unresolved galaxies (KiDS and Mistele lenses, cluster galaxies) at their SDSS sizes (`data/lens_sizes_sdss_v25.json`); a run writes `trapping_stats.json` (escaping shares, zones) next to its results | 'none' |
 
 Candidates now in the folder:
 
@@ -84,6 +85,9 @@ Candidates now in the folder:
 | `eft_excess_local_r12.json` | the repair with no memory (today's matter only) | a purely local field equation |
 | `eft_excess_aqual_r12.json` | the repair solved exactly on the collision maps (curl field kept; damped iteration, relaxation 0.3, 60 steps) | whether the field form's shortcut matters |
 | `eft_scalar_r12.json`, `eft_scalar_local_r12.json` | brightness only (the heat enters through S, the direction from the cold flow), with / without memory | an alternative repair |
+| `trapped_own_heat_r12.json` | the self-energy repair's trapping (round 25, registered): glow born where n < 0 heard only there; a cluster galaxy's own glow at the heat of its internal motions; u refitted (146.0 km/s) | the owner's self-energy repair (results README §36.8–36.9) |
+| `trapped_cluster_heat_r12.json` | the same with a cluster galaxy's own glow at the cluster's heat (nothing trapped in clusters; u 169.4) | the law's formula taken literally inside a galaxy |
+| `trapped_own_heat_refit_au_r12.json` | `trapped_own_heat_r12` with a refitted as well (exploratory, after the run) | whether its costs are the constants' balance |
 
 `gradual_release.json` (release over 30,000 AU) was adopted in round 9 and is now the default.
 
@@ -223,6 +227,22 @@ passes are more frustrated than the misses), so, as registered, no recycling can
 exploratory follow-up (`code/frustration_explore_v25.py`) finds the dwarfs' misses ordered by how much the Galaxy's
 pull outweighs their own, which points back to `no_hold_r12` (round 20: 61 / 12 / 4) as the comparison to test on
 new dwarfs.
+
+## Round 25: the trapped companion (full tier, against the round-12 baseline)
+
+The results README §36.9; registered in `../round25-trapped-suite.md` (commit ed61d9c) before either run; the runs are kept in
+`../run-trapped-v25/suite/` (`code/trapped_suite_table_v25.py` → `../run-trapped-v25/suite_table_v25.json`). With the switch
+off the suite reproduces its baseline to the last digit (all 60 quick-tier checks).
+
+| Law | Pass / close / fail | What moves |
+|---|---|---|
+| round 12 (adopted) | 59 / 11 / 7 | |
+| `trapped_own_heat_r12` (u 146.0) | 57 / 12 / 8 | regressed: SPARC's bulge-dominated galaxies 29.44 → 30.55 km/s (close; MOND 30.35), the Milky Way at 15–27 kpc −8.7 → −11.3 km/s (close), Mistele's ellipticals 2.55 → 4.00 (fail); held: X-COP 0.222 → 0.220 (worst radius 0.235), KiDS all +0.064, blue −0.007, colour gap 0.096, all 27 collision grades, the dwarfs (χ² 134.5) |
+| `trapped_cluster_heat_r12` (u 169.4) | 57 / 9 / 11 | clusters and collisions exactly the law's; regressed: KiDS all, disks, bulges (+0.106, +0.084, +0.092 dex, fail), GAMA (close), Mistele's spirals (fail), the Milky Way at 15–27 kpc (close); improved: Mistele's ellipticals 2.55 → 1.91 (pass) |
+| `trapped_own_heat_refit_au_r12` (a 6.465 × 10⁻¹¹, u 148.1; quick tier, exploratory) | 34 / 8 / 7 of the quick tier's 49 | the same three regressions (30.39 km/s, 4.00, −10.6 km/s) |
+
+Not adopted: the own-heat reading lands in the registration's "mixed" band by its numbers but gains no grade; the
+cluster-heat reading is not supported (11 fails).
 
 ## What the candidates do now (quick tier, against the round-9 baseline)
 

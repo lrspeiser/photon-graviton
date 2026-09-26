@@ -6135,3 +6135,111 @@ with the companion slower (u ≈ 113 km/s), the clusters fit better than the law
 (ellipticals better, spirals worse). The fill-up is nearly neutral (it trades the Sun's speed against the pull above the
 disk). **Next:** register a full-suite test of the trapped model with u refitted (the collisions with their galaxies'
 glow held, the dwarfs, the Milky Way, the lenses with measured sizes), and derive how emission proceeds where n < 0.
+
+**Correction (§36.9).** The X-COP rows above count only the cluster's brightness in T inside a cluster galaxy. With
+the galaxy's own glow counted as well, a cluster galaxy holds a quarter of its glow, not 60%, nearly the same at every
+radius: X-COP then prefers u = 146 km/s and its shape does not change. The full-suite test is §36.9.
+
+### 36.9 The trapped companion on the full suite (registered)
+
+The test §36.8 ended with, registered and pushed before either candidate ran
+([round25-trapped-suite.md](round25-trapped-suite.md), commit ed61d9c). `code/trapping_v25.py` adds consequence A of
+the repair, and nothing else, to the adopted law: glow born where n < 0 (Q > a/4 + √(aT)) is heard only where n < 0.
+It is switched by the law's `companion_trapping` (the suite's other registered comparisons work the same way); with it
+off, all 60 quick-tier checks reproduce the baseline to the last digit. u is refitted on X-COP; a and g_d are held.
+Galaxies the models do not resolve (the KiDS and Mistele lenses, the cluster galaxies) are given measured sizes, new in
+this round: the median of the same 120,000 SDSS DR17 galaxies whose heat round 12 measured
+(`code/lens_sizes_sdss_v25.py` → `data/lens_sizes_sdss_v25.json`): red galaxies of 4 × 10¹⁰ Msun, half-light radius
+2.7 kpc; blue ones, disk scale length 3.2 kpc; red galaxies of 1.1 × 10¹¹, 4.6 kpc.
+
+**First, a correction to §36.8.** §36.8 counted only the cluster's brightness in T inside a cluster galaxy. The galaxy's
+own glow is there too, and inside the galaxy it is the larger part. What it amounts to depends on which heat the
+galaxy's stars carry for their own glow, the registration's two readings:
+* **at the heat of the galaxy's internal motions** (SDSS, σ_e = 178 km/s; k = 3.16 at u = 169.4, 4.26 at 146): a typical
+  cluster galaxy keeps only a quarter to a third of its glow whatever the cluster around it does (escaping share 0.73
+  at a cluster brightness of 3 × 10⁻¹¹ m/s², 0.75 at 3 × 10⁻¹⁰, 0.85 at 3 × 10⁻⁹, at u = 146), not the 60% of §36.8.
+  The share is then nearly the same at every radius of every cluster (0.730–0.742 in the 12 X-COP clusters), so it
+  rescales the clusters' glow without reshaping it: X-COP asks for **u = 146.0 km/s**, not 113, and its profile barely
+  moves;
+* **at the cluster's heat** (k ≈ 50–100): the galaxy's own glow keeps n positive everywhere in it, nothing is trapped
+  (escaping share ≥ 0.998 in X-COP, ≥ 0.999 on the collision maps), and u stays 169.4 km/s, as the registration
+  expected.
+
+**The scoreboards** (full tier against the round-12 baseline; `code/trapped_suite_table_v25.py` →
+`run-trapped-v25/suite_table_v25.json`; the runs, their reports and trapping statistics in `run-trapped-v25/suite/`):
+
+| group (pass / close / fail) | the law | own heat (u 146.0) | cluster heat (u 169.4) |
+|---|---|---|---|
+| **all 77 graded checks** | **59 / 11 / 7** | **57 / 12 / 8** | **57 / 9 / 11** |
+| machinery | 3 / 0 / 0 | 3 / 0 / 0 | 3 / 0 / 0 |
+| galaxies (SPARC) | 6 / 0 / 0 | 5 / 1 / 0 | 6 / 0 / 0 |
+| clusters (X-COP) | 3 / 0 / 0 | 3 / 0 / 0 | 3 / 0 / 0 |
+| lensing | 8 / 4 / 1 | 8 / 3 / 2 | 7 / 1 / 5 |
+| Milky Way | 7 / 2 / 0 | 6 / 3 / 0 | 6 / 3 / 0 |
+| dwarfs | 4 / 1 / 5 | 4 / 1 / 5 | 4 / 1 / 5 |
+| precision | 6 / 0 / 0 | 6 / 0 / 0 | 6 / 0 / 0 |
+| collisions | 22 / 4 / 1 | 22 / 4 / 1 | 22 / 4 / 1 |
+
+| key numbers | the law | own heat (u 146.0) | cluster heat (u 169.4) |
+|---|---:|---:|---:|
+| SPARC typical miss, all / bulge-dominated (km/s; MOND 16.13 / 30.35) | 15.87 / 29.44 | 16.12 / **30.55** | 16.03 / 29.95 |
+| SPARC median residual (dex) | +0.027 | +0.034 | +0.034 |
+| X-COP rms / worst radius / held-out | 0.222 / 0.239 / 0.236 | 0.220 / 0.235 / 0.235 | 0.222 / 0.239 / 0.236 |
+| KiDS all / red / blue (dex; 0 ± 0.025) | +0.065 / +0.078 / +0.011 | +0.064 / +0.089 / −0.007 | **+0.106** / +0.138 / +0.023 |
+| KiDS disks / bulges / GAMA (dex) | +0.066 / +0.034 / +0.009 | +0.065 / +0.042 / +0.009 | **+0.084 / +0.092** / +0.050 |
+| KiDS colour / Sérsic gap (0.153 / 0.154 ± 0.04) | 0.126 / 0.155 | 0.096 / 0.146 | 0.080 / 0.116 |
+| lensing speeds, spirals / ellipticals (rms z) | 2.86 / 2.55 | 2.69 / **4.00** | **3.04** / 1.91 |
+| SLACS light = matter (dex) | −0.028 | −0.027 | −0.002 |
+| Milky Way: speed at the Sun / offset at 15–27 kpc (km/s) | 209.2 / −8.7 | 209.7 / **−11.3** | 209.1 / **−11.2** |
+| Milky Way mass inside 20 / 50 / 100 / 200 kpc (10¹¹ Msun) | 1.66 / 3.56 / 6.53 / 12.4 | 1.61 / 3.41 / 6.24 / 11.8 | 1.60 / 3.40 / 6.23 / 11.8 |
+| dwarfs χ² (ten) | 137.7 | 134.5 | 134.4 |
+| the Bullet's smaller half in 250 kpc (10¹⁴; 2.47–2.85) | 1.385 | 1.393 | 1.385 |
+| collision stack β | 0.019 | 0.018 | 0.019 |
+
+Bold: a change of grade. **Own heat** loses three grades and gains none:
+* **SPARC's 25 bulge-dominated galaxies**, 29.44 → 30.55 km/s against MOND's 30.35 (close). In all 31 galaxies with a
+  zone, essentially every bulge star is inside it (median 100%), and the zone covers the inner 57% of the measured radii
+  (median); the outer points lose the bulge's glow, and inside, the slower companion makes the heat 35% larger.
+* **The Milky Way's rotation at 15–27 kpc**, −8.7 → −11.3 km/s against the four Gaia analyses (close). The zone reaches
+  16.8 kpc in the plane; beyond it the bulge is not heard at all and the stellar halo only in part (44% of its stars are
+  inside the zone), so the curve drops by 2–3.4 km/s beyond 17 kpc (193.0 against 196.4 km/s at 20 kpc) and the mass
+  inside 20–100 kpc by 3–5%. The Sun, inside the zone, is untouched (209.7 km/s).
+* **Mistele's ellipticals**, rms z 2.55 → 4.00 (fail), through the slower companion: the massive ellipticals' zones are
+  small (1.5–2.5 kpc), so they keep only 8–32% of a heat that is now 35% larger, and at 10^11.3 Msun the predicted lensing
+  speeds come out 11% too high (observed / predicted 1.15, 0.96, 0.90 in the three mass bins).
+
+The rest holds: X-COP 0.222 → 0.220 (worst radius 0.239 → 0.235), KiDS all +0.065 → +0.064 with the blue lenses now at
+−0.007 (they have no zone at 146 km/s) and the colour gap 0.126 → 0.096 (still within 1.5σ of 0.153), Mistele's spirals
+2.86 → 2.69, the dwarfs' χ² 137.7 → 134.5 (the Galaxy's glow reaches them weaker), all 27 collision grades (the Bullet's
+smaller half 1.385 → 1.393 × 10¹⁴, still short).
+
+**Cluster heat** leaves the clusters and collisions exactly as the law has them, and loses galaxy lensing instead:
+with u at 169.4 km/s, the lenses keep 20–44% of their glow and nothing compensates, so KiDS all, disks and bulges fail
+(+0.106, +0.084, +0.092 dex), GAMA and Mistele's spirals drop a grade; Mistele's ellipticals gain one (2.55 → 1.91,
+pass); the Milky Way's outer curve drops as above. 57 / 9 / 11.
+
+**Against the registered criteria:** own heat, 57 / 12 / 8, lands inside the "mixed" band by its numbers (two passes
+fewer, one fail more) but gains no grade, so it is a small net cost; cluster heat, 57 / 9 / 11, is **not supported**
+(more than 9 fails). Neither replaces the law.
+
+**Is it only the constants?** (exploratory, after the run; `candidates/trapped_own_heat_refit_au_r12.json`, quick tier):
+with a refitted on SPARC as well (6.465 × 10⁻¹¹ m/s², u 148.1 km/s), the same three checks stay down (bulge-dominated
+galaxies 30.39 km/s, ellipticals 4.00, the Milky Way −10.6 km/s). The cost is structural, not a matter of balance.
+
+**Where this leaves the self-energy repair.**
+* **The repair itself stands.** Its energy is bounded and its static response is the law's; this run tests one of its
+  consequences on its own, trapping without the fill-up, and that costs about two passes rather than breaking anything
+  (clusters, collisions, dwarfs, precision tests and most lensing unchanged in grade).
+* **The data choose the reading.** Galaxy lensing needs a galaxy's own glow, inside it, to carry the heat of its own
+  stars' motions relative to one another (the cluster-heat reading fails KiDS by 0.04–0.06 dex). The incoherent sum at
+  galaxy scale is set by internal motions: a physical statement the law did not make before.
+* **§36.8's cluster gain was an artifact** of leaving that glow out. Counted, trapping is uniform in clusters and cannot
+  reshape X-COP's profile; the core-to-edge swing (+12% to −24%) still needs a mechanism that varies with radius.
+* **The costs sit exactly where the fill-up acts.** All three are places just outside galaxies' trapping zones or
+  heated by the lower u. In the Milky Way, the band just outside the zone, where n would turn negative once the trapped
+  glow is missing, reaches 21.9 kpc, and the curve's loss is at 17–27 kpc. Consequence B fills every place where the
+  heard glow leaves n < 0 up to n = 0: T = max(T_heard, T_eq), T_eq = (Q − a/4)²/a. There the companion's pull takes a
+  closed form with nothing adjustable, √(a(Q + T_eq)) = Q + a/4 (times the release factor): at the zone's edge it equals
+  the law's, and inside it adds more (§36.8: the Sun's speed 209 → 223 km/s). The complete trapped model, A + B with a
+  and g_d refitted on SPARC, is the natural next registered test; the ellipticals' cost, which comes from the lower u,
+  will not be touched by B and is the one to watch.

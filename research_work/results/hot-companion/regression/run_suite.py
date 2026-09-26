@@ -149,6 +149,9 @@ def main():
     out.mkdir(parents=True, exist_ok=True)
     (out / 'results.json').write_text(json.dumps(payload, indent=1, default=float) + '\n')
     (out / 'report.md').write_text(report_md(payload))
+    import trapping_v25 as TR                    # round 25: escaping shares and zones, when the trapped companion is on
+    if TR.MODE:
+        (out / 'trapping_stats.json').write_text(json.dumps(TR.STATS, indent=1, default=float) + '\n')
     print(f"\nwrote {out / 'results.json'} and report.md ({payload['seconds']:.0f} s)", flush=True)
     if args.save_baseline:
         keep = [dict(id=r['id'], group=r['group'], title=r['title'], value=r['value'], unit=r['unit'], target=r['target'],

@@ -26,6 +26,9 @@ def galaxy_profile(law, ctx):
             Ms = f * c.m_profile(s)
         d = np.diff(np.concatenate([[0], Ms])); dm += d
         if k in ('bulge', 'halo'):
+            if law.get('companion_trapping', 'none') != 'none':      # round 25: only the glow born outside the Galaxy's zone
+                import trapping_v25 as TR
+                d = d * TR.mw_shell_escape(law, ctx, c.name, s)
             dmk += 3 * c.sigma ** 2 / law['u_kms'] ** 2 * d
     return dict(s=s, dm=dm, dmk=dmk)
 

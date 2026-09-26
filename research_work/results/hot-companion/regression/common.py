@@ -59,6 +59,8 @@ def apply_distances(law, ctx):
     L.STREAM_KAPPA = float(law.get('stream_kappa_per_Mpc', 0.0)) / 1000.0
     import eft_field_v24 as EF                                 # round 24: the collision maps' field ('law' = the adopted one)
     EF.install(law.get('collision_field', 'law'))
+    import trapping_v25 as TR                                 # round 25: the trapped companion ('none' = the law)
+    TR.install(law.get('companion_trapping', 'none'))
     for key in ('xcop', 'xcop_static'):                       # their shell weights depend on it
         ctx.shared.pop(key, None)
     ctx.sparc_alpha = C10.ALPHA if law.get('sparc_distances', 'published') == 'static' else None

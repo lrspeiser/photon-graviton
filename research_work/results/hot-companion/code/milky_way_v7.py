@@ -110,6 +110,9 @@ class Evaluator:
         consts = dict(self.consts, lam=self.consts['lam'] * gd_scale)
         if law == 'ours':
             S, hR, hz = M.heat_fields(hot, grid, consts['u_kms'])
+            T = sys.modules.get('trapping_v25')                # round 25: the trapped companion
+            if T is not None and T.MODE:
+                S, hR, hz = T.mw_trap(hot, grid, consts, gR, gz, S, hR, hz, key=tuple(sorted(parts.items())))
         else:
             S = hR = hz = np.zeros_like(gR)
         eR, ez = M.law_extra(gR, gz, S, hR, hz, consts, law=law if law != 'lcdm' else 'newton', reach=reach if law == 'ours' else None, grid=grid)

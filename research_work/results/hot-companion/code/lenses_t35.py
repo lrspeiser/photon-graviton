@@ -86,7 +86,11 @@ def analyse(lens, law):
     def g_on_r(dm):
         f = 10 ** dm
         if law == 'Newton': return f * gN_unit
-        return L.total(f * gN_unit, f * k * S_unit, A, LAM)
+        S = f * k * S_unit
+        T = sys.modules.get('trapping_v25')                    # round 25: the trapped companion
+        if T is not None and T.MODE and k > 0:
+            S = T.slacs_S(r, f * gN_unit, S, f * k * dm_star, A)
+        return L.total(f * gN_unit, S, A, LAM)
 
     def theta(dm):
         gr = g_on_r(dm); gi = lambda x: np.exp(np.interp(np.log(x), np.log(r), np.log(gr)))

@@ -42,7 +42,7 @@ The model box has to hold the line of sight: --dx 25 gives a 4.8 Mpc box (defaul
 The subcluster's pre-collision size is also varied (1:8, 1:4, 1:3, 1:2 of the main's baryons).
 """
 from __future__ import annotations
-import argparse, copy, json, time
+import argparse, copy, json, sys, time
 from pathlib import Path
 import numpy as np
 from scipy.optimize import least_squares
@@ -129,7 +129,9 @@ def own_sigma(gas_list, star_list, consts, beta=0.0, n=600, rmax=4000.0, iters=6
     W = L.shell_weights(r, r); rho_s = dms / (4 * np.pi * r ** 2 * dr)
     sig2 = jeans_aniso(r, dr, rho_s, gN + np.sqrt(a * gN), beta)
     for _ in range(iters):
-        S = G * (W @ (L.k_from_sig2(sig2, u, pref=3 - 2 * beta) * dms)) / r ** 2
+        kk = L.k_from_sig2(sig2, u, pref=3 - 2 * beta)
+        T = sys.modules.get('trapping_v25')                    # round 25: the trapped companion
+        S = T.jeans_S(r, W, kk, dms, consts) if (T is not None and T.MODE) else G * (W @ (kk * dms)) / r ** 2
         g = gN + np.exp(-gN / (lam * a)) * np.sqrt(a * (gN + S))
         new = jeans_aniso(r, dr, rho_s, g, beta)
         if np.max(np.abs(new - sig2) * dms) < 1e-8 * np.max(new * dms): sig2 = new; break

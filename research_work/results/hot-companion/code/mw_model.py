@@ -304,15 +304,19 @@ def _stream_table(s):
     return _TABLES[key]
 
 
-def heat_fields(comps, grid, u):
-    """S and g_hot of the hot free-streaming stars (spherical stand-ins; k = 3 sigma^2 / u^2)."""
+def heat_fields(comps, grid, u, shell_factor=None):
+    """S and g_hot of the hot free-streaming stars (spherical stand-ins; k = 3 sigma^2 / u^2). shell_factor(c, s), if
+    given, multiplies each component's shells (round 25: the share of each shell's glow that leaves the trapping zone)."""
     r = np.sqrt(grid.RR ** 2 + grid.ZZ ** 2) + 1e-9
     s = np.geomspace(1e-3, 3000.0, 1200)
     dmk = np.zeros(s.size)
     for c in comps:
         if getattr(c, 'sigma', 0.0) > 0 and c.kind == 'stars' and not isinstance(c, Disk):
             M = c.m_profile(s)
-            dmk += L.k_from_sig2(c.sigma ** 2, u) * np.diff(np.concatenate([[0.0], M]))
+            dm = np.diff(np.concatenate([[0.0], M]))
+            if shell_factor is not None:
+                dm = dm * shell_factor(c, s)
+            dmk += L.k_from_sig2(c.sigma ** 2, u) * dm
     if not dmk.any():
         return np.zeros(r.shape), np.zeros(r.shape), np.zeros(r.shape)
     # S = G sum k dm <1/d^2>_shell  (law.shell_weights logic, vectorised in chunks)

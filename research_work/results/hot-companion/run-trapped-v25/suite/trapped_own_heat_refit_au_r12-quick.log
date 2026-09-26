@@ -1,0 +1,153 @@
+law: trapped_own_heat_refit_au_r12 -- a = 6.2979e-11 m/s^2; g_d = 2.0273e-10 m/s^2 (lambda 3.219); u = 169.4 km/s; reach 2.25 Mpc; gradual release over 3e+04 AU; refit: a, u; distance scale alpha x0.9500 (H0-like 70.9); SPARC distances static; trapped companion, cluster galaxies' own glow at own heat (code/trapping_v25.py)
+refitting a, u on the home data...
+  refitted: a = 6.4654e-11 m/s^2; g_d = 2.0273e-10 m/s^2 (lambda 3.136); u = 148.1 km/s; reach 1.97 Mpc; gradual release over 3e+04 AU; refit: a, u; distance scale alpha x0.9500 (H0-like 70.9); SPARC distances static; trapped companion, cluster galaxies' own glow at own heat (code/trapping_v25.py)
+== machinery
+  [    11 s] guard: point mass, temperature, SPARC local-function test
+== galaxies
+  [    11 s] SPARC scores
+== clusters
+  [    12 s] X-COP masses
+== lensing
+  [    12 s] KiDS lensing
+  [    14 s] Mistele circular speeds
+  [    14 s] SLACS lenses
+== milky_way
+  [    46 s] Milky Way: our law with McMillan (2017) matter
+/home/user/photon-graviton/research_work/results/hot-companion/code/mw_model.py:45: RuntimeWarning: overflow encountered in cosh
+  return 1.0 / np.cosh(z / (2 * self.zd)) ** 2 / (4 * self.zd)
+/home/user/photon-graviton/research_work/results/hot-companion/code/mw_model.py:45: RuntimeWarning: overflow encountered in square
+  return 1.0 / np.cosh(z / (2 * self.zd)) ** 2 / (4 * self.zd)
+  [    74 s] Milky Way: Newton (for the inner share) and the local census (vertical pull)
+== dwarfs
+  [   105 s] dwarfs (external hold x1)
+== precision
+  [   106 s] Cassini Q2 (g_e 1.631e-10, hold x1, release length 30000 AU)
+== collisions
+
+[machinery]
+  info  deep-regime strength a                                                           6.465e-11 m/s^2     | constant of the law under test                               changed   was 6.298e-11 info
+  info  release scale g_d                                                                2.027e-10 m/s^2     | constant of the law under test                                         was 2.027e-10 info
+  info  companion speed u                                                                    148.1 km/s      | constant of the law under test                               changed   was 169.4 info
+  info  reach u x 13 Gyr                                                                    1968.7 kpc       | constant of the law under test                               changed   was 2252.8 info
+  info  companion emission per kg of matter, l = a u / 2                                 4.787e-06 W/kg      | energy budget (round 3: 6.48e-6)                             changed   was 5.336e-06 info
+  PASS  standing rule: not MOND, not Newton, not dark matter                                 1.057 dex       | no forbidden class in the guard verdict; value = spread of t changed   was 0.9994 pass
+  PASS  SPARC pull is not a function of g_N alone                                          0.01069 dex       | >= 0.005 dex beyond a local function of g_N                  changed   was 0.02749 pass
+  PASS  extra pull at 100 g_d, relative to Newton                                                0           | < 1e-12                                                                was 0 pass
+
+[galaxies]
+  PASS  SPARC typical speed miss (all galaxies)                                              16.05 km/s      | no worse than MOND (16.13); within 5% is close               changed   was 15.87 pass
+  info  SPARC mean squared log residual (the fitted statistic)                              0.2121           |                                                              changed   was 0.2111 info
+  PASS  SPARC typical speed miss (test galaxies)                                             12.96 km/s      | no worse than MOND (13.52); within 5% is close               changed   was 12.35 pass
+  PASS  SPARC typical speed miss (validation galaxies)                                       19.13 km/s      | no worse than MOND (19.80); within 5% is close               changed   was 19.01 pass
+  PASS  SPARC median residual log10(observed/predicted pull)                               0.03163 dex       | 0 +- 0.02 dex (stellar mass-to-light zero point)             worse     was 0.02713 pass
+  PASS  SPARC median residual where the release switches (g_N 10^-10.25 to 10^-9.5)        0.03215 dex       | 0 +- 0.02 dex                                                worse     was 0.02706 pass
+  close bulge-dominated galaxies (25): typical speed miss                                    30.39 km/s      | no worse than MOND (30.35)                                   REGRESSED was 29.44 pass
+
+[clusters]
+  PASS  X-COP: typical mass miss, rms ln(M_hydrostatic/M_predicted) (static distances)        0.22           | <= 0.30 (hydrostatic masses carry 10-20% bias and error); MO changed   was 0.2215 pass
+  PASS  X-COP: worst mean miss at any of the six radii (0.1-1 R500)                          0.236           | <= 0.25 (the usual hydrostatic bias at R500)                 changed   was 0.2389 pass
+  info  the companion speed X-COP prefers for these a and g_d                                148.1 km/s      | law uses 148.1                                               changed   was 169.4 info
+
+[lensing]
+  close KiDS lensing pull, all isolated lenses (mixture): median log10(observed/predic     0.06158 dex       | 0 +- 0.025 dex (7 reliable bins)                             changed   was 0.06476 close
+  PASS  KiDS lensing pull, blue lenses (k = 0.66, measured): median log10(observed/pre    -0.01046 dex       | 0 +- 0.025 dex (7 reliable bins)                             changed   was 0.01116 pass
+  FAIL  KiDS lensing pull, red lenses (k = 1.76, measured): median log10(observed/pred     0.08676 dex       | 0 +- 0.025 dex (7 reliable bins)                             worse     was 0.07776 fail
+  close KiDS lensing pull, Sersic n < 2 (disks; k = 0.28): median log10(observed/predi     0.06055 dex       | 0 +- 0.025 dex (7 reliable bins)                             better    was 0.06627 close
+  PASS  KiDS lensing pull, Sersic n > 2 (bulges; k = 1.80): median log10(observed/pred     0.04053 dex       | 0 +- 0.025 dex (7 reliable bins)                             worse     was 0.03364 pass
+  PASS  KiDS lensing pull, GAMA spectroscopic lenses: median log10(observed/predicted)    0.006145 dex       | 0 +- 0.025 dex (7 reliable bins)                             better    was 0.009316 pass
+  PASS  KiDS: red lenses lens more than blue ones of the same visible mass (colour gap     0.09454 dex       | 0.153 +- 0.04 dex (same bins)                                worse     was 0.1263 pass
+  PASS  KiDS: bulge-dominated lenses lens more than disk-dominated ones (Sersic gap)         0.143 dex       | 0.154 +- 0.04 dex (same bins)                                worse     was 0.1553 pass
+  close lensing circular speeds 50-300 kpc, spirals: rms z (static distances)                2.652           | Mistele et al. 2024 (ApJL 969, L3), Table 1                  better    was 2.859 close
+  FAIL  lensing circular speeds 50-300 kpc, ellipticals: rms z (static distances)            4.003           | Mistele et al. 2024 (ApJL 969, L3), Table 1                  REGRESSED was 2.553 close
+  PASS  SLACS: stellar mass from lensing minus from star speeds (mean of 6)               -0.02801 dex       | 0 +- 0.024 (the lenses' own scatter)                         changed   was -0.02775 pass
+  info  SLACS: stellar mass needed for the Einstein radii, vs Chabrier (static distanc       0.427 dex       | Salpeter is +0.25; the IMF trend of Posacki et al. 2015 is d changed   was 0.4264 info
+  PASS  Einstein Cross: companion share of the pull at the ring                          1.088e-12           | dark matter inside the ring < 15% (Trott et al. 2010; van de changed   was 1.073e-12 pass
+  PASS  bulge microlensing: companion share at a star's Einstein radius                          0           | standard lensing by stars (OGLE, MOA optical depths)                   was 0 pass
+
+[milky_way]
+  close rotation speed at the Sun (8.2 kpc)                                                  210.0 km/s      | 229-234 (Eilers 2019, Zhou 2023, Ou 2024, Jiao 2023); +-7 fo changed   was 209.2 close
+  close rotation curve 15-27 kpc: mean offset over the four Gaia analyses                   -10.59 km/s      | 0 +- 5 (the analyses differ by about 10)                     REGRESSED was -8.672 pass
+  info  rotation curve 5-27 kpc: typical miss against Eilers et al. 2019                     15.78 km/s      |                                                              changed   was 15.94 info
+  PASS  vertical pull 1.1 kpc above the Sun (as surface density), counted local matter       72.67 Msun/pc^2 | 69.8 +- 3.3 (Bovy & Rix 2013: 68 +- 4; Holmberg & Flynn 2004 worse     was 72.29 pass
+  PASS  mass inside 20 kpc (as inferred from orbits)                                     1.618e+11 Msun      | 1.91e+11 +- 1.8e+10 (Posti & Helmi 2019)                     worse     was 1.661e+11 pass
+  close mass inside 50 kpc (as inferred from orbits)                                     3.446e+11 Msun      | 4.50e+11 +- 4.0e+10 (Correa Magnus & Vasiliev 2022)          worse     was 3.555e+11 close
+  PASS  mass inside 100 kpc (as inferred from orbits)                                    6.312e+11 Msun      | 6.90e+11 +- 7.0e+10 (Deason 2021 + Correa Magnus & Vasiliev  worse     was 6.533e+11 pass
+  PASS  mass inside 200 kpc (as inferred from orbits)                                    1.199e+12 Msun      | 1.10e+12 +- 2.5e+11 (Correa Magnus & Vasiliev 2022)          better    was 1.243e+12 pass
+  PASS  escape speed at the Sun (to 400 kpc)                                                 498.9 km/s      | 445-580 (seven analyses 2014-2024)                           changed   was 504.4 pass
+  PASS  inner Galaxy (bar region, 2-3 kpc): share of the rotation speed from visible m      0.9826           | 0.88 +- 0.07 (Wegg, Gerhard & Portail 2016, bulge microlensi changed   was 0.9842 pass
+
+[dwarfs]
+  FAIL  Draco: stars' speed spread                                                           2.867 km/s      | 9.1 +- 1.2                                                   known     was 2.788 fail
+  FAIL  Ursa Minor: stars' speed spread                                                      3.537 km/s      | 9.5 +- 1.2                                                   known     was 3.442 fail
+  PASS  Sculptor: stars' speed spread                                                        6.758 km/s      | 9.2 +- 1.4                                                   changed   was 6.639 pass
+  FAIL  Sextans: stars' speed spread                                                         2.165 km/s      | 7.9 +- 1.3                                                   known     was 2.104 fail
+  close Carina: stars' speed spread                                                          3.574 km/s      | 6.6 +- 1.2                                                   changed   was 3.472 close
+  PASS  Fornax: stars' speed spread                                                          12.36 km/s      | 11.7 +- 0.9                                                  worse     was 12.25 pass
+  PASS  Leo II: stars' speed spread                                                          5.284 km/s      | 6.6 +- 0.7                                                   changed   was 5.234 pass
+  PASS  Leo I: stars' speed spread                                                           9.318 km/s      | 9.2 +- 1.4                                                   changed   was 9.264 pass
+  FAIL  Crater II: stars' speed spread                                                       1.028 km/s      | 2.7 +- 0.3                                                   known     was 0.9986 fail
+  FAIL  Antlia 2: stars' speed spread                                                        1.139 km/s      | 5.71 +- 1.08                                                 known     was 1.105 fail
+  info  all ten dwarfs: chi-squared (MOND with the same stars: 119)                          133.6           |                                                              changed   was 137.7 info
+
+[precision]
+  PASS  planets Mercury-Neptune: largest extra pull relative to Newton                           0           | < 1e-12 (planetary ephemerides)                                        was 0 pass
+  PASS  star S2 at the Galactic Centre (far point): extra pull relative to Newton                0           | GR precession 1.10 +- 0.19 (GRAVITY 2020)                              was 0 pass
+  PASS  Double Pulsar: orbit change from the companion emission, in measurement errors     0.01206           | < 0.5 of the error on the orbital decay (Kramer et al. 2021) changed   was 0.01345 pass
+  PASS  light bending at the Sun's limb: extra relative to GR                                    0           | gamma - 1 = (2.1 +- 2.3) x 10^-5 (Cassini)                             was 0 pass
+  PASS  Cassini: Galactic distortion of the Sun's field, Q2                              4.431e-27 1/s^2     | (1.6 +- 1.8) x 10^-27 (Park et al. 2026)                     worse     was 4.377e-27 pass
+  info  Cassini Q2 with the Milky Way model's pull and heat at the Sun                   3.361e-27 1/s^2     |                                                              worse     was 3.472e-27 info
+  PASS  wide binaries (1 Msun, 20,000 AU): boost of the pull                                 1.077           | between the two published analyses, 1.0 (Banik et al. 2024)  changed   was 1.076 pass
+
+status: {'pass': 34, 'close': 8, 'fail': 7, 'info': 11, 'error': 0}
+against the baseline (baseline.json (round12, full, 2026-09-24 04:37 UTC)): {'regressed': 3, 'improved': 0, 'worse': 13, 'better': 4, 'changed': 29, 'new': 0, 'known': 5, 'same': 6, 'error': 0}
+  REGRESSED galaxies.sparc_bulges: 30.39 (close), was 29.44 (pass)
+  REGRESSED lensing.mistele_etg: 4.003 (fail), was 2.553 (close)
+  REGRESSED mw.rc_outer: -10.59 (close), was -8.672 (pass)
+  worse     galaxies.sparc_median: 0.03163 (pass), was 0.02713 (pass)
+  worse     galaxies.sparc_median_switch: 0.03215 (pass), was 0.02706 (pass)
+  worse     lensing.kids_red: 0.08676 (fail), was 0.07776 (fail)
+  worse     lensing.kids_bulge: 0.04053 (pass), was 0.03364 (pass)
+  worse     lensing.kids_gap: 0.09454 (pass), was 0.1263 (pass)
+  worse     lensing.kids_gap_sersic: 0.143 (pass), was 0.1553 (pass)
+  worse     mw.vertical_pull: 72.67 (pass), was 72.29 (pass)
+  worse     mw.mass_20: 1.618e+11 (pass), was 1.661e+11 (pass)
+  worse     mw.mass_50: 3.446e+11 (close), was 3.555e+11 (close)
+  worse     mw.mass_100: 6.312e+11 (pass), was 6.533e+11 (pass)
+  worse     dwarfs.fornax: 12.36 (pass), was 12.25 (pass)
+  worse     precision.cassini_q2: 4.431e-27 (pass), was 4.377e-27 (pass)
+  worse     precision.cassini_q2_mw_model: 3.361e-27 (info), was 3.472e-27 (info)
+  better    lensing.kids_disc: 0.06055 (close), was 0.06627 (close)
+  better    lensing.kids_gama: 0.006145 (pass), was 0.009316 (pass)
+  better    lensing.mistele_ltg: 2.652 (close), was 2.859 (close)
+  better    mw.mass_200: 1.199e+12 (pass), was 1.243e+12 (pass)
+  changed   law.a_SI: 6.465e-11 (info), was 6.298e-11 (info)
+  changed   law.u_kms: 148.1 (info), was 169.4 (info)
+  changed   law.reach_kpc: 1968.7 (info), was 2252.8 (info)
+  changed   law.emission: 4.787e-06 (info), was 5.336e-06 (info)
+  changed   machinery.guard_class: 1.057 (pass), was 0.9994 (pass)
+  changed   machinery.guard_sparc_local: 0.01069 (pass), was 0.02749 (pass)
+  changed   galaxies.sparc_rms_all: 16.05 (pass), was 15.87 (pass)
+  changed   galaxies.sparc_msq: 0.2121 (info), was 0.2111 (info)
+  changed   galaxies.sparc_rms_test: 12.96 (pass), was 12.35 (pass)
+  changed   galaxies.sparc_rms_validation: 19.13 (pass), was 19.01 (pass)
+  changed   clusters.xcop_rms: 0.22 (pass), was 0.2215 (pass)
+  changed   clusters.xcop_radial_trend: 0.236 (pass), was 0.2389 (pass)
+  changed   clusters.u_preferred: 148.1 (info), was 169.4 (info)
+  changed   lensing.kids_all: 0.06158 (close), was 0.06476 (close)
+  changed   lensing.kids_blue: -0.01046 (pass), was 0.01116 (pass)
+  changed   lensing.slacs_light_equals_matter: -0.02801 (pass), was -0.02775 (pass)
+  changed   lensing.slacs_star_mass: 0.427 (info), was 0.4264 (info)
+  changed   lensing.einstein_cross: 1.088e-12 (pass), was 1.073e-12 (pass)
+  changed   mw.v_sun: 210.0 (close), was 209.2 (close)
+  changed   mw.rc_rms_eilers: 15.78 (info), was 15.94 (info)
+  changed   mw.v_escape: 498.9 (pass), was 504.4 (pass)
+  changed   mw.inner_share: 0.9826 (pass), was 0.9842 (pass)
+  changed   dwarfs.sculptor: 6.758 (pass), was 6.639 (pass)
+  changed   dwarfs.carina: 3.574 (close), was 3.472 (close)
+  changed   dwarfs.leo_ii: 5.284 (pass), was 5.234 (pass)
+  changed   dwarfs.leo_i: 9.318 (pass), was 9.264 (pass)
+  changed   dwarfs.chi2: 133.6 (info), was 137.7 (info)
+  changed   precision.double_pulsar: 0.01206 (pass), was 0.01345 (pass)
+  changed   precision.wide_binaries: 1.077 (pass), was 1.076 (pass)
+
+wrote /home/user/photon-graviton/research_work/results/hot-companion/regression/runs/trapped_own_heat_refit_au_r12-quick/results.json and report.md (112 s)

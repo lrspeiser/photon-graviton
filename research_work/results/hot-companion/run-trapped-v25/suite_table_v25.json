@@ -1,0 +1,1311 @@
+{
+ "registration": "round25-trapped-suite.md",
+ "runs": {
+  "round12 (the law)": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.4433686899687,
+    "g_d_SI": 2.027287915237577e-10,
+    "refit_log": null
+   },
+   "companion_trapping": "none",
+   "commit": "779fdf1+changes",
+   "seconds": null,
+   "total": "59 / 11 / 7",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "8 / 4 / 1",
+    "milky_way": "7 / 2 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "22 / 4 / 1"
+   },
+   "grade_changes": [],
+   "key_values": {
+    "law.u_kms": {
+     "value": 169.4433686899687,
+     "status": "info",
+     "unit": "km/s"
+    },
+    "galaxies.sparc_rms_all": {
+     "value": 15.871594797361485,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "galaxies.sparc_median": {
+     "value": 0.027126571335271986,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.435830479800696,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.22152828446272135,
+     "status": "pass",
+     "unit": ""
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.2389136588659999,
+     "status": "pass",
+     "unit": ""
+    },
+    "clusters.u_preferred": {
+     "value": 169.4433686899687,
+     "status": "info",
+     "unit": "km/s"
+    },
+    "clusters.xcop_crossval": {
+     "value": 0.23651412390197052,
+     "status": "pass",
+     "unit": ""
+    },
+    "lensing.kids_all": {
+     "value": 0.06475542119133948,
+     "status": "close",
+     "unit": "dex"
+    },
+    "lensing.kids_red": {
+     "value": 0.07776237399165709,
+     "status": "fail",
+     "unit": "dex"
+    },
+    "lensing.kids_blue": {
+     "value": 0.011155668720862266,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_disc": {
+     "value": 0.0662676587409674,
+     "status": "close",
+     "unit": "dex"
+    },
+    "lensing.kids_bulge": {
+     "value": 0.03364331498305795,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_gama": {
+     "value": 0.009316007200279586,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_gap": {
+     "value": 0.1262971846871556,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_gap_sersic": {
+     "value": 0.15533230886324673,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.mistele_ltg": {
+     "value": 2.8586662948485637,
+     "status": "close",
+     "unit": ""
+    },
+    "lensing.mistele_etg": {
+     "value": 2.5531692196967417,
+     "status": "close",
+     "unit": ""
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.027746384214349617,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "mw.v_sun": {
+     "value": 209.17368380046838,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "mw.rc_outer": {
+     "value": -8.672074673535956,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "mw.vertical_pull": {
+     "value": 72.28765137349475,
+     "status": "pass",
+     "unit": "Msun/pc^2"
+    },
+    "mw.mass_20": {
+     "value": 166099822378.32504,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.mass_50": {
+     "value": 355549557580.3578,
+     "status": "close",
+     "unit": "Msun"
+    },
+    "mw.mass_100": {
+     "value": 653344358620.6371,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.mass_200": {
+     "value": 1243094823580.896,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.v_escape": {
+     "value": 504.3546485928708,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "mw.inner_share": {
+     "value": 0.9841536152013713,
+     "status": "pass",
+     "unit": ""
+    },
+    "dwarfs.chi2": {
+     "value": 137.6971874071253,
+     "status": "info",
+     "unit": ""
+    },
+    "precision.double_pulsar": {
+     "value": 0.013448289426257866,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.outer_stars": {
+     "value": 3711267975055.379,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "bullet.kappa_main": {
+     "value": 0.7168257686822568,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.kappa_sub": {
+     "value": 0.2764404561794175,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.gas_main": {
+     "value": 0.04956641606538461,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.gas_sub": {
+     "value": 0.05160307758690895,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.peak_main": {
+     "value": 15.677769590351035,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "bullet.peak_sub": {
+     "value": 22.971876230556386,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "bullet.m250_main": {
+     "value": 296861165247772.75,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "bullet.m250_sub": {
+     "value": 138495338528792.78,
+     "status": "fail",
+     "unit": "Msun"
+    },
+    "stack.beta_gas": {
+     "value": 0.019136227733650826,
+     "status": "pass",
+     "unit": ""
+    },
+    "macs0025.m300_se": {
+     "value": 205322160296687.38,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "macs0025.m300_nw": {
+     "value": 185316326949703.28,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "macs0025.peak_se": {
+     "value": 23.61307345141903,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "macs0025.peak_nw": {
+     "value": 79.19790739205413,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "macs0025.sigma": {
+     "value": 668.6590074208184,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "abell520.m710": {
+     "value": 527180347427273.0,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.696834124822046,
+     "status": "close",
+     "unit": ""
+    },
+    "elgordo.m500": {
+     "value": 842317643805374.4,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "elgordo.m1000": {
+     "value": 2142108840323049.5,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1013.6683540265178,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "elgordo.sigma_se": {
+     "value": 903.5503096331079,
+     "status": "pass",
+     "unit": "km/s"
+    }
+   },
+   "trapping": {}
+  },
+  "trapped_own_heat_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 145.9815954201216,
+    "g_d_SI": 2.027287915237577e-10,
+    "refit_log": [
+     {
+      "step": "u on X-COP (static, deprojected)",
+      "u_kms": 145.9815954201216
+     }
+    ]
+   },
+   "companion_trapping": "own_heat",
+   "commit": "ed61d9c+changes",
+   "seconds": 1426.4351385310001,
+   "total": "57 / 12 / 8",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "5 / 1 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "8 / 3 / 2",
+    "milky_way": "6 / 3 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "22 / 4 / 1"
+   },
+   "grade_changes": [
+    {
+     "id": "galaxies.sparc_bulges",
+     "title": "bulge-dominated galaxies (25): typical speed miss",
+     "value": 30.550731962233,
+     "status": "close",
+     "baseline_value": 29.435830479800696,
+     "baseline_status": "pass"
+    },
+    {
+     "id": "lensing.mistele_etg",
+     "title": "lensing circular speeds 50-300 kpc, ellipticals: rms z (static distances)",
+     "value": 3.996756044720932,
+     "status": "fail",
+     "baseline_value": 2.5531692196967417,
+     "baseline_status": "close"
+    },
+    {
+     "id": "mw.rc_outer",
+     "title": "rotation curve 15-27 kpc: mean offset over the four Gaia analyses",
+     "value": -11.273348799387882,
+     "status": "close",
+     "baseline_value": -8.672074673535956,
+     "baseline_status": "pass"
+    }
+   ],
+   "key_values": {
+    "law.u_kms": {
+     "value": 145.9815954201216,
+     "status": "info",
+     "unit": "km/s"
+    },
+    "galaxies.sparc_rms_all": {
+     "value": 16.118713472840017,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "galaxies.sparc_median": {
+     "value": 0.03424601374151073,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 30.550731962233,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.21994580238665892,
+     "status": "pass",
+     "unit": ""
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.2354498142262876,
+     "status": "pass",
+     "unit": ""
+    },
+    "clusters.u_preferred": {
+     "value": 145.9815954201216,
+     "status": "info",
+     "unit": "km/s"
+    },
+    "clusters.xcop_crossval": {
+     "value": 0.2349934885867866,
+     "status": "pass",
+     "unit": ""
+    },
+    "lensing.kids_all": {
+     "value": 0.06394484855816174,
+     "status": "close",
+     "unit": "dex"
+    },
+    "lensing.kids_red": {
+     "value": 0.08865966121653379,
+     "status": "fail",
+     "unit": "dex"
+    },
+    "lensing.kids_blue": {
+     "value": -0.007465558168339825,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_disc": {
+     "value": 0.06514728974264195,
+     "status": "close",
+     "unit": "dex"
+    },
+    "lensing.kids_bulge": {
+     "value": 0.042401331725962166,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_gama": {
+     "value": 0.008505434567101844,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_gap": {
+     "value": 0.09587300986418484,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_gap_sersic": {
+     "value": 0.14570328263669555,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.mistele_ltg": {
+     "value": 2.6889493000348303,
+     "status": "close",
+     "unit": ""
+    },
+    "lensing.mistele_etg": {
+     "value": 3.996756044720932,
+     "status": "fail",
+     "unit": ""
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.027446516837053386,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "mw.v_sun": {
+     "value": 209.7295548588684,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "mw.rc_outer": {
+     "value": -11.273348799387882,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "mw.vertical_pull": {
+     "value": 72.34760419583641,
+     "status": "pass",
+     "unit": "Msun/pc^2"
+    },
+    "mw.mass_20": {
+     "value": 160513469018.8539,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.mass_50": {
+     "value": 341021206646.74347,
+     "status": "close",
+     "unit": "Msun"
+    },
+    "mw.mass_100": {
+     "value": 623931184105.7985,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.mass_200": {
+     "value": 1184011024296.6453,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.v_escape": {
+     "value": 496.6706111054169,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "mw.inner_share": {
+     "value": 0.9826631040002511,
+     "status": "pass",
+     "unit": ""
+    },
+    "dwarfs.chi2": {
+     "value": 134.47521101043574,
+     "status": "info",
+     "unit": ""
+    },
+    "precision.double_pulsar": {
+     "value": 0.011586188124651585,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.outer_stars": {
+     "value": 3490442875349.953,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "bullet.kappa_main": {
+     "value": 0.7279094452483443,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.kappa_sub": {
+     "value": 0.28616088631542724,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.gas_main": {
+     "value": 0.050361725896006904,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.gas_sub": {
+     "value": 0.049953670372109404,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.peak_main": {
+     "value": 14.97080590940442,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "bullet.peak_sub": {
+     "value": 22.302134298865514,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "bullet.m250_main": {
+     "value": 299167732228929.1,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "bullet.m250_sub": {
+     "value": 139283651689772.36,
+     "status": "fail",
+     "unit": "Msun"
+    },
+    "stack.beta_gas": {
+     "value": 0.018039093293811,
+     "status": "pass",
+     "unit": ""
+    },
+    "macs0025.m300_se": {
+     "value": 204124381239198.9,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "macs0025.m300_nw": {
+     "value": 184165537484774.1,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "macs0025.peak_se": {
+     "value": 23.308397937031568,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "macs0025.peak_nw": {
+     "value": 80.17351895660539,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "macs0025.sigma": {
+     "value": 666.1964601172165,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "abell520.m710": {
+     "value": 526354891155769.5,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.709844537138921,
+     "status": "close",
+     "unit": ""
+    },
+    "elgordo.m500": {
+     "value": 838257028560011.9,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "elgordo.m1000": {
+     "value": 2132004345523674.8,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1010.8101293248845,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "elgordo.sigma_se": {
+     "value": 900.4663824254421,
+     "status": "pass",
+     "unit": "km/s"
+    }
+   },
+   "trapping": {
+    "xcop_escaping_share": {
+     "mean": 0.7807087434533853,
+     "min": 0.7763408762698103,
+     "max": 0.7867980679034363,
+     "u_last": 136.50921535309942
+    },
+    "lenses": {
+     "red 10.60": {
+      "escaping_share": 0.6819501476813863,
+      "k": 2.657244460464233,
+      "size_kpc": 3.194969893617865,
+      "profile": "hernquist",
+      "zone_outer_kpc": 2.2767984422995142
+     },
+     "blue 10.60": {
+      "escaping_share": 1.0,
+      "k": 0.6811046166747777,
+      "size_kpc": 3.7189180707734417,
+      "profile": "disk",
+      "zone_outer_kpc": 0.0
+     },
+     "bulge 10.60": {
+      "escaping_share": 0.6935570645840308,
+      "k": 2.6630888098423457,
+      "size_kpc": 3.2593033229374035,
+      "profile": "hernquist",
+      "zone_outer_kpc": 2.226870924087595
+     },
+     "disc 10.60": {
+      "escaping_share": 0.7635631240045526,
+      "k": 0.37538971899151913,
+      "size_kpc": 4.082613204050798,
+      "profile": "disk",
+      "zone_outer_kpc": 3.9066895605509417
+     },
+     "blue 10.10": {
+      "escaping_share": 1.0,
+      "k": 0.40667867689742676,
+      "size_kpc": 2.7885702640178622,
+      "profile": "disk",
+      "zone_outer_kpc": 0.0
+     },
+     "blue 10.66": {
+      "escaping_share": 1.0,
+      "k": 0.685626787727775,
+      "size_kpc": 3.8410860810325156,
+      "profile": "disk",
+      "zone_outer_kpc": 0.0
+     },
+     "blue 10.96": {
+      "escaping_share": 1.0,
+      "k": 1.3293432536260275,
+      "size_kpc": 4.28468150258399,
+      "profile": "disk",
+      "zone_outer_kpc": 0.0
+     },
+     "blue 11.29": {
+      "escaping_share": 1.0,
+      "k": 2.092892974233347,
+      "size_kpc": 5.193218207448322,
+      "profile": "disk",
+      "zone_outer_kpc": 0.0
+     },
+     "red 10.66": {
+      "escaping_share": 0.6760913152704618,
+      "k": 2.741498077911499,
+      "size_kpc": 3.3653913596652973,
+      "profile": "hernquist",
+      "zone_outer_kpc": 2.44927283595569
+     },
+     "red 10.96": {
+      "escaping_share": 0.7942737495462419,
+      "k": 3.7611642628838076,
+      "size_kpc": 4.84869935037721,
+      "profile": "hernquist",
+      "zone_outer_kpc": 2.2205665601433284
+     },
+     "red 11.29": {
+      "escaping_share": 0.9227439091211145,
+      "k": 5.451342195379733,
+      "size_kpc": 6.877840768340926,
+      "profile": "hernquist",
+      "zone_outer_kpc": 1.539580156316649
+     }
+    },
+    "sparc": {
+     "galaxies_with_a_zone": 31,
+     "bulge_share_held_median": 0.9999783547939952,
+     "radii_in_zone_median": 0.5714285714285714,
+     "band_median": 0.19444444444444445
+    },
+    "milky_way": {
+     "(('H2', 1), ('HI', 1), ('bulge', 1), ('halo', 1), ('thick', 1), ('thin', 1))": {
+      "zone_outer_R_in_plane_kpc": 16.812055914085885,
+      "band_outer_R_in_plane_kpc": 21.939291147742395,
+      "held_share": {
+       "bulge": 0.9998733723764223,
+       "stellar halo": 0.4392546879700302
+      },
+      "S_at_sun_ratio": 1.0
+     },
+     "(('H2', np.float64(1.1196925329003125)), ('HI', np.float64(1.1196925329003125)), ('bulge', 1), ('halo', 1), ('thick', np.float64(0.7288780242740182)), ('thin', np.float64(0.7288780242740182)))": {
+      "zone_outer_R_in_plane_kpc": 14.53859669214835,
+      "band_outer_R_in_plane_kpc": 19.915675452208177,
+      "held_share": {
+       "bulge": 0.9998707111452684,
+       "stellar halo": 0.3844181467753063
+      },
+      "S_at_sun_ratio": 1.0
+     }
+    },
+    "maps": {
+     "n": 16,
+     "escaping_share": [
+      0.7546,
+      0.7508,
+      0.7829,
+      0.7508,
+      0.7829,
+      0.7508,
+      0.7829,
+      0.7508,
+      0.7829,
+      0.7508,
+      0.7829,
+      0.7508,
+      0.7829,
+      0.733,
+      0.7409,
+      0.7337
+     ],
+     "iterations": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4
+     ]
+    },
+    "slacs_last": {
+     "zone_outer_kpc": 4.114043412081489,
+     "held_share": 0.22349860956352197
+    },
+    "jeans_last": {
+     "escaping_share": 0.7306656110459471,
+     "iterations": 1
+    }
+   }
+  },
+  "trapped_cluster_heat_r12": {
+   "constants": {
+    "a_SI": 6.297889390049439e-11,
+    "u_kms": 169.42904547980416,
+    "g_d_SI": 2.027287915237577e-10,
+    "refit_log": [
+     {
+      "step": "u on X-COP (static, deprojected)",
+      "u_kms": 169.42904547980416
+     }
+    ]
+   },
+   "companion_trapping": "cluster_heat",
+   "commit": "ed61d9c+changes",
+   "seconds": 1330.5535372989998,
+   "total": "57 / 9 / 11",
+   "by_group": {
+    "machinery": "3 / 0 / 0",
+    "galaxies": "6 / 0 / 0",
+    "clusters": "3 / 0 / 0",
+    "lensing": "7 / 1 / 5",
+    "milky_way": "6 / 3 / 0",
+    "dwarfs": "4 / 1 / 5",
+    "precision": "6 / 0 / 0",
+    "collisions": "22 / 4 / 1"
+   },
+   "grade_changes": [
+    {
+     "id": "lensing.kids_all",
+     "title": "KiDS lensing pull, all isolated lenses (mixture): median log10(observed/predicted), static distances",
+     "value": 0.10586170770032233,
+     "status": "fail",
+     "baseline_value": 0.06475542119133948,
+     "baseline_status": "close"
+    },
+    {
+     "id": "lensing.kids_disc",
+     "title": "KiDS lensing pull, Sersic n < 2 (disks; k = 0.16): median log10(observed/predicted), static distances",
+     "value": 0.0839430063809985,
+     "status": "fail",
+     "baseline_value": 0.0662676587409674,
+     "baseline_status": "close"
+    },
+    {
+     "id": "lensing.kids_bulge",
+     "title": "KiDS lensing pull, Sersic n > 2 (bulges; k = 1.21): median log10(observed/predicted), static distances",
+     "value": 0.09220648943953158,
+     "status": "fail",
+     "baseline_value": 0.03364331498305795,
+     "baseline_status": "pass"
+    },
+    {
+     "id": "lensing.kids_gama",
+     "title": "KiDS lensing pull, GAMA spectroscopic lenses: median log10(observed/predicted), static distances",
+     "value": 0.050422293709262433,
+     "status": "close",
+     "baseline_value": 0.009316007200279586,
+     "baseline_status": "pass"
+    },
+    {
+     "id": "lensing.mistele_ltg",
+     "title": "lensing circular speeds 50-300 kpc, spirals: rms z (static distances)",
+     "value": 3.0378452322012905,
+     "status": "fail",
+     "baseline_value": 2.8586662948485637,
+     "baseline_status": "close"
+    },
+    {
+     "id": "lensing.mistele_etg",
+     "title": "lensing circular speeds 50-300 kpc, ellipticals: rms z (static distances)",
+     "value": 1.9119354200044005,
+     "status": "pass",
+     "baseline_value": 2.5531692196967417,
+     "baseline_status": "close"
+    },
+    {
+     "id": "mw.rc_outer",
+     "title": "rotation curve 15-27 kpc: mean offset over the four Gaia analyses",
+     "value": -11.204962536720096,
+     "status": "close",
+     "baseline_value": -8.672074673535956,
+     "baseline_status": "pass"
+    }
+   ],
+   "key_values": {
+    "law.u_kms": {
+     "value": 169.42904547980416,
+     "status": "info",
+     "unit": "km/s"
+    },
+    "galaxies.sparc_rms_all": {
+     "value": 16.02592950622934,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "galaxies.sparc_median": {
+     "value": 0.03430288374663447,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "galaxies.sparc_bulges": {
+     "value": 29.947765232730518,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "clusters.xcop_rms": {
+     "value": 0.22149660163153578,
+     "status": "pass",
+     "unit": ""
+    },
+    "clusters.xcop_radial_trend": {
+     "value": 0.23892590396034566,
+     "status": "pass",
+     "unit": ""
+    },
+    "clusters.u_preferred": {
+     "value": 169.42904547980416,
+     "status": "info",
+     "unit": "km/s"
+    },
+    "clusters.xcop_crossval": {
+     "value": 0.23647623645557098,
+     "status": "pass",
+     "unit": ""
+    },
+    "lensing.kids_all": {
+     "value": 0.10586170770032233,
+     "status": "fail",
+     "unit": "dex"
+    },
+    "lensing.kids_red": {
+     "value": 0.13841356217114864,
+     "status": "fail",
+     "unit": "dex"
+    },
+    "lensing.kids_blue": {
+     "value": 0.02251454864897262,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_disc": {
+     "value": 0.0839430063809985,
+     "status": "fail",
+     "unit": "dex"
+    },
+    "lensing.kids_bulge": {
+     "value": 0.09220648943953158,
+     "status": "fail",
+     "unit": "dex"
+    },
+    "lensing.kids_gama": {
+     "value": 0.050422293709262433,
+     "status": "close",
+     "unit": "dex"
+    },
+    "lensing.kids_gap": {
+     "value": 0.07951193107086948,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.kids_gap_sersic": {
+     "value": 0.11574013138161296,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "lensing.mistele_ltg": {
+     "value": 3.0378452322012905,
+     "status": "fail",
+     "unit": ""
+    },
+    "lensing.mistele_etg": {
+     "value": 1.9119354200044005,
+     "status": "pass",
+     "unit": ""
+    },
+    "lensing.slacs_light_equals_matter": {
+     "value": -0.0018451772634296242,
+     "status": "pass",
+     "unit": "dex"
+    },
+    "mw.v_sun": {
+     "value": 209.06498432416987,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "mw.rc_outer": {
+     "value": -11.204962536720096,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "mw.vertical_pull": {
+     "value": 72.39913237537812,
+     "status": "pass",
+     "unit": "Msun/pc^2"
+    },
+    "mw.mass_20": {
+     "value": 160294487503.8971,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.mass_50": {
+     "value": 340268790631.96497,
+     "status": "close",
+     "unit": "Msun"
+    },
+    "mw.mass_100": {
+     "value": 622462915631.9606,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.mass_200": {
+     "value": 1181137043383.6855,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "mw.v_escape": {
+     "value": 495.9748139571413,
+     "status": "pass",
+     "unit": "km/s"
+    },
+    "mw.inner_share": {
+     "value": 0.984213449688813,
+     "status": "pass",
+     "unit": ""
+    },
+    "dwarfs.chi2": {
+     "value": 134.43707911518536,
+     "status": "info",
+     "unit": ""
+    },
+    "precision.double_pulsar": {
+     "value": 0.013447152629478532,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.outer_stars": {
+     "value": 3709443952126.3135,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "bullet.kappa_main": {
+     "value": 0.7168568330257679,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.kappa_sub": {
+     "value": 0.27646362714960426,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.gas_main": {
+     "value": 0.04956785956759432,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.gas_sub": {
+     "value": 0.05160218869862354,
+     "status": "pass",
+     "unit": ""
+    },
+    "bullet.peak_main": {
+     "value": 15.676592582348118,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "bullet.peak_sub": {
+     "value": 22.97523090480106,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "bullet.m250_main": {
+     "value": 296870551636018.56,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "bullet.m250_sub": {
+     "value": 138500472078918.97,
+     "status": "fail",
+     "unit": "Msun"
+    },
+    "stack.beta_gas": {
+     "value": 0.019132221092715812,
+     "status": "pass",
+     "unit": ""
+    },
+    "macs0025.m300_se": {
+     "value": 205329813026365.84,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "macs0025.m300_nw": {
+     "value": 185317145586971.66,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "macs0025.peak_se": {
+     "value": 23.61108539498473,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "macs0025.peak_nw": {
+     "value": 79.1733845315653,
+     "status": "pass",
+     "unit": "kpc"
+    },
+    "macs0025.sigma": {
+     "value": 668.6478013960083,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "abell520.m710": {
+     "value": 527010696674243.44,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "abell520.sigma_peaks": {
+     "value": 2.6976807956818005,
+     "status": "close",
+     "unit": ""
+    },
+    "elgordo.m500": {
+     "value": 842374891640762.5,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "elgordo.m1000": {
+     "value": 2142229332789157.0,
+     "status": "pass",
+     "unit": "Msun"
+    },
+    "elgordo.sigma_nw": {
+     "value": 1013.7041301466452,
+     "status": "close",
+     "unit": "km/s"
+    },
+    "elgordo.sigma_se": {
+     "value": 903.5748872978558,
+     "status": "pass",
+     "unit": "km/s"
+    }
+   },
+   "trapping": {
+    "xcop_escaping_share": {
+     "mean": 0.999626401814942,
+     "min": 0.9983934638603326,
+     "max": 0.9999459959190132,
+     "u_last": 154.0499707086034
+    },
+    "lenses": {
+     "red 10.60": {
+      "escaping_share": 0.5972721526799506,
+      "k": 1.9726588875578968,
+      "size_kpc": 3.194969893617865,
+      "profile": "hernquist",
+      "zone_outer_kpc": 3.057295635375641
+     },
+     "blue 10.60": {
+      "escaping_share": 0.803292346869255,
+      "k": 0.5056317156478272,
+      "size_kpc": 3.7189180707734417,
+      "profile": "disk",
+      "zone_outer_kpc": 3.2712382579787205
+     },
+     "bulge 10.60": {
+      "escaping_share": 0.6096374018477864,
+      "k": 1.9769975579039116,
+      "size_kpc": 3.2593033229374035,
+      "profile": "hernquist",
+      "zone_outer_kpc": 2.9902527295660786
+     },
+     "disc 10.60": {
+      "escaping_share": 0.5622915385964294,
+      "k": 0.27867811053301067,
+      "size_kpc": 4.082613204050798,
+      "profile": "disk",
+      "zone_outer_kpc": 6.078944495870525
+     },
+     "blue 10.10": {
+      "escaping_share": 1.0,
+      "k": 0.3019060979514999,
+      "size_kpc": 2.7885702640178622,
+      "profile": "disk",
+      "zone_outer_kpc": 0.0
+     },
+     "blue 10.66": {
+      "escaping_share": 0.6969562939985717,
+      "k": 0.508988840312674,
+      "size_kpc": 3.8410860810325156,
+      "profile": "disk",
+      "zone_outer_kpc": 4.349856266149817
+     },
+     "blue 10.96": {
+      "escaping_share": 0.7670922984604627,
+      "k": 0.986864710002022,
+      "size_kpc": 4.28468150258399,
+      "profile": "disk",
+      "zone_outer_kpc": 4.276384639279698
+     },
+     "blue 11.29": {
+      "escaping_share": 0.7980897227917063,
+      "k": 1.5537012073054104,
+      "size_kpc": 5.193218207448322,
+      "profile": "disk",
+      "zone_outer_kpc": 4.969437549599665
+     },
+     "red 10.66": {
+      "escaping_share": 0.5972721526799505,
+      "k": 2.035206255607435,
+      "size_kpc": 3.3653913596652973,
+      "profile": "hernquist",
+      "zone_outer_kpc": 3.2203734801346537
+     },
+     "red 10.96": {
+      "escaping_share": 0.6935589785590375,
+      "k": 2.792175963157966,
+      "size_kpc": 4.84869935037721,
+      "profile": "hernquist",
+      "zone_outer_kpc": 3.3128023179095774
+     },
+     "red 11.29": {
+      "escaping_share": 0.7943007366578447,
+      "k": 4.046913556819119,
+      "size_kpc": 6.877840768340926,
+      "profile": "hernquist",
+      "zone_outer_kpc": 3.1498556855211493
+     }
+    },
+    "sparc": {
+     "galaxies_with_a_zone": 31,
+     "bulge_share_held_median": 0.9999999999999998,
+     "radii_in_zone_median": 0.5714285714285714,
+     "band_median": 0.17391304347826086
+    },
+    "milky_way": {
+     "(('H2', 1), ('HI', 1), ('bulge', 1), ('halo', 1), ('thick', 1), ('thin', 1))": {
+      "zone_outer_R_in_plane_kpc": 17.64598558834962,
+      "band_outer_R_in_plane_kpc": 22.476469469022042,
+      "held_share": {
+       "bulge": 0.9999279976627978,
+       "stellar halo": 0.4612171707873288
+      },
+      "S_at_sun_ratio": 1.0
+     },
+     "(('H2', np.float64(1.1196925329003125)), ('HI', np.float64(1.1196925329003125)), ('bulge', 1), ('halo', 1), ('thick', np.float64(0.7288780242740182)), ('thin', np.float64(0.7288780242740182)))": {
+      "zone_outer_R_in_plane_kpc": 15.634224193956495,
+      "band_outer_R_in_plane_kpc": 20.40341268553553,
+      "held_share": {
+       "bulge": 0.9999259977474297,
+       "stellar halo": 0.4077053902234813
+      },
+      "S_at_sun_ratio": 1.0
+     }
+    },
+    "maps": {
+     "n": 16,
+     "escaping_share": [
+      1.0,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9999,
+      0.9998,
+      0.9991,
+      1.0
+     ],
+     "iterations": [
+      1,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      3,
+      2
+     ]
+    },
+    "slacs_last": {
+     "zone_outer_kpc": 5.565688166946591,
+     "held_share": 0.28863369789493193
+    },
+    "jeans_last": {
+     "escaping_share": 0.9998339503078486,
+     "iterations": 1
+    }
+   }
+  }
+ },
+ "keys": [
+  "law.u_kms",
+  "galaxies.sparc_rms_all",
+  "galaxies.sparc_median",
+  "galaxies.sparc_bulges",
+  "clusters.xcop_rms",
+  "clusters.xcop_radial_trend",
+  "clusters.u_preferred",
+  "clusters.xcop_crossval",
+  "lensing.kids_all",
+  "lensing.kids_red",
+  "lensing.kids_blue",
+  "lensing.kids_disc",
+  "lensing.kids_bulge",
+  "lensing.kids_gama",
+  "lensing.kids_gap",
+  "lensing.kids_gap_sersic",
+  "lensing.mistele_ltg",
+  "lensing.mistele_etg",
+  "lensing.slacs_light_equals_matter",
+  "mw.v_sun",
+  "mw.rc_outer",
+  "mw.vertical_pull",
+  "mw.mass_20",
+  "mw.mass_50",
+  "mw.mass_100",
+  "mw.mass_200",
+  "mw.v_escape",
+  "mw.inner_share",
+  "dwarfs.chi2",
+  "precision.double_pulsar",
+  "bullet.outer_stars",
+  "bullet.kappa_main",
+  "bullet.kappa_sub",
+  "bullet.gas_main",
+  "bullet.gas_sub",
+  "bullet.peak_main",
+  "bullet.peak_sub",
+  "bullet.m250_main",
+  "bullet.m250_sub",
+  "stack.beta_gas",
+  "macs0025.m300_se",
+  "macs0025.m300_nw",
+  "macs0025.peak_se",
+  "macs0025.peak_nw",
+  "macs0025.sigma",
+  "abell520.m710",
+  "abell520.sigma_peaks",
+  "elgordo.m500",
+  "elgordo.m1000",
+  "elgordo.sigma_nw",
+  "elgordo.sigma_se"
+ ]
+}

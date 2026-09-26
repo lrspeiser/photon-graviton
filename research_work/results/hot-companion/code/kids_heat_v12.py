@@ -37,6 +37,9 @@ def kids(consts, u, reach, f=None, k=None, gas_frac=0.0, r_acc_kpc=100.0):
     the paper's units, as Brouwer et al. 2021 model it (their nominal case: 1 x the stars within 100 kpc)."""
     tabs = KS.tables()
     k = heat(u) if k is None else k
+    T = sys.modules.get('trapping_v25')                        # round 25: the trapped companion: k x the lens's escaping share
+    if T is not None and T.MODE:
+        k = {s: k[s] * T.lens_factor(s, 10.6, k[s], consts, f) for s in k}
     fg = 1.0 if f is None else f['stars'] / f['size'] ** 2
     fl = 1.0 if f is None else f['lens'] / f['size'] ** 2
     fm = 1.0 if f is None else f['stars']
@@ -80,6 +83,9 @@ def mistele(consts, u, reach, f=None):
             ok = m & np.isfinite(vc)
             if ok.sum() < 2: continue
             k = LH.k_eff(HEAT, sample, u, logM=lm)
+            T = sys.modules.get('trapping_v25')                # round 25: the trapped companion
+            if T is not None and T.MODE:
+                k = k * T.lens_factor(sample, lm, k, consts, f)
             w = 1 / es[ok] ** 2
             obs = float(np.sum(vc[ok] * w) / w.sum()); err = float(1 / np.sqrt(w.sum()))
             r = np.linspace(50 * fs, 300 * fs, 50)

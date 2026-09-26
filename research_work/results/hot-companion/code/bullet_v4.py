@@ -33,7 +33,7 @@ Before the collision each cluster was a settled cluster:
 Nothing about the lensing is fitted. The constants are round 3's.
 """
 from __future__ import annotations
-import argparse, copy, json, time
+import argparse, copy, json, sys, time
 from pathlib import Path
 import numpy as np
 import bullet_v3 as B
@@ -60,7 +60,9 @@ def own_sigma_multi(gas_list, star_list, consts, n=500, iters=400, rmax=3000.0):
         return np.where(rho_s > 1e-30, tail / np.maximum(rho_s, 1e-300), 0.0)
     sig2 = jeans(gN + np.sqrt(a * gN))
     for _ in range(iters):
-        S = G * (W @ (L.k_from_sig2(sig2, u) * dms)) / r ** 2
+        kk = L.k_from_sig2(sig2, u)
+        T = sys.modules.get('trapping_v25')                    # round 25: the trapped companion
+        S = T.jeans_S(r, W, kk, dms, consts) if (T is not None and T.MODE) else G * (W @ (kk * dms)) / r ** 2
         g = gN + np.exp(-gN / (lam * a)) * np.sqrt(a * (gN + S))
         new = jeans(g)
         if np.max(np.abs(new - sig2) * dms) < 1e-7 * np.max(new * dms): sig2 = new; break
@@ -116,6 +118,9 @@ def kappa_map_v4(current, ghost_gas, ghost_stars, pos, consts, n=192, dx=15.0, c
         if heat:
             krho += L.k_from_sig2(np.interp(r3, prof[0], prof[1]) ** 2, u).astype(np.float32) * rho_c
         del r3, rho_c
+    T = sys.modules.get('trapping_v25')                        # round 25: the trapped companion: the galaxies keep the glow born in their zones
+    if heat and T is not None and T.MODE:
+        krho = T.map_trap(krho, rho_ghost_st, n, dx, dV, consts)
     inv_r = B.Conv(n, dx, lambda r: 1.0 / r, B.cube_average(lambda r: 1 / r) / dx)
     gN = -np.array(np.gradient(-G * inv_r(rho_now * dV), dx))
     # coherent companion flow: stars (unchanged motion) + gas, old part from the ghost

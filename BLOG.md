@@ -1022,7 +1022,8 @@ inside every galaxy (the Milky Way inside 17.6 kpc, about half of all the SPARC 
 dwarf galaxies. Hot glow born there can never leave: its energy would have to change sign on the way out. And the
 region fills up with companion until the factor reaches zero, a still "companion atmosphere" with nothing adjustable in
 it. The data can already judge this:
-* **The clusters like it.** Their galaxies hold back about 60% of their glow; the companion then has to be slower, about
+* **The clusters seemed to like it** (corrected below: this first estimate left out each galaxy's own glow). Their
+  galaxies hold back about 60% of their glow; the companion then has to be slower, about
   113 km/s instead of 169, and the 12 X-COP clusters fit better than with the law (typical miss 20% instead of 22%, and
   the swing from core to edge 0.15 instead of 0.24).
 * **Galaxy lensing survives at that speed:** ellipticals send out about half their glow and spirals about a tenth, and
@@ -1032,6 +1033,34 @@ it. The data can already judge this:
   the Sun's speed from 209 to 223 km/s (measured 229–234) but also the pull just above the disk, beyond its measurement.
 So the repair does more than close a loophole: it predicts where the companion lives (held inside galaxies, free in
 clusters), and that picture now needs the full suite, starting with the colliding clusters.
+
+**The trapped companion, run on every test.** We then ran that picture through the whole regression suite, all 77 graded
+checks, with the rules written down and pushed before the run. The lenses' and cluster galaxies' sizes now come from
+measurement: the same 120,000 SDSS galaxies whose star speeds gave their heat (a typical red lens galaxy has half its
+light within 2.7 kpc; a blue one has a disk that fades over 3.2 kpc). And the full calculation exposed a gap in the quick
+estimate above: inside a cluster galaxy, the galaxy's own glow is there too, and it is the bigger part. Counted, a
+cluster galaxy holds back only about a quarter of its glow, not 60%, and nearly the same quarter everywhere in the
+cluster.
+* **The clusters no longer improve.** The companion's refitted speed is 146 km/s rather than 113, and the 12 X-COP
+  clusters fit as well as with the law and no better (typical miss 22%; core-to-edge swing 0.235 against 0.239). The
+  earlier gain came from leaving each galaxy's own glow out.
+* **The score:** 57 checks pass, 12 are close and 8 fail, against the law's 59, 11 and 7. Nothing moves up a grade and
+  three move down: the 25 SPARC galaxies with big central bulges (typical miss 30.6 km/s, just past MOND's 30.4), because
+  their outer parts no longer hear the bulge; the Milky Way between 15 and 27 kpc (below), because its trapping zone ends
+  at 17 kpc; and the lensing speeds around the heaviest elliptical galaxies, 11% too high, because the slower companion
+  makes their heat larger. Everything else holds, including all 27 colliding-cluster checks and the Solar System.
+  Refitting the strength constant *a* as well changes nothing: the cost is in the structure, not the constants.
+* **The data choose how a galaxy's own glow counts.** If each star in a cluster galaxy carried the cluster's heat,
+  nothing would be trapped in clusters and galaxy lensing would fail (57 / 9 / 11). The data want a galaxy's own glow to
+  carry the heat of its own stars' motions: a small, new physical fact.
+* **The losses point to the other half of the repair.** All three sit just outside the zones where glow is trapped,
+  and that is exactly where the repair's second consequence, the fill-up, acts: wherever the glow that arrives leaves a
+  piece of companion with negative energy, companion collects until the energy reaches zero. There the pull comes out as
+  a formula with nothing to adjust, the ordinary pull plus a quarter of *a* (released as usual in strong pulls): equal to
+  the law at the zone's edge, stronger inside, where the earlier estimate lifted the Sun's speed from 209 to 223 km/s.
+  That complete model is the next registered test.
+
+![The Milky Way's rotation speed from 4 to 28 kpc: the four Gaia analyses (grey), the adopted law (teal) and the law with the companion trapped (orange, the companion's speed refitted to 146 km/s). The two agree inside the trapping zone, which reaches 16.8 kpc, the Sun included; beyond it the trapped curve runs 2 to 3.4 km/s lower. The band out to 21.9 kpc is where the fill-up would act.](blog-figures/trapped-milky-way.png)
 
 An independent review (25 September 2026) set out what a paper would need. In order:
 

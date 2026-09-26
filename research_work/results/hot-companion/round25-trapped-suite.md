@@ -81,3 +81,16 @@ for every law since its target changed in round 18 and is not counted):
 Every change of grade is traced to the part of the rule that causes it. Implementation: `code/trapping_v25.py` (the
 switch `companion_trapping` in `regression/law_config.py`, installed by `regression/common.apply_distances`; 'none'
 must reproduce the baseline to the last digit).
+
+## Results (added after the run)
+
+README §36.9; runs in `run-trapped-v25/suite/`, table `run-trapped-v25/suite_table_v25.json`. Against the round-12
+baseline (59 / 11 / 7): `trapped_own_heat_r12` (u refitted to 146.0 km/s) 57 / 12 / 8, inside the "mixed" band by its
+numbers but with no grade gained (SPARC's bulge-dominated galaxies, the Milky Way at 15–27 kpc and Mistele's ellipticals
+lose a grade); `trapped_cluster_heat_r12` (u 169.4 km/s, clusters and collisions as the law) 57 / 9 / 11, not supported.
+
+Deviations from the text above: none in the rules. Implementation details not fixed above: each hook reads the switch
+when it runs (so the suite's import order is unchanged); X-COP's brightness at its emitting shells is computed on 160
+radii and interpolated; the lens sizes are interpolated in log M* between the SDSS bins' centres; the maps' iteration
+stops when no cell's escaping share moves by more than 10⁻⁴ (four steps), the spherical ones at 10⁻⁶. One exploratory
+run was added after looking (`candidates/trapped_own_heat_refit_au_r12.json`: a refitted too), reported as such.

@@ -81,6 +81,9 @@ def jeans_sigma2(s, ds, dm, g):
 
 def cluster_M3(c, a, u, lam, sigma='hse', gas_weight=0.0, stars_weight=1.0):
     """Predicted enclosed mass at the six radii under the collision rule."""
+    T = sys.modules.get('trapping_v25')                        # round 25: the trapped companion (graded path only)
+    if T is not None and T.MODE and sigma == 'hse' and not gas_weight and L.HOT_GEOMETRY != 'stream':
+        return T.cluster_M3(c, a, u, lam, stars_weight=stars_weight)
     gN = G * c['Mb'] / c['Rk'] ** 2
     if sigma == 'sc':                       # self-consistent dispersion lives on the coarse grid
         S = G * (c['Wk_c'] @ (stars_weight * L.heat_weight(np.sqrt(c['sig2_star_sc_c']), u) * c['dms_c'])) / c['Rk'] ** 2

@@ -109,6 +109,9 @@ def load_xcop(rmax=3.0):
 
 # ----------------------------------------------------------------------------- law on data
 def galaxy_g(g, a, u, lam=np.inf):
+    T = sys.modules.get('trapping_v25')                        # round 25: the trapped companion, when switched on
+    if T is not None and T.MODE:
+        return T.galaxy_g(g, a, u, lam)
     gN = g['gN']
     if u is None or g['sigb'] == 0:
         S = 0.

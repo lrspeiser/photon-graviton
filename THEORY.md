@@ -799,6 +799,15 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   holding their glow X-COP prefers u ≈ 113 km/s (rms 0.203, trend 0.15), and at that speed galaxy lensing stays at the
   law's level (gaps 0.183 / 0.198); the fill-up is nearly neutral (SPARC 15.86 km/s; the Sun 223 but the pull above
   the disk 80 with the law's constants).
+* **The trapped companion on the full suite** (registered, `research_work/results/hot-companion/round25-trapped-suite.md`;
+  README §36.9; `code/trapping_v25.py`, unresolved galaxies at SDSS sizes). Correction first: inside a cluster galaxy its
+  own glow dominates T. At the heat of its internal motions it holds a quarter of its glow at every cluster radius, so
+  X-COP's shape does not change and u refits to 146 km/s (not 113); at the cluster's heat nothing is trapped. Scores (59 /
+  11 / 7 for the law): own heat 57 / 12 / 8 (SPARC bulges, the Milky Way at 15–27 kpc and Mistele's ellipticals each lose
+  a grade; nothing gains one), cluster heat 57 / 9 / 11 (galaxy lensing fails). Not adopted; the data prefer a galaxy's
+  own glow at its internal heat. The losses sit just outside galaxies' zones, where the fill-up acts: with
+  T = max(T_heard, (Q − a/4)²/a) the pull there is exactly released × (|g_N| + a/4), the law's value at the zone edge. Next:
+  the complete trapped model (trapping plus fill-up, a and g_d refitted), registered.
 
 ### What follows
 
