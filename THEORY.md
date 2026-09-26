@@ -791,6 +791,14 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   follows the gas. Retention where streams oppose (τ = τ0 chi) flattens X-COP's trend (0.239 → 0.108; best τ0 = 12.5,
   u = 246) but the refitted u costs galaxy lensing (KiDS all 0.065 → 0.12 dex); in the Bullet it favours the main
   cluster. The spread-of-speeds memory would make lensing speeds fall 41% from 100 kpc to 1 Mpc (measured flat).
+* **The self-energy repair** (the owner's; README §36.8, `code/self_energy_check_v25.py`): V_self = √a T^(3/2)/(6πG) makes
+  V0 + V_self = (g − h)²(g + 2h)/(12πGa) + (|d|g − d·∇φ)/(4πG) ≥ 0 (checked), static response unchanged. Its packets
+  carry ε = n ε0, n = 1 − 2(g − h)/a (aligned), negative where Q > a/4 + √(aT); in a static field such glow cannot leave
+  (trapping) and the region fills to n = 0 at T = (Q − a/4)²/a. Generic to intensity-only self-energies. Data: n < 0 in
+  galaxy interiors (Milky Way inside 17.6 kpc, 48% of SPARC), positive in clusters and dwarfs; with cluster galaxies
+  holding their glow X-COP prefers u ≈ 113 km/s (rms 0.203, trend 0.15), and at that speed galaxy lensing stays at the
+  law's level (gaps 0.183 / 0.198); the fill-up is nearly neutral (SPARC 15.86 km/s; the Sun 223 but the pull above
+  the disk 80 with the law's constants).
 
 ### What follows
 

@@ -1012,6 +1012,27 @@ It reproduces here to the last digit, and each part was checked against the data
   most galaxies and in the Milky Way inside 27 kpc, exactly where the law works best. That joining rule has to be
   replaced before the transport is allowed to change the pull over time.
 
+**The owner's self-energy repair, and what its own dynamics predicts.** The owner then found the missing term: a
+self-energy of the companion, so that crowding more companion into one place costs energy. Its size is fixed by the
+requirement that the total never goes negative, and it leaves the pull of any given arrangement unchanged. We checked
+the algebra independently: the total energy can no longer run away (100,000 random arrangements, never below zero).
+Following the same energy one step further shows something new. Each piece of companion carries its free energy
+multiplied by a factor that turns negative wherever ordinary matter pulls harder than about 1.6 × 10⁻¹¹ m/s², that is,
+inside every galaxy (the Milky Way inside 17.6 kpc, about half of all the SPARC points), but never in the clusters or the
+dwarf galaxies. Hot glow born there can never leave: its energy would have to change sign on the way out. And the
+region fills up with companion until the factor reaches zero, a still "companion atmosphere" with nothing adjustable in
+it. The data can already judge this:
+* **The clusters like it.** Their galaxies hold back about 60% of their glow; the companion then has to be slower, about
+  113 km/s instead of 169, and the 12 X-COP clusters fit better than with the law (typical miss 20% instead of 22%, and
+  the swing from core to edge 0.15 instead of 0.24).
+* **Galaxy lensing survives at that speed:** ellipticals send out about half their glow and spirals about a tenth, and
+  the lensing lands at the law's level, with the colour and shape splits measured as 0.153 and 0.154 now predicted as
+  0.183 and 0.198 (the law: 0.126 and 0.155).
+* **The atmosphere is nearly neutral:** rotation curves fit as well as before (15.9 km/s), and in the Milky Way it raises
+  the Sun's speed from 209 to 223 km/s (measured 229–234) but also the pull just above the disk, beyond its measurement.
+So the repair does more than close a loophole: it predicts where the companion lives (held inside galaxies, free in
+clusters), and that picture now needs the full suite, starting with the colliding clusters.
+
 An independent review (25 September 2026) set out what a paper would need. In order:
 
 1. **The companion as a flowing medium.** Done in round 19 for a uniform stream (§4.4): the absorbing stream is a

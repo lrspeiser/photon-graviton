@@ -6087,3 +6087,51 @@ the other side (§36.5): transport keeps the dwarf's own light; the force rule h
   its range; redirection alone gives +14% (its main peak moves to 57 of the allowed 63 kpc), retention where streams
   oppose +15% (the main cluster then leaves its range), and gas keeping its glow +21% at τ = 18 (X-COP's profile fails).
 * **The spread-of-speeds memory cannot set the pull's radial shape:** lensing speeds stay flat to 1 Mpc.
+
+### 36.8 The self-energy repair (the owner's, 26 September 2026), checked and followed one step
+
+The owner proposed the missing term (message of 26 September; its code is not in the repository): a self-energy of the
+hot companion, V_self(T) = √a T^(3/2) / (6πG), the smallest intensity-only term that makes the repaired field energy
+V0 = g³/(12πGa) − [(T − |d|)g + d·∇φ]/(4πG) nonnegative, with one Hamiltonian for the field, the packets
+(ε = δH/δf) and ordinary matter (coupling mφ). `code/self_energy_check_v25.py` → `run-self-energy-v25/`.
+
+**The algebra checks.** V0 + V_self = (g − h)²(g + 2h)/(12πGa) + (|d|g − d·∇φ)/(4πG), h = √(aT): exact to 1.3 × 10⁻¹⁴ in
+100,000 random three-dimensional configurations, never negative (smallest 6 × 10⁻⁷); the balanced-stream minima
+−0.333, −32.164, −1,233.3 become 1, 10, 100. V_self does not depend on ∇φ, so the static response g² = a(Q + T) is
+unchanged. The repair does what it claims.
+
+**One step further: the energy of a packet.** With DRT-1's normalisation a packet of free energy ε0 and velocity v has
+ε = ε0 [1 + 2(h − g)/a + (2/(au))(g d̂ − ∇φ)·v] (checked against finite differences of H), so in the aligned case
+**ε = n ε0 with n = 1 − 2(g − h)/a.** The total energy is bounded, but n < 0 wherever the ordinary-source term exceeds
+Q > a/4 + √(aT). In a static field a packet keeps its energy, so:
+* **(A) trapping:** hot glow born where n < 0 can never reach a place where n > 0 (its energy would have to change
+  sign);
+* **(B) fill-up:** adding packets there lowers the energy, so the region fills until n = 0, at T = (Q − a/4)²/a, a
+  static companion atmosphere with no free parameter.
+
+No intensity-only self-energy can avoid this while keeping the static response: n = 1 − 2g/a + (8πG/a) dV_self/dT, and
+ordinary matter can make g = √(a(Q + T)) as large as it likes at fixed T. Trapping in galaxy interiors is generic to this
+family of completions.
+
+**Where n < 0** (the law's fields): 48% of the SPARC points (n down to −10.2); 86–100% of every bulge's stars; the Milky
+Way inside 17.6 kpc (n = −0.96 at the Sun); KiDS-mass galaxies inside 6–11 kpc (point lenses); none of the X-COP radii
+(n = 0.82–0.88: the clusters' own brightness keeps it positive) and none of the dwarfs (0.25–0.87).
+
+**What the data say:**
+
+| | the law | self-energy model |
+|---|---|---|
+| X-COP, cluster galaxies keeping their glow where their own pull exceeds a/4 + √(aT) (Hernquist galaxies of 3 × 10¹⁰ or 10¹¹ Msun) | rms 0.222, worst radius 0.239, u = 169 | 36–39% of the glow escapes; u fixed: rms 0.41–0.43; **u refitted to 111–115 km/s: rms 0.203, worst radius 0.15** |
+| KiDS, extended lenses (early types Hernquist R_e = 3.5 kpc, late types disks R_d = 3.0 kpc), u = 169 | all / red / blue +0.065 / +0.078 / +0.011 dex; gaps 0.126 / 0.155 | ellipticals keep 62% of their glow, spirals 92–94%: +0.151 / +0.181 / +0.071; gaps 0.090 / 0.094 |
+| the same at u = 113 km/s (the clusters' preference) | | **+0.075 / +0.068 / +0.055; bulge +0.024, disc +0.100, GAMA +0.020; gaps 0.183 / 0.198** (measured 0.153 / 0.154 ± 0.04) |
+| KiDS if the lenses kept all their glow (point lenses) | | +0.211 / +0.282 / +0.077; gaps 0 |
+| SPARC with the fill-up (and trapped bulge glow) | 15.87 km/s, msq 0.2111 | 15.86 (15.97) with a and g_d refitted (6.49 × 10⁻¹¹, 1.38 × 10⁻¹⁰) |
+| Milky Way with the fill-up, law's constants | v_sun 209.2, 5–10 kpc −20.7 km/s, pull above the Sun 72.3 | 223.0 (passes), −7.6, **80.3 (would fail: 69.8 ± 3.3)** |
+| the same with SPARC's refitted constants | | 212.4, −17.9, 74.0 |
+
+So the completed dynamics predicts a definite structure: the hot companion is held inside galaxies (strongly in spirals,
+partly in ellipticals) and flows freely in clusters, whose own brightness keeps n positive. The data do not reject it:
+with the companion slower (u ≈ 113 km/s), the clusters fit better than the law and galaxy lensing stays at the law's level
+(ellipticals better, spirals worse). The fill-up is nearly neutral (it trades the Sun's speed against the pull above the
+disk). **Next:** register a full-suite test of the trapped model with u refitted (the collisions with their galaxies'
+glow held, the dwarfs, the Milky Way, the lenses with measured sizes), and derive how emission proceeds where n < 0.
