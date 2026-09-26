@@ -715,6 +715,20 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   −0.02 to −0.04 of the galaxy–gas separation (β from +0.02 to 0.00 to −0.02, measured −0.04 ± 0.07); the glow left
   behind by +0.17 to +0.36 (3–6σ).
 
+### Round 23: when the two clusters' companions interfere
+
+* **Question (the owner):** can two sources with an interference pattern change the picture? A pattern of bright and
+  dark bands adds no energy, and for a pull that follows the companion's height an averaged-over pattern gives slightly
+  less (4/π = 1.27 against √2 = 1.41 for two equal waves). What interference adds is flicker: at a star in both
+  companions the intensity rises and falls by 2√(I_other I_own), a depth m = 2√(I_other I_own)/(I_other + I_own), at the
+  crest-crossing rate. m ≫ p = I_other/(I_other + I_own) when the other companion is faint (heterodyne: 1% of the
+  intensity, 20% flicker).
+* **Heat of crossing driven by m instead of p** (`code/beat_heat_v23.py`, `code/beat_heat_far_v23.py`): the Bullet's
+  smaller half 1.59 → 1.70 (spreading at u), 2.00 at 600 km/s with the energy booked (1.75 with p); 2.47 is reached with
+  about 2.2× the power (3.3× with p), the main cluster then at 3.44 (range 3.09–3.46); peaks 5–11 kpc from the galaxies.
+  MACS J0025 and El Gordo change little (within their errors, slightly lower; MACS J0025's peaks onto its galaxies).
+  The flicker helps most in unequal collisions. A registered comparison, not adopted.
+
 ### What follows
 
 ```

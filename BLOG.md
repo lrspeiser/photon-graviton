@@ -8,8 +8,9 @@ Milky Way refitted with its matter held to independent measurements, a frozen pr
 whole record ([STEP-BACK-AUDIT.md](STEP-BACK-AUDIT.md), §9), round 20 (a second way to derive the pull, tested in
 small models, and the clusters checked without their X-ray input), and round 21 (three proposals from the project's
 owner checked against the data: a faster glow from colliding clusters, a refined distance law, and a first
-relativistic version, §5.3 and §9), and round 22 (the faster glow taken as far as the model allows: how it must spread,
-where its energy comes from, and what the companion's medium must do, §5.3 and §9). This is a fresh write-up
+relativistic version, §5.3 and §9), round 22 (the faster glow taken as far as the model allows: how it must spread,
+where its energy comes from, and what the companion's medium must do, §5.3 and §9), and round 23 (what happens when
+the two clusters' companions interfere, §5.3 and §9). This is a fresh write-up
 of where the project stands. The full working notebook, with every
 step, revision and correction along the way, is archived in
 [research_work/blog-archive/BLOG-notebook-rev26.md](research_work/blog-archive/BLOG-notebook-rev26.md), and the
@@ -627,6 +628,16 @@ would need no new speed and no extra energy. It cannot: left behind, the glow ad
 (at most 1.7) and drags its lensing up to 190 kpc onto the gas, which is not what is seen. So the glow must spread
 evenly around the stars that made it: a genuinely faster kind of wave in the companion's medium.
 
+Round 23 asked whether the two clusters' companions interfere, like two sets of ripples on a pond. A pattern of bright
+and dark bands adds no energy, and because the clusters race past each other at 3,000–3,900 km/s any such pattern
+sweeps across the stars far too fast to leave a pull of its own. What interference does add is flicker: each star sits
+in both companions, and their sum rises and falls as the star crosses the other cluster's wave crests. A faint second
+wave makes a surprisingly strong flicker (a wave with 1% of the brightness makes the total flicker by 20%), and that
+flicker is exactly the shaking that heats the stars in a collision. Letting the flicker drive the collision heat, in
+place of simply adding the two companions, raises the smaller half from 1.6 to 1.7, or to 2.0 with the faster glow,
+keeps its lensing right on the galaxies (5–11 kpc), leaves MACS J0025 and El Gordo within their errors, and cuts the
+extra power the fast glow needs from 3.3 times to about 2.2 times.
+
 ![Three more collisions](blog-figures/three-more-collisions.png)
 
 *Three more collisions, with published inputs only (lines: our lensing; circles: galaxies; diamonds: gas). Script
@@ -892,6 +903,14 @@ against the data.
   microscopic model.
 * The evenly spreading glow also passes the 72-collision stack: the lensing moves toward the gas by between 0.00 and
   −0.02 of the gas's lag, against −0.04 ± 0.07 measured.
+
+**Round 23: when the two companions interfere.** Two clusters passing through each other are two sources whose
+companions overlap. Interference adds no energy, but it makes the combined companion flicker at every star crossing the
+other cluster, and a faint second wave makes a strong flicker. Driving the collision heat by that flicker supplies
+about a third of the Bullet Cluster's missing lensing on its own terms and cuts the extra power the fast glow needs from
+3.3 times to about 2.2 times, while the lensing stays on the galaxies and the near-equal collisions stay within their
+errors (§5.3). It also makes a testable prediction: the effect is strongest when one cluster is much smaller than the
+other, as in the Bullet.
 
 An independent review (25 September 2026) set out what a paper would need. In order:
 

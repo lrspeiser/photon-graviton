@@ -5517,3 +5517,92 @@ the Bullet the change in β is estimated as (peak offset with the heat − witho
   hot glow's speed and power from first principles with every watt booked; and a store model with the capacity §33.2
   requires. The rest of round 21's list stands (§32.5).
 * **Unchanged:** the adopted law, its constants, the locked forecasts and the frozen lensing test (§29.7).
+
+## 34. Round 23, 26 September 2026: when the two clusters' companions interfere
+
+The owner asked: "I don't understand the problem. Can the situation be different if there are two different sources
+and they create an interference pattern?"
+
+**The problem, in plain terms.** Lensing weighs each half of the Bullet Cluster. Inside 250 kpc of the smaller half it
+finds 2.47–2.85 × 10¹⁴ suns (in our distances). The law gives 1.37 from the visible matter and its settled glow, and
+1.59 once the glow its stars made while crossing the big cluster is added (round 16). That extra glow stays close to
+the stars: it spreads at the companion's 169 km/s, so in the ~210 Myr since the crossing it has reached only ~37 kpc,
+while the lensing counts everything out to 250 kpc. A glow spreading at ~600 km/s would fill the circle and fit
+(round 21), but a faster glow with the same energy is thinner; it fits only if the collision puts about 3.3 times more
+energy into it (round 21; round 22 showed it must spread evenly, not be left behind).
+
+### 34.1 What interference can and cannot do
+
+* **A pattern of bright and dark bands adds no energy.** It only moves it around: the bright bands are paid for by the
+  dark ones.
+* **For the pull, a pattern that is averaged over is slightly worse than none.** The law's pull follows the
+  companion's height (amplitude). Two equal waves with a random relative phase average to 4/π = 1.27 times one wave's
+  height, against √2 = 1.41 when they add without interfering: 10% less (5% at a height ratio of 0.5, 2% at 0.3).
+  And the clusters pass each other at 3,000–3,900 km/s, so any pattern sweeps across every star hundreds of times per
+  companion cycle (the crest-crossing rate, §33.3): for the pull, it is averaged over.
+* **What interference adds is flicker.** At a star sitting in both companions, the combined intensity rises and
+  falls by 2√(I_other I_own) around the mean I_other + I_own, at the crest-crossing rate. As a fraction of the mean
+  that is m = 2√(I_other I_own)/(I_other + I_own). Round 16's heat of crossing used the other companion's share,
+  p = I_other/(I_other + I_own), as if the two added without interfering. The flicker is much larger when the other
+  companion is faint, because interference grows with the fainter wave's height, not its intensity (the principle of
+  heterodyne detection): a companion with 1% of the intensity makes the total flicker by 20%. For the Bullet's smaller
+  half, m/p = 2.3 at closest approach (p = 0.44), 3.4 now (p = 0.26) and 6.6 during the approach (p = 0.085).
+* **The flicker is the shaking that drives the heat of crossing.** Round 22 found that a crossing star is driven at
+  the rate it crosses the other companion's crests; the flicker is that drive. So the heat of crossing is weighted
+  here by the flicker's depth m instead of the share p. Nothing else changes, and no constant is refitted.
+
+### 34.2 The Bullet Cluster with the heat of crossing driven by the flicker
+
+`code/beat_heat_v23.py` → `run-beat-heat-v23/bullet_*.json` (grid 22.5 kpc; energy booked whenever the glow spreads
+faster than u).
+
+| heat of crossing | smaller half (target 2.47–2.85) | main (3.09–3.46) | peaks from galaxies (kpc) | toward gas | gas residuals (0.05 ± 0.06, 0.02 ± 0.06) |
+|---|---|---|---|---|---|
+| share p, spreading at u (round 16) | 1.586 | 3.101 | 15, 8 | +14, +8 | 0.050, 0.018 |
+| flicker m, spreading at u | 1.695 | 3.194 | 8, 5 | +8, +4 | 0.050, −0.017 |
+| flicker m, 300 km/s | 1.874 | 3.203 | 9, 6 | +9, +6 | 0.050, 0.016 |
+| flicker m, 600 km/s | 1.995 | 3.190 | 11, 10 | +10, +10 | 0.050, 0.073 |
+| flicker m, 600 km/s, power × 1.5 | 2.216 | 3.300 | 9, 8 | +9, +8 | 0.048, 0.088 |
+| flicker m, 600 km/s, power × 2 | 2.401 | 3.404 | 8, 7 | +8, +6 | 0.046, 0.096 |
+| for comparison: share p, 600 km/s, energy booked (round 21) | 1.745 | 3.096 | 18, 16 | +17, +16 | 0.056, 0.036 |
+
+**Findings:**
+* **Interference helps, on its own terms.** With no extra energy assumed, the smaller half rises from 1.59 to 1.70,
+  and to 2.00 with the faster glow (against 1.75 without interference): about a third of the remaining gap.
+* **It cuts the extra power the fast glow needs from about 3.3 times to about 2.2 times** (2.47 is reached at
+  × 2.2 by interpolation; the main cluster is then at the top of its range, 3.44).
+* **The lensing sits on the galaxies** (5–11 kpc; the suite allows 58–63) and the gas stays clean, because the
+  flicker is strongest right around the stars.
+
+### 34.3 MACS J0025 and El Gordo
+
+`code/beat_heat_far_v23.py` → `run-beat-heat-v23/far_*.json` (the models and histories of §32.2).
+
+| cluster: lensing masses (10¹⁴ suns) | share p, at u (round 16's rule) | flicker m, at u | flicker m, 600 km/s (energy booked) |
+|---|---|---|---|
+| MACS J0025 SE, inside 300 kpc (3.64, +1.46/−2.48) | 2.24 (z −0.57) | 2.23 (−0.57) | 2.23 (−0.57) |
+| MACS J0025 NW, inside 300 kpc (3.79, +0.73/−2.04) | 2.03 (−0.86) | 2.00 (−0.88) | 2.02 (−0.87) |
+| MACS J0025 lensing peaks from their galaxies (kpc) | 13, 18 | 4, 9 | 12, 23 |
+| El Gordo inside 500 kpc (9.45 ± 12%) | 8.86 (−0.52) | 8.68 (−0.68) | 8.61 (−0.74) |
+| El Gordo inside 1,000 kpc (24.3 ± 12%) | 22.1 (−0.75) | 21.6 (−0.91) | 21.7 (−0.90) |
+
+* **In the two near-equal collisions the flicker changes little.** Both stay within their errors, slightly lower than
+  with the share rule. Where one companion dominates (each system's outer stars sit mostly in the other's glow,
+  p > 0.8), the flicker is shallow (m < p), which offsets the gain for the inner stars. MACS J0025's lensing peaks move
+  onto their galaxies (4 and 9 kpc, from 13 and 18).
+* **So the flicker helps most in unequal collisions**, where a small system sits in a big one's companion: that is the
+  Bullet's smaller half. This is a testable pattern: in collisions of unequal clusters, the smaller one should carry
+  relatively more extra lensing than the same rule gives near-equal pairs.
+
+### 34.4 Where round 23 leaves things
+
+* **Interference is part of the answer.** Driving the heat of crossing by the two companions' flicker instead of
+  their shares supplies about a third of the Bullet's missing lensing on its own terms, keeps the lensing on the
+  galaxies, leaves the near-equal collisions within their errors, and cuts the extra power the fast glow needs from
+  3.3 times to about 2.2 times.
+* **What remains:** that factor of about 2.2 in power, from matter's internal store (§33.2), and the faster spreading
+  from the medium's two-regime dispersion (§33.3). The flicker rule itself (heat ∝ m) is motivated, not derived: the
+  store's response to a modulated companion is the next calculation for the matter model.
+* **A registered comparison,** not adopted: the suite's Bullet has no heat of crossing, so none of rounds 16–23 enters
+  its tally.
+* **Unchanged:** the adopted law, its constants, the locked forecasts and the frozen lensing test (§29.7).
