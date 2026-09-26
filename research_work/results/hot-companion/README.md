@@ -6146,7 +6146,7 @@ The test §36.8 ended with, registered and pushed before either candidate ran
 ([round25-trapped-suite.md](round25-trapped-suite.md), commit ed61d9c). `code/trapping_v25.py` adds consequence A of
 the repair, and nothing else, to the adopted law: glow born where n < 0 (Q > a/4 + √(aT)) is heard only where n < 0.
 It is switched by the law's `companion_trapping` (the suite's other registered comparisons work the same way); with it
-off, all 60 quick-tier checks reproduce the baseline to the last digit. u is refitted on X-COP; a and g_d are held.
+off, the suite reproduces its baseline to the last digit (checked on all 60 quick-tier and all 29 collision checks). u is refitted on X-COP; a and g_d are held.
 Galaxies the models do not resolve (the KiDS and Mistele lenses, the cluster galaxies) are given measured sizes, new in
 this round: the median of the same 120,000 SDSS DR17 galaxies whose heat round 12 measured
 (`code/lens_sizes_sdss_v25.py` → `data/lens_sizes_sdss_v25.json`): red galaxies of 4 × 10¹⁰ Msun, half-light radius

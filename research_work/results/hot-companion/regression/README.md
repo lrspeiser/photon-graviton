@@ -232,7 +232,7 @@ new dwarfs.
 
 The results README §36.9; registered in `../round25-trapped-suite.md` (commit ed61d9c) before either run; the runs are kept in
 `../run-trapped-v25/suite/` (`code/trapped_suite_table_v25.py` → `../run-trapped-v25/suite_table_v25.json`). With the switch
-off the suite reproduces its baseline to the last digit (all 60 quick-tier checks).
+off the suite reproduces its baseline to the last digit (all 60 quick-tier and all 29 collision checks).
 
 | Law | Pass / close / fail | What moves |
 |---|---|---|
