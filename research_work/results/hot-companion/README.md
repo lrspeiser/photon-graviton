@@ -5930,8 +5930,10 @@ What the table shows instead:
   * With τ = v/a instead (v a local speed): v = 230 km/s gives L = 20 kpc and a reach of 245 kpc; v = 1,000 km/s,
     87 kpc and 512 kpc; v = 9.1 km/s, 0.8 kpc and 49 kpc. Same conclusion. **The companion streams straight.**
 * **Redirection only where streams oppose** (a turning rate that grows with 1 − f) is not excluded by these numbers:
-  a single clean source keeps the law. But §36.3 finds no sign of it in the residuals, so there is nothing yet for it
-  to explain.
+  a single clean source keeps the law. DRT-1, pushed to main during this round (`drt1-transport/`, commits d24b0c2 and
+  ab1c027), built exactly such a process, (+x) + (−x) ↔ (+y) + (−y), conserving energy and momentum and leaving a
+  solitary beam straight, and found that the simplest way to couple it to the pull's energy is unbounded. §36.3 finds
+  no sign of it in the residuals, so there is nothing yet for it to explain.
 
 ### 36.5 What does organise the misses (exploratory, found after looking)
 
@@ -5960,6 +5962,10 @@ so each is a lead for a new registered test, not a result.
   over their own. Round 20's registered comparison `no_hold_r12` (§31.7) does exactly that: 61 / 12 / 4 on the suite,
   the dwarfs' χ² 137.7 → 60.4, Crater II 1.0 → 3.4 (2.7 ± 0.3), Antlia 2 1.1 → 4.1 (5.7 ± 1.1), Sextans 2.1 → 4.4,
   Carina 3.5 → 4.4; Draco and Ursa Minor stay near 4.1–4.2 against 9.1 and 9.5.
+  DRT-1 (§5 of `drt1-transport/README.md`) adds a sharp condition: keeping the dwarf's own intensity as separate
+  brightness is not enough. With the law's force rule unchanged, a dwarf whose outside pull is 100 times its own keeps
+  only 9.2% of its isolated response. The change has to be in the force rule: the dwarf's own stream must set its own
+  internal pull.
 * **The collisions' galaxy speeds are all low** (7 of 7: 669 against 835, 452–617 against 579–811, 904–1,014 against
   1,089–1,290 km/s), while their lensing masses mostly pass. The predictions use the settled pre-collision clusters;
   merging clusters' measured spreads include the subclusters' motions along the line of sight.
@@ -5973,9 +5979,11 @@ so each is a lead for a new registered test, not a result.
 * **Two leads replace it:**
   1. **The outside-current rule for small systems.** Register a test on dwarf galaxies the law has not used (M31's
      satellites with measured dispersions; the Galaxy's other faint satellites), with the law's merging rule and the
-     no-hold rule side by side, before computing. The flow picture offers a physical reason to look for: separate
-     systems need not be in step with each other, and streams that are not in step add like brightness rather than
-     merging (the cold glow adds as a vector sum because its sources emit in step, §8 and §21).
+     no-hold rule side by side, before computing. The physical question is why a system's own stream would set its
+     own internal pull while a larger current flows through it. Being out of step with the outside current is one
+     candidate (the cold glow adds as a vector sum because its sources emit in step, §8 and §21), but DRT-1 shows that
+     adding the two as separate brightness does not do it while the force rule is unchanged (9.2% of the isolated
+     response at 100:1): the rule for the pull itself has to change.
   2. **The broad 8–16% deficit** where nothing is frustrated: weigh the lenses' circumgalactic gas and recheck the SPARC
      fit statistic's median.
 * **Unchanged:** the adopted law, its constants, the baseline, the locked forecasts and the frozen lensing test.

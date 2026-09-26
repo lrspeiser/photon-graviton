@@ -779,8 +779,10 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   J gets nothing beyond ~500 kpc, where lensing speeds stay flat to 1 Mpc (Mistele et al. 2024). Excluded either way.
 * **What orders the misses instead** (exploratory): 36 of 43 pull-like checks have the law low (18/18 non-passes);
   8–16% short even at chi < 0.01; the dwarfs by η = g_Galaxy/g_own (ρ = +0.87; all six with η ≥ 0.78 miss, all four
-  with η ≤ 0.31 pass), the case round 20's `no_hold_r12` addresses. Physical question: do separate systems add their
-  cold glows in step (vector, the law) or not (brightness, independent pulls)?
+  with η ≤ 0.31 pass), the case round 20's `no_hold_r12` addresses. Physical question: why would a system's own stream
+  set its own internal pull inside a larger current? DRT-1 (`drt1-transport/`, main) shows that separate brightness
+  alone does not, with the force rule unchanged (9.2% of the isolated response at 100:1); it also built a conservative
+  counter-stream redirection, (+x) + (−x) ↔ (+y) + (−y), for which these residuals give nothing to explain yet.
 
 ### What follows
 

@@ -980,10 +980,11 @@ What the misses do follow is encouraging:
   the proposal's "big current swamps a small one", but it points the other way from the law: the dwarfs behave as if
   the Galaxy's current does not take over their own companion. A rule that does exactly that was registered in round
   20 ("no hold"). It scores 61 pass, 12 close and 4 fail on the suite, against the law's 59, 11 and 7, and brings
-  Crater II, Antlia 2, Sextans and Carina close. What it needs now is a physical reason (one candidate: separate
-  systems are not in step with each other, so their streams would not merge) and a test fixed in advance on dwarf
-  galaxies the law has not yet seen, such as Andromeda's. The pattern was found after looking, so it is a lead, not
-  yet a result.
+  Crater II, Antlia 2, Sextans and Carina close. What it needs now is a physical reason, and a parallel check pushed
+  to the repository during this round (DRT-1) narrows it: keeping a dwarf's own companion as separate brightness is
+  not enough, so the dwarf's own stream has to set its own internal pull. It also needs a test fixed in advance on
+  dwarf galaxies the law has not yet seen, such as Andromeda's. The pattern was found after looking, so it is a lead,
+  not yet a result.
 
 ![The ten dwarf galaxies: measured speed spread over the prediction, against how much the Galaxy's pull outweighs the dwarf's own. The four dwarfs whose own pull dominates pass; the six where the Galaxy's pull is comparable or larger miss. Open circles: the no-hold rule of round 20, which closes most of the gap for Crater II, Antlia 2, Sextans and Carina; Draco and Ursa Minor stay short under both.](blog-figures/dwarfs-outside-pull.png)
 
