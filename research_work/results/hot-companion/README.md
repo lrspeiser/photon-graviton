@@ -5987,3 +5987,103 @@ so each is a lead for a new registered test, not a result.
   2. **The broad 8–16% deficit** where nothing is frustrated: weigh the lenses' circumgalactic gas and recheck the SPARC
      fit statistic's median.
 * **Unchanged:** the adopted law, its constants, the baseline, the locked forecasts and the frozen lensing test.
+
+### 36.7 DRT-1 (on main), re-run and checked against the data
+
+DRT-1 (`drt1-transport/`, commits d24b0c2 and ab1c027, the owner's) follows the companion direction by direction: a
+conservative way for opposing streams to turn one another, the exact link between the law's hot terms and the
+companion's energy and flux, the difference between energy a system makes and energy arriving from outside, the effect
+of a spread of speeds, a dwarf control, and a test of the simplest way to join the transport to the repaired field
+equation's energy. Its conclusion: keep the direction-resolved transport, and replace that joining rule.
+
+**Re-run here:** all 13 modules pass and every number in the note reproduces to the last digit: the redirected share
+(0.37583218, 0.37598495, 0.37602319 and 0.62802256, 0.63164253, 0.63263115 at 160, 320 and 640 cells), energy drift
+≤ 9 × 10⁻¹⁶, the shell's 1.098612 and 1.635799, the slab's (1/2 + τ/12), the dwarf's 0.09241 at 100:1, the threshold
+a/2 = 3.1489 × 10⁻¹¹ m/s², 6.41564 at 30 kpc and 13 Gyr, the 59.9 km/s mean speed and the crossover at τ = 24.3.
+
+**In the law's terms.** With S_hot = (4πGu/ℓ)U_hot and g_hot = −(4πG/ℓ)F_hot:
+* The pull's size √(a(|g_N| + S)) counts the hot glow's *energy*, U_hot. Redirection alone conserves U_hot, so it cannot
+  change the pull's size, only its direction (the factor (g_N + g_hot)/(|g_N| + |g_hot|) moves toward the ordered flow).
+  This is §36.2 seen from the transport side, and it is why a frustration statistic finds nothing to recycle.
+* Retention, the slower escape of a system's own glow, does raise U_hot in the steady state: S → S(1 + τ/6) for DRT-1's
+  slab.
+
+Four checks against the data (`code/drt1_bearing_v25.py`, `code/drt1_redirect_v25.py`; exploratory, nothing adopted):
+
+1. **Where the joining rule fails.** DRT-1's unbounded region, |∇φ| > a/2, is |g_N| + S > a/4 = 1.57 × 10⁻¹¹ m/s² in round
+   systems. It covers 58% of the SPARC points, all 72 X-COP radii (at least 1.9 times the threshold), 99% of the Milky
+   Way's rotation-curve points (inside 26.8 kpc) and all of the Bullet Cluster's 250-kpc aperture walls; none of the KiDS
+   bins (44–241 kpc) and none of the ten dwarfs (0.04–0.70 of it). The failure sits where the law works best, so the
+   joining rule has to be replaced before any time-dependent transport is coupled to the pull.
+2. **How much of its own glow cluster gas may keep** (retained excess ε = τ/6 of its transparent brightness, added to
+   S around today's gas):
+
+   | τ (ε) | 0 | 0.6 (0.1) | 1.8 (0.3) | 6 (1) | 18 (3) | 60 (10) |
+   |---|---:|---:|---:|---:|---:|---:|
+   | X-COP rms, u refitted | 0.222 | 0.222 | 0.222 | 0.227 | 0.250 | 0.497 |
+   | X-COP worst radius (≤ 0.25 passes) | 0.239 | 0.242 | 0.248 | 0.269 | 0.333 | 0.739 |
+   | u refitted (km/s) | 169 | 172 | 177 | 197 | 326 | (runs away) |
+   | Bullet: lensing on the gas, main / sub | 0.050 / 0.052 | 0.050 / 0.052 | 0.052 / 0.052 | 0.057 / 0.053 | 0.070 / 0.055 | 0.102 / 0.061 |
+   | Bullet: peaks from the galaxies (kpc; limits 63 / 58) | 16 / 23 | 16 / 23 | 16 / 23 | 17 / 23 | 18 / 24 | 21 / 24 |
+   | Bullet: mass in 250 kpc, main / sub (10¹⁴) | 2.97 / 1.38 | 2.99 / 1.40 | 3.03 / 1.42 | 3.16 / 1.49 | 3.51 / 1.68 | 4.50 / 2.21 |
+
+   DRT-1's point holds: even very opaque gas does not pull the Bullet's lensing onto itself (the peaks stay on the
+   galaxies at every τ). The binding limit is X-COP's shape: τ ≲ 2 changes nothing; τ ≈ 6 already fails the radial trend.
+   No τ fixes the Bullet's smaller half alone: it would need τ ≈ 42 (ε ≈ 7), where the main cluster is already above its
+   range (from τ ≈ 32) and X-COP fails.
+3. **A system's own hot glow held back where its streams oppose** (τ = τ0 chi, chi from §36.3), X-COP with u refitted:
+
+   | τ0 | 0 | 3 | 10 | 30 |
+   |---|---:|---:|---:|---:|
+   | u refitted (km/s) | 169 | 192 | 233 | 313 |
+   | X-COP rms | 0.222 | 0.217 | 0.214 | 0.216 |
+   | X-COP worst radius | 0.239 | 0.207 | 0.164 | 0.108 |
+
+   X-COP likes it: the cores (chi ≈ 0.74) keep more than the edges (≈ 0.37), which shrinks the law's swing in
+   mean ln(M_hydrostatic / M_law), from +0.10–0.12 in the cores to −0.24 at R500 (joint best fit τ0 = 12.5,
+   u = 246 km/s, rms 0.214). But the refitted u weakens the heat everywhere the streams do not oppose. At the lensing radii of the suite's point lenses (chi = 0):
+
+   | τ0 (u) | 0 (169) | 3 (192) | 10 (233) | 30 (313) |
+   |---|---:|---:|---:|---:|
+   | KiDS all / red / blue (dex; 0 ± 0.025) | +0.065 / +0.078 / +0.011 | +0.089 / +0.109 / +0.024 | +0.120 / +0.151 / +0.040 | +0.155 / +0.200 / +0.055 |
+   | KiDS red/blue gap (0.153 ± 0.04) | 0.126 | 0.110 | 0.086 | 0.056 |
+   | SPARC bulge-dominated (km/s; MOND 30.35) | 29.44 | 29.21 | 29.20 | 29.44 |
+
+   So, as a rule for the whole law, it trades the clusters' shape for galaxy lensing (KiDS all from close to fail at the
+   clusters' best τ0). It is a lead only in a form that holds back glow in cluster cores without changing u.
+   In the Bullet Cluster (u kept at 169 km/s, so the most favourable case):
+
+   | case | main / smaller half in 250 kpc (10¹⁴; ranges 3.09–3.46 / 2.47–2.85) | lensing on the gas | peaks from the galaxies (kpc; limits 63 / 58) |
+   |---|---|---|---|
+   | the law | 2.97 / 1.38 | 0.050 / 0.052 | 16 / 23 |
+   | held back where streams oppose, τ0 = 3 | 3.28 / 1.45 | 0.060 / 0.060 | 16 / 24 |
+   | τ0 = 10 | 3.89 / 1.59 | 0.079 / 0.074 | 16 / 26 |
+   | τ0 = 30 | 5.21 / 1.92 | 0.115 / 0.102 | 15 / 27 |
+   | redirection alone (hot direction merged into the ordered flow) | 2.84 / 1.58 | 0.092 / 0.074 | 57 / 33 |
+
+   The main cluster's streams oppose more (chi 0.58 at its aperture against 0.36), so holding back glow raises the main
+   cluster faster than the smaller half and the ratio gets worse. Redirection alone lifts the smaller half by 14% but
+   drags the main cluster's lensing peak 41 kpc toward its gas. Neither closes the Bullet's gap, consistent with DRT-1's
+   own conclusion that a fast collision component needs a different emitted spectrum or dispersion (rounds 21–22).
+4. **A spread of speeds** (DRT-1 §6, 13-Gyr source): the retained energy relative to one speed is 6.42 at 30 kpc, 4.25 at
+   100, 2.31 at 300 and 0.50 at 1,000 kpc (10 Gyr: 5.94, 3.78, 1.86, 0.26). If the pull followed it, lensing speeds would
+   fall by 23% from 100 to 500 kpc and 41% by 1 Mpc (49% for 10 Gyr), while they are measured flat to 1 Mpc (Mistele et
+   al. 2024). The age dependence can only enter without the slow modes setting the pull's radial shape.
+
+The dwarf control (9.24% of the isolated response at 100:1 with the force rule unchanged) is round 25's dwarf lead from
+the other side (§36.5): transport keeps the dwarf's own light; the force rule has to use it.
+
+**Where DRT-1 leaves things.**
+* **Keep the direction-resolved transport:** its moments are the law's hot terms exactly, its redirection conserves
+  energy and momentum, and its inside/outside distinction survives the data (gas may keep up to about a third of its own
+  brightness, τ ≲ 2, without any visible effect; the Bullet's lensing never follows the gas).
+* **Replace the joining rule first:** its unbounded region covers X-COP, most of SPARC, the Milky Way inside 27 kpc and
+  the Bullet Cluster.
+* **Retention where streams oppose is the first mechanism in this project that flattens X-COP's radial trend** (0.239 →
+  0.108), but as a global rule it does so by raising u, which costs galaxy lensing. The version worth a registered test
+  holds back glow only inside dense cluster cores, where the steady state actually traps it, with u left to the other
+  data.
+* **The Bullet's smaller half still needs the fast collision glow** (rounds 21–22): it needs +43% to reach the edge of
+  its range; redirection alone gives +14% (its main peak moves to 57 of the allowed 63 kpc), retention where streams
+  oppose +15% (the main cluster then leaves its range), and gas keeping its glow +21% at τ = 18 (X-COP's profile fails).
+* **The spread-of-speeds memory cannot set the pull's radial shape:** lensing speeds stay flat to 1 Mpc.

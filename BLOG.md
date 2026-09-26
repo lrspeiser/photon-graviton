@@ -988,6 +988,30 @@ What the misses do follow is encouraging:
 
 ![The ten dwarf galaxies: measured speed spread over the prediction, against how much the Galaxy's pull outweighs the dwarf's own. The four dwarfs whose own pull dominates pass; the six where the Galaxy's pull is comparable or larger miss. Open circles: the no-hold rule of round 20, which closes most of the gap for Crater II, Antlia 2, Sextans and Carina; Draco and Ursa Minor stay short under both.](blog-figures/dwarfs-outside-pull.png)
 
+**What the owner's direction-by-direction model (DRT-1) adds.** In parallel with round 25, the project's owner built the
+companion's travel direction by direction ([drt1-transport](research_work/results/hot-companion/drt1-transport/README.md)).
+It reproduces here to the last digit, and each part was checked against the data:
+* **Streams can turn one another without cheating.** Where two opposite streams meet they can swap into the sideways
+  directions (38–63% in the tests), with energy and momentum exactly conserved and no hidden push on ordinary matter; a
+  lone stream goes straight. In the law this changes where the pull points, never how strong it is, because the law's
+  strength already counts the energy and turning keeps it. In the Bullet Cluster, turning alone lifts the smaller half
+  by 14%, a third of what it needs, while pulling the main cluster's lensing toward its gas.
+* **A system keeps more of its own glow but does not collect other systems' glow.** Cluster gas is therefore not an
+  automatic trap. The clusters say how much of its own glow the gas may keep: up to about a third of its brightness
+  changes nothing; three times more already bends the clusters' profiles out of shape. Even very opaque gas never pulls
+  the Bullet Cluster's lensing onto itself.
+* **Holding back a cluster's own hot glow where its streams oppose flattens the clusters' profiles.** The law runs about
+  12% low in the cores of the 12 X-COP clusters and about 27% high at their edges; this shrinks the swing by more than half,
+  the first mechanism in the project to do so. As a rule for everything it costs galaxy lensing, because the companion's
+  speed has to be refitted and that weakens the heat where streams do not oppose, so the version worth testing next
+  holds back glow only inside dense cluster cores.
+* **A spread of speeds would make old systems pull harder, but not with that spread:** lensing speeds would fall by about
+  40% between 100 kpc and 1 Mpc, and they are measured flat out to 1 Mpc.
+* **One warning to fix first.** The simplest way to join this transport to the field equation's energy has no floor
+  wherever the companion is stronger than a set level, and that level is exceeded in every cluster, in the inner parts of
+  most galaxies and in the Milky Way inside 27 kpc, exactly where the law works best. That joining rule has to be
+  replaced before the transport is allowed to change the pull over time.
+
 An independent review (25 September 2026) set out what a paper would need. In order:
 
 1. **The companion as a flowing medium.** Done in round 19 for a uniform stream (§4.4): the absorbing stream is a

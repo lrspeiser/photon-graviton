@@ -783,6 +783,14 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   set its own internal pull inside a larger current? DRT-1 (`drt1-transport/`, main) shows that separate brightness
   alone does not, with the force rule unchanged (9.2% of the isolated response at 100:1); it also built a conservative
   counter-stream redirection, (+x) + (−x) ↔ (+y) + (−y), for which these residuals give nothing to explain yet.
+* **DRT-1 against the data** (README §36.7; `code/drt1_bearing_v25.py`, `code/drt1_redirect_v25.py`; DRT-1 re-run, every
+  number reproduces). With S_hot = (4πGu/ℓ)U_hot, the pull's size counts energy, so redirection alone changes only the
+  pull's direction; retention (slower escape of a system's own glow) raises U_hot. The joining rule's unbounded region,
+  |g_N| + S > a/4, covers X-COP (all), SPARC (58%), the Milky Way inside 27 kpc and the Bullet (all), none of KiDS or
+  the dwarfs. Gas keeping its own glow: τ ≲ 2 invisible, τ ≈ 6 breaks X-COP's trend; the Bullet's lensing never
+  follows the gas. Retention where streams oppose (τ = τ0 chi) flattens X-COP's trend (0.239 → 0.108; best τ0 = 12.5,
+  u = 246) but the refitted u costs galaxy lensing (KiDS all 0.065 → 0.12 dex); in the Bullet it favours the main
+  cluster. The spread-of-speeds memory would make lensing speeds fall 41% from 100 kpc to 1 Mpc (measured flat).
 
 ### What follows
 

@@ -1,0 +1,255 @@
+{
+ "source": "code/drt1_bearing_v25.py",
+ "drt1": "drt1-transport/README.md (main at ab1c027)",
+ "threshold": {
+  "sparc": {
+   "n": 3150,
+   "share_above": 0.5752380952380952
+  },
+  "xcop": {
+   "n": 72,
+   "share_above": 1.0,
+   "min_over_threshold": 1.9307344615129793
+  },
+  "kids": {
+   "red": {
+    "n": 7,
+    "share_above": 0.0
+   },
+   "blue": {
+    "n": 7,
+    "share_above": 0.0
+   },
+   "disc": {
+    "n": 7,
+    "share_above": 0.0
+   },
+   "bulge": {
+    "n": 7,
+    "share_above": 0.0
+   }
+  },
+  "mw": {
+   "n": 127,
+   "share_above": 0.9921259842519685,
+   "crossing_radius_kpc": 26.78640973816477
+  },
+  "dwarfs": {
+   "n": 10,
+   "share_above": 0.0,
+   "rows": [
+    {
+     "name": "Draco",
+     "over_threshold": 0.12711445069001662
+    },
+    {
+     "name": "Ursa Minor",
+     "over_threshold": 0.16558978913797334
+    },
+    {
+     "name": "Sculptor",
+     "over_threshold": 0.28545015532108287
+    },
+    {
+     "name": "Sextans",
+     "over_threshold": 0.08597604311877025
+    },
+    {
+     "name": "Carina",
+     "over_threshold": 0.07999255418634536
+    },
+    {
+     "name": "Fornax",
+     "over_threshold": 0.36408259641216606
+    },
+    {
+     "name": "Leo II",
+     "over_threshold": 0.1742064226246507
+    },
+    {
+     "name": "Leo I",
+     "over_threshold": 0.6990292588068749
+    },
+    {
+     "name": "Crater II",
+     "over_threshold": 0.050390850783080164
+    },
+    {
+     "name": "Antlia 2",
+     "over_threshold": 0.03833199306940931
+    }
+   ]
+  },
+  "threshold_m_s2": 1.5744723475123598e-11,
+  "bullet_aperture_walls": {
+   "main": 1.0,
+   "sub": 1.0
+  }
+ },
+ "xcop": [
+  {
+   "eps": 0.0,
+   "tau": 0.0,
+   "rms_u_fixed": 0.22152828446272135,
+   "worst_radius_u_fixed": 0.2389136588659999,
+   "mean_u_fixed": -0.0006948425093280422,
+   "u_refit": 169.4433686899687,
+   "rms_refit": 0.22152828446272135,
+   "worst_radius_refit": 0.2389136588659999
+  },
+  {
+   "eps": 0.1,
+   "tau": 0.6000000000000001,
+   "rms_u_fixed": 0.22205050304471283,
+   "worst_radius_u_fixed": 0.2517118813149788,
+   "mean_u_fixed": -0.011761708371227322,
+   "u_refit": 171.7450994734459,
+   "rms_refit": 0.22178868285876258,
+   "worst_radius_refit": 0.24178112838823754
+  },
+  {
+   "eps": 0.3,
+   "tau": 1.7999999999999998,
+   "rms_u_fixed": 0.2247042070052045,
+   "worst_radius_u_fixed": 0.2762595149600927,
+   "mean_u_fixed": -0.03309543541287298,
+   "u_refit": 176.58708257911968,
+   "rms_refit": 0.22249583487604338,
+   "worst_radius_refit": 0.2476165411713338
+  },
+  {
+   "eps": 1.0,
+   "tau": 6.0,
+   "rms_u_fixed": 0.24610046818551462,
+   "worst_radius_u_fixed": 0.3529885461865221,
+   "mean_u_fixed": -0.10062796896456926,
+   "u_refit": 196.707249884764,
+   "rms_refit": 0.2267450477365632,
+   "worst_radius_refit": 0.26882292298230775
+  },
+  {
+   "eps": 3.0,
+   "tau": 18.0,
+   "rms_u_fixed": 0.34222839896479773,
+   "worst_radius_u_fixed": 0.5204550418235511,
+   "mean_u_fixed": -0.25187751514318635,
+   "u_refit": 326.05037029045417,
+   "rms_refit": 0.2501326769366864,
+   "worst_radius_refit": 0.3331846900053975
+  },
+  {
+   "eps": 10.0,
+   "tau": 60.0,
+   "rms_u_fixed": 0.6198799265156197,
+   "worst_radius_u_fixed": 0.8584405216326226,
+   "mean_u_fixed": -0.568913981112376,
+   "u_refit": 9999.896506626263,
+   "rms_refit": 0.49682305230863066,
+   "worst_radius_refit": 0.7386244146431064
+  }
+ ],
+ "bullet": [
+  {
+   "eps": 0.0,
+   "tau": 0.0,
+   "kappa_main": 0.7168257686822568,
+   "kappa_sub": 0.2764404561794175,
+   "gas_main": 0.04956641606538461,
+   "gas_sub": 0.05160307758690895,
+   "peak_main_kpc": 15.677769590351035,
+   "peak_sub_kpc": 22.971876230556386,
+   "peak_limit_main": 63.06752937579062,
+   "peak_limit_sub": 58.45315861751188,
+   "m250_main": 296861165247772.75,
+   "m250_sub": 138495338528792.78,
+   "gas_checks_pass": true,
+   "peaks_pass": true,
+   "m250_main_in_range": true
+  },
+  {
+   "eps": 0.1,
+   "tau": 0.6000000000000001,
+   "kappa_main": 0.7206182841853928,
+   "kappa_sub": 0.27800345612788346,
+   "gas_main": 0.05037035459684865,
+   "gas_sub": 0.051715759726519615,
+   "peak_main_kpc": 15.773657886858555,
+   "peak_sub_kpc": 22.99888901015014,
+   "peak_limit_main": 63.06752937579062,
+   "peak_limit_sub": 58.45315861751188,
+   "m250_main": 298856788233863.4,
+   "m250_sub": 139611790822698.11,
+   "gas_checks_pass": true,
+   "peaks_pass": true,
+   "m250_main_in_range": true
+  },
+  {
+   "eps": 0.3,
+   "tau": 1.7999999999999998,
+   "kappa_main": 0.7281426304820855,
+   "kappa_sub": 0.2811003268627521,
+   "gas_main": 0.0519435620047325,
+   "gas_sub": 0.05193961517652743,
+   "peak_main_kpc": 15.960163029521452,
+   "peak_sub_kpc": 23.051602355851735,
+   "peak_limit_main": 63.06752937579062,
+   "peak_limit_sub": 58.45315861751188,
+   "m250_main": 302801078630717.94,
+   "m250_sub": 141812084144439.28,
+   "gas_checks_pass": true,
+   "peaks_pass": true,
+   "m250_main_in_range": true
+  },
+  {
+   "eps": 1.0,
+   "tau": 6.0,
+   "kappa_main": 0.7538658666396111,
+   "kappa_sub": 0.291651789715331,
+   "gas_main": 0.05712596112952597,
+   "gas_sub": 0.052707709153069035,
+   "peak_main_kpc": 16.56237002004708,
+   "peak_sub_kpc": 23.22321443673618,
+   "peak_limit_main": 63.06752937579062,
+   "peak_limit_sub": 58.45315861751188,
+   "m250_main": 316150197547428.3,
+   "m250_sub": 149201945909439.1,
+   "gas_checks_pass": true,
+   "peaks_pass": true,
+   "m250_main_in_range": true
+  },
+  {
+   "eps": 3.0,
+   "tau": 18.0,
+   "kappa_main": 0.8227149462059348,
+   "kappa_sub": 0.3197002357238234,
+   "gas_main": 0.06985548403170905,
+   "gas_sub": 0.054785891167836887,
+   "peak_main_kpc": 17.94194464526753,
+   "peak_sub_kpc": 23.622679218405043,
+   "peak_limit_main": 63.06752937579062,
+   "peak_limit_sub": 58.45315861751188,
+   "m250_main": 351088962503405.5,
+   "m250_sub": 168213506548579.8,
+   "gas_checks_pass": true,
+   "peaks_pass": true,
+   "m250_main_in_range": true
+  },
+  {
+   "eps": 10.0,
+   "tau": 60.0,
+   "kappa_main": 1.025930214628527,
+   "kappa_sub": 0.40167754205349887,
+   "gas_main": 0.10203844908486855,
+   "gas_sub": 0.06114606996403196,
+   "peak_main_kpc": 20.70368414125507,
+   "peak_sub_kpc": 24.4228968540307,
+   "peak_limit_main": 63.06752937579062,
+   "peak_limit_sub": 58.45315861751188,
+   "m250_main": 450425728994267.25,
+   "m250_sub": 220716147552762.6,
+   "gas_checks_pass": true,
+   "peaks_pass": true,
+   "m250_main_in_range": false
+  }
+ ]
+}
