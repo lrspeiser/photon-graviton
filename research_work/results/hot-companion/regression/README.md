@@ -82,6 +82,7 @@ Candidates now in the folder:
 | `eft_memory_r12.json` | the note's equation with the law's memory on the collision maps | separates memory from how the heat adds up |
 | `eft_excess_r12.json` | the proposed repair: the note's source plus the hot glow's non-flowing brightness S_ex = S − \|g_hot\| (round systems: the law exactly), with memory | the repair (round 24, results README §35.3) |
 | `eft_excess_local_r12.json` | the repair with no memory (today's matter only) | a purely local field equation |
+| `eft_excess_aqual_r12.json` | the repair solved exactly on the collision maps (curl field kept; damped iteration, relaxation 0.3, 60 steps) | whether the field form's shortcut matters |
 | `eft_scalar_r12.json`, `eft_scalar_local_r12.json` | brightness only (the heat enters through S, the direction from the cold flow), with / without memory | an alternative repair |
 
 `gradual_release.json` (release over 30,000 AU) was adopted in round 9 and is now the default.
@@ -208,6 +209,7 @@ law, the adopted one included: its target became Park et al. 2026 in round 18, a
 | `eft_memory_r12` | 50 / 12 / 15 | as `eft_r12` outside the collisions; the Bullet's smaller half recovers its peak, the rest does not |
 | `eft_excess_r12` (the repair) | **59 / 11 / 7** | nothing changes status; the collision numbers move by 1% or less (peaks by up to 4 kpc) |
 | `eft_excess_local_r12` (the repair, no memory) | **58 / 11 / 8** | regressed: MACS J0025's NW peak (259 kpc); the Bullet's smaller half κ 0.114 (still passes), stack β 0.061 |
+| `eft_excess_aqual_r12` (the repair solved exactly, curl field kept; collisions only, the rest is the law) | **58 / 11 / 8** | regressed: MACS J0025's NW peak (213 kpc); the Bullet's peaks 27 and 50 kpc, gas lensing 0.064 / 0.084, κ 0.695 / 0.222 (all pass); stack β 0.021 |
 | `eft_scalar_r12` (brightness only) | 59 / 10 / 8 | regressed: MACS J0025's NW peak (223 kpc); improved: Abell 520 P6 |
 | `eft_scalar_local_r12` | 51 / 11 / 15 | the lensing follows the gas: Bullet peaks 265 and 617 kpc, stack β 0.98, MACS J0025 both peaks |
 

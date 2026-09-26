@@ -5772,9 +5772,15 @@ the cold flow alone, L = −|∇φ|³/(12πGa) + S|∇φ|/(4πG) − ρφ. Round
   the leftover swirl at 1% of the field. Against the field form on the same grid (128 cells of 22.5 kpc), the exact
   solution moves the Bullet's lensing peaks about 20 kpc toward the gas (17 → 33 and 26 → 48 kpc, limits 63 and 58),
   raises the gas lensing a little (0.050 → 0.067, 0.048 → 0.072; the measurements 0.05 ± 0.06 and 0.02 ± 0.06), and
-  lowers the lensing masses by 1–2% (2.96 → 2.93 and 1.37 → 1.35 × 10¹⁴): every Bullet check still passes. The
-  exact solution for the collision stack and the three other collisions is running (candidate
-  `eft_excess_aqual_r12`) and will be added when it finishes.
+  lowers the lensing masses by 1–2% (2.96 → 2.93 and 1.37 → 1.35 × 10¹⁴): every Bullet check still passes.
+* **The exact solution on every collision** (candidate `eft_excess_aqual_r12` on the suite's own grids, 97 minutes;
+  `run-eft-v24/suite/eft_excess_aqual_r12-collisions/`) keeps 21 / 4 / 2 of the 27 collision checks against the
+  law's 22 / 4 / 1, so **58 / 11 / 8 in all** (round systems are the law exactly). The Bullet passes (κ 0.695 / 0.222,
+  gas lensing 0.064 / 0.084, peaks 27 and 50 kpc from the galaxies, main mass 2.94 × 10¹⁴); the collision stack stays
+  with the galaxies (β = 0.021, against the law's 0.019); Abell 520's clumps and El Gordo's masses pass as before.
+  The one check lost is MACS J0025's NW lensing peak, now 213 kpc from its galaxies with the gas 244 kpc away: the
+  same check the version without memory loses. That side of MACS J0025 is a nearly flat ridge from the galaxies to
+  the gas (§21.4), so small changes decide which end is highest.
 
 ### 35.4 Where round 24 leaves things
 
@@ -5785,8 +5791,9 @@ the cold flow alone, L = −|∇φ|³/(12πGa) + S|∇φ|/(4πG) − ρφ. Round
 * **One added term repairs it:** the hot glow's non-flowing energy, S_ex|∇φ|/(4πG), gives 59 / 11 / 7 on all 77 checks,
   exactly the law's tally. This is the law's own picture (orderly matter adds as a flow, hot matter adds as
   brightness, §2) written in the note's field language, so the EFT and the law now agree.
-* **Still open for the EFT:** the exact (curl-field) solution in every collision (the Bullet passes; the stack and the
-  other three are running), the hold (not in its equation; required by the Solar System), how S_ex arises from the
+* **Solved exactly** (the curl field kept, with damping), the repaired equation keeps 58 / 11 / 8: it loses only MACS
+  J0025's NW lensing peak, which sits on a nearly flat ridge between the galaxies and the gas.
+* **Still open for the EFT:** the hold (not in its equation; required by the Solar System), how S_ex arises from the
   companion's own dynamics (the hot/cold split), test B (the heat factor's form near light speed decides it), and the
   RULES.md decision on the AQUAL-type action.
 * **Unchanged:** the adopted law, its constants, the baseline, the locked forecasts and the frozen lensing test (§29.7).

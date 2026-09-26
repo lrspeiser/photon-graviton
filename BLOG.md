@@ -931,13 +931,16 @@ law's rules for the pull's size and direction.
   repaired equation scores 59, 11 and 7 on all 77 checks, exactly the law's tally, with no check changing its grade.
   Even with no memory of where the gas was before a collision it keeps 58, 11 and 8. So the field theory and the law
   now agree, and the law has a candidate foundation written as a field equation.
+* **Solved exactly,** without the shortcut both versions share (the field set along the net flow), the repaired
+  equation keeps 58, 11 and 8. The lensing moves a little toward the gas, about 20–25 kpc in the Bullet Cluster, and
+  only one check is lost: a lensing peak in MACS J0025 that sits on an almost flat ridge between the galaxies and the
+  gas.
 * **What it still needs:** the strong-field hold (without it the planets would feel an extra pull billions of times
-  larger than measured); an exact solution of the repaired equation in colliding clusters (the simple solver does not
-  settle there, though all its states pass the Bullet's checks); and a check with the most energetic cosmic rays.
-  Whether protons of 10²⁰ electronvolts would lose their energy to the companion depends on how the heat rule behaves
-  near light speed, anywhere from completely safe to ruled out, so that calculation decides.
+  larger than measured), and a check with the most energetic cosmic rays. Whether protons of 10²⁰ electronvolts would
+  lose their energy to the companion depends on how the heat rule behaves near light speed, anywhere from completely
+  safe to ruled out, so that calculation decides.
 
-![The regression suite's 77 graded checks for the adopted law and six versions of the field equation from the round-24 note (pass, close, fail): the law 59 / 11 / 7; the note's equation as written 47 / 13 / 17; refitted 50 / 12 / 15; without the strong-field hold 41 / 12 / 24; with the law's memory 50 / 12 / 15; the repaired equation 58 / 11 / 8 without memory and 59 / 11 / 7 with it.](blog-figures/eft-scoreboard.png)
+![The regression suite's 77 graded checks for the adopted law and six versions of the field equation from the round-24 note (pass, close, fail): the law 59 / 11 / 7; the note's equation as written 47 / 13 / 17; refitted 50 / 12 / 15; without the strong-field hold 41 / 12 / 24; with the law's memory 50 / 12 / 15; the repaired equation 58 / 11 / 8 without memory, 59 / 11 / 7 with it, and 58 / 11 / 8 when solved exactly.](blog-figures/eft-scoreboard.png)
 
 An independent review (25 September 2026) set out what a paper would need. In order:
 

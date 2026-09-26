@@ -748,9 +748,11 @@ pieces, k ≤ 16, at most ~100 pieces, one scalar channel, identical senders and
   changes status) and **58 / 11 / 8** with none (only MACS J0025's NW peak fails). Brightness only, with the direction
   from the cold flow: 59 / 10 / 8 with memory, 51 / 11 / 15 without, so the note's source is what keeps the lensing on
   the galaxies.
-* **Exact solution** (the curl field kept, Bullet): the note's equation converges in three steps and changes by less
-  than 2%. For the repair the simple iteration oscillates by about 10% where the brightness dominates the net flow;
-  its states pass the Bullet's checks (κ 0.709 / 0.257 with memory). A robust solver is the next numerical step.
+* **Exact solution** (the curl field kept): the note's equation converges in three steps and changes the Bullet by
+  less than 2%. For the repair the undamped iteration oscillates where the brightness dominates the net flow; damped
+  (relaxation 0.3) it settles, with 1% of leftover swirl. On every collision it keeps 58 / 11 / 8: the Bullet's peaks
+  move about 20–25 kpc toward the gas (27 and 50 kpc, all checks pass), the stack's β is 0.021, and only MACS J0025's
+  NW peak, on a flat ridge between its galaxies and gas, is lost.
 * **Test B, bounded:** a 10²⁰ eV proton crossing 100 Mpc allows 1.7 × 10¹⁷ times the rest emission. A heat factor
   saturating at 1 + c²/u² is safe by 5.6 × 10¹⁰; γv²/u² is marginal (52 Mpc); (γv)²/u² fails by 2 × 10¹¹.
 * **Rules:** the φ action is AQUAL's deep-regime form, not allowed as our law (RULES.md) unless derived from the
